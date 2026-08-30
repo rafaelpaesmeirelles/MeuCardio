@@ -34140,5 +34140,68 @@
       "data": null,
       "nota": "aguardando revisão editorial"
     }
+  },
+  {
+    "slug": "cardiopatia-congenita-associada-a-sindrome-de-alagille-vacterl-e-charge-espectro-e-manejo",
+    "condicao": "Cardiopatia congênita associada a síndromes genéticas — Alagille, VACTERL/VATER e CHARGE",
+    "resumo": "Checklist do espectro cardiovascular de três condições genéticas menos comuns, porém clinicamente reconhecidas — síndrome de Alagille, associação VACTERL/VATER e síndrome CHARGE —, cobrindo lesão cardíaca típica, base genética, implicações de manejo e aconselhamento sobre risco de recorrência. Não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) para nenhuma das três condições; as recomendações abaixo se baseiam em GeneReviews e estudos de referência indexados no PubMed/NCBI, verificados via e-utils.",
+    "documento_origem": null,
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Spinner NB, Loomes KM, Krantz ID, Gilbert MA. Alagille Syndrome. In: Adam MP, Bick S, Mirzaa GM, Wallace SE, Amemiya A, editores. GeneReviews(®). Seattle (WA): University of Washington, Seattle; 1993-2026. 2000 May 19 [atualizado 2024 Jan 4]. PMID: 20301450.",
+      "Halma J, Lin HC. Alagille syndrome: understanding the genotype-phenotype relationship and its potential therapeutic impact. Expert Rev Gastroenterol Hepatol. 2023;17(9):883-892. DOI: 10.1080/17474124.2023.2255518. PMID: 37668532.",
+      "Emerick KM, Rand EB, Goldmuntz E, Krantz ID, Spinner NB, Piccoli DA. Features of Alagille syndrome in 92 patients: frequency and relation to prognosis. Hepatology. 1999;29(3):822-829. DOI: 10.1002/hep.510290331. PMID: 10051485.",
+      "McElhinney DB, Krantz ID, Bason L, Piccoli DA, Emerick KM, Spinner NB, Goldmuntz E. Analysis of cardiovascular phenotype and genotype-phenotype correlation in individuals with a JAG1 mutation and/or Alagille syndrome. Circulation. 2002;106(20):2567-2574. DOI: 10.1161/01.cir.0000037221.45902.69. PMID: 12427653.",
+      "Hallbergson A, Lock JE, Marshall AC. Frequency and risk of in-stent stenosis following pulmonary artery stenting. Am J Cardiol. 2014;113(3):541-545. DOI: 10.1016/j.amjcard.2013.10.016. PMID: 24433604.",
+      "Solomon BD. VACTERL/VATER Association. Orphanet J Rare Dis. 2011;6:56. DOI: 10.1186/1750-1172-6-56. PMID: 21846383.",
+      "Solomon BD. The etiology of VACTERL association: Current knowledge and hypotheses. Am J Med Genet C Semin Med Genet. 2018;178(4):440-446. DOI: 10.1002/ajmg.c.31664. PMID: 30580478.",
+      "van Ravenswaaij-Arts CM, Hefner M, Blake K, Martin DM. CHD7 Disorder. In: Adam MP, Bick S, Mirzaa GM, Wallace SE, Amemiya A, editores. GeneReviews(®). Seattle (WA): University of Washington, Seattle; 1993-2026. 2006 Oct 2 [atualizado 2025 Aug 14]. PMID: 20301296.",
+      "Vissers LE, van Ravenswaaij CM, Admiraal R, Hurst JA, de Vries BB, Janssen IM, van der Vliet WA, Huys EH, de Jong PJ, Hamel BC, Schoenmakers EF, Brunner HG, Veltman JA, van Kessel AG. Mutations in a new member of the chromodomain gene family cause CHARGE syndrome. Nat Genet. 2004;36(9):955-957. DOI: 10.1038/ng1407. PMID: 15300250.",
+      "Meisner JK, Martin DM. Congenital heart defects in CHARGE: The molecular role of CHD7 and effects on cardiac phenotype and clinical outcomes. Am J Med Genet C Semin Med Genet. 2020;184(1):81-89. DOI: 10.1002/ajmg.c.31761. PMID: 31833191.",
+      "Corsten-Janssen N, van Ravenswaaij-Arts CMA, Kapusta L. Congenital arch vessel anomalies in CHARGE syndrome: A frequent feature with risk for co-morbidity. Int J Cardiol Heart Vasc. 2016;12:21-25. DOI: 10.1016/j.ijcha.2016.05.015. PMID: 28616537."
+    ],
+    "itens": [
+      {
+        "id": "alagille-cardiaco-01",
+        "categoria": "Síndrome de Alagille",
+        "obrigatorio": true,
+        "texto": "Na síndrome de Alagille (mutações heterozigotas em JAG1 e, mais raramente, NOTCH2 — via de sinalização Notch), o acometimento cardiovascular é a regra: em coorte de 200 indivíduos com variante em JAG1 e/ou Alagille confirmada, 94% tinham evidência de envolvimento cardiovascular (McElhinney et al., Circulation 2002); em série independente de 92 pacientes, sopro cardíaco esteve presente em 97% (Emerick et al., Hepatology 1999). A lesão mais comum e mais característica é a estenose/hipoplasia de ramos da artéria pulmonar (branch pulmonary artery stenosis), documentada em 76% da coorte de McElhinney et al. — tipicamente difusa e multifocal, acometendo os ramos periféricos e não apenas a valva pulmonar isolada; tetralogia de Fallot ocorreu em 11,5% dos casos (23/200), acompanhada de atresia pulmonar em 8 deles. Essa distribuição predominantemente periférica e multifocal tem implicação prática de manejo: diferentemente da estenose valvar pulmonar isolada, a estenose pulmonar periférica da síndrome de Alagille responde de forma menos definitiva a uma única intervenção percutânea — estudo sobre reestenose intra-stent em artéria pulmonar mostrou incidência global de 24%, com incidência desproporcionalmente maior justamente nos subgrupos com Alagille, Williams ou tetralogia de Fallot com colaterais aortopulmonares múltiplas (Hallbergson et al., Am J Cardiol 2014), reforçando a expectativa de reintervenções seriadas e a necessidade de seguimento cardiológico longitudinal.",
+        "origem_secao": "McElhinney et al. 2002 (PMID 12427653); Emerick et al. 1999 (PMID 10051485); Hallbergson et al. 2014 (PMID 24433604)"
+      },
+      {
+        "id": "vacterl-cardiaco-02",
+        "categoria": "VACTERL/VATER",
+        "obrigatorio": true,
+        "texto": "VACTERL/VATER não é uma síndrome genética única com causa identificada, mas uma associação não aleatória de defeitos congênitos, clínica e etiologicamente heterogênea — a causa foi identificada em apenas uma pequena fração dos pacientes até o momento (Solomon BD, Am J Med Genet C Semin Med Genet 2018). O critério diagnóstico usual exige a presença de pelo menos 3 dos seguintes componentes: defeitos Vertebrais, atresia Anal, defeitos Cardíacos, fístula Traqueoesofágica, anomalias Renais e anomalias de membros (Limb); a incidência estimada varia de aproximadamente 1 em 10.000 a 1 em 40.000 nascidos vivos, e o diagnóstico exige exclusão de condições que mimetizam o quadro — entre elas a própria síndrome CHARGE e a deleção 22q11.2 (Solomon BD, Orphanet J Rare Dis 2011). Cardiopatia congênita é um dos componentes centrais do espectro e, junto com a fístula traqueoesofágica e a atresia anal, tipicamente exige correção cirúrgica já no período neonatal imediato. Implicação prática: a presença de outros achados do espectro VACTERL em um recém-nascido — mesmo sem sopro audível ao exame físico — deve motivar rastreio cardíaco dirigido (ecocardiograma), já que a cardiopatia associada é um determinante relevante de morbimortalidade precoce nessa população.",
+        "origem_secao": "Solomon BD 2011 (PMID 21846383); Solomon BD 2018 (PMID 30580478)"
+      },
+      {
+        "id": "charge-cardiaco-03",
+        "categoria": "Síndrome CHARGE",
+        "obrigatorio": true,
+        "texto": "A síndrome CHARGE (mnemônico: Coloboma, Heart defects/cardiopatia, Atresia de coanas, Retardo de crescimento/desenvolvimento, anomalias Genitais, anomalias de orelha/Ear) é causada, na grande maioria dos casos, por variante patogênica heterozigota de novo em CHD7 (van Ravenswaaij-Arts et al., GeneReviews; gene identificado originalmente por Vissers et al., Nat Genet 2004). Cardiopatia congênita ocorre em cerca de 74% dos indivíduos com variante patogênica em CHD7 confirmada, com sobrerrepresentação de defeitos atrioventriculares septais e defeitos conotruncais — incluindo tetralogia de Fallot e anomalias do arco aórtico (artéria subclávia aberrante, arco aórtico à direita); anomalias de vasos do arco estiveram presentes em 14% de uma coorte de 299 pacientes com variante em CHD7 e, nesses casos, associaram-se a outro defeito cardíaco concomitante em 81% das vezes (Corsten-Janssen et al., Int J Cardiol Heart Vasc 2016; Meisner & Martin, Am J Med Genet C Semin Med Genet 2020). Consideração especial de manejo: a atresia/estenose de coanas e outras anomalias de via aérea superior da síndrome aumentam o risco de complicações respiratórias pós-anestésicas; o GeneReviews orienta minimizar e agrupar procedimentos que exijam anestesia sempre que possível, recomendação particularmente relevante ao planejar intervenções cardíacas (cirúrgicas ou percutâneas) nesses pacientes.",
+        "origem_secao": "van Ravenswaaij-Arts et al., GeneReviews (PMID 20301296); Vissers et al. 2004 (PMID 15300250); Corsten-Janssen et al. 2016 (PMID 28616537); Meisner & Martin 2020 (PMID 31833191)"
+      },
+      {
+        "id": "abordagem-pratica-04",
+        "categoria": "Abordagem prática",
+        "obrigatorio": true,
+        "texto": "Nas três condições, a cardiopatia congênita raramente é um achado isolado: acompanha-se de outras anomalias extracardíacas, por vezes sutis — embriotoxon posterior, vértebras em borboleta e alterações faciais características na síndrome de Alagille; atresia anal e anomalias vertebrais, renais ou de membros na VACTERL; coloboma, atresia de coanas e anomalias de orelha na CHARGE. Diante de cardiopatia congênita associada a qualquer combinação desses achados extracardíacos, mesmo discretos, a conduta não deve se limitar ao tratamento isolado do defeito cardíaco: está indicada avaliação genética/sindrômica dirigida — exame clínico completo, avaliações oftalmológica, hepática, renal e esquelética conforme a suspeita, e teste genético molecular direcionado (JAG1/NOTCH2 na suspeita de Alagille; CHD7 na suspeita de CHARGE; investigação clínica dos demais componentes na suspeita de VACTERL, já que não há um teste genético único confirmatório). O reconhecimento da síndrome de base muda o rastreio de comorbidades associadas (hepática e renal na Alagille; renal, vertebral e gastrointestinal na VACTERL; via aérea, auditiva e do neurodesenvolvimento na CHARGE), antecipa riscos peri-operatórios específicos e direciona o aconselhamento familiar sobre risco de recorrência.",
+        "origem_secao": "Síntese a partir de Spinner et al., GeneReviews (PMID 20301450); Solomon BD 2011 (PMID 21846383); van Ravenswaaij-Arts et al., GeneReviews (PMID 20301296)"
+      },
+      {
+        "id": "aconselhamento-genetico-05",
+        "categoria": "Aconselhamento genético",
+        "obrigatorio": true,
+        "texto": "Alagille: herança autossômica dominante com penetrância clínica altamente variável, inclusive dentro da mesma família; cerca de 40% dos indivíduos têm variante patogênica herdada e cerca de 60% têm variante de novo, mosaicismo parental somático/germinativo já foi relatado, e cada filho de um indivíduo afetado tem 50% de chance de herdar a variante patogênica em JAG1 ou NOTCH2 — mas a expressividade clínica não é previsível por teste genético pré-natal isolado (GeneReviews, Spinner et al.). VACTERL/VATER: na maioria dos casos é esporádica, sem padrão de herança mendeliana claro identificável, refletindo heterogeneidade clínica e etiológica ampla; a causa permanece não identificada na maior parte dos pacientes, o que limita o aconselhamento sobre risco de recorrência a estimativas empíricas baixas, caso a caso (Solomon BD, 2011; 2018). CHARGE: tipicamente variante de novo em CHD7, com padrão autossômico dominante quando familiar; se a variante do probando não for detectável no DNA leucocitário de nenhum dos pais, o risco de recorrência empírico para irmãos é de aproximadamente 1%-2% (por possível mosaicismo germinativo parental); se um dos pais for portador confirmado, o risco para os irmãos é de 50%, e cada filho de um indivíduo afetado tem 50% de chance de herdar a variante (GeneReviews, van Ravenswaaij-Arts et al.).",
+        "origem_secao": "Spinner et al., GeneReviews (PMID 20301450); Solomon BD 2011 (PMID 21846383) e 2018 (PMID 30580478); van Ravenswaaij-Arts et al., GeneReviews (PMID 20301296)"
+      }
+    ],
+    "revisao": {
+      "por": null,
+      "data": null,
+      "nota": "aguardando revisão editorial"
+    }
   }
 ]
