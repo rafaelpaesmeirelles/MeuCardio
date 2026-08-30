@@ -886,3 +886,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 20 (3 descartados por colisão) | 180 |
 | **Total** | **4.900** | **151** | **4.749** |
+
+## Lote 44 — concluído (commit 067434ab)
+
+- **7 documentos** (metabólico/tóxico/genético raro, vein consistentemente produtiva): hemocromatose cardiovascular (HFE hereditária vs. transfusional, RM T2*, quelação/flebotomia — `content/Cardiomiopatias`), escorbuto e acometimento cardiovascular (fragilidade capilar, disautonomia por deficit de dopamina-beta-hidroxilase, hemopericárdio/tamponamento — `content/Insuficiência_cardíaca`), síndrome de Alström (cardiomiopatia dilatada bifásica, ciliopatia, diferencial com Bardet-Biedl — `content/Cardiologia_pediátrica`), latrodectismo/viúva-negra (tempestade catecolaminérgica por alfa-latrotoxina — `content/Geral`), escorpionismo grave na criança (miocardite tóxica, edema pulmonar catecolaminérgico, choque — `content/Cardiologia_pediátrica`), porfiria aguda intermitente (taquicardia/hipertensão/hiponatremia da crise porfírica — `content/Geral`), intoxicação por bufotoxinas/sapo-cururu (fenocópia de intoxicação digitálica — `content/Terapia_intensiva`).
+- **doencas**: +7, todas pareadas 1:1 aos documentos acima — `hemocromatose-cardiaca`, `escorbuto-deficiencia-grave-de-vitamina-c`, `sindrome-de-alstrom`, `latrodectismo-envenenamento-por-aranha-viuva-negra`, `escorpionismo-grave-cardiovascular`, `porfiria-aguda-intermitente`, `intoxicacao-por-bufotoxinas`.
+- **Correções na integração**: 4 dos 7 slugs de doença propostos pelos agentes colidiam com o slug do próprio documento pareado (hemocromatose, Alström, escorpionismo, porfiria) — renomeados para slugs curtos e distintos, seguindo o padrão do Lote 38/42. `prevalence_rank` recalculado ao vivo contra o manifesto (geral 28-32, cardiopediatria 43-44), sem colisão entre os 7. Entidades HTML (`&amp;`/`&lt;`/`&gt;`) corrigidas em 3 documentos; front-matter `theme` com underscore corrigido para o padrão com espaço em 2 documentos (Alström, bufotoxinas). `source_urls` do escorbuto corrigido de 6 para as 22 URLs correspondentes aos 22 PMIDs de `source_refs`.
+- **Falso negativo do checkout `/opt/meucardio`**: o agente de escorbuto relatou não ter encontrado documentos de pelagra nem síndrome de realimentação no corpus (ambos existem no branch de trabalho desde os Lotes 40/41) — adicionados manualmente como 2 dos 7 links de "Tudo com Tudo" após verificação direta no worktree.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.352 (10.281 revisado + 71 pendente_revisao).
+
+### Status consolidado (após Lote 44)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 33 | 2.367 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 27 (3 descartados por colisão) | 173 |
+| **Total** | **4.900** | **165** | **4.735** |
