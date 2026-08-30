@@ -28319,5 +28319,68 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "trombocitemia-essencial-risco-trombose-sangramento",
+    "titulo": "Trombocitemia essencial: por que posso ter risco de trombose e de sangramento ao mesmo tempo",
+    "subtitulo": "Entenda esse paradoxo do excesso de plaquetas e como ele orienta o uso de aspirina e dos medicamentos que baixam as plaquetas",
+    "tema": "Populações especiais",
+    "documento_slug": null,
+    "review_status": "pendente_revisao",
+    "resumo": "Na trombocitemia essencial, o excesso de plaquetas pode aumentar o risco de trombose e, ao mesmo tempo, o risco de sangramento — um paradoxo que tem explicação biológica e que orienta decisões como manter ou suspender a aspirina e usar medicamentos citorredutores.",
+    "secoes": [
+      {
+        "titulo": "O que é a trombocitemia essencial e por que ela parece contraditória",
+        "paragrafos": [
+          "A trombocitemia essencial é uma doença crônica da medula óssea em que o corpo produz plaquetas em excesso. As plaquetas são as células do sangue responsáveis por formar coágulos e estancar sangramentos, então é natural pensar que, quanto mais plaquetas, maior o risco de trombose (coágulos que entopem vasos sanguíneos).",
+          "Isso é parcialmente verdade: pessoas com trombocitemia essencial realmente têm mais risco de trombose do que a população em geral. Mas, de forma que parece contraditória, algumas pessoas com plaquetas muito altas também podem sangrar mais facilmente. Entender por que isso acontece ajuda a compreender por que o tratamento é individualizado e por que remédios como a aspirina às vezes são usados e às vezes são suspensos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O paradoxo: por que plaquetas muito altas podem causar sangramento",
+        "paragrafos": [
+          "O sangue conta com uma proteína chamada fator de von Willebrand, que funciona como uma espécie de cola, ajudando as plaquetas a grudarem umas nas outras e nas paredes dos vasos lesionados para formar o tampão inicial que estanca um sangramento. As formas maiores dessa proteína (chamadas multímeros de alto peso molecular) são as mais eficientes nessa função.",
+          "Quando a contagem de plaquetas está muito acima do normal — o que pode acontecer na trombocitemia essencial, com frequência quando os valores ficam bem acima de 1 milhão de plaquetas por microlitro de sangue —, essas formas grandes do fator de von Willebrand tendem a se ligar à superfície do excesso de plaquetas e a serem removidas ou quebradas mais rapidamente da circulação. Esse fenômeno foi descrito por van Genderen e colaboradores em 1996 (British Journal of Haematology), que mostraram que a perda dos multímeros grandes do fator de von Willebrand se relaciona diretamente com o nível da contagem de plaquetas.",
+          "O resultado é uma condição chamada síndrome de von Willebrand adquirida: mesmo com muitas plaquetas circulando, falta a 'cola' de melhor qualidade para fazê-las funcionar bem. Por isso, em vez de proteger contra sangramentos, plaquetas extremamente altas podem, paradoxalmente, deixar o sangue com mais dificuldade de coagular em determinadas situações."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Aspirina em dose baixa: por que é usada e por que às vezes é suspensa",
+        "paragrafos": [
+          "A aspirina em dose baixa (um antiagregante plaquetário, geralmente em torno de 100 mg por dia) é frequentemente prescrita para pessoas com trombocitemia essencial porque reduz a capacidade das plaquetas de se agregarem, diminuindo o risco de trombose. Ela costuma ser indicada principalmente para quem tem outros fatores de risco cardiovascular, sinais de alteração da microcirculação (como queimação nas mãos ou pés) ou a mutação JAK2.",
+          "No entanto, quando a contagem de plaquetas está extremamente elevada e existe suspeita de síndrome de von Willebrand adquirida, a aspirina pode aumentar o risco de sangramento em vez de proteger — porque o paciente já tem uma dificuldade de coagulação de base, e a aspirina soma mais um fator que dificulta a formação do coágulo. Nessas situações, o médico pode solicitar exames que avaliam a função do fator de von Willebrand e decidir suspender temporariamente a aspirina até que a contagem de plaquetas seja reduzida com outro tratamento.",
+          "Por isso, a aspirina nunca deve ser iniciada, suspensa ou retomada por conta própria: a decisão depende do equilíbrio entre risco de trombose e risco de sangramento em cada pessoa, avaliado pelo hematologista."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Citorredução: os medicamentos que baixam as plaquetas e por que são usados",
+        "paragrafos": [
+          "Citorredução é o nome dado ao tratamento com medicamentos que reduzem a produção de plaquetas pela medula óssea, trazendo a contagem para níveis mais seguros. Esses medicamentos não são usados por todo mundo com trombocitemia essencial — a decisão depende do risco individual de trombose e de sangramento.",
+          "De forma geral, o tratamento citorredutor costuma ser considerado para pessoas com maior risco, avaliado por escores validados que combinam fatores como idade mais avançada, histórico prévio de trombose, presença de fatores de risco cardiovascular e presença da mutação JAK2 — como o escore IPSET-thrombosis, publicado por Barbui e colaboradores em 2012 na revista Blood. Também pode ser indicado quando a contagem de plaquetas está extremamente alta, justamente pelo risco aumentado de sangramento associado à síndrome de von Willebrand adquirida.",
+          "Ao reduzir o número de plaquetas para uma faixa mais equilibrada, a citorredução ajuda a diminuir tanto o risco de trombose quanto o risco de sangramento ao mesmo tempo. O tratamento exige acompanhamento regular com exames de sangue para ajustar a dose e monitorar efeitos colaterais."
+        ],
+        "itens": [
+          "Hidroxiureia: geralmente o medicamento citorredutor de primeira escolha",
+          "Anagrelida: atua reduzindo especificamente a produção de plaquetas",
+          "Interferona peguilada: alternativa usada com frequência em pacientes mais jovens ou durante a gravidez"
+        ]
+      },
+      {
+        "titulo": "Sinais de alerta: quando procurar atendimento imediato",
+        "paragrafos": [
+          "Como a trombocitemia essencial pode causar tanto trombose quanto sangramento, é importante reconhecer os dois grupos de sinais de alerta e procurar atendimento médico imediato se algum deles aparecer, especialmente se for novo ou diferente do habitual.",
+          "Qualquer sintoma novo de sangramento ou de possível trombose deve ser comunicado ao hematologista o quanto antes — não é indicado ajustar medicamentos por conta própria com base nesses sinais, mas sim buscar avaliação médica."
+        ],
+        "itens": [
+          "Sinais de possível trombose maior: fraqueza súbita de um lado do corpo, dificuldade repentina para falar ou enxergar, dor no peito, falta de ar de início súbito, dor, inchaço ou vermelhidão em uma perna",
+          "Sinais de trombose de pequenos vasos: queimação e vermelhidão nas mãos ou nos pés (eritromelalgia), dor de cabeça forte e incomum, alterações visuais passageiras, formigamento nas extremidades",
+          "Sinais de sangramento: sangramento nasal frequente ou difícil de estancar, manchas roxas (equimoses) sem explicação aparente, sangramento nas gengivas, menstruação muito mais intensa que o habitual",
+          "Sinais de sangramento mais grave: sangue nas fezes ou fezes muito escuras, vômito com sangue, sangue na urina, qualquer sangramento que não pare com pressão local"
+        ]
+      }
+    ]
   }
 ]
