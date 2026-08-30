@@ -291,8 +291,9 @@ jobs:
             for (const href of requiredDesktopLinks) {
               const link = desktop.page.locator(`.ccc-nav a[href="${href}"]`).first();
               const disclosure = link.locator('xpath=ancestor::details[1]');
-              if (await disclosure.count() && !await disclosure.getAttribute('open')) {
-                await disclosure.locator(':scope > summary').click();
+              if (await disclosure.count()) {
+                const isOpen = await disclosure.evaluate((element) => element.open);
+                if (!isOpen) await disclosure.locator(':scope > summary').click();
               }
               await link.scrollIntoViewIfNeeded().catch(() => {});
               if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature inacessível após abrir a seção ${href}`);
