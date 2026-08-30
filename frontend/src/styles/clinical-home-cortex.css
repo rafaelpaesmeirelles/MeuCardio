@@ -780,7 +780,9 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
   .ccc-approved-main__command input {
     padding: 0 7%;
     color: #eaf8ff;
-    background: transparent;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
     font-size: clamp(.62rem, .82vw, .86rem);
   }
 
