@@ -79,10 +79,10 @@ jobs:
               runs = json.load(handle)["workflow_runs"]
 
           required = {
-              "CI": "push",
-              "RC2 Acceptance — Canonical CorVIA": "workflow_dispatch",
-              "Visual QA — Clinical OS": "workflow_dispatch",
-              "Corpus database reconciliation": "workflow_dispatch",
+              "CI": {"push", "workflow_dispatch"},
+              "RC2 Acceptance — Canonical CorVIA": {"workflow_dispatch"},
+              "Visual QA — Clinical OS": {"workflow_dispatch"},
+              "Corpus database reconciliation": {"workflow_dispatch"},
           }
           latest = {}
           for run in runs:
@@ -91,7 +91,7 @@ jobs:
                   name not in required
                   or run.get("head_sha") != expected_sha
                   or run.get("head_branch") != "main"
-                  or run.get("event") != required[name]
+                  or run.get("event") not in required[name]
               ):
                   continue
               previous = latest.get(name)
