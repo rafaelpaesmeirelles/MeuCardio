@@ -771,3 +771,27 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 11 (3 descartados por colisão) | 189 |
 | **Total** | **4.900** | **113** | **4.787** |
+
+## Lote 39 — concluído (commit ddd50714)
+
+- **content/Cardiologia_geriátrica**: +1 — `hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca`.
+- **content/Cardiomiopatias**: +1 — `sindrome-de-cushing-e-risco-cardiovascular-mecanismos-cardiomiopatia-e-risco-residual`.
+- **doencas**: +1 — `doenca-de-wilson-cardiovascular` (pareada com documento do lote 38).
+- **checklists**: +2 — rastreio cardiovascular na doença de Wilson; prevenção/manejo da síndrome de realimentação.
+- **casos-clinicos**: +2 — loxoscelismo cutâneo-visceral (hemólise/CIVD/LRA); toxoplasmose reativada pós-transplante cardíaco (miocardite vs. rejeição).
+- **material-paciente**: +1 — síndrome de realimentação, tom não estigmatizante para contexto de transtorno alimentar, sem dose/meta calórica numérica.
+- **Correções durante integração**: `prevalence_rank: null` de um agente corrigido para valor inteiro coerente (padrão do manifesto); entidades HTML (`&lt;`) corrigidas em dois documentos.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.308 (10.281 revisado + 27 pendente_revisao).
+
+### Status consolidado (após Lote 39)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 20 | 2.380 |
+| Casos clínicos | 900 | 37 | 863 |
+| Checklists | 600 | 23 | 577 |
+| Materiais-paciente | 500 | 26 | 474 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 12 (3 descartados por colisão) | 188 |
+| **Total** | **4.900** | **121** | **4.779** |
