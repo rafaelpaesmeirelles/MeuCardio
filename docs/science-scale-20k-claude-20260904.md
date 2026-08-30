@@ -640,3 +640,22 @@ um documento novo cobre um material-paciente pré-existente.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 6 (3 descartados por colisão) | 194 |
 | **Total** | **4.900** | **90** | **4.810** |
+
+## Lote 34 — concluído (commit ea3c3dac)
+
+- **content/Insuficiência_cardíaca**: +1 — `cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave`.
+- **casos-clinicos**: +1 — `cardiomiopatia-dilatada-hipocalcemia-hipoparatireoidismo-pos-tireoidectomia`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.279 (10.189 revisado + 90 pendente_revisao).
+
+### Status consolidado (após Lote 34)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 13 | 2.387 |
+| Casos clínicos | 900 | 32 | 868 |
+| Checklists | 600 | 16 | 584 |
+| Materiais-paciente | 500 | 23 | 477 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 6 (3 descartados por colisão) | 194 |
+| **Total** | **4.900** | **92** | **4.808** |
