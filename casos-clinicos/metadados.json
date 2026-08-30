@@ -17702,5 +17702,27 @@
       "Porto AG, Brun F, Severini GM, et al. Clinical Spectrum of PRKAG2 Syndrome. Circ Arrhythm Electrophysiol. 2016;9(1):e003121. PMID 26729852. doi:10.1161/CIRCEP.115.003121"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "esclerose-sistemica-acometimento-cardiaco-primario-rmc",
+    "titulo": "Acometimento cardíaco primário subclínico na esclerose sistêmica",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos, com esclerose sistêmica cutânea difusa há 8 anos (anti-topoisomerase I positivo, fenômeno de Raynaud grave e doença pulmonar intersticial leve), refere palpitações intermitentes e dispneia leve aos esforços nos últimos 2 meses. O ecocardiograma transtorácico mostra FEVE preservada (62%) com disfunção diastólica leve, sem valvopatia ou derrame pericárdico significativo. O Holter de 24h evidencia extrassístoles ventriculares frequentes. A troponina T de alta sensibilidade está discretamente elevada, sem dor torácica ou alterações isquêmicas ao ECG.",
+    "pergunta": "Diante desse quadro sugestivo de acometimento cardíaco primário subclínico da esclerose sistêmica, qual é a investigação mais sensível para confirmar o diagnóstico e caracterizar a fibrose miocárdica?",
+    "opcoes": [
+      "Ressonância magnética cardíaca com realce tardio de gadolínio e mapeamento T1/volume extracelular (VEC)",
+      "Cateterismo cardíaco direito para investigar hipertensão arterial pulmonar",
+      "Cinecoronariografia para excluir doença arterial coronariana obstrutiva",
+      "Repetir o ecocardiograma em 6 meses para monitorar a tendência da FEVE"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O acometimento cardíaco primário da esclerose sistêmica (pHI-ES) resulta de microangiopatia coronariana ('Raynaud do coração') e fibrose miocárdica difusa e focal, sendo frequentemente subclínico e sub-reconhecido em fases iniciais, com FEVE preservada ao ecocardiograma convencional — como no caso descrito. A ressonância magnética cardíaca (RMC) é a ferramenta diagnóstica mais sensível: permite avaliar reserva de perfusão miocárdica (reduzida por disfunção microvascular), realce tardio de gadolínio (fibrose focal, ausente em controles saudáveis) e mapeamento T1/volume extracelular (fibrose difusa), mesmo com função contrátil e coronárias epicárdicas normais (Dumitru et al., Rheumatology 2021;60(6):2934-2945, PMID 34080001). Elevação de troponina T, PCR, presença de doença pulmonar intersticial e arritmias ao Holter são 'sinais de alerta' (red flags) que devem motivar a solicitação precoce de RMC para diagnosticar pHI-ES (Batani et al., Rheumatology 2025;64(9):5004-5013, PMID 40353849), já que arritmias significativas subclínicas se associam a maior volume extracelular (fibrose difusa) na RMC (Bissell et al., Rheumatology 2019;58(7):1221-1226, PMID 30690570). O cateterismo direito (opção B) é o padrão-ouro para hipertensão arterial pulmonar secundária, um fenótipo cardiopulmonar distinto, não para a miocardiopatia fibrosante primária. A cinecoronariografia (opção C) tende a ser normal, pois o mecanismo é microvascular, não obstrutivo epicárdico. Repetir o ecocardiograma (opção D) atrasaria o diagnóstico, pois a FEVE frequentemente permanece preservada até fases avançadas da doença, quando o dano já é extenso e menos reversível.",
+    "source_refs": [
+      "Dumitru RB, Bissell LA, Erhayiem B, et al. Predictors of subclinical systemic sclerosis primary heart involvement characterised by microvasculopathy and myocardial fibrosis. Rheumatology (Oxford). 2021;60(6):2934-2945. doi:10.1093/rheumatology/keaa742. PMID: 34080001.",
+      "Batani V, Palmisano A, Campochiaro C, et al. The complex diagnosis of primary heart involvement in systemic sclerosis: red flags to drive the choice of cardiac magnetic resonance. Rheumatology (Oxford). 2025;64(9):5004-5013. doi:10.1093/rheumatology/keaf234. PMID: 40353849.",
+      "Bissell LA, Dumitru RB, Erhayiem B, et al. Incidental significant arrhythmia in scleroderma associates with cardiac magnetic resonance measure of fibrosis and hs-TnI and NT-proBNP. Rheumatology (Oxford). 2019;58(7):1221-1226. doi:10.1093/rheumatology/key430. PMID: 30690570."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
