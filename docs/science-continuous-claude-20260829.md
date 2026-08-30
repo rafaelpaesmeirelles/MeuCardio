@@ -1381,7 +1381,29 @@ métodos gráficos.
   AHA-ACC 2018 ACHD. Nenhuma diretriz SBC específica localizada —
   declarado. Gates limpos. Total: 422 checklists.
 
-## Lote 62 (planejado)
+## Lote 62 — concluído (SHA 424505dd) — total 90 commits
+
+- checklist `sindrome-heterotaxia-isomerismo-atrial-direito-esquerdo`
+  — gap genuíno: heterotaxia/isomerismo atrial nunca teve entrada
+  dedicada (apenas 6 menções de passagem em `content/**/*.md` e 1 menção
+  textual sem slug em `doencas/metadados.json`). Nenhum PR aberto sobre
+  o tema. 6 itens: classificação IAD (asplenia) vs. IAE (polisplenia)
+  por morfologia de apêndice atrial, com discordância subtipo↔status
+  esplênico documentada em até ~28% dos casos; espectro de cardiopatias
+  associadas (DSAV 72,9% IAD vs. 59,3% IAE, metanálise com IC amplos
+  declarados); sistema de condução — base anatômica explicando maior
+  bradiarritmia/BAVT no IAE (87% vs. 29%); achados extracardíacos e
+  risco infeccioso por asplenia, variabilidade de prática documentada
+  por ausência de diretriz unificada; abordagem diagnóstica; manejo
+  cirúrgico/prognóstico — dados diretamente discordantes entre séries
+  sobre qual subtipo é pior, declarado em vez de resolvido
+  artificialmente. Correção de integridade: 2 citações inline sem
+  lastro em `source_refs` (Rao 1982, Pastakia 1979) removidas antes de
+  integrar, em vez de adicionadas sem verificação própria. 19 fontes
+  via NCBI e-utils. Nenhuma diretriz SBC/AHA-ACC dedicada localizada —
+  declarado. Gates limpos. Total: 423 checklists.
+
+## Lote 63 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
