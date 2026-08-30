@@ -1317,7 +1317,25 @@ aprofundamento pontual de hubs existentes.
   extensa saturação nesta auditoria: SGLT2i em CMH, PFA, leadless
   pacemaker, clozapina, sarcopenia — já cobertos.
 
-## Lote 59 (planejado)
+## Lote 59 — concluído (SHA e119589a) — total 87 commits
+
+- checklist `cuidado-cardiovascular-no-adulto-com-sindrome-de-down-espectro-congenito-e-valvopatia-adquirida`
+  — achado de ALTA prevalência: síndrome de Down é a causa cromossômica
+  mais comum de CHD (~50% vs. ~1%), zero cobertura apesar da extensa
+  ACHD já construída. 5 itens: espectro congênito (AVSD mais frequente,
+  eco neonatal mesmo sem sopro); hipertensão pulmonar ("janela segura"
+  clássica não se aplica — DVPO fixa em 10/81 antes de 1 ano vs. 0/40
+  sem Down); valvopatia adquirida (MVP em até 57%/RA em 11% mesmo sem
+  CHD ao nascimento, progressão adolescência→adulto documentada);
+  considerações perioperatórias (instabilidade atlantoaxial, estridor
+  pós-extubação em 24%); rastreio vitalício sem periodicidade numérica
+  especificada — lacuna declarada. Nota de rigor: uma citação inline
+  não respaldada por `source_refs` foi removida antes de integrar. 9
+  fontes via NCBI e-utils. Evitada colisão com PR #599 (dispositivos)
+  ao descartar tópico de complicações de CSP — hub geral de 21k linhas
+  já em revisão.
+
+## Lote 60 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
