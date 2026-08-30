@@ -85,7 +85,7 @@ export default function Entrar() {
               <Link to="/esqueci-senha" className="prehome-link">Esqueci minha senha</Link>
             </div>
             {erro && <p id="login-erro" className="login-formulario__erro" role="alert">{erro}</p>}
-            <button className="login-formulario__entrar" type="submit" disabled={enviando || !email.trim() || !senha}>
+            <button className="login-formulario__entrar" type="submit" disabled={enviando}>
               <span>{enviando ? "Abrindo seus Cardiology Spaces…" : "Entrar na minha conta"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
             </button>
           </form>

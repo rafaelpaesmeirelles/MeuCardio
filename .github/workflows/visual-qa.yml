@@ -213,11 +213,21 @@ jobs:
             await page.locator('button[type="submit"]').click();
             await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
             await page.waitForTimeout(900);
+            await selectCompleteMode(page);
             return { context, page };
+          }
+
+          async function selectCompleteMode(page) {
+            const choice = page.locator('.spaces-choice');
+            if (await choice.isVisible().catch(() => false)) {
+              await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
+            }
+            await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
           }
 
           async function inspectAndCapture(page, mode, name, route) {
             await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+            if (name === 'home') await selectCompleteMode(page);
             await page.waitForTimeout(1100);
             const metrics = await page.evaluate((forbidden) => {
               const visible = (element) => {
@@ -258,9 +268,15 @@ jobs:
                 legacyFabVisible,
                 creditVisible,
                 suspenseVisible,
-                homeBoard: visible(document.querySelector('.ccc-home--board')),
-                homeIntelligence: visible(document.querySelector('.ccc-home__intelligence')),
-                homeAssistant: visible(document.querySelector('.ccc-home__assistant')),
+                spacesHome: visible(document.querySelector('.spaces-home')),
+                spacesBrand: visible(document.querySelector('.spaces-brand')),
+                spacesDoors: visible(document.querySelector('.spaces-doors')),
+                spacesNow: visible(document.querySelector('.spaces-layer--now')),
+                spacesNext: visible(document.querySelector('.spaces-layer--next')),
+                spacesReferences: visible(document.querySelector('.spaces-layer--refs')),
+                spacesDock: visible(document.querySelector('.spaces-dock')),
+                spacesDay: visible(document.querySelector('.spaces-day')),
+                consultorioSelected: document.querySelector('.spaces-door[aria-label="Consultório"]')?.getAttribute('aria-pressed') === 'true',
                 drugCommand: visible(document.querySelector('.cc-drugs-page')),
               };
             }, forbiddenVisibleText);
@@ -271,8 +287,11 @@ jobs:
             if (metrics.creditVisible) report.failures.push(`${mode}/${name}: crédito institucional visível dentro do workspace`);
             if (metrics.suspenseVisible) report.failures.push(`${mode}/${name}: rota permaneceu presa no fallback “Carregando a tela”`);
             if (name === 'medicamentos' && !metrics.drugCommand) report.failures.push(`${mode}/medicamentos: Medication Command Center não renderizou`);
-            if (mode === 'desktop' && name === 'home' && (!metrics.homeBoard || !metrics.homeIntelligence || !metrics.homeAssistant)) {
-              report.failures.push(`desktop/home: composição canônica incompleta (board=${metrics.homeBoard}, intelligence=${metrics.homeIntelligence}, assistant=${metrics.homeAssistant})`);
+            if (name === 'home' && (!metrics.spacesHome || !metrics.spacesBrand || !metrics.spacesDoors || !metrics.spacesNow || !metrics.spacesDock || !metrics.consultorioSelected)) {
+              report.failures.push(`${mode}/home: Cardiology Spaces incompleto (home=${metrics.spacesHome}, brand=${metrics.spacesBrand}, doors=${metrics.spacesDoors}, now=${metrics.spacesNow}, dock=${metrics.spacesDock}, consultorio=${metrics.consultorioSelected})`);
+            }
+            if (mode === 'desktop' && name === 'home' && (!metrics.spacesNext || !metrics.spacesReferences || !metrics.spacesDay)) {
+              report.failures.push(`desktop/home: modo completo incompleto (next=${metrics.spacesNext}, references=${metrics.spacesReferences}, day=${metrics.spacesDay})`);
             }
             if (mode === 'desktop' && name === 'emergencia') {
               if (!metrics.emergencyRect || metrics.emergencyRect.left < 200 || metrics.emergencyRect.top < 50) report.failures.push(`desktop/emergencia: modo está sob a sidebar/topbar (${JSON.stringify(metrics.emergencyRect)})`);
@@ -285,31 +304,35 @@ jobs:
             for (const [name, route] of desktopRoutes) await inspectAndCapture(desktop.page, 'desktop', name, route);
 
             await desktop.page.goto(`${base}/`, { waitUntil: 'networkidle' });
-            const desktopBrand = await desktop.page.locator('.ccc-nav__brand-copy strong').textContent().catch(() => null);
-            if (desktopBrand?.trim() !== 'CorVIA') report.failures.push(`desktop/home: branding lateral inválido (${desktopBrand})`);
+            await selectCompleteMode(desktop.page);
+            const desktopBrand = await desktop.page.locator('.spaces-brand').first().getAttribute('aria-label').catch(() => null);
+            if (desktopBrand !== 'CorVIA Cardiology Spaces') report.failures.push(`desktop/home: branding inválido (${desktopBrand})`);
+            await desktop.page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
+            await desktop.page.locator('.spaces-catalog').waitFor({ state: 'visible' });
             const requiredDesktopLinks = ['/triagem-sintomas','/interacoes','/condicoes','/fluxogramas','/biblioteca','/avaliacao-preoperatoria','/telediagnostico','/indicadores','/cursos','/apresentacao','/admin','/admin/usuarios','/fila-telediagnostico'];
             for (const href of requiredDesktopLinks) {
-              const link = desktop.page.locator(`.ccc-nav a[href="${href}"]`).first();
-              if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/nav: feature sem acesso visível ${href}`);
+              const link = desktop.page.locator(`.spaces-catalog a[href="${href}"]`).first();
+              if (!await link.isVisible().catch(() => false)) report.failures.push(`desktop/catálogo: feature sem acesso visível ${href}`);
             }
+            await desktop.page.screenshot({ path: path.join(out, 'desktop-todas-funcoes.png'), fullPage: false });
             await desktop.context.close();
 
             const mobile = await login({ width: 390, height: 844 });
             for (const [name, route] of mobileRoutes) await inspectAndCapture(mobile.page, 'mobile', name, route);
 
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
-            await mobile.page.waitForTimeout(500);
-            const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
-            const expected = ['Início','Buscar','Prontuário','Agenda','Mais'];
-            if (JSON.stringify(labels.slice(0,5)) !== JSON.stringify(expected)) report.failures.push(`mobile/nav: itens canônicos divergentes ${JSON.stringify(labels)}`);
-            await mobile.page.locator('.cc-mobile-nav button').last().click();
+            await selectCompleteMode(mobile.page);
+            const labels = await mobile.page.locator('.spaces-dock > * span').allTextContents();
+            const expected = ['Prescrever','Solicitar exames','Prontuário','Documentos','Tudo com Tudo','Todas as funções'];
+            if (JSON.stringify(labels) !== JSON.stringify(expected)) report.failures.push(`mobile/dock: itens canônicos divergentes ${JSON.stringify(labels)}`);
+            await mobile.page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
             await mobile.page.waitForTimeout(250);
-            await mobile.page.screenshot({ path: path.join(out, 'mobile-mais.png'), fullPage: false });
-            const moreVisible = await mobile.page.locator('.cc-mobile-more').isVisible();
-            if (!moreVisible) report.failures.push('mobile/mais: action sheet não abriu');
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-todas-funcoes.png'), fullPage: false });
+            const moreVisible = await mobile.page.locator('.spaces-catalog').isVisible();
+            if (!moreVisible) report.failures.push('mobile/catálogo: catálogo de funções não abriu');
             const requiredMobileLinks = ['/triagem-sintomas','/interacoes','/fluxogramas','/biblioteca','/avaliacao-preoperatoria','/telediagnostico','/cursos','/apresentacao','/admin','/admin/usuarios','/fila-telediagnostico'];
             for (const href of requiredMobileLinks) {
-              if (!await mobile.page.locator(`.cc-mobile-more a[href="${href}"]`).count()) report.failures.push(`mobile/mais: feature sem acesso ${href}`);
+              if (!await mobile.page.locator(`.spaces-catalog a[href="${href}"]`).count()) report.failures.push(`mobile/catálogo: feature sem acesso ${href}`);
             }
             await mobile.context.close();
           } catch (error) {
