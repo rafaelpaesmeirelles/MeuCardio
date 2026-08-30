@@ -24098,5 +24098,102 @@
       }
     ],
     "fonte_producao": "grok"
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-reconhecimento-inicial",
+    "titulo": "Fibrilação atrial: reconhecimento inicial e quando encaminhar",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo reconhecer a fibrilação atrial ao exame e ao ECG, distinguir o que é urgência do que pode seguir eletivo, calcular o CHA2DS2-VA e decidir sobre anticoagulação, e identificar quando encaminhar ao cardiologista ou eletrofisiologista.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+        "por_que": "Começa aqui porque é onde está a definição da FA, a apresentação clínica (palpitação, pulso irregular, achado incidental em ECG de rotina) e a regra mais importante para quem não é especialista: a confirmação exige documentação eletrocardiográfica interpretável do ritmo, não a impressão de pulso irregular isolada. Para esta trilha básica, o que importa é a seção de definição e apresentação — o restante do documento (via AF-CARE completa, ablação, oclusão de apêndice) é aprofundado nas trilhas de nível intermediário e avançado do mesmo tema."
+      },
+      {
+        "ordem": 2,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-inicial-de-fa-de-inicio-recente-no-pronto-socorro",
+        "por_que": "O primeiro item deste checklist é exatamente o filtro que o clínico geral precisa: instabilidade hemodinâmica (hipotensão, choque, isquemia ou insuficiência cardíaca aguda atribuível à FA) indica cardioversão elétrica imediata — ou seja, urgência, referência para emergência sem demora. Paciente estável não é urgência e pode seguir via eletiva. Os itens seguintes do checklist, sobre a escolha entre conduta expectante e cardioversão precoce, já são decisão do especialista que vai assumir o caso; o que fica retido nesta trilha é só o gatilho de estabilidade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cha2ds2-va",
+        "por_que": "Depois de reconhecer a FA e descartar urgência, o próximo passo é estimar risco de AVC. Este documento explica o escore que a ESC 2024 adotou — CHA2DS2-VA, sem o ponto de sexo feminino do CHA2DS2-VASc antigo — e é a peça que faltava para quem aprendeu o escore antigo e precisa entender o que mudou."
+      },
+      {
+        "ordem": 4,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "A calculadora disponível na plataforma hoje para aplicar o escore na prática, variável por variável, em vez de somar de cabeça — o nome do slug ainda é o antigo, mas o cálculo e a interpretação seguem a lógica CHA2DS2-VA descrita no documento anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "aplicacao-do-cha2ds2-va-e-has-bled-na-decisao-de-anticoagulacao-em-fibrilacao-atrial",
+        "por_que": "Fecha o raciocínio de anticoagulação: confere cada variável do CHA2DS2-VA pontuada corretamente e traz o ponto que mais gera decisão errada na atenção primária — o HAS-BLED serve para corrigir fator de sangramento modificável, nunca para negar uma anticoagulação já indicada pelo escore de risco tromboembólico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "fa-incidental-cha2ds2-va-decisao-de-anticoagular",
+        "por_que": "Aplica em um caso de nível básico exatamente o que as três etapas anteriores ensinaram: paciente assintomática, achado incidental em ECG de rotina, e a armadilha de achar que FA paroxística ou primeiro episódio muda a indicação — não muda. É o teste de que o raciocínio do escore foi entendido antes de avançar para a decisão de encaminhamento."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
+        "por_que": "Encerra com o encaminhamento: a seção 'Indicação por classificação temporal' já basta para o clínico geral saber quando vale acionar o eletrofisiologista — sintoma refratário ao controle de frequência, ou cenário de controle de ritmo precoce. A técnica de ablação propriamente dita, a tecnologia de campo pulsado e os ensaios que sustentam cada indicação ficam para a trilha avançada de ablação; aqui o objetivo é só reconhecer o gatilho de encaminhamento, não decidir a técnica."
+      }
+    ],
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
+  },
+  {
+    "slug": "trilha-aorta-mimetizadores-raros-igg4-erdheim-chester-behcet",
+    "titulo": "Aorta: quando não é aterosclerose nem a vasculite clássica — IgG4, Erdheim-Chester e Behçet",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Sair reconhecendo que espessamento periaórtico, aneurisma com componente inflamatório e trombose vascular atípica podem ter causas além do aneurisma aterosclerótico comum e das vasculites clássicas de grandes vasos — e que cada mimetizador (IgG4, Erdheim-Chester, Behçet) muda radicalmente a conduta terapêutica, inclusive tornando a anticoagulação contraindicada em um dos cenários.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-aortica-aguda-esc-2024",
+        "por_que": "Ponto de partida: o caminho decisório padrão diante de suspeita de doença aórtica aguda, que serve de referência antes de entrar nos mimetizadores menos comuns."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "arterite-de-takayasu-e-arterite-de-celulas-gigantes-vasculite-de-grandes-vasos",
+        "por_que": "A vasculite de grandes vasos 'clássica' — a referência com a qual todo mimetizador raro precisa ser comparado antes de se firmar um diagnóstico alternativo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio",
+        "por_que": "O primeiro mimetizador: um aneurisma inflamatório que, ao contrário do aterosclerótico, pode responder a corticoide — e cuja sorologia de IgG4 engana em ambas as direções."
+      },
+      {
+        "ordem": 4,
+        "item_type": "caso_clinico",
+        "item_slug": "erdheim-chester-aorta-em-bainha-braf",
+        "por_que": "O segundo mimetizador, no formato de caso: a 'aorta em bainha' da doença de Erdheim-Chester, que parece igual à periaortite por IgG4 na imagem, mas exige biópsia e pesquisa de BRAF V600E para não errar o tratamento-alvo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin",
+        "por_que": "O terceiro mimetizador, e o de maior risco prático: uma vasculite que soma trombose venosa a aneurisma de artéria pulmonar, na qual anticoagular sem rastrear o aneurisma pode ser fatal — o oposto do reflexo terapêutico padrão para TVP."
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30."
   }
 ]
