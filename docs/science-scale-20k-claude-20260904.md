@@ -230,3 +230,11 @@ desta expansão). Gates limpos, 10.226 registros totais.
 
 **Total canônico projetado após Lote 11**: 10.226 (10.189 revisado +
 37 pendente_revisao nesta branch).
+
+## Lote 12 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (sarcoidose cardíaca/CDI, amiloidose AL/hipotensão). Gates
+limpos, 10.228 registros totais.
+
+**Total canônico projetado após Lote 12**: 10.228 (10.189 revisado +
+39 pendente_revisao nesta branch).
