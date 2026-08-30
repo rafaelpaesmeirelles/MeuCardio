@@ -17859,5 +17859,25 @@
       "Adam MP, Bick S, Mirzaa GM, et al. Friedreich Ataxia. In: GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-. PMID: 20301458."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "ataxia-telangiectasia-evitar-radiacao-investigacao-cardiovascular",
+    "titulo": "Ataxia-telangiectasia: investigação cardiovascular evitando radiação ionizante",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Menina de 12 anos, com diagnóstico molecular confirmado de ataxia-telangiectasia (mutação bialélica no gene ATM) desde os 4 anos de idade, apresenta ataxia cerebelar progressiva, telangiectasias oculocutâneas (conjuntivais e em pavilhões auriculares) e história de infecções sinopulmonares de repetição decorrentes de imunodeficiência combinada variável, com bronquiectasias estabelecidas. Ela é encaminhada ao cardiologista pediátrico por dispneia aos esforços de piora progressiva e um sopro sistólico novo à ausculta, levantando suspeita de hipertensão pulmonar e sobrecarga de câmaras cardíacas direitas.",
+    "pergunta": "Qual é a estratégia de investigação de imagem cardiovascular mais apropriada para essa paciente, considerando sua condição de base?",
+    "opcoes": [
+      "Ecocardiograma transtorácico como exame inicial, reservando ressonância magnética cardíaca para complementação anatômica/funcional caso necessário, evitando exames com radiação ionizante sempre que um método alternativo puder responder à mesma pergunta clínica",
+      "Cateterismo cardíaco direito com angiografia como primeiro exame, por ser considerado padrão-ouro para avaliação hemodinâmica inicial",
+      "Angiotomografia cardíaca como exame de escolha inicial pela rapidez na avaliação anatômica",
+      "Cintilografia miocárdica com radionuclídeo como exame de primeira linha para avaliação de perfusão"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Pacientes com ataxia-telangiectasia (doença autossômica recessiva por mutação bialélica no gene ATM) apresentam radiossensibilidade extrema: a proteína ATM é central na resposta a quebras de dupla-fita do DNA induzidas por radiação ionizante, e sua disfunção resulta em reparo deficiente, maior taxa de mutação e risco aumentado de neoplasias radioinduzidas, além de toxicidade tecidual desproporcional. Por esse motivo, o GeneReviews (Veenhuis et al., atualizado em dezembro de 2025) declara explicitamente que 'a radiação ionizante (raios X e raios gama) é contraindicada devido à sensibilidade aumentada' e que 'a radioterapia é contraindicada porque a radiossensibilidade aumentada pode levar a complicações muito graves' — princípio que se estende, na prática clínica, à minimização de exames diagnósticos que empregam radiação ionizante (radiografias seriadas, tomografia computadorizada, cateterismo com fluoroscopia, medicina nuclear) sempre que um método sem radiação (ecocardiograma, ressonância magnética) puder responder à mesma questão clínica. Nesta vinícula, o ecocardiograma transtorácico é o exame inicial adequado para avaliar sopro novo, função ventricular, pressões estimadas de artéria pulmonar e sobrecarga de câmaras direitas, sem qualquer exposição à radiação; caso seja necessária caracterização anatômica adicional, a ressonância cardíaca também não emprega radiação ionizante. Cateterismo cardíaco, angiotomografia e cintilografia miocárdica devem ser reservados para situações em que os métodos não radiantes forem insuficientes para a decisão clínica, e não usados como primeira linha. As demais pistas do caso — telangiectasias oculocutâneas, ataxia cerebelar progressiva como manifestação neurológica inicial típica, e imunodeficiência humoral/celular predispondo a infecções sinopulmonares recorrentes e bronquiectasias — são achados clássicos da ataxia-telangiectasia descritos na mesma fonte, reforçando o diagnóstico de base que motiva a cautela radiológica.",
+    "source_refs": [
+      "Veenhuis S, van Os N, Weemaes C, Kamsteeg EJ, Willemsen M. Ataxia-Telangiectasia. 1999 Mar 19 [Updated 2025 Dec 4]. In: Adam MP, Bick S, Mirzaa GM, Wallace SE, Amemiya A, editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301790. Bookshelf ID: NBK26468. Disponível em: https://www.ncbi.nlm.nih.gov/books/NBK26468/"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
