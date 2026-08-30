@@ -1,5 +1,5 @@
-/* HOME — hierarquia visual
-   Comando e ações primeiro. Mapa só com destino. Catálogo abaixo da dobra. */
+/* HOME — hierarquia
+   Só reordena o primeiro viewport. Não esconde o Clinical OS. */
 
 @media (min-width: 901px) {
   .ccc-reference-board {
@@ -75,12 +75,12 @@
   .ccc-reference-board .ccc-reference-trust {
     grid-column: 1 / -1 !important;
     grid-row: 8 !important;
-    opacity: .82;
   }
 
+  /* Identidade atual: 10 ações em 5×2, diretório em 6 grupos. */
   .ccc-reference-board .ccc-actions {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    grid-template-rows: none !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(68px, auto)) !important;
   }
 
   .ccc-reference-summary > .ccc-reference-day {
@@ -100,47 +100,27 @@
 
   .ccc-reference-commute {
     min-height: 0 !important;
-    grid-template-columns: minmax(0, 220px) minmax(0, 1fr) !important;
-  }
-
-  .ccc-reference-commute__map,
-  .ccc-reference-commute__map > * {
-    min-height: 168px !important;
-    max-height: 168px !important;
-    height: 168px !important;
   }
 
   .ccc-module-directory__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
-
-  .ccc-module-group nav a {
-    color: #8ea3ab !important;
-  }
-
-  .ccc-home--board .ccc-home__welcome h1,
-  .ccc-reference-board .ccc-home__welcome h1 {
-    font-size: 1.18rem !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1280px) {
   .ccc-reference-board .ccc-actions {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+  .ccc-module-directory__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
 
 @media (max-width: 900px) {
-  .ccc-reference-board .ccc-command {
-    order: 1;
-  }
-  .ccc-reference-board .ccc-actions-section {
-    order: 2;
-  }
-  .ccc-reference-summary {
-    order: 3;
-  }
-  .ccc-reference-summary:not(.has-commute) > .ccc-reference-commute {
-    display: none !important;
-  }
+  .ccc-reference-board .ccc-command { order: 1; }
+  .ccc-reference-board .ccc-actions-section { order: 2; }
+  .ccc-reference-summary { order: 3; }
+  .ccc-reference-updates { order: 4; }
+  .ccc-module-directory { order: 5; }
+  .ccc-reference-trust { order: 6; }
 }
