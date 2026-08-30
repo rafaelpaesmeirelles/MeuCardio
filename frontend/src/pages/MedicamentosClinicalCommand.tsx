@@ -7,6 +7,7 @@ import DicaContextual from "../components/DicaContextual";
 import GrafoRelacionados from "../components/GrafoRelacionados";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import ClinicalText from "../components/ClinicalText";
+import BotaoFavorito from "../components/BotaoFavorito";
 import {
   ClinicalContextLink,
   ClinicalEmpty,
@@ -33,6 +34,7 @@ type ApresentacaoCmed = {
 };
 
 type Insight = {
+  id: number;
   slug: string;
   generic_name: string;
   drug_class: string;
@@ -167,7 +169,7 @@ function DetalheMedicamento({ drug, onClose }: { drug: Insight; onClose: () => v
         </div>
         <div className="mc-command__actions">
           <Link to="/receituario" className="mc-command__prescribe"><Icone nome="prescricao" /> Prescrever</Link>
-          <Link to="/favoritos" className="mc-command__favorite" aria-label="Abrir favoritos"><Icone nome="favorito" /></Link>
+          <BotaoFavorito itemType="medicamento" itemId={drug.id} />
         </div>
       </header>
 

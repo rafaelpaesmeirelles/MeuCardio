@@ -8,6 +8,7 @@ import Fluxograma from "../components/Fluxograma";
 import ExportarApresentacao from "../components/ExportarApresentacao";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import BotaoFavorito from "../components/BotaoFavorito";
 
 /** Extrai o código de um bloco ```mermaid```; devolve null para qualquer outro
  * bloco. Sobrescrevemos `pre` em vez de `code` porque o diagrama é uma <div>, e
@@ -33,6 +34,7 @@ function fonteOriginal(sourceRefs: string[]): string | null {
 }
 
 type Doc = {
+  id: number;
   title: string; theme: string; kind: string; summary: string | null; body_md: string;
   source_refs: string[]; review_status: string; version: number;
 };
@@ -56,8 +58,7 @@ export default function Documento() {
   return (
     <article style={{ maxWidth: contemFluxograma ? "100%" : "72ch", minWidth: 0 }}>
       <Link to="/biblioteca" className="eyebrow">← Biblioteca</Link>
-      <p className="eyebrow" style={{ marginTop: "0.8rem" }}>{doc.theme} · {doc.kind}</p>
-      <h1>{doc.title}</h1>
+      <div className="clinical-detail-heading"><div><p className="eyebrow">{doc.theme} · {doc.kind}</p><h1>{doc.title}</h1></div><BotaoFavorito itemType="documento" itemId={doc.id} /></div>
       <div style={{ display: "flex", gap: 8, alignItems: "center", margin: "0.5rem 0 1.2rem" }}>
         <SeloRevisao status={doc.review_status} />
         <span className="selo">versão {doc.version}</span>

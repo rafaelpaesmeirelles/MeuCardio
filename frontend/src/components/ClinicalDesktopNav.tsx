@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { assetUrl } from "../lib/api";
+import { getClinicalNavigationContext, getContextActions } from "../lib/clinicalNavigationContext";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
@@ -49,18 +50,16 @@ const TRABALHO_ASSISTENCIA: NavItem[] = [
 ];
 
 const FERRAMENTAS_PRODUTIVIDADE: NavItem[] = [
-  { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
   { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
   { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
   { to: "/exportar", label: "Exportar conteúdo (PDF)", icon: "documento" },
-  { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
   { to: "/busca", label: "Busca avançada", icon: "busca" },
 ];
 
 const REDE_CONECTIVIDADE: NavItem[] = [
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-  { to: "/telediagnostico", label: "Colaboração / Consultoria", icon: "evidencia" },
 ];
 
 const ADMINISTRACAO: NavItem[] = [
@@ -86,10 +85,19 @@ function Item({ item }: { item: NavItem }) {
   );
 }
 
-function Section({ section, isAdmin }: { section: NavSection; isAdmin: boolean }) {
+function routeIsActive(pathname: string, to: string) {
+  const path = to.split("?")[0];
+  return pathname === path || pathname.startsWith(`${path}/`);
+}
+
+function Section({ section, isAdmin, pathname }: { section: NavSection; isAdmin: boolean; pathname: string }) {
   const items = section.items.filter((item) => !item.adminOnly || isAdmin);
   if (!items.length) return null;
-  return <div className="ccc-nav__section"><p>{section.title}</p>{items.map((item) => <Item key={`${section.title}-${item.label}-${item.to}`} item={item} />)}</div>;
+  const current = items.some((item) => routeIsActive(pathname, item.to));
+  return <details className={`ccc-nav__section${current ? " is-current" : ""}`} open={current || (pathname === "/" && section.title === "Clínica & Decisão")}>
+    <summary><span>{section.title}</span><small>{items.length}</small><Icone nome="chevron" /></summary>
+    <div className="ccc-nav__section-items">{items.map((item) => <Item key={`${section.title}-${item.label}-${item.to}`} item={item} />)}</div>
+  </details>;
 }
 
 function iniciais(nome?: string) {
@@ -98,7 +106,10 @@ function iniciais(nome?: string) {
 
 export default function ClinicalDesktopNav() {
   const { usuario } = useAuth();
+  const { pathname } = useLocation();
   const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
+  const context = getClinicalNavigationContext(pathname);
+  const contextActions = getContextActions(pathname).slice(0, 3);
 
   const administracao=ADMINISTRACAO
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
@@ -120,7 +131,11 @@ export default function ClinicalDesktopNav() {
       </NavLink>
       <nav className="ccc-nav__scroll">
         <NavLink to="/" end className={({ isActive }) => `ccc-nav__item ccc-nav__home${isActive ? " is-active" : ""}`}><IconeHoje /><span>Página inicial</span></NavLink>
-        {sections.map((section) => <Section key={section.title} section={section} isAdmin={usuario?.role === "admin"} />)}
+        <section className="ccc-nav__context" aria-label="Atalhos do contexto atual">
+          <header><span><Icone nome={context.icon} /></span><div><small>No seu contexto</small><strong>{context.title}</strong></div></header>
+          <div>{contextActions.map((action) => <NavLink to={action.to} key={action.to}><Icone nome={action.icon} /><span>{action.label}</span></NavLink>)}</div>
+        </section>
+        {sections.map((section) => <Section key={section.title} section={section} isAdmin={usuario?.role === "admin"} pathname={pathname} />)}
       </nav>
       <NavLink to="/minha-conta" className="ccc-nav__footer ccc-nav__plan" aria-label="Abrir perfil e conta">
         {usuario?.photo_url ? <img className="ccc-nav__plan-photo" src={assetUrl(usuario.photo_url)} alt="" /> : <span className="ccc-nav__plan-avatar">{iniciais(usuario?.full_name)}</span>}

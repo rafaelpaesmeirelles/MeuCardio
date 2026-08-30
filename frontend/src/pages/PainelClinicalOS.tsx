@@ -107,7 +107,7 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/indicadores", label: "Indicadores & Métricas", icon: "indicadores" },
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
       { to: "/exportar", label: "Exportar conteúdo (PDF)", icon: "documento" },
-      { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+      { to: "/favoritos", label: "Favoritos", icon: "favorito" },
       { to: "/busca", label: "Busca avançada", icon: "busca" },
       { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
     ],

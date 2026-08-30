@@ -63,3 +63,40 @@ test("Termos de Uso cobrem a plataforma e preservam o apêndice de mapas", () =>
     "Apêndice — mapas e deslocamento",
   ]) assert.equal(terms.includes(section), true, `falta seção jurídica: ${section}`);
 });
+
+test("navegação usa contexto clínico e elimina rotas duplicadas do catálogo", () => {
+  const context = read("src/lib/clinicalNavigationContext.ts");
+  const desktop = read("src/components/ClinicalDesktopNav.tsx");
+  const mobile = read("src/components/ClinicalMobileNav.tsx");
+  for (const token of ["Farmacologia clínica", "Contexto do paciente", "Produção clínica", "Tudo com Tudo", "commandDestination"]) {
+    assert.equal(context.includes(token), true, `falta contexto: ${token}`);
+  }
+  assert.equal(desktop.includes("<details"), true, "seções desktop precisam de revelação progressiva");
+  assert.equal(desktop.includes("No seu contexto"), true);
+  assert.equal(mobile.includes("cc-mobile-more__context"), true);
+  for (const [source, name] of [[desktop, "desktop"], [mobile, "mobile"]]) {
+    assert.equal((source.match(/to: "\/calculadoras"/g) ?? []).length, 1, `calculadoras duplicada no ${name}`);
+    assert.equal((source.match(/to: "\/telediagnostico"/g) ?? []).length, 1, `telediagnóstico duplicado no ${name}`);
+    assert.equal(source.includes("Notas & Favoritos"), false, `o ${name} não pode prometer notas inexistentes`);
+  }
+});
+
+test("busca tem refinamento progressivo e favoritos fecham o fluxo prometido", () => {
+  const search = read("src/pages/Busca.tsx");
+  const favorites = read("src/pages/Favoritos.tsx");
+  const favoriteButton = read("src/components/BotaoFavorito.tsx");
+  const drug = read("src/pages/MedicamentosClinicalCommand.tsx");
+  const document = read("src/pages/Documento.tsx");
+  const image = read("src/pages/ImagemGaleria.tsx");
+  const drugApi = read("../backend/app/api/drug_insights.py");
+  for (const token of ["Filtrar por área clínica", "Ver todos os", "aria-expanded", "tct-group__toggle"]) {
+    assert.equal(search.includes(token), true, `busca sem contrato progressivo: ${token}`);
+  }
+  assert.equal(favorites.includes("Filtrar favoritos"), true);
+  assert.equal(favorites.includes("Buscar conteúdo"), true);
+  assert.equal(favoriteButton.includes("Atualizando…"), true);
+  assert.equal(drug.includes('itemType="medicamento"'), true);
+  assert.equal(document.includes('itemType="documento"'), true);
+  assert.equal(image.includes('itemType="imagem"'), true);
+  assert.match(drugApi, /"id": drug\.id/);
+});

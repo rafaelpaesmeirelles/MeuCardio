@@ -79,6 +79,7 @@ def _cmed(db: Session, drug: Drug, uf: str | None, versao: CmedVersao | None) ->
 
 def _payload(db: Session, drug: Drug, uf: str | None, versao: CmedVersao | None) -> dict:
     return {
+        "id": drug.id,
         "slug": drug.slug,
         "generic_name": drug.generic_name,
         "drug_class": drug.drug_class,

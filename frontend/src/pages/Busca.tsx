@@ -86,12 +86,14 @@ export default function Busca() {
   const [q, setQ] = useState(inicial), [assunto, setAssunto] = useState(inicial.trim());
   const [res, setRes] = useState<Res[] | null>(null), [drug, setDrug] = useState<Insight | null>(null), [rel, setRel] = useState<Rel[]>([]);
   const [loading, setLoading] = useState(false), [erro, setErro] = useState(""), [aviso, setAviso] = useState("");
+  const [filtro, setFiltro] = useState<"tudo" | Area>("tudo");
+  const [expandidos, setExpandidos] = useState<Set<string>>(new Set());
   const seq = useRef(0);
 
   async function buscar(valor: string) {
     const termo = valor.trim(); if (termo.length < 2) return;
     const id = ++seq.current;
-    setLoading(true); setErro(""); setAviso(""); setDrug(null); setRel([]); setAssunto(termo); setParams({ q: termo }, { replace: true });
+    setLoading(true); setErro(""); setAviso(""); setDrug(null); setRel([]); setFiltro("tudo"); setExpandidos(new Set()); setAssunto(termo); setParams({ q: termo }, { replace: true });
     const [s, ds] = await Promise.allSettled([api.get<{ results: Res[] }>(`/search?q=${encodeURIComponent(termo)}`), api.get<Drug[]>(`/drugs?q=${encodeURIComponent(termo)}`)]);
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
@@ -118,20 +120,29 @@ export default function Busca() {
   const grupos = new Map<Area, Res[]>();
   (res ?? []).forEach((r) => { const a = area(r); grupos.set(a, [...(grupos.get(a) ?? []), r]); });
   const ordenados = [...grupos].sort((a, b) => Number(AREAS[a[0]][3]) - Number(AREAS[b[0]][3]));
+  const gruposVisiveis = filtro === "tudo" ? ordenados : ordenados.filter(([a]) => a === filtro);
   const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(area(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
 
+  function alternarExpandido(chave: string) {
+    setExpandidos((atuais) => {
+      const proximos = new Set(atuais);
+      proximos.has(chave) ? proximos.delete(chave) : proximos.add(chave);
+      return proximos;
+    });
+  }
+
   return <main className="tct-page">
-    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Todo o conhecimento do assunto, separado por área clínica.</p>
+    <header className="cartao tct-hero"><div className="tct-hero__top"><div><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Todo o conhecimento do assunto, separado por área clínica.</p></div><Link className="tct-favorites-link" to="/favoritos">☆ Favoritos</Link></div>
       <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
     </header>
     {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando áreas…" />}
     {!loading && drug && <PainelDrug d={drug} />}
     {!loading && res && res.length > 0 && <section className="cartao">
       <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por área</p></div></header>
-      <nav className="tct-nav" aria-label="Áreas">{ordenados.map(([a, xs]) => <a className="selo" href={`#area-${a}`} key={a}>{AREAS[a][0]} · {xs.length}</a>)}</nav>
+      <nav className="tct-nav tct-nav--filters" aria-label="Filtrar por área clínica"><button type="button" className={filtro === "tudo" ? "is-active" : ""} aria-pressed={filtro === "tudo"} onClick={() => setFiltro("tudo")}>Todas · {res.length}</button>{ordenados.map(([a, xs]) => <button type="button" className={filtro === a ? "is-active" : ""} aria-pressed={filtro === a} onClick={() => setFiltro(a)} key={a}>{AREAS[a][0]} · {xs.length}</button>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([a, xs]) => <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
-        {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
+        {gruposVisiveis.map(([a, xs]) => { const aberto = filtro === a || expandidos.has(a); const visiveis = aberto ? xs : xs.slice(0, 4); return <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p></header><div>{visiveis.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div>{filtro === "tudo" && xs.length > 4 && <button type="button" className="tct-group__toggle" aria-expanded={aberto} onClick={() => alternarExpandido(a)}>{aberto ? "Mostrar menos" : `Ver todos os ${xs.length} resultados`}</button>}</section>; })}
+        {filtro === "tudo" && rel.map((g) => { const chave = `rel-${g.tipo}`; const aberto = expandidos.has(chave); const visiveis = aberto ? g.itens : g.itens.slice(0, 4); return <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{visiveis.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div>{g.itens.length > 4 && <button type="button" className="tct-group__toggle" aria-expanded={aberto} onClick={() => alternarExpandido(chave)}>{aberto ? "Mostrar menos" : `Ver todos os ${g.itens.length} itens`}</button>}</section>; })}
       </div>
     </section>}
     {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{AREAS[area(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
