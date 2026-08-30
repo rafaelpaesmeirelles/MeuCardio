@@ -6,7 +6,7 @@ kind: fluxograma
 summary: "GUSTO-IIb 30 d P=0,06 (IC inclui 1); OASIS-2 7 d P=0,077. Não vender 24 h, 72 h nem o composto com angina. Sangramento maior sobe no OASIS-2. OASIS-1 é piloto. OASIS-5 é fondaparinux."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em GUSTO-IIb PMID 8778585 e OASIS-2 PMID 9989712. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em GUSTO-IIb PMID 8778585 e OASIS-2 PMID 9989712. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "GUSTO IIb Investigators. N Engl J Med. 1996;335(11):775-782. PMID: 8778585."
   - "OASIS-2 Investigators. Lancet. 1999;353(9151):429-438. PMID: 9989712."

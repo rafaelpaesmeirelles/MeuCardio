@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 summary: "Diferencial da troponina acima do percentil 99 quando o quadro não é uma SCA típica: separar elevação crônica estável de lesão aguda com padrão dinâmico, depois procurar evidência clínica de isquemia para distinguir infarto tipo 1, infarto tipo 2 por desequilíbrio oferta-demanda e lesão miocárdica não isquêmica, com a conduta de cada folha."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Thygesen K, Alpert JS, Jaffe AS, et al; ESC Scientific Document Group. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617. https://academic.oup.com/eurheartj/article/40/3/237/5079081"
   - "Byrne RA, Rossello X, Coughlan JJ, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. https://academic.oup.com/eurheartj/article/44/38/3720/7243210 (texto integral lido no PDF espelhado em https://www.uniklinik-ulm.de/fileadmin/default/09_Sonstige/Klinische-Chemie/Downloads/ESC_Guideline_ACS_2023.pdf)"

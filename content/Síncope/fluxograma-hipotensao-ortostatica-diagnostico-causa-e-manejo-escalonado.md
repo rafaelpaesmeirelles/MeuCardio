@@ -5,7 +5,7 @@ theme: "Síncope"
 kind: fluxograma
 summary: "Do teste de ortostatismo ativo à prescrição: como confirmar a hipotensão ortostática clássica, separar a forma medicamentosa, a hipovolêmica e a neurogênica pela resposta da frequência cardíaca, esgotar as medidas não farmacológicas e só então escolher entre midodrina, fludrocortisona e droxidopa sem agravar a hipertensão supina."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304. Texto integral lido em PDF: https://www.eusem.org/images/ESC_guideline_2018.pdf (seções 4.2.2.1, 5.3.1-5.3.10, Tabelas 3 e 8 e tabela Treatment of orthostatic hypotension)."
   - "Brignole M, Moya A, de Lange FJ, et al. Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):e43-e80. DOI: 10.1093/eurheartj/ehy071. Texto integral lido em PDF: https://www.gimsi.it/wp-content/uploads/2018/07/ESC-guidelines-2018-Practical-Instructions.pdf (seção de síndromes de intolerância ortostática, Web Table 1)."

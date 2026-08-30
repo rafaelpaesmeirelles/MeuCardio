@@ -6,7 +6,7 @@ kind: fluxograma
 summary: "Três multicêntricos de EGDT vs usual: ProCESS morte 60 d NS; ARISE 90 d P=0,90; ProMISe 90 d P=0,90 e mais caro. Não vender o ensaio unicêntrico antigo. SOAP-II é vasopressor; CLOVERS é volume — outras perguntas. Não inventar números do Rivers."
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em ProCESS PMID 24635773, ARISE 25272316 e ProMISe 25776532. Rivers 2001 não relido. Publicação sujeita à aprovação do responsável técnico. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
+review_note: "Produção científica contínua em 29/08/2026. Árvore ancorada em ProCESS PMID 24635773, ARISE 25272316 e ProMISe 25776532. Rivers 2001 não relido. Revisão independente ChatGPT concluída em 29/08/2026: desfechos primários, amostra, comparadores, PMIDs/DOIs e mensagens de segurança conferidos; liberado para publicação pelo responsável técnico."
 source_refs:
   - "ProCESS Investigators. N Engl J Med. 2014;370(18):1683-1693. PMID: 24635773."
   - "ARISE Investigators. N Engl J Med. 2014;371(16):1496-1506. PMID: 25272316."

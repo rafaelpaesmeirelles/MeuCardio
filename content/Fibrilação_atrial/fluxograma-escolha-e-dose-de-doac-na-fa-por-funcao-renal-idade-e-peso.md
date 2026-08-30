@@ -5,7 +5,7 @@ theme: "Fibrilação atrial"
 kind: fluxograma
 summary: "Depois de decidido que o paciente com fibrilação atrial vai anticoagular, esta árvore escolhe entre varfarina e DOAC e fixa a dose: contraindicação valvar, faixa de clearance de creatinina por Cockcroft-Gault, interação medicamentosa limitante e os critérios de redução de dose próprios de cada fármaco."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Steffel J, Collins R, Antz M, et al. 2021 European Heart Rhythm Association Practical Guide on the Use of Non-Vitamin K Antagonist Oral Anticoagulants in Patients with Atrial Fibrillation. Europace. 2021;23(10):1612-1676. DOI: 10.1093/europace/euab065. PMID: 33895845. Texto integral lido em https://academic.oup.com/europace/article/23/10/1612/6247378"
   - "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723. Página do artigo aberta em https://academic.oup.com/eurheartj/article/45/36/3314/7738779 — as tabelas de recomendação estão em imagem e não foram transcritas nesta sessão"

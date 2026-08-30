@@ -5,7 +5,7 @@ theme: "Insuficiência cardíaca"
 kind: fluxograma
 summary: "Do momento da alta por IC aguda às primeiras seis semanas: confirmar euvolemia e terapia oral iniciada com PA, potássio e creatinina estáveis; escolher entre a estratégia intensiva do STRONG-HF, com metade da dose-alvo na alta e visitas nas semanas 1, 2, 3 e 6, e o cuidado habitual com consulta em 1 a 2 semanas; e o que fazer quando um indicador de segurança aparece na visita."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666. https://academic.oup.com/eurheartj/article/44/37/3627/7246292"
   - "2023 Focused Update of ESC Guidelines for Acute and Chronic HF: Key Points. American College of Cardiology, 2023. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/58/2023-focused-update-esc-guidelines-hf-esc-2023"

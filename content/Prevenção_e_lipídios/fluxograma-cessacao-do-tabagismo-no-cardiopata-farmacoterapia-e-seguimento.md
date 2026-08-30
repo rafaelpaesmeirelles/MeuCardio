@@ -5,7 +5,7 @@ theme: "Prevenção e lipídios"
 kind: fluxograma
 summary: "Caminho decisório da cessação tabágica em quem já tem doença cardiovascular: perguntar, aconselhar e avaliar disposição; vareniclina como primeira linha ou TRN combinada, bupropiona como alternativa; início ainda na internação após SCA; entrevista motivacional para quem não está pronto; e o que fazer na recaída."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905. Seção 4.5 (Smoking intervention), Tabela 9 e tabela de recomendações, lidas no PDF integral: https://www.sciensano.be/sites/default/files/2021_esc_guidelines_prevention_cardiovasculaire_3.pdf"
   - "Eisenberg MJ, Windle SB, Roy N, et al.; EVITA Investigators. Varenicline for Smoking Cessation in Hospitalized Patients With Acute Coronary Syndrome. Circulation. 2016;133(1):21-30. DOI: 10.1161/CIRCULATIONAHA.115.019634. PMID: 26553744. Abstract lido via Europe PMC."

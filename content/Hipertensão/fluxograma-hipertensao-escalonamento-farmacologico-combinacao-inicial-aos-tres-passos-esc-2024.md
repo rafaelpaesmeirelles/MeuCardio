@@ -5,7 +5,7 @@ theme: "Hipertensão"
 kind: fluxograma
 summary: "Os três passos do algoritmo farmacológico da ESC 2024 — dupla em dose baixa em comprimido único, tripla em dose baixa, tripla titulada até a dose máxima tolerada —, as exceções em que se começa com monoterapia, o lugar do betabloqueador e o que confirmar antes de rotular o paciente como hipertenso resistente."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McEvoy JW, McCarthy CP, Bruno RM, Brouwers S, Canavan MD, Ceconi C, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715. Texto integral lido em https://web.archive.org/web/20260823162145/https://academic.oup.com/eurheartj/article/45/38/3912/7741010"
   - "McCarthy CP, Bruno RM, McEvoy JW, Touyz RM. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension: what is new in pharmacotherapy? Eur Heart J Cardiovasc Pharmacother. 2025;11(1):7-9. DOI: 10.1093/ehjcvp/pvae084. PMID: 39439212. PMCID: PMC11805683. https://pmc.ncbi.nlm.nih.gov/articles/PMC11805683/"

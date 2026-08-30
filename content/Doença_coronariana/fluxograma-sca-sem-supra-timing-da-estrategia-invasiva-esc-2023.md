@@ -5,7 +5,7 @@ theme: "Doença coronariana"
 kind: fluxograma
 summary: "Na SCA sem supra de ST, a diretriz ESC 2023 separa três velocidades para a angiografia — imediata, precoce em menos de 24 h e seletiva — a partir de critérios de risco muito alto e de alto risco; o fluxograma organiza essa escolha e mostra o que fazer no ramo seletivo, em que o teste não invasivo decide se a angiografia acontece."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654. Texto integral lido no PDF espelhado em https://www.uniklinik-ulm.de/fileadmin/default/09_Sonstige/Klinische-Chemie/Downloads/ESC_Guideline_ACS_2023.pdf (seções 5.2.2-5.2.4, Figura 8, Recommendation Tables 2 e 4)."
   - "'10 commandments' for the 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2024;45(14):1193-1195. https://academic.oup.com/eurheartj/article/45/14/1193/7516285"

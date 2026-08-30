@@ -5,7 +5,7 @@ theme: "Prevenção e lipídios"
 kind: fluxograma
 summary: "Caminho decisório no adulto com obesidade visto pelo cardiologista: limiar de IMC para tratar, estilo de vida estruturado como base, semaglutida 2,4 mg na doença aterosclerótica estabelecida (SELECT), semaglutida ou tirzepatida na ICFEp com obesidade (STEP-HFpEF, SUMMIT), incretínico no diabético obeso e os limiares de IMC para encaminhar à cirurgia bariátrica."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas. Publicação sujeita à aprovação do responsável técnico."
+review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563 — texto conferido por meio da revisão de acesso aberto do ensaio em PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC11439431/"
   - "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681 — números tomados do documento já verificado no acervo semaglutida-na-icfep-com-obesidade-o-ensaio-step-hfpef.md"
