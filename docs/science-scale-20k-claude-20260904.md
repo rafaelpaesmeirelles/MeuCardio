@@ -132,3 +132,31 @@ até aqui.
 
 **Total canônico projetado após Lote 3**: 10.206 (10.189 revisado + 17
 pendente_revisao desta branch: 8 do Lote 1 + 7 do Lote 2 + 2 do Lote 3).
+
+## Lote 4 — concluído (commit `eda08a49`, 30/08/2026)
+
+3 itens em interseções hemato-cardiológicas (PTT, CAPS, policitemia
+vera) — pivô deliberado após confirmar que temas cardiovasculares
+"óbvios" já estão quase todos cobertos; esta área teve 0 colisões nas
+checagens. Gates limpos, 10.209 registros totais.
+
+**Total canônico projetado após Lote 4**: 10.209 (10.189 revisado + 20
+pendente_revisao nesta branch: 8+7+2+3).
+
+## Status consolidado até aqui (4 lotes)
+
+| Tipo | Cota Claude | Entregues (pendente_revisao) | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 2 | 2.398 |
+| Casos clínicos | 900 | 5 | 895 |
+| Checklists | 600 | 8 | 592 |
+| Materiais-paciente | 500 | 4 | 496 |
+| Trilhas | 300 | 0 | 300 |
+| Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
+| **Total** | **4.900** | **19** | **4.881** |
+
+Ritmo real observado: ~2-3 itens por rodada de agentes paralelos
+(8-10min cada agente com pesquisa PubMed completa), limitado por
+verificação anticolisão cada vez mais difícil (corpus muito denso) e
+pelo tempo de pesquisa/verificação por item, não pelo paralelismo em
+si. Reportando ritmo real a cada lote em vez de prometer a cota cheia.
