@@ -17836,5 +17836,28 @@
       "Zinnamosca L, Petramala L, Cotesta D, et al. Neurofibromatosis type 1 (NF1) and pheochromocytoma: prevalence, clinical and cardiovascular aspects. Arch Dermatol Res. 2011;303(5):317-325. doi:10.1007/s00403-010-1090-z. PMID: 21042801"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica-ataxia-friedreich",
+    "titulo": "Ataxia progressiva e hipertrofia ventricular concêntrica em adolescente",
+    "tema": "Cardiomiopatias hereditárias",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 14 anos é trazido ao ambulatório por marcha atáxica progressiva iniciada aos 11 anos, associada a disartria, perda de sensibilidade vibratória em membros inferiores e escoliose. Ao exame, apresenta pés cavos bilaterais e arreflexia aquileana. O ecocardiograma transtorácico mostra hipertrofia ventricular esquerda concêntrica, com espessura septal aumentada e fração de ejeção preservada.",
+    "pergunta": "Diante desse quadro neurológico associado a hipertrofia ventricular esquerda concêntrica, qual das alternativas está correta quanto ao diagnóstico e ao prognóstico deste paciente?",
+    "opcoes": [
+      "Trata-se de doença de Danon; a hipertrofia biventricular concêntrica com pré-excitação ao ECG é típica, e a insuficiência cardíaca antes dos 20 anos é a causa mais comum de óbito.",
+      "Trata-se de ataxia de Friedreich; a cardiomiopatia hipertrófica concêntrica é o principal determinante da sobrevida e a causa mais frequente de óbito nesses pacientes, de forma relativamente independente da gravidade das manifestações neurológicas.",
+      "Trata-se de doença de Fabry; o acometimento cardíaco costuma ser tardio, na vida adulta, precedido por acroparestesias e angioqueratomas, sendo a ataxia manifestação incomum dessa doença.",
+      "Trata-se de doença de Pompe de início tardio; a hipertrofia concêntrica é achado universal em adolescentes e o óbito decorre predominantemente de insuficiência respiratória por fraqueza diafragmática, sem relação com a função cardíaca."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro descrito é clássico de ataxia de Friedreich (FRDA): início na infância/adolescência com ataxia de marcha progressiva, disartria, perda de sensibilidade proprioceptiva/vibratória, arreflexia, pés cavos e escoliose, associado a hipertrofia ventricular esquerda concêntrica. A FRDA é uma doença neurodegenerativa autossômica recessiva causada por expansão do trinucleotídeo GAA no gene FXN, levando a deficiência de frataxina (Adam MP et al., GeneReviews, PMID 20301458). A cardiomiopatia hipertrófica concêntrica está presente na maioria dos pacientes: em uma coorte pediátrica britânica com FA-HCM, 90,3% apresentavam hipertrofia ventricular esquerda concêntrica ao diagnóstico (Norrish G et al., Arch Dis Child 2022;107(5):450-455, PMID 34610949). Weidemann F et al. (Circulation 2012;125(13):1626-34, PMID 22379112) demonstraram, em coorte transversal de 205 pacientes, que apenas 31,7% não apresentavam cardiomiopatia detectável, e que a gravidade da cardiomiopatia não se correlacionava claramente com o grau de comprometimento neurológico — reforçando a necessidade de rastreio cardíaco regular independentemente da apresentação neurológica. Em fase mais avançada, uma fração dos pacientes evolui para disfunção sistólica com dilatação ventricular (FA-CM 'severa', segundo a classificação do mesmo estudo). Do ponto de vista prognóstico, Pousset F et al. (JAMA Neurol 2015;72(11):1334-41, PMID 26414159), em seguimento de 22 anos de 133 pacientes com FRDA confirmada geneticamente, mostraram que 80% dos óbitos foram de causa cardíaca, que a hipertrofia cardíaca estava presente em 57,9% da coorte, e que o comprometimento neurológico não foi preditivo da evolução cardíaca ao longo do tempo — confirmando que a cardiomiopatia, e não a doença neurológica em si, é o principal determinante de sobrevida na FRDA. As demais alternativas descrevem outras doenças hereditárias com hipertrofia cardíaca (Danon, Fabry, Pompe de início tardio), mas nenhuma reproduz de forma característica a combinação de ataxia de início na infância/adolescência com disartria, perda sensitiva, arreflexia e pés cavos associada a hipertrofia concêntrica como principal causa de morte independente da gravidade neurológica — perfil que é distintivo da ataxia de Friedreich.",
+    "source_refs": [
+      "Weidemann F, Rummey C, Bijnens B, et al. The heart in Friedreich ataxia: definition of cardiomyopathy, disease severity, and correlation with neurological symptoms. Circulation. 2012;125(13):1626-1634. doi:10.1161/CIRCULATIONAHA.111.059477. PMID: 22379112.",
+      "Pousset F, Legrand L, Monin ML, et al. A 22-Year Follow-up Study of Long-term Cardiac Outcome and Predictors of Survival in Friedreich Ataxia. JAMA Neurol. 2015;72(11):1334-1341. doi:10.1001/jamaneurol.2015.1855. PMID: 26414159.",
+      "Norrish G, Rance T, Montanes E, et al. Friedreich's ataxia-associated childhood hypertrophic cardiomyopathy: a national cohort study. Arch Dis Child. 2022;107(5):450-455. doi:10.1136/archdischild-2021-322455. PMID: 34610949.",
+      "Adam MP, Bick S, Mirzaa GM, et al. Friedreich Ataxia. In: GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-. PMID: 20301458."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
