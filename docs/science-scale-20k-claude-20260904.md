@@ -456,3 +456,25 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
 | **Total** | **4.900** | **69** | **4.831** |
+
+## Lote 25 — concluído (commit 0159c802)
+
+- **content/Cardiomiopatias**: +1 — `reativacao-da-doenca-de-chagas-apos-transplante-cardiaco`. Sobreposição parcial registrada com subseção curta pré-existente em `miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022.md` — aprofundamento dedicado, não duplicata; decisão de eventual consolidação fica com o Rafael.
+- **casos-clinicos**: +1 — `miocardite-de-celulas-gigantes-choque-cardiogenico-bloqueio-av-refratario-imunossupressao-combinada` (pareado com doc+checklist do lote 21).
+- **material-paciente**: +1 — `estenose-aortica-e-amiloidose-ao-mesmo-tempo-o-que-significa-para-o-tavi` (pareado com o documento do lote 24).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.260 (10.189 revisado + 71 pendente_revisao).
+- **PR #709**: OPEN, mergeable, checks verdes — sem mudança, aguardando Rafael.
+- **PR #778**: OPEN, draft — sem mudança de status (gate editorial permanece vermelho por desenho).
+
+### Status consolidado (após Lote 25)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 9 | 2.391 |
+| Casos clínicos | 900 | 28 | 872 |
+| Checklists | 600 | 11 | 589 |
+| Materiais-paciente | 500 | 21 | 479 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
+| **Total** | **4.900** | **71** | **4.829** |
