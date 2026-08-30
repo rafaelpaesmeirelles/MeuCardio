@@ -1687,15 +1687,54 @@ explicitamente em cada resumo. Verificação de colisão reconfirmada:
 `origin/main` (SHA 5915b662, 427 itens) permanece subconjunto exato
 do branch. Gates limpos. Total: 464 checklists.
 
-## Lote 72 (planejado)
+## Lote 72 — concluído (SHA 5610fd62) — total 472 checklists — MÁXIMO PARALELO (8 agentes)
+
+Quinta rodada de "máximo de agentes possível". Mudança de domínio
+(endócrino/metabólico/genético-vascular, após vasculites no lote
+71):
+
+- `acometimento-cardiovascular-sindrome-de-cushing` — hipertensão
+  via receptor mineralocorticoide; tromboprofilaxia perioperatória
+  (consenso Delphi 2025); mortalidade CV residual pós-remissão (SMR
+  2,72, Clayton 2016).
+- `miocardite-associada-a-dress` — miocardite eosinofílica como
+  causa de óbito; latência 2-8 semanas (mediana 22 dias); escore
+  RegiSCAR.
+- `acometimento-cardiovascular-insuficiencia-adrenal-crise-adrenal`
+  — crise adrenal como diferencial de choque refratário a
+  vasopressor; cardiomiopatia takotsubo-símile reversível.
+- `cardiomiopatia-acromegalica` — hipertrofia biventricular;
+  valvopatia por efeito trófico GH/IGF-1; FA (HR 1,59, coorte
+  coreana n=1874).
+- `cardiomiopatia-deficiencia-primaria-de-carnitina` — SLC22A5/
+  OCTN2; rara cardiomiopatia genética curável com L-carnitina; OR
+  54,3 para morte súbita não tratada.
+- `insuficiencia-cardiaca-alto-debito-doenca-de-paget-ossea` —
+  mecanismo de shunt intraósseo; hoje considerada rara isoladamente
+  (Giaquinto 2025); não repete o documento geral de alto débito já
+  existente.
+- `aneurisma-aortico-toracico-familiar-nao-sindromico` — FTAAD
+  (ACTA2/MYH11/PRKG1/MYLK), diferenciado de Marfan/Loeys-Dietz/EDS
+  já cobertos; limiares cirúrgicos mais baixos por gene.
+- `acometimento-cardiovascular-hiperparatireoidismo-primario` —
+  calcificação valvar (PTH como preditor independente mais forte
+  que fatores de risco tradicionais); reversibilidade heterogênea
+  pós-PTX.
+
+Nenhuma diretriz SBC/ESC/AHA específica localizada para a maioria
+dos temas — declarado explicitamente em cada resumo. Verificação de
+colisão reconfirmada: `origin/main` (SHA 56eaa014, 427 itens)
+permanece subconjunto exato do branch. Gates limpos. Total: 472
+checklists.
+
+## Lote 73 (planejado)
 
 Continuando no ritmo máximo de paralelismo, em tempo indeterminado,
 até ordem de pausa do Rafael. Meta compartilhada: 20.000 documentos
 científicos publicados até 06/09/2026 (Claude+Grok geram
-pendente_revisao; ChatGPT revisa e publica — confirmado em produção
-via PR #772/#773). Auditoria de próximos gaps com o procedimento
-padrão (JSONs + `content/**/*.md` + `gh pr list` + verificação de
-que main não avançou com conteúdo de outras faixas desde o último
-fetch).
+pendente_revisao; ChatGPT revisa e publica). Auditoria de próximos
+gaps com o procedimento padrão (JSONs + `content/**/*.md` +
+`gh pr list` + verificação de que main não avançou com conteúdo de
+outras faixas desde o último fetch).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
