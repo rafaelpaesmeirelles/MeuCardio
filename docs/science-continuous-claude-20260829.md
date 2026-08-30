@@ -1523,11 +1523,67 @@ temas — declarado explicitamente em cada resumo. Gates (tudo-com-
 tudo: broken_references=[]; content_inventory --strict: exit 0)
 limpos. Total: 436 checklists.
 
-## Lote 69 (planejado)
+## Lote 69 — concluído (SHA a770349a) — total 446 checklists — MÁXIMO PARALELO (10 agentes)
 
-Continuando no ritmo máximo de paralelismo. Auditoria de próximos
-gaps com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list` + verificação de que main não avançou com conteúdo de
-outras faixas desde o último fetch).
+Segunda rodada de "máximo de agentes possível". 10 itens: 8
+canalopatias/laminopatias/distrofias musculares hereditárias + 1
+lacuna de rastreio (CTEPH pós-TEP agudo) + 1 cardiomiopatia
+neuromuscular:
+
+- `sindrome-de-jervell-e-lange-nielsen` — LQTS bialélica
+  (KCNQ1/KCNE1) com surdez neurossensorial obrigatória, gravidade
+  cardíaca maior que Romano-Ward; registro Schwartz 2006 (n=186).
+- `cardiomiopatia-ataxia-friedreich` — CMH concêntrica na FRDA
+  (expansão GAA em FXN); coorte EFACTS 2024.
+- `acometimento-cardiovascular-neurofibromatose-tipo-1` —
+  vasculopatia própria da NF1, hipertensão secundária
+  (renovascular/feocromocitoma), diferenciação molecular do
+  fenótipo NF1-Noonan/Watson (variante em NF1, não em genes
+  Ras-MAPK clássicos).
+- `sindrome-de-timothy` — LQT8 (CACNA1C/Cav1.2), bloqueio AV
+  funcional 2:1, registro internacional 2024 com mortalidade de 45%.
+- `rastreio-cteph-pos-tep-agudo` — lacuna de rastreio na janela de
+  3-6 meses pós-TEP agudo, distinta do verbete geral de CTEPH já
+  em tramitação no PR #714 (operabilidade/endarterectomia); ~25%
+  dos casos de CTEPH não têm TEP agudo prévio reconhecido — limite
+  estrutural declarado explicitamente.
+- `sindrome-de-alstrom-acometimento-cardiovascular` — ciliopatia
+  ultrarrara (ALMS1), padrão bimodal de cardiomiopatia dilatada
+  (infância precoce e adolescência/adulto).
+- `cardiomiopatia-duchenne-becker-vigilancia-manejo` — rastreio e
+  manejo farmacológico padrão (IECA precoce, eplerenona,
+  corticoterapia), escopo explicitamente separado do artigo
+  existente sobre deramiocel/HOPE-2/HOPE-3.
+- `acometimento-cardiaco-distrofia-emery-dreifuss` — laminopatia
+  (EMD/LMNA), doença de condução e risco de morte súbita mesmo com
+  FEVE preservada (Classe IIa/C para CDI em mutação LMNA, ESC 2021).
+- `acometimento-cardiaco-distrofia-miotonica-tipo-1` — doença de
+  condução desproporcional à função sistólica na DM1; segunda
+  causa de morte após insuficiência respiratória (Groh 2008, Wahbi
+  2012).
+- `doenca-de-danon` — deficiência de LAMP2 (defeito
+  autofágico-lisossômico estrutural, não enzimático), assimetria
+  de gravidade ligada ao sexo, pré-excitação WPW por via
+  fascículo-ventricular (fenocópia de HCM).
+
+Nenhuma diretriz SBC/ESC/AHA específica localizada para nenhum dos
+10 temas — declarado explicitamente em cada resumo. Gates (tudo-
+com-tudo: broken_references=[]; content_inventory --strict: exit 0)
+limpos. Total: 446 checklists.
+
+Trabalho lateral concluído nesta janela (branch própria, PR aberto,
+não bloqueia esta produção): correção de 3 anomalias de tema fora
+do vocabulário canônico do motor "Tudo com Tudo" — PR #709.
+
+## Lote 70 (planejado)
+
+Continuando no ritmo máximo de paralelismo, em tempo indeterminado,
+até ordem de pausa do Rafael. Meta compartilhada: 20.000 documentos
+científicos publicados até 06/09/2026 (Claude+Grok geram
+pendente_revisao; ChatGPT revisa e publica — divisão de trabalho
+confirmada em 30/08). Auditoria de próximos gaps com o procedimento
+padrão (JSONs + `content/**/*.md` + `gh pr list` + verificação de
+que main não avançou com conteúdo de outras faixas desde o último
+fetch).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
