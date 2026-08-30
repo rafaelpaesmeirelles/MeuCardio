@@ -4649,5 +4649,482 @@
     "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
     "fonte_producao": "claude",
     "version": 2
+  },
+  {
+    "slug": "suspeita-infeccao-dispositivo-cardiaco-implantavel",
+    "name": "Suspeita de infecção de dispositivo cardíaco implantável",
+    "aliases": [
+      "infecção no marca-passo",
+      "ferida no local do gerador",
+      "bolsa do CDI inflamada",
+      "infecção de CIED",
+      "erosão do gerador",
+      "infecção de bolsa do dispositivo"
+    ],
+    "areas": [
+      "geral",
+      "cardiogeriatria"
+    ],
+    "summary": "Triagem de sinais locais na loja do gerador de marca-passo, CDI ou ressincronizador (eritema, dor, drenagem purulenta, deiscência, erosão) associados ou não a febre, sepse ou evidência prévia de envolvimento endovascular, para diferenciar infecção de bolsa/sistema — que exige extração completa — de achados benignos como hematoma isolado ou reação inflamatória pós-operatória recente.",
+    "questions": [
+      {
+        "id": "device_type",
+        "label": "Qual dispositivo está implantado?",
+        "type": "select",
+        "required": true,
+        "section": "Contexto",
+        "options": [
+          {
+            "value": "marca_passo",
+            "label": "Marca-passo"
+          },
+          {
+            "value": "cdi",
+            "label": "Cardiodesfibrilador implantável (CDI)"
+          },
+          {
+            "value": "ressincronizador",
+            "label": "Ressincronizador (TRC)"
+          },
+          {
+            "value": "outro",
+            "label": "Outro ou não sabe especificar"
+          }
+        ]
+      },
+      {
+        "id": "days_since_procedure",
+        "label": "Quantos dias se passaram desde o implante ou o procedimento mais recente no dispositivo (troca de gerador, revisão, upgrade)?",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 3650,
+        "unit": "dias",
+        "section": "Contexto"
+      },
+      {
+        "id": "erosion_exposure",
+        "label": "Há erosão da pele com exposição do gerador ou do eletrodo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "purulent_drainage",
+        "label": "Há drenagem purulenta ou trajeto fistuloso na loja do gerador?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "wound_dehiscence",
+        "label": "Há deiscência de sutura ou abertura da incisão sobre a loja do dispositivo?",
+        "type": "boolean",
+        "required": true,
+        "section": "Red flags"
+      },
+      {
+        "id": "local_erythema_warmth",
+        "label": "Há eritema, calor ou edema localizado na loja do gerador?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sinais locais"
+      },
+      {
+        "id": "hematoma_only",
+        "label": "Há apenas hematoma ou equimose no local, sem eritema, calor ou drenagem associados?",
+        "type": "boolean",
+        "section": "Sinais locais"
+      },
+      {
+        "id": "fever",
+        "label": "Há febre ou calafrio associado?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sinais sistêmicos"
+      },
+      {
+        "id": "sepsis_signs",
+        "label": "Há hipotensão, taquicardia importante, confusão mental ou outros sinais de sepse?",
+        "type": "boolean",
+        "required": true,
+        "section": "Sinais sistêmicos"
+      },
+      {
+        "id": "positive_blood_cultures",
+        "label": "Há hemoculturas prévias positivas relacionadas a este quadro atual?",
+        "type": "boolean",
+        "section": "Investigação prévia"
+      },
+      {
+        "id": "vegetation_on_lead_echo",
+        "label": "Há ecocardiograma prévio (transtorácico ou transesofágico) mostrando vegetação ou massa em eletrodo/válvula?",
+        "type": "boolean",
+        "section": "Investigação prévia"
+      }
+    ],
+    "rules": [
+      {
+        "id": "erosao-exposicao",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "erosion_exposure",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Erosão com exposição do gerador ou eletrodo equivale a infecção definitiva do sistema, com risco de bacteremia e endocardite relacionada a dispositivo"
+          ],
+          "emergency_flow": [
+            "Não tratar como problema cutâneo isolado nem tentar reparo local ou reimplante no mesmo sítio",
+            "Acionar avaliação para extração completa do sistema (gerador e todos os eletrodos, incluindo eletrodos abandonados)",
+            "Colher hemoculturas antes de iniciar antimicrobiano quando a condição clínica permitir"
+          ]
+        }
+      },
+      {
+        "id": "sepse-sistemica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {
+              "field": "sepsis_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Sinais de sepse em paciente com dispositivo cardíaco implantável exigem protocolo de sepse e investigação imediata de infecção do dispositivo e endocardite"
+          ],
+          "emergency_flow": [
+            "Iniciar protocolo de sepse institucional sem aguardar confirmação de infecção do dispositivo",
+            "Colher hemoculturas antes do antimicrobiano quando a condição clínica permitir",
+            "Discutir com infectologia, cardiologia/eletrofisiologia e equipe de extração"
+          ]
+        }
+      },
+      {
+        "id": "vegetacao-eletrodo-previa",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "vegetation_on_lead_echo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Vegetação ou massa em eletrodo/válvula ao ecocardiograma prévio é achado compatível com endocardite relacionada a dispositivo, mesmo sem novos sinais locais"
+          ],
+          "suggested_tests": [
+            "Rediscutir o ecocardiograma prévio com a equipe assistente e considerar repetição/ecocardiograma transesofágico",
+            "Hemoculturas seriadas antes de ajustar antimicrobiano"
+          ]
+        }
+      },
+      {
+        "id": "febre-com-sinais-locais",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "fever",
+              "op": "truthy"
+            }
+          ],
+          "any": [
+            {
+              "field": "local_erythema_warmth",
+              "op": "truthy"
+            },
+            {
+              "field": "purulent_drainage",
+              "op": "truthy"
+            },
+            {
+              "field": "wound_dehiscence",
+              "op": "truthy"
+            },
+            {
+              "field": "erosion_exposure",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Febre associada a sinais locais na loja do dispositivo aumenta a probabilidade de infecção de CIED com possível envolvimento sistêmico"
+          ],
+          "suggested_tests": [
+            "Hemoculturas antes do antimicrobiano, quando a condição clínica permitir",
+            "Ecocardiograma transesofágico se a suspeita de envolvimento endovascular persistir"
+          ]
+        }
+      },
+      {
+        "id": "drenagem-purulenta",
+        "priority": 88,
+        "when": {
+          "all": [
+            {
+              "field": "purulent_drainage",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Drenagem purulenta na loja do gerador indica infecção de bolsa estabelecida e deve ser investigada mesmo sem febre — o consenso HRS 2017 trata como infecção do sistema"
+          ],
+          "emergency_flow": [
+            "Não aspirar a bolsa para diagnóstico — colher cultura de tecido/eletrodo apenas no momento da extração",
+            "Acionar avaliação para extração completa do sistema"
+          ]
+        }
+      },
+      {
+        "id": "deiscencia-sutura",
+        "priority": 82,
+        "when": {
+          "all": [
+            {
+              "field": "wound_dehiscence",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Deiscência de sutura sobre a loja do dispositivo comunica o sistema implantado com o ambiente e deve ser tratada como possível infecção, não como intercorrência cirúrgica isolada"
+          ]
+        }
+      },
+      {
+        "id": "hemocultura-previa-positiva",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "positive_blood_cultures",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Hemocultura prévia positiva em paciente com dispositivo cardíaco implantável aumenta a probabilidade de infecção relacionada ao dispositivo e deve ser correlacionada com sinais locais e ecocardiograma"
+          ],
+          "suggested_tests": [
+            "Investigar fonte alternativa de bacteremia quando não houver sinais locais evidentes",
+            "Ecocardiograma transesofágico conforme probabilidade pré-teste (organismo, persistência, ausência de outra fonte)"
+          ]
+        }
+      },
+      {
+        "id": "eritema-tardio-sem-outros-sinais",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "local_erythema_warmth",
+              "op": "truthy"
+            },
+            {
+              "field": "days_since_procedure",
+              "op": "gt",
+              "value": 14
+            }
+          ],
+          "none": [
+            {
+              "field": "erosion_exposure",
+              "op": "truthy"
+            },
+            {
+              "field": "purulent_drainage",
+              "op": "truthy"
+            },
+            {
+              "field": "wound_dehiscence",
+              "op": "truthy"
+            },
+            {
+              "field": "fever",
+              "op": "truthy"
+            },
+            {
+              "field": "sepsis_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Eritema localizado que surge fora da janela pós-operatória imediata (mais de 14 dias após o procedimento) é menos provável reação inflamatória benigna e reforça avaliação para infecção de bolsa"
+          ]
+        }
+      },
+      {
+        "id": "hematoma-sem-inflamacao",
+        "priority": 40,
+        "when": {
+          "all": [
+            {
+              "field": "hematoma_only",
+              "op": "truthy"
+            }
+          ],
+          "none": [
+            {
+              "field": "erosion_exposure",
+              "op": "truthy"
+            },
+            {
+              "field": "purulent_drainage",
+              "op": "truthy"
+            },
+            {
+              "field": "local_erythema_warmth",
+              "op": "truthy"
+            },
+            {
+              "field": "fever",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "Hematoma sem eritema, calor ou drenagem sugere complicação hemorrágica local, não infecção — não deve ser puncionado nem tratado empiricamente com antimicrobiano"
+          ],
+          "suggested_tests": [
+            "Reavaliação clínica precoce para monitorar evolução, sem aspiração diagnóstica do hematoma"
+          ]
+        }
+      },
+      {
+        "id": "eritema-leve-pos-procedimento-recente",
+        "priority": 30,
+        "when": {
+          "all": [
+            {
+              "field": "local_erythema_warmth",
+              "op": "truthy"
+            },
+            {
+              "field": "days_since_procedure",
+              "op": "lte",
+              "value": 14
+            }
+          ],
+          "none": [
+            {
+              "field": "erosion_exposure",
+              "op": "truthy"
+            },
+            {
+              "field": "purulent_drainage",
+              "op": "truthy"
+            },
+            {
+              "field": "wound_dehiscence",
+              "op": "truthy"
+            },
+            {
+              "field": "fever",
+              "op": "truthy"
+            },
+            {
+              "field": "sepsis_signs",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Eritema leve isolado, sem outros sinais, próximo ao implante ou procedimento recente, é compatível com reação inflamatória benigna pós-operatória, mas ainda requer reavaliação clínica"
+          ],
+          "suggested_tests": [
+            "Reavaliação clínica em 48 a 72 horas para monitorar evolução do eritema"
+          ]
+        }
+      }
+    ],
+    "default_tests": [
+      "Avaliação clínica dirigida da loja do gerador (eritema, calor, flutuação, drenagem, deiscência, erosão)",
+      "Hemograma e marcadores inflamatórios conforme contexto clínico",
+      "Hemoculturas antes de antimicrobiano, quando a condição clínica permitir"
+    ],
+    "differentials": [
+      "Infecção de bolsa/sistema do dispositivo cardíaco implantável (infecção definitiva)",
+      "Endocardite relacionada a dispositivo com envolvimento de eletrodo",
+      "Hematoma de bolsa sem infecção",
+      "Reação inflamatória benigna pós-procedimento imediato",
+      "Alergia de contato ou dermatite local sobre a incisão",
+      "Bacteremia de outro foco em paciente portador de dispositivo cardíaco"
+    ],
+    "red_flags": [
+      "Erosão com exposição do gerador ou eletrodo",
+      "Febre associada a sinais locais na loja do dispositivo",
+      "Drenagem purulenta na loja do gerador",
+      "Deiscência de sutura sobre a loja do dispositivo",
+      "Sinais de sepse",
+      "Vegetação em eletrodo ou válvula ao ecocardiograma"
+    ],
+    "ambulatory_flow": [
+      "Definir o tempo desde o implante ou procedimento mais recente e classificar sinais locais e sistêmicos",
+      "Não aspirar nem puncionar a loja do gerador para 'aliviar' ou diagnosticar hematoma ou coleção",
+      "Encaminhar com prioridade a serviço com equipe de eletrofisiologia/extração diante de qualquer sinal de infecção de bolsa ou sistema",
+      "Reavaliar precocemente eritema isolado sem outros sinais, próximo ao implante recente, antes de assumir infecção"
+    ],
+    "emergency_flow": [
+      "Reconhecer erosão com exposição do dispositivo e drenagem purulenta como infecção de sistema, mesmo sem febre ou hemocultura positiva",
+      "Colher hemoculturas antes do antimicrobiano quando a condição clínica permitir",
+      "Acionar avaliação para extração completa do sistema (gerador e todos os eletrodos, incluindo eletrodos abandonados) — extração parcial não trata infecção de sistema",
+      "Protocolo de sepse quando houver instabilidade, com discussão conjunta entre infectologia, cardiologia/eletrofisiologia e equipe de extração",
+      "Ecocardiograma transesofágico e, em casos indeterminados, considerar PET/CT com 18F-FDG"
+    ],
+    "tags": [
+      "CIED",
+      "marca-passo",
+      "CDI",
+      "ressincronizador",
+      "infecção de dispositivo",
+      "erosão",
+      "bolsa do gerador",
+      "endocardite"
+    ],
+    "source_refs": [
+      "Baddour LM, Esquer Garrigos Z, Sohail MR, et al. Update on Cardiovascular Implantable Electronic Device Infections and Their Prevention, Diagnosis, and Management: A Scientific Statement From the American Heart Association. Circulation. 2024;149(2):e201-e216. DOI: 10.1161/CIR.0000000000001187. PMID: 38047353.",
+      "Kusumoto FM, Schoenfeld MH, Wilkoff BL, et al. 2017 HRS expert consensus statement on cardiovascular implantable electronic device lead management and extraction. Heart Rhythm. 2017;14(12):e503-e551. DOI: 10.1016/j.hrthm.2017.09.001. PMID: 28919379.",
+      "Tarakji KG, Mittal S, Kennergren C, et al.; WRAP-IT Investigators. Antibacterial Envelope to Prevent Cardiac Implantable Device Infection. N Engl J Med. 2019;380(20):1895-1905. DOI: 10.1056/NEJMoa1901111. PMID: 30883056.",
+      "Polyzos KA, Konstantelias AA, Falagas ME. Risk factors for cardiac implantable electronic device infection: a systematic review and meta-analysis. Europace. 2015;17(5):767-777. DOI: 10.1093/europace/euv053. PMID: 25926473."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/38047353/",
+      "https://pubmed.ncbi.nlm.nih.gov/28919379/",
+      "https://pubmed.ncbi.nlm.nih.gov/30883056/",
+      "https://pubmed.ncbi.nlm.nih.gov/25926473/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Registro novo, criado em 29/08/2026 a partir do Scientific Statement AHA 2024 sobre infecção de CIED (PMID 38047353), do consenso HRS 2017 de manejo e extração de eletrodo (PMID 28919379), do ensaio WRAP-IT (PMID 30883056) e da meta-análise de fatores de risco de infecção de CIED (PMID 25926473). Os quatro PMIDs foram conferidos individualmente via NCBI E-utilities (esummary) nesta sessão, contra título, revista, volume/página e DOI. Nenhuma dose de fármaco incluída em nenhum campo. Pendente revisão médica humana independente antes de uso assistencial.",
+    "version": 1
   }
 ]
