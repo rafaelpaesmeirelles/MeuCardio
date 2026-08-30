@@ -37331,5 +37331,900 @@
     "review_note": "Hub Tudo com Tudo criado por Claude em 27/08/2026, sexto ciclo independente do dia (após endocardite infecciosa PR #553, pericardite PR #554, hipertensão pulmonar PR #555, síncope PR #560 e valvopatias PR #563). Nenhum verbete-hub geral de cardiomiopatia do adulto existia antes deste registro — os únicos entries relacionados eram todos de subpopulação (cardiomiopatia-periparto, cardiomiopatias-pediatricas, amiloidose-cardiaca-idoso). Conecta 32 documentos já publicados e revisados: 27 de content/Cardiomiopatias/ mais 5 de outras pastas (cardiopediatria, cardiogeriatria, arritmias, esporte, dispositivos) com menção direta e explícita ao tema, sem duplicar o escopo específico dos três verbetes-irmãos de subpopulação, citados em special_populations como texto, nunca como related_document_slugs. Fontes primárias verificadas nesta sessão: diretriz ESC 2023 de cardiomiopatias (primeira diretriz abrangente do tema, PMID 37622657), diretriz brasileira 2024 de CMH, HCM Risk-SCD (O'Mahony 2014, PMID 24126876), registro InterTAK de Takotsubo (Templin 2015, PMID 26332547), algoritmo não invasivo de amiloidose ATTR (Gillmore 2016, PMID 27143678; Garcia-Pavia 2021, PMID 33825853), ATTR-ACT/tafamidis (Maurer 2018, PMID 30145929), e ensaios de inibidores de miosina cardíaca EXPLORER-HCM/SEQUOIA-HCM (mavacamten/aficamten). Nenhuma dose de fármaco foi incluída em nenhum campo novo.",
     "version": 1,
     "fonte_producao": "claude"
+  },
+  {
+    "slug": "erdheim-chester-disease-acometimento-cardiovascular",
+    "name": "Doença de Erdheim-Chester — acometimento cardiovascular",
+    "aliases": [
+      "ECD",
+      "histiocitose de Erdheim-Chester",
+      "doença de Erdheim-Chester"
+    ],
+    "area": "geral",
+    "category": "histiocitose",
+    "subtype": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Histiocitose não-Langerhans rara, geralmente associada a mutação somática BRAF V600E na via MAPK-ERK, com tropismo característico por grandes vasos e coração: infiltração periaórtica circunferencial ('aorta em bainha'/coated aorta), pseudotumor infiltrativo de átrio direito, derrame pericárdico e estenose de artérias renais são as apresentações cardiovasculares mais típicas e frequentemente definem o prognóstico.",
+    "presentation": [
+      "Dispneia, ortopneia ou sinais de tamponamento por derrame/espessamento pericárdico infiltrativo",
+      "Massa infiltrativa em átrio direito (pseudotumor) — pode cursar com arritmias, insuficiência cardíaca direita ou achado incidental em exame de imagem",
+      "Infiltração periaórtica circunferencial da aorta torácica e/ou abdominal ('aorta em bainha'/coated aorta), frequentemente assintomática mas associada a maior mortalidade",
+      "Hipertensão renovascular por estenose de artéria(s) renal(is) secundária à infiltração periarterial",
+      "Claudicação ou isquemia de membros por acometimento de artérias periféricas (infiltração periarterial em 'punho de cachimbo')",
+      "Dor óssea simétrica em membros inferiores (osteosclerose de diáfise/metáfise de ossos longos) — achado extracardíaco quase constante e útil para levantar a hipótese diagnóstica",
+      "Diabetes insipidus central e outras disfunções hipotálamo-hipofisárias",
+      "Exoftalmia bilateral (infiltração retro-orbitária), xantelasma",
+      "'Hairy kidney' — infiltração perirrenal em TC/PET, frequentemente associada a estenose de artéria renal",
+      "Sintomas constitucionais (febre, perda de peso, astenia) na doença sistêmica ativa"
+    ],
+    "differentials": [
+      "Doença relacionada a IgG4 com periaortite/periarterite e aneurisma inflamatório",
+      "Sarcoidose cardíaca (infiltração miocárdica/pericárdica, massas intracavitárias)",
+      "Aortite de grandes vasos (arterite de Takayasu, arterite de células gigantes)",
+      "Fibrose retroperitoneal idiopática (periaortite crônica)",
+      "Histiocitose de células de Langerhans (e formas mistas ECD/LCH)",
+      "Doença de Rosai-Dorfman",
+      "Linfoma cardíaco ou pericárdico / carcinomatose pericárdica",
+      "Mixoma ou outro tumor cardíaco primário (para pseudotumor de átrio direito)",
+      "Amiloidose cardíaca (infiltração miocárdica difusa)",
+      "Pericardite tuberculosa ou neoplásica (para derrame pericárdico volumoso)"
+    ],
+    "tests": [
+      "TC de tórax, abdome e pelve com contraste — infiltração periaórtica circunferencial ('aorta em bainha') e perirrenal ('hairy kidney')",
+      "Ressonância cardíaca — caracterização de pseudotumor de átrio direito, derrame/espessamento pericárdico e eventual infiltração miocárdica",
+      "Ecocardiograma transtorácico — triagem de derrame pericárdico e massa em átrio direito",
+      "PET-CT com FDG — extensão e atividade metabólica sistêmica da doença, incluindo acometimento vascular e ósseo",
+      "Radiografia ou cintilografia óssea — osteosclerose simétrica de diáfises/metáfises de ossos longos (achado quase patognomônico, útil para direcionar biópsia)",
+      "Biópsia de tecido acometido (óssea, vascular/periaórtica ou de massa cardíaca) com imuno-histoquímica: histiócitos espumosos CD68+/CD163+, CD1a negativo, S100 variável (distingue de LCH)",
+      "Pesquisa de mutação BRAF V600E no tecido (imuno-histoquímica com clone VE1 e/ou sequenciamento) — determina elegibilidade para inibidor de BRAF",
+      "Pesquisa de mutações alternativas da via MAPK-ERK (MAP2K1 e outras) quando BRAF V600E negativo",
+      "Avaliação endócrina (eixo hipotálamo-hipofisário) se suspeita de diabetes insipidus",
+      "Função renal, Doppler ou angio-TC de artérias renais quando houver hipertensão de difícil controle"
+    ],
+    "red_flags": [
+      "Tamponamento pericárdico ou derrame volumoso com repercussão hemodinâmica",
+      "Arritmia sustentada ou risco de embolização associado a pseudotumor de átrio direito",
+      "Hipertensão renovascular grave ou lesão renal aguda por estenose bilateral de artérias renais",
+      "Isquemia aguda de membro por infiltração/oclusão arterial periférica",
+      "Acometimento de sistema nervoso central (fator de pior prognóstico e maior risco de progressão)",
+      "Insuficiência adrenal ou pan-hipopituitarismo associado"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica a partir de achado incidental de aorta em bainha, pseudotumor de AD ou osteosclerose de ossos longos em exame de imagem",
+      "Investigação sistêmica com TC de tórax/abdome/pelve e PET-CT para mapear extensão da doença",
+      "Encaminhamento a centro de referência em histiocitoses para biópsia diagnóstica e confirmação histológica",
+      "Pesquisa obrigatória de BRAF V600E (e via MAPK-ERK alternativa se negativa) no tecido biopsiado, para orientar terapia-alvo",
+      "Avaliação multidisciplinar (hematologia/oncologia, cardiologia, nefrologia, endocrinologia, radiologia)",
+      "Definição terapêutica: inibidor de BRAF (vemurafenibe) se mutação positiva, ou interferon-alfa/inibidor de MEK como alternativas, com monitoramento seriado por imagem",
+      "Seguimento cardiovascular seriado (ecocardiograma/RM cardíaca) para monitorar pseudotumor, derrame pericárdico e resposta terapêutica"
+    ],
+    "emergency_flow": [
+      "Reconhecer e tratar tamponamento pericárdico com pericardiocentese/drenagem guiada por imagem",
+      "Suporte hemodinâmico e monitorização em sinais de instabilidade por massa em átrio direito ou arritmia associada",
+      "Investigação urgente de hipertensão renovascular refratária ou lesão renal aguda quando houver suspeita de estenose bilateral de artérias renais",
+      "Avaliação vascular urgente diante de isquemia de membro por acometimento arterial periférico",
+      "Encaminhamento urgente a hematologia/centro de referência quando a apresentação cardiovascular grave for a manifestação inicial de suspeita diagnóstica"
+    ],
+    "tags": [
+      "erdheim-chester",
+      "histiocitose não-langerhans",
+      "BRAF V600E",
+      "vemurafenibe",
+      "interferon-alfa",
+      "aorta em bainha",
+      "coated aorta",
+      "pseudotumor de átrio direito",
+      "derrame pericárdico",
+      "estenose de artéria renal",
+      "doença rara",
+      "via MAPK-ERK"
+    ],
+    "source_refs": [
+      "Haroche J, Amoura Z, Dion E, et al. Cardiovascular involvement, an overlooked feature of Erdheim-Chester disease: report of 6 new cases and a literature review. Medicine (Baltimore). 2004 Nov;83(6):371-392. PMID: 15525849",
+      "Haroche J, Cohen-Aubart F, Emile JF, et al. Dramatic efficacy of vemurafenib in both multisystemic and refractory Erdheim-Chester disease and Langerhans cell histiocytosis harboring the BRAF V600E mutation. Blood. 2013 Feb 28;121(9):1495-500. PMID: 23258922",
+      "Hervier B, Arnaud L, Charlotte F, et al. Treatment of Erdheim-Chester disease with long-term high-dose interferon-α. Semin Arthritis Rheum. 2012 Jun;41(6):907-913. PMID: 22300602",
+      "Diamond EL, Subbiah V, Lockhart AC, et al. Vemurafenib for BRAF V600-Mutant Erdheim-Chester Disease and Langerhans Cell Histiocytosis: Analysis of Data From the Histology-Independent, Phase 2, Open-label VE-BASKET Study. JAMA Oncol. 2018 Mar 1;4(3):384-388. PMID: 29188284",
+      "Goyal G, Heaney ML, Collin M, et al. Erdheim-Chester disease: consensus recommendations for evaluation, diagnosis, and treatment in the molecular era. Blood. 2020 May 28;135(22):1929-1945. PMID: 32187362",
+      "Berti A, Ferrarini M, Ferrero E, et al. Cardiovascular manifestations of Erdheim-Chester disease. Clin Exp Rheumatol. 2015 Mar-Apr;33(2 Suppl 89):S155-163. PMID: 25738753",
+      "Ghotra AS, Thompson K, Lopez-Mattei J, et al. Cardiovascular manifestations of Erdheim-Chester disease. Echocardiography. 2019 Feb;36(2):229-236. PMID: 30569522"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "doenca-de-behcet",
+    "name": "Doença de Behçet",
+    "aliases": [
+      "Behçet",
+      "síndrome de Behçet",
+      "doença de Adamantiades-Behçet",
+      "Behçet vascular"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Vasculite sistêmica primária de adultos jovens, notável por ser a única vasculite a acometer de forma tipicamente esperada tanto artérias quanto veias no mesmo paciente — aneurismas de artéria pulmonar, síndrome de Hughes-Stovin, trombose intracardíaca de ventrículo direito e regurgitação aórtica por aortite —, com uma inversão terapêutica central: o tratamento da trombose vascular é a imunossupressão, e a anticoagulação pode ser contraindicada quando há aneurisma de artéria pulmonar não excluído, pelo risco de hemoptise maciça fatal.",
+    "presentation": [
+      "Adulto jovem (20-40 anos), com predomínio de gravidade vascular e ocular em homens, associação com HLA-B51 e distribuição geográfica clássica ao longo da antiga Rota da Seda",
+      "Úlceras orais recorrentes, úlceras genitais, lesões cutâneas (eritema nodoso, pseudofoliculite), uveíte e teste de patergia cutânea positivo",
+      "Tromboflebite superficial migratória recorrente",
+      "Trombose venosa profunda multissegmentar ou em sítios atípicos (veia cava, veias suprahepáticas — síndrome de Budd-Chiari, seios venosos cerebrais)",
+      "Trombose arterial ou aneurisma (aorta, artéria pulmonar) em paciente jovem sem os fatores de risco cardiovascular habituais",
+      "Hemoptise, que pode ser a primeira manifestação de aneurisma de artéria pulmonar",
+      "Achado incidental de trombo intracardíaco — com predomínio incomum em ventrículo direito — ou de insuficiência aórtica por aortite"
+    ],
+    "differentials": [
+      "Doença relacionada a IgG4 (aortite/periaortite)",
+      "Doença de Erdheim-Chester",
+      "Arterite de Takayasu e arterite de células gigantes",
+      "Trombofilias hereditárias (fator V de Leiden, mutação da protrombina, deficiência de antitrombina/proteína C/proteína S) e síndrome antifosfolípide",
+      "Tromboembolismo pulmonar 'comum', sem componente aneurismático/vasculítico associado",
+      "Poliarterite nodosa e vasculites ANCA-associadas",
+      "Outras massas intracardíacas: mixoma, endocardite trombótica não bacteriana, trombo mural por disfunção ventricular"
+    ],
+    "tests": [
+      "Avaliação clínica baseada em critérios de classificação (International Study Group / International Criteria for Behçet's Disease)",
+      "Teste de patergia cutânea",
+      "Angiotomografia de tórax para rastreio obrigatório de aneurisma de artéria pulmonar antes de qualquer anticoagulação",
+      "Ecocardiograma transtorácico/transesofágico e ressonância cardíaca para caracterização de trombo intracardíaco, valvopatia aórtica ou massa cardíaca",
+      "Angiotomografia ou angiorressonância de aorta e demais territórios arteriais para mapeamento de aneurismas e pseudoaneurismas",
+      "Doppler venoso de membros e avaliação de territórios atípicos (veia cava, veias suprahepáticas, seios venosos cerebrais) quando indicado",
+      "HLA-B51 como dado de apoio, sem valor de critério diagnóstico isolado"
+    ],
+    "red_flags": [
+      "Hemoptise em paciente com Behçet conhecido ou suspeito é emergência que exige investigação imediata de aneurisma de artéria pulmonar",
+      "Trombo intracardíaco em ventrículo direito em paciente jovem sem cardiopatia estrutural prévia",
+      "Trombose venosa recorrente, multissegmentar, em sítio atípico ou refratária à anticoagulação isolada",
+      "Aneurisma de artéria pulmonar não rastreado antes de anticoagular TVP ou trombo intracardíaco em paciente com Behçet",
+      "Pseudoaneurisma após qualquer intervenção sobre a parede vascular (punção, cirurgia, endoprótese, sutura valvar) em paciente com Behçet"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de Behçet vascular em paciente jovem com trombose atípica, recorrente, multissegmentar ou refratária, especialmente associada a úlceras orais/genitais recorrentes ou uveíte",
+      "Encaminhar para avaliação reumatológica para confirmação diagnóstica por critérios de classificação",
+      "Antes de qualquer anticoagulação, rastrear aneurisma de artéria pulmonar com angiotomografia de tórax",
+      "Planejar imunossupressão (glicocorticoide associado a azatioprina, ciclofosfamida ou ciclosporina A; anti-TNF em refratariedade) como pilar terapêutico da doença vascular, não a anticoagulação isolada",
+      "Se cirurgia vascular ou valvar eletiva for necessária, priorizar controle inflamatório prévio com imunossupressão para reduzir o risco de pseudoaneurisma ou deiscência no sítio de reparo"
+    ],
+    "emergency_flow": [
+      "Hemoptise em paciente com Behçet conhecido ou suspeito: investigação imediata de aneurisma de artéria pulmonar, sem assumir por default causa infecciosa ou TEP comum",
+      "Suspeita de trombo intracardíaco ou TVP nova em paciente com Behçet: não anticoagular antes de excluir aneurisma de artéria pulmonar por angiotomografia de tórax",
+      "Instabilidade por insuficiência aórtica aguda, pseudoaneurisma ou dissecção: avaliação de emergência com imagem cardíaca e discussão com cirurgia cardiovascular, considerando controle inflamatório prévio quando a urgência clínica permitir",
+      "Discussão multidisciplinar precoce (cardiologia, reumatologia, cirurgia vascular/cardíaca) diante de aneurisma de artéria pulmonar sintomático, em crescimento ou já sangrando"
+    ],
+    "tags": [
+      "vasculite",
+      "trombose",
+      "aneurisma de artéria pulmonar",
+      "síndrome de hughes-stovin",
+      "trombo intracardíaco",
+      "regurgitação aórtica",
+      "imunossupressão",
+      "hemoptise"
+    ],
+    "source_refs": [
+      "Yazici Y, Hatemi G, Bodaghi B, et al. Behçet syndrome. Nat Rev Dis Primers. 2021;7:67. PMID: 34531393",
+      "Hatemi G, Christensen R, Bang D, et al. 2018 update of the EULAR recommendations for the management of Behçet's syndrome. Ann Rheum Dis. 2018;77(6):808-818. PMID: 29625968",
+      "Bettiol A, Alibaz-Oner F, Direskeneli H, et al. Vascular Behçet syndrome: from pathogenesis to treatment. Nat Rev Rheumatol. 2023;19(2):111-126. PMID: 36544027",
+      "Emmi G, Bettiol A, Silvestri E, et al. Vascular Behçet's syndrome: an update. Intern Emerg Med. 2019;14(5):645-652. PMID: 30499073",
+      "Khalid U, Saleem T. Hughes-Stovin syndrome. Orphanet J Rare Dis. 2011;6:15. PMID: 21489283",
+      "Geri G, Wechsler B, Thi Huong DL, et al. Spectrum of cardiac lesions in Behçet disease: a series of 52 patients. Medicine (Baltimore). 2012;91(1):25-34. PMID: 22198500",
+      "Aksu T, Tufekcioglu O. Intracardiac thrombus in Behçet's disease: four new cases and a comprehensive literature review. Rheumatol Int. 2015;35(12):1969-1978. PMID: 25381640",
+      "Ahn JK, Lee YS, Jeon CH, Koh EM, Cha HS. Treatment of venous thrombosis associated with Behçet's disease: immunosuppressive therapy alone versus immunosuppressive therapy plus anticoagulation. Clin Rheumatol. 2008;27(2):201-205. PMID: 17636362",
+      "Chuklin A, Chiasakul T, Uaprasert N. Anticoagulants and immunosuppressive therapy for thrombosis in Behçet's syndrome: a systematic review and meta-analysis. J Thromb Haemost. 2025. PMID: 40769432",
+      "Veilleux SP, et al. What the Cardiologist Should Know About Cardiac Involvement in Behçet Disease. Can J Cardiol. 2015;31(12):1485-1488. PMID: 26215987"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "fibroelastoma-papilar-cardiaco",
+    "name": "Fibroelastoma papilar cardíaco",
+    "aliases": [
+      "fibroelastoma papilar",
+      "papillary fibroelastoma",
+      "tumor valvar fibroelastoma",
+      "fibroelastoma cardíaco"
+    ],
+    "area": "geral",
+    "category": "tumor_cardiaco",
+    "subtype": "tumor_valvar_benigno",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Neoplasia benigna de origem endocárdica, pediculada, que se implanta preferencialmente nas valvas do coração esquerdo — o tumor cardíaco valvar primário mais comum do adulto. É quase sempre assintomática e achada de forma incidental ao ecocardiograma; quando sintomática, a apresentação é dominada por fenômeno embólico (AVC/AIT, embolia coronariana ou periférica), e não por disfunção valvar.",
+    "presentation": [
+      "Achado incidental assintomático em ecocardiograma pedido por outro motivo",
+      "AVC isquêmico ou ataque isquêmico transitório sem outra fonte cardioembólica óbvia, especialmente em paciente jovem",
+      "Síndrome coronariana aguda por embolia coronariana, sobretudo com fibroelastoma aórtico próximo a óstio coronariano, inclusive sem fatores de risco aterosclerótico",
+      "Embolia sistêmica periférica (membro, rim, baço) a partir de fibroelastoma em valva esquerda",
+      "Embolia pulmonar quando a origem é em valva tricúspide ou pulmonar (bem menos comum)",
+      "Raramente sopro novo ou sinais de disfunção valvar, já que o tumor raramente causa estenose ou insuficiência hemodinamicamente relevante"
+    ],
+    "differentials": [
+      "Vegetação infecciosa (endocardite) — contorno mais irregular, acomete a linha de coaptação, contexto de febre/hemoculturas positivas/critérios de Duke-ISCVID",
+      "Trombo valvar ou mural — base de implantação mais larga, movimento em bloco, contexto de fibrilação atrial, disfunção ventricular, cateter ou prótese",
+      "Mixoma — tipicamente maior, nasce no septo interatrial (fossa oval) e não na superfície valvar, mobilidade em bloco pedunculado, sintomas obstrutivos posicionais",
+      "Excrescência de Lambl (valvular strand) — filiforme, mais fina, frequentemente múltipla, implantada na própria linha de coaptação, de origem degenerativa e não neoplásica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico como exame de triagem inicial",
+      "Ecocardiograma transesofágico quando a suspeita persiste ou quando tamanho, mobilidade e implantação mudam a conduta — maior sensibilidade para massas pequenas e móveis",
+      "Avaliação clínica e laboratorial dirigida a excluir endocardite infecciosa (hemoculturas, critérios de Duke-ISCVID) quando o quadro é ambíguo",
+      "Investigação de fonte cardioembólica alternativa (fibrilação atrial, trombo em VE, placa aórtica complexa) diante de evento embólico sem etiologia aparente",
+      "Confirmação anatomopatológica quando há ressecção cirúrgica"
+    ],
+    "red_flags": [
+      "Evento embólico prévio atribuível ao tumor (AVC, AIT, embolia coronariana ou periférica sem outra causa mais provável)",
+      "Localização em valva do coração esquerdo (aórtica ou mitral)",
+      "Tamanho maior, próximo ou acima de aproximadamente 1 cm",
+      "Mobilidade alta, com excursão livre e ampla das frondes",
+      "Pedículo longo e fino, particularmente próximo a óstio coronariano"
+    ],
+    "ambulatory_flow": [
+      "Diante de achado ecocardiográfico incidental sugestivo (massa pequena, pediculada, bem demarcada, móvel, aspecto cintilante), correlacionar localização, tamanho e mobilidade antes de definir conduta",
+      "Excluir diagnósticos diferenciais pelo contexto clínico (febre e hemoculturas para endocardite; fibrilação atrial, disfunção ventricular ou prótese para trombo) antes de assumir fibroelastoma",
+      "Em tumor assintomático, sem evento embólico prévio, em valva direita, pequeno e de mobilidade limitada, ou com risco cirúrgico proibitivo: seguir vigilância com ecocardiograma seriado",
+      "No seguimento, reavaliar crescimento, mudança de mobilidade e qualquer novo sintoma compatível com embolia, o que reabre a indicação cirúrgica de imediato",
+      "Encaminhar para avaliação de cirurgia cardíaca quando os fatores de risco embólico se acumulam (valva esquerda, tamanho maior, mobilidade alta, pedículo próximo a óstio coronariano), mesmo sem evento prévio"
+    ],
+    "emergency_flow": [
+      "Diante de AVC/AIT, síndrome coronariana aguda ou embolia periférica em paciente jovem ou sem fonte cardioembólica óbvia, incluir ecocardiograma (transtorácico e, se necessário, transesofágico) na investigação etiológica",
+      "Uma vez identificado fibroelastoma como fonte embólica provável, tratar o evento agudo conforme protocolo específico (AVC, SCA ou isquemia de membro) e encaminhar para avaliação cirúrgica cardíaca",
+      "Não iniciar antibioticoterapia empírica prolongada para massa valvar móvel sem reavaliar o contexto clínico de endocardite (febre, hemoculturas, critérios de Duke-ISCVID)",
+      "Evento embólico prévio já atribuído ao tumor é indicação de ressecção cirúrgica para prevenir recorrência — não adiar por o tumor 'ser pequeno'"
+    ],
+    "tags": [
+      "fibroelastoma papilar",
+      "tumor cardíaco",
+      "tumor valvar",
+      "embolia",
+      "AVC criptogênico",
+      "ecocardiograma transesofágico",
+      "cirurgia cardíaca",
+      "diagnóstico diferencial de massa valvar"
+    ],
+    "source_refs": [
+      "Gowda RM, Khan IA, Nair CK, Mehta NJ, Vasavada BC, Sacchi TJ. Cardiac papillary fibroelastoma: a comprehensive analysis of 725 cases. Am Heart J. 2003;146(3):404-410. PMID: 12947356",
+      "Klarich KW, Enriquez-Sarano M, Gura GM, Edwards WD, Tajik AJ, Seward JB. Papillary fibroelastoma: echocardiographic characteristics for diagnosis and pathologic correlation. J Am Coll Cardiol. 1997;30(3):784-790. PMID: 9283541",
+      "Tamin SS, Maleszewski JJ, Scott CG, Khan SK, Edwards WD, Bruce CJ, Klarich KW. Prognostic and Bioepidemiologic Implications of Papillary Fibroelastomas. J Am Coll Cardiol. 2015;65(22):2420-2429. PMID: 26046736",
+      "Wolf RC, Spiess J, Vasic N, Wolf SS, Beisse F, Klöppel S, Otti A, Grön G, Freudenmann RW. Valvular strands and ischemic stroke. Eur Neurol. 2007. PMID: 17312371"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "fibroelastoma-papilar-cardiaco-diagnostico-ecocardiografico-risco-embolico-e-indicacao-cirurgica"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "sindrome-poems",
+    "name": "Síndrome POEMS",
+    "aliases": [
+      "síndrome de Crow-Fukase",
+      "doença de Takatsuki",
+      "PEP syndrome"
+    ],
+    "area": "geral",
+    "category": "circulacao_pulmonar",
+    "subtype": "grupo_5_esc_ers_2022_doenca_sistemica",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Síndrome paraneoplásica rara decorrente de discrasia plasmocitária clonal produtora de cadeia leve lambda, com hipersecreção de VEGF como elo fisiopatológico central; hipertensão pulmonar e sobrecarga de volume extravascular (derrame pericárdico, derrame pleural, ascite, edema) são manifestações cardiovasculares reconhecidas e, muitas vezes, a pista inicial que leva o paciente ao cardiologista antes da suspeita hematológica.",
+    "presentation": [
+      "Polineuropatia sensitivo-motora simétrica, subaguda e de predomínio distal, com hipoestesia em bota e arreflexia",
+      "Organomegalia: hepatomegalia, esplenomegalia ou linfadenopatia",
+      "Endocrinopatia: hipotireoidismo, insuficiência adrenal, hipogonadismo, alterações do metabolismo da glicose",
+      "Proteína monoclonal (proteína M), quase sempre de cadeia leve lambda, à eletroforese/imunofixação sérica",
+      "Alterações de pele: hiperpigmentação difusa, espessamento cutâneo, angiomas rubi, hipertricose",
+      "Hipertensão pulmonar, muitas vezes identificada por ecocardiograma em investigação de dispneia progressiva",
+      "Sobrecarga de volume extravascular: derrame pericárdico, derrame pleural, ascite e edema periférico refratário a diurético",
+      "Papiledema e alterações hematológicas (trombocitose, policitemia) em subgrupo de pacientes"
+    ],
+    "differentials": [
+      "Amiloidose de cadeia leve (AL) — diferencial central; tipicamente cadeia leve kappa, cardiomiopatia restritiva com padrão 'sparkling' ao ecocardiograma e biomarcadores muito elevados, sem lesões ósseas escleróticas nem endocrinopatia típicas de POEMS",
+      "Hipertensão arterial pulmonar idiopática — risco de fechamento diagnóstico prematuro se a neuropatia, a organomegalia e as alterações de pele não forem valorizadas como parte de uma síndrome sistêmica",
+      "Mieloma múltiplo — infiltração plasmocitária medular tipicamente baixa na POEMS (não preenche critérios CRAB), ao contrário do mieloma",
+      "Macroglobulinemia de Waldenström ou outra gamopatia monoclonal sem os critérios maiores/menores de POEMS",
+      "Polineuropatia desmielinizante inflamatória crônica (CIDP) isolada, sem discrasia plasmocitária ou demais achados sistêmicos",
+      "Doença de Castleman isolada, sem critérios diagnósticos completos de POEMS"
+    ],
+    "tests": [
+      "Eletroforese de proteínas séricas com imunofixação, tipicamente demonstrando componente monoclonal de cadeia leve lambda",
+      "VEGF sérico ou plasmático, elo fisiopatológico central e critério maior diagnóstico",
+      "Pesquisa de lesões ósseas escleróticas por radiografia de corpo inteiro ou PET-CT",
+      "Rastreio de doença de Castleman associada (biópsia linfonodal quando linfadenopatia presente)",
+      "Ecocardiograma transtorácico para pressão sistólica de artéria pulmonar estimada, função de ventrículo direito e derrame pericárdico",
+      "Avaliação endócrina (tireoide, eixo adrenal, gonadal, glicemia)",
+      "Mielograma e biópsia de medula óssea, geralmente com baixa infiltração plasmocitária clonal",
+      "Eletroneuromiografia para caracterizar a polineuropatia sensitivo-motora"
+    ],
+    "red_flags": [
+      "Hipertensão pulmonar ou derrame pericárdico sem causa identificada após investigação padrão (tromboembolismo crônico, doença intersticial, hipertensão portal, colagenose, HIV)",
+      "Sinais de tamponamento pericárdico associados a derrame de origem não esclarecida",
+      "Polineuropatia sensitivo-motora progressiva concomitante a organomegalia, alterações de pele ou proteína monoclonal",
+      "Edema, ascite ou derrame pleural refratários a diurético em paciente com neuropatia periférica não explicada por diabetes",
+      "Papiledema associado a manifestações sistêmicas sugestivas de POEMS"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de POEMS diante da combinação de polineuropatia distal progressiva, organomegalia, endocrinopatia, proteína monoclonal e alterações de pele, especialmente quando associada a hipertensão pulmonar ou sobrecarga de volume não explicadas",
+      "Solicitar eletroforese/imunofixação sérica, VEGF, pesquisa de lesões ósseas escleróticas (radiografia de corpo inteiro ou PET-CT) e rastreio de doença de Castleman",
+      "Encaminhar a hematologia para confirmação diagnóstica e definição de tratamento dirigido ao clone plasmocitário (radioterapia, quimioterapia com alquilante e dexametasona, lenalidomida-dexametasona ou transplante autólogo de células-tronco conforme extensão da doença)",
+      "Acompanhar em conjunto com cardiologia a hipertensão pulmonar e a sobrecarga de volume, que tendem a ser reversíveis com o tratamento hematológico eficaz",
+      "Evitar tratar a hipertensão pulmonar isoladamente com vasodilatador pulmonar específico sem investigar e tratar a doença de base"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de tamponamento pericárdico em paciente com derrame pericárdico e dispneia aguda; pericardiocentese se instabilidade hemodinâmica",
+      "Estabilizar sobrecarga de volume grave (ascite, derrame pleural volumoso, edema anasarca) com medidas de suporte enquanto se investiga a causa sistêmica",
+      "Não postergar a investigação hematológica direcionada (VEGF, eletroforese/imunofixação, imagem óssea) em paciente internado por hipertensão pulmonar ou derrame pericárdico de causa não esclarecida",
+      "Encaminhar precocemente à hematologia quando a suspeita de POEMS for consistente, pois o tratamento do clone plasmocitário é o que reverte as manifestações cardiopulmonares"
+    ],
+    "tags": [
+      "POEMS",
+      "hipertensão pulmonar",
+      "derrame pericárdico",
+      "proteína M",
+      "discrasia plasmocitária",
+      "VEGF",
+      "polineuropatia",
+      "doença de Castleman",
+      "sobrecarga de volume"
+    ],
+    "source_refs": [
+      "Dispenzieri A. POEMS syndrome: Update on diagnosis, risk-stratification, and management. Am J Hematol. 2023;98(12):1934-1950. doi:10.1002/ajh.27081. PMID: 37732822",
+      "Dispenzieri A. POEMS Syndrome: 2019 Update on diagnosis, risk-stratification, and management. Am J Hematol. 2019;94(7):812-827. doi:10.1002/ajh.25495. PMID: 31012139",
+      "Li J, Tian Z, Zheng HY, Zhang W, Duan MH, Liu YT, Cao XX, Zhou DB. Pulmonary hypertension in POEMS syndrome. Haematologica. 2013;98(3):393-398. doi:10.3324/haematol.2012.073031. PMID: 22983590",
+      "Nozza A. POEMS Syndrome: an Update. Mediterr J Hematol Infect Dis. 2017;9(1):e2017051. doi:10.4084/mjhid.2017.051. PMID: 28894560"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "tumores-cardiacos-malignos-primarios",
+    "name": "Tumores cardíacos malignos primários (angiossarcoma e linfoma cardíaco primário)",
+    "aliases": [
+      "angiossarcoma cardíaco",
+      "sarcoma cardíaco primário",
+      "linfoma cardíaco primário",
+      "linfoma não-Hodgkin primário do coração",
+      "tumor maligno primário do coração",
+      "massa cardíaca maligna"
+    ],
+    "area": "geral",
+    "category": "tumor_cardiaco",
+    "subtype": "tumor_maligno_primario",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Angiossarcoma cardíaco e linfoma cardíaco primário são os dois tumores malignos primários mais relevantes do coração no adulto: ambos predominam no átrio direito e cursam com derrame pericárdico recorrente, mas têm biologia e prognóstico muito diferentes — o angiossarcoma tem comportamento agressivo e mortalidade elevada, enquanto o linfoma cardíaco primário responde bem à quimioterapia sistêmica.",
+    "presentation": [
+      "Dispneia, presente na maioria dos casos de angiossarcoma cardíaco",
+      "Derrame pericárdico recorrente, frequentemente hemorrágico no angiossarcoma e com tamponamento recorrente no linfoma cardíaco primário",
+      "Dor torácica",
+      "Arritmias atriais ou distúrbios de condução, por infiltração miocárdica",
+      "Insuficiência cardíaca direita, por obstrução mecânica ao influxo do átrio direito",
+      "Sintomas constitucionais (perda de peso, febre, sudorese noturna, fadiga) — mais típicos do linfoma, mas também presentes em doença metastática de angiossarcoma",
+      "Síndrome de veia cava superior, quando há massa mediastinal contígua no linfoma cardíaco primário",
+      "Achado incidental de massa cardíaca ou derrame pericárdico em exame de imagem"
+    ],
+    "differentials": [
+      "Mixoma cardíaco (tumor benigno, tipicamente pediculado e móvel em átrio esquerdo)",
+      "Fibroelastoma papilar (tumor benigno valvar, pequeno, bem delimitado)",
+      "Metástase cardíaca de tumor extracardíaco (muito mais comum que tumor maligno primário)",
+      "Endocardite trombótica não bacteriana (NBTE)",
+      "Trombo intracavitário",
+      "Linfoma cardíaco secundário (acometimento cardíaco por linfoma nodal disseminado, não confinado ao coração)",
+      "Pericardite ou derrame pericárdico de causa inflamatória, infecciosa ou urêmica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico e, quando disponível, transesofágico — exame inicial de maior sensibilidade para detectar massa e derrame pericárdico associado",
+      "Ressonância magnética cardíaca — exame de escolha para caracterização tecidual: avalia margens (infiltrativas vs. bem definidas), acometimento de múltiplas câmaras, extensão pericárdica contígua, necrose/heterogeneidade e invasão extracardíaca",
+      "Tomografia de tórax/abdome ou PET-CT para estadiamento, já que metástase pulmonar, hepática e óssea é comum ao diagnóstico do angiossarcoma",
+      "Biópsia tecidual (cirúrgica, guiada por imagem ou endomiocárdica) — necessária para diagnóstico definitivo em ambos os tumores; nenhum achado de imagem isoladamente fecha o diagnóstico",
+      "Imuno-histoquímica para origem endotelial no angiossarcoma (CD31, CD34, FLI-1, fator de von Willebrand)",
+      "Imunofenotipagem para subtipagem do linfoma (mais comumente difuso de grandes células B)",
+      "Citologia do líquido de pericardiocentese, quando há derrame — pode sugerir malignidade, mas raramente é suficiente para tipificação completa",
+      "Sorologia para HIV e triagem de imunossupressão em todo caso de linfoma cardíaco primário, dado o impacto prognóstico do status imunológico"
+    ],
+    "red_flags": [
+      "Derrame pericárdico hemorrágico recorrente após drenagem, sobretudo em átrio direito",
+      "Tamponamento cardíaco recorrente sem causa inflamatória ou infecciosa evidente",
+      "Massa cardíaca com margens infiltrativas e mal definidas à RM",
+      "Acometimento de múltiplas câmaras cardíacas",
+      "Invasão extracardíaca (pericárdio parietal, grandes vasos, mediastino) — achado praticamente definidor de malignidade",
+      "Acometimento de ventrículo esquerdo no linfoma cardíaco primário — associado a sobrevida drasticamente pior",
+      "Doença extracardíaca (metastática) já presente ao diagnóstico"
+    ],
+    "ambulatory_flow": [
+      "Massa cardíaca ou derrame pericárdico com características atípicas (margens infiltrativas, múltiplas câmaras, extensão pericárdica) identificados em ecocardiograma eletivo devem ser encaminhados para RM cardíaca em caráter prioritário, não como achado de rotina a ser reavaliado em retorno de longo prazo",
+      "Não assumir etiologia benigna (mixoma, fibroelastoma) sem caracterização tecidual quando a imagem mostrar padrão infiltrativo ou multifocal",
+      "Encaminhar precocemente a serviço com oncologia cardíaca ou oncologia clínica e cirurgia cardíaca para definição de biópsia e estadiamento",
+      "Em linfoma suspeito, iniciar triagem para imunossupressão (HIV, história de transplante) como parte da avaliação ambulatorial inicial"
+    ],
+    "emergency_flow": [
+      "Derrame pericárdico com repercussão hemodinâmica ou tamponamento exige pericardiocentese ou janela pericárdica de urgência, com envio do líquido para citologia",
+      "Após drenagem, reacúmulo rápido e hemorrágico do derrame deve levantar suspeita ativa de etiologia neoplásica e motivar investigação por imagem dirigida (RM cardíaca) antes da alta",
+      "Estabilizar arritmias e insuficiência cardíaca decorrentes de infiltração miocárdica ou obstrução mecânica ao influxo",
+      "Não tratar como pericardite idiopática recorrente sem excluir massa cardíaca em paciente com derrame pericárdico hemorrágico recorrente",
+      "Acionar precocemente equipe de cirurgia cardíaca e oncologia diante de suspeita de tumor maligno cardíaco para biópsia e planejamento terapêutico multimodal"
+    ],
+    "tags": [
+      "tumor cardíaco maligno",
+      "angiossarcoma",
+      "linfoma cardíaco primário",
+      "sarcoma cardíaco",
+      "derrame pericárdico hemorrágico",
+      "massa cardíaca",
+      "átrio direito",
+      "tamponamento cardíaco",
+      "oncologia cardíaca"
+    ],
+    "source_refs": [
+      "Patel SD, Peterson A, Bartczak A, et al. Primary cardiac angiosarcoma - a review. Med Sci Monit. 2014;20:103-9. DOI: 10.12659/MSM.889875. PMID: 24452054",
+      "Chambergo-Michilot D, et al. Clinical characteristics, management, and outcomes of patients with primary cardiac angiosarcoma: a systematic review. J Cardiovasc Thorac Res. 2023;15(1):1-8. DOI: 10.34172/jcvtr.2023.30531. PMID: 37342661",
+      "Stergioula A, et al. Multimodality treatment of primary cardiac angiosarcoma: a systematic literature review. Cancer Treat Rev. 2023;120:102617. DOI: 10.1016/j.ctrv.2023.102617. PMID: 37603906",
+      "Jeudy J, et al. Cardiac Lymphoma. Radiol Clin North Am. 2016;54(4):689-710. DOI: 10.1016/j.rcl.2016.03.006. PMID: 27265603",
+      "Chalabreysse L, et al. Primary cardiac lymphoma in immunocompetent patients: a report of three cases and review of the literature. Virchows Arch. 2002;441(5):456-61. DOI: 10.1007/s00428-002-0711-0. PMID: 12447675",
+      "Ceresoli GL, et al. Primary cardiac lymphoma in immunocompetent patients: diagnostic and therapeutic management. Cancer. 1997;80(8):1497-506. PMID: 9338475",
+      "Petrich A, et al. Primary cardiac lymphoma: an analysis of presentation, treatment, and outcome patterns. Cancer. 2011;117(3):581-9. DOI: 10.1002/cncr.25444. PMID: 20922788",
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "tumores-cardiacos-malignos-primarios-angiossarcoma-e-linfoma-cardiaco-primario"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "cardiomiopatia-por-deficiencia-de-selenio",
+    "name": "Cardiomiopatia por deficiência de selênio (doença de Keshan)",
+    "aliases": [
+      "doença de Keshan",
+      "Keshan disease",
+      "cardiomiopatia por selênio",
+      "cardiomiopatia nutricional por deficiência de selênio",
+      "cardiomiopatia dilatada por deficiência de selênio"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "nutricional",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia dilatada causada por deficiência do oligoelemento selênio, cofator da glutationa peroxidase antioxidante miocárdica — na forma clássica endêmica chinesa (doença de Keshan), agravada por seleção de coxsackievírus mais virulento em hospedeiro deficiente; nas formas adquiridas ocidentais (NPT prolongada sem suplementação, má absorção grave incluindo fibrose cística, dietas extremamente restritas e alcoolismo crônico), é diagnóstico diferencial tratável e substancialmente reversível de cardiomiopatia dilatada não isquêmica quando reconhecida a tempo.",
+    "presentation": [
+      "Cardiomiopatia dilatada com dispneia, edema, fadiga, cardiomegalia radiológica e FEVE reduzida ao ecocardiograma, indistinguível à primeira vista de outras cardiomiopatias dilatadas não isquêmicas",
+      "Miopatia esquelética concomitante — fraqueza muscular proximal e mialgia, por vezes com elevação de creatina-quinase — é a pista clínica diferencial chave, refletindo o mesmo dano oxidativo por déficit de glutationa peroxidase atuando também na musculatura esquelética",
+      "Arritmia, incluindo formas ventriculares malignas, podendo ocorrer em apresentações fulminantes",
+      "Na doença de Keshan clássica: forma aguda/subaguda com insuficiência cardíaca de início rápido, arritmia e choque cardiogênico, ou forma crônica com cardiomiopatia dilatada de evolução insidiosa",
+      "Contexto de risco nutricional associado: NPT domiciliar prolongada sem suplementação de oligoelementos, síndrome de má absorção grave (intestino curto, doença inflamatória intestinal extensa, fibrose cística), dieta extremamente restritiva, ou alcoolismo crônico com desnutrição",
+      "Perfil demográfico da forma endêmica: crianças e mulheres em idade fértil, especialmente gestantes e lactantes, por maior demanda metabólica de selênio"
+    ],
+    "differentials": [
+      "Beribéri cardíaco (deficiência de tiamina) — outra cardiomiopatia nutricional reversível, tipicamente com padrão de alto débito",
+      "Cardiomiopatia alcoólica — o alcoolismo é fator de risco compartilhado, e a deficiência de selênio pode ser cofator nutricional adicional no mesmo paciente",
+      "Deficiência de carnitina — outra cardiomiopatia metabólica/nutricional potencialmente reversível a considerar no mesmo espectro diagnóstico",
+      "Cardiomiopatia dilatada idiopática — diagnóstico de exclusão que não deve ser fechado sem considerar deficiência de selênio quando há contexto de risco nutricional ou miopatia esquelética associada",
+      "Miocardite viral (incluindo por coxsackievírus) — relevante sobretudo na doença de Keshan clássica, em que a deficiência de selênio favorece a seleção de cepas virais mais virulentas como cofator patogênico",
+      "Cardiomiopatia da fibrose cística por outras causas (relacionada a doença pulmonar avançada, hipoxemia crônica) — a forma nutricional por deficiência de selênio deve ser considerada em paralelo"
+    ],
+    "tests": [
+      "Selênio sérico ou plasmático — exame diagnóstico central, sempre interpretado no contexto do risco nutricional do paciente, pois tem baixo valor de triagem isolado em população geral",
+      "Contexto de risco nutricional dirigido: história de NPT prolongada, síndrome de má absorção grave (intestino curto, DII extensa, fibrose cística), dieta extremamente restrita ou alcoolismo crônico com desnutrição",
+      "Atividade da glutationa peroxidase eritrocitária — marcador funcional complementar do status de selênio",
+      "Creatina-quinase e avaliação de força muscular proximal — apoia a identificação da miopatia esquelética associada",
+      "Ecocardiograma — caracteriza a disfunção sistólica e o padrão de cardiomiopatia dilatada, sem achado específico que distinga a etiologia por selênio de outras causas",
+      "Revisão periódica do perfil de oligoelementos em pacientes sob NPT domiciliar prolongada, como rotina preventiva e não apenas investigação reativa após sintomas cardíacos"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de início rápido com arritmia e choque cardiogênico (apresentação aguda/fulminante, descrita tanto na doença de Keshan quanto em casos adquiridos graves)",
+      "Arritmia ventricular maligna em paciente com cardiomiopatia dilatada e contexto de risco nutricional",
+      "Diagnóstico tardio ou não realizado — os desfechos fatais documentados na literatura ocorreram justamente quando a deficiência de selênio não foi investigada a tempo, e não por refratariedade intrínseca ao tratamento",
+      "NPT domiciliar prolongada sem revisão periódica de oligoelementos — situação de risco silencioso que pode evoluir para cardiomiopatia grave antes de ser reconhecida",
+      "Cardiomiopatia dilatada de etiologia não esclarecida associada a fraqueza muscular proximal/mialgia — combinação que deve disparar dosagem de selênio antes de rotular o quadro como idiopático"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar diante de cardiomiopatia dilatada de etiologia não esclarecida associada a contexto de risco nutricional (NPT prolongada, má absorção grave incluindo fibrose cística, dieta extremamente restrita, alcoolismo crônico) e/ou miopatia esquelética concomitante",
+      "Dosar selênio sérico/plasmático, reforçado pela presença de fraqueza muscular proximal ou mialgia associada",
+      "Investigar e tratar a causa de base da deficiência em paralelo à reposição — revisão da formulação de NPT, otimização do manejo da doença de má absorção, abordagem nutricional da dieta restritiva, ou encaminhamento para tratamento do alcoolismo",
+      "Iniciar reposição de selênio (tipicamente selenito de sódio, oral ou parenteral conforme a via de acesso nutricional disponível) associada ao manejo padrão de insuficiência cardíaca conforme o quadro hemodinâmico",
+      "Instituir revisão periódica do perfil de oligoelementos como rotina preventiva em todo paciente sob NPT domiciliar prolongada, independentemente de sintomas",
+      "Reavaliar função ventricular e força muscular ao longo do seguimento — a recuperação de ambas com a reposição é o próprio teste diagnóstico retrospectivo de deficiência de selênio como causa"
+    ],
+    "emergency_flow": [
+      "Reconhecer a apresentação aguda/fulminante — insuficiência cardíaca de início rápido, arritmia (incluindo formas ventriculares malignas) e choque cardiogênico — como possível manifestação de cardiomiopatia por deficiência de selênio em paciente com contexto de risco nutricional",
+      "Tratar o choque cardiogênico e a insuficiência cardíaca aguda conforme suporte hemodinâmico padrão, sem aguardar confirmação laboratorial da deficiência de selênio para estabilização inicial",
+      "Considerar deficiência de selênio no diferencial de cardiomiopatia dilatada de causa não esclarecida em paciente crítico com NPT prolongada, má absorção grave, dieta extremamente restrita ou alcoolismo, especialmente se houver miopatia esquelética associada",
+      "Colher selênio sérico assim que suspeitado e, uma vez confirmado ou fortemente suspeito pelo contexto, iniciar reposição de selênio em paralelo ao tratamento padrão da insuficiência cardíaca aguda",
+      "Investigar e corrigir de forma coordenada a causa de base da deficiência (revisão urgente da formulação de NPT, manejo da má absorção) como parte do plano de estabilização, dado o potencial de reversibilidade substancial da disfunção ventricular"
+    ],
+    "tags": [
+      "cardiomiopatia nutricional",
+      "doença de Keshan",
+      "deficiência de selênio",
+      "NPT prolongada",
+      "má absorção",
+      "fibrose cística",
+      "cardiomiopatia dilatada reversível",
+      "miopatia esquelética",
+      "glutationa peroxidase",
+      "alcoolismo crônico",
+      "coxsackievírus",
+      "oligoelemento"
+    ],
+    "source_refs": [
+      "Rayman MP. Selenium and human health. Lancet. 2012;379(9822):1256-1268. DOI: 10.1016/S0140-6736(11)61452-9. PMID: 22381456.",
+      "Rayman MP. The importance of selenium to human health. Lancet. 2000;356(9225):233-241. DOI: 10.1016/S0140-6736(00)02490-9. PMID: 10963212.",
+      "Xu GL et al. Further investigation on the role of selenium deficiency in the aetiology and pathogenesis of Keshan disease. Biomed Environ Sci. 1997;10(2-3):316-326. PMID: 9315325.",
+      "Levander OA, Beck MA. Interacting nutritional and infectious etiologies of Keshan disease. Biol Trace Elem Res. 1997;56(1):5-21. DOI: 10.1007/BF02778980. PMID: 9152508.",
+      "Beck MA, Kolbeck PC, Rohr LH, Shi Q, Morris VC, Levander OA. Rapid genomic evolution of a non-virulent coxsackievirus B3 in selenium-deficient mice results in selection of identical virulent isolates. Nat Med. 1995;1(5):433-436. DOI: 10.1038/nm0595-433. PMID: 7585090.",
+      "Beck MA, Nelson HK, Shi Q, et al. Increased virulence of coxsackievirus B3 in mice due to vitamin E or selenium deficiency. J Nutr. 1997;127(5 Suppl):966S-970S. DOI: 10.1093/jn/127.5.966S. PMID: 9164275.",
+      "Zhou H et al. Prevention of Keshan Disease by Selenium Supplementation: a Systematic Review and Meta-analysis. Biol Trace Elem Res. 2018;186(1):98-105. DOI: 10.1007/s12011-018-1302-5. PMID: 29627894.",
+      "Chen J. An original discovery: selenium deficiency and Keshan disease (an endemic heart disease). Asia Pac J Clin Nutr. 2012;21(3):320-326. PMID: 22705420.",
+      "Goldman IS, Kantrowitz NE. Cardiomyopathy associated with selenium deficiency. N Engl J Med. 1981;305(12):701. DOI: 10.1056/NEJM198109173051219. PMID: 7266610.",
+      "Fleming CR, Lie JT, McCall JT, O'Brien JF, Baillie EE, Thistle JL. Selenium deficiency and fatal cardiomyopathy in a patient on home parenteral nutrition. Gastroenterology. 1982;83(3):689-693. PMID: 6807740.",
+      "Quercia RA et al. Selenium deficiency and fatal cardiomyopathy in a patient receiving long-term home parenteral nutrition. Clin Pharm. 1984;3(5):531-535. PMID: 6435941.",
+      "Reeves WC, Marcuard SP, Willis SE, Movahed A. Reversible cardiomyopathy due to selenium deficiency. JPEN J Parenter Enteral Nutr. 1989;13(6):663-665. DOI: 10.1177/0148607189013006663. PMID: 2614867.",
+      "Bolhack SM. Selenium deficiency and cardiomyopathy. JPEN J Parenter Enteral Nutr. 1990;14(4):433. DOI: 10.1177/0148607190014004433. PMID: 2119451.",
+      "Lockitch G, Taylor GP, Wong LT, et al. Cardiomyopathy associated with nonendemic selenium deficiency in a Caucasian adolescent. Am J Clin Nutr. 1990;52(3):572-577. DOI: 10.1093/ajcn/52.3.572. PMID: 2168125.",
+      "Marcus RW, Huang PC. Myopathy and cardiomyopathy associated with selenium deficiency: case report, literature review, and hypothesis. Md Med J. 1993;42(7):669-674. PMID: 8412527.",
+      "Rannem T, Ladefoged K, Hylander E, Hegnhøj J, Staun M. The effect of selenium supplementation on skeletal and cardiac muscle in selenium-depleted patients. JPEN J Parenter Enteral Nutr. 1995;19(5):351-355. DOI: 10.1177/0148607195019005351. PMID: 8577010.",
+      "Chariot P, Bignani O. Skeletal muscle disorders associated with selenium deficiency in humans. Muscle Nerve. 2003;27(6):662-668. DOI: 10.1002/mus.10304. PMID: 12766976.",
+      "Burke MP, Opeskin K. Fulminant heart failure due to selenium deficiency cardiomyopathy (Keshan disease). Med Sci Law. 2002;42(1):10-13. DOI: 10.1177/002580240204200103. PMID: 11848134.",
+      "Segovia-Cubero J et al. The cardiomyopathy of cystic fibrosis: a modern form of Keshan disease. Front Cardiovasc Med. 2024;11:1285223. DOI: 10.3389/fcvm.2024.1285223. PMID: 38361580.",
+      "Volk DM et al. Selenium deficiency and cardiomyopathy in a patient with cystic fibrosis. J Ky Med Assoc. 1986;84(5):222-224. PMID: 3722990.",
+      "Liu S et al. Selenium deficiency in inflammatory bowel disease: A comprehensive meta-analysis. Heliyon. 2024;10(22):e40139. DOI: 10.1016/j.heliyon.2024.e40139. PMID: 39584095.",
+      "Thuong T et al. Decrease of the serum level of selenium in chronic alcoholics with or without dilated cardiomyopathy. Presse Med. 1986;15(15):693-696. PMID: 2941733."
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-por-hipocalcemia-grave",
+    "name": "Cardiomiopatia dilatada por hipocalcemia grave",
+    "aliases": [
+      "Cardiomiopatia hipocalcêmica",
+      "Cardiomiopatia dilatada reversível por hipocalcemia",
+      "Insuficiência cardíaca por hipocalcemia grave",
+      "Cardiomiopatia por hipoparatireoidismo"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "metabolica",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia dilatada com disfunção sistólica de ventrículo esquerdo causada por hipocalcemia grave e sustentada — mais comumente por hipoparatireoidismo pós-cirúrgico, mas também por deficiência grave de vitamina D, pseudo-hipoparatireoidismo ou síndrome do osso faminto —, notável pela recuperação rápida e geralmente completa da fração de ejeção após a correção do cálcio.",
+    "presentation": [
+      "Quadro de insuficiência cardíaca com fração de ejeção reduzida — dispneia, ortopneia, edema, sinais de congestão —, muitas vezes indistinguível clinicamente de uma cardiomiopatia dilatada de outra etiologia",
+      "Sinais neuromusculares e sensoriais de hipocalcemia como pista diagnóstica chave, frequentemente relatados pelo próprio paciente: parestesias periorais e de extremidades, cãibras musculares, tetania e espasmo carpopedal",
+      "Sinal de Chvostek (contração da musculatura facial à percussão do nervo facial anterior ao trago) e sinal de Trousseau (espasmo carpal após insuflação do manguito de pressão acima da sistólica por 3 minutos) — este último mais sensível e específico",
+      "Convulsões, em casos de hipocalcemia muito grave ou de instalação rápida",
+      "QTc prolongado ao ECG, que pode coexistir com a disfunção sistólica e reforça a suspeita de hipocalcemia em paciente com insuficiência cardíaca de etiologia indeterminada",
+      "História de cirurgia cervical prévia (tireoidectomia total ou paratireoidectomia), por vezes remota — anos a décadas antes do reconhecimento da cardiomiopatia",
+      "Ausência de sinais neuromusculares não exclui hipocalcemia como causa: sintomas podem ser sutis ou ausentes mesmo com cálcio bastante baixo, sobretudo se a instalação foi lenta"
+    ],
+    "differentials": [
+      "Cardiomiopatia dilatada idiopática — diagnóstico de exclusão que costuma absorver casos não reconhecidos de cardiomiopatia hipocalcêmica quando o cálcio não é dosado",
+      "Taquicardiomiopatia (cardiomiopatia induzida por taquicardia)",
+      "Cardiomiopatia por deficiência de selênio",
+      "Cardiomiopatia alcoólica",
+      "Miocardite",
+      "Cardiomiopatia por disfunção tireoidiana",
+      "Cardiomiopatia periparto, quando o contexto clínico for compatível"
+    ],
+    "tests": [
+      "Cálcio ionizado — exame de escolha; o cálcio total corrigido por albumina é impreciso em pacientes críticos ou desnutridos e não deve ser usado isoladamente para excluir hipocalcemia",
+      "PTH — diferencia hipoparatireoidismo (baixo ou inapropriadamente normal) de pseudo-hipoparatireoidismo (elevado, com hiperfosfatemia) e de hipocalcemia secundária a deficiência de vitamina D (elevado, compensatório)",
+      "Magnésio sérico — hipomagnesemia grave pode simular hipoparatireoidismo primário ao suprimir a secreção de PTH",
+      "25-hidroxivitamina D — fecha o diagnóstico quando a hipocalcemia é secundária a deficiência grave de vitamina D",
+      "Fósforo sérico — hiperfosfatemia associada à hipocalcemia orienta para hipoparatireoidismo ou pseudo-hipoparatireoidismo",
+      "Ecocardiograma transtorácico — confirma o fenótipo de cardiomiopatia dilatada com FEVE reduzida, mas não distingue a etiologia",
+      "Eletrocardiograma — avalia QTc prolongado concomitante, achado que pode coexistir com a disfunção sistólica"
+    ],
+    "red_flags": [
+      "Hipocalcemia ionizada muito grave com tetania, espasmo carpopedal ou convulsão",
+      "QTc marcadamente prolongado associado — risco de torsades de pointes concomitante à disfunção sistólica",
+      "Instabilidade hemodinâmica ou choque cardiogênico antes da correção do cálcio",
+      "Arritmia ventricular associada",
+      "Nova disfunção ventricular nos dias a semanas após paratireoidectomia por doença óssea de alto turnover — suspeitar de síndrome do osso faminto",
+      "História de cirurgia cervical (tireoidectomia ou paratireoidectomia) não investigada em paciente com insuficiência cardíaca de etiologia indeterminada"
+    ],
+    "ambulatory_flow": [
+      "Diante de cardiomiopatia dilatada de etiologia não esclarecida, dosar cálcio ionizado como parte da investigação de rotina, ao lado de outras causas reversíveis já estabelecidas (taquicardiomiopatia, disfunção tireoidiana, deficiência nutricional)",
+      "Pesquisar ativamente sinais neuromusculares de hipocalcemia (Chvostek, Trousseau, parestesias, tetania) e história de cirurgia cervical prévia, mesmo remota",
+      "Se hipocalcemia grave confirmada, dosar PTH, magnésio e 25-hidroxivitamina D para diferenciar a etiologia",
+      "Tratar a causa de base e corrigir o cálcio (reposição oral e/ou parenteral conforme gravidade, associada a calcitriol/vitamina D ativa) em conjunto com terapia padrão de insuficiência cardíaca",
+      "Reavaliar a FEVE por ecocardiograma seriado em dias a poucas semanas após a correção — recuperação relevante da função ventricular é a expectativa terapêutica correta",
+      "Evitar avançar para investigação invasiva (biópsia endomiocárdica) ou terapias definitivas de longo prazo antes de permitir a janela de resposta à correção do cálcio, desde que o paciente esteja hemodinamicamente estável"
+    ],
+    "emergency_flow": [
+      "Reconhecer tetania, espasmo carpopedal ou convulsão associados a insuficiência cardíaca descompensada como possível manifestação de hipocalcemia grave",
+      "Solicitar cálcio ionizado e eletrocardiograma (QTc) de forma imediata",
+      "Corrigir a hipocalcemia por via intravenosa conforme gravidade, com monitorização cardíaca contínua pelo risco de arritmia durante a reposição",
+      "Investigar e corrigir magnésio concomitante, que pode perpetuar a hipocalcemia se não tratado",
+      "Manter suporte padrão de insuficiência cardíaca descompensada ou choque cardiogênico enquanto se aguarda a resposta à correção do cálcio",
+      "Encaminhar para investigação etiológica completa (PTH, história de cirurgia cervical, 25-OH-vitamina D) assim que o paciente estiver estabilizado"
+    ],
+    "tags": [
+      "hipocalcemia",
+      "hipoparatireoidismo",
+      "cardiomiopatia reversível",
+      "cálcio ionizado",
+      "PTH",
+      "vitamina D",
+      "pseudo-hipoparatireoidismo",
+      "síndrome do osso faminto",
+      "insuficiência cardíaca",
+      "cardiomiopatia dilatada",
+      "Chvostek",
+      "Trousseau",
+      "tireoidectomia",
+      "paratireoidectomia"
+    ],
+    "source_refs": [
+      "Bers DM. Cardiac excitation-contraction coupling. Nature. 2002;415(6868):198-205. DOI: 10.1038/415198a. PMID: 11805843",
+      "Slomp J, van der Voort PH, Gerritsen RT, Berk JA, Bakker AJ. Albumin-adjusted calcium is not suitable for diagnosis of hyper- and hypocalcemia in the critically ill. Crit Care Med. 2003;31(5):1389-1393. DOI: 10.1097/01.CCM.0000063044.55669.3C. PMID: 12771607",
+      "Anastasopoulou C, Goyal A, Mounica C. Hypocalcemia. StatPearls Publishing, NBK430912, atualizado 2026. PMID: 28613662",
+      "Mutlu U, Cakmak R, Sonsöz MR, Karaayvaz EB, Uzum AK, Tanakol R, Aral F. A rare cause of dilated cardiomyopathy: hypocalcemia. Arch Endocrinol Metab. 2022;66(4):582-586. DOI: 10.20945/2359-3997000000474. PMID: 35551679",
+      "Zhang W, Xue F, Bu Q, Liu X. Hypocalcemic cardiomyopathy after parathyroidectomy in a patient with uremia: a case report and literature review. J Int Med Res. 2020;48(7):300060520942115. DOI: 10.1177/0300060520942115. PMID: 32700587",
+      "Daniella RM, Ritchy R, Narindra RA, Rakotoarimanana S, Rabearivory N. Reversible dilated cardiomyopathy induced by hypocalcaemia secondary to hypoparathyroidism after total thyroidectomy: about a case. Pan Afr Med J. 2019;32:34. DOI: 10.11604/pamj.2019.32.34.13886. PMID: 31143339",
+      "Elikowski W, Małek-Elikowska M, Lachowska-Kotowska P. Severe reversible hypocalcemic cardiomyopathy diagnosed 36 years after subtotal thyroidectomy - a case report. Pol Merkur Lekarski. 2017;43(253):26-31. PMID: 28805198",
+      "Ahmad B, Hussain S, Shah J, Khan SW. Hypocalcaemia As A Rare Reversible Cause Of Dilated Cardiomyopathy. J Ayub Med Coll Abbottabad. 2023;35(Suppl 1):S810-S812. DOI: 10.55519/JAMC-S4-12192. PMID: 38406916",
+      "Rupasinghe N, Ranasinghe P, Wanninayake L. Dilated cardiomyopathy due to hypocalcaemia: a case report. J Med Case Rep. 2024;18(1):204. DOI: 10.1186/s13256-024-04505-3. PMID: 38600559",
+      "Hunter L, Ferguson R, McDevitt H. Vitamin D deficiency cardiomyopathy in Scotland: a retrospective review of the last decade. Arch Dis Child. 2020;105(9):853-856. DOI: 10.1136/archdischild-2019-317794. PMID: 32122880",
+      "Yazici MU, Kesici S, Demirbilek H, Tanyıldız M, Gumustas M, Bayrakci B. Reversible Dilated Cardiomyopathy Due to Combination of Vitamin D-Deficient Rickets and Primary Hypomagnesemia in an 11-Month-Old Infant. J Pediatr Intensive Care. 2018;7(1):46-48. DOI: 10.1055/s-0037-1602803. PMID: 31073467",
+      "Fasih A. Pseudohypoparathyroidism and Cardiomyopathy: A Case Report with a New Perspective on the Cardiovascular-Endocrine Axis with Respect to Calcium Homeostasis. Eur J Case Rep Intern Med. 2019;6(2):000993. DOI: 10.12890/2019_000993. PMID: 30931261",
+      "Batra CM, Agarwal R. Hypocalcemic Cardiomyopathy and Pseudohypoparathyroidism Due to Severe Vitamin D Deficiency. J Assoc Physicians India. 2016;64(6):74-76. PMID: 27739274",
+      "Cetani F, Bertoldo F, Bononi M, Tarallo M, Camozzi V, Cipriani C, Palermo A, Pasquali D, Zavatta G. Unveiling the complexities of hypoparathyroidism: a comprehensive review of clinical manifestations, diagnosis, and novel therapies. J Endocrinol Invest. 2026;49(4):725-746. DOI: 10.1007/s40618-025-02760-9. PMID: 41335198",
+      "Noori W, Sibley CT, Chirikov VV, Roney K, Smith AR. Risk of Cardiovascular Events, Infections, and Renal Complications in Postsurgical Chronic Hypoparathyroidism: A US Medicare Claims Retrospective Analysis. Adv Ther. 2025;42(10):4866-4880. DOI: 10.1007/s12325-025-03264-x. PMID: 40531442",
+      "Khatua B, Yaron JR, El-Kurdi B, Kostenko S, Papachristou GI, Singh VP. Ringer's Lactate Prevents Early Organ Failure by Providing Extracellular Calcium. J Clin Med. 2020;9(1):263. PMID: 31963691"
+    ],
+    "source_urls": [],
+    "review_status": "revisado",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Revisão editorial independente Codex: estrutura, fontes declaradas, consistência interna, segurança clínica e vínculos canônicos verificados em 2026-08-30.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave"
+    ],
+    "patient_material_slug": null,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "cardiomiopatia-acromegalica",
+    "name": "Cardiomiopatia acromegálica",
+    "aliases": [
+      "cardiomiopatia da acromegalia",
+      "cardiopatia acromegálica",
+      "doença cardíaca por excesso de GH/IGF-1",
+      "cardiomiopatia por excesso de hormônio de crescimento"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "endocrina",
+    "prevalence_rank": 22,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia causada pela exposição crônica ao excesso de GH e IGF-1 na acromegalia (quase sempre por adenoma hipofisário somatotrofo), com efeito trófico direto sobre o miócito somado a mecanismos indiretos (hipertensão, resistência insulínica/diabetes, apneia obstrutiva do sono, doença valvar). Evolui em três fases — hiperdinâmica, hipertrofia concêntrica com disfunção diastólica, e dilatação com disfunção sistólica/insuficiência cardíaca — e é a principal causa de morte na acromegalia não tratada. É parcialmente reversível com o controle bioquímico da doença de base, de forma mais completa quanto mais precoce o diagnóstico e o tratamento.",
+    "presentation": [
+      "Fase hiperdinâmica inicial: débito cardíaco aumentado, taquicardia relativa, resistência vascular periférica reduzida, geralmente assintomática ou com sintomas inespecíficos",
+      "Fase intermediária: hipertrofia ventricular esquerda concêntrica biventricular com disfunção diastólica, frequentemente subclínica, independente de hipertensão ou de outras causas de sobrecarga",
+      "Fase tardia (se não tratada): dilatação ventricular com queda da fração de ejeção, evoluindo para insuficiência cardíaca; pode se apresentar como insuficiência cardíaca de alto débito já ao diagnóstico da acromegalia",
+      "Dispneia aos esforços, fadiga, edema e palpitações tendem a surgir apenas em fase avançada, quando parte do dano estrutural já não é totalmente reversível",
+      "Arritmias, sobretudo ventriculares, associadas ao remodelamento e à hipertrofia miocárdica",
+      "Sinais e sintomas somáticos da acromegalia (crescimento de extremidades, alterações faciais, artropatia) costumam preceder o reconhecimento do envolvimento cardíaco, dado o curso insidioso da doença de base"
+    ],
+    "differentials": [
+      "Cardiomiopatia hipertensiva sem excesso de GH/IGF-1",
+      "Cardiomiopatia hipertrófica genética (sarcomérica)",
+      "Outras causas de hipertrofia ventricular esquerda secundária (estenose aórtica, coartação da aorta, doenças infiltrativas como amiloidose cardíaca)",
+      "Coração de atleta (hipertrofia fisiológica por treinamento)",
+      "Cardiomiopatia dilatada de outra etiologia (isquêmica, idiopática, valvar) quando o paciente já se apresenta em fase tardia",
+      "Insuficiência cardíaca de alto débito por outras causas (tireotoxicose, anemia grave, fístula arteriovenosa, beribéri)",
+      "Doença valvar primária não relacionada à acromegalia"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico obrigatório na avaliação inicial de todo paciente com acromegalia confirmada, independentemente de sintomas cardíacos (massa e geometria ventricular, função sistólica e diastólica, triagem de doença valvar)",
+      "IGF-1 sérico para confirmação bioquímica e acompanhamento da atividade da acromegalia",
+      "Teste de supressão de GH com sobrecarga oral de glicose para confirmação diagnóstica da acromegalia",
+      "Aferição de pressão arterial e rastreio de diabetes/resistência insulínica",
+      "Triagem clínica (ou polissonografia quando indicada) para apneia obstrutiva do sono",
+      "Eletrocardiograma e, quando pertinente, Holter para rastreio de arritmias",
+      "Reavaliação ecocardiográfica seriada após início do tratamento da acromegalia para acompanhar a reversibilidade da hipertrofia e da função diastólica/sistólica"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de alto débito já presente ao diagnóstico da acromegalia",
+      "Fração de ejeção reduzida ou dilatação ventricular ao ecocardiograma",
+      "Hipertrofia ventricular esquerda importante, sobretudo desproporcional aos fatores de risco cardiovascular tradicionais",
+      "Arritmias ventriculares frequentes",
+      "Dispneia, edema ou palpitações em paciente com acromegalia não tratada ou não controlada — sinal de possível fase tardia da cardiomiopatia",
+      "Diagnóstico tardio de acromegalia (longa duração estimada de doença), associado a maior risco de complicação cardíaca e a menor reversibilidade"
+    ],
+    "ambulatory_flow": [
+      "Confirmar bioquimicamente a acromegalia (IGF-1 e teste de supressão de GH) antes ou em paralelo à avaliação cardiológica",
+      "Solicitar ecocardiograma transtorácico na avaliação inicial de todo paciente com acromegalia, mesmo assintomático do ponto de vista cardíaco",
+      "Rastrear ativamente hipertensão, diabetes/resistência insulínica e apneia obstrutiva do sono como amplificadores do dano cardíaco",
+      "Encaminhar para tratamento definitivo da acromegalia (cirurgia transesfenoidal, análogo de somatostatina e/ou pegvisomanto) assim que confirmado o diagnóstico, priorizando o controle bioquímico precoce como estratégia de proteção cardíaca",
+      "Reavaliar com ecocardiograma seriado após o início do tratamento, para documentar a regressão parcial da hipertrofia e da disfunção diastólica",
+      "Manter seguimento cardiológico e endocrinológico conjunto mesmo após normalização bioquímica, dado o potencial de disfunção residual em casos de diagnóstico tardio"
+    ],
+    "emergency_flow": [
+      "Considerar acromegalia não diagnosticada como causa de insuficiência cardíaca de alto débito em paciente com fenótipo compatível (crescimento de extremidades, alterações faciais)",
+      "Estabilizar a insuficiência cardíaca de forma convencional enquanto se investiga a etiologia",
+      "Solicitar ecocardiograma para caracterizar padrão hemodinâmico (dilatação, massa ventricular indexada, fração de ejeção) e orientar gravidade",
+      "Investigar IGF-1 em paciente com insuficiência cardíaca de etiologia não esclarecida associada a características somáticas sugestivas de acromegalia",
+      "Articular avaliação endocrinológica urgente para confirmação diagnóstica e definição do tratamento da doença de base assim que a estabilização hemodinâmica permitir"
+    ],
+    "tags": [
+      "acromegalia",
+      "GH",
+      "IGF-1",
+      "cardiomiopatia",
+      "hipertrofia ventricular esquerda",
+      "disfunção diastólica",
+      "insuficiência cardíaca de alto débito",
+      "endocrinologia",
+      "adenoma hipofisário",
+      "reversibilidade"
+    ],
+    "source_refs": [
+      "Melmed S. Acromegaly. N Engl J Med. 2006;355(24):2558-2573. PMID 17167139",
+      "Colao A, Ferone D, Marzullo P, Lombardi G. Systemic complications of acromegaly: epidemiology, pathogenesis, and management. Endocr Rev. 2004;25(1):102-152. PMID 14769829",
+      "Saccà L, Cittadini A, Fazio S. Growth hormone and the heart. Endocr Rev. 1994;15(5):555-573. PMID 7843068",
+      "Colao A, Spinelli L, Marzullo P, et al. Determinants of cardiac disease in newly diagnosed patients with acromegaly: results of a 10 year survey study. Eur J Endocrinol. 2011;165(5):713-721. PMID 21868601",
+      "Damjanovic SS, Neskovic AN, Petakov MS, et al. High output heart failure in patients with newly diagnosed acromegaly. Am J Med. 2002;112(8):610-616. PMID 12034409",
+      "Lombardi G, Colao A, Ferone D, et al. Improvement of left ventricular hypertrophy and arrhythmias after lanreotide-induced GH and IGF-I decrease in acromegaly. J Endocrinol Invest. 2002;25(11):971-976. PMID 12553557",
+      "Auriemma RS, Pivonello R, Galdiero M, et al. Effects of long-term combined treatment with somatostatin analogues and pegvisomant on cardiac structure and performance in acromegaly. Endocrine. 2017;55(3):872-884. PMID 27295183",
+      "Katznelson L, Laws ER Jr, Melmed S, et al. Acromegaly: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(11):3933-3951. PMID 25356808",
+      "Fleseriu M, Biermasz NR, Gadelha M, et al. A Pituitary Society update to acromegaly management guidelines. Pituitary. 2021;24(1):1-13. PMID 33079318",
+      "Melmed S, Bronstein MD, Chanson P, et al. A Consensus Statement on acromegaly therapeutic outcomes. Nat Rev Endocrinol. 2018;14(9):552-561. PMID 30050156"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/17167139/",
+      "https://pubmed.ncbi.nlm.nih.gov/14769829/",
+      "https://pubmed.ncbi.nlm.nih.gov/7843068/",
+      "https://pubmed.ncbi.nlm.nih.gov/21868601/",
+      "https://pubmed.ncbi.nlm.nih.gov/12034409/",
+      "https://pubmed.ncbi.nlm.nih.gov/12553557/",
+      "https://pubmed.ncbi.nlm.nih.gov/27295183/",
+      "https://pubmed.ncbi.nlm.nih.gov/25356808/",
+      "https://pubmed.ncbi.nlm.nih.gov/33079318/",
+      "https://pubmed.ncbi.nlm.nih.gov/30050156/"
+    ],
+    "review_status": "revisado",
+    "review_note": " Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-acromegalica-historia-natural-mecanismos-e-reversibilidade"
+    ],
+    "patient_material_slug": null,
+    "published": false,
+    "fonte_producao": "claude"
+  },
+  {
+    "slug": "granulomatose-eosinofilica-com-poliangiite-egpa",
+    "name": "Granulomatose Eosinofílica com Poliangiite (EGPA)",
+    "aliases": [
+      "Síndrome de Churg-Strauss",
+      "EGPA",
+      "vasculite eosinofílica ANCA-associada"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": 10,
+    "completeness": "intermediario",
+    "summary": "Vasculite necrosante de pequenos e médios vasos associada a ANCA, precedida por asma de início tardio e rinossinusite crônica; ao contrário de outras vasculites ANCA-associadas, o determinante dominante de mortalidade é o acometimento cardíaco — miocardite eosinofílica aguda que pode evoluir para fibrose endomiocárdica restritiva — e não a doença renal.",
+    "presentation": [
+      "Pródromo respiratório: asma de início tardio, frequentemente grave e de difícil controle, associada a rinossinusite crônica com polipose nasal, podendo preceder em anos o diagnóstico de vasculite",
+      "Fase de eosinofilia tecidual e periférica: infiltrados pulmonares migratórios, gastroenterite eosinofílica, eosinofilia periférica marcada",
+      "Fase vasculítica (parte dos pacientes): mononeurite múltipla, púrpura cutânea, glomerulonefrite, hemorragia alveolar",
+      "Miocardite eosinofílica aguda: infiltração miocárdica por eosinófilos ativados, podendo se manifestar como insuficiência cardíaca aguda, choque cardiogênico ou arritmia ventricular, com elevação de troponina",
+      "Fibrose endomiocárdica na fase crônica, quando a miocardite eosinofílica não é reconhecida a tempo: padrão restritivo com obliteração apical, trombo mural e insuficiência valvar atrioventricular por tração de cordoalhas",
+      "Pericardite aguda com derrame pericárdico — manifestação cardíaca mais comum e geralmente mais benigna, mas tamponamento é descrito",
+      "Coronariite (vasculite coronariana) causando isquemia miocárdica sem doença aterosclerótica obstrutiva subjacente",
+      "Acometimento cardíaco frequentemente assintomático ou pouco sintomático até estágios avançados, exigindo rastreio ativo mesmo sem sintomas cardiovasculares"
+    ],
+    "differentials": [
+      "Síndrome hipereosinofílica idiopática / endocardite de Löffler",
+      "Miocardite de células gigantes",
+      "Outras vasculites ANCA-associadas: granulomatose com poliangiite (GPA) e poliangiite microscópica (MPA)",
+      "Asma grave refratária isolada, sem componente vasculítico ou eosinofilia sistêmica",
+      "Outras causas de infiltrado pulmonar eosinofílico ou eosinofilia periférica secundária (parasitose, reação medicamentosa)"
+    ],
+    "tests": [
+      "ANCA (tipicamente p-ANCA/anti-mieloperoxidase, positivo em apenas uma minoria dos pacientes)",
+      "Eosinofilia periférica (contagem absoluta de eosinófilos)",
+      "Troponina e ECG na avaliação de todo paciente com diagnóstico novo, independentemente de sintomas cardiovasculares",
+      "Ecocardiograma para avaliação de função ventricular, derrame pericárdico e trombo mural",
+      "Ressonância magnética cardíaca com realce tardio, quando disponível, para identificar acometimento cardíaco subclínico e diferenciar fase inflamatória ativa de fibrose já estabelecida",
+      "Angiografia coronariana quando há suspeita de coronariite (pode ser normal ou mostrar irregularidades difusas de pequenos vasos)"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca aguda, choque cardiogênico ou arritmia ventricular nova em paciente com EGPA ativa",
+      "Dor torácica ou alteração eletrocardiográfica isquêmica em paciente jovem com EGPA ativa, sugerindo coronariite",
+      "Dispneia nova em EGPA ativa, levantando suspeita de tamponamento pericárdico",
+      "Paciente ANCA-negativo: fenótipo associado a maior risco cardíaco relativo, não menor, apesar de menos glomerulonefrite/mononeurite evidentes",
+      "Mononeurite múltipla, glomerulonefrite ou hemorragia alveolar indicando manifestação órgão-ameaçadora que exige indução clássica imediata"
+    ],
+    "ambulatory_flow": [
+      "Em todo paciente com diagnóstico novo de EGPA, investigar ativamente envolvimento cardíaco (ECG, troponina, ecocardiograma e, quando disponível, ressonância cardíaca), independentemente de sintomas cardiovasculares",
+      "Verificar status ANCA e ajustar o grau de vigilância cardiológica: ANCA-negativo aponta para o fenótipo de maior risco cardíaco",
+      "Definir a fase da doença (inflamatória ativa vs. fibrose já estabelecida), pois isso muda tanto a expectativa de resposta à imunossupressão/anti-IL-5 quanto a necessidade de manejo cardiológico específico",
+      "Seguimento conjunto com reumatologia/vasculite para decisão de indução clássica vs. terapia biológica (mepolizumabe) conforme gravidade e fase"
+    ],
+    "emergency_flow": [
+      "Suspeita de miocardite eosinofílica aguda: priorizar avaliação de instabilidade hemodinâmica, troponina, ECG e ecocardiograma urgentes",
+      "Choque cardiogênico ou arritmia ventricular: suporte hemodinâmico e discussão imediata com cardiologia/terapia intensiva, com indução imunossupressora precoce conforme gravidade",
+      "Dispneia nova com suspeita de tamponamento: avaliação ecocardiográfica emergencial",
+      "Dor torácica com EGPA ativa: considerar coronariite como mecanismo mesmo na ausência de doença aterosclerótica obstrutiva à angiografia",
+      "Manifestação órgão-ameaçadora associada (glomerulonefrite rapidamente progressiva, mononeurite múltipla grave, hemorragia alveolar): não atrasar indução clássica com glicocorticoide em dose alta associado a ciclofosfamida ou rituximabe conforme gravidade"
+    ],
+    "tags": [
+      "vasculite ANCA-associada",
+      "EGPA",
+      "miocardite eosinofílica",
+      "fibrose endomiocárdica",
+      "eosinofilia",
+      "asma",
+      "cardiomiopatia"
+    ],
+    "source_refs": [
+      "Grayson PC, Ponte C, Suppiah R, Robson JC, Craven A, Judge A, Khalid S, Hutchings A, Luqmani RA, Watts RA, Merkel PA; DCVAS Study Group. 2022 American College of Rheumatology/European Alliance of Associations for Rheumatology Classification Criteria for Eosinophilic Granulomatosis With Polyangiitis. Arthritis & Rheumatology. 2022;74(3):386-392. DOI: 10.1002/art.41982. PMID: 35106968",
+      "Comarmond C, Pagnoux C, Khellaf M, Cordier JF, Hamidou M, Viallard JF, Maurier F, Jouneau S, Bienvenu B, Puéchal X, Aumaître O, Le Guenno G, Le Quellec A, Cevallos R, Fain O, Godeau B, Seror R, Dunogué B, Mahr A, Guilpain P, Cohen P, Aouba A, Mouthon L, Guillevin L; French Vasculitis Study Group. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss): clinical characteristics and long-term followup of the 383 patients enrolled in the French Vasculitis Study Group cohort. Arthritis and Rheumatism. 2013;65(1):270-281. DOI: 10.1002/art.37721. PMID: 23044708",
+      "Sablé-Fourtassou R, Cohen P, Mahr A, Pagnoux C, Mouthon L, Jayne D, Blockmans D, Cordier JF, Delaval P, Puechal X, Lauque D, Viallard JF, Zoulim A, Guillevin L. Antineutrophil cytoplasmic antibodies and the Churg-Strauss syndrome. Annals of Internal Medicine. 2005;143(9):632-638. DOI: 10.7326/0003-4819-143-9-200511010-00006. PMID: 16263885",
+      "Dennert RM, van Paassen P, Schalla S, Kuznetsova T, Alzand BS, Staessen JA, Velthuis S, Crijns HJ, Tervaert JW, Heymans S. Cardiac involvement in Churg-Strauss syndrome. Arthritis and Rheumatism. 2010;62(2):627-634. DOI: 10.1002/art.27263. PMID: 20112390",
+      "Hazebroek MR, Kemna MJ, Schalla S, Sanders-van Wijk S, Gerretsen SC, Dennert R, Merken J, Kuznetsova T, Staessen JA, Brunner-La Rocca HP, van Paassen P, Cohen Tervaert JW, Heymans S. Prevalence and prognostic relevance of cardiac involvement in ANCA-associated vasculitis: eosinophilic granulomatosis with polyangiitis and granulomatosis with polyangiitis. International Journal of Cardiology. 2015;199:170-179. DOI: 10.1016/j.ijcard.2015.06.087. PMID: 26209947",
+      "Groh M, Pagnoux C, Baldini C, Bel E, Bottero P, Cottin V, Dalhoff K, Dunogué B, Gross W, Holle J, Humbert M, Jayne D, Jennette JC, Lazor R, Mahr A, Merkel PA, Mouthon L, Sinico RA, Specks U, Vaglio A, Wechsler ME, Cordier JF, Guillevin L. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss) (EGPA) Consensus Task Force recommendations for evaluation and management. European Journal of Internal Medicine. 2015;26(7):545-553. DOI: 10.1016/j.ejim.2015.04.022. PMID: 25971154",
+      "Wechsler ME, Akuthota P, Jayne D, Khoury P, Klion A, Langford CA, Merkel PA, Moosig F, Specks U, Cid MC, Luqmani R, Brown J, Mallett S, Philipson R, Yancey SW, Steinfeld J, Weller PF, Gleich GJ; EGPA Mepolizumab Study Team. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. New England Journal of Medicine. 2017;376(20):1921-1932. DOI: 10.1056/NEJMoa1702079. PMID: 28514601"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35106968/",
+      "https://pubmed.ncbi.nlm.nih.gov/23044708/",
+      "https://pubmed.ncbi.nlm.nih.gov/16263885/",
+      "https://pubmed.ncbi.nlm.nih.gov/20112390/",
+      "https://pubmed.ncbi.nlm.nih.gov/26209947/",
+      "https://pubmed.ncbi.nlm.nih.gov/25971154/",
+      "https://pubmed.ncbi.nlm.nih.gov/28514601/"
+    ],
+    "review_status": "revisado",
+    "review_note": " Revisão editorial independente Codex em 2026-08-30: 79 PMIDs declarados no lote ampliado resolveram no PubMed; estrutura, fontes, segurança clínica e relações canônicas verificadas.",
+    "version": 1,
+    "related_document_slugs": [
+      "granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular"
+    ],
+    "patient_material_slug": "egpa-granulomatose-eosinofilica-e-o-coracao",
+    "published": false,
+    "fonte_producao": "claude"
   }
 ]
