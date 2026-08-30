@@ -1359,7 +1359,29 @@ de órgão sólido bilateral (doador+receptor, cardíaco/hepático/renal),
 populações especiais (falciforme, HIV, pós-COVID, hEDS), canalopatias,
 métodos gráficos.
 
-## Lote 61 (planejado)
+## Lote 61 — concluído (SHA 59cc61f2) — total 89 commits
+
+- checklist `atresia-tricuspide-classificacao-edwards-burchell-e-via-cirurgica-estagiada-ao-fontan`
+  — gap genuíno: a atresia tricúspide como entidade anatômica primária
+  nunca havia sido coberta, apesar da base extensa já construída sobre
+  Fontan/cianose neonatal/triagem oximétrica (menções existentes em
+  `content/**/*.md` tratam a lesão apenas de passagem). PR #710
+  (insuficiência tricúspide) é valvopatia, sem sobreposição. 5 itens:
+  classificação de Edwards-Burchell (1949) — tipos I-III por relação
+  ventrículo-arterial × subtipos a/b/c por fluxo pulmonar;
+  apresentação neonatal (shunt D-E obrigatório via CIA, dependência
+  ductal por subtipo); manejo inicial (PGE1, Rashkind, shunt BT vs.
+  banding); via estagiada ao Fontan (Glenn ~6 meses, Fontan ~1-2 anos
+  depois, fenestração 4-6mm — nota de rigor sobre variação de idade
+  entre centros); particularidades univentriculares — metanálise de
+  27 estudos/9.373 pacientes (Ponzoni 2022, PMID 36367236): sobrevida
+  em 20 anos 86% (ventrículo dominante esquerdo, caso da atresia
+  tricúspide) vs. 69% (dominante direito). 8 fontes via NCBI e-utils,
+  incluindo a classificação original (PMID 18145655) e ESC 2020/
+  AHA-ACC 2018 ACHD. Nenhuma diretriz SBC específica localizada —
+  declarado. Gates limpos. Total: 422 checklists.
+
+## Lote 62 (planejado)
 
 A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
 `gh pr list`): território ainda não explorado, ou aprofundamento
