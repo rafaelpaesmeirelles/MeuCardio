@@ -819,3 +819,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 14 (3 descartados por colisão) | 186 |
 | **Total** | **4.900** | **129** | **4.771** |
+
+## Lote 41 — concluído (commit 2404ef9e)
+
+- **content/Terapia_intensiva**: +2 — `crise-adrenal-insuficiencia-adrenal-aguda-choque-cardiovascular-refratario`, `tempestade-tireotoxica-emergencia-cardiovascular-...` (duas emergências endócrino-cardiovasculares genuinamente ausentes do corpus até então).
+- **doencas**: +2 — `gaucher-tipo-3c`, `pelagra-...` (pareadas com lote 40).
+- **checklists**: +1 — calcificação valvar grave em jovem, suspeita de Gaucher 3c.
+- **casos-clinicos**: +2 — síndrome de Sheehan com crise adrenal secundária; intoxicação por metanol com cardiotoxicidade por acidose grave.
+- **material-paciente**: +1 — doença de Wilson e o coração, voltado a público jovem.
+- **Correção durante integração**: um link "Tudo com Tudo" tinha erro de digitação no slug (`simultaneo` faltando o `s` de `simultaneos`) — corrigido antes do commit via reconferência manual contra o worktree.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.324 (10.281 revisado + 43 pendente_revisao).
+
+### Status consolidado (após Lote 41)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 24 | 2.376 |
+| Casos clínicos | 900 | 39 | 861 |
+| Checklists | 600 | 26 | 574 |
+| Materiais-paciente | 500 | 29 | 471 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 16 (3 descartados por colisão) | 184 |
+| **Total** | **4.900** | **137** | **4.763** |
