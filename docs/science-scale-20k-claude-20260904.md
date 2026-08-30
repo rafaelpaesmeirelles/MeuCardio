@@ -929,3 +929,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 34 (3 descartados por colisão) | 166 |
 | **Total** | **4.900** | **179** | **4.721** |
+
+## Lote 46 — concluído (commit 6673b4f1)
+
+- **6 documentos** (infectocontagioso/pós-viral/tóxico): malária grave e acometimento cardiovascular (sequestro microvascular, malária álgida, cardiotoxicidade de antimaláricos — `content/Terapia_intensiva`), febre amarela grave (miocardite, sinal de Faget, dados PROVAR+ — `content/Geral`), POTS pós-COVID (disautonomia cardiovascular na COVID longa — `content/Geral`), botulismo e disautonomia cardiovascular (mecanismo SNARE, honesto sobre risco dominante ser respiratório — `content/Terapia_intensiva`), loxoscelismo/aranha-marrom (hemólise por complemento, CIVD — `content/Terapia_intensiva`), síndrome cardiopulmonar por hantavírus (fisiopatologia dual, ECMO — `content/Terapia_intensiva`).
+- **doencas**: +6, pareadas 1:1 — `malaria-grave`, `miocardite-e-disfuncao-cardiovascular-na-febre-amarela`, `pots-pos-covid`, `botulismo`, `loxoscelismo-picada-de-aranha-marrom`, `sindrome-cardiopulmonar-por-hantavirus`.
+- **7º tópico corretamente descartado por colisão real**: esquistossomose/hipertensão pulmonar esquistossomótica já está coberta por 2 documentos revisados em `content/Hipertensão_pulmonar/` (epidemiologia/prognóstico + mecanismo fisiopatológico), ambos já linkados à doença `hipertensao-pulmonar` existente. O agente identificou a colisão antes de escrever qualquer conteúdo e não produziu duplicata — nenhuma perda de trabalho.
+- **Padrão recorrente confirmado: mensagens de agente truncadas.** 3 dos 7 agentes deste lote (malária, febre amarela vieram completos; botulismo precisou de reenvio) — a essa altura já é um padrão estabelecido (Lote 44 e 45 também tiveram casos), tratado sistematicamente com `SendMessage` pedindo reenvio antes de prosseguir.
+- **Correções na integração**: slug de doença do POTS pós-COVID renomeado (era idêntico ao slug do documento) para `pots-pos-covid`. `prevalence_rank` recalculado ao vivo (área geral: 40-45, sem colisão). `source_urls` da malária reconstruído — o agente entregou um array com contagem incorreta (15 URLs para 16 referências) e uma URL malformada (DOI inválido para Day et al. 2000); refeito como 16 links PMID padrão, um por referência.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.378 itens.
+
+### Status consolidado (após Lote 46)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 46 | 2.354 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 40 (3 descartados por colisão) | 160 |
+| **Total** | **4.900** | **191** | **4.709** |
