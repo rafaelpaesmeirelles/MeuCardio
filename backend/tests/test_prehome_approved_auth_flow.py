@@ -10,12 +10,12 @@ def read(relative: str) -> str:
 
 
 def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
-    main = read("main.tsx")
-    prehome = 'import "./styles/prehome-approved-auth-flow.css";'
-    contrast = 'import "./styles/clinical-form-control-contrast.css";'
-    assert prehome in main
-    assert contrast in main
-    assert main.index(prehome) < main.index(contrast)
+    manifest = read("styles/app.css")
+    prehome = '@import "./prehome-approved-auth-flow.css";'
+    contrast = '@import "./clinical-form-control-contrast.css";'
+    assert prehome in manifest
+    assert contrast in manifest
+    assert manifest.index(prehome) < manifest.index(contrast)
 
 
 def test_prehome_brand_matches_approved_corvia_identity():
