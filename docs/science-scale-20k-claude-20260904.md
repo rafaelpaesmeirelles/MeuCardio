@@ -393,3 +393,26 @@ limpos, 10.243 registros totais.
 | Trilhas | 300 | 1 | 299 |
 | Doenças especializadas | 200 | 1 (3 descartados por colisão) | 199 |
 | **Total** | **4.900** | **62** | **4.838** |
+
+## Remediação de schema — concluída (commit c49847e8)
+
+Dívida aberta no checkpoint do Lote 22 fechada: os 17 materiais-
+paciente entregues nos lotes 2-19 agora têm os 3 campos reais do
+schema (`sinais_de_alerta`, `perguntas`, `fontes`), preenchidos por
+4 agentes paralelos com fontes individualmente verificadas via
+PubMed/Europe PMC/GeneReviews — nenhuma referência inventada; um caso
+descartou uma citação não localizável e usou a fonte real mais
+próxima do mesmo achado. `sinais_de_alerta`/`perguntas` derivados
+apenas do conteúdo clínico já presente em cada registro.
+
+Verificado: os 426 registros de `material-paciente/metadados.json`
+têm agora os 3 campos (0 faltando). Nenhum item novo — só correção.
+
+Gates: `broken_references: []`; `content_inventory.py --strict` exit 0.
+
+**Lição geral reforçada**: sempre confirmar o schema real (chaves de
+um item existente do manifesto) antes de produzir um novo tipo de
+conteúdo — meus dois achados de dívida nesta frente (revisao como
+objeto vs. string; e agora estes 3 campos ausentes) vieram de nunca
+ter conferido um item completo e real antes da primeira produção
+daquele tipo.
