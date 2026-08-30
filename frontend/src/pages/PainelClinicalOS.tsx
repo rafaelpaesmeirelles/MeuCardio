@@ -218,6 +218,7 @@ export default function PainelClinicalOS() {
   const [calculandoRota, setCalculandoRota] = useState(false);
   const [erroRota, setErroRota] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const approvedInputRef = useRef<HTMLInputElement>(null);
   const chamadaRotaEmCurso = useRef(false);
   const ultimaRotaEm = useRef(0);
 
@@ -260,7 +261,7 @@ export default function PainelClinicalOS() {
   }, [mobilidade?.enabled]);
 
   useEffect(() => {
-    function focar(evento: KeyboardEvent) { if (evento.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") { evento.preventDefault(); inputRef.current?.focus(); } }
+    function focar(evento: KeyboardEvent) { if (evento.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") { evento.preventDefault(); (window.matchMedia("(min-width: 901px)").matches ? approvedInputRef : inputRef).current?.focus(); } }
     document.addEventListener("keydown", focar); return () => document.removeEventListener("keydown", focar);
   }, []);
 
@@ -441,7 +442,53 @@ export default function PainelClinicalOS() {
   const grupos = MODULOS.map((grupo) => ({ ...grupo, items: grupo.items.filter((item) => !item.adminOnly || usuario?.role === "admin") })).filter((grupo) => grupo.items.length);
 
   return (
-    <div className="ccc-home ccc-home--board ccc-reference-board">
+    <>
+      <section className="ccc-approved-main" aria-label="Página inicial CorVIA Clinical OS">
+        <div className="ccc-approved-main__canvas">
+          <img src="/corvia-home-approved-v1.png" alt="CorVIA Clinical OS — O que você precisa agora?" />
+
+          <nav className="ccc-approved-main__hotspots" aria-label="Acessos rápidos da página inicial">
+            <Link data-spot="top-search" to="/busca"><span>Pesquisar no CorVIA</span></Link>
+            <Link data-spot="account" to="/minha-conta"><span>Minha conta</span></Link>
+            <Link data-spot="new" to="/documentos"><span>Novo documento</span></Link>
+            <Link data-spot="notifications" to="/diretrizes"><span>Notificações</span></Link>
+            <Link data-spot="mail-top" to="/corvia-mail"><span>CorVIA Mail</span></Link>
+
+            <Link data-spot="nav-home" to="/"><span>Página inicial</span></Link>
+            <Link data-spot="nav-diseases" to="/doencas"><span>Guia de Doenças</span></Link>
+            <Link data-spot="nav-drugs" to="/medicamentos"><span>Medicamentos</span></Link>
+            <Link data-spot="nav-exams" to="/exames"><span>Exames</span></Link>
+            <Link data-spot="nav-calculators" to="/calculadoras"><span>Calculadoras</span></Link>
+            <Link data-spot="nav-emergency" to="/emergencia"><span>Emergências</span></Link>
+            <Link data-spot="nav-icu" to="/cardiologia-intensiva"><span>Cardiologia Intensiva e UCO</span></Link>
+            <Link data-spot="nav-checklists" to="/checklists"><span>Checklists</span></Link>
+            <Link data-spot="nav-screening" to="/triagem-sintomas"><span>Triagem de sintomas</span></Link>
+            <Link data-spot="nav-interactions" to="/interacoes"><span>Interações medicamentosas</span></Link>
+            <Link data-spot="nav-conditions" to="/condicoes"><span>Condições especiais</span></Link>
+            <Link data-spot="nav-flows" to="/fluxogramas"><span>Fluxogramas clínicos</span></Link>
+            <Link data-spot="nav-preop" to="/avaliacao-preoperatoria"><span>Avaliação pré-operatória</span></Link>
+
+            <Link data-spot="exams-ai" to="/exames-ia"><span>IA para Exames</span></Link>
+            <Link data-spot="flows" to="/fluxogramas"><span>Fluxogramas clínicos</span></Link>
+            <Link data-spot="calculators" to="/calculadoras"><span>Calculadoras</span></Link>
+            <Link data-spot="patient-material-left" to="/material-paciente"><span>Material para paciente</span></Link>
+            <Link data-spot="interactions" to="/interacoes"><span>Interações medicamentosas</span></Link>
+            <Link data-spot="mail" to="/corvia-mail"><span>CorVIA Mail</span></Link>
+            <Link data-spot="patient-material-right" to="/material-paciente"><span>Material para paciente</span></Link>
+            <Link data-spot="evidence" to="/evidencias"><span>Evidências</span></Link>
+            <Link data-spot="prescribe" to="/receituario"><span>Prescrever</span></Link>
+            <Link data-spot="medications" to="/medicamentos"><span>Medicamentos</span></Link>
+            <Link data-spot="library" to="/biblioteca"><span>Biblioteca científica</span></Link>
+          </nav>
+
+          <form className="ccc-approved-main__command" onSubmit={executar} role="search">
+            <input ref={approvedInputRef} value={comando} onChange={(event) => setComando(event.target.value)} placeholder=" " aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
+            <button type="submit" aria-label="Conectar e executar">Conectar</button>
+          </form>
+        </div>
+      </section>
+
+      <div className="ccc-home ccc-home--board ccc-reference-board">
       <main className="ccc-home__main">
         <header className="ccc-home__welcome">
           <span className="ccc-home__live"><i /> CorVIA Clinical OS</span>
@@ -576,6 +623,7 @@ export default function PainelClinicalOS() {
           <button type="button" className="ccc-assistant-input" onClick={abrirAssistentePessoal}><span>Pergunte ou peça algo...</span><Icone nome="assistente" /></button>
         </section>
       </aside>
-    </div>
+      </div>
+    </>
   );
 }
