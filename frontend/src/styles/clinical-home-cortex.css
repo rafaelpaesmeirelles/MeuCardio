@@ -415,3 +415,164 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
   .ccc-reference-board .ccc-home__intelligence,
   .ccc-reference-board .ccc-home__assistant { transition: none; }
 }
+
+/* Desktop hero — faithful spatial reproduction of the supplied CorVIA reference. */
+@media (min-width: 901px) {
+  .ccc-clinical-cortex {
+    min-height: 674px;
+    margin: 0;
+    padding: 0 18px 10px;
+    overflow: visible;
+    background:
+      radial-gradient(ellipse 58% 46% at 50% 44%, rgba(0, 107, 255, .17), transparent 66%),
+      radial-gradient(ellipse 78% 55% at 50% 48%, rgba(108, 42, 255, .09), transparent 74%),
+      linear-gradient(180deg, rgba(1, 8, 19, .96), rgba(1, 8, 18, .985));
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .ccc-clinical-cortex::before {
+    opacity: .42;
+    background-image:
+      radial-gradient(circle, rgba(67, 175, 255, .62) 0 1px, transparent 1.7px),
+      radial-gradient(circle, rgba(137, 78, 255, .38) 0 1px, transparent 1.6px);
+    background-position: 0 0, 17px 23px;
+    background-size: 43px 43px, 59px 59px;
+    mask-image: radial-gradient(ellipse 62% 60% at 50% 44%, #000 0 38%, transparent 76%);
+  }
+
+  .ccc-cortex__copy h2 {
+    font-size: clamp(2.55rem, 3.7vw, 3.18rem);
+    font-weight: 770;
+    letter-spacing: -.045em;
+    line-height: 1;
+  }
+
+  .ccc-cortex__stage {
+    min-height: 625px;
+    margin-top: 1px;
+  }
+
+  .ccc-cortex__network {
+    top: 14px;
+    width: min(92%, 910px);
+    opacity: .95;
+  }
+
+  .ccc-cortex__network::before { width: 38%; border-color: rgba(35, 214, 246, .25); }
+  .ccc-cortex__network::after { width: 104%; height: 72%; border-color: rgba(79, 83, 255, .17); }
+  .ccc-cortex__network > i:nth-child(1) { width: 58%; height: 52%; }
+  .ccc-cortex__network > i:nth-child(2) { width: 118%; height: 86%; }
+  .ccc-cortex__network > i:nth-child(3),
+  .ccc-cortex__network > i:nth-child(4) { width: 112%; height: 42%; }
+
+  .ccc-cortex__heart {
+    top: 8px;
+    width: 320px;
+  }
+
+  .ccc-cortex__heart::after { display: none; }
+
+  .ccc-cortex__heart > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    filter: saturate(1.18) contrast(1.04) drop-shadow(-12px 0 24px rgba(0, 190, 255, .2)) drop-shadow(12px 0 24px rgba(167, 53, 255, .18));
+  }
+
+  .ccc-cortex__heart > span { inset: 8%; border-color: rgba(35, 185, 255, .12); }
+  .ccc-cortex__heart > span:nth-child(2) { inset: -8%; }
+  .ccc-cortex__heart > span:nth-child(3) { inset: -22%; }
+
+  .ccc-cortex-card {
+    width: clamp(190px, 21%, 224px);
+    min-height: 112px;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 12px;
+    padding: 13px;
+    background:
+      linear-gradient(145deg, color-mix(in srgb, var(--cortex-accent) 11%, transparent), transparent 60%),
+      linear-gradient(155deg, rgba(7, 32, 52, .92), rgba(3, 14, 29, .96));
+    border-color: color-mix(in srgb, var(--cortex-accent) 48%, transparent);
+    border-radius: 11px;
+    box-shadow: 0 0 24px -14px color-mix(in srgb, var(--cortex-accent) 84%, transparent), inset 0 1px rgba(255, 255, 255, .055);
+  }
+
+  .ccc-cortex-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+
+  .ccc-cortex-card__icon svg { width: 22px; height: 22px; }
+  .ccc-cortex-card strong { font-size: .84rem; line-height: 1.18; text-overflow: clip; white-space: normal; }
+  .ccc-cortex-card small { margin-top: 5px; font-size: .56rem; line-height: 1.34; }
+  .ccc-cortex-card em { margin-top: 7px; font-size: .5rem; }
+
+  .ccc-cortex-card[data-slot="left-1"], .ccc-cortex-card[data-slot="right-1"] { top: 68px; }
+  .ccc-cortex-card[data-slot="left-2"], .ccc-cortex-card[data-slot="right-2"] { top: 197px; }
+  .ccc-cortex-card[data-slot="left-3"], .ccc-cortex-card[data-slot="right-3"] { top: 326px; }
+  .ccc-cortex-card[data-slot="left-4"], .ccc-cortex-card[data-slot="right-4"] { top: 455px; }
+
+  .ccc-cortex-card[data-slot^="bottom"] {
+    bottom: 2px;
+    width: 16%;
+    min-height: 105px;
+  }
+
+  .ccc-cortex-card[data-slot="bottom-1"] { left: 17%; }
+  .ccc-cortex-card[data-slot="bottom-2"] { left: 34%; }
+  .ccc-cortex-card[data-slot="bottom-3"] { right: 34%; }
+  .ccc-cortex-card[data-slot="bottom-4"] { right: 17%; }
+
+  .ccc-cortex__core {
+    top: 279px;
+    width: min(45%, 430px);
+    min-width: 360px;
+    min-height: 182px;
+    padding: 23px 22px 18px;
+    background:
+      radial-gradient(circle at 50% 0, rgba(20, 142, 255, .2), transparent 14rem),
+      linear-gradient(160deg, rgba(5, 28, 48, .985), rgba(2, 13, 27, .99));
+    border-color: rgba(91, 193, 255, .72);
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px rgba(73, 86, 255, .11), 0 0 66px rgba(20, 130, 255, .18), 0 32px 68px -40px #000;
+  }
+
+  .ccc-cortex__core > strong { font-size: 2rem; }
+  .ccc-cortex__core > p { margin: 5px 0 16px; font-size: .84rem; }
+
+  body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command {
+    min-height: 54px !important;
+    grid-template-columns: 20px minmax(0, 1fr) auto;
+    gap: 9px;
+    padding: 6px 6px 6px 13px !important;
+    border-radius: 9px !important;
+  }
+
+  .ccc-clinical-cortex .ccc-command input { font-size: .77rem !important; }
+  .ccc-clinical-cortex .ccc-command kbd { display: none; }
+  .ccc-clinical-cortex .ccc-command button { min-height: 40px; padding: 0 14px; font-size: .68rem; }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .ccc-cortex__heart { width: 285px; }
+  .ccc-cortex-card { width: 21%; min-width: 160px; padding: 10px; }
+  .ccc-cortex-card strong { font-size: .7rem; }
+  .ccc-cortex-card small { font-size: .49rem; }
+  .ccc-cortex__core { min-width: 320px; }
+}
+
+@media (max-width: 900px) {
+  .ccc-cortex__heart::after { display: none; }
+  .ccc-cortex__heart > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+  }
+}

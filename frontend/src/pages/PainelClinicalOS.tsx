@@ -463,7 +463,7 @@ export default function PainelClinicalOS() {
 
             <div className="ccc-cortex__heart" aria-hidden="true">
               <span /><span /><span />
-              <img src="/corvia-mark-canonical.svg" alt="" />
+              <img src="/corvia-cortex-heart-v2.png" alt="" />
             </div>
 
             <nav className="ccc-cortex__connections" aria-label="Conexões do Tudo com Tudo">
