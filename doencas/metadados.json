@@ -38464,5 +38464,114 @@
       "amiloidose-relacionada-a-dialise-beta2-microglobulina-e-acometimento-cardiovascular"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "doenca-de-wilson-cardiovascular",
+    "name": "Acometimento cardiovascular da doença de Wilson",
+    "aliases": [
+      "cardiomiopatia da doença de Wilson",
+      "cardiopatia por ATP7B",
+      "acometimento cardíaco na doença de Wilson",
+      "cardiotoxicidade por cobre livre",
+      "doença de Wilson cardíaca"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "toxica",
+    "prevalence_rank": 23,
+    "completeness": "completo",
+    "summary": "Espectro de acometimento cardiovascular por acúmulo tóxico de cobre livre na doença de Wilson, distúrbio autossômico recessivo por mutações em ATP7B que compromete a excreção biliar de cobre. O cobre livre pró-oxidante lesa o miocárdio por estresse oxidativo mitocondrial, peroxidação lipídica de membrana e fibrose, produzindo um fenótipo predominantemente elétrico e estrutural: arritmias (incluindo bloqueios atrioventriculares e taquicardia ventricular), prolongamento de QT, hipertrofia/remodelamento ventricular subclínico, cardiomiopatia com disfunção sistólica ou diastólica variável e disautonomia cardiovascular (hipotensão ortostática, resposta anormal à manobra de Valsalva). O acometimento cardíaco é historicamente subavaliado — não consta em protocolo de rastreio estruturado das diretrizes hepatológicas de referência (EASL, AASLD) — e não se correlaciona de forma comprovada com a gravidade do fenótipo hepático ou neurológico predominante. A terapia quelante (D-penicilamina, trientina) e o zinco seguem sendo a base do tratamento, com eficácia bem estabelecida sobre os desfechos hepático e neurológico, mas a evidência de que revertam especificamente o dano cardíaco é escassa, indireta e majoritariamente transversal, não prospectiva.",
+    "presentation": [
+      "Arritmias: bloqueios atrioventriculares, taquicardia ventricular, extrassístoles atriais/ventriculares, alargamento de QRS e inversão de onda T; há relato de fibrilação ventricular fatal associada a cobre miocárdico elevado",
+      "Prolongamento do intervalo QT, documentado em coorte pediátrica com Wilson mesmo com função sistólica preservada e proposto como potencial preditor de risco arrítmico, com heterogeneidade entre séries pequenas",
+      "Hipertrofia ventricular esquerda e remodelamento concêntrico subclínico, com espessura relativa de parede aumentada apesar de fração de ejeção normal",
+      "Cardiomiopatia com disfunção diastólica e/ou sistólica subclínica (menor velocidade sistólica anular ao Doppler tecidual), podendo evoluir para cardiomiopatia dilatada franca; elevação de troponina e de peptídeos natriuréticos em parte dos casos",
+      "Disautonomia cardiovascular: hipotensão ortostática assintomática e resposta anormal à manobra de Valsalva",
+      "Predomínio de achados subclínicos, presentes já em pacientes jovens, com curta duração de doença e sem sintomas cardíacos referidos"
+    ],
+    "differentials": [
+      "Deficiência de cobre (doença de Menkes e formas adquiridas de hipocupremia, defeito em ATP7A): mecanismo oposto — falha de enzimas cobre-dependentes (lisil oxidase, citocromo c oxidase) por deficiência tecidual de cobre, não excesso tóxico; fenótipo predominantemente de cardiomiopatia dilatada por falência energética e de fragilidade vascular, não elétrico-oxidativo",
+      "Cardiomiopatia dilatada de outra etiologia (idiopática, genética/sarcomérica, isquêmica, viral, alcoólica)",
+      "Cardiomiopatia hipertrófica genética (sarcomérica) e outras causas de hipertrofia ventricular esquerda secundária (hipertensão, estenose aórtica, amiloidose cardíaca)",
+      "Canalopatias primárias e outras causas de QT longo adquirido (fármacos, distúrbio eletrolítico) quando o prolongamento de QT é achado isolado",
+      "Cardiomiopatia cirrótica ou repercussão cardiovascular indireta de hepatopatia avançada de outra etiologia, quando a apresentação hepática predomina"
+    ],
+    "tests": [
+      "Eletrocardiograma no diagnóstico e no seguimento, com atenção a intervalo QT, bloqueios de condução e arritmias",
+      "Ecocardiograma transtorácico com Doppler tecidual, mais sensível que a fração de ejeção convencional para detectar disfunção sistólica subclínica",
+      "Holter de ritmo prolongado para rastreio de arritmias",
+      "Biomarcadores: troponina e peptídeos natriuréticos",
+      "Ressonância magnética cardíaca (mapeamento T1/T2, realce tardio) para caracterização de fibrose miocárdica e estratificação de risco arrítmico em casos selecionados",
+      "Avaliação de disautonomia (pressão arterial ortostática, resposta à manobra de Valsalva) quando houver sintomas sugestivos"
+    ],
+    "red_flags": [
+      "Síncope ou pré-síncope em paciente com doença de Wilson",
+      "Taquicardia ventricular ou bloqueio atrioventricular ao ECG/Holter",
+      "Prolongamento significativo de QT, sobretudo com uso concomitante de fármaco que prolonga QT",
+      "Sinais ou sintomas de insuficiência cardíaca (dispneia, edema, fadiga) em paciente com Wilson, independentemente do fenótipo hepático/neurológico predominante",
+      "Elevação de troponina ou de peptídeos natriuréticos sem outra causa evidente",
+      "Morte súbita cardíaca pessoal (evento abortado) ou familiar em contexto de doença de Wilson"
+    ],
+    "ambulatory_flow": [
+      "Considerar rastreio cardiovascular sistemático (ECG, ecocardiograma com Doppler tecidual, biomarcadores) em todo paciente com diagnóstico de Wilson, independentemente do fenótipo hepático ou neurológico predominante e independentemente de sintomas cardíacos referidos, dado o padrão subclínico descrito na literatura",
+      "Não usar o fenótipo hepático ou neurológico como critério isolado para dispensar avaliação cardiológica — a evidência disponível não mostra correlação linear comprovada entre gravidade hepática/neurológica e risco cardíaco",
+      "Solicitar Holter prolongado e, quando disponível, ressonância magnética cardíaca em casos com achados sugestivos de fibrose ou de risco arrítmico",
+      "Manter terapia quelante (D-penicilamina, trientina) ou zinco conforme critérios hepatológicos e neurológicos estabelecidos (EASL, AASLD); não escolher agente com base em suposta superioridade cardioprotetora, que não foi demonstrada",
+      "Reavaliar periodicamente com ECG e ecocardiograma ao longo do seguimento, comunicando que a reversibilidade do dano cardíaco com a terapia de depleção de cobre não está estabelecida por evidência prospectiva"
+    ],
+    "emergency_flow": [
+      "Investigar doença de Wilson como diagnóstico diferencial em paciente jovem com arritmia ventricular, bloqueio atrioventricular inexplicado, síncope ou morte súbita abortada, sobretudo na presença de sinais hepáticos, neurológicos ou oftalmológicos (anéis de Kayser-Fleischer) sugestivos",
+      "Manejar a arritmia ou instabilidade elétrica de forma convencional (monitorização, correção de distúrbio eletrolítico, suspensão de fármacos que prolonguem QT) enquanto se investiga ou confirma a etiologia",
+      "Solicitar ECG, biomarcadores (troponina, peptídeos natriuréticos) e ecocardiograma para caracterizar o acometimento cardíaco agudo",
+      "Articular avaliação hepatológica/neurológica urgente para confirmação diagnóstica de Wilson e início ou ajuste da terapia de depleção de cobre assim que a estabilização hemodinâmica permitir",
+      "Não presumir que a quelação em curso previne ou reverte o evento cardíaco agudo — a evidência de proteção cardíaca específica da terapia quelante é escassa e indireta"
+    ],
+    "tags": [
+      "doença de Wilson",
+      "ATP7B",
+      "cobre",
+      "cardiomiopatia tóxica",
+      "arritmia",
+      "QT longo",
+      "disautonomia",
+      "hipertrofia ventricular",
+      "D-penicilamina",
+      "trientina",
+      "zinco",
+      "fibrose miocárdica"
+    ],
+    "source_refs": [
+      "Chevalier K, Benyounes N, Obadia MA, Van Der Vynckt C, Morvan E, Tibi T, Poujois A. Cardiac involvement in Wilson disease: Review of the literature and description of three cases of sudden death. J Inherit Metab Dis. 2021;44(5):1099-1112. PMID 34286869",
+      "Hua D, Sun L, Xiang S, Yuan Y, Xu C, Xuan Q, Yang W, Wang H. Cardiac involvement in Wilson disease: pathophysiology, clinical spectrum, and multimodality imaging assessment. Front Cardiovasc Med. 2026;13:1884519. PMID 42666729",
+      "Hullon D, Saraireh THA, Obaidi GA, Mirza H, Fediunina VA, Oskouyan Z, Al-Sudani N, Tawallbeh MA. Systematic review of cardiac ventricular dysfunction in Wilson's disease: mechanisms, diagnostic advancements, and management strategies. Future Cardiol. 2025;21(12):1187-1199. PMID 40904321",
+      "Wang C, Gao H, Sun J, Wang L, Li W, Zu X, Cheng P, Wei S, Zhao P. Cardiac involvement in Wilson's disease: a retrospective cohort study. Eur J Gastroenterol Hepatol. 2022;34(11):1147-1150. PMID 36170683",
+      "Karhan AN, Aykan HH, Gümüş E, Dönmez Y, Alehan D, Özkutlu S, Demir H, Saltık Temizel İN, Özen H, Yüce A. Assessment of cardiac function and electrocardiographic findings in patients with Wilson's disease. Cardiol Young. 2019;29(9):1183-1188. PMID 31460854",
+      "Meenakshi-Sundaram S, Sinha S, Rao M, Prashanth LK, Arunodaya GR, Rao S, Swamy HS, Taly AB. Cardiac involvement in Wilson's disease--an electrocardiographic observation. J Assoc Physicians India. 2004;52:294-296. PMID 15636330",
+      "Kuan P. Cardiac Wilson's disease. Chest. 1987;91(4):579-583. PMID 3829752",
+      "Członkowska A, Litwin T, Dusek P, Ferenci P, Lutsenko S, Medici V, Rybakowski JK, Weiss KH, Schilsky ML. Wilson disease. Nat Rev Dis Primers. 2018;4(1):21. PMID 30190489",
+      "Ferenci P, Czlonkowska A, Stremmel W, Houwen R, Rosenberg W, Schilsky M, Jansen P, Moradpour D (European Association for the Study of the Liver). EASL Clinical Practice Guidelines: Wilson's disease. J Hepatol. 2012;56(3):671-685. PMID 22340672",
+      "Schilsky ML, Roberts EA, Bronstein JM, Dhawan A, Hamilton JP, Rivard AM, Washington MK, Weiss KH, Zimbrean PC. A multidisciplinary approach to the diagnosis and management of Wilson disease: 2022 Practice Guidance on Wilson disease from the American Association for the Study of Liver Diseases (AASLD). Hepatology. 2023;77(4):1428-1455. PMID 36151586, DOI 10.1002/hep.32801",
+      "Kaler SG, DiStasio AT. ATP7A-Related Copper Transport Disorders. In: GeneReviews [Internet]. Seattle: University of Washington; 1993-2021 (atualizado). PMID 20301586"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/34286869/",
+      "https://pubmed.ncbi.nlm.nih.gov/42666729/",
+      "https://pubmed.ncbi.nlm.nih.gov/40904321/",
+      "https://pubmed.ncbi.nlm.nih.gov/36170683/",
+      "https://pubmed.ncbi.nlm.nih.gov/31460854/",
+      "https://pubmed.ncbi.nlm.nih.gov/15636330/",
+      "https://pubmed.ncbi.nlm.nih.gov/3829752/",
+      "https://pubmed.ncbi.nlm.nih.gov/30190489/",
+      "https://pubmed.ncbi.nlm.nih.gov/22340672/",
+      "https://pubmed.ncbi.nlm.nih.gov/36151586/",
+      "https://pubmed.ncbi.nlm.nih.gov/20301586/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-wilson-acometimento-cardiovascular-fisiopatologia-manifestacoes-e-terapia-quelante"
+    ],
+    "patient_material_slug": null
   }
 ]

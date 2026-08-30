@@ -36379,5 +36379,205 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "rastreio-cardiovascular-na-doenca-de-wilson-confirmada-ecg-ecocardiograma-e-atencao-ao-qt",
+    "condicao": "Doença de Wilson confirmada — rastreio cardiovascular no diagnóstico",
+    "resumo": "Checklist de rastreio cardiovascular sistemático para todo paciente com doença de Wilson confirmada, independentemente do fenótipo predominante (hepático ou neurológico) e da presença de sintomas cardíacos, com atenção dirigida ao intervalo QT e comunicação honesta dos limites da evidência sobre reversão cardíaca com terapia quelante.",
+    "documento_origem": "doenca-de-wilson-acometimento-cardiovascular-fisiopatologia-manifestacoes-e-terapia-quelante",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Chevalier K, Benyounes N, Obadia MA, Van Der Vynckt C, Morvan E, Tibi T, Poujois A. Cardiac involvement in Wilson disease: Review of the literature and description of three cases of sudden death. J Inherit Metab Dis. 2021;44(5):1099-1112. PMID 34286869",
+      "Hua D, Sun L, Xiang S, Yuan Y, Xu C, Xuan Q, Yang W, Wang H. Cardiac involvement in Wilson disease: pathophysiology, clinical spectrum, and multimodality imaging assessment. Front Cardiovasc Med. 2026;13:1884519. PMID 42666729",
+      "Hullon D, Saraireh THA, Obaidi GA, Mirza H, Fediunina VA, Oskouyan Z, Al-Sudani N, Tawallbeh MA. Systematic review of cardiac ventricular dysfunction in Wilson's disease: mechanisms, diagnostic advancements, and management strategies. Future Cardiol. 2025;21(12):1187-1199. PMID 40904321",
+      "Wang C, Gao H, Sun J, Wang L, Li W, Zu X, Cheng P, Wei S, Zhao P. Cardiac involvement in Wilson's disease: a retrospective cohort study. Eur J Gastroenterol Hepatol. 2022;34(11):1147-1150. PMID 36170683",
+      "Karhan AN, Aykan HH, Gümüş E, Dönmez Y, Alehan D, Özkutlu S, Demir H, Saltık Temizel İN, Özen H, Yüce A. Assessment of cardiac function and electrocardiographic findings in patients with Wilson's disease. Cardiol Young. 2019;29(9):1183-1188. PMID 31460854",
+      "Kuan P. Cardiac Wilson's disease. Chest. 1987;91(4):579-583. PMID 3829752",
+      "Członkowska A, Litwin T, Dusek P, Ferenci P, Lutsenko S, Medici V, Rybakowski JK, Weiss KH, Schilsky ML. Wilson disease. Nat Rev Dis Primers. 2018;4(1):21. PMID 30190489",
+      "Ferenci P, Czlonkowska A, Stremmel W, Houwen R, Rosenberg W, Schilsky M, Jansen P, Moradpour D (European Association for the Study of the Liver). EASL Clinical Practice Guidelines: Wilson's disease. J Hepatol. 2012;56(3):671-685. PMID 22340672",
+      "Schilsky ML, Roberts EA, Bronstein JM, Dhawan A, Hamilton JP, Rivard AM, Washington MK, Weiss KH, Zimbrean PC. A multidisciplinary approach to the diagnosis and management of Wilson disease: 2022 Practice Guidance on Wilson disease from the American Association for the Study of Liver Diseases (AASLD). Hepatology. 2023;77(4):1428-1455. PMID 36151586, DOI 10.1002/hep.32801"
+    ],
+    "itens": [
+      {
+        "id": "wilson-cv-ecg-diagnostico-todos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações solicitado no momento do diagnóstico de doença de Wilson para todo paciente, independentemente de sintomas cardíacos referidos",
+        "origem_secao": "Por que o coração foi historicamente negligenciado"
+      },
+      {
+        "id": "wilson-cv-eco-diagnostico-todos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma solicitado no momento do diagnóstico para todo paciente, independentemente de sintomas cardíacos referidos, avaliando função sistólica e diastólica e, quando disponível, Doppler tecidual",
+        "origem_secao": "Manifestações cardíacas descritas — Hipertrofia ventricular e remodelamento estrutural; Cardiomiopatia"
+      },
+      {
+        "id": "wilson-cv-atencao-qt",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Intervalo QT medido e registrado explicitamente no laudo do ECG, com atenção a prolongamento mesmo em paciente jovem, assintomático ou com doença de curta duração",
+        "origem_secao": "Manifestações cardíacas descritas — Arritmias"
+      },
+      {
+        "id": "wilson-cv-rastreio-independente-fenotipo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastreio cardiovascular indicado para todo paciente com Wilson confirmado, e não restrito aos casos com apresentação hepática ou neurológica mais grave — ausência de correlação linear comprovada entre gravidade cardíaca e fenótipo hepático/neurológico predominante",
+        "origem_secao": "Relação com a gravidade da doença hepática e neurológica de base"
+      },
+      {
+        "id": "wilson-cv-biomarcadores",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Biomarcadores cardíacos (troponina e peptídeos natriuréticos) considerados no diagnóstico, como sinalizadores de lesão miocárdica subclínica ativa",
+        "origem_secao": "Manifestações cardíacas descritas — Cardiomiopatia"
+      },
+      {
+        "id": "wilson-cv-holter",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Holter prolongado considerado no diagnóstico e no seguimento, dada a alta prevalência de arritmias e bloqueios de condução assintomáticos",
+        "origem_secao": "Manifestações cardíacas descritas — Arritmias"
+      },
+      {
+        "id": "wilson-cv-rm-cardiaca-selecionados",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ressonância magnética cardíaca (mapeamento T1/T2, realce tardio) considerada em casos selecionados para estratificação de risco arrítmico por fibrose miocárdica",
+        "origem_secao": "Mecanismos de lesão cardíaca pelo excesso de cobre livre"
+      },
+      {
+        "id": "wilson-cv-seguimento-periodico",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliação cardiovascular periódica programada ao longo do seguimento, não apenas no diagnóstico, dado que o acometimento pode ser progressivo e a carga cumulativa de cobre é o determinante mecanístico proposto",
+        "origem_secao": "Relação com a gravidade da doença hepática e neurológica de base"
+      },
+      {
+        "id": "wilson-cv-comunicar-lacuna-quelacao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Comunicado explicitamente ao paciente/equipe que a terapia quelante e o zinco têm eficácia estabelecida sobre os desfechos hepático e neurológico, mas que ainda não há ensaio clínico ou coorte prospectiva com desfecho cardíaco primário demonstrando reversão específica de hipertrofia, redução de risco arrítmico ou normalização do QT",
+        "origem_secao": "Papel e limitações da terapia quelante e do zinco"
+      },
+      {
+        "id": "wilson-cv-nao-basear-escolha-em-cardioprotecao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Escolha entre D-penicilamina, trientina e zinco mantida com base nos critérios hepatológicos e neurológicos estabelecidos (efeitos adversos, fase da doença, tolerância), sem presumir superioridade cardioprotetora de um agente sobre outro",
+        "origem_secao": "Papel e limitações da terapia quelante e do zinco"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "prevencao-e-manejo-da-sindrome-de-realimentacao-em-paciente-de-risco",
+    "condicao": "Prevenção e manejo da síndrome de realimentação em paciente de risco",
+    "resumo": "Checklist de execução para identificar risco de síndrome de realimentação antes da primeira caloria, repor fósforo, potássio, magnésio e tiamina de forma preventiva, iniciar a oferta calórica de forma cautelosa e gradual, e monitorizar laboratorial e cardiovascularmente o paciente de risco (anorexia nervosa, jejum prolongado, alcoolismo crônico, pós-bariátrica, idoso desnutrido hospitalizado, oncológico) nos primeiros dias de realimentação.",
+    "documento_origem": "sindrome-de-realimentacao-e-cardiotoxicidade-por-hipofosfatemia-grave",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Mehanna HM, Moledina J, Travis J. Refeeding syndrome: what it is, and how to prevent and treat it. BMJ. 2008;336(7659):1495-1498. DOI: 10.1136/bmj.a301. PMID: 18583681",
+      "Friedli N, Stanga Z, Sobotka L, Culkin A, Kondrup J, Laviano A, Mueller B, Schuetz P. Revisiting the refeeding syndrome: Results of a systematic review. Nutrition. 2017;35:151-160. DOI: 10.1016/j.nut.2016.05.016. PMID: 28087222",
+      "Friedli N, Stanga Z, Culkin A, Crook M, Laviano A, Sobotka L, Kressig RW, Kondrup J, Mueller B, Schuetz P. Management and prevention of refeeding syndrome in medical inpatients: An evidence-based and consensus-supported algorithm. Nutrition. 2018;47:13-20. DOI: 10.1016/j.nut.2017.09.007. PMID: 29429529",
+      "Crook MA, Hally V, Panteli JV. The importance of the refeeding syndrome. Nutrition. 2001;17(7-8):632-637. DOI: 10.1016/s0899-9007(01)00542-1. PMID: 11448586",
+      "O'Connor LR, Wheeler WS, Bethune JE. Effect of hypophosphatemia on myocardial performance in man. N Engl J Med. 1977;297(17):901-903. DOI: 10.1056/NEJM197710272971702. PMID: 904668",
+      "Zazzo JF, Troché G, Ruel P, Maintenant J. High incidence of hypophosphatemia in surgical intensive care patients: efficacy of phosphorus therapy on myocardial function. Intensive Care Med. 1995;21(10):826-831. DOI: 10.1007/BF01700966. PMID: 8557871",
+      "Weinsier RL, Krumdieck CL. Death resulting from overzealous total parenteral nutrition: the refeeding syndrome revisited. Am J Clin Nutr. 1981;34(3):393-399. DOI: 10.1093/ajcn/34.3.393. PMID: 6782855",
+      "Miller SJ. Death resulting from overzealous total parenteral nutrition: the refeeding syndrome revisited. Nutr Clin Pract. 2008;23(2):166-171. DOI: 10.1177/0884533608314530. PMID: 18390784",
+      "Pacei F, Bersano B, Corti E, Napoli M, et al. Wernicke's encephalopathy, refeeding syndrome and wet beriberi after laparoscopic sleeve gastrectomy: the importance of thiamine evaluation. Eur J Clin Nutr. 2020;74(4):659-662. DOI: 10.1038/s41430-020-0575-1. PMID: 32047291",
+      "Wilson RB. Pathophysiology, prevention, and treatment of beriberi after gastric surgery. Nutr Rev. 2020;78(12):1015-1029. DOI: 10.1093/nutrit/nuz112. PMID: 32388553",
+      "National Institute for Health and Care Excellence (NICE). Nutrition support for adults: oral nutrition support, enteral tube feeding and parenteral nutrition. Clinical guideline CG32."
+    ],
+    "itens": [
+      {
+        "id": "reali-triagem-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Risco de síndrome de realimentação triado sistematicamente antes da primeira caloria ofertada, considerando IMC muito baixo, perda ponderal recente acentuada, período prolongado de ingesta mínima ou ausente e níveis basais baixos de potássio, fósforo ou magnésio",
+        "origem_secao": "Prevenção: identificar o risco antes de iniciar a realimentação"
+      },
+      {
+        "id": "reali-populacao-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente reconhecido como pertencente a grupo de risco (anorexia nervosa/transtorno alimentar restritivo, jejum prolongado, alcoolismo crônico, pós-operatório bariátrico com intolerância alimentar, idoso hospitalizado desnutrido, oncológico com ingesta muito reduzida) antes de definir o plano de realimentação",
+        "origem_secao": "Populações de risco"
+      },
+      {
+        "id": "reali-reposicao-eletrolitica-preventiva",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Correção de deficiências de fósforo, potássio e magnésio iniciada antes ou simultaneamente ao início da realimentação em paciente de alto risco, sem aguardar hipofosfatemia se manifestar clinicamente",
+        "origem_secao": "Prevenção — Reposição eletrolítica preventiva"
+      },
+      {
+        "id": "reali-tiamina-antes-carboidrato",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Tiamina reposta antes ou no momento do início da oferta calórica de carboidrato em paciente de risco (alcoolismo crônico, desnutrição grave, pós-bariátrica), não apenas os eletrólitos",
+        "origem_secao": "A sobreposição com deficiência de tiamina: o risco do beribéri cardíaco"
+      },
+      {
+        "id": "reali-inicio-calorico-gradual",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Oferta calórica iniciada com fração reduzida da meta calculada e escalonada progressivamente conforme resposta clínica e eletrolítica, em vez de ofertar a meta calórica plena desde o primeiro dia — parâmetro exato de kcal/kg/dia confirmado no protocolo institucional local",
+        "origem_secao": "Prevenção — Início calórico cauteloso e gradual"
+      },
+      {
+        "id": "reali-monitorizacao-laboratorial-seriada",
+        "categoria": "monitorizacao",
+        "obrigatorio": true,
+        "texto": "Fósforo, potássio, magnésio e glicemia monitorizados diariamente (ou com frequência maior nas primeiras 24-72 horas em risco muito alto), com atenção a que a queda do fósforo costuma ocorrer entre o 2º e o 5º dia de realimentação",
+        "origem_secao": "Prevenção — Monitorização laboratorial seriada"
+      },
+      {
+        "id": "reali-vigilancia-cardiovascular",
+        "categoria": "monitorizacao",
+        "obrigatorio": true,
+        "texto": "Frequência cardíaca, sinais de sobrecarga de volume e eletrocardiograma acompanhados ativamente nos primeiros dias, com atenção a taquicardia relativa como sinal precoce em paciente com bradicardia basal (ex.: anorexia nervosa)",
+        "origem_secao": "Prevenção — Vigilância cardiovascular clínica"
+      },
+      {
+        "id": "reali-hipofosfatemia-reduzir-progressao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Diante de hipofosfatemia grave já instalada, velocidade da oferta calórica reavaliada e reduzida temporariamente, em vez de apenas repor fósforo sobre uma taxa de infusão calórica que permanece alta",
+        "origem_secao": "Diagnóstico e manejo da hipofosfatemia aguda grave já instalada"
+      },
+      {
+        "id": "reali-correcao-simultanea-k-mg",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Potássio e magnésio corrigidos simultaneamente ao fósforo, reconhecendo que hipomagnesemia não corrigida pode tornar a hipocalemia refratária à reposição isolada de potássio",
+        "origem_secao": "Diagnóstico e manejo da hipofosfatemia aguda grave já instalada"
+      },
+      {
+        "id": "reali-monitorizacao-cardiaca-continua",
+        "categoria": "monitorizacao",
+        "obrigatorio": false,
+        "texto": "Monitorização cardíaca contínua mantida em paciente sintomático ou com hipofosfatemia grave, dado o risco arrítmico combinado de fósforo, potássio e magnésio",
+        "origem_secao": "Diagnóstico e manejo da hipofosfatemia aguda grave já instalada"
+      },
+      {
+        "id": "reali-disfuncao-reversivel",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Disfunção contrátil por hipofosfatemia grave reconhecida e comunicada à equipe como funcional e potencialmente reversível com a correção do distúrbio metabólico, evitando investigação ou rótulo precoce de miocardiopatia estrutural nova",
+        "origem_secao": "O papel central do fósforo na função cardíaca / Diagnóstico e manejo da hipofosfatemia aguda grave já instalada"
+      },
+      {
+        "id": "reali-reavaliacao-ate-estabilizacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Fósforo sérico reavaliado de forma seriada até estabilização, com ajuste da velocidade de reposição conforme resposta, e tiamina mantida durante todo o processo em paciente de risco",
+        "origem_secao": "Diagnóstico e manejo da hipofosfatemia aguda grave já instalada"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
