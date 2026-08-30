@@ -15,7 +15,7 @@ type Insight = Drug & {
 };
 type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: { slug: string; titulo: string; subtitulo?: string; rota: string }[] };
 
-const AREAS = {
+const SECOES = {
   geral: ["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca", 10],
   conduta: ["Condutas e protocolos", "Manejo, tratamento e aplicação prática", "/biblioteca", 11],
   diretriz: ["Diretrizes e consensos", "Guidelines, consensos e posicionamentos", "/biblioteca", 12],
@@ -25,10 +25,10 @@ const AREAS = {
   exame: ["Exames", "Diagnóstico, indicação e interpretação", "/exames", 40],
   galeria: ["Galeria clínica", "Imagens e achados relacionados", "/galeria", 50],
 } as const;
-type Area = keyof typeof AREAS;
+type Secao = keyof typeof SECOES;
 const ROTULOS: Record<string, string> = { documento: "Documento", estudo: "Estudo", evidencia: "Evidência", exame: "Exame", galeria: "Imagem", fluxograma: "Fluxograma", protocolo: "Protocolo" };
 const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-function area(r: Res): Area {
+function secao(r: Res): Secao {
   const f = norm(r.frente || r.kind);
   if (/^(estudo|estudos|study)$/.test(f)) return "estudo";
   if (/^(evidencia|evidencias|evidence)$/.test(f)) return "evidencia";
@@ -40,7 +40,7 @@ function area(r: Res): Area {
   if (/\b(protoc|condut|manejo|tratamento|terapia|abordagem)/.test(t)) return "conduta";
   return "geral";
 }
-const rota = (r: Res) => `${AREAS[area(r)][2]}/${r.slug}`;
+const rota = (r: Res) => `${SECOES[secao(r)][2]}/${r.slug}`;
 
 function Snippet({ texto }: { texto: string }) {
   return <>{texto.split(/<\/?mark>/i).map((p, i) => i % 2 ? <mark key={i}>{p}</mark> : p)}</>;
@@ -109,32 +109,36 @@ export default function Busca() {
     if (!medicamentoForte) {
       const n = norm(termo), tema = itens.map((x) => x.theme).find((x) => norm(x) === n);
       const cobertos = new Set(itens.map((x) => x.kind === "fluxograma" ? "fluxograma" : (x.frente || x.kind)));
-      if (tema) try { const x = await api.get<{ grupos: Rel[] }>(`/relacionados?tema=${encodeURIComponent(tema)}`); if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !cobertos.has(g.tipo))); } catch { /* complemento opcional */ }
+      if (tema) try {
+        const query = new URLSearchParams({ tema, assunto: termo });
+        const x = await api.get<{ grupos: Rel[] }>(`/relacionados?${query.toString()}`);
+        if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !cobertos.has(g.tipo)));
+      } catch { /* complemento opcional */ }
     }
     if (id === seq.current) setLoading(false);
   }
   useEffect(() => { if (inicial.trim().length > 1) void buscar(inicial); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, []);
 
-  const grupos = new Map<Area, Res[]>();
-  (res ?? []).forEach((r) => { const a = area(r); grupos.set(a, [...(grupos.get(a) ?? []), r]); });
-  const ordenados = [...grupos].sort((a, b) => Number(AREAS[a[0]][3]) - Number(AREAS[b[0]][3]));
-  const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(area(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
+  const grupos = new Map<Secao, Res[]>();
+  (res ?? []).forEach((r) => { const s = secao(r); grupos.set(s, [...(grupos.get(s) ?? []), r]); });
+  const ordenados = [...grupos].sort((a, b) => Number(SECOES[a[0]][3]) - Number(SECOES[b[0]][3]));
+  const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(secao(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
 
   return <main className="tct-page">
-    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Todo o conhecimento do assunto, separado por área clínica.</p>
+    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Conteúdo relacionado ao assunto, organizado por frente de conhecimento.</p>
       <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
     </header>
-    {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando áreas…" />}
+    {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando o conhecimento…" />}
     {!loading && drug && <PainelDrug d={drug} />}
     {!loading && res && res.length > 0 && <section className="cartao">
-      <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por área</p></div></header>
-      <nav className="tct-nav" aria-label="Áreas">{ordenados.map(([a, xs]) => <a className="selo" href={`#area-${a}`} key={a}>{AREAS[a][0]} · {xs.length}</a>)}</nav>
+      <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por frente de conhecimento</p></div></header>
+      <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([a, xs]) => <section className="cartao tct-group" id={`area-${a}`} key={a}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{AREAS[a][0]}</h3><p>{AREAS[a][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
         {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
       </div>
     </section>}
-    {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{AREAS[area(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
+    {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
     {!loading && res?.length === 0 && !drug && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
   </main>;
 }

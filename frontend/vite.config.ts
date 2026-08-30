@@ -4,7 +4,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 const limitePrecacheJs = 100 * 1024;
 const foraDoPrecacheInicial = /(?:^|\/)(?:Admin|AdminAssinantes|AdminFichaAssinante|FilaTelediagnostico|VerificacaoIdentidade|PrescricaoLivreEspecial)-[^/]*\.js$/;
-const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
+const loginSomenteOnline = /(?:^|\/)(?:Entrar-[^/]*|PreHomeBrand-[^/]*|login-[^/]*|SolicitarAcesso-[^/]*|EsqueciSenha-[^/]*|RedefinirSenha-[^/]*)\.(?:js|css)$/;
 // A validação pública depende obrigatoriamente do backend para conferir SHA/PAdES
 // e liberar o PDF original. Não há valor nem comportamento correto em precache
 // offline dessa rota; os chunks continuam disponíveis por NetworkFirst em runtime.
@@ -30,9 +30,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["corvia-mark-canonical.svg", "corvia-logo-canonical.svg", "corvia-logo-canonical-dark.svg"],
       manifest: {
-        name: "CorVIA — Clinical OS do médico",
+        name: "CorVIA — Cardiology Spaces",
         short_name: "CorVIA",
-        description: "Workspace clínico inteligente do médico: conhecimento, contexto, decisão e ação conectados.",
+        description: "Ambientes de cardiologia centrados no médico: conhecimento, contexto, decisão e ação conectados.",
         lang: "pt-BR",
         theme_color: "#03101A",
         background_color: "#03101A",

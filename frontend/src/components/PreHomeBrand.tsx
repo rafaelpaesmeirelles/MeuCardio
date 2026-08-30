@@ -25,7 +25,7 @@ const PILARES: Array<{ icon: NomeIcone; title: string; detail: string }> = [
   { icon: "check", title: "Segurança e Privacidade", detail: "Proteção por padrão" },
 ];
 
-function CoracaoHolografico() {
+export function CoracaoHolografico() {
   return (
     <svg className="prehome-brand__heart" viewBox="0 0 360 420" role="img" aria-label="Coração anatômico digital do CorVIA">
       <defs>
@@ -112,7 +112,7 @@ export default function PreHomeBrand({
 
       <Link to="/" className="prehome-brand__logo" aria-label="CorVIA — página inicial">
         <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
-        <span><strong>CorVIA</strong><small>CLINICAL OS</small></span>
+        <span><strong>CorVIA</strong><small>CARDIOLOGY SPACES</small></span>
       </Link>
 
       <div className="prehome-brand__content">

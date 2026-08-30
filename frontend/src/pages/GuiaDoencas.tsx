@@ -26,8 +26,8 @@ type Response = {
   has_more: boolean;
 };
 
-type DiseaseFacet = { id: string; count: number };
-type DiseaseFacetsResponse = { areas: DiseaseFacet[]; categories: DiseaseFacet[] };
+type DiseaseFacet = { id: string; count: number; label?: string };
+type DiseaseFacetsResponse = { areas: DiseaseFacet[]; clinical_domains: DiseaseFacet[]; categories: DiseaseFacet[] };
 
 type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pediatrica" | "oncologia" | "gestacao" | "outros";
 
@@ -41,29 +41,6 @@ const AREA_LABELS: Record<string, string> = {
   cardiogeriatria: "Cardiogeriatria",
   cardiooncologia: "Cardio-oncologia",
   gravidez: "Cardiologia na gestação e puerpério",
-};
-
-const CATEGORY_LABELS: Record<string, string> = {
-  arritmia: "Arritmias",
-  antitromboticos: "Antitrombóticos",
-  aortopatia: "Aortopatias",
-  cardiomiopatia: "Cardiomiopatias",
-  cardiopatia_adquirida: "Cardiopatias adquiridas",
-  cardiopatia_congenita: "Cardiopatias congênitas",
-  cardiologia_fetal: "Cardiologia fetal",
-  circulacao_pulmonar: "Circulação e hipertensão pulmonar",
-  doenca_coronariana: "Doença coronariana",
-  doenca_inflamatoria: "Doenças inflamatórias",
-  doenca_miocardica: "Doenças do miocárdio",
-  doenca_prevalente: "Doenças prevalentes",
-  hipertensao: "Hipertensão",
-  hipertensao_na_gestacao: "Hipertensão na gestação",
-  insuficiencia_cardiaca: "Insuficiência cardíaca",
-  pericardio: "Doenças do pericárdio",
-  prevencao: "Prevenção cardiovascular",
-  tromboembolismo: "Tromboembolismo",
-  valvopatia: "Valvopatias",
-  valvopatia_e_anticoagulacao: "Valvopatias e anticoagulação",
 };
 
 const TAB_LABELS: Record<Tab, string> = {
@@ -82,10 +59,6 @@ function labelArea(area: string) {
   return AREA_LABELS[area] ?? area.replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
 }
 
-function labelCategory(category: string) {
-  return CATEGORY_LABELS[category] ?? category.replaceAll("_", " ").replace(/^./, (letter) => letter.toUpperCase());
-}
-
 function labelCyanosis(value?: string | null) {
   if (value === "cianotica") return "Cianótica";
   if (value === "acianotica") return "Acianótica";
@@ -99,7 +72,7 @@ export default function GuiaDoencas() {
   const serializedParams = params.toString();
   const [q, setQ] = useState(params.get("q") || "");
   const [area, setArea] = useState(params.get("area") || "");
-  const [category, setCategory] = useState(params.get("category") || "");
+  const [clinicalDomain, setClinicalDomain] = useState(params.get("clinical_domain") || "");
   const [cyanosis, setCyanosis] = useState(params.get("cyanosis") || "");
   const [items, setItems] = useState<Disease[]>([]);
   const [page, setPage] = useState(1);
@@ -107,12 +80,12 @@ export default function GuiaDoencas() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [diseaseFacets, setDiseaseFacets] = useState<DiseaseFacetsResponse>({ areas: [], categories: [] });
+  const [diseaseFacets, setDiseaseFacets] = useState<DiseaseFacetsResponse>({ areas: [], clinical_domains: [], categories: [] });
 
   useEffect(() => {
     setQ(params.get("q") || "");
     setArea(params.get("area") || "");
-    setCategory(params.get("category") || "");
+    setClinicalDomain(params.get("clinical_domain") || "");
     setCyanosis(params.get("cyanosis") || "");
     setPage(1);
     setItems([]);
@@ -123,7 +96,7 @@ export default function GuiaDoencas() {
     if (!SEARCH_TABS.has(tab)) nextParams.delete("q");
     if (!GENERAL_FILTER_TABS.has(tab)) {
       nextParams.delete("area");
-      nextParams.delete("category");
+      nextParams.delete("clinical_domain");
     }
     if (tab !== "congenitas") nextParams.delete("cyanosis");
     if (nextParams.toString() !== serializedParams) {
@@ -134,18 +107,18 @@ export default function GuiaDoencas() {
   useEffect(() => {
     const facetParams = new URLSearchParams();
     if (GENERAL_FILTER_TABS.has(tab) && area) facetParams.set("area", area);
-    if (GENERAL_FILTER_TABS.has(tab) && category) facetParams.set("category", category);
+    if (GENERAL_FILTER_TABS.has(tab) && clinicalDomain) facetParams.set("clinical_domain", clinicalDomain);
     const search = facetParams.toString();
     api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets${search ? `?${search}` : ""}`)
       .then(setDiseaseFacets)
-      .catch(() => setDiseaseFacets({ areas: [], categories: [] }));
-  }, [area, category, tab]);
+      .catch(() => setDiseaseFacets({ areas: [], clinical_domains: [], categories: [] }));
+  }, [area, clinicalDomain, tab]);
 
   const filters = useMemo(() => {
     const result: Record<string, string> = { page_size: "60", page: String(page) };
     if (SEARCH_TABS.has(tab) && q.trim()) result.q = q.trim();
     if (GENERAL_FILTER_TABS.has(tab) && area) result.area = area;
-    if (GENERAL_FILTER_TABS.has(tab) && category) result.category = category;
+    if (GENERAL_FILTER_TABS.has(tab) && clinicalDomain) result.clinical_domain = clinicalDomain;
     if (tab === "assistentes") result.assistant_only = "true";
     if (tab === "congenitas") result.category = "cardiopatia_congenita";
     if (tab === "fetal") result.category = "cardiologia_fetal";
@@ -155,7 +128,7 @@ export default function GuiaDoencas() {
     if (tab === "outros") result.area = "cardiogeriatria";
     if (cyanosis && tab === "congenitas") result.cyanosis_class = cyanosis;
     return result;
-  }, [q, area, category, tab, cyanosis, page]);
+  }, [q, area, clinicalDomain, tab, cyanosis, page]);
 
   useEffect(() => {
     let active = true;
@@ -178,19 +151,19 @@ export default function GuiaDoencas() {
     setPage(1);
     setItems([]);
     setCyanosis("");
-    setCategory("");
+    setClinicalDomain("");
     if (!["catalogo", "assistentes"].includes(next)) setArea("");
     const nextParams = new URLSearchParams();
     nextParams.set("tab", next);
     if (SEARCH_TABS.has(next) && q.trim()) nextParams.set("q", q.trim());
     if (GENERAL_FILTER_TABS.has(next) && GENERAL_FILTER_TABS.has(tab)) {
       if (area) nextParams.set("area", area);
-      if (category) nextParams.set("category", category);
+      if (clinicalDomain) nextParams.set("clinical_domain", clinicalDomain);
     }
     setParams(nextParams);
   }
 
-  function updateUrlFilter(key: "q" | "area" | "category" | "cyanosis", value: string, replace = false) {
+  function updateUrlFilter(key: "q" | "area" | "clinical_domain" | "cyanosis", value: string, replace = false) {
     const nextParams = new URLSearchParams(params);
     nextParams.set("tab", tab);
     if (value.trim()) nextParams.set(key, value.trim());
@@ -200,14 +173,14 @@ export default function GuiaDoencas() {
 
   function updateAreaFilter(value: string) {
     setArea(value);
-    setCategory("");
+    setClinicalDomain("");
     setPage(1);
     setItems([]);
     const nextParams = new URLSearchParams(params);
     nextParams.set("tab", tab);
     if (value) nextParams.set("area", value);
     else nextParams.delete("area");
-    nextParams.delete("category");
+    nextParams.delete("clinical_domain");
     setParams(nextParams);
   }
 
@@ -215,16 +188,16 @@ export default function GuiaDoencas() {
     setPage(1);
     setItems([]);
     setArea(areaSelecionada);
-    setCategory("");
+    setClinicalDomain("");
     setParams({ tab: "catalogo", area: areaSelecionada });
   }
 
-  function abrirCategoria(categorySelecionada: string) {
+  function abrirDominio(domainSelecionado: string) {
     setPage(1);
     setItems([]);
     setArea("");
-    setCategory(categorySelecionada);
-    setParams({ tab: "catalogo", category: categorySelecionada });
+    setClinicalDomain(domainSelecionado);
+    setParams({ tab: "catalogo", clinical_domain: domainSelecionado });
   }
 
   function updateSearch(value: string) {
@@ -281,9 +254,9 @@ export default function GuiaDoencas() {
             <div><p className="eyebrow">Subáreas e grupos clínicos</p><h2>Todos os grupos com conteúdo</h2></div>
           </div>
           <div className="painel__temas">
-            {diseaseFacets.categories.map((item) => (
-              <button className="painel__tema" type="button" key={item.id} onClick={() => abrirCategoria(item.id)}>
-                {labelCategory(item.id)} ({item.count.toLocaleString("pt-BR")})
+            {diseaseFacets.clinical_domains.map((item) => (
+              <button className="painel__tema" type="button" key={item.id} onClick={() => abrirDominio(item.id)}>
+                {item.label ?? item.id} ({item.count.toLocaleString("pt-BR")})
               </button>
             ))}
           </div>
@@ -326,12 +299,12 @@ export default function GuiaDoencas() {
           {GENERAL_FILTER_TABS.has(tab) && <label>
             <strong>Área clínica</strong>
             <select
-              value={category}
-              onChange={(event) => { setCategory(event.target.value); setPage(1); setItems([]); updateUrlFilter("category", event.target.value); }}
+              value={clinicalDomain}
+              onChange={(event) => { setClinicalDomain(event.target.value); setPage(1); setItems([]); updateUrlFilter("clinical_domain", event.target.value); }}
               style={{ marginTop: "0.35rem" }}
             >
               <option value="">Todas</option>
-              {diseaseFacets.categories.map((item) => <option key={item.id} value={item.id}>{labelCategory(item.id)} ({item.count})</option>)}
+              {diseaseFacets.clinical_domains.map((item) => <option key={item.id} value={item.id}>{item.label ?? item.id} ({item.count})</option>)}
             </select>
           </label>}
         </div>

@@ -22,12 +22,22 @@ def relacionados(
     entity_type: str = Query(..., min_length=1, max_length=40),
     slug: str = Query(..., min_length=1, max_length=255),
     limite_por_tipo: int = Query(5, ge=1, le=20),
+    incluir_contexto_tematico: bool = Query(
+        False,
+        description="Inclui vizinhos que apenas compartilham o mesmo tema amplo.",
+    ),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
     if entity_type not in TIPOS_ENTIDADE_PERMITIDOS:
         raise HTTPException(status_code=422, detail="entity_type desconhecido.")
-    resultado = relacionados_de(db, entity_type=entity_type, slug=slug, limite_por_tipo=limite_por_tipo)
+    resultado = relacionados_de(
+        db,
+        entity_type=entity_type,
+        slug=slug,
+        limite_por_tipo=limite_por_tipo,
+        incluir_contexto_tematico=incluir_contexto_tematico,
+    )
     if resultado is None:
         return {"entity_type": entity_type, "slug": slug, "titulo": None, "grupos": [], "total": 0}
     return resultado

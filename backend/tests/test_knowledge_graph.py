@@ -293,6 +293,26 @@ def test_relacionados_de_agrupa_por_tipo_e_ordena_por_relevancia(db):
             assert not (g["tipo"] == "documento" and item["slug"] == "ic-doc-1")
 
 
+def test_relacionados_de_pode_ocultar_vizinhos_apenas_taxonomicos(db):
+    _limpar(db)
+    _semear_conteudo_publicado(db)
+    kg.backfill_mesmo_tema(db)
+
+    resultado = kg.relacionados_de(
+        db,
+        entity_type="documento",
+        slug="ic-doc-1",
+        incluir_contexto_tematico=False,
+    )
+
+    assert resultado is not None
+    assert all(
+        item["relation_type"] != "belongs_to_topic"
+        for grupo in resultado["grupos"]
+        for item in grupo["itens"]
+    )
+
+
 def test_relacionados_de_devolve_none_quando_item_nao_esta_no_grafo(db):
     _limpar(db)
     assert kg.relacionados_de(db, entity_type="documento", slug="nao-existe") is None
