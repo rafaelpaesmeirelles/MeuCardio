@@ -372,3 +372,24 @@ limpos, 10.243 registros totais.
 | Trilhas | 300 | 1 | 299 |
 | Doenças especializadas | 200 | 1 (3 descartados por colisão) | 199 |
 | **Total** | **4.900** | **59** | **4.841** |
+
+## Lote 22 — concluído (commit 62065c00)
+
+- **content/Cardiomiopatias**: +1 — `fibroelastoma-papilar-cardiaco-diagnostico-ecocardiografico-risco-embolico-e-indicacao-cirurgica`.
+- **content/Aorta_e_doença_arterial_periférica**: +1 — `doenca-de-behcet-e-envolvimento-cardiovascular-aneurismas-trombose-e-sindrome-de-hughes-stovin`.
+- **material-paciente**: +1 — `aneurisma-inflamatorio-da-aorta-doenca-relacionada-a-igg4` (pareado com o documento do lote 20).
+- **ACHADO DE SCHEMA (dívida aberta)**: `material-paciente/metadados.json` tem 3 campos reais além dos documentados — `sinais_de_alerta`, `perguntas`, `fontes` — presentes em 408/425 registros pré-existentes. Os 17 materiais-paciente entregues por esta frente nos lotes 2-19 **não têm** esses 3 campos (confirmado por diff de chaves contra o schema real). Remediação dispatchada a seguir como lote dedicado.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.251 (10.189 revisado + 62 pendente_revisao).
+
+### Status consolidado (após Lote 22)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 7 | 2.393 |
+| Casos clínicos | 900 | 26 | 874 |
+| Checklists | 600 | 9 | 591 |
+| Materiais-paciente | 500 | 18 | 482 |
+| Trilhas | 300 | 1 | 299 |
+| Doenças especializadas | 200 | 1 (3 descartados por colisão) | 199 |
+| **Total** | **4.900** | **62** | **4.838** |
