@@ -246,3 +246,11 @@ limpos, 10.228 registros totais.
 
 **Total canônico projetado após Lote 13**: 10.230 (10.189 revisado +
 41 pendente_revisao nesta branch).
+
+## Lote 14 — concluído (commit ver git log, 30/08/2026)
+
+3 itens (distrofia miotônica tipo 1, síndrome de Alström, Emery-
+Dreifuss). Gates limpos, 10.233 registros totais.
+
+**Total canônico projetado após Lote 14**: 10.233 (10.189 revisado +
+44 pendente_revisao nesta branch).
