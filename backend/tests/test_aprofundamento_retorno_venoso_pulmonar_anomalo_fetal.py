@@ -90,6 +90,8 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # também em retorno-venoso-pulmonar-anomalo (adulto, alvo do PR #576)
     "retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
     "fluxograma-retorno-venoso-pulmonar-anomalo-total-obstruido-no-neonato",
+    "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos",
+    "retorno-venoso-pulmonar-anomalo-papvr-tapvr-no-adulto",
 }
 
 
