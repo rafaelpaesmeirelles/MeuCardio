@@ -318,3 +318,35 @@ limpos, 10.243 registros totais.
 | Trilhas | 300 | 1 | 299 |
 | Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
 | **Total** | **4.900** | **54** | **4.846** |
+
+## Lote 20 — concluído (commit c5d649af)
+
+- **casos-clinicos**: +1 — `erdheim-chester-aorta-em-bainha-braf` (histiocitose não-Langerhans, "aorta em bainha", BRAF V600E, tema Populações especiais).
+- **content/**: +1 — `doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio` (Aorta e doença arterial periférica) — periaortite/aneurisma inflamatório por IgG4-RD, diferencial direto com o caso do Erdheim-Chester deste mesmo lote.
+- **Correção de dívida "Tudo com Tudo"**: 4 documentos de lotes anteriores (17–19 e um mais antigo) estavam sem a seção `## Tudo com Tudo` — achado ao validar manualmente os 7 links que o agente do documento de IgG4 havia proposto (todos fabricados, nenhum slug existia no corpus). Refeitos com links reais, cada slug conferido individualmente contra o corpus antes do commit:
+  - `complicacoes-vasculares-acesso-cateterismo-hematoma-pseudoaneurisma-fistula-av.md`
+  - `hipotireoidismo-sistema-cardiovascular-bradicardia-dislipidemia.md`
+  - `cardiomiopatia-deficiencia-primaria-carnitina.md`
+  - `aneurisma-aortico-toracico-familiar-nao-sindromico-documento.md`
+  - `doenca-relacionada-a-igg4-e-a-aorta-periaortite-e-aneurisma-inflamatorio.md` (novo, com 5 links)
+
+  **Lição registrada**: `audit_tudo_com_tudo.py` só valida referências estruturadas (`documento_slug`, `related_document_slugs`, etc.) — **não** valida os links markdown dentro da seção `## Tudo com Tudo` de `content/*.md`. Um subagente pode alucinar slugs plausíveis nessa seção sem que o gate `--strict` detecte. **Regra nova**: todo slug citado em `## Tudo com Tudo` de um documento novo precisa ser conferido manualmente (grep pelo `slug:` exato no front-matter) antes do commit — não confiar apenas nos gates automatizados para essa seção.
+
+- **PMIDs novos**: 4 (Erdheim-Chester: PMID 15525849, 15505288, 22879539, 23258922) + 28 do documento de IgG4 (ver front-matter) — nenhum PMID duplicado dentro do corpus verificado nesta rodada.
+- **Slugs pulados por duplicação**: nenhum.
+- **Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`; `content_inventory.py --strict` → exit 0, `invalid: []`, `missing: []`.
+- **Total canônico projetado**: 10.245 (10.189 revisado + 56 pendente_revisao desta frente).
+- **PR #709** (correção de anomalias de tema): OPEN, mergeable, checks 100% verdes (Backend tests, Frontend build) — aguardando decisão de merge do Rafael, não mexido.
+- **PR #778** (frente principal desta expansão): permanece com "Backend tests" vermelho por desenho (gate de aprovação editorial, sem segunda revisão independente ainda realizada em nenhum item) — sem mudança de status.
+
+### Status consolidado (após Lote 20)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 5 | 2.395 |
+| Casos clínicos | 900 | 25 | 875 |
+| Checklists | 600 | 8 | 592 |
+| Materiais-paciente | 500 | 17 | 483 |
+| Trilhas | 300 | 1 | 299 |
+| Doenças especializadas | 200 | 0 (3 descartados por colisão) | 200 |
+| **Total** | **4.900** | **56** | **4.844** |
