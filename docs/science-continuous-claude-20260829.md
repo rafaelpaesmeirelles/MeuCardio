@@ -1468,10 +1468,66 @@ métodos gráficos.
   hemocromatose). Nenhuma diretriz SBC localizada — declarado. Gates
   limpos. Total: 426 checklists.
 
-## Lote 66 (planejado)
+## RETOMADA (30/08/2026) — nova meta do Rafael: 10.000 → 20.000 documentos científicos publicados em uma semana
 
-A auditar com o procedimento corrigido (JSONs + `content/**/*.md` +
-`gh pr list`): território ainda não explorado, ou aprofundamento
-pontual em hub existente. Confirmar cobertura antes de despachar.
+Divisão de trabalho confirmada pelo Rafael: Claude (esta sessão) e Grok
+geram conteúdo — sempre `pendente_revisao`, nunca autoaprovado; o
+ChatGPT revisa e publica. Nenhuma mudança no regime de aprovação desta
+sessão: continuo sem autoridade para marcar `revisado`/publicado.
+
+Pedido direto: "máximo de agentes possível pra acelerar a produção" —
+9 agentes paralelos dispatchados de uma vez (recorde desta janela,
+antes o máximo era ~1-2 simultâneos por rodada).
+
+## Lote 67 — concluído (SHA 3903650d) — total 94 commits
+
+- checklist `sindrome-de-barth` — cardiomiopatia ligada ao X (gene
+  TAZ/tafazina, remodelação de cardiolipina). Tétrade clássica
+  (cardiomiopatia dilatada/LVNC + neutropenia + miopatia + atraso de
+  crescimento), risco de morte súbita mesmo com disfunção leve
+  (Spencer 2005). 11 fontes via NCBI e-utils. Total: 428 checklists.
+
+## Lote 68 — concluído (SHA 4eb6ff0c) — total 95 commits — MÁXIMO PARALELO (9 agentes)
+
+Rodada de máxima escala: 9 agentes de pesquisa dispatchados
+simultaneamente sobre 9 gaps genuínos confirmados (canalopatias
+raras, RASopatias, cardiomiopatias hereditárias raras). Todos os 9
+retornaram JSON completo, verificado via NCBI e-utils, integrado em
+lote único após validação individual.
+
+- `sindrome-do-qt-curto-congenito` — SQT1/2/3, registro europeu de 53
+  pacientes, CDI + quinidina (único fármaco eficaz em EEF).
+- `sindrome-e-padrao-de-repolarizacao-precoce` — padrão (5,8% da
+  população) vs. síndrome (31% em sobreviventes de FVI, Haissaguerre
+  2008 NEJM); CDI só após evento documentado.
+- `fibrilacao-ventricular-idiopatica` — diagnóstico de exclusão,
+  rendimento diagnóstico de 43% com investigação completa (revisão
+  sistemática de 21 estudos); algoritmo escalonado por rendimento.
+- `cardiomiopatia-mitocondrial` — Kearns-Sayre (BAV progressivo,
+  marca-passo profilático) e MELAS/m.3243A>G; barreiras documentadas
+  ao transplante por doença sistêmica (zero de 10 candidatos
+  transplantados numa série).
+- `sindrome-de-costello-envolvimento-cardiovascular` — HRAS, CMH em
+  ~60%, taquicardia atrial multifocal independente da CMH, protocolo
+  de rastreio oncológico.
+- `sindrome-noonan-multiplos-lentigos-leopard` — PTPN11 com mecanismo
+  de PERDA de função fosfatase, distinto da Noonan clássica.
+- `acometimento-cardiovascular-sindrome-de-cantu` — canal KATP
+  (ABCC9/KCNJ8), cardiomegalia 64%/PCA 58%/derrame pericárdico 25%.
+- `sindrome-de-kabuki-acometimento-cardiovascular` — KMT2D/KDM6A,
+  predomínio de lesões obstrutivas esquerdas, diferenciação formal
+  frente a Turner/Down/Noonan.
+
+Nenhuma diretriz SBC/ESC/AHA específica localizada para nenhum dos 8
+temas — declarado explicitamente em cada resumo. Gates (tudo-com-
+tudo: broken_references=[]; content_inventory --strict: exit 0)
+limpos. Total: 436 checklists.
+
+## Lote 69 (planejado)
+
+Continuando no ritmo máximo de paralelismo. Auditoria de próximos
+gaps com o procedimento corrigido (JSONs + `content/**/*.md` +
+`gh pr list` + verificação de que main não avançou com conteúdo de
+outras faixas desde o último fetch).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
