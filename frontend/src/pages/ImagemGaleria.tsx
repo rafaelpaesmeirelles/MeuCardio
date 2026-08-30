@@ -4,8 +4,10 @@ import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import BotaoFavorito from "../components/BotaoFavorito";
 
 type Detalhe = {
+  id: number;
   slug: string; title: string; modality: string; theme: string;
   file_path: string; findings: string; teaching_points: string | null;
   source_name: string; source_url: string; license: string; attribution: string;
@@ -31,8 +33,7 @@ export default function ImagemGaleria() {
     <>
       <Link to="/galeria" style={{ fontSize: "0.86rem" }}>← Voltar para a galeria</Link>
 
-      <p className="eyebrow" style={{ marginTop: "0.8rem" }}>{img.modality} · {img.theme}</p>
-      <h1>{img.title}</h1>
+      <div className="clinical-detail-heading"><div><p className="eyebrow">{img.modality} · {img.theme}</p><h1>{img.title}</h1></div><BotaoFavorito itemType="imagem" itemId={img.id} /></div>
 
       <img
         src={img.file_path}

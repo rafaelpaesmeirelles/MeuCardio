@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../lib/auth";
+import { getClinicalNavigationContext, getContextActions } from "../lib/clinicalNavigationContext";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
@@ -49,18 +50,16 @@ const TRABALHO_ASSISTENCIA: LinkItem[] = [
 
 const FERRAMENTAS: LinkItem[] = [
   { to: "/busca?modo=tudo-com-tudo", label: "Tudo com Tudo", icon: "busca", featured: true },
-  { to: "/calculadoras", label: "Calculadoras avançadas", icon: "calculadora" },
   { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
   { to: "/apresentacao", label: "Apresentação", icon: "documento" },
   { to: "/exportar", label: "Exportar PDF", icon: "documento" },
-  { to: "/favoritos", label: "Notas & Favoritos", icon: "favorito" },
+  { to: "/favoritos", label: "Favoritos", icon: "favorito" },
   { to: "/busca", label: "Busca avançada", icon: "busca" },
 ];
 
 const REDE: LinkItem[] = [
   { to: "/usuarios-online", label: "Rede profissional", icon: "pacientes" },
   { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
-  { to: "/telediagnostico", label: "Consultoria", icon: "evidencia" },
 ];
 
 const CONTA_ADMIN: LinkItem[] = [
@@ -78,6 +77,7 @@ const CONTA_ADMIN: LinkItem[] = [
 
 export default function ClinicalMobileNav() {
   const { usuario } = useAuth();
+  const { pathname } = useLocation();
   const [maisAberto, setMaisAberto] = useState(false);
   const pendentesAssinatura = usePrescriptionQueueBadge(usuario?.role === "admin");
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -86,6 +86,8 @@ export default function ClinicalMobileNav() {
 
   const contaAdmin=CONTA_ADMIN
     .map(item=>item.to==="/receitas-para-assinatura"?{...item,badge:pendentesAssinatura}:item);
+  const context = getClinicalNavigationContext(pathname);
+  const contextActions = getContextActions(pathname).slice(0, 3);
 
   const secoes: MobileSection[] = [
     { title: "Clínica & Decisão", items: CLINICA_DECISAO },
@@ -139,6 +141,10 @@ export default function ClinicalMobileNav() {
       <aside ref={sheetRef} className="cc-mobile-more is-open" role="dialog" aria-modal="true" aria-label="Todas as áreas do CorVIA">
         <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>CorVIA</strong><small>Clinical OS</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
         <button type="button" className="cc-mobile-more__assistant" onClick={abrirAssistentePessoal}><span className="cc-mobile-more__assistant-icon">✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamentos e pendências</small></span><Icone nome="seta" /></button>
+        <section className="cc-mobile-more__context" aria-label="Atalhos do contexto atual">
+          <header><span><Icone nome={context.icon} /></span><div><small>No seu contexto</small><strong>{context.title}</strong></div></header>
+          <div>{contextActions.map((action) => <NavLink to={action.to} key={action.to} onClick={() => setMaisAberto(false)}><Icone nome={action.icon} /><span><strong>{action.label}</strong><small>{action.detail}</small></span></NavLink>)}</div>
+        </section>
         {secoes.map((secao) => {
           const itens = secao.items.filter((item) => !item.adminOnly || usuario?.role === "admin");
           return <section key={secao.title} className="cc-mobile-more__section"><p>{secao.title}</p><div className="cc-mobile-more__grid">{itens.map((item) => <SheetLink key={`${secao.title}-${item.label}-${item.to}`} item={item} />)}</div></section>;

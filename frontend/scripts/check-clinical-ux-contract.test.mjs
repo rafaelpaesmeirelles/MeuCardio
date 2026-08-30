@@ -63,3 +63,49 @@ test("Termos de Uso cobrem a plataforma e preservam o apêndice de mapas", () =>
     "Apêndice — mapas e deslocamento",
   ]) assert.equal(terms.includes(section), true, `falta seção jurídica: ${section}`);
 });
+
+test("navegação usa contexto clínico e elimina rotas duplicadas do catálogo", () => {
+  const context = read("src/lib/clinicalNavigationContext.ts");
+  const desktop = read("src/components/ClinicalDesktopNav.tsx");
+  const mobile = read("src/components/ClinicalMobileNav.tsx");
+  const visualQa = read("../.github/workflows/visual-qa.yml");
+  for (const token of ["Farmacologia clínica", "Contexto do paciente", "Produção clínica", "Tudo com Tudo", "commandDestination"]) {
+    assert.equal(context.includes(token), true, `falta contexto: ${token}`);
+  }
+  assert.equal(context.includes('prefixes: ["/doencas", "/triagem-sintomas", "/condicoes", "/calculadoras"]'), true, "calculadoras precisam manter contexto de decisão clínica");
+  for (const stem of ["prescrev\\w*", "prescri\\w*", "receit\\w*", "calcul\\w*", "favorit\\w*"]) {
+    assert.equal(context.includes(stem), true, `comando precisa aceitar a flexão ${stem}`);
+  }
+  assert.equal(desktop.includes("<details"), true, "seções desktop precisam de revelação progressiva");
+  assert.equal(desktop.includes("No seu contexto"), true);
+  assert.equal(mobile.includes("cc-mobile-more__context"), true);
+  assert.equal(visualQa.includes("ancestor::details[1]"), true, "QA visual precisa abrir a seção antes de validar o link");
+  assert.equal(visualQa.includes("element.open"), true, "QA visual precisa ler o estado booleano real da seção");
+  assert.equal(visualQa.includes("scrollIntoViewIfNeeded"), true, "QA visual precisa rolar a navegação progressiva antes de validar o link");
+  for (const [source, name] of [[desktop, "desktop"], [mobile, "mobile"]]) {
+    assert.equal((source.match(/to: "\/calculadoras"/g) ?? []).length, 1, `calculadoras duplicada no ${name}`);
+    assert.equal((source.match(/to: "\/telediagnostico"/g) ?? []).length, 1, `telediagnóstico duplicado no ${name}`);
+    assert.equal(source.includes("Notas & Favoritos"), false, `o ${name} não pode prometer notas inexistentes`);
+  }
+});
+
+test("busca tem refinamento progressivo e favoritos fecham o fluxo prometido", () => {
+  const search = read("src/pages/Busca.tsx");
+  const favorites = read("src/pages/Favoritos.tsx");
+  const favoriteButton = read("src/components/BotaoFavorito.tsx");
+  const drug = read("src/pages/MedicamentosClinicalCommand.tsx");
+  const document = read("src/pages/Documento.tsx");
+  const image = read("src/pages/ImagemGaleria.tsx");
+  const drugApi = read("../backend/app/api/drug_insights.py");
+  for (const token of ["Filtrar por área clínica", "Ver todos os", "aria-expanded", "tct-group__toggle"]) {
+    assert.equal(search.includes(token), true, `busca sem contrato progressivo: ${token}`);
+  }
+  assert.equal(favorites.includes("Filtrar favoritos"), true);
+  assert.equal(favorites.includes("Buscar conteúdo"), true);
+  assert.equal(favorites.includes('setFiltro("todos")'), true, "remover o último favorito filtrado precisa retornar a Todos");
+  assert.equal(favoriteButton.includes("Atualizando…"), true);
+  assert.equal(drug.includes('itemType="medicamento"'), true);
+  assert.equal(document.includes('itemType="documento"'), true);
+  assert.equal(image.includes('itemType="imagem"'), true);
+  assert.match(drugApi, /"id": drug\.id/);
+});

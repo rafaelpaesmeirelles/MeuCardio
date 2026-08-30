@@ -195,6 +195,48 @@ async function clinicalLegibility() {
   record("clinical-legibility", { medication, emergency });
 }
 
+async function navigationAndFavorites() {
+  const drugs = required(await api("/api/drugs"), "listar medicamentos para favoritos");
+  assert.ok(drugs.length > 0);
+  const drug = required(await api(`/api/drug-insights/${encodeURIComponent(drugs[0].slug)}`), "abrir medicamento favorito");
+  assert.ok(Number.isInteger(drug.id), "detalhe do medicamento precisa expor id canônico");
+  await api(`/api/favorites/medicamento/${drug.id}`, { method: "DELETE" });
+
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  const command = page.locator(".cos-command-mini input");
+  await command.fill("prescrever");
+  await command.press("Enter");
+  await page.waitForURL((url) => url.pathname === "/receituario");
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  await page.locator(".cos-command-mini input").fill("calcular risco");
+  await page.locator(".cos-command-mini input").press("Enter");
+  await page.waitForURL((url) => url.pathname === "/calculadoras");
+  await page.locator(".ccc-nav__context").getByText("Decisão clínica", { exact: true }).waitFor({ state: "visible" });
+
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  const favoriteButton = page.getByRole("button", { name: "☆ Favoritar", exact: true });
+  await favoriteButton.waitFor({ state: "visible" });
+  await favoriteButton.click();
+  await page.getByRole("button", { name: "★ Favoritado", exact: true }).waitFor({ state: "visible" });
+  const favorites = required(await api("/api/favorites"), "reler favorito");
+  assert.ok(favorites.some((item) => item.item_type === "medicamento" && item.item_id === drug.id));
+
+  await page.goto(`${baseUrl}/favoritos`, { waitUntil: "networkidle" });
+  await page.getByText(drug.generic_name, { exact: true }).waitFor({ state: "visible" });
+  assert.equal(await page.getByRole("button", { name: `Todos · ${favorites.length}`, exact: true }).count(), 1);
+  const medicationCount = favorites.filter((item) => item.item_type === "medicamento").length;
+  assert.equal(await page.getByRole("button", { name: `Medicamento · ${medicationCount}`, exact: true }).count(), 1);
+
+  await page.goto(`${baseUrl}/medicamentos?slug=${encodeURIComponent(drug.slug)}`, { waitUntil: "networkidle" });
+  const nav = await page.locator(".ccc-nav__scroll").evaluate((element) => ({ clientHeight: element.clientHeight, scrollHeight: element.scrollHeight }));
+  assert.ok(nav.scrollHeight <= nav.clientHeight + 1, `navegação contextual ainda exige rolagem: ${JSON.stringify(nav)}`);
+  assert.ok(await page.locator(".ccc-nav__context").isVisible());
+  assert.equal(await page.locator(".ccc-nav__section[open]").count(), 1);
+
+  await api(`/api/favorites/medicamento/${drug.id}`, { method: "DELETE" });
+  record("navigation-favorites", { drugId: drug.id, nav });
+}
+
 try {
   await publicContracts();
   await login();
@@ -203,6 +245,7 @@ try {
   await emailSignatureFlow();
   await integrationFlow();
   await clinicalLegibility();
+  await navigationAndFavorites();
 } catch (error) {
   report.failures.push(error?.stack ?? String(error));
 } finally {

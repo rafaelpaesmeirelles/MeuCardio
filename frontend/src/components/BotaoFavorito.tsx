@@ -5,6 +5,8 @@ type Tipo = "documento" | "medicamento" | "imagem" | "exame" | "evidencia" | "es
 
 export default function BotaoFavorito({ itemType, itemId }: { itemType: Tipo; itemId: number }) {
   const [favoritado, setFavoritado] = useState<boolean | null>(null);
+  const [ocupado, setOcupado] = useState(false);
+  const [erro, setErro] = useState("");
 
   useEffect(() => {
     api.get<any[]>("/favorites").then((lista) => {
@@ -13,25 +15,24 @@ export default function BotaoFavorito({ itemType, itemId }: { itemType: Tipo; it
   }, [itemType, itemId]);
 
   async function alternar() {
-    if (favoritado) {
-      await api.delete(`/favorites/${itemType}/${itemId}`);
-      setFavoritado(false);
-    } else {
-      await api.post("/favorites", { item_type: itemType, item_id: itemId });
-      setFavoritado(true);
-    }
+    if (ocupado) return;
+    setOcupado(true); setErro("");
+    try {
+      if (favoritado) {
+        await api.delete(`/favorites/${itemType}/${itemId}`);
+        setFavoritado(false);
+      } else {
+        await api.post("/favorites", { item_type: itemType, item_id: itemId });
+        setFavoritado(true);
+      }
+    } catch {
+      setErro("Não foi possível atualizar o favorito.");
+    } finally { setOcupado(false); }
   }
 
   if (favoritado === null) return null;
 
-  return (
-    <button
-      className="botao botao--secundario"
-      onClick={alternar}
-      aria-pressed={favoritado}
-      style={{ padding: "0.35rem 0.75rem", fontSize: "0.86rem" }}
-    >
-      {favoritado ? "★ Favoritado" : "☆ Favoritar"}
-    </button>
-  );
+  return <span className="favorite-control"><button className="botao botao--secundario favorite-control__button" disabled={ocupado} onClick={() => void alternar()} aria-pressed={favoritado}>
+    {ocupado ? "Atualizando…" : favoritado ? "★ Favoritado" : "☆ Favoritar"}
+  </button>{erro && <small role="status">{erro}</small>}</span>;
 }

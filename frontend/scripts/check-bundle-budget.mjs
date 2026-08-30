@@ -162,7 +162,12 @@ for (const path of await listarArquivos(dist.pathname)) {
 // rota jurídica lazy, levando o precache a 2948709 B. O incremento de 14 KiB
 // deixa ~1,3 KiB de margem e mantém inalterados os limites do entrypoint, gzip,
 // divisão por rotas e chunks opcionais.
-const maxPrecacheBytes = 2881 * 1024;
+//
+// Ajustado de 2881 KB para 2893 KB em 30/08/2026: a navegação contextual,
+// refinamento progressivo da busca e superfícies completas de favoritos levaram
+// o precache a 2961019 B. O incremento de 12 KiB deixa ~1,4 KiB de margem e
+// mantém inalterados entrypoint, gzip, divisão por rotas e chunks opcionais.
+const maxPrecacheBytes = 2893 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

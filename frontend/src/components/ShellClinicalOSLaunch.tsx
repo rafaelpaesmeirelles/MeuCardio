@@ -2,6 +2,7 @@ import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api, assetUrl } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { commandDestination, getClinicalNavigationContext, getContextActions } from "../lib/clinicalNavigationContext";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
 import Credito from "./Credito";
@@ -87,33 +88,6 @@ const BASE: Secao[] = [
   },
 ];
 
-const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone: NomeIcone }> = [
-  { prefixo: "/cardiologia-intensiva", titulo: "Cardiologia Intensiva & UCO", detalhe: "Cockpit assistencial", icone: "clinica" },
-  { prefixo: "/medicamentos", titulo: "Medicamentos", detalhe: "Farmacologia e segurança", icone: "medicamento" },
-  { prefixo: "/interacoes", titulo: "Interações", detalhe: "Segurança medicamentosa", icone: "medicamento" },
-  { prefixo: "/doencas", titulo: "Guia de Doenças", detalhe: "Consulta clínica", icone: "doencas" },
-  { prefixo: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e decisão", icone: "calculadora" },
-  { prefixo: "/diretrizes", titulo: "Diretrizes", detalhe: "Recomendações e atualização", icone: "evidencia" },
-  { prefixo: "/evidencias", titulo: "Evidências", detalhe: "Síntese científica", icone: "evidencia" },
-  { prefixo: "/estudos", titulo: "Estudos", detalhe: "Literatura original", icone: "evidencia" },
-  { prefixo: "/biblioteca", titulo: "Biblioteca", detalhe: "Conhecimento clínico", icone: "conhecimento" },
-  { prefixo: "/exames", titulo: "Exames", detalhe: "Diagnóstico e interpretação", icone: "clinica" },
-  { prefixo: "/receituario", titulo: "Prescrição", detalhe: "Produção clínica", icone: "prescricao" },
-  { prefixo: "/documentos", titulo: "Documentos", detalhe: "Documentos e solicitações", icone: "documento" },
-  { prefixo: "/exames-ia", titulo: "IA para Exames", detalhe: "Análise multimodal cardiovascular", icone: "ecg" },
-  { prefixo: "/ecg-ia", titulo: "IA para Exames", detalhe: "Análise multimodal cardiovascular", icone: "ecg" },
-  { prefixo: "/prontuario", titulo: "Prontuário", detalhe: "Registro clínico longitudinal", icone: "pacientes" },
-  { prefixo: "/round", titulo: "Pacientes e round", detalhe: "Continuidade do cuidado", icone: "round" },
-  { prefixo: "/agenda", titulo: "Agenda", detalhe: "Organização clínica", icone: "agenda" },
-  { prefixo: "/assistente", titulo: "Assistente", detalhe: "Assistência contextual", icone: "assistente" },
-  { prefixo: "/emergencia", titulo: "Emergência", detalhe: "Protocolos de risco imediato", icone: "emergencia" },
-];
-
-function meta(pathname: string) {
-  return CONTEXTOS.find((item) => pathname.startsWith(item.prefixo))
-    ?? { prefixo: pathname, titulo: "CorVIA", detalhe: "Workspace clínico", icone: "clinica" as NomeIcone };
-}
-
 function iniciais(nome?: string) {
   return (nome || "Médico").trim().split(/\s+/).slice(0, 2).map((parte) => parte[0]?.toUpperCase()).join("");
 }
@@ -128,18 +102,6 @@ function primeiroNome(nome?: string) {
 
 function chaveContextosRecentes(userId?: number) {
   return userId ? `corvia:contextos-recentes:${userId}` : "";
-}
-
-function destino(valor: string) {
-  const termo = valor.trim();
-  const normalizado = termo.toLocaleLowerCase("pt-BR");
-  if (/\b(ecg|eletrocardiograma|holter|mapa|ecocardiograma|resson[aâ]ncia|tomografia|exame cardiovascular)\b/.test(normalizado)) return "/exames-ia";
-  if (/\b(prescrev|prescri|receita|receitu)/.test(normalizado)) return "/receituario";
-  if (/\b(atestado|documento|relat[oó]rio|encaminhamento|solicitar exames?|pedido de exames?)/.test(normalizado)) return "/documentos";
-  if (/\b(calcul|escore|score)/.test(normalizado)) return "/calculadoras";
-  if (/\b(emerg[eê]ncia|urg[eê]ncia)/.test(normalizado)) return "/emergencia";
-  if (/\b(intera[cç][aã]o)/.test(normalizado)) return "/interacoes";
-  return `/busca?q=${encodeURIComponent(termo)}`;
 }
 
 function Navegacao({ secoes, onNavigate }: { secoes: Secao[]; onNavigate?: () => void }) {
@@ -175,43 +137,17 @@ function Navegacao({ secoes, onNavigate }: { secoes: Secao[]; onNavigate?: () =>
 }
 
 function Intelligence({ pathname }: { pathname: string }) {
-  const contexto = meta(pathname);
-  const mapa = useMemo(() => {
-    if (pathname.startsWith("/medicamentos") || pathname.startsWith("/interacoes")) return {
-      titulo: "Inteligência farmacológica",
-      texto: "Conecte medicamento, segurança, evidência e ação clínica.",
-      links: [["/interacoes", "Revisar interações", "medicamento"], ["/evidencias", "Abrir evidências", "evidencia"], ["/receituario", "Ir para prescrição", "prescricao"]] as [string, string, NomeIcone][],
-    };
-    if (pathname.startsWith("/doencas") || pathname.startsWith("/triagem-sintomas")) return {
-      titulo: "Inteligência clínica",
-      texto: "Navegue da doença para diretrizes, fármacos, escores e exames.",
-      links: [["/diretrizes", "Ver diretrizes", "evidencia"], ["/calculadoras", "Abrir escores", "calculadora"], ["/medicamentos", "Explorar fármacos", "medicamento"]] as [string, string, NomeIcone][],
-    };
-    if (pathname.startsWith("/evidencias") || pathname.startsWith("/estudos") || pathname.startsWith("/diretrizes")) return {
-      titulo: "Inteligência científica",
-      texto: "Cruze estudos, recomendações e aplicação prática.",
-      links: [["/biblioteca", "Abrir biblioteca", "conhecimento"], ["/estudos", "Estudos relacionados", "evidencia"], ["/assistente", "Discutir com o Assistente", "assistente"]] as [string, string, NomeIcone][],
-    };
-    if (pathname.startsWith("/exames") || pathname.startsWith("/galeria")) return {
-      titulo: "Inteligência diagnóstica",
-      texto: "Relacione achados, critérios, condições e próximos passos.",
-      links: [["/doencas", "Doenças relacionadas", "doencas"], ["/calculadoras", "Critérios e escores", "calculadora"], ["/assistente", "Analisar contexto", "assistente"]] as [string, string, NomeIcone][],
-    };
-    return {
-      titulo: "CorVIA Intelligence",
-      texto: "O sistema aproxima conhecimento, decisão e ação conforme seu contexto.",
-      links: [["/assistente", "Perguntar ao Assistente", "assistente"], ["/diretrizes", "Atualização clínica", "evidencia"], ["/favoritos", "Abrir favoritos", "favorito"]] as [string, string, NomeIcone][],
-    };
-  }, [pathname]);
+  const contexto = getClinicalNavigationContext(pathname);
+  const links = getContextActions(pathname);
 
   return (
     <aside className="cos-intelligence" aria-label="CorVIA Intelligence">
       <div className="cos-intelligence__status"><i /> contexto ativo</div>
-      <div className="cos-intelligence__context"><span><Icone nome={contexto.icone} /></span><div><small>Você está em</small><strong>{contexto.titulo}</strong></div></div>
+      <div className="cos-intelligence__context"><span><Icone nome={contexto.icon} /></span><div><small>Você está em</small><strong>{contexto.title}</strong></div></div>
       <section className="cos-intelligence__card">
-        <p className="eyebrow">CorVIA Intelligence</p><h2>{mapa.titulo}</h2><p>{mapa.texto}</p>
+        <p className="eyebrow">CorVIA Intelligence</p><h2>{contexto.title}</h2><p>{contexto.detail}</p>
         <div className="cos-intelligence__links">
-          {mapa.links.map(([to, rotulo, icone]) => <Link to={to} key={to + rotulo}><Icone nome={icone} /><span>{rotulo}</span><Icone nome="seta" /></Link>)}
+          {links.map((action) => <Link to={action.to} key={action.to}><Icone nome={action.icon} /><span>{action.label}</span><Icone nome="seta" /></Link>)}
         </div>
       </section>
       <Link to="/busca" className="cos-intelligence__graph"><span>◎</span><span><strong>Tudo com Tudo</strong><small>Explorar relações clínicas</small></span><Icone nome="seta" /></Link>
@@ -251,8 +187,8 @@ export default function ShellClinicalOSLaunch() {
     if (location.pathname === "/" || location.pathname.startsWith("/admin")) return;
     const chave = chaveContextosRecentes(usuario?.id);
     if (!chave) return;
-    const contexto = meta(location.pathname);
-    const novo: Recente = { path: location.pathname, titulo: contexto.titulo, detalhe: contexto.detalhe, icone: contexto.icone, visitadoEm: Date.now() };
+    const contexto = getClinicalNavigationContext(location.pathname);
+    const novo: Recente = { path: location.pathname, titulo: contexto.title, detalhe: contexto.detail, icone: contexto.icon, visitadoEm: Date.now() };
     try {
       const anteriores = JSON.parse(sessionStorage.getItem(chave) || "[]") as Recente[];
       sessionStorage.setItem(chave, JSON.stringify([novo, ...anteriores.filter((item) => item.path !== novo.path)].slice(0, 6)));
@@ -320,7 +256,7 @@ export default function ShellClinicalOSLaunch() {
   function executar(evento: FormEvent) {
     evento.preventDefault();
     if (comando.trim().length < 2) return;
-    navigate(destino(comando));
+    navigate(commandDestination(comando));
     setComando("");
   }
 
