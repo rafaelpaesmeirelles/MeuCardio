@@ -4,11 +4,13 @@ import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
 import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import OptionalFeatureBoundary from "./components/OptionalFeatureBoundary";
+import { cardiologySpacesEnabled } from "./lib/cardiologySpacesFeature";
 import { useAuth } from "./lib/auth";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Produto = lazy(() => import("./pages/Produto"));
 const Painel = lazy(() => import("./pages/Painel"));
+const CardiologySpacesHome = lazy(() => import("./pages/CardiologySpacesHome"));
 const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
 const TimelineDoencas = lazy(() => import("./pages/TimelineDoencas"));
@@ -154,7 +156,7 @@ export default function App() {
       <RotasSuspensas>
         <Routes>
         <Route element={<Shell />}>
-          <Route index element={<Painel />} />
+          <Route index element={cardiologySpacesEnabled() ? <CardiologySpacesHome /> : <Painel />} />
           <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />

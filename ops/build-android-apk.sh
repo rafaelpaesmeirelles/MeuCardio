@@ -36,10 +36,10 @@ apk_file="app/build/outputs/apk/release/app-release.apk"
 [[ -s "$apk_file" ]] || { echo "Signed release APK was not generated." >&2; exit 65; }
 
 install -d -m 0755 "$DOWNLOAD_DIR"
-install -m 0644 "$apk_file" "$DOWNLOAD_DIR/corvia-os-android-1.0.1.apk"
-cp "$DOWNLOAD_DIR/corvia-os-android-1.0.1.apk" "$DOWNLOAD_DIR/corvia-os-android.apk"
+install -m 0644 "$apk_file" "$DOWNLOAD_DIR/corvia-cardiology-spaces-android-1.1.0.apk"
+cp "$DOWNLOAD_DIR/corvia-cardiology-spaces-android-1.1.0.apk" "$DOWNLOAD_DIR/corvia-cardiology-spaces-android.apk"
 cd "$DOWNLOAD_DIR"
-sha256sum corvia-os-android-1.0.1.apk > corvia-os-android-1.0.1.apk.sha256
-sha256sum corvia-os-android.apk > corvia-os-android.apk.sha256
+sha256sum corvia-cardiology-spaces-android-1.1.0.apk > corvia-cardiology-spaces-android-1.1.0.apk.sha256
+sha256sum corvia-cardiology-spaces-android.apk > corvia-cardiology-spaces-android.apk.sha256
 
-printf 'Android APK published for %s.\n' "$EXPECTED_SHA"
+printf 'CorVIA Cardiology Spaces Android APK published for %s.\n' "$EXPECTED_SHA"

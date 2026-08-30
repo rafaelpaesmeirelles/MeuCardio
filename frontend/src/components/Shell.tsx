@@ -1,3 +1,5 @@
+import { Outlet, useLocation } from "react-router-dom";
+import { cardiologySpacesEnabled } from "../lib/cardiologySpacesFeature";
 import ClinicalDesktopNav from "./ClinicalDesktopNav";
 import ClinicalMobileNav from "./ClinicalMobileNav";
 import ClinicalPresentationGuard from "./ClinicalPresentationGuard";
@@ -8,13 +10,22 @@ import ShellClinicalOSLaunch from "./ShellClinicalOSLaunch";
 import "../styles/canonical-brand-standard.css";
 
 export default function Shell() {
+  const { pathname } = useLocation();
+  const spacesHome = pathname === "/" && cardiologySpacesEnabled();
+
   return (
     <>
       <ClinicalRouteContext />
-      <ClinicalDesktopNav />
-      <HomePendingActionsPortal />
-      <ShellClinicalOSLaunch />
-      <ClinicalMobileNav />
+      {spacesHome ? (
+        <Outlet />
+      ) : (
+        <>
+          <ClinicalDesktopNav />
+          <HomePendingActionsPortal />
+          <ShellClinicalOSLaunch />
+          <ClinicalMobileNav />
+        </>
+      )}
       <ClinicalPresentationGuard />
       <InvestorDemoBanner />
     </>

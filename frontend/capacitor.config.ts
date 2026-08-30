@@ -20,7 +20,7 @@ const config: CapacitorConfig = {
   // instalar de novo. A troca foi feita agora justamente porque o app está
   // sendo gerado do zero: adiar só aumentaria a base a migrar.
   appId: "br.med.corvia",
-  appName: "Corvia",
+  appName: "CorVIA Cardiology Spaces",
   webDir: "dist",
   server: {
     // O app carrega o site ao vivo, não um build congelado dentro do pacote.

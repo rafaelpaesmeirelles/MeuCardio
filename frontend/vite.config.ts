@@ -30,9 +30,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["corvia-mark-canonical.svg", "corvia-logo-canonical.svg", "corvia-logo-canonical-dark.svg"],
       manifest: {
-        name: "CorVIA — Clinical OS do médico",
+        name: "CorVIA — Cardiology Spaces",
         short_name: "CorVIA",
-        description: "Workspace clínico inteligente do médico: conhecimento, contexto, decisão e ação conectados.",
+        description: "Ambientes de cardiologia centrados no médico: conhecimento, contexto, decisão e ação conectados.",
         lang: "pt-BR",
         theme_color: "#03101A",
         background_color: "#03101A",
