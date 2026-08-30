@@ -679,3 +679,70 @@ um documento novo cobre um material-paciente pré-existente.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 7 (3 descartados por colisão) | 193 |
 | **Total** | **4.900** | **94** | **4.806** |
+
+## Marco: primeira revisão editorial independente (commit 6afe6673, 30/08)
+
+Rafael, com revisão independente do Codex, executou pela primeira vez o segundo
+estágio do regime de revisão em dois estágios: promoveu 79 registros e 13
+documentos de `pendente_revisao` para `revisado`, adicionando `fonte_producao:
+"claude"` e `review_note` com a data e o escopo da revisão (estrutura, fontes
+declaradas, consistência interna, segurança clínica, vínculos canônicos). O
+commit também **removeu posologia acionável de materiais leigos** (ex.:
+"aspirina em dose baixa, em geral 100 mg por dia" → "aspirina em baixa dose, na
+posologia individualmente prescrita") — padrão de segurança que passo a aplicar
+proativamente em todo material-paciente novo: nunca declarar dose numérica
+acionável a público leigo. Novo diretório `editorial-approvals/` criado com os
+artefatos de certificação do lançamento de 29/08.
+
+Push do Lote 36 exigiu rebase (`git rebase origin/claude/science-scale-20k-20260904`)
+por conflito de seam em `material-paciente/metadados.json` entre o fechamento do
+commit de revisão e meu item recém-anexado — resolvido preservando ambos os
+lados, gates reverificados, push concluído sem perda de trabalho de nenhuma
+parte. Regra "nunca autopromover `review_status`" permanece integralmente em
+vigor — apenas o artefato de certificação passou a existir de fato.
+
+## Lote 36 — concluído (commit 79b585d0)
+
+- **content/Cardiomiopatias**: +1 — `cardiomiopatia-acromegalica-historia-natural-mecanismos-e-reversibilidade`.
+- **material-paciente**: +1 — material de apoio para hipocalcemia grave (pareado com lote 34).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (pós-rebase).
+- **Total canônico**: 10.283 (10.281 revisado + 2 pendente_revisao).
+
+### Status consolidado (após Lote 36)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 14 | 2.386 |
+| Casos clínicos | 900 | 32 | 868 |
+| Checklists | 600 | 17 | 583 |
+| Materiais-paciente | 500 | 24 | 476 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 7 (3 descartados por colisão) | 193 |
+| **Total** | **4.900** | **96** | **4.804** |
+
+## Lote 37 — concluído (commit 82cb3323)
+
+Ritmo acelerado a pedido explícito do Rafael ("maximo de agentes, acelere") —
+8 agentes dispatchados em paralelo nesta rodada (recorde da sessão, ante o
+padrão de 1-3 agentes/lote usado até o Lote 36).
+
+- **content/Cardiomiopatias**: +2 — `cardiomiopatia-dilatada-por-deficiencia-de-cobre-causas-adquiridas-doenca-de-menkes-e-reversibilidade`, `amiloidose-relacionada-a-dialise-beta2-microglobulina-e-acometimento-cardiovascular`.
+- **doencas**: +2 — `cardiomiopatia-acromegalica`, `granulomatose-eosinofilica-com-poliangiite-egpa` (ambas pareadas com documentos já existentes).
+- **checklists**: +2 — `avaliacao-cardiovascular-inicial-e-seguimento-na-acromegalia`, `rastreio-cardiovascular-ativo-na-egpa-recem-diagnosticada`.
+- **casos-clinicos**: +2 — `picada-bothrops-jararaca-coagulopatia-choque-procedimento-invasivo`, `avc-embolico-endocardite-libman-sacks-lupus-e-sindrome-antifosfolipide`.
+- **trilhas**: +1 — `trilha-cardiomiopatias-metabolicas-reversiveis-do-adulto` (montada diretamente por mim, sem despacho de agente, unificando o cluster selênio/cobre/beribéri/hipocalcemia/acromegalia/alcoólica dos lotes 31-37 sob um único padrão clínico).
+- **Verificação**: todos os slugs de colisão e todos os links "Tudo com Tudo" reconferidos manualmente contra o worktree antes da integração (2 agentes propuseram links para selênio/hipocalcemia que julgaram inexistentes por checarem `/opt/meucardio` — que segue `origin/main`, não minha branch — corrigido na integração).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.292 (10.281 revisado + 11 pendente_revisao).
+
+### Status consolidado (após Lote 37)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 16 | 2.384 |
+| Casos clínicos | 900 | 34 | 866 |
+| Checklists | 600 | 19 | 581 |
+| Materiais-paciente | 500 | 24 | 476 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 9 (3 descartados por colisão) | 191 |
+| **Total** | **4.900** | **105** | **4.795** |
