@@ -1,0 +1,407 @@
+name: Monthly scientific validation and publication
+
+on:
+  schedule:
+    # 09:05 America/Sao_Paulo (UTC-3), on the first day of every month.
+    - cron: "5 12 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: corvia-monthly-scientific-validation
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  correct:
+    name: Audit and prepare verified corrections
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    environment: production
+    outputs:
+      branch: ${{ steps.commit.outputs.branch }}
+      sha: ${{ steps.commit.outputs.sha }}
+      base_sha: ${{ steps.commit.outputs.base_sha }}
+    steps:
+      - name: Check required AI credential
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "The production environment must define the OPENAI_API_KEY secret."
+            exit 78
+          fi
+
+      - name: Check out the canonical branch
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install audit dependencies
+        run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Capture the baseline audit
+        run: |
+          mkdir -p .codex-monthly
+          python scripts/audit_scientific_publication.py \
+            --verify-pubmed \
+            --only-status revisado \
+            --output .codex-monthly/before.json
+
+      - name: Re-audit the corpus and make evidence-backed corrections
+        id: correction
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ":workspace"
+          allow-bots: true
+          allow-bot-users: "github-actions[bot]"
+          effort: xhigh
+          codex-args: '["--search", "--ephemeral"]'
+          prompt: |
+            You are CorVIA's monthly scientific evidence auditor. Work autonomously
+            in this checked-out repository, but do not commit, push, open pull
+            requests, deploy, or change infrastructure.
+
+            Read INSTRUCOES_CHATGPT.md completely and obey its medical-publication
+            rules. Use .codex-monthly/before.json as the deterministic baseline.
+            Audit the entire canonical scientific corpus for stale, contradictory,
+            unsupported, misquoted, or incorrectly identified evidence. Re-open
+            primary sources on the web. Prefer official guidelines and primary
+            publications from SBC, ESC, AHA, ACC, ISHLT, PubMed/NCBI, Crossref,
+            Europe PMC, journal publishers, and regulatory agencies.
+
+            Correct only statements whose source, population, intervention,
+            comparator, outcome, numerical result, DOI/PMID, recommendation class,
+            level of evidence, dose, and date can be verified exactly. Never invent
+            or infer a missing identifier, number, class, recommendation, dose, or
+            safety claim. Do not silently generalize trial findings. If evidence is
+            uncertain or conflicting, leave the published scientific file unchanged
+            and document the issue for human review in the monthly report.
+
+            Allowed edits are limited to:
+            - content/**
+            - evidencias/metadados.json
+            - estudos/metadados.json
+            - medicamentos/metadados.json
+            - exames/metadados.json
+            - emergencia/metadados.json
+            - checklists/metadados.json
+            - doencas/metadados.json
+            - triagem-sintomas/metadados.json
+            - casos-clinicos/metadados.json
+            - trilhas/metadados.json
+            - material-paciente/metadados.json
+            - galeria/metadados.json
+            - reports/scientific-audit/**
+
+            Do not edit workflows, scripts, application code, prompts, tests,
+            dependencies, migrations, deployment, authentication, authorization,
+            billing, or operational configuration. Do not add placeholders such as
+            "VERIFICAÇÃO HUMANA NECESSÁRIA" to publishable content. Do not mark an
+            uncertain item as revisado or published.
+
+            Create reports/scientific-audit/${{ github.run_id }}.md. The report must
+            identify the UTC audit time, baseline findings, corpus coverage,
+            corrected files, exact supporting URLs/DOIs/PMIDs for every correction,
+            unresolved conflicts, items deliberately left unchanged, and residual
+            risk. A report with no safe correction is valid. Keep all edits concise,
+            reversible, and auditable.
+
+      - name: Validate the proposed scientific diff
+        env:
+          REPORT_PATH: reports/scientific-audit/${{ github.run_id }}.md
+        run: |
+          python scripts/audit_scientific_publication.py \
+            --verify-pubmed \
+            --only-status revisado \
+            --output .codex-monthly/after.json
+
+          python - <<'PY'
+          import json
+          import os
+          import pathlib
+          import subprocess
+          import sys
+
+          import yaml
+
+          allowed_files = {
+              "evidencias/metadados.json",
+              "estudos/metadados.json",
+              "medicamentos/metadados.json",
+              "exames/metadados.json",
+              "emergencia/metadados.json",
+              "checklists/metadados.json",
+              "doencas/metadados.json",
+              "triagem-sintomas/metadados.json",
+              "casos-clinicos/metadados.json",
+              "trilhas/metadados.json",
+              "material-paciente/metadados.json",
+              "galeria/metadados.json",
+          }
+          allowed_prefixes = ("content/", "reports/scientific-audit/")
+
+          changed = subprocess.check_output(
+              [
+                  "git", "ls-files", "--modified", "--deleted", "--others",
+                  "--exclude-standard", "--", ".", ":(exclude).codex-monthly/**",
+              ],
+              text=True,
+          ).splitlines()
+          forbidden = [
+              path for path in changed
+              if path not in allowed_files and not path.startswith(allowed_prefixes)
+          ]
+          if forbidden:
+              print("Forbidden paths changed:", *forbidden, sep="\n- ")
+              sys.exit(1)
+
+          for path in changed:
+              if pathlib.Path(path).exists() and not subprocess.run(
+                  ["git", "ls-files", "--error-unmatch", "--", path],
+                  stdout=subprocess.DEVNULL,
+                  stderr=subprocess.DEVNULL,
+              ).returncode == 0:
+                  subprocess.run(["git", "add", "-N", "--", path], check=True)
+
+          report = pathlib.Path(os.environ["REPORT_PATH"])
+          if not report.is_file() or not report.read_text(encoding="utf-8").strip():
+              print(f"Required audit report is missing or empty: {report}")
+              sys.exit(1)
+
+          def load(path):
+              return json.loads(pathlib.Path(path).read_text(encoding="utf-8"))
+
+          def error_set(payload):
+              errors = set()
+              for item in payload.get("documents", []):
+                  path = str(item.get("path", "<unknown>"))
+                  for error in item.get("errors", []):
+                      errors.add((path, str(error)))
+              for error in payload.get("errors", []):
+                  errors.add(("<global>", str(error)))
+              return errors
+
+          before = error_set(load(".codex-monthly/before.json"))
+          after = error_set(load(".codex-monthly/after.json"))
+          new_errors = sorted(after - before)
+          if new_errors:
+              print("The correction introduced new audit errors:")
+              for path, error in new_errors:
+                  print(f"- {path}: {error}")
+              sys.exit(1)
+
+          for manifest in sorted(allowed_files):
+              path = pathlib.Path(manifest)
+              if path.is_file():
+                  json.loads(path.read_text(encoding="utf-8"))
+
+          for path in pathlib.Path("content").rglob("*.md"):
+              text = path.read_text(encoding="utf-8")
+              if not text.startswith("---\n"):
+                  continue
+              parts = text.split("---\n", 2)
+              if len(parts) < 3:
+                  raise ValueError(f"Malformed front matter: {path}")
+              metadata = yaml.safe_load(parts[1])
+              if not isinstance(metadata, dict):
+                  raise ValueError(f"Invalid front matter object: {path}")
+
+          diff = subprocess.check_output(
+              ["git", "diff", "--unified=0", "--no-color", "HEAD"], text=True
+          forbidden_markers = (
+              "VERIFICAÇÃO HUMANA NECESSÁRIA",
+              "VERIFICACAO HUMANA NECESSARIA",
+              "review_status: pendente",
+              'review_status: "pendente"',
+          )
+          unsafe = []
+          for line in diff.splitlines():
+              if line.startswith("+++") or not line.startswith("+"):
+                  continue
+              if any(marker in line for marker in forbidden_markers):
+                  unsafe.append(line)
+          if unsafe:
+              print("Unsafe publication markers were added:", *unsafe, sep="\n")
+              sys.exit(1)
+
+          print(f"Validated {len(changed)} changed paths; no new audit errors.")
+          PY
+
+          git diff --check
+          if [ -f scripts/scientific_corpus_inventory.py ]; then
+            python scripts/scientific_corpus_inventory.py --strict
+          fi
+
+      - name: Commit the auditable correction branch
+        id: commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="automation/monthly-science-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          BASE_SHA="$(git rev-parse HEAD)"
+          git switch -c "$BRANCH"
+          git config user.name "corvia-science-bot"
+          git config user.email "corvia-science-bot@users.noreply.github.com"
+
+          while IFS= read -r path; do
+            [ -n "$path" ] && git add -- "$path"
+          done < <(git ls-files --modified --deleted --others --exclude-standard \
+            -- . ':(exclude).codex-monthly/**')
+
+          git commit -m "chore(science): monthly evidence validation"
+          git push \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "HEAD:refs/heads/${BRANCH}"
+
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "base_sha=$BASE_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Upload the deterministic audit evidence
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: monthly-scientific-audit-${{ github.run_id }}
+          path: .codex-monthly/
+          if-no-files-found: ignore
+          retention-days: 90
+
+  verify-and-promote:
+    name: Independently verify and promote
+    needs: correct
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    environment: production
+    steps:
+      - name: Check out the proposed correction
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.correct.outputs.branch }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Confirm the canonical branch has not moved
+        env:
+          EXPECTED_BASE: ${{ needs.correct.outputs.base_sha }}
+        run: |
+          git fetch origin main
+          CURRENT_BASE="$(git rev-parse origin/main)"
+          if [ "$CURRENT_BASE" != "$EXPECTED_BASE" ]; then
+            echo "main moved during the audit; refusing a non-fast-forward promotion."
+            exit 1
+          fi
+
+      - name: Independently re-open sources and verify every correction
+        id: verifier
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ":read-only"
+          allow-bots: true
+          allow-bot-users: "github-actions[bot]"
+          effort: xhigh
+          codex-args: '["--search", "--ephemeral"]'
+          output-file: .codex-verifier.json
+          output-schema: |
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "approved": {"type": "boolean"},
+                "summary": {"type": "string"},
+                "violations": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                }
+              },
+              "required": ["approved", "summary", "violations"]
+            }
+          prompt: |
+            Act as an independent, read-only clinical evidence verifier. Review only
+            the proposed monthly change in `git diff origin/main...HEAD` and the
+            monthly audit report. Do not trust the first auditor's conclusions.
+
+            Re-open the primary source for every changed clinical assertion and
+            identifier. Verify population, intervention, comparator, outcome,
+            numerical results, dates, DOI/PMID, recommendation class, evidence
+            level, dosing, contraindications, and whether the conclusion is faithful
+            to the cited evidence. Check INSTRUCOES_CHATGPT.md and reject any change
+            that violates its publication rules, broadens evidence, hides
+            uncertainty, publishes a placeholder, or lacks an exact accessible
+            primary source. Also reject changes outside the permitted scientific
+            corpus and report paths.
+
+            Set approved=true only if every proposed publishable correction is
+            independently verified and no safety or provenance violation remains.
+            Any uncertainty must produce approved=false and a concrete violation.
+
+      - name: Enforce the independent verdict
+        run: |
+          python - <<'PY'
+          import json
+          import pathlib
+          import sys
+
+          path = pathlib.Path(".codex-verifier.json")
+          verdict = json.loads(path.read_text(encoding="utf-8"))
+          print(verdict.get("summary", "No verifier summary."))
+          for violation in verdict.get("violations", []):
+              print(f"- {violation}")
+          if verdict.get("approved") is not True:
+              sys.exit("Independent clinical verification rejected the correction.")
+          PY
+
+      - name: Promote the verified commit to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_BASE: ${{ needs.correct.outputs.base_sha }}
+          AUDITED_SHA: ${{ needs.correct.outputs.sha }}
+        run: |
+          if [ "$(git rev-parse HEAD)" != "$AUDITED_SHA" ]; then
+            echo "Checked-out commit does not match the audited commit."
+            exit 1
+          fi
+
+          REMOTE_MAIN="$(git ls-remote origin refs/heads/main | cut -f1)"
+          if [ "$REMOTE_MAIN" != "$EXPECTED_BASE" ]; then
+            echo "main moved after verification; refusing promotion."
+            exit 1
+          fi
+
+          git push \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "$AUDITED_SHA:refs/heads/main"
+
+      - name: Dispatch certified publication gates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for workflow in \
+            ci.yml \
+            rc2-acceptance.yml \
+            visual-qa.yml \
+            corpus-database.yml
+          do
+            gh workflow run "$workflow" --ref main
+          done
+
+          gh api \
+            -X DELETE \
+            "repos/${GITHUB_REPOSITORY}/git/refs/heads/${{ needs.correct.outputs.branch }}"
+
+          echo "All certified gates were dispatched for ${AUDITED_SHA}."
+          echo "The existing production certifier will deploy after all four pass."
