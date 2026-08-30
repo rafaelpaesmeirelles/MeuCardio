@@ -17747,5 +17747,27 @@
       "Alhareth D, Ghazawi AE, Ajami S, Saifi Z, Refaat M. Latest Management of Cardiac Sarcoidosis: A Comprehensive Review. Cardiol Res Pract. 2026;2026:4913082. doi:10.1155/crp/4913082. PMID 42369165."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "sindrome-de-timothy-cacna1c-sindactilia-qt-longo",
+    "titulo": "Síndrome de Timothy: sindactilia e QT longo extremo",
+    "tema": "Cardiomiopatias hereditárias",
+    "nivel": "avançado",
+    "enunciado": "Recém-nascido de termo, sexo masculino, é encaminhado à UTI neonatal após bradicardia fetal identificada em ultrassonografia obstétrica no terceiro trimestre. Ao exame físico, observa-se sindactilia cutânea bilateral acometendo o 2º ao 5º quirodáctilos e pododáctilos. O ECG neonatal revela intervalo QT corrigido de 640 ms, com ondas T alternantes e um episódio autolimitado de taquicardia ventricular polimórfica. O ecocardiograma mostra forame oval patente, sem outras malformações estruturais maiores.",
+    "pergunta": "Diante da combinação de sindactilia bilateral e QT longo extremo no período neonatal, qual é o diagnóstico mais provável?",
+    "opcoes": [
+      "Síndrome de Timothy (canalopatia por mutação em CACNA1C)",
+      "Síndrome do QT longo tipo 1 (mutação em KCNQ1)",
+      "Síndrome de Jervell e Lange-Nielsen",
+      "Síndrome de Andersen-Tawil (LQT7, mutação em KCNJ2)"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A associação de sindactilia (fusão cutânea de dedos das mãos e/ou pés) com QT longo extremo em um neonato é a assinatura clínica clássica da síndrome de Timothy, uma canalopatia multissistêmica rara causada por mutação de ganho de função, geralmente de novo, no gene CACNA1C, que codifica a subunidade alfa-1C do canal de cálcio tipo L cardíaco (Ca(V)1.2). A mutação mais recorrente, G406R, causa perda quase completa da inativação dependente de voltagem do canal, mantendo corrente de cálcio despolarizante prolongada; isso retarda a repolarização do cardiomiócito e explica o QT extremamente longo (QTc frequentemente entre 620 e 730 ms) e o altíssimo risco de arritmias ventriculares malignas e morte súbita, a principal causa de óbito nesses pacientes (Splawski et al., Cell 2004, PMID 15454078; Splawski et al., PNAS 2005, PMID 15863612). Além do coração e da pele, o Ca(V)1.2 é expresso em múltiplos tecidos, o que explica o caráter multissistêmico da síndrome: cardiopatias congênitas estruturais, imunodeficiência, hipoglicemia intermitente, características faciais dismórficas, comprometimento cognitivo e transtorno do espectro autista costumam coexistir. É importante notar que existe uma variante mais grave e rara (TS2, por mutação no éxon 8 alternativo do mesmo gene) que cursa com QT ainda mais prolongado, porém SEM sindactilia — mas na apresentação clássica (TS1, éxon 8A), a sindactilia está presente em praticamente todos os casos e funciona como pista diagnóstica decisiva que direciona a suspeita para CACNA1C antes mesmo do resultado do teste genético (GeneReviews, Napolitano & Priori, atualizado 2025, PMID 20301577). As demais opções são diagnósticos diferenciais relevantes de QT longo sindrômico, mas nenhuma cursa com sindactilia: a LQT1 (KCNQ1) é a forma mais comum de QT longo congênito, tipicamente desencadeada por esforço/natação e sem dismorfismos associados; a síndrome de Jervell e Lange-Nielsen é uma forma recessiva de QT longo associada a surdez neurossensorial congênita bilateral, não a sindactilia; e a síndrome de Andersen-Tawil (LQT7, KCNJ2) cursa com dismorfismos faciais e paralisia periódica, ondas U proeminentes e ectopia ventricular/taquicardia ventricular bidirecional, mas com prolongação do QT tipicamente mais discreta e sem sindactilia verdadeira (podem ocorrer clinodactilia ou sindactilia parcial leve, mas não como achado cardinal).",
+    "source_refs": [
+      "Splawski I, Timothy KW, Sharpe LM, Decher N, Kumar P, Bloise R, Napolitano C, Schwartz PJ, Joseph RM, Condouris K, Tager-Flusberg H, Priori SG, Sanguinetti MC, Keating MT. Ca(V)1.2 calcium channel dysfunction causes a multisystem disorder including arrhythmia and autism. Cell. 2004;119(1):19-31. PMID: 15454078. DOI: 10.1016/j.cell.2004.09.011",
+      "Splawski I, Timothy KW, Decher N, Kumar P, Sachse FB, Beggs AH, Sanguinetti MC, Keating MT. Severe arrhythmia disorder caused by cardiac L-type calcium channel mutations. Proc Natl Acad Sci U S A. 2005;102(23):8089-8096. PMID: 15863612. DOI: 10.1073/pnas.0502506102",
+      "Napolitano C, Priori SG. CACNA1C-Related Disorders. In: Adam MP, Bick S, Mirzaa GM, Wallace SE, Amemiya A, eds. GeneReviews(®). Seattle (WA): University of Washington, Seattle; 2006 Feb 15 [updated 2025 Sep 18]. PMID: 20301577."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
