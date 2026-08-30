@@ -276,7 +276,7 @@ jobs:
                 spacesReferences: visible(document.querySelector('.spaces-layer--refs')),
                 spacesDock: visible(document.querySelector('.spaces-dock')),
                 spacesDay: visible(document.querySelector('.spaces-day')),
-                consultorioSelected: document.querySelector('.spaces-door[aria-label="Consultório"]')?.getAttribute('aria-pressed') === 'true',
+                consultorioSelected: document.querySelector('.spaces-door[aria-pressed="true"]')?.textContent?.includes('Consultório') === true,
                 drugCommand: visible(document.querySelector('.cc-drugs-page')),
               };
             }, forbiddenVisibleText);
