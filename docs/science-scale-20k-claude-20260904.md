@@ -436,3 +436,23 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
 | **Total** | **4.900** | **66** | **4.834** |
+
+## Lote 24 — concluído (commit cdae6db8)
+
+- **content/Cardiologia_geriátrica**: +1 — `estenose-aortica-e-amiloidose-cardiaca-por-transtirretina-overlap-no-idoso` (11-16% de coexistência EA/ATTR em 5 coortes; evidência de que tratar as duas doenças — TAVI + tafamidis — dá o melhor prognóstico, Nitsche et al. 2025 PMID 40452225).
+- **casos-clinicos**: +1 — `beriberi-cardiaco-pos-cirurgia-bariatrica-ic-alto-debito-reversivel-com-tiamina`.
+- **material-paciente**: +1 — `doenca-de-behcet-e-o-coracao-por-que-ela-causa-trombose-e-aneurismas-ao-mesmo-tempo`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.257 (10.189 revisado + 68 pendente_revisao).
+
+### Status consolidado (após Lote 24)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 8 | 2.392 |
+| Casos clínicos | 900 | 27 | 873 |
+| Checklists | 600 | 11 | 589 |
+| Materiais-paciente | 500 | 20 | 480 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
+| **Total** | **4.900** | **69** | **4.831** |
