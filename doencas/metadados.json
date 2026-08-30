@@ -38222,5 +38222,247 @@
       "granulomatose-eosinofilica-com-poliangiite-egpa-e-envolvimento-cardiovascular"
     ],
     "patient_material_slug": "egpa-granulomatose-eosinofilica-e-o-coracao"
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre",
+    "name": "Cardiomiopatia dilatada por deficiência de cobre",
+    "aliases": [
+      "Cardiomiopatia por deficiência de cobre",
+      "Hipocupremia com cardiomiopatia",
+      "Doença de Menkes (cardiomiopatia por ATP7A)"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "metabolica",
+    "prevalence_rank": 15,
+    "completeness": "intermediario",
+    "summary": "Cardiomiopatia dilatada causada por deficiência de cobre — adquirida (cirurgia bariátrica com bypass em Y-de-Roux, excesso de zinco, nutrição parenteral prolongada, má absorção) ou, raramente, por defeito genético do transporte de cobre (ATP7A/doença de Menkes) — potencialmente reversível com reposição de cobre e correção da causa de base.",
+    "presentation": [
+      "Cardiomiopatia dilatada com disfunção sistólica, indistinguível por imagem de outras causas de cardiomiopatia dilatada 'idiopática'",
+      "Mielopatia/neuropatia com marcha espástica e ataxia sensorial proeminente, clínica e radiologicamente semelhante à degeneração combinada subaguda por deficiência de vitamina B12, frequentemente concomitante",
+      "Citopenias — principalmente anemia e neutropenia — como pista diagnóstica associada; o quadro neurológico pode estar presente sem manifestação hematológica",
+      "Fator de risco identificável na história: cirurgia bariátrica prévia (bypass em Y-de-Roux), uso crônico de creme fixador de prótese dentária ou suplemento de zinco, nutrição parenteral prolongada, síndrome de má absorção intestinal",
+      "Na forma genética rara (doença de Menkes, ligada ao X, mutação de ATP7A): início precoce na infância com deterioração neurodegenerativa grave; defeitos cardíacos congênitos e tortuosidade vascular ocorrem com frequência aumentada nesse espectro"
+    ],
+    "differentials": [
+      "Cardiomiopatia dilatada idiopática",
+      "Cardiomiopatia por deficiência de selênio (doença de Keshan e formas adquiridas)",
+      "Cardiomiopatia por deficiência de tiamina (beribéri cardíaco)",
+      "Doença de Wilson — mecanismo oposto: acúmulo tóxico de cobre por defeito de ATP7B, não deficiência de cobre",
+      "Degeneração combinada subaguda por deficiência de vitamina B12, quando predomina o quadro neurológico",
+      "Outras causas de mielopatia associada a citopenia e disfunção ventricular (toxicidade medicamentosa, síndromes mielodisplásicas)"
+    ],
+    "tests": [
+      "Cobre sérico — exame de triagem inicial; pode mascarar deficiência leve/moderada em contexto inflamatório por circular majoritariamente ligado à ceruloplasmina",
+      "Ceruloplasmina — dosar em conjunto com o cobre sérico; reforça a investigação e é descrita como biomarcador particularmente sensível nos distúrbios de ATP7A",
+      "Zinco sérico — passo indispensável quando a causa não é imediatamente óbvia; hiperzincemia pode estar presente mesmo sem relato espontâneo de exposição (creme fixador de prótese, suplementos)",
+      "Hemograma completo — reforça a suspeita diagnóstica (anemia, neutropenia) e serve como marcador precoce de resposta à reposição de cobre",
+      "Anamnese dirigida — cirurgia bariátrica prévia, uso de dentadura/creme fixador, suplementos de zinco/multivitamínicos, histórico de nutrição parenteral e de síndrome de má absorção",
+      "Avaliação genética direcionada ao espectro de distúrbios de ATP7A em casos sem causa adquirida identificável, sobretudo em paciente jovem com estigmas vasculares/tecido conjuntivo associados",
+      "Ecocardiograma seriado após correção da deficiência, para documentar a resposta da função ventricular caso a caso"
+    ],
+    "red_flags": [
+      "Cardiomiopatia dilatada 'idiopática' com citopenia inexplicada (sobretudo neutropenia) não investigada",
+      "Neutropenia grave — risco infeccioso associado à deficiência de cobre não corrigida",
+      "Mielopatia progressiva com ataxia sensorial sem diagnóstico etiológico definido",
+      "Cardiomiopatia dilatada em paciente com cirurgia bariátrica prévia sem avaliação de oligoelementos",
+      "Sinais do espectro ATP7A em lactente (deterioração neurológica precoce, convulsões) — suspeitar de doença de Menkes",
+      "Fragilidade vascular/tortuosidade arterial associada a cardiopatia em paciente jovem com defeito de transporte de cobre — risco de complicação aneurismática"
+    ],
+    "ambulatory_flow": [
+      "Investigar deficiência de cobre em toda cardiomiopatia dilatada sem causa esclarecida, especialmente na presença de citopenia ou sinal neurológico associado",
+      "Dosar cobre sérico, ceruloplasmina, zinco sérico e hemograma completo",
+      "Revisar ativamente fatores de risco na história: cirurgia bariátrica, nutrição parenteral prolongada, uso de creme fixador de prótese ou suplemento de zinco, síndrome de má absorção",
+      "Iniciar reposição de cobre — oral nos casos leves a moderados, intravenosa nos casos graves ou com absorção comprometida — sempre associada à correção da causa de base",
+      "Reavaliação ecocardiográfica seriada para documentar a resposta da função ventricular, sem prometer normalização garantida e quantificada da FEVE",
+      "Considerar avaliação genética do espectro ATP7A quando não houver causa adquirida identificável, sobretudo em paciente jovem com estigmas vasculares/de tecido conjuntivo"
+    ],
+    "emergency_flow": [
+      "Descompensação aguda de insuficiência cardíaca por cardiomiopatia dilatada — manejo padrão de IC aguda enquanto se investiga a causa de base",
+      "Neutropenia grave com sinais de infecção — avaliação urgente e suporte hematológico, com investigação simultânea de deficiência de cobre em paciente de risco",
+      "Lactente com deterioração neurológica aguda e suspeita de doença de Menkes — estabilização e avaliação especializada urgente (neurologia pediátrica/genética)"
+    ],
+    "tags": [
+      "cobre",
+      "deficiência de cobre",
+      "doença de Menkes",
+      "ATP7A",
+      "cardiomiopatia dilatada",
+      "cirurgia bariátrica",
+      "excesso de zinco",
+      "nutrição parenteral",
+      "mielopatia",
+      "cardiomiopatia reversível",
+      "citopenia",
+      "oligoelementos"
+    ],
+    "source_refs": [
+      "Fukai T, Ushio-Fukai M, Kaplan JH. Copper transporters and copper chaperones: roles in cardiovascular physiology and disease. Am J Physiol Cell Physiol. 2018;315(2):C186-C201. PMID: 29874110",
+      "Cobine PA, Moore SA, Leary SC. Getting out what you put in: Copper in mitochondria and its impacts on human disease. Biochim Biophys Acta Mol Cell Res. 2021;1868(1):118867. PMID: 32979421",
+      "Kumar N. Copper deficiency myelopathy (human swayback). Mayo Clin Proc. 2006;81(10):1371-1384. PMID: 17036563",
+      "Kumar N, Gross JB Jr, Ahlskog JE. Copper deficiency myelopathy produces a clinical picture like subacute combined degeneration. Neurology. 2004;63(1):33-39. PMID: 15249607",
+      "Kumar N. Neurologic complications of bariatric surgery. Continuum (Minneap Minn). 2014;20(3 Neurology of Systemic Disease):580-597. PMID: 24893235",
+      "Kumar N. Metabolic and toxic myelopathies. Semin Neurol. 2012;32(2):123-136. PMID: 22961187",
+      "Halfdanarson TR, Kumar N, Li CY, Phyliky RL, Hogan WJ. Hematological manifestations of copper deficiency: a retrospective review. Eur J Haematol. 2008;80(6):523-531. PMID: 18284630",
+      "Nations SP, Boyer PJ, Love LA, et al. Denture cream: an unusual source of excess zinc, leading to hypocupremia and neurologic disease. Neurology. 2008;71(9):639-643. PMID: 18525032",
+      "Hedera P, Peltier A, Fink JK, Wilcock S, London Z, Brewer GJ. Myelopolyneuropathy and pancytopenia due to copper deficiency and high zinc levels of unknown origin II. The denture cream is a primary source of excessive zinc. Neurotoxicology. 2009;30(6):996-999. PMID: 19732792",
+      "Doherty K, Connor M, Cruickshank R. Zinc-containing denture adhesive: a potential source of excess zinc resulting in copper deficiency myelopathy. Br Dent J. 2011;210(11):523-525. PMID: 21660014",
+      "Jin J, Mulesa L, Carrilero Rouillet M. Trace Elements in Parenteral Nutrition: Considerations for the Prescribing Clinician. Nutrients. 2017;9(5):440. PMID: 28452962",
+      "Qureshi A, Bergbower E, Patel J. Copper deficiency myeloneuropathy with a history of malabsorption: a tale of two cases. J Community Hosp Intern Med Perspect. 2021;11(1):152-155. PMID: 33552441",
+      "Tümer Z, Møller LB. Menkes disease. Eur J Hum Genet. 2010;18(5):511-518. PMID: 19888294",
+      "De Feyter S, Beyens A, Callewaert B. ATP7A-related copper transport disorders: A systematic review and definition of the clinical subtypes. J Inherit Metab Dis. 2023;46(2):163-173. PMID: 36692329",
+      "Hicks JD, Donsante A, Pierson TM, Gillespie MJ, Chou DE, Kaler SG. Increased frequency of congenital heart defects in Menkes disease. Clin Dysmorphol. 2012;21(2):59-63. PMID: 22134099",
+      "Olivieri JF, Jeyakumar A, Shivaram GM, Koo KSH, Monroe EJ. Emergent embolization of a ruptured splenic artery aneurysm complicating Menkes disease. Radiol Case Rep. 2018;13(6):1267-1270. PMID: 30275920",
+      "Buchman AL, Keen CL, Vinters HV, et al. Copper deficiency secondary to a copper transport defect: a new copper metabolic disturbance. Metabolism. 1994;43(12):1462-1469. PMID: 7990697",
+      "Elsherif L, Wang L, Saari JT, Kang YJ. Regression of dietary copper restriction-induced cardiomyopathy by copper repletion in mice. J Nutr. 2004;134(4):855-860. PMID: 15051837",
+      "Patel AJ, et al. Copper Replacement: A Life-Saving Treatment. Cureus. 2026;18(2):e103621. PMID: 41700144"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29874110/",
+      "https://pubmed.ncbi.nlm.nih.gov/32979421/",
+      "https://pubmed.ncbi.nlm.nih.gov/17036563/",
+      "https://pubmed.ncbi.nlm.nih.gov/15249607/",
+      "https://pubmed.ncbi.nlm.nih.gov/24893235/",
+      "https://pubmed.ncbi.nlm.nih.gov/22961187/",
+      "https://pubmed.ncbi.nlm.nih.gov/18284630/",
+      "https://pubmed.ncbi.nlm.nih.gov/18525032/",
+      "https://pubmed.ncbi.nlm.nih.gov/19732792/",
+      "https://pubmed.ncbi.nlm.nih.gov/21660014/",
+      "https://pubmed.ncbi.nlm.nih.gov/28452962/",
+      "https://pubmed.ncbi.nlm.nih.gov/33552441/",
+      "https://pubmed.ncbi.nlm.nih.gov/19888294/",
+      "https://pubmed.ncbi.nlm.nih.gov/36692329/",
+      "https://pubmed.ncbi.nlm.nih.gov/22134099/",
+      "https://pubmed.ncbi.nlm.nih.gov/30275920/",
+      "https://pubmed.ncbi.nlm.nih.gov/7990697/",
+      "https://pubmed.ncbi.nlm.nih.gov/15051837/",
+      "https://pubmed.ncbi.nlm.nih.gov/41700144/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-dilatada-por-deficiencia-de-cobre-causas-adquiridas-doenca-de-menkes-e-reversibilidade"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "amiloidose-relacionada-a-dialise-beta2-microglobulina",
+    "name": "Amiloidose relacionada à diálise (beta-2-microglobulina)",
+    "aliases": [
+      "DRA",
+      "dialysis-related amyloidosis",
+      "amiloidose por beta-2-microglobulina",
+      "amiloidose associada à hemodiálise"
+    ],
+    "area": "cardiogeriatria",
+    "category": "cardiomiopatia",
+    "subtype": "infiltrativa",
+    "prevalence_rank": 16,
+    "completeness": "completo",
+    "summary": "Amiloidose sistêmica adquirida por depósito de fibrilas de beta-2-microglobulina em pacientes de diálise crônica prolongada, com tropismo predominantemente osteoarticular e acometimento cardíaco (infiltração miocárdica, disfunção diastólica, arritmias) cuja probabilidade cresce com o tempo cumulativo de diálise; a tipagem do amiloide é obrigatória para diferenciar de ATTR e AL antes de qualquer decisão terapêutica.",
+    "presentation": [
+      "Síndrome do túnel do carpo bilateral, frequentemente a primeira manifestação clínica, anos antes de qualquer sinal cardíaco — bilateralidade e ausência de causa alternativa (diabetes, hipotireoidismo, uso ocupacional) em paciente de diálise prolongada devem levantar suspeita",
+      "Espondiloartropatia destrutiva, predominando em coluna cervical, com estreitamento do espaço intervertebral e erosões de plataformas vertebrais sem osteofitose — pode ser confundida com espondilodiscite infecciosa ou doença por depósito de pirofosfato de cálcio",
+      "Cistos ósseos (geodos subcondrais) periarticulares (carpo, cabeça do úmero, colo do fêmur, platô tibial), predispondo a fraturas patológicas",
+      "Manifestações musculoesqueléticas com prevalência histológica crescente conforme o tempo cumulativo de diálise, tornando-se quase universais em diálise muito prolongada — funcionam como sentinela de que depósito cardíaco ainda assintomático pode já estar presente",
+      "Acometimento cardíaco documentado sobretudo em pacientes com mais de 10 anos de hemodiálise, com maior extensão acima de 15 anos — fenótipo infiltrativo/restritivo com disfunção diastólica predominando sobre a sistólica",
+      "Dispneia, arritmias (incluindo bloqueios de condução e fibrilação atrial) e hipotensão intradialítica progressiva, sintomas inespecíficos com frequência atribuídos a outras causas comuns no paciente dialítico (doença coronariana, sobrecarga de volume, calcificação valvar)",
+      "Casos graves podem evoluir com infiltração amiloide difusa do ventrículo esquerdo, substituição extensa de fibras miocárdicas e insuficiência cardíaca congestiva refratária, com hipotensão intradialítica progressiva até inviabilizar a diálise"
+    ],
+    "differentials": [
+      "Amiloidose cardíaca por transtirretina selvagem (ATTRwt/senil) — doença do envelhecimento, mecanismo independente da função renal, tratamento com estabilizadores de transtirretina",
+      "Amiloidose cardíaca por transtirretina hereditária (ATTRv) — mutação do gene TTR, herança autossômica dominante, exige aconselhamento genético e testagem em cascata",
+      "Amiloidose de cadeia leve (AL) — discrasia de plasmócitos, curso frequentemente mais agressivo, exige terapia hematológica dirigida; erro de tipagem que rotule AL como DRA ou ATTR pode postergar tratamento urgente com impacto direto na sobrevida",
+      "Calcificação valvar e vascular própria da doença renal crônica em diálise, que pode coexistir com o depósito amiloide e se somar como substrato de rigidez arterial e disfunção diastólica",
+      "Outras cardiomiopatias infiltrativas ou restritivas não amiloides (sarcoidose cardíaca, fibrose endomiocárdica) a considerar quando a tipagem não confirma nenhuma das três amiloidoses",
+      "Causas mais comuns de sintomas cardíacos inespecíficos no paciente dialítico — doença coronariana, sobrecarga de volume — que podem mascarar ou coexistir com o quadro infiltrativo"
+    ],
+    "tests": [
+      "Cintilografia com traçador ósseo (99mTc-PYP/DPD/HMDP) com SPECT — não discrimina de forma confiável depósito de beta-2-microglobulina de transtirretina; útil para triagem do fenótipo infiltrativo, mas não substitui a tipagem definitiva",
+      "Eletroforese de proteínas séricas e urinárias com imunofixação e relação de cadeias leves livres séricas — obrigatória para excluir amiloidose AL antes de qualquer interpretação de cintilografia",
+      "Biópsia (endomiocárdica ou de sítio extracardíaco acessível, como gordura abdominal ou tecido articular/túnel do carpo já eventualmente ressecado) com imuno-histoquímica dirigida contra beta-2-microglobulina, transtirretina e cadeias leves kappa/lambda",
+      "Espectrometria de massa em amostra microdissecada a laser — método considerado padrão-ouro de tipagem quando disponível, sobretudo em amostras com múltiplos componentes proteicos coexistentes",
+      "Teste genético do gene TTR — necessário para diferenciar ATTRv de ATTRwt quando a tipagem apontar para transtirretina, já que um paciente dialítico pode desenvolver ATTRwt relacionada à idade de forma independente da DRA",
+      "Ecocardiograma com strain longitudinal global e ressonância cardíaca com realce tardio/mapeamento T1 — caracterizam o fenótipo infiltrativo (espessamento parietal, padrão de apical sparing), mas não distinguem os subtipos de amiloide entre si"
+    ],
+    "red_flags": [
+      "Síndrome do túnel do carpo bilateral prévia, espondiloartropatia destrutiva ou cistos ósseos periarticulares em paciente de diálise prolongada, sobretudo acima de 10 anos",
+      "Tempo cumulativo de diálise acima de 10-15 anos, especialmente com tecnologia convencional (membranas de baixo fluxo, sem água ultrapura) — o principal fator de risco independente identificado em todas as séries",
+      "Hipotensão intradialítica progressiva até inviabilizar a diálise, associada a sinais de insuficiência cardíaca — pode sinalizar infiltração amiloide difusa do ventrículo esquerdo",
+      "Fenótipo de cardiomiopatia infiltrativa/restritiva (espessamento de parede, disfunção diastólica) em paciente dialítico sem tipagem do amiloide já realizada",
+      "Cintilografia óssea positiva sem exclusão prévia de proteína monoclonal — falso-positivo para ATTR ocorre em mais de 10% dos casos de amiloidose AL, e a beta-2-microglobulina também não é discriminada pela cintilografia"
+    ],
+    "ambulatory_flow": [
+      "Investigar ativamente manifestações osteoarticulares (síndrome do túnel do carpo bilateral, dor cervical/lombar sugestiva de espondiloartropatia destrutiva, cistos ósseos) em todo paciente de diálise prolongada, sobretudo acima de 10 anos, como sinal sentinela de depósito sistêmico",
+      "Diante de fenótipo cardíaco infiltrativo (espessamento ventricular, disfunção diastólica, arritmia inexplicada) em paciente dialítico, solicitar tipagem de amiloide antes de presumir a etiologia: eletroforese sérica/urinária com imunofixação, cadeias leves livres e cintilografia óssea com SPECT",
+      "Não assumir beta-2-microglobulina pelo contexto clínico isolado (tempo de diálise, manifestações osteoarticulares prévias) — biópsia com imuno-histoquímica (ou espectrometria de massa, quando disponível) dirigida contra beta-2-microglobulina, transtirretina e cadeias leves é etapa obrigatória para tipagem definitiva",
+      "Se a tipagem apontar para transtirretina, prosseguir com genotipagem do TTR para diferenciar ATTRv de ATTRwt, com aconselhamento genético e testagem em cascata se hereditária",
+      "Se houver qualquer prova de clonalidade alterada, encaminhar à hematologia para avaliação de amiloidose AL antes de qualquer decisão terapêutica, independentemente do resultado da cintilografia",
+      "Priorizar avaliação para transplante renal assim que viável — intervenção mais eficaz para deter a progressão da doença ao restaurar a depuração de beta-2-microglobulina, embora complicações osteoarticulares já estabelecidas frequentemente não regridam mesmo após enxerto funcionante",
+      "Quando disponível, considerar técnica dialítica de maior depuração de beta-2-microglobulina (membranas de alto fluxo, água ultrapura) para retardar o início das manifestações, sabendo que isso adia mas não abole o risco associado ao tempo cumulativo de diálise"
+    ],
+    "emergency_flow": [
+      "Estabilizar o quadro agudo (dispneia, arritmia, hipotensão) antes de investigar a etiologia do amiloide; obter ECG, ecocardiograma à beira-leito e revisar história de tempo em diálise e manifestações osteoarticulares prévias",
+      "Hipotensão intradialítica progressiva ou refratária em paciente com longo tempo de diálise: considerar infiltração amiloide cardíaca como diagnóstico diferencial, junto de causas mais comuns (hipovolemia por ultrafiltração excessiva, arritmia, sepse, disfunção do acesso)",
+      "Arritmia (bloqueio de condução, fibrilação atrial) em paciente dialítico de longa data com fenótipo infiltrativo: tratar a arritmia pelos critérios convencionais; a suspeita de amiloide não muda o manejo agudo, mas motiva investigação ambulatorial dirigida após estabilização",
+      "Insuficiência cardíaca congestiva descompensada em paciente com depósito amiloide já confirmado ou fortemente suspeito: diurese/ultrafiltração cautelosa, com reavaliação frequente de perfusão e pressão arterial — fisiologia restritiva tolera mal tanto sobrecarga quanto remoção volêmica excessiva",
+      "Diante de suspeita de amiloidose cardíaca não tipada em paciente instável: não postergar a estabilização clínica em função da tipagem, mas sinalizar a necessidade de diferenciar beta-2-microglobulina de ATTR e de AL assim que o paciente estiver estável, pela urgência do encaminhamento hematológico caso AL seja possibilidade"
+    ],
+    "tags": [
+      "amiloidose",
+      "beta-2-microglobulina",
+      "diálise",
+      "hemodiálise",
+      "amiloidose relacionada à diálise",
+      "cardiomiopatia infiltrativa",
+      "síndrome do túnel do carpo",
+      "espondiloartropatia destrutiva",
+      "transplante renal",
+      "ATTR",
+      "amiloidose AL",
+      "doença renal crônica"
+    ],
+    "source_refs": [
+      "Gejyo F, Yamada T, Odani S, et al. A new form of amyloid protein associated with chronic hemodialysis was identified as beta 2-microglobulin. Biochem Biophys Res Commun. 1985;129(3):701-706. PMID 3893430.",
+      "Shirahama T, Skinner M, Cohen AS, et al. Histochemical and immunohistochemical characterization of amyloid associated with chronic hemodialysis as beta 2-microglobulin. Lab Invest. 1985;53(6):705-709. PMID 2415776.",
+      "Kuntz D, Naveau B, Bardin T, et al. Destructive spondylarthropathy in hemodialyzed patients. A new syndrome. Arthritis Rheum. 1984;27(4):369-375. PMID 6712753.",
+      "Hurst NP, Van den Berg R, Disney A, et al. 'Dialysis related arthropathy': a survey of 95 patients receiving chronic haemodialysis with special reference to beta 2 microglobulin related amyloidosis. Ann Rheum Dis. 1989;48(5):409-420. PMID 2658876.",
+      "Maruyama H, et al. Clinical studies of destructive spondyloarthropathy in long-term hemodialysis patients. Nephron. 1992;61(1):37-44. PMID 1528338.",
+      "Gal R, Korzets A, Schwartz A, Rath-Wolfson L, Gafter U. Systemic distribution of beta 2-microglobulin-derived amyloidosis in patients who undergo long-term hemodialysis. Arch Pathol Lab Med. 1994;118(7):718-721. PMID 8024407.",
+      "Jadoul M, Garbar C, Noël H, et al. Histological prevalence of beta 2-microglobulin amyloidosis in hemodialysis: a prospective post-mortem study. Kidney Int. 1997;51(6):1928-1932. PMID 9186884.",
+      "Schwalbe S, Holzhauer M, Schaeffer J, et al. Beta 2-microglobulin associated amyloidosis: a vanishing complication of long-term hemodialysis? Kidney Int. 1997;52(4):1077-1083. PMID 9328948.",
+      "Kawano M, et al. Fatal cardiac beta2-microglobulin amyloidosis in patients on long-term hemodialysis. Am J Kidney Dis. 1998;31(3):E4. PMID 10074578.",
+      "Takayama F, Miyazaki S, Morita T, Hirasawa Y, Niwa T. Dialysis-related amyloidosis of the heart in long-term hemodialysis patients. Kidney Int Suppl. 2001;78:S172-S176. PMID 11169005.",
+      "Jadoul M, Garbar C, van Ypersele de Strihou C. Pathological aspects of beta(2)-microglobulin amyloidosis. Semin Dial. 2001;14(2):86-89. PMID 11264772.",
+      "Julian BA, Laskow DA, Dubovsky J, et al. Musculoskeletal complications after renal transplantation: pathogenesis and treatment. Am J Kidney Dis. 1992;19(2):99-120. PMID 1739106.",
+      "Kopeć J, et al. Carpal tunnel syndrome in hemodialysis patients as a dialysis-related amyloidosis manifestation. Med Sci Monit. 2011;17(9):CR505-509. PMID 21873947.",
+      "Schiffl H. Impact of advanced dialysis technology on the prevalence of dialysis-related amyloidosis in long-term maintenance dialysis patients. Hemodial Int. 2014;18(1):136-141. PMID 23718290.",
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI 10.1161/CIRCULATIONAHA.116.021612. PMID 27143678."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/3893430/",
+      "https://pubmed.ncbi.nlm.nih.gov/2415776/",
+      "https://pubmed.ncbi.nlm.nih.gov/6712753/",
+      "https://pubmed.ncbi.nlm.nih.gov/2658876/",
+      "https://pubmed.ncbi.nlm.nih.gov/1528338/",
+      "https://pubmed.ncbi.nlm.nih.gov/8024407/",
+      "https://pubmed.ncbi.nlm.nih.gov/9186884/",
+      "https://pubmed.ncbi.nlm.nih.gov/9328948/",
+      "https://pubmed.ncbi.nlm.nih.gov/10074578/",
+      "https://pubmed.ncbi.nlm.nih.gov/11169005/",
+      "https://pubmed.ncbi.nlm.nih.gov/11264772/",
+      "https://pubmed.ncbi.nlm.nih.gov/1739106/",
+      "https://pubmed.ncbi.nlm.nih.gov/21873947/",
+      "https://pubmed.ncbi.nlm.nih.gov/23718290/",
+      "https://doi.org/10.1161/CIRCULATIONAHA.116.021612"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "amiloidose-relacionada-a-dialise-beta2-microglobulina-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
   }
 ]

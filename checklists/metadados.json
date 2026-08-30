@@ -36168,5 +36168,216 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-investigacao-e-manejo",
+    "condicao": "Cardiomiopatia dilatada com suspeita de deficiência de cobre",
+    "resumo": "Checklist de investigação e manejo para cardiomiopatia dilatada 'idiopática' com suspeita de deficiência de cobre — reconhecimento da tríade clínica, fatores de risco na história, exames dirigidos (cobre sérico, ceruloplasmina, zinco sérico, hemograma), reposição de cobre com correção da causa de base e reavaliação.",
+    "documento_origem": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-causas-adquiridas-doenca-de-menkes-e-reversibilidade",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kumar N. Copper deficiency myelopathy (human swayback). Mayo Clin Proc. 2006;81(10):1371-1384. PMID: 17036563",
+      "Kumar N, Gross JB Jr, Ahlskog JE. Copper deficiency myelopathy produces a clinical picture like subacute combined degeneration. Neurology. 2004;63(1):33-39. PMID: 15249607",
+      "Kumar N. Neurologic complications of bariatric surgery. Continuum (Minneap Minn). 2014;20(3 Neurology of Systemic Disease):580-597. PMID: 24893235",
+      "Halfdanarson TR, Kumar N, Li CY, Phyliky RL, Hogan WJ. Hematological manifestations of copper deficiency: a retrospective review. Eur J Haematol. 2008;80(6):523-531. PMID: 18284630",
+      "Nations SP, Boyer PJ, Love LA, et al. Denture cream: an unusual source of excess zinc, leading to hypocupremia and neurologic disease. Neurology. 2008;71(9):639-643. PMID: 18525032",
+      "Hedera P, Peltier A, Fink JK, Wilcock S, London Z, Brewer GJ. Myelopolyneuropathy and pancytopenia due to copper deficiency and high zinc levels of unknown origin II. The denture cream is a primary source of excessive zinc. Neurotoxicology. 2009;30(6):996-999. PMID: 19732792",
+      "Doherty K, Connor M, Cruickshank R. Zinc-containing denture adhesive: a potential source of excess zinc resulting in copper deficiency myelopathy. Br Dent J. 2011;210(11):523-525. PMID: 21660014",
+      "Jin J, Mulesa L, Carrilero Rouillet M. Trace Elements in Parenteral Nutrition: Considerations for the Prescribing Clinician. Nutrients. 2017;9(5):440. PMID: 28452962",
+      "Qureshi A, Bergbower E, Patel J. Copper deficiency myeloneuropathy with a history of malabsorption: a tale of two cases. J Community Hosp Intern Med Perspect. 2021;11(1):152-155. PMID: 33552441",
+      "De Feyter S, Beyens A, Callewaert B. ATP7A-related copper transport disorders: A systematic review and definition of the clinical subtypes. J Inherit Metab Dis. 2023;46(2):163-173. PMID: 36692329",
+      "Buchman AL, Keen CL, Vinters HV, et al. Copper deficiency secondary to a copper transport defect: a new copper metabolic disturbance. Metabolism. 1994;43(12):1462-1469. PMID: 7990697",
+      "Elsherif L, Wang L, Saari JT, Kang YJ. Regression of dietary copper restriction-induced cardiomyopathy by copper repletion in mice. J Nutr. 2004;134(4):855-860. PMID: 15051837",
+      "Patel AJ, et al. Copper Replacement: A Life-Saving Treatment. Cureus. 2026;18(2):e103621. PMID: 41700144"
+    ],
+    "itens": [
+      {
+        "id": "cmd-cobre-suspeita-triade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita ativa de deficiência de cobre levantada em toda cardiomiopatia dilatada 'idiopática' associada a citopenia inexplicada (sobretudo neutropenia) e/ou mielopatia com marcha espástica e ataxia sensorial",
+        "origem_secao": "Apresentação clínica: a tríade que deve levantar a suspeita"
+      },
+      {
+        "id": "cmd-cobre-fator-risco-historia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Anamnese dirigida realizada para fatores de risco de deficiência de cobre: cirurgia bariátrica prévia (bypass em Y-de-Roux), nutrição parenteral prolongada, uso de creme/adesivo fixador de prótese dentária, uso de suplemento de zinco, síndrome de má absorção conhecida",
+        "origem_secao": "Causas adquiridas de deficiência de cobre"
+      },
+      {
+        "id": "cmd-cobre-hemograma-normal-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que hemograma normal não exclui deficiência de cobre neurologicamente manifesta, e considerada deficiência concomitante de vitamina B12 quando há mielopatia",
+        "origem_secao": "Apresentação clínica: a tríade que deve levantar a suspeita"
+      },
+      {
+        "id": "cmd-cobre-serico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Cobre sérico solicitado como exame de triagem inicial",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "cmd-ceruloplasmina",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ceruloplasmina dosada em conjunto com o cobre sérico, com atenção a seu papel de proteína de fase aguda em contexto inflamatório",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "cmd-zinco-serico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Zinco sérico dosado ativamente sempre que a causa da deficiência de cobre não é imediatamente óbvia, mesmo sem relato espontâneo de uso de suplemento ou creme fixador de prótese",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "cmd-hemograma-completo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Hemograma completo solicitado para reforçar a suspeita diagnóstica (anemia, neutropenia) e servir de marcador precoce de resposta terapêutica",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "cmd-avaliacao-genetica-atp7a",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Em casos sem causa adquirida identificável, sobretudo em paciente jovem com estigmas vasculares/tecido conjuntivo associados, considerada avaliação genética direcionada ao espectro de distúrbios de ATP7A (doença de Menkes e formas atípicas)",
+        "origem_secao": "A forma genética rara: doença de Menkes / Diagnóstico"
+      },
+      {
+        "id": "cmd-reposicao-cobre",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Reposição de cobre iniciada — via oral nos casos leves a moderados com trato digestivo funcionante, ou via intravenosa nos casos graves, em má absorção extensa, ou quando a via oral não é viável",
+        "origem_secao": "Tratamento e reversibilidade"
+      },
+      {
+        "id": "cmd-correcao-causa-base",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Causa de base corrigida ou controlada em paralelo à reposição de cobre (interrupção do excesso de zinco, ajuste da formulação de nutrição parenteral, manejo nutricional pós-bariátrica)",
+        "origem_secao": "Tratamento e reversibilidade"
+      },
+      {
+        "id": "cmd-comunicacao-prognostico-cauteloso",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Prognóstico comunicado com cautela: reversibilidade cardíaca em humanos sustentada por plausibilidade mecanística e relatos de caso, sem série validada de variação de FEVE pré/pós — normalização garantida e quantificada não prometida ao paciente",
+        "origem_secao": "Tratamento e reversibilidade"
+      },
+      {
+        "id": "cmd-reavaliacao-hematologica-precoce",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Resposta hematológica reavaliada precocemente após a reposição (resposta pronta e completa esperada), usada como marcador antecipado de eficácia antes da resposta cardíaca, mais lenta",
+        "origem_secao": "Apresentação clínica / Tratamento e reversibilidade"
+      },
+      {
+        "id": "cmd-reavaliacao-ecocardiograma-seriado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma seriado programado após correção da deficiência para documentar a resposta funcional ventricular caso a caso",
+        "origem_secao": "Tratamento e reversibilidade"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "rastreio-de-amiloidose-relacionada-a-dialise-beta2-microglobulina-com-acometimento-cardiovascular",
+    "condicao": "Rastreio de amiloidose relacionada à diálise (beta-2-microglobulina) com acometimento cardiovascular",
+    "resumo": "Checklist para reconhecer a síndrome do túnel do carpo bilateral, a espondiloartropatia destrutiva e os cistos ósseos periarticulares como sinais sentinela de amiloidose relacionada à diálise por beta-2-microglobulina; suspeitar de acometimento cardíaco em paciente com mais de 10 anos de hemodiálise e cardiomiopatia infiltrativa/disfunção diastólica inexplicada; exigir tipagem obrigatória do amiloide para diferenciar de ATTR e AL antes de definir conduta; e reconhecer que o comprometimento osteoarticular frequentemente não regride após transplante renal, mesmo com enxerto funcionante.",
+    "documento_origem": "amiloidose-relacionada-a-dialise-beta2-microglobulina-e-acometimento-cardiovascular",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Gejyo F, Yamada T, Odani S, et al. A new form of amyloid protein associated with chronic hemodialysis was identified as beta 2-microglobulin. Biochem Biophys Res Commun. 1985;129(3):701-706. PMID 3893430.",
+      "Kuntz D, Naveau B, Bardin T, et al. Destructive spondylarthropathy in hemodialyzed patients. A new syndrome. Arthritis Rheum. 1984;27(4):369-375. PMID 6712753.",
+      "Hurst NP, Van den Berg R, Disney A, et al. 'Dialysis related arthropathy': a survey of 95 patients receiving chronic haemodialysis with special reference to beta 2 microglobulin related amyloidosis. Ann Rheum Dis. 1989;48(5):409-420. PMID 2658876.",
+      "Jadoul M, Garbar C, Noël H, et al. Histological prevalence of beta 2-microglobulin amyloidosis in hemodialysis: a prospective post-mortem study. Kidney Int. 1997;51(6):1928-1932. PMID 9186884.",
+      "Gal R, Korzets A, Schwartz A, Rath-Wolfson L, Gafter U. Systemic distribution of beta 2-microglobulin-derived amyloidosis in patients who undergo long-term hemodialysis. Arch Pathol Lab Med. 1994;118(7):718-721. PMID 8024407.",
+      "Takayama F, Miyazaki S, Morita T, Hirasawa Y, Niwa T. Dialysis-related amyloidosis of the heart in long-term hemodialysis patients. Kidney Int Suppl. 2001;78:S172-S176. PMID 11169005.",
+      "Kawano M, et al. Fatal cardiac beta2-microglobulin amyloidosis in patients on long-term hemodialysis. Am J Kidney Dis. 1998;31(3):E4. PMID 10074578.",
+      "Kopeć J, et al. Carpal tunnel syndrome in hemodialysis patients as a dialysis-related amyloidosis manifestation — incidence, risk factors and results of surgical treatment. Med Sci Monit. 2011;17(9):CR505-509. PMID 21873947.",
+      "Julian BA, Laskow DA, Dubovsky J, et al. Musculoskeletal complications after renal transplantation: pathogenesis and treatment. Am J Kidney Dis. 1992;19(2):99-120. PMID 1739106.",
+      "Schiffl H. Impact of advanced dialysis technology on the prevalence of dialysis-related amyloidosis in long-term maintenance dialysis patients. Hemodial Int. 2014;18(1):136-141. PMID 23718290.",
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI 10.1161/CIRCULATIONAHA.116.021612. PMID 27143678."
+    ],
+    "itens": [
+      {
+        "id": "dra-tempo-dialise",
+        "categoria": "anamnese",
+        "obrigatorio": true,
+        "texto": "Tempo cumulativo de diálise investigado e registrado explicitamente, com atenção redobrada a partir de aproximadamente 10 anos de tratamento",
+        "origem_secao": "Relação com o tempo de diálise"
+      },
+      {
+        "id": "dra-pista-tunel-carpo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Síndrome do túnel do carpo bilateral pesquisada ativamente; em paciente de diálise prolongada, não atribuída por padrão a diabetes, hipotireoidismo ou uso ocupacional sem considerar amiloidose relacionada à diálise",
+        "origem_secao": "A pista musculoesquelética: por que costuma vir primeiro"
+      },
+      {
+        "id": "dra-espondiloartropatia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Quadro de espondiloartropatia destrutiva (estreitamento de espaço intervertebral com erosões e geodos de plataformas, sem osteofitose, predomínio cervical) diferenciado ativamente de espondilodiscite infecciosa e de doença por depósito de pirofosfato de cálcio",
+        "origem_secao": "A pista musculoesquelética: por que costuma vir primeiro"
+      },
+      {
+        "id": "dra-cistos-osseos",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Cistos ósseos (geodos subcondrais) periarticulares — carpo, cabeça do úmero, colo do fêmur, platô tibial — reconhecidos como possível manifestação de amiloidose relacionada à diálise, com atenção ao risco de fratura patológica",
+        "origem_secao": "A pista musculoesquelética: por que costuma vir primeiro"
+      },
+      {
+        "id": "dra-suspeita-cardiaca",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com mais de 10 anos de diálise e cardiomiopatia infiltrativa/restritiva ou disfunção diastólica inexplicada, amiloidose relacionada à diálise incluída ativamente no diagnóstico diferencial, especialmente diante de manifestações osteoarticulares prévias sugestivas",
+        "origem_secao": "Acometimento cardiovascular"
+      },
+      {
+        "id": "dra-tipagem-obrigatoria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Tipagem definitiva do amiloide realizada antes de definir conduta terapêutica, diferenciando beta-2-microglobulina de transtirretina (ATTR) e de cadeia leve (AL) por imuno-histoquímica dirigida e, quando disponível, espectrometria de massa em amostra microdissecada a laser",
+        "origem_secao": "Diagnóstico diferencial: por que a tipagem é obrigatória"
+      },
+      {
+        "id": "dra-nao-presumir-por-contexto",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Tipagem histológica não dispensada mesmo diante de contexto clínico fortemente sugestivo de DRA, considerando a possibilidade de ATTRwt relacionada à idade concomitante no mesmo paciente dialítico",
+        "origem_secao": "Diagnóstico diferencial: por que a tipagem é obrigatória"
+      },
+      {
+        "id": "dra-cintilografia-limitacao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Reconhecido que a cintilografia com traçadores ósseos não discrimina de forma confiável beta-2-microglobulina de transtirretina, não substituindo a tipagem histológica/bioquímica do amiloide",
+        "origem_secao": "Diagnóstico diferencial: por que a tipagem é obrigatória"
+      },
+      {
+        "id": "dra-transplante-expectativa",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado de que o transplante renal interrompe o principal mecanismo de acúmulo de beta-2-microglobulina, mas que as complicações ósseas e articulares já estabelecidas com frequência não regridem, ou regridem apenas parcialmente, mesmo com enxerto funcionante",
+        "origem_secao": "Impacto do transplante renal e das membranas de alto fluxo"
+      },
+      {
+        "id": "dra-prevencao-tecnica-dialitica",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Uso de membranas de alto fluxo/água ultrapura e encaminhamento precoce para transplante renal considerados como estratégia preventiva, reconhecendo que a tecnologia dialítica moderna adia, mas não abole, o risco de amiloidose relacionada à diálise associado ao tempo cumulativo de tratamento",
+        "origem_secao": "Impacto do transplante renal e das membranas de alto fluxo"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
