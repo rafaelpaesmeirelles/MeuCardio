@@ -536,3 +536,22 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
 | **Total** | **4.900** | **80** | **4.820** |
+
+## Lote 29 — concluído (commit 9c7334d6)
+
+- **doencas**: +1 — `tumores-cardiacos-malignos-primarios` (pareado com lote 28).
+- **material-paciente**: +1 — `achado-de-massa-no-coracao-entendendo-a-investigacao` (tom cuidadoso, momento de incerteza diagnóstica, sem presumir prognóstico).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.269 (10.189 revisado + 80 pendente_revisao).
+
+### Status consolidado (após Lote 29)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 11 | 2.389 |
+| Casos clínicos | 900 | 30 | 870 |
+| Checklists | 600 | 12 | 588 |
+| Materiais-paciente | 500 | 22 | 478 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 5 (3 descartados por colisão) | 195 |
+| **Total** | **4.900** | **82** | **4.818** |
