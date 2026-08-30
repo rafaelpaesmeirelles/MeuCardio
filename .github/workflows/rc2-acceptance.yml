@@ -229,7 +229,16 @@ jobs:
             await page.locator('button[type="submit"]').click();
             await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
             await page.waitForTimeout(500);
+            await selectCompleteMode(page);
             return { context, page };
+          }
+
+          async function selectCompleteMode(page) {
+            const choice = page.locator('.spaces-choice');
+            if (await choice.isVisible().catch(() => false)) {
+              await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
+            }
+            await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
           }
 
           async function requestJson(page, url, options = {}) {
@@ -282,7 +291,7 @@ jobs:
                     scrollWidth: document.documentElement.scrollWidth,
                     stuck: /carregando a tela/i.test(text),
                     serverError: /internal server error|application error|erro 500/i.test(text),
-                    shell: !!document.querySelector('.clinical-os'),
+                    shell: !!document.querySelector('.clinical-os, .spaces-home'),
                   };
                 });
                 report.routes.push({ route, ...state });
@@ -331,17 +340,23 @@ jobs:
             await page.screenshot({ path: path.join(out, 'desktop-science-timeline.png'), fullPage: false });
 
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
-            await page.locator('.ccc-assistant-input').click();
-            await page.locator('.cos-assistant-panel.is-open').waitFor({ state: 'visible', timeout: 10000 });
-            await page.screenshot({ path: path.join(out, 'desktop-personal-assistant.png'), fullPage: false });
+            await selectCompleteMode(page);
+            await page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
+            const desktopAssistant = page.locator('.spaces-catalog a[href="/assistente"]').first();
+            await desktopAssistant.waitFor({ state: 'visible', timeout: 10000 });
+            await desktopAssistant.click();
+            await page.waitForURL((url) => url.pathname === '/assistente');
+            await page.getByRole('heading', { name: /Assistente/ }).first().waitFor({ state: 'visible', timeout: 10000 });
+            await page.screenshot({ path: path.join(out, 'desktop-assistant-route.png'), fullPage: false });
             await desktop.context.close();
 
             const mobile = await login({ width: 390, height: 844 });
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            await selectCompleteMode(mobile.page);
             await mobile.page.screenshot({ path: path.join(out, 'mobile-home.png'), fullPage: false });
-            const labels = await mobile.page.locator('.cc-mobile-nav > * span').allTextContents();
-            const expected = ['Início', 'Buscar', 'Prontuário', 'Agenda', 'Mais'];
-            if (JSON.stringify(labels.slice(0, 5)) !== JSON.stringify(expected)) fail(`mobile/nav divergente: ${JSON.stringify(labels.slice(0, 5))}`);
+            const labels = await mobile.page.locator('.spaces-dock > * span').allTextContents();
+            const expected = ['Prescrever', 'Solicitar exames', 'Prontuário', 'Documentos', 'Tudo com Tudo', 'Todas as funções'];
+            if (JSON.stringify(labels) !== JSON.stringify(expected)) fail(`mobile/dock divergente: ${JSON.stringify(labels)}`);
 
             if (selected?.slug) {
               await mobile.page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
@@ -353,11 +368,14 @@ jobs:
             }
 
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
-            await mobile.page.locator('.cc-mobile-nav button').last().click();
-            await mobile.page.locator('.cc-mobile-more__assistant').waitFor({ state: 'visible', timeout: 10000 });
-            await mobile.page.locator('.cc-mobile-more__assistant').click();
-            await mobile.page.locator('.cos-assistant-panel.is-open').waitFor({ state: 'visible', timeout: 10000 });
-            await mobile.page.screenshot({ path: path.join(out, 'mobile-personal-assistant.png'), fullPage: false });
+            await selectCompleteMode(mobile.page);
+            await mobile.page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
+            const mobileAssistant = mobile.page.locator('.spaces-catalog a[href="/assistente"]').first();
+            await mobileAssistant.waitFor({ state: 'visible', timeout: 10000 });
+            await mobileAssistant.click();
+            await mobile.page.waitForURL((url) => url.pathname === '/assistente');
+            await mobile.page.getByRole('heading', { name: /Assistente/ }).first().waitFor({ state: 'visible', timeout: 10000 });
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-assistant-route.png'), fullPage: false });
             await mobile.context.close();
           } catch (e) {
             fail(`acceptance runner: ${e?.stack || e}`);
