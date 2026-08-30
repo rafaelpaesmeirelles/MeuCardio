@@ -37131,5 +37131,203 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "diante-de-lactente-com-hipertrofia-ventricular-importante-red-flags-para-doenca-de-pompe",
+    "condicao": "Lactente com hipertrofia ventricular importante: diferenciação entre doença de Pompe e cardiomiopatia hipertrófica sarcomérica",
+    "resumo": "Checklist de reconhecimento para o lactente com hipertrofia ventricular grave e rapidamente progressiva, orientado a identificar os red flags que apontam para doença de Pompe (hipotonia, macroglossia, hepatomegalia, ECG com PR curto e QRS de alta voltagem, CK elevada), disparar a triagem enzimática de alfa-glicosidase ácida em paralelo — não em sequência — ao painel genético sarcomérico, e não perder a janela terapêutica em que a terapia de reposição enzimática precoce muda radicalmente o desfecho.",
+    "documento_origem": "doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kishnani PS, Hwu WL, Mandel H, Nicolino M, Yong F, Corzo D; Infantile-Onset Pompe Disease Natural History Study Group. A retrospective, multinational, multicenter study on the natural history of infantile-onset Pompe disease. J Pediatr. 2006;148(5):671-676. PMID 16737883",
+      "Kishnani PS, Corzo D, Nicolino M, Byrne B, Mandel H, Hwu WL, et al. Recombinant human acid alpha-glucosidase: major clinical benefits in infantile-onset Pompe disease. Neurology. 2007;68(2):99-109. PMID 17151339",
+      "Ditters IAM, Huidekoper HH, Kruijshaar ME, Rizopoulos D, Hahn A, Mongini TE, et al; European Pompe Consortium. Effect of alglucosidase alfa dosage on survival and walking ability in patients with classic infantile Pompe disease: a multicentre observational cohort study from the European Pompe Consortium. Lancet Child Adolesc Health. 2022;6(1):28-37. PMID 34822769",
+      "Arad M, Maron BJ, Gorham JM, Johnson WH Jr, Saul JP, Perez-Atayde AR, et al. Glycogen storage diseases presenting as hypertrophic cardiomyopathy. N Engl J Med. 2005;352(4):362-372. PMID 15673802",
+      "Arbelo E, Protonotarios A, Gimeno JR, Arbustini E, Barriales-Villa R, Basso C, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657"
+    ],
+    "itens": [
+      {
+        "id": "pompe-hipertrofia-fenocopia-reconhecida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Lactente com hipertrofia ventricular importante e de progressão rápida (semanas a poucos meses) reconhecido como possível fenocópia metabólica, e não rotulado apenas como CMH sarcomérica",
+        "origem_secao": "Por que a doença de Pompe é uma fenocópia da cardiomiopatia hipertrófica sarcomérica"
+      },
+      {
+        "id": "pompe-hipotonia-proeminente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hipotonia proeminente ('floppy infant') pesquisada e reconhecida como desproporcional ao que se espera de uma CMH sarcomérica isolada, na qual o tônus costuma estar preservado nas fases iniciais",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-macroglossia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de macroglossia investigada ao exame físico, como achado clássico e relativamente específico de doença de depósito lisossomal",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-hepatomegalia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hepatomegalia pesquisada à palpação abdominal, como sinal de doença sistêmica de depósito de glicogênio e não de cardiomiopatia genética isolada do sarcômero",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-ecg-pr-curto-qrs-alta-voltagem",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG realizado e avaliado quanto a PR curto associado a QRS de alta voltagem, sem atribuir automaticamente o padrão a pré-excitação tipo WPW por via acessória",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-ck-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "CK (e AST/ALT/LDH) dosadas, com elevação reconhecida como indício de acometimento sistêmico de músculo esquelético — não esperado na CMH sarcomérica pura",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-triagem-enzimatica-em-paralelo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Diante da combinação de red flags, dosagem da atividade de alfa-glicosidase ácida (papel filtro/gota de sangue seco) solicitada em paralelo ao painel genético sarcomérico — não após seu resultado",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-confirmacao-molecular-gaa",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Confirmação por análise molecular do gene GAA solicitada diante de triagem enzimática de alfa-glicosidase ácida alterada",
+        "origem_secao": "Red flags: diferenciando Pompe infantil de CMH sarcomérica no lactente"
+      },
+      {
+        "id": "pompe-encaminhamento-precoce",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Encaminhamento a centro com experiência em doença de Pompe realizado assim que a suspeita clínica surge, sem aguardar confirmação laboratorial completa",
+        "origem_secao": "Terapia de reposição enzimática: o tratamento que muda a história natural"
+      },
+      {
+        "id": "pompe-tre-inicio-precoce",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Terapia de reposição enzimática com alglucosidase alfa considerada/iniciada o mais precocemente possível diante de diagnóstico confirmado, reconhecendo que atraso reduz sobrevida e potencial de reversão do fenótipo cardíaco",
+        "origem_secao": "Terapia de reposição enzimática: o tratamento que muda a história natural"
+      },
+      {
+        "id": "pompe-status-crim",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Status CRIM (cross-reactive immunologic material) avaliado antes ou concomitante ao início da TRE, com indução de tolerância imunológica considerada em pacientes CRIM-negativos",
+        "origem_secao": "Terapia de reposição enzimática: o tratamento que muda a história natural"
+      },
+      {
+        "id": "pompe-seguimento-cardiologico",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Ecocardiogramas seriados (mais frequentes nos primeiros meses de TRE) e ECG basal/seriado programados para documentar resposta da hipertrofia e detectar distúrbios de condução ou arritmia nova",
+        "origem_secao": "Seguimento cardiológico"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "sindrome-de-bartter-ou-gitelman-diferenciacao-monitorizacao-e-reposicao",
+    "condicao": "Síndrome de Bartter ou de Gitelman confirmada — diferenciação, monitorização eletrocardiográfica e reposição eletrolítica",
+    "resumo": "Checklist de seguimento para paciente com tubulopatia perdedora de sal já confirmada, cobrindo a diferenciação por cálcio urinário/magnésio, a monitorização de ECG/QT como rotina, a reposição conjunta de potássio e magnésio, os fatores agravantes do risco arrítmico e o uso racional de poupadores de potássio e AINEs conforme o subtipo.",
+    "documento_origem": "sindrome-de-bartter-e-de-gitelman-tubulopatias-hereditarias-hipocalemia-e-risco-arritmico",
+    "theme": "Arritmias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Konrad M, Nijenhuis T, Ariceta G, et al. Diagnosis and management of Bartter syndrome: executive summary of the consensus and recommendations from the European Rare Kidney Disease Reference Network Working Group for Tubular Disorders. Kidney Int. 2021;99(2):324-335. DOI: 10.1016/j.kint.2020.10.035. PMID: 33509356",
+      "Blanchard A, Bockenhauer D, Bolignano D, et al. Gitelman syndrome: consensus and guidance from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference. Kidney Int. 2017;91(1):24-33. DOI: 10.1016/j.kint.2016.09.046. PMID: 28003083",
+      "Seyberth HW, Schlingmann KP. Bartter- and Gitelman-like syndromes: salt-losing tubulopathies with loop or DCT defects. Pediatr Nephrol. 2011;26(10):1789-1802. DOI: 10.1007/s00467-011-1871-4. PMID: 21503667",
+      "Cortesi C, Lava SA, Bettinelli A, et al. Cardiac arrhythmias and rhabdomyolysis in Bartter-Gitelman patients. Pediatr Nephrol. 2010;25(10):2005-2008. DOI: 10.1007/s00467-010-1580-4. PMID: 20549246",
+      "Foglia PE, Bettinelli A, Tosetto C, et al. Cardiac work up in primary renal hypokalaemia-hypomagnesaemia (Gitelman syndrome). Nephrol Dial Transplant. 2004;19(6):1398-1402. DOI: 10.1093/ndt/gfh204. PMID: 15034158",
+      "Cunha TDS, Heilberg IP. Bartter syndrome: causes, diagnosis, and treatment. Int J Nephrol Renovasc Dis. 2018;11:291-301. DOI: 10.2147/IJNRD.S155397. PMID: 30519073"
+    ],
+    "itens": [
+      {
+        "id": "bg-diferenciacao-ca-mg",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cálcio urinário e magnésio sérico avaliados para diferenciar o padrão compatível com Bartter (cálcio urinário normal/alto, hipomagnesemia menos constante) do padrão compatível com Gitelman (hipocalciúria, hipomagnesemia mais constante e pronunciada)",
+        "origem_secao": "Diferenças de apresentação clínica"
+      },
+      {
+        "id": "bg-mg-antes-de-escalonar-k",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Magnésio sérico dosado sempre que a hipocalemia se mostrar refratária à reposição, antes de escalonar a dose de potássio",
+        "origem_secao": "A armadilha: repor potássio sem corrigir o magnésio"
+      },
+      {
+        "id": "bg-reposicao-k-mg-conjunta",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Reposição de potássio e magnésio prescrita em conjunto, nunca potássio isolado quando há hipomagnesemia associada",
+        "origem_secao": "Abordagem terapêutica — Reposição de potássio e magnésio, sempre em conjunto"
+      },
+      {
+        "id": "bg-ecg-qt-rotina",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Monitorização eletrocardiográfica e do intervalo QT incorporada à rotina de seguimento crônico, e não reservada apenas às intercorrências agudas",
+        "origem_secao": "Monitorização eletrocardiográfica e do intervalo QT como parte da rotina de seguimento"
+      },
+      {
+        "id": "bg-ecg-reforco-subgrupo-risco",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Frequência da avaliação cardiológica com ECG reforçada em pacientes com hipomagnesemia mais acentuada, potássio persistentemente baixo, ou necessidade de fármaco com potencial pró-QT",
+        "origem_secao": "Monitorização eletrocardiográfica e do intervalo QT como parte da rotina de seguimento"
+      },
+      {
+        "id": "bg-orientacao-gatilhos",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Paciente e família orientados a comunicar prontamente vômitos, diarreia ou exercício físico intenso planejado, gatilhos reconhecidos de descompensação aguda",
+        "origem_secao": "O risco arrítmico: o motivo deste documento existir"
+      },
+      {
+        "id": "bg-revisao-farmacos-pro-qt",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrições revisadas quanto a fármacos que prolongam o QT (antiarrítmicos classe IA/III, macrolídeos, antifúngicos azólicos, antipsicóticos, entre outros) antes de associá-los ao esquema do paciente",
+        "origem_secao": "O risco arrítmico: o motivo deste documento existir"
+      },
+      {
+        "id": "bg-poupador-potassio",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Uso de diurético poupador de potássio (espironolactona, amilorida ou eplerenona) considerado como adjuvante para reduzir a caliurese secundária, com escolha individualizada pelo perfil de efeitos adversos e pela função renal",
+        "origem_secao": "Abordagem terapêutica — Diuréticos poupadores de potássio"
+      },
+      {
+        "id": "bg-aine-restrito-a-bartter",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Uso de AINE (indometacina) considerado apenas em casos selecionados de síndrome de Bartter, sobretudo formas clássicas graves de início precoce, com monitorização de função renal e trato gastrointestinal — não indicado rotineiramente na Gitelman",
+        "origem_secao": "Abordagem terapêutica — Anti-inflamatórios não esteroidais (AINEs), notadamente indometacina"
+      },
+      {
+        "id": "bg-meta-realista",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Meta terapêutica definida como manter o paciente assintomático e fora da faixa de maior risco arrítmico, em vez de normalizar o potássio sérico a todo custo",
+        "origem_secao": "Abordagem terapêutica"
+      },
+      {
+        "id": "bg-suspeita-hipocalemia-inexplicada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Tubulopatia perdedora de sal incluída no diagnóstico diferencial diante de hipocalemia crônica inexplicada — sem uso de diuréticos e sem vômitos/diarreia evidentes —, sobretudo em paciente jovem",
+        "origem_secao": "Síntese para a prática"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]

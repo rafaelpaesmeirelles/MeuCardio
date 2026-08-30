@@ -39231,5 +39231,208 @@
       "tempestade-tireotoxica-emergencia-cardiovascular-diagnostico-clinico-e-tratamento-sequenciado"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "doenca-de-pompe-cardiaca",
+    "name": "Doença de Pompe (acometimento cardíaco)",
+    "aliases": [
+      "Glicogenose tipo II",
+      "Deficiência de alfa-glicosidase ácida",
+      "Deficiência de maltase ácida",
+      "GSD tipo II",
+      "Doença de Pompe infantil"
+    ],
+    "area": "cardiopediatria",
+    "category": "cardiomiopatia",
+    "subtype": "glicogenose",
+    "prevalence_rank": 42,
+    "completeness": "completo",
+    "summary": "Erro inato do metabolismo (glicogenose tipo II) por deficiência de alfa-glicosidase ácida (gene GAA), com acúmulo lisossomal de glicogênio; a forma infantil causa cardiomiopatia hipertrófica maciça, obstrutiva e rapidamente fatal sem tratamento, enquanto a forma de início tardio tipicamente poupa o coração mas cursa com vasculopatia cerebral.",
+    "presentation": [
+      "Forma infantil clássica (início antes dos 6 meses): hipotonia grave ('floppy infant'), fraqueza muscular progressiva, dificuldade de ganho de peso e insuficiência respiratória, associadas a uma das apresentações mais dramáticas de cardiomiopatia hipertrófica em pediatria",
+      "Forma infantil: cardiomegalia maciça (frequentemente ocupando praticamente todo o hemitórax) e hipertrofia biventricular grave, concêntrica e de progressão rápida (semanas a poucos meses), com espessura de parede entre as mais extremas descritas em lactentes",
+      "Forma infantil: obstrução de via de saída do ventrículo esquerdo em proporção relevante dos casos, decorrente do septo hipertrofiado e, por vezes, de movimento anterior sistólico da valva mitral",
+      "Forma infantil: função sistólica inicialmente preservada ou hiperdinâmica, evoluindo para disfunção sistólica progressiva e insuficiência cardíaca congestiva franca; sem tratamento, evolução fulminante para óbito antes de 1 ano de vida na ampla maioria dos casos",
+      "Forma de início tardio (juvenil/adulto): quadro dominado por miopatia esquelética proximal de progressão lenta e por insuficiência respiratória por fraqueza diafragmática desproporcional à fraqueza de membros, muitas vezes precedendo qualquer limitação de marcha relevante",
+      "Forma de início tardio: acometimento cardíaco estrutural tipicamente ausente ou discreto — coração 'poupado' — mas com relatos de anormalidades de condução e arritmias supraventriculares/ventriculares em subgrupos de pacientes",
+      "Forma de início tardio: vasculopatia cerebral associada — dilatação/dolicoectasia de artérias intracranianas (sobretudo território vertebrobasilar) e aneurismas de artérias cerebrais, podendo se manifestar como hemorragia subaracnóidea ou AVC em adultos jovens com miopatia de cinturas"
+    ],
+    "differentials": [
+      "Cardiomiopatia hipertrófica sarcomérica clássica (mutações em MYH7, MYBPC3, TNNT2, entre outros)",
+      "Doença de Fabry (deficiência de alfa-galactosidase A)",
+      "Doença de Danon (deficiência de LAMP2)",
+      "Mutações em PRKAG2",
+      "Amiloidose cardíaca"
+    ],
+    "tests": [
+      "Dosagem da atividade da alfa-glicosidase ácida em papel filtro/gota de sangue seco — triagem rápida e amplamente disponível, indicada em paralelo (não em sequência) à investigação genética sarcomérica tradicional diante de red flags",
+      "Análise molecular do gene GAA para confirmação diagnóstica",
+      "Ecocardiograma seriado — na forma infantil, mais frequente, sobretudo nos primeiros meses de terapia de reposição enzimática, para documentar resposta ou progressão",
+      "Eletrocardiograma basal e seriado — na forma infantil, atenção ao padrão de PR curto com QRS de alta voltagem; na forma tardia, avaliação basal mesmo sem hipertrofia ao ecocardiograma, pela possibilidade de distúrbios de condução e arritmias",
+      "CK, AST/ALT e LDH — costumam estar elevadas, refletindo acometimento de músculo esquelético (achado não esperado na CMH sarcomérica pura)",
+      "Radiografia de tórax — cardiomegalia maciça na forma infantil",
+      "Avaliação de vasculopatia cerebral (angiotomografia/angiorressonância) na forma de início tardio diante de sintomas neurológicos focais ou cefaleia thunderclap"
+    ],
+    "red_flags": [
+      "Hipotonia proeminente ('floppy infant') desproporcional ao esperado em CMH sarcomérica isolada",
+      "Macroglossia — achado clássico e relativamente específico da doença de Pompe infantil, ausente na CMH sarcomérica",
+      "Hepatomegalia associada à hipertrofia ventricular, apontando para doença sistêmica de depósito",
+      "ECG com intervalo PR curto e QRS de alta voltagem — padrão característico da forma infantil, por vezes confundido com pré-excitação tipo WPW",
+      "Insuficiência respiratória e infecções respiratórias de repetição precoces, desproporcionais ao grau de insuficiência cardíaca isoladamente",
+      "Elevação de CK, AST/ALT e LDH em lactente com hipertrofia ventricular grave",
+      "Hipertrofia ventricular grave e rapidamente progressiva (semanas a poucos meses) em lactente — ritmo muito mais rápido que o das CMH sarcoméricas pediátricas típicas",
+      "Cefaleia thunderclap ou déficit neurológico focal em paciente com doença de Pompe de início tardio, sinalizando possível evento relacionado à vasculopatia cerebral associada"
+    ],
+    "ambulatory_flow": [
+      "Diante de hipertrofia ventricular grave em lactente com hipotonia, macroglossia, hepatomegalia e/ou PR curto com voltagem QRS elevada, solicitar dosagem da atividade da alfa-glicosidase ácida em paralelo à investigação genética sarcomérica",
+      "Confirmar diagnóstico com análise molecular do gene GAA e determinar status CRIM (cross-reactive immunologic material) antes do início da terapia de reposição enzimática",
+      "Encaminhamento precoce a centro com experiência na doença assim que houver suspeita clínica, sem aguardar confirmação laboratorial completa",
+      "Seguimento cardiológico com ecocardiogramas seriados (mais frequentes na forma infantil, sobretudo nos primeiros meses de TRE) para documentar resposta ou progressão",
+      "ECG basal e seriado em todas as formas, com atenção a distúrbios de condução e arritmia nova",
+      "Nas formas de início tardio, mesmo sem hipertrofia ventricular, manter vigilância eletrocardiográfica e atenção dirigida a sintomas neurológicos focais ou cefaleia thunderclap relacionados à vasculopatia cerebral associada"
+    ],
+    "emergency_flow": [
+      "Lactente com cardiomegalia maciça, hipertrofia biventricular grave e sinais de insuficiência cardíaca congestiva: avaliar obstrução de via de saída do ventrículo esquerdo e iniciar suporte hemodinâmico/respiratório conforme gravidade, em paralelo ao início urgente da investigação etiológica (não aguardar painel genético sarcomérico completo)",
+      "Assim que houver suspeita de doença de Pompe infantil, acionar centro de referência para viabilizar início precoce da terapia de reposição enzimática — a precocidade do início é determinante de sobrevida e de resposta cardíaca",
+      "Em paciente com doença de Pompe de início tardio e cefaleia thunderclap ou déficit neurológico focal, investigar prontamente hemorragia subaracnóidea/AVC relacionados à vasculopatia cerebral associada (dolicoectasia/aneurisma de artérias intracranianas)"
+    ],
+    "tags": [
+      "doença de Pompe",
+      "glicogenose tipo II",
+      "GAA",
+      "alfa-glicosidase ácida",
+      "cardiomiopatia hipertrófica",
+      "fenocópia de CMH",
+      "terapia de reposição enzimática",
+      "alglucosidase alfa",
+      "cardiopediatria",
+      "erro inato do metabolismo",
+      "doença de depósito lisossomal",
+      "vasculopatia cerebral"
+    ],
+    "source_refs": [
+      "Kishnani PS, Hwu WL, Mandel H, Nicolino M, Yong F, Corzo D; Infantile-Onset Pompe Disease Natural History Study Group. A retrospective, multinational, multicenter study on the natural history of infantile-onset Pompe disease. J Pediatr. 2006;148(5):671-676. PMID 16737883",
+      "Kishnani PS, Corzo D, Nicolino M, Byrne B, Mandel H, Hwu WL, et al. Recombinant human acid alpha-glucosidase: major clinical benefits in infantile-onset Pompe disease. Neurology. 2007;68(2):99-109. PMID 17151339",
+      "Ditters IAM, Huidekoper HH, Kruijshaar ME, Rizopoulos D, Hahn A, Mongini TE, et al; European Pompe Consortium. Effect of alglucosidase alfa dosage on survival and walking ability in patients with classic infantile Pompe disease: a multicentre observational cohort study from the European Pompe Consortium. Lancet Child Adolesc Health. 2022;6(1):28-37. PMID 34822769",
+      "Arad M, Maron BJ, Gorham JM, Johnson WH Jr, Saul JP, Perez-Atayde AR, et al. Glycogen storage diseases presenting as hypertrophic cardiomyopathy. N Engl J Med. 2005;352(4):362-372. PMID 15673802",
+      "Montagnese F, Granata F, Musumeci O, Rodolico C, Mondello S, Barca E, et al. Intracranial arterial abnormalities in patients with late onset Pompe disease (LOPD). J Inherit Metab Dis. 2016;39(3):391-398. PMID 26830551",
+      "Laforêt P, Petiot P, Nicolino M, Orlikowski D, Caillaud C, Pellegrini N, et al. Dilative arteriopathy and basilar artery dolichoectasia complicating late-onset Pompe disease. Neurology. 2008;70(22):2063-2066. PMID 18505979",
+      "Arbelo E, Protonotarios A, Gimeno JR, Arbustini E, Barriales-Villa R, Basso C, et al; ESC Scientific Document Group. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16737883/",
+      "https://pubmed.ncbi.nlm.nih.gov/17151339/",
+      "https://pubmed.ncbi.nlm.nih.gov/34822769/",
+      "https://pubmed.ncbi.nlm.nih.gov/15673802/",
+      "https://pubmed.ncbi.nlm.nih.gov/26830551/",
+      "https://pubmed.ncbi.nlm.nih.gov/18505979/",
+      "https://pubmed.ncbi.nlm.nih.gov/37622657/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-bartter-e-gitelman",
+    "name": "Síndrome de Bartter e de Gitelman",
+    "aliases": [
+      "tubulopatia de Bartter",
+      "tubulopatia de Gitelman",
+      "hipocalemia hereditária por tubulopatia renal",
+      "canalopatia renal com perda de sal"
+    ],
+    "area": "geral",
+    "category": "arritmia",
+    "subtype": "canalopatia_secundaria",
+    "prevalence_rank": 27,
+    "completeness": "completo",
+    "summary": "Tubulopatias hereditárias raras que reproduzem de forma crônica o efeito de um diurético de alça (Bartter) ou tiazídico (Gitelman), causando hipocalemia e alcalose metabólica sustentadas. O risco cardiológico central é o prolongamento adquirido do intervalo QT por hipocalemia crônica, potencializado por hipomagnesemia associada, com relatos de torsades de pointes.",
+    "presentation": [
+      "Bartter: início antenatal ou neonatal, poliidrâmnio por poliúria fetal, prematuridade, poliúria acentuada, desidratação recorrente e déficit de crescimento na infância",
+      "Bartter: cálcio urinário normal ou aumentado, hipomagnesemia ausente ou menos constante",
+      "Gitelman: início tipicamente tardio, na adolescência ou vida adulta, com frequência achado incidental em exame de rotina",
+      "Gitelman: poliúria discreta ou ausente, sintomas inespecíficos como fadiga, cãibras, tetania e fraqueza muscular",
+      "Gitelman: par característico de hipocalciúria e hipomagnesemia mais pronunciada e constante",
+      "Ambas: hipocalemia crônica e alcalose metabólica de base",
+      "Ambas: palpitações, síncope ou QT prolongado no ECG como manifestação cardiológica de alerta, sobretudo diante de intercorrência (vômitos, diarreia, exercício intenso, fármaco pró-QT)"
+    ],
+    "differentials": [
+      "Uso crônico (inclusive velado ou sub-reptício) de diurético de alça ou tiazídico",
+      "Vômitos ou diarreia crônicos com perda de potássio",
+      "Hiperaldosteronismo primário e outras causas de excesso mineralocorticoide",
+      "Acidose tubular renal tipo 1 (distal)",
+      "Abuso de laxantes",
+      "Canalopatias primárias de QT longo congênito (síndromes de QT longo tipos 1-3 e correlatas)",
+      "Outras causas de hipocalemia crônica refratária sem tubulopatia identificável"
+    ],
+    "tests": [
+      "Eletrólitos séricos: potássio, magnésio, bicarbonato/gasometria venosa (alcalose metabólica)",
+      "Eletrólitos urinários: cálcio urinário e magnésio urinário para diferenciar padrão Bartter (cálcio normal/alto) de Gitelman (hipocalciúria)",
+      "ECG com medida do intervalo QT/QTc, inclusive fora de intercorrência aguda, como parte do seguimento",
+      "Investigação de uso oculto de diurético (triagem urinária quando indicado) para excluir diagnóstico diferencial mais comum",
+      "Renina e aldosterona plasmáticas (ativação secundária do eixo renina-angiotensina-aldosterona)",
+      "Teste genético confirmatório (SLC12A1, KCNJ1, CLCNKB, BSND, CaSR para Bartter; SLC12A3 para Gitelman) quando disponível e pertinente"
+    ],
+    "red_flags": [
+      "QT/QTc prolongado ao ECG, especialmente com hipomagnesemia concomitante",
+      "Palpitações, síncope ou parada cardíaca em paciente com tubulopatia conhecida",
+      "Hipocalemia refratária à reposição isolada de potássio — sinal de hipomagnesemia não corrigida associada",
+      "Introdução de fármaco que prolonga o QT (antiarrítmicos classe IA/III, macrolídeos, azólicos, antipsicóticos, entre outros)",
+      "Vômitos, diarreia ou exercício físico intenso intercorrentes, que podem descompensar agudamente um quadro compensado",
+      "Rabdomiólise associada a hipocalemia grave"
+    ],
+    "ambulatory_flow": [
+      "Investigar tubulopatia perdedora de sal diante de hipocalemia crônica inexplicada, sem uso de diuréticos nem perdas gastrointestinais evidentes, sobretudo em paciente jovem",
+      "Dosar cálcio urinário e magnésio sérico para orientar a suspeita entre padrão Bartter e Gitelman",
+      "Incorporar ECG com medida de QTc à rotina periódica de seguimento, não apenas às intercorrências agudas",
+      "Repor potássio e magnésio sempre em conjunto — a hipomagnesemia não corrigida torna a hipocalemia refratária à reposição isolada de potássio",
+      "Considerar diurético poupador de potássio (espironolactona, amilorida ou eplerenona) como adjuvante para reduzir a caliurese",
+      "Orientar explicitamente o paciente sobre os gatilhos de descompensação: fármacos pró-QT, vômitos/diarreia e exercício físico intenso"
+    ],
+    "emergency_flow": [
+      "Obter ECG imediato e avaliar QTc diante de palpitações, síncope ou suspeita de arritmia em paciente com tubulopatia conhecida ou hipocalemia crônica inexplicada",
+      "Corrigir potássio e magnésio simultaneamente por via intravenosa, nunca potássio isoladamente",
+      "Monitorização eletrocardiográfica contínua enquanto durar o risco de QT longo/torsades de pointes",
+      "Identificar e afastar temporariamente fármacos com potencial pró-QT",
+      "Investigar e tratar o gatilho agudo precipitante (vômitos, diarreia, exercício extenuante recente)",
+      "Envolver nefrologia para manejo conjunto da tubulopatia de base após estabilização do risco arrítmico"
+    ],
+    "tags": [
+      "bartter",
+      "gitelman",
+      "hipocalemia",
+      "hipomagnesemia",
+      "tubulopatia",
+      "QT longo",
+      "torsades de pointes",
+      "canalopatia secundária"
+    ],
+    "source_refs": [
+      "Konrad M, Nijenhuis T, Ariceta G, et al. Diagnosis and management of Bartter syndrome: executive summary of the consensus and recommendations from the European Rare Kidney Disease Reference Network Working Group for Tubular Disorders. Kidney Int. 2021;99(2):324-335. DOI: 10.1016/j.kint.2020.10.035. PMID: 33509356",
+      "Blanchard A, Bockenhauer D, Bolignano D, et al. Gitelman syndrome: consensus and guidance from a Kidney Disease: Improving Global Outcomes (KDIGO) Controversies Conference. Kidney Int. 2017;91(1):24-33. DOI: 10.1016/j.kint.2016.09.046. PMID: 28003083",
+      "Seyberth HW, Schlingmann KP. Bartter- and Gitelman-like syndromes: salt-losing tubulopathies with loop or DCT defects. Pediatr Nephrol. 2011;26(10):1789-1802. DOI: 10.1007/s00467-011-1871-4. PMID: 21503667",
+      "Cortesi C, Lava SA, Bettinelli A, et al. Cardiac arrhythmias and rhabdomyolysis in Bartter-Gitelman patients. Pediatr Nephrol. 2010;25(10):2005-2008. DOI: 10.1007/s00467-010-1580-4. PMID: 20549246",
+      "Foglia PE, Bettinelli A, Tosetto C, et al. Cardiac work up in primary renal hypokalaemia-hypomagnesaemia (Gitelman syndrome). Nephrol Dial Transplant. 2004;19(6):1398-1402. DOI: 10.1093/ndt/gfh204. PMID: 15034158",
+      "Cunha TDS, Heilberg IP. Bartter syndrome: causes, diagnosis, and treatment. Int J Nephrol Renovasc Dis. 2018;11:291-301. DOI: 10.2147/IJNRD.S155397. PMID: 30519073"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/33509356/",
+      "https://pubmed.ncbi.nlm.nih.gov/28003083/",
+      "https://pubmed.ncbi.nlm.nih.gov/21503667/",
+      "https://pubmed.ncbi.nlm.nih.gov/20549246/",
+      "https://pubmed.ncbi.nlm.nih.gov/15034158/",
+      "https://pubmed.ncbi.nlm.nih.gov/30519073/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-bartter-e-de-gitelman-tubulopatias-hereditarias-hipocalemia-e-risco-arritmico"
+    ],
+    "patient_material_slug": null
   }
 ]
