@@ -1575,15 +1575,80 @@ Trabalho lateral concluído nesta janela (branch própria, PR aberto,
 não bloqueia esta produção): correção de 3 anomalias de tema fora
 do vocabulário canônico do motor "Tudo com Tudo" — PR #709.
 
-## Lote 70 (planejado)
+## Lote 70 — concluído (SHA 78feccb9) — total 456 checklists — MÁXIMO PARALELO (10 agentes)
+
+Terceira rodada de "máximo de agentes possível" (30/08/2026). 10
+itens: glicogenoses/canalopatias por depósito, desmossomopatias
+recessivas, laminopatias atípicas, RASopatia adicional e doenças
+sistêmicas raras com acometimento cardiovascular relevante:
+
+- `sindrome-cardiaca-prkag2` — cardiomiopatia por depósito de
+  glicogênio (AMPK gama-2); vias AV "verdadeiras" por ruptura do
+  ânulo fibroso (Arad 2003); alerta explícito contra ablação de
+  "via acessória" sem investigar a causa de base (Sternick 2011).
+  Diferenciação de Danon/Pompe/HCM sarcomérica. Extensa série
+  brasileira publicada em Arq Bras Cardiol, sem diretriz formal SBC.
+- `doenca-de-naxos-e-sindrome-de-carvajal` — desmossomopatias
+  recessivas (JUP/DSP); ceratodermia palmoplantar + cabelo lanoso
+  como marcador de triagem familiar precoce, anos antes do fenótipo
+  cardíaco; Naxos = VD (padrão DAVD), Carvajal = VE (dominância
+  esquerda).
+- `acometimento-cardiovascular-sindrome-de-wolfram` — DIDMOAD
+  (WFS1/CISD2); lacuna declarada sobre QT longo (zero achados
+  PubMed); disautonomia e arritmia em séries pequenas.
+- `acometimento-cardiovascular-progeria-hutchinson-gilford` —
+  laminopatia (LMNA c.1824C>T) explicitamente diferenciada das
+  laminopatias clássicas: aterosclerose acelerada (não CMD/BAV);
+  lonafarnibe reduz mortalidade (HR 0,12-0,23, Gordon 2014/2018).
+- `acometimento-cardiovascular-ataxia-telangiectasia` —
+  radiossensibilidade sistêmica (contraindica radioterapia); risco
+  CV composto em heterozigotos ATM (RR 1,7); evidência de baixo
+  nível declarada item a item.
+- `acometimento-cardiovascular-homocistinuria-classica` — risco
+  tromboembólico dominante (não aórtico como Marfan verdadeiro);
+  tratamento dirigido reduz risco vascular em ~91% (Yap 2001).
+- `cardiomiopatia-desminopatia` — gene DES, corpos citoplasmáticos;
+  doença de condução é manifestação mais prevalente (41,7%) em
+  metanálise de 230 pacientes (Asatryan 2025); lacuna dupla
+  declarada (sem GeneReviews dedicado, sem diretriz SBC).
+- `acometimento-cardiovascular-doenca-de-behcet` — aneurisma de
+  artéria pulmonar (síndrome de Hughes-Stovin) como emergência
+  fatal; ponto crítico de segurança: anticoagulação isolada NÃO
+  reduz recidiva e é de alto risco em aneurisma não controlado —
+  pilar terapêutico é imunossupressão (EULAR).
+- `acometimento-cardiovascular-doenca-de-erdheim-chester` —
+  histiocitose BRAF V600E (~54%), "coated aorta", pseudotumor de
+  átrio direito, pericardite constritiva; vemurafenibe como
+  terapia-alvo (ORR 54,5%, VE-BASKET).
+- `sindrome-cardio-facio-cutanea-acometimento-cardiovascular` —
+  RASopatia (BRAF/MAP2K1/2) explicitamente diferenciada de Noonan/
+  Costello já cobertas; estenose pulmonar ~50% em variantes BRAF+;
+  fenótipo ectodérmico como pista pré-genética.
+
+Nenhuma diretriz SBC/ESC/AHA específica localizada para a maioria
+dos 10 temas — declarado explicitamente em cada resumo (exceção
+parcial: PRKAG2, com literatura original brasileira extensa em Arq
+Bras Cardiol, mas ainda sem diretriz formal). Gates limpos. Total:
+456 checklists.
+
+Verificação de colisão feita nesta rodada: `origin/main` avançou
+para SHA 23aa9502 (PR #772 "release: publicar corpus científico
+revisado ChatGPT, Claude e Grok" + PR #773 hotfix de normalização
+do campo `revisao`) — confirmado que os 427 itens de main são
+subconjunto exato deste branch, sem colisão de slug nem divergência
+estrutural. O hotfix apenas converteu `revisao` de objeto para
+string em itens já `review_status: revisado` (publicados por outra
+trilha) — não afeta os itens `pendente_revisao` deste branch.
+
+## Lote 71 (planejado)
 
 Continuando no ritmo máximo de paralelismo, em tempo indeterminado,
 até ordem de pausa do Rafael. Meta compartilhada: 20.000 documentos
 científicos publicados até 06/09/2026 (Claude+Grok geram
-pendente_revisao; ChatGPT revisa e publica — divisão de trabalho
-confirmada em 30/08). Auditoria de próximos gaps com o procedimento
-padrão (JSONs + `content/**/*.md` + `gh pr list` + verificação de
-que main não avançou com conteúdo de outras faixas desde o último
-fetch).
+pendente_revisao; ChatGPT revisa e publica — confirmado em produção
+via PR #772/#773 nesta mesma janela). Auditoria de próximos gaps
+com o procedimento padrão (JSONs + `content/**/*.md` + `gh pr list`
++ verificação de que main não avançou com conteúdo de outras
+faixas desde o último fetch).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
