@@ -84,7 +84,7 @@ def test_page_title_does_not_silently_truncate_over_300_characters():
         + '"></head></html>'
     )
     assert len(long_title) > 300
-    assert _page_title(parser, "fallback") == long_title
+    assert _page_title(parser, "fallback") == long_title.strip()
 
 
 def test_discovery_reuses_existing_slug_when_metadata_changed(monkeypatch):
