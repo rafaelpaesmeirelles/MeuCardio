@@ -312,15 +312,36 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
 .ccc-cortex__mobile-actions { display: none; }
 
 @media (min-width: 901px) {
+  .ccc-reference-board {
+    grid-template-columns: minmax(0, 1fr) 260px !important;
+    grid-template-rows: auto auto !important;
+    align-items: start;
+  }
+  .ccc-reference-board .ccc-home__main { grid-column: 1; grid-row: 1 / 3; }
+  .ccc-reference-board .ccc-home__intelligence { grid-column: 2; grid-row: 1; }
+  .ccc-reference-board .ccc-home__assistant { grid-column: 2; grid-row: 2; }
   .ccc-reference-board .ccc-home__welcome { display: none !important; }
   .ccc-reference-board .ccc-home__main { gap: 9px !important; }
   .ccc-reference-board .ccc-home__intelligence,
-  .ccc-reference-board .ccc-home__assistant { opacity: .62; transition: opacity .2s ease; }
+  .ccc-reference-board .ccc-home__assistant {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: start !important;
+    opacity: .62;
+    transition: opacity .2s ease;
+  }
+  .ccc-reference-board .ccc-home__intelligence > .ccc-rail-card,
+  .ccc-reference-board .ccc-home__assistant > .ccc-rail-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
   .ccc-reference-board .ccc-home__intelligence:hover,
   .ccc-reference-board .ccc-home__assistant:hover { opacity: 1; }
 }
 
 @media (min-width: 901px) and (max-width: 1280px) {
+  .ccc-reference-board { grid-template-columns: minmax(0, 1fr) 220px !important; }
   .ccc-clinical-cortex { padding-inline: 11px; }
   .ccc-cortex__stage { min-height: 610px; }
   .ccc-cortex__copy h2 { font-size: 1.72rem; }
