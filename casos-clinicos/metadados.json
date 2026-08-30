@@ -17813,5 +17813,28 @@
       "Dedeoglu S, Dede E, Oztunc F, Gedikbasi A, Yesil G, Dedeoglu R. Mutation identification and prediction for severe cardiomyopathy in Alström syndrome, and review of the literature for cardiomyopathy. Orphanet J Rare Dis. 2022;17(1):359. doi:10.1186/s13023-022-02483-7. PMID: 36109815"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "nf1-vasculopatia-hipertensao-secundaria",
+    "titulo": "Hipertensão refratária na neurofibromatose tipo 1",
+    "tema": "Populações especiais",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 15 anos, com diagnóstico conhecido de neurofibromatose tipo 1 (mais de seis manchas café-com-leite, neurofibromas cutâneos múltiplos e efélides axilares), é encaminhado à cardiologia por hipertensão arterial não controlada apesar de losartana e anlodipino em doses adequadas. Nega palpitações, sudorese paroxística ou cefaleia latejante episódica. Ao exame, chama atenção sopro abdominal audível em região epigástrica/flanco, sem outros achados cardíacos relevantes.",
+    "pergunta": "Diante deste quadro — NF1 associada a hipertensão arterial refratária e sopro abdominal, sem sintomas sugestivos de excesso catecolaminérgico — qual é a conduta mais apropriada para investigar a causa da hipertensão?",
+    "opcoes": [
+      "Solicitar angiotomografia (ou angiorressonância) de artérias renais, pois a vasculopatia própria da NF1 — com estenose de artéria renal por proliferação fibromuscular da parede vascular ou compressão por neurofibroma perivascular — é a causa mais prevalente e clinicamente mais relevante de hipertensão secundária nessa doença, achado compatível com o sopro abdominal",
+      "Solicitar dosagem de metanefrinas plasmáticas fracionadas como primeiro exame, independentemente da ausência de sintomas paroxísticos, pois o rastreio de feocromocitoma é rotineiramente recomendado em todo paciente com NF1 e hipertensão",
+      "Solicitar ecocardiograma transtorácico para investigar estenose valvar pulmonar, a cardiopatia congênita mais comum na NF1, considerando-a a causa direta da hipertensão arterial sistêmica observada",
+      "Solicitar angiorressonância de crânio para pesquisar vasculopatia cerebral tipo moyamoya, apontada como a causa mais frequente de hipertensão arterial secundária em pacientes com NF1"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A neurofibromatose tipo 1 (NF1) cursa com uma vasculopatia própria, decorrente da haploinsuficiência de neurofibromina em células musculares lisas vasculares, levando a proliferação intimal, estenoses, ectasias e aneurismas em vasos de médio calibre — renais, mesentéricos, cerebrais e periféricos. Entre as causas de hipertensão secundária na NF1, a vasculopatia (sobretudo estenose de artéria renal) é considerada a manifestação 'menos enfatizada, porém mais importante', segundo revisão de Sivasubramanian e Meyers (Curr Hypertens Rep, 2021; PMID 33779870), que explicitamente recomenda NÃO rastrear feocromocitoma de forma rotineira em todo paciente NF1 hipertenso, por não ser custo-efetivo — a investigação de catecolaminas deve ser reservada a quem apresenta sintomas paroxísticos (palpitação, sudorese, cefaleia), labilidade pressórica acentuada ou outros indícios clínicos/bioquímicos sugestivos. Dados de uma coorte pediátrica chinesa (Li et al., BMC Pediatr, 2025; PMID 39799317) mostraram estenose arterial em 4,7% dos pacientes com NF1, sendo a artéria renal o sítio mais acometido (58,3% dos casos), manifestando-se predominantemente como hipertensão renovascular — muitas vezes com sopro abdominal ao exame, como no caso descrito. O feocromocitoma, embora tenha prevalência aumentada em relação à população geral (um estudo em unidade de hipertensão secundária identificou feocromocitoma em 14,6% de uma coorte selecionada de pacientes NF1, população enriquecida por encaminhamento — Zinnamosca et al., Arch Dermatol Res, 2011; PMID 21042801), não é a causa mais comum de HAS na NF1 e não deve ser a primeira hipótese investigada na ausência de sintomas paroxísticos. A estenose pulmonar é, de fato, a cardiopatia congênita mais frequente na NF1 (37,1% dos casos de cardiopatia congênita, segundo Pinna et al., Genes, 2019; PMID 31487937), mas causa obstrução de via de saída do ventrículo direito, não hipertensão arterial sistêmica. A vasculopatia cerebral tipo moyamoya também ocorre na NF1, mas manifesta-se por acidente vascular cerebral isquêmico/AIT, e não é causa de hipertensão arterial sistêmica nem a etiologia mais prevalente de HAS secundária nessa condição.",
+    "source_refs": [
+      "Sivasubramanian R, Meyers KE. Hypertension in Children and Adolescents with Turner Syndrome (TS), Neurofibromatosis 1 (NF1), and Williams Syndrome (WS). Curr Hypertens Rep. 2021;23(4):18. doi:10.1007/s11906-021-01136-7. PMID: 33779870",
+      "Li H, Zhang H, Cao J, Guo D, Zhang X, Yao Z. Diagnosis and treatment of pediatric arterial stenosis associated with neurofibromatosis type 1. BMC Pediatr. 2025;25(1):27. doi:10.1186/s12887-024-05240-w. PMID: 39799317",
+      "Pinna V, Daniele P, Calcagni G, et al. Prevalence, Type, and Molecular Spectrum of NF1 Mutations in Patients with Neurofibromatosis Type 1 and Congenital Heart Disease. Genes (Basel). 2019;10(9):675. doi:10.3390/genes10090675. PMID: 31487937",
+      "Zinnamosca L, Petramala L, Cotesta D, et al. Neurofibromatosis type 1 (NF1) and pheochromocytoma: prevalence, clinical and cardiovascular aspects. Arch Dermatol Res. 2011;303(5):317-325. doi:10.1007/s00403-010-1090-z. PMID: 21042801"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
