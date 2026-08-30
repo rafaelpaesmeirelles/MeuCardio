@@ -85,6 +85,9 @@ DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     # valvopatias-na-gravidez — VAB é causa clássica de estenose aórtica em
     # mulher jovem grávida.
     "estenose-aortica-grave-sintomatica-na-gestacao",
+    "doenca-valvar-elegibilidade-esportiva-no-atleta",
+    "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+    "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
 }
 
 
