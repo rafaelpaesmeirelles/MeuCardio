@@ -35572,5 +35572,246 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "cardiomiopatia-deficiencia-primaria-carnitina",
+    "condicao": "Cardiomiopatia por deficiência primária de carnitina",
+    "resumo": "Checklist de suspeição, confirmação diagnóstica e tratamento da deficiência primária de carnitina (SLC22A5/OCTN2) como causa rara e genuinamente reversível de cardiomiopatia dilatada, com ênfase no reconhecimento precoce, na diferenciação de causas secundárias de carnitina baixa e na reposição de L-carnitina em alta dose antes de dano estrutural irreversível.",
+    "documento_origem": "cardiomiopatia-deficiencia-primaria-carnitina",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Nezu J, Tamai I, Oku A, et al. Primary systemic carnitine deficiency is caused by mutations in a gene encoding sodium ion-dependent carnitine transporter. Nat Genet. 1999;21(1):91-94. PMID 9916797.",
+      "El-Hattab AW, Almannai M. Primary Carnitine Deficiency. In: Adam MP, Feldman J, Mirzaa GM, et al., eds. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2012 Mar 15 [Updated 2024 Dec 5]. NCBI Bookshelf NBK84551.",
+      "Magoulas PL, El-Hattab AW. Systemic primary carnitine deficiency: an overview of clinical manifestations, diagnosis, and management. Orphanet J Rare Dis. 2012;7:68. PMID 22989098.",
+      "Longo N, Frigeni M, Pasquali M. Carnitine transport and fatty acid oxidation. Biochim Biophys Acta. 2016;1863(10):2422-2435. PMID 26828774.",
+      "Lund AM, Joensen F, Hougaard DM, et al. Carnitine transporter and holocarboxylase synthetase deficiencies in The Faroe Islands. J Inherit Metab Dis. 2007;30(3):341-349. PMID 17417720.",
+      "Rasmussen J, Nielsen OW, Janzen N, et al. Carnitine levels in 26,462 individuals from the nationwide screening program for primary carnitine deficiency in the Faroe Islands. J Inherit Metab Dis. 2014;37(2):215-222. PMID 23653224.",
+      "Rasmussen J, Dunø M, Lund AM, et al. Increased risk of sudden death in untreated primary carnitine deficiency. J Inherit Metab Dis. 2020;43(2):290-296. PMID 31373028.",
+      "Abrahamsen RK, Lund AM, Rasmussen J. Patients with primary carnitine deficiency treated with L-carnitine are alive and doing well - a 10-year follow-up in the Faroe Islands. JIMD Rep. 2023;64(6):453-459. PMID 37927485.",
+      "Grünert SC, Tucci S, Schumann A, et al. Primary carnitine deficiency - diagnosis after heart transplantation: better late than never! Orphanet J Rare Dis. 2020;15(1):87. PMID 32276632.",
+      "Schimmenti LA, Crombez EA, Schwahn BC, et al. Expanded newborn screening identifies maternal primary carnitine deficiency. Mol Genet Metab. 2007;90(4):441-445. PMID 17126586.",
+      "Lodewyckx P, Issa J, Gaschignard M, et al. Systemic primary carnitine deficiency induces severe arrhythmia due to shortening of QT interval. Mol Genet Metab. 2023;140(4):107733. PMID 37979236."
+    ],
+    "itens": [
+      {
+        "id": "carnitina-suspeita-cmd-pediatrica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de cardiomiopatia dilatada de causa não esclarecida em criança (tipicamente entre 2 e 4 anos), deficiência primária de carnitina incluída no diagnóstico diferencial",
+        "origem_secao": "Apresentação clínica: um espectro amplo, do lactente ao adulto"
+      },
+      {
+        "id": "carnitina-suspeita-fraqueza-ck",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença associada de fraqueza muscular proximal e creatinoquinase elevada reconhecida como reforço à suspeita, não avaliada isoladamente",
+        "origem_secao": "Apresentação clínica: um espectro amplo, do lactente ao adulto"
+      },
+      {
+        "id": "carnitina-suspeita-hipoglicemia-hipocetotica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "História de hipoglicemia hipocetótica, hepatomegalia ou hiperamonemia na lactância (mesmo remota) pesquisada ativamente como antecedente sugestivo",
+        "origem_secao": "Apresentação clínica: um espectro amplo, do lactente ao adulto"
+      },
+      {
+        "id": "carnitina-suspeita-historia-familiar",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "História familiar de morte súbita inexplicada em jovens investigada como dado de suspeição, considerando o risco quantificado de morte súbita na doença não tratada",
+        "origem_secao": "Epidemiologia e a coorte Faroesa: o risco de morte súbita quantificado"
+      },
+      {
+        "id": "carnitina-nao-excluir-por-triagem-normal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Triagem neonatal prévia normal não usada isoladamente para descartar o diagnóstico em paciente com cardiomiopatia inexplicada, dado relato de caso com diagnóstico só após transplante cardíaco",
+        "origem_secao": "Diagnóstico no paciente sintomático (adulto ou pediátrico)"
+      },
+      {
+        "id": "carnitina-dosagem-plasmatica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Carnitina livre plasmática dosada em toda cardiomiopatia dilatada de causa não esclarecida, com valor acentuadamente baixo (tipicamente < 5 µM, referência normal 25–50 µM) levantando forte suspeita",
+        "origem_secao": "Diagnóstico no paciente sintomático (adulto ou pediátrico)"
+      },
+      {
+        "id": "carnitina-diferenciar-causas-secundarias",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Causas secundárias de carnitina baixa (acidemias orgânicas, defeitos de beta-oxidação, doença renal com perda tubular, uso de ácido valproico, desnutrição) diferenciadas da deficiência primária antes de firmar o diagnóstico",
+        "origem_secao": "Diagnóstico no paciente sintomático (adulto ou pediátrico)"
+      },
+      {
+        "id": "carnitina-confirmacao-genetica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diagnóstico confirmado por teste molecular do gene SLC22A5 e, quando necessário, por ensaio funcional de captação de carnitina em fibroblastos cultivados (< 10% da atividade normal em casos afetados)",
+        "origem_secao": "Diagnóstico no paciente sintomático (adulto ou pediátrico)"
+      },
+      {
+        "id": "carnitina-rastreio-familiar",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Rastreamento familiar considerado, incluindo dos pais, quando recém-nascido apresenta carnitina livre baixa na triagem, pela possibilidade de doença materna assintomática não diagnosticada",
+        "origem_secao": "Um cenário particular... a mãe assintomática ou paucissintomática"
+      },
+      {
+        "id": "carnitina-tratamento-precoce",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Suplementação oral de L-carnitina (levocarnitina) iniciada precocemente em alta dose, fracionada em três tomadas diárias, reconhecendo que a reversibilidade da cardiomiopatia é tempo-dependente",
+        "origem_secao": "Tratamento: L-carnitina oral e reversibilidade da cardiomiopatia"
+      },
+      {
+        "id": "carnitina-seguimento-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Avaliação basal com ecocardiograma, eletrocardiograma, creatinoquinase e glicemia pré-prandial realizada ao diagnóstico, com reavaliação periódica sob tratamento",
+        "origem_secao": "Implicações práticas para a cardiologia"
+      },
+      {
+        "id": "carnitina-monitorar-arritmia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Avaliação eletrocardiográfica atenta a arritmia associada, incluindo encurtamento do intervalo QT descrito como manifestação elétrica da doença, e não apenas à disfunção sistólica",
+        "origem_secao": "Apresentação clínica: um espectro amplo, do lactente ao adulto"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "reconhecimento-e-conduta-inicial-complicacoes-vasculares-acesso-cateterismo",
+    "condicao": "Complicações vasculares do acesso após cateterismo cardíaco: hematoma, pseudoaneurisma, fístula arteriovenosa e hemorragia retroperitoneal",
+    "resumo": "Checklist de execução para reconhecer à beira-leito hematoma expansivo, pseudoaneurisma femoral e fístula arteriovenosa, decidir a investigação por ultrassom Doppler, conduzir compressão ou trombina guiadas por imagem e escalar para correção cirúrgica/endovascular quando indicado, mantendo alto índice de suspeição para hemorragia retroperitoneal diante de dor lombar ou hipotensão sem sangramento externo visível.",
+    "documento_origem": "complicacoes-vasculares-acesso-cateterismo-hematoma-pseudoaneurisma-fistula-av",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Feres F, et al. Diretriz da Sociedade Brasileira de Cardiologia e da Sociedade Brasileira de Hemodinâmica e Cardiologia Intervencionista sobre Intervenção Coronária Percutânea. Arq Bras Cardiol. 2017;109(1 Supl 1):1-81, PMID 28792984",
+      "Shroff AR, et al. SCAI expert consensus statement update on best practices for transradial angiography and intervention. Catheter Cardiovasc Interv. 2020;95(2):245-252, PMID 31880380",
+      "Chiarito M, et al. Radial versus femoral access for coronary interventions: an updated systematic review and meta-analysis of randomized trials. Catheter Cardiovasc Interv. 2021;97(7):1387-1396, PMID 33507598",
+      "Stone PA, Campbell JE, AbuRahma AF. Femoral pseudoaneurysms after percutaneous access. J Vasc Surg. 2014;60(5):1359-1366, PMID 25175631",
+      "Stolt M, Braun-Dullaeus R, Herold J. Do not underestimate the femoral pseudoaneurysm. Vasa. 2018;47(3):177-185, PMID 29439611",
+      "Mahmoud MZ, et al. \"To-and-fro\" waveform in the diagnosis of arterial pseudoaneurysms. World J Radiol. 2015;7(5):89-99, PMID 26029351",
+      "Shatnawi NJ, et al. Risk factors attributed to failure of ultrasound-guided compression for post-cardiac catheterization femoral artery pseudoaneurysms. SAGE Open Med. 2019;7:2050312119843705, PMID 31019697",
+      "Schaub F, Theiss W, Heinz M, Zagel M, Schömig A. New aspects in ultrasound-guided compression repair of postcatheterization femoral artery injuries. Circulation. 1994;90(4):1861-1865, PMID 7923673",
+      "Chatterjee T, Do DD, Kaufmann U, Mahler F, Meier B. Ultrasound-guided compression repair for treatment of femoral artery pseudoaneurysm: acute and follow-up results. Cathet Cardiovasc Diagn. 1996;38(4):335-340, PMID 8853137",
+      "Kang SS, et al. Expanded indications for ultrasound-guided thrombin injection of pseudoaneurysms. J Vasc Surg. 2000;31(2):289-298, PMID 10664498",
+      "Hanson JM, Atri M, Power N. Ultrasound-guided thrombin injection of iatrogenic groin pseudoaneurysm: Doppler features and technical tips. Br J Radiol. 2008;81(962):154-163, PMID 18238924",
+      "Sidawy AN, Neville RF, Adib H, Curry KM. Femoral arteriovenous fistula following cardiac catheterization: an anatomic explanation. Cardiovasc Surg. 1993;1(2):134-137, PMID 8076015",
+      "Frank JJ, Kamalakannan D, Kodenchery M, Savoy-Moore RT, Rosman H. Retroperitoneal hematoma in patients undergoing cardiac catheterization. J Interv Cardiol. 2010;23(6):569-574, PMID 20796167",
+      "Thadani U, Latif F. Retroperitoneal hemorrhage after cardiac catheterization and percutaneous coronary interventions. Cardiology. 2013;126(1):24-26, PMID 23860184",
+      "Pang N, et al. Vascular Closure Devices versus Manual Compression in Cardiac Interventional Procedures: Systematic Review and Meta-Analysis. Cardiovasc Ther. 2022;2022:8569188, PMID 36134143"
+    ],
+    "itens": [
+      {
+        "id": "vasc-hematoma-marcar-limites",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Limites do hematoma inguinal marcados na pele e reavaliados em intervalos curtos para diferenciar hematoma estável de hematoma expansivo",
+        "origem_secao": "3. Hematoma do sítio de punção: estável versus expansivo"
+      },
+      {
+        "id": "vasc-hematoma-expansivo-emergencia",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Hematoma expansivo (crescimento perceptível em minutos a horas, dor progressiva, tensão de pele, compromisso neurovascular) tratado como emergência: anticoagulação/antiagregação revertida ou suspensa quando clinicamente possível, compressão manual direta e sustentada iniciada, e necessidade de imagem reavaliada de imediato",
+        "origem_secao": "3. Hematoma do sítio de punção: estável versus expansivo"
+      },
+      {
+        "id": "vasc-pseudoaneurisma-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Massa pulsátil dolorosa com sopro sistólico na região da punção — mesmo dias após o procedimento — investigada com ultrassom Doppler antes de ser atribuída a hematoma simples",
+        "origem_secao": "4.1 Fisiopatologia e apresentação clínica"
+      },
+      {
+        "id": "vasc-pseudoaneurisma-doppler",
+        "categoria": "investigacao",
+        "obrigatorio": true,
+        "texto": "Ultrassom Doppler colorido solicitado como exame de escolha; padrão bicolor \"yin-yang\" ou fluxo espectral \"to-and-fro\" no colo confirmado como critério diagnóstico de pseudoaneurisma, com registro do diâmetro do colo e do comprimento do trajeto comunicante",
+        "origem_secao": "4.2 Diagnóstico: ultrassom Doppler e o padrão \"yin-yang\""
+      },
+      {
+        "id": "vasc-pseudoaneurisma-observacao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Pseudoaneurisma pequeno (geralmente <2–3 cm), sem crescimento documentado e assintomático, conduzido com observação clínica e ultrassonográfica seriada",
+        "origem_secao": "4.3 Tratamento — Observação"
+      },
+      {
+        "id": "vasc-pseudoaneurisma-trombina",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Injeção de trombina guiada por ultrassom considerada primeira escolha quando o pseudoaneurisma tem indicação de tratamento, inclusive em pacientes anticoagulados, com atenção ao risco de embolização em colo curto e largo",
+        "origem_secao": "4.3 Tratamento — Injeção de trombina guiada por ultrassom"
+      },
+      {
+        "id": "vasc-pseudoaneurisma-compressao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Compressão guiada por ultrassom considerada alternativa razoável em paciente não anticoagulado, reconhecendo menor taxa de sucesso e maior tempo de procedimento quando há anticoagulação",
+        "origem_secao": "4.3 Tratamento — Compressão guiada por ultrassom"
+      },
+      {
+        "id": "vasc-pseudoaneurisma-cirurgia",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Correção cirúrgica acionada em caso de falha de compressão/trombina, pseudoaneurisma infectado, compressão neurovascular, isquemia distal ou colo excessivamente curto/largo que contraindica trombina",
+        "origem_secao": "4.3 Tratamento — Correção cirúrgica"
+      },
+      {
+        "id": "vasc-fav-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sopro contínuo (sistodiastólico) com frêmito contínuo na virilha — distinto do sopro sistólico isolado do pseudoaneurisma — reconhecido como sinal de fístula arteriovenosa e confirmado por ultrassom Doppler",
+        "origem_secao": "5. Fístula arteriovenosa iatrogênica"
+      },
+      {
+        "id": "vasc-fav-conduta",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Fístula arteriovenosa sintomática, de alto fluxo ou associada a insuficiência venosa/isquemia por roubo de fluxo encaminhada para correção endovascular (stent recoberto) ou cirúrgica, sem depender de compressão como conduta principal",
+        "origem_secao": "5. Fístula arteriovenosa iatrogênica"
+      },
+      {
+        "id": "vasc-hrp-alerta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor lombar/flanco, hipotensão sem sangramento externo visível ou queda inexplicada de hemoglobina após acesso femoral tratadas como hemorragia retroperitoneal até prova em contrário, mesmo com exame da virilha normal",
+        "origem_secao": "6.2 Reconhecimento clínico"
+      },
+      {
+        "id": "vasc-hrp-imagem",
+        "categoria": "investigacao",
+        "obrigatorio": true,
+        "texto": "Tomografia computadorizada de abdome e pelve com contraste solicitada com limiar baixo diante de suspeita de hemorragia retroperitoneal, sem atrasar a estabilização hemodinâmica inicial em paciente instável",
+        "origem_secao": "6.3 Diagnóstico e conduta imediata"
+      },
+      {
+        "id": "vasc-hrp-conduta-inicial",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Conduta inicial da hemorragia retroperitoneal combinando reversão/suspensão de anticoagulação e antiagregação quando possível, reposição volêmica e hemoderivados conforme necessidade, e monitorização hemodinâmica contínua",
+        "origem_secao": "6.3 Diagnóstico e conduta imediata"
+      },
+      {
+        "id": "vasc-hrp-intervencao",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Sangramento ativo confirmado ou instabilidade persistente encaminhados para embolização endovascular percutânea (via preferida na maioria dos casos) ou correção cirúrgica quando a via endovascular está indisponível ou malsucedida",
+        "origem_secao": "6.3 Diagnóstico e conduta imediata"
+      },
+      {
+        "id": "vasc-vcd-vigilancia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Uso de dispositivo de fechamento vascular (VCD) não dispensa a vigilância clínica pós-procedimento; falha ou mau posicionamento do dispositivo reconhecido como causa de pseudoaneurisma e hematoma",
+        "origem_secao": "7. Dispositivos de fechamento vascular e prevenção"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
