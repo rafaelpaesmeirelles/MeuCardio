@@ -44,13 +44,13 @@ def _document_slugs() -> set[str]:
     return slugs
 
 
-def test_hub_separa_paivs_de_pavsd_e_requer_revisao_humana():
+def test_hub_separa_paivs_de_pavsd_e_tem_revisao_concluida():
     disease = _disease()
     assert disease["completeness"] == "completo"
     assert disease["review_status"] == "revisado"
-    assert disease["version"] == 2
+    assert disease["version"] == 3
     assert disease["fonte_producao"] == "chatgpt"
-    assert "exige revisão humana" in disease["review_note"].casefold()
+    assert "audit" in disease["review_note"].casefold()
     assert "PA/IVS" in disease["summary"]
     assert "PA/VSD" in disease["summary"]
     assert "MAPCA" in disease["diagnostic_approach"]["mapa_pavsd"]
