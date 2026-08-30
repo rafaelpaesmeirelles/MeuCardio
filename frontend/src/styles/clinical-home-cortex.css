@@ -610,12 +610,27 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
     background: #000713;
   }
 
-  body.ccc-home-active .ccc-nav,
   body.ccc-home-active .clinical-os .cos-topbar,
   body.ccc-home-active .clinical-os .cos-intelligence,
-  body.ccc-home-active .clinical-os .credito,
-  body.ccc-home-active .ccc-reference-board {
+  body.ccc-home-active .clinical-os .credito {
     display: none !important;
+  }
+
+  body.ccc-home-active .ccc-nav {
+    display: block !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  body.ccc-home-active .ccc-reference-board {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    display: grid !important;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
 
   body.ccc-home-active .clinical-os .cos-shell {
@@ -746,8 +761,7 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
     transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
   }
 
-  .ccc-approved-main__command:focus-within,
-  .ccc-approved-main__command:has(input:not(:placeholder-shown)) {
+  .ccc-approved-main__command[data-active="true"] {
     background: rgba(5, 22, 39, .97);
     border-color: rgba(70, 188, 255, .45);
     box-shadow: 0 0 28px rgba(24, 120, 255, .2);
@@ -772,14 +786,13 @@ body.ccc-home-active .clinical-os .cos-content .ccc-clinical-cortex .ccc-command
 
   .ccc-approved-main__command button {
     cursor: pointer;
-    color: transparent;
+    color: transparent !important;
     background: transparent;
     font-size: clamp(.55rem, .72vw, .78rem);
   }
 
-  .ccc-approved-main__command:focus-within button,
-  .ccc-approved-main__command:has(input:not(:placeholder-shown)) button {
-    color: #f4fbff;
+  .ccc-approved-main__command[data-active="true"] button {
+    color: #f4fbff !important;
     background: rgba(44, 126, 191, .25);
   }
 }

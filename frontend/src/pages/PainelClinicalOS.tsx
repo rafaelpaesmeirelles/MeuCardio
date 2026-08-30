@@ -481,7 +481,7 @@ export default function PainelClinicalOS() {
             <Link data-spot="library" to="/biblioteca"><span>Biblioteca científica</span></Link>
           </nav>
 
-          <form className="ccc-approved-main__command" onSubmit={executar} role="search">
+          <form className="ccc-approved-main__command" data-active={comando.trim() ? "true" : "false"} onSubmit={executar} role="search">
             <input ref={approvedInputRef} value={comando} onChange={(event) => setComando(event.target.value)} placeholder=" " aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
             <button type="submit" aria-label="Conectar e executar">Conectar</button>
           </form>
