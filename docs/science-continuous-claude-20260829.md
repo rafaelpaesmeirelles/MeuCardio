@@ -1640,15 +1640,62 @@ estrutural. O hotfix apenas converteu `revisao` de objeto para
 string em itens já `review_status: revisado` (publicados por outra
 trilha) — não afeta os itens `pendente_revisao` deste branch.
 
-## Lote 71 (planejado)
+## Lote 71 — concluído (SHA 561f81c6) — total 464 checklists — MÁXIMO PARALELO (8 agentes)
+
+Quarta rodada de "máximo de agentes possível". 8 itens: vasculites
+e doenças autoinflamatórias raras com acometimento cardiovascular,
+tema não explorado nas rodadas anteriores (foco anterior era
+canalopatias/cardiomiopatias hereditárias):
+
+- `acometimento-cardiovascular-granulomatose-com-poliangiite` —
+  pericardite mais comum; massas valvares mimetizando endocardite;
+  coronarite não aterosclerótica; diferenciação vasculite ativa vs.
+  aterosclerose por imunossupressão crônica.
+- `miocardiopatia-primaria-esclerose-sistemica` — "fenômeno de
+  Raynaud miocárdico" (Follansbee 1990), fibrose em patchwork; RM
+  com LGE/T1-T2; explicitamente diferenciado da HAP-ES já coberta
+  (algoritmo DETECT).
+- `acometimento-cardiovascular-doenca-relacionada-a-igg4` —
+  periaortite/aortite IgG4 ("fibrose retroperitoneal idiopática"
+  histórica); diferenciado de Erdheim-Chester (lote 70) e
+  Takayasu/células gigantes.
+- `acometimento-cardiovascular-poliarterite-nodosa` — necrose
+  fibrinoide de médio calibre; sem glomerulonefrite (diferencial de
+  ANCA-associadas); associação histórica com hepatite B com
+  esquema terapêutico distinto.
+- `acometimento-cardiovascular-febre-familiar-do-mediterraneo` —
+  pericardite de crise serosítica (distinta da idiopática recorrente
+  já coberta); amiloidose AA tardia; colchicina vitalícia como
+  determinante causal (Zemer 1986).
+- `acometimento-cardiovascular-policondrite-recidivante` —
+  aortite/aneurisma como principal risco; traqueobroncomalácia como
+  risco perioperatório crítico; síndrome VEXAS (UBA1) como subgrupo
+  de pior prognóstico cardíaco.
+- `acometimento-cardiovascular-granulomatose-eosinofilica-com-
+  poliangiite` — miocardite eosinofílica como principal causa de
+  morte na EGPA (~50%); dicotomia ANCA-positivo vs. ANCA-negativo
+  (maior risco cardíaco).
+- `endocardite-por-doenca-de-whipple` — causa clássica de
+  endocardite com hemocultura negativa; diagnóstico por PCR+PAS em
+  tecido valvar excisado; tratamento prolongado (~12 meses).
+
+Nota de processo: um agente (Whipple) retornou inicialmente apenas
+confirmação sem reincluir o JSON completo — reenviado com sucesso
+via SendMessage antes da integração. Nenhuma diretriz SBC/ESC/AHA
+específica localizada para a maioria dos temas — declarado
+explicitamente em cada resumo. Verificação de colisão reconfirmada:
+`origin/main` (SHA 5915b662, 427 itens) permanece subconjunto exato
+do branch. Gates limpos. Total: 464 checklists.
+
+## Lote 72 (planejado)
 
 Continuando no ritmo máximo de paralelismo, em tempo indeterminado,
 até ordem de pausa do Rafael. Meta compartilhada: 20.000 documentos
 científicos publicados até 06/09/2026 (Claude+Grok geram
 pendente_revisao; ChatGPT revisa e publica — confirmado em produção
-via PR #772/#773 nesta mesma janela). Auditoria de próximos gaps
-com o procedimento padrão (JSONs + `content/**/*.md` + `gh pr list`
-+ verificação de que main não avançou com conteúdo de outras
-faixas desde o último fetch).
+via PR #772/#773). Auditoria de próximos gaps com o procedimento
+padrão (JSONs + `content/**/*.md` + `gh pr list` + verificação de
+que main não avançou com conteúdo de outras faixas desde o último
+fetch).
 
 _(atualizado incrementalmente a cada lote — sem relatório longo, só checkpoint)_
