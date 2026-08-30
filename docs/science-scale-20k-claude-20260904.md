@@ -746,3 +746,28 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 9 (3 descartados por colisão) | 191 |
 | **Total** | **4.900** | **105** | **4.795** |
+
+## Lote 38 — concluído (commit 5d3aed3a)
+
+- **content/Cardiomiopatias**: +1 — `doenca-de-wilson-acometimento-cardiovascular-fisiopatologia-manifestacoes-e-terapia-quelante` (par de contraste mecanístico do documento de deficiência de cobre do lote 37: mesmo elemento, direção metabólica oposta).
+- **content/Terapia_intensiva**: +1 — `sindrome-de-realimentacao-e-cardiotoxicidade-por-hipofosfatemia-grave`.
+- **doencas**: +2 — `cardiomiopatia-dilatada-por-deficiencia-de-cobre`, `amiloidose-relacionada-a-dialise-beta2-microglobulina` (pareadas com os dois documentos do lote 37).
+- **checklists**: +2 — investigação/manejo da cardiomiopatia por deficiência de cobre; rastreio de amiloidose relacionada à diálise.
+- **casos-clinicos**: +1 — `escorpionismo-grave-tempestade-catecolaminergica-crianca` (Tityus serrulatus, tempestade catecolaminérgica, armadilha do edema pulmonar tratado como anafilaxia).
+- **material-paciente**: +1 — `deficiencia-de-cobre-e-o-coracao`, sem nenhuma dose numérica acionável (política de segurança pós-revisão de 29/08 aplicada proativamente).
+- **Correção de schema durante integração**: um agente propôs o mesmo slug para a doença de amiloidose-diálise e para seu documento técnico irmão — nenhum precedente no corpus tem doença e documento compartilhando slug idêntico (risco de colisão de rota `/biblioteca/<slug>`); renomeado para um slug mais curto e distinto antes de integrar, seguindo o padrão já usado em EGPA/acromegalia.
+- **Verificação**: 2 agentes reportaram não conseguir confirmar a existência dos documentos de deficiência de cobre e diálise-amiloidose (criados no lote 37) por checarem apenas `/opt/meucardio` — comportamento esperado e já documentado; confirmado manualmente contra o worktree antes de integrar, e o link ao documento de cobre foi adicionado ao "Tudo com Tudo" do documento de Wilson.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.300 (10.281 revisado + 19 pendente_revisao).
+
+### Status consolidado (após Lote 38)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 18 | 2.382 |
+| Casos clínicos | 900 | 35 | 865 |
+| Checklists | 600 | 21 | 579 |
+| Materiais-paciente | 500 | 25 | 475 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 11 (3 descartados por colisão) | 189 |
+| **Total** | **4.900** | **113** | **4.787** |
