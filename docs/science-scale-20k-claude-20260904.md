@@ -584,3 +584,22 @@ raras cardiovasculares (alta taxa de acerto, ~0 colisões nos últimos
 commit (pegou 1 alucinação real no lote 20, 1 falso-positivo por
 aspas no lote 28), e pareamento retroativo de documento_slug quando
 um documento novo cobre um material-paciente pré-existente.
+
+## Lote 31 — concluído (commit 98dcb0f0)
+
+- **content/Insuficiência_cardíaca**: +1 — `cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas`.
+- **casos-clinicos**: +1 — `cardiomiopatia-dilatada-por-deficiencia-de-selenio-em-npt-prolongada`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.273 (10.189 revisado + 84 pendente_revisao).
+
+### Status consolidado (após Lote 31)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 12 | 2.388 |
+| Casos clínicos | 900 | 31 | 869 |
+| Checklists | 600 | 14 | 586 |
+| Materiais-paciente | 500 | 22 | 478 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 5 (3 descartados por colisão) | 195 |
+| **Total** | **4.900** | **86** | **4.814** |
