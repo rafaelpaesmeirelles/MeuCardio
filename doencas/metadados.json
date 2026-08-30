@@ -37904,5 +37904,114 @@
       "cardiomiopatia-por-deficiencia-de-selenio-doenca-de-keshan-e-formas-adquiridas"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-por-hipocalcemia-grave",
+    "name": "Cardiomiopatia dilatada por hipocalcemia grave",
+    "aliases": [
+      "Cardiomiopatia hipocalcêmica",
+      "Cardiomiopatia dilatada reversível por hipocalcemia",
+      "Insuficiência cardíaca por hipocalcemia grave",
+      "Cardiomiopatia por hipoparatireoidismo"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "metabolica",
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia dilatada com disfunção sistólica de ventrículo esquerdo causada por hipocalcemia grave e sustentada — mais comumente por hipoparatireoidismo pós-cirúrgico, mas também por deficiência grave de vitamina D, pseudo-hipoparatireoidismo ou síndrome do osso faminto —, notável pela recuperação rápida e geralmente completa da fração de ejeção após a correção do cálcio.",
+    "presentation": [
+      "Quadro de insuficiência cardíaca com fração de ejeção reduzida — dispneia, ortopneia, edema, sinais de congestão —, muitas vezes indistinguível clinicamente de uma cardiomiopatia dilatada de outra etiologia",
+      "Sinais neuromusculares e sensoriais de hipocalcemia como pista diagnóstica chave, frequentemente relatados pelo próprio paciente: parestesias periorais e de extremidades, cãibras musculares, tetania e espasmo carpopedal",
+      "Sinal de Chvostek (contração da musculatura facial à percussão do nervo facial anterior ao trago) e sinal de Trousseau (espasmo carpal após insuflação do manguito de pressão acima da sistólica por 3 minutos) — este último mais sensível e específico",
+      "Convulsões, em casos de hipocalcemia muito grave ou de instalação rápida",
+      "QTc prolongado ao ECG, que pode coexistir com a disfunção sistólica e reforça a suspeita de hipocalcemia em paciente com insuficiência cardíaca de etiologia indeterminada",
+      "História de cirurgia cervical prévia (tireoidectomia total ou paratireoidectomia), por vezes remota — anos a décadas antes do reconhecimento da cardiomiopatia",
+      "Ausência de sinais neuromusculares não exclui hipocalcemia como causa: sintomas podem ser sutis ou ausentes mesmo com cálcio bastante baixo, sobretudo se a instalação foi lenta"
+    ],
+    "differentials": [
+      "Cardiomiopatia dilatada idiopática — diagnóstico de exclusão que costuma absorver casos não reconhecidos de cardiomiopatia hipocalcêmica quando o cálcio não é dosado",
+      "Taquicardiomiopatia (cardiomiopatia induzida por taquicardia)",
+      "Cardiomiopatia por deficiência de selênio",
+      "Cardiomiopatia alcoólica",
+      "Miocardite",
+      "Cardiomiopatia por disfunção tireoidiana",
+      "Cardiomiopatia periparto, quando o contexto clínico for compatível"
+    ],
+    "tests": [
+      "Cálcio ionizado — exame de escolha; o cálcio total corrigido por albumina é impreciso em pacientes críticos ou desnutridos e não deve ser usado isoladamente para excluir hipocalcemia",
+      "PTH — diferencia hipoparatireoidismo (baixo ou inapropriadamente normal) de pseudo-hipoparatireoidismo (elevado, com hiperfosfatemia) e de hipocalcemia secundária a deficiência de vitamina D (elevado, compensatório)",
+      "Magnésio sérico — hipomagnesemia grave pode simular hipoparatireoidismo primário ao suprimir a secreção de PTH",
+      "25-hidroxivitamina D — fecha o diagnóstico quando a hipocalcemia é secundária a deficiência grave de vitamina D",
+      "Fósforo sérico — hiperfosfatemia associada à hipocalcemia orienta para hipoparatireoidismo ou pseudo-hipoparatireoidismo",
+      "Ecocardiograma transtorácico — confirma o fenótipo de cardiomiopatia dilatada com FEVE reduzida, mas não distingue a etiologia",
+      "Eletrocardiograma — avalia QTc prolongado concomitante, achado que pode coexistir com a disfunção sistólica"
+    ],
+    "red_flags": [
+      "Hipocalcemia ionizada muito grave com tetania, espasmo carpopedal ou convulsão",
+      "QTc marcadamente prolongado associado — risco de torsades de pointes concomitante à disfunção sistólica",
+      "Instabilidade hemodinâmica ou choque cardiogênico antes da correção do cálcio",
+      "Arritmia ventricular associada",
+      "Nova disfunção ventricular nos dias a semanas após paratireoidectomia por doença óssea de alto turnover — suspeitar de síndrome do osso faminto",
+      "História de cirurgia cervical (tireoidectomia ou paratireoidectomia) não investigada em paciente com insuficiência cardíaca de etiologia indeterminada"
+    ],
+    "ambulatory_flow": [
+      "Diante de cardiomiopatia dilatada de etiologia não esclarecida, dosar cálcio ionizado como parte da investigação de rotina, ao lado de outras causas reversíveis já estabelecidas (taquicardiomiopatia, disfunção tireoidiana, deficiência nutricional)",
+      "Pesquisar ativamente sinais neuromusculares de hipocalcemia (Chvostek, Trousseau, parestesias, tetania) e história de cirurgia cervical prévia, mesmo remota",
+      "Se hipocalcemia grave confirmada, dosar PTH, magnésio e 25-hidroxivitamina D para diferenciar a etiologia",
+      "Tratar a causa de base e corrigir o cálcio (reposição oral e/ou parenteral conforme gravidade, associada a calcitriol/vitamina D ativa) em conjunto com terapia padrão de insuficiência cardíaca",
+      "Reavaliar a FEVE por ecocardiograma seriado em dias a poucas semanas após a correção — recuperação relevante da função ventricular é a expectativa terapêutica correta",
+      "Evitar avançar para investigação invasiva (biópsia endomiocárdica) ou terapias definitivas de longo prazo antes de permitir a janela de resposta à correção do cálcio, desde que o paciente esteja hemodinamicamente estável"
+    ],
+    "emergency_flow": [
+      "Reconhecer tetania, espasmo carpopedal ou convulsão associados a insuficiência cardíaca descompensada como possível manifestação de hipocalcemia grave",
+      "Solicitar cálcio ionizado e eletrocardiograma (QTc) de forma imediata",
+      "Corrigir a hipocalcemia por via intravenosa conforme gravidade, com monitorização cardíaca contínua pelo risco de arritmia durante a reposição",
+      "Investigar e corrigir magnésio concomitante, que pode perpetuar a hipocalcemia se não tratado",
+      "Manter suporte padrão de insuficiência cardíaca descompensada ou choque cardiogênico enquanto se aguarda a resposta à correção do cálcio",
+      "Encaminhar para investigação etiológica completa (PTH, história de cirurgia cervical, 25-OH-vitamina D) assim que o paciente estiver estabilizado"
+    ],
+    "tags": [
+      "hipocalcemia",
+      "hipoparatireoidismo",
+      "cardiomiopatia reversível",
+      "cálcio ionizado",
+      "PTH",
+      "vitamina D",
+      "pseudo-hipoparatireoidismo",
+      "síndrome do osso faminto",
+      "insuficiência cardíaca",
+      "cardiomiopatia dilatada",
+      "Chvostek",
+      "Trousseau",
+      "tireoidectomia",
+      "paratireoidectomia"
+    ],
+    "source_refs": [
+      "Bers DM. Cardiac excitation-contraction coupling. Nature. 2002;415(6868):198-205. DOI: 10.1038/415198a. PMID: 11805843",
+      "Slomp J, van der Voort PH, Gerritsen RT, Berk JA, Bakker AJ. Albumin-adjusted calcium is not suitable for diagnosis of hyper- and hypocalcemia in the critically ill. Crit Care Med. 2003;31(5):1389-1393. DOI: 10.1097/01.CCM.0000063044.55669.3C. PMID: 12771607",
+      "Anastasopoulou C, Goyal A, Mounica C. Hypocalcemia. StatPearls Publishing, NBK430912, atualizado 2026. PMID: 28613662",
+      "Mutlu U, Cakmak R, Sonsöz MR, Karaayvaz EB, Uzum AK, Tanakol R, Aral F. A rare cause of dilated cardiomyopathy: hypocalcemia. Arch Endocrinol Metab. 2022;66(4):582-586. DOI: 10.20945/2359-3997000000474. PMID: 35551679",
+      "Zhang W, Xue F, Bu Q, Liu X. Hypocalcemic cardiomyopathy after parathyroidectomy in a patient with uremia: a case report and literature review. J Int Med Res. 2020;48(7):300060520942115. DOI: 10.1177/0300060520942115. PMID: 32700587",
+      "Daniella RM, Ritchy R, Narindra RA, Rakotoarimanana S, Rabearivory N. Reversible dilated cardiomyopathy induced by hypocalcaemia secondary to hypoparathyroidism after total thyroidectomy: about a case. Pan Afr Med J. 2019;32:34. DOI: 10.11604/pamj.2019.32.34.13886. PMID: 31143339",
+      "Elikowski W, Małek-Elikowska M, Lachowska-Kotowska P. Severe reversible hypocalcemic cardiomyopathy diagnosed 36 years after subtotal thyroidectomy - a case report. Pol Merkur Lekarski. 2017;43(253):26-31. PMID: 28805198",
+      "Ahmad B, Hussain S, Shah J, Khan SW. Hypocalcaemia As A Rare Reversible Cause Of Dilated Cardiomyopathy. J Ayub Med Coll Abbottabad. 2023;35(Suppl 1):S810-S812. DOI: 10.55519/JAMC-S4-12192. PMID: 38406916",
+      "Rupasinghe N, Ranasinghe P, Wanninayake L. Dilated cardiomyopathy due to hypocalcaemia: a case report. J Med Case Rep. 2024;18(1):204. DOI: 10.1186/s13256-024-04505-3. PMID: 38600559",
+      "Hunter L, Ferguson R, McDevitt H. Vitamin D deficiency cardiomyopathy in Scotland: a retrospective review of the last decade. Arch Dis Child. 2020;105(9):853-856. DOI: 10.1136/archdischild-2019-317794. PMID: 32122880",
+      "Yazici MU, Kesici S, Demirbilek H, Tanyıldız M, Gumustas M, Bayrakci B. Reversible Dilated Cardiomyopathy Due to Combination of Vitamin D-Deficient Rickets and Primary Hypomagnesemia in an 11-Month-Old Infant. J Pediatr Intensive Care. 2018;7(1):46-48. DOI: 10.1055/s-0037-1602803. PMID: 31073467",
+      "Fasih A. Pseudohypoparathyroidism and Cardiomyopathy: A Case Report with a New Perspective on the Cardiovascular-Endocrine Axis with Respect to Calcium Homeostasis. Eur J Case Rep Intern Med. 2019;6(2):000993. DOI: 10.12890/2019_000993. PMID: 30931261",
+      "Batra CM, Agarwal R. Hypocalcemic Cardiomyopathy and Pseudohypoparathyroidism Due to Severe Vitamin D Deficiency. J Assoc Physicians India. 2016;64(6):74-76. PMID: 27739274",
+      "Cetani F, Bertoldo F, Bononi M, Tarallo M, Camozzi V, Cipriani C, Palermo A, Pasquali D, Zavatta G. Unveiling the complexities of hypoparathyroidism: a comprehensive review of clinical manifestations, diagnosis, and novel therapies. J Endocrinol Invest. 2026;49(4):725-746. DOI: 10.1007/s40618-025-02760-9. PMID: 41335198",
+      "Noori W, Sibley CT, Chirikov VV, Roney K, Smith AR. Risk of Cardiovascular Events, Infections, and Renal Complications in Postsurgical Chronic Hypoparathyroidism: A US Medicare Claims Retrospective Analysis. Adv Ther. 2025;42(10):4866-4880. DOI: 10.1007/s12325-025-03264-x. PMID: 40531442",
+      "Khatua B, Yaron JR, El-Kurdi B, Kostenko S, Papachristou GI, Singh VP. Ringer's Lactate Prevents Early Organ Failure by Providing Extracellular Calcium. J Clin Med. 2020;9(1):263. PMID: 31963691"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave"
+    ],
+    "patient_material_slug": null
   }
 ]
