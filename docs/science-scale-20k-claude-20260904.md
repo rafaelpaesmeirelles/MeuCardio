@@ -478,3 +478,22 @@ daquele tipo.
 | Trilhas | 300 | 2 | 298 |
 | Doenças especializadas | 200 | 2 (3 descartados por colisão) | 198 |
 | **Total** | **4.900** | **71** | **4.829** |
+
+## Lote 26 — concluído (commit 706b1136)
+
+- **doencas**: +2 — `fibroelastoma-papilar-cardiaco` (pareado com lote 22), `sindrome-poems` (pareado com lote 21).
+- **checklists**: +1 — `vigilancia-de-reativacao-da-doenca-de-chagas-pos-transplante-cardiaco` (pareado com lote 25).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0.
+- **Total canônico**: 10.263 (10.189 revisado + 74 pendente_revisao).
+
+### Status consolidado (após Lote 26)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 9 | 2.391 |
+| Casos clínicos | 900 | 28 | 872 |
+| Checklists | 600 | 12 | 588 |
+| Materiais-paciente | 500 | 21 | 479 |
+| Trilhas | 300 | 2 | 298 |
+| Doenças especializadas | 200 | 4 (3 descartados por colisão) | 196 |
+| **Total** | **4.900** | **76** | **4.824** |
