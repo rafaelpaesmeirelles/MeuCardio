@@ -65,3 +65,37 @@ agente de inventário para cruzar `doencas/metadados.json` por
 resistente, protocolo 0h/1h, ferro IV em IC, miocardite pós-vacinal)
 já estão cobertos em profundidade, confirmando que o corpus está denso;
 lacunas reais exigem varredura estruturada, não suposição por tema.
+
+## Lote 2 — concluído (commit `feb3c63c`, 30/08/2026)
+
+7 itens novos: 3 casos clínicos, 2 materiais-paciente, 2 documentos.
+Ver mensagem de commit para lista completa e PMIDs-chave.
+
+**Achado crítico de processo**: 3 itens de `doenças especializadas`
+planejados (choque-cardiogênico, dislipidemia, cardiomiopatia-chagásica-
+crônica) foram descartados após verificação mais profunda — colidiam
+com `doencas/fragmentos/*.json` (overlay de composição que o inventário
+inicial de lacunas não havia verificado, só `doencas/metadados.json`).
+`choque-cardiogenico` e `dislipidemia` são colisão exata de slug com
+fragments já "completo"; `cardiomiopatia-chagasica-cronica` é duplicata
+semântica de `cardiomiopatia-chagasica` já existente. **Regra adicionada
+para todos os lotes futuros de doenças**: checar `doencas/metadados.json`
++ `doencas/fragmentos/` + `doencas/correcoes/` antes de produzir, e o
+equivalente para `material-paciente/correcoes/` (verificado limpo neste
+lote). `casos-clinicos/`, `checklists/`, `trilhas/` e `content/` não têm
+overlay — checagem contra o `metadados.json`/arquivos `.md` é suficiente.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`;
+`content_inventory.py --strict` → exit 0, 10.204 registros totais.
+
+**Total canônico projetado após Lote 2**: 10.204 (10.189 revisado +
+15 pendente_revisao desta branch: 8 do Lote 1 + 7 do Lote 2).
+
+## Lote 3 (planejado)
+
+Cota de "doenças especializadas" (200 pedidos, 103 existentes) precisa
+de nova varredura que já cruze `fragmentos/`+`correcoes/` desde o início
+para não repetir o retrabalho deste lote. Candidatos a reverificar com
+o método correto: síndrome aórtica aguda, DAP/claudicação intermitente,
+crise hipertensiva (separada da urgência), tako-tsubo, apneia do sono
+e coração, obesidade e risco cardiovascular, tabagismo e DCV.
