@@ -290,3 +290,11 @@ registros totais.
 
 **Total canônico projetado após Lote 17**: 10.239 (10.189 revisado +
 50 pendente_revisao nesta branch).
+
+## Lote 18 — concluído (commit ver git log, 30/08/2026)
+
+2 itens (Löffler/hipereosinofílica, hemocromatose). Gates limpos,
+10.241 registros totais.
+
+**Total canônico projetado após Lote 18**: 10.241 (10.189 revisado +
+52 pendente_revisao nesta branch).
