@@ -171,6 +171,11 @@ jobs:
             await page.waitForTimeout(350);
           }
 
+          async function certifyDefaultPortal(modeLabel, expectedLabel) {
+            const activeLabel = (await page.locator('.spaces-door.is-active').first().textContent())?.trim() || '';
+            if (!activeLabel.includes(expectedLabel)) failures.push(`${modeLabel}: portal padrão deveria ser ${expectedLabel}, encontrado ${activeLabel || 'nenhum'}`);
+          }
+
           async function measure(mode) {
             const metrics = await page.evaluate((modeName) => {
               const q = (selector) => document.querySelector(selector);
@@ -248,9 +253,15 @@ jobs:
 
           try {
             await login();
-            await choose('Completo', 'Hospital');
+            await choose('Completo');
+            await certifyDefaultPortal('complete-default', 'Consultório');
+            await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
+            await page.waitForTimeout(350);
             certify(await measure('complete'), 'complete');
-            await choose('Essencial', 'Hospital');
+            await choose('Essencial');
+            await certifyDefaultPortal('essential-default', 'Consultório');
+            await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
+            await page.waitForTimeout(350);
             certify(await measure('essential'), 'essential');
             await choose('Ciência & Ensino', 'Evidências');
             certify(await measure('scientific'), 'scientific');
