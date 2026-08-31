@@ -1,0 +1,133 @@
+/* ======================================================================
+   CorVIA Cardiology Spaces — HOSPITAL
+   Round, Emergência, IA para Exames, Heart Team e Checklists.
+   O azul define o ambiente; vermelho/âmbar/verde permanecem reservados a
+   risco, falha e validação clínica.
+   ====================================================================== */
+
+/* ------------------------------- Round ------------------------------- */
+body.corvia-space--hospital .clinical-os .ccc-patient-command{color:#dbe8f3}
+body.corvia-space--hospital .clinical-os .pc-command{
+  overflow:hidden;
+  background:linear-gradient(155deg,rgba(var(--space-rgb),.055),rgba(4,16,31,.92))!important;
+  border:1px solid rgba(var(--space-rgb),.18)!important;
+  border-radius:15px!important;
+  box-shadow:0 24px 64px -48px rgba(var(--space-rgb),.62)!important;
+}
+body.corvia-space--hospital .clinical-os .pc-command__header{
+  position:relative;
+  background:radial-gradient(circle at 12% 16%,rgba(var(--space-rgb),.15),transparent 15rem),linear-gradient(110deg,rgba(7,27,52,.98),rgba(3,14,28,.96))!important;
+  border-bottom:1px solid rgba(var(--space-rgb),.13)!important;
+}
+body.corvia-space--hospital .clinical-os .pc-command__header::before{position:absolute;top:0;right:17%;left:17%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.65),transparent);box-shadow:0 0 16px rgba(var(--space-rgb),.25);content:""}
+body.corvia-space--hospital .clinical-os .pc-command__avatar{color:#f5fbff!important;background:rgba(var(--space-rgb),.14)!important;border-color:rgba(var(--space-rgb),.36)!important;box-shadow:0 0 24px rgba(var(--space-rgb),.10)!important}
+body.corvia-space--hospital .clinical-os .pc-command__identity h1{color:#f3f9ff!important;text-shadow:0 0 18px rgba(var(--space-rgb),.10)}
+body.corvia-space--hospital .clinical-os .pc-command__identity :where(p,small){color:#8298ad!important}
+body.corvia-space--hospital .clinical-os .pc-command__quick-icons :where(a,button){color:#b8cce0!important;background:rgba(7,25,47,.70)!important;border-color:rgba(var(--space-rgb),.14)!important}
+body.corvia-space--hospital .clinical-os .pc-command__quick-icons :where(a,button):hover{color:#fff!important;background:rgba(var(--space-rgb),.08)!important;border-color:rgba(var(--space-rgb),.38)!important}
+body.corvia-space--hospital .clinical-os .pc-command__tabs{background:rgba(3,15,29,.76)!important;border-color:rgba(var(--space-rgb),.10)!important}
+body.corvia-space--hospital .clinical-os .pc-command__tabs :where(button,a){color:#839aad!important;border-color:transparent!important}
+body.corvia-space--hospital .clinical-os .pc-command__tabs :where(button,a).is-active{color:#f4fbff!important;background:rgba(var(--space-rgb),.13)!important;border-color:rgba(var(--space-rgb),.34)!important;box-shadow:0 0 18px rgba(var(--space-rgb),.06)!important}
+body.corvia-space--hospital .clinical-os :where(.pc-command__clinical-summary,.pc-command__meds,.pc-command__actions,.ccc-patient-command__manager){background:linear-gradient(145deg,rgba(var(--space-rgb),.035),rgba(4,17,32,.86))!important;border-color:rgba(var(--space-rgb),.13)!important;box-shadow:inset 0 1px rgba(255,255,255,.016),0 18px 44px -40px rgba(var(--space-rgb),.48)!important}
+body.corvia-space--hospital .clinical-os .pc-command__clinical-summary>small,
+body.corvia-space--hospital .clinical-os .pc-command__meds>small,
+body.corvia-space--hospital .clinical-os .pc-command__actions>small{color:var(--space-accent)!important;letter-spacing:.10em}
+body.corvia-space--hospital .clinical-os .pc-command__columns section{background:rgba(3,15,29,.48)!important;border-color:rgba(var(--space-rgb),.08)!important}
+body.corvia-space--hospital .clinical-os .pc-command__actions :where(a,button){color:#b7c9dc!important;background:rgba(5,22,41,.58)!important;border-color:rgba(var(--space-rgb),.11)!important}
+body.corvia-space--hospital .clinical-os .pc-command__actions :where(a,button):hover{color:#fff!important;background:rgba(var(--space-rgb),.07)!important;border-color:rgba(var(--space-rgb),.31)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__manager-head .eyebrow{color:var(--space-accent)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__active-row{background:rgba(4,18,34,.66)!important;border-color:rgba(var(--space-rgb),.085)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__active-row:hover{background:rgba(var(--space-rgb),.045)!important;border-color:rgba(var(--space-rgb),.18)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__active-row.is-selected{background:linear-gradient(90deg,rgba(var(--space-rgb),.15),rgba(var(--space-rgb),.04))!important;border-color:rgba(var(--space-rgb),.30)!important;box-shadow:inset 2px 0 var(--space-accent)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__bed{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.075)!important;border-color:rgba(var(--space-rgb),.20)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__clinical{margin-top:14px;padding:14px;background:rgba(3,15,29,.42)!important;border:1px solid rgba(var(--space-rgb),.09)!important;border-radius:14px!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__clinical>.eyebrow{color:var(--space-accent)!important}
+body.corvia-space--hospital .clinical-os .ccc-patient-command__clinical .cartao{background:linear-gradient(145deg,rgba(var(--space-rgb),.03),rgba(4,17,31,.86))!important;border-color:rgba(var(--space-rgb),.13)!important}
+
+/* ----------------------------- Emergência ---------------------------- */
+body.corvia-route--emergencia .clinical-os .emerg{color:#dce8f5;background:transparent!important}
+body.corvia-route--emergencia .clinical-os .emerg__topo{background:linear-gradient(90deg,rgba(var(--space-rgb),.09),rgba(3,14,28,.86))!important;border-color:rgba(var(--space-rgb),.18)!important}
+body.corvia-route--emergencia .clinical-os .emerg__marca{color:#dceaff!important;letter-spacing:.13em;text-transform:uppercase}
+body.corvia-route--emergencia .clinical-os .emerg__offline{color:#f2c978!important}
+body.corvia-route--emergencia .clinical-os .emerg__aviso,
+body.corvia-route--emergencia .clinical-os .emerg__busca{background:linear-gradient(145deg,rgba(var(--space-rgb),.035),rgba(4,17,31,.88))!important;border-color:rgba(var(--space-rgb),.14)!important}
+body.corvia-route--emergencia .clinical-os .emerg__alvo{color:#d6e4f2!important;background:linear-gradient(145deg,rgba(var(--space-rgb),.035),rgba(4,17,31,.88))!important;border-color:rgba(var(--space-rgb),.13)!important}
+body.corvia-route--emergencia .clinical-os .emerg__alvo:hover{background:rgba(var(--space-rgb),.07)!important;border-color:rgba(var(--space-rgb),.36)!important;box-shadow:0 0 24px rgba(var(--space-rgb),.055)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__hero{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(var(--space-rgb),.14),transparent 18rem),linear-gradient(105deg,rgba(7,27,52,.98),rgba(3,14,28,.96))!important;border-color:rgba(var(--space-rgb),.22)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__hero::before{position:absolute;top:0;right:18%;left:18%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.65),transparent);content:""}
+body.corvia-route--emergencia .clinical-os .emerg-command__hero>small{color:#8fb2e8!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__hero h1{color:#f5f9ff!important;text-shadow:0 0 20px rgba(var(--space-rgb),.10)}
+body.corvia-route--emergencia .clinical-os .emerg__secao{background:rgba(4,17,31,.78)!important;border-color:rgba(var(--space-rgb),.10)!important}
+body.corvia-route--emergencia .clinical-os .emerg__secaoTitulo{color:#b7c9dd!important;background:transparent!important}
+body.corvia-route--emergencia .clinical-os .emerg__secaoTitulo.aberta{color:#f5fbff!important;background:rgba(var(--space-rgb),.07)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__step-number{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.08)!important;border-color:rgba(var(--space-rgb),.24)!important}
+body.corvia-route--emergencia .clinical-os .emerg__corpo{color:#b7c8d7!important;border-top-color:rgba(var(--space-rgb),.08)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__quick{background:linear-gradient(180deg,rgba(7,25,47,.88),rgba(3,14,27,.94))!important;border-color:rgba(var(--space-rgb),.15)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__quick a{color:#b9cde2!important;background:rgba(4,18,34,.56)!important;border-color:rgba(var(--space-rgb),.10)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__quick a:hover{color:#fff!important;background:rgba(var(--space-rgb),.07)!important;border-color:rgba(var(--space-rgb),.32)!important}
+body.corvia-route--emergencia .clinical-os :where(.emerg__erro,.emerg__lacuna){color:#ffd7db!important;background:rgba(116,27,44,.22)!important;border-color:rgba(255,95,109,.34)!important}
+body.corvia-route--emergencia .clinical-os .emerg-command__footer{border-color:rgba(var(--space-rgb),.12)!important;background:rgba(3,14,27,.78)!important}
+
+/* --------------------------- IA para Exames -------------------------- */
+body.corvia-space--hospital .clinical-os .ceai{color:#dce8f3}
+body.corvia-space--hospital .clinical-os .ceai__hero{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(var(--space-rgb),.14),transparent 18rem),linear-gradient(105deg,rgba(7,27,52,.98),rgba(3,14,28,.96))!important;border-color:rgba(var(--space-rgb),.22)!important;box-shadow:0 20px 52px -42px rgba(var(--space-rgb),.65)!important}
+body.corvia-space--hospital .clinical-os .ceai__hero::before{position:absolute;top:0;right:18%;left:18%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.66),transparent);content:""}
+body.corvia-space--hospital .clinical-os .ceai__hero-icon{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.08)!important;border-color:rgba(var(--space-rgb),.28)!important;box-shadow:0 0 20px rgba(var(--space-rgb),.08)!important}
+body.corvia-space--hospital .clinical-os .ceai__hero .eyebrow{color:var(--space-accent)!important}
+body.corvia-space--hospital .clinical-os .ceai__badge{color:#ddebff!important;background:rgba(var(--space-rgb),.09)!important;border-color:rgba(var(--space-rgb),.25)!important}
+body.corvia-space--hospital .clinical-os .ceai__privacy{background:linear-gradient(90deg,rgba(var(--space-rgb),.07),rgba(4,17,31,.76))!important;border-color:rgba(var(--space-rgb),.15)!important}
+body.corvia-space--hospital .clinical-os :where(.ceai__form,.ceai__files,.ceai__drop,.ceai__consent,.ceai__analysis,.ceai__result,.ceai__block,.ceai__sources){background:linear-gradient(145deg,rgba(var(--space-rgb),.03),rgba(4,17,31,.86))!important;border-color:rgba(var(--space-rgb),.13)!important}
+body.corvia-space--hospital .clinical-os .ceai__drop{box-shadow:inset 0 0 40px rgba(var(--space-rgb),.025)!important}
+body.corvia-space--hospital .clinical-os .ceai__drop.has-files{border-color:rgba(var(--space-rgb),.32)!important;background:rgba(var(--space-rgb),.045)!important}
+body.corvia-space--hospital .clinical-os .ceai__drop-icon{color:var(--space-accent)!important;filter:drop-shadow(0 0 7px rgba(var(--space-rgb),.28))}
+body.corvia-space--hospital .clinical-os .ceai__source-actions .ceai__camera{box-shadow:0 0 20px rgba(var(--space-rgb),.08)!important}
+body.corvia-space--hospital .clinical-os .ceai__file{background:rgba(3,15,29,.58)!important;border-color:rgba(var(--space-rgb),.095)!important}
+body.corvia-space--hospital .clinical-os .ceai__block h3{color:#e9f2ff!important}
+body.corvia-space--hospital .clinical-os .ceai__block.is-alert{background:rgba(116,27,44,.18)!important;border-color:rgba(255,95,109,.30)!important}
+body.corvia-space--hospital .clinical-os .ceai__error{color:#ffd4da!important;background:rgba(116,27,44,.19)!important;border-color:rgba(255,95,109,.32)!important}
+
+/* ---------------------------- Heart Team ----------------------------- */
+body.corvia-space--hospital .clinical-os :where(.cai-shell,.cai-page,.cai-result){color:#dce8f3}
+body.corvia-space--hospital .clinical-os :where(.cai-hero,.cai-case-header){position:relative;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(var(--space-rgb),.14),transparent 18rem),linear-gradient(105deg,rgba(7,27,52,.98),rgba(3,14,28,.96))!important;border-color:rgba(var(--space-rgb),.22)!important}
+body.corvia-space--hospital .clinical-os :where(.cai-hero,.cai-case-header)::before{position:absolute;top:0;right:18%;left:18%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.66),transparent);content:""}
+body.corvia-space--hospital .clinical-os :where(.cai-card,.cai-panel,.cai-form,.cai-opinion,.cai-suggestion,.cai-source,.cai-result-section,.cai-final-review,.cai-final-review-record){background:linear-gradient(145deg,rgba(var(--space-rgb),.03),rgba(4,17,31,.87))!important;border-color:rgba(var(--space-rgb),.13)!important;box-shadow:inset 0 1px rgba(255,255,255,.016),0 18px 46px -41px rgba(var(--space-rgb),.50)!important}
+body.corvia-space--hospital .clinical-os .cai-agent-avatar{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.08)!important;border-color:rgba(var(--space-rgb),.22)!important}
+body.corvia-space--hospital .clinical-os .cai-kicker{color:var(--space-accent)!important;letter-spacing:.12em}
+body.corvia-space--hospital .clinical-os .cai-related-link{color:#b9cde2!important;border-color:rgba(var(--space-rgb),.14)!important;background:rgba(var(--space-rgb),.05)!important}
+body.corvia-space--hospital .clinical-os .cai-source:hover{background:rgba(var(--space-rgb),.055)!important;border-color:rgba(var(--space-rgb),.27)!important}
+body.corvia-space--hospital .clinical-os .cai-suggestion footer{border-top-color:rgba(var(--space-rgb),.08)!important}
+body.corvia-space--hospital .clinical-os :where(.cai-alert--error,.cai-result-blocked,.cai-error){background:rgba(116,27,44,.20)!important;border-color:rgba(255,95,109,.31)!important;color:#ffd4da!important}
+body.corvia-space--hospital .clinical-os .cai-final-review{border-color:rgba(240,187,83,.30)!important;box-shadow:inset 2px 0 rgba(240,187,83,.54)!important}
+body.corvia-space--hospital .clinical-os .cai-final-review-record.is-accepted{border-color:rgba(72,211,157,.30)!important;box-shadow:inset 2px 0 rgba(72,211,157,.62)!important}
+body.corvia-space--hospital .clinical-os .cai-final-review-record.is-rejected{border-color:rgba(255,95,109,.31)!important;box-shadow:inset 2px 0 rgba(255,95,109,.62)!important}
+
+/* ----------------------------- Checklists ---------------------------- */
+body.corvia-space--hospital .clinical-os .checklist__abertas{display:grid!important;gap:7px!important;padding:0!important;list-style:none!important}
+body.corvia-space--hospital .clinical-os .checklist__abertas li{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;padding:11px 12px!important;background:linear-gradient(145deg,rgba(var(--space-rgb),.03),rgba(4,17,31,.84))!important;border:1px solid rgba(var(--space-rgb),.11)!important;border-radius:10px!important}
+body.corvia-space--hospital .clinical-os .checklist__abertas li:hover{border-color:rgba(var(--space-rgb),.25)!important;background:rgba(var(--space-rgb),.045)!important}
+body.corvia-space--hospital .clinical-os .checklist__progresso{color:#7f97aa!important}
+body.corvia-space--hospital .clinical-os .checklist__progresso em{color:#f0bd70!important;font-style:normal!important}
+body.corvia-space--hospital .clinical-os .painel__funcoes{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))!important;gap:10px!important}
+body.corvia-space--hospital .clinical-os .painel__funcao{background:linear-gradient(145deg,rgba(var(--space-rgb),.035),rgba(4,17,31,.86))!important;border-color:rgba(var(--space-rgb),.13)!important}
+body.corvia-space--hospital .clinical-os .painel__funcao .eyebrow{color:var(--space-accent)!important}
+body.corvia-space--hospital .clinical-os .checklist__contador{display:flex!important;align-items:center!important;gap:9px!important;margin:12px 0!important;padding:11px 13px!important;color:#9eb2c4!important;background:linear-gradient(90deg,rgba(var(--space-rgb),.08),rgba(4,17,31,.72))!important;border:1px solid rgba(var(--space-rgb),.15)!important;border-radius:10px!important}
+body.corvia-space--hospital .clinical-os .checklist__contador>strong{color:var(--space-accent)!important;font-size:1.05rem!important}
+body.corvia-space--hospital .clinical-os .checklist__pendente{margin-left:auto;color:#f2c475!important}
+body.corvia-space--hospital .clinical-os .checklist__grupo{margin-top:12px!important;padding:14px!important;background:linear-gradient(145deg,rgba(var(--space-rgb),.028),rgba(4,17,31,.84))!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-radius:12px!important}
+body.corvia-space--hospital .clinical-os .checklist__grupo h3{color:#e7f0fb!important;border-bottom:1px solid rgba(var(--space-rgb),.08)!important;padding-bottom:7px!important}
+body.corvia-space--hospital .clinical-os .checklist__item{display:grid!important;grid-template-columns:auto 1fr!important;gap:10px!important;padding:10px!important;color:#b8cad9!important;background:rgba(3,15,29,.46)!important;border:1px solid rgba(var(--space-rgb),.075)!important;border-radius:9px!important}
+body.corvia-space--hospital .clinical-os .checklist__item:hover{background:rgba(var(--space-rgb),.035)!important;border-color:rgba(var(--space-rgb),.16)!important}
+body.corvia-space--hospital .clinical-os .checklist__item--ok{background:rgba(72,211,157,.045)!important;border-color:rgba(72,211,157,.19)!important}
+body.corvia-space--hospital .clinical-os .checklist__obrig{color:#f2c475!important;background:rgba(240,187,83,.08)!important;border:1px solid rgba(240,187,83,.18)!important;border-radius:999px!important;padding:2px 6px!important;font-style:normal!important}
+body.corvia-space--hospital .clinical-os .checklist__origem-item{color:#6f8799!important}
+body.corvia-space--hospital .clinical-os .checklist__acoes{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important;margin-top:12px!important;padding:11px!important;background:rgba(3,15,29,.45)!important;border-top:1px solid rgba(var(--space-rgb),.08)!important}
+body.corvia-space--hospital .clinical-os .checklist__nota{color:#8ca1b2!important}
+
+@media(max-width:900px){
+  body.corvia-space--hospital .clinical-os .pc-command__body,
+  body.corvia-space--hospital .clinical-os .ceai__workspace,
+  body.corvia-space--hospital .clinical-os .emerg-command__layout{grid-template-columns:1fr!important}
+  body.corvia-space--hospital .clinical-os .pc-command__tabs{overflow-x:auto!important}
+  body.corvia-space--hospital .clinical-os .checklist__abertas li{align-items:flex-start!important;flex-direction:column!important}
+  body.corvia-space--hospital .clinical-os .checklist__pendente{margin-left:0}
+}
