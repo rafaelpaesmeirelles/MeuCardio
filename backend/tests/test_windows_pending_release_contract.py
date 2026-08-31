@@ -52,6 +52,22 @@ def test_android_release_recreates_capacitor_assets_before_sync():
     assert build.index(assets) < build.index("npx cap sync android")
 
 
+def test_android_release_exports_sdk_for_clean_worktree_gradle():
+    build = _read("ops/build-android-apk.sh")
+    sdk_declaration = (
+        'readonly ANDROID_SDK_DIR="${ANDROID_SDK_ROOT:-'
+        '${ANDROID_HOME:-/opt/android-sdk}}"'
+    )
+    export_home = 'export ANDROID_HOME="$ANDROID_SDK_DIR"'
+    export_root = 'export ANDROID_SDK_ROOT="$ANDROID_SDK_DIR"'
+    gradle = "./gradlew assembleRelease"
+    assert sdk_declaration in build
+    assert export_home in build
+    assert export_root in build
+    assert build.index(export_home) < build.index(gradle)
+    assert build.index(export_root) < build.index(gradle)
+
+
 def test_windows_manual_release_stays_fail_closed_and_strictly_signed():
     workflow = _read(".github/workflows/native-installers.yml")
     entrypoint = _read("ops/remote-deploy-entrypoint.sh")
