@@ -1,0 +1,353 @@
+/* ======================================================================
+   CorVIA Cardiology Spaces — INTERIORES APROVADOS
+   Contrato visual global das rotas autenticadas.
+
+   A imagem aprovada é a fonte de verdade: canvas espacial escuro, coração
+   holográfico ao fundo, rail compacto, superfícies translúcidas, linhas finas,
+   hierarquia ciano/azul/violeta/rosa/teal e conteúdo clínico sempre no centro.
+
+   Esta folha é carregada depois das linguagens históricas e, deliberadamente,
+   normaliza TODAS as páginas internas sem alterar semântica, dados ou ações.
+   ====================================================================== */
+
+:root{
+  --spaces-interior-nav:166px;
+  --spaces-interior-rail:232px;
+  --spaces-interior-top:68px;
+}
+
+/* ----------------------------------------------------------------------
+   CONTEXTO DE ESPAÇO POR ROTA
+   ---------------------------------------------------------------------- */
+.clinical-os{
+  --space-rgb:43,216,225;
+  --space-accent:#2bd8e1;
+  --space-accent-2:#69edf3;
+  --space-violet:#a06df2;
+  --space-rose:#f04f8b;
+  --space-blue:#4b82ff;
+  --space-teal:#37c7c0;
+  --space-panel:rgba(5,22,37,.88);
+  --space-panel-strong:rgba(7,28,47,.95);
+  --space-line:rgba(91,155,198,.20);
+  --space-line-soft:rgba(91,155,198,.105);
+  --space-muted:#72899c;
+  --space-text:#eaf4f7;
+  --ccc-nav-w:var(--spaces-interior-nav);
+  --cos-rail:var(--spaces-interior-rail);
+  --cos-topbar:var(--spaces-interior-top);
+  isolation:isolate;
+  color:var(--space-text);
+  background:
+    radial-gradient(circle at 50% 44%,rgba(var(--space-rgb),.085),transparent 31rem),
+    radial-gradient(circle at 78% 68%,rgba(142,78,226,.055),transparent 26rem),
+    linear-gradient(150deg,#01060d 0%,#03111e 52%,#020812 100%)!important;
+}
+body.corvia-route--pacientes .clinical-os,
+body.corvia-route--emergencia .clinical-os,
+body.corvia-route--telediagnostico .clinical-os{--space-rgb:75,130,255;--space-accent:#4b82ff;--space-accent-2:#77a2ff}
+body.corvia-route--conhecimento .clinical-os{--space-rgb:160,109,242;--space-accent:#a06df2;--space-accent-2:#c19cff}
+body.corvia-route--ferramentas .clinical-os{--space-rgb:240,79,139;--space-accent:#f04f8b;--space-accent-2:#ff8ab3}
+body.corvia-route--admin .clinical-os,
+body.corvia-route--conta .clinical-os,
+body.corvia-route--integracoes .clinical-os,
+body.corvia-route--rede .clinical-os,
+body.corvia-route--mail .clinical-os{--space-rgb:55,199,192;--space-accent:#37c7c0;--space-accent-2:#77ded9}
+body.corvia-route--agenda .clinical-os,
+body.corvia-route--prescricao .clinical-os,
+body.corvia-route--documentos .clinical-os,
+body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent:#2bd8e1;--space-accent-2:#69edf3}
+
+/* Coração holográfico permanente e campo estelar discreto. */
+.clinical-os::before{
+  position:fixed;
+  z-index:-2;
+  top:50%;
+  left:54%;
+  width:min(49vw,650px);
+  aspect-ratio:1;
+  background:url('/corvia-mark-canonical.svg') center/contain no-repeat;
+  opacity:.055;
+  filter:drop-shadow(0 0 42px rgba(var(--space-rgb),.34)) saturate(1.12);
+  content:"";
+  transform:translate(-50%,-50%) scale(1.18);
+  pointer-events:none;
+}
+.clinical-os::after{
+  position:fixed;
+  z-index:-3;
+  inset:0;
+  opacity:.45;
+  background-image:
+    radial-gradient(circle at 12% 18%,rgba(198,235,255,.58) 0 .7px,transparent 1px),
+    radial-gradient(circle at 68% 12%,rgba(168,211,255,.44) 0 .7px,transparent 1px),
+    radial-gradient(circle at 84% 62%,rgba(218,194,255,.42) 0 .7px,transparent 1px),
+    radial-gradient(circle at 36% 84%,rgba(142,238,244,.38) 0 .7px,transparent 1px),
+    linear-gradient(rgba(72,139,182,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(72,139,182,.014) 1px,transparent 1px);
+  background-size:220px 220px,310px 310px,270px 270px,350px 350px,44px 44px,44px 44px;
+  content:"";
+  pointer-events:none;
+}
+
+/* ----------------------------------------------------------------------
+   RAIL ESQUERDO — compacto, útil e no mesmo desenho da imagem aprovada
+   ---------------------------------------------------------------------- */
+@media(min-width:901px){
+  .clinical-os .cos-sidebar{display:none!important}
+  .clinical-os .cos-shell{margin-left:var(--spaces-interior-nav)!important}
+  .ccc-nav--reference{
+    width:var(--spaces-interior-nav)!important;
+    background:
+      radial-gradient(circle at 50% 8%,rgba(var(--space-rgb),.075),transparent 12rem),
+      linear-gradient(180deg,rgba(5,22,37,.98),rgba(2,12,21,.99))!important;
+    border-right:1px solid rgba(var(--space-rgb),.13)!important;
+    box-shadow:18px 0 54px rgba(0,0,0,.18)!important;
+  }
+  .ccc-nav--reference .ccc-nav__brand{min-height:74px!important;padding:10px 9px!important;gap:7px!important}
+  .ccc-nav--reference .ccc-nav__brand-mark{width:34px!important;height:34px!important;flex:0 0 34px!important}
+  .ccc-nav--reference .ccc-nav__brand-mark img{width:32px!important;height:32px!important;filter:drop-shadow(0 0 8px rgba(var(--space-rgb),.24))!important}
+  .ccc-nav--reference .ccc-nav__brand-copy strong{font-size:.98rem!important}
+  .ccc-nav--reference .ccc-nav__brand-copy small{font-size:.41rem!important;letter-spacing:.13em!important;white-space:normal!important}
+  .ccc-nav--reference .ccc-nav__scroll{padding:7px 6px 9px!important}
+  .ccc-nav--reference .ccc-nav__home{min-height:31px!important;margin-bottom:5px!important}
+  .ccc-nav--reference .ccc-nav__section{margin-top:4px!important;padding-top:5px!important;border-top-color:rgba(var(--space-rgb),.06)!important}
+  .ccc-nav--reference .ccc-nav__section>p{margin:0 0 2px 7px!important;color:#5f7789!important;font-size:.41rem!important;letter-spacing:.085em!important}
+  .ccc-nav--reference .ccc-nav__item{min-height:25px!important;gap:6px!important;padding:4px 6px!important;color:#9eb2c0!important;border-radius:7px!important;font-size:.51rem!important;line-height:1.12!important}
+  .ccc-nav--reference .ccc-nav__item svg{width:12px!important;height:12px!important;color:#6f8e9f!important}
+  .ccc-nav--reference .ccc-nav__item:hover{color:#ecf7fa!important;background:rgba(var(--space-rgb),.045)!important}
+  .ccc-nav--reference .ccc-nav__item.is-active{
+    color:#f4fdff!important;
+    background:linear-gradient(90deg,rgba(var(--space-rgb),.24),rgba(var(--space-rgb),.065))!important;
+    box-shadow:inset 2px 0 var(--space-accent),0 0 20px rgba(var(--space-rgb),.045)!important;
+  }
+  .ccc-nav--reference .ccc-nav__item.is-active svg{color:var(--space-accent)!important;filter:drop-shadow(0 0 5px rgba(var(--space-rgb),.3))}
+  .ccc-nav--reference .ccc-nav__footer{min-height:54px!important;padding:7px 8px!important;background:rgba(0,0,0,.09)!important}
+  .ccc-nav--reference .ccc-nav__plan-photo,.ccc-nav--reference .ccc-nav__plan-avatar{width:29px!important;height:29px!important;flex-basis:29px!important}
+  .ccc-nav--reference .ccc-nav__plan-copy strong{font-size:.49rem!important}.ccc-nav--reference .ccc-nav__plan-copy small{font-size:.4rem!important}
+}
+
+/* ----------------------------------------------------------------------
+   TOPBAR E WORKSPACE
+   ---------------------------------------------------------------------- */
+.clinical-os .cos-topbar{
+  min-height:var(--spaces-interior-top)!important;
+  padding:10px 16px!important;
+  background:linear-gradient(180deg,rgba(2,11,20,.94),rgba(4,18,30,.89))!important;
+  border-bottom:1px solid rgba(var(--space-rgb),.12)!important;
+  box-shadow:0 12px 38px rgba(0,0,0,.12)!important;
+  backdrop-filter:blur(20px) saturate(125%)!important;
+}
+.clinical-os .cos-command-mini{
+  width:min(690px,100%)!important;
+  min-height:43px!important;
+  color:#8298a9!important;
+  background:linear-gradient(180deg,rgba(9,31,50,.78),rgba(5,20,35,.82))!important;
+  border:1px solid rgba(var(--space-rgb),.15)!important;
+  border-radius:11px!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.025),0 10px 30px -24px rgba(var(--space-rgb),.4)!important;
+}
+.clinical-os .cos-command-mini:focus-within{border-color:rgba(var(--space-rgb),.5)!important;box-shadow:0 0 0 3px rgba(var(--space-rgb),.055),0 0 28px rgba(var(--space-rgb),.07)!important}
+.clinical-os .cos-command-mini input{color:#eaf6f9!important}.clinical-os .cos-command-mini input::placeholder{color:#657d8f!important}
+.clinical-os .cos-command-mini button{color:#dffcff!important;background:rgba(var(--space-rgb),.105)!important}
+.clinical-os .cos-topbar__icon,.clinical-os .cos-account__trigger{
+  color:#b9cbd6!important;background:rgba(7,25,41,.66)!important;border:1px solid rgba(var(--space-rgb),.11)!important;border-radius:10px!important
+}
+.clinical-os .cos-topbar__icon:hover,.clinical-os .cos-account__trigger:hover{color:#fff!important;border-color:rgba(var(--space-rgb),.33)!important;background:rgba(var(--space-rgb),.07)!important}
+.clinical-os .cos-account__avatar{background:linear-gradient(145deg,rgba(var(--space-rgb),.2),rgba(37,88,130,.13))!important;border-color:rgba(var(--space-rgb),.25)!important}
+
+.clinical-os .cos-workspace{
+  min-height:calc(100vh - var(--spaces-interior-top))!important;
+  grid-template-columns:minmax(0,1fr) var(--spaces-interior-rail)!important;
+  gap:16px!important;
+  padding:16px 18px 26px!important;
+  background:transparent!important;
+}
+.clinical-os .cos-content{
+  position:relative;
+  z-index:2;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0;
+  padding:0!important;
+  background:transparent!important;
+}
+.clinical-os .cos-content>.credito{opacity:.42!important}
+
+/* O rail de inteligência passa a ocupar o papel visual da coluna direita da prancha. */
+.clinical-os .cos-intelligence{
+  position:sticky!important;
+  top:calc(var(--spaces-interior-top) + 16px)!important;
+  align-self:start!important;
+  width:100%!important;
+  max-height:calc(100vh - var(--spaces-interior-top) - 32px)!important;
+  overflow:auto!important;
+  padding:14px 11px!important;
+  color:#aec0cc!important;
+  background:linear-gradient(180deg,rgba(7,25,42,.9),rgba(3,14,25,.96))!important;
+  border:1px solid rgba(var(--space-rgb),.15)!important;
+  border-radius:16px!important;
+  box-shadow:0 22px 56px -42px #000,inset 0 1px rgba(255,255,255,.02)!important;
+}
+.clinical-os .cos-intelligence :where(h2,h3,strong){color:#dce9ef!important}
+.clinical-os .cos-intelligence :where(p,small){color:#72899c!important}
+.clinical-os .cos-intelligence a{color:#a9bdc9!important;border-color:rgba(var(--space-rgb),.11)!important;background:rgba(7,25,42,.56)!important}
+.clinical-os .cos-intelligence a:hover{color:#fff!important;border-color:rgba(var(--space-rgb),.34)!important;background:rgba(var(--space-rgb),.07)!important}
+.clinical-os .cos-intelligence svg{color:var(--space-accent)!important;filter:drop-shadow(0 0 5px rgba(var(--space-rgb),.25))}
+
+/* ----------------------------------------------------------------------
+   CABEÇALHO CANÔNICO DAS PÁGINAS
+   ---------------------------------------------------------------------- */
+.clinical-os .cc-page-header{
+  position:relative!important;
+  z-index:2;
+  display:flex!important;
+  min-height:116px!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:18px!important;
+  margin:0 0 12px!important;
+  padding:18px 22px!important;
+  overflow:hidden!important;
+  background:
+    radial-gradient(circle at 14% 18%,rgba(var(--space-rgb),.13),transparent 16rem),
+    linear-gradient(105deg,rgba(7,28,47,.96),rgba(3,16,28,.96))!important;
+  border:1px solid rgba(var(--space-rgb),.23)!important;
+  border-radius:14px!important;
+  box-shadow:0 18px 45px -38px rgba(var(--space-rgb),.75),inset 0 1px rgba(255,255,255,.03)!important;
+  clip-path:polygon(1.1% 0,98.9% 0,100% 100%,0 100%)!important;
+}
+.clinical-os .cc-page-header::after{
+  position:absolute;right:-8%;bottom:-80%;width:34%;aspect-ratio:1;border:1px solid rgba(var(--space-rgb),.14);border-radius:50%;box-shadow:0 0 45px rgba(var(--space-rgb),.06);content:"";pointer-events:none
+}
+.clinical-os .cc-page-header__identity{display:flex!important;align-items:center!important;gap:14px!important;min-width:0!important}
+.clinical-os .cc-page-header__icon{
+  display:grid!important;width:46px!important;height:46px!important;place-items:center!important;flex:0 0 46px!important;color:var(--space-accent)!important;background:rgba(var(--space-rgb),.075)!important;border:1px solid rgba(var(--space-rgb),.25)!important;border-radius:12px!important;box-shadow:0 0 22px rgba(var(--space-rgb),.06)!important
+}
+.clinical-os .cc-page-header__icon svg{width:24px!important;height:24px!important;filter:drop-shadow(0 0 6px rgba(var(--space-rgb),.3))}
+.clinical-os .cc-page-header .eyebrow{margin:0 0 4px!important;color:var(--space-accent)!important;font-size:.52rem!important;font-weight:760!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+.clinical-os .cc-page-header h1{margin:0!important;color:#eef7fa!important;font-size:clamp(1.45rem,2.35vw,2.35rem)!important;font-weight:480!important;letter-spacing:-.045em!important;line-height:1.04!important;text-shadow:0 0 22px rgba(255,255,255,.025)!important}
+.clinical-os .cc-page-header__description{max-width:72ch!important;margin:6px 0 0!important;color:#7f95a6!important;font-size:.69rem!important;line-height:1.48!important}
+.clinical-os .cc-page-header__meta{margin-top:7px!important;color:#71899b!important;font-size:.6rem!important}
+.clinical-os .cc-page-header__actions{display:flex!important;align-items:center!important;gap:7px!important;flex-wrap:wrap!important;justify-content:flex-end!important}
+
+/* ----------------------------------------------------------------------
+   SEÇÕES, CARDS, MÉTRICAS, LISTAS E RELAÇÕES
+   ---------------------------------------------------------------------- */
+.clinical-os .cc-section{
+  position:relative!important;
+  margin:9px 0!important;
+  padding:15px 16px!important;
+  background:linear-gradient(145deg,rgba(7,26,43,.9),rgba(4,17,30,.93))!important;
+  border:1px solid rgba(var(--space-rgb),.13)!important;
+  border-radius:13px!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.018),0 16px 40px -36px #000!important;
+}
+.clinical-os .cc-section__heading{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;margin-bottom:10px!important;padding-bottom:9px!important;border-bottom:1px solid rgba(var(--space-rgb),.095)!important}
+.clinical-os .cc-section__heading .eyebrow{margin:0 0 3px!important;color:var(--space-accent)!important;font-size:.49rem!important;letter-spacing:.14em!important}
+.clinical-os .cc-section__heading h2{margin:0!important;color:#dfeaf0!important;font-size:.86rem!important;font-weight:650!important}
+.clinical-os .cc-section__heading p{margin:4px 0 0!important;color:#71899b!important;font-size:.61rem!important;line-height:1.45!important}
+
+.clinical-os :where(.cc-metric,.cc-context-link,.cc-empty){
+  color:#d9e8ed!important;background:linear-gradient(145deg,rgba(8,29,47,.88),rgba(4,18,31,.91))!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-radius:11px!important;box-shadow:inset 0 1px rgba(255,255,255,.016)!important
+}
+.clinical-os .cc-metric{min-height:84px!important;padding:11px!important}.clinical-os .cc-metric__top{color:#718a9a!important;font-size:.55rem!important}.clinical-os .cc-metric__top svg{color:var(--space-accent)!important}.clinical-os .cc-metric>strong{color:#eff9fb!important;font-size:1.2rem!important}.clinical-os .cc-metric>small{color:#687f90!important}
+.clinical-os .cc-context-link:hover{transform:translateY(-1px)!important;border-color:rgba(var(--space-rgb),.35)!important;background:rgba(var(--space-rgb),.06)!important}
+.clinical-os .cc-context-link>span:first-child{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.075)!important}
+.clinical-os .cc-empty{padding:24px!important;color:#91a7b5!important}
+
+/* Amplia a linguagem aprovada também às páginas antigas que ainda não usam os primitives. */
+.clinical-os .cos-content :where(
+  article,
+  [class$="__card"],[class*="__card "],[class*="-card"],
+  [class$="__panel"],[class*="__panel "],[class*="-panel"],
+  [class$="__box"],[class*="__box "],
+  [class$="__tile"],[class*="__tile "]
+){
+  border-color:rgba(var(--space-rgb),.12)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.014),0 14px 38px -36px #000!important;
+}
+.clinical-os .cos-content :where(article,[class$="__card"],[class*="__card "],[class*="-card"]):not(.cc-page-header):not(.emerg){
+  background-color:rgba(5,20,34,.82)!important;
+}
+.clinical-os .cos-content :where(article,[class$="__card"],[class*="__card "],[class*="-card"]):hover{
+  border-color:rgba(var(--space-rgb),.24)!important;
+}
+
+.clinical-os .cos-content :where(h1,h2,h3,h4){color:#e5f0f4!important}
+.clinical-os .cos-content :where(p,li,dd,figcaption){color:#8ba0ae!important}
+.clinical-os .cos-content :where(.eyebrow,[class*="__eyebrow"]){color:var(--space-accent)!important}
+.clinical-os .cos-content :where(hr){border-color:rgba(var(--space-rgb),.11)!important}
+
+/* Botões e ações — sem apagar cores semânticas de risco. */
+.clinical-os .cos-content :where(button,a)[class*="primary"],
+.clinical-os .cos-content :where(button,a)[class*="action"],
+.clinical-os .cos-content :where(button,a)[class*="cta"]{
+  border-color:rgba(var(--space-rgb),.22)!important;
+}
+.clinical-os .cos-content :where(button,a)[class*="primary"]:not([class*="danger"]):not([class*="emerg"]){
+  color:#eaffff!important;background:linear-gradient(90deg,rgba(var(--space-rgb),.23),rgba(var(--space-rgb),.09))!important;box-shadow:0 0 22px rgba(var(--space-rgb),.045)!important
+}
+
+/* Tabelas e dados clínicos. */
+.clinical-os .cos-content table{width:100%;overflow:hidden;background:rgba(4,17,29,.8)!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-collapse:separate!important;border-spacing:0!important;border-radius:10px!important}
+.clinical-os .cos-content thead{background:rgba(var(--space-rgb),.055)!important}.clinical-os .cos-content th{color:#a9bdc9!important;font-size:.58rem!important;font-weight:720!important;letter-spacing:.04em!important;border-color:rgba(var(--space-rgb),.11)!important}.clinical-os .cos-content td{color:#8ea4b2!important;border-color:rgba(var(--space-rgb),.075)!important}.clinical-os .cos-content tr:hover td{background:rgba(var(--space-rgb),.025)!important}
+
+/* Campos e controles — integra sem comprometer o contrato de contraste final. */
+.clinical-os .cos-content :where(input,textarea,select){color:#e3f0f4!important;background:rgba(5,21,36,.86)!important;border-color:rgba(var(--space-rgb),.16)!important;border-radius:9px!important}
+.clinical-os .cos-content :where(input,textarea,select):focus{border-color:rgba(var(--space-rgb),.48)!important;box-shadow:0 0 0 3px rgba(var(--space-rgb),.055)!important}
+.clinical-os .cos-content :where(input,textarea)::placeholder{color:#60798a!important}
+
+/* Chips, pills, tabs. */
+.clinical-os .cos-content :where([class*="chip"],[class*="pill"],[class*="tag"],[class*="badge"]):not(.cos-account-menu__badge){border-color:rgba(var(--space-rgb),.16)!important;background:rgba(var(--space-rgb),.055)!important;color:#9eb4c1!important}
+.clinical-os .cos-content :where([role="tab"],nav button).is-active{color:#eefcff!important;border-color:rgba(var(--space-rgb),.34)!important;background:rgba(var(--space-rgb),.09)!important;box-shadow:inset 0 -1px var(--space-accent)!important}
+
+/* ----------------------------------------------------------------------
+   DOMÍNIOS ESPECÍFICOS — mantém identidade única apesar das estruturas antigas
+   ---------------------------------------------------------------------- */
+.clinical-os :where(.mc-command,.cc-drugs-page,.agenda-page,.round-page,.emerg,.admin-page,.biblioteca,.evidence-page,.guidelines-page,.exam-page){
+  color:var(--space-text)!important;
+}
+.clinical-os .mc-command__header,.clinical-os .mc-command__tabs,.clinical-os .mc-command__primary,.clinical-os .mc-command__intelligence,.clinical-os .mc-command__facts>article{
+  background:linear-gradient(145deg,rgba(7,26,43,.92),rgba(4,17,30,.95))!important;border-color:rgba(var(--space-rgb),.14)!important
+}
+.clinical-os .mc-command__tabs button.is-active{color:var(--space-accent)!important;border-bottom-color:var(--space-accent)!important}
+.clinical-os .mc-command__prescribe{background:linear-gradient(90deg,rgba(var(--space-rgb),.24),rgba(var(--space-rgb),.10))!important;border-color:rgba(var(--space-rgb),.28)!important;color:#effeff!important}
+
+/* Emergência continua semanticamente vermelha, mas dentro do mesmo cosmos. */
+body.corvia-route--emergencia .clinical-os{--space-rgb:239,80,98;--space-accent:#ef5062;--space-accent-2:#ff8392}
+body.corvia-route--emergencia .clinical-os .cos-content .emerg{background:
+  radial-gradient(circle at 25% 5%,rgba(239,80,98,.10),transparent 20rem),
+  linear-gradient(150deg,rgba(15,12,22,.96),rgba(5,15,25,.96))!important}
+
+/* ----------------------------------------------------------------------
+   MOBILE — mesma identidade, não uma interface paralela
+   ---------------------------------------------------------------------- */
+@media(max-width:900px){
+  :root{--spaces-interior-top:66px}
+  .clinical-os::before{top:44%;left:50%;width:min(94vw,560px);opacity:.04}
+  .clinical-os .cos-shell{margin-left:0!important}
+  .clinical-os .cos-workspace{display:block!important;min-height:calc(100svh - 66px)!important;padding:10px 12px 88px!important}
+  .clinical-os .cos-content{width:100%!important}
+  .clinical-os .cos-intelligence{position:relative!important;top:auto!important;max-height:none!important;margin-top:10px!important;border-radius:13px!important}
+  .clinical-os .cos-topbar{min-height:66px!important;padding:8px 10px!important;background:rgba(2,11,19,.94)!important}
+  .clinical-os .cos-command-mini{min-height:40px!important;border-radius:10px!important}
+  .cc-mobile-nav{background:rgba(3,15,26,.96)!important;border-color:rgba(var(--space-rgb),.13)!important;box-shadow:0 -14px 34px rgba(0,0,0,.22)!important;backdrop-filter:blur(18px)!important}
+  .cc-mobile-nav a,.cc-mobile-nav button{color:#879daa!important}.cc-mobile-nav svg{color:#6e8c9e!important}.cc-mobile-nav .active,.cc-mobile-nav a[aria-current="page"]{color:#e7f7fa!important}.cc-mobile-nav a[aria-current="page"] svg{color:var(--space-accent)!important;filter:drop-shadow(0 0 5px rgba(var(--space-rgb),.3))}
+  .cc-mobile-more{background:radial-gradient(circle at 50% 0%,rgba(var(--space-rgb),.07),transparent 15rem),linear-gradient(180deg,#061722,#031019)!important}
+  .cc-mobile-more__grid>a{background:linear-gradient(145deg,rgba(9,30,45,.95),rgba(5,20,32,.98))!important;border-color:rgba(var(--space-rgb),.10)!important}
+  .cc-mobile-more__grid>a>span{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.065)!important}
+
+  .clinical-os .cc-page-header{min-height:auto!important;display:grid!important;padding:15px!important;clip-path:none!important;border-radius:12px!important}
+  .clinical-os .cc-page-header__identity{align-items:flex-start!important}.clinical-os .cc-page-header__icon{width:40px!important;height:40px!important;flex-basis:40px!important}.clinical-os .cc-page-header h1{font-size:1.48rem!important}.clinical-os .cc-page-header__actions{justify-content:flex-start!important}
+  .clinical-os .cc-section{padding:12px!important;border-radius:11px!important}.clinical-os .cc-section__heading{display:grid!important}
+  .clinical-os .cos-content table{font-size:.72rem!important}
+}
+
+@media(max-width:560px){
+  .clinical-os .cos-workspace{padding-inline:9px!important}
+  .clinical-os .cc-page-header{padding:13px!important}.clinical-os .cc-page-header__icon{display:none!important}.clinical-os .cc-page-header__description{font-size:.64rem!important}
+  .clinical-os .cc-section{padding:10px!important}.clinical-os .cc-section__heading h2{font-size:.8rem!important}
+}
+
+@media(prefers-reduced-motion:reduce){.clinical-os *{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
