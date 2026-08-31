@@ -48867,5 +48867,322 @@
       "melioidose-e-acometimento-cardiovascular-pericardite-endocardite-e-abscesso-miocardico"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "vasculopatia-do-enxerto-cardiaco",
+    "name": "Vasculopatia do enxerto cardíaco (CAV)",
+    "aliases": [
+      "CAV",
+      "Cardiac allograft vasculopathy",
+      "Doença coronariana do enxerto",
+      "Rejeição vascular crônica pós-transplante cardíaco",
+      "Coronariopatia do transplantado cardíaco",
+      "Vasculopatia coronariana do enxerto"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_coronariana_do_enxerto_pos_transplante",
+    "prevalence_rank": 106,
+    "completeness": "completo",
+    "summary": "A vasculopatia do enxerto cardíaco (cardiac allograft vasculopathy, CAV) é a principal causa de falência tardia do enxerto após transplante cardíaco — forma acelerada, difusa e imunomediada de doença coronariana, distinta morfologicamente da aterosclerose focal excêntrica clássica por produzir espessamento concêntrico e difuso da íntima em toda a extensão do vaso, incluindo leito microvascular. Mecanismo combina resposta imune humoral e celular contra o endotélio doador com fatores de risco tradicionais e fatores específicos do transplante (isquemia-reperfusão, CMV, rejeição celular aguda prévia). Como o coração transplantado é denervado, a isquemia é predominantemente silenciosa, tornando o rastreio protocolar obrigatório desde o primeiro ano pós-transplante e mantido indefinidamente. Gravidade graduada pelo sistema ISHLT CAV0-CAV3. Manejo combina otimização de fatores de risco, estatina (evidência robusta independente do efeito lipídico), inibidores de mTOR para retardar progressão, revascularização percutânea seletiva (desfecho inferior ao da coronariopatia não transplantada) e retransplante em casos avançados refratários.",
+    "presentation": [
+      "Isquemia miocárdica silenciosa, sem angina, pela denervação do enxerto — apresentação predominante",
+      "Disfunção ventricular progressiva de causa não claramente identificada",
+      "Insuficiência cardíaca congestiva de instalação insidiosa em receptor de transplante",
+      "Arritmia nova em receptor de transplante de longa data",
+      "Síncope ou pré-síncope em receptor de transplante cardíaco",
+      "Morte súbita como primeira manifestação em casos não rastreados",
+      "Achado angiográfico ou por IVUS de espessamento intimal em rastreio protocolar assintomático"
+    ],
+    "differentials": [
+      "Rejeição celular aguda em atividade",
+      "Rejeição mediada por anticorpos",
+      "Disfunção primária do enxerto de causa não coronariana",
+      "Doença coronariana aterosclerótica preexistente do doador",
+      "Cardiomiopatia restritiva pós-transplante de outra etiologia",
+      "Infecção por citomegalovírus com repercussão sistêmica, sem CAV estabelecida",
+      "Toxicidade miocárdica por imunossupressor"
+    ],
+    "tests": [
+      "Angiografia coronariana invasiva seriada",
+      "Ultrassom intravascular (IVUS)",
+      "Ecocardiograma sob estresse com dobutamina",
+      "Tomografia por emissão de pósitrons (PET) com quantificação de fluxo sanguíneo miocárdico",
+      "Angiotomografia coronariana",
+      "Biópsia endomiocárdica, para avaliação concomitante de rejeição",
+      "Avaliação seriada de fração de ejeção e função de VD"
+    ],
+    "red_flags": [
+      "Disfunção do enxerto com FEVE ≤45% associada a lesão coronariana (define CAV3)",
+      "Estenose de tronco de coronária esquerda ≥70%",
+      "Estenose ≥70% em dois ou mais ramos primários",
+      "Fisiologia restritiva nova",
+      "Arritmia ventricular ameaçadora à vida",
+      "Progressão apesar de otimização terapêutica",
+      "Ausência de rastreio protocolar além do primeiro ano"
+    ],
+    "ambulatory_flow": [
+      "Manter rastreio protocolar de CAV independentemente de sintomas, desde o primeiro ano pós-transplante e por toda a vida do enxerto",
+      "Otimizar fatores de risco cardiovascular tradicionais",
+      "Manter estatina em praticamente todo receptor, independentemente do perfil lipídico",
+      "Considerar conversão para inibidor de mTOR em pacientes selecionados",
+      "Investigar e tratar infecção por citomegalovírus",
+      "Avaliar revascularização percutânea em lesão focal, com expectativa realista de progressão em segmentos não tratados",
+      "Reavaliar elegibilidade para retransplante em CAV3 refratária"
+    ],
+    "emergency_flow": [
+      "Considerar CAV avançada em receptor com IC aguda, arritmia ventricular nova ou choque sem outra causa evidente",
+      "Não excluir isquemia pela ausência de dor torácica típica",
+      "Angiografia urgente em instabilidade hemodinâmica inexplicada",
+      "Investigar rejeição aguda concomitante (biópsia) em toda descompensação de causa não esclarecida",
+      "Acionar suporte circulatório mecânico e avaliação de retransplante em choque refratário"
+    ],
+    "tags": [
+      "transplante cardíaco",
+      "vasculopatia do enxerto",
+      "rejeição crônica",
+      "isquemia silenciosa",
+      "IVUS",
+      "estadiamento ISHLT",
+      "estatina pós-transplante",
+      "inibidor de mTOR",
+      "everolimo",
+      "sirolimo",
+      "retransplante cardíaco",
+      "citomegalovírus"
+    ],
+    "source_refs": [
+      "Mehra MR et al. ISHLT working formulation of a standardized nomenclature for cardiac allograft vasculopathy-2010. J Heart Lung Transplant. 2010;29(7):717-727. PMID: 20620917",
+      "Pober JS, et al. Cardiac allograft vasculopathy: current review. Cardiovasc Res. 2021;117(13):2624-2638. PMID: 34343276",
+      "Costanzo MR et al. ISHLT Guidelines for the care of heart transplant recipients. J Heart Lung Transplant. 2010;29(8):914-956. PMID: 20643330",
+      "Khush KK et al. ISHLT Thirty-sixth adult heart transplantation report - 2019. J Heart Lung Transplant. 2019;38(10):1056-1066. PMID: 31548031",
+      "Kobashigawa JA et al. Effect of pravastatin on outcomes after cardiac transplantation. N Engl J Med. 1995;333(10):621-627. PMID: 7637722",
+      "Eisen HJ et al. Everolimus for the prevention of allograft rejection and vasculopathy. N Engl J Med. 2003;349(9):847-858. PMID: 12944570",
+      "Mehra MR et al. Presence of severe intimal thickening by IVUS predicts cardiac events. J Heart Lung Transplant. 1995;14(4):632-639. PMID: 7578168"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20620917/",
+      "https://pubmed.ncbi.nlm.nih.gov/34343276/",
+      "https://pubmed.ncbi.nlm.nih.gov/20643330/",
+      "https://pubmed.ncbi.nlm.nih.gov/31548031/",
+      "https://pubmed.ncbi.nlm.nih.gov/7637722/",
+      "https://pubmed.ncbi.nlm.nih.gov/12944570/",
+      "https://pubmed.ncbi.nlm.nih.gov/7578168/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "vasculopatia-do-enxerto-cardiaco-rejeicao-cronica-isquemia-silenciosa-rastreio-e-manejo"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "lesao-miocardica-por-monoxido-de-carbono",
+    "name": "Lesão miocárdica por intoxicação por monóxido de carbono",
+    "aliases": [
+      "cardiotoxicidade por monóxido de carbono",
+      "lesão cardíaca por CO",
+      "troponina elevada na intoxicação por CO",
+      "acometimento cardiovascular na intoxicação por monóxido de carbono"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "lesao_miocardica_toxica",
+    "prevalence_rank": 107,
+    "completeness": "completo",
+    "summary": "Lesão miocárdica bioquímica e/ou eletrocardiográfica presente em cerca de um terço dos pacientes com intoxicação moderada a grave por monóxido de carbono, decorrente da combinação de hipóxia tecidual (ligação do CO à hemoglobina com afinidade 200-250x maior que o oxigênio, deslocando a curva de dissociação da oxi-hemoglobina) e toxicidade mitocondrial direta no cardiomiócito (ligação à mioglobina e inibição da citocromo c oxidase). Associada a maior mortalidade em curto e longo prazo, independentemente de doença coronariana estrutural prévia; pode coexistir com síndrome coronariana aguda verdadeira em paciente com placa aterosclerótica vulnerável.",
+    "presentation": [
+      "Taquicardia sinusal reflexa (achado mais comum)",
+      "Elevação de troponina I ou CK-MB, frequentemente assintomática do ponto de vista anginoso",
+      "Alterações eletrocardiográficas isquêmicas inespecíficas (até 30% dos casos moderados-graves)",
+      "Dor torácica ou dispneia associadas a sintomas sistêmicos inespecíficos (cefaleia, náusea, tontura, confusão)",
+      "Disfunção ventricular esquerda segmentar ou global em casos com lesão miocárdica significativa",
+      "Arritmias ventriculares ou bloqueio atrioventricular em intoxicação grave com instabilidade hemodinâmica",
+      "Sintomas em múltiplos moradores da mesma residência ou piora ao entrar em determinado ambiente (pista epidemiológica)"
+    ],
+    "differentials": [
+      "Síndrome coronariana aguda tipo 1 por trombose coronariana verdadeira sobre placa vulnerável",
+      "Infarto tipo 2 por desequilíbrio oferta-demanda de outra causa",
+      "MINOCA (infarto sem doença coronariana obstrutiva) de outra etiologia",
+      "Miocardite aguda",
+      "Cardiomiopatia de takotsubo",
+      "Lesão miocárdica não isquêmica associada a sepse ou choque",
+      "Intoxicação por cianeto concomitante (incêndios estruturais)"
+    ],
+    "tests": [
+      "Carboxi-hemoglobina (COHb) por co-oximetria — não confiável por oximetria de pulso convencional",
+      "Eletrocardiograma de 12 derivações na admissão",
+      "Troponina seriada em todo paciente com intoxicação moderada a grave, independentemente de dor torácica",
+      "Ecocardiograma se troponina elevada, alteração isquêmica ao ECG ou instabilidade hemodinâmica",
+      "Gasometria arterial com lactato",
+      "Coronariografia reservada a quadro clínico/eletrocardiográfico sugestivo de evento coronariano tipo 1 verdadeiro"
+    ],
+    "red_flags": [
+      "Perda de consciência no momento da exposição",
+      "Gestante exposta",
+      "Sintomas neurológicos significativos (confusão, convulsão, coma)",
+      "Instabilidade hemodinâmica ou choque cardiogênico",
+      "Arritmia além de taquicardia sinusal reflexa",
+      "Troponina marcadamente elevada ou em ascensão dinâmica",
+      "COHb muito elevada"
+    ],
+    "ambulatory_flow": [
+      "Após alta de intoxicação leve sem elevação de troponina, sem indicação rotineira de investigação cardiológica adicional",
+      "Pacientes com lesão miocárdica documentada durante a internação devem ter seguimento cardiológico estruturado, dado o risco de mortalidade aumentado em longo prazo",
+      "Reforçar orientação sobre prevenção de reexposição (ventilação adequada, detectores de CO, manutenção de aquecedores/geradores)"
+    ],
+    "emergency_flow": [
+      "Suspeita clínica/epidemiológica → confirmar COHb por co-oximetria (não usar oximetria de pulso isolada)",
+      "Oxigenoterapia normobárica em alto fluxo imediatamente, antes mesmo da confirmação laboratorial se suspeita forte",
+      "ECG de 12 derivações e troponina na admissão, com troponina seriada",
+      "Avaliar critérios de oxigenoterapia hiperbárica e encaminhar se disponível e indicado",
+      "Ecocardiograma se troponina elevada ou instabilidade hemodinâmica",
+      "Monitorização cardíaca contínua durante a fase aguda",
+      "Investigação coronariana invasiva apenas se quadro sugestivo de SCA tipo 1 verdadeira, não por troponina elevada isolada"
+    ],
+    "tags": [
+      "monóxido de carbono",
+      "intoxicação",
+      "toxicologia cardiovascular",
+      "lesão miocárdica",
+      "troponina",
+      "hipóxia",
+      "disfunção mitocondrial",
+      "terapia intensiva",
+      "oxigenoterapia hiperbárica"
+    ],
+    "source_refs": [
+      "Henry CR, Satran D, Lindgren B, Adkinson C, Nicholson CI, Henry TD. Myocardial injury and long-term mortality following moderate to severe carbon monoxide poisoning. JAMA. 2006;295(4):398-402. PMID: 16434630",
+      "Satran D, Henry CR, Adkinson C, Nicholson CI, Bracha Y, Henry TD. Cardiovascular manifestations of moderate to severe carbon monoxide poisoning. J Am Coll Cardiol. 2005;45(9):1513-1516. PMID: 15862427",
+      "Kao LW, Nañagas KA. Carbon monoxide poisoning. Emerg Med Clin North Am. 2004;22(4):985-1018. PMID: 15474779",
+      "Rose JJ, Wang L, Xu Q, McTiernan CF, Shiva S, Tejero J, Gladwin MT. Carbon Monoxide Poisoning: Pathogenesis, Management, and Future Directions of Therapy. Am J Respir Crit Care Med. 2017;195(5):596-606. PMID: 27753502",
+      "Weaver LK, Hopkins RO, Chan KJ, Churchill S, Elliott CG, Clemmer TP, Orme JF Jr, Thomas FO, Morris AH. Hyperbaric oxygen for acute carbon monoxide poisoning. N Engl J Med. 2002;347(14):1057-1067. PMID: 12362006",
+      "Sebbane M, Claret PG, Mercier G, Lefebvre S, Théry R, Dumont R, Maillé M, Richard JP, Eledjam JJ, de La Coussaye JE. Emergency department management of suspected carbon monoxide poisoning: role of pulse CO-oximetry. Respir Care. 2013;58(10):1614-1620. PMID: 23513247",
+      "Zevin S, Saunders S, Gourlay SG, Jacob P, Benowitz NL. Cardiovascular effects of carbon monoxide and cigarette smoking. J Am Coll Cardiol. 2001;38(6):1633-1638. PMID: 11704374",
+      "Hampson NB. U.S. Mortality Due to Carbon Monoxide Poisoning, 1999-2014. Accidental and Intentional Deaths. Ann Am Thorac Soc. 2016;13(10):1768-1774. PMID: 27466698"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16434630/",
+      "https://pubmed.ncbi.nlm.nih.gov/15862427/",
+      "https://pubmed.ncbi.nlm.nih.gov/15474779/",
+      "https://pubmed.ncbi.nlm.nih.gov/27753502/",
+      "https://pubmed.ncbi.nlm.nih.gov/12362006/",
+      "https://pubmed.ncbi.nlm.nih.gov/23513247/",
+      "https://pubmed.ncbi.nlm.nih.gov/11704374/",
+      "https://pubmed.ncbi.nlm.nih.gov/27466698/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "intoxicacao-por-monoxido-de-carbono-e-lesao-cardiovascular-hipoxia-toxicidade-mitocondrial-e-troponina"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "cardiotoxicidade-por-cobalto",
+    "name": "Cardiotoxicidade sistêmica por cobalto",
+    "aliases": [
+      "Cobaltismo cardíaco",
+      "Cardiomiopatia por cobalto",
+      "Cardiomiopatia da cerveja de cobalto",
+      "Beer-drinker's cardiomyopathy",
+      "Cobaltismo artroprotético",
+      "Arthroprosthetic cobaltism",
+      "Cardiotoxicidade por prótese metal-metal"
+    ],
+    "area": "geral",
+    "category": "cardiomiopatia",
+    "subtype": "toxica",
+    "prevalence_rank": 108,
+    "completeness": "completo",
+    "summary": "Cardiomiopatia tóxica por intoxicação sistêmica por cobalto, descrita em dois cenários históricos distintos: (1) surtos fulminantes de cardiomiopatia dilatada em bebedores pesados de cerveja aditivada com sais de cobalto (Quebec, Omaha, Minneapolis, Bélgica, 1964-1967), episódio hoje encerrado após a proibição do aditivo, mas comprovado por necropsia e dosagem tecidual; e (2) cobaltismo sistêmico por desgaste de prótese de quadril metal-metal (cobalto-cromo), causa clinicamente relevante hoje, descrita quase exclusivamente por relatos de caso e pequenas séries, com manifestações extracardíacas associadas (neuropatia periférica, hipotireoidismo, perda auditiva/visual) e reversibilidade parcial a completa documentada após revisão cirúrgica precoce do implante.",
+    "presentation": [
+      "Cardiomiopatia dilatada (mais comum) ou, em relatos, padrão restritivo, em paciente com prótese de quadril metal-metal (ou histórico de componentes fraturados/corroídos em prótese não metal-metal)",
+      "Sinais e sintomas de insuficiência cardíaca de causa inicialmente não esclarecida",
+      "Arritmias ventriculares, incluindo instabilidade elétrica maligna descrita como manifestação de apresentação",
+      "Manifestações extracardíacas associadas: neuropatia periférica sensitivomotora, hipotireoidismo, perda auditiva e/ou neuropatia óptica, tinido",
+      "Achados atípicos descritos em relatos isolados: tamponamento pericárdico, pneumonite",
+      "Cenário histórico da cerveja de cobalto: cardiomiopatia dilatada fulminante em bebedor pesado, choque cardiogênico, derrame pericárdico hemorrágico, policitemia — hoje inexistente"
+    ],
+    "differentials": [
+      "Cardiomiopatia dilatada idiopática ou genética/sarcomérica",
+      "Cardiomiopatia alcoólica",
+      "Outras cardiomiopatias tóxicas por metal (deficiência de cobre, doença de Wilson, hemocromatose)",
+      "Miocardite de células gigantes e outras miocardites",
+      "Amiloidose cardíaca e outras causas de cardiomiopatia restritiva",
+      "Reação adversa local a debris de desgaste (ARMD/pseudotumor) sem toxicidade sistêmica associada"
+    ],
+    "tests": [
+      "Cobalto sérico ou sanguíneo total",
+      "Ecocardiograma transtorácico",
+      "Ressonância magnética cardíaca",
+      "Biópsia endomiocárdica (achados inespecíficos, útil para excluir outras etiologias)",
+      "Avaliação de manifestações extracardíacas: função tireoidiana, avaliação neurológica/eletroneuromiográfica, auditiva e oftalmológica",
+      "Avaliação orientada ao implante: tipo de par de atrito, tempo de uso, sinais radiográficos de falha/desgaste/corrosão"
+    ],
+    "red_flags": [
+      "Cardiomiopatia de causa não esclarecida em paciente com prótese de quadril, independentemente do tempo de implante",
+      "Arritmia ventricular maligna em paciente com prótese metal-metal",
+      "Combinação de cardiomiopatia com neuropatia periférica, hipotireoidismo ou perda auditiva/visual em paciente protetizado",
+      "Componente protético com sinal de fratura, desgaste acentuado ou corrosão de junção modular",
+      "Cobalto sérico muito elevado associado a sintomas sistêmicos",
+      "Reconhecimento tardio — associado a dano irreversível"
+    ],
+    "ambulatory_flow": [
+      "Considerar cobaltismo sistêmico em todo paciente com prótese de quadril e cardiomiopatia de causa não esclarecida",
+      "Dosar cobalto sérico e correlacionar com achados clínicos e de imagem",
+      "Solicitar ecocardiograma e rastrear manifestações extracardíacas associadas",
+      "Articular avaliação ortopédica para investigação de falha/desgaste/corrosão do implante",
+      "Priorizar avaliação para revisão cirúrgica precoce quando a suspeita for consistente",
+      "Reavaliação seriada de cobalto sérico e função ventricular após revisão"
+    ],
+    "emergency_flow": [
+      "Descompensação aguda de IC em paciente com prótese de quadril — manejo convencional enquanto se investiga cobaltismo",
+      "Arritmia ventricular maligna em paciente com prótese metal-metal — estabilização elétrica padrão com investigação simultânea de cobalto sérico",
+      "Suspeita de cobaltismo sistêmico agudo grave — articulação urgente com ortopedia para revisão cirúrgica",
+      "Não atribuir cardiomiopatia a causa idiopática sem investigar cobalto sérico em paciente com prótese de quadril"
+    ],
+    "tags": [
+      "cobalto",
+      "cobaltismo",
+      "cardiotoxicidade",
+      "cardiomiopatia tóxica",
+      "prótese metal-metal",
+      "artroplastia de quadril",
+      "cobalto-cromo",
+      "cardiomiopatia da cerveja",
+      "cardiomiopatia dilatada",
+      "neuropatia periférica",
+      "hipotireoidismo",
+      "disfunção mitocondrial",
+      "revisão protética"
+    ],
+    "source_refs": [
+      "Morin Y, Daniel P. Quebec beer-drinkers' cardiomyopathy: etiological considerations. Can Med Assoc J. 1967;97(15):926-928. PMID: 6051264",
+      "Cheung AC, Banerjee S, Cherian JJ, et al. Systemic cobalt toxicity from total hip arthroplasties: review of a rare condition Part 1. Bone Joint J. 2016;98-B(1):6-13. PMID: 26733509",
+      "Zywiel MG, et al. Systemic cobalt toxicity from total hip arthroplasties: Part 2. Bone Joint J. 2016;98-B(1):14-20. PMID: 26733510",
+      "Machado C, Appelbe A, Wood R. Arthroprosthetic cobaltism and cardiomyopathy. Heart Lung Circ. 2012;21(11):759-760. PMID: 22520206",
+      "Lassalle M, et al. Is There a Cardiotoxicity Associated With Metallic Head Hip Prostheses? Clin Orthop Relat Res. 2018;476(11):2246-2256. PMID: 29698302",
+      "Deere K, et al. The risk of all-cause mortality, heart outcomes, cancer, and neurodegenerative disorders in patients with cobalt-chromium hip implants. Bone Joint J. 2022;104-B(11):1218-1228. PMID: 35227088",
+      "Hullon D, et al. Cobalt-Induced Cardiomyopathy: A Systematic Review. Cardiovasc Toxicol. 2026. PMID: 41622383"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/6051264/",
+      "https://pubmed.ncbi.nlm.nih.gov/26733509/",
+      "https://pubmed.ncbi.nlm.nih.gov/26733510/",
+      "https://pubmed.ncbi.nlm.nih.gov/22520206/",
+      "https://pubmed.ncbi.nlm.nih.gov/29698302/",
+      "https://pubmed.ncbi.nlm.nih.gov/35227088/",
+      "https://pubmed.ncbi.nlm.nih.gov/41622383/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiotoxicidade-por-cobalto-da-cardiomiopatia-da-cerveja-ao-cobaltismo-por-protese-metal-metal"
+    ],
+    "patient_material_slug": null
   }
 ]
