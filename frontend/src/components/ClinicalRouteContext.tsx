@@ -5,6 +5,7 @@ import "../styles/cardiology-spaces-consultorio-pages.css";
 import "../styles/cardiology-spaces-consultorio-prescricao.css";
 import "../styles/cardiology-spaces-consultorio-knowledge.css";
 import "../styles/cardiology-spaces-hospital-pages.css";
+import "../styles/cardiology-spaces-ensino-pages.css";
 
 type RouteGroup = "documentos" | "pacientes" | "prescricao" | "agenda" | "mail" | "assistente" | "integracoes" | "conhecimento" | "ferramentas" | "emergencia" | "rede" | "telediagnostico" | "conta" | "admin" | "geral";
 type CardiologySpace = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
