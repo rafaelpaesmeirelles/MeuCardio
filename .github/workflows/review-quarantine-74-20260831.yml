@@ -56,3 +56,4 @@ jobs:
           git add -A
           git commit -m 'science: resolver quarentena de 74 itens com fontes disponíveis' || true
           git push origin HEAD:report/science-publication-readiness-20260831-30h
+# v4: static reviewed PubMed allowlist; no deploy or merge
