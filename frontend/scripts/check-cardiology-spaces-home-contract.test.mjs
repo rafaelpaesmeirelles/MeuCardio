@@ -39,6 +39,16 @@ test("approved image composition is encoded as a product contract", () => {
   assert.match(styles, /\.spaces-home__heart/);
 });
 
+test("portal preview is temporary on mouse and keyboard and only click persists selection", () => {
+  assert.match(home, /const \[previewSpace, setPreviewSpace\] = useState<SpaceId \| null>\(null\)/);
+  assert.match(home, /availableSpaces\.find\(\(space\) => space\.id === \(previewSpace \|\| selectedSpace\)\)/);
+  assert.match(home, /onMouseEnter=\{\(\) => setPreviewSpace\(space\.id\)\}/);
+  assert.match(home, /onFocus=\{\(\) => setPreviewSpace\(space\.id\)\}/);
+  assert.match(home, /onBlur=\{\(\) => setPreviewSpace\(null\)\}/);
+  assert.match(home, /className="spaces-doors" onMouseLeave=\{\(\) => setPreviewSpace\(null\)\}/);
+  assert.match(home, /onClick=\{\(\) => \{ setSelectedSpace\(space\.id\); setPreviewSpace\(null\); \}\}/);
+});
+
 test("user-preferred treatment replaces generic voce in the work question", () => {
   assert.match(home, /const chamamento = usuario\?\.professional_title\?\.trim\(\) \|\| nomeComTratamento\(usuario, true\)/);
   assert.match(home, /`Onde \$\{chamamento\} vai trabalhar agora\?`/);
