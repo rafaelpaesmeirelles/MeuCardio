@@ -25091,5 +25091,445 @@
         "por_que": "Fecha a trilha reunindo as decisões farmacológicas e metabólicas anteriores dentro de um pacote único e testado: o consenso ERAS Cardíaco de 2019 e a metanálise de 2025 mostram que a soma organizada dessas otimizações pré, intra e pós-operatórias reduz internação hospitalar — o ganho não vem de uma medida isolada, vem do pacote."
       }
     ]
+  },
+  {
+    "slug": "trilha-farmacologia-polifarmacia-e-desprescricao-cardiovascular-no-idoso",
+    "titulo": "Farmacologia da desprescrição: polifarmácia cardiovascular no idoso, da cascata de prescrição à retirada segura",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo reconhecer a cascata de prescrição antes de acrescentar mais um fármaco ao idoso cardiopata polimedicado, aplicar um roteiro estruturado de revisão de lista (STOPP/START, Beers) para decidir o que retirar, e saber quando a desintensificação — anti-hipertensiva ou da anticoagulação por medo de queda — é respaldada por evidência e quando é um erro, incluindo o ajuste que interações e suplementos exigem nessa população.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+        "por_que": "Abre a trilha pelo conceito que organiza tudo o que vem depois: a cascata de prescrição, em que um efeito colateral de um fármaco é tratado como doença nova, gerando outro fármaco. Sem reconhecer esse padrão, a revisão de lista de medicamentos do idoso vira apenas contagem de comprimidos em vez de raciocínio farmacológico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "didomenico-2026-consenso-aha-desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia",
+        "por_que": "É a declaração científica da AHA que dá peso de sociedade a um ato clínico que ainda soa contraintuitivo — parar fármaco cardiovascular. Fundamenta com evidência formal o que a etapa anterior apresentou como conceito, e serve de referência-mãe para o restante da trilha."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "desprescricao-de-medicamentos-cardiovasculares-na-polifarmacia-consenso-cientifico-aha-2026",
+        "por_que": "Traduz o consenso AHA 2026 em síntese prática Corvia, com a arquitetura de decisão que o artigo original não entrega em formato acionável. Faz a ponte entre a evidência bruta da etapa anterior e o checklist operacional que vem a seguir."
+      },
+      {
+        "ordem": 4,
+        "item_type": "checklist",
+        "item_slug": "polifarmacia-cardiovascular-revisao-estruturada-no-idoso",
+        "por_que": "Operacionaliza os dois primeiros passos em rotina de beira-leito: cruzar a lista do paciente contra STOPP/START v3 e os itens cardiovasculares dos critérios de Beers 2023, com atenção nomeada a digoxina, bloqueador de canal de cálcio não di-hidropiridínico em ICFEr e combinações de bloqueio do SRAA — os erros mais comuns e mais evitáveis da polifarmácia cardiovascular."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida",
+        "por_que": "Depois de identificar o que revisar, esta etapa decide o quando e o como parar — incluindo o cenário mais delicado da trilha, a desprescrição no fim de vida, em que a meta terapêutica deixa de ser prevenção de desfecho a longo prazo e passa a ser conforto."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "optimise-desprescricao-de-anti-hipertensivos-em-idosos-muito-idosos",
+        "por_que": "Fornece a evidência de não inferioridade que sustenta, na prática, o caso de uso mais frequente da desprescrição cardiovascular: reduzir anti-hipertensivo em paciente de 80 anos ou mais sem perder controle pressórico — o ensaio que a trilha vai citar repetidamente daqui em diante."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "desprescricao-anti-hipertensiva-e-simplificacao-no-idoso-polimedicado",
+        "por_que": "Transforma o resultado do OPTIMISE em rotina: antes de acrescentar mais um anti-hipertensivo a um idoso fora de meta, confirmar adesão real, avaliar elegibilidade para retirar um fármaco e considerar combinação em comprimido único quando o problema é o número de comprimidos, não o número de classes."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "partage-pressao-arterial-baixa-e-polifarmacia-anti-hipertensiva-em-idosos-institucionalizados",
+        "por_que": "Mostra o outro lado do mesmo problema: idosos muito frágeis e institucionalizados em polifarmácia anti-hipertensiva com pressão já baixa, associados a maior mortalidade — reforçando que a decisão de desprescrever depende do fenótipo de fragilidade, não de uma regra única de idade."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "operam-desprescricao-guiada-por-farmaceutico-em-idosos-multimorbidos-hospitalizados",
+        "por_que": "Amplia o escopo da trilha para além do anti-hipertensivo isolado: um ensaio cluster-randomizado de otimização farmacoterapêutica por equipe médico-farmacêutica em idosos multimórbidos hospitalizados, mostrando que a desprescrição estruturada funciona melhor como processo de equipe do que como decisão isolada do prescritor."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+        "por_que": "Introduz o caso em que desprescrever é o erro: o medo de queda leva, na prática, à suspensão inadequada de anticoagulante em fibrilação atrial, quando o risco de AVC quase sempre supera o risco de sangramento por queda — e mostra que o ajuste correto é de dose por função renal, não de suspensão."
+      },
+      {
+        "ordem": 11,
+        "item_type": "estudo",
+        "item_slug": "frail-af-troca-de-varfarina-por-doac-em-idoso-fragil",
+        "por_que": "Testa diretamente a alternativa correta à suspensão: trocar varfarina por DOAC no idoso frágil com fibrilação atrial é segura, dando ao prescritor uma saída baseada em evidência para o dilema que a etapa anterior formulou, em vez de resolvê-lo por medo."
+      },
+      {
+        "ordem": 12,
+        "item_type": "checklist",
+        "item_slug": "anticoagulacao-no-idoso-com-risco-de-queda-decisao-e-ajuste-de-dose",
+        "por_que": "Fecha o bloco de anticoagulação com o roteiro de decisão à beira-leito: confirmar que o risco de queda isolado raramente deveria pesar contra anticoagular, investigar e mitigar a causa da queda, preferir DOAC à varfarina e ajustar a dose por critério objetivo — não por impressão clínica de fragilidade."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares",
+        "por_que": "Lembra que a lista de medicamentos do idoso polimedicado quase nunca é só a receita médica — suplementos e fitoterápicos de venda livre interagem com anticoagulante, antiarrítmico e anti-hipertensivo e são sistematicamente esquecidos na revisão estruturada das etapas anteriores."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "metas-terapeuticas-cardiovasculares-no-muito-idoso",
+        "por_que": "Fecha a trilha na causa raiz da polifarmácia: metas terapêuticas de LDL, pressão e frequência cardíaca pensadas para o adulto de meia-idade, aplicadas sem ajuste ao muito idoso, geram fármaco atrás de fármaco para perseguir um alvo que talvez nem devesse ser o mesmo — devolvendo o raciocínio ao ponto de partida da cascata de prescrição."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-valvopatias-doenca-sistemica-rara-mecanismos-nao-ateroscleroticos",
+    "titulo": "Valvopatias por doença sistêmica rara: quando o mecanismo foge do script degenerativo comum",
+    "tema": "Valvopatias",
+    "objetivo": "Sair sabendo reconhecer valvopatia causada por doença sistêmica rara — não pela calcificação degenerativa senil nem pela doença reumática — organizando o raciocínio em três famílias mecanísticas distintas: depósito lisossômico/metabólico (Fabry, Gaucher tipo 3c, mucopolissacaridose IVA, alcaptonúria/ocronose), defeito estrutural de colágeno ou elastina (osteogênese imperfeita, pseudoxantoma elástico) e mediador humoral (síndrome carcinoide); e entender por que, nas doenças de depósito, a terapia de reposição enzimática frequentemente não reverte a valvopatia já instalada.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+        "por_que": "Esta é a diretriz canônica de valvopatias e o ponto de partida obrigatório: ela descreve o script habitual do tema — calcificação degenerativa senil, doença reumática, congênita — que dá conta da imensa maioria dos casos vistos na prática. É esse script que o restante da trilha vai contrastar, mostrando doenças sistêmicas raras que produzem valvopatia por mecanismos completamente diferentes."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+        "por_que": "Primeira doença de depósito lisossômico da trilha: a doença de Fabry acumula globotriaosilceramida em múltiplos tecidos, incluindo o aparelho valvar, e é classicamente descrita como fenocópia de cardiomiopatia hipertrófica — mas com tratamento etiológico específico disponível (terapia de reposição enzimática, chaperona farmacológica), o que muda completamente a conduta se for reconhecida a tempo. A Tabela 23 da ESC 2023 traz os red flags cardíacos e extracardíacos completos."
+      },
+      {
+        "ordem": 3,
+        "item_type": "checklist",
+        "item_slug": "rastreio-de-red-flags-para-doenca-de-fabry-com-acometimento-cardiaco",
+        "por_que": "Converte os red flags da etapa anterior em um roteiro de beira-leito: diante de hipertrofia ventricular esquerda inexplicada, quais achados cardíacos e extracardíacos levantam a suspeita de Fabry e como conduzir a confirmação diagnóstica por sexo. É a ponte entre reconhecer a doença na teoria e suspeitar dela no paciente real."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "fabry-t1-reduzido-e-o-marcador-de-imagem",
+        "por_que": "O T1 nativo reduzido é o achado de imagem que diferencia o depósito de esfingolipídio (Fabry) de outras causas de hipertrofia com depósito — ao contrário da amiloidose, que eleva o T1. Esse marcador é o elo entre o raciocínio clínico dos red flags e a discriminação de imagem que decide o diagnóstico diferencial na etapa seguinte."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "hve-t1-nativo-baixo-doenca-de-fabry-vs-amiloidose",
+        "por_que": "Aplica o marcador de T1 num caso concreto de diagnóstico diferencial entre as duas principais doenças de depósito que mimetizam hipertrofia ventricular — Fabry e amiloidose —, fixando por que a distinção não é acadêmica: muda completamente o tratamento disponível."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "hipertrofia-por-doenca-de-fabry-agalsidase-beta-atrasa-eventos-quanto-mais-cedo-fabry-trial",
+        "por_que": "Introduz o tema que vai se repetir nas próximas doenças de depósito da trilha: o momento de início da terapia de reposição enzimática importa, porque o benefício é maior quanto menos fibrose/dano estrutural já houver — um alerta que prepara o contraste com Gaucher e MPS IVA, em que a valvopatia já estabelecida responde muito menos à mesma terapia."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "doenca-de-gaucher-acometimento-cardiovascular-tipo-3c-calcificacao-valvar-e-limites-da-terapia-de-reposicao-enzimatica",
+        "por_que": "Segunda doença de depósito lisossômico, mas com um mecanismo valvar diferente do de Fabry: a variante 3c da doença de Gaucher causa calcificação valvar precoce e agressiva — em paciente jovem, fora da faixa etária da calcificação degenerativa senil. O documento já nomeia no título o achado central da trilha: os limites da terapia de reposição enzimática, que controla a doença sistêmica mas não reverte a valva já calcificada."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "calcificacao-valvar-grave-em-paciente-jovem-suspeita-de-gaucher-tipo-3c",
+        "por_que": "Checklist de aplicação direta: como reconhecer calcificação valvar aórtica/mitral grave em paciente jovem como possível manifestação de Gaucher tipo 3c, confirmar por dosagem de glicocerebrosidase e sequenciamento de GBA1, e não subordinar a indicação cirúrgica valvar ao controle da doença de base — reforçando que a decisão de operar segue os critérios habituais de gravidade, não a resposta à TRE."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "mucopolissacaridose-tipo-iva-morquio-a-acometimento-cardiovascular-valvopatia-e-limites-da-terapia-de-reposicao-enzimatica",
+        "por_que": "Terceira doença de depósito lisossômico, agora por acúmulo de glicosaminoglicanos: na MPS IVA a valvopatia é a manifestação cardíaca mais característica e, de novo, uma das mais refratárias à terapia de reposição enzimática — consolidando o padrão observado em Fabry e Gaucher de que a TRE controla manifestações sistêmicas sem necessariamente reverter a lesão valvar já depositada."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "acometimento-cardiaco-nas-mucopolissacaridoses-valvopatia-cardiomiopatia-e-doenca-coronariana",
+        "por_que": "Amplia o raciocínio da MPS IVA para o espectro completo das mucopolissacaridoses, organizando a fisiopatologia do depósito de glicosaminoglicanos em válvula, miocárdio e coronárias, e o impacto diferencial da terapia de reposição enzimática e do transplante de células-tronco hematopoiéticas sobre cada componente cardíaco — fechando o bloco de doenças de depósito lisossômico da trilha."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "alcaptonuria-ocronose-acometimento-cardiovascular-calcificacao-e-disfuncao-valvar",
+        "por_que": "Muda a família de mecanismo dentro do próprio bloco de depósito: a alcaptonúria não é uma doença lisossômica, mas um erro inato do metabolismo do ácido homogentísico, cujo pigmento (ocronose) se deposita em cartilagem e tecido conjuntivo, incluindo a valva aórtica, causando calcificação e disfunção valvar por uma via bioquímica inteiramente distinta de Fabry, Gaucher e MPS IVA."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+        "por_que": "Introduz a segunda família mecanística da trilha: o pseudoxantoma elástico não é doença de depósito metabólico, mas um defeito genético (ABCC6) de mineralização da fibra elástica, que calcifica artérias e também acomete a valva mitral — um mecanismo de calcificação ectópica estrutural, não bioquímico-metabólico, que amplia o repertório de causas não ateroscleróticas de valvopatia calcificada."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio",
+        "por_que": "Contraste deliberado com todo o bloco anterior: na osteogênese imperfeita o defeito é do colágeno tipo I, e o padrão valvar resultante é oposto ao das doenças de depósito — não calcificação e estenose, mas fragilidade do tecido conjuntivo levando a dilatação de raiz aórtica e regurgitação valvar, com implicações próprias de risco perioperatório (fragilidade capilar, disfunção plaquetária)."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-cardiaca-carcinoide",
+        "por_que": "Fecha a trilha com uma terceira família mecanística inteiramente diferente das anteriores: a doença valvar carcinoide não é genética nem metabólica, mas mediada por substâncias vasoativas circulantes (serotonina) que fibrosam as valvas de câmaras direitas. Force o aluno a consolidar o mapa mental construído na trilha — depósito lisossômico, defeito estrutural de colágeno/elastina e mediador humoral — como as três vias não ateroscleróticas de lesão valvar por doença sistêmica rara."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-tromboembolismo-cteph-sequela-tardia-do-tep-nao-resolvido",
+    "titulo": "Tromboembolismo: CTEPH, a hipertensão pulmonar tromboembólica crônica como sequela tardia do TEP não resolvido",
+    "tema": "Tromboembolismo",
+    "objetivo": "Sair sabendo por que todo paciente com TEP agudo precisa de seguimento estruturado a 3-6 meses, reconhecer quando encaminhar um paciente com dispneia persistente e defeitos de perfusão a um centro especializado em CTEPH, aplicar os critérios de operabilidade que definem a decisão entre endarterectomia pulmonar curativa e as alternativas para doença inoperável — angioplastia pulmonar por balão, riociguato e macitentana.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019",
+        "por_que": "Ponto de partida da trilha: a diretriz ESC/ERS 2019 já recomenda, com Classe I, um modelo de seguimento integrado hospitalar-ambulatorial de 3-6 meses após TEP agudo, e o encaminhamento de pacientes sintomáticos com defeitos de perfusão persistentes na cintilografia V/Q a um centro especializado em CTEPH. É a recomendação que todas as trilhas de TEP agudo já publicadas citam de passagem, mas nenhuma desenvolve — aqui ela se torna o fio condutor."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "tep-risco-intermediario-alto-reperfusao-peitho-e-quando-nao-trombolisar",
+        "por_que": "Desfaz um raciocínio intuitivo antes de entrar em CTEPH propriamente dita: no seguimento de 37,8 meses do PEITHO, a incidência de CTEPH foi estatisticamente igual entre quem recebeu trombólise no TEP agudo de risco intermediário-alto e quem não recebeu (2,1% vs. 3,2%, p=0,79). Tratar mais agressivamente na fase aguda não é estratégia de prevenção de CTEPH — o que previne é o seguimento sistemático do passo anterior, não a intensidade da reperfusão inicial."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+        "por_que": "Define a doença: critérios diagnósticos (PAPm >25 mmHg, defeitos de perfusão persistentes apesar de 3-6 meses de anticoagulação), incidência de 3-5 casos/100.000/ano, algoritmo de confirmação (cintilografia V/Q, cateterismo direito, angio-TC) e os critérios de encaminhamento a transplante pulmonar para quem não responde às terapias específicas. É o documento-âncora que introduz CTEPH como grupo 4 de hipertensão pulmonar."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+        "por_que": "Coloca a decisão central da trilha: a endarterectomia pulmonar é o único tratamento potencialmente curativo em toda a hipertensão pulmonar, mas 'operabilidade' não é um corte objetivo — depende da expertise do centro. Desfaz três suposições comuns de consultório (RVP muito alta, idade >80 anos e reoperação NÃO são contraindicações isoladas) e separa operabilidade técnica de indicação de operar."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-de-operabilidade-cirurgica-na-cteph-encaminhamento-ao-heart-team",
+        "por_que": "Operacionaliza o documento anterior em itens de checagem à beira do leito: confirma que o paciente foi encaminhado a centro de expertise, que a equipe multidisciplinar tem a composição mínima exigida, e que nenhuma das exclusões incorretas (RVP elevada, idade, obesidade, reoperação) foi usada para negar a avaliação cirúrgica."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+        "por_que": "Justifica em números por que a decisão de operabilidade dos dois passos anteriores importa tanto: no registro prospectivo de 679 pacientes (27 centros europeus), 59% foram operados e 41% não — fornecendo a quantificação direta, na mesma coorte e com o mesmo método de seguimento, da diferença de sobrevida entre os dois caminhos que o heart team decide."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cteph-operabilidade-bpa-riociguate",
+        "por_que": "Integra visualmente os passos 3 a 6 num fluxograma único: do diagnóstico hemodinâmico confirmado até a decisão entre endarterectomia, angioplastia pulmonar por balão e riociguato, deixando explícito que a anticoagulação vitalícia é a base de tratamento comum a todos os ramos antes de introduzir o subgrupo inoperável, tema dos próximos passos."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "angioplastia-pulmonar-por-balao-na-cteph-inoperavel-race-e-mr-bpa",
+        "por_que": "Desce ao subgrupo inoperável — 30-45% dos pacientes com CTEPH, segundo o passo 3 — e apresenta os dois ensaios randomizados publicados lado a lado em 2022 (RACE francês, MR BPA japonês) que comparam angioplastia pulmonar por balão contra riociguato, ambos favorecendo BPA na melhora hemodinâmica em 12-26 semanas, à custa de mais hemoptise/hemorragia pulmonar."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "riociguato",
+        "por_que": "Antes de detalhar os ensaios pivotais do riociguato em CTEPH, fixa sua farmacologia: estimulador direto da guanilato-ciclase solúvel, mecanismo distinto dos inibidores de fosfodiesterase-5, e a única molécula desta biblioteca com indicação registrada tanto em hipertensão arterial pulmonar quanto em CTEPH inoperável."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "riociguate-na-hap-e-na-cteph-os-ensaios-patent-1-e-chest-1",
+        "por_que": "Traz a evidência pivotal por trás do fármaco do passo 9: PATENT-1 (HAP, grupo 1) e CHEST-1 (CTEPH, grupo 4), publicados lado a lado no NEJM em 2013 como um par desenhado propositalmente — a dupla indicação do riociguato citada nos passos 7 e 8 vem exatamente desses dois ensaios de fase 3."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "macitentana-na-cteph-inoperavel-o-ensaio-merit-1-e-sua-retratacao-republicacao",
+        "por_que": "Apresenta a segunda opção farmacológica para CTEPH inoperável, o MERIT-1, com uma nuance rara na biblioteca: o ensaio original de 2017 foi retratado e republicado pelo próprio periódico em 2024 por questão de integridade de dados — não por fraude nem por reversão de conclusão —, um episódio que ensina a ler criticamente a evidência por trás de uma recomendação, e não só o resultado final."
+      },
+      {
+        "ordem": 12,
+        "item_type": "medicamento",
+        "item_slug": "macitentana",
+        "por_que": "Fecha a trilha com a farmacologia do fármaco do passo 11: antagonista duplo do receptor de endotelina (ETA e ETB) de segunda geração, mecanismo distinto do estimulador da guanilato-ciclase do riociguato — mostrando que CTEPH inoperável tem hoje duas classes farmacológicas diferentes disponíveis, além da via intervencionista da angioplastia por balão."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-dispositivos-interferencia-eletromagnetica-e-disfuncao-tecnica-do-implante",
+    "titulo": "Dispositivos cardíacos: interferência eletromagnética, disfunção técnica e o dia a dia do implante fora da sala de eco",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo distinguir complicação mecânica de bolso de infecção, reconhecer fratura de eletrodo e taquicardia mediada por marca-passo na telemetria, investigar um choque inapropriado de CDI e acolher seu impacto psicológico, e conduzir com segurança o portador de marca-passo ou CDI em cirurgia não cardíaca, ressonância magnética não condicional e radioterapia oncológica.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "complicacoes-de-bolso-do-gerador-hematoma-infeccao-erosao-fatores-de-risco-e-prevencao",
+        "por_que": "Abre a trilha situando o espectro completo de complicações no bolso do gerador — hematoma, infecção e erosão — para deixar claro que nem toda intercorrência pós-implante é infecciosa. A partir daqui a trilha segue deliberadamente pelo ramo mecânico e técnico, não pelo infeccioso, que já tem trilhas dedicadas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta",
+        "por_que": "Primeira falha genuinamente técnica: a fratura ou falha de isolamento do eletrodo, achada em telemetria de rotina antes de dar qualquer sintoma. Ensina a olhar impedância, limiar de captura e ruído de sensing como sinais precoces de um problema que, se ignorado, leva a estimulação inadequada ou choque inapropriado — o próximo passo da trilha."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "taquicardia-mediada-por-marca-passo-mecanismo-reconhecimento-e-prevencao-pelo-pvarp",
+        "por_que": "Um tipo de 'malfuncionamento' diferente do anterior: o dispositivo não está quebrado, está fazendo exatamente o que foi programado para fazer, mas isso cria um circuito de reentrada patológico via condução retrógrada. Reforça que investigar disfunção de dispositivo exige diferenciar defeito de hardware de comportamento de software mal ajustado ao paciente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo",
+        "por_que": "Amarra os dois passos anteriores na apresentação clínica mais temida: o choque inapropriado do CDI, que pode nascer de fratura de eletrodo, oversensing ou taquiarritmia supraventricular mal discriminada. É o ponto de convergência entre disfunção mecânica e interpretação eletrônica equivocada."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-psicologica-apos-choque-do-cdi",
+        "por_que": "O choque de CDI não termina quando a arritmia é revertida ou a causa técnica corrigida — extensão natural do passo anterior. Estrutura o rastreio de ansiedade específica ao choque, sintomas depressivos e repercussão funcional, lembrando que a disfunção de dispositivo tem um desfecho humano além do eletrônico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "marcapasso-sem-eletrodo-e-manejo-perioperatorio-de-dispositivo-cardiaco",
+        "por_que": "Muda o eixo da trilha de disfunção intrínseca para interferência externa: o mesmo dispositivo saudável pode ser enganado por eletrocautério, ablação por radiofrequência ou litotripsia durante uma cirurgia não cardíaca. Introduz a resposta ao ímã e a diferença entre paciente dependente e não dependente de estimulação, conceito que reaparece nos dois próximos cenários de interferência."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "manejo-perioperatorio-de-cdi-ou-marcapasso-em-cirurgia-nao-cardiaca",
+        "por_que": "Operacionaliza o passo anterior em checklist de beira-leito — o que revisar antes de levar à sala um portador de dispositivo eletrônico implantável para cirurgia fora do contexto cardíaco, incluindo dependência de estimulação e proteção do trajeto do eletrocautério."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+        "por_que": "Segundo cenário de interferência externa, com mecanismo distinto do eletrocautério: campo magnético estático, gradientes e radiofrequência de um exame de ressonância em paciente com dispositivo legado, não certificado para o ambiente de RM. O registro MagnaSafe mostra que a RM pode ser feita com segurança seguindo protocolo, não que deva ser evitada por padrão."
+      },
+      {
+        "ordem": 9,
+        "item_type": "checklist",
+        "item_slug": "rm-em-marcapasso-ou-cdi-nao-condicional-triagem-e-protocolo-magnasafe",
+        "por_que": "Traduz o protocolo MagnaSafe do passo anterior em triagem, reprogramação, monitorização intraexame e reversão pós-exame — o roteiro prático para autorizar ou não a ressonância nesse paciente."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "manejo-de-marcapasso-e-cdi-durante-radioterapia-oncologica",
+        "por_que": "Terceiro e último cenário de interferência externa, com mecanismo ainda mais distinto: dano cumulativo por radiação ionizante aos componentes semicondutores do gerador, não um efeito eletromagnético agudo. Fecha o arco 'o mesmo dispositivo saudável, três ambientes diferentes que exigem estratégias de proteção diferentes'."
+      },
+      {
+        "ordem": 11,
+        "item_type": "checklist",
+        "item_slug": "manejo-de-cied-durante-radioterapia-oncologica",
+        "por_que": "Fecha a trilha operacionalizando o passo anterior: estratificação de risco pela AAPM TG-203 antes de iniciar radioterapia, escolha de energia de feixe e frequência de reinterrogação do dispositivo ao longo do curso do tratamento oncológico."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-comunicacao-clinica-reanimacao-recusa-de-tratamento-e-decisor-substituto",
+    "titulo": "Comunicação clínica: status de reanimação, recusa de tratamento e o decisor substituto",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo conduzir as três conversas de maior risco no cardiopata grave que nenhuma outra trilha do tema cobre de frente: estruturar a conversa sobre status de reanimação (ONR) sem deixar o paciente presumir abandono de cuidado, reconhecer o quanto o médico costuma errar a preferência do paciente e o quanto um decisor substituto acerta quando o próprio paciente já não pode falar, e conduzir com segurança jurídica e clínica a recusa terapêutica por convicção religiosa antes de cirurgia cardíaca.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "wenger-2000-o-quanto-o-medico-conhece-a-preferencia-do-paciente-sobre-reanimacao-support",
+        "por_que": "Abre a trilha mostrando o tamanho do problema antes de qualquer solução: no subestudo SUPPORT, o médico assistente frequentemente presume errado a preferência do próprio paciente grave sobre reanimação. Sem esse dado, a conversa sobre status de reanimação parece opcional; com ele, fica claro que perguntar diretamente não é cortesia, é correção de um erro sistemático documentado."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "golin-2000-baixa-taxa-de-comunicacao-da-preferencia-de-reanimacao-ao-medico-support",
+        "por_que": "Completa o quadro do SUPPORT pelo lado do paciente: apenas 30% dos que ainda não haviam discutido reanimação chegaram a comunicar sua preferência ao médico dentro de dois meses de internação. A falha não é só de escuta do médico — é de iniciativa dos dois lados, e a trilha precisa deixar isso explícito antes de entrar em ferramentas."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ordem-de-nao-ressuscitar-onr-nao-ressuscitar-nao-e-nao-tratar",
+        "por_que": "Depois de mostrar que a comunicação falha nos dois sentidos, este documento dá a base conceitual que evita o erro mais comum da conversa: ONR não é sinônimo de parar de cuidar. Estabelece a distinção entre suspender compressão/desfibrilação e suspender analgesia, diurético, antibiótico ou visita — distinção que precisa estar clara antes de qualquer roteiro prático."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-decisao-de-reanimacao-onr-em-cardiologia",
+        "por_que": "Converte o conceito do passo anterior em sequência operacional de seis passos para a beira do leito. Depois de entender o que é (e o que não é) uma ONR, o profissional precisa de um roteiro visual para não pular etapa numa conversa que costuma acontecer sob pressão de tempo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "decisao-compartilhada-em-status-de-reanimacao-ensaio-randomizado",
+        "por_que": "Traz a evidência de que a estrutura ensinada nos passos 3 e 4 não é só teoricamente correta — um ensaio randomizado mostra que uma abordagem estruturada de decisão compartilhada (ensino, checklist, auxílio decisório) reduz conflito decisional e muda a escolha registrada de status de reanimação. Fecha o arco 'por que fazer direito' com dado, não só com protocolo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "video-de-apoio-a-decisao-de-metas-de-cuidado-antes-de-conversa-sobre-reanimacao",
+        "por_que": "Aplica tudo até aqui a um cenário concreto de cardiologia — choque cardiogênico refratário sobre cardiopatia estrutural avançada — usando um vídeo de apoio à decisão como ferramenta prática antes da conversa sobre RCP. É o primeiro ponto de checagem: o profissional testa se sabe usar a ferramenta, não só descrever o protocolo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "julgamento-substituto-o-quanto-o-decisor-substituto-realmente-acerta",
+        "por_que": "Muda o eixo da trilha para a pergunta que vem logo depois de qualquer conversa sobre ONR malsucedida por falta de tempo: quando o paciente perde a capacidade de decidir — sedado, em coma pós-parada —, o substituto designado exerce julgamento substituto (o que o paciente escolheria), não preferência pessoal própria. A pergunta que raramente se faz em voz alta na beira do leito é se essa predição é confiável."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "shalowitz-2006-acuracia-de-decisores-substitutos-revisao-sistematica",
+        "por_que": "É a evidência primária por trás do documento anterior: revisão sistemática que compara a decisão hipotética prevista pelo substituto contra a preferência real relatada pelo próprio paciente em cenários de fim de vida. Sem esse dado, a afirmação 'o substituto pode errar' fica sem número atrás — este estudo fornece o número."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fragilidade-e-decisao-compartilhada-em-procedimento-cardiovascular-de-alto-risco-no-idoso",
+        "por_que": "Faz a ponte entre as duas metades da trilha: descreve explicitamente a discussão de status de reanimação como parte do processo de decisão compartilhada antes de TAVI, cirurgia valvar, revascularização, CDI ou LVAD no idoso frágil — o mesmo cenário em que a recusa terapêutica e a decisão por substituto voltam a aparecer, agora antes do procedimento, não só na crise aguda."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "recusa-de-transfusao-sanguinea-em-cirurgia-cardiaca-testemunhas-de-jeova-e-conservacao-de-sangue",
+        "por_que": "Introduz a terceira forma de decisão de altíssimo risco da trilha: a recusa terapêutica antecipada e explícita, não a indecisão do paciente incapacitado. Cobre o que a evidência mostra sobre desfecho cirúrgico sem transfusão, a decisão do STF de 25/09/2024 que garante o direito de recusa a adultos capazes, e o limite que não se negocia — a criança e o adolescente."
+      },
+      {
+        "ordem": 11,
+        "item_type": "checklist",
+        "item_slug": "recusa-de-transfusao-sanguinea-antes-de-cirurgia-cardiaca-comunicacao-e-consentimento",
+        "por_que": "Converte o documento anterior em conduta verificável passo a passo antes da cirurgia — a mesma lógica de checklist operacional que os passos 3-4 já usaram para ONR, agora aplicada à recusa terapêutica, onde o risco de falha de comunicação (e de litígio) é ainda maior."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "fluxograma-recusa-transfusao-sanguinea-cirurgia-cardiaca",
+        "por_que": "Dá o roteiro visual de decisão — verificação de capacidade, levantamento item a item do que o paciente aceita ou recusa, exigência de programa de conservação de sangue, distinção entre objeção de consciência do médico e recusa do paciente — para uso rápido na avaliação pré-operatória, complementando o checklist do passo anterior."
+      },
+      {
+        "ordem": 13,
+        "item_type": "caso_clinico",
+        "item_slug": "testemunha-de-jeova-recusa-transfusao-cirurgia-cardiaca-eletiva",
+        "por_que": "Segundo ponto de checagem prática da trilha: estenose aórtica grave sintomática, candidata a troca valvar, recusa qualquer hemoderivado. Testa se o profissional consegue aplicar o checklist e o fluxograma dos dois passos anteriores para decidir entre contraindicar a cirurgia e planejar conservação de sangue, em vez de reagir por impulso."
+      },
+      {
+        "ordem": 14,
+        "item_type": "caso_clinico",
+        "item_slug": "presenca-de-familiar-durante-reanimacao-cardiopulmonar",
+        "por_que": "Fecha a trilha voltando à cena da reanimação em si, completando o arco que começou nos passos 1-2 (antes da parada, sobre preferência) e passou pela decisão por substituto (durante a incapacidade): agora a família pede para presenciar a RCP em curso, e o profissional precisa decidir com base em evidência, não em receio não testado de que a presença atrapalhe a equipe."
+      }
+    ]
   }
 ]
