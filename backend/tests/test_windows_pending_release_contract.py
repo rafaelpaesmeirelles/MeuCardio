@@ -45,6 +45,13 @@ def test_android_release_certificate_has_a_public_pinned_fallback():
     assert "no private signing material is stored in Git" in deploy
 
 
+def test_android_release_recreates_capacitor_assets_before_sync():
+    build = _read("ops/build-android-apk.sh")
+    assets = 'install -d -m 0755 "$ANDROID_DIR/app/src/main/assets"'
+    assert assets in build
+    assert build.index(assets) < build.index("npx cap sync android")
+
+
 def test_windows_manual_release_stays_fail_closed_and_strictly_signed():
     workflow = _read(".github/workflows/native-installers.yml")
     entrypoint = _read("ops/remote-deploy-entrypoint.sh")
