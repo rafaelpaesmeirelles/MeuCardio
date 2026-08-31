@@ -52,7 +52,22 @@ aapt="$(find_android_tool aapt)" || die "aapt unavailable"
 actual_cert="$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' "$ANDROID_DIR/app/build/apksigner-release.txt" | head -n 1)"
 actual_cert="$(printf '%s' "$actual_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
 [[ "$actual_cert" == "$expected_cert" ]] || die "release certificate fingerprint mismatch"
-badging="$("$aapt" dump badging "$apk_file" | head -n 1)"
+badging="$("$aapt" dump badging "$apk_file")"
+badging="${badging%%
+grep -Fq "package: name='$EXPECTED_APP_ID'" <<< "$badging" || die "unexpected applicationId"
+grep -Fq "versionCode='$EXPECTED_VERSION_CODE'" <<< "$badging" || die "unexpected versionCode"
+grep -Fq "versionName='$EXPECTED_VERSION_NAME'" <<< "$badging" || die "unexpected versionName"
+
+install -d -m 0755 "$OUTPUT_DIR"
+artifact_tmp="$(mktemp "$OUTPUT_DIR/.android-1.2.0.XXXXXX")"
+sidecar_tmp="$(mktemp "$OUTPUT_DIR/.android-1.2.0-sha.XXXXXX")"
+trap 'rm -f "$artifact_tmp" "$sidecar_tmp"' EXIT
+install -m 0644 "$apk_file" "$artifact_tmp"
+artifact_sha="$(sha256sum "$artifact_tmp" | cut -d' ' -f1)"
+printf '%s  %s\n' "$artifact_sha" "$APK_NAME" > "$sidecar_tmp"; chmod 0644 "$sidecar_tmp"
+mv -f "$artifact_tmp" "$OUTPUT_DIR/$APK_NAME"; mv -f "$sidecar_tmp" "$OUTPUT_DIR/$APK_NAME.sha256"; trap - EXIT
+printf 'ANDROID_SHA256=%s\nANDROID_CERT_SHA256=%s\n' "$artifact_sha" "$actual_cert"
+\n'*}"
 grep -Fq "package: name='$EXPECTED_APP_ID'" <<< "$badging" || die "unexpected applicationId"
 grep -Fq "versionCode='$EXPECTED_VERSION_CODE'" <<< "$badging" || die "unexpected versionCode"
 grep -Fq "versionName='$EXPECTED_VERSION_NAME'" <<< "$badging" || die "unexpected versionName"
