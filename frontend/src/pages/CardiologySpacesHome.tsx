@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CardiologySpaceScene from "../components/CardiologySpaceScene";
 import Icone, { type NomeIcone } from "../components/Icone";
 import { CoracaoHolografico } from "../components/PreHomeBrand";
@@ -119,6 +119,7 @@ const SPACES: Space[] = [
     now: [
       { to: "/indicadores", label: "Ver indicadores", icon: "indicadores" },
       { to: "/agenda", label: "Organizar agenda", icon: "agenda" },
+      { to: "/documentos", label: "Documentos pendentes", icon: "documento" },
       { to: "/admin", label: "Painel administrativo", icon: "gestao", adminOnly: true },
     ],
     next: [
@@ -316,7 +317,6 @@ function ActionLink({ action }: { action: Action }) {
 
 export default function CardiologySpacesHome() {
   const { usuario } = useAuth();
-  const navigate = useNavigate();
   const storageKey = `corvia:cardiology-spaces:essentials:${usuario?.id || "user"}`;
   const [mode, setMode] = useState<Mode | null>(() => {
     const saved = sessionStorage.getItem(MODE_KEY);
@@ -381,7 +381,6 @@ export default function CardiologySpacesHome() {
     setMode(nextMode);
     setSelectedSpace(nextMode === "scientific" ? "descobrir" : "consultorio");
     setPreviewSpace(null);
-    if (!localStorage.getItem("corvia:cardiology-spaces:tour:v2")) navigate("/tour/cardiology-spaces?retorno=/");
   }
 
   function toggleEssential(path: string) {
@@ -399,8 +398,8 @@ export default function CardiologySpacesHome() {
         <header><Brand /><span className="spaces-user"><Icone nome="conta" /> {nomeComTratamento(usuario, true)}</span></header>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">SEU JEITO DE TRABALHAR</p>
-          <h1>Como você quer trabalhar hoje?</h1>
-          <p>Escolha a experiência para o seu momento. Completo e Essencial começam no Consultório; Ciência & Ensino começa em Descobrir. Todas as funções permanecem acessíveis.</p>
+          <h1>Completo ou Essencial?</h1>
+          <p>Escolha a experiência para este acesso. Completo e Essencial começam no Consultório; Ciência & Ensino permanece disponível para descobrir, aprender, ensinar e produzir. Todas as funções continuam acessíveis.</p>
           <div className="spaces-choice__cards">
             <button type="button" onClick={() => chooseMode("complete")}>
               <span className="spaces-choice__icon"><Icone nome="gestao" /></span>
