@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import AppErrorBoundary from "./components/AppErrorBoundary";
 import { AuthProvider } from "./lib/auth";
+import "./lib/cardiologySpacesHoverBoundary";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
