@@ -18704,5 +18704,45 @@
       "Rudolph MI, Borngaesser F, Zmily OM, et al. Preoperative beta blocker use and postoperative ischaemic stroke risk in noncardiac surgery: a multicentre retrospective cohort study. Br J Anaesth. 2026;137(1):129-140. DOI: 10.1016/j.bja.2025.11.027. PMID: 41506973."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "fechamento-percutaneo-leak-paravalvular-mitral-hemolise-meta-do-jato-residual",
+    "titulo": "Leak paravalvular mitral causando hemólise: qual é a meta do fechamento percutâneo?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 61 anos, portadora de prótese mecânica mitral implantada há 3 anos, é encaminhada por anemia progressiva nos últimos 4 meses. Exames mostram hemoglobina em queda, LDH elevado, haptoglobina indetectável e esquizócitos no esfregaço de sangue periférico — quadro compatível com anemia hemolítica mecânica. Ela está em classe funcional NYHA I-II, sem sinais de insuficiência cardíaca. O ecocardiograma transesofágico 3D identifica um leak paravalvular mitral com canal estreito e jato regurgitante de alta velocidade; o disco protético tem mobilidade normal. O heart team indica fechamento percutâneo com dispositivo Amplatzer como alternativa à reoperação, dado o risco elevado de mortalidade em reintervenção valvar.",
+    "pergunta": "Qual deve ser a meta procedural para definir sucesso do fechamento percutâneo neste caso, considerando que a indicação é hemólise?",
+    "opcoes": [
+      "Implantar o dispositivo com sucesso técnico já basta como critério de sucesso — a liberação bem-sucedida do oclusor indica resolução do mecanismo hemolítico, independentemente do grau de jato residual",
+      "Aceitar regurgitação residual leve a moderada após o fechamento, como se faz quando a indicação é insuficiência cardíaca, já que o tamanho do defeito residual é o que determina a gravidade da hemólise",
+      "Buscar redução da área de secção transversal do jato residual em mais de 90%, pois mesmo um canal residual pequeno de alta velocidade pode manter o estresse de cisalhamento e a hemólise, ao contrário do que ocorre com os sintomas de insuficiência cardíaca",
+      "Selecionar o dispositivo Amplatzer pelo diâmetro nominal do defeito medido ao ecocardiograma, para garantir oclusão completa e evitar jato residual em um único implante"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A hemólise associada a leak paravalvular é gerada por estresse de cisalhamento turbulento em um canal regurgitante de alta velocidade, e sua gravidade não se correlaciona necessariamente com o tamanho do defeito — um defeito pequeno com jato de alta velocidade pode causar hemólise grave, enquanto um defeito maior com fluxo mais distribuído pode causar menos destruição de hemácias. Por isso, ao contrário da insuficiência cardíaca (em que regurgitação residual leve costuma ser tolerável), quando a indicação do fechamento é hemólise a meta procedural é a eliminação quase completa do jato responsável: no registro citado pela fonte, a recuperação laboratorial em 6 meses foi mais pronunciada quando a área de secção transversal do leak foi reduzida em mais de 90%. Julgar sucesso apenas pela liberação do dispositivo, aceitar jato residual como na insuficiência cardíaca, ou escolher o dispositivo pelo diâmetro nominal em vez da morfologia do canal (que costuma ser em fenda, crescente ou trajeto serpiginoso, não um orifício circular) são as armadilhas explicitamente descritas na fonte, e todas podem deixar hemólise clinicamente ativa apesar de um procedimento tecnicamente bem-sucedido.",
+    "source_refs": [
+      "Rosu AM, Ungureanu C, Radu ES, Tanasescu MD, Cismas EG, Popa OA. Amplatzer-Based Transcatheter Paravalvular Leak Closure: A Narrative Review of Device Design, Procedural Strategy, Safety, and Outcomes. Life (Basel). 2026;16(6):905. DOI: 10.3390/life16060905. PMID: 42355433."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "carfilzomibe-hipertensao-nova-e-o-risco-cardiovascular-real-metanalise-de-waxman",
+    "titulo": "Hipertensão nova durante carfilzomibe: achado incidental ou toxicidade do fármaco?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 54 anos, sem hipertensão arterial ou outras comorbidades cardiovasculares prévias, com pressão arterial basal de 118/76 mmHg documentada antes do início do tratamento. Diagnóstico recente de mieloma múltiplo, iniciando primeira linha de tratamento com carfilzomibe (56 mg/m² IV, dias 1, 2, 8, 9, 15 e 16), lenalidomida e dexametasona. Após o segundo ciclo, em consulta de rotina, está assintomática — sem dispneia, edema ou dor torácica —, mas a pressão arterial está em 162/98 mmHg, confirmada em duas medidas na mesma consulta.",
+    "pergunta": "Qual a interpretação mais apropriada desse achado e a conduta subsequente?",
+    "opcoes": [
+      "Trata-se provavelmente de hipertensão essencial incidental, sem relação com o carfilzomibe; iniciar anti-hipertensivo de rotina, sem necessidade de comunicar o achado à equipe de hematologia",
+      "A hipertensão nova deve ser interpretada como provável evento cardiovascular relacionado ao carfilzomibe — o componente mais frequente da toxicidade descrita para o fármaco —, devendo ser tratada e discutida com a hematologia, já que a dose atual (56 mg/m²) está na faixa associada a maior risco de evento grave",
+      "Como a paciente é jovem e está em primeira linha de tratamento para o mieloma, sem exposição prévia a outras terapias, o risco cardiovascular associado ao carfilzomibe é baixo, e a elevação pressórica não exige mudança na vigilância",
+      "Qualquer elevação pressórica nova sob carfilzomibe indica evento cardiovascular grave iminente; a conduta correta é suspender definitivamente o fármaco já neste momento, independentemente da resposta ao anti-hipertensivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de Waxman et al. (JAMA Oncol. 2018;4(3):e174519, DOI 10.1001/jamaoncol.2017.4519, PMID 29285538), que reuniu 24 estudos e 2.594 pacientes com mieloma múltiplo em uso de carfilzomibe, encontrou evento cardiovascular adverso (CVAE) de qualquer grau em 18,1% dos pacientes e de grau ≥3 em 8,2%, sendo a hipertensão o componente mais frequente (seguida de insuficiência cardíaca). Nos ensaios randomizados incluídos, o risco relativo de CVAE de qualquer grau com carfilzomibe foi 1,8, e de CVAE grau ≥3 foi 2,2, comparado a controle sem o fármaco. Por isso, hipertensão nova ou piora de hipertensão prévia durante o uso de carfilzomibe deve ser tratada como provável evento relacionado ao tratamento, não como achado incidental desconectado dele. A mesma metanálise mostrou, de forma contraintuitiva, que idade >65 anos e terapia prévia ou concomitante para mieloma NÃO se associaram a maior CVAE — ao contrário do que a intuição clínica sugeriria —, enquanto dose de carfilzomibe ≥45 mg/m² (a paciente do caso está em 56 mg/m², portanto na faixa de maior risco) e a fase do estudo clínico se associaram especificamente a evento de alto grau. Isso invalida a suposição de que idade jovem ou ausência de tratamento prévio protegem a paciente, e orienta a decisão correta: tratar a hipertensão e discutir com a hematologia a relação dose-toxicidade, sem presumir baixo risco pela idade nem suspender definitivamente o fármaco ao primeiro sinal pressórico — conduta não sustentada pelos dados desta metanálise.",
+    "source_refs": [
+      "Waxman AJ, Clasen S, Hwang WT, et al. Carfilzomib-Associated Cardiovascular Adverse Events: A Systematic Review and Meta-analysis. JAMA Oncol. 2018;4(3):e174519. DOI: 10.1001/jamaoncol.2017.4519. PMID: 29285538"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

@@ -38589,5 +38589,93 @@
       }
     ],
     "revisao": "Checklist extraído fielmente do fluxograma já publicado fluxograma-aldosteronismo-primario-subtipagem-avs-cirurgia-ou-mra.md. Cada item é rastreável a um nó da árvore de decisão (mermaid) ou a uma seção de prosa do documento de origem. Nenhum corte numérico de índice de seletividade/lateralização foi fixado como universal, respeitando a decisão editorial do documento fonte de usar 'conforme o protocolo do centro'. Pendente de revisão clínica individual."
+  },
+  {
+    "slug": "escolha-de-acesso-e-manejo-do-marca-passo-temporario-transvenoso-na-emergencia",
+    "condicao": "Marca-passo temporário transvenoso na emergência: indicação, escolha de acesso e vigilância de complicações",
+    "resumo": "O que não pode faltar antes, durante e depois de instalar um marca-passo temporário transvenoso como ponte até o implante definitivo ou até a resolução da bradiarritmia.",
+    "documento_origem": "marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia",
+    "theme": "Dispositivos",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Metkus TS, Schulman SP, Marine JE, Eid SM. Complications and Outcomes of Temporary Transvenous Pacing: An Analysis of > 360,000 Patients From the National Inpatient Sample. Chest. 2019;155(4):749-757. DOI: 10.1016/j.chest.2018.11.026. PMID: 30543806",
+      "Tjong FVY, de Ruijter UW, Beurskens NEG, Knops RE. A comprehensive scoping review on transvenous temporary pacing therapy. Neth Heart J. 2019;27(10):462-473. DOI: 10.1007/s12471-019-01307-x. PMID: 31392624",
+      "Pereira RA, Barcellos G, Lenz G, Tumelero M, Collin B, Peruzzo N, Gordon D. Complications of Temporary Transvenous Cardiac Pacing by Access Site: A Systematic Review and Meta-Analysis. Pacing Clin Electrophysiol. 2026;online ahead of print. DOI: 10.1111/pace.70295. PMID: 42132883",
+      "Long B, Bridwell RE, DeVivo A, Gottlieb M. Transvenous Pacemaker Placement: A Review for Emergency Clinicians. J Emerg Med. 2024;66(4):e492-e502. DOI: 10.1016/j.jemermed.2023.11.018. PMID: 38453595",
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430"
+    ],
+    "itens": [
+      {
+        "id": "tvtp-indicacao-clinica",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Confirmada indicação clínica de estimulação temporária: bradicardia sintomática e hemodinamicamente instável por bloqueio atrioventricular ou disfunção do nó sinusal sem resposta a atropina/medidas farmacológicas, OU overdrive pacing em taquiarritmia instável dependente de bradicardia (ex.: torsades de pointes com QT longo), OU falha da estimulação transcutânea",
+        "origem_secao": "Indicações"
+      },
+      {
+        "id": "tvtp-transcutanea-previa",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Registrado que a estimulação transcutânea foi tentada e falhou ou foi considerada insuficiente antes da via transvenosa, exceto quando essa própria falha é a indicação para o transvenoso",
+        "origem_secao": "Onde ele entra"
+      },
+      {
+        "id": "tvtp-reversibilidade-ou-ponte",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que a causa da bradiarritmia é esperadamente reversível (isquemia miocárdica, miocardite, distúrbio eletrolítico, exposição tóxica, pós-operatório cardíaco) OU que o marca-passo temporário está sendo usado como ponte para implante de dispositivo definitivo indisponível no momento (ESC 2021, Classe IIa)",
+        "origem_secao": "O que a diretriz de sociedade recomenda: ESC 2021"
+      },
+      {
+        "id": "tvtp-subclavia-evitada",
+        "categoria": "acesso",
+        "obrigatorio": true,
+        "texto": "Punção subclávia intratorácica evitada, pelo risco de pneumotórax (ESC 2021)",
+        "origem_secao": "O que a diretriz de sociedade recomenda: ESC 2021"
+      },
+      {
+        "id": "tvtp-jugular-se-implante-planejado",
+        "categoria": "acesso",
+        "obrigatorio": true,
+        "texto": "Acesso jugular preferido quando já há plano de implante ipsilateral de dispositivo definitivo (ESC 2021)",
+        "origem_secao": "O que a diretriz de sociedade recomenda: ESC 2021"
+      },
+      {
+        "id": "tvtp-femoral-curto-prazo",
+        "categoria": "acesso",
+        "obrigatorio": false,
+        "texto": "Acesso femoral usado apenas quando é necessária estimulação rápida e eficiente (curto prazo/emergência), com plano explícito de manter a duração dessa abordagem o mais curta possível",
+        "origem_secao": "O que a diretriz de sociedade recomenda: ESC 2021"
+      },
+      {
+        "id": "tvtp-confirmacao-posicionamento",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Posicionamento do eletrodo no ventrículo direito confirmado por captura eletromecânica: supradesnivelamento do segmento ST no QRS estimulado junto de captura mecânica (pulso palpável/traçado de pressão sincronizado)",
+        "origem_secao": "Técnica e via de acesso"
+      },
+      {
+        "id": "tvtp-vigilancia-complicacoes-maiores",
+        "categoria": "risco_dispositivo",
+        "obrigatorio": true,
+        "texto": "Vigilância dirigida mantida para tamponamento pericárdico e pneumotórax, mesmo sendo complicações incomuns (abaixo de 1-2% na coorte de Metkus et al.), pelo peso desproporcional quando ocorrem — tamponamento associado a mortalidade intra-hospitalar 5 vezes maior (OR 5,00; IC95% 2,51-9,96)",
+        "origem_secao": "Magnitude das complicações"
+      },
+      {
+        "id": "tvtp-discussao-precoce-definitivo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Discussão precoce com a equipe de implante iniciada, já que a maioria dos pacientes com marca-passo temporário evolui para marca-passo definitivo (37,9% a 64,2%, conforme a fonte)",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "tvtp-mortalidade-nao-atribuida-ao-procedimento",
+        "categoria": "documentacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a mortalidade intra-hospitalar de 14,1% reflete a gravidade da população que recebe o dispositivo (parada cardíaca, choque, comorbidade grave), e não deve ser lida como risco atribuível ao procedimento em si",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente do documento já publicado marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia.md, com origem_secao rastreável em cada item. Pendente de revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
