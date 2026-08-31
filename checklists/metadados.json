@@ -38354,5 +38354,240 @@
       }
     ],
     "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "manejo-antitrombotico-e-prevencao-secundaria-na-sca-acc-aha-2025",
+    "condicao": "Antitrombose, revascularização e prevenção secundária na síndrome coronariana aguda (ACC/AHA 2025)",
+    "resumo": "Checklist de conferência dos pontos centrais de antiagregação, estratégias de redução de sangramento, decisão de revascularização, manejo do choque cardiogênico e prevenção secundária na síndrome coronariana aguda, derivado da diretriz ACC/AHA 2025.",
+    "documento_origem": "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. J Am Coll Cardiol. 2025;85(22):2135-2237. DOI: 10.1016/j.jacc.2024.11.009. PMID: 40013746."
+    ],
+    "itens": [
+      {
+        "id": "sca25-dapt-12m",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na ausência de alto risco hemorrágico, dupla antiagregação (AAS + inibidor P2Y12) mantida por pelo menos 12 meses após a síndrome coronariana aguda",
+        "origem_secao": "Antiagregação"
+      },
+      {
+        "id": "sca25-p2y12-preferencia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em pacientes submetidos a PCI, ticagrelor ou prasugrel preferidos a clopidogrel em cenários apropriados de STEMI/NSTE-ACS",
+        "origem_secao": "Antiagregação"
+      },
+      {
+        "id": "sca25-ibp-risco-gi",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Inibidor de bomba de prótons associado quando há risco gastrointestinal",
+        "origem_secao": "Estratégias para reduzir sangramento"
+      },
+      {
+        "id": "sca25-monoterapia-ticagrelor",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Transição para monoterapia com ticagrelor considerada após pelo menos 1 mês em pacientes que toleraram DAPT, quando apropriado",
+        "origem_secao": "Estratégias para reduzir sangramento"
+      },
+      {
+        "id": "sca25-anticoagulacao-longo-prazo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Em pacientes que necessitam anticoagulação de longo prazo, AAS suspenso entre 1 e 4 semanas após PCI, mantendo anticoagulante + inibidor P2Y12 (preferencialmente clopidogrel)",
+        "origem_secao": "Estratégias para reduzir sangramento"
+      },
+      {
+        "id": "sca25-pretratamento-nste",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando há estratégia invasiva planejada e a angiografia não ocorrerá nas primeiras 24 horas, pré-tratamento com clopidogrel ou ticagrelor considerado em pacientes selecionados de NSTE-ACS",
+        "origem_secao": "NSTE-ACS e pré-tratamento"
+      },
+      {
+        "id": "sca25-escolha-revasc",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escolha entre PCI e cirurgia baseada em anatomia coronariana, estabilidade clínica, complexidade da doença, diabetes, função ventricular, comorbidades e risco cirúrgico",
+        "origem_secao": "Revascularização"
+      },
+      {
+        "id": "sca25-revasc-completa-stemi",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Em STEMI com doença multivascular e estabilidade hemodinâmica, revascularização completa das lesões significativas não culpadas considerada em momento apropriado",
+        "origem_secao": "Revascularização"
+      },
+      {
+        "id": "sca25-choque-culpada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "No IAM complicado por choque cardiogênico, revascularização priorizada na artéria culpada",
+        "origem_secao": "Choque cardiogênico"
+      },
+      {
+        "id": "sca25-choque-nao-culpada-indiscriminada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "PCI rotineira imediata de múltiplos vasos no mesmo procedimento não aplicada de forma indiscriminada em choque cardiogênico",
+        "origem_secao": "Choque cardiogênico"
+      },
+      {
+        "id": "sca25-prevencao-lipidios",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia hipolipemiante de alta intensidade iniciada precocemente",
+        "origem_secao": "Prevenção secundária"
+      },
+      {
+        "id": "sca25-prevencao-pa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Controle pressórico incluído na prevenção secundária",
+        "origem_secao": "Prevenção secundária"
+      },
+      {
+        "id": "sca25-prevencao-tabagismo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Cessação do tabagismo abordada",
+        "origem_secao": "Prevenção secundária"
+      },
+      {
+        "id": "sca25-prevencao-reab",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Reabilitação cardíaca incluída no plano",
+        "origem_secao": "Prevenção secundária"
+      },
+      {
+        "id": "sca25-prevencao-dm-obesidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diabetes/obesidade e demais fatores de risco tratados",
+        "origem_secao": "Prevenção secundária"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "aldosteronismo-primario-subtipagem-avs-adrenalectomia-ou-mra",
+    "condicao": "Aldosteronismo primário confirmado — subtipagem por TC/AVS e decisão entre adrenalectomia e antagonista mineralocorticoide",
+    "resumo": "Checklist do passo seguinte ao diagnóstico bioquímico confirmado de aldosteronismo primário: avaliação de candidatura cirúrgica, papel limitado da TC de adrenais isolada, critérios da exceção que dispensa amostragem de veia adrenal (AVS), sucesso técnico e interpretação da AVS, e a bifurcação terapêutica entre adrenalectomia unilateral e antagonista do receptor mineralocorticoide.",
+    "documento_origem": "fluxograma-aldosteronismo-primario-subtipagem-avs-cirurgia-ou-mra",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Funder JW, Carey RM, Mantero F, Murad MH, Reincke M, Shibata H, Stowasser M, Young WF Jr. The Management of Primary Aldosteronism: Case Detection, Diagnosis, and Treatment: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2016;101(5):1889-1916. DOI: 10.1210/jc.2015-4061. PMID: 26934393",
+      "Adler GK, Stowasser M, Correa RR, Khan N, Kline G, McGowan MJ, Mulatero P, Murad MH, Touyz RM, Vaidya A, Williams TA, Yang J, Young WF Jr, Zennaro MC, Brito JP. Primary Aldosteronism: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 2025;110(9):2453-2495. DOI: 10.1210/clinem/dgaf284. PMID: 40658480",
+      "Rossi GP, Auchus RJ, Brown M, Lenders JW, Naruse M, Plouin PF, Satoh F, Young WF Jr. An expert consensus statement on use of adrenal vein sampling for the subtyping of primary aldosteronism. Hypertension. 2014;63(1):151-160. DOI: 10.1161/HYPERTENSIONAHA.113.02097. PMID: 24218436",
+      "da Cunha Brito P, de Sousa Lages A, Machado C, Fernandes V. Perioperative management of patients with primary aldosteronism: a practical approach for the endocrinologist. Endocr Connect. 2026;15(6):e260178. DOI: 10.1530/EC-26-0178. PMID: 42223108",
+      "Ragnarsson O, Juhlin CC, Åkerström T, Dahlqvist P, Falhammar H, Hellman P. Emerging methods for subtype differentiation in primary aldosteronism. J Intern Med. 2026;299(2):178-195. DOI: 10.1111/joim.70055. PMID: 41467368"
+    ],
+    "itens": [
+      {
+        "id": "hp-subtipagem-candidato-cirurgico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Com diagnóstico bioquímico de aldosteronismo primário já confirmado, avaliado se o paciente é candidato a tratamento cirúrgico — aceita adrenalectomia caso doença unilateral seja confirmada e tem condição clínica para cirurgia",
+        "origem_secao": "Árvore de decisão (nó D1)"
+      },
+      {
+        "id": "hp-nao-candidato-mra-sem-subtipagem",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se não candidato a cirurgia (recusa, risco cirúrgico proibitivo ou expectativa de vida limitada): tratamento medicamentoso direto com antagonista do receptor mineralocorticoide — espironolactona como primeira escolha, eplerenona como alternativa se efeitos antiandrogênicos forem limitantes — sem necessidade de TC ou AVS para subtipagem",
+        "origem_secao": "Árvore de decisão (nó C1)"
+      },
+      {
+        "id": "hp-tc-adrenais-cortes-finos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Se candidato a cirurgia: solicitada TC de adrenais com cortes finos para definir anatomia, ajudar a excluir carcinoma adrenocortical e planejar a cirurgia — sem usar o resultado, isoladamente, para decidir lateralidade",
+        "origem_secao": "Árvore de decisão (nó P1)"
+      },
+      {
+        "id": "hp-criterios-excecao-avs",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado se o paciente preenche simultaneamente TODOS os critérios da exceção que dispensa AVS: adenoma adrenal unilateral solitário maior que 1cm na TC com glândula contralateral de aspecto normal, idade menor que 35 anos, aldosterona muito elevada e hipopotassemia espontânea/grave",
+        "origem_secao": "Árvore de decisão (nó D2)"
+      },
+      {
+        "id": "hp-excecao-adrenalectomia-direta",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se todos os critérios da exceção forem preenchidos simultaneamente: prosseguir direto para adrenalectomia laparoscópica unilateral, sem necessidade de amostragem de veia adrenal",
+        "origem_secao": "Árvore de decisão (nó C2)"
+      },
+      {
+        "id": "hp-encaminhar-avs",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se não preencher todos os critérios da exceção ao mesmo tempo: encaminhado para amostragem de veia adrenal (AVS) em centro com experiência no procedimento — indicação padrão para candidato cirúrgico fora da exceção",
+        "origem_secao": "Árvore de decisão (nó P2)"
+      },
+      {
+        "id": "hp-avs-sucesso-tecnico",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Verificado se a AVS foi tecnicamente bem-sucedida, com cateterização de ambas as veias adrenais confirmada pelo índice de seletividade definido no protocolo do centro",
+        "origem_secao": "Árvore de decisão (nó D3)"
+      },
+      {
+        "id": "hp-avs-malsucedida-conduta",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se a cateterização de uma ou ambas as veias adrenais for malsucedida: repetir o procedimento em centro de referência antes de decidir; se permanecer malsucedida, decisão individualizada em centro especializado, com base em imagem e quadro clínico, reconhecendo o risco de erro de mais de um terço usando só TC/RM",
+        "origem_secao": "Árvore de decisão (nó C3)"
+      },
+      {
+        "id": "hp-indice-lateralizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Com AVS tecnicamente adequada, avaliado o índice de lateralização (conforme o protocolo do centro) para verificar se há predomínio de secreção de aldosterona em um dos lados",
+        "origem_secao": "Árvore de decisão (nó D4)"
+      },
+      {
+        "id": "hp-sem-lateralizacao-bilateral",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se sem lateralização clara, achado compatível com doença bilateral (cerca de 70% dos casos): tratamento medicamentoso com antagonista do receptor mineralocorticoide — espironolactona primeira escolha, eplerenona se efeitos antiandrogênicos limitantes — sem indicação cirúrgica",
+        "origem_secao": "Árvore de decisão (nó C5)"
+      },
+      {
+        "id": "hp-otimizacao-preoperatoria",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se lateralização evidente para um dos lados: antes da cirurgia, PA otimizada para meta menor que 140/90mmHg e potássio corrigido com antagonista do receptor mineralocorticoide em todos os pacientes, para favorecer a recuperação da função adrenal contralateral e reduzir risco perioperatório",
+        "origem_secao": "Árvore de decisão (nó P3)"
+      },
+      {
+        "id": "hp-adrenalectomia-unilateral-seguimento",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Aldosteronismo primário unilateral confirmado (cerca de 30% dos casos): adrenalectomia laparoscópica unilateral, com acompanhamento por critérios PASO em 6 a 12 meses",
+        "origem_secao": "Árvore de decisão (nó C4)"
+      },
+      {
+        "id": "hp-tc-nao-decide-sozinha",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que TC/RM isoladas classificam mal mais de um terço dos pacientes com aldosteronismo primário unilateral verdadeiro, por isso a TC não é usada isoladamente para decidir qual lado operar",
+        "origem_secao": "Por que a TC de adrenais não decide sozinha"
+      },
+      {
+        "id": "hp-corte-avs-protocolo-local",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Índices de seletividade e de lateralização da AVS interpretados conforme o protocolo validado do próprio centro, sem assumir um corte numérico único como se fosse universal — a literatura mostra variação documentada entre centros",
+        "origem_secao": "Por que não há um corte numérico único para o índice de lateralização neste fluxograma"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente do fluxograma já publicado fluxograma-aldosteronismo-primario-subtipagem-avs-cirurgia-ou-mra.md. Cada item é rastreável a um nó da árvore de decisão (mermaid) ou a uma seção de prosa do documento de origem. Nenhum corte numérico de índice de seletividade/lateralização foi fixado como universal, respeitando a decisão editorial do documento fonte de usar 'conforme o protocolo do centro'. Pendente de revisão clínica individual."
   }
 ]

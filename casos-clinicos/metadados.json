@@ -18643,5 +18643,66 @@
       "Ommen SR, Ho CY, Asif IM, et al. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy. Circulation. 2024. DOI: 10.1161/CIR.0000000000001250."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "choque-septico-enchimento-capilar-versus-lactato-alvo-de-reanimacao",
+    "titulo": "Choque séptico em reanimação: perseguir o lactato numérico ou olhar a perfusão periférica?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, admitido na UTI com choque séptico de foco urinário, já em noradrenalina após ressuscitação volêmica inicial. Seis horas após o início do tratamento, o lactato caiu apenas 12% em relação ao valor inicial (não atingiu a meta de queda >20% a cada 2 horas), mas o tempo de enchimento capilar normalizou (menor que 3 segundos), as extremidades estão quentes e a diurese está adequada. A equipe está decidindo se deve escalonar a reanimação volêmica e a dose de vasopressor apenas porque o lactato ainda não caiu conforme a meta numérica esperada.",
+    "pergunta": "Com base no ensaio ANDROMEDA-SHOCK, qual a conduta mais apropriada diante desse cenário?",
+    "opcoes": [
+      "Escalonar imediatamente volume e vasopressor até o lactato cair >20% a cada 2 horas, já que esse é o alvo mais objetivo e reduz mortalidade de forma comprovada",
+      "Não perseguir o número do lactato como meta cega isolada — o enchimento capilar já normalizado é um alvo de reanimação válido, e o ensaio mostrou até menos disfunção orgânica em 72h com essa estratégia, sem diferença estatisticamente significativa de mortalidade em 28 dias entre as duas abordagens",
+      "Suspender a dosagem seriada de lactato definitivamente, já que o exame não tem mais nenhum valor prognóstico ou diagnóstico neste paciente",
+      "Reduzir a dose de noradrenalina imediatamente, pois a normalização do enchimento capilar prova redução de mortalidade e torna o suporte vasopressor desnecessário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ANDROMEDA-SHOCK (Hernández G, et al. JAMA. 2019;321(7):654-664. DOI: 10.1001/jama.2019.0071. PMID: 30772908) randomizou 424 adultos com choque séptico para reanimação guiada por normalização do tempo de enchimento capilar versus queda do lactato >20% a cada 2 horas. A mortalidade em 28 dias foi numericamente menor no grupo capilar (34,9% vs 43,4%; HR 0,75; IC95% 0,55-1,02) mas NÃO atingiu significância estatística (P=0,06) — o intervalo de confiança inclui tanto benefício relevante quanto ausência de efeito. Por outro lado, o grupo capilar teve menos disfunção orgânica em 72 horas (SOFA 5,6±4,3 vs 6,6±4,7; diferença −1,00; P=0,045). A mensagem prática correta não é que o enchimento capilar prova redução de mortalidade (erro da opção que reduz a noradrenalina) nem que o lactato perdeu todo valor clínico (erro de abandonar o exame por completo) — é que, quando a perfusão periférica já normalizou, não é necessário perseguir cegamente a queda numérica do lactato como gatilho automático para escalonar volume e vasopressor, o que evita reanimação excessiva sem benefício demonstrado. O documento da casa é explícito: este resultado é do choque séptico e não deve ser extrapolado para choque cardiogênico, obstrutivo ou hemorrágico.",
+    "source_refs": [
+      "Hernández G, Ospina-Tascón GA, Damiani LP, Estenssoro E, Dubin A, Hurtado J, et al.; ANDROMEDA-SHOCK Investigators. Effect of a Resuscitation Strategy Targeting Peripheral Perfusion Status vs Serum Lactate Levels on 28-Day Mortality Among Patients With Septic Shock: The ANDROMEDA-SHOCK Randomized Clinical Trial. JAMA. 2019;321(7):654-664. DOI: 10.1001/jama.2019.0071. PMID: 30772908. ClinicalTrials.gov: NCT03078712. Abstract relido nesta revisão editorial."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "taquicardia-mediada-por-marca-passo-ima-interrompe-o-circuito-de-reentrada",
+    "titulo": "Taquicardia mediada por marca-passo: qual manobra interrompe o circuito à beira do leito?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, portador de marca-passo bicameral (DDD) implantado há 3 anos por bloqueio atrioventricular de alto grau, é atendido no pronto-socorro com palpitações e mal-estar iniciados há 20 minutos. No monitor, uma extrassístole ventricular precedeu imediatamente o início dos sintomas. PA 110/70mmHg, sem sinais de instabilidade hemodinâmica franca. O traçado mostra taquicardia regular de QRS estimulado, com frequência estável de 130bpm — exatamente a frequência limite superior de rastreamento (upper tracking rate) programada no dispositivo, sem variação de ciclo batimento a batimento. A telemetria do próprio marca-passo evidencia uma sequência repetitiva de ondas P retrógradas sentidas seguidas de estimulação ventricular.",
+    "pergunta": "Qual a conduta mais apropriada para interromper agudamente esse quadro à beira do leito?",
+    "opcoes": [
+      "Realizar cardioversão elétrica sincronizada imediata, assumindo taquicardia ventricular pelo QRS alargado estimulado",
+      "Aplicar um ímã sobre a loja do gerador, colocando o dispositivo em modo assíncrono e removendo o ramo anterógrado do circuito",
+      "Solicitar reprogramação urgente do dispositivo para prolongar o PVARP antes de qualquer outra manobra à beira do leito",
+      "Realizar massagem do seio carotídeo isoladamente e aguardar resolução espontânea, sem outra intervenção"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro descrito é uma taquicardia mediada por marca-passo (PMT, ou taquicardia de circuito sem fim): uma extrassístole ventricular gerou condução ventrículo-atrial retrógrada, o eletrodo atrial sentiu o P retrógrado fora do período refratário atrial pós-ventricular (PVARP) e o canal ventricular, em modo de rastreamento (tracking), disparou um novo estímulo — fechando um circuito de reentrada em que o próprio dispositivo forma o ramo anterógrado e o nó AV o ramo retrógrado. A frequência estável exatamente no limite superior de rastreamento, sem variabilidade batimento a batimento, é o achado característico que diferencia PMT de taquicardia sinusal ou de uma taquiarritmia atrial rastreada. A manobra padrão para terminação aguda à beira do leito é aplicar um ímã sobre a loja do gerador: isso comuta o dispositivo para modo assíncrono, eliminando o rastreamento atrial (o ramo anterógrado do circuito) e interrompendo a taquicardia imediatamente. Cardioversão elétrica é um erro de raciocínio comum diante de um QRS alargado e regular em alta frequência — trataria o achado como se fosse taquicardia ventricular, mas não corrige o mecanismo (o circuito voltaria a se formar assim que o dispositivo retomasse o rastreamento) e expõe o paciente a um procedimento desnecessário. Prolongar o PVARP por reprogramação é a estratégia de prevenção definitiva, mas depende de programador e equipe habilitada — não é a manobra mais rápida disponível à beira do leito, e adiar o ímã em favor dela atrasa a terminação aguda. Massagem do seio carotídeo (ou fármacos bloqueadores do nó AV) é apenas manobra temporizadora, usada quando o ímã não está disponível ou como medida adjunta, e não é a conduta inicial preferida quando o ímã pode ser aplicado.",
+    "source_refs": [
+      "Abu-haniyeh A, Hajouli S. Pacemaker Mediated Tachycardia. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; última atualização 25/07/2023. PMID: 32809666. NCBI Bookshelf NBK560831",
+      "Monteil B, Ploux S, Eschalier R, Ritter P, Haissaguerre M, Koneru JN, Ellenbogen KA, Bordachar P. Pacemaker-Mediated Tachycardia: Manufacturer Specifics and Spectrum of Cases. Pacing Clin Electrophysiol. 2015;38(12):1489-1498. DOI: 10.1111/pace.12750. PMID: 26403498"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "betabloqueador-cronico-avc-coorte-hope-suspender-ou-manter",
+    "titulo": "Coorte associa betabloqueador crônico a mais AVC pós-operatório: suspender antes da cirurgia?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 64 anos, hipertensa e com fibrilação atrial permanente controlada, em uso crônico de bisoprolol há 3 anos, será submetida a herniorrafia inguinal eletiva (cirurgia de baixo risco). O cirurgião, ao preparar o encaminhamento pré-operatório, cita um estudo de coorte retrospectiva multicêntrica recente que encontrou risco ajustado maior de AVC isquêmico em 30 e 365 dias entre pacientes em uso crônico de betabloqueador submetidos a cirurgia não cardíaca, e sugere suspender o bisoprolol por precaução antes do procedimento.",
+    "pergunta": "Considerando o desenho do estudo citado, qual a conduta mais adequada quanto ao bisoprolol dessa paciente?",
+    "opcoes": [
+      "Manter o bisoprolol na dose habitual até o dia da cirurgia, incluindo a dose da manhã: o estudo é uma coorte observacional sujeita a confusão por indicação, não estabelece causalidade e é geradora de hipótese — suspender abruptamente um betabloqueador crônico pode causar rebote de taquicardia, hipertensão e isquemia",
+      "Suspender o bisoprolol 48 horas antes da cirurgia, já que a coorte mostrou risco ajustado significativamente maior de AVC isquêmico tanto em 30 quanto em 365 dias, com p<0,001 em ambos os desfechos",
+      "Trocar o bisoprolol por um bloqueador de canal de cálcio no pré-operatório, evitando expor a paciente ao risco de AVC atribuído à classe dos betabloqueadores",
+      "Reduzir a dose do bisoprolol pela metade na semana da cirurgia, como forma de mitigar proporcionalmente o risco relatado sem retirar totalmente a proteção cardiovascular"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A coorte citada (Rudolph MI, Borngaesser F, Zmily OM, et al. Br J Anaesth. 2026;137(1):129-140. DOI: 10.1016/j.bja.2025.11.027. PMID: 41506973) analisou 289.511 pacientes submetidos a cirurgia não cardíaca, dos quais 18.715 usavam betabloqueador cronicamente, e encontrou associação com maior AVC isquêmico em 30 dias (RR ajustado 1,26; IC95% 1,17-1,36; p<0,001) e em 365 dias (RR ajustado 1,22; IC95% 1,16-1,28; p<0,001), mais forte em pacientes ASA 1-2 do que ASA 3-4. Mas os próprios autores são explícitos: não houve randomização para manter, iniciar ou suspender a droga, e prescrição crônica de betabloqueador é, em si, um marcador de doença coronariana, arritmia, hipertensão e carga de comorbidades que carregam risco próprio de AVC — mesmo após ajuste estatístico, permanece confusão residual e confusão por indicação. Por isso o achado não justifica suspender betabloqueador crônico no perioperatório; interromper abruptamente a droga em paciente dependente da terapia (como esta, com fibrilação atrial) pode produzir taquicardia, hipertensão, isquemia ou descompensação — risco concreto e bem estabelecido, contra um sinal observacional que é gerador de hipótese, não uma indicação de retirada. Trocar de classe ou reduzir a dose pela metade não têm respaldo nos dados do estudo e introduzem risco extra sem base de evidência.",
+    "source_refs": [
+      "Rudolph MI, Borngaesser F, Zmily OM, et al. Preoperative beta blocker use and postoperative ischaemic stroke risk in noncardiac surgery: a multicentre retrospective cohort study. Br J Anaesth. 2026;137(1):129-140. DOI: 10.1016/j.bja.2025.11.027. PMID: 41506973."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
