@@ -6,17 +6,17 @@ export default function PoliticaPrivacidade() {
     <main className="legal-page" id="conteudo-principal">
       <header>
         <Link to="/" aria-label="Voltar ao CorVIA">
-          <img src="/corvia-logo-canonical-dark.svg" alt="CorVIA" />
+          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
         </Link>
         <p className="eyebrow">Privacidade, transparência e segurança</p>
-        <h1>Política de Privacidade — CorVIA OS</h1>
+        <h1>Política de Privacidade — CorVIA Cardiology Spaces</h1>
         <p>Última atualização: 28 de agosto de 2026.</p>
       </header>
 
       <section>
         <h2>1. Escopo e contato</h2>
         <p>
-          Esta Política de Privacidade descreve como o CorVIA OS (“CorVIA”), em suas versões web e móvel,
+          Esta Política de Privacidade descreve como o CorVIA Cardiology Spaces (“CorVIA”), em suas versões web e móvel,
           trata dados pessoais no fornecimento de recursos de apoio à prática clínica, organização profissional,
           prontuário, documentos, prescrições, exames, comunicação, integrações e inteligência artificial.
         </p>

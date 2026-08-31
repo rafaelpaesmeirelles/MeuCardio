@@ -24,7 +24,7 @@ export default function EmBreve() {
     >
       <div aria-hidden="true" style={{ position: "absolute", inset: "auto 0 14%", height: 1, background: "linear-gradient(90deg, transparent, #00aeef, #7439f1, #eb2c8b, transparent)" }} />
       <section style={{ width: "min(760px, 100%)", textAlign: "center", position: "relative" }}>
-        <img src="/corvia-logo-canonical-dark.svg" alt="CorVIA Clinical OS" style={{ width: "min(310px, 70vw)", marginBottom: "clamp(2rem, 6vw, 4rem)" }} />
+        <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" style={{ width: "min(310px, 70vw)", marginBottom: "clamp(2rem, 6vw, 4rem)" }} />
         <p style={{ margin: "0 0 1rem", color: "#52dded", fontWeight: 800, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".78rem" }}>
           Estamos preparando a experiência completa
         </p>
@@ -32,7 +32,7 @@ export default function EmBreve() {
           Em breve<span style={{ color: "#eb2c8b" }}>.</span>
         </h1>
         <p style={{ maxWidth: 610, margin: "1.6rem auto 0", color: "#b7c9d6", fontSize: "clamp(1rem, 2.4vw, 1.25rem)", lineHeight: 1.65 }}>
-          O CorVIA Clinical OS está em fase final de preparação. As assinaturas permanecem pausadas e nenhuma cobrança será iniciada neste momento.
+          O CorVIA Cardiology Spaces está em fase final de preparação. As assinaturas permanecem pausadas e nenhuma cobrança será iniciada neste momento.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: ".8rem", flexWrap: "wrap", marginTop: "2rem" }}>
           <Link to="/tour?modo=completo" style={{ padding: ".8rem 1.2rem", borderRadius: 10, color: "#03101a", background: "#52dded", fontWeight: 800, textDecoration: "none" }}>

@@ -17,6 +17,8 @@ const ROUTES: Array<[string, string]> = [
   ["/corvia-mail", "mail"],
   ["/caixa-de-email", "mail"],
   ["/assistente", "assistente"],
+  ["/heart-team", "assistente"],
+  ["/whatsapp-assistant", "integracoes"],
 
   // Conhecimento/contexto onde Intelligence agrega relações
   ["/medicamentos", "conhecimento"],

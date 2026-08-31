@@ -17,14 +17,24 @@
   top:0;
   right:0;
   content:"VIA";
-  color:#128df4;
+  color:#16d9f5;
   pointer-events:none;
 }
 
+.prehome-brand__logo strong:has(.corvia-via)::after,
+.cc-mobile-more__head>div>span>strong:has(.corvia-via)::after,
+.cos-brand__text>strong:has(.corvia-via)::after,
+.cos-topbar__mobile-brand>span:has(.corvia-via)::after,
+.cos-tour__brand strong:has(.corvia-via)::after {
+  content:none;
+}
+
+.corvia-via { color:#16d9f5; }
+
 /* Sidebar desktop: nunca reconstruir a wordmark com pseudo-elementos.
-   Usa diretamente o ativo canônico, que já contém Cor branco + VIA azul + Clinical OS. */
+   Usa diretamente o ativo Cardiology Spaces, com VIA ciano. */
 .ccc-nav__brand {
-  background-image:url('/corvia-logo-canonical-dark.svg');
+  background-image:url('/corvia-logo-spaces-dark.svg');
   background-repeat:no-repeat;
   background-position:left .9rem center;
   background-size:174px auto;

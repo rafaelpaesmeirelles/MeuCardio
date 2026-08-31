@@ -486,7 +486,7 @@ export default function PainelClinicalOS() {
         </section>
 
         <section className="ccc-section ccc-module-directory" aria-labelledby="ccc-modules-title">
-          <div className="ccc-section__head"><h2 id="ccc-modules-title">CorVIA Clinical OS</h2><Link to="/busca">Explorar tudo <Icone nome="seta" /></Link></div>
+          <div className="ccc-section__head"><h2 id="ccc-modules-title">CorVIA Cardiology Spaces</h2><Link to="/busca">Explorar tudo <Icone nome="seta" /></Link></div>
           <div className="ccc-module-directory__grid">
             {grupos.map((grupo) => <article key={grupo.title} className="ccc-module-group" data-tone={grupo.tone}>
               <header><span><Icone nome={grupo.icon} /></span><strong>{grupo.title}</strong></header>

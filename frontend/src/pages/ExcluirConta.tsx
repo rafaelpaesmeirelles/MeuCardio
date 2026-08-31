@@ -11,7 +11,7 @@ export default function ExcluirConta() {
     <main className="legal-page" id="conteudo-principal">
       <header>
         <Link to="/" aria-label="Voltar ao CorVIA">
-          <img src="/corvia-logo-canonical-dark.svg" alt="CorVIA" />
+          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
         </Link>
         <p className="eyebrow">Conta e privacidade</p>
         <h1>Solicitar exclusão da conta CorVIA</h1>

@@ -5,7 +5,7 @@ export default function TermosUso() {
   return (
     <main className="legal-page" id="conteudo-principal">
       <header>
-        <Link to="/" aria-label="Voltar ao CorVIA"><img src="/corvia-logo-canonical-dark.svg" alt="CorVIA" /></Link>
+        <Link to="/" aria-label="Voltar ao CorVIA"><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" /></Link>
         <p className="eyebrow">Uso responsável</p>
         <h1>Termos de Uso — mapas e deslocamento</h1>
         <p>Última atualização: 5 de agosto de 2026.</p>

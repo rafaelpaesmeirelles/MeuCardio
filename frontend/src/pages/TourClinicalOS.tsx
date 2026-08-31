@@ -202,7 +202,7 @@ const SLIDES: Slide[] = [
   { id:"action", eyebrow:"Ação", titulo:"Quando a decisão termina, a execução já está ali.", resumo:"Prescrição, exames e documentos fazem parte do fluxo clínico e não de um sistema paralelo.", promessa:"Menos troca de contexto entre pensar, documentar e agir.", icone:"prescricao", pontos:["Solicitar Exames", "Emitir Atestado Médico", "Documento em Branco sem template obrigatório"], Mockup:MockAction },
   { id:"emergency", eyebrow:"Risco imediato", titulo:"Na emergência, o CorVIA fica mais simples — de propósito.", resumo:"Reconhecimento, primeiros minutos, estratificação e tratamento ganham prioridade visual.", promessa:"O visual acompanha a urgência em vez de competir com ela.", icone:"emergencia", pontos:["Protocolos rápidos", "Ações críticas próximas", "Vermelho reservado para risco"], Mockup:MockEmergency, sinal:"red" },
   { id:"knowledge", eyebrow:"Conhecimento", titulo:"Estudar, consultar e decidir usam a mesma base.", resumo:"Evidências, estudos, guidelines, exames, casos e trilhas deixam de parecer ilhas separadas.", promessa:"Aprofunde quando quiser sem perder aplicação clínica.", icone:"conhecimento", pontos:["Fontes rastreáveis", "Filtros progressivos", "Enums internos nunca chegam ao usuário"], Mockup:MockKnowledge },
-  { id:"communication", eyebrow:"Comunicação", titulo:"Seu trabalho continua depois da consulta.", resumo:"CorVIA Mail permanece integrado ao Clinical OS e pode ser resumido pelo Assistente apenas quando autorizado.", promessa:"Comunicação profissional dentro do mesmo ambiente de trabalho.", icone:"mail", pontos:["Inbox premium", "CorVIA Chat permanece separado do Assistente", "HTML recebido isolado", "Assistente não lê caixa sem necessidade"], Mockup:MockCommunication },
+  { id:"communication", eyebrow:"Comunicação", titulo:"Seu trabalho continua depois da consulta.", resumo:"CorVIA Mail permanece integrado ao Cardiology Spaces e pode ser resumido pelo Assistente apenas quando autorizado.", promessa:"Comunicação profissional dentro do mesmo ambiente de trabalho.", icone:"mail", pontos:["Inbox premium", "CorVIA Chat permanece separado do Assistente", "HTML recebido isolado", "Assistente não lê caixa sem necessidade"], Mockup:MockCommunication },
   { id:"mobile", eyebrow:"Mobile", titulo:"No celular, a prioridade é alcançar a ação com uma mão.", resumo:"Mobile não é desktop empilhado: busca, pacientes, agenda e Mais têm ergonomia própria.", promessa:"O mesmo produto, com outra ergonomia.", icone:"menu", pontos:["Início · Buscar · Pacientes · Agenda · Mais", "Command Bar compacta", "Nenhum floating button cobre conteúdo"], Mockup:MockMobile },
 ];
 
@@ -264,7 +264,7 @@ export default function TourClinicalOS() {
   return (
     <div className="cos-tour">
       <header className="cos-tour__top">
-        <div className="cos-tour__brand"><img src="/corvia-logo-canonical-dark.svg" alt="CorVIA Clinical OS"/></div>
+        <div className="cos-tour__brand"><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces"/></div>
         <div className="cos-tour__mode"><i/><span>{modo === "quick" ? "Início rápido" : "Tour completo"}</span></div>
         <button type="button" className="cos-tour__skip" onClick={() => void concluir()} disabled={concluindo}>{pendente ? "Pular" : "Fechar"}</button>
       </header>
@@ -273,7 +273,7 @@ export default function TourClinicalOS() {
       <main className="cos-tour__stage">
         {boasVindas && <section className="cos-tour-welcome">
           <div className="cos-tour-welcome__glow" aria-hidden="true" />
-          <p className="cos-tour-welcome__kicker">Bem-vindo ao CorVIA Clinical OS</p>
+          <p className="cos-tour-welcome__kicker">Bem-vindo ao CorVIA Cardiology Spaces</p>
           <h1>Um sistema que começa pelo que você precisa resolver.</h1>
           <p className="cos-tour-welcome__lead">Não é prontuário. Não é só IA. Não é portal de conteúdo. É o workspace clínico inteligente do médico para pesquisar, decidir, executar e organizar o trabalho.</p>
           {usuario?.socio && <p className="cos-tour-welcome__entitlement">Acesso de sócio.</p>}

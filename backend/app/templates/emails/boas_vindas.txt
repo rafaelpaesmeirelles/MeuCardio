@@ -1,6 +1,6 @@
 Olá, {{ nome }}!
 
-Sua assinatura da Corvia foi confirmada. Resumo:
+Sua assinatura do CorVIA Cardiology Spaces foi confirmada. Resumo:
 
 Plano: {{ plano.nome }}
 Inclui: {{ plano.descricao }}

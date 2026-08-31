@@ -44,6 +44,7 @@ export default function Entrar() {
     setEnviando(true);
     setErro("");
     try {
+      sessionStorage.removeItem("corvia:cardiology-spaces:mode");
       await entrar(email.trim().toLowerCase(), senha, permanecerConectado);
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível entrar.");
@@ -92,17 +93,17 @@ export default function Entrar() {
           <div className="prehome-card__actions">
             <a
               className="prehome-android-download"
-              href="/downloads/corvia-cardiology-spaces-android-1.1.0.apk"
-              download="CorVIA-Cardiology-Spaces-Android-1.1.0.apk"
+              href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"
+              download="CorVIA-Cardiology-Spaces-Android-1.2.0.apk"
             >
               <span className="prehome-android-download__icon"><MarcaAndroid /></span>
-              <span><strong>Baixar app para Android</strong><small>Versão 1.1.0 · APK assinado</small></span>
+              <span><strong>Baixar app para Android</strong><small>Versão 1.2.0 · APK assinado</small></span>
               <Icone nome="seta" aria-hidden="true" />
             </a>
             <a
               className="prehome-windows-download"
-              href="/downloads/corvia-os-windows.exe"
-              download="CorVIA-Cardiology-Spaces-Windows-Setup.exe"
+              href="/downloads/corvia-cardiology-spaces-windows-1.2.0.exe"
+              download="CorVIA-Cardiology-Spaces-Windows-Setup-1.2.0.exe"
               aria-label="Baixar instalador do CorVIA Cardiology Spaces para Windows 10 ou 11"
             >
               <span className="prehome-windows-download__icon"><MarcaWindows /></span>

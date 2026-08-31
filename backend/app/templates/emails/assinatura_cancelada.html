@@ -2,10 +2,10 @@
 {% from "_macros.html" import botao %}
 {% block corpo %}
 <p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
-<p style="margin:0 0 16px;">Sua assinatura Corvia foi cancelada, como pedido.</p>
+<p style="margin:0 0 16px;">Sua assinatura CorVIA foi cancelada, como pedido.</p>
 <p style="margin:0 0 16px;">Você mantém acesso até <strong>{{ acesso_ate }}</strong> — fim do período já pago.</p>
 {% if tinha_mail %}
-<p style="margin:0 0 16px;">Sua caixa do CorvIA Mail e as mensagens nela seguem acessíveis até essa mesma data.</p>
+<p style="margin:0 0 16px;">Sua caixa do CorVIA Mail e as mensagens nela seguem acessíveis até essa mesma data.</p>
 {% endif %}
 <p style="margin:0 0 16px;">Seus dados ficam guardados por {{ dias_retencao }} dias após o fim do acesso. Depois disso, exclusão definitiva.</p>
 {{ botao("Reativar assinatura", link_reativar) }}

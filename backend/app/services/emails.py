@@ -30,10 +30,14 @@ _texto_simples_de_html = _legacy._texto_simples_de_html
 def _normalizar_branding(valor: str) -> str:
     """Remove resíduos textuais/visuais da identidade anterior antes do envio."""
     return (
-        valor.replace("Corvia — O caminho do coração", "CorVIA — Clinical OS")
-        .replace("CorvIA — O Caminho do Coração", "CorVIA — Clinical OS")
-        .replace("CorvIA — O caminho do coração", "CorVIA — Clinical OS")
+        valor.replace("Corvia — O caminho do coração", "CorVIA — Cardiology Spaces")
+        .replace("CorvIA — O Caminho do Coração", "CorVIA — Cardiology Spaces")
+        .replace("CorvIA — O caminho do coração", "CorVIA — Cardiology Spaces")
+        .replace("CorVIA — Clinical OS", "CorVIA — Cardiology Spaces")
+        .replace("CorVIA Clinical OS", "CorVIA Cardiology Spaces")
+        .replace("CorVIA OS", "CorVIA Cardiology Spaces")
         .replace("Corvia —", "CorVIA —")
+        .replace("CorvIA", "CorVIA")
         .replace("à Corvia", "ao CorVIA")
         .replace("no Corvia", "no CorVIA")
         .replace("do Corvia", "do CorVIA")
@@ -174,7 +178,7 @@ def enviar_alerta_seguranca(access_id: int) -> bool:
                 "nome_usuario": user.full_name,
                 "email_usuario": user.email,
                 "quando": when,
-                "superficie": "CorVIA Mail" if access.surface == "corvia_mail" else "CorVIA OS",
+                "superficie": "CorVIA Mail" if access.surface == "corvia_mail" else "CorVIA Cardiology Spaces",
                 "local": location,
                 "ip": access.ip_address or "não informado",
                 "sistema": access.operating_system or "não identificado",

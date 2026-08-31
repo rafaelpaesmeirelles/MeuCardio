@@ -1,6 +1,6 @@
-{# E-mail ao PACIENTE, enviado do endereço do próprio médico via Mail360 —
-   não é um e-mail "da Corvia" (por isso não estende _base.html: sem logo/
-   rodapé institucional, é o médico falando, não a plataforma). Texto
+{# E-mail ao PACIENTE, enviado do endereço do próprio médico via Mail360.
+   A autoria clínica continua sendo do médico; logo e rodapé identificam
+   apenas a plataforma. Texto
    aprovado palavra por palavra pelo Rafael em material-paciente-por-email-
    spec.md — não reescrever o conteúdo, só os estilos. #}
 <!DOCTYPE html>
@@ -8,12 +8,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Material do seu médico — Corvia</title>
+<title>Material do seu médico — CorVIA Cardiology Spaces</title>
 </head>
 <body style="margin:0;padding:0;background-color:#F4F6F7;font-family:Arial,Helvetica,sans-serif;color:#26333B;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F4F6F7;padding:24px 0;">
 <tr><td align="center">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="background-color:#ffffff;max-width:560px;width:100%;border-radius:8px;">
+  <tr>
+    <td style="padding:24px 32px 8px;">
+      <img src="{{ public_url }}/corvia-logo-canonical.png" alt="CorVIA Cardiology Spaces" width="230" style="display:block;width:230px;max-width:100%;height:auto;border:0;">
+    </td>
+  </tr>
   <tr>
     <td style="padding:28px 32px;font-size:15px;line-height:1.65;">
       <p style="margin:0 0 16px;">{{ nome_paciente }},</p>
@@ -34,6 +39,7 @@
         Em caso de dúvida sobre o conteúdo, responda a este e-mail para falar diretamente com seu médico.
         <strong>Se você estiver passando mal agora, não use este canal — procure atendimento ou ligue 192.</strong>
       </p>
+      <p style="margin:20px 0 0;font-size:12px;color:#70808A;">CorVIA — Cardiology Spaces</p>
     </td>
   </tr>
 </table>

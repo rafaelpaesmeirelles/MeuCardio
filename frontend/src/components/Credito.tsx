@@ -10,7 +10,7 @@ export default function Credito({ compacto = false }: { compacto?: boolean }) {
         lineHeight: 1.6,
       }}
     >
-      CorVIA — Clinical OS
+      CorVIA — Cardiology Spaces
       <br />
       Todos os Direitos Reservados
       <br />

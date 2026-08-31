@@ -1,6 +1,6 @@
 Olá, {{ nome }}!
 
-Recebemos sua solicitação de acesso à Corvia.
+Recebemos sua solicitação de acesso ao CorVIA.
 
 Um administrador vai conferir seu registro profissional{% if conselho %} ({{ conselho }}{% if numero %} {{ numero }}{% endif %}{% if estado %}, {{ estado }}{% endif %}){% endif %} antes de liberar o acesso à plataforma.
 

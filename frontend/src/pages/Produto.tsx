@@ -41,10 +41,10 @@ export default function Produto() {
       <header className="produto-nav">
         <Link to="/" className="produto-nav__marca" aria-label="CorVIA — início">
           <img src="/corvia-logo-compacta.png" alt="CorVIA" />
-          <span>Clinical OS do médico</span>
+          <span>Cardiology Spaces</span>
         </Link>
         <nav aria-label="Navegação da página">
-          <a href="#clinical-os">Clinical OS</a>
+          <a href="#clinical-os">Cardiology Spaces</a>
           <a href="#como-funciona">Como funciona</a>
           <a href="#qualidade">Ciência e segurança</a>
         </nav>
@@ -57,8 +57,8 @@ export default function Produto() {
       <main>
         <section className="produto-hero">
           <div className="produto-hero__conteudo">
-            <p className="produto-selo"><span /> CorVIA · Clinical OS do médico</p>
-            <h1>Um sistema operacional para o trabalho médico.</h1>
+            <p className="produto-selo"><span /> CorVIA · Cardiology Spaces</p>
+            <h1>Ambientes de cardiologia para o trabalho médico.</h1>
             <p className="produto-hero__subtitulo">
               Conhecimento, contexto, paciente, decisão e ação conectados em um único workspace —
               construído a partir do que o médico precisa resolver agora.
@@ -67,7 +67,7 @@ export default function Produto() {
               <Link to="/solicitar-acesso" className="produto-botao produto-botao--grande">
                 Solicitar acesso profissional <Icone nome="seta" />
               </Link>
-              <a href="#clinical-os" className="produto-botao produto-botao--secundario">Entender o Clinical OS</a>
+              <a href="#clinical-os" className="produto-botao produto-botao--secundario">Conhecer o Cardiology Spaces</a>
             </div>
             <div className="produto-hero__garantias" aria-label="Princípios do CorVIA">
               <span><Icone nome="check" /> Médico no centro do produto</span>
@@ -108,7 +108,7 @@ export default function Produto() {
           </div>
         </section>
 
-        <section className="produto-faixa" aria-label="Arquitetura do Clinical OS">
+        <section className="produto-faixa" aria-label="Arquitetura do Cardiology Spaces">
           <span>Necessidade</span><i />
           <strong>Contexto</strong><i />
           <strong>Conhecimento</strong><i />
@@ -177,7 +177,7 @@ export default function Produto() {
           <div>
             <p className="produto-selo produto-selo--claro"><span /> Comece pelo que precisa resolver</p>
             <h2>Experimente uma nova maneira de trabalhar em medicina.</h2>
-            <p>Solicite acesso profissional e conheça o Clinical OS construído para o médico.</p>
+            <p>Solicite acesso profissional e conheça o Cardiology Spaces construído para o médico.</p>
           </div>
           <div>
             <Link to="/solicitar-acesso" className="produto-botao produto-botao--claro">Solicitar acesso <Icone nome="seta" /></Link>
@@ -188,7 +188,7 @@ export default function Produto() {
 
       <footer className="produto-rodape">
         <img src="/corvia-logo-compacta.png" alt="CorVIA" />
-        <p>CorVIA — Clinical OS do médico. Apoio ao trabalho profissional; não substitui julgamento clínico nem responsabilidade médica.</p>
+        <p>CorVIA — Cardiology Spaces. Apoio ao trabalho profissional; não substitui julgamento clínico nem responsabilidade médica.</p>
         <div><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><Link to="/entrar">Acesso profissional</Link></div>
       </footer>
     </div>
