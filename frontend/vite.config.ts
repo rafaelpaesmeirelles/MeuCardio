@@ -52,9 +52,19 @@ export default defineConfig({
         // no lugar de JSON e esconder falhas de sessão em PWA/mobile.
         navigateFallbackDenylist: [/^\/api\//],
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
-        // O PNG existe para clientes de e-mail que não renderizam SVG, mas
-        // não precisa ocupar o precache offline do aplicativo.
-        globIgnores: ["corvia-logo-canonical.png", "corvia-logo.png"],
+        // PNGs de marca e ícones de instalação são consumidos pelo navegador,
+        // pelo manifesto ou por clientes de e-mail. Eles não fazem parte do
+        // shell offline e duplicá-los no precache acrescenta mais de 1 MiB sem
+        // melhorar a experiência depois que o PWA já foi instalado.
+        globIgnores: [
+          "corvia-logo-canonical.png",
+          "corvia-logo.png",
+          "apple-touch-icon.png",
+          "favicon.png",
+          "icon-192.png",
+          "icon-512.png",
+          "icon-maskable.png",
+        ],
         manifestTransforms: [
           async (entries) => ({
             manifest: entries.filter((entry) => {
