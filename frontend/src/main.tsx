@@ -80,6 +80,7 @@ import "./styles/clinical-ai-spaces.css";
    paralela. O contraste de controles permanece a última camada de segurança. */
 import "./styles/cardiology-spaces-interior-approved.css";
 import "./styles/cardiology-spaces-route-tones.css";
+import "./styles/cardiology-spaces-reference-fidelity.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
