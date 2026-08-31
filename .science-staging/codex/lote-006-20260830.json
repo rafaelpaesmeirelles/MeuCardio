@@ -1,0 +1,255 @@
+{
+  "batch": "codex-006-20260830",
+  "fonte_producao": "codex",
+  "status": "pendente_revisao",
+  "source_scope": "XML/abstract PubMed efetch consultado em 2026-08-30; artigos integrais não conferidos",
+  "generated_at": "2026-08-30",
+  "studies": [
+    {
+      "slug": "pfa-versus-radiofrequencia-lesoes-cerebrais-silenciosas-estudo",
+      "title": "Incidence of silent cerebral lesions during pulsed field ablation for paroxysmal atrial fibrillation",
+      "study_type": "ensaio_clinico_piloto",
+      "authors": "Peiqi Ding, Wensu Chen, Jianfan Shen, Bowen Qiu, Xiaoqin Hu, Lixiang Xie, et al.",
+      "journal": "Annals of Medicine", "year": 2026,
+      "doi": "10.1080/07853890.2026.2634472", "pmid": "41774050", "url": "https://pubmed.ncbi.nlm.nih.gov/41774050/",
+      "summary": "Ensaio piloto prospectivo que randomizou 62 pacientes com fibrilação atrial paroxística para ablação por campo pulsado ou radiofrequência, com ressonância cerebral antes e 24–48 horas após o procedimento.",
+      "key_findings": "Lesões cerebrais silenciosas ocorreram em 4/31 pacientes com campo pulsado e 2/31 com radiofrequência, sem diferença estatisticamente significativa (p=0,67).",
+      "clinical_implications": "O estudo não demonstra diferença entre as técnicas e o sinal numérico exige avaliação em amostra maior antes de inferências sobre segurança cerebral.",
+      "limitations": "Piloto com 62 pacientes e poucos eventos; artigo integral não conferido.",
+      "theme": "Ablação de fibrilação atrial", "tags": ["campo pulsado", "radiofrequência", "lesão cerebral silenciosa"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "seguranca-estrutural-da-ablacao-por-campo-pulsado-esofago-e-veias-pulmonares"
+    },
+    {
+      "slug": "larisa-landiolol-controle-frequencia-fa-ic-aguda-estudo",
+      "title": "Landiolol for rate control in decompensated heart failure due to atrial fibrillation: the LARISA trial",
+      "study_type": "ensaio_clinico", "authors": "Marek Sramko, Ales Benak, Jakub Toman, Martin Kleissner, Michal Pazdernik, Josef Kautzner",
+      "journal": "European Heart Journal - Acute Cardiovascular Care", "year": 2026,
+      "doi": "10.1093/ehjacc/zuag027", "pmid": "41761704", "url": "https://pubmed.ncbi.nlm.nih.gov/41761704/",
+      "summary": "Ensaio com 40 pacientes com insuficiência cardíaca aguda atribuída à fibrilação atrial e fração de ejeção reduzida, comparando controle intensivo de frequência baseado em landiolol com tratamento padrão.",
+      "key_findings": "O controle de frequência ocorreu mais cedo com a estratégia intensiva: mediana de 1,5 versus 4 horas; o desfecho primário em duas horas ocorreu em 80% versus 20%, sem excesso de hipotensão ou eventos adversos.",
+      "clinical_implications": "A estratégia acelerou o controle da frequência e o alívio inicial, mas os resultados convergiram em 24 horas e não avaliam desfechos tardios.",
+      "limitations": "Apenas 40 pacientes e avaliação predominantemente hemodinâmica e sintomática de curto prazo; artigo integral não conferido.",
+      "theme": "Fibrilação atrial e insuficiência cardíaca aguda", "tags": ["LARISA", "landiolol", "controle de frequência", "IC aguda"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "fibrilacao-atrial-pos-operatoria-de-cirurgia-cardiaca-controle-de-frequencia-ou-de-ritmo"
+    },
+    {
+      "slug": "azalea-timi-71-anticoagulacao-previa-abelacimabe-estudo",
+      "title": "Prior anticoagulation experience and bleeding risk with the factor XI inhibitor abelacimab in the AZALEA-TIMI 71 study",
+      "study_type": "analise_pre_especificada_ensaio_clinico",
+      "authors": "Andre M Small, Siddharth M Patel, Robert P Giugliano, David A Morrow, Erica L Goodrich, Bruce Hug, et al.",
+      "journal": "Blood", "year": 2026, "doi": "10.1182/blood.2026033829", "pmid": "42213637", "url": "https://pubmed.ncbi.nlm.nih.gov/42213637/",
+      "summary": "Análise pré-especificada do AZALEA-TIMI 71 avaliando a experiência prévia com anticoagulação oral como marcador de risco hemorrágico em pacientes com fibrilação atrial.",
+      "key_findings": "O abstract relata que abelacimabe reduziu sangramento independentemente da experiência prévia com anticoagulação, com possível maior benefício absoluto entre pacientes sem uso prévio.",
+      "clinical_implications": "A experiência prévia com anticoagulante pode estratificar risco hemorrágico, mas esta análise não redefine a eficácia antitrombótica nem recomenda uso clínico do inibidor do fator XI.",
+      "limitations": "Abstract extremamente conciso, sem números, definições ou estimativas de efeito; artigo integral não conferido.",
+      "theme": "Anticoagulação na fibrilação atrial", "tags": ["AZALEA-TIMI 71", "abelacimabe", "fator XI", "sangramento"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese limitada ao abstract PubMed, que não apresenta números; artigo integral não conferido.",
+      "document_slug": "experiencia-previa-com-anticoagulante-como-marcador-de-risco-hemorragico-azalea-timi-71"
+    },
+    {
+      "slug": "strokestop-iii-rastreamento-oportunistico-sistematico-fa-estudo",
+      "title": "Population reach and participation rate in opportunistic vs. systematic atrial fibrillation screening: STROKESTOP III",
+      "study_type": "ensaio_clinico_cluster", "authors": "Mashroor Khan, Sofia Skröder, Michael Ingre, Fredrik Carlstedt, Anders Eriksson, Johanna Star Tenn, et al.",
+      "journal": "Europace", "year": 2026, "doi": "10.1093/europace/euag214", "pmid": "42669050", "url": "https://pubmed.ncbi.nlm.nih.gov/42669050/",
+      "summary": "Ensaio cluster em 16 centros de atenção primária suecos, comparando convite oportunístico durante consultas com convite sistemático por correio para rastreamento de fibrilação atrial aos 75–76 anos.",
+      "key_findings": "Entre elegíveis convidados, a participação foi 61,4% no rastreio oportunístico e 46,3% no sistemático; porém, o alcance populacional foi menor no oportunístico, 25,3% versus 42,2%, devido à avaliação incompleta de elegibilidade.",
+      "clinical_implications": "Convites oportunísticos aumentaram adesão individual, mas perderam alcance populacional; uma estratégia combinada pode equilibrar as duas métricas.",
+      "limitations": "Desfechos de implementação, região sueca única e ausência de dados de eventos clínicos; artigo integral não conferido.",
+      "theme": "Rastreamento de fibrilação atrial", "tags": ["STROKESTOP III", "rastreamento", "atenção primária"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "rastreio-populacional-de-fibrilacao-atrial-no-idoso-loop-e-strokestop"
+    },
+    {
+      "slug": "norscreen-rastreamento-digital-fa-patch-ecg-estudo",
+      "title": "Digital recruitment and prevalence of screen-detected atrial fibrillation in nationwide patch-based ECG screening: the NORSCREEN randomized clinical trial",
+      "study_type": "analise_pre_especificada_ensaio_clinico", "authors": "Miroslav Boskovic, Marius Blørstad Haraldsen, Trygve Berge, Bjørnar Leangen Grenne, Per Torger Skretteberg, Johan Engdahl, et al.",
+      "journal": "Europace", "year": 2026, "doi": "10.1093/europace/euag140", "pmid": "42669049", "url": "https://pubmed.ncbi.nlm.nih.gov/42669049/",
+      "summary": "Análise pré-especificada do NORSCREEN, com recrutamento nacional inteiramente digital de pessoas com 65 anos ou mais e risco adicional de AVC, randomizadas para rastreamento remoto com patch de ECG por sete dias ou cuidado usual.",
+      "key_findings": "Entre 19.723 participantes que completaram o rastreamento, fibrilação atrial previamente desconhecida foi detectada em 382 (1,9%); 366 desses pacientes iniciaram anticoagulação.",
+      "clinical_implications": "O modelo digital demonstrou viabilidade operacional em grande escala, mas esta análise não informa se o rastreamento reduz AVC ou mortalidade.",
+      "limitations": "Dependência de smartphone, autoseleção digital e foco em detecção e adesão inicial, não em desfechos clínicos; artigo integral não conferido.",
+      "theme": "Rastreamento de fibrilação atrial", "tags": ["NORSCREEN", "patch ECG", "rastreamento digital"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "rastreio-de-fibrilacao-atrial-assintomatica-no-idoso-loop-strokestop-guard-af-e-mstops"
+    },
+    {
+      "slug": "cardioversao-fa-ondas-bifasicas-rbw-bte-estudo",
+      "title": "Pragmatic Randomized Clinical Trial Comparing Rectilinear Biphasic Waveform and Biphasic Truncated Exponential Waveform Shocks for Cardioversion of Atrial Fibrillation",
+      "study_type": "ensaio_clinico", "authors": "Andrew H Nguyen, Abbas Emaminia, Chirag Sandesara, Leonard Ilkhanoff, Stephen A Gaeta, Jeff Jae Lee, et al.",
+      "journal": "Journal of the American Heart Association", "year": 2026, "doi": "10.1161/JAHA.125.042938", "pmid": "42500901", "url": "https://pubmed.ncbi.nlm.nih.gov/42500901/",
+      "summary": "Ensaio pragmático aberto em três hospitais, com 546 pacientes sintomáticos com fibrilação atrial randomizados entre duas formas de onda bifásicas em potência máxima para cardioversão elétrica.",
+      "key_findings": "Ritmo sinusal após o primeiro choque ocorreu em 82,6% com onda bifásica retilínea e 84,4% com onda exponencial truncada (p=0,565), sem diferenças em eficácia acumulada ou segurança.",
+      "clinical_implications": "O estudo não identificou vantagem entre as duas formas de onda testadas quando aplicadas em potência máxima.",
+      "limitations": "Estudo aberto em um único sistema hospitalar e comparação simultânea de forma de onda e energia máxima; artigo integral não conferido.",
+      "theme": "Cardioversão elétrica", "tags": ["cardioversão", "fibrilação atrial", "onda bifásica"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024"
+    },
+    {
+      "slug": "optima-af-um-versus-doze-meses-antitrombotico-pos-pci-estudo",
+      "title": "1-month versus 12-month dual antithrombotic therapy after percutaneous coronary intervention in patients with atrial fibrillation (OPTIMA-AF): a multicentre, open-label, hybrid non-inferiority and superiority, randomised, controlled trial",
+      "study_type": "ensaio_clinico", "authors": "Yohei Sotomi, Ken Kozuma, Yoshiharu Higuchi, Gaku Nakazawa, Yoshihiro Morino, Kenji Ando, et al.",
+      "journal": "The Lancet", "year": 2026, "doi": "10.1016/S0140-6736(26)00665-3", "pmid": "42456692", "url": "https://pubmed.ncbi.nlm.nih.gov/42456692/",
+      "summary": "Ensaio aberto em 75 centros japoneses com 1.079 pacientes analisados, comparando um mês de DOAC associado a inibidor P2Y12 seguido de DOAC isolado com 12 meses de terapia dupla após PCI guiada por imagem intravascular.",
+      "key_findings": "O composto de morte ou tromboembolismo ocorreu em 5,4% e 4,3%, atendendo não inferioridade; sangramento maior ou clinicamente relevante ocorreu em 4,5% e 8,8% (HR 0,50; IC95% 0,30–0,81).",
+      "clinical_implications": "Na população predominantemente com síndrome coronariana crônica, terapia dupla por um mês reduziu sangramento sem perda de eficácia pelo critério de não inferioridade.",
+      "limitations": "Estudo aberto japonês, poucos eventos, margem absoluta fixa de não inferioridade e maioria com doença coronariana crônica; artigo integral não conferido.",
+      "theme": "FA e PCI", "tags": ["OPTIMA-AF", "DOAC", "PCI", "sangramento"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "fluxograma-antitrombotico-na-fa-com-icp-ou-sca-terapia-tripla-e-dupla-esc-2023-2024"
+    },
+    {
+      "slug": "his-alternative-i-his-versus-biventricular-cinco-anos-estudo",
+      "title": "His Pacing vs Biventricular Pacing for Cardiac Resynchronization Therapy: Long-Term Follow-Up From the His-Alternative I Trial",
+      "study_type": "seguimento_ensaio_clinico", "authors": "Emil Anton Frandsen, Johanna Krøll, Ulrik Winsløw, Berit Thornvig Philbert, Jesper Hastrup Svendsen, Niels Risum, Michael Vinther",
+      "journal": "JACC: Clinical Electrophysiology", "year": 2026, "doi": "10.1016/j.jacep.2026.02.016", "pmid": "41973899", "url": "https://pubmed.ncbi.nlm.nih.gov/41973899/",
+      "summary": "Seguimento de cinco anos do His-Alternative I, que randomizou 50 pacientes com insuficiência cardíaca, fração de ejeção reduzida e bloqueio de ramo esquerdo para ressincronização por His ou biventricular.",
+      "key_findings": "Após crossovers, revisões de eletrodo ocorreram em 37% com estimulação de His e 3% com biventricular, e troca de gerador em 47% e 10%; resposta ecocardiográfica foi 89% e 90%, sem diferença detectada no composto clínico.",
+      "clinical_implications": "A resposta ventricular foi comparável, mas a estimulação de His apresentou maior carga de manutenção no conjunto implantado.",
+      "limitations": "Apenas 50 randomizados, crossovers relevantes, análise pelo tratamento recebido e estimativas clínicas imprecisas; artigo integral não conferido.",
+      "theme": "Ressincronização cardíaca", "tags": ["His-Alternative I", "estimulação de His", "CRT", "bloqueio de ramo esquerdo"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "estimulacao-do-feixe-de-his-versus-biventricular-o-ensaio-his-sync"
+    },
+    {
+      "slug": "var-pvc-vareniciclina-extrassistoles-pos-infarto-estudo",
+      "title": "Varenicline and Ventricular Ectopy After Myocardial Infarction: A Randomized Phase 2 Study",
+      "study_type": "ensaio_clinico_fase_2", "authors": "Yunli Shen, Xiaogang Guo, Chunyu Zeng, Dao Wen Wang, Wei Han, Xiang Cheng, et al.",
+      "journal": "Journal of the American College of Cardiology", "year": 2026, "doi": "10.1016/j.jacc.2025.12.090", "pmid": "41778949", "url": "https://pubmed.ncbi.nlm.nih.gov/41778949/",
+      "summary": "Ensaio fase 2 multicêntrico, duplo-cego e controlado por placebo em 118 pacientes com extrassístoles ventriculares frequentes após infarto, avaliando vareniciclina por 45 dias.",
+      "key_findings": "A redução da carga de extrassístoles foi 60,1 pontos percentuais maior com vareniciclina; resposta de pelo menos 50% ocorreu em 67,8% versus 30,5%, e taquicardia ventricular não sustentada em 20,3% versus 37,3%.",
+      "clinical_implications": "O sinal eletrofisiológico é promissor, mas não estabelece benefício em morte súbita, sintomas ou eventos cardiovasculares.",
+      "limitations": "Fase 2 exploratória, 118 pacientes, 45 dias e desfechos de monitorização em vez de eventos clínicos; artigo integral não conferido.",
+      "theme": "Arritmias ventriculares pós-infarto", "tags": ["Var-PVC", "vareniciclina", "extrassístoles ventriculares", "infarto"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "extrassistole-ventricular-frequente-e-cardiomiopatia-induzida-carga-que-preve-disfuncao"
+    },
+    {
+      "slug": "safe-protect-anchorman-watchman-oclusao-apendice-estudo",
+      "title": "Left atrial appendage closure with the AnchorMan or Watchman devices: 12-month results of the SAFE-PROTECT randomised trial",
+      "study_type": "ensaio_clinico_nao_inferioridade", "authors": "Binhao Wang, Heng Cai, Yanqing Wu, Manhua Chen, Changqian Wang, Xiaofei Jiang, et al.",
+      "journal": "EuroIntervention", "year": 2026, "doi": "10.4244/EIJ-D-25-01168", "pmid": "42405627", "url": "https://pubmed.ncbi.nlm.nih.gov/42405627/",
+      "summary": "Ensaio multicêntrico aberto de não inferioridade em 216 pacientes com fibrilação atrial não valvar e alto risco de AVC, comparando oclusão do apêndice atrial esquerdo com AnchorMan ou Watchman 2.5.",
+      "key_findings": "Sucesso clínico em 12 meses foi 98,1% em ambos os grupos, e oclusão ecocardiográfica foi 100% em ambos, atendendo os critérios de não inferioridade.",
+      "clinical_implications": "O novo dispositivo apresentou desempenho não inferior ao comparador testado em um ano, sem evidência de superioridade.",
+      "limitations": "Amostra de 216, desenho aberto, eventos raros e comparador Watchman 2.5; artigo integral não conferido.",
+      "theme": "Oclusão do apêndice atrial esquerdo", "tags": ["SAFE-PROTECT", "AnchorMan", "Watchman", "FA"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "oclusao-do-apendice-atrial-esquerdo-protect-af-e-prevail"
+    },
+    {
+      "slug": "pivotal-pvi-parede-posterior-criobalao-fa-persistente-estudo",
+      "title": "Concomitant cryoballoon pulmonary vein and posterior wall isolation in persistent atrial fibrillation: Results from the PIVoTAL IDE trial",
+      "study_type": "ensaio_clinico_interrompido_precocemente", "authors": "Arash Aryana, Deep K Pujara, Shelley L Allen, Ethan R Ellis, Russell R Heath, Amar D Trivedi, et al.",
+      "journal": "Heart Rhythm", "year": 2026, "doi": "10.1016/j.hrthm.2025.08.018", "pmid": "40840576", "url": "https://pubmed.ncbi.nlm.nih.gov/40840576/",
+      "summary": "Ensaio multicêntrico que randomizou 153 pacientes com fibrilação atrial persistente sintomática para isolamento das veias pulmonares por criobalão isolado ou associado ao isolamento da parede posterior; o recrutamento foi encerrado por falta de financiamento.",
+      "key_findings": "Recorrência de FA em 12 meses foi 29,0% versus 43,3% (p=0,12); carga de arritmia acima de 0,1% foi 19,2% versus 31,6% (p=0,02), com procedimentos mais longos e radiofrequência complementar em 28,9% do braço combinado.",
+      "clinical_implications": "O isolamento adicional reduziu carga arrítmica, mas o estudo subdimensionado não comprovou redução do desfecho primário de recorrência.",
+      "limitations": "Interrupção precoce, poder estatístico insuficiente e necessidade frequente de radiofrequência complementar; artigo integral não conferido.",
+      "theme": "Ablação de fibrilação atrial persistente", "tags": ["PIVoTAL", "criobalão", "parede posterior", "PVI"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "star-af-ii-isolamento-de-veias-pulmonares-isolado-versus-ablacao-adicional-de-substrato-na-fa-persistente"
+    },
+    {
+      "slug": "magnesio-prevencao-fa-pos-operatoria-cirurgia-cardiaca-estudo",
+      "title": "Magnesium Sulfate to Prevent Perioperative Atrial Fibrillation in Cardiac Surgery: A Randomized Clinical Trial",
+      "study_type": "ensaio_clinico_interrompido_por_futilidade", "authors": "Manon Meerman, Marit Buijser, Ary Serpa Neto, Lettie van den Berg, Anne-Marthe van den Heuvel, Gerard Hoohenkerk, et al.",
+      "journal": "Critical Care Medicine", "year": 2026, "doi": "10.1097/CCM.0000000000007162", "pmid": "42206948", "url": "https://pubmed.ncbi.nlm.nih.gov/42206948/",
+      "summary": "Ensaio unicêntrico duplo-cego e controlado por placebo em adultos submetidos a cirurgia coronária e/ou valvar, avaliando infusão perioperatória de magnésio para prevenir fibrilação atrial pós-operatória.",
+      "key_findings": "O estudo foi interrompido por futilidade após 265 randomizações; FA pós-operatória ocorreu em 37,9% com magnésio e 28,6% com placebo (RR 1,29; IC95% 0,92–1,80).",
+      "clinical_implications": "O ensaio não apoia suplementação profilática rotineira de magnésio com esse protocolo para prevenir FA pós-operatória.",
+      "limitations": "Centro único, interrupção interina por futilidade e exclusão de arritmia prévia e disfunção renal grave; artigo integral não conferido.",
+      "theme": "Fibrilação atrial pós-operatória", "tags": ["magnésio", "cirurgia cardíaca", "FA pós-operatória"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex",
+      "review_note": "Síntese original em português após consulta ao XML/abstract PubMed; artigo integral não conferido; números limitados ao abstract.",
+      "document_slug": "pompae-magnesio-prevencao-fibrilacao-atrial-pos-operatoria-cirurgia-cardiaca-2026"
+    }
+  ],
+  "evidence": [
+    {
+      "slug": "pfa-radiofrequencia-lesoes-cerebrais-silenciosas-achado", "statement": "Em ensaio piloto de FA paroxística, a incidência de lesões cerebrais silenciosas não diferiu significativamente entre campo pulsado e radiofrequência, com poucos eventos e sinal numérico que requer confirmação.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Incidence of silent cerebral lesions during pulsed field ablation for paroxysmal atrial fibrillation",
+      "reference": "Ding P, Chen W, Shen J, et al. Annals of Medicine. 2026. doi:10.1080/07853890.2026.2634472. PMID:41774050.", "theme": "Ablação de fibrilação atrial", "tags": ["campo pulsado", "segurança cerebral"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "41774050", "doi": "10.1080/07853890.2026.2634472", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "pfa-versus-radiofrequencia-lesoes-cerebrais-silenciosas-estudo"
+    },
+    {
+      "slug": "larisa-landiolol-controle-frequencia-fa-ic-aguda-achado", "statement": "No LARISA, controle intensivo baseado em landiolol acelerou a redução da frequência e o alívio inicial na IC aguda por FA, sem diferença persistente em 24 horas.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Landiolol for rate control in decompensated heart failure due to atrial fibrillation: the LARISA trial",
+      "reference": "Sramko M, Benak A, Toman J, et al. European Heart Journal - Acute Cardiovascular Care. 2026. doi:10.1093/ehjacc/zuag027. PMID:41761704.", "theme": "FA e insuficiência cardíaca aguda", "tags": ["LARISA", "landiolol"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "41761704", "doi": "10.1093/ehjacc/zuag027", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "larisa-landiolol-controle-frequencia-fa-ic-aguda-estudo"
+    },
+    {
+      "slug": "azalea-timi-71-anticoagulacao-previa-abelacimabe-achado", "statement": "Na análise pré-especificada do AZALEA-TIMI 71, abelacimabe reduziu sangramento independentemente do uso prévio de anticoagulante, segundo abstract sem estimativas numéricas.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Prior anticoagulation experience and bleeding risk with the factor XI inhibitor abelacimab in the AZALEA-TIMI 71 study",
+      "reference": "Small AM, Patel SM, Giugliano RP, et al. Blood. 2026. doi:10.1182/blood.2026033829. PMID:42213637.", "theme": "Anticoagulação na fibrilação atrial", "tags": ["AZALEA-TIMI 71", "abelacimabe"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42213637", "doi": "10.1182/blood.2026033829", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed sem números; artigo integral não conferido.", "document_slug": "azalea-timi-71-anticoagulacao-previa-abelacimabe-estudo"
+    },
+    {
+      "slug": "strokestop-iii-rastreamento-oportunistico-sistematico-fa-achado", "statement": "No STROKESTOP III, convite oportunístico aumentou participação entre convidados, mas teve menor alcance populacional por falhas na avaliação de elegibilidade.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Population reach and participation rate in opportunistic vs. systematic atrial fibrillation screening: STROKESTOP III",
+      "reference": "Khan M, Skröder S, Ingre M, et al. Europace. 2026. doi:10.1093/europace/euag214. PMID:42669050.", "theme": "Rastreamento de fibrilação atrial", "tags": ["STROKESTOP III", "rastreamento"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42669050", "doi": "10.1093/europace/euag214", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "strokestop-iii-rastreamento-oportunistico-sistematico-fa-estudo"
+    },
+    {
+      "slug": "norscreen-rastreamento-digital-fa-patch-ecg-achado", "statement": "O NORSCREEN demonstrou viabilidade de rastreamento nacional digital com patch de ECG e detectou FA não conhecida em 1,9% dos participantes rastreados, sem dados de impacto em AVC.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Digital recruitment and prevalence of screen-detected atrial fibrillation in nationwide patch-based ECG screening: the NORSCREEN randomized clinical trial",
+      "reference": "Boskovic M, Haraldsen MB, Berge T, et al. Europace. 2026. doi:10.1093/europace/euag140. PMID:42669049.", "theme": "Rastreamento de fibrilação atrial", "tags": ["NORSCREEN", "patch ECG"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42669049", "doi": "10.1093/europace/euag140", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "norscreen-rastreamento-digital-fa-patch-ecg-estudo"
+    },
+    {
+      "slug": "cardioversao-fa-ondas-bifasicas-rbw-bte-achado", "statement": "Em cardioversão elétrica de FA, não houve diferença detectada entre choque bifásico retilíneo e bifásico exponencial truncado em potência máxima quanto a reversão ou segurança.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Pragmatic Randomized Clinical Trial Comparing Rectilinear Biphasic Waveform and Biphasic Truncated Exponential Waveform Shocks for Cardioversion of Atrial Fibrillation",
+      "reference": "Nguyen AH, Emaminia A, Sandesara C, et al. Journal of the American Heart Association. 2026. doi:10.1161/JAHA.125.042938. PMID:42500901.", "theme": "Cardioversão elétrica", "tags": ["cardioversão", "onda bifásica"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42500901", "doi": "10.1161/JAHA.125.042938", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "cardioversao-fa-ondas-bifasicas-rbw-bte-estudo"
+    },
+    {
+      "slug": "optima-af-um-versus-doze-meses-antitrombotico-pos-pci-achado", "statement": "No OPTIMA-AF, um mês de terapia antitrombótica dupla seguido de DOAC isolado foi não inferior para morte ou tromboembolismo e reduziu sangramento em comparação com 12 meses.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "1-month versus 12-month dual antithrombotic therapy after percutaneous coronary intervention in patients with atrial fibrillation (OPTIMA-AF)",
+      "reference": "Sotomi Y, Kozuma K, Higuchi Y, et al. The Lancet. 2026. doi:10.1016/S0140-6736(26)00665-3. PMID:42456692.", "theme": "FA e PCI", "tags": ["OPTIMA-AF", "DOAC", "PCI"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42456692", "doi": "10.1016/S0140-6736(26)00665-3", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "optima-af-um-versus-doze-meses-antitrombotico-pos-pci-estudo"
+    },
+    {
+      "slug": "his-alternative-i-his-versus-biventricular-cinco-anos-achado", "statement": "No seguimento do His-Alternative I, resposta ecocardiográfica foi semelhante, mas a estimulação de His apresentou mais revisões de eletrodo e trocas de gerador no conjunto implantado.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "His Pacing vs Biventricular Pacing for Cardiac Resynchronization Therapy: Long-Term Follow-Up From the His-Alternative I Trial",
+      "reference": "Frandsen EA, Krøll J, Winsløw U, et al. JACC: Clinical Electrophysiology. 2026. doi:10.1016/j.jacep.2026.02.016. PMID:41973899.", "theme": "Ressincronização cardíaca", "tags": ["His-Alternative I", "CRT"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "41973899", "doi": "10.1016/j.jacep.2026.02.016", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "his-alternative-i-his-versus-biventricular-cinco-anos-estudo"
+    },
+    {
+      "slug": "var-pvc-vareniciclina-extrassistoles-pos-infarto-achado", "statement": "No Var-PVC fase 2, vareniciclina reduziu carga de extrassístoles e taquicardia ventricular não sustentada após infarto, sem avaliação de benefício em eventos clínicos.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Varenicline and Ventricular Ectopy After Myocardial Infarction: A Randomized Phase 2 Study",
+      "reference": "Shen Y, Guo X, Zeng C, et al. Journal of the American College of Cardiology. 2026. doi:10.1016/j.jacc.2025.12.090. PMID:41778949.", "theme": "Arritmias ventriculares pós-infarto", "tags": ["Var-PVC", "vareniciclina", "extrassístoles"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "41778949", "doi": "10.1016/j.jacc.2025.12.090", "review_note": "Achado de estudo fase 2, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "var-pvc-vareniciclina-extrassistoles-pos-infarto-estudo"
+    },
+    {
+      "slug": "safe-protect-anchorman-watchman-oclusao-apendice-achado", "statement": "No SAFE-PROTECT, o dispositivo AnchorMan foi não inferior ao Watchman 2.5 para sucesso clínico e oclusão do apêndice atrial esquerdo em 12 meses.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Left atrial appendage closure with the AnchorMan or Watchman devices: 12-month results of the SAFE-PROTECT randomised trial",
+      "reference": "Wang B, Cai H, Wu Y, et al. EuroIntervention. 2026. doi:10.4244/EIJ-D-25-01168. PMID:42405627.", "theme": "Oclusão do apêndice atrial esquerdo", "tags": ["SAFE-PROTECT", "AnchorMan", "Watchman"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42405627", "doi": "10.4244/EIJ-D-25-01168", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "safe-protect-anchorman-watchman-oclusao-apendice-estudo"
+    },
+    {
+      "slug": "pivotal-pvi-parede-posterior-criobalao-fa-persistente-achado", "statement": "No PIVoTAL interrompido precocemente, isolamento adicional da parede posterior reduziu carga arrítmica, mas não comprovou redução da recorrência de FA em 12 meses.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Concomitant cryoballoon pulmonary vein and posterior wall isolation in persistent atrial fibrillation: Results from the PIVoTAL IDE trial",
+      "reference": "Aryana A, Pujara DK, Allen SL, et al. Heart Rhythm. 2026. doi:10.1016/j.hrthm.2025.08.018. PMID:40840576.", "theme": "Ablação de fibrilação atrial persistente", "tags": ["PIVoTAL", "criobalão", "parede posterior"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "40840576", "doi": "10.1016/j.hrthm.2025.08.018", "review_note": "Achado de estudo interrompido precocemente, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "pivotal-pvi-parede-posterior-criobalao-fa-persistente-estudo"
+    },
+    {
+      "slug": "magnesio-prevencao-fa-pos-operatoria-cirurgia-cardiaca-achado", "statement": "Em ensaio interrompido por futilidade, infusão perioperatória de magnésio não reduziu fibrilação atrial após cirurgia cardíaca.",
+      "recommendation_class": "N/A", "evidence_level": "N/A", "society": "Estudo-índice", "year": 2026, "guideline_title": "Magnesium Sulfate to Prevent Perioperative Atrial Fibrillation in Cardiac Surgery: A Randomized Clinical Trial",
+      "reference": "Meerman M, Buijser M, Serpa Neto A, et al. Critical Care Medicine. 2026. doi:10.1097/CCM.0000000000007162. PMID:42206948.", "theme": "Fibrilação atrial pós-operatória", "tags": ["magnésio", "cirurgia cardíaca", "FA pós-operatória"],
+      "review_status": "pendente_revisao", "published": false, "fonte_producao": "codex", "pmid": "42206948", "doi": "10.1097/CCM.0000000000007162", "review_note": "Achado de estudo, sem classe ou nível de diretriz; abstract PubMed consultado; artigo integral não conferido.", "document_slug": "magnesio-prevencao-fa-pos-operatoria-cirurgia-cardiaca-estudo"
+    }
+  ]
+}
