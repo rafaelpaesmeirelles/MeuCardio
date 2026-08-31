@@ -1387,3 +1387,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 148 (19 descartados por colisão) | 52 |
 | **Total** | **4.900** | **351** | **4.549** |
+
+## Lote 67 — concluído (commit f95c190a)
+
+- **4 documentos** (uma aortopatia genética ultrarrara, uma citopatia mitocondrial pediátrica, uma associação neurocutânea esporádica e uma cardiomiopatia nutricional reversível): síndrome da tortuosidade arterial/SLC2A10-GLUT10 (doença ultrarrara — 106 casos confirmados na literatura mundial até 2023 —, mecanismo por compartimentalização anômala de ascorbato, distinto de TGF-beta/Loeys-Dietz e de colágeno III/Ehlers-Danlos vascular; tortuosidade arterial difusa em 92% como achado discriminador; ausência explícita de ensaio clínico controlado para qualquer terapia — `content/Aorta_e_doença_arterial_periférica`), síndrome de Barth (TAZ/tafazzina, cardiomiopatia dilatada com não compactação do VE em lactente, tríade com neutropenia cíclica e miopatia esquelética, biomarcador MLCL:CL patognomônico, diferenciação mecanística explícita de Kearns-Sayre e MELAS — `content/Cardiomiopatias`), síndrome PHACE (associação sem gene causador identificado; coarctação de aorta em 19% de 150 pacientes em registro internacional, 61% dos casos de coarctação exigindo intervenção; dilema terapêutico do propranolol em arteriopatia cerebrovascular documentado com honestidade explícita sobre a incerteza de risco de AVC — `content/Cardiopatias_congênitas`), cardiomiopatia por deficiência de tiamina/beribéri cardíaco (mecanismo por deficiência de cofator mitocondrial, insuficiência cardíaca de alto débito reversível em dias com reposição; populações de risco contemporâneas — alcoolismo, bariátrica, hiperêmese gravídica, diuréticos de alça, realimentação, oncologia/UTI; diferenciação explícita de Keshan/selênio e pelagra/niacina já cobertas — `content/Insuficiência_cardíaca`).
+- **doencas**: +4, pareadas 1:1 — `sindrome-da-tortuosidade-arterial`, `sindrome-de-barth`, `sindrome-phace`, `beriberi-cardiaco`. `prevalence_rank` 153-156 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 4 tópicos despachados confirmaram gap genuíno após checagem cruzada; todos os quatro foram descobertos como menções laterais de diferencial em documentos já existentes (aortopatias genéticas pediátricas, cardiomiopatia não compactada/Kearns-Sayre, coarctação de aorta, cardiomiopatias nutricionais), com cada documento novo citando/diferenciando explicitamente esses vizinhos sem duplicar conteúdo.
+- **Correções na integração**: nenhuma entidade HTML residual em nenhum dos 4 documentos. Dois links do documento de tiamina foram inicialmente sinalizados como possível problema pela verificação Python local por causa de slugs entre aspas em dois arquivos pré-existentes (convenção antiga presente em 38 arquivos do repositório, não introduzida por este lote) — confirmado pelos gates oficiais que ambos os alvos resolvem corretamente, sem ação corretiva necessária.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.602 itens.
+
+### Status consolidado (após Lote 67)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 158 | 2.242 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 152 (19 descartados por colisão) | 48 |
+| **Total** | **4.900** | **355** | **4.545** |
