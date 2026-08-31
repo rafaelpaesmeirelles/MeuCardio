@@ -974,3 +974,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 47 (3 descartados por colisão) | 153 |
 | **Total** | **4.900** | **205** | **4.695** |
+
+## Lote 48 — concluído (commit b7ae1eb9)
+
+- **7 documentos** (infeccioso/tóxico/zoonótico): sífilis cardiovascular terciária (aortite, aneurisma sacular e estenose ostial coronariana por endarterite obliterante dos vasa vasorum — `content/Aorta_e_doença_arterial_periférica`), brucelose e endocardite (zoonose ocupacional, endocardite de hemocultura exigente — `content/Endocardite`), síndrome de hiperinfecção por *Strongyloides stercoralis* e choque cardiovascular (`content/Terapia_intensiva`), tétano grave e disautonomia cardiovascular (mecanismo da tetanospasmina contrastado explicitamente com o do botulismo — mesma protease SNARE, alvo funcional oposto — `content/Terapia_intensiva`), raiva/hidrofobia e complicações cardiovasculares (tempestade autonômica, miocardite em autópsia, limites documentados do protocolo de Milwaukee — `content/Terapia_intensiva`), leishmaniose visceral/calazar e acometimento cardiovascular (dois eixos: miocardite direta de baixa evidência vs. cardiotoxicidade dominante dos antimoniais pentavalentes — `content/Geral`), febre tifoide grave (miocardite, bradicardia relativa comparada ponto a ponto com o sinal de Faget da febre amarela, choque multifatorial — `content/Geral`).
+- **doencas**: +7, pareadas 1:1 — `sifilis-cardiovascular-terciaria`, `brucelose-endocardite`, `estrongiloidiase-cardiovascular`, `tetano-grave-e-disautonomia-cardiovascular`, `raiva-humana-hidrofobia`, `leishmaniose-visceral-calazar`, `miocardite-e-disfuncao-cardiovascular-na-febre-tifoide`.
+- **Nenhum tópico descartado por colisão real neste lote** — as 7 buscas de anti-colisão (grep alternado, `content/**/*.md` + `doencas/metadados.json` + fragmentos/correções) não encontraram sobreposição genuína; a veia de infecções raras/zoonoses/toxicologia com repercussão cardiovascular seguiu rendendo tópicos genuinamente novos.
+- **"Tudo com Tudo" com referências cruzadas intra-lote**: tétano linka ao botulismo (Lote 46) mantendo o contraste mecanístico explícito no corpo do texto; febre tifoide linka à febre amarela (Lote 46) com comparação direta do mecanismo da bradicardia relativa/sinal de Faget entre as duas doenças — ambos os links verificados por grep contra o estado real do worktree (não a `main`, que não vê essas branches).
+- **Correções na integração**: 2 dos 7 slugs de doença propostos colidiam com o slug do documento pareado (brucelose, estrongiloidíase) — renomeados para `brucelose-endocardite` e `estrongiloidiase-cardiovascular`. Documento de sífilis entregue sem heading H1 (corpo começava direto em `## Por que este assunto...`) — corrigido. `theme` de estrongiloidíase entregue como `"Terapia_intensiva"` (underscore) — corrigido para `"Terapia intensiva"` (espaço), convenção reconfirmada por auditoria das 4 pastas de destino usadas neste lote. `prevalence_rank` recalculado ao vivo (área geral: 52-58, sem colisão intra ou inter-lote).
+- **Zero mensagens de agente truncadas neste lote** — os 7 agentes (incluindo o de raiva, cujo primeiro retorno veio truncado e exigiu reenvio via `SendMessage` antes da integração) entregaram, ao final, os dois blocos completos.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.406 itens.
+
+### Status consolidado (após Lote 48)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 60 | 2.340 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 54 (3 descartados por colisão) | 146 |
+| **Total** | **4.900** | **219** | **4.681** |
