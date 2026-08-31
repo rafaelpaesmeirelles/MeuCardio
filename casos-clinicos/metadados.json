@@ -18790,5 +18790,47 @@
       "Wechsler ME, Akuthota P, Jayne D, et al.; EGPA Mepolizumab Study Team. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. New England Journal of Medicine. 2017;376(20):1921-1932. DOI: 10.1056/NEJMoa1702079. PMID: 28514601"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "hipertensao-sistolica-isolada-no-idoso-clortalidona-baixa-dose-reduz-avc-shep",
+    "titulo": "Hipertensão sistólica isolada no idoso: qual o tratamento farmacológico inicial?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 66 anos, assintomática, comparece a consulta de rotina. Três medidas de consultório confirmam PA 172/78 mmHg, com PAD sempre abaixo de 90 mmHg nas aferições prévias registradas em prontuário. Sem diabetes, sem doença renal, função renal e potássio normais, sem gota. Nunca usou anti-hipertensivo.",
+    "pergunta": "Com base na evidência de maior peso para esta apresentação, qual a conduta farmacológica inicial com melhor sustentação para redução de AVC?",
+    "opcoes": [
+      "Iniciar clortalidona em baixa dose (12,5 mg/dia, podendo titular para 25 mg/dia), associando atenolol em segundo degrau se a meta não for atingida — esquema testado no SHEP em pacientes ≥60 anos com hipertensão sistólica isolada",
+      "Não tratar farmacologicamente por ora: como a pressão diastólica está normal, o risco de hipotensão diastólica excessiva com o tratamento supera o benefício esperado",
+      "Iniciar nitrendipina, di-hidropiridínico testado especificamente para hipertensão sistólica isolada do idoso no ensaio Syst-Eur",
+      "Buscar meta intensiva de PAS <120 mmHg, à semelhança do alvo testado no SPRINT, para maximizar a redução de eventos cardiovasculares"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O SHEP (SHEP Cooperative Research Group, JAMA. 1991;265(24):3255-3264, PMID: 2046107) randomizou 4.736 pacientes ≥60 anos com PAS 160-219 mmHg e PAD <90 mmHg para tratamento escalonado com clortalidona 12,5→25 mg/dia (associando atenolol 25→50 mg/dia se necessário) versus placebo. Em 4,5 anos de seguimento médio, o grupo ativo teve AVC total de 5,2 vs 8,2 por 100 pacientes em 5 anos (RR 0,64; P=0,0003) — benefício absoluto de 30 AVC evitados por 1.000 pacientes tratados em 5 anos. A opção 'não tratar' erra ao interpretar PAD normal como ausência de risco: é exatamente a definição de hipertensão sistólica isolada, e foi essa população que o SHEP demonstrou se beneficiar. A nitrendipina é a droga testada no Syst-Eur, outro ensaio válido para hipertensão sistólica isolada do idoso, mas não é o regime testado no SHEP — confundir os dois ensaios é um erro de atribuição comum. A meta de PAS <120 mmHg é o alvo do SPRINT, que usa técnica de medida (PA automatizada não observada) e desenho distintos do SHEP, não devendo ser extrapolada para este cenário.",
+    "source_refs": [
+      "SHEP Cooperative Research Group. Prevention of stroke by antihypertensive drug treatment in older persons with isolated systolic hypertension. Final results of the Systolic Hypertension in the Elderly Program (SHEP). JAMA. 1991;265(24):3255-3264. PMID: 2046107."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "marcapasso-temporario-transvenoso-escolha-do-acesso-venoso-jugular-ou-femoral",
+    "titulo": "Marca-passo temporário transvenoso: qual acesso venoso escolher quando a estimulação vai durar dias?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 74 anos, é internado por bloqueio atrioventricular total sintomático — síncope, FC 32 bpm, PA 78/50 mmHg, confusão mental. Não responde à atropina. É iniciada estimulação transcutânea, mas a captura mecânica é inconsistente e o paciente refere dor intensa a cada estímulo. História relevante: há 3 semanas teve marca-passo definitivo removido por infecção de bolsa do gerador no lado esquerdo, está em curso de antibioticoterapia intravenosa prolongada e o reimplante definitivo — planejado para o lado direito — só está previsto para daqui a 10-14 dias, após completar o tratamento da infecção. A equipe decide implantar um marca-passo temporário transvenoso como ponte até o reimplante.",
+    "pergunta": "Qual a melhor escolha de acesso venoso central para o marca-passo temporário transvenoso neste paciente?",
+    "opcoes": [
+      "Subclávia esquerda, pelo trajeto mais direto até o ventrículo direito e por ser tecnicamente a via mais simples de manipular o eletrodo",
+      "Femoral, por ser o acesso mais usado na prática em cenários de emergência e permitir estimulação rápida sob pressão de tempo",
+      "Jugular interna direita, por menor risco de infecção relacionada ao cateter quando se antecipa uso prolongado, e por preservar o lado esquerdo já comprometido e poupar o lado direito planejado para o reimplante",
+      "Não indicar marca-passo transvenoso agora — manter apenas a estimulação transcutânea até a infecção estar completamente resolvida, para não criar um novo foco infeccioso"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A ESC 2021 (Glikson M et al., Eur Heart J 2021;42(35):3427-3520, DOI 10.1093/eurheartj/ehab364, PMID 34455430, seção 11.3) recomenda evitar a punção subclávia intratorácica pelo risco de pneumotórax e afirma explicitamente que o acesso jugular deve ser preferido quando um implante de dispositivo definitivo ipsilateral já está planejado — o que descarta a opção subclávia esquerda e torna a jugular direita (ipsilateral ao reimplante planejado à direita) a escolha coerente. A meta-análise comparativa mais recente (Pereira RA et al., Pacing Clin Electrophysiol 2026, DOI 10.1111/pace.70295, PMID 42132883 — 6 estudos, 2.267 pacientes) mostrou risco significativamente menor de infecção relacionada ao cateter com acesso jugular versus femoral (RR 0,25; IC95% 0,11-0,53; p=0,0003), sem diferença em sangramento, reposicionamento ou perfuração — vantagem que só se traduz em benefício proporcional ao tempo de permanência do cateter, e aqui a permanência esperada é de 10-14 dias, não horas. O acesso femoral (opção B) é de fato o mais usado na prática segundo Tjong et al. (Neth Heart J 2019;27(10):462-473, PMID 31392624 — 47,2% dos casos) por ser rápido e não interferir em outros acessos durante emergência, e continua sendo escolha razoável para indicação de curto prazo — mas é a resposta 'obviamente familiar' que ignora que a duração antecipada aqui é longa, cenário em que a vantagem infecciosa da jugular pesa mais. Suspender o transvenoso e manter só a estimulação transcutânea (opção D) contraria a própria indicação: a transcutânea já está falhando (captura mecânica inconsistente, dor limitante), e a ESC 2021 recomenda o transvenoso justamente quando a transcutânea é insuficiente ou indisponível — mesmo em contexto de infecção ativa em outro sítio, já que o local de acesso do marca-passo temporário é distinto e independente do foco infectado original.",
+    "source_refs": [
+      "Pereira RA, Barcellos G, Lenz G, Tumelero M, Collin B, Peruzzo N, Gordon D. Complications of Temporary Transvenous Cardiac Pacing by Access Site: A Systematic Review and Meta-Analysis. Pacing Clin Electrophysiol. 2026;online ahead of print. DOI: 10.1111/pace.70295. PMID: 42132883",
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430",
+      "Tjong FVY, de Ruijter UW, Beurskens NEG, Knops RE. A comprehensive scoping review on transvenous temporary pacing therapy. Neth Heart J. 2019;27(10):462-473. DOI: 10.1007/s12471-019-01307-x. PMID: 31392624"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

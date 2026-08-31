@@ -38926,5 +38926,89 @@
       }
     ],
     "revisao": "Checklist extraído fielmente de content/Gravidez/endocardite-infecciosa-na-gestacao-e-puerperio.md; nenhum esquema/dose de antimicrobiano foi inventado — o próprio documento de origem declara que esquema/dose exigem verificação humana contra diretriz de EI, infectologia e bula vigente."
+  },
+  {
+    "slug": "indicacao-de-ecocardiograma-sob-estresse-na-valvopatia",
+    "condicao": "Indicação de ecocardiograma sob estresse na doença valvar",
+    "resumo": "Itens de verificação antes de solicitar ecocardiograma sob estresse em doença valvar, organizados por lesão (estenose e insuficiência mitral, estenose e insuficiência aórtica, prótese valvar), incluindo as duas contraindicações Classe III mais ignoradas — estenose aórtica grave sintomática e quantificação da insuficiência aórtica — e a janela de gradiente transprotético em que o exame decide algo.",
+    "documento_origem": "ecocardiograma-sob-estresse-nas-valvopatias-indicacoes-sbc-2024",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581"
+    ],
+    "itens": [
+      {
+        "id": "eee-mitral-discordancia-classe-i",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar o exame, confirmada discordância entre sintomas e área/gradiente na estenose mitral, com área mitral > 1,5 cm² (Classe I, Nível C)",
+        "origem_secao": "Estenose mitral"
+      },
+      {
+        "id": "eee-mitral-assintomatica-grave",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Na estenose mitral assintomática com área < 1 cm², indicação Classe IIa considerada — a ausência de sintoma em valva gravíssima não descarta o exame",
+        "origem_secao": "Estenose mitral"
+      },
+      {
+        "id": "eee-mitral-gravidez-cirurgia",
+        "categoria": "indicacao",
+        "obrigatorio": false,
+        "texto": "Na estenose mitral assintomática com área entre 1 e 1,5 cm², verificado se há programação de gravidez ou de cirurgia de maior porte (Classe IIb, Nível C)",
+        "origem_secao": "Estenose mitral"
+      },
+      {
+        "id": "eee-insuficiencia-mitral-discrepancia",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Na insuficiência mitral, indicação considerada quando há discrepância entre gravidade valvar e sintomas, ou para avaliar tolerância ao esforço em insuficiência mitral grave assintomática (Classe IIa, Nível B)",
+        "origem_secao": "Insuficiencia mitral"
+      },
+      {
+        "id": "eee-aortica-estagios-b-c1",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Na estenose aórtica moderada ou acentuada (estágios B e C1) assintomática, exame indicado para avaliar sintomas esforço-induzidos, resposta pressórica sistêmica e pulmonar, comportamento dos gradientes e função ventricular esquerda (Classe IIa, Nível B)",
+        "origem_secao": "Estenose aortica"
+      },
+      {
+        "id": "eee-aortica-baixo-fluxo-fe-preservada",
+        "categoria": "indicacao",
+        "obrigatorio": false,
+        "texto": "Em baixo fluxo/baixo gradiente com fração de ejeção PRESERVADA (assintomática ou com sintomas leves/duvidosos), exame considerado para diferenciar estenose verdadeira de pseudoestenose, e não aplicado à rota de fração de ejeção reduzida (Classe IIb, Nível B)",
+        "origem_secao": "Estenose aortica"
+      },
+      {
+        "id": "eee-classe-iii-ao-grave-sintomatica",
+        "categoria": "contraindicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o exame NÃO foi solicitado em estenose aórtica grave e sintomática — Classe III, Nível C: o sintoma já define a conduta e o teste não muda a decisão",
+        "origem_secao": "As duas Classe III, e a distincao fina entre elas"
+      },
+      {
+        "id": "eee-classe-iii-iao-quantificacao",
+        "categoria": "contraindicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o exame NÃO foi solicitado com a finalidade de quantificar o grau da insuficiência aórtica — Classe III, Nível C para essa finalidade específica, distinta da indicação Classe IIa para avaliar sintoma esforço-induzido e capacidade funcional na insuficiência aórtica grave assintomática ou com sintomas duvidosos",
+        "origem_secao": "As duas Classe III, e a distincao fina entre elas"
+      },
+      {
+        "id": "eee-protese-janela-gradiente",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Em prótese valvar, indicação restrita à janela de gradiente transprotético em repouso leve a moderado: posição aórtica entre 20 e 40 mmHg, posição mitral entre 5 e 10 mmHg (Classe IIa, Nível B) — abaixo da faixa não há o que investigar, acima a obstrução já está caracterizada em repouso",
+        "origem_secao": "Protese valvar"
+      },
+      {
+        "id": "eee-tcpe-excecao-estenose-aortica",
+        "categoria": "indicacao",
+        "obrigatorio": false,
+        "texto": "Se optar por TCPE em vez de ecocardiograma de estresse para quadro clínico não correspondente ao eco, verificado que essa indicação (Classe IIa, Nível C) exclui explicitamente a estenose aórtica",
+        "origem_secao": "O teste ergometrico e o TCPE na mesma diretriz"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente da tabela de indicações da Diretriz Brasileira de Ergometria em População Adulta (SBC 2024) já publicada nesta base como documento de origem. Pendente de validação clínica final."
   }
 ]

@@ -25923,5 +25923,75 @@
         "por_que": "Encerra a trilha ampliando o horizonte: a mesma lógica de controle pressórico que evita a recorrência de um AVC clínico também se conecta ao dano cerebrovascular silencioso e ao declínio cognitivo — mostrando que o cérebro continua sendo órgão-alvo mesmo quando não há novo evento clínico visível, e por que a prevenção secundária pós-AVC não deve ser vista apenas como 'evitar o próximo AVC'."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-doencas-de-deposito-fenocopias-miocardio-valva-e-vaso",
+    "titulo": "Doenças de depósito em cardiologia: fenocópias no miocárdio, na valva e no vaso",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair reconhecendo que hipertrofia ventricular inexplicada, calcificação valvar precoce e aterosclerose acelerada em paciente jovem podem não ser a doença sarcomérica ou degenerativa 'padrão', e sim uma doença de depósito com tratamento etiológico próprio — e entender onde a terapia de reposição enzimática funciona e onde ela já chega tarde demais.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+        "por_que": "Começa pela diretriz que formalizou, pela primeira vez, as 'cardiomiopatias sindrômicas e metabólicas' como categoria própria ao lado da hipertrófica, dilatada e restritiva. É o mapa que justifica a trilha inteira: fenocópia não é exceção rara, é uma categoria nomeada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+        "por_que": "Antes de reconhecer uma fenocópia, é preciso dominar o fenótipo que ela imita: a cardiomiopatia hipertrófica sarcomérica clássica, seu diagnóstico e risco de morte súbita. Sem essa referência, os 'red flags' das próximas etapas não fazem sentido."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+        "por_que": "O mesmo conteúdo em árvore de decisão, mostrando exatamente onde o algoritmo bifurca para investigação etiológica quando há red flags — o ponto de entrada prático para as doenças de depósito que seguem."
+      },
+      {
+        "ordem": 4,
+        "item_type": "checklist",
+        "item_slug": "rastreio-de-red-flags-para-doenca-de-fabry-com-acometimento-cardiaco",
+        "por_que": "Aplica a bifurcação do fluxograma na fenocópia mais comum em adultos: diante de hipertrofia inexplicada, o checklist estrutura a busca por sinais cardíacos e extracardíacos de Fabry antes de rotular o caso como sarcomérico idiopático."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+        "por_que": "Aprofunda o que o checklist levantou: herança ligada ao X, diagnóstico por sexo e a terapia específica (reposição enzimática ou chaperona) — a primeira demonstração de que a fenocópia tem tratamento próprio, diferente do manejo padrão da HCM."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "diante-de-lactente-com-hipertrofia-ventricular-importante-red-flags-para-doenca-de-pompe",
+        "por_que": "Muda o extremo etário: no lactente com hipertrofia grave e progressiva, o diagnóstico diferencial é outro mecanismo lisossômico (Pompe), e o checklist ensina a disparar a triagem enzimática em paralelo ao painel genético — não em sequência — porque a janela terapêutica é curta."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica",
+        "por_que": "Aprofunda a urgência do checklist anterior: a forma infantil clássica é potencialmente fatal sem reposição enzimática precoce, e mesmo com resposta ao tratamento o seguimento cardiológico é vitalício — o primeiro sinal de que a terapia de depósito trata a causa, mas não apaga a vigilância."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "doenca-de-gaucher-acometimento-cardiovascular-tipo-3c-calcificacao-valvar-e-limites-da-terapia-de-reposicao-enzimatica",
+        "por_que": "Desloca a fenocópia do miocárdio para a valva: calcificação aórtica/mitral grave em paciente jovem sugere Gaucher tipo 3c, e aqui a lição se inverte — a terapia de reposição enzimática não reverte a calcificação já estabelecida, só o manejo sistêmico da doença de base."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "mucopolissacaridose-tipo-iva-morquio-a-acometimento-cardiovascular-valvopatia-e-limites-da-terapia-de-reposicao-enzimatica",
+        "por_que": "Reforça a lição da etapa anterior com outra doença de depósito e o mesmo limite terapêutico, consolidando o padrão: fenocópia valvar em jovem, terapia enzimática sistêmica eficaz em outros órgãos mas não sobre a valva já lesada — o momento de generalizar, não de aprender de novo."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "deficiencia-de-lipase-acida-lisossomica-lal-d-espectro-wolman-cesd-e-aterosclerose-acelerada",
+        "por_que": "Fecha a trilha ampliando o alcance da lesão para o vaso: a LAL-D mostra que o mesmo princípio — depósito lisossômico causando fenocópia de doença cardiovascular comum, aqui aterosclerose precoce — se estende do miocárdio à valva e, por fim, à parede arterial."
+      }
+    ]
   }
 ]
