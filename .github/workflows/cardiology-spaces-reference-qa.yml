@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   reference-fidelity:
-    name: Complete + Essential · 1536x864
+    name: Complete + Essential + Science · 1536x864
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
@@ -147,12 +147,6 @@ jobs:
           const failures = [];
           const modes = {};
 
-          const rect = (el) => {
-            if (!el) return null;
-            const r = el.getBoundingClientRect();
-            return { x:r.x, y:r.y, width:r.width, height:r.height, right:r.right, bottom:r.bottom };
-          };
-
           async function login() {
             await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
             await page.locator('#email').fill('spaces-reference@teste.local');
@@ -166,14 +160,14 @@ jobs:
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
           }
 
-          async function choose(label) {
+          async function choose(label, targetLabel) {
             if (await page.locator('.spaces-choice').isVisible().catch(() => false)) {
               await page.locator('.spaces-choice__cards button', { hasText: label }).click();
             } else {
               await page.locator('.spaces-home__topbar nav button', { hasText: label }).click();
             }
             await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
-            await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
+            if (targetLabel) await page.locator('.spaces-door', { hasText: targetLabel }).click();
             await page.waitForTimeout(350);
           }
 
@@ -191,6 +185,7 @@ jobs:
                 mode: modeName,
                 viewport: { width:innerWidth, height:innerHeight, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight },
                 root:r(q('.spaces-home')),
+                scientific:q('.spaces-home')?.classList.contains('spaces-home--scientific') || false,
                 brand:r(q('.spaces-brand')),
                 topbar:r(q('.spaces-home__topbar')),
                 greeting:r(q('.spaces-workspace__greeting')),
@@ -198,6 +193,7 @@ jobs:
                 workspace:r(q('.spaces-workspace')),
                 doors,
                 title:r(q('.spaces-title')),
+                titleText:q('.spaces-title')?.textContent?.trim() || '',
                 now:r(q('.spaces-layer--now')),
                 next:r(q('.spaces-layer--next')),
                 refs:r(q('.spaces-layer--refs')),
@@ -205,7 +201,10 @@ jobs:
                 personalize:r(q('.spaces-personalize')),
                 doctor:r(q('.spaces-doctor')),
                 day:r(q('.spaces-day')),
+                dayTitle:q('.spaces-day h2')?.textContent?.trim() || '',
                 dock:r(q('.spaces-dock')),
+                dockLabels:qa('.spaces-dock span').map((el) => el.textContent?.trim() || ''),
+                layerLabels:qa('.spaces-layer header span').map((el) => el.textContent?.trim() || ''),
                 motto:r(q('.spaces-motto')),
                 heart:r(q('.spaces-home__heart')),
                 tabs:qa('.spaces-home__topbar nav button').map((el) => ({ text:el.textContent?.trim() || '', active:el.classList.contains('is-active') })),
@@ -231,17 +230,30 @@ jobs:
             if (!m.dock || m.dock.width < 1400 || m.dock.bottom < 790) failures.push(`${mode}: dock não ocupa a base aprovada ${JSON.stringify(m.dock)}`);
             if (!m.heart || m.heart.width < 500) failures.push(`${mode}: coração holográfico ausente/pequeno ${JSON.stringify(m.heart)}`);
             if (!m.title || Math.abs((m.title.x + m.title.width / 2) - 768) > 165) failures.push(`${mode}: título do espaço fora do eixo central ${JSON.stringify(m.title)}`);
-            if (!m.tabs.some((t) => t.text === (mode === 'complete' ? 'Completo' : 'Essencial') && t.active)) failures.push(`${mode}: aba correta não está ativa`);
+            const expectedTab = mode === 'complete' ? 'Completo' : mode === 'essential' ? 'Essencial' : 'Ciência & Ensino';
+            if (!m.tabs.some((t) => t.text === expectedTab && t.active)) failures.push(`${mode}: aba correta não está ativa`);
             if (mode === 'complete' && (!m.next || !m.refs)) failures.push('complete: Em seguida/Referências ausentes');
             if (mode === 'essential' && (!m.essential || !m.personalize || m.next || m.refs)) failures.push('essential: composição de essenciais incorreta');
+            if (mode === 'scientific') {
+              const expectedDoors = ['Descobrir','Evidências','Aprender','Ensinar','Produzir'];
+              for (const label of expectedDoors) if (!m.doors.some((d) => d.label.includes(label))) failures.push(`scientific: jornada ausente ${label}`);
+              if (!m.scientific || !m.next || !m.refs || m.essential) failures.push('scientific: composição científica incorreta');
+              if (!m.titleText.includes('Minha jornada')) failures.push(`scientific: título incorreto ${m.titleText}`);
+              if (!m.layerLabels.includes('APROFUNDAR') || !m.layerLabels.includes('CONEXÕES DO CONHECIMENTO')) failures.push(`scientific: camadas científicas incompletas ${JSON.stringify(m.layerLabels)}`);
+              if (m.dayTitle !== 'Minha jornada científica') failures.push(`scientific: painel lateral incorreto ${m.dayTitle}`);
+              const expectedDock = ['Tudo com Tudo','Biblioteca','Evidências','Trilhas','Documento IA','Apresentar'];
+              for (const label of expectedDock) if (!m.dockLabels.includes(label)) failures.push(`scientific: ação global ausente ${label}`);
+            }
           }
 
           try {
             await login();
-            await choose('Completo');
+            await choose('Completo', 'Hospital');
             certify(await measure('complete'), 'complete');
-            await choose('Essencial');
+            await choose('Essencial', 'Hospital');
             certify(await measure('essential'), 'essential');
+            await choose('Ciência & Ensino', 'Evidências');
+            certify(await measure('scientific'), 'scientific');
             fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify({ failures, modes }, null, 2));
             if (failures.length) throw new Error(failures.join('\n'));
           } finally {
