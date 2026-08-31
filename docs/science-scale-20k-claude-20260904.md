@@ -1366,3 +1366,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 144 (19 descartados por colisão) | 56 |
 | **Total** | **4.900** | **347** | **4.553** |
+
+## Lote 66 — concluído (commit dcae9ef8)
+
+- **4 documentos** (uma doença vascular multissistêmica e três RASopatias que fecham a comparação sistemática das cinco já cobertas na plataforma): telangiectasia hemorrágica hereditária/Osler-Weber-Rendu (MAV pulmonares com risco de embolia paradoxal — AVC, abscesso cerebral — e MAV hepáticas com insuficiência cardíaca de alto débito documentada em ~42% de coorte sintomática de 19 pacientes; sobreposição genética real com HAP hereditária por BMPR2 via ACVRL1/ALK1, diferenciada explicitamente sem equivalência clínica automática — `content/Hipertensão_pulmonar`), síndrome de Mazzanti (SHOC2, variante quase invariável p.Ser2Gly, mecanismo por miristoilação aberrante distinto de PTPN11/RAF1/HRAS; cardiomiopatia hipertrófica documentada apenas em 2 relatos de caso incluindo 1 fatal em lactente, limite de evidência explicitamente reportado; sinais preliminares de risco oncológico/autoimune tratados como hipótese, não recomendação — `content/Cardiologia_pediátrica`), síndrome cardiofaciocutânea/CFC (BRAF ~75%/MAP2K1/MAP2K2 ~25%; cardiopatia em 75-80% dos casos mas sem coorte cardiovascular dedicada equivalente às de Noonan/Costello, lacuna explicitamente reportada; tabela comparativa das três RASopatias cardíacas; menor risco oncológico entre as três com ressalva de viés de notificação — `content/Cardiologia_pediátrica`), síndrome LEOPARD/NSML (alélica a Noonan via PTPN11, mecanismo dominante-negativo oposto ao ganho de função clássico; padrão cardíaco invertido — CMH até 70% dominante, estenose pulmonar apenas ~25%; coorte de história natural de 42 pacientes com sobrevida em 1/5 anos; ausência de correlação genótipo-fenótipo estabelecida para RAF1/BRAF/MAP2K1 dentro do NSML explicitamente registrada — `content/Cardiologia_pediátrica`).
+- **doencas**: +4, pareadas 1:1 — `telangiectasia-hemorragica-hereditaria`, `sindrome-de-mazzanti`, `sindrome-cardiofaciocutanea`, `sindrome-leopard`. `prevalence_rank` 149-152 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 4 tópicos despachados confirmaram gap genuíno após checagem cruzada; todos os quatro foram descobertos como menções laterais de diferencial em documentos já existentes (HAP hereditária BMPR2, síndrome de Noonan, complexo de Carney, síndrome de Costello), com cada documento novo citando/diferenciando explicitamente esses vizinhos sem duplicar conteúdo — inclusive uma correção de falso positivo (busca por "Mazzanti" inicialmente capturou apenas o sobrenome de um autor citado em outro documento sobre CPVT, corrigida com termos de busca mais específicos).
+- **Correções na integração**: nenhuma entidade HTML residual em nenhum dos 4 documentos — rodada totalmente limpa (entidades já convertidas na transcrição dos relatórios dos agentes antes da extração).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.594 itens.
+
+### Status consolidado (após Lote 66)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 154 | 2.246 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 148 (19 descartados por colisão) | 52 |
+| **Total** | **4.900** | **351** | **4.549** |
