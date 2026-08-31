@@ -359,7 +359,7 @@ def day_context(db: Session = Depends(get_db), user: User = Depends(current_user
     if end_location and (end_location.owner_id != user.id or not end_location.active):
         end_location = None
     if not targets:
-        return {"stage": "no_commitments", "first_target": None, "last_target": None,
+        return {"stage": "no_commitments", "targets": [], "first_target": None, "last_target": None,
                 "start_location": _dump_location(start_location) if start_location else None,
                 "end_location": _dump_location(end_location) if end_location else None}
     first = min(targets, key=lambda item: item["starts_at"])
@@ -367,7 +367,7 @@ def day_context(db: Session = Depends(get_db), user: User = Depends(current_user
     now = datetime.now(timezone.utc)
     stage = "before_first" if now < first["starts_at"] else "at_last" if now >= last["starts_at"] else "active_day"
     return {
-        "stage": stage, "first_target": first, "last_target": last,
+        "stage": stage, "targets": targets, "first_target": first, "last_target": last,
         "start_location": _dump_location(start_location) if start_location else None,
         "end_location": _dump_location(end_location) if end_location else None,
     }
