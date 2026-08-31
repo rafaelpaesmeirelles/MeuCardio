@@ -1,0 +1,14 @@
+/* Identidade cromática canônica dos cinco espaços da prancha aprovada.
+   Esta folha vem após o contrato global para que o espaço, e não o tipo de
+   conteúdo, determine o acento final da página. */
+body.corvia-space--consultorio .clinical-os{--space-rgb:43,216,225;--space-accent:#2bd8e1;--space-accent-2:#69edf3}
+body.corvia-space--hospital .clinical-os{--space-rgb:75,130,255;--space-accent:#4b82ff;--space-accent-2:#77a2ff}
+body.corvia-space--ensino .clinical-os{--space-rgb:160,109,242;--space-accent:#a06df2;--space-accent-2:#c19cff}
+body.corvia-space--pesquisa .clinical-os{--space-rgb:240,79,139;--space-accent:#f04f8b;--space-accent-2:#ff8ab3}
+body.corvia-space--gestao .clinical-os{--space-rgb:55,199,192;--space-accent:#37c7c0;--space-accent-2:#77ded9}
+
+body.corvia-space--consultorio .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · CONSULTÓRIO";color:#2bd8e1}
+body.corvia-space--hospital .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · HOSPITAL";color:#4b82ff}
+body.corvia-space--ensino .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · ENSINO";color:#a06df2}
+body.corvia-space--pesquisa .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · PESQUISA";color:#f04f8b}
+body.corvia-space--gestao .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · GESTÃO";color:#37c7c0}
