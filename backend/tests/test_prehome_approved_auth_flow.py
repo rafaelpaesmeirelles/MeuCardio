@@ -47,6 +47,16 @@ def test_login_copy_and_all_real_auth_controls_remain_available():
         assert token in login
 
 
+def test_login_keeps_android_download_and_marks_windows_as_pending_without_link():
+    login = read("pages/Entrar.tsx")
+    assert 'href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"' in login
+    assert "Aplicativo para Windows" in login
+    assert "pendente de assinatura" in login
+    assert "prehome-windows-pending" in login
+    assert ".exe" not in login
+    assert "prehome-windows-download\"" not in login
+
+
 def test_approved_prehome_css_keeps_desktop_mobile_and_dark_contracts():
     css = read("styles/prehome-approved-auth-flow.css")
     compact = "".join(css.split())

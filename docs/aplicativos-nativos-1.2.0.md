@@ -1,8 +1,9 @@
 # Aplicativos CorVIA Cardiology Spaces 1.2.0
 
-Os clientes Android e Windows usam o site certificado como fonte funcional,
-mas seus binários têm identidade, versão, origem e assinatura verificadas.
-Nenhum segredo de assinatura pertence ao repositório.
+O cliente Android usa o site certificado como fonte funcional. O cliente
+Windows está marcado como pendente e não possui link de download na interface
+até que sua identidade Authenticode esteja configurada e validada. Nenhum
+segredo de assinatura pertence ao repositório.
 
 ## Android
 
@@ -15,11 +16,12 @@ Git. A variável protegida `CORVIA_ANDROID_CERT_SHA256` contém o fingerprint
 público da chave de release existente. `apksigner` e `aapt` bloqueiam APK sem
 assinatura, chave trocada, appId ou versão incorretos.
 
-## Windows
+## Windows — pendência registrada
 
 - Electron/NSIS x64 para Windows 10/11
-- versão: `1.2.0`
-- URL: `/downloads/corvia-cardiology-spaces-windows-1.2.0.exe`
+- versão planejada: `1.2.0`
+- estado: **pendente de assinatura**
+- download na interface: **desativado**
 
 O workflow exige Authenticode válido, certificado fixado e gera o digest, o
 `source-sha.txt` e o fingerprint do signatário. Configuração obrigatória:
@@ -28,28 +30,27 @@ O workflow exige Authenticode válido, certificado fixado e gera o digest, o
 - secret `CORVIA_WINDOWS_CODE_SIGNING_PASSWORD`;
 - variable `CORVIA_WINDOWS_SIGNING_CERT_SHA256`.
 
-O Android exige a variable protegida `CORVIA_ANDROID_CERT_SHA256`. As
-verificações públicas agendadas exigem ainda os hashes dos últimos binários
-publicados em `CORVIA_ANDROID_EXPECTED_SHA256` e
-`CORVIA_WINDOWS_EXPECTED_SHA256`; sem ambos o gate de deriva falha fechado.
+O Android exige a variable protegida `CORVIA_ANDROID_CERT_SHA256`. Enquanto o
+Windows estiver pendente, as verificações públicas agendadas exigem somente
+`CORVIA_ANDROID_EXPECTED_SHA256`. A validação Windows continua disponível
+quando selecionada explicitamente e permanece fail-closed.
 
-## Release sem publicação parcial
+## Release web e Android enquanto Windows está pendente
 
 1. Todos os gates são certificados no mesmo SHA atual da `main`.
-2. O `run_id` exato de `Native installers` é preservado.
-3. Windows é enviado para staging com timeout, limite de 350 MiB, MZ e SHA.
-4. Android é construído, assinado e validado em um worktree temporário do SHA;
+2. `Native installers` permanece manual e rigoroso; não é gate automático.
+3. Android é construído, assinado e validado em um worktree temporário do SHA;
    o checkout de produção ainda não é alterado.
-5. Só então `deploy.sh` pode alterar web/banco.
-6. Após sucesso, APK/EXE e sidecars são promovidos; falha restaura os anteriores.
-7. O pós-deploy baixa ambos com cache-buster e compara os hashes esperados da execução.
+4. Só então `deploy.sh` pode alterar web/banco.
+5. Após sucesso, APK e sidecar são promovidos; falha restaura os anteriores.
+6. O pós-deploy baixa o APK com cache-buster e compara o hash da execução.
+7. O protocolo legado `deploy-release` continua exigindo EXE certificado; não
+   foi relaxado e só será reativado com autorização e credenciais válidas.
 
-## Bootstrap único obrigatório
+## Bootstrap único do protocolo Android-only
 
-O `authorized_keys` antigo chama diretamente o entrypoint dentro do checkout e
-ele não conhece `windows-stage`/`deploy-release`. O comando antigo `deploy`
-atualizaria o arquivo, porém também executaria imediatamente o deploy web. Isso
-não é um bootstrap seguro.
+O forced command estável precisa conhecer `deploy-web-android` antes do primeiro
+deploy neste modo. O bootstrap abaixo não faz checkout nem deploy.
 
 Em uma sessão administrativa autenticada, execute **sem checkout e sem deploy**:
 
@@ -78,11 +79,12 @@ Secrets: `PRODUCTION_SSH_HOST`, `PRODUCTION_SSH_PORT`,
 `PRODUCTION_SSH_USER`, `PRODUCTION_SSH_PRIVATE_KEY` e
 `PRODUCTION_SSH_KNOWN_HOSTS`.
 
-Variables: `CORVIA_ANDROID_CERT_SHA256` e
-`CORVIA_WINDOWS_SIGNING_CERT_SHA256`. Secrets de assinatura Windows:
+Variable obrigatória no deploy atual: `CORVIA_ANDROID_CERT_SHA256`. Quando o
+Windows for reativado, também serão exigidos
+`CORVIA_WINDOWS_SIGNING_CERT_SHA256` e os secrets de assinatura:
 `CORVIA_WINDOWS_CODE_SIGNING_CERT` e
 `CORVIA_WINDOWS_CODE_SIGNING_PASSWORD`.
 
-O workflow valida todos os valores de SSH e os fingerprints antes do primeiro
-envio. Ausência de chave de assinatura Windows já reprova `Native installers`,
-antes que o job de produção possa existir.
+O workflow valida SSH e o fingerprint Android antes do primeiro envio. O
+workflow manual `Native installers` reprova qualquer Windows sem chave, senha,
+assinatura Authenticode e fingerprint fixado.

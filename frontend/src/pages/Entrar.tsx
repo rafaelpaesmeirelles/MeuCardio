@@ -100,16 +100,15 @@ export default function Entrar() {
               <span><strong>Baixar app para Android</strong><small>Versão 1.2.0 · APK assinado</small></span>
               <Icone nome="seta" aria-hidden="true" />
             </a>
-            <a
-              className="prehome-windows-download"
-              href="/downloads/corvia-cardiology-spaces-windows-1.2.0.exe"
-              download="CorVIA-Cardiology-Spaces-Windows-Setup-1.2.0.exe"
-              aria-label="Baixar instalador do CorVIA Cardiology Spaces para Windows 10 ou 11"
+            <div
+              className="prehome-windows-pending"
+              role="status"
+              aria-label="Aplicativo CorVIA para Windows pendente de assinatura"
             >
               <span className="prehome-windows-download__icon"><MarcaWindows /></span>
-              <span><strong>Baixar instalador para Windows</strong><small>Arquivo .EXE · Windows 10/11</small></span>
-              <Icone nome="seta" aria-hidden="true" />
-            </a>
+              <span><strong>Aplicativo para Windows</strong><small>Em preparação · pendente de assinatura</small></span>
+              <span className="prehome-windows-pending__badge">Em breve</span>
+            </div>
             <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Solicitar acesso</Link>
           </div>
           <footer className="prehome-card__footer"><Icone nome="check" /><span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span></footer>
