@@ -1,0 +1,106 @@
+/* ======================================================================
+   CorVIA Cardiology Spaces — CONSULTÓRIO / Conhecimento clínico
+   Guia de Doenças, Triagem de Sintomas e Condições Especiais.
+   ====================================================================== */
+body.corvia-space--consultorio .clinical-os .painel__temas{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:7px!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__tema{
+  color:#9fb4c1!important;
+  background:linear-gradient(180deg,rgba(7,27,45,.72),rgba(4,18,31,.80))!important;
+  border:1px solid rgba(var(--space-rgb),.12)!important;
+  border-radius:9px!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.018)!important;
+  transition:border-color .16s ease,background .16s ease,color .16s ease,transform .16s ease!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__tema:hover,
+body.corvia-space--consultorio .clinical-os .painel__tema:focus-visible{
+  color:#f2fdff!important;
+  background:rgba(var(--space-rgb),.07)!important;
+  border-color:rgba(var(--space-rgb),.34)!important;
+  box-shadow:0 0 18px rgba(var(--space-rgb),.055)!important;
+  outline:none!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__tema[aria-selected="true"],
+body.corvia-space--consultorio .clinical-os .painel__tema[style*="border-color"],
+body.corvia-space--consultorio .clinical-os .painel__tema[style*="borderColor"]{
+  color:#f4fdff!important;
+  background:linear-gradient(180deg,rgba(var(--space-rgb),.16),rgba(var(--space-rgb),.075))!important;
+  border-color:rgba(var(--space-rgb),.46)!important;
+  box-shadow:0 0 22px rgba(var(--space-rgb),.07),inset 2px 0 var(--space-accent)!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__grupo{
+  position:relative;
+  margin-top:14px!important;
+  padding:16px!important;
+  overflow:hidden;
+  color:#c7d7df!important;
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.032),rgba(4,18,31,.86))!important;
+  border:1px solid rgba(var(--space-rgb),.14)!important;
+  border-radius:13px!important;
+  box-shadow:0 18px 46px -40px rgba(var(--space-rgb),.50)!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__grupo::before{
+  position:absolute;top:0;right:16%;left:16%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.32),transparent);content:"";
+}
+body.corvia-space--consultorio .clinical-os .painel__grupo h2{color:#e8f5f8!important}
+body.corvia-space--consultorio .clinical-os .painel__grupo-sub{color:#7890a1!important}
+body.corvia-space--consultorio .clinical-os .painel__funcao{
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.038),rgba(4,18,31,.86))!important;
+  border-color:rgba(var(--space-rgb),.14)!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__funcao--destaque{
+  position:relative;
+  border-color:rgba(var(--space-rgb),.27)!important;
+  box-shadow:inset 2px 0 rgba(var(--space-rgb),.66),0 0 24px rgba(var(--space-rgb),.045)!important;
+}
+body.corvia-space--consultorio .clinical-os .painel__funcao--destaque::after{
+  position:absolute;right:9px;top:9px;width:7px;height:7px;border-radius:50%;
+  background:var(--space-accent);box-shadow:0 0 12px rgba(var(--space-rgb),.62);content:"";
+}
+
+/* Guia de Doenças */
+body.corvia-space--consultorio .clinical-os .guia-areas{
+  margin-top:14px!important;
+  padding:16px!important;
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.025),rgba(3,16,28,.72))!important;
+  border:1px solid rgba(var(--space-rgb),.11)!important;
+  border-radius:14px!important;
+}
+body.corvia-space--consultorio .clinical-os .guia-areas__topo{
+  display:flex!important;align-items:end!important;justify-content:space-between!important;gap:16px!important;
+  padding-bottom:10px!important;border-bottom:1px solid rgba(var(--space-rgb),.09)!important;
+}
+body.corvia-space--consultorio .clinical-os .guia-areas__topo h2{color:#e8f4f8!important}
+body.corvia-space--consultorio .clinical-os .guia-areas__topo>p{max-width:48ch;color:#72899b!important}
+body.corvia-space--consultorio .clinical-os .guia-areas__grade{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))!important;gap:10px!important;margin-top:12px!important}
+body.corvia-space--consultorio .clinical-os .guia-area{
+  position:relative;overflow:hidden;display:grid!important;grid-template-columns:auto 1fr!important;gap:10px!important;
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.05),rgba(4,18,31,.86))!important;
+}
+body.corvia-space--consultorio .clinical-os .guia-area::after{
+  position:absolute;right:-32px;bottom:-46px;width:105px;height:105px;border:1px solid rgba(var(--space-rgb),.08);border-radius:50%;content:"";pointer-events:none;
+}
+body.corvia-space--consultorio .clinical-os .guia-area__marca{
+  display:grid!important;place-items:center!important;width:38px!important;height:38px!important;
+  color:var(--space-accent)!important;background:rgba(var(--space-rgb),.075)!important;
+  border:1px solid rgba(var(--space-rgb),.24)!important;border-radius:10px!important;
+  box-shadow:0 0 18px rgba(var(--space-rgb),.06)!important;font-size:.7rem!important;font-weight:820!important;letter-spacing:.08em!important;
+}
+body.corvia-space--consultorio .clinical-os .guia-area h3{color:#eaf6f9!important}
+body.corvia-space--consultorio .clinical-os .guia-area p{color:#738b9c!important}
+body.corvia-space--consultorio .clinical-os .guia-outros{position:relative;overflow:hidden;border-left:2px solid rgba(var(--space-rgb),.58)!important}
+
+/* Triagem: preserva semântica de risco sem sair do universo do Consultório. */
+body.corvia-route--ferramentas.corvia-space--consultorio .clinical-os .painel__funcao--destaque :where(strong,h3){color:#f0fbfd!important}
+body.corvia-space--consultorio .clinical-os :where(.dado){color:var(--space-accent)!important}
+
+@media(max-width:900px){
+  body.corvia-space--consultorio .clinical-os .guia-areas{padding:12px!important}
+  body.corvia-space--consultorio .clinical-os .guia-areas__topo{display:grid!important;align-items:start!important}
+  body.corvia-space--consultorio .clinical-os .guia-areas__grade{grid-template-columns:1fr!important}
+  body.corvia-space--consultorio .clinical-os .painel__tema{min-height:38px!important}
+}
