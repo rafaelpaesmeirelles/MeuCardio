@@ -1130,3 +1130,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 90 (9 descartados por colisão) | 110 |
 | **Total** | **4.900** | **284** | **4.616** |
+
+## Lote 55 — concluído (commit 0016f0f8)
+
+- **5 documentos** (parasitoses/arboviroses/micoses raras com acometimento cardiovascular): hidatidose cardíaca (equinococose cística — mecanismo de ruptura como eixo central: embolização, tamponamento, anafilaxia; base em revisão sistemática de 974 cistos catalogados — `content/Geral`), triquinelose e miocardite (achado mecanístico central de que a larva não se encista no miocárdio, ao contrário do músculo esquelético, gerando miocardite eosinofílica transitória em vez de reservatório crônico — `content/Geral`), chikungunya e acometimento cardiovascular (calibração explícita de que os percentuais mais citados na literatura são frações dentro de séries sobre manifestações atípicas, não prevalência populacional; contraste deliberado com o consenso formal de POTS pós-COVID para mostrar ausência de evidência equivalente para disautonomia pós-chikungunya — `content/Geral`), síndrome congênita do Zika e acometimento cardiovascular (documento estrutura dois planos de evidência: eixo neurológico bem estabelecido versus acometimento cardíaco discreto e heterogêneo, sem confirmação histopatológica de miocardite — `content/Cardiologia_pediátrica`), endocardite por fungos filamentosos raros não-Aspergillus/não-Mucorales — Fusarium, Scedosporium/Lomentospora prolificans e Trichosporon (aprofunda o documento geral de endocardite fúngica; mortalidade extrema documentada para Lomentospora prolificans — `content/Endocardite`).
+- **doencas**: +5, pareadas 1:1 — `hidatidose-cardiaca`, `triquinelose-e-miocardite`, `chikungunya-cardiovascular`, `sindrome-congenita-do-zika`, `endocardite-por-fungos-filamentosos-raros`. `prevalence_rank` 95-99 (area=geral).
+- **2 tópicos despachados neste lote, corretamente descartados por colisão real**: hemocromatose hereditária cardíaca e talassemia major/sobrecarga transfusional — ambos já cobertos de forma completa e revisada pelo mesmo documento existente (`hemocromatose-cardiovascular-hereditaria-hfe-e-transfusional-rm-t2-estrela-quelacao-e-flebotomia.md`, em `content/Cardiomiopatias/`), que trata tanto a etiologia primária (HFE) quanto a secundária/transfusional no mesmo texto. Ambos os agentes identificaram a colisão antes de escrever qualquer conteúdo — nenhuma perda de trabalho.
+- **Correção de integração inédita neste lote**: 3 dos 5 itens (hidatidose, chikungunya, endocardite fúngica rara) chegaram dos agentes produtores com slug de doença idêntico ao slug do documento — um padrão nunca antes visto nas 55 rodadas desta branch, onde todo par doc/doença mantém slugs distintos. Verificado programaticamente que nenhum par existente no manifesto compartilha slug com seu documento correspondente; os 3 slugs de doença foram renomeados para versões mais curtas e canônicas (`hidatidose-cardiaca`, `chikungunya-cardiovascular`, `endocardite-por-fungos-filamentosos-raros`) antes da integração, sem alterar os slugs dos documentos nem os `related_document_slugs`.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;`) em 1 dos 5 documentos (endocardite fúngica rara), corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.488 itens.
+
+### Status consolidado (após Lote 55)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 101 | 2.299 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 95 (11 descartados por colisão) | 105 |
+| **Total** | **4.900** | **289** | **4.611** |
