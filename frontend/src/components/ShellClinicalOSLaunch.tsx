@@ -10,6 +10,7 @@ import Credito from "./Credito";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeEmergencia, IconeHoje } from "./IdentidadeClinica";
 import PersonalAssistantPanel from "./PersonalAssistantPanel";
+import { CoracaoHolografico } from "./PreHomeBrand";
 
 type Item = { to: string; rotulo: string; icone: NomeIcone; badge?: number };
 type Secao = { id: string; rotulo: string; icone: NomeIcone; itens: Item[] };
@@ -335,6 +336,7 @@ export default function ShellClinicalOSLaunch() {
   return (
     <div className={`app-clinico clinical-os${foco ? " clinical-os--focus" : ""}${naEmergencia ? " clinical-os--emergency" : ""}`}>
       <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+      <div className="cos-shell-heart" aria-hidden="true"><CoracaoHolografico /></div>
       <aside className="cos-sidebar" aria-label="Navegação principal">
         <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/corvia-mark-canonical.svg" alt="" /></span><span className="cos-brand__text"><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></NavLink>
         <Navegacao secoes={secoes} />
@@ -359,7 +361,7 @@ export default function ShellClinicalOSLaunch() {
                 {usuario?.photo_url && !fotoQuebrada ? <img src={assetUrl(usuario.photo_url)} alt="" onError={() => setFotoQuebrada(true)} /> : <span className="cos-account__avatar">{iniciais(usuario?.full_name)}</span>}
                 <span className="cos-account__identity"><strong><span className="cos-account__nome-completo">{nomeComTratamento(usuario)}</span><span className="cos-account__nome-curto">{nomeComTratamento(usuario, true)}</span></strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
               </button>
-              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{nomeComTratamento(usuario)}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/tour?origem=assinatura&modo=quick" role="menuitem"><Icone nome="check" />Tour CorVIA</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
+              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{nomeComTratamento(usuario)}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/tour?retorno=/minha-conta" role="menuitem"><Icone nome="curso" />Tour Cardiology Spaces</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
             </div>
           </div>
         </header>
