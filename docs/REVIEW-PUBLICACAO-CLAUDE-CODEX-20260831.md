@@ -1,0 +1,123 @@
+# Revisão de publicação — Claude Code + Codex — 31/08/2026
+
+- Base `main`: `d17ef290505b35f62328f5d4eb40c4c932762cd8`
+- Claude: `c8cdd5db6d12c764690eb1e061f75461300ace79`
+- Codex: `a27c8d3d7b12126df22811e5237d944c144f9020`
+
+## Critérios
+
+- Reconciliação conservadora contra a `main`; conflito real não é sobrescrito.
+- PMIDs reabertos no PubMed/NCBI; DOI Codex comparado ao PubMed quando disponível.
+- `TODO/TBD/PLACEHOLDER` só contam como marcador editorial quando aparecem explicitamente nessa forma; a palavra portuguesa “todo” não é bloqueador.
+- Achados de estudos permanecem `recommendation_class: N/A` / `evidence_level: N/A`.
+- `published: false` é preservado até a publicação.
+- Não se declara leitura integral de todos os artigos quando a fonte original do lote foi abstract/XML.
+
+## Adições desta passagem corretiva
+
+- Claude — registros: **91**; Markdown: **72**.
+- Codex — estudos: **7**; evidências: **1**.
+- PMIDs reabertos nesta passagem: **1495**; não resolvidos: **31**.
+
+## Delta cumulativo do candidato versus main
+
+- `casos-clinicos/metadados.json`: +24 novos; 0 modificados.
+- `checklists/metadados.json`: +24 novos; 0 modificados.
+- `doencas/metadados.json`: +121 novos; 0 modificados.
+- `material-paciente/metadados.json`: +11 novos; 0 modificados.
+- `trilhas/metadados.json`: +21 novos; 0 modificados.
+- `estudos/metadados.json`: +170 novos; 0 modificados.
+- `evidencias/metadados.json`: +174 novos; 0 modificados.
+- `content_markdown`: +16 novos; 0 modificados.
+
+## Quarentena final (74)
+
+- `{"origin": "Claude", "path": "casos-clinicos/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "cha-de-sapo-bufotoxina-mimetiza-toxicidade-digitalica"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "abscesso-hepatico-amebiano-ruptura-pericardica-tamponamento"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "cardiotoxicidade-por-interleucina-2"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "citomegalovirose-congenita-com-acometimento-cardiovascular"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "doenca-da-arranhadura-do-gato-classica"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "sindrome-phace"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "reason": "editorial-marker:a confirmar", "slug": "tempestade-tireotoxica"}`
+- `{"origin": "Claude", "path": "material-paciente/metadados.json", "reason": "explicit-dose-in-patient-material", "slug": "aspirina-em-baixa-dose-na-gravidez-prevencao-de-pre-eclampsia"}`
+- `{"origin": "Claude", "path": "material-paciente/metadados.json", "reason": "explicit-dose-in-patient-material", "slug": "remedios-para-colesterol-na-gravidez-e-amamentacao"}`
+- `{"origin": "Claude", "path": "content/Arritmias/bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Cardio-oncologia/cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Cardiorrenal/morte-subita-cardiaca-em-hemodialise-o-ciclo-dialitico-e-o-longo-intervalo-interdialitico.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Endocardite/endocardite-por-fungos-filamentosos-raros-fusarium-scedosporium-lomentospora-trichosporon.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Geral/actinomicose-toracica-com-acometimento-pericardico-mimetizando-cancer-de-pulmao.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/babesiose-grave-e-acometimento-cardiovascular-hemolise-choque-e-miocardite-em-relatos-de-caso.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/cardiomiopatia-associada-ao-hiv-da-era-pre-tarv-a-doenca-cardiovascular-acelerada.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/cisticercose-cardiaca-achado-incidental-na-neurocisticercose-sistemica.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/latrodectismo-picada-de-viuva-negra-e-manifestacoes-cardiovasculares.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Geral/pericardite-histoplasmica-mecanismo-inflamatorio-diagnostico-e-tratamento.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Geral/peste-yersinia-pestis-choque-septico-e-disfuncao-miocardica.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Geral/toxoplasmose-aguda-e-miocardite-em-imunocompetentes.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/crise-adrenal-insuficiencia-adrenal-aguda-choque-cardiovascular-refratario.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/envenenamento-botropico-jararaca-coagulopatia-e-choque-cardiovascular.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/hlh-secundaria-miocardite-choque-refratario-e-tamponamento-cardiaco.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/onda-de-osborn-e-progressao-arritmica-na-hipotermia-acidental.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/profilaxia-de-sangramento-gastrointestinal-por-estresse-na-uti-cardiologica-revise.md", "reason": "editorial-marker:a confirmar"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/raiva-hidrofobia-disautonomia-e-complicacoes-cardiovasculares.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/sindrome-antifosfolipide-catastrofica-e-acometimento-cardiovascular-tempestade-trombotica-e-triade-terapeutica.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/tetano-grave-e-disautonomia-cardiovascular-mecanismo-tempestade-simpatica-e-tratamento.md", "reason": "three-way-content-conflict"}`
+- `{"origin": "Claude", "path": "casos-clinicos/metadados.json", "pmids": ["32809666"], "reason": "unresolved-pmid", "slug": "taquicardia-mediada-por-marca-passo-ima-interrompe-o-circuito-de-reentrada"}`
+- `{"origin": "Claude", "path": "checklists/metadados.json", "pmids": ["20301609", "20301717"], "reason": "unresolved-pmid", "slug": "avaliacao-e-manejo-da-cardiomiopatia-por-lmna-risco-arritmico-e-cdi"}`
+- `{"origin": "Claude", "path": "checklists/metadados.json", "pmids": ["20301446"], "reason": "unresolved-pmid", "slug": "calcificacao-valvar-grave-em-paciente-jovem-suspeita-de-gaucher-tipo-3c"}`
+- `{"origin": "Claude", "path": "checklists/metadados.json", "pmids": ["28846289"], "reason": "unresolved-pmid", "slug": "checklist-tempestade-tireotoxica-diagnostico-e-tratamento-sequenciado"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301627"], "reason": "unresolved-pmid", "slug": "alcaptonuria"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["30725889"], "reason": "unresolved-pmid", "slug": "beriberi-cardiaco"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301463"], "reason": "unresolved-pmid", "slug": "complexo-de-carney"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301431"], "reason": "unresolved-pmid", "slug": "deficiencia-de-cpt2"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301586"], "reason": "unresolved-pmid", "slug": "doenca-de-wilson-cardiovascular"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301446"], "reason": "unresolved-pmid", "slug": "gaucher-tipo-3c"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["26225414"], "reason": "unresolved-pmid", "slug": "lal-d"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301609", "20301717"], "reason": "unresolved-pmid", "slug": "laminopatia-cardiaca-lmna"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301391"], "reason": "unresolved-pmid", "slug": "lipodistrofia-congenita-generalizada"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["23844448"], "reason": "unresolved-pmid", "slug": "mucopolissacaridose-iva-morquio-a-cardiovascular"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301472"], "reason": "unresolved-pmid", "slug": "osteogenese-imperfeita"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301715"], "reason": "unresolved-pmid", "slug": "paraganglioma-cardiaco-primario"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301300"], "reason": "unresolved-pmid", "slug": "progeria-de-hutchinson-gilford"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301292"], "reason": "unresolved-pmid", "slug": "pseudoxantoma-elastico"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["32644621"], "reason": "unresolved-pmid", "slug": "reacao-anafilactoide-a-contraste-iodado"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301365"], "reason": "unresolved-pmid", "slug": "sindrome-cardiofaciocutanea"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["25392904"], "reason": "unresolved-pmid", "slug": "sindrome-da-tortuosidade-arterial"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301450"], "reason": "unresolved-pmid", "slug": "sindrome-de-alagille"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301444", "20301537"], "reason": "unresolved-pmid", "slug": "sindrome-de-alstrom"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["25275207"], "reason": "unresolved-pmid", "slug": "sindrome-de-cantu"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["35593853"], "reason": "unresolved-pmid", "slug": "sindrome-de-cogan"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301283"], "reason": "unresolved-pmid", "slug": "sindrome-de-cornelia-de-lange"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301680"], "reason": "unresolved-pmid", "slug": "sindrome-de-costello"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["21882399"], "reason": "unresolved-pmid", "slug": "sindrome-de-kabuki"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301699"], "reason": "unresolved-pmid", "slug": "sindrome-de-rubinstein-taybi"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["20301557"], "reason": "unresolved-pmid", "slug": "sindrome-leopard"}`
+- `{"origin": "Claude", "path": "doencas/metadados.json", "pmids": ["30860746"], "reason": "unresolved-pmid", "slug": "triquinelose-e-miocardite"}`
+- `{"origin": "Claude", "path": "material-paciente/metadados.json", "pmids": ["20301446"], "reason": "unresolved-pmid", "slug": "doenca-de-gaucher-tipo-3c-cuidando-do-coracao"}`
+- `{"origin": "Claude", "path": "content/Cardiomiopatias/cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi.md", "pmids": ["20301609", "20301717"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Cardiomiopatias/complexo-de-carney-mixoma-cardiaco-familiar-genetica-quadro-clinico-e-seguimento.md", "pmids": ["20301463"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Cardiomiopatias/doenca-de-wilson-acometimento-cardiovascular-fisiopatologia-manifestacoes-e-terapia-quelante.md", "pmids": ["20301586"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Cardiomiopatias/paraganglioma-cardiaco-primario-tumor-neuroendocrino-intracardiaco-funcionante-ou-nao-funcionante.md", "pmids": ["20301715"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Diabetes_e_cardiologia/lipodistrofia-congenita-generalizada-berardinelli-seip-acometimento-cardiovascular-e-metabolico.md", "pmids": ["20301391"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Geral/triquinelose-e-miocardite-a-larva-que-nao-se-encista-no-coracao-e-a-principal-causa-de-morte-na-forma-grave.md", "pmids": ["30860746"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/reacao-de-hipersensibilidade-anafilactoide-a-contraste-iodado-mecanismo-gravidade-e-manejo-do-choque.md", "pmids": ["32644621"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Terapia_intensiva/tempestade-tireotoxica-emergencia-cardiovascular-diagnostico-clinico-e-tratamento-sequenciado.md", "pmids": ["28846289"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Valvopatias/alcaptonuria-ocronose-acometimento-cardiovascular-calcificacao-e-disfuncao-valvar.md", "pmids": ["20301627"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Valvopatias/doenca-de-gaucher-acometimento-cardiovascular-tipo-3c-calcificacao-valvar-e-limites-da-terapia-de-reposicao-enzimatica.md", "pmids": ["20301446"], "reason": "unresolved-pmid", "slug": null}`
+- `{"origin": "Claude", "path": "content/Valvopatias/mucopolissacaridose-tipo-iva-morquio-a-acometimento-cardiovascular-valvopatia-e-limites-da-terapia-de-reposicao-enzimatica.md", "pmids": ["23844448"], "reason": "unresolved-pmid", "slug": null}`
+
+## Gates obrigatórios
+
+- `git diff --check`
+- `python scripts/content_inventory.py --strict`
+- `python scripts/audit_tudo_com_tudo.py`
+
+O candidato só é commitado se todos os gates passarem.
+
+## Sanitização final do candidato
+
+- Itens em quarentena processados: **74**.
+- Todos foram removidos do delta candidato ou restaurados exatamente à versão de `main`; nenhum item em quarentena permanece como alteração publicável.
+- A lista de quarentena acima permanece no relatório como trilha auditável para revisão futura.
+- O candidato final inclui somente o subconjunto que passou reconciliação, validação bibliográfica aplicável e gates estruturais.
