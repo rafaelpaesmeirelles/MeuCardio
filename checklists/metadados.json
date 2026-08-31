@@ -37329,5 +37329,526 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "titulacao-sequenciada-da-terapia-quadrupla-conforme-barreira-de-seguranca-na-icfer",
+    "condicao": "Insuficiência cardíaca com fração de ejeção reduzida (ICFEr)",
+    "resumo": "Checklist de execução para decidir a ordem de introdução dos quatro pilares farmacológicos da ICFEr e conduzir a titulação conforme barreiras de segurança identificadas na primeira consulta e nas reavaliações precoces.",
+    "documento_origem": "fluxograma-sequenciamento-titulacao-terapia-quadrupla-icfer",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "CONSENSUS Trial Study Group. Effects of enalapril on mortality in severe congestive heart failure (CONSENSUS). N Engl J Med. 1987;316(23):1429-1435. DOI: 10.1056/NEJM198706043162301. PMID: 2883575",
+      "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015",
+      "McMurray JJV, Solomon SD, Inzucchi SE, et al; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829",
+      "Packer M, Anker SD, Butler J, et al; EMPEROR-Reduced Trial Investigators. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. N Engl J Med. 2020;383(15):1413-1424. DOI: 10.1056/NEJMoa2022190. PMID: 32865377",
+      "Pitt B, Zannad F, Remme WJ, et al; RALES Investigators. The effect of spironolactone on morbidity and mortality in patients with severe heart failure. N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456",
+      "Zannad F, McMurray JJ, Krum H, et al; EMPHASIS-HF Study Group. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. DOI: 10.1056/NEJMoa1009492. PMID: 21073363",
+      "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised trial. Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631",
+      "Butler J, Anker SD, Lund LH, et al. Patiromer for the management of hyperkalemia in heart failure with reduced ejection fraction: the DIAMOND trial. Eur Heart J. 2022;43(41):4362-4373. DOI: 10.1093/eurheartj/ehac401. PMID: 35900838",
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666"
+    ],
+    "itens": [
+      {
+        "id": "icfer-seq-confirmar-fever",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar FEVE ≤ 40% antes de indicar o início da terapia quádrupla",
+        "origem_secao": "Árvore de decisão — Diagnóstico confirmado de ICFEr"
+      },
+      {
+        "id": "icfer-seq-triagem-instabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar qualquer pilar, avaliar se o paciente está hemodinamicamente instável agora — congestão não tratada, hipotensão sintomática, hipercalemia ou injúria renal aguda",
+        "origem_secao": "Árvore de decisão — Paciente hemodinamicamente instável agora?"
+      },
+      {
+        "id": "icfer-seq-estabilizar-primeiro",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se instável, estabilizar a intercorrência aguda primeiro — tratar a congestão e corrigir potássio e função renal — e só então iniciar os quatro pilares",
+        "origem_secao": "Árvore de decisão — nó de estabilização (C1)"
+      },
+      {
+        "id": "icfer-seq-identificar-barreira",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Identificar, na primeira consulta, se há barreira específica que limita iniciar as quatro classes ao mesmo tempo: PA limítrofe, FC/condução limítrofes, ou TFGe/potássio limítrofes",
+        "origem_secao": "Árvore de decisão — Há barreira específica que limita iniciar as quatro classes ao mesmo tempo?"
+      },
+      {
+        "id": "icfer-seq-sem-barreira",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Sem barreira relevante, introduzir prontamente os quatro pilares, em sequência individualizada ou concomitante quando seguro; iSGLT2 não exige titulação e as demais classes são iniciadas em doses toleráveis",
+        "origem_secao": "Árvore de decisão — nó sem barreira (P1)"
+      },
+      {
+        "id": "icfer-seq-barreira-pa",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Com PA limítrofe/hipotensão, iniciar primeiro iSGLT2 e antagonista mineralocorticoide (menor efeito hipotensor imediato); introduzir IECA/ARNI e betabloqueador em dose mínima, com intervalo maior entre as introduções",
+        "origem_secao": "Árvore de decisão — sequenciamento por PA limítrofe (C2)"
+      },
+      {
+        "id": "icfer-seq-barreira-fc",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Com FC/condução limítrofes, iniciar iSGLT2, antagonista mineralocorticoide e IECA/ARNI primeiro; introduzir betabloqueador em dose mínima com monitorização de FC e ECG, avaliando necessidade de marca-passo antes de escalar a dose",
+        "origem_secao": "Árvore de decisão — sequenciamento por FC/condução limítrofes (C3)"
+      },
+      {
+        "id": "icfer-seq-barreira-renal-potassio",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Com TFGe ou potássio limítrofes, iniciar iSGLT2 e betabloqueador primeiro (menor impacto renal/potássio imediato); introduzir IECA/ARNI e antagonista mineralocorticoide em dose mínima, controlando potássio e TFGe em 1 a 2 semanas antes de qualquer titulação",
+        "origem_secao": "Árvore de decisão — sequenciamento por TFGe/potássio limítrofes (C4)"
+      },
+      {
+        "id": "icfer-seq-reavaliacao-precoce",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliar precocemente após cada mudança de dose, verificando se PA, FC, potássio e TFGe toleraram a dose atual",
+        "origem_secao": "Árvore de decisão — Na reavaliação precoce após cada mudança...?"
+      },
+      {
+        "id": "icfer-seq-titular-tolerado",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Se a dose foi tolerada, titular uma ou mais classes conforme tolerância até doses-alvo ou máximas toleradas, individualizando intervalo e incremento com monitorização clínica e laboratorial",
+        "origem_secao": "Árvore de decisão — nó de titulação por tolerância (C5)"
+      },
+      {
+        "id": "icfer-seq-limitante-hipotensao",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Se hipotensão sintomática limitou a titulação, seguir o fluxograma dedicado de manejo da hipotensão, limitando a titulação de IECA/ARNI",
+        "origem_secao": "Árvore de decisão — parâmetro limitante: hipotensão sintomática (C6)"
+      },
+      {
+        "id": "icfer-seq-limitante-hipercalemia",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Se hipercalemia limitou a titulação, considerar quelante de potássio antes de reduzir a dose do bloqueador do SRAA ou do antagonista mineralocorticoide",
+        "origem_secao": "Árvore de decisão — parâmetro limitante: hipercalemia (C7)"
+      },
+      {
+        "id": "icfer-seq-limitante-bradicardia",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Se bradicardia ou distúrbio de condução limitou a titulação, reduzir a dose do betabloqueador e priorizar a titulação dos demais pilares",
+        "origem_secao": "Árvore de decisão — parâmetro limitante: bradicardia/distúrbio de condução (C8)"
+      },
+      {
+        "id": "icfer-seq-piora-renal-leve",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Diante de piora renal isolada, leve a moderada, manter a dose atual — não suspender por elevação isolada e leve de creatinina — e reavaliar em 1 a 2 semanas",
+        "origem_secao": "Árvore de decisão — parâmetro limitante: piora renal isolada leve/moderada (C9)"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "civ-adulto-decisao-fechamento-esc-2020",
+    "condicao": "Comunicação interventricular no adulto — decisão de fechamento",
+    "resumo": "Checklist de execução para conduzir a decisão de fechar ou não uma comunicação interventricular (CIV) no adulto, seguindo a árvore ESC 2020 que separa repercussão hemodinâmica (resistência vascular pulmonar, sobrecarga de volume do VE) de risco valvar aórtico associado.",
+    "documento_origem": "fluxograma-comunicacao-interventricular-no-adulto-quando-fechar-esc-2020",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028",
+      "Lin TH, Wang JK, Lin MT, et al. Impact of Device Position and Aortic Valve Prolapse on Outcomes After Transcatheter VSD Closure. JACC Asia. 2026 Aug 5. DOI: 10.1016/j.jacasi.2026.06.027. PMID: 42559775",
+      "Nguyen TVN, Ho SY, Do TN. Applied Anatomy of Perimembranous Ventricular Septal Defect for Transcatheter Device Closure. JACC Asia. 2026;6(7):1019-1032. DOI: 10.1016/j.jacasi.2026.03.002. PMID: 42412691"
+    ],
+    "itens": [
+      {
+        "id": "civ-avaliacao-hp-inicial",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigada a presença de sinal não invasivo de hipertensão pulmonar (PAP sistólica estimada elevada, sinais indiretos) ou dessaturação ao esforço em todo adulto com CIV diagnosticada",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-cateterismo-obrigatorio",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se houver sinal de hipertensão pulmonar ou dessaturação ao esforço, realizado cateterismo cardíaco direito com medida invasiva da resistência vascular pulmonar antes de qualquer decisão de fechar",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-fechar-rvp-baixa",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Com resistência vascular pulmonar abaixo de 3 unidades Wood e shunt esquerda-direita confirmado, indicado fechamento (Classe I), cirúrgico ou por dispositivo conforme anatomia e experiência do centro",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-considerar-rvp-intermediaria",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Com resistência vascular pulmonar de 3 a menos de 5 unidades Wood, fechamento considerado (Classe IIa) com decisão individualizada em centro especializado",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-decisao-rvp-alta",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Com resistência vascular pulmonar de 5 unidades Wood ou mais e sem fisiologia de Eisenmenger estabelecida, decisão tomada de forma individual e cuidadosa em centro especializado (Classe IIb)",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-nao-fechar-eisenmenger",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Com fisiologia de Eisenmenger já estabelecida, fechamento não realizado (Classe III), pelo risco de retirar a válvula de escape que mantém o débito sistêmico e precipitar falência aguda do ventrículo direito",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-fechar-sobrecarga-volume",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Sem sinal de hipertensão pulmonar, avaliada a presença de sobrecarga de volume do ventrículo esquerdo (CIV moderada a grande, não restritiva); se presente, fechamento indicado independentemente de sintomas (Classe I)",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-avaliar-risco-valvar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em CIV pequena e restritiva sem sobrecarga de volume, avaliada a presença de prolapso de cúspide aórtica com regurgitação progressiva ou anatomia de alto risco (subarterial ou perimembranosa tipo 2 com extensão superior-anterior)",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-avaliar-viabilidade-percutanea",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Diante de prolapso ou regurgitação aórtica progressiva ou anatomia de alto risco, avaliada a viabilidade técnica do fechamento percutâneo por dispositivo — borda aórtica suficiente e índice de prolapso mensurado por ecocardiograma transesofágico",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-fechar-dispositivo-evitar-clamping",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Quando o fechamento percutâneo é viável, realizado por dispositivo mesmo em defeito pequeno sem sobrecarga relevante de VE, evitando a posição de 'clamping' do dispositivo sobre a cúspide aórtica, associada a maior progressão de regurgitação no seguimento",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-fechar-cirurgico-valva",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Quando a anatomia é desfavorável ao dispositivo ou a regurgitação aórtica já é relevante, realizado fechamento cirúrgico com reparo ou anuloplastia da valva aórtica no mesmo tempo cirúrgico, quando indicado",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "civ-eco-transtoracico-basal",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Realizado ecocardiograma transtorácico para localizar o defeito, medir o gradiente transdefeito e avaliar prolapso/regurgitação da valva aórtica antes de qualquer decisão da árvore",
+        "origem_secao": "O que a árvore não mostra"
+      },
+      {
+        "id": "civ-seguimento-sem-fechamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Na ausência de indicação de fechamento, mantido seguimento ecocardiográfico regular com atenção dirigida à cúspide aórtica adjacente ao defeito, pelo risco de prolapso progressivo mesmo décadas após o diagnóstico",
+        "origem_secao": "Árvore de decisão"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "doses-de-antiagregantes-e-anticoagulantes-na-sca-a-beira-do-leito",
+    "condicao": "Doença coronariana",
+    "resumo": "Checklist de conferência de dose e ajuste ao administrar antiagregantes, anticoagulantes e inibidores da glicoproteína IIb/IIIa na síndrome coronariana aguda, incluindo contraindicações, ajuste renal e a transição do cangrelor.",
+    "documento_origem": "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. European Heart Journal. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Tabela 6"
+    ],
+    "itens": [
+      {
+        "id": "dac-posologia-aas-ataque",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Dose de ataque de AAS administrada — 150–300 mg VO, ou 75–250 mg IV se a via oral não for possível",
+        "origem_secao": "Antiagregantes"
+      },
+      {
+        "id": "dac-posologia-clopidogrel-fibrinolise-idade",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "No contexto de fibrinólise, dose de ataque de clopidogrel ajustada pela idade: 300 mg em geral, reduzida a 75 mg em pacientes com mais de 75 anos",
+        "origem_secao": "Antiagregantes"
+      },
+      {
+        "id": "dac-posologia-prasugrel-avc-contraindicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de prescrever prasugrel, história de AVC prévio verificada — é contraindicação registrada para o fármaco",
+        "origem_secao": "Antiagregantes"
+      },
+      {
+        "id": "dac-posologia-prasugrel-ajuste-peso-idade",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Dose de manutenção de prasugrel reduzida a 5 mg/dia em pacientes com peso abaixo de 60 kg ou, com cautela, a partir de 75 anos",
+        "origem_secao": "Antiagregantes"
+      },
+      {
+        "id": "dac-posologia-cangrelor-transicao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Na transição do cangrelor para tienopiridina oral, dose de ataque administrada imediatamente após a suspensão da infusão (clopidogrel 600 mg ou prasugrel 60 mg; prasugrel também pode ser dado 30 minutos antes de a infusão parar), e ticagrelor 180 mg administrado no momento da angioplastia — não ao fim da infusão",
+        "origem_secao": "Antiagregantes — transição do cangrelor"
+      },
+      {
+        "id": "dac-posologia-gpiib-contraindicacoes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de iniciar inibidor da glicoproteína IIb/IIIa, contraindicações conferidas: hemorragia intracraniana prévia, AVC isquêmico nos últimos 30 dias, uso concomitante de fibrinolítico e plaquetas abaixo de 100.000/mm³",
+        "origem_secao": "Inibidores da glicoproteína IIb/IIIa"
+      },
+      {
+        "id": "dac-posologia-eptifibatida-renal",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Com clearance de creatinina entre 30 e 50 mL/min, infusão de manutenção da eptifibatida reduzida a 1 mcg/kg/min (máximo 7,5 mg/h), mantendo o bolus de 180 mcg/kg (máximo 22,6 mg); fármaco contraindicado na doença renal em estágio terminal",
+        "origem_secao": "Inibidores da glicoproteína IIb/IIIa"
+      },
+      {
+        "id": "dac-posologia-hnf-ttpa",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Após o bolus inicial de heparina não fracionada (70–100 U/kg), infusão titulada para TTPa alvo de 60–80 segundos",
+        "origem_secao": "Anticoagulantes"
+      },
+      {
+        "id": "dac-posologia-enoxaparina-8h",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Antes da angioplastia em paciente já em uso de enoxaparina, horário da última dose subcutânea verificado: se há menos de 8 horas, nenhuma dose adicional; se há mais de 8 horas, bolus IV de 0,3 mg/kg administrado",
+        "origem_secao": "A regra das 8 horas da enoxaparina"
+      },
+      {
+        "id": "dac-posologia-ajuste-renal-anticoagulantes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Clearance de creatinina calculado antes de definir a dose do anticoagulante: enoxaparina reduzida a 1 mg/kg uma vez ao dia e bivalirudina reduzida a 1 mg/kg/h com clearance abaixo de 30 mL/min; fondaparinux evitado com clearance abaixo de 20 mL/min",
+        "origem_secao": "Ajuste renal, que é onde os três divergem"
+      },
+      {
+        "id": "dac-posologia-fondaparinux-icp",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Em paciente sob fondaparinux submetido a angioplastia, bolus único de heparina não fracionada administrado durante o procedimento",
+        "origem_secao": "Anticoagulantes"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "indicacao-preparo-e-manejo-do-marcapasso-transvenoso-temporario",
+    "condicao": "Bradicardia instável com indicação de marcapasso transvenoso temporário na UCO",
+    "resumo": "Checklist de execução para decidir, preparar, implantar e desmamar o marcapasso transvenoso temporário na UCO — da indicação centrada em repercussão hemodinâmica (não na frequência isolada) à estratégia diária de saída e ao acionamento precoce de eletrofisiologia.",
+    "documento_origem": "marcapasso-transvenoso-temporario-na-uco-bradicardia-instavel-indicacao-e-complicacoes",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "American Heart Association. Part 9: Adult Advanced Life Support. 2025 AHA Guidelines for CPR and ECC — Initial Management of Bradycardia.",
+      "American Heart Association. Adult Bradycardia With a Pulse Algorithm. 2025.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140:e382-e482. DOI: 10.1161/CIR.0000000000000628."
+    ],
+    "itens": [
+      {
+        "id": "mptv-indicacao-repercussao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de MPTV baseada na combinação de bradicardia clinicamente relevante com repercussão hemodinâmica persistente (hipotensão, choque/hipoperfusão, alteração aguda do estado mental, desconforto isquêmico, insuficiência cardíaca aguda, síncope/pré-síncope recorrente ou baixo débito por bloqueio avançado) e falha ou inadequação da terapia inicial — frequência cardíaca isolada não indica o dispositivo",
+        "origem_secao": "1. Não tratar o número: tratar a bradicardia com repercussão"
+      },
+      {
+        "id": "mptv-causa-reversivel",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Causas reversíveis pesquisadas e tratadas antes e durante qualquer estratégia de pacing: isquemia/infarto, hipóxia, hipercalemia e outros distúrbios eletrolíticos, toxicidade por betabloqueador/bloqueador de canal de cálcio/digoxina, hipotermia, acidose grave, complicação mecânica/pós-operatória e aumento vagal/procedimental — o MPTV não deve atrasar o tratamento específico dessas causas",
+        "origem_secao": "2. Primeira obrigação: procurar causa reversível"
+      },
+      {
+        "id": "mptv-sequencia-inicial",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Sequência inicial respeitada na bradicardia instável: suporte de via aérea/respiração e monitorização, ECG de 12 derivações quando não atrasar a estabilização, tratamento das causas reversíveis e terapia farmacológica inicial conforme algoritmo de bradicardia, antes de escalonar para pacing",
+        "origem_secao": "3. Sequência inicial na bradicardia instável"
+      },
+      {
+        "id": "mptv-ponte-transcutanea",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se resposta inadequada à terapia farmacológica inicial, pacing transcutâneo e/ou agonista adrenérgico com efeito cronotrópico usados como ponte enquanto o MPTV emergente é preparado",
+        "origem_secao": "3. Sequência inicial na bradicardia instável"
+      },
+      {
+        "id": "mptv-captura-transcutanea",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "No pacing transcutâneo, captura elétrica confirmada em conjunto com captura mecânica (pulso/onda de pressão arterial compatível com o QRS estimulado) — captura elétrica aparente isoladamente não é considerada suficiente",
+        "origem_secao": "5. Quando pacing transcutâneo é particularmente útil"
+      },
+      {
+        "id": "mptv-preparacao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Antes da punção, organizados monitorização contínua, desfibrilador/pacing externo disponível, acesso venoso e material apropriado, ultrassom para acesso vascular quando disponível, equipe habilitada, plano de sedação/analgesia proporcional ao estado hemodinâmico (evitando sedação excessiva em paciente em choque) e plano para complicações (pneumotórax, sangramento, arritmia, perfuração/tamponamento)",
+        "origem_secao": "6. Preparação para MPTV"
+      },
+      {
+        "id": "mptv-acesso-venoso",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Via de acesso (jugular interna, femoral ou subclávia/axilar) escolhida conforme contexto, experiência e duração prevista, com uso de ultrassom quando disponível e sem multiplicar punções em paciente anticoagulado/coagulopático",
+        "origem_secao": "7. Acesso venoso"
+      },
+      {
+        "id": "mptv-confirmacao-captura",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Após posicionamento do eletrodo, confirmados captura elétrica no monitor/ECG, captura mecânica por pulso/pressão arterial, limiar de captura, posição apropriada pelo método disponível no serviço, ausência de estimulação diafragmática inesperada e estabilidade do cateter após fixação",
+        "origem_secao": "8. Posicionamento e captura"
+      },
+      {
+        "id": "mptv-perda-captura",
+        "categoria": "emergencia",
+        "obrigatorio": true,
+        "texto": "Diante de perda de captura em paciente dependente de pacing: avaliar imediatamente pulso e perfusão, ativar pacing transcutâneo de resgate se necessário, conferir cabos/conexões/gerador, revisar saída/sensibilidade/limiar, procurar deslocamento do eletrodo, corrigir alterações metabólicas que elevam o limiar (distúrbios eletrolíticos/acidose) e avaliar perfuração/tamponamento se houver deterioração súbita",
+        "origem_secao": "10. Perda de captura: abordagem de emergência"
+      },
+      {
+        "id": "mptv-estrategia-saida",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Estratégia de saída revisada diariamente com pergunta explícita: a causa reversível já foi corrigida, a condução nativa recuperou, ainda há instabilidade sem pacing, há indicação provável de marcapasso definitivo, há infecção ativa que impede dispositivo permanente imediato e se é necessária estratégia temporária de maior duração",
+        "origem_secao": "11. Duração: temporário precisa ter estratégia de saída"
+      },
+      {
+        "id": "mptv-acionamento-ep",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Eletrofisiologia/Heart Team acionados precocemente diante de bloqueio AV persistente pós-IAM/procedimento, dependência completa do pacing, necessidade de suporte por vários dias, suspeita de indicação de marcapasso definitivo, infecção que exige ponte prolongada, acesso difícil/complicado, falha recorrente de captura ou cardiopatia estrutural complexa",
+        "origem_secao": "12. Quando chamar eletrofisiologia/Heart Team precocemente"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "doenca-ateroembolica-cristais-colesterol-checklist",
+    "condicao": "Doença ateroembólica por cristais de colesterol",
+    "resumo": "Checklist de execução para reconhecer a doença ateroembólica por cristais de colesterol como imitadora de vasculite sistêmica, conduzir a investigação diagnóstica correta e aplicar o manejo de suporte, evitando gatilhos de novos episódios.",
+    "documento_origem": "doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Scolari F, Ravani P. Atheroembolic renal disease. Lancet. 2010;375(9726):1650-1660. DOI: 10.1016/S0140-6736(09)62073-0. PMID: 20381857.",
+      "Saric M, Kronzon I. Aortic atherosclerosis and embolic events. Curr Cardiol Rep. 2012;14(3):342-349. DOI: 10.1007/s11886-012-0261-2. PMID: 22437371.",
+      "Meyrier A. Cholesterol crystal embolism: diagnosis and treatment. Kidney Int. 2006;69(8):1308-1312. DOI: 10.1038/sj.ki.5000263. PMID: 16614719.",
+      "Belenfant X, Meyrier A, Jacquot C. Supportive treatment improves survival in multivisceral cholesterol crystal embolism. Am J Kidney Dis. 1999;33(5):840-850. DOI: 10.1016/S0272-6386(99)70415-4. PMID: 10213638.",
+      "Thériault J, Agharazzi M, Dumont M, Pichette V, Ouimet D, Leblanc M. Atheroembolic renal failure requiring dialysis: potential for renal recovery? A review of 43 cases. Nephron Clin Pract. 2003;94(1):c11-c18. DOI: 10.1159/000070819. PMID: 12806187.",
+      "Umemoto D, Nishino I, Yamashita D, Ishimaru N, Nishioka H. Small-vessel vasculitis associated with cholesterol embolism: a case report. BMC Rheumatol. 2024;8(1):66. DOI: 10.1186/s41927-024-00437-z. PMID: 39639413."
+    ],
+    "itens": [
+      {
+        "id": "ateroembolismo-colesterol-suspeita-temporal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar história de procedimento vascular, angiografia, cirurgia aórtica ou início de anticoagulação/trombólise nas semanas anteriores ao quadro, em paciente com fatores de risco para aterosclerose avançada",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-exame-cutaneo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Examinar a pele em busca de livedo reticular e síndrome do dedo azul/roxo (cianose ou necrose focal da polpa digital) e conferir os pulsos periféricos, que tipicamente permanecem preservados",
+        "origem_secao": "Quadro clínico multissistêmico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-lab-eosinofilia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Solicitar hemograma com eosinófilos, complemento (C3/C4), VHS e PCR, atentando para eosinofilia e hipocomplementemia transitórias como pistas laboratoriais características",
+        "origem_secao": "Achados laboratoriais e a armadilha da vasculite"
+      },
+      {
+        "id": "ateroembolismo-colesterol-funcao-renal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Monitorar a função renal atentando para padrão de insuficiência subaguda e progressiva ao longo de dias a semanas, diferenciando-o da necrose tubular aguda pós-contraste (instalação em 24-48h)",
+        "origem_secao": "Quadro clínico multissistêmico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-fundo-olho",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Realizar exame de fundo de olho em busca de placas de Hollenhorst",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-biopsia",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Considerar biópsia de pele (borda de lesão livedoide ou área necrótica) ou de rim, buscando fendas biconvexas em forma de agulha na luz de pequenas artérias e arteríolas",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-imagem-aorta",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Solicitar exame de imagem da aorta (ecocardiograma transesofágico ou angiotomografia) para identificar a placa complexa/ulcerada de origem",
+        "origem_secao": "Diagnóstico"
+      },
+      {
+        "id": "ateroembolismo-colesterol-diferencial-vasculite",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Considerar e afastar ativamente vasculites sistêmicas (poliangiite microscópica, granulomatose com poliangiite, granulomatose eosinofílica com poliangiite, poliarterite nodosa) e demais diagnósticos diferenciais antes de iniciar imunossupressão",
+        "origem_secao": "Diagnóstico diferencial"
+      },
+      {
+        "id": "ateroembolismo-colesterol-fatores-risco",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Instituir controle agressivo dos fatores de risco ateroscleróticos: cessação do tabagismo e controle pressórico e glicêmico",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ateroembolismo-colesterol-estatina",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Iniciar ou otimizar estatina em dose otimizada, mesmo quando iniciada após o evento embólico",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ateroembolismo-colesterol-suporte-renal",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Manter suporte à disfunção renal, incluindo diálise quando indicada, sem presumir irreversibilidade precocemente, já que parte relevante dos pacientes recupera função suficiente para descontinuar a diálise meses depois",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ateroembolismo-colesterol-evitar-gatilhos",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Evitar novos procedimentos vasculares e anticoagulação/trombólise desnecessárias; quando houver indicação concomitante de anticoagulação por outra condição, decidir de forma individualizada e compartilhada entre cardiologia, nefrologia e paciente",
+        "origem_secao": "Tratamento"
+      },
+      {
+        "id": "ateroembolismo-colesterol-corticoide",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Considerar corticoide sistêmico nas fases inflamatórias mais exuberantes, de forma individualizada, reconhecendo que seu papel não é consensual",
+        "origem_secao": "Tratamento"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
