@@ -1720,3 +1720,27 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **416** | **4.484** |
+
+## Lote 82 — concluído (commit eeee0aec)
+
+- **3 casos clínicos** — pivô de estratégia: casos clínicos (5,7%) e checklists (6,7%) eram as duas categorias mais atrasadas por razão de conclusão após o Lote 81; doenças especializadas seguiu intocada (37/200 restantes).
+  - **Terapia intensiva**: choque séptico — enchimento capilar vs. lactato como alvo de reanimação (ANDROMEDA-SHOCK, PMID 30772908); distratores tratam o resultado como prova de mortalidade ou como abandono do lactato.
+  - **Dispositivos**: taquicardia mediada por marca-passo — terminação aguda com ímã sobre o gerador (PMID 32809666, PMID 26403498); fielmente extraído do documento já publicado sobre mecanismo/PVARP.
+  - **Perioperatório**: coorte Rudolph et al. (PMID 41506973) associando betabloqueador crônico a AVC pós-operatório — por que confusão por indicação não justifica suspender a droga.
+- **2 checklists** — ambos com `documento_origem` confirmado como arquivo real em `content/`:
+  - **Doença coronariana**: manejo antitrombótico e prevenção secundária na SCA, extraído da diretriz ACC/AHA 2025 (15 itens).
+  - **Hipertensão**: subtipagem de aldosteronismo primário (TC/AVS, adrenalectomia vs. MRA), extraído do fluxograma já publicado (14 itens rastreáveis a nós da árvore de decisão).
+- **Verificação de integridade**: nenhum slug colide (906 casos / 466 checklists pré-existentes conferidos); `documento_origem` de ambos checklists confirmado por arquivo real; `source_refs` coincidem com os documentos de origem.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.679 itens.
+
+### Status consolidado (após Lote 82)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 174 | 2.226 |
+| Casos clínicos | 900 | 54 | 846 |
+| Checklists | 600 | 42 | 558 |
+| Materiais-paciente | 500 | 36 | 464 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **421** | **4.479** |
