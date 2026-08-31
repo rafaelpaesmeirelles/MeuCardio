@@ -377,10 +377,10 @@ export default function CardiologySpacesHome() {
   const allActions = useMemo(() => CATALOG.flatMap((section) => section.actions).filter((action) => !action.adminOnly || usuario?.role === "admin"), [usuario?.role]);
   const essentials = essentialPaths.map((path) => allActions.find((action) => action.to === path)).filter((action): action is Action => Boolean(action));
   const day = dayTargets.slice(0, 3);
-  const railActions = Array.from(new Map(
+  const railActions = Array.from(new Map<string, Action>(
     [...activeSpace.now, ...activeSpace.next]
       .filter((action) => !action.adminOnly || usuario?.role === "admin")
-      .map((action) => [action.to, action]),
+      .map((action) => [action.to, action] as const),
   ).values()).slice(0, 5);
 
   function chooseMode(nextMode: Mode) {
