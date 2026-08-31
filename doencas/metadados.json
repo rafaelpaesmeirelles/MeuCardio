@@ -54905,5 +54905,344 @@
       "cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi"
     ],
     "patient_material_slug": "distrofia-muscular-emery-dreifuss-coracao"
+  },
+  {
+    "slug": "alcaptonuria",
+    "name": "Alcaptonúria (Ocronose)",
+    "aliases": [
+      "ocronose",
+      "alkaptonuria",
+      "AKU",
+      "deficiência de homogentisato 1,2-dioxigenase",
+      "doença da urina escura"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "erro inato do metabolismo com acometimento cardiovascular tardio",
+    "prevalence_rank": 160,
+    "completeness": "completo",
+    "summary": "Erro inato do metabolismo autossômico recessivo por deficiência de homogentisato 1,2-dioxigenase (gene HGD), com acúmulo de ácido homogentísico e deposição cumulativa de pigmento ocronótico em tecido conjuntivo. A artropatia ocronótica costuma dominar o quadro clínico e surgir mais cedo (lombalgia antes dos 30-40 anos), enquanto o acometimento cardiovascular — calcificação e espessamento de valva aórtica (mais comum) e mitral, podendo evoluir a estenose ou regurgitação grave com necessidade de troca valvar, além de calcificação/rigidez da parede aórtica — é tipicamente uma manifestação tardia, concentrada a partir da quinta-sétima décadas de vida, sem correlação com fatores de risco cardiovascular tradicionais.",
+    "presentation": [
+      "Urina que escurece ao repouso ou à exposição ao ar (achado frequentemente não relatado espontaneamente pelo paciente)",
+      "Pigmentação azul-acinzentada a enegrecida de cartilagem auricular e esclera",
+      "Lombalgia e artropatia degenerativa de início relativamente precoce (antes dos 30-40 anos), com calcificação e achatamento de discos intervertebrais",
+      "Artropatia de grandes articulações (joelhos, quadris, ombros), muitas vezes exigindo artroplastia",
+      "Calcificação/espessamento valvar aórtico e, com menor frequência, mitral — em fase mais tardia da doença (a partir da quinta década)",
+      "Estenose ou regurgitação valvar aórtica/mitral hemodinamicamente significativa em pacientes de meia-idade a idosos",
+      "Calcificação e possível dilatação da parede aórtica; calcificação coronariana à tomografia",
+      "Achado incidental de valva cardíaca enegrecida em cirurgia ou necropsia, levando ao diagnóstico"
+    ],
+    "differentials": [
+      "Doença valvar calcífica degenerativa relacionada à idade e a fatores de risco cardiovascular tradicionais",
+      "Valva aórtica bicúspide",
+      "Doença valvar reumática",
+      "Calcificação anular mitral (MAC) grave associada a doença renal crônica/diálise",
+      "Doença valvar carcinoide",
+      "Doença de Gaucher tipo 3c com calcificação valvar precoce",
+      "Amiloidose cardíaca com acometimento valvar",
+      "Valvopatia actínica (pós-radioterapia torácica)"
+    ],
+    "tests": [
+      "Dosagem de ácido homogentísico em urina de 24 horas",
+      "Análise molecular do gene HGD para confirmação diagnóstica",
+      "Ecocardiograma transtorácico para avaliar espessamento, calcificação e função das valvas aórtica e mitral",
+      "Tomografia de tórax para avaliar calcificação de aorta e artérias coronárias quando indicado",
+      "Radiografia de coluna (discos intervertebrais achatados e calcificados — achado sugestivo de ocronose axial)",
+      "Exame clínico dirigido para pigmentação de esclera e cartilagem auricular"
+    ],
+    "red_flags": [
+      "Calcificação/estenose valvar aórtica em paciente sem perfil de risco cardiovascular tradicional esperado",
+      "Calcificação valvar associada a pigmentação escurecida de cartilagem auricular ou esclera",
+      "História de urina que escurece ao repouso, especialmente associada a artropatia degenerativa precoce",
+      "Achado intraoperatório de valva cardíaca com coloração enegrecida/azulada não explicada",
+      "Sintomas de estenose ou regurgitação valvar grave (dispneia, síncope, angina) em paciente com diagnóstico prévio ou pistas de alcaptonúria"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de alcaptonúria diante de artropatia degenerativa precoce e/ou pigmentação característica de cartilagem/esclera, associada a calcificação valvar",
+      "Investigar com dosagem de ácido homogentísico urinário e, se necessário, análise molecular do gene HGD",
+      "Uma vez confirmado o diagnóstico, iniciar vigilância cardiovascular estruturada: ecocardiograma a cada 1-2 anos a partir dos 40 anos de idade",
+      "Considerar tomografia de tórax para avaliação de calcificação aórtica/coronariana conforme suspeita clínica",
+      "Encaminhar a cirurgia cardíaca quando critérios de gravidade e indicação de intervenção valvar forem atingidos, com aviso à equipe cirúrgica sobre a friabilidade tecidual esperada",
+      "Discutir com o paciente a incerteza sobre o benefício cardiovascular específico da nitisinona, evitando inflar a certeza terapêutica"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de descompensação por estenose ou regurgitação valvar grave (dispneia aguda, síncope, dor torácica, sinais de insuficiência cardíaca)",
+      "Ecocardiograma urgente para quantificar gravidade valvar e função ventricular",
+      "Manejo hemodinâmico e estabilização conforme protocolo padrão de valvopatia grave descompensada",
+      "Acionar equipe de cirurgia cardíaca/heart team quando houver indicação de intervenção valvar de urgência, sinalizando o diagnóstico de base para planejamento cirúrgico"
+    ],
+    "tags": [
+      "alcaptonuria",
+      "ocronose",
+      "valvopatia",
+      "estenose aortica",
+      "calcificacao valvar",
+      "erro inato do metabolismo",
+      "gene HGD",
+      "acido homogentisico",
+      "doenca rara"
+    ],
+    "source_refs": [
+      "Introne WJ, Perry M, Chen M. Alkaptonuria. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews. Seattle: University of Washington; 1993-2021 [updated 2021 Jun 10]. PMID: 20301627",
+      "Ather N, Roberts WC. Cardiovascular ochronosis. Cardiovasc Pathol. 2020 Sep-Oct. PMID: 32473412",
+      "Selvakumar D, Sian K, Sugito S, Singh T. Ochronosis of the aortic valve. J Thorac Dis. 2018 May. PMID: 29997987",
+      "Steger CM. Aortic valve ochronosis: a rare manifestation of alkaptonuria. BMJ Case Rep. 2011 Jul 28. PMID: 22689837",
+      "Vo T, Edwards JRM. A black heart: Aortic valve ochronosis secondary to alkaptonuria causing aortic stenosis. J Card Surg. 2021 Feb. PMID: 33386753",
+      "Putz C, Putz FJ, Keyser A, Schmid C. Black Aortic Valve: Incidental Finding of Alkaptonuria. Thorac Cardiovasc Surg Rep. 2021 Jan. PMID: 34194920",
+      "Hosseini S, Salari S, Ansari MJA, Hesami M, Banar S, Shojaei MA. Ease of sutureless aortic valve replacement in a patient with unexpected ochronosis: a case report. J Cardiothorac Surg. 2024. PMID: 38918861"
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1454/",
+      "https://pubmed.ncbi.nlm.nih.gov/32473412/",
+      "https://pubmed.ncbi.nlm.nih.gov/29997987/",
+      "https://pubmed.ncbi.nlm.nih.gov/22689837/",
+      "https://pubmed.ncbi.nlm.nih.gov/33386753/",
+      "https://pubmed.ncbi.nlm.nih.gov/34194920/",
+      "https://pubmed.ncbi.nlm.nih.gov/38918861/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "alcaptonuria-ocronose-acometimento-cardiovascular-calcificacao-e-disfuncao-valvar"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "osteogenese-imperfeita",
+    "name": "Osteogênese Imperfeita",
+    "aliases": [
+      "Doença dos ossos de vidro",
+      "Osteogenesis imperfecta",
+      "OI",
+      "Doença de Lobstein",
+      "Doença de Vrolik (forma perinatal letal)"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "Doença hereditária do colágeno tipo I (COL1A1/COL1A2 dominante; formas recessivas mais raras em CRTAP, P3H1, PPIB, SERPINH1, FKBP10, SP7, WNT1 e outros) com acometimento cardiovascular associado — dilatação de raiz aórtica, regurgitação aórtica e mitral, dissecção aórtica rara",
+    "prevalence_rank": 161,
+    "completeness": "completo",
+    "summary": "Grupo heterogêneo de doenças genéticas do colágeno tipo I, classicamente definido por fragilidade óssea e fraturas de repetição (cerca de 80-85% dos casos por variantes dominantes em COL1A1/COL1A2; prevalência global estimada em 6-7:100.000). Além do fenótipo esquelético dominante, a OI tem um espectro cardiovascular próprio, de frequência moderada (não majoritária, mas clinicamente relevante): dilatação de raiz aórtica, regurgitação aórtica e mitral (predominantemente leves a moderadas) e, mais raramente, dissecção aórtica. Difere mecanisticamente das aortopatias genéticas clássicas (Marfan, Loeys-Dietz, Ehlers-Danlos vascular) por ter o colágeno tipo I e o osso como órgão-alvo primário, não a parede arterial; não existe hoje protocolo formal de rastreio aórtico nem limiares cirúrgicos por gene equivalentes aos dessas três síndromes. A condição também cursa com disfunção hemostática associada (fragilidade capilar, disfunção plaquetária, redução de fator VIII R:Ag), relevante para o planejamento perioperatório além do já conhecido risco ortopédico.",
+    "presentation": [
+      "Fraturas de repetição com trauma mínimo, desde a infância, de gravidade variável conforme o tipo clínico (Sillence I a IV)",
+      "Escleras azuladas ou acinzentadas (mais marcantes nos tipos I e III)",
+      "Dentinogênese imperfeita (dentes acinzentados ou translúcidos, friáveis)",
+      "Perda auditiva de início tipicamente na vida adulta (cerca de 28% dos pacientes com forma COL1A1/COL1A2), condutiva, sensorioneural ou mista",
+      "Baixa estatura e deformidade óssea progressiva nos tipos mais graves (III e, quando compatível com vida, formas recessivas)",
+      "Sopro de regurgitação aórtica ou mitral em ausculta de rotina, geralmente leve e assintomático",
+      "Dilatação de raiz aórtica identificada em ecocardiograma, com maior magnitude no tipo III",
+      "Formação fácil de equimoses, relatada por até dois terços dos pacientes em série de hemostasia",
+      "Dor torácica ou dorsal aguda como manifestação rara de dissecção aórtica em paciente com OI conhecida"
+    ],
+    "differentials": [
+      "Síndrome de Marfan (FBN1) — hábito marfanoide, ectopia lentis, dilatação aórtica como fenótipo central, sem fragilidade óssea fraturária típica da OI",
+      "Síndrome de Loeys-Dietz — doença vascular mais agressiva e disseminada, hipertelorismo, úvula bífida, limiares cirúrgicos definidos por gene",
+      "Síndrome de Ehlers-Danlos vascular (COL3A1) — pele fina e translúcida, ruptura arterial/visceral espontânea, sem acometimento esquelético fraturário marcante",
+      "Síndrome de tortuosidade arterial (SLC2A10/GLUT10) — tortuosidade arterial difusa como achado distintivo",
+      "Homocistinúria — hábito marfanoide com ectopia lentis, mas tipicamente sem dilatação aórtica proeminente",
+      "Hipofosfatasia e outras displasias esqueléticas — diferencial da fragilidade óssea isolada, sem o espectro cardiovascular da OI",
+      "Abuso físico infantil — diagnóstico diferencial obrigatório diante de fraturas múltiplas em criança pequena, exigindo avaliação genética/clínica cuidadosa da OI"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico basal, com avaliação de diâmetros aórticos e função/estrutura das valvas aórtica e mitral",
+      "Sequenciamento de COL1A1/COL1A2 (forma dominante) e, quando fenótipo compatível com forma recessiva, painel gênico ampliado (CRTAP, P3H1, PPIB, SERPINH1, FKBP10, SP7, WNT1, entre outros)",
+      "Avaliação de hemostasia antes de procedimentos eletivos com risco de sangramento (contagem e função plaquetária, tempos de coagulação; considerar teste do torniquete como triagem à beira do leito)",
+      "Audiometria seriada, particularmente a partir da vida adulta",
+      "Avaliação oftalmológica das escleras e avaliação odontológica para dentinogênese imperfeita",
+      "Densitometria óssea (DXA) e avaliação ortopédica/radiológica do esqueleto",
+      "Avaliação pré-anestésica de via aérea e coluna cervical antes de procedimentos que exijam intubação ou posicionamento"
+    ],
+    "red_flags": [
+      "Dilatação de raiz aórtica progressiva em exames seriados, especialmente no tipo III",
+      "Regurgitação aórtica ou mitral de grau pelo menos moderado, ou em piora progressiva",
+      "Dor torácica ou dorsal aguda de início súbito em paciente com OI conhecida — considerar dissecção aórtica, ainda que seja manifestação rara",
+      "Equimoses fáceis ou sangramento desproporcional já relatados na história, antes de qualquer procedimento invasivo eletivo",
+      "Necessidade de cirurgia ortopédica eletiva sem avaliação cardiovascular e hemostática prévia",
+      "Fratura decorrente de manguito de pressão arterial ou torniquete durante procedimento — sinal de fragilidade óssea extrema que também deve motivar cautela hemodinâmica/vascular"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico clínico (e, sempre que possível, genético) e classificar o tipo clínico (Sillence I a IV)",
+      "Solicitar ecocardiograma transtorácico basal em todo paciente com diagnóstico de OI, independentemente de sintomas cardiovasculares",
+      "Individualizar a periodicidade de reavaliação ecocardiográfica conforme achados basais (mais frequente se houver dilatação aórtica ou regurgitação valvar documentada, ou no tipo III), reconhecendo a ausência de protocolo formal publicado para esse intervalo",
+      "Encaminhar a equipe multidisciplinar: ortopedia, genética clínica, otorrinolaringologia/audiologia, odontologia e cardiologia",
+      "Investigar hemostasia (plaquetas, tempos de coagulação) antes de qualquer procedimento cirúrgico eletivo, dada a prevalência descrita de disfunção plaquetária e capilar nessa população",
+      "Planejar avaliação cardiológica e hemostática pré-operatória de forma antecipada, já que pacientes com OI são submetidos a cirurgias ortopédicas com frequência maior que a população geral",
+      "Orientar cautela no manuseio (evitar torniquete e manguito de pressão prolongados quando possível) durante qualquer procedimento"
+    ],
+    "emergency_flow": [
+      "Dor torácica ou dorsal aguda em paciente com OI conhecida: considerar dissecção aórtica como diagnóstico diferencial, apesar de sua raridade nessa população, com avaliação de emergência e imagem conforme estabilidade clínica",
+      "Sangramento perioperatório desproporcional ao procedimento: investigar disfunção hemostática associada à OI (fragilidade capilar, disfunção plaquetária, redução de fator VIII R:Ag) além das causas cirúrgicas habituais",
+      "Nova regurgitação valvar com instabilidade hemodinâmica: avaliação cardiológica/cirúrgica de urgência",
+      "Fratura durante manuseio perioperatório (posicionamento, manguito de pressão, torniquete): documentar e ajustar protocolo de manuseio para procedimentos futuros",
+      "Planejamento anestésico de emergência: considerar fragilidade da coluna cervical e via aérea potencialmente difícil, e obter avaliação hemostática rápida sempre que o tempo clínico permitir"
+    ],
+    "tags": [
+      "osteogênese imperfeita",
+      "COL1A1",
+      "COL1A2",
+      "doença dos ossos de vidro",
+      "dilatação de raiz aórtica",
+      "regurgitação aórtica",
+      "regurgitação mitral",
+      "dissecção aórtica",
+      "colágeno tipo I",
+      "risco perioperatório",
+      "disfunção hemostática",
+      "anestesia regional",
+      "fragilidade vascular",
+      "doença do tecido conjuntivo",
+      "aortopatia",
+      "cardiogenética"
+    ],
+    "source_refs": [
+      "Rodriguez Celin M, Steiner RD, Basel D. COL1A1- and COL1A2-Related Osteogenesis Imperfecta. GeneReviews. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301472.",
+      "Radunovic Z, Wekre LL, Diep LM, Steine K. Cardiovascular abnormalities in adults with osteogenesis imperfecta. Am Heart J. 2011;161(3):523-529. PMID: 21392607.",
+      "Ashournia H, Johansen FT, Folkestad L, Diederichsen ACP, Brixen K. Heart disease in patients with osteogenesis imperfecta - a systematic review. Int J Cardiol. 2015;196:149-157. PMID: 26100571.",
+      "Radunovic Z, Steine K. Prevalence of Cardiovascular Disease and Cardiac Symptoms: Left and Right Ventricular Function in Adults With Osteogenesis Imperfecta. Can J Cardiol. 2015;31(11):1386-1392. PMID: 26416541.",
+      "Balasubramanian M, Verschueren A, Kleevens S, Luyckx I, Perik M, Schirwani S, Mortier G, Morisaki H, Rodrigus I, Van Laer L, Verstraeten A, Loeys B. Aortic aneurysm/dissection and osteogenesis imperfecta: Four new families and review of the literature. Bone. 2019;121:191-195. PMID: 30684648.",
+      "Beethe AR, Bohannon NA, Ogun OA, Wallace MJ, Esposito PW, Lockhart TJ, Hamlin RJ, Williams JR, Goeller JK. Neuraxial and regional anesthesia in surgical patients with osteogenesis imperfecta: a narrative review of literature. Reg Anesth Pain Med. 2020;45(12):993-999. PMID: 33037052.",
+      "Evensen SA, Myhre L, Stormorken H. Haemostatic studies in osteogenesis imperfecta. Scand J Haematol. 1984;33(2):177-179. PMID: 6474094.",
+      "Huang J, Dinh M, Kuchle N, Zhou J. Anesthetic management for combined mitral valve replacement and aortic valve repair in a patient with osteogenesis imperfecta. Ann Card Anaesth. 2011;14(2):115-118. PMID: 21636932.",
+      "Sullivan BT, Margalit A, Garg VS, Njoku DB, Sponseller PD. Incidence of Fractures From Perioperative Blood Pressure Cuff Use, Tourniquet Use, and Patient Positioning in Osteogenesis Imperfecta. J Pediatr Orthop. 2019;39(1):e68-e70. PMID: 29189536."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1295/",
+      "https://pubmed.ncbi.nlm.nih.gov/20301472/",
+      "https://pubmed.ncbi.nlm.nih.gov/21392607/",
+      "https://pubmed.ncbi.nlm.nih.gov/26100571/",
+      "https://pubmed.ncbi.nlm.nih.gov/26416541/",
+      "https://pubmed.ncbi.nlm.nih.gov/30684648/",
+      "https://pubmed.ncbi.nlm.nih.gov/33037052/",
+      "https://pubmed.ncbi.nlm.nih.gov/6474094/",
+      "https://pubmed.ncbi.nlm.nih.gov/21636932/",
+      "https://pubmed.ncbi.nlm.nih.gov/29189536/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "pseudoxantoma-elastico",
+    "name": "Pseudoxantoma Elástico",
+    "aliases": [
+      "PXE",
+      "Pseudoxanthoma elasticum",
+      "Síndrome de Grönblad-Strandberg",
+      "Doença de ABCC6",
+      "Elastorrhexis sistêmica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "Doença genética rara (autossômica recessiva, gene ABCC6) de calcificação ectópica progressiva de fibras elásticas em pele, olhos e sistema cardiovascular",
+    "prevalence_rank": 162,
+    "completeness": "completo",
+    "summary": "Doença rara autossômica recessiva por mutação bialélica em ABCC6, que causa calcificação ectópica de fibras elásticas em pele (pápulas amarelo-acinzentadas em áreas flexurais), retina (estrias angioides, risco de neovascularização coroidal) e artérias de médio calibre (mediocalcinose). O acometimento vascular inclui doença arterial periférica precoce com claudicação e pulsos diminuídos em pacientes jovens, doença arterial coronariana prematura com risco de infarto do miocárdio mesmo sem fatores de risco cardiovascular tradicionais, hipertensão renovascular por calcificação de artérias renais, e risco de sangramento gastrointestinal por fragilidade de vasos da mucosa. O diagnóstico costuma ser estabelecido pela dermatologia e/ou oftalmologia antes de qualquer avaliação cardiovascular, o que torna o rastreio cardiovascular estruturado pós-diagnóstico uma etapa prática essencial, ainda que sem protocolo formal validado por ensaio clínico.",
+    "presentation": [
+      "Lesões cutâneas papulares amarelo-acinzentadas (ou enegrecidas em pele escura) em pescoço, axilas, fossas antecubitais, virilha e fossas poplíteas, evoluindo para pele frouxa e redundante",
+      "Estrias angioides e mosqueado em 'pele de laranja' (peau d'orange) na retina, com risco de neovascularização coroidal e perda visual",
+      "Claudicação intermitente e pulsos diminuídos ou assimétricos em membros, frequentemente já na segunda a terceira décadas de vida",
+      "Doença arterial coronariana prematura, angina e risco de infarto do miocárdio mesmo sem fatores de risco cardiovascular tradicionais",
+      "Hipertensão arterial por calcificação de artérias renais (hipertensão renovascular)",
+      "Sangramento gastrointestinal, tipicamente alto (gástrico), por fragilidade e vasoconstrição defeituosa de vasos da mucosa",
+      "Eventos isquêmicos cerebrais menores por acometimento de artéria carótida interna intracraniana"
+    ],
+    "differentials": [
+      "Calcificação arterial generalizada da infância (GACI, mutações em ENPP1) — fenótipo muito mais grave e de início na lactência",
+      "Calcificação medial de Mönckeberg associada a diabetes, doença renal crônica e envelhecimento — sem estigmas cutâneos ou oculares",
+      "Calcifilaxia — tipicamente em doença renal crônica dialítica, associada a uso de varfarina, com necrose cutânea dolorosa aguda",
+      "Displasia fibromuscular — mulher jovem, mas por proliferação fibromuscular não calcificante da parede arterial (padrão 'colar de contas')",
+      "Doença arterial periférica aterosclerótica clássica — associada a fatores de risco tradicionais, padrão predominantemente intimal",
+      "Homocistinúria — doença vascular em jovens por trombose e lesão endotelial, não por calcificação; fenótipo marfanoide e ectopia lentis",
+      "Pseudo-PXE induzido por D-penicilamina — lesão cutânea clinicamente semelhante, mas sem mineralização de fibras elásticas na histologia",
+      "Cútis laxa — pele frouxa distribuída por todo o corpo, sem as pápulas discretas características em áreas flexurais"
+    ],
+    "tests": [
+      "Índice tornozelo-braço (ITB) bilateral",
+      "Exame de pulsos em quatro membros",
+      "Biópsia de pele com coloração de von Kossa para fibras elásticas calcificadas",
+      "Exame oftalmológico com retinografia, tomografia de coerência óptica (OCT) e grade de Amsler",
+      "Teste genético molecular para variantes bialélicas em ABCC6",
+      "Perfil lipídico e avaliação dos fatores de risco cardiovascular tradicionais",
+      "Duplex ou angiografia de artérias renais em caso de hipertensão de difícil controle ou assimetria pressórica entre membros",
+      "Ecocardiograma",
+      "Avaliação gastroenterológica (incluindo endoscopia digestiva alta) se história de sangramento digestivo"
+    ],
+    "red_flags": [
+      "Metamorfopsia ou queda aguda de acuidade visual (sugere neovascularização coroidal ativa)",
+      "Dor torácica ou outros sintomas sugestivos de síndrome coronariana aguda em paciente jovem com PXE",
+      "Sangramento digestivo alto, especialmente maciço, recorrente ou de origem difícil de localizar",
+      "Dor, palidez, parestesia ou perda súbita de pulso em membro (isquemia aguda de membro)",
+      "Hipertensão resistente, de difícil controle ou de início abrupto",
+      "Déficit neurológico focal agudo"
+    ],
+    "ambulatory_flow": [
+      "Paciente encaminhado ao cardiologista após diagnóstico dermatológico e/ou oftalmológico de pseudoxantoma elástico (achados cutâneos característicos e/ou estrias angioides confirmadas)",
+      "Avaliação cardiovascular basal: pulsos em quatro membros, ITB bilateral, aferição de pressão arterial e revisão de sintomas de claudicação, angina, dispneia e sintomas neurológicos",
+      "Perfil lipídico e rastreio dos fatores de risco cardiovascular tradicionais, tratados de forma independente do diagnóstico de PXE",
+      "Se ITB anormal, claudicação ou pulsos assimétricos: encaminhamento à cirurgia vascular para avaliação de doença arterial periférica",
+      "Se hipertensão de difícil controle, assimetria pressórica entre membros ou início abrupto: duplex ou angiografia de artérias renais para rastreio de hipertensão renovascular",
+      "Revisão da história gastrointestinal para sangramento oculto ou manifesto, com orientação explícita de evitar aspirina e anti-inflamatórios não esteroidais",
+      "Orientação de cessação de tabagismo, pelo efeito vasoconstritor que agrava o quadro vascular já comprometido",
+      "Encaminhamento para aconselhamento genético e rastreio familiar (herança autossômica recessiva)",
+      "Manutenção do seguimento oftalmológico anual (ou mais frequente se neovascularização coroidal ativa), com atenção a sintomas visuais novos",
+      "Periodicidade de reavaliação cardiovascular individualizada pela equipe multidisciplinar, na ausência de protocolo de rastreio validado por ensaio clínico"
+    ],
+    "emergency_flow": [
+      "Dor torácica aguda em paciente com PXE: investigar síndrome coronariana aguda com protocolo-padrão (ECG, troponina seriada), sem assumir baixo risco pela idade jovem",
+      "Dor, palidez, parestesia ou ausência súbita de pulso em membro: investigar isquemia aguda de membro e acionar cirurgia vascular imediatamente",
+      "Sangramento digestivo alto agudo: endoscopia digestiva alta precoce, considerando que a origem pode ser difusa e de difícil localização, com possível necessidade de intervenção cirúrgica; evitar aspirina/AINEs em qualquer manejo concomitante",
+      "Déficit neurológico focal agudo: protocolo padrão de AVC, com atenção ao possível acometimento de artéria carótida interna intracraniana",
+      "Crise hipertensiva: manejo padrão de emergência hipertensiva, com investigação subsequente de componente renovascular se a pressão permanecer de difícil controle"
+    ],
+    "tags": [
+      "doença rara",
+      "genética",
+      "ABCC6",
+      "calcificação vascular",
+      "mediocalcinose",
+      "doença arterial periférica",
+      "doença arterial coronariana prematura",
+      "hipertensão renovascular",
+      "sangramento digestivo",
+      "dermatologia",
+      "oftalmologia",
+      "estrias angioides"
+    ],
+    "source_refs": [
+      "Terry SF, Uitto J. Pseudoxanthoma Elasticum. GeneReviews. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301292.",
+      "Germain DP. Pseudoxanthoma elasticum. Orphanet J Rare Dis. 2017;12(1):85. DOI: 10.1186/s13023-017-0639-8. PMID: 28486967.",
+      "Campens L, Vanakker OM, Trachet B, et al. Characterization of cardiovascular involvement in pseudoxanthoma elasticum families. Arterioscler Thromb Vasc Biol. 2013;33(11):2646-2652. DOI: 10.1161/ATVBAHA.113.301901. PMID: 23968982.",
+      "Leftheriotis G, Omarjee L, Le Saux O, et al. The contribution of arterial calcification to peripheral arterial disease in pseudoxanthoma elasticum. PLoS One. 2014;9(5):e96003. DOI: 10.1371/journal.pone.0096003. PMID: 24800819.",
+      "Pingel S, Pausewang KS, Passon K, et al. Increased vascular occlusion in patients with pseudoxanthoma elasticum. Vasa. 2017;46(1):47-52. DOI: 10.1024/0301-1526/a000583. PMID: 27927085.",
+      "Kranenburg G, de Jong PA, Bartstra JW, et al. Arterial stiffening and thickening in patients with pseudoxanthoma elasticum. Atherosclerosis. 2018;270:160-165. DOI: 10.1016/j.atherosclerosis.2018.02.006. PMID: 29432933.",
+      "Lefthériotis G, Abraham P, Le Corre Y, et al. The vascular phenotype in Pseudoxanthoma elasticum and related disorders. Front Genet. 2013;4:4. DOI: 10.3389/fgene.2013.00004. PMID: 23408347.",
+      "D'Marco L, Bellasi A, et al. Pseudoxanthoma Elasticum: An Interesting Model to Evaluate Chronic Kidney Disease-Like Vascular Damage without Renal Disease. Kidney Dis (Basel). 2020;6(2):92-97. DOI: 10.1159/000505026. PMID: 32309291.",
+      "Cotard S, et al. Doença arterial periférica em pacientes com menos de 50 anos: qual etiologia? Ann Cardiol Angeiol (Paris). 2016;65(4):275-285. DOI: 10.1016/j.ancard.2016.04.027. PMID: 27319272.",
+      "Apigian AK, Landry GJ. Basic data underlying decision making in nonatherosclerotic causes of intermittent claudication. Ann Vasc Surg. 2015;29(1):138-153. DOI: 10.1016/j.avsg.2014.09.013. PMID: 25277047."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1113/",
+      "https://pubmed.ncbi.nlm.nih.gov/28486967/",
+      "https://pubmed.ncbi.nlm.nih.gov/23968982/",
+      "https://pubmed.ncbi.nlm.nih.gov/24800819/",
+      "https://pubmed.ncbi.nlm.nih.gov/27927085/",
+      "https://pubmed.ncbi.nlm.nih.gov/29432933/",
+      "https://pubmed.ncbi.nlm.nih.gov/23408347/",
+      "https://pubmed.ncbi.nlm.nih.gov/32309291/",
+      "https://pubmed.ncbi.nlm.nih.gov/27319272/",
+      "https://pubmed.ncbi.nlm.nih.gov/25277047/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado"
+    ],
+    "patient_material_slug": null
   }
 ]
