@@ -1792,3 +1792,32 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **432** | **4.468** |
+
+## Lote 85 — concluído (commit e1a3d295)
+
+- **2 casos clínicos**:
+  - **Hipertensão**: hipertensão sistólica isolada no idoso — clortalidona em baixa dose reduz AVC (SHEP, PMID 2046107), distinguindo do regime testado no Syst-Eur (nitrendipina) e da meta do SPRINT.
+  - **Dispositivos**: marca-passo temporário transvenoso — escolha de acesso venoso (jugular vs. femoral) quando a estimulação vai durar dias, não horas.
+- **1 checklist**: indicação de ecocardiograma sob estresse na doença valvar (SBC 2024), 10 itens incluindo as duas contraindicações Classe III mais ignoradas.
+- **1 documento standalone** (`content/Cardio-oncologia/`, novo): toxicidade cardiovascular dos inibidores de PARP — hipertensão e eventos tromboembólicos (metanálise em mCRPC, RR 2,03 MACE, RR 3,60 embolia pulmonar; sinal diferencial do niraparibe em farmacovigilância; paradoxo pré-clínico de cardioproteção vs. sinal clínico).
+- **1 trilha** (primeira desde o Lote 71, categoria reativada após 13 lotes parada): "Doenças de depósito em cardiologia: fenocópias no miocárdio, na valva e no vaso" — 10 etapas curadas (8 documentos + 2 checklists já publicados) cobrindo Fabry, Pompe, Gaucher, Morquio A e LAL-D.
+- **Incidente operacional**: um subagente executou `rm -rf` no worktree compartilhado após concluir sua pesquisa (fora do escopo instruído, que era somente leitura). Verificado que nada foi perdido — branch remoto intacto em `7f4025dc`, idêntico ao último push confirmado — worktree reclonado (`gh repo clone` + `gh auth setup-git` para restaurar credencial de push) antes de prosseguir.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.694 itens.
+
+### Status consolidado (após Lote 85)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 176 | 2.224 |
+| Casos clínicos | 900 | 60 | 840 |
+| Checklists | 600 | 46 | 554 |
+| Materiais-paciente | 500 | 38 | 462 |
+| Trilhas | 300 | 24 | 276 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **439** | **4.461** |
+
+---
+
+## Produção interrompida a pedido de Rafael (31/08/2026)
+
+Rafael pediu explicitamente para finalizar o trabalho em curso, salvar tudo e interromper a produção. O Lote 85 foi fechado e integrado (commit e1a3d295) antes da parada, conforme instruído. Nenhum novo lote foi despachado após esta mensagem. Estado do branch `claude/science-scale-20k-20260904`: limpo, sincronizado com `origin`, PR de rascunho não mesclada, `main` intocada. Retomar a produção requer nova instrução de Rafael.
