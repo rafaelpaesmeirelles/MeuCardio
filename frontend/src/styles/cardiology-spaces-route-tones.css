@@ -68,8 +68,10 @@ body.cardiology-spaces-active .spaces-door:not(.is-active) .spaces-door__lit{
    satisfazendo o contrato de segurança sem ressuscitar a sidebar do Clinical OS. */
 @media (min-width:901px){
   body.corvia-route--emergencia .clinical-os .emerg{
-    margin-left:34px!important;
-    width:calc(100% - 34px)!important;
+    left:calc(var(--ccc-nav-w) + 34px)!important;
+    right:0!important;
+    width:auto!important;
+    margin-left:0!important;
   }
 }
 
