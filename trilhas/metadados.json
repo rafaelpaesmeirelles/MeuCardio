@@ -24241,5 +24241,433 @@
         "por_que": "Fecha a trilha com a causa reversível mais prevalente do grupo na prática clínica real, e com a mensagem central que amarra tudo: a reversibilidade com abstinência é genuína, mas a distinção prognóstica em relação à cardiomiopatia dilatada idiopática só se sustenta quando a causa é ativamente procurada — exatamente o hábito que esta trilha inteira treinou."
       }
     ]
+  },
+  {
+    "slug": "trilha-febre-reumatica-diagnostico-diferencial-artrite-e-mimetismos-antes-de-jones",
+    "titulo": "Febre reumática aguda: o diagnóstico diferencial da criança com febre e poliartrite, antes de fechar Jones",
+    "tema": "Febre reumática",
+    "objetivo": "Sair sabendo confirmar a infecção estreptocócica precedente com o método correto, aplicar os critérios de Jones revisados sem os erros de contagem mais comuns, descartar os dois diagnósticos diferenciais mais perigosos da criança febril com poliartrite (artrite reativa pós-estreptocócica e doença de Kawasaki), e escolher o anti-inflamatório correto depois de confirmada a artrite da febre reumática.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "diagnostico-laboratorial-da-faringite-estreptococica-teste-rapido-de-antigeno-e-cultura-idsa-2012",
+        "por_que": "Antes de contar qualquer critério de Jones é preciso confirmar a infecção estreptocócica precedente com o método correto — RADT confirmado por cultura em criança, conforme IDSA 2012. Este é o primeiro ponto em que o diagnóstico diferencial começa a errar quando pulado: sem essa base, a suspeita de febre reumática já nasce mal fundamentada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "checklist",
+        "item_slug": "diagnostico-laboratorial-de-faringite-estreptococica-antes-de-tratar",
+        "por_que": "Converte a diretriz em passo a passo operacional: fixa que ASLO não serve para o diagnóstico agudo da faringite (só como evidência de infecção prévia dentro de Jones, mais adiante) e reforça a janela de 9 dias em que o antibiótico ainda previne a febre reumática — o elo direto entre este exame e a doença que a trilha investiga."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-febre-reumatica-aguda-criterios-de-jones-2015",
+        "por_que": "Com a infecção estreptocócica confirmada, aplicam-se agora os critérios de Jones revisados (AHA 2015), que já dependem da categoria de risco populacional definida antes de contar qualquer manifestação maior ou menor — o núcleo da suspeita diagnóstica que os próximos passos vão pôr à prova contra dois diferenciais."
+      },
+      {
+        "ordem": 4,
+        "item_type": "checklist",
+        "item_slug": "aplicacao-dos-criterios-de-jones-2015-para-diagnostico-de-febre-reumatica-aguda",
+        "por_que": "Detalha as regras de contagem que mais geram falso positivo — poliartralgia só conta como maior em risco moderado/alto, e a mesma manifestação articular não pode ser contada duas vezes em categorias diferentes. É o ponto exato em que a suspeita vira diagnóstico errado se as regras não forem seguidas à risca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "artrite-reativa-pos-estreptococica-psra-diagnostico-diferencial-com-febre-reumatica",
+        "por_que": "A artrite reativa pós-estreptocócica é o diferencial mais próximo: mesmo antecedente infeccioso, mesma articulação afetada, mas sem cardite e com padrão de artrite diferente. É o primeiro dos dois diagnósticos que imitam Jones e que esta trilha precisa descartar antes de tratar a criança como febre reumática."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-artrite-febre-reumatica-diagnostico-diferencial-psra-tratamento",
+        "por_que": "Fluxograma operacional que separa a artrite migratória de grandes articulações da febre reumática da artrite persistente e não migratória típica da PSRA, e já direciona ao tratamento anti-inflamatório correspondente conforme a hipótese que se confirma."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "tratamento-da-artrite-na-febre-reumatica-aguda-naproxeno-como-alternativa-ao-aas",
+        "por_que": "Uma vez confirmada a artrite da febre reumática (e não PSRA), a escolha do anti-inflamatório deixa de ser trivial: o naproxeno surge como alternativa ao AAS clássico, com perfil de segurança mais favorável em criança, sem perder o efeito terapêutico que também funciona como confirmação diagnóstica indireta."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "hashkes-naproxeno-vs-aas-artrite-febre-reumatica",
+        "por_que": "É o ensaio que sustenta a recomendação da etapa anterior — mostra equivalência de resposta clínica entre naproxeno e AAS na artrite da febre reumática aguda, a evidência primária por trás da escolha do anti-inflamatório."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "febre-reumatica-aguda-versus-doenca-de-kawasaki-diagnostico-diferencial",
+        "por_que": "O segundo e mais perigoso diferencial: na criança pequena com febre prolongada e alteração articular/mucocutânea, Kawasaki tratado com IVIG dentro da janela de 10 dias evita aneurisma coronariano, enquanto confundi-lo com febre reumática atrasa a terapia certa para um órgão-alvo completamente diferente — coronária, não valva."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "diferenciacao-entre-febre-reumatica-aguda-e-doenca-de-kawasaki-na-crianca-febril",
+        "por_que": "Operacionaliza os pontos de corte que mais confundem entre as duas doenças — idade, duração e resposta da febre, padrão da artrite — e fixa a regra central de não postergar a IVIG à espera de confirmação estreptocócica quando Kawasaki é a hipótese principal."
+      },
+      {
+        "ordem": 11,
+        "item_type": "estudo",
+        "item_slug": "aha-2017-diagnostico-tratamento-e-manejo-de-longo-prazo-da-doenca-de-kawasaki",
+        "por_que": "Fonte primária dos cinco critérios clínicos de Kawasaki usados na etapa anterior — fecha o lastro de evidência do diferencial mais perigoso da trilha antes de a sequência retornar à síntese do manejo agudo da febre reumática já confirmada."
+      },
+      {
+        "ordem": 12,
+        "item_type": "checklist",
+        "item_slug": "febre-reumatica-aguda-na-crianca-criterios-diagnosticos-por-risco-e-tratamento",
+        "por_que": "Depois de percorrer confirmação laboratorial, critérios de Jones e os dois diagnósticos diferenciais, esta etapa final reúne tudo num único checklist de manejo agudo — inclusive a regra de não iniciar anti-inflamatório antes de fechar o diagnóstico, que só faz sentido plenamente depois de entender por que PSRA e Kawasaki precisam ser descartados primeiro."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-pericardio-doenca-sistemica-extracardiaca-uremia-infeccao-vasculite",
+    "titulo": "Pericárdio como espelho da doença sistêmica: urêmica, purulenta, amebiana e vasculítica — quando a causa não está no coração",
+    "tema": "Pericárdio",
+    "objetivo": "Sair sabendo reconhecer e conduzir quatro causas de doença pericárdica em que a correção está fora do pericárdio — insuficiência renal/diálise inadequada, infecção bacteriana sistêmica, abscesso hepático amebiano roto e vasculite ANCA-associada — e por que tratar cada uma exige agir sobre o órgão ou sistema de origem, não apenas sobre o saco pericárdico.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-derrame-pericardico-diagnostico-diferencial-e-drenagem",
+        "por_que": "Serve de moldura de entrada: uma vez identificado um derrame pericárdico sem tamponamento agudo, a árvore de decisão obriga a perguntar pela etiologia antes de decidir drenar — e é exatamente essa pergunta pela causa de base, não pelo tamanho do derrame, que organiza toda esta trilha. Nenhuma das 16 trilhas de Pericárdio já publicadas usa este fluxograma, o que o torna um ponto de partida limpo e ainda não explorado."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "pericardite-uremica-e-associada-a-dialise-diagnostico-e-manejo",
+        "por_que": "Primeira causa sistêmica: a insuficiência renal. O documento distingue a forma urêmica clássica (dentro das primeiras 8 semanas de diálise, por toxinas urêmicas não dialisadas) da forma associada à diálise (após esse período, por diálise inadequada) — uma distinção que muda a conduta, já que o tratamento de ambas está na função renal, não em anti-inflamatório."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "esc2015-dialise-na-pericardite-uremica",
+        "por_que": "Fixa em uma recomendação ESC 2015 de Classe IIa, Nível C, o núcleo conceitual desta etapa da trilha: na pericardite urêmica a diálise deve ser considerada como o próprio tratamento — não um anti-inflamatório convencional, que trata sintoma sem corrigir a causa renal."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "esc2015-intensificar-a-dialise-quando-o-paciente-ja-dialisado-desenvolve-pericardite",
+        "por_que": "Complementa a etapa anterior com o cenário inverso e mais frequente na prática: o paciente já dialisado que desenvolve pericardite tem, como primeira medida recomendada, a intensificação da diálise — reforçando que mesmo dentro da causa renal há duas situações clínicas distintas com a mesma lógica terapêutica de fundo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "diagnostico-e-manejo-da-pericardite-uremica-e-associada-a-dialise",
+        "por_que": "Converte as duas evidências anteriores em um roteiro operacional de beira-leito: diferenciar as duas formas pelo tempo de diálise, reconhecer o ECG atipicamente pouco alterado (achado característico desta etiologia) e decidir entre intensificar diálise, anti-inflamatório e drenagem."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "pericardite-associada-a-dialise-ecg-atipico-diagnostico-e-conduta",
+        "por_que": "Testa a etapa anterior em um caso concreto — dor torácica em paciente há 4 meses em hemodiálise, com o ECG normal (não o padrão difuso da pericardite viral) levando ao erro comum de afastar o diagnóstico por reflexo eletrocardiográfico, exatamente a armadilha que o checklist previne."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "pericardite-purulenta-bacteriana-diagnostico-e-tratamento",
+        "por_que": "Segunda causa sistêmica: a infecção bacteriana disseminada (via hematogênica, contígua torácica ou pós-cirúrgica), não a inflamação viral idiopática que domina as outras trilhas do tema. Forma rara mas de mortalidade muito mais alta, em que antibiótico e drenagem mecânica são obrigatórios desde o início — nunca um anti-inflamatório isolado."
+      },
+      {
+        "ordem": 8,
+        "item_type": "evidencia",
+        "item_slug": "esc2015-antibiotico-intravenoso-na-pericardite-purulenta",
+        "por_que": "Fixa a primeira metade do tratamento obrigatório em uma recomendação de Classe I, Nível C: antibiótico por via intravenosa, tratando a causa infecciosa sistêmica de origem — não o anti-inflamatório de primeira linha usado na pericardite idiopática das outras trilhas."
+      },
+      {
+        "ordem": 9,
+        "item_type": "evidencia",
+        "item_slug": "esc2015-drenagem-pericardica-efetiva-na-pericardite-purulenta",
+        "por_que": "Fixa a segunda metade do tratamento obrigatório, também Classe I: drenagem pericárdica efetiva — o adjetivo é parte da própria recomendação, já que uma punção que não drena de fato o material purulento não cumpre o objetivo. Antibiótico sem drenagem, ou drenagem sem antibiótico, não é tratamento completo nesta etiologia."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "drenagem-pericardica-na-pericardite-purulenta-bacteriana",
+        "por_que": "Opera as duas evidências anteriores como decisão prática: confirma que a combinação antibiótico + drenagem mecânica está sendo tratada como obrigatória, não como opção, e orienta a via de drenagem diante da suspeita ou confirmação de pericardite purulenta."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "abscesso-hepatico-amebiano-com-ruptura-pericardica",
+        "por_que": "Terceira causa sistêmica, a mais extrema do espectro: uma parasitose intestinal (Entamoeba histolytica) que forma abscesso no lobo hepático esquerdo e rompe por contiguidade direta — não por via hematogênica — para o saco pericárdico, podendo causar tamponamento fulminante em horas. Ilustra o limite do eixo desta trilha: aqui a origem sistêmica nem é uma doença inflamatória ou infecciosa primariamente cardiovascular, mas uma infecção abdominal que invade o pericárdio por proximidade anatômica."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular",
+        "por_que": "Quarta causa sistêmica: uma vasculite ANCA-associada de vias aéreas, pulmão e rim em que a pericardite é a manifestação cardíaca mais comum — presente em até 26% dos pacientes por ressonância cardíaca, muitas vezes subclínica. Fecha o espectro etiológico da trilha com uma causa autoimune sistêmica cujo tratamento é a imunossupressão da doença de base, não anti-inflamatório pericárdico isolado."
+      },
+      {
+        "ordem": 13,
+        "item_type": "caso_clinico",
+        "item_slug": "granulomatose-poliangiite-pericardite-coronariite-anca-pr3",
+        "por_que": "Aplica a etapa anterior a um caso concreto de GPA com pericardite e coronariíte ANCA-PR3, mostrando na prática como o acometimento cardiovascular da vasculite pode se apresentar simultaneamente em duas estruturas — pericárdio e coronárias — e por que a resposta correta é escalonar a imunossupressão sistêmica, não isolar o problema como doença cardíaca primária."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "fluxograma-tamponamento-cardiaco",
+        "por_que": "Fecha a trilha no ponto de convergência clínica: as quatro causas sistêmicas apresentadas — urêmica, purulenta, amebiana e vasculítica — podem todas evoluir para tamponamento cardíaco, e o reconhecimento e a resposta de emergência a esse desfecho comum são independentes da etiologia de base, ainda que o tratamento definitivo continue dependendo de corrigir a causa sistêmica identificada nas etapas anteriores."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cafeina-bebidas-energeticas-e-suplementos-risco-cardiovascular-no-atleta",
+    "titulo": "Cafeína, Bebidas Energéticas e Suplementos no Atleta: o Risco Cardiovascular que a Anamnese Não Costuma Perguntar",
+    "tema": "Cardiologia do Esporte e do Exercício",
+    "objetivo": "Sair sabendo diferenciar, com evidência de qualidade, o que café, bebidas energéticas e suplementos de venda livre realmente fazem ao coração do atleta e do praticante de exercício — e saber perguntar por esse uso na anamnese, reconhecer o sinal elétrico que exige atenção real e escolher terapia cardiovascular compatível tanto com a farmacocinética do paciente quanto com as regras antidoping do esporte.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cafeina-e-arritmia-o-que-o-ensaio-crave-e-a-metanalise-mostram",
+        "por_que": "Ponto de entrada pela pergunta mais comum e mais mal respondida na prática — 'posso tomar café?' — respondida aqui com o ensaio randomizado CRAVE e uma metanálise de coorte, não com crença. Estabelece a linha de base necessária para o resto da trilha: consumo agudo de café não aumenta extrassístole atrial nem risco de FA incidente, mas aumenta extrassístole ventricular de forma significativa, um sinal que a trilha vai retomar em doses mais altas de estimulante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "caso_clinico",
+        "item_slug": "consumo-de-cafe-e-arritmia-o-que-o-ensaio-crave-realmente-mostrou",
+        "por_que": "Aplica imediatamente a evidência da etapa 1 a um paciente real que atribui palpitação ao café — o exercício de traduzir 'o ensaio não mostrou diferença em extrassístole atrial' em conduta de consultório, incluindo a armadilha de restringir café por medo de FA sem base no próprio estudo que o paciente ouviu falar."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "bebidas-energeticas-cafeina-e-taurina-em-alta-dose-e-arritmia",
+        "por_que": "Escala a exposição: energético industrializado não é 'café mais forte' — é cafeína em dose próxima do teto diário combinada a taurina e glucuronolactona, uma combinação farmacologicamente distinta que dois ensaios randomizados associam a prolongamento de QTc além do que a cafeína isolada explica. Essencial para o atleta jovem que consome antes do treino, questão que a etapa 1 (café) não cobre."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "sessa-2026-bebidas-energeticas-smart-drugs-e-morte-subita-cardiaca",
+        "por_que": "Amplia o espectro da etapa 3 do efeito eletrocardiográfico mensurável em voluntário saudável para o desfecho catastrófico: revisão mecanística, clínica e forense ligando bebidas energéticas e 'smart drugs' a morte súbita cardíaca, situando o risco em quem já tem substrato arritmogênico não diagnosticado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "morte-subita-atleta-jovem-bebida-energetica-autopsia-molecular",
+        "por_que": "Ancora o risco abstrato da etapa 4 num caso real de atleta jovem, incluindo o papel da autópsia molecular quando a causa é canalopatia hereditária não identificada em vida — fecha o arco 'estimulante comum, mas nem sempre inócuo' antes de a trilha mudar de mecanismo (de elétrico para farmacocinético)."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares",
+        "por_que": "Muda o eixo da trilha: não é mais o estimulante causando arritmia por efeito elétrico direto, é o suplemento 'natural' (erva-de-são-joão, alho, ginkgo biloba) alterando silenciosamente o nível sérico de digoxina, estatina, verapamil e varfarina por indução enzimática — risco especialmente relevante no atleta cardiopata que treina, é anticoagulado ou usa estatina e não relata suplemento por achar que não é 'remédio'."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "Ancora o mecanismo farmacocinético da etapa 6 num fármaco concreto de janela terapêutica estreita — a erva-de-são-joão aumenta a depuração da varfarina em ~39%, achado que só tem peso clínico se o leitor souber o que essa queda de INR significa na prática do paciente anticoagulado que quer manter atividade física ou esporte de contato."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares-na-anamnese",
+        "por_que": "Converte as etapas 6-7 em ferramenta de consultório: a pergunta certa não é 'que remédios você toma' e sim 'toma algum chá, cápsula ou suplemento' — o checklist operacionaliza essa investigação ativa antes de iniciar ou ajustar fármaco cardiovascular no paciente que treina."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-no-atleta-diagnostico-manejo-e-elegibilidade-esportiva",
+        "por_que": "Introduz a última camada do problema: a escolha do próprio fármaco cardiovascular pode colidir com a regra do esporte, não só com a fisiologia do paciente — diuréticos tiazídicos (agentes mascarantes) e betabloqueadores (banidos em esportes de precisão) são exemplos de classe anti-hipertensiva de primeira linha que pode desqualificar o atleta, tensão que as etapas anteriores (foco em risco biológico) não abordam."
+      },
+      {
+        "ordem": 10,
+        "item_type": "caso_clinico",
+        "item_slug": "hipertensao-atleta-tiro-esportivo-escolha-anti-hipertensivo",
+        "por_que": "Fecha a trilha aplicando a tensão da etapa 9 a um caso concreto — atirador esportivo hipertenso — que exige escolher anti-hipertensivo eficaz sem violar a lista de substâncias proibidas da WADA, síntese prática de todo o percurso: da cafeína do dia a dia ao fármaco de prescrição, tudo que o atleta ingere ou toma tem uma pergunta cardiovascular específica que a anamnese genérica não capta."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-gravidez-arritmias-materno-fetal-do-ritmo-lento-a-canalopatia",
+    "titulo": "Gravidez: arritmias materno-fetais, do ritmo lento à canalopatia hereditária",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo reconhecer e conduzir o espectro completo de arritmia na gestante e puérpera — bradicardia/BAV de alto grau, fibrilação atrial nova versus crônica, taquiarritmia instável, arritmia supraventricular associada à pré-eclâmpsia/HELLP, as canalopatias hereditárias (QT longo e CPVT) cujo risco se concentra no pós-parto, e a taquiarritmia fetal tratada por via transplacentária — situando cada apresentação no momento certo do pré-natal, parto e puerpério.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "arritmias-maternas-desfechos-cardiacos-perinatais-epic-cosmos-2026",
+        "por_que": "Abre a trilha estabelecendo por que arritmia na gestação não é só um sintoma incômodo: a coorte Epic Cosmos de 2026 mostra que FA/flutter e TSV se associam a odds muito maiores de AVC, insuficiência cardíaca, tromboembolismo, parto prematuro e cesariana em relação a gestantes sem arritmia. Essa moldura epidemiológica justifica por que cada apresentação específica que vem a seguir merece protocolo próprio, e não conduta genérica extrapolada da não gestante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "bradicardia-sintomatica-e-bloqueio-av-de-alto-grau-na-gestacao",
+        "por_que": "Começa pelo extremo lento do espectro, o mais frequentemente esquecido: BAV avançado com síncope, hipotensão ou choque é emergência materna e deve ser tratado sem atraso pelo fato de a paciente estar grávida. O documento também ensina o primeiro passo prático — diferenciar bradicardia verdadeira de síndrome hipotensiva supina, uma armadilha comum no exame da gestante em decúbito."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-bradicardia-sintomatica-e-bloqueio-av-de-alto-grau-na-gestacao",
+        "por_que": "Consolida em árvore de decisão rápida o raciocínio da etapa anterior — confirmação de bradicardia verdadeira, exclusão de causa posicional, tratamento agudo igual ao da não gestante e pacing com mínima radiação quando indicado —, servindo de referência de cabeceira para a situação de emergência que o texto descreveu em profundidade."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-de-inicio-na-gestacao-incidencia-causas-e-controle-agudo",
+        "por_que": "Vira o eixo do lento para o rápido, tratando especificamente da FA que surge pela primeira vez durante a gestação — incidência real, causas associadas a esse contexto (como tireotoxicose) e controle agudo com segurança fetal. O próprio documento se define como complementar ao caso de FA crônica pré-existente, o que justifica a sequência com a etapa seguinte."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-cronica-e-cardiomiopatia-dilatada-pre-existente-na-gestacao",
+        "por_que": "Contrasta deliberadamente com a etapa anterior: aqui a gestante já chega à concepção com FA conhecida e cardiomiopatia dilatada estabelecida, situação clínica e de estratificação de risco distinta da FA nova sem substrato identificado. Ensina o leitor a nunca tratar 'FA na gestante' como categoria única, mas sempre perguntar se é nova ou crônica antes de decidir conduta."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+        "por_que": "Depois de cobrir os tipos de taquiarritmia atrial, esta etapa ensina o manejo agudo transversal a TSV, FA e flutter: a gestação não muda a prioridade da instabilidade hemodinâmica, e cardioversão elétrica sincronizada é o primeiro passo diante de hipotensão, choque, isquemia ou edema pulmonar, com adenosina reservada à taquicardia regular de QRS estreito estável."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-taquiarritmia-na-gestacao-com-instabilidade-hemodinamica",
+        "por_que": "Formaliza em árvore de decisão o algoritmo da etapa anterior — já revisado diretamente contra as seções 12.4.1.1–12.4.1.2 da ESC 2025, incluindo as doses de adenosina, metoprolol e verapamil da Figura 14 e a ressalva de que amiodarona fica restrita a arritmia refratária ou ameaçadora à vida. É o material de consulta rápida para o momento em que a decisão precisa ser tomada em minutos."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
+        "por_que": "Aplica o algoritmo de taquiarritmia instável recém-aprendido a um cenário de altíssimo rendimento clínico: pré-eclâmpsia grave e síndrome HELLP são gatilhos comuns de arritmia supraventricular aguda, e o documento detalha os critérios de gravidade do ACOG junto com o manejo específico dessa TSV no contexto hipertensivo-hepático — situação em que confundir a causa muda a conduta."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "sindrome-do-qt-longo-na-gestacao-risco-concentrado-no-pos-parto",
+        "por_que": "Muda o eixo de arritmia adquirida/gatilhada para canalopatia hereditária, e traz a evidência que corrige a intuição clínica errada: os dois estudos de maior peso do International LQTS Registry mostram que a gestação em si não aumenta o risco de evento arrítmico — o período de risco concentrado é o pós-parto, sobretudo nos primeiros nove meses. Esse achado motiva diretamente a conduta da etapa seguinte."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "sindrome-do-qt-longo-e-risco-arritmico-no-puerperio",
+        "por_que": "Transforma a evidência da etapa anterior em protocolo: aborda síncope, QT prolongado e torsades no puerpério, sobretudo no genótipo LQT2, com a ESC 2025 considerando esse risco relevante por até 12 meses pós-parto. É a etapa que converte 'quando o risco é maior' em 'o que fazer durante essa janela'."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-do-qt-longo-e-risco-arritmico-no-puerperio",
+        "por_que": "Sintetiza o protocolo em árvore de decisão para síncope/torsades no puerpério, já revisado contra as seções 5.2.9 e 6.2.1 da ESC 2025 — inclui a manutenção de dose plena do betabloqueador (propranolol/nadolol como opções mais eficazes), a ponderação da maior excreção do nadolol no leite e o ECG neonatal seriado, informação prática que o texto corrido não deixa tão imediata."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-polimorfica-catecolaminergica-na-gestacao-e-puerperio",
+        "por_que": "Fecha o par de canalopatias hereditárias com a CPVT, mecanicamente distinta do QT longo — estímulo adrenérgico (exercício, dor, medo, estresse) precipita TV bidirecional/polimórfica em coração estruturalmente normal e ECG basal frequentemente normal —, reforçando manutenção do betabloqueador e adição de flecainida quando há eventos apesar da terapia."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "fluxograma-taquicardia-ventricular-polimorfica-catecolaminergica-na-gestacao-e-puerperio",
+        "por_que": "Fecha o subeixo das canalopatias com a árvore de decisão para síncope/TV em mulher com CPVT, conferida contra a seção 6.2.3 da ESC 2025, repetindo o mesmo cuidado de lactação com nadolol visto na etapa do QT longo — deixando explícito ao leitor que esse é um padrão recorrente entre as canalopatias, não uma peculiaridade isolada."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "taquiarritmia-fetal-hidropsia-nao-imune-e-tratamento-transplacentario",
+        "por_que": "Fecha a trilha cruzando do lado materno para o fetal: TSV e flutter atrial fetal são causa reconhecida de hidropisia não imune, diagnosticada por ecocardiografia fetal e tratada por via transplacentária com digoxina, flecainida ou sotalol. É o capítulo que faltava nas 17 trilhas existentes — nenhuma delas trata a arritmia do próprio feto como desfecho a ser vigiado e tratado, e ele completa logicamente uma trilha que começou tratando só do ritmo materno."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pulmonar-pipeline-experimental-alem-das-quatro-classes",
+    "titulo": "Hipertensão pulmonar: o pipeline experimental além das quatro classes aprovadas — do proof-of-concept ao ensaio negativo",
+    "tema": "Hipertensão pulmonar",
+    "objetivo": "Sair sabendo classificar a maturidade e a confiabilidade da evidência de uma terapia de hipertensão pulmonar ainda em desenvolvimento — da prova de conceito de fase 2 à extensão de segurança de longo prazo de um fármaco já aprovado — e reconhecer quando dado de imprensa sem revisão por pares, metanálise heterogênea ou ensaio francamente negativo devem mudar a confiança clínica no que está por vir.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "caso_clinico",
+        "item_slug": "hap-sintomatica-em-terapia-de-base-estavel-adicionar-sotatercept-ensaio-stellar",
+        "por_que": "Abre a trilha com o cenário clínico que justifica todo um pipeline além dos quatro mecanismos já consolidados (antagonismo do receptor de endotelina, PDE5i/estimulação da guanilato ciclase solúvel, via da prostaciclina e, mais recentemente, a via da ativina): um paciente em terapia tripla oral que continua sintomático. É esse tipo de lacuna terapêutica — e não curiosidade acadêmica — que sustenta o investimento nos seis mecanismos experimentais revisados nesta trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "pulsar-sotatercepte-fase-2-hipertensao-arterial-pulmonar",
+        "por_que": "PULSAR é o primeiro degrau do pipeline: fase 2, 106 pacientes, desfecho substituto hemodinâmico (variação da RVP), que apenas estabeleceu prova de conceito e forneceu a dose testada depois na fase 3. Serve de modelo de comparação para o resto da trilha — quando um candidato aparecer adiante com número de pacientes semelhante e desfecho também substituto, o leitor já sabe em que estágio de maturidade ele está."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sotatercepte-o-ensaio-de-fase-3-stellar",
+        "por_que": "STELLAR é o único mecanismo desta trilha que completou toda a travessia — de PULSAR até a aprovação regulatória — e por isso funciona como padrão-ouro de comparação: 323 pacientes, ainda desfecho funcional (TC6M +34,4 m vs. +1,0 m), mas em fase 3 confirmatória, com oito de nove desfechos secundários hierarquizados também favoráveis. É a régua contra a qual os demais candidatos desta trilha devem ser julgados."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hyperion-sotatercept-hap-primeiro-ano-diagnostico",
+        "por_que": "Depois da aprovação, o sotatercepte não parou de ser testado — HYPERION o move para dentro do primeiro ano após o diagnóstico e troca a distância caminhada por um desfecho composto de eventos clínicos duros (morte, hospitalização, septostomia, transplante, piora do exercício): 10,6% vs. 36,9% (HR 0,24). Mostra que um fármaco aprovado continua gerando cadeia própria de evidência — extensão de indicação para doença mais precoce é ensaio novo, não suposição."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "zenith-sotatercept-hap-alto-risco-morte",
+        "por_que": "ZENITH testa o mesmo fármaco no extremo oposto do espectro de gravidade — classe funcional III/IV, alto risco de morte apesar de terapia máxima — com magnitude de efeito quase idêntica à de HYPERION (HR 0,24; hospitalização 9,3% vs. 50,0%). Colocado ao lado do passo anterior, ensina que um efeito consistente em populações opostas é evidência mais forte do que um único ensaio em população intermediária."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "soteria-sotatercept-seguranca-longo-prazo-hap",
+        "por_que": "Nenhum dos ensaios de eficácia anteriores tinha seguimento longo o bastante para responder à pergunta seguinte: o que acontece depois de mais de um ano de exposição? SOTERIA acumula 523 pacientes-ano e revela sangramento grave (5,2%, com dois óbitos julgados não relacionados) e telangiectasia (16,9%) — achados que só aparecem quando a exposição se prolonga além da janela de um ensaio pivotal, fechando o ciclo de segurança de uma terapia já aprovada."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cadence-sotatercept-na-hipertensao-pulmonar-combinada-associada-a-icfep",
+        "por_que": "CADENCE devolve o sotatercepte à fase 2 — mas em outra indicação: hipertensão pulmonar combinada pós- e pré-capilar associada à ICFEp, do grupo 2 (doença cardíaca esquerda), população em que o próprio documento declara que o resultado 'não autoriza extrapolar indicação entre grupos'. Fecha o arco do sotatercepte mostrando que, ao mudar de população, mesmo um fármaco aprovado volta a ser prova de conceito de fase 2 — e a trilha vira, a partir daqui, para candidatos que nunca saíram dessa fase inicial."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "ralinepague-agonista-oral-do-receptor-de-prostaciclina-o-programa-advance",
+        "por_que": "Ralinepague é o candidato mais maduro fora do sotatercepte — fase 3 (ADVANCE OUTCOMES) já concluída —, mas o próprio documento declara que os três números de desfecho secundário mais recentes vêm de comunicado de imprensa, não de texto revisado por pares, após esgotar as vias usuais de acesso ao artigo completo (bloqueio Cloudflare, ausência no PMC apesar de licença CC BY). Ensina a diferença prática entre 'fase 3 concluída' e 'aprovado e prescritível', e o hábito de declarar explicitamente quando uma informação vem de fonte secundária."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "seralutinib-inibidor-de-quinase-inalado-na-hap-torrey",
+        "por_que": "Um degrau atrás de ralinepague: seralutinibe inalado tem apenas fase 2 (TORREY, 86 pacientes) mais extensão aberta, desfecho ainda substituto (RVP), sem fase 3 concluída. Contrastado com o passo anterior, treina o leitor a diferenciar dois candidatos que soam igualmente promissores pelo nome, mas estão em estágios de maturidade regulatória distintos."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "rodatristat-etil-inibidor-de-tph1-elevate-2-ensaio-negativo",
+        "por_que": "Depois de dois candidatos promissores, ELEVATE-2 é o contraponto necessário: fase 2b, três braços, inibidor da via serotoninérgica (TPH1) que o próprio título do documento já anuncia como ensaio negativo com sinal de dano. Sem esta etapa, a trilha ensinaria implicitamente que todo mecanismo novo em teste acaba dando certo — o erro mais comum de quem lê pipeline farmacêutico de forma acrítica."
+      },
+      {
+        "ordem": 11,
+        "item_type": "caso_clinico",
+        "item_slug": "inibicao-de-tph1-na-hap-o-que-o-ensaio-elevate-2-mostrou-sobre-a-via-serotoninergica",
+        "por_que": "Ancora a lição de ELEVATE-2 num cenário de prática — a pergunta que um paciente ou colega faz ao ouvir falar de 'um novo remédio para a via da serotonina' — e obriga o leitor a articular, em linguagem clínica, por que um resultado negativo de fase 2b encerra (por ora) essa via terapêutica em vez de justificar expectativa de aprovação."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "denervacao-da-arteria-pulmonar-padn-metanalise-2026",
+        "por_que": "Muda o eixo de farmacológico para intervencionista: a denervação da artéria pulmonar (PADN) tem sua evidência resumida numa metanálise de 2026 de estudos pequenos e heterogêneos (TC6M +92 m; redução de mPAP e RVP), não num único ensaio de fase 3 como os passos anteriores. Ensina um terceiro tipo de leitura crítica de pipeline — quando o corpo de evidência é uma metanálise de estudos díspares, com os limites de heterogeneidade que isso implica, em vez de um programa de fases sequenciais."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "esra-riociguat-na-doenca-vascular-pulmonar-precoce",
+        "por_que": "Fecha a trilha com um tipo de inovação diferente de todas as anteriores: ESRA não testa molécula nova, mas reposiciona o riociguate — já aprovado e usado em outras trilhas desta biblioteca — para uma população mais precoce e restrita (doença vascular pulmonar limítrofe, mPAP 21–25 mmHg), com apenas 35 dos 261 pacientes pré-triados finalmente randomizados. Mostra que nem toda fronteira do pipeline é sobre mecanismo inédito — parte dela é perguntar se um fármaco que já funciona também funciona mais cedo."
+      }
+    ]
   }
 ]
