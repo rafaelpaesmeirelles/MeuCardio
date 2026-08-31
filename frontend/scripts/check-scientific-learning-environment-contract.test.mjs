@@ -75,7 +75,8 @@ test("keeps 360px navigation legible instead of shrinking text to 9px", () => {
   assert.match(styles, /@media \(max-width:760px\)/);
   assert.match(styles, /font-size:max\(\.68rem,11px\)/);
   assert.doesNotMatch(styles, /(?:font-size|max-width):[^;]*(?:9px|72px)/);
-  assert.match(styles, /\.spaces-dock \{ grid-template-columns:repeat\(7,minmax\(58px,1fr\)\); overflow-x:auto; \}/);
-  assert.match(styles, /\.spaces-dock a,\.spaces-dock button,\.spaces-action \{ font-size:max\(\.68rem,11px\); \}/);
+  assert.match(styles, /\.spaces-dock \{ grid-template-columns:repeat\(6,minmax\(0,1fr\)\); max-width:calc\(100vw - 16px\); overflow-x:hidden; \}/);
+  assert.match(styles, /\.spaces-dock a,\.spaces-dock button \{[^}]*font-size:max\(\.68rem,11px\);[^}]*white-space:normal;/);
+  assert.doesNotMatch(styles, /\.spaces-dock \{[^}]*repeat\(7|minmax\(58px|overflow-x:auto/);
   assert.match(tourStyles, /\.cst__controls>div\{max-width:calc\(100vw - 136px\);overflow-x:auto\}/);
 });
