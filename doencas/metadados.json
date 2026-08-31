@@ -54571,5 +54571,111 @@
       "cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "deficiencia-de-vlcad",
+    "name": "Deficiência de VLCAD",
+    "aliases": [
+      "Deficiência de acil-CoA desidrogenase de cadeia muito longa",
+      "VLCADD",
+      "Deficiência de ACADVL",
+      "Very long-chain acyl-CoA dehydrogenase deficiency"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "erro_inato_metabolismo_beta_oxidacao_acidos_graxos",
+    "prevalence_rank": 157,
+    "completeness": "completo",
+    "summary": "Erro inato do metabolismo da beta-oxidação mitocondrial de ácidos graxos de cadeia longa, autossômico recessivo (gene ACADVL), incluído em programas de triagem neonatal; a forma neonatal/infantil grave causa cardiomiopatia hipertrófica e/ou dilatada com risco de arritmia ventricular fatal, hipoglicemia hipocetótica e hepatomegalia, desencadeadas por jejum, febre ou exercício extenuante, enquanto a forma miopática de início mais tardio cursa com rabdomiólise induzida por exercício, sem cardiomiopatia proeminente.",
+    "presentation": [
+      "Forma neonatal/infantil grave (a mais relevante para o cardiologista): início nos primeiros meses de vida com cardiomiopatia hipertrófica e/ou dilatada, frequentemente associada a derrame pericárdico e a arritmias que podem ser fatais (taquicardia ventricular, fibrilação ventricular)",
+      "Forma neonatal/infantil grave: hipoglicemia hipocetótica desproporcional à duração do jejum, hepatomegalia e hipotonia, tipicamente desencadeadas ou agravadas por jejum prolongado, doença febril intercorrente ou (em crianças maiores) exercício extenuante",
+      "Forma neonatal/infantil grave: descompensação aguda pode ocorrer mesmo com jejum de duração aparentemente tolerável para uma criança sem a doença — mecanismo central é a incapacidade de mobilizar ácidos graxos de cadeia longa como substrato quando a demanda energética aumenta ou o glicogênio se esgota",
+      "Forma miopática de início mais tardio (infância mais avançada, adolescência ou idade adulta): rabdomiólise intermitente induzida por exercício, mialgia e/ou intolerância ao exercício, tipicamente sem hipoglicemia no início dos sintomas e sem cardiomiopatia proeminente",
+      "Coortes identificadas por triagem neonatal apresentam desproporcionalmente variantes de ACADVL mais brandas, e a maioria dos lactentes identificados por triagem está assintomática ao diagnóstico e permanece assintomática com manejo adequado — a proporção que evoluirá para a forma cardiomiopática grave não está quantificada de forma prospectiva robusta"
+    ],
+    "differentials": [
+      "Deficiência primária de carnitina (defeito do transportador OCTN2/SLC22A5) — cardiomiopatia reversível com suplementação de L-carnitina, mecanismo de transporte e não de oxidação enzimática",
+      "Doença de Pompe (glicogenose tipo II, deficiência de alfa-glicosidase ácida) — fenocópia de cardiomiopatia hipertrófica por depósito lisossomal de glicogênio, sem hipoglicemia hipocetótica esperada, com PR curto e QRS de alta voltagem ao ECG",
+      "Síndrome de Barth (defeito de TAZ) — cardiomiopatia com não compactação do VE, neutropenia e miopatia",
+      "Outros defeitos de beta-oxidação de cadeia longa (deficiência de proteína trifuncional mitocondrial/LCHAD, deficiência de carnitina palmitoiltransferase tipo 2)",
+      "Cardiomiopatia hipertrófica sarcomérica primária"
+    ],
+    "tests": [
+      "Triagem neonatal por espectrometria de massa em tandem (MS/MS) — perfil de acilcarnitinas em papel filtro, com C14:1 (tetradecenoilcarnitina) como marcador primário (valores acima de cerca de 1 µmol/L fortemente sugestivos), apoiado por C14:2, C14 e pelas razões C14:1/C2 e C14:1/C16",
+      "Confirmação por análise molecular do gene ACADVL e/ou ensaio enzimático ou de fluxo em fibroblastos diante de triagem neonatal positiva, em centro com experiência em doenças metabólicas",
+      "Ecocardiograma e eletrocardiograma diante de suspeita clínica (cardiomiopatia de início precoce, arritmia inexplicada em lactente) ou em seguimento de caso confirmado",
+      "Glicemia, cetonemia/cetonúria, lactato, amônia e CK durante episódio de descompensação aguda, para caracterizar o padrão de hipoglicemia hipocetótica e avaliar rabdomiólise associada",
+      "Investigação metabólica dirigida (perfil de acilcarnitinas, entre outros) como parte da avaliação sistemática de qualquer cardiomiopatia pediátrica de etiologia não esclarecida"
+    ],
+    "red_flags": [
+      "Cardiomiopatia hipertrófica e/ou dilatada de início nos primeiros meses de vida associada a hipoglicemia hipocetótica e hepatomegalia",
+      "Arritmia ventricular inexplicada (taquicardia ventricular, fibrilação ventricular) em lactente com cardiomiopatia de início precoce",
+      "Hipoglicemia desproporcional à duração do jejum e sem cetose significativa em lactente ou criança pequena",
+      "Descompensação aguda (incluindo piora da função cardíaca) desencadeada por jejum, doença febril intercorrente ou exercício extenuante em criança com cardiomiopatia de etiologia não esclarecida",
+      "Rabdomiólise recorrente induzida por exercício em criança maior, adolescente ou adulto jovem, mesmo sem hipoglicemia ou cardiomiopatia — sugere a forma miopática mais tardia do mesmo gene"
+    ],
+    "ambulatory_flow": [
+      "Diante de cardiomiopatia pediátrica de etiologia não esclarecida, incluir defeitos de beta-oxidação de ácidos graxos de cadeia longa (deficiência de VLCAD entre eles) na investigação metabólica sistemática, junto com deficiência de carnitina, glicogenoses e doenças de depósito lisossomal",
+      "Confirmar triagem neonatal positiva com análise molecular do gene ACADVL e/ou ensaio enzimático em centro com experiência em doenças metabólicas antes de rotular a criança como afetada",
+      "Orientação dietética estruturada (restrição de gordura de cadeia longa, suplementação de TCM ou trieptanoína, fracionamento de refeições, evitar jejum prolongado) em conjunto com especialista em erros inatos do metabolismo",
+      "Seguimento cardiológico com ecocardiograma e ECG, com periodicidade orientada por protocolo de consenso (não há cronograma validado prospectivamente), inclusive em pacientes assintomáticos identificados por triagem",
+      "Orientação explícita sobre protocolo de \"dia de doença\" para a família, com plano escrito de quando buscar atendimento e evitar jejum diante de doença intercorrente"
+    ],
+    "emergency_flow": [
+      "Diante de febre, vômitos, recusa alimentar ou qualquer intercorrência em criança com deficiência de VLCAD conhecida, priorizar a interrupção do jejum: fluidos orais de alta densidade energética se tolerado, ou dextrose intravenosa a pelo menos 10% com eletrólitos, em taxa de pelo menos 1,5 vez a manutenção, diante de intolerância oral ou hipoglicemia",
+      "Evitar lipídeos intravenosos na fase aguda",
+      "Monitorizar glicemia, sinais de disfunção cardíaca e arritmia, e CK (rabdomiólise) durante a descompensação aguda",
+      "Baixo limiar para internação e suporte intensivo diante de qualquer instabilidade hemodinâmica ou elétrica, dado o risco de arritmia ventricular potencialmente fatal na forma grave",
+      "Em lactente com cardiomiopatia de início precoce e descompensação aguda sem diagnóstico metabólico prévio, colher amostra crítica (glicemia, cetonas, lactato, amônia, perfil de acilcarnitinas) antes de corrigir a hipoglicemia, sempre que isso não atrasar o tratamento de emergência"
+    ],
+    "tags": [
+      "VLCAD",
+      "ACADVL",
+      "erro inato do metabolismo",
+      "beta-oxidação de ácidos graxos",
+      "cardiomiopatia neonatal",
+      "cardiomiopatia infantil",
+      "hipoglicemia hipocetótica",
+      "triagem neonatal",
+      "cardiopediatria",
+      "fenocópia de cardiomiopatia",
+      "distúrbio de beta-oxidação de ácidos graxos de cadeia longa",
+      "arritmia ventricular pediátrica",
+      "rabdomiólise induzida por exercício"
+    ],
+    "source_refs": [
+      "Leslie ND, Saenz-Ayala S. Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency. 2005 Aug 30 [Updated 2025 Aug 7]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews. Seattle (WA): University of Washington, Seattle. NCBI Bookshelf NBK6816.",
+      "Arnold GL, Van Hove J, Freedenberg D, Strauss A, Longo N, Burton B, et al. A Delphi clinical practice protocol for the management of very long chain acyl-CoA dehydrogenase deficiency. Mol Genet Metab. 2009;96(3):85-90. PMID 19157942.",
+      "Wood JC, Magera MJ, Rinaldo P, Seashore MR, Strauss AW, Friedman A. Diagnosis of very long chain acyl-dehydrogenase deficiency from an infant's newborn screening card. Pediatrics. 2001;108(1):E19. PMID 11433098.",
+      "Bleeker JC, Kok IL, Ferdinandusse S, van der Pol WL, Cuppen I, Bosch AM, et al. Impact of newborn screening for very-long-chain acyl-CoA dehydrogenase deficiency on genetic, enzymatic, and clinical outcomes. J Inherit Metab Dis. 2019;42(3):414-423. PMID 30761551.",
+      "Miller MJ, Burrage LC, Gibson JB, Strenk ME, Lose EJ, Bick DP, et al. Recurrent ACADVL molecular findings in individuals with a positive newborn screen for very long chain acyl-coA dehydrogenase (VLCAD) deficiency in the United States. Mol Genet Metab. 2015;116(3):139-145. PMID 26385305.",
+      "Spiekerkoetter U. Mitochondrial fatty acid oxidation disorders: clinical presentation of long-chain fatty acid oxidation defects before and after newborn screening. J Inherit Metab Dis. 2010;33(5):527-532. PMID 20449660.",
+      "Spiekerkoetter U, Lindner M, Santer R, Grotzke M, Baumgartner MR, Boehles H, et al. Management and outcome in 75 individuals with long-chain fatty acid oxidation defects: results from a workshop. J Inherit Metab Dis. 2009;32(4):488-497. PMID 19399638.",
+      "Gillingham MB, Heitner SB, Martin J, Rose S, Goldstein A, El-Gharbawy AH, et al. Triheptanoin versus trioctanoin for long-chain fatty acid oxidation disorders: a double blinded, randomized controlled trial. J Inherit Metab Dis. 2017;40(6):831-843. PMID 28871440.",
+      "Yamada K, Taketani T. Management and diagnosis of mitochondrial fatty acid oxidation disorders: focus on very-long-chain acyl-CoA dehydrogenase deficiency. J Hum Genet. 2019;64(2):73-85. PMID 30401918.",
+      "Exil VJ, Roberts RL, Sims H, McLaughlin JE, Malkin RA, Gardner CD, et al. Very-long-chain acyl-coenzyme a dehydrogenase deficiency in mice. Circ Res. 2003;93(5):448-455. PMID 12893739.",
+      "Landau YE, Waisbren SE, Chan LM, Levy HL. Long-term outcome of expanded newborn screening at Boston children's hospital: benefits and challenges in defining true disease. J Inherit Metab Dis. 2017;40(2):209-218. PMID 28054209."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK6816/",
+      "https://pubmed.ncbi.nlm.nih.gov/19157942/",
+      "https://pubmed.ncbi.nlm.nih.gov/11433098/",
+      "https://pubmed.ncbi.nlm.nih.gov/30761551/",
+      "https://pubmed.ncbi.nlm.nih.gov/26385305/",
+      "https://pubmed.ncbi.nlm.nih.gov/20449660/",
+      "https://pubmed.ncbi.nlm.nih.gov/19399638/",
+      "https://pubmed.ncbi.nlm.nih.gov/28871440/",
+      "https://pubmed.ncbi.nlm.nih.gov/30401918/",
+      "https://pubmed.ncbi.nlm.nih.gov/12893739/",
+      "https://pubmed.ncbi.nlm.nih.gov/28054209/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "deficiencia-de-vlcad-cardiomiopatia-neonatal-e-diagnostico-diferencial-com-cardiomiopatias-metabolicas-pediatricas"
+    ],
+    "patient_material_slug": null
   }
 ]
