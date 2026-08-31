@@ -9,10 +9,10 @@ const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].m
 const primaryRoutes = [
   "/doencas", "/medicamentos", "/exames", "/calculadoras", "/emergencia", "/cardiologia-intensiva",
   "/checklists", "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas", "/avaliacao-preoperatoria",
-  "/exames-ia", "/prontuario", "/round", "/receituario", "/documentos", "/agenda", "/corvia-mail",
+  "/exames-ia", "/prontuario", "/round", "/receituario", "/documentos", "/agenda", "/deslocamento", "/corvia-mail",
   "/caixa-de-email", "/assistente", "/validar", "/telediagnostico", "/material-paciente", "/evidencias",
   "/estudos", "/documentos-cientificos-ia", "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/diretrizes",
-  "/cursos", "/biblioteca", "/galeria", "/indicadores", "/apresentacao", "/exportar", "/favoritos", "/busca",
+  "/biblioteca", "/galeria", "/indicadores", "/apresentacao", "/exportar", "/favoritos", "/busca",
   "/busca?modo=tudo-com-tudo", "/usuarios-online", "/sincronizacao", "/minha-conta", "/privacidade", "/termos",
   "/tour", "/tour/cardiology-spaces", "/verificacao-identidade", "/excluir-conta", "/admin", "/admin/usuarios",
   "/fila-telediagnostico", "/receitas-para-assinatura", "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
@@ -42,4 +42,11 @@ test("detail, contextual, alias and authentication routes stay outside the funct
   for (const excluded of ["/:slug", "/:id", "/heart-team/:caseId", "/admin/usuarios/:id", "/ecg-ia", "/assinatura", "/entrar", "/redefinir-senha", "/em-breve"]) {
     assert.ok(!catalogPaths.includes(excluded), `${excluded} não é um ponto de entrada primário`);
   }
+});
+
+test("home day card uses the canonical mobility itinerary and opens the orbital map", () => {
+  assert.match(home, /\/agenda\/mobility\/day-context/);
+  assert.match(home, /to="\/deslocamento"/);
+  assert.match(app, /path="deslocamento" element=\{<SpaceTravelMap \/>\}/);
+  assert.doesNotMatch(catalog, /"\/cursos"/);
 });
