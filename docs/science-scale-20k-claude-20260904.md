@@ -1217,3 +1217,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 109 (17 descartados por colisão) | 91 |
 | **Total** | **4.900** | **303** | **4.597** |
+
+## Lote 59 — concluído (commit 40dafe6a)
+
+- **6 documentos** (canalopatias hereditárias raras, complicações embólicas/iatrogênicas e alergologia cardiovascular): doença ateroembólica por cristais de colesterol (a "grande imitadora de vasculite" — eosinofilia e hipocomplementemia transitórias mimetizam vasculite sistêmica; pulsos periféricos preservados como diferencial-chave de oclusão arterial trombótica — `content/Aorta_e_doença_arterial_periférica`), síndrome de embolia gordurosa (tríade de Gurd e Wilson; duas teorias mecanísticas complementares — mecânica e bioquímica; disfunção aguda de VD por hipertensão pulmonar aguda, distinta em mecanismo e resposta terapêutica do TEP maciço — `content/Terapia_intensiva`), bloqueio cardíaco progressivo familiar/Lenègre-Lev hereditário (genes SCN5A e TRPM4; pleiotropia alélica com síndrome de Brugada e QT longo tipo 3 — a mesma mutação de SCN5A pode produzir os dois fenótipos na mesma família ou no mesmo indivíduo; modelo de haploinsuficiência somada a envelhecimento — `content/Arritmias`), síndrome de Timothy/LQT8 (canalopatia CACNA1C/CaV1.2; mutação G406R no éxon 8A abole a inativação dependente de voltagem do canal; fenótipo multissistêmico com sindactilia quase patognomônica, dismorfismo facial, hipoglicemia e autismo — um dos poucos modelos monogênicos de autismo em pesquisa translacional; mortalidade histórica de 60-80% — `content/Cardiologia_pediátrica`), reação de hipersensibilidade anafilactoide a contraste iodado (a maioria das reações graves não é IgE-mediada, mas por ativação direta de mastócitos/basófilos; pretesting pré-procedimento tem valor preditivo quase nulo para reação grave; glucagon como adjuvante reconhecido no paciente betabloqueado refratário à adrenalina; controvérsia atual da literatura sobre eficácia da pré-medicação clássica com corticosteroide/anti-histamínico, documentada com honestidade — `content/Terapia_intensiva`), doença do nó sinusal familiar (distinção entre a forma degenerativa comum do idoso, poligênica e ligada à idade, e a forma monogênica rara de início precoce — genes HCN4/corrente "funny", por vezes associada a cardiomiopatia não compactada em subgrupos familiares; SCN5A com padrão recessivo descrito; GNB2 e ANK2/ankyrin-B como causas adicionais mais raras — `content/Arritmias`).
+- **doencas**: +6, pareadas 1:1 — `ateroembolismo-por-colesterol`, `sindrome-de-embolia-gordurosa`, `bloqueio-cardiaco-progressivo-familiar`, `sindrome-de-timothy`, `reacao-anafilactoide-a-contraste-iodado`, `doenca-do-no-sinusal-familiar`. `prevalence_rank` 114-119 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — todos os 6 tópicos despachados (de um sweep mais amplo de ~19 candidatos mineirados: canalopatias raras, síndromes embólicas, complicações de contraste/gadolínio) confirmaram gap genuíno após checagem cruzada contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/` e `doencas/correcoes/`. Candidatos descartados **antes do despacho** por já estarem cobertos: síndrome de Andersen-Tawil, TVPC, QT curto, repolarização precoce, displasia arritmogênica biventricular, taquicardia fetal SVT/hidropsia não imune, reativação de Chagas pós-transplante — todos com documento dedicado já existente identificado no sweep de mineração de tópicos.
+- **Checagem de distinção doc-vs-doença slug**: 100% conforme (6/6 pares distintos), confirmando a prevenção adotada desde o Lote 56.
+- **Correções na integração**: entidades HTML residuais (`&amp;` `&lt;` `&gt;`) em 4 dos 6 documentos (ateroembolismo, embolia gordurosa, Timothy, doença do nó sinusal familiar), corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.528 itens.
+
+### Status consolidado (após Lote 59)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 121 | 2.279 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 115 (17 descartados por colisão) | 85 |
+| **Total** | **4.900** | **315** | **4.585** |
