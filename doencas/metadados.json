@@ -53214,5 +53214,449 @@
       "sindrome-de-charge-cardiopatia-congenita-gene-chd7-e-rastreio-cardiaco-no-recem-nascido"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "distrofia-muscular-de-becker",
+    "name": "Distrofia muscular de Becker",
+    "aliases": [
+      "Becker muscular dystrophy",
+      "BMD",
+      "distrofinopatia de Becker",
+      "distrofia de Becker"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "cardiomiopatia genética / distrofinopatia",
+    "prevalence_rank": 145,
+    "completeness": "completo",
+    "summary": "Distrofinopatia ligada ao X causada por variantes tipicamente in-frame no gene DMD, que geram distrofina truncada mas parcialmente funcional — em contraste com a distrofina ausente/não funcional da distrofia muscular de Duchenne (DMD). O quadro musculoesquelético é mais brando e de início mais tardio que na DMD, mas a cardiomiopatia dilatada não acompanha necessariamente essa gravidade: pode ser desproporcional à fraqueza muscular ou até a manifestação predominante/isolada da doença, o que torna obrigatório o rastreio cardíaco estruturado (ECG e imagem cardíaca) independentemente do grau de comprometimento motor.",
+    "presentation": [
+      "Fraqueza muscular proximal de início tardio (frequentemente após os 16 anos, por vezes só após os 30 anos), com preservação da deambulação por décadas em muitos casos",
+      "Pseudo-hipertrofia de panturrilhas e elevação de creatinoquinase (CK) sérica",
+      "Cãibras e mialgia induzidas por esforço",
+      "Formas subclínicas ou benignas do ponto de vista muscular, nas quais a cardiomiopatia dilatada pode ser a manifestação clínica predominante",
+      "Sinais/sintomas de cardiomiopatia dilatada: dispneia aos esforços, palpitações, síncope, sinais de insuficiência cardíaca congestiva — podendo estar presentes mesmo com fraqueza muscular discreta ou ausente",
+      "Insuficiência mitral funcional associada à dilatação/disfunção ventricular esquerda",
+      "Possível acometimento cardíaco em mulheres portadoras heterozigotas, mesmo sem fenótipo muscular"
+    ],
+    "differentials": [
+      "Distrofia muscular de Duchenne (fraqueza muscular grave e precoce, perda de deambulação antes dos 13 anos, ausência de distrofina)",
+      "Distrofias musculares de cinturas (LGMD), incluindo sarcoglicanopatias",
+      "Distrofia miotônica tipo 1 (doença de Steinert) — outra doença neuromuscular com acometimento cardíaco de condução progressivo",
+      "Cardiomiopatia dilatada idiopática/familiar sem outra causa neuromuscular identificada",
+      "Outras cardiomiopatias dilatadas de causa genética (variantes em LMNA, FLNC, TTN)",
+      "Doença de Danon e outras cardiomiopatias metabólicas/de depósito com fenocópia de cardiomiopatia dilatada ou hipertrófica"
+    ],
+    "tests": [
+      "Creatinoquinase (CK) sérica",
+      "Painel genético dirigido ao gene DMD: análise de deleção/duplicação (ex.: MLPA), seguida de sequenciamento se negativa",
+      "Eletrocardiograma de 12 derivações",
+      "Ecocardiograma transtorácico",
+      "Ressonância magnética cardíaca (avaliação de função ventricular e fibrose/realce tardio, quando disponível)",
+      "Biópsia muscular com imuno-histoquímica/immunoblot de distrofina, reservada para casos com genética não conclusiva",
+      "Avaliação neurológica e eletroneuromiografia quando o diagnóstico muscular ainda não está estabelecido",
+      "Aconselhamento genético familiar, incluindo avaliação cardíaca de mulheres portadoras"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca em paciente jovem do sexo masculino com fraqueza muscular discreta ou ausente ao exame",
+      "CK elevada em paciente investigado por cardiomiopatia dilatada sem outra causa aparente",
+      "História familiar de distrofinopatia ligada ao X (Becker ou Duchenne)",
+      "Arritmia ventricular em paciente jovem com cardiomiopatia dilatada e diagnóstico ou suspeita de distrofinopatia",
+      "Insuficiência mitral desproporcional ao grau de dilatação ventricular esquerda"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico molecular (análise de deleção/duplicação do gene DMD, seguida de sequenciamento se necessário)",
+      "Solicitar avaliação cardíaca completa (ECG + ecocardiograma ou ressonância cardíaca) no momento do diagnóstico, independentemente da idade ou do grau de fraqueza muscular",
+      "Repetir avaliação cardíaca pelo menos a cada 2 anos em paciente assintomático sem disfunção ventricular conhecida",
+      "Repetir avaliação cardíaca pelo menos a cada 6 meses se houver disfunção ventricular já identificada",
+      "Iniciar terapia farmacológica para insuficiência cardíaca (IECA/BRA, betabloqueador, e demais classes conforme estadiamento) diante de disfunção ventricular",
+      "Estratificar risco de morte súbita e considerar indicação de cardiodesfibrilador implantável (CDI) seguindo os critérios já estabelecidos para cardiomiopatia dilatada não isquêmica",
+      "Encaminhar a centro de referência em doenças neuromusculares para acompanhamento multidisciplinar",
+      "Oferecer aconselhamento genético familiar, incluindo avaliação cardiológica de mulheres portadoras heterozigotas"
+    ],
+    "emergency_flow": [
+      "Reconhecer possível insuficiência cardíaca aguda/choque cardiogênico em paciente jovem, mesmo sem fraqueza muscular evidente à anamnese rápida",
+      "Investigar CK e considerar distrofinopatia no diagnóstico diferencial de cardiomiopatia dilatada de causa não esclarecida em paciente jovem do sexo masculino",
+      "Conduzir manejo padrão de insuficiência cardíaca aguda descompensada",
+      "Avaliar e tratar arritmias ventriculares malignas conforme protocolo padrão",
+      "Considerar necessidade de suporte circulatório mecânico e avaliação para transplante cardíaco em casos refratários"
+    ],
+    "tags": [
+      "distrofia muscular de becker",
+      "cardiomiopatia dilatada",
+      "distrofina",
+      "gene DMD",
+      "genética cardiovascular",
+      "doença neuromuscular",
+      "rastreio cardíaco",
+      "cardiomiopatia genética",
+      "distrofinopatia"
+    ],
+    "source_refs": [
+      "Darras BT, Urion DK, Ghosh PS. Dystrophinopathies. In: Adam MP, Feldman J, Mirzaa GM, et al., eds. GeneReviews [Internet]. University of Washington, Seattle; 1993-2026. Publicado em 05/09/2000, revisado em 20/01/2022. NCBI Bookshelf ID: NBK1119 — capítulo completo lido nesta sessão via NCBI Bookshelf.",
+      "Melacini P, Fanin M, Danieli GA, et al. Myocardial involvement is very frequent among patients affected with subclinical Becker's muscular dystrophy. Circulation. 1996;94(12):3168-3175. PMID: 8989125 — abstract completo lido nesta sessão via PubMed E-utilities.",
+      "Saito M, Kawai H, Akaike M, Adachi K, Nishida Y, Saito S. Cardiac dysfunction with Becker muscular dystrophy. Am Heart J. 1996;132(3):642-647. PMID: 8800037 — abstract completo lido nesta sessão via PubMed E-utilities.",
+      "Connuck DM, Sleeper LA, Colan SD, et al; Pediatric Cardiomyopathy Registry Study Group. Characteristics and outcomes of cardiomyopathy in children with Duchenne or Becker muscular dystrophy: a comparative study from the Pediatric Cardiomyopathy Registry. Am Heart J. 2008;155(6):998-1005. PMID: 18513510 — abstract completo lido nesta sessão via PubMed E-utilities; subgrupo BMD pequeno (n=15).",
+      "2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID: 37622657 — usado apenas como enquadramento geral de manejo de cardiomiopatia dilatada genética."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1119/",
+      "https://pubmed.ncbi.nlm.nih.gov/8989125/",
+      "https://pubmed.ncbi.nlm.nih.gov/8800037/",
+      "https://pubmed.ncbi.nlm.nih.gov/18513510/",
+      "https://academic.oup.com/eurheartj/article/44/37/3503/7246608"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-dilatada-na-distrofia-muscular-de-becker-genetica-da-distrofina-e-rastreio-cardiaco-independente-da-gravidade-muscular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "associacao-vacterl",
+    "name": "Associação VACTERL",
+    "aliases": [
+      "VACTERL",
+      "associação VATER",
+      "VATER association",
+      "VACTERL association"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "associacao_nao_sindromica_de_malformacoes",
+    "prevalence_rank": 146,
+    "completeness": "completo",
+    "summary": "Associação não aleatória de malformações congênitas multissistêmicas, definida pela presença de pelo menos 3 dos 6 componentes descritos pela sigla: defeitos Vertebrais, Atresia anal, defeitos Cardíacos, fístula TraqueoEsofágica com atresia de esôfago, displasia Renal e anomalias de Limb (membro, sobretudo do raio radial). Descrita originalmente em 1973 como VATER, antes da inclusão explícita do componente cardíaco. A cardiopatia congênita associada não corresponde a um tipo estrutural único — é um espectro amplo, no qual a comunicação interventricular é o defeito isolado mais citado como mais prevalente em série dedicada (67% dos pacientes com VACTERL tinham cardiopatia congênita em uma série de 46 casos), mas que também inclui comunicação interatrial, tetralogia de Fallot, persistência do canal arterial hemodinamicamente significativa e defeitos conotruncais, entre outros. Ao contrário da síndrome de CHARGE (gene CHD7) ou da síndrome de deleção 22q11.2, VACTERL não tem uma causa genética única identificada na maioria dos casos — a etiologia é heterogênea, e uma causa definida (variantes em ZIC3, PTEN, HOXD13 ou, raramente, FOXF1) é encontrada em apenas fração minoritária dos pacientes. A incidência estimada varia amplamente (1:10.000 a 1:40.000 nascidos vivos), refletindo diferenças de critério diagnóstico entre estudos. Diante de qualquer componente isolado identificado no recém-nascido, a literatura recomenda investigação ativa dos demais componentes, incluindo ecocardiograma de rastreio, independentemente de exame cardiovascular normal — recomendação que, em dados administrativos, mostrou implementação incompleta na prática (rastreio de membro em apenas 19% e rastreio combinado completo em apenas 45% de uma coorte de crianças com malformação anorretal).",
+    "presentation": [
+      "Defeitos vertebrais (hemivértebras, vértebras em borboleta, fusões vertebrais, escoliose congênita, anomalias de costela), presentes em cerca de 60-80% dos pacientes",
+      "Atresia anal ou outra malformação anorretal, com ou sem fístula, presente em cerca de 55-90% dos pacientes",
+      "Defeitos cardíacos, presentes em cerca de 40-80% dos pacientes conforme a série — comunicação interventricular é o defeito isolado mais citado como mais prevalente, mas o espectro inclui comunicação interatrial, tetralogia de Fallot, persistência do canal arterial hemodinamicamente significativa e defeitos conotruncais",
+      "Fístula traqueoesofágica com atresia de esôfago, presente em cerca de 50-80% dos pacientes",
+      "Displasia renal (agenesia uni ou bilateral, rim displásico multicístico, hidronefrose, refluxo vesicoureteral, anomalias de posição/rotação), presente em cerca de 50-80% dos pacientes",
+      "Anomalias de membro, sobretudo do raio radial (rádio hipoplásico ou ausente, polegar hipoplásico/trifalângico/ausente, sindactilia), presentes em cerca de 40-50% dos pacientes",
+      "Nenhum componente isolado é obrigatório para o diagnóstico — o critério é a presença de pelo menos 3 dos 6 componentes, na ausência de diagnóstico sindrômico alternativo que explique melhor o quadro"
+    ],
+    "differentials": [
+      "Síndrome de CHARGE — sobreposição em anomalias vertebrais, fístula traqueoesofágica e anomalias renais/de membro, mas com padrão característico ausente em VACTERL: coloboma ocular, atresia/estenose de coanas e disfunção de nervos cranianos (sobretudo VIII par); a maioria dos casos de CHARGE tem variante identificável em CHD7, ao contrário de VACTERL",
+      "Anemia de Fanconi — pode compartilhar atresia anal, defeitos de raio radial e anomalias renais; pancitopenia progressiva, teste de fragilidade cromossômica positivo (diepoxibutano) ou manchas café-com-leite motivam investigação específica",
+      "Síndrome de deleção 22q11.2 (velocardiofacial/DiGeorge) — defeito conotruncal predominante, hipocalcemia neonatal, imunodeficiência por hipoplasia tímica; teste único (microarray/FISH/MLPA para 22q11.2) identifica a causa na maioria dos casos, ao contrário de VACTERL",
+      "Síndrome de Townes-Brocks — atresia anal, anomalias de membro (polegar trifalângico) e anomalias renais compartilhadas, mas com anomalias auriculares características e frequentemente causa identificável em SALL1",
+      "Síndrome de Feingold — anomalias de membro e, por vezes, atresia esofágica compartilhadas, associada a variantes em MYCN, com microcefalia como achado adicional relevante",
+      "Cardiopatia congênita isolada não sindrômica — diagnóstico mais provável quando o defeito cardíaco é achado único, sem os demais componentes do espectro"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico de rastreio para todo recém-nascido com qualquer componente isolado identificado, independentemente de exame cardiovascular ou oximetria de pulso normais",
+      "Radiografia de coluna total (ou triagem de imagem equivalente) para defeitos vertebrais",
+      "Avaliação e classificação de malformação anorretal por cirurgia pediátrica",
+      "Investigação de fístula traqueoesofágica/atresia de esôfago diante de sinais sugestivos (sialorreia excessiva, incapacidade de passar sonda orogástrica, engasgos à primeira mamada)",
+      "Ultrassonografia renal e de vias urinárias como rastreio sistemático de displasia renal",
+      "Exame físico dirigido de membros superiores e inferiores, com radiografia de antebraço/mão diante de suspeita de anomalia de raio radial",
+      "Cariótipo ou microarray cromossômico, e avaliação dirigida para 22q11.2, para excluir diagnósticos diferenciais sindrômicos sobrepostos",
+      "Teste de fragilidade cromossômica induzida por diepoxibutano diante de suspeita de anemia de Fanconi (achados de raio radial associados a citopenias ou manchas café-com-leite)",
+      "Painel genético direcionado ou sequenciamento apenas quando há achados clínicos que sugiram uma causa monogênica específica (por exemplo, hidrocefalia associada sugerindo variante em ZIC3) — não como teste de confirmação padrão de VACTERL, que permanece diagnóstico clínico por contagem de componentes"
+    ],
+    "red_flags": [
+      "Qualquer componente isolado identificado ao nascimento (defeito vertebral, atresia anal, fístula traqueoesofágica, displasia renal ou anomalia de raio radial) sem investigação ativa dos demais componentes, incluindo ecocardiograma — a literatura documenta lacuna prática real nesse rastreio, sobretudo para anomalias de membro",
+      "Exame cardiovascular e oximetria de pulso normais usados isoladamente para descartar cardiopatia congênita em recém-nascido com componente VACTERL identificado — insuficientes, já que boa parte dos defeitos do espectro pode ser hemodinamicamente discreta ao nascimento",
+      "Achado de coloboma ocular, atresia/estenose de coanas ou disfunção de nervo craniano associados aos demais componentes — sugere síndrome de CHARGE, não VACTERL, e deve redirecionar a investigação para sequenciamento de CHD7",
+      "Pancitopenia, manchas café-com-leite ou história familiar sugestiva em paciente com atresia anal e anomalia de raio radial — investigar anemia de Fanconi antes de assumir VACTERL isolado",
+      "Hidrocefalia associada aos demais componentes — considerar variante em ZIC3 e investigação genética direcionada (fenótipo por vezes descrito como VACTERL-H)"
+    ],
+    "ambulatory_flow": [
+      "Diante de qualquer componente isolado identificado (vertebral, anal, cardíaco, traqueoesofágico, renal ou de membro), buscar ativamente os demais componentes antes de tratar o achado como isolado",
+      "Solicitar ecocardiograma de rastreio para todo recém-nascido com componente VACTERL identificado, mesmo com exame cardiovascular e oximetria de pulso normais",
+      "Coordenar avaliação multidisciplinar em paralelo (cirurgia pediátrica, nefrologia/urologia, ortopedia, genética clínica), sem aguardar confirmação de um eixo para investigar os demais",
+      "Investigar diagnósticos diferenciais sindrômicos sobrepostos diante de achados que não fazem parte do espectro típico de VACTERL — sobretudo coloboma, atresia de coana ou disfunção de nervo craniano (síndrome de CHARGE) e citopenias ou manchas café-com-leite (anemia de Fanconi)",
+      "Explicar à família que, na maioria dos casos, não se espera identificar uma causa genética única, e que o diagnóstico é clínico, por contagem de componentes — sem prometer um teste confirmatório definitivo",
+      "Estruturar seguimento cardiológico de longo prazo proporcional à complexidade do defeito estrutural encontrado, com reavaliação após eventual correção cirúrgica"
+    ],
+    "emergency_flow": [
+      "Recém-nascido com incapacidade de progressão de sonda orogástrica, sialorreia excessiva ou engasgos à primeira mamada: investigar fístula traqueoesofágica/atresia de esôfago e avaliar cardiopatia associada em paralelo, não em sequência",
+      "Recém-nascido com cianose ou colapso hemodinâmico e cardiopatia canal-dependente conhecida ou suspeita no contexto de componentes VACTERL identificados: seguir protocolo de reconhecimento e manejo de colapso neonatal por cardiopatia congênita crítica canal-dependente",
+      "Não excluir cardiopatia congênita significativa com base apenas em exame físico e oximetria de pulso normais isolados diante de qualquer componente VACTERL identificado — solicitar ecocardiograma",
+      "Malformação anorretal identificada ao exame neonatal: avaliação cirúrgica pediátrica em caráter prioritário, com investigação em paralelo dos demais componentes antes de considerar o quadro isolado"
+    ],
+    "tags": [
+      "VACTERL",
+      "VATER",
+      "associação de malformações",
+      "cardiopatia congênita sindrômica",
+      "comunicação interventricular",
+      "atresia de esôfago",
+      "fístula traqueoesofágica",
+      "atresia anal",
+      "displasia renal",
+      "anomalia de raio radial",
+      "rastreio neonatal",
+      "diagnóstico diferencial de CHARGE",
+      "etiologia heterogênea"
+    ],
+    "source_refs": [
+      "Quan L, Smith DW. The VATER association. Vertebral defects, Anal atresia, T-E fistula with esophageal atresia, Radial and Renal dysplasia: a spectrum of associated defects. J Pediatr. 1973;82(1):104-107. PMID: 4681850.",
+      "Solomon BD. VACTERL/VATER Association. Orphanet J Rare Dis. 2011;6:56. DOI: 10.1186/1750-1172-6-56. PMID: 21846383.",
+      "Cunningham BK, Hadley DW, Hannoush H, Meltzer AC, Niforatos N, Pineda-Alvarez D, Sachdev V, Warren-Mora N, Solomon BD. Analysis of cardiac anomalies in VACTERL association. Birth Defects Res A Clin Mol Teratol. 2013;97(12):792-797. DOI: 10.1002/bdra.23211. PMID: 24343877.",
+      "Lane VA, Ambeba E, Chisolm DJ, Lodwick D, Levitt MA, Wood RJ, Deans KJ, Minneci PC. Low vertebral ano-rectal cardiac tracheo-esophageal renal limb screening rates in children with anorectal malformations. J Surg Res. 2016;203(2):398-406. DOI: 10.1016/j.jss.2016.03.056. PMID: 27363649."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/4681850/",
+      "https://pubmed.ncbi.nlm.nih.gov/21846383/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3169446/",
+      "https://pubmed.ncbi.nlm.nih.gov/24343877/",
+      "https://pubmed.ncbi.nlm.nih.gov/27363649/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "associacao-vacterl-espectro-de-cardiopatia-congenita-criterios-diagnosticos-e-rastreio-no-recem-nascido"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-cornelia-de-lange",
+    "name": "Síndrome de Cornelia de Lange",
+    "aliases": [
+      "Síndrome de Brachmann-de Lange",
+      "CdLS",
+      "Cornelia de Lange syndrome",
+      "Brachmann-de Lange syndrome",
+      "coesinopatia NIPBL"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "coesinopatia_com_cardiopatia_congenita",
+    "prevalence_rank": 147,
+    "completeness": "completo",
+    "summary": "Síndrome genética do neurodesenvolvimento multissistêmica causada majoritariamente por variantes em NIPBL (~80% dos casos, autossômica dominante, de novo) e, em menor proporção, em SMC1A (~5%, ligada ao X), HDAC8 (~4%, ligada ao X), SMC3 (1-2%, autossômica dominante), RAD21, BRD4 e MAU2 (cada um <1%) — genes da via de carregamento e regulação do complexo da coesina, classificando a síndrome como uma 'coesinopatia'. Caracteriza-se por fenótipo facial típico (sinofris com sobrancelhas arqueadas em ~98%, cílios longos e espessos em >90%, micrognatia em ~80% da forma clássica, microcefalia), restrição de crescimento de início pré-natal e anomalias de membro superior em espectro contínuo (de micromelia leve a ausência completa de cotovelos e antebraços em ~25% dos casos graves). Cardiopatia congênita estrutural é relatada em cerca de 30% dos indivíduos (33,3% em coorte dedicada de 87 pacientes), predominando estenose pulmonar/pulmonar periférica e defeitos septais (CIV, CIA); variantes em SMC3 associam-se a maior frequência de malformação cardíaca (~56%).",
+    "presentation": [
+      "Sinofris com sobrancelhas arqueadas e/ou espessas",
+      "Cílios longos e espessos",
+      "Ponte nasal baixa e deprimida com narinas antevertidas",
+      "Micrognatia, com ou sem esporão mandibular",
+      "Microcefalia",
+      "Filtro nasolabial longo e/ou liso, lábio superior fino",
+      "Fenda palatina em parcela dos casos",
+      "Restrição de crescimento de início pré-natal, com peso e estatura persistentemente abaixo do percentil 5 na forma clássica",
+      "Anomalias de membro superior em espectro contínuo: micromelia leve, polegar de implantação proximal e clinodactilia do quinto dedo até oligodactilia ou ausência completa de cotovelos/antebraços (padrão tipo focomelia) nos casos mais graves",
+      "Deficiência intelectual de gravidade variável, tipicamente grave nas formas associadas a NIPBL e mais leve nas formas associadas a RAD21",
+      "Sopro cardíaco ou achado ecocardiográfico compatível com cardiopatia estrutural em cerca de 30% dos casos",
+      "Refluxo gastroesofágico grave e dificuldade alimentar, frequentes ao longo da vida"
+    ],
+    "differentials": [
+      "Síndrome CHOPS (relacionada a AFF4)",
+      "Síndrome de KBG (relacionada a ANKRD11)",
+      "Síndrome de Bohring-Opitz (relacionada a ASXL1)",
+      "Síndrome de Rubinstein-Taybi (relacionada a EP300)",
+      "Síndrome de Fryns (relacionada a PIGN)",
+      "Deleção 2q31.1",
+      "Síndrome alcoólica fetal"
+    ],
+    "tests": [
+      "Ecocardiograma inicial em todo paciente com diagnóstico clínico ou molecular de CdLS, independentemente de sintomas",
+      "Avaliação cardiológica pré-operatória antes de qualquer procedimento cirúrgico",
+      "Sequenciamento de NIPBL, SMC1A, HDAC8, SMC3, RAD21, BRD4 e MAU2 (painel multigênico direcionado ou sequenciamento de exoma)",
+      "Avaliação seriada de crescimento (peso, estatura, perímetro cefálico)",
+      "Avaliação do desenvolvimento neuropsicomotor",
+      "Avaliação gastroenterológica dirigida a refluxo gastroesofágico e dificuldade alimentar",
+      "Avaliação auditiva e oftalmológica de rotina"
+    ],
+    "red_flags": [
+      "Sopro cardíaco novo ou sintomas cardiovasculares em qualquer idade, mesmo com ecocardiograma inicial normal — valvopatia de início tardio é descrita em parcela dos pacientes",
+      "Cianose ou sinais de insuficiência cardíaca no período neonatal",
+      "Anomalia grave de membro superior (tipo focomelia) associada a fenótipo facial sugestivo — reforça a suspeita diagnóstica e a indicação de avaliação cardíaca completa",
+      "Dificuldade alimentar grave ou aspiração recorrente — causa importante de morbimortalidade na síndrome, a ser investigada em paralelo à avaliação cardíaca",
+      "Necessidade de qualquer cirurgia (especialmente gastrointestinal) sem avaliação cardiológica pré-operatória prévia"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pelo fenótipo facial típico (sinofris, cílios longos, micrognatia) associado a restrição de crescimento e/ou anomalia de membro superior",
+      "Encaminhamento a genética clínica para confirmação diagnóstica (critérios clínicos e/ou painel molecular direcionado aos genes da via da coesina)",
+      "Encaminhamento a cardiologia pediátrica assim que o diagnóstico é suspeitado ou confirmado, independentemente de sintomas cardíacos",
+      "Ecocardiograma inicial com avaliação estrutural completa no primeiro contato cardiológico",
+      "Seguimento cardiológico conforme o achado estrutural encontrado (protocolo padrão da lesão identificada, quando presente)",
+      "Reavaliação ecocardiográfica orientada por sintoma novo (sopro, sinais de insuficiência cardíaca) mesmo após ecocardiograma inicial normal — não há protocolo estabelecido de reecocardiograma seriado de rotina na ausência de achado inicial ou de sintoma novo",
+      "Rastreio multissistêmico de rotina (crescimento, desenvolvimento, gastrointestinal, auditivo, oftalmológico) conforme calendário de vigilância"
+    ],
+    "emergency_flow": [
+      "Recém-nascido com cianose ou sinais de insuficiência cardíaca: investigação ecocardiográfica urgente para cardiopatia estrutural (estenose pulmonar, defeito septal, coarctação, tetralogia de Fallot, entre outras)",
+      "Sopro novo ou deterioração clínica cardiovascular em paciente com diagnóstico já estabelecido: ecocardiograma e avaliação cardiológica sem demora, considerando a possibilidade de valvopatia de início tardio",
+      "Paciente com indicação cirúrgica não cardíaca (particularmente gastrointestinal): garantir avaliação cardiológica pré-operatória antes do procedimento, mesmo em contexto de urgência relativa",
+      "Sinais de aspiração ou desconforto respiratório agudo: avaliar disfagia e refluxo gastroesofágico grave, causas frequentes de descompensação nesta população"
+    ],
+    "tags": [
+      "síndrome de cornelia de lange",
+      "síndrome de brachmann-de lange",
+      "NIPBL",
+      "SMC1A",
+      "SMC3",
+      "HDAC8",
+      "RAD21",
+      "coesinopatia",
+      "cardiopatia congênita",
+      "defeito septal",
+      "estenose pulmonar",
+      "síndrome genética",
+      "cardiologia pediátrica",
+      "doença rara"
+    ],
+    "source_refs": [
+      "Deardorff MA, Raible SE, Krantz ID. Cornelia de Lange Syndrome. In: Adam MP, Bick S, Mirzaa GM, et al., editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Publicação inicial 16 set 2005, última atualização 16 jun 2026. NCBI Bookshelf NBK1104. PMID: 20301283.",
+      "Krantz ID, McCallum J, DeScipio C, Kaur M, Gillis LA, Yaeger D, Jukofsky L, Wasserman N, Bottani A, Morris CA, Nowaczyk MJ, Toriello H, Bamshad MJ, Carey JC, Rappaport E, Kawauchi S, Lander AD, Calof AL, Li HH, Devoto M, Jackson LG. Cornelia de Lange syndrome is caused by mutations in NIPBL, the human homolog of Drosophila melanogaster Nipped-B. Nat Genet. 2004;36(6):631-635. DOI: 10.1038/ng1364. PMID: 15146186.",
+      "Tonkin ET, Wang TJ, Lisgo S, Bamshad MJ, Strachan T. NIPBL, encoding a homolog of fungal Scc2-type sister chromatid cohesion proteins and fly Nipped-B, is mutated in Cornelia de Lange syndrome. Nat Genet. 2004;36(6):636-641. DOI: 10.1038/ng1363. PMID: 15146185.",
+      "Musio A, Selicorni A, Focarelli ML, Gervasini C, Milani D, Russo S, Vezzoni P, Larizza L. X-linked Cornelia de Lange syndrome owing to SMC1L1 mutations. Nat Genet. 2006;38(5):528-530. DOI: 10.1038/ng1779. PMID: 16604071.",
+      "Deardorff MA, Kaur M, Yaeger D, Rampuria A, Korolev S, Pie J, Gil-Rodríguez C, Arnedo M, Loeys B, Kline AD, Wilson M, Lillquist K, Siu V, Ramos FJ, Musio A, Jackson LS, Dorsett D, Krantz ID. Mutations in cohesin complex members SMC3 and SMC1A cause a mild variant of Cornelia de Lange syndrome with predominant mental retardation. Am J Hum Genet. 2007;80(3):485-494. DOI: 10.1086/511888. PMID: 17273969.",
+      "Deardorff MA, Bando M, Nakato R, Watrin E, Itoh T, Minamino M, Saitoh K, Komata M, Katou Y, Clark D, Cole KE, De Baere E, Decroos C, Di Donato N, Ernst S, Francey LJ, Gyftodimou Y, Hirashima K, Hullings M, Ishikawa Y, Jaulin C, Kaur M, Kiyono T, Lombardi PM, Magnaghi-Jaulin L, Mortier GR, Nozaki N, Petersen MB, Seimiya H, Siu VM, Suzuki Y, Takagaki K, Wilde JJ, Willems PJ, Prigent C, Gillessen-Kaesbach G, Christianson DW, Kaiser FJ, Jackson LG, Hirota T, Krantz ID, Shirahige K. HDAC8 mutations in Cornelia de Lange syndrome affect the cohesin acetylation cycle. Nature. 2012;489(7415):313-317. DOI: 10.1038/nature11316. PMID: 22885700.",
+      "Deardorff MA, Wilde JJ, Albrecht M, Dickinson E, Tennstedt S, Braunholz D, Mönnich M, Yan Y, Xu W, Gil-Rodríguez MC, Clark D, Hakonarson H, Halbach S, Michelis LD, Rampuria A, Rossier E, Spranger S, Van Maldergem L, Lynch SA, Gillessen-Kaesbach G, Lüdecke HJ, Ramsay RG, McKay MJ, Krantz ID, Xu H, Horsfield JA, Kaiser FJ. RAD21 mutations cause a human cohesinopathy. Am J Hum Genet. 2012;90(6):1014-1027. DOI: 10.1016/j.ajhg.2012.04.019. PMID: 22633399.",
+      "Selicorni A, Colli AM, Passarini A, Milani D, Cereda A, Cerutti M, Maitz S, Alloni V, Salvini L, Galli MA, Ghiglia S, Salice P, Danzi GB. Analysis of congenital heart defects in 87 consecutive patients with Brachmann-de Lange syndrome. Am J Med Genet A. 2009;149A(6):1268-1272. DOI: 10.1002/ajmg.a.32838. PMID: 19449412.",
+      "Schrier SA, Sherer I, Deardorff MA, Clark D, Audette L, Gillis L, Kline AD, Ernst L, Loomes K, Krantz ID, Jackson LG. Causes of death and autopsy findings in a large study cohort of individuals with Cornelia de Lange syndrome and review of the literature. Am J Med Genet A. 2011;155A(12):3007-3024. DOI: 10.1002/ajmg.a.34329. PMID: 22069164.",
+      "Piché J, Van Vliet PP, Pucéat M, Andelfinger G. The expanding phenotypes of cohesinopathies: one ring to rule them all! Cell Cycle. 2019;18(21):2828-2848. DOI: 10.1080/15384101.2019.1658476. PMCID: PMC6791706. PMID: 31516082."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1104/",
+      "https://pubmed.ncbi.nlm.nih.gov/15146186/",
+      "https://pubmed.ncbi.nlm.nih.gov/15146185/",
+      "https://pubmed.ncbi.nlm.nih.gov/16604071/",
+      "https://pubmed.ncbi.nlm.nih.gov/17273969/",
+      "https://pubmed.ncbi.nlm.nih.gov/22885700/",
+      "https://pubmed.ncbi.nlm.nih.gov/22633399/",
+      "https://pubmed.ncbi.nlm.nih.gov/19449412/",
+      "https://pubmed.ncbi.nlm.nih.gov/22069164/",
+      "https://pubmed.ncbi.nlm.nih.gov/31516082/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-cornelia-de-lange-espectro-de-cardiopatia-congenita-genetica-das-coesinopatias-e-rastreio-cardiaco"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-rubinstein-taybi",
+    "name": "Síndrome de Rubinstein-Taybi",
+    "aliases": [
+      "Rubinstein-Taybi syndrome",
+      "RSTS",
+      "broad thumb-hallux syndrome",
+      "síndrome do polegar largo",
+      "CREBBP-related Rubinstein-Taybi syndrome",
+      "EP300-related Rubinstein-Taybi syndrome",
+      "Rubinstein-Taybi syndrome 2"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_cromatinica_com_cardiopatia_congenita",
+    "prevalence_rank": 148,
+    "completeness": "completo",
+    "summary": "Síndrome genética do desenvolvimento (síndrome cromatínica) causada majoritariamente por variantes em CREBBP (~55-60% dos casos, autossômica dominante, geralmente de novo) e, em menor proporção, em EP300 (~8-10%, forma dita 'RSTS tipo 2'), ambos genes que codificam coativadores transcricionais com atividade de acetiltransferase de histona; em cerca de 30% dos casos clinicamente típicos, nenhuma variante é identificada. Caracteriza-se por polegares e hálux largos e frequentemente angulados (achado quase universal), fácies característica (fissuras palpebrais inclinadas para baixo, nariz proeminente com columela pendente, palato ogival, cúspides talon), atraso do desenvolvimento neuropsicomotor de grau variável (QI médio 35-50, com possibilidade de intelecto normal em subgrupo EP300) e cardiopatia congênita em cerca de um terço dos pacientes, com predomínio de persistência do canal arterial e defeitos septais (CIV, CIA) entre os achados mais citados. O fenótipo craniofacial e de via aérea (micrognatia, palato estreito, hipotonia, colapsabilidade laríngea, laringo/traqueo/broncomalácia) confere risco anestésico e de via aérea difícil aumentado, relevante para qualquer procedimento sob anestesia geral, cardíaco ou não.",
+    "presentation": [
+      "Polegares e hálux largos, frequentemente angulados (achado quase universal)",
+      "Fissuras palpebrais inclinadas para baixo",
+      "Nariz proeminente, com dorso nasal convexo e columela pendente",
+      "Palato ogival (alto)",
+      "Sorriso característico ('grimacing smile')",
+      "Cúspides talon nos incisivos maxilares",
+      "Baixa estatura pós-natal",
+      "Atraso do desenvolvimento neuropsicomotor e/ou deficiência intelectual de grau variável",
+      "Atraso de fala presente em cerca de 90% das crianças",
+      "Comportamentos do espectro autista descritos em cerca de 62% dos adultos",
+      "Ansiedade ou medos desproporcionais em cerca de um terço dos pacientes",
+      "Sopro cardíaco, cianose ou sinais de insuficiência cardíaca quando há cardiopatia estrutural associada",
+      "Ronco, apneias observadas ou sonolência diurna sugestivos de apneia obstrutiva do sono",
+      "Dificuldade alimentar e sinais sugestivos de disfagia"
+    ],
+    "differentials": [
+      "Síndrome de Kabuki",
+      "Síndrome de Cornelia de Lange",
+      "Síndrome de Coffin-Siris",
+      "Síndrome de Floating-Harbor (gene SRCAP)",
+      "Síndrome de Say-Barber-Biesecker-Young-Simpson / síndrome genitopatelar (gene KAT6B)",
+      "Síndrome de CHARGE"
+    ],
+    "tests": [
+      "Sequenciamento de CREBBP e EP300 (painel multigênico direcionado ou sequenciamento de exoma)",
+      "Análise de deleção/duplicação de CREBBP e EP300 quando sequenciamento pontual é negativo e a suspeita clínica é alta",
+      "Ecocardiograma transtorácico no momento do diagnóstico, independentemente de sintomas ou sopro",
+      "Eletrocardiograma de 12 derivações como parte da avaliação cardíaca inicial",
+      "Polissonografia diante de ronco, apneias observadas, postura de sono peculiar ou sonolência diurna excessiva",
+      "Avaliação de deglutição e/ou estudo radiográfico de deglutição diante de sinais sugestivos de disfagia",
+      "Avaliação oftalmológica anual",
+      "Avaliação audiológica anual",
+      "Avaliação renal e monitorização de crescimento com curvas específicas para RSTS quando disponíveis",
+      "Avaliação odontológica dedicada, considerando a frequência de cúspides talon e outras alterações dentárias"
+    ],
+    "red_flags": [
+      "Sinais de insuficiência cardíaca ou cianose em paciente sem avaliação cardiológica prévia",
+      "Apneia obstrutiva do sono não investigada/tratada — risco de evolução para hipertensão pulmonar secundária",
+      "Qualquer procedimento programado sob sedação ou anestesia geral (cardíaco ou não, incluindo odontológico) sem comunicação prévia do diagnóstico de RSTS à equipe de anestesiologia e sem plano antecipado para via aérea difícil",
+      "Sintomas de arritmia (síncope, palpitações) em paciente com anormalidade de condução conhecida ou suspeita",
+      "Sinais de aspiração ou disfagia não avaliados antes de dieta oral plena"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pela combinação de polegares/hálux largos e angulados, fácies característica e atraso do desenvolvimento",
+      "Encaminhamento a genética clínica para confirmação diagnóstica (critérios clínicos e/ou sequenciamento de CREBBP/EP300)",
+      "Encaminhamento a cardiologia assim que o diagnóstico é suspeitado ou confirmado, com ecocardiograma no primeiro contato, independentemente de sintomas",
+      "Rastreio de apneia obstrutiva do sono por história dirigida e polissonografia quando indicada, com atenção ao risco de hipertensão pulmonar secundária se não tratada",
+      "Seguimento cardiológico conforme o achado estrutural encontrado (protocolo padrão da lesão identificada, quando presente)",
+      "Registro explícito do diagnóstico de RSTS no prontuário e comunicação prévia a qualquer equipe de anestesiologia antes de procedimentos eletivos, incluindo odontológicos",
+      "Rastreio multissistêmico de rotina (auditivo, oftalmológico, renal, odontológico, desenvolvimento) conforme calendário de vigilância"
+    ],
+    "emergency_flow": [
+      "Recém-nascido ou lactente com sinais de insuficiência cardíaca ou cianose: investigar cardiopatia estrutural não diagnosticada com ecocardiograma urgente",
+      "Necessidade de intubação ou anestesia geral não eletiva: assumir via aérea potencialmente difícil (micrognatia, palato estreito, laringo/traqueo/broncomalácia relatadas), acionar operador experiente e ter dispositivo supraglótico e/ou videolaringoscópio disponíveis antes da tentativa",
+      "Sintomas obstrutivos ou arritmia no pós-extubação: manter vigilância ativa, dado que são complicações anestésicas documentadas na síndrome",
+      "Criança com RSTS e sinais de hipertensão pulmonar sem cardiopatia estrutural conhecida: investigar apneia obstrutiva do sono não tratada como causa potencial"
+    ],
+    "tags": [
+      "síndrome de Rubinstein-Taybi",
+      "CREBBP",
+      "EP300",
+      "cardiopatia congênita",
+      "síndrome cromatínica",
+      "persistência do canal arterial",
+      "comunicação interventricular",
+      "comunicação interatrial",
+      "via aérea difícil",
+      "risco anestésico",
+      "apneia obstrutiva do sono",
+      "síndrome genética",
+      "doença rara"
+    ],
+    "source_refs": [
+      "Stevens CA. Rubinstein-Taybi Syndrome. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Initial publication 2002 Aug 30; Last Update 2023 Nov 9. PMID: 20301699. Bookshelf ID: NBK1526.",
+      "Wu Y, Xia Y, Li P, Qu HQ, Liu Y, Yang Y, Lin J, Zheng M, Tian L, Wu Z, Huang S, Qin X, Zhou X, Chen S, Liu Y, Wang Y, Li X, Zeng H, Hakonarson H, Zhuang J. Role of the ADCY9 gene in cardiac abnormalities of the Rubinstein-Taybi syndrome. Orphanet J Rare Dis. 2020;15(1):101. DOI: 10.1186/s13023-020-01378-9. PMID: 32321550.",
+      "Bartsch O, Wagner A, Hinkel GK, et al. FISH studies in 45 patients with Rubinstein-Taybi syndrome: deletions associated with polysplenia. Eur J Hum Genet. 1999;7(7):748-756. DOI: 10.1038/sj.ejhg.5200378. PMID: 10573006.",
+      "Hanauer D, Argilla M, Wallerstein R. Rubinstein-Taybi syndrome and hypoplastic left heart. Am J Med Genet. 2002;112(1):109-111. DOI: 10.1002/ajmg.10617. PMID: 12239733.",
+      "Choi HS, Yu JJ, Kim YH, Ko JK, Park IS. Pulmonary hypertension due to obstructive sleep apnea in a child with Rubinstein-Taybi syndrome. Korean J Pediatr. 2012;55(6):212-214. DOI: 10.3345/kjp.2012.55.6.212. PMID: 22745646.",
+      "Cieślikowska A, Madej-Pilarczyk A, Iwanowski P, et al. Rubinstein-Taybi Syndrome: A Comprehensive Analysis of a Polish Cohort. Genes (Basel). 2025;16(10):1206. DOI: 10.3390/genes16101206. PMID: 41153422.",
+      "Choi N, Kim HY, Lim BC, et al. Genetic and clinical heterogeneity in Korean patients with Rubinstein-Taybi syndrome. Mol Genet Genomic Med. 2021;9(10):e1791. DOI: 10.1002/mgg3.1791. PMID: 34427995.",
+      "Solomon BD, Bodian DL, Khromykh A, Mora GG, Lanpher BC, Iyer RK, Baveja R, Vockley JG, Niederhuber JE. Expanding the phenotypic spectrum in EP300-related Rubinstein-Taybi syndrome. Am J Med Genet A. 2015;167A(5):1111-1116. DOI: 10.1002/ajmg.a.36883. PMID: 25712426.",
+      "Karahan MA, Sert H, Ayhan Z, Ayhan B. Anaesthetic Management of Children with Rubinstein-Taybi Syndrome. Turk J Anaesthesiol Reanim. 2016;44(3):152-154. DOI: 10.5152/TJAR.2016.76992. PMID: 27366579.",
+      "Khanna P, Baidya DK, Tomar V, Agarwal A. Successful use of air-Q intubating laryngeal airway after failed rapid sequence intubation in a child with Rubinstein-Taybi syndrome. Indian J Anaesth. 2013;57(2):203-204. DOI: 10.4103/0019-5049.111870. PMID: 23825828.",
+      "Au Yong PS, Lim HLE. Anesthetic Management of an Asian Pediatric Patient With Rubinstein-Taybi Syndrome for Dental Surgery. J Med Cases. 2020;11(6):148-151. DOI: 10.14740/jmc3458. PMID: 34434387.",
+      "Abduljawad EM, AlHarthi A, AlMatrafi SA, Hussain M, Shawli A, Waggass R. The Prevalence of Congenital Heart Diseases in Syndromic Children at King Khalid National Guard Hospital from 2005 to 2016. Cureus. 2020;12(4):e7891. DOI: 10.7759/cureus.7891. PMID: 32489745."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1526/",
+      "https://pubmed.ncbi.nlm.nih.gov/32321550/",
+      "https://pubmed.ncbi.nlm.nih.gov/10573006/",
+      "https://pubmed.ncbi.nlm.nih.gov/12239733/",
+      "https://pubmed.ncbi.nlm.nih.gov/22745646/",
+      "https://pubmed.ncbi.nlm.nih.gov/41153422/",
+      "https://pubmed.ncbi.nlm.nih.gov/34427995/",
+      "https://pubmed.ncbi.nlm.nih.gov/25712426/",
+      "https://pubmed.ncbi.nlm.nih.gov/27366579/",
+      "https://pubmed.ncbi.nlm.nih.gov/23825828/",
+      "https://pubmed.ncbi.nlm.nih.gov/34434387/",
+      "https://pubmed.ncbi.nlm.nih.gov/32489745/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-rubinstein-taybi-espectro-cardiovascular-genetica-crebbp-ep300-e-risco-anestesico"
+    ],
+    "patient_material_slug": null
   }
 ]
