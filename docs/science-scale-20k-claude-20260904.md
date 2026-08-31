@@ -1470,3 +1470,23 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 158 (21 descartados por colisão) | 42 |
 | **Total** | **4.900** | **361** | **4.539** |
+
+## Lote 71 — concluído (commit 512bb85d)
+
+- **5 documentos** (erro inato do metabolismo pediátrico, uma displasia esquelética com risco cardiovascular indireto, uma síndrome progeroide, uma mucopolissacaridose e uma dislipidemia genética lisossômica): deficiência de CPT2/carnitina palmitoiltransferase II (três formas clínicas — letal neonatal, infantil hepatocardiomuscular, miopática do adulto —, com diferenciação explícita de CPT1, VLCAD, deficiência primária de carnitina, Barth e Pompe — `content/Cardiologia_pediátrica`), acondroplasia (estenose de forame magno como mecanismo respiratório/neurológico de morte súbita infantil, não cardíaco primário; achado honesto de estudo caso-controle em que adultos com acondroplasia tiveram perfil de risco cardiovascular tradicional preservado ou melhor que controles pareados por IMC, contradizendo a hipótese simples de obesidade→síndrome metabólica — `content/Cardiologia_pediátrica`), progeria de Hutchinson-Gilford/HGPS (mecanismo da aterosclerose acelerada por progerina, LMNA c.1824C>T; diferenciação explícita e cuidadosa da cardiomiopatia por LMNA clássica publicada no Lote 69 — mesmo gene, mecanismos e fenótipos cardíacos completamente distintos; lonafarnib como único tratamento aprovado — `content/Cardiologia_pediátrica`), mucopolissacaridose tipo IVA/Morquio A (valvopatia predominantemente regurgitante pelo MorCAP, com sinalização explícita de divergência de uma série taiwanesa menor mostrando padrão estenótico; TRE com elosulfase alfa sem efeito significativo sobre função cardíaca; risco perioperatório multissistêmico — via aérea, coluna cervical, coração — `content/Valvopatias`), deficiência de lipase ácida lisossômica/LAL-D (espectro Wolman/CESD; mecanismo de aterosclerose por defeito de processamento lisossômico intracelular, explicitamente diferenciado do defeito de depuração extracelular da hipercolesterolemia familiar; sebelipase alfa com efeito documentado sobre biomarcadores aterogênicos, não sobre desfechos duros — `content/Prevenção_e_lipídios`).
+- **doencas**: +5, pareadas 1:1 — `deficiencia-de-cpt2`, `acondroplasia`, `progeria-de-hutchinson-gilford`, `mucopolissacaridose-iva-morquio-a-cardiovascular`, `lal-d`. `prevalence_rank` 163-167 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 5 tópicos despachados confirmaram gap genuíno após checagem cruzada contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/*.json` e `doencas/correcoes/*.json` (um falso alarme inicial de "lipase" em fragmentos/correcoes foi verificado e descartado — referia-se a lipase lipoproteica/pancreática, entidade distinta de LIPA).
+- **Correções na integração**: entidades HTML (`&amp;`, `&gt;`) em três documentos (CPT2, acondroplasia, progeria) corrigidas na transcrição; tema da progeria veio como `Cardiologia_pediátrica` (com underscore) no relatório do agente, normalizado para `Cardiologia pediátrica` (espaço) no front-matter, conforme convenção.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`). Total canônico: 10.624 itens.
+
+### Status consolidado (após Lote 71)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **366** | **4.534** |
