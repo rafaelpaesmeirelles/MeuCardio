@@ -1152,3 +1152,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 95 (11 descartados por colisão) | 105 |
 | **Total** | **4.900** | **289** | **4.611** |
+
+## Lote 56 — concluído (commit ffc28fa0)
+
+- **6 documentos** (zoonoses bacterianas/protozoárias raras e vírus históricos com acometimento cardiovascular): tularemia (pericardite como complicação rara, 5 relatos de caso 2008-2025 — `content/Geral`), carbúnculo inalatório (mediastinite hemorrágica e derrame pericárdico por toxina letal, distinguindo choque toxêmico independente de citocinas versus lesão estrutural, achados do surto dos correios de 2001 — `content/Geral`), peste septicêmica (choque séptico e disfunção miocárdica, epidemiologia histórica brasileira completa desde 1899, último caso humano em 2005 no Ceará, honestidade sobre ausência de evidência humana moderna de miocardite específica — `content/Geral`), babesiose grave (distingue disfunção cardiovascular séptico-símile bem documentada, coorte de 163 pacientes, de miocardite direta sustentada apenas por relatos de caso — `content/Geral`), poliomielite (três mecanismos cardiovasculares distintos com bases de evidência muito diferentes: miocardite histopatológica pré-vacinal, disautonomia bulbar aguda, e componente autonômico tardio na síndrome pós-pólio declarado explicitamente como não estabelecido — `content/Geral`), melioidose (pericardite/endocardite/abscesso miocárdico por Burkholderia pseudomallei, revisão sistemática de referência com apenas 31 artigos elegíveis entre quase mil rastreados, alerta de biossegurança laboratorial — `content/Endocardite`).
+- **doencas**: +6, pareadas 1:1 — `tularemia-pericardite`, `carbunculo-inalatorio`, `peste-septicemica`, `babesiose-grave`, `poliomielite-cardiovascular`, `melioidose-cardiovascular`. `prevalence_rank` 100-105 (area=geral).
+- **1 tópico despachado neste lote, corretamente descartado por colisão real**: sarampo e miocardite — já coberto de forma completa pelo documento existente `miocardite-sarampionosa-efeito-viral-amnesia-imunologica-e-reemergencia-epidemiologica.md`. O agente identificou a colisão antes de escrever qualquer conteúdo — nenhuma perda de trabalho.
+- **Melhoria de processo**: aprendendo com o Lote 55 (3 de 5 itens chegaram com slug de doença idêntico ao slug do documento, exigindo renomeação pós-hoc), todos os 6 agentes deste lote foram instruídos desde o prompt inicial a usar slug de doença distinto do slug do documento — checagem programática confirmou 6/6 pares distintos, sem necessidade de correção.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;` `&amp;`) em 5 dos 6 documentos (babesiose, poliomielite, melioidose, carbúnculo, peste), corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.500 itens.
+
+### Status consolidado (após Lote 56)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 107 | 2.293 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 101 (12 descartados por colisão) | 99 |
+| **Total** | **4.900** | **295** | **4.605** |
