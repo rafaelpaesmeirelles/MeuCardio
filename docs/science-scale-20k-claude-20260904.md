@@ -1697,3 +1697,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **411** | **4.489** |
+
+## Lote 81 — concluído (commit aea5f1ce)
+
+- **5 documentos autônomos** (sem doença especializada pareada) — pivô de estratégia: cota de doenças especializadas próxima do esgotamento (37/200 restantes), enquanto documentos é a categoria com maior folga absoluta (2.231/2.400). Cada agente minerou uma lacuna genuína diretamente em seu tema via `ls content/<tema>/` + busca ampla em `content/**/*.md`, sem produzir JSON de doença.
+  - **Doença coronariana**: ectasia e aneurisma coronariano no adulto — definição, etiologia, risco trombótico e antitrombótico dirigido por fenótipo (Markis, Swaye, Woźniak, Azarboo, Abaci, Vink).
+  - **Insuficiência cardíaca**: manejo farmacológico da IC na amiloidose cardíaca — por que evitar digoxina e bloqueadores de canal de cálcio, e o que muda entre AL e ATTR (Rubinow, Gertz, Pollak/Falk, Kittleson AHA 2020, Garcia-Pavia ESC 2021, Pinheiro 2026, Khan 2026).
+  - **Arritmias**: flutter atrial atípico pós-ablação de fibrilação atrial — mecanismo, mapeamento e estratégia de ablação (Johner, Ko Ko, Akhtar, Lim, Bai/PROPOSE, Ammar, Chou, Demian).
+  - **Hipertensão**: hipertensão induzida por AINEs — mecanismo, magnitude por fármaco e antagonismo do anti-hipertensivo (Johnson, Pope, Whelton, Sowers, Aw, Chan, Nissen/PRECISION).
+  - **Terapia intensiva**: profilaxia de sangramento gastrointestinal por estresse na UTI cardiológica — quem tratar e o que mudou com o REVISE; inclui o ângulo cardiológico específico (DAPT, anticoagulação plena, suporte circulatório mecânico) ausente dos grandes ensaios de UTI mista, e resolve explicitamente o receio de interação IBP-clopidogrel via COGENT (Cook 1994, Krag/SUP-ICU, Young/PEPTIC, Cook/REVISE 2024, MacLaren SCCM/ASHP 2024, Amer GRADE-ADOLOPMENT 2026, Bhatt/COGENT).
+- **Verificação de integridade**: nenhum slug colide com `content/**/*.md` ou `doencas/metadados.json`; todos os links de Tudo com Tudo (5-7 por documento) re-verificados contra o `known` set ao vivo do worktree, incluindo um alvo com slug acentuado confirmado por arquivo real.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.674 itens.
+
+### Status consolidado (após Lote 81)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 174 | 2.226 |
+| Casos clínicos | 900 | 51 | 849 |
+| Checklists | 600 | 40 | 560 |
+| Materiais-paciente | 500 | 36 | 464 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **416** | **4.484** |
