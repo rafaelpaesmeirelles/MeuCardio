@@ -77,8 +77,10 @@
   .spaces-home__topbar > nav { min-width:0; gap:5px; }
   .spaces-home__topbar > nav button { min-width:0; min-height:44px; padding-inline:4px; font-size:max(.68rem,11px); white-space:nowrap; }
   .spaces-home__topbar > nav button:last-child { max-width:86px; white-space:normal; line-height:1.15; }
-  .spaces-dock { grid-template-columns:repeat(7,minmax(58px,1fr)); overflow-x:auto; }
-  .spaces-dock a,.spaces-dock button,.spaces-action { font-size:max(.68rem,11px); }
+  .spaces-dock { grid-template-columns:repeat(6,minmax(0,1fr)); max-width:calc(100vw - 16px); overflow-x:hidden; }
+  .spaces-dock a,.spaces-dock button { min-width:0; padding-inline:2px; font-size:clamp(.5rem,2.2vw,.62rem); line-height:1.18; }
+  .spaces-dock a span,.spaces-dock button span { min-width:0; overflow-wrap:anywhere; }
+  .spaces-action { font-size:max(.68rem,11px); }
   .spaces-dock a:nth-child(4),.spaces-dock a:nth-child(5) { display:flex; }
 }
 
