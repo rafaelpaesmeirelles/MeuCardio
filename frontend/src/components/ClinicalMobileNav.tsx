@@ -43,7 +43,7 @@ const TRABALHO_ASSISTENCIA: LinkItem[] = [
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
-  { to: "/documentos", label: "Documentos", icon: "documento" },
+  { to: "/documentos", label: "Documentos", icon: "documento" },\n  { to: "/deslocamento", label: "Mapa de deslocamento", icon: "rota" },
   { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
   { to: "/assistente", label: "Assistente Clínica", icon: "assistente" },
   { to: "/telediagnostico", label: "Telediagnóstico", icon: "evidencia" },
@@ -67,7 +67,7 @@ const REDE: LinkItem[] = [
 
 const CONTA_ADMIN: LinkItem[] = [
   { to: "/minha-conta", label: "Minha conta", icon: "conta" },
-  { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
+  { to: "/tour?retorno=/minha-conta", label: "Tour CorVIA", icon: "check" },
   { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
   { to: "/excluir-conta", label: "Excluir conta e dados", icon: "conta" },
   { to: "/termos", label: "Termos", icon: "documento" },
