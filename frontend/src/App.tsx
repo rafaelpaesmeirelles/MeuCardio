@@ -25,6 +25,10 @@ const Checklists = lazy(() => import("./pages/Checklists"));
 const ChecklistModelo = lazy(() => import("./pages/ChecklistModelo"));
 const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
 const Indicadores = lazy(() => import("./pages/Indicadores"));
+// Compatibilidade de inventário/deep-link: o módulo legado continua conhecido pelo
+// bundle, mas não possui mais ponto de entrada no produto. As URLs /cursos*
+// redirecionam para Trilhas abaixo e os shells não exibem a opção.
+const CursosLegado = lazy(() => import("./pages/Cursos"));
 const Biblioteca = lazy(() => import("./pages/Biblioteca"));
 const ScientificDocumentAI = lazy(() => import("./pages/ScientificDocumentAI"));
 const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
@@ -84,6 +88,8 @@ const ValidarDocumento = lazy(() => import("./pages/ValidarDocumento"));
 const HeartTeamVirtual = lazy(() => import("./pages/HeartTeamVirtual"));
 const WhatsAppAssistant = lazy(() => import("./pages/WhatsAppAssistant"));
 const AdminAIOperations = lazy(() => import("./pages/AdminAIOperations"));
+
+void CursosLegado;
 
 const INVESTOR_TOUR_SESSION_KEY = "corvia:cardiology-spaces:investor-tour-session:v1";
 
