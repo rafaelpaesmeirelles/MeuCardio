@@ -25,7 +25,6 @@ const Checklists = lazy(() => import("./pages/Checklists"));
 const ChecklistModelo = lazy(() => import("./pages/ChecklistModelo"));
 const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
 const Indicadores = lazy(() => import("./pages/Indicadores"));
-const Cursos = lazy(() => import("./pages/Cursos"));
 const Biblioteca = lazy(() => import("./pages/Biblioteca"));
 const ScientificDocumentAI = lazy(() => import("./pages/ScientificDocumentAI"));
 const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
@@ -86,6 +85,8 @@ const HeartTeamVirtual = lazy(() => import("./pages/HeartTeamVirtual"));
 const WhatsAppAssistant = lazy(() => import("./pages/WhatsAppAssistant"));
 const AdminAIOperations = lazy(() => import("./pages/AdminAIOperations"));
 
+const INVESTOR_TOUR_SESSION_KEY = "corvia:cardiology-spaces:investor-tour-session:v1";
+
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
     <Suspense fallback={<Carregando texto="Carregando a tela…" />}>
@@ -144,13 +145,25 @@ export default function App() {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 
+  const noCardiologySpacesTour = location.pathname === "/tour/cardiology-spaces";
   if (
     usuario.onboarding_pendente &&
     !usuario.profile_completion_required &&
     !usuario.kyc_required &&
-    location.pathname !== "/tour"
+    !noCardiologySpacesTour
   ) {
-    return <Navigate to="/tour" replace />;
+    return <Navigate to="/tour/cardiology-spaces?retorno=/" replace />;
+  }
+
+  const investorTourSeen = window.sessionStorage.getItem(INVESTOR_TOUR_SESSION_KEY) === "seen";
+  if (
+    usuario.investidor &&
+    !usuario.profile_completion_required &&
+    !usuario.kyc_required &&
+    !investorTourSeen &&
+    !noCardiologySpacesTour
+  ) {
+    return <Navigate to="/tour/cardiology-spaces?retorno=/" replace />;
   }
 
   return (
@@ -198,8 +211,8 @@ export default function App() {
           <Route path="checklists/:slug" element={<ChecklistModelo />} />
           <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
           <Route path="indicadores" element={<Indicadores />} />
-          <Route path="cursos" element={<Cursos />} />
-          <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
+          <Route path="cursos" element={<Navigate to="/trilhas" replace />} />
+          <Route path="cursos/:slug" element={<Navigate to="/trilhas" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<Assistente />} />
           <Route path="heart-team" element={heartTeamEnabled() ? <HeartTeamVirtual /> : <Navigate to="/" replace />} />
