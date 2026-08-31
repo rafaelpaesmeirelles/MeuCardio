@@ -18429,5 +18429,109 @@
       "Chi HT, Hung DZ, Hu WH, Yang DY. Prognostic implications of hyperkalemia in toad toxin intoxication. Hum Exp Toxicol. 1998;17(6):343-6. PMID: 9688359."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto",
+    "titulo": "Estenose tricúspide reumática achada no pré-operatório de cirurgia mitral: operar as duas valvas juntas?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 39 anos, com sequela de febre reumática na infância, em acompanhamento por estenose mitral reumática grave já com indicação cirúrgica estabelecida (dispneia aos moderados esforços, área valvar mitral reduzida). Nos últimos meses, evoluiu com turgência jugular, hepatomegalia dolorosa e edema de membros inferiores que a equipe considera desproporcionais ao grau de doença mitral isoladamente conhecido. O ecocardiograma transtorácico pré-operatório, revisado com atenção à valva tricúspide, mostra folhetos tricúspides espessados, com mobilidade reduzida e fusão de comissuras, aumento importante do átrio direito, e gradiente de pressão elevado ao Doppler contínuo através da valva — achados compatíveis com estenose tricúspide reumática associada.",
+    "pergunta": "Qual a conduta mais adequada quanto à valva tricúspide nesta paciente?",
+    "opcoes": [
+      "Abordar a valva tricúspide (reparo ou substituição) na mesma cirurgia da valva mitral, já que a estenose tricúspide concomitante foi demonstrada no ecocardiograma pré-operatório e a mitral já tem indicação cirúrgica estabelecida",
+      "Tratar a congestão sistêmica com diuréticos, operar apenas a valva mitral agora, e reavaliar a valva tricúspide após a cirurgia, operando-a somente se os sintomas persistirem ou progredirem",
+      "Não intervir sobre a valva tricúspide neste momento, pois a estenose tricúspide costuma ter curso benigno e isoladamente raramente exige tratamento específico — manter apenas vigilância ecocardiográfica anual",
+      "Indicar valvuloplastia tricúspide por balão percutâneo antes da cirurgia mitral, evitando ampliar o porte da cirurgia combinada"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A etiologia reumática da estenose tricúspide é quase sempre multivalvar, e a congestão sistêmica desproporcional ao grau conhecido de doença mitral é justamente o sinal que deve levar à reavaliação ecocardiográfica dedicada da valva tricúspide — o que já foi feito aqui, confirmando estenose associada. Uma vez demonstrada essa estenose tricúspide concomitante em paciente que já tem indicação cirúrgica para a valva mitral, a conduta correta é abordar as duas valvas no mesmo tempo cirúrgico: operar a mitral e 'deixar para depois' a estenose tricúspide já identificada significa reoperação evitável. A opção de tratar clinicamente e reavaliar depois (opção 2) é exatamente o padrão de adiamento que o documento-fonte identifica como armadilha. A opção 3 usa um fato verdadeiro fora de contexto: a estenose tricúspide *isolada* de fato costuma ter curso benigno e não exigir tratamento específico — mas essa afirmação vale para estenose tricúspide isolada, não para o cenário desta paciente, em que a valvopatia mitral concomitante já exige cirurgia, condição que por si só justifica corrigir a tricúspide junto. A opção 4 aplica incorretamente à valva tricúspide uma técnica (valvuloplastia por balão) que é tratamento estabelecido para estenose mitral, mas que o documento-fonte não descreve como opção para a valva tricúspide, cujo tratamento definitivo é cirúrgico (reparo ou substituição).",
+    "source_refs": [
+      "Estenose Tricúspide Reumática: Diagnóstico e Manejo — documento interno Corvia Clinical OS (content/Valvopatias/estenose-tricuspide-reumatica-diagnostico-e-manejo.md), baseado em Tricuspid Stenosis · StatPearls · NCBI Bookshelf · NBK499990, com achados ecocardiográficos conferidos por busca cruzada em literatura secundária concordante (Merck Manual Professional Edition, revisões indexadas em PMC)."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "endocardite-protetica-tardia-nao-complicada-por-estreptococo-cirurgia-ou-antibiotico",
+    "titulo": "Endocardite protética tardia por estreptococo, sem complicações: cirurgia agora ou antibiótico com seguimento próximo?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, submetido a troca valvar aórtica por prótese biológica há 14 meses. Internado com febre há 5 dias, sem calafrios importantes. Ao exame: ausculta cardíaca sem sopro novo, sem estertores pulmonares, sem edema de membros, sem sinais de insuficiência cardíaca. Duas hemoculturas colhidas na admissão são positivas para Streptococcus mitis (grupo viridans), sensível à penicilina. Ecocardiograma transesofágico mostra pequena vegetação móvel em folheto da prótese biológica aórtica, sem abscesso ou pseudoaneurisma perianular, gradiente transprotético normal e função protética preservada. ECG sem alterações do intervalo PR e sem bloqueio atrioventricular novo. Após início de antibioticoterapia dirigida (penicilina G associada a gentamicina, conforme sensibilidade), o paciente apresenta defervescência e melhora clínica progressiva nos dias seguintes, sem novas hemoculturas positivas.",
+    "pergunta": "Qual a conduta mais apropriada em relação à indicação cirúrgica neste momento?",
+    "opcoes": [
+      "Manter antibioticoterapia dirigida ao Streptococcus mitis, com acompanhamento clínico e ecocardiográfico próximo, reservando cirurgia para o surgimento de insuficiência cardíaca, abscesso perianular, disfunção protética grave ou febre persistente/recorrente",
+      "Indicar cirurgia agora, com nova troca valvar e desbridamento completo, pois toda endocardite de prótese valvar tem recomendação Classe I de reoperação, independentemente do tempo decorrido desde a cirurgia índice",
+      "Como a cirurgia índice foi há mais de 6 meses, o episódio é de baixo risco por definição — completar o curso de antibiótico e dar alta sem necessidade de reavaliação ecocardiográfica programada",
+      "Como se trata de prótese biológica e não mecânica, cirurgia está descartada neste episódio de endocardite protética, mesmo que surjam sinais de complicação durante o tratamento"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A recomendação Classe I/Nível C de cirurgia da ESC 2023 (Recommendation Table 19) para endocardite protética (PVE) é específica para a forma PRECOCE, definida pela própria tabela como dentro de 6 meses da cirurgia valvar — racional: nesse cenário a infecção está associada ao período peri-operatório, tem mortalidade alta e o tratamento conservador raramente cura. Este paciente está a 14 meses da cirurgia índice, portanto em PVE TARDIA. Para PVE tardia NÃO COMPLICADA e NÃO ESTAFILOCÓCICA — exatamente o perfil do caso, causada por Streptococcus mitis (grupo viridans, coerente com o padrão microbiológico típico de prótese biológica descrito na diretriz), sem insuficiência cardíaca, sem abscesso, sem disfunção protética grave e sem febre persistente — a ESC 2023 (Seção 12.1.3) explicita que o manejo conservador com antibiótico é apropriado, desde que acompanhado de seguimento próximo, pelo risco de evento tardio, recidiva ou disfunção valvar. A opção 2 é a armadilha central do caso: aplica de forma reflexa a recomendação Classe I da PVE precoce a um episódio de PVE tardia, ignorando que a própria diretriz reserva a cirurgia mandatória para o corte temporal de 6 meses e trata a forma tardia não complicada de modo distinto. A opção 3 erra ao interpretar 'conservador' como 'sem necessidade de seguimento' — a diretriz é explícita que o manejo conservador exige acompanhamento clínico e ecocardiográfico próximo, justamente porque o risco de descompensação tardia persiste. A opção 4 é falsa: o tipo de prótese (biológica versus mecânica) não é o que determina a indicação cirúrgica na PVE tardia — os subgrupos de alto risco (insuficiência cardíaca, disfunção protética grave, abscesso, febre persistente) continuam sendo indicação cirúrgica reconhecida pela diretriz independentemente do material da prótese.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — Seção 12.1 e Recommendation Table 19, conforme documento content/Endocardite/endocardite-protetica-precoce-versus-tardia-esc-2023.md"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "tireotoxicose-por-amiodarona-em-portador-de-tv-so-controlada-pelo-farmaco-suspender-ou-tratar-o-fenotipo",
+    "titulo": "Tireotoxicose por amiodarona em portador de taquicardia ventricular só controlada pelo fármaco: suspender ou tratar o fenótipo?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, com cardiomiopatia isquêmica e portador de CDI, tem história de múltiplos episódios de taquicardia ventricular monomórfica sustentada refratários a outros antiarrítmicos — a arritmia só ficou controlada após início de amiodarona há 14 meses, sem recorrências desde então. Tem bócio multinodular conhecido há vários anos, documentado antes de iniciar a amiodarona, quando os exames de função tireoidiana basais eram normais. Retorna ao ambulatório com queixa de perda de peso, tremor e palpitações nas últimas semanas. Exames mostram TSH suprimido e T4 livre elevado, compatíveis com tireotoxicose.",
+    "pergunta": "Qual a conduta mais apropriada neste momento?",
+    "opcoes": [
+      "Suspender a amiodarona imediatamente e aguardar resolução espontânea da tireotoxicose, já que ela é a causa do quadro",
+      "Iniciar corticosteroide, tratamento indicado para a tireotoxicose associada à amiodarona",
+      "Iniciar droga antitireoidiana, compatível com o fenótipo sugerido pelo bócio multinodular preexistente, e reavaliar de forma individualizada se a amiodarona deve ser suspensa, ponderando o risco tireoidiano contra o risco de perder o controle da taquicardia ventricular",
+      "Suspender a amiodarona e substituí-la por outro antiarrítmico equivalente, o que resolve tanto o problema arrítmico quanto o tireoidiano"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A tireotoxicose associada à amiodarona (AIT) tem dois fenótipos com tratamentos opostos: tipo 1, por excesso de iodo levando a síntese aumentada de hormônio em tireoide com doença subjacente (tratada com droga antitireoidiana), e tipo 2, por tireoidite destrutiva em tireoide previamente normal (tratada com corticosteroide). Neste paciente, o bócio multinodular preexistente e documentado antes do uso de amiodarona é o dado que aponta para o fenótipo tipo 1 — tireoide com doença de base, hipersíntese hormonal por excesso de iodo —, o que torna a droga antitireoidiana a terapia dirigida ao mecanismo correto; dar corticosteroide isolado (opção 2) não bloqueia a produção hormonal nesse cenário. Sobre suspender a amiodarona: a decisão deve ser individualizada, ponderando risco tireoidiano contra risco cardíaco, e não tomada automaticamente diante de qualquer tireotoxicose. Duas armadilhas específicas tornam as opções 1 e 4 erradas: primeiro, a meia-vida longa da amiodarona e o depósito de iodo fazem o efeito persistir por meses, então suspender não resolve a tireotoxicose rapidamente nem justifica 'aguardar' como conduta isolada; segundo, e mais crítico neste caso, a amiodarona é o único fármaco que controlou a taquicardia ventricular deste paciente após falha de outros antiarrítmicos — retirá-la troca um problema endócrino tratável por um risco arrítmico que pode ser fatal, e a premissa de que existe um 'antiarrítmico equivalente' prontamente disponível não está sustentada. A tireotoxicose, além disso, tende a agravar a própria arritmia, o que reforça a necessidade de tratar o fenótipo tireoidiano em vez de simplesmente remover o antiarrítmico.",
+    "source_refs": [
+      "Nagesh S, Maiya S, Kunnath RDN. Amiodarone-associated thyroid dysfunction: Current evidence and a practical approach to management. Indian Heart J. 2026. DOI: 10.1016/j.ihj.2026.07.010. PMID: 42520855",
+      "content/Arritmias/disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender.md"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cetoacidose-euglicemica-por-isglt2-glicemia-normal-nao-exclui-diagnostico",
+    "titulo": "Diabética em uso de empagliflozina com náusea e taquipneia: a glicemia de 168 mg/dL afasta cetoacidose?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 61 anos, diabetes tipo 2 e doença arterial coronariana estabelecida (infarto prévio há 3 anos), em uso regular de empagliflozina 10mg/dia, metformina e AAS. Procura o pronto-socorro relatando náusea, vômitos e dor abdominal difusa há dois dias, além de mal-estar importante. Conta que, por estar 'enjoada', reduziu bastante a ingesta alimentar e hídrica nesse período. Ao exame: taquipneica leve (FR 24 irpm), mucosas discretamente secas, abdome doloroso difusamente à palpação, sem sinais de irritação peritoneal, sem febre. Glicemia capilar: 168 mg/dL.",
+    "pergunta": "Diante desse quadro, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Dosar cetonas (sangue ou urina) e gasometria com bicarbonato agora, independentemente da glicemia estar apenas discretamente elevada, pois a baixa ingesta oral em paciente usando iSGLT2 é fator precipitante reconhecido de cetoacidose diabética euglicêmica",
+      "Não solicitar cetonas neste momento: uma glicemia de 168 mg/dL está bem abaixo do patamar de 250-300 mg/dL habitualmente associado à cetoacidose diabética, tornando esse diagnóstico pouco provável",
+      "Repetir a glicemia capilar em algumas horas e reservar a dosagem de cetonas para o caso de ela ultrapassar 250 mg/dL",
+      "Suspender a empagliflozina e reavaliar em 48 horas sem exames adicionais, já que o quadro é inespecífico e a glicemia normal afasta urgência metabólica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A cetoacidose diabética (CAD) associada a inibidores de SGLT2 é caracteristicamente euglicêmica ou apenas discretamente hiperglicêmica — na série original de Peters et al. (Diabetes Care 2015), a glicemia tipicamente fica abaixo de 300 mg/dL, valor muito inferior ao que costuma disparar a suspeita clínica de CAD. O mecanismo explica por quê: o iSGLT2 mantém glicosúria persistente e independente de insulina, o que segura a glicemia plasmática mesmo quando a ingesta calórica cai e o metabolismo já desviou para a cetogênese por insulinopenia relativa. Nesta paciente, a redução importante da ingesta alimentar e hídrica é exatamente um dos fatores precipitantes descritos na literatura (junto com jejum prolongado, cirurgia, infecção e redução de dose de insulina). Diante de sintomas compatíveis com acidose — náusea, vômitos, dor abdominal, taquipneia — em usuária de iSGLT2, a glicemia capilar normal ou pouco elevada NÃO afasta CAD: é preciso dosar cetonas e gasometria/bicarbonato independentemente do valor glicêmico, como o próprio documento-fonte recomenda como conduta prática à beira do leito. A opção 2 reproduz literalmente a armadilha que a literatura descreve: Peters et al. relatam textualmente que 'a ausência de hiperglicemia significativa nesses pacientes atrasou o reconhecimento da natureza emergencial do problema' — usar um limiar glicêmico de 250-300 mg/dL como critério para sequer suspeitar do diagnóstico é a causa documentada de atraso diagnóstico nesta entidade. A opção 3 comete o mesmo erro de forma disfarçada: condiciona a investigação a uma elevação futura da glicemia, quando o próprio ponto é que ela pode nunca subir o suficiente. A opção 4 acerta em suspender o iSGLT2 (medida correta), mas erra ao dispensar a investigação laboratorial imediata — sem cetonas e gasometria, uma CAD em curso pode evoluir sem diagnóstico nem tratamento (insulina, reposição volêmica e eletrolítica) nas 48 horas de 'observação'.",
+    "source_refs": [
+      "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479. DOI 10.2337/dc15-0843",
+      "Rosenstock J, Ferrannini E. Euglycemic Diabetic Ketoacidosis: A Predictable, Detectable, and Preventable Safety Concern With SGLT2 Inhibitors. Diabetes Care. 2015;38(9):1638-1642. PMID 26294774. DOI 10.2337/dc15-1380",
+      "Morace C, Lorello G, Bellone F, et al. Ketoacidosis and SGLT2 Inhibitors: A Narrative Review. Metabolites. 2024;14(5):264. PMID 38786741. DOI 10.3390/metabo14050264"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "digoxina-em-icfer-do-muito-idoso-desprescricao-cautelosa-apos-otimizacao-dos-quatro-pilares",
+    "titulo": "Digoxina em idosa com ICFEr já nos quatro pilares: simplificar o esquema é suspendê-la?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 88 anos, insuficiência cardíaca com FEVE de 32%, em ritmo sinusal. Usa digoxina 0,125mg/dia há vários anos, associada por sintomas persistentes antes da otimização atual. Nos últimos meses, sacubitril-valsartana, betabloqueador, espironolactona e dapagliflozina foram todos iniciados e titulados, com melhora funcional (NYHA II). TFGe atual 45mL/min/1,73m² (estável), potássio 4,4mEq/L. A paciente usa ao todo 12 medicamentos. Numa revisão farmacêutica estruturada de polifarmácia (rastreio STOPP/Beers), o farmacêutico assinala a digoxina como candidata a suspensão, argumentando que os quatro pilares modernos tornam o fármaco redundante e que se trata de droga antiga, de janela terapêutica estreita, em paciente muito idosa.",
+    "pergunta": "À luz da atualização de 2023 dos critérios de Beers, qual a conduta mais adequada quanto à digoxina desta paciente?",
+    "opcoes": [
+      "Suspender a digoxina agora mesmo, já que os quatro pilares modernos tornam sua manutenção desnecessária e ela é fármaco antigo com risco de toxicidade em idosa muito idosa",
+      "Manter a digoxina na dose atual (não superior a 0,125mg/dia), reavaliando periodicamente se a indicação clínica persiste, e evitar suspensão abrupta sem essa reavaliação estruturada",
+      "Aumentar a dose de digoxina para reforçar o controle sintomático, já que ainda há registro prévio de sintomas apesar dos quatro pilares",
+      "Substituir a digoxina por diltiazem para simplificar o esquema mantendo controle de frequência com um único fármaco adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A atualização de 2023 dos critérios de Beers traz um item novo (ausente da versão de 2019, citado explicitamente no documento-fonte): 'usar cautela ao descontinuar digoxina em usuário crônico com IC de fração reduzida — há evidência limitada de pior desfecho clínico após a suspensão'. Isso inverte a intuição de que suspender um fármaco antigo e de janela estreita é sempre a opção mais segura ao desprescrever num idoso polimedicado — aqui, a suspensão abrupta sem reavaliação é o próprio risco a evitar, não a solução. A conduta correta é reavaliar a indicação de forma estruturada (não suspender por rotina) e manter a dose dentro do limite seguro: a mesma fonte é explícita que 'em insuficiência cardíaca, doses mais altas não trazem benefício adicional e podem aumentar risco de toxicidade' e que, se usada para IC, deve-se 'evitar doses >0,125mg/dia' — o que descarta a opção de aumentar a dose para reforço sintomático. Trocar digoxina por diltiazem também é armadilha: o documento-fonte lista bloqueadores de canal de cálcio não diidropiridínicos (diltiazem, verapamil) como fármacos a **evitar especificamente na ICFEr**, tornando essa opção uma segunda escolha inadequada, não uma simplificação segura. A TFGe de 45mL/min (estágio 3) da paciente reforça vigilância de dose, mas não muda a orientação central: reavaliar sem suspender abruptamente.",
+    "source_refs": [
+      "content/Cardiologia_geriátrica/polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao.md — seção 'Digoxina: o caso mais bem documentado da atualização de 2023'",
+      "2023 American Geriatrics Society Beers Criteria(R) Update Expert Panel. American Geriatrics Society 2023 updated AGS Beers Criteria(R) for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-2081. PMID: 37139824. PMCID: PMC12478568"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
