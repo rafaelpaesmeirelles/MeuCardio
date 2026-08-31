@@ -1513,3 +1513,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 8 | 292 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **371** | **4.529** |
+
+## Lote 73 — concluído (commit 775820da)
+
+- **5 trilhas** (continuação do rebalanceamento de cota iniciado no Lote 72). Mesma metodologia: leitura integral das 17 trilhas já existentes em cada tema antes de escolher o ângulo, todas as referências verificadas individualmente por mim antes da integração.
+  - **Prevenção e lipídios**: dislipidemias genéticas raras além da HF clássica — HoFH/ANGPTL3 (evinacumabe), LAL-D, quilomicronemia familiar/ApoC-III (plozasiran/olezarsen), Lp(a)/olpasirana — fenótipo extremo pareado com terapia dirigida ao mecanismo (10 etapas).
+  - **Saúde mental e cardiologia**: pontos cegos de farmacovigilância (mito do betabloqueador-suicídio vs. risco real do tricíclico vs. sinal regulatório do GLP-1 investigado e encerrado vs. fronteira ainda incerta dos psicodélicos) e três fatores de risco nunca perguntados na anamnese (hostilidade crônica, transtornos pré-menstruais, violência por parceiro íntimo/ACEs) (10 etapas).
+  - **Endocardite**: hemocultura negativa — HACEK, zoonoses (febre Q, Bartonella, brucelose, Whipple) e endocardite fúngica brasileira (coorte Siciliano 2018), do raciocínio diagnóstico estruturado à indicação cirúrgica (14 etapas).
+  - **Síncope**: diferenciação da causa estrutural/elétrica maligna na síncope relacionada ao exercício no atleta — eixo central no momento exato da síncope (durante vs. pós-esforço), CMH, anomalia coronariana, canalopatias, commotio cordis (14 etapas).
+  - **Perioperatório**: otimização farmacológica pré-operatória de classes recentes — SGLT2 (tensão cetoacidose euglicêmica vs. proteção cardiovascular perdida ao suspender cedo), GLP-1 (risco de aspiração), estatina/STICS, SRAA, anemia pré-operatória (PREVENTT negativo) e o pacote ERAS cardíaco (14 etapas).
+- **Verificação de integridade**: todas as 62 referências verificadas independentemente contra o manifesto/arquivo correto (incluindo descoberta de que `item_type: calculadora` resolve contra `backend/app/services/calculators.py`, não um manifesto JSON) — nenhuma referência quebrada.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.634 itens.
+
+### Status consolidado (após Lote 73)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 13 | 287 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **376** | **4.524** |
