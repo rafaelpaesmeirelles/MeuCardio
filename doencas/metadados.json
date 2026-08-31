@@ -49701,5 +49701,730 @@
       "dermatomiosite-e-polimiosite-miocardite-subclinica-aterosclerose-acelerada-e-arritmias-cardiovasculares"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "ateroembolismo-por-colesterol",
+    "name": "Doença ateroembólica por cristais de colesterol",
+    "aliases": [
+      "ateroembolismo sistêmico",
+      "embolia de colesterol",
+      "síndrome do dedo azul",
+      "síndrome do dedo roxo",
+      "cholesterol crystal embolism",
+      "blue toe syndrome",
+      "purple toe syndrome"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "embolizacao_sistemica_de_cristais_de_colesterol",
+    "prevalence_rank": 114,
+    "completeness": "completo",
+    "summary": "Síndrome multissistêmica causada pela embolização de cristais de colesterol a partir de placa aterosclerótica aórtica instável — espontânea ou desencadeada por cateterismo/angiografia, cirurgia vascular ou anticoagulação/trombólise —, que oclui a microvasculatura de pele, rins, trato gastrointestinal, retina e sistema nervoso central e desencadeia reação inflamatória granulomatosa de corpo estranho; mimetiza vasculite sistêmica por cursar com eosinofilia e hipocomplementemia transitórias, e distingue-se de oclusão arterial trombótica pelos pulsos periféricos preservados.",
+    "presentation": [
+      "Livedo reticular",
+      "Síndrome do dedo azul/roxo com pulsos periféricos preservados",
+      "Insuficiência renal subaguda e progressiva ao longo de dias a semanas",
+      "Eosinofilia periférica transitória",
+      "Hipocomplementemia transitória",
+      "Dor abdominal, sangramento digestivo ou pancreatite por embolização mesentérica",
+      "Placas de Hollenhorst e amaurose fugaz à fundoscopia",
+      "Início dias a semanas após cateterismo cardíaco, cirurgia vascular aórtica ou início de anticoagulação/trombólise"
+    ],
+    "differentials": [
+      "Poliangiite microscópica e outras vasculites sistêmicas de pequenos vasos",
+      "Granulomatose eosinofílica com poliangiite (Churg-Strauss)",
+      "Endocardite infecciosa com embolização séptica",
+      "Mixoma atrial embolizante",
+      "Oclusão arterial trombótica aguda de membro",
+      "Nefrite intersticial aguda por fármacos",
+      "Crioglobulinemia"
+    ],
+    "tests": [
+      "Hemograma com eosinófilos e VHS/PCR",
+      "Dosagem de complemento sérico (C3/C4)",
+      "Função renal seriada e urina tipo I com pesquisa de eosinofiluria",
+      "Biópsia de pele ou renal com fendas biconvexas características (achado patognomônico)",
+      "Fundoscopia em busca de placas de Hollenhorst",
+      "Ecocardiograma transesofágico ou angiotomografia de aorta para caracterizar a placa de origem"
+    ],
+    "red_flags": [
+      "Dedo azul/roxo com pulsos periféricos preservados dias a semanas após cateterismo, cirurgia vascular ou início de anticoagulação",
+      "Insuficiência renal subaguda progressiva em paciente idoso com aterosclerose difusa",
+      "Eosinofilia e hipocomplementemia transitórias sugerindo, à primeira vista, vasculite",
+      "Multissistêmico com acometimento cutâneo, renal e gastrointestinal concomitantes"
+    ],
+    "ambulatory_flow": [
+      "Investigar contexto temporal de procedimento vascular ou anticoagulação/trombólise recente diante de livedo reticular ou dedo azul inexplicado",
+      "Solicitar função renal, hemograma com eosinófilos e complemento sérico",
+      "Encaminhar para biópsia de pele de lesão suspeita quando o diagnóstico permanecer incerto",
+      "Otimizar estatina e fatores de risco ateroscleróticos; evitar novo procedimento vascular ou anticoagulação desnecessária"
+    ],
+    "emergency_flow": [
+      "Excluir diagnósticos que exigem intervenção imediata (oclusão arterial trombótica com pulso ausente, isquemia mesentérica aguda com abdome agudo, endocardite)",
+      "Avaliar necessidade de suporte dialítico diante de disfunção renal progressiva",
+      "Suspender ou reavaliar anticoagulação/trombólise em curso quando clinicamente plausível como gatilho, ponderando o risco da indicação de base",
+      "Acionar nefrologia e cardiologia vascular para manejo multissistêmico"
+    ],
+    "tags": [
+      "ateroembolismo",
+      "embolia de colesterol",
+      "síndrome do dedo azul",
+      "vasculite mimic",
+      "complicação de cateterismo",
+      "aorta",
+      "doença renal ateroembólica"
+    ],
+    "source_refs": [
+      "Scolari F, Ravani P. Atheroembolic renal disease. Lancet. 2010;375(9726):1650-1660. DOI: 10.1016/S0140-6736(09)62073-0. PMID: 20381857.",
+      "Fine MJ, Kapoor W, Falanga V. Cholesterol crystal embolization: a review of 221 cases in the English literature. Angiology. 1987;38(10):769-784. DOI: 10.1177/000331978703801007. PMID: 3310742.",
+      "Saric M, Kronzon I. Aortic atherosclerosis and embolic events. Curr Cardiol Rep. 2012;14(3):342-349. DOI: 10.1007/s11886-012-0261-2. PMID: 22437371.",
+      "Meyrier A. Cholesterol crystal embolism: diagnosis and treatment. Kidney Int. 2006;69(8):1308-1312. DOI: 10.1038/sj.ki.5000263. PMID: 16614719.",
+      "Belenfant X, Meyrier A, Jacquot C. Supportive treatment improves survival in multivisceral cholesterol crystal embolism. Am J Kidney Dis. 1999;33(5):840-850. DOI: 10.1016/S0272-6386(99)70415-4. PMID: 10213638.",
+      "Li X, Bayliss G, Zhuang S. Cholesterol Crystal Embolism and Chronic Kidney Disease. Int J Mol Sci. 2017;18(6):1120. DOI: 10.3390/ijms18061120. PMID: 28538699.",
+      "Denis Le Sève J, Gourraud-Vercel C, Connault J, Artifoni M. Update on cholesterol crystal embolism. Rev Med Interne. 2020;41(4):250-257. DOI: 10.1016/j.revmed.2020.02.002. PMID: 32088097.",
+      "Hyman BT, Landas SK, Ashman RF, Schelper RL, Robinson RA. Warfarin-related purple toes syndrome and cholesterol microembolization. Am J Med. 1987;82(6):1233-1237. DOI: 10.1016/0002-9343(87)90231-2. PMID: 3605140.",
+      "Thériault J, Agharazzi M, Dumont M, Pichette V, Ouimet D, Leblanc M. Atheroembolic renal failure requiring dialysis: potential for renal recovery? A review of 43 cases. Nephron Clin Pract. 2003;94(1):c11-c18. DOI: 10.1159/000070819. PMID: 12806187.",
+      "Wilson DM, Salazar TL, Farkouh ME. Eosinophiluria in atheroembolic renal disease. Am J Med. 1991;91(2):186-189. DOI: 10.1016/0002-9343(91)90013-N. PMID: 1867244.",
+      "Ravani P, Gaggi R, Rollino C, et al. Lack of association between dialysis modality and outcomes in atheroembolic renal disease. Clin J Am Soc Nephrol. 2010;5(3):454-459. DOI: 10.2215/CJN.06590909. PMID: 20019115.",
+      "Umemoto D, Nishino I, Yamashita D, Ishimaru N, Nishioka H. Small-vessel vasculitis associated with cholesterol embolism: a case report. BMC Rheumatol. 2024;8(1):66. DOI: 10.1186/s41927-024-00437-z. PMID: 39639413."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20381857/",
+      "https://pubmed.ncbi.nlm.nih.gov/3310742/",
+      "https://pubmed.ncbi.nlm.nih.gov/22437371/",
+      "https://pubmed.ncbi.nlm.nih.gov/16614719/",
+      "https://pubmed.ncbi.nlm.nih.gov/10213638/",
+      "https://pubmed.ncbi.nlm.nih.gov/28538699/",
+      "https://pubmed.ncbi.nlm.nih.gov/32088097/",
+      "https://pubmed.ncbi.nlm.nih.gov/3605140/",
+      "https://pubmed.ncbi.nlm.nih.gov/12806187/",
+      "https://pubmed.ncbi.nlm.nih.gov/1867244/",
+      "https://pubmed.ncbi.nlm.nih.gov/20019115/",
+      "https://pubmed.ncbi.nlm.nih.gov/39639413/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-embolia-gordurosa",
+    "name": "Síndrome de embolia gordurosa",
+    "aliases": [
+      "SEG",
+      "fat embolism syndrome",
+      "embolia gordurosa pós-fratura",
+      "embolia gordurosa ortopédica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "complicacao_pos_traumatica_ou_pos_operatoria",
+    "prevalence_rank": 115,
+    "completeness": "completo",
+    "summary": "Síndrome sistêmica desencadeada pela liberação de gordura da medula óssea na circulação após fratura de osso longo (fêmur é o clássico), fratura pélvica ou instrumentação cirúrgica do canal medular (artroplastia com haste intramedular), e mais raramente após pancreatite aguda, lipoaspiração ou necrose gordurosa maciça. Manifesta-se 24 a 72 horas após o evento com tríade de insuficiência respiratória hipoxêmica, alterações neurológicas e rash petequial, podendo cursar com disfunção aguda de ventrículo direito por hipertensão pulmonar aguda. Diagnóstico essencialmente clínico pelos critérios de Gurd e Wilson; tratamento é de suporte.",
+    "presentation": [
+      "Insuficiência respiratória hipoxêmica de início 24 a 72 horas após fratura de osso longo, fratura pélvica ou cirurgia ortopédica com instrumentação do canal medular",
+      "Alterações neurológicas variando de confusão e agitação a coma, geralmente sem déficit focal correspondente a território vascular único",
+      "Rash petequial em tórax, axilas e conjuntivas, tipicamente surgindo 24 a 36 horas após o evento e transitório",
+      "Taquicardia sinusal quase universal nos casos sintomáticos",
+      "Febre, sem foco infeccioso identificado inicialmente",
+      "Disfunção aguda de ventrículo direito por hipertensão pulmonar aguda, podendo evoluir para choque obstrutivo/cardiogênico direito nos casos graves",
+      "Contextos não traumáticos mais raros: pancreatite aguda, lipoaspiração de grande volume, necrose gordurosa maciça"
+    ],
+    "differentials": [
+      "Tromboembolismo pulmonar agudo",
+      "SDRA por outra causa (contusão pulmonar, aspiração, transfusão maciça)",
+      "Sepse e choque séptico",
+      "Traumatismo cranioencefálico com alteração neurológica primária",
+      "Acidente vascular cerebral embólico",
+      "Púrpura trombocitopênica trombótica e outras microangiopatias trombóticas",
+      "Reação transfusional ou coagulação intravascular disseminada"
+    ],
+    "tests": [
+      "Diagnóstico clínico pelos critérios de Gurd e Wilson (1 critério maior + ao menos 4 critérios menores)",
+      "TC de tórax: padrão em vidro fosco difuso ou multifocal e nódulos centrolobulares",
+      "RM de crânio nos casos com acometimento neurológico: padrão em 'céu estrelado' (starfield pattern) na difusão",
+      "Ecocardiograma para avaliação de disfunção de ventrículo direito e pressão sistólica de artéria pulmonar estimada",
+      "Hemograma seriado (queda de hemoglobina, trombocitopenia), VHS, exame de urina (lipúria) e fundo de olho (embolia retiniana) como critérios menores de apoio",
+      "Gasometria arterial para quantificar gravidade da hipoxemia"
+    ],
+    "red_flags": [
+      "Hipoxemia progressiva com necessidade crescente de suporte ventilatório",
+      "Rebaixamento de consciência ou coma",
+      "Sinais de disfunção de ventrículo direito: hipotensão, turgência jugular, choque obstrutivo",
+      "Instalação nas primeiras 24 a 72 horas após fratura de osso longo, fratura pélvica ou artroplastia com haste intramedular",
+      "Múltiplas fraturas de ossos longos ou fratura pélvica associada, que aumentam o risco de SEG"
+    ],
+    "ambulatory_flow": [
+      "SEG não é condição de manejo ambulatorial; qualquer suspeita em paciente com fratura recente ou cirurgia ortopédica exige avaliação hospitalar imediata",
+      "Em paciente já internado por fratura de osso longo, manter vigilância clínica ativa na janela de 24 a 72 horas pós-trauma ou pós-cirurgia para sinais de insuficiência respiratória, alteração neurológica ou rash petequial"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, oxigenar e monitorizar; aplicar critérios de Gurd e Wilson para sustentar a hipótese diagnóstica",
+      "Solicitar TC de tórax e considerar RM de crânio se houver acometimento neurológico relevante",
+      "Realizar ecocardiograma para avaliar função de ventrículo direito e pressão pulmonar estimada",
+      "Suporte respiratório proporcional à gravidade, de oxigenoterapia suplementar a ventilação mecânica protetora",
+      "Em disfunção de ventrículo direito, seguir princípios gerais de manejo do cor pulmonale agudo: otimização cuidadosa de volume, suporte vasopressor/inotrópico e, em casos refratários, suporte circulatório mecânico",
+      "Excluir diagnósticos diferenciais relevantes, sobretudo tromboembolismo pulmonar agudo",
+      "Não há terapia específica que reverta a embolização já instalada; tratamento é de suporte"
+    ],
+    "tags": [
+      "embolia gordurosa",
+      "fratura de fêmur",
+      "fratura pélvica",
+      "artroplastia",
+      "haste intramedular",
+      "critérios de Gurd e Wilson",
+      "cor pulmonale agudo",
+      "disfunção de ventrículo direito",
+      "starfield pattern",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Gurd AR. Fat embolism: an aid to diagnosis. J Bone Joint Surg Br. 1970;52(4):732-7. PMID: 5487573",
+      "Gurd AR, Wilson RI. The fat embolism syndrome. J Bone Joint Surg Br. 1974;56-B(3):408-16. PMID: 4547466",
+      "Mellor A, Soni N. Fat embolism. Anaesthesia. 2001;56(2):145-54. PMID: 11167474",
+      "Kosova E, Bergmark B, Piazza G. Fat embolism syndrome. Circulation. 2015;131(3):317-20. PMID: 25601951",
+      "Rothberg DL, Makarewich CA. Fat Embolism and Fat Embolism Syndrome. J Am Acad Orthop Surg. 2019;27(8):e346-e355. PMID: 30958807",
+      "George J, George R, Dixit R, Gupta RC, Gupta N. Fat embolism syndrome. Lung India. 2013;30(1):47-53. PMID: 23661916",
+      "Bederman SS, Bhandari M, McKee MD, Schemitsch EH. Do corticosteroids reduce the risk of fat embolism syndrome in patients with long-bone fractures? A meta-analysis. Can J Surg. 2009;52(5):386-93. PMID: 19865573",
+      "Bone LB, Johnson KD, Weigelt J, Scheinberg R. Early versus delayed stabilization of femoral fractures. A prospective randomized study. J Bone Joint Surg Am. 1989;71(3):336-40. PMID: 2925704"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/5487573/",
+      "https://pubmed.ncbi.nlm.nih.gov/4547466/",
+      "https://pubmed.ncbi.nlm.nih.gov/11167474/",
+      "https://pubmed.ncbi.nlm.nih.gov/25601951/",
+      "https://pubmed.ncbi.nlm.nih.gov/30958807/",
+      "https://pubmed.ncbi.nlm.nih.gov/23661916/",
+      "https://pubmed.ncbi.nlm.nih.gov/19865573/",
+      "https://pubmed.ncbi.nlm.nih.gov/2925704/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-embolia-gordurosa-mecanismo-triade-e-repercussao-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "bloqueio-cardiaco-progressivo-familiar",
+    "name": "Bloqueio Cardíaco Progressivo Familiar",
+    "aliases": [
+      "Doença de Lenègre-Lev hereditária",
+      "Progressive Cardiac Conduction Disease (PCCD)",
+      "Progressive Familial Heart Block type I (PFHB-I)",
+      "Doença de Lenègre familiar",
+      "Doença hereditária isolada do sistema de condução cardíaco"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_hereditaria_do_sistema_de_conducao",
+    "prevalence_rank": 116,
+    "completeness": "completo",
+    "summary": "O bloqueio cardíaco progressivo familiar é a forma hereditária, autossômica dominante, da doença degenerativa do sistema His-Purkinje classicamente descrita por Lenègre e Lev — distinta da forma esporádica idade-relacionada por afetar múltiplas gerações da mesma família e, por vezes, iniciar mais precocemente. O gene mais bem estabelecido é o SCN5A (canal de sódio cardíaco Nav1.5), com mutações de perda de função que reduzem a corrente de sódio e, na mesma família ou no mesmo indivíduo, podem produzir tanto bloqueio de condução progressivo quanto fenótipo de síndrome de Brugada — pleiotropia alélica que também liga esse gene ao QT longo tipo 3. Mutações em TRPM4 constituem via genética adicional, menos frequente. Clinicamente, a doença progride ao longo de décadas, do bloqueio de ramo/BAV de primeiro grau assintomático na juventude ao BAV total sintomático na idade adulta, com história familiar de marca-passo precoce ou síncope inexplicada. O diagnóstico integra ECG seriado, história familiar em três gerações, teste genético dirigido para SCN5A e, quando há suspeita de sobreposição com Brugada, teste farmacológico com bloqueador de canal de sódio (ajmalina/flecainida). O tratamento do BAV estabelecido é o marca-passo definitivo, seguindo os critérios gerais de qualquer BAV avançado; a diferença prática está no aconselhamento genético, no rastreamento familiar em cascata e na vigilância de longo prazo mesmo em portadores assintomáticos da mutação.",
+    "presentation": [
+      "Achado incidental de BAV de primeiro grau ou bloqueio de ramo em ECG de rotina de paciente jovem ou de meia-idade, assintomático",
+      "Progressão documentada ao longo de anos a décadas do intervalo PR, da duração do QRS e do padrão de bloqueio de ramo em ECGs seriados do mesmo paciente",
+      "BAV bifascicular ou trifascicular em fase intermediária da doença",
+      "Síncope, pré-síncope, fadiga ou intolerância a esforço quando o bloqueio progride a alto grau ou completo",
+      "História familiar de implante de marca-passo em idade incomumente precoce (antes dos 50-60 anos)",
+      "História familiar de síncope inexplicada ou morte súbita cardíaca",
+      "Quando a mutação é em SCN5A: possível sobreposição fenotípica com síndrome de Brugada no mesmo paciente ou em outros membros da família — ECG tipo Brugada intermitente, síncope, palpitações"
+    ],
+    "differentials": [
+      "Doença degenerativa idiopática esporádica do sistema de condução (doença de Lenègre-Lev clássica, sem padrão familiar) — a causa mais comum de BAV no idoso; verbete próprio de bloqueio atrioventricular já existente nesta biblioteca",
+      "BAV por doença coronariana ou infarto — deve ser excluído por história e investigação de isquemia antes de se atribuir o quadro à doença de condução hereditária",
+      "Doenças infiltrativas ou inflamatórias com acometimento do sistema de condução — sarcoidose cardíaca, amiloidose cardíaca, doença de Chagas crônica em área endêmica",
+      "Cardiomiopatias hereditárias com acometimento do sistema de condução (por exemplo, laminopatias — mutações em LMNA), que também cursam com BAV progressivo familiar mas tipicamente associado a arritmias atriais e miocardiopatia dilatada",
+      "Bloqueio atrioventricular congênito associado a anticorpos anti-Ro/SSA maternos — apresentação pré-natal ou neonatal, mecanismo autoimune e não hereditário mendeliano",
+      "Causas reversíveis de BAV (fármacos bloqueadores do nó AV, distúrbio eletrolítico, hipertonia vagal, cardite de Lyme) — sempre excluídas antes de se atribuir o quadro a doença degenerativa ou hereditária"
+    ],
+    "tests": [
+      "ECG de 12 derivações seriado ao longo do tempo, para documentar a progressão do PR, do QRS e do padrão de bloqueio de ramo",
+      "Revisão sistemática da história familiar em três gerações, buscando marca-passo precoce, síncope inexplicada e morte súbita",
+      "Teste genético dirigido, com sequenciamento de SCN5A como alvo prioritário quando há padrão familiar autossômico dominante sugestivo; TRPM4 como alvo secundário",
+      "Teste farmacológico com bloqueador de canal de sódio (ajmalina ou flecainida) em familiares assintomáticos com suspeita de sobreposição com síndrome de Brugada",
+      "Holter ou monitor de eventos quando há sintomas paroxísticos (síncope, palpitações) não capturados em ECG de repouso",
+      "Ecocardiograma para excluir cardiopatia estrutural associada (ajuda a distinguir doença isolada de condução de cardiomiopatias hereditárias com acometimento do sistema de condução)",
+      "Rastreamento em cascata (ECG seriado e teste genético) oferecido a familiares de primeiro grau assim que a variante causal é identificada no caso índice"
+    ],
+    "red_flags": [
+      "Síncope em portador conhecido ou suspeito da mutação familiar",
+      "Progressão documentada para BAV de segundo grau Mobitz II, alto grau ou completo",
+      "ECG tipo 1 de Brugada (espontâneo ou desmascarado) em paciente ou familiar com mutação de SCN5A associada a bloqueio de condução",
+      "Morte súbita inexplicada em familiar jovem — deve motivar investigação genética direcionada de toda a família",
+      "Bloqueio trifascicular ou BAV de alto grau em paciente jovem com história familiar de marca-passo precoce"
+    ],
+    "ambulatory_flow": [
+      "Paciente jovem ou de meia-idade com BAV de primeiro grau, bloqueio de ramo ou bloqueio bifascicular incidental em ECG de rotina, associado a história familiar de marca-passo precoce ou síncope inexplicada",
+      "Investigar ativamente história familiar em três gerações e revisar ECGs prévios do paciente e, quando disponíveis, de familiares, para documentar progressão",
+      "Encaminhar para avaliação genética e considerar teste dirigido de SCN5A (e TRPM4, se SCN5A negativo e suspeita clínica mantida)",
+      "Se mutação em SCN5A identificada: rastrear ativamente sintomas e sinais de sobreposição com Brugada (síncope, palpitações, ECG tipo Brugada) no paciente e nos familiares; considerar teste com bloqueador de canal de sódio nos familiares assintomáticos com ECG basal duvidoso",
+      "Oferecer rastreamento em cascata a familiares de primeiro grau (ECG seriado e teste genético) assim que a variante causal é confirmada",
+      "Programar ECG seriado periódico de longo prazo mesmo em portadores assintomáticos da mutação, dado o caráter previsivelmente progressivo da doença",
+      "Encaminhar para implante de marca-passo definitivo quando surgir BAV sintomático de alto grau ou completo, seguindo os critérios gerais de indicação de estimulação cardíaca permanente"
+    ],
+    "emergency_flow": [
+      "BAV avançado ou completo sintomático (síncope, instabilidade hemodinâmica): manejo agudo segue o mesmo algoritmo de bradiarritmia sintomática de qualquer etiologia — atropina/medidas farmacológicas de suporte, marca-passo transcutâneo ou transvenoso temporário conforme necessidade, com indicação subsequente de marca-passo definitivo",
+      "Se houver suspeita de sobreposição com síndrome de Brugada (ECG tipo 1 espontâneo, história de síncope arrítmica): tratar febre agressivamente, suspender qualquer fármaco bloqueador de canal de sódio, e avaliar risco de arritmia ventricular conforme protocolo específico de Brugada",
+      "Excluir sistematicamente causas reversíveis de BAV (fármacos, distúrbio eletrolítico, isquemia aguda) antes de atribuir a descompensação à progressão natural da doença de condução hereditária"
+    ],
+    "tags": [
+      "bloqueio cardíaco progressivo familiar",
+      "doença de Lenègre-Lev",
+      "doença de Lenègre",
+      "doença de Lev",
+      "SCN5A",
+      "TRPM4",
+      "canalopatia",
+      "síndrome de Brugada",
+      "bloqueio atrioventricular",
+      "doença hereditária do sistema de condução",
+      "rastreamento em cascata",
+      "marca-passo",
+      "genética cardiovascular",
+      "arritmia hereditária"
+    ],
+    "source_refs": [
+      "Lenègre J. Etiology and pathology of bilateral bundle branch block in relation to complete heart block. Prog Cardiovasc Dis. 1964;6:409-44. PMID: 14153648",
+      "Lev M. The pathology of complete atrioventricular block. Prog Cardiovasc Dis. 1964;6:317-26. PMID: 14105712",
+      "Brink PA, Ferreira A, Moolman JC, et al. Gene for progressive familial heart block type I maps to chromosome 19q13. Circulation. 1995;91(6):1633-40. DOI: 10.1161/01.cir.91.6.1633. PMID: 7882468",
+      "Schott JJ, Alshinawi C, Kyndt F, et al. Cardiac conduction defects associate with mutations in SCN5A. Nat Genet. 1999;23(1):20-1. DOI: 10.1038/12618. PMID: 10471492",
+      "Kyndt F, Probst V, Potet F, et al. Novel SCN5A mutation leading either to isolated cardiac conduction defect or Brugada syndrome in a large French family. Circulation. 2001;104(25):3081-6. DOI: 10.1161/hc5001.100834. PMID: 11748104",
+      "Probst V, Kyndt F, Potet F, et al. Haploinsufficiency in combination with aging causes SCN5A-linked hereditary Lenègre disease. J Am Coll Cardiol. 2003;41(4):643-52. DOI: 10.1016/S0735-1097(02)02864-4. PMID: 12598077",
+      "Kruse M, Schulze-Bahr E, Corfield V, et al. Impaired endocytosis of the ion channel TRPM4 is associated with human progressive familial heart block type I. J Clin Invest. 2009;119(9):2737-44. DOI: 10.1172/JCI38292. PMID: 19726882",
+      "Liu H, El Zein L, Kruse M, et al. Gain-of-function mutations in TRPM4 cause autosomal dominant isolated cardiac conduction disease. Circ Cardiovasc Genet. 2010;3(4):374-85. DOI: 10.1161/CIRCGENETICS.109.930867. PMID: 20562447",
+      "Kruse M, Pongs O. TRPM4 channels in the cardiovascular system. Curr Opin Pharmacol. 2014;15:68-73. DOI: 10.1016/j.coph.2013.12.003. PMID: 24721656",
+      "Baruteau AE, Probst V, Abriel H. Inherited progressive cardiac conduction disorders. Curr Opin Cardiol. 2015;30(1):33-9. DOI: 10.1097/HCO.0000000000000134. PMID: 25426816",
+      "Therasse D, Sacher F, Petit B, et al. Sodium-channel blocker challenge in the familial screening of Brugada syndrome: Safety and predictors of positivity. Heart Rhythm. 2017;14(10):1442-1448. DOI: 10.1016/j.hrthm.2017.06.031. PMID: 28666944",
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-63. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. DOI: 10.1161/CIR.0000000000000628. PMID: 30586772"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/14153648/",
+      "https://pubmed.ncbi.nlm.nih.gov/14105712/",
+      "https://pubmed.ncbi.nlm.nih.gov/7882468/",
+      "https://pubmed.ncbi.nlm.nih.gov/10471492/",
+      "https://pubmed.ncbi.nlm.nih.gov/11748104/",
+      "https://pubmed.ncbi.nlm.nih.gov/12598077/",
+      "https://pubmed.ncbi.nlm.nih.gov/19726882/",
+      "https://pubmed.ncbi.nlm.nih.gov/20562447/",
+      "https://pubmed.ncbi.nlm.nih.gov/24721656/",
+      "https://pubmed.ncbi.nlm.nih.gov/25426816/",
+      "https://pubmed.ncbi.nlm.nih.gov/28666944/",
+      "https://pubmed.ncbi.nlm.nih.gov/24011539/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://pubmed.ncbi.nlm.nih.gov/30586772/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-timothy",
+    "name": "Síndrome de Timothy",
+    "aliases": [
+      "LQT8",
+      "síndrome do QT longo tipo 8",
+      "Timothy syndrome",
+      "CACNA1C-related disorder (forma sindrômica clássica)"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "canalopatia_multissistemica_cacna1c",
+    "prevalence_rank": 117,
+    "completeness": "completo",
+    "summary": "Canalopatia rara e gravíssima por variante de ganho de função no gene CACNA1C (canal de cálcio tipo L, CaV1.2), classificada como síndrome do QT longo tipo 8 (LQT8). A mutação clássica G406R, no éxon 8A, abole a inativação dependente de voltagem do canal, mantendo influxo de cálcio sustentado durante o platô do potencial de ação — mecanismo distinto das canalopatias de potássio/sódio do LQT clássico. Cursa com QTc extremamente prolongado (mediana de 600 ms), arritmias ventriculares malignas de início muito precoce na infância e altíssima mortalidade (32-80% conforme a série), além de fenótipo multissistêmico característico: sindactilia cutânea (tipo 1, quase patognomônica), dismorfismo facial, imunodeficiência com infecções de repetição, hipoglicemia episódica e autismo/atraso do desenvolvimento neuropsicomotor em proporção relevante dos casos — achado que torna a síndrome um dos poucos modelos monogênicos de autismo estudados na pesquisa translacional. O tipo 2 (atípico) cursa sem sindactilia. Tratamento exige abordagem multimodal precoce: betabloqueador não seletivo em dose plena (insuficiente isoladamente na maioria dos casos), marca-passo e/ou CDI considerados precocemente, bloqueadores de canal de cálcio tipo L como terapia dirigida ao mecanismo (evidência ainda limitada a séries de caso) e denervação simpática cardíaca esquerda em casos refratários.",
+    "presentation": [
+      "Bradicardia fetal persistente (70-80 bpm), frequentemente o primeiro sinal identificado ainda intraútero",
+      "QTc extremamente prolongado ao ECG neonatal, tipicamente muito acima de 500-550 ms (mediana descrita de 600 ms)",
+      "Bloqueio atrioventricular funcional 2:1 por período refratário miocárdico extremamente prolongado",
+      "Alternância macroscópica de onda T e ectopia ventricular complexa",
+      "Arritmia ventricular maligna (torsades de pointes, fibrilação ventricular) de início muito precoce, geralmente nos primeiros meses de vida",
+      "Sindactilia cutânea de mãos (2º-5º dedos) e, com menor frequência, pés (2º-3º dedos), bilateral — quase patognomônica no tipo 1 clássico",
+      "Face arredondada, ponte nasal baixa e achatada, orelhas de implantação baixa, filtro liso, dentes pequenos e espaçados com esmalte deficiente",
+      "Calvície ou rarefação capilar ao nascimento, persistindo nos primeiros dois anos de vida",
+      "Infecções recorrentes de vias aéreas superiores, ouvido e trato respiratório",
+      "Episódios de hipoglicemia intermitente",
+      "Hipotonia, ataxia, convulsões, atraso global do desenvolvimento neuropsicomotor e/ou transtorno do espectro autista",
+      "Cardiopatia estrutural congênita associada em parte dos casos (canal arterial patente, CIV, tetralogia de Fallot, cardiomiopatia hipertrófica)"
+    ],
+    "differentials": [
+      "Síndrome do QT longo congênita clássica (LQT1, LQT2, LQT3) sem sindactilia nem fenótipo multissistêmico",
+      "Síndrome de Andersen-Tawil (LQT7, gene KCNJ2) — QT longo com dismorfismo e paralisia periódica, mas sem sindactilia",
+      "Taquicardia ventricular polimórfica catecolaminérgica (CPVT) — arritmia maligna induzida por esforço/catecolamina, sem QT basal prolongado",
+      "Síndrome de Brugada pediátrica precipitada por febre",
+      "Outras síndromes com sindactilia isolada (ex.: síndrome de Apert), sem acometimento cardíaco associado",
+      "Bloqueio atrioventricular congênito completo isolado (sem QT prolongado nem achados extracardíacos)"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações seriado (QTc extremamente prolongado, bloqueio AV 2:1, alternância de onda T)",
+      "Ecocardiografia fetal e/ou monitorização de frequência cardíaca fetal diante de bradicardia persistente",
+      "Ecocardiograma pós-natal para rastreio de cardiopatia estrutural associada",
+      "Holter de 24-48h para quantificação de ectopia ventricular e eventos arrítmicos",
+      "Exame físico dirigido para sindactilia de mãos/pés e feições faciais características",
+      "Teste genético molecular para CACNA1C (sequenciamento direcionado, painel de canalopatia/arritmia pediátrica, ou exoma/genoma se fenótipo atípico); considerar sequenciamento de alta profundidade se suspeita de mosaicismo somático",
+      "Avaliação do neurodesenvolvimento e triagem para transtorno do espectro autista",
+      "Monitorização de glicemia, sobretudo em jejum ou estresse metabólico",
+      "Avaliação imunológica diante de infecções recorrentes",
+      "Avaliação odontológica precoce pela fragilidade do esmalte dentário"
+    ],
+    "red_flags": [
+      "QTc extremamente prolongado (muito acima de 500-550 ms), fora da faixa típica das demais canalopatias de QT longo",
+      "Bradicardia fetal persistente associada a QT longo ao nascimento",
+      "Bloqueio atrioventricular 2:1 funcional em neonato sem cardiopatia estrutural que o explique",
+      "Sindactilia associada a qualquer grau de prolongamento de QT — deve disparar investigação genética imediata para CACNA1C",
+      "Arritmia ventricular maligna (torsades, fibrilação ventricular) já nos primeiros meses de vida",
+      "Uso de qualquer fármaco ou anestésico com potencial de prolongar o QT em paciente com fenótipo sugestivo, mesmo antes da confirmação genética"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pelo tripé QT extremo + sindactilia + achados faciais (ou QT extremo isolado, sem excluir tipo 2)",
+      "Encaminhamento imediato a centro de referência em canalopatias pediátricas/eletrofisiologia",
+      "Teste genético para CACNA1C e aconselhamento genético familiar (risco de recorrência baixo por predomínio de mutação de novo, exceto mosaicismo germinativo)",
+      "Avaliação multidisciplinar sistemática: neurodesenvolvimento, imunologia, endocrinologia, odontologia, nutrição/fonoaudiologia",
+      "Início de betabloqueador não seletivo em dose plena assim que a suspeita é levantada, sem aguardar confirmação genética",
+      "Discussão precoce, em equipe, sobre indicação de marca-passo, CDI e denervação simpática cardíaca esquerda",
+      "Seguimento cardiológico estreito com ECG e Holter seriados, e reavaliação de resposta terapêutica"
+    ],
+    "emergency_flow": [
+      "Torsades de pointes/fibrilação ventricular: desfibrilação/cardioversão imediata conforme protocolo de PCR, sulfato de magnésio intravenoso, correção de distúrbios eletrolíticos",
+      "Suspender imediatamente qualquer fármaco com potencial de prolongar QT",
+      "Bradicardia sintomática com bloqueio AV 2:1: marca-passo temporário/definitivo conforme estabilidade",
+      "Otimização ou reinício de betabloqueador em dose plena; considerar bloqueador de canal de cálcio tipo L como adjuvante dirigido ao mecanismo em ambiente monitorizado",
+      "Internação em unidade de terapia intensiva pediátrica/cardíaca com monitorização eletrocardiográfica contínua",
+      "Avaliação urgente de indicação de CDI e, em casos refratários, de denervação simpática cardíaca esquerda",
+      "Rastreio e correção de hipoglicemia associada durante o episódio agudo"
+    ],
+    "tags": [
+      "síndrome de Timothy",
+      "LQT8",
+      "síndrome do QT longo tipo 8",
+      "CACNA1C",
+      "CaV1.2",
+      "canal de cálcio tipo L",
+      "canalopatia",
+      "sindactilia",
+      "QT longo extremo",
+      "morte súbita cardíaca pediátrica",
+      "autismo monogênico",
+      "atraso do desenvolvimento neuropsicomotor",
+      "bloqueio atrioventricular 2:1",
+      "cardiodesfibrilador implantável pediátrico",
+      "denervação simpática cardíaca esquerda",
+      "bloqueador de canal de cálcio",
+      "hipoglicemia",
+      "imunodeficiência",
+      "dismorfismo facial",
+      "arritmia neonatal"
+    ],
+    "source_refs": [
+      "Napolitano C, Priori SG. CACNA1C-Related Disorders. 2006 Feb 15 [Updated 2025 Sep 18]. GeneReviews® [Internet]. Bookshelf ID: NBK1403.",
+      "Splawski I, Timothy KW, Sharpe LM, et al. Ca(V)1.2 calcium channel dysfunction causes a multisystem disorder including arrhythmia and autism. Cell. 2004;119(1):19-31. DOI: 10.1016/j.cell.2004.09.011. PMID: 15454078.",
+      "Splawski I, Timothy KW, Decher N, et al. Severe arrhythmia disorder caused by cardiac L-type calcium channel mutations. Proc Natl Acad Sci U S A. 2005;102(23):8089-8096. DOI: 10.1073/pnas.0502506102. PMID: 15863612.",
+      "Borbás J, Vámos M, Hategan L, et al. Geno- and phenotypic characteristics and clinical outcomes of CACNA1C gene mutation associated Timothy syndrome. Front Cardiovasc Med. 2022;9:1021009. DOI: 10.3389/fcvm.2022.1021009. PMID: 36523353.",
+      "Sepp R, Hategan L, Bácsi A, et al. Timothy syndrome 1 genotype without syndactyly and major extracardiac manifestations. Am J Med Genet A. 2017;173(3):784-789. DOI: 10.1002/ajmg.a.38084. PMID: 28211989.",
+      "Baurand A, Falcon-Eicher S, Laurent G, et al. Incomplete Timothy syndrome secondary to a mosaic mutation of the CACNA1C gene diagnosed using next-generation sequencing. Am J Med Genet A. 2017;173(2):531-536. DOI: 10.1002/ajmg.a.38045. PMID: 27868338.",
+      "Boczek NJ, Miller EM, Ye D, et al. Novel Timothy syndrome mutation leading to increase in CACNA1C window current. Heart Rhythm. 2015;12(1):211-219. DOI: 10.1016/j.hrthm.2014.09.051. PMID: 25260352.",
+      "Wemhöner K, Friedrich C, Stallmeyer B, et al. Gain-of-function mutations in the calcium channel CACNA1C (Cav1.2) cause non-syndromic long-QT but not Timothy syndrome. J Mol Cell Cardiol. 2015;80:186-195. DOI: 10.1016/j.yjmcc.2015.01.002. PMID: 25633834.",
+      "Jacobs A, Knight BP, McDonald KT, Burke MC. Verapamil decreases ventricular tachyarrhythmias in a patient with Timothy syndrome (LQT8). Heart Rhythm. 2006;3(8):967-970. DOI: 10.1016/j.hrthm.2006.04.024. PMID: 16876748.",
+      "Shah DP, Baez-Escudero JL, Weisberg IL, Beshai JF, Burke MC. Ranolazine safely decreases ventricular and atrial fibrillation in Timothy syndrome (LQT8). Pacing Clin Electrophysiol. 2012;35(3):e62-e64. DOI: 10.1111/j.1540-8159.2010.02913.x. PMID: 20883512.",
+      "Hermida A, Jedraszak G, Kubala M, et al. Long-term follow-up of a patient with type 2 Timothy syndrome and the partial efficacy of mexiletine. Gene. 2021;777:145465. DOI: 10.1016/j.gene.2021.145465. PMID: 33524520.",
+      "Bader PL, Faizi M, Kim LH, et al. Mouse model of Timothy syndrome recapitulates triad of autistic traits. Proc Natl Acad Sci U S A. 2011;108(37):15432-15437. DOI: 10.1073/pnas.1112667108. PMID: 21878566.",
+      "Song L, Park SE, Isseroff Y, Morikawa K, Yazawa M. Inhibition of CDK5 Alleviates the Cardiac Phenotypes in Timothy Syndrome. Stem Cell Reports. 2017;9(1):50-57. DOI: 10.1016/j.stemcr.2017.05.028. PMID: 28648896.",
+      "Yazawa M, Dolmetsch RE. Modeling Timothy syndrome with iPS cells. J Cardiovasc Transl Res. 2013;6(1):1-9. DOI: 10.1007/s12265-012-9444-x. PMID: 23299782.",
+      "Sarquella-Brugada G, Mazzanti A, Baban A, et al. Diagnosis and management of very rare primary arrhythmia syndromes in children and adults: a European Heart Rhythm Association consensus document. Europace. 2026;28(8):euag184. DOI: 10.1093/europace/euag184."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1403/",
+      "https://pubmed.ncbi.nlm.nih.gov/15454078/",
+      "https://pubmed.ncbi.nlm.nih.gov/15863612/",
+      "https://www.frontiersin.org/articles/10.3389/fcvm.2022.1021009/full",
+      "https://pubmed.ncbi.nlm.nih.gov/28211989/",
+      "https://pubmed.ncbi.nlm.nih.gov/27868338/",
+      "https://pubmed.ncbi.nlm.nih.gov/25260352/",
+      "https://pubmed.ncbi.nlm.nih.gov/25633834/",
+      "https://pubmed.ncbi.nlm.nih.gov/16876748/",
+      "https://pubmed.ncbi.nlm.nih.gov/20883512/",
+      "https://pubmed.ncbi.nlm.nih.gov/33524520/",
+      "https://pubmed.ncbi.nlm.nih.gov/21878566/",
+      "https://pubmed.ncbi.nlm.nih.gov/28648896/",
+      "https://pubmed.ncbi.nlm.nih.gov/23299782/",
+      "https://academic.oup.com/europace/article/doi/10.1093/europace/euag184/8771971"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-timothy-lqt8-canalopatia-cacna1c-fenotipo-multissistemico-e-estrategias-de-tratamento"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "reacao-anafilactoide-a-contraste-iodado",
+    "name": "Reação anafilactoide (hipersensibilidade) a contraste iodado",
+    "aliases": [
+      "reação alérgica a contraste",
+      "reação anafilactoide a contraste iodado",
+      "choque anafilactoide induzido por contraste",
+      "hipersensibilidade a meio de contraste iodado",
+      "reação idiossincrática a contraste iodado"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "reacao_hipersensibilidade_iatrogenica",
+    "prevalence_rank": 118,
+    "completeness": "completo",
+    "summary": "Espectro de reação aguda de hipersensibilidade a contraste iodado intravenoso, da urticária leve ao choque com colapso cardiovascular. A maioria das reações agudas, inclusive as graves, é anafilactoide — não mediada por IgE, por ativação direta de mastócitos/basófilos e do complemento pelo próprio agente hiperosmolar/iônico — o que limita o valor preditivo do teste cutâneo alergológico clássico. Reação prévia é o principal fator de risco; betabloqueador atenua a resposta à adrenalina no tratamento da reação grave. Manejo do choque segue os princípios de qualquer anafilaxia grave (adrenalina intramuscular, volume, suporte de via aérea, glucagon como adjuvante no paciente betabloqueado).",
+    "presentation": [
+      "Urticária localizada ou difusa e prurido, minutos após a injeção do contraste",
+      "Náusea leve, rubor facial ou sensação de calor (reação leve)",
+      "Edema facial/periorbital, broncoespasmo leve a moderado, hipotensão leve (reação moderada)",
+      "Broncoespasmo grave, estridor ou edema laríngeo, hipotensão profunda/choque, arritmia (reação grave)",
+      "Parada cardiorrespiratória no extremo do espectro de gravidade"
+    ],
+    "differentials": [
+      "Síndrome de Kounis (síndrome coronariana aguda desencadeada pela mesma reação alérgica/anafilática, incluindo contraste como gatilho)",
+      "Nefropatia induzida por contraste (lesão renal, sem colapso cardiovascular agudo)",
+      "Reação vasovagal a procedimento (bradicardia e hipotensão sem urticária/broncoespasmo)",
+      "Sobrecarga de volume/edema pulmonar por contraste hiperosmolar em cardiopata/nefropata",
+      "Embolia pulmonar ou tamponamento cardíaco periprocedimento",
+      "Anafilaxia por outro agente administrado no mesmo momento (sedativo, antibiótico profilático, látex)"
+    ],
+    "tests": [
+      "Nenhum teste laboratorial confirma a reação no momento agudo — diagnóstico é clínico",
+      "Triptase sérica seriada (basal e 1-2h após o evento) pode apoiar retrospectivamente ativação de mastócitos em caso grave",
+      "Teste cutâneo alergológico após o evento, para orientar escolha de agente alternativo em reexposição futura — sem valor preditivo relevante quando feito como pretesting pré-procedimento",
+      "Monitorização hemodinâmica contínua e oximetria durante o manejo do episódio grave"
+    ],
+    "red_flags": [
+      "Estridor, rouquidão súbita ou sensação de fechamento de garganta (edema laríngeo iminente)",
+      "Hipotensão progressiva ou refratária à reposição volêmica inicial",
+      "Broncoespasmo grave com dessaturação",
+      "Uso crônico de betabloqueador em paciente com reação grave (risco de refratariedade à adrenalina)",
+      "Arritmia nova ou instabilidade hemodinâmica sustentada",
+      "Reação prévia grave documentada em paciente que necessitará de novo exame contrastado"
+    ],
+    "ambulatory_flow": [
+      "Revisar história de reação prévia a contraste antes de qualquer exame contrastado eletivo",
+      "Preferir contraste de baixa osmolaridade/isosmolar em todo paciente de risco",
+      "Em reação prévia moderada/grave documentada com exame contrastado considerado imprescindível: discutir pré-medicação (corticosteroide + anti-histamínico) com radiologia/alergologia, reconhecendo controvérsia recente sobre eficácia desse esquema",
+      "Trocar o agente de contraste causador sempre que alternativa estiver disponível",
+      "Encaminhar para avaliação alergológica com teste cutâneo pós-reação para orientar reexposições futuras",
+      "Corrigir rótulo impreciso de 'alergia a iodo'/'alergia a frutos do mar' no prontuário quando não houver base para equivalência com risco de reação a contraste"
+    ],
+    "emergency_flow": [
+      "Reconhecer gravidade da reação (leve/moderada/grave) e escalonar conforme classificação",
+      "Reação grave: adrenalina intramuscular sem atraso, repetida conforme resposta clínica",
+      "Oxigenoterapia suplementar e monitorização contínua",
+      "Reposição volêmica agressiva com cristaloide para sustentar pré-carga",
+      "Manejo proativo de via aérea diante de edema laríngeo/estridor, com intubação precoce se sinais de progressão",
+      "Paciente em uso de betabloqueador com resposta inadequada à adrenalina: considerar glucagon como adjuvante",
+      "Anti-histamínico H1/H2 e corticosteroide sistêmico como adjuvantes, nunca substituindo a adrenalina na reação grave",
+      "Observação prolongada pós-estabilização pelo risco de reação bifásica"
+    ],
+    "tags": [
+      "contraste iodado",
+      "reação anafilactoide",
+      "hipersensibilidade a contraste",
+      "choque anafilático",
+      "anafilaxia",
+      "adrenalina",
+      "glucagon",
+      "betabloqueador",
+      "radiologia",
+      "terapia intensiva",
+      "emergência"
+    ],
+    "source_refs": [
+      "Katayama H, Yamaguchi K, Kozuka T, Takashima T, Seez P, Matsuura K. Adverse reactions to ionic and nonionic contrast media. Radiology. 1990;175(3):621-628. PMID: 2343107",
+      "Yamaguchi K, Katayama H, Takashima T, Kozuka T, Seez P, Matsuura K. Prediction of severe adverse reactions to ionic and nonionic contrast media in Japan. Radiology. 1991;178(2):363-367. PMID: 1987594",
+      "Lang DM, Ramsey A, Kuruvilla M, Wang C. Iodinated Contrast Media and Anaphylaxis. Immunol Allergy Clin North Am. 2026;46(2):305-324. DOI: 10.1016/j.iac.2026.01.009. PMID: 41932749",
+      "Wulf NR, Schmitz J, Choi A, Kapusnik-Uner J. Iodine allergy: Common misperceptions. Am J Health Syst Pharm. 2021;78(9):781-793. DOI: 10.1093/ajhp/zxab033. PMID: 33547463",
+      "Torres MJ, Trautmann A, Böhm I, et al. Practice parameters for diagnosing and managing iodinated contrast media hypersensitivity. Allergy. 2021;76(5):1325-1339. DOI: 10.1111/all.14656. PMID: 33170954",
+      "Wang C, Ramsey A, Lang D, et al. Management and Prevention of Hypersensitivity Reactions to Radiocontrast Media: A Consensus Statement from the ACR and AAAAI. Radiology. 2025;315(2):e240100. DOI: 10.1148/radiol.240100. PMID: 40326871",
+      "van der Molen AJ, van de Ven AAJM, Vega F, et al. Hypersensitivity reactions to contrast media: Part 1. Eur Radiol. 2025;35(11):6798-6810. DOI: 10.1007/s00330-025-11675-1. PMID: 40425758",
+      "Byrne A, Macdonald DB, Kirkpatrick IDC, et al. CAR/CSACI Practice Guidance for Contrast Media Hypersensitivity. Can Assoc Radiol J. 2025;76(3):400-416. DOI: 10.1177/08465371241311253. PMID: 39797723",
+      "Porri F, Vervloet D. Reactions to iodinated contrast media. Allerg Immunol (Paris). 1994;26(10):374-376, 379. PMID: 7702729",
+      "Bumbăcea RS, Petruţescu B, Bumbăcea D, Strâmbu I. Immediate and delayed hypersensitivity reactions to intravascular iodine based radiocontrast media – an update. Pneumologia. 2013;62(1):47-51. PMID: 23781574",
+      "Morris CH, Baker J. Glucagon. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2025. PMID: 32644621"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/2343107/",
+      "https://pubmed.ncbi.nlm.nih.gov/1987594/",
+      "https://pubmed.ncbi.nlm.nih.gov/41932749/",
+      "https://pubmed.ncbi.nlm.nih.gov/33547463/",
+      "https://pubmed.ncbi.nlm.nih.gov/33170954/",
+      "https://pubmed.ncbi.nlm.nih.gov/40326871/",
+      "https://pubmed.ncbi.nlm.nih.gov/40425758/",
+      "https://pubmed.ncbi.nlm.nih.gov/39797723/",
+      "https://pubmed.ncbi.nlm.nih.gov/7702729/",
+      "https://pubmed.ncbi.nlm.nih.gov/23781574/",
+      "https://pubmed.ncbi.nlm.nih.gov/32644621/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "reacao-de-hipersensibilidade-anafilactoide-a-contraste-iodado-mecanismo-gravidade-e-manejo-do-choque"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "doenca-do-no-sinusal-familiar",
+    "name": "Doença do nó sinusal familiar (hereditária)",
+    "aliases": [
+      "síndrome do nó sinusal doente familiar",
+      "disfunção sinusal hereditária",
+      "sick sinus syndrome familiar",
+      "bradicardia sinusal familiar",
+      "canalopatia do nó sinusal"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "arritmia_eletrica_hereditaria",
+    "prevalence_rank": 119,
+    "completeness": "completo",
+    "summary": "Forma rara e monogênica de disfunção do nó sinusal, distinta da doença do nó sinusal comum degenerativa do idoso. Início precoce (infância ou adulto jovem), sem cardiopatia estrutural, cirurgia prévia ou outra causa secundária, com herança familiar autossômica dominante ou recessiva conforme o gene. Causada por mutações em HCN4 (canal marca-passo da corrente 'funny' If, por vezes associada a cardiomiopatia não compactada em famílias específicas), SCN5A (canal de sódio cardíaco Nav1.5, mesmo gene de Brugada e QT longo tipo 3, ilustrando pleiotropia alélica; forma isolada pode ser autossômica recessiva) e, mais raramente, GNB2 e ANK2 (síndrome de ankyrin-B). Diagnóstico por ECG/Holter, teste de esforço, história familiar de três gerações, teste genético direcionado e ecocardiograma dirigido quando há suspeita de HCN4. Tratamento central é o marca-passo definitivo, com desafios técnicos específicos no paciente pediátrico/jovem (via de acesso, longevidade do sistema, risco de limiar de captura elevado em mutação de SCN5A) e necessidade de aconselhamento genético e rastreio familiar em cascata.",
+    "presentation": [
+      "Bradicardia sinusal sintomática (fadiga, intolerância ao exercício, tontura, pré-síncope ou síncope) de início na infância, adolescência ou idade adulta jovem, sem cardiopatia estrutural ou outra causa secundária identificável",
+      "Pausas sinusais documentadas em ECG ou Holter, por vezes achadas incidentalmente em paciente assintomático",
+      "Síndrome bradicardia-taquicardia, com alternância entre bradicardia/pausas sinusais e taquiarritmia atrial (fibrilação ou flutter atrial, taquicardia atrial)",
+      "História familiar de marca-passo implantado em idade incomumente jovem, bradicardia sintomática em múltiplos parentes, ou morte súbita cardíaca inexplicada em parente jovem",
+      "Em subgrupo com mutação de HCN4: sinais e sintomas de cardiomiopatia não compactada associada (insuficiência cardíaca, arritmia ventricular, tromboembolismo), que pode se manifestar tardiamente em relação à bradicardia",
+      "Resposta cronotrópica reduzida ao esforço em famílias com determinadas mutações de HCN4",
+      "Achado incidental de bradicardia sinusal em ECG de rotina ou pré-participação esportiva, sem sintoma"
+    ],
+    "differentials": [
+      "Doença do nó sinusal degenerativa/adquirida do idoso (fibrose idiopática ligada à idade — a grande maioria dos casos na prática clínica)",
+      "Bradicardia sinusal fisiológica do atleta / bradicardia do sono e do condicionamento físico",
+      "Disfunção do nó sinusal pós-cirúrgica em cardiopatia congênita (Fontan, Mustard/Senning, entre outras)",
+      "Disfunção do nó sinusal secundária a fármaco cronotrópico negativo",
+      "Hipotireoidismo e outras causas metabólicas/endócrinas de bradicardia",
+      "Bloqueio atrioventricular como causa primária de bradiarritmia sintomática",
+      "Síndrome CAID (Chronic Atrial and Intestinal Dysrhythmia) por mutação em SGO1 — coesinopatia com disfunção do nó sinusal associada a dismotilidade intestinal crônica",
+      "Distrofia muscular de Emery-Dreifuss com envolvimento de condução cardíaca",
+      "Outras canalopatias hereditárias com disfunção sinusal secundária (síndrome de Brugada, QT longo com bradicardia associada)"
+    ],
+    "tests": [
+      "ECG de 12 derivações — documenta bradicardia sinusal e pausas; limitação: não estabelece por si só a causa genética nem a idade de início real",
+      "Holter de 24-48h ou monitorização prolongada — detecta pausas, correlação sintoma-ritmo e componente taquicárdico associado; limitação: baixo rendimento se os eventos forem infrequentes",
+      "Teste ergométrico — avalia competência cronotrópica formalmente; em famílias com certas mutações de HCN4, documenta objetivamente resposta cronotrópica reduzida ao esforço",
+      "História familiar estruturada de três gerações — dirigida a bradicardia sintomática, marca-passo em idade jovem, síncope inexplicada e morte súbita cardíaca; etapa central que diferencia a investigação da forma familiar da rotina padrão",
+      "Painel genético multigênico direcionado (no mínimo HCN4, SCN5A, GNB2, ANK2) — indicado quando há início precoce sem causa secundária e/ou história familiar sugestiva; deve vir acompanhado de aconselhamento genético; limitação: variante de significado incerto é achado frequente",
+      "Ecocardiograma — indicado em todo caso; atenção redobrada à morfologia do ventrículo esquerdo (padrão de não compactação) quando há mutação confirmada ou fortemente suspeita em HCN4, com reavaliação periódica pois o achado estrutural pode se manifestar tardiamente",
+      "ECG (e, quando indicado, teste genético direcionado) dos familiares de primeiro grau — rastreio em cascata a partir do caso índice"
+    ],
+    "red_flags": [
+      "Bradicardia sinusal sintomática ou pausa sinusal significativa em criança, adolescente ou adulto jovem sem cardiopatia estrutural, cirurgia cardíaca prévia ou outra causa secundária evidente",
+      "História familiar de marca-passo implantado em idade jovem incomum",
+      "Morte súbita cardíaca inexplicada em parente jovem",
+      "Bradicardia sinusal familiar associada a sinais de insuficiência cardíaca ou arritmia ventricular, levantando suspeita de cardiomiopatia não compactada associada (subgrupo HCN4)",
+      "Síndrome bradicardia-taquicardia de início precoce, sem cardiopatia estrutural identificada",
+      "Heterozigose composta/recessiva identificada no probando com pais assintomáticos portadores de variante única — implicação direta para aconselhamento genético e planejamento familiar"
+    ],
+    "ambulatory_flow": [
+      "Anamnese dirigida a idade de início da bradicardia, sintomas associados e exclusão sistemática de causa secundária (fármaco, hipotireoidismo, cirurgia cardíaca prévia)",
+      "História familiar detalhada de três gerações: bradicardia sintomática, marca-passo em idade jovem, síncope inexplicada, morte súbita cardíaca",
+      "ECG de 12 derivações e Holter de 24-48h (ou monitorização prolongada) para documentar padrão de disfunção sinusal e eventual componente taquicárdico",
+      "Teste ergométrico para avaliar competência cronotrópica",
+      "Ecocardiograma, com atenção à morfologia do ventrículo esquerdo quando há suspeita de mutação em HCN4",
+      "Encaminhar para avaliação genética e aconselhamento familiar quando houver início precoce sem causa secundária e/ou história familiar sugestiva",
+      "Rastrear (ECG e, quando indicado, teste genético direcionado) familiares de primeiro grau assim que houver caso índice confirmado",
+      "Seguimento estruturado com cardiologista/eletrofisiologista com experiência em canalopatias hereditárias, incluindo reavaliação ecocardiográfica periódica no subgrupo HCN4",
+      "Planejamento cuidadoso de via de acesso e sistema de estimulação quando marca-passo for indicado em paciente pediátrico ou jovem, considerando crescimento corporal e longevidade do sistema"
+    ],
+    "emergency_flow": [
+      "Avaliação de sintoma agudo (síncope, pré-síncope, palpitação) com ECG de 12 derivações e monitorização contínua",
+      "Investigar e corrigir causa secundária reversível de bradicardia antes de atribuir o quadro à forma familiar (distúrbio eletrolítico, fármaco em uso, hipotireoidismo não tratado)",
+      "Em bradicardia sintomática grave ou pausa significativa documentada, seguir fluxo padrão de indicação de marca-passo temporário/definitivo conforme correlação sintoma-ritmo",
+      "Documentar componente taquicárdico associado (fibrilação/flutter atrial) quando presente, pois pode orientar a escolha de terapia farmacológica concomitante e a programação do dispositivo",
+      "Iniciar triagem familiar (ECG dos pais e irmãos) ainda durante a investigação do caso índice, quando pertinente",
+      "Encaminhar para avaliação especializada em eletrofisiologia/canalopatias hereditárias antes de rotular o quadro como disfunção sinusal idiopática, especialmente em paciente jovem sem causa secundária evidente"
+    ],
+    "tags": [
+      "doença do nó sinusal familiar",
+      "disfunção sinusal hereditária",
+      "HCN4",
+      "SCN5A",
+      "GNB2",
+      "ANK2",
+      "ankyrin-B",
+      "corrente funny",
+      "bradicardia sinusal familiar",
+      "síndrome bradicardia-taquicardia",
+      "cardiomiopatia não compactada",
+      "canalopatia cardíaca hereditária",
+      "marca-passo pediátrico",
+      "aconselhamento genético",
+      "rastreio familiar em cascata",
+      "arritmia hereditária",
+      "sick sinus syndrome congênita",
+      "pleiotropia alélica"
+    ],
+    "source_refs": [
+      "Milanesi R, Baruscotti M, Gnecchi-Ruscone T, DiFrancesco D. Familial sinus bradycardia associated with a mutation in the cardiac pacemaker channel. N Engl J Med. 2006;354(2):151-7. DOI: 10.1056/NEJMoa052475. PMID: 16407510.",
+      "Benson DW, Wang DW, Dyment M, Knilans TK, Fish FA, Strieper MJ, Rhodes TH, George AL Jr. Congenital sick sinus syndrome caused by recessive mutations in the cardiac sodium channel gene (SCN5A). J Clin Invest. 2003;112(7):1019-28. DOI: 10.1172/JCI18062. PMID: 14523039.",
+      "Nof E, Luria D, Brass D, et al. Point mutation in the HCN4 cardiac ion channel pore affecting synthesis, trafficking, and functional expression is associated with familial asymptomatic sinus bradycardia. Circulation. 2007;116(5):463-70. DOI: 10.1161/CIRCULATIONAHA.107.706887. PMID: 17646576.",
+      "Hategan L, Csányi B, Ördög B, et al. A novel 'splice site' HCN4 gene mutation, c.1737+1 G>T, causes familial bradycardia, reduced heart rate response, split QRS complexes and even left ventricular non-compaction. Int J Cardiol. 2017;241:364-372. DOI: 10.1016/j.ijcard.2017.04.058. PMID: 28465117.",
+      "Laish-Farkash A, Glikson M, Brass D, et al. A novel mutation in the HCN4 gene causes symptomatic sinus bradycardia in Moroccan Jews. J Cardiovasc Electrophysiol. 2010;21(12):1365-72. DOI: 10.1111/j.1540-8167.2010.01844.x. PMID: 20662977.",
+      "Milano A, Vermeer AM, Lodder EM, et al. HCN4 mutations in multiple families with bradycardia and left ventricular noncompaction cardiomyopathy. J Am Coll Cardiol. 2014;64(8):745-56. DOI: 10.1016/j.jacc.2014.05.045. PMID: 25145517.",
+      "Schweizer PA, Schröter J, Greiner S, et al. The symptom complex of familial sinus node dysfunction and myocardial noncompaction is associated with mutations in the HCN4 channel. J Am Coll Cardiol. 2014;64(8):757-67. DOI: 10.1016/j.jacc.2014.06.1155. PMID: 25145518.",
+      "Millat G, Janin A, de Tauriac O, et al. HCN4 mutation as a molecular explanation on patients with bradycardia and non-compaction cardiomyopathy. Eur J Med Genet. 2015;58(9):439-42. DOI: 10.1016/j.ejmg.2015.06.004. PMID: 26206080.",
+      "Zhang F, Zhao N, Wang L, et al. A rare HCN4 variant combined with sick sinus syndrome, left ventricular noncompaction, and complex congenital heart disease. Channels (Austin). 2025;19(1):2517851. DOI: 10.1080/19336950.2025.2517851. PMID: 40613349.",
+      "Duhme N, Schweizer PA, Thomas D, et al. Altered HCN4 channel C-linker interaction is associated with familial tachycardia-bradycardia syndrome and atrial fibrillation. Eur Heart J. 2013;34(35):2768-75. DOI: 10.1093/eurheartj/ehs391. PMID: 23178648.",
+      "Wilde AAM, Amin AS. Clinical Spectrum of SCN5A Mutations: Long QT Syndrome, Brugada Syndrome, and Cardiomyopathy. JACC Clin Electrophysiol. 2018;4(5):569-579. DOI: 10.1016/j.jacep.2018.03.006. PMID: 29798782.",
+      "Chiang DY, Kim JJ, Valdes SO, et al. Loss-of-Function SCN5A Mutations Associated With Sinus Node Dysfunction, Atrial Arrhythmias, and Poor Pacemaker Capture. Circ Arrhythm Electrophysiol. 2015;8(5):1105-12. DOI: 10.1161/CIRCEP.115.003098. PMID: 26111534.",
+      "Shi J, Pan X, Wang Z, et al. SCN5A-L256del and L1621F exhibit loss-of-function properties related to autosomal recessive congenital cardiac disorders presenting as sick sinus syndrome, dilated cardiomyopathy, and sudden cardiac death. Gene. 2024;898:148093. DOI: 10.1016/j.gene.2023.148093. PMID: 38123004.",
+      "Takeda Y, Fujita S, Yachi Y, et al. SCN5A mutation-associated sick sinus syndrome revealed by atrial flutter in a pediatric patient. J Cardiol Cases. 2025;32(1):5-9. DOI: 10.1016/j.jccase.2025.03.001. PMID: 40697204.",
+      "Stallmeyer B, Kuß J, Kotthoff S, et al. A Mutation in the G-Protein Gene GNB2 Causes Familial Sinus Node and Atrioventricular Conduction Dysfunction. Circ Res. 2017;120(10):e33-e44. DOI: 10.1161/CIRCRESAHA.116.310112. PMID: 28219978.",
+      "Wolf RM, Glynn P, Hashemi S, et al. Atrial fibrillation and sinus node dysfunction in human ankyrin-B syndrome: a computational analysis. Am J Physiol Heart Circ Physiol. 2013;304(9):H1253-66. DOI: 10.1152/ajpheart.00734.2012. PMID: 23436330.",
+      "Thorolfsdottir RB, Sveinbjornsson G, Aegisdottir HM, et al. Genetic insight into sick sinus syndrome. Eur Heart J. 2021;42(20):1959-1971. DOI: 10.1093/eurheartj/ehaa1108. PMID: 33580673.",
+      "Jensen PN, Gronroos NN, Chen LY, et al. Incidence of and risk factors for sick sinus syndrome in the general population. J Am Coll Cardiol. 2014;64(6):531-538. PMID: 25104519.",
+      "Zeljkovic I, Gauthey A, Manninger M, et al. Genetic testing for inherited arrhythmia syndromes and cardiomyopathies: results of the European Heart Rhythm Association survey. Europace. 2024;26(9). DOI: 10.1093/europace/euae216. PMID: 39148456.",
+      "Wildbolz M, Dave H, Weber R, et al. Pacemaker Implantation in Neonates and Infants: Favorable Outcomes with Epicardial Pacing Systems. Pediatr Cardiol. 2020;41(5):910-917. DOI: 10.1007/s00246-020-02332-z. PMID: 32107584.",
+      "Silka MJ, Bar-Cohen Y. Pacemakers and implantable cardioverter-defibrillators in pediatric patients. Heart Rhythm. 2006;3(11):1360-6. DOI: 10.1016/j.hrthm.2006.02.009. PMID: 17074646.",
+      "Barbuti A, DiFrancesco D. Control of cardiac rate by 'funny' channels in health and disease. Ann N Y Acad Sci. 2008;1123:213-23. DOI: 10.1196/annals.1420.024. PMID: 18375593."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16407510/",
+      "https://pubmed.ncbi.nlm.nih.gov/14523039/",
+      "https://pubmed.ncbi.nlm.nih.gov/17646576/",
+      "https://pubmed.ncbi.nlm.nih.gov/28465117/",
+      "https://pubmed.ncbi.nlm.nih.gov/20662977/",
+      "https://pubmed.ncbi.nlm.nih.gov/25145517/",
+      "https://pubmed.ncbi.nlm.nih.gov/25145518/",
+      "https://pubmed.ncbi.nlm.nih.gov/26206080/",
+      "https://pubmed.ncbi.nlm.nih.gov/40613349/",
+      "https://pubmed.ncbi.nlm.nih.gov/23178648/",
+      "https://pubmed.ncbi.nlm.nih.gov/29798782/",
+      "https://pubmed.ncbi.nlm.nih.gov/26111534/",
+      "https://pubmed.ncbi.nlm.nih.gov/38123004/",
+      "https://pubmed.ncbi.nlm.nih.gov/40697204/",
+      "https://pubmed.ncbi.nlm.nih.gov/28219978/",
+      "https://pubmed.ncbi.nlm.nih.gov/23436330/",
+      "https://pubmed.ncbi.nlm.nih.gov/33580673/",
+      "https://pubmed.ncbi.nlm.nih.gov/25104519/",
+      "https://pubmed.ncbi.nlm.nih.gov/39148456/",
+      "https://pubmed.ncbi.nlm.nih.gov/32107584/",
+      "https://pubmed.ncbi.nlm.nih.gov/17074646/",
+      "https://pubmed.ncbi.nlm.nih.gov/18375593/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-do-no-sinusal-familiar-hcn4-scn5a-e-a-distincao-entre-disfuncao-sinusal-hereditaria-e-degenerativa"
+    ],
+    "patient_material_slug": null
   }
 ]
