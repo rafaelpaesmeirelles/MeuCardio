@@ -1239,3 +1239,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 115 (17 descartados por colisão) | 85 |
 | **Total** | **4.900** | **315** | **4.585** |
+
+## Lote 60 — concluído (commit 4e05b4ba)
+
+- **5 documentos** (vasculites/autoimunidade rara com acometimento aórtico-valvar, anomalia coronariana congênita e toxicologia ambiental/ocupacional): síndrome de Cogan (ceratite intersticial não sifilítica + disfunção audiovestibular tipo Ménière; forma atípica mais associada a aortite; dados de tratamento mostram resposta vestíbulo-auditiva de 35% com corticoide isolado versus 80% com infliximabe em coorte francesa de 62 pacientes — `content/Aorta_e_doença_arterial_periférica`), fístula arteriovenosa coronariana congênita (comunicação distal anômala entre coronária de origem normal e câmara/vaso de baixa pressão — distinção conceitual explícita de ALCAPA/AAOCA, que são anomalias de origem; fechamento percutâneo com molas como primeira escolha em anatomia favorável — `content/Cardiopatias_congênitas`), intoxicação por tálio (mimetismo iônico Tl+/K+ na Na+/K+-ATPase; tríade GI precoce + neuropatia dolorosa + alopecia tardia raramente completa, explicando atraso diagnóstico documentado na literatura; azul da Prússia como antídoto central — `content/Terapia_intensiva`), cardiotoxicidade crônica por arsênico ambiental/ocupacional (explicitamente distinta do trióxido de arsênio farmacológico já coberto; blackfoot disease, hipertensão e aterosclerose acelerada com evidência dose-resposta taiwanesa desde os anos 1990; remoção da fonte como intervenção com maior evidência de impacto populacional — `content/Hipertensão`), policondrite recidivante (autoimunidade contra colágeno tipo II/matrilina-1; condrite auricular poupando o lóbulo como achado semiológico distintivo; aortite em 82% e insuficiência aórtica em 36% de coorte de acometimento aórtico; associação com VEXAS/síndrome mielodisplásica em homens mais velhos — 75% vs. 0% em série comparativa francesa — `content/Aorta_e_doença_arterial_periférica`).
+- **doencas**: +5, pareadas 1:1 — `sindrome-de-cogan`, `fistula-arteriovenosa-coronariana-congenita`, `intoxicacao-por-talio`, `cardiotoxicidade-cronica-por-arsenico`, `policondrite-recidivante-cardiovascular`. `prevalence_rank` 120-124 (area=geral).
+- **1 tópico despachado neste lote, corretamente descartado por colisão**: síndrome carcinoide cardíaca — documento completo já existente sob nomenclatura diferente (`doenca-valvar-cardiaca-carcinoide.md`), não capturado pela checagem inicial de mineração de tópicos por variação de frase exata ("síndrome carcinoide cardíaca" vs. "doença valvar cardíaca carcinoide"). O próprio agente identificou a colisão em sua checagem ampla obrigatória antes de escrever qualquer conteúdo — zero trabalho perdido. Lição registrada: busca de colisão por frase exata pode gerar falso negativo por variação de nomenclatura clínica; a checagem ampla feita por cada agente antes da produção continua sendo a rede de segurança eficaz.
+- **Correções na integração**: entidades HTML residuais (`&amp;` `&lt;` `&gt;`) em 3 dos 5 documentos (Cogan, arsênico, tálio), corrigidas antes do commit; um arquivo de rascunho órfão deixado por um agente fora de `content/` (`_draft_fistula_coronariana.md`, não rastreado pelo git) removido antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.538 itens.
+
+### Status consolidado (após Lote 60)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 126 | 2.274 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 120 (18 descartados por colisão) | 80 |
+| **Total** | **4.900** | **320** | **4.580** |
