@@ -1064,3 +1064,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 74 (5 descartados por colisão) | 126 |
 | **Total** | **4.900** | **253** | **4.647** |
+
+## Lote 52 — concluído (commit 60c7692c)
+
+- **5 documentos** (doenças imunopreviníveis/perinatais/oportunistas raras): caxumba/parotidite epidêmica (ressurgimento em populações vacinadas por imunidade decrescente, acometimento cardiovascular predominantemente subclínico com casos fulminantes raros descritos em quase um século de literatura — `content/Geral`), miocardite neonatal por enterovírus/Coxsackievírus B (transmissão vertical periparto, apresentação sepse-like, tripé cardíaco-hepático-neurológico, documento deliberadamente distinto do já publicado sobre miocardite fulminante viral do adulto — `content/Cardiologia_pediátrica`), parvovírus B19 (dois eixos: miocardite linfocítica — vírus mais detectado em biópsia endomiocárdica europeia — e hidropsia fetal não imune por crise aplásica transplacentária — `content/Geral`), criptococose disseminada (pericardite/miocardite/endocardite raríssimas em imunossuprimido, evidência inteiramente anedótica ao longo de 4 décadas — `content/Geral`), hanseníase e o coração (disautonomia cardiovascular com evidência funcional consistente, reações hansênicas e miocárdio como pergunta em aberto, cardiotoxicidade farmacológica de clofazimina/dapsona bem documentada — `content/Geral`).
+- **doencas**: +5, pareadas 1:1 — `miocardite-e-pericardite-associadas-a-caxumba`, `miocardite-neonatal-por-enterovirus`, `infeccao-por-parvovirus-b19-com-acometimento-cardiovascular`, `acometimento-cardiovascular-na-criptococose-disseminada`, `hanseniase-doenca-de-hansen-disautonomia-cardiovascular`.
+- **2 tópicos despachados neste lote, corretamente descartados por colisão real**: coqueluche maligna no lactente (já coberta em `content/Cardiologia_pediátrica/coqueluche-maligna-no-lactente-hiperleucocitose-e-hipertensao-pulmonar-refrataria.md`) e botulismo/disautonomia cardiovascular (já coberto em `content/Terapia_intensiva/botulismo-e-disautonomia-cardiovascular-mecanismo-manifestacoes-e-monitorizacao.md`). Ambos os agentes identificaram a colisão antes de escrever qualquer conteúdo — nenhuma perda de trabalho.
+- **Correção de processo**: o agente de hanseníase, em sua primeira tentativa (herdada do Lote 51), travou sem progresso registrado no transcript entre duas checagens consecutivas — mesmo timestamp, mesmo conteúdo — tratado como trava real e não lentidão por contenção de máquina. Encerrado via `TaskStop` e redespachado com sucesso como parte deste lote, entregando documento completo desta vez.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;` `&amp;`) em 3 dos 5 documentos (parvovírus, enterovírus, hanseníase), corrigidas antes do commit; um link de "Tudo com Tudo" no documento de hanseníase com typo no slug do tétano grave (`tempestica` em vez de `tempestade-simpatica`), corrigido por conferência contra o arquivo real já publicado na branch.
+- **Nota operacional**: confirmado, ao final da integração, que a branch `claude/science-scale-20k-20260904` segue independente do avanço de `origin/main` (consolidação editorial via PR #785 e feature Cardiology Spaces via PR #788, já registrada no Lote 51) — sem necessidade de rebase, sem conflito.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.456 itens.
+
+### Status consolidado (após Lote 52)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 85 | 2.315 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 79 (7 descartados por colisão) | 121 |
+| **Total** | **4.900** | **269** | **4.631** |
