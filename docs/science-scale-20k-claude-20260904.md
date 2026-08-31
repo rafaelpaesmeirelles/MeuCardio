@@ -1041,3 +1041,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 68 (5 descartados por colisão) | 132 |
 | **Total** | **4.900** | **247** | **4.653** |
+
+## Lote 51 — concluído (commit 5fa345db)
+
+- **6 documentos** (zoonoses/micoses/arbovirose/envenenamento): ehrlichiose e anaplasmose humanas (riquetsioses por carrapato com repercussão cardiovascular menos reconhecida, contraste fisiopatológico explícito com a febre maculosa — tropismo leucocitário e mórulas vs. invasão endotelial direta; evidência brasileira calibrada como fragmentária, não endemicidade estabelecida — `content/Geral`), erucismo por *Lonomia obliqua*/taturana (coagulopatia hemorrágica grave e repercussão cardiovascular, sem acometimento cardíaco/pericárdico direto documentado — choque hemorrágico secundário — `content/Terapia_intensiva`), paracoccidioidomicose e acometimento cardiovascular (a micose sistêmica genuinamente brasileira; busca dedicada em PubMed não encontrou nenhum caso de acometimento cardiovascular — `content/Geral`), esporotricose zoonótica disseminada (epidemia felina do Rio de Janeiro por *Sporothrix brasiliensis*, acometimento cardiovascular sustentado por um único relato de caso publicado — `content/Geral`), febre do Oropouche (arbovirose reemergente, expansão geográfica sem precedentes em 2023-2024, primeiros óbitos e desfechos gestacionais adversos; busca sistemática não encontrou miocardite/pericardite estabelecida — `content/Geral`), envenenamento por caravela-portuguesa/*Physalia physalis* (dor extrema e reações sistêmicas, repercussão cardiovascular rara, contraste didático com a cardiotoxicidade bem caracterizada de *Chironex fleckeri* — `content/Terapia_intensiva`).
+- **doencas**: +6, pareadas 1:1 — `ehrlichiose-e-anaplasmose-humanas-com-acometimento-cardiovascular`, `envenenamento-por-lonomia-obliqua-taturana`, `paracoccidioidomicose`, `esporotricose-zoonotica-disseminada`, `febre-do-oropouche`, `envenenamento-por-caravela-portuguesa`.
+- **Nenhuma colisão neste lote**: todos os 6 tópicos e os 12 slugs (documento + doença de cada) foram conferidos por grep contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/*.json` e `doencas/correcoes/*.json` antes da integração — zero hits prévios em todos os casos.
+- **Calibração de honestidade científica reforçada**: 4 dos 6 itens (paracoccidioidomicose, Lonomia, Oropouche e, em menor grau, ehrlichiose/anaplasmose) relatam explicitamente ausência ou escassez de evidência de acometimento cardiovascular direto na literatura pesquisada, em vez de forçar a narrativa de "repercussão cardiovascular" da coleção — inclusive com busca dedicada em PubMed sem nenhum resultado para a combinação doença + acometimento cardíaco (paracoccidioidomicose) e uma revisão sistemática de 73 casos que não lista acometimento cardiovascular entre os achados predominantes (ehrlichiose/anaplasmose).
+- **Correção de processo**: o agente de hanseníase (7º tópico despachado neste lote) travou por tempo prolongado sem progresso registrado no transcript entre duas checagens consecutivas (mesmo conteúdo, mesmo timestamp) — tratado como trava real, não lentidão por contenção de máquina; encerrado via `TaskStop` e não reagendado dentro deste lote, para não bloquear a integração dos 6 itens já prontos. Hanseníase fica pendente para um lote futuro.
+- **Nota operacional relevante**: durante a espera deste lote, uma investigação de rotina revelou que `origin/main` avançou substancialmente (mais de 100 commits) desde a base desta branch, incluindo a consolidação e publicação de ~84 registros do Claude via PR #785 (aproximadamente até o Lote 35, confirmado pelo próprio `docs/PRONTIDAO-PUBLICACAO-CIENTIFICA-20260830.md` já presente em `main`) e uma feature não relacionada (Cardiology Spaces, PR #788). Isso é o pipeline de revisão em dois estágios funcionando como esperado, não uma anomalia: os Lotes 36-51 desta branch permanecem pendentes do próximo ciclo de consolidação editorial independente. Nenhuma ação de merge foi tomada sobre esta branch como resultado — ela segue avançando de forma independente, como desenhado.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.446 itens.
+
+### Status consolidado (após Lote 51)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 80 | 2.320 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 74 (5 descartados por colisão) | 126 |
+| **Total** | **4.900** | **253** | **4.647** |
