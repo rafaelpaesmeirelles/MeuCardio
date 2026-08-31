@@ -4,6 +4,7 @@ import "../styles/cardiology-spaces-route-deep.css";
 import "../styles/cardiology-spaces-consultorio-pages.css";
 import "../styles/cardiology-spaces-consultorio-prescricao.css";
 import "../styles/cardiology-spaces-consultorio-knowledge.css";
+import "../styles/cardiology-spaces-hospital-pages.css";
 
 type RouteGroup = "documentos" | "pacientes" | "prescricao" | "agenda" | "mail" | "assistente" | "integracoes" | "conhecimento" | "ferramentas" | "emergencia" | "rede" | "telediagnostico" | "conta" | "admin" | "geral";
 type CardiologySpace = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
@@ -19,7 +20,6 @@ type RouteContext = { prefix: string; group: RouteGroup; space: CardiologySpace 
  * aprovada. A ordem importa apenas quando um prefixo é subconjunto de outro.
  */
 const ROUTES: RouteContext[] = [
-  // CONSULTÓRIO — decisão, produção e fluxo ambulatorial
   { prefix: "/documentos", group: "documentos", space: "consultorio" },
   { prefix: "/avaliacao-preoperatoria", group: "documentos", space: "consultorio" },
   { prefix: "/receituario", group: "prescricao", space: "consultorio" },
@@ -34,7 +34,6 @@ const ROUTES: RouteContext[] = [
   { prefix: "/condicoes", group: "ferramentas", space: "consultorio" },
   { prefix: "/assistente", group: "assistente", space: "consultorio" },
 
-  // HOSPITAL — internação, UCO, emergência, decisão multidisciplinar e suporte assistencial
   { prefix: "/heart-team", group: "assistente", space: "hospital" },
   { prefix: "/round", group: "pacientes", space: "hospital" },
   { prefix: "/cardiologia-intensiva", group: "ferramentas", space: "hospital" },
@@ -43,14 +42,12 @@ const ROUTES: RouteContext[] = [
   { prefix: "/exames-ia", group: "ferramentas", space: "hospital" },
   { prefix: "/ecg-ia", group: "ferramentas", space: "hospital" },
 
-  // ENSINO — aprendizagem, apresentação e educação clínica
   { prefix: "/casos-clinicos", group: "conhecimento", space: "ensino" },
   { prefix: "/trilhas", group: "conhecimento", space: "ensino" },
   { prefix: "/material-paciente", group: "ferramentas", space: "ensino" },
   { prefix: "/galeria", group: "ferramentas", space: "ensino" },
   { prefix: "/apresentacao", group: "ferramentas", space: "ensino" },
 
-  // PESQUISA — literatura, evidência, descoberta e produção científica
   { prefix: "/documentos-cientificos-ia", group: "conhecimento", space: "pesquisa" },
   { prefix: "/evidencias", group: "conhecimento", space: "pesquisa" },
   { prefix: "/estudos", group: "conhecimento", space: "pesquisa" },
@@ -61,7 +58,6 @@ const ROUTES: RouteContext[] = [
   { prefix: "/exportar", group: "ferramentas", space: "pesquisa" },
   { prefix: "/favoritos", group: "conhecimento", space: "pesquisa" },
 
-  // GESTÃO — comunicação, rede, integrações, conta e administração
   { prefix: "/corvia-mail", group: "mail", space: "gestao" },
   { prefix: "/caixa-de-email", group: "mail", space: "gestao" },
   { prefix: "/whatsapp-assistant", group: "integracoes", space: "gestao" },
