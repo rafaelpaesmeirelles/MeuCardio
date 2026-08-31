@@ -26,7 +26,7 @@ const SPACE_LABEL: Record<SpaceKey, string> = {
 const SPACE_ROUTES: Array<[string, SpaceKey]> = [
   ["/documentos-cientificos-ia", "pesquisa"], ["/evidencias", "pesquisa"], ["/estudos", "pesquisa"], ["/diretrizes", "pesquisa"], ["/biblioteca", "pesquisa"], ["/busca", "pesquisa"], ["/fluxogramas", "pesquisa"], ["/exportar", "pesquisa"], ["/favoritos", "pesquisa"],
   ["/casos-clinicos", "ensino"], ["/trilhas", "ensino"], ["/material-paciente", "ensino"], ["/galeria", "ensino"], ["/apresentacao", "ensino"],
-  ["/round", "hospital"], ["/cardiologia-intensiva", "hospital"], ["/checklists", "hospital"], ["/emergencia", "hospital"], ["/exames-ia", "hospital"], ["/ecg-ia", "hospital"],
+  ["/heart-team", "hospital"], ["/round", "hospital"], ["/cardiologia-intensiva", "hospital"], ["/checklists", "hospital"], ["/emergencia", "hospital"], ["/exames-ia", "hospital"], ["/ecg-ia", "hospital"],
   ["/corvia-mail", "gestao"], ["/caixa-de-email", "gestao"], ["/whatsapp-assistant", "gestao"], ["/usuarios-online", "gestao"], ["/telediagnostico", "gestao"], ["/fila-telediagnostico", "gestao"], ["/sincronizacao", "gestao"], ["/minha-conta", "gestao"], ["/assinatura", "gestao"], ["/verificacao-identidade", "gestao"], ["/excluir-conta", "gestao"], ["/indicadores", "gestao"], ["/receitas-para-assinatura", "gestao"], ["/admin", "gestao"], ["/privacidade", "gestao"], ["/termos", "gestao"],
 ];
 
