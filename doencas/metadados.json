@@ -41707,5 +41707,750 @@
       "sindrome-cardiopulmonar-por-hantavirus-fisiopatologia-diagnostico-e-suporte-hemodinamico"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "saturnismo-cardiovascular",
+    "name": "Intoxicação crônica por chumbo (saturnismo) e risco cardiovascular",
+    "aliases": [
+      "saturnismo",
+      "plumbismo",
+      "intoxicação crônica por chumbo",
+      "exposição crônica ao chumbo e hipertensão",
+      "hipertensão induzida por chumbo"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "toxicologia_cronica",
+    "prevalence_rank": 46,
+    "completeness": "completo",
+    "summary": "Exposição crônica ao chumbo, predominantemente ocupacional (fabricação e reciclagem de baterias automotivas, reciclagem informal de sucata metálica, cerâmica vidrada artesanal, fabricação de munição) ou ambiental de baixo nível, associada a hipertensão arterial e a maior mortalidade cardiovascular mesmo em níveis de chumbo sanguíneo considerados baixos (abaixo de 10 µg/dL, com achados de causalidade para hipertensão já descritos abaixo de 5 µg/dL). O mecanismo envolve disfunção endotelial, estresse oxidativo, interferência no sistema renina-angiotensina e efeito sobre canais de cálcio da musculatura lisa vascular. O diagnóstico depende de história ocupacional dirigida e chumbo sanguíneo; o tratamento de base é o afastamento da exposição, com quelação reservada a intoxicação aguda ou sintomática — o benefício cardiovascular específico da quelação em exposição crônica assintomática foi testado de forma direcionada pelo ensaio TACT2 e não se confirmou.",
+    "presentation": [
+      "Hipertensão arterial de difícil controle ou de início em contexto de exposição ocupacional plausível, sem outra causa secundária identificada",
+      "História ocupacional em fabricação ou reciclagem de baterias automotivas, reciclagem informal de sucata metálica, cerâmica vidrada artesanal ou fabricação de munição",
+      "Exposição ambiental plausível: residência em área de contaminação histórica de solo, tinta ou tubulação antiga, uso de cerâmica vidrada artesanal para alimentos",
+      "Quadro habitualmente assintomático do ponto de vista cardiovascular — sem cólica abdominal, linha gengival de Burton ou neuropatia motora, sinais que só aparecem em intoxicação aguda ou muito mais grave",
+      "Eventualmente identificado por vigilância ocupacional de rotina (chumbo sanguíneo periódico) antes de qualquer sintoma"
+    ],
+    "differentials": [
+      "Hipertensão essencial sem exposição a metal identificável",
+      "Outras causas secundárias de hipertensão: hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono, doença renal parenquimatosa, feocromocitoma",
+      "Exposição concomitante ou isolada a outros metais contaminantes (mercúrio, cádmio, arsênico) com mecanismo cardiovascular sobreposto",
+      "Intoxicação aguda por chumbo com quadro clínico florido (encefalopatia, cólica abdominal, neuropatia motora) — entidade clínica distinta, com conduta de emergência própria",
+      "Nefropatia por chumbo como causa primária de hipertensão secundária à disfunção renal, em vez de efeito vascular direto"
+    ],
+    "tests": [
+      "Chumbo sanguíneo (plumbemia) — teste de referência para exposição recente a moderadamente recente",
+      "História ocupacional dirigida: função atual e prévia, ramo de atividade, tempo de exposição, uso de equipamento de proteção respiratória, hábitos de higiene no trabalho",
+      "Hemograma completo (rastreio de anemia associada a intoxicação por chumbo, incluindo pontilhado basófilo)",
+      "Função renal (creatinina, taxa de filtração glomerular estimada) — nefropatia por chumbo como diferencial e complicação",
+      "Investigação de hipertensão secundária conforme diretriz vigente quando a causa não estiver esclarecida apenas pela história ocupacional",
+      "Monitorização biológica periódica (chumbo sanguíneo seriado) em trabalhador com exposição ocupacional confirmada, conforme protocolo de saúde ocupacional"
+    ],
+    "red_flags": [
+      "Encefalopatia, confusão, convulsão ou alteração do nível de consciência em contexto de exposição ao chumbo — suspeitar de intoxicação aguda grave e acionar manejo de emergência",
+      "Cólica abdominal intensa, neuropatia motora (mão caída) ou anemia importante associada a exposição ocupacional ao chumbo",
+      "Chumbo sanguíneo acentuadamente elevado, acima dos limiares de ação clínica graduada",
+      "Gestante com exposição ocupacional ou ambiental ao chumbo confirmada ou suspeita — risco para o feto exige avaliação prioritária",
+      "Criança no mesmo domicílio de adulto com exposição ocupacional ao chumbo (contaminação secundária por roupas, calçados ou poeira trazida do trabalho)"
+    ],
+    "ambulatory_flow": [
+      "Perguntar ativamente sobre exposição ocupacional ao chumbo na anamnese de hipertensão arterial, sobretudo quando a causa não é evidente ou o controle pressórico é difícil",
+      "Solicitar chumbo sanguíneo quando houver história ocupacional ou ambiental plausível",
+      "Orientar e articular afastamento ou redução da exposição (mudança de função, uso correto de EPI, controle de engenharia no ambiente de trabalho) como primeira medida, independentemente do nível de chumbo sanguíneo",
+      "Não indicar quelação com o objetivo isolado de reduzir risco cardiovascular em paciente assintomático com exposição crônica de baixo grau — benefício cardiovascular específico não confirmado pelo TACT2",
+      "Encaminhar para avaliação toxicológica ou de medicina do trabalho quando o chumbo sanguíneo estiver elevado, para definição de conduta graduada (monitorização seriada, afastamento, eventual quelação)",
+      "Tratar a hipertensão associada à exposição ao chumbo com a mesma abordagem farmacológica de primeira linha recomendada para hipertensão em geral, já que não há terapia anti-hipertensiva específica para esse mecanismo"
+    ],
+    "emergency_flow": [
+      "Reconhecer intoxicação aguda ou sintomática por chumbo (encefalopatia, cólica abdominal intensa, neuropatia motora, chumbo sanguíneo muito elevado) como cenário distinto da exposição crônica assintomática discutida neste documento",
+      "Acionar toxicologia clínica ou centro de intoxicação para definição de agente quelante (CaNa2EDTA, dimercaprol/BAL, succimer/DMSA) e via de administração conforme gravidade",
+      "Afastar imediatamente a fonte de exposição enquanto se organiza a avaliação",
+      "Investigar e tratar complicações associadas (anemia grave, disfunção renal aguda, manifestações neurológicas) em paralelo à quelação",
+      "Não usar quelação de urgência como estratégia isolada de redução de risco cardiovascular fora do contexto de intoxicação aguda ou sintomática"
+    ],
+    "tags": [
+      "saturnismo",
+      "intoxicação por chumbo",
+      "chumbo",
+      "hipertensão secundária",
+      "exposição ocupacional",
+      "exposição ambiental",
+      "disfunção endotelial",
+      "quelação",
+      "TACT2",
+      "toxicologia cardiovascular",
+      "metais contaminantes"
+    ],
+    "source_refs": [
+      "Lanphear BP, Rauch S, Auinger P, Allen RW, Hornung RW. Low-level lead exposure and mortality in US adults: a population-based cohort study. Lancet Public Health. 2018;3(4):e177-e184. DOI: 10.1016/S2468-2667(18)30025-2. PMID: 29544878.",
+      "Menke A, Muntner P, Batuman V, Silbergeld EK, Guallar E. Blood lead below 0.48 micromol/L (10 microg/dL) and mortality among US adults. Circulation. 2006;114(13):1388-1394. DOI: 10.1161/CIRCULATIONAHA.106.628321. PMID: 16982939.",
+      "Navas-Acien A, Guallar E, Silbergeld EK, Rothenberg SJ. Lead exposure and cardiovascular disease--a systematic review. Environ Health Perspect. 2007;115(3):472-482. DOI: 10.1289/ehp.9785. PMID: 17431501.",
+      "Vaziri ND. Mechanisms of lead-induced hypertension and cardiovascular disease. Am J Physiol Heart Circ Physiol. 2008;295(2):H454-H465. DOI: 10.1152/ajpheart.00158.2008. PMID: 18567711.",
+      "Cheng Y, Schwartz J, Sparrow D, Aro A, Weiss ST, Hu H. Bone lead and blood lead levels in relation to baseline blood pressure and prospective hypertension development: the Normative Aging Study. Am J Epidemiol. 2001;153(2):164-171. DOI: 10.1093/aje/153.2.164. PMID: 11159162.",
+      "Yu YL, Thijs L, Yu CG, Yang WY, Melgarejo JD, Wei DM, Wei FF, Nawrot TS, Verhamme P, Roels HA, Staessen JA, Zhang ZY. Two-Year Responses of Heart Rate and Heart Rate Variability to First Occupational Lead Exposure. Hypertension. 2021;77(5):1775-1786. DOI: 10.1161/HYPERTENSIONAHA.120.16545. PMID: 33775124.",
+      "Kosnett MJ, Wedeen RP, Rothenberg SJ, Hipkins KL, Materna BL, Schwartz BS, Hu H, Woolf A. Recommendations for medical management of adult lead exposure. Environ Health Perspect. 2007;115(3):463-471. DOI: 10.1289/ehp.9784. PMID: 17431500.",
+      "Lamas GA, Goertz C, Boineau R, et al; TACT Investigators. Effect of disodium EDTA chelation regimen on cardiovascular events in patients with previous myocardial infarction: the TACT randomized trial. JAMA. 2013;309(12):1241-1250. DOI: 10.1001/jama.2013.2107. PMID: 23532240.",
+      "Lamas GA, Anstrom KJ, Navas-Acien A, et al; TACT2 Investigators. Edetate Disodium-Based Chelation for Patients With a Previous Myocardial Infarction and Diabetes: TACT2 Randomized Clinical Trial. JAMA. 2024;332(10):794-803. DOI: 10.1001/jama.2024.11463. PMID: 39141382.",
+      "Gomes WR, Devóz PP, Rocha BA, et al. Association between Polymorphisms of Hemochromatosis (HFE), Blood Lead (Pb) Levels, and DNA Oxidative Damage in Battery Workers. Int J Environ Res Public Health. 2023;20(4):3513. DOI: 10.3390/ijerph20043513. PMID: 36834208."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29544878/",
+      "https://pubmed.ncbi.nlm.nih.gov/16982939/",
+      "https://pubmed.ncbi.nlm.nih.gov/17431501/",
+      "https://pubmed.ncbi.nlm.nih.gov/18567711/",
+      "https://pubmed.ncbi.nlm.nih.gov/11159162/",
+      "https://pubmed.ncbi.nlm.nih.gov/33775124/",
+      "https://pubmed.ncbi.nlm.nih.gov/17431500/",
+      "https://pubmed.ncbi.nlm.nih.gov/23532240/",
+      "https://pubmed.ncbi.nlm.nih.gov/39141382/",
+      "https://pubmed.ncbi.nlm.nih.gov/36834208/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado. Documento pareado é complementar ao já existente exposicao-ao-chumbo-e-risco-cardiovascular (mesmas fontes-base Lanphear/AHA); esta ficha soma mecanismo detalhado, exposição ocupacional brasileira e a controvérsia TACT/TACT2.",
+    "version": 1,
+    "related_document_slugs": [
+      "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miocardite-por-toxoplasmose-aguda-em-imunocompetente",
+    "name": "Miocardite por toxoplasmose aguda em imunocompetente",
+    "aliases": [
+      "miocardite toxoplásmica",
+      "miocardite por Toxoplasma gondii",
+      "toxoplasmose cardíaca aguda",
+      "cardite por toxoplasmose"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 47,
+    "completeness": "completo",
+    "summary": "Complicação rara da infecção aguda por Toxoplasma gondii em hospedeiro sem imunossupressão conhecida. A maioria das infecções agudas por toxoplasmose é assintomática ou oligossintomática e autolimitada; a miocardite é uma complicação infrequente, mas documentada em relatos de caso ao longo de décadas, que deve entrar no diagnóstico diferencial de miocardite aguda sem etiologia viral esclarecida, especialmente diante de contexto epidemiológico compatível (água ou alimento de procedência duvidosa, surto conhecido). Difere da reativação em imunossuprimidos (HIV/AIDS, transplante), forma mais grave e mais estudada, na qual óbito por miocardite fulminante está mais bem documentado. Tratamento específico com pirimetamina-sulfadiazina e ácido folínico está indicado quando há acometimento de órgão-alvo, incluindo o coração.",
+    "presentation": [
+      "Dor torácica, dispneia ou palpitações em contexto de infecção aguda ou recente por toxoplasmose",
+      "Febre, linfadenopatia cervical, fadiga e mialgia associadas ao quadro cardíaco (síndrome mononucleose-like)",
+      "Alterações eletrocardiográficas inespecíficas de miocardite (alterações de repolarização, arritmias)",
+      "Elevação de troponina e/ou disfunção ventricular à ecocardiografia ou à ressonância cardíaca",
+      "Sinais de insuficiência cardíaca em casos com maior comprometimento miocárdico",
+      "Eventual coriorretinite ou outro acometimento ocular concomitante ou recente",
+      "Quadro sistêmico geralmente discreto, contrastando com o achado cardíaco, o que pode atrasar a suspeita etiológica"
+    ],
+    "differentials": [
+      "Miocardite viral (enterovírus, parvovírus B19, herpesvírus, SARS-CoV-2, entre outros)",
+      "Miocardite chagásica aguda e outras miocardites tropicais",
+      "Miocardite autoimune ou associada a doença do tecido conjuntivo",
+      "Miocardite por hipersensibilidade ou eosinofílica",
+      "Síndrome coronariana aguda com troponina elevada e coronárias normais (MINOCA)",
+      "Pericardite aguda isolada sem acometimento miocárdico",
+      "Miocardite por inibidor de checkpoint imunológico em paciente oncológico",
+      "Endocardite infecciosa com acometimento miocárdico associado"
+    ],
+    "tests": [
+      "Sorologia IgM e IgG para Toxoplasma gondii",
+      "Teste de avidez de IgG para diferenciar infecção recente de pregressa",
+      "PCR para Toxoplasma gondii em sangue ou líquido pericárdico quando pertinente",
+      "Troponina seriada",
+      "Eletrocardiograma",
+      "Ecocardiograma transtorácico",
+      "Ressonância cardíaca com realce tardio",
+      "Biópsia endomiocárdica em cenário selecionado, conforme estratificação de risco de miocardite aguda",
+      "Hemograma completo antes e durante tratamento específico, pelo risco de mielossupressão por pirimetamina"
+    ],
+    "red_flags": [
+      "Choque cardiogênico ou instabilidade hemodinâmica",
+      "Arritmia ventricular sustentada ou bloqueio atrioventricular avançado",
+      "Disfunção ventricular importante à ecocardiografia ou à ressonância",
+      "Elevação progressiva de troponina",
+      "Sinais de insuficiência cardíaca descompensada",
+      "Imunossupressão não reconhecida previamente (investigar sorologia para HIV e outras causas de imunossupressão diante de qualquer miocardite toxoplásmica, pelo risco de curso mais grave)"
+    ],
+    "ambulatory_flow": [
+      "Considerar toxoplasmose no diferencial de miocardite aguda sem etiologia viral esclarecida, sobretudo com contexto epidemiológico compatível",
+      "Solicitar sorologia IgM/IgG e teste de avidez de IgG para toxoplasmose",
+      "Investigar sintomas sistêmicos associados (febre, linfadenopatia, mialgia, alteração visual) e história epidemiológica (água não tratada, carne malcozida, contato com solo ou surto local)",
+      "Encaminhar para avaliação cardiológica com ecocardiograma e, quando disponível, ressonância cardíaca diante de suspeita confirmada",
+      "Não tratar infecção assintomática ou oligossintomática sem acometimento de órgão-alvo com antiparasitário específico",
+      "Iniciar pirimetamina-sulfadiazina com ácido folínico e monitorização hematológica seriada quando houver confirmação de acometimento cardíaco",
+      "Reavaliação clínica e ecocardiográfica programada durante e após o tratamento"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de instabilidade hemodinâmica, choque cardiogênico e arritmia ao primeiro contato",
+      "Solicitar troponina, eletrocardiograma e ecocardiograma à beira-leito diante de suspeita de miocardite aguda",
+      "Investigar etiologia infecciosa ampla, incluindo sorologia para toxoplasmose, quando a causa viral habitual não é confirmada",
+      "Iniciar suporte hemodinâmico e de insuficiência cardíaca conforme gravidade, incluindo consideração de suporte circulatório mecânico em choque cardiogênico refratário",
+      "Acionar equipe de infectologia para confirmação diagnóstica (PCR, avidez de IgG) e definição de esquema com pirimetamina-sulfadiazina e ácido folínico diante de confirmação de acometimento cardíaco",
+      "Investigar imunossupressão não reconhecida (por exemplo, sorologia para HIV), dado o contraste prognóstico com a reativação em imunossuprimidos"
+    ],
+    "tags": [
+      "toxoplasmose",
+      "toxoplasma gondii",
+      "miocardite",
+      "miocardite infecciosa",
+      "doença infecciosa cardiovascular",
+      "imunocompetente",
+      "surto hídrico",
+      "Santa Isabel do Ivaí",
+      "pirimetamina",
+      "sulfadiazina"
+    ],
+    "source_refs": [
+      "Dubey JP, Lago EG, Gennari SM, Su C, Jones JL. Toxoplasmosis in humans and animals in Brazil: high prevalence, high burden of disease, and epidemiology. Parasitology. 2012;139(11):1375-1424. DOI: 10.1017/S0031182012000765. PMID: 22776427",
+      "de Moura L, Bahia-Oliveira LM, Wada MY, Jones JL, Tuboi SH, Carmo EH, et al. Waterborne toxoplasmosis, Brazil, from field to gene. Emerg Infect Dis. 2006;12(2):326-329. DOI: 10.3201/eid1202.041115. PMID: 16494765",
+      "de Almeida MJ, de Oliveira LH, Freire RL, Navarro IT. Aspectos sociopolíticos da epidemia de toxoplasmose em Santa Isabel do Ivaí, Estado do Paraná, Brasil. Cien Saude Colet. 2011;16(Supl.1):1363-1373. DOI: 10.1590/S1413-81232011000700071. PMID: 21503487",
+      "Vaudaux JD, Muccioli C, James ER, Silveira C, Magargal SL, Jung C, et al. Identification of an atypical strain of Toxoplasma gondii as the cause of a waterborne outbreak of toxoplasmosis in Santa Isabel do Ivaí, Brazil. J Infect Dis. 2010;202(8):1226-1233. DOI: 10.1086/656397. PMID: 20836703",
+      "Silveira C, Muccioli C, Holland GN, Jones JL, Yu F, de Paulo A, Belfort R Jr. Ocular involvement following an epidemic of Toxoplasma gondii infection in Santa Isabel do Ivaí, Brazil. Am J Ophthalmol. 2015;159(6):1013-1021. DOI: 10.1016/j.ajo.2015.02.017. PMID: 25743340",
+      "Montoya JG, Liesenfeld O. Toxoplasmosis. Lancet. 2004;363(9425):1965-1976. DOI: 10.1016/S0140-6736(04)16412-X. PMID: 15194258",
+      "Bousquet A, Bigaillon C, Dumitrescu N, Larréché S, Godreuil C, Mestiri R, et al. Acute myocarditis in an immunocompetent young man: don't forget Toxoplasma gondii. Int J Cardiol. 2016;214:358-359. DOI: 10.1016/j.ijcard.2016.03.155. PMID: 27085128",
+      "Nelwan EJ, Shakinah S, Clarissa G, Hosea FN, Herdanto DY, Pandelaki J. Rare cardiac complication of toxoplasmosis in immunocompetent host. IDCases. 2022;29:e01533. DOI: 10.1016/j.idcr.2022.e01533. PMID: 35756700",
+      "Mustafa K, Hillyard J, Nowak E, Slowikowski J, Okogbue I, Garner D. Toxoplasma myocarditis: an atypical case in an immunocompetent patient. IDCases. 2021;26:e01273. DOI: 10.1016/j.idcr.2021.e01273. PMID: 34584844",
+      "Chandenier J, Jarry G, Nassif D, Douadi Y, Paris L, Thulliez P, et al. Congestive heart failure and myocarditis after seroconversion for toxoplasmosis in two immunocompetent patients. Eur J Clin Microbiol Infect Dis. 2000;19(5):375-379. DOI: 10.1007/s100960050498. PMID: 10898141",
+      "Paspalaki PK, Mihailidou EP, Bitsori M, Tsagkaraki D, Mantzouranis E. Polyomyositis and myocarditis associated with acquired toxoplasmosis in an immunocompetent girl. BMC Musculoskelet Disord. 2001;2:8. DOI: 10.1186/1471-2474-2-8. PMID: 11818029",
+      "Hermanns B, Brunn A, Schwarz ER, Sachweh JS, Zimmermann N, Fahl K, et al. Fulminant toxoplasmosis in a heart transplant recipient. Pathol Res Pract. 2001;197(3):211-215. DOI: 10.1078/0344-0338-00036. PMID: 11314787",
+      "Eza DE, Lucas SB. Fulminant toxoplasmosis causing fatal pneumonitis and myocarditis. HIV Med. 2006;7(6):415-420. DOI: 10.1111/j.1468-1293.2006.00393.x. PMID: 16903988",
+      "Lanjewar DN, Agale SV, Chitale AR, Joshi SR. Sudden death due to cardiac toxoplasmosis. J Assoc Physicians India. 2006;54:244-245. PMID: 16800354"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/22776427/",
+      "https://pubmed.ncbi.nlm.nih.gov/16494765/",
+      "https://pubmed.ncbi.nlm.nih.gov/21503487/",
+      "https://pubmed.ncbi.nlm.nih.gov/20836703/",
+      "https://pubmed.ncbi.nlm.nih.gov/25743340/",
+      "https://pubmed.ncbi.nlm.nih.gov/15194258/",
+      "https://pubmed.ncbi.nlm.nih.gov/27085128/",
+      "https://pubmed.ncbi.nlm.nih.gov/35756700/",
+      "https://pubmed.ncbi.nlm.nih.gov/34584844/",
+      "https://pubmed.ncbi.nlm.nih.gov/10898141/",
+      "https://pubmed.ncbi.nlm.nih.gov/11818029/",
+      "https://pubmed.ncbi.nlm.nih.gov/11314787/",
+      "https://pubmed.ncbi.nlm.nih.gov/16903988/",
+      "https://pubmed.ncbi.nlm.nih.gov/16800354/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "toxoplasmose-aguda-e-miocardite-em-imunocompetentes"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "coqueluche-maligna-do-lactente",
+    "name": "Coqueluche maligna do lactente",
+    "aliases": [
+      "coqueluche maligna",
+      "pertussis maligna",
+      "forma maligna da coqueluche",
+      "hipertensão pulmonar maligna da coqueluche"
+    ],
+    "area": "cardiopediatria",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 45,
+    "completeness": "completo",
+    "summary": "Forma grave e potencialmente fatal da coqueluche (Bordetella pertussis) em lactentes jovens, tipicamente menores de 3 a 4 meses e não vacinados ou com esquema incompleto, caracterizada por hiperleucocitose extrema, hipertensão pulmonar refratária ao suporte máximo e falência cardiovascular — mecanismo predominante de óbito, não a insuficiência respiratória isolada.",
+    "presentation": [
+      "Lactente jovem, tipicamente menor de 3 meses, não vacinado ou com esquema vacinal incompleto",
+      "Tosse paroxística evoluindo com deterioração respiratória rápida, apneia ou cianose",
+      "Taquicardia desproporcional, sinais de baixo débito e má perfusão periférica",
+      "Hipoxemia progressiva refratária a suporte ventilatório convencional",
+      "Leucocitose acentuada e ascendente ao hemograma seriado (frequentemente >50x10⁹/L, podendo ultrapassar 100x10⁹/L)",
+      "Choque cardiovascular e sinais de falência de ventrículo direito em casos avançados"
+    ],
+    "differentials": [
+      "Sepse bacteriana neonatal/do lactente jovem",
+      "Bronquiolite viral grave (VSR e outros vírus respiratórios)",
+      "Hipertensão pulmonar persistente do recém-nascido de outras causas",
+      "Cardiopatia congênita com hipertensão pulmonar",
+      "Miocardite viral fulminante",
+      "Leucemia/reação leucemoide com leucostase",
+      "Coinfecção respiratória (parainfluenza, VSR) mascarando ou agravando o quadro de coqueluche"
+    ],
+    "tests": [
+      "PCR para Bordetella pertussis em swab/aspirado nasofaríngeo",
+      "Hemograma seriado com contagem e cinética de leucócitos (leucometria de pico e velocidade de ascensão)",
+      "Gasometria arterial seriada",
+      "Ecocardiograma para avaliação de hipertensão pulmonar, função de VD e função biventricular",
+      "Radiografia de tórax",
+      "Lactato e marcadores de perfusão",
+      "Hemocultura e investigação de coinfecção bacteriana/viral quando houver deterioração desproporcional"
+    ],
+    "red_flags": [
+      "Leucocitose >50x10⁹/L, especialmente com ascensão rápida (>12x10⁹/L/dia) ou relação linfócito/neutrófilo <1",
+      "Hipertensão pulmonar ao ecocardiograma ou hipoxemia refratária a suporte ventilatório máximo",
+      "Choque cardiovascular ou sinais de falência de ventrículo direito",
+      "Idade menor que 6 a 8 semanas, faixa de maior mortalidade descrita",
+      "Ausência de vacinação materna ou esquema vacinal do lactente incompleto",
+      "Apneia recorrente ou deterioração respiratória rápida e progressiva"
+    ],
+    "ambulatory_flow": [
+      "Não tratar tosse paroxística em lactente jovem como quadro viral banal sem investigar coqueluche",
+      "Solicitar PCR para B. pertussis e hemograma diante de tosse paroxística, apneia ou cianose em lactente não vacinado ou com esquema incompleto",
+      "Encaminhar para avaliação hospitalar imediata qualquer lactente jovem com suspeita de coqueluche e sinais de gravidade — não aguardar resultado de PCR para referenciar",
+      "Orientar isolamento respiratório e quimioprofilaxia de contactantes conforme protocolo local",
+      "Reforçar oportunidade perdida de vacinação materna e do casulo em toda consulta pré-natal e puerperal"
+    ],
+    "emergency_flow": [
+      "Monitorização contínua e hemograma seriado para acompanhar cinética leucocitária desde a admissão",
+      "Ecocardiograma precoce para avaliar hipertensão pulmonar e função ventricular",
+      "Suporte hemodinâmico com drogas vasoativas e ventilação protetora; evitar sobrecarga volêmica indiscriminada",
+      "Discutir com centro terciário/quaternário com experiência em leucodepleção (exsanguineotransfusão ou leucaférese) diante de hiperleucocitose extrema e progressiva, reconhecendo que essa intervenção tem nível de evidência de séries de caso, não de ensaio randomizado",
+      "Considerar transferência precoce para centro com capacidade de ECMO diante de hipertensão pulmonar/hipoxemia refratárias, com expectativa de benefício limitada e mortalidade elevada descrita mesmo com suporte extracorpóreo, especialmente em menores de 6 semanas",
+      "Não atrasar antibioticoterapia dirigida a B. pertussis (macrolídeo) enquanto aguarda confirmação laboratorial em caso de alta suspeita clínica",
+      "Acionar isolamento respiratório e notificação/quimioprofilaxia de contactantes conforme protocolo institucional e de vigilância epidemiológica"
+    ],
+    "tags": [
+      "coqueluche",
+      "pertussis",
+      "hiperleucocitose",
+      "hipertensão pulmonar",
+      "ECMO",
+      "leucodepleção",
+      "exsanguineotransfusão",
+      "vacinação materna",
+      "cocoon strategy",
+      "lactente jovem"
+    ],
+    "source_refs": [
+      "Paddock CD, Sanden GN, Cherry JD, et al. Pathology and pathogenesis of fatal Bordetella pertussis infection in infants. Clin Infect Dis. 2008;47(3):328-338. DOI: 10.1086/589753. PMID: 18558873.",
+      "Sawal M, Cohen M, Irazuzta JE, et al. Fulminant pertussis: a multi-center study with new insights into the clinico-pathological mechanisms. Pediatr Pulmonol. 2009;44(10):970-980. DOI: 10.1002/ppul.21082. PMID: 19725100.",
+      "Coquaz-Garoudet M, Ploin D, Pouyau R, et al. Malignant pertussis in infants: factors associated with mortality in a multicenter cohort study. Ann Intensive Care. 2021;11(1):55. DOI: 10.1186/s13613-021-00856-y. PMID: 33961197.",
+      "Pierce C, Klein N, Peters M. Is leukocytosis a predictor of mortality in severe pertussis infection? Intensive Care Med. 2000;26(10):1512-1514. DOI: 10.1007/s001340000587. PMID: 11126265.",
+      "Winter K, Zipprich J, Harriman K, et al. Risk Factors Associated With Infant Deaths From Pertussis: A Case-Control Study. Clin Infect Dis. 2015;61(7):1099-1106. DOI: 10.1093/cid/civ472. PMID: 26082502.",
+      "Surridge J, Segedin ER, Grant CC. Pertussis requiring intensive care. Arch Dis Child. 2007;92(11):970-975. DOI: 10.1136/adc.2006.114082. PMID: 17611239.",
+      "Rowlands HE, Goldman AP, Harrington K, et al. Impact of rapid leukodepletion on the outcome of severe clinical pertussis in young infants. Pediatrics. 2010;126(4):e816-e827. DOI: 10.1542/peds.2009-2860. PMID: 20819895.",
+      "Halasa NB, Barr FE, Johnson JE, Edwards KM. Fatal pulmonary hypertension associated with pertussis in infants: does extracorporeal membrane oxygenation have a role? Pediatrics. 2003;112(6 Pt 1):1274-1278. DOI: 10.1542/peds.112.6.1274. PMID: 14654596.",
+      "AlSuwaidi N, Otour B, Salman A. Pertussis-Associated Myocarditis in an Adolescent: A Case Report. Cureus. 2025;17(10):e95226. DOI: 10.7759/cureus.95226. PMID: 41281058.",
+      "Amirthalingam G, Andrews N, Campbell H, et al. Effectiveness of maternal pertussis vaccination in England: an observational study. Lancet. 2014;384(9953):1521-1528. DOI: 10.1016/S0140-6736(14)60686-3. PMID: 25037990.",
+      "Liang JL, Tiwari T, Moro P, Messonnier NE, Reingold A, Sawyer M, Clark TA. Prevention of Pertussis, Tetanus, and Diphtheria with Vaccines in the United States: Recommendations of the ACIP. MMWR Recomm Rep. 2018;67(2):1-44. DOI: 10.15585/mmwr.rr6702a1. PMID: 29702631."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18558873/",
+      "https://pubmed.ncbi.nlm.nih.gov/19725100/",
+      "https://pubmed.ncbi.nlm.nih.gov/33961197/",
+      "https://pubmed.ncbi.nlm.nih.gov/11126265/",
+      "https://pubmed.ncbi.nlm.nih.gov/26082502/",
+      "https://pubmed.ncbi.nlm.nih.gov/17611239/",
+      "https://pubmed.ncbi.nlm.nih.gov/20819895/",
+      "https://pubmed.ncbi.nlm.nih.gov/14654596/",
+      "https://pubmed.ncbi.nlm.nih.gov/41281058/",
+      "https://pubmed.ncbi.nlm.nih.gov/25037990/",
+      "https://pubmed.ncbi.nlm.nih.gov/29702631/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "coqueluche-maligna-no-lactente-hiperleucocitose-e-hipertensao-pulmonar-refrataria"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miocardite-associada-ao-sarampo",
+    "name": "Miocardite associada ao sarampo",
+    "aliases": [
+      "miocardite sarampionosa",
+      "miocardite pelo vírus do sarampo",
+      "complicação cardíaca do sarampo"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 48,
+    "completeness": "completo",
+    "summary": "Complicação cardíaca rara do sarampo, descrita predominantemente em relatos de caso e pequenas séries, sem série populacional que estabeleça sua incidência real. Decorre de efeito viral direto documentado sobre o miocárdio e, possivelmente, de infecção secundária por outros agentes favorecida pela imunossupressão transitória pós-sarampo ('amnésia imunológica') — mecanismo biologicamente plausível, mas não demonstrado especificamente para miocardite. Não há antiviral específico; o manejo é de suporte, com vitamina A recomendada pela OMS para todo caso de sarampo. Ganha relevância prática pela reemergência do sarampo associada à queda de cobertura vacinal no Brasil e no mundo.",
+    "presentation": [
+      "Sintomas cardíacos (dispneia, dor torácica, palpitações) surgindo durante a fase exantemática do sarampo ou nos dias subsequentes",
+      "Taquicardia desproporcional ao grau de febre",
+      "Sinais de disfunção ventricular ou insuficiência cardíaca aguda em casos mais graves, incluindo relatos de evolução para choque cardiogênico e óbito",
+      "Alterações eletrocardiográficas inespecíficas de miocardite: distúrbios de repolarização, arritmias ou distúrbios de condução",
+      "Elevação de troponina quando dosada no contexto do sarampo agudo",
+      "Sobreposição com pneumonia sarampionosa em parte dos relatos, dificultando atribuir os sintomas respiratórios isoladamente ao pulmão ou ao coração",
+      "Contexto epidemiológico obrigatório: febre, exantema maculopapular céfalo-caudal, tosse, coriza, conjuntivite ou manchas de Koplik, com nexo epidemiológico (contato com caso confirmado, viagem a área com transmissão ativa, esquema vacinal incompleto ou ausente)"
+    ],
+    "differentials": [
+      "Miocardite viral por outros agentes cardiotrópicos (enterovírus, parvovírus B19, adenovírus)",
+      "Miocardite chagásica aguda e outras miocardites tropicais em área endêmica",
+      "Doença de Kawasaki (em criança pequena com febre e exantema)",
+      "Escarlatina ou outras doenças exantemáticas com acometimento cardíaco tóxico",
+      "Pericardite isolada sem acometimento miocárdico relevante",
+      "Cardiomiopatia preexistente descompensada por doença febril intercorrente"
+    ],
+    "tests": [
+      "Sorologia IgM específica para sarampo",
+      "RT-PCR para RNA do vírus do sarampo em secreção respiratória ou urina",
+      "Eletrocardiograma",
+      "Troponina e, quando pertinente, peptídeos natriuréticos",
+      "Ecocardiograma para avaliar função ventricular e derrame pericárdico associado",
+      "Ressonância magnética cardíaca em paciente estável, quando disponível",
+      "Biópsia endomiocárdica reservada a instabilidade hemodinâmica ou dúvida diagnóstica relevante, pelos mesmos critérios usados em miocardite de outras etiologias"
+    ],
+    "red_flags": [
+      "Instabilidade hemodinâmica ou sinais de choque cardiogênico",
+      "Arritmia sustentada ou distúrbio de condução de alto grau",
+      "Sinais de insuficiência cardíaca aguda em paciente com sarampo confirmado ou suspeito",
+      "Necessidade de suporte inotrópico, ventilatório ou circulatório mecânico",
+      "Deterioração clínica rápida durante o curso do sarampo, sugerindo complicação além do quadro exantemático habitual"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico de sarampo (clínico-epidemiológico, IgM e/ou RT-PCR) e notificar compulsoriamente a vigilância epidemiológica de forma imediata",
+      "Orientar isolamento respiratório durante o período de transmissibilidade",
+      "Iniciar vitamina A conforme recomendação da OMS para todo caso de sarampo",
+      "Perguntar ativamente sobre sintomas cardíacos (dispneia, dor torácica, palpitações) em toda consulta de acompanhamento do sarampo, mesmo sem queixa espontânea",
+      "Encaminhar imediatamente à emergência qualquer paciente com sarampo que desenvolva sintoma cardiovascular ou sinal de gravidade"
+    ],
+    "emergency_flow": [
+      "Confirmar isolamento respiratório e notificar a vigilância epidemiológica sem atrasar o atendimento",
+      "Avaliar estabilidade hemodinâmica, obter ECG, troponina e ecocardiograma diante de qualquer sintoma cardíaco",
+      "Iniciar suporte hemodinâmico proporcional à gravidade (observação, suporte inotrópico, ventilatório ou circulatório mecânico) seguindo os mesmos princípios de manejo de miocardite fulminante viral de outras etiologias",
+      "Administrar vitamina A conforme recomendação da OMS, se ainda não iniciada",
+      "Não há antiviral específico indicado; reservar biópsia endomiocárdica e imunossupressão a cenários com indicação específica, pelos critérios gerais de miocardite"
+    ],
+    "tags": [
+      "sarampo",
+      "miocardite",
+      "amnésia imunológica",
+      "doença infecciosa",
+      "vacinação",
+      "reemergência epidemiológica",
+      "pediatria"
+    ],
+    "source_refs": [
+      "Perry RT, Halsey NA. The clinical significance of measles: a review. J Infect Dis. 2004;189 Suppl 1:S4-S16. DOI: 10.1086/377712. PMID: 15106083.",
+      "Mina MJ, Metcalf CJ, de Swart RL, Osterhaus ADME, Grenfell BT. Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality. Science. 2015;348(6235):694-699. DOI: 10.1126/science.aaa3662. PMID: 25954009.",
+      "Mina MJ, Kula T, Leng Y, et al. Measles virus infection diminishes preexisting antibodies that offer protection from other pathogens. Science. 2019;366(6465):599-606. DOI: 10.1126/science.aay6485. PMID: 31672891.",
+      "Petrova VN, Sawatsky B, Han AX, et al. Incomplete genetic reconstitution of B cell pools contributes to prolonged immunosuppression after measles. Sci Immunol. 2019;4(41):eaay6125. DOI: 10.1126/sciimmunol.aay6125. PMID: 31672862.",
+      "Susanto DF, Emilda, Risna. Measles-associated Myocarditis: A Case Report. Pediatr Infect Dis J. 2024;43(2):e71. DOI: 10.1097/INF.0000000000004159. PMID: 38758208.",
+      "Frustaci A, Abdulla AK, Caldarulo M, Buffon A. Fatal measles myocarditis. Cardiologia. 1990;35(4):347-349. PMID: 2245437.",
+      "Andrus JK, Santos JI, Evans Gilbert T, Siqueira M, Gentile A, Boshell J, Reef S. Sustaining measles and rubella elimination through the Regional Monitoring and Re-Verification Commission in the Americas. Rev Panam Salud Publica. 2024;48:e93. DOI: 10.26633/RPSP.2024.93. PMID: 39687260.",
+      "Kaur A, Alaribe U, Varon J, Hassaan S, Halma M. Acute management of measles: a systematic review of therapeutic strategies. Antiviral Res. 2026;247:106361. DOI: 10.1016/j.antiviral.2026.106361. PMID: 41638401.",
+      "Huiming Y, Chaomin W, Meng M. Vitamin A for treating measles in children. Cochrane Database Syst Rev. 2005;(4):CD001479. DOI: 10.1002/14651858.CD001479.pub3. PMID: 16235283."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/15106083/",
+      "https://pubmed.ncbi.nlm.nih.gov/25954009/",
+      "https://pubmed.ncbi.nlm.nih.gov/31672891/",
+      "https://pubmed.ncbi.nlm.nih.gov/31672862/",
+      "https://pubmed.ncbi.nlm.nih.gov/38758208/",
+      "https://pubmed.ncbi.nlm.nih.gov/2245437/",
+      "https://pubmed.ncbi.nlm.nih.gov/39687260/",
+      "https://pubmed.ncbi.nlm.nih.gov/41638401/",
+      "https://pubmed.ncbi.nlm.nih.gov/16235283/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "miocardite-sarampionosa-efeito-viral-amnesia-imunologica-e-reemergencia-epidemiologica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "intoxicacao-por-tetrodotoxina",
+    "name": "Intoxicação por tetrodotoxina (baiacu)",
+    "aliases": [
+      "intoxicação por baiacu",
+      "intoxicação por peixe-botete",
+      "envenenamento por Tetraodontidae",
+      "fugu poisoning",
+      "paralisia por tetrodotoxina"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 49,
+    "completeness": "completo",
+    "summary": "Envenenamento por ingestão de peixe-baiacu/botete (família Tetraodontidae) ou de outros organismos marinhos que bioacumulam tetrodotoxina, produzida por bactérias simbiontes e não pelo próprio peixe. A toxina bloqueia de forma seletiva e reversível os canais de sódio dependentes de voltagem em nervo e músculo, causando parestesia perioral progredindo para paralisia flácida ascendente, insuficiência respiratória e, com frequência, bradicardia e hipotensão, com risco de assistolia em envenenamento grave. Não há antídoto específico validado; o tratamento é exclusivamente de suporte, incluindo ventilação mecânica com frequência prolongada até a resolução espontânea do bloqueio, com prognóstico geralmente favorável quando o suporte é precoce e adequado.",
+    "presentation": [
+      "Parestesia e dormência perioral, de lábios e de língua minutos a poucas horas após ingestão de peixe compatível com baiacu/botete",
+      "Náuseas, vômitos e sialorreia no início do quadro",
+      "Parestesia progressiva em extremidades, ataxia, disartria e disfagia",
+      "Fraqueza muscular flácida progressiva e ascendente, de membros inferiores para superiores",
+      "Midríase fixa, perda de reflexos profundos e paralisia flácida completa em envenenamento grave",
+      "Consciência tipicamente preservada mesmo com paralisia motora extensa",
+      "Bradicardia sinusal e hipotensão",
+      "Insuficiência respiratória por falência da musculatura diafragmática e intercostal",
+      "Arritmia, distúrbio de condução ou parada cardiorrespiratória em envenenamento grave"
+    ],
+    "differentials": [
+      "Síndrome de Guillain-Barré e outras polirradiculoneuropatias agudas",
+      "Crise miastênica",
+      "Botulismo",
+      "Intoxicação por saxitoxina (envenenamento paralítico por moluscos)",
+      "Intoxicação por organofosforado ou carbamato (síndrome colinérgica com fraqueza e bradicardia)",
+      "Intoxicação digitálica (mecanismo distinto — inibição da Na+/K+-ATPase, não bloqueio direto de canal de sódio)",
+      "Hipercalemia grave com fraqueza muscular e bradiarritmia",
+      "Acidente vascular encefálico de tronco ou outra causa central de paralisia aguda"
+    ],
+    "tests": [
+      "História alimentar dirigida: ingestão de peixe compatível com baiacu/botete, procedência não identificada ou comprado como outra espécie",
+      "Avaliação seriada de força muscular, pares cranianos e capacidade ventilatória",
+      "Eletrocardiograma seriado, com atenção a bradicardia, distúrbio de condução e arritmia",
+      "Gasometria arterial e monitorização contínua de saturação",
+      "Eletrólitos (excluir hipercalemia como diferencial) e creatinofosfoquinase",
+      "Não há teste toxicológico de beira-leito amplamente disponível; confirmação, quando realizada, depende de método especializado (ex.: cromatografia líquida acoplada a espectrometria de massas) não disponível em tempo útil para a decisão inicial"
+    ],
+    "red_flags": [
+      "Progressão rápida de parestesia para fraqueza motora objetiva",
+      "Disartria, disfagia ou comprometimento de pares cranianos",
+      "Qualquer sinal de esforço respiratório aumentado, uso de musculatura acessória ou queda da capacidade ventilatória, mesmo com paciente consciente e calmo",
+      "Bradicardia sintomática ou hipotensão",
+      "Paralisia flácida extensa ou midríase fixa",
+      "Hipóxia ou necessidade emergente de via aérea avançada"
+    ],
+    "ambulatory_flow": [
+      "Não há manejo ambulatorial para intoxicação por tetrodotoxina suspeita ou confirmada — encaminhamento imediato a serviço de emergência com capacidade de suporte ventilatório é mandatório diante de qualquer sintoma compatível após ingestão de peixe suspeito",
+      "Orientação de saúde pública sobre não consumir peixe de espécie não identificada com certeza, sobretudo em mercados e feiras onde o baiacu pode ser vendido eviscerado como substituto de outro peixe"
+    ],
+    "emergency_flow": [
+      "Avaliação imediata de via aérea, ventilação e circulação, com baixo limiar para intubação e ventilação mecânica antes da instalação abrupta de insuficiência respiratória franca",
+      "Monitorização cardíaca contínua e reavaliação seriada da força muscular e da capacidade ventilatória",
+      "Suporte hemodinâmico para bradicardia sintomática e hipotensão, com abordagem análoga à de outras bradiarritmias sintomáticas na terapia intensiva",
+      "Não administrar nem aguardar antídoto específico — não existe antídoto validado para tetrodotoxina",
+      "Ventilação mecânica mantida, com frequência por dias, até resolução espontânea do bloqueio dos canais de sódio",
+      "Consulta precoce a centro de toxicologia/controle de intoxicações e notificação epidemiológica conforme fluxo local de vigilância sanitária"
+    ],
+    "tags": [
+      "toxicologia",
+      "tetrodotoxina",
+      "baiacu",
+      "peixe-botete",
+      "Tetraodontidae",
+      "canal de sódio dependente de voltagem",
+      "paralisia flácida ascendente",
+      "bradicardia",
+      "insuficiência respiratória",
+      "envenenamento marinho"
+    ],
+    "source_refs": [
+      "Isbister GK, Kiernan MC. Neurotoxic marine poisoning. Lancet Neurol. 2005;4(4):219-228. DOI: 10.1016/S1474-4422(05)70041-7. PMID: 15778101",
+      "Bane V, Lehane M, Dikshit M, O'Riordan A, Furey A. Tetrodotoxin: chemistry, toxicity, source, distribution and detection. Toxins (Basel). 2014;6(2):693-755. DOI: 10.3390/toxins6020693. PMID: 24566728",
+      "Noguchi T, Arakawa O. Tetrodotoxin — distribution and accumulation in aquatic organisms, and cases of human intoxication. Mar Drugs. 2008;6(2):220-242. DOI: 10.3390/md20080011. PMID: 18728726",
+      "Lago J, Rodríguez LP, Blanco L, Vieites JM, Cabado AG. Tetrodotoxin, an Extremely Potent Marine Neurotoxin: Distribution, Toxicity, Origin and Therapeutical Uses. Mar Drugs. 2015;13(10):6384-6406. DOI: 10.3390/md13106384. PMID: 26492253",
+      "Vidigal IEM, Silva GVFD, Costa NFMF, Bezerra MH, Dias HN, Santos JA, Hauser-Davis RA, Nunes JLS. Tetrodotoxin poisoning with cardiorespiratory arrest and permanent neurological sequelae following ingestion of a checkered puffer Sphoeroides testudineus (Linnaeus, 1758) from the Brazilian Amazon coast. Rev Soc Bras Med Trop. 2026;59:e05442025. DOI: 10.1590/0037-8682-0544-2025. PMID: 42307394"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/15778101/",
+      "https://pubmed.ncbi.nlm.nih.gov/24566728/",
+      "https://pubmed.ncbi.nlm.nih.gov/18728726/",
+      "https://pubmed.ncbi.nlm.nih.gov/26492253/",
+      "https://pubmed.ncbi.nlm.nih.gov/42307394/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "intoxicacao-por-tetrodotoxina-ingestao-de-baiacu-e-manifestacoes-cardiovasculares"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "cisticercose-cardiaca",
+    "name": "Cisticercose cardíaca",
+    "aliases": [
+      "cisto cardíaco por Taenia solium",
+      "cisticerco no miocárdio",
+      "acometimento cardíaco da cisticercose",
+      "cardiocisticercose",
+      "cisticercose miocárdica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 50,
+    "completeness": "completo",
+    "summary": "Presença de cisticercos (larvas de Taenia solium) no subpericárdio, subendocárdio ou miocárdio, quase sempre no contexto de cisticercose sistêmica disseminada associada a neurocisticercose. A maioria dos casos é assintomática e descoberta incidentalmente em ecocardiograma, ressonância cardíaca ou autópsia; relatos de caso descrevem arritmia, distúrbio de condução, miocardite e derrame pericárdico associados a cisto cardíaco, mas essa base de evidência é predominantemente de relatos e pequenas séries de caso, não de estudos populacionais ou coortes grandes. Diagnóstico por ecocardiograma, ressonância cardíaca e sorologia (ELISA/EITB), com investigação obrigatória de neurocisticercose associada. Tratamento com albendazol e/ou praziquantel, extrapolado do manejo bem estabelecido da neurocisticercose, com cautela pelo risco de reação inflamatória perilesional na morte do parasita — incluindo risco teórico de arritmia ou distúrbio de condução transitório quando o cisto está próximo ao sistema de condução — e uso frequente de corticosteroide adjuvante.",
+    "presentation": [
+      "Assintomática na maioria dos casos descritos: achado incidental em ecocardiograma, ressonância cardíaca, cirurgia cardíaca por outra indicação ou autópsia",
+      "Contexto epidemiológico típico: paciente de área endêmica para teníase-cisticercose, frequentemente com neurocisticercose já diagnosticada ou concomitante (cefaleia, crise convulsiva de início no adulto, hidrocefalia)",
+      "Palpitações ou extrassístoles em paciente com cisto identificado por imagem",
+      "Relatos de caso de arritmia ventricular associada a cisto intramiocárdico",
+      "Relatos de caso de distúrbio de condução (incluindo bloqueio atrioventricular) quando o cisto se localiza próximo ao nó atrioventricular ou ao feixe de His",
+      "Relato de caso de miocardite com quadro simulando síndrome coronariana aguda com supradesnivelamento de ST, troponina muito elevada e coronárias angiograficamente normais",
+      "Derrame pericárdico, geralmente de pequeno volume, associado a cisto subpericárdico"
+    ],
+    "differentials": [
+      "Cisto pericárdico simples (não parasitário)",
+      "Cisto hidático cardíaco por Echinococcus granulosus",
+      "Mixoma e outros tumores cardíacos benignos",
+      "Trombo intracavitário",
+      "Tumor cardíaco maligno primário ou metastático",
+      "Miocardite chagásica aguda e outras miocardites tropicais (dengue, Zika, Chikungunya, malária)",
+      "Miocardite viral não tropical",
+      "Cardite de Lyme e outras causas infecciosas de bloqueio atrioventricular reversível",
+      "Abscesso ou massa infecciosa cardíaca de outra etiologia"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico e, quando necessário, transesofágico — massa cística de paredes bem definidas, com ou sem escólex visível",
+      "Ressonância magnética cardíaca com realce tardio para caracterização tecidual e diferenciação de outras massas/cistos cardíacos",
+      "Sorologia para cisticercose: ELISA e immunoblot EITB (maior sensibilidade em doença multicística que em lesão única)",
+      "Tomografia ou ressonância de crânio para investigar neurocisticercose associada (deve ser feita sempre que houver cisto cardíaco compatível)",
+      "Eletrocardiograma basal e monitorização eletrocardiográfica, sobretudo se o cisto for próximo ao sistema de condução ou houver sintomas sugestivos de arritmia",
+      "Troponina quando houver quadro sugestivo de miocardite",
+      "Histopatologia quando há achado cirúrgico incidental ou biópsia"
+    ],
+    "red_flags": [
+      "Arritmia sustentada ou bloqueio atrioventricular de alto grau em paciente de área endêmica ou com neurocisticercose conhecida",
+      "Quadro compatível com miocardite aguda (dor torácica, elevação de troponina, coronárias normais) em contexto epidemiológico compatível com cisticercose",
+      "Derrame pericárdico com repercussão hemodinâmica",
+      "Convulsão de início no adulto associada a achado cardíaco cístico, sugerindo neurocisticercose concomitante não investigada",
+      "Sinais de hipertensão intracraniana ou hidrocefalia não avaliados antes de iniciar tratamento cisticida",
+      "Piora de sintomas cardíacos (arritmia nova, dispneia, dor torácica) nos primeiros dias após início de albendazol/praziquantel, compatível com reação inflamatória perilesional"
+    ],
+    "ambulatory_flow": [
+      "Achado incidental de cisto cardíaco compatível: não tratar isoladamente sem avaliação sistêmica completa",
+      "Solicitar sorologia (ELISA/EITB) e investigar neurocisticercose associada com imagem de crânio antes de definir conduta",
+      "Caracterizar o cisto por ressonância cardíaca e correlacionar a localização com o sistema de condução",
+      "Encaminhar para avaliação conjunta de infectologia e cardiologia antes de iniciar tratamento cisticida",
+      "Se indicado tratamento antiparasitário, ponderar corticosteroide adjuvante e planejar monitorização eletrocardiográfica no início do esquema, sobretudo se o cisto for próximo ao sistema de condução",
+      "Cisto assintomático sem neurocisticercose ativa e sem indicação sistêmica de tratamento: seguimento clínico e de imagem, sem intervenção cirúrgica"
+    ],
+    "emergency_flow": [
+      "Paciente com arritmia sintomática ou bloqueio atrioventricular de alto grau: estabilização, monitorização contínua e ecocardiograma urgente",
+      "Investigar etiologia infecciosa incluindo cisticercose quando o contexto epidemiológico for compatível, sem retardar o suporte hemodinâmico",
+      "Considerar marca-passo transitório se bloqueio atrioventricular avançado sintomático, independentemente da etiologia ainda em investigação",
+      "Não iniciar cisticida na emergência sem avaliação neurológica prévia (risco de hipertensão intracraniana) e sem plano de monitorização, pelo risco teórico de piora inflamatória perilesional transitória",
+      "Tratar miocardite ou derrame pericárdico associados conforme gravidade clínica, com suporte multidisciplinar (cardiologia, infectologia, neurologia quando há neurocisticercose concomitante)"
+    ],
+    "tags": [
+      "cisticercose",
+      "taenia solium",
+      "doenca tropical negligenciada",
+      "neurocisticercose",
+      "arritmia",
+      "bloqueio atrioventricular",
+      "miocardite",
+      "derrame pericardico",
+      "massa cardiaca",
+      "zoonose"
+    ],
+    "source_refs": [
+      "García-Martínez CE, Scatularo CE, Farina JM, Saldarriaga C, Pérez GE, Wyss F, Spina S, Mendoza I, Lopez Santi R, Martínez-Sellés M, Baranchuk A. Cysticercosis and Heart: A Systematic Review. Curr Probl Cardiol. 2023;48(8):101195. DOI: 10.1016/j.cpcardiol.2022.101195. PMID: 35395330",
+      "Garcia HH, Nash TE, Del Brutto OH. Clinical symptoms, diagnosis, and treatment of neurocysticercosis. Lancet Neurol. 2014;13(12):1202-1215. DOI: 10.1016/S1474-4422(14)70094-8. PMID: 25453460",
+      "White AC Jr, Coyle CM, Rajshekhar V, Singh G, Hauser WA, Mohanty A, Garcia HH, Nash TE. Diagnosis and Treatment of Neurocysticercosis: 2017 Clinical Practice Guidelines by the IDSA and the ASTMH. Clin Infect Dis. 2018;66(8):e49-e75. DOI: 10.1093/cid/cix1084. PMID: 29481580",
+      "Garcia HH, Pretell EJ, Gilman RH, et al.; Cysticercosis Working Group in Peru. A trial of antiparasitic treatment to reduce the rate of seizures due to cerebral cysticercosis. N Engl J Med. 2004;350(3):249-258. DOI: 10.1056/NEJMoa031294. PMID: 14724304",
+      "Hamamoto Filho PT, Fragoso G, Sciutto E, Fleury A. Inflammation in neurocysticercosis: clinical relevance and impact on treatment decisions. Expert Rev Anti Infect Ther. 2021;19(12):1503-1518. DOI: 10.1080/14787210.2021.1912592. PMID: 33794119",
+      "Rodríguez-Rivas R, Flisser A, Norcia LF, et al. Neurocysticercosis in Latin America: Current epidemiological situation based on official statistics from four countries. PLoS Negl Trop Dis. 2022;16(8):e0010652. DOI: 10.1371/journal.pntd.0010652. PMID: 36037251",
+      "Marinho GLOC, Schwarz DGG, Trigo BB, et al. Swine cysticercosis and associated risk factors in non-technified pig breeding in semi-arid region of Sergipe state, Brazil. Trop Anim Health Prod. 2020;53(1):37. DOI: 10.1007/s11250-020-02441-0. PMID: 33230578",
+      "Bhalla A, Sood A, Sachdev A. Heart involvement in disseminated cysticercosis- a case report and review of literature. Indian Heart J. 2008;60(3):260-262. PMID: 19240318",
+      "Littlewood S. A case report of cardiac cysticercosis in a returning traveller: a rare cause of myocarditis. Eur Heart J Case Rep. 2022;6(5):ytac208. DOI: 10.1093/ehjcr/ytac208. PMID: 35664898",
+      "Kumar S, Shiva, Tewarson V, et al. Isolated cardiac cysticercosis of the right ventricle. Indian J Thorac Cardiovasc Surg. 2024;40(1):99-102. DOI: 10.1007/s12055-023-01617-1. PMID: 38125329"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35395330/",
+      "https://pubmed.ncbi.nlm.nih.gov/25453460/",
+      "https://pubmed.ncbi.nlm.nih.gov/29481580/",
+      "https://pubmed.ncbi.nlm.nih.gov/14724304/",
+      "https://pubmed.ncbi.nlm.nih.gov/33794119/",
+      "https://pubmed.ncbi.nlm.nih.gov/36037251/",
+      "https://pubmed.ncbi.nlm.nih.gov/33230578/",
+      "https://pubmed.ncbi.nlm.nih.gov/19240318/",
+      "https://pubmed.ncbi.nlm.nih.gov/35664898/",
+      "https://pubmed.ncbi.nlm.nih.gov/38125329/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cisticercose-cardiaca-achado-incidental-na-neurocisticercose-sistemica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "pericardite-histoplasmica",
+    "name": "Pericardite histoplásmica",
+    "aliases": [
+      "pericardite por histoplasmose",
+      "pericardite fúngica por Histoplasma capsulatum",
+      "histoplasmose com acometimento pericárdico"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 51,
+    "completeness": "completo",
+    "summary": "Pericardite que surge como manifestação de histoplasmose pulmonar aguda, tipicamente em hospedeiro imunocompetente semanas após exposição a solo contaminado por fezes de morcego ou de aves (cavernas, galinheiros, demolição de construções antigas). O mecanismo predominante é inflamatório/de hipersensibilidade a antígeno fúngico de foco pulmonar-mediastinal contíguo, não invasão fúngica maciça do pericárdio — diferente da histoplasmose disseminada progressiva do imunossuprimido. Cursa com dor torácica pleurítica, atrito pericárdico e derrame que pode evoluir a tamponamento. A maioria responde a anti-inflamatório não esteroidal; itraconazol é reservado a casos moderados/graves, prolongados ou com evidência de disseminação.",
+    "presentation": [
+      "Dor torácica pleurítica, aliviada ao sentar e inclinar o tronco para frente, agravada pelo decúbito e pela inspiração profunda",
+      "Atrito pericárdico à ausculta, quando presente",
+      "Febre, tosse e mal-estar concomitantes de histoplasmose pulmonar aguda, frequentemente em contexto de surto com exposição compartilhada (caverna, galinheiro, demolição)",
+      "Derrame pericárdico, por vezes volumoso, com possível progressão para tamponamento cardíaco",
+      "Dispneia progressiva, taquicardia, hipotensão, turgência jugular e pulso paradoxal quando há repercussão hemodinâmica",
+      "Sintomas sistêmicos desproporcionais, perda de peso importante, hepatoesplenomegalia, citopenias ou lesões mucocutâneas sugerindo doença disseminada, não pericardite isolada por hipersensibilidade"
+    ],
+    "differentials": [
+      "Pericardite viral/idiopática — quadro clínico semelhante sem contexto epidemiológico de exposição fúngica",
+      "Pericardite tuberculosa — outra causa granulomatosa infecciosa, com maior tendência a evoluir para forma efusivo-constritiva ou constritiva crônica",
+      "Pericardite purulenta bacteriana — evolução mais tóxica e aguda, com maior risco de tamponamento rápido",
+      "Histoplasmose disseminada progressiva com acometimento cardíaco — predomina em imunossuprimido, com carga fúngica sistêmica elevada e necessidade obrigatória de antifúngico",
+      "Pericardite pós-infarto ou síndrome de Dressler, quando há contexto coronariano prévio",
+      "Neoplasia com derrame pericárdico maligno, especialmente se derrame volumoso sem resposta a anti-inflamatório"
+    ],
+    "tests": [
+      "Sorologia para Histoplasma (imunodifusão e fixação de complemento)",
+      "Antígeno urinário de Histoplasma, especialmente útil em doença aguda difusa ou disseminada",
+      "Radiografia e tomografia de tórax, buscando infiltrado pulmonar e linfadenopatia mediastinal/hilar associada",
+      "Ecocardiograma para quantificar derrame pericárdico e avaliar sinais de repercussão hemodinâmica",
+      "Hemoculturas para fungos e, quando indicado, cultura/histopatologia de tecido acometido em suspeita de doença disseminada",
+      "Investigação de fatores de imunossupressão (HIV, uso de biológicos/bloqueador de TNF-α, transplante, corticoterapia prolongada)"
+    ],
+    "red_flags": [
+      "Sinais de tamponamento cardíaco: dispneia progressiva, hipotensão, turgência jugular, pulso paradoxal",
+      "Evidência clínica ou laboratorial de histoplasmose disseminada (citopenias, hepatoesplenomegalia, lesões mucocutâneas, perda de peso importante)",
+      "Imunossupressão subjacente não reconhecida (HIV, biológico, transplante, corticoterapia prolongada)",
+      "Ausência de resposta ao anti-inflamatório em prazo razoável, sugerindo necessidade de reavaliação diagnóstica ou terapêutica",
+      "Derrame pericárdico volumoso ou de rápida progressão"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico com sorologia e/ou antígeno urinário de Histoplasma e correlacionar com contexto epidemiológico de exposição",
+      "Iniciar anti-inflamatório não esteroidal como base do tratamento na forma predominantemente inflamatória sem evidência de disseminação",
+      "Investigar ativamente imunossupressão subjacente em todo caso confirmado",
+      "Programar ecocardiograma seriado para acompanhar resolução do derrame pericárdico",
+      "Reservar itraconazol para casos moderados/graves, prolongados (geralmente além de quatro semanas) ou com evidência de disseminação, conforme diretriz IDSA de histoplasmose",
+      "Monitorar clinicamente sinais de evolução para pericardite constritiva em seguimento tardio"
+    ],
+    "emergency_flow": [
+      "Sinais de tamponamento cardíaco: ecocardiograma point-of-care e pericardiocentese ou janela pericárdica sem atraso, independentemente da etiologia fúngica suspeita",
+      "Instabilidade hemodinâmica com suspeita de doença disseminada: iniciar avaliação para antifúngico sistêmico (anfotericina B lipídica em quadros graves, com transição para itraconazol) sem retardar por confirmação micológica completa",
+      "Corticosteroide sistêmico apenas associado a cobertura antifúngica quando houver qualquer suspeita de componente disseminado"
+    ],
+    "tags": [
+      "histoplasmose",
+      "pericardite",
+      "Histoplasma capsulatum",
+      "doença fúngica endêmica",
+      "tamponamento cardíaco",
+      "derrame pericárdico",
+      "itraconazol",
+      "hipersensibilidade fúngica",
+      "exposição a morcegos",
+      "cavernas"
+    ],
+    "source_refs": [
+      "Wheat LJ, Stein L, Corya BC, et al. Pericarditis as a manifestation of histoplasmosis during two large urban outbreaks. Medicine (Baltimore). 1983;62(2):110-119. PMID: 6827979.",
+      "Wheat LJ, Freifeld AG, Kleiman MB, et al. Clinical Practice Guidelines for the Management of Patients with Histoplasmosis: 2007 Update by the Infectious Diseases Society of America. Clin Infect Dis. 2007;45(7):807-825. DOI: 10.1086/521259. PMID: 17806045.",
+      "Kauffman CA. Histoplasmosis: a clinical and laboratory update. Clin Microbiol Rev. 2007;20(1):115-132. DOI: 10.1128/CMR.00027-06. PMID: 17223625.",
+      "Ferreira MS, Borges AS. Histoplasmose. Rev Soc Bras Med Trop. 2009;42(2):192-198. PMID: 19448941.",
+      "Bernardes JPRA, Tenório BG, Lucas J Jr, et al. Mapping Histoplasma spp. in bats and cave ecosystems: evidence from midwestern Brazil. Appl Environ Microbiol. 2025;91(9):e00335-25. PMID: 40793772.",
+      "Abdallah W, Myint T, LaRue R, et al. Diagnosis of Histoplasmosis Using the MVista Histoplasma Galactomannan Antigen Qualitative Lateral Flow-Based Immunoassay: A Multicenter Study. Open Forum Infect Dis. 2021;8(9):ofab454. PMID: 34557565.",
+      "Vergidis P, Avery RK, Wheat LJ, et al. Histoplasmosis complicating tumor necrosis factor-α blocker therapy: a retrospective analysis of 98 cases. Clin Infect Dis. 2015;61(3):409-417. PMID: 25870331."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/6827979/",
+      "https://pubmed.ncbi.nlm.nih.gov/17806045/",
+      "https://pubmed.ncbi.nlm.nih.gov/17223625/",
+      "https://pubmed.ncbi.nlm.nih.gov/19448941/",
+      "https://pubmed.ncbi.nlm.nih.gov/40793772/",
+      "https://pubmed.ncbi.nlm.nih.gov/34557565/",
+      "https://pubmed.ncbi.nlm.nih.gov/25870331/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "pericardite-histoplasmica-mecanismo-inflamatorio-diagnostico-e-tratamento"
+    ],
+    "patient_material_slug": null
   }
 ]
