@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   review:
-    if: ${{ startsWith(github.event.head_commit.message, 'bootstrap: executar revisão final dos 74 itens') }}
+    if: "startsWith(github.event.head_commit.message, 'bootstrap: executar revisão final dos 74 itens')"
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
