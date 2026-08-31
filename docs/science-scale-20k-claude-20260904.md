@@ -1559,3 +1559,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 18 | 282 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **381** | **4.519** |
+
+## Lote 75 — concluído (commit fa43bc86)
+
+- **5 trilhas** (continuação do rebalanceamento de cota). Mesma metodologia dos Lotes 72-74.
+  - **Cardio-oncologia**: decisão de rechallenge após evento cardiovascular — estratificação de risco basal, overlap miocardite/miosite/miastenia por ICI, dados observacionais reais (Khan 2026), framework JACC Cardio-Oncology 2026, e o desfecho paliativo quando a resposta correta é não retomar (12 etapas).
+  - **Cardiologia pediátrica**: cardiomiopatia por erro inato do metabolismo — VLCAD, CPT2, deficiência primária de carnitina (a única curável), Pompe e síndrome de Barth, com o registro de Colan 2007 (8,7% dos casos de CMH pediátrica) justificando a investigação etiológica (12 etapas).
+  - **Fibrilação atrial**: terapia antitrombótica combinada após SCA/ICP — AUGUSTUS (apixabana vs. AVK, AAS vs. placebo), duração da tripla e dupla terapia por ESC 2023/2024 (10 etapas).
+  - **Cardiomiopatias**: cardiomiopatia por sobrecarga de ferro (hemocromatose HFE e talassemia) — T2* como padrão-ouro (Classe I-A) vs. T1 nativo reduzido (inverso da amiloidose, recomendação mais fraca), flebotomia vs. quelação por etiologia (13 etapas).
+  - **Hipertensão**: prevenção secundária de PA pós-AVC guiada por desenho de ensaio — PROGRESS (combinação) vs. PRoFESS (neutro) vs. PATS (preliminar) vs. MOSES (eventos recorrentes), SSaSS e SPRINT MIND (10 etapas).
+- **Verificação de integridade**: todas as 61 referências verificadas independentemente — nenhuma quebrada.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.644 itens.
+
+### Status consolidado (após Lote 75)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **386** | **4.514** |
