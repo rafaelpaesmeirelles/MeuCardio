@@ -54103,5 +54103,473 @@
       "sindrome-leopard-noonan-com-multiplos-lentigos-mecanismo-paradoxal-de-ptpn11-e-cardiomiopatia-hipertrofica-na-rasopatia"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-da-tortuosidade-arterial",
+    "name": "Síndrome da Tortuosidade Arterial",
+    "aliases": [
+      "Arterial Tortuosity Syndrome",
+      "ATS",
+      "Deficiência de GLUT10",
+      "Síndrome de tortuosidade arterial por mutação em SLC2A10",
+      "Cutis laxa com tortuosidade arterial"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "aortopatia_genetica_rara_do_tecido_conjuntivo",
+    "prevalence_rank": 153,
+    "completeness": "completo",
+    "summary": "Doença rara de tecido conjuntivo, autossômica recessiva, causada por variantes bialélicas no gene SLC2A10 (proteína GLUT10), que provavelmente funciona como transportador intracelular de ácido desidroascórbico (vitamina C oxidada) em vez de glicose propriamente dita, comprometendo cofatores enzimáticos necessários para o entrecruzamento de colágeno e elastina na parede vascular. Causa tortuosidade arterial generalizada e progressiva (achado presente em 92% dos casos descritos), com risco de estenose (particularmente pulmonar, 57%), aneurisma (16%, em qualquer ponto da árvore arterial) e dissecção, associada a fenótipo sistêmico de hipermobilidade articular (76%), pele frouxa/hiperextensível com cútis laxa franca em uma minoria (31%), e traços craniofaciais característicos (face longa, micrognatia, bochechas cheias) em cerca de 60% dos casos. Diferencia-se mecanística e clinicamente de síndrome de Marfan, síndrome de Loeys-Dietz e síndrome de Ehlers-Danlos vascular, sobretudo pela herança recessiva e pela tortuosidade arterial difusa como achado de imagem, ausente ou pouco proeminente nas outras três. Doença extremamente rara (106 indivíduos molecularmente confirmados descritos até 2023), sem ensaios clínicos controlados de tratamento — manejo baseado em consenso de especialistas.",
+    "presentation": [
+      "Tortuosidade arterial generalizada e progressiva, envolvendo aorta e artérias de médio/grande calibre, identificada em exame de imagem (92% dos casos)",
+      "Estenose de artéria pulmonar (57%) — achado estenótico mais comum da síndrome",
+      "Estenose aórtica (24%) ou de outras artérias (15%)",
+      "Aneurisma de raiz aórtica (16%), com risco de dissecção em qualquer ponto da árvore arterial e em qualquer idade",
+      "Sopro cardíaco ou cianose na infância como forma de apresentação inicial",
+      "Desconforto respiratório neonatal, por vezes com necessidade de UTI neonatal (cerca de 12%)",
+      "Pele frouxa, hiperextensível; cútis laxa franca em cerca de um terço dos casos",
+      "Hipermobilidade articular (76%) e dor articular (26%)",
+      "Hérnia inguinal (38%) e hérnia diafragmática/hiato hiatal por deslizamento (29%)",
+      "Fácies característica: face longa, micrognatia, bochechas cheias, palato alto, fissuras palpebrais inclinadas para baixo, ponte nasal convexa — mais evidente com a idade (cerca de 60% dos casos)",
+      "Deformidade torácica (pectus, 28%), aracnodactilia (30%), escoliose (22%)",
+      "Ceratocone (15%) e miopia (43%)",
+      "Disautonomia (18%)",
+      "Anormalidades urogenitais (cerca de 20%): pieloectasia, divertículo vesical",
+      "Eventos isquêmicos vasculares (acidente vascular cerebral, infarto de órgão abdominal) em casos mais graves",
+      "Apresentação em adulto com quadro leve: dor articular e sinais de envelhecimento cutâneo prematuro, sem diagnóstico prévio na infância"
+    ],
+    "differentials": [
+      "Síndrome de Marfan (gene FBN1) — sem tortuosidade arterial manifesta; achado central é subluxação de cristalino e aneurisma de raiz aórtica; herança dominante",
+      "Síndrome de Loeys-Dietz (genes TGFBR1, TGFBR2, SMAD2, SMAD3, TGFB2, TGFB3) — aneurisma mais proeminente e dissecção em diâmetros menores; hipertelorismo, fenda de úvula/palato e craniossinostose, achados geralmente ausentes em ATS; herança dominante",
+      "Síndrome de Ehlers-Danlos vascular (gene COL3A1) — tortuosidade arterial ausente; pele fina e translúcida com cicatrizes atróficas e equimoses fáceis; herança dominante",
+      "Cútis laxa relacionada ao gene EFEMP2 — fenótipo arterial tipicamente mais agressivo e de progressão mais rápida para aneurisma do que ATS",
+      "Cútis laxa relacionada aos genes FBLN5 ou LTBP4 — sem a tortuosidade arterial típica de ATS; enfisema pulmonar de início precoce como manifestação sistêmica dominante",
+      "Aneurisma/dissecção de aorta torácica familiar não sindrômica — sem o fenótipo cutâneo-articular-facial sistêmico de ATS",
+      "Displasia fibromuscular — pode cursar com tortuosidade de artérias de médio calibre, mas tipicamente sem o fenótipo cutâneo-articular-facial sistêmico e sem padrão de herança mendeliano claro na maioria dos casos"
+    ],
+    "tests": [
+      "Teste genético molecular: sequenciamento de SLC2A10, buscando variantes patogênicas bialélicas (homozigotas ou heterozigotas compostas) — exame confirmatório",
+      "Ecocardiograma: a cada 3 meses até os 5 anos de idade; anual a partir daí se medidas aórticas estáveis",
+      "Angiorressonância ou angiotomografia com reconstrução 3D, da cabeça à pelve: anual desde o diagnóstico; espaçamento para a cada 3 anos em pacientes estáveis mais velhos",
+      "Aferição de pressão arterial em toda consulta",
+      "Avaliação oftalmológica seriada (refração, rastreamento de ceratocone) por especialista com experiência em doenças de tecido conjuntivo",
+      "Radiografia de coluna para escoliose durante períodos de crescimento rápido (primeiros 2 anos e puberdade)",
+      "Avaliação ortodôntica durante erupção dentária permanente",
+      "Prova de função pulmonar basal aos 18 anos",
+      "Aconselhamento genético familiar, com teste de portador e possibilidade de teste pré-natal/pré-implantacional em famílias com variante já identificada"
+    ],
+    "red_flags": [
+      "Tortuosidade arterial difusa identificada incidentalmente em exame de imagem de criança ou adulto jovem, especialmente se associada a hipermobilidade articular ou pele frouxa",
+      "Dor torácica ou abdominal aguda em paciente com diagnóstico conhecido de ATS — suspeitar de dissecção em qualquer segmento arterial, não apenas na raiz aórtica",
+      "Sinais neurológicos focais agudos (suspeita de acidente vascular cerebral) em paciente jovem com fenótipo de tecido conjuntivo",
+      "Desconforto respiratório neonatal associado a sopro cardíaco e fácies dismórfica",
+      "História de consanguinidade parental associada a fenótipo vascular e cutâneo-articular em mais de um filho (padrão sugestivo de herança recessiva)",
+      "Hipertensão associada a estenose de artéria renal conhecida — cautela ao introduzir ou ajustar anti-hipertensivo, risco de comprometer ainda mais a perfusão distal à estenose"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica por tortuosidade arterial difusa em imagem, associada a fenótipo cutâneo-articular-facial sugestivo → encaminhar para geneticista clínico",
+      "Confirmação diagnóstica por sequenciamento de SLC2A10 (variantes bialélicas)",
+      "Uma vez confirmado o diagnóstico: iniciar protocolo de vigilância por imagem seriada (ecocardiograma + angiorressonância/angiotomografia de corpo inteiro) conforme intervalos por idade e estabilidade vascular",
+      "Encaminhamento multidisciplinar: cardiologista, oftalmologista, ortopedista, cirurgião cardiotorácico, preferencialmente em centro de referência com experiência na condição",
+      "Orientação sobre restrição de atividade física (evitar esportes de contato, isométricos, mergulho autônomo) e fatores agravantes (tabagismo, estimulantes cardiovasculares)",
+      "Aconselhamento genético familiar e discussão de risco de recorrência (25% por gestação em casais de risco)",
+      "Em mulheres em idade fértil: aconselhamento pré-concepcional específico sobre risco gestacional e ajuste medicamentoso antes da concepção"
+    ],
+    "emergency_flow": [
+      "Dor torácica, abdominal ou dorsal aguda em paciente com ATS conhecida ou fenótipo sugestivo → angiotomografia de tórax/abdome/pelve com protocolo para síndrome aórtica aguda, considerando que o aneurisma/dissecção pode ocorrer fora da raiz aórtica",
+      "Déficit neurológico focal agudo → protocolo de acidente vascular cerebral, com investigação vascular adicional dirigida pela suspeita de arteriopatia subjacente",
+      "Instabilidade hemodinâmica com suspeita de ruptura vascular → estabilização e avaliação cirúrgica vascular/cardiotorácica de urgência, com cautela quanto à fragilidade tecidual conhecida da síndrome",
+      "Evitar angiografia convencional com cateter sempre que imagem não invasiva (angiotomografia/angiorressonância) puder responder à pergunta clínica, dado o risco teórico de fragilidade de parede vascular"
+    ],
+    "tags": [
+      "aortopatia genética",
+      "doença rara",
+      "tecido conjuntivo",
+      "SLC2A10",
+      "GLUT10",
+      "tortuosidade arterial",
+      "autossômica recessiva",
+      "aneurisma",
+      "dissecção aórtica",
+      "cútis laxa",
+      "hipermobilidade articular",
+      "cardiologia pediátrica",
+      "genética cardiovascular"
+    ],
+    "source_refs": [
+      "Callewaert B, De Paepe A, Coucke P. Arterial Tortuosity Syndrome. 2014 Nov 13 [Updated 2023 Feb 23]. In: Adam MP, Feldman J, Mirzaa GM, Pagon RA, Wallace SE, Amemiya A, editors. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 25392904.",
+      "Coucke PJ, Willaert A, Wessels MW, Callewaert B, Zoppi N, De Backer J, Fox JE, Mancini GM, Kambouris M, Gardella R, Facchetti F, Willems PJ, Forsyth R, Dietz HC, Barlati S, Colombi M, Loeys B, De Paepe A. Mutations in the facilitative glucose transporter GLUT10 alter angiogenesis and cause arterial tortuosity syndrome. Nat Genet. 2006;38(4):452-457. PMID: 16550171.",
+      "Segade F. Glucose transporter 10 and arterial tortuosity syndrome: the vitamin C connection. FEBS Lett. 2010;584(14):2990-2994. PMID: 20547159.",
+      "Boel A, Veszelyi K, Németh CE, Beyens A, Willaert A, Coucke P, Callewaert B, Margittai É. Arterial Tortuosity Syndrome: An Ascorbate Compartmentalization Disorder? Antioxid Redox Signal. 2021;34(11):875-889. PMID: 31621376. DOI: 10.1089/ars.2019.7843."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK253404/",
+      "https://pubmed.ncbi.nlm.nih.gov/16550171/",
+      "https://pubmed.ncbi.nlm.nih.gov/20547159/",
+      "https://pubmed.ncbi.nlm.nih.gov/31621376/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-barth",
+    "name": "Síndrome de Barth",
+    "aliases": [
+      "Barth syndrome",
+      "BTHS",
+      "deficiência de tafazzina",
+      "cardiomiopatia dilatada ligada ao X tipo 3",
+      "acidúria 3-metilglutacônica tipo II"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "citopatia_mitocondrial",
+    "prevalence_rank": 154,
+    "completeness": "completo",
+    "summary": "Doença mitocondrial ligada ao X causada por mutação no gene TAZ (tafazzina), enzima essencial no remodelamento da cardiolipina da membrana mitocondrial interna. O fenótipo cardíaco central é cardiomiopatia dilatada, frequentemente associada a não compactação do ventrículo esquerdo, com apresentação tipicamente na lactância e possibilidade de curso fulminante. Compõe tríade clássica com neutropenia cíclica/persistente e atraso de crescimento com miopatia esquelética proximal. O biomarcador diagnóstico é a excreção urinária elevada de ácido 3-metilglutacônico (limitada por variabilidade e por poder ser normal antes dos 18 meses), confirmado por razão MLCL:CL elevada e sequenciamento de TAZ. Diferencia-se mecanisticamente da síndrome de Kearns-Sayre (deleção de mtDNA, fenótipo predominantemente elétrico) e da MELAS (mutação pontual de mtDNA, cardiomiopatia hipertrófica).",
+    "presentation": [
+      "Lactente ou menino do sexo masculino com cardiomiopatia dilatada de início precoce, antes dos 5 anos na quase totalidade dos casos",
+      "Não compactação do ventrículo esquerdo associada em proporção relevante dos casos (padrão de aumento de trabeculação/LVNC em cerca de metade dos pacientes em uma coorte de referência)",
+      "Insuficiência cardíaca congestiva já na lactância, podendo ser de curso fulminante em alguns casos",
+      "Neutropenia cíclica ou persistente, com risco infeccioso variável conforme a contagem absoluta de neutrófilos",
+      "Fraqueza muscular proximal, fadiga e intolerância ao exercício",
+      "Atraso de crescimento nos primeiros anos de vida, com recuperação (catch-up growth) e frequente estirão puberal",
+      "Atraso leve do desenvolvimento neuropsicomotor na primeira infância, geralmente não progressivo",
+      "Arritmia ventricular, sobretudo em pacientes mais velhos (documentada em quase metade dos pacientes com 11 anos ou mais em uma coorte pequena de referência)"
+    ],
+    "differentials": [
+      "Síndrome de Kearns-Sayre (deleção única de larga escala do mtDNA, fenótipo cardíaco predominantemente elétrico com doença de condução AV progressiva, sem neutropenia nem miopatia esquelética como eixo diagnóstico)",
+      "MELAS (mutação pontual m.3243A>G do mtDNA, herança materna, cardiomiopatia hipertrófica predominante, episódios agudos semelhantes a AVC)",
+      "Cardiomiopatia dilatada/não compactada pediátrica de outra etiologia genética (sarcomérica, citoesquelética ou de outros genes mitocondriais), sem a tríade com neutropenia e sem herança ligada ao X",
+      "Deficiência primária de carnitina (cardiomiopatia mitocondrial metabólica reversível com suplementação, sem neutropenia)",
+      "Doença de Pompe (fenocópia de cardiomiopatia hipertrófica em lactente, doença de depósito lisossômico, sem neutropenia nem defeito de cardiolipina)",
+      "Síndrome de Pearson (deleção de mtDNA, insuficiência medular e pancreática exócrina na infância, extremo mais grave do espectro de deleção única de mtDNA)"
+    ],
+    "tests": [
+      "Ecocardiograma com avaliação específica de trabeculação/não compactação do ventrículo esquerdo",
+      "Eletrocardiograma com Holter para rastreio de arritmia ventricular",
+      "Hemograma completo com diferencial seriado (a neutropenia pode ser intermitente; contagem isolada normal não exclui o diagnóstico)",
+      "Ácido 3-metilglutacônico em urina (pode ser normal em amostra isolada e nos primeiros 6-18 meses de vida — não deve ser usado isoladamente para excluir o diagnóstico)",
+      "Razão monolisocardiolipina/cardiolipina (MLCL:CL) em sangue seco, fibroblastos cultivados ou tecido — achado bioquímico mais específico, considerado patognomônico",
+      "Sequenciamento do gene TAZ para confirmação diagnóstica definitiva",
+      "Avaliação nutricional e de crescimento seriada"
+    ],
+    "red_flags": [
+      "Lactente do sexo masculino com cardiomiopatia dilatada ou não compactada de início muito precoce e evolução rapidamente progressiva para choque cardiogênico",
+      "Neutropenia grave (contagem absoluta de neutrófilos < 500 células/µL) associada a cardiomiopatia — marcador de pior sobrevida em um ano nesta síndrome",
+      "Febre em paciente com síndrome de Barth conhecida e neutropenia — indicação de avaliação urgente pelo risco infeccioso",
+      "Arritmia ventricular documentada, particularmente em paciente mais velho com disfunção ventricular associada"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar diante de lactente ou menino com cardiomiopatia dilatada/não compactada precoce associada a neutropenia (mesmo intermitente) e/ou atraso de crescimento com fraqueza muscular proximal",
+      "Solicitar razão MLCL:CL em sangue seco e sequenciamento do gene TAZ; não excluir o diagnóstico apenas por acidúria 3-metilglutacônica normal em amostra isolada",
+      "Programar ecocardiograma e ECG com Holter pelo menos anuais",
+      "Programar hemograma completo com diferencial semestral e em todo episódio febril",
+      "Acompanhar crescimento (peso e estatura em cada consulta) e desenvolvimento neuropsicomotor (avaliação formal a cada 3-5 anos na infância)",
+      "Envolver equipe multidisciplinar (cardiologia pediátrica, hematologia, nutrição, genética médica, fisioterapia) pelo caráter multissistêmico da doença",
+      "Considerar G-CSF para neutropenia significativa, conforme avaliação hematológica",
+      "Discutir com a família o padrão de herança ligada ao X (aconselhamento genético para mães portadoras e irmãs) e a heterogeneidade prognóstica da doença"
+    ],
+    "emergency_flow": [
+      "Lactente com síndrome de Barth conhecida ou suspeita e sinais de insuficiência cardíaca aguda/choque: manejo padrão de choque cardiogênico pediátrico, com avaliação precoce para necessidade de suporte circulatório mecânico e transplante",
+      "Febre em paciente com neutropenia conhecida: manejo como neutropenia febril, com antibioticoterapia empírica precoce conforme protocolo institucional",
+      "Arritmia ventricular sintomática: manejo agudo padrão de taquiarritmia ventricular, com investigação subsequente de necessidade de terapia antiarrítmica ou CDI conforme avaliação especializada",
+      "Considerar síndrome de Barth como diagnóstico a investigar em lactente do sexo masculino com cardiomiopatia dilatada/não compactada fulminante de causa não esclarecida, sobretudo se houver neutropenia associada"
+    ],
+    "tags": [
+      "doença mitocondrial",
+      "cardiomiopatia dilatada",
+      "não compactação do ventrículo esquerdo",
+      "LVNC",
+      "neutropenia",
+      "miopatia",
+      "genética",
+      "ligado ao X",
+      "pediatria",
+      "cardiologia pediátrica",
+      "TAZ",
+      "tafazzina",
+      "cardiolipina"
+    ],
+    "source_refs": [
+      "Ferreira C, Pierre G, Thompson R, Vernon H. Barth Syndrome. 2014 Oct 9 [Updated 2026 Jan 8]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews®. Seattle (WA): University of Washington, Seattle. NBK247162",
+      "Bione S, D'Adamo P, Maestrini E, Massimo Bernardi F, Lanfranchi G, Fugazza G, Comini L, Toniolo D. A novel X-linked gene, G4.5. is responsible for Barth syndrome. Nat Genet. 1996;12(4):385-389. PMID: 8630491",
+      "Clarke SL, Bowron A, Gonzalez IL, Groves SJ, Newbury-Ecob R, Clayton N, Martin RP, Tsai-Goodman B, Garratt V, Ashworth M, Bowen VM, McCurdy KR, Damin MK, Spencer CT, Toth MJ, Kelley RI, Steward CG. Barth syndrome. Orphanet J Rare Dis. 2013;8:23. DOI: 10.1186/1750-1172-8-23. PMID: 23398819",
+      "Spencer CT, Bryant RM, Day J, Gonzalez IL, Colan SD, Thompson WR, Berthy J, Redfearn SP, Byrne BJ. Cardiac and clinical phenotype in Barth syndrome. Pediatrics. 2006;118(2):e337-346. DOI: 10.1542/peds.2005-2724. PMID: 16847078",
+      "Taylor C, Rao ES, Pierre G, Chronopoulou E, Hornby B, Heyman A, Vernon HJ. Clinical presentation and natural history of Barth Syndrome: An overview. J Inherit Metab Dis. 2022;45(1):7-16. DOI: 10.1002/jimd.12421. PMID: 34355402",
+      "Vishwanath S, Brockmeyer A, Hornby B, Thompson WR, Vernon HJ. Barth syndrome: Natural history in infants and young children. Mol Genet Metab. 2025;146(4):109270. DOI: 10.1016/j.ymgme.2025.109270. PMID: 41177130",
+      "Roberts AE, Nixon C, Steward CG, Gauvreau K, Maisenbacher M, Fletcher M, Geva J, Byrne BJ, Spencer CT. The Barth Syndrome Registry: distinguishing disease characteristics and growth data from a longitudinal study. Am J Med Genet A. 2012;158A(11):2726-2732. DOI: 10.1002/ajmg.a.35609. PMID: 23045169"
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK247162/",
+      "https://pubmed.ncbi.nlm.nih.gov/8630491/",
+      "https://pubmed.ncbi.nlm.nih.gov/23398819/",
+      "https://pubmed.ncbi.nlm.nih.gov/16847078/",
+      "https://pubmed.ncbi.nlm.nih.gov/34355402/",
+      "https://pubmed.ncbi.nlm.nih.gov/41177130/",
+      "https://pubmed.ncbi.nlm.nih.gov/23045169/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-barth-cardiomiopatia-dilatada-nao-compactacao-do-ve-e-a-triade-com-neutropenia-e-miopatia"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-phace",
+    "name": "Síndrome PHACE",
+    "aliases": [
+      "PHACES",
+      "síndrome PHACES",
+      "PHACE association",
+      "PHACE syndrome"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_neurocutanea_esporadica_com_acometimento_cardiovascular",
+    "prevalence_rank": 155,
+    "completeness": "completo",
+    "summary": "Síndrome neurocutânea rara e esporádica, de causa ainda não estabelecida (sem gene causador único identificado), descrita pela sigla mnemônica PHACE: malformações de fossa Posterior, Hemangioma infantil segmentar de face/couro cabeludo, anomalias Arteriais cerebrovasculares, defeitos Cardíacos, anormalidades oculares (Eye) e, em subgrupo, defeitos de linha média ventral/Sternal (variante PHACES). Predomina em meninas (88% em coorte prospectiva). A prevalência entre lactentes com hemangioma facial varia com o critério de seleção: 20% dos hemangiomas faciais segmentares em coorte prospectiva geral, 31% dos hemangiomas faciais com área ≥22 cm², e 44,5% em coorte já pré-selecionada de hemangiomas faciais/cervicais avaliados sistematicamente, na qual envolvimento de 3 ou mais localizações anatômicas foi o preditor mais forte de risco (odds ratio 17,96). O achado cardíaco mais característico é a coarctação de aorta (19% de 150 sujeitos em registro internacional), tipicamente associada a outras anomalias de arco aórtico (artéria subclávia aberrante em 21%, arco à direita em 16% do subgrupo com anomalia cardiovascular); 61% dos casos de coarctação nessa coorte necessitaram de intervenção. A arteriopatia cerebrovascular acomete predominantemente a artéria carótida interna e ramos embrionários, ipsilateral ao hemangioma, com padrões de disgenesia (56%), origem/trajeto anômalos (47%), estreitamento (39%) e não visualização (20%); não há, na literatura revisada, quantificação consolidada de incidência de AVC associada a esses padrões. O propranolol, tratamento de primeira linha do hemangioma infantil, tem uso debatido em PHACE com arteriopatia cerebrovascular significativa por risco teórico de hipoperfusão cerebral distal a segmento estenótico/ocluído sob queda pressórica; série de 32 lactentes tratados mostrou apenas 1 evento neurológico (hemiparesia leve, estável, resolvida mantendo o fármaco), mas os autores não excluem risco aumentado e recomendam cautela, dose conservadora e monitorização estreita, sobretudo no subgrupo (22% da série) classificado como de maior risco vascular.",
+    "presentation": [
+      "Hemangioma infantil segmentar grande (tipicamente >5 cm) de face ou couro cabeludo, muitas vezes o achado que motiva a avaliação inicial",
+      "Hemangioma em distribuição de 'barba' (perioral/mandibular/cervical anterior) com risco aumentado de hemangioma de via aérea concomitante",
+      "Sopro cardíaco, pulsos diminuídos em membros inferiores ou diferencial pressórico sugestivo de coarctação de aorta ao exame de rotina",
+      "Assimetria de pulsos ou sinais de baixo débito em lactente com coarctação hemodinamicamente significativa",
+      "Achado incidental de anomalia de arco aórtico (arco à direita, artéria subclávia aberrante, anel vascular) em investigação de imagem motivada pelo hemangioma",
+      "Sinais neurológicos focais em lactente com arteriopatia cerebrovascular conhecida, que devem levantar suspeita de evento isquêmico",
+      "Achados oftalmológicos de segmento posterior identificados apenas em exame dirigido com pupila dilatada, frequentemente assintomáticos",
+      "Defeito de linha média ventral (fenda ou pit esternal, rafe supraumbilical) identificado ao exame físico dirigido",
+      "Malformação de fossa posterior (incluindo complexo de Dandy-Walker) identificada em neuroimagem realizada por outro motivo ou como parte do rastreio sistemático"
+    ],
+    "differentials": [
+      "Hemangioma infantil segmentar grande sem demais critérios de PHACE — situação mais comum; requer investigação sistemática completa, não suspeita clínica isolada, para confirmar ou afastar o diagnóstico",
+      "Síndrome LUMBAR/PELVIS/SACRAL — análogo de PHACE para hemangiomas segmentares de metade inferior do corpo, com disrafismo espinhal e anomalias anogenitais/renais/de membros em vez do espectro cefálico cardiovascular",
+      "Coarctação de aorta isolada, não sindrômica, sem hemangioma segmentar nem demais achados do espectro",
+      "Anomalias de arco aórtico isoladas (arco duplo, arco à direita, anel vascular) sem hemangioma nem demais critérios diagnósticos",
+      "Malformação capilar do espectro da síndrome de Sturge-Weber — mácula vascular congênita presente ao nascimento, biologicamente distinta do hemangioma infantil proliferativo pós-natal",
+      "Fenômeno de Kasabach-Merritt associado a hemangioendotelioma kaposiforme ou angioma em tufo — tumor vascular distinto do hemangioma infantil comum, com coagulopatia consumptiva característica"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico de rastreio sistemático em toda criança em risco (hemangioma facial/couro cabeludo >5 cm ou critério de PHACE definitivo/possível)",
+      "Ressonância magnética/angiorressonância cardíaca diante de alteração ao ecocardiograma, para delinear anatomia do arco e dos vasos braquiocefálicos",
+      "Ressonância magnética de crânio com e sem gadolínio, como parte da avaliação diagnóstica basal",
+      "Angiorressonância de crânio, pescoço e arco aórtico, como parte da avaliação diagnóstica basal",
+      "Exame oftalmológico com pupila dilatada, dirigido a achados de segmento posterior",
+      "Exame físico dirigido à linha média ventral/torácica (defeito esternal, rafe supraumbilical)",
+      "Imagem de vigilância neurovascular programada conforme estratificação de risco (sem necessidade adicional no risco baixo; eletiva e postergada no risco intermediário; aos 6 meses e 1 ano no risco alto)",
+      "Ecocardiograma anual de seguimento diante de anomalia de arco aórtico não obstrutiva identificada"
+    ],
+    "red_flags": [
+      "Hemangioma facial/couro cabeludo segmentar >5 cm sem rastreio cardiovascular e neurovascular completo já realizado ou em curso",
+      "Estenose ou oclusão arterial cerebrovascular grave sem colateral adequada documentada — subgrupo de maior risco teórico de AVC sob uso de betabloqueador sistêmico",
+      "Início de propranolol em paciente com PHACE conhecida ou fortemente suspeita sem avaliação de imagem cerebrovascular prévia, fora do contexto de hemangioma com risco funcional imediato (via aérea, eixo visual)",
+      "Uso concomitante de betabloqueador sistêmico e corticosteroide sistêmico em paciente de alto risco vascular — combinação associada a casos de AVC descritos na literatura",
+      "Sinais neurológicos focais agudos em lactente com PHACE e arteriopatia cerebrovascular documentada — deve ser tratado como possível evento isquêmico até prova em contrário",
+      "Coarctação de aorta identificada em paciente com hemangioma facial segmentar sem busca ativa por demais anomalias de arco e por arteriopatia cerebrovascular associada"
+    ],
+    "ambulatory_flow": [
+      "Diante de hemangioma facial/couro cabeludo segmentar grande (>5 cm) ou achado sugestivo isolado, aplicar os critérios diagnósticos consensuais (Metry 2009/Garzon 2016) e investigar ativamente os demais sistemas antes de descartar a hipótese",
+      "Solicitar ecocardiograma transtorácico de rastreio sistemático, independentemente de exame cardíaco normal ao exame físico",
+      "Solicitar ressonância/angiorressonância de crânio, pescoço e arco aórtico como avaliação basal, coordenando com neurologia/neurorradiologia pediátrica",
+      "Encaminhar para avaliação oftalmológica com pupila dilatada e para exame físico dirigido à linha média ventral/esternal",
+      "Discutir com a família, de forma explícita e documentada, o risco teórico de hipoperfusão cerebral associado ao propranolol antes de iniciar o fármaco em paciente com arteriopatia cerebrovascular documentada, sempre que a urgência clínica do hemangioma permitir aguardar a investigação completa",
+      "Estruturar seguimento cardiológico proporcional à complexidade do achado (ecocardiograma anual em anomalia de arco não obstrutiva; seguimento pós-intervenção em coarctação corrigida)",
+      "Estruturar vigilância de imagem neurovascular conforme estratificação de risco (baixo: sem imagem adicional; intermediário: eletiva, postergada até dispensar sedação; alto: aos 6 meses e 1 ano)"
+    ],
+    "emergency_flow": [
+      "Lactente com PHACE conhecida ou suspeita e sinais neurológicos focais agudos: investigar possível AVC isquêmico com prioridade, incluindo revisão da arteriopatia cerebrovascular já caracterizada em imagem prévia, se disponível",
+      "Lactente com hemangioma facial segmentar grande e sinais de baixo débito, assimetria de pulsos ou diferencial pressórico entre membros: investigar coarctação de aorta com prioridade, seguindo protocolo de reconhecimento e manejo de colapso neonatal por cardiopatia congênita crítica canal-dependente conforme o quadro",
+      "Não excluir cardiopatia significativa com base apenas em oximetria de pulso normal isolada em lactente com hemangioma facial segmentar grande — a coarctação de aorta pode não cursar com dessaturação detectável na triagem neonatal padrão",
+      "Diante de necessidade de iniciar propranolol em caráter urgente (obstrução de via aérea ou de eixo visual) sem investigação de imagem cerebrovascular completa, iniciar com dose conservadora, escalonamento lento e monitorização neurológica e hemodinâmica estreita, documentando a decisão compartilhada com a família"
+    ],
+    "tags": [
+      "síndrome PHACE",
+      "PHACES",
+      "hemangioma infantil segmentar",
+      "coarctação de aorta",
+      "anomalias de arco aórtico",
+      "arteriopatia cerebrovascular",
+      "propranolol",
+      "AVC pediátrico",
+      "arco aórtico à direita",
+      "artéria subclávia aberrante",
+      "malformação de fossa posterior",
+      "síndrome neurocutânea"
+    ],
+    "source_refs": [
+      "Frieden IJ, Reese V, Cohen D. PHACE syndrome. The association of posterior fossa brain malformations, hemangiomas, arterial anomalies, coarctation of the aorta and cardiac defects, and eye abnormalities. Arch Dermatol. 1996;132(3):307-311. PMID: 8607636.",
+      "Metry DW, Haggstrom AN, Drolet BA, et al. A prospective study of PHACE syndrome in infantile hemangiomas: demographic features, clinical findings, and complications. Am J Med Genet A. 2006;140(9):975-986. PMID: 16575892.",
+      "Metry D, Heyer G, Hess C, et al; PHACE Syndrome Research Conference. Consensus Statement on Diagnostic Criteria for PHACE Syndrome. Pediatrics. 2009;124(5):1447-1456. PMID: 19858157.",
+      "Haggstrom AN, Garzon MC, Baselga E, et al. Risk for PHACE syndrome in infants with large facial hemangiomas. Pediatrics. 2010;126(2):e418-426. PMID: 20643720.",
+      "Hess CP, Fullerton HJ, Metry DW, et al. Cervical and intracranial arterial anomalies in 70 patients with PHACE syndrome. AJNR Am J Neuroradiol. 2010;31(10):1980-1986. PMID: 20705698.",
+      "Metry D, Frieden IJ, Hess C, et al. Propranolol use in PHACE syndrome with cervical and intracranial arterial anomalies: collective experience in 32 infants. Pediatr Dermatol. 2013;30(1):71-89. PMID: 22994362.",
+      "Drolet BA, Frommelt PC, Chamlin SL, et al. Initiation and use of propranolol for infantile hemangioma: report of a consensus conference. Pediatrics. 2013;131(1):128-140. PMID: 23266923.",
+      "Garzon MC, Epstein LG, Heyer GL, et al. PHACE Syndrome: Consensus-Derived Diagnosis and Care Recommendations. J Pediatr. 2016;178:24-33.e2. PMID: 27659028.",
+      "Bayer ML, Frommelt PC, Blei F, et al. Congenital cardiac, aortic arch, and vascular bed anomalies in PHACE syndrome. Am J Cardiol. 2013;112(12):1948-1952. PMID: 24079520.",
+      "Cotton CH, Ahluwalia J, Balkin DM, et al. Association of Demographic Factors and Infantile Hemangioma Characteristics With Risk of PHACE Syndrome. JAMA Dermatol. 2021;157(8):1-8. PMID: 34132754."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8607636/",
+      "https://pubmed.ncbi.nlm.nih.gov/16575892/",
+      "https://pubmed.ncbi.nlm.nih.gov/19858157/",
+      "https://pubmed.ncbi.nlm.nih.gov/20643720/",
+      "https://pubmed.ncbi.nlm.nih.gov/20705698/",
+      "https://pubmed.ncbi.nlm.nih.gov/22994362/",
+      "https://pubmed.ncbi.nlm.nih.gov/23266923/",
+      "https://pubmed.ncbi.nlm.nih.gov/27659028/",
+      "https://pubmed.ncbi.nlm.nih.gov/24079520/",
+      "https://pubmed.ncbi.nlm.nih.gov/34132754/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-phace-coarctacao-de-aorta-arteriopatia-cerebrovascular-e-cautela-com-propranolol"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "beriberi-cardiaco",
+    "name": "Beribéri cardíaco (cardiomiopatia por deficiência de tiamina)",
+    "aliases": [
+      "Cardiomiopatia por deficiência de tiamina",
+      "Beribéri úmido",
+      "Wet beriberi",
+      "Shoshin beriberi",
+      "Insuficiência cardíaca por deficiência de vitamina B1"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "nutricional",
+    "prevalence_rank": 156,
+    "completeness": "completo",
+    "summary": "Insuficiência cardíaca de alto débito causada por deficiência de tiamina (vitamina B1), cujo derivado ativo (tiamina pirofosfato) é cofator obrigatório de enzimas centrais do metabolismo energético mitocondrial (piruvato desidrogenase, alfa-cetoglutarato desidrogenase, transcetolase). A falência desse metabolismo oxidativo leva a vasodilatação periférica compensatória, queda da resistência vascular sistêmica e estado circulatório hiperdinâmico, podendo evoluir para insuficiência cardíaca de alto débito franca ('beribéri úmido'). Ocorre em populações de risco contemporâneas que vão além da desnutrição clássica — alcoolismo crônico, cirurgia bariátrica, hiperêmese gravídica, uso crônico de diuréticos de alça, síndrome de realimentação e pacientes oncológicos/de UTI de longa permanência. O diagnóstico é predominantemente clínico e de resposta terapêutica, já que a dosagem de tiamina não está amplamente disponível ou é lenta. É um dos poucos tipos de insuficiência cardíaca potencialmente totalmente reversível em dias (por vezes horas) com reposição parenteral de tiamina.",
+    "presentation": [
+      "Insuficiência cardíaca de alto débito: dispneia, edema, congestão, débito cardíaco elevado e resistência vascular sistêmica baixa à avaliação hemodinâmica, achado documentado por cateterismo direito em séries clássicas e casos contemporâneos",
+      "Pode coexistir com o padrão 'seco' (neurológico) da deficiência de tiamina — polineuropatia periférica simétrica, e no espectro da encefalopatia de Wernicke, confusão, ataxia e oftalmoplegia — sendo a coexistência frequente, não uma exceção",
+      "Forma fulminante ('shoshin beriberi'): choque cardiogênico ou colapso cardiovascular de instalação rápida, acidose láctica inexplicada, podendo mimetizar síndrome coronariana aguda com alterações eletrocardiográficas difusas",
+      "Contexto de risco quase sempre identificável: alcoolismo crônico, cirurgia bariátrica recente, hiperêmese gravídica/gestação com ingestão comprometida, uso crônico de diurético de alça, síndrome de realimentação, ou câncer/internação prolongada em UTI",
+      "Resposta hemodinâmica e clínica caracteristicamente rápida (horas a poucos dias) à reposição de tiamina, usada na prática como critério diagnóstico retrospectivo"
+    ],
+    "differentials": [
+      "Cardiomiopatia por deficiência de selênio (doença de Keshan e formas adquiridas) — mecanismo antioxidante (glutationa peroxidase), não energético; pista diferencial é a miopatia esquelética proximal concomitante, ausente no beribéri",
+      "Pelagra (deficiência de niacina) — paralelo mecanístico direto (cofator obrigatório do metabolismo oxidativo, NAD+/NADP+ em vez de tiamina pirofosfato), mas com evidência cardiovascular clínica muito mais fragmentada; as duas deficiências coexistem com frequência no mesmo paciente desnutrido/alcoolista",
+      "Outras causas de insuficiência cardíaca de alto débito: obesidade, hepatopatia avançada, shunt arteriovenoso (incluindo fístula de hemodiálise), doença pulmonar crônica, doença mieloproliferativa, hipertireoidismo, doença de Paget óssea extensa — mais frequentes que o beribéri nas séries contemporâneas, mas em geral de reversão mais lenta",
+      "Encefalopatia de Wernicke isolada (predomínio neurológico, sem componente cardíaco de alto débito proeminente) quando o quadro cardiovascular não está presente",
+      "Cardiomiopatia periparto, em gestante/puérpera com insuficiência cardíaca inexplicada — a hiperêmese gravídica pode causar deficiência de tiamina concomitante, exigindo diferenciação cuidadosa",
+      "Síndrome coronariana aguda, na apresentação fulminante (shoshin beriberi) com dor torácica, choque e alterações eletrocardiográficas difusas — já descrita como mimetizadora de infarto na literatura"
+    ],
+    "tests": [
+      "Diagnóstico predominantemente clínico e de resposta terapêutica: quadro hemodinâmico compatível (débito elevado, resistência vascular sistêmica baixa) associado a fator de risco nutricional, com reposição empírica de tiamina em vez de aguardar confirmação laboratorial",
+      "Avaliação hemodinâmica (ecocardiograma; cateterismo direito quando disponível e o quadro for grave/atípico) para documentar o padrão de débito elevado e resistência vascular sistêmica baixa",
+      "Coeficiente de atividade da transcetolase eritrocitária (ETKAC) — ensaio funcional que reflete o status de tiamina, pouco disponível fora de laboratórios de referência",
+      "Tiamina difosfato em sangue total, quando disponível — reflete melhor os estoques teciduais que a tiamina sérica isolada, mas o resultado costuma demorar dias, o que limita seu uso para decisão terapêutica aguda",
+      "Rastreio ativo de sinais neurológicos associados (polineuropatia, confusão, ataxia, oftalmoplegia), já que a coexistência de beribéri seco e úmido é frequente e reforça a suspeita diagnóstica",
+      "Investigação e reposição concomitante de outras deficiências do complexo B (niacina, piridoxina, cobalamina) em paciente com fator de risco para desnutrição combinada, já que o quadro clínico se sobrepõe e a reposição isolada de um único nutriente pode ser insuficiente"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de alto débito inexplicada com fator de risco nutricional — não aguardar dosagem laboratorial de tiamina para iniciar reposição empírica, dado o baixo risco da intervenção e a possibilidade de reversão rápida",
+      "Reposição calórica ou glicídica em paciente desnutrido sem cobertura prévia ou concomitante de tiamina — risco de precipitar ou agravar encefalopatia de Wernicke",
+      "Apresentação fulminante com choque cardiogênico e acidose láctica inexplicada em paciente de risco (shoshin beriberi) — condição rapidamente fatal se não tratada, mas potencialmente revertida em horas com tiamina intravenosa",
+      "Ausência de resposta hemodinâmica dentro de 24 horas após reposição adequada de tiamina — deve motivar busca ativa de causas alternativas ou concomitantes (selênio, niacina, outras causas de IC de alto débito)",
+      "Paciente bariátrico, gestante com hiperêmese, ou paciente oncológico/UTI de longa permanência com quadro cardiovascular ou neurológico inexplicado — populações de risco frequentemente subdiagnosticadas por não se encaixarem no estereótipo clássico de desnutrição"
+    ],
+    "ambulatory_flow": [
+      "Reconhecer o contexto de risco contemporâneo (alcoolismo crônico, cirurgia bariátrica, hiperêmese gravídica/gestação, uso crônico de diurético de alça, câncer em tratamento) diante de sintomas cardiovasculares ou neurológicos inexplicados",
+      "Diante de suspeita, não postergar a reposição de tiamina aguardando exame confirmatório — iniciar tratamento empírico e usar a resposta clínica como reforço diagnóstico",
+      "Investigar e corrigir a causa de base em paralelo (abordagem do alcoolismo, revisão da suplementação vitamínica pós-bariátrica, manejo da hiperêmese, revisão da necessidade/dose do diurético)",
+      "Rastrear e repor empiricamente outras deficiências de complexo B associadas (niacina, piridoxina, cobalamina, ácido fólico) em paciente com fator de risco para desnutrição combinada",
+      "Encaminhar para avaliação cardiológica com ecocardiograma diante de sinais de insuficiência cardíaca de alto débito, mantendo o beribéri no topo da lista de causas ativamente corrigíveis a excluir"
+    ],
+    "emergency_flow": [
+      "Estabilização hemodinâmica padrão diante de sinais de insuficiência cardíaca de alto débito ou choque, sem aguardar confirmação laboratorial da deficiência de tiamina para iniciar suporte",
+      "Administrar tiamina parenteral empiricamente diante de IC de alto débito inexplicada ou choque em paciente com fator de risco nutricional — resposta hemodinâmica caracteristicamente rápida (horas) quando a tiamina é a causa dominante",
+      "Nunca administrar glicose/reposição calórica isolada sem cobertura de tiamina em paciente desnutrido ou de risco — risco de precipitar encefalopatia de Wernicke",
+      "Considerar shoshin beriberi no diferencial de choque cardiogênico com acidose láctica inexplicada, inclusive quando o quadro mimetiza síndrome coronariana aguda",
+      "Reavaliar em 24 horas: ausência de resposta hemodinâmica à tiamina deve motivar investigação de causas alternativas ou concomitantes (deficiência de selênio, de niacina, ou outras causas de IC de alto débito)"
+    ],
+    "tags": [
+      "beribéri",
+      "beriberi",
+      "deficiência de tiamina",
+      "vitamina B1",
+      "tiamina pirofosfato",
+      "cardiomiopatia nutricional",
+      "insuficiência cardíaca de alto débito",
+      "shoshin beriberi",
+      "encefalopatia de Wernicke",
+      "alcoolismo crônico",
+      "cirurgia bariátrica",
+      "hiperêmese gravídica",
+      "diurético de alça",
+      "síndrome de realimentação",
+      "paciente oncológico",
+      "terapia intensiva",
+      "reversibilidade"
+    ],
+    "source_refs": [
+      "Wiley KD, Singh J. Vitamin B1 (Thiamine) Deficiency. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 2026 Jan. PMID: 30725889",
+      "DiNicolantonio JJ, Liu J, O'Keefe JH. Thiamine and Cardiovascular Disease: A Literature Review. Prog Cardiovasc Dis. 2018 May-Jun;61(1):27-32. DOI: 10.1016/j.pcad.2018.01.009. PMID: 29360523",
+      "Polegato BF, Pereira AG, Azevedo PS, Costa NA, Zornoff LAM, Paiva SAR, Minicucci MF. Role of Thiamin in Health and Disease. Nutr Clin Pract. 2019;34(4):558-564. DOI: 10.1002/ncp.10234. PMID: 30644592",
+      "Ikram H, Maslowski AH, Smith BL, Nicholls MG. The haemodynamic, histopathological and hormonal features of alcoholic cardiac beriberi. Q J Med. 1981;50(200):359-375. PMID: 7342167",
+      "Reddy YNV, Melenovsky V, Redfield MM, Nishimura RA, Borlaug BA. High-Output Heart Failure: A 15-Year Experience. J Am Coll Cardiol. 2016;68(5):473-482. DOI: 10.1016/j.jacc.2016.05.043. PMID: 27470455",
+      "Mehta PA, Dubrey SW. High output heart failure. QJM. 2009;102(4):235-241. DOI: 10.1093/qjmed/hcn147. PMID: 18990720",
+      "Nisar S, Mohi-U-Din K, Tak SI, Andrabi SMA, Tanvir M, Muzaffer U, Kareem O, Ganie MA. Thiamine responsive high output heart failure of adults: an under-recognized entity. Eur J Clin Nutr. 2023 Jul;77(7):757-760. DOI: 10.1038/s41430-023-01279-7. PMID: 36859659",
+      "Nisar S, Kareem O, Muzaffer U, Tanvir M, Ganaie MA, Ahmed RN. Descriptive spectrum of thiamine deficiency in pregnancy: A potentially preventable condition. Int J Gynaecol Obstet. 2024 Jan;164(1):157-165. DOI: 10.1002/ijgo.14989. PMID: 37458305",
+      "Indraccolo U, Gentile G, Pomili G, Luzi G, Villani C. Thiamine deficiency and beriberi features in a patient with hyperemesis gravidarum. Nutrition. 2005 Sep;21(9):967-968. DOI: 10.1016/j.nut.2005.04.001. PMID: 15979284",
+      "Bathobakae L, Ozgur SS, Lombardo D, Mekheal N, Michael P. \"Bariatric Beriberi\": A Rare Case of Wernicke Encephalopathy Two Weeks After Laparoscopic Sleeve Gastrectomy. Cureus. 2023 Apr;15(4):e37056. DOI: 10.7759/cureus.37056. PMID: 37153253",
+      "Seligmann H, Halkin H, Rauchfleisch S, Kaufmann N, Motro M, Vered Z, Ezra D. Thiamine deficiency in patients with congestive heart failure receiving long-term furosemide therapy: a pilot study. Am J Med. 1991 Aug;91(2):151-155. DOI: 10.1016/0002-9343(91)90007-k. PMID: 1867241",
+      "Shimon I, Almog S, Vered Z, Seligmann H, Shefi M, Peleg E, Rosenthal T, Motro M, Halkin H, Ezra D. Improved left ventricular function after thiamine supplementation in patients with congestive heart failure receiving long-term furosemide therapy. Am J Med. 1995 May;98(5):485-490. DOI: 10.1016/s0002-9343(99)80349-0. PMID: 7733128",
+      "Teigen LM, Twernbold DD, Miller WL. Prevalence of thiamine deficiency in a stable heart failure outpatient cohort on standard loop diuretic therapy. Clin Nutr. 2016 Dec;35(6):1323-1327. DOI: 10.1016/j.clnu.2016.02.011. PMID: 26923517",
+      "Misumida N, Umeda H, Iwase M. Shoshin beriberi induced by long-term administration of diuretics: a case report. Case Rep Cardiol. 2014;2014:878915. DOI: 10.1155/2014/878915. PMID: 25105030",
+      "Senthil A, Chalasani VB, Bonsu E, Aman N, Trivedi YV, Alihsan B, Jain R. Cardiac Complications of Refeeding Syndrome: Pathophysiological Mechanisms, Clinical Manifestations, and Preventive Strategies. Cardiol Rev. 2026 May 12. DOI: 10.1097/CRD.0000000000001218. PMID: 42115821",
+      "Onishi H, Sato I, Uchida N, Takahashi T, Furuya D, Ebihara Y, Yoshioka A, Ito H, Ishida M. High proportion of thiamine deficiency in referred cancer patients with delirium: a retrospective descriptive study. Eur J Clin Nutr. 2021 Oct;75(10):1499-1505. DOI: 10.1038/s41430-021-00859-9. PMID: 33514871",
+      "Boopathy D, Grahf D, Ross J, Hawatian K, Rammal JA, Alaimo K, Miller JB. Thiamine Deficiency Is Common and Underrecognized in Emergency Department Oncology Patients. J Clin Med. 2025 Jan 4;14(1):257. DOI: 10.3390/jcm14010257. PMID: 39797340",
+      "Attaluri P, Castillo A, Edriss H, Nugent K. Thiamine Deficiency: An Important Consideration in Critically Ill Patients. Am J Med Sci. 2018 Oct;356(4):382-390. DOI: 10.1016/j.amjms.2018.06.015. PMID: 30146080",
+      "Jones KS, Parkington DA, Cox LJ, Koulman A. Erythrocyte transketolase activity coefficient (ETKAC) assay protocol for the assessment of thiamine status. Ann N Y Acad Sci. 2021 Aug;1498(1):77-84. DOI: 10.1111/nyas.14547. PMID: 33354793",
+      "Lei Y, Zheng MH, Huang W, Zhang J, Lu Y. Wet beriberi with multiple organ failure remarkably reversed by thiamine administration: A case report and literature review. Medicine (Baltimore). 2018 Mar;97(9). DOI: 10.1097/MD.0000000000010010. PMID: 29489643",
+      "Essa E, Velez MR, Smith S, Giri S, Raman SV, Gumina RJ. Cardiovascular magnetic resonance in wet beriberi. J Cardiovasc Magn Reson. 2011 Aug 12;13(1):41. DOI: 10.1186/1532-429X-13-41. PMID: 21838901",
+      "Cox FM, Cornel JH, Aramideh M. [A man with the combination of dry and wet beriberi]. Ned Tijdschr Geneeskd. 2006 Jun 17;150(24):1347-1350. PMID: 16808367",
+      "Lobao M, Sampaio MB, Sousa Leite M, Gomes F, Silva JM. Beri-Beri and Wernicke Encephalopathy in a Thirty-Year-Old Male. Cureus. 2022 May;14(5):e24692. DOI: 10.7759/cureus.24692. PMID: 35663705"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/30725889/",
+      "https://pubmed.ncbi.nlm.nih.gov/29360523/",
+      "https://pubmed.ncbi.nlm.nih.gov/30644592/",
+      "https://pubmed.ncbi.nlm.nih.gov/7342167/",
+      "https://pubmed.ncbi.nlm.nih.gov/27470455/",
+      "https://pubmed.ncbi.nlm.nih.gov/18990720/",
+      "https://pubmed.ncbi.nlm.nih.gov/36859659/",
+      "https://pubmed.ncbi.nlm.nih.gov/37458305/",
+      "https://pubmed.ncbi.nlm.nih.gov/15979284/",
+      "https://pubmed.ncbi.nlm.nih.gov/37153253/",
+      "https://pubmed.ncbi.nlm.nih.gov/1867241/",
+      "https://pubmed.ncbi.nlm.nih.gov/7733128/",
+      "https://pubmed.ncbi.nlm.nih.gov/26923517/",
+      "https://pubmed.ncbi.nlm.nih.gov/25105030/",
+      "https://pubmed.ncbi.nlm.nih.gov/42115821/",
+      "https://pubmed.ncbi.nlm.nih.gov/33514871/",
+      "https://pubmed.ncbi.nlm.nih.gov/39797340/",
+      "https://pubmed.ncbi.nlm.nih.gov/30146080/",
+      "https://pubmed.ncbi.nlm.nih.gov/33354793/",
+      "https://pubmed.ncbi.nlm.nih.gov/29489643/",
+      "https://pubmed.ncbi.nlm.nih.gov/21838901/",
+      "https://pubmed.ncbi.nlm.nih.gov/16808367/",
+      "https://pubmed.ncbi.nlm.nih.gov/35663705/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao"
+    ],
+    "patient_material_slug": null
   }
 ]
