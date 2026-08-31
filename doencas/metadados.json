@@ -53658,5 +53658,450 @@
       "sindrome-de-rubinstein-taybi-espectro-cardiovascular-genetica-crebbp-ep300-e-risco-anestesico"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "telangiectasia-hemorragica-hereditaria",
+    "name": "Telangiectasia hemorrágica hereditária",
+    "aliases": [
+      "HHT",
+      "doença de Osler-Weber-Rendu",
+      "síndrome de Osler-Weber-Rendu",
+      "Rendu-Osler-Weber",
+      "doença de Rendu-Osler"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "malformacoes_arteriovenosas_multissistemicas",
+    "prevalence_rank": 149,
+    "completeness": "completo",
+    "summary": "Doença vascular autossômica dominante (genes ENG/HHT1 ou ACVRL1-ALK1/HHT2, entre outros) que causa telangiectasias mucocutâneas e malformações arteriovenosas viscerais — pulmonares, hepáticas, cerebrais e gastrointestinais — com risco de hipoxemia por shunt direita-esquerda, embolia paradoxal (AVC, ataque isquêmico transitório, abscesso cerebral) e insuficiência cardíaca de alto débito por shunt hepático; diagnóstico clínico pelos critérios de Curaçao e rastreio de malformação arteriovenosa pulmonar recomendado mesmo em paciente assintomático.",
+    "presentation": [
+      "Epistaxe recorrente e espontânea, geralmente a manifestação mais precoce e mais comum",
+      "Telangiectasias mucocutâneas em lábios, cavidade oral, dedos e nariz, tipicamente surgindo mais tarde que a epistaxe",
+      "Dispneia, platipneia-ortodeoxia ou hipoxemia inexplicada por shunt direita-esquerda em malformação arteriovenosa pulmonar, podendo ser assintomática mesmo com shunt significativo",
+      "AVC isquêmico, ataque isquêmico transitório, abscesso cerebral ou embolia sistêmica por embolia paradoxal através de malformação arteriovenosa pulmonar",
+      "Dispneia aos esforços, edema e sinais de insuficiência cardíaca de alto débito por malformação arteriovenosa hepática com shunt significativo",
+      "Anemia ferropriva crônica por sangramento mucocutâneo ou gastrointestinal recorrente",
+      "Sangramento gastrointestinal por telangiectasias digestivas, mais comum em pacientes mais velhos"
+    ],
+    "differentials": [
+      "Telangiectasia essencial generalizada e outras telangiectasias cutâneas sem base sindrômica",
+      "Esclerose sistêmica limitada/CREST, que também causa telangiectasias cutâneas",
+      "Malformação arteriovenosa pulmonar esporádica isolada, sem critério adicional de Curaçao",
+      "Hipertensão arterial pulmonar hereditária por BMPR2, sem malformação arteriovenosa visceral associada",
+      "Outras causas de insuficiência cardíaca de alto débito: fístula arteriovenosa adquirida, doença de Paget óssea, tireotoxicose, anemia grave, beribéri",
+      "Outras causas de forame oval patente ou shunt direita-esquerda sem malformação arteriovenosa pulmonar"
+    ],
+    "tests": [
+      "Critérios clínicos de Curaçao: epistaxe recorrente, telangiectasias em sítios característicos, malformação arteriovenosa visceral, familiar de primeiro grau com HHT",
+      "Teste genético de ENG e ACVRL1/ALK1 e, se negativos, SMAD4 e outros genes menos frequentes",
+      "Ecocardiograma transtorácico com contraste salino agitado para rastreio de shunt direita-esquerda por malformação arteriovenosa pulmonar, mesmo sem sintomas respiratórios",
+      "Angiotomografia de tórax para caracterizar malformação arteriovenosa pulmonar identificada no rastreio e planejar embolização",
+      "Investigação hepática por imagem (ultrassom Doppler, tomografia ou ressonância) dirigida a sinais/sintomas sugestivos, não como rastreio universal assintomático",
+      "Hemograma e ferritina para investigação de anemia ferropriva",
+      "Ressonância cerebral para rastreio de malformação arteriovenosa cerebral/espinal, com recomendação menos uniforme entre diretrizes"
+    ],
+    "red_flags": [
+      "Hipoxemia ou dessaturação inexplicada, mesmo em paciente assintomático — pode ser a única pista de malformação arteriovenosa pulmonar com shunt significativo",
+      "AVC isquêmico, ataque isquêmico transitório ou abscesso cerebral em paciente jovem sem fator de risco cardiovascular habitual",
+      "Dispneia, taquicardia e sinais de alto débito em paciente com hepatomegalia pulsátil ou sopro hepático",
+      "Sangramento ativo persistente (epistaxe ou digestivo) com repercussão hemodinâmica ou queda de hemoglobina",
+      "Procedimento com risco de bacteremia em paciente com malformação arteriovenosa pulmonar não tratada, sem avaliação prévia de profilaxia"
+    ],
+    "ambulatory_flow": [
+      "Aplicar os critérios de Curaçao e, com ≥2 critérios presentes, encaminhar para teste genético e rastreio sistemático de malformação arteriovenosa visceral",
+      "Rastrear malformação arteriovenosa pulmonar com ecocardiograma com contraste salino em todo paciente com diagnóstico confirmado ou possível, mesmo sem sintomas respiratórios",
+      "Se rastreio positivo, confirmar com angiotomografia de tórax e encaminhar para avaliação de embolização percutânea",
+      "Investigar malformação arteriovenosa hepática por imagem quando houver sinais/sintomas sugestivos de alto débito, hipertensão porta ou doença biliar — não é rastreio universal",
+      "Discutir profilaxia antibiótica antes de procedimento com risco de bacteremia enquanto houver malformação arteriovenosa pulmonar não tratada, conforme diretriz vigente",
+      "Rastrear e tratar anemia ferropriva; considerar reposição de ferro endovenoso quando a via oral não for suficiente",
+      "Oferecer aconselhamento genético e rastreio em cascata para familiares de primeiro grau, inclusive quando ainda assintomáticos"
+    ],
+    "emergency_flow": [
+      "Déficit neurológico focal agudo em paciente com HHT conhecida ou suspeita: investigar AVC isquêmico e embolia paradoxal, sem assumir apenas causa aterotrombótica habitual",
+      "Suspeita de abscesso cerebral (febre, cefaleia, déficit focal): investigar malformação arteriovenosa pulmonar não tratada como fonte",
+      "Hipoxemia aguda ou dessaturação desproporcional ao quadro pulmonar: considerar malformação arteriovenosa pulmonar com shunt direita-esquerda",
+      "Descompensação de insuficiência cardíaca de alto débito: tratar a congestão como em qualquer insuficiência cardíaca aguda, mas investigar malformação arteriovenosa hepática como causa de base antes de assumir etiologia isquêmica ou valvar habitual",
+      "Epistaxe ou sangramento digestivo maior: manejo hemostático padrão, com atenção à repercussão hemodinâmica e à necessidade transfusional"
+    ],
+    "tags": [
+      "HHT",
+      "telangiectasia hemorrágica hereditária",
+      "Osler-Weber-Rendu",
+      "malformação arteriovenosa pulmonar",
+      "malformação arteriovenosa hepática",
+      "ENG",
+      "ACVRL1",
+      "ALK1",
+      "embolia paradoxal",
+      "insuficiência cardíaca de alto débito",
+      "critérios de Curaçao",
+      "hipertensão arterial pulmonar hereditária"
+    ],
+    "source_refs": [
+      "Faughnan ME, Mager JJ, Hetts SW, et al. Second International Guidelines for the Diagnosis and Management of Hereditary Hemorrhagic Telangiectasia. Ann Intern Med. 2020;173(12):989-1001. DOI: 10.7326/M20-1443. PMID: 32894695",
+      "Shovlin CL, Guttmacher AE, Buscarini E, et al. Diagnostic criteria for hereditary hemorrhagic telangiectasia (Rendu-Osler-Weber syndrome). Am J Med Genet. 2000;91(1):66-67. PMID: 10751092",
+      "Harrison RE, Flanagan JA, Sankelo M, et al. Molecular and functional analysis identifies ALK-1 as the predominant cause of pulmonary hypertension related to hereditary haemorrhagic telangiectasia. J Med Genet. 2003;40(12):865-871. DOI: 10.1136/jmg.40.12.865. PMID: 14684682",
+      "Garcia-Tsao G, Korzenik JR, Young L, et al. Liver disease in patients with hereditary hemorrhagic telangiectasia. N Engl J Med. 2000;343(13):931-936. DOI: 10.1056/NEJM200009283431305. PMID: 11006369",
+      "Bayrak-Toydemir P, McDonald J, Markewitz B, et al. Genotype-phenotype correlation in hereditary hemorrhagic telangiectasia: mutations and manifestations. Am J Med Genet A. 2006;140(5):463-470. DOI: 10.1002/ajmg.a.31101. PMID: 16470787",
+      "Dakeishi M, Shioya T, Wada Y, et al. Genetic epidemiology of hereditary hemorrhagic telangiectasia in a local community in the northern part of Japan. Hum Mutat. 2002;19(2):140-148. DOI: 10.1002/humu.10026. PMID: 11793473",
+      "Faughnan ME, Palda VA, Garcia-Tsao G, et al. International guidelines for the diagnosis and management of hereditary haemorrhagic telangiectasia. J Med Genet. 2011;48(2):73-87. DOI: 10.1136/jmg.2009.069013. PMID: 19553198",
+      "McDonald J, Bayrak-Toydemir P, Pyeritz RE. Hereditary Hemorrhagic Telangiectasia. GeneReviews (NCBI Bookshelf), NBK1351 — capítulo revisado periodicamente, consultado em 31/08/2026 para prevalência combinada de ENG/ACVRL1 e protocolo de rastreio de MAV pulmonar por ecocardiograma com contraste",
+      "Dupuis-Girod S, Cottin V, Shovlin CL. The Lung in Hereditary Hemorrhagic Telangiectasia. Respiration. 2017;94(4):315-330. DOI: 10.1159/000479632. PMID: 28850955"
+    ],
+    "source_urls": [
+      "https://doi.org/10.7326/M20-1443",
+      "https://pubmed.ncbi.nlm.nih.gov/10751092/",
+      "https://doi.org/10.1136/jmg.40.12.865",
+      "https://doi.org/10.1056/NEJM200009283431305",
+      "https://doi.org/10.1002/ajmg.a.31101",
+      "https://doi.org/10.1002/humu.10026",
+      "https://doi.org/10.1136/jmg.2009.069013",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1351/",
+      "https://doi.org/10.1159/000479632"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "telangiectasia-hemorragica-hereditaria-mavs-pulmonares-hepaticas-genetica-e-rastreio"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-mazzanti",
+    "name": "Síndrome de Mazzanti",
+    "aliases": [
+      "Noonan-like syndrome with loose anagen hair",
+      "NS/LAH",
+      "NSLH1",
+      "síndrome de Mazzanti (SHOC2)",
+      "RASopatia por SHOC2"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "rasopatia",
+    "prevalence_rank": 150,
+    "completeness": "completo",
+    "summary": "RASopatia rara causada por variante germinativa quase exclusiva em SHOC2 (c.4A>G, p.Ser2Gly), gene que codifica uma proteína scaffold sem atividade catalítica própria — mecanismo distinto de PTPN11 (fosfatase), RAF1/BRAF (cinases) e HRAS (GTPase), já cobertos por outras RASopatias desta plataforma. A variante cria um sítio de N-miristoilação próximo ao N-terminal, causando direcionamento anômalo da proteína à membrana plasmática e sinalização RAS-MAPK aumentada. Descrita originalmente em 2003 (Mazzanti L et al.) e ligada ao gene em 2009 (Cordeddu V et al., nos 25 indivíduos afetados estudados). Fenótipo característico: cabelo esparso, fino, de crescimento lento e facilmente destacável (\"loose anagen hair\"), hiperpigmentação cutânea, baixa estatura com deficiência/insensibilidade a hormônio de crescimento em parte dos casos, e macrocefalia relativa. O espectro cardíaco inclui estenose pulmonar valvar, defeitos septais e valvares (inclusive displasia mitral) e coarctação de aorta, todos descritos apenas em relatos e séries de caso pequenas — sem coorte grande o suficiente para gerar frequência confiável. Achado de particular interesse mecanístico: cardiomiopatia hipertrófica, incluindo pelo menos um caso fatal em lactente, já foi documentada nesta síndrome apesar de SHOC2 não ser cataliticamente relacionado aos genes clássicos de CMH sindrômica (RAF1, HRAS). Sinais preliminares de possível predisposição oncológica (neuroblastoma, relato isolado de linfoma cutâneo) e autoimune (lúpus eritematoso sistêmico em mais de um relato recente) existem na literatura, mas não têm, até o momento, protocolo de vigilância estabelecido — devem ser tratados como hipótese gerada por caso/série pequena, não como recomendação validada.",
+    "presentation": [
+      "Cabelo esparso, fino, de crescimento lento e facilmente destacável ao tracionar suavemente (\"loose anagen hair\") — achado que dá nome à síndrome",
+      "Hiperpigmentação cutânea difusa",
+      "Baixa estatura, com deficiência ou insensibilidade a hormônio de crescimento descrita em parcela dos casos publicados",
+      "Macrocefalia relativa e espaços liquóricos aumentados descritos na série original",
+      "Fenótipo facial Noonan-like (sem detalhamento dismórfico próprio consolidado em coorte grande)",
+      "Estenose valvar pulmonar",
+      "Defeitos septais e displasia de valva mitral",
+      "Coarctação de aorta (relato de caso)",
+      "Cardiomiopatia hipertrófica, incluindo relato de caso fatal em lactente prematuro com obstrução de via de saída do ventrículo esquerdo",
+      "Manifestações neurológicas relatadas em casos isolados: crises epilépticas, tiques complexos crônicos, e relatos repetidos (mais de um paciente, em publicações independentes) de doença tipo moyamoya",
+      "Sinais preliminares, de relato/série pequena, de possível predisposição a neuroblastoma e a lúpus eritematoso sistêmico"
+    ],
+    "differentials": [
+      "Síndrome de Noonan clássica (PTPN11, SOS1, LZTR1, RAF1, RIT1 e outros genes RAS-MAPK; estenose pulmonar valvar displásica é o achado cardíaco dominante; ausência do padrão de cabelo anágeno frouxo e da hiperpigmentação cutânea típicos de Mazzanti; heterogeneidade de mais de dez genes causais, contra a recorrência quase exclusiva de uma única variante em SHOC2)",
+      "Síndrome de Costello (HRAS, hotspot quase exclusivo p.Gly12Ser; cardiomiopatia hipertrófica em ~60% e taquicardia atrial caótica/multifocal em ~48-55% são os achados cardíacos dominantes e mais distintivos; papilomas nasais/periorais característicos; risco oncológico vitalício ~15% com protocolo de vigilância dedicado, em contraste com os relatos isolados e sem protocolo estabelecido em Mazzanti)",
+      "Síndrome cardiofaciocutânea (BRAF, MAP2K1/2, KRAS) — sobreposição de fenótipo cutâneo/capilar, sem os papilomas de Costello nem a recorrência mutacional restrita de SHOC2",
+      "NSLH2 — segunda entidade também chamada \"Noonan-like syndrome with loose anagen hair\", causada por variante em PPP1CB, gene distinto de SHOC2 apesar do nome quase idêntico; não deve ser presumida como sinônimo da síndrome de Mazzanti (SHOC2/NSLH1)",
+      "Cardiomiopatia hipertrófica sarcomérica isolada não sindrômica, quando o fenótipo dismórfico/capilar ainda não é evidente ao diagnóstico cardíaco inicial"
+    ],
+    "tests": [
+      "Teste genético dirigido para SHOC2 (o achado quase universal na literatura publicada é a variante c.4A>G, p.Ser2Gly), ou painel de genes de RASopatia quando o fenótipo for atípico ou a apresentação inicial for isoladamente cardíaca",
+      "Ecocardiograma com eletrocardiograma ao diagnóstico ou à suspeita clínica, com reavaliação programada mais próxima se houver cardiomiopatia hipertrófica ou lesão valvar/septal significativa ao diagnóstico inicial — extrapolação pragmática do manejo geral de RASopatias, não uma recomendação validada para esta síndrome especificamente por ausência de diretriz dedicada",
+      "Avaliação do eixo do hormônio de crescimento (IGF-1, teste de estímulo quando indicado) diante de baixa estatura, com atenção a possível padrão de insensibilidade ao GH descrito em relato de caso",
+      "Avaliação dermatológica/tricológica do padrão de cabelo (tração suave, tricograma) para apoiar a suspeita clínica diante de fenótipo Noonan-like com baixa estatura",
+      "Aconselhamento genético estruturado antes e depois do teste, dado o padrão de herança autossômica dominante (variantes de novo na maioria dos relatos publicados)",
+      "Atenção clínica a sintomas neurológicos focais ou cefaleia atípica, dado relato repetido de doença tipo moyamoya em publicações independentes"
+    ],
+    "red_flags": [
+      "Cardiomiopatia hipertrófica com obstrução de via de saída do ventrículo esquerdo em lactente com fenótipo de cabelo esparso/frouxo e hiperpigmentação cutânea — já documentada com desfecho fatal em relato de caso",
+      "Sinais neurológicos focais ou cefaleia atípica em paciente com síndrome de Mazzanti confirmada, pelo sinal repetido de doença tipo moyamoya na literatura",
+      "Baixa estatura grave não responsiva a hormônio de crescimento — considerar insensibilidade ao GH, já relatada nesta síndrome"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pela combinação de cabelo anágeno frouxo, hiperpigmentação cutânea, fenótipo facial Noonan-like e baixa estatura",
+      "Encaminhamento a genética médica para teste dirigido a SHOC2 ou painel de RASopatia, com aconselhamento genético estruturado",
+      "Avaliação cardiológica com ecocardiograma e eletrocardiograma ao diagnóstico ou à suspeita clínica",
+      "Avaliação endocrinológica do eixo do hormônio de crescimento diante de baixa estatura",
+      "Seguimento cardiológico programado conforme achado inicial (mais próximo se houver cardiomiopatia hipertrófica ou lesão estrutural significativa), por extrapolação do manejo geral de RASopatias, sem protocolo validado específico para esta síndrome",
+      "Atenção a sintomas neurológicos focais no seguimento, dado o sinal recorrente de doença tipo moyamoya em mais de um relato independente"
+    ],
+    "emergency_flow": [
+      "Sinais de insuficiência cardíaca ou instabilidade hemodinâmica em lactente com cardiomiopatia hipertrófica conhecida ou suspeita: avaliação cardiológica urgente com ecocardiograma, pela gravidade e potencial de progressão rápida já documentada em relato de caso",
+      "Déficit neurológico focal agudo em paciente com síndrome de Mazzanti confirmada: investigar vasculopatia cerebral tipo moyamoya como diagnóstico diferencial, dado o sinal repetido na literatura"
+    ],
+    "tags": [
+      "RASopatia",
+      "SHOC2",
+      "síndrome de Mazzanti",
+      "Noonan-like syndrome with loose anagen hair",
+      "cabelo anágeno frouxo",
+      "cardiomiopatia hipertrófica",
+      "estenose pulmonar",
+      "cardiologia pediátrica",
+      "genética cardiovascular",
+      "via RAS-MAPK"
+    ],
+    "source_refs": [
+      "Mazzanti L, Cacciari E, Cicognani A, Bergamaschi R, Scarano E, Forabosco A. Noonan-like syndrome with loose anagen hair: a new syndrome? Am J Med Genet A. 2003;118A(3):279-286. DOI: 10.1002/ajmg.a.10923. PMID: 12673660",
+      "Cordeddu V, Di Schiavi E, Pennacchio LA, et al. Mutation of SHOC2 promotes aberrant protein N-myristoylation and causes Noonan-like syndrome with loose anagen hair. Nat Genet. 2009;41(9):1022-1026. DOI: 10.1038/ng.425. PMID: 19684605",
+      "Baldassarre G, Mussa A, Banaudi E, Rossi C, Tartaglia M, Silengo M, Ferrero GB. Phenotypic variability associated with the invariant SHOC2 c.4A>G (p.Ser2Gly) missense mutation. Am J Med Genet A. 2014;164A(11):2802-2806. DOI: 10.1002/ajmg.a.36697. PMID: 25331583",
+      "Hoban R, Roberts AE, Demmer L, Jethva R, Shephard B. Noonan syndrome due to a SHOC2 mutation presenting with fetal distress and fatal hypertrophic cardiomyopathy in a premature infant. Am J Med Genet A. 2012;158A(6):1411-1413. DOI: 10.1002/ajmg.a.35318. PMID: 22528146",
+      "Uehara T, Hosogaya N, Matsuo N, Kosaki K. Systemic lupus erythematosus in a patient with Noonan syndrome-like disorder with loose anagen hair 1. Am J Med Genet A. 2018;176(7):1662-1666. DOI: 10.1002/ajmg.a.38834. PMID: 29737035",
+      "Zmolikova M, Hlavata A, Vejvalkova S, Havlovicova M, Baxova A, Kotalova R. Coarctation of the aorta in Noonan-like syndrome with loose anagen hair. Am J Med Genet A. 2014;164A(3):766-769. DOI: 10.1002/ajmg.a.36349. PMID: 24458596",
+      "Leoni C, Blandino R, Delogu AB, et al. Genotype-cardiac phenotype correlations in a large single-center cohort of patients affected by RASopathies: Clinical implications and literature review. Am J Med Genet A. 2022;188(2):431-445. DOI: 10.1002/ajmg.a.62529. PMID: 34643321",
+      "Croonen EA, Nillesen WM, Stuurman KE, et al. Noonan syndrome: comparing mutation-positive with mutation-negative Dutch patients. Mol Syndromol. 2013;4(3):46-53. DOI: 10.1159/000345876. PMID: 23885229",
+      "Garavelli L, Cordeddu V, Errico S, et al. Noonan syndrome-like disorder with loose anagen hair: a second case with neuroblastoma. Am J Med Genet A. 2015;167A(7):1902-1906. DOI: 10.1002/ajmg.a.37082. PMID: 25846317",
+      "Liu Z, Lai J, Song F. Noonan syndrome and Noonan syndrome-like syndrome with loose anagen hair: rare phenotypes may emerge during follow-up. Transl Pediatr. 2024;13(9):1633-1642. DOI: 10.21037/tp-24-113. PMID: 39144424",
+      "Capalbo D, Melis D, De Martino L, Pignata C, Salerno M. Noonan-like syndrome with loose anagen hair associated with growth hormone insensitivity and atypical neurological manifestations. Am J Med Genet A. 2012;158A(6):1444-1448. DOI: 10.1002/ajmg.a.35234. PMID: 22419608",
+      "Takasawa K, et al. Improved growth velocity of a patient with Noonan-like syndrome with loose anagen hair caused by SHOC2 mutation. Am J Med Genet A. 2015;167A(11):2812-2814. PMID: 26096762",
+      "Mazzanti L, et al. GH therapy and first final height data in Noonan-like syndrome with loose anagen hair (Mazzanti syndrome) caused by the specific SHOC2 mutation. Am J Med Genet A. 2013;161A(11):2756-2761. PMID: 24124081"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12673660/",
+      "https://pubmed.ncbi.nlm.nih.gov/19684605/",
+      "https://pubmed.ncbi.nlm.nih.gov/25331583/",
+      "https://pubmed.ncbi.nlm.nih.gov/22528146/",
+      "https://pubmed.ncbi.nlm.nih.gov/29737035/",
+      "https://pubmed.ncbi.nlm.nih.gov/24458596/",
+      "https://pubmed.ncbi.nlm.nih.gov/34643321/",
+      "https://pubmed.ncbi.nlm.nih.gov/23885229/",
+      "https://pubmed.ncbi.nlm.nih.gov/25846317/",
+      "https://pubmed.ncbi.nlm.nih.gov/39144424/",
+      "https://pubmed.ncbi.nlm.nih.gov/22419608/",
+      "https://pubmed.ncbi.nlm.nih.gov/26096762/",
+      "https://pubmed.ncbi.nlm.nih.gov/24124081/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-mazzanti-rasopatia-por-shoc2-cabelo-anageno-frouxo-espectro-cardiaco-e-cardiomiopatia-hipertrofica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-cardiofaciocutanea",
+    "name": "Síndrome Cardiofaciocutânea (CFC)",
+    "aliases": [
+      "CFC syndrome",
+      "cardiofaciocutaneous syndrome",
+      "RASopatia por BRAF/MAP2K1/MAP2K2",
+      "síndrome cardio-fácio-cutânea"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "rasopatia",
+    "prevalence_rank": 151,
+    "completeness": "completo",
+    "summary": "RASopatia rara causada, na grande maioria dos casos, por variante germinativa ativadora em BRAF (~75% dos casos), seguida por MAP2K1/MAP2K2 (MEK1/MEK2, juntos ~25%) e, raramente, KRAS (<2%); variantes em YWHAZ descritas em número muito pequeno de casos. Prevalência global desconhecida; única estimativa populacional identificada é japonesa, de 1 em 810.000 nascidos vivos. Cardiopatias ocorrem em aproximadamente 75-80% dos indivíduos, mais frequentemente estenose pulmonar (~50% especificamente nos casos por BRAF, a única correlação genótipo-fenótipo cardíaca estatisticamente significativa identificada) e cardiomiopatia hipertrófica, sem coorte cardiovascular dedicada de grande porte que permita percentuais consolidados como existem para síndrome de Noonan e síndrome de Costello — lacuna de evidência que este registro sinaliza explicitamente. Distinta da síndrome de Noonan (predominantemente PTPN11/SOS1/RAF1/LZTR1/RIT1, deficiência intelectual tipicamente mais leve) e da síndrome de Costello (predominantemente HRAS, papilomas característicos, maior risco oncológico entre as três), a CFC tem fenótipo cutâneo próprio (queratose pilar em 80%, ulerema oftriogenes em 90%, hemangiomas infantis em 26%, ausência de papilomas e de manchas café-com-leite múltiplas), deficiência intelectual descrita como moderada a grave (achado cardinal da síndrome, com variação interna — variantes MAP2K1 podem ter perfil mais leve, mais próximo de Noonan) e o menor risco oncológico entre as três RASopatias cardíacas já cobertas nesta plataforma (câncer em apenas 1,6% dos casos revisados, concentrado antes dos 3 anos de idade, predominando leucemia linfoblástica aguda).",
+    "presentation": [
+      "Fenótipo facial reminiscente de síndrome de Noonan ao nascimento, tornando-se progressivamente menos semelhante e geralmente menos \"grosseiro\" que o de Costello ao longo da infância/adolescência",
+      "Cabelo esparso, encaracolado, fino ou grosso, e lanoso ou quebradiço; cílios e sobrancelhas frequentemente ausentes ou esparsos",
+      "Queratose pilar em cerca de 80% dos casos e ulerema oftriogenes (queratose pilar atrófica de sobrancelhas) em cerca de 90%",
+      "Hemangiomas infantis em cerca de 26% dos casos, frequência maior que na população geral",
+      "Mais de 50 nevos melanocíticos adquiridos relatados por cerca de 23% dos pacientes na coorte dermatológica dedicada",
+      "Ausência característica de papilomas nasais/periorais/perianais e de manchas café-com-leite múltiplas — achado negativo útil para diferenciar de Costello e de neurofibromatose tipo 1",
+      "Dificuldade alimentar grave com falha de crescimento; escassez de massa muscular e miopatia esquelética; contraturas, escoliose, pé plano, displasia de quadril",
+      "Deficiência intelectual moderada a grave como achado cardinal, com faixa ampla (leve a profunda) e alguns indivíduos com QI normal; variantes MAP2K1 podem ter perfil neurocognitivo mais leve",
+      "Cardiopatia presente em aproximadamente 75-80% dos indivíduos, mais comumente estenose pulmonar (associada a variante BRAF) e cardiomiopatia hipertrófica; defeitos septais, valvopatias associadas e arritmias também descritos, sem percentual consolidado nas fontes revisadas"
+    ],
+    "differentials": [
+      "Síndrome de Noonan (PTPN11, SOS1, RAF1, LZTR1, RIT1 e outros genes da via RAS-MAPK; achado cardíaco dominante é estenose pulmonar valvar displásica; deficiência intelectual tipicamente mais leve; fenótipo cutâneo pouco marcado)",
+      "Síndrome de Costello (HRAS, quase restrita aos códons p.Gly12/p.Gly13; cardiomiopatia hipertrófica como achado cardíaco central em ~60% dos casos; papilomas nasais/perianais característicos; maior risco oncológico entre as RASopatias, ~15% vitalício)",
+      "Síndrome de Noonan com múltiplos lentigos (antiga LEOPARD), causada por PTPN11/RAF1, com lentiginose difusa em vez do fenótipo cutâneo da CFC",
+      "Neurofibromatose tipo 1, pela sobreposição de alguns achados cutâneos, mas distinta pela presença de manchas café-com-leite múltiplas (ausentes na CFC) e neurofibromas",
+      "Outras RASopatias raras (síndrome de Legius, síndrome de Mazzanti/SHOC2, variantes em KRAS com fenótipo sobreposto) no diferencial molecular amplo quando o fenótipo é atípico ou o teste genético dirigido é negativo (10-30% dos casos clinicamente diagnosticados)",
+      "Cardiomiopatia hipertrófica sarcomérica isolada não sindrômica ou estenose pulmonar isolada não sindrômica, quando o fenótipo dismórfico ainda não está evidente ao diagnóstico cardíaco inicial"
+    ],
+    "tests": [
+      "Teste genético — painel ou sequenciamento dirigido a BRAF, MAP2K1, MAP2K2 e KRAS —, com aconselhamento genético estruturado antes e depois do teste",
+      "Ecocardiograma ao diagnóstico, com reavaliação a cada 2-3 anos até os 20 anos de idade se a avaliação inicial for normal, e a cada 3-5 anos depois dos 20 anos",
+      "Eletrocardiograma periódico ao longo da vida, dado que cardiomiopatia hipertrófica e arritmias podem se manifestar tardiamente",
+      "Aferição de pressão arterial em toda consulta clínica",
+      "Avaliação de neurodesenvolvimento estruturada, dada a deficiência intelectual moderada a grave descrita como achado cardinal",
+      "Avaliação nutricional e de crescimento, dada a dificuldade alimentar grave e a falha de crescimento frequentes",
+      "Avaliação dermatológica dirigida (queratose pilar, ulerema oftriogenes, nevos melanocíticos, hemangiomas) para caracterização fenotípica e apoio diagnóstico"
+    ],
+    "red_flags": [
+      "Cardiomiopatia hipertrófica com sinais de obstrução importante da via de saída do ventrículo esquerdo ou de insuficiência cardíaca",
+      "Estenose pulmonar grave, sobretudo em paciente com variante confirmada em BRAF",
+      "Arritmia de início recente ou alteração eletrocardiográfica nova em paciente previamente estável, dado que cardiomiopatia hipertrófica e arritmia podem se manifestar tardiamente",
+      "Falha de crescimento grave associada a dificuldade alimentar refratária, exigindo investigação nutricional estruturada",
+      "Achado hematológico sugestivo de leucemia linfoblástica aguda em criança pequena (predominantemente antes dos 3 anos), dado o SIR elevado especificamente para essa malignidade neste grupo"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de síndrome cardiofaciocutânea diante de fenótipo cutâneo característico (queratose pilar, ulerema oftriogenes, cabelo esparso/encaracolado, ausência de papilomas) associado a cardiopatia congênita e/ou cardiomiopatia hipertrófica, dificuldade alimentar grave e deficiência intelectual moderada a grave.",
+      "Confirmar com teste genético dirigido a BRAF, MAP2K1, MAP2K2 e KRAS, com aconselhamento genético estruturado; reconhecer que 10-30% dos casos clinicamente diagnosticados não têm mutação identificada nos genes conhecidos.",
+      "Encaminhar a cardiologia pediátrica para ecocardiograma ao diagnóstico e seguimento conforme cronograma etário (a cada 2-3 anos até os 20 anos se normal, a cada 3-5 anos depois), com ECG periódico ao longo da vida.",
+      "Diferenciar explicitamente de síndrome de Noonan e de síndrome de Costello antes de aplicar protocolo de vigilância ou de rastreio oncológico de qualquer uma das duas — o risco oncológico da CFC é o mais baixo entre as três, sem protocolo de vigilância estruturado equivalente ao de Costello identificado nas fontes revisadas.",
+      "Encaminhar a neurodesenvolvimento, nutrição e genética clínica para avaliação e acompanhamento estruturado do atraso do desenvolvimento, da deficiência intelectual e da dificuldade alimentar.",
+      "Manter seguimento multidisciplinar de longo prazo (cardiologia pediátrica, neurodesenvolvimento, nutrição, dermatologia, genética clínica), dado o caráter multissistêmico da síndrome."
+    ],
+    "emergency_flow": [
+      "Insuficiência cardíaca descompensada por cardiomiopatia hipertrófica obstrutiva: manejo agudo conforme princípios gerais de CMH pediátrica descompensada, reconhecendo que não há, até esta busca, caso publicado de uso de inibidor de MEK especificamente em CFC — extrapolação da experiência de Noonan/Costello deve ser individualizada em centro com experiência na síndrome.",
+      "Estenose pulmonar grave com repercussão hemodinâmica: manejo conforme protocolo geral de estenose pulmonar valvar crítica/grave pediátrica.",
+      "Arritmia sintomática de início agudo: estabilização conforme protocolo de taquiarritmia ou bradicardia pediátrica com pulso, conforme o ritmo identificado.",
+      "Suspeita aguda de leucemia linfoblástica aguda (citopenias inexplicadas, sinais de infiltração): investigação hematológica urgente e encaminhamento a oncologia pediátrica."
+    ],
+    "tags": [
+      "rasopatia",
+      "BRAF",
+      "MAP2K1",
+      "MAP2K2",
+      "genética cardiovascular pediátrica",
+      "estenose pulmonar valvar",
+      "cardiomiopatia hipertrófica pediátrica",
+      "deficiência intelectual",
+      "queratose pilar",
+      "síndrome de Noonan",
+      "síndrome de Costello",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Rauen KA. Cardiofaciocutaneous Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Última revisão: 21 mai 2026. PMID: 20301365.",
+      "Rodriguez-Viciana P et al. Germline mutations in genes within the MAPK pathway cause cardio-facio-cutaneous syndrome. Science. 2006;311(5765):1287-1290. PMID: 16439621.",
+      "Niihori T et al. Germline KRAS and BRAF mutations in cardio-facio-cutaneous syndrome. Nat Genet. 2006;38(3):294-296. PMID: 16474404.",
+      "Roberts A et al. The cardiofaciocutaneous syndrome. J Med Genet. 2006;43(11):833-842. PMID: 16825433.",
+      "Allanson JE et al. Cardio-facio-cutaneous syndrome: does genotype predict phenotype? Am J Med Genet C Semin Med Genet. 2011;157C(2):129-135. PMID: 21495173.",
+      "Siegel DH et al. Dermatological findings in 61 mutation-positive individuals with cardiofaciocutaneous syndrome. Br J Dermatol. 2011;164(3):521-529. PMID: 21062266.",
+      "Kratz CP et al. Cancer spectrum and frequency among children with Noonan, Costello, and cardio-facio-cutaneous syndromes. Br J Cancer. 2015;112(8):1392-1397. PMID: 25742478.",
+      "Bess J et al. A literature review and pooled case analysis of cardiofaciocutaneous syndrome to estimate cancer risk. Genet Med. 2025;27(7):101423. PMID: 40196938.",
+      "Feng B et al. Molecular and phenotypic spectrum of cardio-facio-cutaneous syndrome in Chinese patients. Orphanet J Rare Dis. 2023;18(1):284. PMID: 37697378.",
+      "Boleti O et al. Natural history and outcomes in paediatric RASopathy-associated hypertrophic cardiomyopathy. ESC Heart Fail. 2024;11(2):923-936. PMID: 38217456.",
+      "Chaput D, Andelfinger G. MEK Inhibition for RASopathy-Associated Hypertrophic Cardiomyopathy: Clinical Application of a Basic Concept. Can J Cardiol. 2024;40(5):789-799. PMID: 38432396.",
+      "Pierpont EI et al. Variability in clinical and neuropsychological features of individuals with MAP2K1 mutations. Am J Med Genet A. 2017;173(2):452-459. PMID: 27862862.",
+      "Botia-Arciniegas V et al. Targeting cardiomyopathies associated with RASopathies: the role of mitogen-activated protein kinase inhibitors and therapeutic challenges. Pharmacogenet Genomics. 2025;35(6):173-182. PMID: 40460044."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1186/",
+      "https://pubmed.ncbi.nlm.nih.gov/16439621/",
+      "https://pubmed.ncbi.nlm.nih.gov/16474404/",
+      "https://pubmed.ncbi.nlm.nih.gov/16825433/",
+      "https://pubmed.ncbi.nlm.nih.gov/21495173/",
+      "https://pubmed.ncbi.nlm.nih.gov/21062266/",
+      "https://pubmed.ncbi.nlm.nih.gov/25742478/",
+      "https://pubmed.ncbi.nlm.nih.gov/40196938/",
+      "https://pubmed.ncbi.nlm.nih.gov/37697378/",
+      "https://pubmed.ncbi.nlm.nih.gov/38217456/",
+      "https://pubmed.ncbi.nlm.nih.gov/38432396/",
+      "https://pubmed.ncbi.nlm.nih.gov/27862862/",
+      "https://pubmed.ncbi.nlm.nih.gov/40460044/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-cardiofaciocutanea-cfc-espectro-cardiaco-genetica-braf-map2k1-map2k2-e-diferenciacao-de-noonan-e-costello"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-leopard",
+    "name": "Síndrome LEOPARD (Noonan com múltiplos lentigos)",
+    "aliases": [
+      "Síndrome de Noonan com múltiplos lentigos",
+      "NSML",
+      "Noonan syndrome with multiple lentigines",
+      "LEOPARD syndrome",
+      "Síndrome dos lentigos múltiplos"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "rasopatia",
+    "prevalence_rank": 152,
+    "completeness": "completo",
+    "summary": "RASopatia rara, alélica à síndrome de Noonan clássica: mais de 95% dos casos são causados por variante germinativa em PTPN11, mas por mecanismo oposto ao de Noonan — variantes cataliticamente prejudicadas (fosfatase reduzida, não eliminada) que atuam predominantemente por efeito dominante-negativo (e, por entendimento mais recente, também com um componente de ganho de função via separação de fase líquido-líquido), ainda assim hiperativando a via RAS-MAPK. RAF1 responde por menos de 3% dos casos e BRAF/MAP2K1 por apenas 1-2 indivíduos cada na literatura. O achado cardíaco dominante é a cardiomiopatia hipertrófica (até 70% dos casos, proporção maior que na síndrome de Noonan clássica), enquanto a estenose pulmonar valvar é proporcionalmente menos frequente (~25%, contra 50-60% em Noonan) — um padrão cardíaco invertido em relação à síndrome de Noonan. O acrônimo histórico LEOPARD resume os achados cardinais: Lentigos múltiplos (surgindo após os 4-5 anos, ausentes em alguns pacientes), anormalidades de condução no ECG (~25%), hipertelorismo Ocular, estenose Pulmonar valvar (~25%), Anormalidades genitais (criptorquidia em ~1/3 dos homens), Retardo de crescimento (<50%) e surdez neurossensorial (Deafness, ~20%, pouco caracterizada). Manchas café-com-leite (70-80%) tipicamente precedem os lentigos, permitindo suspeita clínica já no primeiro ano de vida quando associadas a face característica e cardiomiopatia hipertrófica. Diferente da síndrome de Costello (HRAS, papilomas, taquicardia atrial caótica, risco tumoral de ~15% com protocolo de rastreio dedicado), o risco oncológico em NSML é considerado baixo, sem recomendação de rastreio de rotina.",
+    "presentation": [
+      "Lentigos múltiplos surgindo tipicamente entre 4-5 anos, aumentando a milhares por volta da puberdade, em face/pescoço/tronco, poupando mucosas — podem estar ausentes mesmo com diagnóstico molecular confirmado",
+      "Manchas café-com-leite em 70-80% dos casos, geralmente precedendo o surgimento dos lentigos",
+      "Cardiomiopatia hipertrófica em até 70% dos casos — achado cardíaco dominante da síndrome, mais frequente que na síndrome de Noonan clássica",
+      "Estenose pulmonar valvar em cerca de 25% dos casos — proporcionalmente menos frequente que em Noonan clássica (50-60%)",
+      "Anormalidades de condução no ECG em cerca de 25%, além das atribuíveis à cardiomiopatia hipertrófica",
+      "Face característica: hipertelorismo ocular, fissuras palpebrais oblíquas, ptose — sobreposta ao fenótipo facial de Noonan clássica",
+      "Surdez neurossensorial em cerca de 20% dos pacientes, achado pouco caracterizado na literatura",
+      "Criptorquidia em cerca de um terço dos homens afetados",
+      "Baixa estatura pós-natal em menos de 50% dos afetados, embora a maioria tenha estatura abaixo do percentil 25",
+      "Deficiência intelectual tipicamente leve em cerca de 30% dos casos; achados oftalmológicos (coloboma, estrabismo) descritos como raros"
+    ],
+    "differentials": [
+      "Síndrome de Noonan clássica (mesmo gene principal PTPN11, mas mutação de ganho de função em vez de cataliticamente prejudicada; estenose pulmonar valvar como achado cardíaco dominante em vez de cardiomiopatia hipertrófica; sem lentiginose difusa nem surdez como achados típicos)",
+      "Síndrome de Costello (HRAS; papilomas em vez de lentigos; taquicardia atrial caótica/multifocal; risco oncológico alto com protocolo de rastreio dedicado, diferente do risco baixo em NSML)",
+      "Síndrome cardiofaciocutânea — BRAF, MAP2K1/2, KRAS; fenótipo cutâneo/capilar e deficiência intelectual geralmente mais proeminentes, sem lentiginose característica de NSML",
+      "Complexo de Carney (PRKAR1A; lentiginose cutânea multifocal semelhante, mas com mixoma cardíaco recorrente e endocrinopatia associada — ausentes em NSML)",
+      "Cardiomiopatia hipertrófica sarcomérica isolada não sindrômica, quando o fenótipo dismórfico e cutâneo ainda não é evidente ao diagnóstico cardíaco inicial"
+    ],
+    "tests": [
+      "Sequenciamento dirigido de PTPN11 (éxons 7, 12 e 13 do domínio fosfatase, responsável por mais de 95% dos casos), seguido de RAF1 e, se negativo, BRAF/MAP2K1",
+      "Aconselhamento genético estruturado antes e depois do teste, dado o padrão autossômico dominante e a possibilidade de mosaicismo germinativo parental",
+      "Ecocardiograma com eletrocardiograma ao diagnóstico e seguimento seriado (anual até os 3 anos, depois aos 5 e aos 10 anos ou conforme indicação clínica)",
+      "Avaliação audiológica ao menos anual durante a infância",
+      "Avaliação oftalmológica se houver anomalia ocular identificada",
+      "Aferição de parâmetros de crescimento em cada consulta"
+    ],
+    "red_flags": [
+      "Cardiomiopatia hipertrófica de apresentação precoce em lactente com face dismórfica e manchas café-com-leite, mesmo antes do surgimento dos lentigos",
+      "Cardiomiopatia hipertrófica obstrutiva grave com insuficiência cardíaca refratária ao tratamento padrão",
+      "Surdez neurossensorial não investigada em criança com fenótipo dismórfico e cardiopatia — achado facilmente subdiagnosticado por ser pouco lembrado",
+      "Confundir NSML com síndrome de Noonan clássica ou de Costello e aplicar protocolo de vigilância ou terapêutico da síndrome errada",
+      "Novo sopro ou alteração de ausculta em consulta de seguimento, sinal de possível progressão de cardiomiopatia ou de estenose pulmonar"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de NSML diante de cardiomiopatia hipertrófica precoce associada a manchas café-com-leite e/ou lentigos múltiplos (surgem tipicamente após os 4-5 anos) e/ou surdez neurossensorial, sobretudo quando a estenose pulmonar não é o achado cardíaco predominante.",
+      "Confirmar com sequenciamento dirigido de PTPN11 (depois RAF1, BRAF/MAP2K1 se negativo), com aconselhamento genético estruturado.",
+      "Encaminhar a cardiologia pediátrica para ecocardiograma seriado (anual até os 3 anos, depois aos 5 e 10 anos) e ECG.",
+      "Encaminhar a avaliação audiológica ao menos anual durante a infância.",
+      "Não aplicar protocolo de rastreio oncológico de rotina — risco tumoral considerado baixo nesta síndrome, diferente de Costello e de Noonan.",
+      "Manter seguimento multidisciplinar (cardiologia pediátrica, genética clínica, audiologia, oftalmologia conforme achados)."
+    ],
+    "emergency_flow": [
+      "Insuficiência cardíaca descompensada por cardiomiopatia hipertrófica obstrutiva grave: manejo agudo conforme princípios gerais de CMH pediátrica descompensada, com avaliação de escalonamento terapêutico em centro com experiência na síndrome.",
+      "Arritmia associada a distúrbio de condução no ECG: investigação e monitorização conforme apresentação clínica, sem protocolo específico dedicado a NSML nas fontes revisadas.",
+      "Achado cardíaco agudo em paciente com diagnóstico molecular de NSML já conhecido: priorizar avaliação ecocardiográfica dirigida, dada a alta prevalência de cardiomiopatia hipertrófica nesta população."
+    ],
+    "tags": [
+      "rasopatia",
+      "PTPN11",
+      "lentiginose",
+      "síndrome de Noonan com múltiplos lentigos",
+      "NSML",
+      "cardiomiopatia hipertrófica pediátrica",
+      "estenose pulmonar valvar",
+      "surdez neurossensorial",
+      "genética cardiovascular pediátrica",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Gelb BD, Tartaglia M. Noonan Syndrome with Multiple Lentigines. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Publicação original: 30 nov 2007; última revisão: 30 jun 2022. PMID: 20301557.",
+      "Kontaridis MI, Swanson KD, David FS, Barford D, Neel BG. PTPN11 (Shp2) mutations in LEOPARD syndrome have dominant negative, not activating, effects on the RAS/MAPK signaling pathway. J Biol Chem. 2006;281(10):6785-6792. PMID: 16377799.",
+      "Digilio MC, Conti E, Sarkozy A, Mingarelli R, Dottorini T, Marino B, Pizzuti A, Dallapiccola B. Grouping of multiple-lentigines/LEOPARD and Noonan syndromes on the PTPN11 gene. Am J Hum Genet. 2002;71(2):389-394. PMID: 12058348.",
+      "Digilio MC, Sarkozy A, de Zorzi A, Pacileo G, Limongelli G, Mingarelli R, Calabrò R, Marino B, Dallapiccola B. LEOPARD syndrome: clinical diagnosis in the first year of life. Am J Med Genet A. 2006;140(7):740-746. PMID: 16523510.",
+      "Pandit B, Sarkozy A, Pennacchio LA, et al. Gain-of-function RAF1 mutations cause Noonan and LEOPARD syndromes with hypertrophic cardiomyopathy. Nat Genet. 2007;39(8):1007-1012. PMID: 17603483.",
+      "Sarkozy A, Carta C, Moretti S, et al. Germline BRAF mutations in Noonan, LEOPARD, and cardiofaciocutaneous syndromes: molecular diversity and associated phenotypic spectrum. Hum Mutat. 2009;30(4):695-702. PMID: 19206169.",
+      "Sarkozy A, Digilio MC, Dallapiccola B. Leopard syndrome. Orphanet J Rare Dis. 2008;3:13. PMID: 18505544.",
+      "Monda E, Rubino M, Palmiero G, et al. Natural History of Hypertrophic Cardiomyopathy in Noonan Syndrome With Multiple Lentigines. Circ Genom Precis Med. 2023;16(4):350-358. PMID: 37199218.",
+      "Gorlin RJ, Anderson RC, Blaw M. Multiple lentigenes syndrome. Am J Dis Child. 1969;117(6):652-662. PMID: 5771505.",
+      "Gorlin RJ, Anderson RC, Moller JH. The Leopard (multiple lentigines) syndrome revisited. Birth Defects Orig Artic Ser. 1971;7(4):110-115. PMID: 5173334.",
+      "Villani A, Greer MC, Kalish JM, et al. Recommendations for Cancer Surveillance in Individuals with RASopathies and Other Rare Genetic Conditions with Increased Cancer Risk. Clin Cancer Res. 2017;23(12):e83-e90. PMID: 28620009."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1383/",
+      "https://pubmed.ncbi.nlm.nih.gov/16377799/",
+      "https://pubmed.ncbi.nlm.nih.gov/12058348/",
+      "https://pubmed.ncbi.nlm.nih.gov/16523510/",
+      "https://pubmed.ncbi.nlm.nih.gov/17603483/",
+      "https://pubmed.ncbi.nlm.nih.gov/19206169/",
+      "https://pubmed.ncbi.nlm.nih.gov/18505544/",
+      "https://pubmed.ncbi.nlm.nih.gov/37199218/",
+      "https://pubmed.ncbi.nlm.nih.gov/5771505/",
+      "https://pubmed.ncbi.nlm.nih.gov/5173334/",
+      "https://pubmed.ncbi.nlm.nih.gov/28620009/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-leopard-noonan-com-multiplos-lentigos-mecanismo-paradoxal-de-ptpn11-e-cardiomiopatia-hipertrofica-na-rasopatia"
+    ],
+    "patient_material_slug": null
   }
 ]
