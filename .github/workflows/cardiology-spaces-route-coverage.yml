@@ -1,0 +1,38 @@
+name: Cardiology Spaces — Route Coverage
+
+on:
+  pull_request:
+    paths:
+      - "frontend/src/App.tsx"
+      - "frontend/src/components/ClinicalRouteContext.tsx"
+      - "frontend/src/styles/cardiology-spaces-*.css"
+      - "frontend/scripts/check-cardiology-spaces-route-coverage.mjs"
+      - "frontend/package.json"
+      - ".github/workflows/cardiology-spaces-route-coverage.yml"
+  push:
+    branches: [main]
+    paths:
+      - "frontend/src/App.tsx"
+      - "frontend/src/components/ClinicalRouteContext.tsx"
+      - "frontend/src/styles/cardiology-spaces-*.css"
+      - "frontend/scripts/check-cardiology-spaces-route-coverage.mjs"
+      - "frontend/package.json"
+      - ".github/workflows/cardiology-spaces-route-coverage.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  coverage:
+    name: All authenticated routes assigned to a Cardiology Space
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Enforce complete five-space route coverage
+        working-directory: frontend
+        run: npm run test:cardiology-spaces-route-coverage
