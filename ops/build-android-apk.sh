@@ -9,6 +9,7 @@ readonly EXPECTED_CERT_ARGUMENT="${3:-}"
 readonly NODE_IMAGE="node:22-bookworm-slim"
 readonly FRONTEND_DIR="$PROJECT_DIR/frontend"
 readonly ANDROID_DIR="$FRONTEND_DIR/android"
+readonly ANDROID_SDK_DIR="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/opt/android-sdk}}"
 readonly APK_NAME="corvia-cardiology-spaces-android-1.2.0.apk"
 readonly EXPECTED_APP_ID="br.med.corvia"
 readonly EXPECTED_VERSION_NAME="1.2.0"
@@ -16,10 +17,9 @@ readonly EXPECTED_VERSION_CODE="4"
 
 die() { printf 'Android release validation failed: %s\n' "$1" >&2; exit 65; }
 find_android_tool() {
-  local name="$1" sdk_root candidate
+  local name="$1" candidate
   if command -v "$name" >/dev/null 2>&1; then command -v "$name"; return 0; fi
-  sdk_root="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/opt/android-sdk}}"
-  candidate="$(find "$sdk_root/build-tools" -type f -name "$name" -perm -u+x 2>/dev/null | sort -V | tail -n 1)"
+  candidate="$(find "$ANDROID_SDK_DIR/build-tools" -type f -name "$name" -perm -u+x 2>/dev/null | sort -V | tail -n 1)"
   [[ -n "$candidate" ]] || return 1; printf '%s\n' "$candidate"
 }
 
@@ -32,6 +32,9 @@ if [[ -f "$PROJECT_DIR/.env" ]]; then set -a; source "$PROJECT_DIR/.env"; set +a
 expected_cert="${EXPECTED_CERT_ARGUMENT:-${CORVIA_ANDROID_CERT_SHA256:-}}"
 expected_cert="$(printf '%s' "$expected_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
 [[ "$expected_cert" =~ ^[0-9a-f]{64}$ ]] || die "pinned Android release certificate SHA-256 missing or invalid"
+[[ -d "$ANDROID_SDK_DIR" ]] || die "Android SDK is unavailable at $ANDROID_SDK_DIR"
+export ANDROID_HOME="$ANDROID_SDK_DIR"
+export ANDROID_SDK_ROOT="$ANDROID_SDK_DIR"
 
 # Capacitor generates its runtime configuration inside this directory. The
 # directory is intentionally not tracked because the generated files belong to
