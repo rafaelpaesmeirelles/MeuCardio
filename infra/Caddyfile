@@ -68,13 +68,18 @@
 		file_server
 	}
 
-	# Windows está pendente de identidade Authenticode. Não expor binário ou
-	# aliases antigos até a assinatura ser configurada e certificada.
-	respond /downloads/corvia-os-windows.zip "Aplicativo Windows em preparação" 410
-	respond /downloads/corvia-os-windows.exe "Aplicativo Windows em preparação" 410
-	respond /downloads/corvia-os-windows.exe.sha256 "Aplicativo Windows em preparação" 410
-	respond /downloads/corvia-cardiology-spaces-windows-1.2.0.exe "Aplicativo Windows em preparação" 410
-	respond /downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256 "Aplicativo Windows em preparação" 410
+	# Windows está pendente de identidade Authenticode. O matcher precisa
+	# participar da mesma cadeia de handle do fallback SPA; diretivas respond
+	# soltas são reordenadas pelo adaptador do Caddy e podem perder para o SPA.
+	@windows_pending path \
+		/downloads/corvia-os-windows.zip \
+		/downloads/corvia-os-windows.exe \
+		/downloads/corvia-os-windows.exe.sha256 \
+		/downloads/corvia-cardiology-spaces-windows-1.2.0.exe \
+		/downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256
+	handle @windows_pending {
+		respond "Aplicativo Windows em preparação" 410
+	}
 
 	# Hash de conteúdo: é seguro manter imutável. Cada build gera URLs novas.
 	handle_path /assets/* {
