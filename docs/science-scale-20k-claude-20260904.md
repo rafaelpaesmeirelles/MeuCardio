@@ -997,3 +997,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 54 (3 descartados por colisão) | 146 |
 | **Total** | **4.900** | **219** | **4.681** |
+
+## Lote 49 — concluído (commit f3a4f6ca)
+
+- **7 documentos** (endocardite fastidiosa/zoonoses/toxicologia): Febre Q/*Coxiella burnetii* e endocardite crônica (sorologia de fase I vs. fase II, esquema doxiciclina+hidroxicloroquina por 18-24 meses — `content/Endocardite`), bartonelose e endocardite (*B. henselae*/arranhadura do gato com valvopatia prévia vs. *B. quintana*/febre das trincheiras como marcador de vulnerabilidade social — `content/Endocardite`), doença de Whipple cardíaca **isolada** — endocardite por *Tropheryma whipplei* sem diarreia/artralgia/perda de peso, quarto patógeno mais frequente numa coorte alemã de 1.135 valvas explantadas (`content/Endocardite`), meningococcemia fulminante e síndrome de Waterhouse-Friderichsen (púrpura fulminante, CIVD, hemorragia adrenal bilateral — `content/Terapia_intensiva`), envenenamento crotálico/cascavel (crotoxina neurotóxica pré-sináptica e miotóxica sistêmica, hipercalemia como eixo cardiovascular, contraste explícito com o mecanismo botrópico já publicado — `content/Terapia_intensiva`), pericardite coccidioidomicótica no viajante (micose não endêmica no Brasil, evidência cardiovascular tratada explicitamente como baixa — `content/Geral`), febre maculosa brasileira (vasculite endoteliotrópica por *Rickettsia rickettsii*, capivaras como hospedeiro amplificador, doxiciclina empírica independente de idade/gestação — `content/Geral`).
+- **doencas**: +7, pareadas 1:1 — `endocardite-cronica-por-coxiella-burnetii-febre-q`, `endocardite-por-bartonella`, `meningococcemia-fulminante`, `envenenamento-crotalico-picada-de-cascavel`, `coccidioidomicose-disseminada-com-acometimento-cardiovascular`, `endocardite-por-tropheryma-whipplei`, `febre-maculosa-brasileira-com-comprometimento-cardiovascular`.
+- **8º tópico despachado neste lote, corretamente descartado por colisão real**: cardite de Lyme já está integralmente coberta por documento revisado e mergeado em `main` desde 29/08 (`content/Arritmias/cardite-de-lyme-bloqueio-atrioventricular-de-alto-grau-potencialmente-reversivel.md`, commit `6c7b51a9`). O agente identificou a colisão antes de escrever qualquer conteúdo e não produziu duplicata — nenhuma perda de trabalho. A esta altura, 8 lotes despachados nesta rodada mineraram consistentemente a veia de endocardite com hemocultura negativa por agentes fastidiosos (Coxiella, Bartonella, Tropheryma) como fonte adicional de tópicos genuinamente novos, complementar à veia de infecções tropicais/tóxicas já explorada nos Lotes 44-48.
+- **Correção na integração**: 1 entidade HTML residual (`&gt;`) no documento de Febre Q, corrigida para texto plano antes do commit. `prevalence_rank` recalculado ao vivo (área geral: 59-65, sem colisão intra ou inter-lote).
+- **Zero mensagens de agente truncadas neste lote** — todos os 8 agentes (incluindo o de Lyme, que retornou apenas a análise de colisão sem produzir os blocos de entrega) entregaram o esperado já na primeira notificação.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.420 itens.
+
+### Status consolidado (após Lote 49)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 67 | 2.333 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 61 (4 descartados por colisão) | 139 |
+| **Total** | **4.900** | **233** | **4.667** |
