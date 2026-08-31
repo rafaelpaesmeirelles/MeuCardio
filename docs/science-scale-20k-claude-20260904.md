@@ -1345,3 +1345,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 140 (19 descartados por colisão) | 60 |
 | **Total** | **4.900** | **343** | **4.557** |
+
+## Lote 65 — concluído (commit 6fb40c0c)
+
+- **4 documentos** (síndromes genéticas descobertas como diferenciais dos Lotes 64 e ainda sem documento dedicado, mais uma cardiomiopatia genética não sindrômica): distrofia muscular de Becker (mutações in-frame no gene DMD, distrofina truncada porém parcialmente funcional; achado central sustentado por três estudos observacionais independentes de que a cardiomiopatia dilatada não é proporcional à gravidade muscular esquelética, podendo ser desproporcional ou isolada; limitações de amostra pequena dos três estudos explicitamente reportadas — `content/Cardiomiopatias`), associação VACTERL (espectro heterogêneo de cardiopatia congênita, CIV como defeito isolado mais prevalente em série dedicada; distinção conceitual central de etiologia heterogênea sem gene único identificável, ao contrário de CHARGE/22q11.2; lacuna prática de rastreio documentada em dados administrativos — `content/Cardiopatias_congênitas`), síndrome de Cornelia de Lange (coesinopatia por NIPBL ~80%/SMC1A/HDAC8/SMC3/RAD21/BRD4/MAU2; cardiopatia congênita em ~30% dos casos, correlação genótipo preliminar de maior acometimento em SMC3 ~56%; cardiopatia contextualizada dentro da mortalidade geral da síndrome, onde causas respiratória e gastrointestinal predominam — `content/Cardiopatias_congênitas`), síndrome de Rubinstein-Taybi (síndrome cromatínica por CREBBP/EP300; cardiopatia congênita em ~1/3 dos casos; foco expandido em risco anestésico e via aérea difícil, com relatos reais de falha de intubação, e via indireta de hipertensão pulmonar secundária a apneia obstrutiva do sono não tratada — `content/Cardiopatias_congênitas`).
+- **doencas**: +4, pareadas 1:1 — `distrofia-muscular-de-becker`, `associacao-vacterl`, `sindrome-de-cornelia-de-lange`, `sindrome-de-rubinstein-taybi`. `prevalence_rank` 145-148 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 4 tópicos despachados confirmaram gap genuíno após checagem cruzada; três deles (VACTERL, Cornelia de Lange, Rubinstein-Taybi) foram descobertos como menções de diferencial nos documentos de CHARGE e Kabuki do Lote 64, e cada documento novo cita/diferencia explicitamente esses vizinhos sem duplicar conteúdo.
+- **Correções na integração**: nenhuma entidade HTML residual em nenhum dos 4 documentos — rodada totalmente limpa. Um agente (Becker) entregou os blocos via arquivos de trabalho em scratch em vez de no corpo da resposta final por limite de contexto — conteúdo recuperado e integrado normalmente, sem perda.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.586 itens.
+
+### Status consolidado (após Lote 65)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 150 | 2.250 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 144 (19 descartados por colisão) | 56 |
+| **Total** | **4.900** | **347** | **4.553** |
