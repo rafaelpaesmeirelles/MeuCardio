@@ -42452,5 +42452,782 @@
       "pericardite-histoplasmica-mecanismo-inflamatorio-diagnostico-e-tratamento"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sifilis-cardiovascular-terciaria",
+    "name": "Sífilis cardiovascular terciária",
+    "aliases": [
+      "aortite sifilítica",
+      "sífilis cardiovascular",
+      "aneurisma sifilítico de aorta",
+      "estenose ostial coronariana sifilítica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 52,
+    "completeness": "completo",
+    "summary": "Complicação estrutural tardia da sífilis não tratada, causada por endarterite obliterante dos vasa vasorum da aorta com destruição da média elástica, manifestando-se 10 a 30 anos após a infecção primária como aneurisma sacular de aorta ascendente, insuficiência aórtica por dilatação do anel e/ou estenose ostial coronariana. Diagnóstico exige sorologia treponêmica confirmatória associada a imagem estrutural da aorta; tratamento combina penicilina benzatina para a infecção com correção cirúrgica da lesão estrutural estabelecida.",
+    "presentation": [
+      "Assintomática por décadas até a manifestação estrutural (latência típica de 10 a 30 anos após a infecção primária)",
+      "Dor torácica ou sintomas relacionados a aneurisma de aorta ascendente, muitas vezes achado incidental em imagem",
+      "Dispneia e sinais de insuficiência cardíaca por regurgitação aórtica crônica de instalação lenta",
+      "Angina ou isquemia miocárdica por estenose ostial coronariana, podendo ocorrer sem fatores de risco aterosclerótico clássicos",
+      "Sopro diastólico de regurgitação aórtica ao exame cardiovascular",
+      "Ausência frequente de relato espontâneo de sífilis prévia, por desconhecimento ou esquecimento do episódio inicial"
+    ],
+    "differentials": [
+      "Aneurisma de aorta torácica aterosclerótico ou degenerativo",
+      "Aortopatia associada a doença do tecido conjuntivo (Marfan, Loeys-Dietz, Ehlers-Danlos vascular)",
+      "Aortite de grandes vasos de etiologia autoimune (arterite de Takayasu, arterite de células gigantes)",
+      "Insuficiência aórtica por doença valvar degenerativa ou reumática",
+      "Insuficiência aórtica por dilatação da raiz de outra etiologia (bicuspidia, hipertensão crônica, ectasia anuloaórtica idiopática)",
+      "Doença coronariana obstrutiva aterosclerótica clássica",
+      "Aortite infecciosa de outra etiologia ou endocardite com extensão perianular"
+    ],
+    "tests": [
+      "Teste não treponêmico (VDRL ou RPR) com titulação",
+      "Teste treponêmico específico (FTA-ABS, TPPA ou imunoensaio treponêmico automatizado)",
+      "Ecocardiograma transtorácico e, quando indicado, transesofágico para raiz aórtica, valva aórtica e função ventricular",
+      "Angiotomografia de aorta para morfologia do aneurisma, extensão e planejamento cirúrgico",
+      "Angiorressonância de aorta como alternativa quando há restrição a contraste iodado ou radiação",
+      "Angiotomografia coronariana ou cateterismo cardíaco dirigido a lesão ostial diante de angina ou isquemia",
+      "Sorologia para HIV e rastreio de outras infecções sexualmente transmissíveis"
+    ],
+    "red_flags": [
+      "Dor torácica ou dorsal súbita e intensa sugerindo dissecção ou ruptura de aneurisma de aorta ascendente",
+      "Sinais de insuficiência cardíaca aguda em paciente com regurgitação aórtica conhecida ou sopro diastólico novo",
+      "Síncope, choque ou instabilidade hemodinâmica associados a dor torácica",
+      "Angina de início recente sem fatores de risco aterosclerótico tradicionais",
+      "Aneurisma sacular assimétrico de aorta ascendente em imagem, sobretudo com sorologia treponêmica positiva"
+    ],
+    "ambulatory_flow": [
+      "Confirmar sorologia treponêmica e não treponêmica diante de achado estrutural sugestivo (aneurisma sacular de aorta ascendente, insuficiência aórtica de causa não esclarecida, lesão ostial coronariana isolada)",
+      "Solicitar imagem estrutural da aorta (ecocardiograma e angiotomografia ou angiorressonância) para caracterizar extensão e morfologia",
+      "Encaminhar para tratamento com penicilina benzatina conforme diretriz vigente assim que confirmada a infecção, independente da necessidade de cirurgia",
+      "Acompanhar com imagem seriada o diâmetro do aneurisma e a gravidade da insuficiência aórtica, com os mesmos critérios usados para aortopatias de outras etiologias",
+      "Investigar isquemia miocárdica dirigidamente quando houver sintomas anginosos, considerando estenose ostial mesmo sem fatores de risco clássicos",
+      "Encaminhar para avaliação cirúrgica cardiovascular quando o aneurisma, a insuficiência aórtica ou a lesão coronariana atingirem critério estrutural de intervenção"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de dissecção ou ruptura aórtica em dor torácica/dorsal aguda com aneurisma conhecido ou suspeito",
+      "Estabilizar hemodinamicamente e investigar por imagem de urgência (angiotomografia de aorta) quando houver suspeita de complicação aguda",
+      "Reconhecer que descompensação de insuficiência cardíaca pode ser a primeira manifestação de insuficiência aórtica grave por dilatação da raiz",
+      "Considerar síndrome coronariana aguda por obstrução ostial mesmo em paciente sem perfil de risco aterosclerótico clássico",
+      "Acionar avaliação cirúrgica cardiovascular de urgência conforme o quadro estrutural identificado"
+    ],
+    "tags": [
+      "sífilis",
+      "aortite",
+      "aneurisma de aorta",
+      "aorta ascendente",
+      "insuficiência aórtica",
+      "estenose ostial coronariana",
+      "infecção sexualmente transmissível",
+      "vasa vasorum",
+      "penicilina benzatina",
+      "aortopatia infecciosa"
+    ],
+    "source_refs": [
+      "Jackman JD Jr, Radolf JD. Cardiovascular syphilis. Am J Med. 1989;87(4):425-433. PMID: 2679075.",
+      "Kallash M, Frishman W. Cardiovascular Syphilis. Cardiol Rev. 2025. PMID: 39902879.",
+      "Yuan SM. Syphilitic aortic aneurysm. Z Rheumatol. 2018;77(8):741-748. PMID: 30073493.",
+      "Bai L, Wang M, Peng Y. Syphilitic Aortitis Causing Severe Bilateral Coronary Ostial Stenosis. JACC Cardiovasc Interv. 2021;14(7):e65-e67. PMID: 33744210.",
+      "Miller SA, Ladich ER. Syphilitic Aortitis. N Engl J Med. 2022;386(20):e55. PMID: 35550616.",
+      "De Martino A, Bortolotti U, Pucci A. The comeback of syphilitic aortitis. Cardiovasc Pathol. 2020;49:107229. PMID: 32580086.",
+      "Marques Dos Santos M, Lopes AKB, Roncalli AGD. Trends of syphilis in Brazil: A growth portrait of the treponemic epidemic. PLoS One. 2020;15(4):e0231029. PMID: 32271807.",
+      "Costa IB, Pimenta IDSF, Aiquoc KM, et al. Congenital syphilis, syphilis in pregnancy and prenatal care in Brazil: An ecological study. PLoS One. 2024;19(6):e0306120. PMID: 38917233.",
+      "Spiteri G, Unemo M, Mårdh O. The resurgence of syphilis in high-income countries in the 2000s: a focus on Europe. Epidemiol Infect. 2019;147:e143. PMID: 30869043.",
+      "Rosset F, Celoria V, Delmonte S, et al. The Epidemiology of Syphilis Worldwide in the Last Decade. J Clin Med. 2025;14(15):5300. PMID: 40806930.",
+      "Workowski KA, Bachmann LH, Chan PA, et al. Sexually Transmitted Infections Treatment Guidelines, 2021. MMWR Recomm Rep. 2021;70(4):1-187. PMID: 34292926."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/2679075/",
+      "https://pubmed.ncbi.nlm.nih.gov/39902879/",
+      "https://pubmed.ncbi.nlm.nih.gov/30073493/",
+      "https://pubmed.ncbi.nlm.nih.gov/33744210/",
+      "https://pubmed.ncbi.nlm.nih.gov/35550616/",
+      "https://pubmed.ncbi.nlm.nih.gov/32580086/",
+      "https://pubmed.ncbi.nlm.nih.gov/32271807/",
+      "https://pubmed.ncbi.nlm.nih.gov/38917233/",
+      "https://pubmed.ncbi.nlm.nih.gov/30869043/",
+      "https://pubmed.ncbi.nlm.nih.gov/40806930/",
+      "https://pubmed.ncbi.nlm.nih.gov/34292926/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "brucelose-endocardite",
+    "name": "Brucelose e endocardite brucélica",
+    "aliases": [
+      "endocardite por brucelose",
+      "endocardite brucélica",
+      "febre de Malta com acometimento cardíaco",
+      "brucelose com endocardite"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 53,
+    "completeness": "completo",
+    "summary": "Zoonose por Brucella spp. transmitida por contato com animais infectados ou consumo de leite e derivados não pasteurizados, de relevância ocupacional em veterinários, trabalhadores rurais e de abatedouro. Cursa classicamente com febre ondulante, sudorese noturna e artralgia. A endocardite é complicação rara, mas concentra a maior parte da mortalidade da doença, acomete preferencialmente a valva aórtica nativa e exige alerta ao laboratório para prolongar a incubação da hemocultura, dado o crescimento lento e fastidioso do agente. O tratamento combina antibioticoterapia prolongada (doxiciclina, rifampicina e aminoglicosídeo) com cirurgia valvar na maioria dos casos estabelecidos.",
+    "presentation": [
+      "Febre ondulante ou recorrente, por vezes prolongada e de origem indeterminada",
+      "Sudorese noturna profusa",
+      "Artralgia, mialgia ou artrite periférica, com possível sacroiliíte",
+      "Astenia, cefaleia, anorexia e perda de peso",
+      "Hepatoesplenomegalia ou linfadenopatia",
+      "Sopro cardíaco novo ou em piora, sobretudo de regurgitação aórtica, em contexto epidemiológico compatível",
+      "Sinais de insuficiência cardíaca ou fenômeno embólico quando há endocardite estabelecida"
+    ],
+    "differentials": [
+      "Endocardite infecciosa por outros agentes fastidiosos ou de hemocultura negativa (grupo HACEK, Coxiella burnetii, Bartonella spp., fungos)",
+      "Endocardite com hemocultura negativa por exposição prévia a antibiótico",
+      "Tuberculose e outras causas de febre de origem indeterminada com acometimento sistêmico",
+      "Febre reumática e outras doenças reumatológicas com artralgia e febre",
+      "Linfoma e outras neoplasias hematológicas com febre, sudorese noturna e perda de peso",
+      "Outras zoonoses com quadro sistêmico prolongado (leptospirose, febre Q crônica)"
+    ],
+    "tests": [
+      "Teste de soroaglutinação (SAT) e triagem por Rosa Bengala, com atenção a reações cruzadas",
+      "Hemocultura com incubação prolongada — alertar explicitamente o laboratório sobre a suspeita clínica",
+      "PCR para Brucella em sangue ou tecido valvar, quando disponível",
+      "Ecocardiograma transtorácico e transesofágico para caracterizar vegetação, destruição valvar e complicação perianular",
+      "Hemograma, provas inflamatórias e função renal/hepática basal",
+      "Cultura de material valvar removido cirurgicamente, quando há indicação de cirurgia"
+    ],
+    "red_flags": [
+      "Sopro de regurgitação aórtica nova ou rapidamente progressiva em contexto epidemiológico compatível com brucelose",
+      "Sinais de insuficiência cardíaca aguda ou instabilidade hemodinâmica sugestivos de destruição valvar",
+      "Evidência de abscesso perianular, pseudoaneurisma ou bloqueio atrioventricular novo",
+      "Fenômeno embólico sistêmico em paciente com febre prolongada e fator de risco ocupacional ou alimentar para brucelose",
+      "Hemocultura persistentemente negativa em paciente com quadro clínico e epidemiológico sugestivo, sem alerta prévio ao laboratório para incubação prolongada"
+    ],
+    "ambulatory_flow": [
+      "Investigar ativamente exposição ocupacional (veterinário, trabalhador rural, abatedouro, laboratório) e consumo de leite ou queijo artesanal não pasteurizado em todo paciente com febre prolongada de origem indeterminada",
+      "Solicitar sorologia (soroaglutinação) e hemocultura, alertando o laboratório sobre a suspeita para prolongar a incubação",
+      "Encaminhar para avaliação cardiológica com ecocardiograma diante de sopro novo, febre persistente ou outro sinal sugestivo de acometimento cardíaco",
+      "Não excluir brucelose por uma única hemocultura negativa lida no tempo padrão sem confirmar se a incubação foi estendida",
+      "Encaminhar precocemente a serviço com experiência em doenças infecciosas e em endocardite diante de suspeita consistente"
+    ],
+    "emergency_flow": [
+      "Diante de sinais de insuficiência cardíaca aguda, instabilidade hemodinâmica ou complicação perianular, tratar como emergência de endocardite infecciosa e acionar avaliação cardiológica e cirúrgica imediata",
+      "Coletar hemoculturas antes de iniciar antibioticoterapia empírica sempre que a estabilidade clínica permitir, e comunicar ao laboratório a suspeita de brucelose para incubação prolongada",
+      "Iniciar antibioticoterapia empírica de endocardite conforme protocolo institucional quando a apresentação for grave, sem aguardar confirmação sorológica ou de cultura",
+      "Envolver equipe multidisciplinar (heart team) precocemente para definir indicação e timing de cirurgia valvar",
+      "Manter antibioticoterapia dirigida a Brucella (doxiciclina, rifampicina e aminoglicosídeo) por período prolongado, antes, durante e depois de eventual cirurgia"
+    ],
+    "tags": [
+      "brucelose",
+      "endocardite",
+      "zoonose",
+      "endocardite infecciosa",
+      "hemocultura negativa",
+      "valva aórtica",
+      "doença ocupacional",
+      "febre de origem indeterminada"
+    ],
+    "source_refs": [
+      "Pappas G, Akritidis N, Bosilkovski M, Tsianos E. Brucellosis. N Engl J Med. 2005;352(22):2325-2336. DOI: 10.1056/NEJMra050570. PMID: 15930423",
+      "Poester FP, Gonçalves VS, Lage AP. Brucellosis in Brazil. Vet Microbiol. 2002;90(1-4):55-62. DOI: 10.1016/S0378-1135(02)00245-6. PMID: 12414134",
+      "Reguera JM, Alarcón A, Miralles F, Pachón J, Juárez C, Colmenero JD. Brucella endocarditis: clinical, diagnostic, and therapeutic approach. Eur J Clin Microbiol Infect Dis. 2003;22(11):647-650. DOI: 10.1007/s10096-003-1026-z. PMID: 14566576"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/15930423/",
+      "https://pubmed.ncbi.nlm.nih.gov/12414134/",
+      "https://pubmed.ncbi.nlm.nih.gov/14566576/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "brucelose-e-endocardite"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "estrongiloidiase-cardiovascular",
+    "name": "Síndrome de hiperinfecção por Strongyloides stercoralis com choque cardiovascular",
+    "aliases": [
+      "estrongiloidíase disseminada",
+      "hiperinfecção por Strongyloides",
+      "sepse Gram-negativa por translocação em estrongiloidíase",
+      "choque séptico por hiperinfecção helmíntica"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 54,
+    "completeness": "completo",
+    "summary": "Amplificação descontrolada do ciclo de autoinfecção interna do Strongyloides stercoralis — único entre os helmintos, permitindo persistência assintomática por décadas — desencadeada por imunossupressão, sobretudo corticoterapia mesmo em curso curto ou dose moderada, além de HTLV-1 (relevante no Norte/Nordeste do Brasil), transplante de órgão sólido e quimioterapia. A migração larvária maciça lesa a mucosa intestinal e permite translocação de bactérias entéricas Gram-negativas, produzindo choque séptico polimicrobiano com meningite/bacteremia por enterobactérias associadas. A eosinofilia pode normalizar na hiperinfecção grave, o que não afasta o diagnóstico. A armadilha central é iniciar corticoide sistêmico em paciente de área endêmica sem rastrear Strongyloides antes.",
+    "presentation": [
+      "Piora respiratória com tosse, dispneia, hemoptise e infiltrados pulmonares, podendo progredir para insuficiência respiratória",
+      "Piora gastrointestinal com dor abdominal difusa, náusea, vômitos, diarreia, íleo ou distensão abdominal",
+      "Sepse Gram-negativa polimicrobiana e/ou meningite por enterobactérias por translocação bacteriana entérica",
+      "Choque séptico/distributivo com vasoplegia e disfunção miocárdica associada",
+      "Púrpura periumbilical ou em flancos por migração larvária cutânea maciça, quando presente",
+      "Eosinofilia ausente ou normalizada na hiperinfecção grave, apesar de característica na infecção crônica não complicada",
+      "Fator de risco epidemiológico ou farmacológico identificável: área endêmica, HTLV-1, corticoterapia recente (mesmo curso curto), transplante, quimioterapia"
+    ],
+    "differentials": [
+      "Choque séptico de outra origem abdominal (perfuração, colangite, isquemia mesentérica)",
+      "Síndrome do desconforto respiratório agudo de outra etiologia",
+      "Outras helmintíases ou eosinofilias de causa não infecciosa",
+      "Meningite bacteriana comunitária sem foco entérico identificado",
+      "Choque cardiogênico ou choque misto em paciente crítico com disfunção miocárdica associada à sepse"
+    ],
+    "tests": [
+      "Parasitológico de fezes seriado (3 amostras) com técnica de concentração/Baermann-Moraes",
+      "Sorologia para Strongyloides (ELISA), sobretudo como rastreio pré-imunossupressão",
+      "Identificação de larvas em escarro induzido ou lavado broncoalveolar na hiperinfecção pulmonar",
+      "Hemoculturas (tipicamente polimicrobianas com Gram-negativos entéricos)",
+      "Análise de líquor quando houver suspeita de meningite associada",
+      "Eosinófilos no hemograma, com atenção a que valor normal não exclui hiperinfecção",
+      "Sorologia para HTLV-1 em paciente de área endêmica com estrongiloidíase grave ou refratária"
+    ],
+    "red_flags": [
+      "Início ou planejamento de corticoterapia sistêmica em paciente de área endêmica sem rastreio prévio de Strongyloides",
+      "Choque séptico com hemoculturas polimicrobianas por enterobactérias sem foco abdominal ou urinário evidente",
+      "Meningite por enterobactérias em paciente com fator de risco para estrongiloidíase",
+      "Piora respiratória e gastrointestinal simultâneas em paciente imunossuprimido de área endêmica",
+      "HTLV-1 conhecido associado a quadro infeccioso grave ou refratário ao tratamento antiparasitário padrão",
+      "Ausência de eosinofilia interpretada erroneamente como exclusão de estrongiloidíase em paciente grave"
+    ],
+    "ambulatory_flow": [
+      "Rastrear Strongyloides (parasitológico seriado e/ou sorologia) antes de iniciar corticoterapia sistêmica eletiva em paciente de área endêmica ou com fator de risco epidemiológico",
+      "Considerar risco aumentado em paciente com HTLV-1 conhecido, residente ou procedente do Norte/Nordeste do Brasil, ou de outra área endêmica",
+      "Não excluir o diagnóstico apenas por eosinofilia normal quando a suspeita clínica ou epidemiológica for consistente",
+      "Encaminhar à emergência qualquer paciente de risco com piora gastrointestinal ou respiratória após início de corticoide ou outra imunossupressão"
+    ],
+    "emergency_flow": [
+      "Reconhecer o padrão de choque séptico polimicrobiano por Gram-negativos entéricos como possível hiperinfecção em paciente de risco",
+      "Coletar parasitológico de fezes seriado, sorologia e, se houver acometimento pulmonar, pesquisa de larvas em escarro/lavado broncoalveolar sem atrasar a estabilização",
+      "Iniciar suporte hemodinâmico de choque séptico (ressuscitação guiada, vasopressor) e cobertura antibiótica empírica de amplo espectro para Gram-negativos entéricos",
+      "Iniciar ivermectina em esquema prolongado assim que a suspeita for razoável, sem aguardar confirmação parasitológica completa em quadro grave",
+      "Revisar e, quando possível, reduzir a imunossupressão precipitante, ponderando o risco da doença de base",
+      "Investigar coinfecção por HTLV-1 em paciente de área endêmica com hiperinfecção confirmada ou refratária"
+    ],
+    "tags": [
+      "strongyloides stercoralis",
+      "hiperinfecção",
+      "estrongiloidíase disseminada",
+      "choque séptico",
+      "translocação bacteriana",
+      "htlv-1",
+      "corticoterapia",
+      "imunossupressão",
+      "doença tropical negligenciada",
+      "ivermectina"
+    ],
+    "source_refs": [
+      "Marcos LA, Terashima A, Dupont HL, Gotuzzo E. Strongyloides hyperinfection syndrome: an emerging global infectious disease. Trans R Soc Trop Med Hyg. 2008;102(4):314-318. DOI: 10.1016/j.trstmh.2008.01.020. PMID: 18321548.",
+      "Keiser PB, Nutman TB. Strongyloides stercoralis in the Immunocompromised Population. Clin Microbiol Rev. 2004;17(1):208-217. DOI: 10.1128/CMR.17.1.208-217.2004. PMID: 14726461.",
+      "Krolewiecki A, Nutman TB. Strongyloidiasis: A Neglected Tropical Disease. Infect Dis Clin North Am. 2019;33(1):135-151. DOI: 10.1016/j.idc.2018.10.006. PMID: 30712758.",
+      "Ye L, Taylor GP, Rosadas C. Human T-Cell Lymphotropic Virus Type 1 and Strongyloides stercoralis Co-infection: A Systematic Review and Meta-Analysis. Front Med (Lausanne). 2022;9:832430. DOI: 10.3389/fmed.2022.832430. PMID: 35237633.",
+      "Paula FM, Costa-Cruz JM. Epidemiological aspects of strongyloidiasis in Brazil. Parasitology. 2011;138(11):1331-1340. DOI: 10.1017/S003118201100120X. PMID: 21810305.",
+      "Buonfrate D, Mena MA, Angheben A, Requena-Mendez A, Muñoz J, Gobbi F, Albonico M, Gotuzzo E, Bisoffi Z; COHEMI Project Study Group. Prevalence of strongyloidiasis in Latin America: a systematic review of the literature. Epidemiol Infect. 2015;143(3):452-460. DOI: 10.1017/S0950268814001563. PMID: 24990510.",
+      "Henriquez-Camacho C, Gotuzzo E, Echevarria J, White AC Jr, Terashima A, Samalvides F, Pérez-Molina JA, Plana MN. Ivermectin versus albendazole or thiabendazole for Strongyloides stercoralis infection. Cochrane Database Syst Rev. 2016;2016(1):CD007745. DOI: 10.1002/14651858.CD007745.pub3. PMID: 26778150.",
+      "Boulware DR, Stauffer WM, Hendel-Paterson BR, Rocha JL, Seet RC, Summer AP, Nield LS, Supparatpinyo K, Chaiwarith R, Walker PF. Maltreatment of Strongyloides infection: case series and worldwide physicians-in-training survey. Am J Med. 2007;120(6):545.e1-8. DOI: 10.1016/j.amjmed.2006.05.072. PMID: 17524758."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18321548/",
+      "https://pubmed.ncbi.nlm.nih.gov/14726461/",
+      "https://pubmed.ncbi.nlm.nih.gov/30712758/",
+      "https://pubmed.ncbi.nlm.nih.gov/35237633/",
+      "https://pubmed.ncbi.nlm.nih.gov/21810305/",
+      "https://pubmed.ncbi.nlm.nih.gov/24990510/",
+      "https://pubmed.ncbi.nlm.nih.gov/26778150/",
+      "https://pubmed.ncbi.nlm.nih.gov/17524758/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-hiperinfeccao-por-strongyloides-stercoralis-e-choque-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "tetano-grave-e-disautonomia-cardiovascular",
+    "name": "Tétano grave e disautonomia cardiovascular",
+    "aliases": [
+      "tétano generalizado",
+      "tempestade simpática do tétano",
+      "disautonomia do tétano",
+      "Clostridium tetani grave",
+      "tétano com instabilidade autonômica"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 55,
+    "completeness": "completo",
+    "summary": "Doença neurotóxica causada pela tetanospasmina de Clostridium tetani, que sofre transporte axonal retrógrado até o SNC e cliva sinaptobrevina/VAMP (mesmo alvo molecular do botulismo) em interneurônios inibitórios espinhais e do tronco, bloqueando a liberação de GABA e glicina. A desinibição resultante causa rigidez muscular generalizada e espasmos, mas também desinibe neurônios simpáticos pré-ganglionares, produzindo tempestade simpática (labilidade pressórica extrema, taquicardia, arritmias, sudorese profusa, hipertermia), hoje reconhecida como principal causa de óbito em pacientes que superam a fase motora com suporte ventilatório adequado. Tratamento da disautonomia combina sulfato de magnésio, betabloqueio cauteloso (preferindo labetalol ao betabloqueio isolado), clonidina e sedação profunda. Risco concentrado em idosos não reforçados, feridas contaminadas, uso de drogas injetáveis e parto/puerpério sem cobertura vacinal adequada.",
+    "presentation": [
+      "Trismo, risus sardonicus e rigidez muscular generalizada de instalação progressiva",
+      "Opistótono e rigidez abdominal em tábua",
+      "Espasmos tetânicos paroxísticos desencadeados por estímulos mínimos (som, luz, toque)",
+      "Laringoespasmo ou espasmo de musculatura respiratória com risco de asfixia",
+      "Labilidade pressórica extrema, com picos hipertensivos alternando com hipotensão",
+      "Taquicardia sustentada, arritmias e, em fases avançadas, bradiarritmia de predomínio vagal",
+      "Sudorese profusa e hipertermia",
+      "Nível de consciência preservado durante os espasmos",
+      "Neonato/puerpério: dificuldade de sucção, rigidez e espasmos após período de latência pós-parto em cenário de assepsia inadequada do coto umbilical"
+    ],
+    "differentials": [
+      "Intoxicação por estricnina (rigidez e espasmos por bloqueio direto do receptor de glicina, sem período de latência típico do tétano)",
+      "Síndrome neuroléptica maligna",
+      "Síndrome serotoninérgica",
+      "Reação distônica aguda induzida por fármaco",
+      "Meningoencefalite",
+      "Raiva (quando há história de mordedura ou contato com animal suspeito)",
+      "Causa odontogênica ou de articulação temporomandibular para trismo isolado",
+      "Síndrome de Guillain-Barré (padrão oposto: flacidez ascendente, não rigidez)"
+    ],
+    "tests": [
+      "Diagnóstico primariamente clínico: rigidez generalizada, trismo e espasmos em paciente com ferida compatível e vacinação incompleta ou desconhecida",
+      "Cultura de ferida tem baixa sensibilidade e não é necessária para iniciar tratamento",
+      "Creatinoquinase pode estar elevada por contração muscular sustentada",
+      "Eletrocardiograma e telemetria contínua para vigilância de arritmia",
+      "Pressão arterial invasiva contínua em caso grave com labilidade pressórica",
+      "Investigação de porta de entrada (ferida, coto umbilical, uso de drogas injetáveis) e revisão do histórico vacinal"
+    ],
+    "red_flags": [
+      "Trismo associado a rigidez de tronco e espasmos generalizados",
+      "Laringoespasmo ou comprometimento da musculatura respiratória",
+      "Labilidade pressórica extrema, taquiarritmia ou bradiarritmia súbita em paciente com tétano",
+      "Hipertermia com sudorese profusa em paciente com rigidez muscular",
+      "Ferida contaminada com solo ou tecido desvitalizado em paciente idoso não reforçado ou com esquema vacinal desconhecido",
+      "Parto ou puerpério recente sem assepsia adequada e sem cobertura vacinal materna"
+    ],
+    "ambulatory_flow": [
+      "Tétano estabelecido não tem manejo ambulatorial: suspeita clínica exige encaminhamento hospitalar imediato",
+      "No atendimento de feridas, classificar risco (limpa/baixo risco versus contaminada/profunda) e revisar histórico vacinal para decidir toxoide e/ou imunoglobulina antitetânica",
+      "Notificar caso confirmado ou suspeito à vigilância epidemiológica",
+      "Após alta, seguimento de reabilitação motora e avaliação de reforço vacinal completo do esquema"
+    ],
+    "emergency_flow": [
+      "Internar em unidade de terapia intensiva, em ambiente de baixo estímulo sonoro e luminoso",
+      "Desbridar a ferida e administrar imunoglobulina antitetânica humana para neutralizar toxina circulante ainda não internalizada",
+      "Antibioticoterapia dirigida ao foco (metronidazol preferido a penicilina G por preocupação teórica de a penicilina antagonizar GABA)",
+      "Sedação profunda com benzodiazepínico e opioide; bloqueio neuromuscular e ventilação mecânica precoce diante de espasmo com risco de via aérea",
+      "Sulfato de magnésio intravenoso para reduzir descarga catecolaminérgica e instabilidade cardiovascular",
+      "Betabloqueio cauteloso: preferir labetalol (alfa e beta) a betabloqueador isolado, pelo risco descrito de morte súbita com betabloqueio não seletivo isolado; associar clonidina para picos refratários",
+      "Monitorização hemodinâmica contínua (telemetria e pressão arterial), atenta à possível transição para fase de predomínio vagal (bradicardia e hipotensão súbitas)",
+      "Vacinar com toxoide tetânico durante a internação, já que a infecção natural não confere imunidade"
+    ],
+    "tags": [
+      "tétano",
+      "Clostridium tetani",
+      "tetanospasmina",
+      "disautonomia",
+      "tempestade simpática",
+      "sulfato de magnésio",
+      "clonidina",
+      "labetalol",
+      "SNARE",
+      "sinaptobrevina",
+      "terapia intensiva",
+      "arritmia",
+      "toxina"
+    ],
+    "source_refs": [
+      "Kerr JH, Corbett JL, Prys-Roberts C, Crampton Smith A, Spalding JM. Involvement of the sympathetic nervous system in tetanus. Studies on 82 cases. Lancet. 1968;2(7562):236-241. DOI: 10.1016/s0140-6736(68)92350-7. PMID: 4173682",
+      "Wright DK, Lalloo UG, Nayiager S, Govender P. Autonomic nervous system dysfunction in severe tetanus: current perspectives. Crit Care Med. 1989;17(4):371-375. DOI: 10.1097/00003246-198904000-00015. PMID: 2649313",
+      "Farrar JJ, Yen LM, Cook T, Fairweather N, Binh N, Parry J, Parry CM. Tetanus. J Neurol Neurosurg Psychiatry. 2000;69(3):292-301. DOI: 10.1136/jnnp.69.3.292. PMID: 10945801",
+      "Cook TM, Protheroe RT, Handel JM. Tetanus: a review of the literature. Br J Anaesth. 2001;87(3):477-487. DOI: 10.1093/bja/87.3.477. PMID: 11517134",
+      "Rushdy AA, White JM, Ramsay ME, Crowcroft NS. Tetanus in England and Wales, 1984-2000. Epidemiol Infect. 2003;130(1):71-77. DOI: 10.1017/s0950268802007884. PMID: 12613747",
+      "Schiavo G, Benfenati F, Poulain B, Rossetto O, Polverino de Laureto P, DasGupta BR, Montecucco C. Tetanus and botulinum-B neurotoxins block neurotransmitter release by proteolytic cleavage of synaptobrevin. Nature. 1992;359(6398):832-835. DOI: 10.1038/359832a0. PMID: 1331807",
+      "Sutton DN, Tremlett MR, Woodcock TE, Nielsen MS. Management of autonomic dysfunction in severe tetanus: the use of magnesium sulphate and clonidine. Intensive Care Med. 1990;16(2):75-80. DOI: 10.1007/BF02575297. PMID: 2094230",
+      "Thwaites CL, Yen LM, Loan HT, et al. Magnesium sulphate for treatment of severe tetanus: a randomised controlled trial. Lancet. 2006;368(9545):1436-1443. DOI: 10.1016/S0140-6736(06)69444-0. PMID: 17055945",
+      "Thwaites CL, Yen LM, Cordon SM, et al. Effect of magnesium sulphate on urinary catecholamine excretion in severe tetanus. Anaesthesia. 2008;63(7):719-725. DOI: 10.1111/j.1365-2044.2008.05476.x. PMID: 18582257",
+      "Buchanan N, Cane RD, de Andrade M, Cooper R. Sympathetic overactivity in tetanus: fatality associated with propranolol. Br Med J. 1978;2(6132):254-255. DOI: 10.1136/bmj.2.6132.254-a. PMID: 678897",
+      "Domenighetti GM, Savary G, Stricker H. Hyperadrenergic syndrome in severe tetanus: extreme rise in catecholamines responsive to labetalol. Br Med J (Clin Res Ed). 1984;288(6429):1483-1484. DOI: 10.1136/bmj.288.6429.1483. PMID: 6426611"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/4173682/",
+      "https://pubmed.ncbi.nlm.nih.gov/2649313/",
+      "https://pubmed.ncbi.nlm.nih.gov/10945801/",
+      "https://pubmed.ncbi.nlm.nih.gov/11517134/",
+      "https://pubmed.ncbi.nlm.nih.gov/12613747/",
+      "https://pubmed.ncbi.nlm.nih.gov/1331807/",
+      "https://pubmed.ncbi.nlm.nih.gov/2094230/",
+      "https://pubmed.ncbi.nlm.nih.gov/17055945/",
+      "https://pubmed.ncbi.nlm.nih.gov/18582257/",
+      "https://pubmed.ncbi.nlm.nih.gov/678897/",
+      "https://pubmed.ncbi.nlm.nih.gov/6426611/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "tetano-grave-e-disautonomia-cardiovascular-mecanismo-tempestade-simpatica-e-tratamento"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "raiva-humana-hidrofobia",
+    "name": "Raiva humana (hidrofobia)",
+    "aliases": [
+      "hidrofobia",
+      "rabies",
+      "encefalite rábica",
+      "raiva furiosa",
+      "raiva paralítica",
+      "raiva silvestre"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 56,
+    "completeness": "completo",
+    "summary": "Encefalite viral aguda causada por lyssavírus, transmitida por mordedura, arranhadura ou contato de mucosa com saliva de mamífero infectado, com letalidade próxima de 100% após o início dos sintomas. No Brasil, o controle bem-sucedido da raiva canina urbana deslocou o perfil epidemiológico predominante para morcegos hematófagos (Desmodus rotundus) em áreas rurais e amazônicas, além de outros mamíferos silvestres. A forma furiosa cursa com disautonomia intensa — labilidade pressórica, taquicardia, arritmias, hipersalivação e espasmo faríngeo/laríngeo desencadeado por hidrofobia/aerofobia — e miocardite documentada em séries de autópsia; a forma paralítica cursa com paralisia flácida ascendente e é mais frequentemente subdiagnosticada. O protocolo de Milwaukee (coma induzido associado a antivirais) não replicou, em dezenas de casos subsequentes, o sucesso do caso índice de 2005. A única intervenção com eficácia real comprovada é a profilaxia pós-exposição (lavagem da ferida, soro/imunoglobulina antirrábica e vacina), que deve ser buscada imediatamente após qualquer exposição de risco, antes do início de qualquer sintoma.",
+    "presentation": [
+      "Pródromo inespecífico: febre, mal-estar, cefaleia, e frequentemente parestesia, dor ou prurido no sítio da mordedura/exposição prévia",
+      "Forma furiosa: agitação psicomotora, alucinações, comportamento bizarro, alternância de períodos de lucidez e agitação extrema",
+      "Hidrofobia (espasmo faríngeo/laríngeo doloroso desencadeado por tentativa de deglutir líquidos) e aerofobia (espasmo desencadeado por correntes de ar)",
+      "Hipersalivação profusa, sudorese e piloereção associadas a crises autonômicas paroxísticas",
+      "Labilidade pressórica extrema (alternância entre hipertensão e hipotensão), taquicardia sustentada e arritmias diversas durante crises de agitação",
+      "Evolução para coma, falência respiratória central e óbito, tipicamente em poucos dias após o início dos sintomas na forma furiosa",
+      "Forma paralítica (raiva muda): paralisia flácida ascendente, simétrica ou assimétrica, com menor proeminência de agitação e de fenômenos autonômicos floridos, podendo mimetizar síndrome de Guillain-Barré",
+      "História epidemiológica de exposição a morcego (com ou sem mordedura percebida), cão, gato ou outro mamífero não vacinado, semanas a meses antes do início dos sintomas, especialmente em área rural ou amazônica"
+    ],
+    "differentials": [
+      "Síndrome de Guillain-Barré e outras polirradiculoneuropatias agudas (principal diferencial da forma paralítica)",
+      "Outras encefalites virais (herpética, arboviroses, encefalite por outros lyssavírus)",
+      "Abstinência alcoólica grave / delirium tremens com tempestade autonômica",
+      "Tétano (espasmos, mas sem hidrofobia/aerofobia típicas e com sensório preservado)",
+      "Síndrome serotoninérgica e síndrome neuroléptica maligna",
+      "Crise de feocromocitoma ou tempestade tireotóxica (labilidade pressórica e taquicardia sem quadro encefalítico)",
+      "Miocardite fulminante viral de outra etiologia sem acometimento encefalítico associado",
+      "Psicose aguda ou intoxicação exógena com agitação e disautonomia"
+    ],
+    "tests": [
+      "Anamnese dirigida e ativa sobre exposição a morcego, cão, gato ou outro mamífero (mordedura, arranhadura, contato de mucosa/lesão com saliva), incluindo exposições sem mordedura percebida",
+      "RT-PCR de saliva, líquor e, quando indicado, biópsia de pele da região da nuca (folículos pilosos) para detecção de RNA viral",
+      "Imunofluorescência direta em biópsia de pele ou tecido cerebral (post mortem) para antígeno rábico",
+      "Sorologia (anticorpos neutralizantes) em soro e líquor, interpretada em conjunto com status vacinal prévio",
+      "Ressonância magnética de encéfalo, que pode mostrar alterações mesmo antes do quadro clínico evidente na forma furiosa",
+      "Eletrocardiograma seriado e monitorização de ritmo diante de labilidade pressórica ou taquicardia importante",
+      "Troponina e ecocardiograma quando houver suspeita clínica de miocardite associada",
+      "Notificação compulsória e articulação imediata com vigilância epidemiológica para investigação da fonte e dos contactantes"
+    ],
+    "red_flags": [
+      "Encefalopatia aguda com hidrofobia e/ou aerofobia em paciente com história de exposição a morcego ou outro mamífero",
+      "Labilidade pressórica extrema associada a arritmia em contexto de agitação e história epidemiológica compatível",
+      "Hipersalivação profusa com espasmo faríngeo/laríngeo doloroso desencadeado por deglutição",
+      "Paralisia flácida ascendente de evolução rápida com história de mordedura/exposição a mamífero não investigada",
+      "Deterioração neurológica rápida para coma associada a instabilidade cardiovascular",
+      "Qualquer exposição recente a morcego (mesmo sem mordedura percebida, como acordar com morcego no quarto) sem profilaxia pós-exposição documentada"
+    ],
+    "ambulatory_flow": [
+      "Diante de qualquer história de mordedura, arranhadura ou contato de mucosa/lesão de pele com saliva de morcego, cão, gato ou outro mamífero, iniciar avaliação de profilaxia pós-exposição imediatamente, sem aguardar sintomas",
+      "Lavar a ferida de forma imediata e prolongada com água e sabão antes de qualquer outra medida",
+      "Classificar o tipo de exposição e indicar soro/imunoglobulina antirrábica e esquema vacinal conforme protocolo vigente e disponibilidade local",
+      "Investigar ativamente exposição a morcego mesmo sem lesão visível, especialmente em área rural ou amazônica, pois a mordedura pode ser indolor e passar despercebida",
+      "Orientar que a profilaxia perde eficácia após o início de qualquer sintoma e não deve ser adiada por incerteza sobre o risco do animal envolvido",
+      "Encaminhar para notificação e observação do animal agressor quando aplicável (cão/gato), sem atrasar o início da profilaxia enquanto se aguarda o resultado dessa observação"
+    ],
+    "emergency_flow": [
+      "Uma vez estabelecido o quadro clínico de raiva, tratar como emergência de suporte e não como condição potencialmente curável por protocolo padronizado: não há intervenção pós-sintomática com eficácia reprodutível demonstrada",
+      "Internar em unidade de terapia intensiva com monitorização hemodinâmica contínua e suporte para labilidade pressórica, arritmias e disautonomia paroxística",
+      "Aplicar precauções de contato e gotículas para manuseio de saliva e secreções, e restringir procedimentos invasivos desnecessários",
+      "Notificar compulsoriamente e acionar de imediato a vigilância epidemiológica e a equipe de controle de infecção para rastreamento de profissionais e contactantes potencialmente expostos",
+      "Envolver cuidados paliativos e comunicação clara e precoce com a família sobre o prognóstico quase invariavelmente fatal",
+      "Considerar protocolo experimental (tipo Milwaukee) apenas em centro especializado, com consentimento informado explícito sobre a taxa de insucesso predominante documentada na literatura, e nunca como expectativa padrão de cura",
+      "Investigar e tratar miocardite associada com suporte hemodinâmico convencional quando houver repercussão cardíaca significativa, mantendo o foco em conforto e estabilização, não em reversão do curso viral"
+    ],
+    "tags": [
+      "raiva",
+      "hidrofobia",
+      "lyssavírus",
+      "disautonomia",
+      "tempestade autonômica",
+      "miocardite",
+      "morcegos hematófagos",
+      "protocolo de Milwaukee",
+      "encefalite viral",
+      "zoonose",
+      "profilaxia pós-exposição",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Hemachudha T, Ugolini G, Wacharapluesadee S, Sungkarat W, Shuangshoti S, Laothamatas J. Human rabies: neuropathogenesis, diagnosis, and management. Lancet Neurol. 2013;12(5):498-513. DOI: 10.1016/S1474-4422(13)70038-3. PMID: 23602163",
+      "Warrell DA, Davidson NM, Pope HM, Bailie WE, Lawrie JH, Ormerod LD, Kertesz A, Lewis P. Pathophysiologic studies in human rabies. Am J Med. 1976;60(2):180-190. DOI: 10.1016/0002-9343(76)90427-7. PMID: 766622",
+      "Cheetham HD, Hart J, Coghill NF, Fox B. Rabies with myocarditis. Two cases in England. Lancet. 1970;1(7653):921-922. DOI: 10.1016/S0140-6736(70)91048-2. PMID: 4191551",
+      "Willoughby RE Jr, Tieves KS, Hoffman GM, Ghanayem NS, Amlie-Lefond CM, Schwabe MJ, Chusid MJ, Rupprecht CE. Survival after treatment of rabies with induction of coma. N Engl J Med. 2005;352(24):2508-2514. DOI: 10.1056/NEJMoa050382. PMID: 15958806",
+      "Zeiler FA, Jackson AC. Critical Appraisal of the Milwaukee Protocol for Rabies: This Failed Approach Should Be Abandoned. Can J Neurol Sci. 2016;43(1):44-51. DOI: 10.1017/cjn.2015.331. PMID: 26639059",
+      "Jackson AC. Demise of the Milwaukee Protocol for Rabies. Clin Infect Dis. 2025;81(4):e229-e232. DOI: 10.1093/cid/ciaf157. PMID: 40139921",
+      "da Rosa ES, Kotait I, Barbosa TF, et al. Bat-transmitted human rabies outbreaks, Brazilian Amazon. Emerg Infect Dis. 2006;12(8):1197-1202. DOI: 10.3201/eid1208.050929. PMID: 16965697",
+      "Catozo RG, Molina CML, Silva ALD, et al. Two Decades of Human Rabies in Brazil: Epidemiological Trends, Emerging Risks and Treatment Challenges. Rev Soc Bras Med Trop. 2025;58:e0110. DOI: 10.1590/0037-8682-0110-2025. PMID: 40767697",
+      "Ledesma LA, Lemos ERS, Horta MA. Comparing clinical protocols for the treatment of human rabies: the Milwaukee protocol and the Brazilian protocol (Recife). Rev Soc Bras Med Trop. 2020;53:e20200352. DOI: 10.1590/0037-8682-0352-2020. PMID: 33174958"
+    ],
+    "source_urls": [
+      "https://doi.org/10.1016/S1474-4422(13)70038-3",
+      "https://doi.org/10.1016/0002-9343(76)90427-7",
+      "https://doi.org/10.1016/S0140-6736(70)91048-2",
+      "https://doi.org/10.1056/NEJMoa050382",
+      "https://doi.org/10.1017/cjn.2015.331",
+      "https://doi.org/10.1093/cid/ciaf157",
+      "https://doi.org/10.3201/eid1208.050929",
+      "https://doi.org/10.1590/0037-8682-0110-2025",
+      "https://doi.org/10.1590/0037-8682-0352-2020"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "raiva-hidrofobia-disautonomia-e-complicacoes-cardiovasculares"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "leishmaniose-visceral-calazar",
+    "name": "Leishmaniose visceral (calazar) com acometimento cardiovascular",
+    "aliases": [
+      "calazar",
+      "kala-azar",
+      "leishmaniose visceral",
+      "LV",
+      "cardiotoxicidade por antimonial na leishmaniose visceral"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 57,
+    "completeness": "completo",
+    "summary": "Doença sistêmica causada por Leishmania infantum (chagasi), transmitida por Lutzomyia longipalpis, endêmica historicamente no Nordeste do Brasil e em expansão/urbanização para outras regiões, com quadro clássico de febre prolongada, hepatoesplenomegalia e pancitopenia. O acometimento cardiovascular ocorre por dois eixos distintos: miocardite/pericardite direta pela infecção, rara e sustentada por evidência de baixo nível (relatos de caso); e cardiotoxicidade do tratamento com antimoniais pentavalentes (antimoniato de meglumina), com prolongamento de QT dose-dependente, arritmia ventricular e risco de morte súbita — eixo com evidência mais robusta, que exige monitorização eletrocardiográfica obrigatória antes e durante o tratamento e pode indicar anfotericina B lipossomal como alternativa de menor cardiotoxicidade em pacientes de maior risco cardiovascular.",
+    "presentation": [
+      "Febre prolongada, geralmente por semanas, irregular ou em picos",
+      "Hepatoesplenomegalia, com esplenomegalia frequentemente volumosa",
+      "Emagrecimento progressivo e palidez cutaneomucosa",
+      "Distensão abdominal por visceromegalia",
+      "Adenomegalia, especialmente em crianças",
+      "Sinais decorrentes de pancitopenia: fadiga, infecções bacterianas secundárias, sangramento",
+      "Achado cardiovascular direto pela infecção (raro): sinais de disfunção miocárdica ou derrame pericárdico não explicados por outra causa",
+      "Achado cardiovascular relacionado ao tratamento: alteração eletrocardiográfica (QT prolongado, alteração de onda T), palpitação, síncope ou pré-síncope durante uso de antimonial pentavalente"
+    ],
+    "differentials": [
+      "Malária",
+      "Esquistossomose hepatoesplênica",
+      "Linfoma e outras neoplasias hematológicas com hepatoesplenomegalia",
+      "Tuberculose disseminada",
+      "Endocardite infecciosa subaguda",
+      "Doença de Chagas aguda ou reativação em imunocomprometido",
+      "Anemia hemolítica ou outras citopenias de causa não infecciosa",
+      "Hiperesplenismo por hepatopatia crônica"
+    ],
+    "tests": [
+      "Teste rápido sorológico por antígeno rK39 (imunocromatografia) como triagem inicial",
+      "Teste de aglutinação direta quando disponível",
+      "Exame parasitológico direto de aspirado de medula óssea (sítio inicial preferido pelo menor risco de sangramento)",
+      "Exame parasitológico direto de aspirado esplênico em serviço com experiência específica, quando a medula óssea for inconclusiva e a coagulação permitir",
+      "Hemograma completo com avaliação de pancitopenia",
+      "Eletroforese de proteínas (hipergamaglobulinemia policlonal e inversão albumina/globulina como achados de suporte)",
+      "Função renal e hepática antes de iniciar tratamento com antimonial pentavalente",
+      "Eletrólitos (potássio e magnésio) antes e durante o tratamento com antimonial",
+      "ECG basal e seriado durante o tratamento com antimonial pentavalente, com atenção ao QTc"
+    ],
+    "red_flags": [
+      "QTc marcadamente prolongado (referência de alerta geral: acima de 500 ms) ou incremento relevante em relação ao basal durante uso de antimonial",
+      "Arritmia ventricular, síncope ou pré-síncope durante tratamento com antimonial pentavalente",
+      "Sangramento ativo ou plaquetopenia grave, especialmente antes de considerar aspirado esplênico",
+      "Instabilidade hemodinâmica ou sinais de sepse associada em paciente com pancitopenia",
+      "Disfunção renal ou hepática significativa em paciente em uso de antimonial (reduz depuração e amplia risco de cardiotoxicidade)",
+      "Uso concomitante de outro fármaco QT-prolongador em paciente candidato a antimonial",
+      "Sinais de disfunção miocárdica ou derrame pericárdico não explicados por outra causa em paciente com leishmaniose visceral"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de leishmaniose visceral em paciente com febre prolongada, hepatoesplenomegalia e pancitopenia, inclusive fora da área endêmica clássica do Nordeste, dada a expansão geográfica documentada da doença",
+      "Solicitar sorologia rK39 como triagem inicial; se negativa em quadro clínico fortemente sugestivo, não descartar e prosseguir investigação parasitológica",
+      "Encaminhar para confirmação parasitológica por aspirado de medula óssea (ou esplênico, em serviço com experiência) antes de iniciar tratamento",
+      "Realizar avaliação cardiovascular basal (ECG, eletrólitos, função renal e hepática) antes de decidir o esquema terapêutico",
+      "Identificar fatores de maior risco cardiovascular (idade avançada, cardiopatia estrutural, arritmia prévia, QTc basal prolongado, uso de outro fármaco QT-prolongador, disfunção renal/hepática) para orientar a escolha entre antimonial pentavalente e anfotericina B lipossomal",
+      "Encaminhar para tratamento hospitalar ou ambulatorial especializado com capacidade de monitorização eletrocardiográfica seriada quando o antimonial for o esquema escolhido"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de gravidade sistêmica (sepse secundária, sangramento, instabilidade hemodinâmica) no paciente com leishmaniose visceral não tratada ou em tratamento",
+      "Diante de paciente em uso de antimonial pentavalente com síncope, palpitação ou achado sugestivo de arritmia, obter ECG imediato e avaliar QTc, eletrólitos (potássio, magnésio) e função renal/hepática",
+      "Suspender o antimonial diante de QTc marcadamente prolongado, arritmia ventricular documentada ou sintoma compatível com arritmia, e corrigir distúrbio eletrolítico associado",
+      "Considerar troca para anfotericina B lipossomal após suspensão do antimonial por cardiotoxicidade, com discussão da equipe assistencial responsável pelo tratamento da leishmaniose",
+      "Manejar torsades de pointes conforme protocolo padrão de QT longo adquirido caso a arritmia já esteja estabelecida",
+      "Investigar causa cardíaca direta pela própria infecção (miocardite/pericardite) apenas diante de achado não explicado pelo tratamento, como diagnóstico diferencial de exclusão"
+    ],
+    "tags": [
+      "leishmaniose visceral",
+      "calazar",
+      "kala-azar",
+      "Leishmania infantum",
+      "Leishmania chagasi",
+      "Lutzomyia longipalpis",
+      "antimoniato de meglumina",
+      "antimonial pentavalente",
+      "cardiotoxicidade",
+      "QT longo adquirido",
+      "torsades de pointes",
+      "anfotericina B lipossomal",
+      "doença tropical negligenciada",
+      "doença infecciosa endêmica no Brasil",
+      "miocardite tropical"
+    ],
+    "source_refs": [
+      "Harhay MO, Olliaro PL, Costa DL, Costa CH. Urban parasitology: visceral leishmaniasis in Brazil. Trends Parasitol. 2011;27(9):403-9. PMID: 21596622",
+      "Vasconcelos AO, Bedoya-Pacheco SJ, Cunha E Silva RR, et al. Spatial-temporal distribution of visceral leishmaniasis in Rio de Janeiro, Brazil, 2001-2020: expansion and challenges. Trans R Soc Trop Med Hyg. 2024;118(7):448-457. PMID: 38517304",
+      "Sundar S, Chakravarty J. Antimony toxicity. Int J Environ Res Public Health. 2010;7(12):4267-77. DOI: 10.3390/ijerph7124267. PMID: 21318007",
+      "Berhe N, Abraham Y, Hailu A, Ali A. Electrocardiographic findings in Ethiopians on pentavalent antimony therapy for visceral leishmaniasis. East Afr Med J. 2001;78(11):608-10. PMID: 12219968",
+      "Rodrigues AM, Hueb M, Nery AF, Fontes CJ. Possible cardioprotective effect of angiotensin-converting enzyme inhibitors during treatment of American tegumentary leishmaniasis with meglumine antimoniate. Acta Trop. 2007;102(2):113-8. PMID: 17555699",
+      "Meyerhoff A. U.S. Food and Drug Administration approval of AmBisome (liposomal amphotericin B) for treatment of visceral leishmaniasis. Clin Infect Dis. 1999;28(1):42-8. PMID: 10028069",
+      "Sundar S, Chakravarty J. An update on pharmacotherapy for leishmaniasis. Expert Opin Pharmacother. 2015;16(2):237-52. DOI: 10.1517/14656566.2015.973850. PMID: 25346016",
+      "Chappuis F, Rijal S, Soto A, Menten J, Boelaert M. A meta-analysis of the diagnostic performance of the direct agglutination test and rK39 dipstick for visceral leishmaniasis. BMJ. 2006;333(7571):723. DOI: 10.1136/bmj.38917.503056.7C. PMID: 16882683",
+      "Sundar S, Rai M. Laboratory diagnosis of visceral leishmaniasis. Clin Diagn Lab Immunol. 2002;9(5):951-8. PMID: 12204943",
+      "Puerto-Alonso JL, Molina-Ruano FJ, Gómez-Soto F, Torres-Molina MJ, Sanz-Trelles A. [Visceral leishmaniasis with cardiac affectation in an immunocompetent patient]. Med Clin (Barc). 2006;127(13):519. PMID: 17043012"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/21596622/",
+      "https://pubmed.ncbi.nlm.nih.gov/38517304/",
+      "https://pubmed.ncbi.nlm.nih.gov/21318007/",
+      "https://pubmed.ncbi.nlm.nih.gov/12219968/",
+      "https://pubmed.ncbi.nlm.nih.gov/17555699/",
+      "https://pubmed.ncbi.nlm.nih.gov/10028069/",
+      "https://pubmed.ncbi.nlm.nih.gov/25346016/",
+      "https://pubmed.ncbi.nlm.nih.gov/16882683/",
+      "https://pubmed.ncbi.nlm.nih.gov/12204943/",
+      "https://pubmed.ncbi.nlm.nih.gov/17043012/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "leishmaniose-visceral-calazar-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miocardite-e-disfuncao-cardiovascular-na-febre-tifoide",
+    "name": "Miocardite e disfunção cardiovascular na febre tifoide",
+    "aliases": [
+      "miocardite tífica",
+      "cardiopatia da febre tifoide",
+      "acometimento cardíaco na febre entérica",
+      "bradicardia relativa da febre tifoide"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 58,
+    "completeness": "completo",
+    "summary": "Acometimento cardiovascular na febre tifoide grave (Salmonella enterica sorotipo Typhi), doença de transmissão fecal-oral com relevância residual em bolsões de saneamento precário no Brasil: miocardite de mecanismo predominantemente tóxico/endotoxinêmico e inflamatório sistêmico — evidência ainda limitada a relatos e pequenas séries —, bradicardia relativa/dissociação pulso-temperatura análoga ao sinal de Faget da febre amarela, e complicações graves (perfuração intestinal, hemorragia digestiva, encefalopatia tífica) que compõem quadro de choque multifatorial. Diagnóstico por hemocultura/mielocultura, com limitações conhecidas da sorologia de Widal; tratamento com antibioticoterapia dirigida por perfil de resistência local.",
+    "presentation": [
+      "Febre prolongada e ascendente, cefaleia, mal-estar, dor abdominal e alterações do trânsito intestinal (constipação ou diarreia) no quadro sistêmico da febre tifoide",
+      "Bradicardia relativa/sinusal desproporcional à febre (dissociação pulso-temperatura), achado clássico descrito há décadas",
+      "Sinais sugestivos de acometimento miocárdico em casos descritos: dor torácica, elevação de troponina e alterações eletrocardiográficas isquêmicas sem doença coronariana estrutural, geralmente reversíveis com antibioticoterapia",
+      "Delirium/confusão mental (encefalopatia tífica), a complicação mais prevalente na doença grave, podendo evoluir para rebaixamento do nível de consciência",
+      "Sinais de abdome agudo (dor súbita, distensão, defesa/peritonismo) sugerindo perfuração intestinal, tipicamente na terceira semana de doença não tratada",
+      "Sangramento digestivo (melena, hematêmese) por ulceração das placas de Peyer, isolado ou associado à perfuração",
+      "Sinais de choque multifatorial: hipotensão e hipoperfusão associadas a perda volêmica, resposta inflamatória sistêmica e, quando presente, disfunção miocárdica concomitante",
+      "Contexto epidemiológico: exposição a água ou alimento de procedência incerta em área de saneamento precário, viagem a região endêmica"
+    ],
+    "differentials": [
+      "Febre amarela grave (mesma dissociação pulso-temperatura/bradicardia relativa, mecanismo miocárdico predominante distinto)",
+      "Malária grave",
+      "Leptospirose (síndrome de Weil)",
+      "Dengue grave",
+      "Brucelose",
+      "Doença dos legionários",
+      "Sepse de outro foco com disfunção miocárdica",
+      "Miocardite viral ou chagásica aguda"
+    ],
+    "tests": [
+      "Hemocultura — exame primário, sensibilidade limitada e reduzida por uso prévio de antibiótico",
+      "Mielocultura (cultura de medula óssea) — sensibilidade mais alta que a hemocultura, permanece positiva mesmo após antibioticoterapia prévia; indicada quando hemocultura negativa com suspeita clínica alta",
+      "Sorologia de Widal — utilidade limitada por variabilidade de sensibilidade/especificidade, reação cruzada e necessidade de títulos de referência locais; idealmente interpretada com amostras pareadas",
+      "ECG em todo caso com suspeita de acometimento cardíaco (dor torácica, arritmia, bradicardia desproporcional)",
+      "Troponina quando há suspeita clínica de miocardite associada",
+      "Hemograma, função renal e hepática, coagulograma para avaliação de gravidade sistêmica",
+      "Imagem abdominal (radiografia simples com pesquisa de pneumoperitônio, tomografia) diante de suspeita de perfuração intestinal"
+    ],
+    "red_flags": [
+      "Bradicardia relativa associada a hipotensão ou hipoperfusão — pode mascarar gravidade se a equipe aguardar taquicardia compensatória clássica, o mesmo alerta descrito para o sinal de Faget na febre amarela",
+      "Dor abdominal súbita com defesa/peritonismo em paciente com febre tifoide na segunda-terceira semana de evolução — suspeitar de perfuração intestinal e acionar avaliação cirúrgica de emergência",
+      "Sangramento digestivo ativo (melena, hematêmese)",
+      "Delirium, confusão ou rebaixamento do nível de consciência (encefalopatia tífica), com risco de comprometimento de via aérea",
+      "Elevação de troponina ou alterações eletrocardiográficas sugestivas de acometimento miocárdico",
+      "Choque sem resposta clara a volume, sugerindo componente distributivo/cardiogênico sobreposto à perda volêmica"
+    ],
+    "ambulatory_flow": [
+      "Não afastar febre tifoide apenas pela ausência de taquicardia — bradicardia relativa é achado clássico esperado, não sinal de estabilidade",
+      "Colher hemocultura antes de iniciar antibiótico sempre que possível, diante de febre prolongada com contexto epidemiológico compatível (exposição a água/alimento de risco, saneamento precário, viagem a área endêmica)",
+      "Não basear diagnóstico definitivo em título único de Widal isolado, especialmente em área com prevalência de base desconhecida",
+      "Encaminhar com urgência para avaliação hospitalar todo caso com dor abdominal súbita, sangramento, confusão mental ou sinais de gravidade sistêmica, sem aguardar confirmação laboratorial completa",
+      "Iniciar antibioticoterapia empírica considerando padrão de resistência local (evitar fluoroquinolona empírica em contexto de exposição ao Sul da Ásia)"
+    ],
+    "emergency_flow": [
+      "Monitorização cardíaca e ECG diante de dor torácica, arritmia ou bradicardia desproporcional à febre",
+      "Avaliação cirúrgica de emergência diante de sinais de perfuração intestinal (abdome agudo, pneumoperitônio), com cobertura antimicrobiana de amplo espectro para flora entérica associada à peritonite",
+      "Suporte transfusional e avaliação endoscópica diante de hemorragia digestiva ativa",
+      "Suporte neurológico e proteção de via aérea diante de encefalopatia tífica com rebaixamento do nível de consciência",
+      "Avaliação hemodinâmica individualizada antes de assumir choque como puramente hipovolêmico ou puramente séptico, pelo risco de componente cardiogênico concomitante",
+      "Antibioticoterapia dirigida por perfil de resistência local (ceftriaxona, azitromicina ou fluoroquinolona conforme antibiograma/procedência epidemiológica), com reavaliação clínica e laboratorial seriada"
+    ],
+    "tags": [
+      "febre tifoide",
+      "Salmonella Typhi",
+      "miocardite",
+      "bradicardia relativa",
+      "dissociação pulso-temperatura",
+      "perfuração intestinal",
+      "hemorragia digestiva",
+      "encefalopatia tífica",
+      "choque multifatorial",
+      "resistência antimicrobiana",
+      "saneamento"
+    ],
+    "source_refs": [
+      "Parry CM, Hien TT, Dougan G, White NJ, Farrar JJ. Typhoid fever. N Engl J Med. 2002;347(22):1770-1782. DOI: 10.1056/NEJMra020201. PMID: 12456854",
+      "Meiring JE, Khanam F, Basnyat B, Charles RC, Crump JA, Debellut F, Holt KE, Kariuki S, Mugisha E, Neuzil KM, Parry CM, Pitzer VE, Pollard AJ, Qadri F, Gordon MA. Typhoid fever. Nat Rev Dis Primers. 2023;9(1):71. DOI: 10.1038/s41572-023-00480-z. PMID: 38097589",
+      "Kuehn R, Rahden P, Hussain HS, Karkey A, Qamar FN, Rupali P, Parry CM. Enteric (typhoid and paratyphoid) fever. Lancet. 2025;406(10509):1283-1294. DOI: 10.1016/S0140-6736(25)01335-2. PMID: 40914181",
+      "Murthy S, Hagedoorn NN, Faigan S, Rathan MD, Marchello CS, Crump JA. Complications and mortality of typhoid fever: an updated global systematic review and meta-analysis. Lancet Infect Dis. 2026;26(3):270-283. DOI: 10.1016/S1473-3099(25)00551-1. PMID: 41240962",
+      "Murthy S, Hagedoorn NN, Adhy WP, Batool R, Rathan MD, Marchello CS, Crump JA. An updated systematic review on antimicrobial resistance among Salmonella Typhi worldwide. Clin Microbiol Infect. 2026. DOI: 10.1016/j.cmi.2026.08.007. PMID: 42601018",
+      "Marchello CS, Carr SD, Crump JA. A Systematic Review on Antimicrobial Resistance among Salmonella Typhi Worldwide. Am J Trop Med Hyg. 2020;103(6):2518-2527. DOI: 10.4269/ajtmh.20-0258. PMID: 32996447",
+      "Shah S, Dubrey SW. Typhoid fever, complicated by myocarditis, in a traveller returning to the UK. BMJ Case Rep. 2013;2013:bcr2012008387. DOI: 10.1136/bcr-2012-008387. PMID: 23417944",
+      "Le-Van-Diem, Arnold K. Typhoid fever with myocarditis. Am J Trop Med Hyg. 1974;23(2):218-221. DOI: 10.4269/ajtmh.1974.23.218. PMID: 4274141",
+      "Chakraborty PP, Bhattacharjee R, Bandyopadhyay D. Complicated typhoid fever. J Assoc Physicians India. 2010;58:186-187. PMID: 20848818",
+      "Cunha BA, Thermidor M, Mohan S, Valsamis AS, Johnson DH. Fever of unknown origin: subacute thyroiditis versus typhoid fever. Heart Lung. 2005;34(2):147-151. DOI: 10.1016/j.hrtlng.2004.07.003. PMID: 15761461",
+      "Mellon G, Eme AL, Rohaut B, Brossier F, Epelboin L, Caumes E. Encephalitis in a traveller with typhoid fever: efficacy of corticosteroids. J Travel Med. 2017;24(6). DOI: 10.1093/jtm/tax063. PMID: 29088483",
+      "Wabada S, Oyinloye AO, Usman B, Abubakar AM, Christopher RU. Typhoid perforation in children below 5 years: a 10-year review of cases managed and outcome. Pediatr Surg Int. 2022;38(1):143-148. DOI: 10.1007/s00383-021-05010-0. PMID: 34652510",
+      "Tiba-Casas MR, Sacchi CT, Gonçalves CR, Almeida EA, Soares FB, de Jesus Bertani AM, Fernandes SA, de Paula Eduardo MB, Camargo CH. Molecular analysis of clonally related Salmonella Typhi recovered from epidemiologically unrelated cases of typhoid fever, Brazil. Int J Infect Dis. 2019;81:191-195. DOI: 10.1016/j.ijid.2019.02.009. PMID: 30849581",
+      "de Carvalho DVP, do Rosario Marinho AN, da Cruz Rocha DC. Analysis of the Epidemiological Profile of Typhoid Fever in the State of Pará Between the Years 1999 and 2018. Int J Microbiol. 2025;2025:3747557. DOI: 10.1155/ijm/3747557. PMID: 41246287",
+      "Omuse G, Kohli R, Revathi G. Diagnostic utility of a single Widal test in the diagnosis of typhoid fever at Aga Khan University Hospital (AKUH), Nairobi, Kenya. Trop Doct. 2010;40(1):43-44. DOI: 10.1258/td.2009.090109. PMID: 19850607"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12456854/",
+      "https://pubmed.ncbi.nlm.nih.gov/38097589/",
+      "https://pubmed.ncbi.nlm.nih.gov/40914181/",
+      "https://pubmed.ncbi.nlm.nih.gov/41240962/",
+      "https://pubmed.ncbi.nlm.nih.gov/42601018/",
+      "https://pubmed.ncbi.nlm.nih.gov/32996447/",
+      "https://pubmed.ncbi.nlm.nih.gov/23417944/",
+      "https://pubmed.ncbi.nlm.nih.gov/4274141/",
+      "https://pubmed.ncbi.nlm.nih.gov/20848818/",
+      "https://pubmed.ncbi.nlm.nih.gov/15761461/",
+      "https://pubmed.ncbi.nlm.nih.gov/29088483/",
+      "https://pubmed.ncbi.nlm.nih.gov/34652510/",
+      "https://pubmed.ncbi.nlm.nih.gov/30849581/",
+      "https://pubmed.ncbi.nlm.nih.gov/41246287/",
+      "https://pubmed.ncbi.nlm.nih.gov/19850607/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "febre-tifoide-grave-miocardite-e-bradicardia-relativa"
+    ],
+    "patient_material_slug": null
   }
 ]
