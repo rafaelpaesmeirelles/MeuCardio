@@ -50426,5 +50426,568 @@
       "doenca-do-no-sinusal-familiar-hcn4-scn5a-e-a-distincao-entre-disfuncao-sinusal-hereditaria-e-degenerativa"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-cogan",
+    "name": "Síndrome de Cogan",
+    "aliases": [
+      "Síndrome de Cogan típica",
+      "Síndrome de Cogan atípica",
+      "Cogan syndrome",
+      "vasculite de Cogan"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculite_autoimune_rara_com_acometimento_ocular_audiovestibular_e_aortico",
+    "prevalence_rank": 120,
+    "completeness": "completo",
+    "summary": "Vasculite autoimune rara, típica de adultos jovens, definida pela combinação de ceratite intersticial não sifilítica e disfunção audiovestibular súbita semelhante à doença de Ménière (perda auditiva neurossensorial flutuante, vertigem, ataxia). Classifica-se em forma típica (intervalo ocular-audiovestibular ≤2 anos, ceratite clássica) e atípica (intervalo maior ou manifestação ocular diferente, como episclerite/uveíte), sendo a forma atípica mais associada a vasculite sistêmica, incluindo aortite. A aortite de aorta ascendente/raiz aórtica é a manifestação cardiovascular mais característica, podendo causar insuficiência aórtica por dilatação do anel valvar, presente em subgrupo definido de pacientes (cerca de 12,5% em série de referência) e potencialmente exigindo cirurgia de raiz/válvula aórtica.",
+    "presentation": [
+      "Ceratite intersticial não sifilítica, tipicamente bilateral, com fotofobia, dor ocular e hiperemia conjuntival",
+      "Disfunção audiovestibular de início súbito, tipo Ménière: perda auditiva neurossensorial flutuante e progressiva, vertigem, náusea e ataxia",
+      "Forma atípica: episclerite, uveíte ou conjuntivite em vez de ceratite intersticial clássica, e/ou intervalo maior que 2 anos entre sintomas oculares e audiovestibulares",
+      "Manifestações sistêmicas em proporção relevante dos pacientes: febre, artralgia, mialgia, artrite, cefaleia",
+      "Aortite de aorta ascendente/raiz aórtica em subgrupo de pacientes, podendo ser assintomática até fase avançada",
+      "Insuficiência aórtica por dilatação do anel valvar e distorção da geometria da raiz aórtica, podendo ser a manifestação cardiovascular predominante",
+      "Miocardite e pericardite descritas com menor frequência"
+    ],
+    "differentials": [
+      "Sífilis (ceratite intersticial luética) — deve ser sempre excluída antes de firmar o diagnóstico",
+      "Doença de Ménière idiopática",
+      "Arterite de Takayasu e arterite de células gigantes (outras vasculites com potencial acometimento aórtico)",
+      "Doença de Behçet com envolvimento vascular",
+      "Doença relacionada a IgG4 com periaortite",
+      "Granulomatose com poliangeíte (GPA) e outras vasculites ANCA-associadas com acometimento ocular/audiovestibular",
+      "Outras causas infecciosas de ceratite intersticial e de perda auditiva neurossensorial súbita"
+    ],
+    "tests": [
+      "Exame oftalmológico com lâmpada de fenda para caracterização de ceratite intersticial ou outra inflamação ocular",
+      "Audiometria seriada e avaliação vestibular",
+      "Testes treponêmicos (FTA-ABS) e não treponêmicos (VDRL/RPR) para exclusão de sífilis",
+      "VHS e PCR para avaliação de atividade inflamatória (elevados na fase ativa, inespecíficos)",
+      "Ecocardiograma transtorácico para avaliação de raiz aórtica, aorta ascendente e função valvar aórtica em todo paciente com diagnóstico confirmado",
+      "Angiotomografia ou angiorressonância de aorta quando indicado para caracterização e seguimento de aortite/dilatação de raiz aórtica"
+    ],
+    "red_flags": [
+      "Perda auditiva neurossensorial súbita — tratamento precoce com corticoide é determinante para preservação da audição, sob risco de surdez permanente",
+      "Sinais ou sintomas de insuficiência aórtica aguda ou dilatação de raiz aórtica em paciente com diagnóstico de síndrome de Cogan",
+      "Forma atípica (manifestação ocular não clássica ou intervalo longo) — maior probabilidade de vasculite sistêmica associada, incluindo aortite",
+      "Febre de origem indeterminada associada a sintomas oculares e audiovestibulares — considerar aortite subjacente"
+    ],
+    "ambulatory_flow": [
+      "Paciente com ceratite intersticial não sifilítica e/ou disfunção audiovestibular súbita tipo Ménière: encaminhar para avaliação combinada de oftalmologia, otorrinolaringologia e reumatologia/imunologia",
+      "Excluir sífilis e outras causas infecciosas antes de firmar diagnóstico de síndrome de Cogan",
+      "Em todo paciente com diagnóstico confirmado, solicitar ecocardiograma transtorácico para rastreio de aortite/insuficiência aórtica, mesmo na ausência de sintomas cardiovasculares",
+      "Iniciar corticosteroide sistêmico em dose alta precocemente diante de disfunção audiovestibular aguda",
+      "Associar imunossupressor poupador de corticoide (metotrexato ou azatioprina) para doença crônica/recorrente; escalar para inibidor de TNF (infliximabe) em caso refratário",
+      "Seguimento cardiovascular estruturado com imagem seriada de aorta (ecocardiograma ± angiotomografia/angiorressonância)",
+      "Avaliar indicação cirúrgica de raiz/válvula aórtica em conjunto com cirurgia cardiovascular quando há dilatação significativa ou insuficiência aórtica hemodinamicamente relevante"
+    ],
+    "emergency_flow": [
+      "Perda auditiva neurossensorial súbita: tratar como urgência, iniciar corticosteroide sistêmico em dose alta sem atraso, dado o risco de irreversibilidade",
+      "Suspeita de insuficiência aórtica aguda ou dissecção/complicação aórtica em paciente com síndrome de Cogan conhecida: avaliação cardiovascular de urgência com ecocardiograma e, se indicado, angiotomografia de aorta",
+      "Febre de origem indeterminada com sintomas oculares e audiovestibulares associados: investigar aortite como diagnóstico diferencial ativo"
+    ],
+    "tags": [
+      "vasculite",
+      "doença autoimune rara",
+      "aortite",
+      "insuficiência aórtica",
+      "ceratite intersticial",
+      "perda auditiva neurossensorial",
+      "síndrome de Ménière",
+      "grandes vasos",
+      "reumatologia",
+      "oftalmologia",
+      "otorrinolaringologia"
+    ],
+    "source_refs": [
+      "Belfeki N, et al. Cogan's syndrome. A comprehensive review. Eur J Intern Med. 2025. PMID: 40383683",
+      "Grasland A, Pouchot J, Hachulla E, et al. Typical and atypical Cogan's syndrome: 32 cases and review of the literature. Rheumatology (Oxford). 2004;43(8):1007-1015. PMID: 15150435",
+      "Durtette C, Hachulla E, Résche-Rigon M, et al. Cogan syndrome: Characteristics, outcome and treatment in a French nationwide retrospective study and literature review. Autoimmun Rev. 2017;16(12):1219-1223. PMID: 29037902",
+      "Bowers E, Tripathy K. Cogan Syndrome. StatPearls. 2026. PMID: 35593853",
+      "D'Aguanno V, Ralli M, de Vincentiis M, Greco A. Optimal Management of Cogan's Syndrome: A Multidisciplinary Approach. J Multidiscip Healthc. 2018;11:1-11. PMID: 29317827"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40383683/",
+      "https://pubmed.ncbi.nlm.nih.gov/15150435/",
+      "https://pubmed.ncbi.nlm.nih.gov/29037902/",
+      "https://pubmed.ncbi.nlm.nih.gov/35593853/",
+      "https://pubmed.ncbi.nlm.nih.gov/29317827/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "fistula-arteriovenosa-coronariana-congenita",
+    "name": "Fístula arteriovenosa coronariana congênita",
+    "aliases": [
+      "fístula coronariana congênita",
+      "fístula coronário-camerular",
+      "fístula coronário-arteriovenosa",
+      "coronary artery fistula",
+      "coronary arteriovenous fistula"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "anomalia_coronariana_congenita",
+    "prevalence_rank": 121,
+    "completeness": "completo",
+    "summary": "Comunicação anômala congênita entre uma ou mais artérias coronárias — mais comumente a coronária direita — e uma câmara cardíaca de baixa pressão ou vaso venoso, mais frequentemente o ventrículo direito, seguido de átrio direito, seio coronário e artéria pulmonar, resultante de falha de involução dos sinusoides miocárdicos embrionários. A coronária de origem nasce normalmente da aorta, distinguindo essa entidade de anomalias de origem coronariana como ALCAPA e AAOCA. O shunt esquerda-direita pelo trajeto fistuloso pode causar roubo coronariano e isquemia relativa, além de sobrecarga de volume e dilatação progressiva da coronária em fístulas de grande débito.",
+    "presentation": [
+      "Assintomática, achado incidental em ecocardiograma ou cateterismo realizado por outro motivo (situação mais comum)",
+      "Sopro contínuo, classicamente mais audível ao longo da borda esternal",
+      "Dispneia e fadiga aos esforços em fístulas de grande volume, por sobrecarga de câmara receptora",
+      "Angina ou isquemia de esforço por roubo coronariano em fístulas hemodinamicamente significativas",
+      "Infarto do miocárdio em paciente jovem sem aterosclerose coronariana, em casos de grande shunt não corrigido",
+      "Sinais de insuficiência cardíaca por sobrecarga crônica de volume quando o shunt permanece sem tratamento"
+    ],
+    "differentials": [
+      "ALCAPA (origem anômala da coronária esquerda a partir da artéria pulmonar) — anomalia de origem, não de trajeto distal",
+      "AAOCA (origem aórtica anômala de coronária) — anomalia de origem a partir do seio de Valsalva oposto",
+      "Persistência do canal arterial — outro shunt esquerda-direita com sopro contínuo",
+      "Janela aortopulmonar",
+      "Sopro inocente da infância",
+      "Doença coronariana aterosclerótica (em adultos com angina e coronárias epicárdicas normais)"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com Doppler colorido — exame inicial, detecta jato de fluxo anômalo e dilatação da coronária de origem",
+      "Angiotomografia coronariana com reconstrução 3D — mapeamento anatômico completo do trajeto fistuloso para planejamento terapêutico",
+      "Cateterismo cardíaco com cineangiocoronariografia — padrão de referência para diagnóstico definitivo, ponto de drenagem e magnitude do shunt",
+      "Eletrocardiograma — pode mostrar sinais de sobrecarga de câmara ou isquemia",
+      "Ressonância magnética cardíaca — quantificação de shunt e função ventricular em casos selecionados"
+    ],
+    "red_flags": [
+      "Angina ou isquemia documentada atribuível ao roubo coronariano",
+      "Sinais de insuficiência cardíaca por sobrecarga de volume",
+      "Sopro contínuo de início recente com repercussão hemodinâmica",
+      "Febre ou sinais sistêmicos sugestivos de endocardite do trajeto fistuloso",
+      "Dor torácica aguda com suspeita de ruptura de aneurisma coronariano ou tamponamento",
+      "Evidência de embolização distal a partir de trombo mural na coronária dilatada"
+    ],
+    "ambulatory_flow": [
+      "Achado incidental de sopro contínuo ou de fístula ao ecocardiograma: caracterizar tamanho, trajeto e sítio de drenagem",
+      "Fístula pequena, assintomática, sem sobrecarga de câmara: seguimento clínico e ecocardiográfico periódico, sem intervenção",
+      "Fístula média a grande, ou sintomática: complementar com angiotomografia coronariana e encaminhar para cateterismo cardíaco diagnóstico",
+      "Definição de estratégia de fechamento (percutâneo versus cirúrgico) conforme anatomia do trajeto, presença de fístulas múltiplas e necessidade de cirurgia cardíaca concomitante",
+      "Seguimento pós-fechamento com ecocardiograma e, quando indicado, nova angiografia, pela possibilidade de recanalização tardia"
+    ],
+    "emergency_flow": [
+      "Dor torácica aguda ou instabilidade hemodinâmica com fístula coronariana conhecida: investigar ruptura de aneurisma, tamponamento cardíaco e síndrome coronariana aguda por embolização/trombose",
+      "Febre com fístula coronariana conhecida: investigar endocardite/endarterite do trajeto fistuloso",
+      "Sinais de insuficiência cardíaca descompensada em paciente com fístula de grande débito: estabilização e avaliação para fechamento não eletivo",
+      "Suspeita de isquemia aguda por roubo coronariano: eletrocardiograma, marcadores de necrose miocárdica e avaliação cardiológica urgente"
+    ],
+    "tags": [
+      "cardiopatia congênita",
+      "anomalia coronariana",
+      "fístula coronariana",
+      "roubo coronariano",
+      "sopro contínuo",
+      "fechamento percutâneo",
+      "cardiologia pediátrica",
+      "cateterismo cardíaco"
+    ],
+    "source_refs": [
+      "Giordano M, Evangelista M, Piccinelli E, Moscatelli S, Sirico D, Meliota G, Russo MG, Butera G, Castaldi B, Chessa M, Rinelli G, Favilli S. Anomalous Coronary Artery Origin from Pulmonary Artery and Coronary Fistulas: A Review About Coronary Steal Phenomenon. Children (Basel). 2026;13(3):424. DOI: 10.3390/children13030424. PMID: 41897136. PMCID: PMC13025776.",
+      "Kanduri J, Falk Z, Singh HS. Diagnosis and Management of Congenital Coronary Artery Fistulas in Adults. Curr Cardiol Rep. 2024;26(5):373-379. DOI: 10.1007/s11886-024-02038-1. PMID: 38466533.",
+      "Jama A, Barsoum M, Bjarnason H, Holmes DR Jr, Rihal CS. Percutaneous closure of congenital coronary artery fistulae: results and angiographic follow-up. JACC Cardiovasc Interv. 2011;4(7):814-821. DOI: 10.1016/j.jcin.2011.03.014. PMID: 21777892.",
+      "Alizadehasl A, Firouzi A, Khajali Z, Khalilipur E, Hosseini Z, Nezhadbahram H, Mohamad Gholizad T, Amini F, Sahraee T, Dehbandi S, Parhizgar SE. Clinical outcomes of transcatheter closure of congenital coronary artery fistula in 28 cases. J Cardiovasc Thorac Res. 2024;16(2):135-141. DOI: 10.34172/jcvtr.31823. PMID: 39253348.",
+      "Wang NK, Hsieh LY, Shen CT, Lin YM. Coronary arteriovenous fistula in pediatric patients: a 17-year institutional experience. J Formos Med Assoc. 2002;101(3):177-182. PMID: 12051012."
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13025776/",
+      "https://pubmed.ncbi.nlm.nih.gov/38466533/",
+      "https://pubmed.ncbi.nlm.nih.gov/21777892/",
+      "https://pubmed.ncbi.nlm.nih.gov/39253348/",
+      "https://pubmed.ncbi.nlm.nih.gov/12051012/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "fistula-arteriovenosa-coronariana-congenita-fisiopatologia-do-roubo-coronariano-diagnostico-e-fechamento-percutaneo"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "intoxicacao-por-talio",
+    "name": "Intoxicação por tálio",
+    "aliases": [
+      "talotoxicose",
+      "envenenamento por tálio",
+      "thallotoxicosis",
+      "thallium poisoning",
+      "saturnismo talêmico"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "intoxicacao_por_metal_pesado",
+    "prevalence_rank": 122,
+    "completeness": "completo",
+    "summary": "Intoxicação por tálio, metal pesado inodoro, insípido e incolor historicamente usado como rodenticida (banido na maioria dos países, mas ainda causa de exposição criminal, ocupacional e acidental). O íon Tl+ mimetiza o potássio por semelhança de raio iônico, substituindo-o na bomba Na+/K+-ATPase e interferindo na repolarização do potencial de ação cardíaco, além de se ligar a grupos sulfidrila mitocondriais e inibir a fosforilação oxidativa. Manifesta-se por taquicardia sinusal precoce por disautonomia, alterações eletrocardiográficas de repolarização e, em casos descritos, prolongamento de QT, associadas à tríade extracardíaca de sintomas gastrointestinais precoces, neuropatia periférica dolorosa e alopecia tardia (2-3 semanas). O diagnóstico exige alto índice de suspeita e dosagem de tálio urinário; o tratamento central é o azul da Prússia oral, com hemodiálise adjuvante em casos graves.",
+    "presentation": [
+      "Taquicardia sinusal (achado cardiovascular mais comum e mais precoce, por disfunção autonômica)",
+      "Hipertensão arterial associada à disautonomia em subgrupo de pacientes",
+      "Alterações eletrocardiográficas de repolarização (achatamento/inversão de onda T, alterações inespecíficas de ST)",
+      "Prolongamento de intervalo QT em casos descritos",
+      "Náusea, vômito e dor abdominal nas primeiras horas, por vezes com diarreia hemorrágica",
+      "Neuropatia periférica dolorosa, sensitivo-predominante, de instalação subaguda",
+      "Alopecia iniciando classicamente 2-3 semanas após a exposição — sinal tardio, mas de alto valor diagnóstico",
+      "Descoloração metálica de pele em casos descritos",
+      "Instabilidade hemodinâmica e colapso cardiovascular em intoxicação grave, como parte de falência de múltiplos órgãos"
+    ],
+    "differentials": [
+      "Síndrome de Guillain-Barré e outras polineuropatias agudas/subagudas",
+      "Outras intoxicações por metal pesado (chumbo, arsênio, mercúrio)",
+      "Alopecia areata e outras alopecias não tóxicas",
+      "Gastroenterite infecciosa aguda (fase inicial)",
+      "Neuropatia autonômica de outras causas (diabética, paraneoplásica, amiloide)",
+      "Porfiria aguda intermitente",
+      "Intoxicação por outros venenos de ação lenta com quadro sistêmico multissistêmico"
+    ],
+    "tests": [
+      "Dosagem de tálio em urina de 24 horas ou urina spot (exame confirmatório central)",
+      "Radiografia simples de abdome (pode mostrar material radiopaco no trato GI nas primeiras horas, achado de valor prático limitado)",
+      "Eletrocardiograma seriado para monitorizar repolarização e QT",
+      "Eletrólitos séricos, função renal",
+      "Avaliação neurológica seriada, incluindo eletroneuromiografia quando disponível",
+      "Investigação toxicológica ampliada quando suspeita de exposição criminal ou ocupacional coletiva"
+    ],
+    "red_flags": [
+      "Combinação temporal de sintomas gastrointestinais precoces seguidos, semanas depois, de neuropatia dolorosa e alopecia",
+      "Múltiplos casos simultâneos em mesma residência, local de trabalho ou grupo familiar (sugestivo de exposição ambiental ou criminal)",
+      "Instabilidade hemodinâmica ou arritmia além de taquicardia sinusal",
+      "Prolongamento significativo de QT",
+      "Neuropatia dolorosa rapidamente progressiva de causa não esclarecida",
+      "Diagnóstico tardio associado a sequela neurológica permanente"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de intoxicação por tálio diante de neuropatia dolorosa inexplicada associada a história recente de sintomas gastrointestinais e/ou alopecia de início recente",
+      "Solicitar dosagem de tálio urinário diante de suspeita clínica dirigida",
+      "Encaminhar para avaliação toxicológica/centro de referência assim que a suspeita for levantada, não aguardar confirmação laboratorial para iniciar investigação",
+      "Seguimento neurológico e cardiológico estruturado após intoxicação confirmada, dado risco de sequela",
+      "Investigar fonte de exposição (ocupacional, ambiental, alimentar, criminal) com apoio de vigilância sanitária/toxicológica"
+    ],
+    "emergency_flow": [
+      "Suspeita clínica (GI precoce + neuropatia + alopecia, isolados ou em combinação) → coletar tálio urinário e iniciar azul da Prússia oral empiricamente diante de suspeita forte, sem aguardar confirmação",
+      "ECG de 12 derivações na admissão e monitorização cardíaca contínua",
+      "Avaliar critérios para hemodiálise adjuvante em intoxicação grave, sobretudo em fase inicial antes da distribuição tecidual completa",
+      "Suporte hemodinâmico ativo diante de instabilidade",
+      "Correção cautelosa e monitorizada de distúrbios eletrolíticos, com atenção ao potássio",
+      "Notificação a autoridades sanitárias/forenses quando houver suspeita de exposição criminal ou coletiva"
+    ],
+    "tags": [
+      "tálio",
+      "thallium",
+      "intoxicação por metal pesado",
+      "toxicologia cardiovascular",
+      "azul da Prússia",
+      "disautonomia",
+      "taquicardia sinusal",
+      "alopecia",
+      "neuropatia periférica",
+      "prolongamento de QT",
+      "rodenticida",
+      "terapia intensiva",
+      "hemodiálise"
+    ],
+    "source_refs": [
+      "Fujihara J, Nishimoto N. Thallium - poisoner's poison: An overview and review of current knowledge on the toxicological effects and mechanisms. Curr Res Toxicol. 2024;6:100157. PMID: 38420185",
+      "Moura AV, Pedroza LAL, da Silva JDS, et al. Thallium: An overview of its distribution in the environment and its cellular and molecular toxicity. Toxicol Lett. 2026;418:111857. PMID: 41759642",
+      "Mulkey JP, Oehme FW. A review of thallium toxicity. Vet Hum Toxicol. 1993;35(5):445-453. PMID: 8249271",
+      "Rusyniak DE, Furbee RB, Kirk MA. Thallium and arsenic poisoning in a small Midwestern town. Ann Emerg Med. 2002;39(3):307-311. PMID: 11867986",
+      "Rusyniak DE, Arroyo A, Acciani J, et al. Heavy metal poisoning: management of intoxication and antidotes. EXS. 2010;100:365-396. PMID: 20358690",
+      "Di Candia D, Muccino E, Battistini A, et al. Thallium toxicity due to adulterated infusion with thallium sulfate in eight members belonging to the same family nucleus. Leg Med (Tokyo). 2020;42:101661. PMID: 31874453",
+      "Rangel-Guerra R, Martínez HR, Villarreal HJ. Thallium poisoning. Experience with 50 patients. Gac Med Mex. 1990;126(6):487-495. PMID: 2103558",
+      "Wang Q, Huang X, Liu L. Analysis of nine cases of acute thallium poisoning. J Huazhong Univ Sci Technolog Med Sci. 2007;27(2):213-216. PMID: 17497301",
+      "Nordentoft T, Andersen EB, Mogensen PH. Initial sensorimotor and delayed autonomic neuropathy in acute thallium poisoning. Neurotoxicology. 1998;19(3):421-426. PMID: 9621348",
+      "Sipahioğlu H. Cardinal symptoms and ECG changes in thallium poisoning. A review of 16 cases. Turk Tip Cemiy Mecm. 1968. PMID: 5733138",
+      "Grunfeld O. Electrocardiographic changes in experimental thallium poisoning. Am J Vet Res. 1963. PMID: 14081469",
+      "Hoffman RS. Thallium toxicity and the role of Prussian blue in therapy. Toxicol Rev. 2003;22(1):29-40. PMID: 14579545",
+      "Ghannoum M, Nolin TD, Goldfarb DS, et al. Extracorporeal treatment for thallium poisoning: recommendations from the EXTRIP Workgroup. Clin J Am Soc Nephrol. 2012;7(10):1682-1690. PMID: 22837270",
+      "Liu H, Liao G. Long-term misdiagnosis and neurologic outcomes of thallium poisoning: a case report and literature review. Brain Behav. 2021;11(3):e02032. PMID: 33438838",
+      "Li S, Huang W, Duan Y, et al. Human fatality due to thallium poisoning: autopsy, microscopy, and mass spectrometry assays. J Forensic Sci. 2015;60(1):247-251. PMID: 25407479",
+      "Duan W, Wang Y, Li Z, et al. Thallium exposure at low concentration leads to early damage on multiple organs in children. Environ Pollut. 2020;258:113319. PMID: 31882189",
+      "Aasly JO. Thallium intoxication with metallic skin discoloration. Neurology. 2007;68(21):1869. PMID: 17515554",
+      "Hirata M, Taoda K, Ono-Ogasawara M, et al. A probable case of chronic occupational thallium poisoning in a glass factory. Ind Health. 1998;36(3):300-303. PMID: 9701911"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/38420185/",
+      "https://pubmed.ncbi.nlm.nih.gov/41759642/",
+      "https://pubmed.ncbi.nlm.nih.gov/8249271/",
+      "https://pubmed.ncbi.nlm.nih.gov/11867986/",
+      "https://pubmed.ncbi.nlm.nih.gov/20358690/",
+      "https://pubmed.ncbi.nlm.nih.gov/31874453/",
+      "https://pubmed.ncbi.nlm.nih.gov/2103558/",
+      "https://pubmed.ncbi.nlm.nih.gov/17497301/",
+      "https://pubmed.ncbi.nlm.nih.gov/9621348/",
+      "https://pubmed.ncbi.nlm.nih.gov/5733138/",
+      "https://pubmed.ncbi.nlm.nih.gov/14081469/",
+      "https://pubmed.ncbi.nlm.nih.gov/14579545/",
+      "https://pubmed.ncbi.nlm.nih.gov/22837270/",
+      "https://pubmed.ncbi.nlm.nih.gov/33438838/",
+      "https://pubmed.ncbi.nlm.nih.gov/25407479/",
+      "https://pubmed.ncbi.nlm.nih.gov/31882189/",
+      "https://pubmed.ncbi.nlm.nih.gov/17515554/",
+      "https://pubmed.ncbi.nlm.nih.gov/9701911/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "cardiotoxicidade-cronica-por-arsenico",
+    "name": "Cardiotoxicidade crônica por arsênico inorgânico ambiental e ocupacional",
+    "aliases": [
+      "arsenicose",
+      "arseniasis",
+      "hidroarsenicismo crônico regional endêmico",
+      "HACRE",
+      "blackfoot disease",
+      "doença do pé negro",
+      "intoxicação crônica por arsênico",
+      "arsênio em água de poço"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "toxicologia_cronica",
+    "prevalence_rank": 123,
+    "completeness": "completo",
+    "summary": "Exposição crônica a arsênico inorgânico por água de poço/subterrânea contaminada naturalmente (Bangladesh, Bengala Ocidental, Taiwan, partes da América Latina), mineração e fundição, agrotóxicos arsenicais históricos e conservantes de madeira, ou indústria de vidro e semicondutores, associada a doença arterial periférica obliterante grave (blackfoot disease, historicamente em Taiwan), hipertensão arterial, aterosclerose acelerada com doença isquêmica coronariana e cerebrovascular, e prolongamento de QT mesmo em exposição contínua de baixa dose. O mecanismo — biotransformação em metabólitos metilados (MMA, DMA), estresse oxidativo endotelial, disfunção mitocondrial, inibição de enzimas dependentes de tiol e efeito pró-aterogênico/pró-trombótico direto sobre o endotélio — é distinto do bloqueio agudo de canal hERG pelo trióxido de arsênio farmacológico usado em quimioterapia. O diagnóstico depende de arsênico urinário (exposição recente), arsênico em cabelo/unha (exposição crônica), índice tornozelo-braço e eletrocardiograma. O tratamento central é a remoção da fonte de exposição; a quelação tem papel estabelecido apenas em intoxicação aguda/subaguda documentada, com benefício não demonstrado na doença vascular crônica já instalada.",
+    "presentation": [
+      "Hipertensão arterial de início ou agravamento em contexto de exposição ambiental ou ocupacional plausível a arsênico, sem outra causa secundária identificada",
+      "Claudicação, cianose distal ou, em exposição histórica muito elevada, gangrena espontânea de extremidades sem trauma precipitante (espectro da blackfoot disease)",
+      "História de consumo prolongado de água de poço não monitorada, residência em área de contaminação geológica conhecida, ou atividade ocupacional em mineração, fundição, vidro ou semicondutores",
+      "Uso histórico de agrotóxico arsenical ou exposição a madeira tratada com arseniato de cobre cromatado (CCA)",
+      "Quadro cardiovascular frequentemente assintomático e insidioso, identificado por rastreio de hipertensão de causa não esclarecida ou por doença arterial periférica em paciente sem os fatores de risco clássicos usuais",
+      "Eventualmente achado incidental de QT prolongado ao eletrocardiograma em paciente com exposição ambiental crônica documentada"
+    ],
+    "differentials": [
+      "Hipertensão essencial sem exposição a metal identificável",
+      "Outras causas secundárias de hipertensão: hiperaldosteronismo primário, doença renovascular, apneia obstrutiva do sono, doença renal parenquimatosa, feocromocitoma",
+      "Exposição concomitante ou isolada a outros metais contaminantes (chumbo, mercúrio, cádmio) com mecanismo cardiovascular sobreposto",
+      "Doença arterial periférica aterosclerótica por fatores de risco clássicos (tabagismo, diabetes, dislipidemia) sem componente tóxico",
+      "Tromboangiite obliterante (doença de Buerger) como diferencial de doença arterial periférica distal grave em paciente jovem tabagista, sem exposição a arsênico",
+      "Prolongamento de QT por trióxido de arsênio farmacológico (quimioterapia de leucemia promielocítica aguda) — entidade distinta, aguda, com bolus terapêutico e monitorização dose a dose",
+      "Outras causas adquiridas de QT longo (fármaco QT-prolongador, distúrbio eletrolítico) sem exposição ambiental a arsênico"
+    ],
+    "tests": [
+      "Arsênico urinário — biomarcador de referência para exposição recente (dias a poucas semanas)",
+      "Arsênico em cabelo e unha — biomarcador de exposição crônica acumulada ao longo de meses",
+      "Índice tornozelo-braço (ITB) para avaliação de doença arterial periférica em paciente com exposição documentada",
+      "Eletrocardiograma com medida de QT corrigido, sobretudo se houver fator de risco adicional para QT longo (distúrbio eletrolítico, fármaco QT-prolongador concomitante, doença aterosclerótica estabelecida)",
+      "História ocupacional e ambiental dirigida: origem da água consumida, atividade profissional, uso histórico de agrotóxico arsenical ou madeira tratada com CCA",
+      "Investigação de hipertensão secundária conforme diretriz vigente quando a causa não estiver esclarecida apenas pela história de exposição",
+      "Perfil lipídico e avaliação padrão de risco cardiovascular, já que a aterosclerose acelerada por arsênico se soma, não substitui, aos fatores de risco convencionais"
+    ],
+    "red_flags": [
+      "Gangrena espontânea de extremidade distal sem trauma precipitante em paciente com exposição documentada ou plausível a arsênico — espectro da blackfoot disease, com risco de perda de membro",
+      "Isquemia crítica de membro (dor em repouso, lesão trófica, gangrena) em paciente com exposição ambiental/ocupacional a arsênico, independentemente da presença dos fatores de risco ateroscleróticos clássicos",
+      "QT corrigido acentuadamente prolongado em paciente com exposição crônica a arsênico e fator de risco adicional associado (distúrbio eletrolítico, fármaco QT-prolongador)",
+      "Sintomas sistêmicos de intoxicação aguda/subaguda (gastrointestinais, neurológicos, cutâneos) sobrepostos ao quadro cardiovascular crônico — sugerem exposição ativa de alta intensidade, não apenas efeito cardiovascular cumulativo de baixa dose",
+      "Gestante com exposição ocupacional ou ambiental a arsênico confirmada ou suspeita — risco para o feto exige avaliação prioritária",
+      "Criança na mesma comunidade ou domicílio com fonte de água compartilhada de origem não monitorada"
+    ],
+    "ambulatory_flow": [
+      "Perguntar ativamente sobre origem da água consumida (poço próprio, rede não monitorada) e sobre exposição ocupacional a arsênico na anamnese de hipertensão de causa não esclarecida ou de doença arterial periférica sem fator de risco clássico proeminente",
+      "Solicitar arsênico urinário (exposição recente) ou em cabelo/unha (exposição crônica) quando houver história ambiental ou ocupacional plausível",
+      "Orientar e articular a remoção ou redução da fonte de exposição (troca de fonte de água, medida de proteção ocupacional, afastamento de atividade de risco) como primeira medida, independentemente do nível de arsênico medido",
+      "Avaliar doença arterial periférica com índice tornozelo-braço em paciente com exposição documentada e qualquer sintoma sugestivo em extremidade",
+      "Solicitar eletrocardiograma com QT corrigido em paciente com exposição crônica documentada e fator de risco adicional para QT longo",
+      "Não indicar quelação com o objetivo isolado de reduzir risco cardiovascular em paciente assintomático com exposição crônica de baixo grau e doença vascular já estabelecida — benefício cardiovascular específico da quelação nesse cenário não está demonstrado",
+      "Tratar a hipertensão, a dislipidemia e a doença arterial periférica associadas com a mesma abordagem de primeira linha recomendada para essas condições em geral, já que não há terapia cardiovascular específica dirigida ao mecanismo do arsênico"
+    ],
+    "emergency_flow": [
+      "Reconhecer isquemia crítica de membro ou gangrena espontânea em paciente com exposição a arsênico como emergência vascular, com avaliação de cirurgia vascular para definição de revascularização versus amputação, seguindo o mesmo fluxo de qualquer doença arterial periférica grave",
+      "Reconhecer intoxicação aguda ou subaguda sintomática (quadro gastrointestinal, neurológico ou cutâneo agudo sobreposto) como cenário distinto da exposição crônica assintomática discutida neste documento, e acionar toxicologia clínica para definição de quelação (DMSA/succimer) conforme gravidade",
+      "Afastar imediatamente a fonte de exposição enquanto se organiza a avaliação",
+      "Investigar e tratar QT acentuadamente prolongado ou arritmia ventricular associada, corrigindo fatores reversíveis (distúrbio eletrolítico, fármaco QT-prolongador concomitante) antes de atribuir o achado exclusivamente ao arsênico",
+      "Não usar quelação de urgência como estratégia isolada de redução de risco cardiovascular fora do contexto de intoxicação aguda ou subaguda documentada"
+    ],
+    "tags": [
+      "arsênio",
+      "arsenicose",
+      "blackfoot disease",
+      "doença do pé negro",
+      "HACRE",
+      "hipertensão secundária",
+      "exposição ocupacional",
+      "exposição ambiental",
+      "água de poço",
+      "doença arterial periférica",
+      "aterosclerose",
+      "QT longo",
+      "disfunção endotelial",
+      "toxicologia cardiovascular",
+      "metais contaminantes"
+    ],
+    "source_refs": [
+      "Chen Y, Graziano JH, Parvez F, et al. Arsenic exposure from drinking water and mortality from cardiovascular disease in Bangladesh: prospective cohort study. BMJ. 2011;342:d2431. DOI: 10.1136/bmj.d2431. PMID: 21546419.",
+      "Moon KA, Guallar E, Umans JG, et al. Association between exposure to low to moderate arsenic levels and incident cardiovascular disease. A prospective cohort study. Ann Intern Med. 2013;159(10):649-659. DOI: 10.7326/0003-4819-159-10-201311190-00719. PMID: 24061511.",
+      "Newman JD, Navas-Acien A, Kuo CC, et al. Peripheral Arterial Disease and Its Association With Arsenic Exposure and Metabolism in the Strong Heart Study. Am J Epidemiol. 2016;184(11):806-817. DOI: 10.1093/aje/kww002. PMID: 27810857.",
+      "Moon KA, Zhang Y, Guallar E, et al. Association of low-moderate urine arsenic and QT interval: cross-sectional and longitudinal evidence from the Strong Heart Study. Environ Pollut. 2018;240:894-902. DOI: 10.1016/j.envpol.2018.04.129. PMID: 29793197.",
+      "Mordukhovich I, Wright RO, Amarasiriwardena C, et al. Association between low-level environmental arsenic exposure and QT interval duration in a general population study. Am J Epidemiol. 2009;170(6):739-746. DOI: 10.1093/aje/kwp191. PMID: 19700500.",
+      "Wang CH, Chen CL, Hsiao CK, et al. Increased risk of QT prolongation associated with atherosclerotic diseases in arseniasis-endemic area in southwestern coast of Taiwan. Toxicol Appl Pharmacol. 2009;239(3):320-324. DOI: 10.1016/j.taap.2009.06.017. PMID: 19573547.",
+      "Mumford JL, Wu K, Xia Y, et al. Chronic arsenic exposure and cardiac repolarization abnormalities with QT interval prolongation in a population-based study. Environ Health Perspect. 2007;115(5):690-694. DOI: 10.1289/ehp.9686. PMID: 17520054.",
+      "Chen CJ, Chiou HY, Chiang MH, Lin LJ, Tai TY. Dose-response relationship between ischemic heart disease mortality and long-term arsenic exposure. Arterioscler Thromb Vasc Biol. 1996;16(4):504-510. DOI: 10.1161/01.atv.16.4.504. PMID: 8624771.",
+      "Chiou HY, Huang WI, Su CL, Chang SF, Hsu YH, Chen CJ. Dose-response relationship between prevalence of cerebrovascular disease and ingested inorganic arsenic. Stroke. 1997;28(9):1717-1723. DOI: 10.1161/01.str.28.9.1717. PMID: 9303014.",
+      "Navas-Acien A, Sharrett AR, Silbergeld EK, et al. Arsenic exposure and cardiovascular disease: a systematic review of the epidemiologic evidence. Am J Epidemiol. 2005;162(11):1037-1049. DOI: 10.1093/aje/kwi330. PMID: 16269585.",
+      "Wang SL, Li WF, Chen CJ, et al. Hypertension incidence after tap-water implementation: a 13-year follow-up study in the arseniasis-endemic area of southwestern Taiwan. Sci Total Environ. 2011;409(21):4528-4535. DOI: 10.1016/j.scitotenv.2011.07.058. PMID: 21872294.",
+      "Abir T, Rahman B, D'Este C, Farooque A, Milton AH. The Association between Chronic Arsenic Exposure and Hypertension: A Meta-Analysis. J Toxicol. 2012;2012:198793. DOI: 10.1155/2012/198793. PMID: 22523484.",
+      "Chen CJ. Health hazards and mitigation of chronic poisoning from arsenic in drinking water: Taiwan experiences. Rev Environ Health. 2014;29(1-2):13-19. DOI: 10.1515/reveh-2014-0007. PMID: 24552958.",
+      "Karachaliou C, Sgourou A, Kakkos S, Kalavrouziotis IK. Arsenic exposure promotes the emergence of cardiovascular diseases. Rev Environ Health. 2022;37(4):467-486. DOI: 10.1515/reveh-2021-0004. PMID: 34253004.",
+      "Kosnett MJ. Chelation for heavy metals (arsenic, lead, and mercury): protective or perilous? Clin Pharmacol Ther. 2010;88(3):412-415. DOI: 10.1038/clpt.2010.132. PMID: 20664538.",
+      "Guha Mazumder D, Dasgupta UB. Chronic arsenic toxicity: studies in West Bengal, India. Kaohsiung J Med Sci. 2011;27(9):360-370. DOI: 10.1016/j.kjms.2011.05.003. PMID: 21914522."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/21546419/",
+      "https://pubmed.ncbi.nlm.nih.gov/24061511/",
+      "https://pubmed.ncbi.nlm.nih.gov/27810857/",
+      "https://pubmed.ncbi.nlm.nih.gov/29793197/",
+      "https://pubmed.ncbi.nlm.nih.gov/19700500/",
+      "https://pubmed.ncbi.nlm.nih.gov/19573547/",
+      "https://pubmed.ncbi.nlm.nih.gov/17520054/",
+      "https://pubmed.ncbi.nlm.nih.gov/8624771/",
+      "https://pubmed.ncbi.nlm.nih.gov/9303014/",
+      "https://pubmed.ncbi.nlm.nih.gov/16269585/",
+      "https://pubmed.ncbi.nlm.nih.gov/21872294/",
+      "https://pubmed.ncbi.nlm.nih.gov/22523484/",
+      "https://pubmed.ncbi.nlm.nih.gov/24552958/",
+      "https://pubmed.ncbi.nlm.nih.gov/34253004/",
+      "https://pubmed.ncbi.nlm.nih.gov/20664538/",
+      "https://pubmed.ncbi.nlm.nih.gov/21914522/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "policondrite-recidivante-cardiovascular",
+    "name": "Policondrite recidivante com acometimento cardiovascular",
+    "aliases": [
+      "relapsing polychondritis",
+      "policondrite recidivante",
+      "condrite recidivante",
+      "aortite por policondrite recidivante"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculite_e_doenca_autoimune_da_aorta",
+    "prevalence_rank": 124,
+    "completeness": "completo",
+    "summary": "Doença autoimune sistêmica rara, dirigida contra colágeno tipo II, matrilina-1 e outros componentes da matriz cartilaginosa, causando episódios recorrentes e destrutivos de condrite auricular (poupando o lóbulo), nasal e laringotraqueal, artrite não erosiva e manifestações oculares e audiovestibulares. Em um subgrupo de pacientes há acometimento cardiovascular — aortite (principalmente de aorta ascendente), insuficiência valvar aórtica (a manifestação valvar mais comum) e mitral, e aneurismas em múltiplos territórios — que, junto ao acometimento laringotraqueal, é uma das principais causas de morbimortalidade da doença.",
+    "presentation": [
+      "Condrite auricular súbita, dolorosa, com eritema e edema da hélix/anti-hélix, tipicamente poupando o lóbulo",
+      "Condrite nasal, podendo evoluir para deformidade em nariz em sela após episódios recorrentes",
+      "Rouquidão, estridor, tosse não produtiva persistente ou dispneia por condrite laringotraqueal",
+      "Poliartrite ou oligoartrite não erosiva, episódica",
+      "Episclerite, esclerite, uveíte ou ceratite",
+      "Perda auditiva neurossensorial, zumbido ou vertigem por acometimento audiovestibular",
+      "Sopro diastólico aórtico ou sistólico mitral de início recente",
+      "Dispneia ou sinais de insuficiência cardíaca por insuficiência valvar aórtica ou mitral progressiva",
+      "Achado incidental de aneurisma de aorta ascendente ou dilatação de raiz aórtica em paciente com condrite conhecida",
+      "Febre, citopenias ou macrocitose em homens mais velhos, sugerindo síndrome mielodisplásica/VEXAS associada"
+    ],
+    "differentials": [
+      "Granulomatose com poliangiite (nariz em sela, mas geralmente com acometimento renal e pulmonar cavitário)",
+      "Síndrome de Cogan (ceratite intersticial e acometimento audiovestibular, com sobreposição clínica reconhecida em subgrupo de pacientes)",
+      "Arterite de Takayasu e arterite de células gigantes (aortite e acometimento de grandes vasos sem condrite)",
+      "Sífilis cardiovascular terciária (aortite e insuficiência aórtica sem condrite auricular)",
+      "Erisipela ou celulite auricular (acomete também o lóbulo, diferente da condrite)",
+      "Doença de Behçet (aneurismas e vasculite sistêmica sem condrite típica)",
+      "Endocardite infecciosa (insuficiência valvar aguda com febre e hemoculturas positivas)",
+      "VEXAS syndrome como causa primária, com policondrite como manifestação"
+    ],
+    "tests": [
+      "Avaliação clínica seriada de sítios cartilaginosos (orelha, nariz, laringe/traqueia) e aplicação de critérios de McAdam ou Damiani-Levine",
+      "Biópsia de cartilagem afetada quando o diagnóstico é incerto, mostrando inflamação perincondral e destruição da matriz",
+      "Ecocardiograma transtorácico em todo paciente com diagnóstico confirmado, avaliando raiz aórtica, valva aórtica, valva mitral e função ventricular",
+      "Angiotomografia ou angiorressonância de aorta quando há suspeita de aneurisma, dilatação de raiz aórtica ou acometimento de outros territórios vasculares",
+      "Broncoscopia e/ou TC de vias aéreas quando há suspeita de acometimento laringotraqueal",
+      "Hemograma completo, e mielograma quando indicado, para investigação de síndrome mielodisplásica associada em homens mais velhos com quadro atípico ou tardio",
+      "Provas de atividade inflamatória (VHS, PCR) para monitorização de atividade, sem valor diagnóstico específico",
+      "Audiometria e avaliação otoneurológica quando há sintomas audiovestibulares"
+    ],
+    "red_flags": [
+      "Estridor, dispneia progressiva ou sinais de obstrução de via aérea por condrite laringotraqueal",
+      "Sopro diastólico aórtico novo ou sinais de insuficiência cardíaca aguda",
+      "Dor torácica ou dorsal súbita sugerindo dissecção ou ruptura aórtica em paciente com PR conhecida",
+      "Aneurisma aórtico de crescimento rápido ou diâmetro acima dos limiares habituais de intervenção",
+      "Febre, citopenias e acometimento cutâneo em homem mais velho, sugerindo VEXAS/síndrome mielodisplásica associada",
+      "Perda auditiva neurossensorial rapidamente progressiva com ceratite, sugerindo sobreposição com síndrome de Cogan"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de PR diante de condrite auricular poupando o lóbulo, condrite nasal ou laringotraqueal, associada a artrite, inflamação ocular ou sintomas audiovestibulares",
+      "Confirmar diagnóstico por critérios clínicos (McAdam ou Damiani-Levine); biópsia de cartilagem se dúvida diagnóstica",
+      "Solicitar ecocardiograma basal em todo paciente com diagnóstico confirmado, mesmo assintomático do ponto de vista cardiovascular",
+      "Complementar com angiotomografia ou angiorressonância de aorta quando ecocardiograma sugerir dilatação de raiz ou dúvida sobre extensão do acometimento aórtico",
+      "Encaminhar a reumatologia para definição de esquema imunossupressor conforme gravidade e extensão do acometimento",
+      "Programar seguimento cardiovascular estruturado de longo prazo com imagem seriada de aorta e reavaliação valvar periódica",
+      "Investigar síndrome mielodisplásica/VEXAS em homens mais velhos com PR de início tardio, febre ou citopenias"
+    ],
+    "emergency_flow": [
+      "Avaliar via aérea imediatamente diante de estridor, rouquidão súbita grave ou dispneia em paciente com PR conhecida ou suspeita, pelo risco de colapso traqueal",
+      "Investigar síndrome aórtica aguda (dor torácica/dorsal súbita) com angiotomografia de aorta em paciente com PR e acometimento aórtico conhecido",
+      "Avaliar descompensação hemodinâmica por insuficiência valvar aguda com ecocardiograma à beira-leito",
+      "Considerar corticoterapia em dose alta e avaliação de cirurgia cardíaca/vascular de urgência conforme gravidade da lesão valvar ou aórtica",
+      "Acionar equipe de via aérea difícil e considerar via aérea cirúrgica precoce em obstrução laringotraqueal significativa"
+    ],
+    "tags": [
+      "policondrite recidivante",
+      "aortite",
+      "insuficiência aórtica",
+      "insuficiência mitral",
+      "aneurisma de aorta",
+      "vasculite",
+      "doença autoimune rara",
+      "síndrome mielodisplásica",
+      "VEXAS",
+      "condrite laringotraqueal"
+    ],
+    "source_refs": [
+      "McAdam LP, O'Hanlan MA, Bluestone R, Pearson CM. Relapsing polychondritis: prospective study of 23 patients and a review of the literature. Medicine (Baltimore). 1976;55(3):193-215. PMID 775252.",
+      "Damiani JM, Levine HL. Relapsing polychondritis--report of ten cases. Laryngoscope. 1979;89(6 Pt 1):929-46. PMID 449538.",
+      "Trentham DE, Le CH. Relapsing polychondritis. Ann Intern Med. 1998;129(2):114-22. PMID 9669970.",
+      "Letko E, Zafirakis P, Baltatzis S, Voudouri A, Livir-Rallatos C, Foster CS. Relapsing polychondritis: a clinical review. Semin Arthritis Rheum. 2002;31(6):384-95. PMID 12077711.",
+      "Del Rosso A, Petix NR, Pratesi M, Bini A. Cardiovascular involvement in relapsing polychondritis. Semin Arthritis Rheum. 1997;26(6):840-4. PMID 9213383.",
+      "Erdogan M, et al. Aortic involvement in relapsing polychondritis: case-based review. Rheumatol Int. 2021;41(11):2033-42. PMID 31768631.",
+      "Rossi FW, et al. Severe Aortic Valve Regurgitation in Relapsing Polychondritis. J Clin Rheumatol. 2018. PMID 29200026.",
+      "Moulis G, et al. Efficacy and safety of biologics in relapsing polychondritis: a French national multicentre study. Ann Rheum Dis. 2018;77(8):1172-8. PMID 29535124.",
+      "Khitri MY, et al. Comparison between idiopathic and VEXAS-relapsing polychondritis. RMD Open. 2022;8(2):e002255. PMID 35868738.",
+      "Arnaud L, et al. French practical guidelines for the diagnosis and management of relapsing polychondritis. Rev Med Interne. 2023. PMID 37236870."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/775252/",
+      "https://pubmed.ncbi.nlm.nih.gov/449538/",
+      "https://pubmed.ncbi.nlm.nih.gov/9669970/",
+      "https://pubmed.ncbi.nlm.nih.gov/12077711/",
+      "https://pubmed.ncbi.nlm.nih.gov/9213383/",
+      "https://pubmed.ncbi.nlm.nih.gov/31768631/",
+      "https://pubmed.ncbi.nlm.nih.gov/29200026/",
+      "https://pubmed.ncbi.nlm.nih.gov/29535124/",
+      "https://pubmed.ncbi.nlm.nih.gov/35868738/",
+      "https://pubmed.ncbi.nlm.nih.gov/37236870/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma"
+    ],
+    "patient_material_slug": null
   }
 ]
