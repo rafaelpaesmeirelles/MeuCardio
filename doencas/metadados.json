@@ -44050,5 +44050,834 @@
       "febre-maculosa-brasileira-e-acometimento-cardiovascular-vasculite-sistemica-por-rickettsia-rickettsii"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "envenenamento-elapidico-picada-de-coral-verdadeira",
+    "name": "Envenenamento elapídico (picada de coral verdadeira, Micrurus spp.)",
+    "aliases": [
+      "acidente elapídico",
+      "acidente ofídico por Micrurus",
+      "picada de coral verdadeira",
+      "envenenamento por Micrurus spp",
+      "acidente por coral verdadeira"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 66,
+    "completeness": "completo",
+    "summary": "Envenenamento por serpentes do gênero Micrurus (corais verdadeiras), o tipo de acidente ofídico proporcionalmente mais raro no Brasil (menos de 1% dos acidentes ofídicos notificados), frequentemente confundidas com falsas-corais não peçonhentas (Oxyrhopus, Erythrolamprus) por padrão de anéis coloridos semelhante — diferenciação notoriamente pouco confiável e que não deve orientar a decisão terapêutica. O veneno é predominantemente neurotóxico pós-sináptico: neurotoxinas de três dedos (3FTx) bloqueiam de forma competitiva e potencialmente reversível o receptor nicotínico de acetilcolina na placa motora (mecanismo tipo curare), com contribuição pré-sináptica adicional variável de fosfolipases A2 conforme a espécie — perfil mecanisticamente oposto ao veneno predominantemente proteolítico/hemostático do acidente botrópico e distinto do bloqueio pré-sináptico predominante da crotoxina no acidente crotálico. O quadro local é discreto (sem edema significativo, necrose ou coagulopatia relevante), enquanto o quadro sistêmico evolui com ptose palpebral, diplopia, oftalmoplegia, disartria, disfagia e sialorreia, podendo progredir para paralisia flácida descendente e insuficiência respiratória por falência da musculatura torácica/diafragmática — a principal causa de óbito. A repercussão cardiovascular é predominantemente secundária à hipóxia da insuficiência respiratória, sem mecanismo cardiotóxico direto bem estabelecido. O tratamento específico é o soro antielapídico (não intercambiável com soro antibotrópico/anticrotálico), associado a suporte ventilatório precoce e agressivo, muitas vezes prolongado por dias até a reversão do bloqueio neuromuscular.",
+    "presentation": [
+      "Sinais locais discretos: dor e parestesia/dormência leves, edema e eritema mínimos, sem necrose ou flictenas — contraste marcante com os acidentes botrópico e crotálico",
+      "Ptose palpebral bilateral, diplopia e oftalmoplegia, muitas vezes precedidas por período de latência clínica enganosamente benigno",
+      "Disartria, disfagia, sialorreia e flacidez da musculatura facial em quadros mais avançados",
+      "Fraqueza generalizada progressiva e dificuldade de deambulação",
+      "Paralisia flácida descendente evoluindo para comprometimento da musculatura do tronco, intercostal e diafragmática",
+      "Sinais precoces de fraqueza respiratória (taquipneia, uso de musculatura acessória, voz entrecortada, tosse fraca) antecedendo hipoxemia franca",
+      "Insuficiência respiratória aguda por falência da bomba ventilatória, principal causa de óbito",
+      "Ausência de sangramento sistêmico ou de sinais hemorrágicos relevantes"
+    ],
+    "differentials": [
+      "Acidente botrópico (Bothrops) — coagulopatia de consumo, sangramento sistêmico e edema/necrose local proeminentes, sem o padrão neuromuscular do acidente elapídico",
+      "Acidente crotálico (Crotalus) — também neurotóxico e com fácies miastênica, mas por bloqueio pré-sináptico da crotoxina, com miotoxicidade sistêmica (rabdomiólise) e hipercalemia arritmogênica sem equivalente relevante no acidente elapídico",
+      "Botulismo — paralisia flácida descendente e insuficiência respiratória semelhantes, mas por bloqueio pré-sináptico (clivagem de proteínas SNARE) em vez de bloqueio competitivo pós-sináptico, geralmente sem contexto de picada e por vezes com pródromo gastrointestinal",
+      "Miastenia gravis em crise — mesmo alvo molecular (receptor nicotínico pós-sináptico), porém por autoanticorpo em vez de neurotoxina exógena, sem contexto de picada e com instalação tipicamente mais lenta",
+      "Síndrome de Guillain-Barré (incluindo variante de Miller Fisher) — fraqueza ascendente ou oftalmoplegia/ataxia sem contexto de picada, com dissociação albuminocitológica no líquor",
+      "Intoxicação por organofosforados — também compromete a transmissão colinérgica, mas por excesso de acetilcolina (inibição da acetilcolinesterase), com sinais muscarínicos proeminentes (miose, broncorreia, bradicardia), mecanismo funcionalmente oposto ao bloqueio competitivo do receptor",
+      "AVC de tronco encefálico — diplopia, disartria e disfagia agudas, mas tipicamente assimétricas e associadas a outros déficits focais, sem contexto de picada"
+    ],
+    "tests": [
+      "Diagnóstico eminentemente clínico-epidemiológico — não há teste laboratorial de confirmação rápida amplamente disponível",
+      "Avaliação seriada e frequente de ptose palpebral e demais sinais de nervos cranianos, mesmo quando discretos",
+      "Avaliação seriada de força muscular global e capacidade de deambulação",
+      "Vigilância ativa de sinais precoces de fraqueza da musculatura respiratória (taquipneia, uso de musculatura acessória, tosse fraca, voz entrecortada)",
+      "Medida seriada de capacidade vital e força inspiratória negativa quando disponível, que costuma antecipar a queda da saturação periférica de oxigênio",
+      "Oximetria de pulso contínua e gasometria arterial diante de qualquer sinal de comprometimento respiratório",
+      "Creatinoquinase, embora elevação miotóxica relevante seja incomum e não seja o eixo do quadro (ao contrário do acidente crotálico)",
+      "Classificação de gravidade clínica conforme critérios do Ministério da Saúde, que orienta a dose de soro"
+    ],
+    "red_flags": [
+      "Qualquer grau de ptose palpebral, diplopia, oftalmoplegia, disartria, disfagia ou sialorreia, mesmo discretos e mesmo com local da picada pouco alterado",
+      "Sinais precoces de fraqueza da musculatura respiratória, mesmo sem hipoxemia estabelecida",
+      "Progressão de fraqueza de padrão descendente (face e nervos cranianos antes de membros)",
+      "Incerteza sobre a identificação da serpente pelo padrão de cores — não deve reduzir o índice de suspeição nem atrasar observação hospitalar",
+      "Período de latência clínica inicial enganosamente benigno seguido de piora rápida",
+      "Administração inadvertida de soro antibotrópico ou anticrotálico isolado em vez do soro antielapídico específico",
+      "Necessidade antecipada de suporte ventilatório prolongado (dias), mesmo após soroterapia já iniciada"
+    ],
+    "ambulatory_flow": [
+      "Todo paciente com suspeita de picada por serpente de padrão anelado compatível com coral deve ser encaminhado a serviço com soro antielapídico disponível — não é quadro de manejo ambulatorial isolado, mesmo com local da picada discreto",
+      "Não tentar diferenciar coral verdadeira de falsa-coral pelo padrão de cores como base para decidir não buscar atendimento — a diferenciação visual é pouco confiável",
+      "Não aplicar torniquete, incisão local, sucção ou qualquer manipulação da ferida que atrase o transporte",
+      "Orientar transporte rápido sem tentar capturar ou manipular a serpente",
+      "Reforçar retorno/observação imediata diante de ptose, visão dupla, dificuldade para engolir, fraqueza ou qualquer sinal neurológico novo, mesmo que o local da picada pareça benigno",
+      "Manter paciente em observação hospitalar com reavaliação neurológica e respiratória seriada nas primeiras horas mesmo se inicialmente assintomático, pelo risco de latência seguida de progressão rápida"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC com atenção especial à via aérea e à musculatura respiratória; obter acesso venoso e monitorizar sinais vitais e oximetria contínua",
+      "Buscar ativamente ptose, diplopia, oftalmoplegia, disartria e disfagia ao exame inicial, mesmo com local da picada pouco alterado",
+      "Iniciar soro antielapídico específico assim que o diagnóstico clínico-epidemiológico for razoável, sem aguardar confirmação laboratorial ou identificação segura da espécie — confirmar que não se trata de soro antibotrópico/anticrotálico isolado",
+      "Reavaliar força muscular, sinais bulbares e função respiratória de forma seriada e frequente, com baixo limiar para medida de capacidade vital/força inspiratória quando disponível",
+      "Antecipar via aérea definitiva (intubação e ventilação mecânica) diante de sinais precoces de fraqueza respiratória ou bulbar — não aguardar hipoxemia estabelecida ou parada respiratória iminente",
+      "Planejar suporte ventilatório potencialmente prolongado (dias), pois a reversão do bloqueio neuromuscular pode ser mais lenta que a neutralização do veneno circulante pelo soro",
+      "Considerar anticolinesterásico (por exemplo, neostigmina) como adjuvante individualizado em casos selecionados, sem substituir a soroterapia específica, monitorizando efeitos colinérgicos sistêmicos",
+      "Investigar e tratar causas cardiovasculares secundárias à insuficiência respiratória (hipoxemia, acidose) em vez de presumir efeito cardiotóxico direto do veneno",
+      "Evitar torniquete, incisão local ou sucção da ferida"
+    ],
+    "tags": [
+      "envenenamento",
+      "acidente ofídico",
+      "Micrurus",
+      "coral verdadeira",
+      "elapídico",
+      "bloqueio neuromuscular pós-sináptico",
+      "receptor nicotínico de acetilcolina",
+      "paralisia flácida",
+      "insuficiência respiratória",
+      "soro antielapídico",
+      "falsa-coral",
+      "toxicologia de emergência"
+    ],
+    "source_refs": [
+      "Bucaretchi F, Hyslop S, Vieira RJ. Bites by coral snakes (Micrurus spp.) in Campinas, State of São Paulo, Southeastern Brazil. Rev Inst Med Trop Sao Paulo. 2006;48(3):141-145. DOI: 10.1590/s0036-46652006000300005. PMID: 16847503",
+      "Bucaretchi F, Capitani EM, Vieira RJ, Rodrigues CK, Zannin M, Da Silva NJ Jr, Casais-e-Silva LL, Hyslop S. Coral snake bites (Micrurus spp.) in Brazil: a review of literature reports. Clin Toxicol (Phila). 2016;54(3):222-234. DOI: 10.3109/15563650.2015.1135337. PMID: 26808120",
+      "Pardal PP, Pardal JS, Gadelha MA, Rodrigues LdaS, Feitosa DT, Prudente AL, Fan HW. Envenomation by Micrurus coral snakes in the Brazilian Amazon region: report of two cases. Rev Inst Med Trop Sao Paulo. 2010;52(6):333-337. DOI: 10.1590/s0036-46652010000600009. PMID: 21225218",
+      "Bisneto PF, Alcântara JA, Mendonça da Silva I, de Almeida Gonçalves Sachett J, Bernarde PS, Monteiro WM, Kaefer IL. Coral snake bites in Brazilian Amazonia: Perpetrating species, epidemiology and clinical aspects. Toxicon. 2020;175:7-18. DOI: 10.1016/j.toxicon.2019.11.011. PMID: 31785286",
+      "Bisneto PF, Araújo BDS, Pereira HDS, Mendonça da Silva I, Sachett JAG, Bernarde PS, Monteiro WM, Kaefer IL. Envenomations by coral snakes in an Amazonian metropolis: Ecological, epidemiological and clinical aspects. Toxicon. 2020;185:193-202. DOI: 10.1016/j.toxicon.2020.07.009. PMID: 32710896",
+      "Strauch MA, Souza GJ, Pereira JN, Ramos TDS, Cesar MO, Tomaz MA, Monteiro-Machado M, Patrão-Neto FC, Melo PA. True or false coral snake: is it worth the risk? A Micrurus corallinus case report. J Venom Anim Toxins Incl Trop Dis. 2018;24:10. DOI: 10.1186/s40409-018-0148-9. PMID: 29651298",
+      "Sanz L, Quesada-Bernat S, Ramos T, Casais-E-Silva LL, Corrêa-Netto C, Silva-Haad JJ, Sasa M, Lomonte B, Calvete JJ. New insights into the phylogeographic distribution of the 3FTx/PLA2 venom dichotomy across genus Micrurus in South America. J Proteomics. 2019;200:90-101. DOI: 10.1016/j.jprot.2019.03.014. PMID: 30946991",
+      "Corrêa-Netto C, Junqueira-de-Azevedo Ide L, Silva DA, Ho PL, Leitão-de-Araújo M, Alves ML, Sanz L, Foguel D, Zingali RB, Calvete JJ. Snake venomics and venom gland transcriptomic analysis of Brazilian coral snakes, Micrurus altirostris and M. corallinus. J Proteomics. 2011;74(9):1795-1809. DOI: 10.1016/j.jprot.2011.04.003. PMID: 21515432",
+      "Renjifo C, Smith EN, Hodgson WC, Renjifo JM, Sanchez A, Acosta R, Maldonado JH, Riveros A. Neuromuscular activity of the venoms of the Colombian coral snakes Micrurus dissoleucus and Micrurus mipartitus: an evolutionary perspective. Toxicon. 2012;59(1):132-142. DOI: 10.1016/j.toxicon.2011.10.017. PMID: 22108621",
+      "Ministério da Saúde (Brasil). Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos. Brasília: Fundação Nacional de Saúde, 2001."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16847503/",
+      "https://pubmed.ncbi.nlm.nih.gov/26808120/",
+      "https://pubmed.ncbi.nlm.nih.gov/21225218/",
+      "https://pubmed.ncbi.nlm.nih.gov/31785286/",
+      "https://pubmed.ncbi.nlm.nih.gov/32710896/",
+      "https://pubmed.ncbi.nlm.nih.gov/29651298/",
+      "https://pubmed.ncbi.nlm.nih.gov/30946991/",
+      "https://pubmed.ncbi.nlm.nih.gov/21515432/",
+      "https://pubmed.ncbi.nlm.nih.gov/22108621/",
+      "https://bvsms.saude.gov.br/bvs/publicacoes/funasa/manu_peconhentos.pdf"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "envenenamento-elapidico-coral-verdadeira-bloqueio-neuromuscular-pos-sinaptico-e-insuficiencia-respiratoria"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "actinomicose-toracica-com-acometimento-pericardico",
+    "name": "Actinomicose torácica com acometimento pericárdico",
+    "aliases": [
+      "actinomicose pericárdica",
+      "pericardite actinomicótica",
+      "actinomicose torácica",
+      "actinomicose pulmonar com invasão de parede torácica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 67,
+    "completeness": "completo",
+    "summary": "Infecção bacteriana crônica e supurativa por Actinomyces spp. (classicamente Actinomyces israelii), organismos comensais de baixa virulência da flora oral que se tornam invasivos após ruptura da barreira mucosa (aspiração, doença periodontal, doença pulmonar estrutural), geralmente como infecção polimicrobiana. Na forma torácica, produz consolidação pulmonar crônica que evolui para massa pleuropulmonar com invasão contígua de parede torácica e mediastino, radiologicamente indistinguível de neoplasia maligna (carcinoma broncogênico invasivo, tumor de Pancoast) e frequentemente investigada e até ressecada como câncer antes do diagnóstico correto. O acometimento pericárdico é raro, descrito predominantemente em relatos de caso, por extensão contígua direta (não hematogênica) de foco pulmonar/mediastinal, podendo causar derrame pericárdico, pericardite purulenta com tamponamento ou, pela natureza fibrosante crônica do processo, pericardite constritiva. O diagnóstico depende de histopatologia (grânulos de enxofre, filamentos Gram-positivos ramificados não fragmentados) e cultura anaeróbia prolongada; o tratamento é antibioticoterapia prolongada (penicilina G intravenosa seguida de penicilina oral ou amoxicilina por 6 a 12 meses ou mais), associada a drenagem/ressecção cirúrgica e, quando indicado, pericardiocentese ou pericardiectomia.",
+    "presentation": [
+      "Tosse crônica, febre baixa intermitente, perda de peso e mal-estar de evolução insidiosa, semanas a meses",
+      "Massa pulmonar ou pleuropulmonar de crescimento lento, com ou sem invasão de parede torácica, por vezes confundida clinicamente e radiologicamente com neoplasia",
+      "Dor torácica localizada e, quando há invasão de parede torácica, massa palpável ou trajeto fistuloso cutâneo com drenagem de material contendo grânulos de enxofre (achado clássico, hoje menos frequente)",
+      "Sinais de acometimento pericárdico quando há extensão contígua: dor torácica pleurítica, atrito pericárdico, dispneia por derrame pericárdico",
+      "Sinais de tamponamento cardíaco (dispneia progressiva, hipotensão, turgência jugular, pulso paradoxal) em casos com pericardite purulenta",
+      "Sinais de pericardite constritiva (edema, ascite, turgência jugular, sinal de Kussmaul) em casos de diagnóstico tardio com fibrose pericárdica estabelecida",
+      "Fatores de risco associados: má higiene dentária, doença periodontal avançada, uso abusivo de álcool, distúrbio de deglutição com aspiração recorrente, doença pulmonar estrutural prévia (bronquiectasia, sequela de tuberculose, DPOC)"
+    ],
+    "differentials": [
+      "Carcinoma broncogênico localmente invasivo ou tumor de Pancoast — principal diagnóstico diferencial de imagem, indistinguível sem histopatologia",
+      "Tuberculose pulmonar e pericárdica — outra causa infecciosa crônica granulomatosa com invasão contígua e potencial constritivo",
+      "Nocardiose torácica — filamentos Gram-positivos ramificados semelhantes à histopatologia, porém mais finos, fragmentados e parcialmente álcool-ácido resistentes",
+      "Empiema pleural com fístula ou invasão de parede torácica de outra etiologia bacteriana",
+      "Linfoma ou outra neoplasia mediastinal com invasão local",
+      "Micoses endêmicas com acometimento pulmonar e pericárdico (histoplasmose, coccidioidomicose) em contexto epidemiológico compatível",
+      "Pericardite purulenta bacteriana por outros agentes, quando o quadro se apresenta como derrame pericárdico agudo com tamponamento"
+    ],
+    "tests": [
+      "Tomografia de tórax para caracterizar extensão da massa, invasão de parede torácica e mediastino e eventual envolvimento pericárdico",
+      "Cultura anaeróbia prolongada de material purulento, biópsia ou espécime cirúrgico, com alerta explícito ao laboratório sobre a suspeita clínica",
+      "Histopatologia do tecido biopsiado ou ressecado, buscando grânulos de enxofre e filamentos Gram-positivos ramificados não fragmentados",
+      "PCR para Actinomyces quando disponível, especialmente diante de cultura negativa com histopatologia sugestiva ou uso prévio de antibiótico empírico",
+      "Ecocardiograma para quantificar derrame pericárdico, espessamento pericárdico e sinais hemodinâmicos de tamponamento ou constrição, quando há suspeita de acometimento pericárdico",
+      "Investigação odontológica/periodontal e de disfagia/aspiração como parte da busca ativa pela porta de entrada"
+    ],
+    "red_flags": [
+      "Massa torácica com invasão de parede torácica levando a investigação ou ressecção cirúrgica presumindo malignidade sem confirmação histopatológica prévia",
+      "Sinais de tamponamento cardíaco: dispneia progressiva, hipotensão, turgência jugular, pulso paradoxal",
+      "Sinais de pericardite constritiva estabelecida em paciente com massa pulmonar/mediastinal contígua ao pericárdio",
+      "Cultura de rotina negativa em paciente com forte suspeita clínica — risco de descarte precoce da placa por falta de alerta ao laboratório sobre necessidade de cultura anaeróbia prolongada",
+      "Trajeto fistuloso cutâneo crônico de parede torácica com drenagem purulenta não investigado para grânulos de enxofre"
+    ],
+    "ambulatory_flow": [
+      "Manter actinomicose no diagnóstico diferencial de toda massa torácica invasiva antes de assumir malignidade, especialmente com fatores de risco compatíveis (má higiene dentária, aspiração, doença pulmonar estrutural)",
+      "Encaminhar para biópsia com envio sistemático de material tanto para histopatologia quanto para cultura anaeróbia prolongada, alertando o laboratório sobre a suspeita",
+      "Investigar ativamente porta de entrada: avaliação odontológica/periodontal e triagem de disfagia/aspiração",
+      "Iniciar penicilina G intravenosa em altas doses por várias semanas, com transição planejada para penicilina oral ou amoxicilina por período total de 6 a 12 meses ou mais, conforme extensão da doença e resposta clínico-radiológica",
+      "Programar imagem seriada (tomografia de tórax) e, se houve acometimento pericárdico, ecocardiograma seriado para documentar resolução",
+      "Monitorar clinicamente sinais tardios de evolução para pericardite constritiva em pacientes com acometimento pericárdico confirmado"
+    ],
+    "emergency_flow": [
+      "Sinais de tamponamento cardíaco: ecocardiograma point-of-care e pericardiocentese sem atraso, independentemente da etiologia infecciosa suspeita",
+      "Pericardite constritiva estabelecida com repercussão hemodinâmica: avaliação para pericardiectomia após controle antibiótico inicial",
+      "Suspeita de actinomicose torácica extensa ou refratária: avaliação cirúrgica para drenagem ou ressecção de tecido necrótico/abscesso como complemento à antibioticoterapia, não como substituto",
+      "Material obtido em qualquer drenagem ou ressecção de emergência deve ser sistematicamente enviado para cultura anaeróbia prolongada e histopatologia"
+    ],
+    "tags": [
+      "actinomicose",
+      "Actinomyces israelii",
+      "pericardite",
+      "massa pulmonar",
+      "invasão de parede torácica",
+      "grânulos de enxofre",
+      "diagnóstico diferencial de câncer de pulmão",
+      "pericardite constritiva",
+      "tamponamento cardíaco",
+      "penicilina G",
+      "infecção anaeróbia polimicrobiana",
+      "aspiração"
+    ],
+    "source_refs": [
+      "Valour F, Sénéchal A, Dupieux C, et al. Actinomycosis: etiology, clinical features, diagnosis, treatment, and management. Infect Drug Resist. 2014;7:183-197. PMID: 25045274.",
+      "Boot M, Archer J, Ali I. The diagnosis and management of pulmonary actinomycosis. J Infect Public Health. 2023;16(4):490-500. PMID: 36801629.",
+      "Cardoso CG, Freitas C, Gomes I, et al. Enlightening clinical and therapeutic heterogeneity in thoracic actinomycosis: a review in bronchiectasis and non-bronchiectasis patients. Pulm Pharmacol Ther. 2021;71:102078. PMID: 34571094.",
+      "Hooker TP, Hammond M, Corral K. Empyema necessitatis: review of the manifestations of thoracic actinomycosis. Cleve Clin J Med. 1992;59(5):542-548. PMID: 1468136.",
+      "Bartlett AH, Rivera AL, Krishnamurthy R, et al. Thoracic actinomycosis in children: case report and review of the literature. Pediatr Infect Dis J. 2008;27(2):165-169. PMID: 18174864.",
+      "McHugh KE, Sturgis CD, Procop GW, et al. The cytopathology of Actinomyces, Nocardia, and their mimickers. Diagn Cytopathol. 2017;45(12):1105-1115. PMID: 28888064.",
+      "Fife TD, Finegold SM, Grennan T. Pericardial actinomycosis: case report and review. Rev Infect Dis. 1991;13(1):120-126. PMID: 2017611.",
+      "Korkchi N, Ngo L, Fong KM, et al. Pericardial infiltration and constriction due to cardiac actinomycosis—case report. Eur Heart J Case Rep. 2023;7(11):ytad510. PMID: 38077408.",
+      "Tuck N, Leatherman J, Assi M, et al. A case of actinomycosis presenting as purulent pericarditis with cardiac tamponade. Kans J Med. 2021;14:227-228. PMID: 34540137.",
+      "Shinagawa N, Yamaguchi E, Takahashi T, et al. Pulmonary actinomycosis followed by pericarditis and intractable pleuritis. Intern Med. 2002;41(4):319-322. PMID: 11993795.",
+      "Datta JS, Raff MJ. Actinomycotic pleuropericarditis. Am Rev Respir Dis. 1974;110(3):338-341. PMID: 4277986.",
+      "Mohan K, Dass SI, Kemble EE. Actinomycosis of pericardium. JAMA. 1974;229(3):321. PMID: 4406956.",
+      "O'Sullivan RA, Armstrong JG, Rivers JT, et al. Pulmonary actinomycosis complicated by effusive constrictive pericarditis. Aust N Z J Med. 1991;21(6):879-880. PMID: 1818548."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25045274/",
+      "https://pubmed.ncbi.nlm.nih.gov/36801629/",
+      "https://pubmed.ncbi.nlm.nih.gov/34571094/",
+      "https://pubmed.ncbi.nlm.nih.gov/1468136/",
+      "https://pubmed.ncbi.nlm.nih.gov/18174864/",
+      "https://pubmed.ncbi.nlm.nih.gov/28888064/",
+      "https://pubmed.ncbi.nlm.nih.gov/2017611/",
+      "https://pubmed.ncbi.nlm.nih.gov/38077408/",
+      "https://pubmed.ncbi.nlm.nih.gov/34540137/",
+      "https://pubmed.ncbi.nlm.nih.gov/11993795/",
+      "https://pubmed.ncbi.nlm.nih.gov/4277986/",
+      "https://pubmed.ncbi.nlm.nih.gov/4406956/",
+      "https://pubmed.ncbi.nlm.nih.gov/1818548/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "actinomicose-toracica-com-acometimento-pericardico-mimetizando-cancer-de-pulmao"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "febre-purpurica-brasileira",
+    "name": "Febre Purpúrica Brasileira",
+    "aliases": [
+      "FPB",
+      "Brazilian purpuric fever",
+      "doença invasiva por Haemophilus influenzae biogrupo aegyptius",
+      "sepse por Haemophilus aegyptius",
+      "conjuntivite-sepse pelo clone BPF"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 68,
+    "completeness": "completo",
+    "summary": "Doença rara, descrita originalmente em surtos no interior de São Paulo (Promissão e Serrana) em 1984 e documentada no Brasil até 1993, causada por um clone específico do biogrupo aegyptius de Haemophilus influenzae (Haemophilus aegyptius). Apresenta-se em duas fases: uma conjuntivite purulenta bilateral banal e autolimitada, seguida, numa fração pequena e imprevisível dos casos, 7 a 16 dias depois, por febre alta súbita, vômitos, dor abdominal e progressão em horas para púrpura fulminante, choque séptico refratário e coagulação intravascular disseminada, com letalidade histórica em torno de 70% nos casos bem documentados. A fase fulminante é clinicamente indistinguível da meningococcemia fulminante; a pista diagnóstica central é a história de conjuntivite purulenta recente, frequentemente negligenciada. Nenhum caso novo foi documentado no Brasil desde 1993, provavelmente por imunidade populacional adquirida ao clone circulante.",
+    "presentation": [
+      "Fase 1 (a esmagadora maioria dos casos): conjuntivite purulenta bilateral, indistinguível de qualquer conjuntivite bacteriana comum da infância, autolimitada",
+      "Fase 2 (minoria imprevisível dos casos, 7 a 16 dias após a conjuntivite): início súbito de febre alta, vômitos e dor abdominal",
+      "Progressão em horas para púrpura hemorrágica de pele, predominando em face e extremidades",
+      "Cianose e necrose rapidamente progressiva de tecidos moles, sobretudo mãos, pés, nariz e orelhas",
+      "Choque séptico refratário a volume, frequentemente fatal em poucas horas desde a chegada ao hospital",
+      "Trombocitopenia (plaquetas medianas em torno de 50.000/µL), alargamento do tempo de protrombina e demais sinais de CIVD",
+      "Idade tipicamente entre 3 meses e 10 anos, sem predileção de sexo consistente"
+    ],
+    "differentials": [
+      "Meningococcemia fulminante e síndrome de Waterhouse-Friderichsen (apresentação fulminante idêntica; distinção pela história de conjuntivite antecedente)",
+      "Sepse fulminante por Streptococcus pneumoniae",
+      "Síndrome do choque tóxico estafilocócico ou estreptocócico",
+      "Sepse por outros bacilos gram-negativos com púrpura fulminante secundária",
+      "Síndrome do choque da doença de Kawasaki (febre, exantema e conjuntivite não purulenta, mas sem púrpura necrotizante fulminante típica)",
+      "MIS-C (síndrome inflamatória multissistêmica pediátrica) com disfunção miocárdica e choque",
+      "Púrpura fulminante de causa não infecciosa (deficiência hereditária de proteína C/S, púrpura fulminans pós-infecciosa idiopática)"
+    ],
+    "tests": [
+      "Hemocultura (historicamente positiva em apenas cerca de 10% dos casos documentados de FPB; não deve atrasar a decisão terapêutica)",
+      "Coagulograma completo: tempo de protrombina, TTPA, fibrinogênio e D-dímero",
+      "Hemograma completo com contagem de plaquetas seriada",
+      "Gasometria arterial e lactato",
+      "Cultura de secreção conjuntival, se ainda presente ou relatada recentemente",
+      "Função renal e hepática",
+      "Anamnese dirigida específica sobre conjuntivite purulenta nos 5 a 16 dias anteriores"
+    ],
+    "red_flags": [
+      "Criança pequena (geralmente menor de 10 anos) em choque com púrpura extensa de instalação em horas",
+      "História de conjuntivite purulenta bilateral nos 5 a 16 dias anteriores, mesmo que já resolvida e considerada 'banal' pela família",
+      "Febre alta súbita associada a vômitos e dor abdominal em criança com conjuntivite recente",
+      "Progressão de exantema petequial para púrpura necrotizante em poucas horas",
+      "Cianose ou necrose de extremidades (mãos, pés, nariz, orelhas) de instalação rápida",
+      "Choque refratário a volume em criança previamente hígida"
+    ],
+    "ambulatory_flow": [
+      "No atendimento de uma conjuntivite purulenta bilateral em criança pequena, tratar como conjuntivite bacteriana comum (a esmagadora maioria dos casos é benigna e autolimitada)",
+      "Orientar a família, ainda que de forma breve, a procurar atendimento de urgência caso a criança desenvolva febre alta, vômitos, dor abdominal ou manchas hemorrágicas na pele nos dias seguintes",
+      "Não há indicação de rastreio laboratorial rotineiro ou de antibioticoprofilaxia sistêmica em toda criança com conjuntivite purulenta banal, dado que a evolução para forma sistêmica é rara e imprevisível",
+      "Se disponível historicamente em contexto de surto confirmado, considerar rifampicina oral para erradicação de colonização conjuntival, preferível ao cloranfenicol tópico para esse fim"
+    ],
+    "emergency_flow": [
+      "Reconhecer o padrão de choque com púrpura extensa em criança pequena como emergência com tratamento imediato, sem aguardar confirmação microbiológica de nenhuma etiologia",
+      "Perguntar ativamente sobre conjuntivite purulenta nos 5 a 16 dias anteriores como parte da anamnese dirigida, ao lado da investigação padrão para doença meningocócica invasiva",
+      "Iniciar antibioticoterapia empírica parenteral imediata com cobertura para Haemophilus influenzae e demais gram-negativos causadores de sepse fulminante pediátrica (tipicamente cefalosporina de terceira geração), seguindo o mesmo princípio de não aguardar confirmação já estabelecido para outras sepses fulminantes",
+      "Suporte hemodinâmico agressivo com reposição volêmica guiada por resposta clínica e introdução precoce de vasopressor diante de choque refratário a volume",
+      "Reposição de hemoderivados (plasma fresco congelado, crioprecipitado, plaquetas) guiada pela presença de sangramento clínico ativo, não pela correção isolada de valores de coagulograma",
+      "Transferência precoce para unidade de terapia intensiva pediátrica assim que reconhecido o padrão clínico, dada a velocidade de deterioração histórica (óbito em poucas horas desde a chegada ao hospital nos casos fatais)",
+      "Considerar desbridamento cirúrgico tardio (após demarcação de tecido viável) para necrose de extremidades, em conjunto com cirurgia plástica, quando houver sobrevida à fase aguda"
+    ],
+    "tags": [
+      "pediatria",
+      "doença infecciosa",
+      "choque séptico",
+      "púrpura fulminante",
+      "coagulação intravascular disseminada",
+      "Haemophilus influenzae",
+      "Haemophilus aegyptius",
+      "conjuntivite",
+      "emergência pediátrica",
+      "doença rara",
+      "epidemiologia brasileira",
+      "sepse fulminante"
+    ],
+    "source_refs": [
+      "Brazilian Purpuric Fever Study Group. Brazilian purpuric fever: epidemic purpura fulminans associated with antecedent purulent conjunctivitis. Lancet. 1987;2(8562):757-761. PMID: 2888985",
+      "Brazilian Purpuric Fever Study Group. Haemophilus aegyptius bacteraemia in Brazilian purpuric fever. Lancet. 1987;2(8562):761-763. PMID: 2888986",
+      "Brenner DJ, Mayer LW, Carlone GM, Harrison LH, Bibb WF, Brandileone MC, Sottnek FO, Irino K, Reeves MW, Swenson JM, et al. Biochemical, genetic, and epidemiologic characterization of Haemophilus influenzae biogroup aegyptius (Haemophilus aegyptius) strains associated with Brazilian purpuric fever. J Clin Microbiol. 1988;26(8):1524-1534. PMID: 3262623",
+      "Harrison LH, da Silva GA, Pittman M, Fleming DW, Vranjac A, Broome CV. Epidemiology and clinical spectrum of Brazilian purpuric fever. J Clin Microbiol. 1989;27(4):599-604. PMID: 2656737",
+      "Swaminathan B, Mayer LW, Bibb WF, Ajello GW, Irino K, Birkness KA, Garon CF, Reeves MW, de Cunto Brandileone MC, Sottnek FO. Microbiology of Brazilian purpuric fever and diagnostic tests. J Clin Microbiol. 1989;27(4):605-608. PMID: 2656738",
+      "Carlone GM, Gorelkin L, Gheesling LL, Erwin AL, Hoiseth SK, Mulks MH, O'Connor SP, Weyant RS, Myrick J, Rubin L. Potential virulence-associated factors in Brazilian purpuric fever. J Clin Microbiol. 1989;27(4):609-614. PMID: 2656739",
+      "Harrison LH, Simonsen V, Waldman EA. Emergence and disappearance of a virulent clone of Haemophilus influenzae biogroup aegyptius, cause of Brazilian purpuric fever. Clin Microbiol Rev. 2008;21(4):594-605. PMID: 18854482",
+      "Brazilian Purpuric Fever Study Group. Brazilian purpuric fever identified in a new region of Brazil. J Infect Dis. 1992;165(Suppl 1):S16-S19. PMID: 1588153",
+      "Pereira RFC, Theizen TH, Machado D, Guarnieri JPO, Gomide GP, Hollanda LM, Lancellotti M. Analysis of potential virulence genes and competence to transformation in Haemophilus influenzae biotype aegyptius associated with Brazilian Purpuric Fever. Genet Mol Biol. 2020;44(1):e20200029. PMID: 33395458",
+      "Pereira RFC, Mofatto LS, Silva ACA, Alves DA, Machado D, Theizen TH, Pereira GAG, Levy CE, de Hollanda LM, Carazzolle MF, Lancellotti M. Draft Whole-Genome Sequences of Haemophilus influenzae Biogroup aegyptius Strains Isolated from Five Brazilian Purpuric Fever Cases and One Conjunctivitis Case. Microbiol Resour Announc. 2019;8(30):e00642-19. PMID: 31346025"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/2888985/",
+      "https://pubmed.ncbi.nlm.nih.gov/2888986/",
+      "https://pubmed.ncbi.nlm.nih.gov/3262623/",
+      "https://pubmed.ncbi.nlm.nih.gov/2656737/",
+      "https://pubmed.ncbi.nlm.nih.gov/2656738/",
+      "https://pubmed.ncbi.nlm.nih.gov/2656739/",
+      "https://pubmed.ncbi.nlm.nih.gov/18854482/",
+      "https://pubmed.ncbi.nlm.nih.gov/1588153/",
+      "https://pubmed.ncbi.nlm.nih.gov/33395458/",
+      "https://pubmed.ncbi.nlm.nih.gov/31346025/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "febre-purpurica-brasileira-choque-fulminante-por-haemophilus-aegyptius"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "linfo-histiocitose-hemofagocitica-secundaria",
+    "name": "Linfo-histiocitose hemofagocítica (HLH) secundária",
+    "aliases": [
+      "HLH secundária",
+      "síndrome hemofagocítica reativa",
+      "síndrome de ativação macrofágica",
+      "SAM",
+      "HLH do adulto",
+      "hemophagocytic lymphohistiocytosis"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "hiperinflamatoria_secundaria",
+    "prevalence_rank": 69,
+    "completeness": "completo",
+    "summary": "A linfo-histiocitose hemofagocítica (HLH) secundária é uma síndrome de hiperinflamação sistêmica potencialmente fatal, causada por ativação descontrolada de macrófagos e linfócitos T citotóxicos com liberação maciça de citocinas (tempestade de citocinas), desencadeada por infecção (sobretudo vírus da família Herpesviridae, com destaque para o EBV), neoplasia (sobretudo linfoma) ou doença autoimune/reumatológica — quando é chamada síndrome de ativação macrofágica, classicamente associada à doença de Still do adulto. É a forma predominante de HLH em adultos, em contraste com as formas primárias/genéticas, mais associadas a crianças. O acometimento cardiovascular inclui miocardite com elevação de troponina e disfunção sistólica de gravidade variável, choque multifatorial (componentes distributivo, cardiogênico e, quando há coagulopatia/CIVD associada, hemorrágico) e, mais raramente, derrame pericárdico com potencial evolução para tamponamento cardíaco. O diagnóstico combina critérios clínico-laboratoriais (HLH-2004) e o HScore, validado especificamente para adultos; a investigação ativa do gatilho subjacente é indispensável porque o tratamento definitivo depende de tratar a causa.",
+    "presentation": [
+      "Febre persistente, frequentemente de origem indeterminada na apresentação inicial",
+      "Esplenomegalia, com ou sem hepatomegalia associada",
+      "Citopenias progressivas em duas ou mais linhagens hematológicas",
+      "Elevação de troponina e/ou disfunção sistólica ventricular de gravidade variável, por miocardite direta ou efeito tóxico das citocinas circulantes sobre o miocárdio",
+      "Choque multifatorial refratário à reposição volêmica isolada, combinando componente distributivo (vasoplegia mediada por citocinas), componente cardiogênico (disfunção miocárdica) e, quando há coagulopatia associada, componente hemorrágico",
+      "Derrame pericárdico, geralmente como parte do acometimento seroso sistêmico da síndrome, raramente evoluindo a tamponamento cardíaco",
+      "Manifestações hemorrágicas relacionadas a coagulopatia/CIVD associada, incluindo hipofibrinogenemia",
+      "Disfunção hepática, com elevação de transaminases e/ou icterícia",
+      "Manifestações neurológicas variáveis (confusão, convulsões, rebaixamento do nível de consciência) em casos com acometimento do sistema nervoso central",
+      "Sinais e sintomas relacionados ao gatilho subjacente (infecção ativa, doença reumatológica de base, sintomas B de neoplasia hematológica)"
+    ],
+    "differentials": [
+      "Sepse e choque séptico de outra etiologia, sobretudo em paciente crítico com hiperferritinemia e disfunção de múltiplos órgãos",
+      "Síndrome de liberação de citocinas (SLC) por terapia com células CAR-T ou outra imunoterapia celular, em paciente com histórico oncológico recente",
+      "Linfoma ou outra neoplasia hematológica sem HLH associada, quando febre, citopenias e organomegalia predominam sobre os demais critérios",
+      "Doença de Still do adulto ou outra doença autoimune/reumatológica em atividade, sem síndrome de ativação macrofágica sobreposta",
+      "Insuficiência hepática aguda de outra causa, quando a disfunção hepática é o achado predominante",
+      "Coagulação intravascular disseminada (CIVD) de outra etiologia primária, não secundária à hiperinflamação da HLH",
+      "Miocardite de outra etiologia (viral primária, por checkpoint inibidor, de células gigantes) quando o acometimento cardíaco é a manifestação inicial predominante",
+      "Síndrome hiperferritinêmica de outra causa em paciente criticamente enfermo, sem os demais critérios de HLH presentes"
+    ],
+    "tests": [
+      "Hemograma completo com avaliação de citopenias em pelo menos duas linhagens",
+      "Ferritina sérica (marcador sensível e de resposta laboratorial rápida, interpretado sempre no contexto clínico-laboratorial completo)",
+      "Triglicerídeos séricos e fibrinogênio (hipertrigliceridemia e/ou hipofibrinogenemia)",
+      "Coagulograma completo, incluindo avaliação para coagulação intravascular disseminada (CIVD)",
+      "CD25 solúvel (receptor de IL-2 solúvel), quando disponível",
+      "Avaliação de atividade/função de células natural killer (NK), quando disponível",
+      "Aspirado/biópsia de medula óssea com pesquisa de hemofagocitose",
+      "Cálculo do HScore (variáveis clínicas, laboratoriais e histológicas) — ferramenta validada especificamente para adultos",
+      "Aplicação dos critérios HLH-2004 (cinco de oito critérios ou confirmação molecular)",
+      "Sorologia e PCR viral, com atenção dirigida ao vírus Epstein-Barr (EBV) e outros herpesvírus",
+      "Investigação hematológica dirigida para linfoma (tomografia/PET-CT, biópsia de linfonodo, biópsia de medula óssea) quando há suspeita de gatilho neoplásico",
+      "Marcadores autoimunes (fator antinuclear, fator reumatoide, entre outros conforme o quadro clínico) quando há suspeita de gatilho autoimune/reumatológico",
+      "Troponina de alta sensibilidade e peptídeo natriurético, diante de suspeita de acometimento cardíaco",
+      "Ecocardiograma transtorácico (avaliação de função ventricular e de derrame pericárdico), incluindo avaliação point-of-care à beira do leito quando há suspeita de repercussão hemodinâmica"
+    ],
+    "red_flags": [
+      "Choque refratário à reposição volêmica inicial, sugerindo componente cardiogênico e/ou hemorrágico sobreposto ao componente distributivo",
+      "Nova disfunção ventricular, arritmia ou elevação significativa de troponina no contexto de HLH/SAM em atividade",
+      "Sinais de tamponamento cardíaco (hipotensão, turgência jugular, pulso paradoxal, abafamento de bulhas) diante de derrame pericárdico conhecido ou suspeito",
+      "Sangramento ativo ou coagulopatia grave sugestiva de coagulação intravascular disseminada (CIVD)",
+      "Rebaixamento do nível de consciência ou sinais neurológicos focais, sugerindo acometimento do sistema nervoso central",
+      "Deterioração clínica rápida em paciente com neoplasia hematológica conhecida ou recém-diagnosticada, sugerindo HLH associada a linfoma",
+      "Ausência de resposta à corticoterapia em alta dose nas primeiras 24-48 horas, sinalizando necessidade de escalonamento terapêutico"
+    ],
+    "ambulatory_flow": [
+      "Investigação ambulatorial de febre de origem indeterminada associada a citopenias e organomegalia deve incluir ferritina sérica desde a avaliação inicial",
+      "Paciente com doença de Still do adulto, artrite idiopática juvenil sistêmica ou outra doença autoimune em atividade deve ser monitorado clinicamente para sinais precoces de ativação macrofágica (febre persistente, queda inexplicada de contagens hematológicas, elevação de ferritina)",
+      "Paciente em acompanhamento por linfoma com febre persistente, citopenias desproporcionais ao esperado pela quimioterapia ou organomegalia nova deve ser investigado ativamente para HLH associada à neoplasia",
+      "Suspeita clínica de HLH em ambiente ambulatorial (critérios clínicos e ferritina muito elevada) justifica encaminhamento urgente para avaliação hospitalar, dada a potencial gravidade e rapidez de progressão da síndrome",
+      "Rastreio de comorbidade cardiovascular basal (ECG, avaliação de sintomas cardíacos) deve ser considerado em paciente com HLH/SAM confirmada, mesmo antes de sintomas cardiovasculares evidentes, dado o potencial de acometimento miocárdico e pericárdico"
+    ],
+    "emergency_flow": [
+      "Paciente com suspeita de HLH e instabilidade hemodinâmica: avaliação hemodinâmica imediata, ecocardiograma point-of-care para triagem de disfunção ventricular e derrame pericárdico, e início precoce de suporte conforme o(s) componente(s) de choque identificado(s) (distributivo, cardiogênico, hemorrágico)",
+      "Confirmação ou forte suspeita diagnóstica (critérios HLH-2004 e/ou HScore elevado): iniciar corticoterapia em alta dose sem atraso, em paralelo à investigação ativa do gatilho subjacente (sorologia/PCR viral, investigação hematológica, marcadores autoimunes)",
+      "Choque refratário à corticoterapia isolada ou quadro clínico grave: considerar escalonamento terapêutico (etoposídeo ou terapia direcionada a citocina específica) em conjunto com hematologia/reumatologia, conforme o gatilho e a gravidade",
+      "Suspeita de tamponamento cardíaco: ecocardiograma point-of-care imediato e avaliação para pericardiocentese/drenagem guiada por imagem conforme repercussão hemodinâmica",
+      "Sinais de coagulopatia/CIVD: reposição de hemocomponentes conforme sangramento ativo e alterações laboratoriais, com reavaliação seriada do coagulograma",
+      "Internação em unidade de terapia intensiva indicada diante de choque, disfunção miocárdica relevante, coagulopatia grave ou necessidade de suporte de múltiplos órgãos",
+      "Tratamento do gatilho subjacente assim que identificado — antiviral quando aplicável, quimioterapia dirigida ao linfoma, ou intensificação da imunossupressão específica para a doença autoimune de base — em paralelo ao controle da hiperinflamação sistêmica, não como etapa sequencial posterior"
+    ],
+    "tags": [
+      "HLH",
+      "linfo-histiocitose hemofagocítica",
+      "síndrome de ativação macrofágica",
+      "tempestade de citocinas",
+      "miocardite",
+      "choque refratário",
+      "choque misto",
+      "tamponamento cardíaco",
+      "derrame pericárdico",
+      "ferritina",
+      "HScore",
+      "HLH-2004",
+      "etoposídeo",
+      "anakinra",
+      "doença de Still do adulto",
+      "linfoma",
+      "EBV",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Henter JI, Horne A, Aricó M, Egeler RM, Filipovich AH, Imashuku S, Ladisch S, McClain K, Webb D, Winiarski J, Janka G. HLH-2004: Diagnostic and therapeutic guidelines for hemophagocytic lymphohistiocytosis. Pediatr Blood Cancer. 2007;48(2):124-131. DOI: 10.1002/pbc.21039. PMID: 16937360.",
+      "Henter JI, Aricò M, Egeler RM, Elinder G, Favara BE, Filipovich AH, Gadner H, Imashuku S, Janka-Schaub G, Komp D, Ladisch S, Webb D. HLH-94: a treatment protocol for hemophagocytic lymphohistiocytosis. Med Pediatr Oncol. 1997;28(5):342-347. DOI: 10.1002/(sici)1096-911x(199705)28:5<342::aid-mpo3>3.0.co;2-h. PMID: 9121398.",
+      "Fardet L, Galicier L, Lambotte O, Marzac C, Aumont C, Chahwan D, Coppo P, Hejblum G. Development and validation of the HScore, a score for the diagnosis of reactive hemophagocytic syndrome. Arthritis Rheumatol. 2014;66(9):2613-2620. DOI: 10.1002/art.38690. PMID: 24782338.",
+      "La Rosée P, Horne A, Hines M, von Bahr Greenwood T, Machowicz R, Berliner N, Birndt S, Gil-Herrera J, Girschikofsky M, Jordan MB, Kumar A, van Laar JAM, Lachmann G, Nichols KE, Ramanan AV, Wang Y, Wang Z, Janka G, Henter JI. Recommendations for the management of hemophagocytic lymphohistiocytosis in adults. Blood. 2019;133(23):2465-2477. DOI: 10.1182/blood.2018894618. PMID: 30992265.",
+      "Ramos-Casals M, Brito-Zerón P, López-Guillermo A, Khamashta MA, Bosch X. Adult haemophagocytic syndrome. Lancet. 2014;383(9927):1503-1516. DOI: 10.1016/S0140-6736(13)61048-X. PMID: 24290661.",
+      "Griffin G, Shenoi S, Hughes GC. Hemophagocytic lymphohistiocytosis: An update on pathogenesis, diagnosis, and therapy. Best Pract Res Clin Rheumatol. 2020;34(4):101515. DOI: 10.1016/j.berh.2020.101515. PMID: 32387063.",
+      "Knaak C, Nyvlt P, Schuster FS, Spies C, Heeren P, Schenk T, Balzer F, La Rosée P, Janka G, Brunkhorst FM, Keh D, Lachmann G. Hemophagocytic lymphohistiocytosis in critically ill patients: diagnostic reliability of HLH-2004 criteria and HScore. Crit Care. 2020;24(1):244. DOI: 10.1186/s13054-020-02941-3. PMID: 32448380.",
+      "Ravelli A, Minoia F, Davì S, Horne A, Bovis F, Pistorio A, et al. 2016 Classification Criteria for Macrophage Activation Syndrome Complicating Systemic Juvenile Idiopathic Arthritis. Ann Rheum Dis. 2016;75(3):481-489. DOI: 10.1136/annrheumdis-2015-208982. PMID: 26865703.",
+      "Lehmberg K, Nichols KE, Henter JI, Girschikofsky M, Greenwood T, Jordan M, Kumar A, Minkov M, La Rosée P, Weitzman S; for the Study Group on Hemophagocytic Lymphohistiocytosis Subtypes of the Histiocyte Society. Consensus recommendations for the diagnosis and management of hemophagocytic lymphohistiocytosis associated with malignancies. Haematologica. 2015;100(8):997-1004. DOI: 10.3324/haematol.2015.123562. PMID: 26314082.",
+      "Li B, Guo J, Li T, et al. Clinical Characteristics of Hemophagocytic Lymphohistiocytosis Associated with Non-Hodgkin B-Cell Lymphoma: A Multicenter Retrospective Study. Clin Lymphoma Myeloma Leuk. 2021;21(2):e198-e205. DOI: 10.1016/j.clml.2020.10.009. PMID: 33303420.",
+      "Mehta P, McAuley DF, Brown M, Sanchez E, Tattersall RS, Manson JJ; HLH Across Speciality Collaboration, UK. COVID-19: consider cytokine storm syndromes and immunosuppression. Lancet. 2020;395(10229):1033-1034. DOI: 10.1016/S0140-6736(20)30628-0. PMID: 32192578.",
+      "Meng M, Chen L, Zhang S, et al. Risk factors for secondary hemophagocytic lymphohistiocytosis in severe coronavirus disease 2019 adult patients. BMC Infect Dis. 2021;21(1):398. DOI: 10.1186/s12879-021-06094-8. PMID: 33926377.",
+      "Ocon AJ, Bhatt BD, Miller C, et al. Safe usage of anakinra and dexamethasone to treat refractory hemophagocytic lymphohistiocytosis secondary to acute disseminated histoplasmosis in a patient with HIV/AIDS. BMJ Case Rep. 2017;2017:bcr2017221264. DOI: 10.1136/bcr-2017-221264. PMID: 28978596.",
+      "Gupta D, Jagani R, Mendonca S, et al. Adult-onset Still's disease with myocarditis and hemophagocytic lymphohistiocytosis: Rare manifestation with fatal outcome. Indian J Pathol Microbiol. 2016;59(1):84-86. DOI: 10.4103/0377-4929.174825. PMID: 26960645.",
+      "Horai Y, Miyamura T, Takahama S, et al. Influenza virus B-associated hemophagocytic syndrome and recurrent pericarditis in a patient with systemic lupus erythematosus. Mod Rheumatol. 2010;20(2):178-182. DOI: 10.1007/s10165-009-0241-6. PMID: 19898920.",
+      "Tudesq JJ, Valade S, Galicier L, et al. Diagnostic strategy for trigger identification in severe reactive hemophagocytic lymphohistiocytosis. Hematol Oncol. 2021;39(1):114-122. DOI: 10.1002/hon.2819. PMID: 33099794.",
+      "Lachmann G, Knaak C, Vorderwülbecke G, et al. Hyperferritinemia in Critically Ill Patients. Crit Care Med. 2020;48(4):459-465. DOI: 10.1097/CCM.0000000000004131. PMID: 32205591."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16937360/",
+      "https://pubmed.ncbi.nlm.nih.gov/9121398/",
+      "https://pubmed.ncbi.nlm.nih.gov/24782338/",
+      "https://pubmed.ncbi.nlm.nih.gov/30992265/",
+      "https://pubmed.ncbi.nlm.nih.gov/24290661/",
+      "https://pubmed.ncbi.nlm.nih.gov/32387063/",
+      "https://pubmed.ncbi.nlm.nih.gov/32448380/",
+      "https://pubmed.ncbi.nlm.nih.gov/26865703/",
+      "https://pubmed.ncbi.nlm.nih.gov/26314082/",
+      "https://pubmed.ncbi.nlm.nih.gov/33303420/",
+      "https://pubmed.ncbi.nlm.nih.gov/32192578/",
+      "https://pubmed.ncbi.nlm.nih.gov/33926377/",
+      "https://pubmed.ncbi.nlm.nih.gov/28978596/",
+      "https://pubmed.ncbi.nlm.nih.gov/26960645/",
+      "https://pubmed.ncbi.nlm.nih.gov/19898920/",
+      "https://pubmed.ncbi.nlm.nih.gov/33099794/",
+      "https://pubmed.ncbi.nlm.nih.gov/32205591/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "hlh-secundaria-miocardite-choque-refratario-e-tamponamento-cardiaco"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "toxocariase-cardiaca-larva-migrans-visceral-com-miocardite-eosinofilica",
+    "name": "Toxocaríase cardíaca (larva migrans visceral com miocardite eosinofílica)",
+    "aliases": [
+      "Larva migrans visceral cardíaca",
+      "Miocardite eosinofílica por Toxocara canis",
+      "Miocardite eosinofílica por Toxocara cati",
+      "Toxocaríase com acometimento miocárdico",
+      "Doença cardíaca por Toxocara"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 70,
+    "completeness": "completo",
+    "summary": "A toxocaríase é a infecção humana por larvas de Toxocara canis (cão) ou Toxocara cati (gato), adquirida pela ingestão acidental de ovos embrionados do parasita presentes em solo contaminado por fezes de animais não vermifugados — cenário clássico em crianças pequenas com geofagia. É uma das helmintíases mais prevalentes globalmente (soroprevalência mundial estimada em torno de 19%, com faixas de 20-40% em estudos brasileiros de populações expostas ao solo contaminado), e a grande maioria das infecções é assintomática ou se manifesta apenas como eosinofilia isolada. O ser humano é hospedeiro paratênico (acidental): as larvas migram por via hematogênica/linfática para fígado, pulmão, olho e sistema nervoso central sem completar seu ciclo até verme adulto, provocando reação inflamatória granulomatosa eosinofílica ao redor da larva no tecido onde se aloja. O acometimento cardíaco é uma complicação rara, documentada quase exclusivamente em relatos e pequenas séries de caso — miocardite eosinofílica com espectro de gravidade variável, de elevação assintomática de troponina a disfunção ventricular fulminante com choque cardiogênico e derrame pericárdico associado, atribuída tanto à migração larvária direta no miocárdio quanto ao efeito tóxico sistêmico da hipereosinofilia sustentada sobre o tecido cardíaco (Ma G et al., Lancet Infect Dis 2018, PMID 28781085; Rostami A et al., PLoS Negl Trop Dis 2019, PMID 31856156).",
+    "presentation": [
+      "Eosinofilia inexplicada, isolada ou associada a sintomas sistêmicos discretos, achado laboratorial mais comum e muitas vezes a única manifestação da infecção (forma sistêmica oculta/encoberta)",
+      "Febre, hepatomegalia, hipergamaglobulinemia com IgE elevada e sintomas respiratórios asmatiformes ou pneumonite eosinofílica migratória (síndrome de Löffler pulmonar) na larva migrans visceral clássica, tipicamente em criança pequena",
+      "Leucocoria, uveíte posterior ou granuloma retiniano unilateral na toxocaríase ocular, forma que frequentemente cursa sem eosinofilia periférica significativa",
+      "Dor torácica, dispneia ou palpitações com elevação de troponina e alterações eletrocardiográficas inespecíficas quando há acometimento miocárdico",
+      "Sinais de disfunção ventricular de gravidade variável — de discreta a fulminante com choque cardiogênico — e/ou derrame pericárdico associado nos casos de miocardite eosinofílica estabelecida",
+      "Contexto epidemiológico compatível: criança com geofagia/pica, contato com filhotes ou animais não vermifugados, ou exposição ocupacional/recreativa a solo contaminado (parques, quintais, áreas rurais)"
+    ],
+    "differentials": [
+      "Fibrose endomiocárdica e síndrome hipereosinofílica idiopática (endocardite de Löffler) — mecanismo de dano eosinofílico semelhante, porém sem causa parasitária identificável; ver ficha própria desta biblioteca",
+      "Granulomatose eosinofílica com poliangiite (EGPA) — vasculite sistêmica com acometimento cardíaco e hipereosinofilia, diagnóstico diferencial obrigatório de miocardite eosinofílica",
+      "Neoplasia mieloproliferativa com rearranjo FIP1L1-PDGFRA associada a hipereosinofilia primária",
+      "Outras causas infecciosas de miocardite eosinofílica ou com eosinofilia associada (outras helmintíases, incluindo estrongiloidíase e cisticercose cardíaca)",
+      "Miocardite viral ou de outras etiologias sem eosinofilia associada — a estratificação diagnóstica geral de miocardite se aplica igualmente",
+      "Retinoblastoma, na forma ocular — diferencial obrigatório em criança com leucocoria; lesões 'pseudorretinoblastoma' incluem a toxocaríase ocular entre suas causas mais frequentes",
+      "Reação de hipersensibilidade a fármacos ou eosinofilia medicamentosa como causa de miocardite eosinofílica, quando a história de exposição a fármaco recente é compatível"
+    ],
+    "tests": [
+      "ELISA para antígenos de excreção-secreção de Toxocara (TES-ELISA) — sorologia de escolha; limitação relevante de reação cruzada com outras helmintíases, o que reduz especificidade em populações poliparasitadas",
+      "Hemograma completo com diferencial (eosinofilia) e dosagem de IgE sérica — achados de apoio, não específicos isoladamente",
+      "Ecocardiograma — avaliação inicial de função ventricular e derrame pericárdico diante de suspeita de acometimento cardíaco",
+      "Ressonância magnética cardíaca com realce tardio — caracterização tecidual (edema miocárdico, fibrose) diante de suspeita de miocardite eosinofílica",
+      "Troponina e eletrocardiograma seriados quando há suspeita clínica de envolvimento miocárdico",
+      "Biópsia endomiocárdica — reservada a casos de dúvida diagnóstica relevante em que o resultado possa mudar a conduta ou for necessário excluir ativamente outras causas de miocardite eosinofílica",
+      "Investigação hematológica da hipereosinofilia (incluindo pesquisa de rearranjo FIP1L1-PDGFRA) quando a eosinofilia for desproporcional ou persistente apesar do tratamento antiparasitário"
+    ],
+    "red_flags": [
+      "Disfunção ventricular importante ou choque cardiogênico em paciente com eosinofilia e contexto epidemiológico compatível com toxocaríase",
+      "Elevação de troponina associada a eosinofilia significativa, mesmo sem sintomas cardíacos evidentes",
+      "Derrame pericárdico de instalação relativamente rápida associado a eosinofilia inexplicada",
+      "Leucocoria em criança pequena — exige exclusão urgente entre toxocaríase ocular e retinoblastoma",
+      "Sinais de miocardite fulminante (instabilidade hemodinâmica, arritmia mal tolerada) exigindo suporte hemodinâmico avançado",
+      "Eosinofilia persistente ou progressiva apesar de tratamento antiparasitário adequado — reforça necessidade de investigação hematológica da causa"
+    ],
+    "ambulatory_flow": [
+      "Diante de eosinofilia inexplicada com contexto epidemiológico compatível (criança com geofagia, contato com animais não vermifugados, exposição a solo contaminado), solicitar sorologia TES-ELISA para Toxocara",
+      "Investigar sintomas ou sinais cardiológicos associados (dor torácica, dispneia, palpitações); se presentes, complementar com eletrocardiograma, troponina e ecocardiograma",
+      "Confirmada sorologia positiva com quadro clínico compatível, iniciar antiparasitário (albendazol ou mebendazol); associar corticosteroide sistêmico se houver acometimento de órgão nobre (ocular, cardíaco, neurológico)",
+      "Se houver suspeita de acometimento miocárdico ao ecocardiograma ou por biomarcadores, complementar com ressonância magnética cardíaca e conduzir em conjunto com cardiologia",
+      "Encaminhar à oftalmologia com urgência diante de leucocoria ou uveíte para exclusão de retinoblastoma e avaliação de toxocaríase ocular",
+      "Reavaliar eosinofilia e função ventricular após tratamento; eosinofilia persistente apesar de tratamento adequado deve motivar encaminhamento à hematologia",
+      "Reforçar orientação de prevenção (vermifugação de cães e gatos, higiene após contato com solo/areia, lavagem de mãos em crianças pequenas) como medida de saúde pública, dada a alta prevalência de exposição na população geral"
+    ],
+    "emergency_flow": [
+      "Estabilizar primeiro; obter ECG, ecocardiograma à beira-leito e troponina em paciente com suspeita de miocardite e eosinofilia associada",
+      "Miocardite fulminante com choque cardiogênico: suporte hemodinâmico avançado conforme protocolo geral de miocardite fulminante, incluindo consideração de suporte circulatório mecânico quando disponível e indicado",
+      "Investigar eosinofilia associada como pista etiológica ativa (não apenas achado incidental), com sorologia para Toxocara entre as hipóteses a excluir, junto de outras causas de miocardite eosinofílica (EGPA, hipereosinofilia hematológica, outras parasitoses)",
+      "Iniciar corticosteroide sistêmico e antiparasitário assim que a suspeita for razoável, em conjunto com a equipe assistente, sem aguardar confirmação sorológica completa se a gravidade clínica exigir tratamento empírico",
+      "Derrame pericárdico com repercussão hemodinâmica: avaliar necessidade de pericardiocentese conforme gravidade e critérios gerais de tamponamento",
+      "Manter monitorização contínua de arritmias e reavaliação seriada de função ventricular durante a fase aguda"
+    ],
+    "tags": [
+      "toxocariase",
+      "larva migrans visceral",
+      "miocardite eosinofílica",
+      "zoonose",
+      "helmintíase",
+      "eosinofilia",
+      "hipereosinofilia cardíaca",
+      "Toxocara canis",
+      "Toxocara cati",
+      "cardiologia pediátrica",
+      "doença infecciosa",
+      "geo-helmintíase"
+    ],
+    "source_refs": [
+      "Ma G, Holland CV, Wang T, Hu Y, Loukas A, Sotillo J, Vlaminck J, Cepon-Robins TJ, Gasser RB, Prichard RK, Yazwinski TA, Frank C, Kaplan RM, Coles GC, Vercruysse J. Human toxocariasis. Lancet Infect Dis. 2018;18(1):e14-e24. PMID: 28781085",
+      "Rostami A, Riahi SM, Holland CV, Taghipour A, Khalili-Fomeshi M, Fakhri Y, Omrani VF, Hotez PJ, Gasser RB. Seroprevalence estimates for toxocariasis in people worldwide: A systematic review and meta-analysis. PLoS Negl Trop Dis. 2019;13(12):e0007809. PMID: 31856156",
+      "Despommier D. Toxocariasis: clinical aspects, epidemiology, medical ecology, and molecular aspects. Clin Microbiol Rev. 2003;16(2):265-272. PMID: 12692098",
+      "Santarém VA, Doline FR, Ferreira IB, Rubinsky-Elefant G, Lescano SAZ, Giuffrida R. One health approach to toxocariasis in Brazilian indigenous populations, their dogs, and soil contamination. Front Public Health. 2023;11:1220001. PMID: 37744519",
+      "Santarém VA, do Couto AC, Lescano SZ, Giuffrida R. Serosurvey of anti-Toxocara canis antibodies in people experiencing homelessness and shelter workers from São Paulo, Brazil. Parasit Vectors. 2022;15(1):373. PMID: 36253837",
+      "Lima VDSV, Ferreira IB, Rapchan GGDS, Santarém VA, Giuffrida R, Lescano SAZ. Toxocariasis in children: seroprevalence after 15 years in a major city in Brazil. Front Pediatr. 2025;13:1663016. PMID: 41346665",
+      "Stephenson J, O'Connor M, Hoyos M, et al. Eosinophilic Myocarditis in Children From Toxocara Canis: A Case and Review of the Literature. Circ Heart Fail. 2025;18(9):e011531. PMID: 40534552",
+      "Enko K, Tada T, Ohgo KO, Nagase S, Nakamura K, Ohta K, Ohishi M, Tabuchi K, Ejima K, Yoshimatsu H, Nagake Y, Fujiwara M. Fulminant eosinophilic myocarditis associated with visceral larva migrans caused by Toxocara canis infection. Circ J. 2009;73(7):1344-1348. PMID: 19122304",
+      "Shibazaki S, Eguchi S, Endo T, Yagi S, Ohkusu K, Ohira H. Eosinophilic Myocarditis due to Toxocariasis: Not a Rare Cause. Case Rep Cardiol. 2016;2016:2586292. PMID: 27123346",
+      "Wygant CM, Cohle SD. Fatal visceral larva migrans from Toxocara catis infection of the heart and liver in a child. Cardiovasc Pathol. 2023;63:107496. PMID: 36336311",
+      "Sturchler D, Schubarth P, Gualzata M, Gottstein B, Oettli A. Thiabendazole vs. albendazole in treatment of toxocariasis: a clinical trial. Ann Trop Med Parasitol. 1989;83(5):473-478. PMID: 2694978",
+      "Shields CL, Schoenberg E, Kocher K, Ferenczy SR, Kaliki S, Shields JA. Lesions simulating retinoblastoma (pseudoretinoblastoma) in 604 cases. Ophthalmology. 2013;120(2):311-316. PMID: 23107579"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/28781085",
+      "https://pubmed.ncbi.nlm.nih.gov/31856156",
+      "https://pubmed.ncbi.nlm.nih.gov/12692098",
+      "https://pubmed.ncbi.nlm.nih.gov/37744519",
+      "https://pubmed.ncbi.nlm.nih.gov/36253837",
+      "https://pubmed.ncbi.nlm.nih.gov/41346665",
+      "https://pubmed.ncbi.nlm.nih.gov/40534552",
+      "https://pubmed.ncbi.nlm.nih.gov/19122304",
+      "https://pubmed.ncbi.nlm.nih.gov/27123346",
+      "https://pubmed.ncbi.nlm.nih.gov/36336311",
+      "https://pubmed.ncbi.nlm.nih.gov/2694978",
+      "https://pubmed.ncbi.nlm.nih.gov/23107579"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "toxocariase-larva-migrans-visceral-e-miocardite-eosinofilica-uma-zoonose-comum-com-complicacao-cardiaca-rara"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "abscesso-hepatico-amebiano-ruptura-pericardica-tamponamento",
+    "name": "Abscesso hepático amebiano com ruptura pericárdica",
+    "aliases": [
+      "pericardite amebiana",
+      "ruptura pericárdica de abscesso hepático amebiano",
+      "tamponamento por abscesso hepático amebiano",
+      "fístula hepatopericárdica amebiana"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 71,
+    "completeness": "completo",
+    "summary": "Complicação rara e potencialmente fatal do abscesso hepático amebiano (a principal manifestação extraintestinal da amebíase, causada por Entamoeba histolytica), em que um abscesso do lobo hepático esquerdo — por proximidade anatômica com o pericárdio — rompe por contiguidade para o saco pericárdico, causando pericardite amebiana aguda com risco de tamponamento cardíaco e choque obstrutivo. Distingue-se do abscesso hepático amebiano não complicado (lobo direito, sem extensão torácica) pela vigilância cardiovascular ativa que exige e pela emergência que representa quando a ruptura já ocorreu.",
+    "presentation": [
+      "Quadro de base do abscesso hepático amebiano: dor em hipocôndrio direito, febre e hepatomegalia dolorosa, por vezes com perda de peso e mal-estar",
+      "Sinais de alarme para extensão pericárdica: dor torácica (isolada ou sobreposta à dor em hipocôndrio direito), dispneia de início recente, taquicardia desproporcional ao quadro infeccioso de base",
+      "Forma subaguda: derrame pericárdico de instalação progressiva, com sintomas constitucionais predominando sobre o quadro cardiovascular agudo",
+      "Forma aguda/catastrófica: ruptura súbita com grande volume de material necrótico no saco pericárdico, evoluindo para tamponamento e choque obstrutivo em horas",
+      "Sinais clássicos de tamponamento estabelecido: hipotensão, turgência jugular, pulso paradoxal e abafamento de bulhas cardíacas"
+    ],
+    "differentials": [
+      "Abscesso hepático piogênico (bacteriano), incluindo casos com extensão torácica/pericárdica por outro mecanismo infeccioso",
+      "Pericardite purulenta bacteriana por outra via de disseminação (hematogênica ou contígua a partir de foco pulmonar/mediastinal)",
+      "Pericardite tuberculosa, outra causa infecciosa de derrame pericárdico com evolução subaguda em região endêmica",
+      "Derrame pericárdico neoplásico com risco de tamponamento, em paciente com massa hepática de outra etiologia",
+      "Tamponamento cardíaco de outra causa (urêmico, pós-cirúrgico, actínico, idiopático) em paciente com hepatopatia coincidente",
+      "Pneumotórax hipertensivo ou outra causa de choque obstrutivo, no diagnóstico diferencial à beira do leito do paciente instável com dispneia e hipotensão"
+    ],
+    "tests": [
+      "Sorologia para Entamoeba histolytica (sensibilidade elevada especificamente na forma invasiva/tecidual, ao contrário da amebíase intestinal isolada)",
+      "Ultrassonografia ou tomografia computadorizada de abdome, caracterizando número, volume, localização (lateralidade direita versus esquerda) e proximidade do abscesso com o diafragma e o pericárdio",
+      "Ecocardiograma diante de qualquer sintoma ou sinal cardiovascular, ou diante de abscesso esquerdo volumoso e próximo ao pericárdio mesmo sem sintomas floridos, avaliando derrame pericárdico, progressão e repercussão hemodinâmica",
+      "Aspiração do abscesso hepático (diagnóstica e terapêutica), com material característico espesso e acastanhado ('pasta de anchova'), tipicamente estéril em cultura bacteriana",
+      "Pericardiocentese diagnóstica/terapêutica diante de tamponamento, com análise do líquido pericárdico (pode identificar trofozoítos, com sensibilidade variável; resultado negativo não afasta o diagnóstico diante de quadro clínico e de imagem compatíveis)",
+      "Orientação por imagem (ecocardiograma ou fluoroscopia) na pericardiocentese desses pacientes, pelo relato descrito de canulação acidental do próprio abscesso hepático esquerdo durante a punção subxifoidea"
+    ],
+    "red_flags": [
+      "Abscesso hepático amebiano no lobo esquerdo, especialmente com proximidade estreita ao diafragma e ao pericárdio à imagem",
+      "Dor torácica ou dispneia de início recente em paciente com abscesso hepático amebiano conhecido ou suspeito",
+      "Taquicardia desproporcional ao grau de febre ou ao quadro infeccioso de base",
+      "Qualquer sinal de tamponamento (hipotensão, turgência jugular, pulso paradoxal, abafamento de bulhas) nesse contexto exige tratamento com a mesma urgência de qualquer outra causa de tamponamento cardíaco",
+      "Deterioração hemodinâmica rápida sugestiva de ruptura súbita e catastrófica, e não apenas de progressão insidiosa do derrame"
+    ],
+    "ambulatory_flow": [
+      "Não se aplica como via primária: abscesso hepático amebiano com qualquer sinal de alarme cardiovascular deve ser conduzido em ambiente hospitalar, não ambulatorial",
+      "Abscesso hepático amebiano não complicado, sem sinais de alarme e sem proximidade diafragmática relevante, segue tratamento antiparasitário ambulatorial após estabilização inicial, com reavaliação clínica e de imagem programada",
+      "Orientar explicitamente o paciente e a família sobre os sinais de alarme (dor torácica, dispneia, taquicardia) que exigem retorno imediato ao pronto-socorro, dado o risco mesmo tardio de extensão pericárdica"
+    ],
+    "emergency_flow": [
+      "ABC, sinais vitais e monitorização contínua diante de qualquer sintoma cardiorrespiratório em paciente com abscesso hepático amebiano conhecido ou suspeito",
+      "Ecocardiograma à beira do leito para confirmar ou afastar derrame pericárdico e sua repercussão hemodinâmica assim que houver suspeita de extensão torácica",
+      "Tamponamento estabelecido: pericardiocentese de emergência (com orientação por imagem, pelo risco descrito de canulação acidental do abscesso hepático adjacente) ou janela pericárdica cirúrgica quando a drenagem percutânea for insuficiente ou tecnicamente inviável",
+      "Iniciar imediatamente tratamento antiparasitário sistêmico (metronidazol ou outro nitroimidazólico) em paralelo à drenagem pericárdica de emergência — a drenagem mecânica não substitui o tratamento etiológico",
+      "Avaliar indicação de drenagem percutânea do abscesso hepático guiada por imagem: abscesso volumoso, resposta clínica inadequada à terapia antiparasitária isolada, ou risco de ruptura iminente por localização esquerda e proximidade diafragmática",
+      "Após tratamento antiparasitário tecidual, complementar com agente luminal (por exemplo, paromomicina) para erradicar cistos intestinais residuais e prevenir recidiva ou transmissão",
+      "Casos complexos — fístula hepatopericárdica estabelecida ou falha do manejo percutâneo isolado — podem exigir abordagem cirúrgica combinada, com drenagem torácica e abdominal simultânea, em conjunto com cirurgia cardiotorácica e hepatobiliar",
+      "Reavaliação hemodinâmica seriada durante e após a drenagem, com vigilância para recorrência do derrame enquanto o tratamento antiparasitário sistêmico ainda não atingiu efeito pleno"
+    ],
+    "tags": [
+      "amebíase",
+      "abscesso hepático amebiano",
+      "Entamoeba histolytica",
+      "pericardite amebiana",
+      "tamponamento cardíaco",
+      "ruptura pericárdica",
+      "derrame pericárdico",
+      "choque obstrutivo",
+      "doença tropical",
+      "parasitose"
+    ],
+    "source_refs": [
+      "Stanley SL Jr. Amoebiasis. Lancet. 2003;361(9362):1025-1034. PMID: 12660071",
+      "Hughes MA, Petri WA Jr. Amebic liver abscess. Infect Dis Clin North Am. 2000;14(3):565-582. PMID: 10987110",
+      "Tanyuksel M, Petri WA Jr. Laboratory diagnosis of amebiasis. Clin Microbiol Rev. 2003;16(4):713-729. PMID: 14557296",
+      "Roediger R, Lisker-Melman M. Pyogenic and Amebic Infections of the Liver. Gastroenterol Clin North Am. 2020;49(2):361-377. PMID: 32389368",
+      "Mondragón-Sánchez R, Cortes-Espinoza T, Sánchez-Cisneros R, Parra-Silva H, Hurtado-Andrade H. Rupture of an amebic liver abscess into the pericardium. Presentation of a case and review of current management. Hepatogastroenterology. 1994;41(6):585-588. PMID: 7721251",
+      "Takhtani D, Kalagara S, Trehan MS, Chawla Y, Suri S. Intrapericardial rupture of amebic liver abscess managed with percutaneous drainage of liver abscess alone. Am J Gastroenterol. 1996;91(7):1460-1462. PMID: 8678020",
+      "Perna AM, Montesi GF. Cardiac tamponade secondary to intrapericardial rupture of a hepatic amoebic abscess. Eur J Cardiothorac Surg. 1994;8(2):106-107. PMID: 8172716",
+      "Chao TH, Li YH, Tsai LM, Tsai WC, Teng JK, Lin LJ, Chen JH. Amebic liver abscess complicated with cardiac tamponade and mediastinal abscess. J Formos Med Assoc. 1998;97(3):214-216. PMID: 9549274",
+      "Miyauchi T, Takiya H, Sawamura T, Murakami E. Cardiac tamponade due to intrapericardial rupture of an amebic liver abscess. Jpn J Thorac Cardiovasc Surg. 2005;53(4):206-209. PMID: 15875556",
+      "Francis C, Soni S, Gupta A, Agstam S. A case report of ruptured amoebic liver abscess causing cardiac tamponade and requiring pericardial window. Eur Heart J Case Rep. 2020;4(5):1-4. PMID: 33426455",
+      "Alsheikh H, Shaheen N, Shaheen A, Raslan S, Meshref M, Amro Y, Swed S, Nashwan AJ. Amoebic Hepato-Pericardial Fistula Complicating Amoebic Liver Abscess Treated With Pericardiotomy: A Case Report. Cureus. 2022;14(8):e28262. PMID: 36158434",
+      "Verma S, Agrawal C, Gupta P, Gupta A. Accidental cannulation of amoebic liver abscess during pericardiocentesis: a case report. Eur Heart J Case Rep. 2024;8(9):ytae482. PMID: 39308926"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12660071/",
+      "https://pubmed.ncbi.nlm.nih.gov/10987110/",
+      "https://pubmed.ncbi.nlm.nih.gov/14557296/",
+      "https://pubmed.ncbi.nlm.nih.gov/32389368/",
+      "https://pubmed.ncbi.nlm.nih.gov/7721251/",
+      "https://pubmed.ncbi.nlm.nih.gov/8678020/",
+      "https://pubmed.ncbi.nlm.nih.gov/8172716/",
+      "https://pubmed.ncbi.nlm.nih.gov/9549274/",
+      "https://pubmed.ncbi.nlm.nih.gov/15875556/",
+      "https://pubmed.ncbi.nlm.nih.gov/33426455/",
+      "https://pubmed.ncbi.nlm.nih.gov/36158434/",
+      "https://pubmed.ncbi.nlm.nih.gov/39308926/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "abscesso-hepatico-amebiano-com-ruptura-pericardica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "foneutrismo-envenenamento-por-aranha-armadeira",
+    "name": "Foneutrismo (envenenamento por aranha-armadeira, Phoneutria)",
+    "aliases": [
+      "picada de aranha-armadeira",
+      "envenenamento por Phoneutria",
+      "aracnidismo por Phoneutria nigriventer",
+      "aranha-de-banana",
+      "wandering spider bite",
+      "armed spider bite"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 72,
+    "completeness": "completo",
+    "summary": "Síndrome causada pelo veneno de aranhas do gênero Phoneutria (aranha-armadeira), aracnídeo errante e de hábito noturno frequentemente encontrado dentro de calçados, roupas e entulho doméstico no Sudeste e Sul do Brasil. As toxinas peptídicas do veneno (frações PhTx1, PhTx2 — da qual deriva a toxina PnTx2-6 — e PhTx3) atuam predominantemente retardando a inativação de canais de sódio dependentes de voltagem, além de modular canais de cálcio e a liberação de glutamato, produzindo despolarização repetitiva de terminações nervosas sensitivas, motoras e autonômicas — mecanismo distinto da formação de poro por alfa-latrotoxina (latrodectismo) e da hidrólise enzimática complemento-dependente por esfingomielinase D (loxoscelismo). A grande maioria dos acidentes é leve, com dor local imediata e intensa como achado dominante; uma pequena minoria, concentrada em crianças pequenas, evolui com envenenamento sistêmico grave — sudorese profusa, sialorreia, vômitos, agitação, tremores, taquicardia, hipertensão, arritmia, priapismo doloroso persistente e, raramente, edema agudo de pulmão não cardiogênico e choque por tempestade catecolaminérgica. O tratamento combina analgesia potente (por vezes infiltração local com lidocaína e opioide sistêmico), soro antiaracnídico nos casos sistêmicos moderados a graves, suporte hemodinâmico e manejo urológico precoce do priapismo persistente.",
+    "presentation": [
+      "Dor imediata, intensa e desproporcional ao achado local (mediana 7/10 em escala numérica), o sinal mais constante do acidente",
+      "Edema local leve a moderado, eritema e, ocasionalmente, as duas marcas de punção, sem progressão necrótica",
+      "Sudorese local no sítio da picada; em casos sistêmicos, sudorese profusa generalizada e sialorreia",
+      "Náuseas, vômitos, agitação psicomotora, tremores e fasciculações no envenenamento sistêmico",
+      "Taquicardia sinusal e hipertensão arterial, por vezes com picos acentuados; bradicardia e hipotensão relativa são menos frequentes",
+      "Arritmias e alterações eletrocardiográficas inespecíficas associadas ao envenenamento sistêmico grave",
+      "Priapismo doloroso persistente, achado clássico do envenenamento grave, mais descrito em crianças pequenas",
+      "Em casos graves e raros, sobretudo em crianças: dispneia progressiva e edema agudo de pulmão não cardiogênico"
+    ],
+    "differentials": [
+      "Latrodectismo (picada de viúva-negra) — dor sistêmica/muscular com rigidez de parede, mecanismo por exocitose induzida por alfa-latrotoxina",
+      "Loxoscelismo (picada de aranha-marrom) — lesão local inicialmente pouco dolorosa com necrose progressiva e/ou hemólise sistêmica, mecanismo por esfingomielinase D",
+      "Escorpionismo grave (Tityus) — tempestade autonômica de mecanismo também predominante em canal de sódio, sobretudo em crianças",
+      "Feocromocitoma/paraganglioma com crise catecolaminérgica endógena",
+      "Intoxicação simpaticomimética (cocaína, anfetaminas) ou síndrome serotoninérgica",
+      "Abstinência alcoólica aguda com tempestade autonômica",
+      "Tétano grave com disautonomia cardiovascular",
+      "Outras causas de priapismo (doença falciforme, medicamentos vasoativos intracavernosos, trauma perineal, antipsicóticos) quando a história de exposição a aranha não é clara"
+    ],
+    "tests": [
+      "Anamnese dirigida à exposição (picada referida, ambiente de risco: calçado, roupa, entulho) e ao tempo de evolução dos sintomas — não há biomarcador laboratorial de rotina amplamente disponível",
+      "Eletrocardiograma e monitorização contínua em todo paciente com manifestação sistêmica, dor torácica ou instabilidade hemodinâmica",
+      "Avaliação respiratória seriada e oximetria em crianças pequenas com envenenamento sistêmico, pelo risco de edema agudo de pulmão",
+      "Avaliação urológica e hemodinâmica peniana precoce diante de priapismo",
+      "Avaliação toxicológica dirigida quando a história de exposição a aranha não for clara, para excluir diferenciais simpaticomiméticos"
+    ],
+    "red_flags": [
+      "Priapismo doloroso persistente",
+      "Hipertensão acentuada, taquicardia importante ou instabilidade hemodinâmica",
+      "Dispneia progressiva ou sinais de edema agudo de pulmão, sobretudo em criança pequena",
+      "Arritmia ou alteração eletrocardiográfica nova associada ao quadro sistêmico",
+      "Envenenamento sistêmico em criança pequena, grupo de maior risco de evolução grave",
+      "Dor local refratária a analgesia inicial, sugerindo necessidade de infiltração anestésica e analgesia sistêmica potente"
+    ],
+    "ambulatory_flow": [
+      "Casos leves, com dor local e sintomas sistêmicos discretos ou ausentes, podem ser manejados em observação de curta permanência com analgesia local/sistêmica e orientação de retorno imediato se houver progressão",
+      "Orientar reconhecimento de sinais de alarme: priapismo, dispneia, sudorese profusa generalizada, hipertensão importante ou piora do estado geral, sobretudo em crianças",
+      "Não postergar avaliação em pronto-socorro diante de dor local intensa refratária a analgésico oral simples"
+    ],
+    "emergency_flow": [
+      "Estabilização inicial com monitorização cardiovascular contínua (ECG, pressão arterial, oximetria)",
+      "Analgesia escalonada conforme intensidade da dor: analgésico oral/dipirona nos casos leves; infiltração anestésica local (lidocaína 2%) associada a analgesia sistêmica intravenosa, incluindo opioide se necessário, nos casos de dor grave",
+      "Considerar soro antiaracnídico no envenenamento sistêmico moderado a grave — sobretudo com manifestação cardiovascular, priapismo ou instabilidade em criança pequena — pesando o risco de reação ao soro heterólogo (anafilaxia, doença do soro)",
+      "Controle da hipertensão sintomática e suporte hemodinâmico avançado nos raros casos com choque ou edema agudo de pulmão, evitando betabloqueio isolado sem bloqueio alfa concomitante diante de crise de mecanismo adrenérgico",
+      "Avaliação urológica precoce diante de priapismo persistente, com aspiração/irrigação cavernosa conforme protocolo urológico local",
+      "Reavaliação clínica e cardiovascular seriada, já que o quadro sistêmico pode evoluir ao longo de horas",
+      "Observação hospitalar prolongada em crianças pequenas com qualquer manifestação sistêmica, pelo maior risco de evolução grave nesse grupo"
+    ],
+    "tags": [
+      "toxicologia",
+      "envenenamento animal",
+      "foneutrismo",
+      "aranha-armadeira",
+      "Phoneutria nigriventer",
+      "canal de sódio",
+      "crise catecolaminérgica",
+      "priapismo",
+      "edema agudo de pulmão",
+      "emergência",
+      "pediatria"
+    ],
+    "source_refs": [
+      "Bucaretchi F, Deus Reinaldo CR, Hyslop S, Madureira PR, De Capitani EM, Vieira RJ. A clinico-epidemiological study of bites by spiders of the genus Phoneutria. Rev Inst Med Trop Sao Paulo. 2000;42(1):17-21. DOI: 10.1590/s0036-46652000000100003. PMID: 10742722.",
+      "Bucaretchi F, Mello SM, Vieira RJ, Mamoni RL, Blotta MHB, Antunes E, Hyslop S. Systemic envenomation caused by the wandering spider Phoneutria nigriventer, with quantification of circulating venom. Clin Toxicol (Phila). 2008;46(9):885-889. DOI: 10.1080/15563650802258524. PMID: 18788004.",
+      "Bucaretchi F, Mileti LNCR, Ricardi AST, Borrasca-Fernandes CF, Prado CC, De Capitani EM, Hyslop S. Assessment of local pain and analgesia in envenoming by wandering spiders (Phoneutria spp.). Toxicon. 2023;226:107083. DOI: 10.1016/j.toxicon.2023.107083. PMID: 36898505.",
+      "Peigneur S, de Lima ME, Tytgat J. Phoneutria nigriventer venom: A pharmacological treasure. Toxicon. 2018;151:96-110. DOI: 10.1016/j.toxicon.2018.07.008. PMID: 30003916.",
+      "Peigneur S, Paiva ALB, Cordeiro MN, Borges MH, Diniz MRV, de Lima ME, Tytgat J. Phoneutria nigriventer Spider Toxin PnTx2-1 (δ-Ctenitoxin-Pn1a) Is a Modulator of Sodium Channel Gating. Toxins (Basel). 2018;10(9):337. DOI: 10.3390/toxins10090337. PMID: 30134593.",
+      "Carneiro DS, Vieira LB, Cordeiro MN, Richardson M, Castro-Junior CJ, Gomez MV, Reis HJ. Effects of new Phoneutria spider toxins on glutamate release and [Ca2+]i in rat cortical synaptosomes. Cell Mol Biol (Noisy-le-grand). 2010;56 Suppl:OL1223-30. PMID: 20158975.",
+      "Nunes KP, Cordeiro MN, Richardson M, Borges MN, Diniz SO, Cardoso VN, Tostes R, De Lima ME, Webb RC, Leite R. Nitric oxide-induced vasorelaxation in response to PnTx2-6 toxin from Phoneutria nigriventer spider in rat cavernosal tissue. J Sex Med. 2010;7(12):3879-3888. DOI: 10.1111/j.1743-6109.2010.01978.x. PMID: 20722794.",
+      "Villanova FE, Andrade E, Leal E, Andrade PM, Borra RC, Troncone LR, Magalhães L, Leite KR, Paranhos M, Claro J, Srougi M. Erection induced by Tx2-6 toxin of Phoneutria nigriventer spider: expression profile of genes in the nitric oxide pathway of penile tissue of mice. Toxicon. 2009;54(6):793-801. DOI: 10.1016/j.toxicon.2009.06.006. PMID: 19524607.",
+      "Leite KR, Andrade E, Ramos AT, Magnoli FC, Srougi M, Troncone LR. Phoneutria nigriventer spider toxin Tx2-6 causes priapism and death: a histopathological investigation in mice. Toxicon. 2012;60(5):797-801. DOI: 10.1016/j.toxicon.2012.06.006. PMID: 22750220.",
+      "Isbister GK, Fan HW. Spider bite. Lancet. 2011;378(9808):2039-2047. DOI: 10.1016/S0140-6736(10)62230-1. PMID: 21762981.",
+      "Souza TC, Farias BES, Bernarde PS, Chiaravalotti Neto F, Frade DDR, Brilhante AF, Melchior LAK. Epidemiological patterns and changes in venomous animal incidents across Brazil, 2007-2019. Epidemiol Serv Saude. 2022;31(3):e2022025. DOI: 10.1590/S2237-96222022000300009. PMID: 36351057."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/10742722/",
+      "https://pubmed.ncbi.nlm.nih.gov/18788004/",
+      "https://pubmed.ncbi.nlm.nih.gov/36898505/",
+      "https://pubmed.ncbi.nlm.nih.gov/30003916/",
+      "https://pubmed.ncbi.nlm.nih.gov/30134593/",
+      "https://pubmed.ncbi.nlm.nih.gov/20158975/",
+      "https://pubmed.ncbi.nlm.nih.gov/20722794/",
+      "https://pubmed.ncbi.nlm.nih.gov/19524607/",
+      "https://pubmed.ncbi.nlm.nih.gov/22750220/",
+      "https://pubmed.ncbi.nlm.nih.gov/21762981/",
+      "https://pubmed.ncbi.nlm.nih.gov/36351057/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "foneutrismo-picada-de-aranha-armadeira-tempestade-catecolaminergica-e-priapismo"
+    ],
+    "patient_material_slug": null
   }
 ]
