@@ -18533,5 +18533,115 @@
       "2023 American Geriatrics Society Beers Criteria(R) Update Expert Panel. American Geriatrics Society 2023 updated AGS Beers Criteria(R) for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-2081. PMID: 37139824. PMCID: PMC12478568"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "convulsao-pos-cirurgia-cardiaca-acido-tranexamico-atacas-optimal",
+    "titulo": "Convulsão 6 horas após troca valvar aórtica: culpa do ácido tranexâmico?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, disfunção renal crônica leve (creatinina basal 1,6 mg/dL), foi submetido a troca valvar aórtica com circulação extracorpórea (cirurgia de câmara aberta). Recebeu ácido tranexâmico em dose alta no intraoperatório, conforme protocolo do serviço, para redução de sangramento. Seis horas após a cirurgia, ainda intubado e em sedação leve na UTI, a equipe observa abalos tônico-clônicos generalizados em membros. Glicemia capilar e sódio sérico são normais, não há febre, e o exame neurológico inicial não mostra sinais focais lateralizados.",
+    "pergunta": "Qual a interpretação mais apropriada dessa convulsão e a conduta imediata mais adequada, à luz dos ensaios ATACAS e OPTIMAL sobre ácido tranexâmico em cirurgia cardíaca?",
+    "opcoes": [
+      "Tratar a convulsão como evento imprevisível e não relacionado à medicação, solicitando apenas tomografia de crânio e aguardando o resultado antes de qualquer outra consideração diagnóstica",
+      "Iniciar investigação prioritária para AVC isquêmico embólico, já que o ácido tranexâmico é antifibrinolítico e aumenta o risco de eventos trombóticos, incluindo cerebrovasculares, conforme demonstrado nos dois ensaios",
+      "Incluir a exposição ao ácido tranexâmico em dose alta no diagnóstico diferencial da convulsão desde o início — ela ocorreu com frequência significativamente maior que placebo no ATACAS e foi numericamente mais frequente com dose alta no OPTIMAL —, sem abandonar em paralelo a investigação de outras causas (estrutural, metabólica)",
+      "Descartar o ácido tranexâmico como causa, pois a dose alta foi considerada não inferior à dose baixa no desfecho composto de segurança do OPTIMAL, o que comprova que essa dose não aumenta convulsão"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A conduta correta reconhece a exposição ao ácido tranexâmico em dose alta como diagnóstico diferencial relevante e concreto da convulsão pós-operatória, sem deixar de investigar outras causas em paralelo (o documento-fonte é explícito: 'a exposição ao fármaco entra no diagnóstico diferencial da convulsão no pós-operatório imediato'). No ATACAS, a convulsão foi sete vezes mais frequente com ácido tranexâmico que com placebo (0,7% vs. 0,1%, p=0,002); no OPTIMAL, houve mais eventos numericamente com a dose alta que com a dose baixa (1,0% vs. 0,4%), embora esse componente isolado não tenha sido estatisticamente conclusivo (IC95% tocando zero). A opção 1 erra ao tratar o evento como 'imprevisível' e adiar qualquer suspeita farmacológica — o documento nomeia exatamente essa armadilha. A opção 2 erra por extrapolação: nem ATACAS (desfecho composto de morte e complicações trombóticas: RR 0,92, p=0,22, sem diferença) nem OPTIMAL (composto de segurança não inferior) mostraram excesso de eventos trombóticos com o antifibrinolítico — o risco documentado é neurológico (convulsão), não trombótico/isquêmico; associar a convulsão a um mecanismo pró-trombótico do fármaco não tem respaldo nos próprios ensaios que a estabeleceram como risco. A opção 4 comete o erro inverso: confunde a não inferioridade do *composto* de segurança do OPTIMAL (que soma morte, convulsão, disfunção renal e evento trombótico) com ausência de risco no componente convulsão isoladamente — o próprio ensaio não confirmou redução desse evento específico com a dose baixa, e o documento alerta expressamente contra essa leitura.",
+    "source_refs": [
+      "content/Terapia_intensiva/acido-tranexamico-em-cirurgia-cardiaca-atacas-e-a-dose-que-troca-sangramento-por-convulsao-optimal.md",
+      "Myles PS, et al. Tranexamic Acid in Patients Undergoing Coronary-Artery Surgery. N Engl J Med. 2017;376(2):136-148. DOI: 10.1056/NEJMoa1606424. PMID: 27774838",
+      "Shi J, et al. Effect of High- vs Low-Dose Tranexamic Acid Infusion on Need for Red Blood Cell Transfusion and Adverse Events in Patients Undergoing Cardiac Surgery: The OPTIMAL Randomized Clinical Trial. JAMA. 2022;328(4):336-347. DOI: 10.1001/jama.2022.10725. PMID: 35881121"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "betabloqueador-nao-seletivo-na-cirrose-com-ascite-refrataria-manter-ou-suspender",
+    "titulo": "Betabloqueador não seletivo em cirrótico com ascite refratária e hipotensão: manter, reduzir ou suspender?",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 61 anos, cirrose hepática por doença hepática gordurosa não alcoólica, Child-Pugh B, com varizes esofágicas de médio calibre em profilaxia secundária de sangramento com propranolol 80mg de 12/12h há 8 meses, sem intercorrências até então. É internado por piora de ascite volumosa refratária, submetido a paracenteses de repetição. Ao exame: PA 82/54mmHg (PAM ≈ 63mmHg), FC 58bpm, edema de membros inferiores, sem febre. Paracentese diagnóstica exclui peritonite bacteriana espontânea (leucócitos <250/mm³ no líquido ascítico). Creatinina sobe de 0,9 para 1,6mg/dL em 48 horas, sem outra causa identificada além do quadro de base, preenchendo critérios de lesão renal aguda compatível com síndrome hepatorrenal. O sangramento varicoso permanece sem novos episódios.",
+    "pergunta": "Diante desse quadro, qual a conduta mais adequada em relação ao propranolol?",
+    "opcoes": [
+      "Manter a dose atual do propranolol sem alteração, pois suspender betabloqueador em cardiopata aumenta risco de eventos e essa regra não deve ser flexibilizada",
+      "Reduzir a dose ou suspender temporariamente o propranolol até que a pressão arterial e a função renal se normalizem, reavaliando a reintrodução assim que o quadro agudo se resolver",
+      "Suspender definitivamente o propranolol e não reintroduzi-lo, pelo risco de síndrome hepatorrenal documentado na cirrose avançada",
+      "Trocar o propranolol por um betabloqueador cardiosseletivo (ex.: metoprolol), mantendo a dose equivalente, para reduzir o risco renal sem perder a profilaxia de sangramento varicoso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A indicação de betabloqueador não seletivo (BBNS) na cirrose com varizes não é constante ao longo de toda a evolução da doença — é a 'window hypothesis' (Krag et al., Gut 2012): o benefício predomina numa fase intermediária da hepatopatia, mas pode se inverter em fases avançadas e descompensadas, como ascite refratária (Sersté et al., Hepatology 2010, PMID 20583214) e peritonite bacteriana espontânea (Mandorfer et al., Gastroenterology 2014, PMID 24631577). O consenso Baveno VII (Declaração 7.7) formaliza o critério prático: em pacientes com ascite, o BBNS deve ter a dose reduzida ou ser descontinuado diante de hipotensão persistente (PAS <90mmHg ou PAM <65mmHg) e/ou lesão renal aguda associada à síndrome hepatorrenal — com reintrodução ou retitulação assim que a pressão arterial retornar ao basal e/ou a LRA-SHR se resolver. Este paciente preenche exatamente esses dois critérios (PAS 82mmHg/PAM ≈63mmHg e LRA por síndrome hepatorrenal), justificando reduzir/suspender temporariamente — não manter e não suspender em definitivo.\n\nPor que os distratores enganam: (A) reproduz o reflexo cardiológico geral de 'nunca suspender betabloqueador', que aqui é exatamente a situação de exceção descrita no documento — a hipotensão neste contexto pode ser sinal de que o paciente já saiu da janela terapêutica, não um efeito adverso a ser tolerado. (C) comete o erro oposto, de supercorreção: o Baveno VII não recomenda suspensão definitiva, e sim reavaliação dinâmica com reintrodução assim que os parâmetros hemodinâmicos e renais se normalizarem — tratar a suspensão como permanente privaria o paciente, sem necessidade, da profilaxia de sangramento varicoso a longo prazo. (D) ignora que o benefício na hipertensão portal depende do efeito hemodinâmico esplâncnico específico dos betabloqueadores não seletivos (redução do fluxo portal); um betabloqueador cardiosseletivo não replica esse efeito para profilaxia de varizes, então a troca abandonaria a indicação original sem necessariamente resolver o risco hemodinâmico/renal que motivou a preocupação.",
+    "source_refs": [
+      "de Franchis R, Bosch J, Garcia-Tsao G, Reiberger T, Ripoll C; Baveno VII Faculty. Baveno VII – Renewing consensus in portal hypertension. J Hepatol. 2022;76(4):959-974. PMID 35120736 (Declaração 7.7)",
+      "Sersté T, Melot C, Francoz C, et al. Deleterious effects of beta-blockers on survival in patients with cirrhosis and refractory ascites. Hepatology. 2010;52(3):1017-1022. PMID 20583214",
+      "Mandorfer M, Bota S, Schwabl P, et al. Nonselective β blockers increase risk for hepatorenal syndrome and death in patients with cirrhosis and spontaneous bacterial peritonitis. Gastroenterology. 2014;146(7):1680-1690.e1. PMID 24631577",
+      "Krag A, Wiest R, Albillos A, Gluud LL. The window hypothesis. Gut. 2012;61(7):967-969. PMID 22234982"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "rm-de-cranio-em-marca-passo-dependente-nao-condicional-avc-agudo",
+    "titulo": "AVC agudo em portador de marca-passo não condicional: pode fazer a ressonância?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 74 anos, portador de marca-passo bicameral implantado há 9 anos por bloqueio atrioventricular total — é marca-passo-dependente, sem ritmo de escape espontâneo relevante documentado. O modelo é 'legado', não condicional para ressonância magnética (RM). É internado com fraqueza súbita em hemicorpo esquerdo; a neurologia solicita RM de crânio urgente para fechar o diagnóstico de AVC isquêmico e guiar a decisão terapêutica. À última interrogação, há 2 meses, o dispositivo estava íntegro, sem eletrodo fraturado ou abandonado, com carga de bateria adequada.",
+    "pergunta": "Qual a conduta correta quanto à realização da RM de crânio neste paciente?",
+    "opcoes": [
+      "Contraindicar a RM de forma peremptória por se tratar de dispositivo não condicional, solicitando modalidade de imagem alternativa (TC/angioTC de crânio)",
+      "Reprogramar o gerador para modo assíncrono antes do exame (paciente é marca-passo-dependente), realizar a RM com monitorização contínua e reinterrogar/reprogramar o dispositivo de volta ao modo habitual ao término",
+      "Realizar a RM diretamente, sem interrogação ou reprogramação prévias, já que o MagnaSafe e o estudo de Nazarian demonstraram que RM é segura em dispositivos não condicionais",
+      "Priorizar a realização do exame em aparelho de 3 Tesla em vez de 1,5 Tesla, por ser esse o campo magnético validado pelos ensaios de segurança citados"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Registro MagnaSafe (Russo RJ et al., NEJM 2017, PMID 28225684) e o estudo de Nazarian (NEJM 2017, PMID 29281579) mostraram, juntos, que RM em dispositivo não condicional é segura quando feita sob protocolo — não que o dispositivo em si seja seguro para o exame sem preparo. O protocolo padronizado inclui interrogação pré-exame, reprogramação (no paciente marca-passo-dependente, especificamente para modo assíncrono, exatamente o caso aqui), monitorização contínua durante a aquisição e reinterrogação/reprogramação de volta ao modo habitual ao término — reverter essa reprogramação é crítico, pois o paciente dependente que permanece em modo assíncrono por engano fica exposto a risco de competição com ritmo próprio. A opção A repete a contraindicação absoluta que a evidência dos dois estudos revogou: nenhuma morte, falha de eletrodo, perda de captura ou arritmia ventricular ocorreu nos 1.500 casos do MagnaSafe nem eventos adversos de longo prazo nos 2.103 exames de Nazarian, sempre sob protocolo. A opção C é a armadilha inversa — trata a segurança demonstrada como propriedade intrínseca do dispositivo, ignorando que ambos os estudos exigiram reprogramação e monitorização, sem testar 'levar o paciente à sala sem preparo'. A opção D inverte o fato: a evidência de maior volume dos dois estudos é a 1,5 T — nenhum dos dois testa 3 T de forma representativa, e RM a 3 T em dispositivo não condicional tem evidência mais limitada, exigindo avaliação individualizada, não sendo a opção preferencial. Reforço adicional a favor da segurança neste caso específico: o MagnaSafe testou especificamente RM não torácica (como a de crânio aqui solicitada), cenário em que o eletrodo fica mais distante do campo de radiofrequência do que em RM de tórax.",
+    "source_refs": [
+      "Russo RJ, Costa HS, Silva PD, Anderson JL, Arshad A, Biederman RW, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684",
+      "Nazarian S, Hansford R, Rahsepar AA, Weltin V, McVeigh D, Ipek EG, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579",
+      "Indik JH, Gimbel JR, Abe H, Alkmim-Teixeira R, Birgersdotter-Green U, Clarke GD, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "civ-reparada-com-patch-sem-defeito-residual-profilaxia-antes-de-extracao-dentaria",
+    "titulo": "CIV reparada com patch há anos, sem defeito residual: precisa de profilaxia antibiótica antes de extração dentária?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 22 anos, foi submetido a correção cirúrgica de comunicação interventricular perimembranosa aos 5 anos de idade, com fechamento por patch de Dacron. Está assintomático, sem sopro residual ao exame, e um ecocardiograma transtorácico feito há 3 meses confirma ausência de shunt residual no local do patch e função ventricular normal. Ele procura o dentista para extração de um terceiro molar incluso e o cirurgião-dentista pergunta se é necessária profilaxia antibiótica antes do procedimento, já que o paciente tem 'histórico de cirurgia cardíaca com prótese'.",
+    "pergunta": "Com base na diretriz AHA (2007, reafirmada em 2021), qual a conduta correta quanto à profilaxia antibiótica de endocardite infecciosa antes da extração dentária?",
+    "opcoes": [
+      "Não é necessária profilaxia: já se passaram mais de 6 meses da cirurgia e não há defeito residual no local do patch, de modo que se presume endotelização completa do material protético",
+      "É necessária profilaxia de forma vitalícia, porque o paciente tem material protético implantado no reparo cardíaco, independentemente do tempo decorrido ou de defeito residual",
+      "Não é necessária profilaxia porque comunicação interventricular reparada com patch nunca esteve entre as condições de maior risco definidas pela diretriz de 2007",
+      "É necessária profilaxia, mas apenas se o procedimento fosse geniturinário ou gastrointestinal — para extração dentária a diretriz de 2007 não recomenda profilaxia com base na prevenção de endocardite"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A diretriz de 2007 da AHA (reafirmada sem alteração em 2021) inclui cardiopatia congênita completamente reparada com material protético ou dispositivo entre as quatro categorias de maior risco, mas essa indicação tem prazo definido pela fisiologia, não é vitalícia por definição: a endotelização do material protético leva cerca de 6 meses, e após esse prazo, na ausência de defeito residual, a superfície já está endotelizada e a diretriz não recomenda profilaxia. É exatamente o caso deste paciente — reparo há 17 anos, ecocardiograma recente confirmando ausência de shunt residual — portanto a opção correta é não indicar profilaxia. A opção 2 é o erro mais comum na prática: generalizar 'material protético' para indicação vitalícia, ignorando que o prazo de 6 meses e a ausência de defeito residual encerram a indicação nesse cenário específico (a indicação só permanece indefinida quando HÁ defeito residual adjacente ao patch/dispositivo — não é o caso aqui). A opção 3 erra na direção oposta: CIV reparada com material protético ESTEVE na categoria de risco durante os primeiros 6 meses após a cirurgia; o documento-fonte é explícito que a diretriz de 1997 cobria uma lista bem mais ampla e a de 2007 a restringiu, mas isso não significa que a condição nunca tenha se qualificado — o motivo de não precisar de profilaxia agora é o tempo decorrido sem defeito residual, não a lesão em si nunca ter se qualificado. A opção 4 inverte a regra do documento-fonte: a diretriz de 2007 restringiu a indicação a procedimento odontológico com manipulação de tecido gengival, região periapical ou perfuração de mucosa oral — exatamente o cenário de uma extração dentária — e não recomenda profilaxia motivada apenas pela prevenção de endocardite para procedimento geniturinário ou gastrointestinal isolado.",
+    "source_refs": [
+      "Wilson W, Taubert KA, Gewitz M, et al.; American Heart Association. Prevention of infective endocarditis: guidelines from the American Heart Association. Circulation. 2007;116(15):1736-1754. DOI: 10.1161/CIRCULATIONAHA.106.183095. PMID: 17446442",
+      "Wilson WR, Gewitz M, Lockhart PB, et al.; American Heart Association. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. DOI: 10.1161/CIR.0000000000000969. PMID: 33853363",
+      "content/Cardiopatias_congênitas/profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021.md"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cmh-lvoto-hipotensao-intraoperatoria-fenilefrina-versus-efedrina",
+    "titulo": "Hipotensão intraoperatória em paciente com cardiomiopatia hipertrófica obstrutiva: qual vasopressor escolher?",
+    "tema": "Perioperatório",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 58 anos, com cardiomiopatia hipertrófica obstrutiva conhecida (gradiente de via de saída do ventrículo esquerdo de 45 mmHg em repouso no ecocardiograma mais recente), em uso crônico de metoprolol, mantido até a manhã da cirurgia conforme orientação da equipe. É submetida a colecistectomia videolaparoscópica eletiva. Após indução anestésica e insuflação do pneumoperitônio, a paciente evolui com queda abrupta da pressão arterial (de 128/76 para 78/45 mmHg) associada a taquicardia sinusal (112 bpm). Não há sangramento cirúrgico relevante, o débito urinário era adequado antes do evento e não há história de jejum prolongado, vômitos ou uso de diuréticos que sugira hipovolemia significativa.",
+    "pergunta": "Diante dessa hipotensão intraoperatória, sem evidência de hipovolemia, qual é a conduta farmacológica mais apropriada?",
+    "opcoes": [
+      "Administrar fenilefrina intravenosa, um vasoconstritor predominantemente alfa-adrenérgico, para elevar a pressão arterial sem aumentar a contratilidade nem a frequência cardíaca",
+      "Administrar efedrina intravenosa, já que seu efeito combinado alfa e beta costuma ser a primeira escolha para hipotensão intraoperatória",
+      "Administrar um bolus de dobutamina para aumentar a contratilidade miocárdica e o débito cardíaco",
+      "Administrar nitroglicerina para reduzir a pós-carga e facilitar o fluxo de saída do ventrículo esquerdo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Na CMH obstrutiva, o gradiente da via de saída do VE é dinâmico e piora com redução de pré-carga, redução de pós-carga, aumento de contratilidade e taquicardia — por isso a hipotensão nesse contexto não deve ser tratada com as estratégias reflexas usadas para hipotensão de outras causas. Como não há sinais de hipovolemia (sem sangramento relevante, sem sinais de depleção de volume), a causa mais provável é vasodilatação e queda de pós-carga associadas à indução anestésica e ao pneumoperitônio, que intensificam a obstrução dinâmica. A diretriz recomenda, nesse cenário, preferir um vasoconstritor predominantemente alfa-adrenérgico (fenilefrina) ou vasopressina, evitando beta-agonismo indiscriminado — corrigindo a pressão sem piorar o gradiente. A efedrina é a armadilha clássica: por ter efeito beta-adrenérgico associado, aumenta contratilidade e frequência cardíaca, o que pode intensificar a obstrução em vez de corrigi-la — mesmo sendo, em outros contextos, opção padrão para hipotensão intraoperatória. A dobutamina é ainda pior nesse cenário, pois é um inotrópico beta-adrenérgico puro, exatamente o que a diretriz orienta evitar quando a hipotensão é causada por LVOTO. A nitroglicerina reduz ainda mais a pós-carga, agravando diretamente a obstrução dinâmica — o oposto do que a fisiologia exige. A manutenção do metoprolol crônico até o dia da cirurgia também está alinhada com a recomendação de não suspender desnecessariamente betabloqueadores ou bloqueadores de canal de cálcio não diidropiridínicos usados para CMH.",
+    "source_refs": [
+      "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. J Am Coll Cardiol. 2024;84(19):1869-1969. PMID: 39320289. DOI: 10.1016/j.jacc.2024.06.013.",
+      "Ommen SR, Ho CY, Asif IM, et al. 2024 AHA/ACC/AMSSM/HRS/PACES/SCMR Guideline for the Management of Hypertrophic Cardiomyopathy. Circulation. 2024. DOI: 10.1161/CIR.0000000000001250."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
