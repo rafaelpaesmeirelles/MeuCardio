@@ -24669,5 +24669,427 @@
         "por_que": "Fecha a trilha com um tipo de inovação diferente de todas as anteriores: ESRA não testa molécula nova, mas reposiciona o riociguate — já aprovado e usado em outras trilhas desta biblioteca — para uma população mais precoce e restrita (doença vascular pulmonar limítrofe, mPAP 21–25 mmHg), com apenas 35 dos 261 pacientes pré-triados finalmente randomizados. Mostra que nem toda fronteira do pipeline é sobre mecanismo inédito — parte dela é perguntar se um fármaco que já funciona também funciona mais cedo."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-dislipidemias-geneticas-raras-alem-da-hf-classica",
+    "titulo": "Prevenção e lipídios: dislipidemias genéticas raras — do fenótipo extremo à terapia dirigida ao mecanismo",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo reconhecer, além da hipercolesterolemia familiar heterozigota clássica, os fenótipos genéticos extremos do espectro lipídico — HF homozigota, deficiência de lipase ácida lisossômica, hipertrigliceridemia grave por síndrome de quilomicronemia familiar e lipoproteína(a) elevada geneticamente determinada — e situar, para cada um, a terapia de nova geração dirigida ao mecanismo molecular específico (ANGPTL3, ApoC-III, siRNA anti-Lp(a)) que a estatina isolada não resolve.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+        "por_que": "Ponto de partida obrigatório: a HF heterozigota é a dislipidemia monogênica mais comum e o modelo mental de referência — LDL muito alto desde o nascimento, herança autossômica dominante, rastreio em cascata. Todos os fenótipos mais raros das próximas etapas são entendidos por comparação e contraste com este caso-base."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-hipercolesterolemia-familiar-diagnostico-dlcn-e-manejo-esc-eas-2025",
+        "por_que": "Antes de avançar para os fenótipos extremos, fixa a ferramenta prática de diagnóstico — o escore Dutch Lipid Clinic Network — que separa HF heterozigota de LDL alto poligênico comum, e que também é o ponto de partida para suspeitar da forma homozigota da próxima etapa quando o LDL foge da faixa esperada mesmo para HF heterozigota."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "evinacumabe-inibidor-de-angptl3-na-hipercolesterolemia-familiar-homozigota-o-ensaio-elipse-hofh",
+        "por_que": "Primeiro extremo do espectro: a HF homozigota, com LDL na faixa de 400-1000+ mg/dL e aterosclerose já na infância, frequentemente não responde a estatina, ezetimiba ou mesmo PCSK9i porque o defeito é bialélico no receptor de LDL. O ELIPSE HoFH mostra a primeira classe eficaz mesmo com receptor de LDL ausente — a inibição de ANGPTL3, mecanismo independente da via clássica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-angptl3-como-classe-metanalise-de-evinacumabe-vupanorsen-zodasiran-e-solbinsiran",
+        "por_que": "Expande evinacumabe para a classe inteira dos inibidores de ANGPTL3 — anticorpo monoclonal, antisense e siRNA — situando onde essa via terapêutica está indo além da HoFH (inclusive triglicerídeos e Lp(a) em subgrupos), e o que ainda falta em desfecho cardiovascular duro para essa classe nova."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "deficiencia-de-lipase-acida-lisossomica-lal-d-espectro-wolman-cesd-e-aterosclerose-acelerada",
+        "por_que": "Segundo fenótipo raro, e o mais facilmente confundido com dislipidemia comum: a LAL-D é uma doença de depósito lisossômico — não um defeito do receptor de LDL — que cursa com dislipidemia mista grave, hepatoesplenomegalia e aterosclerose acelerada desde a infância (espectro Wolman/CESD). Entra aqui como diagnóstico diferencial que muda completamente a conduta, de hipolipemiante para terapia de reposição enzimática."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "hipertrigliceridemia-e-risco-de-pancreatite-aguda-a-coorte-de-copenhague-e-o-limiar-de-tratamento",
+        "por_que": "Faz a transição do eixo do LDL para o eixo dos triglicerídeos: estabelece, com a coorte de Copenhague, o limiar em que a hipertrigliceridemia deixa de ser risco cardiovascular residual e passa a ser risco iminente de pancreatite aguda — preparando o terreno para o fenótipo genético mais grave dessa via, na etapa 8."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-hipertrigliceridemia-grave-manejo-e-prevencao-de-pancreatite",
+        "por_que": "Fluxograma prático de manejo agudo e crônico da hipertrigliceridemia grave (ACC 2021 ECDP), consolidando o limiar da etapa anterior numa decisão clínica objetiva antes de avançar para a causa genética mais extrema desse fenótipo."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "inibicao-de-apoc3-plozasiran-e-olezarsen-na-hipertrigliceridemia-grave-e-quilomicronemia",
+        "por_que": "Terceiro fenótipo genético raro: a síndrome de quilomicronemia familiar, causada por deficiência de lipoproteína lipase ou de seus cofatores, cursa com triglicerídeos extremos refratários a fibrato e ômega-3 — a via que os fibratos (já cobertos em outra trilha) não alcançam. Plozasiran e olezarsen inibem ApoC-III, o freio fisiológico da lipoproteína lipase, oferecendo a primeira terapia mecanisticamente dirigida a essa causa genética específica."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+        "por_que": "Quarto e último fenótipo do arco: a lipoproteína(a) elevada é geneticamente determinada (herança codominante, valor fixado ao nascimento) e não responde a estatina nem a mudança de estilo de vida — por isso o consenso EAS recomenda dosagem ao menos uma vez na vida de todo adulto, fechando o paralelo com o rastreio em cascata da HF na etapa 1."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose",
+        "por_que": "Fecha a trilha com o mesmo padrão das etapas anteriores — fenótipo genético sem alvo farmacológico tradicional recebendo, agora, terapia de nova geração dirigida ao RNA mensageiro da apolipoproteína(a). O OCEAN(a)-DOSE consolida a lógica central da trilha: quando a estatina não alcança o mecanismo genético, a próxima geração de siRNA e ASOs foi desenhada para alcançá-lo diretamente."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-saude-mental-pontos-cegos-farmacovigilancia-e-fatores-de-risco",
+    "titulo": "Saúde mental e cardiologia: os pontos cegos — sinais de fármaco mal interpretados e fatores de risco nunca perguntados",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo distinguir um mito farmacológico desmentido (betabloqueador e suicídio) de um risco cardiovascular real e conhecido (tricíclico), de um sinal regulatório formalmente investigado e depois retirado (agonista de GLP-1 e ideação suicida), de uma fronteira de segurança ainda incerta (terapia assistida por psicodélicos) — e reconhecer três fatores de risco psicossociais que a anamnese cardiológica padrão raramente pergunta (hostilidade crônica, transtornos pré-menstruais, violência por parceiro íntimo/experiências adversas na infância), fechando com a consequência prática desses pontos cegos somados: por que quem tem transtorno mental grave recebe historicamente menos revascularização.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025",
+        "por_que": "Ponto de partida: o consenso ESC 2025 formaliza a interface entre saúde mental e cardiologia como campo clínico reconhecido, mas trata sobretudo dos fatores de risco e classes de fármaco mais estudados. Esta trilha usa esse consenso como pano de fundo para mostrar exatamente o que fica de fora dele — os sinais de segurança mal compreendidos e os fatores de risco que a anamnese padrão não capta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "risco-suicidio-betabloqueadores-evidencia-2023-2025",
+        "por_que": "Primeiro ponto cego, e o mais didático: um único estudo dinamarquês observacional de 2001 consolidou, por duas décadas, a crença de que betabloqueadores lipofílicos 'causam' depressão e suicídio. A evidência de 2023-2025 revisita essa hipótese com metodologia mais robusta — essencial para o cardiologista que hoje hesita em prescrever propranolol por um medo baseado em dado fraco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "antidepressivos-triciclicos-no-cardiopata-risco-cardiovascular-e-toxicidade-em-superdosagem",
+        "por_que": "Contraste direto com a etapa anterior: aqui o risco cardiovascular não é mito, é mecanístico e bem documentado — os tricíclicos têm efeito quinidina-like real, com prolongamento de QRS/QT e toxicidade letal em superdosagem. Colocar lado a lado um sinal desmentido e um sinal real ensina a diferença entre suspeita farmacológica e risco confirmado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "agonistas-de-glp-1-e-o-sinal-regulatorio-de-ideacao-suicida-o-que-as-revisoes-da-ema-e-fda-concluiram",
+        "por_que": "Um terceiro tipo de sinal, na direção oposta: aqui é um fármaco cardiometabólico (agonista de GLP-1, cada vez mais prescrito pelo próprio cardiologista por indicação cardiovascular direta) que gerou revisão formal da EMA e da FDA por suspeita de ideação suicida — revisão que culminou, em 2026, na retirada do aviso. Mostra o ciclo completo de um sinal regulatório: levantado, investigado e encerrado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "seguranca-cardiovascular-de-terapia-assistida-por-psicodelicos-psilocibina-lsd-e-mdma",
+        "por_que": "Fecha o bloco de farmacovigilância com o caso oposto ao do GLP-1: aqui a revisão de segurança cardiovascular ainda está em curso, não encerrada. A terapia assistida por psicodélicos está saindo do ensaio clínico controlado para a prática psiquiátrica real, e o cardiologista pode ser chamado a avaliar risco antes, durante ou após uma sessão — uma fronteira que a trilha precisa nomear antes que apareça no consultório."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt",
+        "por_que": "Ferramenta prática de síntese do bloco farmacológico: transforma a distinção entre mito, risco real e sinal em processo, orientando a escolha concreta de antidepressivo e antipsicótico no cardiopata com risco de QT — o momento em que o raciocínio das quatro etapas anteriores precisa virar decisão de prescrição."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "raiva-e-hostilidade-cronica-como-fator-de-risco-coronariano-metanalise-de-chida-e-steptoe",
+        "por_que": "Abre o segundo bloco da trilha — fatores de risco que a anamnese cardiológica padrão não pergunta. 'Ele é sempre nervoso, isso faz mal ao coração?' é pergunta que chega ao consultório pelo cônjuge, não pelo paciente; a metanálise de Chida e Steptoe quantifica o que a intuição clínica já suspeitava sobre hostilidade crônica como fator de risco coronariano independente."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "transtornos-pre-menstruais-como-fator-de-risco-cardiovascular-a-coorte-sueca-de-yang",
+        "por_que": "Um fator de risco cardiovascular exclusivamente feminino, tipicamente tratado como questão ginecológica ou psiquiátrica isolada, sem investigação de repercussão cardiovascular. A coorte sueca de Yang é a primeira resposta populacional robusta à pergunta direta que a anamnese cardiológica nunca faz: mulher com transtorno pré-menstrual tem mais doença cardiovascular no seguimento de longo prazo?"
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "violencia-parceiro-intimo-aces-risco-cardiovascular",
+        "por_que": "O fator de risco oculto mais grave do bloco: história de violência por parceiro íntimo na vida adulta ou experiências adversas na infância (ACEs) como determinantes cardiovasculares documentados há décadas na epidemiologia social, mas quase nunca incorporados à anamnese cardiológica clínica — fecha o trio de exposições que o rastreio psicossocial padrão deixa de fora."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "disparidade-no-cuidado-cardiovascular-do-transtorno-mental-grave",
+        "por_que": "Encerramento que une os dois blocos da trilha: mitos farmacológicos mal desfeitos (etapa 2) e fatores de risco nunca perguntados (etapas 7-9) não são só lacuna acadêmica — têm consequência prática mensurável. Quem tem transtorno mental grave (esquizofrenia, bipolar, depressão maior) desenvolve mais doença cardiovascular e recebe, comprovadamente, menos revascularização. É o ponto cego coletivo que resume por que esta trilha precisava existir."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-endocardite-cultura-negativa-hacek-zoonoses-e-fungos",
+    "titulo": "Endocardite com hemocultura negativa: HACEK, zoonoses raras e fungos — o agente que a cultura de rotina não pega",
+    "tema": "Endocardite",
+    "objetivo": "Sair sabendo investigar a endocardite com hemocultura negativa de forma estruturada — por que a cultura veio negativa e que exame pedir em seguida —, reconhecer os agentes fastidiosos e zoonóticos (HACEK, Coxiella burnetii, Bartonella, Brucella, Tropheryma whipplei) que exigem sorologia ou PCR dirigido em vez de hemocultura convencional, e aplicar a mesma lógica de suspeita à endocardite fúngica, da epidemiologia de risco à indicação cirúrgica formal.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+        "por_que": "A trilha começa pelos critérios diagnósticos porque cultura negativa não é um detalhe microbiológico à parte — ela muda a forma como os critérios de Duke-ISCVID 2023 precisam ser aplicados, já que o critério microbiológico maior clássico (hemocultura positiva) frequentemente não está disponível nesses casos. Entender a estrutura atualizada é o alicerce para reconhecer, mais adiante, quando sorologia, PCR ou histopatologia podem substituir a hemocultura como evidência maior."
+      },
+      {
+        "ordem": 2,
+        "item_type": "checklist",
+        "item_slug": "investigacao-de-endocardite-com-hemocultura-negativa",
+        "por_que": "Antes de nomear agentes específicos, a trilha fixa o raciocínio estruturado: por que a hemocultura veio negativa (antibiótico prévio? organismo fastidioso? organismo não cultivável?) e que exame sequencial — sorologia, PCR de valva, histopatologia — responde a essa pergunta. Esse checklist é o mapa que evita pedir o exame errado primeiro."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+        "por_que": "É o documento-guarda-chuva que a própria biblioteca usa como referência central: apresenta os grupos de agentes fastidiosos (Bartonella, Coxiella, Tropheryma, HACEK e fungos) e a lógica geral de manejo em um só panorama. Cada etapa seguinte desta trilha aprofunda, um a um, os agentes que aqui aparecem resumidos em um parágrafo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "dna-microbiano-livre-no-plasma-na-endocardite-com-culturas-negativas",
+        "por_que": "Depois do panorama clássico, entra a ferramenta diagnóstica mais recente: sequenciamento de DNA microbiano livre no plasma, capaz de identificar o patógeno mesmo após antibiótico prévio e mesmo quando a cultura convencional já esterilizou. É a ponte entre a sorologia/PCR dirigido tradicional e uma tecnologia que não exige suspeita prévia do agente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "jcs2026-ei-t31-ceftriaxona-ou-ampicilina-sulbactam-em-valva-nativa-por-hacek",
+        "por_que": "O grupo HACEK é o primeiro agente aprofundado porque tecnicamente cresce em hemocultura — só que devagar, e por isso é historicamente confundido com 'cultura negativa'. Esta evidência fixa o esquema de primeira linha em valva nativa por HACEK."
+      },
+      {
+        "ordem": 6,
+        "item_type": "evidencia",
+        "item_slug": "jcs2026-ei-t31-prolongar-ceftriaxona-para-6-semanas-em-protese-por-hacek",
+        "por_que": "O mesmo grupo de organismo exige duração diferente quando a valva é protética — seis semanas em vez do esquema de valva nativa. Colocar as duas evidências lado a lado deixa explícito que a decisão de duração depende do tipo de valva, não só do agente identificado."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "febre-q-coxiella-burnetii-endocardite-cronica-zoonose-ocupacional",
+        "por_que": "Primeira zoonose verdadeira da trilha: Coxiella burnetii não cresce em hemocultura de rotina, exige diagnóstico sorológico por variação de fase antigênica, e o esquema antimicrobiano (doxiciclina com hidroxicloroquina, 18 a mais de 24 meses) não se parece com nenhum outro em endocardite. É o protótipo do agente que só se pensa quando se pergunta sobre exposição ocupacional a animais de produção."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "endocardite-por-bartonella-henselae-e-quintana-do-gato-ao-morador-de-rua",
+        "por_que": "Segunda zoonose, com dois perfis epidemiológicos opostos sob o mesmo gênero — arranhadura de gato em um extremo, piolho do corpo em população em situação de rua no outro. Mostra que é a pergunta epidemiológica certa (contato com gatos? vulnerabilidade social?) que abre o diagnóstico, não um exame de rotina."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "brucelose-e-endocardite",
+        "por_que": "Terceira zoonose ocupacional, endêmica em áreas rurais brasileiras (contato com gado, leite não pasteurizado), e mais um organismo de crescimento lento que passa despercebido em cultura padrão. Reforça o padrão que se repete nesta trilha: cada zoonose exige uma pergunta de anamnese específica que a rotina laboratorial não faz sozinha."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "doenca-de-whipple-cardiaca-isolada-endocardite-tropheryma-whipplei-sem-sintomas-gastrointestinais",
+        "por_que": "Fecha o bloco de agentes fastidiosos não fúngicos com o caso mais insidioso: endocardite por Tropheryma whipplei sem nenhum dos sintomas gastrointestinais clássicos da doença de Whipple, o que torna esse diagnóstico virtualmente invisível sem PCR de valva dirigido. É o exemplo mais extremo de por que a investigação estruturada da etapa 2 precisa vir antes de qualquer suspeita etiológica fechada."
+      },
+      {
+        "ordem": 11,
+        "item_type": "estudo",
+        "item_slug": "siciliano-2018-endocardite-fungica-coorte-multicentrica-brasileira",
+        "por_que": "Muda o eixo de bactéria fastidiosa para fungo, com dados de uma coorte multicêntrica brasileira — trazendo a epidemiologia real, não apenas a citação de diretriz internacional, sobre quem desenvolve endocardite fúngica no país e qual é o desfecho."
+      },
+      {
+        "ordem": 12,
+        "item_type": "estudo",
+        "item_slug": "giuliano-2017-endocardite-por-candida-revisao-sistematica-fatores-de-risco",
+        "por_que": "Detalha os fatores de risco específicos para Candida — cirurgia cardíaca prévia, cateter venoso central, uso de drogas injetáveis, imunossupressão — que devem elevar a suspeita fúngica antes mesmo do resultado, sempre demorado, da cultura para fungo."
+      },
+      {
+        "ordem": 13,
+        "item_type": "caso_clinico",
+        "item_slug": "endocardite-por-candida-em-protese-valvar-mecanica-anfotericina-b-e-cirurgia-precoce",
+        "por_que": "Aplica os dois estudos anteriores a uma decisão clínica concreta: prótese valvar mecânica infectada por Candida, testando se fluconazol oral basta ou se anfotericina B e cirurgia precoce são obrigatórias. É o ponto em que a trilha sai da epidemiologia e entra na decisão à beira do leito."
+      },
+      {
+        "ordem": 14,
+        "item_type": "evidencia",
+        "item_slug": "jcs2026-ei-t34-infeccao-fungica-ou-por-bacteria-altamente-resistente",
+        "por_que": "Fecha a trilha formalizando a indicação cirúrgica: infecção fúngica ou por bactéria altamente resistente é, por si só, gatilho para cirurgia, independentemente de outros critérios de tamanho de vegetação ou insuficiência cardíaca. Consolida a lição comum a todos os agentes desta trilha — do HACEK ao fungo — de que hemocultura negativa ou de crescimento lento não deve atrasar a decisão terapêutica definitiva."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-sincope-relacionada-ao-exercicio-diferenciando-a-causa-maligna-no-atleta",
+    "titulo": "Síncope relacionada ao exercício: diferenciando a causa estrutural/elétrica maligna no atleta",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo por que o momento exato da síncope em relação ao esforço — durante versus logo após — muda toda a lista de diagnósticos diferenciais e a urgência da investigação; reconhecer e diferenciar as causas estruturais e elétricas malignas de síncope no atleta (cardiomiopatia hipertrófica, anomalia coronária congênita, canalopatias, síndrome de Brugada) do coração de atleta fisiológico e da síncope reflexa benigna; e estruturar a decisão de retorno ao esporte e a resposta de emergência quando a causa não pode ser eliminada.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+        "por_que": "Ponto de partida obrigatório: antes de entrar na população atlética, o leitor precisa ter fresca a divisão entre síncope reflexa, cardíaca e por hipotensão ortostática, porque é exatamente a suspeita de origem cardíaca (estrutural ou elétrica) que muda toda a conduta nas etapas seguintes desta trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sincope-durante-o-esforco-versus-sincope-pos-esforco-por-que-o-momento-muda-tudo",
+        "por_que": "Este é o conceito central da trilha e o mais subutilizado do corpus: uma diferença de segundos no momento da perda de consciência — durante o esforço versus logo após ele cessar — separa uma bandeira vermelha que exige internação e investigação estrutural/elétrica completa de um quadro em geral benigno por retorno venoso prejudicado. Toda a sequência de causas malignas que segue nesta trilha só se justifica clinicamente a partir dessa distinção de anamnese."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sincope-durante-exercicio-atleta",
+        "por_que": "Traduz o conceito da etapa anterior em árvore de decisão prática específica para o atleta — o formato que se consulta no momento da avaliação, já orientando para quais exames (ECG, ecocardiograma, teste de esforço, imagem avançada) seguem a suspeita de cada mecanismo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sincope-durante-exercicio-atleta-avaliacao-retorno-esporte",
+        "por_que": "Aprofunda o fluxograma anterior detalhando os sinais de alarme na história e no exame físico e, principalmente, introduz a pergunta que vai atravessar o resto da trilha: uma vez investigada a síncope no atleta, o que autoriza — ou não — o retorno à competição."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "sincope-no-atleta-avaliacao-antes-do-retorno-ao-esporte",
+        "por_que": "Converte a lógica das duas etapas anteriores em ferramenta de checagem objetiva de plantão — útil precisamente no momento em que a decisão de liberar ou não o atleta precisa ser documentada de forma estruturada, não apenas discutida em texto corrido."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+        "por_que": "Antes de percorrer as causas malignas uma a uma, o leitor precisa da ferramenta que evita o erro oposto — rotular como doença um remodelamento fisiológico do treinamento intenso. Essa diferenciação na 'zona cinzenta' é o que torna possível investigar cardiomiopatia hipertrófica sem gerar desqualificações desnecessárias."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-exercicio-esporte-competitivo",
+        "por_que": "A cardiomiopatia hipertrófica é a causa estrutural mais associada a morte súbita em atletas jovens, e a obstrução dinâmica da via de saída que se agrava com o próprio esforço explica por que a síncope tende a ocorrer justamente DURANTE o exercício — reconectando com o mecanismo central da etapa 2."
+      },
+      {
+        "ordem": 8,
+        "item_type": "caso_clinico",
+        "item_slug": "cmh-baixo-risco-atleta-adulto-competicao-decisao-compartilhada",
+        "por_que": "Aplica a etapa anterior a um cenário concreto e desafiador: cardiomiopatia hipertrófica de baixo risco em atleta competitivo, onde a diretriz moderna substitui a proibição automática por decisão compartilhada — mostrando que 'causa maligna' não significa sempre desqualificação categórica."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "anomalias-coronarias-congenitas-atleta-esporte",
+        "por_que": "Segunda causa estrutural maligna central na síncope de esforço: anomalia de origem coronária com possível compressão dinâmica do óstio durante o exercício — mecanismo isquêmico que também explica classicamente a síncope ocorrendo no pico do esforço, e cuja triagem clínica e ECG podem ser normais, exigindo alto índice de suspeição pela história."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "canalopatias-qt-longo-cpvt-esporte-retorno",
+        "por_que": "Desloca o raciocínio das causas estruturais para as elétricas malignas — síndrome do QT longo (classicamente desencadeada por natação) e taquicardia ventricular catecolaminérgica polimórfica (CPVT) — ambas capazes de gerar síncope de esforço com coração estruturalmente normal, o que torna a investigação eletrocardiográfica indispensável mesmo diante de imagem cardíaca sem alterações."
+      },
+      {
+        "ordem": 11,
+        "item_type": "calculadora",
+        "item_slug": "qtc",
+        "por_que": "Ferramenta prática direta da etapa anterior: a suspeita de síndrome do QT longo exige medir e corrigir o intervalo QT pela frequência cardíaca antes de qualquer decisão sobre liberação esportiva ou necessidade de investigação genética adicional."
+      },
+      {
+        "ordem": 12,
+        "item_type": "caso_clinico",
+        "item_slug": "sincope-durante-natacao-em-adolescente-atleta-suspeita-de-sindrome-do-qt-longo-tipo-1",
+        "por_que": "Aplica as duas etapas anteriores ao cenário clássico da síndrome do QT longo tipo 1 — síncope durante a natação em adolescente — testando na prática o raciocínio de suspeição clínica e o uso da calculadora de QTc."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "commotio-cordis-mecanismo-epidemiologia-e-prevencao",
+        "por_que": "Fecha o espectro de causas malignas com um mecanismo categoricamente diferente das anteriores: não é doença estrutural nem elétrica intrínseca, mas fibrilação ventricular desencadeada por impacto torácico no momento vulnerável da repolarização — diagnóstico diferencial obrigatório em qualquer colapso súbito após trauma torácico no esporte, e lembrete de que nem toda causa maligna é uma cardiopatia de base."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "dea-cadeia-de-sobrevivencia-e-plano-de-emergencia-no-esporte",
+        "por_que": "Etapa final e necessária: como as causas estruturais e elétricas malignas percorridas nesta trilha — incluindo o commotio cordis, que não tem investigação prévia possível — podem se manifestar como parada cardíaca súbita sem aviso, todo ambiente esportivo precisa de plano de emergência com desfibrilador acessível. Encerra a trilha deslocando o foco de 'prevenir todo evento' para 'estar preparado quando a prevenção não é suficiente'."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-perioperatorio-otimizacao-farmacologica-metabolica-e-anemia-pre-operatoria",
+    "titulo": "Perioperatório: otimização farmacológica e metabólica pré-operatória — SGLT2, GLP-1, estatina, SRAA, anemia e o pacote ERAS",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo decidir manter ou suspender IECA/BRA, estatina e inibidor de SGLT2 antes de cirurgia não cardíaca, ajustar o agonista de GLP-1 pelo risco de aspiração perioperatória, reconhecer a anemia pré-operatória como fator de risco modificável (e por que repor ferro isoladamente não muda desfecho), e ver essas decisões farmacológicas reunidas no pacote de recuperação acelerada (ERAS) da cirurgia cardíaca.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-medicacoes-cardiovasculares-perioperatorio",
+        "por_que": "Ponto de entrada porque organiza de uma vez a pergunta que atravessa toda a trilha: qual medicação cardiovascular crônica mantém, qual suspende temporariamente e qual não se inicia só por causa da cirurgia. A árvore geral aqui — betabloqueador, estatina, SGLT2 e SRAA — é o mapa que as próximas etapas aprofundam classe por classe."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "stop-or-not-ieca-bra-cirurgia-nao-cardiaca",
+        "por_que": "Aprofunda a decisão mais discutida da árvore inicial: IECA e BRA têm recomendação menos uniforme que betabloqueador ou estatina, porque a suspensão no dia da cirurgia reduz hipotensão intraoperatória mas remove um fármaco com benefício cardiovascular comprovado. Fixa aqui o racional antes de qualquer outra classe."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estatina-perioperatoria-em-cirurgia-cardiaca-o-ensaio-stics",
+        "por_que": "Segunda classe da árvore inicial, agora em profundidade: por que manter estatina crônica é recomendação forte, e por que iniciar estatina de novo antes de cirurgia vascular tem evidência menos consistente do que se costuma assumir na prática."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "stics-rosuvastatina-perioperatoria-em-cirurgia-cardiaca",
+        "por_que": "O ensaio que testou rosuvastatina perioperatória especificamente em cirurgia cardíaca eletiva contra os desfechos que mais preocupam nesse cenário — fibrilação atrial pós-operatória e lesão miocárdica por troponina seriada. Dá o número por trás da recomendação lida na etapa anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "rosuvastatina-calcica",
+        "por_que": "Do ensaio para a prescrição: dose usada no STICS, perfil de interação e por que é a estatina de escolha quando se decide manter ou iniciar terapia no perioperatório de cirurgia cardíaca."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-no-perioperatorio-cetoacidose-euglicemica-e-tempo-de-suspensao",
+        "por_que": "Terceira classe da árvore inicial — e a que mais mudou de perfil de risco recentemente. O inibidor de SGLT2 virou pilar da insuficiência cardíaca, mas continuar em uso no perioperatório é fator de risco reconhecido de cetoacidose diabética euglicêmica, com glicemia enganosamente normal. Este documento fixa o prazo de suspensão por molécula."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "haziri-suspensao-perioperatoria-de-isglt2-e-complicacoes-cardiacas",
+        "por_que": "Mostra o outro lado da mesma decisão: em 451 pacientes das coortes BASEL-PMI e PMI-Vital, suspender o iSGLT2 por mais dias antes da cirurgia associou-se a mais complicação cardiovascular em 90 dias — o inibidor de SGLT2 não é só risco de cetoacidose, é também proteção cardiovascular que se perde ao suspender cedo demais."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "dixit-isglt2-preoperatorio-e-cetoacidose-diabetica-pos-operatoria",
+        "por_que": "Fecha a tensão da classe com o cenário em que a suspensão programada não é possível: coorte de 34.671 pacientes em cirurgia de urgência/emergência, onde não há tempo hábil para suspender o iSGLT2 antes do procedimento. Ensina a reconhecer o risco de cetoacidose quando a decisão de manter ou suspender já não está mais em suas mãos."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "dapagliflozina",
+        "por_que": "Representante da classe para fixar a prescrição concreta: dose habitual, indicações que se sobrepõem entre diabetes e insuficiência cardíaca, e o prazo de suspensão pré-operatória que as duas etapas anteriores sustentam com dado clínico."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024",
+        "por_que": "Classe que não estava na árvore inicial e traz um risco de natureza diferente das anteriores: o esvaziamento gástrico retardado do agonista de GLP-1 aumenta risco de aspiração pulmonar sob sedação ou anestesia geral, motivando a orientação multissocietária de 2024 sobre quando suspender antes do procedimento."
+      },
+      {
+        "ordem": 11,
+        "item_type": "medicamento",
+        "item_slug": "semaglutida",
+        "por_que": "Representante da classe de agonista de GLP-1, hoje presente em consultório tanto para diabetes quanto para obesidade — o que torna a orientação de suspensão perioperatória da etapa anterior uma decisão cada vez mais frequente, não uma exceção rara."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "anemia-pre-operatoria-prevalencia-de-desfecho-adverso-e-otimizacao",
+        "por_que": "Muda o eixo de medicação para um fator de risco modificável antes da cirurgia: a anemia pré-operatória é prevalente, associa-se a desfecho adverso e a transfusão perioperatória, e por isso entra na mesma lógica de otimização das etapas anteriores — o que se corrige antes do procedimento, e não durante."
+      },
+      {
+        "ordem": 13,
+        "item_type": "estudo",
+        "item_slug": "preventt-ferro-endovenoso-pre-operatorio-nao-reduz-transfusao-ou-morte",
+        "por_que": "O ensaio que testou a correção mais óbvia da anemia — repor ferro endovenoso antes da cirurgia — e não encontrou redução de transfusão nem de mortalidade na cirurgia abdominal aberta maior. Ensina que identificar o fator de risco modificável não garante que a intervenção isolada mude desfecho, mesmo quando a fisiopatologia parece favorável."
+      },
+      {
+        "ordem": 14,
+        "item_type": "documento",
+        "item_slug": "protocolo-eras-cardiaco-recuperacao-acelerada-em-cirurgia-cardiaca",
+        "por_que": "Fecha a trilha reunindo as decisões farmacológicas e metabólicas anteriores dentro de um pacote único e testado: o consenso ERAS Cardíaco de 2019 e a metanálise de 2025 mostram que a soma organizada dessas otimizações pré, intra e pós-operatórias reduz internação hospitalar — o ganho não vem de uma medida isolada, vem do pacote."
+      }
+    ]
   }
 ]
