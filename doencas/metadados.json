@@ -55244,5 +55244,553 @@
       "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "deficiencia-de-cpt2",
+    "name": "Deficiência de CPT2 (Carnitina Palmitoiltransferase II)",
+    "aliases": [
+      "Deficiência de carnitina palmitoiltransferase II",
+      "Deficiência de CPT II",
+      "CPT2 deficiency",
+      "Carnitine palmitoyltransferase II deficiency",
+      "Deficiência da lançadeira de carnitina (CPT2)"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "erro_inato_metabolismo_beta_oxidacao_acidos_graxos",
+    "prevalence_rank": 163,
+    "completeness": "completo",
+    "summary": "Erro inato do metabolismo, autossômico recessivo (gene CPT2, 1p32.3), que compromete a etapa final da lançadeira de carnitina necessária para a beta-oxidação mitocondrial de ácidos graxos de cadeia longa em fígado, músculo e coração. Reconhecidas três formas clínicas: letal neonatal (cardiomiopatia, insuficiência hepática, disgenesia renal e cerebral, óbito precoce), infantil grave hepatocardiomuscular (cardiomiopatia dilatada ou hipertrófica, arritmia ventricular com risco de morte súbita, hepatopatia e hipoglicemia hipocetótica) e miopática do adulto (rabdomiólise induzida por exercício ou jejum, sem cardiomiopatia proeminente). Correlação genótipo-fenótipo ainda limitada segundo a literatura consultada.",
+    "presentation": [
+      "Forma letal neonatal: sintomas nas primeiras horas a dias de vida — cardiomiopatia, insuficiência hepática com hipoglicemia hipocetótica, convulsões refratárias, disgenesia cística renal e malformações do sistema nervoso central (disgenesia de núcleos da base, hidrocefalia, hipoplasia do verme cerebelar, polimicrogiria); evolução tipicamente fatal dentro do primeiro mês de vida",
+      "Forma infantil grave hepatocardiomuscular: início nos primeiros dois anos de vida, com cardiomiopatia (dilatada ou hipertrófica, sem fenótipo morfológico único descrito na literatura), arritmias ventriculares com risco de morte súbita na infância, hepatomegalia com esteatose e insuficiência hepática, hipoglicemia hipocetótica e miopatia episódica com CK elevada; alguns casos identificados apenas postumamente como morte súbita do lactente",
+      "Forma miopática (a mais prevalente, idade de início de 1 a 61 anos): mialgia induzida por exercício em quase todos os casos, fraqueza durante crises em cerca de 60% e mioglobinúria em cerca de 75%, tipicamente assintomática entre crises e sem cardiomiopatia proeminente; gatilhos mais comuns são exercício prolongado, infecções, jejum, frio, anestesia geral e estresse",
+      "Predomínio marcante de homens sintomáticos na forma miopática (razão homem:mulher de 2:1 a 7,3:1 entre séries), de mecanismo não totalmente esclarecido",
+      "Correlação genótipo-fenótipo limitada segundo a fonte primária consultada — variantes específicas (ex.: p.Ser113Leu na forma miopática; p.Pro227Leu, p.Lys414ThrfsTer7 e p.Lys642ThrfsTer6 na forma letal neonatal) orientam mas não predizem com segurança o fenótipo individual"
+    ],
+    "differentials": [
+      "Deficiência de VLCAD — outro defeito de beta-oxidação de cadeia longa com cardiomiopatia neonatal/infantil, mas marcador de triagem neonatal distinto (C14:1, versus C16/C18 elevados na deficiência de CPT2) e sem as malformações renais/cerebrais da forma letal neonatal da CPT2",
+      "Deficiência primária de carnitina (defeito do transportador OCTN2/SLC22A5) — mecanismo anterior à lançadeira de carnitina (falha de captação celular, não de conversão enzimática); ao contrário da deficiência de CPT2, é potencialmente curável com reposição oral de L-carnitina em altas doses, e a carnitina livre plasmática costuma estar baixa, não normal/elevada como na CPT2",
+      "Deficiência de CPT1 (isoforma hepática, CPT1A) — hipoglicemia hipocetótica e doença hepática/renal, mas sem cardiomiopatia, porque a isoforma cardíaca CPT1B não é afetada; padrão de acilcarnitinas oposto (carnitina livre elevada, acilcarnitinas de cadeia longa baixas)",
+      "Síndrome de Barth (defeito de TAZ) — cardiomiopatia com não compactação do VE, neutropenia e miopatia, sem o padrão de acilcarnitinas de cadeia longa elevadas",
+      "Doença de Pompe (deficiência de alfa-glicosidase ácida) — fenocópia de cardiomiopatia hipertrófica por depósito lisossomal de glicogênio, sem hipoglicemia hipocetótica e sem elevação de acilcarnitinas; PR curto e QRS de alta voltagem ao ECG"
+    ],
+    "tests": [
+      "Perfil de acilcarnitinas por espectrometria de massa em tandem (MS/MS), com elevação de acilcarnitinas de cadeia longa (C12–C18, notadamente C16 e C18:1) — investigação em plasma recomendada, pois a deficiência de CPT2 não pode ser excluída apenas com base em sangue seco em papel filtro, e a triagem neonatal pode não detectar sobretudo a forma miopática mais branda",
+      "Ensaio enzimático de atividade da CPT em músculo ou fibroblastos cultivados",
+      "Sequenciamento do gene CPT2 (detecta mais de 95% das variantes patogênicas); análise de deleção/duplicação se apenas uma variante ou nenhuma for identificada; sequenciamento de exoma/genoma para diagnóstico rápido em lactente criticamente enfermo",
+      "Eletrocardiograma e ecocardiograma diante de suspeita clínica nas formas neonatal e infantil grave, ou em seguimento de caso confirmado com cardiomiopatia — não considerados necessários de rotina na forma miopática adulta isolada, sem cardiomiopatia",
+      "Glicemia, cetonemia/cetonúria, amônia, transaminases e CK durante episódio de descompensação aguda, para caracterizar hipoglicemia hipocetótica, disfunção hepática e rabdomiólise associadas"
+    ],
+    "red_flags": [
+      "Cardiomiopatia neonatal ou infantil de etiologia não esclarecida, associada a hipoglicemia hipocetótica e hepatopatia",
+      "Arritmia ventricular refratária em lactente com cardiomiopatia de início precoce, sobretudo se acompanhada de disfunção hepática e renal agudas",
+      "Malformações renais císticas e/ou de sistema nervoso central em neonato com insuficiência hepática e cardiomiopatia — sugere a forma letal neonatal",
+      "Morte súbita inexplicada de lactente, especialmente diante de história familiar de óbito neonatal/infantil precoce inexplicado",
+      "Rabdomiólise recorrente induzida por exercício ou jejum em criança maior, adolescente ou adulto jovem, mesmo sem cardiomiopatia — sugere a forma miopática"
+    ],
+    "ambulatory_flow": [
+      "Diante de cardiomiopatia pediátrica de etiologia não esclarecida, incluir defeitos da lançadeira de carnitina (CPT2 entre eles) na investigação metabólica sistemática, ao lado de deficiência de VLCAD, deficiência primária de carnitina, síndrome de Barth e doenças de depósito lisossomal",
+      "Confirmar suspeita bioquímica (perfil de acilcarnitinas em plasma) com sequenciamento do gene CPT2 e/ou ensaio enzimático em centro com experiência em doenças metabólicas antes de rotular a criança como afetada",
+      "Orientação dietética estruturada (restrição de gordura de cadeia longa, suplementação de TCM ou trieptanoína, fracionamento de refeições, evitar jejum prolongado) em conjunto com especialista em erros inatos do metabolismo",
+      "Seguimento cardiológico com ecocardiograma e ECG anuais nas formas com cardiomiopatia documentada ou risco dela (neonatal e infantil grave); rotina de vigilância cardíaca não indicada na forma miopática adulta isolada e sem cardiomiopatia",
+      "Orientação explícita sobre protocolo de \"dia de doença\" para a família, com plano escrito de quando buscar atendimento e evitar jejum diante de doença intercorrente, febre, cirurgia ou anestesia geral programada"
+    ],
+    "emergency_flow": [
+      "Diante de febre, vômitos, recusa alimentar, cirurgia ou qualquer intercorrência em paciente com deficiência de CPT2 conhecida, priorizar a interrupção do jejum: carboidratos orais de alta densidade energética e trieptanoína se tolerado, ou dextrose intravenosa a 10% com eletrólitos a pelo menos 1,5 vez a manutenção diante de intolerância oral ou hipoglicemia",
+      "Monitorização cardíaca contínua e baixo limiar para UTI diante de qualquer instabilidade hemodinâmica ou elétrica nas formas com cardiomiopatia conhecida ou suspeita, dado o risco de arritmia ventricular potencialmente fatal",
+      "Avaliação laboratorial ampla (glicemia, transaminases, amônia, CK, função renal) e consultas especializadas (hepatologia, cardiologia, nefrologia, neurologia conforme o quadro) diante de descompensação aguda",
+      "Hidratação intravenosa vigorosa e considerar diálise diante de mioglobinúria/rabdomiólise significativa, para prevenir lesão renal aguda",
+      "Em lactente com cardiomiopatia de início precoce e descompensação aguda sem diagnóstico metabólico prévio, colher amostra crítica (glicemia, cetonas, amônia, perfil de acilcarnitinas) antes de corrigir a hipoglicemia, sempre que isso não atrasar o tratamento de emergência",
+      "Cautela com anestesia geral e cirurgia eletiva não urgente sem consulta prévia ao especialista metabólico, pelo risco de hipertermia maligna e rabdomiólise perioperatória"
+    ],
+    "tags": [
+      "CPT2",
+      "carnitina palmitoiltransferase II",
+      "erro inato do metabolismo",
+      "lançadeira de carnitina",
+      "beta-oxidação de ácidos graxos",
+      "cardiomiopatia neonatal",
+      "cardiomiopatia infantil",
+      "hipoglicemia hipocetótica",
+      "morte súbita",
+      "arritmia ventricular pediátrica",
+      "rabdomiólise induzida por exercício",
+      "cardiopediatria",
+      "fenocópia de cardiomiopatia",
+      "triagem neonatal"
+    ],
+    "source_refs": [
+      "LoPiccolo MK, Vockley J. Carnitine Palmitoyltransferase II Deficiency. GeneReviews. Seattle (WA): University of Washington, Seattle. PMID 20301431.",
+      "North KN, Hoppel CL, De Girolami U, Kozakewich HP, Korson MS. Lethal neonatal deficiency of carnitine palmitoyltransferase II associated with dysgenesis of the brain and kidneys. J Pediatr. 1995;127(3):414-420. PMID 7658272.",
+      "Bonnefont JP, Demaugre F, Prip-Buus C, Saudubray JM, Brivet M, Abadi N, Thuillier L. Carnitine palmitoyltransferase deficiencies. Mol Genet Metab. 1999;68(4):424-440. PMID 10607472.",
+      "Bonnefont JP, Djouadi F, Prip-Buus C, Gobin S, Munnich A, Bastin J. Carnitine palmitoyltransferases 1 and 2: biochemical, molecular and medical aspects. Mol Aspects Med. 2004;25(5-6):495-520. PMID 15363638.",
+      "Taggart RT, Smail D, Apolito C, Vladutiu GD. Novel mutations associated with carnitine palmitoyltransferase II deficiency. Hum Mutat. 1999;13(3):210-220. PMID 10090476.",
+      "Serra G, Antona V, Insinga V, Morgante G, Vassallo A, Placa S, Piro E, Salerno S, Schierz IAM, Gitto E, Giuffrè M, Corsello G. Carnitine palmitoyltransferase II (CPT II) deficiency responsible for refractory cardiac arrhythmias, acute multiorgan failure and early fatal outcome. Ital J Pediatr. 2024;50(1):67. PMID 38616285.",
+      "Yamada K, Bo R, Kobayashi H, Hasegawa Y, Ago M, Fukuda S, Yamaguchi S, Taketani T. A newborn case with carnitine palmitoyltransferase II deficiency initially judged as unaffected by acylcarnitine analysis soon after birth. Mol Genet Metab Rep. 2017;11:59-61. PMID 28516040.",
+      "Gillingham MB, Heitner SB, Martin J, Rose S, Goldstein A, El-Gharbawy AH, DeWard S, Lasarev MR, Pollaro J, DeLany JP, Burchill LJ, Goodpaster B, Shoemaker J, Matern D, Harding CO, Vockley J. Triheptanoin versus trioctanoin for long-chain fatty acid oxidation disorders: a double blinded, randomized controlled trial. J Inherit Metab Dis. 2017;40(6):831-843. PMID 28871440."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1253/",
+      "https://pubmed.ncbi.nlm.nih.gov/7658272/",
+      "https://pubmed.ncbi.nlm.nih.gov/10607472/",
+      "https://pubmed.ncbi.nlm.nih.gov/15363638/",
+      "https://pubmed.ncbi.nlm.nih.gov/10090476/",
+      "https://pubmed.ncbi.nlm.nih.gov/38616285/",
+      "https://pubmed.ncbi.nlm.nih.gov/28516040/",
+      "https://pubmed.ncbi.nlm.nih.gov/28871440/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "deficiencia-de-cpt2-cardiomiopatia-arritmia-e-morte-subita-nas-tres-formas-clinicas-do-defeito-da-lancadeira-de-carnitina"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "acondroplasia",
+    "name": "Acondroplasia",
+    "aliases": [
+      "achondroplasia",
+      "displasia esquelética FGFR3",
+      "nanismo acondroplásico"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "displasia_esqueletica",
+    "prevalence_rank": 164,
+    "completeness": "completo",
+    "summary": "Displasia esquelética mais comum, causada em cerca de 99% dos casos por variante patogênica recorrente em FGFR3 (predominantemente p.Gly380Arg, c.1138G>A). Não há cardiopatia estrutural intrínseca bem estabelecida associada à síndrome — o acometimento cardiovascular relevante é predominantemente indireto e ocorre em dois momentos distintos da vida. Em lactentes, a estenose de forame magno por compressão da junção craniocervical eleva o risco de morte súbita por mecanismo primariamente respiratório/neurológico (apneia central por compressão de centros de controle respiratório do tronco encefálico); sem vigilância, o excesso de risco de morte pode chegar a 7,5%, caindo a cerca de 0,3% com manejo adequado. Em adultos, obesidade de início precoce, apneia obstrutiva do sono (prevalência de até 59% em coorte populacional norueguesa, quase metade subdiagnosticada) e hipertensão são mais frequentes do que na população geral, e um estudo de mortalidade de longo prazo (seguimento de 42 anos) documentou expectativa de vida reduzida em cerca de uma década, com mortalidade cardíaca mais de 10 vezes maior entre 25 e 35 anos. Notavelmente, um estudo caso-controle recente encontrou fatores de risco cardiovascular tradicionais (pressão arterial, lipídios, gordura visceral) comparáveis ou menores do que em controles pareados por IMC, sugerindo que o excesso de mortalidade cardíaca não é explicado de forma simples pela via clássica obesidade-síndrome metabólica-doença cardiovascular, e que o mecanismo permanece incompletamente esclarecido — lacuna reconhecida por revisão sistemática de 2026.",
+    "presentation": [
+      "Fenótipo esquelético clássico reconhecível ao nascimento/infância: rizomelia (encurtamento proximal dos membros), macrocefalia relativa, fronte proeminente, hipoplasia do terço médio da face — reconhecimento inicial é ortopédico/dismorfológico, não cardiológico",
+      "Em lactentes: sinais de compressão de junção craniocervical por estenose de forame magno — hipotonia central, apneia central, hiper-reflexia ou clônus de membros inferiores, atraso motor desproporcional, podendo progredir para insuficiência respiratória e morte súbita se não reconhecida",
+      "Doença pulmonar restritiva em lactentes por caixa torácica pequena com complacência aumentada, por vezes com hipoxemia crônica exigindo suplementação de oxigênio",
+      "Apneia obstrutiva do sono, comum em crianças maiores e em adultos, por retrusão do terço médio da face, hipertrofia adenotonsilar e hipotonia de via aérea superior",
+      "Em adultos: obesidade de início precoce, muitas vezes já na primeira infância, com ressalva de que o IMC padrão não é validado para a proporção corporal desproporcional da acondroplasia",
+      "Hipertensão arterial e alteração da regulação glicêmica descritas com maior frequência em adultos com acondroplasia do que na população geral, com heterogeneidade metodológica relevante entre os estudos disponíveis"
+    ],
+    "differentials": [
+      "Hipocondroplasia (fenótipo mais brando, também via FGFR3, menor risco de complicações graves de junção craniocervical)",
+      "Outras displasias esqueléticas FGFR3-relacionadas (displasia tanatofórica — letal no período neonatal; SADDAN)",
+      "Displasias esqueléticas não-FGFR3 com baixa estatura desproporcional (ex.: pseudoacondroplasia, displasia espondiloepifisária)",
+      "Obesidade, síndrome metabólica ou apneia obstrutiva do sono idiopáticas na população geral, quando o fenótipo esquelético subjacente ainda não foi reconhecido (situação rara, já que o fenótipo costuma ser evidente)"
+    ],
+    "tests": [
+      "Confirmação diagnóstica com teste molecular dirigido para FGFR3 (c.1138G>A / p.Gly380Arg em ~98% dos casos; c.1138G>C em ~1%), com aconselhamento genético estruturado",
+      "Ressonância magnética da junção craniocervical o mais precocemente possível após o nascimento, para avaliar estenose de forame magno e compressão de tronco encefálico/medula cervical alta",
+      "Polissonografia para rastreio de apneia — central no lactente, obstrutiva na criança maior e no adulto",
+      "Avaliação seriada de peso, pressão arterial e perfil metabólico (glicemia, HbA1c, perfil lipídico) a partir da infância, reforçada na vida adulta",
+      "Avaliação pneumológica em gestantes com acondroplasia, dado o risco aumentado de insuficiência respiratória gestacional"
+    ],
+    "red_flags": [
+      "Lactente com hipotonia central associada a apneia central, hiper-reflexia/clônus de membros inferiores ou atraso motor desproporcional — investigar estenose de forame magno/compressão de junção craniocervical com urgência",
+      "Episódio de apneia testemunhada, cianose ou evento de aparente ameaça à vida em lactente com acondroplasia",
+      "Sonolência diurna excessiva, ronco alto ou pausas respiratórias observadas durante o sono em criança maior ou adulto — rastrear apneia obstrutiva do sono, dada a alta taxa de subdiagnóstico descrita na literatura",
+      "Hipertensão arterial de início em adulto jovem com acondroplasia — não presumir etiologia primária sem investigar apneia obstrutiva do sono e obesidade como fatores contribuintes",
+      "Dispneia, ortopneia ou sinais de insuficiência cardíaca em adulto com acondroplasia — investigar por protocolo cardiológico padrão, sem presumir mecanismo cardíaco estrutural específico da síndrome, que não está estabelecido na literatura atual"
+    ],
+    "ambulatory_flow": [
+      "Ao diagnóstico, idealmente neonatal: confirmar com teste molecular para FGFR3 e iniciar avaliação multidisciplinar (genética clínica, neurocirurgia/neurologia, pneumologia, ortopedia)",
+      "Solicitar ressonância magnética de junção craniocervical o quanto antes no lactente, para estratificar risco de compressão de tronco encefálico e necessidade de descompressão suboccipital",
+      "Rastrear apneia (central no lactente, obstrutiva na criança maior/adulto) com polissonografia conforme seguimento periódico — mais frequente em crianças, reavaliado em adultos, especialmente diante de hipertensão, idade acima de 40 anos ou IMC elevado",
+      "A partir da infância, reforçado na vida adulta: monitorar peso, pressão arterial e perfil metabólico, com encaminhamento a nutrição e, quando indicado, a cardiologia/endocrinologia para manejo de fatores de risco cardiometabólico",
+      "Orientar contra atividades de alto risco para a coluna cervical (esportes de contato, trampolim, saltos ornamentais, ginástica com voltas, pendurar-se de cabeça para baixo)",
+      "Utilizar checklist de seguimento do adulto do European Achondroplasia Forum na transição do cuidado pediátrico para o cuidado do adulto, cobrindo estenose espinhal, apneia obstrutiva do sono, pressão arterial, dor, peso e aspectos psicossociais"
+    ],
+    "emergency_flow": [
+      "Lactente com acondroplasia e apneia aguda, cianose ou deterioração respiratória: suspeitar de descompensação por compressão de junção craniocervical/estenose de forame magno até prova em contrário; estabilização respiratória imediata e avaliação neurocirúrgica urgente com neuroimagem",
+      "Adulto com acondroplasia e dispneia aguda, dor torácica ou sinais de descompensação cardiovascular: conduzir investigação por protocolos cardiológicos padrão, sem manejo diferenciado por mecanismo cardíaco específico da síndrome — entidade não estabelecida na literatura — mas com atenção à alta prevalência de apneia obstrutiva do sono não diagnosticada e obesidade como comorbidades a rastrear",
+      "Hipertensão de difícil controle em adulto com acondroplasia: considerar polissonografia e investigação/manejo de via aérea (incluindo CPAP) como parte do racional de investigação, dada a alta prevalência (~59%) e a alta taxa de subdiagnóstico (~48%) de apneia obstrutiva do sono descritas em coorte populacional de adultos com acondroplasia"
+    ],
+    "tags": [
+      "acondroplasia",
+      "FGFR3",
+      "displasia esquelética",
+      "estenose de forame magno",
+      "compressão de junção craniocervical",
+      "morte súbita infantil",
+      "apneia obstrutiva do sono",
+      "obesidade",
+      "hipertensão",
+      "mortalidade cardiovascular",
+      "doença genética rara",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Legare JM, Modaff P. Achondroplasia. GeneReviews. Seattle: University of Washington, Seattle; 1993-2026. Bookshelf ID: NBK1152.",
+      "Wynn J, King TM, Gambello MJ, Waller DK, Hecht JT. Mortality in achondroplasia study: a 42-year follow-up. Am J Med Genet A. 2007;143A(21):2502-2511. DOI: 10.1002/ajmg.a.31919. PMID: 17879967.",
+      "Fredwall SO, Linge J, Leinhard OD, Kjønigsen L, Eggesbø HB, Weedon-Fekjær H, Lidal IB, Månum G, Savarirayan R, Tonstad S. Cardiovascular risk factors and body composition in adults with achondroplasia. Genet Med. 2021;23(4):732-739. DOI: 10.1038/s41436-020-01024-6. PMID: 33204020.",
+      "Fredwall SO, Øverland B, Berdal H, Berg S, Weedon-Fekjær H, Lidal IB, Savarirayan R, Månum G. Obstructive sleep apnea in Norwegian adults with achondroplasia: a population-based study. Orphanet J Rare Dis. 2021;16(1):156. DOI: 10.1186/s13023-021-01792-7. PMID: 33827611.",
+      "Lo I, Meti S, Mason A, McDevitt H, Constantinou P, Lucas-Herald AK. Cardiovascular risk in achondroplasia: a systematic review. J Med Genet. 2026;63(2):103-110. DOI: 10.1136/jmg-2025-111024. PMID: 41167810.",
+      "Fredwall S, AlSayed M, Ben-Omran T, et al. European Achondroplasia Forum practical considerations for following adults with achondroplasia. Adv Ther. 2024;41(7):2545-2558. DOI: 10.1007/s12325-024-02880-3. PMID: 38748332."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1152/",
+      "https://pubmed.ncbi.nlm.nih.gov/17879967/",
+      "https://pubmed.ncbi.nlm.nih.gov/33204020/",
+      "https://pubmed.ncbi.nlm.nih.gov/33827611/",
+      "https://pubmed.ncbi.nlm.nih.gov/41167810/",
+      "https://pubmed.ncbi.nlm.nih.gov/38748332/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "acondroplasia-e-risco-cardiovascular-forame-magno-na-infancia-e-risco-cardiometabolico-no-adulto"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "progeria-de-hutchinson-gilford",
+    "name": "Progeria de Hutchinson-Gilford (HGPS)",
+    "aliases": [
+      "HGPS",
+      "Síndrome de Hutchinson-Gilford",
+      "Hutchinson-Gilford Progeria Syndrome",
+      "Progeria infantil",
+      "Progeria clássica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_progeroide_genetica_lmna",
+    "prevalence_rank": 165,
+    "completeness": "completo",
+    "summary": "A progeria de Hutchinson-Gilford (HGPS) é uma doença genética ultrarrara de envelhecimento segmentar acelerado, com incidência estimada em 1 a cada 4 milhões de nascidos vivos e cerca de 400 casos vivos identificados no mundo. Cerca de 90% dos casos são causados pela mesma variante de novo no gene LMNA, c.1824C>T (p.Gly608Gly) — sinônima ao nível de aminoácido, mas que ativa um sítio de splice críptico no éxon 11 e gera uma pré-lamina A truncada, permanentemente farnesilada, chamada progerina, que se acumula progressivamente no envelope nuclear. A doença cardiovascular aterosclerótica acelerada é a principal causa de morte, respondendo por mais de 80% dos óbitos (infarto do miocárdio e/ou insuficiência cardíaca), tipicamente entre os 6 e os 20 anos de idade; o AVC isquêmico por arteriopatia cerebrovascular também é um desfecho relevante. O mecanismo central é a toxicidade direta da progerina sobre as células musculares lisas vasculares — cuja perda progressiva foi documentada em modelo animal e em necropsias humanas, associada a fibrose adventicial proeminente — resultando em rigidez arterial mensurável já na infância (velocidade de onda de pulso marcadamente elevada), tipicamente na presença de perfil lipídico normal, o que distingue o mecanismo da aterosclerose clássica por dislipidemia. A HGPS é mecanisticamente distinta da cardiomiopatia por LMNA/distrofia de Emery-Dreifuss (mesmo gene, mas variantes que não geram progerina e cujo fenótipo cardíaco é doença de condução e arritmia ventricular, não aterosclerose acelerada). O rastreio cardiovascular recomendado inclui eletrocardiograma, ecocardiograma (com atenção à disfunção diastólica, achado mais prevalente), duplex de carótidas e RM/angio-RM de crânio e pescoço a cada 6-12 meses (RM anual), além de perfil lipídico basal. O lonafarnib, inibidor da farnesiltransferase, é o único tratamento farmacológico aprovado pela FDA (2020) para a doença, com associação documentada a menor mortalidade em estudos de coorte comparados a controles históricos não tratados (sem randomização) e melhora de desfechos substitutos de rigidez vascular.",
+    "presentation": [
+      "Aparência normal ao nascimento, com surgimento dos sinais característicos nos primeiros 1-2 anos de vida: retardo de crescimento, alopecia, perda de gordura subcutânea, esclerodermia cutânea e face progeroide (nariz fino, micrognatia)",
+      "Rigidez arterial mensurável precocemente por velocidade de onda de pulso carótido-femoral marcadamente elevada em relação a controles pareados por idade, mesmo em fase assintomática",
+      "Disfunção diastólica do ventrículo esquerdo ao ecocardiograma — a anormalidade cardíaca mais prevalente em coorte longitudinal (59% dos pacientes), com prevalência crescente conforme a idade",
+      "Hipertrofia ventricular esquerda e doença valvar, incluindo estenose aórtica calcificada de evolução acelerada, surgindo predominantemente na segunda década de vida",
+      "Infarto agudo do miocárdio e/ou insuficiência cardíaca por doença aterosclerótica coronariana acelerada, tipicamente entre 6 e 20 anos de idade — principal causa de morte (mais de 80% dos óbitos)",
+      "AVC isquêmico e outras manifestações de arteriopatia cerebrovascular de grandes e pequenos vasos",
+      "Perfil lipídico tipicamente normal ou próximo do normal, distinguindo o mecanismo da aterosclerose por dislipidemia primária",
+      "Manifestações sistêmicas não cardiovasculares associadas: contraturas articulares, perda auditiva de baixa frequência, alterações dentárias e ósseas, baixa estatura desproporcional"
+    ],
+    "differentials": [
+      "Cardiomiopatia por LMNA (laminopatia cardíaca) e distrofia muscular de Emery-Dreifuss — mesmo gene, variantes que não geram progerina, fenótipo cardíaco de doença de condução e arritmia ventricular maligna, sem o fenótipo sistêmico de envelhecimento acelerado nem aterosclerose precoce generalizada como mecanismo central",
+      "Displasia mandibuloacral e dermopatia restritiva (variantes bialélicas em LMNA ou ZMPSTE24) — outras laminopatias progeroides relacionadas ao processamento da pré-lamina A, com fenótipos e gravidade distintos da HGPS clássica",
+      "Síndrome de progeria de Néstor-Guillermo (gene BANF1) — fenótipo progeroide de predomínio osteoarticular, sem o mesmo padrão agressivo de doença cardiovascular acelerada",
+      "Síndrome de Werner (gene WRN) — progeria de início no adulto jovem, com aterosclerose acelerada e catarata bilateral, mas curso muito mais lento e apresentação muito mais tardia do que a HGPS",
+      "Hipercolesterolemia familiar homozigótica — doença coronariana grave em criança/adolescente, mas com LDL marcadamente elevado, xantomas e ausência do fenótipo progeroide sistêmico",
+      "Lipodistrofia congênita generalizada (AGPAT2, BSCL2, CAV1, PTRF/CAVIN1) — sobreposição parcial de perda de gordura subcutânea, mas sem o fenótipo cardiovascular aterosclerótico acelerado como característica central e com mecanismo genético completamente distinto"
+    ],
+    "tests": [
+      "Sequenciamento do gene LMNA dirigido inicialmente à variante recorrente c.1824C>T (p.Gly608Gly)",
+      "Sequenciamento completo de éxons e regiões intrônicas flanqueadoras do LMNA quando a variante clássica não é detectada em fenótipo fortemente sugestivo (formas não clássicas do éxon/íntron 11)",
+      "Eletrocardiograma de 12 derivações",
+      "Ecocardiograma transtorácico completo, com atenção à função diastólica",
+      "Ultrassonografia (duplex) de carótidas — calibre luminal e espessura íntima-média",
+      "Ressonância magnética/angiorressonância de crânio e pescoço, para avaliação de alterações vasculares cerebrais e AVC silencioso",
+      "Velocidade de onda de pulso carótido-femoral, quando disponível em centro com capacidade técnica, como medida objetiva de rigidez arterial subclínica",
+      "Perfil lipídico basal",
+      "Aferição de pressão arterial com manguito de tamanho apropriado para a estatura reduzida característica"
+    ],
+    "red_flags": [
+      "Dor torácica ou dispneia em paciente com HGPS — deve ser tratada como potencial síndrome coronariana aguda independentemente da idade cronológica",
+      "Déficit neurológico focal agudo ou convulsão — deve ser tratado como potencial AVC, com neuroimagem urgente",
+      "Sinais de insuficiência cardíaca descompensada (taquipneia, edema, má progressão ponderal, hepatomegalia congestiva)",
+      "Síncope ou sopro sistólico intenso sugestivo de estenose aórtica crítica",
+      "Assimetria de pulsos ou sinais de isquemia de extremidade",
+      "Progressão rápida de rigidez arterial ou disfunção diastólica em exames seriados, mesmo sem sintomas"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o diagnóstico com sequenciamento de LMNA e encaminhar o paciente e a família a um centro com experiência acumulada em HGPS (rede ligada à Progeria Research Foundation), dada a raridade extrema da doença.",
+      "Realizar avaliação cardiovascular basal completa ao diagnóstico: eletrocardiograma, ecocardiograma com avaliação de função diastólica, duplex de carótidas, RM/angio-RM de crânio e pescoço e perfil lipídico.",
+      "Considerar início de lonafarnib assim que o diagnóstico for confirmado, discutindo com a família o racional mecanístico, os efeitos adversos gastrointestinais esperados (em geral atenuados ao longo dos primeiros meses) e as incertezas de magnitude de benefício individual.",
+      "Programar reavaliação cardiovascular (pressão arterial, eletrocardiograma, ecocardiograma, duplex de carótidas) a cada 6-12 meses.",
+      "Programar RM/angio-RM de crânio e pescoço anualmente para rastreio de alterações vasculares progressivas e AVC silencioso.",
+      "Individualizar uso de ácido acetilsalicílico em baixa dose e, quando há hiperlipidemia associada, estatina — extrapolados do manejo cardiovascular geral, sem ensaio clínico randomizado dedicado nesta população.",
+      "Manter acompanhamento multidisciplinar (cardiologia, genética clínica, endocrinologia/crescimento, odontologia, ortopedia, fonoaudiologia) dada a natureza sistêmica da doença."
+    ],
+    "emergency_flow": [
+      "Diante de dor torácica, dispneia ou outro sintoma sugestivo de isquemia miocárdica em paciente com HGPS, iniciar investigação de síndrome coronariana aguda em caráter de urgência (ECG, troponina, avaliação clínica), independentemente da idade do paciente.",
+      "Diante de déficit neurológico focal agudo, alteração de consciência ou convulsão, ativar protocolo de AVC e obter neuroimagem urgente (RM/angio-RM ou TC conforme disponibilidade e estabilidade clínica).",
+      "Diante de sinais de insuficiência cardíaca aguda, obter ecocardiograma urgente e iniciar terapia anticongestiva conforme apresentação hemodinâmica.",
+      "Diante de síncope ou sopro sugestivo de estenose aórtica crítica, obter ecocardiograma urgente para quantificação do gradiente e encaminhar a centro de referência com experiência em intervenção valvar adaptada para HGPS (TAVI/implante apico-aórtico modificados), reconhecendo tratar-se de intervenção de alto risco com evidência limitada a séries de casos.",
+      "Manter limiar baixo para avaliação cardiovascular invasiva ou revascularização em adolescente com HGPS e suspeita de doença coronariana obstrutiva grave, discutindo com a família que a experiência disponível é de relatos e séries pequenas de centros isolados, sem desfecho padronizado estabelecido."
+    ],
+    "tags": [
+      "progeria",
+      "Hutchinson-Gilford",
+      "HGPS",
+      "LMNA",
+      "progerina",
+      "lonafarnib",
+      "aterosclerose acelerada",
+      "rigidez arterial",
+      "velocidade de onda de pulso",
+      "doença ultrarrara",
+      "cardiologia pediátrica",
+      "genética cardiovascular",
+      "farnesiltransferase",
+      "envelhecimento acelerado"
+    ],
+    "source_refs": [
+      "Gordon LB, Brown WT, Collins FS. Hutchinson-Gilford Progeria Syndrome. GeneReviews. Seattle: University of Washington; 2003-2025. Bookshelf ID: NBK1121. PMID: 20301300.",
+      "De Sandre-Giovannoli A, Bernard R, Cau P, et al. Lamin a truncation in Hutchinson-Gilford progeria. Science. 2003;300(5628):2055. PMID: 12702809.",
+      "Eriksson M, Brown WT, Gordon LB, et al. Recurrent de novo point mutations in lamin A cause Hutchinson-Gilford progeria syndrome. Nature. 2003;423(6937):293-8. PMID: 12714972.",
+      "Merideth MA, Gordon LB, Clauss S, et al. Phenotype and course of Hutchinson-Gilford progeria syndrome. N Engl J Med. 2008;358(6):592-604. PMID: 18256394.",
+      "Gerhard-Herman M, Smoot LB, Wake N, et al. Mechanisms of premature vascular aging in children with Hutchinson-Gilford progeria syndrome. Hypertension. 2012;59(1):92-7. PMID: 22083160.",
+      "Olive M, Harten I, Mitchell R, et al. Cardiovascular pathology in Hutchinson-Gilford progeria: correlation with the vascular pathology of aging. Arterioscler Thromb Vasc Biol. 2010;30(11):2301-9. PMID: 20798379.",
+      "Varga R, Eriksson M, Erdos MR, et al. Progressive vascular smooth muscle cell defects in a mouse model of Hutchinson-Gilford progeria syndrome. Proc Natl Acad Sci U S A. 2006;103(9):3250-5. PMID: 16492728.",
+      "Prakash A, Gordon LB, Kleinman ME, et al. Cardiac Abnormalities in Patients With Hutchinson-Gilford Progeria Syndrome. JAMA Cardiol. 2018;3(4):326-334. PMID: 29466530.",
+      "Olsen FJ, et al. Progression of Cardiac Abnormalities in Hutchinson-Gilford Progeria Syndrome: A Prospective Longitudinal Study. Circulation. 2023;147(23):1782-1784. PMID: 37276254.",
+      "Gordon LB, Kieran MW, Kleinman ME, et al. Clinical trial of a farnesyltransferase inhibitor in children with Hutchinson-Gilford progeria syndrome. Proc Natl Acad Sci U S A. 2012;109(41):16666-71. PMID: 23012407.",
+      "Gordon LB, Kleinman ME, Miller DT, et al. Impact of farnesylation inhibitors on survival in Hutchinson-Gilford progeria syndrome. Circulation. 2014;130(1):27-34. PMID: 24795390.",
+      "Gordon LB, Shappell H, Massaro J, et al. Association of Lonafarnib Treatment vs No Treatment With Mortality Rate in Patients With Hutchinson-Gilford Progeria Syndrome. JAMA. 2018;319(16):1687-1695. PMID: 29710166.",
+      "Gordon LB, Kleinman ME, Massaro J, et al. Clinical Trial of the Protein Farnesylation Inhibitors Lonafarnib, Pravastatin, and Zoledronic Acid in Children With Hutchinson-Gilford Progeria Syndrome. Circulation. 2016;134(2):114-25. PMID: 27400896.",
+      "Gordon LB, et al. Intervention for critical aortic stenosis in Hutchinson-Gilford progeria syndrome. Front Cardiovasc Med. 2024;11:1356010. PMID: 38725831."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1121/",
+      "https://pubmed.ncbi.nlm.nih.gov/12702809/",
+      "https://pubmed.ncbi.nlm.nih.gov/12714972/",
+      "https://pubmed.ncbi.nlm.nih.gov/18256394/",
+      "https://pubmed.ncbi.nlm.nih.gov/22083160/",
+      "https://pubmed.ncbi.nlm.nih.gov/20798379/",
+      "https://pubmed.ncbi.nlm.nih.gov/16492728/",
+      "https://pubmed.ncbi.nlm.nih.gov/29466530/",
+      "https://pubmed.ncbi.nlm.nih.gov/37276254/",
+      "https://pubmed.ncbi.nlm.nih.gov/23012407/",
+      "https://pubmed.ncbi.nlm.nih.gov/24795390/",
+      "https://pubmed.ncbi.nlm.nih.gov/29710166/",
+      "https://pubmed.ncbi.nlm.nih.gov/27400896/",
+      "https://pubmed.ncbi.nlm.nih.gov/38725831/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "progeria-de-hutchinson-gilford-mecanismo-da-aterosclerose-acelerada-rastreio-cardiovascular-e-lonafarnib"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "mucopolissacaridose-iva-morquio-a-cardiovascular",
+    "name": "Mucopolissacaridose tipo IVA (síndrome de Morquio A) — acometimento cardiovascular",
+    "aliases": [
+      "Morquio A",
+      "MPS IVA",
+      "MPS 4A",
+      "síndrome de Morquio A",
+      "deficiência de GALNS",
+      "deficiência de N-acetilgalactosamina-6-sulfatase"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_deposito_lisossomal_valvopatia_e_risco_anestesico",
+    "prevalence_rank": 166,
+    "completeness": "completo",
+    "summary": "Doença de depósito lisossomal autossômica recessiva causada por deficiência de N-acetilgalactosamina-6-sulfatase (GALNS), com acúmulo de queratan sulfato e condroitina-6-sulfato. O fenótipo dominante é esquelético (displasia esquelética grave, baixa estatura, instabilidade atlantoaxial por hipoplasia de odontoide em até 90% dos casos), mas há acometimento cardiovascular próprio e clinicamente relevante: valvopatia predominantemente regurgitante (tricúspide, mitral e aórtica, por infiltração glicosaminoglicana dos folhetos), com possibilidade de progressão para estenose descrita em subgrupos; hipertrofia ventricular, dilatação de raiz aórtica e enchimento diastólico prejudicado. A terapia de reposição enzimática (elosulfase alfa) tem eficácia demonstrada sobre mobilidade funcional, mas impacto mínimo e não significativo sobre a função cardíaca em 52 semanas de tratamento, sem evidência de reversão da valvopatia estrutural já estabelecida. O risco perioperatório é multissistêmico: além da avaliação cardíaca, exige planejamento cuidadoso de via aérea (estreitamento traqueal progressivo, intubação difícil descrita em cerca de um terço dos procedimentos em séries pequenas) e proteção da coluna cervical instável, relevante pela frequência de cirurgias ortopédicas nessa população.",
+    "presentation": [
+      "Displasia esquelética grave com baixa estatura desproporcional, deformidades torácicas e frouxidão ligamentar — fenótipo dominante que costuma motivar o diagnóstico e o acompanhamento multidisciplinar, tipicamente antes de qualquer sintoma cardíaco",
+      "Instabilidade atlantoaxial por hipoplasia de odontoide, presente em até 90% dos pacientes, com risco de compressão medular se não investigada e tratada",
+      "Sopro cardíaco ou achado ecocardiográfico de regurgitação valvar (tricúspide, mitral ou aórtica) identificado em avaliação de rotina ou pré-operatória, geralmente assintomático na fase inicial",
+      "Dispneia aos esforços ou sinais de insuficiência cardíaca em fase mais avançada de valvopatia regurgitante grave ou, em subgrupo, de estenose valvar em progressão",
+      "Estridor, ronco ou sinais de obstrução de via aérea superior progressiva, relacionados ao estreitamento traqueal e ao acúmulo de glicosaminoglicano em tecidos de via aérea",
+      "Encaminhamento para avaliação cardiovascular pré-operatória antes de cirurgia ortopédica (descompressão cervical, correção de deformidade), contexto em que o achado cardíaco é mais frequentemente identificado na prática"
+    ],
+    "differentials": [
+      "Outras mucopolissacaridoses com acometimento cardíaco mais proeminente e cardiomiopatia hipertrófica associada — MPS I (Hurler) e MPS II (Hunter), em que o comprometimento cardíaco e neurológico tende a ser mais precoce e grave",
+      "MPS IVB (síndrome de Morquio B), causada por deficiência de beta-galactosidase (gene GLB1, a mesma enzima da gangliosidose GM1) — compartilha nome e parte do fenótipo esquelético por acúmulo de queratan sulfato, mas é geneticamente distinta da MPS IVA",
+      "Doença de Gaucher tipo 3c — outra doença de depósito lisossomal com valvopatia proeminente, porém com padrão predominantemente calcificante/estenótico e início tipicamente ainda mais precoce, e mecanismo enzimático distinto",
+      "Doença de Fabry com acometimento cardíaco — doença de depósito lisossomal ligada ao X com hipertrofia ventricular esquerda concêntrica e infiltração miocárdica, sem o componente esquelético displásico dominante da MPS IVA",
+      "Valvopatia reumática ou congênita (valva bicúspide) como causas mais comuns de disfunção valvar na infância/adolescência, afastadas pelo contexto clínico e pela ausência do fenótipo esquelético típico",
+      "Outras displasias esqueléticas sem acometimento cardiovascular sistêmico associado"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico seriado, com atenção dirigida a regurgitação tricúspide, mitral e aórtica (padrão mais comum) e vigilância para eventual progressão a estenose valvar",
+      "Eletrocardiograma como parte da avaliação cardíaca basal e pré-operatória",
+      "Dosagem de atividade de GALNS em leucócitos ou fibroblastos e/ou sequenciamento do gene GALNS para confirmação diagnóstica",
+      "Excreção urinária de glicosaminoglicanos (queratan sulfato e condroitina-6-sulfato), como triagem bioquímica inicial",
+      "Radiografia de coluna cervical em flexão/extensão e ressonância magnética de coluna cervical para avaliação de instabilidade atlantoaxial e estenose espinhal",
+      "Fluoroscopia de via aérea, espirometria e polissonografia como parte da avaliação pré-anestésica multissistêmica",
+      "Tomografia com angiografia de via aérea/torácica quando há suspeita de estreitamento traqueal progressivo relevante para planejamento anestésico"
+    ],
+    "red_flags": [
+      "Instabilidade atlantoaxial não investigada em paciente que será submetido a qualquer procedimento sob anestesia geral, pelo risco de lesão medular com manipulação cervical",
+      "Progressão de valvopatia (regurgitação ou estenose) mesmo sob terapia de reposição enzimática otimizada — a resposta funcional à TRE não implica estabilização da valva",
+      "Sinais de obstrução de via aérea superior (estridor, dificuldade respiratória posicional) não investigados antes de procedimento eletivo sob anestesia",
+      "Indicação de betabloqueador nessa população sem avaliação individualizada cuidadosa, dado o mecanismo compensatório de frequência cardíaca elevada sobre volume sistólico reduzido",
+      "Cirurgia ortopédica planejada sem avaliação cardíaca (ECG e ecocardiograma) e de via aérea prévias, mesmo em paciente sem sintoma cardiovascular referido"
+    ],
+    "ambulatory_flow": [
+      "Incluir avaliação cardiológica basal (ecocardiograma e eletrocardiograma) no acompanhamento multidisciplinar de todo paciente com MPS IVA confirmada, independentemente de sintoma cardíaco",
+      "Repetir ecocardiograma em intervalos regulares para vigilância de progressão da valvopatia, dado o caráter documentadamente progressivo com a idade",
+      "Articular precocemente com genética metabólica/ortopedia a necessidade de avaliação cardíaca e de via aérea antes de qualquer cirurgia eletiva planejada, sobretudo ortopédica",
+      "Evitar betabloqueadores nessa população salvo avaliação individualizada cuidadosa, pelo mecanismo compensatório cronotrópico já descrito",
+      "Não presumir estabilização ou reversão de valvopatia estrutural em paciente sob elosulfase alfa bem otimizada do ponto de vista funcional/sistêmico — manter vigilância cardiológica independente da resposta à TRE",
+      "Indicar profilaxia de endocardite infecciosa em paciente com prótese valvar ou endocardite prévia, pelos critérios gerais aplicáveis a qualquer valvopatia estrutural",
+      "Referenciar para intervenção valvar (predominantemente cirúrgica) pelos mesmos critérios de gravidade e sintomas de qualquer valvopatia grave, quando indicado"
+    ],
+    "emergency_flow": [
+      "Investigar descompensação cardíaca aguda (dispneia, sinais de baixo débito) em paciente com MPS IVA conhecida como possível progressão de valvopatia regurgitante ou estenótica grave, seguindo o manejo padrão da valvopatia aguda descompensada",
+      "Antes de qualquer procedimento de urgência sob anestesia geral, avaliar ativamente via aérea (risco de intubação difícil, estreitamento traqueal) e estabilidade cervical, mesmo quando o tempo disponível for limitado",
+      "Priorizar técnicas de via aérea compatíveis com posição neutra da coluna cervical (videolaringoscopia, fibrobroncoscopia, máscara laríngea) e ter via aérea alternativa prontamente disponível",
+      "Evitar betabloqueadores no manejo agudo, pelo mecanismo compensatório cronotrópico sobre volume sistólico reduzido já descrito nessa população",
+      "Considerar monitorização neurofisiológica intraoperatória em qualquer procedimento de urgência que envolva manipulação cervical, posicionamento em prona ou duração prolongada (acima de 45 minutos)",
+      "Acionar equipe multidisciplinar (cardiologia, anestesiologia, ortopedia/neurocirurgia, genética metabólica) diante de qualquer intercorrência perioperatória grave, dado o caráter multissistêmico do risco nessa população"
+    ],
+    "tags": [
+      "mucopolissacaridose tipo IVA",
+      "síndrome de Morquio A",
+      "MPS IVA",
+      "GALNS",
+      "queratan sulfato",
+      "doença de depósito lisossomal",
+      "valvopatia regurgitante",
+      "instabilidade atlantoaxial",
+      "elosulfase alfa",
+      "terapia de reposição enzimática",
+      "via aérea difícil",
+      "risco perioperatório",
+      "doença rara"
+    ],
+    "source_refs": [
+      "Regier DS, Oetgen M, Tanpaiboon P. Mucopolysaccharidosis Type IVA. GeneReviews. Seattle: University of Washington; 2013-2021. PMID: 23844448",
+      "Harmatz P, Mengel KE, Giugliani R, Valayannopoulos V, Lin SP, et al. The Morquio A Clinical Assessment Program (MorCAP): baseline results illustrating progressive, multisystemic clinical impairments in Morquio A subjects. Mol Genet Metab. 2013;109(1):54-61. PMID: 23452954",
+      "Braunlin EA, Harmatz PR, Scarpa M, et al. Cardiac disease in patients with mucopolysaccharidosis: presentation, diagnosis and management. J Inherit Metab Dis. 2011;34(6):1183-1197. PMID: 21744090",
+      "Hendriksz CJ, Harmatz P, Beck M, et al. Review of clinical presentation and diagnosis of mucopolysaccharidosis IVA. Mol Genet Metab. 2013;110(1-2):54-64. PMID: 23665161",
+      "Hendriksz CJ, Al-Jawad M, Berger KI, et al. Clinical overview and treatment options for non-skeletal manifestations of mucopolysaccharidosis type IVA. J Inherit Metab Dis. 2013;36(2):309-322. PMID: 22358740",
+      "Lin HY, Chuang CK, Chen MR, et al. Natural history and clinical assessment of Taiwanese patients with mucopolysaccharidosis IVA. Orphanet J Rare Dis. 2014;9:21. PMID: 24513086",
+      "Solanki GA, Martin KW, Theroux MC, et al. Spinal involvement in mucopolysaccharidosis IVA (Morquio-Brailsford or Morquio A syndrome): presentation, diagnosis and management. J Inherit Metab Dis. 2013;36(2):339-355. PMID: 23385297",
+      "Akyol MU, Alden TD, Amartino H, et al. Recommendations for the management of MPS IVA: systematic evidence- and consensus-based guidance. Orphanet J Rare Dis. 2019;14(1):137. PMID: 31196221",
+      "Averill LW, Kecskemethy HH, Theroux MC, et al. Tracheal narrowing in children and adults with mucopolysaccharidosis type IVA: evaluation with computed tomography angiography. Pediatr Radiol. 2021;51(7):1202-1213. PMID: 33608742",
+      "Tümer M, Yılbaş AA, Debbağ S, et al. Airway management in mucopolysaccharidosis: a retrospective case series review. Braz J Anesthesiol. 2023;73(5):680-682. PMID: 34848310",
+      "Hendriksz CJ, Burton B, Fleming TR, et al. Efficacy and safety of enzyme replacement therapy with BMN 110 (elosulfase alfa) for Morquio A syndrome (mucopolysaccharidosis IVA): a phase 3 randomised placebo-controlled study. J Inherit Metab Dis. 2014;37(6):979-990. PMID: 24810369",
+      "Hendriksz CJ, Giugliani R, Harmatz P, et al. Multi-domain impact of elosulfase alfa in Morquio A syndrome in the pivotal phase III trial. Mol Genet Metab. 2015;114(2):178-185. PMID: 25284089",
+      "Barry MO, Beardslee MA, Braverman AC. Morquio's syndrome: severe aortic regurgitation and late pulmonary autograft failure. J Heart Valve Dis. 2006;15(6):839-842. PMID: 17152795",
+      "Dostalova G, Hlubocka Z, Lindner J, et al. Late diagnosis of mucopolysaccharidosis type IVB and successful aortic valve replacement in a 60-year-old female patient. Cardiovasc Pathol. 2018;35:52-56. PMID: 29800929"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/23844448/",
+      "https://pubmed.ncbi.nlm.nih.gov/23452954/",
+      "https://pubmed.ncbi.nlm.nih.gov/21744090/",
+      "https://pubmed.ncbi.nlm.nih.gov/23665161/",
+      "https://pubmed.ncbi.nlm.nih.gov/22358740/",
+      "https://pubmed.ncbi.nlm.nih.gov/24513086/",
+      "https://pubmed.ncbi.nlm.nih.gov/23385297/",
+      "https://pubmed.ncbi.nlm.nih.gov/31196221/",
+      "https://pubmed.ncbi.nlm.nih.gov/33608742/",
+      "https://pubmed.ncbi.nlm.nih.gov/34848310/",
+      "https://pubmed.ncbi.nlm.nih.gov/24810369/",
+      "https://pubmed.ncbi.nlm.nih.gov/25284089/",
+      "https://pubmed.ncbi.nlm.nih.gov/17152795/",
+      "https://pubmed.ncbi.nlm.nih.gov/29800929/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "mucopolissacaridose-tipo-iva-morquio-a-acometimento-cardiovascular-valvopatia-e-limites-da-terapia-de-reposicao-enzimatica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "lal-d",
+    "name": "Deficiência de lipase ácida lisossômica (LAL-D)",
+    "aliases": [
+      "LAL-D",
+      "deficiência de LIPA",
+      "doença de Wolman",
+      "deficiência de éster de colesterila",
+      "CESD",
+      "cholesteryl ester storage disease"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "dislipidemia_genetica_por_doenca_de_deposito_lisossomico",
+    "prevalence_rank": 167,
+    "completeness": "completo",
+    "summary": "Doença lisossômica de depósito autossômica recessiva por variantes bialélicas em LIPA, que codifica a lipase ácida lisossômica, enzima que hidrolisa ésteres de colesterol e triglicerídeos dentro do lisossomo. A deficiência causa acúmulo intracelular progressivo desses lipídios em hepatócitos, macrófagos e outras células, com dislipidemia característica (LDL-C elevado, HDL-C baixo) e aterosclerose acelerada/prematura como manifestação cardiovascular central — mecanismo distinto do defeito de depuração extracelular de LDL da hipercolesterolemia familiar. Espectro clínico contínuo, de atividade enzimática residual: forma infantil grave (doença de Wolman, quase sem atividade residual, apresentação nas primeiras semanas de vida com hepatoesplenomegalia, má absorção, falência de crescimento e, por vezes, calcificação adrenal bilateral, historicamente fatal no primeiro ano sem tratamento) a forma de início tardio (deficiência de éster de colesterila/CESD, atividade residual parcial, hepatomegalia e dislipidemia aterogênica reconhecidas da infância à vida adulta, com risco de fibrose/cirrose hepática e de doença cardiovascular aterosclerótica). Tratamento específico com sebelipase alfa (lipase ácida lisossômica humana recombinante), com efeito documentado sobre transaminases, volume/gordura hepática e perfil lipídico aterogênico (LDL-C, HDL-C, apoB, número de partículas de LDL) em ensaios controlados; sobrevida documentada em lactentes tratados precocemente na forma de Wolman, sem grupo controle contemporâneo por razões éticas.",
+    "presentation": [
+      "Forma infantil (Wolman): vômitos e diarreia/má absorção nas primeiras semanas de vida, distensão abdominal, hepatoesplenomegalia maciça, falência de crescimento rapidamente progressiva",
+      "Calcificação adrenal bilateral à imagem — achado clássico e sugestivo na forma de Wolman, mas não universal; sua ausência não exclui o diagnóstico",
+      "Forma de início tardio (CESD): hepatomegalia isolada ou com esplenomegalia, muitas vezes assintomática, achado incidental em investigação de transaminases elevadas",
+      "Dislipidemia característica — LDL-C elevado e HDL-C desproporcionalmente baixo — por vezes identificada antes do reconhecimento do componente hepático",
+      "Elevação persistente de transaminases (AST/ALT) sem causa hepática evidente (viral, autoimune, medicamentosa, metabólica comum)",
+      "Sinais de doença hepática crônica/fibrose-cirrose em criança ou adulto jovem sem etiologia esclarecida",
+      "Aterosclerose prematura/doença cardiovascular aterosclerótica documentada em pacientes com CESD não tratada, descrita predominantemente em séries de casos e registros"
+    ],
+    "differentials": [
+      "Hipercolesterolemia familiar (heterozigota ou homozigota) — defeito de depuração extracelular de LDL (LDLR/APOB/PCSK9), tipicamente sem hepatomegalia nem transaminases elevadas como manifestação primária",
+      "Doença hepática gordurosa metabólica (esteato-hepatite não alcoólica) — mais comum, associada a obesidade/síndrome metabólica, sem o padrão lipídico LDL-alto/HDL-baixo desproporcional da LAL-D",
+      "Doença de Gaucher — outra doença lisossômica de depósito com hepatoesplenomegalia e quitotriosidase elevada, mas com acúmulo de glicocerebrosídeo, não de éster de colesterol, e sem o mesmo perfil de dislipidemia aterogênica",
+      "Doença de Niemann-Pick tipo B — hepatoesplenomegalia e dislipidemia por acúmulo lisossômico, porém por deficiência de esfingomielinase ácida (gene SMPD1), não de LIPA",
+      "Hepatite autoimune ou hepatopatia de causa viral/medicamentosa — diagnósticos diferenciais convencionais de transaminases elevadas persistentes que devem ser excluídos antes de investigar LAL-D",
+      "Glicogenoses hepáticas — hepatomegalia e dislipidemia secundária na infância, mas com padrão bioquímico e enzimático distinto"
+    ],
+    "tests": [
+      "Atividade da lipase ácida lisossômica em amostra de papel-filtro/gota de sangue seco — teste de escolha para triagem/confirmação bioquímica",
+      "Análise molecular do gene LIPA para confirmação diagnóstica e caracterização do genótipo",
+      "Perfil lipídico completo (LDL-C, HDL-C, triglicerídeos, apolipoproteína B) — caracteristicamente LDL-C elevado e HDL-C baixo",
+      "Transaminases (AST/ALT) e demais provas de função/lesão hepática",
+      "Ultrassonografia abdominal para hepatoesplenomegalia; elastografia ou biópsia hepática quando houver suspeita de fibrose avançada",
+      "Quitotriosidase — marcador inespecífico de ativação macrofágica, elevado em várias doenças de depósito lisossômico, não substitui a dosagem enzimática específica",
+      "Tomografia/ultrassonografia de adrenais em lactentes com suspeita de doença de Wolman, à procura de calcificação bilateral"
+    ],
+    "red_flags": [
+      "Lactente com vômitos/diarreia persistentes, distensão abdominal e falha de crescimento nas primeiras semanas de vida — investigar doença de Wolman com urgência, dado o curso historicamente fatal sem tratamento precoce",
+      "Hepatoesplenomegalia maciça em lactente com deterioração clínica rápida",
+      "Combinação de LDL-C elevado, HDL-C baixo e transaminases persistentemente elevadas em criança ou adulto jovem, sobretudo quando o quadro não se encaixa bem nos critérios diagnósticos de hipercolesterolemia familiar",
+      "Cirrose ou fibrose hepática avançada de causa não esclarecida em paciente jovem, associada a dislipidemia"
+    ],
+    "ambulatory_flow": [
+      "Diante de dislipidemia (LDL-C alto, HDL-C baixo) associada a hepatomegalia e/ou transaminases persistentemente elevadas sem causa hepática comum identificada, solicitar dosagem de atividade da lipase ácida lisossômica em papel-filtro antes de assumir hipercolesterolemia familiar isolada",
+      "Confirmar diagnóstico bioquímico positivo com análise molecular do gene LIPA",
+      "Encaminhar a centro especializado em doenças lisossômicas de depósito/hepatologia metabólica para estadiamento hepático (elastografia/biópsia conforme indicação) e avaliação de indicação de sebelipase alfa",
+      "Estratificar risco cardiovascular e tratar a dislipidemia residual conforme metas de LDL-C por categoria de risco, em paralelo ao tratamento enzimático dirigido, seguindo o mesmo racional de estratificação usado em outras dislipidemias",
+      "Rastrear familiares de risco (irmãos) diante de caso índice confirmado, dado o padrão de herança autossômica recessiva",
+      "Seguimento seriado de transaminases, perfil lipídico e imagem hepática durante o tratamento com sebelipase alfa"
+    ],
+    "emergency_flow": [
+      "Lactente com vômitos, diarreia, distensão abdominal e falência de crescimento com suspeita de doença de Wolman: internar para suporte nutricional/hidroeletrolítico agressivo e investigação diagnóstica urgente (atividade enzimática, imagem abdominal para hepatoesplenomegalia e adrenais), com início de sebelipase alfa assim que o diagnóstico for confirmado ou fortemente suspeitado em centro com experiência, dado o curso historicamente fatal sem tratamento precoce",
+      "Sinais de descompensação hepática aguda (coagulopatia, encefalopatia, ascite) em paciente com LAL-D conhecida ou suspeita: manejo conforme protocolo de insuficiência hepática aguda/crônica agudizada, com avaliação por hepatologia especializada",
+      "Evento cardiovascular agudo (síndrome coronariana aguda) em paciente jovem com LAL-D conhecida: manejo conforme protocolo padrão de síndrome coronariana aguda, sem particularidade de conduta aguda descrita na literatura além do racional geral de aterosclerose prematura"
+    ],
+    "tags": [
+      "LAL-D",
+      "LIPA",
+      "doença de Wolman",
+      "deficiência de éster de colesterila",
+      "CESD",
+      "doença lisossômica de depósito",
+      "sebelipase alfa",
+      "terapia de reposição enzimática",
+      "dislipidemia genética",
+      "aterosclerose prematura",
+      "hepatomegalia",
+      "hipercolesterolemia familiar (diferencial)"
+    ],
+    "source_refs": [
+      "Balwani M, Vijay S. Lysosomal Acid Lipase Deficiency. GeneReviews. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 26225414",
+      "Bernstein DL, Hülkova H, Bialer MG, Desnick RJ. Cholesteryl ester storage disease: review of the findings in 135 reported patients with an underdiagnosed disease. J Hepatol. 2013;58(6):1230-1243. PMID: 23485521",
+      "Reiner Ž, Guardamagna O, Nair D, et al. Lysosomal acid lipase deficiency--an under-recognized cause of dyslipidaemia and liver dysfunction. Atherosclerosis. 2014;235(1):21-30. PMID: 24792990",
+      "Pericleous M, Kelly C, Wang T, Livingstone C, Ala A. Wolman's disease and cholesteryl ester storage disorder: the phenotypic spectrum of lysosomal acid lipase deficiency. Lancet Gastroenterol Hepatol. 2017;2(9):670-679. PMID: 28786388",
+      "Scott SA, Liu B, Nazarenko I, et al. Frequency of the cholesteryl ester storage disease common LIPA E8SJM mutation (c.894G>A) in various racial and ethnic groups. Hepatology. 2013;58(3):958-965. PMID: 23424026",
+      "Burton BK, Balwani M, Feillet F, et al. A Phase 3 Trial of Sebelipase Alfa in Lysosomal Acid Lipase Deficiency. N Engl J Med. 2015;373(11):1010-1020. PMID: 26352813",
+      "Wilson DP, Friedman M, Marulkar S, et al. Sebelipase alfa improves atherogenic biomarkers in adults and children with lysosomal acid lipase deficiency. J Clin Lipidol. 2018;12(3):604-614. PMID: 29628368",
+      "Jones SA, Rojas-Caro S, Quinn AG, et al. Survival in infants treated with sebelipase alfa for lysosomal acid lipase deficiency: an open-label, multicenter, dose-escalation study. Orphanet J Rare Dis. 2017;12(1):25. PMID: 28179030",
+      "Vijay S, Brassier A, Ghosh A, et al. Long-term survival with sebelipase alfa enzyme replacement therapy in infants with rapidly progressive lysosomal acid lipase deficiency: final results from 2 open-label studies. Orphanet J Rare Dis. 2021;16(1):13. PMID: 33407676"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26225414/",
+      "https://pubmed.ncbi.nlm.nih.gov/23485521/",
+      "https://pubmed.ncbi.nlm.nih.gov/24792990/",
+      "https://pubmed.ncbi.nlm.nih.gov/28786388/",
+      "https://pubmed.ncbi.nlm.nih.gov/23424026/",
+      "https://pubmed.ncbi.nlm.nih.gov/26352813/",
+      "https://pubmed.ncbi.nlm.nih.gov/29628368/",
+      "https://pubmed.ncbi.nlm.nih.gov/28179030/",
+      "https://pubmed.ncbi.nlm.nih.gov/33407676/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "deficiencia-de-lipase-acida-lisossomica-lal-d-espectro-wolman-cesd-e-aterosclerose-acelerada"
+    ],
+    "patient_material_slug": null
   }
 ]
