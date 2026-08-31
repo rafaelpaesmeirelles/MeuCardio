@@ -1651,3 +1651,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **401** | **4.499** |
+
+## Lote 79 — concluído (commit f1e3a71c)
+
+- **5 checklists** (continuação do rodízio entre trilhas/checklists/casos clínicos/materiais-paciente):
+  - **Hipertensão**: bloqueio do SRAA + iSGLT2 + finerenona na hipertensão com DRC (ESC 2024/KDIGO 2024) — doses, prazos de reavaliação de creatinina/potássio, manejo de hipercalemia sem suspender o bloqueio (13 itens).
+  - **Cardio-oncologia**: avaliação e vigilância cardiovascular ao longo do tratamento oncológico (IC-OS/MASCC 2026) — critérios de encaminhamento precoce e armadilhas (12 itens).
+  - **Hipertensão pulmonar**: técnica e segurança do cateterismo cardíaco direito — zeragem do transdutor, medida correta da POCP, termodiluição vs. Fick (10 itens).
+  - **Diabetes e cardiologia**: manejo perioperatório de iSGLT2 — suspensão por molécula, gatilho de cetonemia, cetoacidose euglicêmica (12 itens).
+  - **Cardiomiopatias**: cardiomiopatia por LMNA — workup, fatores de van Rijsingen, calculadora LMNA-risk-VTA, CDI vs. marca-passo (13 itens).
+- **Verificação de integridade**: todos os 5 `documento_origem` confirmados; nenhum slug colide.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.664 itens.
+
+### Status consolidado (após Lote 79)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 46 | 854 |
+| Checklists | 600 | 40 | 560 |
+| Materiais-paciente | 500 | 36 | 464 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **406** | **4.494** |
