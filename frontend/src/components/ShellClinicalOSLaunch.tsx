@@ -42,6 +42,7 @@ const BASE: Secao[] = [
     itens: [
       { to: "/exames-ia", rotulo: "IA para Exames · destaque", icone: "ecg" },
       { to: "/agenda", rotulo: "Agenda", icone: "agenda" },
+      { to: "/deslocamento", rotulo: "Mapa de deslocamento", icone: "rota" },
       { to: "/round", rotulo: "Pacientes e round", icone: "round" },
       { to: "/receituario", rotulo: "Prescrição", icone: "prescricao" },
       { to: "/documentos", rotulo: "Documentos e solicitações", icone: "documento" },
