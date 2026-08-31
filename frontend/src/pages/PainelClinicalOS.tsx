@@ -94,6 +94,7 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/documentos", label: "Documentos & Solicitações", icon: "documento" },
       { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
       { to: "/agenda", label: "Agenda", icon: "agenda" },
+      { to: "/deslocamento", label: "Mapa de deslocamento", icon: "rota" },
       { to: "/corvia-mail", label: "CorVIA Mail", icon: "mail" },
       { to: "/telediagnostico", label: "Telediagnóstico", icon: "evidencia" },
       { to: "/indicadores", label: "Indicadores", icon: "indicadores" },
