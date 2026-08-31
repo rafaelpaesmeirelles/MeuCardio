@@ -1628,3 +1628,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **396** | **4.504** |
+
+## Lote 78 — concluído (commit a82362f4)
+
+- **5 materiais-paciente** (materiais-paciente era a cota mais atrasada — 31/500, 6,2%). Tradução fiel para linguagem simples de documento clínico já publicado, sem adicionar/alterar informação médica:
+  - **Prevenção e lipídios**: remédios para colesterol na gravidez e amamentação — cuidado com estatina mesmo sem planos imediatos de engravidar, suspensão 60 dias antes, exceção individualizada de risco muito alto.
+  - **Gravidez**: aspirina em baixa dose para prevenção de pré-eclâmpsia — quando começar (idealmente <16 semanas), como tomar, por que não interromper por conta própria.
+  - **Insuficiência cardíaca**: ferro baixo na IC — por que testar mesmo sem anemia, por que comprimido geralmente não resolve (IRONOUT-HF), o que esperar da aplicação na veia.
+  - **Cardiologia pediátrica**: pressão alta na criança — por que uma medida isolada não fecha diagnóstico, manguito do tamanho certo, quando o remédio entra em cena (AAP 2017).
+  - **Doença coronariana**: sinais de alerta após cateterismo pela virilha — hematoma esperado vs. pseudoaneurisma/fístula AV, alerta crítico de hemorragia retroperitoneal sem roxo visível.
+- **Verificação de integridade**: todos os 5 `documento_slug` confirmados como documentos reais e sem material prévio; nenhum slug colide.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.659 itens.
+
+### Status consolidado (após Lote 78)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 46 | 854 |
+| Checklists | 600 | 35 | 565 |
+| Materiais-paciente | 500 | 36 | 464 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **401** | **4.499** |
