@@ -47677,5 +47677,569 @@
       "cardiomiopatia-associada-ao-hiv-da-era-pre-tarv-a-doenca-cardiovascular-acelerada"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "hidatidose-cardiaca",
+    "name": "Hidatidose cardíaca (equinococose cística cardíaca)",
+    "aliases": [
+      "cisto hidático cardíaco",
+      "equinococose cística do coração",
+      "cardiopatia hidática",
+      "Echinococcus granulosus no coração",
+      "cisto hidático intramiocárdico"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 95,
+    "completeness": "completo",
+    "summary": "Acometimento cardíaco raro (0,02-2% de todos os casos) da equinococose cística, causada pela forma larvária de Echinococcus granulosus. O ventrículo esquerdo é a câmara mais afetada (37,2%), seguido do septo interventricular (25,4%) e do ventrículo direito (16,0%), refletindo a distribuição da circulação coronariana. A maioria dos pacientes é sintomática (dispneia, dor torácica, palpitações), diferentemente da cisticercose cardíaca. A complicação central é a ruptura do cisto (cerca de 18% dos casos), que pode causar embolização pulmonar ou sistêmica, tamponamento pericárdico ou reação anafilática — por vezes fatal. Diagnóstico é primariamente por ecocardiograma, complementado por TC/RM; sorologia tem sensibilidade limitada nessa localização. Tratamento é cirúrgico na maioria dos casos (ressecção com cuidado para não romper o cisto no intraoperatório), associado a albendazol perioperatório (esquema não padronizado na literatura) e seguimento mínimo de dez anos pelo risco de recorrência e doença secundária em outros órgãos. Evidência de base sólida em número absoluto de casos publicados (974 cistos catalogados em revisão sistemática de 2024), mas ainda formada por relatos e séries retrospectivas, sem coorte prospectiva dedicada.",
+    "presentation": [
+      "Dispneia progressiva e dor torácica inespecífica em paciente de área endêmica para hidatidose (pecuária ovina/bovina, contato com cães)",
+      "Palpitações associadas a cisto identificado por imagem",
+      "Bloqueio atrioventricular de qualquer grau, incluindo bloqueio total, quando o cisto é septal, mesmo sem ruptura",
+      "Achado incidental em ecocardiograma solicitado por outro motivo, sobretudo quando há hidatidose hepática ou pulmonar já conhecida",
+      "Evento embólico sistêmico agudo (AVC, isquemia de membro, isquemia mesentérica) quando o cisto é de câmara esquerda e rompe",
+      "Embolia pulmonar múltipla ou infarto pulmonar quando o cisto é de câmara direita e rompe",
+      "Tamponamento pericárdico de instalação súbita quando o cisto subepicárdico ou pericárdico rompe",
+      "Reação anafilática (urticária, broncoespasmo, choque) na ruptura, por liberação de antígenos do líquido hidático na circulação",
+      "Derrame pericárdico de volume variável associado a cisto subepicárdico não roto"
+    ],
+    "differentials": [
+      "Cisticercose cardíaca por Taenia solium",
+      "Cisto pericárdico simples não parasitário",
+      "Mixoma e outros tumores cardíacos benignos",
+      "Tumor cardíaco maligno primário ou metastático",
+      "Trombo intracavitário",
+      "Abscesso cardíaco de outra etiologia infecciosa",
+      "Vegetação endocardítica (quando há embolização como apresentação inicial)"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico — método diagnóstico central, massa cística de paredes bem definidas, uni ou multilocular, por vezes com membranas internas flutuantes",
+      "Ecocardiograma transesofágico para cistos de difícil visualização transtorácica, sobretudo atriais ou próximos à base",
+      "Tomografia computadorizada de tórax para caracterização adicional e planejamento cirúrgico",
+      "Ressonância magnética cardíaca para caracterização tecidual e delimitação anatômica",
+      "Investigação de acometimento hepático e pulmonar concomitante (ultrassonografia/TC de abdome, TC de tórax) — quase sempre indicada, já que hidatidose cardíaca isolada sem foco em outro órgão é incomum",
+      "Sorologia anti-Echinococcus (ELISA, confirmação por immunoblot) — sensibilidade limitada nessa localização, não deve ser usada para excluir o diagnóstico",
+      "Eletrocardiograma e monitorização, sobretudo em cisto septal ou próximo ao sistema de condução",
+      "Hemograma com contagem de eosinófilos — pode estar elevado, mas achado inconsistente"
+    ],
+    "red_flags": [
+      "Sinais de embolização sistêmica aguda (déficit neurológico focal, isquemia de membro) em paciente com cisto cardíaco identificado ou suspeita epidemiológica de hidatidose",
+      "Dispneia súbita ou dor pleurítica sugestiva de embolia pulmonar em paciente com cisto cardíaco de câmara direita",
+      "Derrame pericárdico de instalação aguda com repercussão hemodinâmica em paciente com cisto pericárdico/subepicárdico conhecido — suspeitar de ruptura e tamponamento iminente",
+      "Reação de hipersensibilidade aguda (urticária, broncoespasmo, hipotensão) em paciente com cisto hidático cardíaco conhecido, espontânea ou durante manipulação diagnóstica/cirúrgica — suspeitar de ruptura com liberação antigênica",
+      "Bloqueio atrioventricular novo de alto grau em paciente de área endêmica com massa septal identificada",
+      "Manipulação percutânea ou biópsia de massa cardíaca cística sem suspeita prévia de hidatidose — risco de ruptura iatrogênica com embolização e/ou anafilaxia"
+    ],
+    "ambulatory_flow": [
+      "Suspeita por ecocardiograma em paciente de área endêmica ou com hidatidose hepática/pulmonar conhecida — completar com TC ou RM cardíaca",
+      "Rastrear acometimento hepático e pulmonar concomitante em todo paciente com achado cardíaco compatível",
+      "Solicitar sorologia anti-Echinococcus como apoio, ciente de sua sensibilidade limitada nessa localização",
+      "Encaminhar precocemente para avaliação cirúrgica cardíaca especializada — a maioria dos cistos cardíacos é indicada à ressecção independentemente do estágio, mesmo se assintomático",
+      "Evitar tratamento medicamentoso pré-operatório prolongado com albendazol isolado sem plano cirúrgico definido, pelo risco teórico de fragilizar a parede do cisto",
+      "Planejar seguimento estruturado de no mínimo dez anos após tratamento, com reavaliação de fígado, pulmão e coração pelo risco de recorrência local e doença secundária em outro órgão"
+    ],
+    "emergency_flow": [
+      "Estabilização hemodinâmica imediata se houver suspeita de tamponamento pericárdico agudo (POCUS à beira-leito, pericardiocentese se instabilidade)",
+      "Suporte a via aérea e tratamento de anafilaxia (adrenalina intramuscular, suporte hemodinâmico) se houver quadro compatível com reação de hipersensibilidade aguda, espontânea ou após manipulação de massa cística cardíaca",
+      "Investigação de embolização sistêmica ou pulmonar aguda conforme território acometido (neuroimagem, angiotomografia de tórax) em paciente com cisto cardíaco conhecido e novo déficit focal ou dispneia súbita",
+      "Acionar equipe de cirurgia cardíaca precocemente diante de suspeita de ruptura de cisto hidático cardíaco — o manejo definitivo é cirúrgico, com circulação extracorpórea e técnica que evita derramamento adicional de conteúdo hidático",
+      "Manter alto índice de suspeição em paciente de área endêmica com quadro embólico ou anafilático sem outra causa evidente, mesmo sem diagnóstico prévio de hidatidose"
+    ],
+    "tags": [
+      "hidatidose",
+      "equinococose cística",
+      "Echinococcus granulosus",
+      "Echinococcus multilocularis",
+      "cisto hidático cardíaco",
+      "parasitose cardíaca",
+      "zoonose",
+      "tamponamento pericárdico",
+      "anafilaxia",
+      "embolização sistêmica",
+      "massa cardíaca",
+      "cirurgia cardíaca",
+      "albendazol"
+    ],
+    "source_refs": [
+      "Bumann S, Kuenzli E, Lissandrin R, Brunetti E, Goblirsch S, Henning L, Tamarozzi F, Neumayr A. Cardiac cystic echinococcosis-A systematic review and analysis of the literature. PLoS Negl Trop Dis. 2024;18(5):e0012183. DOI: 10.1371/journal.pntd.0012183. PMID: 38814859",
+      "Banisefid E, Baghernezhad K, Beheshti R, Hamzehzadeh S, Nemati S, Samadifar Z, Owaysee Osquee H, Javanshir E, Naseri A. Cardiac hydatid disease; a systematic review. BMC Infect Dis. 2023;23(1):584. DOI: 10.1186/s12879-023-08576-3. PMID: 37705012",
+      "Kahlfuß S, Flieger RR, Roepke TK, Yilmaz K. Diagnosis and treatment of cardiac echinococcosis. Heart. 2016;102(17):1348-1353. DOI: 10.1136/heartjnl-2016-309350. PMID: 27199228",
+      "Fennira S, Kamoun S, Besbes B, Ben Mrad I, Zairi I, Ben Moussa F, Mzoughi K, Kraiem S. Cardiac hydatid cyst in the interventricular septum: A literature review. Int J Infect Dis. 2019;88:180-183. PMID: 31499211",
+      "Bakkali A, Jaabari I, Bouhdadi H, Razine R, Bennani Mechita N, El Harrag J, Belkhadir A, Benlafqih C, Laaroussi M. Kyste hydatique cardiaque à propos de 17 cas opérés. Ann Cardiol Angeiol (Paris). 2018;67(3):172-176. PMID: 28554702",
+      "Abid A, Ben Omrane S, Kaouel K, Marghli A, Dhiab M, Abid N, Ben Zarkouna S, Khayati A. Intracavitary cardiac hydatid cyst. Cardiovasc Surg. 2003;11(2):125-129. PMID: 14627976",
+      "Wang J, Liu X, Aizezi Y, Li W, Xu J, Wang Y, Yu X. Cardiac hydatid cyst: case series and review of the literature. BMC Infect Dis. 2025;25:75. PMID: 39833674"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "hidatidose-cardiaca-acometimento-cardiovascular-da-equinococose-cistica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "triquinelose-e-miocardite",
+    "name": "Triquinelose com miocardite",
+    "aliases": [
+      "Trichinella spiralis cardíaca",
+      "triquinose cardíaca",
+      "miocardite eosinofílica por Trichinella",
+      "trichinellosis cardíaca"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 96,
+    "completeness": "completo",
+    "summary": "Zoonose parasitária por Trichinella spiralis (ou outras espécies do gênero) adquirida pela ingestão de carne crua ou malcozida contendo larvas encistadas, sobretudo suína e de caça (javali). Após a fase entérica inicial, larvas neonatas migram por via hematogênica e se encistam permanentemente na musculatura estriada esquelética; no miocárdio, ao contrário, as larvas não conseguem induzir a transformação em célula-babá nem se encistar, e sua passagem transitória provoca miocardite eosinofílica multifocal aguda, autolimitada por definição biológica — a principal causa de óbito na triquinelose grave. O quadro clássico inclui edema periorbital/facial, mialgia intensa e eosinofilia marcada; alteração eletrocardiográfica ocorre em até 80% das séries, mas miocardite clinicamente manifesta é bem menos frequente. Diagnóstico combina eosinofilia, sorologia (limitada nas primeiras 3 semanas) e biópsia muscular (definitiva, idealmente após a 4ª semana). O tratamento é com albendazol ou mebendazol, associando corticosteroide sistêmico nos casos graves com miocardite ou acometimento neurológico para atenuar a resposta inflamatória à morte larval induzida pelo antiparasitário.",
+    "presentation": [
+      "Fase entérica inicial (2-7 dias após ingestão): dor abdominal, diarreia, náusea e vômitos",
+      "Edema periorbital e facial, frequentemente com proptose, quemose e hemorragia subconjuntival",
+      "Mialgia intensa e fraqueza, por vezes incapacitantes, na fase muscular sistêmica",
+      "Febre e eosinofilia marcada, correlacionada com a carga parasitária",
+      "Dor torácica, dispneia, palpitação ou síncope quando há miocardite associada",
+      "Quadro que pode mimetizar síndrome coronariana aguda, com troponina elevada e alteração segmentar ao ecocardiograma"
+    ],
+    "differentials": [
+      "Miocardite viral ou de outras etiologias infecciosas",
+      "Síndrome hipereosinofílica idiopática e granulomatose eosinofílica com poliangiite (EGPA)",
+      "Toxocaríase (larva migrans visceral) com miocardite eosinofílica",
+      "Síndrome coronariana aguda verdadeira, quando há troponina elevada e alteração segmentar",
+      "Outras parasitoses com eosinofilia e acometimento cardíaco (estrongiloidíase, toxoplasmose aguda)",
+      "Dermatomiosite ou outras miopatias inflamatórias, na fase de mialgia predominante"
+    ],
+    "tests": [
+      "Hemograma com contagem de eosinófilos",
+      "Creatinoquinase, desidrogenase lática e IgE sérica",
+      "Sorologia para Trichinella (ELISA, imunofluorescência indireta ou aglutinação por látex), repetida se inicialmente negativa e suspeita persistir além de 3 semanas",
+      "Biópsia muscular (deltoide, panturrilha ou reto femoral), idealmente após a 4ª semana de infecção",
+      "Eletrocardiograma seriado",
+      "Ecocardiograma transtorácico (função ventricular, alteração segmentar, derrame pericárdico)",
+      "Troponina, quando há suspeita clínica de acometimento cardíaco",
+      "Ressonância magnética cardíaca para caracterização tecidual, quando disponível e a suspeita de miocardite persistir"
+    ],
+    "red_flags": [
+      "Dor torácica, dispneia ou palpitação em paciente com triquinelose confirmada ou fortemente suspeita",
+      "Eosinofilia muito acentuada associada a sintomas cardíacos",
+      "Alteração eletrocardiográfica nova (bloqueio de condução, extrassistolia complexa, alteração de repolarização)",
+      "Troponina elevada com quadro sugestivo de síndrome coronariana em paciente jovem sem fatores de risco tradicionais e história epidemiológica compatível (ingestão de carne suína ou de caça crua/malcozida)",
+      "Sinais de insuficiência cardíaca aguda ou choque cardiogênico",
+      "Derrame pericárdico com repercussão hemodinâmica"
+    ],
+    "ambulatory_flow": [
+      "Investigar história alimentar (carne suína ou de caça crua/malcozida, embutido artesanal) em paciente com eosinofilia, mialgia e edema periorbital",
+      "Solicitar sorologia e considerar biópsia muscular conforme tempo de evolução",
+      "Rastrear acometimento cardíaco com eletrocardiograma e, se alterado ou sintomático, ecocardiograma, mesmo em ausência de sintomas cardíacos francos",
+      "Iniciar albendazol ou mebendazol assim que o diagnóstico for considerado suficientemente provável, sem aguardar confirmação definitiva em quadro compatível",
+      "Encaminhar para avaliação cardiológica e considerar corticosteroide associado diante de qualquer evidência de acometimento miocárdico"
+    ],
+    "emergency_flow": [
+      "Estabilizar e monitorizar ritmo cardíaco diante de suspeita de miocardite aguda",
+      "Solicitar troponina, ecocardiograma e eletrocardiograma seriados",
+      "Iniciar antiparasitário (albendazol ou mebendazol) associado a corticosteroide sistêmico em caso de miocardite confirmada ou fortemente suspeita",
+      "Suporte hemodinâmico avançado, incluindo suporte circulatório mecânico quando disponível e indicado, nos raros casos de miocardite fulminante com choque cardiogênico",
+      "Notificar e investigar exposição alimentar comum diante de suspeita de surto (múltiplos casos ligados à mesma fonte de carne)"
+    ],
+    "tags": [
+      "triquinelose",
+      "trichinella",
+      "miocardite",
+      "eosinofilia",
+      "zoonose",
+      "carne suína",
+      "javali",
+      "parasitose"
+    ],
+    "source_refs": [
+      "Rawla P, Sharma S. Trichinella Spiralis Infection. StatPearls. 2023. PMID: 30860746",
+      "Gottstein B, Pozio E, Nöckler K. Epidemiology, diagnosis, treatment, and control of trichinellosis. Clin Microbiol Rev. 2009;22(1):127-145. PMID: 19136437",
+      "Neghina R, Neghina AM, Marincu I, Iacobiciu I. Reviews on trichinellosis (III): cardiovascular involvement. Foodborne Pathog Dis. 2011;8(8):853-860. PMID: 21438766",
+      "Puljiz I, Beus A, Kuzman I, Seiwerth S. Electrocardiographic changes and myocarditis in trichinellosis: a retrospective study of 154 patients. Ann Trop Med Parasitol. 2005;99(4):403-411. PMID: 15949188",
+      "Lazarević AM, Nešković AN, Goronja M, et al. Low incidence of cardiac abnormalities in treated trichinosis. Am J Med. 1999;107(1):18-23. PMID: 10403348",
+      "Bessoudo R, Marrie TJ, Smith ER. Cardiac involvement in trichinosis. Chest. 1981;79(6):698-699. PMID: 7226959",
+      "Mohib O, Clevenbergh P, Truyens C, et al. Trichinella spiralis-associated myocarditis mimicking acute myocardial infarction. Acta Clin Belg. 2022;77(4):814-818. PMID: 32627690",
+      "Tanariyakul M, Estaris J, Saowapa S, et al. Trichinellosis-Induced Eosinophilic Myocarditis Mimicking Hypereosinophilic Syndrome. Cureus. 2024;16(4):e58497. PMID: 38800259",
+      "Krivokapich SJ, Gatti GM, Gonzalez Prous CL, et al. Detection of Trichinella britovi in pork sausage suspected to be implicated in a human outbreak in Mendoza, Argentina. Parasitol Int. 2019;71:64-67. PMID: 30880157",
+      "Kmetiuk LB, Biondo LM, Pedrosa F, Favero GM, Biondo AW. One Health at gunpoint: Impact of wild boars as exotic species in Brazil - A review. One Health. 2023;16:100568. PMID: 37332883"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "triquinelose-e-miocardite-a-larva-que-nao-se-encista-no-coracao-e-a-principal-causa-de-morte-na-forma-grave"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "chikungunya-cardiovascular",
+    "name": "Chikungunya e acometimento cardiovascular",
+    "aliases": [
+      "Miocardite por chikungunya",
+      "Cardiopatia por CHIKV",
+      "Acometimento cardíaco na chikungunya",
+      "Arritmia por chikungunya",
+      "Miocardite chikungunya"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": null,
+    "prevalence_rank": 97,
+    "completeness": "completo",
+    "summary": "O acometimento cardiovascular pela chikungunya (CHIKV) é uma manifestação extra-articular atípica, presente em uma minoria dos pacientes — a manifestação dominante e definidora da doença é a poliartralgia febril, com parcela relevante evoluindo para artralgia/artrite crônica. Quando ocorre, o espectro cardiovascular documentado na literatura de casos e séries inclui miocardite (a complicação mais prevalente), distúrbios do ritmo (arritmias em cerca de 52% dos casos com acometimento cardíaco descrito), insuficiência cardíaca, pericardite e, raramente, infarto agudo do miocárdio, com mortalidade cardiovascular estimada em 10 a 20% nesse subgrupo. Mecanisticamente, modelo murino recente demonstrou tropismo direto do CHIKV por fibroblastos cardíacos, com depuração viral dependente de sinalização via MAVS/interferon tipo I; falha nessa via leva a infecção persistente, miocardite focal e vasculite de grandes vasos. Casos documentados incluem miocardite mimetizando síndrome coronariana aguda em idosos e, no Brasil, miocardite após coinfecção dengue-chikungunya. Diferentemente do POTS pós-COVID-19 (com consenso formal de sociedade especializada), não existe evidência clínica robusta — coorte prospectiva, revisão sistemática dedicada ou consenso — estabelecendo disfunção cardiovascular ou autonômica crônica como síndrome reconhecida pós-chikungunya; o que existe é plausibilidade biológica em modelo animal e um único estudo transversal brasileiro de associação entre biomarcadores cardíacos e sorologia positiva para CHIKV, insuficientes para sustentar causalidade ou definir entidade clínica. No Brasil, doença de notificação compulsória desde sua introdução em 2014 (focos simultâneos no Amapá e na Bahia), com epidemiologia em descentralização progressiva do Nordeste para municípios não metropolitanos e, mais recentemente, expansão para Sudeste e Sul; estimativa de 3,2 milhões de casos e US$ 9,8 bilhões em custos entre 2011 e 2020. Vacina de vírus vivo atenuado aprovada pela Anvisa em 2024, com sinal de segurança pós-comercialização concentrado em idosos com múltiplas comorbidades.",
+    "presentation": [
+      "Quadro dominante e definidor: febre de início súbito e poliartralgia simétrica distal incapacitante, com ou sem exantema — o acometimento cardiovascular é minoria dentro desse universo de pacientes",
+      "Dor torácica, dispneia ou palpitação desproporcional ao quadro febril-articular isolado, sinal de alarme para investigação cardíaca",
+      "Arritmia de início recente concomitante a febre e poliartralgia — combinação que deve levantar suspeita de miocardite por chikungunya",
+      "Miocardite aguda, podendo mimetizar síndrome coronariana aguda, sobretudo em pacientes idosos ou com fatores de risco cardiovascular",
+      "Distúrbios do ritmo cardíaco de espectro amplo: bradicardia relativa, alterações inespecíficas de repolarização, bloqueio atrioventricular, fibrilação atrial e, raramente, arritmia ventricular ou parada cardíaca",
+      "Insuficiência cardíaca aguda e, em casos graves relatados, choque cardiogênico exigindo suporte inotrópico, vasopressor ou circulatório mecânico",
+      "Pericardite associada, menos frequente que a miocardite isolada",
+      "Coinfecção com dengue como cenário concreto de investigação etiológica combinada em área de cocirculação de arboviroses, já documentado no Brasil",
+      "Sintomas cardiovasculares persistentes após a fase aguda (palpitação, intolerância ortostática) — achado sem síndrome clínica estabelecida por evidência robusta, devendo ser investigado caso a caso e não presumido como 'disautonomia pós-chikungunya'"
+    ],
+    "differentials": [
+      "Dengue grave com acometimento cardiovascular, em área de cocirculação — pode inclusive coexistir como coinfecção confirmada",
+      "Febre amarela grave com miocardite e disfunção cardiovascular",
+      "Doença de Chagas aguda e outras miocardites tropicais (malária, Zika)",
+      "Síndrome coronariana aguda, sobretudo em paciente idoso ou com fatores de risco cardiovascular, cujo quadro pode ser clinicamente indistinguível de miocardite por chikungunya sem sorologia e exame de imagem cardíaca",
+      "Miocardite viral de outra etiologia (enterovírus, parvovírus B19, HHV-6, SARS-CoV-2), quando sorologia arboviral for negativa",
+      "POTS ou disautonomia cardiovascular pós-viral de outra causa (pós-COVID-19), como diagnóstico diferencial de sintomas cardiovasculares persistentes após infecção febril, dado que não há entidade clínica equivalente estabelecida para chikungunya"
+    ],
+    "tests": [
+      "RT-PCR para CHIKV nos primeiros dias de sintomas (viremia detectável tipicamente até o 5º-7º dia)",
+      "Sorologia IgM (a partir de aproximadamente o 5º dia) e IgG para confirmação diagnóstica",
+      "Painel diagnóstico multiplex ou vigilância integrada para arbovírus (dengue, Zika, Oropouche), recomendado em área de cocirculação onde a apresentação clínica isolada não diferencia os agentes",
+      "Eletrocardiograma de 12 derivações diante de qualquer sinal de alarme cardiovascular",
+      "Troponina e demais biomarcadores de lesão miocárdica",
+      "Ecocardiograma transtorácico",
+      "Ressonância magnética cardíaca, quando disponível e clinicamente indicada, seguindo os critérios gerais de estratificação de risco em miocardite aguda",
+      "Biópsia endomiocárdica em casos selecionados, pelos mesmos critérios aplicáveis a miocardite aguda de qualquer etiologia"
+    ],
+    "red_flags": [
+      "Arritmia de início recente concomitante a febre e poliartralgia em área endêmica",
+      "Dor torácica com alteração eletrocardiográfica em paciente com quadro febril-articular recente — risco de ser confundida com síndrome coronariana aguda",
+      "Dispneia ou sinais de insuficiência cardíaca aguda durante ou logo após quadro febril compatível com chikungunya",
+      "Bloqueio atrioventricular avançado ou instabilidade hemodinâmica, exigindo suporte de função vital",
+      "Comorbidade cardiovascular prévia (hipertensão, cardiopatia estrutural, diabetes), idade avançada — fatores de risco independentes para gravidade e óbito documentados na literatura",
+      "Coinfecção com dengue em paciente com sintomas cardíacos, cenário já documentado no Brasil"
+    ],
+    "ambulatory_flow": [
+      "Paciente com febre e poliartralgia sem sinais de alarme cardiovascular: manejo sintomático ambulatorial (analgesia, antitérmico), evitando anti-inflamatórios não esteroidais até exclusão razoável de dengue",
+      "Investigar sorologia/RT-PCR conforme janela temporal e considerar painel multiplex em área de cocirculação de arboviroses",
+      "Triagem ativa de sintomas cardiovasculares (palpitação, dor torácica, dispneia, síncope) em toda consulta por suspeita de chikungunya, sobretudo em paciente idoso, diabético, hipertenso ou com cardiopatia prévia",
+      "Encaminhamento para avaliação cardiológica e eletrocardiograma diante de qualquer sintoma cardiovascular novo",
+      "Paciente com sintomas cardiovasculares persistentes na fase pós-aguda: investigação individualizada conforme protocolo geral de disautonomia/síncope, sem rotulagem automática como síndrome específica pós-chikungunya"
+    ],
+    "emergency_flow": [
+      "Paciente com quadro febril compatível com chikungunya e dor torácica, dispneia, arritmia de início recente ou síncope: eletrocardiograma, troponina e ecocardiograma na admissão",
+      "Considerar síndrome coronariana aguda como diferencial ativo em paciente com fatores de risco cardiovascular, mesmo com sorologia arboviral positiva",
+      "Confirmar etiologia com sorologia/RT-PCR para CHIKV e investigar coinfecção com dengue e demais arbovírus circulantes",
+      "Miocardite confirmada com instabilidade hemodinâmica: internação em ambiente com capacidade de suporte, incluindo eventual marca-passo temporário para bloqueio atrioventricular avançado e suporte inotrópico, vasopressor ou circulatório mecânico em casos graves",
+      "Vigilância de arritmia e monitorização contínua durante a fase aguda em todo paciente com miocardite confirmada ou fortemente suspeita"
+    ],
+    "tags": [
+      "chikungunya",
+      "CHIKV",
+      "arbovirose",
+      "miocardite",
+      "arritmia",
+      "doença tropical",
+      "notificação compulsória",
+      "epidemiologia brasileira",
+      "vacina",
+      "disautonomia"
+    ],
+    "source_refs": [
+      "Economopoulou A, Dominguez M, Helynck B, et al. Atypical Chikungunya virus infections: clinical manifestations, mortality and risk factors for severe disease during the 2005-2006 outbreak on Réunion. Epidemiol Infect. 2009;137(4):534-541. PMID: 18694529",
+      "Alvarez MF, Bolívar-Mejía A, Rodriguez-Morales AJ, Ramirez-Vallejo E. Cardiovascular involvement and manifestations of systemic Chikungunya virus infection: A systematic review. F1000Res. 2017;6:390. PMID: 28503297",
+      "Cotella JI, Sauce AL, Saldarriaga CI, Perez GE, Farina JM, Wyss F, Sosa Liprandi A, Mendoza I, Múnera AG, Alexander B, Baranchuk A. Chikungunya and the Heart. Cardiology. 2021;146(4):477-482. PMID: 33789296",
+      "Traverse EM, Hopkins HK, Vaidhyanathan V, Barr KL. Cardiomyopathy and Death Following Chikungunya Infection: An Increasingly Common Outcome. Trop Med Infect Dis. 2021;6(3):108. PMID: 34206332",
+      "Noval MG, Spector SN, Bartnicki E, et al. MAVS signaling is required for preventing persistent chikungunya heart infection and chronic vascular tissue inflammation. Nat Commun. 2023;14:4331. PMID: 37537212",
+      "Acosta-Reyes J, Rico A, Bayona-Pacheco B, Navarro-Lechuga E, Muñoz FL, Campo A, Beracaza K, Viasus D, Mercado M. High levels of cardiovascular biomarkers in fatal Chikungunya virus infection. Acta Trop. 2023;238:106783. PMID: 36183865",
+      "Farias LABG, Beserra FLCN, Fernandes L, Teixeira AAR, Ferragut JM, Girão ES, Pires Neto RDJ. Myocarditis Following Recent Chikungunya and Dengue Virus Coinfection: A Case Report. Arq Bras Cardiol. 2019;113(4):783-786. PMID: 31553384",
+      "Gabadage T. Chikungunya Myocarditis Mimicking Acute Coronary Syndrome in an Elderly Patient: A Case Report. Cureus. 2025. PMID: 41487840",
+      "Oliveira JL, Nogueira IA, Amaral JK, Campos LR, Mendonça MMM, Ricarte MB, Cavalcanti LPG, Schoen RT. Extra-articular Manifestations of Chikungunya. Rev Soc Bras Med Trop. 2023;56:e0341. PMID: 38088664",
+      "Badawi A, Ryoo SG, Vasileva D, Yaghoubi S. Prevalence of chronic comorbidities in chikungunya: A systematic review and meta-analysis. Int J Infect Dis. 2018;67:107-113. PMID: 29277382",
+      "Vairo F, Haider N, Kock R, Ntoumi F, Ippolito G, Zumla A. Chikungunya: Epidemiology, Pathogenesis, Clinical Features, Management, and Prevention. Infect Dis Clin North Am. 2019;33(4):1003-1025. PMID: 31668189",
+      "Nicacio JM, Souza CDF, Gomes OV, et al. Cardiac Biomarkers in a Brazilian Indigenous Population Exposed to Arboviruses: A Cross-Sectional Study. Viruses. 2024;16(12):1902. PMID: 39772209",
+      "Almeida IF, Codeço CT, Lana RM. Beyond the metropolises: the decentralization of chikungunya to non-metropolitan areas in Brazil. Cad Saude Publica. 2026;42:e00129025. PMID: 42417769",
+      "Barros CRDS, Sampaio SC, Elias MC, Slavov SN. Chikungunya vaccine approval in Brazil: navigating through epidemiological challenges. Mem Inst Oswaldo Cruz. 2026;121:e260088. PMID: 42561373",
+      "Guo C, Xiao C, Paiva JE, Lo YH, Drabo EF. Guiding vaccine policy for chikungunya in Brazil: a cost-effectiveness analysis. BMJ Public Health. 2026;4(2):e003794. PMID: 42006758",
+      "Vondeling GT, Croda J, Jelinek T, Kassianos G, Kollaritsch H, Nguyen LBL, Ribeiro GS, Schmidt-Chanasit J, Thomas SJ, Unger Z, de Roo A, Plennevaux E, Jaramillo JC. Post-marketing safety evaluation of the live-attenuated chikungunya vaccine (IXCHIQ). Vaccine. 2026;79:128491. PMID: 41863914",
+      "Tran VL, Gervais A, Champeaux MM, et al. Autoantibodies neutralizing type I interferons underlie a third of cases of Chikungunya virus-associated CNS disease. Proc Natl Acad Sci U S A. 2026;123(34):e2616897123. PMID: 42607207"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18694529/",
+      "https://pubmed.ncbi.nlm.nih.gov/28503297/",
+      "https://pubmed.ncbi.nlm.nih.gov/33789296/",
+      "https://pubmed.ncbi.nlm.nih.gov/34206332/",
+      "https://pubmed.ncbi.nlm.nih.gov/37537212/",
+      "https://pubmed.ncbi.nlm.nih.gov/36183865/",
+      "https://pubmed.ncbi.nlm.nih.gov/31553384/",
+      "https://pubmed.ncbi.nlm.nih.gov/41487840/",
+      "https://pubmed.ncbi.nlm.nih.gov/38088664/",
+      "https://pubmed.ncbi.nlm.nih.gov/29277382/",
+      "https://pubmed.ncbi.nlm.nih.gov/31668189/",
+      "https://pubmed.ncbi.nlm.nih.gov/39772209/",
+      "https://pubmed.ncbi.nlm.nih.gov/42417769/",
+      "https://pubmed.ncbi.nlm.nih.gov/42561373/",
+      "https://pubmed.ncbi.nlm.nih.gov/42006758/",
+      "https://pubmed.ncbi.nlm.nih.gov/41863914/",
+      "https://pubmed.ncbi.nlm.nih.gov/42607207/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "chikungunya-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-congenita-do-zika",
+    "name": "Síndrome congênita do Zika",
+    "aliases": [
+      "SCZ",
+      "Zika congênito",
+      "Congenital Zika syndrome",
+      "Síndrome congênita associada ao vírus Zika",
+      "Embriofetopatia pelo Zika vírus"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_congenita_transplacentaria",
+    "prevalence_rank": 98,
+    "completeness": "completo",
+    "summary": "A síndrome congênita do Zika (SCZ) é o conjunto de malformações e alterações funcionais resultantes da infecção transplacentária pelo vírus Zika (ZIKV, um flavivírus transmitido por Aedes aegypti) durante a gestação, reconhecida a partir da epidemia brasileira de 2015-2016, com o Brasil como epicentro mundial da caracterização clínica e epidemiológica da doença. O quadro é dominado por acometimento neurológico: microcefalia grave com colapso parcial do crânio, calcificações subcorticais na transição córtico-subcortical, ventriculomegalia, alterações oftalmológicas específicas (cicatriz macular, mosqueamento pigmentar retiniano), artrogripose de provável origem neurogênica e hipertonia precoce com sinais extrapiramidais. O registro nacional brasileiro (França et al., Lancet 2016) identificou 602 de 1.501 nascidos vivos notificados (40%) como casos definidos ou prováveis de SCZ, com cerca de 1 em cada 5 casos apresentando perímetro cefálico normal ao nascimento. O acometimento cardiovascular é mais discreto e muito menos sistematicamente estudado que o neurológico: a maior série publicada (Cavalcanti et al., 103 lactentes) encontrou cardiopatia congênita estrutural, majoritariamente lesões septais pequenas, em 13,5% dos casos, sem evidência de miocardite ou disfunção em quase todos; uma série com controles (Barbosa et al., 52 crianças com déficit neurológico grave vs. 25 controles) encontrou redução discreta de parâmetros funcionais do ventrículo direito (TAPSE, S', MAPSE) com fração de ejeção e biomarcadores normais e sem repercussão clínica; relatos de caso isolados descrevem cardiopatia congênita crítica (síndrome de coração esquerdo hipoplásico) sem causalidade estabelecida. Não há confirmação histopatológica consistente de miocardite por Zika na literatura revisada. Diagnóstico combina confirmação laboratorial da infecção materna/fetal (RT-PCR, sorologia IgM com confirmação por PRNT), neuroimagem característica, avaliação oftalmológica/audiológica e exclusão de outras infecções TORCH; manejo é predominantemente de suporte multidisciplinar centrado no eixo neurológico, com avaliação cardiológica (ecocardiograma) recomendada por parte da literatura mas ainda sem protocolo universal de rastreamento estabelecido.",
+    "presentation": [
+      "Microcefalia grave ao nascimento, frequentemente com colapso parcial do crânio e redundância de couro cabeludo (achado sugestivo de interrupção do crescimento cerebral após fase inicial mais preservada)",
+      "Perímetro cefálico normal ao nascimento em cerca de 1 em cada 5 casos definidos/prováveis — microcefalia isolada não é critério suficiente nem necessário para o diagnóstico",
+      "Calcificações cerebrais na transição córtico-subcortical, ventriculomegalia, simplificação do padrão giral e hipoplasia de corpo caloso à neuroimagem",
+      "Alterações oftalmológicas: cicatriz macular e mosqueamento pigmentar focal da retina",
+      "Artrogripose congênita (contraturas articulares), tipicamente com luxação de quadril e acometimento de membros superiores e inferiores, de provável origem neurogênica",
+      "Hipertonia precoce marcada, com sinais de acometimento extrapiramidal e evolução frequente para paralisia cerebral grave",
+      "Perda auditiva neurossensorial em subgrupo de casos",
+      "Disfagia e epilepsia como complicações frequentes ao longo do seguimento em crianças com dano cortical extenso",
+      "Cardiopatia congênita estrutural (predominantemente comunicações interatriais e interventriculares pequenas) descrita em cerca de 13,5% de uma série de 103 lactentes — achado de série única, ainda não replicado em coorte de tamanho comparável",
+      "Alterações funcionais cardíacas discretas (redução de TAPSE, S' tricúspide e MAPSE) descritas em série com controles, sem repercussão clínica de insuficiência cardíaca e com biomarcadores (troponina, BNP) normais",
+      "Cardiopatia congênita crítica (síndrome de coração esquerdo hipoplásico) descrita em relato de caso isolado, sem causalidade estabelecida com a infecção por Zika"
+    ],
+    "differentials": [
+      "Outras infecções congênitas do grupo TORCH: citomegalovirose congênita, toxoplasmose congênita, sífilis congênita, rubéola congênita",
+      "Microcefalia primária genética ou por outras causas ambientais (uso de álcool, outras infecções, exposição a teratógenos)",
+      "Síndromes genéticas com microcefalia e calcificações cerebrais (ex.: síndrome de Aicardi-Goutières, outras interferonopatias tipo I)",
+      "Outras causas de artrogripose congênita não infecciosa (amioplasia, doenças neuromusculares congênitas)",
+      "Outras cardiopatias congênitas estruturais isoladas, sem relação com infecção congênita"
+    ],
+    "tests": [
+      "RT-PCR para RNA do ZIKV em soro/urina maternos (fase aguda) ou em líquido amniótico/tecido fetal/placentário",
+      "Sorologia IgM anti-Zika, com confirmação por teste de neutralização por redução de placas (PRNT) devido à reação cruzada com outros flavivírus, notadamente dengue",
+      "Tomografia computadorizada e/ou ressonância magnética de crânio, buscando calcificações córtico-subcorticais, ventriculomegalia, simplificação giral e hipoplasia de corpo caloso",
+      "Avaliação oftalmológica dirigida (fundoscopia) para cicatriz macular e mosqueamento pigmentar retiniano",
+      "Triagem auditiva (emissões otoacústicas/potencial evocado auditivo de tronco encefálico)",
+      "Sorologia/PCR para exclusão de outras infecções congênitas do grupo TORCH",
+      "Ecocardiograma transtorácico com avaliação estrutural e funcional (incluindo TAPSE, Doppler tecidual e, quando disponível, análise de deformação miocárdica), considerado por parte da literatura como parte da avaliação inicial de toda criança com SCZ confirmada ou altamente provável, ainda sem protocolo universal estabelecido"
+    ],
+    "red_flags": [
+      "Microcefalia grave com colapso parcial do crânio em recém-nascido de mãe com sintomas compatíveis com arbovirose (exantema, febre, artralgia) durante a gestação, em área de circulação de Zika",
+      "Calcificações cerebrais córtico-subcorticais associadas a artrogripose e alterações oftalmológicas específicas",
+      "Sinais clínicos de insuficiência cardíaca (taquipneia/taquicardia desproporcionais, hepatomegalia congestiva, má perfusão) em recém-nascido com SCZ confirmada ou presumida — achado que, embora incomum na literatura revisada, deve motivar avaliação cardiológica e hemodinâmica imediata",
+      "Comunicação interventricular de maior porte identificada ao ecocardiograma, com sinais clínicos associados (dispneia, dificuldade de ganho ponderal)",
+      "Achados de imagem pré-natal sugestivos de cardiopatia congênita crítica associados a calcificações cerebrais, exigindo avaliação cardiológica fetal especializada e planejamento de parto em centro com suporte cardiológico neonatal"
+    ],
+    "ambulatory_flow": [
+      "Notificar e investigar toda gestante com quadro clínico sugestivo de arbovirose (exantema, febre baixa, artralgia, conjuntivite não purulenta) em área de circulação de Zika, com RT-PCR na fase aguda quando disponível.",
+      "Realizar ultrassonografia obstétrica seriada em gestantes com infecção confirmada ou fortemente suspeita por Zika, com atenção a perímetro cefálico fetal, calcificações cerebrais, ventriculomegalia e restrição de crescimento, independentemente do trimestre da infecção materna.",
+      "Encaminhar toda criança com suspeita ou confirmação de SCZ para seguimento multidisciplinar estruturado: neuropediatria, oftalmologia, fonoaudiologia, fisioterapia motora e, quando indicado, genética clínica para exclusão de diferenciais.",
+      "Solicitar ecocardiograma transtorácico como parte da avaliação inicial de toda criança com SCZ confirmada ou altamente provável, mesmo na ausência de sintomas cardiovasculares, dado o achado de cardiopatia estrutural em cerca de 13,5% de uma série publicada.",
+      "Em crianças com déficit neurológico grave (paralisia cerebral grau V), considerar reavaliação ecocardiográfica funcional periódica (incluindo TAPSE e Doppler tecidual), dado o achado de alterações funcionais discretas nesse subgrupo específico, mesmo sem sintomas clínicos.",
+      "Manter seguimento auditivo e oftalmológico seriado ao longo da infância, independentemente do resultado do exame inicial, pela possibilidade de progressão tardia de perda auditiva e alterações visuais.",
+      "Orientar a família sobre prevenção de novas infecções por arbovirose em gestações futuras (controle vetorial, proteção individual) e sobre ausência de vacina aprovada para uso rotineiro em gestantes até o momento."
+    ],
+    "emergency_flow": [
+      "Diante de recém-nascido com sinais de insuficiência cardíaca (taquipneia, taquicardia desproporcional, hepatomegalia congestiva, má perfusão periférica) e SCZ confirmada ou presumida, solicitar ecocardiograma em caráter de urgência para caracterizar a cardiopatia estrutural ou disfunção associada.",
+      "Em cardiopatia congênita crítica identificada (ex.: síndrome de coração esquerdo hipoplásico), acionar precocemente equipe de cardiologia pediátrica/cirurgia cardíaca congênita para definição de manejo paliativo estagiado, considerando também a gravidade do acometimento neurológico associado na discussão multidisciplinar e nas decisões compartilhadas com a família.",
+      "Em crise convulsiva ou deterioração neurológica aguda em criança com SCZ, investigar e tratar conforme protocolo de emergência neurológica pediátrica, considerando causas concorrentes (infecção intercorrente, distúrbio metabólico) antes de atribuir o quadro exclusivamente à SCZ de base.",
+      "Em sinais de disfagia grave com risco de aspiração, suspender via oral e acionar avaliação fonoaudiológica/nutricional em caráter de urgência.",
+      "Notificar todo caso suspeito ou confirmado às autoridades de vigilância epidemiológica, conforme definição de caso vigente, independentemente do desfecho clínico imediato."
+    ],
+    "tags": [
+      "síndrome congênita do zika",
+      "zika vírus",
+      "arbovirose",
+      "transmissão vertical",
+      "transplacentária",
+      "microcefalia",
+      "artrogripose",
+      "pediatria",
+      "neonatologia",
+      "cardiologia pediátrica",
+      "infecção congênita",
+      "saúde pública Brasil",
+      "epidemia 2015-2016"
+    ],
+    "source_refs": [
+      "Musso D, Gubler DJ. Zika Virus. Clin Microbiol Rev. 2016;29(3):487-524. DOI: 10.1128/CMR.00072-15. PMID: 27029595.",
+      "Miner JJ, Cao B, Govero J, Smith AM, Fernandez E, Cabrera OH, Garber C, Noll M, Klein RS, Noguchi KK, Mysorekar IU, Diamond MS. Zika Virus Infection during Pregnancy in Mice Causes Placental Damage and Fetal Demise. Cell. 2016;165(5):1081-1091. DOI: 10.1016/j.cell.2016.05.008. PMID: 27180225.",
+      "Liang B, Guida JP, Costa Do Nascimento ML, Mysorekar IU. Host and viral mechanisms of congenital Zika syndrome. Virulence. 2019;10(1):768-775. DOI: 10.1080/21505594.2019.1656503. PMID: 31451049.",
+      "Brasil P, Pereira JP Jr, Moreira ME, et al. Zika Virus Infection in Pregnant Women in Rio de Janeiro. N Engl J Med. 2016;375(24):2321-2334. DOI: 10.1056/NEJMoa1602412. PMID: 26943629.",
+      "Moore CA, Staples JE, Dobyns WB, Pessoa A, Ventura CV, Fonseca EB, Ribeiro EM, Ventura LO, Neto NN, Arena JF, Rasmussen SA. Characterizing the Pattern of Anomalies in Congenital Zika Syndrome for Pediatric Clinicians. JAMA Pediatr. 2017;171(3):288-295. DOI: 10.1001/jamapediatrics.2016.3982. PMID: 27812690.",
+      "França GVA, Schuler-Faccini L, Oliveira WK, Henriques CM, Carmo EH, Pedi VD, Nunes ML, Castro MC, Serruya S, Silveira MF, Barros FC, Victora CG. Congenital Zika virus syndrome in Brazil: a case series of the first 1501 livebirths with complete investigation. Lancet. 2016;388(10047):891-897. DOI: 10.1016/S0140-6736(16)30902-3. PMID: 27372398.",
+      "van der Linden V, Filho ELR, Lins OG, van der Linden A, Aragão MFVC, Brainer-Lima AM, Cruz DDCS, Rocha MAW, Sobral da Silva PF, Carvalho MDCG, do Amaral FJ, Gomes JA, Ribeiro de Medeiros IC, Ventura CV, Ramos RCF. Congenital Zika syndrome with arthrogryposis: retrospective case series study. BMJ. 2016;354:i3899. DOI: 10.1136/bmj.i3899. PMID: 27509902.",
+      "de Fatima Vasco Aragao M, van der Linden V, Brainer-Lima AM, Coeli RR, Rocha MA, Sobral da Silva P, Durce Costa Gomes de Carvalho M, van der Linden A, Cesario de Holanda A, Valenca MM. Clinical features and neuroimaging (CT and MRI) findings in presumed Zika virus related congenital infection and microcephaly: retrospective case series study. BMJ. 2016;353:i1901. DOI: 10.1136/bmj.i1901. PMID: 27075009.",
+      "Coutinho CM, Cecatti JG, Bittar RE, et al. Early maternal Zika infection predicts severe neonatal neurological damage: results from the prospective Natural History of Zika Virus Infection in Gestation cohort study. BJOG. 2021;128(2):317-326. DOI: 10.1111/1471-0528.16490. PMID: 32920998.",
+      "Cavalcanti DD, Alves LV, Furtado GJ, Santos CC, Feitosa FG, Ribeiro MC, Menge P, Lira IM, Alves JG. Echocardiographic findings in infants with presumed congenital Zika syndrome: Retrospective case series study. PLoS One. 2017;12(4):e0175065. DOI: 10.1371/journal.pone.0175065. PMID: 28426680.",
+      "Barbosa ICQ, de Paula Gomes L, de Almeida Feitosa IN, Botelho LFB, Barbosa BRC, Barbosa A, Araújo ATV, Melo MDT, Melo ASO, Salemi VMC. Morphological and functional cardiac alterations in children with congenital Zika syndrome and severe neurological deficits. PLoS Negl Trop Dis. 2023;17(11):e0011762. DOI: 10.1371/journal.pntd.0011762. PMID: 38019886.",
+      "Angelidou A, Michael Z, Hotz A, Friedman K, Emani S, LaRovere K, Christou H. Is There More to Zika? Complex Cardiac Disease in a Case of Congenital Zika Syndrome. Neonatology. 2018;113(3):177-182. DOI: 10.1159/000484656. PMID: 29248924.",
+      "Arrais NMR, de Souza PVS, Leite GCP, Bezerra MTAL, Maia CRS, de Moraes-Pinto MI. Congenital heart disease in Zika virus congenital syndrome: How and when to investigate. Acta Paediatr. 2021;110(12):3343-3345. DOI: 10.1111/apa.16063. PMID: 34363633.",
+      "Santana MB, Lamas CC, Athayde JG, Calvet G, Moreira J, De Lorenzo A. Congenital Zika syndrome: is the heart part of its spectrum? Clin Microbiol Infect. 2019;25(9):1043-1044. DOI: 10.1016/j.cmi.2019.03.020. PMID: 30922930."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/27029595/",
+      "https://pubmed.ncbi.nlm.nih.gov/27180225/",
+      "https://pubmed.ncbi.nlm.nih.gov/31451049/",
+      "https://pubmed.ncbi.nlm.nih.gov/26943629/",
+      "https://pubmed.ncbi.nlm.nih.gov/27812690/",
+      "https://pubmed.ncbi.nlm.nih.gov/27372398/",
+      "https://pubmed.ncbi.nlm.nih.gov/27509902/",
+      "https://pubmed.ncbi.nlm.nih.gov/27075009/",
+      "https://pubmed.ncbi.nlm.nih.gov/32920998/",
+      "https://pubmed.ncbi.nlm.nih.gov/28426680/",
+      "https://pubmed.ncbi.nlm.nih.gov/38019886/",
+      "https://pubmed.ncbi.nlm.nih.gov/29248924/",
+      "https://pubmed.ncbi.nlm.nih.gov/34363633/",
+      "https://pubmed.ncbi.nlm.nih.gov/30922930/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-congenita-do-zika-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "endocardite-por-fungos-filamentosos-raros",
+    "name": "Endocardite por fungos filamentosos raros não-Aspergillus/não-Mucorales (Fusarium, Scedosporium/Lomentospora, Trichosporon)",
+    "aliases": [
+      "endocardite por Fusarium",
+      "endocardite por Scedosporium",
+      "endocardite por Lomentospora prolificans",
+      "endocardite por Trichosporon",
+      "fusariose com acometimento cardíaco",
+      "escedosporiose/lomentosporiose cardíaca",
+      "tricosporonose invasiva"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infecciosa_fungica_rara",
+    "prevalence_rank": 99,
+    "completeness": "completo",
+    "summary": "Endocardite causada por fungos filamentosos raros emergentes — Fusarium spp., Scedosporium spp./Lomentospora prolificans e a levedura pseudo-filamentosa Trichosporon spp. — em pacientes imunossuprimidos (neutropenia prolongada, transplante de órgão sólido ou de células-tronco hematopoiéticas), usuários de drogas injetáveis, portadores de cateter venoso central ou, no caso de Scedosporium/Lomentospora, vítimas de quase-afogamento. Grupo distinto de Candida e Aspergillus por perfil de resistência antifúngica frequentemente extenso e espécie-dependente, com literatura restrita a relatos de caso e pequenas séries (a maior com 30 casos). Fusarium e Scedosporium/Lomentospora, ao contrário de Aspergillus, apresentam hemocultura positiva com relativa frequência, achado de valor diagnóstico. Mortalidade elevada em todos os subgrupos, extrema (até 100% com embolização para sistema nervoso central) em Lomentospora prolificans.",
+    "presentation": [
+      "Febre persistente e sinais de embolização sistêmica em paciente neutropênico, transplantado ou usuário de cateter venoso central de longa permanência",
+      "Fungemia com hemocultura positiva para molde não identificado prontamente — achado que, ao contrário do que ocorre em Aspergillus, é relativamente comum em Fusarium e Scedosporium/Lomentospora e deve levantar suspeita ativa, não ser descartado como contaminante",
+      "Lesões cutâneas nodulares/necróticas disseminadas sugestivas de fusariose disseminada em paciente neutropênico",
+      "Endocardite em valva protética, incluindo apresentação tardia (anos após a cirurgia), especialmente descrita com Trichosporon",
+      "Infecção invasiva grave (incluindo endocardite) após quase-afogamento, mesmo em paciente sem imunossupressão de base — sugestivo de Scedosporium/Lomentospora prolificans",
+      "Êmbolos sépticos com acometimento neurológico (aneurisma micótico, abscesso, AVC embólico) frequentes, particularmente em Scedosporium/Lomentospora",
+      "Fungemia por Trichosporon emergindo sob profilaxia com equinocandina, refletindo resistência intrínseca de classe",
+      "Pneumonite de hipersensibilidade do tipo verão em paciente imunocompetente com exposição domiciliar crônica a Trichosporon — quadro alérgico distinto da doença invasiva"
+    ],
+    "differentials": [
+      "Endocardite por Candida spp.",
+      "Endocardite por Aspergillus spp.",
+      "Mucormicose cardiovascular",
+      "Endocardite bacteriana com hemocultura negativa (HACEK, Bartonella, Coxiella burnetii, Tropheryma whipplei)",
+      "Endocardite trombótica não bacteriana (marântica)",
+      "Contaminação de hemocultura por fungo ambiental (diagnóstico de exclusão, nunca assumido de imediato em paciente de alto risco)"
+    ],
+    "tests": [
+      "Hemoculturas seriadas — positividade relativamente frequente em Fusarium e Scedosporium/Lomentospora, ponto de diferenciação em relação a Aspergillus",
+      "Identificação micológica com sequenciamento da região ITS ou MALDI-TOF com biblioteca atualizada para fungos filamentosos, dada a dificuldade de identificação morfológica de espécie",
+      "Teste de suscetibilidade antifúngica in vitro do isolado sempre que disponível, dado o perfil de resistência espécie-dependente e imprevisível",
+      "1,3-β-D-glucana — pode ser positiva nos três gêneros (inclusive Trichosporon, que a produz na parede celular), teste inespecífico para espécie",
+      "Ecocardiografia transesofágica",
+      "Neuroimagem (TC ou RM de crânio) mesmo sem sintoma neurológico focal, dada a alta taxa de embolização para sistema nervoso central em Scedosporium/Lomentospora",
+      "PET-CT de corpo inteiro para rastreio de focos embólicos/metastáticos a distância quando disponível"
+    ],
+    "red_flags": [
+      "Hemocultura positiva para molde ou fungo filamentoso não identificado prontamente em paciente neutropênico, com cateter venoso central, transplantado ou usuário de drogas injetáveis",
+      "Lesões cutâneas nodulares/necróticas disseminadas com suspeita de fungemia em neutropênico",
+      "Infecção fúngica invasiva após episódio de quase-afogamento",
+      "Fungemia por Trichosporon durante profilaxia com equinocandina",
+      "Diagnóstico confirmado de Lomentospora prolificans — rastrear agressivamente êmbolos no sistema nervoso central dada a mortalidade extrema nesse subgrupo"
+    ],
+    "ambulatory_flow": [
+      "Este é um quadro predominantemente hospitalar/emergencial; acompanhamento ambulatorial aplica-se apenas à fase de terapia supressiva prolongada e monitorização de recidiva após alta, com infectologista/micologista de referência",
+      "Reavaliação seriada de exames de imagem cardíaca e triagem para recidiva embólica em pacientes que permanecem imunossuprimidos cronicamente"
+    ],
+    "emergency_flow": [
+      "Coletar hemoculturas seriadas e considerar precocemente etiologia fúngica rara em paciente de alto risco com sepse sem foco bacteriano claro",
+      "Iniciar antifúngico empírico de amplo espectro (geralmente anfotericina B lipossomal) enquanto aguarda identificação de espécie, ajustando conforme resultado microbiológico e teste de suscetibilidade",
+      "Solicitar ecocardiograma transesofágico e avaliação de embolização sistêmica, incluindo neuroimagem",
+      "Acionar avaliação cirúrgica cardíaca precoce, dado que a maioria dos casos relatados de endocardite por esses gêneros necessitou de troca valvar",
+      "Envolver infectologia/micologia de referência para ajuste de terapia combinada e envio de isolado a laboratório de referência quando disponível",
+      "Remover cateter venoso central suspeito como fonte, especialmente em fungemia por Trichosporon",
+      "Buscar ativamente reversão da imunossupressão de base (recuperação de neutrófilos, ajuste de imunossupressores) como parte integral do tratamento, não apenas suporte"
+    ],
+    "tags": [
+      "endocardite fúngica",
+      "Fusarium",
+      "Scedosporium",
+      "Lomentospora prolificans",
+      "Trichosporon",
+      "fungo filamentoso raro",
+      "imunossupressão",
+      "neutropenia febril",
+      "resistência antifúngica",
+      "quase-afogamento",
+      "cateter venoso central",
+      "usuário de drogas injetáveis",
+      "voriconazol",
+      "anfotericina B lipossomal",
+      "olorofim"
+    ],
+    "source_refs": [
+      "Nucci M, Anaissie E. Invasive fusariosis. Clin Microbiol Rev. 2023;36(4):e0015922. PMID: 37937988",
+      "Nucci M, Anaissie E. Fusarium infections in immunocompromised patients. Clin Microbiol Rev. 2007;20(4):695-704. PMID: 17934079",
+      "Nucci M, Anaissie EJ, Queiroz-Telles F, et al. Outcome predictors of 84 patients with hematologic malignancies and Fusarium infection. Cancer. 2003;98(2):315-319. PMID: 12872351",
+      "Vignals C, Ternacle J, Garcia-Hermoso D, et al. Endocarditis Due to Scedosporium spp and Lomentospora prolificans: Case Series and Literature Review. Open Forum Infect Dis. 2026;13(1). PMID: 42238380",
+      "Neoh CF, Chen SC, Lanternier F, et al. Scedosporiosis and lomentosporiosis: modern perspectives on these difficult-to-treat rare mold infections. Clin Microbiol Rev. 2024;37(2):e0009423. PMID: 38551323",
+      "Kermani F, et al. A systematic review and disability-adjusted life years of Scedosporium/Lomentospora infection in patients after near-drowning. Mycoses. 2024;67(2):e13698. PMID: 38345265",
+      "Pellon A, Ramírez-García A, Buldain I, et al. Pathobiology of Lomentospora prolificans: could this species serve as a model of primary antifungal resistance? Int J Antimicrob Agents. 2018;51(6):803-810. PMID: 28669833",
+      "Maertens JA, et al. Olorofim for the treatment of invasive fungal diseases in patients with few or no therapeutic options: a single-arm, open-label, phase 2b study. Lancet Infect Dis. 2025. PMID: 40541222",
+      "Mulè A, Rossini F, Sollima A, et al. Trichosporon asahii Infective Endocarditis of Prosthetic Valve: A Case Report and Literature Review. Antibiotics (Basel). 2023;12(7):1195. PMID: 37508277",
+      "Stępień-Wojno M, Marona M, Kołsut P, et al. Infective endocarditis caused by Trichosporon spp. effectively managed with a combination of voriconazole and surgical intervention. Pol Arch Intern Med. 2024;134(2):16646. PMID: 38116647",
+      "Keay S, Denning DW, Stevens DA. Endocarditis due to Trichosporon beigelii: in vitro susceptibility of isolates and review. Rev Infect Dis. 1991;13(3):383-386. PMID: 1866540",
+      "Ando M, Arima K, Yoneda R, Tamura M. Summer-type hypersensitivity pneumonitis. Intern Med. 1995;34(8):707-712. PMID: 8563107",
+      "Thompson GR 3rd, Jenks JD, Baddley JW, et al. Fungal Endocarditis: Pathophysiology, Epidemiology, Clinical Presentation, Diagnosis, and Management. Clin Microbiol Rev. 2023;36(3):e0001923. PMID: 37439685"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37937988/",
+      "https://pubmed.ncbi.nlm.nih.gov/17934079/",
+      "https://pubmed.ncbi.nlm.nih.gov/12872351/",
+      "https://pubmed.ncbi.nlm.nih.gov/42238380/",
+      "https://pubmed.ncbi.nlm.nih.gov/38551323/",
+      "https://pubmed.ncbi.nlm.nih.gov/38345265/",
+      "https://pubmed.ncbi.nlm.nih.gov/28669833/",
+      "https://pubmed.ncbi.nlm.nih.gov/40541222/",
+      "https://pubmed.ncbi.nlm.nih.gov/37508277/",
+      "https://pubmed.ncbi.nlm.nih.gov/38116647/",
+      "https://pubmed.ncbi.nlm.nih.gov/1866540/",
+      "https://pubmed.ncbi.nlm.nih.gov/8563107/",
+      "https://pubmed.ncbi.nlm.nih.gov/37439685/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "endocardite-por-fungos-filamentosos-raros-fusarium-scedosporium-lomentospora-trichosporon"
+    ],
+    "patient_material_slug": null
   }
 ]
