@@ -52206,5 +52206,343 @@
       "teratoma-intrapericardico-fetal-e-pediatrico-hidropsia-nao-imune-diagnostico-e-conduta-cirurgica"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-cantu",
+    "name": "Síndrome de Cantú",
+    "aliases": [
+      "Síndrome da hipertricose-osteocondrodisplasia",
+      "HOCA",
+      "Hypertrichotic osteochondrodysplasia",
+      "Cantú syndrome"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "canalopatia_katp",
+    "prevalence_rank": 136,
+    "completeness": "completo",
+    "summary": "Canalopatia rara e autossômica dominante causada, na maioria dos casos, por mutação de ganho de função no gene ABCC9 (subunidade SUR2 do canal K-ATP) e, mais raramente, no gene KCNJ8 (subunidade Kir6.1). O ganho de função mantém o canal K-ATP vascular e miocárdico patologicamente aberto, causando hiperpolarização e vasodilatação crônica da musculatura lisa vascular — mecanismo proposto para a cardiomegalia marcante, a persistência do canal arterial, o derrame pericárdico, o edema linfático e a hipotensão crônica leve que caracterizam a síndrome, associados à hipertricose congênita generalizada e a dismorfismos faciais e esqueléticos típicos.",
+    "presentation": [
+      "Hipertricose congênita generalizada presente ao nascimento",
+      "Face grosseira, ponte nasal larga, lábios espessos",
+      "Cardiomegalia marcante, frequentemente desproporcional, por vezes identificada no pré-natal",
+      "Persistência do canal arterial",
+      "Derrame pericárdico, podendo ser volumoso ou refratário",
+      "Edema linfático de membros, por vezes presente ao nascimento",
+      "Hipotensão arterial crônica leve",
+      "Osteocondrodisplasia com costelas alargadas e alterações vertebrais",
+      "Tortuosidade arterial e, raramente, aneurismas"
+    ],
+    "differentials": [
+      "Síndrome de Zimmermann-Laband (KCNH1/KCNN3)",
+      "Síndrome de Ambras (hipertricose)",
+      "Hipertricose lanuginosa congênita isolada",
+      "Síndrome fetal por hidantoína",
+      "Cardiomiopatia dilatada de outras etiologias",
+      "Persistência do canal arterial isolada de outra causa",
+      "Derrame pericárdico de causa infecciosa, autoimune ou neoplásica"
+    ],
+    "tests": [
+      "Ecocardiograma (cardiomegalia, canal arterial, derrame pericárdico)",
+      "Teste genético dirigido para ABCC9",
+      "Teste genético para KCNJ8 se ABCC9 negativo com quadro clínico compatível",
+      "Radiografia esquelética quando há suspeita de osteocondrodisplasia",
+      "Ultrassonografia obstétrica (rastreio pré-natal de cardiomegalia fetal)",
+      "Eletrocardiograma de seguimento"
+    ],
+    "red_flags": [
+      "Cardiomegalia fetal desproporcional identificada em ultrassonografia obstétrica de rotina",
+      "Derrame pericárdico volumoso ou com repercussão hemodinâmica",
+      "Sinais de tamponamento cardíaco",
+      "Canal arterial patente com repercussão hemodinâmica significativa",
+      "Hipotensão sintomática",
+      "Edema linfático progressivo de membros"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pela combinação de hipertricose congênita e cardiomegalia",
+      "Ecocardiograma para caracterização de cardiomegalia, canal arterial e derrame pericárdico",
+      "Teste genético dirigido (ABCC9, depois KCNJ8 se negativo)",
+      "Avaliação esquelética por imagem quando indicada",
+      "Aconselhamento genético e avaliação de familiares de primeiro grau",
+      "Seguimento cardiovascular estruturado de longo prazo com ecocardiograma e ECG periódicos"
+    ],
+    "emergency_flow": [
+      "Avaliação de sinais de tamponamento cardíaco em paciente com derrame pericárdico conhecido",
+      "Pericardiocentese ou janela pericárdica cirúrgica em derrame volumoso refratário ou com repercussão hemodinâmica",
+      "Manejo de insuficiência cardíaca descompensada seguindo princípios gerais pediátricos",
+      "Avaliação de canal arterial patente com repercussão hemodinâmica para fechamento seguindo critérios gerais de PCA"
+    ],
+    "tags": [
+      "síndrome de Cantú",
+      "ABCC9",
+      "KCNJ8",
+      "canal K-ATP",
+      "SUR2",
+      "Kir6.1",
+      "hipertricose congênita",
+      "cardiomegalia",
+      "persistência do canal arterial",
+      "derrame pericárdico",
+      "canalopatia",
+      "glibenclamida",
+      "linfedema congênito",
+      "doença rara"
+    ],
+    "source_refs": [
+      "PMID: 25275207",
+      "PMID: 22610116",
+      "PMID: 22608503",
+      "PMID: 24176758",
+      "PMID: 24700710",
+      "PMID: 36336713",
+      "PMID: 38114927",
+      "PMID: 31175705",
+      "PMID: 40399303",
+      "PMID: 42511666",
+      "PMID: 40449010",
+      "PMID: 41448431",
+      "PMID: 32622958",
+      "PMID: 41549877"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25275207/",
+      "https://pubmed.ncbi.nlm.nih.gov/22610116/",
+      "https://pubmed.ncbi.nlm.nih.gov/22608503/",
+      "https://pubmed.ncbi.nlm.nih.gov/24176758/",
+      "https://pubmed.ncbi.nlm.nih.gov/24700710/",
+      "https://pubmed.ncbi.nlm.nih.gov/36336713/",
+      "https://pubmed.ncbi.nlm.nih.gov/38114927/",
+      "https://pubmed.ncbi.nlm.nih.gov/31175705/",
+      "https://pubmed.ncbi.nlm.nih.gov/40399303/",
+      "https://pubmed.ncbi.nlm.nih.gov/42511666/",
+      "https://pubmed.ncbi.nlm.nih.gov/40449010/",
+      "https://pubmed.ncbi.nlm.nih.gov/41448431/",
+      "https://pubmed.ncbi.nlm.nih.gov/32622958/",
+      "https://pubmed.ncbi.nlm.nih.gov/41549877/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-cantu-canalopatia-katp-abcc9-kcnj8-hipertricose-cardiomegalia"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "vasculopatia-da-neurofibromatose-tipo-1",
+    "name": "Vasculopatia da Neurofibromatose Tipo 1",
+    "aliases": [
+      "vasculopatia NF1",
+      "acometimento cardiovascular da neurofibromatose tipo 1",
+      "neurofibromatose tipo 1 vascular",
+      "midaortic syndrome em NF1",
+      "síndrome de Watson"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculopatia_genetica_com_acometimento_cardiovascular",
+    "prevalence_rank": 137,
+    "completeness": "completo",
+    "summary": "Espectro vascular e cardíaco associado à neurofibromatose tipo 1 (doença autossômica dominante por mutação no gene NF1/neurofibromina), incluindo vasculopatia com estenose/aneurisma arterial (sobretudo renal), coarctação de aorta atípica de localização média/abdominal, estenose pulmonar valvar ou supravalvar, feocromocitoma/paraganglioma associados e cardiomiopatia hipertrófica descrita em subgrupo de pacientes.",
+    "presentation": [
+      "Hipertensão arterial em criança, adolescente ou adulto jovem com estigmas cutâneos de NF1 (manchas café-com-leite, efélides axilares/inguinais, neurofibromas)",
+      "Sopro abdominal em paciente com NF1, sugestivo de estenose de artéria renal ou coarctação de aorta atípica",
+      "Hipertensão paroxística, cefaleia, sudorese e palpitação sugestivas de excesso catecolaminérgico",
+      "Sopro cardíaco sistólico sugestivo de estenose pulmonar valvar ou supravalvar",
+      "Achado ecocardiográfico incidental de hipertrofia miocárdica em paciente NF1 assintomático",
+      "Dor abdominal, torácica ou neurológica súbita por ruptura de aneurisma arterial em território renal, aórtico, cerebral ou periférico",
+      "Claudicação ou isquemia mesentérica por displasia/estenose de ramos viscerais"
+    ],
+    "differentials": [
+      "Hipertensão arterial essencial (não deve ser diagnóstico de exclusão automático em paciente NF1 hipertenso)",
+      "Displasia fibromuscular",
+      "Coarctação de aorta justaductal clássica (não associada a NF1)",
+      "Feocromocitoma/paraganglioma esporádico ou associado a outras síndromes (von Hippel-Lindau, NEM2, síndromes de paraganglioma por SDHx)",
+      "Estenose pulmonar valvar isolada não sindrômica",
+      "Cardiomiopatia hipertrófica sarcomérica clássica",
+      "Vasculite de grandes vasos (arterite de Takayasu, poliarterite nodosa) como diferencial de estenose/aneurisma multifocal",
+      "Toxicidade cardiovascular de inibidores de BRAF/MEK em paciente NF1 sob tratamento oncológico (hipertensão e disfunção ventricular iatrogênicas)"
+    ],
+    "tests": [
+      "Medida de pressão arterial em toda consulta",
+      "Angiotomografia ou angiorressonância de aorta e artérias renais",
+      "Catecolaminas/metanefrinas fracionadas (plasmáticas ou urinárias de 24h)",
+      "Ecocardiograma transtorácico (via de saída do VD/ramos pulmonares e espessura miocárdica)",
+      "Doppler de artérias renais como triagem inicial em centros sem angiotomografia disponível",
+      "Avaliação genética molecular confirmatória do gene NF1 quando o diagnóstico clínico é incerto"
+    ],
+    "red_flags": [
+      "Hipertensão grave ou refratária em paciente NF1 jovem",
+      "Sopro abdominal associado a hipertensão",
+      "Crise hipertensiva paroxística com cefaleia, sudorese e taquicardia",
+      "Dor súbita torácica, abdominal ou neurológica sugestiva de ruptura de aneurisma",
+      "Assimetria de pulsos ou de pressão arterial entre membros",
+      "Hipertensão identificada pela primeira vez na gestação em paciente NF1 (risco de feocromocitoma malignizado)"
+    ],
+    "ambulatory_flow": [
+      "Medir pressão arterial em toda consulta de paciente NF1, em qualquer idade",
+      "Diante de hipertensão confirmada, não assumir causa essencial: solicitar angiotomografia/angiorressonância de aorta e renais e considerar dosagem de metanefrinas fracionadas",
+      "Solicitar ecocardiograma diante de sopro cardíaco ou como parte de rastreio cardiovascular estruturado",
+      "Encaminhar para avaliação vascular especializada diante de estenose, coarctação atípica ou aneurisma confirmado",
+      "Encaminhar para avaliação endócrina diante de feocromocitoma/paraganglioma confirmado, com bloqueio alfa pré-operatório antes de qualquer procedimento",
+      "Manter seguimento cardiovascular estruturado de longo prazo, com reavaliação periódica de pressão arterial, função renal e imagem vascular quando clinicamente indicado"
+    ],
+    "emergency_flow": [
+      "Suspeitar de ruptura de aneurisma arterial diante de dor súbita intensa (torácica, abdominal ou neurológica) em paciente NF1, com instabilidade hemodinâmica",
+      "Investigar crise hipertensiva adrenérgica (feocromocitoma) diante de hipertensão paroxística grave com cefaleia, sudorese e taquicardia",
+      "Estabilizar hemodinamicamente e acionar imagem de urgência (angiotomografia) diante de suspeita de ruptura vascular",
+      "Evitar betabloqueio isolado sem bloqueio alfa prévio diante de suspeita de crise catecolaminérgica",
+      "Acionar cirurgia vascular ou radiologia intervencionista de urgência conforme território acometido"
+    ],
+    "tags": [
+      "neurofibromatose tipo 1",
+      "NF1",
+      "vasculopatia",
+      "hipertensão renovascular",
+      "estenose de artéria renal",
+      "coarctação de aorta atípica",
+      "aneurisma arterial",
+      "estenose pulmonar",
+      "síndrome de Watson",
+      "feocromocitoma",
+      "paraganglioma",
+      "cardiomiopatia hipertrófica",
+      "hipertensão secundária",
+      "síndrome neurocutânea",
+      "hipertensão pediátrica"
+    ],
+    "source_refs": [
+      "Bergoug M, et al. Neurofibromin Structure, Functions and Regulation. Cells. 2020;9(11):2365. PMID: 33121128.",
+      "Angelova-Toshkina D, et al. Neurofibromatosis type 1: a comparison of the 1997 NIH and the 2021 revised diagnostic criteria in 75 children and adolescents. Genet Med. 2022;24(9):1978-1985. PMID: 35713653.",
+      "Esfahani A, Aghayev A. Vasculopathy in Neurofibromatosis Type 1. Radiology. 2023;306(1):78. PMID: 36165793.",
+      "Zulfiqar M, et al. Imaging Features of Neurofibromatosis Type 1 in the Abdomen and Pelvis. AJR Am J Roentgenol. 2021;216(1):241-251. PMID: 33211573.",
+      "Celik B, et al. Renal manifestations in children with neurofibromatosis type 1. Eur J Pediatr. 2021. PMID: 34091747.",
+      "Coleman DM, et al. Molecular genetic evaluation of pediatric renovascular hypertension due to renal artery stenosis and abdominal aortic coarctation in neurofibromatosis type 1. Hum Mol Genet. 2022. PMID: 34476477.",
+      "Veean S, et al. Coarctation of abdominal aorta and renal artery stenosis due to neurofibromatosis type 1. Postgrad Med J. 2017. PMID: 27708004.",
+      "Tedesco MA, et al. The heart in neurofibromatosis type 1: an echocardiographic study. Am Heart J. 2002. PMID: 12040353.",
+      "Kapusta L, et al. Cardiac screening in pediatric patients with neurofibromatosis type 1. Int J Cardiovasc Imaging. 2024. PMID: 38739321.",
+      "Kenborg L, et al. Endocrine morbidity in neurofibromatosis 1: a nationwide, register-based cohort study. Eur J Endocrinol. 2023. PMID: 37542520.",
+      "Dupuis H, et al. Prevalence of Endocrine Manifestations and GIST in 108 Systematically Screened Patients With Neurofibromatosis Type 1. J Endocr Soc. 2023. PMID: 37409183."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/36165793/",
+      "https://pubmed.ncbi.nlm.nih.gov/33121128/",
+      "https://pubmed.ncbi.nlm.nih.gov/35713653/",
+      "https://pubmed.ncbi.nlm.nih.gov/34476477/",
+      "https://pubmed.ncbi.nlm.nih.gov/12040353/",
+      "https://pubmed.ncbi.nlm.nih.gov/38739321/",
+      "https://pubmed.ncbi.nlm.nih.gov/37542520/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "neurofibromatose-tipo-1-e-acometimento-cardiovascular-vasculopatia-estenose-pulmonar-feocromocitoma-e-cardiomiopatia-hipertrofica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-costello",
+    "name": "Síndrome de Costello",
+    "aliases": [
+      "Costello syndrome",
+      "RASopatia por HRAS",
+      "síndrome de Costello (HRAS)",
+      "faciocutaneous-skeletal syndrome (nomenclatura histórica)"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "rasopatia",
+    "prevalence_rank": 138,
+    "completeness": "completo",
+    "summary": "RASopatia rara causada, na esmagadora maioria dos casos, por mutação germinativa ativadora (ganho de função) no gene HRAS — mais de 95% das variantes patogênicas afetam os códons 12 ou 13, com p.Gly12Ser (c.34G>A) como a substituição isolada mais recorrente, um dos hotspots mutacionais mais restritos da genética de doenças do desenvolvimento. Distinta da síndrome de Noonan (predominantemente PTPN11, SOS1, RAF1 e outros genes da via RAS-MAPK, com estenose pulmonar valvar displásica como achado cardíaco dominante), a síndrome de Costello tem como achado cardíaco central a cardiomiopatia hipertrófica (~60% dos casos, apresentação tipicamente precoce, podendo já ser grave no período fetal/neonatal) e a taquicardia atrial caótica/multifocal (~48-55% dos casos, achado considerado o mais distintivo da síndrome dentro do espectro das RASopatias, desafiador de tratar e persistente/refratário em cerca de um quarto dos casos). O fenótipo inclui face coarse característica, papilomas nasais e periorais/perianais (50-60%), pele frouxa com pregas palmoplantares profundas, baixa estatura universal, hipotonia e atraso do desenvolvimento neuropsicomotor/deficiência intelectual geralmente mais proeminentes que em Noonan. A síndrome carrega o maior risco de câncer entre as RASopatias avaliadas (~15% vitalício), predominantemente rabdomiossarcoma e neuroblastoma na infância e carcinoma de bexiga em adolescentes/adultos jovens, com protocolo de vigilância oncológica dedicado (ultrassonografia abdominal/pélvica seriada até 8-10 anos, uroanálise anual a partir dos 10 anos).",
+    "presentation": [
+      "Face coarse característica: lábios cheios e proeminentes, ponta nasal cheia, cabelo encaracolado ou esparso e fino",
+      "Papilomas nasais e periorais/perianais em 50-60% dos indivíduos",
+      "Pele frouxa e macia com pregas palmares e plantares profundas, hiperqueratose e calosidades",
+      "Baixa estatura universal (estatura adulta 135-150 cm), com atraso de idade óssea e ganho ponderal lento na primeira infância",
+      "Hipotonia, em cerca de 70% dos casos, por vezes com fenótipo de miopatia esquelética",
+      "Atraso do desenvolvimento neuropsicomotor e deficiência intelectual, presentes na quase totalidade dos casos e geralmente mais proeminentes do que na síndrome de Noonan",
+      "Cardiomiopatia hipertrófica, em cerca de 60% dos casos, tipicamente de apresentação em lactância ou primeira infância, podendo ser grave já no período fetal/neonatal com obstrução de via de saída do ventrículo esquerdo",
+      "Taquicardia atrial caótica/multifocal (ou ectópica), em 48-55% dos casos — achado eletrocardiográfico considerado o mais distintivo da síndrome, por vezes de início já intraútero",
+      "Estenose valvar pulmonar leve a moderada em cerca de 10% dos casos, achado sobreposto ao espectro de Noonan mas bem menos proeminente",
+      "Achados fetais sugestivos: translucência nucal aumentada, polidrâmnio (>90%), desvio ulnar dos punhos, úmeros e fêmures curtos, taquicardia atrial fetal, hidropsia fetal em subgrupo grave"
+    ],
+    "differentials": [
+      "Síndrome de Noonan (PTPN11, SOS1, RAF1, LZTR1, RIT1 e outros genes da via RAS-MAPK; achado cardíaco dominante é estenose pulmonar valvar displásica, não cardiomiopatia hipertrófica; deficiência intelectual tipicamente mais leve que em Costello; ausência de papilomas)",
+      "Síndrome cardiofaciocutânea (CFC) — BRAF, MAP2K1/2, KRAS; fenótipo cutâneo e capilar sobreposto, mas sem os papilomas característicos de Costello e com perfil de deficiência intelectual/funcional descrito como mais grave em algumas séries comparativas",
+      "Síndrome de Noonan com múltiplos lentigos (antiga LEOPARD), causada por PTPN11/RAF1, com lentiginose difusa em vez de papilomas",
+      "Outras RASopatias (síndrome de Legius/NF1-like, síndrome de Mazzanti/SHOC2) no diferencial molecular amplo quando o fenótipo é atípico",
+      "Cardiomiopatia hipertrófica sarcomérica isolada não sindrômica, quando o fenótipo dismórfico ainda não está evidente ao diagnóstico cardíaco inicial"
+    ],
+    "tests": [
+      "Teste genético dirigido para HRAS (sequenciamento focado nos códons 12 e 13, hotspot mutacional responsável por mais de 95% dos casos), com aconselhamento genético estruturado antes e depois do teste",
+      "Ecocardiograma com eletrocardiograma ao diagnóstico, seguido de reavaliação mais próxima nos primeiros dois anos de vida conforme gravidade da hipertrofia e depois anual",
+      "Ecocardiograma fetal, quando a suspeita é levantada intraútero por achados sugestivos (polidrâmnio, translucência nucal aumentada, desvio ulnar dos punhos, ossos longos curtos, taquicardia atrial fetal)",
+      "ECG de 12 derivações e Holter, para caracterização e monitorização da taquicardia atrial caótica/multifocal",
+      "Ultrassonografia abdominal e pélvica seriada a cada três a seis meses até os 8-10 anos de idade, para rastreio de rabdomiossarcoma e neuroblastoma",
+      "Uroanálise anual a partir dos 10 anos de idade, para detecção de hematúria como sinal precoce de carcinoma de bexiga",
+      "Avaliação de neurodesenvolvimento estruturada, dado o atraso e a deficiência intelectual geralmente mais proeminentes do que em Noonan"
+    ],
+    "red_flags": [
+      "Cardiomiopatia hipertrófica de apresentação fetal ou neonatal grave, com obstrução importante da via de saída do ventrículo esquerdo",
+      "Taquicardia atrial caótica/multifocal refratária a antiarrítmicos convencionais",
+      "Insuficiência cardíaca refratária ao tratamento padrão em paciente com cardiomiopatia hipertrófica confirmada",
+      "Hematúria em paciente com síndrome de Costello, sinal de alerta para carcinoma de bexiga",
+      "Massa abdominal ou pélvica em rastreio de imagem seriado, sinal de alerta para rabdomiossarcoma ou neuroblastoma",
+      "Fenótipo facial/cutâneo compatível associado a taquicardia atrial multifocal em lactente — combinação citada na literatura como pista diagnóstica de síndrome de Costello dentro do espectro das RASopatias"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de síndrome de Costello diante de fenótipo facial/cutâneo característico (face coarse, papilomas nasais/periorais, pele frouxa com pregas palmoplantares profundas) associado a cardiomiopatia hipertrófica precoce e/ou taquicardia atrial caótica/multifocal.",
+      "Confirmar com teste genético dirigido para HRAS, com aconselhamento genético estruturado.",
+      "Encaminhar a cardiologia pediátrica para ecocardiograma seriado (mais próximo nos primeiros dois anos de vida, depois anual) e ECG/Holter dirigido à caracterização da arritmia atrial.",
+      "Iniciar rastreio oncológico estruturado (ultrassonografia abdominal/pélvica seriada até 8-10 anos; uroanálise anual a partir dos 10 anos) assim que o diagnóstico for confirmado ou fortemente suspeito.",
+      "Encaminhar a neurodesenvolvimento e genética clínica para avaliação e acompanhamento estruturado do atraso do desenvolvimento e da deficiência intelectual.",
+      "Manter seguimento multidisciplinar de longo prazo (cardiologia pediátrica, oncologia pediátrica, genética clínica, neurodesenvolvimento), dado o caráter multissistêmico da síndrome."
+    ],
+    "emergency_flow": [
+      "Taquicardia atrial caótica/multifocal com repercussão hemodinâmica: estabilização conforme protocolo de taquiarritmia pediátrica com pulso, reconhecendo a maior probabilidade de refratariedade a antiarrítmicos convencionais nesta síndrome.",
+      "Insuficiência cardíaca descompensada por cardiomiopatia hipertrófica obstrutiva grave: manejo agudo conforme princípios gerais de CMH pediátrica descompensada, com avaliação para escalonamento terapêutico (incluindo discussão de miectomia septal em obstrução refratária e de inibidor de MEK em insuficiência cardíaca refratária ao tratamento padrão) em centro com experiência na síndrome.",
+      "Achado agudo sugestivo de tumor embrionário (massa abdominal/pélvica nova, hematúria) em paciente com síndrome de Costello conhecida: investigação urgente com imagem e encaminhamento a oncologia pediátrica."
+    ],
+    "tags": [
+      "rasopatia",
+      "HRAS",
+      "genética cardiovascular pediátrica",
+      "cardiomiopatia hipertrófica pediátrica",
+      "taquicardia atrial caótica",
+      "taquicardia atrial multifocal",
+      "síndrome de Costello",
+      "predisposição a câncer",
+      "rabdomiossarcoma",
+      "neuroblastoma",
+      "vigilância oncológica",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Aoki Y et al. Germline mutations in HRAS proto-oncogene cause Costello syndrome. Nat Genet. 2005;37(10):1038-1040. PMID: 16170316.",
+      "Gripp KW, Weaver KN. HRAS-Related Costello Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Última revisão: 21 mai 2026. PMID: 20301680.",
+      "Lin AE et al. Clinical, pathological, and molecular analyses of cardiovascular abnormalities in Costello syndrome: a Ras/MAPK pathway syndrome. Am J Med Genet A. 2011;155A(3):486-507. PMID: 21344638.",
+      "Kerr B et al. Genotype-phenotype correlation in Costello syndrome: HRAS mutation analysis in 43 cases. J Med Genet. 2006;43(5):401-405. PMID: 16443854.",
+      "Villani A et al. Recommendations for Cancer Surveillance in Individuals with RASopathies and Other Rare Genetic Conditions with Increased Cancer Risk. Clin Cancer Res. 2017;23(12):e83-e90. PMID: 28620009.",
+      "Ney G et al. Cancer incidence and surveillance strategies in individuals with RASopathies. Am J Med Genet C Semin Med Genet. 2022;190(4):530-540. PMID: 36533693.",
+      "Botia-Arciniegas V et al. Targeting cardiomyopathies associated with RASopathies: the role of mitogen-activated protein kinase inhibitors and therapeutic challenges. Pharmacogenet Genomics. 2025;35(6):173-182. PMID: 40460044."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16170316/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1507/",
+      "https://pubmed.ncbi.nlm.nih.gov/21344638/",
+      "https://pubmed.ncbi.nlm.nih.gov/16443854/",
+      "https://pubmed.ncbi.nlm.nih.gov/28620009/",
+      "https://pubmed.ncbi.nlm.nih.gov/36533693/",
+      "https://pubmed.ncbi.nlm.nih.gov/40460044/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-costello-cardiomiopatia-hipertrofica-precoce-taquicardia-atrial-caotica-e-risco-tumoral-na-rasopatia-por-hras"
+    ],
+    "patient_material_slug": null
   }
 ]
