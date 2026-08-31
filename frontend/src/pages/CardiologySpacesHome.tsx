@@ -77,17 +77,17 @@ const SPACES: Space[] = [
     id: "ensino", label: "Ensino", icon: "curso", tone: "violet",
     description: "Conhecimento organizado para aprender e ensinar.",
     now: [
-      { to: "/cursos", label: "Abrir cursos", icon: "curso" },
+      { to: "/trilhas", label: "Abrir trilhas", icon: "seta" },
       { to: "/apresentacao", label: "Apresentar", icon: "documento" },
-      { to: "/trilhas", label: "Continuar trilha", icon: "seta" },
+      { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
     ],
     next: [
-      { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
+      { to: "/biblioteca", label: "Abrir biblioteca", icon: "conhecimento" },
       { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
       { to: "/material-paciente", label: "Material educativo", icon: "documento" },
     ],
     references: [
-      { to: "/biblioteca", label: "Biblioteca", icon: "conhecimento" },
+      { to: "/favoritos", label: "Notas & favoritos", icon: "favorito" },
       { to: "/evidencias", label: "Evidências", icon: "evidencia" },
       { to: "/diretrizes", label: "Diretrizes", icon: "conhecimento" },
       { to: "/trilhas/timeline", label: "Timeline", icon: "seta" },
@@ -182,7 +182,7 @@ const SCIENTIFIC_SPACES: Space[] = [
     id: "aprender", label: "Aprender", icon: "curso", tone: "violet",
     description: "Aprendizagem contínua por cursos, trilhas, casos e conteúdo multimodal.",
     now: [
-      { to: "/cursos", label: "Continuar cursos", icon: "curso" },
+      { to: "/biblioteca", label: "Abrir biblioteca", icon: "conhecimento" },
       { to: "/trilhas", label: "Minhas trilhas", icon: "seta" },
       { to: "/casos-clinicos", label: "Resolver casos clínicos", icon: "doencas" },
     ],
@@ -261,7 +261,7 @@ const CATALOG: Array<{ title: string; actions: Action[] }> = [
     ["/evidencias", "Estudos & Evidências", "evidencia"], ["/estudos", "Estudos clínicos", "evidencia"],
     ["/documentos-cientificos-ia", "Documentos científicos IA", "assistente"], ["/trilhas/timeline", "Timeline do conhecimento", "seta"],
     ["/trilhas", "Trilhas", "seta"], ["/casos-clinicos", "Casos clínicos", "doencas"],
-    ["/diretrizes", "Diretrizes & Guidelines", "conhecimento"], ["/cursos", "Cursos & Atualizações", "curso"],
+    ["/diretrizes", "Diretrizes & Guidelines", "conhecimento"],
     ["/biblioteca", "Biblioteca científica", "conhecimento"], ["/galeria", "Atlas & Galeria", "galeria"],
   ].map(([to, label, icon]) => ({ to, label, icon: icon as NomeIcone })) },
   { title: "Produtividade & Rede", actions: [
@@ -493,7 +493,6 @@ export default function CardiologySpacesHome() {
           <Link to="/biblioteca"><Icone nome="conhecimento" /><span>Biblioteca</span></Link>
           <Link to="/evidencias"><Icone nome="evidencia" /><span>Evidências</span></Link>
           <Link to="/trilhas"><Icone nome="seta" /><span>Trilhas</span></Link>
-          <Link to="/cursos"><Icone nome="curso" /><span>Cursos</span></Link>
           <Link to="/documentos-cientificos-ia"><Icone nome="assistente" /><span>Documento IA</span></Link>
         </> : <>
           <Link to="/receituario"><Icone nome="prescricao" /><span>Prescrever</span></Link>
