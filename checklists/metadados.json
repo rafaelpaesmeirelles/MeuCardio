@@ -38677,5 +38677,350 @@
       }
     ],
     "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "avaliacao-e-manejo-da-cardiomiopatia-por-lmna-risco-arritmico-e-cdi",
+    "condicao": "Cardiomiopatia por LMNA (laminopatia cardíaca) e Distrofia Muscular de Emery-Dreifuss",
+    "resumo": "Checklist de execução para avaliação cardíaca e neuromuscular do portador de variante patogênica em LMNA/EMD, estratificação de risco arrítmico e decisão fundamentada sobre CDI versus marca-passo isolado.",
+    "documento_origem": "cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi",
+    "theme": "Cardiomiopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "van Rijsingen IA, Arbustini E, Elliott PM, et al. Risk factors for malignant ventricular arrhythmias in lamin a/c mutation carriers a European cohort study. J Am Coll Cardiol. 2012;59(5):493-500. PMID: 22281253.",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. PMID: 31155932.",
+      "Rootwelt-Norberg C, et al. Timing of cardioverter-defibrillator implantation in patients with cardiac laminopathies - External validation of the LMNA-risk ventricular tachyarrhythmia calculator. Heart Rhythm. 2023;20(3):423-429. PMID: 36494026.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572.",
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID: 37622657.",
+      "Hershberger RE, Jordan E. LMNA-Related Dilated Cardiomyopathy. GeneReviews. Seattle: University of Washington; 2008-2022. Bookshelf ID: NBK1674. PMID: 20301717.",
+      "Ben Yaou R, Leturcq F, Bonne G. Emery-Dreifuss Muscular Dystrophy. GeneReviews. Seattle: University of Washington; 2004-2025. Bookshelf ID: NBK1436. PMID: 20301609."
+    ],
+    "itens": [
+      {
+        "id": "lmna-avaliacao-cardiaca-sistematica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cardíaca sistemática solicitada em revisado portador confirmado de variante patogênica em LMNA ou EMD, independentemente da gravidade do fenótipo muscular",
+        "origem_secao": "Distrofia muscular de Emery-Dreifuss: o fenótipo neuromuscular associado"
+      },
+      {
+        "id": "lmna-workup-cardiaco-inicial",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Workup cardíaco inicial completo: ECG de 12 derivações, ecocardiograma transtorácico, monitorização ambulatorial de ritmo (Holter ou dispositivo de monitorização prolongada) e, quando disponível, ressonância cardíaca com realce tardio de gadolínio",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-avaliacao-neuromuscular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação neuromuscular dirigida à busca de contraturas (cotovelo, tornozelo/Aquiles, coluna cervical) e ao padrão de fraqueza umeroperoneal, com dosagem de creatinoquinase sérica; eletroneuromiografia e biópsia muscular solicitadas se o diagnóstico permanecer incerto",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-teste-genetico-multigenico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Teste genético multigênico (painel combinado de cardiomiopatia e distrofias musculares) solicitado, com aconselhamento genético estruturado antes e depois do teste, em paciente com cardiomiopatia e doença de condução desproporcional, história familiar de morte súbita precoce ou marca-passo jovem, ou fenótipo compatível com EDMD",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-rastreamento-cascata-familiar",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Rastreamento em cascata realizado em parentes de primeiro grau assintomáticos quando uma variante patogênica é identificada, incluindo avaliação cardíaca em mulheres portadoras assintomáticas de variante em EMD",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-fatores-risco-arritmico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Presença dos quatro fatores de risco arrítmico pesquisada e registrada: taquicardia ventricular não sustentada, FEVE menor que 45% no primeiro contato clínico, sexo masculino e mutação não missense (truncante)",
+        "origem_secao": "Por que a fração de ejeção não basta: risco arrítmico desproporcional"
+      },
+      {
+        "id": "lmna-calculadora-risco-vta",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Calculadora de risco dedicada LMNA-risk-VTA aplicada (preditores: sexo masculino, mutação não missense, BAV de primeiro grau ou mais avançado, TVNS e FEVE contínua) para apoiar a decisão de CDI, em vez de usar isoladamente o corte de FEVE ≤35% padrão de outras CMD não isquêmicas",
+        "origem_secao": "Estratificação de risco e indicação de CDI"
+      },
+      {
+        "id": "lmna-decisao-cdi-individualizada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Decisão de CDI tratada como individualizada e multiparamétrica (fatores de risco clínicos, calculadora de risco e contexto familiar), idealmente conduzida em centro especializado em cardiomiopatias genéticas; genótipo positivo isolado para LMNA não usado como indicação automática de CDI",
+        "origem_secao": "Estratificação de risco e indicação de CDI"
+      },
+      {
+        "id": "lmna-cdi-vs-marcapasso",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Diante de indicação de dispositivo de estimulação por bradiarritmia em portador de LMNA, CDI considerado em vez de marca-passo simples, sobretudo na presença de variante truncante, sexo masculino, TVNS documentada ou FEVE já reduzida",
+        "origem_secao": "Doença de condução progressiva e a escolha entre marca-passo e CDI"
+      },
+      {
+        "id": "lmna-tratamento-icfer",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Tratamento farmacológico das diretrizes usuais para insuficiência cardíaca com fração de ejeção reduzida iniciado quando há disfunção sistólica estabelecida",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-anticoagulacao-fa",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Diante de fibrilação ou flutter atrial documentado, decisão de anticoagulação conduzida pelos critérios habituais de risco tromboembólico, sem presumir critério de exceção específico para LMNA",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-seguimento-vitalicio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Acompanhamento cardiológico regular e ao longo da vida mantido mesmo em portadores assintomáticos ou com fenótipo muscular leve, dada a natureza progressiva da doença de condução e o risco de morte súbita como primeira manifestação",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-manejo-multidisciplinar",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Quando há componente de distrofia muscular associado, manejo organizado de forma multidisciplinar envolvendo cardiologia, neurologia/doenças neuromusculares, genética clínica e reabilitação física",
+        "origem_secao": "Manejo geral"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "published": false,
+    "review_note": "Revisão final 31/08/2026: referências auditadas por fontes públicas disponíveis; PMIDs cruzados incorretos corrigidos; conflitos preservam a main; marcadores editoriais removidos."
+  },
+  {
+    "slug": "calcificacao-valvar-grave-em-paciente-jovem-suspeita-de-gaucher-tipo-3c",
+    "condicao": "Calcificação valvar aórtica/mitral grave em paciente jovem — suspeita de doença de Gaucher tipo 3c",
+    "resumo": "Checklist para reconhecer a calcificação valvar aórtica e/ou mitral grave em paciente fora da faixa etária de calcificação degenerativa senil como possível manifestação da doença de Gaucher tipo 3c, orientar a confirmação diagnóstica (dosagem de glicocerebrosidase e sequenciamento de GBA1, com atenção à homozigose D409H) e assegurar que o manejo cardiológico — vigilância ecocardiográfica seriada e indicação cirúrgica pelos critérios habituais de gravidade — não seja subordinado ao controle sistêmico da doença de base, já que a terapia de reposição enzimática e a terapia de redução de substrato não revertem calcificação valvar já estabelecida.",
+    "documento_origem": "doenca-de-gaucher-acometimento-cardiovascular-tipo-3c-calcificacao-valvar-e-limites-da-terapia-de-reposicao-enzimatica",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Abrahamov A, Elstein D, Gross-Tsur V, Farber B, Glaser Y, Hadas-Halpern I, Ronen S, Tafakjdi M, Horowitz M, Zimran A. Gaucher's disease variant characterised by progressive calcification of heart valves and unique genotype. Lancet. 1995;346(8981):1000-1003. DOI: 10.1016/s0140-6736(95)91687-1. PMID: 7475546",
+      "Hughes DA, Pastores GM. Gaucher Disease. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews. Seattle: University of Washington; 2023 [1993-2023]. PMID: 20301446",
+      "Kurolap A, Del Toro M, Spiegel R, et al. Gaucher disease type 3c: New patients with unique presentations and review of the literature. Mol Genet Metab. 2019;127(2):138-146. DOI: 10.1016/j.ymgme.2019.05.011. PMID: 31130326",
+      "Alsharhan H, et al. Cardiovascular Gaucher Disease Type 3c Associated With Homozygous Asp448His GBA1 Variant. Am J Med Genet A. 2025. PMID: 40491257",
+      "Rastogi A, et al. Gaucher's Disease with Cardiac Valve Calcification and Stenosis: A Rare Presentation due to Homozygous p.D409H Mutation. Indian J Pediatr. 2016;83(9):1032-1034. PMID: 26887759",
+      "Öztürk, et al. Challenging clinical management of a patient with Gaucher disease type IIIC homozygous for the D409H mutation, aortic valve calcification and porcelain aorta. Turk J Pediatr. 2024. PMID: 39582444",
+      "Mireles, et al. Undiagnosed type IIIc Gaucher disease in a child with aortic and mitral valve calcification. J Cardiothorac Vasc Anesth. 2010. PMID: 19632857",
+      "Kör Y, et al. Severe cardiac involvement in Gaucher type IIIC: a case report and review of the literature. Cardiol Young. 2017;27(4):809-812. PMID: 28393750",
+      "Inui K, et al. A new variant neuropathic type of Gaucher's disease characterized by hydrocephalus, corneal opacities, deafness, and skeletal abnormalities. J Pediatr. 2001;138(1):137-139. PMID: 11148530",
+      "Mistry PK, Lukina E, Ben Turkia H, et al. Effect of oral eliglustat on splenomegaly in patients with Gaucher disease type 1: the ENGAGE randomized clinical trial. JAMA. 2015;313(7):695-706. DOI: 10.1001/jama.2015.459. PMID: 25688781"
+    ],
+    "itens": [
+      {
+        "id": "gaucher3c-idade-suspeita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcificação valvar aórtica e/ou mitral grave reconhecida como incompatível com etiologia degenerativa senil em paciente jovem, sem etiologia reumática, congênita bicúspide ou outra causa evidente",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-esplenomegalia-citopenias",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Esplenomegalia e/ou citopenias inexplicadas (trombocitopenia, anemia) pesquisadas ativamente como achados associados",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-opacidades-corneanas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação oftalmológica solicitada para pesquisa de opacidades corneanas",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-calcificacao-grandes-vasos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Calcificação de grandes vasos (aorta, incluindo padrão de 'aorta em porcelana') pesquisada e documentada, fora de proporção com a idade",
+        "origem_secao": "A variante cardiovascular: Gaucher tipo 3c"
+      },
+      {
+        "id": "gaucher3c-historia-familiar",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Consanguinidade familiar e história familiar de manifestações similares investigadas, compatíveis com padrão de herança autossômica recessiva",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-afastar-causas-comuns",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Febre reumática prévia e valva bicúspide ativamente afastadas antes de assumir etiologia degenerativa ou indeterminada",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-dosagem-glicocerebrosidase",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Dosagem de atividade de glicocerebrosidase em leucócitos solicitada diante de suspeita clínica",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-sequenciamento-gba1",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Sequenciamento do gene GBA1 solicitado, com atenção específica à pesquisa de homozigose para D409H (p.D448H) quando o fenótipo cardiovascular motiva a investigação",
+        "origem_secao": "Diferenciação da calcificação valvar degenerativa 'comum' do idoso"
+      },
+      {
+        "id": "gaucher3c-tre-nao-reverte-calcificacao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Equipe e paciente/família informados de que a terapia de reposição enzimática e a terapia de redução de substrato não revertem calcificação valvar já estabelecida, apesar da eficácia sobre esplenomegalia e citopenias",
+        "origem_secao": "Tratamento sistêmico da doença de Gaucher: eficácia estabelecida e seus limites"
+      },
+      {
+        "id": "gaucher3c-vigilancia-ecocardiografica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ecocardiográfica seriada instituída assim que o diagnóstico de tipo 3c é estabelecido ou suspeitado, independentemente de sintomas cardíacos",
+        "origem_secao": "Implicação prática: manejo cardiológico dirigido, independente do controle sistêmico"
+      },
+      {
+        "id": "gaucher3c-indicacao-cirurgica-independente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação de intervenção valvar avaliada pelos mesmos critérios habituais de gravidade e sintomas, sem aguardar resposta da terapia sistêmica da doença de base",
+        "origem_secao": "Implicação prática: manejo cardiológico dirigido, independente do controle sistêmico"
+      },
+      {
+        "id": "gaucher3c-planejamento-cirurgico-grandes-vasos",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Calcificação de grandes vasos concomitante (incluindo aorta em porcelana) ativamente pesquisada antes de qualquer planejamento cirúrgico, por seu impacto sobre técnica de canulação e clampeamento",
+        "origem_secao": "Implicação prática: manejo cardiológico dirigido, independente do controle sistêmico"
+      },
+      {
+        "id": "gaucher3c-equipe-multidisciplinar",
+        "categoria": "equipe",
+        "obrigatorio": true,
+        "texto": "Manejo sistêmico (hematologia/genética metabólica) e manejo estrutural cardíaco (cardiologia, ecocardiografia, cirurgia cardíaca) conduzidos em paralelo, com comunicação explícita sobre as duas trajetórias terapêuticas distintas dentro da mesma doença",
+        "origem_secao": "Implicação prática: manejo cardiológico dirigido, independente do controle sistêmico"
+      },
+      {
+        "id": "gaucher3c-triagem-genetica-jovens",
+        "categoria": "qualidade",
+        "obrigatorio": false,
+        "texto": "Triagem genética dirigida considerada em qualquer paciente jovem com calcificação valvar aórtica/mitral inexplicada, com implicações para aconselhamento familiar sobre herança autossômica recessiva e risco de recorrência",
+        "origem_secao": "Implicação prática: manejo cardiológico dirigido, independente do controle sistêmico"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "published": false,
+    "review_note": "Revisão final 31/08/2026: referências auditadas por fontes públicas disponíveis; PMIDs cruzados incorretos corrigidos; conflitos preservam a main; marcadores editoriais removidos."
+  },
+  {
+    "slug": "checklist-tempestade-tireotoxica-diagnostico-e-tratamento-sequenciado",
+    "condicao": "Tempestade tireotóxica: reconhecimento clínico e tratamento sequenciado da emergência cardiovascular",
+    "resumo": "Checklist de execução para suspeitar e diagnosticar a tempestade tireotóxica pelo escore de Burch-Wartofsky — sem aguardar exame laboratorial específico —, identificar o fator precipitante e conduzir o tratamento multimodal na sequência correta: tionamida antes do iodo (intervalo mínimo de 1 hora), betabloqueador (propranolol) e corticosteroide.",
+    "documento_origem": "tempestade-tireotoxica-emergencia-cardiovascular-diagnostico-clinico-e-tratamento-sequenciado",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Burch HB, Wartofsky L. Life-threatening thyrotoxicosis. Thyroid storm. Endocrinol Metab Clin North Am. 1993;22(2):263-277. PMID: 8325286",
+      "Akamizu T, Satoh T, Isozaki O, Suzuki A, Wakino S, Iburi T, Tsuboi K, Monden T, Kouki T, Otani H, Teramukai S, Uehara R, Nakamura Y, Nagai M, Mori M; Japan Thyroid Association. Diagnostic criteria, clinical features, and incidence of thyroid storm based on nationwide surveys. Thyroid. 2012;22(7):661-679. PMID: 22690898",
+      "Akamizu T. Thyroid Storm: A Japanese Perspective. Thyroid. 2018;28(1):32-40. PMID: 28899229",
+      "Angell TE, Lechner MG, Nguyen CT, Salvato VL, Nicoloff JT, LoPresti JS. Clinical features and hospital outcomes in thyroid storm: a retrospective cohort study. J Clin Endocrinol Metab. 2015;100(2):451-459. PMID: 25343237",
+      "Chiha M, Samarasinghe S, Kabaker AS. Thyroid storm: an updated review. J Intensive Care Med. 2015;30(3):131-140. PMID: 23920160",
+      "Carroll R, Matfin G. Endocrine and metabolic emergencies: thyroid storm. Ther Adv Endocrinol Metab. 2010;1(3):139-145. PMID: 23148158",
+      "Ross DS, Burch HB, Cooper DS, Greenlee MC, Laurberg P, Maia AL, Rivkees SA, Samuels M, Sosa JA, Stan MN, Walter MA. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067",
+      "De Leo S, Lee SY, Braverman LE. Hyperthyroidism. Lancet. 2016;388(10047):906-918. PMID: 27038492",
+      "Klubo-Gwiezdzinska J, Wartofsky L. Thyroid emergencies. Med Clin North Am. 2012;96(2):385-403. PMID: 22443982",
+      "Pokhrel B, Aiman W, Bhusal K. Thyroid Storm. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em janeiro de 2026. PMID: 28846289"
+    ],
+    "itens": [
+      {
+        "id": "tt-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Suspeita de tempestade tireotóxica levantada diante de taquiarritmia, insuficiência cardíaca de causa indeterminada, hipertermia desproporcional e/ou alteração do estado mental associadas — antes de esgotar apenas as medidas cardiológicas padrão",
+        "origem_secao": "A armadilha final: tratar a arritmia e a insuficiência cardíaca como se fossem apenas cardiológicas"
+      },
+      {
+        "id": "tt-diagnostico-nao-espera-laboratorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conduta não foi postergada à espera de resultado de T3, T4 livre ou TSH: reconhecido que não há corte bioquímico que diferencie tempestade de tireotoxicose não complicada e que o diagnóstico é clínico",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-escore-burch-wartofsky",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Escore de Burch-Wartofsky (BWPS) calculado somando os sete domínios: disfunção termorregulatória, efeitos no SNC, disfunção gastrointestinal-hepática, taquicardia, fibrilação atrial, insuficiência cardíaca congestiva e fator precipitante",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-interpretacao-escore",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Resultado do BWPS interpretado nos cortes de referência: ≥45 altamente sugestivo de tempestade; 25-44 sustenta o diagnóstico (tempestade iminente); <25 torna o diagnóstico improvável",
+        "origem_secao": "Diagnóstico: por que não existe exame que separe tempestade de hipertireoidismo não complicado"
+      },
+      {
+        "id": "tt-fator-precipitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fator precipitante pesquisado ativamente: infecção, cirurgia (incluindo tireoidectomia sem preparo pré-operatório), trauma, parto/período periparto, suspensão abrupta de tionamida, uso de contraste iodado e cetoacidose diabética",
+        "origem_secao": "Fatores precipitantes: o gatilho que descompensa um equilíbrio já frágil"
+      },
+      {
+        "id": "tt-tionamida-primeiro",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Tionamida (metimazol ou propiltiouracila) administrada como primeira medida farmacológica, antes de qualquer solução de iodo, para bloquear a síntese hormonal",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-iodo-apos-intervalo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Iodo (Lugol ou solução saturada de iodeto de potássio) administrado somente após intervalo mínimo de 1 hora da tionamida — nunca antes e nunca simultaneamente sem esse intervalo",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-betabloqueador",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Betabloqueador iniciado para controle da resposta adrenérgica e da frequência cardíaca, com propranolol como agente preferencial pelo efeito adicional de bloqueio da conversão periférica de T4 em T3",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-corticosteroide",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Corticosteroide (tipicamente hidrocortisona) administrado para bloquear a conversão periférica de T4 em T3 e cobrir possível insuficiência adrenal relativa",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-tratamento-precipitante",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Tratamento do fator precipitante conduzido em paralelo ao bloqueio hormonal (antibioticoterapia se infecção, controle glicêmico e correção metabólica se cetoacidose associada, entre outros)",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      },
+      {
+        "id": "tt-suporte-intensivo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Suporte intensivo instituído: controle térmico ativo, reposição volêmica e correção de distúrbios hidroeletrolíticos, evitando diuréticos agressivos e vasodilatadores padrão de baixo débito sem correção da causa tireotóxica",
+        "origem_secao": "A armadilha final: tratar a arritmia e a insuficiência cardíaca como se fossem apenas cardiológicas"
+      },
+      {
+        "id": "tt-resgate-refratario",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Em caso de refratariedade ao tratamento farmacológico máximo, plasmaférese terapêutica ou tireoidectomia de emergência consideradas como medidas de resgate",
+        "origem_secao": "Tratamento: multimodal, simultâneo — e com uma sequência que não pode ser invertida"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "published": false,
+    "review_note": "Revisão final 31/08/2026: referências auditadas por fontes públicas disponíveis; PMIDs cruzados incorretos corrigidos; conflitos preservam a main; marcadores editoriais removidos."
   }
 ]
