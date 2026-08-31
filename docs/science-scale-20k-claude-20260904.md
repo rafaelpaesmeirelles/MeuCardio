@@ -1196,3 +1196,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 104 (16 descartados por colisão) | 96 |
 | **Total** | **4.900** | **298** | **4.602** |
+
+## Lote 58 — concluído (commit 1133813d)
+
+- **5 documentos** (doenças autoimunes/hematológicas raras com acometimento cardiovascular): mastocitose sistêmica (distingue hipotensão anafilactoide, bem documentada, de "cardiomiopatia mastocitária" por infiltração direta — achado de evidência muito baixa, declarado explicitamente após busca dirigida não recuperar nenhum artigo indexado com esse termo — `content/Geral`), crioglobulinemia (classificação de Brouet, pericardite mais documentada que miocardite/vasculite coronariana verdadeira, esta sustentada apenas por relatos de caso — `content/Geral`), doença mista do tecido conjuntivo (HAP como principal causa de morte, 41% dos óbitos em coorte húngara, pericardite como preditor de HAP futura — `content/Hipertensão_pulmonar`), síndrome de Sjögren primária no adulto (complementar e distinto do documento já existente sobre bloqueio cardíaco congênito fetal por anti-Ro/SSA; risco aterosclerótico confirmado mas de magnitude menor que LES/esclerose sistêmica na mesma coorte — `content/Geral`), dermatomiosite/polimiosite (armadilha diagnóstica central: CK-MB e troponina T falsamente elevadas por regeneração de músculo esquelético, troponina I como biomarcador preferencial — `content/Geral`).
+- **doencas**: +5, pareadas 1:1 — `mastocitose-cardiovascular`, `crioglobulinemia-cardiovascular`, `dmtc-cardiovascular`, `sjogren-cardiovascular`, `miopatia-inflamatoria-cardiovascular`. `prevalence_rank` 109-113 (area=geral).
+- **1 tópico despachado neste lote, corretamente descartado por colisão real**: síndrome POEMS cardiovascular — já existe entrada de doença completa e revisada (`sindrome-poems`) em `doencas/metadados.json`, com todos os elementos cardiovasculares (HAP, sobrecarga de volume mediada por VEGF) já cobertos. O agente identificou a colisão antes de produzir conteúdo extenso.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;` `&amp;`) em 4 dos 5 documentos (crioglobulinemia, mastocitose, dermatomiosite, DMTC), corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.516 itens.
+
+### Status consolidado (após Lote 58)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 115 | 2.285 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 109 (17 descartados por colisão) | 91 |
+| **Total** | **4.900** | **303** | **4.597** |
