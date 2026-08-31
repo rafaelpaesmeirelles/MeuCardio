@@ -197,17 +197,23 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
     for fonte in (desktop, mobile):
         assert "Clínica & Decisão" in fonte
         assert "Trabalho & Assistência" in fonte
-        assert "Ferramentas & Produtividade" in fonte
         assert "Rede & Conectividade" in fonte
         for rota in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
             "/indicadores", "/galeria", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
-            "/assistente", "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
+            "/assistente", "/favoritos", "/minha-conta", "/tour",
         ):
             assert rota in fonte
         assert "/cursos" not in fonte
 
-    assert "Estudos & Educação" in desktop and "Estudos & Educação" in mobile
-    assert "Administração" in desktop and "Administração & Conta" in mobile
+    assert "Ciência & Ensino" in desktop
+    assert "Produtividade" in desktop
+    assert "Administração & Conta" in desktop
+    assert "/documentos-cientificos-ia" in desktop
+
+    assert "Estudos & Educação" in mobile
+    assert "Ferramentas & Produtividade" in mobile
+    assert "Administração & Conta" in mobile
+    assert "/tour?origem=assinatura&modo=quick" in mobile

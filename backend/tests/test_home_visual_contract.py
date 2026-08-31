@@ -123,23 +123,29 @@ def test_navigation_matches_reference_six_area_information_architecture():
     for source in (desktop, mobile):
         for title in (
             "Clínica & Decisão",
-            "Estudos & Educação",
             "Trabalho & Assistência",
-            "Ferramentas & Produtividade",
             "Rede & Conectividade",
         ):
             assert title in source
         for route in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
-            "/indicadores", "/galeria", "/cursos", "/apresentacao",
+            "/indicadores", "/galeria", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar", "/assistente",
-            "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
+            "/favoritos", "/minha-conta", "/tour",
         ):
             assert route in source
+        assert "/cursos" not in source
 
-    assert "Administração" in desktop
+    assert "Ciência & Ensino" in desktop
+    assert "Produtividade" in desktop
+    assert "Administração & Conta" in desktop
+    assert "/documentos-cientificos-ia" in desktop
+
+    assert "Estudos & Educação" in mobile
+    assert "Ferramentas & Produtividade" in mobile
     assert "Administração & Conta" in mobile
+    assert "/tour?origem=assinatura&modo=quick" in mobile
     assert ".ccc-nav--reference" in nav_css
     assert ".cc-mobile-more__grid" in nav_css
 
