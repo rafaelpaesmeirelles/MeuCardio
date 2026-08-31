@@ -1408,3 +1408,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 152 (19 descartados por colisão) | 48 |
 | **Total** | **4.900** | **355** | **4.545** |
+
+## Lote 68 — concluído (commit aab055f5)
+
+- **1 documento** (defeito de beta-oxidação de ácidos graxos pediátrico): deficiência de VLCAD (gene ACADVL, triagem neonatal por C14:1; forma neonatal/infantil grave com cardiomiopatia hipertrófica/dilatada e risco de arritmia ventricular fatal, explicitamente separada da forma miopática tardia sem cardiomiopatia; honestidade explícita de que a proporção de recém-nascidos triados positivos que evoluirá para forma grave não é conhecida prospectivamente; diferenciação mecanística de deficiência de carnitina, doença de Pompe e síndrome de Barth — `content/Cardiologia_pediátrica`).
+- **doencas**: +1, pareada 1:1 — `deficiencia-de-vlcad`. `prevalence_rank` 157 (area=geral).
+- **2 tópicos descartados por colisão genuína neste lote**: doença de Danon e síndrome PRKAG2 — os dois agentes despachados, de forma independente, identificaram o mesmo fragmento já completo e revisado (`doencas/fragmentos/fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2.json`, commit `52bbd9b7`, produção de rodada anterior combinando ChatGPT/Claude/Grok, `review_status: revisado`), cobrindo os dois tópicos combinados em uma única ficha. Nenhum conteúdo duplicado foi produzido; o fragmento pré-existente foi deixado intocado, por estar fora do escopo desta sessão decidir sobre sua fusão em `metadados.json`.
+- **Correções na integração**: nenhuma entidade HTML residual no documento produzido.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.604 itens.
+
+### Status consolidado (após Lote 68)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 159 | 2.241 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 153 (21 descartados por colisão) | 47 |
+| **Total** | **4.900** | **356** | **4.544** |
