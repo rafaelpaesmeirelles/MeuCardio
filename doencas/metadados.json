@@ -49184,5 +49184,522 @@
       "cardiotoxicidade-por-cobalto-da-cardiomiopatia-da-cerveja-ao-cobaltismo-por-protese-metal-metal"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "mastocitose-cardiovascular",
+    "name": "Mastocitose sistêmica com acometimento cardiovascular",
+    "aliases": [
+      "hipotensão/síncope anafilactoide da mastocitose",
+      "choque tipo anafilactoide por ativação mastocitária",
+      "cardiomiopatia mastocitária",
+      "infiltração cardíaca por mastócitos"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "hemodinamica_mediador_dependente",
+    "prevalence_rank": 109,
+    "completeness": "completo",
+    "summary": "Repercussão cardiovascular da mastocitose sistêmica, dominada por episódios de hipotensão, síncope ou choque tipo anafilactoide desencadeados pela liberação de histamina, triptase, prostaglandina D2 e leucotrienos por mastócitos clonais (mutação KIT D816V), tipicamente independentes de IgE e de alérgeno identificável. Gatilhos reconhecidos incluem álcool, AINEs, opioides e, com relevância clínica desproporcional, picada de himenóptero (abelha/vespa). Uma 'cardiomiopatia mastocitária' por infiltração miocárdica direta é descrita em doença sistêmica avançada (ASM, leucemia de mastócitos), mas com evidência limitada a relatos de caso.",
+    "presentation": [
+      "Episódios recorrentes de flushing facial e de tronco associados a hipotensão sintomática",
+      "Síncope ou pré-síncope sem gatilho postural claro, por vezes recorrente",
+      "Taquicardia reflexa durante os episódios de vasodilatação aguda",
+      "Prurido, urticária pigmentosa ou lesões cutâneas de mastocitose associadas",
+      "Sintomas gastrointestinais concomitantes durante crises",
+      "Choque distributivo agudo após exposição a gatilho ou sem gatilho identificável",
+      "Em doença avançada: dispneia, sinais de insuficiência cardíaca ou derrame pericárdico inexplicado"
+    ],
+    "differentials": [
+      "Anafilaxia alérgica clássica mediada por IgE",
+      "Síndrome de ativação mastocitária (MCAS) sem mastocitose sistêmica confirmada",
+      "Síncope vasovagal ou reflexa",
+      "Hipotensão ortostática e síndrome de taquicardia postural (POTS)",
+      "Feocromocitoma/paraganglioma",
+      "Síndrome carcinoide",
+      "Síndrome de Kounis",
+      "Choque séptico ou outras causas de choque distributivo"
+    ],
+    "tests": [
+      "Triptase sérica basal",
+      "Triptase sérica durante o episódio agudo, comparada à basal (regra do 20% + 2)",
+      "Biópsia e aspirado de medula óssea com critérios OMS",
+      "Pesquisa de mutação KIT D816V por PCR",
+      "Imuno-histoquímica/citometria de medula para CD25 e CD2",
+      "Ecocardiograma (apenas se suspeita de acometimento cardíaco direto)",
+      "RM cardíaca com realce tardio (apenas se suspeita de infiltração/fibrose miocárdica)"
+    ],
+    "red_flags": [
+      "Síncope ou choque após picada de himenóptero em paciente com mastocitose de base",
+      "Triptase basal muito elevada",
+      "Derrame pericárdico ou sinais de IC inexplicados em mastocitose sistêmica avançada",
+      "Episódios de hipotensão/choque recorrentes sem alérgeno identificável",
+      "Uso de AINE, opioide ou álcool como gatilho não identificado previamente"
+    ],
+    "ambulatory_flow": [
+      "Investigar triptase basal em episódios recorrentes de flushing/hipotensão/síncope sem causa reflexa/cardíaca estabelecida",
+      "Encaminhar para hematologia/alergologia para biópsia de medula e KIT D816V quando triptase elevada ou suspeita persistente",
+      "Orientar evitação de gatilhos e avaliar imunoterapia de veneno se história de picada de himenóptero",
+      "Prescrever anti-histamínico H1/H2 de manutenção e adrenalina autoinjetável",
+      "Reservar avaliação cardiológica estrutural para suspeita específica de acometimento direto"
+    ],
+    "emergency_flow": [
+      "Tratar episódio agudo como anafilaxia: adrenalina IM, decúbito com elevação de membros, reposição volêmica",
+      "Considerar síndrome de Kounis se dor torácica ou alterações isquêmicas concomitantes",
+      "Monitorar via aérea e hemodinâmica até resolução completa (risco de reação bifásica)",
+      "Coletar triptase sérica durante o episódio (1-2h do início) para comparação com basal",
+      "Investigar gatilho e encaminhar para investigação ambulatorial de mastocitose se ainda não diagnosticada"
+    ],
+    "tags": [
+      "mastocitose",
+      "mastocitose sistêmica",
+      "KIT D816V",
+      "triptase",
+      "síndrome de ativação mastocitária",
+      "anafilaxia",
+      "choque anafilactoide",
+      "síncope",
+      "hipotensão",
+      "picada de himenóptero",
+      "cardiomiopatia mastocitária"
+    ],
+    "source_refs": [
+      "Valent P, Akin C, Hartmann K, et al. Updated Diagnostic Criteria and Classification of Mast Cell Disorders. Hemasphere. 2021;5(11):e646. PMID: 34901755",
+      "Pardanani A. Systemic mastocytosis in adults: 2023 update. Am J Hematol. 2023;98(7):1097-1116. PMID: 37309222",
+      "Schuch A, Brockow K. Mastocytosis and Anaphylaxis. Immunol Allergy Clin North Am. 2017;37(1):153-164. PMID: 27886904",
+      "van Anrooij B, et al. Higher mast cell load decreases the risk of Hymenoptera venom-induced anaphylaxis. J Allergy Clin Immunol. 2013;132(1):125-130. PMID: 23498593",
+      "Valent P, et al. Why the 20% + 2 Tryptase Formula Is a Diagnostic Gold Standard. Int Arch Allergy Immunol. 2019;180(1):44-51. PMID: 31256161",
+      "Idamakanti M, et al. Mast Cell Leukemia: Comprehensive Review. J Hematol. 2025;14(4):174-192. PMID: 40904938",
+      "Reiter A, et al. Efficacy of avapritinib versus best available therapy. Leukemia. 2022;36(9):2108-2120. PMID: 35790816"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/34901755/",
+      "https://pubmed.ncbi.nlm.nih.gov/37309222/",
+      "https://pubmed.ncbi.nlm.nih.gov/27886904/",
+      "https://pubmed.ncbi.nlm.nih.gov/23498593/",
+      "https://pubmed.ncbi.nlm.nih.gov/31256161/",
+      "https://pubmed.ncbi.nlm.nih.gov/40904938/",
+      "https://pubmed.ncbi.nlm.nih.gov/35790816/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "mastocitose-sistemica-e-acometimento-cardiovascular-hipotensao-anafilactoide-e-cardiomiopatia-mastocitaria"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "crioglobulinemia-cardiovascular",
+    "name": "Crioglobulinemia com acometimento cardiovascular",
+    "aliases": [
+      "vasculite crioglobulinêmica",
+      "crioglobulinemia mista",
+      "vasculite por crioglobulina",
+      "doença crioglobulinêmica",
+      "pericardite/miocardite crioglobulinêmica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculite_sistemica",
+    "prevalence_rank": 110,
+    "completeness": "completo",
+    "summary": "Vasculite sistêmica de pequenos e médios vasos mediada por imunocomplexos de crioglobulina, classificada por Brouet em tipo I (monoclonal, associada a discrasia plasmocitária/linfoproliferativa), tipo II (mista, componente monoclonal, classicamente associada a hepatite C — causa mais comum globalmente) e tipo III (mista policlonal, associada a lúpus e Sjögren). Quadro clássico: púrpura palpável, artralgia, neuropatia periférica e glomerulonefrite membranoproliferativa. Acometimento cardiovascular é raro: pericardite é a manifestação mais descrita, miocardite mais rara (sobretudo no tipo I), e vasculite coronariana verdadeira é achado raro documentado em relatos de caso, podendo mimetizar SCA em paciente jovem sem fatores de risco tradicionais.",
+    "presentation": [
+      "Púrpura palpável recorrente em membros inferiores",
+      "Artralgia poliarticular não erosiva",
+      "Astenia/fraqueza",
+      "Neuropatia periférica sensitiva ou sensitivo-motora",
+      "Glomerulonefrite membranoproliferativa com hipocomplementemia",
+      "Pericardite com derrame pericárdico, associada a atividade sistêmica",
+      "Miocardite (rara, mais em tipo I)",
+      "Dor torácica isquêmica por vasculite coronariana verdadeira, achado raro que pode mimetizar SCA em paciente jovem",
+      "Úlceras cutâneas e vasculite necrosante em formas graves"
+    ],
+    "differentials": [
+      "Poliarterite nodosa",
+      "Granulomatose eosinofílica com poliangiite (EGPA)",
+      "Vasculites ANCA-associadas",
+      "Lúpus eritematoso sistêmico com vasculite secundária",
+      "Púrpura de Henoch-Schönlein / vasculite por IgA",
+      "Endocardite infecciosa",
+      "Aterosclerose coronariana convencional",
+      "Amiloidose cardíaca"
+    ],
+    "tests": [
+      "Dosagem de crioglobulina sérica com coleta a 37°C",
+      "Criócrito após refrigeração a 4°C por até 7 dias",
+      "Complemento sérico C3 e C4",
+      "Fator reumatoide",
+      "Sorologia anti-HCV e carga viral por PCR",
+      "Eletroforese de proteínas séricas e imunofixação",
+      "Biópsia de pele de lesão purpúrica",
+      "Biópsia renal quando indicada",
+      "ECG e ecocardiograma na suspeita de acometimento cardíaco",
+      "Troponina e angiografia coronariana quando há suspeita de vasculite coronariana"
+    ],
+    "red_flags": [
+      "Dor torácica isquêmica em paciente jovem com crioglobulinemia ou HCV positivo, sem fatores de risco tradicionais",
+      "Derrame pericárdico significativo ou sinais de tamponamento",
+      "Sinais de IC de início recente em vasculite ativa",
+      "Hiperviscosidade sintomática",
+      "Vasculite necrosante extensa com úlceras cutâneas ou hemorragia digestiva",
+      "Perda rápida de função renal com sedimento urinário ativo"
+    ],
+    "ambulatory_flow": [
+      "Investigar hepatite C crônica em púrpura palpável, artralgia e hipocomplementemia inexplicada",
+      "Confirmar crioglobulinemia com coleta a 37°C e caracterizar tipo por imunofixação",
+      "Encaminhar para antiviral de ação direta quando HCV confirmado",
+      "Rastrear discrasia plasmocitária/linfoproliferativa quando houver componente monoclonal",
+      "Avaliar acometimento de órgão-alvo para definir necessidade de imunossupressão",
+      "Considerar rituximabe em vasculite moderada a grave refratária"
+    ],
+    "emergency_flow": [
+      "Avaliar dor torácica com ECG e troponina; considerar vasculite coronariana no diferencial de SCA em paciente jovem com crioglobulinemia",
+      "Ecocardiograma à beira-leito se suspeita de derrame pericárdico ou disfunção miocárdica aguda",
+      "Pericardiocentese se tamponamento",
+      "Iniciar corticosteroide em dose alta e considerar imunossupressor/rituximabe em vasculite grave com acometimento de órgão-alvo",
+      "Plasmaférese em crioglobulinemia grave com hiperviscosidade ou vasculite fulminante",
+      "Revascularização quando há lesão coronariana obstrutiva associada à vasculite ativa"
+    ],
+    "tags": [
+      "vasculite",
+      "crioglobulinemia",
+      "hepatite C",
+      "pericardite",
+      "miocardite",
+      "vasculite coronariana",
+      "imunocomplexos",
+      "glomerulonefrite membranoproliferativa",
+      "rituximabe",
+      "plasmaférese"
+    ],
+    "source_refs": [
+      "Kolopp-Sarda MN, Miossec P. Cryoglobulins: An update on detection, mechanisms and clinical contribution. Autoimmunity Reviews. 2018;17(5):457-464. PMID: 29526627",
+      "Ferri C, Ramos-Casals M, et al. International diagnostic guidelines for patients with HCV-related extrahepatic manifestations. Autoimmunity Reviews. 2016;15(12):1145-1160. PMID: 27640316",
+      "Gragnani L, Lorini S, et al. Predictors of long-term cryoglobulinemic vasculitis outcomes after HCV eradication. Autoimmunity Reviews. 2022;21(1). PMID: 34419670",
+      "Quartuccio L, Bortoluzzi A, et al. Management of mixed cryoglobulinemia with rituximab. Clinical Rheumatology. 2023;42(2). PMID: 36169798",
+      "Cao XX, Tian Z, et al. Successful Treatment of Type 1 Cryoglobulinemic Vasculitis With Cardiac Involvement. Canadian Journal of Cardiology. 2018. PMID: 29395708",
+      "Ohta Y, Tsuchiya T, et al. Successful treatment with bortezomib for refractory cryoglobulinemic vasculitis. CEN Case Reports. 2025. PMID: 39760978"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29526627/",
+      "https://pubmed.ncbi.nlm.nih.gov/27640316/",
+      "https://pubmed.ncbi.nlm.nih.gov/34419670/",
+      "https://pubmed.ncbi.nlm.nih.gov/36169798/",
+      "https://pubmed.ncbi.nlm.nih.gov/29395708/",
+      "https://pubmed.ncbi.nlm.nih.gov/39760978/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "crioglobulinemia-e-vasculite-cardiovascular-pericardite-miocardite-e-vasculite-coronariana"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "dmtc-cardiovascular",
+    "name": "Doença Mista do Tecido Conjuntivo com Acometimento Cardiovascular",
+    "aliases": [
+      "DMTC",
+      "MCTD",
+      "síndrome de Sharp",
+      "doença mista do tecido conjuntivo",
+      "mixed connective tissue disease"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_overlap_autoimune",
+    "prevalence_rank": 111,
+    "completeness": "completo",
+    "summary": "Síndrome overlap autoimune que combina características de lúpus, esclerose sistêmica e polimiosite/dermatomiosite, definida obrigatoriamente por anticorpo anti-U1-RNP em título alto. Tem história natural de doença inicialmente mais branda que o lúpus isolado, cuja gravidade em longo prazo é determinada, sobretudo, pelo desenvolvimento de hipertensão arterial pulmonar (HAP) — a principal causa de morte na doença, com mecanismo semelhante ao da esclerose sistêmica. Pericardite é a manifestação cardíaca mais comum, geralmente subclínica; miocardite é menos frequente, mas descrita.",
+    "presentation": [
+      "Fenômeno de Raynaud (quase universal, frequentemente sintoma inicial)",
+      "Edema difuso de mãos",
+      "Artralgia/artrite não erosiva",
+      "Miosite leve a moderada",
+      "Esclerodactilia/acroesclerose em subgrupo com evolução para fenótipo esclerodérmico",
+      "Dispneia progressiva e sinais de IC direita quando há HAP estabelecida",
+      "Derrame pericárdico ou pericardite subclínica, frequentemente achado incidental",
+      "Doença pulmonar intersticial associada em parte dos casos"
+    ],
+    "differentials": [
+      "Lúpus eritematoso sistêmico isolado",
+      "Esclerose sistêmica isolada",
+      "Polimiosite/dermatomiosite isolada",
+      "Doença indiferenciada do tecido conjuntivo",
+      "Síndrome de overlap sem critério sorológico definidor",
+      "Síndrome de Sjögren primária com Raynaud"
+    ],
+    "tests": [
+      "FAN (padrão pontilhado grosso)",
+      "Anti-U1-RNP quantitativo/titulado",
+      "Ecocardiograma transtorácico anual para rastreio de HAP",
+      "NT-proBNP seriado",
+      "DLCO seriada",
+      "Cateterismo cardíaco direito para confirmação de HAP",
+      "Capilaroscopia periungueal",
+      "Provas de função pulmonar e TC de tórax de alta resolução se suspeita de DPI"
+    ],
+    "red_flags": [
+      "Dispneia progressiva ou síncope — suspeitar de HAP até prova em contrário",
+      "Sinais ecocardiográficos de sobrecarga de câmaras direitas",
+      "Elevação de NT-proBNP em paciente previamente estável",
+      "Pericardite de início recente (marcador de risco de HAP futura)",
+      "Dor torácica, arritmia nova ou disfunção ventricular sugestiva de miocardite"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico com anti-U1-RNP em título alto associado aos critérios clínicos",
+      "Iniciar rastreio anual de HAP com ecocardiograma, independentemente de sintomas",
+      "Complementar com DLCO seriada e NT-proBNP",
+      "Encaminhar para cateterismo direito diante de sinais sugestivos de HAP",
+      "Tratar atividade da doença de base com imunossupressão escalonada",
+      "Monitorar pericárdio em exames de rotina, mesmo assintomático"
+    ],
+    "emergency_flow": [
+      "Dispneia aguda com sinais de falência de VD: investigar HAP descompensada e afastar TEP concomitante",
+      "Suspeita de tamponamento: ecocardiograma à beira-leito e pericardiocentese se instabilidade",
+      "Suspeita de miocardite aguda: fluxo geral com suporte hemodinâmico e investigação etiológica"
+    ],
+    "tags": [
+      "DMTC",
+      "doença mista do tecido conjuntivo",
+      "hipertensão arterial pulmonar",
+      "anti-U1-RNP",
+      "pericardite",
+      "miocardite",
+      "síndrome overlap",
+      "esclerose sistêmica",
+      "fenômeno de Raynaud"
+    ],
+    "source_refs": [
+      "Sharp GC et al. Am J Med. 1972;52(2):148-159. PMID: 4621694",
+      "Hajas A et al. J Rheumatol. 2013;40(7):1134-1142. PMID: 23637328",
+      "Chaigne B et al. Rheumatology (Oxford). 2023;62(11):3596-3606. PMID: 36727465",
+      "Hassan AB et al. Clin Exp Rheumatol. 2023;41(11):2301-2311. PMID: 37497727",
+      "Ungprasert P et al. Int J Cardiol. 2014;171(3):326-330. PMID: 24433611",
+      "Cansu DÜ, Korkmaz C. Clin Rheumatol. 2023;42(10):2601-2610. PMID: 36396789"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/4621694/",
+      "https://pubmed.ncbi.nlm.nih.gov/23637328/",
+      "https://pubmed.ncbi.nlm.nih.gov/36727465/",
+      "https://pubmed.ncbi.nlm.nih.gov/37497727/",
+      "https://pubmed.ncbi.nlm.nih.gov/24433611/",
+      "https://pubmed.ncbi.nlm.nih.gov/36396789/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-mista-do-tecido-conjuntivo-e-acometimento-cardiovascular-hipertensao-arterial-pulmonar-pericardite-e-miocardite"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sjogren-cardiovascular",
+    "name": "Síndrome de Sjögren Primária com Acometimento Cardiovascular",
+    "aliases": [
+      "Sjögren e coração",
+      "acometimento cardiovascular na síndrome de Sjögren",
+      "disautonomia cardiovascular no Sjögren",
+      "pericardite no Sjögren",
+      "risco cardiovascular no Sjögren primária"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "manifestacao_cardiovascular_de_doenca_autoimune_sistemica",
+    "prevalence_rank": 112,
+    "completeness": "completo",
+    "summary": "A síndrome de Sjögren primária é doença autoimune sistêmica com infiltração linfocítica de glândulas exócrinas, mas com manifestações extraglandulares reconhecidas, entre elas cardiovasculares: disfunção autonômica cardiovascular (achado consistente em estudos de HRV, refletindo provável neuropatia de pequenas fibras), pericardite geralmente subclínica ou leve, risco aumentado de eventos ateroscleróticos mediado por inflamação crônica (magnitude menor que no LES e esclerose sistêmica), e vasculite de pequenos vasos (predominantemente crioglobulinêmica) que raramente acomete vasos cardíacos.",
+    "presentation": [
+      "Fadiga desproporcional, associada a disautonomia subclínica",
+      "Síncope, pré-síncope ou intolerância ortostática",
+      "Palpitações ou taquicardia postural com neuropatia periférica concomitante",
+      "Dor torácica pleurítica por pericardite, geralmente leve",
+      "Achado incidental de espessamento/derrame pericárdico em ecocardiograma de rotina",
+      "Dispneia progressiva e constrição pericárdica em casos raros",
+      "Evento cardiovascular aterosclerótico prematuro em paciente relativamente jovem",
+      "Púrpura palpável associada a crioglobulinemia, raramente com repercussão cardíaca"
+    ],
+    "differentials": [
+      "Lúpus eritematoso sistêmico com acometimento cardiovascular",
+      "Esclerose sistêmica com acometimento cardíaco",
+      "Artrite reumatoide com risco cardiovascular aumentado",
+      "Neuropatia autonômica cardíaca diabética",
+      "POTS pós-viral",
+      "Pericardite idiopática ou viral",
+      "Vasculite ANCA-associada primária",
+      "Amiloidose cardíaca"
+    ],
+    "tests": [
+      "Anti-Ro/SSA e anti-La/SSB",
+      "Biópsia de glândula salivar labial com escore de foco",
+      "Teste de Schirmer e escore de coloração ocular",
+      "ECG de repouso",
+      "Ecocardiograma transtorácico",
+      "Teste de função autonômica formal quando suspeita clínica",
+      "Provas inflamatórias e crioglobulinas quando suspeita de vasculite",
+      "Índice ESSDAI",
+      "Perfil de risco cardiovascular tradicional"
+    ],
+    "red_flags": [
+      "Dispneia progressiva com sinais de constrição pericárdica",
+      "Síncope recorrente inexplicada",
+      "Dor torácica sugestiva de SCA em paciente jovem com longa duração de doença",
+      "Púrpura palpável com sinais sistêmicos de vasculite ativa",
+      "Derrame pericárdico volumoso ou sinais de tamponamento",
+      "Déficit neurológico focal sugerindo AVC prematuro"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico pelos critérios ACR/EULAR 2016",
+      "Rastrear sintomas cardiovasculares dirigidos na consulta",
+      "Solicitar ECG e ecocardiograma quando sintomática ou com longa duração de doença/atividade persistente",
+      "Encaminhar para teste de função autonômica se suspeita de disautonomia",
+      "Tratar ativamente fatores de risco cardiovascular tradicionais",
+      "Manter hidroxicloroquina quando indicada, sem esperar proteção cardiovascular específica comprovada",
+      "Investigar crioglobulinemia diante de púrpura palpável",
+      "Encaminhar para reumatologia para terapia biológica em manifestações extraglandulares graves"
+    ],
+    "emergency_flow": [
+      "Dor torácica aguda: ECG e marcadores de necrose miocárdica imediatos",
+      "Dispneia com sinais de tamponamento/constrição: ecocardiograma urgente",
+      "Síncope: ECG, avaliação hemodinâmica postural e investigação de causas estruturais",
+      "Déficit neurológico focal agudo: protocolo padrão de AVC"
+    ],
+    "tags": [
+      "síndrome de Sjögren",
+      "doença autoimune sistêmica",
+      "disautonomia cardiovascular",
+      "pericardite",
+      "aterosclerose",
+      "vasculite de pequenos vasos",
+      "risco cardiovascular",
+      "anti-Ro/SSA",
+      "hidroxicloroquina"
+    ],
+    "source_refs": [
+      "Shiboski CH, Shiboski SC, Seror R, et al. 2016 ACR/EULAR Classification Criteria for Primary Sjögren's Syndrome. Arthritis Rheumatol. 2017;69(1):35-45. PMID: 27785888",
+      "Karakasis P, Patoulias D, Pamporis K, et al. Risk of subclinical atherosclerosis in primary Sjögren's syndrome. Eur J Intern Med. 2024;122:93-101. PMID: 37977997",
+      "Lai EC, Huang YC, Liao TC, Weng MY. Premature coronary artery disease in patients with immune-mediated inflammatory disease. RMD Open. 2022;8(1):e002014. PMID: 35064093",
+      "Gyöngyösi M, Pokorny G, Jambrik Z, et al. Cardiac manifestations in primary Sjögren's syndrome. Ann Rheum Dis. 1996;55(7):450-454. PMID: 8774163",
+      "Koh JH, Kwok SK, Lee J, Park SH. Autonomic dysfunction in primary Sjögren's syndrome. Korean J Intern Med. 2017. PMID: 27017389",
+      "Liu S, Li X, Yang Q, et al. Association between atherosclerosis and primary Sjögren's syndrome. Health Sci Rep. 2023. PMID: 37885467"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/27785888/",
+      "https://pubmed.ncbi.nlm.nih.gov/37977997/",
+      "https://pubmed.ncbi.nlm.nih.gov/35064093/",
+      "https://pubmed.ncbi.nlm.nih.gov/8774163/",
+      "https://pubmed.ncbi.nlm.nih.gov/27017389/",
+      "https://pubmed.ncbi.nlm.nih.gov/37885467/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "miopatia-inflamatoria-cardiovascular",
+    "name": "Acometimento cardiovascular na dermatomiosite e polimiosite (miopatias inflamatórias idiopáticas)",
+    "aliases": [
+      "miocardite em dermatomiosite",
+      "miocardite em polimiosite",
+      "cardiopatia nas miopatias inflamatórias idiopáticas",
+      "acometimento cardíaco na dermatopolimiosite"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_autoimune_sistemica_com_repercussao_cardiovascular",
+    "prevalence_rank": 113,
+    "completeness": "completo",
+    "summary": "Dermatomiosite e polimiosite, miopatias inflamatórias idiopáticas que acometem primariamente o músculo esquelético, podem afetar o coração pelo mesmo mecanismo autoimune. Miocardite subclínica é frequente em RM cardíaca com realce tardio e mapeamento T1/T2, mesmo sem sintomas. Inflamação sistêmica crônica acelera aterosclerose. Subgrupo mais grave evolui para miocardiopatia dilatada, IC manifesta ou distúrbios de condução (BAV). Armadilha diagnóstica: CK elevada pela miosite confunde CK-MB, e troponina T pode ter falsos-positivos por expressão ectópica em músculo esquelético regenerativo — troponina I é o biomarcador cardíaco preferencial.",
+    "presentation": [
+      "Fraqueza muscular proximal e/ou rash característico, com acometimento cardíaco frequentemente assintomático",
+      "Dispneia ou intolerância a esforço que pode ser confundida com fraqueza respiratória",
+      "Palpitações, síncope ou pré-síncope sugestivas de arritmia/distúrbio de condução",
+      "Sinais de IC em subgrupo minoritário mais grave",
+      "Bloqueio atrioventricular, por vezes como manifestação inicial precedendo o diagnóstico reumatológico",
+      "Elevação desproporcional de CK, CK-MB ou troponina T gerando dúvida sobre origem cardíaca vs. muscular esquelética"
+    ],
+    "differentials": [
+      "Miocardite viral ou de outra etiologia infecciosa",
+      "Miocardite por inibidor de checkpoint imunológico",
+      "Miopatia necrosante imunomediada (anti-HMGCR, anti-SRP)",
+      "Cardiotoxicidade por corticoterapia crônica em altas doses",
+      "Doença arterial coronariana aterosclerótica convencional",
+      "Miocardiopatia induzida por outras doenças autoimunes (lúpus, esclerose sistêmica, sarcoidose)",
+      "Distúrbio de condução de outra etiologia"
+    ],
+    "tests": [
+      "Eletrocardiograma basal e seriado",
+      "Ecocardiograma com strain longitudinal global/speckle-tracking",
+      "RM cardíaca com mapeamento T1/T2 e realce tardio",
+      "Troponina I (preferencial); cautela com CK-MB e troponina T na vigência de miosite ativa",
+      "Perfil lipídico, glicemia e avaliação de risco cardiovascular tradicional",
+      "Painel de autoanticorpos específicos de miosite",
+      "Biópsia muscular quando indicada"
+    ],
+    "red_flags": [
+      "BAV de alto grau ou síncope em paciente com miopatia inflamatória",
+      "IC aguda ou choque cardiogênico associado a rabdomiólise",
+      "Troponina I elevada desproporcionalmente à CK total",
+      "Arritmia ventricular sustentada",
+      "Dispneia progressiva sem explicação pela fraqueza respiratória isolada",
+      "Anti-MDA5 positivo com comprometimento sistêmico rapidamente progressivo"
+    ],
+    "ambulatory_flow": [
+      "Ao diagnóstico, solicitar ECG e ecocardiograma basais mesmo sem sintomas cardíacos",
+      "Dosar troponina I como biomarcador preferencial",
+      "Considerar RM cardíaca em pacientes com biomarcadores alterados, arritmia ou doença de alto risco (anti-MDA5, síndrome antissintetase)",
+      "Encaminhar a cardiologia diante de qualquer alteração cardíaca detectada",
+      "Reavaliar risco cardiovascular tradicional periodicamente",
+      "Ajustar imunossupressão em conjunto entre reumatologia e cardiologia diante de acometimento confirmado"
+    ],
+    "emergency_flow": [
+      "Síncope, dispneia aguda ou instabilidade: ECG imediato para rastrear BAV avançado ou arritmia",
+      "Dosar troponina I (não CK-MB isolada) diante de suspeita de SCA ou miocardite aguda",
+      "Ecocardiograma à beira-leito em instabilidade",
+      "BAV avançado sintomático: suporte para marca-passo temporário/definitivo",
+      "Suspeita de miocardite fulminante: internação com monitorização contínua e pulsoterapia com corticoide precoce",
+      "Investigar e tratar rabdomiólise concomitante"
+    ],
+    "tags": [
+      "dermatomiosite",
+      "polimiosite",
+      "miopatia inflamatoria idiopatica",
+      "miocardite subclinica",
+      "aterosclerose acelerada",
+      "bloqueio atrioventricular",
+      "troponina I",
+      "RM cardiaca",
+      "cardio-reumatologia"
+    ],
+    "source_refs": [
+      "Lundberg IE, et al. 2017 EULAR/ACR Classification Criteria for Adult and Juvenile Idiopathic Inflammatory Myopathies. Arthritis Rheumatol. 2017. PMID: 29106061",
+      "Fairley JL, et al. Defining cardiac involvement in idiopathic inflammatory myopathies. Rheumatology. 2021;61:103-120. PMID: 34273157",
+      "Fisher L, et al. Risk of atherosclerosis-related diseases in polymyositis and dermatomyositis patients. Atherosclerosis. 2025;401:119100. PMID: 39818113",
+      "Lilleker JB, et al. Using serum troponins to screen for cardiac involvement. Rheumatology. 2018;57:1041-1046. PMID: 29538753",
+      "Erlacher P, et al. Cardiac troponin and beta-type myosin heavy chain concentrations. Clin Chim Acta. 2001. PMID: 11282091",
+      "Kasser C, et al. Cardiovascular events in patients with myositis. RMD Open. 2025. PMID: 40081915"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29106061/",
+      "https://pubmed.ncbi.nlm.nih.gov/34273157/",
+      "https://pubmed.ncbi.nlm.nih.gov/39818113/",
+      "https://pubmed.ncbi.nlm.nih.gov/29538753/",
+      "https://pubmed.ncbi.nlm.nih.gov/11282091/",
+      "https://pubmed.ncbi.nlm.nih.gov/40081915/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "dermatomiosite-e-polimiosite-miocardite-subclinica-aterosclerose-acelerada-e-arritmias-cardiovasculares"
+    ],
+    "patient_material_slug": null
   }
 ]
