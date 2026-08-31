@@ -1,3 +1,9 @@
 /* Padroniza o símbolo aprovado no login sem alterar dimensões ou estrutura do shell. */
 img[src="/logo-marca.png"]{content:url("/corvia-mark-canonical.svg")}
 .cos-brand__mark img,.cos-topbar__mobile-brand img,.cos-drawer__head img{object-fit:contain}
+
+/* Cursos foi retirado do produto. Mantemos os endpoints legados apenas para
+   redirecionamento seguro em App.tsx; nenhum shell pode continuar oferecendo
+   esse destino como opção navegável, inclusive layouts antigos ainda montados
+   em rotas internas. */
+a[href="/cursos"],a[href^="/cursos/"]{display:none!important}
