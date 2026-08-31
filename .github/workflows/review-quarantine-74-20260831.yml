@@ -1,0 +1,57 @@
+name: Review quarantine 74 — sources available 2026-08-31
+
+on:
+  push:
+    branches:
+      - report/science-publication-readiness-20260831-30h
+    paths:
+      - .github/workflows/review-quarantine-74-20260831.yml
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    if: ${{ startsWith(github.event.head_commit.message, 'bootstrap: executar revisão final dos 74 itens') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Fetch scientific source branches
+        run: |
+          set -euo pipefail
+          git fetch origin +refs/heads/claude/science-scale-20k-20260904:refs/remotes/origin/claude/science-scale-20k-20260904
+          git fetch origin +refs/heads/main:refs/remotes/origin/main
+      - name: Review and resolve quarantine
+        run: |
+          set -euo pipefail
+          python scripts/review_quarantine_sources_20260831.py
+      - name: Canonical scientific gates
+        run: |
+          set -euo pipefail
+          git diff --check
+          python scripts/content_inventory.py --strict
+          python scripts/audit_tudo_com_tudo.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for p in [
+              'casos-clinicos/metadados.json','checklists/metadados.json','doencas/metadados.json',
+              'material-paciente/metadados.json','trilhas/metadados.json','estudos/metadados.json',
+              'evidencias/metadados.json','docs/RESOLUCAO-QUARENTENA-74-20260831.json'
+          ]:
+              json.loads(Path(p).read_text(encoding='utf-8'))
+          print('JSON parse: OK')
+          PY
+      - name: Commit reviewed publication candidate only
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/review-quarantine-74-20260831.yml
+          rm -f scripts/review_quarantine_sources_20260831.py
+          git config user.name corvia-science-review-bot
+          git config user.email actions@users.noreply.github.com
+          git add -A
+          git commit -m 'science: resolver quarentena de 74 itens com fontes disponíveis' || true
+          git push origin HEAD:report/science-publication-readiness-20260831-30h
