@@ -1,0 +1,394 @@
+/* CorVIA Cardiology Spaces — Gestão
+   Camada canônica teal para comunicação, integrações, conta, indicadores,
+   administração e páginas jurídicas autenticadas. Mantém cores semânticas
+   de risco/sucesso e preserva previews que precisam simular documentos reais. */
+
+body.corvia-space--gestao {
+  --gestao-accent: #37d8cf;
+  --gestao-rgb: 55, 216, 207;
+  --gestao-ink: #eafffd;
+  --gestao-muted: #9cc7c8;
+  --gestao-panel: rgba(8, 25, 31, 0.86);
+  --gestao-panel-strong: rgba(7, 19, 25, 0.95);
+  --gestao-border: rgba(var(--gestao-rgb), 0.24);
+  --gestao-border-strong: rgba(var(--gestao-rgb), 0.56);
+  --gestao-glow: 0 0 34px rgba(var(--gestao-rgb), 0.13);
+}
+
+body.corvia-space--gestao .conteudo :is(.pagina, main, article, section) {
+  min-width: 0;
+}
+
+body.corvia-space--gestao .conteudo :is(.cartao, .cai-panel, .cai-admin-summary > article, .indicador, .distribuicao, .admin-assinantes__filtros, .admin-assinantes__tabela-wrap) {
+  border-color: var(--gestao-border);
+}
+
+body.corvia-space--gestao .conteudo :is(.cartao, .cai-panel, .indicador, .distribuicao) {
+  background:
+    linear-gradient(145deg, rgba(var(--gestao-rgb), 0.055), transparent 42%),
+    var(--gestao-panel);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025), var(--gestao-glow);
+  backdrop-filter: blur(18px);
+}
+
+body.corvia-space--gestao .conteudo :is(.eyebrow, .cai-kicker, .dado) {
+  color: var(--gestao-muted);
+}
+
+body.corvia-space--gestao .conteudo :is(h1, h2, h3, strong) {
+  text-shadow: 0 0 20px rgba(var(--gestao-rgb), .06);
+}
+
+body.corvia-space--gestao .conteudo :is(input, select, textarea) {
+  background: rgba(4, 15, 20, .84);
+  border-color: rgba(var(--gestao-rgb), .22);
+  color: #edfdfc;
+}
+body.corvia-space--gestao .conteudo :is(input, select, textarea):focus {
+  border-color: var(--gestao-border-strong);
+  box-shadow: 0 0 0 3px rgba(var(--gestao-rgb), .10), 0 0 24px rgba(var(--gestao-rgb), .10);
+}
+
+/* --------------------------------------------------------------------------
+   CorVIA Mail — entrada/gestão da caixa
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao.corvia-route--mail .pagina {
+  position: relative;
+}
+body.corvia-space--gestao.corvia-route--mail .pagina::before {
+  content: "CARDIOLOGY SPACES · GESTÃO / COMUNICAÇÃO";
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 .8rem;
+  padding: .32rem .68rem;
+  border: 1px solid var(--gestao-border-strong);
+  border-radius: 999px;
+  background: rgba(var(--gestao-rgb), .08);
+  color: #8ff6ef;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+body.corvia-space--gestao.corvia-route--mail .pagina > .cartao {
+  border-left: 2px solid rgba(var(--gestao-rgb), .72);
+}
+
+/* --------------------------------------------------------------------------
+   Caixa profissional — workspace completo
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao .cmp-shell {
+  width: 100%;
+  min-height: min(76vh, 820px);
+  overflow: hidden;
+  border: 1px solid var(--gestao-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(var(--gestao-rgb), .11), transparent 32%),
+    linear-gradient(155deg, rgba(8, 28, 34, .98), rgba(2, 10, 15, .98));
+  box-shadow: 0 24px 70px rgba(0,0,0,.36), 0 0 42px rgba(var(--gestao-rgb), .11);
+}
+body.corvia-space--gestao .cmp-topbar {
+  border-bottom-color: var(--gestao-border);
+  background: rgba(4, 16, 21, .93);
+  backdrop-filter: blur(20px);
+}
+body.corvia-space--gestao .cmp-brand small,
+body.corvia-space--gestao .cmp-user small {
+  color: var(--gestao-muted);
+}
+body.corvia-space--gestao .cmp-workspace {
+  background: transparent;
+}
+body.corvia-space--gestao .cmp-sidebar {
+  background: rgba(4, 17, 22, .80);
+  border-right-color: var(--gestao-border);
+}
+body.corvia-space--gestao .cmp-compose-primary {
+  border: 1px solid rgba(var(--gestao-rgb), .52);
+  background: linear-gradient(135deg, rgba(var(--gestao-rgb), .30), rgba(var(--gestao-rgb), .12));
+  color: #edfffd;
+  box-shadow: 0 0 24px rgba(var(--gestao-rgb), .12);
+}
+body.corvia-space--gestao .cmp-sidebar__section > p,
+body.corvia-space--gestao .cmp-sidebar__privacy {
+  color: var(--gestao-muted);
+}
+body.corvia-space--gestao .cmp-sidebar__section button {
+  border-color: transparent;
+  color: #cce9e8;
+}
+body.corvia-space--gestao .cmp-sidebar__section button:hover,
+body.corvia-space--gestao .cmp-sidebar__section button.is-active {
+  border-color: rgba(var(--gestao-rgb), .28);
+  background: rgba(var(--gestao-rgb), .09);
+  color: #effffd;
+}
+body.corvia-space--gestao .cmp-list {
+  background: rgba(5, 18, 24, .68);
+  border-right-color: var(--gestao-border);
+}
+body.corvia-space--gestao .cmp-list__header,
+body.corvia-space--gestao .cmp-message {
+  border-bottom-color: rgba(var(--gestao-rgb), .13);
+}
+body.corvia-space--gestao .cmp-message:hover,
+body.corvia-space--gestao .cmp-message.is-active {
+  background: rgba(var(--gestao-rgb), .07);
+}
+body.corvia-space--gestao .cmp-reader {
+  background: rgba(5, 17, 22, .62);
+}
+body.corvia-space--gestao .cmp-reader.has-message {
+  box-shadow: inset 1px 0 0 rgba(var(--gestao-rgb), .10);
+}
+body.corvia-space--gestao .cmp-privacy {
+  border-color: rgba(var(--gestao-rgb), .20);
+  background: rgba(var(--gestao-rgb), .055);
+}
+body.corvia-space--gestao .cmp-alert:not(.cmp-alert--warn):not(.cmp-alert--error) {
+  border-color: var(--gestao-border);
+  background: rgba(var(--gestao-rgb), .06);
+}
+
+/* --------------------------------------------------------------------------
+   IA operacional / WhatsApp — cai-* sob Gestão
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao .cai-page {
+  --cai-accent: var(--gestao-accent);
+}
+body.corvia-space--gestao .cai-hero {
+  border: 1px solid var(--gestao-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 82% 14%, rgba(var(--gestao-rgb), .15), transparent 30%),
+    linear-gradient(145deg, rgba(var(--gestao-rgb), .08), rgba(5, 18, 24, .92));
+  box-shadow: var(--gestao-glow);
+}
+body.corvia-space--gestao .cai-hero__trust,
+body.corvia-space--gestao .cai-panel,
+body.corvia-space--gestao .cai-pending-reviews > article,
+body.corvia-space--gestao .cai-media-review-fields,
+body.corvia-space--gestao .cai-admin-summary > article {
+  border-color: var(--gestao-border);
+  background: rgba(5, 19, 25, .80);
+}
+body.corvia-space--gestao .cai-admin-summary > article > span:first-child {
+  color: var(--gestao-accent);
+  filter: drop-shadow(0 0 10px rgba(var(--gestao-rgb), .28));
+}
+body.corvia-space--gestao .cai-admin-summary > article strong {
+  color: #eafffd;
+}
+body.corvia-space--gestao .cai-model-table > div,
+body.corvia-space--gestao .cai-tabs,
+body.corvia-space--gestao .cai-tabs button,
+body.corvia-space--gestao .cai-pending-reviews > article {
+  border-color: rgba(var(--gestao-rgb), .16);
+}
+body.corvia-space--gestao .cai-tabs button[aria-selected="true"],
+body.corvia-space--gestao .cai-tabs button.is-active {
+  background: rgba(var(--gestao-rgb), .12);
+  color: #eafffd;
+  box-shadow: inset 0 -2px 0 var(--gestao-accent);
+}
+body.corvia-space--gestao .cai-review-text {
+  border-left-color: rgba(var(--gestao-rgb), .65);
+  background: rgba(var(--gestao-rgb), .055);
+}
+
+/* --------------------------------------------------------------------------
+   Indicadores
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao .indicadores__janela {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.2rem;
+}
+body.corvia-space--gestao .indicadores__janela .chip {
+  border-color: rgba(var(--gestao-rgb), .22);
+  background: rgba(var(--gestao-rgb), .045);
+  color: #b8d7d7;
+}
+body.corvia-space--gestao .indicadores__janela .chip--ativo {
+  border-color: var(--gestao-border-strong);
+  background: rgba(var(--gestao-rgb), .13);
+  color: #effffd;
+  box-shadow: 0 0 22px rgba(var(--gestao-rgb), .10);
+}
+body.corvia-space--gestao .indicadores__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: .8rem;
+}
+body.corvia-space--gestao .indicador {
+  min-height: 126px;
+  padding: 1rem;
+  border: 1px solid var(--gestao-border);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+body.corvia-space--gestao .indicador__valor {
+  color: #ebfffd;
+  font-size: clamp(1.35rem, 2.4vw, 2.15rem);
+  font-weight: 800;
+}
+body.corvia-space--gestao .indicador__rotulo,
+body.corvia-space--gestao .indicador__detalhe,
+body.corvia-space--gestao .distribuicao__nome {
+  color: var(--gestao-muted);
+}
+body.corvia-space--gestao .indicadores__distribuicoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: .8rem;
+  margin-top: .9rem;
+}
+body.corvia-space--gestao .distribuicao {
+  padding: 1rem;
+  border: 1px solid var(--gestao-border);
+  border-radius: 16px;
+}
+body.corvia-space--gestao .distribuicao__barra {
+  background: rgba(var(--gestao-rgb), .08);
+}
+body.corvia-space--gestao .distribuicao__barra > span {
+  background: linear-gradient(90deg, rgba(var(--gestao-rgb), .48), var(--gestao-accent));
+  box-shadow: 0 0 12px rgba(var(--gestao-rgb), .18);
+}
+
+/* --------------------------------------------------------------------------
+   Administração — assinantes, ficha e gerenciamento
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao .admin-assinantes__filtros {
+  border: 1px solid var(--gestao-border);
+  border-radius: 18px;
+  background: rgba(5, 19, 25, .80);
+  box-shadow: var(--gestao-glow);
+}
+body.corvia-space--gestao .admin-assinantes__campo label,
+body.corvia-space--gestao .admin-assinantes__resumo,
+body.corvia-space--gestao .admin-assinantes__sub {
+  color: var(--gestao-muted);
+}
+body.corvia-space--gestao .admin-assinantes__tabela-wrap {
+  overflow: auto;
+  border: 1px solid var(--gestao-border);
+  border-radius: 18px;
+  background: rgba(4, 16, 22, .82);
+  box-shadow: var(--gestao-glow);
+}
+body.corvia-space--gestao .admin-assinantes__tabela {
+  color: #dff6f4;
+}
+body.corvia-space--gestao .admin-assinantes__tabela th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: rgba(5, 22, 28, .97);
+  color: #9ed6d2;
+  border-bottom-color: rgba(var(--gestao-rgb), .22);
+}
+body.corvia-space--gestao .admin-assinantes__tabela td {
+  border-bottom-color: rgba(var(--gestao-rgb), .10);
+}
+body.corvia-space--gestao .admin-assinantes__linha:hover,
+body.corvia-space--gestao .admin-assinantes__linha:focus-visible {
+  background: rgba(var(--gestao-rgb), .065);
+  outline-color: rgba(var(--gestao-rgb), .48);
+}
+body.corvia-space--gestao .admin-assinantes__paginacao {
+  border-top-color: rgba(var(--gestao-rgb), .16);
+}
+body.corvia-space--gestao :is(.admin-ficha__campo, .admin-ficha__secao, .admin-ficha__abas, .admin-ficha__resumo) {
+  border-color: rgba(var(--gestao-rgb), .18);
+}
+body.corvia-space--gestao .admin-ficha__campo dt,
+body.corvia-space--gestao .admin-ficha__vazio {
+  color: var(--gestao-muted);
+}
+body.corvia-space--gestao .admin-visualizador {
+  background: rgba(1, 8, 12, .92);
+  backdrop-filter: blur(18px);
+}
+body.corvia-space--gestao .admin-visualizador > div,
+body.corvia-space--gestao .admin-visualizador__painel {
+  border-color: var(--gestao-border);
+  background: rgba(5, 18, 24, .98);
+  box-shadow: 0 28px 90px rgba(0,0,0,.52), 0 0 42px rgba(var(--gestao-rgb), .12);
+}
+
+/* Receitas para assinatura — mantém a semântica de fila, mas assume Gestão. */
+body.corvia-space--gestao.corvia-route--admin .conteudo > .cartao,
+body.corvia-space--gestao.corvia-route--admin .conteudo .cartao {
+  border-color: var(--gestao-border);
+}
+
+/* --------------------------------------------------------------------------
+   Páginas jurídicas autenticadas — leitura longa sem voltar ao visual antigo
+   -------------------------------------------------------------------------- */
+body.corvia-space--gestao .legal-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 1.6rem);
+  color: #d7eeee;
+  background: transparent;
+}
+body.corvia-space--gestao .legal-page > header,
+body.corvia-space--gestao .legal-page > section,
+body.corvia-space--gestao .legal-page > footer {
+  border: 1px solid var(--gestao-border);
+  background:
+    linear-gradient(145deg, rgba(var(--gestao-rgb), .045), transparent 44%),
+    rgba(5, 18, 24, .82);
+  box-shadow: var(--gestao-glow);
+}
+body.corvia-space--gestao .legal-page > header {
+  border-radius: 20px 20px 12px 12px;
+}
+body.corvia-space--gestao .legal-page > section {
+  border-radius: 14px;
+}
+body.corvia-space--gestao .legal-page > footer {
+  border-radius: 12px 12px 20px 20px;
+}
+body.corvia-space--gestao .legal-page :is(h1, h2, h3) {
+  color: #effffd;
+}
+body.corvia-space--gestao .legal-page :is(p, li) {
+  color: #c4dddd;
+}
+body.corvia-space--gestao .legal-page a:not(.botao) {
+  color: #8cf3ed;
+}
+body.corvia-space--gestao .legal-page header img {
+  filter: drop-shadow(0 0 14px rgba(var(--gestao-rgb), .13));
+}
+
+/* Preview de assinatura/e-mail: deve continuar representando o arquivo real. */
+body.corvia-space--gestao #dados-pessoais + .cartao [style*="background: rgb(255"],
+body.corvia-space--gestao .cartao [style*="background: #fff"],
+body.corvia-space--gestao .cartao [style*="background:#fff"] {
+  color-scheme: light;
+}
+
+@media (max-width: 900px) {
+  body.corvia-space--gestao .cmp-shell {
+    border-radius: 16px;
+    min-height: auto;
+  }
+  body.corvia-space--gestao .cmp-workspace {
+    grid-template-columns: 1fr;
+  }
+  body.corvia-space--gestao .cmp-sidebar,
+  body.corvia-space--gestao .cmp-list,
+  body.corvia-space--gestao .cmp-reader {
+    border-right: 0;
+    border-bottom: 1px solid var(--gestao-border);
+  }
+  body.corvia-space--gestao .admin-assinantes__tabela-wrap {
+    border-radius: 14px;
+  }
+}
