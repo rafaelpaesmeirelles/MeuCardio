@@ -377,6 +377,11 @@ export default function CardiologySpacesHome() {
   const allActions = useMemo(() => CATALOG.flatMap((section) => section.actions).filter((action) => !action.adminOnly || usuario?.role === "admin"), [usuario?.role]);
   const essentials = essentialPaths.map((path) => allActions.find((action) => action.to === path)).filter((action): action is Action => Boolean(action));
   const day = dayTargets.slice(0, 3);
+  const railActions = Array.from(new Map(
+    [...activeSpace.now, ...activeSpace.next]
+      .filter((action) => !action.adminOnly || usuario?.role === "admin")
+      .map((action) => [action.to, action]),
+  ).values()).slice(0, 5);
 
   function chooseMode(nextMode: Mode) {
     sessionStorage.setItem(MODE_KEY, nextMode);
@@ -438,16 +443,16 @@ export default function CardiologySpacesHome() {
         <Link to="/minha-conta" className="spaces-user"><Icone nome="conta" /> {nomeComTratamento(usuario, true)} <Icone nome="chevron" /></Link>
       </header>
 
-      <aside className="spaces-rail" aria-label="Meus espaços">
-        <span>{mode === "scientific" ? <>JORNADAS<br />CIENTÍFICAS</> : <>MEUS<br />ESPAÇOS</>}</span>
-        {availableSpaces.map((space) => <button key={space.id} className={activeSpace.id === space.id ? "is-active" : ""} onMouseEnter={() => setPreviewSpace(space.id)} onMouseLeave={() => setPreviewSpace(null)} onFocus={() => setPreviewSpace(space.id)} onBlur={() => setPreviewSpace(null)} onClick={() => { setSelectedSpace(space.id); setPreviewSpace(null); }} aria-label={space.label} aria-pressed={selectedSpace === space.id}><Icone nome={space.icon} /><i data-tone={space.tone} /></button>)}
-        {mode === "essential" && <button className="spaces-rail__personalize" onClick={() => setPersonalizerOpen(true)} aria-label="Personalizar essencial"><Icone nome="configuracao" /></button>}
+      <aside className="spaces-rail spaces-rail--context" aria-label={`Atalhos de ${activeSpace.label}`}>
+        <span>{activeSpace.label.toLocaleUpperCase("pt-BR")}<br />ATALHOS</span>
+        {railActions.map((action) => <Link key={`rail-${activeSpace.id}-${action.to}`} to={action.to} data-label={action.label} aria-label={`${action.label} — ${activeSpace.label}`}><Icone nome={action.icon} /><i /></Link>)}
+        {mode === "essential" && <button className="spaces-rail__personalize" onClick={() => setPersonalizerOpen(true)} aria-label="Personalizar essencial" data-label="Personalizar"><Icone nome="configuracao" /></button>}
       </aside>
 
       <section className="spaces-workspace">
         <header className="spaces-workspace__greeting">
           <p>{new Date().getHours() < 12 ? "Bom dia" : new Date().getHours() < 18 ? "Boa tarde" : "Boa noite"}, <strong>{nomeComTratamento(usuario, true)}</strong>.</p>
-          <h1>{mode === "scientific" ? "Como você quer explorar o conhecimento agora?" : "Onde você vai trabalhar agora?"}</h1>
+          <h1>{mode === "scientific" ? `Como ${nomeComTratamento(usuario, true)} quer explorar o conhecimento agora?` : `Onde ${nomeComTratamento(usuario, true)} vai trabalhar agora?`}</h1>
           <span>{mode === "scientific" ? "Escolha uma jornada. Todo o conteúdo científico, a aprendizagem e o ensino permanecem conectados." : "Escolha um ambiente. As funções e prioridades se reorganizam para a sua rotina."}</span>
         </header>
         <div className="spaces-doors" onMouseLeave={() => setPreviewSpace(null)}>
