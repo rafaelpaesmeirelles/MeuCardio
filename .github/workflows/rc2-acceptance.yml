@@ -149,6 +149,7 @@ jobs:
         working-directory: frontend
         run: |
           npm ci
+          npm run test:scientific-environment-contract
           npm run build
 
       - name: Serve production build
@@ -224,6 +225,7 @@ jobs:
             const page = await context.newPage();
             page.on('pageerror', (e) => report.pageErrors.push(`${page.url()} :: ${String(e)}`));
             await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
+            await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v2', 'seen'));
             await page.locator('#email').fill('rc2-acceptance@teste.local');
             await page.locator('#senha').fill('rc2-acceptance-seguro-123');
             await page.locator('button[type="submit"]').click();
@@ -239,6 +241,16 @@ jobs:
               await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
             }
             await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
+          }
+
+          async function selectScientificMode(page) {
+            const choice = page.locator('.spaces-choice');
+            if (await choice.isVisible().catch(() => false)) {
+              await page.locator('.spaces-choice__cards button', { hasText: 'Ciência & Ensino' }).click();
+            } else {
+              await page.locator('.spaces-home__topbar nav button', { hasText: 'Ciência & Ensino' }).click();
+            }
+            await page.locator('.spaces-home--scientific').waitFor({ state: 'visible', timeout: 10000 });
           }
 
           async function requestJson(page, url, options = {}) {
@@ -307,6 +319,12 @@ jobs:
 
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await page.screenshot({ path: path.join(out, 'desktop-home.png'), fullPage: false });
+            await selectScientificMode(page);
+            const scientificJourneys = await page.locator('.spaces-door > span').allTextContents();
+            const expectedJourneys = ['Descobrir', 'Evidências', 'Aprender', 'Ensinar', 'Produzir'];
+            if (JSON.stringify(scientificJourneys) !== JSON.stringify(expectedJourneys)) fail(`desktop/ciência jornadas divergentes: ${JSON.stringify(scientificJourneys)}`);
+            await page.screenshot({ path: path.join(out, 'desktop-scientific-learning-environment.png'), fullPage: false });
+            await page.locator('.spaces-home__topbar nav button', { hasText: 'Completo' }).click();
 
             const drugResponse = await requestJson(page, '/api/drugs');
             const drugs = Array.isArray(drugResponse.body) ? drugResponse.body : [];
@@ -357,6 +375,14 @@ jobs:
             const labels = await mobile.page.locator('.spaces-dock > * span').allTextContents();
             const expected = ['Prescrever', 'Solicitar exames', 'Prontuário', 'Documentos', 'Tudo com Tudo', 'Todas as funções'];
             if (JSON.stringify(labels) !== JSON.stringify(expected)) fail(`mobile/dock divergente: ${JSON.stringify(labels)}`);
+            await selectScientificMode(mobile.page);
+            const mobileScientific = await mobile.page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
+            if (mobileScientific.scrollWidth > mobileScientific.width + 16) fail(`mobile/ciência: overflow horizontal ${mobileScientific.scrollWidth} > ${mobileScientific.width}`);
+            const scientificDock = await mobile.page.locator('.spaces-dock > * span').allTextContents();
+            const expectedScientificDock = ['Tudo com Tudo', 'Biblioteca', 'Evidências', 'Trilhas', 'Cursos', 'Documento IA', 'Todas as funções'];
+            if (JSON.stringify(scientificDock) !== JSON.stringify(expectedScientificDock)) fail(`mobile/ciência dock divergente: ${JSON.stringify(scientificDock)}`);
+            await mobile.page.screenshot({ path: path.join(out, 'mobile-scientific-learning-environment.png'), fullPage: false });
+            await mobile.page.locator('.spaces-home__topbar nav button', { hasText: 'Completo' }).click();
 
             if (selected?.slug) {
               await mobile.page.goto(`${base}/exportar?tipo=medicamento&slug=${encodeURIComponent(selected.slug)}`, { waitUntil: 'networkidle' });
