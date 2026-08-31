@@ -1108,3 +1108,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 83 (9 descartados por colisão) | 117 |
 | **Total** | **4.900** | **277** | **4.623** |
+
+## Lote 54 — concluído (commit 6e77d6b6)
+
+- **7 documentos** (micoses/bactérias oportunistas raras e infecções congênitas/crônicas de imunossupressão): nocardiose disseminada (pericardite e abscesso miocárdico no imunossuprimido, achado de transparência científica de que não há relato indexado de abscesso miocárdico verdadeiro, apenas pericárdico — `content/Geral`), sífilis congênita (transmissão transplacentária e acometimento cardiovascular mecanisticamente distinto da aortite terciária do adulto — `content/Cardiologia_pediátrica`), blastomicose (pericardite rara na micose endêmica norte-americana, com esclarecimento explícito da confusão histórica de nomenclatura com a paracoccidioidomicose brasileira — `content/Geral`), aspergilose invasiva cardíaca (endocardite/pericardite/miocardite, aprofundando o que o documento geral de endocardite fúngica apenas menciona, com achado de que endocardite associada a cuidados de saúde/prótese valvar supera neutropenia como fator de risco na maior série publicada — `content/Endocardite`), toxoplasmose congênita (documento irmão do já publicado sobre toxoplasmose aguda em imunocompetentes, miocardite sustentada por apenas 2 relatos de caso antigos — `content/Cardiologia_pediátrica`), mucormicose cardiovascular (mecanismo molecular CotH3-GRP78, incluindo registro honesto do resultado negativo do ensaio DEFEAT Mucor — `content/Geral`), cardiomiopatia associada ao HIV (contraste entre o fenótipo dilatado clássico da era pré-TARV e a doença cardiovascular acelerada da era moderna, incluindo o ensaio REPRIEVE — `content/Geral`).
+- **doencas**: +7, pareadas 1:1 — `nocardiose-cardiovascular-pericardite-e-abscesso-miocardico`, `sifilis-congenita`, `pericardite-blastomicotica`, `aspergilose-cardiaca-invasiva`, `toxoplasmose-congenita-com-acometimento-cardiovascular`, `mucormicose-invasiva`, `cardiomiopatia-e-doenca-cardiovascular-associada-ao-hiv`. `prevalence_rank` 88-94 (area=geral).
+- **Zero colisões neste lote**: todos os 7 tópicos despachados eram genuinamente inéditos — confirmado por checagem programática contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/*.json` e `doencas/correcoes/*.json` no worktree ao vivo da branch antes da integração.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;` `&amp;`) em 2 dos 7 documentos (toxoplasmose congênita, cardiomiopatia HIV), corrigidas antes do commit.
+- **Verificação de links**: todos os 39 links de "Tudo com Tudo" (7 documentos, 4-6 links cada) resolvidos contra o índice completo de slugs conhecidos (content + manifesto de doenças); um falso positivo do script de checagem (aspas na linha `slug:` do front-matter de parvovírus B19) investigado e descartado manualmente — o arquivo de destino existe e o link está correto.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.478 itens.
+
+### Status consolidado (após Lote 54)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 96 | 2.304 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 90 (9 descartados por colisão) | 110 |
+| **Total** | **4.900** | **284** | **4.616** |
