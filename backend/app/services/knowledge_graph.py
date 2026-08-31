@@ -61,6 +61,8 @@ from app.services.topic_relevance import (
 )
 
 # Rota pública de cada tipo de entidade — usada para montar o `href` na API.
+_TOPICOS_AMPLOS_SEM_EXPANSAO = frozenset({"Geral", "Farmacologia"})
+
 ROTA_LISTA_POR_TIPO = {
     "documento": "/biblioteca",
     "fluxograma": "/fluxogramas",
@@ -1623,7 +1625,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 def relacionados_de(
     db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
-    incluir_contexto_tematico: bool = True,
+    incluir_contexto_tematico: bool = False,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
 
@@ -1695,9 +1697,11 @@ def relacionados_de(
         for relacao, outro in list(saida) + list(entrada)
         if relacao.relation_type == "belongs_to_topic"
         and outro.entity_type == "tema"
-        # A página de medicamento nunca expande o catch-all Farmacologia:
-        # apenas contextos sustentados pelas indicações do próprio fármaco.
-        and not (origem.entity_type == "medicamento" and outro.title == "Farmacologia")
+        # Coleções amplas são catálogo, não evidência de relação clínica.
+        # Mesmo quando a expansão é solicitada, Geral e Farmacologia nunca
+        # projetam todos os seus membros sobre o assunto ativo.
+        and outro.title not in _TOPICOS_AMPLOS_SEM_EXPANSAO
+        and relacao.relevance_score >= 0.5
     }
     vizinhos_de_tema: list[tuple[KnowledgeRelation, KnowledgeEntity]] = []
     if topicos and incluir_contexto_tematico:
@@ -1711,6 +1715,7 @@ def relacionados_de(
                 KnowledgeRelation.target_entity_id.in_(topicos),
                 KnowledgeRelation.relation_type == "belongs_to_topic",
                 KnowledgeRelation.review_status != "rejeitado",
+                KnowledgeRelation.relevance_score >= 0.5,
                 KnowledgeEntity.status == "ativo",
                 KnowledgeEntity.entity_type != "tema",
                 KnowledgeEntity.id != origem.id,
