@@ -123,7 +123,7 @@ const MODULOS: ModuloGrupo[] = [
   {
     title: "Administração & Conta", tone: "slate", icon: "gestao", items: [
       { to: "/minha-conta", label: "Minha Conta", icon: "conta" },
-      { to: "/tour?origem=assinatura&modo=quick", label: "Tour CorVIA", icon: "check" },
+      { to: "/tour?retorno=/minha-conta", label: "Tour CorVIA", icon: "check" },
       { to: "/tour", label: "Tour da plataforma", icon: "curso" },
       { to: "/privacidade", label: "Segurança & Privacidade", icon: "check" },
       { to: "/termos", label: "Termos de uso", icon: "documento" },
