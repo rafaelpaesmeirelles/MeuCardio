@@ -951,3 +951,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 40 (3 descartados por colisão) | 160 |
 | **Total** | **4.900** | **191** | **4.709** |
+
+## Lote 47 — concluído (commit 03e8d6b7)
+
+- **7 documentos** (tóxico/infeccioso/parasitário): saturnismo ocupacional brasileiro (mecanismo da hipertensão por chumbo, controvérsia TACT/TACT2 — `content/Hipertensão`), toxoplasmose aguda e miocardite em imunocompetentes (surto de Santa Isabel do Ivaí/PR como contexto — `content/Geral`), coqueluche maligna no lactente (hiperleucocitose, hipertensão pulmonar refratária como mecanismo dominante de óbito — `content/Cardiologia_pediátrica`), miocardite sarampionosa (efeito viral + amnésia imunológica calibrada com precisão — `content/Geral`), intoxicação por tetrodotoxina/baiacu (bloqueio de canal de sódio — `content/Terapia_intensiva`), cisticercose cardíaca (achado incidental na neurocisticercose — `content/Geral`), pericardite histoplásmica (mecanismo inflamatório vs. invasão fúngica — `content/Geral`).
+- **doencas**: +7, pareadas 1:1 — `saturnismo-cardiovascular`, `miocardite-por-toxoplasmose-aguda-em-imunocompetente`, `coqueluche-maligna-do-lactente`, `miocardite-associada-ao-sarampo`, `intoxicacao-por-tetrodotoxina`, `cisticercose-cardiaca`, `pericardite-histoplasmica`.
+- **Colisão real tratada por reformulação, não descarte**: o agente de saturnismo identificou overlap substancial com documento já publicado (`exposicao-ao-chumbo-e-risco-cardiovascular`, mesmas fontes Lanphear/AHA, mesmos exemplos brasileiros — Vale do Ribeira, Santo Amaro, reciclagem de baterias). Em vez de descartar ou publicar quase-duplicata, reescrevi o documento como recorte estreito e complementar (mecanismo detalhado, exposição ocupacional específica com fonte brasileira própria — Gomes et al. 2023 —, HRV ocupacional, e a controvérsia TACT/TACT2 resolvida pelo ensaio neutro de 2024), com link cruzado explícito ao documento original logo na abertura.
+- **Rigor mantido sob pressão de "achar uma frequência"**: em pelo menos 3 dos 7 documentos (coqueluche/miocardite, sarampo/amnésia imunológica, cisticercose cardíaca), os agentes calibraram explicitamente o que a literatura primária estabelece versus o que é hipótese mecanística plausível sem estudo dedicado — por exemplo, as séries de autópsia de coqueluche maligna descrevem falência cardiovascular secundária à hipertensão pulmonar, não miocardite histologicamente confirmada, e isso foi mantido como tal em vez de simplificado.
+- **Correções na integração**: 1 slug de doença renomeado (saturnismo, idêntico ao slug do documento original antes da reformulação). `prevalence_rank` recalculado ao vivo (geral: 46-51, cardiopediatria: 45). Entidades HTML corrigidas em 4 documentos.
+- **Nenhuma mensagem de agente truncada neste lote** — os 7 agentes entregaram os dois blocos completos já na primeira notificação, rompendo o padrão dos Lotes 44-46.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.392 itens.
+
+### Status consolidado (após Lote 47)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 53 | 2.347 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 47 (3 descartados por colisão) | 153 |
+| **Total** | **4.900** | **205** | **4.695** |
