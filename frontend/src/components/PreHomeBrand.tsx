@@ -19,10 +19,11 @@ type Props = {
 };
 
 const PILARES: Array<{ icon: NomeIcone; title: string; detail: string }> = [
-  { icon: "assistente", title: "Inteligência Artificial", detail: "Contexto clínico" },
-  { icon: "evidencia", title: "Evidências atualizadas", detail: "Fontes rastreáveis" },
-  { icon: "sincronizar", title: "Tudo com Tudo", detail: "Conhecimento conectado" },
-  { icon: "check", title: "Segurança e Privacidade", detail: "Proteção por padrão" },
+  { icon: "conta", title: "Consultório", detail: "Rotina clínica" },
+  { icon: "emergencia", title: "Hospital", detail: "Cuidado hospitalar" },
+  { icon: "curso", title: "Ensino", detail: "Aprender e ensinar" },
+  { icon: "evidencia", title: "Pesquisa", detail: "Ciência rastreável" },
+  { icon: "gestao", title: "Gestão", detail: "Prática conectada" },
 ];
 
 export function CoracaoHolografico() {
