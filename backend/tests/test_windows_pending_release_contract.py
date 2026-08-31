@@ -19,13 +19,10 @@ def test_windows_is_pending_without_public_login_link():
 
 def test_windows_download_routes_are_explicitly_unavailable():
     caddy = _read("infra/Caddyfile")
-    matcher = re.search(
-        r"@windows_pending path (?P<paths>.*?)"
-        r"handle @windows_pending \\{(?P<body>.*?)\\n\\t\\}",
-        caddy,
-        re.DOTALL,
-    )
-    assert matcher is not None
+    start = caddy.index("@windows_pending path")
+    end = caddy.index("# Hash de conteúdo")
+    pending = caddy[start:end]
+    assert "handle @windows_pending {" in pending
     for path in (
         "/downloads/corvia-os-windows.zip",
         "/downloads/corvia-os-windows.exe",
@@ -33,11 +30,8 @@ def test_windows_download_routes_are_explicitly_unavailable():
         "/downloads/corvia-cardiology-spaces-windows-1.2.0.exe",
         "/downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256",
     ):
-        assert path in matcher.group("paths")
-    assert 'respond "Aplicativo Windows em preparação" 410' in matcher.group("body")
-    assert caddy.index("handle @windows_pending") < caddy.index(
-        "# Hash de conteúdo"
-    )
+        assert path in pending
+    assert pending.count('respond "Aplicativo Windows em preparação" 410') == 1
 
 
 def test_automatic_release_requires_web_android_but_not_windows_installer():
