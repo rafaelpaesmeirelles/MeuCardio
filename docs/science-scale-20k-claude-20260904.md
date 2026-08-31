@@ -1281,3 +1281,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 126 (18 descartados por colisão) | 74 |
 | **Total** | **4.900** | **326** | **4.574** |
+
+## Lote 62 — concluído (commit cba2355c)
+
+- **5 documentos** (tumores cardíacos raros/hereditários e cardiotoxicidade de imunoterapia mais antiga): complexo de Carney (síndrome multiendócrina PRKAR1A, 17q24, ativação constitutiva da via cAMP-PKA; mixoma cardíaco familiar/recorrente — cerca de 7% de todos os mixomas cardíacos — exigindo seguimento ecocardiográfico vitalício, explicitamente distinto do mixoma esporádico do adulto; lentiginose cutânea, PPNAD, tumor de Sertoli, acromegalia, schwannoma melanótico psamomatoso — `content/Cardiomiopatias`), paraganglioma cardíaco primário (tumor neuroendócrino nascido na base do coração, não no miocárdio; distinção conceitual explícita da miocardiopatia catecolaminérgica já coberta — efeito hormonal à distância versus massa estrutural intracardíaca; na maior série de tumores cardíacos primários publicada (212 casos), apenas 1 paraganglioma; localização intracardíaca e metástase como únicos preditores independentes de desfecho — `content/Cardiomiopatias`), cardiotoxicidade por interleucina-2 em alta dose (síndrome de extravasamento capilar sistêmico mediada por eNOS; padrão hemodinâmico paradoxal — hipovolemia intravascular efetiva com sobrecarga hídrica corporal total — que contraindica reposição volêmica agressiva isolada; dopamina precoce em baixa dose como estratégia validada em bula — `content/Cardio-oncologia`), cardiotoxicidade por interferon (arritmia, cardiomiopatia dilatada tipicamente reversível — com exceção documentada em paciente com exposição prévia a doxorrubicina —, e isquemia miocárdica rara; ausência de relação dose-toxicidade já notada na série clássica de 1991, achado que limita qualquer estratégia de vigilância por limiar de dose cumulativa — `content/Cardio-oncologia`), teratoma intrapericárdico fetal/pediátrico (origem na base do coração aderido à raiz aórtica/pulmonar; mecanismo compressivo — não elétrico/obstrutivo como no rabdomioma — causando derrame pericárdico e hidropsia fetal não imune; mortalidade de 25,5% no grupo com diagnóstico e repercussão intraútero versus 0% no grupo diagnosticado apenas após o nascimento, em revisão sistemática de 61 casos — `content/Cardiologia_pediátrica`).
+- **doencas**: +5, pareadas 1:1 — `complexo-de-carney`, `paraganglioma-cardiaco-primario`, `cardiotoxicidade-por-interleucina-2`, `cardiotoxicidade-por-interferon`, `teratoma-cardiaco-pericardico-fetal`. `prevalence_rank` 131-135 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — todos os 5 tópicos despachados confirmaram gap genuíno após checagem cruzada contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/` e `doencas/correcoes/`, com atenção específica para não sobrepor o documento existente de "massas cardíacas e pericárdicas" (Carney e paraganglioma como aprofundamentos sindrômicos/entidades distintas, não redundância) e o documento existente de "miocardiopatia catecolaminérgica por feocromocitoma/paraganglioma" (paraganglioma cardíaco primário como entidade estrutural anatomicamente distinta do efeito hormonal à distância).
+- **Correção de processo registrada**: dois agentes (Carney e teratoma) escreveram arquivos diretamente no worktree apesar da instrução de não commitar/checkout — um arquivo temporário na raiz do worktree (`_doc_complexo_de_carney.md`, removido antes do commit) e uma versão incompleta de 86 linhas do documento de teratoma salva prematuramente em `content/Cardiologia_pediátrica/` (sobrescrita pela versão completa extraída do relatório final do agente durante a integração normal). Nenhum dos dois chegou a ser commitado ou a poluir o histórico.
+- **Correções na integração**: entidades HTML residuais (`&amp;` `&lt;` `&gt;`) em 2 dos 5 documentos (interferon, IL-2), corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.560 itens.
+
+### Status consolidado (após Lote 62)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 137 | 2.263 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 131 (18 descartados por colisão) | 69 |
+| **Total** | **4.900** | **331** | **4.569** |
