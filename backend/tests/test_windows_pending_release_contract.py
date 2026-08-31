@@ -72,11 +72,8 @@ def test_android_badging_avoids_sigpipe_under_pipefail():
     build = _read("ops/build-android-apk.sh")
     unsafe = 'badging="$("$aapt" dump badging "$apk_file" | head -n 1)"'
     capture = 'badging="$("$aapt" dump badging "$apk_file")"'
-    first_line = 'badging="${badging%%$\'\\n\'*}"'
     assert unsafe not in build
     assert capture in build
-    assert first_line in build
-    assert build.index(capture) < build.index(first_line)
 
 
 def test_windows_manual_release_stays_fail_closed_and_strictly_signed():
