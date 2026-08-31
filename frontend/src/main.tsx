@@ -79,6 +79,7 @@ import "./styles/clinical-ai-spaces.css";
    mesmo universo aprovado, sem reescrever cada domínio com uma linguagem
    paralela. O contraste de controles permanece a última camada de segurança. */
 import "./styles/cardiology-spaces-interior-approved.css";
+import "./styles/cardiology-spaces-route-tones.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
