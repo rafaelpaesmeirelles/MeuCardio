@@ -1,45 +1,61 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 umask 027
-
-readonly PROJECT_DIR="/opt/meucardio"
+readonly PROJECT_DIR="${CORVIA_PROJECT_DIR:-/opt/meucardio}"
 readonly EXPECTED_SHA="${1:-}"
+readonly OUTPUT_DIR="${2:-$PROJECT_DIR/downloads}"
+readonly EXPECTED_CERT_ARGUMENT="${3:-}"
 readonly NODE_IMAGE="node:22-bookworm-slim"
 readonly FRONTEND_DIR="$PROJECT_DIR/frontend"
 readonly ANDROID_DIR="$FRONTEND_DIR/android"
-readonly DOWNLOAD_DIR="$PROJECT_DIR/downloads"
+readonly APK_NAME="corvia-cardiology-spaces-android-1.2.0.apk"
+readonly EXPECTED_APP_ID="br.med.corvia"
+readonly EXPECTED_VERSION_NAME="1.2.0"
+readonly EXPECTED_VERSION_CODE="4"
+
+die() { printf 'Android release validation failed: %s\n' "$1" >&2; exit 65; }
+find_android_tool() {
+  local name="$1" sdk_root candidate
+  if command -v "$name" >/dev/null 2>&1; then command -v "$name"; return 0; fi
+  sdk_root="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/opt/android-sdk}}"
+  candidate="$(find "$sdk_root/build-tools" -type f -name "$name" -perm -u+x 2>/dev/null | sort -V | tail -n 1)"
+  [[ -n "$candidate" ]] || return 1; printf '%s\n' "$candidate"
+}
 
 [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Expected a 40-character SHA." >&2; exit 64; }
-[[ "$(git -C "$PROJECT_DIR" rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || {
-  echo "Checkout SHA mismatch while building Android APK." >&2
-  exit 65
-}
-[[ -f "$ANDROID_DIR/keystore.properties" ]] || { echo "android/keystore.properties is missing." >&2; exit 65; }
-[[ -x "$ANDROID_DIR/gradlew" ]] || { echo "android/gradlew is unavailable." >&2; exit 65; }
-command -v docker >/dev/null || { echo "docker is unavailable." >&2; exit 65; }
+[[ "$(git -C "$PROJECT_DIR" rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || die "checkout SHA mismatch"
+[[ -f "$ANDROID_DIR/keystore.properties" ]] || die "android/keystore.properties is missing"
+[[ -x "$ANDROID_DIR/gradlew" ]] || die "android/gradlew is unavailable"
+command -v docker >/dev/null || die "docker is unavailable"
+if [[ -f "$PROJECT_DIR/.env" ]]; then set -a; source "$PROJECT_DIR/.env"; set +a; fi
+expected_cert="${EXPECTED_CERT_ARGUMENT:-${CORVIA_ANDROID_CERT_SHA256:-}}"
+expected_cert="$(printf '%s' "$expected_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
+[[ "$expected_cert" =~ ^[0-9a-f]{64}$ ]] || die "pinned Android release certificate SHA-256 missing or invalid"
 
-printf 'Synchronizing Capacitor with isolated Node 22 image %s.\n' "$NODE_IMAGE"
-docker run --rm --pull=missing \
-  -v "$FRONTEND_DIR:/workspace" \
-  -w /workspace \
-  "$NODE_IMAGE" \
-  bash -lc 'set -euo pipefail; node --version; npm --version; npm ci; npx cap sync android'
-
+docker run --rm --pull=missing -v "$FRONTEND_DIR:/workspace" -w /workspace "$NODE_IMAGE" \
+  bash -lc 'set -euo pipefail; npm ci; npx cap sync android'
 cd "$ANDROID_DIR"
-JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 \
-  PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH \
-  ./gradlew assembleRelease
-
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH ./gradlew assembleRelease
 apk_file="app/build/outputs/apk/release/app-release.apk"
-[[ -s "$apk_file" ]] || { echo "Signed release APK was not generated." >&2; exit 65; }
+[[ -s "$apk_file" && "$(stat -c '%s' "$apk_file")" -ge 1000000 ]] || die "signed APK missing or too small"
+apksigner="$(find_android_tool apksigner)" || die "apksigner unavailable"
+aapt="$(find_android_tool aapt)" || die "aapt unavailable"
+"$apksigner" verify --verbose --print-certs "$apk_file" > "$ANDROID_DIR/app/build/apksigner-release.txt" || die "signature verification failed"
+actual_cert="$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' "$ANDROID_DIR/app/build/apksigner-release.txt" | head -n 1)"
+actual_cert="$(printf '%s' "$actual_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
+[[ "$actual_cert" == "$expected_cert" ]] || die "release certificate fingerprint mismatch"
+badging="$("$aapt" dump badging "$apk_file" | head -n 1)"
+grep -Fq "package: name='$EXPECTED_APP_ID'" <<< "$badging" || die "unexpected applicationId"
+grep -Fq "versionCode='$EXPECTED_VERSION_CODE'" <<< "$badging" || die "unexpected versionCode"
+grep -Fq "versionName='$EXPECTED_VERSION_NAME'" <<< "$badging" || die "unexpected versionName"
 
-install -d -m 0755 "$DOWNLOAD_DIR"
-install -m 0644 "$apk_file" "$DOWNLOAD_DIR/corvia-cardiology-spaces-android-1.1.0.apk"
-cp "$DOWNLOAD_DIR/corvia-cardiology-spaces-android-1.1.0.apk" "$DOWNLOAD_DIR/corvia-cardiology-spaces-android.apk"
-cd "$DOWNLOAD_DIR"
-sha256sum corvia-cardiology-spaces-android-1.1.0.apk > corvia-cardiology-spaces-android-1.1.0.apk.sha256
-sha256sum corvia-cardiology-spaces-android.apk > corvia-cardiology-spaces-android.apk.sha256
-
-printf 'CorVIA Cardiology Spaces Android APK published for %s.\n' "$EXPECTED_SHA"
+install -d -m 0755 "$OUTPUT_DIR"
+artifact_tmp="$(mktemp "$OUTPUT_DIR/.android-1.2.0.XXXXXX")"
+sidecar_tmp="$(mktemp "$OUTPUT_DIR/.android-1.2.0-sha.XXXXXX")"
+trap 'rm -f "$artifact_tmp" "$sidecar_tmp"' EXIT
+install -m 0644 "$apk_file" "$artifact_tmp"
+artifact_sha="$(sha256sum "$artifact_tmp" | cut -d' ' -f1)"
+printf '%s  %s\n' "$artifact_sha" "$APK_NAME" > "$sidecar_tmp"; chmod 0644 "$sidecar_tmp"
+mv -f "$artifact_tmp" "$OUTPUT_DIR/$APK_NAME"; mv -f "$sidecar_tmp" "$OUTPUT_DIR/$APK_NAME.sha256"; trap - EXIT
+printf 'ANDROID_SHA256=%s\nANDROID_CERT_SHA256=%s\n' "$artifact_sha" "$actual_cert"

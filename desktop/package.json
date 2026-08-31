@@ -1,0 +1,39 @@
+{
+  "name": "corvia-cardiology-spaces-desktop",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Aplicativo oficial CorVIA Cardiology Spaces para Windows",
+  "main": "main.cjs",
+  "author": "CorVIA",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build:windows": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.0.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "br.med.corvia.desktop",
+    "productName": "CorVIA Cardiology Spaces",
+    "asar": true,
+    "files": ["main.cjs", "package.json", "build/corvia.ico"],
+    "directories": {"output": "dist", "buildResources": "build"},
+    "win": {
+      "target": [{"target": "nsis", "arch": ["x64"]}],
+      "icon": "build/corvia.ico",
+      "artifactName": "CorVIA-Cardiology-Spaces-Windows-Setup-1.2.0.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CorVIA Cardiology Spaces",
+      "installerLanguages": ["pt_BR"],
+      "language": "1046",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

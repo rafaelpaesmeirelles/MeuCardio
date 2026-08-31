@@ -23,6 +23,8 @@ backend/.venv/
 
 # artefatos de build Android (arquivo grande, regenerado pelo gradlew)
 frontend/android/app/build/outputs/
+desktop/dist/
+/downloads/
 
 # backups de banco (ficam só no servidor)
 infra/backup/dumps/
