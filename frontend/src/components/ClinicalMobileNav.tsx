@@ -4,6 +4,7 @@ import { useAuth } from "../lib/auth";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
+import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 
 type LinkItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type MobileSection = { title: string; items: LinkItem[] };
@@ -38,6 +39,8 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
 
 const TRABALHO_ASSISTENCIA: LinkItem[] = [
   { to: "/exames-ia", label: "IA para Exames", icon: "ecg", featured: true },
+  ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team Virtual", icon: "assistente" as NomeIcone, featured: true }] : []),
+  ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", label: "Assistente pelo WhatsApp", icon: "comunicacao" as NomeIcone, featured: true }] : []),
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
@@ -71,6 +74,7 @@ const CONTA_ADMIN: LinkItem[] = [
   { to: "/termos", label: "Termos", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
   { to: "/admin", label: "Administração", icon: "gestao", adminOnly: true },
+  ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ to: "/admin/operacoes-ia", label: "Operações de IA", icon: "indicadores" as NomeIcone, adminOnly: true }] : []),
   { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
   { to: "/fila-telediagnostico", label: "Fila telediagnóstico", icon: "evidencia", adminOnly: true },
   { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
@@ -137,7 +141,7 @@ export default function ClinicalMobileNav() {
     {maisAberto && <>
       <div className="cc-mobile-more-backdrop is-open" aria-hidden="true" onClick={() => fecharMais(true)} />
       <aside ref={sheetRef} className="cc-mobile-more is-open" role="dialog" aria-modal="true" aria-label="Todas as áreas do CorVIA">
-        <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>CorVIA</strong><small>Clinical OS</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
+        <header className="cc-mobile-more__head"><div><img src="/corvia-mark-canonical.svg" alt="" /><span><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></div><button ref={closeRef} type="button" onClick={() => fecharMais(true)} aria-label="Fechar menu"><Icone nome="fechar" /></button></header>
         <button type="button" className="cc-mobile-more__assistant" onClick={abrirAssistentePessoal}><span className="cc-mobile-more__assistant-icon">✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamentos e pendências</small></span><Icone nome="seta" /></button>
         {secoes.map((secao) => {
           const itens = secao.items.filter((item) => !item.adminOnly || usuario?.role === "admin");

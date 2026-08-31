@@ -1,1 +1,1 @@
-"""Comandos operacionais explícitos da aplicação."""
+"""Operational commands invoked by the maintenance scheduler."""

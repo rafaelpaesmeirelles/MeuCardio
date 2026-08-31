@@ -37,6 +37,8 @@ services:
     volumes:
       - ./backend:/app
       - ./content:/content:ro
+      - whatsappmediafiles:/whatsapp-media
+      - heartteamfiles:/heart-team-files
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
@@ -46,6 +48,19 @@ services:
       start_period: 20s
     ports: ["8000:8000"]
 
+  whatsapp-heart-team-worker:
+    build: ./backend
+    env_file: .env
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - whatsappmediafiles:/whatsapp-media
+      - heartteamfiles:/heart-team-files
+    command: ["python", "-m", "app.services.whatsapp_heart_team_worker"]
+    restart: unless-stopped
+
   frontend:
     build: ./frontend
     depends_on:
@@ -54,6 +69,8 @@ services:
     environment:
       VITE_API_URL: /api
       VITE_CARDIOLOGY_SPACES_ENABLED: ${VITE_CARDIOLOGY_SPACES_ENABLED:-true}
+      VITE_HEART_TEAM_ENABLED: ${VITE_HEART_TEAM_ENABLED:-false}
+      VITE_WHATSAPP_ASSISTANT_ENABLED: ${VITE_WHATSAPP_ASSISTANT_ENABLED:-false}
     ports: ["5173:5173"]
     volumes:
       - ./frontend:/app
@@ -73,3 +90,5 @@ services:
 volumes:
   pgdata:
   redisdata:
+  whatsappmediafiles:
+  heartteamfiles:

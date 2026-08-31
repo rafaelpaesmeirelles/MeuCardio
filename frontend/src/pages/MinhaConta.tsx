@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import CampoSenha from "../components/CampoSenha";
+import WhatsAppIntegrationCard from "../components/WhatsAppIntegrationCard";
 import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useNavigate } from "react-router-dom";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
@@ -886,7 +888,7 @@ function PreferenciaAssinaturaEmail({ revisaoCertificado }: { revisaoCertificado
                   style={{ maxHeight: 48, maxWidth: 160, display: "block", marginBottom: 6 }}
                 />
               )}
-              <img src="/corvia-logo-canonical.svg" alt="Corvia" style={{ height: 22, display: "block" }} />
+              <img src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" style={{ height: 30, display: "block" }} />
             </div>
             <div style={{ fontFamily: "Arial, Helvetica, sans-serif", fontSize: "12.5px", color: "#3a4750" }}>
               <strong style={{ color: "#0b2e45" }}>{dados.pre_visualizacao.nome}</strong>
@@ -1227,6 +1229,7 @@ export default function MinhaConta() {
           }}
         />
         <ResumoSincronizacao />
+        {whatsappAssistantEnabled() && <WhatsAppIntegrationCard />}
         <CertificadoA1 aoAlterar={() => setRevisaoCertificado((valor) => valor + 1)} />
         <PreferenciaAssinaturaEmail revisaoCertificado={revisaoCertificado} />
         <DadosPessoais

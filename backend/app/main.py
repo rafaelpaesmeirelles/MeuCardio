@@ -12,6 +12,7 @@ from app.api import (
     encounter_artifacts, related_content, knowledge_graph, patient_profiles, patient_timeline, ecg_quick,
     cardiovascular_exam_ai, scientific_documents_ai, patient_multimodal_ai,
     patient_multimodal_delete_guard as _patient_multimodal_delete_guard,
+    whatsapp, heart_team,
 )
 from app.core.canonical_registration import CanonicalRegistrationMiddleware
 from app.core.config import settings
@@ -91,6 +92,8 @@ ROUTERS_LIVRES = (
     account_access_admin.router, admin.router, ADMIN_USER_DELETE_ROUTER, admin_user_management.router,
     service_orders.router, partner_courses.router, email_api.router, email_session.router,
     documentos_publicos.router, cmed.router, agenda_integrada.oauth_callback_router,
+    whatsapp.public_router, whatsapp.admin_router,
+    heart_team.admin_router,
 )
 
 ROUTERS_ASSINANTES = (
@@ -111,6 +114,8 @@ ROUTERS_ASSINANTES = (
     encounter_artifacts.router, related_content.router, knowledge_graph.router,
     PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER, patient_profiles.router, patient_timeline.router,
     patient_multimodal_ai.router, ecg_quick.router, cardiovascular_exam_ai.router,
+    whatsapp.router,
+    heart_team.router,
 )
 
 for router in ROUTERS_LIVRES:

@@ -2,6 +2,8 @@ import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api, assetUrl } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
+import { nomeComTratamento } from "../lib/clinicalIdentity";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
 import Credito from "./Credito";
@@ -20,6 +22,7 @@ const BASE: Secao[] = [
     icone: "clinica",
     itens: [
       { to: "/assistente", rotulo: "Assistente", icone: "assistente" },
+      ...(heartTeamEnabled() ? [{ to: "/heart-team", rotulo: "Heart Team Virtual", icone: "round" as NomeIcone }] : []),
       { to: "/doencas", rotulo: "Guia de Doenças", icone: "doencas" },
       { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", icone: "triagem" },
       { to: "/calculadoras", rotulo: "Calculadoras e escores", icone: "calculadora" },
@@ -70,6 +73,7 @@ const BASE: Secao[] = [
     icone: "comunicacao",
     itens: [
       { to: "/corvia-mail", rotulo: "CorVIA Mail", icone: "mail" },
+      ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", rotulo: "Assistente no WhatsApp", icone: "comunicacao" as NomeIcone }] : []),
       { to: "/usuarios-online", rotulo: "Rede profissional", icone: "pacientes" },
     ],
   },
@@ -88,6 +92,8 @@ const BASE: Secao[] = [
 ];
 
 const CONTEXTOS: Array<{ prefixo: string; titulo: string; detalhe: string; icone: NomeIcone }> = [
+  { prefixo: "/heart-team", titulo: "Heart Team Virtual", detalhe: "Conselho clínico independente", icone: "round" },
+  { prefixo: "/whatsapp-assistant", titulo: "Assistente no WhatsApp", detalhe: "Rotina profissional com confirmação", icone: "comunicacao" },
   { prefixo: "/cardiologia-intensiva", titulo: "Cardiologia Intensiva & UCO", detalhe: "Cockpit assistencial", icone: "clinica" },
   { prefixo: "/medicamentos", titulo: "Medicamentos", detalhe: "Farmacologia e segurança", icone: "medicamento" },
   { prefixo: "/interacoes", titulo: "Interações", detalhe: "Segurança medicamentosa", icone: "medicamento" },
@@ -116,14 +122,6 @@ function meta(pathname: string) {
 
 function iniciais(nome?: string) {
   return (nome || "Médico").trim().split(/\s+/).slice(0, 2).map((parte) => parte[0]?.toUpperCase()).join("");
-}
-
-function primeiroNome(nome?: string) {
-  // Pula título honorífico ("Dr.", "Dra.", "Prof.") para não exibi-lo sozinho;
-  // se o nome for só o título, cai no primeiro termo cru em vez de vazio.
-  const partes = (nome || "").trim().split(/\s+/).filter(Boolean);
-  const semTitulo = partes.filter((parte) => !/^(dr|dra|prof|profa)\.?$/i.test(parte));
-  return semTitulo[0] ?? partes[0] ?? "";
 }
 
 function chaveContextosRecentes(userId?: number) {
@@ -304,7 +302,7 @@ export default function ShellClinicalOSLaunch() {
 
   const secoes = useMemo(() => usuario?.role !== "admin" ? BASE : BASE.map((secao) => secao.id !== "gestao" ? secao : {
     ...secao,
-    itens: [...secao.itens, { to: "/admin", rotulo: "Administração", icone: "gestao" as NomeIcone, badge: pendentes }, { to: "/admin/usuarios", rotulo: "Assinantes", icone: "pacientes" as NomeIcone }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" as NomeIcone }],
+    itens: [...secao.itens, { to: "/admin", rotulo: "Administração", icone: "gestao" as NomeIcone, badge: pendentes }, { to: "/admin/usuarios", rotulo: "Assinantes", icone: "pacientes" as NomeIcone }, ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ to: "/admin/operacoes-ia", rotulo: "Operações de IA", icone: "indicadores" as NomeIcone }] : []), { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia" as NomeIcone }],
   }), [pendentes, usuario?.role]);
 
   function abrirDrawer(disparador: HTMLElement) {
@@ -338,7 +336,7 @@ export default function ShellClinicalOSLaunch() {
     <div className={`app-clinico clinical-os${foco ? " clinical-os--focus" : ""}${naEmergencia ? " clinical-os--emergency" : ""}`}>
       <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
       <aside className="cos-sidebar" aria-label="Navegação principal">
-        <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/logo-marca.png" alt="" /></span><span className="cos-brand__text"><strong>CorVIA</strong><small>Clinical OS</small></span></NavLink>
+        <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/corvia-mark-canonical.svg" alt="" /></span><span className="cos-brand__text"><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></NavLink>
         <Navegacao secoes={secoes} />
         <div className="cos-sidebar__footer">
           <button type="button" className="cos-assistant-sidebar" onClick={() => { setDrawer(false); setConta(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Agenda, deslocamento e rotina</small></span></button>
@@ -350,7 +348,7 @@ export default function ShellClinicalOSLaunch() {
       <div className="cos-shell">
         <header className="cos-topbar">
           <button type="button" className="cos-topbar__menu" onClick={(evento) => abrirDrawer(evento.currentTarget)} aria-label="Abrir navegação"><Icone nome="menu" /></button>
-          <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/logo-marca.png" alt="" /><span>CorVIA</span></NavLink>
+          <NavLink to="/" className="cos-topbar__mobile-brand" aria-label="CorVIA — início"><img src="/corvia-mark-canonical.svg" alt="" /><span>Cor<span className="corvia-via">VIA</span></span></NavLink>
           <form className="cos-command-mini" role="search" onSubmit={executar}><Icone nome="busca" /><input ref={buscaRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute uma ação..." aria-label="Pergunte, pesquise ou execute uma ação" /><kbd>⌘ K</kbd><button type="submit" aria-label="Executar"><Icone nome="seta" /></button></form>
           <div className="cos-topbar__actions">
             <button type="button" className="cos-topbar__icon cos-topbar__quick" onClick={() => navigate("/documentos")} aria-label="Criar nova ação"><Icone nome="adicionar" /></button>
@@ -359,9 +357,9 @@ export default function ShellClinicalOSLaunch() {
             <div className="cos-account" ref={contaRef}>
               <button type="button" className="cos-account__trigger" onClick={() => setConta((valor) => !valor)} aria-haspopup="menu" aria-expanded={conta}>
                 {usuario?.photo_url && !fotoQuebrada ? <img src={assetUrl(usuario.photo_url)} alt="" onError={() => setFotoQuebrada(true)} /> : <span className="cos-account__avatar">{iniciais(usuario?.full_name)}</span>}
-                <span className="cos-account__identity"><strong><span className="cos-account__nome-completo">{usuario?.full_name}</span><span className="cos-account__nome-curto">{primeiroNome(usuario?.full_name)}</span></strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
+                <span className="cos-account__identity"><strong><span className="cos-account__nome-completo">{nomeComTratamento(usuario)}</span><span className="cos-account__nome-curto">{nomeComTratamento(usuario, true)}</span></strong><small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small></span><Icone nome="chevron" />
               </button>
-              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{usuario?.full_name}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/tour?origem=assinatura&modo=quick" role="menuitem"><Icone nome="check" />Tour CorVIA</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
+              {conta && <div className="cos-account-menu" role="menu"><div className="cos-account-menu__head"><strong>{nomeComTratamento(usuario)}</strong><small>{usuario?.email}</small></div><NavLink to="/minha-conta" role="menuitem"><Icone nome="conta" />Minha conta</NavLink><NavLink to="/tour?origem=assinatura&modo=quick" role="menuitem"><Icone nome="check" />Tour CorVIA</NavLink><NavLink to="/sincronizacao" role="menuitem"><Icone nome="sincronizar" />Contas conectadas</NavLink><NavLink to="/favoritos" role="menuitem"><Icone nome="favorito" />Favoritos</NavLink>{usuario?.role === "admin" && <NavLink to="/admin" role="menuitem"><Icone nome="gestao" />Administração {pendentes > 0 && <strong className="cos-account-menu__badge">{pendentes}</strong>}</NavLink>}<button type="button" role="menuitem" onClick={() => void encerrar()}><Icone nome="sair" />Sair</button></div>}
             </div>
           </div>
         </header>
@@ -372,7 +370,7 @@ export default function ShellClinicalOSLaunch() {
       </div>
 
       <div className={`cos-drawer-backdrop${drawer ? " is-visible" : ""}`} onClick={() => fecharDrawer(true)} aria-hidden="true" />
-      <aside ref={drawerRef} className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/logo-marca.png" alt="CorVIA" /></NavLink><button ref={fecharDrawerRef} type="button" onClick={() => fecharDrawer(true)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
+      <aside ref={drawerRef} className={`cos-drawer${drawer ? " is-open" : ""}`} aria-hidden={!drawer} aria-label="Navegação móvel"><div className="cos-drawer__head"><NavLink to="/" onClick={() => setDrawer(false)}><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" /></NavLink><button ref={fecharDrawerRef} type="button" onClick={() => fecharDrawer(true)} aria-label="Fechar navegação"><Icone nome="fechar" /></button></div><button type="button" className="cos-drawer__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span><strong>Assistente Pessoal</strong><small>Seu dia, deslocamentos e pendências</small></span><Icone nome="seta" /></button><Navegacao secoes={secoes} onNavigate={() => setDrawer(false)} /></aside>
 
       <nav className="cos-mobilebar" aria-label="Ações principais"><NavLink to="/" end><IconeHoje /><span>Início</span></NavLink><NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink><button type="button" className="cos-mobilebar__assistant" onClick={() => { setDrawer(false); setAssistente(true); }}><span>✦</span><span>Assistente</span></button><NavLink to="/agenda"><Icone nome="agenda" /><span>Agenda</span></NavLink><button type="button" onClick={(evento) => abrirDrawer(evento.currentTarget)}><Icone nome="mais" /><span>Mais</span></button></nav>
 

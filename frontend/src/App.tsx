@@ -5,6 +5,7 @@ import { Carregando } from "./components/Estado";
 import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import OptionalFeatureBoundary from "./components/OptionalFeatureBoundary";
 import { cardiologySpacesEnabled } from "./lib/cardiologySpacesFeature";
+import { heartTeamEnabled, whatsappAssistantEnabled } from "./lib/aiFeatureFlags";
 import { useAuth } from "./lib/auth";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
@@ -79,7 +80,11 @@ const ExcluirConta = lazy(() => import("./pages/ExcluirConta"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
 const Tour = lazy(() => import("./pages/Tour"));
+const CardiologySpacesTour = lazy(() => import("./pages/CardiologySpacesTour"));
 const ValidarDocumento = lazy(() => import("./pages/ValidarDocumento"));
+const HeartTeamVirtual = lazy(() => import("./pages/HeartTeamVirtual"));
+const WhatsAppAssistant = lazy(() => import("./pages/WhatsAppAssistant"));
+const AdminAIOperations = lazy(() => import("./pages/AdminAIOperations"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -197,6 +202,9 @@ export default function App() {
           <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<Assistente />} />
+          <Route path="heart-team" element={heartTeamEnabled() ? <HeartTeamVirtual /> : <Navigate to="/" replace />} />
+          <Route path="heart-team/:caseId" element={heartTeamEnabled() ? <HeartTeamVirtual /> : <Navigate to="/" replace />} />
+          <Route path="whatsapp-assistant" element={whatsappAssistantEnabled() ? <WhatsAppAssistant /> : <Navigate to="/minha-conta" replace />} />
           <Route path="prontuario" element={<Prontuario />} />
           <Route path="exames-ia" element={<CardiovascularExamAI />} />
           <Route path="ecg-ia" element={<CardiovascularExamAI />} />
@@ -224,8 +232,10 @@ export default function App() {
           {usuario.role === "admin" && <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />}
           {usuario.role === "admin" && <Route path="receitas-para-assinatura" element={<ReceitasParaAssinatura />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
+          {usuario.role === "admin" && <Route path="admin/operacoes-ia" element={(heartTeamEnabled() || whatsappAssistantEnabled()) ? <AdminAIOperations /> : <Navigate to="/admin" replace />} />}
         </Route>
         <Route path="/tour" element={<Tour />} />
+        <Route path="/tour/cardiology-spaces" element={<CardiologySpacesTour />} />
         <Route path="/em-breve" element={<EmBreve />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
