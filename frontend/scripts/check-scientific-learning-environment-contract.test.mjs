@@ -28,7 +28,6 @@ const scientificRoutes = [
   "/trilhas",
   "/trilhas/timeline",
   "/material-paciente",
-  "/cursos",
   "/apresentacao",
   "/exportar",
   "/galeria",
@@ -53,7 +52,7 @@ test("keeps five scientific journeys and every existing scientific surface disco
     const routePath = route.split("?")[0].replace(/^\//, "");
     assert.ok(app.includes(`path="${routePath}"`) || app.includes(`path="/${routePath}"`), `route is not registered: ${route}`);
   }
-  assert.equal(scientificRoutes.length, 21);
+  assert.equal(scientificRoutes.length, 20);
 });
 
 test("preserves canonical hover, keyboard focus and selected behavior", () => {
@@ -63,9 +62,11 @@ test("preserves canonical hover, keyboard focus and selected behavior", () => {
   assert.match(styles, /\.spaces-door\.is-active/);
 });
 
-test("ships the versioned Cardiology Spaces tour with the scientific step", () => {
-  assert.match(tour, /corvia:cardiology-spaces:tour:v2/);
-  assert.match(tour, /05 · CIÊNCIA & ENSINO/);
+test("ships the interactive Cardiology Spaces onboarding without a local repeat gate", () => {
+  assert.doesNotMatch(tour, /corvia:cardiology-spaces:tour:v2/);
+  assert.match(tour, /06 · CIÊNCIA & ENSINO/);
+  assert.match(tour, /08 · INTELIGÊNCIA INTEGRADA/);
+  assert.match(tour, /onboarding_pendente/);
   assert.match(app, /import\("\.\/pages\/CardiologySpacesTour"\)/);
   assert.match(app, /path="\/tour" element=\{<Tour \/>\}/);
   assert.match(app, /path="\/tour\/cardiology-spaces" element=\{<CardiologySpacesTour \/>\}/);
@@ -81,5 +82,5 @@ test("keeps 360px navigation legible instead of shrinking text to 9px", () => {
   assert.match(styles, /\.spaces-home \{ overflow-x:clip; \}/);
   assert.match(styles, /\.spaces-home__heart \{[^}]*width:min\(100vw,620px\)/);
   assert.doesNotMatch(styles, /width:min\(130vw,620px\)/);
-  assert.match(tourStyles, /\.cst__controls>div\{max-width:calc\(100vw - 136px\);overflow-x:auto\}/);
+  assert.match(tourStyles, /\.cst__controls>div\{max-width:calc\(100vw - 168px\);overflow-x:auto\}/);
 });
