@@ -78,5 +78,8 @@ test("keeps 360px navigation legible instead of shrinking text to 9px", () => {
   assert.match(styles, /\.spaces-dock \{ grid-template-columns:repeat\(6,minmax\(0,1fr\)\); max-width:calc\(100vw - 16px\); overflow-x:hidden; \}/);
   assert.match(styles, /\.spaces-dock a,\.spaces-dock button \{[^}]*font-size:max\(\.68rem,11px\);[^}]*white-space:normal;/);
   assert.doesNotMatch(styles, /\.spaces-dock \{[^}]*repeat\(7|minmax\(58px|overflow-x:auto/);
+  assert.match(styles, /\.spaces-home \{ overflow-x:clip; \}/);
+  assert.match(styles, /\.spaces-home__heart \{[^}]*width:min\(100vw,620px\)/);
+  assert.doesNotMatch(styles, /width:min\(130vw,620px\)/);
   assert.match(tourStyles, /\.cst__controls>div\{max-width:calc\(100vw - 136px\);overflow-x:auto\}/);
 });

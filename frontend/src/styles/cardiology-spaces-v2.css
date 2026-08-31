@@ -62,7 +62,7 @@
 }
 
 @media (max-width:900px) {
-  .spaces-home__heart { top:45%; left:50%; width:min(130vw,620px); opacity:.07; }
+  .spaces-home__heart { top:45%; left:50%; width:min(100vw,620px); opacity:.07; }
   .spaces-door__scene,.spaces-door.is-active .spaces-door__scene { min-height:94px; }
   .spaces-door.is-active { transform:translateY(2px); }
   .spaces-workspace__greeting { margin:6px 0 16px; }
@@ -71,6 +71,7 @@
 }
 
 @media (max-width:760px) {
+  .spaces-home { overflow-x:clip; }
   .spaces-choice__cards { grid-template-columns:1fr; }
   .spaces-choice__science { grid-column:auto; }
   .spaces-choice__cards > button { min-height:154px; }
