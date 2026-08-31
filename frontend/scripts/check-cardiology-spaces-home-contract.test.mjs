@@ -9,6 +9,11 @@ const styles = read("src/styles/cardiology-spaces-v2.css");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
 const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
+const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
+const shellStart = app.indexOf('<Route element={<Shell />}>');
+const shellEnd = app.indexOf("</Route>", shellStart);
+const shellRoutes = shellStart >= 0 && shellEnd > shellStart ? app.slice(shellStart, shellEnd) : "";
+const shellRoutePaths = [...shellRoutes.matchAll(/<Route\s+path="([^"]+)"/g)].map((match) => match[1]);
 
 const requiredCatalogRoutes = [
   "/doencas", "/medicamentos", "/exames", "/calculadoras", "/emergencia", "/cardiologia-intensiva",
@@ -21,6 +26,13 @@ const requiredCatalogRoutes = [
   "/verificacao-identidade", "/excluir-conta", "/admin", "/admin/usuarios", "/fila-telediagnostico",
   "/receitas-para-assinatura", "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
 ];
+
+const nonCatalogShellRoutes = new Set([
+  "cursos", // alias histórico → Trilhas
+  "ecg-ia", // alias histórico → IA para Exames
+  "assinatura", // fluxo técnico → tour rápido de assinatura
+  "admin/usuarios-online", // alias administrativo → Rede profissional
+]);
 
 test("approved image composition is encoded as a product contract", () => {
   assert.match(home, /spaces-choice__heart/);
@@ -99,6 +111,20 @@ test("catalog stays complete, unique and courses are retired safely", () => {
     const path = route.split("?")[0];
     const relative = path.slice(1).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     assert.match(app, new RegExp(`<Route path="\\/?${relative}`), `${route} precisa existir em App.tsx`);
+  }
+});
+
+test("every authenticated primary Shell route is catalogued or explicitly classified as alias/technical", () => {
+  assert.ok(shellStart >= 0 && shellEnd > shellStart, "o bloco autenticado do Shell precisa ser localizável");
+  assert.ok(shellRoutePaths.length > 30, "o inventário autenticado não pode encolher silenciosamente");
+
+  const primaryRoutes = [...new Set(shellRoutePaths.filter((path) => !path.includes(":") && !nonCatalogShellRoutes.has(path)))];
+  const missing = primaryRoutes.filter((path) => !catalogPrimaryPaths.has(`/${path}`));
+  assert.deepEqual(missing, [], `funções autenticadas fora de Todas as funções: ${missing.join(", ")}`);
+
+  for (const alias of nonCatalogShellRoutes) {
+    assert.ok(shellRoutePaths.includes(alias), `alias/técnica classificada deixou de existir: ${alias}`);
+    assert.ok(!catalogPrimaryPaths.has(`/${alias}`), `alias/técnica ${alias} não deve virar função duplicada no catálogo`);
   }
 });
 
