@@ -64,7 +64,6 @@ const BASE: Secao[] = [
       { to: "/casos-clinicos", rotulo: "Casos clínicos", icone: "doencas" },
       { to: "/galeria", rotulo: "Galeria", icone: "galeria" },
       { to: "/trilhas", rotulo: "Trilhas", icone: "seta" },
-      { to: "/cursos", rotulo: "Cursos", icone: "curso" },
       { to: "/apresentacao", rotulo: "Modo apresentação", icone: "documento" },
     ],
   },
