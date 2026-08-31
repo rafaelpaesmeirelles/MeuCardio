@@ -176,6 +176,55 @@ jobs:
             if (!activeLabel.includes(expectedLabel)) failures.push(`${modeLabel}: portal padrão deveria ser ${expectedLabel}, encontrado ${activeLabel || 'nenhum'}`);
           }
 
+          async function certifyClinicalPortalSet() {
+            const labels = await page.locator('.spaces-door').evaluateAll((els) => els.map((el) => el.textContent?.trim() || ''));
+            const expected = ['Consultório','Hospital','Ensino','Pesquisa','Gestão'];
+            if (labels.length !== 5) failures.push(`clinical-portals: esperado 5 portais, encontrado ${labels.length}`);
+            for (const label of expected) if (!labels.some((value) => value.includes(label))) failures.push(`clinical-portals: portal ausente ${label}`);
+          }
+
+          async function activeContext() {
+            return page.evaluate(() => ({
+              active: document.querySelector('.spaces-door.is-active')?.textContent?.trim() || '',
+              title: document.querySelector('.spaces-title strong')?.textContent?.trim() || '',
+              description: document.querySelector('.spaces-title small')?.textContent?.trim() || '',
+            }));
+          }
+
+          async function certifyPreviewInteractions() {
+            const pesquisa = page.locator('.spaces-door', { hasText: 'Pesquisa' });
+            await pesquisa.hover();
+            await page.waitForTimeout(120);
+            const hover = await activeContext();
+            if (!hover.active.includes('Pesquisa') || hover.title !== 'Pesquisa' || !/Evidência|literatura|investigação/i.test(hover.description)) {
+              failures.push(`preview-hover: Pesquisa não atualizou contexto ${JSON.stringify(hover)}`);
+            }
+            await page.locator('.spaces-doors').hover({ position: { x: 2, y: 2 } });
+            await page.waitForTimeout(120);
+            const afterHover = await activeContext();
+            if (!afterHover.active.includes('Consultório') || afterHover.title !== 'Consultório') failures.push(`preview-hover: saída não restaurou Consultório ${JSON.stringify(afterHover)}`);
+
+            const ensino = page.locator('.spaces-door', { hasText: 'Ensino' });
+            await ensino.focus();
+            await page.waitForTimeout(120);
+            const focused = await activeContext();
+            if (!focused.active.includes('Ensino') || focused.title !== 'Ensino' || !/Conhecimento|aprender|ensinar/i.test(focused.description)) {
+              failures.push(`preview-focus: Ensino não atualizou contexto ${JSON.stringify(focused)}`);
+            }
+            await page.locator('.spaces-home__topbar').focus().catch(() => {});
+            await page.evaluate(() => document.activeElement instanceof HTMLElement && document.activeElement.blur());
+            await page.waitForTimeout(120);
+            const afterFocus = await activeContext();
+            if (!afterFocus.active.includes('Consultório') || afterFocus.title !== 'Consultório') failures.push(`preview-focus: blur não restaurou Consultório ${JSON.stringify(afterFocus)}`);
+          }
+
+          async function certifySelectedContext(expectedLabel, descriptionPattern) {
+            const ctx = await activeContext();
+            if (!ctx.active.includes(expectedLabel) || ctx.title !== expectedLabel || !descriptionPattern.test(ctx.description)) {
+              failures.push(`selected-context: ${expectedLabel} inconsistente ${JSON.stringify(ctx)}`);
+            }
+          }
+
           async function measure(mode) {
             const metrics = await page.evaluate((modeName) => {
               const q = (selector) => document.querySelector(selector);
@@ -255,14 +304,21 @@ jobs:
             await login();
             await choose('Completo');
             await certifyDefaultPortal('complete-default', 'Consultório');
+            await certifyClinicalPortalSet();
+            await certifyPreviewInteractions();
             await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
             await page.waitForTimeout(350);
+            await certifySelectedContext('Hospital', /rotina hospitalar/i);
             certify(await measure('complete'), 'complete');
+
             await choose('Essencial');
             await certifyDefaultPortal('essential-default', 'Consultório');
+            await certifyClinicalPortalSet();
             await page.locator('.spaces-door', { hasText: 'Hospital' }).click();
             await page.waitForTimeout(350);
+            await certifySelectedContext('Hospital', /rotina hospitalar/i);
             certify(await measure('essential'), 'essential');
+
             await choose('Ciência & Ensino', 'Evidências');
             certify(await measure('scientific'), 'scientific');
             fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify({ failures, modes }, null, 2));
