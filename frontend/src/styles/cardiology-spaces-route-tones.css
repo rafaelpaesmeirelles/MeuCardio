@@ -23,10 +23,44 @@ body.corvia-space--gestao .clinical-os .ccc-nav--reference .ccc-nav__brand-copy 
   }
 }
 
-/* Polimento da referência 1536×864. A agenda real pode estar vazia no QA,
-   mas a coluna “Meu dia entre espaços” mantém a silhueta alta da prancha
-   aprovada. O conteúdo rola dentro do painel quando houver mais eventos. */
+/* Polimento da referência 1536×864. */
 @media (min-width:1100px){
+  /* A referência agrupa os modos no quadrante superior direito, imediatamente
+     antes do perfil; não usa uma navegação central flutuante. */
+  body.cardiology-spaces-active .spaces-home .spaces-home__topbar{
+    grid-template-columns:minmax(320px,1fr) auto 150px!important;
+    column-gap:28px!important;
+  }
+  body.cardiology-spaces-active .spaces-home .spaces-home__topbar>nav{
+    justify-self:end!important;
+  }
+  body.cardiology-spaces-active .spaces-home .spaces-home__topbar>.spaces-user{
+    min-width:150px!important;
+    justify-self:end!important;
+    justify-content:flex-end!important;
+  }
+
+  /* Na prancha aprovada os planos ocupam aproximadamente 1030 px, deixando
+     ar entre rail, conteúdo e timeline. A largura anterior (>1130 px) estava
+     visualmente maior que a referência. */
+  body.cardiology-spaces-active .spaces-home:not(.spaces-home--scientific) .spaces-workspace .spaces-layers{
+    width:1050px!important;
+    max-width:calc(100% - 34px)!important;
+    justify-self:center!important;
+    transform:translateX(18px)!important;
+  }
+
+  /* No Essencial, AGORA e MEUS ESSENCIAIS têm o respiro vertical observado
+     na referência: o primeiro plano começa ~12 px abaixo do estado anterior
+     e o intervalo entre os dois planos cresce para ~15 px. */
+  body.cardiology-spaces-active .spaces-home:not(.spaces-home--scientific) .spaces-workspace:has(.spaces-layer--essential) .spaces-layers{
+    gap:15px!important;
+    transform:translate(18px,12px)!important;
+  }
+
+  /* A agenda real pode estar vazia no QA, mas a coluna “Meu dia entre espaços”
+     mantém a silhueta alta da prancha aprovada. O conteúdo rola quando houver
+     mais eventos do que a altura de referência comporta. */
   body.cardiology-spaces-active .spaces-day{
     align-self:end!important;
     width:194px!important;
@@ -35,6 +69,7 @@ body.corvia-space--gestao .clinical-os .ccc-nav--reference .ccc-nav__brand-copy 
     max-height:334px!important;
     margin-bottom:50px!important;
     overflow:auto!important;
+    transform:translateX(-15px)!important;
   }
 
   /* Na referência o controle de personalização é uma cápsula baixa, e não
