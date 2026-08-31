@@ -45,8 +45,8 @@ def notificar_admins_nova_solicitacao(db, nome_solicitante: str, email_solicitan
         return
     admins = db.query(User).filter(User.role == "admin", User.is_active.is_(True)).all()
     corpo = (
-        f"{nome_solicitante} ({email_solicitante}) solicitou acesso à Corvia.\n"
+        f"{nome_solicitante} ({email_solicitante}) solicitou acesso ao CorVIA Cardiology Spaces.\n"
         f"Revise em: {{DOMINIO}}/admin"
     )
     for admin in admins:
-        tentar_enviar_email(admin.email, "Corvia — nova solicitação de acesso", corpo)
+        tentar_enviar_email(admin.email, "CorVIA — nova solicitação de acesso", corpo)

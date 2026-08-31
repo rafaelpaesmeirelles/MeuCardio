@@ -114,7 +114,7 @@ def _capa_pptx(prs: Presentation, titulo: str, subtitulo: str, nome: str, detalh
     p2.font.color.rgb = RGBColor(0xCF, 0xDD, 0xE4)
     tf3 = _caixa(slide, Inches(0.85), ALTURA - Inches(1.05), LARGURA - Inches(1.7), Inches(0.7))
     p3 = tf3.paragraphs[0]
-    p3.text = " · ".join([nome, *detalhes, "CorVIA — Clinical OS"])
+    p3.text = " · ".join([nome, *detalhes, "CorVIA — Cardiology Spaces"])
     p3.font.size = Pt(11)
     p3.font.color.rgb = RGBColor(0xA9, 0xBD, 0xC8)
 
@@ -197,7 +197,7 @@ def gerar_pptx(
     prs.slide_height = ALTURA
     subtitulo = itens[0].tema or ROTULOS_TIPO[itens[0].tipo] if len(itens) == 1 else f"{len(itens)} conteúdos selecionados"
     _capa_pptx(prs, titulo_final, subtitulo, nome, detalhes)
-    rodape = f"CorVIA — Clinical OS · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')}"
+    rodape = f"CorVIA — Cardiology Spaces · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')}"
 
     _slide_conteudo(prs, "Proveniência", [
         ("paragrafo", "Este arquivo reproduz conteúdo publicado no CorVIA na data da exportação."),
@@ -322,7 +322,7 @@ def gerar_docx(
         footer = secao_doc.footer.paragraphs[0]
         footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
         run = footer.add_run(
-            f"CorVIA — Clinical OS · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')}"
+            f"CorVIA — Cardiology Spaces · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')}"
         )
         run.font.size = DocxPt(8)
         run.font.color.rgb = DocxRGBColor.from_string("55666F")

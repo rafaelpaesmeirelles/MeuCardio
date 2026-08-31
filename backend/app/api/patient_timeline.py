@@ -18,6 +18,7 @@ from app.models.appointment_clinical_flow import AppointmentClinicalFlow
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment, GeneratedDocument, Prescription
 from app.models.encounter_artifact import EncounterArtifact
+from app.models.heart_team import HeartTeamPatientRecord
 from app.models.patient_multimodal import PatientMultimodalAISuggestion, PatientMultimodalExamRecord
 from app.models.prontuario import (
     ClinicalEncounter, PatientClinicalAISuggestion, PatientClinicalItem,
@@ -162,6 +163,31 @@ def linha_do_tempo_paciente(
         .order_by(PatientMultimodalAISuggestion.created_at.desc())
         .all()
     )
+    heart_team_records = (
+        db.query(HeartTeamPatientRecord)
+        .filter(
+            HeartTeamPatientRecord.owner_id == user.id,
+            HeartTeamPatientRecord.patient_profile_id == pid,
+        )
+        .all()
+    )
+    for row in heart_team_records:
+        provenance = row.provenance or {}
+        modelos = sorted({str(value) for value in (provenance.get("model_versions") or {}).values() if value})
+        eventos.append({
+            "id": f"heart_team:{row.case_id}",
+            "tipo": "apoio_ia_heart_team",
+            "data": row.created_at,
+            "titulo": "Apoio do Heart Team Virtual revisado",
+            "resumo": "Parecer validado pelo médico." if row.decision == "accepted" else "Parecer rejeitado pelo médico; não utilizar.",
+            "status": row.decision,
+            "heart_team_case_id": row.case_id,
+            "reviewer_id": row.reviewer_id,
+            "pipeline_version": provenance.get("pipeline_version"),
+            "models": modelos,
+            "source_ids": provenance.get("source_ids") or [],
+            "final_hash": row.final_hash,
+        })
 
     accepted_ecg_by_result = {
         row.accepted_result_id: row

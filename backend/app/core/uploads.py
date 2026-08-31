@@ -80,6 +80,13 @@ _SCIENTIFIC_DOCUMENT_POLICY = UploadPolicy(
     25 * 1024 * 1024,
     "email",
 )
+_HEART_TEAM_POLICY = UploadPolicy(
+    "heart-team",
+    20 * 1024 * 1024,
+    "clinical_exam",
+    max_files=5,
+    max_total_file_bytes=40 * 1024 * 1024,
+)
 _EMAIL_POLICY = UploadPolicy("anexo-email", 15 * 1024 * 1024, "email")
 
 
@@ -105,6 +112,8 @@ def policy_for(method: str, path: str) -> UploadPolicy | None:
         return _CARDIOVASCULAR_EXAM_POLICY
     if path == "/api/documentos-cientificos-ia":
         return _SCIENTIFIC_DOCUMENT_POLICY
+    if re.fullmatch(r"/api/heart-team/cases/\d+/attachments", path):
+        return _HEART_TEAM_POLICY
     if path == "/api/email/mensagens/anexos":
         return _EMAIL_POLICY
     return None

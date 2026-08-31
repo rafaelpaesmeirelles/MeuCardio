@@ -143,7 +143,7 @@ class AppleDavClient:
             # User-Agent. DAVx5/vdirsyncer (clientes CalDAV populares) sempre mandam um
             # User-Agent identificável; alinhando por cautela, não confirmado como causa
             # raiz definitiva sem reproduzir com credencial real.
-            headers={"User-Agent": "Corvia/1.0 (CalDAV/CardDAV sync; +https://corvia.med.br)"},
+            headers={"User-Agent": "CorVIA-Cardiology-Spaces/1.2 (CalDAV/CardDAV sync; +https://corvia.med.br)"},
         )
 
     def _xml(self, method: str, url: str, body: str, *, depth: str = "0") -> tuple[ET.Element, str]:

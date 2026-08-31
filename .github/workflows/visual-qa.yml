@@ -220,6 +220,9 @@ jobs:
           async function selectCompleteMode(page) {
             const choice = page.locator('.spaces-choice');
             if (await choice.isVisible().catch(() => false)) {
+              // Este gate certifica a Home. O tour tem contrato próprio e, em
+              // um contexto novo, redirecionaria corretamente antes da Home.
+              await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v2', 'visual-qa'));
               await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
             }
             await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });

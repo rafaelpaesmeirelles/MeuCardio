@@ -61,6 +61,7 @@ class ProvedorIA(ABC):
         usar_internet: bool = True,
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
+        max_output_tokens: int | None = None,
     ) -> Resposta: ...
 
     @abstractmethod
@@ -86,6 +87,7 @@ class ProvedorIA(ABC):
         conteudo: bytes,
         media_type: str,
         modelo: str | None = None,
+        max_output_tokens: int | None = None,
     ) -> Resposta:
         """Analisa um arquivo clínico sem persistir o binário no provedor.
 
@@ -141,19 +143,24 @@ class ProvedorOpenAI(ProvedorIA):
         usar_internet: bool = True,
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
+        max_output_tokens: int | None = None,
     ) -> Resposta:
-        # usar_internet, modelo, ferramentas e executor_ferramenta não têm
-        # efeito no caminho OpenAI — aceitos na assinatura só por paridade de
+        # usar_internet, ferramentas e executor_ferramenta não têm
+        # efeito no caminho OpenAI — aceitos na assinatura por paridade de
         # interface com ProvedorAnthropic. A validação de que usar_internet e
         # ferramentas exigem provider="anthropic" é feita antes, na rota
         # (app/api/ai.py), não aqui.
-        modelo_efetivo = self._modelo
-        resp = self._cliente.chat.completions.create(
-            model=modelo_efetivo,
-            messages=[{"role": "system", "content": sistema}, *mensagens],
-            max_tokens=settings.ai_max_output_tokens,
-            temperature=0.2,
-        )
+        modelo_efetivo = modelo or self._modelo
+        kwargs = {
+            "model": modelo_efetivo,
+            "messages": [{"role": "system", "content": sistema}, *mensagens],
+        }
+        if modelo_efetivo.startswith("gpt-5"):
+            kwargs["max_completion_tokens"] = max_output_tokens or settings.ai_max_output_tokens
+        else:
+            kwargs["max_tokens"] = max_output_tokens or settings.ai_max_output_tokens
+            kwargs["temperature"] = 0.2
+        resp = self._cliente.chat.completions.create(**kwargs)
         uso = resp.usage
         return Resposta(
             texto=resp.choices[0].message.content or "",
@@ -207,6 +214,7 @@ class ProvedorOpenAI(ProvedorIA):
         conteudo: bytes,
         media_type: str,
         modelo: str | None = None,
+        max_output_tokens: int | None = None,
     ) -> Resposta:
         # Chat Completions aceita imagem inline, mas não PDF. Recusamos em vez
         # de transformar PDF em texto e perder justamente o traçado do ECG.
@@ -245,12 +253,12 @@ class ProvedorOpenAI(ProvedorIA):
             }
             if modelo_gpt_56:
                 kwargs.update({
-                    "max_completion_tokens": settings.ai_max_output_tokens,
+                    "max_completion_tokens": max_output_tokens or settings.ai_max_output_tokens,
                     "reasoning_effort": "high",
                 })
             else:
                 kwargs.update({
-                    "max_tokens": settings.ai_max_output_tokens,
+                    "max_tokens": max_output_tokens or settings.ai_max_output_tokens,
                     "temperature": 0,
                 })
             return kwargs
@@ -419,9 +427,11 @@ class ProvedorAnthropic(ProvedorIA):
         usar_internet: bool = True,
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
+        max_output_tokens: int | None = None,
     ) -> Resposta:
         modelo_efetivo = modelo or self._modelo
         kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet, ferramentas)
+        kwargs["max_tokens"] = max_output_tokens or settings.ai_max_output_tokens
         max_rodadas = self._MAX_RODADAS_TOOL_USE if ferramentas else self._MAX_RODADAS_PAUSE_TURN
 
         mensagens_turno = list(mensagens)
@@ -534,6 +544,7 @@ class ProvedorAnthropic(ProvedorIA):
         conteudo: bytes,
         media_type: str,
         modelo: str | None = None,
+        max_output_tokens: int | None = None,
     ) -> Resposta:
         modelo_efetivo = self._modelo_ecg_compativel(modelo)
         encoded = base64.b64encode(conteudo).decode("ascii")
@@ -553,7 +564,7 @@ class ProvedorAnthropic(ProvedorIA):
             raise ValueError("Formato de arquivo não suportado pelo provedor multimodal.")
         kwargs = {
             "system": sistema,
-            "max_tokens": settings.ai_max_output_tokens,
+            "max_tokens": max_output_tokens or settings.ai_max_output_tokens,
             "temperature": 0,
             "messages": [{
                 "role": "user",

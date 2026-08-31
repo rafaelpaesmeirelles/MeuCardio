@@ -1,10 +1,10 @@
 Olá, {{ nome }}!
 
-Sua caixa do CorvIA Mail foi criada com sucesso.
+Sua caixa do CorVIA Mail foi criada com sucesso.
 
 Endereço: {{ endereco }}
 
-Acesse pelo painel da Corvia:
+Acesse pelo painel do CorVIA:
 {{ link_painel }}
 
 Regra de uso: a caixa é para comunicação profissional — nunca envie dado clínico identificável de paciente por e-mail.

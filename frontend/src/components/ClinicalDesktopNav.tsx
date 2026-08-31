@@ -4,6 +4,8 @@ import { assetUrl } from "../lib/api";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeHoje } from "./IdentidadeClinica";
+import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
+import { nomeComTratamento } from "../lib/clinicalIdentity";
 
 type NavItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean; badge?: number; featured?: boolean };
 type NavSection = { title: string; items: NavItem[] };
@@ -38,6 +40,8 @@ const ESTUDO_EDUCACAO: NavItem[] = [
 
 const TRABALHO_ASSISTENCIA: NavItem[] = [
   { to: "/exames-ia", label: "IA para Exames", icon: "ecg", featured: true },
+  ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team Virtual", icon: "assistente" as NomeIcone, featured: true }] : []),
+  ...(whatsappAssistantEnabled() ? [{ to: "/whatsapp-assistant", label: "Assistente pelo WhatsApp", icon: "comunicacao" as NomeIcone, featured: true }] : []),
   { to: "/prontuario", label: "Prontuário", icon: "pacientes" },
   { to: "/round", label: "Round hospitalar", icon: "pacientes" },
   { to: "/receituario", label: "Prescrição", icon: "prescricao" },
@@ -65,6 +69,7 @@ const REDE_CONECTIVIDADE: NavItem[] = [
 
 const ADMINISTRACAO: NavItem[] = [
   { to: "/admin", label: "Painel administrativo", icon: "gestao", adminOnly: true },
+  ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ to: "/admin/operacoes-ia", label: "Operações de IA", icon: "indicadores" as NomeIcone, adminOnly: true }] : []),
   { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
   { to: "/fila-telediagnostico", label: "Fila de telediagnóstico", icon: "evidencia", adminOnly: true },
   { to: "/receitas-para-assinatura", label: "Receitas para assinatura", icon: "prescricao", adminOnly: true },
@@ -116,7 +121,7 @@ export default function ClinicalDesktopNav() {
     <aside className="ccc-nav ccc-nav--reference" aria-label="Navegação principal do CorVIA">
       <NavLink to="/" className="ccc-nav__brand" aria-label="CorVIA — Início">
         <span className="ccc-nav__brand-mark"><img src="/corvia-mark-canonical.svg" alt="" /></span>
-        <span className="ccc-nav__brand-copy"><strong>CorVIA</strong><small>Clinical OS</small></span>
+        <span className="ccc-nav__brand-copy"><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span>
       </NavLink>
       <nav className="ccc-nav__scroll">
         <NavLink to="/" end className={({ isActive }) => `ccc-nav__item ccc-nav__home${isActive ? " is-active" : ""}`}><IconeHoje /><span>Página inicial</span></NavLink>
@@ -124,7 +129,7 @@ export default function ClinicalDesktopNav() {
       </nav>
       <NavLink to="/minha-conta" className="ccc-nav__footer ccc-nav__plan" aria-label="Abrir perfil e conta">
         {usuario?.photo_url ? <img className="ccc-nav__plan-photo" src={assetUrl(usuario.photo_url)} alt="" /> : <span className="ccc-nav__plan-avatar">{iniciais(usuario?.full_name)}</span>}
-        <span className="ccc-nav__plan-copy"><strong>{usuario?.full_name || "Minha conta"}</strong><small>{usuario?.role === "admin" ? "Administrador · Premium" : "Plano Premium"}</small></span>
+        <span className="ccc-nav__plan-copy"><strong>{usuario ? nomeComTratamento(usuario) : "Minha conta"}</strong><small>{usuario?.role === "admin" ? "Administrador · Premium" : "Plano Premium"}</small></span>
       </NavLink>
     </aside>
   );

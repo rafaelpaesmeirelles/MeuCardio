@@ -127,6 +127,55 @@ class Settings(BaseSettings):
     # dados/retencao do projeto usado para processar dados de saúde.
     ai_clinical_data_controls_approved: bool = False
 
+    # Assistente WhatsApp e Heart Team: capabilities independentes, ambas
+    # desligadas por padrão até homologação operacional/clínica.
+    whatsapp_assistant_enabled: bool = False
+    whatsapp_provider: str = "sandbox"
+    whatsapp_phone_number_id: str = ""
+    whatsapp_business_account_id: str = ""
+    whatsapp_business_phone_number: str = ""
+    whatsapp_meta_access_token: str = ""
+    whatsapp_meta_app_secret: str = ""
+    whatsapp_meta_verify_token: str = ""
+    whatsapp_meta_api_version: str = "v23.0"
+    whatsapp_default_retention_days: int = 30
+    whatsapp_pairing_ttl_seconds: int = 600
+    whatsapp_confirmation_ttl_seconds: int = 600
+    whatsapp_pairing_max_attempts: int = 5
+    whatsapp_replay_window_seconds: int = 86400
+    whatsapp_rate_limit_per_minute: int = 30
+    whatsapp_daily_command_limit: int = 100
+    whatsapp_monthly_command_limit: int = 1500
+    whatsapp_monthly_cost_ceiling_microunits: int = 5_000_000
+    whatsapp_meta_message_cost_microunits: int = 0
+    whatsapp_transcription_cost_microunits: int = 0
+    whatsapp_scientific_summary_cost_microunits: int = 0
+    whatsapp_media_dir: str = "/whatsapp-media"
+    whatsapp_max_media_bytes: int = 10 * 1024 * 1024
+    whatsapp_transcription_model: str = "gpt-4o-mini-transcribe"
+    whatsapp_default_timezone: str = "America/Sao_Paulo"
+    whatsapp_heart_team_worker_interval_seconds: int = 15
+    whatsapp_heart_team_job_lease_seconds: int = 300
+    whatsapp_retention_purge_interval_seconds: int = 3600
+    whatsapp_heart_team_ready_template_name: str = ""
+    whatsapp_heart_team_ready_template_language: str = "pt_BR"
+    whatsapp_approved_template_names: str = ""
+    heart_team_enabled: bool = False
+    heart_team_files_dir: str = "/heart-team-files"
+    heart_team_clinical_model: str = ""
+    heart_team_max_output_tokens: int = 2200
+    heart_team_source_limit: int = 16
+    heart_team_cache_ttl_seconds: int = 3600
+    heart_team_monthly_cost_ceiling_micros: int = 25_000_000
+    heart_team_daily_case_limit: int = 10
+    heart_team_monthly_case_limit: int = 100
+    heart_team_input_token_cost_micros: int = 2
+    heart_team_output_token_cost_micros: int = 12
+
+    @property
+    def whatsapp_meta_configured(self) -> bool:
+        return bool(self.whatsapp_phone_number_id and self.whatsapp_meta_access_token and self.whatsapp_meta_app_secret and self.whatsapp_meta_verify_token)
+
     openai_api_key: str = ""
     # Confirme o identificador exato do modelo no painel da OpenAI antes do piloto.
     openai_model: str = "gpt-4o-mini"
@@ -146,7 +195,7 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "CorVIA <contato@corvia.med.br>"
+    smtp_from: str = "CorVIA Cardiology Spaces <contato@corvia.med.br>"
     public_url: str = "https://corvia.med.br"
 
     # --- Caixa de e-mail do assinante — Zoho Mail360 (Tarefa 28) ------------

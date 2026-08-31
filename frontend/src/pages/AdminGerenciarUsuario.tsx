@@ -190,7 +190,7 @@ export default function AdminGerenciarUsuario() {
     try {
       await api.post(`/admin/users/${id}/senha`, { password: novaSenha });
       setNovaSenha(""); setSenha2("");
-      setMensagem("Senha do Clinical OS alterada. As sessões anteriores foram revogadas.");
+      setMensagem("Senha do Cardiology Spaces alterada. As sessões anteriores foram revogadas.");
     } catch (e) {
       setErro(mensagemErro(e, "Não foi possível alterar a senha."));
     } finally { setAlterandoSenha(false); }
@@ -230,7 +230,7 @@ export default function AdminGerenciarUsuario() {
     setRevogandoSessao(true); setErro(""); setMensagem("");
     try {
       await api.post(`/admin/user-management/${id}/revoke-session`, {});
-      setMensagem("A sessão atual do CorVIA OS e do CorVIA Mail foi encerrada.");
+      setMensagem("A sessão atual do Cardiology Spaces e do CorVIA Mail foi encerrada.");
       await carregarAcessos();
     } catch (e) {
       setErro(mensagemErro(e, "Não foi possível encerrar a sessão do usuário."));
@@ -249,7 +249,7 @@ export default function AdminGerenciarUsuario() {
       <p className="eyebrow" style={{ marginTop: "1rem" }}>Administração · usuário #{usuario.id}</p>
       <h1>Gerenciar conta</h1>
       <p style={{ color: "var(--texto-secundario)", maxWidth: "72ch" }}>
-        Edite dados, redefina as senhas do Clinical OS e do CorVIA Mail e, quando permitido,
+        Edite dados, redefina as senhas do Cardiology Spaces e do CorVIA Mail e, quando permitido,
         remova definitivamente contas gratuitas ou de demonstração.
       </p>
 
@@ -286,7 +286,7 @@ export default function AdminGerenciarUsuario() {
             <div>
               <h2 style={{ marginTop: 4 }}>Histórico completo de acessos</h2>
               <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem", maxWidth: "68ch" }}>
-                Sessão única ativa: um novo login invalida imediatamente o anterior no CorVIA OS e no CorVIA Mail.
+                Sessão única ativa: um novo login invalida imediatamente o anterior no Cardiology Spaces e no CorVIA Mail.
                 Localização depende dos dados enviados pelo provedor de rede e pode ser imprecisa com VPN ou rede móvel.
               </p>
             </div>
@@ -307,7 +307,7 @@ export default function AdminGerenciarUsuario() {
                 {historico.items.map((item) => (
                   <article key={item.id} style={{ border: "1px solid var(--borda)", borderRadius: 12, padding: 12 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                      <strong>{item.surface === "corvia_mail" ? "CorVIA Mail" : "CorVIA OS"} · {new Date(item.started_at).toLocaleString("pt-BR")}</strong>
+                      <strong>{item.surface === "corvia_mail" ? "CorVIA Mail" : "Cardiology Spaces"} · {new Date(item.started_at).toLocaleString("pt-BR")}</strong>
                       <span className={`selo ${item.active ? "selo--sucesso" : item.risk_level === "alto" ? "selo--atencao" : "selo--info"}`}>
                         {!item.successful ? "Tentativa recusada" : item.active ? "Sessão ativa" : item.risk_level === "alto" ? "Risco alto" : item.risk_level === "medio" ? "Atenção" : "Encerrada"}
                       </span>
@@ -340,7 +340,7 @@ export default function AdminGerenciarUsuario() {
       )}
 
       <section className="cartao" style={{ maxWidth: 900, marginTop: 16 }}>
-        <p className="eyebrow">Senha do Clinical OS</p>
+        <p className="eyebrow">Senha do Cardiology Spaces</p>
         <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem" }}>A troca administrativa revoga as sessões anteriores da conta.</p>
         <div className="grade grade--2">
           <div><label>Nova senha</label><input type="password" value={novaSenha} autoComplete="new-password" onChange={(e) => setNovaSenha(e.target.value)} /></div>
@@ -354,7 +354,7 @@ export default function AdminGerenciarUsuario() {
           <p className="eyebrow">Senha do CorVIA Mail</p>
           <strong>{usuario.corvia_mail.email_address}</strong>
           <p style={{ color: "var(--texto-secundario)", fontSize: ".88rem" }}>
-            A caixa possui senha própria, independente do Clinical OS. A redefinição também revoga sessões anteriores do e-mail.
+            A caixa possui senha própria, independente do Cardiology Spaces. A redefinição também revoga sessões anteriores do e-mail.
           </p>
           <div className="grade grade--2">
             <div><label>Nova senha do e-mail</label><input type="password" value={novaSenhaMail} autoComplete="new-password" onChange={(e) => setNovaSenhaMail(e.target.value)} /></div>
@@ -366,7 +366,7 @@ export default function AdminGerenciarUsuario() {
 
       <section className="cartao" style={{ maxWidth: 900, marginTop: 16, borderColor: "rgba(251,113,133,.5)" }}>
         <p className="eyebrow" style={{ color: "#fb7185" }}>Zona de exclusão definitiva</p>
-        <h2 style={{ marginTop: 4 }}>Excluir definitivamente do CorVIA OS + CorVIA Mail</h2>
+        <h2 style={{ marginTop: 4 }}>Excluir definitivamente do Cardiology Spaces + CorVIA Mail</h2>
         <p style={{ color: "var(--texto-secundario)" }}>
           Esta ação é irreversível. Remove a conta local e, se houver, a caixa nativa do CorVIA Mail.
           Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.

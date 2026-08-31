@@ -39,3 +39,9 @@ from app.models.prontuario import (  # noqa: F401
     ClinicalEncounter, PatientClinicalItem, PatientExamResult,
     PatientECGRecord, PatientClinicalAISuggestion,
 )
+from app.models.whatsapp import (WhatsAppLink,WhatsAppPairing,WhatsAppWebhookEvent,WhatsAppMessage,WhatsAppCommand,WhatsAppUsageMetric,WhatsAppHeartTeamJob,WhatsAppOutboundOutbox,WhatsAppOptEvent,WhatsAppDraft)  # noqa: F401,E501
+from app.models.heart_team import (  # noqa: F401
+    HeartTeamAnalysisJob, HeartTeamAttachment, HeartTeamAuditEvent, HeartTeamCache, HeartTeamCase,
+    HeartTeamCostLedger, HeartTeamFinalReview, HeartTeamOpinion,
+    HeartTeamPatientRecord, HeartTeamSuggestion, HeartTeamSuggestionReview,
+)

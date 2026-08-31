@@ -12,7 +12,8 @@ readonly SSH_HOST="${1:-169.58.78.100}"
 readonly SSH_PORT="${2:-22}"
 readonly SSH_USER="root"
 readonly PROJECT_DIR="/opt/meucardio"
-readonly ENTRYPOINT="$PROJECT_DIR/ops/remote-deploy-entrypoint.sh"
+readonly SOURCE_ENTRYPOINT="$PROJECT_DIR/ops/remote-deploy-entrypoint.sh"
+readonly ENTRYPOINT="/usr/local/libexec/corvia-remote-deploy-entrypoint"
 readonly AUTHORIZED_KEYS="/root/.ssh/authorized_keys"
 readonly KEY_MARKER="corvia-github-actions-deploy"
 
@@ -20,7 +21,10 @@ readonly KEY_MARKER="corvia-github-actions-deploy"
 [[ "$SSH_HOST" =~ ^[A-Za-z0-9.-]+$ ]] || { echo "Invalid SSH host." >&2; exit 64; }
 [[ "$SSH_PORT" =~ ^[0-9]{1,5}$ ]] || { echo "Invalid SSH port." >&2; exit 64; }
 (( SSH_PORT >= 1 && SSH_PORT <= 65535 )) || { echo "SSH port is out of range." >&2; exit 64; }
-[[ -x "$ENTRYPOINT" ]] || { echo "$ENTRYPOINT must exist and be executable." >&2; exit 1; }
+[[ -f "$SOURCE_ENTRYPOINT" ]] || { echo "$SOURCE_ENTRYPOINT must exist." >&2; exit 1; }
+bash -n "$SOURCE_ENTRYPOINT"
+install -d -o root -g root -m 0755 "$(dirname "$ENTRYPOINT")"
+install -o root -g root -m 0755 "$SOURCE_ENTRYPOINT" "$ENTRYPOINT"
 
 for command in gh git ssh-keygen; do
   command -v "$command" >/dev/null || { echo "Missing required command: $command" >&2; exit 1; }
@@ -81,4 +85,4 @@ gh secret set PRODUCTION_SSH_KNOWN_HOSTS --repo "$REPOSITORY" < "$tmpdir/known_h
 
 authorization_installed=0
 echo "Restricted production deploy key installed and GitHub secrets configured."
-echo "The key accepts only: deploy <current 40-character origin/main SHA>."
+echo "The key accepts only the forced entrypoint allow-list; release commands require exact current origin/main SHA."

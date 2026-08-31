@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
+import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { Carregando, Erro } from "../components/Estado";
 
 type Usuario = {
@@ -315,6 +316,7 @@ export default function Admin() {
   return <>
     <p className="eyebrow">Administração</p><h1>Usuários</h1>
     <Link to="/admin/usuarios" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 760, textDecoration: "none" }}><strong>Ficha completa de assinantes →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Busca, KYC, assinatura, documentos e histórico administrativo.</p></Link>
+    {(heartTeamEnabled() || whatsappAssistantEnabled()) && <Link to="/admin/operacoes-ia" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 760, textDecoration: "none" }}><strong>Operações de IA e custos →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Heart Team, WhatsApp, consumo, segurança, latência e falhas operacionais.</p></Link>}
     <EmailTransacionalPanel />
     {erro && <div style={{ marginTop: "0.8rem", maxWidth: 760 }}><Erro mensagem={erro} /></div>}
     {lista === null ? <Carregando /> : <>

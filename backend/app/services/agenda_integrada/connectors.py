@@ -237,7 +237,7 @@ class GoogleCalendarConnector(_HttpConnector):
         timezone = payload.get("timezone") or "America/Sao_Paulo"
         expose_name = bool(self.configuration.get("expose_patient_name"))
         title = payload.get("patient_name") if expose_name else None
-        summary = f"{payload.get('service_name') or 'Consulta'} — {title or 'Corvia'}"
+        summary = f"{payload.get('service_name') or 'Consulta'} — {title or 'CorVIA'}"
         return {
             "summary": summary[:300],
             "description": str(payload.get("notes") or "")[:4000],
@@ -350,7 +350,7 @@ class Microsoft365CalendarConnector(_HttpConnector):
             headers["If-Match"] = version
         response = self.client.post(
             f"{self._events_url()}/{quote(external_id, safe='')}/cancel",
-            headers=headers, json={"comment": (reason or "Cancelado no Corvia")[:500]},
+            headers=headers, json={"comment": (reason or "Cancelado no CorVIA")[:500]},
         )
         _raise_provider(response)
         return {"id": external_id, "status": "cancelled"}
@@ -358,7 +358,7 @@ class Microsoft365CalendarConnector(_HttpConnector):
     def _event_body(self, payload: dict[str, Any]) -> dict[str, Any]:
         expose_name = bool(self.configuration.get("expose_patient_name"))
         title = payload.get("patient_name") if expose_name else None
-        subject = f"{payload.get('service_name') or 'Consulta'} — {title or 'Corvia'}"
+        subject = f"{payload.get('service_name') or 'Consulta'} — {title or 'CorVIA'}"
         return {
             "subject": subject[:255],
             "sensitivity": "private",

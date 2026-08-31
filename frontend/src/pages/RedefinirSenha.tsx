@@ -9,7 +9,7 @@ import "../styles/login.css";
 const BENEFICIOS = [
   { icon: "check" as const, title: "Segurança avançada", detail: "O token de recuperação é temporário, vinculado à conta e de uso único.", tone: "cyan" as const },
   { icon: "documento" as const, title: "Proteção de dados", detail: "A senha não é enviada por e-mail e fica armazenada somente de forma protegida.", tone: "violet" as const },
-  { icon: "sincronizar" as const, title: "Ambiente confiável", detail: "Depois da troca, o acesso volta ao fluxo normal do Clinical OS.", tone: "green" as const },
+  { icon: "sincronizar" as const, title: "Ambiente confiável", detail: "Depois da troca, o acesso volta ao fluxo normal do Cardiology Spaces.", tone: "green" as const },
 ];
 
 export default function RedefinirSenha() {
@@ -42,7 +42,7 @@ export default function RedefinirSenha() {
   const conteudo = !token ? (
     <div className="prehome-confirmation"><div className="prehome-confirmation__icon prehome-confirmation__icon--pending"><Icone nome="emergencia" /></div><h2>Link inválido</h2><p>O token de redefinição não está presente. Solicite um novo link pelo canal seguro.</p><Link to="/esqueci-senha" className="prehome-primary"><span>Solicitar novo link</span><Icone nome="seta" /></Link></div>
   ) : feito ? (
-    <div className="prehome-confirmation" role="status"><div className="prehome-confirmation__icon"><Icone nome="check" /></div><h2>Senha atualizada</h2><p>Pronto. Você será levado para {alvo === "email" ? "o CorVIA Mail" : "o login do Clinical OS"}.</p></div>
+    <div className="prehome-confirmation" role="status"><div className="prehome-confirmation__icon"><Icone nome="check" /></div><h2>Senha atualizada</h2><p>Pronto. Você será levado para {alvo === "email" ? "o CorVIA Mail" : "o login do Cardiology Spaces"}.</p></div>
   ) : (
     <form className="login-formulario" onSubmit={(e) => { e.preventDefault(); void enviar(); }}>
       <div className="login-campo"><label htmlFor="senha">Nova senha</label><CampoSenha id="senha" autoComplete="new-password" value={senha} onChange={(e) => setSenha(e.target.value)} autoFocus /><div className="prehome-password-meter" data-level={nivelForca} aria-label={`Força da senha: ${rotuloForca}`}><i /><i /><i /><i /><span>{senha ? rotuloForca : ""}</span></div></div>
@@ -59,7 +59,7 @@ export default function RedefinirSenha() {
       <section className="prehome-access" aria-labelledby="reset-titulo">
         <div className="prehome-card">
           {token && !feito && <div className="prehome-status-chip"><Icone nome="check" /> Link de recuperação recebido</div>}
-          <header className="prehome-card__header" style={{ textAlign: "center" }}><h2 id="reset-titulo">{alvo === "email" ? "Definir nova senha do CorVIA Mail" : "Definir nova senha"}</h2><p style={{ marginLeft: "auto", marginRight: "auto" }}>Crie uma senha forte e exclusiva para acessar o Clinical OS.</p></header>
+          <header className="prehome-card__header" style={{ textAlign: "center" }}><h2 id="reset-titulo">{alvo === "email" ? "Definir nova senha do CorVIA Mail" : "Definir nova senha"}</h2><p style={{ marginLeft: "auto", marginRight: "auto" }}>Crie uma senha forte e exclusiva para acessar o Cardiology Spaces.</p></header>
           {conteudo}
           {!feito && token && <div className="prehome-card__actions"><div className="prehome-divider">ou</div><Link to="/entrar" className="prehome-secondary">← Voltar ao login</Link></div>}
           <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>

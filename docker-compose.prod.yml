@@ -74,6 +74,8 @@ services:
       - certificadosfiles:/certificados-a1
       - kycfiles:/kyc-documentos
       - cursofiles:/materiais-curso
+      - whatsappmediafiles:/whatsapp-media
+      - heartteamfiles:/heart-team-files
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
@@ -102,6 +104,19 @@ services:
     command: ["python", "-m", "app.services.agenda_sync_worker"]
     restart: unless-stopped
 
+  whatsapp-heart-team-worker:
+    build:
+      context: ./backend
+    env_file: .env
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - whatsappmediafiles:/whatsapp-media
+      - heartteamfiles:/heart-team-files
+    command: ["python", "-m", "app.services.whatsapp_heart_team_worker"]
+    restart: unless-stopped
+
   frontend-build:
     build:
       context: ./frontend
@@ -110,6 +125,8 @@ services:
         VITE_API_URL: /api
         VITE_DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
         VITE_CARDIOLOGY_SPACES_ENABLED: ${VITE_CARDIOLOGY_SPACES_ENABLED:-true}
+        VITE_HEART_TEAM_ENABLED: ${VITE_HEART_TEAM_ENABLED:-false}
+        VITE_WHATSAPP_ASSISTANT_ENABLED: ${VITE_WHATSAPP_ASSISTANT_ENABLED:-false}
     volumes:
       - sitefiles:/site
     restart: "no"
@@ -146,5 +163,7 @@ volumes:
   certificadosfiles:
   kycfiles:
   cursofiles:
+  whatsappmediafiles:
+  heartteamfiles:
   caddy_data:
   caddy_config:

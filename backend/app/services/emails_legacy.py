@@ -67,7 +67,7 @@ PLANOS = {
     },
     PLANO_COMPLETO: {
         "nome": "Assinatura Completa",
-        "descricao": "Acesso ao site + CorvIA Mail",
+        "descricao": "Acesso ao Cardiology Spaces + CorVIA Mail",
         "preco_formatado": "R$ 59,90",
     },
 }
@@ -110,10 +110,10 @@ def _renderizar(nome_template: str, contexto: dict) -> tuple[str, str]:
     corpo_txt = _env_txt.get_template(f"{nome_template}.txt").render(**ctx).rstrip()
     rodape_txt = (
         "\n\n--\n"
-        "Corvia — O caminho do coração\n"
+        "CorVIA — Cardiology Spaces\n"
         f"{EMPRESA['razao_social']} — CNPJ {EMPRESA['cnpj']}\n"
         f"Política de privacidade: {settings.public_url}/privacidade\n"
-        "Você recebeu este e-mail porque tem uma assinatura ativa no Corvia."
+        "Você recebeu este e-mail porque tem uma assinatura ativa no CorVIA Cardiology Spaces."
     )
     return html, corpo_txt + rodape_txt
 
@@ -146,8 +146,8 @@ def _montar_mensagem(destinatario: str, assunto: str, html: str, texto: str) -> 
 
 
 def _reply_to_da_plataforma() -> str:
-    # O `smtp_from` já é "Corvia <contato@corvia.med.br>" (aprovado pelo
-    # Rafael, 02/08/2026); reply-to é o mesmo endereço, sem o nome de exibição.
+    # O `smtp_from` já contém a identidade CorVIA Cardiology Spaces;
+    # reply-to é o mesmo endereço, sem o nome de exibição.
     de = settings.smtp_from
     if "<" in de and ">" in de:
         return de.split("<", 1)[1].split(">", 1)[0]
@@ -261,7 +261,7 @@ def enviar_solicitacao_recebida(user_id: int) -> bool:
         }
         return _enviar(
             db, tipo="solicitacao_recebida", destinatario=user.email,
-            assunto="Corvia — solicitação de acesso recebida",
+            assunto="CorVIA — solicitação de acesso recebida",
             template="solicitacao_recebida", contexto=contexto, user_id=user.id,
             chave_idempotencia=f"solicitacao_recebida:{user.id}",
         )
@@ -291,7 +291,7 @@ def enviar_boas_vindas(user_id: int, plano_codigo: str, valor_centavos: int, pro
         }
         return _enviar(
             db, tipo="boas_vindas", destinatario=user.email,
-            assunto="Bem-vindo à Corvia — ative sua conta",
+            assunto="Bem-vindo ao CorVIA Cardiology Spaces — ative sua conta",
             template="boas_vindas", contexto=contexto, user_id=user.id,
             chave_idempotencia=f"boas_vindas:{user.id}",
         )
@@ -317,7 +317,7 @@ def enviar_reenvio_ativacao(user_id: int) -> bool:
         }
         return _enviar(
             db, tipo="reenvio_ativacao", destinatario=user.email,
-            assunto="Corvia — novo link de ativação",
+            assunto="CorVIA — novo link de ativação",
             template="reenvio_ativacao", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -344,7 +344,7 @@ def enviar_recuperar_senha(user_id: int) -> bool:
         contexto = {"link": f"{settings.public_url}/redefinir-senha?token={token.token}"}
         return _enviar(
             db, tipo="recuperar_senha", destinatario=user.email,
-            assunto="Corvia — redefinição de senha",
+            assunto="CorVIA — redefinição de senha",
             template="recuperar_senha", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -370,7 +370,7 @@ def enviar_senha_alterada(user_id: int, cidade: str | None = None) -> bool:
         }
         return _enviar(
             db, tipo="senha_alterada", destinatario=user.email,
-            assunto="Corvia — sua senha foi alterada",
+            assunto="CorVIA — sua senha foi alterada",
             template="senha_alterada", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -417,7 +417,7 @@ def enviar_alteracao_plano(
         }
         return _enviar(
             db, tipo="alteracao_plano", destinatario=user.email,
-            assunto="Corvia — seu plano foi alterado",
+            assunto="CorVIA — seu plano foi alterado",
             template="alteracao_plano", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -445,7 +445,7 @@ def enviar_alteracao_cadastro(user_id: int, mudancas: list[dict]) -> bool:
         }
         return _enviar(
             db, tipo="alteracao_cadastro", destinatario=user.email,
-            assunto="Corvia — seu cadastro foi alterado",
+            assunto="CorVIA — seu cadastro foi alterado",
             template="alteracao_cadastro", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -475,7 +475,7 @@ def enviar_troca_email(user_id: int, email_antigo: str, email_novo: str) -> bool
 
         ok_novo = _enviar(
             db, tipo="troca_email_novo", destinatario=email_novo,
-            assunto="Corvia — confirmação de novo e-mail de acesso",
+            assunto="CorVIA — confirmação de novo e-mail de acesso",
             template="troca_email_novo",
             contexto={
                 "nome": user.full_name, "quando": quando,
@@ -485,7 +485,7 @@ def enviar_troca_email(user_id: int, email_antigo: str, email_novo: str) -> bool
         )
         ok_antigo = _enviar(
             db, tipo="troca_email_antigo", destinatario=email_antigo,
-            assunto="Corvia — o e-mail da sua conta foi alterado",
+            assunto="CorVIA — o e-mail da sua conta foi alterado",
             template="troca_email_antigo",
             contexto={
                 "nome": user.full_name, "quando": quando,
@@ -529,7 +529,7 @@ def enviar_pagamento_confirmado(
         }
         return _enviar(
             db, tipo="pagamento_confirmado", destinatario=user.email,
-            assunto="Corvia — pagamento confirmado",
+            assunto="CorVIA — pagamento confirmado",
             template="pagamento_confirmado", contexto=contexto, user_id=user.id,
             chave_idempotencia=chave_idempotencia,
         )
@@ -561,7 +561,7 @@ def enviar_pagamento_falhou(
         }
         return _enviar(
             db, tipo="pagamento_falhou", destinatario=user.email,
-            assunto="Corvia — não conseguimos processar seu pagamento",
+            assunto="CorVIA — não conseguimos processar seu pagamento",
             template="pagamento_falhou", contexto=contexto, user_id=user.id,
             chave_idempotencia=chave_idempotencia,
         )
@@ -589,7 +589,7 @@ def enviar_assinatura_cancelada(user_id: int, acesso_ate: datetime, tinha_mail: 
         }
         return _enviar(
             db, tipo="assinatura_cancelada", destinatario=user.email,
-            assunto="Corvia — assinatura cancelada",
+            assunto="CorVIA — assinatura cancelada",
             template="assinatura_cancelada", contexto=contexto, user_id=user.id,
         )
     finally:
@@ -614,7 +614,7 @@ def enviar_assinatura_suspensa(user_id: int, dados_ate: datetime, chave_idempote
         }
         return _enviar(
             db, tipo="assinatura_suspensa", destinatario=user.email,
-            assunto="Corvia — acesso suspenso por falta de pagamento",
+            assunto="CorVIA — acesso suspenso por falta de pagamento",
             template="assinatura_suspensa", contexto=contexto, user_id=user.id,
             chave_idempotencia=chave_idempotencia,
         )
@@ -643,7 +643,7 @@ def enviar_assinatura_suspensa_aviso_exclusao(
         }
         return _enviar(
             db, tipo="assinatura_suspensa_aviso_exclusao", destinatario=user.email,
-            assunto="Corvia — últimos dias antes da exclusão dos seus dados",
+            assunto="CorVIA — últimos dias antes da exclusão dos seus dados",
             template="assinatura_suspensa_aviso_exclusao", contexto=contexto, user_id=user.id,
             chave_idempotencia=chave_idempotencia,
         )
@@ -671,7 +671,7 @@ def enviar_google_teste_liberado(user_id: int, google_email: str) -> bool:
         }
         return _enviar(
             db, tipo="google_teste_liberado", destinatario=user.email,
-            assunto="Corvia — sua conexão com o Google já está liberada",
+            assunto="CorVIA — sua conexão com o Google já está liberada",
             template="google_teste_liberado", contexto=contexto, user_id=user.id,
             chave_idempotencia=f"google_teste_liberado:{user.id}:{google_email}",
         )
@@ -691,7 +691,7 @@ def enviar_corvia_mail_ativado(user_id: int, endereco: str) -> bool:
         }
         return _enviar(
             db, tipo="corvia_mail_ativado", destinatario=user.email,
-            assunto="Corvia — sua caixa do CorvIA Mail está pronta",
+            assunto="CorVIA — sua caixa do CorVIA Mail está pronta",
             template="corvia_mail_ativado", contexto=contexto, user_id=user.id,
             chave_idempotencia=f"corvia_mail_ativado:{user.id}",
         )
@@ -708,7 +708,7 @@ def enviar_corvia_mail_ativado(user_id: int, endereco: str) -> bool:
 # `mail360.enviar_mensagem` com a conta do próprio médico.
 # --------------------------------------------------------------------------
 
-ASSUNTO_MATERIAL_PACIENTE = "Material do seu médico — Corvia"
+ASSUNTO_MATERIAL_PACIENTE = "Material do seu médico — CorVIA Cardiology Spaces"
 
 
 def montar_html_material_paciente(
@@ -717,7 +717,7 @@ def montar_html_material_paciente(
     template = _env_html.get_template("material_paciente.html")
     return template.render(
         nome_paciente=nome_paciente, nome_medico=nome_medico, recado=(recado or "").strip() or None,
-        url=url, dias=dias_validade,
+        url=url, dias=dias_validade, public_url=settings.public_url,
     )
 
 
@@ -726,7 +726,7 @@ def montar_html_material_paciente(
 # `/api/document-templates/gerados/{id}/enviar-email`, Trabalho 11
 # (ampliação de 06/08/2026), via `services/envio_documento_email.py`.
 
-ASSUNTO_DOCUMENTO_DISPONIVEL = "Corvia — documento do seu médico disponível"
+ASSUNTO_DOCUMENTO_DISPONIVEL = "CorVIA — documento do seu médico disponível"
 
 
 def montar_html_documento_disponivel(
@@ -735,7 +735,7 @@ def montar_html_documento_disponivel(
     template = _env_html.get_template("documento_disponivel.html")
     return template.render(
         nome_medico=nome_medico, url=url, dias=dias_validade,
-        divulgacao_assinatura=divulgacao_assinatura,
+        divulgacao_assinatura=divulgacao_assinatura, public_url=settings.public_url,
     )
 
 
@@ -803,14 +803,14 @@ class ResultadoEnvioInstitucional:
 def enviar_institucional_paciente(
     db, *, user_id: int, destinatario: str, assunto: str, html: str, tipo_log: str,
 ) -> ResultadoEnvioInstitucional:
-    """Envia em nome da Corvia (`contato@corvia.med.br`, via SMTP) — canal
+    """Envia em nome do CorVIA (`contato@corvia.med.br`, via SMTP) — canal
     "automático" da oferta de envio ao paciente. `html` já vem pronto de
     `montar_html_documento_disponivel`/`montar_html_material_paciente`."""
     if not settings.smtp_configurado:
         log.info("SMTP não configurado — envio institucional (%s) para %s não realizado", tipo_log, destinatario)
         _registrar_log(db, tipo_log, destinatario, user_id, None, False, "SMTP não configurado")
         return ResultadoEnvioInstitucional(
-            False, "O envio automático pela Corvia ainda não está disponível neste servidor."
+            False, "O envio automático pelo CorVIA ainda não está disponível neste servidor."
         )
     texto = _texto_simples_de_html(html)
     msg = _montar_mensagem(destinatario, assunto, html, texto)

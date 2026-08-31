@@ -135,7 +135,7 @@ def _capa(prs: Presentation, titulo: str, resumo: str, nome: str, registro: str)
     rodape = " · ".join(x for x in (nome, registro) if x) or "CorVIA"
     tf3 = _caixa_texto(slide, Inches(0.9), ALTURA - Inches(0.9), LARGURA - Inches(1.8), Inches(0.5))
     p3 = tf3.paragraphs[0]
-    p3.text = f"{rodape}  ·  CorVIA — Clinical OS · corvia.med.br"
+    p3.text = f"{rodape}  ·  CorVIA — Cardiology Spaces · corvia.med.br"
     p3.font.size = Pt(12)
     p3.font.color.rgb = RGBColor(0x9D, 0xB4, 0xC2)
 
@@ -161,7 +161,7 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
 
     _capa(prs, doc.title, doc.summary or "", nome or "CorVIA", registro)
 
-    rodape_txt = f"CorVIA — Clinical OS · {doc.theme} · corvia.med.br"
+    rodape_txt = f"CorVIA — Cardiology Spaces · {doc.theme} · corvia.med.br"
     paginas_conteudo = 0
 
     def abrir_slide(titulo: str):

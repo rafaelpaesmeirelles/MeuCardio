@@ -607,7 +607,7 @@ class DocumentoExportacao(Documento):
             x_texto = self.margem + 82
         else:
             x_texto = self.margem
-        self.pdf.texto(x_texto, topo - 12, "CORVIA · CLINICAL OS", 7.5, NAVY, negrito=True, espaco_extra=0.7)
+        self.pdf.texto(x_texto, topo - 12, "CORVIA · CARDIOLOGY SPACES", 7.5, NAVY, negrito=True, espaco_extra=0.7)
         self.pdf.linha(self.margem, self.altura - 58, self.largura - self.margem, self.altura - 58, FIO)
         self.y = self.altura - 78
 

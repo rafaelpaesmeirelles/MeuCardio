@@ -107,7 +107,7 @@ def montar_assinatura_html(user: Any) -> str | None:
 <table role="presentation" style="margin-top:24px;padding-top:12px;border-top:1px solid #dbe2e6;font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#3a4750;">
   <tr>
     <td style="vertical-align:top;padding-right:14px;">{logo_profissional}
-      <img src="{_html.escape(LOGO_CORVIA_URL)}" alt="Corvia" style="height:22px;display:block;">
+      <img src="{_html.escape(LOGO_CORVIA_URL)}" alt="CorVIA Cardiology Spaces" style="height:28px;display:block;">
     </td>
     <td style="vertical-align:top;">
       <strong style="color:#0b2e45;">{nome}</strong><br>

@@ -1,4 +1,4 @@
-# Corvia — domínio único.
+# CorVIA Cardiology Spaces — domínio único.
 {$DOMAIN}, www.{$DOMAIN} {
 	encode gzip zstd
 
@@ -42,45 +42,50 @@
 	# Artefatos nativos ficam fora do volume efêmero do frontend. Rotas
 	# explícitas impedem que um arquivo ausente caia no fallback da SPA e seja
 	# baixado como index.html com extensão .apk/.exe.
-	redir /downloads/corvia-os-android.apk /downloads/corvia-cardiology-spaces-android-1.1.0.apk 308
-	redir /downloads/corvia-os-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 308
-	redir /downloads/corvia-os-android-1.0.1.apk /downloads/corvia-cardiology-spaces-android-1.1.0.apk 308
-	redir /downloads/corvia-os-android-1.0.1.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 308
-	redir /downloads/corvia-cardiology-spaces-android.apk /downloads/corvia-cardiology-spaces-android-1.1.0.apk 308
-	redir /downloads/corvia-cardiology-spaces-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 308
+	redir /downloads/corvia-os-android.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
+	redir /downloads/corvia-os-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
+	redir /downloads/corvia-os-android-1.0.1.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
+	redir /downloads/corvia-os-android-1.0.1.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
+	redir /downloads/corvia-cardiology-spaces-android.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
+	redir /downloads/corvia-cardiology-spaces-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
+	redir /downloads/corvia-cardiology-spaces-android-1.1.0.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
+	redir /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
 
-	handle /downloads/corvia-cardiology-spaces-android-1.1.0.apk {
+	handle /downloads/corvia-cardiology-spaces-android-1.2.0.apk {
 		root * /downloads
-		rewrite * /corvia-cardiology-spaces-android-1.1.0.apk
+		rewrite * /corvia-cardiology-spaces-android-1.2.0.apk
 		header Content-Type "application/vnd.android.package-archive"
-		header Content-Disposition "attachment; filename=CorVIA-Cardiology-Spaces-Android-1.1.0.apk"
-		header Cache-Control "no-store"
+		header Content-Disposition "attachment; filename=CorVIA-Cardiology-Spaces-Android-1.2.0.apk"
+		header Cache-Control "public, max-age=31536000, immutable"
 		file_server
 	}
 
-	handle /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 {
+	handle /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 {
 		root * /downloads
-		rewrite * /corvia-cardiology-spaces-android-1.1.0.apk.sha256
+		rewrite * /corvia-cardiology-spaces-android-1.2.0.apk.sha256
 		header Content-Type "text/plain; charset=utf-8"
-		header Cache-Control "no-store"
+		header Cache-Control "public, max-age=31536000, immutable"
 		file_server
 	}
 
-	redir /downloads/corvia-os-windows.zip /downloads/corvia-os-windows.exe 308
+	redir /downloads/corvia-os-windows.zip /downloads/corvia-cardiology-spaces-windows-1.2.0.exe 308
+	redir /downloads/corvia-os-windows.exe /downloads/corvia-cardiology-spaces-windows-1.2.0.exe 308
+	redir /downloads/corvia-os-windows.exe.sha256 /downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256 308
 
-	handle /downloads/corvia-os-windows.exe {
+	handle /downloads/corvia-cardiology-spaces-windows-1.2.0.exe {
 		root * /downloads
-		rewrite * /corvia-os-windows.exe
-		header Content-Disposition "attachment; filename=CorVIA-Cardiology-Spaces-Windows-Setup.exe"
-		header Cache-Control "public, max-age=3600"
+		rewrite * /corvia-cardiology-spaces-windows-1.2.0.exe
+		header Content-Type "application/vnd.microsoft.portable-executable"
+		header Content-Disposition "attachment; filename=CorVIA-Cardiology-Spaces-Windows-Setup-1.2.0.exe"
+		header Cache-Control "public, max-age=31536000, immutable"
 		file_server
 	}
 
-	handle /downloads/corvia-os-windows.exe.sha256 {
+	handle /downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256 {
 		root * /downloads
-		rewrite * /corvia-os-windows.exe.sha256
+		rewrite * /corvia-cardiology-spaces-windows-1.2.0.exe.sha256
 		header Content-Type "text/plain; charset=utf-8"
-		header Cache-Control "public, max-age=3600"
+		header Cache-Control "public, max-age=31536000, immutable"
 		file_server
 	}
 

@@ -18,7 +18,7 @@ IDENTIFIER_PATTERNS = (
     re.compile(r"\b\d{3}\.?\d{3}\.?\d{3}-?\d{2}\b"),
     re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I),
     re.compile(r"\b(?:\+?55\s*)?(?:\(?\d{2}\)?\s*)?9?\d{4}[-\s]?\d{4}\b"),
-    re.compile(r"\b(?:Nome|Paciente|Patient|NOME|PACIENTE|PATIENT)\s*[:#-]?\s+[A-ZÀ-ÖØ-Ý][A-Za-zÀ-ÖØ-öø-ÿ'-]+(?:\s+[A-ZÀ-ÖØ-Ý][A-Za-zÀ-ÖØ-öø-ÿ'-]+){1,5}\b"),
+    re.compile(r"\b(?:nome|paciente|patient)\s*[:#-]?\s+[A-ZÀ-ÖØ-Ý][A-Za-zÀ-ÖØ-öø-ÿ'-]+(?:\s+(?:[A-ZÀ-ÖØ-Ý][A-Za-zÀ-ÖØ-öø-ÿ'-]+|da|de|do|das|dos|e)){1,6}\b", re.I),
     re.compile(r"\b(?:cpf|rg|prontu[aá]rio|registro|endere[cç]o|telefone|celular)\s*[:#]", re.I),
     re.compile(r"\b(?:MRN|CNS|medical\s+record|registro|prontu[aá]rio)\s*[:#-]?\s*\d{4,20}\b", re.I),
     re.compile(r"\b\d{15}\b"),

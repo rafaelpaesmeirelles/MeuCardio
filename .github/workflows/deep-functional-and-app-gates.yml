@@ -1,0 +1,85 @@
+name: Deep functional inventory and public apps
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "backend/app/**"
+      - "frontend/src/**"
+      - "scripts/deep_feature_inventory.py"
+      - "scripts/validate_public_app_artifacts.py"
+      - ".github/workflows/deep-functional-and-app-gates.yml"
+  schedule:
+    - cron: "17 9 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  deep-functional-inventory:
+    name: Endpoints, handlers, controls and API calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Resolve comparison baseline
+        id: baseline
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then echo "ref=$PR_BASE_SHA" >> "$GITHUB_OUTPUT";
+          else echo "ref=" >> "$GITHUB_OUTPUT"; fi
+      - name: Validate deep functional inventory
+        env:
+          BASE_REF: ${{ steps.baseline.outputs.ref }}
+        run: |
+          mkdir -p deep-gates
+          if [ -n "$BASE_REF" ]; then
+            python3 scripts/deep_feature_inventory.py --compare-ref "$BASE_REF" --report deep-gates/functional-inventory.json
+          else
+            python3 scripts/deep_feature_inventory.py --report deep-gates/functional-inventory.json
+          fi
+      - name: Upload functional inventory
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: deep-functional-inventory
+          path: deep-gates/functional-inventory.json
+          if-no-files-found: warn
+          retention-days: 14
+
+  public-app-artifacts:
+    name: Public APK and EXE integrity
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate public application artifacts
+        env:
+          CORVIA_ANDROID_EXPECTED_SHA256: ${{ vars.CORVIA_ANDROID_EXPECTED_SHA256 }}
+          CORVIA_WINDOWS_EXPECTED_SHA256: ${{ vars.CORVIA_WINDOWS_EXPECTED_SHA256 }}
+        run: |
+          [[ "$CORVIA_ANDROID_EXPECTED_SHA256" =~ ^[0-9a-fA-F]{64}$ ]] \
+            || { echo "CORVIA_ANDROID_EXPECTED_SHA256 is required for scheduled drift checks" >&2; exit 65; }
+          [[ "$CORVIA_WINDOWS_EXPECTED_SHA256" =~ ^[0-9a-fA-F]{64}$ ]] \
+            || { echo "CORVIA_WINDOWS_EXPECTED_SHA256 is required for scheduled drift checks" >&2; exit 65; }
+          mkdir -p deep-gates
+          python3 scripts/validate_public_app_artifacts.py --base-url "https://corvia.med.br" \
+            --expected-android-sha256 "$CORVIA_ANDROID_EXPECTED_SHA256" \
+            --expected-windows-sha256 "$CORVIA_WINDOWS_EXPECTED_SHA256" \
+            --cache-buster "${GITHUB_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --report deep-gates/public-app-artifacts.json
+      - name: Upload public application report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: public-app-artifacts
+          path: deep-gates/public-app-artifacts.json
+          if-no-files-found: warn
+          retention-days: 14

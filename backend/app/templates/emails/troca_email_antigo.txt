@@ -1,6 +1,6 @@
 Olá, {{ nome }}!
 
-O e-mail de acesso da sua conta Corvia foi alterado para {{ novo_email_mascarado }}, em {{ quando }}.
+O e-mail de acesso da sua conta CorVIA foi alterado para {{ novo_email_mascarado }}, em {{ quando }}.
 
 Não foi você? Fale conosco agora:
 {{ link_nao_fui_eu }}

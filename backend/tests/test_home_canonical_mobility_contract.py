@@ -66,7 +66,7 @@ def test_prancha_e_navegacao_mobile_permanecem_canonicas_com_p1():
     assert 'ccc-actions-section' in home
     assert 'ccc-reference-summary' in home
     assert 'ccc-module-directory' in home
-    assert 'CorVIA Clinical OS' in home
+    assert 'CorVIA Cardiology Spaces' in home
     assert 'Tudo com Tudo' in home
 
     labels = ["Início", "Buscar", "Prontuário", "Agenda", "Mais"]

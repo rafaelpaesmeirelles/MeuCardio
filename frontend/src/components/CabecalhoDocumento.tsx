@@ -19,7 +19,10 @@ type Medico = {
 export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
   const registro = [medico.council_name, medico.council_number].filter(Boolean).join(" ");
   const uf = medico.council_state ? `/${medico.council_state}` : "";
-  const nome = [medico.professional_title, medico.full_name].filter(Boolean).join(" ");
+  const nomeBase = medico.professional_title
+    ? medico.full_name.split(/\s+/).filter((parte) => !/^(sr|sra|dr|dra|prof|profa|me|ma|esp)\.?$/i.test(parte)).join(" ") || medico.full_name
+    : medico.full_name;
+  const nome = [medico.professional_title, nomeBase].filter(Boolean).join(" ");
   const local = medico.include_workplace_on_documents
     ? [medico.workplace_name, [medico.workplace_department, medico.workplace_role].filter(Boolean).join(" · "), medico.workplace_notes].filter(Boolean)
     : [];
@@ -38,7 +41,7 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
         {medico.specialty && <span className="doc-cabecalho__especialidade">{medico.specialty}</span>}
         {local.map((linha) => <span key={linha}>{linha}</span>)}
       </div>
-      <img className="doc-cabecalho__logo" src="/corvia-logo-canonical.svg" alt="CorVIA Clinical OS" />
+      <img className="doc-cabecalho__logo" src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" />
     </header>
   );
 }

@@ -38,7 +38,8 @@ EXPECTED_APP_ROUTES = {
     "/minha-conta", "/excluir-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/receitas-para-assinatura", "/admin/usuarios-online",
     "/admin/usuarios", "/admin/usuarios/:id", "/admin/usuarios/:id/gerenciar",
-    "/tour", "/em-breve", "/verificacao-identidade",
+    "/heart-team", "/heart-team/:caseId", "/whatsapp-assistant", "/admin/operacoes-ia",
+    "/tour", "/tour/cardiology-spaces", "/em-breve", "/verificacao-identidade",
     "/sincronizacao",
 }
 
@@ -52,6 +53,7 @@ EXPECTED_NAV_ROUTES = {
     "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/exames-ia", "/trilhas", "/trilhas/timeline",
     "/usuarios-online", "/minha-conta", "/excluir-conta", "/privacidade", "/termos", "/admin", "/fila-telediagnostico", "/receitas-para-assinatura",
     "/sincronizacao", "/admin/usuarios", "/tour", "/tour?origem=assinatura&modo=quick",
+    "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -70,10 +72,14 @@ EXPECTED_BACKEND_ROUTERS = {
     "encounter_artifacts.router", "avaliacao_preoperatoria.router", "chat_session.router_ws", "kyc.router",
     "related_content.router", "knowledge_graph.router", "patient_profiles.router", "patient_timeline.router",
     "account_sync.router", "patient_multimodal_ai.router", "ecg_quick.router", "cardiovascular_exam_ai.router",
+    "heart_team.router", "whatsapp.router",
 }
 
 EXPECTED_SUPPORT_FILES = {
     ".github/workflows/release-final-dispatch.yml",
+    "docs/ambiente-cientifico-aprendizagem-ensino.md",
+    "frontend/scripts/check-scientific-learning-environment-contract.test.mjs",
+    "frontend/src/components/CardiologySpaceScene.tsx",
     "frontend/src/components/ChatFlutuante.tsx",
     "frontend/src/components/PersonalAssistantPanel.tsx",
     "frontend/src/components/ShellClinicalOSLaunch.tsx",
@@ -81,6 +87,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ClinicalMobileNav.tsx",
     "frontend/src/components/PatientMultimodalAssistant.tsx",
     "frontend/src/pages/PainelClinicalOS.tsx",
+    "frontend/src/pages/CardiologySpacesHome.tsx",
+    "frontend/src/pages/CardiologySpacesTour.tsx",
     "frontend/src/pages/TourClinicalOS.tsx",
     "frontend/src/pages/EmBreve.tsx",
     "frontend/src/pages/ECGQuickOpinion.tsx",
@@ -113,6 +121,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/RoundGerenciavel.tsx",
     "frontend/src/pages/Telediagnostico.tsx",
     "frontend/src/pages/UsuariosOnline.tsx",
+    "frontend/src/styles/cardiology-spaces-tour.css",
+    "frontend/src/styles/cardiology-spaces-v2.css",
     "backend/app/api/account_access_admin.py",
     "backend/app/api/admin_user_management.py",
     "backend/app/api/assinatura.py",

@@ -166,12 +166,12 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
 
     a = Apresentacao(
         titulo=doc.title,
-        autor=nome or "Corvia",
+        autor=nome or "CorVIA Cardiology Spaces",
         assunto=f"Material de apresentação — {doc.theme}",
-        rodape=f"Corvia · {doc.theme} · corvia.med.br",
+        rodape=f"CorVIA Cardiology Spaces · {doc.theme} · corvia.med.br",
     )
     a.capa(
-        doc.title, doc.summary or "", nome or "Corvia", registro,
+        doc.title, doc.summary or "", nome or "CorVIA Cardiology Spaces", registro,
         logo_profissional=str(logo_profissional) if logo_profissional else None,
     )
 
@@ -194,7 +194,7 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
             if raiz is None:
                 a.corpo(
                     "O diagrama não pôde ser redesenhado com fidelidade. "
-                    "Consulte o fluxograma original na Corvia.", 12,
+                    "Consulte o fluxograma original no CorVIA Cardiology Spaces.", 12,
                 )
             else:
                 for linha in arv.em_lista(raiz):
@@ -272,7 +272,7 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
         a.y -= 44
     hoje = datetime.now(timezone.utc).astimezone().strftime("%d/%m/%Y")
     a.corpo(
-        f"Exportado da Corvia em {hoje}" + (f" por {nome}." if nome else "."),
+        f"Exportado do CorVIA Cardiology Spaces em {hoje}" + (f" por {nome}." if nome else "."),
         9.5,
     )
 

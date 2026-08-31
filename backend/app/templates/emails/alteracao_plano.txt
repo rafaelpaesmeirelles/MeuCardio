@@ -1,6 +1,6 @@
 Olá, {{ nome }}!
 
-Seu plano na Corvia foi alterado.
+Seu plano no CorVIA foi alterado.
 
 Plano anterior: {{ plano_anterior }}
 Novo plano: {{ plano_novo }}

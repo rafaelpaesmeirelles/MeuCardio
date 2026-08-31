@@ -398,7 +398,7 @@ class PDF:
             b"<< /Title " + _literal(self.metadados["titulo"])
             + b" /Author " + _literal(self.metadados["autor"])
             + b" /Subject " + _literal(self.metadados["assunto"])
-            + b" /Creator " + _literal("CorVIA Clinical OS") + b" >>"
+            + b" /Creator " + _literal("CorVIA Cardiology Spaces") + b" >>"
         )
         n_raiz = add(b"<< /Type /Catalog /Pages " + str(n_pages).encode() + b" 0 R >>")
 

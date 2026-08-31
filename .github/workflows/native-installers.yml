@@ -1,0 +1,113 @@
+name: Native installers
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Windows Cardiology Spaces 1.2.0
+    runs-on: windows-latest
+    timeout-minutes: 35
+    environment: production
+    env:
+      CSC_LINK: ${{ secrets.CORVIA_WINDOWS_CODE_SIGNING_CERT }}
+      CSC_KEY_PASSWORD: ${{ secrets.CORVIA_WINDOWS_CODE_SIGNING_PASSWORD }}
+      EXPECTED_SIGNING_CERT_SHA256: ${{ vars.CORVIA_WINDOWS_SIGNING_CERT_SHA256 }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+      - name: Prove exact source SHA
+        shell: pwsh
+        run: |
+          $actual = (git rev-parse HEAD).Trim()
+          if ($actual -ne $env:GITHUB_SHA) {
+            throw "Checkout SHA $actual differs from workflow SHA $env:GITHUB_SHA"
+          }
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Install desktop dependencies
+        working-directory: desktop
+        run: |
+          npm ci
+          npm audit --audit-level=high
+      - name: Require protected Windows signing identity
+        shell: pwsh
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:CSC_LINK)) {
+            throw "CORVIA_WINDOWS_CODE_SIGNING_CERT is required"
+          }
+          if ([string]::IsNullOrWhiteSpace($env:CSC_KEY_PASSWORD)) {
+            throw "CORVIA_WINDOWS_CODE_SIGNING_PASSWORD is required"
+          }
+          $expected = ($env:EXPECTED_SIGNING_CERT_SHA256 -replace '[^0-9A-Fa-f]', '').ToLowerInvariant()
+          if ($expected -notmatch '^[0-9a-f]{64}$') {
+            throw "CORVIA_WINDOWS_SIGNING_CERT_SHA256 repository variable is missing or invalid"
+          }
+      - name: Build NSIS installer
+        working-directory: desktop
+        run: npm run build:windows
+      - name: Verify Authenticode and generate immutable manifest
+        shell: pwsh
+        run: |
+          $installer = Get-ChildItem desktop/dist/CorVIA-Cardiology-Spaces-Windows-Setup-1.2.0.exe
+          $signature = Get-AuthenticodeSignature $installer.FullName
+          if ($signature.Status -ne [System.Management.Automation.SignatureStatus]::Valid) {
+            throw "Installer Authenticode status is $($signature.Status): $($signature.StatusMessage)"
+          }
+          if ($null -eq $signature.SignerCertificate) {
+            throw "Installer has no Authenticode signer certificate"
+          }
+          $actualCert = $signature.SignerCertificate.GetCertHashString([System.Security.Cryptography.HashAlgorithmName]::SHA256).ToLowerInvariant()
+          $expectedCert = ($env:EXPECTED_SIGNING_CERT_SHA256 -replace '[^0-9A-Fa-f]', '').ToLowerInvariant()
+          if ($actualCert -ne $expectedCert) {
+            throw "Authenticode signer fingerprint differs from the pinned certificate"
+          }
+          $hash = (Get-FileHash $installer.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  corvia-cardiology-spaces-windows-1.2.0.exe" | Set-Content -NoNewline desktop/dist/corvia-cardiology-spaces-windows-1.2.0.exe.sha256
+          $env:GITHUB_SHA | Set-Content -NoNewline desktop/dist/source-sha.txt
+          $actualCert | Set-Content -NoNewline desktop/dist/windows-signing-cert-sha256.txt
+          Copy-Item $installer.FullName desktop/dist/corvia-cardiology-spaces-windows-1.2.0.exe
+      - uses: actions/upload-artifact@v6
+        with:
+          name: corvia-cardiology-spaces-windows-1.2.0
+          path: |
+            desktop/dist/corvia-cardiology-spaces-windows-1.2.0.exe
+            desktop/dist/corvia-cardiology-spaces-windows-1.2.0.exe.sha256
+            desktop/dist/source-sha.txt
+            desktop/dist/windows-signing-cert-sha256.txt
+          if-no-files-found: error
+          retention-days: 14
+
+  android-source:
+    name: Android source 1.2.0
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+      - name: Prove exact source SHA
+        run: test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Build and synchronize Capacitor
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+          npx cap sync android
+      - name: Verify native identity and version
+        run: |
+          grep -F 'appName: "CorVIA Cardiology Spaces"' frontend/capacitor.config.ts
+          grep -F 'versionName "1.2.0"' frontend/android/app/build.gradle
+          grep -F 'versionCode 4' frontend/android/app/build.gradle

@@ -113,7 +113,7 @@ export default function ValidarDocumento() {
     <main className="corvia-validator" id="conteudo-principal">
       <section className="corvia-validator__panel">
         <header className="corvia-validator__header">
-          <img src="/corvia-logo-canonical-dark.svg" alt="CorVIA" />
+          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
           <p>Validação pública de documento clínico</p>
           <h1>Confira a autenticidade da emissão e da assinatura</h1>
           <span>O QR confirma o documento emitido pelo CorVIA sem revelar medicamentos, diagnóstico ou dados do paciente nesta página.</span>
