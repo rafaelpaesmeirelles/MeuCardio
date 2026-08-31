@@ -225,12 +225,22 @@ jobs:
             const page = await context.newPage();
             page.on('pageerror', (e) => report.pageErrors.push(`${page.url()} :: ${String(e)}`));
             await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
-            await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v2', 'seen'));
+            await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v3', 'seen'));
             await page.locator('#email').fill('rc2-acceptance@teste.local');
             await page.locator('#senha').fill('rc2-acceptance-seguro-123');
+            const sessionResponsePromise = page.waitForResponse((response) =>
+              response.url().endsWith('/api/auth/sessao') && response.request().method() === 'POST',
+              { timeout: 20000 },
+            );
+            const profileResponsePromise = page.waitForResponse((response) =>
+              response.url().endsWith('/api/auth/me') && response.request().method() === 'GET' && response.status() === 200,
+              { timeout: 20000 },
+            );
             await page.locator('button[type="submit"]').click();
-            await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
-            await page.waitForTimeout(500);
+            const [sessionResponse] = await Promise.all([sessionResponsePromise, profileResponsePromise]);
+            if (!sessionResponse.ok()) throw new Error(`login RC2: HTTP ${sessionResponse.status()}`);
+            await page.goto(`${base}/`, { waitUntil: 'networkidle' });
+            await page.locator('.spaces-choice, .spaces-home').first().waitFor({ state: 'visible', timeout: 10000 });
             await selectCompleteMode(page);
             return { context, page };
           }
@@ -240,7 +250,7 @@ jobs:
             if (await choice.isVisible().catch(() => false)) {
               // A aceitação das superfícies internas não deve ser desviada
               // pelo onboarding; o tour é validado separadamente.
-              await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v2', 'rc2-acceptance'));
+              await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v3', 'rc2-acceptance'));
               await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
             }
             await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
@@ -362,7 +372,7 @@ jobs:
 
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await selectCompleteMode(page);
-            await page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
+            await page.locator('.spaces-context-rail__all').click();
             const desktopAssistant = page.locator('.spaces-catalog a[href="/assistente"]').first();
             await desktopAssistant.waitFor({ state: 'visible', timeout: 10000 });
             await desktopAssistant.click();
@@ -376,13 +386,13 @@ jobs:
             await selectCompleteMode(mobile.page);
             await mobile.page.screenshot({ path: path.join(out, 'mobile-home.png'), fullPage: false });
             const labels = await mobile.page.locator('.spaces-dock > * span').allTextContents();
-            const expected = ['Prescrever', 'Solicitar exames', 'Prontuário', 'Documentos', 'Tudo com Tudo', 'Todas as funções'];
+            const expected = ['Prescrever', 'Solicitar exames', 'Prontuário', 'Documentos', 'Tudo com Tudo', 'Apoio CorVIA'];
             if (JSON.stringify(labels) !== JSON.stringify(expected)) fail(`mobile/dock divergente: ${JSON.stringify(labels)}`);
             await selectScientificMode(mobile.page);
             const mobileScientific = await mobile.page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
             if (mobileScientific.scrollWidth > mobileScientific.width + 16) fail(`mobile/ciência: overflow horizontal ${mobileScientific.scrollWidth} > ${mobileScientific.width}`);
             const scientificDock = await mobile.page.locator('.spaces-dock > * span').allTextContents();
-            const expectedScientificDock = ['Tudo com Tudo', 'Biblioteca', 'Evidências', 'Trilhas', 'Cursos', 'Documento IA', 'Todas as funções'];
+            const expectedScientificDock = ['Tudo com Tudo', 'Biblioteca', 'Evidências', 'Trilhas', 'Documento IA', 'Apresentar'];
             if (JSON.stringify(scientificDock) !== JSON.stringify(expectedScientificDock)) fail(`mobile/ciência dock divergente: ${JSON.stringify(scientificDock)}`);
             await mobile.page.screenshot({ path: path.join(out, 'mobile-scientific-learning-environment.png'), fullPage: false });
             await mobile.page.locator('.spaces-home__topbar nav button', { hasText: 'Completo' }).click();
@@ -398,7 +408,7 @@ jobs:
 
             await mobile.page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await selectCompleteMode(mobile.page);
-            await mobile.page.locator('.spaces-dock button', { hasText: 'Todas as funções' }).click();
+            await mobile.page.locator('.spaces-context-rail__all').click();
             const mobileAssistant = mobile.page.locator('.spaces-catalog a[href="/assistente"]').first();
             await mobileAssistant.waitFor({ state: 'visible', timeout: 10000 });
             await mobileAssistant.click();
