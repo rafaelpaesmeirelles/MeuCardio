@@ -38677,5 +38677,254 @@
       }
     ],
     "revisao": "Checklist extraído fielmente do documento já publicado marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia.md, com origem_secao rastreável em cada item. Pendente de revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "confirmacao-de-gravidade-e-gates-de-seguranca-na-hipercalemia-da-uco",
+    "condicao": "Confirmação de gravidade e gates de segurança na hipercalemia da UCO",
+    "resumo": "Checklist de conferência para a hipercalemia adulta na Unidade Coronariana — qualidade da amostra, classificação por faixa de potássio, papel do ECG, atribuição causal em parada, potássio/glicemia seriados e função renal — sem selecionar tratamento ou dose.",
+    "documento_origem": "hipercalemia-na-uco-gravidade-ecg-e-gates-de-seguranca",
+    "theme": "Terapia intensiva",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "UK Kidney Association. Clinical Practice Guideline: Management of Hyperkalaemia in Adults. Hospital section updated 19 Dec 2023.",
+      "American Heart Association. 2025 Guidelines for CPR and ECC, Part 10: Adult and Pediatric Special Circumstances of Resuscitation.",
+      "Durfey N, Lehnhof B, Bergeson A, et al. Severe Hyperkalemia: Can the Electrocardiogram Risk Stratify for Short-term Adverse Events? West J Emerg Med. 2017;18(5):963-971. PMID: 28874951.",
+      "Montague BT, Ouellette JR, Buller GK. Retrospective Review of the Frequency of ECG Changes in Hyperkalemia. Clin J Am Soc Nephrol. 2008;3(2):324-330. PMID: 18235147."
+    ],
+    "itens": [
+      {
+        "id": "hipercal-amostra-qualidade-desconhecida",
+        "categoria": "amostra",
+        "obrigatorio": true,
+        "texto": "Qualidade da amostra registrada como 'desconhecida' até conferência explícita, nunca assumida como 'confirmada' por default da interface",
+        "origem_secao": "Hemólise não transforma K grave em K normal"
+      },
+      {
+        "id": "hipercal-hemolise-repetir-coleta",
+        "categoria": "amostra",
+        "obrigatorio": true,
+        "texto": "Diante de suspeita de hemólise, coleta repetida prontamente em condições adequadas",
+        "origem_secao": "Hemólise não transforma K grave em K normal"
+      },
+      {
+        "id": "hipercal-hemolise-pseudo-hipercalemia",
+        "categoria": "amostra",
+        "obrigatorio": false,
+        "texto": "Causas de pseudo-hipercalemia pesquisadas conforme o contexto clínico",
+        "origem_secao": "Hemólise não transforma K grave em K normal"
+      },
+      {
+        "id": "hipercal-hemolise-nao-rebaixa-grave",
+        "categoria": "amostra",
+        "obrigatorio": true,
+        "texto": "Com K ≥6,5 mmol/L, classificação de hipercalemia grave/emergência mantida enquanto a repetição da amostra ocorre em paralelo — hemólise não usada para rebaixar automaticamente essa classificação",
+        "origem_secao": "Hemólise não transforma K grave em K normal"
+      },
+      {
+        "id": "hipercal-classificar-faixa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Potássio classificado na faixa operacional correta: 5,5–5,9 mmol/L (leve), 6,0–6,4 mmol/L (moderada) ou ≥6,5 mmol/L (grave/emergência mesmo sem alteração eletrocardiográfica marcante)",
+        "origem_secao": "Faixas operacionais adultas"
+      },
+      {
+        "id": "hipercal-priorizar-abaixo-de-6-5",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Prioridade aumentada mesmo com K abaixo de 6,5 mmol/L quando há instabilidade, bradiarritmia sintomática, arritmia ventricular grave ou alteração de ECG compatível",
+        "origem_secao": "Faixas operacionais adultas"
+      },
+      {
+        "id": "hipercal-ecg-realizado-ou-declarado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações realizado; se não realizado, estado declarado explicitamente como 'ECG não realizado', nunca como 'ECG normal'",
+        "origem_secao": "ECG: compatível aumenta risco; ausente não é normal"
+      },
+      {
+        "id": "hipercal-ecg-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG sem alterações marcantes não usado para neutralizar ou excluir hipercalemia diante de K ≥6,5 mmol/L",
+        "origem_secao": "ECG: compatível aumenta risco; ausente não é normal"
+      },
+      {
+        "id": "hipercal-ecg-nao-confundir-monitor",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em parada, ritmo do monitor/desfibrilador não confundido com um ECG de 12 derivações documentado",
+        "origem_secao": "ECG: compatível aumenta risco; ausente não é normal"
+      },
+      {
+        "id": "hipercal-parada-als-padrao",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Em parada cardíaca, ALS padrão aplicado; K discretamente aumentado (ex.: 5,5 mmol/L) não usado isoladamente como prova de que a parada foi causada por hipercalemia",
+        "origem_secao": "Parada cardiorrespiratória: atribuição causal precisa existir"
+      },
+      {
+        "id": "hipercal-parada-caminho-especifico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Caminho específico de hipercalemia como causa reversível aberto apenas com forte suspeita clínica/laboratorial declarada, integrando valor e tendência do potássio, função renal, ritmo/ECG, contexto metabólico e outras causas reversíveis",
+        "origem_secao": "Parada cardiorrespiratória: atribuição causal precisa existir"
+      },
+      {
+        "id": "hipercal-potassio-seriado-pendencia",
+        "categoria": "monitorizacao",
+        "obrigatorio": true,
+        "texto": "Em K ≥6,0 mmol/L, potássio seriado mantido como pendência explícita, independentemente de insulina/glicose já terem sido administradas",
+        "origem_secao": "Potássio seriado é gate próprio"
+      },
+      {
+        "id": "hipercal-glicemia-seriada-pos-insulina",
+        "categoria": "monitorizacao",
+        "obrigatorio": true,
+        "texto": "Após insulina/glicose, glicemia seriada monitorizada pelo risco de hipoglicemia tardia, como gate separado do potássio seriado",
+        "origem_secao": "Potássio seriado é gate próprio"
+      },
+      {
+        "id": "hipercal-funcao-renal-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função renal (LRA/oligúria/anúria) avaliada, considerando redução da capacidade de eliminação e maior risco de persistência/rebote do potássio",
+        "origem_secao": "Função renal e eliminação"
+      },
+      {
+        "id": "hipercal-kdigo-nao-indicacao-automatica",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Estágio KDIGO isolado não tratado como indicação automática de diálise",
+        "origem_secao": "Função renal e eliminação"
+      },
+      {
+        "id": "hipercal-considerar-brash",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Diante de bradicardia/choque com disfunção renal e uso de bloqueador nodal associados à hipercalemia, síndrome BRASH considerada como reconhecimento de padrão",
+        "origem_secao": "BRASH e toxicidade digitálica"
+      },
+      {
+        "id": "hipercal-digitalica-fluxo-proprio",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Diante de suspeita de toxicidade digitálica, fluxo toxicológico próprio aberto, distinto da avaliação isolada de hipercalemia",
+        "origem_secao": "BRASH e toxicidade digitálica"
+      }
+    ],
+    "revisao": "Checklist extraído do protocolo publicado sobre hipercalemia na UCO, cobrindo os gates de segurança de amostra, ECG, atribuição causal em parada, monitorização seriada e função renal descritos no documento de origem. Pendente de validação clínica."
+  },
+  {
+    "slug": "diagnostico-e-manejo-de-endocardite-infecciosa-na-gestante-e-puerpera",
+    "condicao": "Endocardite infecciosa na gestação e no puerpério",
+    "resumo": "O que checar ao suspeitar e conduzir endocardite infecciosa em gestante ou puérpera, mantendo a intensidade diagnóstica e terapêutica materna e adaptando antimicrobianos e decisão cirúrgica ao contexto gestacional, com Endocarditis Team e Pregnancy Heart Team acionados precocemente.",
+    "documento_origem": "endocardite-infecciosa-na-gestacao-e-puerperio",
+    "theme": "Gravidez",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "De Backer J, Haugaa KH, Hasselberg NE, et al.; ESC Scientific Document Group. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."
+    ],
+    "itens": [
+      {
+        "id": "ei-gest-suspeita-clinica",
+        "categoria": "gatilho_clinico",
+        "obrigatorio": true,
+        "texto": "Suspeitar de endocardite infecciosa diante de febre persistente sem foco claro, bacteremia por microrganismo típico, sopro novo ou piora de sopro conhecido, prótese valvar ou cardiopatia congênita com febre, fenômeno embólico, insuficiência cardíaca aguda por disfunção valvar, AVC/deficit neurológico em contexto infeccioso ou sinais de infecção de dispositivo",
+        "origem_secao": "Quando suspeitar"
+      },
+      {
+        "id": "ei-gest-hemoculturas",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Colher hemoculturas antes do antibiótico, desde que isso não atrase o tratamento de sepse/choque",
+        "origem_secao": "1. Diagnóstico"
+      },
+      {
+        "id": "ei-gest-eco-tt",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma transtorácico, sem evitá-lo por causa da gestação",
+        "origem_secao": "1. Diagnóstico"
+      },
+      {
+        "id": "ei-gest-eco-te",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Realizar ecocardiograma transesofágico quando indicado",
+        "origem_secao": "1. Diagnóstico"
+      },
+      {
+        "id": "ei-gest-investigacao-embolizacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Investigar embolização/complicações e aplicar os critérios ESC/Duke-ISCVID conforme o caso",
+        "origem_secao": "1. Diagnóstico"
+      },
+      {
+        "id": "ei-gest-fatores-selecao-antibiotico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Selecionar o antibiótico considerando simultaneamente o provável foco e válvula nativa/prótese, a microbiologia local, a função renal/hepática, alergias, a segurança materno-fetal do antimicrobiano e a idade gestacional (esquema e dose exigem verificação humana contra a diretriz de EI, infectologia e bula vigente)",
+        "origem_secao": "2. Antibiótico: o agente microbiológico manda, mas a gestação modifica a seleção"
+      },
+      {
+        "id": "ei-gest-antibiotico-empirico-nao-adiado",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na paciente instável, não adiar o antibiótico empírico de forma perigosa; ajustar ao agente e à sensibilidade após as culturas",
+        "origem_secao": "2. Antibiótico: o agente microbiológico manda, mas a gestação modifica a seleção"
+      },
+      {
+        "id": "ei-gest-acionar-equipes",
+        "categoria": "equipe",
+        "obrigatorio": true,
+        "texto": "Acionar precocemente Endocarditis Team e Pregnancy Heart Team, além de infectologia, cirurgia cardíaca, obstetrícia/medicina fetal e anestesia quando houver risco cirúrgico/de procedimento",
+        "origem_secao": "3. Acionar duas equipes"
+      },
+      {
+        "id": "ei-gest-indicacao-cirurgica-materna",
+        "categoria": "indicacao",
+        "obrigatorio": true,
+        "texto": "Reavaliar as indicações maternas clássicas de cirurgia — insuficiência cardíaca por destruição/disfunção valvar, infecção não controlada, abscesso/complicação perivalvar, prevenção de embolização em cenário de alto risco conforme diretriz e infecção protética complicada — sem usar a gravidez para adiar cirurgia salvadora quando há risco materno grave",
+        "origem_secao": "4. As indicações maternas de cirurgia continuam relevantes"
+      },
+      {
+        "id": "ei-gest-decisao-cirurgia-durante-gestacao",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Quando a cirurgia cardíaca for necessária durante a gestação, discutir em conjunto a urgência materna, a viabilidade fetal, a possibilidade de parto antes da cirurgia se clinicamente seguro, o risco de deterioração materna durante a espera e a capacidade neonatal local",
+        "origem_secao": "5. Cirurgia cardíaca durante a gestação"
+      },
+      {
+        "id": "ei-gest-choque-ic-emergencia",
+        "categoria": "emergencia",
+        "obrigatorio": true,
+        "texto": "Se a EI cursar com edema pulmonar, choque ou destruição valvar aguda, tratar como emergência de IC/choque com eco urgente, antibiótico apropriado e discussão cirúrgica imediata, sem prolongar tratamento clínico quando há indicação cirúrgica por lesão valvar estrutural grave",
+        "origem_secao": "6. Insuficiência cardíaca/choque"
+      },
+      {
+        "id": "ei-gest-avaliacao-neurologica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Integrar avaliação neurológica/imagem ao Endocarditis Team quando houver AVC/hemorragia intracraniana, pois isso pode alterar o timing cirúrgico e a anticoagulação",
+        "origem_secao": "7. Neurológico"
+      },
+      {
+        "id": "ei-gest-puerperio-nao-atribuir-a-foco-obstetrico",
+        "categoria": "gatilho_clinico",
+        "obrigatorio": true,
+        "texto": "No puerpério, não atribuir automaticamente a foco obstétrico febre puerperal com bacteremia, novo sopro, embolização ou insuficiência cardíaca",
+        "origem_secao": "8. Puerpério"
+      },
+      {
+        "id": "ei-gest-armadilha-antibiotico-unilateral",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Evitar escolher o antibiótico apenas pela segurança fetal deixando cobertura microbiológica inadequada, e evitar escolher apenas pelo protocolo adulto ignorando a fetotoxicidade",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente de content/Gravidez/endocardite-infecciosa-na-gestacao-e-puerperio.md; nenhum esquema/dose de antimicrobiano foi inventado — o próprio documento de origem declara que esquema/dose exigem verificação humana contra diretriz de EI, infectologia e bula vigente."
   }
 ]

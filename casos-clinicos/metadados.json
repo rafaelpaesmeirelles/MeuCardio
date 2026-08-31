@@ -18744,5 +18744,51 @@
       "Waxman AJ, Clasen S, Hwang WT, et al. Carfilzomib-Associated Cardiovascular Adverse Events: A Systematic Review and Meta-analysis. JAMA Oncol. 2018;4(3):e174519. DOI: 10.1001/jamaoncol.2017.4519. PMID: 29285538"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "sglt2i-na-icfer-continuar-apos-tfge-cair-abaixo-de-20",
+    "titulo": "ICFEr em uso de dapagliflozina: TFGe cai para 18 mL/min/1,73m² — suspender o iSGLT2?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Homem, 71 anos, ICFEr (FEVE 30%), DRC estágio 3b, em uso crônico bem tolerado de dapagliflozina, IECA, betabloqueador e espironolactona. Em consulta de rotina, exames mostram queda progressiva da TFGe, agora em 18 mL/min/1,73 m² (antes 24 mL/min/1,73 m² há 6 meses), sem sintomas de descompensação, sem hipotensão, sem hiperpotassemia (K+ 4,8 mEq/L), volemia clinicamente normal e sem uso recente de contraste ou nefrotóxico novo.",
+    "pergunta": "Qual conduta em relação à dapagliflozina está mais alinhada com a diretriz ESC 2026 sobre doença cardiovascular e doença renal crônica?",
+    "opcoes": [
+      "Suspender a dapagliflozina imediatamente, pois TFGe abaixo de 20 mL/min/1,73 m² é contraindicação formal a inibidor de SGLT2",
+      "Considerar a continuação da dapagliflozina, já tolerada e sem contraindicação específica no momento, mesmo com a TFGe abaixo de 20 mL/min/1,73 m², com monitorização apropriada",
+      "Trocar a dapagliflozina por um ARNI, já que ARNI tem perfil renal mais seguro nessa faixa de TFGe",
+      "Reduzir a dose da dapagliflozina pela metade para compensar a queda da TFGe, mantendo o mesmo princípio ativo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2026 para doença cardiovascular e doença renal crônica estabelece que, em pacientes que já utilizam inibidor de SGLT2, a continuação pode ser considerada mesmo quando a TFGe cai abaixo de 20 mL/min/1,73 m², desde que o fármaco seja tolerado e não haja contraindicação específica (recomendação Classe IIa, nível C). A ideia de que TFGe < 20 é corte automático para suspensão reflete um limiar antigo, anterior à evidência atual de segurança e benefício sustentado do iSGLT2 em faixas mais baixas de função renal, e não corresponde à recomendação vigente. Trocar por ARNI não resolve a questão colocada (a suspensão do iSGLT2) nem tem essa indicação na diretriz para este cenário, e o ARNI tem sua própria regra de continuação (TFGe < 30, IIa C) — não substitui a decisão sobre o iSGLT2. Redução de dose pela metade também não é a estratégia recomendada: a diretriz fala em manter ou suspender de acordo com tolerabilidade e contraindicação, não em ajuste posológico do iSGLT2 por função renal decrescente.",
+    "source_refs": [
+      "European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "egpa-anca-negativo-vigilancia-cardiaca-nao-deve-ser-reduzida",
+    "titulo": "EGPA ANCA-negativa recém-diagnosticada: o rastreio cardíaco pode esperar os sintomas?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 42 anos, com asma de início tardio há 3 anos, de difícil controle apesar de tratamento otimizado, associada a rinossinusite crônica com polipose nasal. Há 2 meses evoluiu com infiltrados pulmonares migratórios e eosinofilia periférica de 2.400 células/mm³. Biópsia de pele de lesão purpúrica mostrou inflamação eosinofílica extravascular sem vasculite necrosante florida. O quadro preenche critérios ACR/EULAR 2022 para granulomatose eosinofílica com poliangiite (EGPA). A investigação sorológica mostra ANCA negativo. Função renal é normal, sem hematúria, e o exame neurológico não mostra sinais de mononeurite múltipla. A paciente está assintomática do ponto de vista cardiovascular — nega dispneia, dor torácica, palpitações ou edema — e o exame físico cardiovascular é inocente.",
+    "pergunta": "Diante do resultado de ANCA negativo nesta paciente com EGPA recém-diagnosticada, qual a conduta mais apropriada quanto à avaliação cardiovascular?",
+    "opcoes": [
+      "Como o ANCA é negativo, o fenótipo tende a ser mais brando — sem glomerulonefrite nem mononeurite múltipla — logo o rastreio cardíaco pode ser adiado e reservado para o caso de surgirem sintomas cardiovasculares",
+      "Solicitar ativamente troponina, ECG, ecocardiograma e, quando disponível, ressonância cardíaca com realce tardio, mesmo na ausência de sintomas — porque o fenótipo ANCA-negativo concentra proporcionalmente mais risco de acometimento cardíaco (frequentemente subclínico), não menos",
+      "O rastreio cardíaco intensivo só se justifica se o ANCA fosse positivo, já que nesse subgrupo a lesão é mediada por vasculite coronariana; como o ANCA é negativo, o mecanismo predominante é eosinofílico direto e não costuma acometer o coração",
+      "Iniciar mepolizumabe (anti-IL-5) imediatamente como terapia de indução de primeira linha, dispensando avaliação cardíaca prévia, já que o bloqueio de IL-5 já previne a progressão para miocardite eosinofílica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ponto central deste caso é contraintuitivo e é exatamente o que o documento de origem enfatiza: a ausência de ANCA em EGPA não identifica um fenótipo mais brando, e sim um fenótipo com padrão de órgão-alvo diferente. Sablé-Fourtassou et al. (Annals of Internal Medicine, 2005, PMID 16263885) mostraram que pacientes ANCA-positivos concentram manifestações vasculíticas clássicas (glomerulonefrite, mononeurite múltipla, púrpura, hemorragia alveolar), enquanto pacientes ANCA-negativos concentram acometimento eosinofílico direto de órgão — incluindo, de forma proeminente, o coração. Como a cardiomiopatia é a manifestação mais fortemente associada a óbito em EGPA (Comarmond et al., Arthritis and Rheumatism, 2013, PMID 23044708), e o acometimento cardíaco costuma ser subclínico até estágios avançados, identificado por ressonância cardíaca com frequência maior do que a suspeita clínica isolada sugeriria (Hazebroek et al., International Journal of Cardiology, 2015, PMID 26209947), a ausência de ANCA deve manter ou intensificar a vigilância cardiovascular ativa (troponina, ECG, ecocardiograma, RM com realce tardio), não reduzi-la. A opção C inverte essa lógica ao supor que o mecanismo eosinofílico direto (típico do ANCA-negativo) poupa o coração — é justamente o oposto: é esse o mecanismo que mais lesiona o miocárdio no espectro EGPA/hipereosinofílico. A opção D erra o posicionamento terapêutico do mepolizumabe: o ensaio de Wechsler et al. (New England Journal of Medicine, 2017, PMID 28514601) e as recomendações de consenso (Groh et al., European Journal of Internal Medicine, 2015, PMID 25971154) posicionam o mepolizumabe para doença recidivante/refratária ou como poupador de glicocorticoide, não como substituto da indução clássica (corticoide em dose alta associado a ciclofosfamida ou rituximabe) diante de manifestação órgão-ameaçadora, nem como dispensador de avaliação cardíaca.",
+    "source_refs": [
+      "Grayson PC, Ponte C, Suppiah R, Robson JC, Craven A, Judge A, Khalid S, Hutchings A, Luqmani RA, Watts RA, Merkel PA; DCVAS Study Group. 2022 American College of Rheumatology/European Alliance of Associations for Rheumatology Classification Criteria for Eosinophilic Granulomatosis With Polyangiitis. Arthritis & Rheumatology. 2022;74(3):386-392. DOI: 10.1002/art.41982. PMID: 35106968",
+      "Comarmond C, Pagnoux C, Khellaf M, et al.; French Vasculitis Study Group. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss): clinical characteristics and long-term followup of the 383 patients enrolled in the French Vasculitis Study Group cohort. Arthritis and Rheumatism. 2013;65(1):270-281. DOI: 10.1002/art.37721. PMID: 23044708",
+      "Sablé-Fourtassou R, Cohen P, Mahr A, et al. Antineutrophil cytoplasmic antibodies and the Churg-Strauss syndrome. Annals of Internal Medicine. 2005;143(9):632-638. DOI: 10.7326/0003-4819-143-9-200511010-00006. PMID: 16263885",
+      "Dennert RM, van Paassen P, Schalla S, et al. Cardiac involvement in Churg-Strauss syndrome. Arthritis and Rheumatism. 2010;62(2):627-634. DOI: 10.1002/art.27263. PMID: 20112390",
+      "Hazebroek MR, Kemna MJ, Schalla S, et al. Prevalence and prognostic relevance of cardiac involvement in ANCA-associated vasculitis: eosinophilic granulomatosis with polyangiitis and granulomatosis with polyangiitis. International Journal of Cardiology. 2015;199:170-179. DOI: 10.1016/j.ijcard.2015.06.087. PMID: 26209947",
+      "Groh M, Pagnoux C, Baldini C, et al. Eosinophilic granulomatosis with polyangiitis (Churg-Strauss) (EGPA) Consensus Task Force recommendations for evaluation and management. European Journal of Internal Medicine. 2015;26(7):545-553. DOI: 10.1016/j.ejim.2015.04.022. PMID: 25971154",
+      "Wechsler ME, Akuthota P, Jayne D, et al.; EGPA Mepolizumab Study Team. Mepolizumab or Placebo for Eosinophilic Granulomatosis with Polyangiitis. New England Journal of Medicine. 2017;376(20):1921-1932. DOI: 10.1056/NEJMoa1702079. PMID: 28514601"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
