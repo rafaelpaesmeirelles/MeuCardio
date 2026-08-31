@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState, type ReactNode } from "
 import { api, type Usuario } from "./api";
 
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
+const INVESTOR_TOUR_SESSION_KEY = "corvia:cardiology-spaces:investor-tour-session:v1";
 
 type Estado = {
   usuario: Usuario | null;
@@ -53,11 +54,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // atualizar o contexto é suficiente para o App encaminhar o primeiro
     // acesso a /minha-conta, KYC ou tour.
     const perfil = await api.get<Usuario>("/auth/me");
+    // O perfil Investidor deve receber o tour a cada novo login. O marcador é
+    // mantido apenas durante a sessão atual para impedir loop entre páginas.
+    if (perfil.investidor) window.sessionStorage.removeItem(INVESTOR_TOUR_SESSION_KEY);
     setUsuario(perfil);
   }
 
   async function sair() {
     await api.logout();
+    window.sessionStorage.removeItem(INVESTOR_TOUR_SESSION_KEY);
     setUsuario(null);
   }
 
