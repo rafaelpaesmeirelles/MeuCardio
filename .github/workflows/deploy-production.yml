@@ -104,7 +104,10 @@ jobs:
     environment: production
     env:
       TARGET_SHA: ${{ needs.certify.outputs.sha }}
-      ANDROID_CERT_SHA256: ${{ vars.CORVIA_ANDROID_CERT_SHA256 }}
+      # Public fingerprint of the existing production release certificate.
+      # The repository variable remains an explicit override for a controlled
+      # certificate rotation; no private signing material is stored in Git.
+      ANDROID_CERT_SHA256: ${{ vars.CORVIA_ANDROID_CERT_SHA256 || '1344fed66fce26841b5fbb6a302a27ad5cd207c1b8fb989005e9be370148ce5e' }}
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
