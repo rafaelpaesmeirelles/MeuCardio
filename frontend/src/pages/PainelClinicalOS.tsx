@@ -44,6 +44,7 @@ type ConfigMapa = { provider: string; configured: boolean; api_key: string | nul
 type EstadoPermissao = "desconhecida" | "concedida" | "negada" | "indisponivel";
 type ModuloItem = { to: string; label: string; icon: NomeIcone; adminOnly?: boolean };
 type ModuloGrupo = { title: string; tone: "cyan" | "violet" | "blue" | "amber" | "teal" | "slate"; icon: NomeIcone; items: ModuloItem[] };
+type ConexaoCortex = { to: string; titulo: string; detalhe: string; icone: NomeIcone; tone: string; slot: string };
 
 const ACOES: AcaoRapida[] = [
   { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices", icone: "calculadora", tone: "amber" },
@@ -54,6 +55,21 @@ const ACOES: AcaoRapida[] = [
   { to: "/receituario", titulo: "Prescrever", detalhe: "Novo receituário", icone: "prescricao", tone: "cyan" },
   { to: "/documentos", titulo: "Solicitar exames", detalhe: "Adicionar solicitação", icone: "clinica", tone: "blue" },
   { to: "/busca?modo=tudo-com-tudo", titulo: "Tudo com Tudo", detalhe: "Tema completo, organizado por áreas", icone: "busca", tone: "violet" },
+];
+
+const CONEXOES_CORTEX: ConexaoCortex[] = [
+  { to: "/exames-ia", titulo: "IA para Exames", detalhe: "Interpretação cardiovascular multimodal", icone: "ecg", tone: "cyan", slot: "left-1" },
+  { to: "/fluxogramas", titulo: "Fluxogramas clínicos", detalhe: "Decisão passo a passo", icone: "seta", tone: "cyan", slot: "left-2" },
+  { to: "/calculadoras", titulo: "Calculadoras", detalhe: "Escores e índices clínicos", icone: "calculadora", tone: "cyan", slot: "left-3" },
+  { to: "/material-paciente", titulo: "Material para paciente", detalhe: "Orientações claras e personalizadas", icone: "documento", tone: "violet", slot: "left-4" },
+  { to: "/interacoes", titulo: "Interações medicamentosas", detalhe: "Risco, gravidade e conduta", icone: "medicamento", tone: "violet", slot: "right-1" },
+  { to: "/corvia-mail", titulo: "CorVIA Mail", detalhe: "Comunicação clínica segura", icone: "mail", tone: "violet", slot: "right-2" },
+  { to: "/triagem-sintomas", titulo: "Triagem de sintomas", detalhe: "Sinais de alerta e prioridade", icone: "triagem", tone: "cyan", slot: "right-3" },
+  { to: "/evidencias", titulo: "Evidências", detalhe: "Recomendações rastreáveis", icone: "evidencia", tone: "violet", slot: "right-4" },
+  { to: "/receituario", titulo: "Prescrever", detalhe: "Receituário inteligente", icone: "prescricao", tone: "violet", slot: "bottom-1" },
+  { to: "/medicamentos", titulo: "Medicamentos", detalhe: "Doses, ajustes e segurança", icone: "medicamento", tone: "violet", slot: "bottom-2" },
+  { to: "/biblioteca", titulo: "Biblioteca científica", detalhe: "Conhecimento clínico integrado", icone: "conhecimento", tone: "violet", slot: "bottom-3" },
+  { to: "/diretrizes", titulo: "Guidelines", detalhe: "Diretrizes nacionais e internacionais", icone: "conhecimento", tone: "violet", slot: "bottom-4" },
 ];
 
 const MODULOS: ModuloGrupo[] = [
@@ -202,6 +218,7 @@ export default function PainelClinicalOS() {
   const [calculandoRota, setCalculandoRota] = useState(false);
   const [erroRota, setErroRota] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const approvedInputRef = useRef<HTMLInputElement>(null);
   const chamadaRotaEmCurso = useRef(false);
   const ultimaRotaEm = useRef(0);
 
@@ -244,7 +261,7 @@ export default function PainelClinicalOS() {
   }, [mobilidade?.enabled]);
 
   useEffect(() => {
-    function focar(evento: KeyboardEvent) { if (evento.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") { evento.preventDefault(); inputRef.current?.focus(); } }
+    function focar(evento: KeyboardEvent) { if (evento.key === "/" && document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") { evento.preventDefault(); (window.matchMedia("(min-width: 901px)").matches ? approvedInputRef : inputRef).current?.focus(); } }
     document.addEventListener("keydown", focar); return () => document.removeEventListener("keydown", focar);
   }, []);
 
@@ -425,24 +442,98 @@ export default function PainelClinicalOS() {
   const grupos = MODULOS.map((grupo) => ({ ...grupo, items: grupo.items.filter((item) => !item.adminOnly || usuario?.role === "admin") })).filter((grupo) => grupo.items.length);
 
   return (
-    <div className="ccc-home ccc-home--board ccc-reference-board">
+    <>
+      <section className="ccc-approved-main" aria-label="Página inicial CorVIA Clinical OS">
+        <div className="ccc-approved-main__canvas">
+          <img src="/corvia-home-approved-v1.png" alt="CorVIA Clinical OS — O que você precisa agora?" />
+
+          <nav className="ccc-approved-main__hotspots" aria-label="Acessos rápidos da página inicial">
+            <Link data-spot="top-search" to="/busca"><span>Pesquisar no CorVIA</span></Link>
+            <Link data-spot="account" to="/minha-conta"><span>Minha conta</span></Link>
+            <Link data-spot="new" to="/documentos"><span>Novo documento</span></Link>
+            <Link data-spot="notifications" to="/diretrizes"><span>Notificações</span></Link>
+            <Link data-spot="mail-top" to="/corvia-mail"><span>CorVIA Mail</span></Link>
+
+            <Link data-spot="nav-home" to="/"><span>Página inicial</span></Link>
+            <Link data-spot="nav-diseases" to="/doencas"><span>Guia de Doenças</span></Link>
+            <Link data-spot="nav-drugs" to="/medicamentos"><span>Medicamentos</span></Link>
+            <Link data-spot="nav-exams" to="/exames"><span>Exames</span></Link>
+            <Link data-spot="nav-calculators" to="/calculadoras"><span>Calculadoras</span></Link>
+            <Link data-spot="nav-emergency" to="/emergencia"><span>Emergências</span></Link>
+            <Link data-spot="nav-icu" to="/cardiologia-intensiva"><span>Cardiologia Intensiva e UCO</span></Link>
+            <Link data-spot="nav-checklists" to="/checklists"><span>Checklists</span></Link>
+            <Link data-spot="nav-screening" to="/triagem-sintomas"><span>Triagem de sintomas</span></Link>
+            <Link data-spot="nav-interactions" to="/interacoes"><span>Interações medicamentosas</span></Link>
+            <Link data-spot="nav-conditions" to="/condicoes"><span>Condições especiais</span></Link>
+            <Link data-spot="nav-flows" to="/fluxogramas"><span>Fluxogramas clínicos</span></Link>
+            <Link data-spot="nav-preop" to="/avaliacao-preoperatoria"><span>Avaliação pré-operatória</span></Link>
+
+            <Link data-spot="exams-ai" to="/exames-ia"><span>IA para Exames</span></Link>
+            <Link data-spot="flows" to="/fluxogramas"><span>Fluxogramas clínicos</span></Link>
+            <Link data-spot="calculators" to="/calculadoras"><span>Calculadoras</span></Link>
+            <Link data-spot="patient-material-left" to="/material-paciente"><span>Material para paciente</span></Link>
+            <Link data-spot="interactions" to="/interacoes"><span>Interações medicamentosas</span></Link>
+            <Link data-spot="mail" to="/corvia-mail"><span>CorVIA Mail</span></Link>
+            <Link data-spot="patient-material-right" to="/material-paciente"><span>Material para paciente</span></Link>
+            <Link data-spot="evidence" to="/evidencias"><span>Evidências</span></Link>
+            <Link data-spot="prescribe" to="/receituario"><span>Prescrever</span></Link>
+            <Link data-spot="medications" to="/medicamentos"><span>Medicamentos</span></Link>
+            <Link data-spot="library" to="/biblioteca"><span>Biblioteca científica</span></Link>
+          </nav>
+
+          <form className="ccc-approved-main__command" data-active={comando.trim() ? "true" : "false"} onSubmit={executar} role="search">
+            <input ref={approvedInputRef} value={comando} onChange={(event) => setComando(event.target.value)} placeholder=" " aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
+            <button type="submit" aria-label="Conectar e executar">Conectar</button>
+          </form>
+        </div>
+      </section>
+
+      <div className="ccc-home ccc-home--board ccc-reference-board">
       <main className="ccc-home__main">
         <header className="ccc-home__welcome">
-          <h1>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}! <span aria-hidden="true">👋</span></h1>
-          <p>O que você precisa resolver agora?</p>
+          <span className="ccc-home__live"><i /> CorVIA Clinical OS</span>
+          <div>
+            <h1>{saudacao()}, Dr. {primeiroNome(usuario?.full_name)}!</h1>
+            <p>Seu centro de decisão clínica está pronto.</p>
+          </div>
         </header>
 
-        <form className="ccc-command" onSubmit={executar} role="search">
-          <Icone nome="busca" />
-          <input ref={inputRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute uma ação..." aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
-          <kbd>⌘ K</kbd>
-          <button type="submit" aria-label="Executar comando"><Icone nome="seta" /></button>
-        </form>
-        <div className="ccc-examples" aria-label="Exemplos de comandos"><span>Exemplos:</span>{EXEMPLOS.map((texto) => <button key={texto} type="button" onClick={() => usarExemplo(texto)}>{texto}</button>)}</div>
+        <section className="ccc-clinical-cortex" aria-labelledby="ccc-cortex-title">
+          <header className="ccc-cortex__copy">
+            <h2 id="ccc-cortex-title">O que você precisa agora?</h2>
+          </header>
 
-        <section className="ccc-section ccc-actions-section" aria-labelledby="ccc-actions-title">
-          <div className="ccc-section__head"><h2 id="ccc-actions-title">Ações rápidas</h2><Link to="/busca"><Icone nome="configuracao" /> Personalizar</Link></div>
-          <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
+          <div className="ccc-cortex__stage">
+            <div className="ccc-cortex__network" aria-hidden="true">
+              <i /><i /><i /><i /><i />
+            </div>
+
+            <div className="ccc-cortex__heart" aria-hidden="true">
+              <span /><span /><span />
+              <img src="/corvia-cortex-heart-v2.png" alt="" />
+            </div>
+
+            <nav className="ccc-cortex__connections" aria-label="Conexões do Tudo com Tudo">
+              {CONEXOES_CORTEX.map((conexao) => <Link to={conexao.to} key={conexao.slot} className="ccc-cortex-card" data-slot={conexao.slot} data-tone={conexao.tone}><span className="ccc-cortex-card__icon"><Icone nome={conexao.icone} /></span><span><strong>{conexao.titulo}</strong><small>{conexao.detalhe}</small><em>Abrir <Icone nome="seta" /></em></span></Link>)}
+            </nav>
+
+            <div className="ccc-cortex__core">
+              <strong>Tudo com Tudo</strong>
+              <p>Um assunto, todas as conexões</p>
+              <form className="ccc-command" onSubmit={executar} role="search">
+                <Icone nome="busca" />
+                <input ref={inputRef} value={comando} onChange={(e) => setComando(e.target.value)} placeholder="Pergunte, pesquise ou execute..." aria-label="Pergunte, pesquise ou execute uma ação" autoComplete="off" />
+                <kbd>⌘ K</kbd>
+                <button type="submit" aria-label="Conectar e executar"><span>Conectar</span><Icone nome="seta" /></button>
+              </form>
+              <div className="ccc-examples" aria-label="Exemplos de comandos">{EXEMPLOS.slice(0, 3).map((texto) => <button key={texto} type="button" onClick={() => usarExemplo(texto)}>{texto}</button>)}</div>
+            </div>
+          </div>
+
+          <section className="ccc-section ccc-actions-section ccc-cortex__mobile-actions" aria-labelledby="ccc-actions-title">
+            <div className="ccc-section__head"><h2 id="ccc-actions-title">Ações rápidas</h2><Link to="/busca"><Icone nome="configuracao" /> Personalizar</Link></div>
+            <div className="ccc-actions">{ACOES.map((acao) => <Link to={acao.to} key={acao.titulo} className={`ccc-action ccc-action--${acao.icone}${acao.featured ? " is-featured" : ""}`} data-tone={acao.tone}>{acao.featured && <em className="ccc-action__featured">Destaque</em>}<span className="ccc-action__icon"><Icone nome={acao.icone} /></span><span><strong>{acao.titulo}</strong><small>{acao.detalhe}</small></span></Link>)}</div>
+          </section>
         </section>
 
         <section className="ccc-mobile-summary ccc-reference-summary" aria-label="Resumo do dia e próximo deslocamento">
@@ -532,6 +623,7 @@ export default function PainelClinicalOS() {
           <button type="button" className="ccc-assistant-input" onClick={abrirAssistentePessoal}><span>Pergunte ou peça algo...</span><Icone nome="assistente" /></button>
         </section>
       </aside>
-    </div>
+      </div>
+    </>
   );
 }
