@@ -1087,3 +1087,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 79 (7 descartados por colisão) | 121 |
 | **Total** | **4.900** | **269** | **4.631** |
+
+## Lote 53 — concluído (commit 46c664b3)
+
+- **4 documentos** (infecções congênitas/zoonoses/exantemáticas): síndrome da rubéola congênita (persistência do canal arterial e estenose de artéria pulmonar periférica, tríade de Gregg, situação epidemiológica brasileira de eliminação verificada em 2015 sob pressão de cobertura vacinal em queda — `content/Cardiologia_pediátrica`), doença da arranhadura do gato clássica (linfadenite regional benigna com miocardite e vasculite como complicações extra-endocárdicas raras, documento deliberadamente distinto e complementar ao já publicado sobre endocardite por Bartonella — `content/Geral`), varicela e acometimento cardiovascular (miocardite/pericardite na infecção aguda e vasculopatia cerebral pós-varicela como causa bem estabelecida de AVC isquêmico pediátrico, consórcio VIPS/VIPS II — `content/Geral`), citomegalovirose congênita e acometimento cardiovascular (quadro clássico bem estabelecido versus acometimento cardíaco direto sustentado por apenas 3 relatos de caso isolados, sem integrar nenhuma definição-padrão de doença sintomática usada nos ensaios de referência — `content/Cardiologia_pediátrica`).
+- **doencas**: +4, pareadas 1:1 — `sindrome-da-rubeola-congenita`, `doenca-da-arranhadura-do-gato-classica`, `acometimento-cardiovascular-da-varicela`, `citomegalovirose-congenita-com-acometimento-cardiovascular`.
+- **2 tópicos despachados neste lote, corretamente descartados por colisão real**: esquistossomose/cor pulmonale esquistossomótico (já coberta e revisada em 2 documentos completos sobre hipertensão pulmonar associada, incluindo mecanismo/subdiagnóstico e epidemiologia/prognóstico brasileiro) e malária grave/acometimento cardiovascular (já coberta e publicada, com distinção honesta entre miocardite documentada por autópsia e choque multifatorial/malária álgida). Ambos os agentes identificaram a colisão antes de escrever qualquer conteúdo — nenhuma perda de trabalho.
+- **Correção de processo**: um typo de slug (`toxocariase-larus-` em vez de `toxocariase-larva-`) no corpo do documento de arranhadura do gato, corrigido por conferência programática contra o slug real do arquivo já publicado na branch, antes da integração.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.464 itens.
+
+### Status consolidado (após Lote 53)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 89 | 2.311 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 83 (9 descartados por colisão) | 117 |
+| **Total** | **4.900** | **277** | **4.623** |
