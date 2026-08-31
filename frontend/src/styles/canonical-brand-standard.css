@@ -2,6 +2,23 @@
 img[src="/logo-marca.png"]{content:url("/corvia-mark-canonical.svg")}
 .cos-brand__mark img,.cos-topbar__mobile-brand img,.cos-drawer__head img{object-fit:contain}
 
+/* O produto evoluiu de Clinical OS / Clinical Command Center para
+   CorVIA Cardiology Spaces. O shell legado permanece somente como estrutura
+   técnica de compatibilidade; nenhuma nomenclatura antiga pode aparecer na UI. */
+.cos-nav__home small{
+  font-size:0!important;
+  line-height:1!important;
+  color:transparent!important;
+}
+.cos-nav__home small::after{
+  content:"Cardiology Spaces";
+  display:inline-block;
+  color:var(--texto-secundario,#8aa4b4);
+  font-size:.62rem;
+  line-height:1.15;
+  letter-spacing:.04em;
+}
+
 /* Cursos foi retirado do produto. Mantemos os endpoints legados apenas para
    redirecionamento seguro em App.tsx; nenhum shell pode continuar oferecendo
    esse destino como opção navegável, inclusive layouts antigos ainda montados
