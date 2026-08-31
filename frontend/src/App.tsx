@@ -59,6 +59,7 @@ const Evidencia = lazy(() => import("./pages/Evidencia"));
 const Estudos = lazy(() => import("./pages/Estudos"));
 const Estudo = lazy(() => import("./pages/Estudo"));
 const Agenda = lazy(() => import("./pages/Agenda"));
+const SpaceTravelMap = lazy(() => import("./pages/SpaceTravelMap"));
 const Templates = lazy(() => import("./pages/Templates"));
 const AvaliacaoPreOperatoria = lazy(() => import("./pages/AvaliacaoPreOperatoria"));
 const EmBreve = lazy(() => import("./pages/EmBreve"));
@@ -210,6 +211,7 @@ export default function App() {
           <Route path="ecg-ia" element={<CardiovascularExamAI />} />
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
+          <Route path="deslocamento" element={<SpaceTravelMap />} />
           <Route path="documentos" element={<Templates />} />
           <Route path="exportar" element={<ExportarConteudo />} />
           <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
