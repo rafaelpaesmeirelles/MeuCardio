@@ -1768,3 +1768,27 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **427** | **4.473** |
+
+## Lote 84 — concluído (commit 9cbe0b74)
+
+- **2 casos clínicos**:
+  - **Insuficiência cardíaca**: ICFEr com TFGe caindo abaixo de 20 — continuação de iSGLT2 conforme ESC 2026 cardiorrenal (IIa C), não suspensão automática por corte antigo.
+  - **Cardiomiopatias**: EGPA ANCA-negativa — por que a ausência de ANCA concentra risco cardíaco subclínico, não o reduz (inverte a intuição de "ANCA-negativo = fenótipo brando").
+- **2 checklists**:
+  - **Terapia intensiva**: gates de segurança na hipercalemia da UCO (qualidade de amostra, faixas operacionais, ECG, atribuição causal em parada), 17 itens.
+  - **Gravidez**: diagnóstico e manejo de endocardite infecciosa na gestante/puérpera, 14 itens.
+- **1 documento standalone** (`content/Cardiorrenal/`, novo): morte súbita cardíaca em hemodiálise — ciclo dialítico, longo intervalo interdialítico (Bleyer 1999, Karnik 2001, Foley/Collins NEJM 2011) e a mudança de paradigma arrítmico de taquiarritmia hipercalêmica para bradiarritmia/assistolia predominante (Wong 2015, MiD 2018), incluindo o ICD2 inconclusivo sobre CDI profilático em diálise. Campo `theme` corrigido de "Nefrologia cardiovascular" (sugestão inicial do agente) para "Cardiorrenal", único nome de pasta física existente.
+- **Verificação de integridade**: nenhum slug colide (911 casos / 469 checklists / 2.765 slugs de content+doenças conferidos); `documento_origem` de ambos checklists confirmado; 6 links de Tudo com Tudo do documento re-verificados.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.689 itens.
+
+### Status consolidado (após Lote 84)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 175 | 2.225 |
+| Casos clínicos | 900 | 58 | 842 |
+| Checklists | 600 | 45 | 555 |
+| Materiais-paciente | 500 | 38 | 462 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **432** | **4.468** |
