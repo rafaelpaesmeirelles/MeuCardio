@@ -22,3 +22,42 @@ body.corvia-space--gestao .clinical-os .ccc-nav--reference .ccc-nav__brand-copy 
     width:calc(100% - 34px)!important;
   }
 }
+
+/* Polimento da referência 1536×864. A agenda real pode estar vazia no QA,
+   mas a coluna “Meu dia entre espaços” mantém a silhueta alta da prancha
+   aprovada. O conteúdo rola dentro do painel quando houver mais eventos. */
+@media (min-width:1100px){
+  body.cardiology-spaces-active .spaces-day{
+    align-self:end!important;
+    width:194px!important;
+    height:334px!important;
+    min-height:334px!important;
+    max-height:334px!important;
+    margin-bottom:50px!important;
+    overflow:auto!important;
+  }
+
+  /* Na referência o controle de personalização é uma cápsula baixa, e não
+     um terceiro plano trapezoidal. Impedimos o stretch automático da grid. */
+  body.cardiology-spaces-active .spaces-home .spaces-personalize{
+    align-self:center!important;
+    width:220px!important;
+    min-width:220px!important;
+    height:40px!important;
+    min-height:40px!important;
+    max-height:40px!important;
+    padding:7px 18px!important;
+  }
+
+  /* A pílula do médico e o dock ficam suspensos imediatamente abaixo dos
+     planos, como na prancha aprovada, sem alterar a geometria dos portais. */
+  body.cardiology-spaces-active .spaces-home .spaces-doctor{
+    transform:translateY(-22px)!important;
+  }
+  body.cardiology-spaces-active .spaces-home .spaces-dock{
+    transform:translateY(-24px)!important;
+  }
+  body.cardiology-spaces-active .spaces-home .spaces-motto{
+    transform:translateY(-12px)!important;
+  }
+}
