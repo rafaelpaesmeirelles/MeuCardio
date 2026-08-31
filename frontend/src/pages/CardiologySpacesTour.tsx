@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import CardiologySpaceScene, { type CardiologySpaceSceneId } from "../components/CardiologySpaceScene";
 import Icone, { type NomeIcone } from "../components/Icone";
@@ -82,7 +82,7 @@ function TourVisual({ type }: { type: Visual }) {
   if (type === "layers") return <div className="cst-layers"><span className="is-now"><small>AGORA</small><b>Abrir round</b><b>Registrar evolução</b><b>Prescrever</b></span><span><small>EM SEGUIDA</small><b>Revisar exames</b><b>Documentos</b><b>Checklists</b></span><span><small>REFERÊNCIAS</small><b>Diretrizes</b><b>Calculadoras</b><b>Emergências</b></span></div>;
   if (type === "day") return <div className="cst-day"><h3>Meu dia entre espaços</h3><span className="blue"><i /><b>Hospital</b><small>07:00–13:00</small></span><span className="cyan"><i /><b>Consultório</b><small>15:00–18:00</small></span><span className="violet"><i /><b>Estudo</b><small>20:00</small></span><strong><Icone nome="rota" /> Deslocamento <small>18 min</small></strong></div>;
   if (type === "orbit") return <div className="cst-orbit"><span className="planet origin"><i /><b>AGORA</b></span><span className="route"><i /></span><span className="planet destination"><i /><b>HOSPITAL</b></span><em>18 min · rota recomendada</em></div>;
-  if (type === "relations") return <div className="cst-relations"><strong>Tudo com Tudo</strong>{["Doença", "Exame", "Medicamento", "Diretriz", "Evidência", "Calculadora", "Caso", "Documento"].map((label, index) => <span style={{ "--i": index } as React.CSSProperties} key={label}>{label}</span>)}</div>;
+  if (type === "relations") return <div className="cst-relations"><strong>Tudo com Tudo</strong>{["Doença", "Exame", "Medicamento", "Diretriz", "Evidência", "Calculadora", "Caso", "Documento"].map((label, index) => <span style={{ "--i": index } as CSSProperties} key={label}>{label}</span>)}</div>;
   return <div className="cst-essential"><section><small>CONSULTÓRIO</small><strong>Prescrever</strong><span>Agenda · Prontuário · Exames</span></section><section className="is-active"><small>HOSPITAL</small><strong>Round</strong><span>Exames · Documentos · Checklists</span></section><section><small>PESQUISA</small><strong>Evidências</strong><span>Estudos · Biblioteca · Exportar</span></section></div>;
 }
 
