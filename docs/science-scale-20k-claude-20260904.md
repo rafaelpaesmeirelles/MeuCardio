@@ -1744,3 +1744,27 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **421** | **4.479** |
+
+## Lote 83 — concluído (commit 122c55c4)
+
+- **2 casos clínicos** — casos clínicos seguiu como categoria mais atrasada (6,0%) após o Lote 82.
+  - **Valvopatias**: leak paravalvular mitral com hemólise — meta procedural de fechamento percutâneo (redução >90% do jato residual), diferente da tolerância a resíduo aceita quando a indicação é IC (PMID 42355433).
+  - **Cardio-oncologia**: hipertensão nova sob carfilzomibe interpretada como provável evento cardiovascular do fármaco, não achado incidental — metanálise de Waxman et al. mostra idade >65 anos e terapia prévia como NÃO associadas a maior risco, contraintuitivamente (PMID 29285538).
+- **2 materiais-paciente** — categoria parada desde o Lote 80 (36), agora reativada:
+  - **Insuficiência cardíaca**: cardiomiopatia induzida por taquicardia — coração fraco por arritmia que pode reverter, com alerta sobre recorrência em >50% em 6 meses.
+  - **Doença coronariana**: ponte miocárdica — anomalia congênita geralmente benigna, com alerta específico de que nitrato pode piorar (em vez de aliviar) a dor nesse cenário.
+- **1 checklist**: marca-passo temporário transvenoso na emergência — indicação, escolha de acesso (jugular preferido se implante planejado; subclávia evitada) e vigilância de tamponamento/pneumotórax, 10 itens.
+- **Verificação de integridade**: nenhum slug colide (909 casos / 443 materiais / 468 checklists pré-existentes conferidos); todos os `documento_slug`/`documento_origem` confirmados como arquivos reais em `content/`.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.684 itens.
+
+### Status consolidado (após Lote 83)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 174 | 2.226 |
+| Casos clínicos | 900 | 56 | 844 |
+| Checklists | 600 | 43 | 557 |
+| Materiais-paciente | 500 | 38 | 462 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **427** | **4.473** |
