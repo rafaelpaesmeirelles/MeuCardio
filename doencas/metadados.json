@@ -54677,5 +54677,233 @@
       "deficiencia-de-vlcad-cardiomiopatia-neonatal-e-diagnostico-diferencial-com-cardiomiopatias-metabolicas-pediatricas"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "lipodistrofia-congenita-generalizada",
+    "name": "Lipodistrofia Congênita Generalizada (Síndrome de Berardinelli-Seip)",
+    "aliases": [
+      "síndrome de Berardinelli-Seip",
+      "lipodistrofia congênita generalizada tipo 1",
+      "lipodistrofia congênita generalizada tipo 2",
+      "deficiência congênita generalizada de tecido adiposo",
+      "BSCL"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "lipodistrofia genética rara com acometimento cardiometabólico",
+    "prevalence_rank": 158,
+    "completeness": "completo",
+    "summary": "Doença autossômica recessiva ultrarrara caracterizada por ausência quase total de tecido adiposo desde o nascimento, causada mais comumente por mutações em AGPAT2 (tipo 1) ou BSCL2/seipina (tipo 2). Cursa com resistência insulínica extrema, diabetes de início muito precoce, hipertrigliceridemia grave com risco de pancreatite aguda e esteato-hepatite, além de cardiomiopatia hipertrófica em cerca de 20-25% dos pacientes — cujo mecanismo (lipotoxicidade, hiperinsulinismo trófico, ou hipercatabolismo lipídico energético-deficitário) ainda é debatido na literatura. O subtipo BSCL2 associa-se a maior gravidade global e maior frequência de deficiência intelectual; a diferença de frequência de cardiomiopatia entre subtipos não é consistente na principal série publicada.",
+    "presentation": [
+      "Ausência generalizada de tecido adiposo subcutâneo desde o nascimento ou primeiros meses de vida",
+      "Pseudo-hipertrofia muscular aparente",
+      "Hepatomegalia por esteatose hepática",
+      "Acantose nigricans (cervical, axilar, inguinal) como marcador de resistência insulínica grave",
+      "Fácies com traços grosseiros e proeminência muscular",
+      "Diabetes mellitus de início muito precoce, tipicamente entre 15-20 anos",
+      "Hipertrigliceridemia grave, por vezes com crises de pancreatite aguda recorrente",
+      "Cardiomiopatia hipertrófica em subgrupo de pacientes, podendo ser subclínica por anos"
+    ],
+    "differentials": [
+      "Lipodistrofia congênita generalizada tipo 3 (CAV1)",
+      "Lipodistrofia congênita generalizada tipo 4 (PTRF/CAVIN1)",
+      "Lipodistrofias parciais familiares",
+      "Síndrome de Alström",
+      "Progeria de Hutchinson-Gilford",
+      "Lipodistrofias adquiridas (generalizada ou parcial)",
+      "Síndrome SHORT"
+    ],
+    "tests": [
+      "Sequenciamento genético (AGPAT2, BSCL2, CAV1, PTRF/CAVIN1)",
+      "Ecocardiograma e eletrocardiograma (basal ao diagnóstico e anual)",
+      "Perfil lipídico seriado (triglicerídeos)",
+      "Hemoglobina glicada, glicemia de jejum, insulina/peptídeo C",
+      "Ultrassonografia hepática periódica",
+      "Avaliação oftalmológica (complicações da hiperlipidemia)",
+      "Leptina sérica (tipicamente muito baixa ou indetectável)"
+    ],
+    "red_flags": [
+      "Hipertrofia ventricular ao ecocardiograma, mesmo assintomática",
+      "Triglicerídeos muito elevados com risco iminente de pancreatite aguda",
+      "Dor abdominal aguda em paciente com hipertrigliceridemia grave conhecida (suspeitar de pancreatite)",
+      "Sinais de insuficiência cardíaca em paciente jovem com fenótipo lipodistrófico",
+      "Deterioração do controle glicêmico associada a infecção ou estresse metabólico agudo"
+    ],
+    "ambulatory_flow": [
+      "Confirmação diagnóstica clínica e molecular, com aconselhamento genético familiar",
+      "Encaminhamento a endocrinologia especializada em lipodistrofias para consideração de terapias específicas (restrição dietética de gordura, reposição de leptina recombinante quando disponível)",
+      "Ecocardiograma e eletrocardiograma basais, com repetição anual independentemente do subtipo genético",
+      "Perfil lipídico e glicêmico seriados, com metas agressivas de controle para reduzir risco de pancreatite e de progressão metabólica",
+      "Ultrassonografia hepática periódica para monitorar esteato-hepatite",
+      "Avaliação multidisciplinar (nutrição, oftalmologia, e triagem de desenvolvimento neurocognitivo, com atenção especial em pacientes BSCL2)"
+    ],
+    "emergency_flow": [
+      "Dor abdominal aguda com hipertrigliceridemia grave conhecida: investigar e tratar pancreatite aguda seguindo protocolo padrão, com atenção ao manejo da hipertrigliceridemia extrema",
+      "Sinais de descompensação cardíaca (dispneia, edema, intolerância ao exercício): investigar cardiomiopatia hipertrófica com ecocardiograma, mesmo em paciente sem diagnóstico cardíaco prévio",
+      "Hiperglicemia grave/cetoacidose: manejo conforme protocolo de emergência para diabetes, considerando resistência insulínica extrema já basal desses pacientes",
+      "Suporte metabólico e encaminhamento a centro com experiência em lipodistrofias sempre que possível, dado o caráter ultrarraro da doença"
+    ],
+    "tags": [
+      "lipodistrofia",
+      "doença rara",
+      "cardiomiopatia hipertrófica",
+      "resistência insulínica",
+      "diabetes de início precoce",
+      "hipertrigliceridemia",
+      "pancreatite aguda",
+      "AGPAT2",
+      "BSCL2",
+      "seipina",
+      "genética cardiovascular",
+      "esteato-hepatite"
+    ],
+    "source_refs": [
+      "Van Maldergem L. Berardinelli-Seip Congenital Lipodystrophy. 2003 Sep 8 [Updated 2016 Dec 8]. In: GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle. PMID 20301391",
+      "Van Maldergem L, Magré J, Khallouf TE, et al. Genotype-phenotype relationships in Berardinelli-Seip congenital lipodystrophy. J Med Genet. 2002;39(10):722-733. PMID 12362029",
+      "Magré J, Delépine M, Khallouf E, et al. Identification of the gene altered in Berardinelli-Seip congenital lipodystrophy on chromosome 11q13. Nat Genet. 2001;28(4):365-370. PMID 11479539",
+      "Lima JG, Nobrega LHC, Lima NN, et al. Cardiac Alterations in Patients with Familial Lipodystrophy. Arq Bras Cardiol. 2020. PMID 32215503",
+      "Simha V, Szczepaniak LS, Wagner AJ, DePaoli AM, Garg A. Leptin Attenuates Cardiac Hypertrophy in Patients With Generalized Lipodystrophy. J Clin Endocrinol Metab. 2021. PMID 34223895",
+      "Wang C, et al. BSCL2/Seipin deficiency in hearts causes cardiac energy deficit and dysfunction via inducing excessive lipid catabolism. Clin Transl Med. 2022. PMID 35384404"
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1212/",
+      "https://pubmed.ncbi.nlm.nih.gov/12362029/",
+      "https://pubmed.ncbi.nlm.nih.gov/11479539/",
+      "https://pubmed.ncbi.nlm.nih.gov/32215503/",
+      "https://pubmed.ncbi.nlm.nih.gov/34223895/",
+      "https://pubmed.ncbi.nlm.nih.gov/35384404/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "lipodistrofia-congenita-generalizada-berardinelli-seip-acometimento-cardiovascular-e-metabolico"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "laminopatia-cardiaca-lmna",
+    "name": "Cardiomiopatia por LMNA (laminopatia cardíaca)",
+    "aliases": [
+      "Laminopatia cardíaca",
+      "Cardiomiopatia associada a LMNA",
+      "LMNA cardiomyopathy",
+      "Cardiolaminopatia",
+      "Distrofia muscular de Emery-Dreifuss (fenótipo associado)",
+      "Doença de condução cardíaca familiar por LMNA"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "cardiomiopatia_genetica",
+    "prevalence_rank": 159,
+    "completeness": "completo",
+    "summary": "A cardiomiopatia por LMNA (laminopatia cardíaca) é causada por variantes patogênicas no gene LMNA, que codifica as proteínas do envelope nuclear lamina A e lamina C, e caracteriza-se por doença do sistema de condução (BAV progressivo, doença do nó sinusal) e arritmias atriais que tipicamente precedem a disfunção sistólica, seguidas em muitos casos por cardiomiopatia dilatada. O traço distintivo é um risco de morte súbita por arritmia ventricular maligna desproporcional ao grau de disfunção sistólica, o que faz da laminopatia uma das poucas cardiomiopatias em que a indicação de cardiodesfibrilador implantável (CDI) deve considerar fatores de risco específicos — sexo masculino, variante não missense (truncante), taquicardia ventricular não sustentada e FEVE <45% no primeiro exame (van Rijsingen et al., 2012) — mesmo com função sistólica relativamente preservada, em vez de seguir primariamente o critério de FEVE usado na maioria das outras CMD. A distrofia muscular de Emery-Dreifuss (DMED), causada tanto por LMNA quanto por EMD/emerina (ligado ao X), é o fenótipo neuromuscular clássico associado — contraturas precoces de cotovelo, tornozelo e coluna cervical, fraqueza umeroperoneal —, mas nem todo portador de laminopatia cardíaca tem miopatia esquelética evidente, e vice-versa.",
+    "presentation": [
+      "Palpitações por arritmia atrial (extrassístoles, fibrilação ou flutter atrial) em adulto jovem",
+      "Síncope ou pré-síncope associada a bloqueio atrioventricular ou arritmia ventricular",
+      "Bloqueio atrioventricular progressivo ou doença do nó sinusal identificados em eletrocardiograma de rotina, muitas vezes anos antes de qualquer disfunção sistólica",
+      "Necessidade de marca-passo em idade incomumente jovem para a causa aparente",
+      "Dispneia e sinais de insuficiência cardíaca quando já há disfunção sistólica/dilatação estabelecida",
+      "Morte súbita ressuscitada ou parada cardiorrespiratória como manifestação inicial, com função sistólica preservada ou apenas levemente reduzida",
+      "Contraturas articulares precoces (cotovelo, tendão de Aquiles/tornozelo, coluna cervical), já na primeira década de vida, quando há fenótipo de distrofia muscular de Emery-Dreifuss associado",
+      "Fraqueza e atrofia muscular de distribuição umeroperoneal, progredindo depois para cinturas escapular e pélvica, no fenótipo de Emery-Dreifuss",
+      "Achado incidental em rastreamento familiar de parente assintomático após identificação de variante patogênica em outro membro da família",
+      "Em mulheres portadoras de variante em EMD (herança ligada ao X): acometimento cardíaco isolado (arritmia, BAV) mesmo sem miopatia esquelética evidente"
+    ],
+    "differentials": [
+      "Cardiomiopatia dilatada por variante truncante em FLNC",
+      "Cardiomiopatia por variante PLN p.Arg14del",
+      "Cardiomiopatia dilatada relacionada a RBM20 ou TTN",
+      "Distrofia miotônica tipo 1 (doença de condução proeminente, mas com fenótipo miotônico e catarata característicos)",
+      "Distrofia muscular de Duchenne ou Becker (predomínio de disfunção sistólica sobre distúrbio de condução)",
+      "Doença do nó sinusal ou bloqueio atrioventricular familiar isolado por outros genes de condução (por exemplo, SCN5A), sem componente miopático esquelético",
+      "Cardiomiopatia arritmogênica de predomínio de ventrículo esquerdo",
+      "Cardiomiopatia dilatada idiopática sem etiologia genética identificada"
+    ],
+    "tests": [
+      "Eletrocardiograma de 12 derivações",
+      "Ecocardiograma transtorácico com Doppler",
+      "Monitorização ambulatorial de ritmo (Holter ou dispositivo de monitorização prolongada)",
+      "Ressonância cardíaca com realce tardio de gadolínio, quando disponível",
+      "Painel genético multigênico combinando cardiomiopatia e distrofias musculares, com aconselhamento genético estruturado",
+      "Creatinoquinase sérica",
+      "Eletroneuromiografia e, se necessário, biópsia muscular em caso de diagnóstico neuromuscular incerto",
+      "Avaliação clínica dirigida a contraturas articulares e padrão de fraqueza muscular umeroperoneal",
+      "Calculadora de risco LMNA-risk-VTA em portador confirmado de variante patogênica em LMNA",
+      "Rastreamento cardíaco em cascata de parentes de primeiro grau, incluindo mulheres portadoras de variante em EMD"
+    ],
+    "red_flags": [
+      "Síncope inexplicada em portador de variante em LMNA",
+      "Taquicardia ventricular não sustentada documentada",
+      "Variante não missense (truncante) confirmada em LMNA",
+      "FEVE <45% no primeiro exame em portador de variante em LMNA",
+      "Sexo masculino associado a outros fatores de risco presentes",
+      "Bloqueio atrioventricular avançado em paciente jovem",
+      "História familiar de morte súbita precoce ou de marca-passo/CDI em idade jovem",
+      "Necessidade de marca-passo em portador de variante patogênica em LMNA, sobretudo com outros fatores de risco associados (considerar CDI em vez de marca-passo isolado)"
+    ],
+    "ambulatory_flow": [
+      "Confirmar o fenótipo cardíaco com eletrocardiograma, ecocardiograma e monitorização ambulatorial de ritmo",
+      "Investigar sistematicamente contraturas articulares e padrão de fraqueza muscular sugestivos de distrofia de Emery-Dreifuss",
+      "Solicitar teste genético multigênico com aconselhamento genético estruturado antes e depois do exame",
+      "Aplicar a calculadora de risco LMNA-risk-VTA em portador confirmado de variante patogênica em LMNA, associando-a aos fatores de risco clínicos (sexo masculino, variante não missense, TVNS, FEVE)",
+      "Encaminhar a centro especializado em cardiomiopatias genéticas para decisão individualizada e multiparamétrica sobre indicação de CDI",
+      "Considerar CDI em vez de marca-passo isolado quando surgir indicação de dispositivo de estimulação em portador de LMNA com fatores de risco associados",
+      "Iniciar rastreamento em cascata de parentes de primeiro grau assintomáticos, incluindo avaliação cardíaca em mulheres portadoras de variante em EMD",
+      "Encaminhar o componente neuromuscular a acompanhamento multidisciplinar (neurologia/doenças neuromusculares, reabilitação física)",
+      "Reavaliar periodicamente função ventricular e ritmo, já que o fenótipo é progressivo e pode evoluir mesmo em portadores inicialmente assintomáticos"
+    ],
+    "emergency_flow": [
+      "Reconhecer síncope, palpitação sustentada ou parada cardiorrespiratória em portador conhecido ou suspeito de laminopatia como potencial evento arrítmico grave, com monitorização eletrocardiográfica contínua imediata",
+      "Investigar bloqueio atrioventricular avançado ou bradicardia sintomática como possível indicação de estimulação temporária ou definitiva de urgência",
+      "Considerar arritmia ventricular maligna mesmo na presença de função sistólica preservada ou apenas levemente reduzida, dado o risco desproporcional descrito na laminopatia",
+      "Estabilizar quadro de descompensação de insuficiência cardíaca conforme protocolo institucional quando já houver disfunção sistólica estabelecida",
+      "Encaminhar, após estabilização, para avaliação especializada de indicação de CDI e para investigação genética se ainda não realizada"
+    ],
+    "tags": [
+      "cardiomiopatia genética",
+      "laminopatia",
+      "LMNA",
+      "distrofia muscular de Emery-Dreifuss",
+      "emerina",
+      "morte súbita cardíaca",
+      "cardiodesfibrilador implantável",
+      "doença de condução cardíaca",
+      "genética cardiovascular",
+      "arritmia ventricular"
+    ],
+    "source_refs": [
+      "van Rijsingen IA, Arbustini E, Elliott PM, et al. Risk factors for malignant ventricular arrhythmias in lamin a/c mutation carriers a European cohort study. J Am Coll Cardiol. 2012;59(5):493-500. PMID: 22281253.",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. PMID: 31155932.",
+      "Rootwelt-Norberg C, et al. Timing of cardioverter-defibrillator implantation in patients with cardiac laminopathies - External validation of the LMNA-risk ventricular tachyarrhythmia calculator. Heart Rhythm. 2023;20(3):423-429. PMID: 36494026.",
+      "Meune C, Van Berlo JH, Anselme F, Bonne G, Pinto YM, Duboc D. Primary prevention of sudden death in patients with lamin A/C gene mutations. N Engl J Med. 2006;354(2):209-210. PMID: 16407522.",
+      "Pasotti M, Klersy C, Pilotto A, et al. Long-term outcome and risk stratification in dilated cardiolaminopathies. J Am Coll Cardiol. 2008;52(15):1250-1260. PMID: 18926329.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572.",
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID: 37622657.",
+      "Hershberger RE, Jordan E. LMNA-Related Dilated Cardiomyopathy. GeneReviews [Internet]. Seattle: University of Washington; 2008 Jun 12 [Updated 2022 Mar 17]. Bookshelf ID: NBK1674. PMID: 20301717.",
+      "Ben Yaou R, Leturcq F, Bonne G. Emery-Dreifuss Muscular Dystrophy. GeneReviews [Internet]. Seattle: University of Washington; 2004 Sep 29 [Updated 2025 Sep 18]. Bookshelf ID: NBK1436. PMID: 20301609.",
+      "Karanikola AE, Doundoulakis I, Antoniou CK, et al. Redefining Sudden Cardiac Death Risk Stratification in Dilated Cardiomyopathy: An Integrative Approach. Rev Cardiovasc Med. 2026;27(7):49889. PMID: 42534340.",
+      "Tetaj N, Segreti A, Ferro A, et al. High-Risk Cardiomyopathy Genotypes and Arrhythmic Risk: LMNA, FLNC, RBM20, PLN and Desmosomal Genes in the ESC 2023 Era. Genes (Basel). 2026;17(4):370. PMID: 42074488."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/22281253/",
+      "https://pubmed.ncbi.nlm.nih.gov/31155932/",
+      "https://pubmed.ncbi.nlm.nih.gov/36494026/",
+      "https://pubmed.ncbi.nlm.nih.gov/16407522/",
+      "https://pubmed.ncbi.nlm.nih.gov/18926329/",
+      "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+      "https://pubmed.ncbi.nlm.nih.gov/37622657/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1674/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1436/",
+      "https://pubmed.ncbi.nlm.nih.gov/42534340/",
+      "https://pubmed.ncbi.nlm.nih.gov/42074488/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi"
+    ],
+    "patient_material_slug": "distrofia-muscular-emery-dreifuss-coracao"
   }
 ]
