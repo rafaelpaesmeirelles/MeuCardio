@@ -91,7 +91,9 @@ def test_email_transacional_usa_conta_native_mail360(db, monkeypatch):
     assert remetente == "contato@corvia.med.br"
     assert para == user.email
     assert assunto == "CorVIA — solicitação de acesso recebida"
-    assert "https://corvia.med.br/corvia-logo-canonical.svg" in html
+    # PNG canônico é deliberado em e-mail: tem suporte mais consistente do
+    # que SVG nos clientes Outlook/Gmail sem alterar a identidade CorVIA.
+    assert "https://corvia.med.br/corvia-logo-canonical.png" in html
     assert "cid:corvia-logo" not in html
     assert kwargs["mail_format"] == "html"
 

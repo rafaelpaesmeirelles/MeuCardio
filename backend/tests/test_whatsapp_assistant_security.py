@@ -75,7 +75,8 @@ def test_retention_runner_without_http(monkeypatch):
  from app.commands import purge_expired_whatsapp_data as runner
  db=DB();monkeypatch.setattr(runner,"purge_expired_data",lambda d:4);assert runner.purge_once(session_factory=lambda:db,origin="test")==4 and db.commits==1
 def test_migration_chained_after_heart():
- text=Path("backend/migrations/versions/f88w20260831_whatsapp_assistant.py").read_text();assert 'down_revision="f87h20260831"' in text
+ path=Path(__file__).resolve().parents[1]/"migrations/versions/f88w20260831_whatsapp_assistant.py"
+ text=path.read_text();assert 'down_revision="f87h20260831"' in text
 
 def test_meta_button_and_list_only_accept_server_allowlist():
  button={"type":"interactive","interactive":{"button_reply":{"id":"corvia:menu:agenda","title":"payload livre ignorado"}}}

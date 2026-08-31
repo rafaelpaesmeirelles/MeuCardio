@@ -95,13 +95,19 @@ def test_header_mobile_composto():
     # item 9: hambúrguer fora do topo mobile — e nada no lugar dele
     assert ".clinical-os .cos-topbar__menu { display: none !important; }" in css
     assert "display: grid !important; order: 3" not in css  # a regra que o reexibia não pode voltar
-    # item 9: primeiro nome no mobile, nome completo no desktop
+    # item 9/29: tratamento cadastrado + nome curto no mobile e tratamento +
+    # nome completo no desktop.
     assert "cos-account__nome-curto" in shell and "cos-account__nome-completo" in shell
-    assert "primeiroNome(usuario?.full_name)" in shell
+    assert 'import { nomeComTratamento } from "../lib/clinicalIdentity";' in shell
+    assert "nomeComTratamento(usuario, true)" in shell
+    assert "nomeComTratamento(usuario)" in shell
     assert ".cos-account__nome-curto { display: none; }" in css  # default desktop
     assert ".clinical-os .cos-account__nome-completo { display: none; }" in css  # mobile
-    # a extração pula título honorífico e nunca devolve vazio para nome não vazio
-    assert "(dr|dra|prof|profa)" in shell
+    # A extração e o tratamento ficam centralizados na identidade clínica,
+    # evitando regras divergentes entre desktop, mobile e documentos.
+    identidade = (ROOT / "frontend/src/lib/clinicalIdentity.ts").read_text(encoding="utf-8")
+    assert "professional_title" in identidade
+    assert "curto ? nomeSemTitulo.split" in identidade
 
 
 def test_css_de_pagina_entra_no_bundle():
