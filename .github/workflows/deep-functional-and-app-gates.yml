@@ -54,7 +54,7 @@ jobs:
           retention-days: 14
 
   public-app-artifacts:
-    name: Public APK and EXE integrity
+    name: Public Android integrity (Windows pending)
     if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -63,16 +63,13 @@ jobs:
       - name: Validate public application artifacts
         env:
           CORVIA_ANDROID_EXPECTED_SHA256: ${{ vars.CORVIA_ANDROID_EXPECTED_SHA256 }}
-          CORVIA_WINDOWS_EXPECTED_SHA256: ${{ vars.CORVIA_WINDOWS_EXPECTED_SHA256 }}
         run: |
           [[ "$CORVIA_ANDROID_EXPECTED_SHA256" =~ ^[0-9a-fA-F]{64}$ ]] \
             || { echo "CORVIA_ANDROID_EXPECTED_SHA256 is required for scheduled drift checks" >&2; exit 65; }
-          [[ "$CORVIA_WINDOWS_EXPECTED_SHA256" =~ ^[0-9a-fA-F]{64}$ ]] \
-            || { echo "CORVIA_WINDOWS_EXPECTED_SHA256 is required for scheduled drift checks" >&2; exit 65; }
           mkdir -p deep-gates
           python3 scripts/validate_public_app_artifacts.py --base-url "https://corvia.med.br" \
+            --artifacts android \
             --expected-android-sha256 "$CORVIA_ANDROID_EXPECTED_SHA256" \
-            --expected-windows-sha256 "$CORVIA_WINDOWS_EXPECTED_SHA256" \
             --cache-buster "${GITHUB_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
             --report deep-gates/public-app-artifacts.json
       - name: Upload public application report

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate public Android and Windows artifacts without changing production."""
+"""Validate explicitly selected public application artifacts."""
 
 from __future__ import annotations
 
@@ -123,15 +123,26 @@ def validate(base_url: str, specs: tuple[ArtifactSpec, ...] = SPECS,
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
+    parser.add_argument(
+        "--artifacts", nargs="+", choices=tuple(spec.name for spec in SPECS),
+        default=[spec.name for spec in SPECS],
+        help="Artifacts to validate explicitly (default: all).",
+    )
     parser.add_argument("--expected-android-sha256")
     parser.add_argument("--expected-windows-sha256")
     parser.add_argument("--cache-buster")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
+    selected = tuple(spec for spec in SPECS if spec.name in set(args.artifacts))
     try:
-        report = validate(args.base_url, expected_shas={"android": args.expected_android_sha256 or "",
-                                                        "windows": args.expected_windows_sha256 or ""},
+        report = validate(args.base_url, specs=selected,
+                          expected_shas={"android": args.expected_android_sha256 or "",
+                                         "windows": args.expected_windows_sha256 or ""},
                           cache_buster=args.cache_buster)
+        report["release_status"] = {
+            "android": "published" if "android" in args.artifacts else "not_checked",
+            "windows": "published" if "windows" in args.artifacts else "pending",
+        }
     except (AssertionError, OSError, urllib.error.URLError, ValueError) as exc:
         print(f"ERRO: validação pública dos apps falhou: {exc}", file=sys.stderr); return 1
     if args.report:

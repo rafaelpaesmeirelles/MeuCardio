@@ -13,7 +13,6 @@ MANDATORY_FINAL_GATES: tuple[str, ...] = (
     "Visual QA — Clinical OS",
     "Corpus database reconciliation",
     "Deep functional inventory and public apps",
-    "Native installers",
 )
 
 

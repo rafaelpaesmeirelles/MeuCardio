@@ -25,6 +25,7 @@ git show "$EXPECTED_SHA:ops/remote-deploy-entrypoint.sh" > "$tmpdir/entrypoint"
 bash -n "$tmpdir/entrypoint"
 grep -Fq 'windows-stage' "$tmpdir/entrypoint"
 grep -Fq 'deploy-release' "$tmpdir/entrypoint"
+grep -Fq 'deploy-web-android' "$tmpdir/entrypoint"
 install -d -o root -g root -m 0755 "$(dirname "$STABLE_ENTRYPOINT")"
 install -o root -g root -m 0755 "$tmpdir/entrypoint" "$tmpdir/entrypoint.installed"
 

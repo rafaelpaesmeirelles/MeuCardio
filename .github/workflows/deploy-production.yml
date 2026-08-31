@@ -8,7 +8,6 @@ on:
       - Visual QA — Clinical OS
       - Corpus database reconciliation
       - Deep functional inventory and public apps
-      - Native installers
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -33,7 +32,6 @@ jobs:
     outputs:
       ready: ${{ steps.gates.outputs.ready }}
       sha: ${{ steps.gates.outputs.sha }}
-      native_run_id: ${{ steps.gates.outputs.native_run_id }}
     steps:
       - name: Require every release gate for the current main SHA
         id: gates
@@ -72,7 +70,6 @@ jobs:
               "Visual QA — Clinical OS": "workflow_dispatch",
               "Corpus database reconciliation": "workflow_dispatch",
               "Deep functional inventory and public apps": "workflow_dispatch",
-              "Native installers": "workflow_dispatch",
           }
           latest = {}
           for run in runs:
@@ -94,17 +91,12 @@ jobs:
               print("Mandatory gates are not all green for this exact SHA:")
               for failure in failures: print(f"- {failure}")
               raise SystemExit(1)
-          native_run_id = latest["Native installers"].get("id")
-          if not isinstance(native_run_id, int):
-              raise SystemExit("Native installers run has no numeric run id")
-          with open(output_path, "a", encoding="utf-8") as output:
-              output.write(f"native_run_id={native_run_id}\n")
-          print(f"All mandatory gates succeeded for {expected_sha}; native run {native_run_id}.")
+          print(f"All mandatory web/Android gates succeeded for {expected_sha}; Windows is pending.")
           PY
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
   deploy:
-    name: Stage native clients and deploy certified SHA
+    name: Deploy certified web and Android release
     needs: certify
     if: needs.certify.outputs.ready == 'true'
     runs-on: ubuntu-latest
@@ -112,9 +104,7 @@ jobs:
     environment: production
     env:
       TARGET_SHA: ${{ needs.certify.outputs.sha }}
-      NATIVE_RUN_ID: ${{ needs.certify.outputs.native_run_id }}
       ANDROID_CERT_SHA256: ${{ vars.CORVIA_ANDROID_CERT_SHA256 }}
-      WINDOWS_CERT_SHA256: ${{ vars.CORVIA_WINDOWS_SIGNING_CERT_SHA256 }}
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -125,38 +115,6 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: ${{ env.TARGET_SHA }}
-
-      - name: Download exact certified Windows artifact
-        id: windows
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
-        run: |
-          set -euo pipefail
-          [[ "$NATIVE_RUN_ID" =~ ^[0-9]+$ ]] || { echo "Invalid certified native run id" >&2; exit 65; }
-          artifact_dir="$RUNNER_TEMP/corvia-windows"
-          install -d -m 0700 "$artifact_dir"
-          gh run download "$NATIVE_RUN_ID" --repo "$REPOSITORY" \
-            --name corvia-cardiology-spaces-windows-1.2.0 --dir "$artifact_dir"
-          installer="$artifact_dir/corvia-cardiology-spaces-windows-1.2.0.exe"
-          sidecar="$installer.sha256"
-          source_sha="$artifact_dir/source-sha.txt"
-          signer_sha="$artifact_dir/windows-signing-cert-sha256.txt"
-          [[ -s "$installer" && -s "$sidecar" && -s "$source_sha" && -s "$signer_sha" ]] \
-            || { echo "Windows artifact is incomplete" >&2; exit 65; }
-          [[ "$(tr -d '[:space:]' < "$source_sha")" == "$TARGET_SHA" ]] \
-            || { echo "Windows artifact was built from another commit" >&2; exit 65; }
-          artifact_sha="$(sha256sum "$installer" | cut -d' ' -f1)"
-          grep -Eiq "^${artifact_sha}([[:space:]]|$)" "$sidecar" \
-            || { echo "Windows artifact digest differs from sidecar" >&2; exit 65; }
-          [[ "$(od -An -tx1 -N2 "$installer" | tr -d '[:space:]')" == "4d5a" ]] \
-            || { echo "Windows artifact is not a PE executable" >&2; exit 65; }
-          expected_signer="$(printf '%s' "$WINDOWS_CERT_SHA256" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
-          artifact_signer="$(tr -d '[:space:]:' < "$signer_sha" | tr '[:upper:]' '[:lower:]')"
-          [[ "$expected_signer" =~ ^[0-9a-f]{64}$ && "$artifact_signer" == "$expected_signer" ]] \
-            || { echo "Windows artifact signer differs from pinned certificate" >&2; exit 65; }
-          echo "sha256=$artifact_sha" >> "$GITHUB_OUTPUT"
-          echo "path=$installer" >> "$GITHUB_OUTPUT"
 
       - name: Prepare restricted SSH transport
         run: |
@@ -173,18 +131,7 @@ jobs:
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
 
-      - name: Stage bounded Windows installer before web mutation
-        run: |
-          set -euo pipefail
-          SSH_PORT="${SSH_PORT:-22}"
-          timeout 360s ssh -p "$SSH_PORT" -i "$RUNNER_TEMP/corvia-ssh/deploy_key" \
-            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
-            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 -o StrictHostKeyChecking=yes \
-            -o "UserKnownHostsFile=$RUNNER_TEMP/corvia-ssh/known_hosts" \
-            "$SSH_USER@$SSH_HOST" "windows-stage $TARGET_SHA ${{ steps.windows.outputs.sha256 }}" \
-            < "${{ steps.windows.outputs.path }}"
-
-      - name: Build and stage signed Android, deploy web, then promote both clients
+      - name: Build and stage signed Android, then deploy certified web release
         id: release
         run: |
           set -euo pipefail
@@ -197,7 +144,7 @@ jobs:
             -o ServerAliveInterval=30 -o ServerAliveCountMax=10 -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$RUNNER_TEMP/corvia-ssh/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            "deploy-release $TARGET_SHA ${{ steps.windows.outputs.sha256 }} $cert" | tee "$release_log"
+            "deploy-web-android $TARGET_SHA $cert" | tee "$release_log"
           android_sha="$(sed -n 's/^ANDROID_SHA256=//p' "$release_log" | tail -n 1)"
           [[ "$android_sha" =~ ^[0-9a-f]{64}$ ]] \
             || { echo "Remote release did not return a valid Android digest" >&2; exit 65; }
@@ -207,7 +154,6 @@ jobs:
         env:
           PUBLIC_URL: https://corvia.med.br
           EXPECTED_ANDROID_SHA256: ${{ steps.release.outputs.android_sha256 }}
-          EXPECTED_WINDOWS_SHA256: ${{ steps.windows.outputs.sha256 }}
         run: |
           set -euo pipefail
           cache_buster="${TARGET_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
@@ -227,7 +173,12 @@ jobs:
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health?release=$cache_buster" > /dev/null
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready?release=$cache_buster" > /dev/null
           python3 scripts/validate_public_app_artifacts.py --base-url "$PUBLIC_URL" \
+            --artifacts android \
             --expected-android-sha256 "$EXPECTED_ANDROID_SHA256" \
-            --expected-windows-sha256 "$EXPECTED_WINDOWS_SHA256" \
             --cache-buster "$cache_buster"
-          echo "Production SHA and exact Android/Windows 1.2.0 digests confirmed."
+          windows_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
+            -H 'Cache-Control: no-cache' \
+            "$PUBLIC_URL/downloads/corvia-cardiology-spaces-windows-1.2.0.exe?release=$cache_buster")"
+          [[ "$windows_status" == "410" ]] \
+            || { echo "Windows download returned HTTP $windows_status; expected pending status 410" >&2; exit 65; }
+          echo "Production SHA, Android 1.2.0 digest and Windows-pending login confirmed."

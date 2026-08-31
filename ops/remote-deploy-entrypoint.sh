@@ -3,6 +3,7 @@
 # Release protocol:
 #   windows-stage <current-main SHA> <Windows SHA-256> (binary on stdin)
 #   deploy-release <current-main SHA> <Windows SHA-256> <Android cert SHA-256>
+#   deploy-web-android <current-main SHA> <Android cert SHA-256>
 # Operational maintenance remains limited to intelligence/intelligence-force
 # for the exact already-deployed SHA. Web/APK release bypasses are not accepted.
 set -Eeuo pipefail
@@ -22,6 +23,8 @@ deny() { printf 'Production request denied: %s\n' "$1" >&2; exit 64; }
 REQUEST_KIND=""; EXPECTED_SHA=""; EXPECTED_WINDOWS_SHA=""; EXPECTED_ANDROID_CERT_SHA=""; INTELLIGENCE_FORCE="0"
 if [[ "$ORIGINAL_COMMAND" =~ ^deploy-release[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})[[:space:]]([0-9a-f]{64})$ ]]; then
   REQUEST_KIND="deploy-release"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_WINDOWS_SHA="${BASH_REMATCH[2]}"; EXPECTED_ANDROID_CERT_SHA="${BASH_REMATCH[3]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^deploy-web-android[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})$ ]]; then
+  REQUEST_KIND="deploy-web-android"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_ANDROID_CERT_SHA="${BASH_REMATCH[2]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^windows-stage[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})$ ]]; then
   REQUEST_KIND="windows-stage"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_WINDOWS_SHA="${BASH_REMATCH[2]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
@@ -83,8 +86,10 @@ if [[ "$REQUEST_KIND" == "intelligence" ]]; then
   fi
   exec docker compose -f docker-compose.prod.yml exec -T backend python -m app.services.guideline_discovery_cli
 fi
-if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
-  validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+if [[ "$REQUEST_KIND" == "deploy-release" || "$REQUEST_KIND" == "deploy-web-android" ]]; then
+  if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
+    validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+  fi
   install -d -m 0750 "$RELEASE_STAGING_DIR"
   native_worktree="$(mktemp -d "$STAGING_ROOT/.native-source.XXXXXX")"
   rmdir "$native_worktree"
@@ -125,7 +130,9 @@ PY
   expected_android_sha="$(sed -n 's/^ANDROID_SHA256=//p' "$build_log" | tail -n 1)"
   [[ "$expected_android_sha" =~ ^[0-9a-f]{64}$ ]] || deny "Android build returned no digest"
   validate_staged_artifact "$RELEASE_STAGING_DIR/$ANDROID_NAME" "$expected_android_sha" "504b0304"
-  validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+  if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
+    validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+  fi
   cleanup_native_worktree
   trap - EXIT
 fi
@@ -149,22 +156,28 @@ fi
 
 bash ./deploy.sh
 validate_staged_artifact "$RELEASE_STAGING_DIR/$ANDROID_NAME" "$expected_android_sha" "504b0304"
-validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
+  validate_staged_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME" "$EXPECTED_WINDOWS_SHA" "4d5a"
+fi
 
 download_dir="$PROJECT_DIR/downloads"; backup_dir="$RELEASE_STAGING_DIR/.previous"
 install -d -m 0755 "$download_dir"; install -d -m 0750 "$backup_dir"
+release_artifacts=("$ANDROID_NAME" "$ANDROID_NAME.sha256")
+if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
+  release_artifacts+=("$WINDOWS_NAME" "$WINDOWS_NAME.sha256")
+fi
 promotion_failed=0
-for name in "$ANDROID_NAME" "$ANDROID_NAME.sha256" "$WINDOWS_NAME" "$WINDOWS_NAME.sha256"; do
+for name in "${release_artifacts[@]}"; do
   if [[ -e "$download_dir/$name" ]]; then mv "$download_dir/$name" "$backup_dir/$name" || promotion_failed=1; fi
 done
 if [[ "$promotion_failed" == "0" ]]; then
-  for name in "$ANDROID_NAME" "$ANDROID_NAME.sha256" "$WINDOWS_NAME" "$WINDOWS_NAME.sha256"; do
+  for name in "${release_artifacts[@]}"; do
     mv "$RELEASE_STAGING_DIR/$name" "$download_dir/$name" || promotion_failed=1
   done
 fi
 if [[ "$promotion_failed" != "0" ]]; then
-  rm -f "$download_dir/$ANDROID_NAME" "$download_dir/$ANDROID_NAME.sha256" "$download_dir/$WINDOWS_NAME" "$download_dir/$WINDOWS_NAME.sha256"
-  for name in "$ANDROID_NAME" "$ANDROID_NAME.sha256" "$WINDOWS_NAME" "$WINDOWS_NAME.sha256"; do
+  for name in "${release_artifacts[@]}"; do rm -f "$download_dir/$name"; done
+  for name in "${release_artifacts[@]}"; do
     [[ ! -e "$backup_dir/$name" ]] || mv "$backup_dir/$name" "$download_dir/$name"
   done
   deny "native promotion failed; prior clients restored"
@@ -176,5 +189,8 @@ if [[ -e "$STABLE_ENTRYPOINT" ]]; then
   bash -n "$next_entrypoint"
   mv -f "$next_entrypoint" "$STABLE_ENTRYPOINT"
 fi
-printf 'ANDROID_SHA256=%s\nWINDOWS_SHA256=%s\n' "$expected_android_sha" "$EXPECTED_WINDOWS_SHA"
-printf 'Release %s deployed; native clients promoted.\n' "$EXPECTED_SHA"
+printf 'ANDROID_SHA256=%s\n' "$expected_android_sha"
+if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
+  printf 'WINDOWS_SHA256=%s\n' "$EXPECTED_WINDOWS_SHA"
+fi
+printf 'Release %s deployed; certified clients promoted for %s.\n' "$EXPECTED_SHA" "$REQUEST_KIND"
