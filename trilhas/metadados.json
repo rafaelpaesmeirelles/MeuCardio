@@ -25531,5 +25531,397 @@
         "por_que": "Fecha a trilha voltando à cena da reanimação em si, completando o arco que começou nos passos 1-2 (antes da parada, sobre preferência) e passou pela decisão por substituto (durante a incapacidade): agora a família pede para presenciar a RCP em curso, e o profissional precisa decidir com base em evidência, não em receio não testado de que a presença atrapalhe a equipe."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardio-oncologia-rechallenge-apos-evento-cardiovascular",
+    "titulo": "Cardio-oncologia: retomar ou não o tratamento oncológico depois de um evento cardiovascular — a decisão de rechallenge",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Sair sabendo estruturar a decisão de pausar, retomar ou substituir a terapia antineoplásica depois de um evento cardiovascular relacionado ao tratamento — miocardite por inibidor de checkpoint, seu overlap com miosite/miastenia, insuficiência cardíaca aguda/CTRCD e disfunção ventricular por anti-HER2 —, usando estratificação de risco basal, critérios de resolução por biomarcador, os dados observacionais reais de reexposição e o framework prático JACC Cardio-Oncology 2026, até reconhecer quando a resposta correta é não retomar e conduzir essa conversa em cuidados paliativos.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "ic-os-mascc-2026-padrao-minimo-de-cuidado-cardiovascular-no-adulto-com-cancer",
+        "por_que": "Situa a trilha no fluxo completo de cuidado cardiovascular oncológico — antes, durante e depois do tratamento — segundo o statement IC-OS/MASCC 2026. É o ponto de partida que mostra onde, dentro desse fluxo, surge a pergunta específica desta trilha: o que fazer quando o próprio tratamento cardiovascular do câncer causa um evento que interrompe a terapia antineoplásica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+        "por_que": "Antes de discutir reexposição, é preciso entender a estratificação de risco basal pelo escore HFA-ICOS que precede o início do inibidor de checkpoint (ICI) — o mesmo instrumento que, depois de um evento, ajuda a calibrar o quanto o paciente já era vulnerável. Sem essa camada inicial, a decisão de rechallenge fica sem parâmetro de comparação."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "miocardite-por-inibidor-de-checkpoint-imune-emergencia-esc-2025",
+        "por_que": "Descreve o reconhecimento e a conduta imediata da miocardite por ICI segundo ESC 2025 — o evento agudo que, na maioria dos casos desta trilha, é o que interrompe a terapia oncológica e abre a pergunta sobre reexposição. É pré-requisito entender a gravidade aguda antes de discutir o que vem depois dela."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "triade-miocardite-miosite-miastenia-por-inibidor-de-checkpoint-reconhecimento-precoce",
+        "por_que": "Alerta para a armadilha de ancorar a gravidade da miocardite só na troponina, quando fraqueza, ptose ou disfagia sinalizam overlap com miosite/miastenia — um fator que muda inteiramente o cálculo de risco de qualquer reexposição futura e que passa despercebido se a avaliação for só cardíaca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "overlap-miocardite-miosite-miastenia-por-ici",
+        "por_que": "Aprofunda o manejo do overlap cardiomuscular por ICI — BAV, arritmia e insuficiência respiratória concomitantes — cenário que, por sua gravidade multissistêmica, costuma pesar contra a reexposição mesmo quando a função ventricular se recupera. Estabelece o extremo de risco que servirá de contraste ao framework de rechallenge."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "biomarcadores-nao-cardiacos-de-rotina-ck-ast-alt-ldh-na-vigilancia-da-miocardite-por-checkpoint",
+        "por_que": "CK, AST, ALT e LDH são biomarcadores não cardíacos de rotina que sinalizam atividade residual de miosite associada mesmo quando a troponina já normalizou — um critério prático de resolução completa que precisa estar satisfeito antes de qualquer consideração de reexposição, e que nenhum documento sobre o framework de rechallenge cobre isoladamente."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "khan-2026-reexposicao-ici-apos-miocardite-trinetx",
+        "por_que": "Traz os dados reais de reexposição ao ICI após miocardite em coorte TriNetX — a evidência observacional concreta que qualquer decisão de rechallenge precisa conhecer antes de recorrer a um framework de consenso, situando a magnitude e os limites do que já foi observado em prática clínica real."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "reexposicao-a-ici-apos-miocardite-associacao-observacional",
+        "por_que": "Interpreta criticamente esses mesmos dados de reexposição: association, not proof of safety. Ensina a não confundir uma coorte observacional pequena e selecionada com evidência de segurança do rechallenge — um passo de leitura crítica indispensável antes de aplicar o framework prático da etapa seguinte."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "rechallenge-de-ici-apos-miocardite-framework-jacc-cardio-oncology-2026",
+        "por_que": "É o framework prático central da trilha: integra necessidade oncológica, certeza diagnóstica, grau de recuperação cardiovascular, vigilância intensificada e capacidade de resgate numa estrutura de decisão sobre se, quando e como reiniciar o ICI após miocardite — a culminação lógica de tudo que veio antes."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "safe-heart-terapia-her2-com-fe-reduzida-e-cardioprotecao",
+        "por_que": "Mostra que a lógica de 'continuar/retomar apesar do evento cardiovascular sob vigilância e cardioproteção' não é exclusiva do ICI: o SAFE-HEaRt testou exatamente isso para terapia anti-HER2 em pacientes com FEVE 40–49%, um mecanismo de toxicidade totalmente diferente (disfunção ventricular direta, não miocardite imunomediada) que generaliza o princípio da trilha para outra classe de fármaco."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-aguda-e-ctrcd-sintomatica-durante-terapia-oncologica",
+        "por_que": "Estende o framework de pausa/reexposição para outro tipo de evento — a insuficiência cardíaca aguda e a CTRCD sintomática, independente de miocardite por ICI — mostrando que a decisão multidisciplinar sobre suspender e eventualmente retomar a terapia antineoplásica é um problema estrutural da cardio-oncologia, não um caso isolado do checkpoint."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "cuidados-paliativos-e-comunicacao-de-prognostico-duplo-na-ic-avancada-por-cardiotoxicidade",
+        "por_que": "Fecha a trilha no extremo oposto do rechallenge: quando a insuficiência cardíaca induzida pelo próprio tratamento se torna refratária e a resposta correta deixa de ser 'retomar' e passa a ser cuidados paliativos, com prognóstico oncológico e cardíaco colidindo na mesma conversa — o desfecho que todo o raciocínio de reexposição desta trilha existe para tentar evitar."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-erros-inatos-do-metabolismo-e-cardiomiopatia",
+    "titulo": "Cardiologia pediátrica: cardiomiopatia por erro inato do metabolismo — o diagnóstico diferencial que a triagem de rotina não cobre",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer, no lactente com cardiomiopatia hipertrófica ou dilatada de causa não esclarecida, o grupo de erros inatos do metabolismo que muda o prognóstico e a conduta: os defeitos de beta-oxidação de ácidos graxos de cadeia longa (deficiência de VLCAD e de CPT2) e da lançadeira de carnitina que os precede (deficiência primária de carnitina — a única realmente curável), a fenocópia por depósito lisossomal (doença de Pompe) e a citopatia mitocondrial da cardiolipina (síndrome de Barth) — entendendo por que a triagem neonatal por oximetria de pulso não detecta nenhuma dessas condições e qual exame (perfil de acilcarnitinas, carnitina livre, alfa-glicosidase ácida) detecta cada uma.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "colan-2007-registro-cardiomiopatia-hipertrofica-pediatrica",
+        "por_que": "Abre a trilha com o número que justifica todo o esforço diagnóstico que vem a seguir: no Registro Pediátrico de Cardiomiopatia (855 crianças), 8,7% dos casos de cardiomiopatia hipertrófica tinham erro inato do metabolismo como causa, e esse subgrupo teve sobrevida significativamente pior que a forma idiopática. Estabelece que investigar a etiologia metabólica não é exercício acadêmico — é o que separa uma criança que responde a dieta/terapia específica de uma que evolui para insuficiência cardíaca refratária sem que ninguém tenha procurado a causa certa."
+      },
+      {
+        "ordem": 2,
+        "item_type": "caso_clinico",
+        "item_slug": "cardiomiopatia-hipertrofica-pediatrica-a-etiologia-muda-o-prognostico",
+        "por_que": "Transforma o dado epidemiológico do passo 1 em decisão clínica: um lactente de 8 meses com CMH e erro inato do metabolismo associado tem uma trajetória diferente da criança diagnosticada aos 6 anos sem doença associada, mesmo com o mesmo rótulo ecocardiográfico. Fixa, antes de entrar em cada condição específica, a pergunta que deve orientar a investigação — 'qual é a causa por trás do fenótipo' — que os próximos passos respondem uma a uma."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+        "por_que": "Ponto de contraste deliberado: a triagem neonatal que todo pediatra conhece — oximetria de pulso — foi desenhada para detectar cardiopatia estrutural canal-dependente, não cardiomiopatia metabólica. Uma criança pode passar pela triagem por oximetria com resultado normal e ainda assim ter um defeito de beta-oxidação ou de depósito lisossomal em curso, porque o exame certo para esse grupo de doenças é outro (perfil de acilcarnitinas em papel-filtro) — o que os próximos passos detalham condição por condição."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "deficiencia-de-vlcad-cardiomiopatia-neonatal-e-diagnostico-diferencial-com-cardiomiopatias-metabolicas-pediatricas",
+        "por_que": "Primeira condição específica do núcleo da trilha: a deficiência de VLCAD bloqueia o primeiro passo da beta-oxidação mitocondrial de ácidos graxos de cadeia longa, gerando a tríade cardiomiopatia (hipertrófica e/ou dilatada) + hipoglicemia hipocetótica + arritmia ventricular potencialmente fatal. Introduz o marcador de triagem (C14:1) e o protocolo de 'dia de doença' que reaparece, com variações, em quase todas as condições seguintes — e já apresenta explicitamente o diagnóstico diferencial com carnitina, Pompe e Barth que os próximos passos aprofundam."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "deficiencia-de-cpt2-cardiomiopatia-arritmia-e-morte-subita-nas-tres-formas-clinicas-do-defeito-da-lancadeira-de-carnitina",
+        "por_que": "Segue na mesma via metabólica, mas um passo adiante: a CPT2 reconverte acilcarnitinas em acil-CoA já dentro da mitocôndria, e sua deficiência tem três formas clínicas com prognóstico radicalmente diferente — da forma letal neonatal (associada a malformações renais/cerebrais, ausentes na VLCAD) à forma miopática do adulto sem acometimento cardíaco relevante. O marcador de triagem muda (C16/C18, não C14:1), reforçando que cada defeito de beta-oxidação exige leitura própria do perfil de acilcarnitinas, não um raciocínio único de 'defeito de oxidação de ácido graxo'."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-deficiencia-primaria-carnitina",
+        "por_que": "O contraste mecanístico mais importante da trilha: aqui o defeito é no transportador que leva carnitina para dentro da célula (OCTN2/SLC22A5), não na maquinaria enzimática da beta-oxidação em si — por isso, ao contrário da VLCAD e da CPT2, a suplementação oral de L-carnitina em alta dose contorna o transportador defeituoso e reverte a cardiomiopatia quase completamente. É a única das cardiomiopatias metabólicas desta trilha que é genuinamente curável, e a coorte Faroesa quantifica o custo de não tratar: odds ratio de 54 para morte súbita (348 em mulheres) na forma não tratada."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "cardiomiopatia-deficiencia-primaria-carnitina",
+        "por_que": "Converte o documento anterior em ação de beira de leito: quando dosar carnitina livre, quando não descartar o diagnóstico apesar de triagem neonatal prévia normal, como diferenciar causas secundárias de carnitina baixa e como não perder a janela de reversibilidade — o mesmo ponto crítico do passo 6, agora em formato de verificação prática diante da criança com cardiomiopatia dilatada inexplicada."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica",
+        "por_que": "Muda de via metabólica: a doença de Pompe não é um defeito de beta-oxidação, mas de depósito lisossomal de glicogênio (deficiência de alfa-glicosidase ácida) — e ainda assim entra no mesmo diagnóstico diferencial do lactente com hipertrofia ventricular maciça. O ECG com PR curto e QRS de alta voltagem, a macroglossia e a hipotonia são os achados que a separam clinicamente da VLCAD e da CPT2, e a terapia de reposição enzimática (alglucosidase alfa) muda radicalmente a história natural quando iniciada precocemente."
+      },
+      {
+        "ordem": 9,
+        "item_type": "checklist",
+        "item_slug": "diante-de-lactente-com-hipertrofia-ventricular-importante-red-flags-para-doenca-de-pompe",
+        "por_que": "Operacionaliza o passo anterior no momento exato em que a decisão precisa ser tomada: lactente com hipertrofia ventricular grave e rapidamente progressiva, quando disparar a dosagem de alfa-glicosidase ácida em paralelo — não em sequência — ao painel genético sarcomérico, para não perder a janela terapêutica da reposição enzimática por esperar o resultado de um exame que não é o determinante."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "acometimento-cardiaco-na-doenca-de-pompe-cardiomiopatia-infantil-e-terapia-de-reposicao-enzimatica",
+        "por_que": "Vai além do reconhecimento inicial do passo 9 para o seguimento de longo prazo: mesmo após resposta favorável da função ventricular à terapia de reposição enzimática, a vigilância cardiológica (ECG, ecocardiograma, Holter) deve continuar indefinidamente pelo risco residual de arritmia — inclusive pré-excitação tipo WPW documentada em pacientes já tratados — e há cuidado anestésico específico (evitar propofol e sevoflurano em alta concentração) pelo risco de parada cardiopulmonar na indução."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-barth-cardiomiopatia-dilatada-nao-compactacao-do-ve-e-a-triade-com-neutropenia-e-miopatia",
+        "por_que": "Fecha o núcleo de diagnóstico diferencial com uma terceira via metabólica: a síndrome de Barth (defeito de TAZ, ligado ao X) afeta a remodelação da cardiolipina mitocondrial, não a beta-oxidação nem o depósito lisossomal, e por isso tem marcador bioquímico próprio (razão monolisocardiolipina:cardiolipina) e fenótipo característico — cardiomiopatia com não compactação do ventrículo esquerdo, neutropenia e miopatia. Depois de VLCAD, CPT2, carnitina e Pompe, este passo completa o quadro de que 'cardiomiopatia metabólica pediátrica' não é uma entidade única, mas um grupo de mecanismos distintos que exigem investigação bioquímica dirigida e específica para cada um."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+        "por_que": "Encerra dando a moldura mais ampla em que todo o percurso desta trilha se encaixa: situa as cinco condições metabólicas específicas percorridas nos passos anteriores dentro da classificação geral de cardiomiopatia pediátrica por etiologia (genética sarcomérica, metabólica, adquirida) e por faixa etária, e reforça — agora com a bagagem construída ao longo da trilha — por que a etiologia identificada, e não o rótulo ecocardiográfico isolado, é o que determina prognóstico e a eventual indicação de transplante."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-antitrombotico-apos-sca-ou-icp",
+    "titulo": "Fibrilação atrial com síndrome coronariana aguda ou angioplastia: a terapia antitrombótica combinada",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo decidir a terapia antitrombótica combinada no paciente com fibrilação atrial que sofre síndrome coronariana aguda ou é submetido a angioplastia — qual anticoagulante escolher (e quando a varfarina ainda é obrigatória), se e por quanto tempo manter o ácido acetilsalicílico ao lado do inibidor de P2Y12, e como a duração da tripla e da dupla terapia se ajusta ao risco isquêmico e hemorrágico de cada paciente — o cenário em que o paciente precisa de anticoagulante e de antiagregante ao mesmo tempo, que nenhuma das outras trilhas de FA já publicadas detalha.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+        "por_que": "Antes de complicar a equação com antiagregantes, o leitor precisa do esqueleto padrão: como o caminho AF-CARE decide anticoagulação a partir do risco tromboembólico, independentemente de ritmo ou de procedimento. É a base sobre a qual a camada de SCA/ICP será empilhada nas etapas seguintes."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "O primeiro dos dois riscos que precisam ser pesados: sem quantificar a chance de AVC/embolia sistêmica pela FA, não há como justificar manter três fármacos antitrombóticos simultâneos nem decidir por quanto tempo. É o lado 'isquêmico pela FA' da balança que toda a trilha equilibra."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "has-bled",
+        "por_que": "O segundo lado da balança, e o que dá nome ao problema clínico central desta trilha: cada fármaco antitrombótico somado — anticoagulante, AAS, inibidor de P2Y12 — soma sangramento. O HAS-BLED é o instrumento que orienta a rapidez com que a tripla terapia deve ser reduzida à dupla."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "augustus-terapia-antitrombotica-apos-sca-ou-icp-na-fibrilacao-atrial",
+        "por_que": "O ensaio que resolveu, com desenho fatorial 2×2 em 4.614 pacientes, as duas perguntas centrais deste cenário ao mesmo tempo: apixabana ou antagonista da vitamina K, e manter ou suspender o AAS ao lado do inibidor de P2Y12. É o eixo factual sobre o qual toda a trilha se apoia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "apixabana",
+        "por_que": "O anticoagulante validado pelo AUGUSTUS como preferível ao antagonista da vitamina K nesse cenário combinado, com menos sangramento e sem perda de eficácia na prevenção de AVC — a escolha padrão quando não há contraindicação formal ao DOAC."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "O braço comparador do AUGUSTUS e a opção que continua obrigatória quando o DOAC está formalmente contraindicado — FA valvar reumática ou prótese mecânica — situação em que a mesma pergunta de terapia combinada com SCA/ICP se repete, mas sem a opção do anticoagulante mais moderno."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "clopidogrel-bissulfato",
+        "por_que": "O inibidor de P2Y12 que sustentou a quase totalidade dos braços do AUGUSTUS e que segue como escolha padrão na terapia combinada, justamente por ter o perfil de sangramento mais previsível quando já há um anticoagulante na equação — ao contrário de opções mais potentes, que a maioria dos protocolos evita nesse contexto."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "acido-acetilsalicilico-aas",
+        "por_que": "O fármaco cujo papel o próprio AUGUSTUS testou diretamente contra placebo: manter o AAS ao lado do anticoagulante e do inibidor de P2Y12 aumenta sangramento sem redução proporcional de eventos isquêmicos além da janela periprocedimento mais precoce — a peça que este passo ajuda o leitor a saber quando suspender."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fluxograma-antitrombotico-na-fa-com-icp-ou-sca-terapia-tripla-e-dupla-esc-2023-2024",
+        "por_que": "Transforma a evidência do AUGUSTUS e as diretrizes ESC 2023/2024 em algoritmo aplicável à beira do leito: até uma semana de tripla terapia como padrão (até um mês em alto risco isquêmico), depois anticoagulante mais clopidogrel por 6 a 12 meses, e anticoagulante isolado a partir de 12 meses — o fechamento operacional de tudo o que veio antes."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-fibrilacao-atrial",
+        "por_que": "Garante que a decisão antitrombótica combinada não se perca entre os demais itens do AF-CARE na alta hospitalar — revisão de interações medicamentosas, reavaliação programada e registro explícito do escore e da estratégia escolhida — fechando o ciclo entre a evidência do ensaio e a prática documentada na alta."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiomiopatia-sobrecarga-de-ferro-hemocromatose-e-talassemia",
+    "titulo": "Cardiomiopatia por Sobrecarga de Ferro: da Hemocromatose e da Talassemia ao T2* e à Quelação",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo reconhecer a cardiomiopatia por sobrecarga de ferro como uma entidade que atravessa fenótipos (diastólica precoce, dilatada tardia, ocasionalmente restritiva) e duas etiologias distintas — hemocromatose hereditária por HFE e sobrecarga secundária/transfusional por talassemia maior —, conduzir o rastreio e a estratificação de risco pela RM cardíaca com T2* (entendendo por que o mapeamento T1, ao contrário do que ocorre na amiloidose, tem papel secundário aqui), e escolher entre flebotomia e os três quelantes de ferro conforme a etiologia, distinguindo essa cardiomiopatia de outras causas restritivas e infiltrativas no diagnóstico diferencial.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+        "por_que": "Começa aqui porque a classificação ESC 2023 organiza as cardiomiopatias por fenótipo morfofuncional — hipertrófica, dilatada, restritiva, arritmogênica de VD, não dilatada hipocinética. A sobrecarga de ferro é uma exceção pedagogicamente importante dentro desse esquema: não se fixa em um único fenótipo, começando como disfunção diastólica sutil, evoluindo tipicamente para dilatada e, com menor frequência, sobrepondo um componente restritivo. Entender esse enquadramento fenotípico antes evita o erro de procurar 'a' categoria fixa em que a sobrecarga de ferro se encaixa."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hemocromatose-cardiovascular-hereditaria-hfe-e-transfusional-rm-t2-estrela-quelacao-e-flebotomia",
+        "por_que": "O documento central da trilha: apresenta as duas etiologias que convergem no mesmo mecanismo final — ferro não ligado à transferrina captado por canais de cálcio tipo L, catálise de Fenton, disfunção mitocondrial e fibrose — mas que diferem na via de entrada do ferro, na velocidade de acometimento cardíaco e, sobretudo, no tratamento. É a base factual sobre a qual todas as etapas seguintes, mais específicas, se apoiam."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "ferro-eco-como-primeira-linha-na-sobrecarga",
+        "por_que": "Antes de chegar à ressonância, a avaliação começa pelo ecocardiograma transtorácico — e o posicionamento SBC 2026 é explícito que a análise sistólica biventricular e a análise diastólica (com Doppler tecidual bilateral) são duas recomendações fortes distintas, não uma etapa substituível pela outra. É o primeiro degrau prático do rastreio, antes de justificar a indicação de RM T2*."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "ferro-t2-estrela-abaixo-de-20-ms-define-sobrecarga-relevante",
+        "por_que": "Fixa os dois cortes que organizam toda a conduta subsequente: T2* abaixo de 20 ms define sobrecarga clinicamente relevante, e abaixo de 10 ms marca o risco elevado de disfunção e arritmia grave — os mesmos números já apresentados na etapa 2, agora como recomendação formal graduada pela SBC 2026, reforçando que não são números soltos de um único estudo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "t2-estrela-quantitativo-para-sobrecarga-de-ferro-miocardica",
+        "por_que": "A mesma indicação, agora graduada pela Diretriz de TC e RM Cardiovascular da SBC 2024 na escala clássica I-A, tanto para diagnóstico quanto para monitorização terapêutica. Ver a recomendação chegar por dois caminhos independentes (imagem multimodal 2026 e RM/TC 2024) com o mesmo corte e a mesma força consolida que o T2* não é apenas uma métrica de pesquisa, é padrão de cuidado com nível de evidência A."
+      },
+      {
+        "ordem": 6,
+        "item_type": "evidencia",
+        "item_slug": "ferro-t1-nativo-reduzido-distingue-a-sobrecarga",
+        "por_que": "Vira a chave do diagnóstico diferencial: na sobrecarga de ferro, o mapa T1 nativo é REDUZIDO, ao contrário da amiloidose e da maioria das cardiomiopatias infiltrativas, em que é elevado. Esse sinal invertido é o detalhe que evita confundir as duas entidades quando ambas se apresentam com espessamento parietal e padrão restritivo à beira do leito."
+      },
+      {
+        "ordem": 7,
+        "item_type": "evidencia",
+        "item_slug": "t1-na-sobrecarga-de-ferro-tem-recomendacao-muito-mais-fraca-que-t2-estrela",
+        "por_que": "Fecha a comparação de métodos com um alerta prático: mesmo sendo útil como pista diferencial (etapa anterior), o T1 tem recomendação Classe IIb Nível C para diagnóstico e seguimento da sobrecarga de ferro — muito mais fraca que o Classe I Nível A do T2* quantitativo. As duas técnicas não são intercambiáveis, e substituir T2* por T1 na prática troca uma recomendação de máxima força por uma das mais fracas da diretriz."
+      },
+      {
+        "ordem": 8,
+        "item_type": "evidencia",
+        "item_slug": "ferro-intervalo-do-eco-depende-do-t2-estrela",
+        "por_que": "Devolve o raciocínio ao ecocardiograma da etapa 3, agora fechando o ciclo de seguimento: o intervalo de repetição do eco (6 a 12 meses, ou 6 meses ou menos se sintomático) é definido pelo valor de T2* da ressonância, não pelo eco anterior. É a dependência entre os dois métodos que costuma se perder na prática e que esta trilha deixa explícita."
+      },
+      {
+        "ordem": 9,
+        "item_type": "evidencia",
+        "item_slug": "ferro-t2-estrela-no-acompanhamento-do-tratamento",
+        "por_que": "Conecta a imagem ao desfecho terapêutico: a melhora do T2* sob quelação ou flebotomia acompanha a melhora da função cardíaca e a redução de eventos adversos, tornando-o um dos poucos marcadores de imagem em cardiomiopatia em que o número monitorizado se correlaciona com o resultado clínico. Prepara a etapa seguinte, em que o tratamento é detalhado por completo."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "cardiomiopatia-sobrecarga-de-ferro",
+        "por_que": "O documento de síntese da trilha: reúne fisiopatologia, triagem por ferritina/TSAT (e suas limitações), teste genético HFE, os cortes de T2* já vistos, e o núcleo terapêutico que as etapas anteriores só anteciparam — flebotomia como primeira linha na hemocromatose hereditária, e os três quelantes (deferoxamina, deferasirox, deferiprona) na sobrecarga secundária, com a deferiprona destacada pela afinidade específica pelo ferro intramiocárdico. Declara também, com transparência, a ausência de diretriz brasileira dedicada ao tema."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide",
+        "por_que": "Primeiro contraste do diagnóstico diferencial: outra causa de fenótipo restritivo não amiloide, mas com mecanismo, epidemiologia (regiões tropicais, síndrome hipereosinofílica) e conduta completamente distintos da sobrecarga de ferro. Ver as duas lado a lado evita o erro de tratar 'restritivo não amiloide' como uma categoria única e uniforme."
+      },
+      {
+        "ordem": 12,
+        "item_type": "documento",
+        "item_slug": "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+        "por_que": "O principal diagnóstico diferencial de cardiomiopatia infiltrativa: a amiloidose compartilha com a sobrecarga de ferro a apresentação com espessamento parietal e disfunção diastólica precoce, mas se distingue pelo T1 nativo elevado (e não reduzido), pelo mecanismo de depósito mecânico da fibrila amiloide (e não toxicidade oxidativa), pela ausência de reversibilidade completa, e por um arsenal terapêutico próprio — estabilizadores e silenciadores de transtirretina, não flebotomia ou quelantes."
+      },
+      {
+        "ordem": 13,
+        "item_type": "documento",
+        "item_slug": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+        "por_que": "Fecha a trilha com uma terceira doença de depósito genética que, como a hemocromatose hereditária, tem tratamento específico dirigido ao mecanismo — terapia de reposição enzimática na Fabry, flebotomia na sobrecarga de ferro — em vez de manejo sintomático genérico de insuficiência cardíaca. É o paralelo conceitual que a própria página da hemocromatose já aponta em seu 'Tudo com Tudo', e que aqui se completa em etapa própria: cardiomiopatias de depósito com mecanismo identificável merecem, cada uma, sua terapia dirigida."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pos-avc-prevencao-secundaria-guiada-por-evidencia",
+    "titulo": "Hipertensão pós-AVC: o que a evidência realmente sustenta na prevenção secundária",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo o que fazer com a pressão arterial depois que o paciente já teve um AVC ou AIT — contrastando PROGRESS (combinação perindopril+indapamida), PRoFESS (telmisartana precoce, neutro), PATS (indapamida isolada, evidência preliminar) e MOSES (eprosartana vs. nitrendipina, desenho que conta todos os eventos recorrentes) não pelo mecanismo teórico, mas pelo desenho de cada ensaio — e fechando com uma intervenção não farmacológica (substituto de sal, SSaSS) e a conexão entre controle pressórico e declínio cognitivo (SPRINT MIND).",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-classificacao-diagnostico-metas",
+        "por_que": "Estabelece a classificação, o diagnóstico e as metas pressóricas gerais da diretriz 2025 antes de entrar na pergunta específica desta trilha. Sem esse vocabulário comum — estágios, meta padrão — as nuances dos ensaios de prevenção secundária pós-AVC que vêm a seguir ficam sem referência de comparação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "progress-perindopril-indapamida-na-prevencao-secundaria-de-avc",
+        "por_que": "É o ensaio fundador desta trilha: mostrou que reduzir a pressão depois de um AVC ou AIT prévio, mesmo em pacientes normotensos, reduz a recorrência — mas o benefício veio da combinação perindopril+indapamida, não do IECA isolado. Esse achado específico (combinação, não monoterapia) é o que muda a prescrição na prática e o que os ensaios seguintes vão contrastar."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-progress-pos-avc-perindopril-indapamida",
+        "por_que": "Traduz o PROGRESS em conduta objetiva — o que prescrever, para quem e por quê — fixando o achado central do estudo anterior antes de ele ser contrastado pelos ensaios seguintes, que testaram outras estratégias farmacológicas e obtiveram resultados diferentes."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "profess-telmisartana-precoce-apos-avc-isquemico",
+        "por_que": "Contraponto essencial: o PRoFESS testou telmisartana iniciada precocemente após AVC isquêmico e não replicou benefício significativo no desfecho primário (HR 0,95; P=0,23). Ensina que nem toda estratégia de bloqueio do SRAA pós-AVC funciona igual ao PROGRESS — o timing de início e a escolha do fármaco importam, e a generalização apressada é o erro que esta etapa previne."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "pats-indapamida-na-prevencao-secundaria-de-avc",
+        "por_que": "Situa cronologicamente onde a evidência começou: o PATS testou indapamida isolada (não combinação) após AVC/AIT e mostrou redução de AVC recorrente em 3 anos, mas sem redução de mortalidade e com resultado descrito como preliminar. Mostra o que faltava responder até o PROGRESS consolidar a estratégia de combinação."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "moses-eprosartana-versus-nitrendipina-pos-avc-eventos-recorrentes",
+        "por_que": "Introduz uma lição metodológica que muda a leitura dos ensaios anteriores: o MOSES comparou dois fármacos ativos (não fármaco vs. placebo) e contou todos os eventos recorrentes, não apenas o primeiro — desenho estatístico diferente que precisa ser reconhecido para não comparar as magnitudes de efeito da trilha de forma ingênua entre si."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-pa-apos-avc-progress-profess-pats-moses",
+        "por_que": "Capítulo de síntese que reúne PROGRESS, PRoFESS, PATS e MOSES lado a lado, deixando explícito onde convergem (controle pressórico reduz AVC recorrente) e onde divergem (fármaco, desenho do ensaio, desfecho primário) — consolida a leitura crítica que as quatro etapas anteriores prepararam."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "substituto-de-sal-com-potassio-e-desfecho-cardiovascular-o-ensaio-ssass",
+        "por_que": "Muda de eixo farmacológico para uma intervenção não medicamentosa testada na mesma população-alvo desta trilha (hipertensos com AVC prévio ou ≥60 anos): o substituto de sal com potássio reduziu AVC, eventos cardiovasculares maiores e mortalidade por qualquer causa — mostra que a prevenção secundária pressórica pós-AVC não se esgota na escolha do anti-hipertensivo."
+      },
+      {
+        "ordem": 9,
+        "item_type": "caso_clinico",
+        "item_slug": "substituto-de-sal-em-hipertenso-com-avc-previo",
+        "por_que": "Aplica o achado do SSaSS a um caso real, testando se o raciocínio 'reduzir sódio com potássio ajuda todo hipertenso com AVC prévio' resiste às ressalvas de função renal e uso concomitante de poupador de potássio, IECA ou BRA em dose alta — fecha o ciclo estudo → decisão clínica à beira do leito."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "hipertensao-e-declinio-cognitivo-o-que-o-sprint-mind-realmente-mostrou",
+        "por_que": "Encerra a trilha ampliando o horizonte: a mesma lógica de controle pressórico que evita a recorrência de um AVC clínico também se conecta ao dano cerebrovascular silencioso e ao declínio cognitivo — mostrando que o cérebro continua sendo órgão-alvo mesmo quando não há novo evento clínico visível, e por que a prevenção secundária pós-AVC não deve ser vista apenas como 'evitar o próximo AVC'."
+      }
+    ]
   }
 ]
