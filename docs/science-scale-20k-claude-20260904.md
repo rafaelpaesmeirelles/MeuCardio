@@ -1536,3 +1536,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 13 | 287 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **376** | **4.524** |
+
+## Lote 74 — concluído (commit 910ffdae)
+
+- **5 trilhas** (continuação do rebalanceamento de cota). Mesma metodologia dos Lotes 72-73.
+  - **Farmacologia**: polifarmácia e desprescrição cardiovascular no idoso — cascata de prescrição, consenso AHA 2026, OPTIMISE/PARTAGE/OPERAM (anti-hipertensivo) e FRAIL-AF (anticoagulação vs. risco de queda) (14 etapas).
+  - **Valvopatias**: valvopatia por doença sistêmica rara em três famílias mecanísticas — depósito lisossômico/metabólico (Fabry, Gaucher 3c, MPS IVA, alcaptonúria), defeito estrutural de colágeno/elastina (osteogênese imperfeita, pseudoxantoma elástico) e mediador humoral (carcinoide); por que a TRE frequentemente não reverte a valvopatia já instalada (14 etapas).
+  - **Tromboembolismo**: CTEPH como sequela tardia do TEP não resolvido — seguimento pós-TEP, critérios de operabilidade, endarterectomia vs. angioplastia por balão/riociguato/macitentana, incluindo a nota de retratação/republicação do MERIT-1 (12 etapas).
+  - **Dispositivos**: interferência eletromagnética e disfunção técnica do implante — fratura de eletrodo, TMP, choque inapropriado, cirurgia não cardíaca, RM não condicional (MagnaSafe), radioterapia oncológica (11 etapas).
+  - **Comunicação clínica**: status de reanimação (ONR), acurácia do decisor substituto (Shalowitz 2006) e recusa terapêutica por convicção religiosa (Testemunhas de Jeová) em cirurgia cardíaca, incluindo a decisão do STF de 25/09/2024 (14 etapas).
+- **Verificação de integridade**: todas as 65 referências verificadas independentemente — nenhuma quebrada.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.639 itens.
+
+### Status consolidado (após Lote 74)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 18 | 282 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **381** | **4.519** |
