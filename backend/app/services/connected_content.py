@@ -340,11 +340,11 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
     responses = [
         buscar_relacionados_contextuais(
             db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
-            assunto=drug.slug,
-            # Structured indications already prove the clinical-topic link.
-            # Preserve each supported topic's documents and other fronts;
-            # studies still require explicit overlap with the medication.
-            filtrar_grupos_por_assunto=False,
+            assunto=f"{drug.slug} {drug.generic_name}",
+            # A indicação prova medicamento -> tema, mas não prova que todo
+            # item do tema se relacione ao medicamento. Cada vizinho precisa
+            # compartilhar o assunto específico no próprio metadado.
+            filtrar_grupos_por_assunto=True,
         )
         for theme in themes
     ]
