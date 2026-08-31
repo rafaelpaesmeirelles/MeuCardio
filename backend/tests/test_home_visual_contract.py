@@ -81,7 +81,7 @@ def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
         "/checklists", "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
         "/avaliacao-preoperatoria", "/evidencias", "/estudos", "/diretrizes",
         "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/biblioteca", "/galeria",
-        "/cursos", "/apresentacao", "/round", "/receituario", "/documentos",
+        "/deslocamento", "/apresentacao", "/round", "/receituario", "/documentos",
         "/material-paciente", "/agenda", "/corvia-mail",
         "/telediagnostico", "/indicadores", "/exportar", "/favoritos", "/busca",
         "/assistente", "/usuarios-online", "/sincronizacao", "/minha-conta",
@@ -91,7 +91,7 @@ def test_home_exposes_all_real_functional_areas_without_dead_mock_buttons():
         assert f'to: "{route}"' in panel
         assert f'path="{route.lstrip("/")}' in app or f'path="{route}"' in app
 
-    assert 'to: "/tour?origem=assinatura&modo=quick"' in panel
+    assert 'to: "/tour?retorno=/minha-conta"' in panel
     assert 'path="assinatura"' in app
     assert 'path="/em-breve"' in app or 'path="em-breve"' in app
 
@@ -132,9 +132,9 @@ def test_navigation_matches_reference_six_area_information_architecture():
         for route in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
-            "/indicadores", "/galeria", "/cursos", "/apresentacao",
+            "/indicadores", "/galeria", "/deslocamento", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar", "/assistente",
-            "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
+            "/favoritos", "/minha-conta", "/tour?retorno=/minha-conta", "/tour",
         ):
             assert route in source
 
