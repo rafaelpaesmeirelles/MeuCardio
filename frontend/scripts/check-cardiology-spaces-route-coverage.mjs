@@ -73,5 +73,50 @@ for (const [space, count] of Object.entries(counts)) {
   if (count === 0) throw new Error(`O espaço ${space} ficou sem nenhuma rota explícita.`);
 }
 
+// Contrato de identidade visível: classes e nomes de arquivo legados podem existir
+// como detalhes técnicos de compatibilidade, mas nenhuma superfície moderna pode
+// voltar a exibir a nomenclatura antiga do produto.
+const brandCss = read("src/styles/canonical-brand-standard.css");
+if (!brandCss.includes('.cos-nav__home small::after')) {
+  throw new Error("O shell legado não possui substituição visual explícita para o subtítulo antigo.");
+}
+if (!brandCss.includes('content:"Cardiology Spaces"')) {
+  throw new Error("O shell legado deve exibir Cardiology Spaces no lugar da nomenclatura antiga.");
+}
+if (!brandCss.includes('a[href="/cursos"]') || !brandCss.includes('a[href^="/cursos/"]')) {
+  throw new Error("Cursos deve permanecer invisível em qualquer shell legado.");
+}
+
+const modernSurfaces = [
+  "src/components/ClinicalDesktopNav.tsx",
+  "src/components/ClinicalMobileNav.tsx",
+  "src/components/ClinicalCommandPrimitives.tsx",
+  "src/pages/CardiologySpacesHome.tsx",
+  "src/pages/CardiologySpacesTour.tsx",
+];
+for (const file of modernSurfaces) {
+  const source = read(file);
+  if (/Clinical Command Center|Clinical OS/.test(source)) {
+    throw new Error(`${file} voltou a expor nomenclatura visual legada.`);
+  }
+  if (/to:\s*["']\/cursos(?:\/|["'])|href=["']\/cursos/.test(source)) {
+    throw new Error(`${file} voltou a expor Cursos como opção navegável.`);
+  }
+}
+
+const legacyShell = read("src/components/ShellClinicalOSLaunch.tsx");
+if (!legacyShell.includes("<small>Clinical Command Center</small>")) {
+  // Quando o shell for finalmente renomeado em código, a regra abaixo deixa de ser
+  // necessária. Até lá, o texto residual só é aceitável porque canonical-brand-standard
+  // o substitui de forma determinística por Cardiology Spaces.
+  if (/Clinical Command Center/.test(legacyShell)) {
+    throw new Error("Encontrada outra ocorrência não controlada de Clinical Command Center no shell legado.");
+  }
+}
+if (!legacyShell.includes("Cardiology Spaces")) {
+  throw new Error("O shell autenticado deve carregar branding Cardiology Spaces explícito.");
+}
+
 console.log(`Cardiology Spaces route coverage OK: ${routePaths.length - explicitAliases.size} rotas autenticadas cobertas.`);
 console.log(`Distribuição explícita: ${Object.entries(counts).map(([space, count]) => `${space}=${count}`).join(" · ")}`);
+console.log("Cardiology Spaces visible-brand contract OK: nomenclatura antiga não é exibida nas superfícies modernas.");
