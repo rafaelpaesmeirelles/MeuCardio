@@ -50989,5 +50989,675 @@
       "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-antifosfolipide-catastrofica",
+    "name": "Síndrome Antifosfolípide Catastrófica (CAPS)",
+    "aliases": [
+      "CAPS",
+      "síndrome de Asherson",
+      "catastrophic antiphospholipid syndrome"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "emergencia_trombotica_multiorganica",
+    "prevalence_rank": 125,
+    "completeness": "completo",
+    "summary": "Forma rara (menos de 1% dos pacientes com síndrome antifosfolípide) e potencialmente fatal da síndrome antifosfolípide, caracterizada por trombose microvascular disseminada e aguda acometendo três ou mais órgãos em menos de uma semana, confirmada histopatologicamente e associada a anticorpos antifosfolípide. Distinta da SAF comum (trombose macrovascular insidiosa). Acomete o coração em cerca de metade dos episódios, com falência cardíaca aguda por microtrombose coronariana intramural difusa, disfunção valvar aguda mimetizando endocardite e choque cardiogênico. Tratamento de referência é a tríade anticoagulação plena + corticosteroide em dose alta + plasmaférese/imunoglobulina, com rituximabe e eculizumabe como adjuvantes em casos refratários.",
+    "presentation": [
+      "Falência aguda de múltiplos órgãos em dias, em paciente com SAF conhecida ou aPL positivo",
+      "Insuficiência renal aguda por microtrombose glomerular (manifestação mais comum)",
+      "Insuficiência respiratória aguda/SDRA e hemorragia alveolar",
+      "Disfunção neurológica aguda (AVC, encefalopatia)",
+      "Falência cardíaca aguda com disfunção sistólica global e/ou choque cardiogênico",
+      "Disfunção valvar aguda mimetizando endocardite",
+      "Livedo racemoso e necrose cutânea",
+      "Febre, trombocitopenia e achados laboratoriais que lembram CIVD"
+    ],
+    "differentials": [
+      "Sepse com falência de múltiplos órgãos",
+      "Coagulação intravascular disseminada (CIVD) de outra causa",
+      "Púrpura trombocitopênica trombótica e outras microangiopatias trombóticas",
+      "Síndrome hemolítico-urêmica atípica",
+      "Endocardite infecciosa (no acometimento valvar)",
+      "Vasculite sistêmica com falência multiorgânica",
+      "Lúpus eritematoso sistêmico com atividade grave multissistêmica"
+    ],
+    "tests": [
+      "Anticoagulante lúpico, anticardiolipina IgG/IgM, anti-beta2-glicoproteína I (com confirmação em amostra subsequente quando possível)",
+      "Ecocardiograma para função ventricular e avaliação valvar",
+      "Função renal, urina tipo I, hemograma com plaquetas, coagulograma, LDH, esquizócitos",
+      "Biópsia de órgão acometido quando factível e segura, para confirmação histopatológica",
+      "Rastreio infeccioso ativo (hemoculturas, foco suspeito)",
+      "Imagem de tórax (TC) na suspeita de SDRA/hemorragia alveolar",
+      "Neuroimagem na suspeita de acometimento de SNC"
+    ],
+    "red_flags": [
+      "Falência de três ou mais órgãos de instalação aguda (menos de uma semana) em paciente com SAF ou aPL positivo",
+      "Choque cardiogênico refratário associado a disfunção sistólica global aguda sem lesão coronariana epicárdica focal",
+      "Disfunção valvar aguda com hemoculturas negativas em paciente com aPL",
+      "Livedo racemoso extenso com necrose cutânea associado a falência de órgãos",
+      "Trombocitopenia com esquizócitos e falência multiorgânica aguda"
+    ],
+    "ambulatory_flow": [
+      "CAPS não tem manejo ambulatorial — é emergência médica com indicação de internação imediata em unidade de terapia intensiva",
+      "Pacientes com SAF conhecida devem ser orientados a buscar atendimento de emergência diante de sintomas sistêmicos agudos multissistêmicos, sobretudo após infecção, cirurgia ou suspensão de anticoagulação"
+    ],
+    "emergency_flow": [
+      "Alto índice de suspeita diante de falência aguda de múltiplos órgãos com aPL positivo ou SAF conhecida",
+      "Iniciar tríade terapêutica sem atraso: anticoagulação plena (heparina), corticosteroide sistêmico em dose alta, plasmaférese e/ou imunoglobulina intravenosa",
+      "Investigar e tratar agressivamente o gatilho identificado (antibioticoterapia se infecção, revisão de medicações, avaliação de suspensão recente de anticoagulação)",
+      "Ecocardiograma precoce para função ventricular e avaliação valvar",
+      "Suporte hemodinâmico intensivo, incluindo suporte circulatório mecânico temporário se choque cardiogênico refratário",
+      "Considerar rituximabe ou eculizumabe (inibidor de complemento) como adjuvantes em casos refratários à tríade terapêutica",
+      "Biópsia de órgão acometido quando factível e segura, para confirmação histopatológica formal"
+    ],
+    "tags": [
+      "síndrome antifosfolípide",
+      "CAPS",
+      "trombose microvascular",
+      "falência de múltiplos órgãos",
+      "choque cardiogênico",
+      "microtrombose coronariana",
+      "disfunção valvar aguda",
+      "terapia intensiva",
+      "plasmaférese",
+      "eculizumabe"
+    ],
+    "source_refs": [
+      "Asherson RA, Cervera R, de Groot PG, et al. Catastrophic antiphospholipid syndrome: international consensus statement on classification criteria and treatment guidelines. Lupus. 2003;12(7):530-534. DOI: 10.1191/0961203303lu394oa. PMID: 12892393",
+      "Rodríguez-Pintó I, Moitinho M, Santacreu I, et al. Catastrophic antiphospholipid syndrome (CAPS): Descriptive analysis of 500 patients from the International CAPS Registry. Autoimmun Rev. 2016;15(12):1120-1124. DOI: 10.1016/j.autrev.2016.09.010. PMID: 27639837",
+      "Bucciarelli S, Espinosa G, Cervera R, et al. Mortality in the catastrophic antiphospholipid syndrome: causes of death and prognostic factors in a series of 250 patients. Arthritis Rheum. 2006;54(8):2568-2576. DOI: 10.1002/art.22018. PMID: 16868979",
+      "Rodríguez-Pintó I, Espinosa G, Erkan D, Shoenfeld Y, Cervera R; CAPS Registry Project Group. The effect of triple therapy on the mortality of catastrophic anti-phospholipid syndrome patients. Rheumatology (Oxford). 2018;57(7):1264-1270. DOI: 10.1093/rheumatology/key082. PMID: 29660074",
+      "Pons I, Jeréz A, Espinosa G, Rodríguez-Pintó I, Erkan D, Shoenfeld Y, Cervera R. Cardiac involvement in the catastrophic antiphospholipid syndrome (CAPS): Lessons from the 'CAPS Registry'. Semin Arthritis Rheum. 2024;66:152439. DOI: 10.1016/j.semarthrit.2024.152439. PMID: 38552300",
+      "Legault K, Schunemann H, Hillis C, et al. McMaster RARE-Bestpractices clinical practice guideline on diagnosis and management of the catastrophic antiphospholipid syndrome. J Thromb Haemost. 2018;16(8):1656-1664. DOI: 10.1111/jth.14192. PMID: 29978552",
+      "Berman H, Rodríguez-Pintó I, Cervera R, et al. Rituximab use in the catastrophic antiphospholipid syndrome: descriptive analysis of the CAPS registry patients receiving rituximab. Autoimmun Rev. 2013;12(11):1085-1090. DOI: 10.1016/j.autrev.2013.05.004. PMID: 23777822",
+      "Yelnik CM, Miranda S, Mekinian A, et al. Patients with refractory catastrophic antiphospholipid syndrome respond inconsistently to eculizumab. Blood. 2020;136(21):2473-2477. DOI: 10.1182/blood.2020007499. PMID: 32722806",
+      "Jacobs L, Wauters N, Lablad Y, Morelle J, Taghavi M. Diagnosis and Management of Catastrophic Antiphospholipid Syndrome and the Potential Impact of the 2023 ACR/EULAR Antiphospholipid Syndrome Classification Criteria. Antibodies (Basel). 2024;13(1):21. DOI: 10.3390/antib13010021. PMID: 38534211",
+      "Bitsadze V, Yakubova F, Khizroeva J, et al. Catastrophic Antiphospholipid Syndrome. Int J Mol Sci. 2024;25(1):668. DOI: 10.3390/ijms25010668. PMID: 38203837"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-antifosfolipide-catastrofica-e-acometimento-cardiovascular-tempestade-trombotica-e-triade-terapeutica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "eritromelalgia",
+    "name": "Eritromelalgia",
+    "aliases": [
+      "Eritermalgia",
+      "Doença de Weir Mitchell",
+      "Erythromelalgia",
+      "Erythermalgia"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "síndrome de dor neurovascular episódica de extremidades",
+    "prevalence_rank": 126,
+    "completeness": "completo",
+    "summary": "Síndrome rara de episódios recorrentes de dor em queimação, eritema e calor cutâneo em extremidades (tipicamente pés), desencadeados por calor/exercício/dependência do membro e aliviados por frio/elevação. Forma primária hereditária por mutação de ganho de função no gene SCN9A (canal Nav1.7), sem resposta ao AAS; forma secundária mais comumente associada a trombocitemia essencial e policitemia vera, por agregação plaquetária microvascular, com resposta tipicamente dramática ao AAS em dose baixa — diferença com valor diagnóstico direto.",
+    "presentation": [
+      "Episódios recorrentes de dor em queimação intensa em extremidades, tipicamente pés bilateralmente, com menor frequência mãos",
+      "Eritema e aumento da temperatura cutânea local durante as crises",
+      "Crises desencadeadas ou agravadas por calor, exercício e dependência do membro (posição pendente)",
+      "Alívio característico por resfriamento ou elevação do membro",
+      "Comportamento de imersão repetida dos pés em água gelada, por vezes com lesão cutânea associada — achado clínico de valor diagnóstico",
+      "Forma primária: início na infância/adolescência, história familiar frequente",
+      "Forma secundária: início na idade adulta, sem história familiar"
+    ],
+    "differentials": [
+      "Fenômeno de Raynaud (padrão oposto: dor com vasoconstrição/palidez ao frio, não ao calor)",
+      "Neuropatia periférica de pequenas fibras de outras causas",
+      "Síndrome dolorosa regional complexa (causalgia)",
+      "Celulite ou erisipela (ausência de febre/leucocitose sistêmica sustentada na eritromelalgia)",
+      "Gota aguda",
+      "Insuficiência venosa crônica",
+      "Vasculite de pequenos vasos"
+    ],
+    "tests": [
+      "Anamnese e exame físico direcionados (gatilhos térmicos/dependência, padrão de alívio ao frio)",
+      "Hemograma completo com contagem de plaquetas em todo paciente com início na idade adulta",
+      "Pesquisa de mutação JAK2 V617F quando há suspeita de doença mieloproliferativa",
+      "Teste genético para SCN9A quando há suspeita de forma primária hereditária (início precoce, história familiar)",
+      "Teste terapêutico com AAS em dose baixa como ferramenta diagnóstica diferencial prática",
+      "Biópsia de pele/avaliação de fibras finas em casos selecionados com suspeita de neuropatia associada"
+    ],
+    "red_flags": [
+      "Lesão cutânea (maceração, ulceração, necrose por frio) por imersão repetida e prolongada em água gelada",
+      "Sinais hematológicos de doença mieloproliferativa não investigada (esplenomegalia, trombocitose, eritrocitose)",
+      "Eventos trombóticos associados (isquemia digital, AVC, trombose venosa) sugerindo doença mieloproliferativa de base não tratada",
+      "Início em idade adulta sem causa identificada, exigindo investigação hematológica ativa antes de rotular como idiopática"
+    ],
+    "ambulatory_flow": [
+      "Caracterizar a tríade clínica: dor em queimação, eritema e calor local, com gatilhos térmicos/dependência e alívio ao frio/elevação",
+      "Definir idade de início e história familiar",
+      "Solicitar hemograma completo com plaquetas em todo caso de início adulto; se trombocitose/eritrocitose, investigar JAK2 V617F e encaminhar à hematologia",
+      "Considerar teste genético SCN9A se início precoce (infância/adolescência) e/ou história familiar",
+      "Considerar teste terapêutico com AAS em dose baixa como recurso diagnóstico diferencial",
+      "Se forma secundária confirmada: tratar a doença mieloproliferativa de base, com AAS em dose baixa como medida sintomática de resposta característica",
+      "Se forma primária: orientar evitar gatilhos de calor, resfriamento cauteloso sem lesão cutânea, e considerar ensaio terapêutico com bloqueador de canal de sódio (carbamazepina, mexiletina, lidocaína tópica/sistêmica) com expectativa realista de eficácia parcial"
+    ],
+    "emergency_flow": [
+      "Eritromelalgia isolada raramente é emergência — avaliar sinais de complicação: lesão cutânea extensa por resfriamento, sinais de infecção secundária, ou evento trombótico agudo sugestivo de doença mieloproliferativa descompensada",
+      "Diante de trombose arterial/venosa aguda associada, seguir fluxo de urgência vascular/hematológica específico, não o fluxo ambulatorial da eritromelalgia isolada",
+      "Diagnóstico diferencial de urgência com celulite, isquemia aguda de membro e síndrome compartimental deve ser ativamente excluído antes de atribuir o quadro à eritromelalgia"
+    ],
+    "tags": [
+      "eritromelalgia",
+      "eritermalgia",
+      "SCN9A",
+      "Nav1.7",
+      "canalopatia",
+      "dor neuropática",
+      "trombocitemia essencial",
+      "policitemia vera",
+      "doença mieloproliferativa",
+      "aspirina",
+      "AAS",
+      "extremidades",
+      "dor em queimação",
+      "doença rara"
+    ],
+    "source_refs": [
+      "Yang Y, Wang Y, Li S, et al. Mutations in SCN9A, encoding a sodium channel alpha subunit, in patients with primary erythermalgia. J Med Genet. 2004;41(3):171-174. PMID: 14985375",
+      "Fertleman CR, Baker MD, Parker KA, et al. SCN9A mutations in paroxysmal extreme pain disorder: allelic variants underlie distinct channel defects and phenotypes. Neuron. 2006;52(5):767-774. PMID: 17145499",
+      "Cox JJ, Reimann F, Nicholas AK, et al. An SCN9A channelopathy causes congenital inability to experience pain. Nature. 2006;444(7121):894-898. PMID: 17167479",
+      "Tang Z, Chen Z, Tang B, Jiang H. Primary erythromelalgia: a review. Orphanet J Rare Dis. 2015;10:127. PMID: 26419464",
+      "Klein-Weigel PF, Volz TS, Richter JG. Erythromelalgia. Vasa. 2018;47(2):91-97. PMID: 29299961",
+      "Mann N, et al. Review of primary and secondary erythromelalgia. Clin Exp Dermatol. 2019. PMID: 30609105",
+      "Caldito EG, et al. Erythromelalgia. Part I: Pathogenesis, clinical features, evaluation, and complications. J Am Acad Dermatol. 2024;90(3):453-462. PMID: 37364617",
+      "Caldito EG, et al. Erythromelalgia. Part II: Differential diagnoses and management. J Am Acad Dermatol. 2024. PMID: 37364616",
+      "Ma JE, et al. Erythromelalgia: A Review of Medical Management Options and Our Approach to Management. Mayo Clin Proc. 2023. PMID: 36470753",
+      "Kurzrock R, Cohen PR. Erythromelalgia and myeloproliferative disorders. Arch Intern Med. 1989. PMID: 2643412",
+      "Michiels JJ, et al. Erythromelalgia in thrombocythemia of various myeloproliferative disorders. Am J Hematol. 1992. PMID: 1550104",
+      "Michiels JJ, et al. Clinical and laboratory features, pathobiology of platelet-mediated thrombosis and bleeding complications, and the molecular etiology of essential thrombocythemia and polycythemia vera. Semin Thromb Hemost. 2006. PMID: 16673274",
+      "Brière JB. Essential thrombocythemia. Orphanet J Rare Dis. 2007;2:3. PMID: 17210076",
+      "Tremblay D, et al. Diagnosis and Treatment of Polycythemia Vera: A Review. JAMA. 2025. PMID: 39556352"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/14985375/",
+      "https://pubmed.ncbi.nlm.nih.gov/17145499/",
+      "https://pubmed.ncbi.nlm.nih.gov/17167479/",
+      "https://pubmed.ncbi.nlm.nih.gov/26419464/",
+      "https://pubmed.ncbi.nlm.nih.gov/29299961/",
+      "https://pubmed.ncbi.nlm.nih.gov/30609105/",
+      "https://pubmed.ncbi.nlm.nih.gov/37364617/",
+      "https://pubmed.ncbi.nlm.nih.gov/37364616/",
+      "https://pubmed.ncbi.nlm.nih.gov/36470753/",
+      "https://pubmed.ncbi.nlm.nih.gov/2643412/",
+      "https://pubmed.ncbi.nlm.nih.gov/1550104/",
+      "https://pubmed.ncbi.nlm.nih.gov/16673274/",
+      "https://pubmed.ncbi.nlm.nih.gov/17210076/",
+      "https://pubmed.ncbi.nlm.nih.gov/39556352/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "vasculite-por-iga-cardiovascular",
+    "name": "Vasculite por IgA (Púrpura de Henoch-Schönlein) — Acometimento Cardiovascular",
+    "aliases": [
+      "púrpura de Henoch-Schönlein",
+      "Henoch-Schönlein purpura",
+      "IgA vasculitis",
+      "vasculite anafilactoide",
+      "purpura henoch-schonlein"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculite_pequenos_vasos_iga_pediatrica",
+    "prevalence_rank": 127,
+    "completeness": "completo",
+    "summary": "Vasculite sistêmica de pequenos vasos mediada por depósito de imunocomplexos de IgA1 galactose-deficiente, a vasculite mais comum da infância (pico entre 3 e 10 anos), classicamente com tétrade de púrpura palpável, artrite, dor abdominal e acometimento renal (nefrite por IgA, principal determinante prognóstico de longo prazo). Acometimento cardiovascular direto — miocardite, pericardite, coronarite com aneurisma/infarto — é raro, descrito majoritariamente em relatos de caso isolados, distinto do acometimento renal que tem evidência de coorte robusta.",
+    "presentation": [
+      "Púrpura palpável não trombocitopênica, tipicamente em membros inferiores e nádegas, por vasculite leucocitoclástica cutânea",
+      "Artralgia ou artrite não deformante, geralmente de grandes articulações (joelhos, tornozelos), transitória e migratória",
+      "Dor abdominal tipo cólica por vasculite mesentérica, podendo complicar com intussuscepção intestinal (tipicamente ileoileal), sangramento digestivo ou, raramente, perfuração",
+      "Acometimento renal variando de hematúria microscópica isolada a glomerulonefrite proliferativa com risco de doença renal crônica",
+      "Frequentemente precedida por infecção de vias aéreas superiores nas semanas anteriores",
+      "Acometimento cardiovascular raro: miocardite (por vezes com repercussão hemodinâmica grave em casos extremos descritos), pericardite/derrame pericárdico, coronarite com aneurisma coronariano e infarto do miocárdio descritos em relatos de caso",
+      "Hipertensão arterial secundária ao acometimento renal, com repercussão cardiovascular indireta em casos com progressão para doença renal crônica"
+    ],
+    "differentials": [
+      "Nefropatia por IgA isolada (sem manifestação extrarrenal)",
+      "Doença de Kawasaki (sobretudo quando há acometimento coronariano relatado na vasculite por IgA, achado atípico que tensiona a distinção categórica entre as duas doenças)",
+      "Púrpura trombocitopênica idiopática (diferenciada pela contagem de plaquetas normal na vasculite por IgA)",
+      "Vasculites ANCA-associadas (granulomatose com poliangiite, poliangiite microscópica, EGPA)",
+      "Poliarterite nodosa",
+      "Meningococcemia e outras púrpuras infecciosas (febre maculosa, púrpura fulminante)",
+      "Lúpus eritematoso sistêmico com vasculite secundária",
+      "Abdome agudo cirúrgico de outra etiologia (quando a dor abdominal precede a púrpura cutânea)"
+    ],
+    "tests": [
+      "Hemograma e coagulograma (para excluir trombocitopenia/coagulopatia como causa da púrpura)",
+      "Urinálise seriada (hematúria/proteinúria) por semanas a meses para monitorização do acometimento renal",
+      "Função renal (ureia, creatinina) e pressão arterial",
+      "Biópsia de pele com imunofluorescência direta (vasculite leucocitoclástica com depósito predominante de IgA) em casos atípicos",
+      "Biópsia renal em casos com acometimento renal significativo, para estadiamento histológico e decisão terapêutica",
+      "Ultrassonografia abdominal com Doppler quando há suspeita de intussuscepção",
+      "Eletrocardiograma e ecocardiograma reservados a paciente com sintomas cardíacos ou achados sugestivos, não como rastreio de rotina"
+    ],
+    "red_flags": [
+      "Dor abdominal grave, em piora progressiva ou associada a massa palpável — suspeitar de intussuscepção",
+      "Sangramento digestivo franco",
+      "Proteinúria de grau nefrótico, hipertensão ou queda de função renal — sinalizam nefrite grave e podem exigir biópsia renal",
+      "Dor torácica, dispneia, taquicardia desproporcional ou sinais de insuficiência cardíaca — investigar miocardite/pericardite",
+      "Alteração eletrocardiográfica ou elevação de biomarcador cardíaco em paciente com vasculite por IgA ativa",
+      "Escroto agudo (edema escrotal/orquiepididimite vasculítica) — diagnóstico diferencial cirúrgico importante em meninos"
+    ],
+    "ambulatory_flow": [
+      "Diagnóstico clínico com base nos critérios EULAR/PRINTO/PRES na criança com apresentação típica",
+      "Tratamento sintomático de suporte para casos leves autolimitados",
+      "Anti-inflamatório não esteroidal para artralgia, com cautela se houver acometimento renal ou gastrointestinal significativo",
+      "Urinálise seriada por semanas a meses após o diagnóstico, mesmo após resolução da púrpura cutânea",
+      "Encaminhamento à nefrologia pediátrica se hematúria persistente, proteinúria relevante ou hipertensão",
+      "Avaliação cardiológica (ECG, ecocardiograma) apenas se houver sintoma ou sinal sugestivo de acometimento cardíaco"
+    ],
+    "emergency_flow": [
+      "Avaliação de sinais de abdome agudo/intussuscepção — imagem abdominal urgente se suspeita",
+      "Corticosteroide sistêmico para dor abdominal grave ou acometimento renal relevante",
+      "Investigação e suporte hemodinâmico se houver sinais de miocardite/pericardite (ECG, ecocardiograma, biomarcadores cardíacos, eventualmente suporte inotrópico ou circulatório mecânico em casos graves)",
+      "Imunossupressão intensiva (ciclofosfamida, rituximabe) reservada a glomerulonefrite rapidamente progressiva",
+      "Avaliação cirúrgica se sangramento digestivo significativo, perfuração ou intussuscepção não redutível"
+    ],
+    "tags": [
+      "vasculite",
+      "pediatria",
+      "nefrite por IgA",
+      "púrpura palpável",
+      "miocardite",
+      "pericardite",
+      "coronarite",
+      "cardiologia pediátrica",
+      "reumatologia pediátrica"
+    ],
+    "source_refs": [
+      "Gardner-Medwin JM, Dolezalova P, Cummins C, Southwood TR. Lancet. 2002;360(9341):1197-1202. PMID: 12401245.",
+      "Ruperto N, Ozen S, Pistorio A, et al. Ann Rheum Dis. 2010;69(5):790-797. PMID: 20388738.",
+      "Ozen S, Pistorio A, Iusan SM, et al. Ann Rheum Dis. 2010;69(5):798-806. PMID: 20413568.",
+      "Suzuki H, et al. Kidney Int. 2018;93(3):700-705. PMID: 29329643.",
+      "Kiryluk K, et al. Kidney Int. 2011;80(1):79-87. PMID: 21326171.",
+      "Pediatr Nephrol. 2022;37(4):719-733. PMID: 33818625.",
+      "Weiss PF, Feinstein JA, Luan X, et al. Pediatrics. 2007;120(5):1079-1087. PMID: 17974746.",
+      "Hahn D, Hodson EM, Willis NS, Craig JC. Cochrane Database Syst Rev. 2015;(8):CD005128. PMID: 26258874.",
+      "Ozen S, Marks SD, Brogan P, et al. Rheumatology (Oxford). 2019;58(9):1607-1616. PMID: 30879080.",
+      "Yılmaz N, Yüksel S, Becerir T, et al. Clin Rheumatol. 2021;40(4):1607-1613. PMID: 32789615.",
+      "Michas G, Grigoriou K, Syrigos D, et al. Hellenic J Cardiol. 2017. PMID: 28528257.",
+      "Kang Z, Wu W, Xun M, et al. Front Pediatr. 2021. PMID: 35186817.",
+      "Bloom JL, Darst JR, Prok L, et al. Pediatr Rheumatol Online J. 2018. PMID: 30180850.",
+      "Canpolat U, Yorgun H, Sahiner L, Kabakçi G. Herz. 2012. PMID: 22361720.",
+      "Zaidi M, et al. Kidney Int. 2008. PMID: 18033245."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/12401245/",
+      "https://pubmed.ncbi.nlm.nih.gov/20388738/",
+      "https://pubmed.ncbi.nlm.nih.gov/20413568/",
+      "https://pubmed.ncbi.nlm.nih.gov/29329643/",
+      "https://pubmed.ncbi.nlm.nih.gov/21326171/",
+      "https://pubmed.ncbi.nlm.nih.gov/33818625/",
+      "https://pubmed.ncbi.nlm.nih.gov/17974746/",
+      "https://pubmed.ncbi.nlm.nih.gov/26258874/",
+      "https://pubmed.ncbi.nlm.nih.gov/30879080/",
+      "https://pubmed.ncbi.nlm.nih.gov/32789615/",
+      "https://pubmed.ncbi.nlm.nih.gov/28528257/",
+      "https://pubmed.ncbi.nlm.nih.gov/35186817/",
+      "https://pubmed.ncbi.nlm.nih.gov/30180850/",
+      "https://pubmed.ncbi.nlm.nih.gov/22361720/",
+      "https://pubmed.ncbi.nlm.nih.gov/18033245/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "vasculite-por-iga-purpura-de-henoch-schonlein-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "granulomatose-com-poliangiite-cardiovascular",
+    "name": "Granulomatose com Poliangiite (GPA) — Acometimento Cardiovascular",
+    "aliases": [
+      "Doença de Wegener",
+      "Wegener granulomatosis",
+      "GPA",
+      "vasculite ANCA-associada PR3",
+      "acometimento cardíaco na GPA"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "vasculite",
+    "prevalence_rank": 128,
+    "completeness": "completo",
+    "summary": "Vasculite necrosante ANCA-associada de pequenos e médios vasos, tipicamente PR3-ANCA/c-ANCA positiva, definida pela tríade clássica de vias aéreas superiores (sinusite, nariz em sela), pulmão (nódulos cavitários, hemorragia alveolar) e rim (glomerulonefrite pauci-imune). O acometimento cardiovascular é menos frequente e menos proeminente do que na EGPA, mas clinicamente relevante: pericardite é a manifestação mais comum (subclínica em boa parte dos casos, identificada em até 61% dos pacientes por ressonância cardíaca dedicada), seguida por coronarite (isquemia, infarto ou aneurisma coronariano por mecanismo vasculítico distinto de aterosclerose), miocardite, valvulite rara e, raramente, massas granulomatosas cardíacas que podem mimetizar tumor. Associa-se a risco cardiovascular aumentado (razão observado:esperado de até 2,5 para infarto do miocárdio) e a pior prognóstico quando presente.",
+    "presentation": [
+      "Tríade clássica: sinusite crônica/recorrente e ulceração nasal/oral, podendo evoluir para nariz em sela; nódulos pulmonares frequentemente cavitários e hemorragia alveolar; glomerulonefrite necrosante pauci-imune, podendo ser rapidamente progressiva",
+      "Pericardite aguda com ou sem derrame — manifestação cardíaca mais comum, de assintomática a tamponamento cardíaco, podendo raramente ser a primeira manifestação da doença",
+      "Coronarite (vasculite coronariana): isquemia miocárdica, infarto ou aneurisma coronariano em paciente jovem sem fatores de risco aterosclerótico clássicos",
+      "Miocardite, menos proeminente do que em EGPA, contribuindo para disfunção ventricular segmentar e realce tardio à ressonância cardíaca",
+      "Valvulite (rara): acometimento valvar inflamatório direto, podendo cursar com regurgitação valvar",
+      "Massa granulomatosa cardíaca (rara): extensão de granuloma necrosante ao miocárdio/pericárdio, podendo mimetizar tumor cardíaco à imagem estrutural e ao FDG-PET/CT",
+      "Arritmias e bloqueio de condução (incluindo bloqueio atrioventricular completo) por granuloma próximo ao nó AV ou feixe de His",
+      "Acometimento cardíaco frequentemente subclínico — identificado por ecocardiograma/ressonância em proporção maior de pacientes do que a sugerida por sintomas isolados"
+    ],
+    "differentials": [
+      "Granulomatose eosinofílica com poliangiite (EGPA) — asma, eosinofilia e miocardite eosinofílica como manifestação cardíaca dominante, ao contrário do perfil pericárdico/coronariano da GPA",
+      "Poliangiite microscópica (MPA) — sem granulomas, sem acometimento de vias aéreas superiores destrutivo",
+      "Policondrite recidivante — pode cursar com nariz em sela e acometimento aórtico/valvar, por mecanismo diferente (condrite, não vasculite ANCA)",
+      "Doença aterosclerótica coronariana clássica — diagnóstico diferencial obrigatório da coronarite vasculítica em paciente com GPA e dor torácica",
+      "Sarcoidose cardíaca e outras causas de massa/infiltrado granulomatoso miocárdico",
+      "Endocardite infecciosa e outras causas de massa cardíaca ou febre com sopro novo"
+    ],
+    "tests": [
+      "ANCA com especificação de PR3 versus MPO (PR3-ANCA/c-ANCA positivo em cerca de 80-90% dos casos generalizados de GPA)",
+      "Biópsia de tecido acometido (pulmão, rim ou via aérea superior) mostrando vasculite necrosante com granulomas",
+      "Ecocardiograma para avaliação de derrame pericárdico, função ventricular e válvulas em todo paciente com diagnóstico novo de doença generalizada",
+      "Ressonância cardíaca com realce tardio, quando disponível, para caracterizar acometimento miocárdico/pericárdico subclínico",
+      "Angiotomografia coronariana ou cateterismo cardíaco quando há suspeita clínica de coronarite (dor torácica, isquemia eletrocardiográfica, troponina elevada em doença ativa)",
+      "ECG e troponina como triagem inicial de acometimento cardíaco"
+    ],
+    "red_flags": [
+      "Dispneia nova, hipotensão ou taquicardia inexplicada em paciente com GPA ativa — investigar tamponamento cardíaco emergencialmente",
+      "Dor torácica ou alteração eletrocardiográfica isquêmica em paciente jovem com GPA ativa, mesmo sem fatores de risco aterosclerótico clássicos — considerar coronarite",
+      "Bloqueio atrioventricular novo ou arritmia ventricular em GPA ativa, sugerindo granuloma próximo ao sistema de condução",
+      "Massa cardíaca de aspecto atípico em paciente com GPA — considerar granuloma antes de assumir neoplasia ou vegetação infecciosa",
+      "Hemorragia alveolar ou glomerulonefrite rapidamente progressiva concomitante — manifestação órgão-ameaçadora que exige indução imunossupressora imediata, independentemente do grau de acometimento cardíaco isolado"
+    ],
+    "ambulatory_flow": [
+      "Em todo paciente com diagnóstico novo de GPA generalizada, solicitar ECG, troponina e ecocardiograma, independentemente de sintomas cardiovasculares",
+      "Confirmar especificidade PR3 versus MPO do ANCA, correlacionando com risco cardiovascular e padrão de órgão-alvo esperado",
+      "Considerar ressonância cardíaca com realce tardio quando disponível, especialmente se houver qualquer anormalidade em ECG/ecocardiograma ou elevação de troponina",
+      "Seguimento conjunto com reumatologia/vasculite para definição de indução (ciclofosfamida versus rituximabe) e manutenção conforme gravidade e extensão de órgãos acometidos",
+      "Vigilância cardiovascular de longo prazo mesmo em remissão, dado o excesso de risco isquêmico documentado independente de atividade inflamatória aguda"
+    ],
+    "emergency_flow": [
+      "Suspeita de tamponamento cardíaco: ecocardiograma emergencial e drenagem pericárdica conforme gravidade hemodinâmica, com indução imunossupressora concomitante da doença de base",
+      "Dor torácica com GPA ativa: investigar coronarite vasculítica como mecanismo, mesmo com coronariografia sem lesão obstrutiva convincente ou com aneurisma coronariano",
+      "Bloqueio atrioventricular completo ou arritmia ventricular nova em GPA ativa: suporte hemodinâmico/eletrofisiológico imediato e discussão de indução imunossupressora precoce",
+      "Manifestação órgão-ameaçadora associada (glomerulonefrite rapidamente progressiva, hemorragia alveolar, mononeurite múltipla grave): não atrasar indução com corticoide em dose alta associado a ciclofosfamida ou rituximabe",
+      "Massa cardíaca nova em paciente com GPA: investigação urgente com imagem multimodal e discussão multidisciplinar antes de qualquer intervenção cirúrgica precipitada"
+    ],
+    "tags": [
+      "vasculite ANCA-associada",
+      "GPA",
+      "Wegener",
+      "PR3-ANCA",
+      "pericardite",
+      "coronarite",
+      "vasculite coronariana",
+      "granuloma cardíaco",
+      "bloqueio atrioventricular"
+    ],
+    "source_refs": [
+      "Robson JC, Grayson PC, Ponte C, Suppiah R, Craven A, Judge A, Khalid S, Hutchings A, Watts RA, Merkel PA, Luqmani RA; DCVAS Study Group. 2022 American College of Rheumatology/European Alliance of Associations for Rheumatology Classification Criteria for Granulomatosis With Polyangiitis. Arthritis & Rheumatology. 2022;74(3):393-399. PMID: 35106964",
+      "Lie JT. Wegener's granulomatosis: histological documentation of common and uncommon manifestations in 216 patients. Vasa. 1997;26(4):261-270. PMID: 9409175",
+      "Hazebroek MR, Kemna MJ, Schalla S, et al. Prevalence and prognostic relevance of cardiac involvement in ANCA-associated vasculitis: EGPA and GPA. International Journal of Cardiology. 2015;199:170-179. PMID: 26209947",
+      "Pugnet G, Gouya H, Puéchal X, et al. Cardiac involvement in granulomatosis with polyangiitis: a magnetic resonance imaging study of 31 consecutive patients. Rheumatology (Oxford). 2017;56(6):947-956. PMID: 28339663",
+      "Faurschou M, Mellemkjaer L, Sorensen IJ, et al. Increased morbidity from ischemic heart disease in patients with Wegener's granulomatosis. Arthritis and Rheumatism. 2009;60(4):1187-1192. PMID: 19333952",
+      "Suppiah R, Judge A, Batra R, et al. A model to predict cardiovascular events in patients with newly diagnosed Wegener's granulomatosis and microscopic polyangiitis. Arthritis Care & Research. 2011;63(4):588-596. PMID: 21452269",
+      "Musuruana JL, Cavallasca JA. Coronary artery aneurysms in Wegener's granulomatosis. Joint Bone Spine. 2011;78(3):309-311. PMID: 21195005",
+      "Stone JH, Merkel PA, Spiera R, et al. Rituximab versus cyclophosphamide for ANCA-associated vasculitis. New England Journal of Medicine. 2010;363(3):221-232. PMID: 20647199",
+      "Guillevin L, Pagnoux C, Karras A, et al. Rituximab versus azathioprine for maintenance in ANCA-associated vasculitis. New England Journal of Medicine. 2014;371(19):1771-1780. PMID: 25372085",
+      "Jayne DRW, Merkel PA, Schall TJ, Bekker P; ADVOCATE Study Group. Avacopan for the Treatment of ANCA-Associated Vasculitis. New England Journal of Medicine. 2021;384(7):599-609. PMID: 33596356",
+      "Hellmich B, Sanchez-Alamo B, Schirmer JH, et al. EULAR recommendations for the management of ANCA-associated vasculitis: 2022 update. Annals of the Rheumatic Diseases. 2024;83(1):30-47. PMID: 36927642"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/35106964/",
+      "https://pubmed.ncbi.nlm.nih.gov/9409175/",
+      "https://pubmed.ncbi.nlm.nih.gov/26209947/",
+      "https://pubmed.ncbi.nlm.nih.gov/28339663/",
+      "https://pubmed.ncbi.nlm.nih.gov/19333952/",
+      "https://pubmed.ncbi.nlm.nih.gov/21452269/",
+      "https://pubmed.ncbi.nlm.nih.gov/21195005/",
+      "https://pubmed.ncbi.nlm.nih.gov/20647199/",
+      "https://pubmed.ncbi.nlm.nih.gov/25372085/",
+      "https://pubmed.ncbi.nlm.nih.gov/33596356/",
+      "https://pubmed.ncbi.nlm.nih.gov/36927642/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "poliarterite-nodosa-cardiovascular",
+    "name": "Poliarterite Nodosa (acometimento cardiovascular)",
+    "aliases": [
+      "PAN",
+      "poliarterite nodosa clássica",
+      "periarterite nodosa",
+      "vasculite necrosante de médio calibre ANCA-negativa"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": 129,
+    "completeness": "completo",
+    "summary": "Vasculite necrosante de artérias musculares de médio calibre, classicamente ANCA-negativa e sem granulomas, que forma microaneurismas característicos por fragilização segmentar da parede arterial; no coração, causa coronarite com infarto do miocárdio não aterosclerótico e, por acometimento renovascular, hipertensão grave de difícil controle com cardiopatia hipertensiva secundária — mecanismos isquêmico e hipertensivo que frequentemente coexistem no mesmo paciente.",
+    "presentation": [
+      "Dor torácica ou infarto agudo do miocárdio em paciente jovem sem fatores de risco aterosclerótico habituais, por coronarite vasculítica",
+      "Infarto do miocárdio recorrente ou multifocal, padrão distinto do infarto aterotrombótico unifocal clássico",
+      "Hipertensão arterial grave, de início relativamente abrupto e de difícil controle com múltiplas classes de anti-hipertensivos, por acometimento renovascular",
+      "Hipertrofia ventricular esquerda concêntrica e insuficiência cardíaca de padrão hipertensivo em evolução",
+      "Dor abdominal, hematúria ou hematoma perirrenal por ruptura de microaneurisma renal ou mesentérico",
+      "Mononeurite múltipla, púrpura cutânea, livedo reticular, nódulos subcutâneos dolorosos ao longo de trajetos arteriais",
+      "Sintomas constitucionais (febre, perda de peso, mialgia, artralgia) precedendo o diagnóstico",
+      "Derrame pericárdico associado a atividade sistêmica, manifestação cardíaca menos frequente que a coronarite e a cardiopatia hipertensiva"
+    ],
+    "differentials": [
+      "Poliangiite microscópica (MPA) — acomete capilares, vênulas e arteríolas, tipicamente ANCA-positiva",
+      "Granulomatose com poliangiite (GPA) e granulomatose eosinofílica com poliangiite (EGPA) — inflamação granulomatosa, ausente na PAN",
+      "Doença aterosclerótica coronariana convencional, especialmente em paciente com fatores de risco clássicos",
+      "Doença de Kawasaki — vasculite de médio calibre com aneurismas coronarianos, predominantemente pediátrica",
+      "Crioglobulinemia mista e outras vasculites por imunocomplexos associadas a hepatite viral",
+      "Displasia fibromuscular e outras arteriopatias não inflamatórias de médio calibre causando estenose/aneurisma renal e hipertensão renovascular",
+      "Síndrome antifosfolípide e outras trombofilias, no diagnóstico diferencial de isquemia multiterritorial"
+    ],
+    "tests": [
+      "Angiografia convencional, angiotomografia ou angiorressonância de vasos abdominais e renais, buscando microaneurismas e estenoses segmentares",
+      "Biópsia de tecido acometido (nervo sural, músculo esquelético ou rim) quando a angiografia não é conclusiva, mostrando vasculite necrosante transmural sem granuloma",
+      "ANCA (tipicamente negativo na PAN, ajudando a distinguir de MPA/GPA/EGPA quando o quadro é ambíguo)",
+      "Sorologia para hepatite B (HBsAg, anti-HBc, HBeAg e carga viral quando positiva) em todo paciente com diagnóstico de PAN",
+      "Ecocardiograma e monitorização sistemática da pressão arterial em todo paciente, dado o risco de coronarite e de cardiopatia hipertensiva secundária",
+      "Marcadores inflamatórios (VHS, PCR) e provas de atividade sistêmica",
+      "Angiografia coronariana ou angio-TC de coronárias na suspeita de coronarite, incluindo pesquisa de microaneurismas coronarianos"
+    ],
+    "red_flags": [
+      "Infarto do miocárdio em paciente jovem sem fatores de risco aterosclerótico relevantes — considerar coronarite vasculítica não aterosclerótica",
+      "Hipertensão arterial grave e refratária de instalação relativamente recente, especialmente com hipertrofia ventricular esquerda já estabelecida — investigar acometimento renovascular",
+      "Dor abdominal ou lombar aguda intensa em paciente com PAN conhecida ou suspeita — considerar ruptura de microaneurisma renal ou mesentérico com hemorragia",
+      "Insuficiência cardíaca de mecanismo não esclarecido em paciente com PAN — investigar ativamente componente isquêmico (coronarite) e componente hipertensivo (renovascular), que frequentemente coexistem",
+      "Diagnóstico novo de PAN sem sorologia para hepatite B solicitada — exame obrigatório pela implicação terapêutica direta"
+    ],
+    "ambulatory_flow": [
+      "Em todo paciente com diagnóstico confirmado ou suspeito de PAN, solicitar sorologia para hepatite B, ecocardiograma e avaliação estruturada da pressão arterial, independentemente de sintomas cardiovasculares",
+      "Se hepatite B ativa confirmada, encaminhar para condução combinada com hepatologia/infectologia: tratamento antiviral associado a plasmaférese e curso curto de corticosteroide, evitando imunossupressão prolongada",
+      "Se PAN idiopática, estratificar gravidade e definir necessidade de ciclofosfamida associada a corticosteroide em dose alta diante de acometimento de órgão-alvo relevante, incluindo acometimento cardiovascular",
+      "Instituir controle agressivo da pressão arterial quando houver hipertensão renovascular, com entendimento explícito de que o controle pressórico isolado não trata a vasculite de base",
+      "Programar seguimento cardiovascular estruturado de longo prazo, com reavaliação periódica de função ventricular e risco isquêmico, mesmo em paciente assintomático do ponto de vista cardíaco"
+    ],
+    "emergency_flow": [
+      "Dor torácica ou alteração eletrocardiográfica isquêmica em paciente com PAN ativa: investigar infarto do miocárdio por coronarite, mesmo sem fatores de risco aterosclerótico clássicos ou doença coronariana obstrutiva prévia conhecida",
+      "Dor abdominal ou lombar aguda intensa com instabilidade hemodinâmica em paciente com PAN: considerar ruptura de microaneurisma renal, hepático ou mesentérico e investigar com imagem de urgência",
+      "Emergência hipertensiva em paciente com PAN conhecida: tratar a crise pressórica e investigar/reavaliar acometimento renovascular ativo em paralelo, sem assumir hipertensão essencial isolada",
+      "Insuficiência cardíaca aguda de causa não esclarecida em paciente com PAN: avaliação simultânea de mecanismo isquêmico (coronarite) e hipertensivo (renovascular), que podem coexistir",
+      "Discussão multidisciplinar precoce (cardiologia, reumatologia, nefrologia) diante de acometimento cardiovascular grave ou órgão-ameaçador, para definição rápida de indução imunossupressora"
+    ],
+    "tags": [
+      "vasculite",
+      "poliarterite nodosa",
+      "coronarite",
+      "microaneurisma",
+      "hepatite B",
+      "hipertensão renovascular",
+      "infarto do miocárdio não aterosclerótico",
+      "cardiopatia hipertensiva",
+      "ANCA-negativa"
+    ],
+    "source_refs": [
+      "Jennette JC, Falk RJ, Bacon PA, et al. 2012 revised International Chapel Hill Consensus Conference Nomenclature of Vasculitides. Arthritis Rheum. 2013;65(1):1-11. PMID: 23045170",
+      "Hernández-Rodríguez J, Alba MA, Prieto-González S, Cid MC. Diagnosis and classification of polyarteritis nodosa. J Autoimmun. 2014;48-49:84-89. PMID: 24485157",
+      "Forbess L, Bannykh S. Polyarteritis nodosa. Rheum Dis Clin North Am. 2015;41(1):33-46. PMID: 25399938",
+      "Karadag O, Bolek EC, Ayan G, et al. Clinical Characteristics and Outcomes of Polyarteritis Nodosa: An International Study. Arthritis Rheumatol. 2024;76(7):1120-1129. PMID: 38343337",
+      "Guillevin L, Mahr A, Callard P, et al. Hepatitis B virus-associated polyarteritis nodosa: clinical characteristics, outcome, and impact of treatment in 115 patients. Medicine (Baltimore). 2005;84(5):313-322. PMID: 16148731",
+      "Guillevin L, Lhote F, Leon A, et al. Treatment of polyarteritis nodosa related to hepatitis B virus with short term steroid therapy associated with antiviral agents and plasma exchanges. J Rheumatol. 1993;20(2):289-298. PMID: 8097249",
+      "Guillevin L, Lhote F, Sauvaget F, et al. Treatment of polyarteritis nodosa related to hepatitis B virus with interferon-alpha and plasma exchanges. Ann Rheum Dis. 1994;53(5):334-337. PMID: 7912504",
+      "Samson M, Puéchal X, Devilliers H, et al. Microscopic polyangiitis and non-HBV polyarteritis nodosa with poor-prognosis factors: 10-year results of the prospective CHUSPAN trial. Clin Exp Rheumatol. 2017;35 Suppl 103(1):176-184. PMID: 28422001",
+      "Samson M, Puéchal X, Devilliers H, et al. Long-term follow-up of a randomized trial on 118 patients with polyarteritis nodosa or microscopic polyangiitis without poor-prognosis factors. Autoimmun Rev. 2014;13(2):197-205. PMID: 24161361",
+      "Günal N, Kara N, Cakar N, Koçak H, Kahramanyol O, Cetinkaya E. Cardiac involvement in childhood polyarteritis nodosa. Int J Cardiol. 1997;60(3):257-262. PMID: 9261636",
+      "AbuHalimeh BJ, Sanger S, Gobolos L, et al. Coronary Polyarteritis Nodosa: Clinical Dilemmas in Diagnosis and Management. JACC Case Rep. 2025;30:103906. PMID: 40645730",
+      "Tsukui D, Kono H. Multiple Renal Microaneurysms in Polyarteritis Nodosa. Mayo Clin Proc. 2021;96(9):2277-2278. PMID: 34353474",
+      "Miyagawa T, Iwata Y, Oshima M, et al. Polyarteritis nodosa with perirenal hematoma due to the rupture of a renal artery aneurysm. CEN Case Rep. 2021;10(2):244-249. PMID: 33175365",
+      "Ferrao D, Nogueira-Silva L, Tavares S, Lima MJ, Almeida J. A case of renovascular hypertension due to polyarteritis nodosa. J Hypertens. 2025;43(4):705-708. PMID: 39791432"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/23045170/",
+      "https://pubmed.ncbi.nlm.nih.gov/24485157/",
+      "https://pubmed.ncbi.nlm.nih.gov/25399938/",
+      "https://pubmed.ncbi.nlm.nih.gov/38343337/",
+      "https://pubmed.ncbi.nlm.nih.gov/16148731/",
+      "https://pubmed.ncbi.nlm.nih.gov/8097249/",
+      "https://pubmed.ncbi.nlm.nih.gov/7912504/",
+      "https://pubmed.ncbi.nlm.nih.gov/28422001/",
+      "https://pubmed.ncbi.nlm.nih.gov/24161361/",
+      "https://pubmed.ncbi.nlm.nih.gov/9261636/",
+      "https://pubmed.ncbi.nlm.nih.gov/40645730/",
+      "https://pubmed.ncbi.nlm.nih.gov/34353474/",
+      "https://pubmed.ncbi.nlm.nih.gov/33175365/",
+      "https://pubmed.ncbi.nlm.nih.gov/39791432/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "poliangiite-microscopica-cardiovascular",
+    "name": "Poliangiite Microscópica (MPA)",
+    "aliases": [
+      "MPA",
+      "vasculite microscópica",
+      "poliangeíte microscópica",
+      "vasculite ANCA-associada pauci-imune"
+    ],
+    "area": "geral",
+    "category": "doenca_inflamatoria",
+    "subtype": "vasculite",
+    "prevalence_rank": 130,
+    "completeness": "completo",
+    "summary": "Vasculite necrosante de pequenos vasos (capilares, vênulas, arteríolas e por vezes pequenas artérias), pauci-imune e associada a ANCA, tipicamente MPO-ANCA/p-ANCA, sem granulomas (diferente de GPA) e sem asma/eosinofilia (diferente de EGPA). O quadro é dominado por glomerulonefrite necrosante pauci-imune, frequentemente rapidamente progressiva, e por capilarite pulmonar com hemorragia alveolar, podendo compor síndrome pulmão-rim. O acometimento cardiovascular — pericardite, miocardite, raramente vasculite coronariana — é descrito com menor frequência e menor força de evidência do que na EGPA, mas é clinicamente relevante quando presente e associado a pior prognóstico.",
+    "presentation": [
+      "Manifestações sistêmicas inespecíficas na fase prodrômica: febre, perda de peso, mialgia, artralgia",
+      "Glomerulonefrite necrosante pauci-imune, frequentemente rapidamente progressiva — manifestação mais comum e principal determinante de morbidade renal a longo prazo",
+      "Capilarite pulmonar com hemorragia alveolar, podendo ser grave e ameaçadora à vida",
+      "Síndrome pulmão-rim (hemorragia alveolar associada a glomerulonefrite), compartilhada com GPA e com a doença anti-membrana basal glomerular (síndrome de Goodpasture)",
+      "Púrpura palpável e mononeurite múltipla como manifestações de pequeno/médio vaso",
+      "Acometimento cardiovascular menos frequente que o eixo pulmão-rim: pericardite (por vezes com derrame significativo), miocardite (podendo cursar com disfunção ventricular), vasculite coronariana descrita com menor frequência que em outras vasculites deste espectro",
+      "Insuficiência cardíaca clinicamente aparente descrita em cerca de 17,6% dos pacientes em coorte histórica de referência"
+    ],
+    "differentials": [
+      "Granulomatose com poliangiite (GPA) — presença de granulomas necrosantes e acometimento típico de vias aéreas superiores, tipicamente PR3-ANCA/c-ANCA",
+      "Granulomatose eosinofílica com poliangiite (EGPA) — asma de início tardio, eosinofilia periférica e tecidual marcada, granulomas extravasculares",
+      "Poliarterite nodosa clássica — vasculite de médio vaso mediada por imunocomplexo, tipicamente ANCA-negativa, sem glomerulonefrite ou capilarite pulmonar",
+      "Vasculite por IgA — vasculite mediada por imunocomplexo com depósito de IgA à imunofluorescência",
+      "Doença anti-membrana basal glomerular (síndrome de Goodpasture) — diagnóstico diferencial central da síndrome pulmão-rim, exige sorologia anti-MBG específica",
+      "Vasculite associada a ANCA induzida por fármaco (ex.: propiltiouracila, hidralazina, cocaína adulterada com levamisol)"
+    ],
+    "tests": [
+      "MPO-ANCA/p-ANCA (teste sorológico central; minoria de pacientes é PR3-ANCA positiva ou ANCA-negativa, exigindo correlação clínico-patológica mesmo com sorologia negativa em caso de alta suspeita)",
+      "Biópsia renal — padrão de referência quando há acometimento renal, mostrando glomerulonefrite necrosante pauci-imune, tipicamente crescêntica, sem depósito significativo de imunocomplexo ou granuloma",
+      "Broncoscopia com lavado broncoalveolar — hemorragia alveolar difusa quando há suspeita de acometimento pulmonar",
+      "Creatinina sérica e exame de urina (hematúria dismórfica, cilindros hemáticos, proteinúria) na avaliação de glomerulonefrite",
+      "Ecocardiograma em paciente com qualquer sintoma cardiovascular",
+      "Ressonância magnética cardíaca com realce tardio, quando disponível e indicada, em paciente com sintomas cardíacos — rastreio menos sistematizado na literatura do que em EGPA",
+      "Sorologia anti-membrana basal glomerular (anti-MBG) na síndrome pulmão-rim, para diferenciação da doença de Goodpasture"
+    ],
+    "red_flags": [
+      "Glomerulonefrite rapidamente progressiva com elevação aguda de creatinina",
+      "Hemorragia alveolar difusa (hemoptise, infiltrado pulmonar difuso, queda de hemoglobina, hipoxemia)",
+      "Síndrome pulmão-rim — combinação de hemorragia alveolar e glomerulonefrite, potencialmente ameaçadora à vida",
+      "Mononeurite múltipla de instalação aguda ou subaguda",
+      "Sintoma cardiovascular novo (dispneia, dor torácica, palpitação, sinais de insuficiência cardíaca) em paciente com MPA ativa — investigação cardiológica objetiva indicada apesar da menor prevalência relatada de acometimento cardíaco nesta doença",
+      "Dispneia nova sugerindo tamponamento pericárdico em paciente com MPA ativa e derrame pericárdico conhecido"
+    ],
+    "ambulatory_flow": [
+      "Investigar MPO-ANCA/p-ANCA e PR3-ANCA/c-ANCA diante de suspeita clínica; não descartar o diagnóstico apenas por sorologia negativa quando a suspeita clínica é alta",
+      "Avaliar função renal e exame de urina em toda consulta de acompanhamento em paciente com MPA, dado o peso do acometimento renal no prognóstico",
+      "Investigar ativamente qualquer sintoma cardiovascular com ecocardiograma, mesmo sabendo que o acometimento cardíaco é proporcionalmente menos frequente nesta doença do que em EGPA — a menor prevalência relatada não deve gerar falsa tranquilidade",
+      "Seguimento conjunto com reumatologia/nefrologia para decisão de indução clássica versus manutenção conforme fase e gravidade da doença",
+      "Planejar manutenção (rituximabe de manutenção, azatioprina ou metotrexato) após indução bem-sucedida, com monitorização de recidiva"
+    ],
+    "emergency_flow": [
+      "Suspeita de síndrome pulmão-rim (hemoptise/hemorragia alveolar associada a piora aguda de função renal): priorizar estabilização respiratória, investigação sorológica urgente (ANCA, anti-MBG) e discussão imediata com nefrologia/reumatologia/terapia intensiva",
+      "Glomerulonefrite rapidamente progressiva: não atrasar indução imunossupressora (rituximabe ou ciclofosfamida associados a corticoide em dose alta) enquanto se aguarda biópsia renal confirmatória, quando a suspeita clínica é forte",
+      "Hemorragia alveolar grave ou glomerulonefrite rapidamente progressiva com creatinina muito elevada: considerar plasmaférese em casos selecionados, com discussão honesta sobre evidência mista/em evolução quanto ao benefício adicional sobre a imunossupressão padrão",
+      "Sintoma cardiovascular agudo (dispneia nova, dor torácica, sinais de insuficiência cardíaca) em MPA ativa: ecocardiograma urgente, considerando pericardite com tamponamento ou miocardite ativa",
+      "Mononeurite múltipla de instalação aguda: avaliação neurológica e indução imunossupressora precoce conforme gravidade"
+    ],
+    "tags": [
+      "vasculite ANCA-associada",
+      "MPA",
+      "MPO-ANCA",
+      "p-ANCA",
+      "glomerulonefrite pauci-imune",
+      "capilarite pulmonar",
+      "síndrome pulmão-rim",
+      "pericardite",
+      "miocardite",
+      "cardiomiopatia"
+    ],
+    "source_refs": [
+      "Jennette JC, Falk RJ, Bacon PA, et al. 2012 Revised International Chapel Hill Consensus Conference Nomenclature of Vasculitides. Arthritis and Rheumatism. 2013;65(1):1-11. PMID: 23045170",
+      "Guillevin L, Durand-Gasselin B, Cevallos R, Gayraud M, Lhote F, Callard P, Amouroux J, Casassus P, Jarrousse B. Microscopic polyangiitis: clinical and laboratory findings in eighty-five patients. Arthritis and Rheumatism. 1999;42(3):421-430. PMID: 10088763",
+      "Guillevin L, Pagnoux C, Seror R, et al. The Five-Factor Score revisited. Medicine (Baltimore). 2011;90(1):19-27. PMID: 21200183",
+      "Mahr A, Katsahian S, Varet H, et al. Revisiting the classification of clinical phenotypes of ANCA-associated vasculitis: a cluster analysis. Annals of the Rheumatic Diseases. 2013;72(6):1003-1010. PMID: 22962314",
+      "Lyons PA, Rayner TF, Trivedi S, et al. Genetically Distinct Subsets within ANCA-Associated Vasculitis. New England Journal of Medicine. 2012;367(3):214-223. PMID: 22808956",
+      "Unizony S, Villarreal M, Miloslavsky EM, et al. Clinical outcomes of treatment of ANCA-associated vasculitis based on ANCA type. Annals of the Rheumatic Diseases. 2016;75(6):1166-1169. PMID: 26621483",
+      "Kitching AR, Anders HJ, Basu N, et al. ANCA-associated vasculitis. Nature Reviews Disease Primers. 2020;6(1):71. PMID: 32855422",
+      "Stone JH, Merkel PA, Spiera R, et al. Rituximab versus Cyclophosphamide for ANCA-Associated Vasculitis. New England Journal of Medicine. 2010;363(3):221-232. PMID: 20647199",
+      "Jones RB, Furuta S, Tervaert JWC, et al. Rituximab versus cyclophosphamide in ANCA-associated renal vasculitis: 2-year results. Annals of the Rheumatic Diseases. 2015;74(6):1178-1182. PMID: 25739829",
+      "Guillevin L, Pagnoux C, Karras A, et al. Rituximab versus Azathioprine for Maintenance in ANCA-Associated Vasculitis. New England Journal of Medicine. 2014;371(19):1771-1780. PMID: 25372085",
+      "Walsh M, Merkel PA, Peh CA, et al. Plasma Exchange and Glucocorticoids in Severe ANCA-Associated Vasculitis. New England Journal of Medicine. 2020;382(7):622-631. PMID: 32053298",
+      "Walsh M, Collister D, Zeng L, et al. The effects of plasma exchange in patients with ANCA-associated vasculitis: an updated systematic review and meta-analysis. BMJ. 2022;376:e064604. PMID: 35217545",
+      "Yates M, Watts RA, Bajema IM, et al. EULAR/ERA-EDTA recommendations for the management of ANCA-associated vasculitis. Annals of the Rheumatic Diseases. 2016;75(9):1583-1594. PMID: 27338776",
+      "Jeantin L, Lenfant T, Bataille P, et al. Antineutrophil Cytoplasm Antibody-Associated Vasculitides Valvular Impairment. Journal of Rheumatology. 2022;49(12):1349-1355. PMID: 35840158"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/23045170/",
+      "https://pubmed.ncbi.nlm.nih.gov/10088763/",
+      "https://pubmed.ncbi.nlm.nih.gov/21200183/",
+      "https://pubmed.ncbi.nlm.nih.gov/22962314/",
+      "https://pubmed.ncbi.nlm.nih.gov/22808956/",
+      "https://pubmed.ncbi.nlm.nih.gov/26621483/",
+      "https://pubmed.ncbi.nlm.nih.gov/32855422/",
+      "https://pubmed.ncbi.nlm.nih.gov/20647199/",
+      "https://pubmed.ncbi.nlm.nih.gov/25739829/",
+      "https://pubmed.ncbi.nlm.nih.gov/25372085/",
+      "https://pubmed.ncbi.nlm.nih.gov/32053298/",
+      "https://pubmed.ncbi.nlm.nih.gov/35217545/",
+      "https://pubmed.ncbi.nlm.nih.gov/27338776/",
+      "https://pubmed.ncbi.nlm.nih.gov/35840158/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "poliangiite-microscopica-mpa-e-envolvimento-cardiovascular"
+    ],
+    "patient_material_slug": null
   }
 ]
