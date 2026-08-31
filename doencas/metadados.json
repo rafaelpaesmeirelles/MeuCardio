@@ -48241,5 +48241,631 @@
       "endocardite-por-fungos-filamentosos-raros-fusarium-scedosporium-lomentospora-trichosporon"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "tularemia-pericardite",
+    "name": "Tularemia com Acometimento Pericárdico",
+    "aliases": [
+      "Pericardite tularêmica",
+      "Febre da caça (tick-borne)",
+      "Doença de Francis com pericardite",
+      "Francisella tularensis - pericardite"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "zoonose_bacteriana_com_acometimento_cardiovascular",
+    "prevalence_rank": 100,
+    "completeness": "completo",
+    "summary": "Complicação pericárdica rara da tularemia (Francisella tularensis), zoonose bacteriana do hemisfério norte transmitida por picada de carrapato/mosquito, contato com lebres/coelhos, inalação de aerossol ou ingestão contaminada. A pericardite — descrita desde a revisão clássica de Evans et al. (1985) e em relatos de caso isolados mais recentes — pode surgir como manifestação isolada ou como parte de doença sistêmica (forma ulceroglandular ou tifoide), podendo evoluir a tamponamento cardíaco. Sem casos autóctones bem documentados no Brasil/América do Sul.",
+    "presentation": [
+      "Febre prolongada, mal-estar, dispneia em paciente com exposição epidemiológica compatível (viagem a área endêmica do hemisfério norte, contato com lebres/coelhos, picada de carrapato ou mosquito)",
+      "Derrame pericárdico identificado em ecocardiograma, por vezes como achado isolado sem outras manifestações sistêmicas evidentes",
+      "Possível linfadenopatia regional ou mediastinal associada (formas ulceroglandular ou tifoide)",
+      "Lesão cutânea ulcerada no sítio de inoculação (forma ulceroglandular) ou ausência de porta de entrada localizatória (forma tifoide)",
+      "Pancitopenia e hipoglicemia em apresentações tifoides graves, podendo mimetizar doença hematológica maligna",
+      "Em casos extremos, evolução para tamponamento cardíaco"
+    ],
+    "differentials": [
+      "Pericardite viral (idiopática)",
+      "Pericardite tuberculosa",
+      "Pericardite purulenta bacteriana (outros agentes)",
+      "Pericardite fúngica (histoplasmose, coccidioidomicose, blastomicose)",
+      "Febre Q (Coxiella burnetii)",
+      "Brucelose",
+      "Doença de Lyme",
+      "Neoplasia hematológica (quando há pancitopenia associada)",
+      "Doença autoimune/pericardite urêmica ou neoplásica"
+    ],
+    "tests": [
+      "Sorologia para Francisella tularensis (microaglutinação/ELISA, com confirmação por Western blot em caso de reação cruzada)",
+      "PCR de líquido pericárdico ou outra amostra clínica",
+      "Cultura em meio enriquecido (ágar de levedura-carvão tamponado) — ALERTA obrigatório ao laboratório antes do envio, pelo risco biológico ao manipulador",
+      "Ecocardiograma para caracterização do derrame pericárdico e avaliação de tamponamento",
+      "Hemograma completo (avaliar pancitopenia em formas tifoides)",
+      "Pericardiocentese diagnóstica/terapêutica quando indicada"
+    ],
+    "red_flags": [
+      "Sinais de tamponamento cardíaco (hipotensão, turgência jugular, pulso paradoxal, abafamento de bulhas)",
+      "Instabilidade hemodinâmica",
+      "Forma tifoide com deterioração sistêmica rápida (maior mortalidade sem tratamento)",
+      "Manipulação laboratorial de amostra sem alerta prévio sobre suspeita de tularemia (risco de infecção ocupacional)",
+      "Paciente imunossuprimido com apresentação atípica ou mais grave"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar em paciente com febre prolongada e exposição epidemiológica compatível (viagem/residência em área endêmica do hemisfério norte, contato com lebres/coelhos, picada de carrapato ou mosquito)",
+      "Alertar o laboratório antes de coletar culturas pela suspeita diagnóstica",
+      "Solicitar sorologia e, se disponível, PCR",
+      "Considerar ecocardiograma se houver sintomas cardiorrespiratórios ou dor torácica associados",
+      "Iniciar doxiciclina ou ciprofloxacino oral em formas leves sem comprometimento sistêmico, com reavaliação clínica próxima",
+      "Encaminhar a serviço de referência em doenças infecciosas para confirmação e manejo de formas complicadas"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de tamponamento cardíaco (POCUS/ecocardiograma à beira do leito)",
+      "Se tamponamento presente, pericardiocentese de emergência com envio de líquido para PCR/cultura (com alerta ao laboratório)",
+      "Iniciar gentamicina ou estreptomicina intravenosa/intramuscular empiricamente diante de suspeita clínica-epidemiológica forte, sem aguardar confirmação laboratorial em paciente grave",
+      "Investigar outras etiologias concomitantes (ex.: tuberculose) quando a resposta terapêutica ou o quadro clínico não se encaixarem perfeitamente no diagnóstico inicial",
+      "Suporte hemodinâmico conforme necessário",
+      "Notificação e comunicação com vigilância epidemiológica quando aplicável (considerando também o status de agente de bioterrorismo categoria A do CDC em contextos de exposição atípica ou em cluster)"
+    ],
+    "tags": [
+      "tularemia",
+      "Francisella tularensis",
+      "pericardite",
+      "zoonose",
+      "doença transmitida por carrapato",
+      "tamponamento cardíaco",
+      "bioterrorismo categoria A",
+      "doença infecciosa rara",
+      "medicina de viajante"
+    ],
+    "source_refs": [
+      "PMID: 3892222",
+      "PMID: 18554395",
+      "PMID: 39866373",
+      "PMID: 36681600",
+      "PMID: 41458397",
+      "PMID: 40322625"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/3892222/",
+      "https://pubmed.ncbi.nlm.nih.gov/18554395/",
+      "https://pubmed.ncbi.nlm.nih.gov/39866373/",
+      "https://pubmed.ncbi.nlm.nih.gov/36681600/",
+      "https://pubmed.ncbi.nlm.nih.gov/41458397/",
+      "https://pubmed.ncbi.nlm.nih.gov/40322625/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "tularemia-e-acometimento-cardiovascular-pericardite-como-complicacao-rara"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "carbunculo-inalatorio",
+    "name": "Carbúnculo inalatório (antraz inalatório) com mediastinite hemorrágica e derrame pericárdico",
+    "aliases": [
+      "antraz inalatório",
+      "anthrax inalatório",
+      "carbúnculo pulmonar",
+      "Bacillus anthracis - forma inalatória",
+      "inhalational anthrax"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_toxemica_sistemica_grave",
+    "prevalence_rank": 101,
+    "completeness": "completo",
+    "summary": "Forma inalatória do carbúnculo (Bacillus anthracis), causada pela fagocitose de esporos por macrófagos alveolares e sua germinação em linfonodos mediastinais, produzindo linfadenite hemorrágica necrosante, mediastinite hemorrágica ('mediastino alargado' à imagem), derrame pleural e derrame pericárdico hemorrágico, com risco de tamponamento cardíaco. A toxina letal (PA+LF) causa choque circulatório mesmo após controle bacteriológico, justificando antitoxina monoclonal (raxibacumabe, obiltoxaximabe) associada a antibioticoterapia combinada. Rara, mas de altíssima letalidade, com relevância para vigilância de bioterrorismo (surto dos correios dos EUA, 2001).",
+    "presentation": [
+      "Pródromo inespecífico tipo gripal (febre, mal-estar, mialgia, tosse seca) seguido em dias por fase fulminante com dispneia súbita, sudorese, choque",
+      "Taquicardia desproporcional, náusea/vômito, transaminases elevadas, hiponatremia, leucometria frequentemente normal (não elevada)",
+      "Dor torácica, atrito pericárdico ou sinais de tamponamento (hipotensão, turgência jugular, pulso paradoxal) quando há derrame pericárdico significativo",
+      "Mediastino alargado à radiografia/tomografia de tórax, com ou sem derrame pleural bilateral volumoso",
+      "Possível meningite associada (carbúnculo sistêmico tem tropismo pelo SNC)"
+    ],
+    "differentials": [
+      "Pneumonia adquirida na comunidade grave",
+      "Mediastinite de outras etiologias (bacteriana, pós-cirúrgica, por perfuração esofágica)",
+      "Tuberculose com linfadenopatia mediastinal necrosante",
+      "Linfoma mediastinal com derrame pericárdico neoplásico",
+      "Choque séptico de outra etiologia bacteriana",
+      "Síndrome da veia cava superior por outras causas de massa mediastinal",
+      "Pericardite purulenta bacteriana de outra etiologia"
+    ],
+    "tests": [
+      "Hemocultura (positiva na maioria dos casos sistêmicos não tratados)",
+      "PCR para Bacillus anthracis em sangue/tecido",
+      "Imuno-histoquímica em tecido (essencial quando há antibioticoterapia prévia ou baixa carga bacilar)",
+      "Radiografia e tomografia de tórax (mediastino alargado, derrame pleural)",
+      "Ecocardiograma (avaliação de derrame pericárdico e sinais de tamponamento)",
+      "Punção lombar se suspeita de meningite associada"
+    ],
+    "red_flags": [
+      "Mediastino alargado à imagem torácica em paciente com quadro febril agudo e exposição de risco",
+      "Choque refratário a vasopressor apesar de antibioticoterapia em curso e culturas em negativação (sugere toxina letal circulante)",
+      "Sinais ecocardiográficos de tamponamento cardíaco",
+      "Progressão para fase fulminante — mortalidade de até 97% mesmo com tratamento uma vez estabelecida",
+      "Exposição ocupacional ou contexto de possível ato deliberado (bioterrorismo) — notificação compulsória"
+    ],
+    "ambulatory_flow": [
+      "Carbúnculo inalatório sistêmico não é manejado em ambiente ambulatorial — qualquer suspeita exige encaminhamento imediato para emergência/UTI"
+    ],
+    "emergency_flow": [
+      "Suspeita clínica (pródromo gripal atípico + taquicardia desproporcional + contexto epidemiológico ou mediastino alargado) — iniciar hemocultura, PCR e imagem torácica imediatamente",
+      "Iniciar antibioticoterapia combinada empírica precoce: ciprofloxacino ou doxiciclina + segundo agente inibidor de síntese proteica (linezolida ou clindamicina)",
+      "Solicitar e administrar antitoxina monoclonal (raxibacumabe ou obiltoxaximabe) assim que houver suspeita/confirmação de doença sistêmica, em associação à antibioticoterapia",
+      "Ecocardiograma à beira do leito diante de instabilidade hemodinâmica ou suspeita de derrame pericárdico; pericardiocentese ou drenagem cirúrgica se tamponamento",
+      "Toracocentese/drenagem pleural se derrame volumoso com repercussão respiratória",
+      "Suporte hemodinâmico em UTI reconhecendo possível refratariedade por toxina letal circulante mesmo após controle bacteriológico",
+      "Notificação compulsória e acionamento de vigilância epidemiológica/biodefesa diante de caso confirmado ou fortemente suspeito"
+    ],
+    "tags": [
+      "bacillus anthracis",
+      "carbunculo",
+      "antraz",
+      "mediastinite hemorragica",
+      "derrame pericardico",
+      "tamponamento cardiaco",
+      "toxina letal",
+      "choque toxemico",
+      "bioterrorismo",
+      "antitoxina",
+      "raxibacumabe",
+      "obiltoxaximabe"
+    ],
+    "source_refs": [
+      "Jernigan JA et al. Emerg Infect Dis. 2001;7(6):933-944. PMID: 11747719",
+      "Jernigan DB et al. Emerg Infect Dis. 2002;8(10):1019-1028. PMID: 12396909",
+      "Holty JE et al. Ann Intern Med. 2006;144(4):270-280. PMID: 16490913",
+      "Mina B et al. JAMA. 2002;287(7):858-862. PMID: 11851577",
+      "Barakat LA et al. JAMA. 2002;287(7):863-868. PMID: 11851578",
+      "Guarner J et al. Am J Pathol. 2003;163(2):701-709. PMID: 12875989",
+      "Kuehnert MJ et al. Clin Infect Dis. 2003;36(3):328-336. PMID: 12539075",
+      "Moayeri M, Leppla SH. Mol Aspects Med. 2009;30(6):439-455. PMID: 19638283",
+      "Cui X et al. Am J Physiol Regul Integr Comp Physiol. 2004;286(4):R699-709. PMID: 14715494",
+      "Young JA, Collier RJ. Annu Rev Biochem. 2007;76:243-265. PMID: 17335404",
+      "Migone TS et al. N Engl J Med. 2009;361(2):135-144. PMID: 19587338",
+      "Yamamoto BJ et al. Antimicrob Agents Chemother. 2016;60(10):5796-5805. PMID: 27431219",
+      "Huang E et al. Health Secur. 2015;13(6):365-377. PMID: 26690378",
+      "Hendricks KA et al. Emerg Infect Dis. 2014;20(2):e130687. PMID: 24447897",
+      "Bower WA et al. MMWR Recomm Rep. 2015;64(4):1-22. PMID: 26632963",
+      "Sweeney DA et al. Am J Respir Crit Care Med. 2011;184(12):1333-1341. PMID: 21852539",
+      "CDC. MMWR Morb Mortal Wkly Rep. 2001;50(42):909-919. PMID: 11699843",
+      "Owen JL, Yang T, Mohamadzadeh M. Trends Mol Med. 2015;21(3):154-163. PMID: 25577136"
+    ],
+    "source_urls": [],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "carbunculo-inalatorio-mediastinite-hemorragica-derrame-pericardico-e-choque-por-toxina-letal"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "peste-septicemica",
+    "name": "Peste Septicêmica (Yersinia pestis)",
+    "aliases": [
+      "peste",
+      "peste bubônica",
+      "peste pneumônica",
+      "yersiniose por Yersinia pestis",
+      "morte negra",
+      "black death",
+      "choque séptico por peste"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_infecciosa_bacteriana_zoonotica",
+    "prevalence_rank": 102,
+    "completeness": "completo",
+    "summary": "Zoonose bacteriana causada por Yersinia pestis, transmitida por picada de pulga de roedor infectado, contato com animal infectado ou, na forma pneumônica, por gotícula respiratória pessoa-a-pessoa. Apresenta três formas clínicas clássicas — bubônica, septicêmica e pneumônica. Na forma septicêmica, o lipopolissacarídeo bacteriano deflagra choque séptico distributivo, coagulação intravascular disseminada com púrpura e necrose acral (gangrena de dedos), e disfunção miocárdica que segue o mecanismo geral de cardiomiopatia séptica, sem evidência humana robusta de miocardite específica por Y. pestis. Rara globalmente hoje; no Brasil, sem casos autóctones desde 2005 (Ceará), após focos históricos no Nordeste (Araripe/CE-PE-PI, Paraíba, Bahia, RN), com vigilância epidemiológica ainda ativa nas áreas de foco natural.",
+    "presentation": [
+      "Febre súbita, calafrios, mal-estar após período de incubação de 2-8 dias (bubônica) ou mais curto na pneumônica primária (a partir de 24h)",
+      "Bubão: linfadenopatia regional dolorosa, de rápido crescimento, tipicamente inguinal, femoral ou axilar (forma bubônica)",
+      "Peste septicêmica: síndrome séptica febril com delirium, hipotensão, náusea, sem bubão evidente",
+      "Petéquias, púrpura e, em estágio avançado, gangrena/necrose acral de dedos, nariz e orelhas por CIVD e vasculite",
+      "Choque séptico refratário com disfunção de múltiplos órgãos e possível disfunção miocárdica (mecanismo geral de cardiomiopatia séptica)",
+      "Peste pneumônica: tosse, dispneia, hemoptise, insuficiência respiratória rapidamente progressiva, risco de transmissão pessoa-a-pessoa por gotícula"
+    ],
+    "differentials": [
+      "Sepse por outras bactérias Gram-negativas",
+      "Leptospirose grave / síndrome de Weil",
+      "Febre maculosa brasileira (Rickettsia rickettsii)",
+      "Febre tifoide grave",
+      "Tularemia (Francisella tularensis)",
+      "Antraz (Bacillus anthracis) na forma septicêmica",
+      "Linfadenite bacteriana comum na apresentação bubônica",
+      "Púrpura fulminante de outras etiologias (meningococcemia, CIVD por outras sepses)"
+    ],
+    "tests": [
+      "Cultura de Y. pestis em aspirado de bubão, sangue ou escarro (padrão-ouro)",
+      "Bacterioscopia com coloração de Gram ou Wayson (bacilo Gram-negativo bipolar)",
+      "PCR multiplex/qPCR/ddPCR direcionado a genes de virulência (caf1, pla, lcrV, irp2)",
+      "Sorologia: hemaglutinação e ELISA para antígeno F1, teste rápido (RDT) point-of-care",
+      "Hemograma, coagulograma (avaliação de CIVD), lactato, função renal e hepática",
+      "Ecocardiografia à beira-leito e troponina seriada em choque séptico grave"
+    ],
+    "red_flags": [
+      "Hipotensão refratária a volume em paciente com bubão ou exposição epidemiológica compatível",
+      "Petéquias, púrpura ou necrose acral progressiva sugerindo CIVD",
+      "Insuficiência respiratória aguda com escarro hemoptoico em área endêmica (isolamento imediato)",
+      "Ausência de bubão em paciente séptico grave com história de exposição a roedores/pulgas",
+      "Viagem recente ou exposição ocupacional em foco natural conhecido"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica-epidemiológica com febre e linfadenopatia dolorosa: coletar cultura/PCR e iniciar antibioticoterapia empírica sem aguardar confirmação",
+      "Notificação compulsória imediata",
+      "Encaminhamento urgente a serviço hospitalar",
+      "Isolamento respiratório se sintoma pulmonar até exclusão de forma pneumônica"
+    ],
+    "emergency_flow": [
+      "Isolamento respiratório imediato enquanto peste pneumônica não for excluída",
+      "Coleta de culturas antes do antibiótico, sem atrasar a primeira dose",
+      "Antibioticoterapia empírica imediata: gentamicina ou estreptomicina; alternativas doxiciclina/fluoroquinolona; cloranfenicol se meningite",
+      "Ressuscitação hemodinâmica: volume guiado por parâmetros dinâmicos, noradrenalina de primeira linha",
+      "Avaliação de disfunção miocárdica associada (ecocardiograma, troponina, lactato seriado)",
+      "Monitorização e correção de CIVD",
+      "Notificação compulsória imediata e comunicação à vigilância epidemiológica"
+    ],
+    "tags": [
+      "peste",
+      "yersinia pestis",
+      "zoonose",
+      "choque septico",
+      "sepse",
+      "civd",
+      "gangrena",
+      "necrose acral",
+      "cardiomiopatia septica",
+      "disfuncao miocardica",
+      "nordeste brasileiro",
+      "vigilancia epidemiologica"
+    ],
+    "source_refs": [
+      "Prentice MB, Rahalison L. Plague. Lancet. 2007;369(9568):1196-1207. PMID: 17416264",
+      "Butler T. Plague gives surprises in the first decade of the 21st century in the United States and worldwide. Am J Trop Med Hyg. 2013;89(4):788-793. PMID: 24043686",
+      "Sebbane F, Lemaître N. Antibiotic Therapy of Plague: A Review. Biomolecules. 2021;11(5):724. PMID: 34065940",
+      "Godfred-Cato S, et al. Treatment of Human Plague: A Systematic Review. Clin Infect Dis. 2020;70(Suppl 1):S11-S19. PMID: 32435800",
+      "Maves R, Berjohn C. Zoonotic Infections and Biowarfare Agents in Critical Care. Springer; 2020. PMCID: PMC7122055",
+      "Bourner J, et al. A systematic review of the clinical profile of patients with bubonic plague. PLoS Negl Trop Dis. 2023;17(11):e0011509. PMID: 37943880",
+      "Kwaghe VG, et al. Fulminant Yersinia pestis Infection in a Known HIV-Positive Patient. Clin Infect Dis. 2025. PMID: 41263683",
+      "Rocha IV, Bezerra MF, Sobreira M, de Almeida AMP. 125 years of the plague in Brazil. Mem Inst Oswaldo Cruz. 2025;120:e240220. PMID: 40008699",
+      "Bezerra MF, et al. Ecologic, Geoclimatic, and Genomic Factors Modulating Plague Epidemics in Primary Natural Focus, Brazil. Emerg Infect Dis. 2024;30(9):1850-1864. PMID: 39173663",
+      "World Health Organization. Plague. Fact sheet. Geneva: WHO; 2024.",
+      "Pădureanu V, et al. Association Between Myocardial Dysfunction and Septic Shock. Int J Mol Sci. 2026;27(6):2552. PMID: 41898416",
+      "Hildebrand GJ, et al. Studies on the mechanism of circulatory failure induced in rats by Pasteurella pestis murine toxin. J Infect Dis. 1966. PMID: 5957268",
+      "Cherkasova TD, et al. Cyclic nucleotides in the dynamic development of shock caused by the murine toxin of Yersinia pestis. Zh Mikrobiol Epidemiol Immunobiol. 1987. PMID: 2823509",
+      "Cherkasova TD, et al. Regulatory properties of the rat heart adenylate cyclase in toxic-infective shock caused by Yersinia pestis. Biull Eksp Biol Med. 1992. PMID: 1611068"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3795114/",
+      "https://europepmc.org/articles/PMC11851657",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7122055/",
+      "https://www.who.int/news-room/fact-sheets/detail/plague"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "peste-yersinia-pestis-choque-septico-e-disfuncao-miocardica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "babesiose-grave",
+    "name": "Babesiose grave com acometimento cardiovascular",
+    "aliases": [
+      "babesiose humana grave",
+      "infecção por Babesia microti",
+      "infecção por Babesia divergens",
+      "piroplasmose humana",
+      "babesiose transfusional",
+      "miocardite por babesiose"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 103,
+    "completeness": "completo",
+    "summary": "A babesiose é causada por protozoários intraeritrocitários do gênero Babesia (B. microti nos EUA, B. divergens na Europa), transmitidos por carrapatos Ixodes e também por transfusão de hemocomponentes. Mecanismo central: parasitismo intraeritrocitário com hemólise; na forma grave, soma-se resposta inflamatória sistêmica, configurando quadro análogo à malária grave (SIRS, choque, CIVD, insuficiência renal, SDRA). Principais fatores de risco: asplenia, idade avançada, imunossupressão, coinfecção com Lyme. Acometimento cardiovascular: disfunção como parte do quadro séptico-símile é bem documentada (coorte de 163 pacientes, 19,6% de complicação cardíaca — FA, IC, QT longo, isquemia); miocardite direta é sustentada apenas por relatos de caso isolados. Tratamento estratificado: atovaquona+azitromicina (leve-moderada), clindamicina+quinina (grave), exsanguineotransfusão em parasitemia muito elevada/asplenia.",
+    "presentation": [
+      "Febre, calafrios, mialgia, cefaleia e mal-estar geral na forma leve-moderada",
+      "Anemia hemolítica (LDH e bilirrubina elevadas, haptoglobina baixa), plaquetopenia",
+      "Exposição a carrapato Ixodes em área endêmica ou transfusão recente de hemocomponentes",
+      "Espectro amplo: subclínico a fulminante com choque, sobretudo em asplênicos, idosos ou imunocomprometidos",
+      "Forma grave: SDRA, CIVD, insuficiência renal aguda, disfunção hepática, ruptura/infarto esplênico",
+      "Repercussão cardiovascular: arritmia (fibrilação atrial), descompensação de IC, QT longo, isquemia no contexto de doença crítica multissistêmica — mais documentado que miocardite direta",
+      "Miocardite direta: relatos de caso isolados (cardiomiopatia de estresse/takotsubo)",
+      "Coinfecção possível com doença de Lyme e, mais raramente, vírus Powassan"
+    ],
+    "differentials": [
+      "Malária, sobretudo em viajante",
+      "Sepse de outra origem com hemólise e disfunção multiorgânica",
+      "Ehrlichiose e anaplasmose humanas",
+      "Doença de Lyme disseminada",
+      "Púrpura trombocitopênica trombótica e microangiopatias trombóticas",
+      "Outras anemias hemolíticas agudas",
+      "Leptospirose anictérica",
+      "Miocardite viral sem exposição epidemiológica a carrapato ou transfusão"
+    ],
+    "tests": [
+      "Esfregaço de sangue periférico (Giemsa/Wright), seriado se negativo inicialmente",
+      "PCR para Babesia (gene 18S rRNA)",
+      "Sorologia por imunofluorescência indireta — papel limitado na doença aguda",
+      "Hemograma, LDH, bilirrubinas, haptoglobina, função renal/hepática, coagulograma",
+      "Eletrocardiograma em toda forma grave",
+      "Troponina e ecocardiograma diante de sintoma cardiovascular",
+      "Investigação de coinfecção (Borrelia burgdorferi, Anaplasma phagocytophilum)"
+    ],
+    "red_flags": [
+      "Parasitemia elevada (>10%), sobretudo em asplênico",
+      "Asplenia anatômica ou funcional conhecida",
+      "Insuficiência respiratória hipoxêmica/SDRA",
+      "Choque, CIVD ou sangramento espontâneo",
+      "Insuficiência renal aguda ou disfunção hepática progressiva",
+      "Arritmia nova ou instabilidade hemodinâmica inexplicada",
+      "Imunossupressão significativa"
+    ],
+    "ambulatory_flow": [
+      "Considerar babesiose no diferencial de febre aguda com hemólise em exposição a carrapato ou transfusão recente",
+      "Solicitar esfregaço e PCR; repetir se negativo e suspeita persistir",
+      "Iniciar atovaquona + azitromicina na forma leve-moderada estável",
+      "Rastrear fatores de risco para forma grave",
+      "Investigar coinfecção com Lyme em área de sobreposição"
+    ],
+    "emergency_flow": [
+      "Internar todo paciente com fator de risco para forma grave ou parasitemia elevada",
+      "ECG em toda forma grave; troponina/eco diante de sintoma cardiovascular",
+      "Iniciar clindamicina + quinina na forma grave",
+      "Avaliar critérios para exsanguineotransfusão com hematologia/hemoterapia",
+      "Suporte intensivo dirigido (choque, SDRA, terapia renal substitutiva)",
+      "Investigar/tratar empiricamente coinfecção com Lyme quando razoável"
+    ],
+    "tags": [
+      "babesiose",
+      "Babesia microti",
+      "Babesia divergens",
+      "carrapato Ixodes",
+      "hemólise intraeritrocitária",
+      "asplenia",
+      "transfusão",
+      "atovaquona azitromicina",
+      "clindamicina quinina",
+      "exsanguineotransfusão",
+      "miocardite",
+      "choque",
+      "coinfecção Lyme"
+    ],
+    "source_refs": [
+      "Vannier E, Krause PJ. Human babesiosis. N Engl J Med. 2012;366(25):2397-2407. PMID: 22716978",
+      "Krause PJ, et al. IDSA 2020 Guideline. Clin Infect Dis. 2021;72(2):185-189. PMID: 33501959",
+      "Vannier EG, et al. Babesiosis. Infect Dis Clin North Am. 2015;29(2):357-370. PMID: 25999229",
+      "Sanchez E, et al. JAMA. 2016;315(16):1767-1777. PMID: 27115378",
+      "Krause PJ, et al. Atovaquone and azithromycin for babesiosis. N Engl J Med. 2000;343(20):1454-1458. PMID: 11078770",
+      "Spichler-Moffarah A, et al. Cardiac Complications of Human Babesiosis. Clin Infect Dis. 2023;76(3):e1385-e1391. PMID: 35983604",
+      "Odigie-Okon E, et al. Stress-induced cardiomyopathy complicating severe babesiosis. Cardiol J. 2011;18(1):83-86. PMID: 21305491",
+      "Hatcher JC, et al. Severe babesiosis in Long Island. Clin Infect Dis. 2001;32(8):1117-1125. PMID: 11283800",
+      "Marcus LC, et al. Fatal pancarditis in a patient with coexistent Lyme disease and babesiosis. Ann Intern Med. 1985;103(3):374-376. PMID: 4040723",
+      "Khan AM, et al. Powassan virus encephalitis, severe babesiosis and lyme carditis. BMJ Case Rep. 2019;12(11):e231645. PMID: 31712240",
+      "Leaf DE, et al; STOP-BABESIOSIS. Red Blood Cell Exchange Transfusion for Severe Babesiosis. JAMA Intern Med. 2026;186(5):597-607. PMID: 41910966",
+      "Kakoullis L, et al. Comparative Outcomes of Babesiosis in Immunocompromised and Nonimmunocompromised Hosts. Clin Infect Dis. 2025;81(5):987-994. PMID: 39873391",
+      "Persing DH, et al. Infection with a babesia-like organism in northern California. N Engl J Med. 1995;332(5):298-303. PMID: 7816065",
+      "França DA, et al. Serosurvey of Anaplasma phagocytophilum, Babesia microti, and Ehrlichia chaffeensis in Quilombola Communities of Southern Brazil. Pathogens. 2025;14(4):318. PMID: 40333051"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/22716978/",
+      "https://pubmed.ncbi.nlm.nih.gov/33501959/",
+      "https://pubmed.ncbi.nlm.nih.gov/35983604/",
+      "https://pubmed.ncbi.nlm.nih.gov/4040723/",
+      "https://pubmed.ncbi.nlm.nih.gov/41910966/",
+      "https://pubmed.ncbi.nlm.nih.gov/40333051/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "babesiose-grave-e-acometimento-cardiovascular-hemolise-choque-e-miocardite-em-relatos-de-caso"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "poliomielite-cardiovascular",
+    "name": "Poliomielite e Acometimento Cardiovascular",
+    "aliases": [
+      "polio cardiovascular",
+      "miocardite pós-poliomielite",
+      "disautonomia bulbar da poliomielite",
+      "poliovirus e coração"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccioso_viral",
+    "prevalence_rank": 104,
+    "completeness": "completo",
+    "summary": "O poliovírus (Enterovirus C) pode causar acometimento cardiovascular por dois mecanismos distintos: miocardite aguda por efeito viral direto sobre o miócito (achado majoritariamente de séries de necropsia da era pré-vacinal, 1940-1950) e disautonomia cardiovascular na forma bulbar grave, por lesão de núcleos do tronco encefálico (mecanismo central, com labilidade pressórica, arritmias e risco de colapso hemodinâmico). Um possível componente autonômico cardiovascular tardio na síndrome pós-pólio é hipótese plausível mas com evidência escassa. O Brasil é certificado livre de poliomielite desde 1994; globalmente restam apenas dois países com transmissão endêmica do vírus selvagem (Afeganistão e Paquistão), enquanto o poliovírus circulante derivado de vacina (cVDPV2) é hoje o principal desafio remanescente à erradicação em áreas de baixa cobertura vacinal.",
+    "presentation": [
+      "Maioria das infecções assintomática ou com doença febril inespecífica autolimitada",
+      "Minoria (<1%) evolui para poliomielite paralítica com fraqueza flácida assimétrica aguda",
+      "Forma bulbar grave: disfagia, disfonia, insuficiência respiratória, labilidade de pressão arterial, taquicardia ou bradicardia paradoxais, arritmias, risco de colapso cardiovascular",
+      "Miocardite aguda: frequentemente subclínica; quando manifesta, taquicardia desproporcional à febre, alterações eletrocardiográficas inespecíficas, raramente insuficiência cardíaca franca",
+      "Síndrome pós-pólio (décadas após infecção aguda): fadiga generalizada, nova fraqueza muscular progressiva, dor musculoesquelética; componente autonômico cardiovascular não estabelecido"
+    ],
+    "differentials": [
+      "Síndrome de Guillain-Barré",
+      "Mielite transversa aguda",
+      "Enterovirus não-pólio (Coxsackievirus, Echovirus, Enterovirus D68/A71) com paralisia flácida aguda",
+      "Miocardite viral de outras etiologias",
+      "Disautonomias de outras causas (POTS pós-viral, raiva, botulismo, síndromes paraneoplásicas)",
+      "Miastenia gravis (em quadros com fraqueza bulbar)"
+    ],
+    "tests": [
+      "Isolamento viral em cultura a partir de amostra de fezes",
+      "RT-PCR em tempo real com diferenciação intratípica",
+      "Sorologia (anticorpos neutralizantes) com papel de apoio/retrospectivo",
+      "Eletrocardiograma seriado, troponina e ecocardiograma na suspeita de miocardite associada",
+      "Monitorização hemodinâmica contínua na forma bulbar grave"
+    ],
+    "red_flags": [
+      "Disfagia ou disfonia de início agudo sugerindo forma bulbar",
+      "Insuficiência respiratória progressiva",
+      "Labilidade extrema de pressão arterial ou arritmia em paciente com poliomielite bulbar",
+      "Resposta pressórica paradoxal a vasopressores no contexto de disautonomia bulbar",
+      "Sinais de disfunção ventricular sugerindo miocardite",
+      "Nova fraqueza muscular progressiva em sobrevivente de poliomielite paralítica, décadas após estabilidade funcional"
+    ],
+    "ambulatory_flow": [
+      "Paciente sem antecedente de poliomielite paralítica: risco praticamente restrito a contexto de viagem a área com circulação ativa ou exposição a caso confirmado",
+      "Sobrevivente com nova fadiga/fraqueza tardia: avaliar critérios de síndrome pós-pólio, excluir diferenciais, manejo sintomático/reabilitador",
+      "Reforçar situação vacinal (VIP) em indivíduos não vacinados ou com esquema incompleto"
+    ],
+    "emergency_flow": [
+      "Suspeita de poliomielite paralítica aguda: isolamento, notificação compulsória imediata, coleta de fezes para isolamento viral e RT-PCR",
+      "Forma bulbar grave: monitorização respiratória e hemodinâmica contínua, suporte ventilatório precoce, titulação cautelosa de vasopressores diante de labilidade autonômica",
+      "Suspeita de miocardite associada: ECG, troponina, ecocardiograma e manejo de suporte",
+      "Não há antiviral específico; tratamento é de suporte"
+    ],
+    "tags": [
+      "poliomielite",
+      "poliovirus",
+      "enterovirus",
+      "miocardite",
+      "disautonomia",
+      "sindrome pos-polio",
+      "vacinacao",
+      "erradicacao"
+    ],
+    "source_refs": [
+      "Spain DM, Bradess VA, Parsonnet AE. Myocarditis in poliomyelitis. Am Heart J. 1950;40(3):336-44. PMID: 14770974.",
+      "Laake H. Myocarditis in poliomyelitis. Acta Med Scand. 1951;140(3):159-69. PMID: 14856633.",
+      "Teloh HA. Myocarditis in poliomyelitis. AMA Arch Pathol. 1953;55(5):408-11. PMID: 13039688.",
+      "Clough PW. Myocarditis in poliomyelitis and related viral infections. Ann Intern Med. 1951;34(6):1502-8. PMID: 14838513.",
+      "Zipf K, Heinecker R. Heart and circulatory involvement in acute anterior poliomyelitis. Munch Med Wochenschr. 1965. PMID: 5898772.",
+      "Grossetete G, et al. Cardiovascular collapse during an autonomic syndrome caused by acute anterior poliomyelitis. Presse Med. 1964. PMID: 14132931.",
+      "Kuske FA. On the autonomic, endocrine and mental disorders as poliomyelitis sequelae. 1953. PMID: 13065252.",
+      "Kidd D, Williams AJ, Howard RS. Poliomyelitis. Postgrad Med J. 1996;72(853):641-7. PMID: 8944203.",
+      "Farbu E, et al. EFNS guideline on diagnosis and management of post-polio syndrome. Eur J Neurol. 2006;13(8):795-801. PMID: 16879288.",
+      "Huang YH, et al. Intravenous immunoglobulin for postpolio syndrome. BMC Neurol. 2015;15:39. PMID: 25886512.",
+      "Gerloff N, Burns CC. Evaluating the Effectiveness of External Molecular Proficiency Testing in the Global Polio Laboratory Network. Pathogens. 2024. PMID: 39599567.",
+      "Sun L, Zhang L. WPV1 resurgence and the dominant threat of cVDPV2. Int J Infect Dis. 2026. PMID: 42214662.",
+      "Arroyo LH, et al. Áreas com queda na cobertura vacinal para BCG, poliomielite e tríplice viral no Brasil. Cad Saude Publica. 2020;36(4):e00015619. PMID: 32267382."
+    ],
+    "source_urls": [
+      "https://www.who.int/news-room/fact-sheets/detail/poliomyelitis",
+      "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/p/poliomielite"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "poliomielite-e-acometimento-cardiovascular-miocardite-aguda-disautonomia-bulbar-e-sindrome-pos-polio"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "melioidose-cardiovascular",
+    "name": "Melioidose cardiovascular",
+    "aliases": [
+      "Melioidose com acometimento cardíaco",
+      "Pericardite melioidótica",
+      "Endocardite por Burkholderia pseudomallei",
+      "Abscesso miocárdico por melioidose",
+      "Doença do Nordeste (melioidose)"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_bacteriana_rara_com_acometimento_cardiaco",
+    "prevalence_rank": 105,
+    "completeness": "completo",
+    "summary": "Acometimento cardiovascular por Burkholderia pseudomallei — bacilo gram-negativo ambiental do solo e da água, endêmico no sudeste asiático (sobretudo Tailândia) e norte da Austrália, com reconhecimento crescente fora dessas áreas clássicas, incluindo relatos autóctones e de viajantes nas Américas — na forma disseminada da doença. Diabetes mellitus é o principal fator de risco de aquisição (cerca de 46% dos casos, risco relativo em torno de 3,4). O acometimento cardíaco é raro mesmo dentro da forma disseminada e é descrito essencialmente por relatos de caso e pequenas séries: pericardite (a manifestação cardíaca mais relatada, com semelhança clínica frequente à pericardite tuberculosa), endocardite (geralmente com vegetações pequenas em câmaras esquerdas) e abscesso miocárdico/miocardite (a manifestação menos frequente, mas com a maior mortalidade entre as três). O diagnóstico exige cultura em meio seletivo, com risco relevante de identificação incorreta por sistemas automatizados comerciais — B. pseudomallei é agente select categoria B do CDC. O tratamento segue esquema bifásico característico: fase intensiva intravenosa (ceftazidima ou meropenem) por semanas, prolongada em doença profunda ou cardíaca, seguida de fase de erradicação oral prolongada com sulfametoxazol-trimetoprima por meses.",
+    "presentation": [
+      "Febre prolongada e sinais sistêmicos de sepse em paciente com exposição epidemiológica compatível (residência ou viagem recente a área endêmica, contato com solo ou água estagnada)",
+      "Diabetes mellitus ou outra condição predisponente na maioria dos casos",
+      "Pneumonia como forma de apresentação mais comum, de gravidade variável",
+      "Abscessos multiorgânicos na forma disseminada (próstata, fígado, baço, pele/tecidos moles)",
+      "Dor torácica pleurítica, atrito pericárdico ou sinais de derrame/tamponamento quando há pericardite",
+      "Sopro cardíaco novo, fenômenos embólicos ou febre persistente sob antibioticoterapia inespecífica quando há endocardite",
+      "Sinais de disfunção miocárdica ou insuficiência cardíaca de instalação subaguda quando há abscesso miocárdico",
+      "Quadro que pode se manifestar após latência de anos a décadas em relação à exposição original"
+    ],
+    "differentials": [
+      "Pericardite tuberculosa (principal diagnóstico diferencial clínico e radiológico em área endêmica)",
+      "Pericardite purulenta por outros agentes bacterianos piogênicos",
+      "Endocardite infecciosa por outros agentes de hemocultura negativa ou fastidiosos (Coxiella burnetii, Brucella spp., Bartonella spp.)",
+      "Sepse comunitária por outros gram-negativos (Pseudomonas aeruginosa, Burkholderia cepacia) — inclusive por risco de identificação laboratorial incorreta",
+      "Abscesso hepático ou esplênico de outras etiologias em paciente com sepse e febre de origem obscura",
+      "Pneumonia comunitária grave por outros agentes em paciente diabético"
+    ],
+    "tests": [
+      "Cultura de sangue, líquido pericárdico, escarro ou material de abscesso em meio seletivo (ágar de Ashdown) com alerta explícito ao laboratório de microbiologia",
+      "Identificação confirmatória por MALDI-TOF validada para o gênero ou PCR, dado o risco de má identificação por sistemas automatizados comerciais",
+      "Sorologia (hemaglutinação indireta) como auxiliar em contexto endêmico, sem substituir a tentativa de isolamento do agente",
+      "Ecocardiograma transtorácico e transesofágico para caracterizar derrame/espessamento pericárdico, vegetação valvar ou abscesso miocárdico",
+      "Tomografia ou ressonância cardíaca para avaliação complementar",
+      "Investigação de disseminação multiorgânica diante de qualquer foco cardíaco confirmado"
+    ],
+    "red_flags": [
+      "Suspeita clínica de melioidose sem comunicação explícita ao laboratório — risco de identificação incorreta e exposição ocupacional a agente select categoria B",
+      "Pericardite exsudativa em área endêmica tratada empiricamente como tuberculose sem tentativa de isolamento de B. pseudomallei",
+      "Sinais de tamponamento cardíaco ou constrição pericárdica em evolução",
+      "Insuficiência cardíaca refratária, destruição valvar extensa ou abscesso perianular em endocardite confirmada ou suspeita",
+      "Disfunção miocárdica de instalação subaguda em paciente com melioidose disseminada conhecida",
+      "Interrupção precoce da fase de erradicação oral, com risco de recidiva"
+    ],
+    "ambulatory_flow": [
+      "Suspeitar de melioidose em paciente com febre prolongada, diabetes mellitus e exposição epidemiológica compatível",
+      "Solicitar cultura com alerta explícito ao laboratório de microbiologia para uso de meio seletivo e precauções de biossegurança",
+      "Diante de pericardite ou sopro cardíaco novo em melioidose confirmada/suspeita, encaminhar para ecocardiograma",
+      "Iniciar/ajustar antibioticoterapia bifásica em conjunto com infectologia",
+      "Seguimento clínico e laboratorial ao longo de toda a fase de erradicação, dado o risco de recidiva com interrupção precoce"
+    ],
+    "emergency_flow": [
+      "Estabilizar hemodinamicamente paciente com sepse grave/choque séptico",
+      "Coletar hemoculturas e material de foco suspeito antes da antibioticoterapia, com alerta laboratorial explícito",
+      "Considerar cobertura empírica com ceftazidima ou carbapenêmico em sepse grave com exposição epidemiológica compatível",
+      "Ecocardiograma urgente diante de tamponamento, sopro novo ou instabilidade sugestiva de complicação cardíaca",
+      "Avaliação cirúrgica (pericardiocentese, drenagem, avaliação valvar) conforme critérios gerais",
+      "Envolver infectologia/referência em doenças tropicais para condução da fase intensiva e planejamento da erradicação prolongada"
+    ],
+    "tags": [
+      "melioidose",
+      "Burkholderia pseudomallei",
+      "pericardite infecciosa",
+      "endocardite infecciosa",
+      "abscesso miocárdico",
+      "doença tropical",
+      "diabetes mellitus",
+      "agente select categoria B",
+      "viajante retornando de área endêmica"
+    ],
+    "source_refs": [
+      "Wiersinga WJ, Currie BJ, Peacock SJ. Melioidosis. Nat Rev Dis Primers. 2018;4:17107. PMID: 29388572",
+      "Limmathurotsakul D, et al. Predicted global distribution of Burkholderia pseudomallei and burden of melioidosis. Nat Microbiol. 2016;1:15008. PMID: 27571754",
+      "Chowdhury S, et al. The Epidemiology of Melioidosis and Its Association with Diabetes Mellitus: A Systematic Review. Pathogens. 2022;11:149. PMID: 35215093",
+      "Thanasai J, et al. Diabetes Mellitus as a Risk Factor for Severe Disease and Mortality Among Patients with Melioidosis. Life (Basel). 2026;16. PMID: 41752996",
+      "Velusamy R, Muhi S. Melioidosis and the Heart: A Systematic Review. Trop Med Infect Dis. 2020;5:121. PMID: 32717859",
+      "Gupta A, et al. Melioidosis Complicated by Native Valve Endocarditis in a Traveler Returning From Thailand to the United States. Clin Infect Dis. 2026;82:e1216-e1221. PMID: 41665361",
+      "Sullivan RP, et al. 2020 review and revision of the 2015 Darwin melioidosis treatment guideline. PLoS Negl Trop Dis. 2020;14:e0008659. PMID: 32986699",
+      "Kiratisin P, et al. Accuracy of commercial systems for identification of Burkholderia pseudomallei versus Burkholderia cepacia. Diagn Microbiol Infect Dis. 2007;59:277-281. PMID: 17916419"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29388572/",
+      "https://pubmed.ncbi.nlm.nih.gov/27571754/",
+      "https://pubmed.ncbi.nlm.nih.gov/35215093/",
+      "https://pubmed.ncbi.nlm.nih.gov/41752996/",
+      "https://pubmed.ncbi.nlm.nih.gov/32717859/",
+      "https://pubmed.ncbi.nlm.nih.gov/41665361/",
+      "https://pubmed.ncbi.nlm.nih.gov/32986699/",
+      "https://pubmed.ncbi.nlm.nih.gov/17916419/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "melioidose-e-acometimento-cardiovascular-pericardite-endocardite-e-abscesso-miocardico"
+    ],
+    "patient_material_slug": null
   }
 ]
