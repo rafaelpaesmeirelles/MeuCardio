@@ -26,7 +26,8 @@ type Space = {
   next: Action[];
   references: Action[];
 };
-type Appointment = { id: number; patient_name: string | null; starts_at: string; appointment_type: string; status: string };
+type DayTarget = { target_key: string; starts_at: string; service_name?: string; title?: string; location?: { name?: string } | null };
+type DayContext = { stage: string; targets: DayTarget[] };
 type AppointmentsState = "loading" | "ready" | "error";
 
 const MODE_KEY = "corvia:cardiology-spaces:mode";
@@ -327,7 +328,7 @@ export default function CardiologySpacesHome() {
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [personalizerOpen, setPersonalizerOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const [dayTargets, setDayTargets] = useState<DayTarget[]>([]);
   const [appointmentsState, setAppointmentsState] = useState<AppointmentsState>("loading");
   const [essentialPaths, setEssentialPaths] = useState<string[]>(() => {
     try {
@@ -343,13 +344,13 @@ export default function CardiologySpacesHome() {
 
   useEffect(() => {
     let active = true;
-    api.get<Appointment[]>("/agenda/appointments").then((items) => {
+    api.get<DayContext>("/agenda/mobility/day-context").then((context) => {
       if (!active) return;
-      setAppointments(Array.isArray(items) ? items : []);
+      setDayTargets(Array.isArray(context.targets) ? context.targets : []);
       setAppointmentsState("ready");
     }).catch(() => {
       if (!active) return;
-      setAppointments([]);
+      setDayTargets([]);
       setAppointmentsState("error");
     });
     return () => { active = false; };
@@ -374,7 +375,7 @@ export default function CardiologySpacesHome() {
   })).filter((section) => section.actions.length), [query, usuario?.role]);
   const allActions = useMemo(() => CATALOG.flatMap((section) => section.actions).filter((action) => !action.adminOnly || usuario?.role === "admin"), [usuario?.role]);
   const essentials = essentialPaths.map((path) => allActions.find((action) => action.to === path)).filter((action): action is Action => Boolean(action));
-  const day = appointments.filter((item) => !/cancel/i.test(item.status || "")).slice(0, 3);
+  const day = dayTargets.slice(0, 3);
 
   function chooseMode(nextMode: Mode) {
     sessionStorage.setItem(MODE_KEY, nextMode);
@@ -483,8 +484,8 @@ export default function CardiologySpacesHome() {
           { id: 901, appointment_type: "Tudo com Tudo", starts_at: "", patient_name: null, status: "" },
           { id: 902, appointment_type: "Trilhas", starts_at: "", patient_name: null, status: "" },
           { id: 903, appointment_type: "Favoritos", starts_at: "", patient_name: null, status: "" },
-        ].map((item, index) => <Link to={["/busca?modo=tudo-com-tudo", "/trilhas", "/favoritos"][index]} key={item.id} className={`spaces-day__item spaces-day__item--${index}`}><i /><span><strong>{item.appointment_type}</strong><small>{["Explorar relações", "Continuar aprendizagem", "Retomar leituras"][index]}</small></span></Link>) : day.length ? day.map((item, index) => <Link to="/agenda" key={item.id} className={`spaces-day__item spaces-day__item--${index}`}><i /><span><strong>{item.appointment_type || "Compromisso"}</strong><small>{time(item.starts_at) || "Horário não informado"}</small></span></Link>) : <div className={`spaces-day__empty is-${appointmentsState}`} role="status"><strong>{appointmentsState === "loading" ? "Carregando sua agenda…" : appointmentsState === "error" ? "Agenda indisponível agora" : "Nenhum compromisso encontrado"}</strong><small>{appointmentsState === "error" ? "Abra a agenda para consultar ou organizar seu dia." : "Use os atalhos para organizar seu próximo passo."}</small>{EMPTY_DAY_ACTIONS.map((action, index) => <ActionLink key={`empty-day-${action.to}`} action={{ ...action, label: index === 0 && appointmentsState === "error" ? "Consultar agenda" : action.label }} />)}</div>}
-        <Link to={mode === "scientific" ? "/trilhas/timeline" : "/agenda"} className="spaces-day__travel"><Icone nome={mode === "scientific" ? "relogio" : day.length ? "rota" : "agenda"} /><span><strong>{mode === "scientific" ? "Minha timeline" : day.length ? "Deslocamento" : "Planejar o dia"}</strong><small>{mode === "scientific" ? "Ver evolução do conhecimento" : day.length ? "Ver rota do dia" : "Abrir agenda completa"}</small></span></Link>
+        ].map((item, index) => <Link to={["/busca?modo=tudo-com-tudo", "/trilhas", "/favoritos"][index]} key={item.id} className={`spaces-day__item spaces-day__item--${index}`}><i /><span><strong>{item.appointment_type}</strong><small>{["Explorar relações", "Continuar aprendizagem", "Retomar leituras"][index]}</small></span></Link>) : day.length ? day.map((item, index) => <Link to="/deslocamento" key={item.target_key} className={`spaces-day__item spaces-day__item--${index}`}><i /><span><strong>{item.service_name || item.title || "Compromisso"}</strong><small>{time(item.starts_at) || "Horário não informado"}{item.location?.name ? ` · ${item.location.name}` : ""}</small></span></Link>) : <div className={`spaces-day__empty is-${appointmentsState}`} role="status"><strong>{appointmentsState === "loading" ? "Carregando sua agenda…" : appointmentsState === "error" ? "Agenda indisponível agora" : "Nenhum compromisso encontrado"}</strong><small>{appointmentsState === "error" ? "Abra a agenda para consultar ou organizar seu dia." : "Use os atalhos para organizar seu próximo passo."}</small>{EMPTY_DAY_ACTIONS.map((action, index) => <ActionLink key={`empty-day-${action.to}`} action={{ ...action, label: index === 0 && appointmentsState === "error" ? "Consultar agenda" : action.label }} />)}</div>}
+        <Link to={mode === "scientific" ? "/trilhas/timeline" : "/deslocamento"} className="spaces-day__travel"><Icone nome={mode === "scientific" ? "relogio" : day.length ? "rota" : "agenda"} /><span><strong>{mode === "scientific" ? "Minha timeline" : day.length ? "Deslocamento" : "Planejar o dia"}</strong><small>{mode === "scientific" ? "Ver evolução do conhecimento" : day.length ? "Abrir mapa do percurso" : "Planejar deslocamentos"}</small></span></Link>
       </aside>
 
       <nav className="spaces-dock" aria-label="Ações globais">
