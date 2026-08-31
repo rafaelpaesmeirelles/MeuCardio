@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import "../styles/cardiology-spaces-route-deep.css";
 
 type RouteGroup = "documentos" | "pacientes" | "prescricao" | "agenda" | "mail" | "assistente" | "integracoes" | "conhecimento" | "ferramentas" | "emergencia" | "rede" | "telediagnostico" | "conta" | "admin" | "geral";
 type CardiologySpace = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
@@ -29,9 +30,9 @@ const ROUTES: RouteContext[] = [
   { prefix: "/triagem-sintomas", group: "ferramentas", space: "consultorio" },
   { prefix: "/condicoes", group: "ferramentas", space: "consultorio" },
   { prefix: "/assistente", group: "assistente", space: "consultorio" },
-  { prefix: "/heart-team", group: "assistente", space: "consultorio" },
 
-  // HOSPITAL — internação, UCO, emergência e suporte assistencial
+  // HOSPITAL — internação, UCO, emergência, decisão multidisciplinar e suporte assistencial
+  { prefix: "/heart-team", group: "assistente", space: "hospital" },
   { prefix: "/round", group: "pacientes", space: "hospital" },
   { prefix: "/cardiologia-intensiva", group: "ferramentas", space: "hospital" },
   { prefix: "/checklists", group: "ferramentas", space: "hospital" },
