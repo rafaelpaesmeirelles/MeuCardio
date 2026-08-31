@@ -1303,3 +1303,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 131 (18 descartados por colisão) | 69 |
 | **Total** | **4.900** | **331** | **4.569** |
+
+## Lote 63 — concluído (commit 2d5920d5)
+
+- **3 documentos** (canalopatia sindrômica rara, vasculopatia genética multissistêmica e RASopatia pediátrica): síndrome de Cantú (canalopatia KATP por variantes de ganho de função em ABCC9/KCNJ8, subunidades SUR2/Kir6.1 do canal de potássio sensível a ATP; hipertricose congênita generalizada, cardiomegalia, edema linfático generalizado e derrame pericárdico crônico como núcleo do fenótipo; honestidade científica explícita — "não há tratamentos eficazes ou específicos" per revisão de 2026, e a hipótese terapêutica da glibenclamida caracterizada como limitada a relatos de caso e a um pequeno ensaio piloto de 4 pacientes sem melhora cardíaca/de edema estatisticamente significativa, resultado negativo reportado sem omissão — `content/Cardiologia_pediátrica`), vasculopatia da neurofibromatose tipo 1 (espectro vascular por displasia da parede arterial — estenose, oclusão e aneurisma coexistindo em territórios distintos no mesmo paciente —, com estenose de artéria renal como manifestação mais bem descrita e causa de hipertensão renovascular secundária; coarctação de aorta atípica de localização média/abdominal formando síndrome do arco médio; estenose pulmonar valvar/supravalvar — síndrome de Watson, hoje reconhecida como alélica à NF1; feocromocitoma/paraganglioma associados, com recomendação prática de investigar ambas as causas secundárias de hipertensão em paralelo, não sequencialmente por exclusão; cardiomiopatia hipertrófica descrita em subgrupo, com base de evidência explicitamente qualificada como limitada a uma série pequena de corte único, sem seguimento longitudinal — `content/Hipertensão`), síndrome de Costello (RASopatia por mutação germinativa ativadora em HRAS, hotspot mutacional extremamente restrito — mais de 95% dos casos em p.Gly12/p.Gly13 —, geneticamente e fenotipicamente distinta de Noonan/PTPN11-SOS1-RAF1 e de CFC/BRAF-MAP2K1-2-KRAS; cardiomiopatia hipertrófica em ~60% dos casos como achado cardíaco central — ao contrário de Noonan, cujo achado dominante é estenose pulmonar —, e taquicardia atrial caótica/multifocal em 48-55% como achado "mais distintivo" da síndrome dentro do espectro das RASopatias, com mecanismo proposto de disfunção sarcomérica compartilhada explicitamente reportado como hipótese correlacional, não comprovação eletrofisiológica; maior risco de câncer entre as RASopatias avaliadas (~15% vitalício, predominantemente rabdomiossarcoma/neuroblastoma na infância e carcinoma de bexiga em adultos jovens), com protocolo de vigilância oncológica próprio e explicitamente distinto do protocolo hematológico de Noonan — `content/Cardiologia_pediátrica`).
+- **doencas**: +3, pareadas 1:1 — `sindrome-de-cantu`, `vasculopatia-da-neurofibromatose-tipo-1`, `sindrome-de-costello`. `prevalence_rank` 136-138 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 3 tópicos despachados confirmaram gap genuíno após checagem cruzada contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/` e `doencas/correcoes/`, com verificação explícita de que candidatos adjacentes (TAAD familiar por ACTA2/MYH11, genes de cardiomiopatia LMNA/TTN/RYR2, endocardite de Löffler/fibrose endomiocárdica, ARVC, CADASIL, síndrome de Noonan/Shprintzen-Goldberg) já estavam adequadamente cobertos ou eram tênues demais, e corretamente excluídos do dispatch.
+- **Correções na integração**: entidades HTML residuais (`&amp;` `&lt;` `&gt;`) presentes nos 3 documentos e no JSON de doença de Costello, corrigidas antes do commit; nenhum arquivo estranho gravado no worktree pelos agentes desta rodada (instrução reforçada desde o Lote 62 aplicada com sucesso).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.566 itens.
+
+### Status consolidado (após Lote 63)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 140 | 2.260 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 134 (18 descartados por colisão) | 66 |
+| **Total** | **4.900** | **337** | **4.563** |
