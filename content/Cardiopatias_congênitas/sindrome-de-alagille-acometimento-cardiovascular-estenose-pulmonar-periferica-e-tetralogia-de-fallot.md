@@ -1,0 +1,67 @@
+---
+title: "Síndrome de Alagille: Acometimento Cardiovascular, Estenose Pulmonar Periférica e Tetralogia de Fallot Associada"
+slug: sindrome-de-alagille-acometimento-cardiovascular-estenose-pulmonar-periferica-e-tetralogia-de-fallot
+theme: "Cardiopatias congênitas"
+kind: documento
+review_status: pendente_revisao
+source_refs: ["Spinner NB, Loomes KM, Krantz ID, et al. Alagille Syndrome. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2024. Publicação inicial 19 May 2000, última atualização 4 Jan 2024. NCBI Bookshelf NBK1273. PMID: 20301450 — fonte primária agregadora, conferida nesta sessão via WebFetch e ficha bibliográfica confirmada via PubMed E-utilities (esummary).", "McElhinney DB, Krantz ID, Bason L, Piccoli DA, Emerick KM, Spinner NB, Goldmuntz E. Analysis of cardiovascular phenotype and genotype-phenotype correlation in individuals with a JAG1 mutation and/or Alagille syndrome. Circulation. 2002;106(20):2567-2574. DOI: 10.1161/01.CIR.0000037221.45902.69. PMID: 12427653 — ficha conferida via PubMed E-utilities (esearch/esummary) nesta sessão.", "Emerick KM, Rand EB, Goldmuntz E, Krantz ID, Spinner NB, Piccoli DA. Features of Alagille syndrome in 92 patients: frequency and relation to prognosis. Hepatology. 1999;29(3):822-829. DOI: 10.1002/hep.510290331. PMID: 10051485 — ficha conferida via PubMed E-utilities nesta sessão.", "Kamath BM, Ye W, Goodrich NP, Loomes KM, Romero R, Heubi JE, Leung DH, Spinner NB, Piccoli DA, Alonso EM, Guthery SL, Karpen SJ, Mack CL, Molleston JP, Murray KF, Rosenthal P, Squires JE, Teckman J, Wang KS, Thompson R, Magee JC, Sokol RJ. Outcomes of Childhood Cholestasis in Alagille Syndrome: Results of a Multicenter Observational Study. Hepatol Commun. 2020;4(3):387-398. DOI: 10.1002/hep4.1468. PMID: 33313463 — ficha conferida via PubMed E-utilities nesta sessão; usada para o dado de sobrevida sem transplante.", "Bauer RC, Laney AO, Smith R, Gerfen J, Morrissette JJ, Woyciechowski S, Garbarini J, Loomes KM, Krantz ID, Urban Z, Gelb BD, Goldmuntz E, Spinner NB. Jagged1 (JAG1) mutations in patients with tetralogy of Fallot or pulmonic stenosis. Hum Mutat. 2010;31(5):594-601. DOI: 10.1002/humu.21231. PMID: 20437614 — ficha conferida via PubMed E-utilities nesta sessão; usada para a correlação genótipo-fenótipo de variantes JAG1 isoladas sem síndrome completa.", "Gilbert MA, Bauer RC, Rajagopalan R, Grochowski CM, Chao G, McEldrew D, Nassur JA, Rand EB, Krock BL, Kamath BM, Krantz ID, Piccoli DA, Loomes KM, Spinner NB. Alagille syndrome mutation update: Comprehensive overview of JAG1 and NOTCH2 mutation frequencies and insight into missense variant classification. Hum Mutat. 2019;40(12):2197-2220. DOI: 10.1002/humu.23879. PMID: 31343788 — ficha conferida via PubMed E-utilities nesta sessão.", "Tumialán LM, Dhall SS, Tomak PR, Barrow DL. Alagille syndrome and aneurysmal subarachnoid hemorrhage. Case report and review of the literature. Pediatr Neurosurg. 2006;42(1):57-61. PMID: 16357504 — relato de caso com revisão de literatura; citado explicitamente como evidência de nível caso/série pequena para o risco de aneurisma intracraniano, não como dado de incidência populacional."]
+---
+
+# Síndrome de Alagille: Acometimento Cardiovascular, Estenose Pulmonar Periférica e Tetralogia de Fallot Associada
+
+## Definição e base genética
+
+A síndrome de Alagille (ALGS) é uma doença genética autossômica dominante multissistêmica causada por haploinsuficiência de proteínas da via de sinalização Notch, essencial para o desenvolvimento de múltiplos órgãos, incluindo o sistema cardiovascular, o fígado, o esqueleto, o olho e a face. Variantes patogênicas em *JAG1* respondem por cerca de 94,3% dos casos com variante identificada, e variantes em *NOTCH2* por cerca de 2,5%; a maioria das variantes de *JAG1* (~87%) é de perda de função, afetando a ligação ligante-receptor ou o tráfego da proteína até a membrana celular (Gilbert MA et al., Hum Mutat 2019, PMID 31343788; GeneReviews, PMID 20301450). Aproximadamente 60% dos casos são variantes de novo e 40% são herdados de um genitor afetado; a penetrância para doença relacionada a *JAG1* é de cerca de 96%, mas a expressividade é altamente variável, inclusive dentro da mesma família — um mesmo genótipo pode produzir de um quadro subclínico a uma síndrome multissistêmica grave.
+
+## Espectro cardiovascular
+
+O acometimento cardiovascular está presente em 90–97% dos indivíduos com ALGS, sendo a manifestação sistêmica mais constante depois do envolvimento hepático. A vasculatura pulmonar é o alvo preferencial, com anormalidades estruturais descritas em até 94% dos casos (GeneReviews, PMID 20301450):
+
+- **Estenose pulmonar periférica (de ramos)** — é o achado cardíaco isolado mais característico da síndrome, presente em cerca de 67% dos pacientes, envolvendo a valva pulmonar e/ou os ramos da artéria pulmonar em graus e extensões variáveis, frequentemente multifocal e bilateral.
+- **Tetralogia de Fallot** — é a cardiopatia complexa mais frequente associada à ALGS, presente em cerca de 7–16% dos pacientes, tipicamente com estenose pulmonar de padrão misto (valvar e supravalvar/de ramos), o que torna a via de saída do ventrículo direito nesses pacientes tecnicamente mais desafiadora do que na tetralogia de Fallot não sindrômica.
+- Outras lesões descritas, em ordem decrescente de frequência: comunicação interventricular, comunicação interatrial, estenose aórtica valvar e coarctação de aorta (GeneReviews, PMID 20301450; McElhinney DB et al., Circulation 2002, PMID 12427653).
+
+Essa distribuição — predomínio de lesões da via de saída direita e da árvore pulmonar, em vez de lesões septais isoladas — reflete o papel da sinalização Notch/Jagged1 no desenvolvimento do trato de saída ventricular e da vasculatura pulmonar, e é o motivo pelo qual a estenose de ramos pulmonares na ALGS deve ser abordada com estratégia de imagem e de intervenção diferente da estenose valvar pulmonar isolada não sindrômica (angiografia/angio-TC ou angio-RM para mapear ramos periféricos, frequentemente não acessíveis à avaliação ecocardiográfica completa, e intervenção percutânea multi-sítio quando indicada).
+
+## Correlação genótipo-fenótipo: quando a estenose pulmonar é a única pista
+
+Um achado clinicamente relevante é que variantes patogênicas de *JAG1* podem causar estenose pulmonar valvar isolada ou tetralogia de Fallot sem os demais critérios clínicos de Alagille (colestase, achados oculares, esqueléticos ou faciais completos) — ou seja, o fenótipo cardíaco pode preceder ou existir sem o quadro sindrômico completo (Bauer RC et al., Hum Mutat 2010, PMID 20437614). Isso tem implicação prática direta: em uma criança com estenose pulmonar periférica atípica (multifocal, de ramos) ou tetralogia de Fallot associada a estenose pulmonar de padrão incomum, mesmo sem estigmas evidentes de Alagille, deve-se considerar teste genético dirigido a *JAG1*/*NOTCH2*, sobretudo se houver qualquer sinal hepático (icterícia prolongada, prurido, hepatomegalia) ou achado oftalmológico associado.
+
+## Complicações vasculares extracardíacas
+
+Além das lesões estruturais intracardíacas, a ALGS cursa com uma verdadeira arteriopatia sistêmica, com risco aumentado de:
+
+- Eventos neurovasculares — acidentes vasculares cerebrais isquêmicos ou hemorrágicos, aneurismas intracranianos e hemorragia subaracnóidea, com relatos também de doença de moyamoya;
+- Síndrome da aorta média e anomalias renovasculares.
+
+O GeneReviews cita taxas de eventos neurovasculares de até 15% e menciona que essas complicações responderam por 34% da mortalidade em uma grande série (PMID 20301450), mas é importante qualificar a robustez dessa evidência: parte substancial da literatura específica sobre aneurisma intracraniano e hemorragia subaracnóidea na ALGS é composta por relatos de caso isolados e pequenas séries (por exemplo, Tumialán LM et al., Pediatr Neurosurg 2006, PMID 16357504, e relatos posteriores de manejo perioperatório em pacientes com Alagille e tetralogia de Fallot não corrigida), não por coortes prospectivas dedicadas a quantificar incidência populacional de aneurisma. Na prática, isso significa: o risco vascular cerebral deve ser levado a sério — evitar procedimentos invasivos desnecessários, ter limiar baixo para investigar cefaleia súbita/sinais neurológicos focais, e discutir rastreio de imagem vascular cerebral caso a caso com neurologia/neurocirurgia em centros com experiência em ALGS — mas a magnitude exata do risco individual não está bem quantificada por estudos populacionais robustos, e não deve ser apresentada ao paciente/família como um número fechado.
+
+## Outros sistemas envolvidos e critérios diagnósticos
+
+A ALGS é uma doença multissistêmica, e o reconhecimento do quadro cardíaco completo depende de conhecer os demais achados:
+
+- **Hepático** (~95%): paucidade de ductos biliares interlobulares, colestase crônica com hiperbilirrubinemia conjugada, prurido e xantomas; doença hepática terminal com necessidade de transplante em 50,4% dos pacientes até os 18 anos, segundo estudo multicêntrico observacional (Kamath BM et al., Hepatol Commun 2020, PMID 33313463).
+- **Oftalmológico** (78–89%): embriotoxon posterior (anel de Schwalbe proeminente) é o achado mais comum; também descritos anomalia de Axenfeld/Rieger e alterações pigmentares retinianas.
+- **Esquelético** (33–93%): vértebras em borboleta na coluna torácica é o achado radiográfico mais frequente; há também risco aumentado de fratura por déficit de mineralização óssea.
+- **Facial** (20–90%): fronte ampla, olhos fundos com hipertelorismo moderado, queixo pontudo e dorso nasal reto ou côncavo com ponta bulbosa, compondo fácies em triângulo invertido.
+- **Renal** (~39%): displasia renal, acidose tubular renal, obstrução ureteropélvica, cistos renais.
+
+O diagnóstico clínico é estabelecido por paucidade de ductos biliares em biópsia hepática associada a pelo menos três dos cinco critérios maiores (colestase, defeito cardíaco, anormalidades esqueléticas, anormalidades oftalmológicas, fácies característica), ou por um critério maior associado a história familiar positiva. O diagnóstico molecular (identificação de variante patogênica em *JAG1* ou *NOTCH2*) confirma o diagnóstico independentemente da biópsia hepática (GeneReviews, PMID 20301450).
+
+## Implicações práticas para o cardiologista
+
+- **Toda criança com diagnóstico ou suspeita de ALGS deve ter avaliação cardiológica dedicada com ecocardiograma**, com atenção específica aos ramos pulmonares periféricos (frequentemente subestimados pelo ecocardiograma transtorácico isolado), e seguimento em centro com experiência na síndrome.
+- **A estenose de ramos pulmonares na ALGS tem estratégia de imagem e de intervenção diferente da estenose valvar isolada não sindrômica** — o mapeamento angiográfico completo da árvore pulmonar é frequentemente necessário antes de qualquer intervenção percutânea, e lesões multifocais podem exigir múltiplos procedimentos estagiados.
+- **Antes de qualquer procedimento invasivo (incluindo cateterismo cardíaco e cirurgia)**, deve-se considerar a coagulopatia associada à colestase crônica (deficiência de vitamina K e de fatores de coagulação dependentes de vitamina K), que pode agravar o risco hemorrágico já aumentado pela arteriopatia sistêmica — a avaliação de coagulação e a correção pré-procedimento são parte da preparação, não um detalhe hepatológico à parte.
+- **Esportes de contato devem ser evitados**, particularmente em pacientes com acometimento cardíaco relevante ou esplenomegalia, pelo risco combinado de trauma vascular/hepático.
+- A causa de morte mais comum na ALGS envolve complicações relacionadas a transplante hepático, doença cardíaca, doença hepática grave e sangramento intracraniano, com mortalidade global descrita em torno de 8,5%, concentrada nos primeiros cinco anos de vida (GeneReviews, PMID 20301450) — reforçando que o manejo cardiovascular não pode ser pensado isoladamente do quadro hepático e vascular sistêmico.
+- Terapias dirigidas recentes (inibidores do transportador ileal de ácidos biliares, como maralixibat e odevixibat) tratam o prurido e a colestase, mas não têm ação sobre as lesões cardíacas estruturais, que continuam a exigir manejo cardiológico/intervencionista específico.
+
+## Tudo com Tudo
+
+- [Obstrução da Via de Saída do Ventrículo Direito (Estenose Pulmonar) no Adulto — ESC 2020](/biblioteca/obstrucao-da-via-de-saida-do-ventriculo-direito-estenose-pulmonar-esc-2020)
+- [Estenose Pulmonar Valvar Isolada na Criança: Gravidade por Doppler e Critérios de Valvoplastia por Balão](/biblioteca/estenose-pulmonar-valvar-isolada-na-crianca-gravidade-por-doppler-e-criterios-de-valvoplastia-por-balao)
+- [Crise hipercianótica na Tetralogia de Fallot — manejo de emergência](/biblioteca/crise-hipercianotica-na-tetralogia-de-fallot)
+- [Estratificação de Risco Arrítmico e Morte Súbita na Tetralogia de Fallot Operada](/biblioteca/estratificacao-de-risco-arritmico-e-morte-subita-na-tetralogia-de-fallot-operada)
+- [Cianose no Recém-Nascido: Diagnóstico Diferencial e Conduta Inicial](/biblioteca/cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial)
+- [22q11.2 na cardiologia: cardiopatias conotruncais, segurança perioperatória e transição para o adulto](/biblioteca/22q11-2-cardiovascular-cardiopatias-conotruncais-seguranca-perioperatoria-e-transicao)

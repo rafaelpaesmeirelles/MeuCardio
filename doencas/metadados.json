@@ -52544,5 +52544,675 @@
       "sindrome-de-costello-cardiomiopatia-hipertrofica-precoce-taquicardia-atrial-caotica-e-risco-tumoral-na-rasopatia-por-hras"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-alagille",
+    "name": "Síndrome de Alagille",
+    "aliases": [
+      "ALGS",
+      "Displasia arteriohepática",
+      "Síndrome de Alagille-Watson"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_genetica_multissistemica_notch_com_acometimento_cardiovascular",
+    "prevalence_rank": 139,
+    "completeness": "completo",
+    "summary": "Síndrome genética autossômica dominante (variantes de JAG1 em ~94,3% e de NOTCH2 em ~2,5% dos casos com variante identificada) causada por haploinsuficiência na via de sinalização Notch, com acometimento cardiovascular em 90-97% dos pacientes. O achado cardíaco mais característico é a estenose pulmonar periférica/de ramos (~67%); a tetralogia de Fallot é a cardiopatia complexa mais frequente associada (~7-16%). Cursa também com arteriopatia sistêmica (risco neurovascular, síndrome da aorta média), colestase crônica hepática, embriotoxon posterior, vértebras em borboleta e fácies característica. Diagnóstico clínico por paucidade de ductos biliares + 3 de 5 critérios maiores, ou 1 critério maior + história familiar; confirmação molecular por JAG1/NOTCH2.",
+    "presentation": [
+      "Sopro cardíaco identificado ao exame de rotina ou por cianose/sinais de baixo débito em lactente, frequentemente associado a icterícia colestática prolongada",
+      "Estenose pulmonar periférica/de ramos, isolada ou multifocal, muitas vezes subestimada pelo ecocardiograma transtorácico isolado",
+      "Tetralogia de Fallot com padrão de obstrução da via de saída do ventrículo direito misto (valvar e de ramos)",
+      "Colestase crônica com prurido, xantomas e hepatomegalia",
+      "Fácies característica: fronte ampla, hipertelorismo moderado, queixo pontudo, dorso nasal reto/côncavo com ponta bulbosa (aspecto em triângulo invertido)",
+      "Embriotoxon posterior ao exame oftalmológico com lâmpada de fenda",
+      "Vértebras em borboleta em radiografia de coluna torácica",
+      "Sinais neurológicos focais ou cefaleia súbita, que devem levantar suspeita de evento vascular cerebral"
+    ],
+    "differentials": [
+      "Tetralogia de Fallot não sindrômica (sem estigmas extracardíacos, sem variante JAG1/NOTCH2 identificável)",
+      "Estenose pulmonar valvar isolada não sindrômica",
+      "Síndrome de Noonan (também cursa com estenose pulmonar, frequentemente valvar displásica, e cardiomiopatia hipertrófica associada)",
+      "Síndrome de deleção 22q11.2 (cardiopatias conotruncais, incluindo tetralogia de Fallot, com fenótipo extracardíaco distinto)",
+      "Atresia biliar e outras causas de colestase neonatal sem acometimento cardíaco ou esquelético associado",
+      "Displasia arteriohepática de outras etiologias genéticas raras com fenótipo sobreposto"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico com atenção dirigida aos ramos da artéria pulmonar",
+      "Angio-TC ou angio-RM pulmonar quando houver suspeita de estenose de ramos não totalmente caracterizada ao ecocardiograma",
+      "Cateterismo cardíaco com angiografia pulmonar seletiva para mapeamento pré-intervenção em estenose de ramos multifocal",
+      "Painel genético dirigido (sequenciamento e análise de deleção/duplicação) para JAG1 e NOTCH2, ou painel multigênico/exoma quando o quadro clínico for sugestivo",
+      "Avaliação hepática: bilirrubinas, transaminases, gama-GT, coagulograma (triagem de deficiência de vitamina K)",
+      "Exame oftalmológico com lâmpada de fenda para embriotoxon posterior",
+      "Radiografia de coluna para vértebras em borboleta",
+      "Biópsia hepática para avaliação de paucidade de ductos biliares, quando indicada para critério diagnóstico clínico",
+      "Avaliação de imagem vascular cerebral (angio-RM/angio-TC), a ser discutida caso a caso com neurologia/neurocirurgia em centros com experiência em ALGS, dada a limitação da evidência sobre rastreio populacional sistemático"
+    ],
+    "red_flags": [
+      "Sinais neurológicos focais súbitos ou cefaleia intensa de início súbito — suspeitar de evento vascular cerebral isquêmico ou hemorrágico",
+      "Cianose progressiva ou crise hipercianótica em paciente com tetralogia de Fallot associada",
+      "Sangramento inesperado ou excessivo (relacionado a coagulopatia por deficiência de vitamina K da colestase crônica, somada a arteriopatia sistêmica), especialmente no perioperatório",
+      "Descompensação hepática aguda em paciente com cardiopatia associada, exigindo avaliação combinada hepatologia-cardiologia antes de qualquer procedimento invasivo",
+      "Sinais de síndrome da aorta média (hipertensão refratária em membros superiores, claudicação, insuficiência renal de origem vascular)"
+    ],
+    "ambulatory_flow": [
+      "Confirmar diagnóstico clínico (paucidade de ductos biliares + 3 de 5 critérios maiores, ou 1 critério maior + história familiar) e/ou molecular (JAG1/NOTCH2)",
+      "Encaminhar para avaliação cardiológica dedicada com ecocardiograma completo, incluindo mapeamento dirigido dos ramos pulmonares",
+      "Se estenose de ramos pulmonares significativa ou multifocal, complementar com angio-TC/angio-RM ou cateterismo diagnóstico antes de planejar intervenção",
+      "Coordenar seguimento multidisciplinar (hepatologia, cardiologia, oftalmologia, genética clínica, ortopedia) em centro com experiência em ALGS",
+      "Rever risco hemorrágico (coagulograma, vitamina K) antes de qualquer procedimento eletivo, cardíaco ou não",
+      "Orientar restrição a esportes de contato quando houver acometimento cardíaco relevante ou esplenomegalia",
+      "Discutir individualmente, com neurologia/neurocirurgia, a indicação de rastreio de imagem vascular cerebral, explicitando ao paciente/família a limitação da evidência disponível sobre a magnitude exata do risco"
+    ],
+    "emergency_flow": [
+      "Cianose súbita/crise hipercianótica em paciente com tetralogia de Fallot associada: manejo fisiológico padrão da crise (posição joelho-tórax, oxigênio, sedação leve, aumento de resistência vascular sistêmica) com escalada para suporte avançado se refratária",
+      "Sinais neurológicos focais ou cefaleia súbita intensa: investigação de imagem vascular cerebral em caráter de urgência, dado o risco descrito de aneurisma/hemorragia subaracnóidea/AVC nesta síndrome",
+      "Sangramento significativo (digestivo, pós-procedimento ou espontâneo): investigar e corrigir coagulopatia relacionada à colestase (vitamina K, fatores de coagulação) em paralelo à investigação da fonte de sangramento",
+      "Antes de qualquer procedimento invasivo de urgência, verificar história de colestase/coagulopatia e de arteriopatia sistêmica conhecida, ajustando o plano de acesso vascular e a preparação hemostática"
+    ],
+    "tags": [
+      "síndrome de Alagille",
+      "ALGS",
+      "JAG1",
+      "NOTCH2",
+      "estenose pulmonar periférica",
+      "estenose de ramos pulmonares",
+      "tetralogia de Fallot",
+      "displasia arteriohepática",
+      "cardiopatia congênita sindrômica",
+      "colestase neonatal",
+      "via Notch",
+      "arteriopatia sistêmica"
+    ],
+    "source_refs": [
+      "Spinner NB, Loomes KM, Krantz ID, et al. Alagille Syndrome. In: GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2024. Última atualização 4 Jan 2024. NCBI Bookshelf NBK1273. PMID: 20301450.",
+      "McElhinney DB, Krantz ID, Bason L, Piccoli DA, Emerick KM, Spinner NB, Goldmuntz E. Analysis of cardiovascular phenotype and genotype-phenotype correlation in individuals with a JAG1 mutation and/or Alagille syndrome. Circulation. 2002;106(20):2567-2574. PMID: 12427653.",
+      "Emerick KM, Rand EB, Goldmuntz E, Krantz ID, Spinner NB, Piccoli DA. Features of Alagille syndrome in 92 patients: frequency and relation to prognosis. Hepatology. 1999;29(3):822-829. PMID: 10051485.",
+      "Kamath BM, Ye W, Goodrich NP, et al. Outcomes of Childhood Cholestasis in Alagille Syndrome: Results of a Multicenter Observational Study. Hepatol Commun. 2020;4(3):387-398. PMID: 33313463.",
+      "Bauer RC, Laney AO, Smith R, et al. Jagged1 (JAG1) mutations in patients with tetralogy of Fallot or pulmonic stenosis. Hum Mutat. 2010;31(5):594-601. PMID: 20437614.",
+      "Gilbert MA, Bauer RC, Rajagopalan R, et al. Alagille syndrome mutation update: Comprehensive overview of JAG1 and NOTCH2 mutation frequencies and insight into missense variant classification. Hum Mutat. 2019;40(12):2197-2220. PMID: 31343788.",
+      "Tumialán LM, Dhall SS, Tomak PR, Barrow DL. Alagille syndrome and aneurysmal subarachnoid hemorrhage. Case report and review of the literature. Pediatr Neurosurg. 2006;42(1):57-61. PMID: 16357504 (evidência de nível caso/série pequena, citada explicitamente como tal)."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1273/",
+      "https://pubmed.ncbi.nlm.nih.gov/12427653/",
+      "https://pubmed.ncbi.nlm.nih.gov/10051485/",
+      "https://pubmed.ncbi.nlm.nih.gov/33313463/",
+      "https://pubmed.ncbi.nlm.nih.gov/20437614/",
+      "https://pubmed.ncbi.nlm.nih.gov/31343788/",
+      "https://pubmed.ncbi.nlm.nih.gov/16357504/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-alagille-acometimento-cardiovascular-estenose-pulmonar-periferica-e-tetralogia-de-fallot"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-kabuki",
+    "name": "Síndrome de Kabuki",
+    "aliases": [
+      "Kabuki make-up syndrome",
+      "Niikawa-Kuroki syndrome",
+      "síndrome de Niikawa-Kuroki",
+      "Kabuki syndrome",
+      "KMT2D-related Kabuki syndrome",
+      "KDM6A-related Kabuki syndrome"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_cromatinica_com_cardiopatia_congenita",
+    "prevalence_rank": 140,
+    "completeness": "completo",
+    "summary": "Síndrome genética do desenvolvimento (síndrome cromatínica) causada majoritariamente por variantes em KMT2D (~75% dos casos, autossômica dominante) e, em menor proporção, em KDM6A (~3-5%, ligada ao X), caracterizada por hipotonia infantil, atraso do desenvolvimento, fenótipo facial típico (fissuras palpebrais longas com eversão do terço lateral da pálpebra inferior, sobrancelhas arqueadas, columela curta, orelhas grandes) e cardiopatia congênita em cerca de 70% dos casos, com predomínio de lesões obstrutivas do lado esquerdo do coração (coarctação de aorta, valva aórtica bicúspide, síndrome do coração esquerdo hipoplásico) e defeitos septais (CIA, CIV).",
+    "presentation": [
+      "Hipotonia infantil",
+      "Atraso do desenvolvimento neuropsicomotor e/ou deficiência intelectual",
+      "Fissuras palpebrais longas com eversão do terço lateral da pálpebra inferior",
+      "Sobrancelhas arqueadas e amplas, esparsas no terço lateral",
+      "Columela curta com ponta nasal deprimida",
+      "Orelhas grandes, proeminentes ou em formato de taça",
+      "Almofadas digitais fetais persistentes",
+      "Baixa estatura pós-natal",
+      "Dificuldades alimentares no período neonatal e lactente",
+      "Hipotonia de sucção/dificuldade de ganho ponderal",
+      "Hipoglicemia neonatal (mais associada à forma KDM6A-relacionada, por hiperinsulinismo)",
+      "Otite média de repetição e perda auditiva",
+      "Hipermobilidade/luxações articulares",
+      "Anomalias renais estruturais",
+      "Sopro cardíaco ou cianose ao exame neonatal, quando há cardiopatia estrutural associada"
+    ],
+    "differentials": [
+      "Síndrome de Turner",
+      "Síndrome de Noonan",
+      "Síndrome de Cornelia de Lange",
+      "Síndrome de CHARGE",
+      "Síndrome de Williams-Beuren",
+      "Deleção 22q11.2",
+      "Síndrome de Down",
+      "Outras síndromes cromatínicas (síndrome de Cornelia de Lange 2, síndrome de Coffin-Siris)"
+    ],
+    "tests": [
+      "Ecocardiograma com visualização dedicada do arco aórtico ao diagnóstico",
+      "Eletrocardiograma se houver suspeita de arritmia",
+      "Sequenciamento de KMT2D e KDM6A (painel multigênico direcionado ou sequenciamento de exoma)",
+      "Avaliação renal por ultrassonografia",
+      "Avaliação auditiva (audiometria) pelo menos anual",
+      "Avaliação oftalmológica pelo menos anual",
+      "Função tireoidiana a cada 2-3 anos",
+      "Glicemia/investigação de hiperinsulinismo se hipoglicemia neonatal",
+      "Avaliação do desenvolvimento neuropsicomotor em cada consulta na infância e adolescência",
+      "Medida seriada de peso, estatura e perímetro cefálico, idealmente em curva específica para KMT2D-related quando disponível"
+    ],
+    "red_flags": [
+      "Lesão obstrutiva do lado esquerdo do coração ducto-dependente (coarctação crítica, síndrome do coração esquerdo hipoplásico) com risco de colapso circulatório neonatal ao fechamento do canal arterial",
+      "Hipoglicemia neonatal grave ou refratária, sugestiva de hiperinsulinismo",
+      "Sinais de arritmia (síncope, palpitações) — indicação de eletrocardiograma",
+      "Cianose ou sopro cardíaco novo em qualquer idade",
+      "Sinais de infecção recorrente sugestivos de disfunção imune associada"
+    ],
+    "ambulatory_flow": [
+      "Suspeita clínica pelo fenótipo facial típico associado a hipotonia e atraso do desenvolvimento",
+      "Encaminhamento a genética clínica para confirmação diagnóstica (critérios clínicos e/ou teste molecular de KMT2D/KDM6A)",
+      "Encaminhamento a cardiologia pediátrica assim que o diagnóstico é suspeitado ou confirmado, independentemente de sintomas cardíacos",
+      "Ecocardiograma com avaliação dedicada do arco aórtico no primeiro contato cardiológico",
+      "Seguimento cardiológico conforme o achado estrutural encontrado (protocolo padrão da lesão identificada, quando presente)",
+      "Rastreio multissistêmico de rotina (auditivo, oftalmológico, renal, tireoidiano, desenvolvimento) conforme calendário de vigilância",
+      "Reavaliação clínica se não houver cardiopatia estrutural ao ecocardiograma inicial — não há indicação estabelecida de imagem aórtica seriada rotineira na ausência de achado inicial"
+    ],
+    "emergency_flow": [
+      "Recém-nascido com cianose, choque ou colapso circulatório: investigar lesão obstrutiva esquerda ducto-dependente (coarctação crítica, síndrome do coração esquerdo hipoplásico) — iniciar prostaglandina E1 conforme suspeita e estabilizar antes de ecocardiograma confirmatório",
+      "Hipoglicemia neonatal grave: tratar emergencialmente e investigar hiperinsulinismo em paralelo à avaliação cardíaca",
+      "Sinais de insuficiência cardíaca ou sopro novo em paciente com diagnóstico já estabelecido: ecocardiograma e avaliação cardiológica sem demora"
+    ],
+    "tags": [
+      "síndrome de kabuki",
+      "KMT2D",
+      "KDM6A",
+      "cardiopatia congênita",
+      "síndrome cromatínica",
+      "lesão obstrutiva do lado esquerdo do coração",
+      "coarctação de aorta",
+      "defeito septal",
+      "cardiologia pediátrica",
+      "síndrome genética",
+      "doença rara"
+    ],
+    "source_refs": [
+      "Adam MP, Hannibal M. Kabuki Syndrome. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. Initial publication 2011 Sep 1. PMID: 21882399. Bookshelf ID: NBK62111.",
+      "Digilio MC, Gnazzo M, Lepri F, et al. Congenital heart defects in molecularly proven Kabuki syndrome patients. Am J Med Genet A. 2017;173(11):2912-2922. PMID: 28884922.",
+      "Digilio MC, Marino B, Toscano A, Giannotti A, Dallapiccola B. Congenital heart defects in Kabuki syndrome. Am J Med Genet. 2001;100(4):269-274. PMID: 11343317.",
+      "Yoon JK, Ahn KJ, Kwon BS, Kim GB, Bae EJ, Noh CI, Ko JM. The strong association of left-side heart anomalies with Kabuki syndrome. Korean J Pediatr. 2015;58(7):256-262. PMID: 26300940.",
+      "Yuan SM. Congenital heart defects in Kabuki syndrome. Cardiol J. 2013;20(2):121-124. PMID: 23558868.",
+      "Lee CL, Chuang CK, Chen MR, et al. Illuminating the Genetic Basis of Congenital Heart Disease in Patients with Kabuki Syndrome. Diagnostics (Basel). 2024;14(8):846. PMID: 38667491."
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK62111/",
+      "https://pubmed.ncbi.nlm.nih.gov/28884922/",
+      "https://pubmed.ncbi.nlm.nih.gov/11343317/",
+      "https://pubmed.ncbi.nlm.nih.gov/26300940/",
+      "https://pubmed.ncbi.nlm.nih.gov/23558868/",
+      "https://pubmed.ncbi.nlm.nih.gov/38667491/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-kabuki-espectro-cardiovascular-genetica-kmt2d-kdm6a-e-rastreio-cardiaco"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-kearns-sayre",
+    "name": "Síndrome de Kearns-Sayre",
+    "aliases": [
+      "KSS",
+      "Kearns-Sayre",
+      "citopatia mitocondrial por deleção única de mtDNA",
+      "síndrome de deleção única de larga escala do DNA mitocondrial"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "citopatia_mitocondrial",
+    "prevalence_rank": 141,
+    "completeness": "completo",
+    "summary": "Citopatia mitocondrial por deleção única de larga escala do mtDNA, com tríade diagnóstica clássica de oftalmoplegia externa progressiva, retinopatia pigmentar e início antes dos 20 anos. O acometimento cardiovascular ocorre em cerca de metade dos pacientes e é predominantemente elétrico — bloqueio fascicular/de ramo que pode progredir de forma imprevisível para bloqueio atrioventricular total e assistolia —, o que justifica indicação de marca-passo profilático mesmo em paciente assintomático diante de qualquer alteração de condução. Cardiomiopatia é descrita, mas é bem menos comum que a doença de condução.",
+    "presentation": [
+      "Oftalmoplegia externa progressiva crônica com ptose, geralmente o sinal inicial",
+      "Retinopatia pigmentar atípica em padrão sal e pimenta",
+      "Início dos sintomas antes dos 20 anos de idade",
+      "Bloqueio de ramo ou bloqueio fascicular ao ECG, muitas vezes assintomático",
+      "Síncope ou pré-síncope quando já há progressão para bloqueio atrioventricular avançado",
+      "Hipoacusia neurossensorial, ataxia cerebelar, baixa estatura, tubulopatia renal, dismotilidade gastrointestinal e distúrbios endócrinos associados",
+      "Elevação da proteína liquórica (>100 mg/dL) como achado de suporte diagnóstico"
+    ],
+    "differentials": [
+      "MELAS (mutação pontual m.3243A>G, fenótipo cardíaco predominante de cardiomiopatia hipertrófica, episódios semelhantes a AVC)",
+      "Síndrome de Barth (mutação ligada ao X em TAZ/tafazzina, defeito estrutural de cardiolipina, cardiomiopatia dilatada/não compactada com neutropenia)",
+      "Síndrome de Pearson (deleção de mtDNA, extremo mais grave do espectro, insuficiência medular e pancreática exócrina na infância)",
+      "Oftalmoplegia externa progressiva crônica isolada (extremo mais brando do espectro, sem os demais achados sistêmicos da KSS)",
+      "Bloqueio cardíaco progressivo familiar (SCN5A/TRPM4, sem oftalmoplegia nem retinopatia)",
+      "Retinose pigmentar hereditária isolada sem acometimento cardíaco ou muscular extraocular",
+      "Distrofias musculares com acometimento de condução (miotônica, Erb, Becker)"
+    ],
+    "tests": [
+      "ECG de repouso seriado (a cada 6-12 meses após o diagnóstico)",
+      "Ecocardiograma seriado (a cada 6-12 meses) para rastreio de cardiomiopatia subclínica",
+      "Ressonância cardíaca quando disponível, para detecção de acometimento miocárdico subclínico",
+      "Estudo eletrofisiológico invasivo diante de progressão do distúrbio de condução",
+      "Biópsia muscular com análise genética de mtDNA (detecção da deleção; sangue periférico pode ser falso-negativo pela heteroplasmia tecido-específica)",
+      "Avaliação oftalmológica (fundoscopia, campimetria) e audiometria",
+      "Dosagem de proteína liquórica, avaliação endócrina (glicemia, função paratireoidiana) e função renal (tubulopatia)"
+    ],
+    "red_flags": [
+      "Qualquer grau de bloqueio atrioventricular (incluindo primeiro grau) ou bloqueio fascicular/bifascicular novo em paciente com diagnóstico de KSS, mesmo assintomático — indicação para avaliação de marca-passo, não apenas observação",
+      "Síncope em paciente com KSS conhecida — considerar BAV paroxístico até prova em contrário",
+      "Progressão eletrocardiográfica documentada (de bloqueio isolado para bifascicular) como preditor de evento catastrófico iminente",
+      "Sinais de insuficiência cardíaca em paciente com KSS — rastrear cardiomiopatia associada, menos comum mas descrita"
+    ],
+    "ambulatory_flow": [
+      "Confirmar tríade diagnóstica (oftalmoplegia progressiva, retinopatia pigmentar, início antes dos 20 anos) e buscar confirmação genética da deleção de mtDNA em tecido muscular",
+      "Solicitar ECG e ecocardiograma basais no momento do diagnóstico, independentemente de sintomas cardiovasculares",
+      "Programar ECG e ecocardiograma seriados a cada 6-12 meses",
+      "Encaminhar a eletrofisiologia/arritmologia diante de qualquer alteração de condução nova ao ECG, para discussão sobre indicação de marca-passo profilático",
+      "Envolver equipe multidisciplinar (neurologia, oftalmologia, endocrinologia, nefrologia) dado o caráter multissistêmico da doença",
+      "Discutir com paciente e família a natureza imprevisível da progressão da doença de condução e a lógica da indicação profilática de dispositivo, incluindo as limitações da evidência disponível (ausência de ensaio randomizado)"
+    ],
+    "emergency_flow": [
+      "Paciente com KSS e síncope: ECG imediato e monitorização contínua, com alto índice de suspeita para bloqueio atrioventricular paroxístico mesmo com ECG intercrise normal",
+      "Bradicardia sintomática ou BAV avançado/total: manejo agudo conforme protocolo padrão de bradiarritmia sintomática, com marca-passo transvenoso temporário se necessário, seguido de avaliação para marca-passo definitivo",
+      "Considerar KSS como diagnóstico diferencial em jovem com BAV total inexplicado e sinais oculares associados (ptose, limitação da motilidade ocular) não previamente investigados",
+      "Investigar e tratar causas metabólicas associadas que podem descompensar no contexto agudo (hipoparatireoidismo, diabetes) em paciente mitocondrial conhecido"
+    ],
+    "tags": [
+      "arritmia",
+      "bloqueio atrioventricular",
+      "marca-passo",
+      "doença mitocondrial",
+      "citopatia mitocondrial",
+      "mtDNA",
+      "pediatria",
+      "genética",
+      "morte súbita cardíaca",
+      "cardiologia pediátrica"
+    ],
+    "source_refs": [
+      "Kearns TP, Sayre GP. Retinitis pigmentosa, external ophthalmoplegia, and complete heart block: unusual syndrome with histologic study in one of two cases. AMA Arch Ophthalmol. 1958;60(2):280-289. PMID: 13558799",
+      "Kabunga P, Lau AK, Phan K, Puranik R, Liang C, Davis RL, Sue CM, Sy RW. Systematic review of cardiac electrical disease in Kearns-Sayre syndrome and mitochondrial cytopathy. Int J Cardiol. 2015;181:303-310. DOI: 10.1016/j.ijcard.2014.12.038. PMID: 25540845",
+      "Di Mambro C, Tamborrino PP, Silvetti MS, Yammine ML, Marcolin C, Righi D, Baban A, Martinelli D, Dionisi Vici C, Drago F. Progressive involvement of cardiac conduction system in paediatric patients with Kearns-Sayre syndrome: how to predict occurrence of complete heart block and sudden cardiac death? Europace. 2021;23(6):948-957. PMID: 33336258",
+      "Adorisio R, Cantarutti N, Siri B, et al. Mitochondrial cardiomyopathies: navigating through different clinical and management pictures between adult and paediatric forms. Front Cardiovasc Med. 2025;12:1621096. DOI: 10.3389/fcvm.2025.1621096. PMID: 40678571. PMCID: PMC12267293",
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430",
+      "Goldstein A, Falk MJ. Single Large-Scale Mitochondrial DNA Deletion Syndromes. 2003 Dec 17 [Updated 2023 Sep 28]. In: Adam MP, Feldman J, Mirzaa GM, et al., editors. GeneReviews. Seattle (WA): University of Washington, Seattle. NBK1203",
+      "Malfatti E, Laforêt P, Jardel C, et al. High risk of severe cardiac adverse events in patients with mitochondrial m.3243A>G mutation. Neurology. 2013;80(1):100-105. PMID: 23243073",
+      "Ng YS, Grady JP, Lax NZ, et al. Sudden adult death syndrome in m.3243A>G-related mitochondrial disease: an unrecognized clinical entity in young, asymptomatic adults. Eur Heart J. 2016;37(32):2552-2559. PMID: 26188002"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/13558799/",
+      "https://pubmed.ncbi.nlm.nih.gov/25540845/",
+      "https://pubmed.ncbi.nlm.nih.gov/33336258/",
+      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12267293/",
+      "https://pubmed.ncbi.nlm.nih.gov/34455430/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1203/",
+      "https://pubmed.ncbi.nlm.nih.gov/23243073/",
+      "https://pubmed.ncbi.nlm.nih.gov/26188002/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-kearns-sayre-doenca-de-conducao-atrioventricular-e-indicacao-de-marca-passo-profilatico"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "distrofia-miotonica-tipo-1",
+    "name": "Distrofia miotônica tipo 1 (doença de Steinert)",
+    "aliases": [
+      "DM1",
+      "Doença de Steinert",
+      "Distrofia miotônica de Steinert",
+      "Miotonia distrófica",
+      "Dystrophia myotonica tipo 1",
+      "Myotonic dystrophy type 1"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "doenca_neuromuscular_com_acometimento_condutivo_cardiaco",
+    "prevalence_rank": 142,
+    "completeness": "completo",
+    "summary": "Doença multissistêmica autossômica dominante causada por expansão do trinucleotídeo CTG no gene DMPK, a distrofia muscular hereditária mais comum do adulto (prevalência mundial ~1:8.000). O acometimento cardíaco é predominantemente elétrico — doença progressiva do sistema de condução (BAV, bloqueio de ramo), com prevalência de primeiro grau de 28,2% a 45,0% — e é a principal causa de morte precoce junto à insuficiência respiratória: até um terço dos óbitos são súbitos, presumivelmente por bradiarritmia maligna. Arritmias atriais (5-12,5%) e taquicardia ventricular (sustentada 1,0-2,7%) também ocorrem; cardiomiopatia dilatada é bem menos comum que a doença de condução. O risco de morte súbita existe mesmo em pacientes cardiologicamente assintomáticos, tornando o rastreamento anual por ECG/imagem obrigatório independentemente de sintoma. Expansões CTG maiores associam-se a maior prevalência de manifestações cardíacas em nível populacional, mas eventos graves já foram descritos com expansões pequenas — o tamanho da repetição não deve ser usado para prever gravidade individual.",
+    "presentation": [
+      "Muitas vezes assintomático do ponto de vista cardíaco no momento do diagnóstico neuromuscular — achado cardíaco surge por rastreamento sistemático, não por queixa espontânea",
+      "Palpitações por taquiarritmia atrial (fibrilação, flutter ou taquicardia atrial), por vezes com condução AV rápida e síncope associada, inclusive como primeira manifestação cardiovascular em paciente jovem",
+      "Síncope ou pré-síncope por bradiarritmia — sinal de alarme que sugere BAV avançado subjacente e deve motivar investigação imediata",
+      "Dispneia aos esforços quando há disfunção sistólica de ventrículo esquerdo associada (menos comum que a doença de condução isolada)",
+      "Fraqueza muscular distal progressiva, miotonia (dificuldade de relaxamento muscular após contração), ptose, catarata precoce e outras manifestações extracardíacas típicas da DM1, que costumam preceder o diagnóstico cardíaco",
+      "Em crianças com DM1, arritmia atrial e, com menor frequência, TV sustentada podem surgir após os 10 anos de idade, tipicamente desencadeadas por exercício; BAV de terceiro grau não foi descrito nessa faixa etária"
+    ],
+    "differentials": [
+      "Doença do sistema de condução idiopática ligada à idade (bloqueio bifascicular ou trifascicular sem doença neuromuscular de base) — diferencia-se pela ausência de miotonia, fraqueza distal e outros achados sistêmicos da DM1, e pela ausência de expansão CTG no DMPK",
+      "Bloqueio cardíaco progressivo familiar por mutação em SCN5A (doença de Lenègre-Lev genética) — outra causa hereditária de doença de condução progressiva, sem o componente muscular esquelético/miotônico da DM1; a própria DM1 pode causar disfunção do canal de sódio por splicing anormal de SCN5A, o que aproxima fisiopatologicamente as duas condições",
+      "Taquicardia ventricular por reentrada de ramo (BBR-VT) de outras etiologias — cardiomiopatia dilatada idiopática, mutação primária em SCN5A — quando a DM1 ainda não foi diagnosticada e o paciente se apresenta com TV em coração aparentemente estrutural normal",
+      "Outras distrofias musculares com acometimento cardíaco (Duchenne, Becker, cinturas, Emery-Dreifuss/laminopatia) — fenótipo cardíaco distinto: Emery-Dreifuss e laminopatias cursam com doença de condução e risco arrítmico proeminentes de forma semelhante à DM1, enquanto Duchenne/Becker cursam predominantemente com cardiomiopatia dilatada",
+      "Distrofia miotônica tipo 2 (DM2/PROMM), causada por expansão CCTG no gene CNBP/ZNF9 — manifestações cardíacas semelhantes, porém menos prevalentes e de início mais tardio que na DM1"
+    ],
+    "tests": [
+      "Teste genético molecular para expansão CTG no gene DMPK — confirma o diagnóstico e define a categoria de repetição (pré-mutação, penetrância completa leve/clássica/congênita), embora o tamanho da expansão não deva ser usado para prever gravidade cardíaca individual",
+      "ECG de 12 derivações no diagnóstico e com reavaliação periódica, mesmo sem sintoma cardíaco — instrumento central de rastreio: PR ≥240 ms, QRS ≥120 ms, ritmo não sinusal e BAV de segundo/terceiro grau são preditores independentes de morte súbita",
+      "ECG ambulatorial (Holter) periódico — detecta arritmia atrial ou ventricular paroxística e BAV intermitente não capturado no ECG de repouso",
+      "Ecocardiograma (ou ressonância cardíaca) no diagnóstico e com reavaliação periódica — avalia função sistólica de ventrículo esquerdo; anormalidade significativa é menos comum do que a doença de condução, e a indicação de repetição do exame é maior em pacientes sintomáticos ou com doença de condução já documentada",
+      "Estudo eletrofisiológico (EEF) com medida do intervalo HV — indicado quando há sintoma sugestivo de bradicardia com anormalidade leve a moderada de condução no ECG e teste não invasivo inconclusivo; HV ≥70 ms identifica risco aumentado de BAV avançado e orienta marca-passo profilático; evidência mais recente sugere que um limiar de HV ≥65 ms pode melhorar a sensibilidade, ainda sem substituir formalmente o limiar de 70 ms nas diretrizes vigentes",
+      "Estimulação ventricular programada durante o EEF — pode ser considerada quando há sintoma sugestivo de taquiarritmia ventricular e teste não invasivo inconclusivo; protocolo deve incluir manobra dirigida à indução de taquicardia por reentrada de ramo"
+    ],
+    "red_flags": [
+      "BAV de terceiro grau ou de segundo grau avançado em qualquer nível anatômico — indicação de marca-passo mesmo na ausência completa de sintomas, pelo risco de ritmo de escape instável, assistolia e morte súbita",
+      "Síncope inexplicada em paciente com DM1 e qualquer grau de anormalidade de condução no ECG — deve motivar investigação ativa (EEF), não observação",
+      "Taquiarritmia atrial (fibrilação, flutter) com condução AV rápida, especialmente em paciente jovem — associada a maior risco de morte súbita por mecanismo ainda não esclarecido",
+      "Intervalo HV ≥70 ms ao EEF — marcador de risco aumentado de BAV avançado e morte súbita, mesmo em paciente assintomático",
+      "Morte súbita já ocorreu em portadores de marca-passo e mesmo de CDI na DM1 — a presença de dispositivo não deve gerar falsa sensação de proteção completa, e novos sintomas devem ser investigados ativamente",
+      "Uso de mexiletina ou outro bloqueador de canal de sódio classe I para tratar miotonia esquelética em paciente com distúrbio de condução documentado — risco de agravar arritmia por disfunção pré-existente do canal de sódio cardíaco; requer monitorização cuidadosa ao iniciar"
+    ],
+    "ambulatory_flow": [
+      "Ao diagnóstico neuromuscular de DM1 (confirmado por teste genético), encaminhar para avaliação cardíaca mesmo sem qualquer sintoma cardíaco: exame físico, ECG de 12 derivações, ECG ambulatorial e ecocardiograma (ou RM cardíaca)",
+      "Manter reavaliação cardíaca periódica ao longo da vida, com frequência determinada pelo achado basal e pela evolução — vigilância vitalícia, não pontual, dada a natureza progressiva e por vezes imprevisível da doença de condução",
+      "Se ECG mostrar PR ≥240 ms, QRS ≥120 ms, ritmo não sinusal ou BAV de segundo/terceiro grau: encaminhar para eletrofisiologia para considerar marca-passo",
+      "Se houver sintoma sugestivo de bradicardia com anormalidade de condução leve a moderada e teste não invasivo inconclusivo: considerar EEF com medida do intervalo HV",
+      "Antes de iniciar mexiletina (ou outro bloqueador de canal de sódio) para miotonia em paciente com distúrbio de condução: articular com cardiologia/eletrofisiologia sobre estratégia de monitorização (telemetria hospitalar ou ECG seriado ambulatorial) antes e após o início",
+      "Discutir explicitamente objetivos de cuidado e status funcional junto ao paciente e à família ao considerar marca-passo ou CDI, dado que a decisão em DM1 costuma envolver comorbidade neuromuscular significativa e não apenas o critério cardíaco isolado",
+      "Oferecer aconselhamento genético a familiares de primeiro grau, dado o padrão autossômico dominante com 50% de risco de transmissão e o fenômeno de antecipação"
+    ],
+    "emergency_flow": [
+      "Síncope ou pré-síncope em paciente com DM1 conhecida: obter ECG imediato buscando BAV avançado, ritmo não sinusal ou anormalidade grave de condução; internar para monitorização se qualquer um desses achados estiver presente",
+      "Palpitação sustentada ou instabilidade hemodinâmica em paciente com DM1: considerar taquiarritmia atrial com condução rápida e taquicardia ventricular (incluindo por reentrada de ramo) no diagnóstico diferencial imediato",
+      "Paciente com DM1 e BAV de terceiro grau ou de segundo grau avançado, mesmo assintomático e achado incidental: não tratar como observação ambulatorial — indicação de marca-passo é a mesma independentemente de sintoma",
+      "Evitar bloqueadores de canal de sódio classe I (incluindo uso off-label de flecainida) sem articulação prévia com eletrofisiologia — risco de desencadear taquiarritmia ventricular grave ou desmascarar padrão de Brugada nesses pacientes",
+      "Em parada cardíaca recuperada ou arritmia ventricular sustentada hemodinamicamente instável documentada em paciente com DM1: tratar como indicação de CDI de prevenção secundária, com sistema com capacidade de estimulação permanente (não CDI puro de choque), dada a alta probabilidade de doença de condução coexistente"
+    ],
+    "tags": [
+      "distrofia miotônica tipo 1",
+      "doença de Steinert",
+      "DM1",
+      "DMPK",
+      "expansão CTG",
+      "doença de condução cardíaca",
+      "bloqueio atrioventricular",
+      "morte súbita cardíaca",
+      "marca-passo",
+      "cardiodesfibrilador implantável",
+      "arritmia atrial",
+      "taquicardia ventricular",
+      "genética cardiovascular",
+      "doença neuromuscular"
+    ],
+    "source_refs": [
+      "Bird TD. Myotonic Dystrophy Type 1. GeneReviews [Internet]. Seattle (WA): University of Washington; última revisão 14/11/2024. NCBI Bookshelf NBK1165",
+      "Groh WJ, Bhakta D, Tomaselli GF, et al. 2022 HRS expert consensus statement on evaluation and management of arrhythmic risk in neuromuscular disorders. Heart Rhythm. 2022;19(10):e61-e120. DOI: 10.1016/j.hrthm.2022.04.022. PMID: 35500790",
+      "Groh WJ, Groh MR, Saha C, et al. Electrocardiographic abnormalities and sudden death in myotonic dystrophy type 1. N Engl J Med. 2008;358(25):2688-2697. DOI: 10.1056/NEJMoa062800. PMID: 18565861",
+      "Wahbi K, Babuty D, Probst V, et al. Incidence and predictors of sudden death, major conduction defects and sustained ventricular tachyarrhythmias in 1388 patients with myotonic dystrophy type 1. Eur Heart J. 2017;38(10):751-758. DOI: 10.1093/eurheartj/ehw569. PMID: 27941019",
+      "Wahbi K, Meune C, Porcher R, et al. Electrophysiological study with prophylactic pacing and survival in adults with myotonic dystrophy and conduction system disease. JAMA. 2012;307(12):1292-1301. DOI: 10.1001/jama.2012.346. PMID: 22453570",
+      "Groh WJ, Lowe MR, Zipes DP. Severity of cardiac conduction involvement and arrhythmias in myotonic dystrophy type 1 correlates with age and CTG repeat length. J Cardiovasc Electrophysiol. 2002;13(5):444-448. DOI: 10.1046/j.1540-8167.2002.00444.x. PMID: 12030525",
+      "Chong-Nguyen C, Wahbi K, Algalarrondo V, et al. Association Between Mutation Size and Cardiac Involvement in Myotonic Dystrophy Type 1: An Analysis of the DM1-Heart Registry. Circ Cardiovasc Genet. 2017;10(3):e001526. DOI: 10.1161/CIRCGENETICS.116.001526. PMID: 28611030",
+      "Petri H, Vissing J, Witting N, Bundgaard H, Køber L. Cardiac manifestations of myotonic dystrophy type 1. Int J Cardiol. 2012;160(2):82-88. DOI: 10.1016/j.ijcard.2011.08.037. PMID: 21917328",
+      "Lund M, Diaz LJ, Ranthe MF, et al. Cardiac involvement in myotonic dystrophy: a nationwide cohort study. Eur Heart J. 2014;35(32):2158-2164. DOI: 10.1093/eurheartj/ehu157. PMID: 24742887",
+      "Wahbi K, Porcher R, Laforêt P, et al. Development and Validation of a New Scoring System to Predict Survival in Patients With Myotonic Dystrophy Type 1. JAMA Neurol. 2018;75(5):573-581. DOI: 10.1001/jamaneurol.2017.4778. PMID: 29404559",
+      "Freyermuth F, Rau F, Kokunai Y, et al. Splicing misregulation of SCN5A contributes to cardiac-conduction delay and heart arrhythmia in myotonic dystrophy. Nat Commun. 2016;7:11067. DOI: 10.1038/ncomms11067. PMID: 27063795",
+      "Clementy N, Labombarda F, Grolleau F, et al. Electrocardiogram vs Electrophysiological Study and Major Conduction Delays in Myotonic Dystrophy Type 1. JAMA Cardiol. 2025;10(11):1121-1129. DOI: 10.1001/jamacardio.2025.3055. PMID: 40991257",
+      "Lorca R, Alen A, Moliner-Abós C, et al. Genetic anticipation and cardiac conduction abnormalities in myotonic dystrophy type 1. Int J Cardiol Heart Vasc. 2026;62:101851. DOI: 10.1016/j.ijcha.2025.101851. PMID: 41488597"
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1165/",
+      "https://doi.org/10.1016/j.hrthm.2022.04.022",
+      "https://doi.org/10.1056/NEJMoa062800",
+      "https://doi.org/10.1093/eurheartj/ehw569",
+      "https://doi.org/10.1001/jama.2012.346",
+      "https://doi.org/10.1046/j.1540-8167.2002.00444.x",
+      "https://doi.org/10.1161/CIRCGENETICS.116.001526",
+      "https://doi.org/10.1016/j.ijcard.2011.08.037",
+      "https://doi.org/10.1093/eurheartj/ehu157",
+      "https://doi.org/10.1001/jamaneurol.2017.4778",
+      "https://doi.org/10.1038/ncomms11067",
+      "https://doi.org/10.1001/jamacardio.2025.3055",
+      "https://doi.org/10.1016/j.ijcha.2025.101851"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "distrofia-miotonica-tipo-1-doenca-de-conducao-cardiaca-progressiva-e-morte-subita"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "rosai-dorfman",
+    "name": "Doença de Rosai-Dorfman",
+    "aliases": [
+      "histiocitose sinusal com linfadenopatia maciça",
+      "sinus histiocytosis with massive lymphadenopathy",
+      "SHML",
+      "doença de Rosai-Dorfman-Destombes",
+      "RDD"
+    ],
+    "area": "geral",
+    "category": "histiocitose",
+    "subtype": null,
+    "prevalence_rank": 143,
+    "completeness": "completo",
+    "summary": "Histiocitose não-Langerhans rara (grupo R da classificação de Emile 2016), classicamente manifesta como linfadenopatia cervical bilateral maciça com histiócitos S100+/CD68+/CD1a- exibindo emperipolese; acometimento cardiovascular é raro e descrito quase exclusivamente em relatos de caso e pequenas séries, mais comumente como massa em átrio direito ou infiltração/derrame pericárdico, podendo simular outras causas de massa cardíaca ou doença aórtica.",
+    "presentation": [
+      "Linfadenopatia cervical bilateral indolor, com ou sem febre e perda de peso (apresentação clássica extracardíaca)",
+      "Massa intracavitária cardíaca, mais frequentemente em átrio direito, achado incidental ou sintomático (dispneia, desconforto torácico, edema de membros inferiores)",
+      "Derrame pericárdico recorrente ou refratário, podendo evoluir para pericardite constritiva",
+      "Arritmia ventricular ou bloqueio atrioventricular associado a massa em septo interatrial ou miocárdio",
+      "Choque obstrutivo por massa intracavitária volumosa (apresentação rara, descrita em relato de caso)",
+      "Infiltração periaórtica ou de artéria pulmonar mimetizando hematoma intramural ou aneurisma",
+      "Acometimento extranodal (pele, órbita, trato sinonasal, osso, sistema nervoso central) em cerca de 43% dos casos, podendo preceder ou coexistir com a forma cardíaca"
+    ],
+    "differentials": [
+      "Doença de Erdheim-Chester (histiocitose de grupo distinto, mutação predominante em BRAF V600E, tropismo por aorta e artérias renais)",
+      "Sarcoidose cardíaca",
+      "Linfoma cardíaco primário e outros tumores malignos primários do coração (angiossarcoma)",
+      "Mixoma cardíaco e complexo de Carney",
+      "Doença relacionada a IgG4 com periaortite/aneurisma inflamatório",
+      "Amiloidose cardíaca",
+      "Carcinomatose pericárdica ou pericardite tuberculosa"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico/transesofágico — caracterização inicial de massa, derrame ou espessamento pericárdico",
+      "Ressonância cardíaca — caracterização tecidual da massa, infiltração miocárdica e repercussão hemodinâmica",
+      "PET-CT com FDG — mapeamento de extensão sistêmica nodal e extranodal, orientação de sítio de biópsia",
+      "Biópsia com imuno-histoquímica — histiócitos S100+, CD68+/CD163+, CD1a- com emperipolese característica",
+      "Pesquisa de mutações da via MAPK (KRAS, NRAS, MAP2K1, BRAF) no tecido, quando há intenção de terapia dirigida"
+    ],
+    "red_flags": [
+      "Massa intracavitária associada a linfadenopatia cervical, febre ou hipergamaglobulinemia inexplicada",
+      "Bloqueio atrioventricular ou arritmia ventricular de causa indeterminada com massa associada",
+      "Derrame pericárdico recorrente/refratário sem etiologia identificada após investigação padrão",
+      "Massa cardíaca pediátrica atípica para rabdomioma ou fibroma"
+    ],
+    "ambulatory_flow": [
+      "Suspeita a partir de massa cardíaca ou derrame pericárdico de etiologia indeterminada, especialmente com linfadenopatia associada",
+      "Investigação inicial com ecocardiograma e ressonância cardíaca para caracterização da lesão",
+      "PET-CT para avaliar extensão sistêmica e escolher o sítio mais seguro de biópsia",
+      "Biópsia com imuno-histoquímica (S100, CD68, CD1a) para confirmação diagnóstica e pesquisa de emperipolese",
+      "Discussão multidisciplinar (cardiologia, hematologia/oncologia, patologia) para definir observação, cirurgia ou terapia sistêmica/dirigida",
+      "Seguimento clínico e de imagem conforme localização e resposta ao tratamento, dada a ausência de protocolo padronizado"
+    ],
+    "emergency_flow": [
+      "Avaliação de repercussão hemodinâmica imediata (tamponamento, choque obstrutivo, arritmia instável) em paciente com massa cardíaca ou derrame volumoso conhecido ou recém-diagnosticado",
+      "Suporte hemodinâmico (incluindo ECMO, quando indicado) em choque obstrutivo por massa intracavitária",
+      "Pericardiocentese ou janela pericárdica em tamponamento por derrame associado",
+      "Avaliação cirúrgica de urgência em massa causando obstrução de via de entrada/saída ou arritmia instável",
+      "Encaminhamento para biópsia e definição diagnóstica assim que houver estabilização clínica"
+    ],
+    "tags": [
+      "histiocitose",
+      "rosai-dorfman",
+      "massa cardiaca",
+      "derrame pericardico",
+      "doenca rara",
+      "histiocitose nao-langerhans",
+      "cardio-oncologia",
+      "pericardio"
+    ],
+    "source_refs": [
+      "Dalia S, Sagatys E, Sokol L, Kubal T. Rosai-Dorfman disease: tumor biology, clinical features, pathology, and treatment. Cancer Control. 2014;21(4):322-7. PMID 25310213.",
+      "Emile JF, Abla O, Fraitag S, et al. Revised classification of histiocytoses and neoplasms of the macrophage-dendritic cell lineages. Blood. 2016;127(22):2672-81. PMID 26966089.",
+      "Goyal G, Young JR, Koster MJ, et al. Mayo Clinic Histiocytosis Working Group Consensus Statement. Mayo Clin Proc. 2019;94(10):2054-71. PMID 31472931.",
+      "Elbaz Younes I, Sokol L, Zhang L. Rosai-Dorfman Disease between Proliferation and Neoplasia. Cancers (Basel). 2022;14(21):5271. PMID 36358690.",
+      "Samadzadeh Tabrizi N, Dogar MH, Wilkinson D, et al. Cardiac Manifestation of Rosai-Dorfman Disease: A Case Report and a Systematic Review. Heart Surg Forum. 2023;26(6):E896-904. PMID 38178342.",
+      "Butt AH, et al. Interatrial Septal Mass Secondary to Rosai-Dorfman Disease. JACC Case Rep. 2023;14:101824. PMID 37152702.",
+      "Magana S, et al. Rosai-Dorfman Disease Presenting as a Right Atrial Mass. Am J Case Rep. 2024;25:e942511. PMID 38501248.",
+      "Al Yafi M, et al. Rosai-Dorfman Disease: Left Ventricular Mass Causing Ventricular Tachycardia. JACC Case Rep. 2026;31(17):107608. PMID 41879609.",
+      "Marinkovic A, et al. Isolated Cardiac Involvement in Rosai-Dorfman-Destombes Disease Causing Obstructive Shock. JACC Case Rep. 2025;30(29):105150. PMID 41005864.",
+      "Das P, et al. Refractory Pericardial Effusion in a Patient with Rosai-Dorfman Disease. J Assoc Physicians India. 2025;73(1):81-82. PMID 39893536.",
+      "Dos Santos Filho HM, et al. Cardiac involvement of Rosai-Dorfman disease responsive to Trametinib. Eur Heart J Cardiovasc Imaging. 2026 Jun 22:jeag142. PMID 42324617.",
+      "Qian L, et al. Rosai-Dorfman disease of the ascending aorta and pulmonary artery. Eur Heart J. 2025;46(23):2246. PMID 40214969.",
+      "Rabha KD, et al. Rosai-Dorfman Disease as Constrictive Pericarditis. Cureus. 2024;16(6):e62062. PMID 38989342.",
+      "Yoshida M, et al. Rosai-Dorfman disease with rare extranodal lesions in the pelvis, heart, liver and skin. Front Oncol. 2023;12:1083500. PMID 36686758.",
+      "Bhatia S, et al. Utility of cardiac MRI in pediatric Rosai-Dorfman disease. Pediatr Radiol. 2025;55(12):2676-80. PMID 40856713."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/25310213/",
+      "https://pubmed.ncbi.nlm.nih.gov/26966089/",
+      "https://pubmed.ncbi.nlm.nih.gov/31472931/",
+      "https://pubmed.ncbi.nlm.nih.gov/36358690/",
+      "https://pubmed.ncbi.nlm.nih.gov/38178342/",
+      "https://pubmed.ncbi.nlm.nih.gov/37152702/",
+      "https://pubmed.ncbi.nlm.nih.gov/38501248/",
+      "https://pubmed.ncbi.nlm.nih.gov/41879609/",
+      "https://pubmed.ncbi.nlm.nih.gov/41005864/",
+      "https://pubmed.ncbi.nlm.nih.gov/39893536/",
+      "https://pubmed.ncbi.nlm.nih.gov/42324617/",
+      "https://pubmed.ncbi.nlm.nih.gov/40214969/",
+      "https://pubmed.ncbi.nlm.nih.gov/38989342/",
+      "https://pubmed.ncbi.nlm.nih.gov/36686758/",
+      "https://pubmed.ncbi.nlm.nih.gov/40856713/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-rosai-dorfman-e-acometimento-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "sindrome-de-charge",
+    "name": "Síndrome de CHARGE",
+    "aliases": [
+      "associação CHARGE",
+      "CHARGE syndrome",
+      "CHD7 disorder",
+      "síndrome CHD7"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "sindrome_genetica_multissistemica",
+    "prevalence_rank": 144,
+    "completeness": "completo",
+    "summary": "Síndrome genética multissistêmica, na maioria dos casos causada por variante patogênica de novo no gene CHD7 (8q12.2), descrita pela sigla mnemônica CHARGE: Coloboma ocular, Heart defects (cardiopatia congênita), Atresia/estenose de coanas, Retardo de crescimento e desenvolvimento, anomalias Genitais (hipogonadismo hipogonadotrófico) e anomalias de orelha/audição (Ear). Cardiopatia congênita está presente em cerca de 74% dos pacientes com mutação de CHD7 confirmada, com predominância relativa de defeitos conotruncais (tetralogia de Fallot é o exemplo mais citado) e de defeitos do septo atrioventricular, além de defeitos de arco aórtico, CIV, CIA e persistência do canal arterial. O fenótipo é altamente variável e não é previsível pelo genótipo — pacientes com mutação confirmada podem ter apresentação leve ou incompleta. O diagnóstico clínico histórico baseava-se em critérios maiores/menores (Blake 1998; Verloes 2005), mas a prática atual estabelece o diagnóstico pela combinação de achados clínicos sugestivos com confirmação molecular do CHD7. No recém-nascido com suspeita, ecocardiograma sistemático é recomendado independentemente do resultado da oximetria de pulso, cuja sensibilidade isolada para cardiopatia congênita crítica é de aproximadamente 70-77% e reconhecidamente menor para defeitos não cianóticos ou de shunt esquerda-direita predominante, categoria relevante dentro do espectro cardíaco de CHARGE.",
+    "presentation": [
+      "Coloboma ocular (íris, retina, coroide ou disco óptico), presente em cerca de 80% dos pacientes",
+      "Cardiopatia congênita, presente em cerca de 74% dos pacientes, com predomínio de defeitos conotruncais e de canal atrioventricular",
+      "Atresia ou estenose de coanas, uni ou bilateral, presente em cerca de 45% dos pacientes — causa de desconforto respiratório neonatal com piora à alimentação e melhora ao choro",
+      "Disfunção de nervos cranianos, sobretudo do VIII par (>90%), associada a hipoacusia sensorioneural e disfunção vestibular",
+      "Malformação característica de orelha externa e/ou média, presente em cerca de 90% dos pacientes",
+      "Retardo de crescimento pós-natal, presente em cerca de 70% dos pacientes",
+      "Hipogonadismo hipogonadotrófico ou hipoplasia genital, presente em 50-70% dos pacientes",
+      "Atraso de desenvolvimento neuropsicomotor e/ou deficiência intelectual, de grau variável, em mais de 90% (atraso) e cerca de 60% (deficiência intelectual)",
+      "Dificuldade de sucção/deglutição por disfunção de nervo craniano baixo, com risco de aspiração no período neonatal",
+      "Fácies característica, fenda orofacial e fístula traqueoesofágica em subgrupo de pacientes"
+    ],
+    "differentials": [
+      "Síndrome de deleção 22q11.2 (velocardiofacial/DiGeorge) — sobreposição em defeitos conotruncais, mas com hipocalcemia, imunodeficiência por hipoplasia tímica e insuficiência velofaríngea, sem coloboma nem atresia de coana típicas",
+      "Associação VACTERL — sobreposição em anomalias vertebrais, fístula traqueoesofágica e anomalias renais/de membro, sem o padrão característico de coloboma e disfunção de nervo craniano de CHARGE",
+      "Síndrome de Kabuki — cardiopatia congênita, anomalias de orelha e atraso de desenvolvimento compartilhados, mas com fácies distinta e etiologia molecular própria (KMT2D, KDM6A)",
+      "Cardiopatia conotruncal isolada não sindrômica (por exemplo, tetralogia de Fallot sem outros achados associados) — diagnóstico mais provável na ausência de outros critérios do espectro CHARGE",
+      "Síndrome do olho de gato (cat-eye syndrome, tetrassomia parcial do 22) — coloboma e cardiopatia congênita também podem coexistir, com cariótipo/microarray como método de diferenciação"
+    ],
+    "tests": [
+      "Sequenciamento de CHD7 e análise de deleção/duplicação gênica — teste confirmatório de primeira linha diante de suspeita clínica",
+      "Cariótipo ou microarray cromossômico / MLPA para 22q11.2, para excluir diagnósticos diferenciais sindrômicos sobrepostos",
+      "Ecocardiograma transtorácico sistemático, independentemente do resultado da oximetria de pulso neonatal",
+      "Eletrocardiograma de 12 derivações como parte da avaliação cardíaca inicial",
+      "Avaliação otorrinolaringológica de via aérea superior (passagem de sonda nasal, endoscopia nasal ou tomografia computadorizada) para atresia/estenose de coanas",
+      "Tomografia computadorizada ou ressonância magnética de osso temporal, para avaliação de canais semicirculares e estruturas do ouvido interno",
+      "Avaliação oftalmológica com fundoscopia para coloboma",
+      "Avaliação audiológica formal (potencial evocado auditivo de tronco encefálico) no período neonatal",
+      "Avaliação formal da deglutição antes de dieta oral plena, diante de disfunção documentada de nervo craniano baixo",
+      "Avaliação endocrinológica (eixo gonadotrófico, curva de crescimento) ao longo do seguimento, não restrita ao período neonatal"
+    ],
+    "red_flags": [
+      "Desconforto respiratório neonatal com piora à alimentação e melhora ao choro — sugere atresia bilateral de coanas concomitante, que pode ser mascarada por cardiopatia já conhecida",
+      "Hipoxemia não totalmente explicada pelo defeito cardíaco identificado — considerar obstrução de via aérea superior associada antes de atribuir tudo à cardiopatia",
+      "Disfunção de deglutição não avaliada antes do início de dieta oral plena, com risco de aspiração",
+      "Mutação truncante de CHD7 confirmada — associa-se a maior frequência de cardiopatia congênita segundo dado de coorte, reforçando (não dispensando) a indicação de ecocardiograma",
+      "Oximetria de pulso neonatal normal isoladamente usada para descartar cardiopatia em recém-nascido com suspeita clínica de CHARGE — sensibilidade insuficiente para essa finalidade, sobretudo para defeitos não cianóticos"
+    ],
+    "ambulatory_flow": [
+      "Diante de achado isolado sugestivo (por exemplo, coloboma ou malformação de orelha), buscar ativamente os demais achados do espectro antes de descartar a hipótese diagnóstica",
+      "Solicitar sequenciamento e análise de deleção/duplicação de CHD7 para confirmação molecular",
+      "Encaminhar para avaliação cardiológica com ecocardiograma sistemático, independentemente de resultado normal de oximetria de pulso",
+      "Coordenar avaliação multidisciplinar em paralelo (otorrinolaringologia, oftalmologia, audiologia, endocrinologia, fonoaudiologia/nutrição), sem aguardar a confirmação de um eixo para iniciar os demais",
+      "Encaminhar para aconselhamento genético familiar, discutindo risco de recorrência predominantemente baixo (mutação de novo na maioria dos casos) mas não nulo (mosaicismo germinativo)",
+      "Estruturar seguimento cardiológico de longo prazo proporcional à complexidade do defeito encontrado, incluindo reavaliação após eventual correção cirúrgica"
+    ],
+    "emergency_flow": [
+      "Recém-nascido com desconforto respiratório e cianose paradoxal (piora à alimentação, melhora ao choro): avaliar obstrução de via aérea superior (atresia de coana) em paralelo à avaliação cardíaca, não em sequência",
+      "Recém-nascido com cianose ou colapso hemodinâmico e cardiopatia canal-dependente conhecida ou suspeita: seguir protocolo de reconhecimento e manejo de colapso neonatal por cardiopatia congênita crítica canal-dependente, incluindo consideração de alprostadil conforme o quadro",
+      "Não excluir cardiopatia congênita significativa com base apenas em oximetria de pulso normal isolada — solicitar ecocardiograma diante de suspeita clínica de CHARGE, mesmo com triagem neonatal normal",
+      "Avaliar risco de aspiração antes de qualquer tentativa de alimentação oral em recém-nascido com disfunção de nervo craniano baixo documentada ou suspeita"
+    ],
+    "tags": [
+      "síndrome de CHARGE",
+      "CHD7",
+      "cardiopatia congênita sindrômica",
+      "coloboma",
+      "atresia de coanas",
+      "tetralogia de Fallot",
+      "defeito de septo atrioventricular",
+      "cardiopatia conotruncal",
+      "rastreio neonatal",
+      "oximetria de pulso",
+      "síndrome genética multissistêmica",
+      "hipogonadismo hipogonadotrófico"
+    ],
+    "source_refs": [
+      "Blake KD, Davenport SL, Hall BD, Hefner MA, Pagon RA, Williams MS, Lin AE, Graham JM Jr. CHARGE association: an update and review for the primary pediatrician. Clin Pediatr (Phila). 1998;37(3):159-173. PMID: 9545604.",
+      "Vissers LE, van Ravenswaaij CM, Admiraal R, et al. Mutations in a new member of the chromodomain gene family cause CHARGE syndrome. Nat Genet. 2004;36(9):955-957. DOI: 10.1038/ng1407. PMID: 15300250.",
+      "Issekutz KA, Graham JM Jr, Prasad C, Smith IM, Blake KD. An epidemiological analysis of CHARGE syndrome: preliminary results from a Canadian study. Am J Med Genet A. 2005;133A(3):309-317. PMID: 15637722.",
+      "Verloes A. Updated diagnostic criteria for CHARGE syndrome: a proposal. Am J Med Genet A. 2005;133A(3):306-308. DOI: 10.1002/ajmg.a.30559. PMID: 15666308.",
+      "Jongmans MC, Admiraal RJ, van der Donk KP, et al. CHARGE syndrome: the phenotypic spectrum of mutations in the CHD7 gene. J Med Genet. 2006;43(4):306-314. PMID: 16155193.",
+      "Blake KD, Prasad C. CHARGE syndrome. Orphanet J Rare Dis. 2006;1:34. DOI: 10.1186/1750-1172-1-34. PMID: 16959034.",
+      "Sanlaville D, Verloes A. CHARGE syndrome: an update. Eur J Hum Genet. 2007;15(4):389-399. DOI: 10.1038/sj.ejhg.5201778. PMID: 17299439.",
+      "Bergman JE, Janssen N, Hoefsloot LH, Jongmans MC, Hofstra RM, van Ravenswaaij-Arts CM. CHD7 mutations and CHARGE syndrome: the clinical implications of an expanding phenotype. J Med Genet. 2011;48(5):334-342. PMID: 21378379.",
+      "Corsten-Janssen N, Kerstjens-Frederikse WS, du Marchie Sarvaas GJ, et al. The cardiac phenotype in patients with a CHD7 mutation. Circ Cardiovasc Genet. 2013;6(3):248-254. DOI: 10.1161/CIRCGENETICS.113.000054. PMID: 23677905.",
+      "Mahle WT, Newburger JW, Matherne GP, et al. Role of pulse oximetry in examining newborns for congenital heart disease: a scientific statement from the American Heart Association and American Academy of Pediatrics. Circulation. 2009;120(5):447-458. DOI: 10.1161/CIRCULATIONAHA.109.192576. PMID: 19581492.",
+      "Thangaratinam S, Brown K, Zamora J, Khan KS, Ewer AK. Pulse oximetry screening for critical congenital heart defects in asymptomatic newborn babies: a systematic review and meta-analysis. Lancet. 2012;379(9835):2459-2464. DOI: 10.1016/S0140-6736(12)60107-X. PMID: 22554860.",
+      "van Ravenswaaij-Arts CM, Hefner M, Blake K, Martin DM. CHD7 Disorder. In: Adam MP, Bick S, Mirzaa GM, et al., eds. GeneReviews [Internet]. Seattle: University of Washington; 2006 Oct 2 [updated 2025 Aug 14]. NCBI Bookshelf ID: NBK1117."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/9545604/",
+      "https://pubmed.ncbi.nlm.nih.gov/15300250/",
+      "https://pubmed.ncbi.nlm.nih.gov/15637722/",
+      "https://pubmed.ncbi.nlm.nih.gov/15666308/",
+      "https://pubmed.ncbi.nlm.nih.gov/16155193/",
+      "https://pubmed.ncbi.nlm.nih.gov/16959034/",
+      "https://pubmed.ncbi.nlm.nih.gov/17299439/",
+      "https://pubmed.ncbi.nlm.nih.gov/21378379/",
+      "https://pubmed.ncbi.nlm.nih.gov/23677905/",
+      "https://pubmed.ncbi.nlm.nih.gov/19581492/",
+      "https://pubmed.ncbi.nlm.nih.gov/22554860/",
+      "https://www.ncbi.nlm.nih.gov/books/NBK1117/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "sindrome-de-charge-cardiopatia-congenita-gene-chd7-e-rastreio-cardiaco-no-recem-nascido"
+    ],
+    "patient_material_slug": null
   }
 ]
