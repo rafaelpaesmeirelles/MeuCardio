@@ -80,6 +80,14 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("POST", "/api/billing/webhook"): (
         "Recepção servidor-a-servidor protegida pela assinatura criptográfica do Stripe."
     ),
+    ("GET", "/api/whatsapp-assistant/meta/webhook"): (
+        "Verificação servidor-a-servidor da Meta; só devolve o desafio quando o token de "
+        "verificação configurado coincide exatamente com o recebido."
+    ),
+    ("POST", "/api/whatsapp-assistant/meta/webhook"): (
+        "Recepção oficial da WhatsApp Business Cloud API; exige assinatura HMAC-SHA256 da Meta, "
+        "idempotência persistida, proteção contra replay e rate limiting antes do processamento."
+    ),
 }
 
 EXPECTED_PUBLIC_ROUTES = set(PUBLIC_ROUTE_RATIONALES)

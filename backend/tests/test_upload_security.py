@@ -328,6 +328,10 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # longitudinal (20 MB) também são cortados/validados antes do multipart.
         "scientific_documents_ai.py",
         "patient_multimodal_ai.py",
+        # Heart Team: até cinco anexos clínicos, com 20 MB por arquivo e
+        # 40 MB agregados. A barreira ASGI valida o conteúdo antes do parser;
+        # o endpoint ainda remove metadados localmente antes da persistência.
+        "heart_team.py",
         # Prescrição livre especial: a devolução do PDF assinado também usa
         # o fluxo externo existente, com leitura limitada a 15 MB + 1 byte,
         # validação real do PDF por validate_file() e conferência criptográfica
@@ -354,6 +358,11 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert scientific_policy is not None
     assert scientific_policy.max_files == 1
     assert scientific_policy.max_file_bytes == 25 * 1024 * 1024
+    heart_team_policy = policy_for("POST", "/api/heart-team/cases/1/attachments")
+    assert heart_team_policy is not None
+    assert heart_team_policy.max_files == 5
+    assert heart_team_policy.max_file_bytes == 20 * 1024 * 1024
+    assert heart_team_policy.max_total_file_bytes == 40 * 1024 * 1024
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None

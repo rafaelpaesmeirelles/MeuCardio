@@ -207,7 +207,7 @@ def test_microsoft_cancel_defaults_reason_when_absent():
 
     conector = _microsoft(handler)
     conector.cancel("evt-1", reason=None, version=None)
-    assert capturado["body"]["comment"] == "Cancelado no Corvia"
+    assert capturado["body"]["comment"] == "Cancelado no CorVIA"
 
 
 # --- erros --------------------------------------------------------------
