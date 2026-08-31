@@ -178,7 +178,7 @@ def _filter_groups_by_subject(
             ))
             overlap = origin_terms & candidate_terms
             if overlap:
-                matched.append((len(overlap), position, item))
+                matched.append((len(overlap), position, {**item, "motivo_relacao": f"Termo específico compartilhado: {', '.join(sorted(overlap))}"}))
         matched.sort(key=lambda row: (-row[0], row[1]))
         best_score = matched[0][0] if matched else 0
         group["itens"] = [
