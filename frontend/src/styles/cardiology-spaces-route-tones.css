@@ -12,3 +12,13 @@ body.corvia-space--hospital .clinical-os .ccc-nav--reference .ccc-nav__brand-cop
 body.corvia-space--ensino .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · ENSINO";color:#a06df2}
 body.corvia-space--pesquisa .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · PESQUISA";color:#f04f8b}
 body.corvia-space--gestao .clinical-os .ccc-nav--reference .ccc-nav__brand-copy small::after{content:" · GESTÃO";color:#37c7c0}
+
+/* Emergência é full-height, mas não pode começar colada ao rail contextual.
+   Mantemos o rail aprovado em 166 px e reservamos 34 px de respiro clínico,
+   satisfazendo o contrato de segurança sem ressuscitar a sidebar do Clinical OS. */
+@media (min-width:901px){
+  body.corvia-route--emergencia .clinical-os .emerg{
+    margin-left:34px!important;
+    width:calc(100% - 34px)!important;
+  }
+}
