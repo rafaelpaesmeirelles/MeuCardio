@@ -254,6 +254,7 @@ const CATALOG: Array<{ title: string; actions: Action[] }> = [
     ["/exames-ia", "IA para Exames", "ecg"], ["/prontuario", "Prontuário", "pacientes"],
     ["/round", "Round hospitalar", "round"], ["/receituario", "Prescrição", "prescricao"],
     ["/documentos", "Documentos & Solicitações", "documento"], ["/agenda", "Agenda", "agenda"],
+    ["/deslocamento", "Mapa de deslocamento", "rota"],
     ["/corvia-mail", "CorVIA Mail", "mail"], ["/caixa-de-email", "Caixa de e-mail unificada", "mail"],
     ["/assistente", "Assistente Clínica", "assistente"], ["/validar", "Validar documento", "check"],
     ["/telediagnostico", "Telediagnóstico & Consultoria", "evidencia"], ["/material-paciente", "Material para paciente", "documento"],
