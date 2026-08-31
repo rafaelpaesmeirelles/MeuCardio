@@ -1582,3 +1582,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **386** | **4.514** |
+
+## Lote 76 — concluído (commit 0137176a)
+
+- **5 checklists** (mudança de estratégia: casos clínicos e checklists eram as cotas mais atrasadas após o rebalanceamento de trilhas — checklists em 30/600, 5,0%). Checklists são extraídos fielmente de um `documento_origem` já publicado, sem pesquisa nova — cada item rastreável a uma seção real do documento-fonte (`origem_secao`), sem limiares/recomendações inventados:
+  - **Insuficiência cardíaca**: titulação sequenciada da terapia quádrupla na ICFEr conforme barreira de segurança (PA, FC/condução, TFGe/K⁺) da primeira consulta (14 itens).
+  - **Cardiopatias congênitas**: decisão de fechamento de CIV no adulto (ESC 2020) — RVP vs. sobrecarga de volume vs. risco de prolapso/regurgitação aórtica associado (13 itens).
+  - **Doença coronariana**: doses de antiagregantes/anticoagulantes na SCA à beira do leito (ESC 2023) — ajuste renal, transição do cangrelor, regra das 8h da enoxaparina (11 itens).
+  - **Terapia intensiva**: marca-passo transvenoso temporário — indicação por repercussão hemodinâmica (não frequência isolada), causas reversíveis, perda de captura, estratégia de saída diária (11 itens).
+  - **Aorta e DAP**: doença ateroembólica por cristais de colesterol — diferenciação de vasculite sistêmica, suporte renal, evitar gatilhos (13 itens).
+- **Verificação de integridade**: todos os 5 `documento_origem` confirmados como documentos reais e sem checklist prévio; nenhum slug colide.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.649 itens.
+
+### Status consolidado (após Lote 76)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 35 | 565 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **391** | **4.509** |
