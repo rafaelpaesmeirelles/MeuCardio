@@ -1174,3 +1174,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 101 (12 descartados por colisão) | 99 |
 | **Total** | **4.900** | **295** | **4.605** |
+
+## Lote 57 — concluído (commit b2e1916d)
+
+- **3 documentos** (lacuna real de transplante/toxicologia/cardiomiopatia tóxica): vasculopatia do enxerto cardíaco (CAV — preenche lacuna real, já que documentos existentes cobrem transplante em geral mas nenhum a fisiopatologia/rastreio/manejo da CAV como entidade própria; classificação ISHLT CAV0-CAV3; ênfase na isquemia silenciosa por denervação do enxerto — `content/Insuficiência_cardíaca`), intoxicação por monóxido de carbono e lesão cardiovascular (dois mecanismos distintos — hipóxia por carboxi-hemoglobina versus toxicidade mitocondrial direta —, valor prognóstico independente da troponina elevada em 7,6 anos de seguimento — `content/Terapia_intensiva`), cardiotoxicidade por cobalto (dois cenários com força de evidência muito diferente — surtos históricos com necropsia confirmada versus cobaltismo artroprotético contemporâneo por relatos de caso —, contraponto honesto entre dois estudos populacionais discordantes — `content/Cardiomiopatias`).
+- **doencas**: +3, pareadas 1:1 — `vasculopatia-do-enxerto-cardiaco`, `lesao-miocardica-por-monoxido-de-carbono`, `cardiotoxicidade-por-cobalto`. `prevalence_rank` 106-108 (area=geral).
+- **4 tópicos despachados neste lote, corretamente descartados por colisão**: cardiomiopatia por PRKAG2 (fragmento já revisado `fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2` cobre o tema combinado com Danon, ainda não mesclado a `doencas/metadados.json`), cardiomiopatia por lítio (documento completo e revisado já existe), doença relacionada a IgG4 cardiovascular (documento completo e revisado já existe), e doença de Danon (caso especial: o agente produziu conteúdo completo e cientificamente sólido, mas foi descartado por decisão pós-hoc desta sessão — o mesmo fragmento já revisado que cobre PRKAG2 também cobre Danon combinado; optou-se por não integrar para evitar duplicidade de entrada de doença contra conteúdo já em estágio de revisão avançado, aplicando a lição da checagem de colisão registrada em memória em 30/08). Nenhuma perda de trabalho relevante — os 3 primeiros foram identificados pelo próprio agente antes de escrever conteúdo extenso.
+- **Correções na integração**: entidades HTML residuais (`&lt;` `&gt;` `&amp;`) nos 3 documentos, corrigidas antes do commit.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.506 itens.
+- **Nota operacional**: existe um fragmento de doença (`fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2.json`, em `doencas/fragmentos/`, `review_status: revisado`, `completeness: intermediario`) ainda não mesclado a `doencas/metadados.json` — fora do escopo desta sessão mesclar, mas registrado aqui para visibilidade caso o painel editorial queira decidir sobre consolidação versus documentos narrativos dedicados separados para Danon e PRKAG2 no futuro.
+
+### Status consolidado (após Lote 57)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 110 | 2.290 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 104 (16 descartados por colisão) | 96 |
+| **Total** | **4.900** | **298** | **4.602** |
