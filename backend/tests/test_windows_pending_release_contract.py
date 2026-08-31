@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 
@@ -32,6 +33,16 @@ def test_automatic_release_requires_web_android_but_not_windows_installer():
     assert "Native installers" not in deploy
     assert "native-installers.yml" not in dispatcher
     assert '"Native installers"' not in certification
+
+
+def test_android_release_certificate_has_a_public_pinned_fallback():
+    deploy = _read(".github/workflows/deploy-production.yml")
+    match = re.search(
+        r"vars\.CORVIA_ANDROID_CERT_SHA256 \|\| '([0-9a-f]{64})'",
+        deploy,
+    )
+    assert match is not None
+    assert "no private signing material is stored in Git" in deploy
 
 
 def test_windows_manual_release_stays_fail_closed_and_strictly_signed():

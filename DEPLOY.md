@@ -9,7 +9,9 @@ Este guia descreve o deploy de produção em `corvia.med.br`, usando o diretóri
 O workflow `Deploy production` só libera o SHA que ainda é a ponta da `main`
 e que concluiu com sucesso `CI`, `RC2 Acceptance`, `Visual QA`,
 `Corpus database reconciliation`, `Deep functional inventory` e
-`Native installers`. A conexão usa uma chave SSH forçada: ela
+`Pre-home visual QA`. Enquanto o Windows estiver registrado como pendente,
+`Native installers` permanece manual e não bloqueia a publicação certificada
+de web e Android. A conexão usa uma chave SSH forçada: ela
 não abre shell nem encaminha portas. A release integrada aceita staging nativo
 e deploy apenas quando o SHA é exatamente o `origin/main` do servidor.
 

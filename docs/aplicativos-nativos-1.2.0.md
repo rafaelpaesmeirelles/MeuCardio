@@ -12,9 +12,11 @@ segredo de assinatura pertence ao repositório.
 - URL: `/downloads/corvia-cardiology-spaces-android-1.2.0.apk`
 
 O servidor mantém `frontend/android/keystore.properties` e o keystore fora do
-Git. A variável protegida `CORVIA_ANDROID_CERT_SHA256` contém o fingerprint
-público da chave de release existente. `apksigner` e `aapt` bloqueiam APK sem
-assinatura, chave trocada, appId ou versão incorretos.
+Git. O workflow fixa somente o fingerprint SHA-256 público do certificado de
+release existente. A variável `CORVIA_ANDROID_CERT_SHA256` pode substituir
+esse valor durante uma rotação controlada; nenhuma chave ou senha é versionada.
+`apksigner` e `aapt` bloqueiam APK sem assinatura, chave trocada, appId ou
+versão incorretos.
 
 ## Windows — pendência registrada
 
@@ -30,10 +32,11 @@ O workflow exige Authenticode válido, certificado fixado e gera o digest, o
 - secret `CORVIA_WINDOWS_CODE_SIGNING_PASSWORD`;
 - variable `CORVIA_WINDOWS_SIGNING_CERT_SHA256`.
 
-O Android exige a variable protegida `CORVIA_ANDROID_CERT_SHA256`. Enquanto o
-Windows estiver pendente, as verificações públicas agendadas exigem somente
-`CORVIA_ANDROID_EXPECTED_SHA256`. A validação Windows continua disponível
-quando selecionada explicitamente e permanece fail-closed.
+O Android usa o fingerprint público fixado no workflow; a variável
+`CORVIA_ANDROID_CERT_SHA256` é um override opcional para rotação controlada.
+Enquanto o Windows estiver pendente, as verificações públicas agendadas exigem
+somente `CORVIA_ANDROID_EXPECTED_SHA256`. A validação Windows continua
+disponível quando selecionada explicitamente e permanece fail-closed.
 
 ## Release web e Android enquanto Windows está pendente
 
@@ -79,8 +82,8 @@ Secrets: `PRODUCTION_SSH_HOST`, `PRODUCTION_SSH_PORT`,
 `PRODUCTION_SSH_USER`, `PRODUCTION_SSH_PRIVATE_KEY` e
 `PRODUCTION_SSH_KNOWN_HOSTS`.
 
-Variable obrigatória no deploy atual: `CORVIA_ANDROID_CERT_SHA256`. Quando o
-Windows for reativado, também serão exigidos
+Override opcional para rotação Android: `CORVIA_ANDROID_CERT_SHA256`. Quando
+o Windows for reativado, também serão exigidos
 `CORVIA_WINDOWS_SIGNING_CERT_SHA256` e os secrets de assinatura:
 `CORVIA_WINDOWS_CODE_SIGNING_CERT` e
 `CORVIA_WINDOWS_CODE_SIGNING_PASSWORD`.
