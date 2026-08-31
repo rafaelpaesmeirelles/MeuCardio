@@ -1490,3 +1490,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **366** | **4.534** |
+
+## Lote 72 — concluído (commit 78fd153d)
+
+- **5 trilhas** (mudança de estratégia: rebalanceamento de cota — trilhas estava em 3/297 (1%) contra doenças especializadas em 163/200 (81,5%), desequilíbrio identificado e corrigido). Diferente de todos os lotes anteriores, trilhas não exigem pesquisa nova em PubMed: curam e sequenciam conteúdo já publicado (documento/estudo/medicamento/checklist/evidencia/caso_clinico) com justificativa pedagógica por etapa. Cada uma foi construída após leitura integral das trilhas já existentes no mesmo tema, para garantir ângulo genuinamente novo:
+  - **Febre reumática**: diagnóstico diferencial da criança com febre/poliartrite antes de fechar Jones — PSRA e Kawasaki como mimetizadores mais perigosos (12 etapas).
+  - **Pericárdio**: doença pericárdica como manifestação de doença sistêmica extracardíaca — urêmica/diálise, purulenta, abscesso hepático amebiano roto, vasculite ANCA/GPA (14 etapas).
+  - **Cardiologia do Esporte e do Exercício**: cafeína/energéticos/suplementos fitoterápicos como risco cardiovascular "legal" no atleta, distinto do doping ilícito (10 etapas).
+  - **Gravidez**: arritmias materno-fetais do ritmo lento à canalopatia — bradicardia/BAV, FA nova vs. crônica, QT longo e CPVT concentrados no pós-parto, arritmia fetal transplacentária (14 etapas).
+  - **Hipertensão pulmonar**: pipeline experimental além das 4 classes aprovadas — do proof-of-concept (PULSAR) à extensão de segurança (SOTERIA), incluindo um ensaio negativo (ELEVATE-2) e um caso de dado de imprensa não revisado por pares (ralinepague) (13 etapas).
+- **Verificação de integridade**: todas as 62 referências (item_slug) verificadas independentemente por mim contra o manifesto correto (content/, estudos/, medicamentos/, checklists/, evidencias/, casos-clinicos/) antes da integração — nenhuma referência quebrada.
+- **Gates**: `broken_references: []`; `StudyTrack.etapas` 3205/3205 resolvidas; `content_inventory.py --strict` exit 0. Total canônico: 10.629 itens.
+
+### Status consolidado (após Lote 72)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 8 | 292 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **371** | **4.529** |
