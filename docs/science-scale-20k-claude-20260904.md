@@ -1019,3 +1019,25 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 61 (4 descartados por colisão) | 139 |
 | **Total** | **4.900** | **233** | **4.667** |
+
+## Lote 50 — concluído (commit fc943fbd)
+
+- **7 documentos** (toxicologia/imunologia/parasitologia raras): envenenamento elapídico/coral verdadeira (*Micrurus*, bloqueio neuromuscular pós-sináptico tipo curare, contraste explícito com o mecanismo pré-sináptico do acidente crotálico e o proteolítico do botrópico — `content/Terapia_intensiva`), foneutrismo/aranha-armadeira (*Phoneutria nigriventer*, retardo de inativação de canal de sódio, tempestade catecolaminérgica, priapismo por vasorrelaxamento mediado por óxido nítrico — `content/Terapia_intensiva`), HLH secundária (miocardite, choque refratário e tamponamento cardíaco na tempestade de citocinas, critérios HLH-2004 e HScore — `content/Terapia_intensiva`), actinomicose torácica com acometimento pericárdico (infecção bacteriana crônica que mimetiza câncer de pulmão — `content/Geral`), toxocaríase/larva migrans visceral com miocardite eosinofílica (zoonose de soroprevalência ~19% mundial com complicação cardíaca rara — `content/Geral`), febre purpúrica brasileira (choque fulminante pediátrico por clone do biogrupo *aegyptius* de *H. influenzae*, precedido por conjuntivite purulenta banal — `content/Cardiologia_pediátrica`), abscesso hepático amebiano com ruptura pericárdica (extensão por contiguidade do lobo hepático esquerdo, risco de tamponamento — `content/Pericárdio`).
+- **doencas**: +7, pareadas 1:1 — `envenenamento-elapidico-picada-de-coral-verdadeira`, `actinomicose-toracica-com-acometimento-pericardico`, `febre-purpurica-brasileira`, `linfo-histiocitose-hemofagocitica-secundaria`, `toxocariase-cardiaca-larva-migrans-visceral-com-miocardite-eosinofilica`, `abscesso-hepatico-amebiano-ruptura-pericardica-tamponamento`, `foneutrismo-envenenamento-por-aranha-armadeira`.
+- **8º tópico despachado neste lote, corretamente descartado por colisão real**: endocardite de Löffler/fibrose endomiocárdica e síndrome hipereosinofílica já está integralmente coberta por documento revisado em `main` (`content/Cardiomiopatias/fibrose-endomiocardica-e-sindrome-hipereosinofilica-cardiomiopatia-restritiva-nao-amiloide.md`). O agente identificou a colisão antes de escrever qualquer conteúdo — nenhuma perda de trabalho. O documento de toxocaríase, produzido neste mesmo lote, linka a esse documento existente em vez de repetir seu mecanismo geral de dano por proteína catiônica eosinofílica, focando no que é específico da etiologia parasitária.
+- **Padrão de truncamento recorrente, mitigado**: o agente de foneutrismo retornou, na primeira notificação, apenas notas de verificação sem os blocos de entrega — mesmo padrão documentado nos Lotes 44-48. Reenvio solicitado via `SendMessage`, entregue completo na segunda resposta, sem perda de conteúdo.
+- **Correções na integração**: nenhuma entidade HTML residual, nenhum H1 ausente, nenhuma colisão de slug doença↔documento neste lote — os 7 pares vieram limpos já na primeira/segunda entrega. `prevalence_rank` recalculado ao vivo (área geral: 66-72, sem colisão intra ou inter-lote).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.434 itens.
+
+### Status consolidado (após Lote 50)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 74 | 2.326 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 68 (5 descartados por colisão) | 132 |
+| **Total** | **4.900** | **247** | **4.653** |
