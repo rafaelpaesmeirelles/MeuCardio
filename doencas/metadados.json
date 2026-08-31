@@ -51659,5 +51659,552 @@
       "poliangiite-microscopica-mpa-e-envolvimento-cardiovascular"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "complexo-de-carney",
+    "name": "Complexo de Carney",
+    "aliases": [
+      "Carney complex",
+      "mixoma cardíaco familiar",
+      "síndrome NAME",
+      "síndrome LAMB",
+      "complexo de Carney-Stratakis"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "neoplasia_multiendocrina_hereditaria",
+    "prevalence_rank": 131,
+    "completeness": "completo",
+    "summary": "Síndrome neoplásica multiendócrina rara, de herança autossômica dominante, causada em 60-70% dos casos por mutação de perda de função no gene PRKAR1A (17q24), com ativação constitutiva da via cAMP-PKA. Caracteriza-se por mixomas cardíacos múltiplos/recorrentes em paciente jovem, mixomas cutâneos e mamários, lentiginose cutânea multifocal, doença adrenocortical nodular pigmentada primária (Cushing ACTH-independente), tumores testiculares/ovarianos, adenoma hipofisário secretor de GH e schwannoma melanótico psamomatoso. Exige seguimento ecocardiográfico vitalício pela alta taxa de recorrência do mixoma.",
+    "presentation": [
+      "Mixoma cardíaco em paciente jovem, múltiplo, recorrente após ressecção, bi-atrial ou em localização atípica",
+      "Lentiginose cutânea multifocal em face, lábios, conjuntiva e mucosa genital, frequentemente desde a infância",
+      "Nevos azuis múltiplos e mixomas cutâneos, mucosos ou mamários",
+      "Sinais de síndrome de Cushing ACTH-independente por doença adrenocortical nodular pigmentada primária",
+      "Massa testicular (tumor de células de Sertoli de grandes células calcificantes) ou puberdade precoce periférica",
+      "Sinais de acromegalia por adenoma hipofisário secretor de GH",
+      "Sintomas constitucionais (febre, perda de peso, artralgias) associados a massa intracardíaca",
+      "AVC embólico ou outro evento embólico sistêmico em paciente jovem sem fonte cardioembólica evidente",
+      "História familiar de manifestações compatíveis com padrão autossômico dominante"
+    ],
+    "differentials": [
+      "Mixoma cardíaco esporádico isolado (paciente mais velho, lesão única em fossa oval, sem lentiginose ou endocrinopatia)",
+      "Síndrome LEOPARD/Noonan com múltiplos lentigos (sem mixoma cardíaco nem PPNAD)",
+      "Neoplasia endócrina múltipla tipo 1 (MEN1) ou tipo 4",
+      "Síndrome de Cushing por adenoma adrenal unilateral esporádico",
+      "Acromegalia esporádica sem outros achados sindrômicos",
+      "Outras causas de massa intracardíaca (trombo, fibroelastoma papilar, sarcoma)",
+      "Síndrome de McCune-Albright (mutação em GNAS, outra via de sinalização cAMP)"
+    ],
+    "tests": [
+      "Ecocardiograma transtorácico como exame inicial de suspeita de mixoma cardíaco",
+      "Ressonância ou tomografia cardíaca para caracterização de massa de difícil definição ecocardiográfica",
+      "Exame dermatológico dirigido para lentiginose e nevos azuis",
+      "Cortisol e ACTH, incluindo teste de supressão com dexametasona (resposta paradoxal sugere PPNAD)",
+      "IGF-1 e avaliação do eixo GH quando houver suspeita de acromegalia",
+      "Ultrassonografia testicular nos homens e pélvica/ovariana nas mulheres",
+      "Ultrassonografia de tireoide, especialmente em pacientes com menos de 18 anos",
+      "Teste genético para PRKAR1A, com aconselhamento genético e rastreamento familiar em cascata"
+    ],
+    "red_flags": [
+      "Mixoma cardíaco múltiplo, recorrente, bi-atrial ou em paciente jovem",
+      "Obstrução intracavitária com repercussão hemodinâmica aguda",
+      "Evento embólico sistêmico, incluindo AVC, a partir de massa intracardíaca",
+      "Síndrome de Cushing ACTH-independente com hiperplasia adrenal bilateral",
+      "Massa testicular bilateral ou multifocal",
+      "Schwannoma melanótico psamomatoso, achado quase patognomônico da síndrome"
+    ],
+    "ambulatory_flow": [
+      "Investigar sindromicamente todo mixoma cardíaco em paciente jovem, múltiplo, recorrente ou em localização atípica",
+      "Realizar exame dermatológico dirigido e rastreio endócrino sistemático (cortisol/ACTH, GH/IGF-1, ultrassom testicular/pélvico) em caso confirmado ou fortemente suspeito",
+      "Aplicar os critérios diagnósticos formais (2 ou mais achados maiores, ou 1 achado maior com história familiar ou mutação PRKAR1A confirmada)",
+      "Oferecer teste genético para PRKAR1A com aconselhamento genético e rastreamento familiar em cascata",
+      "Manter seguimento ecocardiográfico vitalício: anual desde a infância, semestral após excisão de mixoma cardíaco",
+      "Encaminhar cada componente endócrino ao especialista correspondente conforme manifestação"
+    ],
+    "emergency_flow": [
+      "Avaliar repercussão hemodinâmica de massa intracavitária com obstrução ao fluxo",
+      "Investigar mixoma cardíaco como fonte embólica em AVC ou embolia sistêmica de paciente jovem sem outra causa evidente",
+      "Programar ressecção cirúrgica do mixoma sintomático ou de alto risco embólico",
+      "Reconhecer e tratar crise adrenal ou descompensação da síndrome de Cushing quando presente",
+      "Acionar equipe multidisciplinar (cirurgia cardíaca, endocrinologia, genética médica) diante de suspeita sindrômica"
+    ],
+    "tags": [
+      "complexo de Carney",
+      "mixoma cardíaco familiar",
+      "PRKAR1A",
+      "lentiginose",
+      "PPNAD",
+      "síndrome de Cushing ACTH-independente",
+      "acromegalia",
+      "schwannoma melanótico psamomatoso",
+      "tumor de células de Sertoli",
+      "herança autossômica dominante",
+      "aconselhamento genético"
+    ],
+    "source_refs": [
+      "Stratakis CA. Carney Complex. GeneReviews. PMID: 20301463",
+      "Kirschner LS, Carney JA, Pack SD, et al. Nat Genet. 2000;26(1):89-92. PMID: 10973256",
+      "Stratakis CA, Kirschner LS, Carney JA. J Clin Endocrinol Metab. 2001;86(9):4041-4046. PMID: 11549623",
+      "Bertherat J, Horvath A, Groussin L, et al. J Clin Endocrinol Metab. 2009;94(6):2085-2091. PMID: 19293268",
+      "Salpea P, Horvath A, London E, et al. J Clin Endocrinol Metab. 2014;99(1):E183-E188. PMID: 24170103",
+      "Mateus C, Palangié A, Franck N, et al. J Am Acad Dermatol. 2008;59(5):801-810. PMID: 18804312",
+      "Watson JC, Stratakis CA, Bryant-Greenwood PK, et al. J Neurosurg. 2000;92(3):413-418. PMID: 10701527",
+      "Tatsi C, et al. J Clin Endocrinol Metab. 2024;109(8):e1471-e1479. PMID: 38626285"
+    ],
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/books/NBK1286/",
+      "https://pubmed.ncbi.nlm.nih.gov/10973256/",
+      "https://pubmed.ncbi.nlm.nih.gov/11549623/",
+      "https://pubmed.ncbi.nlm.nih.gov/19293268/",
+      "https://pubmed.ncbi.nlm.nih.gov/24170103/",
+      "https://pubmed.ncbi.nlm.nih.gov/18804312/",
+      "https://pubmed.ncbi.nlm.nih.gov/10701527/",
+      "https://pubmed.ncbi.nlm.nih.gov/38626285/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "complexo-de-carney-mixoma-cardiaco-familiar-genetica-quadro-clinico-e-seguimento"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "paraganglioma-cardiaco-primario",
+    "name": "Paraganglioma cardíaco primário",
+    "aliases": [
+      "Paraganglioma intracardíaco",
+      "Chemodectoma cardíaco",
+      "Tumor paraganglionar do coração",
+      "Cardiac paraganglioma"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "tumor_neuroendocrino_intracardiaco",
+    "prevalence_rank": 132,
+    "completeness": "completo",
+    "summary": "Paraganglioma cardíaco primário é um tumor neuroendócrino intracardíaco extremamente raro, originado de remanescentes embriológicos do tecido paraganglionar cromafim ao redor da base do coração e dos grandes vasos, mais comumente no teto do átrio esquerdo/septo interatrial próximo à raiz da aorta. Pode ser funcionante (secretor de catecolaminas, com quadro hormonal indistinguível do feocromocitoma adrenal — hipertensão paroxística, palpitação, cefaleia, sudorese — mas com a massa localizada dentro do próprio coração) ou não funcionante (efeito de massa, obstrução de fluxo, arritmia por proximidade ao sistema de condução, ou achado incidental). É distinto da miocardiopatia catecolaminérgica secundária a feocromocitoma/paraganglioma extra-adrenal, na qual o efeito sobre o coração é hormonal à distância, sem tumor estrutural intracardíaco. Uma proporção relevante dos casos tem base genética hereditária identificável (genes SDHB, SDHD, SDHC), com a mutação em SDHB associada a maior risco de comportamento maligno/metastático, o que justifica rastreio genético universal. O diagnóstico combina dosagem de catecolaminas/metanefrinas, imagem estrutural (ecocardiograma, ressonância, tomografia) e imagem funcional (MIBG ou PET-DOTATATE). O tratamento definitivo é a ressecção cirúrgica, precedida por bloqueio alfa-adrenérgico obrigatório nos tumores funcionantes, e tecnicamente desafiadora pela proximidade com artérias coronárias e estruturas valvares.",
+    "presentation": [
+      "Hipertensão paroxística ou sustentada, palpitação, cefaleia, sudorese e tremor em tumor funcionante — quadro hormonal indistinguível do feocromocitoma adrenal",
+      "Crise hipertensiva desencadeada por manipulação do tumor durante procedimento diagnóstico (biópsia, cateterismo) ou cirúrgico sem bloqueio adrenérgico prévio",
+      "Diagnóstico inicial equivocado como massa cardíaca 'comum' (mixoma, fibroelastoma, trombo) antes do reconhecimento da secreção hormonal",
+      "Dispneia, dor torácica atípica ou síncope por obstrução de via de entrada/saída de câmara cardíaca em tumor não funcionante",
+      "Arritmia por proximidade do tumor ao sistema de condução (nó sinusal ou atrioventricular)",
+      "Achado incidental em exame de imagem cardíaca realizado por outro motivo",
+      "Sintomas hormonais atenuados ou atípicos mesmo em tumor bioquimicamente funcionante"
+    ],
+    "differentials": [
+      "Mixoma cardíaco",
+      "Fibroelastoma papilar cardíaco",
+      "Trombo intracavitário",
+      "Tumores cardíacos malignos primários (angiossarcoma, linfoma cardíaco primário)",
+      "Massa metastática cardíaca/pericárdica",
+      "Miocardiopatia catecolaminérgica secundária a feocromocitoma adrenal ou paraganglioma extra-adrenal (efeito hormonal à distância, sem massa intracardíaca)",
+      "Cisto pericárdico"
+    ],
+    "tests": [
+      "Catecolaminas/metanefrinas plasmáticas ou urinárias fracionadas em todo paciente com massa cardíaca suspeita, mesmo sem sintomas hormonais clássicos",
+      "Ecocardiograma transtorácico e, quando necessário, transesofágico, como exame inicial de imagem cardíaca",
+      "Ressonância magnética cardíaca para caracterização tecidual e relação do tumor com estruturas coronárias/valvares",
+      "Tomografia computadorizada cardíaca para planejamento cirúrgico detalhado",
+      "Cintilografia com MIBG ou PET com traçador para tumor neuroendócrino (⁶⁸Ga-DOTATATE) para confirmação funcional e rastreio de doença multicêntrica/metastática",
+      "Teste genético dirigido para genes SDHB, SDHD, SDHC (e demais genes de suscetibilidade) em todo paciente confirmado",
+      "Seguimento bioquímico e de imagem pós-operatório de longo prazo, sobretudo em portadores de mutação SDHB"
+    ],
+    "red_flags": [
+      "Manipulação tumoral sem bloqueio alfa-adrenérgico prévio — risco de crise hipertensiva intraoperatória",
+      "Localização intracardíaca (em oposição à estritamente pericárdica) — preditor independente de maior mortalidade cirúrgica",
+      "Metástase ao diagnóstico ou no seguimento — preditor independente de mortalidade de longo prazo",
+      "Mutação confirmada em SDHB — maior risco de comportamento maligno/metastático entre os genes de suscetibilidade",
+      "Invasão neoplásica de estrutura coronariana ou valvar mais extensa do que a prevista pela imagem pré-operatória",
+      "Doença multicêntrica (paraganglioma cardíaco associado a foco em outro sítio) não rastreada antes da cirurgia"
+    ],
+    "ambulatory_flow": [
+      "Confirmar status funcional com metanefrinas plasmáticas/urinárias fracionadas antes de qualquer procedimento invasivo sobre a massa.",
+      "Encaminhar todo caso confirmado para teste genético dirigido a SDHB/SDHD/SDHC, com aconselhamento familiar subsequente.",
+      "Complementar caracterização anatômica com ressonância e/ou tomografia cardíaca antes de definir estratégia cirúrgica.",
+      "Solicitar MIBG ou PET-DOTATATE para rastreio de doença multicêntrica ou metastática em todo tumor confirmado.",
+      "Programar seguimento bioquímico e de imagem de longo prazo no pós-operatório, com intensidade maior em portador de mutação SDHB."
+    ],
+    "emergency_flow": [
+      "Em crise hipertensiva desencadeada por manipulação de massa cardíaca com suspeita de paraganglioma, tratar com os mesmos princípios do feocromocitoma: bloqueio alfa-adrenérgico antes de qualquer betabloqueio, nunca betabloqueio isolado.",
+      "Estabilizar hemodinamicamente e suspender manipulação adicional do tumor até confirmação bioquímica e preparo farmacológico adequado.",
+      "Acionar equipe de cirurgia cardíaca e suporte de circulação extracorpórea quando ressecção de emergência for necessária por instabilidade estrutural (obstrução grave, sangramento).",
+      "Considerar suporte circulatório mecânico em choque cardiogênico associado a manipulação tumoral não planejada."
+    ],
+    "tags": [
+      "cardiomiopatia",
+      "tumor cardiaco",
+      "paraganglioma",
+      "feocromocitoma",
+      "neuroendocrino",
+      "SDHB",
+      "SDHD",
+      "massa cardiaca",
+      "genetica",
+      "hipertensao secundaria"
+    ],
+    "source_refs": [
+      "Wang JG, Liu J, Zhao B, et al. Clinicopathologic features and outcomes of primary cardiac tumors: a 16-year-experience with 212 patients at a Chinese medical center. Cardiovasc Pathol. 2018;33:45-54. PMID: 29414432",
+      "Khan MF, Datta S, Sood A, et al. Cardiac paraganglioma: clinical presentation, diagnostic approach and factors affecting short and long-term outcomes. Int J Cardiol. 2013;166(2):315-320. PMID: 22652039",
+      "Tella SH, Jha A, Taïeb D, et al. Comprehensive review of evaluation and management of cardiac paragangliomas. Heart. 2020;106(16):1202-1210. PMID: 32444502",
+      "Punzo B, Ceccarelli F, Nappi C, et al. Advanced imaging of cardiac Paraganglioma: A systematic review. Int J Cardiol Heart Vasc. 2024;53:101437. PMID: 39228979",
+      "Amar L, Bertherat J, Baudin E, et al. Genetic testing in pheochromocytoma or functional paraganglioma. J Clin Oncol. 2005;23(34):8812-8818. PMID: 16314641",
+      "Neumann HP, Pawlu C, Peczkowska M, et al. Distinct clinical features of paraganglioma syndromes associated with SDHB and SDHD gene mutations. JAMA. 2004;292(8):943-951. PMID: 15328326",
+      "Else T, Greenberg S, Fishbein L. Hereditary Paraganglioma-Pheochromocytoma Syndromes. GeneReviews. Seattle: University of Washington; 2008 (atualizado 2023). PMID: 20301715",
+      "Taïeb D, Nölting S, Perrier ND, et al. Clinical consensus guideline on the management of phaeochromocytoma and paraganglioma in patients harbouring germline SDHD pathogenic variants. Lancet Diabetes Endocrinol. 2023;11(5):345-361. PMID: 37011647",
+      "Därr R, Kuhn M, Bode C, et al. Accuracy of recommended sampling and assay methods for the determination of plasma-free and urinary fractionated metanephrines in the diagnosis of pheochromocytoma and paraganglioma: a systematic review. Endocrine. 2017;56(3):495-503. PMID: 28405881",
+      "Lenders JW, Duh QY, Eisenhofer G, et al; Endocrine Society. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. PMID: 24893135"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/29414432/",
+      "https://pubmed.ncbi.nlm.nih.gov/22652039/",
+      "https://pubmed.ncbi.nlm.nih.gov/32444502/",
+      "https://pubmed.ncbi.nlm.nih.gov/39228979/",
+      "https://pubmed.ncbi.nlm.nih.gov/16314641/",
+      "https://pubmed.ncbi.nlm.nih.gov/15328326/",
+      "https://pubmed.ncbi.nlm.nih.gov/20301715/",
+      "https://pubmed.ncbi.nlm.nih.gov/37011647/",
+      "https://pubmed.ncbi.nlm.nih.gov/28405881/",
+      "https://pubmed.ncbi.nlm.nih.gov/24893135/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "paraganglioma-cardiaco-primario-tumor-neuroendocrino-intracardiaco-funcionante-ou-nao-funcionante"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "cardiotoxicidade-por-interleucina-2",
+    "name": "Cardiotoxicidade da Interleucina-2 em Alta Dose",
+    "aliases": [
+      "Toxicidade cardiovascular da aldesleucina",
+      "Síndrome de extravasamento capilar por IL-2",
+      "HD IL-2 cardiotoxicity",
+      "Capillary leak syndrome por interleucina-2",
+      "Cardiotoxicidade por aldesleucina"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "extravasamento_capilar",
+    "prevalence_rank": 133,
+    "completeness": "completo",
+    "summary": "Toxicidade cardiovascular associada à interleucina-2 recombinante em alta dose (aldesleucina), usada historicamente como imunoterapia sistêmica para melanoma metastático e carcinoma de células renais metastático. O mecanismo central é a síndrome de extravasamento capilar sistêmico: ativação maciça de linfócitos T e NK libera citocinas inflamatórias secundárias (TNF-alfa, interferon-gama) que ativam o endotélio de forma difusa, aumentando a permeabilidade capilar e produzindo hipovolemia intravascular efetiva apesar de sobrecarga hídrica corporal total. Repercussão cardiovascular inclui hipotensão refratária à reposição volêmica convencional, arritmias supraventriculares e, mais raramente, ventriculares, isquemia miocárdica/infarto em casos selecionados, miocardite (descrita em relatos de caso, com corpo de evidência limitado) e edema pulmonar não cardiogênico. Tipicamente reversível com suspensão do fármaco e suporte hemodinâmico ativo, incluindo vasopressor precoce.",
+    "presentation": [
+      "Hipotensão de início súbito durante ou logo após infusão/ciclo de HD IL-2, muitas vezes refratária a reposição volêmica isolada",
+      "Taquicardia compensatória, podendo evoluir a taquicardia supraventricular sustentada",
+      "Edema periférico e ganho ponderal por extravasamento tecidual, coexistindo com hipovolemia intravascular efetiva",
+      "Dor torácica com ou sem alterações eletrocardiográficas, sinalizando possível isquemia miocárdica",
+      "Dispneia e desconforto respiratório por edema pulmonar não cardiogênico",
+      "Arritmia ventricular (mais rara) ou alteração de condução associada a distúrbio eletrolítico secundário",
+      "Deterioração hemodinâmica com sinais de hipoperfusão de órgão-alvo (alteração de estado mental, oligúria)"
+    ],
+    "differentials": [
+      "Choque séptico/distributivo de outra etiologia",
+      "Síndrome de liberação de citocinas por CAR-T ou por anticorpos biespecíficos direcionadores de células T",
+      "Miocardite por inibidor de checkpoint imunológico",
+      "Síndrome coronariana aguda verdadeira",
+      "Edema pulmonar cardiogênico por disfunção ventricular primária",
+      "Anafilaxia/reação relacionada à infusão",
+      "Sepse concomitante em paciente imunossuprimido"
+    ],
+    "tests": [
+      "Monitorização hemodinâmica contínua (pressão arterial, frequência cardíaca) durante toda a infusão",
+      "ECG seriado para vigilância de arritmia supraventricular e ventricular",
+      "Troponina quando há suspeita de isquemia miocárdica ou instabilidade hemodinâmica desproporcional",
+      "Ecocardiograma quando há suspeita de disfunção miocárdica associada ou para excluir outras causas de hipotensão/choque",
+      "Ressonância magnética cardíaca em casos selecionados para diferenciar miocardite/toxicidade por IL-2 de síndrome coronariana aguda verdadeira",
+      "Balanço hídrico e peso diário para quantificar extravasamento tecidual",
+      "Função renal e eletrólitos seriados"
+    ],
+    "red_flags": [
+      "Hipotensão refratária a vasopressor em dose crescente",
+      "Dor torácica com alteração eletrocardiográfica nova compatível com angina ou infarto",
+      "Arritmia ventricular sustentada",
+      "Sinais de hipoperfusão de órgão-alvo (alteração de estado mental, oligúria progressiva)",
+      "Insuficiência respiratória com necessidade de suporte ventilatório",
+      "Deterioração hemodinâmica rápida apesar de suporte vasopressor otimizado"
+    ],
+    "ambulatory_flow": [
+      "HD IL-2 é administrada exclusivamente em ambiente hospitalar com capacidade de suporte de terapia intensiva — não há fluxo ambulatorial para o manejo agudo desta toxicidade",
+      "Avaliação cardiovascular basal (ECG, função ventricular quando indicada) antes do início do tratamento em pacientes selecionados, especialmente com fatores de risco cardiovascular",
+      "Após resolução do episódio agudo, seguimento cardiológico para confirmar normalização de função ventricular e ausência de sequela, quando disfunção foi documentada"
+    ],
+    "emergency_flow": [
+      "Reconhecer o padrão hemodinâmico característico: hipotensão com sinais de sobrecarga hídrica tecidual, não hipovolemia clássica",
+      "Evitar reposição volêmica agressiva isolada como estratégia primária — risco de agravar edema tecidual sistêmico e pulmonar sem corrigir a pressão arterial de forma sustentada",
+      "Iniciar suporte vasopressor precocemente (ex.: dopamina em baixa dose) para sustentar perfusão de órgão-alvo",
+      "Suspender ou ajustar a dose de IL-2 conforme protocolo de toxicidade e critérios de instabilidade hemodinâmica/isquêmica",
+      "Monitorizar ECG e biomarcadores de necrose miocárdica diante de suspeita de isquemia",
+      "Instituir suporte respiratório se houver edema pulmonar não cardiogênico com repercussão significativa",
+      "Manejar arritmia conforme princípios gerais, atentando a distúrbio eletrolítico secundário",
+      "Reavaliar função ventricular e reversibilidade após estabilização, com expectativa de resolução na maioria dos casos"
+    ],
+    "tags": [
+      "cardio-oncologia",
+      "interleucina-2",
+      "aldesleucina",
+      "IL-2",
+      "síndrome de extravasamento capilar",
+      "capillary leak syndrome",
+      "hipotensão refratária",
+      "miocardite",
+      "arritmia",
+      "isquemia miocárdica",
+      "edema pulmonar não cardiogênico",
+      "imunoterapia",
+      "melanoma metastático",
+      "carcinoma de células renais",
+      "choque distributivo"
+    ],
+    "source_refs": [
+      "Rosenberg SA, Mulé JJ. Immunotherapy of cancer with lymphokine-activated killer cells and recombinant interleukin-2. Surgery. 1985;98(3):437-444. PMID 3898451",
+      "Rosenberg SA, Yang JC, Topalian SL, et al. Treatment of 283 consecutive patients with metastatic melanoma or renal cell cancer using high-dose bolus interleukin 2. JAMA. 1994;271(12):907-913. PMID 8120958",
+      "White RL Jr, Schwartzentruber DJ, Guleria A, et al. Cardiopulmonary toxicity of treatment with high dose interleukin-2 in 199 consecutive patients with metastatic melanoma or renal cell carcinoma. Cancer. 1994;74(12):3212-3222. PMID 7982185",
+      "Lee RE, Lotze MT, Skibber JM, et al. Cardiorespiratory effects of immunotherapy with interleukin-2. J Clin Oncol. 1989;7(1):7-20. PMID 2783338",
+      "Margolin KA, Rayner AA, Hawkins MJ, et al. Interleukin-2 and lymphokine-activated killer cell therapy of solid tumors: analysis of toxicity and management guidelines. J Clin Oncol. 1989;7(4):486-498. PMID 2647914",
+      "Cotran RS, Pober JS, Gimbrone MA Jr, et al. Endothelial activation during interleukin 2 immunotherapy. J Immunol. 1988;140(6):1883-1888. PMID 3279124",
+      "Samlowski WE, Kondapaneni M, Tharkar S, et al. Endothelial nitric oxide synthase is a key mediator of interleukin-2-induced hypotension and vascular leak syndrome. J Immunother. 2011;34(5):419-427. PMID 21577143",
+      "Baluna R, Vitetta ES. Vascular leak syndrome: a side effect of immunotherapy. Immunopharmacology. 1997;37(2-3):117-132. PMID 9403331",
+      "Zhang J, Yu ZX, Hilbert SL, et al. Cardiotoxicity of human recombinant interleukin-2 in rats. Circulation. 1993;87(4):1340-1353. PMID 8462156",
+      "Citterio G, Fragasso G, Rossetti E, et al. Isolated left ventricular filling abnormalities may predict interleukin-2-induced cardiovascular toxicity. J Immunother Emphasis Tumor Immunol. 1996;19(2):134-141. PMID 8732696",
+      "Schuchter LM, Hendricks CB, Holland KH, et al. Eosinophilic myocarditis associated with high-dose interleukin-2 therapy. Am J Med. 1990;88(4):439-440. PMID 2327430",
+      "Truica CI, Hansen CH, Garvin DF, Meehan KR. Idiopathic giant cell myocarditis after autologous hematopoietic stem cell transplantation and interleukin-2 immunotherapy. Cancer. 1998;83(6):1231-1236. PMID 9740090",
+      "Thavendiranathan P, Verhaert D, Kendra KL, Raman SV. Fulminant myocarditis owing to high-dose interleukin-2 therapy for metastatic melanoma. Br J Radiol. 2011;84(1001):e99-e102. PMID 21511746",
+      "Chow S, Cove-Smith L, Schmitt M, Hawkins R. High-dose interleukin 2-induced myocarditis: can myocardial damage reversibility be assessed by cardiac MRI? J Immunother. 2014;37(5):304-308. PMID 24810642",
+      "FDA/DailyMed. PROLEUKIN (aldesleukin) for injection — prescribing information. SetID 4e2b687e-47f2-4f3c-80ab-e3224befffca"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/3898451/",
+      "https://pubmed.ncbi.nlm.nih.gov/8120958/",
+      "https://pubmed.ncbi.nlm.nih.gov/7982185/",
+      "https://pubmed.ncbi.nlm.nih.gov/2783338/",
+      "https://pubmed.ncbi.nlm.nih.gov/2647914/",
+      "https://pubmed.ncbi.nlm.nih.gov/3279124/",
+      "https://pubmed.ncbi.nlm.nih.gov/21577143/",
+      "https://pubmed.ncbi.nlm.nih.gov/9403331/",
+      "https://pubmed.ncbi.nlm.nih.gov/8462156/",
+      "https://pubmed.ncbi.nlm.nih.gov/8732696/",
+      "https://pubmed.ncbi.nlm.nih.gov/2327430/",
+      "https://pubmed.ncbi.nlm.nih.gov/9740090/",
+      "https://pubmed.ncbi.nlm.nih.gov/21511746/",
+      "https://pubmed.ncbi.nlm.nih.gov/24810642/",
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e2b687e-47f2-4f3c-80ab-e3224befffca"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiotoxicidade-da-interleucina-2-em-alta-dose-sindrome-de-extravasamento-capilar"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "cardiotoxicidade-por-interferon",
+    "name": "Cardiotoxicidade por interferon",
+    "aliases": [
+      "cardiotoxicidade por interferon-alfa",
+      "cardiomiopatia por interferon",
+      "interferon-induced cardiotoxicity",
+      "toxicidade cardíaca por interferon peguilado"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "toxicidade_por_farmaco",
+    "prevalence_rank": 134,
+    "completeness": "completo",
+    "summary": "Espectro de cardiotoxicidade associado ao uso de interferon-alfa (e, com muito menor frequência, interferon-beta) — hoje usado sobretudo em neoplasias mieloproliferativas Philadelphia-negativas (policitemia vera, trombocitemia essencial), com uso residual em hepatite viral crônica e em melanoma/linfoma adjuvante — que inclui arritmias (sobretudo taquiarritmia supraventricular), cardiomiopatia dilatada tipicamente reversível após suspensão do fármaco e, mais raramente, isquemia miocárdica de provável mecanismo vasoespástico/pró-trombótico. A evidência disponível é predominantemente de relatos de caso e séries pequenas, sem ensaios clínicos ou coortes prospectivas dedicados a quantificar o risco.",
+    "presentation": [
+      "Palpitação, dispneia ou fadiga nova em paciente em uso atual ou recente de interferon-alfa",
+      "Taquicardia sinusal desproporcional ao quadro sistêmico, possivelmente relacionada aos sintomas tipo influenza que acompanham o início do interferon",
+      "Taquiarritmia supraventricular de início recente durante o tratamento",
+      "Sinais e sintomas de insuficiência cardíaca de início subagudo (semanas a meses de uso), compatíveis com cardiomiopatia dilatada",
+      "Dor torácica, síncope ou alteração eletrocardiográfica sugestiva de isquemia miocárdica, manifestação mais rara do espectro",
+      "Raramente, derrame pericárdico com repercussão hemodinâmica"
+    ],
+    "differentials": [
+      "Taquicardiomiopatia por arritmia não controlada de outra causa",
+      "Miocardite viral concomitante, sobretudo em paciente tratado para hepatite viral crônica",
+      "Cardiomiopatia induzida por outro agente cardiotóxico usado de forma concomitante ou prévia (ex.: antraciclina)",
+      "Síndrome de Takotsubo relacionada ao estresse do diagnóstico ou tratamento oncológico/hematológico",
+      "Descompensação de cardiopatia estrutural preexistente precipitada pelo estresse sistêmico do interferon, sem toxicidade miocárdica direta",
+      "Isquemia miocárdica por doença arterial coronariana aterosclerótica não relacionada ao interferon"
+    ],
+    "tests": [
+      "Eletrocardiograma diante de suspeita de arritmia",
+      "Ecocardiograma transtorácico diante de suspeita de disfunção ventricular nova",
+      "Repetição do ecocardiograma após a suspensão do interferon, para documentar a reversibilidade característica quando presente",
+      "Marcadores de necrose miocárdica e investigação de perfusão/anatomia coronariana diante de suspeita de isquemia",
+      "Avaliação tireoidiana (TSH), já que hipotireoidismo por interferon pode coexistir e contribuir para o quadro cardiovascular"
+    ],
+    "red_flags": [
+      "Sinais de insuficiência cardíaca aguda ou choque cardiogênico durante uso de interferon",
+      "Arritmia com instabilidade hemodinâmica",
+      "Síncope associada a alteração eletrocardiográfica sugestiva de isquemia durante o tratamento",
+      "Sinais de tamponamento cardíaco (derrame pericárdico volumoso com repercussão hemodinâmica)",
+      "Ausência de reversão da disfunção ventricular após suspensão do fármaco, sobretudo em paciente com exposição prévia ou concomitante a outro agente cardiotóxico"
+    ],
+    "ambulatory_flow": [
+      "Reconhecer o contexto de uso de interferon (hepatite viral, neoplasia mieloproliferativa, melanoma/linfoma) diante de sintoma cardiovascular novo",
+      "Solicitar ECG e/ou ecocardiograma conforme a apresentação (arritmia versus disfunção ventricular)",
+      "Diante de achado compatível com cardiotoxicidade clinicamente relevante, discutir com a equipe responsável pelo interferon a suspensão do fármaco",
+      "Iniciar suporte de insuficiência cardíaca ou manejo de arritmia conforme os princípios gerais de cada quadro, enquanto se aguarda a reversibilidade esperada",
+      "Repetir a imagem cardíaca após a suspensão para documentar recuperação",
+      "Se a reintrodução do interferon for considerada necessária pela ausência de alternativa terapêutica equivalente para a doença de base, decidir de forma compartilhada e programar monitorização cardiovascular mais próxima"
+    ],
+    "emergency_flow": [
+      "Estabilizar insuficiência cardíaca aguda ou choque conforme protocolo geral, sem atribuir automaticamente o quadro ao interferon antes de excluir outras causas",
+      "ECG e ecocardiograma urgentes diante de instabilidade hemodinâmica ou arritmia sintomática",
+      "Investigar tamponamento cardíaco quando houver suspeita de derrame pericárdico volumoso",
+      "Suspender o interferon em conjunto com a equipe assistente (hematologia/oncologia/hepatologia) diante de cardiotoxicidade aguda clinicamente relevante",
+      "Encaminhar à cardiologia para seguimento e reavaliação de imagem seriada após a estabilização"
+    ],
+    "tags": [
+      "interferon-alfa",
+      "interferon peguilado",
+      "cardiotoxicidade",
+      "cardiomiopatia dilatada reversível",
+      "arritmia",
+      "isquemia miocárdica",
+      "policitemia vera",
+      "trombocitemia essencial",
+      "hepatite C",
+      "melanoma"
+    ],
+    "source_refs": [
+      "Sonnenblick M, Rosin A. Cardiotoxicity of interferon. A review of 44 cases. Chest. 1991;99(3):557-561. PMID: 1704826",
+      "Zimmerman S, Adkins D, Graham M, Petruska P, Bowers C, Vrahnos D, Spitzer G. Irreversible, severe congestive cardiomyopathy occurring in association with interferon alpha therapy. Cancer Biother. 1994;9(4):291-299. PMID: 7719376",
+      "Le Corguillé M, Pochmalicki G, Eugène C. Cardiovascular complications of alpha interferon. Gastroenterol Clin Biol. 2007;31(12):1081-1084. PMID: 18176361",
+      "Zhao W, Ji F, Yu S, Li Z, Deng H. Dilated cardiomyopathy and hypothyroidism associated with pegylated interferon and ribavirin treatment for chronic hepatitis C: case report and literature review. Braz J Infect Dis. 2014;18(1):110-113. PMID: 24120833",
+      "Qu C, Zheng Z, Liu W, Jiao J, Zhu J. A case of chronic hepatitis C patient of myocardial ischemia accompanied with interstitial pneumonia induced by pegylated interferon alpha-2a. Int J Clin Exp Pathol. 2014;7(8):5232-5235. PMID: 25197402",
+      "Lenci I, Piccolo P, Francioso S, Di Paolo D, Galante A, Angelico M. Recurrent myocardial ischaemia during combination antiviral therapy in a patient with chronic hepatitis C and normal aminotransferase levels. Dig Liver Dis. 2008;40(9):785-790. PMID: 17913610",
+      "Rauw J, Ahmed S, Petrella T. Pericardial effusion and tamponade following interferon alpha treatment for locally advanced melanoma. Med Oncol. 2012;29(2):1304-1307. PMID: 21499929",
+      "Mordoh J, Pampena MB, Aris M, Blanco PA, Lombardo M, von Euw EM, et al. Phase II Study of Adjuvant Immunotherapy with the CSF-470 Vaccine Plus BCG Plus GM-CSF vs Medium-Dose Interferon Alpha 2B in Stages IIB, IIC, and III Cutaneous Melanoma Patients. Front Immunol. 2017;8:625. PMID: 28620382",
+      "Kiladjian JJ. Pegylated interferon: the who, why, and how. Hematology Am Soc Hematol Educ Program. 2024;2024(1):535-540. PMID: 39644027",
+      "Abu-Tineh M, Kassem N, Abdulla MA, Ismail OM, Ghasoub R, Aldapt MB, Yassin MA. Outcome of Pregnancy in the Era of Pegylated Interferon Alpha 2a in Females with Essential Thrombocythemia: An Experience from Qatar. Case Rep Oncol. 2020;13(1):336-340. PMID: 32308601",
+      "Tefferi A, Vannucchi AM, Barbui T. Essential thrombocythemia: 2024 update on diagnosis, risk stratification, and management. Am J Hematol. 2024;99(4):697-718. PMID: 38269572",
+      "Tefferi A, Barbui T. Polycythemia vera: 2024 update on diagnosis, risk-stratification, and management. Am J Hematol. 2023;98(9):1465-1487. PMID: 37357958"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/1704826/",
+      "https://pubmed.ncbi.nlm.nih.gov/7719376/",
+      "https://pubmed.ncbi.nlm.nih.gov/18176361/",
+      "https://pubmed.ncbi.nlm.nih.gov/24120833/",
+      "https://pubmed.ncbi.nlm.nih.gov/25197402/",
+      "https://pubmed.ncbi.nlm.nih.gov/17913610/",
+      "https://pubmed.ncbi.nlm.nih.gov/21499929/",
+      "https://pubmed.ncbi.nlm.nih.gov/28620382/",
+      "https://pubmed.ncbi.nlm.nih.gov/39644027/",
+      "https://pubmed.ncbi.nlm.nih.gov/32308601/",
+      "https://pubmed.ncbi.nlm.nih.gov/38269572/",
+      "https://pubmed.ncbi.nlm.nih.gov/37357958/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "teratoma-cardiaco-pericardico-fetal",
+    "name": "Teratoma intrapericárdico fetal e pediátrico",
+    "aliases": [
+      "teratoma cardíaco fetal",
+      "teratoma pericárdico",
+      "teratoma intrapericárdico",
+      "cardiac teratoma",
+      "pericardial teratoma"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "tumor_germinativo_fetal_pericardico",
+    "prevalence_rank": 135,
+    "completeness": "completo",
+    "summary": "Tumor de células germinativas raro, originado tipicamente na base do coração, aderido à raiz da aorta e/ou artéria pulmonar, com suprimento vascular próprio a partir desses grandes vasos. É o segundo tumor cardíaco fetal mais relevante depois do rabdomioma, embora raro em termos absolutos. O crescimento intrapericárdico progressivo causa derrame pericárdico volumoso e pode evoluir para tamponamento cardíaco e hidropsia fetal não imune, com alta mortalidade perinatal se não reconhecido a tempo. O diagnóstico é pré-natal, por ultrassonografia obstétrica e ecocardiografia fetal seriada, com RM fetal complementar em casos selecionados. O tratamento combina pericardiocentese fetal terapêutica (isolada ou seriada) como estabilização temporária, parto planejado em centro com cirurgia cardíaca pediátrica neonatal disponível, e ressecção cirúrgica neonatal como tratamento definitivo, geralmente curativa e sem necessidade de reconstrução miocárdica extensa, dada a natureza extracardíaca do tumor.",
+    "presentation": [
+      "Achado ultrassonográfico pré-natal de massa pericárdica associada a derrame pericárdico",
+      "Derrame pericárdico volumoso, frequentemente desproporcional ao tamanho da massa",
+      "Sinais de hidropsia fetal não imune: edema cutâneo generalizado, ascite, derrame pleural",
+      "Polidrâmnio associado",
+      "Síndrome do espelho materno em casos graves de hidropsia fetal sustentada",
+      "Em neonatos, desconforto cardiorrespiratório e sinais de tamponamento ao nascimento quando o diagnóstico não foi feito ou tratado intraútero"
+    ],
+    "differentials": [
+      "Rabdomioma cardíaco (tipicamente intramiocárdico, múltiplo, associado a esclerose tuberosa)",
+      "Fibroma cardíaco (tipicamente intramural, sem relação com a base dos grandes vasos)",
+      "Quilopericárdio fetal",
+      "Derrame pericárdico secundário a hidropsia fetal de outra etiologia (taquiarritmia fetal sustentada, infecção congênita)"
+    ],
+    "tests": [
+      "Ultrassonografia obstétrica de rotina",
+      "Ecocardiografia fetal detalhada e seriada (caracterização da massa, relação com grandes vasos, avaliação da função cardíaca fetal)",
+      "Ressonância magnética fetal complementar em casos selecionados",
+      "Anatomopatológico da peça de ressecção cirúrgica (confirmação diagnóstica definitiva)",
+      "Necropsia nos casos de óbito fetal intrauterino sem diagnóstico prévio confirmado"
+    ],
+    "red_flags": [
+      "Derrame pericárdico volumoso desproporcional ao tamanho da massa identificada",
+      "Sinais ecográficos de hidropsia fetal não imune (ascite, derrame pleural, edema cutâneo)",
+      "Sinais de tamponamento cardíaco fetal (comprometimento do enchimento diastólico)",
+      "Síndrome do espelho materno",
+      "Crescimento tumoral progressivo em exames seriados sem plano de parto em centro com suporte cirúrgico cardíaco neonatal"
+    ],
+    "ambulatory_flow": [
+      "Encaminhamento a centro de referência em cardiologia fetal diante de massa pericárdica ou derrame pericárdico fetal identificado em ultrassonografia obstétrica de rotina",
+      "Ecocardiografia fetal detalhada para caracterização da massa, relação com grandes vasos e função cardíaca",
+      "Ressonância magnética fetal complementar quando houver dúvida anatômica relevante",
+      "Ecocardiografia fetal seriada para monitorar crescimento tumoral, volume do derrame e sinais precoces de comprometimento hemodinâmico",
+      "Planejamento multidisciplinar do parto em centro com cirurgia cardíaca pediátrica neonatal imediatamente disponível",
+      "Seguimento pós-operatório com ecocardiografia para monitorar função cardíaca e descartar tecido residual"
+    ],
+    "emergency_flow": [
+      "Diante de sinais de tamponamento cardíaco fetal estabelecido e/ou hidropsia fetal, considerar pericardiocentese fetal terapêutica para estabilização temporária, com possibilidade de drenagens seriadas",
+      "Reavaliação hemodinâmica fetal seriada após cada drenagem, com decisão compartilhada sobre momento do parto conforme idade gestacional e maturidade pulmonar",
+      "Em derrame maciço com comprometimento hemodinâmico grave próximo ao termo, considerar parto por procedimento EXIT (ex utero intrapartum treatment) com suporte placentário para drenagem e/ou ressecção",
+      "No neonato com comprometimento hemodinâmico significativo, ressecção cirúrgica precoce (frequentemente nos primeiros dias de vida) como tratamento definitivo"
+    ],
+    "tags": [
+      "cardiologia fetal",
+      "cardiologia pediátrica",
+      "tumor cardíaco fetal",
+      "teratoma",
+      "derrame pericárdico",
+      "tamponamento cardíaco",
+      "hidropsia fetal não imune",
+      "cirurgia cardíaca neonatal",
+      "medicina fetal"
+    ],
+    "source_refs": [
+      "Yuan SM, Lin H. Fetal intrapericardial teratomas. Turk J Pediatr. 2019;61(2):153-158. PMID: 31951327",
+      "Yuan SM. Fetal Intrapericardial Teratomas: An Update. Z Geburtshilfe Neonatol. 2020. PMID: 32575128",
+      "Cavalcante CTMB, Pinto Júnior VC, Pompeu RG, et al. Early treatment of intrapericardial teratoma. J Matern Fetal Neonatal Med. 2019. PMID: 29320914",
+      "Alkon J, Hoffmann E, Sainathan S, Mulinari L, Ruano R. Successful Perinatal Management of a Large Fetal Intrapericardial Teratoma. Fetal Diagn Ther. 2026. PMID: 40820406",
+      "Guralp O, Schoner K, Wolter A, et al. Intrapericardial Teratoma and Associated 3q29 Deletion in a Fetus. Z Geburtshilfe Neonatol. 2024. PMID: 39163984",
+      "Carosso M, Carosso AR, Bertschy G, et al. New Findings in the Multidisciplinary Management of a Fetal Intrapericardial Teratoma. Fetal Diagn Ther. 2024. PMID: 37725930",
+      "Beichl M, Thanhaeuser M, Ulm B, Zimpfer D. Successful surgical treatment of a 1160 g neonate with cardiac teratoma and severe foetal hydrops. Eur Heart J Case Rep. 2021. PMID: 33738399",
+      "Rathore B, Adamson ME, Berklite LE, et al. Fetal cardiac masses. Pediatr Radiol. 2025;55(11):2400-2416. PMID: 41123646"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31951327/",
+      "https://pubmed.ncbi.nlm.nih.gov/32575128/",
+      "https://pubmed.ncbi.nlm.nih.gov/29320914/",
+      "https://pubmed.ncbi.nlm.nih.gov/40820406/",
+      "https://pubmed.ncbi.nlm.nih.gov/39163984/",
+      "https://pubmed.ncbi.nlm.nih.gov/37725930/",
+      "https://pubmed.ncbi.nlm.nih.gov/33738399/",
+      "https://pubmed.ncbi.nlm.nih.gov/41123646/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "teratoma-intrapericardico-fetal-e-pediatrico-hidropsia-nao-imune-diagnostico-e-conduta-cirurgica"
+    ],
+    "patient_material_slug": null
   }
 ]
