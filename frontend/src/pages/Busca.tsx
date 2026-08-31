@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import Icone from "../components/Icone";
 
 type Res = { slug: string; title: string; kind: string; frente?: string; theme: string; snippet: string; ano?: number };
 type Drug = { slug: string; generic_name: string; drug_class: string; brand_names?: string[] };
@@ -13,7 +14,7 @@ type Insight = Drug & {
   half_life_hours: number | null; duration_of_action_hours: number | null;
   sbp_reduction_mmhg: number | null; dbp_reduction_mmhg: number | null; bp_evidence_source: string | null;
 };
-type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: { slug: string; titulo: string; subtitulo?: string; rota: string }[] };
+type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: { slug: string; titulo: string; subtitulo?: string; motivo_relacao?: string; rota: string }[] };
 
 const SECOES = {
   geral: ["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca", 10],
@@ -135,7 +136,7 @@ export default function Busca() {
       <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
         {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
-        {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
+        {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}{x.motivo_relacao && <small className="tct-relation-reason"><Icone nome="check" />{x.motivo_relacao}</small>}</Link>)}</div></section>)}
       </div>
     </section>}
     {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
