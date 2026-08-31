@@ -83,7 +83,6 @@ const MODULOS: ModuloGrupo[] = [
       { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
       { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
       { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
-      { to: "/cursos", label: "Cursos & Atualizações", icon: "curso" },
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
     ],
   },
