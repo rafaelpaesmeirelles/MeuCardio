@@ -6,6 +6,7 @@ on:
       - report/science-publication-readiness-20260831-30h
     paths:
       - .github/workflows/review-quarantine-74-20260831.yml
+      - scripts/review_quarantine_sources_20260831.py
 
 permissions:
   contents: write
