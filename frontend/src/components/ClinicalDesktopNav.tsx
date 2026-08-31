@@ -100,6 +100,7 @@ const SPACE_META: Record<SpaceKey, { label: string; icon: NomeIcone; actions: Na
     label: "Hospital", icon: "emergencia",
     actions: [
       { to: "/round", label: "Round", icon: "pacientes" },
+      ...(heartTeamEnabled() ? [{ to: "/heart-team", label: "Heart Team", icon: "assistente" as NomeIcone }] : []),
       { to: "/cardiologia-intensiva", label: "Cardio Intensiva", icon: "clinica" },
       { to: "/emergencia", label: "Emergências", icon: "emergencia" },
       { to: "/exames-ia", label: "IA para Exames", icon: "ecg" },
@@ -148,7 +149,7 @@ const SPACE_META: Record<SpaceKey, { label: string; icon: NomeIcone; actions: Na
 const PATH_TO_SPACE: Array<[string, SpaceKey]> = [
   ["/documentos-cientificos-ia", "pesquisa"], ["/evidencias", "pesquisa"], ["/estudos", "pesquisa"], ["/diretrizes", "pesquisa"], ["/biblioteca", "pesquisa"], ["/busca", "pesquisa"], ["/fluxogramas", "pesquisa"], ["/exportar", "pesquisa"], ["/favoritos", "pesquisa"],
   ["/casos-clinicos", "ensino"], ["/trilhas", "ensino"], ["/material-paciente", "ensino"], ["/galeria", "ensino"], ["/apresentacao", "ensino"],
-  ["/round", "hospital"], ["/cardiologia-intensiva", "hospital"], ["/checklists", "hospital"], ["/emergencia", "hospital"], ["/exames-ia", "hospital"], ["/ecg-ia", "hospital"],
+  ["/heart-team", "hospital"], ["/round", "hospital"], ["/cardiologia-intensiva", "hospital"], ["/checklists", "hospital"], ["/emergencia", "hospital"], ["/exames-ia", "hospital"], ["/ecg-ia", "hospital"],
   ["/corvia-mail", "gestao"], ["/caixa-de-email", "gestao"], ["/whatsapp-assistant", "gestao"], ["/usuarios-online", "gestao"], ["/telediagnostico", "gestao"], ["/fila-telediagnostico", "gestao"], ["/sincronizacao", "gestao"], ["/minha-conta", "gestao"], ["/verificacao-identidade", "gestao"], ["/excluir-conta", "gestao"], ["/indicadores", "gestao"], ["/receitas-para-assinatura", "gestao"], ["/admin", "gestao"], ["/privacidade", "gestao"], ["/termos", "gestao"],
 ];
 
