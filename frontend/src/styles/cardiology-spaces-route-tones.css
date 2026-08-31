@@ -145,4 +145,35 @@ body.cardiology-spaces-active .spaces-door:not(.is-active) .spaces-door__lit{
   body.cardiology-spaces-active .spaces-home .spaces-motto{
     transform:translateY(-12px)!important;
   }
+
+  /* Preset visual do Hospital exatamente como na prancha aprovada. Esta regra
+     só entra quando o conjunto ainda é o default original de seis itens. Se o
+     usuário personalizou qualquer item, o seletor deixa de corresponder e a
+     seleção personalizada permanece intacta. */
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"]){
+    grid-auto-flow:row!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    grid-auto-columns:auto!important;
+  }
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/round"],
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/emergencia"]{
+    display:none!important;
+  }
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/exames"] span,
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/documentos"] span,
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/checklists"] span{
+    font-size:0!important;
+  }
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/exames"] span::after{
+    content:"Revisar exames";
+    font-size:.68rem;
+  }
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/documentos"] span::after{
+    content:"Documentos para assinar";
+    font-size:.68rem;
+  }
+  body.cardiology-spaces-active .spaces-home--blue .spaces-layer--essential>div:has(>a[href="/round"]):has(>a[href="/exames"]):has(>a[href="/documentos"]):has(>a[href="/checklists"]):has(>a[href="/emergencia"]):has(>a[href="/calculadoras"])>a[href="/checklists"] span::after{
+    content:"Protocolos";
+    font-size:.68rem;
+  }
 }
