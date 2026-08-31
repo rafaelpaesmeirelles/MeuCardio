@@ -118,7 +118,7 @@ def media_review(mid:int,data:MediaReview,db:Session=Depends(get_db),user:User=D
  if not data.confirmed or data.action=="reject":m.status="media_rejected";db.commit();return {"ok":True,"status":m.status,"action":"reject"}
  if data.action=="store_only":m.status="reviewed_stored";_audit(db,user.id,"whatsapp_media_stored","whatsapp_message",m.id);db.commit();return {"ok":True,"status":m.status,"action":data.action}
  if not data.contains_no_identifiers:raise HTTPException(422,"Confirme que o arquivo não contém identificadores ou envie uma versão anonimizada")
- _,media_payload,media_data=_media_for_command(db,user,m.id);extracted=_extract_document(media_data,media_payload.get("mime_type"))
+ _,media_payload,media_data=_media_for_command(db,user,m.id,require_reviewed=False);extracted=_extract_document(media_data,media_payload.get("mime_type"))
  if extracted and detect_pii(extracted):raise HTTPException(422,"Identificadores detectados no documento. Envie uma versão anonimizada antes de resumir ou encaminhar ao Heart Team")
  kind="document_summary" if data.action=="summarize" else "heart_team_start";text=data.question or ("Resumir documento revisado" if kind=="document_summary" else "CorVIA, monte um Heart Team para este caso")
  c,r,t,u=create_command(db,user,_active(db,user),text=text,idempotency_key=f"review:media:{m.id}:{kind}",explicit_kind=kind,arguments={"media_message_id":m.id,"question":data.question},pii_reviewed=True,message_id=m.id);m.status="processed";_audit(db,user.id,"whatsapp_media_reviewed","whatsapp_message",m.id,detail={"action":data.action});db.commit();return {"ok":True,"status":m.status,"action":data.action,"command":_out(c,r,t,u)}

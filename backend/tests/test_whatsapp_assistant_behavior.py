@@ -365,7 +365,7 @@ def test_patient_material_is_private_draft_not_published(monkeypatch):
 
 def test_media_review_blocks_document_with_detected_identifiers(monkeypatch):
     link,user=link_user();message=WhatsAppMessage(id=4,link_id=9,owner_id=7,direction="inbound",message_type="document",payload_cipher=b"x",status="awaiting_media_review",expires_at=utcnow());db=DB({WhatsAppMessage:[message]});create=Mock()
-    monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True);monkeypatch.setattr(api,"_media_for_command",lambda *a:(message,{"mime_type":"application/pdf"},b"pdf"));monkeypatch.setattr(api,"_extract_document",lambda *a:"Paciente na Rua das Flores, 120");monkeypatch.setattr(api,"create_command",create)
+    monkeypatch.setattr(settings,"whatsapp_assistant_enabled",True);monkeypatch.setattr(api,"_media_for_command",lambda *a,**k:(message,{"mime_type":"application/pdf"},b"pdf"));monkeypatch.setattr(api,"_extract_document",lambda *a:"Paciente na Rua das Flores, 120");monkeypatch.setattr(api,"create_command",create)
     with pytest.raises(HTTPException) as exc:api.media_review(4,MediaReview(confirmed=True,action="heart_team",contains_no_identifiers=True),db=db,user=user)
     assert exc.value.status_code==422;create.assert_not_called()
 

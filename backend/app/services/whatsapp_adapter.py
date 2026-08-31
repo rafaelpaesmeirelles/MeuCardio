@@ -95,11 +95,32 @@ class MetaCloudAdapter:
         size = int(info.get("file_size") or 0)
         if not url or size > settings.whatsapp_max_media_bytes:
             raise WhatsAppProviderError("Mídia ausente ou acima do limite")
-        response = self.client.get(url, headers=headers)
-        if response.status_code >= 400 or len(response.content) > settings.whatsapp_max_media_bytes:
-            raise WhatsAppProviderError("Falha ou limite excedido no download")
-        mime_type = (response.headers.get("content-type") or info.get("mime_type") or "application/octet-stream").split(";", 1)[0].lower()
-        return MediaResult(response.content, mime_type, f"meta-{safe_id}")
+        limit = settings.whatsapp_max_media_bytes
+        try:
+            with self.client.stream("GET", url, headers=headers) as response:
+                if response.status_code >= 400:
+                    raise WhatsAppProviderError("Falha no download da mídia")
+                declared = response.headers.get("content-length")
+                if declared:
+                    try:
+                        if int(declared) > limit:
+                            raise WhatsAppProviderError("Mídia acima do limite")
+                    except ValueError as exc:
+                        raise WhatsAppProviderError("Content-Length de mídia inválido") from exc
+                chunks: list[bytes] = []
+                downloaded = 0
+                for chunk in response.iter_bytes():
+                    downloaded += len(chunk)
+                    if downloaded > limit:
+                        raise WhatsAppProviderError("Mídia acima do limite")
+                    chunks.append(chunk)
+                content = b"".join(chunks)
+                mime_type = (response.headers.get("content-type") or info.get("mime_type") or "application/octet-stream").split(";", 1)[0].lower()
+        except WhatsAppProviderError:
+            raise
+        except httpx.HTTPError as exc:
+            raise WhatsAppProviderError("Falha no download da mídia") from exc
+        return MediaResult(content, mime_type, f"meta-{safe_id}")
 
     def transcribe_audio(self, content, *, filename, mime_type):
         if not settings.openai_api_key:

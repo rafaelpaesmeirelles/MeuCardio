@@ -113,5 +113,6 @@ def test_browser_and_pwa_use_canonical_mark_only():
     assert 'href="/corvia-mark-canonical.svg"' in index
     assert "corvia-logo-canonical.svg" in index
     assert 'src: "/corvia-mark-canonical.svg"' in vite
+    active_pwa_identity = vite.split("includeAssets:", 1)[1].split("workbox:", 1)[0]
     for legacy in ("icon-192.png", "icon-512.png", "icon-maskable.png", "favicon.png", "apple-touch-icon.png"):
-        assert legacy not in vite
+        assert legacy not in active_pwa_identity

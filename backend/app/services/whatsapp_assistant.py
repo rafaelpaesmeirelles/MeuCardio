@@ -106,10 +106,11 @@ def _recipient_opted_in(db,user,phone,event_id):
    if json.loads(item.detail or "{}").get("recipient_phone_hash")==phone_hash(phone):return False
   except (TypeError,ValueError):continue
  return True
-def _media_for_command(db,user,message_id):
+def _media_for_command(db,user,message_id,*,require_reviewed=True):
  m=db.query(WhatsAppMessage).filter(WhatsAppMessage.id==message_id,WhatsAppMessage.owner_id==user.id).first()
  if not m:raise HTTPException(404,"Arquivo não encontrado")
  payload=decrypt_payload(m.payload_cipher,user.id) or {};key=payload.get("media_storage_key")
+ if require_reviewed and (m.status!="processed" or payload.get("sanitized") is not True):raise HTTPException(409,"Arquivo ainda não foi confirmado pelo assinante")
  if not key:raise HTTPException(409,"Arquivo não está disponível")
  return m,payload,ler(key,user.id,raiz=Path(settings.whatsapp_media_dir))
 def _extract_document(data,mime_type):

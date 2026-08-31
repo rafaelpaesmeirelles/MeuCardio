@@ -98,6 +98,7 @@ def test_media_validation_rejects_type_spoofing(monkeypatch):
  monkeypatch.setattr(settings,"whatsapp_max_media_bytes",1024)
  with pytest.raises(Exception):_validate_media("image",MediaResult(b"%PDF-1.4\n%%EOF","image/jpeg","x"))
  assert _validate_media("audio",MediaResult(b"OggSdata","audio/ogg","a"))[0]=="audio/ogg"
+ with pytest.raises(Exception):_validate_media("audio",MediaResult(b"conteudo-arbitrario","audio/ogg","a"))
  with pytest.raises(Exception):_validate_media("audio",MediaResult(b"x","application/octet-stream","a"))
 
 def test_meta_media_download_enforces_provider_size(monkeypatch):
@@ -106,6 +107,14 @@ def test_meta_media_download_enforces_provider_size(monkeypatch):
  client=Mock();client.get.return_value=metadata
  with pytest.raises(WhatsAppProviderError):MetaCloudAdapter(client=client).download_media("media_1")
  assert client.get.call_count==1
+
+def test_meta_media_download_stops_stream_above_limit(monkeypatch):
+ monkeypatch.setattr(settings,"whatsapp_phone_number_id","p");monkeypatch.setattr(settings,"whatsapp_meta_access_token","t");monkeypatch.setattr(settings,"whatsapp_meta_app_secret","s");monkeypatch.setattr(settings,"whatsapp_meta_verify_token","v");monkeypatch.setattr(settings,"whatsapp_max_media_bytes",5)
+ metadata=Mock(status_code=200);metadata.json.return_value={"url":"https://media","file_size":0,"mime_type":"audio/ogg"}
+ response=Mock(status_code=200,headers={"content-type":"audio/ogg"});response.__enter__=Mock(return_value=response);response.__exit__=Mock(return_value=False);response.iter_bytes.return_value=iter((b"OggS",b"12"))
+ client=Mock();client.get.return_value=metadata;client.stream.return_value=response
+ with pytest.raises(WhatsAppProviderError):MetaCloudAdapter(client=client).download_media("media_1")
+ client.stream.assert_called_once()
 
 def test_audio_transcription_returns_reviewable_text(monkeypatch):
  monkeypatch.setattr(settings,"whatsapp_phone_number_id","p");monkeypatch.setattr(settings,"whatsapp_meta_access_token","t");monkeypatch.setattr(settings,"whatsapp_meta_app_secret","s");monkeypatch.setattr(settings,"whatsapp_meta_verify_token","v");monkeypatch.setattr(settings,"openai_api_key","key")

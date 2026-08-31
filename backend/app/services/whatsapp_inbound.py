@@ -74,7 +74,15 @@ def _validate_media(message_type, media):
         raise UploadRejected(413, "Mídia vazia ou acima do limite.")
     filename = _media_filename(message_type, media.mime_type, media.filename)
     if message_type == "audio":
-        if media.mime_type not in {"audio/ogg", "audio/mpeg", "audio/mp4", "audio/aac", "audio/amr"}:
+        signatures = {
+            "audio/ogg": lambda data: data.startswith(b"OggS"),
+            "audio/mpeg": lambda data: data.startswith(b"ID3") or (len(data) >= 2 and data[0] == 0xFF and data[1] & 0xE0 == 0xE0),
+            "audio/mp4": lambda data: len(data) >= 12 and data[4:8] == b"ftyp",
+            "audio/aac": lambda data: len(data) >= 2 and data[0] == 0xFF and data[1] & 0xF0 == 0xF0,
+            "audio/amr": lambda data: data.startswith((b"#!AMR\n", b"#!AMR-WB\n")),
+        }
+        validator = signatures.get(media.mime_type)
+        if validator is None or not validator(media.content):
             raise UploadRejected(422, "Formato de áudio não permitido.")
         return media.mime_type, filename
     validated = validate_file(media.content, filename, "clinical_exam")
