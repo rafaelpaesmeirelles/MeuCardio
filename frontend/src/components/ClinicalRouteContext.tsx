@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/cardiology-spaces-route-deep.css";
 import "../styles/cardiology-spaces-consultorio-pages.css";
+import "../styles/cardiology-spaces-consultorio-prescricao.css";
 
 type RouteGroup = "documentos" | "pacientes" | "prescricao" | "agenda" | "mail" | "assistente" | "integracoes" | "conhecimento" | "ferramentas" | "emergencia" | "rede" | "telediagnostico" | "conta" | "admin" | "geral";
 type CardiologySpace = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
