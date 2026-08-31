@@ -1,45 +1,57 @@
-/* Identidade CorVIA: em wordmarks textuais legadas, "VIA" permanece azul canônico. */
-.prehome-brand__logo strong,
-.cc-mobile-more__head>div>span>strong,
-.cos-brand__text>strong,
-.cos-topbar__mobile-brand>span,
-.cos-tour__brand strong {
-  position:relative;
+/* Identidade CorVIA canônica.
+   A palavra VIA existe somente no markup ou no ativo oficial. Nunca é
+   reconstruída por pseudo-elemento: isso evita definitivamente CorVIAVIA. */
+.corvia-via,
+.spaces-brand strong b,
+.cst__brand strong b {
+  color:#16d9f5 !important;
+}
+
+.prehome-brand__logo {
+  gap:14px;
+}
+
+.prehome-brand__logo > img {
+  width:clamp(62px,5vw,84px);
+  height:clamp(62px,5vw,84px);
+}
+
+.prehome-brand__logo strong {
   display:inline-block;
+  color:#f7fbff;
+  font-size:clamp(2rem,2.45vw,2.85rem);
+  letter-spacing:-.045em;
+  line-height:.92;
 }
 
-.prehome-brand__logo strong::after,
-.cc-mobile-more__head>div>span>strong::after,
-.cos-brand__text>strong::after,
-.cos-topbar__mobile-brand>span::after,
-.cos-tour__brand strong::after {
-  position:absolute;
-  top:0;
-  right:0;
-  content:"VIA";
-  color:#16d9f5;
-  pointer-events:none;
+.prehome-brand__logo small {
+  margin-top:9px;
+  color:#8ea8ba;
+  font-size:clamp(.56rem,.65vw,.72rem);
+  letter-spacing:.26em;
 }
 
-.prehome-brand__logo strong:has(.corvia-via)::after,
-.cc-mobile-more__head>div>span>strong:has(.corvia-via)::after,
-.cos-brand__text>strong:has(.corvia-via)::after,
-.cos-topbar__mobile-brand>span:has(.corvia-via)::after,
-.cos-tour__brand strong:has(.corvia-via)::after {
-  content:none;
-}
-
-.corvia-via { color:#16d9f5; }
-
-/* Sidebar desktop: nunca reconstruir a wordmark com pseudo-elementos.
-   Usa diretamente o ativo Cardiology Spaces, com VIA ciano. */
+/* Sidebar desktop: usa diretamente o ativo Cardiology Spaces.
+   O arquivo contém VIA ciano e não recebe texto sintético. */
 .ccc-nav__brand {
+  min-height:88px;
   background-image:url('/corvia-logo-spaces-dark.svg');
   background-repeat:no-repeat;
-  background-position:left .9rem center;
-  background-size:174px auto;
+  background-position:left 1rem center;
+  background-size:min(202px,calc(100% - 28px)) auto;
 }
 
 .ccc-nav__brand > * {
   visibility:hidden;
+}
+
+@media(max-width:900px) {
+  .prehome-brand__logo > img {
+    width:58px;
+    height:58px;
+  }
+
+  .prehome-brand__logo strong {
+    font-size:1.92rem;
+  }
 }
