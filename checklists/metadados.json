@@ -37850,5 +37850,509 @@
       }
     ],
     "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "bloqueio-do-sraa-isglt2-e-finerenona-na-hipertensao-com-drc",
+    "condicao": "Hipertensão em doença renal crônica não dialítica",
+    "resumo": "Checklist de execução para o manejo farmacológico nefroprotetor combinado no hipertenso com DRC — quando iniciar e como titular IECA/BRA, quando associar iSGLT2 e finerenona, e os prazos de reavaliação de creatinina e potássio que evitam a suspensão indevida do bloqueio do SRAA.",
+    "documento_origem": "fluxograma-hipertensao-na-doenca-renal-cronica-alvo-bloqueio-do-sraa-isglt2-e-finerenona",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018. PMID: 38490803.",
+      "Kidney Disease: Improving Global Outcomes (KDIGO) Blood Pressure Work Group. KDIGO 2021 Clinical Practice Guideline for the Management of Blood Pressure in Chronic Kidney Disease. Kidney Int. 2021;99(3S):S1-S87. DOI: 10.1016/j.kint.2020.11.003. PMID: 33637192.",
+      "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178.",
+      "fluxograma-hipertensao-na-doenca-renal-cronica-alvo-bloqueio-do-sraa-isglt2-e-finerenona (documento de origem, já publicado no acervo)"
+    ],
+    "itens": [
+      {
+        "id": "has-drc-confirma-populacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem doença renal crônica não dialítica (TFGe abaixo de 60 ou albuminúria persistente), sem transplante renal, antes de aplicar este fluxo",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "has-drc-classifica-albuminuria",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Albuminúria classificada pela relação albumina-creatinina urinária: categoria A2/A3 (30 mg/g ou mais) versus A1 (abaixo de 30 mg/g), pois essa categoria decide o restante da conduta",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "has-drc-inicia-ieca-bra",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Em albuminúria A2 ou A3, IECA ou BRA iniciado e titulado até a dose máxima aprovada tolerada, sem combinar IECA com BRA nem com inibidor direto de renina",
+        "origem_secao": "Bloqueio do SRAA: quem, em que dose, e o que tolerar"
+      },
+      {
+        "id": "has-drc-controle-2-4-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "PA, creatinina e potássio reavaliados de 2 a 4 semanas após o início ou qualquer aumento de dose do IECA/BRA, repetindo a cada nova mudança de dose de fármaco que atue no SRAA",
+        "origem_secao": "Bloqueio do SRAA: quem, em que dose, e o que tolerar"
+      },
+      {
+        "id": "has-drc-creatinina-acima-30",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se a creatinina subir mais de 30% do basal, dose reduzida ou fármaco suspenso e causa investigada (depleção de volume, AINE, contraste, estenose bilateral de artéria renal) antes de reintroduzir",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "has-drc-hipercalemia-manejo",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Diante de hipercalemia, o bloqueio do SRAA mantido com medidas para baixar o potássio (restrição dietética, retirada de suplementos e outros hipercalemiantes, diurético, quelante); reduzir ou suspender somente se essas medidas não controlarem",
+        "origem_secao": "Hipercalemia: o ramo que encaminha"
+      },
+      {
+        "id": "has-drc-hipotensao-sintomatica",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Em hipotensão sintomática associada ao bloqueio do SRAA, dose reduzida ou fármaco suspenso e o quadro reavaliado",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "has-drc-isglt2-tfge20",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Com TFGe de 20 mL/min/1,73 m² ou mais, inibidor de SGLT2 associado ao IECA/BRA e mantido mesmo se a TFGe cair abaixo de 20 depois, salvo intolerância ou início de terapia renal substitutiva",
+        "origem_secao": "Inibidor de SGLT2: a TFGe decide o início, não a continuação"
+      },
+      {
+        "id": "has-drc-finerenona-indicacao",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Em diabetes tipo 2 com TFGe acima de 25, potássio normal e albuminúria persistente apesar de IECA/BRA em dose máxima tolerada, finerenona associada na dose correta pela TFGe (10 mg se TFGe 25-59, 20 mg se 60 ou mais)",
+        "origem_secao": "Finerenona: quem, em que dose e como vigiar o potássio"
+      },
+      {
+        "id": "has-drc-finerenona-potassio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Potássio controlado 1 mês após iniciar finerenona e depois a cada 4 meses; fármaco suspenso se potássio acima de 5,5 mmol/L, com reintrodução em 10 mg somente quando o potássio voltar a 5,0 mmol/L ou menos",
+        "origem_secao": "Finerenona: quem, em que dose e como vigiar o potássio"
+      },
+      {
+        "id": "has-drc-alvo-pressorico",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Alvo sistólico de 120 a 129 mmHg (ESC 2024) ou abaixo de 120 mmHg (KDIGO, se tolerado, com medida padronizada) individualizado para menos intensivo em fragilidade, alto risco de quedas/fraturas, expectativa de vida muito limitada ou hipotensão postural sintomática",
+        "origem_secao": "O alvo: 120 a 129 ou abaixo de 120"
+      },
+      {
+        "id": "has-drc-tfge-abaixo-15",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Com TFGe abaixo de 15 e sintomas urêmicos, considerada a redução ou suspensão do IECA/BRA para conforto, diurético de alça ajustado e preparo de terapia renal substitutiva iniciado com a nefrologia",
+        "origem_secao": "TFGe abaixo de 30 e abaixo de 20"
+      },
+      {
+        "id": "has-drc-restricao-sodio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre restrição de sódio abaixo de 2 g por dia, válida para todos os ramos da árvore",
+        "origem_secao": "Árvore de decisão"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "avaliacao-e-vigilancia-cardiovascular-ao-longo-do-tratamento-oncologico-ic-os-mascc-2026",
+    "condicao": "Avaliação e vigilância cardiovascular ao longo do tratamento oncológico",
+    "resumo": "Checklist de execução para acompanhar o paciente adulto com câncer do ponto de vista cardiovascular antes, durante e após a terapia sistêmica, incluindo critérios de encaminhamento precoce à cardio-oncologia e armadilhas a evitar, segundo o statement IC-OS/MASCC 2026.",
+    "documento_origem": "ic-os-mascc-2026-padrao-minimo-de-cuidado-cardiovascular-no-adulto-com-cancer",
+    "theme": "Cardio-oncologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Dent S, Nadler MB, Blaes A, et al. Prevention and management of cardiovascular disease in adults with cancer: an International Cardio-Oncology Society (IC-OS) and Multinational Association of Supportive Care in Cancer (MASCC) clinical practice statement. Support Care Cancer. 2026;34(6):590. DOI: 10.1007/s00520-026-10741-8. PMID: 42209784.",
+      "Correction: Dent S, Nadler MB, Blaes A, et al. Support Care Cancer. 2026;34(7):707. DOI: 10.1007/s00520-026-10950-1. PMID: 42377594."
+    ],
+    "itens": [
+      {
+        "id": "icosmascc-avaliacao-basal-pre-tratamento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação de risco cardiovascular realizada antes de iniciar a terapia sistêmica, cobrindo história de doença cardiovascular, hipertensão, diabetes, dislipidemia, tabagismo, obesidade, sintomas atuais, terapias oncológicas prévias cardiotóxicas e radioterapia prévia envolvendo coração/mediastino quando relevante",
+        "origem_secao": "1. Antes do tratamento oncológico"
+      },
+      {
+        "id": "icosmascc-exames-basais-proporcionais",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Necessidade de ECG, biomarcadores e imagem definida de forma proporcional à terapia planejada e ao risco basal, sem solicitação indiscriminada de ecocardiograma para todo paciente",
+        "origem_secao": "1. Antes do tratamento oncológico"
+      },
+      {
+        "id": "icosmascc-controle-fatores-risco-durante",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Pressão arterial, diabetes e dislipidemia tratados ativamente durante a terapia oncológica, com cessação do tabagismo e orientação de atividade física/estilo de vida quando clinicamente possível",
+        "origem_secao": "2. Durante a terapia"
+      },
+      {
+        "id": "icosmascc-reconhecimento-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dispneia, dor torácica, síncope, palpitações e edema pesquisados ativamente para reconhecimento precoce ao longo do tratamento",
+        "origem_secao": "2. Durante a terapia"
+      },
+      {
+        "id": "icosmascc-vigilancia-dirigida-risco",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Novas alterações em ECG, biomarcadores ou imagem identificadas conforme a vigilância específica exigida pela terapia em uso, sem aplicar bateria fixa de exames igual para todos os tumores e fármacos",
+        "origem_secao": "2. Durante a terapia; 3. Não confundir prevenção com excesso de exames"
+      },
+      {
+        "id": "icosmascc-encaminhamento-por-descontrole",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para cardio-oncologia/cardiologia realizado quando o risco cardiovascular ultrapassa a capacidade de manejo do time oncológico",
+        "origem_secao": "2. Durante a terapia"
+      },
+      {
+        "id": "icosmascc-criterios-encaminhamento-precoce",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Encaminhamento precoce considerado diante de doença cardiovascular estabelecida com terapia potencialmente cardiotóxica, sintomas cardiovasculares antes/durante o tratamento, fatores de risco persistentemente descontrolados, alteração nova de função ventricular/strain/troponina/ECG, necessidade de decidir sobre continuar, pausar, trocar ou reiniciar a terapia por toxicidade, múltiplas toxicidades concorrentes ou decisão compartilhada complexa como rechallenge após miocardite por ICI",
+        "origem_secao": "Quando encaminhar mais cedo para cardio-oncologia"
+      },
+      {
+        "id": "icosmascc-nao-suspender-por-fator-controlavel",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Tratamento oncológico não interrompido apenas por fator de risco cardiovascular controlável, e hipertensão, diabetes ou dislipidemia não deixados sem tratamento por o câncer ser a prioridade imediata",
+        "origem_secao": "Armadilhas"
+      },
+      {
+        "id": "icosmascc-reavaliacao-pos-tratamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Ao término da terapia, ou periodicamente em tratamentos de longa duração, fatores de risco cardiovascular reavaliados, exposições cardiotóxicas cumulativas documentadas e sintomas ou disfunção cardiovascular nova identificados",
+        "origem_secao": "4. Após o tratamento"
+      },
+      {
+        "id": "icosmascc-plano-vigilancia-longo-prazo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano de vigilância cardiovascular de longo prazo definido, com responsável explícito pela continuidade do cuidado esclarecido entre oncologia, atenção primária, cardiologia ou cardio-oncologia",
+        "origem_secao": "4. Após o tratamento"
+      },
+      {
+        "id": "icosmascc-nao-encerrar-vigilancia-ultima-dose",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Vigilância cardiovascular não encerrada no dia da última infusão",
+        "origem_secao": "Armadilhas"
+      },
+      {
+        "id": "icosmascc-nao-extrapolar-cronograma-entre-classes",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Cronograma de monitorização de um agente ou classe de terapia não aplicado a outra classe de tratamento sem fonte específica que o justifique",
+        "origem_secao": "Nota de governança"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "tecnica-e-seguranca-do-cateterismo-cardiaco-direito-na-hipertensao-pulmonar",
+    "condicao": "Cateterismo cardíaco direito na hipertensão pulmonar",
+    "resumo": "Checklist de execução técnica do cateterismo cardíaco direito em hipertensão pulmonar, cobrindo zeragem do transdutor, medida correta da pressão de oclusão capilar pulmonar, escolha do método de débito cardíaco e vigilância de segurança do procedimento.",
+    "documento_origem": "cateterismo-cardiaco-direito-na-hipertensao-pulmonar-tecnica-armadilhas-e-seguranca",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Rosenkranz S, Preston IR. Right heart catheterisation: best practice and pitfalls in pulmonary hypertension. Eur Respir Rev. 2015;24(138):642-652. DOI: 10.1183/16000617.0062-2015. PMID: 26621978",
+      "Hoeper MM, Lee SH, Voswinckel R, et al. Complications of right heart catheterization procedures in patients with pulmonary hypertension in experienced centers. J Am Coll Cardiol. 2006;48(12):2546-2552. DOI: 10.1016/j.jacc.2006.07.061. PMID: 17174196",
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548"
+    ],
+    "itens": [
+      {
+        "id": "rhc-zero-transdutor",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Zerar o transdutor de pressão na linha médio-torácica, com o paciente em decúbito dorsal, no ponto equidistante entre o esterno anterior e a superfície do leito (interseção do plano frontal médio-torácico, do quarto espaço intercostal anterior e do plano sagital médio) antes de registrar qualquer pressão",
+        "origem_secao": "Zero do transdutor: o ponto de referência que decide todo o resto"
+      },
+      {
+        "id": "rhc-tecnica-oclusao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Insuflar o balão ainda no átrio direito e avançar o cateter com o balão insuflado até a posição de oclusão, evitando inflações e desinflações repetidas nessa posição pelo risco de ruptura de artéria pulmonar",
+        "origem_secao": "Pressão de oclusão capilar pulmonar: como medir certo, e os dois jeitos de errar"
+      },
+      {
+        "id": "rhc-pocp-tres-medidas",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Registrar a pressão de oclusão capilar pulmonar (POCP) como a média de três medidas ao final da expiração, não como leitura única ou não sincronizada com o ciclo respiratório",
+        "origem_secao": "Pressão de oclusão capilar pulmonar: como medir certo, e os dois jeitos de errar"
+      },
+      {
+        "id": "rhc-insuflacao-parcial",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Preferir insuflação parcial do balão (não insuflação plena) na medida da POCP, já que o estudo citado encontrou maior precisão com meia insuflação do que com o balão cheio",
+        "origem_secao": "Os dois erros opostos, e os dois documentados com dado numérico"
+      },
+      {
+        "id": "rhc-suspeita-subinsuflacao",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Em paciente com PAP muito elevada e POCP elevada, questionar se o balão ocluiu completamente o ramo pulmonar antes de aceitar fenótipo pós-capilar, já que a sub-insuflação é mais comum nesses pacientes e eleva falsamente a POCP",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rhc-termodiluicao-preferida",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Medir o débito cardíaco por termodiluição como método preferido, inclusive em pacientes com débito cardíaco muito baixo e/ou regurgitação tricúspide importante",
+        "origem_secao": "Débito cardíaco: termodiluição é a preferida, Fick indireto tem erro sistemático"
+      },
+      {
+        "id": "rhc-evitar-fick-padrao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Não usar o método de Fick indireto como padrão de medida de débito cardíaco quando a termodiluição está disponível, por depender de estimativa (não medição direta) do consumo de oxigênio",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rhc-desafio-fluido",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Considerar desafio de fluido (infusão intravenosa de 500 mL de solução salina em 5-10 minutos) quando há suspeita de disfunção diastólica de ventrículo esquerdo oculta em paciente com POCP normal em repouso, reconhecendo que a técnica ainda carece de padronização para uso rotineiro",
+        "origem_secao": "Desafio de fluido e teste de exercício durante o cateterismo"
+      },
+      {
+        "id": "rhc-centro-experiente",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o procedimento é realizado em centro com experiência reconhecida em hipertensão pulmonar, sem presumir que os índices de segurança de referência (1,1% de complicação grave; 0,055% de mortalidade) se aplicam a qualquer serviço",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rhc-vigilancia-complicacoes",
+        "categoria": "emergencia",
+        "obrigatorio": true,
+        "texto": "Vigiar durante e após o procedimento sinais de complicação relacionada ao acesso venoso (hematoma, pneumotórax), arritmia e episódio de hipotensão, as complicações mais frequentes descritas",
+        "origem_secao": "Segurança do procedimento: os números de Hoeper et al. (2006)"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "manejo-perioperatorio-de-isglt2-suspensao-e-reintroducao-no-diabetico-cardiopata",
+    "condicao": "Manejo perioperatório de inibidores de SGLT2 no diabético cardiopata",
+    "resumo": "Passo a passo para suspender e reintroduzir o inibidor de SGLT2 (dapagliflozina, empagliflozina, canagliflozina ou ertugliflozina) ao redor de cirurgia ou procedimento invasivo no diabético tipo 2 cardiopata, incluindo o gatilho para dosar cetonemia e reconhecer cetoacidose euglicêmica.",
+    "documento_origem": "fluxograma-manejo-perioperatorio-de-isglt2-no-diabetico-cardiopata",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "American Diabetes Association Professional Practice Committee. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes-2024. Diabetes Care. 2024;47(Suppl 1):S295-S306. DOI: 10.2337/dc24-S016. PMID: 38078585.",
+      "Levy NA, El-Boghdadly K, Lobo DN, et al. Peri-operative management of diabetes mellitus: a multidisciplinary consensus statement from the Association of Anaesthetists and the Joint British Diabetes Societies for Inpatient Care group. Anaesthesia. 2026;81(8):1116-1131. DOI: 10.1111/anae.70181. PMID: 41696887.",
+      "Buggy DJ, Columb MO, Hermanides J, et al. Withholding or continuing glucose-lowering drugs for elective surgery in patients with type 2 diabetes mellitus: a secondary analysis of the MOPED international, prospective, observational study. Br J Anaesth. 2026;137(1):99-109. DOI: 10.1016/j.bja.2026.03.068. PMID: 42191528."
+    ],
+    "itens": [
+      {
+        "id": "sglt2-po-identificar-cenario",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente é diabético tipo 2 cardiopata em uso de dapagliflozina, empagliflozina, canagliflozina ou ertugliflozina e que será submetido a cirurgia ou procedimento invasivo com jejum perioperatório",
+        "origem_secao": "Árvore de decisão — nó inicial (R)"
+      },
+      {
+        "id": "sglt2-po-classificar-urgencia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o procedimento como eletivo com pelo menos 4 dias de antecedência para suspender o fármaco, ou como urgente/emergente/eletivo sem antecedência suficiente para suspensão programada",
+        "origem_secao": "Árvore de decisão — nó inicial (R)"
+      },
+      {
+        "id": "sglt2-po-identificar-molecula",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "No cenário eletivo com antecedência suficiente, identificar qual inibidor de SGLT2 o paciente utiliza para definir o intervalo de suspensão",
+        "origem_secao": "Árvore de decisão — D1 (Qual inibidor de SGLT2 o paciente utiliza?)"
+      },
+      {
+        "id": "sglt2-po-suspender-ertugliflozina",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Suspender a ertugliflozina 4 dias antes do procedimento eletivo — intervalo específico recomendado pela FDA para esta molécula, citado pela ADA Standards of Care in Diabetes-2024",
+        "origem_secao": "Árvore de decisão — P1a"
+      },
+      {
+        "id": "sglt2-po-suspender-outros",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Suspender dapagliflozina, empagliflozina ou canagliflozina 3 dias antes do procedimento eletivo (ADA Standards of Care in Diabetes-2024)",
+        "origem_secao": "Árvore de decisão — P1b"
+      },
+      {
+        "id": "sglt2-po-suspender-urgente",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "No cenário urgente, emergente ou eletivo sem antecedência suficiente, suspender o iSGLT2 assim que a decisão do procedimento for tomada, mesmo sem completar o intervalo pleno de suspensão",
+        "origem_secao": "Árvore de decisão — P2"
+      },
+      {
+        "id": "sglt2-po-monitorar-cetonas",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Manter monitorização diária de cetonas capilares, mesmo com glicemia normal, até a alimentação e a hidratação orais normalizarem — em qualquer dos cenários, eletivo ou urgente",
+        "origem_secao": "Árvore de decisão — P1a, P1b e P2"
+      },
+      {
+        "id": "sglt2-po-gatilho-cetonemia",
+        "categoria": "emergencia",
+        "obrigatorio": true,
+        "texto": "No cenário urgente, dosar cetonemia capilar se houver duas ou mais glicemias capilares consecutivas acima de 13 mmol/L (acima de 234 mg/dL) ou mal-estar/sintomas sugestivos, mesmo com glicemia normal",
+        "origem_secao": "Árvore de decisão — D3"
+      },
+      {
+        "id": "sglt2-po-tratar-cad-euglicemica",
+        "categoria": "emergencia",
+        "obrigatorio": true,
+        "texto": "Se a cetonemia for compatível com cetoacidose euglicêmica associada a iSGLT2, tratar pelo protocolo institucional de cetoacidose diabética, suspender definitivamente o fármaco neste episódio e não reintroduzi-lo até resolução completa e reavaliação especializada",
+        "origem_secao": "Árvore de decisão — C3"
+      },
+      {
+        "id": "sglt2-po-avaliar-reintroducao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Antes de reintroduzir o iSGLT2 no pós-operatório, confirmar que o paciente já se alimenta e se hidrata por via oral normalmente, sem doença aguda intercorrente (infecção, injúria renal aguda, cetoacidose) e sem contraindicação ao fármaco",
+        "origem_secao": "Árvore de decisão — D2a/D2b"
+      },
+      {
+        "id": "sglt2-po-reintroduzir",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Reintroduzir o iSGLT2 assim que não houver contraindicação e a doença aguda estiver resolvida, retomando o benefício cardiovascular e renal da classe",
+        "origem_secao": "Árvore de decisão — C1a/C2a"
+      },
+      {
+        "id": "sglt2-po-reavaliar-diariamente",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a condição para reintrodução não estiver satisfeita, manter o iSGLT2 suspenso e reavaliar diariamente a condição clínica até recuperação completa, sem contraindicação",
+        "origem_secao": "Árvore de decisão — C1b/C2b/C4"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "avaliacao-e-manejo-da-cardiomiopatia-por-lmna-risco-arritmico-e-cdi",
+    "condicao": "Cardiomiopatia por LMNA (laminopatia cardíaca) e Distrofia Muscular de Emery-Dreifuss",
+    "resumo": "Checklist de execução para avaliação cardíaca e neuromuscular do portador de variante patogênica em LMNA/EMD, estratificação de risco arrítmico e decisão fundamentada sobre CDI versus marca-passo isolado.",
+    "documento_origem": "cardiomiopatia-por-lmna-laminopatia-cardiaca-e-distrofia-de-emery-dreifuss-risco-arritmico-e-indicacao-de-cdi",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "van Rijsingen IA, Arbustini E, Elliott PM, et al. Risk factors for malignant ventricular arrhythmias in lamin a/c mutation carriers a European cohort study. J Am Coll Cardiol. 2012;59(5):493-500. PMID: 22281253.",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. PMID: 31155932.",
+      "Rootwelt-Norberg C, et al. Timing of cardioverter-defibrillator implantation in patients with cardiac laminopathies - External validation of the LMNA-risk ventricular tachyarrhythmia calculator. Heart Rhythm. 2023;20(3):423-429. PMID: 36494026.",
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572.",
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID: 37622657.",
+      "Hershberger RE, Jordan E. LMNA-Related Dilated Cardiomyopathy. GeneReviews. Seattle: University of Washington; 2008-2022. Bookshelf ID: NBK1674. PMID: 20301717.",
+      "Ben Yaou R, Leturcq F, Bonne G. Emery-Dreifuss Muscular Dystrophy. GeneReviews. Seattle: University of Washington; 2004-2025. Bookshelf ID: NBK1436. PMID: 20301609."
+    ],
+    "itens": [
+      {
+        "id": "lmna-avaliacao-cardiaca-sistematica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cardíaca sistemática solicitada em todo portador confirmado de variante patogênica em LMNA ou EMD, independentemente da gravidade do fenótipo muscular",
+        "origem_secao": "Distrofia muscular de Emery-Dreifuss: o fenótipo neuromuscular associado"
+      },
+      {
+        "id": "lmna-workup-cardiaco-inicial",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Workup cardíaco inicial completo: ECG de 12 derivações, ecocardiograma transtorácico, monitorização ambulatorial de ritmo (Holter ou dispositivo de monitorização prolongada) e, quando disponível, ressonância cardíaca com realce tardio de gadolínio",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-avaliacao-neuromuscular",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação neuromuscular dirigida à busca de contraturas (cotovelo, tornozelo/Aquiles, coluna cervical) e ao padrão de fraqueza umeroperoneal, com dosagem de creatinoquinase sérica; eletroneuromiografia e biópsia muscular solicitadas se o diagnóstico permanecer incerto",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-teste-genetico-multigenico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Teste genético multigênico (painel combinado de cardiomiopatia e distrofias musculares) solicitado, com aconselhamento genético estruturado antes e depois do teste, em paciente com cardiomiopatia e doença de condução desproporcional, história familiar de morte súbita precoce ou marca-passo jovem, ou fenótipo compatível com EDMD",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-rastreamento-cascata-familiar",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Rastreamento em cascata realizado em parentes de primeiro grau assintomáticos quando uma variante patogênica é identificada, incluindo avaliação cardíaca em mulheres portadoras assintomáticas de variante em EMD",
+        "origem_secao": "Diagnóstico, teste genético e rastreamento familiar"
+      },
+      {
+        "id": "lmna-fatores-risco-arritmico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Presença dos quatro fatores de risco arrítmico pesquisada e registrada: taquicardia ventricular não sustentada, FEVE menor que 45% no primeiro contato clínico, sexo masculino e mutação não missense (truncante)",
+        "origem_secao": "Por que a fração de ejeção não basta: risco arrítmico desproporcional"
+      },
+      {
+        "id": "lmna-calculadora-risco-vta",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Calculadora de risco dedicada LMNA-risk-VTA aplicada (preditores: sexo masculino, mutação não missense, BAV de primeiro grau ou mais avançado, TVNS e FEVE contínua) para apoiar a decisão de CDI, em vez de usar isoladamente o corte de FEVE ≤35% padrão de outras CMD não isquêmicas",
+        "origem_secao": "Estratificação de risco e indicação de CDI"
+      },
+      {
+        "id": "lmna-decisao-cdi-individualizada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Decisão de CDI tratada como individualizada e multiparamétrica (fatores de risco clínicos, calculadora de risco e contexto familiar), idealmente conduzida em centro especializado em cardiomiopatias genéticas; genótipo positivo isolado para LMNA não usado como indicação automática de CDI",
+        "origem_secao": "Estratificação de risco e indicação de CDI"
+      },
+      {
+        "id": "lmna-cdi-vs-marcapasso",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Diante de indicação de dispositivo de estimulação por bradiarritmia em portador de LMNA, CDI considerado em vez de marca-passo simples, sobretudo na presença de variante truncante, sexo masculino, TVNS documentada ou FEVE já reduzida",
+        "origem_secao": "Doença de condução progressiva e a escolha entre marca-passo e CDI"
+      },
+      {
+        "id": "lmna-tratamento-icfer",
+        "categoria": "farmacologia",
+        "obrigatorio": true,
+        "texto": "Tratamento farmacológico das diretrizes usuais para insuficiência cardíaca com fração de ejeção reduzida iniciado quando há disfunção sistólica estabelecida",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-anticoagulacao-fa",
+        "categoria": "farmacologia",
+        "obrigatorio": false,
+        "texto": "Diante de fibrilação ou flutter atrial documentado, decisão de anticoagulação conduzida pelos critérios habituais de risco tromboembólico, sem presumir critério de exceção específico para LMNA",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-seguimento-vitalicio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Acompanhamento cardiológico regular e ao longo da vida mantido mesmo em portadores assintomáticos ou com fenótipo muscular leve, dada a natureza progressiva da doença de condução e o risco de morte súbita como primeira manifestação",
+        "origem_secao": "Manejo geral"
+      },
+      {
+        "id": "lmna-manejo-multidisciplinar",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Quando há componente de distrofia muscular associado, manejo organizado de forma multidisciplinar envolvendo cardiologia, neurologia/doenças neuromusculares, genética clínica e reabilitação física",
+        "origem_secao": "Manejo geral"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de origem nesta sessão de produção; aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
