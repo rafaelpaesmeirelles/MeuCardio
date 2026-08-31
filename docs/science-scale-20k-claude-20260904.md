@@ -1674,3 +1674,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **406** | **4.494** |
+
+## Lote 80 — concluído (commit 1039378d)
+
+- **5 casos clínicos** (continuação do rodízio):
+  - **Terapia intensiva**: convulsão pós-cirurgia cardíaca por ácido tranexâmico (ATACAS/OPTIMAL) — risco neurológico, não trombótico.
+  - **Farmacologia**: betabloqueador não seletivo na cirrose com ascite refratária/hipotensão — "window hypothesis" (Baveno VII), reduzir/suspender temporariamente.
+  - **Dispositivos**: RM de crânio em marca-passo dependente não condicional com AVC agudo — segura sob protocolo (MagnaSafe/Nazarian), exige reprogramação.
+  - **Cardiopatias congênitas**: profilaxia antibiótica antes de extração dentária em CIV reparada com patch, sem defeito residual, >6 meses (AHA 2007/2021) — não é vitalícia.
+  - **Perioperatório**: hipotensão intraoperatória em CMH obstrutiva — fenilefrina (alfa-puro), não efedrina (beta-agonismo piora LVOTO).
+- **Verificação de integridade**: nenhum slug colide; estrutura de 4 opções e `resposta_correta` validadas.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.669 itens.
+
+### Status consolidado (após Lote 80)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 51 | 849 |
+| Checklists | 600 | 40 | 560 |
+| Materiais-paciente | 500 | 36 | 464 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **411** | **4.489** |
