@@ -202,11 +202,29 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
         for rota in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
-            "/indicadores", "/galeria", "/cursos", "/apresentacao",
+            "/indicadores", "/galeria", "/deslocamento", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
-            "/assistente", "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
+            "/assistente", "/favoritos", "/minha-conta", "/tour?retorno=/minha-conta", "/tour",
         ):
             assert rota in fonte
 
     assert "Estudos & Educação" in desktop and "Estudos & Educação" in mobile
     assert "Administração" in desktop and "Administração & Conta" in mobile
+
+
+def test_orbital_map_uses_complete_ordered_day_context_without_persisting_origin():
+    page = (ROOT / "frontend/src/pages/SpaceTravelMap.tsx").read_text(encoding="utf-8")
+    styles = (ROOT / "frontend/src/styles/space-travel-map.css").read_text(encoding="utf-8")
+    app = (ROOT / "frontend/src/App.tsx").read_text(encoding="utf-8")
+    home = (ROOT / "frontend/src/pages/CardiologySpacesHome.tsx").read_text(encoding="utf-8")
+    endpoint = (ROOT / "backend/app/api/agenda_mobility_targeted.py").read_text(encoding="utf-8")
+
+    assert '"/agenda/mobility/day-context"' in page
+    assert '"/agenda/mobility/commute-target"' in page
+    assert "navigator.geolocation.getCurrentPosition" in page
+    assert "Sua origem não é armazenada" in page
+    assert "targets" in endpoint
+    assert 'path="deslocamento"' in app
+    assert 'to="/deslocamento"' in home
+    assert ".space-travel__orbit" in styles
+    assert "https://www.google.com/maps/dir/" in page
