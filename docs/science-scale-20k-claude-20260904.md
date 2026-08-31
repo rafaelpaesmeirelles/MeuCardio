@@ -1450,3 +1450,23 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 155 (21 descartados por colisão) | 45 |
 | **Total** | **4.900** | **358** | **4.542** |
+
+## Lote 70 — concluído (commit 2d5781de)
+
+- **3 documentos** (duas doenças de matriz extracelular/tecido conjuntivo com acometimento vascular e uma doença metabólica com acometimento valvar): alcaptonúria/ocronose (deposição de pigmento ocronótico e calcificação/disfunção da valva aórtica — a "valva negra"; nitisinona explicitamente sinalizada como benefício comprovado apenas para desfechos musculoesquelético/urinário, não cardiovascular — `content/Valvopatias`), osteogênese imperfeita (dilatação de raiz aórtica e regurgitação valvar leve-moderada, com diferenciação mecanística explícita das aortopatias genéticas clássicas — Marfan/Loeys-Dietz/Ehlers-Danlos vascular — e sinalização clara de que não existe hoje protocolo de rastreio aórtico nem limiares cirúrgicos por gene equivalentes na OI; espectro hemostático próprio relevante para manejo perioperatório — `content/Aorta_e_doença_arterial_periférica`), pseudoxantoma elástico/ABCC6 (mediocalcinose arterial mecanisticamente distinta de aterosclerose, independente de fatores de risco tradicionais; doença arterial periférica precoce bem documentada em coorte; risco coronariano citado como plausível mas sem estudo epidemiológico de magnitude quantificada — limite de evidência sinalizado explicitamente; diferenciação de hipertensão renovascular por displasia fibromuscular — `content/Aorta_e_doença_arterial_periférica`).
+- **doencas**: +3, pareadas 1:1 — `alcaptonuria`, `osteogenese-imperfeita`, `pseudoxantoma-elastico`. `prevalence_rank` 160-162 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 3 tópicos despachados confirmaram gap genuíno após checagem cruzada contra `content/**/*.md`, `doencas/metadados.json`, `doencas/fragmentos/*.json` e `doencas/correcoes/*.json`.
+- **Correções na integração**: front-matter do documento de alcaptonúria veio com `kind: protocolo` em vez de `kind: documento` — corrigido na transcrição; uma entidade HTML (`&amp;` em "Ather & Roberts") também corrigida no mesmo documento.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`). Total canônico: 10.614 itens.
+
+### Status consolidado (após Lote 70)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 164 | 2.236 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 158 (21 descartados por colisão) | 42 |
+| **Total** | **4.900** | **361** | **4.539** |
