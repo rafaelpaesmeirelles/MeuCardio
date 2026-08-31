@@ -202,11 +202,12 @@ def test_navegacao_reorganizada_sem_eliminar_funcoes_protegidas():
         for rota in (
             "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas",
             "/material-paciente", "/avaliacao-preoperatoria", "/telediagnostico",
-            "/indicadores", "/galeria", "/cursos", "/apresentacao",
+            "/indicadores", "/galeria", "/apresentacao",
             "/usuarios-online", "/sincronizacao", "/exportar",
             "/assistente", "/favoritos", "/minha-conta", "/tour?origem=assinatura&modo=quick", "/tour",
         ):
             assert rota in fonte
+        assert "/cursos" not in fonte
 
     assert "Estudos & Educação" in desktop and "Estudos & Educação" in mobile
     assert "Administração" in desktop and "Administração & Conta" in mobile
