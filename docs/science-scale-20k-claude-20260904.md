@@ -1605,3 +1605,26 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 23 | 277 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **391** | **4.509** |
+
+## Lote 77 — concluído (commit cc2a9187)
+
+- **5 casos clínicos** (casos clínicos era, com checklists, a cota mais atrasada — 41/900, 4,6%). Vinhetas de múltipla escolha aplicando fielmente uma recomendação/nuance real de documento já publicado, testando "resposta óbvia mas errada" vs. "resposta correta menos intuitiva":
+  - **Valvopatias**: estenose tricúspide reumática achada no pré-operatório de cirurgia mitral — operar as duas valvas juntas, não adiar a tricúspide "porque é isoladamente benigna" fora de contexto.
+  - **Endocardite**: endocardite protética TARDIA (>6 meses) não complicada por estreptococo — manejo conservador com seguimento próximo, não a cirurgia Classe I reservada à forma precoce.
+  - **Arritmias**: tireotoxicose por amiodarona em portador de TV só controlada pelo fármaco — tratar o fenótipo (tipo 1 vs. 2) e individualizar a suspensão, não suspender reflexamente.
+  - **Diabetes e cardiologia**: cetoacidose euglicêmica por iSGLT2 — glicemia normal/discreta não exclui o diagnóstico (Peters et al. 2015).
+  - **Cardiologia geriátrica**: digoxina em ICFEr do muito idoso já nos quatro pilares — Beers 2023 recomenda cautela ao SUSPENDER, não suspensão automática por "fármaco antigo redundante".
+- **Verificação de integridade**: nenhum slug colide; estrutura de 4 opções e `resposta_correta` validadas em todos os 5 casos.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.654 itens.
+
+### Status consolidado (após Lote 77)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 169 | 2.231 |
+| Casos clínicos | 900 | 46 | 854 |
+| Checklists | 600 | 35 | 565 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 23 | 277 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **396** | **4.504** |
