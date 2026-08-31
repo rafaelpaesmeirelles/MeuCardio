@@ -1429,3 +1429,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 153 (21 descartados por colisão) | 47 |
 | **Total** | **4.900** | **356** | **4.544** |
+
+## Lote 69 — concluído (commit 8d311bbb)
+
+- **2 documentos** (uma cardiomiopatia genética de alto risco arrítmico e uma lipodistrofia rara com repercussão cardiometabólica): cardiomiopatia por LMNA/laminopatia cardíaca e distrofia muscular de Emery-Dreifuss (risco de morte súbita desproporcional à FEVE, uma das poucas exceções formais em diretriz ESC 2022/2023 à lógica de CDI por FEVE ≤35%; escore LMNA-risk-VTA detalhado com C-index 0,776; ressalva explícita de transparência sobre limiar de ação citado só por fonte secundária; distinção entre laminopatia isolada e o fenótipo neuromuscular clássico EDMD — `content/Cardiomiopatias`), lipodistrofia congênita generalizada/síndrome de Berardinelli-Seip (AGPAT2 versus BSCL2/seipina; cardiomiopatia hipertrófica de mecanismo debatido; honestidade científica notável — o agente reportou que a série fundadora de genótipo-fenótipo não confirmou a premissa inicial de maior frequência de cardiomiopatia em BSCL2, corrigindo o brief com a evidência primária encontrada — `content/Diabetes_e_cardiologia`).
+- **doencas**: +2, pareadas 1:1 — `laminopatia-cardiaca-lmna`, `lipodistrofia-congenita-generalizada`. `prevalence_rank` 158-159 (area=geral).
+- **Nenhum tópico descartado por colisão neste lote** — os 2 tópicos despachados confirmaram gap genuíno após checagem cruzada, incluindo verificação específica de `doencas/fragmentos/*.json` (onde outro produtor já havia deixado conteúdo pronto sobre um tópico correlato em lote anterior desta sessão).
+- **Correções na integração**: um blockquote e algumas comparações numéricas no documento de LMNA vieram com entidades HTML (`&gt;`, `&lt;`) no relatório do agente — corrigidas na transcrição para o arquivo bruto antes da extração, preservando a formatação de citação em bloco pretendida.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.608 itens.
+
+### Status consolidado (após Lote 69)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 161 | 2.239 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 155 (21 descartados por colisão) | 45 |
+| **Total** | **4.900** | **358** | **4.542** |
