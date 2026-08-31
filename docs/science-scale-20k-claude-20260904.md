@@ -1324,3 +1324,24 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 | Trilhas | 300 | 3 | 297 |
 | Doenças especializadas | 200 | 134 (18 descartados por colisão) | 66 |
 | **Total** | **4.900** | **337** | **4.563** |
+
+## Lote 64 — concluído (commit baff9f7e)
+
+- **6 documentos** (síndromes genéticas com espectro cardiovascular próprio, ainda não cobertas na plataforma): síndrome de Alagille (variantes JAG1 ~94%/NOTCH2 ~2,5% na via Notch; acometimento cardiovascular em 90-97% dos casos, estenose pulmonar periférica/de ramos como achado mais característico ~67%, tetralogia de Fallot associada 7-16%; correlação genótipo-fenótipo mostrando que JAG1 isolado pode causar cardiopatia sem síndrome completa; risco neurovascular explicitamente qualificado como evidência de nível caso/série pequena — `content/Cardiopatias_congênitas`), síndrome de Kabuki (síndrome cromatínica por KMT2D ~75%/KDM6A ~3-5%; cardiopatia congênita ~70% com predomínio de lesões obstrutivas do lado esquerdo; honestidade explícita sobre limitação de dados KDM6A-específicos e sobre incerteza quanto a risco de aneurisma aórtico — `content/Cardiologia_pediátrica`), síndrome de Kearns-Sayre (citopatia mitocondrial por deleção única de mtDNA; doença de condução progressiva e imprevisível justificando marca-passo profilático mesmo assintomático; distinção mecanística explícita de MELAS e síndrome de Barth; ressalva de transparência sobre citação de segunda mão da diretriz ESC 2021 — `content/Arritmias`), distrofia miotônica tipo 1/Steinert (expansão CTG em DMPK; até um terço dos óbitos são súbitos; detalhamento completo do consenso HRS 2022 de marca-passo/CDI por classe/nível de evidência; ressalva explícita de discrepância numérica entre dois resumos automatizados do mesmo estudo, não reconciliada e por isso omitida — `content/Arritmias`), doença de Rosai-Dorfman (histiocitose não-Langerhans; acometimento cardiovascular raro, evidência quase só de relatos de caso e uma revisão sistemática de 43 pacientes; diferenciação mecanística explícita de Erdheim-Chester — grupos distintos na classificação de histiocitoses — `content/Geral`), síndrome de CHARGE (gene CHD7; cardiopatia congênita ~74% com predomínio conotruncal/canal AV; detalhamento de por que a oximetria de pulso isolada, sensibilidade 70-77%, é insuficiente para descartar cardiopatia nesta síndrome; ressalva editorial sobre critérios de Verloes 2005 não plenamente reabertos nesta sessão — `content/Cardiopatias_congênitas`).
+- **doencas**: +6, pareadas 1:1 — `sindrome-de-alagille`, `sindrome-de-kabuki`, `sindrome-de-kearns-sayre`, `distrofia-miotonica-tipo-1`, `rosai-dorfman`, `sindrome-de-charge`. `prevalence_rank` 139-144 (area=geral).
+- **1 tópico descartado por colisão neste lote**: doença de Erdheim-Chester — já existe completa e revisada no manifesto (`erdheim-chester-disease-acometimento-cardiovascular`, adicionada em lote anterior de outro produtor na mesma branch, `review_status: revisado`). O agente dispatchado identificou a colisão em sua própria checagem, corretamente não produziu conteúdo duplicado.
+- **Correções na integração**: entidades HTML residuais (`&amp;` `&lt;` `&gt;`) em 1 dos 6 documentos (distrofia miotônica tipo 1), corrigidas antes do commit; nenhum arquivo estranho gravado no worktree pelos agentes desta rodada.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0 (`invalid: []`, `missing: []`).
+- **Total canônico**: 10.578 itens.
+
+### Status consolidado (após Lote 64)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 146 | 2.254 |
+| Casos clínicos | 900 | 41 | 859 |
+| Checklists | 600 | 30 | 570 |
+| Materiais-paciente | 500 | 31 | 469 |
+| Trilhas | 300 | 3 | 297 |
+| Doenças especializadas | 200 | 140 (19 descartados por colisão) | 60 |
+| **Total** | **4.900** | **343** | **4.557** |
