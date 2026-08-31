@@ -33,7 +33,6 @@ const ESTUDO_EDUCACAO: NavItem[] = [
   { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
   { to: "/diretrizes", label: "Diretrizes & Guidelines", icon: "conhecimento" },
   { to: "/material-paciente", label: "Material para paciente", icon: "documento" },
-  { to: "/cursos", label: "Cursos & Atualizações", icon: "curso" },
   { to: "/biblioteca", label: "Biblioteca científica", icon: "conhecimento" },
   { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
 ];
