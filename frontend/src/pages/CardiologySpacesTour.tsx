@@ -68,7 +68,7 @@ const STEPS: Step[] = [
   {
     eyebrow:"06 · CIÊNCIA & ENSINO",
     title:"Descobrir, validar, aprender, ensinar e produzir.",
-    text:"A jornada científica conecta biblioteca, evidências, estudos, cursos, trilhas, casos, apresentações e documentos assistidos por IA em um fluxo único.",
+    text:"A jornada científica conecta biblioteca, evidências, estudos, trilhas, casos, apresentações e documentos assistidos por IA em um fluxo único.",
     icon:"conhecimento",
     visual:"scientific",
     points:["Fontes rastreáveis", "Aprendizagem contínua", "Produção científica conectada"],
