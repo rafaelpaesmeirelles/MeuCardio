@@ -74,6 +74,7 @@ import "./styles/home-desktop-symmetric-personalizable.css";
 import "./styles/clinical-ecg-featured.css";
 import "./styles/tudo-com-tudo.css";
 import "./styles/clinical-ai-spaces.css";
+import "./styles/cardiology-spaces-approved-system.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;
