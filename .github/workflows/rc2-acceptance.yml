@@ -238,6 +238,9 @@ jobs:
           async function selectCompleteMode(page) {
             const choice = page.locator('.spaces-choice');
             if (await choice.isVisible().catch(() => false)) {
+              // A aceitação das superfícies internas não deve ser desviada
+              // pelo onboarding; o tour é validado separadamente.
+              await page.evaluate(() => localStorage.setItem('corvia:cardiology-spaces:tour:v2', 'rc2-acceptance'));
               await page.locator('.spaces-choice__cards button', { hasText: 'Completo' }).click();
             }
             await page.locator('.spaces-home').waitFor({ state: 'visible', timeout: 10000 });
