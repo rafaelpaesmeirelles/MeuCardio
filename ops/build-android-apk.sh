@@ -33,6 +33,10 @@ expected_cert="${EXPECTED_CERT_ARGUMENT:-${CORVIA_ANDROID_CERT_SHA256:-}}"
 expected_cert="$(printf '%s' "$expected_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
 [[ "$expected_cert" =~ ^[0-9a-f]{64}$ ]] || die "pinned Android release certificate SHA-256 missing or invalid"
 
+# Capacitor generates its runtime configuration inside this directory. The
+# directory is intentionally not tracked because the generated files belong to
+# the release worktree, so recreate it before every deterministic sync.
+install -d -m 0755 "$ANDROID_DIR/app/src/main/assets"
 docker run --rm --pull=missing -v "$FRONTEND_DIR:/workspace" -w /workspace "$NODE_IMAGE" \
   bash -lc 'set -euo pipefail; npm ci; npx cap sync android'
 cd "$ANDROID_DIR"
