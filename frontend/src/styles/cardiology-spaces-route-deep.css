@@ -1,0 +1,132 @@
+/* ======================================================================
+   CorVIA Cardiology Spaces — cobertura profunda das rotas autenticadas
+   ----------------------------------------------------------------------
+   Esta camada cobre páginas que não usam ClinicalCommandPrimitives. Ela não
+   altera semântica, endpoints ou handlers; somente impõe o universo visual
+   aprovado e identifica o espaço atual de forma inequívoca.
+   ====================================================================== */
+
+body.corvia-space--consultorio .clinical-os{--route-space-name:"CONSULTÓRIO"}
+body.corvia-space--hospital .clinical-os{--route-space-name:"HOSPITAL"}
+body.corvia-space--ensino .clinical-os{--route-space-name:"ENSINO"}
+body.corvia-space--pesquisa .clinical-os{--route-space-name:"PESQUISA"}
+body.corvia-space--gestao .clinical-os{--route-space-name:"GESTÃO"}
+
+/* Páginas sem o cabeçalho compartilhado recebem uma faixa de contexto própria.
+   :has() evita duplicação nas páginas já migradas para cs-page-header. */
+.clinical-os .cos-content:not(:has(.cs-page-header))::before{
+  display:flex;
+  min-height:30px;
+  align-items:center;
+  gap:8px;
+  margin:0 0 10px;
+  padding:7px 12px 6px;
+  color:#71899b;
+  background:linear-gradient(90deg,rgba(var(--space-rgb),.075),rgba(4,17,29,.42) 42%,transparent);
+  border-top:1px solid rgba(var(--space-rgb),.23);
+  border-bottom:1px solid rgba(var(--space-rgb),.075);
+  box-shadow:0 -8px 28px -24px rgba(var(--space-rgb),.55),inset 2px 0 rgba(var(--space-rgb),.58);
+  content:"CARDIOLOGY SPACES  ·  " var(--route-space-name);
+  font-size:.54rem;
+  font-weight:780;
+  letter-spacing:.15em;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+/* Títulos próprios de páginas antigas passam a se comportar como módulos do
+   mesmo universo sem exigir reescrita de cada DOM. */
+.clinical-os .cos-content:not(:has(.cs-page-header)) :is(h1,.page-title,.titulo-pagina):first-child{
+  color:#edf8fa;
+  text-shadow:0 0 22px rgba(var(--space-rgb),.10);
+}
+
+/* Superfícies recorrentes de layouts próprios. O :where mantém baixa
+   especificidade relativa; !important é reservado ao fundo/borda porque a
+   aplicação carrega várias folhas históricas depois de componentes locais. */
+.clinical-os .cos-content :where(
+  .card,.panel,.painel,.box,.widget,.surface,.section-card,.content-card,
+  .toolbar,.filters,.filtros,.search-panel,.search-box,.summary-card,
+  .details-card,.detail-card,.status-card,.metric-card,.stat-card
+){
+  color:var(--space-text);
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.038),rgba(5,20,34,.82))!important;
+  border-color:rgba(var(--space-rgb),.15)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.018),0 18px 44px -38px rgba(var(--space-rgb),.45)!important;
+}
+
+/* Formulários: mesma leitura clínica, contraste e foco holográfico. */
+.clinical-os .cos-content :where(input,select,textarea){
+  color:#eaf5f8;
+  background-color:rgba(4,18,31,.84)!important;
+  border-color:rgba(var(--space-rgb),.16)!important;
+}
+.clinical-os .cos-content :where(input,select,textarea):focus{
+  border-color:rgba(var(--space-rgb),.52)!important;
+  box-shadow:0 0 0 3px rgba(var(--space-rgb),.065),0 0 24px rgba(var(--space-rgb),.065)!important;
+  outline:none;
+}
+.clinical-os .cos-content :where(input,textarea)::placeholder{color:#61798b}
+
+/* Tabelas/listas densas, inclusive administração e prontuário. */
+.clinical-os .cos-content :where(table){
+  color:#b7c9d3;
+  background:rgba(3,15,27,.50);
+  border-color:rgba(var(--space-rgb),.10)!important;
+}
+.clinical-os .cos-content :where(th){
+  color:#839bab;
+  background:rgba(var(--space-rgb),.052)!important;
+  border-color:rgba(var(--space-rgb),.11)!important;
+}
+.clinical-os .cos-content :where(td){border-color:rgba(var(--space-rgb),.075)!important}
+.clinical-os .cos-content :where(tr:hover td){background:rgba(var(--space-rgb),.035)}
+
+/* Tabs/chips/buttons de páginas próprias conservam função e recebem o acento
+   do espaço sem apagar tons de risco/alerta já definidos localmente. */
+.clinical-os .cos-content :where(.tabs,.tab-list,[role="tablist"]){
+  border-color:rgba(var(--space-rgb),.11)!important;
+}
+.clinical-os .cos-content :where(.tab.is-active,[role="tab"][aria-selected="true"]){
+  color:#f3fdff!important;
+  border-color:rgba(var(--space-rgb),.40)!important;
+  background:rgba(var(--space-rgb),.105)!important;
+  box-shadow:0 0 20px rgba(var(--space-rgb),.055)!important;
+}
+
+/* Dialogs e drawers locais pertencem ao mesmo ambiente. */
+.clinical-os :where(dialog,.modal,.modal-content,.drawer,.sheet){
+  color:#dbe9ee;
+  background:linear-gradient(155deg,rgba(7,27,45,.98),rgba(2,12,22,.99))!important;
+  border-color:rgba(var(--space-rgb),.19)!important;
+  box-shadow:0 30px 100px -38px #000,0 0 44px rgba(var(--space-rgb),.055)!important;
+}
+
+/* Famílias com CSS próprio que historicamente escapavam das camadas globais. */
+body.corvia-space--consultorio .clinical-os :where(.agenda-page,.agenda,.prontuario,.receituario,.templates,.assistente-page),
+body.corvia-space--hospital .clinical-os :where(.round,.round-page,.emerg,.cardiovascular-exam-ai,.exam-ai,.cardio-intensiva),
+body.corvia-space--ensino .clinical-os :where(.trilhas,.casos-clinicos,.galeria,.material-paciente,.apresentacao),
+body.corvia-space--pesquisa .clinical-os :where(.biblioteca,.busca,.evidencias,.estudos,.diretrizes,.fluxogramas,.exportar-conteudo),
+body.corvia-space--gestao .clinical-os :where(.corvia-mail,.caixa-email,.whatsapp-assistant,.usuarios-online,.telediagnostico,.minha-conta,.indicadores,.admin-page){
+  --cardiology-spaces-page-accent:var(--space-accent);
+}
+
+/* Emergência preserva semântica de risco. O espaço é Hospital (azul), mas
+   estados críticos continuam vermelhos/âmbar quando o módulo os define. */
+body.corvia-route--emergencia .clinical-os .cos-content::before{
+  border-top-color:rgba(75,130,255,.34);
+  background:linear-gradient(90deg,rgba(75,130,255,.09),rgba(4,17,29,.46) 44%,transparent);
+}
+body.corvia-route--emergencia .clinical-os .emerg :where(.danger,.critical,.is-critical,[data-risk="critical"]){
+  --space-accent:#ff5f6d;
+  --space-rgb:255,95,109;
+}
+
+@media(max-width:900px){
+  .clinical-os .cos-content:not(:has(.cs-page-header))::before{
+    margin:-2px 0 10px;
+    padding:7px 10px;
+    font-size:.49rem;
+    letter-spacing:.12em;
+  }
+}
