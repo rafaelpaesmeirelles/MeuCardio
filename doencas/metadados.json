@@ -43229,5 +43229,826 @@
       "febre-tifoide-grave-miocardite-e-bradicardia-relativa"
     ],
     "patient_material_slug": null
+  },
+  {
+    "slug": "endocardite-cronica-por-coxiella-burnetii-febre-q",
+    "name": "Endocardite crônica por Coxiella burnetii (Febre Q)",
+    "aliases": [
+      "Febre Q crônica",
+      "endocardite por Febre Q",
+      "endocardite por Coxiella burnetii",
+      "Q fever endocarditis"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 59,
+    "completeness": "completo",
+    "summary": "Forma crônica e persistente da infecção por Coxiella burnetii, zoonose transmitida por aerossol de fluidos de parto de gado bovino, ovino e caprino, que se manifesta como endocardite com hemocultura negativa meses a anos depois de uma exposição aguda frequentemente assintomática ou não reconhecida. Ocorre predominantemente em pacientes com valvopatia nativa prévia ou prótese valvar. O diagnóstico depende de sorologia dirigida (IgG anti-fase I elevado, tipicamente ≥ 1:800 à imunofluorescência indireta) e de PCR; a cultura convencional é inviável fora de laboratório com biossegurança nível 3. O tratamento é prolongado (18 a 24 meses ou mais) com doxiciclina associada a hidroxicloroquina, esquema sem equivalente nas demais endocardites bacterianas.",
+    "presentation": [
+      "Quadro constitucional arrastado por semanas a meses: febre baixa ou ausente, fadiga, perda de peso, sudorese, artralgia",
+      "Endocardite com hemocultura negativa em paciente com valvopatia nativa conhecida ou prótese valvar",
+      "Vegetação ausente ou pequena ao ecocardiograma, desproporcional à gravidade clínica",
+      "História de exposição ocupacional ou rural a gado, ovinos ou caprinos, sobretudo contato com parto ou aborto de animais, ou consumo de laticínios não pasteurizados, frequentemente não relatada de forma espontânea",
+      "Episódio febril agudo inespecífico meses a anos antes, muitas vezes não diagnosticado como Febre Q na época",
+      "Hepatomegalia, elevação leve de transaminases ou achados de hepatite anictérica associados",
+      "Fenômenos embólicos ou sinais de insuficiência cardíaca decorrentes de disfunção valvar em evolução"
+    ],
+    "differentials": [
+      "Endocardite com hemocultura negativa por outros agentes fastidiosos (Bartonella spp., Tropheryma whipplei, grupo HACEK, micobactérias de crescimento lento)",
+      "Endocardite trombótica não bacteriana (NBTE)",
+      "Endocardite decorrente de exposição prévia a antibiótico antes da coleta de hemoculturas",
+      "Febre de origem indeterminada sem acometimento valvar",
+      "Vasculite de grandes vasos ou aneurisma infectado por outro agente, quando há acometimento vascular associado",
+      "Hepatite de outra etiologia, quando o quadro hepático predomina sobre o cardiovascular"
+    ],
+    "tests": [
+      "Sorologia por imunofluorescência indireta (IFA) para Coxiella burnetii, com titulação separada de IgG anti-fase I e anti-fase II — IgG de fase I elevado (tipicamente ≥ 1:800) sinaliza doença crônica/endocardite",
+      "PCR para Coxiella burnetii em sangue, soro ou, preferencialmente, tecido valvar quando há material cirúrgico disponível",
+      "Ecocardiograma transtorácico seguido de transesofágico, mesmo quando vegetação não é evidente ao exame inicial",
+      "Hemoculturas convencionais (tipicamente negativas; servem para excluir outros agentes e documentar a hemocultura negativa que motiva a investigação dirigida)",
+      "Provas de função hepática, à procura de hepatite anictérica associada",
+      "Anamnese ocupacional e epidemiológica dirigida: contato com gado, ovinos, caprinos, parto ou aborto de animais, laticínios não pasteurizados",
+      "Cultura de Coxiella burnetii reservada a laboratório de referência com biossegurança nível 3 (BSL-3); não deve ser tentada em laboratório clínico de rotina"
+    ],
+    "red_flags": [
+      "Valvopatia nativa prévia ou prótese valvar em paciente com quadro febril arrastado e sorologia ou epidemiologia compatível com Febre Q",
+      "Título de IgG de fase I persistentemente elevado ou em ascensão no seguimento",
+      "Sinais de insuficiência cardíaca nova ou progressiva, disfunção protética ou fenômeno embólico em paciente com suspeita de Febre Q crônica",
+      "Aneurisma vascular ou material endovascular protético concomitante, sítio adicional possível de infecção persistente",
+      "Interrupção precoce do tratamento antimicrobiano prolongado sem resposta sorológica adequada (queda do título de fase I)"
+    ],
+    "ambulatory_flow": [
+      "Investigar exposição ocupacional ou rural em todo paciente com endocardite de hemocultura negativa ou febre arrastada inexplicada e valvopatia conhecida",
+      "Solicitar sorologia por IFA com titulação de fase I e fase II direcionada, não sorologia genérica",
+      "Não descartar o diagnóstico por título de fase I abaixo do corte habitual quando a suspeita clínico-epidemiológica permanece alta; repetir sorologia ou associar PCR",
+      "Encaminhar para avaliação cardiológica e infectológica conjunta assim que a sorologia ou o PCR confirmarem o diagnóstico",
+      "Programar seguimento sorológico seriado (título de IgG de fase I) para acompanhar resposta terapêutica ao longo dos 18 a 24 meses de tratamento"
+    ],
+    "emergency_flow": [
+      "Avaliar sinais de instabilidade hemodinâmica, insuficiência cardíaca aguda ou fenômeno embólico decorrentes de disfunção valvar",
+      "Colher hemoculturas convencionais antes de qualquer antimicrobiano, mesmo quando a suspeita já aponta para agente fastidioso",
+      "Não tentar cultivar o organismo suspeito em laboratório sem infraestrutura de biossegurança nível 3",
+      "Iniciar doxiciclina associada a hidroxicloroquina quando o diagnóstico é confirmado ou fortemente suspeitado, em conjunto com infectologia",
+      "Avaliar indicação cirúrgica pelos critérios gerais de endocardite (insuficiência cardíaca refratária, disfunção protética grave, embolização recorrente), não pela infecção por Coxiella isoladamente"
+    ],
+    "tags": [
+      "endocardite",
+      "hemocultura negativa",
+      "Coxiella burnetii",
+      "Febre Q",
+      "zoonose",
+      "doença ocupacional",
+      "sorologia",
+      "endocardite protética",
+      "doxiciclina",
+      "hidroxicloroquina"
+    ],
+    "source_refs": [
+      "Eldin C, Mélenotte C, Mediannikov O, Ghigo E, Million M, Edouard S, Mege JL, Maurin M, Raoult D. From Q Fever to Coxiella burnetii Infection: a Paradigm Change. Clin Microbiol Rev. 2017;30(1):115-190. PMID: 27856520",
+      "Anderson A, Bijlmer H, Fournier PE, Graves S, Hartzell J, Kersh GJ, Limonard G, Marrie TJ, Massung RF, McQuiston JH, Nicholson WL, Paddock CD, Sexton DJ. Diagnosis and management of Q fever--United States, 2013: recommendations from CDC and the Q Fever Working Group. MMWR Recomm Rep. 2013;62(RR-03):1-30. PMID: 23535757",
+      "Kampschreur LM, Delsing CE, Groenwold RH, Wegdam-Blans MC, Bleeker-Rovers CP, de Jager-Leclercq MG, Hoepelman AI, van Kasteren ME, Buijs J, Renders NH, Nabuurs-Franssen MH, Oosterheert JJ, Wever PC. Chronic Q fever in the Netherlands 5 years after the start of the Q fever epidemic: results from the Dutch chronic Q fever database. J Clin Microbiol. 2014;52(5):1637-1643. PMID: 24599987",
+      "Kampschreur LM, Dekker S, Hagenaars JC, Lestrade PJ, Renders NH, de Jager-Leclercq MG, Hermans MH, Groot CA, Groenwold RH, Hoepelman AI, Wever PC, Oosterheert JJ. Identification of risk factors for chronic Q fever, the Netherlands. Emerg Infect Dis. 2012;18(4):563-570. PMID: 22469535",
+      "Kampschreur LM, Hoornenborg E, Renders NH, Oosterheert JJ, Haverman JF, Elsman P, Wever PC. Delayed diagnosis of chronic Q fever and cardiac valve surgery. Emerg Infect Dis. 2013;19(5):768-770. PMID: 23647809",
+      "Million M, Thuny F, Bardin N, Angelakis E, Edouard S, Bessis S, Collart F, Habib G, Raoult D. Evolution from acute Q fever to endocarditis is associated with underlying valvulopathy and age and can be prevented by prolonged antibiotic treatment. Clin Infect Dis. 2013;57(6):836-844. PMID: 23794723",
+      "Raoult D, Houpikian P, Tissot Dupont H, Riss JM, Arditi-Djiane J, Brouqui P. Treatment of Q fever endocarditis: comparison of 2 regimens containing doxycycline and ofloxacin or hydroxychloroquine. Arch Intern Med. 1999;159(2):167-173. PMID: 9927100",
+      "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. PMID: 37138445"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/27856520/",
+      "https://pubmed.ncbi.nlm.nih.gov/23535757/",
+      "https://pubmed.ncbi.nlm.nih.gov/24599987/",
+      "https://pubmed.ncbi.nlm.nih.gov/22469535/",
+      "https://pubmed.ncbi.nlm.nih.gov/23647809/",
+      "https://pubmed.ncbi.nlm.nih.gov/23794723/",
+      "https://pubmed.ncbi.nlm.nih.gov/9927100/",
+      "https://pubmed.ncbi.nlm.nih.gov/37138445/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "febre-q-coxiella-burnetii-endocardite-cronica-zoonose-ocupacional"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "endocardite-por-bartonella",
+    "name": "Endocardite por Bartonella (B. henselae e B. quintana)",
+    "aliases": [
+      "bartonelose com endocardite",
+      "endocardite por Bartonella henselae",
+      "endocardite por Bartonella quintana",
+      "endocardite da doença da arranhadura do gato",
+      "endocardite da febre das trincheiras"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 60,
+    "completeness": "completo",
+    "summary": "Endocardite infecciosa subaguda causada por Bartonella henselae (doença da arranhadura do gato, associada a exposição a gatos e valvopatia estrutural prévia) ou Bartonella quintana (febre das trincheiras, associada a infestação por piolho do corpo em pessoas em situação de rua, encarceradas ou deslocadas por conflito/desastre). É causa clássica de endocardite com hemocultura negativa: o organismo é fastidioso, raramente cresce em hemocultura convencional, e o diagnóstico depende de sorologia (limitada por reatividade cruzada entre as duas espécies e com Coxiella burnetii) associada a PCR, idealmente de tecido valvar excisado. Tratamento com doxiciclina combinada a gentamicina ou rifampicina; a cirurgia valvar é frequentemente necessária pela apresentação tardia com destruição valvar importante.",
+    "presentation": [
+      "Febre subaguda, baixa ou intermitente, fadiga, perda de peso e sudorese noturna de evolução arrastada, muitas vezes por semanas a meses antes do diagnóstico",
+      "Sopro cardíaco novo ou piora de sopro prévio em paciente com valvopatia estrutural conhecida (mais típico de B. henselae) ou em valva previamente normal (mais típico de B. quintana)",
+      "Fenômenos embólicos — acidente vascular cerebral isquêmico, embolia esplênica ou renal — podem ser a manifestação inicial em casos avançados",
+      "Manifestações imunológicas associadas: glomerulonefrite, artralgias, lesões cutâneas",
+      "Contexto epidemiológico de B. henselae: contato recente com gato, sobretudo filhote, arranhadura ou mordida, com ou sem linfadenite regional residual",
+      "Contexto epidemiológico de B. quintana: situação de rua, encarceramento recente, deslocamento forçado por guerra ou desastre humanitário, infestação por piolho do corpo (Pediculus humanus corporis), más condições de higiene",
+      "Hemocultura persistentemente negativa pelos métodos automatizados convencionais, apesar de quadro clínico e ecocardiográfico compatíveis com endocardite infecciosa"
+    ],
+    "differentials": [
+      "Endocardite por Coxiella burnetii (febre Q crônica)",
+      "Endocardite por Tropheryma whipplei",
+      "Endocardite fúngica",
+      "Endocardite trombótica não bacteriana (NBTE)",
+      "Endocardite com hemocultura negativa por exposição prévia a antibiótico",
+      "Doença da arranhadura do gato sem endocardite (linfadenite regional autolimitada)",
+      "Outras causas de febre de origem indeterminada em pessoa em situação de rua (tuberculose, HIV avançado, febre tifoide)"
+    ],
+    "tests": [
+      "Hemoculturas seriadas (3 conjuntos), cientes de que a positividade é excepcional e a negatividade não afasta o diagnóstico",
+      "Sorologia por imunofluorescência indireta para Bartonella henselae e Bartonella quintana, interpretada com atenção à reatividade cruzada entre as duas espécies e com Coxiella burnetii; Western blot com absorção cruzada quando disponível para aumentar especificidade espécie-específica",
+      "PCR dirigido para Bartonella em sangue total, com sensibilidade limitada pela bacteremia intermitente e de baixa magnitude",
+      "PCR de tecido valvar excisado — frequentemente o método que confirma definitivamente o diagnóstico e a espécie quando há cirurgia",
+      "Ecocardiograma transtorácico seguido de transesofágico (Classe I para praticamente todo caso suspeito) para caracterizar vegetação, destruição valvar e complicações perianulares",
+      "Histopatologia do tecido valvar quando operado — endocardite necrosante com intensa reação linfoplasmocitária é achado sugestivo",
+      "Aplicação dos critérios Duke-ISCVID 2023, nos quais detecção de ácido nucleico de Bartonella spp. e evidência sorológica de B. henselae ou B. quintana contam como critério maior"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca por disfunção valvar aguda — indicação cirúrgica não deve aguardar confirmação microbiológica definitiva",
+      "Vegetação volumosa com risco embólico elevado",
+      "Evento embólico maior já estabelecido (AVC, embolia esplênica ou renal)",
+      "Infecção não controlada apesar de antibioticoterapia dirigida",
+      "Sinais de complicação perianular — abscesso, pseudoaneurisma, fístula, novo bloqueio atrioventricular",
+      "Paciente em situação de rua com febre prolongada e sopro novo — risco de diagnóstico tardio por barreiras de acesso a cuidado, exigindo busca ativa"
+    ],
+    "ambulatory_flow": [
+      "Diante de febre prolongada inexplicada com sopro cardíaco novo ou vegetação ao ecocardiograma e hemoculturas negativas, dirigir a anamnese epidemiológica para exposição a gato e para situação de rua, encarceramento, deslocamento forçado ou infestação por piolho",
+      "Solicitar sorologia para Bartonella henselae e Bartonella quintana e, quando disponível, PCR de sangue total, cientes das limitações de sensibilidade e da reatividade cruzada sorológica",
+      "Encaminhar para avaliação cardiológica com ecocardiograma transtorácico e, se necessário, transesofágico",
+      "Iniciar doxiciclina associada a gentamicina ou rifampicina conforme suspeita clínica, sem aguardar confirmação microbiológica completa quando a probabilidade pré-teste é alta",
+      "Reavaliar periodicamente resposta clínica, marcadores inflamatórios e, quando disponível, evolução do título sorológico para orientar duração do tratamento",
+      "Articular suporte social (moradia, higiene, controle de infestação por piolho) como parte do plano terapêutico em caso associado a situação de rua"
+    ],
+    "emergency_flow": [
+      "Em paciente com sopro novo, febre e instabilidade hemodinâmica, tratar como suspeita de endocardite infecciosa: colher hemoculturas antes de iniciar antimicrobiano empírico e obter ecocardiograma com urgência",
+      "Em insuficiência cardíaca aguda por disfunção valvar, infecção não controlada ou evento embólico maior, acionar avaliação cirúrgica sem aguardar identificação definitiva da espécie de Bartonella",
+      "Em déficit neurológico focal novo, investigar AVC embólico associado e definir timing cirúrgico conforme os critérios gerais de endocardite infecciosa",
+      "Em paciente em situação de rua com quadro compatível, não deixar a ausência de residência fixa ou de seguimento ambulatorial prévio atrasar a investigação diagnóstica ou o início do tratamento"
+    ],
+    "tags": [
+      "Bartonella henselae",
+      "Bartonella quintana",
+      "doença da arranhadura do gato",
+      "febre das trincheiras",
+      "endocardite com hemocultura negativa",
+      "piolho do corpo",
+      "situação de rua",
+      "Duke-ISCVID",
+      "doxiciclina",
+      "cirurgia valvar"
+    ],
+    "source_refs": [
+      "Raoult D, Fournier PE, Drancourt M, et al. Diagnosis of 22 new cases of Bartonella endocarditis. Ann Intern Med. 1996;125(8):646-652. PMID: 8849149.",
+      "Fournier PE, Lelievre H, Eykyn SJ, et al. Epidemiologic and clinical characteristics of Bartonella quintana and Bartonella henselae endocarditis: a study of 48 patients. Medicine (Baltimore). 2001;80(4):245-251. PMID: 11470985.",
+      "Fournier PE, Mainardi JL, Raoult D. Value of microimmunofluorescence for diagnosis and follow-up of Bartonella endocarditis. Clin Diagn Lab Immunol. 2002;9(4):795-801. PMID: 12093675.",
+      "Houpikian P, Raoult D. Blood culture-negative endocarditis in a reference center: etiologic diagnosis of 348 cases. Medicine (Baltimore). 2005;84(3):162-173. PMID: 15879906.",
+      "Foucault C, Brouqui P, Raoult D. Bartonella quintana characteristics and clinical management. Emerg Infect Dis. 2006;12(2):217-223. PMID: 16494745.",
+      "Badiaga S, Brouqui P. Human louse-transmitted infectious diseases. Clin Microbiol Infect. 2012;18(4):332-337. PMID: 22360386.",
+      "Edouard S, Nabet C, Lepidi H, Fournier PE, Raoult D. Bartonella, a common cause of endocarditis: a report on 106 cases and review. J Clin Microbiol. 2015;53(3):824-829. PMID: 25540398.",
+      "Brouqui P, Raoult D. Endocarditis due to rare and fastidious bacteria. Clin Microbiol Rev. 2001;14(1):177-207. PMID: 11148009.",
+      "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445.",
+      "DeSimone DC, Garrigos ZE, Marx GE, Tattevin P, et al. Blood Culture-Negative Endocarditis: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(8):e040218. DOI: 10.1161/JAHA.124.040218. PMID: 40094211.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/8849149/",
+      "https://pubmed.ncbi.nlm.nih.gov/11470985/",
+      "https://pubmed.ncbi.nlm.nih.gov/12093675/",
+      "https://pubmed.ncbi.nlm.nih.gov/15879906/",
+      "https://pubmed.ncbi.nlm.nih.gov/16494745/",
+      "https://pubmed.ncbi.nlm.nih.gov/22360386/",
+      "https://pubmed.ncbi.nlm.nih.gov/25540398/",
+      "https://pubmed.ncbi.nlm.nih.gov/11148009/",
+      "https://pubmed.ncbi.nlm.nih.gov/37138445/",
+      "https://pubmed.ncbi.nlm.nih.gov/40094211/",
+      "https://pubmed.ncbi.nlm.nih.gov/37622656/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "endocardite-por-bartonella-henselae-e-quintana-do-gato-ao-morador-de-rua"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "meningococcemia-fulminante",
+    "name": "Meningococcemia fulminante (púrpura fulminante e síndrome de Waterhouse-Friderichsen)",
+    "aliases": [
+      "doença meningocócica invasiva fulminante",
+      "sepse meningocócica fulminante",
+      "púrpura fulminante meningocócica",
+      "síndrome de Waterhouse-Friderichsen",
+      "choque meningocócico refratário"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 61,
+    "completeness": "completo",
+    "summary": "Forma fulminante da doença meningocócica invasiva (Neisseria meningitidis), em que a liberação maciça de endotoxina desencadeia ativação simultânea da cascata de coagulação pela via do fator tecidual, disfunção da via anticoagulante da proteína C e ativação do complemento, gerando trombose microvascular disseminada (púrpura fulminante) e coagulação intravascular disseminada (CIVD) com trombose e sangramento concomitantes. Quando a mesma trombose acomete a microcirculação adrenal, a hemorragia bilateral resultante — síndrome de Waterhouse-Friderichsen — causa insuficiência adrenal aguda que agrava o choque séptico e contribui para refratariedade a vasopressor. A evolução de sintomas inespecíficos até choque estabelecido costuma ocorrer em horas, e a sobrevida depende mais do reconhecimento precoce e da antibioticoterapia empírica imediata do que de qualquer intervenção dirigida à coagulopatia.",
+    "presentation": [
+      "Pródromo inespecífico de horas: febre, mal-estar, mialgia, cefaleia leve, náusea, dor nas pernas — indistinguível de síndrome viral banal na fase inicial",
+      "Sinais precoces de choque (extremidades frias, tempo de enchimento capilar prolongado, taquicardia desproporcional, alteração do estado mental) frequentemente precedendo o aparecimento da púrpura franca",
+      "Lesões petequiais ou equimóticas de bordas irregulares e distribuição assimétrica, coalescendo rapidamente em púrpura violácea-enegrecida com necrose hemorrágica de espessura total em horas (púrpura fulminante)",
+      "Choque séptico com hipotensão refratária a volume e a doses crescentes de vasopressor, sobretudo quando há púrpura extensa sugestiva de coagulopatia grave",
+      "Sangramento clínico concomitante à trombose (sítios de punção, mucosas, sangramento digestivo ou intracraniano) por coagulação intravascular disseminada",
+      "Rigidez de nuca, fotofobia ou rebaixamento de consciência quando há meningite associada, tipicamente como achado tardio em relação ao início dos sintomas",
+      "Choque refratário a vasopressor desproporcional ao volume infundido, levantando suspeita de insuficiência adrenal aguda por hemorragia adrenal bilateral (síndrome de Waterhouse-Friderichsen)"
+    ],
+    "differentials": [
+      "Choque séptico de outra etiologia bacteriana sem coagulopatia de consumo proeminente",
+      "Coagulação intravascular disseminada por outras causas (trauma grave, complicação obstétrica, malignidade hematológica, envenenamento por picada de aranha ou serpente)",
+      "Púrpura trombocitopênica trombótica ou síndrome hemolítico-urêmica",
+      "Vasculite sistêmica com acometimento cutâneo purpúrico (púrpura de Henoch-Schönlein, vasculite associada a ANCA)",
+      "Febre maculosa e outras riquetsioses com exantema petequial",
+      "Crise adrenal por outras causas de insuficiência adrenal aguda, quando o quadro purpúrico é discreto ou ausente",
+      "Choque hemorrágico ou traumático com coagulopatia dilucional, em contexto de trauma associado"
+    ],
+    "tests": [
+      "Hemocultura e, quando indicado e seguro, cultura de líquor — sem que a coleta atrase o início da antibioticoterapia empírica",
+      "PCR para Neisseria meningitidis em sangue ou líquor, útil sobretudo quando antibiótico já foi administrado antes da coleta de cultura",
+      "Hemograma completo com plaquetas, tempo de protrombina, tempo de tromboplastina parcial ativada, fibrinogênio e D-dímero seriados para acompanhar a evolução da coagulopatia de consumo",
+      "Lactato, gasometria e função renal para estratificação de gravidade do choque",
+      "Eletrólitos (sódio, potássio) e glicemia, particularmente quando há suspeita de insuficiência adrenal associada",
+      "Cortisol sérico aleatório quando há choque refratário a volume e vasopressor sugestivo de síndrome de Waterhouse-Friderichsen, sem que a coleta atrase a hidrocortisona empírica",
+      "Avaliação seriada da extensão e da profundidade das lesões purpúricas para orientar decisão cirúrgica tardia (desbridamento, amputação)"
+    ],
+    "red_flags": [
+      "Progressão rápida de petéquias para púrpura extensa e necrose cutânea em horas",
+      "Choque refratário a reposição volêmica agressiva e a doses crescentes de vasopressor",
+      "Sangramento clínico ativo concomitante a lesões trombóticas cutâneas — padrão de CIVD estabelecida",
+      "Extremidades frias com tempo de enchimento capilar muito prolongado e dor desproporcional em membros, mesmo antes do aparecimento de púrpura franca",
+      "Rebaixamento do nível de consciência associado a febre e exantema petequial de evolução rápida",
+      "Refratariedade vasopressora desproporcional ao volume infundido, levantando suspeita de hemorragia adrenal bilateral (síndrome de Waterhouse-Friderichsen)",
+      "Contato próximo recente com caso confirmado de doença meningocócica invasiva"
+    ],
+    "ambulatory_flow": [
+      "Orientar busca imediata de atendimento de emergência diante de febre associada a petéquias, púrpura de progressão rápida, dor intensa em membros ou sinais de choque, sem aguardar evolução",
+      "Não tranquilizar exantema petequial febril como quadro viral banal sem reavaliação de sinais de choque e sem observação seriada em ambiente que permita reavaliação em horas, não em dias",
+      "Notificar compulsoriamente o caso suspeito ou confirmado às autoridades de vigilância epidemiológica, dado o potencial de surto e a necessidade de profilaxia rápida de contactantes",
+      "Iniciar quimioprofilaxia (rifampicina, ciprofloxacino ou ceftriaxona, conforme disponibilidade e contraindicações) em contactantes próximos do caso índice o mais rapidamente possível, idealmente dentro de 24 horas da identificação do caso",
+      "Atualizar esquema de vacinação meningocócica (conjugadas ACWY e, conforme indicação de risco, vacina para sorogrupo B) na rotina do calendário vacinal e em situações de risco aumentado (surto, viagem para área endêmica, asplenia, deficiência de complemento)",
+      "Encaminhar sobreviventes com sequelas de extremidade para reabilitação, cirurgia plástica e suporte psicológico estruturado desde a fase aguda"
+    ],
+    "emergency_flow": [
+      "Administrar antibioticoterapia empírica de amplo espectro (cefalosporina de terceira geração) imediatamente diante de suspeita clínica, sem aguardar confirmação por hemocultura ou cultura de líquor",
+      "Iniciar reposição volêmica precoce guiada por sinais de perfusão, seguida de vasopressor (norepinefrina como agente de primeira linha) assim que o choque persiste apesar de volume adequado",
+      "Repor hemoderivados (plasma fresco congelado, crioprecipitado, plaquetas) guiado pela presença de sangramento clínico ativo ou necessidade de procedimento invasivo iminente, não pela correção isolada de número de coagulograma alterado sem sangramento",
+      "Considerar hidrocortisona intravenosa em dose de estresse diante de choque refratário a volume e a doses crescentes de vasopressor, sobretudo com púrpura extensa, pela suspeita de insuficiência adrenal aguda por síndrome de Waterhouse-Friderichsen — administração empírica, sem aguardar confirmação laboratorial",
+      "Evitar anticoagulação terapêutica rotineira diante do risco hemorrágico concomitante da CIVD, mesmo havendo trombose microvascular extensa em curso",
+      "Monitorar extensão e profundidade das lesões cutâneas e adiar decisão cirúrgica (desbridamento, amputação) até demarcação clara entre tecido viável e não viável, exceto quando há sinais de infecção secundária ou sepse residual",
+      "Notificar o caso às autoridades de vigilância epidemiológica e articular quimioprofilaxia imediata dos contactantes próximos ainda durante a internação do caso índice"
+    ],
+    "tags": [
+      "meningococcemia",
+      "Neisseria meningitidis",
+      "púrpura fulminante",
+      "síndrome de Waterhouse-Friderichsen",
+      "coagulação intravascular disseminada",
+      "choque séptico refratário",
+      "insuficiência adrenal aguda",
+      "hemorragia adrenal bilateral",
+      "via da proteína C",
+      "terapia intensiva",
+      "quimioprofilaxia",
+      "vacinação meningocócica"
+    ],
+    "source_refs": [
+      "Rosenstein NE, Perkins BA, Stephens DS, Popovic T, Hughes JM. Meningococcal disease. N Engl J Med. 2001;344(18):1378-1388. PMID 11333996",
+      "van Deuren M, Brandtzaeg P, van der Meer JW. Update on meningococcal disease with emphasis on pathogenesis and clinical management. Clin Microbiol Rev. 2000;13(1):144-166. PMID 10627495",
+      "Thompson MJ, Ninis N, Perera R, et al. Clinical recognition of meningococcal disease in children and adolescents. Lancet. 2006;367(9508):397-403. PMID 16458763",
+      "Pathan N, Faust SN, Levin M. Pathophysiology of meningococcal meningitis and septicaemia. Arch Dis Child. 2003;88(7):601-607. PMID 12818907",
+      "Faust SN, Levin M, Harrison OB, et al. Dysfunction of endothelial protein C activation in severe meningococcal sepsis. N Engl J Med. 2001;345(6):408-416. PMID 11496851",
+      "Chalmers E, Cooper P, Forman K, et al. Purpura fulminans: recognition, diagnosis and management. Arch Dis Child. 2011;96(11):1066-1071. PMID 21233082",
+      "Levi M, ten Cate H. Disseminated intravascular coagulation. N Engl J Med. 1999;341(8):586-592. PMID 10451465",
+      "Varon J, Chen K, Sternbach GL. Rupert Waterhouse and Carl Friderichsen: adrenal apoplexy. J Emerg Med. 1998;16(4):643-647. PMID 9696186",
+      "Guarner J, Greer PW, Whitney A, et al. Pathogenesis and diagnosis of human meningococcal disease using immunohistochemical and PCR assays. Am J Clin Pathol. 2004;122(5):754-764. PMID 15491972",
+      "de Kleijn ED, de Groot R, Hack CE, et al. Activation of protein C following infusion of protein C concentrate in children with severe meningococcal sepsis and purpura fulminans: a randomized, double-blinded, placebo-controlled, dose-finding study. Crit Care Med. 2003;31(6):1839-1847. PMID 12794428",
+      "Nadel S, Goldstein B, Williams MD, et al. Drotrecogin alfa (activated) in children with severe sepsis: a multicentre phase III randomised controlled trial. Lancet. 2007;369(9564):836-843. PMID 17350452",
+      "Kirsch EA, Barton RP, Kitchen L, Giroir BP. Pathophysiology, treatment and outcome of meningococcemia: a review and recent experience. Pediatr Infect Dis J. 1996;15(11):967-978. PMID 8933544",
+      "Cohn AC, MacNeil JR, Clark TA, et al. Prevention and control of meningococcal disease: recommendations of the Advisory Committee on Immunization Practices (ACIP). MMWR Recomm Rep. 2013;62(RR-2):1-28. PMID 23515099"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/11333996/",
+      "https://pubmed.ncbi.nlm.nih.gov/10627495/",
+      "https://pubmed.ncbi.nlm.nih.gov/16458763/",
+      "https://pubmed.ncbi.nlm.nih.gov/12818907/",
+      "https://pubmed.ncbi.nlm.nih.gov/11496851/",
+      "https://pubmed.ncbi.nlm.nih.gov/21233082/",
+      "https://pubmed.ncbi.nlm.nih.gov/10451465/",
+      "https://pubmed.ncbi.nlm.nih.gov/9696186/",
+      "https://pubmed.ncbi.nlm.nih.gov/15491972/",
+      "https://pubmed.ncbi.nlm.nih.gov/12794428/",
+      "https://pubmed.ncbi.nlm.nih.gov/17350452/",
+      "https://pubmed.ncbi.nlm.nih.gov/8933544/",
+      "https://pubmed.ncbi.nlm.nih.gov/23515099/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "meningococcemia-fulminante-purpura-fulminante-civd-e-sindrome-de-waterhouse-friderichsen"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "envenenamento-crotalico-picada-de-cascavel",
+    "name": "Envenenamento crotálico (picada de cascavel)",
+    "aliases": [
+      "acidente crotálico",
+      "picada de cascavel",
+      "envenenamento por Crotalus durissus",
+      "acidente ofídico por Crotalus"
+    ],
+    "area": "geral",
+    "category": "emergencia_e_ressuscitacao",
+    "subtype": "toxicologia_envenenamento",
+    "prevalence_rank": 62,
+    "completeness": "completo",
+    "summary": "Envenenamento por serpentes do gênero Crotalus (cascavel), menos frequente que o acidente botrópico na maioria das séries brasileiras, mas historicamente uma das principais causas de óbito por acidente ofídico no país por sua gravidade sistêmica desproporcional. O veneno é dominado pela crotoxina, uma neurotoxina heterodimérica (crotapotina + fosfolipase A2 básica) que bloqueia a liberação pré-sináptica de acetilcolina na junção neuromuscular, produzindo fácies miastênica, ptose palpebral bilateral, diplopia e oftalmoplegia como sinais precoces e característicos, e que também tem ação miotóxica sistêmica direta, causando rabdomiólise extensa e generalizada — ao contrário da necrose predominantemente local do acidente botrópico. A repercussão cardiovascular mais grave e tempo-sensível é indireta: hipercalemia aguda por destruição muscular maciça, com risco de arritmia ventricular e parada cardíaca, associada a insuficiência renal aguda mioglobinúrica que pode exigir diálise. Coagulopatia está presente em grau variável, mas costuma ser menos constante e menos exuberante do que no acidente botrópico; relatos de cardiotoxicidade direta da crotoxina existem, mas são mais esparsos que os desfechos neurotóxico, miotóxico e renal. O tratamento específico é o soro anticrotálico (ou antibotrópico-crotálico) precoce, com dose determinada pela gravidade clínica, associado a suporte agressivo para rabdomiólise, monitorização seriada de potássio e diálise quando indicada.",
+    "presentation": [
+      "Fácies miastênica: ptose palpebral bilateral, diplopia e oftalmoplegia parcial, sinal precoce e característico",
+      "Disartria, disfagia ou flacidez da musculatura facial em quadros mais avançados",
+      "Mialgia difusa e urina escura (avermelhada a acastanhada) sugerindo mioglobinúria",
+      "Dor e edema local discretos ou mesmo pouco perceptíveis, ao contrário do acidente botrópico",
+      "Fraqueza da musculatura respiratória em casos graves, com risco de necessidade de suporte ventilatório",
+      "Oligúria, anúria ou outros sinais de lesão renal aguda em evolução",
+      "Sangramento em mucosas ou sítios de punção, menos constante e geralmente menos exuberante que no acidente botrópico"
+    ],
+    "differentials": [
+      "Acidente botrópico (Bothrops) — coagulopatia de consumo, sangramento sistêmico e edema/necrose local proeminentes, sem o padrão neurotóxico pré-sináptico do acidente crotálico",
+      "Acidente elapídico (coral verdadeira) — quadro neurotóxico predominante, mas com bloqueio pós-sináptico competitivo, sem miotoxicidade sistêmica extensa nem rabdomiólise proeminente",
+      "Miastenia gravis ou crise miastênica de outra etiologia — ptose e diplopia sem contexto de picada, sem elevação acentuada de CPK nem mioglobinúria",
+      "Síndrome de Guillain-Barré ou outra polirradiculoneuropatia aguda — fraqueza progressiva sem fácies miastênica típica nem CPK muito elevada",
+      "Rabdomiólise de outras causas (esforço físico extremo, crush injury, hipertermia maligna, estatinas, intoxicação exógena) — ausência de história de picada e de fácies miastênica associada",
+      "Botulismo — bloqueio neuromuscular pré-sináptico com fisiopatologia distinta (toxina botulínica em vez de fosfolipase A2), sem elevação de CPK nem contexto epidemiológico de picada de serpente"
+    ],
+    "tests": [
+      "CPK sérica seriada para dimensionar a extensão da rabdomiólise e antecipar risco de lesão renal aguda",
+      "Potássio sérico seriado, com frequência maior que a rotina habitual, obrigatório em todo paciente com CPK elevada",
+      "Função renal e exame de urina, incluindo pesquisa de mioglobinúria e monitorização da diurese",
+      "Eletrocardiograma seriado diante de hipercalemia confirmada ou suspeita, ou de insuficiência renal aguda instalada",
+      "Coagulograma (fibrinogênio, TP/INR, TTPa) ou tempo de coagulação em tubo, com peso diagnóstico e prognóstico menor do que no acidente botrópico",
+      "Exame físico direcionado à busca ativa de fácies miastênica, ptose, diplopia e oftalmoplegia, mesmo quando o local da picada tem poucos sinais",
+      "Classificação clínica de gravidade (leve, moderado, grave) conforme critérios do Ministério da Saúde, baseada principalmente em achados neurológicos, mialgia/mioglobinúria e CPK — não na extensão do edema local"
+    ],
+    "red_flags": [
+      "Fácies miastênica, ptose palpebral, diplopia ou oftalmoplegia, mesmo isoladas e mesmo com local da picada pouco alterado",
+      "Sinais de fraqueza da musculatura respiratória ou disfagia progressiva",
+      "CPK de admissão muito elevada (documentada acima de 2.000 U/L em casos que evoluíram com maior gravidade) ou em ascensão rápida",
+      "Potássio sérico em elevação ou alterações eletrocardiográficas compatíveis com hipercalemia (ondas T apiculadas, alargamento de QRS, perda de onda P)",
+      "Oligúria, anúria ou urina escura sugerindo mioglobinúria e lesão renal aguda",
+      "Idade menor que 12 anos, fator associado a maior gravidade relativa em séries brasileiras",
+      "Retardo maior que duas horas entre a picada e o início da soroterapia, fator associado a maior gravidade e mortalidade"
+    ],
+    "ambulatory_flow": [
+      "Todo paciente com suspeita de picada de cascavel deve ser encaminhado a serviço com soro antiofídico disponível — não é quadro de manejo ambulatorial isolado, mesmo quando o local da picada parece benigno",
+      "Não aplicar torniquete, incisão local, sucção ou qualquer manipulação da ferida que atrase o transporte",
+      "Orientar transporte rápido sem tentar identificar ou capturar a serpente com risco de nova picada",
+      "Reforçar que a ausência de dor ou edema local importantes NÃO afasta gravidade sistêmica no acidente crotálico, ao contrário do que a experiência com outros acidentes ofídicos poderia sugerir",
+      "Reforçar retorno imediato se surgir ptose palpebral, diplopia, dificuldade para engolir, fraqueza, urina escura ou qualquer sinal neurológico novo após a picada"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, obter acesso venoso calibroso e monitorizar sinais vitais, força muscular e sinais de fraqueza respiratória",
+      "Buscar ativamente fácies miastênica, ptose, diplopia e oftalmoplegia ao exame inicial, mesmo com local da picada pouco alterado",
+      "Classificar gravidade (leve, moderado, grave) com base principalmente em achados neurológicos, mialgia/mioglobinúria e CPK",
+      "Iniciar soro anticrotálico (ou antibotrópico-crotálico) o quanto antes, com dose determinada pela gravidade clínica — não pelo peso do paciente",
+      "Iniciar hidratação venosa vigorosa guiada por diurese e sinais de sobrecarga, visando reduzir a precipitação tubular de mioglobina",
+      "Monitorizar potássio sérico seriadamente enquanto houver CPK elevada em ascensão ou função renal comprometida, tratando qualquer hipercalemia significativa de forma imediata (estabilização de membrana, desvio transcelular, remoção definitiva)",
+      "Obter eletrocardiograma seriado diante de hipercalemia confirmada ou suspeita, ou de insuficiência renal aguda instalada, pelo risco de arritmia ventricular e parada cardíaca",
+      "Considerar terapia renal substitutiva diante de hipercalemia refratária, sobrecarga volêmica não responsiva, acidose grave ou uremia sintomática",
+      "Monitorizar ativamente a força da musculatura respiratória e considerar suporte ventilatório precoce diante de sinais de fraqueza progressiva",
+      "Evitar fármacos nefrotóxicos e equilibrar reposição volêmica com o risco de sobrecarga em paciente com função renal já comprometida"
+    ],
+    "tags": [
+      "envenenamento",
+      "acidente ofídico",
+      "Crotalus",
+      "cascavel",
+      "crotoxina",
+      "rabdomiólise",
+      "hipercalemia",
+      "lesão renal aguda",
+      "mioglobinúria",
+      "fácies miastênica",
+      "soro anticrotálico",
+      "toxicologia de emergência"
+    ],
+    "source_refs": [
+      "Pinho FM, Zanetta DM, Burdmann EA. Acute renal failure after Crotalus durissus snakebite: a prospective survey on 100 patients. Kidney Int. 2005;67(2):659-667. DOI: 10.1111/j.1523-1755.2005.67122.x. PMID: 15673314",
+      "Azevedo-Marques MM, Cupo P, Coimbra TM, Hering SE, Rossi MA, Laure CJ. Myonecrosis, myoglobinuria and acute renal failure induced by South American rattlesnake (Crotalus durissus terrificus) envenomation in Brazil. Toxicon. 1985;23(4):631-636. DOI: 10.1016/0041-0101(85)90367-8. PMID: 4060176",
+      "Magalhães RA, Ribeiro MM, de Rezende NA, Amaral CF. Rabdomiólise secundária a picada por serpente do gênero Crotalus (Crotalus durissus terrificus). Rev Inst Med Trop Sao Paulo. 1986;28(4):228-233. DOI: 10.1590/s0036-46651986000400004. PMID: 3563306",
+      "Frare BT, Silva Resende YK, Dornelas BC, Jorge MT, Souza Ricarte VA, Alves LM, Izidoro LFM. Clinical, Laboratory, and Therapeutic Aspects of Crotalus durissus (South American Rattlesnake) Victims: A Literature Review. Biomed Res Int. 2019;2019:1345923. DOI: 10.1155/2019/1345923. PMID: 31467868",
+      "Santos HLR, Sousa JDB, Alcântara JA, Sachett JAG, Villas Boas TS, Saraiva I, Bernarde PS, Magalhães SFV, Melo GC, Peixoto HM, Oliveira MR, Sampaio V, Monteiro WM. Rattlesnakes bites in the Brazilian Amazon: Clinical epidemiology, spatial distribution and ecological determinants. Acta Trop. 2019;191:69-76. DOI: 10.1016/j.actatropica.2018.12.030. PMID: 30579811",
+      "Délot E, Bon C. Model for the interaction of crotoxin, a phospholipase A2 neurotoxin, with presynaptic membranes. Biochemistry. 1993;32(40):10708-10713. DOI: 10.1021/bi00091a022. PMID: 8399216",
+      "Cavalcante WLG, Noronha-Matos JB, Timóteo MA, Fontes MRM, Gallacci M, Correia-de-Sá P. Neuromuscular paralysis by the basic phospholipase A(2) subunit of crotoxin from Crotalus durissus terrificus snake venom needs its acid chaperone to concurrently inhibit acetylcholine release and produce muscle blockage. Toxicol Appl Pharmacol. 2017;334:8-17. DOI: 10.1016/j.taap.2017.08.021. PMID: 28867438",
+      "Cupo P, Marques MM, Hering SE. Acidentes crotálicos em crianças: aspectos clínicos, laboratoriais, epidemiológicos e conduta terapêutica. Rev Soc Bras Med Trop. 1991;24(2):87-96. DOI: 10.1590/s0037-86821991000200004. PMID: 1841432",
+      "de Sousa-e-Silva MC, Tomy SC, Tavares FL, Navajas L, Larsson MH, Lucas SR, Kogika MM, Sano-Martins IS. Hematological, hemostatic and clinical chemistry disturbances induced by Crotalus durissus terrificus snake venom in dogs. Hum Exp Toxicol. 2003;22(9):491-500. DOI: 10.1191/0960327103ht392oa. PMID: 14580009",
+      "Bochner R, Struchiner CJ. Snake bite epidemiology in the last 100 years in Brazil: a review. Cad Saude Publica. 2003;19(1):7-16. DOI: 10.1590/S0102-311X2003000100002. PMID: 12700779",
+      "Ministério da Saúde (Brasil). Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos. Brasília: Fundação Nacional de Saúde, 2001."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/15673314/",
+      "https://pubmed.ncbi.nlm.nih.gov/4060176/",
+      "https://pubmed.ncbi.nlm.nih.gov/3563306/",
+      "https://pubmed.ncbi.nlm.nih.gov/31467868/",
+      "https://pubmed.ncbi.nlm.nih.gov/30579811/",
+      "https://pubmed.ncbi.nlm.nih.gov/8399216/",
+      "https://pubmed.ncbi.nlm.nih.gov/28867438/",
+      "https://pubmed.ncbi.nlm.nih.gov/1841432/",
+      "https://pubmed.ncbi.nlm.nih.gov/14580009/",
+      "https://pubmed.ncbi.nlm.nih.gov/12700779/",
+      "https://bvsms.saude.gov.br/bvs/publicacoes/funasa/manu_peconhentos.pdf"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "envenenamento-crotalico-cascavel-rabdomiolise-insuficiencia-renal-aguda-e-repercussao-cardiovascular"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "coccidioidomicose-disseminada-com-acometimento-cardiovascular",
+    "name": "Coccidioidomicose disseminada com acometimento cardiovascular",
+    "aliases": [
+      "febre do vale",
+      "valley fever",
+      "pericardite coccidioidomicótica",
+      "coccidioidomicose extrapulmonar",
+      "reumatismo do deserto"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 63,
+    "completeness": "completo",
+    "summary": "Micose sistêmica causada por Coccidioides immitis/posadasii, fungo dimórfico do solo endêmico em áreas áridas e semiáridas específicas das Américas (sudoeste dos Estados Unidos, norte do México e focos descritos na Argentina, no Paraguai e na Venezuela), não endêmica no Brasil. A infecção ocorre por inalação de artroconídeos após perturbação do solo; a maioria dos casos é assintomática ou uma pneumonia autolimitada. Disseminação extrapulmonar é rara e concentrada em imunossuprimidos, gestantes e determinadas ancestralidades de maior risco descritas na literatura; quando ocorre, pode acometer pericárdio, causando derrame e, mais raramente, tamponamento ou constrição. A evidência sobre esse acometimento cardiovascular específico é limitada a relatos de caso e pequenas séries de imagem — não a estudos de coorte robustos. No Brasil, relevância é de diagnóstico diferencial em viajante, imigrante ou trabalhador temporário com procedência epidemiológica compatível, não de doença endêmica local.",
+    "presentation": [
+      "Febre, tosse, dor torácica pleurítica e mal-estar de pneumonia coccidioidomicótica aguda, muitas vezes autolimitada, em paciente com história recente de viagem, residência ou trabalho em área endêmica (sudoeste dos EUA, norte do México, focos descritos na Argentina, Paraguai ou Venezuela)",
+      "Eritema nodoso ou eritema multiforme concomitante ao quadro respiratório (\"reumatismo do deserto\") — achado cutâneo clássico, ainda que inespecífico, da fase aguda",
+      "Dor torácica pleurítica, tipicamente aliviada ao sentar e inclinar o tronco para frente, agravada pelo decúbito e pela inspiração profunda — padrão de pericardite aguda, quando há acometimento pericárdico",
+      "Derrame pericárdico identificado em exame de imagem, na maioria dos relatos de pequeno volume, por vezes assintomático ou com sintomas discretos",
+      "Dispneia progressiva, taquicardia, hipotensão, turgência jugular e pulso paradoxal — sinais de tamponamento cardíaco, complicação já descrita ainda que rara",
+      "Sinais de constrição pericárdica tardia (edema periférico, ascite, dispneia aos esforços) em relatos isolados de pericardite constritiva coccidioidomicótica",
+      "Manifestações extracardíacas concomitantes de doença disseminada — lesões cutâneas, acometimento osteoarticular (inclusive sacroileíte descrita associada a pericardite em um relato), meningite — que devem levantar suspeita de disseminação multissistêmica, não de acometimento pericárdico isolado",
+      "Fator de risco de disseminação presente: imunossupressão celular (HIV com CD4 baixo, corticoterapia, bloqueador de TNF-α, transplante de órgão sólido), gestação (sobretudo segundo/terceiro trimestre), ou ancestralidade filipina ou africana, descritas na literatura como associadas a maior risco de doença disseminada"
+    ],
+    "differentials": [
+      "Pericardite histoplásmica — outra micose endêmica dimórfica do solo com pericardite granulomatosa, esta sim endêmica em grande parte do Brasil; diferencial mais próximo por mecanismo, com epidemiologia geográfica completamente distinta",
+      "Pericardite tuberculosa — granulomatosa, mais prevalente no contexto brasileiro, principal diferencial infeccioso a excluir ativamente",
+      "Pericardite viral ou idiopática — causa mais comum de pericardite aguda em geral, sem necessidade de história de viagem para área endêmica",
+      "Pericardite purulenta bacteriana — evolução mais aguda e tóxica, geralmente com foco infeccioso contíguo ou bacteriemia identificável",
+      "Pericardite neoplásica — a considerar em paciente com derrame volumoso e sintomas sistêmicos sem foco infeccioso claro",
+      "Pericardite urêmica ou pós-actínica — a excluir pelo contexto clínico (doença renal crônica em diálise, radioterapia torácica prévia)",
+      "Outras causas de pneumonia comunitária autolimitada, quando o acometimento pericárdico ainda não está estabelecido e o quadro é predominantemente pulmonar"
+    ],
+    "tests": [
+      "Sorologia por fixação de complemento e imunodifusão — pilar diagnóstico; título de fixação de complemento elevado ou em ascensão tem valor prognóstico para risco de disseminação e deve ser acompanhado de forma seriada",
+      "Antígeno de Coccidioides urinário ou sérico por imunoensaio enzimático — útil sobretudo em doença grave, disseminada ou em imunossuprimido com resposta de anticorpos possivelmente atenuada",
+      "Cultura e histopatologia de líquido pericárdico ou de outro tecido acometido — confirmam o diagnóstico, mas exigem alerta explícito e prévio ao laboratório de microbiologia: Coccidioides em cultura produz artroconídeos infectantes por via aérea, com risco documentado de infecção laboratorial adquirida fora de condições de biossegurança apropriadas",
+      "Ecocardiograma — exame central para quantificar derrame pericárdico, avaliar repercussão hemodinâmica (colapso de câmaras direitas, variação respiratória de fluxos) e monitorar evolução para tamponamento ou constrição",
+      "Tomografia de tórax — infiltrado pulmonar, linfadenopatia, e achado pericárdico associado quando presente, descritos em pequena série de imagem",
+      "Investigação ativa de fatores de imunossupressão (HIV, biológicos, transplante, corticoterapia), gestação e ancestralidade de maior risco em todo paciente com coccidioidomicose confirmada ou suspeita"
+    ],
+    "red_flags": [
+      "Pericardite aguda ou derrame pericárdico em paciente com história epidemiológica de viagem, residência ou trabalho recente em área árida endêmica (sudoeste dos EUA, norte do México, focos descritos na Argentina, Paraguai ou Venezuela) associada a exposição a solo ou poeira",
+      "Fator de risco de disseminação presente (imunossupressão, gestação, ancestralidade de maior risco descrita) em paciente com diagnóstico confirmado ou suspeito de coccidioidomicose",
+      "Sinais de tamponamento cardíaco (dispneia progressiva, taquicardia, hipotensão, turgência jugular, pulso paradoxal) — emergência independentemente da etiologia",
+      "Sintomas sistêmicos desproporcionais, perda de peso, lesões cutâneas ou osteoarticulares concomitantes — sugerem doença disseminada multissistêmica, não pericardite isolada",
+      "Suspeita clínica de coccidioidomicose não comunicada ao laboratório de microbiologia antes do processamento de amostra — risco de infecção laboratorial adquirida"
+    ],
+    "ambulatory_flow": [
+      "Investigar ativamente história de viagem, residência ou trabalho em área endêmica e exposição a solo/poeira em todo paciente com pericardite de causa não esclarecida, especialmente na presença de fator de risco de disseminação",
+      "Solicitar sorologia (fixação de complemento e imunodifusão) e, quando disponível, antígeno urinário/sérico diante de suspeita compatível",
+      "Comunicar explicitamente a suspeita clínica ao laboratório de microbiologia antes de qualquer coleta com potencial de cultura fúngica",
+      "Encaminhar à cardiologia para ecocardiograma e acompanhamento seriado do derrame pericárdico",
+      "Iniciar ou ajustar terapia antifúngica azólica prolongada (fluconazol ou itraconazol) em conjunto com infectologia diante de diagnóstico confirmado de doença disseminada",
+      "Reavaliação clínica, sorológica e ecocardiográfica seriada ao longo do tratamento, com atenção a sinais tardios de constrição pericárdica"
+    ],
+    "emergency_flow": [
+      "Reconhecer sinais de tamponamento cardíaco (dispneia progressiva, taquicardia, hipotensão, turgência jugular, pulso paradoxal) e proceder à pericardiocentese ou janela pericárdica sem atraso, independentemente da confirmação etiológica",
+      "Coletar líquido pericárdico para citologia, cultura (com alerta prévio ao laboratório sobre a suspeita) e, quando disponível, antígeno específico",
+      "Ecocardiograma à beira-leito para quantificar derrame e repercussão hemodinâmica",
+      "Iniciar avaliação de doença disseminada multissistêmica (pele, ossos e articulações, sistema nervoso central) em paralelo à estabilização hemodinâmica",
+      "Discutir com infectologia o início de terapia antifúngica (azólico ou, em quadro grave, anfotericina B) assim que a suspeita for razoável, sem aguardar confirmação cultural definitiva em paciente instável"
+    ],
+    "tags": [
+      "coccidioidomicose",
+      "pericardite",
+      "micose endêmica",
+      "medicina do viajante",
+      "imunossupressão",
+      "tamponamento cardíaco",
+      "fungo dimórfico",
+      "doença disseminada"
+    ],
+    "source_refs": [
+      "Galgiani JN, Ampel NM, Blair JE, et al. 2016 Infectious Diseases Society of America (IDSA) Clinical Practice Guideline for the Treatment of Coccidioidomycosis. Clin Infect Dis. 2016;63(6):e112-e146. PMID: 27470238.",
+      "Galgiani JN, Ampel NM, Blair JE, et al. Executive Summary: 2016 Infectious Diseases Society of America (IDSA) Clinical Practice Guideline for the Treatment of Coccidioidomycosis. Clin Infect Dis. 2016;63(6):717-722. PMID: 27559032.",
+      "Crum NF. Coccidioidomycosis: A Contemporary Review. Infect Dis Ther. 2022;11(2):713-742. PMID: 35233706.",
+      "Diaz JH. Travel-related risk factors for coccidioidomycosis. J Travel Med. 2018;25(1). PMID: 29796604.",
+      "McCotter OZ, Benedict K, Engelthaler DM, et al. Update on the epidemiology of coccidioidomycosis in the United States. Med Mycol. 2019;57(Suppl 1):S30-S40. PMID: 30690599.",
+      "Odio CD, Marciano BE, Galgiani JN, Holland SM. Risk Factors for Disseminated Coccidioidomycosis, United States. Emerg Infect Dis. 2017;23(2):308-311. PMID: 28098554.",
+      "Stockamp NW, Thompson GR 3rd. Coccidioidomycosis. Infect Dis Clin North Am. 2016;30(1):229-246. PMID: 26739609.",
+      "Kollath DR, Miller KJ, Barker BM. The mysterious desert dwellers: Coccidioides immitis and Coccidioides posadasii, causative fungal agents of coccidioidomycosis. Virulence. 2019;10(1):222-233. PMID: 30898028.",
+      "Campins H. Coccidioidomycosis in South America. A review of its epidemiology and geographic distribution. Mycopathologia et Mycologia Applicata. 1970;41(1):25-34. PMID: 5535369.",
+      "Martins MA, Araújo EM, Kuwakino MH, et al. Coccidioidomycosis in Brazil. A case report. Rev Inst Med Trop Sao Paulo. 1997;39(5):299-304. PMID: 9661310.",
+      "Brilhante RSN, Cordeiro RA, Rocha MFG, et al. Coccidioidal pericarditis: a rapid presumptive diagnosis by an in-house antigen confirmed by mycological and molecular methods. J Med Microbiol. 2008;57(Pt 10):1288-1292. PMID: 18809560.",
+      "Vecchié A, Raybould JE, Sangal K, et al. Pericarditis and Sacroiliitis in a World Traveler. JACC Case Rep. 2021;3(10):1322-1326. PMID: 34471887.",
+      "Patel M, Wilson ZT, Seibolt L, et al. A Rare Case of Coccidioidomycosis Constrictive Pericarditis. Circ Cardiovasc Imaging. 2020;13(12):e010825. PMID: 33267611.",
+      "Madani MH, Ghasemiesfe A, Abdelhafez YG, Nardo L. Pericardial computed tomography imaging findings in the setting of coccidioidomycosis. BMC Infect Dis. 2022;22(1):623. PMID: 35843935.",
+      "Durkin M, Connolly P, Kuberski T, et al. Diagnosis of coccidioidomycosis with use of the Coccidioides antigen enzyme immunoassay. Clin Infect Dis. 2008;47(8):e69-73. PMID: 18781884.",
+      "Porte L, Valdivieso F, Wilmes D, et al. Laboratory exposure to Coccidioides: lessons learnt in a non-endemic country. J Hosp Infect. 2019;102(4):461-464. PMID: 30885815."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/27470238/",
+      "https://pubmed.ncbi.nlm.nih.gov/27559032/",
+      "https://pubmed.ncbi.nlm.nih.gov/35233706/",
+      "https://pubmed.ncbi.nlm.nih.gov/29796604/",
+      "https://pubmed.ncbi.nlm.nih.gov/30690599/",
+      "https://pubmed.ncbi.nlm.nih.gov/28098554/",
+      "https://pubmed.ncbi.nlm.nih.gov/26739609/",
+      "https://pubmed.ncbi.nlm.nih.gov/30898028/",
+      "https://pubmed.ncbi.nlm.nih.gov/5535369/",
+      "https://pubmed.ncbi.nlm.nih.gov/9661310/",
+      "https://pubmed.ncbi.nlm.nih.gov/18809560/",
+      "https://pubmed.ncbi.nlm.nih.gov/34471887/",
+      "https://pubmed.ncbi.nlm.nih.gov/33267611/",
+      "https://pubmed.ncbi.nlm.nih.gov/35843935/",
+      "https://pubmed.ncbi.nlm.nih.gov/18781884/",
+      "https://pubmed.ncbi.nlm.nih.gov/30885815/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "pericardite-coccidioidomicotica-e-disseminacao-cardiovascular-no-viajante"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "endocardite-por-tropheryma-whipplei",
+    "name": "Endocardite por Tropheryma whipplei (forma cardíaca isolada)",
+    "aliases": [
+      "endocardite de Whipple",
+      "Whipple's endocarditis",
+      "Tropheryma whipplei endocarditis",
+      "TWE",
+      "doença de Whipple cardíaca isolada",
+      "isolated Whipple's endocarditis",
+      "endocardite valvar por T. whipplei sem doença de Whipple sistêmica"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 64,
+    "completeness": "completo",
+    "summary": "Endocardite valvar causada por Tropheryma whipplei, actinobactéria de crescimento extremamente lento cujo primeiro isolamento em cultura só foi conseguido em 2000, o que faz com que toda endocardite por este organismo seja, por definição, uma endocardite com hemocultura negativa. Ao contrário da doença de Whipple clássica (diarreia, artralgia, perda de peso, linfadenopatia), esta ficha cobre especificamente a forma de acometimento cardíaco ISOLADO — endocardite valvar sem qualquer manifestação gastrointestinal, articular ou sistêmica típica — hipótese sustentada pela evidência de que é a resposta imune do hospedeiro, e não uma característica de virulência do organismo, que determina se a infecção evolui como doença multissistêmica clássica ou como infecção localizada contida num único órgão, como a valva cardíaca. É uma causa relevante e subestimada de endocardite com hemocultura negativa: numa coorte alemã de 1.135 valvas explantadas, T. whipplei foi o patógeno mais comumente identificado dentro do subgrupo de endocardite com hemocultura negativa, superando Bartonella, Coxiella e o grupo HACEK combinado. A apresentação típica é insidiosa — insuficiência cardíaca de instalação lenta, frequentemente sem febre (75% dos casos de endocardite na maior coorte publicada) e sem valvopatia prévia conhecida (69%) — o que a torna facilmente confundida com valvopatia degenerativa comum até que o material valvar excisado cirurgicamente seja analisado por PCR e histopatologia com coloração PAS, muitas vezes o único caminho até o diagnóstico correto. O tratamento segue duas fases (indução intravenosa seguida de manutenção oral prolongada por pelo menos 12 meses), com evidência de superioridade da combinação doxiciclina e hidroxicloroquina sobre sulfametoxazol-trimetoprima como manutenção, devido a relapsos documentados especificamente com este último esquema em endocardite.",
+    "presentation": [
+      "Insuficiência cardíaca de instalação insidiosa em paciente sem valvopatia prévia conhecida, sem o cortejo clássico de diarreia crônica, artralgia migratória, perda de peso ou linfadenopatia — é justamente essa ausência que caracteriza a forma isolada e a torna sub-reconhecida",
+      "Febre ausente ou baixa na maioria dos casos (75% dos pacientes com endocardite na maior coorte publicada não tinham febre ao diagnóstico) — quadro afebril não afasta a hipótese",
+      "Sopro novo ou destruição valvar progressiva de evolução lenta, identificada por vezes apenas quando sobrevêm sintomas de insuficiência cardíaca ou evento embólico",
+      "Acometimento valvar único (mais comum) ou, mais raramente, duas valvas simultaneamente (relatado com acometimento aórtico e mitral concomitante)",
+      "Arritmia ventricular ou ruptura de estrutura subvalvar (por exemplo, músculo papilar) como forma de apresentação aguda e grave em casos de evolução mais fulminante",
+      "Eventos embólicos sépticos múltiplos, por vezes mimetizando outras causas de endocardite ou de doença sistêmica",
+      "Hemoculturas persistentemente negativas apesar de quadro clínico e ecocardiográfico compatível com endocardite infecciosa — achado estrutural, não incidental, dado o crescimento extremamente lento do organismo",
+      "Ausência de vegetação exuberante ao exame macroscópico intraoperatório em parte dos casos publicados, o que pode levar a descartar prematuramente a hipótese de endocardite infecciosa antes da histopatologia"
+    ],
+    "differentials": [
+      "Endocardite com hemocultura negativa por outros agentes fastidiosos (Coxiella burnetii, Bartonella spp., micobactérias de crescimento lento, fungos) — distinguidos pela anamnese epidemiológica dirigida e por sorologia/PCR específica; ver documento geral desta biblioteca sobre endocardite com hemocultura negativa",
+      "Endocardite bacteriana comum com hemocultura falso-negativa por exposição prévia a antibiótico — deve ser sempre considerada e investigada antes de assumir agente fastidioso",
+      "Endocardite trombótica não bacteriana (NBTE) — vegetação valvar estéril associada a lúpus, síndrome antifosfolípide ou câncer, sem infecção; diferenciação por ecocardiograma transesofágico e ausência de organismo à histopatologia",
+      "Valvopatia degenerativa comum de evolução lenta, sem etiologia infecciosa — principal diagnóstico diferencial clínico antes da análise do material valvar, dado o curso insidioso e afebril",
+      "Doenças de depósito com espessamento valvar não reumático (amiloidose cardíaca, doença de Fabry) — macrófagos PAS-positivos na valva também exigem diferenciação com infecção micobacteriana atípica disseminada (Mycobacterium avium) além de doença de Whipple",
+      "Doença de Whipple clássica com acometimento cardíaco secundário — distinta da forma isolada por apresentar concomitantemente diarreia, artralgia, perda de peso e linfadenopatia"
+    ],
+    "tests": [
+      "PCR dirigida para Tropheryma whipplei em tecido valvar excisado cirurgicamente — método com maior rendimento diagnóstico nesta entidade; a PCR sanguínea pode ser negativa mesmo com endocardite confirmada, sobretudo na forma isolada sem disseminação sistêmica",
+      "Histopatologia do tecido valvar com coloração de ácido periódico de Schiff (PAS) — macrófagos espumosos PAS-positivos são o achado característico, análogo ao encontrado na biópsia duodenal da doença clássica; não é específico isoladamente e exige confirmação molecular",
+      "PCR de amplo espectro (16S rRNA) com sequenciamento em material valvar, quando a suspeita específica de T. whipplei não foi levantada previamente",
+      "Imuno-histoquímica com anticorpo específico e/ou microscopia eletrônica do tecido valvar, quando disponíveis, para confirmação adicional do organismo intracelular",
+      "Sequenciamento metagenômico de amostras de sítios suspeitos de disseminação (por exemplo, lavado broncoalveolar) em casos de evolução fulminante com comprometimento pulmonar associado",
+      "Ecocardiograma transesofágico — mais sensível que o transtorácico para caracterizar destruição valvar e vegetações de pequeno volume, frequentes nesta entidade",
+      "Aplicação dos critérios de Duke-ISCVID 2023 com registro de suas limitações práticas nesta entidade — a própria coorte de referência registrou que os critérios foram inefetivos para o diagnóstico antes da análise da valva cardíaca na maioria dos casos"
+    ],
+    "red_flags": [
+      "Insuficiência cardíaca de início recente com hemoculturas persistentemente negativas, mesmo sem febre ou outro sinal infeccioso evidente",
+      "Destruição valvar progressiva sem etiologia esclarecida em paciente sem valvopatia prévia conhecida e sem fator de risco clássico para endocardite (uso de droga injetável, prótese valvar, dispositivo cardíaco)",
+      "Arritmia ventricular nova ou ruptura de estrutura subvalvar (músculo papilar) sem causa isquêmica ou estrutural evidente",
+      "Material valvar excisado cirurgicamente com cultura convencional negativa e causa da endocardite ainda indefinida — indicação para PCR dirigida e histopatologia com PAS antes de encerrar a investigação etiológica",
+      "Persistência de organismo na valva à histopatologia apesar de curso antibiótico pré-operatório considerado adequado pela duração habitual de endocardite bacteriana comum"
+    ],
+    "ambulatory_flow": [
+      "Paciente com valvopatia de evolução insidiosa e hemoculturas negativas, sem etiologia esclarecida, deve ser encaminhado para investigação hospitalar dirigida — a suspeita de endocardite por agente fastidioso não deve ser conduzida em nível puramente ambulatorial",
+      "Não descartar a hipótese diagnóstica em paciente sem diarreia, artralgia, perda de peso ou linfadenopatia — a ausência desses sintomas é compatível com, e não contra, a forma cardíaca isolada",
+      "Em paciente já operado com diagnóstico confirmado, seguimento clínico e ecocardiográfico prolongado é indicado dado o risco de relapso descrito nesta entidade, com atenção à adesão ao esquema de manutenção prolongada"
+    ],
+    "emergency_flow": [
+      "Diante de insuficiência cardíaca aguda ou instabilidade hemodinâmica associada a destruição valvar em paciente com hemoculturas negativas, avaliação cirúrgica cardíaca e infectológica conjunta sem aguardar identificação microbiológica convencional, dado que o organismo não cresce em hemocultura padrão",
+      "Encaminhar todo material valvar excisado cirurgicamente para PCR dirigida e histopatologia com coloração PAS quando a cultura convencional é negativa e a etiologia permanece indefinida — frequentemente o único caminho até o diagnóstico correto nesta entidade",
+      "Não assumir que ausência de vegetação exuberante ao exame macroscópico intraoperatório afasta endocardite infecciosa — aguardar confirmação histopatológica e molecular antes de descartar a hipótese"
+    ],
+    "tags": [
+      "Tropheryma whipplei",
+      "doença de Whipple",
+      "endocardite com hemocultura negativa",
+      "endocardite cardíaca isolada",
+      "PAS positivo",
+      "macrófagos espumosos",
+      "doxiciclina e hidroxicloroquina",
+      "sulfametoxazol-trimetoprima",
+      "Duke-ISCVID 2023",
+      "PCR de valva cardíaca",
+      "agente fastidioso"
+    ],
+    "source_refs": [
+      "Fenollar F, Célard M, Lagier JC, Lepidi H, Fournier PE, Raoult D. Tropheryma whipplei endocarditis. Emerg Infect Dis. 2013;19(11):1721-1730. DOI: 10.3201/eid1911.121356. PMID: 24207100.",
+      "Geissdörfer W, Moos V, Moter A, et al. High frequency of Tropheryma whipplei in culture-negative endocarditis. J Clin Microbiol. 2012;50(2):216-222. DOI: 10.1128/JCM.05531-11. PMID: 22135251.",
+      "Lagier JC, Lepidi H, Raoult D, Fenollar F. Systemic Tropheryma whipplei: clinical presentation of 142 patients with infections diagnosed or confirmed in a reference center. Medicine (Baltimore). 2010;89(5):337-345. DOI: 10.1097/MD.0b013e3181f204a8. PMID: 20827111.",
+      "Fenollar F, Puéchal X, Raoult D. Whipple's disease. N Engl J Med. 2007;356(1):55-66. DOI: 10.1056/NEJMra062477. PMID: 17202456.",
+      "Moos V, Kunkel D, Marth T, Feurle GE, LaScola B, Ignatius R, Zeitz M, Schneider T. Reduced peripheral and mucosal Tropheryma whipplei-specific Th1 response in patients with Whipple's disease. J Immunol. 2006;177(3):2015-2022. DOI: 10.4049/jimmunol.177.3.2015. PMID: 16849516.",
+      "Marth T. Tropheryma whipplei, immunosuppression and Whipple's disease: from a low-pathogenic, environmental infectious organism to a rare, multifaceted inflammatory complex. Dig Dis. 2015;33(2):190-199. DOI: 10.1159/000369538. PMID: 25925922.",
+      "Fenollar F, Trani M, Davoust B, Salle B, Birg ML, Rolain JM, Raoult D. Prevalence of asymptomatic Tropheryma whipplei carriage among humans and nonhuman primates. J Infect Dis. 2008;197(6):880-887. DOI: 10.1086/528693. PMID: 18419351.",
+      "Love SM, Morrison L, Appleby C, Modi P. Tropheryma whipplei endocarditis without gastrointestinal involvement. Interact Cardiovasc Thorac Surg. 2012;15(1):161-163. DOI: 10.1093/icvts/ivs116. PMID: 22499804.",
+      "Chan V, Wang B, Veinot JP, Suh KN, Rose G, Desjardins M, Mesana TG. Tropheryma whipplei aortic valve endocarditis without systemic Whipple's disease. Int J Infect Dis. 2011;15(11):e804-e806. DOI: 10.1016/j.ijid.2011.05.020. PMID: 21880531.",
+      "Herrmann MD, Neumayr A, Essig A, Spiess J, Merk J, Möller P, Liebold A, Barth TF. Isolated Whipple's endocarditis: an underestimated diagnosis that requires molecular analysis of surgical material. Ann Thorac Surg. 2014;98(1):e1-e3. DOI: 10.1016/j.athoracsur.2014.04.059. PMID: 24996742.",
+      "Lagier JC, Fenollar F, Lepidi H, Giorgi R, Million M, Raoult D. Treatment of classic Whipple's disease: from in vitro results to clinical outcome. J Antimicrob Chemother. 2014;69(1):219-227. DOI: 10.1093/jac/dkt310. PMID: 23946319.",
+      "Fenollar F, Lagier JC, Rolain JM, Célard M, Bouchot O, Eicher JC, Lepidi H, Raoult D. Tropheryma whipplei endocarditis relapses after treatment with trimethoprim/sulfamethoxazole. Int J Antimicrob Agents. 2013;41(6):592-594. DOI: 10.1016/j.ijantimicag.2013.02.003. PMID: 23507410.",
+      "Emonet S, Wuillemin T, Harbarth S, Wassilew N, Cikirikcioglu M, Schrenzel J, Lagier JC, Raoult D, van Delden C. Relapse of Tropheryma whipplei endocarditis treated by trimethoprim/sulfamethoxazole, cured by hydroxychloroquine plus doxycycline. Int J Infect Dis. 2015;30:17-19. DOI: 10.1016/j.ijid.2014.11.003. PMID: 25461667.",
+      "Lagier JC, Fenollar F, Raoult D. Whipple's disease and Tropheryma whipplei infections in internal medicine. When to think about it? How to treat? Rev Med Interne. 2014;35(12):801-807. DOI: 10.1016/j.revmed.2014.04.016. PMID: 24933290.",
+      "Schneider T, Moos V, Loddenkemper C, Marth T, Fenollar F, Raoult D. Whipple's disease: new aspects of pathogenesis and treatment. Lancet Infect Dis. 2008;8(3):179-190. DOI: 10.1016/S1473-3099(08)70042-2. PMID: 18291339.",
+      "Alozie A, Zimpfer A, Köller K, Westphal B, Obliers A, Erbersdobler A, Steinhoff G, Podbielski A. Arthralgia and blood culture-negative endocarditis in middle age men suggest Tropheryma whipplei infection: report of two cases and review of the literature. BMC Infect Dis. 2015;15:339. DOI: 10.1186/s12879-015-1078-6. PMID: 26282628.",
+      "Soares CK, Silva RCRD, Brasileiro Filho G, Gelape CL, Rosa Júnior JF, Passaglia LG. Whipple's disease as a differential diagnosis of blood culture-negative endocarditis: a case report. Arq Bras Cardiol. 2025;122(7):e20240207. DOI: 10.36660/abc.20240207. PMID: 40834157.",
+      "Rioux AV, Godbout D, Trahan S, Sénéchal M. Whipple's disease: the elusive cardiac invader in the shadows of systemic illness — case report and literature review of the cardiac implications of Whipple's disease. Acta Cardiol. 2026;81(5):723-728. DOI: 10.1080/00015385.2026.2681981. PMID: 42240429.",
+      "Shi Y, Wang X, Mao X, Mi L, Liu W, Wang N. Severe mitral valve papillary muscle rupture of isolated Whipple's endocarditis: a case report and review of the literature. Front Cardiovasc Med. 2025;12:1669997. DOI: 10.3389/fcvm.2025.1669997. PMID: 41306264.",
+      "Fowler VG Jr, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445."
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/24207100/",
+      "https://pubmed.ncbi.nlm.nih.gov/22135251/",
+      "https://pubmed.ncbi.nlm.nih.gov/20827111/",
+      "https://pubmed.ncbi.nlm.nih.gov/17202456/",
+      "https://pubmed.ncbi.nlm.nih.gov/16849516/",
+      "https://pubmed.ncbi.nlm.nih.gov/25925922/",
+      "https://pubmed.ncbi.nlm.nih.gov/18419351/",
+      "https://pubmed.ncbi.nlm.nih.gov/22499804/",
+      "https://pubmed.ncbi.nlm.nih.gov/21880531/",
+      "https://pubmed.ncbi.nlm.nih.gov/24996742/",
+      "https://pubmed.ncbi.nlm.nih.gov/23946319/",
+      "https://pubmed.ncbi.nlm.nih.gov/23507410/",
+      "https://pubmed.ncbi.nlm.nih.gov/25461667/",
+      "https://pubmed.ncbi.nlm.nih.gov/24933290/",
+      "https://pubmed.ncbi.nlm.nih.gov/18291339/",
+      "https://pubmed.ncbi.nlm.nih.gov/26282628/",
+      "https://pubmed.ncbi.nlm.nih.gov/40834157/",
+      "https://pubmed.ncbi.nlm.nih.gov/42240429/",
+      "https://pubmed.ncbi.nlm.nih.gov/41306264/",
+      "https://pubmed.ncbi.nlm.nih.gov/37138445/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "doenca-de-whipple-cardiaca-isolada-endocardite-tropheryma-whipplei-sem-sintomas-gastrointestinais"
+    ],
+    "patient_material_slug": null
+  },
+  {
+    "slug": "febre-maculosa-brasileira-com-comprometimento-cardiovascular",
+    "name": "Febre maculosa brasileira com comprometimento cardiovascular",
+    "aliases": [
+      "vasculite sistêmica por Rickettsia rickettsii",
+      "riquetsiose do grupo da febre maculosa grave",
+      "febre maculosa das Montanhas Rochosas (forma brasileira)",
+      "miocardite por Rickettsia rickettsii"
+    ],
+    "area": "geral",
+    "category": "sindrome_clinica",
+    "subtype": "infeccao_com_acometimento_cardiovascular",
+    "prevalence_rank": 65,
+    "completeness": "completo",
+    "summary": "Riquetsiose transmitida pelo carrapato-estrela (Amblyomma sculptum ou Amblyomma aureolatum), causada por Rickettsia rickettsii, com relevância epidemiológica em São Paulo, Minas Gerais, Rio de Janeiro e Espírito Santo, associada à expansão de populações de capivaras em fragmentos de mata próximos a áreas urbanizadas. O mecanismo central é uma vasculite sistêmica por invasão direta do endotélio, que explica o exantema mas também a miocardite, o derrame pericárdico, a coagulopatia de consumo e o choque multifatorial dos casos graves. É uma das riquetsioses de maior letalidade do mundo quando o tratamento é tardio, com relatos de letalidade superior a 50% em focos urbanos hiperendêmicos brasileiros; a doxiciclina empírica precoce, iniciada antes da confirmação laboratorial e independentemente da idade ou da gestação, é a intervenção isolada que mais reduz mortalidade.",
+    "presentation": [
+      "Febre de início agudo, cefaleia intensa e mialgia, com ou sem exantema maculopapular nos primeiros dias",
+      "Exantema maculopapular que tipicamente surge após o início da febre, podendo acometer palmas e plantas, evoluindo para petéquias ou sufusões hemorrágicas nos casos graves",
+      "Histórico de exposição a área rural, periurbana ou fragmento de mata com carrapatos, contato com capivaras ou equinos, nas regiões endêmicas do Sudeste brasileiro",
+      "Náusea, vômitos, dor abdominal e mialgia intensa, que podem mimetizar outras síndromes febris agudas",
+      "Sinais de miocardite: dor torácica atípica, dispneia, arritmia nova ou disfunção sistólica identificada à ecocardiografia",
+      "Sinais de choque: hipotensão, taquicardia, perfusão periférica reduzida, alteração do nível de consciência",
+      "Manifestações hemorrágicas mucocutâneas associadas a plaquetopenia e coagulopatia nos casos graves"
+    ],
+    "differentials": [
+      "Dengue e outras arboviroses, sobretudo na fase inicial antes do exantema característico",
+      "Sarampo, rubéola, enteroviroses e outras doenças exantemáticas febris agudas",
+      "Leptospirose e síndrome de Weil, especialmente diante de exposição rural ou a áreas alagadas",
+      "Síndrome cardiopulmonar por hantavírus",
+      "Febre amarela grave, sobretudo em áreas de transmissão silvestre ativa",
+      "Febre tifoide e outras sepses de foco não definido",
+      "Miocardite viral de outra etiologia sem exantema ou exposição epidemiológica compatível",
+      "Meningococcemia e outras causas de púrpura fulminante"
+    ],
+    "tests": [
+      "Sorologia por imunofluorescência indireta (IFA), método de referência, idealmente pareada (fase aguda e convalescença); título isolado precoce negativo não exclui o diagnóstico",
+      "PCR em sangue total, soro ou fragmento de biópsia de pele da lesão exantemática, com sensibilidade reduzida após início do antibiótico",
+      "Hemograma completo com plaquetas, função renal, transaminases, bilirrubinas e coagulograma",
+      "Eletrocardiograma em todo paciente com suspeita de forma grave",
+      "Ecocardiografia à beira do leito diante de instabilidade hemodinâmica não plenamente explicada por hipovolemia, para rastrear miocardite e derrame pericárdico",
+      "Troponina diante de suspeita de acometimento miocárdico",
+      "Gasometria arterial e lactato diante de sinais de choque"
+    ],
+    "red_flags": [
+      "Hipotensão, choque ou necessidade de vasopressor",
+      "Sangramento espontâneo, petéquias extensas ou sufusões hemorrágicas, sugestivos de coagulopatia de consumo",
+      "Arritmia nova ou disfunção sistólica ao ecocardiograma, sugestivas de miocardite",
+      "Derrame pericárdico com repercussão hemodinâmica",
+      "Alteração do nível de consciência",
+      "Insuficiência renal aguda ou oligúria",
+      "Intervalo prolongado entre início dos sintomas e início do antibiótico, fator consistentemente associado a óbito",
+      "Ausência de exantema não deve reduzir a suspeita clínica em paciente grave com exposição epidemiológica compatível"
+    ],
+    "ambulatory_flow": [
+      "Considerar febre maculosa brasileira em febre aguda com mialgia intensa e exposição epidemiológica compatível (área rural, periurbana ou fragmento de mata, contato com carrapatos, capivaras ou equinos), mesmo sem exantema",
+      "Não aguardar confirmação sorológica ou por PCR para iniciar doxiciclina empírica quando a suspeita clínico-epidemiológica é razoável",
+      "Não adiar nem substituir a doxiciclina por alternativa de eficácia inferior em criança pequena ou gestante diante de suspeita de forma grave; o risco de morte pelo atraso supera o risco teórico historicamente atribuído à classe das tetraciclinas",
+      "Orientar retorno ou encaminhamento imediato diante de qualquer sinal de alarme (exantema purpúrico, dispneia, hipotensão, sangramento, alteração de consciência, arritmia percebida)",
+      "Não conduzir de forma ambulatorial paciente com qualquer critério de gravidade; encaminhar para avaliação hospitalar"
+    ],
+    "emergency_flow": [
+      "Avaliar ABC, obter acesso venoso e monitorização cardíaca contínua diante de qualquer critério de gravidade",
+      "Iniciar doxiciclina empírica imediatamente diante de suspeita clínica razoável, sem aguardar confirmação laboratorial, independentemente da idade do paciente ou de gestação",
+      "Obter eletrocardiograma e ecocardiografia à beira do leito diante de instabilidade hemodinâmica, para identificar miocardite e derrame pericárdico concomitantes",
+      "Diferenciar o componente hipovolêmico/distributivo do componente cardiogênico do choque antes de escalar volume de forma não criteriosa",
+      "Instituir suporte hemodinâmico multimodal (volume criterioso, vasopressor para componente distributivo, suporte inotrópico se houver disfunção miocárdica por miocardite) diante de choque misto",
+      "Corrigir coagulopatia e trombocitopenia clinicamente relevantes diante de sangramento ativo",
+      "Rastrear ativamente sinais de disfunção renal, hepática e neurológica como parte da avaliação multissistêmica da vasculite",
+      "Transferir precocemente para unidade de terapia intensiva diante de qualquer sinal de gravidade hemodinâmica, cardíaca, renal ou neurológica, dada a rapidez com que a forma fulminante pode evoluir e a letalidade elevada descrita em focos hiperendêmicos brasileiros"
+    ],
+    "tags": [
+      "febre maculosa",
+      "Rickettsia rickettsii",
+      "vasculite",
+      "miocardite",
+      "derrame pericárdico",
+      "choque",
+      "CIVD",
+      "doxiciclina",
+      "carrapato-estrela",
+      "capivara",
+      "zoonose",
+      "terapia intensiva"
+    ],
+    "source_refs": [
+      "Foley J, López-Pérez AM, Álvarez-Hernández G, Labruna MB, Angerami RN, Zazueta OE, Bermudez S, Rubino F, Salzer JS, Brophy M, Pinter A, Paddock CD. A wolf at the door: the ecology, epidemiology, and emergence of community- and urban-level Rocky Mountain spotted fever in the Americas. Am J Vet Res. 2025;86(3). DOI: 10.2460/ajvr.24.11.0368. PMID: 39904050",
+      "Rosa-Xavier IG, Pinter A, Giuffrida R, Biondo AW, Kmetiuk LB, Santarém VA. One Health Approach to Brazilian Spotted Fever: Capybaras, Horses, and Rural Areas. Pathogens. 2025;14(4):305. DOI: 10.3390/pathogens14040305. PMID: 40333062",
+      "Brasil J, Angerami RN, Donalisio MR. Factors associated with the confirmation and death for Brazilian spotted fever in an important endemic area of the State of São Paulo, 2007-2021. Rev Soc Bras Med Trop. 2024;57:e00708. DOI: 10.1590/0037-8682-0617-2023. PMID: 39082523",
+      "Brasil J, Pinter A, Angerami RN, Donalisio MR. Spatial and temporal distribution of Brazilian spotted fever in an endemic area: epidemiological profile of a zoonosis in constant adaptation to anthropogenic actions. Rev Bras Epidemiol. 2026. DOI: 10.1590/1980-549720260020. PMID: 42138871",
+      "Scinachi CA, Takeda GACG, Mucci LF, Pinter A. Association of Brazilian spotted fever and Atlantic rain forest fragmentation. Acta Trop. 2017;166:225-233. DOI: 10.1016/j.actatropica.2016.11.025. PMID: 27880877",
+      "Sahni A, Fang R, Sahni SK, Walker DH. Pathogenesis of Rickettsial Diseases: Pathogenic and Immune Mechanisms of an Endotheliotropic Infection. Annu Rev Pathol. 2019;14:127-152. DOI: 10.1146/annurev-pathmechdis-012418-012800. PMID: 30148688",
+      "Walker DH, Ismail N. Emerging and re-emerging rickettsioses: endothelial cell infection and early disease events. Nat Rev Microbiol. 2008;6(5):375-386. DOI: 10.1038/nrmicro1866. PMID: 18414502",
+      "Biggs HM, Behravesh CB, Bradley KK, Dahlgren FS, Drexler NA, Dumler JS, Folk SM, Kato CY, Lash RR, Levin ML, Massung RF, Nadelman RB, Nicholson WL, Paddock CD, Pritt BS, Traeger MS. Diagnosis and Management of Tickborne Rickettsial Diseases: Rocky Mountain Spotted Fever and Other Spotted Fever Group Rickettsioses, Ehrlichioses, and Anaplasmosis — United States. MMWR Recomm Rep. 2016;65(2):1-44. DOI: 10.15585/mmwr.rr6502a1. PMID: 27172113",
+      "Cross R, Ling C, Day NP, McGready R, Paris DH. Revisiting doxycycline in pregnancy and early childhood--time to rebuild its reputation? Expert Opin Drug Saf. 2016;15(3):367-382. DOI: 10.1517/14740338.2016.1133584. PMID: 26680308",
+      "Álvarez-Hernández G, Rivera-Rosas CN, Calleja-López JRT, et al. A Comparison of the Clinical and Epidemiological Profile of Rocky Mountain Spotted Fever with Dengue and COVID-19 in Hospitalized Children, Sonora, México, 2015-2022. Trop Med Infect Dis. 2025;10(1):20. DOI: 10.3390/tropicalmed10010020. PMID: 39852671",
+      "Bellman S, McCoy KD, Enriquez D, et al. Predictors of Fatal Outcomes among Pediatric Patients Hospitalized for Rocky Mountain Spotted Fever, Sonora, Mexico, 2004-2024. Emerg Infect Dis. 2026;32(2). DOI: 10.3201/eid3202.251223. PMID: 41714602",
+      "Drexler NA, et al. Morbidity and Functional Outcomes Following Rocky Mountain Spotted Fever Hospitalization. Open Forum Infect Dis. 2022. DOI: 10.1093/ofid/ofac506. PMID: 36324320",
+      "Chapuz-Magaña JF, Mendez-Dominguez N, Dzul-Rosado K, Villarreal-Jimenez E, Olivera-Mar A, Salazar-Tostado VM, Santaularia-Tomas M. Subclinical Cardiac Disturbances After Rickettsia spp. Infection in an Endemic Region of Mexico. Trop Med Infect Dis. 2026;11(3):65. DOI: 10.3390/tropicalmed11030065. PMID: 41893401",
+      "Tsiamis N, Afendoulis D, Tountas C, Toulgaridis F, Tsakirian F, Vidalakis E, Totikidis G, Toutouzas K, Kitsiou A. Rare case of fulminant myocarditis in a patient with rickettsia infection. Glob Cardiol Sci Pract. 2026;2026(2):e202615. DOI: 10.21542/gcsp.2026.15. PMID: 42181786"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/39904050/",
+      "https://pubmed.ncbi.nlm.nih.gov/40333062/",
+      "https://pubmed.ncbi.nlm.nih.gov/39082523/",
+      "https://pubmed.ncbi.nlm.nih.gov/42138871/",
+      "https://pubmed.ncbi.nlm.nih.gov/27880877/",
+      "https://pubmed.ncbi.nlm.nih.gov/30148688/",
+      "https://pubmed.ncbi.nlm.nih.gov/18414502/",
+      "https://pubmed.ncbi.nlm.nih.gov/27172113/",
+      "https://pubmed.ncbi.nlm.nih.gov/26680308/",
+      "https://pubmed.ncbi.nlm.nih.gov/39852671/",
+      "https://pubmed.ncbi.nlm.nih.gov/41714602/",
+      "https://pubmed.ncbi.nlm.nih.gov/36324320/",
+      "https://pubmed.ncbi.nlm.nih.gov/41893401/",
+      "https://pubmed.ncbi.nlm.nih.gov/42181786/"
+    ],
+    "review_status": "pendente_revisao",
+    "review_note": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado.",
+    "version": 1,
+    "related_document_slugs": [
+      "febre-maculosa-brasileira-e-acometimento-cardiovascular-vasculite-sistemica-por-rickettsia-rickettsii"
+    ],
+    "patient_material_slug": null
   }
 ]
