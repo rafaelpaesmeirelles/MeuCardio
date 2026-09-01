@@ -2462,3 +2462,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 45 | 255 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **701** | **4.199** |
+
+## Lote 110 — concluído (commit 7bcb5605)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para FA/Cardiomiopatias/Diabetes/Prevenção (temas do Lote 108) e completando a primeira rotação plena das demais categorias por todos os 8 temas prevalentes.
+
+- **Documentos**:
+  - Fibrilação atrial: "FA e Hipotireoidismo Subclínico: o TSH Como Determinante Direto da Eletrofisiologia Atrial" — estudo mecanístico 2025 (PMID 41332396), metanálise (PMID 38165911), coorte (PMID 39866801) — revisa a conclusão do documento já existente sobre hipertireoidismo subclínico.
+  - Cardiomiopatias: "Preditores de Recuperação da FEVE na Cardiomiopatia Dilatada Não Isquêmica" — 12 fontes 2025-2026 sobre LGE, strain por feature-tracking e genética (TTN vs. LMNA/FLNC) como preditores de remodelamento reverso.
+  - Diabetes e cardiologia: "Retinopatia Diabética como Marcador de Risco Cardiovascular Sistêmico" — metanálise fundadora (PMID 21525504) e 7 fontes 2025-2026, incluindo oculômica por IA.
+  - Prevenção e lipídios: "HDL Funcional: Capacidade de Efluxo de Colesterol e Desfecho Cardiovascular Além do Número" — randomização mendeliana (Voight 2012), coortes fundadoras (PMID 21226578, 25404125, 26025389) e 5 fontes 2025-2026.
+- **Caso clínico**: Lp(a) elevada — lepodisiran, acesso apenas via protocolo de pesquisa (derivado do documento do Lote 105).
+- **Checklist**: manejo antitrombótico na DAC com cirrose ou trombocitopenia (derivado do documento do Lote 109).
+- **Material-paciente**: estetoscópio digital com IA e a detecção precoce de valvopatia (derivado do documento do Lote 105).
+- **Trilha**: insuficiência cardíaca — descongestão guiada, do diurético clássico ao ultrassom pulmonar/VExUS (9 etapas).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 26 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10896`.
+
+### Status consolidado (após Lote 110)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 252 | 2.148 |
+| Casos clínicos | 900 | 107 | 793 |
+| Checklists | 600 | 78 | 522 |
+| Materiais-paciente | 500 | 63 | 437 |
+| Trilhas | 300 | 46 | 254 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **709** | **4.191** |
