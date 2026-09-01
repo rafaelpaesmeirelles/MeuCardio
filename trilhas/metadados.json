@@ -27629,5 +27629,57 @@
         "por_que": "Fecha a trilha no fenótipo onde a lógica da obstrução simplesmente não se aplica: a CMH apical, tipicamente não obstrutiva, com diagnóstico diferencial e prognóstico próprios — o extremo oposto do paciente candidato a inibidor de miosina para gradiente de via de saída."
       }
     ]
+  },
+  {
+    "slug": "trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade",
+    "titulo": "Hipertensão: medida de pressão arterial de próxima geração — de quando pedir MAPA/MRPA ao cuffless, à pressão central e à variabilidade",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo decidir quando pedir MAPA/MRPA pela árvore da ESH 2023, interpretar o que a automedida domiciliar e o MAPA de 24h revelam além da média (padrão noturno, variabilidade visita a visita), situar o que a evidência de 2025-2026 já sustenta sobre dispositivos cuffless e sobre pressão central aórtica, e aplicar tudo isso para diferenciar hipertensão resistente verdadeira de pseudorresistência antes de escalonar tratamento.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-jaleco-branco-e-mascarada-mapa-mrpa",
+        "por_que": "Abre pela árvore de decisão que nenhum outro fluxograma da biblioteca cobria: diante de uma pressão de consultório específica, quando vale pedir MAPA ou MRPA e o que fazer com o resultado — a porta de entrada para toda a medida ambulatorial que segue."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "automedida-domiciliar-de-pressao-arterial-guiando-titulacao-tasminh4-e-home-bp",
+        "por_que": "A automedida domiciliar (MRPA) é o método mais acessível dos indicados no fluxograma anterior — TASMINH4 e HOME BP mostram que usá-la para guiar titulação, não só para diagnosticar, melhora controle pressórico na prática."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-noturna-nao-dipping-e-pico-matinal-exagerado-o-que-a-mrpa-domiciliar-revela",
+        "por_que": "Uma série de MRPA bem conduzida (etapa anterior) não entrega só uma média — revela um padrão temporal (non-dipping, pico matinal) que a média sozinha esconde e que carrega risco cardiovascular próprio."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "variabilidade-da-pressao-arterial-visita-a-visita-e-mapa-24h-como-preditor-independente-de-desfecho",
+        "por_que": "Distinto do padrão non-dipping da etapa anterior: aqui o que prediz desfecho não é o formato da curva, é a amplitude de oscilação entre medidas — dois pacientes com a mesma PA média podem ter risco muito diferente, e a classe de anti-hipertensivo escolhida modula essa variabilidade."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "medida-de-pressao-arterial-sem-manguito-cuffless-evidencia-2025-2026",
+        "por_que": "Depois de estabelecer o que o manguito bem usado (consultório, MRPA, MAPA) já revela, entra a tecnologia que promete substituí-lo — o scientific statement da AHA (2026) mostra por que os dispositivos cuffless hoje no mercado ainda não têm lastro de evidência para decisão clínica."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "pressao-arterial-central-aortica-versus-periferica-implicacao-prognostica",
+        "por_que": "Outra fronteira da medida, ortogonal ao cuffless: mesmo com manguito braquial validado, o número obtido não é a pressão que de fato sobrecarrega aorta, coração e cérebro — a pressão central aórtica, e evidência de 2026 mostra quando essa diferença muda a estimativa de risco."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "por_que": "Fecha a trilha aplicando tudo isso à decisão de maior consequência prática: antes de rotular um paciente como resistente e escalonar tratamento, é preciso excluir erro de técnica, má aderência e efeito do avental branco — exatamente as fontes de erro de medida percorridas nas etapas anteriores."
+      }
+    ]
   }
 ]

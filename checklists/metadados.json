@@ -42638,5 +42638,157 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído do documento já publicado polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa, com itens derivados fielmente das seções de origem indicadas. Ainda não recebeu aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
     }
+  },
+  {
+    "slug": "diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente",
+    "condicao": "Estenose aórtica de baixo fluxo/baixo gradiente — classificação por fenótipos e diagnóstico diferencial entre estenose verdadeira e pseudoestenose",
+    "resumo": "O que checar diante de área valvar aórtica calculada grave (≤1,0 cm²) com gradiente médio baixo (<40 mmHg): classificar corretamente o fenótipo hemodinâmico (ESC/EACTS 2025), diferenciar estenose verdadeiramente grave de pseudoestenose antes de indicar intervenção, e o que a evidência do REBOOT-PARADOX muda na decisão de intervir no fenótipo paradoxal.",
+    "documento_origem": "estenose-aortica-baixo-fluxo-baixo-gradiente-fenotipos-diagnostico-diferencial-e-decisao",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Mehilli J, Steffen J, Rudolph T, et al. Transcatheter Aortic Valve Replacement or Medical Treatment for Paradoxical Low-Flow, Low-Gradient Aortic Valve Stenosis: REBOOT-PARADOX. J Am Coll Cardiol. 2026 Aug 28:S0735-1097(26)07496-6. DOI: 10.1016/j.jacc.2026.08.017. PMID: 42663358.",
+      "Ho JSY, Wong GZ, Ho AKH, Leow AST, Ong JY, Kong W, Quek SC, Ho AFW, Sia CH, Nguyen HTT, Yeo TC, Poh KK. Categories of Aortic Stenosis: What's New and the Clinical Implications. Medicina (Kaunas). 2026;62(5):819. DOI: 10.3390/medicina62050819. PMID: 42195072.",
+      "Khan H, Das S, Das R. A Review of Sex Differences in Patients with Aortic Stenosis. J Clin Med. 2026;15(16):6362. DOI: 10.3390/jcm15166362. PMID: 42652765.",
+      "Dong T, Haroun E, Arockiam AD, et al. Aortic Valve Calcium Score Quantification by Contrast Cardiac CT: Correlations With Echocardiography and Optimal Thresholds. Circ Cardiovasc Imaging. 2025;18(6):e017373. DOI: 10.1161/CIRCIMAGING.124.017373. PMID: 40376780.",
+      "Marrero N, Jha K, Grant JK, et al. Sex-Specific Prognostic Value of Aortic Valve Calcium and the Risk for Aortic Stenosis: Multi-Ethnic Study of Atherosclerosis (MESA). Circ Cardiovasc Imaging. 2026;19(5):e018849. DOI: 10.1161/CIRCIMAGING.125.018849. PMID: 41953973.",
+      "Itani H, Moumneh MB, Zayed A, et al. Updates on Imaging Modalities for the Diagnosis of Aortic Stenosis. Cardiol Rev. 2026 Aug 20. DOI: 10.1097/CRD.0000000000001435. PMID: 42618971.",
+      "Hecht S, Annabi MS, Stanová V, Dahou A, et al. A Novel Echocardiographic Parameter to Confirm Low-Gradient Aortic Stenosis Severity. JACC Adv. 2024;3(10):101245. DOI: 10.1016/j.jacadv.2024.101245. PMID: 39290817.",
+      "Blais C, Burwash IG, Mundigler G, Dumesnil JG, et al. Projected valve area at normal flow rate improves the assessment of stenosis severity in patients with low-flow, low-gradient aortic stenosis: the multicenter TOPAS study. Circulation. 2006;113(5):711-721. DOI: 10.1161/CIRCULATIONAHA.105.557678. PMID: 16461844."
+    ],
+    "itens": [
+      {
+        "id": "it-eabfbg-nao-presumir-leve-so-pelo-gradiente",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Não concluir que a estenose é leve apenas porque o gradiente médio é <40 mmHg — com área valvar calculada ≤1,0 cm² (ou indexada ≤0,6 cm²/m²), o gradiente baixo pode refletir fluxo reduzido, não obstrução discreta; classificar o fenótipo antes de qualquer decisão.",
+        "origem_secao": "Por que isso importa na prática"
+      },
+      {
+        "id": "it-eabfbg-nao-presumir-grave-so-pela-area",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Não indicar intervenção apenas por área pequena e gradiente baixo — isso expõe pacientes com pseudoestenose (área calculada pequena por baixo volume sistólico, sem valva gravemente doente) a procedimento sem benefício esperado.",
+        "origem_secao": "Por que isso importa na prática"
+      },
+      {
+        "id": "it-eabfbg-classificar-fenotipo-hemodinamico",
+        "categoria": "classificacao",
+        "obrigatorio": true,
+        "texto": "Classificar o fenótipo hemodinâmico (ESC/EACTS 2025) usando área valvar, gradiente médio (ou velocidade de pico), volume sistólico indexado (VSi) e fração de ejeção: (1) alto gradiente concordante — gradiente ≥40 mmHg/velocidade ≥4,0 m/s e área ≤1,0 cm²; (2) baixo fluxo/baixo gradiente com FE reduzida — área ≤1,0 cm², gradiente <40 mmHg, VSi ≤35 mL/m², FE reduzida; (3) baixo fluxo/baixo gradiente com FE preservada (paradoxal) — mesmos critérios com FE normal; (4) fluxo normal/gradiente baixo com FE preservada — área ≤1,0 cm², VSi >35 mL/m², gradiente <40 mmHg; (5) alto gradiente discordante — gradiente ≥40 mmHg mas área calculada >1,0 cm².",
+        "origem_secao": "Os cinco fenótipos hemodinâmicos da ESC/EACTS 2025"
+      },
+      {
+        "id": "it-eabfbg-fenotipo-4-questionar-area-calculada",
+        "categoria": "classificacao",
+        "obrigatorio": false,
+        "texto": "No fenótipo fluxo normal/gradiente baixo (VSi >35 mL/m², área ≤1,0 cm², gradiente <40 mmHg), questionar a própria área calculada antes de assumir gravidade — checar erro de medição do diâmetro do trato de saída do VE, causa mais comum de subestimativa da área nesse cenário.",
+        "origem_secao": "Os cinco fenótipos hemodinâmicos da ESC/EACTS 2025"
+      },
+      {
+        "id": "it-eabfbg-fenotipo-5-investigar-alto-debito",
+        "categoria": "classificacao",
+        "obrigatorio": false,
+        "texto": "No fenótipo alto gradiente discordante (gradiente ≥40 mmHg com área calculada >1,0 cm²), investigar causa de alto débito (anemia grave, tireotoxicose, fístula arteriovenosa) ou reconferir erro de medição do trato de saída do VE antes de aceitar a combinação como estenose grave.",
+        "origem_secao": "Os cinco fenótipos hemodinâmicos da ESC/EACTS 2025"
+      },
+      {
+        "id": "it-eabfbg-identificar-causa-de-baixo-fluxo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Nos fenótipos de baixo fluxo (2 e 3), investigar a causa do volume sistólico reduzido — disfunção sistólica de VE, hipertrofia concêntrica grave com cavidade pequena, fibrilação atrial, insuficiência mitral concomitante — pois qualquer uma delas pode reduzir o volume sistólico e gerar área calculada pequena mesmo sem valva gravemente doente.",
+        "origem_secao": "Por que isso importa na prática"
+      },
+      {
+        "id": "it-eabfbg-eco-dobutamina-padrao-referencia",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Nos fenótipos 2 e 3 (baixo fluxo/baixo gradiente com FE reduzida ou preservada), realizar ecocardiograma com dobutamina em baixa dose (até 20 µg/kg/min) como padrão de referência para diferenciar estenose verdadeira de pseudoestenose: reavaliar área e gradiente a cada estágio de infusão.",
+        "origem_secao": "Ecocardiograma com dobutamina em baixa dose e área projetada"
+      },
+      {
+        "id": "it-eabfbg-interpretar-eco-dobutamina",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Interpretar o eco com dobutamina: se a área aumenta pouco enquanto o gradiente sobe proporcionalmente ao fluxo, a estenose é verdadeiramente grave; se a área aumenta significativamente com o fluxo maior, a estenose é apenas moderada (pseudoestenose) — usar a área valvar projetada em fluxo normalizado (EOAproj, indexada pela superfície corporal) como parâmetro mais acurado (91% de classificação correta no estudo TOPAS).",
+        "origem_secao": "Ecocardiograma com dobutamina em baixa dose e área projetada"
+      },
+      {
+        "id": "it-eabfbg-ausencia-reserva-contratil-nao-contraindica",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Não usar a ausência de reserva contrátil (aumento <20% do volume sistólico com dobutamina) como contraindicação à intervenção — é um modificador de risco cirúrgico, não uma exclusão; paciente sem reserva contrátil ainda pode se beneficiar de troca valvar quando a estenose é confirmada verdadeiramente grave.",
+        "origem_secao": "Ecocardiograma com dobutamina em baixa dose e área projetada"
+      },
+      {
+        "id": "it-eabfbg-mg-eoa-alternativa-sem-estresse",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Quando a dobutamina é contraindicada (arritmia ventricular instável, isquemia ativa) ou o paciente é frágil, calcular a razão gradiente médio/área valvar efetiva (MG/EOA) a partir do eco em repouso — ponto de corte ≥25 mmHg/cm² classifica corretamente estenose verdadeiramente grave em cerca de 85% dos casos, mas ainda não substitui o eco com dobutamina como padrão de referência.",
+        "origem_secao": "Uma alternativa sem estresse farmacológico: a razão gradiente médio/área efetiva (MG/EOA)"
+      },
+      {
+        "id": "it-eabfbg-escore-calcio-quando-eco-estresse-inconclusivo",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Quando o eco sob estresse é inconclusivo, contraindicado ou tecnicamente limitado, solicitar escore de cálcio valvar aórtico por tomografia (independente do fluxo) como ferramenta complementar, usando limiares diferenciados por sexo — mulheres calcificam menos a valva para o mesmo grau de obstrução hemodinâmica, e um ponto de corte único subestima gravidade nesse grupo.",
+        "origem_secao": "Escore de cálcio valvar aórtico por tomografia"
+      },
+      {
+        "id": "it-eabfbg-escore-calcio-tc-contrastada",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se disponível apenas tomografia contrastada (feita por outra indicação), aplicar os limiares validados para escore de cálcio modificado por contraste: ≥1.840 unidades Agatston em homens e ≥1.430 em mulheres para estenose grave (sensibilidade 71-73%, especificidade 79-82%).",
+        "origem_secao": "Escore de cálcio valvar aórtico por tomografia"
+      },
+      {
+        "id": "it-eabfbg-rastrear-attr-em-fenotipo-paradoxal",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Diante de baixo fluxo/baixo gradiente em paciente idoso (especialmente >80 anos) com hipertrofia concêntrica e sintomas desproporcionais à gravidade valvar aparente, considerar rastreio para amiloidose cardíaca por transtirretina (ATTR) como segunda causa concomitante.",
+        "origem_secao": "Síntese prática"
+      },
+      {
+        "id": "it-eabfbg-confirmar-gravidade-antes-de-decidir-intervencao",
+        "categoria": "decisao_terapeutica",
+        "obrigatorio": true,
+        "texto": "Não avançar para decisão de intervenção em nenhum dos fenótipos de baixo fluxo/baixo gradiente sem primeiro confirmar que a estenose é verdadeiramente grave (por eco com dobutamina, MG/EOA ou escore de cálcio) — a confirmação diagnóstica é o passo que define elegibilidade para intervenção.",
+        "origem_secao": "O que muda na decisão terapêutica: o ensaio REBOOT-PARADOX"
+      },
+      {
+        "id": "it-eabfbg-paradoxal-vigilancia-ativa-nao-intervencao-automatica",
+        "categoria": "decisao_terapeutica",
+        "obrigatorio": true,
+        "texto": "No fenótipo paradoxal confirmado como verdadeiramente grave, não tratar a intervenção como automática — o REBOOT-PARADOX (2026) mostrou benefício sintomático e funcional consistente com TAVI (83% em NYHA I/II em 1 ano vs. 59% com terapia clínica), mas sem redução estatisticamente significativa de mortalidade em 2 anos (HR 0,83; IC95% 0,41-1,66) ou 5 anos (HR 0,76; IC95% 0,43-1,35); favorecer decisão compartilhada com vigilância clínica próxima.",
+        "origem_secao": "O que muda na decisão terapêutica: o ensaio REBOOT-PARADOX"
+      },
+      {
+        "id": "it-eabfbg-nao-adiar-diante-de-deterioracao",
+        "categoria": "decisao_terapeutica",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa no fenótipo paradoxal não significa observação indiscriminada prolongada — programar TAVI oportuno diante de sinais de deterioração clínica, mesmo sem indicação sistemática precoce baseada apenas na confirmação diagnóstica.",
+        "origem_secao": "O que muda na decisão terapêutica: o ensaio REBOOT-PARADOX"
+      },
+      {
+        "id": "it-eabfbg-vies-de-reconhecimento-em-mulheres",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Reconhecer que mulheres estão sistematicamente sub-representadas no fenótipo de alto gradiente clássico e sobrerrepresentadas no fenótipo paradoxal (hipertrofia concêntrica com cavidade pequena, menor volume sistólico), com diagnóstico mais tardio e menor taxa de encaminhamento — um viés de reconhecimento clínico a corrigir ativamente, não apenas um achado epidemiológico.",
+        "origem_secao": "Por que isso importa na prática"
+      },
+      {
+        "id": "it-eabfbg-seguimento-estruturado-fenotipo-paradoxal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Estruturar seguimento clínico e ecocardiográfico próximo para paciente com fenótipo paradoxal confirmado sob vigilância ativa, dado que a urgência de intervenção nesse fenótipo é menos sustentada por evidência de ensaio randomizado do que na estenose de alto gradiente clássica.",
+        "origem_secao": "O que muda na decisão terapêutica: o ensaio REBOOT-PARADOX"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento estenose-aortica-baixo-fluxo-baixo-gradiente-fenotipos-diagnostico-diferencial-e-decisao.md (já publicado, review_status: pendente_revisao). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
+    }
   }
 ]
