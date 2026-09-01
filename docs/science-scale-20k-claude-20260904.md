@@ -1976,3 +1976,27 @@ O 8º agente do Lote 90 (2 documentos standalone previstos, apenas 1 havia chega
 | Trilhas | 300 | 26 | 274 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **480** | **4.420** |
+
+## Lote 91 — concluído (commit 9854ef85)
+
+Sexto lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **2 casos clínicos**: regurgitação mitral primária assintomática — critério de DSFVE indexado (ESC/EACTS 2025); lerodalcibepe mensal vs. PCSK9 com CVOT — "terceira geração" não é hierarquia de eficácia.
+- **2 checklists**: decisão de tratar com estatina em prevenção primária (ACC/AHA 2026, 15 itens); seleção para reparo transcateter na RM secundária (COAPT vs. MITRA-FR, 9 itens).
+- **2 documentos standalone**: balão farmacológico — consolidado em ISR (AGENT IDE), mas não substitui stent em lesão de novo (REC-CAGEFREE I); diferenças de sexo na resposta ao treinamento físico na ICFEp (OptimEx-Clin + Ex-DHF, ganho de VO2 pico só em mulheres).
+- **1 material-paciente**: anti-inflamatórios podem subir a pressão sem o paciente perceber.
+- **1 trilha**: "Fibrilação atrial: evidência pivotal da ablação e anticoagulação pós-procedimento", 9 etapas.
+- **Correção de integridade relevante**: agente da trilha alegou verificação direta de 10 item_slug, mas 4 estavam incorretos (3 erros de grafia corrigidos, 1 fabricado substituído, 1 fabricado removido — trilha reduzida para 9 etapas verificadas).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.742 itens.
+
+### Status consolidado (após Lote 91)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 190 | 2.210 |
+| Casos clínicos | 900 | 75 | 825 |
+| Checklists | 600 | 56 | 544 |
+| Materiais-paciente | 500 | 44 | 456 |
+| Trilhas | 300 | 27 | 273 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **488** | **4.412** |
