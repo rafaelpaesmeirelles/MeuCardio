@@ -684,24 +684,24 @@ function distanceLabel(meters?: number) {
 
 function trafficLabel(value?: string) {
   if (!value) return "trânsito a calcular";
-  if (/severe|heavy|high|intens|congestion/i.test(value)) return "trânsito intenso";
-  if (/moderate|medium|m[eé]di|regular/i.test(value)) return "trânsito moderado";
-  if (/light|low|livre|flu[ií]d/i.test(value)) return "trânsito fluido";
+  if (/severe|heavy|high|intens|congestion|traffic[_ -]?jam/i.test(value)) return "trânsito intenso";
+  if (/moderate|moderad|medium|m[eé]di|regular|slow/i.test(value)) return "trânsito moderado";
+  if (/light|low|livre|flu[ií]d|leve|normal/i.test(value)) return "trânsito fluido";
   return "trânsito não classificado";
 }
 
 function trafficShortLabel(value?: string) {
   if (!value) return "Trânsito a calcular";
-  if (/severe|heavy|high|intens|congestion/i.test(value)) return "Intenso";
-  if (/moderate|medium|m[eé]di|regular/i.test(value)) return "Moderado";
-  if (/light|low|livre|flu[ií]d/i.test(value)) return "Fluido";
+  if (/severe|heavy|high|intens|congestion|traffic[_ -]?jam/i.test(value)) return "Intenso";
+  if (/moderate|moderad|medium|m[eé]di|regular|slow/i.test(value)) return "Moderado";
+  if (/light|low|livre|flu[ií]d|leve|normal/i.test(value)) return "Fluido";
   return "Não classificado";
 }
 
 function trafficLevel(value?: string) {
-  if (/severe|heavy|high|intens|congestion/i.test(value || "")) return "heavy";
-  if (/moderate|medium|m[eé]di|regular/i.test(value || "")) return "moderate";
-  if (/light|low|livre|flu[ií]d/i.test(value || "")) return "light";
+  if (/severe|heavy|high|intens|congestion|traffic[_ -]?jam/i.test(value || "")) return "heavy";
+  if (/moderate|moderad|medium|m[eé]di|regular|slow/i.test(value || "")) return "moderate";
+  if (/light|low|livre|flu[ií]d|leve|normal/i.test(value || "")) return "light";
   return value ? "unknown" : "pending";
 }
 
@@ -847,7 +847,14 @@ export default function CardiologySpacesHome() {
 
   const essentials = essentialPaths.map((path) => allActions.find((action) => action.to === path)).filter((action): action is Action => Boolean(action));
   const chamamento = usuario?.professional_title?.trim() || nomeComTratamento(usuario, true);
-  const question = mode === "scientific" ? `Como ${chamamento} quer explorar o conhecimento agora?` : `Onde ${chamamento} vai trabalhar agora?`;
+  const tratamentoNormalizado = usuario?.professional_title?.trim().toLocaleLowerCase("pt-BR").replaceAll(".", "") || "";
+  const artigoDoChamamento = /\b(?:dra|sra|profa)\b/.test(tratamentoNormalizado)
+    ? "a"
+    : /\b(?:dr|sr|prof)\b/.test(tratamentoNormalizado)
+      ? "o"
+      : "";
+  const chamamentoComArtigo = [artigoDoChamamento, chamamento].filter(Boolean).join(" ");
+  const question = mode === "scientific" ? `Como ${chamamentoComArtigo} quer explorar o conhecimento agora?` : `Onde ${chamamentoComArtigo} vai trabalhar agora?`;
   const travelTarget = mobilityResult?.destination || mobilityTarget;
   const bestRoute = mobilityResult?.routes?.[0];
   const travelMinutes = bestRoute?.duration_seconds ? Math.max(1, Math.round(bestRoute.duration_seconds / 60)) : null;
@@ -1040,7 +1047,7 @@ export default function CardiologySpacesHome() {
             return (
               <button key={space.id} type="button" className={`spaces-door spaces-door--${space.tone}${active ? " is-active" : ""}${preview ? " is-preview" : ""}`} data-state={active ? "active" : preview ? "preview" : "inactive"} onMouseEnter={() => setPreviewSpace(space.id)} onFocus={() => setPreviewSpace(space.id)} onBlur={() => setPreviewSpace(null)} onClick={() => { setSelectedSpace(space.id); setPreviewSpace(null); }} aria-label={`${space.label}. ${space.description}`} aria-pressed={selectedSpace === space.id}>
                 <span><Icone nome={space.icon} />{space.label}</span>
-                <i aria-hidden="true"><CardiologySpaceScene space={space.id} priority={active} /></i>
+                <i aria-hidden="true"><CardiologySpaceScene space={space.id} /></i>
               </button>
             );
           })}

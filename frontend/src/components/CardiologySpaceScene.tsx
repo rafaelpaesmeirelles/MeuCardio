@@ -3,16 +3,16 @@ export type CardiologySpaceSceneId =
   | "descobrir" | "evidencias" | "aprender" | "ensinar" | "produzir";
 
 const SCENE_BY_SPACE: Record<CardiologySpaceSceneId, string> = {
-  consultorio: "consultorio",
-  hospital: "hospital",
-  ensino: "ensino",
-  pesquisa: "pesquisa",
-  gestao: "gestao",
-  descobrir: "consultorio",
-  evidencias: "hospital",
-  aprender: "ensino",
-  ensinar: "pesquisa",
-  produzir: "gestao",
+  consultorio: "/spaces/corvia-room-consultorio.jpg",
+  hospital: "/spaces/corvia-room-hospital.jpg",
+  ensino: "/spaces/corvia-room-ensino.jpg",
+  pesquisa: "/spaces/corvia-room-pesquisa.jpg",
+  gestao: "/spaces/corvia-room-gestao.jpg",
+  descobrir: "/spaces/corvia-room-consultorio.jpg",
+  evidencias: "/spaces/corvia-room-hospital.jpg",
+  aprender: "/spaces/corvia-room-ensino.jpg",
+  ensinar: "/spaces/corvia-room-pesquisa.jpg",
+  produzir: "/spaces/corvia-room-gestao.jpg",
 };
 
 /**
@@ -20,26 +20,16 @@ const SCENE_BY_SPACE: Record<CardiologySpaceSceneId, string> = {
  * estritamente decorativa: o nome e a descrição acessíveis pertencem ao botão
  * do portal, evitando duplicação para leitores de tela.
  */
-export default function CardiologySpaceScene({ space, priority = false }: { space: CardiologySpaceSceneId; priority?: boolean }) {
-  const scene = `/spaces/corvia-room-${SCENE_BY_SPACE[space]}`;
+export default function CardiologySpaceScene({ space }: { space: CardiologySpaceSceneId }) {
   return (
-    <picture className="spaces-door__picture">
-      <source
-        type="image/webp"
-        srcSet={`${scene}-640.webp 640w, ${scene}-1280.webp 1280w`}
-        sizes="(max-width: 950px) 116px, (max-width: 1440px) 18vw, 290px"
-      />
-      <img
-        className="spaces-door__scene"
-        src={`${scene}.jpg`}
-        alt=""
-        width="1536"
-        height="1024"
-        loading={priority ? "eager" : "lazy"}
-        fetchPriority={priority ? "high" : "auto"}
-        decoding="async"
-        draggable="false"
-      />
-    </picture>
+    <img
+      className="spaces-door__scene"
+      src={SCENE_BY_SPACE[space]}
+      alt=""
+      width="1200"
+      height="800"
+      decoding="async"
+      draggable="false"
+    />
   );
 }

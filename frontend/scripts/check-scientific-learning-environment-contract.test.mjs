@@ -46,13 +46,20 @@ test("offers the third experience at login and in the home selector", () => {
 });
 
 test("keeps five scientific journeys and every scientific surface discoverable", () => {
-  for (const id of ["descobrir", "evidencias", "aprender", "ensinar", "produzir"]) {
+  const approvedScenes = {
+    descobrir: "consultorio",
+    evidencias: "hospital",
+    aprender: "ensino",
+    ensinar: "pesquisa",
+    produzir: "gestao",
+  };
+  for (const [id, sceneName] of Object.entries(approvedScenes)) {
     assert.match(home, new RegExp(`id: "${id}"`));
-    assert.match(scene, new RegExp(`${id}:\\s*"(?:consultorio|hospital|ensino|pesquisa|gestao)"`));
+    assert.match(scene, new RegExp(`${id}:\\s*"/spaces/corvia-room-${sceneName}\\.jpg"`));
   }
-  assert.match(scene, /srcSet=\{`\$\{scene\}-640\.webp 640w, \$\{scene\}-1280\.webp 1280w`\}/);
-  assert.match(scene, /loading=\{priority \? "eager" : "lazy"\}/);
-  assert.match(home, /priority=\{active\}/);
+  assert.match(scene, /src=\{SCENE_BY_SPACE\[space\]\}/);
+  assert.doesNotMatch(scene, /<picture|srcSet=|\.webp|fetchPriority|priority/);
+  assert.doesNotMatch(home, /<CardiologySpaceScene[^>]*priority=/);
   for (const route of scientificRoutes) {
     assert.ok(home.includes(`"${route}"`), `missing ${route}`);
     const routePath = route.split("?")[0].replace(/^\//, "");

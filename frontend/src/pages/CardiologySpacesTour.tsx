@@ -72,7 +72,7 @@ function Brand() {
 }
 
 function Doors({ items, activeIndex = 1 }: { items: Array<[CardiologySpaceSceneId, string]>; activeIndex?: number }) {
-  return <div className="cst-doors">{items.map(([id, label], index) => <span className={index === activeIndex ? "is-active" : ""} key={id}><b>{label}</b><i><CardiologySpaceScene space={id} priority={index === activeIndex} /></i></span>)}</div>;
+  return <div className="cst-doors">{items.map(([id, label], index) => <span className={index === activeIndex ? "is-active" : ""} key={id}><b>{label}</b><i><CardiologySpaceScene space={id} /></i></span>)}</div>;
 }
 
 function TourVisual({ type }: { type: Visual }) {

@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   reference-fidelity:
-    name: Complete + Essential + Science · 1536x864
+    name: Complete + Essential + Science · 1600x900
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
@@ -142,7 +142,7 @@ jobs:
           const base = 'http://127.0.0.1:8080';
           const out = path.join(process.env.GITHUB_WORKSPACE, 'reference-qa');
           const browser = await chromium.launch({ headless: true });
-          const context = await browser.newContext({ viewport: { width: 1536, height: 864 }, colorScheme: 'dark', locale: 'pt-BR' });
+          const context = await browser.newContext({ viewport: { width: 1600, height: 900 }, colorScheme: 'dark', locale: 'pt-BR' });
           const page = await context.newPage();
           const failures = [];
           const modes = {};
@@ -281,13 +281,15 @@ jobs:
             if (!active?.rect || active.rect.width < avgW * 1.28) failures.push(`${mode}: portal ativo não domina em largura (${active?.rect?.width || 0} vs média ${avgW.toFixed(1)})`);
             if (!active?.scene || active.scene.height < avgH * 1.18) failures.push(`${mode}: portal ativo não domina em altura (${active?.scene?.height || 0} vs média ${avgH.toFixed(1)})`);
             if (!m.rail || m.rail.width < 82 || m.rail.width > 125 || m.rail.x > 150) failures.push(`${mode}: rail fora da geometria aprovada ${JSON.stringify(m.rail)}`);
-            if (!m.day || m.day.width < 160 || m.day.width > 225 || m.day.right < 1470) failures.push(`${mode}: painel do dia fora da coluna direita ${JSON.stringify(m.day)}`);
+            if (!m.day || m.day.width < 160 || m.day.width > 225 || m.day.right < 1534) failures.push(`${mode}: painel do dia fora da coluna direita ${JSON.stringify(m.day)}`);
+            if (m.rail && m.day && (Math.abs(m.rail.y - m.day.y) > 2 || Math.abs(m.rail.bottom - m.day.bottom) > 2)) failures.push(`${mode}: painéis laterais perderam a simetria aprovada ${JSON.stringify({ rail:m.rail, day:m.day })}`);
+            if (m.refs && m.day && Math.abs(m.refs.bottom - m.day.bottom) > 2) failures.push(`${mode}: painéis laterais não terminam com a terceira prancha ${JSON.stringify({ refs:m.refs, day:m.day })}`);
             if (!m.now || m.now.width < 760) failures.push(`${mode}: camada AGORA estreita ${JSON.stringify(m.now)}`);
             const expectedDockBottom = m.viewport.height - 77;
-            if (!m.dock || m.dock.width < 1400 || Math.abs(m.dock.bottom - expectedDockBottom) > 4) failures.push(`${mode}: dock fora da base proporcional aprovada (esperado ${expectedDockBottom}) ${JSON.stringify(m.dock)}`);
+            if (!m.dock || m.dock.width < 1450 || Math.abs(m.dock.bottom - expectedDockBottom) > 4) failures.push(`${mode}: dock fora da base proporcional aprovada (esperado ${expectedDockBottom}) ${JSON.stringify(m.dock)}`);
             if (!m.motto || (m.dock && m.motto.y < m.dock.bottom) || m.motto.bottom > m.viewport.height) failures.push(`${mode}: frase inferior fora da faixa reservada ${JSON.stringify(m.motto)}`);
             if (!m.heart || m.heart.width < 500) failures.push(`${mode}: coração holográfico ausente/pequeno ${JSON.stringify(m.heart)}`);
-            if (!m.title || Math.abs((m.title.x + m.title.width / 2) - 768) > 165) failures.push(`${mode}: título do espaço fora do eixo central ${JSON.stringify(m.title)}`);
+            if (!m.title || Math.abs((m.title.x + m.title.width / 2) - 800) > 165) failures.push(`${mode}: título do espaço fora do eixo central ${JSON.stringify(m.title)}`);
             const expectedTab = mode === 'complete' ? 'Completo' : mode === 'essential' ? 'Essencial' : 'Ciência & Ensino';
             if (!m.tabs.some((t) => t.text === expectedTab && t.active)) failures.push(`${mode}: aba correta não está ativa`);
             if (mode === 'complete' && (!m.next || !m.refs)) failures.push('complete: Em seguida/Referências ausentes');
@@ -304,6 +306,46 @@ jobs:
             }
           }
 
+          async function certifyCompactComplete() {
+            await page.setViewportSize({ width: 1050, height: 830 });
+            await page.waitForTimeout(250);
+            const compact = await page.evaluate(() => {
+              const q = (selector) => document.querySelector(selector);
+              const r = (el) => {
+                if (!el) return null;
+                const b = el.getBoundingClientRect();
+                return { x:b.x, y:b.y, width:b.width, height:b.height, right:b.right, bottom:b.bottom };
+              };
+              return {
+                viewport: { width:innerWidth, height:innerHeight, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight },
+                rail:r(q('.spaces-context-rail')),
+                workspace:r(q('.spaces-workspace')),
+                greeting:r(q('.spaces-workspace__greeting')),
+                heading:r(q('.spaces-workspace__greeting h1')),
+                headingText:q('.spaces-workspace__greeting h1')?.textContent?.trim() || '',
+                refs:r(q('.spaces-layer--refs')),
+                day:r(q('.spaces-day')),
+                dock:r(q('.spaces-dock')),
+                motto:r(q('.spaces-motto')),
+              };
+            });
+            modes['complete-compact'] = compact;
+            await page.screenshot({ path:path.join(out, 'screenshots', 'complete-compact.png'), fullPage:false });
+            if (compact.viewport.scrollWidth > compact.viewport.width + 8) failures.push(`complete-compact: overflow horizontal ${compact.viewport.scrollWidth}>${compact.viewport.width}`);
+            if (!compact.rail || !compact.day || !compact.workspace || !compact.refs) {
+              failures.push(`complete-compact: composição incompleta ${JSON.stringify(compact)}`);
+            } else {
+              if (compact.day.x <= compact.workspace.right) failures.push(`complete-compact: Meu dia não ocupa a lateral direita ${JSON.stringify(compact.day)}`);
+              if (Math.abs(compact.rail.y - compact.day.y) > 2) failures.push(`complete-compact: laterais começam em alturas diferentes ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
+              if (Math.abs(compact.rail.bottom - compact.day.bottom) > 2 || Math.abs(compact.day.bottom - compact.refs.bottom) > 2) failures.push(`complete-compact: laterais não terminam com a terceira prancha ${JSON.stringify({ rail:compact.rail, day:compact.day, refs:compact.refs })}`);
+            }
+            if (!compact.greeting || !compact.heading || Math.abs((compact.greeting.y + compact.greeting.height / 2) - (compact.heading.y + compact.heading.height / 2)) > 2) failures.push(`complete-compact: pergunta fora do eixo vertical ${JSON.stringify({ greeting:compact.greeting, heading:compact.heading })}`);
+            if (!/^Onde .+ vai trabalhar agora\?$/.test(compact.headingText)) failures.push(`complete-compact: pergunta profissional inválida ${compact.headingText}`);
+            if (!compact.dock || !compact.motto || compact.motto.y < compact.dock.bottom) failures.push(`complete-compact: dock e frase inferior colidem ${JSON.stringify({ dock:compact.dock, motto:compact.motto })}`);
+            await page.setViewportSize({ width: 1600, height: 900 });
+            await page.waitForTimeout(250);
+          }
+
           try {
             await login();
             await choose('Completo');
@@ -314,6 +356,7 @@ jobs:
             await page.waitForTimeout(350);
             await certifySelectedContext('Hospital', /rotina hospitalar/i);
             certify(await measure('complete'), 'complete');
+            await certifyCompactComplete();
 
             await choose('Essencial');
             await certifyDefaultPortal('essential-default', 'Consultório');

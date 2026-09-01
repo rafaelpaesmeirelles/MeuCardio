@@ -66,9 +66,18 @@ test("portal preview is local on mouse and keyboard and only click persists sele
 
 test("user-preferred treatment replaces generic voce in the work question", () => {
   assert.match(home, /const chamamento = usuario\?\.professional_title\?\.trim\(\) \|\| nomeComTratamento\(usuario, true\)/);
-  assert.match(home, /`Onde \$\{chamamento\} vai trabalhar agora\?`/);
-  assert.match(home, /`Como \$\{chamamento\} quer explorar o conhecimento agora\?`/);
+  assert.match(home, /dra\|sra\|profa/);
+  assert.match(home, /dr\|sr\|prof/);
+  assert.match(home, /const chamamentoComArtigo = \[artigoDoChamamento, chamamento\]\.filter\(Boolean\)\.join\(" "\)/);
+  assert.match(home, /`Onde \$\{chamamentoComArtigo\} vai trabalhar agora\?`/);
+  assert.match(home, /`Como \$\{chamamentoComArtigo\} quer explorar o conhecimento agora\?`/);
   assert.doesNotMatch(home, /Onde você vai trabalhar agora\?/);
+});
+
+test("compact desktop keeps Meu dia entre espacos in the approved right rail", () => {
+  assert.match(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*grid-template-columns: 88px minmax\(0, 1fr\) 176px/);
+  assert.match(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*--spaces-side-height: 519px/);
+  assert.doesNotMatch(styles, /@media \(min-width: 901px\) and \(max-width: 1199px\)[\s\S]*?\.spaces-day \{[\s\S]*?flex-direction: row/);
 });
 
 test("Meu dia entre espaços merges all canonical agenda sources without invented appointments", () => {
@@ -96,6 +105,8 @@ test("Deslocamento uses the canonical mobility target, live geolocation and a re
   assert.match(home, /route\.geometry\.value/);
   assert.match(home, /route\.traffic_segments/);
   assert.match(home, /data-geometry=\{miniRoute\.actual \? "real" : "preview"\}/);
+  assert.match(home, /moderate\|moderad\|medium/);
+  assert.match(home, /leve\|normal/);
   assert.match(home, /spaces-orbit/);
   assert.match(styles, /\.spaces-orbit/);
   assert.match(styles, /spaces-stellar-route__traffic--traffic_jam/);
