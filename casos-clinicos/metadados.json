@@ -19269,5 +19269,45 @@
       "Nicholls SJ, Pavo I, Bhatt DL, Buse JB, Del Prato S, et al; SURPASS-CVOT Investigators. Cardiovascular Outcomes with Tirzepatide versus Dulaglutide in Type 2 Diabetes. N Engl J Med. 2025;393(24):2409-2420. DOI: 10.1056/NEJMoa2505928. PMID: 41406444"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af",
+    "titulo": "FA paroxística pós-ablação sem recorrência documentada: dá para suspender a anticoagulação?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 71 anos, hipertenso controlado, sem diabetes, sem insuficiência cardíaca, sem AVC/AIT prévio. Havia FA paroxística sintomática, tratada com ablação por cateter (isolamento de veias pulmonares) há 18 meses. Desde então está em vigilância de ritmo estruturada — Holter seriado e episódios de monitor de eventos — sem qualquer recorrência documentada de FA ou flutter atrial. CHA₂DS₂-VASc = 2 (idade 65-74 anos + hipertensão). Função renal normal. Está em uso de apixabana 5 mg 12/12h desde antes da ablação e pergunta, na consulta de retorno, se pode parar o anticoagulante, já que 'a ablação deu certo' e ele leu sobre um estudo mostrando que isso é seguro.",
+    "pergunta": "Considerando os resultados do ALONE-AF, qual é a conduta mais adequada?",
+    "opcoes": [
+      "Manter a anticoagulação indefinidamente em qualquer paciente pós-ablação, pois não existe evidência randomizada de que suspender seja seguro",
+      "Discutir com o paciente a suspensão da anticoagulação, já que seu perfil (ablação sem recorrência documentada, CHA₂DS₂-VASc moderado, sem AVC/AIT prévio) corresponde à população do ALONE-AF, condicionando a decisão à manutenção de vigilância rigorosa de ritmo",
+      "Suspender a apixabana e substituí-la por AAS como estratégia intermediária de proteção antitrombólica",
+      "Suspender a anticoagulação de forma definitiva e liberar o paciente do seguimento de ritmo, já que a ablação bem-sucedida elimina o risco tromboembólico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ALONE-AF (JAMA, 2025) randomizou 840 pacientes sem recorrência documentada de arritmia após ablação de FA e pelo menos um fator de risco tromboembólico (CHA₂DS₂-VASc médio 2,1±1,0; idade média 64 anos; FA paroxística em 67,6%) para suspender versus continuar DOAC. Em 2 anos, o desfecho composto (AVC, embolia sistêmica ou sangramento maior) ocorreu em 0,3% no grupo de suspensão versus 2,2% no grupo de continuação (diferença absoluta -1,9 pp; IC95% -3,5 a -0,3; p=0,02), resultado impulsionado sobretudo pela ausência de sangramento maior no grupo que suspendeu (0% vs 1,4%) — o componente isquêmico isolado (AVC 0,3% vs 0,8%; IC95% -1,6 a 0,6) foi raro e estatisticamente inconclusivo. O paciente do caso reproduz de perto a população estudada: ablação sem recorrência documentada por vigilância estruturada, CHA₂DS₂-VASc moderado (2) e sem AVC/AIT prévio — cenário em que a suspensão, discutida e compartilhada com o paciente, é uma opção respaldada por evidência randomizada. Isso não equivale, porém, a uma regra universal: opção A ignora que agora existe evidência randomizada direta para essa população selecionada; opção C não tem respaldo no ensaio (AAS não substitui anticoagulante para prevenção de AVC em FA) e não estava no protocolo; opção D contraria uma condição central do estudo, que pressupõe vigilância contínua do ritmo (a suspensão testada foi seleção com monitorização, não liberação do seguimento) — FA silenciosa/recorrência assintomática não é excluída pela ausência de sintomas.",
+    "source_refs": [
+      "Kim D, Shim J, Choi EK, et al; ALONE-AF Investigators. Long-Term Anticoagulation Discontinuation After Catheter Ablation for Atrial Fibrillation: The ALONE-AF Randomized Clinical Trial. JAMA. 2025;334(14):1246-1254. DOI: 10.1001/jama.2025.14679. PMID: 40886309."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026",
+    "titulo": "ICFEp em paciente obesa com NT-proBNP normal: descartar ou investigar?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "(Caso educacional fictício, elaborado para fins de ensino; não corresponde a paciente real.) Mulher, 58 anos, obesidade (IMC 34 kg/m²), diabetes tipo 2 e hipertensão arterial, refere dispneia progressiva aos esforços moderados há 4 meses (subir um lance de escada), sem ortopneia franca, com edema discreto de tornozelos ao final do dia. Ausculta pulmonar limpa, sem estertores. Ecocardiograma: FEVE 58%, disfunção diastólica leve (grau I), índice de volume atrial esquerdo discretamente aumentado, relação E/e' no limite superior da normalidade. NT-proBNP dosado em ambulatório: 105 pg/mL — abaixo do corte ambulatorial habitual de 125 pg/mL. O médico assistente cogita encerrar a investigação cardíaca com base nesse resultado e direcionar a paciente para avaliação pneumológica.",
+    "pergunta": "Diante do NT-proBNP abaixo do corte de referência nesta paciente obesa com múltiplos sinais sugestivos de ICFEp, qual é a conduta mais apropriada segundo o ACC 2026 Expert Consensus Decision Pathway para ICFEp?",
+    "opcoes": [
+      "O NT-proBNP normal tem alto valor preditivo negativo em qualquer paciente e é suficiente, isoladamente, para excluir insuficiência cardíaca e encerrar a investigação cardiológica",
+      "Reconhecer que a obesidade reduz os níveis circulantes de peptídeos natriuréticos e pode mascarar um NT-proBNP verdadeiramente elevado; manter a suspeita clínica, aplicar um escore de probabilidade (H2FPEF, HFA-PEFF ou HFpEF-ABA) e, se a probabilidade permanecer intermediária, prosseguir com teste funcional ou avaliação hemodinâmica antes de excluir ICFEp",
+      "Iniciar empiricamente inibidor de SGLT2 e finerenona mesmo sem confirmação diagnóstica objetiva, já que o fenótipo obesidade-metabólico dispensa evidência estrutural ou de congestão",
+      "Repetir a dosagem trocando NT-proBNP por BNP convencional, pois o BNP seria mais confiável do que o NT-proBNP em pacientes obesos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ACC 2026 Expert Consensus Decision Pathway (ECDP) para ICFEp (Kittleson MM et al., J Am Coll Cardiol, publicado online em 23/07/2026, DOI: 10.1016/j.jacc.2026.06.018, PMID: 42494134) chama atenção explicitamente para dois erros diagnósticos opostos e igualmente perigosos: atribuir toda dispneia de uma pessoa obesa à ICFEp, e excluir ICFEp apenas porque o BNP/NT-proBNP não está muito elevado. O documento reforça que a obesidade reduz os níveis basais de peptídeos natriuréticos por mecanismos metabólicos (maior depuração via receptores em tecido adiposo, entre outros), de modo que um valor 'normal' ou levemente abaixo do corte não tem, nessa população, o mesmo valor preditivo negativo que teria em um paciente magro. Diante de sinais estruturais compatíveis (aumento do índice de volume atrial esquerdo, E/e' no limite) associados a fatores de risco cardiometabólico (obesidade, diabetes, hipertensão) e sintomas coerentes, o ECDP orienta não encerrar a investigação com base isolada no biomarcador: deve-se aplicar um dos três sistemas de escore reconhecidos pelo consenso (HFA-PEFF, H2FPEF ou HFpEF-ABA) e, se a probabilidade permanecer intermediária, avançar para teste funcional/diastólico ao exercício ou avaliação hemodinâmica conforme disponibilidade — a ICFEp deve ser construída por probabilidade clínica mais evidência objetiva, não pela presença ou ausência isolada de um único valor de biomarcador. A opção que propõe início empírico de SGLT2i e finerenona sem confirmação diagnóstica contraria a estrutura do próprio ECDP, que exige primeiro confirmar que a paciente realmente tem ICFEp antes de tratar o fenótipo; trocar NT-proBNP por BNP convencional não resolve o problema, pois ambos os peptídeos sofrem o mesmo efeito de diluição/depuração relacionado à obesidade.",
+    "source_refs": [
+      "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

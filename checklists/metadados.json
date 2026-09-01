@@ -40433,5 +40433,161 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento estenose-mitral-diagnostico-e-manejo-esc-eacts-2025.md (já publicado, review_status: revisado). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023",
+    "condicao": "Síndrome coronariana aguda — do primeiro contato à definição do tempo de estratégia invasiva",
+    "resumo": "Checklist de execução do fluxograma ESC 2023 para dor torácica suspeita de SCA: ECG em 10 minutos, separação STEMI × NSTE-ACS, rastreio de critérios de risco muito alto, algoritmo 0h/1h de troponina ultrassensível e definição do tempo até a angiografia invasiva.",
+    "documento_origem": "fluxograma-sindrome-coronariana-aguda-esc-2023",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of acute coronary syndromes · European Heart Journal · 2023 · 44(38):3720-3826 · 10.1093/eurheartj/ehad191",
+      "2023 ESC Guidelines for Acute Coronary Syndromes: Key Points · American College of Cardiology · 2023 · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/01/2023-esc-guidelines-acs-esc-2023",
+      "'10 commandments' for the 2023 ESC Guidelines for the management of acute coronary syndromes · European Heart Journal · 2024 · 45(14):1193-1195 · https://academic.oup.com/eurheartj/article/45/14/1193/7516285"
+    ],
+    "itens": [
+      {
+        "id": "dac-sca-ecg-10min",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações realizado em até 10 minutos do primeiro contato médico em paciente com dor torácica ou equivalente suspeito de SCA",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-supra-persistente",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "ECG avaliado quanto a elevação persistente do segmento ST, separando STEMI de NSTE-ACS suspeita",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-stemi-icp-120min",
+        "categoria": "terapia",
+        "obrigatorio": true,
+        "texto": "Se STEMI confirmado: avaliada a viabilidade de ICP primária em até 120 minutos do diagnóstico",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-stemi-fibrinolise",
+        "categoria": "terapia",
+        "obrigatorio": true,
+        "texto": "Se ICP primária não factível dentro de 120 minutos: fibrinólise imediata iniciada e transferência para centro com ICP organizada",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-risco-muito-alto-rastreio",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Se NSTE-ACS suspeita: rastreados os critérios de risco muito alto antes de aguardar resultado de troponina",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-instabilidade",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificada instabilidade hemodinâmica ou choque cardiogênico",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-dor-refrataria",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificada dor torácica recorrente ou persistente, refratária ao tratamento clínico",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-ic-aguda",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificada insuficiência cardíaca aguda presumidamente secundária a isquemia em curso",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-arritmia-pcr",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificada arritmia ameaçadora à vida ou parada cardíaca após a apresentação",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-complicacao-mecanica",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificada complicação mecânica",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-risco-alteracoes-dinamicas-ecg",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Verificadas alterações eletrocardiográficas dinâmicas recorrentes sugestivas de isquemia",
+        "origem_secao": "Critérios de risco muito alto"
+      },
+      {
+        "id": "dac-sca-angiografia-imediata-risco-muito-alto",
+        "categoria": "terapia",
+        "obrigatorio": true,
+        "texto": "Se qualquer critério de risco muito alto presente: indicada angiografia invasiva imediata, equiparada ao manejo do STEMI",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-algoritmo-0h-1h",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se ausência de critério de risco muito alto: aplicado o algoritmo de troponina ultrassensível 0h/1h, classificando o paciente em rule-out, zona de observação ou rule-in",
+        "origem_secao": "Observações sobre o uso do algoritmo 0h/1h"
+      },
+      {
+        "id": "dac-sca-pontos-corte-ensaio-especifico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmado que os pontos de corte numéricos usados são os validados para o ensaio de troponina da instituição, sem intercambiar valores entre fabricantes",
+        "origem_secao": "Observações sobre o uso do algoritmo 0h/1h"
+      },
+      {
+        "id": "dac-sca-rule-in-criterio-alto-risco",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Se rule-in (NSTEMI confirmado): avaliados critérios de alto risco — GRACE > 140, elevação transitória de ST, alterações dinâmicas de ST/T",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-invasiva-precoce-24h",
+        "categoria": "terapia",
+        "obrigatorio": true,
+        "texto": "Se critério de alto risco presente no NSTEMI confirmado: estratégia invasiva precoce considerada em até 24 horas da admissão",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-invasiva-durante-internacao",
+        "categoria": "terapia",
+        "obrigatorio": true,
+        "texto": "Se ausência de critério de alto risco no NSTEMI confirmado: estratégia invasiva realizada durante a internação, sem necessidade de antecipação para 24h",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-zona-observacao-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se zona de observação no algoritmo 0h/1h: nova dosagem seriada de troponina e reavaliação clínica realizadas, reclassificando o paciente no próprio algoritmo",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-rule-out-diagnostico-alternativo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se rule-out: IAM afastado e investigação de diagnóstico alternativo iniciada",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "dac-sca-alta-segura-rule-out",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Alta segura a partir do rule-out considerada apenas quando o quadro clínico acompanha a baixa mortalidade e incidência de IAM em 30 dias observada nessa faixa",
+        "origem_secao": "Observações sobre o uso do algoritmo 0h/1h"
+      }
+    ],
+    "revisao": "Checklist extraído do fluxograma ESC 2023 de síndrome coronariana aguda (content/Doença_coronariana/fluxograma-sindrome-coronariana-aguda-esc-2023.md); pendente de revisão clínica antes de publicação."
   }
 ]

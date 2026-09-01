@@ -26371,5 +26371,75 @@
         "por_que": "Fecha a trilha voltando à pergunta inicial (IECA vs diurético), agora especificamente no idoso de 65-84 anos: resultado no limiar da significância (HR 0,89; P=0,05; IC 95% tocando 1,00) e um sinal de interação por sexo (favorável em homens, neutro em mulheres) que os próprios autores não sustentam como conclusão — o exemplo final de como reconhecer um resultado 'quase lá' sem vender certeza que o ensaio não tem."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular",
+    "titulo": "Prevenção e lipídios: obesidade como alvo farmacológico e cirúrgico — do estigma na consulta à escolha entre GLP-1 e cirurgia bariátrica",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo abordar o peso sem reforçar estigma, reconhecer a evidência de que perder peso reduz evento cardiovascular independente da glicemia (SELECT, SURMOUNT-1), e decidir na prática entre agonista de GLP-1, agonista duplo GIP/GLP-1 e cirurgia bariátrica — com a avaliação pré-operatória correta quando a via cirúrgica for escolhida.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estigma-de-peso-na-consulta-cardiologica",
+        "por_que": "Começa aqui porque a forma de abordar o peso na consulta determina se o paciente volta para a próxima etapa do tratamento ou abandona o seguimento. Antes de qualquer fármaco ou cirurgia, é preciso saber conduzir essa conversa sem reforçar estigma."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "perder-peso-reduz-evento-cardiovascular-look-ahead-surmount-1-e-o-contraste-com-o-select",
+        "por_que": "Dá o panorama comparado entre os grandes ensaios de perda de peso e desfecho cardiovascular (Look AHEAD, SURMOUNT-1, SELECT), situando por que o resultado do SELECT foi o que mudou a conduta — perda de peso reduzindo MACE mesmo sem diabetes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+        "por_que": "Aprofunda o ensaio central da trilha: semaglutida 2,4 mg reduzindo MACE em obesidade sem diabetes, o resultado que tirou o agonista de GLP-1 do território puramente metabólico e o trouxe para a prevenção cardiovascular."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes",
+        "por_que": "É a fonte primária do SELECT (Lincoff et al., NEJM 2023) logo depois da leitura interpretativa — para checar desenho, população e magnitude de efeito direto no artigo original."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tirzepatida-e-reducao-do-risco-cardiovascular-projetado-em-10-anos-no-pre-diabetes-surmount-1",
+        "por_que": "Avança para o agonista duplo GIP/GLP-1: mostra por que a redução de risco cardiovascular projetado no SURMOUNT-1 amplia a discussão além da semaglutida isolada, mesmo sem desfecho duro adjudicado como no SELECT."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "semaglutida",
+        "por_que": "Ficha de referência do fármaco por trás do SELECT — mecanismo, apresentações e perfil de uso — para consulta rápida antes de prescrever."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "tirzepatida",
+        "por_que": "Ficha de referência do agonista duplo GIP/GLP-1, em contraste direto com a semaglutida da etapa anterior — mecanismo distinto por atuar em dois receptores simultaneamente."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "cirurgia-bariatrica-e-eventos-cardiovasculares-de-longo-prazo-estudo-sos",
+        "por_que": "Traz a alternativa cirúrgica com o seguimento mais longo disponível (estudo SOS), para comparar magnitude e durabilidade do benefício cardiovascular contra os agonistas de incretina das etapas anteriores."
+      },
+      {
+        "ordem": 9,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-cardiovascular-pre-operatoria-para-cirurgia-bariatrica",
+        "por_que": "Etapa prática: se a via escolhida for a cirúrgica, é este checklist que organiza a avaliação cardiovascular pré-operatória antes do encaminhamento."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica",
+        "por_que": "Fecha a trilha amarrando tudo em uma árvore de decisão única: quando indicar agonista de GLP-1, quando escalar para agonista duplo, e quando encaminhar para cirurgia bariátrica."
+      }
+    ]
   }
 ]
