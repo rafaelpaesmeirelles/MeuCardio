@@ -2000,3 +2000,27 @@ Sexto lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 27 | 273 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **488** | **4.412** |
+
+## Lote 92 — concluído (commit ec4acdfc)
+
+Sétimo lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **2 casos clínicos**: CMH não obstrutiva — aficamteno permanece investigacional (FOREST-HCM é fase 2 aberta sem placebo); lesão de bifurcação verdadeira — OCT/IVUS equivalentes entre si, ambos superiores à angiografia isolada.
+- **2 checklists**: caracterização diagnóstica pela Segunda Definição Universal de IC 2026 (10 itens); critérios diagnósticos e SAM na CMH (5 itens).
+- **2 documentos standalone**: SGLT2 vs. GLP-1 vs. DPP-4 e risco de FA (metanálise em rede, 2,17M pacientes); IA aplicada ao ECG em ritmo sinusal para FA oculta (Attia 2019, Shimizu 2025, UK Biobank 2026).
+- **1 material-paciente**: remédios GLP-1 e a proteção do coração.
+- **1 trilha**: "Prevenção cardiovascular e dislipidemia: a virada da ACC/AHA 2026", 9 etapas — agente entregou evidência de grep por item, reforçando a disciplina de verificação após o incidente do Lote 91.
+- **Verificação de integridade**: nenhum slug colide (930 casos / 482 checklists / 451 materiais / 558 trilhas conferidos); 13 links de Tudo com Tudo re-verificados; todos os 9 item_slug da trilha reconferidos independentemente.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.750 itens.
+
+### Status consolidado (após Lote 92)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 192 | 2.208 |
+| Casos clínicos | 900 | 77 | 823 |
+| Checklists | 600 | 58 | 542 |
+| Materiais-paciente | 500 | 45 | 455 |
+| Trilhas | 300 | 28 | 272 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **496** | **4.404** |
