@@ -2402,3 +2402,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 43 | 257 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **685** | **4.215** |
+
+## Lote 108 — concluído (commit 7342ed9b)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para FA/Cardiomiopatias/Diabetes/Prevenção (temas do Lote 106).
+
+- **Documentos**:
+  - Fibrilação atrial: "Cirurgia Bariátrica e Fibrilação Atrial: Incidência, Complicações Periablação e Recorrência Pós-Ablação" — coorte TriNetX (PMID 42342490), série NIS de complicações periablação (PMID 42010218, 42107253), metanálise de recorrência dose-resposta (PMID 41843238).
+  - Cardiomiopatias: "Miocardite Crônica e Cardiomiopatia Inflamatória: da Miocardite Aguda à Cardiomiopatia Dilatada" — revisões 2025-2026 (PMID 41747776, 40714217, 40451836), mecanismo imunológico (PMID 41714806).
+  - Diabetes e cardiologia: "Pré-diabetes e Resistência Insulínica: Dano Vascular Subclínico Antes do Diagnóstico de Diabetes" — coorte Framingham (PMID 40471971), rigidez arterial (PMID 40252776, 39710551), gordura epicárdica (PMID 39982028).
+  - Prevenção e lipídios: "Edição de Base do Gene do PCSK9: o VERVE-102 e a Promessa de uma Dose Única para a Vida Toda" — base genética (PMID 16554528), pré-clínico VERVE-101 (PMID 36314243), ensaio fase 1 humano VERVE-102 (NEJM 2026, PMID 42187087).
+- **Caso clínico**: estenose aórtica paradoxal (baixo fluxo/baixo gradiente) — razão MG/EOA e o REBOOT-PARADOX (derivado do documento de fenótipos do Lote 107).
+- **Checklist**: manejo da recorrência de FA após ablação — blanking (8 semanas) e reablação, baseado no consenso EHRA/HRS/APHRS/LAHRS 2024.
+- **Material-paciente**: "O relógio pode medir minha pressão?" (derivado do documento de medida cuffless).
+- **Trilha**: prevenção e lipídios — o arsenal de inibidores de Lp(a), do mecanismo genético (Copenhague) à fase 3 (lepodisiran) (9 etapas).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 26 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10880`.
+
+### Status consolidado (após Lote 108)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 244 | 2.156 |
+| Casos clínicos | 900 | 105 | 795 |
+| Checklists | 600 | 76 | 524 |
+| Materiais-paciente | 500 | 61 | 439 |
+| Trilhas | 300 | 44 | 256 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **693** | **4.207** |
