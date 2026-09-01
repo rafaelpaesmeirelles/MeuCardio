@@ -2240,3 +2240,27 @@ Décimo sexto lote sob o novo direcionamento — 8 agentes em paralelo, prioriza
 | Trilhas | 300 | 37 | 263 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **635** | **4.265** |
+
+## Lote 102 — concluído (commit 0ca0998b)
+
+Décimo sétimo lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: hipertensão na doença renal policística autossômica dominante — non-dipping, HALT-PKD e tolvaptan (2026); ablação repetida (redo) na FA recorrente — metanálise 2025; tempo no alvo (Time in Range) por CGM e mortalidade cardiovascular no diabetes tipo 2.
+- **2 casos clínicos**: ATTR-CM — extensão de 54 meses do ATTRibute-CM mostra custo mensurável em adiar o acoramidis; troca valvar tricúspide transcateter — registro STS/ACC TVT de mundo real reproduz o ensaio pivotal.
+- **1 checklist**: alta hospitalar na IC aguda com titulação intensiva pós-alta (STRONG-HF), 17 itens.
+- **1 material-paciente**: preciso de stent para angina estável? (COURAGE).
+- **1 trilha**: "Fibrilação atrial cardio-oncológica — inibidores de BTK e interação com o anticoagulante", 9 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 20 links de Tudo com Tudo reverificados nos 3 documentos standalone (incluindo confirmação específica de que um slug suspeito de repetir um incidente de fabricação anterior existe de fato no repositório); 9 item_slug da trilha reconfirmados independentemente via grep, incluindo a calculadora verificada contra o registro backend.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.830 itens.
+
+### Status consolidado (após Lote 102)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 222 | 2.178 |
+| Casos clínicos | 900 | 96 | 804 |
+| Checklists | 600 | 69 | 531 |
+| Materiais-paciente | 500 | 55 | 445 |
+| Trilhas | 300 | 38 | 262 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **643** | **4.257** |
