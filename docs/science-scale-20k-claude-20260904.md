@@ -2432,3 +2432,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 44 | 256 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **693** | **4.207** |
+
+## Lote 109 — concluído (commit cd4ce7eb)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para DAC/IC/Valvopatias/HAS (temas do Lote 107).
+
+- **Documentos**:
+  - Doença coronariana: "Terapia Antitrombótica na DAC Associada a Cirrose Hepática e Trombocitopenia" — coorte TriNetX de cirróticos pós-PCI (PMID 42554421), revisões de trombocitopenia/hepatopatia (PMID 41827452, 41899195, 42513652), revisão de manejo (PMID 42059892).
+  - Insuficiência cardíaca: "Descongestão Guiada por Ultrassom Pulmonar e VExUS: Linhas B, Congestão Subclínica e o Ensaio ICARUS" — duas metanálises 2026 (PMID 41643462, 42471928), protocolo do ICARUS (PMID 42021403).
+  - Valvopatias: "Doença Valvar Multivalvar Degenerativa: Estenose Aórtica com Regurgitação Mitral Concomitante" — workshop Heart Valve Collaboratory JACC 2025 (PMID 40576596), padrões real-world Medicare (PMID 42502262).
+  - Hipertensão: "Polipílula e Combinação em Comprimido Único: o Elo Direto com Adesão" — revisão OMS 2026 (PMID 42595774), coorte prospectiva Ruanda (PMID 41738761), meta-análise (PMID 41558137), post hoc SPRINT (PMID 41557471).
+- **Caso clínico**: CMH obstrutiva sintomática sem tratamento prévio — metoprolol ou aficamten, baseado no MAPLE-HCM (derivado do documento do Lote 106).
+- **Checklist**: ajuste da terapia quádrupla ICFEr em DRC avançada e diálise (derivado do documento do Lote 107).
+- **Material-paciente**: fibrilação atrial e cirurgia bariátrica — o que a perda de peso cirúrgica muda (derivado do documento do Lote 108).
+- **Trilha**: diabetes — variabilidade glicêmica e arritmia (8 etapas, incluindo a calculadora QTc do registro backend).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração (incluindo a etapa tipo calculadora confirmada contra `backend/app/services/calculators.py`); zero resíduos de entidades HTML; todos os 28 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente (um deles apontando corretamente para uma calculadora em `content/Calculadoras/`, resolvida como documento comum). Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10888`.
+
+### Status consolidado (após Lote 109)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 248 | 2.152 |
+| Casos clínicos | 900 | 106 | 794 |
+| Checklists | 600 | 77 | 523 |
+| Materiais-paciente | 500 | 62 | 438 |
+| Trilhas | 300 | 45 | 255 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **701** | **4.199** |
