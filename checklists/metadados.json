@@ -39181,5 +39181,176 @@
       }
     ],
     "revisao": "Checklist extraído do documento 'IC descompensada na ESC 2026: o que muda no vocabulário e o que o STRONG-HF ainda manda fazer na alta', já publicado. Itens rastreados às seções reais do documento; pendente de validação clínica final."
+  },
+  {
+    "slug": "escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica",
+    "condicao": "Escolha da modalidade de intervenção (TAVI ou SAVR) na estenose aórtica grave sintomática",
+    "resumo": "Checklist para o Heart Team, com a indicação de intervenção já estabelecida: percorre expectativa de vida, doença concomitante que exige cirurgia, morfologia da valva, o corte de 70 anos com suas três condições anatômicas e de acesso, e o cenário de acesso transfemoral inviável, conforme a Recommendation Table 4 da ESC/EACTS 2025.",
+    "documento_origem": "fluxograma-estenose-aortica-grave-sintomatica-tavi-vs-cirurgia-escolha-da-modalidade-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."
+    ],
+    "itens": [
+      {
+        "id": "eag-heart-team-centro",
+        "categoria": "equipe",
+        "obrigatorio": true,
+        "texto": "Decisão de modalidade (TAVI ou SAVR) discutida pelo Heart Team em Heart Valve Centre, com cardiologia intervencionista e cirurgia cardíaca no mesmo serviço, e não isolada de um único especialista",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "eag-expectativa-vida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Expectativa de vida estimada em mais de 1 ano confirmada antes de indicar a intervenção; abaixo desse limiar, decisão compartilhada em Heart Team priorizando tratamento clínico/paliativo, sem intervir rotineiramente",
+        "origem_secao": "O primeiro corte é a expectativa de vida, não a idade"
+      },
+      {
+        "id": "eag-doenca-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pesquisada doença concomitante que exija cirurgia cardíaca — DAC complexa, aneurisma de raiz ou aorta ascendente, outra valvopatia primária relevante, ou hipertrofia septal com indicação de miectomia — em paciente com risco cirúrgico aceitável ao Heart Team",
+        "origem_secao": "Doença concomitante que exige cirurgia leva à SAVR combinada"
+      },
+      {
+        "id": "eag-savr-combinada",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se houver doença concomitante que exija cirurgia com risco cirúrgico aceitável: SAVR combinada à cirurgia concomitante (CRM, aorta, outra valva ou miectomia) definida como conduta, e não tratamento isolado da valva aórtica",
+        "origem_secao": "Doença concomitante que exige cirurgia leva à SAVR combinada"
+      },
+      {
+        "id": "eag-valva-bicuspide",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Morfologia da valva aórtica classificada como bicúspide ou tricúspide antes de aplicar o corte etário de 70 anos — o corte de 70 anos aplica-se apenas à valva tricúspide",
+        "origem_secao": "Valva bicúspide: a cirurgia continua sendo a via primária"
+      },
+      {
+        "id": "eag-bicuspide-savr",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Na estenose de valva bicúspide, SAVR mantida como modalidade primária; TAVI considerado apenas com risco cirúrgico aumentado e anatomia adequada, em centro experiente (Classe IIb, Nível B)",
+        "origem_secao": "Valva bicúspide: a cirurgia continua sendo a via primária"
+      },
+      {
+        "id": "eag-idade-nao-isolada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na valva tricúspide, o corte de 70 anos não foi usado isoladamente: verificado em conjunto com anatomia valvar adequada (dimensões do anel, calcificação da zona de implante, risco de obstrução coronária) e viabilidade de acesso transfemoral",
+        "origem_secao": "O corte de 70 anos e as três condições que o acompanham"
+      },
+      {
+        "id": "eag-tavi-tf-70mais",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se 70 anos ou mais, valva tricúspide, anatomia adequada e acesso transfemoral viável: TAVI transfemoral indicado (Classe I, Nível A)",
+        "origem_secao": "O corte de 70 anos e as três condições que o acompanham"
+      },
+      {
+        "id": "eag-savr-menos70-baixo-risco",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se menos de 70 anos: risco cirúrgico baixo confirmado por STS-PROM ou EuroSCORE II abaixo de 4% pelo Heart Team antes de indicar SAVR como conduta padrão (Classe I, Nível B)",
+        "origem_secao": "O corte de 70 anos e as três condições que o acompanham"
+      },
+      {
+        "id": "eag-acesso-transfemoral",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Viabilidade de acesso transfemoral avaliada separadamente da anatomia valvar; se inviável e cirurgia possível, SAVR mantida como opção preferida; TAVI por via não transfemoral reservado ao paciente inadequado para cirurgia (Classe IIa, Nível B)",
+        "origem_secao": "Acesso transfemoral inviável"
+      },
+      {
+        "id": "eag-preferencia-paciente",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Preferência informada do paciente incorporada à decisão em todas as bifurcações da árvore, junto ao manejo valvar ao longo da vida",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "eag-baixo-fluxo-baixo-gradiente",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o quadro for de baixo fluxo e baixo gradiente: gravidade confirmada como estenose aórtica grave antes de aplicar esta árvore de escolha de modalidade — a confirmação está fora deste fluxograma",
+        "origem_secao": "Limitações e o que confirmar"
+      }
+    ],
+    "revisao": "Checklist extraído a partir de documento de origem já publicado e revisado (fluxograma ESC/EACTS 2025). Itens rastreados seção a seção, sem invenção de limiares ou doses. Pendente de validação clínica final."
+  },
+  {
+    "slug": "timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial",
+    "condicao": "Momento de iniciar a anticoagulação oral após AVC isquêmico agudo em paciente com fibrilação atrial",
+    "resumo": "Checklist para decidir quando iniciar o DOAC após AVC isquêmico agudo em paciente com FA, com base no conjunto ELAN/TIMING/OPTIMAS e na metanálise de dados individuais CATALYST (2025), que substitui a regra empírica 1-3-6-12 sem respaldo de ensaio randomizado.",
+    "documento_origem": "timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst",
+    "theme": "Fibrilação atrial",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Fischer U, Koga M, Strbian D, et al; ELAN Investigators. Early versus Later Anticoagulation for Stroke with Atrial Fibrillation. N Engl J Med. 2023;388(26):2411-2421. DOI: 10.1056/NEJMoa2303048. PMID: 37222476.",
+      "Oldgren J, Åsberg S, Hijazi Z, et al; National TIMING Collaborators. Early Versus Delayed Non-Vitamin K Antagonist Oral Anticoagulant Therapy After Acute Ischemic Stroke in Atrial Fibrillation (TIMING). Circulation. 2022;146(14):1056-1066. DOI: 10.1161/CIRCULATIONAHA.122.060666. PMID: 36065821.",
+      "Werring DJ, Dehbi HM, Ahmed N, et al; OPTIMAS Investigators. Optimal timing of anticoagulation after acute ischaemic stroke with atrial fibrillation (OPTIMAS). Lancet. 2024. DOI: 10.1016/S0140-6736(24)02197-4. PMID: 39491870.",
+      "Dehbi HM, Fischer U, Åsberg S, et al; CATALYST Collaboration. Collaboration on the optimal timing of anticoagulation after ischaemic stroke and atrial fibrillation: a systematic review and prospective individual participant data meta-analysis of randomised controlled trials (CATALYST). Lancet. 2025;406(10498):43-51. DOI: 10.1016/S0140-6736(25)00439-8. PMID: 40570866."
+    ],
+    "itens": [
+      {
+        "id": "timing-avc-indicacao-inequivoca",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem fibrilação atrial e AVC isquêmico agudo com indicação inequívoca de anticoagulação oral para prevenção secundária — a dúvida em pauta é quando começar, não se anticoagular",
+        "origem_secao": "A pergunta que faltava um ensaio para responder"
+      },
+      {
+        "id": "timing-avc-neuroimagem-previa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Neuroimagem (TC ou RM de crânio) realizada antes de decidir o momento de início, para afastar hemorragia — todos os participantes dos quatro ensaios tiveram neuroimagem pré-randomização e a aplicabilidade sem esse acesso é incerta",
+        "origem_secao": "Limites e o que ainda falta responder"
+      },
+      {
+        "id": "timing-avc-exclusoes-checadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificado que o paciente não se enquadra nas exclusões sistemáticas dos quatro ensaios: AVC muito grave, hemorragia intracraniana na neuroimagem inicial ou transformação hemorrágica identificada — nesses casos a decisão é individualizada, sem respaldo direto desta evidência",
+        "origem_secao": "Limites e o que ainda falta responder"
+      },
+      {
+        "id": "timing-avc-janela-precoce",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na ausência das exclusões acima, início do DOAC considerado dentro da janela precoce (até 4 dias), com base na redução do desfecho composto observada na metanálise CATALYST (OR 0,70; IC95% 0,50-0,98; p=0,039), sem sinal de aumento de hemorragia intracraniana sintomática (OR 1,02)",
+        "origem_secao": "CATALYST (2025) — a metanálise de dados individuais que fecha a questão"
+      },
+      {
+        "id": "timing-avc-doac-nao-varfarina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o anticoagulante escolhido para início precoce é um DOAC — os quatro ensaios testaram exclusivamente DOAC nessa janela, sem dados de varfarina",
+        "origem_secao": "Limites e o que ainda falta responder"
+      },
+      {
+        "id": "timing-avc-regra-1-3-6-12-nao-mandatoria",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a regra prática tradicional de esperar 6, 12 ou 14 dias conforme gravidade ('1-3-6-12') nunca foi testada em ensaio randomizado e não é necessária para a maioria dos pacientes elegíveis, segundo a evidência acumulada de 2022 a 2025",
+        "origem_secao": "O que muda na prática"
+      },
+      {
+        "id": "timing-avc-nao-confundir-hic-espontanea",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que este fluxo se aplica a AVC isquêmico, não a sobrevivente de hemorragia intracraniana espontânea com FA — essa é uma pergunta clínica distinta (SoSTART, PRESTIGE-AF, metanálise COCROACH) e não deve ser respondida com esta evidência",
+        "origem_secao": "Limites e o que ainda falta responder"
+      },
+      {
+        "id": "timing-avc-seguimento-curto-prazo",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Vigilância clínica planejada para os primeiros 30-90 dias após o início, período correspondente à janela de desfecho estudada nos ensaios — nenhum foi desenhado para captar desfecho funcional de longo prazo com poder estatístico adequado",
+        "origem_secao": "Limites e o que ainda falta responder"
+      }
+    ],
+    "revisao": "Checklist extraído a partir do documento já publicado sobre ELAN, TIMING, OPTIMAS e a metanálise CATALYST (2025). Itens rastreáveis às seções do documento; pendente de validação clínica final."
   }
 ]

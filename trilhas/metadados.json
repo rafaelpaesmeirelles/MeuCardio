@@ -25993,5 +25993,57 @@
         "por_que": "Fecha a trilha ampliando o alcance da lesão para o vaso: a LAL-D mostra que o mesmo princípio — depósito lisossômico causando fenocópia de doença cardiovascular comum, aqui aterosclerose precoce — se estende do miocárdio à valva e, por fim, à parede arterial."
       }
     ]
+  },
+  {
+    "slug": "trilha-complicacoes-mecanicas-pos-infarto",
+    "titulo": "Complicações mecânicas pós-infarto — do reconhecimento à decisão de reparo",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo reconhecer à beira do leito quando um choque pós-IAM é mecânico e não de bomba, diferenciar CIV, ruptura papilar, ruptura de parede livre e falência de VD, decidir o papel do balão intra-aórtico como ponte, e situar o timing entre cirurgia de emergência e fechamento percutâneo.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "stemi-estrategia-de-reperfusao-esc-2023",
+        "por_que": "Começa aqui porque o tempo de reperfusão é o principal determinante de quem vai desenvolver complicação mecânica: quanto mais tardia ou incompleta a reperfusão, maior a área de necrose e o risco de ruptura. Este documento já incorpora a seção de manejo de complicações mecânicas do posicionamento da AHA 2021, servindo de ponte natural para o resto da trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "comunicacao-interventricular-pos-infarto-diagnostico-e-decisao",
+        "por_que": "O protocolo central: como separar à beira do leito choque de bomba, CIV e ruptura papilar pelo eco, quando o balão intra-aórtico entra como ponte, e por que o DanGer-Shock (revascularização precoce em choque isquêmico puro) não deve ser extrapolado para ruptura estrutural."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-complicacao-mecanica-pos-iam-civ-e-ruptura-papilar",
+        "por_que": "O mesmo raciocínio em árvore de decisão, fixando a sequência eco imediato → separação diagnóstica → IABP como ponte → Heart Team decidindo entre cirurgia de emergência, adiamento selecionado e fechamento percutâneo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "complicacoes-mecanicas-pos-infarto-na-uco-ruptura-septo-papilar-parede-livre",
+        "por_que": "Aprofunda o que os dois documentos anteriores não cobrem em detalhe: a ruptura de parede livre e o tamponamento pós-infarto, junto com o catálogo completo das três rupturas lado a lado, já com a exigência de centro com cirurgia cardíaca disponível."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-falencia-aguda-de-ventriculo-direito",
+        "por_que": "Amplia o diferencial do choque pós-IAM para a complicação hemodinâmica que mais se confunde com as estruturais: infarto de ventrículo direito. O ponto que mais causa erro é tratar como choque hipovolêmico e expandir volume, quando a resposta hemodinâmica é que deve guiar a reposição."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-na-sindrome-coronariana-aguda-culprit-shock-e-iabp-shock-ii",
+        "por_que": "Fecha o contraste que a trilha construiu: os dois ensaios que definem o choque cardiogênico isquêmico 'comum' (revascularizar só a artéria culpada, balão intra-aórtico sem benefício de rotina) — o pano de fundo que explica por que a complicação mecânica é tratada como exceção, não como regra, na literatura de choque pós-IAM."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
+        "por_que": "Aplicação prática do desfecho: quem sobrevive a uma ruptura reparada quase sempre sai com fração de ejeção reduzida. A trilha termina onde a crise mecânica vira insuficiência cardíaca crônica a tratar até a alta."
+      }
+    ]
   }
 ]

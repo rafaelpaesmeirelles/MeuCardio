@@ -18954,5 +18954,45 @@
       "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624-2757. DOI: 10.1016/j.jacc.2025.11.016. PMID: 41824590."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025",
+    "titulo": "Hipertensão recém-diagnosticada: começar com um só anti-hipertensivo ou já combinar duas classes?",
+    "tema": "Hipertensão",
+    "nivel": "básico",
+    "enunciado": "Homem, 52 anos, sem diabetes, sem doença renal crônica, não fumante, LDL dentro da meta. Hipertensão diagnosticada há um mês, confirmada por médias consistentes de PA em consultório (156/96 mmHg) e em medidas domiciliares. Risco cardiovascular global estimado é intermediário. Já recebeu orientação sobre redução de sódio, padrão alimentar cardioprotetor e atividade física, mas a PA permanece claramente acima da meta.",
+    "pergunta": "Segundo a diretriz ACC/AHA 2025, qual a conduta farmacológica inicial mais adequada?",
+    "opcoes": [
+      "Iniciar monoterapia (ex.: IECA) e reavaliar em 4-6 semanas, adicionando uma segunda classe apenas se a meta não for atingida com a primeira droga em dose otimizada",
+      "Iniciar diretamente combinação de duas classes complementares (ex.: IECA + bloqueador de canal de cálcio), já que a PA está claramente acima da meta, para reduzir inércia terapêutica e acelerar o controle pressórico",
+      "Adiar o início de fármacos por até 6 meses e reavaliar apenas a resposta às medidas não farmacológicas, já que ele não tem diabetes nem doença renal crônica",
+      "Tratar apenas até PA <140/90 mmHg, pois a meta de <130/80 mmHg da diretriz se aplica somente a pacientes com diabetes ou doença renal crônica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM para prevenção, detecção, avaliação e manejo da hipertensão arterial em adultos estabelece meta geral de <130/80 mmHg para a maioria dos adultos, individualizada apenas em situações específicas (fragilidade, institucionalização, expectativa de vida limitada, gestação) — não restrita a diabéticos ou renais crônicos, o que torna a opção D incorreta. A diretriz também recomenda que, em pacientes com pressão claramente acima da meta, a combinação inicial de fármacos de classes complementares (em vez do escalonamento sequencial de monoterapia) facilita o controle mais rápido e reduz a inércia terapêutica — tornando a opção B a conduta recomendada e a opção A (monoterapia com titulação sequencial) uma abordagem defasada frente à evidência atual. Como a PA já está confirmada e claramente elevada, adiar a farmacoterapia (opção C) contraria a diretriz, que reforça as medidas não farmacológicas como base do tratamento mas não como substituto do início de fármacos quando a elevação pressórica já está caracterizada.",
+    "source_refs": [
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025",
+    "titulo": "Estenose aórtica grave por valva bicúspide aos 62 anos: TAVI ou cirurgia?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 62 anos, dispneia aos médios esforços (NYHA II-III). Ecocardiograma mostra estenose aórtica grave por valva aórtica bicúspide (Sievers tipo 1), área valvar de 0,8cm² e gradiente médio de 52mmHg, sem calcificação anelar extensa nem sinais de obstrução coronariana. Aorta ascendente com calibre normal (34mm), sem outra valvopatia ou coronariopatia associada. Avaliado pelo Heart Team: STS-PROM 1,2% e EuroSCORE II 1,4% (risco cirúrgico baixo).",
+    "pergunta": "Segundo a diretriz ESC/EACTS 2025, qual a modalidade de intervenção preferencial para este paciente?",
+    "opcoes": [
+      "TAVI transfemoral, já que a anatomia valvar avaliada foi considerada adequada ao procedimento",
+      "SAVR — a cirurgia continua sendo a modalidade primária de tratamento da estenose aórtica bicúspide, sobretudo em paciente jovem; TAVI seria uma opção a considerar apenas diante de risco cirúrgico aumentado e anatomia favorável, o que não é o caso aqui",
+      "TAVI ou SAVR, decidido apenas pelo corte etário de 70 anos, sem que a morfologia bicúspide interfira na escolha da modalidade",
+      "Aguardar piora funcional adicional antes de indicar qualquer intervenção, já que se trata de paciente jovem com boa reserva funcional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC/EACTS 2025 (Praz F, Borger MA, Lanz J, et al. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295) mantém a SAVR como modalidade primária de tratamento na estenose aórtica de valva bicúspide, particularmente em pacientes jovens, com aortopatia coexistente ou morfologia valvar desfavorável — pacientes bicúspides foram excluídos de quase todos os ensaios randomizados que compararam TAVI e SAVR, e calcificação intensa das cúspides (sobretudo com rafe calcificada) associa-se a lesão de raiz, leak paravalvar e maior mortalidade após TAVI. A única recomendação formal de TAVI nesse cenário é restrita: pode ser considerado na estenose bicúspide grave em pacientes com risco cirúrgico aumentado, se a anatomia for adequada (Classe IIb, Nível B) — recomendação que não se aplica a este paciente, de baixo risco cirúrgico (STS-PROM e EuroSCORE II abaixo de 4%). O corte etário de 70 anos que define a preferência por TAVI (Classe I, Nível A) aplica-se apenas à valva aórtica tricúspide, não à bicúspide — por isso a opção que ignora a morfologia valvar e decide só pela idade está errada. Anatomia valvar isoladamente adequada também não basta: a diretriz condiciona o TAVI, na valva bicúspide, ao risco cirúrgico aumentado, não apenas à anatomia favorável. Adiar a intervenção também é inadequado, pois a estenose aórtica grave sintomática já indica tratamento sem demora, independentemente da idade.",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
