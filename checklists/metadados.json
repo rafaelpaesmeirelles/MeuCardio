@@ -42371,5 +42371,115 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento terapia-antitrombotica-dac-cirrose-hepatica-e-trombocitopenia.md (já publicado, review_status: pendente_revisao). Itens fiéis ao texto de origem, sem adição de critério não presente no documento — inclusive a ressalva explícita de que a estratégia de DAPT abreviada em cirrose pós-PCI apoia-se em coorte observacional (TriNetX 2026), não em ensaio randomizado dedicado. Aguarda revisão médica independente antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular",
+    "condicao": "Retinopatia diabética como marcador de risco cardiovascular sistêmico — incorporação à estratificação de risco e à decisão terapêutica",
+    "resumo": "Incorporação ativa do resultado (não apenas da realização) do exame de fundo de olho à estratificação de risco cardiovascular do paciente diabético: gradação de gravidade da retinopatia, busca de albuminúria concomitante pelo efeito sinérgico sobre o risco, manutenção de GLP-1RA e iSGLT2 nesse subgrupo, e uso ainda apenas exploratório da oculômica por inteligência artificial.",
+    "documento_origem": "retinopatia-diabetica-como-marcador-de-risco-cardiovascular-sistemico",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Kramer CK, Rodrigues TC, Canani LH, Gross JL, Azevedo MJ. Diabetic retinopathy predicts all-cause mortality and cardiovascular events in both type 1 and type 2 diabetes: meta-analysis of observational studies. Diabetes Care. 2011;34(5):1238-1244. DOI: 10.2337/dc11-0079. PMID: 21525504.",
+      "Ponce Alencastro JA, Dommar Alcalá GM, Solares Ovando XS, Escandón González RE, García Garrote CC, Romero HV, Meléndez González VJ. Retinal Microvascular Disease in Diabetes and Its Prognostic Utility for Cardiovascular and Renal Complications: A Comprehensive Literature Review. Cureus. 2026;18(4):e107108. DOI: 10.7759/cureus.107108. PMID: 42147601.",
+      "Varghese RT, John AA. Ocular Manifestations of Metabolic Syndrome: A Systemic Vascular Phenotype. Diabetes Obes Metab. 2026 Jul 20. DOI: 10.1111/dom.71133. PMID: 42477295.",
+      "Park JT, Tan YY, Ko YE, Thakur S, Rim TH, Joo YS. The Eye as a Window to Cardio-Kidney-Metabolic Disease. Clin J Am Soc Nephrol. 2026 Aug 19. DOI: 10.2215/CJN.0000001224. PMID: 42616587.",
+      "Bc A, Rao SN, M M, V VA. Retinal Microvascular Signatures as Early Predictors of Cardiovascular Risk: Integrating Pathophysiology, Molecular Insights, and Artificial Intelligence. Am J Cardiol. 2026;273:131-137. DOI: 10.1016/j.amjcard.2026.05.035. PMID: 42320613.",
+      "Talmor-Barkan Y, Shapira M, Shilo S, Gorodetski M, Azouri D, Aviv Y, Reisner Y, Godneva A, Weinberger A, Skaat A, Loewenstein A, Berkowitz E, Kornowski R, Segal E, Rossman H. RetiMap: Automated Retinal Vascular Measures Link Microvascular Structure to Metabolic Health and Predict Cardiovascular Risk. JACC Basic Transl Sci. 2026;11(7):101596. DOI: 10.1016/j.jacbts.2026.101596. PMID: 42308589.",
+      "Shah J, Makwana B, Panchal K, Patel V, Patel T, Khadke S, Verma A, Vivekanandan S, Kong Y, Upadhyay J, Dani SS, Ramsey KM, Ganatra S, Ramsey DJ. Glucagon-Like Peptide-1 Receptor Agonists and Risk of Systemic and Ocular Vascular Complications in Patients With Type 2 Diabetes and Diabetic Retinopathy. Am J Ophthalmol. 2026;288:131-142. DOI: 10.1016/j.ajo.2026.04.021. PMID: 42025665.",
+      "Chen KE, Wang PC, Lin HA, Lin SF. Association of SGLT2 Inhibitor With Stroke in Type 2 Diabetes With Diabetic Retinopathy: A Multicenter Electronic Health Record Data Study. Diabetes Obes Metab. 2026;28(7):5614-5626. DOI: 10.1111/dom.70744. PMID: 41969190."
+    ],
+    "itens": [
+      {
+        "id": "it-retinopatia-perguntar-resultado-nao-so-realizacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perguntar e registrar o resultado do exame de fundo de olho do paciente diabético, não apenas se o rastreio foi realizado — a gravidade da retinopatia, não sua mera realização, é o dado com valor prognóstico cardiovascular",
+        "origem_secao": "O que isso muda na prática do cardiologista — item 1"
+      },
+      {
+        "id": "it-retinopatia-exigir-gradacao-do-laudo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Exigir do laudo oftalmológico a gradação da retinopatia (ausente / leve / moderada / grave / proliferativa), e não apenas o registro binário de presença ou ausência de retinopatia",
+        "origem_secao": "Gravidade importa: retinopatia leve não é o mesmo sinal que moderada-grave"
+      },
+      {
+        "id": "it-retinopatia-nao-equiparar-leve-a-moderada-grave",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não atribuir à retinopatia não proliferativa leve isolada (microaneurismas) o mesmo peso prognóstico cardiovascular da retinopatia moderada-grave ou proliferativa — foi esta última que explicou de forma consistente a incidência de eventos cardiovasculares, AVC e mortalidade nos estudos revisados",
+        "origem_secao": "Gravidade importa: retinopatia leve não é o mesmo sinal que moderada-grave"
+      },
+      {
+        "id": "it-retinopatia-usar-como-estratificador-adicional",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Tratar retinopatia diabética moderada-grave como estratificador de risco cardiovascular adicional, análogo em espírito aos estratificadores de alto risco (EAR) e muito alto risco (EMAR) já usados na estratificação do diabético — reconhecendo que a evidência ainda não define peso quantitativo formal para incorporação direta em escore validado",
+        "origem_secao": "O que isso muda na prática do cardiologista — item 2"
+      },
+      {
+        "id": "it-retinopatia-buscar-albuminuria-concomitante",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Buscar ativamente albuminúria/microalbuminúria diante de retinopatia moderada-grave — a coexistência dos dois marcadores associou-se a risco de eventos cardiovasculares até 7 vezes maior do que a presença isolada de qualquer um deles",
+        "origem_secao": "O sinergismo com a nefropatia: quando dois marcadores coincidem"
+      },
+      {
+        "id": "it-retinopatia-reclassificar-risco-se-albuminuria-coexistir",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Reclassificar o paciente para categoria de risco cardiovascular mais alta quando retinopatia moderada-grave e albuminúria coexistirem — o efeito descrito é sinérgico/multiplicativo, não a soma aritmética de dois fatores de risco isolados",
+        "origem_secao": "O sinergismo com a nefropatia: quando dois marcadores coincidem"
+      },
+      {
+        "id": "it-retinopatia-manter-glp1-e-isglt2-no-subgrupo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Não hesitar em iniciar ou manter agonista de receptor de GLP-1 ou inibidor de SGLT2 pela presença de retinopatia diabética — dados populacionais recentes mostram redução de infarto do miocárdio (GLP-1RA) e de AVC (iSGLT2) preservada ou ampliada exatamente nesse subgrupo, sem sinal de aumento de oclusão de artéria retiniana",
+        "origem_secao": "O que isso muda na prática do cardiologista — item 4; Da associação à ação"
+      },
+      {
+        "id": "it-retinopatia-alerta-titulacao-rapida-glp1",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar cautela com titulação rápida de GLP-1RA (queda rápida de HbA1c) como o contexto específico historicamente associado a agravamento oftalmológico agudo — achado hoje interpretado como efeito de velocidade de titulação, não uma contraindicação de classe ao uso do fármaco",
+        "origem_secao": "Agonistas do receptor de GLP-1"
+      },
+      {
+        "id": "it-retinopatia-priorizar-inicio-precoce-isglt2",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Priorizar o início de iSGLT2 nos estágios mais iniciais da retinopatia diabética quando possível — o efeito protetor sobre AVC foi mais pronunciado nos subgrupos com retinopatia em estágio inicial e HbA1c mais elevada, sugerindo maior benefício quanto mais precoce a intervenção",
+        "origem_secao": "Inibidores de SGLT2"
+      },
+      {
+        "id": "it-retinopatia-nao-usar-oculomica-para-decisao-terapeutica",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Não usar escores de oculômica por inteligência artificial (ex.: métricas vasculares automatizadas tipo RetiMap) isoladamente para decisão terapêutica individual — a tecnologia prediz risco em coortes, mas ainda não foi comparada diretamente a equações de risco validadas nem testada em ensaio clínico de impacto sobre desfecho",
+        "origem_secao": "A nova fronteira: oculômica e inteligência artificial; Limitações da evidência"
+      },
+      {
+        "id": "it-retinopatia-manter-rastreio-oftalmologico-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter a periodicidade de rastreio oftalmológico anual do paciente diabético já recomendada, incorporando ativamente o resultado (grau de retinopatia) ao prontuário e à discussão de risco cardiovascular do próprio cardiologista, não apenas ao registro oftalmológico isolado",
+        "origem_secao": "O que isso muda na prática do cardiologista — item 1 e item 5"
+      },
+      {
+        "id": "it-retinopatia-nao-tratar-como-evidencia-de-causalidade",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Não interpretar a associação entre retinopatia e risco cardiovascular como evidência de que tratar a retinopatia em si reduz eventos cardiovasculares — a totalidade dos dados é observacional, sem ensaio randomizado desenhado para testar a retinopatia como alvo de intervenção",
+        "origem_secao": "Limitações da evidência"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento retinopatia-diabetica-como-marcador-de-risco-cardiovascular-sistemico.md (já publicado, review_status: pendente_revisao). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
+    }
   }
 ]

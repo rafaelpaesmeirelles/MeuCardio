@@ -19830,5 +19830,27 @@
       "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289.",
       "ClinicalTrials.gov. A Study to Investigate the Effect of Lepodisiran on the Reduction of Major Adverse Cardiovascular Events in Adults With Elevated Lipoprotein(a) (ACCLAIM-Lp(a)). NCT06292013. Fase 3, ativo sem recrutamento, N estimado 17.300, desfecho primário MACE-4, conclusão primária estimada em março de 2029."
     ]
+  },
+  {
+    "slug": "variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar",
+    "titulo": "PA de consultório controlada na média, mas oscilando muito entre visitas: o que fazer?",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 61 anos, hipertensa há 12 anos, em uso de losartana 100 mg/dia e anlodipino 5 mg à noite, com boa adesão referida. Nas últimas seis consultas em 18 meses, a PA de consultório mediu, em mmHg: 128/78, 156/94, 134/82, 118/74, 149/90 e 131/80 — média aproximada de 136/83 mmHg, dentro da meta, mas com desvio-padrão elevado entre as visitas. O MRPA domiciliar do último mês reproduz o mesmo padrão de oscilação (sistólica matinal variando entre 110 e 158 mmHg), com boa concordância entre as leituras de consultório e domiciliares na mesma janela de tempo, afastando efeito do jaleco branco ou hipertensão mascarada. A MAPA de 24h realizada recentemente mostra descenso noturno preservado (14%), afastando padrão non-dipping. Ao interrogatório dirigido, o marido relata ronco alto e pausas respiratórias observadas durante o sono, e a paciente refere sonolência diurna importante; ela também comenta que \"às vezes esquece\" a dose noturna de anlodipino quando viaja a trabalho.",
+    "pergunta": "Diante dessa variabilidade pressórica visita a visita elevada, com PA média controlada e sem non-dipping, jaleco branco ou mascarada explicando o achado, qual é a conduta mais apropriada segundo a evidência atual (2025-2026)?",
+    "opcoes": [
+      "Como a variabilidade pressórica tem valor prognóstico independente já demonstrado, trocar imediatamente o anlodipino por um betabloqueador de meia-vida longa, com o objetivo terapêutico específico de reduzir a variabilidade",
+      "Investigar causas potencialmente reversíveis da variabilidade antes de rotulá-la como traço fixo da paciente — rastrear apneia obstrutiva do sono, dados os achados sugestivos ao interrogatório, e reforçar a adesão à dose noturna de anlodipino, mantendo o esquema anti-hipertensivo atual enquanto isso é investigado",
+      "Como a PA média já está dentro da meta, a variabilidade entre visitas pode ser ignorada, pois não há hoje nenhuma evidência de que ela tenha relevância prognóstica além do nível médio de PA",
+      "Encaminhar diretamente para denervação renal, já que a variabilidade elevada isoladamente é indicação estabelecida do procedimento em pacientes com PA média já controlada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A variabilidade pressórica visita a visita é um constructo distinto de non-dipping e de jaleco branco/mascarada — ambos já afastados neste caso pela MAPA e pela concordância MRPA-consultório — e a evidência de 2025-2026 (Kulkarni et al., J Hypertens 2025; Stiefel et al., Rev Clin Esp 2026) mostra que ela carrega valor prognóstico independente do nível médio de PA, o que torna incorreto simplesmente ignorá-la só porque a média está na meta. Por outro lado, o editorial de Brush e Lu (JACC 2025, 'The Noise Problem') recomenda explicitamente excluir primeiro causas técnicas e clínicas corrigíveis de oscilação — adesão irregular, apneia do sono não tratada, técnica de medida inconsistente — antes de tratar a variabilidade como traço fixo ou como alvo terapêutico autônomo; neste caso há dois achados diretamente acionáveis (sinais clínicos sugestivos de apneia obstrutiva do sono não investigada e adesão irregular referida à dose noturna). Trocar a classe de anti-hipertensivo apenas para reduzir a variabilidade não é sustentado pela evidência mais robusta disponível: o estudo de Qiao et al. (Hypertension 2026) encontrou menor variabilidade com bloqueador de canal de cálcio de ação longa comparado a outras classes, mas sem diferença de MACE entre os regimes — ou seja, não há prova de que modificar a variabilidade pela troca de classe, isoladamente, reduza eventos maiores; trocar por um betabloqueador seria ainda menos justificado, já que essa classe tende a ser neutra ou associada a maior variabilidade nas comparações históricas revisadas por Kulkarni et al. Denervação renal não tem indicação baseada em variabilidade pressórica isolada em nenhuma das fontes revisadas.",
+    "source_refs": [
+      "Kulkarni S, Parati G, Bangalore S, Bilo G, Kim BJ, Kario K, Messerli F, Stergiou G, Wang J, Whiteley W, Wilkinson I, Sever PS. Blood pressure variability: a review. J Hypertens. 2025;43(6):929-938. DOI: 10.1097/HJH.0000000000003994. PMID: 40084481",
+      "Brush JE Jr, Lu Y. The Noise Problem: Visit-to-Visit Blood Pressure Variability and Its Consequences. J Am Coll Cardiol. 2025;86(18):1485-1487. DOI: 10.1016/j.jacc.2025.08.068. PMID: 41162008",
+      "Qiao Y, Sun Z, Harshfield EL, Ji X, Markus HS, Zhao W. Blood Pressure Variability and Outcomes Across Antihypertensive Regimens. Hypertension. 2026;83(9):e27140. DOI: 10.1161/HYPERTENSIONAHA.126.27140. PMID: 42345116"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

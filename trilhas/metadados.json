@@ -27449,5 +27449,69 @@
         "por_que": "Fecha a trilha na transição para fora do hospital: furosemida subcutânea como via de descongestão ambulatorial, aplicando o mesmo racional guiado sem precisar de internação prolongada."
       }
     ]
+  },
+  {
+    "slug": "trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao",
+    "tema": "Valvopatias",
+    "titulo": "Valvopatias: quando duas valvas doentes ao mesmo tempo mudam a decisão — o problema da doença multivalvar",
+    "objetivo": "Sair sabendo por que a combinação de duas lesões valvares significativas distorce a avaliação de gravidade de cada uma isoladamente, resolver essa distorção com ecocardiograma sob estresse quando o fluxo está reduzido, classificar corretamente a regurgitação mitral concomitante por mecanismo antes de decidir, escolher a via de tratamento da estenose aórtica sabendo que ela condiciona a via da valva mitral, decidir entre tratar as duas valvas juntas ou estagiar a intervenção com a evidência observacional de 2025-2026, reconhecer quando a calcificação anular mitral grave limita as opções transcateter, e estender esse raciocínio de sequenciamento para a insuficiência tricúspide secundária que surge ou persiste depois da valva esquerda.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+        "por_que": "Começa aqui porque a trilha inteira depende do arcabouço ESC/EACTS de estadiamento e indicação de intervenção por lesão. Sem essa base de cada valva isolada, não há como reconhecer o que muda quando duas lesões coexistem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-baixo-fluxo-baixo-gradiente-fenotipos-diagnostico-diferencial-e-decisao",
+        "por_que": "A regurgitação mitral concomitante reduz o volume anterógrado efetivo e pode empurrar a estenose aórtica para um fenótipo de baixo fluxo/baixo gradiente, subestimando sua gravidade real em métricas dependentes de fluxo — o primeiro efeito prático de duas valvas interagindo, antes de qualquer decisão de tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ecocardiograma-sob-estresse-nas-valvopatias-indicacoes-sbc-2024",
+        "por_que": "Quando o fluxo reduzido pela valva mitral torna a gravidade da estenose aórtica ambígua, o ecocardiograma sob estresse é a ferramenta que distingue estenose verdadeiramente grave de pseudoestenose — resolve a distorção identificada na etapa anterior antes de seguir para a decisão de tratar."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-regurgitacao-mitral-esc-eacts-2025",
+        "por_que": "Antes de decidir se a regurgitação mitral concomitante precisa de tratamento próprio, é preciso classificá-la corretamente por gravidade e, sobretudo, por mecanismo (primária versus secundária) — a variável que mais pesa na pergunta central desta trilha."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "regurgitacao-mitral-secundaria-transcateter-coapt-versus-mitra-fr-por-que-resultados-divergiram",
+        "por_que": "A regurgitação mitral que acompanha a estenose aórtica é, com frequência, secundária — funcional, por remodelamento imposto pela sobrecarga da própria estenose. Entender por que COAPT e MITRA-FR divergiram ensina a reconhecer quando essa regurgitação tende a regredir com o tratamento da valva aórtica e quando não."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-estenose-aortica-grave-sintomatica-tavi-vs-cirurgia-escolha-da-modalidade-esc-eacts-2025",
+        "por_que": "Com as duas lesões já graduadas e o mecanismo da regurgitação mitral esclarecido, a decisão de via para a valva aórtica — TAVI ou cirurgia — deixa de ser isolada: escolher a via cirúrgica abre a porta para tratar as duas valvas no mesmo tempo operatório, o que a via transcateter isolada não permite."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-multivalvar-estenose-aortica-regurgitacao-mitral-sequenciamento-intervencao",
+        "por_que": "É o núcleo da trilha: reúne o workshop do Heart Valve Collaboratory (JACC 2025) e as séries observacionais de 2025-2026 para comparar as três estratégias — tratar só a aórtica e reavaliar, tratar as duas juntas, ou estagiar — agora que as etapas anteriores já prepararam a gravidade real de cada lesão, o mecanismo da regurgitação mitral e a via de tratamento da estenose."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "calcificacao-anular-mitral-grave-troca-valvar-transcateter-tendyne-summit-mac",
+        "por_que": "Quando a decisão da etapa anterior aponta para tratar a valva mitral — junto ou depois da aórtica —, a calcificação anular mitral grave, comum nesse perfil de paciente idoso e calcífico, pode inviabilizar reparo cirúrgico convencional e redirecionar para troca transcateter dedicada, mudando de novo o sequenciamento possível."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025",
+        "por_que": "Fecha a trilha estendendo o mesmo raciocínio de sequenciamento a uma terceira valva: a insuficiência tricúspide secundária frequentemente persiste ou só se manifesta depois que a valva esquerda (aórtica, mitral, ou ambas) já foi tratada, exigindo a mesma pergunta — tratar junto, tratar depois, ou não tratar — que estruturou toda a trilha."
+      }
+    ]
   }
 ]
