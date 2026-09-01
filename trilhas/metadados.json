@@ -26511,5 +26511,75 @@
         "por_que": "Fecha a trilha amarrando investigação e manejo em sequência operacional única — do reconhecimento da suspeita ao teste funcional invasivo e à escolha terapêutica guiada pelo mecanismo — para o paciente que permanece sintomático apesar da primeira linha."
       }
     ]
+  },
+  {
+    "slug": "trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral",
+    "titulo": "Valvopatias complicadas por endocardite infecciosa: do diagnóstico Duke-ISCVID ao timing cirúrgico e à transição para antibiótico oral",
+    "tema": "Valvopatias",
+    "objetivo": "Guiar o raciocínio clínico do paciente com valvopatia (nativa ou protética) sob suspeita de endocardite infecciosa: aplicar os critérios diagnósticos Duke-ISCVID 2023, investigar o cenário de hemocultura negativa, decidir o timing da cirurgia (inclusive após AVC), e usar a evidência que sustenta a transição para antibiótico oral e o achado de endocardite pós-TAVI.",
+    "nivel": "avancado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "duke-iscvid-2023-criterios-diagnosticos-endocardite-infecciosa",
+        "por_que": "Ponto de partida: os critérios diagnósticos atuais (Duke-ISCVID 2023) que definem caso definitivo, possível ou rejeitado de endocardite infecciosa em valva nativa ou protética."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-endocardite-duke-iscvid-2023-aplicacao-dos-criterios",
+        "por_que": "Traduz os critérios em um fluxo de decisão aplicável à beira do leito, passo a passo, para classificar o caso suspeito."
+      },
+      {
+        "ordem": 3,
+        "item_type": "checklist",
+        "item_slug": "investigacao-de-endocardite-com-hemocultura-negativa",
+        "por_que": "Cenário clínico frequente e desafiador: quando as hemoculturas são negativas, este checklist orienta a investigação complementar (sorologias, PCR, imagem) sem perder o diagnóstico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-endocardite-infecciosa-esc-2023",
+        "por_que": "Visão integrada ESC 2023 do manejo diagnóstico-terapêutico completo, conectando diagnóstico, antibioticoterapia e indicação cirúrgica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "cirurgia-precoce-na-endocardite-infecciosa-com-vegetacao-grande",
+        "por_que": "Evidência que sustenta a cirurgia precoce (em vez de tratamento clínico prolongado) em vegetações grandes com alto risco embólico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "indicacao-e-timing-de-cirurgia-na-endocardite-infecciosa-esc-2023",
+        "por_que": "Operacionaliza a decisão de quando e por que operar, segundo as indicações ESC 2023 (insuficiência cardíaca, infecção não controlada, risco embólico)."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-de-timing-cirurgico-apos-avc-na-endocardite-infecciosa",
+        "por_que": "Situação de alto risco: define a janela seguro para operar após um AVC embólico, equilibrando risco de transformação hemorrágica contra infecção não controlada."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "poet-antibiotico-oral-versus-intravenoso-endocardite",
+        "por_que": "Evidência que mudou a prática: mostra que, após estabilização clínica, a troca para antibiótico oral é não inferior à via intravenosa prolongada."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "poet-seguimento-cinco-anos-terapia-oral-parcial-endocardite",
+        "por_que": "Reforça a segurança de longo prazo (5 anos) da estratégia de transição oral, consolidando a mudança de paradigma terapêutico."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-apos-implante-valvar-aortico-transcateter-tavi-registro-internacional",
+        "por_que": "Fecha o ciclo reconectando com a valvopatia intervencionista: mostra que a prótese transcateter (TAVI) também é sítio de endocardite, com desafios diagnósticos e prognósticos próprios."
+      }
+    ]
   }
 ]

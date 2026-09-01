@@ -40737,5 +40737,127 @@
       }
     ],
     "revisao": "Checklist extraído em 01/09/2026 do documento de origem (diretriz ESC 2023 de cardiomiopatias, seção de cardiomiopatia hipertrófica). Itens fiéis ao texto publicado, sem inclusão de critério não presente na fonte. Pendente de revisão clínica antes de publicação."
+  },
+  {
+    "slug": "classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024",
+    "condicao": "Classificação da pressão arterial e decisão de tratar (ESC 2024)",
+    "resumo": "Checklist de aplicação da árvore de decisão ESC 2024: as três categorias de pressão arterial, o critério de risco cardiovascular que indica farmacoterapia na faixa de pressão elevada, e as exceções ao alvo sistólico intensivo de 120–129 mmHg.",
+    "documento_origem": "fluxograma-hipertensao-arterial-esc-2024",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of elevated blood pressure and hypertension · European Heart Journal · 2024 · 10.1093/eurheartj/ehae178 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/",
+      "2024 ESC Guidelines for Management of Elevated BP and Hypertension: Key Points · American College of Cardiology · 2024 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2024/09/05/14/11/2024-esc-guidelines-for-bp-esc-2024",
+      "New Definition of Elevated Blood Pressure in the 2024 ESC Guidelines: Increased Prevalence, Uncertain Evidence · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.124.072696",
+      "Navigating the 2024 ESC Hypertension Guidelines: What Is New, Context, and Future Directions · Journal of the American College of Cardiology · 2024 · https://www.jacc.org/doi/10.1016/j.jacc.2024.10.114"
+    ],
+    "itens": [
+      {
+        "id": "cpa-medida-confirmada-fora-consultorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Medida de pressão arterial em consultório confirmada por medida fora do consultório (monitorização ambulatorial ou residencial) antes de classificar a categoria de pressão arterial",
+        "origem_secao": "Árvore de decisão"
+      },
+      {
+        "id": "cpa-categoria-nao-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão < 120/70 mmHg classificada como 'pressão não elevada' — tratamento medicamentoso não recomendado nesta categoria",
+        "origem_secao": "As três categorias"
+      },
+      {
+        "id": "cpa-categoria-elevada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão entre 120–139 mmHg sistólica ou 70–89 mmHg diastólica classificada como 'pressão elevada' — categoria intermediária que não implica tratamento medicamentoso automático",
+        "origem_secao": "As três categorias"
+      },
+      {
+        "id": "cpa-categoria-hipertensao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão ≥ 140/90 mmHg classificada como hipertensão — confirmação pronta e tratamento indicados na maioria dos indivíduos",
+        "origem_secao": "As três categorias"
+      },
+      {
+        "id": "cpa-estilo-vida-3-meses",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Na faixa de pressão elevada, medidas de estilo de vida instituídas por 3 meses antes de qualquer decisão sobre farmacoterapia",
+        "origem_secao": "Quem trata na faixa de pressão elevada"
+      },
+      {
+        "id": "cpa-reavaliacao-sistolica-pos-3-meses",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Após os 3 meses de estilo de vida, verificado se a sistólica permanece entre 130 e 139 mmHg antes de considerar tratamento medicamentoso na faixa de pressão elevada",
+        "origem_secao": "Quem trata na faixa de pressão elevada"
+      },
+      {
+        "id": "cpa-criterio-alto-risco-dcv-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Presença de condição de alto risco verificada — doença cardiovascular estabelecida, ou diabetes em adulto com 60 anos ou mais — como critério isolado suficiente para tratar na faixa de pressão elevada",
+        "origem_secao": "Quem trata na faixa de pressão elevada"
+      },
+      {
+        "id": "cpa-criterio-score2",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Risco cardiovascular em 10 anos calculado pelo SCORE2 (40–69 anos) ou SCORE2-OP (70 anos ou mais); risco acima de 10% usado como critério para tratar na faixa de pressão elevada",
+        "origem_secao": "Quem trata na faixa de pressão elevada"
+      },
+      {
+        "id": "cpa-criterio-score2-modificadores",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Quando o risco estimado em 10 anos estiver entre 5% e 10%, verificada a presença de modificadores de risco antes de decidir por tratamento medicamentoso na faixa de pressão elevada",
+        "origem_secao": "Quem trata na faixa de pressão elevada"
+      },
+      {
+        "id": "cpa-excecoes-alvo-intensivo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de fixar o alvo sistólico intensivo, verificadas as quatro situações que flexibilizam a meta: idade acima de 85 anos, fragilidade, sintoma ortostático ou expectativa de vida limitada",
+        "origem_secao": "Árvore de decisão / O alvo"
+      },
+      {
+        "id": "cpa-alvo-sistolico-120-129",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Na ausência das exceções (idade > 85 anos, fragilidade, sintoma ortostático, expectativa de vida limitada), alvo sistólico de 120–129 mmHg estabelecido como ponto de partida do tratamento medicamentoso, tanto para hipertensão confirmada quanto para pressão elevada com indicação de tratar",
+        "origem_secao": "O alvo"
+      },
+      {
+        "id": "cpa-alvo-individualizado-excecao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando presente uma das quatro exceções, alvo pressórico individualizado e menos intensivo definido em vez do alvo padrão de 120–129 mmHg",
+        "origem_secao": "Árvore de decisão / O alvo"
+      },
+      {
+        "id": "cpa-medida-fora-consultorio-diagnostico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Medida fora do consultório (MAPA ou MRPA) utilizada para fins diagnósticos, com atenção a hipertensão do avental branco e hipertensão mascarada — nenhuma das duas é identificável apenas pela medida de consultório",
+        "origem_secao": "Medida fora do consultório"
+      },
+      {
+        "id": "cpa-priorizacao-grupos-alto-consequencia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Priorização ativa de pacientes com diabetes, doença renal, doença cardiovascular, lesão de órgão-alvo ou hipercolesterolemia familiar, nos quais a mesma cifra de pressão tem consequência maior",
+        "origem_secao": "Priorização"
+      },
+      {
+        "id": "cpa-verificar-referencia-aplicavel",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Ao aplicar este fluxograma no Brasil, verificado que a referência de prática é a Diretriz Brasileira de Hipertensão Arterial de 2025 (meta <130/80 mmHg para todos, sem estratificação por risco) e não o alvo ESC 2024 aqui descrito, que é a referência européia",
+        "origem_secao": "Como esta meta se relaciona com a diretriz brasileira"
+      }
+    ],
+    "revisao": "Checklist extraído em 01/09/2026 do documento já publicado fluxograma-hipertensao-arterial-esc-2024.md (kind: fluxograma, review_status: revisado). Itens fiéis à árvore de decisão e ao texto publicado, rastreáveis por origem_secao. Nenhum critério foi adicionado além do que consta na fonte. Pendente de revisão clínica antes de publicação."
   }
 ]

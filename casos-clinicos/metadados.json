@@ -19352,5 +19352,46 @@
       "Forrest JK, Yakubov SJ, Deeb GM, Reardon MJ; Evolut Low Risk Trial Investigators. Six-Year Outcomes After Transcatheter vs Surgical Aortic Valve Replacement in Low-Risk Patients With Aortic Stenosis. J Am Coll Cardiol. 2026;87(23):3210-3221. DOI: 10.1016/j.jacc.2026.02.5063. PMID: 41697183."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada",
+    "titulo": "Cardiomiopatia dilatada por variante em MYH7: dá para prescrever danicamtiv pelo resultado do subgrupo?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 38 anos, investigado há 6 meses por dispneia aos esforços progressiva. Ecocardiograma mostra cardiomiopatia dilatada com FEVE 32%, sem doença coronariana obstrutiva na angiotomografia. Painel genético identifica variante patogênica em MYH7 (cadeia pesada da miosina cardíaca), classificando o quadro como cardiomiopatia dilatada sarcomérica. Está em NYHA II-III apesar de 4 meses de terapia otimizada com os quatro pilares da ICFEr (betabloqueador, IECA/ARNI, antagonista mineralocorticoide e inibidor de SGLT2 em doses-alvo toleradas). O paciente pesquisou sobre o assunto e traz na consulta um resumo de um ensaio de fase 2 com danicamtiv, apontando que o subgrupo MYH7 teve o maior ganho médio de FEVE entre os subgrupos genéticos estudados, e pergunta se pode começar a usar o medicamento.",
+    "pergunta": "Qual a conduta mais apropriada diante desse pedido?",
+    "opcoes": [
+      "Iniciar danicamtiv fora de bula, já que o subgrupo MYH7 do ensaio de fase 2 teve o maior ganho médio de FEVE (+8,8 pontos percentuais) entre os três subgrupos genéticos testados",
+      "Manter e continuar otimizando os quatro pilares da ICFEr já estabelecidos para cardiomiopatia dilatada — independentemente da causa genética —, explicar que danicamtiv é medicação de pesquisa sem aprovação regulatória em nenhuma agência, e considerar encaminhamento a um centro participante do ensaio confirmatório KINSHIP-DCM (fase 2b/3, ainda sem resultado) caso o paciente deseje explorar essa via dentro de protocolo",
+      "Como a variante é em MYH7, tratar como cardiomiopatia hipertrófica e iniciar mavacamten, já validado nesta biblioteca para inibição de miosina",
+      "Suspender a terapia padrão da ICFEr, já que ela não é dirigida ao mecanismo genético específico do paciente, e aguardar terapia genótipo-específica antes de qualquer intervenção farmacológica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O danicamtiv é um ativador seletivo da miosina cardíaca testado em ensaio fase 2a aberto (sem grupo placebo concorrente, comparação apenas contra o basal do próprio paciente), com 41 participantes divididos em três coortes genéticas (MYH7, TTN e outras causas). O subgrupo MYH7 (n=12) teve, de fato, a maior variação média de FEVE do basal ao fim do Período 2 (+8,8 pontos percentuais, IC95% 5,03-12,64), maior que TTN (+5,9) e que 'outras causas' (+4,4, IC95% cruzando zero). Mas esse resultado é sinal farmacodinâmico precoce em amostra pequena, sem braço placebo concorrente — não é prova de eficácia clínica, e a melhora de FEVE em fase 2a aberta não deve ser tratada como equivalente a um desfecho validado. O medicamento não está aprovado para uso clínico em nenhuma diretriz ou agência regulatória; é droga de pesquisa, disponível apenas em ensaio clínico (o confirmatório KINSHIP-DCM, fase 2b/3, iniciou em fevereiro de 2026 e ainda não tem resultado publicado). A conduta correta é manter e otimizar os quatro pilares da ICFEr — terapia guiada por fenótipo, já validada independentemente da causa genética da cardiomiopatia dilatada — e, se o paciente tiver interesse, avaliar elegibilidade para o ensaio confirmatório dentro de protocolo, não prescrição off-label. Prescrever mavacamten estaria mecanisticamente invertido: mavacamten é inibidor de miosina, indicado para hipercontratilidade da CMH obstrutiva, o oposto do que se busca numa cardiomiopatia dilatada com contratilidade reduzida. Suspender a terapia padrão da ICFEr também é incorreto — não existe hoje terapia farmacológica dirigida ao mecanismo genético aprovada para substituí-la, e os quatro pilares continuam sendo a base de evidência estabelecida também nesta população.",
+    "source_refs": [
+      "Lakdawala NK, Hershberger RE, Garcia-Pavia P, et al. Danicamtiv, a Selective Agonist of Cardiac Myosin, for Dilated Cardiomyopathy: A Phase 2 Open-Label Trial. J Am Coll Cardiol. 2025;86(25):2598-2612. DOI: 10.1016/j.jacc.2025.09.1511. PMID: 41217321."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "iam-feve-44-sem-ic-betabloqueador-de-longo-prazo",
+    "titulo": "IAM com FEVE 44% sem insuficiência cardíaca: iniciar betabloqueador de longo prazo?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, tabagista, hipertensão leve controlada com losartana. Admitido com IAM com supra de ST em parede anterior, submetido a angioplastia primária com sucesso (fluxo TIMI 3 final, sem complicação). Evolução hospitalar sem sinais de congestão, sem B3, sem dispneia, PA estável em torno de 118x74 mmHg e FC de repouso em 68 bpm. Ecocardiograma transtorácico no dia 3 mostra FEVE 44%, sem valvopatia significativa. Já está em uso de AAS, ticagrelor, estatina de alta intensidade e IECA. Não há angina residual, arritmia documentada ou outra indicação clássica isolada para betabloqueador. A equipe discute se deve iniciar betabloqueador de longo prazo antes da alta.",
+    "pergunta": "Com base na evidência randomizada contemporânea estratificada por FEVE, qual a conduta mais adequada quanto ao betabloqueador de longo prazo neste paciente?",
+    "opcoes": [
+      "Não iniciar betabloqueador: a evidência mais robusta em volume (mais de 17.000 pacientes) já mostrou que a classe é neutra para morte, IAM ou insuficiência cardíaca no pós-IAM sem indicação clínica, e esse resultado deve ser extrapolado para qualquer paciente com função ventricular não gravemente reduzida.",
+      "Iniciar e manter betabloqueador de longo prazo: em pacientes com FEVE 40–49% e sem insuficiência cardíaca clínica, a meta-análise individual de quatro RCTs (REBOOT, BETAMI, DANBLOCK, CAPITAL-RCT; n=1.885) mostrou redução do desfecho composto morte/IAM/IC (HR 0,75; IC95% 0,58–0,97), um sinal que não deve ser equiparado à neutralidade observada especificamente no estrato de FEVE ≥50%.",
+      "Adiar qualquer decisão e reavaliar a FEVE em 6 meses, já que a função ventricular tende a se recuperar após reperfusão bem-sucedida, tornando prematura qualquer definição sobre betabloqueador nesta fase.",
+      "Iniciar betabloqueador somente se surgir angina, arritmia ou sintoma de insuficiência cardíaca no seguimento, tratando a FEVE 40–49% como clinicamente equivalente à FEVE ≥50% para fins de decisão terapêutica."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A evidência randomizada contemporânea deixou de sustentar uma resposta única de 'betabloqueador para todo pós-IAM sem FE reduzida' — o efeito muda conforme o estrato de FEVE. Em FEVE 40–49% sem insuficiência cardíaca clínica, a meta-análise de dados individuais de quatro ensaios (REBOOT, BETAMI, DANBLOCK, CAPITAL-RCT; 1.885 pacientes, 991 com betabloqueador e 894 controles) mostrou taxa do desfecho composto (morte por qualquer causa, novo IAM ou insuficiência cardíaca) de 32,6 eventos/1.000 pacientes-ano com betabloqueador versus 43,0/1.000 pacientes-ano sem a droga (HR 0,75; IC95% 0,58–0,97; p=0,031), sem heterogeneidade relevante entre os estudos. Esse sinal é distinto do observado no estrato de FEVE ≥50%, onde uma síntese individual maior (17.801 pacientes) foi neutra (HR 0,97; IC95% 0,87–1,07). Como o paciente do caso tem FEVE 44% e nenhuma outra indicação isolada para a classe, ele se enquadra exatamente no estrato em que há sinal randomizado favorável — ainda com incerteza residual pela base de evidência menor que a do grupo com FE normal, mas suficiente para justificar iniciar e manter o betabloqueador de longo prazo, e não extrapolar a neutralidade do grupo FEVE ≥50% para este paciente.",
+    "source_refs": [
+      "Munkhaugen J, Kristensen AMD, Fagerland MW, et al.; BETAMI-DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716.",
+      "Rossello X, Prescott EIB, Kristensen AMD, et al. β blockers after myocardial infarction with mildly reduced ejection fraction: an individual patient data meta-analysis of randomised controlled trials. Lancet. 2025;406(10508):1128-1137. DOI: 10.1016/S0140-6736(25)01592-2. PMID: 40897190. PROSPERO: CRD420251023480."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
