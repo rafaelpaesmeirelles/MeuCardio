@@ -1341,6 +1341,11 @@ body.cardiology-spaces-active :where(a:hover) {
   backdrop-filter: blur(16px) saturate(110%);
 }
 
+/* O diálogo possui sua própria rolagem. Bloquear a página ao fundo evita a
+   segunda barra nativa clara no mobile sem alterar a composição aprovada. */
+html:has(body.cardiology-spaces-active .spaces-overlay),
+body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
+
 .spaces-catalog,
 .spaces-personalizer,
 .spaces-travel {
@@ -1410,7 +1415,21 @@ body.cardiology-spaces-active :where(a:hover) {
 .spaces-catalog > label svg { width: 20px; height: 20px; }
 .spaces-catalog > label input { width: 100%; min-height: 46px; padding: 0; color: #e9f3f6; background: transparent; border: 0; border-radius: 0; box-shadow: none; outline: 0; }
 .spaces-catalog > label input::placeholder { color: #657c8c; }
-.spaces-catalog > div { display: grid; gap: 22px; overflow: auto; padding: 0 5px 26px 0; }
+.spaces-catalog > div {
+  display: grid;
+  gap: 22px;
+  overflow: auto;
+  padding: 0 5px 26px 0;
+  scrollbar-color: rgba(43, 216, 225, 0.58) rgba(3, 15, 27, 0.82);
+  scrollbar-width: thin;
+}
+.spaces-catalog > div::-webkit-scrollbar { width: 8px; }
+.spaces-catalog > div::-webkit-scrollbar-track { background: rgba(3, 15, 27, 0.82); }
+.spaces-catalog > div::-webkit-scrollbar-thumb {
+  background: rgba(43, 216, 225, 0.48);
+  border: 2px solid rgba(3, 15, 27, 0.82);
+  border-radius: 99px;
+}
 .spaces-catalog > div > section h3 { margin: 0 0 8px; color: #8aa1b1; font-family: var(--fonte-dados); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
 .spaces-catalog > div > section > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
 .spaces-catalog .spaces-action { justify-content: flex-start; min-height: 52px; padding: 8px 12px; color: #bdcbd4; background: rgba(7, 25, 42, 0.58); border: 1px solid rgba(91, 155, 198, 0.15); border-radius: 10px; font-size: 0.77rem; text-align: left; }
@@ -1578,7 +1597,7 @@ body.cardiology-spaces-active :where(a:hover) {
 
 /* Mobile: documento vertical, portais com snap e dock sem itens escondidos. */
 @media(max-width:900px) {
-  body.cardiology-spaces-active { overflow: auto; }
+  body.cardiology-spaces-active { overflow-x: hidden; overflow-y: auto; }
 
   .spaces-choice {
     min-height: 100dvh;
@@ -1706,7 +1725,9 @@ body.cardiology-spaces-active :where(a:hover) {
   .spaces-door { width: 128px; min-width: 128px; flex: 0 0 128px; gap: 6px; scroll-snap-align: center; }
   .spaces-door > span { height: 25px; font-size: 0.71rem; }
   .spaces-door > span svg { width: 17px; height: 17px; }
-  .spaces-door > i { height: 128px; }
+  /* A moldura contém a fotografia 3:2. Sem este recorte, o `cover` do portal
+     ativo pinta sobre o ambiente vizinho apesar de as caixas flex não colidirem. */
+  .spaces-door > i { height: 128px; overflow: hidden; }
   .spaces-door:hover,
   .spaces-door.is-preview { transform: translateY(-2px); }
   .spaces-door.is-active { width: 166px; min-width: 166px; flex: 0 0 166px; }
@@ -1726,10 +1747,10 @@ body.cardiology-spaces-active :where(a:hover) {
     min-height: 0;
     grid-template-columns: 1fr;
     gap: 8px;
-    padding: 13px 10px 10px;
-    clip-path: none;
-    border-radius: 13px;
-    filter: none;
+    padding: 13px 4.6% 11px;
+    clip-path: polygon(3.2% 0, 96.8% 0, 100% 100%, 0 100%);
+    border-radius: 0;
+    filter: drop-shadow(0 11px 17px rgba(0, 0, 0, 0.18));
   }
 
   .spaces-layer--now { min-height: 116px; }
@@ -1742,8 +1763,12 @@ body.cardiology-spaces-active :where(a:hover) {
   .spaces-layer > div { display: grid; grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
   .spaces-layer--refs > div,
   .spaces-layer--essential > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .spaces-action { display: grid; min-height: 72px; justify-items: center; align-content: center; gap: 6px; padding: 7px 4px; border: 1px solid rgba(105, 157, 191, 0.14); border-radius: 9px; font-size: 0.66rem; line-height: 1.25; }
-  .spaces-action:first-child { border-left: 1px solid rgba(105, 157, 191, 0.14); }
+  .spaces-action { display: grid; min-height: 72px; justify-items: center; align-content: center; gap: 6px; padding: 7px 4px; border: 0; border-left: 1px solid rgba(105, 157, 191, 0.16); border-radius: 0; font-size: 0.66rem; line-height: 1.25; }
+  .spaces-action:first-child,
+  .spaces-layer--refs .spaces-action:nth-child(odd),
+  .spaces-layer--essential .spaces-action:nth-child(odd) { border-left: 0; }
+  .spaces-layer--refs .spaces-action:nth-child(n + 3),
+  .spaces-layer--essential .spaces-action:nth-child(n + 3) { border-top: 1px solid rgba(105, 157, 191, 0.13); }
   .spaces-action svg { width: 22px; height: 22px; }
   .spaces-personalize { width: min(240px, 100%); min-height: 44px; margin: 0 auto; }
   .spaces-doctor { min-width: 0; width: min(312px, calc(100% - 20px)); min-height: 44px; margin-top: 10px; font-size: 0.72rem; }
@@ -2187,4 +2212,220 @@ body.cardiology-spaces-active :where(a:hover) {
 
   .spaces-everything-search { grid-template-columns: 18px minmax(0, 1fr) 44px; }
   .spaces-everything-search > button { width: 44px; min-width: 44px; height: 44px; }
+}
+
+/* ======================================================================
+   HOTFIX — catálogo da Home
+
+   O overlay passa a usar o centro do mesmo canvas aprovado, sem alterar os
+   demais diálogos (personalização e deslocamento). As categorias ocupam o
+   espaço de forma proporcional e apenas o corpo do catálogo recebe rolagem.
+   ====================================================================== */
+@media (min-width: 901px) {
+  .spaces-overlay:has(> .spaces-catalog) {
+    place-items: center;
+    padding: 24px;
+  }
+
+  .spaces-catalog {
+    width: min(1440px, 100%);
+    height: min(900px, calc(100dvh - 48px));
+    border-radius: 22px;
+    box-shadow: 0 38px 120px rgba(0, 0, 0, 0.64);
+  }
+
+  .spaces-catalog > label input { font-size: 1rem; }
+
+  .spaces-catalog > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: max-content;
+    align-content: start;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .spaces-catalog > div > section {
+    min-width: 0;
+    align-self: start;
+    padding: 12px;
+    background: rgba(5, 20, 34, 0.72);
+    border: 1px solid rgba(91, 155, 198, 0.16);
+    border-radius: 14px;
+  }
+
+  .spaces-catalog > div > section > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spaces-catalog .spaces-action { min-height: 48px; font-size: 0.8125rem; line-height: 1.3; }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+  .spaces-catalog > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .spaces-overlay:has(> .spaces-catalog) {
+    place-items: stretch;
+    padding: 0;
+  }
+
+  .spaces-catalog {
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: none;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    overflow: hidden;
+    padding: 14px;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .spaces-catalog > header { min-height: 58px; align-items: center; }
+  .spaces-catalog > header > div { min-width: 0; gap: 12px; }
+  .spaces-catalog h2 { font-size: clamp(1.3rem, 6vw, 1.65rem); line-height: 1.15; }
+  .spaces-catalog > header button { width: 44px; height: 44px; }
+
+  .spaces-catalog > label {
+    min-height: 48px;
+    margin: 10px 0 12px;
+    padding-inline: 12px;
+  }
+
+  .spaces-catalog > label input { min-height: 46px; font-size: 1rem; }
+
+  .spaces-catalog > div {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 0 calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .spaces-catalog > div > section {
+    width: 100%;
+    min-width: 0;
+    min-height: max-content;
+    flex: 0 0 auto;
+    padding: 12px;
+    overflow: visible;
+    background: rgba(5, 20, 34, 0.72);
+    border: 1px solid rgba(91, 155, 198, 0.18);
+    border-radius: 14px;
+  }
+
+  .spaces-catalog > div > section h3 {
+    margin-bottom: 10px;
+    color: #a8b7c1;
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+
+  .spaces-catalog > div > section > div {
+    display: grid;
+    height: auto;
+    min-height: max-content;
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .spaces-catalog .spaces-action {
+    display: flex;
+    min-height: 48px;
+    justify-content: flex-start;
+    padding: 9px 11px;
+    overflow: visible;
+    font-size: 0.875rem;
+    line-height: 1.35;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .spaces-catalog :where(a, button, input):focus-visible {
+    outline: 2px solid var(--spaces-cyan);
+    outline-offset: 2px;
+  }
+}
+
+/* Pisos funcionais responsivos. Não altera portais, pranchas, proporções ou
+   cores; apenas impede textos acionáveis de cair abaixo de 12 px e preserva
+   áreas de toque seguras nas faixas compactas. */
+@media (max-width: 900px) {
+  .spaces-home {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .spaces-choice {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .spaces-home__topbar > nav button,
+  .spaces-door > span,
+  .spaces-title > small,
+  .spaces-layer > header span,
+  .spaces-layer > header strong,
+  .spaces-action,
+  .spaces-personalize,
+  .spaces-doctor,
+  .spaces-doctor small,
+  .spaces-day__item strong,
+  .spaces-day__item small,
+  .spaces-day__empty strong,
+  .spaces-day__empty small,
+  .spaces-day__travel strong,
+  .spaces-day__travel small,
+  .spaces-stellar-route__heading small,
+  .spaces-stellar-route__metrics > *,
+  .spaces-stellar-route__metrics > strong,
+  .spaces-dock a,
+  .spaces-dock button {
+    font-size: 0.75rem;
+  }
+
+  /* O quinto rótulo é o único que precisa de três linhas a 12 px. Um
+     ajuste tipográfico mínimo preserva as duas linhas e o texto completo. */
+  .spaces-dock :where(a, button):nth-child(5) span { letter-spacing: -0.035em; }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .spaces-home__topbar > nav button,
+  .spaces-door > span,
+  .spaces-title > small,
+  .spaces-layer > header span,
+  .spaces-layer > header strong,
+  .spaces-action,
+  .spaces-personalize,
+  .spaces-doctor,
+  .spaces-doctor small,
+  .spaces-day h2,
+  .spaces-day__item strong,
+  .spaces-day__item small,
+  .spaces-day__travel strong,
+  .spaces-day__travel small,
+  .spaces-stellar-route__heading small,
+  .spaces-stellar-route__metrics > *,
+  .spaces-stellar-route__metrics > strong,
+  .spaces-dock a,
+  .spaces-dock button {
+    font-size: 0.75rem;
+  }
+
+  .spaces-everything-search > button,
+  .spaces-context-rail__space,
+  .spaces-context-rail__all,
+  .spaces-context-rail__personalize {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .spaces-action,
+  .spaces-personalize,
+  .spaces-dock a,
+  .spaces-dock button {
+    min-height: 40px;
+  }
 }

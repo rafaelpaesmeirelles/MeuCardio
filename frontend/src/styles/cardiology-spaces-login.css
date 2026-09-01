@@ -843,6 +843,19 @@
 }
 
 @media (max-width: 900px) {
+  html:has(.login-gateway) {
+    background: #01060e;
+    scrollbar-color: rgba(34, 207, 223, 0.5) #01060e;
+    scrollbar-width: thin;
+  }
+
+  html:has(.login-gateway)::-webkit-scrollbar { width: 6px; }
+  html:has(.login-gateway)::-webkit-scrollbar-track { background: #01060e; }
+  html:has(.login-gateway)::-webkit-scrollbar-thumb {
+    background: rgba(34, 207, 223, 0.44);
+    border-radius: 99px;
+  }
+
   .login-gateway {
     display: block !important;
     width: 100%;
@@ -898,46 +911,69 @@
   }
 
   .login-gateway__core .prehome-brand__heart { width: 58%; }
-  .login-gateway__pulse { width: 105%; }
+  .login-gateway__pulse { width: 100%; }
 
   .login-gateway__spaces {
-    top: auto;
-    bottom: 5px;
-    display: grid;
-    height: 56px;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 4px;
+    inset: 0;
+    display: block;
+    height: auto;
+    pointer-events: none;
   }
 
-  .login-gateway__space,
-  .login-gateway__space--consultorio,
-  .login-gateway__space--hospital,
-  .login-gateway__space--ensino,
-  .login-gateway__space--pesquisa,
-  .login-gateway__space--gestao {
-    position: static;
+  .login-gateway__space {
+    position: absolute;
     display: grid;
-    width: auto;
+    width: clamp(76px, 22vw, 88px);
     min-width: 0;
-    min-height: 52px;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 1px;
-    padding: 4px 2px;
+    min-height: 42px;
+    grid-template-columns: 22px minmax(0, 1fr);
+    justify-items: stretch;
+    gap: 5px;
+    padding: 5px 6px;
     transform: none;
-    text-align: center;
-    border-radius: 7px;
+    text-align: left;
+    background: linear-gradient(145deg, rgba(7, 25, 43, 0.68), rgba(4, 16, 29, 0.46));
+    border-color: color-mix(in srgb, currentColor 32%, transparent);
+    border-radius: 9px;
+    box-shadow: 0 0 24px -17px currentColor, inset 0 1px rgba(255, 255, 255, 0.025);
   }
 
   .login-gateway__space > span {
-    width: 21px;
-    height: 21px;
-    border: 0;
-    background: transparent;
+    width: 22px;
+    height: 22px;
+    border-color: color-mix(in srgb, currentColor 52%, transparent);
+    border-radius: 7px;
+    background: color-mix(in srgb, currentColor 8%, transparent);
   }
 
-  .login-gateway__space > span svg { width: 15px; height: 15px; }
-  .login-gateway__space strong { font-size: 0.625rem; }
+  .login-gateway__space::after {
+    position: absolute;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 50%;
+    box-shadow: 0 0 10px currentColor;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .login-gateway__space--hospital,
+  .login-gateway__space--consultorio { left: 0; }
+  .login-gateway__space--pesquisa,
+  .login-gateway__space--gestao { right: 0; }
+  .login-gateway__space--hospital,
+  .login-gateway__space--pesquisa { top: 13%; }
+  .login-gateway__space--consultorio,
+  .login-gateway__space--gestao { top: 61%; }
+  .login-gateway__space--hospital::after,
+  .login-gateway__space--consultorio::after { right: -7px; }
+  .login-gateway__space--pesquisa::after,
+  .login-gateway__space--gestao::after { left: -7px; }
+  .login-gateway__space--ensino { display: none; }
+
+  .login-gateway__space > span svg { width: 14px; height: 14px; }
+  .login-gateway__space strong { font-size: 0.6875rem; line-height: 1.15; }
   .login-gateway__space small { display: none; }
 
   .login-gateway__console {
@@ -1081,4 +1117,31 @@
   .login-gateway__field > div,
   .login-gateway__enter { min-height: 40px; }
   #root .login-gateway .login-gateway__field input { min-height: 38px !important; }
+}
+
+/* No mobile, textos que orientam uma ação não podem depender da microtipografia
+   decorativa da prancha. Eyebrows e assinatura da marca continuam compactos. */
+@media (max-width: 900px) {
+  .login-gateway__security span,
+  .login-gateway__hero > span,
+  .login-gateway__enter,
+  .login-gateway__error,
+  .login-gateway__form-meta label,
+  .login-gateway__form-meta a,
+  .login-gateway__utilities strong,
+  .login-gateway__utilities small,
+  .login-gateway__footer nav a {
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 390px) {
+  .login-gateway__security span { font-size: 0; }
+  .login-gateway__security span::after,
+  .login-gateway__hero > span,
+  .login-gateway__form-meta label,
+  .login-gateway__form-meta a {
+    font-size: 0.75rem;
+  }
 }

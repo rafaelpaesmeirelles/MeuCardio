@@ -268,8 +268,23 @@ function Evento({ item, aoCancelar, aoAjustar }: {
 }) {
   const compromisso = item.calendar_kind === "commitment";
   const rotina = item.calendar_kind === "work_routine";
+  const agendamento = !compromisso && !rotina;
+  const compromissoEditavel = compromisso && !["cancelado", "realizado"].includes(item.status);
   return (
-    <article className={`agenda-evento agenda-evento--${item.status}${compromisso ? " agenda-evento--compromisso" : ""}${rotina ? " agenda-evento--rotina" : ""}`} style={{ "--evento-cor": item.color || item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}>
+    <article
+      className={`agenda-evento agenda-evento--${item.status}${compromisso ? " agenda-evento--compromisso" : ""}${rotina ? " agenda-evento--rotina" : ""}${agendamento ? " agenda-evento--agendamento" : ""}`}
+      style={{ "--evento-cor": item.color || item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}
+      role={compromissoEditavel ? "button" : undefined}
+      tabIndex={compromissoEditavel ? 0 : undefined}
+      aria-label={compromissoEditavel ? `Editar compromisso ${item.title || "sem título"}` : undefined}
+      onClick={compromissoEditavel ? () => aoAjustar(item) : undefined}
+      onKeyDown={compromissoEditavel ? (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          aoAjustar(item);
+        }
+      } : undefined}
+    >
       <div className="agenda-evento__hora"><strong>{horario(item.starts_at)}</strong><span>{item.duration_minutes} min</span></div>
       <div className="agenda-evento__corpo">
         <div className="agenda-evento__linha">
@@ -284,8 +299,8 @@ function Evento({ item, aoCancelar, aoAjustar }: {
           {compromisso && item.recurrence !== "none" && <span>Recorrente{item.is_exception ? " · ajustado" : ""}</span>}
         </div>
       </div>
-      {!rotina && !['cancelado', 'realizado'].includes(item.status) && (
-        <button className="agenda-evento__mais" onClick={() => compromisso ? aoAjustar(item) : aoCancelar(item)} aria-label={compromisso ? `Alterar ${item.title}` : `Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
+      {agendamento && !['cancelado', 'realizado'].includes(item.status) && (
+        <button className="agenda-evento__mais" onClick={() => aoCancelar(item)} aria-label={`Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
       )}
     </article>
   );
@@ -948,7 +963,12 @@ export default function Agenda() {
       </section>
 
       <div className="agenda-layout">
-        <main className="agenda-calendario">
+        <main
+          className="agenda-calendario"
+          role="region"
+          tabIndex={0}
+          aria-label={`Calendário da agenda em visualização de ${visao}`}
+        >
           {agendamentos === null ? <p className="agenda-carregando">Organizando sua agenda…</p> : visao === "lista" ? (
             <div className="agenda-lista">
               {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} /></div>)}

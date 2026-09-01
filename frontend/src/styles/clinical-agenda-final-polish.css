@@ -57,4 +57,57 @@ body.corvia-route--agenda .clinical-os .agenda-filtro-contas__fechar {
     position:fixed; top:auto; right:.75rem; bottom:calc(78px + env(safe-area-inset-bottom)); left:.75rem;
     width:auto; max-width:none; max-height:55dvh;
   }
+
+  /* Alvos de toque sem recompor a Agenda aprovada. */
+  body.corvia-route--agenda .clinical-os .agenda-cabecalho__acoes .botao:not(:first-child),
+  body.corvia-route--agenda .clinical-os .agenda-navegacao > button,
+  body.corvia-route--agenda .clinical-os .agenda-visoes button {
+    min-height:44px!important;
+  }
+  body.corvia-route--agenda .clinical-os .agenda-visoes button {
+    min-width:44px!important;
+  }
+  body.corvia-route--agenda .clinical-os .agenda-navegacao > button {
+    min-width:44px!important;
+  }
+  body.corvia-route--agenda .clinical-os .dica-ctx__fechar {
+    width:44px!important;
+    min-width:44px!important;
+    height:44px!important;
+    min-height:44px!important;
+  }
+
+  /* O piso tipográfico não deve criar uma barra horizontal dentro do status. */
+  body.corvia-route--agenda .clinical-os .agenda-status {
+    flex-wrap:wrap!important;
+    row-gap:6px;
+    overflow:visible!important;
+  }
+  body.corvia-route--agenda .clinical-os .agenda-status > button {
+    min-height:44px!important;
+    margin-left:auto;
+  }
+
+  /* Piso de leitura apenas para informações úteis que estavam abaixo de 12px. */
+  body.corvia-route--agenda .clinical-os :is(
+    .agenda-cabecalho .eyebrow,
+    .agenda-cabecalho__acoes .botao,
+    .agenda-status,
+    .agenda-navegacao h2,
+    .agenda-navegacao button,
+    .agenda-visoes button,
+    .agenda-dia > header span,
+    .agenda-dia > header i,
+    .agenda-dia__livre,
+    .agenda-evento__hora strong,
+    .agenda-evento__hora span,
+    .agenda-evento__meta,
+    .agenda-evento__linha h3,
+    .agenda-evento__corpo p,
+    .agenda-pill,
+    .dica-ctx__titulo,
+    .dica-ctx__corpo,
+    .agenda-filtro-contas__menu .agenda-filtro-contas__opcao,
+    .agenda-filtro-contas__fechar
+  ) { font-size:.75rem!important; }
 }
