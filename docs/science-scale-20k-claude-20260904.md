@@ -2492,3 +2492,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 46 | 254 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **709** | **4.191** |
+
+## Lote 111 — concluído (commit 342178d9)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para DAC/IC/Valvopatias/HAS (temas do Lote 109).
+
+- **Documentos**:
+  - Doença coronariana: "Apneia Obstrutiva do Sono e Doença Coronariana: por que os Grandes Ensaios com CPAP Foram 'Negativos'" — SAVE/RICCADSA/ISAACC (contexto) + reanálise por fenótipo Eur Heart J 2026 (PMID 40794640) + dado real-world 2026 (PMID 41076065).
+  - Insuficiência cardíaca: "Reabilitação Cardíaca Estruturada na ICFEr: Adesão, Telerreabilitação e Otimização do Tratamento" — 6 fontes 2025-2026 sobre adesão, mHealth e registro PROMETEO.
+  - Valvopatias: "Regurgitação Aórtica Aguda: Reconhecimento e Manejo de Emergência (Endocardite e Dissecção)" — guideline prático BSE 2025 (PMID 39871328) e revisões recentes.
+  - Hipertensão: "Pressão Arterial Central (Aórtica) versus Periférica: Implicação Prognóstica" — estudo primário 2026 de consórcio internacional (PMID 42396797) e editorial companheiro (PMID 42616648).
+- **Caso clínico**: variabilidade pressórica visita a visita com média controlada — o que investigar (derivado do documento do Lote 109).
+- **Checklist**: retinopatia diabética na estratificação de risco cardiovascular (derivado do documento do Lote 110).
+- **Material-paciente**: exame genético CYP2C19 para ajustar o remédio do sangue após o stent (derivado do documento do Lote 105).
+- **Trilha**: valvopatias — doença multivalvar e sequenciamento da intervenção (9 etapas).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 27 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10904`.
+
+### Status consolidado (após Lote 111)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 256 | 2.144 |
+| Casos clínicos | 900 | 108 | 792 |
+| Checklists | 600 | 79 | 521 |
+| Materiais-paciente | 500 | 64 | 436 |
+| Trilhas | 300 | 47 | 253 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **717** | **4.183** |
