@@ -5,6 +5,13 @@ import test from "node:test";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const shell = read("src/components/Shell.tsx");
 const frame = read("src/components/CardiologySpacesAppFrame.tsx");
+const chat = read("src/components/ChatFlutuante.tsx");
+const clinicalUpdates = read("src/components/ClinicalUpdates.tsx");
+const agenda = read("src/pages/Agenda.tsx");
+const checklist = read("src/pages/ChecklistModelo.tsx");
+const evidence = read("src/pages/Evidencia.tsx");
+const disease = read("src/pages/GuiaDoenca.tsx");
+const triage = read("src/pages/TriagemSintomas.tsx");
 const emergency = read("src/pages/Emergencia.tsx");
 const styles = read("src/styles/cardiology-spaces-app-frame.css");
 const rc2 = read("../.github/workflows/rc2-acceptance.yml");
@@ -64,4 +71,30 @@ test("emergency protocols open the first clinical step with stable accordion sem
   assert.match(emergency, /aria-controls=\{`emerg-step-panel-\$\{i\}`\}/);
   assert.match(emergency, /hidden=\{s\.titulo \? secaoAberta !== i : undefined\}/);
   assert.doesNotMatch(emergency, /\{\(secaoAberta === i \|\| !s\.titulo\) && <div/);
+});
+
+test("emergency stacks above chat and unread state refreshes when the app resumes", () => {
+  assert.match(styles, /\.cv-app \.corvia-chat-launch \{ right: 18px; bottom: 78px; \}/);
+  assert.match(styles, /\.cv-app \.cv-emergency-fab \{ right: 44px; bottom: 132px; \}/);
+  assert.match(styles, /\.cv-app \.corvia-chat-launch \{ right: 14px; bottom: 82px; \}/);
+  assert.match(styles, /\.cv-app \.cv-emergency-fab \{ right: 35px; bottom: 136px; \}/);
+  assert.match(chat, /api\.get<\{ total: number \}>\("\/chat\/nao-lidas"\)/);
+  assert.match(chat, /window\.addEventListener\("focus", aoRetomar\)/);
+  assert.match(chat, /document\.addEventListener\("visibilitychange", aoMudarVisibilidade\)/);
+  assert.match(chat, /className="corvia-chat-launch__badge" aria-live="polite"/);
+});
+
+test("agenda deletion uses the numeric series id and preserves cancellation history", () => {
+  assert.match(agenda, /api\.delete\(`\/agenda\/commitment-series\/\$\{id\}`\)/);
+  assert.match(agenda, /removerSerie\(ajustando\.series_id/);
+  assert.doesNotMatch(agenda, /api\.delete\(`\/agenda\/commitment-series\/\$\{ajustando\.id\}`\)/);
+  assert.match(styles, /\.cv-app \.cv-workspace:has\(\.agenda-modal\) \{ z-index: 1301; \}/);
+});
+
+test("clinical updates remain separate from canonical text across clinical detail pages", () => {
+  assert.match(clinicalUpdates, /Atualizações científicas vigentes/);
+  assert.match(clinicalUpdates, /rel="noopener noreferrer"/);
+  for (const page of [disease, evidence, checklist, triage]) {
+    assert.match(page, /<ClinicalUpdates updates=/);
+  }
 });

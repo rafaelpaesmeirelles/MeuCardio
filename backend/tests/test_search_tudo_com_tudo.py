@@ -16,6 +16,7 @@ from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.clinical_text import clinical_text_without_internal_overrides
 
 
 TABELAS_DA_BUSCA = (
@@ -538,6 +539,60 @@ def test_doenca_exata_ou_alias_inequivoco_abre_pela_definicao(
         assert primary["slug"] == disease.slug
         assert primary["name"] == disease.name
         assert primary["summary"].startswith("Taquiarritmia supraventricular")
+
+
+def test_definicao_remove_blocos_internos_legados_do_intelligence(
+    client, db, criar_usuario,
+):
+    definicao = "Fibrilação atrial é uma arritmia supraventricular com ativação atrial desorganizada."
+    blocos = """<!-- corvia-intelligence:diretriz-a:plain:start -->
+**Atualização CorVIA Intelligence:** conteúdo terapêutico que não é definição.
+<!-- corvia-intelligence:diretriz-a:plain:end -->
+
+<!-- corvia-intelligence:diretriz-b:plain:start -->
+**Atualização CorVIA Intelligence:** outra recomendação clínica.
+<!-- corvia-intelligence:diretriz-b:plain:end -->"""
+    db.add(SpecialtyDisease(
+        slug="fibrilacao-atrial-legado-intelligence",
+        name="Fibrilação atrial",
+        aliases=["FA"],
+        area="arritmias",
+        category="taquiarritmia supraventricular",
+        summary=f"{blocos}\n\n{definicao}",
+        review_status="revisado",
+        published=True,
+    ))
+    db.commit()
+
+    response = client.get(
+        "/api/search", params={"q": "fibrilacao atrial"},
+        headers=_headers(criar_usuario),
+    )
+
+    assert response.status_code == 200
+    summary = response.json()["primary_disease"]["summary"]
+    assert summary == definicao
+    assert "corvia-intelligence" not in summary
+    assert "<!--" not in summary
+    assert "**" not in summary
+    disease_result = next(
+        item for item in response.json()["results"]
+        if item["frente"] == "doenca" and item["slug"] == "fibrilacao-atrial-legado-intelligence"
+    )
+    assert "corvia-intelligence" not in disease_result["snippet"]
+    assert "Atualização CorVIA Intelligence" not in disease_result["snippet"]
+    assert "Arritmia supraventricular" in disease_result["snippet"]
+
+
+def test_higiene_clinica_preserva_nulo_e_texto_de_envelope_corrompido():
+    malformed = """<!-- corvia-intelligence:g1:plain:start -->
+Definição clínica que não pode ser apagada.
+<!-- corvia-intelligence:g2:plain:end -->"""
+
+    assert clinical_text_without_internal_overrides(None) is None
+    assert clinical_text_without_internal_overrides(malformed) == (
+        "Definição clínica que não pode ser apagada."
+    )
 
 
 def test_doenca_principal_respeita_filtro_de_outra_frente(

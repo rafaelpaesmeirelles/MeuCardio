@@ -1195,6 +1195,28 @@ body.cv-overlay-open :where(.corvia-chat-launch, .cv-emergency-fab) {
   .cv-drawer { transition: none; }
 }
 
+/* Modais vivem dentro do workspace. Ele precisa subir temporariamente acima
+   da topbar para que o título e o fechar de Configurar agenda não fiquem sob a
+   busca Tudo com Tudo. O seletor não altera a geometria fora do modal. */
+.cv-app .cv-workspace:has(.agenda-modal) { z-index: 1301; }
+
+/* Atalhos clínicos em coluna: Emergência acima do Chat, com o mesmo eixo e sem
+   interceptar o dock inferior. */
+@media (min-width: 901px) {
+  .cv-app .corvia-chat-launch { right: 18px; bottom: 78px; }
+  .cv-app .cv-emergency-fab { right: 44px; bottom: 132px; }
+}
+
+@media (max-width: 900px) {
+  .cv-app .corvia-chat-launch { right: 14px; bottom: 82px; }
+  .cv-app .cv-emergency-fab { right: 35px; bottom: 136px; }
+}
+
+@media (max-width: 900px) and (max-height: 619px) {
+  .cv-app .corvia-chat-launch { bottom: 68px; }
+  .cv-app .cv-emergency-fab { bottom: 122px; }
+}
+
 /* Legibilidade e alcance tátil do shell em telas móveis. A geometria aprovada
    permanece a mesma: somente o conteúdo útil deixa de ser ocultado e os
    controles recebem o piso de 44 px recomendado para toque. */

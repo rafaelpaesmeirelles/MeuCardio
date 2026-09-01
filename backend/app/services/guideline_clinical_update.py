@@ -582,35 +582,50 @@ def _apply_override(db: Session, guideline: Guideline, impact: dict, *, record: 
             db.add(DocumentRevision(document_id=target.id, version=target.version,
                                     body_md=target.body_md, author_id=None))
             target.body_md = new_body
-            target.summary = _plain_override(guideline, impact) + (f"\n\n{_strip_plain_override(target.summary, guideline.slug)}" if target.summary else "")
             target.source_refs = list(dict.fromkeys([*(target.source_refs or []), source_ref]))
             target.version += 1
             changed = True
 
     elif item_type == "evidence":
         before = {"summary": target.summary, "review_note": target.review_note, "reference": target.reference}
-        base = _strip_plain_override(target.summary, guideline.slug)
-        target.summary = _plain_override(guideline, impact) + (f"\n\n{base}" if base else "")
-        target.review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
-        if str(impact.get("source_url")) not in (target.reference or ""):
-            target.reference = f"{target.reference}\n{source_ref}".strip()
-        changed = True
+        review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
+        reference = target.reference or ""
+        if str(impact.get("source_url")) not in reference:
+            reference = f"{reference}\n{source_ref}".strip()
+        metadata_changed = (
+            review_note != target.review_note
+            or reference != (target.reference or "")
+        )
+        target.review_note = review_note
+        target.reference = reference
+        changed = metadata_changed or record
 
     elif item_type == "disease":
         before = {"summary": target.summary, "treatment_summary": target.treatment_summary,
                   "source_refs": list(target.source_refs or []), "source_urls": list(target.source_urls or []),
                   "version": target.version}
-        field = "treatment_summary" if str(impact.get("target_section") or "").casefold() in {
-            "tratamento", "treatment", "therapy", "terapia"
-        } else "summary"
-        current = getattr(target, field) or ""
-        base = _strip_plain_override(current, guideline.slug)
-        setattr(target, field, _plain_override(guideline, impact) + (f"\n\n{base}" if base else ""))
-        target.source_refs = list(dict.fromkeys([*(target.source_refs or []), source_ref]))
-        target.source_urls = list(dict.fromkeys([*(target.source_urls or []), str(impact["source_url"])]))
-        target.review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
-        target.version += 1
-        changed = True
+        # `summary` e `treatment_summary` são campos clínicos canônicos exibidos
+        # diretamente ao médico. Metadados de transporte do Intelligence nunca
+        # podem ser concatenados neles: além de expor comentários internos, uma
+        # atualização de tratamento acabava promovida a "Definição da doença".
+        # O override permanece auditável no GuidelineLink criado abaixo; aqui
+        # atualizamos somente metadados estruturados e referências.
+        source_refs = list(dict.fromkeys([*(target.source_refs or []), source_ref]))
+        source_urls = list(dict.fromkeys([*(target.source_urls or []), str(impact["source_url"])]))
+        review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
+        metadata_changed = (
+            source_refs != list(target.source_refs or [])
+            or source_urls != list(target.source_urls or [])
+            or review_note != target.review_note
+        )
+        target.source_refs = source_refs
+        target.source_urls = source_urls
+        target.review_note = review_note
+        if metadata_changed:
+            target.version += 1
+        # Mesmo quando as referências já existiam, a primeira aplicação ainda
+        # precisa chegar ao bloco de persistência do GuidelineLink.
+        changed = metadata_changed or record
 
     elif item_type == "drug":
         before = {"notes": target.notes, "references": list(target.references or [])}
@@ -631,25 +646,32 @@ def _apply_override(db: Session, guideline: Guideline, impact: dict, *, record: 
 
     elif item_type == "checklist":
         before = {"resumo": target.resumo, "revisao": target.revisao, "source_refs": target.source_refs}
-        base = _strip_plain_override(target.resumo, guideline.slug)
-        target.resumo = _plain_override(guideline, impact) + (f"\n\n{base}" if base else "")
         refs = list(target.source_refs or [])
         if source_ref not in refs:
             refs.append(source_ref)
+        revisao = f"CorVIA Intelligence: {impact['change_summary_pt']}"
+        metadata_changed = refs != list(target.source_refs or []) or revisao != target.revisao
         target.source_refs = refs
-        target.revisao = f"CorVIA Intelligence: {impact['change_summary_pt']}"
-        changed = True
+        target.revisao = revisao
+        changed = metadata_changed or record
 
     elif item_type == "triage":
         before = {"summary": target.summary, "source_refs": list(target.source_refs or []),
                   "source_urls": list(target.source_urls or []), "version": target.version}
-        base = _strip_plain_override(target.summary, guideline.slug)
-        target.summary = _plain_override(guideline, impact) + (f"\n\n{base}" if base else "")
-        target.source_refs = list(dict.fromkeys([*(target.source_refs or []), source_ref]))
-        target.source_urls = list(dict.fromkeys([*(target.source_urls or []), str(impact["source_url"])]))
-        target.review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
-        target.version += 1
-        changed = True
+        source_refs = list(dict.fromkeys([*(target.source_refs or []), source_ref]))
+        source_urls = list(dict.fromkeys([*(target.source_urls or []), str(impact["source_url"])]))
+        review_note = f"CorVIA Intelligence: {impact['change_summary_pt']}"
+        metadata_changed = (
+            source_refs != list(target.source_refs or [])
+            or source_urls != list(target.source_urls or [])
+            or review_note != target.review_note
+        )
+        target.source_refs = source_refs
+        target.source_urls = source_urls
+        target.review_note = review_note
+        if metadata_changed:
+            target.version += 1
+        changed = metadata_changed or record
 
     if not changed:
         return False
@@ -860,11 +882,20 @@ def list_impacts(db: Session, guideline: Guideline) -> list[dict]:
 
 def reapply_confirmed_updates(db: Session) -> dict:
     """Restaura overrides depois que o deploy reconciliou arquivos -> PostgreSQL."""
-    links = db.query(GuidelineLink).filter(
-        GuidelineLink.origem == ORIGIN,
-        GuidelineLink.confirmado.is_(True),
-        GuidelineLink.item_type.in_(tuple(UPDATEABLE_TYPES)),
-    ).order_by(GuidelineLink.guideline_id, GuidelineLink.id).all()
+    links = (
+        db.query(GuidelineLink)
+        .join(Guideline, Guideline.id == GuidelineLink.guideline_id)
+        .filter(
+            GuidelineLink.origem == ORIGIN,
+            GuidelineLink.confirmado.is_(True),
+            GuidelineLink.item_type.in_(tuple(UPDATEABLE_TYPES)),
+            # Uma diretriz substituída permanece no histórico, mas nunca deve
+            # restaurar metadados/recomendações como se ainda fosse vigente.
+            Guideline.superseded_by_id.is_(None),
+        )
+        .order_by(GuidelineLink.guideline_id, GuidelineLink.id)
+        .all()
+    )
     reapplied = 0
     missing = 0
     for link in links:

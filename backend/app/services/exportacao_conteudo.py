@@ -34,6 +34,7 @@ from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services import calculators as calc
+from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.cmed_precos import preco_pmc
 from app.services.pdf.layout import Documento
 from app.services.pdf.marca import FIO, LOGO, NAVY, NEUTRO, TEAL, logo_disponivel
@@ -228,7 +229,7 @@ def _resolver_documento(db: Session, slug: str, tipo: str) -> ConteudoExportavel
     if doc is None:
         return None
     secoes: list[SecaoExportacao] = []
-    _append(secoes, _secao("Resumo", doc.summary))
+    _append(secoes, _secao("Resumo", clinical_text_without_internal_overrides(doc.summary)))
     secoes.extend(_secoes_markdown(doc.body_md))
     _append(secoes, _secao("Nível de evidência", doc.evidence_level))
     _append(secoes, _secao("Referências", itens=list(doc.source_refs or [])))
@@ -243,8 +244,9 @@ def _resolver_evidencia(db: Session, slug: str) -> ConteudoExportavel | None:
         return None
     secoes: list[SecaoExportacao] = []
     _append(secoes, _secao("Recomendação", e.statement, destaque=f"Classe {e.recommendation_class} · nível {e.evidence_level}"))
-    if e.summary and e.summary.strip() != e.statement.strip():
-        _append(secoes, _secao("Resumo clínico", e.summary))
+    evidence_summary = clinical_text_without_internal_overrides(e.summary)
+    if evidence_summary and evidence_summary.strip() != e.statement.strip():
+        _append(secoes, _secao("Resumo clínico", evidence_summary))
     _append(secoes, _secao("Diretriz de origem", f"{e.society} {e.year} · {e.guideline_title}"))
     refs = [x for x in [e.reference, f"DOI: {e.doi}" if e.doi else None, e.source_url] if x]
     _append(secoes, _secao("Referências e fonte", itens=refs))
@@ -328,7 +330,7 @@ def _resolver_doenca(db: Session, slug: str) -> ConteudoExportavel | None:
     if d is None:
         return None
     secoes: list[SecaoExportacao] = []
-    _append(secoes, _secao("Resumo", d.summary))
+    _append(secoes, _secao("Resumo", clinical_text_without_internal_overrides(d.summary)))
     _append(secoes, _secao("Epidemiologia", d.epidemiology))
     _append(secoes, _secao("Apresentação clínica", itens=list(d.presentation or [])))
     _append(secoes, _secao("Investigação e diagnóstico", d.diagnostic_approach))
@@ -337,7 +339,7 @@ def _resolver_doenca(db: Session, slug: str) -> ConteudoExportavel | None:
     _append(secoes, _secao("Sinais de alerta", itens=list(d.red_flags or [])))
     _append(secoes, _secao("Fluxo ambulatorial", itens=list(d.ambulatory_flow or [])))
     _append(secoes, _secao("Fluxo de emergência", itens=list(d.emergency_flow or [])))
-    _append(secoes, _secao("Tratamento", d.treatment_summary))
+    _append(secoes, _secao("Tratamento", clinical_text_without_internal_overrides(d.treatment_summary)))
     _append(secoes, _secao("Monitorização", itens=list(d.monitoring or [])))
     _append(secoes, _secao("Populações especiais", itens=list(d.special_populations or [])))
     _append(secoes, _secao("Fontes", itens=list(d.source_refs or []) + list(d.source_urls or [])))
@@ -401,7 +403,7 @@ def _resolver_checklist(db: Session, slug: str) -> ConteudoExportavel | None:
         else:
             itens.append(_texto(item))
     secoes: list[SecaoExportacao] = []
-    _append(secoes, _secao("Resumo", c.resumo))
+    _append(secoes, _secao("Resumo", clinical_text_without_internal_overrides(c.resumo)))
     _append(secoes, _secao("Itens", itens=itens))
     _append(secoes, _secao("Fontes", itens=list(c.source_refs or [])))
     return ConteudoExportavel("checklist", c.slug, c.condicao, c.theme, c.scope_type, secoes)
@@ -430,7 +432,7 @@ def _resolver_emergencia(db: Session, slug: str) -> ConteudoExportavel | None:
     secoes: list[SecaoExportacao] = []
     _append(secoes, _secao("Gatilho de reconhecimento", p.gatilho, destaque="PROTOCOLO DE EMERGÊNCIA"))
     if doc:
-        _append(secoes, _secao("Resumo", doc.summary))
+        _append(secoes, _secao("Resumo", clinical_text_without_internal_overrides(doc.summary)))
         secoes.extend(_secoes_markdown(doc.body_md))
         _append(secoes, _secao("Referências", itens=list(doc.source_refs or [])))
     if p.relacionados:

@@ -2354,6 +2354,9 @@
 .agenda-modal__destaque { margin: 0; padding: .7rem .8rem; color: var(--acento-escuro); background: color-mix(in srgb, var(--acento) 7%, white); border: 1px solid color-mix(in srgb, var(--acento) 16%, var(--borda)); border-radius: 10px; font-size: .65rem; line-height: 1.45; }
 .agenda-modal__painel > footer.agenda-modal__acoes-distribuidas { align-items: center; justify-content: space-between; }
 .agenda-modal__acoes-distribuidas > div { display: flex; gap: .55rem; }
+.agenda-modal__acoes-perigo { flex-wrap: wrap; }
+.agenda-botao--contorno { color: var(--perigo); background: transparent; border-color: color-mix(in srgb,var(--perigo) 48%,var(--borda)); }
+.agenda-botao--contorno:hover { color: white; background: var(--perigo); border-color: var(--perigo); }
 .agenda-series-lista { display: grid; gap: .35rem; }
 .agenda-integracao-form { grid-template-columns: minmax(160px, .8fr) minmax(220px, 1.4fr); }
 .agenda-integracao-form label { display: flex; min-width: 0; flex-direction: column; gap: .25rem; color: var(--texto-secundario); font-size: .64rem; font-weight: 750; }
@@ -2370,6 +2373,7 @@
   .agenda-modal__painel > footer.agenda-modal__acoes-distribuidas { align-items: stretch; flex-direction: column-reverse; }
   .agenda-modal__acoes-distribuidas > div { display: grid; grid-template-columns: 1fr 1fr; }
   .agenda-modal__acoes-distribuidas .agenda-botao--perigo { width: 100%; }
+  .agenda-modal__acoes-perigo > :only-child { grid-column: 1 / -1; }
 }
 
 /* Proteção de largura para celulares dobráveis, cujo viewport pode ficar

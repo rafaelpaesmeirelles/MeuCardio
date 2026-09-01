@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { api } from "../lib/api";
 
 type Option = { value: string; label: string };
@@ -37,6 +38,7 @@ type TriageDetail = TriageSummary & {
   source_refs: string[];
   source_urls: string[];
   review_status: string;
+  clinical_updates?: ClinicalUpdate[];
 };
 
 type Assessment = {
@@ -204,6 +206,8 @@ export default function TriagemSintomas() {
             <p>{detail.summary}</p>
             {context === "emergencia" && <p><strong>Modo emergência:</strong> na presença de instabilidade, a prioridade é suporte inicial e protocolo local.</p>}
           </section>
+
+          <ClinicalUpdates updates={detail.clinical_updates} />
 
           {sections.map(([section, questions]) => (
             <section className="cartao" style={{ marginTop: "0.8rem" }} key={section}>

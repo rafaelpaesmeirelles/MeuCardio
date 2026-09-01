@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.services import calculators as calc
+from app.services.clinical_text import clinical_text_without_internal_overrides
 
 router = APIRouter(prefix="/api/search", tags=["busca"])
 
@@ -190,6 +191,22 @@ CATALOG_SQL = """
   FROM symptom_triage_guides WHERE published = true
 """
 
+# Remova envelopes internos antes de o PostgreSQL produzir fragmentos. Se a
+# limpeza acontecesse depois de `ts_headline`, o fragmento poderia conter só o
+# marcador inicial ou receber `<mark>` dentro do próprio token, tornando o
+# bloco impossível de reconhecer com segurança. A backreference exige que os
+# marcadores inicial e final pertençam à mesma diretriz.
+_INTERNAL_OVERRIDE_SQL_PATTERN = (
+    r"<!--[[:space:]]*corvia-intelligence:([^>:[:space:]]+):plain:start"
+    r"[[:space:]]*-->.*?<!--[[:space:]]*corvia-intelligence:\1:plain:end"
+    r"[[:space:]]*-->[[:space:]]*"
+)
+_INTERNAL_MARKER_SQL_PATTERN = (
+    r"<!--[[:space:]]*corvia-intelligence:[^>]*:plain:(start|end)"
+    r"[[:space:]]*-->[[:space:]]*"
+)
+
+
 def _search_sql(match_predicate: str):
     return text(f"""
 WITH cmed_atual AS (
@@ -215,7 +232,20 @@ WITH cmed_atual AS (
     AND ({match_predicate})
 )
 SELECT frente, slug, title, kind, theme, source_tier, ano,
-       ts_headline('portuguese', corpo, plainto_tsquery('portuguese', CAST(:q AS text)),
+       ts_headline(
+                   'portuguese',
+                   regexp_replace(
+                     regexp_replace(
+                       corpo,
+                       CAST(:internal_override_pattern AS text),
+                       '',
+                       'gis'
+                     ),
+                     CAST(:internal_marker_pattern AS text),
+                     '',
+                     'gi'
+                   ),
+                   plainto_tsquery('portuguese', CAST(:q AS text)),
                    'StartSel=<mark>,StopSel=</mark>,MaxFragments=2,FragmentDelimiter= … ') AS snippet,
        rank
 FROM filtrados
@@ -389,15 +419,25 @@ def search(
         "q": q, "q_like": _literal_like(q), "frente": frente,
         "limit": database_limit, "offset": database_offset,
     }
-    raw_rows = db.execute(SQL, values).mappings().all() if database_limit else []
+    search_values = {
+        **values,
+        # Binds intencionais: interpolar regex POSIX em `text()` faria o parser
+        # do SQLAlchemy interpretar `:space`/`:plain` como parâmetros espúrios.
+        "internal_override_pattern": _INTERNAL_OVERRIDE_SQL_PATTERN,
+        "internal_marker_pattern": _INTERNAL_MARKER_SQL_PATTERN,
+    }
+    raw_rows = db.execute(SQL, search_values).mappings().all() if database_limit else []
     count_rows = db.execute(COUNT_SQL, values).mappings().all()
     # A busca literal é um fallback, nunca um segundo braço OR da consulta
     # indexada. Isso evita duas varreduras integrais em toda busca normal.
     if not count_rows and _normalizar(q):
-        raw_rows = db.execute(LITERAL_SQL, values).mappings().all() if database_limit else []
+        raw_rows = db.execute(LITERAL_SQL, search_values).mappings().all() if database_limit else []
         count_rows = db.execute(LITERAL_COUNT_SQL, values).mappings().all()
 
     rows = calculator_rows + [dict(row) for row in raw_rows]
+    for row in rows:
+        if isinstance(row.get("snippet"), str):
+            row["snippet"] = clinical_text_without_internal_overrides(row["snippet"])
     por_frente = {
         str(row["frente"]): int(row["total"])
         for row in count_rows
@@ -408,6 +448,10 @@ def search(
         if frente in (None, "doenca") else []
     )
     primary_disease = dict(disease_rows[0]) if len(disease_rows) == 1 else None
+    if primary_disease is not None:
+        primary_disease["summary"] = clinical_text_without_internal_overrides(
+            primary_disease.get("summary")
+        )
     if calculadoras:
         por_frente["calculadora"] = len(calculadoras)
     total = total_banco + len(calculadoras)

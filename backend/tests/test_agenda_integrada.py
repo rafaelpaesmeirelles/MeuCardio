@@ -1,6 +1,11 @@
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta, timezone
 
-from app.models.agenda import AppointmentCommunication, CalendarIntegration
+from app.models.agenda import (
+    AppointmentCommunication,
+    CalendarCommitmentSeries,
+    CalendarIntegration,
+)
+from app.models.audit import AuditLog
 from app.models.subscription import Subscription
 
 
@@ -331,6 +336,130 @@ def test_recurring_commitment_allows_single_occurrence_override(client, criar_us
     assert refreshed[1]["title"] == "Reunião do corpo clínico"
     assert refreshed[1]["duration_minutes"] == 60
     assert refreshed[1]["is_exception"] is False
+
+
+def test_commitment_delete_uses_numeric_series_id_and_is_owner_scoped(
+    client, criar_usuario, db,
+):
+    owner, owner_token = criar_usuario(email="agenda.excluir.owner@teste.local")
+    other, other_token = criar_usuario(email="agenda.excluir.other@teste.local")
+    _subscribe(db, owner.id)
+    _subscribe(db, other.id)
+    starts_on = (datetime.now(timezone.utc) + timedelta(days=2)).date()
+
+    def create(token: str) -> dict:
+        response = client.post(
+            "/api/agenda/commitment-series",
+            headers=_headers(token),
+            json={
+                "title": "[SMOKE-TEST] compromisso reservado",
+                "category": "compromisso",
+                "timezone": "UTC",
+                "starts_on": starts_on.isoformat(),
+                "start_time": "08:00:00",
+                "duration_minutes": 30,
+                "recurrence": "none",
+                "blocks_scheduling": True,
+            },
+        )
+        assert response.status_code == 201, response.text
+        return response.json()
+
+    owner_series = create(owner_token)
+    other_series = create(other_token)
+
+    deleted = client.delete(
+        f"/api/agenda/commitment-series/{owner_series['id']}",
+        headers=_headers(owner_token),
+    )
+    assert deleted.status_code == 204, deleted.text
+    db.expire_all()
+    assert db.get(CalendarCommitmentSeries, owner_series["id"]).active is False
+    audit = db.query(AuditLog).filter(
+        AuditLog.user_id == owner.id,
+        AuditLog.action == "calendar_commitment_series_disable",
+        AuditLog.entity_id == str(owner_series["id"]),
+    ).one()
+    assert audit.entity == "calendar_commitment_series"
+    repeated = client.delete(
+        f"/api/agenda/commitment-series/{owner_series['id']}",
+        headers=_headers(owner_token),
+    )
+    assert repeated.status_code == 204
+    assert db.query(AuditLog).filter(
+        AuditLog.user_id == owner.id,
+        AuditLog.action == "calendar_commitment_series_disable",
+        AuditLog.entity_id == str(owner_series["id"]),
+    ).count() == 1
+
+    occurrences = client.get(
+        "/api/agenda/commitments",
+        params={
+            "start": starts_on.isoformat(),
+            "end": (starts_on + timedelta(days=1)).isoformat(),
+            "include_cancelled": False,
+        },
+        headers=_headers(owner_token),
+    )
+    assert occurrences.status_code == 200, occurrences.text
+    assert occurrences.json() == []
+
+    forbidden = client.delete(
+        f"/api/agenda/commitment-series/{other_series['id']}",
+        headers=_headers(owner_token),
+    )
+    assert forbidden.status_code == 404
+    db.expire_all()
+    assert db.get(CalendarCommitmentSeries, other_series["id"]).active is True
+
+
+def test_reserved_smoke_cleanup_is_exact_atomic_idempotent_and_audited(
+    criar_usuario, db,
+):
+    from migrations.versions.f93s20260901_disable_reserved_smoke_agenda import (
+        AUDIT_ACTION,
+        _disable_reserved_smoke_series,
+    )
+
+    owner, _ = criar_usuario(email="agenda.cleanup.smoke@teste.local")
+    starts_on = (datetime.now(timezone.utc) + timedelta(days=1)).date()
+
+    def series(title: str, *, active: bool = True) -> CalendarCommitmentSeries:
+        return CalendarCommitmentSeries(
+            owner_id=owner.id,
+            title=title,
+            starts_on=starts_on,
+            start_time=time(8, 0),
+            recurrence="none",
+            active=active,
+        )
+
+    exact = series("[SMOKE-TEST] compromisso reservado")
+    whitespace = series("\t[SMOKE-TEST] compromisso com recuo")
+    lowercase = series("[smoke-test] compromisso real preservado")
+    embedded = series("Reunião sobre [SMOKE-TEST] preservada")
+    already_inactive = series("[SMOKE-TEST] já inativo", active=False)
+    db.add_all([exact, whitespace, lowercase, embedded, already_inactive])
+    db.commit()
+
+    assert _disable_reserved_smoke_series(db.connection()) == 2
+    db.commit()
+    db.expire_all()
+
+    assert db.get(CalendarCommitmentSeries, exact.id).active is False
+    assert db.get(CalendarCommitmentSeries, whitespace.id).active is False
+    assert db.get(CalendarCommitmentSeries, lowercase.id).active is True
+    assert db.get(CalendarCommitmentSeries, embedded.id).active is True
+    assert db.get(CalendarCommitmentSeries, already_inactive.id).active is False
+
+    audits = db.query(AuditLog).filter(AuditLog.action == AUDIT_ACTION).all()
+    assert {item.entity_id for item in audits} == {str(exact.id), str(whitespace.id)}
+    assert all(item.user_id is None for item in audits)
+    assert all(item.detail["owner_id"] == owner.id for item in audits)
+
+    assert _disable_reserved_smoke_series(db.connection()) == 0
+    db.commit()
+    assert db.query(AuditLog).filter(AuditLog.action == AUDIT_ACTION).count() == 2
 
 
 def test_blocking_manual_commitment_rejects_patient_double_booking(client, criar_usuario, db):

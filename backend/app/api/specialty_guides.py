@@ -9,6 +9,10 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.services.clinical_rule_engine import evaluate_rules, validate_answers
+from app.services.clinical_text import (
+    clinical_text_without_internal_overrides,
+    structured_clinical_updates,
+)
 from app.services.disease_taxonomy import CLINICAL_DOMAINS, categories_for_domain
 
 router = APIRouter(prefix="/api/specialty-guides", tags=["guias especializados"])
@@ -89,7 +93,7 @@ def _disease_list_item(item: SpecialtyDisease) -> dict[str, Any]:
         "cyanosis_class": item.cyanosis_class,
         "prevalence_rank": item.prevalence_rank,
         "completeness": item.completeness,
-        "summary": item.summary,
+        "summary": clinical_text_without_internal_overrides(item.summary),
         "tags": item.tags or [],
         "has_assistant": bool(item.assistant_questions),
         "version": item.version,
@@ -108,7 +112,7 @@ def _disease_detail(item: SpecialtyDisease) -> dict[str, Any]:
         "red_flags": item.red_flags or [],
         "ambulatory_flow": item.ambulatory_flow or [],
         "emergency_flow": item.emergency_flow or [],
-        "treatment_summary": item.treatment_summary,
+        "treatment_summary": clinical_text_without_internal_overrides(item.treatment_summary),
         "monitoring": item.monitoring or [],
         "special_populations": item.special_populations or [],
         "assistant_questions": item.assistant_questions or [],
@@ -126,7 +130,7 @@ def _triage_list_item(item: SymptomTriageGuide) -> dict[str, Any]:
         "name": item.name,
         "aliases": item.aliases or [],
         "areas": item.areas or [],
-        "summary": item.summary,
+        "summary": clinical_text_without_internal_overrides(item.summary),
         "tags": item.tags or [],
         "version": item.version,
         "updated_at": item.updated_at,
@@ -288,7 +292,10 @@ def get_disease(slug: str, db: Session = Depends(get_db)):
     ).first()
     if item is None:
         raise HTTPException(status_code=404, detail="Doença não encontrada.")
-    return _disease_detail(item)
+    return {
+        **_disease_detail(item),
+        "clinical_updates": structured_clinical_updates(db, "disease", item.id),
+    }
 
 
 @router.post("/diseases/{slug}/assess")
@@ -365,7 +372,10 @@ def get_triage(slug: str, db: Session = Depends(get_db)):
     ).first()
     if item is None:
         raise HTTPException(status_code=404, detail="Fluxo de triagem não encontrado.")
-    return _triage_detail(item)
+    return {
+        **_triage_detail(item),
+        "clinical_updates": structured_clinical_updates(db, "triage", item.id),
+    }
 
 
 @router.post("/triage/{slug}/assess")

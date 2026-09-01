@@ -453,11 +453,20 @@ def _dump_routine(db: Session, item: AvailabilityRule) -> dict:
     }
 
 
-def _commitment_series(db: Session, series_id: int, owner_id: int) -> CalendarCommitmentSeries:
-    item = db.query(CalendarCommitmentSeries).filter(
+def _commitment_series(
+    db: Session,
+    series_id: int,
+    owner_id: int,
+    *,
+    for_update: bool = False,
+) -> CalendarCommitmentSeries:
+    query = db.query(CalendarCommitmentSeries).filter(
         CalendarCommitmentSeries.id == series_id,
         CalendarCommitmentSeries.owner_id == owner_id,
-    ).first()
+    )
+    if for_update:
+        query = query.with_for_update()
+    item = query.first()
     if not item:
         raise HTTPException(status_code=404, detail="Compromisso recorrente não encontrado.")
     return item
@@ -1207,7 +1216,12 @@ def disable_commitment_series(
     user: User = Depends(current_user),
 ):
     owner_id = _owner_for(db, user, professional_id, "configure")
-    item = _commitment_series(db, series_id, owner_id)
+    # O lock torna o soft-delete e a auditoria idempotentes também sob dois
+    # cliques/requisições concorrentes. A segunda transação espera a primeira
+    # e então observa `active=False`, sem gerar um segundo log.
+    item = _commitment_series(db, series_id, owner_id, for_update=True)
+    if not item.active:
+        return None
     item.active = False
     _audit(db, user, "calendar_commitment_series_disable", "calendar_commitment_series", item.id)
     db.commit()

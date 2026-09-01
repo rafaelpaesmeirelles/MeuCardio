@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { api } from "../lib/api";
 
 type Option = { value: string; label: string };
@@ -46,6 +47,7 @@ type Disease = {
   patient_material_slug?: string | null;
   review_status: string;
   review_note?: string | null;
+  clinical_updates?: ClinicalUpdate[];
   version: number;
 };
 
@@ -325,6 +327,7 @@ export default function GuiaDoenca() {
         </>
       ) : (
         <>
+          <ClinicalUpdates updates={disease.clinical_updates} style={{ marginTop: "1rem" }} />
           {disease.epidemiology && <section className="cartao" style={{ marginTop: "1rem" }}><h2>Epidemiologia e relevância</h2><p>{disease.epidemiology}</p></section>}
           <ListBlock title="Apresentação clínica" items={disease.presentation} />
           <ListBlock title="Red flags" items={disease.red_flags} alert />

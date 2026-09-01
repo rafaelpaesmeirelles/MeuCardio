@@ -23,6 +23,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.content import Document
 from app.models.emergency import EmergencyProtocol
+from app.services.clinical_text import clinical_text_without_internal_overrides
 
 router = APIRouter(prefix="/api/emergencia", tags=["emergência"])
 
@@ -33,7 +34,7 @@ def _documento(d: Document) -> dict:
         "title": d.title,
         "theme": d.theme,
         "kind": d.kind,
-        "summary": d.summary,
+        "summary": clinical_text_without_internal_overrides(d.summary),
         "body_md": d.body_md,
         "source_refs": list(d.source_refs or []),
         "source_tier": d.source_tier,

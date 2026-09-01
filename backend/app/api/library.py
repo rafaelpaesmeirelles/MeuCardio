@@ -20,6 +20,7 @@ from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.clinical_text import clinical_text_without_internal_overrides
 from app.services.content_areas import content_area_counts
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
@@ -68,7 +69,7 @@ def _card(d: Document) -> dict:
         "title": d.title,
         "kind": d.kind,
         "theme": d.theme,
-        "summary": d.summary,
+        "summary": clinical_text_without_internal_overrides(d.summary),
         "tags": d.tags,
         "evidence_level": d.evidence_level,
         "review_status": d.review_status,
@@ -206,7 +207,7 @@ def presentation_options(db: Session = Depends(get_db), _=Depends(current_user))
         "title": document.title,
         "theme": document.theme,
         "kind": document.kind,
-        "summary": document.summary,
+        "summary": clinical_text_without_internal_overrides(document.summary),
         "review_status": document.review_status,
     } for document in documents]
 

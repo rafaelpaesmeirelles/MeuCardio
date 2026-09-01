@@ -15,17 +15,21 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.checklist import DischargeChecklist, DischargeChecklistRun
 from app.models.user import User
+from app.services.clinical_text import (
+    clinical_text_without_internal_overrides,
+    structured_clinical_updates,
+)
 
 router = APIRouter(prefix="/api/checklists", tags=["checklists de alta"])
 
 ESCOPO_VALIDO = {"doenca", "procedimento"}
 
 
-def _dump(checklist: DischargeChecklist) -> dict:
-    return {
+def _dump(checklist: DischargeChecklist, db: Session | None = None) -> dict:
+    payload = {
         "slug": checklist.slug,
         "condicao": checklist.condicao,
-        "resumo": checklist.resumo,
+        "resumo": clinical_text_without_internal_overrides(checklist.resumo),
         "theme": checklist.theme,
         "scope_type": checklist.scope_type or "doenca",
         "documento_origem": checklist.documento_origem,
@@ -37,6 +41,11 @@ def _dump(checklist: DischargeChecklist) -> dict:
             item for item in (checklist.itens or []) if item.get("obrigatorio")
         ]),
     }
+    if db is not None:
+        payload["clinical_updates"] = structured_clinical_updates(
+            db, "checklist", checklist.id,
+        )
+    return payload
 
 
 def _pendencias(itens: list, marcados: list) -> dict:
@@ -110,7 +119,7 @@ def detalhe(
     ).first()
     if checklist is None:
         raise HTTPException(status_code=404, detail="Checklist não encontrado.")
-    return _dump(checklist)
+    return _dump(checklist, db)
 
 
 class NovaAplicacao(BaseModel):

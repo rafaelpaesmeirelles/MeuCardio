@@ -8,6 +8,10 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.evidence import EvidenceRecord
+from app.services.clinical_text import (
+    clinical_text_without_internal_overrides,
+    structured_clinical_updates,
+)
 
 router = APIRouter(prefix="/api/evidence", tags=["evidencias"])
 
@@ -44,7 +48,7 @@ def _card(e: EvidenceRecord) -> dict:
         "id": e.id,
         "slug": e.slug,
         "statement": e.statement,
-        "summary": (e.summary or e.statement).strip(),
+        "summary": clinical_text_without_internal_overrides(e.summary) or e.statement.strip(),
         "recommendation_class": e.recommendation_class,
         "evidence_level": e.evidence_level,
         "society": e.society,
@@ -55,7 +59,7 @@ def _card(e: EvidenceRecord) -> dict:
     }
 
 
-def _detail(e: EvidenceRecord) -> dict:
+def _detail(db: Session, e: EvidenceRecord) -> dict:
     return {
         **_card(e),
         "guideline_title": e.guideline_title,
@@ -64,6 +68,7 @@ def _detail(e: EvidenceRecord) -> dict:
         "document_slug": e.document_slug,
         "study_slug": e.study_slug,
         "review_status": e.review_status,
+        "clinical_updates": structured_clinical_updates(db, "evidence", e.id),
     }
 
 
@@ -127,4 +132,4 @@ def get_evidence(slug: str, db: Session = Depends(get_db), _=Depends(current_use
     ).first()
     if not evidence:
         raise HTTPException(status_code=404, detail="Registro não encontrado.")
-    return _detail(evidence)
+    return _detail(db, evidence)

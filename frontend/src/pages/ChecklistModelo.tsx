@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import GrafoRelacionados from "../components/GrafoRelacionados";
 import { Carregando, Erro } from "../components/Estado";
+import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { api } from "../lib/api";
 
 type Item = {
@@ -18,6 +19,7 @@ type Checklist = {
   theme: string | null;
   documento_origem: string | null;
   itens: Item[];
+  clinical_updates?: ClinicalUpdate[];
 };
 
 export default function ChecklistModelo() {
@@ -95,6 +97,8 @@ export default function ChecklistModelo() {
           ))}
         </ul>
       </section>
+
+      <ClinicalUpdates updates={modelo.clinical_updates} />
 
       {modelo.documento_origem && (
         <p><Link to={`/biblioteca/${modelo.documento_origem}`}>Ver protocolo de origem</Link></p>

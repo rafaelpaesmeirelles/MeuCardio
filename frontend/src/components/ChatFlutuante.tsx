@@ -139,7 +139,17 @@ export default function ChatFlutuante() {
     if (!usuario) return;
     carregarNaoLidas();
     const t = setInterval(carregarNaoLidas, 60000);
-    return () => clearInterval(t);
+    const aoRetomar = () => carregarNaoLidas();
+    const aoMudarVisibilidade = () => {
+      if (document.visibilityState === "visible") carregarNaoLidas();
+    };
+    window.addEventListener("focus", aoRetomar);
+    document.addEventListener("visibilitychange", aoMudarVisibilidade);
+    return () => {
+      clearInterval(t);
+      window.removeEventListener("focus", aoRetomar);
+      document.removeEventListener("visibilitychange", aoMudarVisibilidade);
+    };
   }, [usuario, carregarNaoLidas]);
 
   // Socket: abre na primeira vez que o widget é aberto e fica vivo daí em diante.
@@ -271,7 +281,7 @@ export default function ChatFlutuante() {
           <IconeChat tamanho={24} variante="sobre-navy" />
           <span className="corvia-chat-launch__label">Chat</span>
           {naoLidas > 0 && (
-            <span className="corvia-chat-launch__badge">
+            <span className="corvia-chat-launch__badge" aria-live="polite">
               {naoLidas > 99 ? "99+" : naoLidas}
             </span>
           )}

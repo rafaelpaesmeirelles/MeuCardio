@@ -5,6 +5,7 @@ import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
+import ClinicalUpdates, { type ClinicalUpdate } from "../components/ClinicalUpdates";
 import { rotuloClasse, rotuloNivel } from "../lib/evidencia";
 
 type Detalhe = {
@@ -23,6 +24,7 @@ type Detalhe = {
   doi: string | null;
   document_slug: string | null;
   tags: string[];
+  clinical_updates?: ClinicalUpdate[];
 };
 
 export default function Evidencia() {
@@ -74,6 +76,8 @@ export default function Evidencia() {
           <p style={{ lineHeight: 1.65, marginBottom: 0 }}>{evidencia.summary}</p>
         </section>
       )}
+
+      <ClinicalUpdates updates={evidencia.clinical_updates} />
 
       <section className="cartao" style={{ marginTop: "0.8rem" }}>
         <p className="eyebrow">Diretriz de origem</p>

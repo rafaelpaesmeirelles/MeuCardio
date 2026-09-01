@@ -7,7 +7,7 @@ import re
 from datetime import datetime, timezone
 from typing import Any
 
-from app.models.guideline import Guideline, GuidelineNotification
+from app.models.guideline import Guideline, GuidelineLink, GuidelineNotification
 from app.services import guideline_clinical_update as core
 from app.services.guideline_source_trust import is_trusted_official_guideline
 
@@ -21,6 +21,7 @@ _PENDING_STATUSES = (
     "detected",
     "aguardando_revisao",
 )
+_STRUCTURED_LINK_ITEM_TYPES = {"disease", "evidence", "checklist", "triage"}
 
 
 def _plain_override(guideline, impact: dict) -> str:
@@ -68,9 +69,26 @@ def _already_applied(target: Any, item_type: str, guideline_slug: str) -> bool:
 
 
 def _guarded_apply_override(db, guideline, impact: dict, *, record: bool = True) -> bool:
+    if guideline.superseded_by_id is not None:
+        return False
     item_type = str(impact.get("item_type") or "")
     item_id = int(impact.get("item_id") or 0)
     target = core._get_target(db, item_type, item_id)
+    # Resumos clínicos canônicos não recebem mais envelopes de transporte. O
+    # vínculo é a chave de idempotência; numa reaplicação pós-reconciliação
+    # (`record=False`), os metadados estruturados podem ser reidratados sem
+    # tocar nos textos nem duplicar a versão.
+    structured_link = item_type in _STRUCTURED_LINK_ITEM_TYPES and db.query(GuidelineLink.id).filter(
+        GuidelineLink.guideline_id == guideline.id,
+        GuidelineLink.item_type == item_type,
+        GuidelineLink.item_id == item_id,
+        GuidelineLink.origem == core.ORIGIN,
+        GuidelineLink.confirmado.is_(True),
+    ).first() is not None
+    if structured_link:
+        if record:
+            return False
+        return _ORIGINAL_APPLY_OVERRIDE(db, guideline, impact, record=False)
     if target is not None and _already_applied(target, item_type, guideline.slug):
         return False
     return _ORIGINAL_APPLY_OVERRIDE(db, guideline, impact, record=record)

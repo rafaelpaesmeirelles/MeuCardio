@@ -22,16 +22,16 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
-      - name: Authorize the single-use scientific discovery hotfix
+      - name: Authorize the single-use agenda and clinical-text hotfix
         id: policy
         shell: bash
         env:
           EXPECTED_REPOSITORY: rafaelpaesmeirelles/MeuCardio
           EXPECTED_ACTOR: rafaelpaesmeirelles
-          EXPECTED_BRANCH: codex/tour-immersive-login-mobile-hotfix
-          EXPECTED_BASE_SHA: 8264bbcd17e341bbb99b16a77a7809559d10f701
-          EXPECTED_CANDIDATE: ${{ vars.CORVIA_SCIENTIFIC_SEARCH_EMERGENCY_SHA }}
-          EXPECTED_MARKER: "[scientific-search-emergency]"
+          EXPECTED_BRANCH: codex/emergency-agenda-search-chat-hotfix
+          EXPECTED_BASE_SHA: a74cd345e5d38bef740a32630d1961a711645373
+          EXPECTED_CANDIDATE: ${{ vars.CORVIA_AGENDA_SEARCH_EMERGENCY_SHA }}
+          EXPECTED_MARKER: "[agenda-search-emergency]"
           EVENT_NAME: ${{ github.event_name }}
           ACTOR: ${{ github.actor }}
           REPOSITORY: ${{ github.repository }}
@@ -77,37 +77,32 @@ jobs:
             [[ -z "${remainder:-}" ]] || exit 0
             [[ "$status" == "A" || "$status" == "M" ]] || exit 0
             case "$path" in
-              backend/app/api/drugs.py|\
-              backend/app/api/lab_tests.py|\
+              backend/app/api/agenda_integrada.py|\
+              backend/app/api/checklists.py|\
+              backend/app/api/emergencia.py|\
+              backend/app/api/evidence.py|\
+              backend/app/api/library.py|\
               backend/app/api/search.py|\
-              backend/app/api/studies.py|\
-              backend/app/services/connected_content.py|\
-              backend/migrations/versions/f92s20260901_backfill_search_vectors.py|\
-              backend/tests/test_connected_content_clinical_relevance.py|\
-              backend/tests/test_relacionados.py|\
+              backend/app/api/specialty_guides.py|\
+              backend/app/services/clinical_text.py|\
+              backend/app/services/exportacao_conteudo.py|\
+              backend/app/services/guideline_clinical_update.py|\
+              backend/app/services/guideline_clinical_update_runtime.py|\
+              backend/migrations/versions/f93s20260901_disable_reserved_smoke_agenda.py|\
+              backend/tests/test_agenda_integrada.py|\
+              backend/tests/test_guideline_clinical_update_runtime.py|\
               backend/tests/test_search_tudo_com_tudo.py|\
-              backend/tests/test_tudo_com_tudo_medication_ui_contract.py|\
-              frontend/scripts/check-cardiology-spaces-home-contract.test.mjs|\
-              frontend/scripts/check-scientific-learning-environment-contract.test.mjs|\
-              frontend/src/App.tsx|\
-              frontend/src/lib/clinicalRouteRegistry.ts|\
-              frontend/src/lib/cardiologySpacesFeature.ts|\
-              frontend/src/main.tsx|\
-              frontend/src/pages/Busca.tsx|\
+              frontend/scripts/check-cardiology-spaces-app-frame-contract.test.mjs|\
+              frontend/src/components/ChatFlutuante.tsx|\
+              frontend/src/components/ClinicalUpdates.tsx|\
               frontend/src/pages/Agenda.tsx|\
-              frontend/src/pages/CardiologySpacesHome.tsx|\
-              frontend/src/pages/CardiologySpacesTour.tsx|\
-              frontend/src/pages/Condicoes.tsx|\
-              frontend/src/pages/Estudos.tsx|\
-              frontend/src/pages/Exames.tsx|\
-              frontend/src/pages/Fluxogramas.tsx|\
-              frontend/src/pages/Interacoes.tsx|\
-              frontend/src/pages/MinhaConta.tsx|\
-              frontend/src/pages/MedicamentosClinicalCommand.tsx|\
-              frontend/src/pages/Sincronizacao.tsx|\
-              frontend/src/pages/Tour.tsx|\
-              frontend/src/styles/cardiology-spaces-login.css|\
-              frontend/src/styles/cardiology-spaces-tour.css|\
+              frontend/src/pages/ChecklistModelo.tsx|\
+              frontend/src/pages/Evidencia.tsx|\
+              frontend/src/pages/GuiaDoenca.tsx|\
+              frontend/src/pages/TriagemSintomas.tsx|\
+              frontend/src/styles/cardiology-spaces-app-frame.css|\
+              frontend/src/styles/shell.css|\
+              .github/workflows/deploy-production.yml|\
               .github/workflows/ci.yml)
                 ;;
               *)
@@ -119,8 +114,7 @@ jobs:
           [[ "$changes_found" == "true" ]] || exit 0
 
           echo "skip_backend=true" >> "$GITHUB_OUTPUT"
-          echo "scientific_search_emergency=true" >> "$GITHUB_OUTPUT"
-          echo "Single-use scientific discovery exception authorized for $candidate"
+          echo "Single-use agenda and clinical-text exception authorized for $candidate"
 
   backend:
     name: Backend tests

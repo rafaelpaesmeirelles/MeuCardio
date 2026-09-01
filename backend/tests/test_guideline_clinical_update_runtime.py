@@ -1,7 +1,10 @@
 from types import SimpleNamespace
 
+from app.models.guideline import Guideline, GuidelineLink
+from app.models.specialty_guide import SpecialtyDisease
 from app.services import guideline_clinical_update as clinical
 from app.services import guideline_clinical_update_runtime as runtime
+from app.services.clinical_text import _safe_http_url, structured_clinical_updates
 
 
 def guideline(slug="esc-2026-heart-failure"):
@@ -71,3 +74,91 @@ def test_runtime_install_replaces_core_helpers_with_idempotent_guards(monkeypatc
     monkeypatch.setattr(clinical, "_strip_plain_override", original_strip)
     monkeypatch.setattr(clinical, "_apply_override", original_apply)
     monkeypatch.setattr(clinical, "_ensure_summary_document", original_summary)
+
+
+def test_disease_update_keeps_canonical_definition_and_is_idempotent(db):
+    item = SpecialtyDisease(
+        slug="doenca-intelligence-sem-contaminacao-teste",
+        name="Doença de teste do Intelligence",
+        aliases=[], area="cardiologia", category="teste",
+        summary="Definição clínica canônica.",
+        treatment_summary="Tratamento canônico.",
+        review_status="revisado", published=True, version=1,
+    )
+    source = Guideline(
+        slug="diretriz-intelligence-sem-contaminacao-teste",
+        org="ESC", titulo="Diretriz de teste", ano=2026,
+        url="https://www.escardio.org/teste",
+    )
+    replacement = Guideline(
+        slug="diretriz-intelligence-substituta-teste",
+        org="ESC", titulo="Diretriz substituta de teste", ano=2027,
+        url="https://www.escardio.org/teste-substituta",
+    )
+    db.add_all([item, source, replacement])
+    db.commit()
+    impact = {
+        "item_type": "disease", "item_id": item.id,
+        "target_section": "definicao",
+        "change_summary_pt": "Mudança confirmada e auditável.",
+        "override_pt": "Nova orientação que não pertence ao campo definição.",
+        "source_url": "https://www.escardio.org/teste",
+    }
+
+    try:
+        assert clinical._apply_override(db, source, impact, record=True) is True
+        db.commit()
+        db.refresh(item)
+        first_version = item.version
+
+        assert item.summary == "Definição clínica canônica."
+        assert item.treatment_summary == "Tratamento canônico."
+        assert "corvia-intelligence" not in item.summary.casefold()
+        link = db.query(GuidelineLink).filter(
+            GuidelineLink.guideline_id == source.id,
+            GuidelineLink.item_type == "disease",
+            GuidelineLink.item_id == item.id,
+            GuidelineLink.origem == clinical.ORIGIN,
+            GuidelineLink.confirmado.is_(True),
+        ).one()
+        assert "Mudança confirmada" in (link.trecho or "")
+        updates = structured_clinical_updates(db, "disease", item.id)
+        assert len(updates) == 1
+        assert updates[0]["change_summary"] == "Mudança confirmada e auditável."
+        assert updates[0]["recommendation"] == (
+            "Nova orientação que não pertence ao campo definição."
+        )
+        assert updates[0]["source_url"] == "https://www.escardio.org/teste"
+        assert _safe_http_url("javascript:alert(1)") is None
+        assert _safe_http_url("https://usuario:senha@example.com") is None
+
+        source.superseded_by_id = replacement.id
+        db.commit()
+        assert structured_clinical_updates(db, "disease", item.id) == []
+        assert runtime._guarded_apply_override(db, source, impact, record=False) is False
+        source.superseded_by_id = None
+        db.commit()
+
+        item.source_refs = []
+        item.source_urls = []
+        item.review_note = None
+        db.commit()
+        assert runtime._guarded_apply_override(db, source, impact, record=False) is True
+        db.commit()
+        db.refresh(item)
+        rehydrated_version = item.version
+        assert rehydrated_version == first_version + 1
+        assert item.source_refs
+        assert item.source_urls == ["https://www.escardio.org/teste"]
+        assert item.review_note == "CorVIA Intelligence: Mudança confirmada e auditável."
+        assert item.summary == "Definição clínica canônica."
+        assert runtime._guarded_apply_override(db, source, impact, record=False) is False
+        db.commit()
+        db.refresh(item)
+        assert item.version == rehydrated_version
+    finally:
+        db.query(GuidelineLink).filter(GuidelineLink.guideline_id == source.id).delete()
+        db.delete(item)
+        db.delete(source)
+        db.delete(replacement)
+        db.commit()
