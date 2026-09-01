@@ -106,12 +106,23 @@ def _grupo(tipo: str, rotulo: str, rota_lista: str, itens: list[ItemRelacionado]
     }
 
 
+def _aplicar_limite(statement, limite: int | None):
+    """Aplica limite apenas no catálogo final.
+
+    O chamador contextual precisa poder avaliar todos os candidatos do tema
+    antes de pontuar. Limitar a consulta antes desse filtro privilegia os
+    registros mais recentes e pode ocultar justamente a relação clínica
+    correta. A UI de catálogo continua usando o limite padrão de cinco.
+    """
+    return statement.limit(limite) if limite is not None else statement
+
+
 def buscar_relacionados(
     db: Session,
     tema: str,
     excluir_tipo: str | None = None,
     excluir_slug: str | None = None,
-    limite_por_categoria: int = LIMITE_POR_CATEGORIA,
+    limite_por_categoria: int | None = LIMITE_POR_CATEGORIA,
 ) -> dict:
     """Devolve, agrupado por tipo, o conteúdo publicado do mesmo tema em todas
     as frentes do ecossistema Corvia — o "Tudo sobre este tema" das páginas de
@@ -130,9 +141,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "documento" and excluir_slug:
         docs_q = docs_q.where(Document.slug != excluir_slug)
-    docs = db.execute(
-        docs_q.order_by(Document.updated_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    docs = db.execute(_aplicar_limite(
+        docs_q.order_by(Document.updated_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "documento", "Documentos e protocolos", "/biblioteca",
         [ItemRelacionado("documento", d.slug, d.title, d.kind, f"/biblioteca/{d.slug}") for d in docs],
@@ -143,9 +154,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "fluxograma" and excluir_slug:
         fluxos_q = fluxos_q.where(Document.slug != excluir_slug)
-    fluxos = db.execute(
-        fluxos_q.order_by(Document.updated_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    fluxos = db.execute(_aplicar_limite(
+        fluxos_q.order_by(Document.updated_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "fluxograma", "Fluxogramas", "/fluxogramas",
         [ItemRelacionado("fluxograma", d.slug, d.title, "Árvore de decisão", f"/biblioteca/{d.slug}") for d in fluxos],
@@ -157,9 +168,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "evidencia" and excluir_slug:
         ev_q = ev_q.where(EvidenceRecord.slug != excluir_slug)
-    evidencias = db.execute(
-        ev_q.order_by(EvidenceRecord.created_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    evidencias = db.execute(_aplicar_limite(
+        ev_q.order_by(EvidenceRecord.created_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "evidencia", "Evidências", "/evidencias",
         [
@@ -179,9 +190,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "estudo" and excluir_slug:
         est_q = est_q.where(ScientificStudy.slug != excluir_slug)
-    estudos = db.execute(
-        est_q.order_by(ScientificStudy.created_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    estudos = db.execute(_aplicar_limite(
+        est_q.order_by(ScientificStudy.created_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "estudo", "Estudos", "/estudos",
         [ItemRelacionado("estudo", s.slug, s.title, f"{s.journal} · {s.year}", f"/estudos/{s.slug}") for s in estudos],
@@ -193,9 +204,9 @@ def buscar_relacionados(
         drug_q = select(Drug).where(Drug.published.is_(True))
         if excluir_tipo == "medicamento" and excluir_slug:
             drug_q = drug_q.where(Drug.slug != excluir_slug)
-        drogas = db.execute(
-            drug_q.order_by(Drug.generic_name).limit(limite_por_categoria)
-        ).scalars().all()
+        drogas = db.execute(_aplicar_limite(
+            drug_q.order_by(Drug.generic_name), limite_por_categoria,
+        )).scalars().all()
         medicamentos = [
             ItemRelacionado("medicamento", d.slug, d.generic_name, d.drug_class, f"/medicamentos?slug={d.slug}")
             for d in drogas
@@ -206,9 +217,9 @@ def buscar_relacionados(
     ex_q = select(LabTest).where(LabTest.theme == tema, LabTest.published.is_(True))
     if excluir_tipo == "exame" and excluir_slug:
         ex_q = ex_q.where(LabTest.slug != excluir_slug)
-    exames = db.execute(
-        ex_q.order_by(LabTest.name).limit(limite_por_categoria)
-    ).scalars().all()
+    exames = db.execute(_aplicar_limite(
+        ex_q.order_by(LabTest.name), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "exame", "Exames", "/exames",
         [ItemRelacionado("exame", t.slug, t.name, t.category, f"/exames/{t.slug}") for t in exames],
@@ -218,9 +229,9 @@ def buscar_relacionados(
     cc_q = select(ClinicalCase).where(ClinicalCase.tema == tema, ClinicalCase.published.is_(True))
     if excluir_tipo == "caso_clinico" and excluir_slug:
         cc_q = cc_q.where(ClinicalCase.slug != excluir_slug)
-    casos = db.execute(
-        cc_q.order_by(ClinicalCase.created_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    casos = db.execute(_aplicar_limite(
+        cc_q.order_by(ClinicalCase.created_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "caso_clinico", "Casos clínicos", "/casos-clinicos",
         [ItemRelacionado("caso_clinico", c.slug, c.titulo, c.nivel, f"/casos-clinicos/{c.slug}") for c in casos],
@@ -230,9 +241,9 @@ def buscar_relacionados(
     tr_q = select(StudyTrack).where(StudyTrack.tema == tema, StudyTrack.published.is_(True))
     if excluir_tipo == "trilha" and excluir_slug:
         tr_q = tr_q.where(StudyTrack.slug != excluir_slug)
-    trilhas = db.execute(
-        tr_q.order_by(StudyTrack.created_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    trilhas = db.execute(_aplicar_limite(
+        tr_q.order_by(StudyTrack.created_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "trilha", "Trilhas de estudo", "/trilhas",
         [ItemRelacionado("trilha", t.slug, t.titulo, t.nivel, f"/trilhas/{t.slug}") for t in trilhas],
@@ -242,9 +253,9 @@ def buscar_relacionados(
     gal_q = select(GalleryImage).where(GalleryImage.theme == tema, GalleryImage.published.is_(True))
     if excluir_tipo == "galeria" and excluir_slug:
         gal_q = gal_q.where(GalleryImage.slug != excluir_slug)
-    imagens = db.execute(
-        gal_q.order_by(GalleryImage.created_at.desc()).limit(limite_por_categoria)
-    ).scalars().all()
+    imagens = db.execute(_aplicar_limite(
+        gal_q.order_by(GalleryImage.created_at.desc()), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "galeria", "Galeria de imagens", "/galeria",
         [ItemRelacionado("galeria", g.slug, g.title, g.modality, f"/galeria/{g.slug}") for g in imagens],
@@ -287,9 +298,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "checklist" and excluir_slug:
         chk_q = chk_q.where(DischargeChecklist.slug != excluir_slug)
-    checklists = db.execute(
-        chk_q.order_by(DischargeChecklist.condicao).limit(limite_por_categoria)
-    ).scalars().all()
+    checklists = db.execute(_aplicar_limite(
+        chk_q.order_by(DischargeChecklist.condicao), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "checklist", "Checklists de alta", "/checklists",
         [
@@ -306,9 +317,9 @@ def buscar_relacionados(
     )
     if excluir_tipo == "material_paciente" and excluir_slug:
         mat_q = mat_q.where(PatientMaterial.slug != excluir_slug)
-    materiais = db.execute(
-        mat_q.order_by(PatientMaterial.titulo).limit(limite_por_categoria)
-    ).scalars().all()
+    materiais = db.execute(_aplicar_limite(
+        mat_q.order_by(PatientMaterial.titulo), limite_por_categoria,
+    )).scalars().all()
     grupos.append(_grupo(
         "material_paciente", "Material para o paciente", "/material-paciente",
         [

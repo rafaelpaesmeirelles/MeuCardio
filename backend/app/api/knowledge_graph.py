@@ -24,19 +24,31 @@ def relacionados(
     limite_por_tipo: int = Query(5, ge=1, le=20),
     incluir_contexto_tematico: bool = Query(
         False,
-        description="Inclui vizinhos que apenas compartilham o mesmo tema amplo.",
+        deprecated=True,
+        description=(
+            "Expansão temática ampla desativada na API clínica: compartilhar tema "
+            "não comprova relação entre dois conteúdos."
+        ),
     ),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
     if entity_type not in TIPOS_ENTIDADE_PERMITIDOS:
         raise HTTPException(status_code=422, detail="entity_type desconhecido.")
+    if incluir_contexto_tematico:
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                "Contexto temático amplo não é uma relação clínica. "
+                "Consulte os vínculos diretos, curados ou estruturados do grafo."
+            ),
+        )
     resultado = relacionados_de(
         db,
         entity_type=entity_type,
         slug=slug,
         limite_por_tipo=limite_por_tipo,
-        incluir_contexto_tematico=incluir_contexto_tematico,
+        incluir_contexto_tematico=False,
     )
     if resultado is None:
         return {"entity_type": entity_type, "slug": slug, "titulo": None, "grupos": [], "total": 0}

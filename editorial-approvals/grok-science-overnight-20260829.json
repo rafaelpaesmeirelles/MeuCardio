@@ -4,6 +4,22 @@
   "base": "1945e11197bb9a1708469498c1317bae607540e3",
   "decision": "approved_for_publication",
   "approval_basis": "Explicit repository-owner instruction to publish on 2026-08-29 after Grok QC, strict corpus inventory, Tudo-com-Tudo audit, and focused source verification. One broken library link is corrected in the publication follow-up.",
+  "canonical_slug_migrations": [
+    {
+      "front": "estudos",
+      "old_slug": "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes",
+      "new_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "pmid": "37952131",
+      "doi": "10.1056/NEJMoa2307563"
+    },
+    {
+      "front": "estudos",
+      "old_slug": "summit-tirzepatida-icfep-com-obesidade",
+      "new_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+      "pmid": "39555826",
+      "doi": "10.1056/NEJMoa2410027"
+    }
+  ],
   "fronts": {
     "documentos": [
       "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
@@ -123,9 +139,9 @@
       "peitho-seguimento-longo-prazo-mortalidade-dispneia-e-cteph",
       "peitho-tenecteplase-versus-placebo-tep-normotenso-vd-e-troponina",
       "registro-ishlt-sobrevida-do-enxerto-transplante-cardiaco-adulto-2023",
-      "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes",
+      "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
       "shock-registry-ruptura-septal-ventricular-pos-iam-menon-2000",
-      "summit-tirzepatida-icfep-com-obesidade"
+      "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit"
     ],
     "casos_clinicos": [
       "alta-pos-nstemi-cinco-pilares-incompletos-feve-reduzida-tabagismo-ldl-diabetes",

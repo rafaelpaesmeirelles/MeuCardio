@@ -13,7 +13,13 @@ type Insight = Drug & {
   half_life_hours: number | null; duration_of_action_hours: number | null;
   sbp_reduction_mmhg: number | null; dbp_reduction_mmhg: number | null; bp_evidence_source: string | null;
 };
-type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: { slug: string; titulo: string; subtitulo?: string; rota: string }[] };
+type RelItem = {
+  slug: string; titulo: string; subtitulo?: string; rota: string;
+  relation_type?: string; relevance_score?: number; confidence?: string;
+  provenance_type?: string; review_status?: string;
+  match_score?: number; match_threshold?: number;
+};
+type Rel = { tipo: string; rotulo: string; rota_lista: string; itens: RelItem[] };
 
 const SECOES = {
   geral: ["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca", 10],
@@ -41,6 +47,37 @@ function secao(r: Res): Secao {
   return "geral";
 }
 const rota = (r: Res) => `${SECOES[secao(r)][2]}/${r.slug}`;
+
+function origemContextual(item: RelItem): { rotulo: string; detalhe: string; cor: string } {
+  if (item.provenance_type === "editorial" || item.confidence === "explicit") {
+    const revisada = item.review_status === "revisado";
+    const origem = item.provenance_type === "imported" ? " de fonte importada" : item.provenance_type === "editorial" ? " editorial" : "";
+    return {
+      rotulo: revisada ? "Curada e revisada" : "Curada · revisão pendente",
+      detalhe: `Relação explícita${origem} ${revisada ? "e revisada" : "ainda pendente de revisão"}.`,
+      cor: revisada ? "#63dfc1" : "#8fdac8",
+    };
+  }
+  if (item.provenance_type && ["structured_metadata", "imported", "derived"].includes(item.provenance_type)) {
+    return { rotulo: "Estruturada", detalhe: "Correspondência sustentada por metadado ou regra estruturada.", cor: "#76b7ff" };
+  }
+  return {
+    rotulo: "Inferida por contexto",
+    detalhe: "Correspondência automática por assunto e taxonomia; não equivale a vínculo clínico curado.",
+    cor: "#d7a5ff",
+  };
+}
+
+function scoreContextual(item: RelItem): string {
+  const partes: string[] = [];
+  if (typeof item.relevance_score === "number") {
+    partes.push(`pertinência ${Math.round(Math.min(1, Math.max(0, item.relevance_score)) * 100)}%`);
+  }
+  if (typeof item.match_score === "number" && typeof item.match_threshold === "number") {
+    partes.push(`sinal ${item.match_score} · mínimo ${item.match_threshold}`);
+  }
+  return partes.join(" · ");
+}
 
 function Snippet({ texto }: { texto: string }) {
   return <>{texto.split(/<\/?mark>/i).map((p, i) => i % 2 ? <mark key={i}>{p}</mark> : p)}</>;
@@ -108,11 +145,21 @@ export default function Busca() {
     }
     if (!medicamentoForte) {
       const n = norm(termo), tema = itens.map((x) => x.theme).find((x) => norm(x) === n);
-      const cobertos = new Set(itens.map((x) => x.kind === "fluxograma" ? "fluxograma" : (x.frente || x.kind)));
+      const chavesTextuais = new Set(itens.flatMap((x) => [
+        `${x.kind === "fluxograma" ? "fluxograma" : (x.frente || x.kind)}:${x.slug}`,
+        `rota:${rota(x)}`,
+      ]));
       if (tema) try {
         const query = new URLSearchParams({ tema, assunto: termo });
         const x = await api.get<{ grupos: Rel[] }>(`/relacionados?${query.toString()}`);
-        if (id === seq.current) setRel(x.grupos.filter((g) => g.itens.length && !cobertos.has(g.tipo)));
+        if (id === seq.current) setRel(x.grupos
+          .map((g) => ({
+            ...g,
+            itens: g.itens.filter((item) => (
+              !chavesTextuais.has(`${g.tipo}:${item.slug}`) && !chavesTextuais.has(`rota:${item.rota}`)
+            )),
+          }))
+          .filter((g) => g.itens.length > 0));
       } catch { /* complemento opcional */ }
     }
     if (id === seq.current) setLoading(false);
@@ -125,20 +172,23 @@ export default function Busca() {
   const timeline = (res ?? []).filter((r) => ["estudo", "evidencia"].includes(secao(r)) && r.ano).sort((a, b) => (b.ano ?? 0) - (a.ano ?? 0));
 
   return <main className="tct-page">
-    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo</p><h1>{assunto ? `Tudo sobre ${assunto}` : "Um assunto, todas as conexões"}</h1><p>Conteúdo relacionado ao assunto, organizado por frente de conhecimento.</p>
-      <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Conectar"}</button></form>
+    <header className="cartao tct-hero"><p className="eyebrow">Tudo com Tudo · busca textual</p><h1>{assunto ? `Resultados para ${assunto}` : "Pesquisar em todo o conhecimento"}</h1><p>A pesquisa full-text localiza termos em títulos e textos publicados. Um resultado textual não é, por si só, uma conexão clínica.</p>
+      <form className="tct-search" role="search" onSubmit={(e) => { e.preventDefault(); void buscar(q); }}><input type="search" aria-label="Assunto" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ex.: olmesartana, fibrilação atrial…" /><button className="botao" disabled={q.trim().length < 2 || loading}>{loading ? "Buscando…" : "Pesquisar"}</button></form>
     </header>
-    {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando o conhecimento…" />}
+    {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Pesquisando o conhecimento…" />}
     {!loading && drug && <PainelDrug d={drug} />}
-    {!loading && res && res.length > 0 && <section className="cartao">
-      <header className="tct-head"><div><p className="eyebrow">Mapa do assunto</p><h2>Conteúdo conectado</h2><p>{res.length} resultados por frente de conhecimento</p></div></header>
+    {!loading && res && res.length > 0 && <section className="cartao" data-search-mode="full-text">
+      <header className="tct-head"><div><p className="eyebrow">Busca textual</p><h2>Correspondências encontradas</h2><p>{res.length} resultados recuperados por termos, organizados por frente de conhecimento</p></div></header>
+      <p role="note" style={{ margin: "0.55rem 0", padding: "0.65rem 0.75rem", color: "var(--texto-secundario)", background: "rgba(var(--space-rgb), .045)", border: "1px solid rgba(var(--space-rgb), .13)", borderRadius: "9px", fontSize: "0.78rem" }}>
+        Use estes resultados para localizar conteúdo. Relações clínicas curadas ou estruturadas são identificadas explicitamente quando há proveniência disponível; similaridade textual isolada não recebe esse selo.
+      </p>
       <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>{r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
-        {rel.map((g) => <section className="cartao tct-group" key={g.tipo}><header><p className="eyebrow">Ecossistema conectado</p><h3>{g.rotulo}</h3><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={x.slug}><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
+        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} correspondência{xs.length > 1 ? "s" : ""} textual{xs.length > 1 ? "is" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.kind}-${r.slug}`}><small>Busca textual · {r.theme} · {ROTULOS[r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {rel.map((g) => <section className="cartao tct-group" data-relationship-surface="contextual-inference" key={g.tipo}><header><p className="eyebrow">Associação contextual</p><h3>{g.rotulo}</h3><p>Seleção automática por assunto e taxonomia; não equivale, isoladamente, a relação clínica curada.</p><Link to={g.rota_lista}>Ver área →</Link></header><div>{g.itens.map((x) => { const origem = origemContextual(x); const score = scoreContextual(x); return <Link className="tct-row" to={x.rota} key={x.slug} title={origem.detalhe}><small style={{ color: origem.cor }}>{origem.rotulo}{score ? ` · ${score}` : ""}</small><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>; })}</div></section>)}
       </div>
     </section>}
-    {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
+    {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline da busca</p><h2>Estudos e evidências localizados ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
     {!loading && res?.length === 0 && !drug && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
   </main>;
 }

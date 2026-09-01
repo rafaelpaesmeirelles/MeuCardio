@@ -11,6 +11,7 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.lab_test import LabTest
+from app.services.scientific_loader_safety import enforce_safe_publication
 
 
 # `published` NUNCA vem do JSON. Publicar e decisao humana, registrada no banco
@@ -34,15 +35,18 @@ def carregar(caminho_json: str) -> dict:
     db = SessionLocal()
     novos, atualizados = 0, 0
     try:
-        for item in itens:
-            item = {k: v for k, v in item.items() if k != "published" and k in _COLUNAS}
+        for bruto in itens:
+            item = {k: v for k, v in bruto.items() if k != "published" and k in _COLUNAS}
             existente = db.query(LabTest).filter(LabTest.slug == item["slug"]).first()
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(LabTest(**item))
+                registro = LabTest(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

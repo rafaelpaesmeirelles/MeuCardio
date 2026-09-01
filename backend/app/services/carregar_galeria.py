@@ -13,6 +13,7 @@ from pathlib import Path
 
 from app.core.db import SessionLocal
 from app.models.gallery import GalleryImage
+from app.services.scientific_loader_safety import enforce_safe_publication
 
 GALERIA_DIR = Path("/galeria")
 
@@ -64,9 +65,12 @@ def carregar(caminho_json: str) -> dict:
                 for campo in CAMPOS - {"slug"}:
                     if campo in item:
                         setattr(existente, campo, item[campo])
+                enforce_safe_publication(existente, item, is_new=False)
                 atualizados += 1
             else:
-                db.add(GalleryImage(**{k: v for k, v in item.items() if k in CAMPOS}))
+                registro = GalleryImage(**{k: v for k, v in item.items() if k in CAMPOS})
+                enforce_safe_publication(registro, item, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

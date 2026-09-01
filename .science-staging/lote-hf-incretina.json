@@ -20,8 +20,8 @@
   ],
   "estudos": [
     {
-      "slug": "summit-tirzepatida-icfep-com-obesidade",
-      "title": "Tirzepatida na ICFEp com Obesidade: o Ensaio SUMMIT",
+      "slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+      "title": "Tirzepatida e ICFEp com Obesidade: o Ensaio SUMMIT",
       "study_type": "ensaio_clinico",
       "authors": "Packer M, Zile MR, Kramer CM, Baum SJ, Litwin SE, Menon V, Ge J, Weerakkody GJ, Ou Y, Bunck MC, Hurt KC, Murakami M, Borlaug BA; SUMMIT Trial Study Group.",
       "journal": "New England Journal of Medicine",
@@ -33,7 +33,7 @@
       "key_findings": "Composto primário: 36/364 (9,9%) vs. 56/367 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). Piora da IC: 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). Morte CV adjudicada: 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83) — numericamente pior no braço ativo, IC que cruza 1. KCCQ-CSS: +19,5±1,2 vs. +12,7±1,3, diferença 6,9 (IC95% 3,3-10,6; p<0,001). Descontinuação por evento adverso (sobretudo GI): 6,3% vs. 1,4%. O abstract não reporta peso nem caminhada de 6 minutos.",
       "clinical_implications": "O SUMMIT demonstra menor risco do COMPOSTO de morte cardiovascular ou piora da IC, puxado pela piora da IC, e melhora do estado de saúde (KCCQ). Não demonstra redução de mortalidade cardiovascular. Na ESC 2026 a classe (semaglutida ou tirzepatida) entra como AMT IIa B1 para peso, exercício e QoL em IC sintomática com FEVE ≥45% e IMC ≥30, independente de diabetes — não como FMT e não como redução de morte. Não substitui iSGLT2.",
       "limitations": "Morte CV isolada sem significância e numericamente na direção oposta (8 vs. 5). Sem comparação direta com semaglutida. População restrita a FEVE ≥50% e IMC ≥30. Abstract do artigo principal não traz peso nem 6MWT. Não extrapolar para ICFEr nem para ICFEp sem obesidade.",
-      "theme": "Insuficiência cardíaca",
+      "theme": "Diabetes e cardiologia",
       "tags": [
         "summit",
         "tirzepatida",
@@ -42,9 +42,10 @@
         "agonista duplo gip/glp-1",
         "incretina"
       ],
-      "document_slug": "summit-tirzepatida-icfep-com-obesidade",
-      "review_status": "pendente_revisao",
-      "published": false
+      "review_status": "revisado",
+      "published": true,
+      "review_note": "Revisão científica e consolidação de duplicata concluídas em 2026-09-01 contra PubMed PMID 39555826 e DOI 10.1056/NEJMoa2410027. O registro duplicado summit-tirzepatida-icfep-com-obesidade foi incorporado neste canônico sem perda de resultados, limitações, identificadores ou contexto exclusivo; síntese não deve ser extrapolada além da população e dos desfechos da fonte.",
+      "document_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit"
     }
   ],
   "evidencias": [

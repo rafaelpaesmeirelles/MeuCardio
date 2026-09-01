@@ -117,7 +117,6 @@ def _disease_detail(item: SpecialtyDisease) -> dict[str, Any]:
         "related_document_slugs": item.related_document_slugs or [],
         "patient_material_slug": item.patient_material_slug,
         "review_status": item.review_status,
-        "review_note": item.review_note,
     }
 
 
@@ -146,7 +145,6 @@ def _triage_detail(item: SymptomTriageGuide) -> dict[str, Any]:
         "source_refs": item.source_refs or [],
         "source_urls": item.source_urls or [],
         "review_status": item.review_status,
-        "review_note": item.review_note,
     }
 
 

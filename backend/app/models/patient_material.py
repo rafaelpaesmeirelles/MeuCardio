@@ -47,6 +47,8 @@ class PatientMaterial(Base):
     fontes: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
 
     review_status: Mapped[str] = mapped_column(String(40), default="pendente_revisao")
+    review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    fonte_producao: Mapped[str | None] = mapped_column(Text, nullable=True)
     published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
     version: Mapped[int] = mapped_column(Integer, default=1)
     updated_at: Mapped[datetime] = mapped_column(

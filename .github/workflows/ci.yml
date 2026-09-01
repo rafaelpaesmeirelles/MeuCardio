@@ -2,15 +2,50 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
 
 jobs:
+  backend_scope:
+    name: Detect backend risk
+    runs-on: ubuntu-latest
+    outputs:
+      backend_mode: ${{ steps.scope.outputs.backend_mode }}
+      targeted_tests: ${{ steps.scope.outputs.targeted_tests }}
+      changes_digest: ${{ steps.scope.outputs.changes_digest }}
+      tested_tree: ${{ steps.scope.outputs.tested_tree }}
+    steps:
+      - name: Checkout history for an exact base/head comparison
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Enforce Node 24 action runtimes
+        run: python scripts/check_workflow_actions.py
+
+      - name: Test CI and release policy contracts
+        run: python scripts/test_ci_release_policy.py
+
+      - name: Classify changed paths
+        id: scope
+        shell: bash
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          python scripts/ci_release_policy.py classify-git \
+            --base "$BASE_SHA" \
+            --head "$HEAD_SHA" \
+            --github-output "$GITHUB_OUTPUT" \
+            --github-summary "$GITHUB_STEP_SUMMARY"
+
   backend:
     name: Backend tests
+    needs: backend_scope
+    if: needs.backend_scope.outputs.backend_mode != 'skip'
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -63,6 +98,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -73,13 +110,12 @@ jobs:
             backend/requirements.txt
             backend/requirements-dev.txt
 
-      - name: Enforce Node 24 action runtimes
-        run: python scripts/check_workflow_actions.py
-
       - name: Install PostgreSQL client
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         run: sudo apt-get update && sudo apt-get install -y postgresql-client
 
       - name: Validate operational shell scripts
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         run: bash -n ops/*.sh
 
       - name: Install dependencies
@@ -87,18 +123,22 @@ jobs:
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
 
       - name: Audit Python production dependencies
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         working-directory: backend
         run: python -m pip_audit -r requirements.txt --progress-spinner=off --strict
 
       - name: Apply migrations through the operational command
+        if: needs.backend_scope.outputs.backend_mode != 'skip'
         working-directory: backend
         run: python -m app.commands.migrate
 
       - name: Verify migration command is idempotent
+        if: needs.backend_scope.outputs.backend_mode != 'skip'
         working-directory: backend
         run: python -m app.commands.migrate
 
       - name: Smoke test explicit administrator bootstrap
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         working-directory: backend
         run: |
           python -m app.commands.create_admin --email ci-admin@teste.local --password admin-ci-seguro-123
@@ -115,15 +155,27 @@ jobs:
           PY
 
       - name: Compile Python modules
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         working-directory: backend
         run: python -m compileall -q app tests migrations
 
-      - name: Run pytest
+      - name: Run full pytest suite
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         working-directory: backend
         shell: bash
         run: |
           set -o pipefail
           python -m pytest -q --tb=short 2>&1 | tee pytest-output.txt
+
+      - name: Run changed backend tests
+        if: needs.backend_scope.outputs.backend_mode == 'targeted'
+        working-directory: backend
+        env:
+          TARGETED_TESTS: ${{ needs.backend_scope.outputs.targeted_tests }}
+        run: >-
+          python ../scripts/ci_release_policy.py run-targeted-tests
+          --tests-json "$TARGETED_TESTS"
+          --report pytest-output.txt
 
       - name: Upload pytest failure report
         if: failure()
@@ -135,6 +187,7 @@ jobs:
           retention-days: 7
 
       - name: Exercise live HTTP release flow
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         working-directory: backend
         run: |
           python -m app.commands.create_admin \
@@ -150,6 +203,7 @@ jobs:
             || { cat /tmp/corvia-api.log; exit 1; }
 
       - name: Prove PostgreSQL backup and restore
+        if: needs.backend_scope.outputs.backend_mode == 'full'
         run: |
           export PGHOST=localhost
           export PGPORT=5432
@@ -204,6 +258,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -271,3 +327,85 @@ jobs:
       - name: Enforce bundle and PWA budgets
         working-directory: frontend
         run: node scripts/check-bundle-budget.mjs
+
+  ci_policy:
+    name: CI policy
+    if: always()
+    needs: [backend_scope, backend, frontend]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout attestation policy at the exact PR head
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Require every applicable CI job
+        shell: bash
+        env:
+          SCOPE_RESULT: ${{ needs.backend_scope.result }}
+          BACKEND_MODE: ${{ needs.backend_scope.outputs.backend_mode }}
+          BACKEND_RESULT: ${{ needs.backend.result }}
+          FRONTEND_RESULT: ${{ needs.frontend.result }}
+        run: |
+          set -euo pipefail
+          [[ "$SCOPE_RESULT" == "success" ]] \
+            || { echo "Backend scope detection: $SCOPE_RESULT" >&2; exit 1; }
+          [[ "$FRONTEND_RESULT" == "success" ]] \
+            || { echo "Frontend build: $FRONTEND_RESULT" >&2; exit 1; }
+
+          case "$BACKEND_MODE:$BACKEND_RESULT" in
+            full:success)
+              echo "Backend full suite required and successful."
+              ;;
+            targeted:success)
+              echo "Changed backend tests required and successful."
+              ;;
+            skip:skipped)
+              echo "Backend tests safely skipped by the path policy."
+              ;;
+            *)
+              echo "Invalid backend gate state: mode=$BACKEND_MODE result=$BACKEND_RESULT" >&2
+              exit 1
+              ;;
+          esac
+
+      - name: Write reusable PR CI attestation
+        env:
+          ATTESTATION_PATH: ${{ runner.temp }}/ci-pr-attestation.json
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          TESTED_TREE: ${{ needs.backend_scope.outputs.tested_tree }}
+          BACKEND_MODE: ${{ needs.backend_scope.outputs.backend_mode }}
+          TARGETED_TESTS: ${{ needs.backend_scope.outputs.targeted_tests }}
+          CHANGES_DIGEST: ${{ needs.backend_scope.outputs.changes_digest }}
+          BACKEND_RESULT: ${{ needs.backend.result }}
+          FRONTEND_RESULT: ${{ needs.frontend.result }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          set -euo pipefail
+          python scripts/ci_release_policy.py write-attestation \
+            --repository "$REPOSITORY" \
+            --pr-number "$PR_NUMBER" \
+            --base-sha "$BASE_SHA" \
+            --head-sha "$HEAD_SHA" \
+            --tested-tree "$TESTED_TREE" \
+            --backend-mode "$BACKEND_MODE" \
+            --targeted-tests "$TARGETED_TESTS" \
+            --changes-digest "$CHANGES_DIGEST" \
+            --backend-result "$BACKEND_RESULT" \
+            --frontend-result "$FRONTEND_RESULT" \
+            --run-id "$RUN_ID" \
+            --run-attempt "$RUN_ATTEMPT" \
+            --output "$ATTESTATION_PATH"
+
+      - name: Publish reusable PR CI attestation
+        uses: actions/upload-artifact@v6
+        with:
+          name: ci-pr-attestation
+          path: ${{ runner.temp }}/ci-pr-attestation.json
+          if-no-files-found: error
+          overwrite: true
+          retention-days: 30

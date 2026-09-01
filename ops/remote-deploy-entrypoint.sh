@@ -4,6 +4,7 @@
 #   windows-stage <current-main SHA> <Windows SHA-256> (binary on stdin)
 #   deploy-release <current-main SHA> <Windows SHA-256> <Android cert SHA-256>
 #   deploy-web-android <current-main SHA> <Android cert SHA-256>
+#   verify-release <current-main SHA> <Android cert SHA-256>
 # Operational maintenance remains limited to intelligence/intelligence-force
 # for the exact already-deployed SHA. Web/APK release bypasses are not accepted.
 set -Eeuo pipefail
@@ -18,6 +19,8 @@ readonly ANDROID_NAME="corvia-cardiology-spaces-android-1.2.0.apk"
 readonly WINDOWS_NAME="corvia-cardiology-spaces-windows-1.2.0.exe"
 readonly MAX_WINDOWS_BYTES=367001600
 readonly STABLE_ENTRYPOINT="/usr/local/libexec/corvia-remote-deploy-entrypoint"
+readonly DOWNLOAD_DIR="$PROJECT_DIR/downloads"
+readonly RELEASE_LOCK_FILE="$DOWNLOAD_DIR/.corvia-release.lock"
 
 deny() { printf 'Production request denied: %s\n' "$1" >&2; exit 64; }
 REQUEST_KIND=""; EXPECTED_SHA=""; EXPECTED_WINDOWS_SHA=""; EXPECTED_ANDROID_CERT_SHA=""; INTELLIGENCE_FORCE="0"
@@ -25,6 +28,8 @@ if [[ "$ORIGINAL_COMMAND" =~ ^deploy-release[[:space:]]([0-9a-f]{40})[[:space:]]
   REQUEST_KIND="deploy-release"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_WINDOWS_SHA="${BASH_REMATCH[2]}"; EXPECTED_ANDROID_CERT_SHA="${BASH_REMATCH[3]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^deploy-web-android[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})$ ]]; then
   REQUEST_KIND="deploy-web-android"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_ANDROID_CERT_SHA="${BASH_REMATCH[2]}"
+elif [[ "$ORIGINAL_COMMAND" =~ ^verify-release[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})$ ]]; then
+  REQUEST_KIND="verify-release"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_ANDROID_CERT_SHA="${BASH_REMATCH[2]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^windows-stage[[:space:]]([0-9a-f]{40})[[:space:]]([0-9a-f]{64})$ ]]; then
   REQUEST_KIND="windows-stage"; EXPECTED_SHA="${BASH_REMATCH[1]}"; EXPECTED_WINDOWS_SHA="${BASH_REMATCH[2]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
@@ -33,14 +38,26 @@ elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence-force[[:space:]]([0-9a-f]{40})$ ]];
   REQUEST_KIND="intelligence"; EXPECTED_SHA="${BASH_REMATCH[1]}"; INTELLIGENCE_FORCE="1"
 else deny "command is not on the production allow-list"; fi
 readonly REQUEST_KIND EXPECTED_SHA EXPECTED_WINDOWS_SHA EXPECTED_ANDROID_CERT_SHA INTELLIGENCE_FORCE
+readonly RELEASE_RECEIPT="$DOWNLOAD_DIR/.corvia-release-${EXPECTED_SHA}.json"
 
 [[ -d "$PROJECT_DIR/.git" ]] || deny "production checkout not found"
 cd "$PROJECT_DIR"
+install -d -m 0755 "$DOWNLOAD_DIR"
+if [[ "$REQUEST_KIND" != "intelligence" ]]; then
+  exec 9>"$RELEASE_LOCK_FILE"
+  flock -w 30 9 || deny "another release operation holds the production lock"
+fi
 changes="$(git status --porcelain --untracked-files=normal -- . ':(exclude)downloads')"
 [[ -z "$changes" ]] || { printf 'Production checkout is dirty:\n%s\n' "$changes" >&2; exit 65; }
-git fetch --prune origin main
-remote_main="$(git rev-parse --verify origin/main)"
-[[ "$remote_main" == "$EXPECTED_SHA" ]] || { printf 'Requested SHA is not current origin/main.\n' >&2; exit 65; }
+
+require_current_remote_main() {
+  local remote_main
+  git fetch --prune origin main
+  remote_main="$(git rev-parse --verify origin/main)"
+  [[ "$remote_main" == "$EXPECTED_SHA" ]] \
+    || { printf 'Requested SHA is not current origin/main.\n' >&2; exit 65; }
+}
+require_current_remote_main
 
 readonly STAGING_ROOT="$PROJECT_DIR/downloads/.release-staging"
 readonly RELEASE_STAGING_DIR="$STAGING_ROOT/$EXPECTED_SHA"
@@ -72,7 +89,80 @@ validate_staged_artifact() {
   grep -Eiq "^${actual_sha}([[:space:]]|$)" "$artifact.sha256" || deny "staged sidecar mismatch"
 }
 
+find_android_tool() {
+  local name="$1" sdk_dir candidate
+  if command -v "$name" >/dev/null 2>&1; then command -v "$name"; return 0; fi
+  sdk_dir="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/opt/android-sdk}}"
+  candidate="$(find "$sdk_dir/build-tools" -type f -name "$name" -perm -u+x 2>/dev/null | sort -V | tail -n 1)"
+  [[ -n "$candidate" ]] || return 1
+  printf '%s\n' "$candidate"
+}
+
+completed_release_digest() {
+  local receipt="${1:-$RELEASE_RECEIPT}" apk sidecar windows windows_sidecar
+  local receipt_digest apksigner cert_output actual_cert version_payload
+  apk="$DOWNLOAD_DIR/$ANDROID_NAME"
+  sidecar="$apk.sha256"
+  windows="$DOWNLOAD_DIR/$WINDOWS_NAME"
+  windows_sidecar="$windows.sha256"
+  [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || return 1
+  [[ -s "$receipt" && -s "$apk" && -s "$sidecar" ]] || return 1
+
+  receipt_digest="$(python3 scripts/ci_release_policy.py verify-release-receipt \
+    --receipt "$receipt" \
+    --apk "$apk" \
+    --apk-sidecar "$sidecar" \
+    --expected-sha "$EXPECTED_SHA" \
+    --expected-cert "$EXPECTED_ANDROID_CERT_SHA" \
+    --windows "$windows" \
+    --windows-sidecar "$windows_sidecar")" || return 1
+
+  apksigner="$(find_android_tool apksigner)" || return 1
+  cert_output="$("$apksigner" verify --print-certs "$apk" 2>/dev/null)" || return 1
+  actual_cert="$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' <<< "$cert_output" | head -n 1)"
+  actual_cert="$(printf '%s' "$actual_cert" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
+  [[ "$actual_cert" == "$EXPECTED_ANDROID_CERT_SHA" ]] || return 1
+
+  version_payload="$(curl -fsS --max-time 10 -H 'Cache-Control: no-cache, no-store' \
+    "https://corvia.med.br/api/version?release=$EXPECTED_SHA")" || return 1
+  python3 - "$EXPECTED_SHA" "$version_payload" <<'PY' || return 1
+import json
+import sys
+
+expected, raw = sys.argv[1:]
+payload = json.loads(raw)
+actual = payload.get("commit") or payload.get("version") or payload.get("sha")
+if actual != expected:
+    raise SystemExit(f"public release is {actual!r}, expected {expected!r}")
+PY
+  curl -fsS --max-time 10 -H 'Cache-Control: no-cache' \
+    "https://corvia.med.br/api/health?release=$EXPECTED_SHA" >/dev/null || return 1
+  curl -fsS --max-time 10 -H 'Cache-Control: no-cache' \
+    "https://corvia.med.br/api/ready?release=$EXPECTED_SHA" >/dev/null || return 1
+  printf '%s\n' "$receipt_digest"
+}
+
 require_deployed_sha() { [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || deny "production SHA differs"; }
+
+if [[ "$REQUEST_KIND" == "verify-release" ]]; then
+  require_deployed_sha
+  if existing_android_sha="$(completed_release_digest)"; then
+    printf 'ANDROID_SHA256=%s\nALREADY_DEPLOYED=1\n' "$existing_android_sha"
+    printf 'Release %s receipt and artifacts verified; production unchanged.\n' "$EXPECTED_SHA"
+    exit 0
+  fi
+  deny "release receipt, digest, certificate or runtime state could not be verified"
+fi
+
+if [[ "$REQUEST_KIND" == "deploy-release" || "$REQUEST_KIND" == "deploy-web-android" ]] \
+  && [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]]; then
+  if existing_android_sha="$(completed_release_digest)"; then
+    printf 'ANDROID_SHA256=%s\nALREADY_DEPLOYED=1\n' "$existing_android_sha"
+    printf 'Release %s was already complete; no deployment repeated.\n' "$EXPECTED_SHA"
+    exit 0
+  fi
+  deny "release SHA is already checked out but its completion receipt or runtime state is incomplete"
+fi
 
 if [[ "$REQUEST_KIND" == "windows-stage" ]]; then
   receive_windows_artifact "$RELEASE_STAGING_DIR/$WINDOWS_NAME"
@@ -137,6 +227,9 @@ PY
   trap - EXIT
 fi
 
+# Android compilation may take long enough for main to advance. Re-fetch at
+# the last safe point before changing the production checkout.
+require_current_remote_main
 git checkout main
 git merge --ff-only "$EXPECTED_SHA"
 [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || deny "checkout SHA mismatch"
@@ -189,7 +282,39 @@ if [[ -e "$STABLE_ENTRYPOINT" ]]; then
   bash -n "$next_entrypoint"
   mv -f "$next_entrypoint" "$STABLE_ENTRYPOINT"
 fi
-printf 'ANDROID_SHA256=%s\n' "$expected_android_sha"
+
+# The receipt is written only after deploy, public readiness, native promotion
+# and entrypoint rotation all succeeded. It turns a lost SSH response into a
+# safe no-op on retry, while a partial same-SHA state remains fail-closed.
+require_current_remote_main
+receipt_candidate="$(mktemp "$DOWNLOAD_DIR/.corvia-release-receipt.XXXXXX")"
+trap 'rm -f "$receipt_candidate"' EXIT
+python3 - "$receipt_candidate" "$EXPECTED_SHA" "$expected_android_sha" \
+  "$EXPECTED_ANDROID_CERT_SHA" "$EXPECTED_WINDOWS_SHA" <<'PY'
+from __future__ import annotations
+
+import json
+from pathlib import Path
+import sys
+
+path, sha, android_sha, android_cert, windows_sha = sys.argv[1:]
+payload = {
+    "schema": 1,
+    "sha": sha,
+    "android_name": "corvia-cardiology-spaces-android-1.2.0.apk",
+    "android_sha256": android_sha,
+    "android_cert_sha256": android_cert,
+    "windows_sha256": windows_sha or None,
+}
+Path(path).write_text(json.dumps(payload, sort_keys=True) + "\n", encoding="utf-8")
+PY
+chmod 0640 "$receipt_candidate"
+certified_android_sha="$(completed_release_digest "$receipt_candidate")" \
+  || deny "completed release could not be reconciled before receipt commit"
+mv -f "$receipt_candidate" "$RELEASE_RECEIPT"
+trap - EXIT
+
+printf 'ANDROID_SHA256=%s\n' "$certified_android_sha"
 if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
   printf 'WINDOWS_SHA256=%s\n' "$EXPECTED_WINDOWS_SHA"
 fi

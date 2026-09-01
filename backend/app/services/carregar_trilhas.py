@@ -21,6 +21,7 @@ from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
 
 CAMPOS = {"slug", "titulo", "tema", "objetivo", "nivel", "etapas", "review_status", "revisao"}
 
@@ -69,12 +70,21 @@ def carregar(caminho_json: str) -> dict:
 
             item["etapas"] = sorted(etapas, key=lambda e: e.get("ordem", 0))
             existente = db.query(StudyTrack).filter(StudyTrack.slug == item["slug"]).first()
+            note = combined_review_note(
+                bruto,
+                existing=getattr(existente, "revisao", None),
+            )
+            if note is not None:
+                item["revisao"] = note
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(StudyTrack(**item))
+                registro = StudyTrack(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

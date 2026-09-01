@@ -75,7 +75,7 @@ def test_relacionados_exige_assinatura_ativa(client, db, criar_usuario):
     assert resposta.status_code == 402
 
 
-def test_relacionados_prioriza_relacoes_diretas_e_permite_contexto_tematico_explicito(client, db, criar_usuario):
+def test_relacionados_prioriza_relacoes_diretas_e_rejeita_contexto_tematico_amplo(client, db, criar_usuario):
     _limpar(db)
     _semear(db)
     client.post("/api/admin/grafo/backfill", headers=_headers_admin(criar_usuario))
@@ -99,9 +99,8 @@ def test_relacionados_prioriza_relacoes_diretas_e_permite_contexto_tematico_expl
         },
         headers=headers,
     )
-    assert resposta_expandida.status_code == 200
-    tipos_expandidos = {g["tipo"] for g in resposta_expandida.json()["grupos"]}
-    assert "evidencia" in tipos_expandidos
+    assert resposta_expandida.status_code == 422
+    assert "não é uma relação clínica" in resposta_expandida.json()["detail"]
 
 
 def test_relacionados_rejeita_entity_type_desconhecido(client, db, criar_usuario):

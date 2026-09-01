@@ -21,6 +21,25 @@ from app.services.study_slug_aliases import (
 
 ROOT = Path(__file__).resolve().parents[2]
 
+ALIASES_DEDUPLICACAO_RELEASE = {
+    "deliver-dapagliflozina-icfep":
+        "deliver-consistencia-por-faixa-de-feve-nao-e-reclassificacao-2026",
+    "paragon-hf-sacubitril-valsartana-na-icfep":
+        "paragon-hf-neutro-e-a-faixa-45-49-nao-e-paradigm",
+    "finearts-hf-finerenona-na-icfem-e-icfep":
+        "finearts-hf-populacao-feve-maior-igual-40-faixa-historica-icfei",
+    "summit-tirzepatida-icfep-com-obesidade":
+        "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+    "advor-acetazolamida-diuretico-ic-aguda-descompensada":
+        "advor-mullens-2022-acetazolamida-iv-descongestao-apos-alca",
+    "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes":
+        "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+    "clorotic-hidroclorotiazida-associada-a-diuretico-de-alca-na-ic-aguda":
+        "clorotic-trullas-2023-hctz-oral-add-on-furosemida-iv",
+    "peitho-fibrinolise-em-tep-de-risco-intermediario":
+        "peitho-tenecteplase-versus-placebo-tep-normotenso-vd-e-troponina",
+}
+
 
 def test_aliases_apontam_apenas_para_estudos_canonicos_publicaveis():
     estudos = json.loads((ROOT / "estudos" / "metadados.json").read_text(encoding="utf-8"))
@@ -30,6 +49,28 @@ def test_aliases_apontam_apenas_para_estudos_canonicos_publicaveis():
     assert set(STUDY_SLUG_ALIASES).isdisjoint(slugs)
     assert set(STUDY_SLUG_ALIASES.values()) <= slugs
     assert all(item["review_status"] == "revisado" for item in estudos)
+
+
+def test_oito_estudos_deduplicados_preservam_compatibilidade_de_slug():
+    estudos = json.loads((ROOT / "estudos" / "metadados.json").read_text(encoding="utf-8"))
+    por_slug = {item["slug"]: item for item in estudos}
+    slugs = set(por_slug)
+
+    assert len(ALIASES_DEDUPLICACAO_RELEASE) == 8
+    assert {
+        antigo: STUDY_SLUG_ALIASES.get(antigo)
+        for antigo in ALIASES_DEDUPLICACAO_RELEASE
+    } == ALIASES_DEDUPLICACAO_RELEASE
+    assert set(ALIASES_DEDUPLICACAO_RELEASE).isdisjoint(slugs)
+    assert set(ALIASES_DEDUPLICACAO_RELEASE.values()) <= slugs
+    assert all(
+        por_slug[canonico]["published"] is True
+        and por_slug[canonico]["review_status"] == "revisado"
+        for canonico in ALIASES_DEDUPLICACAO_RELEASE.values()
+    )
+    assert canonicalize_study_slugs(list(ALIASES_DEDUPLICACAO_RELEASE)) == sorted(
+        set(ALIASES_DEDUPLICACAO_RELEASE.values())
+    )
 
 
 def test_trilhas_nao_preservam_slug_de_estudo_apos_consolidacao():

@@ -17,6 +17,10 @@ from urllib.parse import urlparse
 from app.core.db import SessionLocal
 from app.models.specialty_guide import SymptomTriageGuide
 from app.services.clinical_rule_engine import validate_question_definitions, validate_rule_definitions
+from app.services.scientific_loader_safety import (
+    combined_review_note,
+    enforce_safe_publication,
+)
 
 CAMPOS = {"slug", "name", "aliases", "areas", "summary", "questions", "rules", "default_tests", "differentials", "red_flags", "ambulatory_flow", "emergency_flow", "tags", "source_refs", "source_urls", "review_status", "review_note", "version"}
 AREAS = {"geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"}
@@ -76,7 +80,11 @@ def carregar(caminho_json: str) -> dict:
     db = SessionLocal(); novos = atualizados = 0; erros: list[str] = []
     try:
         for raw in items:
-            item = {key: value for key, value in raw.items() if key in CAMPOS}
+            item = {
+                key: value
+                for key, value in raw.items()
+                if key in CAMPOS and key != "review_note"
+            }
             slug = str(item.get("slug") or "").strip()
             if not slug or not str(item.get("name") or "").strip() or not str(item.get("summary") or "").strip(): erros.append(f"{slug or '?'}: slug, name e summary são obrigatórios"); continue
             areas = item.get("areas") or []
@@ -88,10 +96,21 @@ def carregar(caminho_json: str) -> dict:
             rule_errors = validate_rule_definitions(slug, item.get("rules") or [], question_ids)
             if question_errors or rule_errors: erros.extend(question_errors + rule_errors); continue
             existing = db.query(SymptomTriageGuide).filter(SymptomTriageGuide.slug == slug).first()
+            note = combined_review_note(
+                raw,
+                existing=getattr(existing, "review_note", None),
+            )
+            if note is not None:
+                item["review_note"] = note
             if existing:
                 for field, value in item.items(): setattr(existing, field, value)
+                enforce_safe_publication(existing, raw, is_new=False)
                 atualizados += 1
-            else: db.add(SymptomTriageGuide(**item)); novos += 1
+            else:
+                record = SymptomTriageGuide(**item)
+                enforce_safe_publication(record, raw, is_new=True)
+                db.add(record)
+                novos += 1
         if erros: db.rollback()
         else: db.commit()
     finally: db.close()

@@ -32,6 +32,7 @@ from pathlib import Path
 from app.core.db import SessionLocal
 from app.models.content import Document
 from app.models.emergency import EmergencyProtocol
+from app.services.scientific_loader_safety import enforce_safe_publication
 
 
 def _documento_pode_ser_referenciado(
@@ -93,7 +94,8 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
 
             reg = (db.query(EmergencyProtocol)
                      .filter(EmergencyProtocol.slug == item["slug"]).first())
-            if reg is None:
+            is_new = reg is None
+            if is_new:
                 reg = EmergencyProtocol(slug=item["slug"])
                 db.add(reg)
                 novos += 1
@@ -107,7 +109,7 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
             reg.fluxograma_slug = item.get("fluxograma_slug")
             reg.relacionados = list(item.get("relacionados") or [])
             reg.review_status = status_protocolo
-            # `published` fica de fora de propósito — ver docstring do módulo.
+            enforce_safe_publication(reg, item, is_new=is_new)
 
         db.commit()
     finally:
