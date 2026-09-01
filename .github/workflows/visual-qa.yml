@@ -228,6 +228,7 @@ jobs:
             if (!sessionResponse) throw new Error('login visual QA: formulário não enviou a sessão após 2 tentativas');
             if (!sessionResponse.ok()) throw new Error(`login visual QA: HTTP ${sessionResponse.status()}`);
             if (!profileResponse) throw new Error('login visual QA: perfil autenticado não foi confirmado');
+            await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
             await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await page.waitForTimeout(900);
             await selectCompleteMode(page);
