@@ -27135,5 +27135,63 @@
         "por_que": "Fecha a trilha voltando à pergunta de saúde pública por trás da etapa 1: quais causas de morte súbita predominam em cada faixa etária de atleta e se o rastreio sistemático com ECG realmente compensa o custo e os falsos positivos gerados por essa mesma zona cinzenta."
       }
     ]
+  },
+  {
+    "slug": "trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais",
+    "titulo": "Hipertensão por substâncias exógenas: do anti-inflamatório de balcão ao metal pesado na água",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo reconhecer as causas de hipertensão induzidas por exposição a substâncias exógenas que a anamnese padrão costuma deixar passar — anti-inflamatório não esteroidal, alcaçuz/regaliz, esteroide anabolizante androgênico e exposição crônica a arsênio ou chumbo — entender o mecanismo que liga cada uma delas ao eixo mineralocorticoide ou à vasculatura, saber quando isso se confunde bioquimicamente com aldosteronismo primário, e excluir pseudorresistência antes de rotular qualquer um desses casos como hipertensão resistente verdadeira.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+        "por_que": "Abre a trilha situando o problema dentro do catálogo operacional de causas secundárias rastreáveis da Diretriz Brasileira de Hipertensão Arterial 2025 — o Capítulo 2.3.9 desse documento é exatamente sobre medicamentos e substâncias como causa de hipertensão, a categoria que as próximas seis etapas abrem em profundidade, uma exposição de cada vez."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo",
+        "por_que": "A exposição mais prevalente e mais silenciosa: o AINE eleva a pressão e antagoniza o anti-hipertensivo em doses analgésicas comuns, em dias, em qualquer paciente hipertenso — e é, segundo o documento, o mecanismo mais frequente de 'hipertensão resistente' evitável em consultório, o fio que conecta esta trilha ao seu fechamento sobre pseudorresistência."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo",
+        "por_que": "Segunda exposição, agora dietética/fitoterápica: o alcaçuz produz hipertensão com hipopotassemia e alcalose metabólica clinicamente indistinguível do aldosteronismo primário — mas com aldosterona e renina plasmáticas suprimidas, não elevadas, o achado bioquímico que resolve o diagnóstico diferencial se o médico souber pedir os dois exames."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr",
+        "por_que": "Contraponto direto à etapa anterior: se a etapa 3 mostrou o quadro que imita aldosteronismo primário com renina suprimida por causa exógena, esta mostra o próprio aldosteronismo primário verdadeiro — muito mais prevalente do que o ensino clássico sugere, e sistematicamente subrastreado por ARR mesmo nas populações em que a diretriz recomenda rastrear todo hipertenso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio",
+        "por_que": "Terceira exposição, e a mais fácil de perder na anamnese se não for perguntada diretamente: o esteroide anabolizante androgênico, usado por fisiculturistas amadores e não declarado espontaneamente, eleva a pressão por mecanismo distinto do eixo mineralocorticoide das duas etapas anteriores — é a causa a considerar no hipertenso jovem, sem causa aparente, com fenótipo de academia."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+        "por_que": "A trilha muda de registro: das exposições que o paciente escolhe consumir para a que ele não escolhe — arsênio inorgânico em água de poço contaminada, mineração ou agrotóxico histórico. A metanálise de Abir et al. (PMID 22523484) e a coorte de Taiwan mostram gradiente dose-resposta entre exposição crônica e incidência de hipertensão, um mecanismo ambiental que a anamnese de substâncias precisa incluir a pergunta sobre fonte de água."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+        "por_que": "Segunda exposição ambiental/ocupacional, com mecanismo distinto do arsênio: o chumbo eleva a pressão por via direta sobre o tônus vascular e o sistema renina-angiotensina, com relação dose-resposta demonstrada mesmo abaixo do limiar clássico de toxicidade (Menke et al., PMID 16982939) — relevante no saturnismo ocupacional brasileiro, e o documento ainda resolve se a quelação (TACT/TACT2) muda esse risco."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "por_que": "Fecha a trilha com o passo que precisa vir antes de qualquer escalonamento: um paciente exposto a AINE, alcaçuz ou anabolizante que continua com pressão elevada não é automaticamente 'resistente verdadeiro' — técnica de medida, aderência e efeito do avental branco respondem por uma fração grande dos rótulos de resistência, e só depois de excluí-los faz sentido atribuir a hipertensão à substância identificada nas etapas anteriores."
+      }
+    ]
   }
 ]

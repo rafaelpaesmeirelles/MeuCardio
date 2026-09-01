@@ -32924,5 +32924,71 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma",
+    "titulo": "Dispositivos vestíveis podem detectar acúmulo de líquido antes do sintoma",
+    "subtitulo": "O que a pesquisa mostra sobre coletes e sensores que medem o pulmão por fora — e por que a balança de casa continua sendo a ferramenta mais confiável hoje",
+    "tema": "Insuficiência cardíaca",
+    "documento_slug": "impedancia-toracica-bioeletrica-nao-invasiva-vestivel-para-deteccao-precoce-de-congestao",
+    "resumo": "Pesquisadores vêm testando coletes e sensores vestíveis que medem, por fora do corpo, sinais de acúmulo de líquido no pulmão antes que o paciente sinta falta de ar ou note inchaço. Este texto explica em linguagem simples como a ideia funciona, o que os estudos já mostraram, o que ainda falta confirmar, e por que — enquanto isso — pesar-se todos os dias continua sendo a forma mais acessível de perceber uma piora cedo.",
+    "secoes": [
+      {
+        "titulo": "Por que \"pegar cedo\" faz tanta diferença na insuficiência cardíaca",
+        "paragrafos": [
+          "Na insuficiência cardíaca, o líquido costuma se acumular no corpo antes de você sentir qualquer coisa diferente. Esse acúmulo começa nos tecidos e só depois vira sintoma percebido — inchaço que se nota, falta de ar que atrapalha, cansaço maior que o normal para a mesma atividade.",
+          "Hoje, os sinais mais usados para perceber essa piora em casa são o peso corporal e os próprios sintomas relatados — e eles já são úteis, mas chegam relativamente tarde: a falta de ar por líquido no pulmão costuma aparecer só depois de dias a semanas de acúmulo progressivo, quando a situação já pede uma resposta mais urgente. Por isso, pesquisadores vêm testando aparelhos vestíveis (colete, cinta ou adesivo) capazes de captar esse acúmulo de forma direta, antes mesmo de aparecer no peso ou no sintoma."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como funciona a ideia por trás desses aparelhos",
+        "paragrafos": [
+          "A tecnologia mais estudada nessa categoria se chama bioimpedância torácica. Na prática, o aparelho passa uma corrente elétrica muito fraca e totalmente segura pelo tórax e mede a resistência que os tecidos oferecem a essa corrente. Pulmão com líquido acumulado conduz eletricidade melhor do que pulmão bem arejado — então, quanto mais líquido se acumula, menor fica a resistência medida pelo aparelho.",
+          "É um princípio parecido com o de um sensor de pressão que já existe implantado dentro da artéria pulmonar em alguns pacientes selecionados, mas o caminho aqui é bem diferente: em vez de um procedimento para implantar um sensor, o aparelho vestível fica por fora do corpo — sem cirurgia, sem risco de sangramento ou infecção de dispositivo, e em tese reutilizável a qualquer momento pelo próprio paciente."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que os estudos já mostraram até agora",
+        "paragrafos": [
+          "Três estudos com desenhos diferentes testaram essa ideia, e vale conhecer os três porque cada um responde a uma pergunta diferente."
+        ],
+        "itens": [
+          "Um colete vestível usado em casa por 45 dias seguidos, em mais de 100 pacientes que haviam acabado de sair do hospital, conseguiu prever quem teria piora ou precisaria de mais diurético — mas errou (deu alarme falso) em cerca de 3 em cada 10 medições, então não é um instrumento perfeito.",
+          "Um sensor de uso rápido (menos de 5 minutos por medição) mostrou que sua leitura acompanha bem outros sinais já conhecidos de acúmulo de líquido, como a variação do peso e imagens de ultrassom do pulmão — mas esse estudo não testou se usar o aparelho de fato evita internação ou morte.",
+          "Um estudo maior e mais rigoroso, com sorteio dos pacientes entre usar ou não um colete de automedição diária em casa, mostrou resultado favorável de verdade: menos internações por insuficiência cardíaca e menor mortalidade no grupo que usou o colete. Esse é o tipo de resultado mais forte — mas veio de um único estudo feito em apenas dois centros, o que ainda pede confirmação em pesquisas maiores antes de virar prática amplamente recomendada."
+        ]
+      },
+      {
+        "titulo": "O que isso significa para você, hoje",
+        "paragrafos": [
+          "Nenhum desses aparelhos vestíveis está, até o momento, estabelecido como parte do cuidado padrão e amplamente disponível para todo paciente com insuficiência cardíaca — os resultados são promissores, mas ainda pedem mais confirmação e não são intercambiáveis entre si, já que são tecnologias diferentes de fabricantes diferentes.",
+          "Por isso, o hábito que continua sendo a ferramenta mais acessível e já comprovadamente útil no dia a dia — sem depender de aparelho nenhum — é a pesagem diária, sempre no mesmo horário e nas mesmas condições, junto com a atenção a inchaço e falta de ar. Se a sua equipe de saúde oferecer, no futuro, algum programa ou estudo com um desses dispositivos vestíveis, isso pode ser um complemento interessante — mas não substitui a pesagem e o contato rápido com a equipe quando algo muda."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Ganho de peso rápido em poucos dias (por exemplo, mais de 2 kg em 2 a 3 dias)",
+      "Inchaço novo ou pior nas pernas, tornozelos ou barriga",
+      "Piora da falta de ar, inclusive para esforços que antes não causavam sintoma, ou necessidade de mais travesseiros para dormir",
+      "Acordar à noite sem ar",
+      "Cansaço muito maior que o habitual para a mesma atividade",
+      "Falta de ar em repouso, dor no peito ou desmaio — nesses casos, procure atendimento de urgência imediatamente"
+    ],
+    "perguntas": [
+      "Existe algum programa ou estudo com dispositivo vestível de monitoramento disponível para o meu caso?",
+      "Enquanto isso, qual variação de peso, em quantos dias, deve me fazer entrar em contato com a equipe?",
+      "Um desses aparelhos, se eu vier a usar algum dia, substituiria a pesagem diária ou seria complementar?",
+      "Existe diferença entre esses sensores vestíveis e o sensor implantado de pressão pulmonar que às vezes é indicado para outros pacientes?",
+      "Quem eu devo avisar, e como, se perceber um sinal de alerta antes da minha próxima consulta?"
+    ],
+    "fontes": [
+      "Darling CE, Dovancescu S, Saczynski JS, Riistama J, Sert Kuniyoshi F, Rock J, et al. Bioimpedance-Based Heart Failure Deterioration Prediction Using a Prototype Fluid Accumulation Vest-Mobile Phone Dyad: An Observational Study. JMIR Cardio. 2017;1(1):e1. DOI: 10.2196/cardio.6057. PMID: 31758769",
+      "Curtain JP, Talebi A, McIntosh A, McConnachie A, O'Donnell J, Welsh P, et al. Measuring congestion with a non-invasive monitoring device in heart failure and haemodialysis: CONGEST-HF. Eur J Heart Fail. 2024;26(6):1383-1392. DOI: 10.1002/ejhf.3290. PMID: 38741283",
+      "Shochat MK, Shotan A, Blondheim DS, Kazatsker M, Dahan I, Asif A, Rozenman Y, Kleiner I, Weinstein JM, Frimerman A, Vasilenko L, Meisel SR. Non-Invasive Lung IMPEDANCE-Guided Preemptive Treatment in Chronic Heart Failure Patients: A Randomized Controlled Trial (IMPEDANCE-HF Trial). J Card Fail. 2016;22(9):713-722. DOI: 10.1016/j.cardfail.2016.03.015. PMID: 27058408"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

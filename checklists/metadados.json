@@ -41840,5 +41840,102 @@
       }
     ],
     "revisao": "Checklist extraído do documento revisado 'Cetoacidose diabética euglicêmica associada a inibidores de SGLT2', cobrindo suspeita diagnóstica (armadilha da glicemia normal), fatores precipitantes, protocolo de suspensão/reinício perioperatório por fármaco (FDA 2020 e posicionamento SBD/SBA/ABESO 2025) e o cenário de cirurgia de emergência. Pendente de validação clínica final."
+  },
+  {
+    "slug": "selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave",
+    "condicao": "Insuficiência tricúspide secundária grave — seleção de paciente para intervenção (cirurgia ou tratamento transcateter)",
+    "resumo": "Sequência de checagem para decidir se, e como, intervir na insuficiência tricúspide (IT) secundária grave sintomática: otimização clínica prévia, exclusão de disfunção ventricular ou hipertensão pulmonar que tornem o procedimento fútil, indicação de cirurgia concomitante ou isolada, e critérios para tratamento transcateter (T-TEER) quando o risco cirúrgico é alto — conforme a diretriz ESC/EACTS 2025 e o TRILUMINATE Pivotal.",
+    "documento_origem": "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — já citada e verificada em 'insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md' desta pasta; título/revista/ano reconferidos nesta sessão via PubMed E-utilities.",
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Recommendation Table 9, texto integral já conferido em 30/07/2026 por sessão anterior; título/revista/ano reconferidos nesta sessão via PubMed E-utilities."
+    ],
+    "itens": [
+      {
+        "id": "it-sec-confirmar-mecanismo",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar por ecocardiograma que a insuficiência tricúspide grave é secundária (dilatação do anel e/ou do ventrículo direito, em geral por hipertensão pulmonar, fibrilação atrial ou doença do coração esquerdo) — não primária (endocardite, lesão por cabo de marca-passo/CDI, doença carcinoide), que segue algoritmo distinto",
+        "origem_secao": "Introdução e o que a árvore não mostra"
+      },
+      {
+        "id": "it-sec-otimizacao-clinica-previa",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente permanece sintomático apesar de terapia clínica otimizada — diurético associado ao tratamento da causa: controle de ritmo/frequência da fibrilação atrial, otimização da insuficiência cardíaca esquerda e manejo da hipertensão pulmonar — antes de considerar qualquer intervenção",
+        "origem_secao": "Árvore de decisão — nó D1"
+      },
+      {
+        "id": "it-sec-nao-otimizado-manter-clinico",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o paciente ainda não estiver em terapia clínica otimizada, manter tratamento clínico e reavaliar periodicamente antes de discutir intervenção",
+        "origem_secao": "Árvore de decisão — nó D1 / C1"
+      },
+      {
+        "id": "it-sec-excluir-disfuncao-vd-ve-hpp",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Excluir disfunção grave de ventrículo direito, disfunção grave de ventrículo esquerdo e hipertensão pulmonar pré-capilar antes de indicar intervenção — presença de qualquer um desses achados torna o procedimento potencialmente fútil, porque o problema deixa de ser a regurgitação e passa a ser a falência que ela deixou para trás; nesse cenário, priorizar tratamento clínico otimizado, incluindo manejo avançado de insuficiência cardíaca quando indicado",
+        "origem_secao": "Árvore de decisão — nó D2 / C2; Por que a disfunção grave de VD interrompe o caminho"
+      },
+      {
+        "id": "it-sec-cirurgia-concomitante",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Verificar se há indicação concomitante de cirurgia cardíaca (por exemplo, cirurgia de valva mitral) e risco cirúrgico aceitável — nesse caso, indicar cirurgia da valva tricúspide concomitante à cirurgia já planejada",
+        "origem_secao": "Árvore de decisão — nó D3 / C3"
+      },
+      {
+        "id": "it-sec-cirurgia-isolada-considerar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Na ausência de outra cirurgia cardíaca indicada, não presumir inoperabilidade: em paciente sintomático operável, com risco aceitável após avaliação pelo Heart Team, considerar cirurgia tricúspide isolada — Classe IIa, Nível B — preferindo reparo ao invés de troca quando tecnicamente viável, antes que disfunção avançada de VD/VE ou hipertensão pulmonar tornem a intervenção fútil",
+        "origem_secao": "Árvore de decisão — nó D3B / C3B; Por que a cirurgia isolada não pode desaparecer da árvore"
+      },
+      {
+        "id": "it-sec-alto-risco-avaliar-transcateter",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente com alto risco cirúrgico, avaliar anatomia do anel tricúspide, tamanho e mobilidade dos folhetos em Centro de Válvula Cardíaca experiente, pelo Heart Team, para definir adequação ao tratamento transcateter",
+        "origem_secao": "Árvore de decisão — nó D4; O que a árvore não mostra"
+      },
+      {
+        "id": "it-sec-t-teer-indicacao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Com anatomia adequada, indicar tratamento transcateter da valva tricúspide (T-TEER quando essa é a modalidade escolhida) — Classe IIa, Nível A — com o objetivo de melhorar qualidade de vida e promover remodelamento de VD; se a anatomia não for adequada e não houver outra opção segura, manter tratamento clínico otimizado e reavaliação",
+        "origem_secao": "Árvore de decisão — nó D4 / C4 / C5"
+      },
+      {
+        "id": "it-sec-comunicar-desfecho-esperado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Ao discutir T-TEER com o paciente, comunicar apenas o que o TRILUMINATE Pivotal sustenta — melhora de sintomas e qualidade de vida (diferença de +11,7 pontos no KCCQ, p<0,001) — e não prometer redução de mortalidade ou de hospitalização por insuficiência cardíaca, desfechos que foram semelhantes entre os grupos no ensaio (óbito ou cirurgia tricúspide: 9,4% vs. 10,6%; hospitalização por IC: 0,21 vs. 0,17 evento/paciente-ano)",
+        "origem_secao": "O que o TRILUMINATE Pivotal realmente mostrou"
+      },
+      {
+        "id": "it-sec-nao-confundir-outras-etiologias",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Não aplicar esta sequência a IT primária (endocardite, lesão por cabo de dispositivo, doença carcinoide) nem a estenose tricúspide reumática — cada uma segue algoritmo próprio, com conduta distinta",
+        "origem_secao": "O que a árvore não mostra"
+      },
+      {
+        "id": "it-sec-heart-team-obrigatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Documentar que a decisão entre cirurgia (concomitante ou isolada) e tratamento transcateter foi discutida em Heart Team — a árvore não substitui essa avaliação individualizada, que pesa anatomia do anel, gravidade da IT e grau de remodelamento do VD",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md (já publicado, review_status: revisado). Itens fiéis ao texto e à árvore de decisão de origem, sem adição de critérios não presentes no documento. Aguarda revisão médica independente antes de qualquer promoção de review_status."
+    }
   }
 ]
