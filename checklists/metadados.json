@@ -41022,5 +41022,75 @@
       }
     ],
     "revisao": "Checklist extraído em 01/09/2026 da diretriz ESC 2023 já publicada no repositório, cobrindo estratificação de risco (SCORE2-Diabetes), metas terapêuticas (HbA1c, PA, LDL-C) e escolha farmacológica por categoria de risco, além do rastreamento sistemático de FA, DRC e IC. Itens fiéis ao conteúdo do documento de origem; pendente de validação clínica final."
+  },
+  {
+    "slug": "manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care",
+    "condicao": "Manejo integrado da fibrilação atrial pelo modelo AF-CARE (ESC 2024)",
+    "resumo": "Checklist de execução para o manejo longitudinal da fibrilação atrial segundo o eixo AF-CARE da diretriz ESC 2024: comorbidades, prevenção de AVC, controle de sintomas por frequência/ritmo e reavaliação dinâmica. Cobre também a decisão de cardioversão e a manutenção da anticoagulação após reversão do ritmo.",
+    "documento_origem": "esc-2024-diretriz-fibrilacao-atrial-af-care",
+    "theme": "Fibrilação atrial",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723."
+    ],
+    "itens": [
+      {
+        "id": "af-care-comorbidades",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores que promovem recorrência e progressão da FA identificados e manejados ativamente como parte do próprio tratamento (não como acessório): hipertensão, obesidade, insuficiência cardíaca, diabetes, apneia do sono, sedentarismo e consumo excessivo de álcool",
+        "origem_secao": "C — Comorbidades e fatores de risco"
+      },
+      {
+        "id": "af-care-cha2ds2-va",
+        "categoria": "estratificacao",
+        "obrigatorio": true,
+        "texto": "Risco tromboembólico individual avaliado com CHA₂DS₂-VA, tratando sexo feminino como modificador de risco em vez de fator isolado suficiente para anticoagulação, e reavaliado ao longo do tempo",
+        "origem_secao": "A — Avoid stroke and thromboembolism"
+      },
+      {
+        "id": "af-care-fa-subclinica-ahre",
+        "categoria": "estratificacao",
+        "obrigatorio": false,
+        "texto": "Quando há FA subclínica/AHRE detectada por dispositivo, decisão de anticoagular individualizada considerando duração/carga arrítmica, risco tromboembólico e risco hemorrágico",
+        "origem_secao": "A — Avoid stroke and thromboembolism"
+      },
+      {
+        "id": "af-care-controle-ritmo-precoce",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Controle de ritmo considerado precocemente em pacientes apropriados, reconhecendo papel além do simples alívio sintomático em populações selecionadas",
+        "origem_secao": "R — Reduce symptoms by rate and rhythm control"
+      },
+      {
+        "id": "af-care-ablacao-primeira-linha",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Ablação por cateter considerada como opção de primeira linha em FA paroxística, em pacientes apropriados, após decisão compartilhada",
+        "origem_secao": "R — Reduce symptoms by rate and rhythm control"
+      },
+      {
+        "id": "af-care-cardioversao-decisao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Decisão sobre cardioversão integra duração conhecida ou provável da FA, anticoagulação prévia, risco tromboembólico e uso de imagem quando apropriado",
+        "origem_secao": "Cardioversão e anticoagulação"
+      },
+      {
+        "id": "af-care-anticoagulacao-pos-cardioversao",
+        "categoria": "anticoagulacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação não interrompida apenas porque o ritmo sinusal foi restaurado, quando o risco basal de AVC permanece elevado",
+        "origem_secao": "Cardioversão e anticoagulação"
+      },
+      {
+        "id": "af-care-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação periódica programada cobrindo risco tromboembólico, risco hemorrágico, sintomas, carga de FA, controle de comorbidades e necessidade de mudança da estratégia de frequência/ritmo",
+        "origem_secao": "E — Evaluation and dynamic reassessment"
+      }
+    ],
+    "revisao": "Checklist extraído do documento esc-2024-diretriz-fibrilacao-atrial-af-care.md em 01/09/2026, sessão de produção científica (lote99). Pendente de revisão clínica final antes de qualquer promoção de review_status."
   }
 ]

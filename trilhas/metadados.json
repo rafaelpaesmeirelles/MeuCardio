@@ -26651,5 +26651,75 @@
         "por_que": "Segundo diagnóstico diferencial, de mecanismo oposto ao da antraciclina: miocardite fulminante imunomediada por inibidor de checkpoint, de instalação aguda e mortalidade alta, que exige imunossupressão emergencial e não vigilância por strain nem betabloqueador profilático."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al",
+    "titulo": "Insuficiência cardíaca por amiloidose cardíaca: do reconhecimento do fenótipo à terapia específica por etiologia (ATTR versus AL)",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Reconhecer a amiloidose cardíaca como fenocópia de ICFEp/hipertrofia por trás de um subgrupo de pacientes com insuficiência cardíaca, confirmar o diagnóstico de forma não invasiva, e separar a estratégia terapêutica conforme a etiologia — ATTR (selvagem, com sobreposição a estenose aórtica no idoso) versus AL (cadeia leve, tratamento hematológico) — até o manejo da descompensação aguda.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "diagnostico-e-tratamento-da-amiloidose-cardiaca",
+        "por_que": "Ponto de partida: visão geral de por que a amiloidose cardíaca é uma causa subdiagnosticada de insuficiência cardíaca com fenótipo restritivo/hipertrófico, e o panorama diagnóstico-terapêutico que organiza todo o resto da trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+        "por_que": "O mesmo raciocínio em árvore de decisão: da suspeita clínica/ecocardiográfica à confirmação por cintilografia com pirofosfato e triagem de cadeia leve, sem necessidade de biópsia miocárdica na maioria dos casos."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "amiloidose-cardiaca-por-transtirretina-selvagem-attrwt-no-idoso",
+        "por_que": "A etiologia mais prevalente na prática: ATTR selvagem (não hereditária) do idoso, frequentemente confundida com HFpEF hipertensiva comum — o subtipo que a trilha aprofunda primeiro."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-e-amiloidose-cardiaca-por-transtirretina-overlap-no-idoso",
+        "por_que": "A armadilha diagnóstica mais relevante do ATTRwt: sobreposição com estenose aórtica calcificada no idoso, onde tratar só a valva sem reconhecer a amiloidose associada muda o prognóstico."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tafamidis-treatment-for-patients-with-transthyretin-amyloid-cardiomyopathy-attr-act",
+        "por_que": "O ensaio pivotal (ATTR-ACT) que estabeleceu a primeira terapia específica para cardiomiopatia por ATTR, reduzindo mortalidade e hospitalização — a virada de 'só tratar a IC' para 'tratar a doença de base'."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "acoramidis-extensao-aberta-de-54-meses-do-attribute-cm",
+        "por_que": "A segunda opção terapêutica para ATTR, com dados de seguimento de longo prazo (extensão aberta do ATTRibute-CM) — mostra ao leitor que já há alternativa e mais evidência de durabilidade do efeito."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "amiloidose-cardiaca-por-cadeia-leve-al-e-o-ensaio-andromeda-daratumumabe",
+        "por_que": "Muda de eixo: a etiologia AL exige tratamento hematológico (terapia dirigida ao clone de plasmócitos), não estabilizador de transtirretina — o ANDROMEDA mostra o daratumumabe mudando esse manejo."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "al-iss-estadiamento-internacional-da-amiloidose-al-cardiaca-2026",
+        "por_que": "Ferramenta prática para estadiar prognóstico especificamente no AL cardíaco, usando biomarcadores — complementa o ensaio anterior com a régua que orienta intensidade de tratamento e seguimento."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "amiloidose-relacionada-a-dialise-beta2-microglobulina-e-acometimento-cardiovascular",
+        "por_que": "Uma terceira etiologia, menos lembrada: amiloidose por beta-2-microglobulina em pacientes em diálise crônica — fecha o diagnóstico diferencial etiológico antes de passar ao desfecho clínico agudo."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "descompensacao-aguda-da-amiloidose-cardiaca-no-idoso",
+        "por_que": "Fecha a trilha na prática clínica: como a fisiologia restritiva da amiloidose muda o manejo da descompensação aguda (resposta diurética, sensibilidade a hipotensão) em relação à IC 'comum', unindo tudo o que foi visto sobre etiologia e tratamento específico."
+      }
+    ]
   }
 ]

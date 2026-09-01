@@ -19434,5 +19434,47 @@
       "Guichard JL, Bonno EL, Nassif ME, et al. Two-Year Results of PROACTIVE-HF Trial Stratified by Left Ventricular Ejection Fraction. J Card Fail. 2026. PMID: 41833749. DOI: 10.1016/j.cardfail.2026.01.023."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2",
+    "titulo": "Empagliflozina no diabetes tipo 2 sem IC: capacidade funcional ou remodelamento ventricular?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 62 anos, diabetes tipo 2 há 8 anos, HbA1c 7,9% em uso de metformina, hipertensão controlada, sem diagnóstico de insuficiência cardíaca. Ecocardiograma basal com função sistólica preservada e sem dilatação de câmaras. Relata leve dispneia aos grandes esforços, sem outros sintomas. Foi iniciada empagliflozina 25 mg/dia visando controle glicêmico e redução de risco cardiovascular e renal. Na consulta de retorno em 3 meses, o paciente pergunta se a medicação já deveria ter melhorado sua disposição para caminhar e se o exame do coração deveria mostrar alguma mudança.",
+    "pergunta": "Com base na evidência atual, incluindo um RCT mecanístico de 2026 que avaliou empagliflozina em diabetes tipo 2 sem IC manifesta, qual afirmação está corretamente fundamentada?",
+    "opcoes": [
+      "A empagliflozina deve melhorar o VO2 pico e a capacidade de exercício em 3 meses, como demonstrado nesse RCT mecanístico; se isso não ocorrer, a dose deve ser aumentada",
+      "O benefício cardiovascular e renal da empagliflozina, estabelecido em grandes ensaios de desfecho no diabetes tipo 2, é independente de melhora demonstrável de capacidade funcional ou de mudanças estruturais de curto prazo observadas em estudos mecanísticos menores",
+      "Como o RCT mecanístico não mostrou melhora do VO2 pico, inibidores de SGLT2 não devem ser iniciados em diabéticos tipo 2 sem insuficiência cardíaca estabelecida",
+      "A redução do volume diastólico final do ventrículo esquerdo observada no RCT prova o mecanismo pelo qual os inibidores de SGLT2 reduzem hospitalização por insuficiência cardíaca, e a dose deve ser titulada para maximizar essa redução de volume"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Um RCT mecanístico randomizado, duplo-cego e placebo-controlado publicado em 2026 avaliou empagliflozina 25 mg/dia por 3 meses em 57 adultos com diabetes tipo 2 sem insuficiência cardíaca manifesta. O desfecho primário, mudança no VO2 pico ao teste cardiopulmonar, não diferiu entre os grupos. Já o volume diastólico final do ventrículo esquerdo em repouso caiu com empagliflozina e aumentou com placebo (diferença estatisticamente significativa), sugerindo um efeito hemodinâmico ou de remodelamento precoce que ocorre dissociado de qualquer ganho de capacidade funcional. Esse achado mecanístico não deve ser confundido com os desfechos clínicos robustos já estabelecidos para os inibidores de SGLT2 no diabetes tipo 2 — redução de mortalidade cardiovascular, hospitalização por insuficiência cardíaca e progressão de doença renal — demonstrados em ensaios de desfecho de grande porte e longo seguimento. Portanto, a ausência de melhora do VO2 pico em 3 meses não contraindica o uso da droga (opção C incorreta), tampouco a mudança de volume ventricular comprova o mecanismo do benefício clínico já demonstrado nem justifica ajuste de dose com esse alvo (opção D incorreta), e não há base para prometer ao paciente melhora sintomática de curto prazo como efeito esperado do fármaco (opção A incorreta). O uso correto da evidência é orientar o paciente de que o benefício cardiovascular e renal da empagliflozina é sustentado por desfechos clínicos duros em estudos maiores, e não depende de sentir-se mais disposto em poucos meses nem de um exame de imagem mostrando mudança estrutural precoce.",
+    "source_refs": [
+      "Nanayakkara N, Huang MLH, La Gerche A, et al. Effects of empagliflozin on cardiac function and cardiorespiratory fitness in people with type 2 diabetes: a randomised controlled trial. Cardiovasc Diabetol Endocrinol Rep. 2026;12(1):14. DOI: 10.1186/s40842-026-00281-9. PMID: 41918037.",
+      "Zinman B, Wanner C, Lachin JM, et al. Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes (EMPA-REG OUTCOME). N Engl J Med. 2015;373(22):2117-2128. DOI: 10.1056/NEJMoa1504720. PMID: 26378978."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "hipertensao-alvo-intensivo-diabetico-esprit-derruba-accord",
+    "titulo": "Hipertenso diabético de alto risco: o alvo intensivo ainda é contraindicado?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, diabetes tipo 2 há 12 anos, doença arterial coronariana estabelecida (angioplastia há 4 anos), sem AVC prévio. Em uso de três anti-hipertensivos, com boa adesão e tolerância. PA média de consultório nas últimas duas consultas: 134/82mmHg e 132/80mmHg. TFGe 72mL/min/1,73m², potássio 4,3mEq/L, sem episódios de hipotensão ortostática ou síncope. O cardiologista assistente hesita em intensificar o tratamento, lembrando que o ACCORD-BP (2010) não mostrou redução do desfecho composto com alvo sistólico abaixo de 120mmHg em diabéticos.",
+    "pergunta": "Com base na evidência mais recente, qual conduta quanto ao alvo pressórico está mais bem sustentada neste paciente?",
+    "opcoes": [
+      "Manter o alvo abaixo de 140mmHg, já atingido, porque o ACCORD-BP demonstrou que o alvo intensivo não beneficia pacientes diabéticos",
+      "Intensificar o tratamento buscando alvo sistólico abaixo de 120mmHg, com monitoração de hipotensão, síncope e eletrólitos, já que o ESPRIT (2024) randomizou 4.359 diabéticos e não encontrou heterogeneidade de efeito por status de diabetes",
+      "Reduzir o alvo apenas para abaixo de 130mmHg, pois nenhum ensaio randomizado testou alvo abaixo de 120mmHg especificamente em diabéticos com doença coronariana",
+      "Não modificar a conduta até que a exceção do diabético seja formalmente revista em diretriz, mantendo o alvo padrão indefinidamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A 'exceção do diabético' baseada no ACCORD-BP (2010) não se sustenta mais. O ACCORD-BP randomizou 4.733 diabéticos tipo 2 para alvo sistólico <120 versus <140mmHg e encontrou HR 0,88 (IC95% 0,73-1,06; p=0,20) para o desfecho composto — resultado lido por 14 anos como 'o alvo intensivo não funciona no diabético'. Mas o ESPRIT (Lancet, 2024), com 11.255 participantes de alto risco cardiovascular (incluindo 4.359 diabéticos e 3.022 com AVC prévio, as duas populações excluídas do SPRINT), testou o mesmo alvo <120 versus <140mmHg e achou exatamente o mesmo HR — 0,88 (IC95% 0,78-0,99; p=0,028) — porém com mais que o dobro da amostra do ACCORD-BP, o intervalo de confiança encolheu o suficiente para cruzar o limiar de significância, e não houve heterogeneidade de efeito por presença de diabetes, duração do diabetes ou história de AVC. Ou seja: o ACCORD-BP não mostrou que o alvo intensivo não funciona no diabético, mostrou que o ensaio era subdimensionado para detectar um efeito daquele tamanho. Neste paciente, sem contraindicação (função renal preservada, potássio normal, sem hipotensão ou síncope prévias), a evidência atual sustenta a intensificação do alvo, com vigilância ativa — o próprio ESPRIT documentou excesso de síncope como evento adverso grave no braço intensivo (HR 3,00; IC95% 1,35-6,68), embora sem diferença significativa em hipotensão, distúrbio eletrolítico ou lesão renal aguda.",
+    "source_refs": [
+      "ACCORD Study Group; Cushman WC, Evans GW, Byington RP, Goff DC Jr, et al. Effects of intensive blood-pressure control in type 2 diabetes mellitus. N Engl J Med. 2010;362(17):1575-1585. DOI: 10.1056/NEJMoa1001286. PMID: 20228401",
+      "Liu J, Li Y, Ge J, Yan X, Zhang H, et al; ESPRIT Collaborative Group. Lowering systolic blood pressure to less than 120 mm Hg versus less than 140 mm Hg in patients with high cardiovascular risk with and without diabetes or previous stroke: an open-label, blinded-outcome, randomised trial. Lancet. 2024;404(10449):245-255. DOI: 10.1016/S0140-6736(24)01028-6. PMID: 38945140"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]
