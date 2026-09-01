@@ -1933,3 +1933,27 @@ Quarto lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 25 | 275 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **471** | **4.429** |
+
+## Lote 90 — concluído (commit c08bda26)
+
+Quinto lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **2 casos clínicos**: coronariopata hipertenso com PA 118/68mmHg — manter esquema, curva em J tem baixa certeza (Diretriz Brasileira HAS 2025); dapagliflozina pós-ablação de FA sem indicação metabólica — DARE-AF neutro, não estender extrapolação observacional.
+- **2 checklists**: classificação de risco CV no diabético pela Diretriz SBD 2025 (9 itens); escolha do fármaco de controle de frequência por FEVE, ESC 2024 AF-CARE (10 itens).
+- **1 documento standalone**: efeito anti-hipertensivo dos agonistas de GLP-1/GIP-GLP-1 — tirzepatida dose-dependente com risco de hipotensão, semaglutida neutra, sem ensaio dedicado a hipertensão como desfecho primário.
+- **1 material-paciente**: dupla antiagregação plaquetária pós-stent — por quanto tempo tomar.
+- **1 trilha**: "Hipertensão: por que o controle foge do esperado" — 8 etapas (padrões de risco, TIME/BedMed, AINE/clonidina, causa secundária, ACC/AHA 2025).
+- **Verificação de integridade**: nenhum slug colide (926 casos / 478 checklists / 449 materiais / 556 trilhas conferidos); 6 links de Tudo com Tudo re-verificados.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.733 itens.
+
+### Status consolidado (após Lote 90)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 187 | 2.213 |
+| Casos clínicos | 900 | 73 | 827 |
+| Checklists | 600 | 54 | 546 |
+| Materiais-paciente | 500 | 43 | 457 |
+| Trilhas | 300 | 26 | 274 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **479** | **4.421** |
