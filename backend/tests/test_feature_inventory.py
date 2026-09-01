@@ -35,7 +35,7 @@ def test_published_feature_inventory_is_intact():
     assert _inventory_count(result.stdout, "routers FastAPI") >= 61
 
 
-def test_evidence_editorial_note_is_preserved_in_detail():
+def test_evidence_editorial_note_is_preserved_without_api_exposure():
     evidence = EvidenceRecord(
         slug="teste-nota-editorial",
         statement="Recomendação de teste.",
@@ -54,5 +54,6 @@ def test_evidence_editorial_note_is_preserved_in_detail():
 
     detail = _detail(evidence)
 
+    assert evidence.review_note == "Conferido pelo corpo editorial."
     assert detail["review_status"] == "revisado"
-    assert detail["review_note"] == "Conferido pelo corpo editorial."
+    assert "review_note" not in detail

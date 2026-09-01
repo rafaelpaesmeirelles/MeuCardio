@@ -156,6 +156,7 @@ def _contextual_studies(
 
 def _filter_groups_by_subject(
     groups: list[dict], themes: tuple[str, ...], origin_subject: str | None,
+    *, somente_melhor_por_grupo: bool = False,
 ) -> None:
     """Remove theme-only neighbours from every non-study content front.
 
@@ -188,6 +189,9 @@ def _filter_groups_by_subject(
             if match.accepted:
                 matched.append((match.score, position, item, match))
         matched.sort(key=lambda row: (-row[0], row[1]))
+        if somente_melhor_por_grupo and matched:
+            melhor_score = matched[0][0]
+            matched = [row for row in matched if row[0] == melhor_score]
         group["itens"] = [
             _with_match_metadata(row[2], row[3]) for row in matched
         ][:LIMITE_POR_CATEGORIA]
@@ -291,6 +295,13 @@ def buscar_relacionados_contextuais(
         excluir_tipo=excluir_tipo,
         excluir_slug=excluir_slug,
     )
+    origem_editorial_enriquecida = bool(
+        assunto
+        and excluir_slug
+        and assunto == excluir_slug
+        and excluir_tipo in {"estudo", "evidencia"}
+        and origin_subject != assunto
+    )
 
     # The legacy service intentionally attached every drug only to
     # Farmacologia. For launch, keep that broad catalogue behavior there, but
@@ -329,7 +340,16 @@ def buscar_relacionados_contextuais(
             for study, match in studies
         ]
         if filtrar_grupos_por_assunto:
-            _filter_groups_by_subject(groups, variants, origin_subject)
+            _filter_groups_by_subject(
+                groups,
+                variants,
+                origin_subject,
+                # Metadados editoriais ampliam o assunto para resgatar um
+                # item específico (por exemplo, título/tags de um ensaio).
+                # Nesse caminho, resultados mais fracos do mesmo grupo são
+                # apenas vizinhos do tema e não relações do item de origem.
+                somente_melhor_por_grupo=origem_editorial_enriquecida,
+            )
         relation_scope = (
             "clinical_match" if filtrar_grupos_por_assunto else "structured_clinical_topic"
         )

@@ -1,105 +1,148 @@
+import json
 import re
 from pathlib import Path
 
+from sqlalchemy import Boolean, String, create_engine
+from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
+
 from app.commands import publish_preserved_content as command
+from app.commands import reconcile_content as reconciliation
 
 
-class _Field:
-    __hash__ = object.__hash__
-
-    def is_(self, value):
-        return ("is", value)
-
-    def in_(self, values):
-        return ("in", frozenset(values))
-
-    def __eq__(self, value):
-        return ("eq", value)
+class _Base(DeclarativeBase):
+    pass
 
 
-class _Model:
-    slug = _Field()
-    published = _Field()
-    review_status = _Field()
+class _Document(_Base):
+    __tablename__ = "test_preserved_documents"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String, unique=True)
+    published: Mapped[bool] = mapped_column(Boolean, default=False)
+    review_status: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
-class _Query:
-    def __init__(self, amount):
-        self.amount = amount
-        self.filters = []
-        self.updated = False
+class _Evidence(_Base):
+    __tablename__ = "test_preserved_evidence"
 
-    def filter(self, *conditions):
-        self.filters.extend(conditions)
-        return self
-
-    def count(self):
-        return self.amount
-
-    def update(self, values, synchronize_session=False):
-        assert values.get(_Model.published) is True
-        assert synchronize_session is False
-        self.updated = True
-        return self.amount
+    id: Mapped[int] = mapped_column(primary_key=True)
+    slug: Mapped[str] = mapped_column(String, unique=True)
+    published: Mapped[bool] = mapped_column(Boolean, default=False)
+    review_status: Mapped[str | None] = mapped_column(String, nullable=True)
 
 
-class _Session:
-    def __init__(self, amounts):
-        self.amounts = iter(amounts)
-        self.queries = []
+class _TrackingSession(Session):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.commits = 0
         self.rollbacks = 0
 
-    def query(self, model):
-        assert model is _Model
-        query = _Query(next(self.amounts))
-        self.queries.append(query)
-        return query
-
     def commit(self):
         self.commits += 1
+        super().commit()
 
     def rollback(self):
         self.rollbacks += 1
+        super().rollback()
 
 
-def test_publica_preservados_revisados(monkeypatch):
-    monkeypatch.setattr(command, "FRONTS", {
-        "documentos": {"model": _Model, "path": "/documentos"},
-        "evidencias": {"model": _Model, "path": "/evidencias.json"},
-    })
-    monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
+def _session_with(*records) -> _TrackingSession:
+    engine = create_engine("sqlite://")
+    _Base.metadata.create_all(engine)
+    db = _TrackingSession(bind=engine)
+    db.add_all(records)
+    db.commit()
+    db.commits = 0
+    return db
+
+
+def _manifest(path: Path, slugs: set[str]) -> Path:
+    path.write_text(
+        json.dumps([{"slug": slug, "published": True} for slug in sorted(slugs)]),
+        encoding="utf-8",
+    )
+    return path
+
+
+def test_publica_preservados_revisados(monkeypatch, tmp_path):
+    document_slugs = {f"documentos-atual-{index}" for index in range(3)}
+    evidence_slugs = {f"evidencias-atual-{index}" for index in range(2)}
+    fronts = {
+        "documentos": {
+            "model": _Document,
+            "path": _manifest(tmp_path / "documentos.json", document_slugs),
+        },
+        "evidencias": {
+            "model": _Evidence,
+            "path": _manifest(tmp_path / "evidencias.json", evidence_slugs),
+        },
+    }
+    approvals = {
+        "documentos": document_slugs,
+        "evidencias": evidence_slugs,
+    }
+    monkeypatch.setattr(command, "FRONTS", fronts)
+    monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    monkeypatch.setattr(command, "_load_editorial_approvals", lambda: approvals)
+    db = _session_with(
+        *(
+            _Document(slug=slug, published=False, review_status="revisado")
+            for slug in document_slugs
+        ),
+        *(
+            _Evidence(slug=slug, published=False, review_status="revisado")
+            for slug in evidence_slugs
+        ),
+    )
+
+    try:
+        result = command.publish_preserved_reviewed(db)
+
+        assert result["published_total"] == 5
+        assert result["published_by_front"] == {"documentos": 3, "evidencias": 2}
+        assert result["unpublished_absent"] == {"documentos": 0, "evidencias": 0}
+        assert result["unpublished_unreviewed"] == {"documentos": 0, "evidencias": 0}
+        assert result["unpublished_ineligible"] == {"documentos": 0, "evidencias": 0}
+        assert db.commits == 1
+        assert db.rollbacks == 0
+        assert all(row.published for row in db.query(_Document).all())
+        assert all(row.published for row in db.query(_Evidence).all())
+    finally:
+        db.close()
+
+
+def test_dry_run_nao_altera_banco(monkeypatch, tmp_path):
+    slugs = {f"atual-{index}" for index in range(4)}
+    fronts = {
+        "documentos": {
+            "model": _Document,
+            "path": _manifest(tmp_path / "documentos.json", slugs),
+        },
+    }
+    monkeypatch.setattr(command, "FRONTS", fronts)
+    monkeypatch.setattr(reconciliation, "FRONTS", fronts)
     monkeypatch.setattr(
         command,
-        "_canonical_source_slugs",
-        lambda front, source: {f"{front}-atual"},
+        "_load_editorial_approvals",
+        lambda: {"documentos": slugs},
     )
-    db = _Session([3, 2])
-    result = command.publish_preserved_reviewed(db)
+    db = _session_with(
+        *(
+            _Document(slug=slug, published=False, review_status="revisado")
+            for slug in slugs
+        )
+    )
 
-    assert result["published_total"] == 5
-    assert result["published_by_front"] == {"documentos": 3, "evidencias": 2}
-    assert db.commits == 1
-    assert db.rollbacks == 0
-    assert all(query.updated for query in db.queries)
-    assert all(len(query.filters) == 3 for query in db.queries)
-    assert db.queries[0].filters[0] == ("in", frozenset({"documentos-atual"}))
-    assert db.queries[1].filters[0] == ("in", frozenset({"evidencias-atual"}))
+    try:
+        result = command.publish_preserved_reviewed(db, dry_run=True)
 
-
-def test_dry_run_nao_altera_banco(monkeypatch):
-    monkeypatch.setattr(command, "FRONTS", {
-        "documentos": {"model": _Model, "path": "/documentos"},
-    })
-    monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
-    monkeypatch.setattr(command, "_canonical_source_slugs", lambda front, source: {"atual"})
-    db = _Session([4])
-    result = command.publish_preserved_reviewed(db, dry_run=True)
-
-    assert result["published_total"] == 4
-    assert db.commits == 0
-    assert db.rollbacks == 1
-    assert not db.queries[0].updated
+        assert result["published_total"] == 4
+        assert result["dry_run"] is True
+        assert db.commits == 0
+        assert db.rollbacks == 1
+        assert all(not row.published for row in db.query(_Document).all())
+    finally:
+        db.close()
 
 
 def test_ordem_do_menu_alerta_e_deploy():

@@ -9,19 +9,36 @@ def _read(relative: str) -> str:
 
 
 def test_all_public_auth_pages_use_canonical_prehome_shell():
-    pages = {
-        "Entrar.tsx": "prehome--login",
-        "EsqueciSenha.tsx": "prehome--recovery",
-        "RedefinirSenha.tsx": "prehome--recovery",
-        "SolicitarAcesso.tsx": "prehome--register",
-    }
-    for filename, variant in pages.items():
+    login = _read("pages/Entrar.tsx")
+    frame = _read("components/PublicCardiologyFrame.tsx")
+    main = _read("main.tsx")
+
+    # /entrar tem a prancha sideral própria aprovada; os demais fluxos de
+    # autenticação compartilham o frame público do Cardiology Spaces.
+    assert '<main className="login login-gateway">' in login
+    assert 'import "../styles/cardiology-spaces-login.css";' in login
+    assert "PublicCardiologyFrame" not in login
+    assert "login prehome" not in login
+
+    for filename in ("EsqueciSenha.tsx", "RedefinirSenha.tsx", "SolicitarAcesso.tsx"):
         source = _read(f"pages/{filename}")
-        assert "PreHomeBrand" in source
+        assert 'import PublicCardiologyFrame from "../components/PublicCardiologyFrame";' in source
+        assert "<PublicCardiologyFrame" in source
         assert 'import "../styles/login.css"' in source
-        assert "login prehome" in source
-        assert variant in source
-        assert "prehome-canonical.css" not in source
+        assert "PreHomeBrand" not in source
+        assert "login prehome" not in source
+
+    for token in (
+        'className={`public-space public-space--${variant} public-space--${tone}`}',
+        "PublicCorviaBrand",
+        'src="/corvia-mark-canonical.svg"',
+        "CARDIOLOGY SPACES",
+        "Ambiente protegido",
+        "Acesso profissional · LGPD",
+    ):
+        assert token in frame
+
+    assert 'import "./styles/cardiology-spaces-public.css";' in main
 
 
 def test_signup_keeps_existing_functional_contract():

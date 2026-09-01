@@ -1733,6 +1733,12 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
             publicados_por_slug=publicados_por_slug,
         )
     )
+    # As arestas do manifesto acima entram no lote por IDs de FK. Enquanto
+    # ainda estão ``pending``, os relacionamentos ORM ``source_entity`` e
+    # ``target_entity`` não são carregáveis e a auditoria de política abaixo
+    # os enxergaria como ``None``. Persistir o lote antes da auditoria mantém
+    # a validação fail-closed sem depender do estado transitório do ORM.
+    db.flush()
     relacoes_automaticas_invalidas = _rejeitar_relacoes_automaticas_invalidas(lote)
     relacoes_automaticas_rejeitadas = _rejeitar_relacoes_automaticas_ausentes(lote)
     ids_especializados["tema"] = ids_publicados_tema
@@ -1798,7 +1804,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 def relacionados_de(
     db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
-    incluir_contexto_tematico: bool = False,
+    incluir_contexto_tematico: bool = True,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
 
@@ -1865,6 +1871,18 @@ def relacionados_de(
         if (
             relacao.review_status == "revisado"
             or relacao.relation_type in RELACOES_PENDENTES_PUBLICAVEIS
+        ):
+            return True
+        # Um diferencial cujo nome/alias casa exatamente com uma única
+        # doença publicada é navegação estrutural auditável. Mantém o status
+        # pendente visível na resposta, mas não abre permissão genérica para
+        # qualquer aresta clínica ``differential_for`` ainda não revisada.
+        if (
+            relacao.relation_type == "differential_for"
+            and relacao.provenance_type == "structured_metadata"
+            and relacao.confidence == "derived"
+            and (relacao.extra or {}).get("campo") == "differentials"
+            and _relacao_pertence_ao_backfill(relacao)
         ):
             return True
         # `associated_with` é genérico demais para uma permissão global. Só
