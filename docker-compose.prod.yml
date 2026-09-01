@@ -67,6 +67,7 @@ services:
       - ./doencas:/doencas:ro
       - ./triagem-sintomas:/triagem-sintomas:ro
       - ./controlados:/controlados:ro
+      - ./editorial-approvals:/editorial-approvals:ro
       - ./backend/migrations/versions:/app/migrations/versions
       - userfiles:/uploads
       - examefiles:/exames-pacientes
