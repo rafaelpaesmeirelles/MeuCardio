@@ -2264,3 +2264,27 @@ Décimo sétimo lote sob o novo direcionamento — 8 agentes em paralelo, priori
 | Trilhas | 300 | 38 | 262 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **643** | **4.257** |
+
+## Lote 103 — concluído (commit 200caf91)
+
+Décimo oitavo lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: ninerafaxstat, modulador metabólico cardíaco, na cardiomiopatia diabética e na ICFEp (IMPROVE-DiCE); inteligência artificial na predição de placa coronariana vulnerável — escore MIB e metanálise AI-QCCTA 2026; calcificação valvar na doença renal crônica — preditores, mecanismos e limites terapêuticos.
+- **2 casos clínicos**: fibrose endomiocárdica com trombo apical — o mapeamento T2 decide a imunossupressão; risco inflamatório residual em coronariopata com DRC — o ZEUS confirma engajamento biológico mas não reduz MACE.
+- **1 checklist**: hipertensão por alcaçuz — suspeita e manejo do pseudohiperaldosteronismo (9 itens).
+- **1 material-paciente**: meu rim e meu coração — o que é a síndrome cardiorrenal.
+- **1 trilha**: "Doença coronariana — troponina ultrassensível e diagnóstico diferencial na dor torácica", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 18 links de Tudo com Tudo reverificados nos 3 documentos standalone (incluindo confirmação de que dois slugs "danicamtiv" distintos coexistem legitimamente em pastas diferentes — não é alucinação); 10 item_slug da trilha reconfirmados independentemente via grep, incluindo a calculadora verificada contra o registro backend.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.838 itens.
+
+### Status consolidado (após Lote 103)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 225 | 2.175 |
+| Casos clínicos | 900 | 98 | 802 |
+| Checklists | 600 | 70 | 530 |
+| Materiais-paciente | 500 | 56 | 444 |
+| Trilhas | 300 | 39 | 261 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **651** | **4.249** |
