@@ -2144,3 +2144,27 @@ Décimo segundo lote sob o novo direcionamento — 8 agentes em paralelo, priori
 | Trilhas | 300 | 33 | 267 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **603** | **4.297** |
+
+## Lote 98 — concluído (commit 7aec2fbd)
+
+Décimo terceiro lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: insulina semanal (icodec) — segurança cardiovascular e impacto na hipoglicemia (ONWARDS 1-6, COMBINE 3); poluição do ar, ruído e mudança climática na hipertensão — position paper ESH 2026; hematopoese clonal (CHIP) e risco cardiovascular — mecanismo inflamatório e o que ainda não é acionável.
+- **2 casos clínicos**: SGLT2i adjuvante pós-ablação de FA sem indicação metabólica — resultado negativo do DARE-AF (2026); PROACTIVE-HF (Cordella) — braço único não é prova causal.
+- **1 checklist**: estratificação de risco e manejo cardiovascular no diabetes ESC 2023 (21 itens).
+- **1 material-paciente**: colesterol LDL — qual é a minha meta e como chegar lá.
+- **1 trilha**: "Cardiomiopatias — induzida por terapia oncológica (CTRCD)", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 17 links de Tudo com Tudo reverificados nos 3 documentos standalone (source_refs corrigido de PMID/DOI soltos para citação bibliográfica completa em 1 documento); 10 item_slug da trilha reconfirmados independentemente via grep no worktree.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.798 itens.
+
+### Status consolidado (após Lote 98)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 209 | 2.191 |
+| Casos clínicos | 900 | 89 | 811 |
+| Checklists | 600 | 65 | 535 |
+| Materiais-paciente | 500 | 51 | 449 |
+| Trilhas | 300 | 34 | 266 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **611** | **4.289** |
