@@ -172,12 +172,20 @@ def test_evidencia_reutiliza_apenas_seu_vinculo_documental_explicito(
 ):
     _limpar(db)
     document = Document(
-        slug="hipertensao-resistente-algoritmo",
-        title="Hipertensão resistente — algoritmo terapêutico",
+        slug="olmesartana",
+        title="Olmesartana",
         kind="modulo", theme="Hipertensão", body_md="conteúdo",
         source_tier="A", review_status="revisado", published=True,
     )
-    db.add(document)
+    db.add_all([
+        document,
+        Document(
+            slug="olmesartana-visao-geral",
+            title="Olmesartana — visão geral",
+            kind="modulo", theme="Hipertensão", body_md="conteúdo",
+            source_tier="A", review_status="revisado", published=True,
+        ),
+    ])
     db.add(EvidenceRecord(
         slug="recomendacao-42", statement="Recomendação editorial revisada.",
         recommendation_class="I", evidence_level="A", society="SBC", year=2025,
@@ -196,8 +204,10 @@ def test_evidencia_reutiliza_apenas_seu_vinculo_documental_explicito(
     assert r.status_code == 200
     por_tipo = {g["tipo"]: g["itens"] for g in r.json()["grupos"]}
     assert [item["slug"] for item in por_tipo["documento"]] == [
-        "hipertensao-resistente-algoritmo"
+        "olmesartana"
     ]
+    assert por_tipo["documento"][0]["relation_scope"] == "structured_clinical_link"
+    assert por_tipo["documento"][0]["relation_method"] == "evidence_document_slug"
 
 
 def test_item_nao_publicado_nunca_aparece(client, db, criar_usuario):

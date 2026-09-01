@@ -4,6 +4,8 @@ These tests are intentionally database-free: they exercise the deterministic
 scoring boundary that must reject lexical noise before any item is returned.
 """
 
+from types import SimpleNamespace
+
 import pytest
 
 from app.services import connected_content as connected
@@ -99,6 +101,162 @@ def test_match_contextual_mantem_todos_os_discriminativos_acima_do_limiar():
         for item in items
         for reason in item["match_reasons"]
     } == {"olmesartana", "resistente"}
+
+
+def test_origem_editorial_preserva_multiplos_especificos_sem_maximo_relativo():
+    groups = [_group([
+        _item(
+            "ablacao-septal-na-cardiomiopatia-hipertrofica",
+            "Ablação septal na cardiomiopatia hipertrófica obstrutiva",
+        ),
+        _item(
+            "miectomia-na-cardiomiopatia-hipertrofica",
+            "Miectomia na cardiomiopatia hipertrófica obstrutiva",
+        ),
+        _item(
+            "cardiomiopatia-hipertrofica-visao-geral",
+            "Cardiomiopatia hipertrófica — visão geral",
+        ),
+    ])]
+
+    connected._filter_groups_by_subject(
+        groups,
+        ("Cardiomiopatias",),
+        (
+            "ensaio-x1 Ablação septal alcoólica versus miectomia "
+            "ablação septal cardiomiopatia hipertrófica"
+        ),
+        exigir_suporte_editorial_absoluto=True,
+        strong_origin_tag_term_groups=(
+            connected._strong_structured_tag_term_groups([
+                "ablação septal",
+                "cardiomiopatia hipertrófica",
+            ])
+        ),
+    )
+
+    items = groups[0]["itens"]
+    assert [item["slug"] for item in items] == [
+        "ablacao-septal-na-cardiomiopatia-hipertrofica",
+        "miectomia-na-cardiomiopatia-hipertrofica",
+    ]
+    assert [item["match_score"] for item in items] == [9, 6]
+    assert [
+        {reason["term"] for reason in item["match_reasons"]}
+        for item in items
+    ] == [
+        {"ablacao", "hipertrofica", "septal"},
+        {"hipertrofica", "miectomia"},
+    ]
+
+
+def test_tag_unitaria_revisada_da_origem_sustenta_match_pelo_caminho_real(
+    monkeypatch,
+):
+    target = _item("mavacamten-na-pratica", "Mavacamten na prática clínica")
+    origin_study = SimpleNamespace(
+        title="EXPLORER-HCM: desfechos clínicos",
+        tags=["mavacamten"],
+    )
+
+    query_results = iter((origin_study, ["mavacamten"], []))
+
+    class FakeResult:
+        def __init__(self, value):
+            self.value = value
+
+        def scalar_one_or_none(self):
+            return self.value
+
+        def scalars(self):
+            return self
+
+        def all(self):
+            return self.value
+
+    class FakeDB:
+        def execute(self, _query):
+            return FakeResult(next(query_results))
+
+    monkeypatch.setattr(
+        connected,
+        "_base",
+        lambda *_args, **_kwargs: {"grupos": [_group([target])]},
+    )
+    monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+
+    result = connected.buscar_relacionados_contextuais(
+        FakeDB(),
+        "Cardiomiopatias",
+        excluir_tipo="estudo",
+        excluir_slug="ensaio-x1",
+        assunto="ensaio-x1",
+    )
+
+    documents = next(group for group in result["grupos"] if group["tipo"] == "documento")
+    assert [item["slug"] for item in documents["itens"]] == [target["slug"]]
+    assert documents["itens"][0]["match_score"] == 3
+    assert documents["itens"][0]["match_reasons"] == [
+        {"source": "title_or_slug", "term": "mavacamten", "weight": 3},
+    ]
+
+
+def test_tag_unitaria_so_e_forte_quando_pertence_a_taxonomia_tipificada():
+    tags = ["mavacamten", "metanálise", "mortalidade", "idoso"]
+    groups = connected._strong_structured_tag_term_groups(
+        tags,
+        trusted_single_terms=frozenset({"mavacamten"}),
+    )
+
+    assert groups == (frozenset({"mavacamten"}),)
+
+
+def test_evidencia_preserva_apenas_documento_explicito_com_um_termo(
+    monkeypatch,
+):
+    linked = _item("olmesartana", "Olmesartana")
+    neighbour = _item("olmesartana-visao-geral", "Olmesartana — visão geral")
+    query_results = iter((
+        SimpleNamespace(document_slug=linked["slug"]),
+        SimpleNamespace(
+            slug=linked["slug"],
+            title=linked["titulo"],
+            kind="modulo",
+        ),
+    ))
+
+    class FakeResult:
+        def __init__(self, value):
+            self.value = value
+
+        def scalar_one_or_none(self):
+            return self.value
+
+    class FakeDB:
+        def execute(self, _query):
+            return FakeResult(next(query_results))
+
+    monkeypatch.setattr(
+        connected,
+        "_base",
+        lambda *_args, **_kwargs: {"grupos": [_group([linked, neighbour])]},
+    )
+    monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+
+    result = connected.buscar_relacionados_contextuais(
+        FakeDB(),
+        "Hipertensão",
+        excluir_tipo="evidencia",
+        excluir_slug="recomendacao-42",
+        assunto="recomendacao-42",
+    )
+
+    documents = next(group for group in result["grupos"] if group["tipo"] == "documento")
+    assert [item["slug"] for item in documents["itens"]] == [linked["slug"]]
+    assert documents["itens"][0]["relation_scope"] == "structured_clinical_link"
+    assert documents["itens"][0]["relation_method"] == "evidence_document_slug"
 
 
 def test_filtro_contextual_pontua_pool_completo_antes_do_top_5(monkeypatch):

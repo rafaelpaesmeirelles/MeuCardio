@@ -299,7 +299,7 @@ def test_relacionados_de_agrupa_por_tipo_e_ordena_por_relevancia(db):
             assert not (g["tipo"] == "documento" and item["slug"] == "ic-doc-1")
 
 
-def test_relacionados_de_pode_ocultar_vizinhos_apenas_taxonomicos(db):
+def test_relacionados_de_oculta_por_padrao_vizinhos_apenas_taxonomicos(db):
     _limpar(db)
     _semear_conteudo_publicado(db)
     kg.backfill_mesmo_tema(db)
@@ -308,7 +308,6 @@ def test_relacionados_de_pode_ocultar_vizinhos_apenas_taxonomicos(db):
         db,
         entity_type="documento",
         slug="ic-doc-1",
-        incluir_contexto_tematico=False,
     )
 
     assert resultado is not None

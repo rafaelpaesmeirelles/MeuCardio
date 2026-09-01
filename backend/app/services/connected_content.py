@@ -17,12 +17,15 @@ a clinically irrelevant relation.
 """
 from __future__ import annotations
 
+from dataclasses import dataclass
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.content import Document
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
+from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
 from app.services.topic_relevance import (
@@ -32,6 +35,7 @@ from app.services.topic_relevance import (
     ContextualRelevance,
     canonical_theme,
     drug_matches_theme,
+    normalize_text,
     relevance_tokens,
     score_contextual_relevance,
     theme_variants,
@@ -97,6 +101,75 @@ def _tokens(value: object) -> set[str]:
     return relevance_tokens(value)
 
 
+@dataclass(frozen=True)
+class _OriginContext:
+    subject: str | None
+    strong_tag_term_groups: tuple[frozenset[str], ...] = ()
+    explicit_item_keys: frozenset[tuple[str, str]] = frozenset()
+
+
+def _strong_structured_tag_term_groups(
+    tags: object,
+    *,
+    trusted_single_terms: frozenset[str] = frozenset(),
+) -> tuple[frozenset[str], ...]:
+    """Keep only tag groups safe enough to justify one absolute relation.
+
+    A single-token reviewed tag is strong only when the token is also a
+    published entity in a typed clinical catalogue. A multi-token tag is
+    strong only when at least two of its terms are discriminative and the
+    candidate matches the complete group. This prevents design, outcome and
+    population tags such as ``metanalise``, ``mortalidade`` and ``idoso`` from
+    creating relations while retaining named entities such as ``mavacamten``.
+    """
+    values = (
+        tags
+        if isinstance(tags, (list, tuple, set, frozenset))
+        else (tags,) if tags else ()
+    )
+    groups: list[frozenset[str]] = []
+    for value in values:
+        discriminative = frozenset(_tokens(value))
+        raw_terms = normalize_text(str(value)).split()
+        if len(discriminative) >= 2 or (
+            len(discriminative) == 1 and len(raw_terms) == 1
+            and discriminative <= trusted_single_terms
+        ):
+            groups.append(discriminative)
+    return tuple(dict.fromkeys(groups))
+
+
+def _trusted_single_tag_terms(db: Session, tags: object) -> frozenset[str]:
+    """Resolve one-token tags only against published typed clinical entities."""
+    values = (
+        tags
+        if isinstance(tags, (list, tuple, set, frozenset))
+        else (tags,) if tags else ()
+    )
+    candidates = {
+        normalized
+        for value in values
+        if len((normalized := normalize_text(str(value))).split()) == 1
+        and len(_tokens(normalized)) == 1
+    }
+    if not candidates:
+        return frozenset()
+
+    drug_slugs = db.execute(
+        select(Drug.slug).where(
+            Drug.published.is_(True),
+            Drug.slug.in_(candidates),
+        )
+    ).scalars().all()
+    disease_slugs = db.execute(
+        select(SpecialtyDisease.slug).where(
+            SpecialtyDisease.published.is_(True),
+            SpecialtyDisease.slug.in_(candidates),
+        )
+    ).scalars().all()
+    return frozenset(candidates & (set(drug_slugs) | set(disease_slugs)))
+
+
 def _with_match_metadata(item: dict, match: ContextualRelevance) -> dict:
     """Add an auditable explanation without changing legacy item fields."""
     return {
@@ -110,6 +183,16 @@ def _with_match_metadata(item: dict, match: ContextualRelevance) -> dict:
         "match_score": match.score,
         "match_threshold": CONTEXT_MIN_RELEVANCE_SCORE,
         "match_reasons": match.reasons(),
+    }
+
+
+def _with_explicit_link_metadata(item: dict) -> dict:
+    """Describe an evidence-to-document relation without claiming lexical proof."""
+    return {
+        **item,
+        "relation_scope": "structured_clinical_link",
+        "relation_method": "evidence_document_slug",
+        "relevance_score": 1.0,
     }
 
 
@@ -154,9 +237,30 @@ def _contextual_studies(
     return [(row[3], row[4]) for row in ranked[:LIMITE_POR_CATEGORIA]]
 
 
+def _has_absolute_editorial_support(
+    match: ContextualRelevance,
+    strong_origin_tag_term_groups: tuple[frozenset[str], ...] = (),
+) -> bool:
+    """Require pool-independent support for an editorially enriched origin.
+
+    Two distinct discriminative overlaps are sufficient. A single overlap is
+    sufficient only when the terms recorded by ``Match`` fully cover a strong
+    reviewed tag from the origin. Unlike comparison with the group's maximum
+    score, this rule is monotonic: adding a stronger candidate cannot
+    invalidate an existing one.
+    """
+    matched_terms = set(match.title_or_slug_terms) | set(match.tag_terms)
+    return match.accepted and (
+        len(matched_terms) >= 2
+        or any(group <= matched_terms for group in strong_origin_tag_term_groups)
+    )
+
+
 def _filter_groups_by_subject(
     groups: list[dict], themes: tuple[str, ...], origin_subject: str | None,
-    *, somente_melhor_por_grupo: bool = False,
+    *, exigir_suporte_editorial_absoluto: bool = False,
+    strong_origin_tag_term_groups: tuple[frozenset[str], ...] = (),
+    explicit_item_keys: frozenset[tuple[str, str]] = frozenset(),
 ) -> None:
     """Remove theme-only neighbours from every non-study content front.
 
@@ -172,7 +276,12 @@ def _filter_groups_by_subject(
     if not origin_terms:
         for group in groups:
             if group["tipo"] != "estudo":
-                group["itens"] = []
+                group["itens"] = [
+                    _with_explicit_link_metadata(item)
+                    for item in group.get("itens", [])
+                    if (group["tipo"], item.get("slug", ""))
+                    in explicit_item_keys
+                ]
         return
 
     for group in groups:
@@ -180,30 +289,51 @@ def _filter_groups_by_subject(
             continue
         matched: list[tuple[int, int, dict, ContextualRelevance]] = []
         for position, item in enumerate(group.get("itens", [])):
+            item_key = (group["tipo"], item.get("slug", ""))
             match = score_contextual_relevance(
                 origin_terms,
                 title_or_slug=(
                     item.get("slug"), item.get("titulo"), item.get("subtitulo"),
                 ),
             )
-            if match.accepted:
+            if match.accepted or item_key in explicit_item_keys:
                 matched.append((match.score, position, item, match))
         matched.sort(key=lambda row: (-row[0], row[1]))
-        if somente_melhor_por_grupo and matched:
-            melhor_score = matched[0][0]
-            matched = [row for row in matched if row[0] == melhor_score]
+        if exigir_suporte_editorial_absoluto:
+            matched = [
+                row for row in matched
+                if (
+                    (group["tipo"], row[2].get("slug", ""))
+                    in explicit_item_keys
+                    or _has_absolute_editorial_support(
+                        row[3], strong_origin_tag_term_groups,
+                    )
+                )
+            ]
+            matched.sort(key=lambda row: (
+                (group["tipo"], row[2].get("slug", ""))
+                not in explicit_item_keys,
+                -row[0],
+                row[1],
+            ))
         group["itens"] = [
-            _with_match_metadata(row[2], row[3]) for row in matched
+            (
+                _with_explicit_link_metadata(row[2])
+                if (group["tipo"], row[2].get("slug", ""))
+                in explicit_item_keys
+                else _with_match_metadata(row[2], row[3])
+            )
+            for row in matched
         ][:LIMITE_POR_CATEGORIA]
 
 
-def _origin_subject(
+def _origin_context(
     db: Session,
     *,
     assunto: str | None,
     excluir_tipo: str | None,
     excluir_slug: str | None,
-) -> str | None:
+) -> _OriginContext:
     """Enrich an item's slug with its own reviewed structured metadata.
 
     Acronyms and named trials frequently make a scientifically valid item look
@@ -215,9 +345,9 @@ def _origin_subject(
     behaviour.
     """
     if not assunto:
-        return None
+        return _OriginContext(None)
     if not excluir_slug or assunto != excluir_slug:
-        return assunto
+        return _OriginContext(assunto)
 
     if excluir_tipo == "estudo":
         item = db.execute(
@@ -227,7 +357,14 @@ def _origin_subject(
             )
         ).scalar_one_or_none()
         if item is not None:
-            return " ".join((assunto, item.title, " ".join(item.tags or [])))
+            trusted_single_terms = _trusted_single_tag_terms(db, item.tags)
+            return _OriginContext(
+                " ".join((assunto, item.title, " ".join(item.tags or []))),
+                _strong_structured_tag_term_groups(
+                    item.tags,
+                    trusted_single_terms=trusted_single_terms,
+                ),
+            )
 
     if excluir_tipo == "evidencia":
         item = db.execute(
@@ -244,9 +381,19 @@ def _origin_subject(
                 )
             ).scalar_one_or_none()
             if document is not None:
-                return " ".join((assunto, document.slug, document.title))
+                return _OriginContext(
+                    " ".join((assunto, document.slug, document.title)),
+                    explicit_item_keys=frozenset({
+                        (
+                            "fluxograma"
+                            if document.kind == "fluxograma"
+                            else "documento",
+                            document.slug,
+                        ),
+                    }),
+                )
 
-    return assunto
+    return _OriginContext(assunto)
 
 
 def temas_clinicos_do_medicamento(drug: Drug) -> list[str]:
@@ -289,12 +436,13 @@ def buscar_relacionados_contextuais(
         for variant in variants
     ]
     groups = _merge_groups(responses, limit=candidate_limit)
-    origin_subject = _origin_subject(
+    origin_context = _origin_context(
         db,
         assunto=assunto,
         excluir_tipo=excluir_tipo,
         excluir_slug=excluir_slug,
     )
+    origin_subject = origin_context.subject
     origem_editorial_enriquecida = bool(
         assunto
         and excluir_slug
@@ -346,9 +494,16 @@ def buscar_relacionados_contextuais(
                 origin_subject,
                 # Metadados editoriais ampliam o assunto para resgatar um
                 # item específico (por exemplo, título/tags de um ensaio).
-                # Nesse caminho, resultados mais fracos do mesmo grupo são
-                # apenas vizinhos do tema e não relações do item de origem.
-                somente_melhor_por_grupo=origem_editorial_enriquecida,
+                # Nesse caminho, exige-se suporte absoluto adicional, sem
+                # comparar candidatos entre si: cobertura integral de uma
+                # tag forte ou dois termos discriminativos no título/slug.
+                exigir_suporte_editorial_absoluto=(
+                    origem_editorial_enriquecida
+                ),
+                strong_origin_tag_term_groups=(
+                    origin_context.strong_tag_term_groups
+                ),
+                explicit_item_keys=origin_context.explicit_item_keys,
             )
         relation_scope = (
             "clinical_match" if filtrar_grupos_por_assunto else "structured_clinical_topic"
