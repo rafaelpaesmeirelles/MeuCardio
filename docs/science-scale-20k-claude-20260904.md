@@ -1857,3 +1857,32 @@ Primeiro lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 24 | 276 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **447** | **4.453** |
+
+## Lote 87 — concluído (commit a887e40b)
+
+Segundo lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **3 casos clínicos**:
+  - **Diabetes e cardiologia**: SOUL — semaglutida oral em diabético com ICFEp prévia não é contraindicada (HR 0,78 no subgrupo IC, mais favorável em ICFEp).
+  - **Doença coronariana**: meta-análise de dados individuais (17.801 pacientes) — betabloqueador pós-IAM com FE ≥50% sem outra indicação não reduz desfecho composto (HR 0,97).
+  - **Prevenção e lipídios**: PREVENT-ASCVD 6,8% em 10 anos — diretriz ACC/AHA 2026 substitui PCE, faixa 5-<10% exige discussão individualizada.
+- **1 checklist**: titulação intensiva pós-alta em IC descompensada (ESC 2026 + STRONG-HF), 10 itens.
+- **3 documentos standalone**:
+  - **Prevenção e lipídios**: inclisirana sem estatina de base — VICTORION-Mono e VICTORION-DIFFERENCE, CVOT ainda em andamento.
+  - **Doença coronariana**: CLEAR-SYNERGY (OASIS-9) — espironolactona rotineira pós-IAM sem exigir disfunção ventricular não reduziu eventos, confirmando o ALBATROSS em escala 4x maior.
+  - **Fibrilação atrial**: timing da anticoagulação pós-AVC isquêmico — TIMING, ELAN, OPTIMAS + metanálise CATALYST 2025 (OR 0,70), substitui a regra "1-3-6-12".
+- **1 material-paciente**: síndrome coronariana aguda em linguagem simples.
+- **Correção durante integração**: link de calculadora CHA2DS2-VA — uma correção manual equivocada para "cha2ds2-vasc" foi revertida após o gate detectar a referência quebrada; lição registrada: calculadoras têm arquivo `.md` próprio em `content/Calculadoras/`, verificar sempre o slug real do arquivo.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.710 itens.
+
+### Status consolidado (após Lote 87)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 182 | 2.218 |
+| Casos clínicos | 900 | 66 | 834 |
+| Checklists | 600 | 48 | 552 |
+| Materiais-paciente | 500 | 40 | 460 |
+| Trilhas | 300 | 24 | 276 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **455** | **4.445** |
