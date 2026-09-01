@@ -18894,5 +18894,65 @@
       "Shubietah A, Elgendy MS, Awashra A, et al. Effect of GLP-1 Receptor Agonists on Post-Ablation Atrial Fibrillation Recurrence: A Meta-Analysis. Pacing Clin Electrophysiol. 2026;49(8):1086-1099. DOI: 10.1111/pace.70262. PMID: 42033283"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul",
+    "titulo": "Diabetes tipo 2 com ICFEp prévia: a insuficiência cardíaca contraindica a semaglutida oral?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 66 anos, diabetes tipo 2 há 12 anos e doença arterial coronariana estabelecida (infarto do miocárdio há 4 anos). Há 2 anos recebeu diagnóstico de insuficiência cardíaca com fração de ejeção preservada (FEVE 55%), atualmente em uso de inibidor de SGLT2 e diurético conforme necessidade, com sintomas classe funcional NYHA II bem controlados. HbA1c 7,8% em uso de metformina. O cardiologista considera associar semaglutida oral para redução adicional de risco cardiovascular, mas o clínico responsável hesita, temendo que a história de insuficiência cardíaca seja contraindicação ou torne o fármaco ineficaz nesse contexto.",
+    "pergunta": "Com base na análise secundária pré-especificada do estudo SOUL sobre desfechos de insuficiência cardíaca, qual a interpretação e conduta mais apropriadas?",
+    "opcoes": [
+      "A história de IC, sobretudo o fenótipo ICFEp, não é contraindicação à semaglutida oral: no subgrupo do SOUL com IC prévia houve menor risco do composto de hospitalização por IC, visita urgente por IC ou morte cardiovascular (HR 0,78; IC95% 0,63-0,96), com sinal mais favorável em ICFEp (HR 0,59; IC95% 0,39-0,86); ainda assim, por ser análise de subgrupo com p de interação de 0,06, esse achado não substitui as terapias com benefício específico já comprovado para ICFEp",
+      "A insuficiência cardíaca é contraindicação formal ao uso de agonistas de GLP-1 no diabetes tipo 2, pois esses fármacos aumentam a incidência de hospitalização por IC nessa população",
+      "O resultado do SOUL demonstra superioridade estatisticamente robusta e homogênea da semaglutida oral sobre a terapia otimizada de ICFEp, justificando substituir o inibidor de SGLT2 pelo GLP-1RA como tratamento central da IC deste paciente",
+      "Como o desfecho de IC não foi o objetivo primário do estudo, o achado não tem qualquer valor clínico e deve ser ignorado até a publicação de um ensaio dedicado exclusivamente a pacientes com ICFEp"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A análise secundária pré-especificada do SOUL (Oral Semaglutide and Heart Failure Outcomes in Persons With Type 2 Diabetes: A Secondary Analysis of the SOUL Randomized Clinical Trial, JAMA Cardiol. 2026; PMID: 41627802; NCT03914326) avaliou os 2.229 participantes (23,1% da coorte de 9.650 pacientes com diabetes tipo 2 e doença cardiovascular aterosclerótica e/ou DRC) que já tinham IC no início do estudo. Nesse estrato, semaglutida oral reduziu o composto de IC versus placebo (HR 0,78; IC95% 0,63-0,96), com efeito mais pronunciado em ICFEp (HR 0,59; IC95% 0,39-0,86) do que em ICFER (HR 0,98; IC95% 0,70-1,38); nos pacientes sem IC prévia a estimativa foi neutra (HR 1,01; IC95% 0,84-1,20), e o p de interação entre os estratos foi 0,06, não atingindo o limiar convencional de significância — por isso o achado deve ser tratado como hipótese-geradora de subgrupo, e não como prova definitiva de heterogeneidade de efeito. O estudo não mostra aumento de risco de IC com semaglutida oral (opção B incorreta), nem justifica substituir terapias de benefício comprovado específico para ICFEp — como o inibidor de SGLT2 já em uso — pelo GLP-1RA (opção C incorreta); tampouco o caráter secundário da análise invalida sua relevância clínica quando interpretado com as devidas ressalvas metodológicas (opção D incorreta). A mensagem prática é que a presença de IC, sobretudo ICFEp, não deve ser vista como motivo para evitar a semaglutida oral no diabético de alto risco cardiovascular, mas a hierarquia terapêutica da IC continua baseada nos tratamentos com benefício específico já estabelecido para cada fenótipo.",
+    "source_refs": [
+      "Oral Semaglutide and Heart Failure Outcomes in Persons With Type 2 Diabetes: A Secondary Analysis of the SOUL Randomized Clinical Trial. JAMA Cardiol. 2026. PMID: 41627802. ClinicalTrials.gov: NCT03914326"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "betabloqueador-pos-iam-fe-normal-meta-analise-individual-2026",
+    "titulo": "Betabloqueador após infarto com FE normal: manter por automatismo em 2026?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 62 anos, infarto agudo do miocárdio com supradesnível de ST há 3 semanas, tratado com angioplastia primária e stent farmacológico com sucesso. Ecocardiograma de controle mostra FEVE de 55%, sem alteração segmentar residual relevante. Não tem angina, não tem arritmia, não tem hipertensão e não tem qualquer outra condição que isoladamente indique betabloqueador. Foi iniciado carvedilol na alta hospitalar, 'como se faz em todo pós-infarto'. Em retorno ambulatorial, o cardiologista assistente questiona se a manutenção do fármaco tem, hoje, respaldo em evidência robusta e contemporânea.",
+    "pergunta": "Com base na meta-análise de dados individuais publicada em 2026 (N Engl J Med), reunindo REBOOT, REDUCE-AMI, BETAMI, DANBLOCK e CAPITAL-RCT (17.801 pacientes), qual a interpretação correta para este caso?",
+    "opcoes": [
+      "A meta-análise confirma que betabloqueador reduz mortalidade, reinfarto e insuficiência cardíaca em qualquer pós-infarto, então o fármaco deve ser mantido indefinidamente só pela indicação de IAM prévio",
+      "Em pacientes com FEVE ≥50% e sem outra indicação independente, o desfecho composto de morte, novo IAM ou IC não diferiu entre usar e não usar betabloqueador (HR 0,97; IC95% 0,87–1,07; p=0,54) — a prescrição não deve ser automática por 'todo pós-infarto usa', e a manutenção deve ser reavaliada considerando se existe indicação própria do fármaco",
+      "Como a meta-análise não mostrou benefício, o betabloqueador está contraindicado neste paciente e deve ser suspenso hoje mesmo, sem necessidade de reavaliação individualizada",
+      "O resultado neutro se aplica apenas a metoprolol e bisoprolol; como este paciente usa carvedilol, a evidência de ausência de benefício não é aplicável e o fármaco deve ser mantido sem questionamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A meta-análise de dados individuais de Kristensen AMD, Rossello X, Atar D, et al. (N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954), que reuniu 17.801 pacientes de cinco RCTs contemporâneos (REBOOT, REDUCE-AMI, BETAMI, DANBLOCK, CAPITAL-RCT), mostrou que em pós-IAM com FEVE ≥50% e sem outra indicação para betabloqueador, o desfecho composto de morte por qualquer causa, novo IAM ou insuficiência cardíaca foi semelhante entre betabloqueador (8,1%) e ausência de betabloqueador (8,3%) — HR 0,97, IC95% 0,87–1,07, p=0,54 — sem benefício em nenhum componente isolado. O documento de origem é explícito que essa ausência de benefício médio não equivale a 'todo paciente já em uso deve suspender automaticamente', nem a contraindicação absoluta — a decisão precisa considerar se existe outra indicação independente do fármaco (angina, arritmia, hipertensão), o que afasta tanto a opção 0 (automatismo de manter sempre) quanto a opção 2 (suspensão compulsória sem reavaliação individualizada). A opção 3 é um distrator de raciocínio: a análise reúne diferentes betabloqueadores usados nos RCTs incluídos e a mensagem central é sobre a classe terapêutica na população com FE normal, não uma exceção molecular para o carvedilol especificamente.",
+    "source_refs": [
+      "Kristensen AMD, Rossello X, Atar D, et al. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026",
+    "titulo": "Risco PREVENT-ASCVD de 6,8% em 10 anos: a diretriz ACC/AHA 2026 manda tratar?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 55 anos, tabagista atual, hipertenso controlado com anti-hipertensivo (PA 128/82 mmHg), sem diabetes e sem história de doença aterosclerótica. Perfil lipídico: LDL-C 152 mg/dL, HDL-C 42 mg/dL. Nunca teve infarto, AVC ou revascularização. Na consulta de prevenção primária, o médico calcula o risco de ASCVD em 10 anos pela equação PREVENT-ASCVD: 6,8%. O paciente pergunta se precisa começar estatina agora ou se pode esperar.",
+    "pergunta": "Segundo a diretriz ACC/AHA 2026 de manejo da dislipidemia, qual é a conduta recomendada diante desse risco PREVENT-ASCVD em 10 anos?",
+    "opcoes": [
+      "O risco deve ser recalculado pelas Pooled Cohort Equations de 2013, já que a diretriz de 2026 mantém as PCE como padrão de referência e usa o PREVENT-ASCVD apenas em contexto de pesquisa",
+      "Um risco de 5% a <10% pelo PREVENT-ASCVD coloca o paciente na faixa em que a terapia redutora de LDL-C deve ser considerada após discussão individualizada risco-benefício com o paciente — não é indicação automática, mas também não é conduta expectante",
+      "Como o LDL-C de 152 mg/dL está abaixo do limiar de 190 mg/dL definido para hipercolesterolemia grave, não há indicação de tratamento farmacológico independentemente do risco calculado",
+      "Só há indicação de estatina quando o risco em 10 anos atinge 20% ou mais (alto risco); abaixo disso a diretriz recomenda apenas reforço de estilo de vida, sem necessidade de discussão sobre farmacoterapia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz multisocietária ACC/AHA de 2026 (Blumenthal RS et al., J Am Coll Cardiol. 2026;87(19):2624-2757, DOI 10.1016/j.jacc.2025.11.016, PMID 41824590) substitui as Pooled Cohort Equations pelo PREVENT-ASCVD para estimar risco em prevenção primária em adultos de 30-79 anos, o que já invalida a opção que propõe recalcular pelas PCE. A diretriz define faixas específicas para discutir terapia: risco de 3% a <5% em 10 anos — terapia redutora de LDL pode ser considerada após discussão clínico-paciente; risco de 5% a <10% — a terapia deve ser considerada após discussão individualizada, um patamar de recomendação mais assertivo que o anterior. Este paciente, com 6,8% de risco em 10 anos, está exatamente nessa segunda faixa, o que torna a decisão sobre estatina uma conversa ativa e não uma postergação. O limiar de LDL-C ≥190 mg/dL (ou ApoB ≥140 mg/dL) definido pela diretriz refere-se a hipercolesterolemia grave, uma categoria à parte que já indica tratamento por si só independentemente do escore de risco — não é o critério que isenta pacientes com LDL abaixo desse valor de tratamento, distorção presente em uma das opções incorretas. Também não existe na diretriz um piso de 20% de risco em 10 anos abaixo do qual a farmacoterapia estaria descartada; esse número corresponde à antiga categoria de 'alto risco' das diretrizes anteriores baseadas em PCE, não ao novo esquema de faixas do PREVENT-ASCVD, que passa a intervir em níveis de risco absoluto bem mais baixos.",
+    "source_refs": [
+      "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624-2757. DOI: 10.1016/j.jacc.2025.11.016. PMID: 41824590."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

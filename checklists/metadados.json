@@ -39094,5 +39094,92 @@
       }
     ],
     "revisao": "Checklist extraído fielmente do documento já publicado quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia.md, com origem_secao rastreável em cada item. Nenhum limiar numérico foi inventado. Pendente de revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "titulacao-intensiva-pos-alta-em-ic-descompensada",
+    "condicao": "Titulação intensiva pós-alta em insuficiência cardíaca descompensada (ESC 2026)",
+    "resumo": "Checklist de execução para a alta hospitalar por IC descompensada: reclassificação de FEVE pelos cortes ESC 2026, avaliação pré-alta de congestão persistente, estratégia estruturada de titulação intensiva da terapia fundacional nas primeiras 6 semanas (STRONG-HF) e barreiras de segurança que não podem ser ignoradas.",
+    "documento_origem": "ic-descompensada-esc-2026-e-titulacao-pos-alta",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100.",
+      "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022. PMID: 36356631.",
+      "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666.",
+      "Comitê Coordenador da Diretriz de Insuficiência Cardíaca. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda. Arq Bras Cardiol. 2018;111(3):436-539. DOI: 10.5935/abc.20180190."
+    ],
+    "itens": [
+      {
+        "id": "icdesc-nomenclatura-descompensada",
+        "categoria": "classificacao",
+        "obrigatorio": false,
+        "texto": "Episódio registrado como 'IC descompensada' (paciente que já tinha ou deveria ter IC e piorou), não como evento novo isolado, orientando a busca de causa de piora",
+        "origem_secao": "O que mudou de nome — e o que não mudou de problema"
+      },
+      {
+        "id": "icdesc-classificacao-feve",
+        "categoria": "classificacao",
+        "obrigatorio": true,
+        "texto": "FEVE reclassificada pelos cortes ESC 2026 antes de definir a sequência terapêutica: ICFEr com FEVE <50% ou ICFEp com FEVE ≥50% e evidência objetiva de anormalidade estrutural e/ou funcional",
+        "origem_secao": "Classificação que o plantão ainda mistura"
+      },
+      {
+        "id": "icdesc-sem-atraso-rotulo-antigo",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Otimização terapêutica não foi adiada à espera do rótulo antigo (HFmrEF/ICFEml, FEVE 41–49%) ainda constante no prontuário",
+        "origem_secao": "Classificação que o plantão ainda mistura"
+      },
+      {
+        "id": "icdesc-avaliacao-pre-alta-congestao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliação cuidadosa pré-alta realizada para excluir congestão persistente (Classe I C)",
+        "origem_secao": "O que o STRONG-HF mostrou — e o que ele não mostrou"
+      },
+      {
+        "id": "icdesc-estrategia-titulacao-intensiva",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Estratégia intensiva de início/titulação rápida da terapia fundacional planejada antes da alta, com visitas frequentes organizadas nas primeiras 6 semanas (Classe I B2)",
+        "origem_secao": "Tradução prática na alta — sem virar protocolo de dose"
+      },
+      {
+        "id": "icdesc-congestao-residual-nao-detalhe",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Congestão residual, sódio urinário baixo e perda de peso insuficiente verificados como barreiras reais à progressão da terapia, não tratados como 'detalhe de enfermagem'",
+        "origem_secao": "Tradução prática na alta — sem virar protocolo de dose"
+      },
+      {
+        "id": "icdesc-quatro-eixos-fundacionais",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Os quatro eixos da terapia fundacional na ICFEr (iSGLT2, bloqueio do SRAA/ARNI, betabloqueador, antagonista mineralocorticoide) revisados e progredidos, independentemente do vocabulário usado no registro (fundacional/adicional ESC 2026 ou quatro pilares SBC)",
+        "origem_secao": "Tradução prática na alta — sem virar protocolo de dose"
+      },
+      {
+        "id": "icdesc-icfep-nao-extrapola-icfer",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Em ICFEp descompensada, sequência de dispositivos/fármacos da ICFEr (CDI, ARNI) não foi aplicada por extrapolação; papel de SGLT2 e do fenótipo obesidade avaliado conforme evidência própria (STEP-HFpEF, SUMMIT)",
+        "origem_secao": "Tradução prática na alta — sem virar protocolo de dose"
+      },
+      {
+        "id": "icdesc-seguranca-titulacao",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Antes de avançar a titulação, hipercalemia, queda de TFGe, hipotensão sintomática e congestão não resolvida foram checadas",
+        "origem_secao": "O que o STRONG-HF mostrou — e o que ele não mostrou"
+      },
+      {
+        "id": "icdesc-limite-estrategia-estruturada",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a Classe I B2 se refere à estratégia estruturada de titulação e seguimento por 6 semanas, e não a uma autorização genérica para ignorar critérios de segurança",
+        "origem_secao": "Limitações de aplicação"
+      }
+    ],
+    "revisao": "Checklist extraído do documento 'IC descompensada na ESC 2026: o que muda no vocabulário e o que o STRONG-HF ainda manda fazer na alta', já publicado. Itens rastreados às seções reais do documento; pendente de validação clínica final."
   }
 ]
