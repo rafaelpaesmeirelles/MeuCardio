@@ -41937,5 +41937,114 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md (já publicado, review_status: revisado). Itens fiéis ao texto e à árvore de decisão de origem, sem adição de critérios não presentes no documento. Aguarda revisão médica independente antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica",
+    "condicao": "Estratificação de risco de morte súbita e indicação de CDI na cardiomiopatia dilatada não isquêmica (CMD) e na cardiomiopatia hipocinética não dilatada (NDLVC)",
+    "resumo": "O que checar antes de indicar (ou não) um CDI de prevenção primária na cardiomiopatia dilatada não isquêmica ou NDLVC pela ESC 2022 — exclusão prévia de etiologia isquêmica/valvar/hipertensiva, reavaliação de FEVE após pelo menos 3 meses de TMO otimizado, critério geral de FEVE ≤35%, calculadora LMNA-risk-VTA para portadores de variante em LMNA, encaminhamento por genótipo de alto risco (FLNC truncante, PLN p.Arg14del), abordagem multiparamétrica para quem não se enquadra nos critérios anteriores, rastreamento em cascata familiar e reavaliação periódica.",
+    "documento_origem": "fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+      "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. DOI: 10.1161/CIRCULATIONAHA.118.039410. PMID: 31155932.",
+      "Køber L, Thune JJ, Nielsen JC, et al. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011.",
+      "Karanikola AE, Doundoulakis I, Antoniou CK, et al. Redefining Sudden Cardiac Death Risk Stratification in Dilated Cardiomyopathy: An Integrative Approach. Rev Cardiovasc Med. 2026;27(7):49889. DOI: 10.31083/RCM49889. PMID: 42534340.",
+      "Tetaj N, Segreti A, Ferro A, et al. High-Risk Cardiomyopathy Genotypes and Arrhythmic Risk: LMNA, FLNC, RBM20, PLN and Desmosomal Genes in the ESC 2023 Era. Genes (Basel). 2026;17(4):370. DOI: 10.3390/genes17040370. PMID: 42074488.",
+      "Ruscio E, Scacciavillani R, Gurgoglione FL, et al. Risk Stratification and Optimal Use of Implantable Cardioverter-Defibrillator Therapy in Primary Prevention of Sudden Cardiac Death in Genetic Cardiomyopathies, with Assessment of the Role of Genetic Variants in Guiding Therapeutic Decisions. Biomedicines. 2025;13(11). DOI: 10.3390/biomedicines13112626. PMID: 41301721.",
+      "Yokoshiki H, Watanabe M, Mitsuhashi T, et al. Current Status of Implantable Cardioverter-Defibrillators (ICDs)/Cardiac Resynchronization Therapy With Defibrillators (CRT-Ds) for Primary Prevention of Sudden Cardiac Death. J Arrhythm. 2026;42(2):e70349. DOI: 10.1002/joa3.70349. PMID: 42039769."
+    ],
+    "itens": [
+      {
+        "id": "cmdcdi-exclusao-etiologica-previa",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmado que etiologia isquêmica, valvar e hipertensiva já foi excluída antes de aplicar este critério de risco arrítmico — investigação etiológica é etapa anterior e distinta, não repetida aqui.",
+        "origem_secao": "Árvore de decisão — raiz"
+      },
+      {
+        "id": "cmdcdi-tmo-3-meses-e-reavaliacao-feve",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Tratamento farmacológico guiado por diretriz (TMO) otimizado por pelo menos 3 meses, com reavaliação de FEVE por ecocardiograma ou ressonância cardíaca depois desse intervalo — decisão de CDI nunca tomada sobre a fração de ejeção do primeiro exame.",
+        "origem_secao": "Árvore de decisão — passo intermediário"
+      },
+      {
+        "id": "cmdcdi-criterio-geral-feve-35",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se FEVE ≤35% após otimização, NYHA II-III e expectativa de vida >1 ano com bom estado funcional: CDI de prevenção primária considerado — Classe IIa na diretriz europeia (ESC 2022); registrar que a diretriz americana e a japonesa mantêm Classe I para a mesma situação, e que o DANISH não mostrou redução de mortalidade total por qualquer causa na CMD não isquêmica, com benefício maior no subgrupo mais jovem — informação relevante para a decisão compartilhada com o paciente.",
+        "origem_secao": "Árvore de decisão — nó C1"
+      },
+      {
+        "id": "cmdcdi-teste-genetico-lmna",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se critério geral de FEVE não preenchido: teste genético para variante patogênica em LMNA solicitado antes de descartar CDI por este critério.",
+        "origem_secao": "Árvore de decisão — nó D2"
+      },
+      {
+        "id": "cmdcdi-calculadora-lmna-risk-vta",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em portador confirmado de variante em LMNA: risco em 5 anos calculado pela calculadora validada LMNA-risk-VTA (lmna-risk-vta.fr), nunca estimado de memória — registrar que o limiar de ≥7% é o de validação estatística do escore original (Wahbi et al. 2019, prevê 96,2% dos eventos) e o de ≥10% combinado a pelo menos uma anormalidade cardíaca (FEVE <50%, BAV ou TVNS) é o limiar de ação clínica atribuído à diretriz — os dois números respondem perguntas diferentes e não devem ser confundidos.",
+        "origem_secao": "Árvore de decisão — nó D3"
+      },
+      {
+        "id": "cmdcdi-cdi-lmna-alto-risco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se LMNA-risk-VTA ≥10% em 5 anos E pelo menos uma anormalidade cardíaca presente (FEVE <50% e/ou BAV e/ou TVNS): CDI considerado independentemente do valor isolado da FEVE — Classe IIa (ESC 2022).",
+        "origem_secao": "Árvore de decisão — nó C2"
+      },
+      {
+        "id": "cmdcdi-lmna-baixo-risco-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se LMNA-risk-VTA abaixo do limiar de ação: CDI não indicado por este critério agora, mas calculadora reagendada para reavaliação a cada consulta, já que o risco de laminopatia é progressivo com a idade.",
+        "origem_secao": "Árvore de decisão — nó C3"
+      },
+      {
+        "id": "cmdcdi-genotipo-flnc-pln",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se LMNA negativo: pesquisada variante truncante em FLNC ou variante PLN p.Arg14del; se presente, encaminhar a centro de cardiomiopatia genética para estratificação multiparamétrica individual — sem atribuir classe de recomendação nem indicar CDI apenas pelo genótipo, já que nenhuma fonte consultada reproduz a classe/nível exatos da diretriz para esse subgrupo especificamente.",
+        "origem_secao": "Árvore de decisão — nó D4/C4"
+      },
+      {
+        "id": "cmdcdi-abordagem-multiparametrica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se FLNC/PLN negativos ou não testados: avaliados em conjunto FEVE <50%, síncope inexplicada, realce tardio (LGE) na RM cardíaca, TV monomórfica sustentada induzível ao estudo eletrofisiológico e variante patogênica em outro gene arritmogênico de alto risco (RBM20, TTN truncante, gene desmossômico) — CDI pode ser considerado por abordagem multiparamétrica (ESC 2022) se FEVE <50% associada a pelo menos dois desses fatores, mesmo com FEVE preservada ou levemente reduzida.",
+        "origem_secao": "Árvore de decisão — nó D5/C5"
+      },
+      {
+        "id": "cmdcdi-sem-criterio-reavaliacao-periodica",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se nenhum critério de indicação de CDI preenchido: FEVE e fatores de risco reavaliados a cada 3 a 6 meses no primeiro ano após o diagnóstico, e depois anualmente — CDI não é decisão definitiva única na primeira consulta.",
+        "origem_secao": "Árvore de decisão — nó C6"
+      },
+      {
+        "id": "cmdcdi-rastreamento-cascata-familiar",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Se etiologia genética confirmada (LMNA, FLNC, PLN ou outro gene de risco): aconselhamento genético e rastreamento em cascata familiar organizados para parentes de primeiro grau — vale transversalmente a qualquer confirmação genética, não é ramo isolado da árvore de decisão.",
+        "origem_secao": "Texto — rastreamento em cascata (transversal)"
+      },
+      {
+        "id": "cmdcdi-nao-confundir-com-trc",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Confirmado que a indicação de ressincronização cardíaca (TRC/TRC-D) não foi decidida por este critério de risco arrítmico — TRC depende de duração e morfologia do QRS (dissincronia elétrica), pergunta clínica distinta com diretriz própria (ESC 2021 de estimulação cardíaca).",
+        "origem_secao": "O que a árvore não mostra, e por quê"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi.md (já publicado, review_status: revisado). Itens fiéis à árvore de decisão e ao texto de origem — inclusive a distinção entre os dois limiares numéricos da calculadora LMNA-risk-VTA (≥7% de validação estatística vs. ≥10% de ação clínica) e a ausência proposital de classe de recomendação para FLNC/PLN p.Arg14del, ambas explicitadas no documento-fonte — sem adição de critério não presente na fonte. Aguarda revisão médica independente antes de qualquer promoção de review_status."
+    }
   }
 ]

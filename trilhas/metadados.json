@@ -27193,5 +27193,75 @@
         "por_que": "Fecha a trilha com o passo que precisa vir antes de qualquer escalonamento: um paciente exposto a AINE, alcaçuz ou anabolizante que continua com pressão elevada não é automaticamente 'resistente verdadeiro' — técnica de medida, aderência e efeito do avental branco respondem por uma fração grande dos rótulos de resistência, e só depois de excluí-los faz sentido atribuir a hipertensão à substância identificada nas etapas anteriores."
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda",
+    "titulo": "Doença coronariana: inibidores da glicoproteína IIb/IIIa, a ascensão e a queda de uma classe",
+    "tema": "Doença coronariana",
+    "objetivo": "Percorrer a evidência que consagrou o abciximabe na angioplastia de alto risco e no stent, tentou (sem sucesso consistente) repetir o benefício no IAM com supra, e por fim derrubou o uso rotineiro da classe na síndrome coronariana aguda tratada clinicamente — entendendo por que um GPI eficaz no laboratório de hemodinâmica não é o mesmo GPI na enfermaria.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "epic-abciximabe-bolus-e-infusao-na-angioplastia-de-alto-risco",
+        "por_que": "O ensaio fundador da classe: bolus+infusão de abciximabe reduz o composto isquêmico de 30 dias na angioplastia de alto risco, mas já mostra o custo em sangramento que vai perseguir o fármaco daqui em diante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "epilog-abciximabe-com-heparina-baixa-na-icp",
+        "por_que": "Resposta direta ao excesso de sangramento do EPIC: heparina em dose baixa combinada ao abciximabe mantém a redução de morte/IAM/revascularização urgente sem o mesmo preço hemorrágico, refinando o protocolo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "epistent-stent-com-abciximabe-versus-stent-isolado-versus-balao",
+        "por_que": "Move a pergunta da era do balão para a era do stent: abciximabe associado ao stent supera stent isolado e balão com abciximabe, estabelecendo a combinação que definiria a próxima década de angioplastia."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "capture-abciximabe-antes-da-ptca-na-angina-instavel-refrataria",
+        "por_que": "Testa o abciximabe antes do procedimento, e não só durante — pré-tratamento de 18 a 24 h na angina instável refratária reduz o composto de 30 dias, mas o benefício desaparece aos 6 meses, um alerta sobre vender efeito de curto prazo como mudança de prognóstico."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "admiral-abciximabe-antes-do-stent-no-iam",
+        "por_que": "Leva a classe para o infarto com supra de ST: em um ensaio pequeno (n=300), abciximabe pré-stent reduz o composto de 30 dias e melhora o fluxo TIMI 3 pré-procedimento — o resultado que o CADILLAC, maior, não vai replicar."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cadillac-stent-versus-angioplastia-com-ou-sem-abciximabe-no-iam",
+        "por_que": "Com 2.082 pacientes, mostra que o ganho do desenho fatorial vem quase inteiro da revascularização do vaso-alvo do stent — morte, reinfarto e AVC ficam sem diferença, e o abciximabe não muda reestenose nem reoclusão, contradizendo o sinal do ADMIRAL."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cadillac-admiral-stent-e-abciximabe-no-iam",
+        "por_que": "Organiza o contraste ADMIRAL versus CADILLAC num só algoritmo: stent no IAM, sim; abciximabe de rotina antes do stent, não — a síntese que evita generalizar um ensaio pequeno e positivo sobre um maior e neutro."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "gusto-iv-acs-abciximabe-sem-revascularizacao-precoce",
+        "por_que": "O ponto de virada da classe: em 7.800 pacientes com síndrome coronariana aguda tratados sem revascularização precoce, abciximabe não reduz morte ou IAM em nenhuma das duas durações testadas, e ainda aumenta sangramento e trombocitopenia — GPI de enfermaria não é GPI de laboratório de ICP."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fluxograma-gpi-pursuit-prism-plus-gusto-iv-early-acs",
+        "por_que": "Amplia a lição do GUSTO-IV para toda a classe na síndrome coronariana aguda sem intervenção precoce planejada: PURSUIT e PRISM-PLUS mostram ganhos pequenos e dependentes de heparina associada, enquanto GUSTO-IV e EARLY-ACS confirmam a neutralidade — o algoritmo que separa quando um GPI ainda se justifica."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "fluxograma-gpi-pre-hospitalar-on-time-1-on-time-2",
+        "por_que": "Fecha o arco com a última tentativa de resgatar a classe — tirofibana pré-hospitalar no IAMCSST: On-TIME 1 não muda o fluxo TIMI 3, e On-TIME 2 só entrega um desfecho substituto (desvio de ST), sem dado de mortalidade no resumo — reforçando por que a rotina de GPI perdeu espaço para a dupla antiagregação oral potente e o stent direto."
+      }
+    ]
   }
 ]
