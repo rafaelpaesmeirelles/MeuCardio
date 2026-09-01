@@ -40859,5 +40859,168 @@
       }
     ],
     "revisao": "Checklist extraído em 01/09/2026 do documento já publicado fluxograma-hipertensao-arterial-esc-2024.md (kind: fluxograma, review_status: revisado). Itens fiéis à árvore de decisão e ao texto publicado, rastreáveis por origem_secao. Nenhum critério foi adicionado além do que consta na fonte. Pendente de revisão clínica antes de publicação."
+  },
+  {
+    "slug": "estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023",
+    "condicao": "Estratificação de risco e manejo cardiovascular no diabetes (ESC 2023)",
+    "resumo": "Checklist de estratificação de risco cardiovascular pelo SCORE2-Diabetes, metas terapêuticas (HbA1c, PA, LDL-C) e escolha de fármaco (iSGLT2, GLP-1RA) por categoria de risco em pacientes com diabetes, conforme a diretriz ESC 2023, incluindo rastreamento sistemático de FA, DRC e insuficiência cardíaca.",
+    "documento_origem": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · European Heart Journal · 2023 · 44(39):4043-4140 · https://academic.oup.com/eurheartj/article/44/39/4043/7238227",
+      "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 1 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/08/18/40/2023-esc-guidelines-cvd-diabetes-part-1-esc-2023",
+      "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 2 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/11/03/37/2023-esc-guidelines-cvd-diabetes-part-2-esc-2023"
+    ],
+    "itens": [
+      {
+        "id": "escdm-avaliar-dcv-orgao-alvo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar todo paciente com diabetes quanto à presença de doença cardiovascular aterosclerótica estabelecida e dano de órgão-alvo grave (definido por TFG estimada, relação albumina/creatinina urinária ou doença microvascular em pelo menos três sítios diferentes, ex.: microalbuminúria + retinopatia + neuropatia) antes de aplicar qualquer escore de risco",
+        "origem_secao": "Mudanca conceitual chave"
+      },
+      {
+        "id": "escdm-score2-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na ausência de DCV aterosclerótica estabelecida ou dano de órgão-alvo grave, estratificar risco pelo SCORE2-Diabetes, combinando fatores convencionais (idade, tabagismo, PA sistólica, colesterol total e HDL-C) com fatores específicos do diabetes (idade ao diagnóstico, HbA1c, TFGe)",
+        "origem_secao": "Estratificacao de risco SCORE2-Diabetes / Novo escore score2 diabetes"
+      },
+      {
+        "id": "escdm-classificar-categoria-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Classificar o risco em baixo (<5%), moderado (5% a <10%), alto (10% a <20%) ou muito alto (≥20%, ou DCV aterosclerótica estabelecida, ou lesão grave de órgão-alvo), pois essa categoria define as metas de LDL-C e a estratégia farmacológica subsequente",
+        "origem_secao": "Estratificacao de risco SCORE2-Diabetes"
+      },
+      {
+        "id": "escdm-meta-hba1c",
+        "categoria": "meta",
+        "obrigatorio": true,
+        "texto": "Definir meta de HbA1c individualizada por expectativa de vida: <8,5% se expectativa de vida curta; <7% se expectativa de vida longa, evitando hipoglicemia",
+        "origem_secao": "Metas de HbA1c"
+      },
+      {
+        "id": "escdm-limite-hipoglicemia",
+        "categoria": "monitorizacao",
+        "obrigatorio": false,
+        "texto": "Manter exposição hipoglicêmica abaixo de 1% do tempo (<15 min/dia) ao perseguir a meta de HbA1c",
+        "origem_secao": "Metas de HbA1c"
+      },
+      {
+        "id": "escdm-farmaco-por-risco",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Escolher a estratégia farmacológica pela categoria de risco: baixo/moderado — metformina isolada; alto/muito alto sem DCV aterosclerótica — metformina e/ou iSGLT2 e/ou agonista de GLP-1; muito alto risco com DCV aterosclerótica estabelecida — iSGLT2 e/ou agonista de GLP-1, independente do controle glicêmico e associado ao tratamento padrão",
+        "origem_secao": "Estrategia farmacologica por categoria de risco"
+      },
+      {
+        "id": "escdm-isglt2-ic",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Prescrever iSGLT2 (dapagliflozina, empagliflozina ou sotagliflozina) em diabetes tipo 2 com ICFEr para reduzir hospitalização por IC e morte cardiovascular; todo paciente diabético com IC, independentemente da fração de ejeção, deve receber iSGLT2 para o mesmo desfecho",
+        "origem_secao": "Inibidores de SGLT2"
+      },
+      {
+        "id": "escdm-isglt2-drc",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em doença renal crônica diabética, prescrever iSGLT2 e/ou finerenona para reduzir eventos cardiovasculares e risco de falência renal",
+        "origem_secao": "Inibidores de SGLT2 / Doenca renal cronica diabetes"
+      },
+      {
+        "id": "escdm-glp1-funcao-renal",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Prescrever agonista do receptor de GLP-1 com TFGe >15 mL/min/1,73m² para controle glicêmico, dado o baixo risco de hipoglicemia e os efeitos benéficos sobre peso, risco cardiovascular e albuminúria",
+        "origem_secao": "Agonistas do receptor de GLP-1"
+      },
+      {
+        "id": "escdm-glp1-efeito-neutro-ic",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Ao escolher agonista de GLP-1 em paciente com risco de IC ou IC estabelecida, considerar que liraglutida, semaglutida, exenatida de liberação prolongada e dulaglutida têm efeito neutro (não deletério) sobre hospitalização por IC",
+        "origem_secao": "Agonistas do receptor de GLP-1"
+      },
+      {
+        "id": "escdm-meta-pa",
+        "categoria": "meta",
+        "obrigatorio": true,
+        "texto": "Definir meta de PA sistólica em 130 mmHg, evitando <120 mmHg; em idosos acima de 65 anos, alvo de 130-139 mmHg; PA diastólica alvo <80 mmHg",
+        "origem_secao": "Metas de pressao arterial"
+      },
+      {
+        "id": "escdm-meta-ldl",
+        "categoria": "meta",
+        "obrigatorio": true,
+        "texto": "Definir meta de LDL-C pela categoria de risco: <55 mg/dL se DCV aterosclerótica, lesão grave de órgão-alvo ou risco muito alto; <70 mg/dL se risco alto (10% a <20%); <100 mg/dL se risco moderado (5% a <10%)",
+        "origem_secao": "Metas de LDL-C"
+      },
+      {
+        "id": "escdm-antitromboticos-doses",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Ao prescrever antitrombótico, usar as doses de referência da diretriz: aspirina 75-100 mg 1x/dia; clopidogrel 75 mg; rivaroxabana 2,5 mg 2x/dia; ticagrelor pós-CABG 60 mg 2x/dia",
+        "origem_secao": "Antitromboticos"
+      },
+      {
+        "id": "escdm-perda-peso-cirurgia-bariatrica",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Orientar perda ponderal >5% do peso em sobrepeso/obesidade, pelo benefício sobre controle glicêmico, perfil lipídico e pressão arterial; considerar cirurgia bariátrica se risco alto/muito alto com IMC ≥35 kg/m² e falha de outras intervenções para perda de peso sustentada",
+        "origem_secao": "Peso corporal"
+      },
+      {
+        "id": "escdm-rastreio-fa",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Rastrear fibrilação atrial por palpação de pulso ou ECG em todo paciente diabético com 65 anos ou mais (Classe I); considerar também abaixo de 65 anos se houver fatores de risco associados, já que diabéticos apresentam FA em idade mais jovem",
+        "origem_secao": "Rastreamento fa"
+      },
+      {
+        "id": "escdm-rastreio-drc",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliar TFGe e relação albumina/creatinina urinária (UACR) de forma regular em todo paciente com diabetes, para risco/presença de doença renal crônica",
+        "origem_secao": "Doenca renal cronica diabetes"
+      },
+      {
+        "id": "escdm-rastreio-ic-toda-consulta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Investigar sinais e sintomas de insuficiência cardíaca em toda consulta clínica do paciente com diabetes, independentemente de sintoma cardiovascular já relatado",
+        "origem_secao": "Insuficiencia cardiaca diabetes"
+      },
+      {
+        "id": "escdm-rastreio-bidirecional-diabetes",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Rastrear diabetes não diagnosticado em todo paciente com doença cardiovascular (rastreamento bidirecional), dada a alta prevalência de diabetes não detectado (10-47% dos pacientes com eventos cardiovasculares)",
+        "origem_secao": "Rastreamento bidirecional"
+      },
+      {
+        "id": "escdm-terapia-cardioprotetora-independente-glicemia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em diabetes com DCV aterosclerótica, associar agonista de GLP-1 e/ou iSGLT2 ao tratamento padrão (antiplaquetário, anti-hipertensivo, hipolipemiante), independentemente do controle glicêmico — mesmo princípio pelo qual a estatina é indicada no diabetes tipo 2 independentemente de considerações glicêmicas",
+        "origem_secao": "Terapia farmacologica cardioprotetora"
+      },
+      {
+        "id": "escdm-nao-prescrever-isglt2-so-por-glicemia",
+        "categoria": "contraindicacao",
+        "obrigatorio": true,
+        "texto": "Não prescrever iSGLT2 apenas por controle glicêmico, sem reconhecer que a indicação cardiovascular (IC, DRC, DCV aterosclerótica) é independente do valor de HbA1c",
+        "origem_secao": "Armadilhas clinicas"
+      },
+      {
+        "id": "escdm-nao-deixar-de-rastrear-fa-jovem",
+        "categoria": "contraindicacao",
+        "obrigatorio": true,
+        "texto": "Não deixar de rastrear fibrilação atrial em diabético jovem (<65 anos) com fatores de risco associados, apenas por estar abaixo do limiar etário de rastreamento sistemático",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Checklist extraído em 01/09/2026 da diretriz ESC 2023 já publicada no repositório, cobrindo estratificação de risco (SCORE2-Diabetes), metas terapêuticas (HbA1c, PA, LDL-C) e escolha farmacológica por categoria de risco, além do rastreamento sistemático de FA, DRC e IC. Itens fiéis ao conteúdo do documento de origem; pendente de validação clínica final."
   }
 ]

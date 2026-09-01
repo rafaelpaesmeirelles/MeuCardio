@@ -19393,5 +19393,46 @@
       "Rossello X, Prescott EIB, Kristensen AMD, et al. β blockers after myocardial infarction with mildly reduced ejection fraction: an individual patient data meta-analysis of randomised controlled trials. Lancet. 2025;406(10508):1128-1137. DOI: 10.1016/S0140-6736(25)01592-2. PMID: 40897190. PROSPERO: CRD420251023480."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dapagliflozina-adjuvante-pos-ablacao-fa-sem-indicacao-metabolica",
+    "titulo": "SGLT2i para prevenir recorrência pós-ablação em quem não tem indicação da droga?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Homem, 57 anos, FA persistente há 14 meses, sintomático apesar de controle de frequência otimizado. Sem diabetes, sem insuficiência cardíaca (FEVE 58%, sem sintomas ou sinais de congestão) e sem doença renal crônica (TFGe 92 mL/min/1,73m²). Está agendado para primeira ablação por cateter. Na consulta pré-procedimento, o paciente pergunta se pode 'ajudar o resultado da ablação' tomando um inibidor de SGLT2, já que leu que essa classe reduz recorrência de FA.",
+    "pergunta": "Qual a conduta mais apropriada, com base na evidência disponível?",
+    "opcoes": [
+      "Iniciar dapagliflozina 10 mg/dia por 3 meses após a ablação, com o objetivo específico de reduzir a recorrência de arritmia atrial",
+      "Explicar que não há, até o momento, base randomizada para prescrever SGLT2i com o objetivo isolado de prevenir recorrência de FA pós-ablação em paciente sem diabetes, insuficiência cardíaca ou doença renal crônica — e não iniciar a droga por essa indicação",
+      "Prescrever SGLT2i apenas se a recorrência de arritmia for confirmada por monitorização após a ablação, como resgate terapêutico",
+      "Adiar a ablação até que o paciente desenvolva alguma indicação metabólica ou cardiovascular estabelecida para SGLT2i, otimizando o efeito antiarrítmico esperado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O sinal observacional de que SGLT2i reduz recorrência de FA pós-ablação (metanálise de 2025 com RR 0,61 para recorrência, IC 95% 0,52-0,71) foi obtido inteiramente em pacientes com indicação de base para a droga — diabetes tipo 2 ou insuficiência cardíaca — e é plausivelmente explicado por efeitos indiretos da classe sobre remodelamento cardíaco, sobrecarga de volume e inflamação, além de viés de indicação residual mesmo em análises pareadas por escore de propensão. O ensaio DARE-AF (Circulation, 2026), randomizado, testou exatamente esse paciente — FA persistente agendada para primeira ablação, sem diabetes, insuficiência cardíaca ou doença renal crônica — comparando dapagliflozina 10 mg/dia por 3 meses versus cuidado padrão, e não encontrou diferença: carga de FA aos 3 meses 7,5% vs. 8,1% (p=0,48) e recorrência de arritmia atrial 29,6% vs. 28,0% (HR 1,11; IC 95% 0,66-1,86; p=0,70). Ou seja, isolado do efeito metabólico/hemodinâmico que justifica a droga nas populações com indicação de base, o SGLT2i não demonstrou efeito antiarrítmico direto detectável. A conduta correta é orientar o paciente sobre essa distinção e não prescrever a droga com esse objetivo isolado — o que não significa negar SGLT2i caso ele desenvolva, por outro motivo, indicação estabelecida para a classe. Adiar a ablação não tem qualquer racional nessa evidência, e usar a droga apenas como resgate após recorrência confirmada também carece de base — o ensaio testou uso profilático, não de resgate, e foi negativo mesmo nesse desenho.",
+    "source_refs": [
+      "Jiang C, Zhao Z, Yang Z, et al. Dapagliflozin to Reduce Early Recurrence After Catheter Ablation for Atrial Fibrillation: The DARE-AF Randomized Clinical Trial. Circulation. 2026;153(5):297-306. DOI: 10.1161/circulationaha.125.077447. PMID: 41206792. ClinicalTrials.gov NCT06433479",
+      "Li J, Zhang F, Fan S, et al. Association of SGLT2 inhibitors with post-ablation atrial fibrillation recurrence in individuals with heart failure or type 2 diabetes mellitus: a systematic review and meta-analysis. Front Cardiovasc Med. 2025 Nov 21. DOI: 10.3389/fcvm.2025.1710123. PMID: 41357094"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal",
+    "titulo": "Monitor de pressão de artéria pulmonar (Cordella) em IC classe III: o PROACTIVE-HF de 2 anos prova redução de eventos?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 71 anos, ICFEr de etiologia isquêmica (FEVE 30%), classe funcional NYHA III apesar de quadriterapia otimizada em doses-alvo (iSGLT2, sacubitril-valsartana, betabloqueador e espironolactona). Teve 2 internações por descompensação de IC nos últimos 12 meses. Está sendo avaliado, dentro de um programa estruturado de IC, para implante de sensor de pressão de artéria pulmonar (sistema Cordella) com monitorização remota. O paciente leu sobre o seguimento de 2 anos do PROACTIVE-HF e pergunta se o estudo já comprova que o sensor vai reduzir suas internações e prolongar sua sobrevida.",
+    "pergunta": "Qual é a interpretação metodologicamente correta do PROACTIVE-HF (seguimento de 2 anos) a ser transmitida a este paciente antes da decisão sobre o implante?",
+    "opcoes": [
+      "O PROACTIVE-HF é um estudo prospectivo, multicêntrico, aberto e de braço único, sem grupo controle contemporâneo: a taxa observada de 0,89 evento de IC/morte por paciente em 2 anos mostra viabilidade e um perfil de eventos relativamente baixo na coorte monitorada, mas não permite afirmar redução causal de mortalidade ou hospitalização versus cuidado usual — o benefício depende de um programa estruturado capaz de agir sobre os dados enviados pelo sensor",
+      "O PROACTIVE-HF é um ensaio clínico randomizado que comparou o sistema Cordella contra cuidado usual e demonstrou redução estatisticamente significativa de mortalidade e hospitalização por IC, resultado que pode ser prometido ao paciente com segurança",
+      "Como os resultados de eventos foram numericamente semelhantes entre ICFEr e ICFEp neste seguimento, o implante do sensor deve substituir a titulação farmacológica remanescente, já que a monitorização hemodinâmica é mais precisa do que os ajustes guiados por classe funcional e sintomas",
+      "Por se tratar de um estudo com resultado favorável, o implante deve ser oferecido a qualquer paciente com IC, independentemente de classe funcional ou histórico de internação, pois o benefício demonstrado se estende a toda a população com o diagnóstico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O seguimento de 2 anos do PROACTIVE-HF, publicado em 2026, é um estudo prospectivo, multicêntrico, aberto e de braço único em pacientes NYHA III monitorados pelo sistema Cordella (pressão média de artéria pulmonar sentada, sinais vitais e sintomas remotos), independentemente da fração de ejeção. A incidência combinada de eventos de IC/morte em 24 meses foi 0,89 por paciente (IC95% 0,81-0,99), predominantemente por hospitalizações por IC, com taxa maior em ICFEr do que em ICFEp (1,0 vs 0,8; p=0,048) — achado de estratificação prognóstica dentro da coorte, não de eficácia diferencial do dispositivo entre fenótipos. Por não existir grupo controle contemporâneo randomizado, não é metodologicamente correto atribuir a taxa de eventos observada exclusivamente ao sensor, tampouco falar em redução causal ou magnitude de benefício versus cuidado usual — a opção que descreve o estudo como RCT positivo (alternativa 2) inverte o desenho real. O racional da monitorização remota invasiva é detectar elevação de pressão pulmonar antes da congestão clínica evidente para permitir ajuste precoce de diuréticos, em pacientes NYHA III com internações recorrentes já acompanhados por programa estruturado — ela não substitui a otimização farmacológica baseada em evidência (afastando a alternativa 3) nem se generaliza para qualquer paciente com IC fora desse perfil de risco e seguimento (afastando a alternativa 4).",
+    "source_refs": [
+      "Guichard JL, Bonno EL, Nassif ME, et al. Two-Year Results of PROACTIVE-HF Trial Stratified by Left Ventricular Ejection Fraction. J Card Fail. 2026. PMID: 41833749. DOI: 10.1016/j.cardfail.2026.01.023."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

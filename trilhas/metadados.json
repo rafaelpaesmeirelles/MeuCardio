@@ -26581,5 +26581,75 @@
         "por_que": "Fecha o ciclo reconectando com a valvopatia intervencionista: mostra que a prótese transcateter (TAVI) também é sítio de endocardite, com desafios diagnósticos e prognósticos próprios."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd",
+    "titulo": "Cardiomiopatia induzida por terapia oncológica: do risco basal ao diagnóstico diferencial da CTRCD",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo estratificar o risco cardiovascular antes de iniciar quimioterapia cardiotóxica, decidir e sustentar com evidência a profilaxia farmacológica primária com carvedilol, conduzir a vigilância por biomarcador de imagem (strain longitudinal global) durante o tratamento, tratar a disfunção ventricular relacionada ao câncer (CTRCD) já estabelecida, e diferenciar essa cardiomiopatia tóxico-cumulativa da antraciclina de duas outras formas de disfunção cardíaca aguda que também ocorrem no paciente oncológico — takotsubo por estresse e miocardite fulminante imunomediada por inibidor de checkpoint — que exigem conduta radicalmente diferente.",
+    "nivel": "avancado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-quimioterapia-cardiotoxica",
+        "por_que": "Ponto de partida obrigatório: estratifica o risco cardiovascular basal do paciente antes de expô-lo a um agente cardiotóxico, definindo quem precisa de vigilância mais próxima desde o primeiro ciclo."
+      },
+      {
+        "ordem": 2,
+        "item_type": "checklist",
+        "item_slug": "decisao-sobre-profilaxia-com-carvedilol-antes-de-antraciclina",
+        "por_que": "Traduz o risco basal identificado na etapa anterior em uma decisão prática: em quem vale a pena iniciar profilaxia farmacológica primária antes da antraciclina."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "carvedilol",
+        "por_que": "Perfil farmacológico do agente sobre o qual recai a decisão de profilaxia primária, antes de examinar a evidência que a sustenta (ou não)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "ceccy-seguimento-final-96-semanas-carvedilol-antraciclina",
+        "por_que": "O seguimento final em 96 semanas do CECCY mostra que a proteção do carvedilol sobre a FEVE não se sustenta a longo prazo, apesar do sinal inicial em troponina — a evidência que relativiza a decisão de profilaxia tomada na etapa 2."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "vigilancia-cardiaca-durante-antraciclina-e-terapia-anti-her2-ctrcd",
+        "por_que": "Como a profilaxia farmacológica isolada não resolve o problema, a vigilância cardíaca estruturada durante o tratamento passa a ser a linha de defesa central — este checklist define o protocolo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "strain-longitudinal-global-marcador-precoce-de-cardiotoxicidade-e-os-cortes-de-queda-relativa",
+        "por_que": "Detalha o biomarcador de imagem (GLS) que sustenta a vigilância da etapa anterior, incluindo os cortes de queda relativa que definem toxicidade subclínica antes da queda de FEVE."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "succour-mri-2024-strain-guia-cardioprotecao-antraciclina",
+        "por_que": "Testa diretamente se agir sobre a queda isolada do GLS identificada na etapa 6 — iniciando cardioproteção guiada por strain — muda desfecho, fechando o ciclo entre detectar e tratar precocemente."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-aguda-e-ctrcd-sintomatica-durante-terapia-oncologica",
+        "por_que": "Quando a vigilância falha ou chega tarde, este é o manejo da disfunção ventricular relacionada ao tratamento do câncer (CTRCD) já sintomática — o desfecho que toda a cadeia anterior tenta evitar."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-takotsubo-associada-ao-cancer-e-terapia-antineoplasica",
+        "por_que": "Diagnóstico diferencial essencial: disfunção ventricular aguda por estresse no paciente oncológico, de mecanismo catecolaminérgico e não dose-cumulativo — não deve ser confundida com CTRCD por antraciclina nem tratada da mesma forma."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "miocardite-fulminante-por-inibidor-de-checkpoint-mortalidade-real",
+        "por_que": "Segundo diagnóstico diferencial, de mecanismo oposto ao da antraciclina: miocardite fulminante imunomediada por inibidor de checkpoint, de instalação aguda e mortalidade alta, que exige imunossupressão emergencial e não vigilância por strain nem betabloqueador profilático."
+      }
+    ]
   }
 ]
