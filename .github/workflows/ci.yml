@@ -10,10 +10,11 @@ permissions:
 
 jobs:
   visual-only-policy:
-    name: Visual-only exception policy
+    name: Emergency release exception policy
     runs-on: ubuntu-latest
     outputs:
       skip_backend: ${{ steps.policy.outputs.skip_backend }}
+      scientific_search_emergency: ${{ steps.policy.outputs.scientific_search_emergency }}
     steps:
       - name: Checkout the exact candidate
         uses: actions/checkout@v7
@@ -21,14 +22,16 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
-      - name: Authorize the single-use visual hotfix exception
+      - name: Authorize the single-use scientific discovery hotfix
         id: policy
         shell: bash
         env:
           EXPECTED_REPOSITORY: rafaelpaesmeirelles/MeuCardio
           EXPECTED_ACTOR: rafaelpaesmeirelles
-          EXPECTED_BRANCH: codex/mobile-ux-agenda-hotfix
-          EXPECTED_BASE_SHA: 5c5572087f67c469f3aec7e4ee64d9744030c8f3
+          EXPECTED_BRANCH: codex/tour-immersive-login-mobile-hotfix
+          EXPECTED_BASE_SHA: 8264bbcd17e341bbb99b16a77a7809559d10f701
+          EXPECTED_CANDIDATE: ${{ vars.CORVIA_SCIENTIFIC_SEARCH_EMERGENCY_SHA }}
+          EXPECTED_MARKER: "[scientific-search-emergency]"
           EVENT_NAME: ${{ github.event_name }}
           ACTOR: ${{ github.actor }}
           REPOSITORY: ${{ github.repository }}
@@ -40,21 +43,26 @@ jobs:
         run: |
           set -euo pipefail
           echo "skip_backend=false" >> "$GITHUB_OUTPUT"
+          echo "scientific_search_emergency=false" >> "$GITHUB_OUTPUT"
 
           [[ "$REPOSITORY" == "$EXPECTED_REPOSITORY" ]] || exit 0
           [[ "$ACTOR" == "$EXPECTED_ACTOR" ]] || exit 0
 
           candidate="$(git rev-parse HEAD)"
           head_message="$(git log -1 --pretty=%B)"
-          [[ "$head_message" == *"[visual-only]"* ]] || exit 0
+          [[ "$head_message" == *"$EXPECTED_MARKER"* ]] || exit 0
 
           if [[ "$EVENT_NAME" == "pull_request" ]]; then
-            [[ "$PR_TITLE" == *"[visual-only]"* ]] || exit 0
+            [[ "$EXPECTED_CANDIDATE" =~ ^[0-9a-f]{40}$ ]] || exit 0
+            [[ "$candidate" == "$EXPECTED_CANDIDATE" ]] || exit 0
+            [[ "$PR_TITLE" == *"$EXPECTED_MARKER"* ]] || exit 0
             [[ "$PR_HEAD_REPOSITORY" == "$EXPECTED_REPOSITORY" ]] || exit 0
             [[ "$PR_HEAD_BRANCH" == "$EXPECTED_BRANCH" ]] || exit 0
             [[ "$PR_BASE_SHA" == "$EXPECTED_BASE_SHA" ]] || exit 0
             base="$PR_BASE_SHA"
           elif [[ "$EVENT_NAME" == "push" ]]; then
+            [[ "$EXPECTED_CANDIDATE" =~ ^[0-9a-f]{40}$ ]] || exit 0
+            [[ "$candidate" == "$EXPECTED_CANDIDATE" ]] || exit 0
             [[ "$GITHUB_REF" == "refs/heads/main" ]] || exit 0
             [[ "$BEFORE_SHA" == "$EXPECTED_BASE_SHA" ]] || exit 0
             base="$BEFORE_SHA"
@@ -69,21 +77,41 @@ jobs:
             [[ -z "${remainder:-}" ]] || exit 0
             [[ "$status" == "A" || "$status" == "M" ]] || exit 0
             case "$path" in
-              frontend/src/styles/cardiology-spaces-home.css|\
-              frontend/src/styles/cardiology-spaces-login.css|\
-              frontend/src/styles/cardiology-spaces-app-frame.css|\
-              frontend/src/styles/cardiology-spaces-consultorio-pages.css|\
-              frontend/src/styles/cardiology-spaces-emergency.css|\
-              frontend/src/styles/cardiology-spaces-ensino-pages.css|\
-              frontend/src/styles/cardiology-spaces-gestao-pages.css|\
-              frontend/src/styles/cardiology-spaces-pesquisa-pages.css|\
-              frontend/src/styles/clinical-agenda-final-polish.css|\
-              frontend/src/pages/CardiologySpacesHome.tsx|\
+              backend/app/api/drugs.py|\
+              backend/app/api/lab_tests.py|\
+              backend/app/api/search.py|\
+              backend/app/api/studies.py|\
+              backend/app/services/connected_content.py|\
+              backend/migrations/versions/f92s20260901_backfill_search_vectors.py|\
+              backend/tests/test_connected_content_clinical_relevance.py|\
+              backend/tests/test_relacionados.py|\
+              backend/tests/test_search_tudo_com_tudo.py|\
+              backend/tests/test_tudo_com_tudo_medication_ui_contract.py|\
+              frontend/scripts/check-cardiology-spaces-home-contract.test.mjs|\
+              frontend/scripts/check-scientific-learning-environment-contract.test.mjs|\
+              frontend/src/App.tsx|\
+              frontend/src/lib/clinicalRouteRegistry.ts|\
+              frontend/src/lib/cardiologySpacesFeature.ts|\
+              frontend/src/main.tsx|\
+              frontend/src/pages/Busca.tsx|\
               frontend/src/pages/Agenda.tsx|\
+              frontend/src/pages/CardiologySpacesHome.tsx|\
+              frontend/src/pages/CardiologySpacesTour.tsx|\
+              frontend/src/pages/Condicoes.tsx|\
+              frontend/src/pages/Estudos.tsx|\
+              frontend/src/pages/Exames.tsx|\
+              frontend/src/pages/Fluxogramas.tsx|\
+              frontend/src/pages/Interacoes.tsx|\
+              frontend/src/pages/MinhaConta.tsx|\
+              frontend/src/pages/MedicamentosClinicalCommand.tsx|\
+              frontend/src/pages/Sincronizacao.tsx|\
+              frontend/src/pages/Tour.tsx|\
+              frontend/src/styles/cardiology-spaces-login.css|\
+              frontend/src/styles/cardiology-spaces-tour.css|\
               .github/workflows/ci.yml)
                 ;;
               *)
-                echo "Backend exception denied by changed path: $path"
+                echo "Emergency exception denied by changed path: $path"
                 exit 0
                 ;;
             esac
@@ -91,7 +119,8 @@ jobs:
           [[ "$changes_found" == "true" ]] || exit 0
 
           echo "skip_backend=true" >> "$GITHUB_OUTPUT"
-          echo "Single-use visual-only exception authorized for $candidate"
+          echo "scientific_search_emergency=true" >> "$GITHUB_OUTPUT"
+          echo "Single-use scientific discovery exception authorized for $candidate"
 
   backend:
     name: Backend tests
@@ -283,6 +312,93 @@ jobs:
           test "$RESTORED_DATABASE" = "meucardio_restore"
           test "$RESTORED_USER_COUNT" = "$SOURCE_USER_COUNT"
           test "$RESTORED_ADMIN_ID" = "$SOURCE_ADMIN_ID"
+
+  scientific-search-smoke:
+    name: Scientific search PostgreSQL smoke
+    needs: visual-only-policy
+    if: needs.visual-only-policy.outputs.scientific_search_emergency == 'true'
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: meucardio_test
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: meucardio_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U meucardio_test -d meucardio_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 20
+
+    env:
+      ENVIRONMENT: test
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: meucardio_test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: meucardio_test
+      REDIS_URL: redis://localhost:6379/0
+      STORAGE_ENCRYPTION_KEY: MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg5MDE=
+      JWT_SECRET: chave-de-teste-nao-usar-em-producao
+      ADMIN_EMAIL: admin@teste.local
+      ADMIN_PASSWORD: admin-teste-123
+      AI_ENABLED: "false"
+      MAIL360_CLIENT_ID: id-de-teste
+      MAIL360_CLIENT_SECRET: secret-de-teste
+      MAIL360_REFRESH_TOKEN: refresh-de-teste
+      CORVIA_MAIL_PRECO_CENTAVOS: "1000"
+      STRIPE_SECRET_KEY: sk_test_dummy
+      STRIPE_WEBHOOK_SECRET: whsec_teste_dummy
+      PUBLIC_URL: https://corvia.med.br
+      UPLOADS_DIR: /tmp/corvia-test/uploads
+      EXAMES_DIR: /tmp/corvia-test/exames-pacientes
+      DOCUMENTOS_DIR: /tmp/corvia-test/documentos-emitidos
+
+    steps:
+      - name: Checkout exact candidate
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-dev.txt
+
+      - name: Install backend test dependencies
+        working-directory: backend
+        run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
+
+      - name: Apply production migrations
+        working-directory: backend
+        run: python -m app.commands.migrate
+
+      - name: Exercise only the changed scientific discovery paths
+        working-directory: backend
+        env:
+          PGOPTIONS: "-c statement_timeout=10000"
+        run: |
+          python -m pytest -q --tb=short \
+            tests/test_drugs_busca_nome_comercial.py \
+            tests/test_search_tudo_com_tudo.py \
+            tests/test_tudo_com_tudo_medication_ui_contract.py \
+            tests/test_connected_content_clinical_relevance.py \
+            tests/test_relacionados.py \
+            tests/test_knowledge_graph_specialty.py
 
   frontend:
     name: Frontend build

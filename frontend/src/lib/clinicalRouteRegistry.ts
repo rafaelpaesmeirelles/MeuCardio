@@ -207,7 +207,7 @@ export const CLINICAL_ROUTES = [
 
   // Experiências autenticadas fora do shell
   route({ path: "/tour", name: "Tour CorVIA", shortName: "Tour", space: "home", group: "geral", icon: "curso", layout: "focus", intelligence: false, kind: "immersive" }),
-  route({ path: "/tour/cardiology-spaces", name: "Onboarding Cardiology Spaces", shortName: "Onboarding", space: "home", group: "geral", icon: "hoje", layout: "focus", intelligence: false, kind: "immersive", parent: "/tour" }),
+  route({ path: "/tour/cardiology-spaces", name: "Onboarding Cardiology Spaces", shortName: "Onboarding", space: "home", group: "geral", icon: "hoje", layout: "focus", intelligence: false, kind: "alias", parent: "/tour", redirectTo: "/tour" }),
   route({ path: "/em-breve", name: "Em breve", space: "home", group: "geral", icon: "relogio", layout: "focus", intelligence: false, kind: "immersive", gate: "no-product-access" }),
 ] as const satisfies readonly ClinicalRouteDefinition[];
 

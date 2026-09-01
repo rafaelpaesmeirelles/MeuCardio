@@ -151,14 +151,14 @@ export default function App() {
     return <Navigate to="/verificacao-identidade" replace />;
   }
 
-  const noCardiologySpacesTour = location.pathname === "/tour/cardiology-spaces";
+  const noCardiologySpacesTour = location.pathname === "/tour" || location.pathname === "/tour/cardiology-spaces";
   if (
     usuario.onboarding_pendente &&
     !usuario.profile_completion_required &&
     !usuario.kyc_required &&
     !noCardiologySpacesTour
   ) {
-    return <Navigate to="/tour/cardiology-spaces?retorno=/" replace />;
+    return <Navigate to="/tour?retorno=/" replace />;
   }
 
   const investorTourSeen = window.sessionStorage.getItem(INVESTOR_TOUR_SESSION_KEY) === "seen";
@@ -169,7 +169,7 @@ export default function App() {
     !investorTourSeen &&
     !noCardiologySpacesTour
   ) {
-    return <Navigate to="/tour/cardiology-spaces?retorno=/" replace />;
+    return <Navigate to="/tour?retorno=/" replace />;
   }
 
   return (
@@ -255,8 +255,8 @@ export default function App() {
           {usuario.role === "admin" && <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />}
           {usuario.role === "admin" && <Route path="admin/operacoes-ia" element={(heartTeamEnabled() || whatsappAssistantEnabled()) ? <AdminAIOperations /> : <Navigate to="/admin" replace />} />}
         </Route>
-        <Route path="/tour" element={<Tour />} />
-        <Route path="/tour/cardiology-spaces" element={<CardiologySpacesTour />} />
+        <Route path="/tour" element={<CardiologySpacesTour />} />
+        <Route path="/tour/cardiology-spaces" element={<Tour />} />
         <Route path="/em-breve" element={<EmBreve />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

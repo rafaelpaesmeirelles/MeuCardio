@@ -19,6 +19,8 @@ type Item = {
   slug: string;
   generic_name: string;
   drug_class: string;
+  brand_names: string[];
+  commercial_names: string[];
   review_status: string;
 };
 
@@ -95,6 +97,10 @@ function grupoAmplo(classe: string) {
 
 function dinheiro(valor: number | null) {
   return valor == null ? "—" : valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function normalizarBusca(valor: string) {
+  return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
 }
 
 function rotuloCampo(chave: string) {
@@ -284,10 +290,10 @@ export default function MedicamentosClinicalCommand() {
   }, [lista]);
 
   const filtrados = useMemo(() => {
-    const termo = busca.trim().toLocaleLowerCase("pt-BR");
+    const termo = normalizarBusca(busca.trim());
     return (lista ?? []).filter((item) => {
       const pertence = !grupo || grupoAmplo(item.drug_class) === grupo;
-      const casa = !termo || `${item.generic_name} ${item.drug_class}`.toLocaleLowerCase("pt-BR").includes(termo);
+      const casa = !termo || normalizarBusca(`${item.generic_name} ${item.drug_class} ${(item.brand_names ?? []).join(" ")} ${(item.commercial_names ?? []).join(" ")}`).includes(termo);
       return pertence && casa;
     });
   }, [lista, busca, grupo]);
@@ -351,7 +357,7 @@ export default function MedicamentosClinicalCommand() {
 
       <ClinicalSection eyebrow="Encontrar" title="Qual medicamento você precisa agora?">
         <div className="cc-filterbar">
-          <div className="cc-filterbar__field"><label htmlFor="cc-drug-search">Nome genérico ou classe</label><input id="cc-drug-search" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: sacubitril, apixabana, betabloqueador…" autoComplete="off" /></div>
+          <div className="cc-filterbar__field"><label htmlFor="cc-drug-search">Nome genérico, comercial ou classe</label><input id="cc-drug-search" value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: Entresto, apixabana, betabloqueador…" autoComplete="off" /></div>
           <div className="cc-filterbar__field"><label htmlFor="cc-drug-group">Grupo terapêutico</label><select id="cc-drug-group" value={grupo} onChange={(e) => setGrupo(e.target.value)}><option value="">Todos os grupos</option>{grupos.map((item) => <option key={item}>{item}</option>)}</select></div>
           <div className="cc-filterbar__result">{filtrados.length} resultado{filtrados.length === 1 ? "" : "s"}</div>
         </div>

@@ -1,6 +1,8 @@
+import unicodedata
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
-from sqlalchemy import func, or_
+from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -30,6 +32,33 @@ def _dump(d: Drug) -> dict:
 
 
 ARQUIVO_INTERACOES = "/medicamentos/interacoes.json"
+
+
+def _termo_sem_acentos(value: str) -> str:
+    return "".join(
+        char for char in unicodedata.normalize("NFKD", value.casefold())
+        if not unicodedata.combining(char)
+    ).strip()
+
+
+def _contem_sem_acentos(column, value: str):
+    return func.unaccent(func.lower(cast(column, Text))).contains(
+        _termo_sem_acentos(value), autoescape=True,
+    )
+
+
+def _nomes_comerciais_unicos(values) -> list[str]:
+    """Preserva a grafia editorial e elimina duplicatas de caixa/acento/espaço."""
+    encontrados: list[str] = []
+    vistos: set[str] = set()
+    for value in values:
+        legivel = " ".join(str(value or "").split())
+        chave = _termo_sem_acentos(legivel)
+        if not chave or chave in vistos:
+            continue
+        vistos.add(chave)
+        encontrados.append(legivel)
+    return encontrados
 
 
 def _interacoes_curadas() -> list[dict]:
@@ -76,26 +105,56 @@ class ApresentacaoComercial(BaseModel):
 
 @router.get("")
 def list_drugs(
-    q: str | None = None,
+    q: str | None = Query(None, max_length=160),
     drug_class: str | None = None,
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
     # Só medicamento publicado aparece — mesmo checkpoint das outras frentes.
     query = db.query(Drug).filter(Drug.published.is_(True))
-    if q:
-        padrao = f"%{q}%"
+    if q and q.strip():
+        latest_cmed_version = select(func.max(CmedVersao.id)).scalar_subquery()
+        cmed_match = select(CmedApresentacao.id).where(
+            CmedApresentacao.drug_id == Drug.id,
+            CmedApresentacao.cmed_versao_id == latest_cmed_version,
+            _contem_sem_acentos(CmedApresentacao.produto, q),
+        ).exists()
         query = query.filter(or_(
-            Drug.generic_name.ilike(padrao),
-            func.array_to_string(Drug.brand_names, " ").ilike(padrao),
+            _contem_sem_acentos(Drug.generic_name, q),
+            _contem_sem_acentos(Drug.brand_names, q),
+            _contem_sem_acentos(Drug.drug_class, q),
+            cmed_match,
         ))
     if drug_class:
         query = query.filter(Drug.drug_class == drug_class)
-    return [
-        {"slug": d.slug, "generic_name": d.generic_name, "drug_class": d.drug_class,
-         "brand_names": d.brand_names or [], "review_status": d.review_status}
-        for d in query.order_by(Drug.generic_name).limit(300)
-    ]
+    drugs = query.order_by(Drug.generic_name).limit(300).all()
+    latest_cmed_version_id = db.query(func.max(CmedVersao.id)).scalar()
+    cmed_names: dict[int, list[str]] = {drug.id: [] for drug in drugs}
+    if latest_cmed_version_id and drugs:
+        for drug_id, product in db.execute(
+            select(CmedApresentacao.drug_id, CmedApresentacao.produto).where(
+                CmedApresentacao.cmed_versao_id == latest_cmed_version_id,
+                CmedApresentacao.drug_id.in_([drug.id for drug in drugs]),
+            ).distinct().order_by(CmedApresentacao.produto)
+        ):
+            if drug_id is not None and product:
+                cmed_names.setdefault(drug_id, []).append(product)
+
+    results = []
+    for drug in drugs:
+        commercial_names = _nomes_comerciais_unicos([
+            *(drug.brand_names or []),
+            *cmed_names.get(drug.id, []),
+        ])
+        results.append({
+            "slug": drug.slug,
+            "generic_name": drug.generic_name,
+            "drug_class": drug.drug_class,
+            "brand_names": drug.brand_names or [],
+            "commercial_names": commercial_names,
+            "review_status": drug.review_status,
+        })
+    return results
 
 
 def _nome_legivel_substancia(bruto: str) -> str:

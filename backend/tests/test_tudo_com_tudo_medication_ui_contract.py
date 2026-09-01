@@ -32,6 +32,9 @@ def test_busca_ancora_medicamento_e_abre_cada_frente_na_rota_correta():
     assert "/drugs?q=" in fonte
     assert "/drug-insights/" in fonte
     assert "brand_names?.some" in fonte
+    assert "commercial_names?.some" in fonte
+    assert "Definição da doença" in fonte
+    assert "ORDEM_DOENCA" in fonte
     assert '["Visão geral e características", "Fundamentos e conteúdo de referência", "/biblioteca"' in fonte
     assert '["Estudos", "Literatura original e trabalhos científicos", "/estudos"' in fonte
     assert '["Evidências", "Recomendações e níveis de evidência", "/evidencias"' in fonte
@@ -53,12 +56,33 @@ def test_qualquer_assunto_e_organizado_sem_expandir_tema_amplo_por_inferencia():
         "Evidências",
         "Exames",
         "Galeria clínica",
+        "Medicamentos",
+        "Guia de doenças",
+        "Triagem por sintomas",
+        "Emergências",
+        "Checklists",
+        "Casos clínicos",
+        "Trilhas",
+        "Material para pacientes",
+        "Calculadoras",
     ):
         assert area in fonte
     assert "Tudo sobre ${assunto}" in fonte
-    assert "new URLSearchParams({ tema, assunto: termo })" in fonte
-    assert "`/relacionados?${query.toString()}`" in fonte
-    assert ".find((x) => norm(x) === n)" in fonte
-    assert "if (!medicamentoForte)" in fonte
-    assert "new Set(itens.map" in fonte
+    assert "`/grafo/relacionados?${query.toString()}`" in fonte
+    assert 'limite_por_tipo: "6"' in fonte
+    assert "mergeGraphGroups" in fonte
+    assert "Conexão clínica verificável" in fonte
+    assert "if (!medicamentoForte)" not in fonte
     assert "temasUnicos.length === 1" not in fonte
+
+
+def test_buscas_de_medicamento_consideram_nomes_comerciais_em_todas_as_superficies():
+    fontes = {
+        "catálogo": MEDICAMENTOS.read_text(encoding="utf-8"),
+        "interações": (REPO_ROOT / "frontend/src/pages/Interacoes.tsx").read_text(encoding="utf-8"),
+        "condições": (REPO_ROOT / "frontend/src/pages/Condicoes.tsx").read_text(encoding="utf-8"),
+    }
+
+    for nome, fonte in fontes.items():
+        assert "commercial_names" in fonte, nome
+        assert "brand_names" in fonte, nome

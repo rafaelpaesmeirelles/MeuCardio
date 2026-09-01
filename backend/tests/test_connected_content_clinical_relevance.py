@@ -17,8 +17,9 @@ from app.services.topic_relevance import (
 
 
 @pytest.fixture(autouse=True)
-def _banco_limpo():
+def _banco_limpo(monkeypatch):
     """These pure matcher regressions intentionally do not require Postgres."""
+    monkeypatch.setattr(connected, "relacionados_de", lambda *_args, **_kwargs: None)
     yield
 
 
@@ -306,3 +307,116 @@ def test_chamada_sem_assunto_e_catalogo_tematico_sem_score_clinico(monkeypatch):
     assert "match_threshold" not in result
     assert "relevance_score" not in item
     assert "match_reasons" not in item
+
+
+def test_doenca_e_triagem_entram_somente_por_relacao_direta_do_grafo(monkeypatch):
+    calls: list[dict] = []
+
+    def fake_graph(_db, **kwargs):
+        calls.append(kwargs)
+        return {
+            "grupos": [
+                {
+                    "tipo": "doenca",
+                    "rota_lista": "/doencas",
+                    "itens": [{
+                        "slug": "doenca-estruturada",
+                        "titulo": "Doença estruturada",
+                        "rota": "/doencas/doenca-estruturada",
+                        "relation_type": "mentioned_in",
+                        "relevance_score": 1.0,
+                        "confidence": "derived",
+                        "provenance_type": "structured_metadata",
+                        "review_status": "pendente_revisao",
+                    }],
+                },
+                {
+                    "tipo": "triagem_sintoma",
+                    "rota_lista": "/triagem-sintomas",
+                    "itens": [{
+                        "slug": "triagem-estruturada",
+                        "titulo": "Triagem estruturada",
+                        "rota": "/triagem-sintomas?slug=triagem-estruturada",
+                        "relation_type": "differential_for",
+                        "relevance_score": 0.9,
+                        "confidence": "derived",
+                        "provenance_type": "structured_metadata",
+                        "review_status": "pendente_revisao",
+                    }],
+                },
+                {
+                    "tipo": "documento",
+                    "rota_lista": "/biblioteca",
+                    "itens": [_item("nao-duplicar", "Não duplicar pelo grafo")],
+                },
+            ],
+            "total": 3,
+        }
+
+    monkeypatch.setattr(connected, "relacionados_de", fake_graph)
+    monkeypatch.setattr(
+        connected,
+        "_base",
+        lambda *_args, **_kwargs: {"grupos": [_group([])]},
+    )
+    monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+
+    result = connected.buscar_relacionados_contextuais(
+        object(),
+        "Arritmias",
+        excluir_tipo="documento",
+        excluir_slug="documento-origem",
+        assunto="documento-origem",
+    )
+
+    assert calls == [{
+        "entity_type": "documento",
+        "slug": "documento-origem",
+        "limite_por_tipo": 5,
+        "incluir_contexto_tematico": False,
+    }]
+    specialty = {
+        group["tipo"]: group
+        for group in result["grupos"]
+        if group["tipo"] in {"doenca", "triagem_sintoma"}
+    }
+    assert set(specialty) == {"doenca", "triagem_sintoma"}
+    assert specialty["doenca"]["itens"][0]["relation_type"] == "mentioned_in"
+    assert specialty["doenca"]["itens"][0]["relation_scope"] == "direct_graph_relation"
+    assert specialty["doenca"]["itens"][0]["context_only"] is False
+    assert specialty["triagem_sintoma"]["itens"][0]["rota"] == (
+        "/triagem-sintomas?slug=triagem-estruturada"
+    )
+    assert not any(
+        item.get("slug") == "nao-duplicar"
+        for group in result["grupos"]
+        for item in group["itens"]
+    )
+
+
+def test_catalogo_tematico_nao_promove_area_a_relacao_clinica(monkeypatch):
+    chamado = False
+
+    def fake_graph(*_args, **_kwargs):
+        nonlocal chamado
+        chamado = True
+        return None
+
+    monkeypatch.setattr(connected, "relacionados_de", fake_graph)
+    monkeypatch.setattr(
+        connected,
+        "_base",
+        lambda *_args, **_kwargs: {"grupos": [_group([])]},
+    )
+    monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
+
+    result = connected.buscar_relacionados_contextuais(
+        object(), "cardiogeriatria",
+    )
+
+    assert chamado is False
+    assert not any(
+        group["tipo"] in {"doenca", "triagem_sintoma"}
+        for group in result["grupos"]
+    )

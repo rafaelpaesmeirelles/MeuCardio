@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
-import { Carregando, Vazio, SeloRevisao } from "../components/Estado";
+import { Carregando, Erro, Vazio, SeloRevisao } from "../components/Estado";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Item = {
@@ -14,12 +14,34 @@ export default function Fluxogramas() {
   const tema = params.get("tema") ?? "";
   const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
+  const [erro, setErro] = useState("");
 
   useEffect(() => {
+    let ativo = true;
     setItens(null);
-    api
-      .get<{ items: Item[] }>("/library/documents?kind=fluxograma&limit=200")
-      .then((r) => setItens(r.items));
+    setErro("");
+    async function carregarCatalogo() {
+      const todos: Item[] = [];
+      let offset = 0;
+      try {
+        do {
+          const pagina = await api.get<{ items: Item[]; next_offset: number | null }>(`/library/documents?kind=fluxograma&limit=200&offset=${offset}`);
+          todos.push(...pagina.items);
+          if (!ativo) return;
+          setItens([...todos]);
+          if (pagina.next_offset == null) break;
+          offset = pagina.next_offset;
+        } while (ativo);
+      } catch {
+        if (!ativo) return;
+        setItens([...todos]);
+        setErro(todos.length
+          ? "Parte do catálogo foi carregada, mas não foi possível obter a página seguinte."
+          : "Não foi possível carregar os fluxogramas agora.");
+      }
+    }
+    void carregarCatalogo();
+    return () => { ativo = false; };
   }, []);
 
   // Os temas vêm dos próprios fluxogramas: /library/themes conta a biblioteca
@@ -54,6 +76,8 @@ export default function Fluxogramas() {
         />
         {busca && <button type="button" onClick={() => setBusca("")}>Limpar busca</button>}
       </div>
+
+      {erro && <Erro mensagem={erro} />}
 
       {temas.length > 1 && (
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>

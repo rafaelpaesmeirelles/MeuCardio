@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import LogoProvedor from "../components/LogoProvedor";
 import CampoSenha from "../components/CampoSenha";
+import { googleAccountConnectVisible } from "../lib/cardiologySpacesFeature";
 
 type IntegracaoExterna = {
   id: number;
@@ -28,6 +29,7 @@ const PROVEDOR_NOME: Record<string, string> = {
 const PROVEDOR_CHAVE_CONEXAO: Record<string, "google" | "microsoft" | "apple"> = {
   google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple",
 };
+const GOOGLE_ACCOUNT_CONNECT_VISIBLE = googleAccountConnectVisible();
 
 /** Central única para conectar e acompanhar contas externas. O backend mantém
  * OAuth/IMAP vivo em segundo plano e esta tela apenas mostra o estado atual.
@@ -147,7 +149,7 @@ export default function Sincronizacao() {
       <p className="eyebrow">Sincronize suas contas</p>
       <h1>Sincronização de contas</h1>
       <p style={{ maxWidth: "62ch", color: "var(--texto-secundario)" }}>
-        Conecte Google, Microsoft e Apple — quantas contas quiser — e escolha o que cada
+        Conecte {GOOGLE_ACCOUNT_CONNECT_VISIBLE ? "Google, Microsoft e Apple" : "Microsoft e Apple"} — quantas contas quiser — e escolha o que cada
         uma integra à Agenda e ao CorvIA Mail. Depois de conectada, a conta permanece vinculada:
         A manutenção é automática: OAuth é renovado em segundo plano e o iCloud recebe heartbeat
         de credencial e o CorVIA Mail consulta caixas externas ao vivo. Reconectar só aparece quando
@@ -169,10 +171,12 @@ export default function Sincronizacao() {
         </label>
 
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: "1rem" }}>
-          <button className="botao botao--secundario" disabled={!consentimento || conectando !== null || !configurado("google_calendar")}
-                  onClick={() => conectarOAuth("google")}>
-            <LogoProvedor provedor="google" /> {conectando === "google" ? "Abrindo Google…" : "Conectar Google"}
-          </button>
+          {GOOGLE_ACCOUNT_CONNECT_VISIBLE && (
+            <button className="botao botao--secundario" disabled={!consentimento || conectando !== null || !configurado("google_calendar")}
+                    onClick={() => conectarOAuth("google")}>
+              <LogoProvedor provedor="google" /> {conectando === "google" ? "Abrindo Google…" : "Conectar Google"}
+            </button>
+          )}
           <button className="botao botao--secundario" disabled={!consentimento || conectando !== null || !configurado("microsoft_365")}
                   onClick={() => conectarOAuth("microsoft")}>
             <LogoProvedor provedor="microsoft" /> {conectando === "microsoft" ? "Abrindo Microsoft…" : "Conectar Microsoft"}

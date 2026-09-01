@@ -22,13 +22,17 @@ from app.models.evidence import EvidenceRecord
 from app.models.gallery import GalleryImage
 from app.models.lab_test import LabTest
 from app.models.patient_material import PatientMaterial
+from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services import knowledge_graph as kg
 
 TEMA = "Insuficiência cardíaca"
 
 TABELAS = (
-    "document_revisions", "documents", "evidence_records", "scientific_studies",
+    "knowledge_relations", "knowledge_entities", "symptom_triage_guides",
+    "specialty_diseases", "document_revisions", "documents",
+    "evidence_records", "scientific_studies",
     "drugs", "clinical_cases", "study_tracks", "gallery_images", "lab_tests",
     "emergency_protocols", "discharge_checklists", "patient_materials",
 )
@@ -367,3 +371,54 @@ def test_checklist_e_material_paciente_por_tema(client, db, criar_usuario):
     assert [i["slug"] for i in por_tipo["trilha"]] == ["trilha-ic"]
     assert [i["slug"] for i in por_tipo["galeria"]] == ["eco-ic"]
     assert [i["slug"] for i in por_tipo["exame"]] == ["bnp"]
+
+
+def test_painel_contextual_inclui_doenca_apenas_por_aresta_direta_do_grafo(
+    client, db, criar_usuario,
+):
+    _limpar(db)
+    db.add(Document(
+        slug="bradicardia-documento-contextual",
+        title="Avaliação estruturada da bradicardia",
+        kind="modulo",
+        theme="Arritmias",
+        body_md="Conteúdo clínico.",
+        review_status="revisado",
+        published=True,
+    ))
+    db.add(SpecialtyDisease(
+        slug="disfuncao-no-sinusal-contextual",
+        name="Disfunção do nó sinusal",
+        aliases=["Doença do nó sinusal"],
+        area="cardiogeriatria",
+        category="arritmia",
+        summary="Bradicardia sintomática e incompetência cronotrópica.",
+        related_document_slugs=["bradicardia-documento-contextual"],
+        review_status="revisado",
+        published=True,
+    ))
+    db.commit()
+    kg.backfill_mesmo_tema(db)
+
+    resposta = client.get(
+        "/api/relacionados",
+        params={
+            "tema": "Arritmias",
+            "assunto": "bradicardia-documento-contextual",
+            "excluir_tipo": "documento",
+            "excluir_slug": "bradicardia-documento-contextual",
+        },
+        headers=_headers(criar_usuario),
+    )
+
+    assert resposta.status_code == 200
+    grupos = {grupo["tipo"]: grupo for grupo in resposta.json()["grupos"]}
+    assert [item["slug"] for item in grupos["doenca"]["itens"]] == [
+        "disfuncao-no-sinusal-contextual"
+    ]
+    item = grupos["doenca"]["itens"][0]
+    assert item["rota"] == "/doencas/disfuncao-no-sinusal-contextual"
+    assert item["relation_type"] == "mentioned_in"
+    assert item["provenance_type"] == "structured_metadata"
+    assert item["relation_scope"] == "direct_graph_relation"
+    assert item["context_only"] is False

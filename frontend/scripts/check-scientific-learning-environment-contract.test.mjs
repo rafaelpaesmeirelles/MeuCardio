@@ -6,6 +6,7 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf
 const home = read("src/pages/CardiologySpacesHome.tsx");
 const scene = read("src/components/CardiologySpaceScene.tsx");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
+const tourAlias = read("src/pages/Tour.tsx");
 const app = read("src/App.tsx");
 const styles = read("src/styles/cardiology-spaces-home.css");
 const tourStyles = read("src/styles/cardiology-spaces-tour.css");
@@ -96,15 +97,16 @@ test("preserves canonical hover, keyboard focus and selected behavior", () => {
 });
 
 test("ships the expanded Cardiology Spaces tour with investor and onboarding gates", () => {
-  assert.match(tour, /corvia:cardiology-spaces:tour:v3/);
-  for (const marker of ["01 · ESCOLHA A EXPERIÊNCIA", "02 · CARDIOLOGY SPACES", "05 · DESLOCAMENTO", "06 · TUDO COM TUDO", "07 · CIÊNCIA & ENSINO", "08 · SEU CORVIA"]) {
+  assert.match(tour, /corvia:cardiology-spaces:tour:v4/);
+  for (const marker of ["01 · ESCOLHA A EXPERIÊNCIA", "02 · CINCO AMBIENTES", "04 · MEU DIA ENTRE ESPAÇOS", "05 · TUDO COM TUDO", "06 · CIÊNCIA & ENSINO", "07 · O SEU CORVIA"]) {
     assert.ok(tour.includes(marker), `tour missing ${marker}`);
   }
   assert.match(tour, /usuario\?\.investidor/);
   assert.match(app, /usuario\.onboarding_pendente/);
   assert.match(app, /usuario\.investidor/);
-  assert.match(app, /path="\/tour" element=\{<Tour \/>\}/);
-  assert.match(app, /path="\/tour\/cardiology-spaces" element=\{<CardiologySpacesTour \/>\}/);
+  assert.match(app, /path="\/tour" element=\{<CardiologySpacesTour \/>\}/);
+  assert.match(app, /path="\/tour\/cardiology-spaces" element=\{<Tour \/>\}/);
+  assert.match(tourAlias, /pathname: "\/tour", search: location\.search, hash: location\.hash/);
 });
 
 test("keeps the approved heart and compact six-action mobile dock", () => {
@@ -113,6 +115,6 @@ test("keeps the approved heart and compact six-action mobile dock", () => {
   assert.match(styles, /@media\(max-width:900px\)/);
   assert.match(styles, /\.spaces-dock\{[^}]*repeat\(6,minmax\(0,1fr\)\)/);
   assert.match(styles, /\.spaces-home__heart\s*\{[^}]*width:min\(100vw,650px\)/);
-  assert.match(tourStyles, /@media\(max-width:950px\)/);
-  assert.match(tourStyles, /\.cst__controls>div\{max-width:calc\(100vw - 140px\);overflow-x:auto\}/);
+  assert.match(tourStyles, /@media\s*\(max-width:\s*900px\)/);
+  assert.match(tourStyles, /\.cst__dots\s*\{[^}]*max-width:\s*calc\(100vw - 190px\);[^}]*overflow-x:\s*auto/);
 });

@@ -4,6 +4,7 @@ import WhatsAppIntegrationCard from "../components/WhatsAppIntegrationCard";
 import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
+import { googleAccountConnectVisible } from "../lib/cardiologySpacesFeature";
 import { useNavigate } from "react-router-dom";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
@@ -40,6 +41,7 @@ const ROTULOS: Record<string, string> = {
 
 // Mesmo conjunto de ACESSO_LIBERADO em backend/app/core/security.py.
 const STATUS_COM_ACESSO = ["ativo", "teste", "inadimplente"];
+const GOOGLE_ACCOUNT_CONNECT_VISIBLE = googleAccountConnectVisible();
 
 type CamposEndereco = {
   street: string; number: string; complement: string; neighborhood: string;
@@ -145,7 +147,7 @@ function ResumoSincronizacao() {
       <div>
         <h2 style={{ margin: "0 0 0.2rem" }}>Sincronize suas contas</h2>
         <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
-          {total === null ? "Google, Microsoft e Apple — conecte quantas contas quiser." :
+          {total === null ? `${GOOGLE_ACCOUNT_CONNECT_VISIBLE ? "Google, Microsoft e Apple" : "Microsoft e Apple"} — conecte quantas contas quiser.` :
            total === 0 ? "Nenhuma conta conectada ainda." :
            `${total} conta${total > 1 ? "s" : ""} conectada${total > 1 ? "s" : ""}.`}
         </p>

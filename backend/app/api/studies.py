@@ -1,3 +1,5 @@
+import unicodedata
+
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
@@ -8,6 +10,19 @@ from app.models.study import ScientificStudy
 from app.services.study_slug_aliases import canonical_study_slug
 
 router = APIRouter(prefix="/api/studies", tags=["estudos"])
+
+
+def _termo_sem_acentos(value: str) -> str:
+    return "".join(
+        char for char in unicodedata.normalize("NFKD", value.casefold())
+        if not unicodedata.combining(char)
+    ).strip()
+
+
+def _contem_sem_acentos(column, value: str):
+    return func.unaccent(func.lower(cast(column, Text))).contains(
+        _termo_sem_acentos(value), autoescape=True,
+    )
 
 
 def _card(s: ScientificStudy) -> dict:
@@ -48,8 +63,9 @@ def themes(db: Session = Depends(get_db), _=Depends(current_user)):
 
 @router.get("")
 def list_studies(
-    study_type: str | None = None, theme: str | None = None, q: str | None = None,
-    limit: int = Query(60, le=500), offset: int = 0,
+    study_type: str | None = None, theme: str | None = None,
+    q: str | None = Query(None, max_length=200),
+    limit: int = Query(60, ge=1, le=500), offset: int = Query(0, ge=0),
     db: Session = Depends(get_db), _=Depends(current_user),
 ):
     query = db.query(ScientificStudy).filter(ScientificStudy.published.is_(True))
@@ -57,17 +73,24 @@ def list_studies(
         query = query.filter(ScientificStudy.study_type == study_type)
     if theme:
         query = query.filter(ScientificStudy.theme == theme)
-    if q:
-        term = f"%{q.strip()}%"
+    if q and q.strip():
         query = query.filter(or_(
-            ScientificStudy.title.ilike(term),
-            ScientificStudy.theme.ilike(term),
-            ScientificStudy.journal.ilike(term),
-            cast(ScientificStudy.tags, Text).ilike(term),
+            _contem_sem_acentos(ScientificStudy.title, q),
+            _contem_sem_acentos(ScientificStudy.theme, q),
+            _contem_sem_acentos(ScientificStudy.journal, q),
+            _contem_sem_acentos(ScientificStudy.tags, q),
         ))
     total = query.count()
     items = query.order_by(ScientificStudy.title).offset(offset).limit(limit).all()
-    return {"total": total, "items": [_card(s) for s in items]}
+    has_more = offset + len(items) < total
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "next_offset": offset + len(items) if has_more else None,
+        "has_more": has_more,
+        "items": [_card(s) for s in items],
+    }
 
 
 @router.get("/{slug}")

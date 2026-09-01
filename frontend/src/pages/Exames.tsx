@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando } from "../components/Estado";
@@ -11,6 +11,7 @@ import {
 } from "../components/ClinicalCommandPrimitives";
 
 type Item = { slug: string; name: string; category: string; theme: string; tags: string[] };
+type PaginaExames = { total: number; next_offset: number | null; items: Item[] };
 type Taxonomia = {
   category: string;
   count: number;
@@ -35,19 +36,32 @@ export default function Exames() {
   const [taxonomia, setTaxonomia] = useState<Taxonomia[]>([]);
   const [busca, setBusca] = useState(params.get("q") ?? "");
   const [itens, setItens] = useState<Item[] | null>(null);
+  const [totalEncontrados, setTotalEncontrados] = useState(0);
+  const [nextOffset, setNextOffset] = useState<number | null>(null);
+  const [carregandoMais, setCarregandoMais] = useState(false);
+  const requisicao = useRef(0);
 
   useEffect(() => {
     api.get<Taxonomia[]>("/lab-tests/taxonomy").then(setTaxonomia);
   }, []);
 
   useEffect(() => {
+    const id = ++requisicao.current;
     setItens(null);
+    setTotalEncontrados(0);
+    setNextOffset(null);
+    setCarregandoMais(false);
     const atraso = setTimeout(() => {
       const qs = new URLSearchParams({ limit: "200" });
       if (categoria) qs.set("category", categoria);
       if (subtipo) qs.set("theme", subtipo);
       if (busca.trim()) qs.set("q", busca.trim());
-      api.get<{ items: Item[] }>(`/lab-tests?${qs}`).then((r) => setItens(r.items));
+      api.get<PaginaExames>(`/lab-tests?${qs}`).then((r) => {
+        if (requisicao.current !== id) return;
+        setItens(r.items);
+        setTotalEncontrados(r.total);
+        setNextOffset(r.next_offset);
+      });
 
       const url = new URLSearchParams();
       if (categoria) url.set("tipo", categoria);
@@ -57,6 +71,25 @@ export default function Exames() {
     }, 250);
     return () => clearTimeout(atraso);
   }, [categoria, subtipo, busca, setParams]);
+
+  async function carregarMais() {
+    if (nextOffset == null || carregandoMais) return;
+    const id = requisicao.current;
+    setCarregandoMais(true);
+    const qs = new URLSearchParams({ limit: "200", offset: String(nextOffset) });
+    if (categoria) qs.set("category", categoria);
+    if (subtipo) qs.set("theme", subtipo);
+    if (busca.trim()) qs.set("q", busca.trim());
+    try {
+      const pagina = await api.get<PaginaExames>(`/lab-tests?${qs}`);
+      if (requisicao.current !== id) return;
+      setItens((atuais) => [...(atuais ?? []), ...pagina.items]);
+      setTotalEncontrados(pagina.total);
+      setNextOffset(pagina.next_offset);
+    } finally {
+      if (requisicao.current === id) setCarregandoMais(false);
+    }
+  }
 
   const subtiposDisponiveis = useMemo(() => {
     if (categoria) return taxonomia.find((tipo) => tipo.category === categoria)?.subtypes ?? [];
@@ -112,7 +145,7 @@ export default function Exames() {
         <ClinicalMetric label="Catálogo" value={total || "—"} detail="exames e marcadores" icon="clinica" />
         <ClinicalMetric label="Tipos" value={taxonomia.length || "—"} detail="grandes categorias" icon="documento" />
         <ClinicalMetric label="Subtipos" value={totalSubtipos || "—"} detail="áreas diagnósticas" icon="evidencia" />
-        <ClinicalMetric label="Seleção" value={itens?.length ?? "…"} detail="resultados atuais" icon="busca" />
+        <ClinicalMetric label="Seleção" value={itens?.length ?? "…"} detail={itens && totalEncontrados > itens.length ? `de ${totalEncontrados} resultados` : "resultados atuais"} icon="busca" />
       </div>
 
       <ClinicalSection eyebrow="Encontrar exame" title="Do nome ao contexto diagnóstico" description="Filtros compactos preservam a área de leitura e funcionam melhor no celular.">
@@ -136,7 +169,7 @@ export default function Exames() {
             </select>
           </label>
         </div>
-        <div className="cc-filter-summary"><span>{itens?.length ?? "…"} resultados</span>{(busca || categoria || subtipo) && <button type="button" onClick={() => { setBusca(""); setParams(new URLSearchParams(), { replace: true }); }}>Limpar filtros</button>}</div>
+        <div className="cc-filter-summary"><span>{itens?.length ?? "…"}{itens && totalEncontrados > itens.length ? ` de ${totalEncontrados}` : ""} resultados</span>{(busca || categoria || subtipo) && <button type="button" onClick={() => { setBusca(""); setParams(new URLSearchParams(), { replace: true }); }}>Limpar filtros</button>}</div>
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Catálogo" title={subtipo || (categoria ? rotuloTipo(categoria) : "Marcadores e exames cardiológicos")} description="Abra um item para revisar indicação, interpretação, limitações e fontes.">
@@ -166,6 +199,7 @@ export default function Exames() {
             })}
           </div>
         )}
+        {nextOffset != null && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button type="button" className="botao botao--secundario" disabled={carregandoMais} onClick={() => void carregarMais()}>{carregandoMais ? "Carregando exames…" : `Carregar mais · ${Math.max(totalEncontrados - (itens?.length ?? 0), 0)} restantes`}</button></div>}
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Do exame à decisão">

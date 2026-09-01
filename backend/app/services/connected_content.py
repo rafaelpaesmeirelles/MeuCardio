@@ -25,9 +25,11 @@ from sqlalchemy.orm import Session
 from app.models.content import Document
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
+from app.models.knowledge import TIPOS_ENTIDADE_PERMITIDOS
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
+from app.services.knowledge_graph import relacionados_de
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
     CONTEXT_TAG_TOKEN_WEIGHT,
@@ -72,6 +74,63 @@ def _merge_groups(
         for group in by_type.values():
             group["itens"] = group["itens"][:limit]
     return [by_type[kind] for kind in order]
+
+
+def _specialty_direct_groups(
+    db: Session,
+    *,
+    entity_type: str | None,
+    slug: str | None,
+) -> list[dict]:
+    """Expose specialty content only through direct, policy-checked edges.
+
+    Diseases and symptom-triage guides do not carry the canonical ``theme``
+    field used by the legacy catalogue. Their ``area`` metadata is deliberately
+    broad and cannot prove a clinical relationship. Reusing the knowledge
+    graph here preserves only explicit/structured links that already passed
+    the relation policy; thematic expansion remains disabled.
+    """
+    if (
+        not entity_type
+        or entity_type == "tema"
+        or entity_type not in TIPOS_ENTIDADE_PERMITIDOS
+        or not slug
+    ):
+        return []
+    graph = relacionados_de(
+        db,
+        entity_type=entity_type,
+        slug=slug,
+        limite_por_tipo=LIMITE_POR_CATEGORIA,
+        incluir_contexto_tematico=False,
+    )
+    if not graph:
+        return []
+
+    labels = {
+        "doenca": ("Doenças", "/doencas"),
+        "triagem_sintoma": ("Triagem por sintomas", "/triagem-sintomas"),
+    }
+    groups: list[dict] = []
+    for group in graph.get("grupos", []):
+        kind = group.get("tipo")
+        if kind not in labels:
+            continue
+        label, list_route = labels[kind]
+        items = [{
+            **item,
+            "subtitulo": None,
+            "relation_scope": "direct_graph_relation",
+            "context_only": False,
+        } for item in group.get("itens", [])]
+        if items:
+            groups.append({
+                "tipo": kind,
+                "rotulo": label,
+                "rota_lista": list_route,
+                "itens": items,
+            })
+    return groups
 
 
 def _contextual_drugs(
@@ -518,6 +577,22 @@ def buscar_relacionados_contextuais(
             group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
         relation_scope = "theme_catalog"
         relation_method = "structured_theme"
+
+    # Doenças e triagens entram somente por aresta direta e auditável do
+    # grafo. A anexação ocorre depois do filtro lexical para que metadados
+    # amplos (área, alias ou resumo) nunca sejam promovidos a nexo clínico.
+    groups = _merge_groups([
+        {"grupos": groups},
+        {"grupos": (
+            _specialty_direct_groups(
+                db,
+                entity_type=excluir_tipo,
+                slug=excluir_slug,
+            )
+            if assunto and excluir_slug and assunto == excluir_slug
+            else []
+        )},
+    ])
 
     total = sum(len(group["itens"]) for group in groups)
     response = {

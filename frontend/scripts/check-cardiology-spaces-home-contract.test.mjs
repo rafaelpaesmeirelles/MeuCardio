@@ -7,7 +7,12 @@ const home = read("src/pages/CardiologySpacesHome.tsx");
 const app = read("src/App.tsx");
 const styles = read("src/styles/cardiology-spaces-home.css");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
+const tourAlias = read("src/pages/Tour.tsx");
 const shell = read("src/components/Shell.tsx");
+const featureFlags = read("src/lib/cardiologySpacesFeature.ts");
+const accountSync = read("src/pages/Sincronizacao.tsx");
+const agenda = read("src/pages/Agenda.tsx");
+const myAccount = read("src/pages/MinhaConta.tsx");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
 const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
 const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
@@ -150,7 +155,7 @@ test("every authenticated primary Shell route is catalogued or explicitly classi
 });
 
 test("tour is immersive and automatically gated only for onboarding and investor sessions", () => {
-  assert.match(tour, /corvia:cardiology-spaces:tour:v3/);
+  assert.match(tour, /corvia:cardiology-spaces:tour:v4/);
   assert.match(tour, /DESLOCAMENTO/);
   assert.match(tour, /TUDO COM TUDO/);
   assert.match(tour, /CIÊNCIA & ENSINO/);
@@ -158,7 +163,10 @@ test("tour is immersive and automatically gated only for onboarding and investor
   assert.match(app, /usuario\.onboarding_pendente/);
   assert.match(app, /usuario\.investidor/);
   assert.match(app, /investor-tour-session:v1/);
-  assert.match(app, /tour\/cardiology-spaces\?retorno=\//);
+  assert.match(app, /<Navigate to="\/tour\?retorno=\/" replace \/>/);
+  assert.match(app, /path="\/tour" element=\{<CardiologySpacesTour \/>\}/);
+  assert.match(app, /path="\/tour\/cardiology-spaces" element=\{<Tour \/>\}/);
+  assert.match(tourAlias, /pathname: "\/tour", search: location\.search, hash: location\.hash/);
 });
 
 test("tour return target is resolved against and confined to the current origin", () => {
@@ -184,4 +192,15 @@ test("the operational feature flag restores the complete legacy shell", () => {
   ]) {
     assert.ok(shell.includes(legacySurface), `rollback precisa restaurar ${legacySurface}`);
   }
+});
+
+test("new Google account connection stays hidden behind an opt-in flag", () => {
+  assert.match(featureFlags, /VITE_GOOGLE_ACCOUNT_CONNECT_VISIBLE === "true"/);
+  assert.match(accountSync, /GOOGLE_ACCOUNT_CONNECT_VISIBLE && \(/);
+  assert.doesNotMatch(accountSync, /item\.provider !== "google_calendar" \|\| GOOGLE_ACCOUNT_CONNECT_VISIBLE/);
+  assert.match(agenda, /PROVEDORES_DE_CONEXAO/);
+  assert.match(agenda, /\["microsoft_365", "apple_icloud"\]/);
+  assert.match(agenda, /GOOGLE_ACCOUNT_CONNECT_VISIBLE \|\| item\.provider !== "google_calendar"/);
+  assert.match(agenda, /gridTemplateColumns: `repeat\(\$\{PROVEDORES_DE_CONEXAO\.length\}/);
+  assert.match(myAccount, /GOOGLE_ACCOUNT_CONNECT_VISIBLE \? "Google, Microsoft e Apple" : "Microsoft e Apple"/);
 });

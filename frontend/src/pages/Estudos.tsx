@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando } from "../components/Estado";
@@ -44,6 +44,10 @@ export default function Estudos() {
   const [area, setArea] = useState("");
   const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
+  const [totalEncontrados, setTotalEncontrados] = useState(0);
+  const [nextOffset, setNextOffset] = useState<number | null>(null);
+  const [carregandoMais, setCarregandoMais] = useState(false);
+  const requisicao = useRef(0);
 
   useEffect(() => {
     Promise.all([
@@ -56,17 +60,58 @@ export default function Estudos() {
   }, []);
 
   useEffect(() => {
+    const id = ++requisicao.current;
     setItens(null);
+    setTotalEncontrados(0);
+    setNextOffset(null);
+    setCarregandoMais(false);
     const atraso = setTimeout(() => {
       const qs = new URLSearchParams();
       if (tipo) qs.set("study_type", tipo);
       if (tema) qs.set("theme", tema);
       if (busca.trim()) qs.set("q", busca.trim());
       qs.set("limit", "500");
-      api.get<{ items: Item[] }>(`/studies?${qs}`).then((r) => setItens(r.items));
+      api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`).then((r) => {
+        if (requisicao.current !== id) return;
+        setItens(r.items);
+        setTotalEncontrados(r.total);
+        setNextOffset(r.next_offset);
+      });
     }, 250);
     return () => clearTimeout(atraso);
   }, [tipo, tema, busca]);
+
+  async function carregarMais() {
+    if (!itens || carregandoMais || nextOffset == null) return;
+    const id = requisicao.current;
+    setCarregandoMais(true);
+    const qs = new URLSearchParams({ limit: "500", offset: String(nextOffset) });
+    if (tipo) qs.set("study_type", tipo);
+    if (tema) qs.set("theme", tema);
+    if (busca.trim()) qs.set("q", busca.trim());
+    try {
+      const pagina = await api.get<{ total: number; next_offset: number | null; items: Item[] }>(`/studies?${qs}`);
+      if (requisicao.current !== id) return;
+      setItens((atuais) => [...(atuais ?? []), ...pagina.items]);
+      setTotalEncontrados(pagina.total);
+      setNextOffset(pagina.next_offset);
+    } finally {
+      if (requisicao.current === id) setCarregandoMais(false);
+    }
+  }
+
+  useEffect(() => {
+    // "Área da Cardiologia" é uma taxonomia composta no cliente. Enquanto o
+    // backend não recebe esse agrupamento, percorremos as páginas restantes ao
+    // selecionar uma área para não produzir um falso “nenhum resultado” com
+    // base apenas nos 500 primeiros estudos.
+    if (area && itens && nextOffset != null && !carregandoMais) {
+      void carregarMais();
+    }
+    // `carregarMais` usa o cursor e o id da requisição corrente; incluí-la na
+    // lista recriaria o efeito em todo render sem alterar esse contrato.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [area, itens?.length, nextOffset, carregandoMais]);
 
   const areas = useMemo(() => {
     const agrupadas = new Map<string, { id: string; label: string; count: number }>();
@@ -136,7 +181,7 @@ export default function Estudos() {
           </label>
         </div>
         <div className="cc-filter-summary">
-          <span>{visiveis?.length ?? "…"} resultado{visiveis?.length === 1 ? "" : "s"}</span>
+          <span>{visiveis?.length ?? "…"}{!area && itens && totalEncontrados > itens.length ? ` de ${totalEncontrados}` : ""} resultado{visiveis?.length === 1 ? "" : "s"}</span>
           {(busca || area || tema || tipo) && <button type="button" onClick={() => { setBusca(""); setArea(""); setTema(""); setTipo(""); }}>Limpar filtros</button>}
         </div>
       </ClinicalSection>
@@ -161,6 +206,7 @@ export default function Estudos() {
             ))}
           </div>
         )}
+        {nextOffset != null && itens && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button type="button" className="botao botao--secundario" disabled={carregandoMais} onClick={() => void carregarMais()}>{carregandoMais ? "Carregando estudos…" : `Carregar mais · ${Math.max(totalEncontrados - itens.length, 0)} restantes`}</button></div>}
       </ClinicalSection>
 
       <ClinicalSection eyebrow="Conhecimento conectado" title="Do estudo à decisão">

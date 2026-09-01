@@ -1,5 +1,7 @@
+import unicodedata
+
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, or_, select
+from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -7,6 +9,19 @@ from app.core.security import current_user
 from app.models.lab_test import LabTest
 
 router = APIRouter(prefix="/api/lab-tests", tags=["exames"])
+
+
+def _termo_sem_acentos(value: str) -> str:
+    return "".join(
+        char for char in unicodedata.normalize("NFKD", value.casefold())
+        if not unicodedata.combining(char)
+    ).strip()
+
+
+def _contem_sem_acentos(column, value: str):
+    return func.unaccent(func.lower(cast(column, Text))).contains(
+        _termo_sem_acentos(value), autoescape=True,
+    )
 
 
 def _card(test: LabTest) -> dict:
@@ -63,7 +78,7 @@ def taxonomy(db: Session = Depends(get_db), _=Depends(current_user)):
 def list_tests(
     category: str | None = None,
     theme: str | None = None,
-    q: str | None = None,
+    q: str | None = Query(None, max_length=200),
     limit: int = Query(60, ge=1, le=200),
     offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
@@ -75,13 +90,12 @@ def list_tests(
     if theme:
         query = query.filter(LabTest.theme == theme)
     if q and q.strip():
-        termo = f"%{q.strip()}%"
         query = query.filter(or_(
-            LabTest.name.ilike(termo),
-            LabTest.category.ilike(termo),
-            LabTest.theme.ilike(termo),
-            func.array_to_string(LabTest.tags, " ").ilike(termo),
-            LabTest.what_it_measures.ilike(termo),
+            _contem_sem_acentos(LabTest.name, q),
+            _contem_sem_acentos(LabTest.category, q),
+            _contem_sem_acentos(LabTest.theme, q),
+            _contem_sem_acentos(LabTest.tags, q),
+            _contem_sem_acentos(LabTest.what_it_measures, q),
         ))
     total = query.count()
     items = (

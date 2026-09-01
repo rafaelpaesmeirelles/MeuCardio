@@ -1062,6 +1062,46 @@
   .login-gateway__form-meta a { font-size: 0.6875rem; }
 }
 
+/* Quatro constelações laterais no login móvel. Preserva a narrativa aprovada,
+   sem tocar no coração ou no traçado do eletrocardiograma. */
+@media (max-width: 425px) {
+  .login-gateway__space {
+    width: clamp(98px, 24vw, 104px);
+    grid-template-columns: 20px minmax(0, 1fr);
+    column-gap: 4px;
+    padding-inline: 5px;
+  }
+
+  .login-gateway__space > span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .login-gateway__space strong {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    letter-spacing: -0.01em;
+  }
+
+  .login-gateway__space--hospital,
+  .login-gateway__space--pesquisa {
+    top: 21%;
+  }
+
+  .login-gateway__space--consultorio,
+  .login-gateway__space--gestao {
+    top: 54%;
+  }
+}
+
+@media (max-width: 360px) {
+  .login-gateway__core {
+    width: 168px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .login-gateway__core .prehome-brand__heart,
   .login-gateway__pulse-trace,

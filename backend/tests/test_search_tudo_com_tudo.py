@@ -3,9 +3,19 @@
 import pytest
 from sqlalchemy import text
 
+from app.models.checklist import DischargeChecklist
+from app.models.clinical_case import ClinicalCase
+from app.models.cmed import CmedApresentacao, CmedVersao
 from app.models.content import Document
+from app.models.drug import Drug
+from app.models.emergency import EmergencyProtocol
 from app.models.evidence import EvidenceRecord
+from app.models.gallery import GalleryImage
+from app.models.lab_test import LabTest
+from app.models.patient_material import PatientMaterial
+from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
+from app.models.study_track import StudyTrack
 
 
 TABELAS_DA_BUSCA = (
@@ -15,6 +25,16 @@ TABELAS_DA_BUSCA = (
     "lab_tests",
     "evidence_records",
     "scientific_studies",
+    "drugs",
+    "clinical_cases",
+    "study_tracks",
+    "discharge_checklists",
+    "patient_materials",
+    "emergency_protocols",
+    "specialty_diseases",
+    "symptom_triage_guides",
+    "cmed_apresentacoes",
+    "cmed_versoes",
 )
 
 
@@ -103,6 +123,92 @@ def test_busca_preserva_frentes_ano_e_oculta_nao_publicado(client, db, criar_usu
     assert por_slug["olmesartana-estudo-teste"]["frente"] == "estudo"
     assert por_slug["olmesartana-estudo-teste"]["ano"] == 2022
     assert corpo["por_frente"] == {"documento": 1, "evidencia": 1, "estudo": 1}
+    assert corpo["total"] == 3
+
+
+def test_busca_tudo_com_tudo_encontra_as_treze_frentes_publicadas(client, db, criar_usuario):
+    sentinela = "cardioconexao"
+    db.add_all([
+        _documento(f"{sentinela}-documento", f"{sentinela} documento"),
+        GalleryImage(
+            slug=f"{sentinela}-galeria", title=f"{sentinela} galeria",
+            modality="ecocardiograma", theme="Tema sentinela", findings="Achado sentinela",
+            file_path="teste.png", source_name="Fonte de teste", source_url="https://example.test",
+            license="CC0", attribution="Teste", review_status="revisado", published=True,
+        ),
+        LabTest(
+            slug=f"{sentinela}-exame", name=f"{sentinela} exame", category="laboratorial",
+            what_it_measures="Medida sentinela", indications="Indicação sentinela",
+            interpretation="Interpretação sentinela", theme="Tema sentinela",
+            review_status="revisado", published=True,
+        ),
+        EvidenceRecord(
+            slug=f"{sentinela}-evidencia", statement=f"{sentinela} evidência",
+            recommendation_class="I", evidence_level="A", society="Sociedade de teste",
+            year=2026, guideline_title="Diretriz sentinela", reference="Referência sentinela",
+            theme="Tema sentinela", review_status="revisado", published=True,
+        ),
+        ScientificStudy(
+            slug=f"{sentinela}-estudo", title=f"{sentinela} estudo", study_type="ensaio_clinico",
+            journal="Periódico de teste", year=2026, summary="Resumo sentinela",
+            key_findings="Achado sentinela", clinical_implications="Implicação sentinela",
+            theme="Tema sentinela", review_status="revisado", published=True,
+        ),
+        Drug(
+            slug=f"{sentinela}-medicamento", generic_name=f"{sentinela} medicamento",
+            drug_class="Classe sentinela", review_status="revisado", published=True,
+        ),
+        ClinicalCase(
+            slug=f"{sentinela}-caso", titulo=f"{sentinela} caso", tema="Tema sentinela",
+            nivel="intermediario", enunciado="Enunciado sentinela", pergunta="Pergunta sentinela?",
+            opcoes=["A", "B"], resposta_correta=0, explicacao="Explicação sentinela",
+            review_status="revisado", published=True,
+        ),
+        StudyTrack(
+            slug=f"{sentinela}-trilha", titulo=f"{sentinela} trilha", tema="Tema sentinela",
+            objetivo="Objetivo sentinela", etapas=[], review_status="revisado", published=True,
+        ),
+        DischargeChecklist(
+            slug=f"{sentinela}-checklist", condicao=f"{sentinela} checklist",
+            resumo="Resumo sentinela", theme="Tema sentinela", itens=[],
+            review_status="revisado", published=True,
+        ),
+        PatientMaterial(
+            slug=f"{sentinela}-material", titulo=f"{sentinela} material",
+            tema="Tema sentinela", resumo="Resumo sentinela", secoes=[],
+            review_status="revisado", published=True,
+        ),
+        EmergencyProtocol(
+            slug=f"{sentinela}-emergencia", titulo=f"{sentinela} emergência",
+            gatilho="Gatilho sentinela", documento_slug=f"{sentinela}-documento",
+            review_status="revisado", published=True,
+        ),
+        SpecialtyDisease(
+            slug=f"{sentinela}-doenca", name=f"{sentinela} doença", area="cardiologia",
+            category="categoria sentinela", summary="Resumo sentinela", completeness="completo",
+            review_status="revisado", published=True,
+        ),
+        SymptomTriageGuide(
+            slug=f"{sentinela}-triagem", name=f"{sentinela} triagem",
+            areas=["cardiologia"], summary="Resumo sentinela", questions=[],
+            review_status="revisado", published=True,
+        ),
+    ])
+    db.commit()
+
+    resposta = client.get(
+        "/api/search", params={"q": sentinela, "limit": 100}, headers=_headers(criar_usuario),
+    )
+
+    assert resposta.status_code == 200
+    corpo = resposta.json()
+    assert corpo["total"] == 13
+    assert corpo["count"] == 13
+    assert set(corpo["por_frente"]) == {
+        "documento", "galeria", "exame", "evidencia", "estudo", "medicamento",
+        "caso_clinico", "trilha", "checklist", "material_paciente", "emergencia",
+        "doenca", "triagem_sintoma",
+    }
 
 
 def test_filtro_de_frente_e_aplicado_antes_do_limite(client, db, criar_usuario):
@@ -142,6 +248,77 @@ def test_filtro_de_frente_e_aplicado_antes_do_limite(client, db, criar_usuario):
     assert resultados[0]["ano"] == 2023
 
 
+def test_busca_inclui_calculadoras_e_nao_trata_curingas_como_conteudo(client, db, criar_usuario):
+    db.add(_documento("documento-sem-coringa", "Conteúdo clínico comum"))
+    db.commit()
+    headers = _headers(criar_usuario)
+
+    calculadora = client.get(
+        "/api/search", params={"q": "CHA2DS2-VASc"}, headers=headers,
+    )
+    assert calculadora.status_code == 200
+    itens = calculadora.json()["results"]
+    assert any(item["frente"] == "calculadora" and item["slug"] == "cha2ds2-vasc" for item in itens)
+
+    curingas = client.get("/api/search", params={"q": "%%"}, headers=headers)
+    assert curingas.status_code == 200
+    assert curingas.json()["count"] == 0
+
+
+def test_calculadoras_respeitam_limite_offset_e_nao_duplicam_paginas(
+    client, db, criar_usuario,
+):
+    db.add(_documento("score-clinico-documento", "Score clínico publicado"))
+    db.commit()
+    headers = _headers(criar_usuario)
+    primeira = client.get(
+        "/api/search",
+        params={"q": "score", "frente": "calculadora", "limit": 1},
+        headers=headers,
+    )
+    assert primeira.status_code == 200
+    corpo_1 = primeira.json()
+    assert corpo_1["count"] == 1
+    assert corpo_1["total"] >= 2
+    assert corpo_1["next_offset"] == 1
+
+    segunda = client.get(
+        "/api/search",
+        params={
+            "q": "score", "frente": "calculadora", "limit": 1,
+            "offset": corpo_1["next_offset"],
+        },
+        headers=headers,
+    )
+    assert segunda.status_code == 200
+    corpo_2 = segunda.json()
+    assert corpo_2["count"] == 1
+    assert corpo_2["results"][0]["slug"] != corpo_1["results"][0]["slug"]
+
+    transversal = client.get(
+        "/api/search", params={"q": "score", "limit": 1}, headers=headers,
+    )
+    assert transversal.status_code == 200
+    assert transversal.json()["count"] == 1
+    assert len(transversal.json()["results"]) == 1
+
+
+def test_busca_literal_e_fallback_apenas_para_fragmento_sem_lexema(
+    client, db, criar_usuario,
+):
+    db.add(_documento("sentinelaomega-documento", "Sentinelaomega cardiovascular"))
+    db.commit()
+
+    resposta = client.get(
+        "/api/search", params={"q": "nelaome"}, headers=_headers(criar_usuario),
+    )
+
+    assert resposta.status_code == 200
+    assert [item["slug"] for item in resposta.json()["results"]] == [
+        "sentinelaomega-documento"
+    ]
+
+
 def test_limite_padrao_e_validado_pela_api(client, db, criar_usuario):
     db.add_all([
         _documento(
@@ -158,6 +335,16 @@ def test_limite_padrao_e_validado_pela_api(client, db, criar_usuario):
     )
     assert resposta_padrao.status_code == 200
     assert resposta_padrao.json()["count"] == 60
+    assert resposta_padrao.json()["next_offset"] == 60
+
+    segunda_pagina = client.get(
+        "/api/search", params={"q": "olmesartana", "offset": 60}, headers=headers,
+    )
+    assert segunda_pagina.status_code == 200
+    assert segunda_pagina.json()["count"] == 1
+    assert segunda_pagina.json()["next_offset"] is None
+    primeira_pagina_slugs = {item["slug"] for item in resposta_padrao.json()["results"]}
+    assert segunda_pagina.json()["results"][0]["slug"] not in primeira_pagina_slugs
 
     assert client.get(
         "/api/search", params={"q": "olmesartana", "limit": 0}, headers=headers,
@@ -165,3 +352,274 @@ def test_limite_padrao_e_validado_pela_api(client, db, criar_usuario):
     assert client.get(
         "/api/search", params={"q": "olmesartana", "limit": 101}, headers=headers,
     ).status_code == 422
+
+
+def test_estudos_e_exames_buscam_sem_acento_e_paginam_sem_ocultar_itens(
+    client, db, criar_usuario,
+):
+    db.add_all([
+        ScientificStudy(
+            slug="insuficiencia-cardiaca-estudo-a",
+            title="Insuficiência cardíaca — estudo A",
+            study_type="ensaio_clinico",
+            journal="Periódico de teste",
+            year=2025,
+            summary="Estudo sentinela A.",
+            key_findings="Achado A.",
+            clinical_implications="Implicação A.",
+            theme="Insuficiência cardíaca",
+            review_status="revisado",
+            published=True,
+        ),
+        ScientificStudy(
+            slug="insuficiencia-cardiaca-estudo-b",
+            title="Insuficiência cardíaca — estudo B",
+            study_type="metanalise",
+            journal="Periódico de teste",
+            year=2026,
+            summary="Estudo sentinela B.",
+            key_findings="Achado B.",
+            clinical_implications="Implicação B.",
+            theme="Insuficiência cardíaca",
+            review_status="revisado",
+            published=True,
+        ),
+        LabTest(
+            slug="acido-urico-exame-a",
+            name="Ácido úrico — exame A",
+            category="laboratorial",
+            what_it_measures="Concentração de ácido úrico.",
+            indications="Avaliação metabólica.",
+            interpretation="Interpretação A.",
+            theme="Metabolismo",
+            review_status="revisado",
+            published=True,
+        ),
+        LabTest(
+            slug="acido-urico-exame-b",
+            name="Ácido úrico — exame B",
+            category="laboratorial",
+            what_it_measures="Concentração de ácido úrico.",
+            indications="Avaliação metabólica.",
+            interpretation="Interpretação B.",
+            theme="Metabolismo",
+            review_status="revisado",
+            published=True,
+        ),
+    ])
+    db.commit()
+    headers = _headers(criar_usuario)
+
+    estudos_1 = client.get(
+        "/api/studies",
+        params={"q": "insuficiencia", "limit": 1, "offset": 0},
+        headers=headers,
+    )
+    estudos_2 = client.get(
+        "/api/studies",
+        params={"q": "insuficiencia", "limit": 1, "offset": 1},
+        headers=headers,
+    )
+    assert estudos_1.status_code == estudos_2.status_code == 200
+    assert estudos_1.json()["total"] == estudos_2.json()["total"] == 2
+    assert estudos_1.json()["items"][0]["slug"] != estudos_2.json()["items"][0]["slug"]
+
+    exames_1 = client.get(
+        "/api/lab-tests",
+        params={"q": "acido urico", "limit": 1, "offset": 0},
+        headers=headers,
+    )
+    exames_2 = client.get(
+        "/api/lab-tests",
+        params={"q": "acido urico", "limit": 1, "offset": 1},
+        headers=headers,
+    )
+    assert exames_1.status_code == exames_2.status_code == 200
+    assert exames_1.json()["total"] == exames_2.json()["total"] == 2
+    assert exames_1.json()["next_offset"] == 1
+    assert exames_2.json()["next_offset"] is None
+    assert exames_1.json()["items"][0]["slug"] != exames_2.json()["items"][0]["slug"]
+
+    assert client.get(
+        "/api/studies", params={"q": "%%"}, headers=headers,
+    ).json()["total"] == 0
+    assert client.get(
+        "/api/lab-tests", params={"q": "__"}, headers=headers,
+    ).json()["total"] == 0
+
+
+def test_nome_comercial_cmed_encontra_medicamento_canonico_em_todas_as_buscas(
+    client, db, criar_usuario,
+):
+    drug = Drug(
+        slug="anlodipino-marca-cmed-teste",
+        generic_name="Anlodipino",
+        brand_names=["Norvasc"],
+        drug_class="Bloqueador do canal de cálcio",
+        review_status="revisado",
+        published=True,
+    )
+    db.add(drug)
+    db.flush()
+    version = CmedVersao(
+        publicado_em="20260901",
+        arquivo_url="https://example.test/cmed.xlsx",
+        sha256="a" * 64,
+        linhas=2,
+    )
+    db.add(version)
+    db.flush()
+    db.add(CmedApresentacao(
+        cmed_versao_id=version.id,
+        drug_id=drug.id,
+        substancia_cmed="BESILATO DE ANLODIPINO",
+        laboratorio="Laboratório de teste",
+        produto="Pressat XR",
+        apresentacao="5 MG COM CT BL AL PLAS TRANS X 30",
+        ggrem="0000000000000",
+        pmc_por_aliquota={},
+    ))
+    db.add(CmedApresentacao(
+        cmed_versao_id=version.id,
+        drug_id=drug.id,
+        substancia_cmed="BESILATO DE ANLODIPINO",
+        laboratorio="Outro laboratório de teste",
+        produto="NORVASC",
+        apresentacao="5 MG COM CT BL AL PLAS TRANS X 60",
+        ggrem="0000000000001",
+        pmc_por_aliquota={},
+    ))
+    db.commit()
+    headers = _headers(criar_usuario)
+
+    for termo in ("Norvasc", "pressat", "PRESSAT XR"):
+        global_response = client.get(
+            "/api/search", params={"q": termo}, headers=headers,
+        )
+        assert global_response.status_code == 200
+        assert [item["slug"] for item in global_response.json()["results"]] == [drug.slug]
+
+        catalog_response = client.get(
+            "/api/drugs", params={"q": termo}, headers=headers,
+        )
+        assert catalog_response.status_code == 200
+        assert [item["slug"] for item in catalog_response.json()] == [drug.slug]
+        assert {"Norvasc", "Pressat XR"}.issubset(
+            set(catalog_response.json()[0]["commercial_names"])
+        )
+        assert sum(
+            nome.casefold() == "norvasc"
+            for nome in catalog_response.json()[0]["commercial_names"]
+        ) == 1
+
+
+def test_doenca_exata_ou_alias_inequivoco_abre_pela_definicao(
+    client, db, criar_usuario,
+):
+    disease = SpecialtyDisease(
+        slug="fibrilacao-atrial-teste",
+        name="Fibrilação atrial",
+        aliases=["FA"],
+        area="arritmias",
+        category="taquiarritmia supraventricular",
+        summary="Taquiarritmia supraventricular caracterizada por ativação atrial desorganizada.",
+        completeness="completo",
+        review_status="revisado",
+        published=True,
+    )
+    db.add(disease)
+    db.commit()
+    headers = _headers(criar_usuario)
+
+    for termo in ("fibrilacao atrial", "FA"):
+        response = client.get("/api/search", params={"q": termo}, headers=headers)
+        assert response.status_code == 200
+        primary = response.json()["primary_disease"]
+        assert primary["slug"] == disease.slug
+        assert primary["name"] == disease.name
+        assert primary["summary"].startswith("Taquiarritmia supraventricular")
+
+
+def test_doenca_principal_respeita_filtro_de_outra_frente(
+    client, db, criar_usuario,
+):
+    db.add(SpecialtyDisease(
+        slug="fibrilacao-atrial-filtrada",
+        name="Fibrilação atrial",
+        aliases=["FA"],
+        area="arritmias",
+        category="taquiarritmia supraventricular",
+        summary="Definição que não pode atravessar um filtro explícito de frente.",
+        review_status="revisado",
+        published=True,
+    ))
+    db.commit()
+
+    response = client.get(
+        "/api/search",
+        params={"q": "fibrilacao atrial", "frente": "estudo"},
+        headers=_headers(criar_usuario),
+    )
+
+    assert response.status_code == 200
+    assert response.json()["primary_disease"] is None
+
+
+def test_alias_ambiguo_nao_e_promovido_a_doenca_principal(client, db, criar_usuario):
+    db.add_all([
+        SpecialtyDisease(
+            slug=f"doenca-alias-ambiguo-{index}",
+            name=f"Doença ambígua {index}",
+            aliases=["DA"],
+            area="cardiologia",
+            category="teste",
+            summary=f"Definição {index}.",
+            review_status="revisado",
+            published=True,
+        )
+        for index in (1, 2)
+    ])
+    db.commit()
+
+    response = client.get(
+        "/api/search", params={"q": "DA"}, headers=_headers(criar_usuario),
+    )
+    assert response.status_code == 200
+    assert response.json()["primary_disease"] is None
+
+
+def test_nome_exato_tem_precedencia_sobre_alias_de_outra_doenca(
+    client, db, criar_usuario,
+):
+    db.add_all([
+        SpecialtyDisease(
+            slug="fibrilacao-atrial-principal",
+            name="Fibrilação atrial",
+            aliases=["FA"],
+            area="arritmias",
+            category="taquiarritmia supraventricular",
+            summary="Ativação atrial desorganizada com resposta ventricular variável.",
+            review_status="revisado",
+            published=True,
+        ),
+        SpecialtyDisease(
+            slug="doenca-com-alias-colidente",
+            name="Doença com nomenclatura histórica",
+            aliases=["Fibrilação atrial"],
+            area="cardiologia",
+            category="teste de resolução",
+            summary="Registro usado para garantir a prioridade do nome canônico.",
+            review_status="revisado",
+            published=True,
+        ),
+    ])
+    db.commit()
+
+    response = client.get(
+        "/api/search",
+        params={"q": "fibrilacao atrial"},
+        headers=_headers(criar_usuario),
+    )
+
+    assert response.status_code == 200
+    assert response.json()["primary_disease"]["slug"] == "fibrilacao-atrial-principal"

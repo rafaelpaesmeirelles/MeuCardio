@@ -10,7 +10,7 @@ import {
   ClinicalSection,
 } from "../components/ClinicalCommandPrimitives";
 
-type Item = { slug: string; nome: string };
+type Item = { slug: string; nome: string; aliases: string[] };
 type Verificada = {
   slug: string;
   gravidade: "contraindicada" | "grave" | "moderada" | "leve";
@@ -35,6 +35,10 @@ const ROTULO: Record<Verificada["gravidade"], string> = {
   moderada: "Moderada",
   leve: "Leve",
 };
+
+function normalizarBusca(valor: string) {
+  return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+}
 
 function tone(gravidade: Verificada["gravidade"]) {
   if (gravidade === "contraindicada" || gravidade === "grave") return "is-danger";
@@ -67,16 +71,16 @@ export default function Interacoes() {
   const [checando, setChecando] = useState(false);
 
   useEffect(() => {
-    api.get<{ slug: string; generic_name: string }[]>("/drugs")
-      .then((l) => setLista(l.map((d) => ({ slug: d.slug, nome: d.generic_name }))))
+    api.get<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }[]>("/drugs")
+      .then((l) => setLista(l.map((d) => ({ slug: d.slug, nome: d.generic_name, aliases: Array.from(new Set([...(d.brand_names ?? []), ...(d.commercial_names ?? [])])) }))))
       .catch((e) => setErro(e.message));
   }, []);
 
   const filtrada = useMemo(() => {
     const fonte = lista ?? [];
-    const termo = busca.trim().toLocaleLowerCase("pt-BR");
+    const termo = normalizarBusca(busca.trim());
     if (!termo) return fonte.slice(0, 24);
-    return fonte.filter((d) => d.nome.toLocaleLowerCase("pt-BR").includes(termo)).slice(0, 40);
+    return fonte.filter((d) => normalizarBusca(`${d.nome} ${d.aliases.join(" ")}`).includes(termo)).slice(0, 40);
   }, [lista, busca]);
 
   function nomeDe(slug: string) {

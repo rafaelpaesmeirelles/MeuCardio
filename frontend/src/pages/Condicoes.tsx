@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 
-type Item = { slug: string; nome: string };
+type Item = { slug: string; nome: string; aliases: string[] };
 
 type Achado = {
   farmaco: Item;
@@ -24,6 +24,10 @@ const CONDICOES = [
   { id: "lactacao", rotulo: "Lactação" },
 ];
 
+function normalizarBusca(valor: string) {
+  return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+}
+
 export default function Condicoes() {
   const [lista, setLista] = useState<Item[] | null>(null);
   const [farmacos, setFarmacos] = useState<string[]>([]);
@@ -34,8 +38,8 @@ export default function Condicoes() {
   const [checando, setChecando] = useState(false);
 
   useEffect(() => {
-    api.get<{ slug: string; generic_name: string }[]>("/drugs")
-      .then((l) => setLista(l.map((d) => ({ slug: d.slug, nome: d.generic_name }))))
+    api.get<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }[]>("/drugs")
+      .then((l) => setLista(l.map((d) => ({ slug: d.slug, nome: d.generic_name, aliases: Array.from(new Set([...(d.brand_names ?? []), ...(d.commercial_names ?? [])])) }))))
       .catch((e) => setErro(e.message));
   }, []);
 
@@ -62,7 +66,7 @@ export default function Condicoes() {
   if (!lista) return <Carregando />;
 
   const filtrada = busca
-    ? lista.filter((d) => d.nome.toLowerCase().includes(busca.toLowerCase()))
+    ? lista.filter((d) => normalizarBusca(`${d.nome} ${d.aliases.join(" ")}`).includes(normalizarBusca(busca)))
     : lista;
   const nomeDe = (s: string) => lista.find((d) => d.slug === s)?.nome ?? s;
 

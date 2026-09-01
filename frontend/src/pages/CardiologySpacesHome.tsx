@@ -1037,7 +1037,7 @@ export default function CardiologySpacesHome() {
     setPreviewSpace(null);
     const investorNeedsTour = usuario?.investidor && !sessionStorage.getItem(INVESTOR_TOUR_SESSION_KEY);
     if (usuario?.onboarding_pendente || investorNeedsTour) {
-      navigate("/tour/cardiology-spaces?retorno=/");
+      navigate("/tour?retorno=/");
     }
   }, [navigate, usuario?.investidor, usuario?.onboarding_pendente]);
 

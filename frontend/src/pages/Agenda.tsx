@@ -5,6 +5,7 @@ import DicaContextual from "../components/DicaContextual";
 import Icone from "../components/Icone";
 import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
+import { googleAccountConnectVisible } from "../lib/cardiologySpacesFeature";
 import { withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 
 type Visao = "dia" | "semana" | "mes" | "lista";
@@ -40,6 +41,10 @@ const LOCAL_VAZIO: LocalForm = {
   name: "", zip: "", street: "", number: "", complement: "",
   neighborhood: "", city: "", state: "", phone: "", latitude: "", longitude: "",
 };
+const GOOGLE_ACCOUNT_CONNECT_VISIBLE = googleAccountConnectVisible();
+const PROVEDORES_DE_CONEXAO = GOOGLE_ACCOUNT_CONNECT_VISIBLE
+  ? (["google_calendar", "microsoft_365", "apple_icloud"] as const)
+  : (["microsoft_365", "apple_icloud"] as const);
 
 type Servico = {
   id: number;
@@ -867,7 +872,7 @@ export default function Agenda() {
 
       {/* Onboarding contextual da área (issue #52) — aparece só na primeira visita. */}
       <DicaContextual id="agenda" titulo="Traga suas outras agendas para cá">
-        Em <strong>Configurar</strong> você conecta Google, Microsoft ou Apple e passa a
+        Em <strong>Configurar</strong> você conecta {GOOGLE_ACCOUNT_CONNECT_VISIBLE ? "Google, Microsoft ou Apple" : "Microsoft ou Apple"} e passa a
         ver tudo numa visão só — quantas contas quiser, inclusive mais de uma do mesmo provedor.
       </DicaContextual>
 
@@ -883,7 +888,7 @@ export default function Agenda() {
           <div>
             <p className="eyebrow">Sincronização externa</p>
             <h2 id="agenda-contas-titulo">Conecte seus Calendários, Contatos e Contas de E-mail</h2>
-            <p>Google, Microsoft e Apple — quantas contas quiser, de uma ou várias empresas ao mesmo tempo.</p>
+            <p>{GOOGLE_ACCOUNT_CONNECT_VISIBLE ? "Google, Microsoft e Apple" : "Microsoft e Apple"} — quantas contas quiser, de uma ou várias empresas ao mesmo tempo.</p>
           </div>
           <Link to="/sincronizacao" className="botao botao--secundario"><Icone nome="configuracao" /> Gerenciar conexões</Link>
         </div>
@@ -895,8 +900,8 @@ export default function Agenda() {
          * manter duas telas de conta divergindo com o tempo (o defeito que este
          * projeto já gastou semanas removendo antes), esta seção virou um resumo
          * que aponta para lá. */}
-        <div className="agenda-contas-destaque__grade">
-          {(["google_calendar", "microsoft_365", "apple_icloud"] as const).map((provider) => {
+        <div className="agenda-contas-destaque__grade" style={{ gridTemplateColumns: `repeat(${PROVEDORES_DE_CONEXAO.length}, minmax(0, 1fr))` }}>
+          {PROVEDORES_DE_CONEXAO.map((provider) => {
             const nome = { google_calendar: "Google", microsoft_365: "Microsoft", apple_icloud: "Apple iCloud" }[provider];
             const acao = { google_calendar: "google", microsoft_365: "microsoft", apple_icloud: "apple" }[provider] as "google" | "microsoft" | "apple";
             const conectadas = integracoes.filter((item) => item.provider === provider && item.enabled);
@@ -1148,7 +1153,7 @@ export default function Agenda() {
           <div className="agenda-config-section__title">
             <div>
               <h3>Administre suas contas</h3>
-              <p>Conectar, sincronizar e desconectar Google, Microsoft e Apple agora é tudo numa página só.</p>
+              <p>Conectar, sincronizar e desconectar {GOOGLE_ACCOUNT_CONNECT_VISIBLE ? "Google, Microsoft e Apple" : "Microsoft e Apple"} agora é tudo numa página só.</p>
             </div>
             <span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span>
           </div>
@@ -1163,7 +1168,7 @@ export default function Agenda() {
             <p className="agenda-config-help span-2">Esta etapa registra a solicitação sem enviar senhas. O conector só será ativado após consentimento e validação técnica; fornecedores sem API homologada permanecem identificados como pendentes.</p>
             <button className="botao botao--secundario" disabled={!novaIntegracao.display_name.trim()} onClick={() => prepararIntegracao().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível preparar a integração."))}>Preparar integração</button>
           </div>
-          <details className="agenda-conectores-catalogo"><summary>Ver disponibilidade por sistema</summary>{capacidades?.connectors.map((item) => <div className="agenda-config-item" key={item.provider}><i className={item.status === "adapter_available" ? "conectavel" : "em-breve"} /><span><strong>{item.name}</strong><small>{item.status === "adapter_available" ? "Adaptador oficial disponível" : item.status === "homologation_required" ? "Depende de homologação oficial" : "Integração planejada"}</small></span><span className="agenda-pill">{item.capabilities.create_appointment ? "Bidirecional" : item.capabilities.read_appointments ? "Leitura" : "Pendente"}</span></div>)}</details>
+          <details className="agenda-conectores-catalogo"><summary>Ver disponibilidade por sistema</summary>{capacidades?.connectors.filter((item) => GOOGLE_ACCOUNT_CONNECT_VISIBLE || item.provider !== "google_calendar").map((item) => <div className="agenda-config-item" key={item.provider}><i className={item.status === "adapter_available" ? "conectavel" : "em-breve"} /><span><strong>{item.name}</strong><small>{item.status === "adapter_available" ? "Adaptador oficial disponível" : item.status === "homologation_required" ? "Depende de homologação oficial" : "Integração planejada"}</small></span><span className="agenda-pill">{item.capabilities.create_appointment ? "Bidirecional" : item.capabilities.read_appointments ? "Leitura" : "Pendente"}</span></div>)}</details>
         </section>
         <footer><button className="botao" onClick={() => setConfigAberta(false)}>Concluir configuração</button></footer>
       </div></div>}
