@@ -2372,3 +2372,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 42 | 258 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **677** | **4.223** |
+
+## Lote 107 — concluído (commit 9b840640)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para DAC/IC/Valvopatias/HAS (temas do Lote 105) enquanto FA/Cardiomiopatias/Diabetes/Prevenção (Lote 106) seguem para o próximo ciclo.
+
+- **Documentos**:
+  - Doença coronariana: "Doença Coronariana na Artrite Reumatoide: Aterosclerose Acelerada, Estratificação de Risco e o Paradoxo Cardiovascular de JAK-Inibidores e Biológicos" — meta-análise de risco CV em AR (PMID 19035419), atualização EULAR (PMID 27697765), ORAL Surveillance (PMID 35081280), evidência 2025-2026 (PMID 42498889, 42452516, 42051524).
+  - Insuficiência cardíaca: "Terapia Quádrupla na ICFEr em Doença Renal Crônica Avançada e Diálise" — metanálise RAASi em diálise (PMID 42584660), sacubitril-valsartana em hemodiálise (PMID 42234894), iSGLT2 em DRC estágio 4 (PMID 42389639), finerenona por estágio CKM (PMID 42234437).
+  - Valvopatias: "Estenose Aórtica de Baixo Fluxo/Baixo Gradiente: os Cinco Fenótipos da ESC/EACTS 2025" — REBOOT-PARADOX (PMID 42663358), classificação por fenótipos (PMID 42195072), diferenças por sexo no escore de cálcio (PMID 41953973, 42652765).
+  - Hipertensão: "Variabilidade da Pressão Arterial (Visita a Visita e MAPA de 24h) como Preditor Independente de Desfecho" — revisão 2025 (PMID 40084481), editorial JACC 2025 (PMID 41162008), Hypertension 2026 (PMID 42345116), declínio cognitivo (PMID 42535681).
+- **Caso clínico**: bioimpedância vestível — alerta de congestão com especificidade moderada não é diagnóstico (derivado do documento de bioimpedância torácica do Lote 105).
+- **Checklist**: estratificação de risco de morte súbita e indicação de CDI na cardiomiopatia dilatada não isquêmica (derivado de fluxograma ESC 2022 já publicado).
+- **Material-paciente**: oscilação do açúcar no sangue pode afetar o ritmo do coração (derivado do documento de variabilidade glicêmica e FA do Lote 106).
+- **Trilha**: doença coronariana — inibidores da glicoproteína IIb/IIIa, a ascensão e a queda de uma classe (10 etapas, arco histórico EPIC/EPILOG/EPISTENT/CAPTURE/ADMIRAL/CADILLAC/GUSTO-IV).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 28 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Nenhuma correção de schema foi necessária — os prompts deste lote já incorporavam as duas correções aprendidas no Lote 106 (proibição explícita de `documento_origem`/`fonte_producao` em casos clínicos; exigência explícita de `review_status: "pendente_revisao"` em material-paciente).
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10872`.
+
+### Status consolidado (após Lote 107)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 240 | 2.160 |
+| Casos clínicos | 900 | 104 | 796 |
+| Checklists | 600 | 75 | 525 |
+| Materiais-paciente | 500 | 60 | 440 |
+| Trilhas | 300 | 43 | 257 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **685** | **4.215** |
