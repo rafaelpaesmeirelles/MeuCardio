@@ -2342,3 +2342,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 41 | 259 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **669** | **4.231** |
+
+## Lote 106 — concluído (commit 044dd6ec)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco reforçado em documentos e evidência 2025-2026, com rotação de temas para os 4 documentos entre os menos cobertos nos lotes recentes (FA, cardiomiopatias, diabetes, prevenção/lipídios).
+
+- **Documentos**:
+  - Fibrilação atrial: "Miopatia Atrial: o Consenso 2024 e a Evidência de Strain e Biomarcadores como Preditores na Fibrilação Atrial" — consenso clínico EHRA/HRS/APHRS/LAHRS 2024 (PMID 39077825), estudos de strain atrial e biomarcadores de 2025 (PMID 39899140, 40520939, 40709024), ARCADIA (PMID 38324415).
+  - Cardiomiopatias: "Aficamten versus Metoprolol como Monoterapia Inicial na Cardiomiopatia Hipertrófica Obstrutiva: o Ensaio MAPLE-HCM" — NEJM 2025 (PMID 40888697), desenho do estudo (PMID 39909646), substudo ecocardiográfico (PMID 40932433).
+  - Diabetes e cardiologia: "Variabilidade Glicêmica e Risco de Fibrilação Atrial no Diabetes" — modelo preditivo VG+SII (PMID 41270790), estudo CADDY (PMID 40019498), revisão mecanística (PMID 41799894), VG em IAM (PMID 42103517).
+  - Prevenção e lipídios: "Lepodisiran: o siRNA de Duração Estendida para Lipoproteína(a) e a Entrada na Fase 3" — fase 1 (PMID 37952254), fase 2 (PMID 40162643), ensaios de fase 3 em andamento ACCLAIM-Lp(a)/ACCLAIM-CTA (ClinicalTrials.gov).
+- **Caso clínico**: DAPT pós-SCA em alto risco hemorrágico com genotipagem CYP2C19 indisponível (derivado do documento de desescalonamento CYP2C19/DAN-DAPT do Lote 105).
+- **Checklist**: seleção de paciente para intervenção na insuficiência tricúspide secundária grave (derivado de fluxograma ESC/EACTS 2025).
+- **Material-paciente**: dispositivos vestíveis podem detectar acúmulo de líquido antes do sintoma (bioimpedância torácica não invasiva).
+- **Trilha**: hipertensão por substâncias, fármacos, drogas e toxinas ambientais (8 etapas, todas tipo documento).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 26 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Duas correções aplicadas antes do commit: (1) removidos do caso clínico de DAC os campos `documento_origem` e `fonte_producao`, que não fazem parte do schema real de `casos-clinicos/metadados.json` (0/957 registros existentes os possuem) — `fonte_producao` em particular nunca deve ser autoatestado pelo agente produtor; (2) adicionado `review_status: "pendente_revisao"` ao material-paciente de IC, que veio sem esse campo (nenhum dos 465 registros existentes tem o campo ausente/nulo).
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10864`.
+
+### Status consolidado (após Lote 106)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 236 | 2.164 |
+| Casos clínicos | 900 | 103 | 797 |
+| Checklists | 600 | 74 | 526 |
+| Materiais-paciente | 500 | 59 | 441 |
+| Trilhas | 300 | 42 | 258 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **677** | **4.223** |
