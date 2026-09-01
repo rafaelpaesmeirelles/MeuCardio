@@ -41283,5 +41283,145 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "alta-hospitalar-ic-aguda-titulacao-intensiva-strong-hf",
+    "condicao": "Alta hospitalar na insuficiência cardíaca aguda com titulação intensiva pós-alta (ESC 2023, STRONG-HF)",
+    "resumo": "Checklist de execução para decidir se o paciente internado por IC aguda pode receber alta, testar a terapia oral ainda internado, selecionar quem entra na estratégia intensiva do STRONG-HF e agir sobre cada indicador de segurança nas visitas das semanas 1, 2, 3 e 6.",
+    "documento_origem": "fluxograma-alta-hospitalar-na-ic-aguda-criterios-de-alta-e-titulacao-intensiva-pos-alta-strong-hf",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666. https://academic.oup.com/eurheartj/article/44/37/3627/7246292",
+      "2023 Focused Update of ESC Guidelines for Acute and Chronic HF: Key Points. American College of Cardiology, 2023. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/58/2023-focused-update-esc-guidelines-hf-esc-2023",
+      "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368 — recomendações pré-alta e de consulta em 1 a 2 semanas conferidas em: 2021 ESC Guidelines for Acute and Chronic Heart Failure: Key Points. American College of Cardiology, 2021. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2021/08/29/18/05/2021-ESC-Guidelines-for-HF-ESC-2021",
+      "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631 — resumo indexado lido via https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=36356631&rettype=abstract&retmode=text",
+      "Tomasoni D, Davison B, Adamo M, et al. Safety Indicators in Patients Receiving High-intensity Care After Hospital Admission for Acute Heart Failure: The STRONG-HF Trial. J Card Fail. 2024;30(4):525-537. DOI: 10.1016/j.cardfail.2023.09.002. PMID: 37820896 — resumo indexado lido via E-utilities do PubMed",
+      "Kimmoun A, Cotter G, Davison B, et al. Safety, tolerability and efficacy of rapid optimization, helped by NT-proBNP and GDF-15, of heart failure therapies (STRONG-HF): rationale and design for a multicentre, randomized, parallel-group study. Eur J Heart Fail. 2019;21(11):1459-1467. DOI: 10.1002/ejhf.1575. PMID: 31423712 — resumo indexado lido via E-utilities do PubMed",
+      "STRONG-HF. ClinicalTrials.gov NCT03412201 — critérios de inclusão e exclusão e descrição dos braços conferidos em https://clinicaltrials.gov/study/NCT03412201",
+      "Derivado de safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf.md e de atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca.md, já publicados no acervo (Insuficiência cardíaca)."
+    ],
+    "itens": [
+      {
+        "id": "alta-ic-euvolemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência de sinal de congestão residual ao exame confirmada antes de cogitar a alta; se presente, manter descongestão e reavaliação diária de peso, exame, função renal e eletrólitos",
+        "origem_secao": "Antes da alta: o que precisa estar pronto"
+      },
+      {
+        "id": "alta-ic-terapia-oral-testada",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Terapia oral baseada em evidência iniciada e tolerada ainda internado, com PA, potássio e creatinina estáveis antes de rediscutir a alta",
+        "origem_secao": "Antes da alta: o que precisa estar pronto"
+      },
+      {
+        "id": "alta-ic-elegibilidade-intensiva",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Candidatura à estratégia intensiva tipo STRONG-HF avaliada: NT-proBNP elevado, hemodinamicamente estável, sem indicador de segurança presente e capaz de comparecer às visitas semanais",
+        "origem_secao": "Árvore de decisão — nó D3"
+      },
+      {
+        "id": "alta-ic-contraindicacao-intensiva",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Quando não candidato à estratégia intensiva, motivo registrado (idade acima de 85 anos, intolerância documentada a doses altas, TFGe abaixo de 30 ou inviabilidade de quatro visitas com laboratório em seis semanas)",
+        "origem_secao": "Quem entra na estratégia intensiva"
+      },
+      {
+        "id": "alta-ic-dose-alta",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Na estratégia intensiva, alta com pelo menos metade da dose-alvo de IECA, BRA ou ARNI, betabloqueador e ARM, ajustada nas 48 h antes da alta",
+        "origem_secao": "Árvore de decisão — bloco P1 / O protocolo do STRONG-HF"
+      },
+      {
+        "id": "alta-ic-visitas-agendadas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Visitas de titulação agendadas nas semanas 1, 2, 3 e 6 após a alta, com exame, PA, FC, potássio, TFGe e NT-proBNP em cada uma",
+        "origem_secao": "Árvore de decisão — bloco P1 / O protocolo do STRONG-HF"
+      },
+      {
+        "id": "alta-ic-cuidado-habitual",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Quando fora da estratégia intensiva, consulta de cuidado habitual agendada em 1 a 2 semanas para avaliar congestão, tolerância e titular em ritmo individualizado",
+        "origem_secao": "Árvore de decisão — conduta C3"
+      },
+      {
+        "id": "alta-ic-checagem-indicadores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em cada visita de titulação, checados os cinco indicadores de segurança: TFGe abaixo de 30, potássio acima de 5,0 mmol/L, PAS abaixo de 95 mmHg, FC abaixo de 55 bpm e NT-proBNP mais de 10% acima do valor pré-alta",
+        "origem_secao": "Indicadores de segurança na visita"
+      },
+      {
+        "id": "alta-ic-dose-plena",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Na ausência de indicador de segurança, titulação até a dose plena tentada com meta de 2 semanas após a alta, mantendo as visitas das semanas 3 e 6",
+        "origem_secao": "Árvore de decisão — conduta C4"
+      },
+      {
+        "id": "alta-ic-congestao-ntprobnp",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Se congestão clínica ou NT-proBNP mais de 10% acima do pré-alta: diurético aumentado e betabloqueador não titulado nesta visita, com reavaliação na visita seguinte",
+        "origem_secao": "Indicadores de segurança na visita"
+      },
+      {
+        "id": "alta-ic-hipotensao",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Se PAS abaixo de 95 mmHg ou hipotensão sintomática: IECA, BRA ou ARNI, ARM e betabloqueador não titulados, causa investigada e reavaliação em uma semana",
+        "origem_secao": "Indicadores de segurança na visita"
+      },
+      {
+        "id": "alta-ic-hipercalemia-renal",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Se potássio acima de 5,0 mmol/L ou TFGe abaixo de 30: IECA, BRA ou ARNI e ARM não titulados, laboratório repetido em uma semana e quelante considerado antes de reduzir dose se hipercalemia",
+        "origem_secao": "Indicadores de segurança na visita"
+      },
+      {
+        "id": "alta-ic-bradicardia",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Se FC abaixo de 55 bpm: betabloqueador não titulado, ECG realizado e demais pilares titulados conforme tolerância",
+        "origem_secao": "Indicadores de segurança na visita"
+      },
+      {
+        "id": "alta-ic-isglt2",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "iSGLT2 iniciado conforme indicação por fração de ejeção em qualquer ramo, independentemente da estratégia de titulação escolhida",
+        "origem_secao": "O que vale para todos os ramos"
+      },
+      {
+        "id": "alta-ic-plano-diuretico",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Plano diurético oral entregue por escrito, com peso-alvo e instrução clara de quando contatar a equipe",
+        "origem_secao": "O que vale para todos os ramos"
+      },
+      {
+        "id": "alta-ic-reconciliacao-educacao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Reconciliação medicamentosa realizada e educação com técnica de teach-back aplicada antes da alta",
+        "origem_secao": "O que vale para todos os ramos"
+      },
+      {
+        "id": "alta-ic-retorno-congestao",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado a retorno imediato ao hospital diante de congestão franca, em qualquer ponto do seguimento pós-alta",
+        "origem_secao": "O que vale para todos os ramos"
+      }
+    ],
+    "revisao": "Checklist extraído do fluxograma de alta hospitalar e titulação intensiva pós-alta (ESC 2023, STRONG-HF), já publicado. Itens fiéis aos nós de decisão, às condutas do diagrama e à tabela de indicadores de segurança do documento de origem. Pendente de revisão clínica final."
   }
 ]

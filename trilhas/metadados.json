@@ -26861,5 +26861,69 @@
         "por_que": "Fecha o arco reprodutivo na transição seguinte da vida da mulher: a decisão sobre terapia hormonal da menopausa precisa dialogar com o risco cardiovascular já estratificado nos passos anteriores, aplicando a 'hipótese do momento' (timing hypothesis)."
       }
     ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante",
+    "titulo": "Fibrilação atrial no paciente oncológico: inibidores de BTK e a interação com o anticoagulante",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Reconhecer a FA induzida por inibidor de BTK (ibrutinibe e a geração mais nova), decidir a conduta aguda diante do conflito entre risco trombótico e hemorrágico do paciente oncológico, e escolher o anticoagulante considerando a interação farmacocinética com a terapia antineoplásica — do diagnóstico à alta.",
+    "nivel": "avancado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-aguda-durante-tratamento-com-inibidor-de-btk",
+        "por_que": "Ponto de partida: reconhecer a FA aguda como evento associado ao inibidor de BTK, sua incidência e o momento típico de aparecimento no curso do tratamento oncológico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ibrutinibe-fibrilacao-atrial-e-sangramento-manejo-da-anticoagulacao",
+        "por_que": "Aprofunda o mecanismo (inibição off-target de PI3K-Akt) e expõe o dilema central da trilha: o mesmo fármaco que causa a FA também eleva o risco de sangramento, complicando a decisão de anticoagular."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-fibrilacao-atrial-aguda-durante-tratamento-com-inibidor-de-btk",
+        "por_que": "Organiza a decisão aguda à beira-leito em algoritmo — manter ou suspender o inibidor de BTK, controle de frequência versus ritmo, e quando acionar a oncologia antes de qualquer mudança de conduta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "Antes de decidir por anticoagulação contínua, estratifica objetivamente o risco tromboembólico do paciente — etapa obrigatória mesmo no contexto oncológico de maior cautela com sangramento."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-btk-de-segunda-geracao-e-menor-fibrilacao-atrial",
+        "por_que": "Mostra a alternativa terapêutica: acalabrutinibe e zanubrutinibe reduzem a incidência de FA em relação ao ibrutinibe, informando a decisão compartilhada com a oncologia sobre troca de classe."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "interacao-entre-anticoagulantes-orais-diretos-e-terapia-antineoplasica-cyp3a4-p-gp",
+        "por_que": "Fundamenta tecnicamente a escolha do anticoagulante: os inibidores de BTK são substratos/moduladores de CYP3A4 e P-gp, alterando a exposição de cada DOAC de forma diferente."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-e-cancer-doac-versus-varfarina-por-qualidade-do-tempo-em-faixa-terapeutica",
+        "por_que": "Amplia a decisão para o cenário oncológico geral, comparando DOAC e varfarina pela qualidade do tempo em faixa terapêutica — relevante quando a interação medicamentosa desaconselha um DOAC específico."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "lista-de-quimioterapicos-de-risco-de-prolongamento-do-qt-e-monitorizacao",
+        "por_que": "Alerta de segurança final antes de associar um antiarrítmico: cruza a lista de quimioterápicos com risco de prolongamento de QT, evitando somar esse risco ao esquema de controle de ritmo."
+      },
+      {
+        "ordem": 9,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-fibrilacao-atrial",
+        "por_que": "Fecha a trilha consolidando o plano de alta — anticoagulante escolhido, monitorização e retorno — agora ajustado às particularidades do paciente sob terapia antineoplásica."
+      }
+    ]
   }
 ]
