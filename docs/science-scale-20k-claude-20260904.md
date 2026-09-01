@@ -2552,3 +2552,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 48 | 252 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **725** | **4.175** |
+
+## Lote 113 — concluído (commit 9e4768dd)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para DAC/IC/Valvopatias/HAS (temas do Lote 111) e completando a terceira rotação das demais categorias por todos os 8 temas prevalentes.
+
+- **Documentos**:
+  - Doença coronariana: "Doença Coronariana em Candidatos e Receptores de Transplante Renal e Hepático" — 15 fontes 2025-2026 sobre aterosclerose acelerada e fim do rastreio invasivo universal pré-transplante.
+  - Insuficiência cardíaca: "Ansiedade na Insuficiência Cardíaca: Prevalência, Impacto na Adesão e no Desfecho Clínico, e Rastreio" — registro SwedeHF (PMID 41711705) e 6 fontes 2026 adicionais.
+  - Valvopatias: "TAVI em Válvula Aórtica Bicúspide: Evidência Específica Além dos Ensaios Pivotais" — 10 fontes, 8 delas de 2026.
+  - Hipertensão: "Hipertensão em Populações de Baixa Renda e Vulnerabilidade Social" — NHANES EUA (PMID 42386021), ensaio randomizado no Nepal (PMID 39220804, 41881536), metanálises Índia/África.
+- **Caso clínico**: retinopatia diabética moderada e início de GLP-1RA — medo de piora oftalmológica (derivado do documento do Lote 110).
+- **Checklist**: prescrição de combinação em comprimido único para adesão na hipertensão (derivado do documento do Lote 109).
+- **Material-paciente**: calculadora de risco cardiovascular e raça (derivado do documento PREVENT/SCORE2 do Lote 112).
+- **Trilha**: cardiomiopatia hipertrófica — aficamten, mapa de evidência (SEQUOIA-HCM, MAPLE-HCM, FOREST-HCM 48/96 semanas), 7 etapas incluindo 3 do tipo "estudo" (primeira vez neste ciclo que uma trilha usa esse item_type, confirmado suportado no código-fonte do gate).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 26 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Uma correção aplicada antes do commit: `revisao.status` do checklist de hipertensão veio como `"nao_revisado"` — valor inexistente nos 8 registros já existentes com `revisao` em formato objeto (todos usam `"pendente_revisao"`) — corrigido para manter consistência.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10920`.
+
+### Status consolidado (após Lote 113)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 264 | 2.136 |
+| Casos clínicos | 900 | 110 | 790 |
+| Checklists | 600 | 81 | 519 |
+| Materiais-paciente | 500 | 66 | 434 |
+| Trilhas | 300 | 49 | 251 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **733** | **4.167** |
