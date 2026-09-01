@@ -1910,3 +1910,26 @@ Terceiro lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 25 | 275 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **463** | **4.437** |
+
+## Lote 89 — concluído (commit cbf51207)
+
+Quarto lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **3 casos clínicos**: DICTATE-AHF (dapagliflozina precoce na IC aguda, ainda sob diurese); SAPPHIRE-LDL (intervenção digital reduz LDL-C em ASCVD, sem eventos maiores demonstrados em 6 meses); ACHIEVE-3 (orforglipron superior a semaglutida oral em HbA1c, mais GI/FC).
+- **2 checklists**: betabloqueador pós-IAM por estrato de FEVE (9 itens); meta pressórica ACC/AHA 2025 (12 itens).
+- **2 documentos standalone**: CA125 como biomarcador de congestão complementar ao BNP; OCT vs. angiografia em PCI complexa (reconciliação ILUMIEN IV/OCTOBER via metanálises 2025-2026).
+- **1 material-paciente**: ordem de introdução dos 4 remédios da IC, sem dose.
+- **Verificação de integridade**: nenhum slug colide (923 casos / 476 checklists / 448 materiais / 2.775 slugs conferidos); 13 links de Tudo com Tudo re-verificados.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.726 itens.
+
+### Status consolidado (após Lote 89)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 186 | 2.214 |
+| Casos clínicos | 900 | 71 | 829 |
+| Checklists | 600 | 52 | 548 |
+| Materiais-paciente | 500 | 42 | 458 |
+| Trilhas | 300 | 25 | 275 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **471** | **4.429** |
