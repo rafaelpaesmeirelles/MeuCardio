@@ -2288,3 +2288,27 @@ Décimo oitavo lote sob o novo direcionamento — 8 agentes em paralelo, prioriz
 | Trilhas | 300 | 39 | 261 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **651** | **4.249** |
+
+## Lote 104 — concluído (commit d497dcd7)
+
+Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais que o padrão de 8), priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: esaxerenona, antagonista não esteroidal seletivo do receptor mineralocorticoide (ESCORT-HT, EXCITE-HT); ablação de FA na ICFEp — subanálise do CABANA e metanálise 2025; estatinas em prevenção primária em pessoas vivendo com HIV — da REPRIEVE às atualizações de 2025.
+- **2 casos clínicos**: SCA com deficiência de ferro — não repor ferro endovenoso por analogia à IC; EMPACT-MI — empagliflozina pós-IAM tem desfecho primário neutro.
+- **2 checklists**: reconhecimento e tratamento etiológico da taquicardiomiopatia (14 itens); decisão TAVI vs. SAVR na estenose aórtica grave ESC/EACTS 2021 (14 itens).
+- **1 material-paciente**: metformina e insuficiência cardíaca — é seguro tomar?
+- **1 trilha**: "Insuficiência cardíaca — terapia elétrica: CDI e ressincronização", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, 2 checklists e material; 20 links de Tudo com Tudo reverificados nos 3 documentos standalone (incluindo confirmação de que o slug "castle-htx-ablacao-na-fa..." — anteriormente fabricado em incidente de trilha do Lote 91 — hoje existe como documento legítimo, auditado por outra frente de produção em 08/08/2026); 10 item_slug da trilha reconfirmados independentemente via grep.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.847 itens.
+
+### Status consolidado (após Lote 104)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 228 | 2.172 |
+| Casos clínicos | 900 | 100 | 800 |
+| Checklists | 600 | 72 | 528 |
+| Materiais-paciente | 500 | 57 | 443 |
+| Trilhas | 300 | 40 | 260 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **660** | **4.240** |
