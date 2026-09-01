@@ -26441,5 +26441,75 @@
         "por_que": "Fecha a trilha amarrando tudo em uma árvore de decisão única: quando indicar agonista de GLP-1, quando escalar para agonista duplo, e quando encaminhar para cirurgia bariátrica."
       }
     ]
+  },
+  {
+    "slug": "trilha-anoca-inoca-endotipo-guiado",
+    "titulo": "ANOCA/INOCA: da angiografia sem obstrução ao tratamento guiado pelo endótipo",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo reconhecer quando a dor torácica persiste apesar de coronárias sem obstrução significativa, diferenciar os dois endótipos vasomotores — disfunção microvascular (CMD) e espasmo epicárdico — pelos critérios COVADIS e pelos limiares do teste funcional invasivo (CFR, IMR, teste provocativo com acetilcolina), e escolher a farmacologia pelo mecanismo identificado em vez de tratar empiricamente, apoiado na evidência do CorMicA.",
+    "nivel": "avancado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+        "por_que": "Ponto de partida: define ANOCA/INOCA como entidade clínica com carga sintomática e risco aumentado de eventos (ESC 2024 CCS), não como diagnóstico de exclusão, e estabelece quando a avaliação funcional invasiva entra no mesmo tempo da angiografia diagnóstica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "caso_clinico",
+        "item_slug": "angina-persistente-coronarias-normais-anoca-inoca-endotipo",
+        "por_que": "Aterrissa o framework em um paciente real: angina persistente com angiografia sem lesão obstrutiva, o cenário exato em que a pergunta deixa de ser 'tem doença coronariana?' e passa a ser 'qual é o endótipo?'."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "angina-microvascular-endotipo-cmd-na-pratica",
+        "por_que": "Detalha o primeiro endótipo — disfunção microvascular coronariana (CMD) — com os critérios COVADIS de angina microvascular e os limiares invasivos que a ESC 2024 trata como anormais (CFR <2,5, IMR ≥25, HMR >2,5 mmHg/cm/s), sempre com a técnica de medida identificada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-angina-vasoespastica-teste-provocativo-e-tratamento",
+        "por_que": "Detalha o segundo endótipo — espasmo epicárdico — pelo teste provocativo com acetilcolina/ergonovina e o corte angiográfico de constrição >90% do consenso COVADIS de angina vasoespástica, o contraponto direto ao endótipo microvascular da etapa anterior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "angina-noturna-coronarias-livres-espasmo-epicardico-covadis",
+        "por_que": "Caso desenhado para testar a diferenciação entre os dois endótipos na prática — angina de madrugada com coronárias livres, exatamente o cenário em que confundir espasmo epicárdico com disfunção microvascular muda a escolha do fármaco."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "nitroglicerina-sublingual-fluxo-coronariano-absoluto-estudo-randomizado",
+        "por_que": "Ponte mecanística antes da farmacologia dirigida: estudo randomizado que testou, por medida direta de fluxo coronariano absoluto, se o efeito antianginoso da nitroglicerina sublingual vem de aumento de fluxo ou de redução de carga hemodinâmica — relevante para não superestimar o que cada classe faz na microcirculação."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "cormica-terapia-estratificada-teste-funcional-invasivo-angina",
+        "por_que": "A evidência pivotal que justifica todo o percurso: no CorMicA, escolher a classe farmacológica pelo mecanismo identificado no teste funcional invasivo (estrutural/microvascular vs. espástico) melhorou o escore de angina e a qualidade de vida de forma sustentada, comparado a tratar empiricamente sem esse diagnóstico."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "verapamil-cloridrato",
+        "por_que": "Antagonista de canal de cálcio não di-hidropiridínico, primeira linha farmacológica para o endótipo de espasmo epicárdico documentado nas etapas 4 e 5."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "ranolazina",
+        "por_que": "Opção listada pela ESC 2024 para angina microvascular com CFR reduzida/IMR aumentado — o endótipo CMD da etapa 3 —, sem que a diretriz a promova a Classe I isolada, o que a trilha já sinalizou ao detalhar o endótipo."
+      },
+      {
+        "ordem": 10,
+        "item_type": "checklist",
+        "item_slug": "angina-refrataria-e-anoca-inoca-investigacao-e-manejo",
+        "por_que": "Fecha a trilha amarrando investigação e manejo em sequência operacional única — do reconhecimento da suspeita ao teste funcional invasivo e à escolha terapêutica guiada pelo mecanismo — para o paciente que permanece sintomático apesar da primeira linha."
+      }
+    ]
   }
 ]

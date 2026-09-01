@@ -19309,5 +19309,48 @@
       "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway: A Report of the American College of Cardiology Solution Set Oversight Committee. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "aprocitentana-precision-hipertensao-resistente-quarta-droga",
+    "titulo": "Hipertensão resistente com DRC estágio 3: espironolactona ou aprocitentana?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 71 anos, hipertensão de longa data e doença renal crônica estágio 3b (TFGe 38mL/min/1,73m², estável nos últimos 12 meses). Está em uso de losartana 100mg/dia, anlodipino 10mg/dia e clortalidona 25mg/dia, com boa adesão confirmada por MRPA. Mesmo assim, a MAPA de 24 horas mostra média de 148/88mmHg, e a PA de consultório repetida em duas consultas confirma ≥140mmHg, caracterizando hipertensão resistente verdadeira (excluídos avental branco e pseudorresistência). Potássio sérico atual: 5,2mEq/L. Não há sinais de insuficiência cardíaca, NT-proBNP não dosado.",
+    "pergunta": "Qual a conduta mais apropriada para a quarta droga anti-hipertensiva, à luz da evidência mais recente?",
+    "opcoes": [
+      "Iniciar espironolactona como quarta droga, seguindo o PATHWAY-2, já que é a opção historicamente preferencial para hipertensão resistente",
+      "Considerar aprocitentana como alternativa à espironolactona, dado que o paciente tem DRC estágio 3 e hipercalemia limítrofe — população em que a espironolactona é limitada por risco de hipercalemia e queda adicional da TFGe, subgrupo em que o PRECISION mostrou redução de PA pelo menos tão robusta quanto na população geral do ensaio",
+      "Aumentar a dose de clortalidona antes de adicionar uma quarta classe farmacológica",
+      "Iniciar aprocitentana 25mg (dose mais alta) para maximizar a redução pressórica, já que o paciente já falhou com três fármacos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O paciente tem hipertensão resistente verdadeira (PA de consultório ≥140mmHg e MAPA confirmatória, apesar de três classes em dose otimizada, incluindo diurético, com adesão comprovada) associada a DRC estágio 3b e potássio já em 5,2mEq/L — cenário em que a espironolactona, apesar de continuar sendo a quarta droga preferencial pelo PATHWAY-2, carrega risco relevante de hipercalemia e de queda adicional da TFGe. O ensaio PRECISION (Schlaich et al., Lancet 2022; PMID 36356632) testou a aprocitentana, antagonista dual do receptor de endotelina, sobre uma terapia de base padronizada de três fármacos (anlodipino+valsartana+hidroclorotiazida em dose máxima tolerada) em pacientes com PA de consultório ≥140mmHg apesar dessa base — reduzindo a PA sistólica em cerca de 15mmHg em 4 semanas (diferença vs. placebo de -3,8mmHg na dose de 12,5mg, IC97,5% -6,8 a -0,8, p=0,0042), com efeito sustentado até a semana 40 pelo desenho de retirada. A revisão de Heidari Nejad, Azzam e Schlaich (autor principal do PRECISION; PMC10505105) posiciona explicitamente a aprocitentana como via alternativa — não sequencial — 'particularmente útil para pacientes não elegíveis para espironolactona', citando idosos e DRC estágios 3-4 como as populações-alvo, com redução de PA numericamente maior nesses subgrupos no próprio ensaio (dado de subgrupo, não comparação direta e poderada). É importante lembrar que nenhum ensaio comparou aprocitentana com espironolactona cabeça a cabeça, e que a dose aprovada pela FDA é 12,5mg/dia (não 25mg) — a eficácia entre as duas doses foi quase idêntica no PRECISION (diferença de 0,1mmHg), mas o edema/retenção hídrica foi o dobro na dose de 25mg (18% vs. 9%), efeito de classe dos antagonistas do receptor de endotelina que exige monitorar sinais de piora de insuficiência cardíaca. Aumentar a clortalidona não é a conduta recomendada quando já há resistência confirmada com diurético em dose adequada e a prioridade é adicionar uma quarta classe de mecanismo distinto.",
+    "source_refs": [
+      "Schlaich MP, Bellet M, Weber MA, Danaietash P, Bakris GL, Flack JM, Dreier RF, Sassi-Sayadi M, Haskell LP, Narkiewicz K, Wang JG; PRECISION investigators. Dual endothelin antagonist aprocitentan for resistant hypertension (PRECISION): a multicentre, blinded, randomised, parallel-group, phase 3 trial. Lancet. 2022;400(10367):1927-1937. DOI: 10.1016/S0140-6736(22)02034-7. PMID: 36356632",
+      "Heidari Nejad S, Azzam O, Schlaich MP. Dual Endothelin Antagonism with Aprocitentan as a Novel Therapeutic Approach for Resistant Hypertension. Curr Hypertens Rep. 2023;25(10):343-352. DOI: 10.1007/s11906-023-01259-z. PMID: 37566184. PMC10505105",
+      "U.S. Food and Drug Administration. TRYVIO (aprocitentan) tablets, for oral use — full prescribing information. Aprovação inicial nos EUA: 2024. DailyMed, setid dfe7a2ee-612c-4aba-834a-d68e6b59a0a6"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos",
+    "titulo": "TAVI em baixo risco: balão-expansível ou autoexpansível, o que dizem os 7 anos de PARTNER 3 e Evolut Low Risk?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 66 anos, estenose aórtica grave sintomática (dispneia aos esforços moderados, classe funcional II-III), sem comorbidades relevantes, STS-PROM 1,8% (baixo risco cirúrgico). Anatomia valvar e vascular favorável tanto para prótese balão-expansível quanto autoexpansível. O heart team já definiu a via transcateter (TAVI), respeitando a forte preferência do paciente por evitar esternotomia, e agora discute qual família de prótese oferecer. O paciente pergunta diretamente: 'daqui a alguns anos, uma dessas próteses vai precisar ser trocada com mais frequência que a outra?'",
+    "pergunta": "Com base no seguimento mais longo publicado em 2026 dos dois ensaios de baixo risco (PARTNER 3, 7 anos, prótese balão-expansível SAPIEN 3; Evolut Low Risk, 6-7 anos, prótese autoexpansível), qual afirmação reflete corretamente a evidência disponível para essa conversa?",
+    "opcoes": [
+      "As duas famílias de prótese mostraram, nesse seguimento, taxas de reintervenção estatisticamente equivalentes às da cirurgia, sem qualquer sinal de diferença atribuível ao tipo de prótese",
+      "A prótese autoexpansível mostrou, em 7 anos, reintervenção significativamente maior que a cirurgia (9,8% vs. 6,0%; p=0,02), impulsionada especificamente por regurgitação (5,6% vs. 1,6%; p<0,001) — achado que a prótese balão-expansível não replicou em 7 anos (reintervenção 6,0% vs. 5,5%; p=0,77)",
+      "A prótese balão-expansível mostrou reintervenção significativamente maior que a cirurgia por trombose subclínica de folheto, enquanto a autoexpansível não mostrou diferença significativa em nenhum desfecho de durabilidade",
+      "Os dois ensaios usaram coortes e definições de desfecho diretamente comparáveis entre si, o que permite concluir que a prótese balão-expansível é superior à autoexpansível para qualquer paciente de baixo risco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O achado central do documento de origem é justamente a divergência entre as duas famílias de prótese no seguimento mais longo disponível. No Evolut Low Risk (prótese autoexpansível), a reintervenção em 7 anos foi maior com TAVI que com cirurgia (9,8% vs. 6,0%; sub-HR 1,68, IC95% 1,10-2,58; p=0,02), diferença que só atingiu significância estatística ao estender a análise de 6 para 7 anos (em 6 anos era apenas tendência, p=0,07) e que foi inteiramente impulsionada pelo componente de regurgitação (5,6% vs. 1,6%; p<0,001), não pelo componente de estenose (3,6% vs. 3,5%; p=0,70). Já no PARTNER 3 (prótese balão-expansível SAPIEN 3), a reintervenção valvar em 7 anos não diferiu entre TAVI e cirurgia (6,0% vs. 5,5%; p=0,77), nem a falha protética por qualquer causa (6,9% vs. 7,5%; p=0,69); o único sinal isolado foi mais disfunção protética por trombose subclínica com TAVI (5,2% vs. 0,9%; p<0,001), que os próprios autores ressalvam ter impacto clínico limitado, já que poucos casos progrediram para falha valvar. A opção correta (índice 1) é a única que atribui cada achado à prótese certa. As demais opções invertem os achados (opção 2, que troca trombose por balão-expansível com reintervenção por autoexpansível, inverte o mecanismo), ignoram a divergência real (opção 0) ou cometem o erro apontado explicitamente como armadilha no documento de origem: tratar os dois ensaios como diretamente comparáveis entre si, quando usam próteses de gerações e famílias diferentes, coortes distintas e definições de desfecho de durabilidade não idênticas (opção 3) — nenhum dos dois estudos comparou as próteses uma contra a outra.",
+    "source_refs": [
+      "Ternacle J, Hahn RT, Silva I, et al; PARTNER 3 Investigators. Seven-Year Valve Durability With Transcatheter or Surgical Aortic Valve Replacement: An Ad Hoc Analysis of the PARTNER 3 Randomized Clinical Trial. JAMA Cardiol. 2026 Jun 24. DOI: 10.1001/jamacardio.2026.2299. PMID: 42340728.",
+      "Forrest JK, Yakubov SJ, Deeb GM, Reardon MJ; Evolut Low Risk Trial Investigators. Six-Year Outcomes After Transcatheter vs Surgical Aortic Valve Replacement in Low-Risk Patients With Aortic Stenosis. J Am Coll Cardiol. 2026;87(23):3210-3221. DOI: 10.1016/j.jacc.2026.02.5063. PMID: 41697183."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

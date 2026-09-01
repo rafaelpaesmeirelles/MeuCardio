@@ -40589,5 +40589,153 @@
       }
     ],
     "revisao": "Checklist extraído do fluxograma ESC 2023 de síndrome coronariana aguda (content/Doença_coronariana/fluxograma-sindrome-coronariana-aguda-esc-2023.md); pendente de revisão clínica antes de publicação."
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023",
+    "condicao": "Cardiomiopatia hipertrófica — diagnóstico, estratificação de risco de morte súbita e tratamento",
+    "resumo": "Checklist de manejo da CMH cobrindo critérios diagnósticos por espessura de parede, avaliação por imagem multimodal, tratamento farmacológico e invasivo da obstrução via de saída, estratificação de risco de morte súbita com o HCM Risk-SCD e indicação de CDI, conforme a diretriz ESC 2023.",
+    "documento_origem": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194",
+      "PMID 37622657"
+    ],
+    "itens": [
+      {
+        "id": "cmh-def-espessura",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Espessura de parede do VE ≥15mm em qualquer segmento confirmada e não explicada apenas por condição de carga anormal",
+        "origem_secao": "Criterios diagnosticos"
+      },
+      {
+        "id": "cmh-zona-intermediaria",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em espessura de 13-15mm (zona intermediária), avaliação adicional realizada com ECG, história familiar e testes genéticos",
+        "origem_secao": "Criterios diagnosticos"
+      },
+      {
+        "id": "cmh-familiar-primeiro-grau",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em parente de primeiro grau de paciente com CMH, espessura ≥13mm considerada diagnóstica",
+        "origem_secao": "Criterios diagnosticos"
+      },
+      {
+        "id": "cmh-eco-inicial",
+        "categoria": "imagem",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico 2D e Doppler realizado na avaliação inicial em repouso e durante manobra de Valsalva, nas posições sentada e semi-supina, com avaliação em pé se nenhum gradiente for provocado, para detectar LVOTO",
+        "origem_secao": "Avaliacao por imagem"
+      },
+      {
+        "id": "cmh-eco-esforco",
+        "categoria": "imagem",
+        "obrigatorio": false,
+        "texto": "Ecocardiograma de esforço realizado em paciente sintomático com gradiente de repouso/provocado <50mmHg, para detectar LVOTO provocável e regurgitação mitral induzida por exercício",
+        "origem_secao": "Avaliacao por imagem"
+      },
+      {
+        "id": "cmh-rm-cardiaca",
+        "categoria": "imagem",
+        "obrigatorio": false,
+        "texto": "Ressonância cardíaca com realce tardio de gadolínio considerada, sobretudo para detectar hipertrofia apical/anterolateral, aneurismas de VE, trombos e marcadores sutis em portadores de variantes sarcoméricas",
+        "origem_secao": "Avaliacao por imagem"
+      },
+      {
+        "id": "cmh-red-flags-etiologicos",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Achados sugestivos de etiologia específica pesquisados na imagem: septo interatrial espessado e vidro fosco/apical sparing strain (amiloidose), espessamento valvar AV (amiloidose, Fabry), hipertrofia concêntrica extrema ≥30mm (Danon, Pompe)",
+        "origem_secao": "Achados sugestivos etiologias especificas"
+      },
+      {
+        "id": "cmh-avaliacao-genetica",
+        "categoria": "genetica",
+        "obrigatorio": false,
+        "texto": "Investigação genética considerada, priorizando pacientes jovens com história familiar; fenocópias (Fabry, Pompe, Danon, PRKAG2, amiloidose, sarcoidose, Noonan, ataxia de Friedreich) rastreadas quando o quadro sugere",
+        "origem_secao": "Genetica"
+      },
+      {
+        "id": "cmh-lvoto-gradiente",
+        "categoria": "lvoto",
+        "obrigatorio": true,
+        "texto": "Gradiente da via de saída do VE classificado (≥30mmHg define LVOTO; ≥50mmHg é o limiar geral para considerar tratamento invasivo)",
+        "origem_secao": "Obstrucao via saida vsvo lvoto"
+      },
+      {
+        "id": "cmh-farmaco-primeira-linha",
+        "categoria": "tratamento_farmacologico",
+        "obrigatorio": true,
+        "texto": "Betabloqueador não vasodilatador titulado até dose máxima tolerada como primeira linha em LVOTO sintomática",
+        "origem_secao": "Tratamento farmacologico com lvot"
+      },
+      {
+        "id": "cmh-farmaco-alternativa-bb",
+        "categoria": "tratamento_farmacologico",
+        "obrigatorio": false,
+        "texto": "Verapamil ou diltiazem titulado até dose máxima tolerada oferecido em caso de intolerância a betabloqueador",
+        "origem_secao": "Tratamento farmacologico com lvot"
+      },
+      {
+        "id": "cmh-mavacamten-seguranca",
+        "categoria": "tratamento_farmacologico",
+        "obrigatorio": false,
+        "texto": "Ao iniciar mavacamten (combinado ou em monoterapia), vigilância ecocardiográfica de FEVE mantida e uso concomitante com disopiramida evitado",
+        "origem_secao": "Tratamento farmacologico com lvot"
+      },
+      {
+        "id": "cmh-evitar-contraindicados",
+        "categoria": "tratamento_farmacologico",
+        "obrigatorio": true,
+        "texto": "Digoxina e dilatadores arteriais/venosos (nitratos, inibidores de fosfodiesterase) evitados em paciente com LVOTO",
+        "origem_secao": "Tratamento farmacologico com lvot"
+      },
+      {
+        "id": "cmh-indicacao-srt",
+        "categoria": "tratamento_invasivo",
+        "obrigatorio": false,
+        "texto": "Redução septal (miectomia ou ablação alcoólica) indicada quando gradiente de repouso ou máximo provocado ≥50mmHg com classe funcional NYHA/Ross III-IV apesar de terapia médica máxima tolerada, ou em síncope recorrente ao esforço pelo mesmo gradiente",
+        "origem_secao": "Tratamento invasivo septal srt"
+      },
+      {
+        "id": "cmh-escolha-tecnica-srt",
+        "categoria": "tratamento_invasivo",
+        "obrigatorio": false,
+        "texto": "Miectomia septal cirúrgica preferida sobre ablação alcoólica em crianças e em adultos com outras lesões que requerem correção cirúrgica associada",
+        "origem_secao": "Tratamento invasivo septal srt"
+      },
+      {
+        "id": "cmh-hcm-risk-scd",
+        "categoria": "estratificacao_risco",
+        "obrigatorio": true,
+        "texto": "Risco de morte súbita em 5 anos calculado com o HCM Risk-SCD (≥16 anos) ou modelo pediátrico validado (<16 anos) na primeira consulta, com reavaliação a cada 1-2 anos ou em mudança do quadro clínico",
+        "origem_secao": "Estratificacao risco morte subita"
+      },
+      {
+        "id": "cmh-cdi-primaria",
+        "categoria": "estratificacao_risco",
+        "obrigatorio": false,
+        "texto": "Indicação de CDI ponderada pelo corte de risco em 5 anos: considerar com ≥6%, pode-se considerar entre 4-6%, e considerar em decisão compartilhada se <4% com LGE extenso (≥15%) na RM",
+        "origem_secao": "Estratificacao risco morte subita"
+      },
+      {
+        "id": "cmh-cdi-secundaria",
+        "categoria": "estratificacao_risco",
+        "obrigatorio": true,
+        "texto": "CDI indicado em sobrevivente de parada cardíaca por TV/FV ou TV sustentada com comprometimento hemodinâmico",
+        "origem_secao": "Estratificacao risco morte subita"
+      },
+      {
+        "id": "cmh-fa-manejo",
+        "categoria": "arritmia",
+        "obrigatorio": false,
+        "texto": "Em fibrilação atrial associada à CMH, controle de ritmo e ablação por cateter preferidos sobre controle de frequência/antiarrítmicos de classe I, e anticoagulação indicada independentemente do escore CHA₂DS₂-VASc",
+        "origem_secao": "Manejo fibrilacao atrial em cmh"
+      }
+    ],
+    "revisao": "Checklist extraído em 01/09/2026 do documento de origem (diretriz ESC 2023 de cardiomiopatias, seção de cardiomiopatia hipertrófica). Itens fiéis ao texto publicado, sem inclusão de critério não presente na fonte. Pendente de revisão clínica antes de publicação."
   }
 ]
