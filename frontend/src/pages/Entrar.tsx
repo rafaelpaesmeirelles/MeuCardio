@@ -1,17 +1,20 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
-import PreHomeBrand from "../components/PreHomeBrand";
+import { CoracaoHolografico } from "../components/PreHomeBrand";
 import { useAuth } from "../lib/auth";
 import "../styles/login.css";
 import "../styles/login-fullscreen-social.css";
 import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
+import "../styles/cardiology-spaces-login.css";
 
-const BENEFICIOS = [
-  { icon: "assistente" as const, title: "Inteligência clínica", detail: "Contexto e apoio à decisão no mesmo ambiente.", tone: "cyan" as const },
-  { icon: "evidencia" as const, title: "Evidências atualizadas", detail: "Guidelines, literatura e protocolos conectados.", tone: "violet" as const },
-  { icon: "check" as const, title: "Segurança e privacidade", detail: "Acesso profissional protegido e rastreável.", tone: "green" as const },
+const ESPACOS = [
+  { id: "consultorio", nome: "Consultório", detalhe: "Assistência", icone: "clinica" as const },
+  { id: "hospital", nome: "Hospital", detalhe: "Decisão", icone: "emergencia" as const },
+  { id: "ensino", nome: "Ensino", detalhe: "Formação", icone: "curso" as const },
+  { id: "pesquisa", nome: "Pesquisa", detalhe: "Evidência", icone: "evidencia" as const },
+  { id: "gestao", nome: "Gestão", detalhe: "Estratégia", icone: "gestao" as const },
 ];
 
 function MarcaAndroid() {
@@ -54,67 +57,92 @@ export default function Entrar() {
   }
 
   return (
-    <main className="login prehome prehome--login prehome--fullscreen">
-      <PreHomeBrand
-        title={<>Tudo o que o cardiologista precisa. <strong>Em um só lugar.</strong></>}
-        description={<>Seus ambientes de cardiologia conectam conhecimento, decisão, assistência e rotina sem tirar o médico do centro.</>}
-        benefits={BENEFICIOS}
-      />
-      <section className="prehome-access" aria-labelledby="login-acesso-titulo">
-        <div className="prehome-card prehome-card--login">
-          <header className="prehome-card__header">
-            <p className="prehome-card__eyebrow"><Icone nome="conta" /> Acesso profissional</p>
-            <h2 id="login-acesso-titulo">Bem-vindo de volta</h2>
-            <p>Acesse sua conta para continuar no CorVIA Cardiology Spaces.</p>
-          </header>
-          <form className="login-formulario" onSubmit={enviar}>
-            <div className="login-campo">
-              <label htmlFor="email">E-mail</label>
-              <input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required autoFocus />
-            </div>
-            <div className="login-campo">
-              <label htmlFor="senha">Senha</label>
-              <div className="login-senha">
-                <input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required />
-                <button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}>
-                  <Icone nome={mostrarSenha ? "olho-fechado" : "olho"} />
-                </button>
-              </div>
-            </div>
-            <div className="prehome-card__inline-actions">
-              <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Lembrar-me</label>
-              <Link to="/esqueci-senha" className="prehome-link">Esqueci minha senha</Link>
-            </div>
-            {erro && <p id="login-erro" className="login-formulario__erro" role="alert">{erro}</p>}
-            <button className="login-formulario__entrar" type="submit" disabled={enviando}>
-              <span>{enviando ? "Abrindo seus Cardiology Spaces…" : "Entrar na minha conta"}</span>{!enviando && <Icone nome="seta" aria-hidden="true" />}{enviando && <i className="login-formulario__carregando" aria-hidden="true" />}
-            </button>
-          </form>
-          <div className="prehome-card__actions">
-            <a
-              className="prehome-android-download"
-              href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"
-              download="CorVIA-Cardiology-Spaces-Android-1.2.0.apk"
-            >
-              <span className="prehome-android-download__icon"><MarcaAndroid /></span>
-              <span><strong>Baixar app para Android</strong><small>Versão 1.2.0 · APK assinado</small></span>
-              <Icone nome="seta" aria-hidden="true" />
-            </a>
-            <div
-              className="prehome-windows-pending"
-              role="status"
-              aria-label="Aplicativo CorVIA para Windows pendente de assinatura"
-            >
-              <span className="prehome-windows-download__icon"><MarcaWindows /></span>
-              <span><strong>Aplicativo para Windows</strong><small>Em preparação · pendente de assinatura</small></span>
-              <span className="prehome-windows-pending__badge">Em breve</span>
-            </div>
-            <Link to="/solicitar-acesso" className="prehome-secondary"><Icone nome="conta" /> Solicitar acesso</Link>
-          </div>
-          <footer className="prehome-card__footer"><Icone nome="check" /><span>Seus dados estão protegidos · ambiente profissional em conformidade com a LGPD</span></footer>
+    <main className="login login-gateway">
+      <div className="login-gateway__aurora" aria-hidden="true" />
+      <div className="login-gateway__stars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+
+      <header className="login-gateway__topbar">
+        <Link to="/" className="login-gateway__brand" aria-label="CorVIA — página inicial">
+          <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
+          <span><strong><span>Cor</span><span className="corvia-via">VIA</span></strong><small>CARDIOLOGY SPACES</small></span>
+        </Link>
+        <div className="login-gateway__security">
+          <span><i /> Ambiente protegido</span>
+          <small>Acesso profissional · LGPD</small>
         </div>
-        <nav className="prehome-legal" aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
+      </header>
+
+      <section className="login-gateway__scene" aria-labelledby="login-title">
+        <header className="login-gateway__hero">
+          <p>UM ACESSO · CINCO ESPAÇOS</p>
+          <h1 id="login-title">Onde todos os seus espaços <strong>se tornam um.</strong></h1>
+          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão conectados sem romper o seu contexto.</span>
+        </header>
+
+        <div className="login-gateway__universe" aria-hidden="true">
+          <svg className="login-gateway__routes" viewBox="0 0 1200 390" preserveAspectRatio="none">
+            <path d="M70 245C240 64 412 48 600 164C788 48 960 64 1130 245" />
+            <path d="M64 273C252 143 430 133 600 218C770 133 948 143 1136 273" />
+            <path d="M128 315C315 253 458 251 600 292C742 251 885 253 1072 315" />
+          </svg>
+          <div className="login-gateway__milky-way">
+            <span />
+          </div>
+          <div className="login-gateway__core">
+            <span className="login-gateway__core-glow" />
+            <CoracaoHolografico />
+            <svg className="login-gateway__pulse" viewBox="0 0 360 48">
+              <path className="login-gateway__pulse-baseline" d="M2 29H358" />
+              <path className="login-gateway__pulse-trace" d="M2 29H29C35 29 37 23 43 23S52 29 59 29H81L88 32L96 8L105 42L113 29H137C148 29 151 16 164 16S181 29 195 29H224C230 29 232 23 238 23S247 29 254 29H275L282 32L290 8L299 42L307 29H329C340 29 343 17 358 17" />
+            </svg>
+            <i className="login-gateway__ring login-gateway__ring--one" />
+            <i className="login-gateway__ring login-gateway__ring--two" />
+          </div>
+          <div className="login-gateway__spaces">
+            {ESPACOS.map((espaco) => (
+              <article className={`login-gateway__space login-gateway__space--${espaco.id}`} key={espaco.id}>
+                <span><Icone nome={espaco.icone} /></span>
+                <div><strong>{espaco.nome}</strong><small>{espaco.detalhe}</small></div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
+
+      <section className="login-gateway__console" aria-labelledby="login-acesso-titulo">
+        <header className="login-gateway__console-head">
+          <span><Icone nome="conta" /></span>
+          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Abra o seu espaço</h2></div>
+        </header>
+        <form className="login-gateway__form" onSubmit={enviar}>
+          <label className="login-gateway__field" htmlFor="email">
+            <span>E-mail profissional</span>
+            <div><Icone nome="mail" /><input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required autoFocus /></div>
+          </label>
+          <label className="login-gateway__field" htmlFor="senha">
+            <span>Senha</span>
+            <div className="login-gateway__password"><Icone nome="configuracao" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
+          </label>
+          <button className="login-gateway__enter" type="submit" disabled={enviando}>
+            <span>{enviando ? "Abrindo seus espaços…" : "Entrar"}</span>
+            {!enviando ? <Icone nome="seta" /> : <i className="login-formulario__carregando" aria-hidden="true" />}
+          </button>
+          {erro && <p id="login-erro" className="login-gateway__error" role="alert">{erro}</p>}
+        </form>
+      </section>
+
+      <footer className="login-gateway__footer">
+        <div className="login-gateway__form-meta">
+          <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Manter este acesso</label>
+          <Link to="/esqueci-senha">Esqueci minha senha</Link>
+        </div>
+        <div className="login-gateway__utilities">
+          <a href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk" download="CorVIA-Cardiology-Spaces-Android-1.2.0.apk"><span><MarcaAndroid /></span><strong>Android</strong><small>Baixar app</small><Icone nome="seta" /></a>
+          <div role="status" aria-label="Aplicativo para Windows pendente de assinatura"><span><MarcaWindows /></span><strong>Windows</strong><small>Em breve</small></div>
+          <Link to="/solicitar-acesso"><span><Icone nome="conta" /></span><strong>Novo no CorVIA?</strong><small>Solicitar acesso</small><Icone nome="seta" /></Link>
+        </div>
+        <nav aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
+      </footer>
     </main>
   );
 }

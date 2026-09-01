@@ -17,8 +17,19 @@ on:
       - "doencas/**"
       - "triagem-sintomas/**"
       - "controlados/**"
+      - "editorial-approvals/**"
       - "scripts/content_inventory.py"
       - "scripts/audit_tudo_com_tudo.py"
+      - "scripts/audit_tudo_com_tudo_semantics.py"
+      - "scripts/fixtures/**"
+      - "scripts/tests/**"
+      - "backend/app/api/knowledge_graph.py"
+      - "backend/app/services/connected_content.py"
+      - "backend/app/services/disease_manifest.py"
+      - "backend/app/services/knowledge_graph.py"
+      - "backend/app/services/knowledge_relation_policy.py"
+      - "backend/app/services/topic_relevance.py"
+      - "backend/app/services/triage_manifest.py"
       - ".github/workflows/corpus-inventory.yml"
   workflow_dispatch:
 
@@ -36,9 +47,12 @@ jobs:
       - name: Enforce scientific corpus baseline
         run: >-
           python scripts/content_inventory.py
-          --minimum-records 9469
-          --minimum-files 2188
+          --minimum-records 11577
+          --minimum-files 2881
           --strict
+
+      - name: Test scientific publication gates
+        run: python -m unittest discover -s scripts/tests -p 'test_*.py' -v
 
       - name: Audit canonical Tudo com Tudo references
         run: |
@@ -53,11 +67,13 @@ jobs:
           review_status = audit["review_status"]
           topic_coverage = audit["topic_coverage"]
 
-          # 9.496 é o último baseline certificado, não um teto. O corpus deve
+          # 11.577 é o baseline certificado desta release, não um teto. O corpus deve
           # poder crescer sem obrigar a regravar este workflow a cada lote.
-          assert total >= 9496, total
+          assert total >= 11577, total
           assert sum(review_status.values()) == total, review_status
-          assert set(review_status) <= {"revisado", "pendente_revisao", "rejeitado"}, review_status
+          assert set(review_status) <= {
+              "revisado", "pendente_revisao", "rejeitado", "lacuna_declarada"
+          }, review_status
 
           # Tudo com Tudo continua obrigatório para 100% dos itens. Pendências
           # editoriais nominais são controladas pelo Content Review Status Gate,
@@ -66,4 +82,78 @@ jobs:
           assert topic_coverage["covered"] == total, topic_coverage
           assert topic_coverage["without_explicit_topic"] == 0, topic_coverage
           assert audit["broken_references"] == [], audit["broken_references"][:10]
+          assert audit["gate"]["passed"] is True, audit["gate"]
           PY
+
+      - name: Audit every publication authorization manifest
+        shell: bash
+        run: |
+          mkdir -p tudo-com-tudo-approval-audits
+          mapfile -t manifests < <(
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in sorted(Path("editorial-approvals").glob("*.json")):
+              payload = json.loads(path.read_text(encoding="utf-8"))
+              if payload.get("decision") == "approved_for_publication":
+                  print(path)
+          PY
+          )
+          if (( ${#manifests[@]} == 0 )); then
+            echo "::error::No approved editorial manifest found"
+            exit 1
+          fi
+          for manifest in "${manifests[@]}"; do
+            output="tudo-com-tudo-approval-audits/$(basename "$manifest" .json).json"
+            echo "Auditing runtime authorization manifest: ${manifest}"
+            python scripts/audit_tudo_com_tudo.py \
+              --approval-manifest "$manifest" \
+              > "$output"
+          done
+
+      - name: Audit Tudo com Tudo semantic sentinels
+        run: >-
+          python scripts/audit_tudo_com_tudo_semantics.py
+          --require-actual-mechanisms
+          --json
+          > tudo-com-tudo-semantics.json
+
+      - name: Audit latest approved science release manifest
+        shell: bash
+        run: |
+          # Aceitar somente data YYYYMMDD torna a ordem lexical cronológica e
+          # impede que um sufixo arbitrário se passe pelo RC mais recente.
+          mapfile -t manifests < <(
+            python - <<'PY'
+          from pathlib import Path
+          import re
+
+          pattern = re.compile(r"^science-release-\d{8}\.json$")
+          for path in sorted(Path("editorial-approvals").glob("science-release-*.json")):
+              if pattern.fullmatch(path.name):
+                  print(path)
+          PY
+          )
+          if (( ${#manifests[@]} == 0 )); then
+            echo "::error::No editorial-approvals/science-release-*.json manifest found"
+            exit 1
+          fi
+
+          manifest="${manifests[-1]}"
+          echo "Auditing latest lexical science release manifest: ${manifest}"
+          python scripts/audit_tudo_com_tudo.py \
+            --strict-release-manifest "$manifest" \
+            > tudo-com-tudo-release-audit.json
+
+      - name: Preserve Tudo com Tudo audit reports
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: tudo-com-tudo-audits
+          path: |
+            tudo-com-tudo-audit.json
+            tudo-com-tudo-release-audit.json
+            tudo-com-tudo-semantics.json
+            tudo-com-tudo-approval-audits/
+          if-no-files-found: warn

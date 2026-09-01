@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
@@ -156,34 +156,95 @@ export default function TimelineDoencas() {
   const [carregandoTimeline, setCarregandoTimeline] = useState(false);
   const [erroTimeline, setErroTimeline] = useState("");
   const [eixoAtivo, setEixoAtivo] = useState("");
+  const requisicaoTimeline = useRef(0);
+  const respostaCanonicaPendente = useRef<Timeline | null>(null);
 
   useEffect(() => {
+    let ativo = true;
+    setErroTemas("");
     api.get<Tema[]>("/trilhas/timeline/temas")
       .then((lista) => {
+        if (!ativo) return;
         setTemas(lista);
-        if (!temaAtivo && lista.length > 0) {
-          setSearchParams({ tema: lista[0].tema }, { replace: true });
+        if (lista.length > 0) {
+          setSearchParams((atuais) => {
+            if (atuais.get("tema")) return atuais;
+            const proximos = new URLSearchParams(atuais);
+            proximos.set("tema", lista[0].tema);
+            return proximos;
+          }, { replace: true });
         }
       })
-      .catch((causa) => setErroTemas(causa instanceof Error ? causa.message : "Não foi possível carregar os temas."));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+      .catch((causa) => {
+        if (ativo) setErroTemas(causa instanceof Error ? causa.message : "Não foi possível carregar os temas.");
+      });
+    return () => { ativo = false; };
+  }, [setSearchParams]);
 
   useEffect(() => {
-    if (!temaAtivo) return;
-    setCarregandoTimeline(true);
+    const idRequisicao = ++requisicaoTimeline.current;
+    setTimeline(null);
     setErroTimeline("");
     setEixoAtivo("");
+
+    if (!temaAtivo) {
+      respostaCanonicaPendente.current = null;
+      setCarregandoTimeline(false);
+      return;
+    }
+
+    const respostaCanonica = respostaCanonicaPendente.current;
+    if (respostaCanonica?.tema === temaAtivo) {
+      respostaCanonicaPendente.current = null;
+      setTimeline(respostaCanonica);
+      setCarregandoTimeline(false);
+      return;
+    }
+
+    respostaCanonicaPendente.current = null;
+    setCarregandoTimeline(true);
     api.get<Timeline>(`/trilhas/timeline?tema=${encodeURIComponent(temaAtivo)}`)
-      .then(setTimeline)
-      .catch((causa) => setErroTimeline(causa instanceof Error ? causa.message : "Não foi possível carregar a timeline deste tema."))
-      .finally(() => setCarregandoTimeline(false));
-  }, [temaAtivo]);
+      .then((dados) => {
+        if (requisicaoTimeline.current !== idRequisicao) return;
+
+        // O backend devolve o nome canônico do tema. Preservamos a resposta e
+        // normalizamos a URL antes de exibi-la, para que URL, tab selecionado,
+        // timeline e painel relacionado nunca representem temas diferentes.
+        if (dados.tema && dados.tema !== temaAtivo) {
+          respostaCanonicaPendente.current = dados;
+          setSearchParams((atuais) => {
+            // Uma interação mais recente pode ter trocado o tema enquanto esta
+            // Promise resolvia. Nesse caso, não sobrescreva a nova escolha.
+            if ((atuais.get("tema") ?? "") !== temaAtivo) return atuais;
+            const proximos = new URLSearchParams(atuais);
+            proximos.set("tema", dados.tema);
+            return proximos;
+          }, { replace: true });
+          return;
+        }
+
+        setTimeline(dados);
+      })
+      .catch((causa) => {
+        if (requisicaoTimeline.current === idRequisicao) {
+          setErroTimeline(causa instanceof Error ? causa.message : "Não foi possível carregar a timeline deste tema.");
+        }
+      })
+      .finally(() => {
+        if (requisicaoTimeline.current === idRequisicao) setCarregandoTimeline(false);
+      });
+
+    return () => {
+      if (requisicaoTimeline.current === idRequisicao) requisicaoTimeline.current += 1;
+    };
+  }, [temaAtivo, setSearchParams]);
+
+  const timelineExibida = timeline?.tema === temaAtivo ? timeline : null;
 
   const marcosFiltrados = useMemo(() => {
-    if (!timeline) return [];
-    return eixoAtivo ? timeline.marcos.filter((marco) => marco.eixo === eixoAtivo) : timeline.marcos;
-  }, [timeline, eixoAtivo]);
+    if (!timelineExibida) return [];
+    return eixoAtivo ? timelineExibida.marcos.filter((marco) => marco.eixo === eixoAtivo) : timelineExibida.marcos;
+  }, [timelineExibida, eixoAtivo]);
 
   const decadas = useMemo(
     () => agruparPorDecada(agruparPorAnoEixoETipo(marcosFiltrados)),
@@ -219,7 +280,11 @@ export default function TimelineDoencas() {
                 role="tab"
                 aria-selected={tema.tema === temaAtivo}
                 className={`timeline-doenca__chip${tema.tema === temaAtivo ? " timeline-doenca__chip--ativo" : ""}`}
-                onClick={() => setSearchParams({ tema: tema.tema })}
+                onClick={() => setSearchParams((atuais) => {
+                  const proximos = new URLSearchParams(atuais);
+                  proximos.set("tema", tema.tema);
+                  return proximos;
+                })}
               >
                 <strong>{tema.tema}</strong>
                 <span>{tema.total_marcos} marco{tema.total_marcos === 1 ? "" : "s"}</span>
@@ -227,20 +292,20 @@ export default function TimelineDoencas() {
             ))}
           </div>
 
-          {erroTimeline ? <Erro mensagem={erroTimeline} /> : carregandoTimeline || !timeline ? (
+          {erroTimeline ? <Erro mensagem={erroTimeline} /> : carregandoTimeline || !timelineExibida ? (
             <Carregando texto="Carregando a timeline…" />
-          ) : timeline.marcos.length === 0 ? (
+          ) : timelineExibida.marcos.length === 0 ? (
             <Vazio
-              titulo={`Nenhum marco publicado ainda em ${timeline.tema}`}
+              titulo={`Nenhum marco publicado ainda em ${timelineExibida.tema}`}
               acao="Assim que uma evidência ou estudo desse tema for publicado com ano, ele aparece aqui automaticamente."
             />
           ) : (
             <>
               <div className="timeline-doenca__entrada">
-                <strong>{timeline.tema}</strong>
+                <strong>{timelineExibida.tema}</strong>
                 <span>
-                  {timeline.total} marco{timeline.total === 1 ? "" : "s"}
-                  {timeline.primeiro_ano && timeline.ultimo_ano ? ` · ${timeline.primeiro_ano}–${timeline.ultimo_ano}` : ""}.
+                  {timelineExibida.total} marco{timelineExibida.total === 1 ? "" : "s"}
+                  {timelineExibida.primeiro_ano && timelineExibida.ultimo_ano ? ` · ${timelineExibida.primeiro_ano}–${timelineExibida.ultimo_ano}` : ""}.
                   Use os eixos abaixo para acompanhar separadamente investigação, tratamento e as demais frentes do conhecimento.
                 </span>
               </div>
@@ -254,9 +319,9 @@ export default function TimelineDoencas() {
                   onClick={() => setEixoAtivo("")}
                 >
                   <strong>Todos os eixos</strong>
-                  <span>{timeline.total} marcos</span>
+                  <span>{timelineExibida.total} marcos</span>
                 </button>
-                {timeline.eixos.map((eixo) => (
+                {timelineExibida.eixos.map((eixo) => (
                   <button
                     key={eixo.eixo}
                     type="button"
@@ -288,7 +353,13 @@ export default function TimelineDoencas() {
             </>
           )}
 
-          <TudoSobreEsteTema tema={timeline?.tema || temaAtivo} titulo="Tudo mais que a CorVIA tem sobre este tema" />
+          {!carregandoTimeline && !erroTimeline && timelineExibida && (
+            <TudoSobreEsteTema
+              key={timelineExibida.tema}
+              tema={timelineExibida.tema}
+              titulo="Tudo mais que a CorVIA tem sobre este tema"
+            />
+          )}
         </>
       )}
     </div>

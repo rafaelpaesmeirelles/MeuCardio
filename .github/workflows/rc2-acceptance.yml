@@ -316,7 +316,7 @@ jobs:
                     scrollWidth: document.documentElement.scrollWidth,
                     stuck: /carregando a tela/i.test(text),
                     serverError: /internal server error|application error|erro 500/i.test(text),
-                    shell: !!document.querySelector('.clinical-os, .spaces-home'),
+                    shell: !!document.querySelector('.cv-app, .clinical-os, .spaces-home'),
                   };
                 });
                 report.routes.push({ route, ...state });

@@ -7,6 +7,7 @@ import Credito from "../components/Credito";
 import DicaContextual from "../components/DicaContextual";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import CampoSenha from "../components/CampoSenha";
+import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 
 type StatusEmail = {
   status: string; current_period_end: string | null;
@@ -423,24 +424,43 @@ export default function CorviaMail() {
 
   if (!usuario) {
     return (
-      <div className="login">
-        <div className="login__cartao">
-          <div className="login__brasao">
-            <LogoCorviaMail />
-          </div>
-          <p className="aviso">
-            O CorvIA Mail é um add-on da Corvia — é preciso ter conta aprovada na plataforma
-            para assinar. Entre na Corvia primeiro.
+      <PublicCardiologyFrame
+        eyebrow="Comunicação profissional"
+        title={<>Sua presença clínica merece um <strong>endereço próprio.</strong></>}
+        description={
+          <p>
+            O CorVIA Mail reúne sua comunicação profissional em um endereço institucional,
+            conectado ao mesmo ecossistema que acompanha sua rotina médica.
           </p>
-          <Link to="/entrar" className="botao" style={{ display: "block", textAlign: "center", marginTop: "1rem" }}>
-            Entrar na Corvia
-          </Link>
-          <Link to="/solicitar-acesso" style={{ display: "block", textAlign: "center", marginTop: "0.8rem", fontSize: "0.86rem" }}>
-            Ainda não tem conta? Solicitar cadastro
-          </Link>
+        }
+        features={[
+          { icon: "mail", title: "Identidade profissional", detail: "Seu endereço @corvia.med.br em uma experiência dedicada.", tone: "cyan" },
+          { icon: "check", title: "Acesso protegido", detail: "Conta CorVIA aprovada antes da ativação do add-on.", tone: "green" },
+          { icon: "sincronizar", title: "Fluxo contínuo", detail: "Comunicação integrada sem perder o contexto do seu dia.", tone: "blue" },
+        ]}
+        tone="cyan"
+      >
+        <section className="public-mail-card" aria-labelledby="public-mail-title">
+          <div className="public-mail-card__brand"><LogoCorviaMail /></div>
+          <div className="public-mail-card__copy">
+            <p className="prehome-card__eyebrow">ADD-ON CORVIA</p>
+            <h2 id="public-mail-title">Entre primeiro no seu espaço profissional.</h2>
+            <p>
+              Para assinar o CorVIA Mail, você precisa ter uma conta aprovada na plataforma.
+              A caixa possui credenciais próprias e permanece protegida dentro do ecossistema.
+            </p>
+          </div>
+          <div className="public-mail-card__actions">
+            <Link to="/entrar" className="prehome-primary">
+              <span>Entrar no CorVIA</span>
+            </Link>
+            <Link to="/solicitar-acesso" className="prehome-secondary">
+              Solicitar cadastro
+            </Link>
+          </div>
           <Credito compacto />
-        </div>
-      </div>
+        </section>
+      </PublicCardiologyFrame>
     );
   }
 

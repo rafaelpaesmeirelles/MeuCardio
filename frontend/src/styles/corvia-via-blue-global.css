@@ -1,5 +1,4 @@
 /* Identidade CorVIA: em wordmarks textuais legadas, "VIA" permanece azul canônico. */
-.prehome-brand__logo strong,
 .cc-mobile-more__head>div>span>strong,
 .cos-brand__text>strong,
 .cos-topbar__mobile-brand>span,
@@ -8,7 +7,6 @@
   display:inline-block;
 }
 
-.prehome-brand__logo strong::after,
 .cc-mobile-more__head>div>span>strong::after,
 .cos-brand__text>strong::after,
 .cos-topbar__mobile-brand>span::after,
@@ -21,7 +19,6 @@
   pointer-events:none;
 }
 
-.prehome-brand__logo strong:has(.corvia-via)::after,
 .cc-mobile-more__head>div>span>strong:has(.corvia-via)::after,
 .cos-brand__text>strong:has(.corvia-via)::after,
 .cos-topbar__mobile-brand>span:has(.corvia-via)::after,
@@ -29,7 +26,7 @@
   content:none;
 }
 
-.corvia-via { color:#16d9f5; }
+.corvia-via { color:#3e7bff; }
 
 /* Sidebar desktop: nunca reconstruir a wordmark com pseudo-elementos.
    Usa diretamente o ativo Cardiology Spaces, com VIA ciano. */

@@ -6,6 +6,22 @@ referenciando-os; por isso a troca precisa ser explícita e versionada.
 """
 
 STUDY_SLUG_ALIASES: dict[str, str] = {
+    "deliver-dapagliflozina-icfep":
+        "deliver-consistencia-por-faixa-de-feve-nao-e-reclassificacao-2026",
+    "paragon-hf-sacubitril-valsartana-na-icfep":
+        "paragon-hf-neutro-e-a-faixa-45-49-nao-e-paradigm",
+    "finearts-hf-finerenona-na-icfem-e-icfep":
+        "finearts-hf-populacao-feve-maior-igual-40-faixa-historica-icfei",
+    "summit-tirzepatida-icfep-com-obesidade":
+        "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+    "advor-acetazolamida-diuretico-ic-aguda-descompensada":
+        "advor-mullens-2022-acetazolamida-iv-descongestao-apos-alca",
+    "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes":
+        "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+    "clorotic-hidroclorotiazida-associada-a-diuretico-de-alca-na-ic-aguda":
+        "clorotic-trullas-2023-hctz-oral-add-on-furosemida-iv",
+    "peitho-fibrinolise-em-tep-de-risco-intermediario":
+        "peitho-tenecteplase-versus-placebo-tep-normotenso-vd-e-troponina",
     "ben-farhat-valvoplastia-por-balao-versus-comissurotomia-cirurgica-na-estenose-mitral":
         "ben-farhat-valvoplastia-mitral-por-balao-versus-comissurotomia-cirurgica",
     "invictus-rivaroxabana-versus-varfarina-na-fa-da-cardiopatia-reumatica":

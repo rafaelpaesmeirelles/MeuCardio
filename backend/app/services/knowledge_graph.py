@@ -21,12 +21,12 @@ Responsabilidades deliberadamente separadas:
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
 import hashlib
 import json
-from pathlib import Path
 import re
 import unicodedata
+from dataclasses import dataclass
+from pathlib import Path
 from urllib.parse import unquote
 
 from sqlalchemy import select, text
@@ -54,6 +54,10 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services import calculators as calc
+from app.services.knowledge_relation_policy import (
+    RelacaoClinicaInvalida,
+    validar_relacao_clinica,
+)
 from app.services.topic_relevance import (
     SUPPORTED_DRUG_TOPICS,
     canonical_theme,
@@ -175,6 +179,17 @@ def registrar_relacao(
         raise ValueError(f"confidence={confidence!r} fora do catálogo permitido.")
     if review_status not in REVIEW_STATUS_RELACAO_PERMITIDOS:
         raise ValueError(f"review_status={review_status!r} fora do catálogo permitido.")
+    validar_relacao_clinica(
+        source_type=source.entity_type,
+        relation_type=relation_type,
+        target_type=target.entity_type,
+        relevance_score=relevance_score,
+        provenance_type=provenance_type,
+        confidence=confidence,
+        review_status=review_status,
+        evidence_source=evidence_source,
+        extra=extra,
+    )
 
     existente = db.execute(
         select(KnowledgeRelation).where(
@@ -219,6 +234,9 @@ _ASSINATURAS_AUTOMATICAS_LEGADAS = {
     # campo: (verbo, tipos de origem, tipos de destino)
     "EvidenceRecord.document_slug": (
         "supported_by", {"documento", "fluxograma"}, {"evidencia"},
+    ),
+    "EvidenceRecord.study_slug": (
+        "supported_by", {"evidencia"}, {"estudo"},
     ),
     "PatientMaterial.documento_slug": (
         "derived_from", {"material_paciente"}, {"documento", "fluxograma"},
@@ -435,6 +453,58 @@ def _itens_por_tema(
     return por_tema, list(publicados.values())
 
 
+def arquivar_entidades_de_conteudo_despublicado(
+    db: Session,
+    *,
+    commit: bool = True,
+) -> int:
+    """Arquiva, de forma fail-closed, nós cujo conteúdo deixou de ser público.
+
+    Esta operação deliberadamente não cria nem reativa nós: ela existe para ser
+    executada na mesma transação que fecha a publicação antes dos loaders. O
+    backfill completo continua responsável por materializar e reativar o grafo
+    após uma reconciliação bem-sucedida.
+    """
+    _, itens_publicados = _itens_por_tema(db)
+    ids_publicados_por_tipo: dict[str, set[int]] = {}
+    for item in itens_publicados:
+        ids_publicados_por_tipo.setdefault(item.tipo, set()).add(item.id_origem)
+
+    ids_publicados_por_tipo["doenca"] = set(
+        db.execute(
+            select(SpecialtyDisease.id).where(SpecialtyDisease.published.is_(True))
+        ).scalars()
+    )
+    ids_publicados_por_tipo["triagem_sintoma"] = set(
+        db.execute(
+            select(SymptomTriageGuide.id).where(SymptomTriageGuide.published.is_(True))
+        ).scalars()
+    )
+
+    # ``tema`` e ``calculadora`` não pertencem às frentes cuja publicação é
+    # fechada pelo reconcile; tocar neles aqui poderia arquivar taxonomia ou
+    # registro estático sem relação com a despublicação em curso.
+    tipos_de_conteudo = TIPOS_ENTIDADE_PERMITIDOS - {"tema", "calculadora"}
+    arquivadas = 0
+    entidades_ativas = db.execute(
+        select(KnowledgeEntity).where(
+            KnowledgeEntity.entity_type.in_(tipos_de_conteudo),
+            KnowledgeEntity.status == "ativo",
+        )
+    ).scalars()
+    for entidade in entidades_ativas:
+        ids_validos = ids_publicados_por_tipo.get(entidade.entity_type, set())
+        if entidade.canonical_id not in ids_validos:
+            entidade.status = "arquivado"
+            arquivadas += 1
+
+    if commit:
+        db.commit()
+    else:
+        db.flush()
+    return arquivadas
+
+
 def _normalizar_chave_clinica(valor: str) -> str:
     """Normalização conservadora para casamento EXATO de nome/alias.
 
@@ -523,6 +593,17 @@ def _registrar_relacao_estruturada(
         raise ValueError(f"confidence={confidence!r} fora do catálogo permitido.")
     if review_status not in REVIEW_STATUS_RELACAO_PERMITIDOS:
         raise ValueError(f"review_status={review_status!r} fora do catálogo permitido.")
+    validar_relacao_clinica(
+        source_type=source.entity_type,
+        relation_type=relation_type,
+        target_type=target.entity_type,
+        relevance_score=relevance_score,
+        provenance_type=provenance_type,
+        confidence=confidence,
+        review_status=review_status,
+        evidence_source=evidence_source,
+        extra=extra,
+    )
 
     chave = (source.id, target.id, relation_type)
     metadados = dict(extra)
@@ -650,6 +731,57 @@ def _rejeitar_relacoes_automaticas_ausentes(lote: _LoteRelacoes) -> int:
     return rejeitadas
 
 
+def _erro_politica_relacao(
+    relacao: KnowledgeRelation, *, source_type: str, target_type: str,
+) -> str | None:
+    """Devolve o motivo de bloqueio sem apagar a trilha persistida."""
+    try:
+        validar_relacao_clinica(
+            source_type=source_type,
+            relation_type=relacao.relation_type,
+            target_type=target_type,
+            relevance_score=relacao.relevance_score,
+            provenance_type=relacao.provenance_type,
+            confidence=relacao.confidence,
+            review_status=relacao.review_status,
+            evidence_source=relacao.evidence_source,
+            extra=relacao.extra,
+        )
+    except RelacaoClinicaInvalida as exc:
+        return str(exc)
+    return None
+
+
+def _rejeitar_relacoes_automaticas_invalidas(lote: _LoteRelacoes) -> int:
+    """Quarentena arestas automáticas legadas que hoje violam a política.
+
+    Relações editoriais não são rebaixadas automaticamente: permanecem na
+    trilha e, fora da matriz, só voltam à leitura pública quando recebem uma
+    ``policy_exception`` auditável. Arestas do backfill são reconciliáveis e
+    por isso podem ser rejeitadas sem DELETE quando a regra evolui.
+    """
+    rejeitadas = 0
+    for relacao in lote.existentes.values():
+        if relacao.review_status == "rejeitado" or not _relacao_pertence_ao_backfill(relacao):
+            continue
+        erro = _erro_politica_relacao(
+            relacao,
+            source_type=relacao.source_entity.entity_type,
+            target_type=relacao.target_entity.entity_type,
+        )
+        if erro is None:
+            continue
+        relacao.review_status = "rejeitado"
+        relacao.extra = {
+            **(relacao.extra or {}),
+            "_producer": _PRODUTOR_BACKFILL,
+            "_inactive_reason": "policy_rejected",
+            "_policy_error": erro,
+        }
+        rejeitadas += 1
+    return rejeitadas
+
+
 _LINK_MARKDOWN = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)")
 _BLOCO_CODIGO_MARKDOWN = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
 _CODIGO_INLINE_MARKDOWN = re.compile(r"`[^`\n]*`")
@@ -702,6 +834,10 @@ def _registrar_referencias_explicitas(
         *,
         score: float,
         extra: dict,
+        provenance_type: str = "structured_metadata",
+        confidence: str = "derived",
+        review_status: str = "pendente_revisao",
+        evidence_source: str | None = None,
     ) -> None:
         nonlocal criadas
         if source is None or target is None:
@@ -715,6 +851,10 @@ def _registrar_referencias_explicitas(
             relevance_score=score,
             extra=extra,
             lote=lote,
+            provenance_type=provenance_type,
+            confidence=confidence,
+            review_status=review_status,
+            evidence_source=evidence_source,
         )
 
     # Documento -> evidência: o campo da evidência aponta para a análise da
@@ -734,6 +874,39 @@ def _registrar_referencias_explicitas(
                 "campo": "EvidenceRecord.document_slug",
                 "origem_slug": evidencia.slug,
                 "destino_slug": evidencia.document_slug,
+            },
+        )
+
+    # Evidência -> estudo: vínculo forte e direcional declarado por slug no
+    # registro editorial. Só é publicável quando os dois registros estão
+    # publicados e revisados; não há fallback por título, tema ou texto.
+    estudos_revisados = set(db.execute(
+        select(ScientificStudy.slug).where(
+            ScientificStudy.published.is_(True),
+            ScientificStudy.review_status == "revisado",
+        )
+    ).scalars())
+    for evidencia in evidencias:
+        study_slug = getattr(evidencia, "study_slug", None)
+        if not study_slug or evidencia.review_status != "revisado":
+            continue
+        _ligar(
+            _no(("evidencia",), evidencia.slug),
+            (
+                _no(("estudo",), study_slug)
+                if study_slug in estudos_revisados
+                else None
+            ),
+            "supported_by",
+            score=1.0,
+            provenance_type="structured_metadata",
+            confidence="derived",
+            review_status="revisado",
+            evidence_source="EvidenceRecord.study_slug",
+            extra={
+                "campo": "EvidenceRecord.study_slug",
+                "origem_slug": evidencia.slug,
+                "destino_slug": study_slug,
             },
         )
 
@@ -1560,6 +1733,7 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
             publicados_por_slug=publicados_por_slug,
         )
     )
+    relacoes_automaticas_invalidas = _rejeitar_relacoes_automaticas_invalidas(lote)
     relacoes_automaticas_rejeitadas = _rejeitar_relacoes_automaticas_ausentes(lote)
     ids_especializados["tema"] = ids_publicados_tema
     for item in itens_publicados:
@@ -1585,6 +1759,7 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
         "relacoes_doenca_explicitas_nao_resolvidas": len(relacoes_doenca_nao_resolvidas),
         "amostra_relacoes_doenca_nao_resolvidas": relacoes_doenca_nao_resolvidas[:25],
         "relacoes_automaticas_rejeitadas": relacoes_automaticas_rejeitadas,
+        "relacoes_automaticas_invalidas": relacoes_automaticas_invalidas,
         "entidades_arquivadas": entidades_arquivadas + calculadoras_duplicadas_arquivadas,
         "calculadoras_duplicadas_arquivadas": calculadoras_duplicadas_arquivadas,
         "relacoes_manuais_calculadora_migradas": relacoes_manuais_calculadora_migradas,
@@ -1623,7 +1798,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 def relacionados_de(
     db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
-    incluir_contexto_tematico: bool = True,
+    incluir_contexto_tematico: bool = False,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
 
@@ -1660,6 +1835,29 @@ def relacionados_de(
         )
     ).all()
 
+    # A política também protege arestas legadas já persistidas. A consulta
+    # nunca confia apenas no fato de a linha existir: automáticas inválidas
+    # aguardam a próxima reconciliação para serem marcadas como rejeitadas;
+    # editoriais fora da matriz exigem `policy_exception` auditável.
+    saida = [
+        (relacao, outro)
+        for relacao, outro in saida
+        if _erro_politica_relacao(
+            relacao,
+            source_type=origem.entity_type,
+            target_type=outro.entity_type,
+        ) is None
+    ]
+    entrada = [
+        (relacao, outro)
+        for relacao, outro in entrada
+        if _erro_politica_relacao(
+            relacao,
+            source_type=outro.entity_type,
+            target_type=origem.entity_type,
+        ) is None
+    ]
+
     # Relações com semântica clínica forte só ficam públicas após revisão.
     # Vínculos de navegação/taxonomia determinísticos podem ser exibidos como
     # pendentes, mantendo o status explícito na resposta.
@@ -1685,11 +1883,6 @@ def relacionados_de(
     # taxonômico e não aparece na UI; seus demais membros são expandidos em um
     # segundo salto. Se o item já tem essa associação, as antigas arestas
     # `same_theme` ficam fora da resposta (permanecem no banco para rollback).
-    todos_os_topicos = {
-        outro.id
-        for relacao, outro in list(saida) + list(entrada)
-        if relacao.relation_type == "belongs_to_topic" and outro.entity_type == "tema"
-    }
     topicos = {
         outro.id
         for relacao, outro in list(saida) + list(entrada)
@@ -1716,6 +1909,15 @@ def relacionados_de(
                 KnowledgeEntity.id != origem.id,
             )
         ).all()
+        vizinhos_de_tema = [
+            (relacao, outro)
+            for relacao, outro in vizinhos_de_tema
+            if _erro_politica_relacao(
+                relacao,
+                source_type=outro.entity_type,
+                target_type="tema",
+            ) is None
+        ]
 
     vistos: set[tuple[str, str]] = set()
     por_tipo: dict[str, list[dict]] = {}
@@ -1734,7 +1936,10 @@ def relacionados_de(
     for relacao, outro in candidatos_diretos:
         if outro.entity_type == "tema" or relacao.relation_type == "belongs_to_topic":
             continue
-        if todos_os_topicos and relacao.relation_type == "same_theme":
+        # `same_theme` is retained only as auditable legacy taxonomy. It is
+        # never a clinical edge: direct results require an explicit typed
+        # relation, and optional theme navigation is built separately below.
+        if relacao.relation_type == "same_theme":
             continue
         chave = (outro.entity_type, outro.slug)
         if chave in vistos:
@@ -1770,10 +1975,13 @@ def relacionados_de(
             "slug": outro.slug,
             "titulo": outro.title,
             "relation_type": "belongs_to_topic",
-            "relevance_score": relacao.relevance_score,
+            # Contexto temático é navegação opt-in, não evidência de nexo
+            # clínico. Portanto não herda score como se fosse relação direta.
+            "relevance_score": None,
             "confidence": relacao.confidence,
             "provenance_type": relacao.provenance_type,
             "review_status": relacao.review_status,
+            "context_only": True,
             "rota": _rota_item(outro.entity_type, outro.slug),
         })
 
@@ -1782,7 +1990,11 @@ def relacionados_de(
     for tipo, itens in sorted(por_tipo.items()):
         itens_ordenados = sorted(
             itens,
-            key=lambda i: (-i["relevance_score"], i["titulo"].casefold(), i["slug"]),
+            key=lambda i: (
+                -i["relevance_score"] if i["relevance_score"] is not None else 1.0,
+                i["titulo"].casefold(),
+                i["slug"],
+            ),
         )
         pagina = itens_ordenados[:limite_por_tipo]
         total += len(itens_ordenados)

@@ -26,6 +26,7 @@ jobs:
           gh workflow run rc2-acceptance.yml --repo "$REPOSITORY" --ref main
           gh workflow run visual-qa.yml --repo "$REPOSITORY" --ref main
           gh workflow run corpus-database.yml --repo "$REPOSITORY" --ref main
+          gh workflow run corpus-inventory.yml --repo "$REPOSITORY" --ref main
           gh workflow run deep-functional-and-app-gates.yml --repo "$REPOSITORY" --ref main
 
-          echo "Dispatched mandatory web/Android release gates for main SHA ${FINAL_SHA}; Windows remains pending."
+          echo "Dispatched mandatory web/Android/scientific release gates for main SHA ${FINAL_SHA}; Windows remains pending."

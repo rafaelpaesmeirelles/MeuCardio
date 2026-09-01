@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
+import LegalDocumentFrame from "../components/LegalDocumentFrame";
 import "../styles/legal.css";
+
+const PRIVACIDADE_FEATURES = [
+  { icon: "check" as const, title: "LGPD no centro", detail: "Papéis, bases legais e direitos dos titulares descritos com transparência.", tone: "green" as const },
+  { icon: "conta" as const, title: "Controle do titular", detail: "Acesso, correção, revogação e eliminação conforme o papel aplicável.", tone: "blue" as const },
+  { icon: "sincronizar" as const, title: "Integrações sob escolha", detail: "Localização, mapas e serviços externos dependem da função utilizada.", tone: "violet" as const },
+];
 
 export default function PoliticaPrivacidade() {
   return (
-    <main className="legal-page" id="conteudo-principal">
-      <header>
-        <Link to="/" aria-label="Voltar ao CorVIA">
-          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
-        </Link>
-        <p className="eyebrow">Privacidade, transparência e segurança</p>
-        <h1>Política de Privacidade — CorVIA Cardiology Spaces</h1>
-        <p>Última atualização: 28 de agosto de 2026.</p>
-      </header>
-
+    <LegalDocumentFrame
+      eyebrow="Privacidade, transparência e segurança"
+      title="Política de Privacidade — CorVIA Cardiology Spaces"
+      description={<p>Como dados profissionais, clínicos e técnicos são tratados para manter cada espaço conectado sem romper o dever de confidencialidade.</p>}
+      updated="28 de agosto de 2026"
+      features={PRIVACIDADE_FEATURES}
+      tone="cyan"
+      footer={<><Link to="/termos">Ler os Termos de Uso</Link><Link to="/">Voltar ao CorVIA</Link></>}
+    >
       <section>
         <h2>1. Escopo e contato</h2>
         <p>
@@ -212,10 +218,6 @@ export default function PoliticaPrivacidade() {
         </p>
       </section>
 
-      <footer>
-        <Link to="/termos">Ler os Termos de Uso</Link>
-        <Link to="/">Voltar ao CorVIA</Link>
-      </footer>
-    </main>
+    </LegalDocumentFrame>
   );
 }

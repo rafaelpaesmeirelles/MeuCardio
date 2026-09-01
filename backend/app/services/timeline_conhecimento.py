@@ -119,13 +119,19 @@ def temas_disponiveis(db: Session) -> list[dict]:
     """Canonical topics with >=1 published evidence/study, merged across aliases."""
     contagem: Counter[str] = Counter()
     for theme in db.execute(
-        select(EvidenceRecord.theme).where(EvidenceRecord.published.is_(True))
+        select(EvidenceRecord.theme).where(
+            EvidenceRecord.published.is_(True),
+            EvidenceRecord.review_status == "revisado",
+        )
     ).scalars():
         canonical = canonical_theme(theme)
         if canonical:
             contagem[canonical] += 1
     for theme in db.execute(
-        select(ScientificStudy.theme).where(ScientificStudy.published.is_(True))
+        select(ScientificStudy.theme).where(
+            ScientificStudy.published.is_(True),
+            ScientificStudy.review_status == "revisado",
+        )
     ).scalars():
         canonical = canonical_theme(theme)
         if canonical:
@@ -137,15 +143,29 @@ def temas_disponiveis(db: Session) -> list[dict]:
     ]
 
 
+def _dump_documento_relacionado(doc: Document) -> dict:
+    return {"slug": doc.slug, "titulo": doc.title, "rota": f"/biblioteca/{doc.slug}"}
+
+
+def _documentos_relacionados(db: Session, slugs: set[str]) -> dict[str, dict]:
+    """Busca todos os documentos da timeline em uma consulta, sem N+1."""
+    if not slugs:
+        return {}
+    docs = db.execute(
+        select(Document).where(
+            Document.slug.in_(slugs),
+            Document.published.is_(True),
+            Document.review_status == "revisado",
+        )
+    ).scalars().all()
+    return {doc.slug: _dump_documento_relacionado(doc) for doc in docs}
+
+
 def _documento_relacionado(db: Session, slug: str | None) -> dict | None:
+    """Compatibilidade para chamadas unitárias fora da montagem em lote."""
     if not slug:
         return None
-    doc = db.execute(
-        select(Document).where(Document.slug == slug, Document.published.is_(True))
-    ).scalar_one_or_none()
-    if doc is None:
-        return None
-    return {"slug": doc.slug, "titulo": doc.title, "rota": f"/biblioteca/{doc.slug}"}
+    return _documentos_relacionados(db, {slug}).get(slug)
 
 
 def montar_timeline(db: Session, tema: str) -> dict:
@@ -162,9 +182,17 @@ def montar_timeline(db: Session, tema: str) -> dict:
 
     evidencias = db.execute(
         select(EvidenceRecord)
-        .where(EvidenceRecord.theme.in_(variants), EvidenceRecord.published.is_(True))
+        .where(
+            EvidenceRecord.theme.in_(variants),
+            EvidenceRecord.published.is_(True),
+            EvidenceRecord.review_status == "revisado",
+        )
         .order_by(EvidenceRecord.year, EvidenceRecord.statement)
     ).scalars().all()
+    documentos = _documentos_relacionados(
+        db,
+        {evidence.document_slug for evidence in evidencias if evidence.document_slug},
+    )
     for evidence in evidencias:
         title = (
             evidence.statement[:160] + "…"
@@ -190,7 +218,7 @@ def montar_timeline(db: Session, tema: str) -> dict:
             fonte=f"{evidence.society} {evidence.year}",
             referencia=evidence.reference,
             rota=f"/evidencias/{evidence.slug}",
-            documento=_documento_relacionado(db, evidence.document_slug),
+            documento=documentos.get(evidence.document_slug),
             tags=evidence.tags or [],
             doi=evidence.doi,
             pmid=None,
@@ -199,7 +227,11 @@ def montar_timeline(db: Session, tema: str) -> dict:
 
     estudos = db.execute(
         select(ScientificStudy)
-        .where(ScientificStudy.theme.in_(variants), ScientificStudy.published.is_(True))
+        .where(
+            ScientificStudy.theme.in_(variants),
+            ScientificStudy.published.is_(True),
+            ScientificStudy.review_status == "revisado",
+        )
         .order_by(ScientificStudy.year, ScientificStudy.title)
     ).scalars().all()
     for study in estudos:

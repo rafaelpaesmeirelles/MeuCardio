@@ -2,8 +2,9 @@
 
 Curadoria do que já existe: a trilha não cria conteúdo, ela propõe ordem e diz
 por que cada etapa vem naquele ponto. O progresso é por médico e por trilha, e
-guardado pelo slug da etapa — reordenar a trilha depois não reescreve o que a
-pessoa já leu.
+guardado pela identidade estável ``item_type:item_slug`` — reordenar a trilha
+depois não reescreve o que a pessoa já leu, e conteúdos de tipos diferentes
+podem compartilhar slug sem compartilhar estado.
 """
 
 from datetime import datetime, timezone
@@ -16,7 +17,15 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.study_track import StudyTrack, StudyTrackProgress
 from app.models.user import User
-from app.services.study_slug_aliases import canonical_study_slug, canonicalize_study_slugs
+from app.services.study_slug_aliases import canonical_study_slug
+from app.services.study_track_progress import (
+    STAGE_TYPES,
+    canonical_stage_slug,
+    completed_stage_ids,
+    expand_legacy_progress_tokens,
+    split_stage_identity,
+    stage_identity,
+)
 from app.services.timeline_conhecimento import montar_timeline, temas_disponiveis
 
 router = APIRouter(prefix="/api/trilhas", tags=["trilhas de estudo"])
@@ -52,14 +61,23 @@ def _disponivel(db: Session, item_type: str, slug: str) -> bool:
     from app.models.evidence import EvidenceRecord
     from app.models.study import ScientificStudy
 
+    if item_type == "calculadora":
+        from app.services.calculators import REGISTRY
+
+        return slug in REGISTRY
+
     modelos = {"documento": Document, "medicamento": Drug,
                "estudo": ScientificStudy, "checklist": DischargeChecklist,
                "evidencia": EvidenceRecord, "caso_clinico": ClinicalCase}
     Modelo = modelos.get(item_type)
     if Modelo is None:
-        return True  # calculadora vive em código, não em tabela
+        return False
     item = db.query(Modelo).filter(Modelo.slug == slug).first()
-    return bool(item and getattr(item, "published", False))
+    return bool(
+        item
+        and getattr(item, "published", False)
+        and getattr(item, "review_status", None) == "revisado"
+    )
 
 
 def _titulo(db: Session, item_type: str, slug: str) -> str | None:
@@ -104,30 +122,54 @@ def _titulo(db: Session, item_type: str, slug: str) -> str | None:
     return getattr(item, campo) if item else None
 
 
-def _progresso(db: Session, user_id: int, track: StudyTrack) -> StudyTrackProgress | None:
-    return db.query(StudyTrackProgress).filter(
+def _progresso(
+    db: Session,
+    user_id: int,
+    track: StudyTrack,
+    *,
+    lock: bool = False,
+) -> StudyTrackProgress | None:
+    query = db.query(StudyTrackProgress).filter(
         StudyTrackProgress.user_id == user_id, StudyTrackProgress.track_id == track.id
-    ).first()
+    )
+    if lock:
+        query = query.with_for_update()
+    return query.first()
 
 
 def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapas: bool = True) -> dict:
-    # Compatibilidade imediata durante o deploy: a reconciliação persiste a
-    # migração, mas este caminho também reconhece progresso antigo antes que o
-    # comando operacional seja executado.
-    feitas = set(canonicalize_study_slugs(prog.concluidas if prog else []))
+    # Compatibilidade imediata: aliases podem ser reconciliados em lote, mas
+    # slugs legados também são reconhecidos sem exigir migração destrutiva. A
+    # primeira escrita dessa trilha persiste as identidades compostas.
     etapas = t.etapas or []
+    feitas = completed_stage_ids(prog.concluidas if prog else [], etapas)
+    identidades = [
+        stage_identity(str(etapa.get("item_type") or ""), str(etapa.get("item_slug") or ""))
+        for etapa in etapas
+    ]
+    concluida_atualmente = bool(identidades) and all(
+        identidade in feitas for identidade in identidades
+    )
+    conclusao_historica_em = prog.concluida_em if prog else None
     d = {
         "slug": t.slug, "titulo": t.titulo, "tema": t.tema, "objetivo": t.objetivo,
         "nivel": t.nivel, "total_etapas": len(etapas),
-        "concluidas": len([e for e in etapas if e.get("item_slug") in feitas]),
-        "finalizada_em": prog.concluida_em if prog else None,
+        "concluidas": len([identidade for identidade in identidades if identidade in feitas]),
+        # Compatibilidade: clientes antigos tratavam ``finalizada_em`` como o
+        # estado atual. O timestamp historico so aparece aqui enquanto todas as
+        # etapas vigentes continuam concluidas. Clientes novos devem usar o
+        # booleano explicito e podem exibir separadamente o primeiro termino.
+        "finalizada_em": conclusao_historica_em if concluida_atualmente else None,
+        "concluida_atualmente": concluida_atualmente,
+        "conclusao_historica_em": conclusao_historica_em,
     }
     if com_etapas:
         d["etapas"] = [
             {**e,
+             "etapa_id": stage_identity(e.get("item_type"), e.get("item_slug")),
              "titulo": _titulo(db, e.get("item_type"), e.get("item_slug")),
              "link": ROTA.get(e.get("item_type"), "").format(slug=e.get("item_slug")),
-             "concluida": e.get("item_slug") in feitas,
+             "concluida": stage_identity(e.get("item_type"), e.get("item_slug")) in feitas,
              "disponivel": _disponivel(db, e.get("item_type"), e.get("item_slug"))}
             for e in etapas
         ]
@@ -137,7 +179,9 @@ def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapa
 
 @router.get("")
 def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    ts = db.query(StudyTrack).filter(StudyTrack.published.is_(True)).order_by(StudyTrack.titulo).all()
+    ts = db.query(StudyTrack).filter(
+        StudyTrack.published.is_(True), StudyTrack.review_status == "revisado"
+    ).order_by(StudyTrack.titulo).all()
     progressos = {
         progresso.track_id: progresso
         for progresso in db.query(StudyTrackProgress).filter(
@@ -178,7 +222,9 @@ def timeline(
 @router.get("/{slug}")
 def detalhe(slug: str, db: Session = Depends(get_db), user: User = Depends(current_user)):
     t = db.query(StudyTrack).filter(
-        StudyTrack.slug == slug, StudyTrack.published.is_(True)
+        StudyTrack.slug == slug,
+        StudyTrack.published.is_(True),
+        StudyTrack.review_status == "revisado",
     ).first()
     if t is None:
         raise HTTPException(status_code=404, detail="Trilha não encontrada.")
@@ -187,32 +233,101 @@ def detalhe(slug: str, db: Session = Depends(get_db), user: User = Depends(curre
 
 class MarcarEtapa(BaseModel):
     item_slug: str
+    item_type: str | None = None
+    etapa_id: str | None = None
     concluida: bool = True
+
+
+def _resolver_etapa(t: StudyTrack, dados: MarcarEtapa) -> tuple[dict, str]:
+    """Resolve payload novo ou legado sem voltar a aceitar ambiguidade."""
+    etapas = t.etapas or []
+    identidade_solicitada: str | None = None
+
+    if dados.etapa_id:
+        parsed = split_stage_identity(dados.etapa_id)
+        if parsed is None:
+            raise HTTPException(status_code=422, detail="Identidade de etapa inválida.")
+        tipo_id, slug_id = parsed
+        if dados.item_type and dados.item_type != tipo_id:
+            raise HTTPException(status_code=422, detail="Tipo e identidade da etapa não conferem.")
+        if canonical_stage_slug(tipo_id, dados.item_slug) != slug_id:
+            raise HTTPException(status_code=422, detail="Slug e identidade da etapa não conferem.")
+        identidade_solicitada = stage_identity(tipo_id, slug_id)
+    elif dados.item_type:
+        if dados.item_type not in STAGE_TYPES:
+            raise HTTPException(status_code=422, detail="Tipo de etapa inválido.")
+        identidade_solicitada = stage_identity(dados.item_type, dados.item_slug)
+
+    if identidade_solicitada is None:
+        slug_legado = canonical_study_slug(dados.item_slug)
+        candidatas = [
+            etapa for etapa in etapas
+            if canonical_stage_slug(
+                str(etapa.get("item_type") or ""), str(etapa.get("item_slug") or "")
+            ) == slug_legado
+        ]
+        if len(candidatas) > 1:
+            raise HTTPException(
+                status_code=422,
+                detail="Este slug identifica mais de uma etapa; informe item_type ou etapa_id.",
+            )
+    else:
+        candidatas = [
+            etapa for etapa in etapas
+            if stage_identity(
+                str(etapa.get("item_type") or ""), str(etapa.get("item_slug") or "")
+            ) == identidade_solicitada
+        ]
+
+    if len(candidatas) != 1:
+        raise HTTPException(status_code=422, detail="Esta etapa não pertence à trilha.")
+    etapa = candidatas[0]
+    return etapa, stage_identity(etapa.get("item_type"), etapa.get("item_slug"))
 
 
 @router.post("/{slug}/progresso")
 def marcar(slug: str, dados: MarcarEtapa,
            db: Session = Depends(get_db), user: User = Depends(current_user)):
     t = db.query(StudyTrack).filter(
-        StudyTrack.slug == slug, StudyTrack.published.is_(True)
+        StudyTrack.slug == slug,
+        StudyTrack.published.is_(True),
+        StudyTrack.review_status == "revisado",
     ).first()
     if t is None:
         raise HTTPException(status_code=404, detail="Trilha não encontrada.")
-    validos = {e.get("item_slug") for e in (t.etapas or [])}
-    item_slug = canonical_study_slug(dados.item_slug)
-    if item_slug not in validos:
-        raise HTTPException(status_code=422, detail="Esta etapa não pertence à trilha.")
+    etapa, etapa_id = _resolver_etapa(t, dados)
+    if dados.concluida and not _disponivel(db, etapa.get("item_type"), etapa.get("item_slug")):
+        raise HTTPException(
+            status_code=409,
+            detail="Esta etapa ainda não está publicada e não pode ser concluída.",
+        )
 
-    prog = _progresso(db, user.id, t)
+    # A linha de progresso pode ainda nao existir. Bloquear a propria linha nao
+    # resolveria a corrida entre dois INSERTs; a linha estavel do usuario
+    # serializa as escritas desse usuario antes de consultar/criar o progresso.
+    db.query(User).filter(User.id == user.id).with_for_update().one()
+    prog = _progresso(db, user.id, t, lock=True)
     if prog is None:
+        if not dados.concluida:
+            db.commit()  # libera o lock sem criar uma linha vazia de progresso
+            return _dump(db, t, None)
         prog = StudyTrackProgress(user_id=user.id, track_id=t.id, concluidas=[])
         db.add(prog)
 
-    feitas = set(canonicalize_study_slugs(prog.concluidas))
-    feitas.add(item_slug) if dados.concluida else feitas.discard(item_slug)
+    validos = {
+        stage_identity(etapa_atual.get("item_type"), etapa_atual.get("item_slug"))
+        for etapa_atual in (t.etapas or [])
+    }
+    feitas = set(expand_legacy_progress_tokens(prog.concluidas, t.etapas or []))
+    concluida_antes = bool(validos) and feitas >= validos
+    feitas.add(etapa_id) if dados.concluida else feitas.discard(etapa_id)
     prog.concluidas = sorted(feitas)
-    # A trilha se conclui sozinha quando a última etapa é marcada — não há botão
-    # de "finalizar", porque a conclusão é consequência e não decisão.
-    prog.concluida_em = datetime.now(timezone.utc) if feitas >= validos else None
+    concluida_agora = bool(validos) and feitas >= validos
+    # ``concluida_em`` passa a ser o primeiro termino historico. Desmarcar ou
+    # editar a trilha muda o estado atual calculado por ``_dump``, sem apagar a
+    # informacao de que ela ja foi concluida. Repetir o mesmo PUT semantico via
+    # POST permanece idempotente e nao reescreve o instante.
+    if concluida_agora and not concluida_antes and prog.concluida_em is None:
+        prog.concluida_em = datetime.now(timezone.utc)
     db.commit()
     return _dump(db, t, prog)

@@ -72,7 +72,7 @@ function Brand() {
 }
 
 function Doors({ items, activeIndex = 1 }: { items: Array<[CardiologySpaceSceneId, string]>; activeIndex?: number }) {
-  return <div className="cst-doors">{items.map(([id, label], index) => <span className={index === activeIndex ? "is-active" : ""} key={id}><b>{label}</b><i><CardiologySpaceScene space={id} /></i></span>)}</div>;
+  return <div className="cst-doors">{items.map(([id, label], index) => <span className={index === activeIndex ? "is-active" : ""} key={id}><b>{label}</b><i><CardiologySpaceScene space={id} priority={index === activeIndex} /></i></span>)}</div>;
 }
 
 function TourVisual({ type }: { type: Visual }) {
@@ -94,7 +94,15 @@ export default function CardiologySpacesTour() {
   const [finishing, setFinishing] = useState(false);
   const total = STEPS.length + 2;
   const requested = params.get("retorno") || "/";
-  const destination = requested.startsWith("/") && !requested.startsWith("//") ? requested : "/";
+  const destination = (() => {
+    try {
+      const resolved = new URL(requested, window.location.origin);
+      if (resolved.origin !== window.location.origin) return "/";
+      return `${resolved.pathname}${resolved.search}${resolved.hash}`;
+    } catch {
+      return "/";
+    }
+  })();
   const next = useCallback(() => setStep((current) => Math.min(current + 1, total - 1)), [total]);
   const back = useCallback(() => setStep((current) => Math.max(current - 1, 0)), []);
   const manual = !usuario?.onboarding_pendente && !usuario?.investidor;

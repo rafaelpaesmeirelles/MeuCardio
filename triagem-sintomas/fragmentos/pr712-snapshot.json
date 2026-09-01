@@ -4907,6 +4907,35 @@
         }
       },
       {
+        "id": "palidez-frieza-com-pulso-presente",
+        "priority": 89,
+        "when": {
+          "all": [
+            {
+              "field": "limb_pallor_or_coldness",
+              "op": "truthy"
+            },
+            {
+              "field": "distal_pulse_absent_or_reduced",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Palidez ou frieza do membro após acesso vascular continua sendo sinal de possível comprometimento da perfusão mesmo quando o pulso distal é palpável"
+          ],
+          "suggested_tests": [
+            "Reavaliação neurovascular seriada com comparação bilateral",
+            "Ultrassom Doppler e avaliação vascular urgente conforme disponibilidade e protocolo local"
+          ],
+          "messages": [
+            "Pulso distal palpável não torna palidez ou frieza pós-procedimento um achado benigno; a perfusão deve ser reavaliada com urgência"
+          ]
+        }
+      },
+      {
         "id": "pulso-distal-ausente-ou-reduzido-isolado",
         "priority": 88,
         "when": {
@@ -5138,7 +5167,7 @@
       "Síndrome compartimental secundária a hematoma ou isquemia prolongada"
     ],
     "red_flags": [
-      "Palidez, frieza e pulso distal ausente ou reduzido — isquemia aguda de membro",
+      "Palidez ou frieza do membro distal após acesso, mesmo com pulso presente — possível comprometimento da perfusão e necessidade de avaliação vascular urgente",
       "Perda sensitiva ou motora nova no membro distal ao acesso",
       "Dor desproporcional ao exame local",
       "Hematoma expansivo/pulsátil ou sangramento ativo não controlado por compressão",
@@ -5155,7 +5184,7 @@
     ],
     "emergency_flow": [
       "Avaliar ABC, sinais vitais e perfusão distal imediatamente",
-      "Acionar avaliação vascular de urgência diante de palidez/frieza associada a pulso distal ausente/reduzido, dor desproporcional isolada ou déficit sensitivo-motor novo — risco de perda de membro",
+      "Acionar avaliação vascular de urgência diante de palidez/frieza, mesmo com pulso distal presente, diante de dor desproporcional isolada ou déficit sensitivo-motor novo — risco de comprometimento de perfusão e perda de membro",
       "Suspeitar de sangramento retroperitoneal diante de dor lombar/abdominal nova e hipotensão após acesso femoral; POCUS abdominal normal não exclui — considerar TC contrastada conforme estabilidade",
       "Controlar hematoma expansivo/sangramento ativo com compressão direcionada e acionar equipe vascular/intervencionista; não atrasar o controle da fonte esperando exame de imagem extenso",
       "Não atribuir hipotensão pós-procedimento apenas a causa cardíaca sem excluir sangramento local ou retroperitoneal"
@@ -5188,8 +5217,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/30543806/",
       "https://pubmed.ncbi.nlm.nih.gov/42132883/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Registro novo de triagem de sintomas construído a partir de três documentos já publicados e verificados desta base (oclusão de artéria radial pós-cateterismo/hemostasia patente, acesso vascular large-bore em tMCS, marca-passo temporário transvenoso) e de conteúdo corroborante em complicações da bomba microaxial (sangramento retroperitoneal e isquemia de membro em acesso femoral). PMIDs centrais reconferidos via NCBI E-utilities em 29/08/2026. Nenhuma dose de fármaco incluída em nenhum campo. Aguarda revisão médica e aval de publicação do responsável.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Registro novo de triagem de sintomas construído a partir de três documentos já publicados e verificados desta base (oclusão de artéria radial pós-cateterismo/hemostasia patente, acesso vascular large-bore em tMCS, marca-passo temporário transvenoso) e de conteúdo corroborante em complicações da bomba microaxial (sangramento retroperitoneal e isquemia de membro em acesso femoral). PMIDs centrais reconferidos via NCBI E-utilities em 29/08/2026. Revisão científica independente concluída em 2026-09-01: perguntas, prioridades, red flags, condutas e referências conferidas; palidez ou frieza pós-acesso permanece classificada como urgente mesmo com pulso distal palpável. Nenhuma dose de fármaco incluída em nenhum campo. Limite: triagem organiza risco e encaminhamento, não confirma diagnóstico nem substitui avaliação presencial ou protocolo local.",
+    "version": 1,
+    "published": true
   }
 ]

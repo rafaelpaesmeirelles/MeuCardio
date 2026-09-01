@@ -11,12 +11,13 @@ Cobre:
 6. a rota `/timeline` não é engolida pelo catch-all `/{slug}` da trilha.
 """
 
-from sqlalchemy import text
+from sqlalchemy import event, text
 
 from app.models.content import Document
 from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.timeline_conhecimento import montar_timeline
 
 TEMA = "Insuficiência cardíaca"
 
@@ -90,6 +91,25 @@ def test_item_nao_publicado_nunca_aparece(client, db, criar_usuario):
     assert body["marcos"] == []
 
 
+def test_flag_publicado_sem_revisao_nao_abre_conteudo_cientifico(client, db, criar_usuario):
+    _limpar(db)
+    db.add(EvidenceRecord(
+        slug="ic-ev-publicada-por-engano", statement="Recomendação ainda sem revisão.",
+        recommendation_class="I", evidence_level="A", society="ESC", year=2024,
+        guideline_title="Rascunho", reference="ref", theme=TEMA,
+        review_status="pendente_revisao", published=True,
+    ))
+    db.commit()
+
+    headers = _headers(criar_usuario)
+    timeline = client.get(f"/api/trilhas/timeline?tema={TEMA}", headers=headers)
+    topics = client.get("/api/trilhas/timeline/temas", headers=headers)
+
+    assert timeline.status_code == 200
+    assert timeline.json()["marcos"] == []
+    assert not any(item["tema"] == TEMA for item in topics.json())
+
+
 def test_documento_relacionado_so_quando_publicado(client, db, criar_usuario):
     _limpar(db)
     db.add(Document(
@@ -123,6 +143,40 @@ def test_documento_relacionado_so_quando_publicado(client, db, criar_usuario):
         "slug": "ic-doc-origem", "titulo": "Manejo da IC crônica", "rota": "/biblioteca/ic-doc-origem",
     }
     assert por_slug["ic-ev-doc-nao-publicado"]["documento"] is None
+
+
+def test_documentos_relacionados_sao_buscados_em_lote(db):
+    _limpar(db)
+    for index in range(3):
+        doc_slug = f"ic-doc-lote-{index}"
+        db.add(Document(
+            slug=doc_slug, title=f"Documento {index}", kind="modulo", theme=TEMA,
+            body_md="conteúdo", review_status="revisado", published=True,
+        ))
+        db.add(EvidenceRecord(
+            slug=f"ic-ev-lote-{index}", statement=f"Recomendação {index}.",
+            recommendation_class="I", evidence_level="A", society="ESC",
+            year=2020 + index, guideline_title=f"ESC {2020 + index}",
+            reference="ref", theme=TEMA, document_slug=doc_slug,
+            review_status="revisado", published=True,
+        ))
+    db.commit()
+
+    document_selects: list[str] = []
+
+    def capture(_conn, _cursor, statement, _parameters, _context, _executemany):
+        normalized = " ".join(statement.lower().split())
+        if normalized.startswith("select") and " from documents" in normalized:
+            document_selects.append(statement)
+
+    event.listen(db.bind, "before_cursor_execute", capture)
+    try:
+        timeline = montar_timeline(db, TEMA)
+    finally:
+        event.remove(db.bind, "before_cursor_execute", capture)
+
+    assert timeline["total"] == 3
+    assert len(document_selects) == 1
 
 
 def test_tema_sem_marco_devolve_lista_vazia_sem_erro(client, db, criar_usuario):

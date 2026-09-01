@@ -17,7 +17,17 @@ const Ctx = createContext<Estado | null>(null);
 async function mensagemLogin(res: Response): Promise<string> {
   const body = await res.json().catch(() => null);
   const detail = body?.detail;
-  return typeof detail === "string" && detail.trim() ? detail : "E-mail ou senha incorretos.";
+  const detailText = typeof detail === "string" && detail.trim() ? detail.trim() : "";
+  if (res.status === 401 || res.status === 403) {
+    return detailText || "E-mail ou senha incorretos.";
+  }
+  if (res.status === 429) {
+    return "Muitas tentativas de acesso. Aguarde alguns instantes e tente novamente.";
+  }
+  if (res.status >= 500) {
+    return "O acesso ao CorVIA está temporariamente indisponível. Tente novamente em instantes.";
+  }
+  return detailText || "Não foi possível concluir o acesso. Revise os dados e tente novamente.";
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -38,13 +48,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       password: senha,
       permanecer_conectado: String(permanecerConectado),
     });
-    const res = await fetch(`${BASE}/auth/sessao`, {
-      method: "POST",
-      credentials: "include",
-      cache: "no-store",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: form,
-    });
+    let res: Response;
+    try {
+      res = await fetch(`${BASE}/auth/sessao`, {
+        method: "POST",
+        credentials: "include",
+        cache: "no-store",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: form,
+      });
+    } catch {
+      throw new Error("Não foi possível conectar ao CorVIA. Verifique sua conexão e tente novamente.");
+    }
     if (!res.ok) throw new Error(await mensagemLogin(res));
 
     // Não recarregue o documento depois do login. Em Safari/Chrome no iOS, uma

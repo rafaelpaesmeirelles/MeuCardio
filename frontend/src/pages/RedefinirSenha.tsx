@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Icone from "../components/Icone";
-import PreHomeBrand from "../components/PreHomeBrand";
 import CampoSenha from "../components/CampoSenha";
+import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/login.css";
 
 const BENEFICIOS = [
@@ -54,18 +54,21 @@ export default function RedefinirSenha() {
   );
 
   return (
-    <main className="login prehome prehome--recovery">
-      <PreHomeBrand title={<>Redefina sua senha com <strong>segurança</strong></>} description={<>Crie uma nova senha exclusiva para retomar o acesso ao seu Clinical Command Center.</>} benefits={BENEFICIOS} />
-      <section className="prehome-access" aria-labelledby="reset-titulo">
-        <div className="prehome-card">
+    <PublicCardiologyFrame
+      eyebrow="Novo ciclo de acesso"
+      title={<>Uma nova senha. O mesmo contexto <strong>preservado.</strong></>}
+      description={<p>Conclua a recuperação por um elo temporário e volte ao Cardiology Spaces sem reconstruir o seu ambiente.</p>}
+      features={BENEFICIOS}
+      variant="form"
+      tone="violet"
+    >
+      <div className="prehome-card">
           {token && !feito && <div className="prehome-status-chip"><Icone nome="check" /> Link de recuperação recebido</div>}
           <header className="prehome-card__header" style={{ textAlign: "center" }}><h2 id="reset-titulo">{alvo === "email" ? "Definir nova senha do CorVIA Mail" : "Definir nova senha"}</h2><p style={{ marginLeft: "auto", marginRight: "auto" }}>Crie uma senha forte e exclusiva para acessar o Cardiology Spaces.</p></header>
           {conteudo}
           {!feito && token && <div className="prehome-card__actions"><div className="prehome-divider">ou</div><Link to="/entrar" className="prehome-secondary">← Voltar ao login</Link></div>}
           <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>
-        </div>
-        <nav className="prehome-legal" aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
-      </section>
-    </main>
+      </div>
+    </PublicCardiologyFrame>
   );
 }

@@ -1,23 +1,28 @@
 import { Link } from "react-router-dom";
+import LegalDocumentFrame from "../components/LegalDocumentFrame";
 import "../styles/legal.css";
 
 const EMAIL_EXCLUSAO = "contato@corvia.med.br";
 const ASSUNTO = "Solicitação de exclusão de conta CorVIA";
 const CORPO = "Olá, solicito a exclusão da minha conta CorVIA e dos dados pessoais associados. Meu e-mail cadastrado é: ";
 const MAILTO = `mailto:${EMAIL_EXCLUSAO}?subject=${encodeURIComponent(ASSUNTO)}&body=${encodeURIComponent(CORPO)}`;
+const EXCLUSAO_FEATURES = [
+  { icon: "conta" as const, title: "Solicitação pelo titular", detail: "A identidade é confirmada antes de qualquer exclusão de dados.", tone: "pink" as const },
+  { icon: "check" as const, title: "Escopo transparente", detail: "A página separa o que é eliminado do que a lei pode exigir preservar.", tone: "green" as const },
+  { icon: "mail" as const, title: "Canal rastreável", detail: "O pedido começa pelo mesmo endereço vinculado à conta.", tone: "blue" as const },
+];
 
 export default function ExcluirConta() {
   return (
-    <main className="legal-page" id="conteudo-principal">
-      <header>
-        <Link to="/" aria-label="Voltar ao CorVIA">
-          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
-        </Link>
-        <p className="eyebrow">Conta e privacidade</p>
-        <h1>Solicitar exclusão da conta CorVIA</h1>
-        <p>Última atualização: 28 de agosto de 2026.</p>
-      </header>
-
+    <LegalDocumentFrame
+      eyebrow="Conta e privacidade"
+      title="Solicitar exclusão da conta CorVIA"
+      description={<p>Um fluxo direto, verificável e consciente para encerrar o vínculo, com transparência sobre identidade, retenção legal e confirmação.</p>}
+      updated="28 de agosto de 2026"
+      features={EXCLUSAO_FEATURES}
+      tone="pink"
+      footer={<><Link to="/privacidade">Política de Privacidade</Link><Link to="/termos">Termos de Uso</Link><Link to="/">Voltar ao CorVIA</Link></>}
+    >
       <section>
         <h2>Como solicitar</h2>
         <p>
@@ -71,11 +76,6 @@ export default function ExcluirConta() {
         </p>
       </section>
 
-      <footer>
-        <Link to="/privacidade">Política de Privacidade</Link>
-        <Link to="/termos">Termos de Uso</Link>
-        <Link to="/">Voltar ao CorVIA</Link>
-      </footer>
-    </main>
+    </LegalDocumentFrame>
   );
 }

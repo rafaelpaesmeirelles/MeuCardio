@@ -4,6 +4,7 @@ import { api } from "../lib/api";
 import GrafoRelacionados from "../components/GrafoRelacionados";
 
 type Etapa = {
+  etapa_id: string;
   ordem: number;
   item_type: string;
   item_slug: string;
@@ -22,6 +23,8 @@ type Detalhe = {
   total_etapas: number;
   concluidas: number;
   finalizada_em: string | null;
+  concluida_atualmente: boolean;
+  conclusao_historica_em: string | null;
   etapas: Etapa[];
   etapas_indisponiveis: number;
 };
@@ -57,11 +60,13 @@ export default function Trilha() {
 
   async function alternar(e: Etapa) {
     if (salvandoEtapa) return;
-    setSalvandoEtapa(e.item_slug);
+    setSalvandoEtapa(e.etapa_id);
     setErro("");
     const slugSolicitado = slug;
     try {
       const r = await api.post<Detalhe>(`/trilhas/${slug}/progresso`, {
+        etapa_id: e.etapa_id,
+        item_type: e.item_type,
         item_slug: e.item_slug,
         concluida: !e.concluida,
       });
@@ -97,7 +102,7 @@ export default function Trilha() {
         <span className="trilha__barra trilha__barra--larga">
           <span style={{ width: `${pct}%` }} />
         </span>
-        {d.finalizada_em && <span className="trilha__concluida">concluída</span>}
+        {d.concluida_atualmente && <span className="trilha__concluida">concluída</span>}
       </div>
 
       {d.etapas_indisponiveis > 0 && (
@@ -111,7 +116,7 @@ export default function Trilha() {
       <ol className="trilha__etapas">
         {d.etapas.map((e) => (
           <li
-            key={e.item_slug}
+            key={e.etapa_id}
             className={`trilha__etapa${e.concluida ? " trilha__etapa--ok" : ""}${
               e.disponivel ? "" : " trilha__etapa--indisponivel"
             }`}
@@ -119,8 +124,14 @@ export default function Trilha() {
             <button
               className="trilha__marcar"
               onClick={() => alternar(e)}
-              disabled={salvandoEtapa !== null}
-              aria-label={e.concluida ? "Desmarcar etapa" : "Marcar etapa como concluída"}
+              disabled={salvandoEtapa !== null || (!e.disponivel && !e.concluida)}
+              aria-label={
+                !e.disponivel && !e.concluida
+                  ? "Etapa indisponível enquanto o conteúdo está em revisão"
+                  : e.concluida
+                    ? "Desmarcar etapa"
+                    : "Marcar etapa como concluída"
+              }
             >
               {e.concluida ? "✓" : e.ordem}
             </button>

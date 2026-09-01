@@ -1,10 +1,10 @@
 """Casos clínicos interativos (Tarefa 11a).
 
 Um caso, uma pergunta, um conjunto de opções — e só depois de responder o
-médico vê a conduta correta e a evidência que a sustenta. A resposta certa
-nunca é omitida da carga (o front decide quando mostrar); o que fica gravado
-por médico é o histórico de tentativas, para Indicadores agregar taxa de
-acerto ao longo do tempo.
+médico vê a conduta correta e a evidência que a sustenta. A resposta certa e a
+explicação não fazem parte do GET inicial: escondê-las apenas no frontend
+permitiria descobri-las no JSON antes da tentativa. O que fica gravado por
+médico é o histórico de tentativas, para Indicadores agregar taxa de acerto.
 """
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -114,7 +114,6 @@ def detalhe(slug: str, db: Session = Depends(get_db), user: User = Depends(curre
     return {
         "slug": c.slug, "titulo": c.titulo, "tema": c.tema, "nivel": c.nivel,
         "enunciado": c.enunciado, "pergunta": c.pergunta, "opcoes": c.opcoes,
-        "resposta_correta": c.resposta_correta, "explicacao": c.explicacao,
         "source_refs": c.source_refs,
         **_resumo_tentativas(db, user.id, c.id),
     }

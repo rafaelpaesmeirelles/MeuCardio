@@ -22,6 +22,11 @@ const buscaTudoComTudoSomenteOnline = /(?:^|\/)Busca-[^/]*\.js$/;
 // chunks não os torna utilizáveis offline; eles permanecem disponíveis pelo
 // cache NetworkFirst de assets quando acessados.
 const conteudoConectadoSomenteOnline = /(?:^|\/)(?:ChecklistModelo|ChecklistAlta|MaterialPaciente|MaterialPacienteDetalhe|Trilha)-[^/]*\.js$/;
+// Agenda, prontuário, prescrição e round dependem de sessão, dados clínicos
+// atuais e APIs transacionais. Manter seus chunks no precache não cria um modo
+// offline seguro e ainda pode exibir informação clínica desatualizada. Eles
+// continuam cobertos pelo cache NetworkFirst de assets depois do primeiro uso.
+const operacaoClinicaSomenteOnline = /(?:^|\/)(?:Agenda|Prontuario|Receituario|RoundGerenciavel)-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -73,6 +78,7 @@ export default defineConfig({
               if (analiseCardiovascularSomenteOnline.test(entry.url)) return false;
               if (buscaTudoComTudoSomenteOnline.test(entry.url)) return false;
               if (conteudoConectadoSomenteOnline.test(entry.url)) return false;
+              if (operacaoClinicaSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
@@ -83,6 +89,23 @@ export default defineConfig({
         ],
         navigateFallback: "index.html",
         runtimeCaching: [
+          {
+            // As cenas dos cinco ambientes são parte do shell visual, mas ficam
+            // fora de /assets porque são servidas a partir de public/. Guarde as
+            // variantes otimizadas depois do primeiro acesso para que Home e
+            // AppFrame não percam sua identidade quando o PWA ficar offline.
+            // StaleWhileRevalidate preserva o fallback e atualiza URLs estáveis
+            // quando uma release futura substituir a arte da mesma cena.
+            urlPattern: ({ url }) =>
+              url.origin === self.location.origin
+              && /^\/spaces\/[^/]+\.(?:webp|jpg)$/.test(url.pathname),
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "corvia-space-scenes-v1",
+              expiration: { maxEntries: 15, maxAgeSeconds: 60 * 60 * 24 * 60 },
+              cacheableResponse: { statuses: [200] }
+            }
+          },
           {
             urlPattern: ({ request, url }) => request.mode === "navigate" && !url.pathname.startsWith("/api/"),
             handler: "NetworkFirst",

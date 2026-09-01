@@ -5005,6 +5005,22 @@
             {
               "field": "fever",
               "op": "truthy"
+            },
+            {
+              "field": "wound_dehiscence",
+              "op": "truthy"
+            },
+            {
+              "field": "sepsis_signs",
+              "op": "truthy"
+            },
+            {
+              "field": "positive_blood_cultures",
+              "op": "truthy"
+            },
+            {
+              "field": "vegetation_on_lead_echo",
+              "op": "truthy"
             }
           ]
         },
@@ -5052,6 +5068,14 @@
             },
             {
               "field": "sepsis_signs",
+              "op": "truthy"
+            },
+            {
+              "field": "positive_blood_cultures",
+              "op": "truthy"
+            },
+            {
+              "field": "vegetation_on_lead_echo",
               "op": "truthy"
             }
           ]
@@ -5123,8 +5147,9 @@
       "https://pubmed.ncbi.nlm.nih.gov/30883056/",
       "https://pubmed.ncbi.nlm.nih.gov/25926473/"
     ],
-    "review_status": "pendente_revisao",
-    "review_note": "Registro novo, criado em 29/08/2026 a partir do Scientific Statement AHA 2024 sobre infecção de CIED (PMID 38047353), do consenso HRS 2017 de manejo e extração de eletrodo (PMID 28919379), do ensaio WRAP-IT (PMID 30883056) e da meta-análise de fatores de risco de infecção de CIED (PMID 25926473). Os quatro PMIDs foram conferidos individualmente via NCBI E-utilities (esummary) nesta sessão, contra título, revista, volume/página e DOI. Nenhuma dose de fármaco incluída em nenhum campo. Pendente revisão médica humana independente antes de uso assistencial.",
-    "version": 1
+    "review_status": "revisado",
+    "review_note": "Registro novo, criado em 29/08/2026 a partir do Scientific Statement AHA 2024 sobre infecção de CIED (PMID 38047353), do consenso HRS 2017 de manejo e extração de eletrodo (PMID 28919379), do ensaio WRAP-IT (PMID 30883056) e da meta-análise de fatores de risco de infecção de CIED (PMID 25926473). Os quatro PMIDs foram conferidos individualmente via NCBI E-utilities (esummary), contra título, revista, volume/página e DOI. Revisão científica independente concluída em 2026-09-01: perguntas, prioridades, red flags, condutas e referências conferidas; regras de hematoma e eritema pós-procedimento foram protegidas contra mensagens tranquilizadoras quando coexistirem sinais locais ou sistêmicos de maior risco. Nenhuma dose de fármaco incluída em nenhum campo. Limite: triagem organiza risco e encaminhamento, não confirma diagnóstico nem substitui avaliação presencial ou protocolo local.",
+    "version": 1,
+    "published": true
   }
 ]

@@ -5,6 +5,7 @@ on:
     paths:
       - "frontend/src/App.tsx"
       - "frontend/src/components/ClinicalRouteContext.tsx"
+      - "frontend/src/lib/clinicalRouteRegistry.ts"
       - "frontend/src/styles/cardiology-spaces-*.css"
       - "frontend/scripts/check-cardiology-spaces-route-coverage.mjs"
       - "frontend/package.json"
@@ -14,6 +15,7 @@ on:
     paths:
       - "frontend/src/App.tsx"
       - "frontend/src/components/ClinicalRouteContext.tsx"
+      - "frontend/src/lib/clinicalRouteRegistry.ts"
       - "frontend/src/styles/cardiology-spaces-*.css"
       - "frontend/scripts/check-cardiology-spaces-route-coverage.mjs"
       - "frontend/package.json"

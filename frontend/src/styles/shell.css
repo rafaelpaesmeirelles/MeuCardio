@@ -932,6 +932,80 @@
   border: 0 !important;
 }
 
+/* CorvIA Chat: uma cápsula de conversa, visualmente distinta do botão circular
+   vermelho de Emergência. Mantém o serviço entre assinantes sempre acessível
+   sem criar dois sinais de urgência concorrentes no mesmo canto da tela. */
+.corvia-chat-launch {
+  position: fixed;
+  right: 18px;
+  bottom: 78px;
+  z-index: 1200;
+  display: inline-flex;
+  min-width: 94px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px 0 11px;
+  color: #dceff3;
+  background: linear-gradient(135deg, rgba(8, 34, 51, 0.98), rgba(6, 27, 43, 0.98));
+  border: 1px solid rgba(43, 216, 225, 0.34);
+  border-radius: 999px;
+  box-shadow: 0 0 0 5px rgba(43, 216, 225, 0.035), 0 14px 34px rgba(0, 8, 18, 0.46);
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+.corvia-chat-launch:hover {
+  border-color: rgba(43, 216, 225, 0.62);
+  box-shadow: 0 0 0 5px rgba(43, 216, 225, 0.055), 0 16px 38px rgba(0, 8, 18, 0.55);
+  transform: translateY(-1px);
+}
+.corvia-chat-launch:focus-visible {
+  outline: 2px solid #67e7ed;
+  outline-offset: 3px;
+}
+.corvia-chat-launch__label {
+  color: #cdeef1;
+  font-size: 0.68rem;
+  font-weight: 720;
+  letter-spacing: 0.04em;
+}
+.corvia-chat-launch__badge {
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  display: flex;
+  min-width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  color: #fff;
+  background: #d5001d;
+  border: 2px solid #071723;
+  border-radius: 10px;
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .corvia-chat-launch {
+    right: 66px;
+    bottom: 82px;
+    min-width: 86px;
+    height: 40px;
+    padding-inline: 10px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .corvia-chat-launch { transition: none; }
+}
+
+@media print {
+  .corvia-chat-launch { display: none !important; }
+}
+
 /* ========================================================================
    CORVIA CLINICAL WORKSPACE — shell premium
    Mantido ao fim do arquivo para sobrepor, sem quebrar, módulos legados que

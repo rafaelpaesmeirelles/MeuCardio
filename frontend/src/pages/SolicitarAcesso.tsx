@@ -2,8 +2,8 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Icone from "../components/Icone";
-import PreHomeBrand from "../components/PreHomeBrand";
 import CampoSenha from "../components/CampoSenha";
+import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/login.css";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
@@ -88,15 +88,14 @@ export default function SolicitarAcesso() {
   if (resposta) return <TelaConfirmacao acessoImediato={resposta.acesso_imediato === true} />;
 
   return (
-    <main className="login prehome prehome--register">
-      <PreHomeBrand
-        title={<>Bem-vindo ao <strong>CorVIA</strong></>}
-        description={<>Crie seu acesso ao Clinical Command Center sem abrir mão dos dados profissionais já necessários ao fluxo real.</>}
-        benefits={BENEFICIOS}
-      />
-
-      <section className="prehome-access" aria-labelledby="cadastro-titulo">
-        <div className="prehome-card prehome-card--register">
+    <PublicCardiologyFrame
+      eyebrow="Identidade profissional"
+      title={<>Seu acesso aos cinco espaços começa <strong>aqui.</strong></>}
+      description={<p>Um cadastro único conecta Consultório, Hospital, Ensino, Pesquisa e Gestão sem romper a proteção dos seus dados profissionais.</p>}
+      features={BENEFICIOS}
+      variant="form"
+    >
+      <div className="prehome-card prehome-card--register">
           <div className="prehome-steps" aria-label="Etapas do primeiro acesso">
             <span className="prehome-step prehome-step--active"><i>1</i>Identificação</span>
             <span className="prehome-step"><i>2</i>Segurança</span>
@@ -240,26 +239,22 @@ export default function SolicitarAcesso() {
             <Link to="/entrar" className="prehome-secondary"><Icone nome="conta" /> Já tenho conta</Link>
           </div>
           <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>
-        </div>
-        <nav className="prehome-legal" aria-label="Links institucionais">
-          <Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a>
-        </nav>
-      </section>
-    </main>
+      </div>
+    </PublicCardiologyFrame>
   );
 }
 
 function TelaConfirmacao({ acessoImediato }: { acessoImediato: boolean }) {
   return (
-    <main className="login prehome prehome--register prehome--status">
-      <PreHomeBrand
-        title={acessoImediato ? <>Acesso <strong>liberado</strong></> : <>Solicitação <strong>recebida</strong></>}
-        description={acessoImediato ? <>Sua conta profissional está pronta para entrar no Clinical Command Center.</> : <>Seu cadastro foi recebido e seguirá o fluxo de conferência profissional.</>}
-        benefits={BENEFICIOS}
-        celebratory={acessoImediato}
-      />
-      <section className="prehome-access" aria-labelledby="confirmacao-titulo">
-        <div className="prehome-card">
+    <PublicCardiologyFrame
+      eyebrow={acessoImediato ? "Conta aprovada" : "Fluxo de acesso"}
+      title={acessoImediato ? <>Acesso <strong>liberado.</strong></> : <>Solicitação <strong>recebida.</strong></>}
+      description={<p>{acessoImediato ? "Sua identidade profissional está pronta para entrar no Cardiology Spaces." : "Seu cadastro seguirá a conferência profissional com o canal de recuperação já protegido."}</p>}
+      features={BENEFICIOS}
+      variant="form"
+      tone={acessoImediato ? "cyan" : "violet"}
+    >
+      <div className="prehome-card">
           <div className="prehome-confirmation">
             <div className={`prehome-confirmation__icon${acessoImediato ? "" : " prehome-confirmation__icon--pending"}`}>
               <Icone nome={acessoImediato ? "check" : "relogio"} aria-hidden="true" />
@@ -275,8 +270,7 @@ function TelaConfirmacao({ acessoImediato }: { acessoImediato: boolean }) {
             <Link to="/entrar" className="prehome-primary"><span>{acessoImediato ? "Entrar no CorVIA" : "Voltar ao login"}</span><Icone nome="seta" /></Link>
           </div>
           <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>
-        </div>
-      </section>
-    </main>
+      </div>
+    </PublicCardiologyFrame>
   );
 }

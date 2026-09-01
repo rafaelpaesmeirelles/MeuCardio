@@ -29,6 +29,7 @@ import frontmatter
 from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.content import Document, DocumentRevision
+from app.services.scientific_loader_safety import enforce_safe_publication
 
 
 # Fontes que não sustentam conteúdo clínico neste produto: site comercial de
@@ -184,6 +185,7 @@ def import_directory(path: str | None = None) -> dict:
                 vistos_neste_lote[slug] = str(md.relative_to(root))
 
                 doc = db.query(Document).filter(Document.slug == slug).first()
+                is_new = doc is None
                 corpo_mudou = doc is None or doc.body_md != body
                 if doc:
                     # Só o corpo gera revisão e sobe a versão. O front matter é
@@ -235,6 +237,7 @@ def import_directory(path: str | None = None) -> dict:
                 # `pendente_revisao`. O sistema afirmava ao assinante uma revisão
                 # que ninguém tinha feito.
                 doc.review_status = meta.get("review_status", "pendente_revisao")
+                enforce_safe_publication(doc, dict(meta), is_new=is_new)
 
                 # Commit por arquivo: um documento com problema não pode derrubar
                 # os outros 153 que estão corretos.

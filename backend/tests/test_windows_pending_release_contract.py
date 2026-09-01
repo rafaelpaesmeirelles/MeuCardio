@@ -45,6 +45,37 @@ def test_automatic_release_requires_web_android_but_not_windows_installer():
     assert '"Native installers"' not in certification
 
 
+def test_scientific_inventory_is_a_mandatory_exact_sha_release_gate():
+    inventory = _read(".github/workflows/corpus-inventory.yml")
+    dispatcher = _read(".github/workflows/release-final-dispatch.yml")
+    deploy = _read(".github/workflows/deploy-production.yml")
+    certification = _read("backend/app/services/release_certification.py")
+
+    assert "workflow_dispatch:" in inventory
+    assert "gh workflow run corpus-inventory.yml" in dispatcher
+    assert "- Corpus inventory" in deploy
+    assert '"Corpus inventory": "workflow_dispatch"' in deploy
+    assert '"Corpus inventory",' in certification
+
+
+def test_automatic_deploy_deduplicates_only_after_a_prior_certified_run():
+    deploy = _read(".github/workflows/deploy-production.yml")
+    assert "prior-certified-deploy" in deploy
+    assert 'run.get("name") == "Deploy production"' in deploy
+    assert 'run.get("status") == "completed"' in deploy
+    assert 'run.get("conclusion") == "success"' in deploy
+    assert 'str(run.get("id")) != current_run_id' in deploy
+    assert 'actions/runs/${prior_run}/jobs?per_page=100' in deploy
+    assert '.name == "Deploy certified web and Android release"' in deploy
+    assert '.status == "completed"' in deploy
+    assert '.conclusion == "success"' in deploy
+    assert 'if [[ "$certified_jobs" =~ ^[1-9][0-9]*$ ]]' in deploy
+    assert 'if [[ -s "$prior_deploy_marker" ]]' in deploy
+    assert "already completed for $candidate; skipping duplicate deployment." in deploy
+    assert "production-version.json" not in deploy
+    assert deploy.index('if [[ -s "$prior_deploy_marker" ]]') < deploy.index('echo "ready=true"')
+
+
 def test_android_release_certificate_has_a_public_pinned_fallback():
     deploy = _read(".github/workflows/deploy-production.yml")
     match = re.search(
