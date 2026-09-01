@@ -41423,5 +41423,84 @@
       }
     ],
     "revisao": "Checklist extraído do fluxograma de alta hospitalar e titulação intensiva pós-alta (ESC 2023, STRONG-HF), já publicado. Itens fiéis aos nós de decisão, às condutas do diagrama e à tabela de indicadores de segurança do documento de origem. Pendente de revisão clínica final."
+  },
+  {
+    "slug": "hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo",
+    "condicao": "Hipertensão por alcaçuz (regaliz) — pseudohiperaldosteronismo",
+    "resumo": "Sequência de reconhecimento, diagnóstico diferencial laboratorial e manejo da hipertensão com hipopotassemia e alcalose metabólica induzida pelo ácido glicirrízico do alcaçuz/regaliz, que imita clinicamente o aldosteronismo primário mas cursa com renina e aldosterona plasmáticas suprimidas, não elevadas.",
+    "documento_origem": "hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sabbadin C, Bordin L, Donà G, Manso J, Avruscio G, Armanini D. Licorice: From Pseudohyperaldosteronism to Therapeutic Uses. Front Endocrinol (Lausanne). 2019;10:484. DOI: 10.3389/fendo.2019.00484. PMID: 31379750 — revisão narrativa, acesso aberto",
+      "McHugh J, Marzella J, Kane A, Islam N. A life-threatening case of pseudo-aldosteronism secondary to excessive liquorice ingestion. BMC Endocr Disord. 2021;21(1):158. DOI: 10.1186/s12902-021-00816-4. PMID: 34362360 — relato de caso, acesso aberto, com valores numéricos de potássio, pressão arterial e renina/aldosterona",
+      "Sabbadin C, Graziani A, Bavaresco A, Mazzeo P, Tizianel I, Ceccato F, Armanini D, Barbot M. Pseudohyperaldosteronism Due to Licorice: A Practice-Based Learning from a Case Series. Int J Mol Sci. 2024;25(13):7454. DOI: 10.3390/ijms25137454. PMID: 39000561 — série de casos, acesso aberto, com o ponto prático de manejo (retirada, reposição de potássio, antagonista do receptor mineralocorticoide)"
+    ],
+    "itens": [
+      {
+        "id": "has-suspeita-clinica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico suspeitado diante de hipertensão associada a hipopotassemia e alcalose metabólica, especialmente quando a hipopotassemia é refratária à reposição intravenosa e oral agressiva — quadro clinicamente indistinguível do aldosteronismo primário",
+        "origem_secao": "Por que este documento existe / Caso que ilustra a magnitude do quadro"
+      },
+      {
+        "id": "has-anamnese-dirigida-exposicao",
+        "categoria": "anamnese",
+        "obrigatorio": true,
+        "texto": "Anamnese dirigida perguntando especificamente sobre consumo de balas/doces de alcaçuz (mais concentrado nas variedades pretas/tradicionais europeias que nas balas vermelhas artificiais, que geralmente não contêm o extrato real), chás/infusões à base de Glycyrrhiza glabra, tabaco de mascar aromatizado e fitoterápicos — inclusive fórmulas de medicina tradicional chinesa contendo 'gan cao' (raiz de alcaçuz) — pois o paciente raramente relata esse consumo como relevante para a pressão",
+        "origem_secao": "Exposição — onde o alcaçuz se esconde"
+      },
+      {
+        "id": "has-renina-aldosterona-absolutas",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Solicitados os valores ABSOLUTOS de renina e aldosterona plasmáticas (não a relação aldosterona-renina, que não discrimina quando ambos os valores estão baixos) para diferenciar do aldosteronismo primário: no pseudohiperaldosteronismo por alcaçuz, renina e aldosterona estão AMBAS suprimidas; no aldosteronismo primário, a aldosterona está alta e a renina, suprimida",
+        "origem_secao": "Mecanismo — pseudohiperaldosteronismo, não hiperaldosteronismo verdadeiro"
+      },
+      {
+        "id": "has-potassio-urinario-apoio",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Potássio urinário considerado como dado de apoio diante de hipopotassemia refratária — elevação inapropriada frente à hipopotassemia sérica (no caso descrito, 22 mmol/L urinário com 2,2 mmol/L sérico) indica perda renal continuada, sinal de alerta de que a exposição segue ativa",
+        "origem_secao": "Caso que ilustra a magnitude do quadro"
+      },
+      {
+        "id": "has-suspensao-consumo",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Suspensão do consumo de alcaçuz/regaliz orientada como primeiro passo do manejo — costuma ser suficiente para reverter o quadro",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "has-reposicao-potassio-continuada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Reposição de potássio mantida mesmo após a suspensão, sabendo que o efeito mineralocorticoide aparente pode persistir por semanas — persistência de hipopotassemia nesse intervalo não significa que o diagnóstico estava errado nem que a suspensão falhou",
+        "origem_secao": "Manejo / Armadilhas clínicas"
+      },
+      {
+        "id": "has-espironolactona-casos-persistentes",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antagonista do receptor mineralocorticoide (espironolactona) considerado nos casos mais críticos ou persistentes, quando suspensão e reposição de potássio não são suficientes — bloqueia diretamente o receptor mineralocorticoide que o cortisol não oposto está ativando",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "has-crise-hipertensiva-manejo-padrao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Hipertensão grave ou crise hipertensiva no momento agudo manejada pelo protocolo padrão de emergência hipertensiva, com reposição de potássio concomitante, sem particularidade farmacológica adicional específica para a causa por alcaçuz",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "has-nao-repor-isoladamente-sem-investigar",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Reposição de potássio não realizada isoladamente e de forma agressiva sem investigar a causa em hipopotassemia inexplicada ou hipertensão resistente — a perda renal persiste enquanto a exposição ao alcaçuz continuar, e a reposição isolada não resolve nem evita a recorrência",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": "Checklist extraído e curado a partir do documento já publicado hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo.md. Itens rastreáveis por documento_origem, source_refs e origem_secao. Pendente de revisão clínica."
   }
 ]

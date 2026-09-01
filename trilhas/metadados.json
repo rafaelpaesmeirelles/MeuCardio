@@ -26925,5 +26925,75 @@
         "por_que": "Fecha a trilha consolidando o plano de alta — anticoagulante escolhido, monitorização e retorno — agora ajustado às particularidades do paciente sob terapia antineoplásica."
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica",
+    "titulo": "Doença coronariana: troponina ultrassensível e o diagnóstico diferencial da dor torácica na emergência",
+    "tema": "Doença coronariana",
+    "objetivo": "Construir o raciocínio da dor torácica aguda no pronto-socorro até a decisão terapêutica: estratificar risco com o escore HEART, aplicar o algoritmo 0h/1h de troponina de alta sensibilidade, reconhecer o ECG de alto risco (Wellens) e diferenciar infarto tipo 1 de infarto tipo 2 e de lesão miocárdica não isquêmica, evitando tanto a alta indevida quanto o rótulo equivocado de síndrome coronariana aguda.",
+    "nivel": "intermediario",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dor-toracica-aguda-primeira-hora-no-pronto-socorro",
+        "por_que": "Ponto de partida: a abordagem sistemática da dor torácica aguda na primeira hora, antes de qualquer resultado de exame, define a via que o paciente vai seguir."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "heart",
+        "por_que": "O escore HEART formaliza a estratificação de risco inicial (história, ECG, idade, fatores de risco, troponina) que orienta a decisão entre alta precoce e investigação seriada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+        "por_que": "O protocolo SBC 2025 integra o escore HEART ao tempo porta-ECG, mostrando como a métrica de processo se conecta à estratificação de risco na prática do pronto-socorro brasileiro."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-dor-toracica-aguda-ecg-troponina-e-via-de-sca",
+        "por_que": "Fluxograma que amarra ECG e troponina numa via de decisão única, servindo de ponte entre a triagem de risco e o algoritmo laboratorial detalhado da próxima etapa."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+        "por_que": "O algoritmo 0h/1h ESC 2023 é o núcleo técnico da trilha: como a cinética da troponina ultrassensível permite descartar ou confirmar infarto em uma hora, com pontos de corte específicos."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-wellens-reconhecimento-e-por-que-nao-fazer-teste-ergometrico",
+        "por_que": "Alerta essencial: um padrão eletrocardiográfico de alto risco (Wellens) pode coexistir com troponina ainda negativa ou limítrofe, e reconhecê-lo evita o erro de encaminhar ao teste ergométrico um paciente que precisa de cateterismo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "wellens-tipo-b-livre-de-dor-nao-mandar-ao-ergometrico",
+        "por_que": "Caso aplicado que testa exatamente a armadilha descrita na etapa anterior: paciente livre de dor, troponina no limiar, padrão de Wellens tipo B — decidir por anatomia, não por esteira."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "infarto-tipo-2-versus-lesao-miocardica-nao-isquemica",
+        "por_que": "Depois de dominar a detecção, a trilha avança para a interpretação: nem toda troponina elevada é síndrome coronariana aguda tipo 1, e distinguir infarto tipo 2 de lesão miocárdica não isquêmica muda a conduta."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fluxograma-elevacao-de-troponina-sem-sca-lesao-miocardica-e-infarto-tipo-2",
+        "por_que": "Fluxograma que operacionaliza a distinção da etapa anterior, oferecendo um caminho estruturado para classificar a troponina elevada sem síndrome coronariana aguda."
+      },
+      {
+        "ordem": 10,
+        "item_type": "caso_clinico",
+        "item_slug": "sangramento-digestivo-troponina-dinamica-nao-rotular-tipo-1",
+        "por_que": "Caso de fechamento que consolida toda a trilha: troponina dinâmica num contexto de sangramento digestivo, testando se o leitor consegue evitar o rótulo automático de infarto tipo 1 diante de um cenário de desequilíbrio oferta-demanda."
+      }
+    ]
   }
 ]
