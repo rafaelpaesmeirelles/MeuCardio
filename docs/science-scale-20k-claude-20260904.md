@@ -2216,3 +2216,27 @@ Décimo quinto lote sob o novo direcionamento — 8 agentes em paralelo, intensi
 | Trilhas | 300 | 36 | 264 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **627** | **4.273** |
+
+## Lote 101 — concluído (commit dc633c1c)
+
+Décimo sexto lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: expansão do pool de doadores em transplante cardíaco — DCD e perfusão ex-situ; litotripsia intravascular em calcificação coronária grave — DISRUPT CAD III, ROTA.shock, ROLLER COASTR-EPIC22; trombose subclínica de folheto (HALT) após TAVI — incidência, preditores e o impasse da anticoagulação profilática.
+- **2 casos clínicos**: zilebesirana (siRNA anti-angiotensinogênio) — ainda não prescrever fora de fase 2; ICFEr refratária — o subgrupo favorável do RELIEVE-HF não autoriza o shunt interatrial agora.
+- **1 checklist**: manejo do no-reflow durante a ICP primária (14 itens).
+- **1 material-paciente**: pressão alta só no consultório — hipertensão do avental branco não tratada não é inofensiva.
+- **1 trilha**: "Prevenção e lipídios — histórico reprodutivo como modificador de risco cardiovascular", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 20 links de Tudo com Tudo reverificados nos 3 documentos standalone; 10 item_slug da trilha reconfirmados independentemente via grep (1 falso-negativo de verificação manual corrigido — slug entre aspas no front-matter).
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.822 itens.
+
+### Status consolidado (após Lote 101)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 219 | 2.181 |
+| Casos clínicos | 900 | 94 | 806 |
+| Checklists | 600 | 68 | 532 |
+| Materiais-paciente | 500 | 54 | 446 |
+| Trilhas | 300 | 37 | 263 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **635** | **4.265** |
