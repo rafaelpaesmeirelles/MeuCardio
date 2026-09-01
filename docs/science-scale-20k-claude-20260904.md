@@ -1957,3 +1957,22 @@ Quinto lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 26 | 274 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **479** | **4.421** |
+
+## Lote 90 (complemento) — concluído (commit 8be730e5)
+
+O 8º agente do Lote 90 (2 documentos standalone previstos, apenas 1 havia chegado no fechamento) retornou após o push do lote principal — integrado agora como complemento.
+
+- **Documento standalone**: finerenona e prevenção de FA incidente — análise agrupada FINE-HEART (14.581 participantes sem FA basal, HR 0,83; p=0,019) e reforço do FINEARTS-HF isolado; benefício na IC não é modificado pelo status de FA basal.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.734 itens.
+
+### Status consolidado (após Lote 90 completo)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 188 | 2.212 |
+| Casos clínicos | 900 | 73 | 827 |
+| Checklists | 600 | 54 | 546 |
+| Materiais-paciente | 500 | 43 | 457 |
+| Trilhas | 300 | 26 | 274 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **480** | **4.420** |
