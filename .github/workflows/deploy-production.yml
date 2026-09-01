@@ -43,7 +43,9 @@ jobs:
           EVENT_SHA: ${{ github.event.workflow_run.head_sha }}
           REQUESTED_SHA: ${{ inputs.sha }}
           EXPECTED_EMERGENCY_SHA: ${{ vars.CORVIA_AGENDA_SEARCH_EMERGENCY_SHA }}
-          EMERGENCY_BASE_SHA: a74cd345e5d38bef740a32630d1961a711645373
+          # SHA que passou pelos gates frontend, mas falhou antes do commit da
+          # migration. A recuperação autorizada deve ser seu descendente direto.
+          EMERGENCY_BASE_SHA: b918703065525771ee25de0f7c62a271b2af3bfb
           EMERGENCY_MARKER: "[agenda-search-emergency]"
         run: |
           set -euo pipefail
@@ -116,22 +118,7 @@ jobs:
           required_emergency_paths = {
               ".github/workflows/ci.yml",
               ".github/workflows/deploy-production.yml",
-              "backend/app/api/agenda_integrada.py",
-              "backend/app/api/checklists.py",
-              "backend/app/api/evidence.py",
-              "backend/app/api/search.py",
-              "backend/app/api/specialty_guides.py",
-              "backend/app/services/clinical_text.py",
-              "backend/app/services/guideline_clinical_update.py",
-              "backend/app/services/guideline_clinical_update_runtime.py",
               "backend/migrations/versions/f93s20260901_disable_reserved_smoke_agenda.py",
-              "frontend/src/components/ClinicalUpdates.tsx",
-              "frontend/src/pages/Agenda.tsx",
-              "frontend/src/pages/ChecklistModelo.tsx",
-              "frontend/src/pages/Evidencia.tsx",
-              "frontend/src/pages/GuiaDoenca.tsx",
-              "frontend/src/pages/TriagemSintomas.tsx",
-              "frontend/src/styles/cardiology-spaces-app-frame.css",
           }
           emergency_authorized = False
           if expected_emergency_sha == expected_sha:

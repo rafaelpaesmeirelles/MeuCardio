@@ -41,11 +41,11 @@ def _disable_reserved_smoke_series(connection) -> int:
         )
         SELECT
             NULL,
-            :action,
-            :entity,
+            CAST(:action AS text),
+            CAST(:entity AS text),
             disabled.id::text,
             jsonb_build_object(
-                'migration', :revision,
+                'migration', CAST(:revision AS text),
                 'operation', 'soft_disable_reserved_test_series',
                 'owner_id', disabled.owner_id
             ),

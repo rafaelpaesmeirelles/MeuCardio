@@ -28,8 +28,11 @@ jobs:
         env:
           EXPECTED_REPOSITORY: rafaelpaesmeirelles/MeuCardio
           EXPECTED_ACTOR: rafaelpaesmeirelles
-          EXPECTED_BRANCH: codex/emergency-agenda-search-chat-hotfix
-          EXPECTED_BASE_SHA: a74cd345e5d38bef740a32630d1961a711645373
+          EXPECTED_BRANCH: codex/emergency-agenda-search-recovery
+          # O primeiro candidato passou pelo CI frontend, mas seu deploy foi
+          # revertido transacionalmente por um bind sem tipo na migration. Esta
+          # exceção aceita somente o descendente imediato que corrige esse bind.
+          EXPECTED_BASE_SHA: b918703065525771ee25de0f7c62a271b2af3bfb
           EXPECTED_CANDIDATE: ${{ vars.CORVIA_AGENDA_SEARCH_EMERGENCY_SHA }}
           EXPECTED_MARKER: "[agenda-search-emergency]"
           EVENT_NAME: ${{ github.event_name }}
