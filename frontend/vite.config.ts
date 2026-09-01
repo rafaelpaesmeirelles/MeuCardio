@@ -64,6 +64,9 @@ export default defineConfig({
         globIgnores: [
           "corvia-logo-canonical.png",
           "corvia-logo.png",
+          "corvia-logo-compacta.png",
+          "logo-marca.png",
+          "logo.png",
           "apple-touch-icon.png",
           "favicon.png",
           "icon-192.png",

@@ -19,7 +19,7 @@ class SpecialtyDisease(Base):
 
     area: Mapped[str] = mapped_column(String(60), index=True)
     category: Mapped[str] = mapped_column(String(100), index=True)
-    subtype: Mapped[str | None] = mapped_column(String(120), nullable=True, index=True)
+    subtype: Mapped[str | None] = mapped_column(Text, nullable=True, index=True)
     cyanosis_class: Mapped[str | None] = mapped_column(String(20), nullable=True, index=True)
     prevalence_rank: Mapped[int] = mapped_column(Integer, default=999, index=True)
     completeness: Mapped[str] = mapped_column(String(20), default="basico", index=True)

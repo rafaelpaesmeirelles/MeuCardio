@@ -184,40 +184,61 @@ jobs:
             for (const [name, route] of routes) {
               await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
               await page.waitForTimeout(350);
-              const metrics = await page.evaluate((viewportName) => {
+              const metrics = await page.evaluate(({ viewportName, pageName }) => {
                 const visible = (selector) => {
                   const element = document.querySelector(selector); if (!element) return false;
                   const style = getComputedStyle(element); const rect = element.getBoundingClientRect();
                   return style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0;
                 };
-                const sample = document.querySelector('.prehome-card');
-                const brand = document.querySelector('.prehome-brand');
-                const heart = document.querySelector('.prehome-brand__heart');
-                const journey = document.querySelector('.prehome-brand__journey');
-                const heartRect = heart?.getBoundingClientRect();
-                const journeyRect = journey?.getBoundingClientRect();
+                const rect = (selector) => {
+                  const element = document.querySelector(selector); if (!element) return null;
+                  const value = element.getBoundingClientRect();
+                  return { x:value.x, y:value.y, width:value.width, height:value.height, right:value.right, bottom:value.bottom };
+                };
+                const intersects = (first, second) => Boolean(
+                  first && second
+                  && first.x < second.right && first.right > second.x
+                  && first.y < second.bottom && first.bottom > second.y
+                );
+                const isLogin = pageName === 'login';
+                const selectors = isLogin ? {
+                  root: '.login-gateway',
+                  panel: '.login-gateway__console',
+                  brand: '.login-gateway__scene',
+                  logo: '.login-gateway__brand',
+                  hero: '.login-gateway__core .prehome-brand__heart',
+                } : {
+                  root: '.public-space',
+                  panel: '.public-space__surface',
+                  brand: '.public-space__context',
+                  logo: '.public-corvia-brand',
+                  hero: '.public-space__signal',
+                };
+                const sample = document.querySelector(selectors.panel);
+                const heart = rect('.login-gateway__core .prehome-brand__heart');
+                const ensino = rect('.login-gateway__space--ensino');
                 const style = sample ? getComputedStyle(sample) : null;
                 return {
                   width: innerWidth, height: innerHeight,
                   scrollWidth: document.documentElement.scrollWidth,
-                  sampleVisible: visible('.prehome-card'), brandVisible: visible('.prehome-brand'),
+                  isLogin,
+                  sampleVisible: visible(selectors.panel), brandVisible: visible(selectors.brand),
                   sampleBackground: style?.backgroundColor || '',
-                  canonicalMain: visible('.prehome'), logo: visible('.prehome-brand__logo'),
-                  hologram: visible('.prehome-brand__hologram'),
-                  heartBottom: heartRect?.bottom ?? null,
-                  journeyTop: journeyRect?.top ?? null,
+                  canonicalMain: visible(selectors.root), logo: visible(selectors.logo),
+                  heroVisual: visible(selectors.hero),
+                  heartOverlapsEnsino: intersects(heart, ensino),
                   isMobile: viewportName.startsWith('mobile'), bodyText: document.body?.innerText || '',
                 };
-              }, viewportName);
+              }, { viewportName, pageName: name });
               const sampleLum = luminance(metrics.sampleBackground);
               report.pages.push({ viewportName, name, route, ...metrics, bodyText: undefined, sampleLuminance: sampleLum });
               if (metrics.scrollWidth > metrics.width + 4) report.failures.push(`${viewportName}/${name}: overflow horizontal ${metrics.scrollWidth}px > ${metrics.width}px`);
               if (!metrics.sampleVisible) report.failures.push(`${viewportName}/${name}: painel transacional não renderizou`);
-              if (!metrics.brandVisible) report.failures.push(`${viewportName}/${name}: área de marca não renderizou`);
+              if (!metrics.brandVisible) report.failures.push(`${viewportName}/${name}: área conceitual não renderizou`);
               if (!metrics.logo) report.failures.push(`${viewportName}/${name}: marca CorVIA não está visível`);
-              if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell prehome canônico ausente`);
-              if (!metrics.isMobile && !metrics.hologram) report.failures.push(`${viewportName}/${name}: hero holográfico ausente no desktop`);
-              if (name === 'login' && !metrics.isMobile && metrics.heartBottom !== null && metrics.journeyTop !== null && metrics.heartBottom > metrics.journeyTop - 8) report.failures.push(`${viewportName}/${name}: coração invade o texto da jornada (${metrics.heartBottom.toFixed(1)}px > ${metrics.journeyTop.toFixed(1)}px)`);
+              if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell público canônico ausente`);
+              if ((metrics.isLogin ? !metrics.isMobile : true) && !metrics.heroVisual) report.failures.push(`${viewportName}/${name}: elemento visual central ausente`);
+              if (metrics.isLogin && !metrics.isMobile && metrics.heartOverlapsEnsino) report.failures.push(`${viewportName}/${name}: coração conflita geometricamente com o espaço Ensino`);
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });

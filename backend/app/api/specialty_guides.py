@@ -233,7 +233,7 @@ def list_diseases(
     area: str | None = Query(None, max_length=60),
     category: str | None = Query(None, max_length=100),
     clinical_domain: str | None = Query(None, max_length=100),
-    subtype: str | None = Query(None, max_length=120),
+    subtype: str | None = Query(None, max_length=400),
     cyanosis_class: str | None = Query(None, max_length=20),
     assistant_only: bool = False,
     page: int = Query(1, ge=1),

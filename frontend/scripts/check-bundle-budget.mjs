@@ -48,15 +48,27 @@ const sw = await readFile(swPath, "utf8");
 let precacheBytes = 0;
 let precacheEntries = 0;
 const maxOptionalPrecacheJs = 160 * 1024;
+const forbiddenLegacyBrandAssets = new Set([
+  "corvia-logo-compacta.png",
+  "logo-marca.png",
+  "logo.png",
+]);
+const isPrecached = (relativePath) => (
+  sw.includes(`url:"${relativePath}"`) || sw.includes(`url:'${relativePath}'`)
+);
 
 for (const path of await listarArquivos(distPath)) {
   const rel = relative(distPath, path).replaceAll("\\", "/");
   if (rel === "sw.js" || rel.startsWith("workbox-")) continue;
-  if (!sw.includes(rel)) continue;
+  if (!isPrecached(rel)) continue;
 
   const bytes = (await stat(path)).size;
   precacheBytes += bytes;
   precacheEntries += 1;
+
+  if (forbiddenLegacyBrandAssets.has(rel)) {
+    failures.push(`PNG legado de marca indevidamente pré-carregado: ${rel}`);
+  }
 
   if (
     rel.endsWith(".js") &&
