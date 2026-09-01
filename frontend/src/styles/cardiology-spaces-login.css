@@ -1023,6 +1023,23 @@
   }
 
   .login-gateway__scene { min-height: 0; }
+
+  /* O bloco auxiliar é absoluto para não deslocar os atalhos centrais. Ele
+     precisa, porém, caber integralmente na própria faixa do rodapé. */
+  .login-gateway__form-meta {
+    top: 50%;
+    bottom: auto;
+    height: 44px;
+    max-height: calc(100% - 4px);
+    transform: translateY(-50%);
+  }
+
+  .login-gateway__form-meta > label,
+  .login-gateway__form-meta > a {
+    height: 44px;
+    min-height: 44px;
+    padding-block: 0;
+  }
 }
 
 @media (min-width: 761px) and (max-height: 700px) {
