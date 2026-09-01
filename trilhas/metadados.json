@@ -27385,5 +27385,69 @@
         "por_que": "Fecha o ciclo perguntando o que a trilha de escolha de classe farmacológica cardioprotetora não cobre: será que iSGLT2, agonista de GLP-1 e inibidor de DPP-4 diferem entre si no risco de fibrilação atrial — a metanálise em rede de 2026 responde com o dado comparativo direto."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-descongestao-guiada",
+    "titulo": "Insuficiência cardíaca aguda: descongestão guiada — do diurético clássico ao ultrassom pulmonar, VExUS e natriurese",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo montar a estratégia diurética inicial, reconhecer e escalonar a resistência diurética por bloqueio sequencial do néfron, e usar sódio urinário, ultrassom pulmonar e VExUS para guiar a descongestão em vez de tratar por peso e sintoma isolados.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+        "por_que": "Ponto de partida: os três ensaios que sustentam a estratégia diurética inicial — DOSE-AHF (bolus versus infusão, dose baixa versus alta), CARRESS-HF e ADVOR. Sem essa base, escalonar terapia depois não tem lastro de evidência."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "resistencia-diuretica-na-insuficiencia-cardiaca-aguda-mecanismos-e-bloqueio-sequencial-do-nefron",
+        "por_que": "Quando a resposta ao diurético de alça não é suficiente, é preciso entender por quê: os mecanismos renais da resistência e a lógica do bloqueio sequencial do néfron, que justificam cada camada adicionada a seguir."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-resistencia-diuretica-e-congestao-refrataria-na-ic-aguda",
+        "por_que": "O mesmo racional em árvore de decisão à beira do leito — fixa a sequência de escalonamento antes de entrar no detalhe farmacológico de cada camada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "acetazolamida-e-tiazidico-na-resistencia-diuretica-advor-e-clorotic",
+        "por_que": "A primeira camada além do diurético de alça, com número: ADVOR (acetazolamida) e CLOROTIC (tiazídico) como as duas opções testadas em ensaio para vencer a resistência."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-proxima-camada-diuretica-apos-alca-advor-clorotic",
+        "por_que": "Fluxograma que converte a comparação ADVOR/CLOROTIC em decisão prática: qual associar e em que ordem, antes de considerar suporte mecânico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "natriurese-guiada-por-sodio-urinario-na-descongestao-da-ic-aguda-push-ahf-e-enact-hf",
+        "por_que": "Muda o critério de resposta: em vez de esperar peso e sintoma, PUSH-AHF e ENACT-HF mostram como titular o diurético por sódio urinário pontual — o protocolo que a ESC já recomenda."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "descongestao-guiada-por-ultrassom-pulmonar-e-vexus-na-insuficiencia-cardiaca-linhas-b-congestao-subclinica-e-o-ensaio-icarus",
+        "por_que": "Complementa o sódio urinário com a imagem: linhas B ao ultrassom pulmonar e o escore VExUS detectam congestão subclínica que o exame físico não pega, com os números do ensaio ICARUS."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "unload-ultrafiltracao-versus-diuretico-ev-na-ic-aguda",
+        "por_que": "O limite da estratégia farmacológica: quando mesmo o bloqueio sequencial guiado não descongestiona, o UNLOAD compara ultrafiltração a diurético endovenoso e mostra onde cada um ganha — e onde o resultado é secundário, não primário."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "furosemida-subcutanea-descongestao-ambulatorial-na-insuficiencia-cardiaca",
+        "por_que": "Fecha a trilha na transição para fora do hospital: furosemida subcutânea como via de descongestão ambulatorial, aplicando o mesmo racional guiado sem precisar de internação prolongada."
+      }
+    ]
   }
 ]

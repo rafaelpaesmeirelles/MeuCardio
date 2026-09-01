@@ -42264,5 +42264,112 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md (documento de origem com review_status: pendente_revisao — ainda não revisado). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento; source_refs preservados integralmente do documento de origem. Aguarda revisão médica independente antes de qualquer promoção de review_status, tanto deste checklist quanto do documento-fonte."
     }
+  },
+  {
+    "slug": "manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia",
+    "condicao": "Terapia antitrombótica na doença coronariana associada a cirrose hepática ou a trombocitopenia de qualquer causa",
+    "resumo": "O que checar antes de definir a estratégia antiagregante ou anticoagulante em paciente coronariopata com cirrose hepática ou com trombocitopenia de causa hepática ou hematológica primária — gravidade da hepatopatia, hipertensão portal, limiares pragmáticos de plaqueta, DAPT abreviada pós-PCI e os limites dos escores de risco hemorrágico padrão da cardiologia intervencionista, derivado da revisão desta biblioteca apoiada no estudo TriNetX 2026 e nas revisões de 2026 sobre hemostasia em trombocitopenia.",
+    "documento_origem": "terapia-antitrombotica-dac-cirrose-hepatica-e-trombocitopenia",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Gala D, Rao S, Gunani M, Shah K, Kulkarni AV, Wijarnpreecha K, Huang DQ, Danpanichkul P, Al-Khazraji A, Hajifathalian K, Lingiah V, Gaglio P, Duong N, Gerula C. Clinical Outcomes After Percutaneous Coronary Intervention in Patients With Cirrhosis: A Multicentre National Study. Aliment Pharmacol Ther. 2026 Aug 5. Online ahead of print (volume/número ainda não atribuídos). DOI: 10.1111/apt.70896. PMID: 42554421 — abstract conferido via PubMed E-utilities (esearch/esummary/efetch) em 01/09/2026.",
+      "Taylor S, Wang J, Lim HY, Saward G, Sood S. Balancing Thrombosis and Bleeding: Antithrombotic Therapy in Cirrhosis-Related Thrombocytopenia. J Clin Med. 2026;15(5):2036. DOI: 10.3390/jcm15052036. PMID: 41827452 — texto integral em acesso aberto (PMCID PMC12986046); abstract conferido via PubMed E-utilities em 01/09/2026.",
+      "Mingot-Castellano ME, Álvarez Román MT, Bastida JM, Butta N, Caballero Navarro G, Canaro Hirnyk M, Entrena Ureña L, Gómez Del Castillo Solano MDC, Ramirez Lopez A, Sánchez González B, Valcarcel Ferreira D, Pascual Izquierdo C. Navigating the Hemostatic Balance: Anticoagulation and Antiplatelet Therapy in Patients with Thrombocytopenia. J Clin Med. 2026;15(6):2273. DOI: 10.3390/jcm15062273. PMID: 41899195 — texto integral em acesso aberto (PMCID PMC13026926); abstract conferido via PubMed E-utilities em 01/09/2026.",
+      "Salihu A, Meier D, Mahendiran T, Zimmerli A, Buri J, Klopfenstein M, Scala E, Fournier S. Percutaneous Coronary Interventions: Bleeding Risk Assessment and Management. J Clin Med. 2026;15(14):5729. DOI: 10.3390/jcm15145729. PMID: 42513652 — texto integral em acesso aberto (PMCID PMC13412146); abstract conferido via PubMed E-utilities em 01/09/2026.",
+      "Thukral J, Khangurra SK, Ghaie M, Kaur M, Moudgil P, Shah R, Kaur H, Thukral N, Frishman WH, Aronow WS. Myeloproliferative Neoplasms, Clonal Thrombosis, and Vascular Disease: Can Cardiology Learn from Hematology? Cardiol Rev. 2026 Apr 29. Online ahead of print (volume/número ainda não atribuídos). DOI: 10.1097/CRD.0000000000001285. PMID: 42059892 — abstract conferido via PubMed E-utilities em 01/09/2026."
+    ],
+    "itens": [
+      {
+        "id": "it-dachep-escores-nao-calibrados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Reconhecido que os escores de risco hemorrágico padrão da cardiologia intervencionista (PRECISE-DAPT, ARC-HBR, escore DAPT) não incorporam gravidade hepática, etiologia da hepatopatia nem hipertensão portal, e tendem a subestimar o risco de sangramento em cirrose — a decisão se apoia em avaliação hepatológica conjunta, não apenas na pontuação cardiológica isolada",
+        "origem_secao": "As ferramentas de risco de sangramento da cardiologia não foram feitas para este paciente"
+      },
+      {
+        "id": "it-dachep-gravidade-hepatopatia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Gravidade da hepatopatia classificada (Child-Pugh, MELD) e status compensada versus descompensada registrado antes de definir a estratégia antitrombótica — a gravidade, não apenas a presença de cirrose, estratifica o risco de sangramento gastrointestinal e de mortalidade após PCI",
+        "origem_secao": "O estudo-âncora: desfechos de PCI em cirrose (TriNetX, 2026)"
+      },
+      {
+        "id": "it-dachep-etiologia-cirrose",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Etiologia da cirrose registrada (alcoólica versus MASLD versus outra) — cirrose alcoólica associou-se a mais sangramento gastrointestinal do que MASLD no estudo-âncora, e tratar 'cirrose' como categoria única sem considerar a causa simplifica demais a decisão",
+        "origem_secao": "Armadilhas"
+      },
+      {
+        "id": "it-dachep-dapt-abreviada-pci",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em cirrótico submetido a PCI, planejada DAPT abreviada seguida de monoterapia antiplaquetária (aspirina ou inibidor de P2Y12 isolado) a partir de aproximadamente 30 dias, salvo risco isquêmico que justifique prolongar — estratégia associada a menos sangramento gastrointestinal (10,31% vs. 20,77%) e menor mortalidade (9,46% vs. 12,89%) sem aumento de reestenose no estudo TriNetX 2026, mas trata-se de evidência observacional, não de ensaio randomizado dedicado",
+        "origem_secao": "O estudo-âncora: desfechos de PCI em cirrose (TriNetX, 2026)"
+      },
+      {
+        "id": "it-dachep-varizes-hipertensao-portal",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Hipertensão portal e presença de varizes esofágicas verificadas como modificador de risco hemorrágico independente da contagem de plaquetas, antes de intensificar ou prolongar a antiagregação",
+        "origem_secao": "Cirrose especificamente: por que ela não é \"só trombocitopenia\""
+      },
+      {
+        "id": "it-dachep-trombocitopenia-nao-e-protecao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Trombocitopenia não interpretada como sinônimo de proteção trombótica — reconhecido que ativação plaquetária residual, disfunção endotelial e estado pró-coagulante podem coexistir com contagem baixa de plaquetas em cirrose, púrpura trombocitopênica imune, trombose associada a câncer e neoplasias mieloproliferativas",
+        "origem_secao": "Por que a trombocitopenia trava a decisão — e não é só sobre sangrar menos"
+      },
+      {
+        "id": "it-dachep-limiar-plaquetas-anticoagulacao",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se anticoagulação plena estiver indicada (por exemplo, fibrilação atrial concomitante ou trombose de veia porta): aplicados os limiares pragmáticos de plaqueta — dose plena com contagem ≥50×10⁹/L, dose reduzida entre 25 e 50×10⁹/L, suspensão abaixo de 25×10⁹/L — reconhecendo que são extrapolados majoritariamente de contextos oncológicos e não validados especificamente para manutenção de DAPT coronariana",
+        "origem_secao": "Por que a trombocitopenia trava a decisão — e não é só sobre sangrar menos"
+      },
+      {
+        "id": "it-dachep-doac-child-pugh",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Uso de anticoagulante oral direto (DOAC) em cirrose restrito a Child-Pugh A/B (compensada) — extrapolação direta para Child-Pugh C sem dados robustos identificada como o erro mais comum descrito na literatura de hepatologia",
+        "origem_secao": "Cirrose especificamente: por que ela não é \"só trombocitopenia\""
+      },
+      {
+        "id": "it-dachep-inr-nao-confiavel",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Reconhecido que o monitoramento por RNI é pouco confiável para ajustar antagonista de vitamina K em cirrose, já que o fígado sintetiza tanto os fatores pró-coagulantes quanto o próprio substrato da medida",
+        "origem_secao": "Cirrose especificamente: por que ela não é \"só trombocitopenia\""
+      },
+      {
+        "id": "it-dachep-avaliacao-hepatologica-conjunta",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Avaliação hepatológica conjunta acionada antes de decisão antitrombótica complexa em cirrótico coronariopata — carga trombótica, risco de sangramento, hipertensão portal e gravidade da hepatopatia incorporados à decisão, sem aplicar protocolo único a todo cirrótico",
+        "origem_secao": "Cirrose especificamente: por que ela não é \"só trombocitopenia\""
+      },
+      {
+        "id": "it-dachep-evidencia-observacional",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Registrado que não existe, até o momento, ensaio randomizado dedicado comparando DAPT abreviada versus prolongada especificamente em cirróticos pós-PCI — a recomendação prática de encurtar DAPT apoia-se em coorte observacional com pareamento por escore de propensão (TriNetX), não em RCT",
+        "origem_secao": "Armadilhas"
+      },
+      {
+        "id": "it-dachep-doenca-hematologica-de-base",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Em DAC associada a neoplasia mieloproliferativa (policitemia vera, trombocitemia essencial, mielofibrose) ou a outra citopenia hematológica primária, tratamento da doença de base (por exemplo, controle do hematócrito na policitemia vera) conduzido em conjunto com a otimização antiplaquetária, não de forma desacoplada",
+        "origem_secao": "Um paralelo instrutivo: trombocitopenia oncológica e o mesmo dilema"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento terapia-antitrombotica-dac-cirrose-hepatica-e-trombocitopenia.md (já publicado, review_status: pendente_revisao). Itens fiéis ao texto de origem, sem adição de critério não presente no documento — inclusive a ressalva explícita de que a estratégia de DAPT abreviada em cirrose pós-PCI apoia-se em coorte observacional (TriNetX 2026), não em ensaio randomizado dedicado. Aguarda revisão médica independente antes de qualquer promoção de review_status."
+    }
   }
 ]

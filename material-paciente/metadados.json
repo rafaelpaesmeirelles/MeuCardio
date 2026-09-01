@@ -33208,5 +33208,69 @@
       "Li HY, et al. Comparing GLP-1 agonists versus other weight loss interventions on risk of atrial fibrillation recurrence after catheter ablation: a meta-analysis. J Interv Card Electrophysiol. 2026;69(4):753-764. PMID: 41843238.",
       "Berends C, et al. Absorption of apixaban following metabolic and bariatric surgery: is reluctance still warranted? J Thromb Haemost. 2025;23(11):3648-3653. PMID: 40846025."
     ]
+  },
+  {
+    "slug": "estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia",
+    "titulo": "Estetoscópio digital com inteligência artificial: um novo jeito de rastrear problema na válvula do coração",
+    "subtitulo": "O que essa tecnologia consegue detectar hoje, e por que ela ainda não substitui o ecocardiograma",
+    "tema": "Valvopatias",
+    "documento_slug": "ausculta-digital-com-inteligencia-artificial-na-triagem-de-valvopatia",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação em linguagem simples sobre o estetoscópio digital com inteligência artificial usado para rastrear doença nas válvulas do coração — como funciona, o que a evidência de 2025-2026 mostra sobre sua precisão, por que o resultado varia tanto entre estudos, e por que ele é uma ferramenta de triagem, não um substituto do ecocardiograma.",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "É um estetoscópio digital que grava o som do coração e usa um programa de inteligência artificial (treinado com milhares de exemplos) para analisar esse som e identificar sinais de que uma válvula pode estar doente — estreitada ou vazando. Diferente do estetoscópio comum, que só amplifica o som para o profissional ouvir, o aparelho digital processa o áudio e gera uma indicação de risco.",
+          "A ideia é resolver um problema conhecido: a ausculta manual, feita no consultório com estetoscópio comum, tem sensibilidade limitada e varia muito conforme o treinamento de quem examina. Uma parte relevante das doenças de válvula moderadas a graves passa despercebida nessa etapa inicial, sendo descoberta só quando o sintoma já está avançado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que a pesquisa mostrou até agora",
+        "paragrafos": [
+          "Um estudo publicado em 2026, com 357 pacientes de 50 anos ou mais, comparou a ausculta feita por um profissional de saúde contra a triagem com o estetoscópio digital de inteligência artificial, usando o ecocardiograma como padrão de referência. O resultado foi favorável à tecnologia: ela identificou 92,3% dos casos de doença valvar moderada a grave, contra 46,2% da ausculta manual — ou seja, o dobro de casos encontrados, incluindo pessoas que ainda não sabiam ter o problema.",
+          "Mas um estudo diferente, publicado em 2025 e feito de forma independente, avaliou uma plataforma comercial de ausculta digital com IA já em uso em um centro de saúde, com mais de mil pacientes. O resultado foi bem mais modesto: a ferramenta identificou corretamente apenas 39,3% dos casos de doença valvar em geral. O desempenho variou muito conforme o tipo de problema — foi bom para detectar estreitamento da válvula aórtica (quase 9 em cada 10 casos), mas fraco para detectar estreitamento da válvula mitral.",
+          "Um terceiro estudo, também de 2026, testou uma versão ainda mais simples: gravar o som do coração pelo microfone de um celular comum, sem nenhum estetoscópio especial. Para detectar estreitamento da válvula aórtica especificamente, o resultado foi bom (acertou o diagnóstico em cerca de 9 em cada 10 casos testados) — parecido com o do aparelho dedicado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que os resultados são tão diferentes entre os estudos",
+        "paragrafos": [
+          "Essa diferença grande entre um estudo (92,3% de acerto) e outro (39,3% de acerto) não é um erro — ela reflete algo importante sobre como essas tecnologias costumam se comportar: o desempenho costuma ser mais alto em estudos feitos especificamente para testar e ajustar o algoritmo, e cai quando a mesma ferramenta é usada no dia a dia, em populações e serviços diferentes daqueles em que foi desenvolvida.",
+          "Também ficou claro, nos três estudos, que a tecnologia funciona melhor para um tipo específico de problema — o estreitamento da válvula aórtica — do que para outros, como o estreitamento da válvula mitral ou os problemas de 'vazamento' (regurgitação) mais leves. Isso provavelmente acontece porque o som do estreitamento aórtico é mais forte e mais característico, mais fácil de o programa de computador reconhecer."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso muda na prática para você",
+        "paragrafos": [
+          "Se o seu profissional de saúde usar um estetoscópio digital com inteligência artificial na sua consulta, entenda que ele é uma ferramenta de triagem — ou seja, ajuda a decidir quem deve ser encaminhado para um ecocardiograma, o exame que de fato confirma se existe (e qual é) o problema na válvula. Em nenhum estudo a tecnologia foi usada para substituir o ecocardiograma.",
+          "Um resultado 'normal' no estetoscópio digital não deve ser motivo de tranquilidade total se você tem sintomas sugestivos de problema na válvula (como falta de ar aos esforços, cansaço fora do comum, tontura ou desmaio) — porque a ferramenta ainda erra, principalmente para alguns tipos de lesão. Nesses casos, vale conversar com seu médico sobre a necessidade de investigação adicional, independentemente do resultado do aparelho.",
+          "Por outro lado, um resultado alterado no estetoscópio digital é um bom motivo para buscar um ecocardiograma, especialmente em locais com acesso limitado a esse exame — é justamente nesse cenário (triagem inicial, atenção primária, áreas mais distantes) que a tecnologia tem seu maior potencial de ajudar."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar aos esforços que é nova ou está piorando",
+      "Cansaço muito maior que o habitual para suas atividades do dia a dia",
+      "Tontura ou desmaio durante esforço físico",
+      "Dor ou aperto no peito ao se exercitar",
+      "Palpitações novas ou sensação de coração batendo irregular"
+    ],
+    "perguntas": [
+      "O estetoscópio digital com inteligência artificial foi usado na minha consulta? O que o resultado dele significa?",
+      "Mesmo com resultado normal no rastreio, meus sintomas justificam pedir um ecocardiograma?",
+      "Esse tipo de triagem é mais confiável para qual tipo de problema na minha válvula?",
+      "Essa tecnologia substitui algum exame que eu já fazia, ou é um passo a mais antes do ecocardiograma?",
+      "Com que frequência devo repetir esse tipo de triagem?"
+    ],
+    "fontes": [
+      "Rancier M, Israel I, Monickam V, et al. Artificial-intelligence-enabled digital stethoscope improves point-of-care screening for moderate-to-severe valvular heart disease. Eur Heart J Digit Health. 2026;7(2):ztag003.",
+      "Roquemen-Echeverri V, Jacobs PG, Shalen EF, et al. External evaluation of a commercial artificial intelligence-augmented digital auscultation platform in valvular heart disease detection using echocardiography as reference standard. Int J Cardiol. 2025;419:132653.",
+      "Close RM, Judson GL, Zhang J, et al. Feasibility of detecting aortic stenosis with mobile phone auscultation data: a pilot study. Front Cardiovasc Med. 2026;13:1768473."
+    ]
   }
 ]
