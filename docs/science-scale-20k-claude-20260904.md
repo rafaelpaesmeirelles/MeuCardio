@@ -2072,3 +2072,27 @@ Nono lote sob o novo direcionamento — 8 agentes em paralelo, priorizando docum
 | Trilhas | 300 | 30 | 270 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **579** | **4.321** |
+
+## Lote 95 — concluído (commit acc637fc)
+
+Décimo lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: terapia gênica para doença de Danon — RP-A501/AAV9.LAMP2B, resultados de fase 1 (NEJM 2025); amilorida 5 vs. 10 mg e a razão clortalidona:hidroclorotiazida — ensaio fatorial brasileiro (JAHA 2026); TAVI em anel aórtico pequeno — prótese autoexpansível vs. balão-expansível (ensaio SMART).
+- **2 casos clínicos**: FA pós-ablação sem recorrência — suspender anticoagulação? (ALONE-AF, JAMA 2025); ICFEp em paciente obesa com NT-proBNP normal — não exclui diagnóstico (ACC 2026 ECDP).
+- **1 checklist**: síndrome coronariana aguda — do primeiro contato à estratégia invasiva ESC 2023 (20 itens).
+- **1 material-paciente**: diabetes e coração — o que mudou no jeito de cuidar (ESC 2023).
+- **1 trilha**: "Prevenção e lipídios — obesidade como alvo cardiovascular: do estigma na consulta à escolha entre GLP-1 e cirurgia bariátrica", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 17 links de Tudo com Tudo reverificados nos 3 documentos standalone (formato de link corrigido em 1 documento, de referência de arquivo `.md` para `/biblioteca/<slug>`); 10 item_slug da trilha reconfirmados independentemente via grep no worktree.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.774 itens.
+
+### Status consolidado (após Lote 95)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 200 | 2.200 |
+| Casos clínicos | 900 | 83 | 817 |
+| Checklists | 600 | 62 | 538 |
+| Materiais-paciente | 500 | 48 | 452 |
+| Trilhas | 300 | 31 | 269 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **587** | **4.313** |
