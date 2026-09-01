@@ -2312,3 +2312,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 40 | 260 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **660** | **4.240** |
+
+## Lote 105 — concluído (commit 043095d2)
+
+9 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 2; checklists: 1; materiais-paciente: 1; trilhas: 1), com foco reforçado em documentos (categoria mais atrasada) e evidência 2025-2026.
+
+- **Documentos**:
+  - Doença coronariana: "Desescalonamento Guiado por Genótipo CYP2C19 (DAN-DAPT) e Revisão Sistemática 2026" — síntese do desenho do ensaio DAN-DAPT (PMID 40015616, protocolo, sem resultados clínicos ainda — caveat explícito no texto), modelo de custo-efetividade (PMID 39537191), revisão sistemática (PMID 42410742) e painel de especialistas (PMID 42443024).
+  - Insuficiência cardíaca: "Biomarcadores de Fibrose Miocárdica na Insuficiência Cardíaca: Fibroblastos, Galectina-3 e Imagem" — heterogeneidade de fibroblastos (Nat Rev Cardiol 2026, PMID 42613428), galectina-3/redox/imagem (Antioxidants 2026, PMID 42650183), biomarcadores de flexibilidade metabólica (Int J Mol Sci 2026, PMID 41596526).
+  - Valvopatias: "Ausculta Digital com Inteligência Artificial na Triagem de Valvopatia" — coorte prospectiva de estetoscópio digital com IA (Eur Heart J Digit Health 2026), validação externa (Int J Cardiol 2025, PMID 39433158), auscultação por celular (Front Cardiovasc Med 2026), revisão narrativa (Cardiovasc Diagn Ther 2026, PMID 42164738).
+  - Hipertensão: "Hipertensão Induzida por Esteroides Anabolizantes Androgênicos: Mecanismo, Prevalência Real e Rastreio Sistemático" — mecanismos cardiovasculares (J Steroid Biochem Mol Biol 2026, PMID 41539555), revisão molecular (Int J Mol Sci 2025, PMID 41303522), coorte transversal (Scand J Med Sci Sports 2024, PMID 38268076: 55% vs. 19% de PA elevada), cardiomiopatia por EAA (Biomedicines 2025, PMID 41007753), cardiomiopatia biventricular grave (Eur J Prev Cardiol 2024, PMID 37992194).
+- **Casos clínicos**: inibidor de fator XI/XIa versus DOAC na FA (troca por menos sangramento); hipertensão resistente — espironolactona vs. baxdrostat após ginecomastia.
+- **Checklist**: suspeita e manejo perioperatório da cetoacidose euglicêmica por iSGLT2.
+- **Material-paciente**: fibra na alimentação e colesterol.
+- **Trilha**: cardiomiopatias no atleta — zona cinzenta e retorno ao esporte (10 etapas, todas tipo documento).
+
+**Verificação independente** (nunca por autoatestado do agente): todos os 9 itens passaram por checagem de colisão de slug contra `content/**/*.md` e os manifests-alvo; documento_origem/documento_slug confirmados para os 2 casos e o material-paciente; os 10 item_slugs da trilha confirmados individualmente via grep contra front-matter; zero resíduos de entidades HTML em todo o conteúdo; todos os 26 links "Tudo com Tudo" (7+7+6+6 nos 4 documentos) resolvidos individualmente via grep antes da integração.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10856`.
+
+### Status consolidado (após Lote 105)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 232 | 2.168 |
+| Casos clínicos | 900 | 102 | 798 |
+| Checklists | 600 | 73 | 527 |
+| Materiais-paciente | 500 | 58 | 442 |
+| Trilhas | 300 | 41 | 259 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **669** | **4.231** |
