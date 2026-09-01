@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "description": "Sentinelas clínicas determinísticas para relações do Tudo com Tudo.",
+  "cases": [
+    {
+      "id": "obvia-ic-sacubitril-valsartana",
+      "cohort": "correta_obvia",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "medicamento", "title": "Sacubitril/valsartana", "theme": "Insuficiência cardíaca", "anchors": ["condition:heart-failure"]},
+      "target": {"type": "doenca", "title": "Insuficiência cardíaca com fração de ejeção reduzida", "theme": "Insuficiência cardíaca", "anchors": ["condition:heart-failure"]},
+      "candidate": {"relation_type": "indicated_for", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 1.0, "evidence_source": "curadoria:diretriz-ic"}
+    },
+    {
+      "id": "obvia-fa-apixabana",
+      "cohort": "correta_obvia",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "medicamento", "title": "Apixabana", "theme": "Fibrilação atrial", "anchors": ["condition:atrial-fibrillation"]},
+      "target": {"type": "doenca", "title": "Fibrilação atrial não valvar", "theme": "Fibrilação atrial", "anchors": ["condition:atrial-fibrillation"]},
+      "candidate": {"relation_type": "indicated_for", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 1.0, "evidence_source": "curadoria:diretriz-fa"}
+    },
+    {
+      "id": "obvia-sca-troponina",
+      "cohort": "correta_obvia",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "doenca", "title": "Síndrome coronariana aguda", "theme": "Doença coronariana", "anchors": ["decision:acute-coronary-syndrome"]},
+      "target": {"type": "exame", "title": "Troponina cardíaca de alta sensibilidade", "theme": "Doença coronariana", "anchors": ["decision:acute-coronary-syndrome"]},
+      "candidate": {"relation_type": "diagnosed_by", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.95, "evidence_source": "campo:diagnostic_tests"}
+    },
+    {
+      "id": "obvia-endocardite-ecocardiograma",
+      "cohort": "correta_obvia",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "doenca", "title": "Endocardite infecciosa", "theme": "Valvopatias", "anchors": ["decision:infective-endocarditis"]},
+      "target": {"type": "exame", "title": "Ecocardiograma transesofágico", "theme": "Valvopatias", "anchors": ["decision:infective-endocarditis"]},
+      "candidate": {"relation_type": "diagnosed_by", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 0.98, "evidence_source": "curadoria:duke-iscvid"}
+    },
+    {
+      "id": "obvia-espironolactona-potassio",
+      "cohort": "correta_obvia",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "medicamento", "title": "Espironolactona", "theme": "Insuficiência cardíaca", "anchors": ["safety:mineralocorticoid-antagonist"]},
+      "target": {"type": "exame", "title": "Potássio sérico", "theme": "Insuficiência cardíaca", "anchors": ["safety:mineralocorticoid-antagonist"]},
+      "candidate": {"relation_type": "monitor_with", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.92, "evidence_source": "campo:safety_monitoring"}
+    },
+    {
+      "id": "dificil-amiodarona-tireoide",
+      "cohort": "correta_dificil",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "medicamento", "title": "Amiodarona", "theme": "Arritmias", "anchors": ["safety:amiodarone-thyroid"]},
+      "target": {"type": "exame", "title": "TSH e tiroxina livre", "theme": "Geral", "anchors": ["safety:amiodarone-thyroid"]},
+      "candidate": {"relation_type": "monitor_with", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.9, "evidence_source": "campo:safety_monitoring"}
+    },
+    {
+      "id": "dificil-fabry-alfa-galactosidase",
+      "cohort": "correta_dificil",
+      "path": "contextual_lexical",
+      "expected": true,
+      "source": {"type": "doenca", "title": "Doença de Fabry com acometimento cardíaco", "theme": "Cardiomiopatias", "anchors": ["diagnosis:fabry-disease"]},
+      "target": {"type": "exame", "title": "Alfa-galactosidase A e lyso-Gb3 na doença de Fabry", "theme": "Cardiomiopatias", "anchors": ["diagnosis:fabry-disease"]},
+      "candidate": {"relation_type": "diagnosed_by", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 0.97, "evidence_source": "curadoria:consenso-fabry"}
+    },
+    {
+      "id": "dificil-tvcpc-teste-esforco",
+      "cohort": "correta_dificil",
+      "path": "contextual_lexical",
+      "expected": true,
+      "source": {"type": "doenca", "title": "Taquicardia ventricular catecolaminérgica polimórfica", "theme": "Cardiogenética", "anchors": ["diagnosis:cpvt"]},
+      "target": {"type": "exame", "title": "Teste ergométrico na taquicardia catecolaminérgica", "theme": "Cardiomiopatias", "anchors": ["diagnosis:cpvt"]},
+      "candidate": {"relation_type": "diagnosed_by", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 0.96, "evidence_source": "curadoria:diretriz-arritmias-geneticas"}
+    },
+    {
+      "id": "dificil-cmh-calculadora-morte-subita",
+      "cohort": "correta_dificil",
+      "path": "knowledge_graph",
+      "expected": true,
+      "source": {"type": "doenca", "title": "Cardiomiopatia hipertrófica", "theme": "Cardiomiopatias", "anchors": ["risk:hcm-sudden-death"]},
+      "target": {"type": "calculadora", "title": "HCM Risk-SCD", "theme": "Arritmias", "anchors": ["risk:hcm-sudden-death"]},
+      "candidate": {"relation_type": "associated_with", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 0.95, "evidence_source": "curadoria:esc-hcm-risk"}
+    },
+    {
+      "id": "dificil-caso-miocardite-ressonancia",
+      "cohort": "correta_dificil",
+      "path": "contextual_lexical",
+      "expected": true,
+      "source": {"type": "caso_clinico", "title": "Caso de miocardite: dor torácica e troponina elevada", "theme": "Geral", "anchors": ["case:acute-myocarditis"]},
+      "target": {"type": "documento", "title": "Critérios de Lake Louise na miocardite", "theme": "Geral", "anchors": ["case:acute-myocarditis"]},
+      "candidate": {"relation_type": "used_in_case", "provenance_type": "editorial", "confidence": "explicit", "review_status": "revisado", "relevance_score": 0.94, "evidence_source": "curadoria:caso-miocardite"}
+    },
+    {
+      "id": "similar-pressao-hemodinamica-vs-ocular",
+      "cohort": "semelhante_errada",
+      "path": "contextual_lexical",
+      "expected": false,
+      "source": {"type": "documento", "title": "Pressão arterial e perfusão no choque", "theme": "Geral", "anchors": ["hemodynamics:shock"]},
+      "target": {"type": "exame", "title": "Pressão intraocular na triagem oftalmológica", "theme": "Geral", "anchors": ["ophthalmology:ocular-pressure"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "similar-frequencia-cardiaca-vs-ultrassom",
+      "cohort": "semelhante_errada",
+      "path": "contextual_lexical",
+      "expected": false,
+      "source": {"type": "exame", "title": "Frequência cardíaca no exercício", "theme": "Geral", "anchors": ["physiology:heart-rate"]},
+      "target": {"type": "documento", "title": "Frequência do ultrassom terapêutico", "theme": "Geral", "anchors": ["rehabilitation:ultrasound-frequency"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "similar-insuficiencia-cardiaca-vs-adrenal",
+      "cohort": "semelhante_errada",
+      "path": "contextual_lexical",
+      "expected": false,
+      "source": {"type": "doenca", "title": "Insuficiência cardíaca crônica", "theme": "Geral", "anchors": ["condition:heart-failure"]},
+      "target": {"type": "documento", "title": "Insuficiência adrenal crônica", "theme": "Geral", "anchors": ["endocrinology:adrenal-insufficiency"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "similar-dor-toracica-vs-neuropatica",
+      "cohort": "semelhante_errada",
+      "path": "contextual_lexical",
+      "expected": false,
+      "source": {"type": "triagem_sintoma", "title": "Dor torácica aguda", "theme": "Geral", "anchors": ["symptom:chest-pain"]},
+      "target": {"type": "material_paciente", "title": "Dor neuropática crônica", "theme": "Geral", "anchors": ["neurology:neuropathic-pain"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "similar-imagem-cardiaca-vs-retiniana",
+      "cohort": "semelhante_errada",
+      "path": "contextual_lexical",
+      "expected": false,
+      "source": {"type": "documento", "title": "Imagem cardíaca avançada", "theme": "Geral", "anchors": ["imaging:cardiac"]},
+      "target": {"type": "galeria", "title": "Imagem retiniana em diabetes", "theme": "Geral", "anchors": ["imaging:retinal"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "absurda-fa-radiografia-joelho",
+      "cohort": "absurda",
+      "path": "knowledge_graph",
+      "expected": false,
+      "source": {"type": "doenca", "title": "Fibrilação atrial", "theme": "Geral", "anchors": ["condition:atrial-fibrillation"]},
+      "target": {"type": "exame", "title": "Radiografia de joelho", "theme": "Geral", "anchors": ["orthopedics:knee"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "absurda-pericardite-protetor-solar",
+      "cohort": "absurda",
+      "path": "knowledge_graph",
+      "expected": false,
+      "source": {"type": "doenca", "title": "Pericardite aguda", "theme": "Geral", "anchors": ["condition:acute-pericarditis"]},
+      "target": {"type": "medicamento", "title": "Protetor solar tópico", "theme": "Geral", "anchors": ["dermatology:photoprotection"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "absurda-estenose-aortica-escala-ansiedade-dentaria",
+      "cohort": "absurda",
+      "path": "knowledge_graph",
+      "expected": false,
+      "source": {"type": "doenca", "title": "Estenose aórtica grave", "theme": "Geral", "anchors": ["condition:aortic-stenosis"]},
+      "target": {"type": "calculadora", "title": "Escala de ansiedade dentária", "theme": "Geral", "anchors": ["dentistry:dental-anxiety"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "absurda-hipertensao-fototipo-fitzpatrick",
+      "cohort": "absurda",
+      "path": "knowledge_graph",
+      "expected": false,
+      "source": {"type": "doenca", "title": "Hipertensão arterial", "theme": "Geral", "anchors": ["condition:arterial-hypertension"]},
+      "target": {"type": "calculadora", "title": "Classificação do fototipo de Fitzpatrick", "theme": "Geral", "anchors": ["dermatology:skin-phototype"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    },
+    {
+      "id": "absurda-estatina-checklist-catarata",
+      "cohort": "absurda",
+      "path": "knowledge_graph",
+      "expected": false,
+      "source": {"type": "medicamento", "title": "Atorvastatina", "theme": "Geral", "anchors": ["therapy:ldl-lowering"]},
+      "target": {"type": "checklist", "title": "Checklist de alta após cirurgia de catarata", "theme": "Geral", "anchors": ["ophthalmology:cataract-surgery"]},
+      "candidate": {"relation_type": "same_theme", "provenance_type": "structured_metadata", "confidence": "derived", "review_status": "pendente_revisao", "relevance_score": 0.35, "evidence_source": "campo:theme"}
+    }
+  ]
+}

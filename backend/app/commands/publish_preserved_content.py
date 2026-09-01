@@ -1,9 +1,10 @@
-"""Publica registros revisados que pertencem ao corpus canônico atual.
+"""Publica registros canônicos com intenção e aprovação explícitas.
 
 O reconciliador mantém registros antigos no PostgreSQL para auditoria. Eles
 devem permanecer despublicados mesmo que tenham sido revisados no passado.
-Este comando, mantido para uso operacional, restringe a publicação aos slugs
-presentes nas fontes versionadas do commit atual.
+Este comando, mantido para uso operacional, não pode contornar o reconciliador:
+``published:false`` permanece em quarentena e ausência legada preserva o estado
+existente sem promover registros novos.
 
 Depois da reconciliação, restaura também os overrides clínicos confirmados pelo
 CorVIA Intelligence. Assim uma atualização científica aplicada entre deploys
@@ -18,36 +19,58 @@ from typing import Any
 
 from sqlalchemy.orm import Session
 
-from app.commands.reconcile_content import FRONTS, _canonical_source_slugs, _ensure_source
+from app.commands.reconcile_content import (
+    FRONTS,
+    _canonical_publication_intents,
+    _canonical_source_slugs,
+    _ensure_source,
+    _load_editorial_approvals,
+    _synchronize_publication,
+    _validate_editorial_approvals,
+)
 from app.core.db import SessionLocal
 
 
 def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[str, Any]:
-    by_front: dict[str, int] = {}
-    total = 0
+    canonical_slugs: dict[str, set[str]] = {}
+    publication_intents: dict[str, dict[str, bool | None]] = {}
     try:
         for front, config in FRONTS.items():
-            model = config["model"]
             source = _ensure_source(front, str(config["path"]))
-            canonical_slugs = _canonical_source_slugs(front, source)
-            query = db.query(model).filter(
-                model.slug.in_(canonical_slugs),
-                model.published.is_(False),
-                model.review_status == "revisado",
-            )
-            changed = query.count() if dry_run else query.update(
-                {model.published: True}, synchronize_session=False
-            )
-            by_front[front] = int(changed)
-            total += int(changed)
-        if dry_run:
-            db.rollback()
-        else:
-            db.commit()
+            canonical_slugs[front] = _canonical_source_slugs(front, source)
+            intents = _canonical_publication_intents(front, source)
+            if set(intents) != canonical_slugs[front]:
+                raise RuntimeError(
+                    f"Frente {front}: intenção de publicação não cobre o corpus canônico."
+                )
+            publication_intents[front] = intents
+
+        approvals = _load_editorial_approvals()
+        _validate_editorial_approvals(canonical_slugs, approvals=approvals)
+        (
+            published,
+            unpublished_absent,
+            unpublished_unreviewed,
+            unpublished_ineligible,
+        ) = _synchronize_publication(
+            db,
+            canonical_slugs,
+            publish_reviewed=True,
+            approved_slugs=approvals,
+            publication_intents=publication_intents,
+            dry_run=dry_run,
+        )
     except Exception:
         db.rollback()
         raise
-    return {"published_total": total, "published_by_front": by_front, "dry_run": dry_run}
+    return {
+        "published_total": sum(published.values()),
+        "published_by_front": published,
+        "unpublished_absent": unpublished_absent,
+        "unpublished_unreviewed": unpublished_unreviewed,
+        "unpublished_ineligible": unpublished_ineligible,
+        "dry_run": dry_run,
+    }
 
 
 def main() -> int:

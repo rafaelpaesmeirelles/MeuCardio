@@ -3,6 +3,7 @@ import { join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const sourceRoot = new URL("../src/", import.meta.url);
+const sourceRootPath = fileURLToPath(sourceRoot);
 
 // Exceção única e deliberada: o Corvia Mail precisa interpretar HTML recebido
 // por e-mail. Esse HTML é sanitizado e renderizado em iframe isolado, com CSP
@@ -131,12 +132,12 @@ async function walk(directory, failures) {
     if (!/\.(?:ts|tsx|js|jsx)$/.test(entry.name)) continue;
 
     const content = await readFile(path, "utf8");
-    const display = relative(sourceRoot.pathname, path);
+    const display = relative(sourceRootPath, path);
     failures.push(...validateRenderingSource(content, display));
   }
 }
 
-export async function checkRenderingTree(root = sourceRoot.pathname) {
+export async function checkRenderingTree(root = sourceRootPath) {
   const failures = [];
   await walk(root, failures);
   return failures;

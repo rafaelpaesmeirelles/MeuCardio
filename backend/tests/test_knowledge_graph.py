@@ -20,6 +20,7 @@ from app.models.evidence import EvidenceRecord
 from app.models.knowledge import KnowledgeEntity, KnowledgeRelation
 from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
+from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.api.study_tracks import ROTA as ROTAS_TRILHA
 from app.services import knowledge_graph as kg
@@ -277,7 +278,12 @@ def test_relacionados_de_agrupa_por_tipo_e_ordena_por_relevancia(db):
     _semear_conteudo_publicado(db)
     kg.backfill_mesmo_tema(db)
 
-    resultado = kg.relacionados_de(db, entity_type="documento", slug="ic-doc-1")
+    resultado = kg.relacionados_de(
+        db,
+        entity_type="documento",
+        slug="ic-doc-1",
+        incluir_contexto_tematico=True,
+    )
 
     assert resultado is not None
     assert resultado["slug"] == "ic-doc-1"
@@ -293,7 +299,7 @@ def test_relacionados_de_agrupa_por_tipo_e_ordena_por_relevancia(db):
             assert not (g["tipo"] == "documento" and item["slug"] == "ic-doc-1")
 
 
-def test_relacionados_de_pode_ocultar_vizinhos_apenas_taxonomicos(db):
+def test_relacionados_de_oculta_por_padrao_vizinhos_apenas_taxonomicos(db):
     _limpar(db)
     _semear_conteudo_publicado(db)
     kg.backfill_mesmo_tema(db)
@@ -302,7 +308,6 @@ def test_relacionados_de_pode_ocultar_vizinhos_apenas_taxonomicos(db):
         db,
         entity_type="documento",
         slug="ic-doc-1",
-        incluir_contexto_tematico=False,
     )
 
     assert resultado is not None
@@ -322,7 +327,7 @@ def test_relacionados_de_devolve_none_quando_item_nao_esta_no_grafo(db):
 # Reconciliação de segurança — conteúdo despublicado nunca continua visível
 # ---------------------------------------------------------------------------
 
-def test_backfill_arquiva_entidade_de_conteudo_despublicado(db):
+def test_preflight_arquiva_entidade_de_conteudo_despublicado(db):
     """Achado de segurança desta fase, mesmo padrão do vazamento histórico
     do RAG (documentado em CLAUDE.md): um item retirado do ar depois de já
     ter sido indexado no grafo não pode continuar aparecendo nas consultas."""
@@ -337,8 +342,8 @@ def test_backfill_arquiva_entidade_de_conteudo_despublicado(db):
     doc.published = False
     db.commit()
 
-    resultado = kg.backfill_mesmo_tema(db)
-    assert resultado["entidades_arquivadas"] >= 1
+    arquivadas = kg.arquivar_entidades_de_conteudo_despublicado(db)
+    assert arquivadas >= 1
 
     entidade = db.execute(select(KnowledgeEntity).where(KnowledgeEntity.slug == "ic-doc-1")).scalar_one()
     assert entidade.status == "arquivado"
@@ -371,7 +376,12 @@ def test_tema_em_dois_saltos_nao_trunca_origens_depois_dos_cinco_primeiros(db):
     db.commit()
 
     kg.backfill_mesmo_tema(db)
-    resultado = kg.relacionados_de(db, entity_type="documento", slug="doc-7")
+    resultado = kg.relacionados_de(
+        db,
+        entity_type="documento",
+        slug="doc-7",
+        incluir_contexto_tematico=True,
+    )
 
     assert resultado is not None
     grupo = next(g for g in resultado["grupos"] if g["tipo"] == "evidencia")
@@ -429,6 +439,172 @@ def test_backfill_ingere_referencias_explicitas_sem_inferencia_textual(db):
             "contains", "mentioned_in"} <= tipos
 
 
+def test_backfill_reconcilia_evidencia_para_estudo_por_slug_explicito(db):
+    _limpar(db)
+    evidencia = EvidenceRecord(
+        slug="ev-com-estudo", theme="Hipertensão", statement="Recomendação",
+        recommendation_class="I", evidence_level="A", society="ESC", year=2026,
+        guideline_title="Diretriz", reference="Referência",
+        review_status="revisado", published=True,
+    )
+    estudo_a = ScientificStudy(
+        slug="estudo-a", title="Estudo A", study_type="ensaio_clinico",
+        journal="Journal", year=2025, summary="Resumo A", key_findings="Achados A",
+        clinical_implications="Implicações A", theme="Hipertensão",
+        review_status="revisado", published=True,
+    )
+    estudo_b = ScientificStudy(
+        slug="estudo-b", title="Estudo B", study_type="metanalise",
+        journal="Journal", year=2026, summary="Resumo B", key_findings="Achados B",
+        clinical_implications="Implicações B", theme="Hipertensão",
+        review_status="revisado", published=True,
+    )
+    db.add_all([evidencia, estudo_a, estudo_b])
+    db.commit()
+
+    # Compatibilidade antecipada: o atributo será mapeado pela migration do
+    # loader, mas esta branch do grafo ainda não deve incorporar o schema.
+    evidencia.study_slug = estudo_a.slug
+    kg.backfill_mesmo_tema(db)
+
+    no_evidencia = db.execute(select(KnowledgeEntity).where(
+        KnowledgeEntity.entity_type == "evidencia",
+        KnowledgeEntity.slug == evidencia.slug,
+    )).scalar_one()
+    no_estudo_a = db.execute(select(KnowledgeEntity).where(
+        KnowledgeEntity.entity_type == "estudo",
+        KnowledgeEntity.slug == estudo_a.slug,
+    )).scalar_one()
+    relacao_a = db.execute(select(KnowledgeRelation).where(
+        KnowledgeRelation.source_entity_id == no_evidencia.id,
+        KnowledgeRelation.target_entity_id == no_estudo_a.id,
+        KnowledgeRelation.relation_type == "supported_by",
+    )).scalar_one()
+
+    assert relacao_a.relevance_score == 1.0
+    assert relacao_a.provenance_type == "structured_metadata"
+    assert relacao_a.confidence == "derived"
+    assert relacao_a.review_status == "revisado"
+    assert relacao_a.evidence_source == "EvidenceRecord.study_slug"
+    assert relacao_a.extra["campo"] == "EvidenceRecord.study_slug"
+    assert relacao_a.extra["graph_source_slug"] == evidencia.slug
+    assert relacao_a.extra["graph_target_slug"] == estudo_a.slug
+
+    evidencia.study_slug = estudo_b.slug
+    kg.backfill_mesmo_tema(db)
+
+    no_estudo_b = db.execute(select(KnowledgeEntity).where(
+        KnowledgeEntity.entity_type == "estudo",
+        KnowledgeEntity.slug == estudo_b.slug,
+    )).scalar_one()
+    relacao_b = db.execute(select(KnowledgeRelation).where(
+        KnowledgeRelation.source_entity_id == no_evidencia.id,
+        KnowledgeRelation.target_entity_id == no_estudo_b.id,
+        KnowledgeRelation.relation_type == "supported_by",
+    )).scalar_one()
+    db.refresh(relacao_a)
+
+    assert relacao_a.review_status == "rejeitado"
+    assert relacao_a.extra["_inactive_reason"] == "source_removed"
+    assert relacao_b.review_status == "revisado"
+    assert relacao_b.extra["destino_slug"] == estudo_b.slug
+
+    evidencia.study_slug = None
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao_b)
+
+    assert relacao_b.review_status == "rejeitado"
+    assert relacao_b.extra["_inactive_reason"] == "source_removed"
+
+
+def test_backfill_publica_vinculo_estudo_so_com_dupla_revisao(db):
+    _limpar(db)
+    evidencia = EvidenceRecord(
+        slug="ev-pendente", theme="Hipertensão", statement="Recomendação",
+        recommendation_class="IIa", evidence_level="B", society="ESC", year=2026,
+        guideline_title="Diretriz", reference="Referência",
+        review_status="pendente_revisao", published=True,
+    )
+    estudo = ScientificStudy(
+        slug="estudo-revisao", title="Estudo em revisão", study_type="coorte",
+        journal="Journal", year=2026, summary="Resumo", key_findings="Achados",
+        clinical_implications="Implicações", theme="Hipertensão",
+        review_status="revisado", published=True,
+    )
+    db.add_all([evidencia, estudo])
+    db.commit()
+    evidencia.study_slug = estudo.slug
+
+    kg.backfill_mesmo_tema(db)
+    assert db.execute(select(KnowledgeRelation).where(
+        KnowledgeRelation.relation_type == "supported_by",
+        KnowledgeRelation.extra["campo"].astext == "EvidenceRecord.study_slug",
+    )).scalars().all() == []
+
+    evidencia.review_status = "revisado"
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    relacao = db.execute(select(KnowledgeRelation).where(
+        KnowledgeRelation.relation_type == "supported_by",
+        KnowledgeRelation.extra["campo"].astext == "EvidenceRecord.study_slug",
+    )).scalar_one()
+    assert relacao.review_status == "revisado"
+
+    evidencia.review_status = "pendente_revisao"
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "rejeitado"
+    assert relacao.extra["_inactive_reason"] == "source_removed"
+
+    evidencia.review_status = "revisado"
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "revisado"
+
+    evidencia.published = False
+    db.commit()
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "rejeitado"
+    assert relacao.extra["_inactive_reason"] == "source_removed"
+
+    evidencia.published = True
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "revisado"
+
+    estudo.review_status = "pendente_revisao"
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+
+    assert relacao.review_status == "rejeitado"
+    assert relacao.extra["_inactive_reason"] == "source_removed"
+
+    estudo.review_status = "revisado"
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "revisado"
+
+    estudo.published = False
+    db.commit()
+    evidencia.study_slug = estudo.slug
+    kg.backfill_mesmo_tema(db)
+    db.refresh(relacao)
+    assert relacao.review_status == "rejeitado"
+    assert relacao.extra["_inactive_reason"] == "source_removed"
+
+
 def test_backfill_reativa_entidade_de_conteudo_republicado(db):
     _limpar(db)
     _semear_conteudo_publicado(db)
@@ -457,9 +633,10 @@ def test_relacionados_de_respeita_limite_por_tipo(db):
             db, entity_type="evidencia", canonical_id=i, slug=f"ev-{i}", title=f"Evidência {i}"
         )
         kg.registrar_relacao(
-            db, source=origem, target=alvo, relation_type="same_theme",
-            provenance_type="structured_metadata", confidence="derived",
+            db, source=origem, target=alvo, relation_type="supported_by",
+            provenance_type="editorial", confidence="explicit",
             relevance_score=i / 10,
+            evidence_source=f"curadoria:ev-{i}", review_status="revisado",
         )
     db.commit()
 
@@ -470,6 +647,28 @@ def test_relacionados_de_respeita_limite_por_tipo(db):
     assert grupo_evidencia["total_disponivel"] == 10
     # ordenado por relevância decrescente — os 3 primeiros são ev-9, ev-8, ev-7
     assert [i["slug"] for i in grupo_evidencia["itens"]] == ["ev-9", "ev-8", "ev-7"]
+
+
+def test_relacionados_de_nao_publica_same_theme_como_relacao_clinica(db):
+    _limpar(db)
+    origem = kg.registrar_entidade(
+        db, entity_type="documento", canonical_id=1, slug="origem-tema", title="Origem",
+    )
+    alvo = kg.registrar_entidade(
+        db, entity_type="evidencia", canonical_id=1, slug="alvo-tema", title="Alvo",
+    )
+    kg.registrar_relacao(
+        db, source=origem, target=alvo, relation_type="same_theme",
+        provenance_type="structured_metadata", confidence="derived",
+        relevance_score=0.35,
+    )
+    db.commit()
+
+    resultado = kg.relacionados_de(db, entity_type="documento", slug="origem-tema")
+
+    assert resultado is not None
+    assert resultado["grupos"] == []
+    assert resultado["total"] == 0
 
 
 def test_reconciliacao_atualiza_e_desativa_somente_relacao_automatica(db):

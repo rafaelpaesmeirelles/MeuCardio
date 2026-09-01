@@ -1,8 +1,10 @@
 import { readFile, readdir, stat } from "node:fs/promises";
 import { join, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 import { gzipSync } from "node:zlib";
 
 const dist = new URL("../dist/", import.meta.url);
+const distPath = fileURLToPath(dist);
 const manifest = JSON.parse(
   await readFile(new URL("../dist/.vite/manifest.json", import.meta.url), "utf8"),
 );
@@ -13,7 +15,7 @@ if (!mainEntry?.file) {
   process.exit(1);
 }
 
-const mainPath = join(dist.pathname, mainEntry.file);
+const mainPath = join(distPath, mainEntry.file);
 const mainBytes = (await stat(mainPath)).size;
 const mainGzipBytes = gzipSync(await readFile(mainPath)).length;
 const maxMainBytes = 300 * 1024;
@@ -41,20 +43,32 @@ async function listarArquivos(directory, files = []) {
   return files;
 }
 
-const swPath = join(dist.pathname, "sw.js");
+const swPath = join(distPath, "sw.js");
 const sw = await readFile(swPath, "utf8");
 let precacheBytes = 0;
 let precacheEntries = 0;
 const maxOptionalPrecacheJs = 160 * 1024;
+const forbiddenLegacyBrandAssets = new Set([
+  "corvia-logo-compacta.png",
+  "logo-marca.png",
+  "logo.png",
+]);
+const isPrecached = (relativePath) => (
+  sw.includes(`url:"${relativePath}"`) || sw.includes(`url:'${relativePath}'`)
+);
 
-for (const path of await listarArquivos(dist.pathname)) {
-  const rel = relative(dist.pathname, path).replaceAll("\\", "/");
+for (const path of await listarArquivos(distPath)) {
+  const rel = relative(distPath, path).replaceAll("\\", "/");
   if (rel === "sw.js" || rel.startsWith("workbox-")) continue;
-  if (!sw.includes(rel)) continue;
+  if (!isPrecached(rel)) continue;
 
   const bytes = (await stat(path)).size;
   precacheBytes += bytes;
   precacheEntries += 1;
+
+  if (forbiddenLegacyBrandAssets.has(rel)) {
+    failures.push(`PNG legado de marca indevidamente pré-carregado: ${rel}`);
+  }
 
   if (
     rel.endsWith(".js") &&

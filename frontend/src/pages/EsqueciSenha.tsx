@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import Icone from "../components/Icone";
-import PreHomeBrand from "../components/PreHomeBrand";
+import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/login.css";
 
 const BENEFICIOS = [
@@ -29,16 +29,15 @@ export default function EsqueciSenha() {
   }
 
   return (
-    <main className="login prehome prehome--recovery">
-      <PreHomeBrand
-        title={<>Recupere seu acesso com <strong>segurança</strong></>}
-        description={<>Retome o controle do seu Clinical Command Center com um fluxo independente, protegido e rastreável.</>}
-        benefits={BENEFICIOS}
-        trustTitle="Segurança que protege o que importa"
-        trustText="Seu acesso profissional e os dados do seu ambiente permanecem protegidos."
-      />
-      <section className="prehome-access" aria-labelledby="recovery-titulo">
-        <div className="prehome-card">
+    <PublicCardiologyFrame
+      eyebrow="Segurança da identidade"
+      title={<>Recupere seu acesso sem perder o seu <strong>universo.</strong></>}
+      description={<p>O caminho de volta é independente, temporário e protegido para preservar seus cinco espaços e o contexto profissional.</p>}
+      features={BENEFICIOS}
+      variant="form"
+      tone="violet"
+    >
+      <div className="prehome-card">
           <header className="prehome-card__header">
             <p className="prehome-card__eyebrow"><Icone nome="sincronizar" /> Segurança da conta</p>
             <h2 id="recovery-titulo">Esqueci minha senha</h2>
@@ -63,9 +62,7 @@ export default function EsqueciSenha() {
           )}
           {!enviado && <div className="prehome-card__actions"><div className="prehome-divider">ou</div><Link to="/entrar" className="prehome-secondary">← Voltar ao login</Link><a href="mailto:contato@corvia.med.br" className="prehome-link" style={{ textAlign: "center" }}>Preciso de ajuda com meu acesso</a></div>}
           <footer className="prehome-card__footer"><Icone nome="check" /> Ambiente seguro para uso profissional</footer>
-        </div>
-        <nav className="prehome-legal" aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></nav>
-      </section>
-    </main>
+      </div>
+    </PublicCardiologyFrame>
   );
 }

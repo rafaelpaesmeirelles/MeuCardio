@@ -2,11 +2,13 @@ from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
 from app.services.disease_manifest import load_disease_records
+from app.services.carregar_triagem_sintomas import load_triage_records
 
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas" / "metadados.json"
-CANONICAL_DISEASE_COUNT = 172
+CANONICAL_DISEASE_COUNT = 326
+TRIAGE_BASE = ROOT / "triagem-sintomas" / "metadados.json"
 
 
 def _load_script(name: str, path: Path):
@@ -17,7 +19,7 @@ def _load_script(name: str, path: Path):
     return module
 
 
-def test_catalogo_canonico_tem_172_doencas_incluindo_fragmentos():
+def test_catalogo_canonico_tem_326_doencas_incluindo_fragmentos():
     records = load_disease_records(BASE)
     assert len(records) == CANONICAL_DISEASE_COUNT
     slugs = {item["slug"] for item in records}
@@ -46,3 +48,26 @@ def test_inventario_conta_catalogo_canonico_com_fragmentos():
     result = inventory_module.inventory()
     assert result["fronts"]["doencas_especializadas"]["records"] == CANONICAL_DISEASE_COUNT
     assert result["fronts"]["doencas_especializadas"]["duplicate_keys"] == []
+
+
+def test_auditoria_e_inventario_usam_catalogo_canonico_de_triagem():
+    expected = load_triage_records(TRIAGE_BASE)
+    expected_slugs = {item["slug"] for item in expected}
+    assert {
+        "suspeita-infeccao-dispositivo-cardiaco-implantavel",
+        "complicacao-local-pos-cateterismo-procedimento-vascular",
+    } <= expected_slugs
+
+    audit_module = _load_script(
+        "audit_tudo_com_tudo_triage_fragments",
+        ROOT / "scripts" / "audit_tudo_com_tudo.py",
+    )
+    assert {item["slug"] for item in audit_module._load("triagem-sintomas")} == expected_slugs
+
+    inventory_module = _load_script(
+        "content_inventory_triage_fragments",
+        ROOT / "scripts" / "content_inventory.py",
+    )
+    result = inventory_module.inventory()
+    assert result["fronts"]["triagem_sintomas"]["records"] == len(expected)
+    assert result["fronts"]["triagem_sintomas"]["duplicate_keys"] == []

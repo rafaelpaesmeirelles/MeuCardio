@@ -9,15 +9,11 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.evidence import EvidenceRecord
+from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
 
 
-# `published` NUNCA vem do JSON. Publicar e decisao humana, registrada no banco
-# pela rota /api/admin/conteudo/publicar — e o checkpoint de revisao clinica
-# exigido para conteudo que vai a producao. Antes desta guarda, qualquer
-# recarga copiava `published: false` do arquivo por cima do banco e tirava do
-# ar tudo que ja estava publicado. Foi o que aconteceu com evidencias e
-# estudos ao recarregar uma correcao de texto. Mesmo principio que o
-# importer.py ja aplica aos documentos de content/.
+# O manifesto só pode reduzir publicação: `false` põe em quarentena, `true`
+# nunca promove. A decisão positiva continua fora do carregador.
 
 # Filtro pelas colunas reais do modelo — sem ele, um campo de documentação
 # novo no JSON (ex.: `review_note`) derruba a carga inteira com TypeError ao
@@ -32,15 +28,28 @@ def carregar(caminho_json: str) -> dict:
     db = SessionLocal()
     novos, atualizados = 0, 0
     try:
-        for item in itens:
-            item = {k: v for k, v in item.items() if k != "published" and k in _COLUNAS}
+        for bruto in itens:
+            item = {
+                k: v
+                for k, v in bruto.items()
+                if k not in {"published", "review_note"} and k in _COLUNAS
+            }
             existente = db.query(EvidenceRecord).filter(EvidenceRecord.slug == item["slug"]).first()
+            note = combined_review_note(
+                bruto,
+                existing=getattr(existente, "review_note", None),
+            )
+            if note is not None:
+                item["review_note"] = note
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(EvidenceRecord(**item))
+                registro = EvidenceRecord(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

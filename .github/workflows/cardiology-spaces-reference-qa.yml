@@ -186,6 +186,9 @@ jobs:
           async function activeContext() {
             return page.evaluate(() => ({
               active: document.querySelector('.spaces-door.is-active')?.textContent?.trim() || '',
+              selected: document.querySelector('.spaces-door[aria-pressed="true"]')?.textContent?.trim() || '',
+              preview: document.querySelector('.spaces-door.is-preview')?.textContent?.trim() || '',
+              previewState: document.querySelector('.spaces-door.is-preview')?.getAttribute('data-state') || '',
               title: document.querySelector('.spaces-title strong')?.textContent?.trim() || '',
               description: document.querySelector('.spaces-title small')?.textContent?.trim() || '',
             }));
@@ -196,26 +199,25 @@ jobs:
             await pesquisa.hover();
             await page.waitForTimeout(120);
             const hover = await activeContext();
-            if (!hover.active.includes('Pesquisa') || hover.title !== 'Pesquisa' || !/Evidência|literatura|investigação/i.test(hover.description)) {
-              failures.push(`preview-hover: Pesquisa não atualizou contexto ${JSON.stringify(hover)}`);
+            if (!hover.preview.includes('Pesquisa') || hover.previewState !== 'preview' || !hover.active.includes('Consultório') || !hover.selected.includes('Consultório') || hover.title !== 'Consultório') {
+              failures.push(`preview-hover: Pesquisa não recebeu preview local sem trocar a seleção ${JSON.stringify(hover)}`);
             }
-            await page.locator('.spaces-doors').hover({ position: { x: 2, y: 2 } });
+            await page.locator('.spaces-workspace__greeting').hover();
             await page.waitForTimeout(120);
             const afterHover = await activeContext();
-            if (!afterHover.active.includes('Consultório') || afterHover.title !== 'Consultório') failures.push(`preview-hover: saída não restaurou Consultório ${JSON.stringify(afterHover)}`);
+            if (afterHover.preview || !afterHover.active.includes('Consultório') || afterHover.title !== 'Consultório') failures.push(`preview-hover: saída não removeu o preview e preservou Consultório ${JSON.stringify(afterHover)}`);
 
             const ensino = page.locator('.spaces-door', { hasText: 'Ensino' });
             await ensino.focus();
             await page.waitForTimeout(120);
             const focused = await activeContext();
-            if (!focused.active.includes('Ensino') || focused.title !== 'Ensino' || !/Conhecimento|aprender|ensinar/i.test(focused.description)) {
-              failures.push(`preview-focus: Ensino não atualizou contexto ${JSON.stringify(focused)}`);
+            if (!focused.preview.includes('Ensino') || focused.previewState !== 'preview' || !focused.active.includes('Consultório') || !focused.selected.includes('Consultório') || focused.title !== 'Consultório') {
+              failures.push(`preview-focus: Ensino não recebeu preview local sem trocar a seleção ${JSON.stringify(focused)}`);
             }
-            await page.locator('.spaces-home__topbar').focus().catch(() => {});
             await page.evaluate(() => document.activeElement instanceof HTMLElement && document.activeElement.blur());
             await page.waitForTimeout(120);
             const afterFocus = await activeContext();
-            if (!afterFocus.active.includes('Consultório') || afterFocus.title !== 'Consultório') failures.push(`preview-focus: blur não restaurou Consultório ${JSON.stringify(afterFocus)}`);
+            if (afterFocus.preview || !afterFocus.active.includes('Consultório') || afterFocus.title !== 'Consultório') failures.push(`preview-focus: blur não removeu o preview e preservou Consultório ${JSON.stringify(afterFocus)}`);
           }
 
           async function certifySelectedContext(expectedLabel, descriptionPattern) {
@@ -281,7 +283,9 @@ jobs:
             if (!m.rail || m.rail.width < 82 || m.rail.width > 125 || m.rail.x > 150) failures.push(`${mode}: rail fora da geometria aprovada ${JSON.stringify(m.rail)}`);
             if (!m.day || m.day.width < 160 || m.day.width > 225 || m.day.right < 1470) failures.push(`${mode}: painel do dia fora da coluna direita ${JSON.stringify(m.day)}`);
             if (!m.now || m.now.width < 760) failures.push(`${mode}: camada AGORA estreita ${JSON.stringify(m.now)}`);
-            if (!m.dock || m.dock.width < 1400 || m.dock.bottom < 790) failures.push(`${mode}: dock não ocupa a base aprovada ${JSON.stringify(m.dock)}`);
+            const expectedDockBottom = m.viewport.height - 77;
+            if (!m.dock || m.dock.width < 1400 || Math.abs(m.dock.bottom - expectedDockBottom) > 4) failures.push(`${mode}: dock fora da base proporcional aprovada (esperado ${expectedDockBottom}) ${JSON.stringify(m.dock)}`);
+            if (!m.motto || (m.dock && m.motto.y < m.dock.bottom) || m.motto.bottom > m.viewport.height) failures.push(`${mode}: frase inferior fora da faixa reservada ${JSON.stringify(m.motto)}`);
             if (!m.heart || m.heart.width < 500) failures.push(`${mode}: coração holográfico ausente/pequeno ${JSON.stringify(m.heart)}`);
             if (!m.title || Math.abs((m.title.x + m.title.width / 2) - 768) > 165) failures.push(`${mode}: título do espaço fora do eixo central ${JSON.stringify(m.title)}`);
             const expectedTab = mode === 'complete' ? 'Completo' : mode === 'essential' ? 'Essencial' : 'Ciência & Ensino';

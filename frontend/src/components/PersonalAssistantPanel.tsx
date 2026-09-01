@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import Icone from "./Icone";
@@ -49,6 +49,9 @@ function normalizarAgendamento(item: AgendamentoIntegrado): Agendamento {
 }
 
 export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
+  const panelRef = useRef<HTMLElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const [agenda, setAgenda] = useState<Agendamento[] | null>(null);
   const [proximoAlvo, setProximoAlvo] = useState<ProximoLocal | null>(null);
   const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
@@ -80,9 +83,24 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
 
   useEffect(() => {
     if (!aberto) return;
-    function escapar(evento: KeyboardEvent) { if (evento.key === "Escape") onClose(); }
-    document.addEventListener("keydown", escapar);
-    return () => document.removeEventListener("keydown", escapar);
+    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    requestAnimationFrame(() => closeRef.current?.focus());
+    function controlarTeclado(evento: KeyboardEvent) {
+      if (evento.key === "Escape") { evento.preventDefault(); onClose(); return; }
+      if (evento.key !== "Tab") return;
+      const controls = Array.from(panelRef.current?.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])') || [])
+        .filter((elemento) => elemento.offsetParent !== null);
+      if (!controls.length) return;
+      const first = controls[0];
+      const last = controls[controls.length - 1];
+      if (evento.shiftKey && document.activeElement === first) { evento.preventDefault(); last.focus(); }
+      else if (!evento.shiftKey && document.activeElement === last) { evento.preventDefault(); first.focus(); }
+    }
+    document.addEventListener("keydown", controlarTeclado);
+    return () => {
+      document.removeEventListener("keydown", controlarTeclado);
+      requestAnimationFrame(() => previousFocusRef.current?.focus());
+    };
   }, [aberto, onClose]);
 
   const hoje = useMemo(() => {
@@ -204,8 +222,8 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
 
   return <>
     <div className="cos-assistant-backdrop is-visible" onClick={onClose} aria-hidden="true" />
-    <aside className="cos-assistant-panel is-open" aria-label="Assistente Pessoal CorVIA">
-      <header className="cos-assistant-panel__head"><div className="cos-assistant-panel__brand"><span className="cos-assistant-panel__spark">✦</span><div><small>Seu copiloto de rotina</small><strong>Assistente Pessoal</strong></div></div><button type="button" onClick={onClose} aria-label="Fechar Assistente Pessoal"><Icone nome="fechar" /></button></header>
+    <aside ref={panelRef} className="cos-assistant-panel is-open" role="dialog" aria-modal="true" aria-labelledby="corvia-assistant-title">
+      <header className="cos-assistant-panel__head"><div className="cos-assistant-panel__brand"><span className="cos-assistant-panel__spark">✦</span><div><small>Seu copiloto de rotina</small><strong id="corvia-assistant-title">Assistente Pessoal</strong></div></div><button ref={closeRef} type="button" onClick={onClose} aria-label="Fechar Assistente Pessoal"><Icone nome="fechar" /></button></header>
       <div className="cos-assistant-panel__body">
         <section className="cos-assistant-briefing">
           <p className="eyebrow">Seu dia</p>

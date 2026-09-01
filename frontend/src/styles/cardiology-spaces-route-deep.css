@@ -13,8 +13,8 @@ body.corvia-space--pesquisa .clinical-os{--route-space-name:"PESQUISA"}
 body.corvia-space--gestao .clinical-os{--route-space-name:"GESTÃO"}
 
 /* Páginas sem o cabeçalho compartilhado recebem uma faixa de contexto própria.
-   :has() evita duplicação nas páginas já migradas para cs-page-header. */
-.clinical-os .cos-content:not(:has(.cs-page-header))::before{
+   :has() evita duplicação tanto no primitive atual quanto no legado. */
+.clinical-os .cos-content:not(:has(.cs-page-header, .cv-page-hero))::before{
   display:flex;
   min-height:30px;
   align-items:center;
@@ -36,7 +36,7 @@ body.corvia-space--gestao .clinical-os{--route-space-name:"GESTÃO"}
 
 /* Títulos próprios de páginas antigas passam a se comportar como módulos do
    mesmo universo sem exigir reescrita de cada DOM. */
-.clinical-os .cos-content:not(:has(.cs-page-header)) :is(h1,.page-title,.titulo-pagina):first-child{
+.clinical-os .cos-content:not(:has(.cs-page-header, .cv-page-hero)) :is(h1,.page-title,.titulo-pagina):first-child{
   color:#edf8fa;
   text-shadow:0 0 22px rgba(var(--space-rgb),.10);
 }
@@ -123,7 +123,7 @@ body.corvia-route--emergencia .clinical-os .emerg :where(.danger,.critical,.is-c
 }
 
 @media(max-width:900px){
-  .clinical-os .cos-content:not(:has(.cs-page-header))::before{
+  .clinical-os .cos-content:not(:has(.cs-page-header, .cv-page-hero))::before{
     margin:-2px 0 10px;
     padding:7px 10px;
     font-size:.49rem;

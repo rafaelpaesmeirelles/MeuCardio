@@ -72,15 +72,26 @@ def test_apple_uses_signed_client_secret_and_verified_identity_token():
 
 def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     login = read(FRONTEND / "pages" / "Entrar.tsx")
-    css = compact(read(FRONTEND / "styles" / "login-fullscreen-social.css"))
-    assert 'prehome--login prehome--fullscreen' in login
-    assert 'login-fullscreen-social.css' in login
+    css = compact(read(FRONTEND / "styles" / "cardiology-spaces-login.css"))
+    local_styles = [
+        line.strip()
+        for line in login.splitlines()
+        if line.strip().startswith('import "../styles/')
+    ]
+
+    assert '<main className="login login-gateway">' in login
+    assert 'prehome--login prehome--fullscreen' not in login
+    assert local_styles[-1] == 'import "../styles/cardiology-spaces-login.css";'
     assert '/auth/social/providers' not in login
     assert '/auth/social/${provider}/start' not in login
     assert 'prehome-social' not in login
-    assert "height:100dvh" in css
+    assert ".login-gateway{" in css
+    assert "height:100svh" in css
+    assert "overflow:hidden" in css
+    assert "@media(max-width:760px)" in css
+    assert "height:auto" in css
     assert "min-height:100svh" in css
-    assert "@media(max-width:820px)" in css
+    assert "overflow-y:auto" in css
 
 
 def test_login_route_stays_online_first_instead_of_inflating_pwa_preload():

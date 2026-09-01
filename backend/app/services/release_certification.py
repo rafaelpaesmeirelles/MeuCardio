@@ -12,6 +12,7 @@ MANDATORY_FINAL_GATES: tuple[str, ...] = (
     "RC2 Acceptance — Canonical CorVIA",
     "Visual QA — Clinical OS",
     "Corpus database reconciliation",
+    "Corpus inventory",
     "Deep functional inventory and public apps",
 )
 

@@ -45,10 +45,11 @@ class StudyTrack(Base):
 class StudyTrackProgress(Base):
     """Onde cada médico parou em cada trilha.
 
-    Guarda a etapa concluída pelo `item_slug`, e não pela posição na lista: se a
-    trilha for reordenada ou ganhar uma etapa no meio, o progresso continua
-    apontando para o que a pessoa de fato leu. Guardar por índice faria uma
-    curadoria futura reescrever o histórico de quem já estudou.
+    Guarda a etapa concluída pela identidade composta ``item_type:item_slug``,
+    e não pela posição na lista: se a trilha for reordenada ou ganhar uma etapa
+    no meio, o progresso continua apontando para o que a pessoa de fato leu.
+    Slugs simples do formato anterior continuam legíveis e são expandidos pela
+    camada de compatibilidade na primeira escrita.
     """
 
     __tablename__ = "study_track_progress"
@@ -59,7 +60,7 @@ class StudyTrackProgress(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     track_id: Mapped[int] = mapped_column(ForeignKey("study_tracks.id", ondelete="CASCADE"), index=True)
-    concluidas: Mapped[list] = mapped_column(JSONB, default=list)   # item_slug das etapas
+    concluidas: Mapped[list] = mapped_column(JSONB, default=list)  # item_type:item_slug; aceita legado
     concluida_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)

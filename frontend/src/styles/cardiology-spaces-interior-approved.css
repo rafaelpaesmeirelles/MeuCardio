@@ -186,7 +186,7 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
   color:#aec0cc!important;
   background:linear-gradient(180deg,rgba(7,25,42,.9),rgba(3,14,25,.96))!important;
   border:1px solid rgba(var(--space-rgb),.15)!important;
-  border-radius:16px!important;
+  border-radius:12px!important;
   box-shadow:0 22px 56px -42px #000,inset 0 1px rgba(255,255,255,.02)!important;
 }
 .clinical-os .cos-intelligence :where(h2,h3,strong){color:#dce9ef!important}
@@ -213,9 +213,8 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
     radial-gradient(circle at 14% 18%,rgba(var(--space-rgb),.13),transparent 16rem),
     linear-gradient(105deg,rgba(7,28,47,.96),rgba(3,16,28,.96))!important;
   border:1px solid rgba(var(--space-rgb),.23)!important;
-  border-radius:14px!important;
+  border-radius:12px!important;
   box-shadow:0 18px 45px -38px rgba(var(--space-rgb),.75),inset 0 1px rgba(255,255,255,.03)!important;
-  clip-path:polygon(1.1% 0,98.9% 0,100% 100%,0 100%)!important;
 }
 .clinical-os .cc-page-header::after{
   position:absolute;right:-8%;bottom:-80%;width:34%;aspect-ratio:1;border:1px solid rgba(var(--space-rgb),.14);border-radius:50%;box-shadow:0 0 45px rgba(var(--space-rgb),.06);content:"";pointer-events:none
@@ -240,7 +239,7 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
   padding:15px 16px!important;
   background:linear-gradient(145deg,rgba(7,26,43,.9),rgba(4,17,30,.93))!important;
   border:1px solid rgba(var(--space-rgb),.13)!important;
-  border-radius:13px!important;
+  border-radius:12px!important;
   box-shadow:inset 0 1px rgba(255,255,255,.018),0 16px 40px -36px #000!important;
 }
 .clinical-os .cc-section__heading{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:12px!important;margin-bottom:10px!important;padding-bottom:9px!important;border-bottom:1px solid rgba(var(--space-rgb),.095)!important}
@@ -249,7 +248,7 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
 .clinical-os .cc-section__heading p{margin:4px 0 0!important;color:#71899b!important;font-size:.61rem!important;line-height:1.45!important}
 
 .clinical-os :where(.cc-metric,.cc-context-link,.cc-empty){
-  color:#d9e8ed!important;background:linear-gradient(145deg,rgba(8,29,47,.88),rgba(4,18,31,.91))!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-radius:11px!important;box-shadow:inset 0 1px rgba(255,255,255,.016)!important
+  color:#d9e8ed!important;background:linear-gradient(145deg,rgba(8,29,47,.88),rgba(4,18,31,.91))!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-radius:12px!important;box-shadow:inset 0 1px rgba(255,255,255,.016)!important
 }
 .clinical-os .cc-metric{min-height:84px!important;padding:11px!important}.clinical-os .cc-metric__top{color:#718a9a!important;font-size:.55rem!important}.clinical-os .cc-metric__top svg{color:var(--space-accent)!important}.clinical-os .cc-metric>strong{color:#eff9fb!important;font-size:1.2rem!important}.clinical-os .cc-metric>small{color:#687f90!important}
 .clinical-os .cc-context-link:hover{transform:translateY(-1px)!important;border-color:rgba(var(--space-rgb),.35)!important;background:rgba(var(--space-rgb),.06)!important}
@@ -264,6 +263,7 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
   [class$="__box"],[class*="__box "],
   [class$="__tile"],[class*="__tile "]
 ){
+  border-radius:12px!important;
   border-color:rgba(var(--space-rgb),.12)!important;
   box-shadow:inset 0 1px rgba(255,255,255,.014),0 14px 38px -36px #000!important;
 }
@@ -290,7 +290,7 @@ body.corvia-route--assistente .clinical-os{--space-rgb:43,216,225;--space-accent
 }
 
 /* Tabelas e dados clínicos. */
-.clinical-os .cos-content table{width:100%;overflow:hidden;background:rgba(4,17,29,.8)!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-collapse:separate!important;border-spacing:0!important;border-radius:10px!important}
+.clinical-os .cos-content table{width:100%;overflow:hidden;background:rgba(4,17,29,.8)!important;border:1px solid rgba(var(--space-rgb),.12)!important;border-collapse:separate!important;border-spacing:0!important;border-radius:12px!important}
 .clinical-os .cos-content thead{background:rgba(var(--space-rgb),.055)!important}.clinical-os .cos-content th{color:#a9bdc9!important;font-size:.58rem!important;font-weight:720!important;letter-spacing:.04em!important;border-color:rgba(var(--space-rgb),.11)!important}.clinical-os .cos-content td{color:#8ea4b2!important;border-color:rgba(var(--space-rgb),.075)!important}.clinical-os .cos-content tr:hover td{background:rgba(var(--space-rgb),.025)!important}
 
 /* Campos e controles — integra sem comprometer o contrato de contraste final. */
@@ -329,7 +329,7 @@ body.corvia-route--emergencia .clinical-os .cos-content .emerg{background:
   .clinical-os .cos-shell{margin-left:0!important}
   .clinical-os .cos-workspace{display:block!important;min-height:calc(100svh - 66px)!important;padding:10px 12px 88px!important}
   .clinical-os .cos-content{width:100%!important}
-  .clinical-os .cos-intelligence{position:relative!important;top:auto!important;max-height:none!important;margin-top:10px!important;border-radius:13px!important}
+  .clinical-os .cos-intelligence{position:relative!important;top:auto!important;max-height:none!important;margin-top:10px!important;border-radius:12px!important}
   .clinical-os .cos-topbar{min-height:66px!important;padding:8px 10px!important;background:rgba(2,11,19,.94)!important}
   .clinical-os .cos-command-mini{min-height:40px!important;border-radius:10px!important}
   .cc-mobile-nav{background:rgba(3,15,26,.96)!important;border-color:rgba(var(--space-rgb),.13)!important;box-shadow:0 -14px 34px rgba(0,0,0,.22)!important;backdrop-filter:blur(18px)!important}
@@ -338,9 +338,9 @@ body.corvia-route--emergencia .clinical-os .cos-content .emerg{background:
   .cc-mobile-more__grid>a{background:linear-gradient(145deg,rgba(9,30,45,.95),rgba(5,20,32,.98))!important;border-color:rgba(var(--space-rgb),.10)!important}
   .cc-mobile-more__grid>a>span{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.065)!important}
 
-  .clinical-os .cc-page-header{min-height:auto!important;display:grid!important;padding:15px!important;clip-path:none!important;border-radius:12px!important}
+  .clinical-os .cc-page-header{min-height:auto!important;display:grid!important;padding:15px!important;border-radius:12px!important}
   .clinical-os .cc-page-header__identity{align-items:flex-start!important}.clinical-os .cc-page-header__icon{width:40px!important;height:40px!important;flex-basis:40px!important}.clinical-os .cc-page-header h1{font-size:1.48rem!important}.clinical-os .cc-page-header__actions{justify-content:flex-start!important}
-  .clinical-os .cc-section{padding:12px!important;border-radius:11px!important}.clinical-os .cc-section__heading{display:grid!important}
+  .clinical-os .cc-section{padding:12px!important;border-radius:12px!important}.clinical-os .cc-section__heading{display:grid!important}
   .clinical-os .cos-content table{font-size:.72rem!important}
 }
 

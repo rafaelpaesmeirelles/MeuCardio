@@ -2,9 +2,8 @@
 
 Segue o padrão das outras frentes, com duas diferenças que são deste conteúdo:
 
-1. **`published` NUNCA vem do arquivo.** Repetido aqui porque já aconteceu de
-   verdade nas frentes de evidências e estudos: o carregador copiava o campo do
-   JSON por cima do banco e qualquer recarga despublicava tudo em silêncio.
+1. **`published` nunca promove pela carga.** `false` é respeitado como
+   quarentena; `true` depende da decisão editorial explícita fora do loader.
 2. **Recusa material que contenha posologia.** A Tarefa 12 é explícita: o
    material é educativo, não prescritivo. A checagem é mecânica e propositalmente
    grosseira — prefere recusar um texto legítimo a deixar passar uma dose para
@@ -26,6 +25,12 @@ from typing import Any
 
 from app.core.db import SessionLocal
 from app.models.patient_material import PatientMaterial
+from app.services.scientific_loader_safety import (
+    enforce_safe_publication,
+    production_provenance,
+    source_references,
+    source_review_note,
+)
 
 # "500 mg", "12,5mg", "5 mg/kg", "2 comprimidos ao dia", "80 UI"
 POSOLOGIA = re.compile(
@@ -131,7 +136,8 @@ def carregar(caminho: str = "/material-paciente/metadados.json") -> dict:
 
             reg = (db.query(PatientMaterial)
                      .filter(PatientMaterial.slug == item["slug"]).first())
-            if reg is None:
+            is_new = reg is None
+            if is_new:
                 reg = PatientMaterial(slug=item["slug"])
                 db.add(reg)
                 novos += 1
@@ -146,10 +152,23 @@ def carregar(caminho: str = "/material-paciente/metadados.json") -> dict:
             reg.secoes = item.get("secoes", [])
             reg.sinais_de_alerta = item.get("sinais_de_alerta", [])
             reg.perguntas = item.get("perguntas", [])
-            reg.fontes = item.get("fontes", [])
+            references = source_references(item, primary="fontes")
+            if references is not None:
+                reg.fontes = references
+            elif is_new:
+                reg.fontes = []
             reg.resumo = item.get("resumo")
-            reg.review_status = item.get("review_status", "pendente_revisao")
-            # `published` fica de fora de propósito — ver docstring do módulo.
+            note = source_review_note(item)
+            if note is not None:
+                reg.review_note = note
+            provenance = production_provenance(item)
+            if provenance is not None:
+                reg.fonte_producao = provenance
+            if "review_status" in item:
+                reg.review_status = item["review_status"]
+            elif is_new:
+                reg.review_status = "pendente_revisao"
+            enforce_safe_publication(reg, item, is_new=is_new)
 
         db.commit()
     finally:

@@ -35,6 +35,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "frontend/src/pages/GuiaDoencas.tsx"
 DETAIL = ROOT / "frontend/src/pages/GuiaDoenca.tsx"
 LIBRARY_API = ROOT / "backend/app/api/library.py"
+SPECIALTY_API = ROOT / "backend/app/api/specialty_guides.py"
 
 
 class _FakeQuery:
@@ -147,3 +148,8 @@ def test_catalogo_da_biblioteca_aponta_para_rota_canonica():
 
     assert '("doencas_especializadas", "Guia de Doenças", "/doencas", SpecialtyDisease)' in source
     assert '"/guias-doencas", SpecialtyDisease' not in source
+
+
+def test_filtro_de_subtipo_aceita_os_valores_descritivos_do_corpus():
+    source = SPECIALTY_API.read_text(encoding="utf-8")
+    assert "subtype: str | None = Query(None, max_length=400)" in source

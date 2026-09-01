@@ -14,8 +14,6 @@ type Caso = {
   enunciado: string;
   pergunta: string;
   opcoes: string[];
-  resposta_correta: number;
-  explicacao: string;
   source_refs: string[];
 };
 

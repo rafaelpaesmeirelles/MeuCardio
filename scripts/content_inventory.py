@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
 from app.services.disease_manifest import load_disease_records  # noqa: E402
+from app.services.triage_manifest import load_triage_records  # noqa: E402
 
 SOURCES: dict[str, dict[str, str]] = {
     "documentos": {"directory": "content", "kind": "markdown"},
@@ -153,6 +154,8 @@ def inventory() -> dict[str, Any]:
         try:
             if name == "doencas_especializadas":
                 payload: Any = load_disease_records(manifest)
+            elif name == "triagem_sintomas":
+                payload = load_triage_records(manifest)
             else:
                 payload = json.loads(manifest.read_text(encoding="utf-8"))
         except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:

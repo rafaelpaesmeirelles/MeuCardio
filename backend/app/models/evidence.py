@@ -28,6 +28,9 @@ class EvidenceRecord(Base):
     theme: Mapped[str] = mapped_column(String(80), index=True)
     tags: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     document_slug: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    study_slug: Mapped[str | None] = mapped_column(
+        String(255), nullable=True, index=True
+    )
 
     review_status: Mapped[str] = mapped_column(String(40), default="pendente_revisao")
     review_note: Mapped[str | None] = mapped_column(Text, nullable=True)

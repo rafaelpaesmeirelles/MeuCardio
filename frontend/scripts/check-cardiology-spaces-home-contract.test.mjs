@@ -5,8 +5,9 @@ import test from "node:test";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const home = read("src/pages/CardiologySpacesHome.tsx");
 const app = read("src/App.tsx");
-const styles = read("src/styles/cardiology-spaces-v2.css");
+const styles = read("src/styles/cardiology-spaces-home.css");
 const tour = read("src/pages/CardiologySpacesTour.tsx");
+const shell = read("src/components/Shell.tsx");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
 const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
 const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
@@ -51,9 +52,11 @@ test("approved image composition is encoded as a product contract", () => {
   assert.match(styles, /\.spaces-home__heart/);
 });
 
-test("portal preview is temporary on mouse and keyboard and only click persists selection", () => {
+test("portal preview is local on mouse and keyboard and only click persists selection", () => {
   assert.match(home, /const \[previewSpace, setPreviewSpace\] = useState<SpaceId \| null>\(null\)/);
-  assert.match(home, /availableSpaces\.find\(\(space\) => space\.id === \(previewSpace \|\| selectedSpace\)\)/);
+  assert.match(home, /availableSpaces\.find\(\(space\) => space\.id === selectedSpace\)/);
+  assert.match(home, /const preview = previewSpace === space\.id && !active/);
+  assert.match(home, /data-state=\{active \? "active" : preview \? "preview" : "inactive"\}/);
   assert.match(home, /onMouseEnter=\{\(\) => setPreviewSpace\(space\.id\)\}/);
   assert.match(home, /onFocus=\{\(\) => setPreviewSpace\(space\.id\)\}/);
   assert.match(home, /onBlur=\{\(\) => setPreviewSpace\(null\)\}/);
@@ -84,11 +87,18 @@ test("Meu dia entre espaços merges all canonical agenda sources without invente
 test("Deslocamento uses the canonical mobility target, live geolocation and a real map escape hatch", () => {
   assert.match(home, /"\/agenda\/mobility\/prepare-next-target"/);
   assert.match(home, /"\/agenda\/mobility\/commute-target"/);
+  assert.match(home, /"\/agenda\/mobility\/map-config"/);
   assert.match(home, /navigator\.geolocation\.getCurrentPosition/);
   assert.match(home, /target_key: target\.target_key/);
   assert.match(home, /https:\/\/www\.google\.com\/maps\/dir\/\?api=1&destination=/);
+  assert.match(home, /<MapaDeslocamento/);
+  assert.match(home, /buildMiniRouteGeometry\(route\)/);
+  assert.match(home, /route\.geometry\.value/);
+  assert.match(home, /route\.traffic_segments/);
+  assert.match(home, /data-geometry=\{miniRoute\.actual \? "real" : "preview"\}/);
   assert.match(home, /spaces-orbit/);
   assert.match(styles, /\.spaces-orbit/);
+  assert.match(styles, /spaces-stellar-route__traffic--traffic_jam/);
   assert.match(styles, /@keyframes spaces-flight/);
 });
 
@@ -140,8 +150,27 @@ test("tour is immersive and automatically gated only for onboarding and investor
   assert.match(app, /tour\/cardiology-spaces\?retorno=\//);
 });
 
+test("tour return target is resolved against and confined to the current origin", () => {
+  assert.match(tour, /new URL\(requested, window\.location\.origin\)/);
+  assert.match(tour, /resolved\.origin !== window\.location\.origin/);
+  assert.doesNotMatch(tour, /requested\.startsWith\("\/"\).*requested\.startsWith\("\/\/"\)/);
+});
+
 test("detail and alias routes stay outside the function catalog", () => {
   for (const excluded of ["/:slug", "/:id", "/heart-team/:caseId", "/admin/usuarios/:id", "/ecg-ia", "/assinatura", "/entrar", "/redefinir-senha", "/em-breve", "/cursos"]) {
     assert.ok(!catalogPaths.includes(excluded), `${excluded} não é um ponto de entrada primário`);
+  }
+});
+
+test("the operational feature flag restores the complete legacy shell", () => {
+  assert.match(shell, /const spacesEnabled = cardiologySpacesEnabled\(\)/);
+  assert.match(shell, /spacesEnabled \? \(\s*<CardiologySpacesAppFrame \/>/);
+  for (const legacySurface of [
+    "<ClinicalDesktopNav />",
+    "<HomePendingActionsPortal />",
+    "<ShellClinicalOSLaunch />",
+    "<ClinicalMobileNav />",
+  ]) {
+    assert.ok(shell.includes(legacySurface), `rollback precisa restaurar ${legacySurface}`);
   }
 });

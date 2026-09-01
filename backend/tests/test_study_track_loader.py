@@ -22,6 +22,14 @@ def _limpar_registros(db, track_slug: str, evidence_slug: str) -> None:
     db.commit()
 
 
+def test_carregador_valida_slug_real_de_calculadora(db):
+    from app.services.calculators import REGISTRY
+
+    slug_real = next(iter(REGISTRY))
+    assert _existe(db, "calculadora", slug_real) is True
+    assert _existe(db, "calculadora", "calculadora-que-nao-existe") is False
+
+
 def test_carregador_aceita_evidencia_existente_na_trilha(db, tmp_path):
     track_slug = "trilha-teste-referencia-evidencia"
     evidence_slug = "evidencia-teste-referencia-trilha"

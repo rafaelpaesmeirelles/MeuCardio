@@ -21,6 +21,9 @@ from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.calculators import REGISTRY
+from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
+from app.services.study_track_progress import stage_identity
 
 CAMPOS = {"slug", "titulo", "tema", "objetivo", "nivel", "etapas", "review_status", "revisao"}
 
@@ -39,9 +42,9 @@ def _existe(db, item_type: str, slug: str) -> bool:
     if item_type == "caso_clinico":
         return db.query(ClinicalCase).filter(ClinicalCase.slug == slug).first() is not None
     if item_type == "calculadora":
-        # As calculadoras vivem em código, não em tabela — a existência é
-        # conferida pela rota de calculadoras, e aqui a referência é aceita.
-        return True
+        # Calculadoras vivem em código, mas o mesmo registro que alimenta a
+        # rota permite validar o slug antes que um link quebrado seja publicado.
+        return slug in REGISTRY
     return False
 
 
@@ -62,6 +65,16 @@ def carregar(caminho_json: str) -> dict:
             if quebradas:
                 recusadas.append(f"{item.get('slug','?')}: referência inexistente -> {quebradas}")
                 continue
+            identidades = [
+                stage_identity(str(e.get("item_type") or ""), str(e.get("item_slug") or ""))
+                for e in etapas
+            ]
+            duplicadas = sorted({identidade for identidade in identidades if identidades.count(identidade) > 1})
+            if duplicadas:
+                recusadas.append(
+                    f"{item.get('slug','?')}: identidade de etapa duplicada -> {duplicadas}"
+                )
+                continue
             sem_porque = [e.get("item_slug") for e in etapas if not e.get("por_que")]
             if sem_porque:
                 recusadas.append(f"{item['slug']}: etapas sem 'por_que' -> {sem_porque}")
@@ -69,12 +82,21 @@ def carregar(caminho_json: str) -> dict:
 
             item["etapas"] = sorted(etapas, key=lambda e: e.get("ordem", 0))
             existente = db.query(StudyTrack).filter(StudyTrack.slug == item["slug"]).first()
+            note = combined_review_note(
+                bruto,
+                existing=getattr(existente, "revisao", None),
+            )
+            if note is not None:
+                item["revisao"] = note
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(StudyTrack(**item))
+                registro = StudyTrack(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

@@ -1,7 +1,10 @@
 import { readFile, readdir } from "node:fs/promises";
 import { join, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const root = new URL("../src/", import.meta.url);
+const rootPath = fileURLToPath(root);
+const frontendPath = fileURLToPath(new URL("..", root));
 const failures = [];
 
 async function walk(directory) {
@@ -15,7 +18,7 @@ async function walk(directory) {
     if (!/\.(ts|tsx|js|jsx)$/.test(entry.name)) continue;
 
     const content = await readFile(path, "utf8");
-    const display = relative(new URL("..", root).pathname, path);
+    const display = relative(frontendPath, path);
 
     // A caixa CorvIA Mail tem credencial e sessão separadas; este guard protege
     // exclusivamente a sessão principal da plataforma nesta etapa.
@@ -44,7 +47,7 @@ async function walk(directory) {
   }
 }
 
-await walk(root.pathname);
+await walk(rootPath);
 
 const apiPath = new URL("../src/lib/api.ts", import.meta.url);
 const api = await readFile(apiPath, "utf8");

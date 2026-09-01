@@ -5,14 +5,17 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import pytest
+from sqlalchemy import Text
 
 from app.commands.reconcile_content import FRONTS
+from app.models.specialty_guide import SpecialtyDisease
 from app.services.clinical_rule_engine import (
     evaluate_rules,
     validate_answers,
     validate_question_definitions,
     validate_rule_definitions,
 )
+from app.services.disease_manifest import load_disease_records
 
 ROOT = Path(__file__).resolve().parents[2]
 DISEASES_PATH = ROOT / "doencas/metadados.json"
@@ -55,6 +58,24 @@ def test_specialty_catalog_has_all_areas_and_canonical_minimum():
     )
     assert all(item.get("source_refs") for item in items)
     _assert_urls(items)
+
+
+def test_specialty_catalog_fits_every_bounded_string_column_without_truncation():
+    items = load_disease_records(DISEASES_PATH)
+    violations: list[tuple[str, str, int, int]] = []
+
+    for column in SpecialtyDisease.__table__.columns:
+        limit = getattr(column.type, "length", None)
+        if not limit:
+            continue
+        for item in items:
+            value = item.get(column.name)
+            if isinstance(value, str) and len(value) > limit:
+                violations.append((item["slug"], column.name, len(value), limit))
+
+    assert isinstance(SpecialtyDisease.__table__.c.subtype.type, Text)
+    assert max(len(str(item.get("subtype") or "")) for item in items) > 120
+    assert violations == []
 
 
 def test_congenital_and_fetal_catalog_taxonomy_is_searchable():

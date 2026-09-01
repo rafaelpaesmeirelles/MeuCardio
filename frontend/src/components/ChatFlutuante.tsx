@@ -259,31 +259,19 @@ export default function ChatFlutuante() {
 
   return (
     <>
-      {/* Botão flutuante. Fica acima do atalho de emergência na ordem visual,
-          mas deslocado à esquerda para não cobri-lo — o de emergência é o que
-          precisa estar sempre alcançável primeiro. */}
+      {/* Acesso ao chat deliberadamente não circular: o rótulo e a geometria de
+          conversa evitam confundi-lo com o atalho clínico de Emergência. */}
       {!aberto && (
         <button
+          className="corvia-chat-launch"
           onClick={() => setAberto(true)}
           aria-label={naoLidas > 0 ? `Abrir o CorvIA Chat, ${naoLidas} mensagens não lidas` : "Abrir o CorvIA Chat"}
           title="CorvIA Chat"
-          style={{
-            position: "fixed", right: 18, bottom: 78, zIndex: 1200,
-            width: 56, height: 56, borderRadius: "50%", border: "none", cursor: "pointer",
-            background: "var(--primaria)", boxShadow: "0 4px 14px rgba(11,46,69,.35)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-          }}
         >
-          <IconeChat tamanho={30} variante="sobre-navy" />
+          <IconeChat tamanho={24} variante="sobre-navy" />
+          <span className="corvia-chat-launch__label">Chat</span>
           {naoLidas > 0 && (
-            <span
-              style={{
-                position: "absolute", top: -2, right: -2, background: "var(--acao)", color: "#fff",
-                fontSize: ".72rem", fontWeight: 700, minWidth: 20, height: 20, borderRadius: 10,
-                display: "flex", alignItems: "center", justifyContent: "center", padding: "0 5px",
-                border: "2px solid var(--branco, #fff)",
-              }}
-            >
+            <span className="corvia-chat-launch__badge">
               {naoLidas > 99 ? "99+" : naoLidas}
             </span>
           )}

@@ -59,6 +59,30 @@ def test_compose_de_producao_monta_todas_as_fontes_do_reconciliador():
             host_dir = container_dir.name
         assert f"./{host_dir}:{container_dir}:ro" in compose
 
+    # O backend de produção é construído apenas a partir de ./backend. Dentro
+    # do container, o reconciliador resolve o repositório como `/` e precisa
+    # receber separadamente as decisões editoriais versionadas; sem este mount,
+    # todo conteúdo novo falha fechado e os lotes aprovados não chegam ao ar.
+    assert "./editorial-approvals:/editorial-approvals:ro" in compose
+
+
+def test_rc2_monta_aprovacoes_e_reproduz_somente_o_snapshot_publico_e16():
+    workflow = (REPOSITORY_ROOT / ".github/workflows/rc2-acceptance.yml").read_text(
+        encoding="utf-8"
+    )
+
+    assert "triagem-sintomas editorial-approvals" in workflow
+    assert "/editorial-approvals/science-release-20260901.json" in workflow
+    assert "18f4d18450cb36f46dc26dcd7c8efda446218a6fd937189a1d1fb3470393b6d0" in workflow
+    assert "d779cc4de3d7a351517e0ff00cd34a1a53d96780ea9b6fe915d585aebdf40968" in workflow
+    assert "exact_emergency_reference_slugs" in workflow
+    assert "f01961e2f34b97106993b0b1977a0ffb0ce7bbb7b8578762d240a15f949de19f" in workflow
+    assert "17c87689aa109248a169d580079d35141de7a04c038e49d9a1b0539f7dfb6386" in workflow
+    assert "Document.slug.in_(emergency_reference_slugs)" in workflow
+    assert "fronts['medicamentos']['published'] == 206" in workflow
+    assert "fronts['emergencia']['published'] == 77" in workflow
+    assert "published_emergency_documents == 165" in workflow
+
 
 def test_catalogo_soma_as_treze_frentes_e_expõe_baselines():
     resposta = catalog(db=_SessaoFalsa(_contagens_no_minimo()), _=object())

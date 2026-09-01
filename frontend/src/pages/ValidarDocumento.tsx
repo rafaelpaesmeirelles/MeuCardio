@@ -1,6 +1,13 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import PublicCardiologyFrame from "../components/PublicCardiologyFrame";
 import "../styles/validar-documento.css";
+
+const RECURSOS_VALIDACAO = [
+  { icon: "check" as const, title: "Conteúdo clínico protegido", detail: "A página não revela medicamentos, diagnósticos nem dados do paciente.", tone: "green" as const },
+  { icon: "documento" as const, title: "Integridade verificável", detail: "Emissão, hash e assinatura permanecem separados e rastreáveis.", tone: "blue" as const },
+  { icon: "sincronizar" as const, title: "Confirmação independente", detail: "Quando aplicável, o documento também pode ser conferido no ITI.", tone: "violet" as const },
+];
 
 type Prescritor = {
   nome: string;
@@ -64,6 +71,15 @@ function registroPrescritor(prescritor: Prescritor | null) {
   return conselho ? `${prescritor.nome} — ${conselho}` : prescritor.nome;
 }
 
+async function mensagemErroValidacao(resposta: Response) {
+  const corpo = await resposta.json().catch(() => null);
+  const detalhe = typeof corpo?.detail === "string" && corpo.detail.trim() ? corpo.detail.trim() : "";
+  if (resposta.status === 404) return detalhe || "Código de validação não encontrado.";
+  if (resposta.status === 429) return "Muitas validações em sequência. Aguarde alguns instantes e tente novamente.";
+  if (resposta.status >= 500) return "O serviço de validação está temporariamente indisponível. Tente novamente em instantes.";
+  return detalhe || "Não foi possível concluir a validação deste documento.";
+}
+
 export default function ValidarDocumento() {
   const params = useParams();
   const navigate = useNavigate();
@@ -83,13 +99,20 @@ export default function ValidarDocumento() {
         headers: { Accept: "application/json" },
       });
       if (!resposta.ok) {
-        const corpo = await resposta.json().catch(() => null);
-        throw new Error(corpo?.detail || "Código de validação não encontrado.");
+        throw new Error(await mensagemErroValidacao(resposta));
       }
-      setResultado(await resposta.json());
+      const corpo = await resposta.json().catch(() => null);
+      if (!corpo) throw new Error("O serviço de validação retornou uma resposta inesperada. Tente novamente em instantes.");
+      setResultado(corpo);
       if (params.codigo !== codigoFinal) navigate(`/validar/${codigoFinal}`, { replace: true });
     } catch (e) {
-      setErro(e instanceof Error ? e.message : "Não foi possível validar o documento.");
+      setErro(
+        e instanceof TypeError
+          ? "Não foi possível conectar ao serviço de validação. Verifique sua conexão e tente novamente."
+          : e instanceof Error
+            ? e.message
+            : "Não foi possível validar o documento.",
+      );
     } finally {
       setCarregando(false);
     }
@@ -110,15 +133,15 @@ export default function ValidarDocumento() {
   );
 
   return (
-    <main className="corvia-validator" id="conteudo-principal">
-      <section className="corvia-validator__panel">
-        <header className="corvia-validator__header">
-          <img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" />
-          <p>Validação pública de documento clínico</p>
-          <h1>Confira a autenticidade da emissão e da assinatura</h1>
-          <span>O QR confirma o documento emitido pelo CorVIA sem revelar medicamentos, diagnóstico ou dados do paciente nesta página.</span>
-        </header>
-
+    <PublicCardiologyFrame
+      eyebrow="Validação pública"
+      title={<>Autenticidade clínica sem expor o que é <strong>privado.</strong></>}
+      description={<p>Confirme a emissão e a integridade criptográfica de um documento CorVIA sem revelar medicamentos, diagnóstico ou dados do paciente.</p>}
+      features={RECURSOS_VALIDACAO}
+      variant="validator"
+      tone="cyan"
+    >
+      <section className="corvia-validator__panel" aria-label="Validar documento clínico">
         <form className="corvia-validator__form" onSubmit={enviar}>
           <label htmlFor="codigo-validacao">Código de validação</label>
           <div>
@@ -189,6 +212,6 @@ export default function ValidarDocumento() {
           A CorVIA confirma a emissão registrada, o SHA-256 e a integridade criptográfica do PDF persistido. A cadeia de confiança, revogação e validade jurídica final do certificado devem ser confirmadas também em um validador independente, como o VALIDAR/ITI.
         </footer>
       </section>
-    </main>
+    </PublicCardiologyFrame>
   );
 }

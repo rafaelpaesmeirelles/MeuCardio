@@ -174,9 +174,11 @@ export default function App() {
 
   return (
     <>
-      <OptionalFeatureBoundary nome="personalização da página inicial">
-        <HomeQuickActionsPersonalizer />
-      </OptionalFeatureBoundary>
+      {!cardiologySpacesEnabled() && (
+        <OptionalFeatureBoundary nome="personalização da página inicial">
+          <HomeQuickActionsPersonalizer />
+        </OptionalFeatureBoundary>
+      )}
       <RotasSuspensas>
         <Routes>
         <Route element={<Shell />}>

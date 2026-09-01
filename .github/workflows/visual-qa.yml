@@ -207,11 +207,29 @@ jobs:
             const context = await browser.newContext({ viewport, colorScheme: 'dark', locale: 'pt-BR' });
             const page = await context.newPage();
             page.on('pageerror', (error) => report.pageErrors.push(String(error)));
-            await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
-            await page.locator('#email').fill('visual-qa@teste.local');
-            await page.locator('#senha').fill('visual-qa-seguro-123');
-            await page.locator('button[type="submit"]').click();
+            let sessionResponse = null;
+            let profileResponse = null;
+            for (let attempt = 1; attempt <= 2 && !sessionResponse; attempt += 1) {
+              await page.goto(`${base}/entrar`, { waitUntil: 'networkidle' });
+              await page.locator('#email').fill('visual-qa@teste.local');
+              await page.locator('#senha').fill('visual-qa-seguro-123');
+              const sessionResponsePromise = page.waitForResponse((response) =>
+                response.url().endsWith('/api/auth/sessao') && response.request().method() === 'POST',
+                { timeout: 12000 },
+              ).catch(() => null);
+              const profileResponsePromise = page.waitForResponse((response) =>
+                response.url().endsWith('/api/auth/me') && response.request().method() === 'GET' && response.status() === 200,
+                { timeout: 20000 },
+              ).catch(() => null);
+              await page.locator('button[type="submit"]').click();
+              sessionResponse = await sessionResponsePromise;
+              if (sessionResponse) profileResponse = await profileResponsePromise;
+            }
+            if (!sessionResponse) throw new Error('login visual QA: formulário não enviou a sessão após 2 tentativas');
+            if (!sessionResponse.ok()) throw new Error(`login visual QA: HTTP ${sessionResponse.status()}`);
+            if (!profileResponse) throw new Error('login visual QA: perfil autenticado não foi confirmado');
             await page.waitForURL((url) => !url.pathname.includes('/entrar'), { timeout: 20000 });
+            await page.goto(`${base}/`, { waitUntil: 'networkidle' });
             await page.waitForTimeout(900);
             await selectCompleteMode(page);
             return { context, page };
@@ -252,11 +270,18 @@ jobs:
               const emergencyRect = emergency && visible(emergency)
                 ? (() => { const r = emergency.getBoundingClientRect(); return { left:r.left, top:r.top, right:r.right, bottom:r.bottom }; })()
                 : null;
-              const legacyFabVisible = [
-                document.querySelector('button[aria-label^="Abrir o CorvIA Chat"]'),
-                document.querySelector('section[aria-label="CorvIA Chat"]'),
-                document.querySelector('.cos-emergency-fab'),
-              ].some(visible);
+              const sidebar = document.querySelector('.cv-sidebar');
+              const topbar = document.querySelector('.cv-topbar');
+              const overlaps = (first, second) => {
+                if (!first || !second || !visible(first) || !visible(second)) return false;
+                const a = first.getBoundingClientRect();
+                const b = second.getBoundingClientRect();
+                return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+              };
+              const emergencyUnderChrome = emergency
+                ? overlaps(emergency, sidebar) || overlaps(emergency, topbar)
+                : false;
+              const legacyFabVisible = visible(document.querySelector('.cos-emergency-fab'));
               const creditVisible = visible(document.querySelector('.credito'));
               const suspenseVisible = text.includes('carregando a tela');
               return {
@@ -268,6 +293,7 @@ jobs:
                 forbidden: forbidden.filter((needle) => text.includes(needle)),
                 fixed,
                 emergencyRect,
+                emergencyUnderChrome,
                 legacyFabVisible,
                 creditVisible,
                 suspenseVisible,
@@ -299,7 +325,7 @@ jobs:
               report.failures.push(`desktop/home: modo completo incompleto (next=${metrics.spacesNext}, references=${metrics.spacesReferences}, day=${metrics.spacesDay})`);
             }
             if (mode === 'desktop' && name === 'emergencia') {
-              if (!metrics.emergencyRect || metrics.emergencyRect.left < 200 || metrics.emergencyRect.top < 50) report.failures.push(`desktop/emergencia: modo está sob a sidebar/topbar (${JSON.stringify(metrics.emergencyRect)})`);
+              if (!metrics.emergencyRect || metrics.emergencyUnderChrome) report.failures.push(`desktop/emergencia: modo está sob a sidebar/topbar (${JSON.stringify(metrics.emergencyRect)})`);
             }
             await page.screenshot({ path: path.join(out, `${mode}-${name}.png`), fullPage: false });
           }

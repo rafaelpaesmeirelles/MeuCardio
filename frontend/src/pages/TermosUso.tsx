@@ -1,16 +1,24 @@
 import { Link } from "react-router-dom";
+import LegalDocumentFrame from "../components/LegalDocumentFrame";
 import "../styles/legal.css";
+
+const TERMOS_FEATURES = [
+  { icon: "rota" as const, title: "Orientação, não garantia", detail: "Tempos, distâncias e trânsito são estimativas do provedor de mapas.", tone: "blue" as const },
+  { icon: "emergencia" as const, title: "Condução responsável", detail: "A via, a sinalização e as autoridades sempre prevalecem sobre a tela.", tone: "pink" as const },
+  { icon: "pin" as const, title: "Localização opcional", detail: "O recurso depende de escolha expressa e pode ser desativado.", tone: "violet" as const },
+];
 
 export default function TermosUso() {
   return (
-    <main className="legal-page" id="conteudo-principal">
-      <header>
-        <Link to="/" aria-label="Voltar ao CorVIA"><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" /></Link>
-        <p className="eyebrow">Uso responsável</p>
-        <h1>Termos de Uso — mapas e deslocamento</h1>
-        <p>Última atualização: 5 de agosto de 2026.</p>
-      </header>
-
+    <LegalDocumentFrame
+      eyebrow="Uso responsável"
+      title="Termos de Uso — mapas e deslocamento"
+      description={<p>Condições claras para usar o planejamento entre espaços como apoio de rota, sem substituir a realidade da via e a direção segura.</p>}
+      updated="5 de agosto de 2026"
+      features={TERMOS_FEATURES}
+      tone="blue"
+      footer={<><Link to="/privacidade">Ler a Política de Privacidade</Link><Link to="/">Voltar ao CorVIA</Link></>}
+    >
       <section>
         <h2>Finalidade do recurso</h2>
         <p>“Próximos deslocamentos” auxilia o planejamento entre a posição atual do profissional e o próximo local de trabalho cadastrado. O recurso apresenta estimativas de duração, distância, trânsito, horário de saída e rotas alternativas.</p>
@@ -41,7 +49,6 @@ export default function TermosUso() {
         <p>Dúvidas, solicitações ou relato de funcionamento incorreto podem ser enviados para <a href="mailto:contato@corvia.med.br">contato@corvia.med.br</a>.</p>
       </section>
 
-      <footer><Link to="/privacidade">Ler a Política de Privacidade</Link><Link to="/">Voltar ao CorVIA</Link></footer>
-    </main>
+    </LegalDocumentFrame>
   );
 }

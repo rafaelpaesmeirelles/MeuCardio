@@ -22,6 +22,7 @@ on:
       - "emergencia/**"
       - "doencas/**"
       - "triagem-sintomas/**"
+      - "editorial-approvals/**"
 
 permissions:
   contents: read
@@ -116,27 +117,205 @@ jobs:
         run: |
           BACKEND_ID="$(docker compose ps -q backend)"
           test -n "$BACKEND_ID"
-          for dir in galeria exames evidencias estudos medicamentos controlados checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas; do
+          for dir in galeria exames evidencias estudos medicamentos controlados checklists casos-clinicos trilhas material-paciente emergencia doencas triagem-sintomas editorial-approvals; do
             test -e "$dir"
             docker cp "$dir" "$BACKEND_ID:/$dir"
           done
           docker compose exec -T backend test -f /medicamentos/metadados.json
           docker compose exec -T backend test -f /controlados/listas-344-98.json
           docker compose exec -T backend test -f /emergencia/metadados.json
+          docker compose exec -T backend test -f /editorial-approvals/science-release-20260901.json
 
-      - name: Load official clinical stores
+      - name: Reconcile clean canonical corpus
+        run: docker compose exec -T backend python -m app.commands.reconcile_content --publish-reviewed
+
+      - name: Restore exact e16 legacy publication state in isolated RC2
         run: |
           docker compose exec -T backend python - <<'PY'
-          from app.services.carregar_drugs import carregar as carregar_drugs
-          from app.services.carregar_emergencia import carregar as carregar_emergencia
-          resultado_drugs = carregar_drugs('/medicamentos/metadados.json')
-          carregar_emergencia()
-          assert resultado_drugs.get('total', 0) >= 200, resultado_drugs
-          print({'drugs': resultado_drugs, 'emergency': 'loaded'})
+          import hashlib
+          import json
+          from pathlib import Path
+
+          from app.core.db import SessionLocal
+          from app.models.content import Document
+          from app.models.drug import Drug
+          from app.models.emergency import EmergencyProtocol
+
+          def exact_legacy_slugs(path, *, expected_count, expected_digest):
+              payload = json.loads(Path(path).read_text(encoding='utf-8'))
+              assert len(payload) == expected_count, (path, len(payload))
+              assert all(item.get('review_status') == 'revisado' for item in payload), path
+              slugs = sorted(item['slug'] for item in payload)
+              digest = hashlib.sha256('\n'.join(slugs).encode()).hexdigest()
+              assert digest == expected_digest, (path, digest)
+              return set(slugs)
+
+          def exact_emergency_reference_slugs(path):
+              payload = json.loads(Path(path).read_text(encoding='utf-8'))
+              slugs = {
+                  slug
+                  for item in payload
+                  for slug in (
+                      item['documento_slug'],
+                      item.get('fluxograma_slug'),
+                      *(item.get('relacionados') or []),
+                  )
+                  if slug
+              }
+              digest = hashlib.sha256('\n'.join(sorted(slugs)).encode()).hexdigest()
+              assert len(slugs) == 205, len(slugs)
+              assert digest == 'f01961e2f34b97106993b0b1977a0ffb0ce7bbb7b8578762d240a15f949de19f', digest
+              return slugs
+
+          drug_slugs = exact_legacy_slugs(
+              '/medicamentos/metadados.json',
+              expected_count=206,
+              expected_digest='18f4d18450cb36f46dc26dcd7c8efda446218a6fd937189a1d1fb3470393b6d0',
+          )
+          emergency_slugs = exact_legacy_slugs(
+              '/emergencia/metadados.json',
+              expected_count=77,
+              expected_digest='d779cc4de3d7a351517e0ff00cd34a1a53d96780ea9b6fe915d585aebdf40968',
+          )
+          emergency_reference_slugs = exact_emergency_reference_slugs(
+              '/emergencia/metadados.json'
+          )
+
+          db = SessionLocal()
+          try:
+              drugs = db.query(Drug.slug, Drug.review_status).filter(Drug.slug.in_(drug_slugs)).all()
+              emergency = (
+                  db.query(EmergencyProtocol.slug, EmergencyProtocol.review_status)
+                  .filter(EmergencyProtocol.slug.in_(emergency_slugs))
+                  .all()
+              )
+              emergency_documents = (
+                  db.query(Document.slug, Document.review_status)
+                  .filter(Document.slug.in_(emergency_reference_slugs))
+                  .all()
+              )
+              # `relacionados` pode apontar tanto para outro protocolo quanto
+              # para um Document. Oito slugs existem nas duas tabelas; portanto
+              # excluir todo slug que também seja protocolo perde documentos
+              # reais. A interseção com o catálogo carregado é a autoridade que
+              # reproduz exatamente os 165 Documents públicos do e16.
+              emergency_document_slugs = {slug for slug, _ in emergency_documents}
+              emergency_document_digest = hashlib.sha256(
+                  '\n'.join(sorted(emergency_document_slugs)).encode()
+              ).hexdigest()
+              assert len(emergency_document_slugs) == 165, len(emergency_document_slugs)
+              assert emergency_document_digest == (
+                  '17c87689aa109248a169d580079d35141de7a04c038e49d9a1b0539f7dfb6386'
+              ), emergency_document_digest
+              assert {slug for slug, _ in drugs} == drug_slugs
+              assert {slug for slug, _ in emergency} == emergency_slugs
+              assert all(status == 'revisado' for _, status in drugs)
+              assert all(status == 'revisado' for _, status in emergency)
+              assert all(status == 'revisado' for _, status in emergency_documents)
+
+              # Test-only compatibility fixture: e16 published every canonical
+              # reviewed item. Production already owns this persistent state;
+              # this isolated database starts empty and must reproduce it
+              # without turning the legacy state into a new editorial approval.
+              db.query(Drug).filter(Drug.slug.in_(drug_slugs)).update(
+                  {Drug.published: True}, synchronize_session=False,
+              )
+              db.query(EmergencyProtocol).filter(
+                  EmergencyProtocol.slug.in_(emergency_slugs)
+              ).update({EmergencyProtocol.published: True}, synchronize_session=False)
+              db.query(Document).filter(
+                  Document.slug.in_(emergency_document_slugs)
+              ).update({Document.published: True}, synchronize_session=False)
+              db.commit()
+          except Exception:
+              db.rollback()
+              raise
+          finally:
+              db.close()
           PY
 
-      - name: Reconcile versioned corpus
-        run: docker compose exec -T backend python -m app.commands.reconcile_content --publish-reviewed
+      - name: Reconcile preserved state and certify publication policy
+        run: |
+          docker compose exec -T backend python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          from app.commands.reconcile_content import reconcile
+          from app.core.db import SessionLocal
+          from app.models.content import Document
+
+          result = reconcile(publish_reviewed=True)
+          expected_science_release = {
+              'documentos': 89,
+              'estudos': 181,
+              'evidencias': 174,
+              'doencas_especializadas': 161,
+              'casos_clinicos': 28,
+              'checklists': 50,
+              'material_paciente': 15,
+              'trilhas': 24,
+              'triagem_sintomas': 5,
+          }
+          for front, minimum in expected_science_release.items():
+              actual = result['editorial_approvals'].get(front, 0)
+              assert actual >= minimum, (front, actual, minimum)
+
+          fronts = result['database']['fronts']
+          assert fronts['medicamentos']['published'] == 206, fronts['medicamentos']
+          assert fronts['emergencia']['published'] == 77, fronts['emergencia']
+          assert not result['database']['below_minimum'], result['database']['below_minimum']
+
+          emergency_payload = json.loads(
+              Path('/emergencia/metadados.json').read_text(encoding='utf-8')
+          )
+          emergency_reference_slugs = {
+              slug
+              for item in emergency_payload
+              for slug in (
+                  item['documento_slug'],
+                  item.get('fluxograma_slug'),
+                      *(item.get('relacionados') or []),
+                  )
+              if slug
+          }
+          db = SessionLocal()
+          try:
+              emergency_document_slugs = {
+                  slug
+                  for (slug,) in (
+                      db.query(Document.slug)
+                      .filter(Document.slug.in_(emergency_reference_slugs))
+                      .all()
+                  )
+              }
+              emergency_document_digest = hashlib.sha256(
+                  '\n'.join(sorted(emergency_document_slugs)).encode()
+              ).hexdigest()
+              assert len(emergency_document_slugs) == 165, len(emergency_document_slugs)
+              assert emergency_document_digest == (
+                  '17c87689aa109248a169d580079d35141de7a04c038e49d9a1b0539f7dfb6386'
+              ), emergency_document_digest
+              published_emergency_documents = (
+                  db.query(Document)
+                  .filter(
+                      Document.slug.in_(emergency_document_slugs),
+                      Document.published.is_(True),
+                  )
+                  .count()
+              )
+          finally:
+              db.close()
+          assert published_emergency_documents == 165, published_emergency_documents
+          print(json.dumps({
+              'editorial_approvals': result['editorial_approvals'],
+              'published_total': result['database']['published_total'],
+              'medicamentos': fronts['medicamentos'],
+              'emergencia': fronts['emergencia'],
+              'published_emergency_documents': published_emergency_documents,
+              'knowledge_graph': result['knowledge_graph'],
+          }, ensure_ascii=False, default=str))
+          PY
 
       - name: Create acceptance administrator
         run: |
@@ -316,7 +495,7 @@ jobs:
                     scrollWidth: document.documentElement.scrollWidth,
                     stuck: /carregando a tela/i.test(text),
                     serverError: /internal server error|application error|erro 500/i.test(text),
-                    shell: !!document.querySelector('.clinical-os, .spaces-home'),
+                    shell: !!document.querySelector('.cv-app, .clinical-os, .spaces-home'),
                   };
                 });
                 report.routes.push({ route, ...state });
@@ -341,6 +520,8 @@ jobs:
 
             const drugResponse = await requestJson(page, '/api/drugs');
             const drugs = Array.isArray(drugResponse.body) ? drugResponse.body : [];
+            if (!drugResponse.ok) fail(`medicamentos: HTTP ${drugResponse.status}`);
+            if (drugs.length !== 206) fail(`medicamentos: esperado 206, recebido ${drugs.length}`);
             const selected = drugs.find((d) => /sacubitril/i.test(d.generic_name || '')) || drugs[0];
             if (!selected?.slug) fail('medicamentos: loader oficial não retornou slug');
             else {
@@ -359,6 +540,10 @@ jobs:
             await page.screenshot({ path: path.join(out, 'desktop-patient-command.png'), fullPage: false });
 
             await page.goto(`${base}/emergencia`, { waitUntil: 'networkidle' });
+            const emergencyResponse = await requestJson(page, '/api/emergencia');
+            const protocols = Array.isArray(emergencyResponse.body?.protocolos) ? emergencyResponse.body.protocolos : [];
+            if (!emergencyResponse.ok) fail(`emergencia: HTTP ${emergencyResponse.status}`);
+            if (protocols.length !== 77) fail(`emergencia: esperado 77, recebido ${protocols.length}`);
             const firstProtocol = page.locator('.emerg__alvo').first();
             if (!await firstProtocol.count()) fail('emergencia: loader oficial não retornou protocolos');
             else {

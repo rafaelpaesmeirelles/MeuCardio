@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 
@@ -19,42 +20,67 @@ def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
 
 
 def test_prehome_brand_matches_approved_corvia_identity():
-    brand = read("components/PreHomeBrand.tsx")
+    login = read("pages/Entrar.tsx")
     for token in (
-        "A PLATAFORMA Nº 1",
-        "Inteligência clínica",
-        "transforma decisões.",
-        "Inteligência Artificial",
-        "Evidências atualizadas",
-        "Tudo com Tudo",
-        "Segurança e Privacidade",
-        "prehome-brand__heart",
-        "prehome-brand__ring--3",
+        '<main className="login login-gateway">',
+        'src="/corvia-mark-canonical.svg"',
+        "CARDIOLOGY SPACES",
+        "UM ACESSO · CINCO ESPAÇOS",
+        "Onde todos os seus espaços",
+        "se tornam um.",
+        "Consultório, Hospital, Ensino, Pesquisa e Gestão",
+        "CoracaoHolografico",
+        "login-gateway__stars",
+        "login-gateway__milky-way",
+        "login-gateway__pulse",
+        "login-gateway__ring--two",
     ):
-        assert token in brand
+        assert token in login
+
+    for space_id, name in (
+        ("consultorio", "Consultório"),
+        ("hospital", "Hospital"),
+        ("ensino", "Ensino"),
+        ("pesquisa", "Pesquisa"),
+        ("gestao", "Gestão"),
+    ):
+        assert f'{{ id: "{space_id}", nome: "{name}"' in login
+
+    assert "A PLATAFORMA Nº 1" not in login
 
 
 def test_login_copy_and_all_real_auth_controls_remain_available():
     login = read("pages/Entrar.tsx")
     for token in (
-        "Bem-vindo de volta",
-        "Entrar na minha conta",
-        "Esqueci minha senha",
-        "Solicitar acesso",
+        "Abra o seu espaço",
+        '<form className="login-gateway__form" onSubmit={enviar}>',
+        'id="email" type="email"',
+        'id="senha" type={mostrarSenha ? "text" : "password"}',
+        'type="submit" disabled={enviando}',
+        'aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"}',
         "permanecerConectado",
         "await entrar(email.trim().toLowerCase(), senha, permanecerConectado)",
+        '<Link to="/esqueci-senha">Esqueci minha senha</Link>',
+        '<Link to="/solicitar-acesso">',
+        "Solicitar acesso",
     ):
         assert token in login
+
+    assert "Bem-vindo de volta" not in login
+    assert "Entrar na minha conta" not in login
 
 
 def test_login_keeps_android_download_and_marks_windows_as_pending_without_link():
     login = read("pages/Entrar.tsx")
-    assert 'href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"' in login
-    assert "Aplicativo para Windows" in login
-    assert "pendente de assinatura" in login
-    assert "prehome-windows-pending" in login
-    assert ".exe" not in login
-    assert "prehome-windows-download\"" not in login
+    hrefs = re.findall(r'href="([^"]+)"', login)
+
+    assert "/downloads/corvia-cardiology-spaces-android-1.2.0.apk" in hrefs
+    assert 'download="CorVIA-Cardiology-Spaces-Android-1.2.0.apk"' in login
+    assert "<strong>Android</strong><small>Baixar app</small>" in login
+    assert '<div role="status" aria-label="Aplicativo para Windows pendente de assinatura">' in login
+    assert "<strong>Windows</strong><small>Em breve</small>" in login
+    assert all("windows" not in href.lower() and not href.lower().endswith(".exe") for href in hrefs)
+    assert "prehome-windows-pending" not in login
 
 
 def test_approved_prehome_css_keeps_desktop_mobile_and_dark_contracts():

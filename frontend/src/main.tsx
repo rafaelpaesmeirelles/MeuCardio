@@ -54,7 +54,6 @@ import "./styles/clinical-home-board-fidelity.css";
 import "./styles/clinical-shell-board-fidelity.css";
 import "./styles/clinical-medication-board-fidelity.css";
 import "./styles/clinical-patient-board-fidelity.css";
-import "./styles/clinical-emergency-board-fidelity.css";
 import "./styles/clinical-assistant-board-fidelity.css";
 import "./styles/clinical-home-mobile-final.css";
 import "./styles/clinical-full-viewport.css";
@@ -81,7 +80,10 @@ import "./styles/clinical-ai-spaces.css";
    paralela. O contraste de controles permanece a última camada de segurança. */
 import "./styles/cardiology-spaces-interior-approved.css";
 import "./styles/cardiology-spaces-route-tones.css";
-import "./styles/cardiology-spaces-reference-fidelity.css";
+import "./styles/cardiology-spaces-app-frame.css";
+/* Camada pública isolada: aplica a identidade aprovada sem alterar /entrar. */
+import "./styles/cardiology-spaces-public.css";
+/* Contrato de segurança visual: permanece deliberadamente como último CSS. */
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;

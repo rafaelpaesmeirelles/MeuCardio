@@ -4,11 +4,476 @@
    arquitetura do espaço Ensino. */
 
 body.corvia-space--ensino {
-  --ensino-rgb: 151, 99, 255;
-  --ensino-accent: #a986ff;
+  --ensino-rgb: 160, 109, 242;
+  --ensino-accent: #a06df2;
   --ensino-line: rgba(var(--ensino-rgb), .34);
   --ensino-soft: rgba(var(--ensino-rgb), .08);
   --ensino-panel: linear-gradient(145deg, rgba(10, 11, 28, .88), rgba(23, 14, 48, .72));
+}
+
+/* Observatório de Aprendizagem — matriz canônica de Trilhas. */
+body.corvia-space--ensino .cv-learning-observatory {
+  --learning-accent: #a06df2;
+  --learning-rgb: 160, 109, 242;
+  position: relative;
+  isolation: isolate;
+}
+
+body.corvia-space--ensino .cv-learning-observatory::before {
+  position: absolute;
+  z-index: -1;
+  top: 86px;
+  right: 4%;
+  width: min(42vw, 540px);
+  height: 310px;
+  opacity: .28;
+  background-image:
+    radial-gradient(circle, rgba(202, 177, 255, .68) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(115, 168, 255, .48) 0 1px, transparent 1.5px);
+  background-position: 0 0, 27px 31px;
+  background-size: 61px 61px, 83px 83px;
+  content: "";
+  mask-image: linear-gradient(135deg, transparent, #000 30%, transparent 88%);
+  pointer-events: none;
+}
+
+body.corvia-space--ensino .cv-learning-observatory .cv-page-hero {
+  background:
+    linear-gradient(90deg, rgba(var(--learning-rgb), .035) 1px, transparent 1px),
+    linear-gradient(rgba(var(--learning-rgb), .025) 1px, transparent 1px),
+    radial-gradient(circle at 84% 24%, rgba(var(--learning-rgb), .18), transparent 17rem),
+    linear-gradient(106deg, rgba(10, 24, 47, .97), rgba(10, 9, 32, .97));
+  background-size: 46px 46px, 46px 46px, auto, auto;
+}
+
+body.corvia-space--ensino .learning-metrics {
+  min-height: 88px;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(var(--learning-rgb), .115), rgba(5, 18, 34, .96) 39%, rgba(var(--learning-rgb), .065));
+  border-color: rgba(var(--learning-rgb), .25);
+  border-radius: 12px;
+  clip-path: none;
+}
+
+body.corvia-space--ensino .learning-metrics .cv-metric {
+  min-height: 86px;
+  border-color: rgba(var(--learning-rgb), .15);
+}
+
+body.corvia-space--ensino .learning-metrics .cv-metric::after {
+  position: absolute;
+  right: 14px;
+  bottom: 9px;
+  width: 33px;
+  height: 14px;
+  opacity: .25;
+  border: 1px solid rgba(var(--learning-rgb), .36);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-10deg);
+}
+
+body.corvia-space--ensino .learning-metrics .cv-metric__top svg,
+body.corvia-space--ensino .learning-metrics .cv-metric > strong { color: var(--learning-accent); }
+
+body.corvia-space--ensino .learning-console,
+body.corvia-space--ensino .learning-map {
+  background:
+    linear-gradient(110deg, rgba(var(--learning-rgb), .045), transparent 36%),
+    linear-gradient(145deg, rgba(6, 23, 40, .94), rgba(5, 13, 29, .96));
+  border-color: rgba(var(--learning-rgb), .17);
+}
+
+body.corvia-space--ensino .learning-clear {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  color: #cdb9ee;
+  background: rgba(var(--learning-rgb), .055);
+  border: 1px solid rgba(var(--learning-rgb), .19);
+  border-radius: 9px;
+  font-size: .72rem;
+  cursor: pointer;
+}
+
+body.corvia-space--ensino .learning-clear:hover { color: #fff; border-color: rgba(var(--learning-rgb), .44); }
+body.corvia-space--ensino .learning-clear svg { width: 16px; height: 16px; }
+
+body.corvia-space--ensino .learning-filter-grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(250px, 1.65fr) repeat(3, minmax(120px, .72fr)) 104px;
+  align-items: end;
+  gap: 9px;
+}
+
+body.corvia-space--ensino .learning-filter-grid label {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+body.corvia-space--ensino .learning-filter-grid label > span {
+  color: #9aacc0;
+  font-size: .76rem;
+  font-weight: 560;
+}
+
+body.corvia-space--ensino .learning-filter-grid :where(input, select),
+body.corvia-space--ensino .learning-search > div {
+  width: 100%;
+  height: 46px;
+  color: #eaf0f7;
+  -webkit-text-fill-color: #eaf0f7;
+  background: rgba(4, 16, 31, .92);
+  border: 1px solid rgba(var(--learning-rgb), .2);
+  border-radius: 10px;
+  outline: 0;
+  font-size: .82rem;
+}
+
+body.corvia-space--ensino .learning-filter-grid select { padding: 0 11px; }
+
+body.corvia-space--ensino .learning-search > div {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+}
+
+body.corvia-space--ensino .learning-search > div > svg {
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  color: var(--learning-accent);
+}
+
+body.corvia-space--ensino .learning-filter-grid .learning-search input {
+  height: 44px;
+  padding: 0 11px 0 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+body.corvia-space--ensino .learning-filter-grid input::placeholder { color: #61758c; -webkit-text-fill-color: #61758c; }
+body.corvia-space--ensino .learning-filter-grid :where(label:focus-within > div, select:focus) { border-color: rgba(var(--learning-rgb), .67); box-shadow: 0 0 0 3px rgba(var(--learning-rgb), .1); }
+
+body.corvia-space--ensino .learning-result {
+  display: grid;
+  min-height: 46px;
+  place-content: center;
+  justify-items: center;
+  color: #8b9fb0;
+  background: rgba(var(--learning-rgb), .05);
+  border: 1px solid rgba(var(--learning-rgb), .18);
+  border-radius: 10px;
+}
+
+body.corvia-space--ensino .learning-result strong { color: var(--learning-accent); font: 620 1rem/1 var(--fonte-dados, ui-monospace, monospace); }
+body.corvia-space--ensino .learning-result span { margin-top: 3px; font-size: .66rem; }
+
+body.corvia-space--ensino .learning-map__heading { align-items: center; }
+
+body.corvia-space--ensino .learning-timeline-link {
+  display: grid;
+  min-width: 224px;
+  min-height: 50px;
+  grid-template-columns: 34px minmax(0, 1fr) 15px;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 10px;
+  color: #d9cbed;
+  background: rgba(var(--learning-rgb), .065);
+  border: 1px solid rgba(var(--learning-rgb), .2);
+  border-radius: 10px;
+}
+
+body.corvia-space--ensino .learning-timeline-link:hover { color: #fff; border-color: rgba(var(--learning-rgb), .48); background: rgba(var(--learning-rgb), .105); }
+body.corvia-space--ensino .learning-timeline-link > span:first-child { display: grid; width: 34px; height: 34px; place-items: center; color: var(--learning-accent); background: rgba(var(--learning-rgb), .1); border-radius: 8px; }
+body.corvia-space--ensino .learning-timeline-link > span:nth-child(2) { display: grid; min-width: 0; }
+body.corvia-space--ensino .learning-timeline-link strong { font-size: .76rem; }
+body.corvia-space--ensino .learning-timeline-link small { margin-top: 2px; color: #83759a; font-size: .65rem; }
+body.corvia-space--ensino .learning-timeline-link svg { width: 16px; height: 16px; }
+body.corvia-space--ensino .learning-timeline-link > svg { color: #76658e; }
+
+body.corvia-space--ensino .learning-sectors { display: grid; gap: 17px; }
+
+body.corvia-space--ensino .learning-sector {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  padding-left: 23px;
+}
+
+body.corvia-space--ensino .learning-sector::before {
+  position: absolute;
+  top: 29px;
+  bottom: -18px;
+  left: 6px;
+  width: 1px;
+  background: linear-gradient(rgba(var(--learning-rgb), .52), rgba(var(--learning-rgb), .08));
+  content: "";
+}
+
+body.corvia-space--ensino .learning-sector:last-child::before { bottom: 1rem; }
+
+body.corvia-space--ensino .learning-sector > header {
+  display: grid;
+  min-height: 48px;
+  grid-template-columns: 18px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 0 2px 7px 0;
+  border-bottom: 1px solid rgba(var(--learning-rgb), .12);
+}
+
+body.corvia-space--ensino .learning-sector__node {
+  position: relative;
+  left: -25px;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  margin-right: -18px;
+  background: #071426;
+  border: 1px solid rgba(var(--learning-rgb), .72);
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(var(--learning-rgb), .28);
+}
+
+body.corvia-space--ensino .learning-sector__node i { width: 5px; height: 5px; background: var(--learning-accent); border-radius: 50%; box-shadow: 0 0 7px rgba(var(--learning-rgb), .75); }
+body.corvia-space--ensino .learning-sector > header div { min-width: 0; }
+body.corvia-space--ensino .learning-sector > header small { color: var(--learning-accent); font: 650 .6rem/1 var(--fonte-dados, ui-monospace, monospace); letter-spacing: .12em; }
+body.corvia-space--ensino .learning-sector > header h3 { margin: 4px 0 0; color: #dce5ee; font-size: .92rem; font-weight: 620; }
+body.corvia-space--ensino .learning-sector > header > span:last-child { color: #71869a; font: 500 .67rem/1.2 var(--fonte-dados, ui-monospace, monospace); }
+
+body.corvia-space--ensino .learning-grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+body.corvia-space--ensino .learning-card {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 218px;
+  grid-template-rows: auto minmax(78px, 1fr) auto 6px auto;
+  gap: 8px;
+  overflow: hidden;
+  padding: 13px;
+  color: #9eafbf;
+  background:
+    linear-gradient(135deg, rgba(var(--learning-rgb), .08), transparent 42%),
+    rgba(4, 16, 31, .88);
+  border: 1px solid rgba(var(--learning-rgb), .17);
+  border-radius: 12px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .018);
+  transition: transform .16s ease, border-color .16s ease, background .16s ease, box-shadow .16s ease;
+}
+
+body.corvia-space--ensino .learning-card::after {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  left: 12%;
+  height: 1px;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, var(--learning-accent), transparent);
+  box-shadow: 0 0 11px rgba(var(--learning-rgb), .6);
+  content: "";
+  transition: opacity .16s ease;
+}
+
+body.corvia-space--ensino .learning-card:hover,
+body.corvia-space--ensino .learning-card:focus-visible {
+  color: #fff;
+  background: linear-gradient(135deg, rgba(var(--learning-rgb), .13), rgba(5, 17, 34, .94) 48%);
+  border-color: rgba(var(--learning-rgb), .48);
+  box-shadow: 0 18px 38px -30px rgba(var(--learning-rgb), .7), inset 0 1px rgba(255, 255, 255, .026);
+  transform: translateY(-2px);
+}
+
+body.corvia-space--ensino .learning-card:hover::after,
+body.corvia-space--ensino .learning-card:focus-visible::after { opacity: 1; }
+
+body.corvia-space--ensino .learning-card__orbit {
+  position: absolute;
+  top: -31px;
+  right: -20px;
+  width: 100px;
+  height: 70px;
+  opacity: .3;
+  border: 1px solid rgba(var(--learning-rgb), .32);
+  border-radius: 50%;
+  transform: rotate(-17deg);
+  pointer-events: none;
+}
+
+body.corvia-space--ensino .learning-card__orbit i { position: absolute; width: 3px; height: 3px; background: var(--learning-accent); border-radius: 50%; box-shadow: 0 0 6px rgba(var(--learning-rgb), .8); }
+body.corvia-space--ensino .learning-card__orbit i:nth-child(1) { top: 36px; left: 7px; }
+body.corvia-space--ensino .learning-card__orbit i:nth-child(2) { right: 15px; bottom: 8px; }
+body.corvia-space--ensino .learning-card__orbit i:nth-child(3) { top: 4px; right: 38px; }
+
+body.corvia-space--ensino .learning-card__topline,
+body.corvia-space--ensino .learning-card__progress-copy,
+body.corvia-space--ensino .learning-card__open { display: flex; min-width: 0; align-items: center; justify-content: space-between; gap: 8px; }
+
+body.corvia-space--ensino .learning-card__topline > small { overflow: hidden; color: #7f90a2; font-size: .68rem; text-overflow: ellipsis; white-space: nowrap; }
+
+body.corvia-space--ensino .learning-status {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  color: #a9b5c3;
+  background: rgba(113, 132, 153, .07);
+  border: 1px solid rgba(113, 132, 153, .16);
+  border-radius: 999px;
+  font-size: .65rem;
+  font-weight: 620;
+}
+
+body.corvia-space--ensino .learning-status i { width: 6px; height: 6px; background: #748597; border-radius: 50%; }
+body.corvia-space--ensino .learning-status--em_andamento { color: #cfb9f5; background: rgba(var(--learning-rgb), .08); border-color: rgba(var(--learning-rgb), .25); }
+body.corvia-space--ensino .learning-status--em_andamento i { background: var(--learning-accent); box-shadow: 0 0 7px rgba(var(--learning-rgb), .7); }
+body.corvia-space--ensino .learning-status--concluida { color: #a8e9cc; background: rgba(75, 201, 144, .07); border-color: rgba(75, 201, 144, .22); }
+body.corvia-space--ensino .learning-status--concluida i { background: #55d498; box-shadow: 0 0 7px rgba(85, 212, 152, .55); }
+
+body.corvia-space--ensino .learning-card__copy { display: grid; min-width: 0; align-content: start; }
+body.corvia-space--ensino .learning-card__copy strong { display: -webkit-box; overflow: hidden; color: #e2e9ef; font-size: .9rem; font-weight: 640; line-height: 1.32; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+body.corvia-space--ensino .learning-card__copy p { display: -webkit-box; margin: 7px 0 0; overflow: hidden; color: #8294a6; font-size: .76rem; line-height: 1.48; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+body.corvia-space--ensino .learning-card__progress-copy { color: #75889a; font: 500 .67rem/1 var(--fonte-dados, ui-monospace, monospace); }
+body.corvia-space--ensino .learning-card__progress-copy b { color: #bda1eb; font-weight: 620; }
+
+body.corvia-space--ensino .learning-card__progress {
+  display: block;
+  overflow: hidden;
+  height: 6px;
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid rgba(var(--learning-rgb), .15);
+  border-radius: 999px;
+}
+
+body.corvia-space--ensino .learning-card__progress i { display: block; height: 100%; background: linear-gradient(90deg, #7250bf, var(--learning-accent)); border-radius: inherit; box-shadow: 0 0 9px rgba(var(--learning-rgb), .45); }
+body.corvia-space--ensino .learning-card--concluida .learning-card__progress i { background: linear-gradient(90deg, #2b9f70, #55d498); box-shadow: 0 0 9px rgba(85, 212, 152, .35); }
+body.corvia-space--ensino .learning-card__open { min-height: 30px; padding-top: 4px; color: #b89be7; font-size: .72rem; font-weight: 620; }
+body.corvia-space--ensino .learning-card__open svg { width: 16px; height: 16px; }
+
+body.corvia-space--ensino .learning-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  color: #718598;
+  border-top: 1px solid rgba(var(--learning-rgb), .11);
+  font-size: .7rem;
+}
+
+body.corvia-space--ensino .learning-more button,
+body.corvia-space--ensino .learning-state button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 13px;
+  color: #d9c8f5;
+  background: rgba(var(--learning-rgb), .08);
+  border: 1px solid rgba(var(--learning-rgb), .25);
+  border-radius: 9px;
+  font-size: .74rem;
+  cursor: pointer;
+}
+
+body.corvia-space--ensino .learning-more button:hover,
+body.corvia-space--ensino .learning-state button:hover { color: #fff; border-color: rgba(var(--learning-rgb), .53); }
+body.corvia-space--ensino .learning-more button svg { width: 16px; height: 16px; }
+
+body.corvia-space--ensino .learning-loading {
+  display: grid;
+  min-height: 225px;
+  place-content: center;
+  justify-items: center;
+  gap: 7px;
+  color: #8597a9;
+  text-align: center;
+}
+
+body.corvia-space--ensino .learning-loading > span { position: relative; width: 92px; height: 42px; margin-bottom: 8px; border: 1px solid rgba(var(--learning-rgb), .28); border-radius: 50%; animation: learning-orbit 4s linear infinite; }
+body.corvia-space--ensino .learning-loading > span::after { position: absolute; inset: 9px 24px; border: 1px solid rgba(var(--learning-rgb), .2); border-radius: 50%; content: ""; }
+body.corvia-space--ensino .learning-loading > span i { position: absolute; width: 5px; height: 5px; background: var(--learning-accent); border-radius: 50%; box-shadow: 0 0 10px rgba(var(--learning-rgb), .8); }
+body.corvia-space--ensino .learning-loading > span i:nth-child(1) { top: 4px; left: 19px; }
+body.corvia-space--ensino .learning-loading > span i:nth-child(2) { right: 4px; bottom: 12px; }
+body.corvia-space--ensino .learning-loading > span i:nth-child(3) { bottom: 1px; left: 38px; }
+body.corvia-space--ensino .learning-loading strong { color: #d8e1e9; font-size: .82rem; }
+body.corvia-space--ensino .learning-loading small { font-size: .7rem; }
+
+body.corvia-space--ensino .learning-state {
+  display: grid;
+  min-height: 148px;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  padding: 18px;
+  background: rgba(5, 17, 31, .64);
+  border: 1px solid rgba(var(--learning-rgb), .15);
+  border-radius: 12px;
+}
+
+body.corvia-space--ensino .learning-state > svg { width: 25px; height: 25px; color: var(--learning-accent); }
+body.corvia-space--ensino .learning-state strong { color: #dce6ed; font-size: .84rem; }
+body.corvia-space--ensino .learning-state p { margin: 4px 0 0; color: #7c90a1; font-size: .74rem; }
+body.corvia-space--ensino .learning-state--error { border-color: rgba(238, 92, 140, .24); }
+body.corvia-space--ensino .learning-state--error > svg { color: #ee5c8c; }
+
+@keyframes learning-orbit { to { transform: rotate(360deg); } }
+
+@media (max-width: 1240px) and (min-width: 901px) {
+  body.corvia-space--ensino .learning-filter-grid { grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(112px, .72fr)) 94px; }
+  body.corvia-space--ensino .learning-card { min-height: 224px; }
+}
+
+@media (max-width: 1080px) {
+  body.corvia-space--ensino .learning-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.corvia-space--ensino .learning-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.corvia-space--ensino .learning-search { grid-column: 1 / -1; }
+  body.corvia-space--ensino .learning-result { min-height: 46px; }
+}
+
+@media (max-width: 760px) {
+  body.corvia-space--ensino .learning-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.corvia-space--ensino .learning-metrics .cv-metric { min-height: 72px; }
+  body.corvia-space--ensino .learning-filter-grid { grid-template-columns: 1fr; }
+  body.corvia-space--ensino .learning-search { grid-column: auto; }
+  body.corvia-space--ensino .learning-map__heading { align-items: stretch; }
+  body.corvia-space--ensino .learning-timeline-link { min-width: 0; width: 100%; }
+  body.corvia-space--ensino .learning-sector { padding-left: 17px; }
+  body.corvia-space--ensino .learning-sector::before { left: 5px; }
+  body.corvia-space--ensino .learning-sector__node { left: -19px; }
+  body.corvia-space--ensino .learning-sector > header { grid-template-columns: 13px minmax(0, 1fr); }
+  body.corvia-space--ensino .learning-sector > header > span:last-child { grid-column: 2; margin-top: -4px; }
+  body.corvia-space--ensino .learning-grid { grid-template-columns: 1fr; }
+  body.corvia-space--ensino .learning-card { min-height: 206px; }
+  body.corvia-space--ensino .learning-card__copy strong { font-size: .92rem; }
+  body.corvia-space--ensino .learning-card__copy p { font-size: .78rem; }
+  body.corvia-space--ensino .learning-more { display: grid; justify-items: center; }
+  body.corvia-space--ensino .learning-more button { width: 100%; }
+  body.corvia-space--ensino .learning-state { grid-template-columns: 36px minmax(0, 1fr); }
+  body.corvia-space--ensino .learning-state button { grid-column: 1 / -1; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.corvia-space--ensino .learning-card { transition: none; }
+  body.corvia-space--ensino .learning-card:hover,
+  body.corvia-space--ensino .learning-card:focus-visible { transform: none; }
+  body.corvia-space--ensino .learning-loading > span { animation: none; }
 }
 
 /* Coleções: Casos clínicos, Trilhas e Material ao paciente. */
