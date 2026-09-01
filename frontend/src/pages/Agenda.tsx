@@ -5,6 +5,7 @@ import DicaContextual from "../components/DicaContextual";
 import Icone from "../components/Icone";
 import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
+import { withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 
 type Visao = "dia" | "semana" | "mes" | "lista";
 
@@ -415,8 +416,8 @@ export default function Agenda() {
       api.get<SerieCompromisso[]>("/agenda/commitment-series"),
       api.get<StatusTesteGoogle>("/agenda/google-teste/status"),
     ]);
-    setAgendamentos(appointments); setLocais(locations); setServicos(services);
-    setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(routines); setSeries(commitmentSeries);
+    setAgendamentos(withoutReservedSmokeTestRecords(appointments)); setLocais(locations); setServicos(services);
+    setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(withoutReservedSmokeTestRecords(routines)); setSeries(withoutReservedSmokeTestRecords(commitmentSeries));
     setStatusTesteGoogle(testeGoogle);
   }
 
@@ -448,7 +449,7 @@ export default function Agenda() {
       api.get<Agendamento[]>(`/agenda/commitments?start=${dataApi(start)}&end=${dataApi(end)}`),
       api.get<Agendamento[]>(`/agenda/work-routines/occurrences?start=${dataApi(start)}&end=${dataApi(end)}`),
     ]);
-    setCompromissos([...itens, ...rotinasVisiveis]);
+    setCompromissos(withoutReservedSmokeTestRecords([...itens, ...rotinasVisiveis]));
   }
 
   async function atualizarAgenda() {

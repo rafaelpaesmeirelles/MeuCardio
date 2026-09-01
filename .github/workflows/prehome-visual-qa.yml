@@ -12,6 +12,7 @@ on:
       - "frontend/src/components/PreHomeBrand.tsx"
       - "frontend/src/styles/login.css"
       - "frontend/src/styles/login-viewport-refinement.css"
+      - "frontend/src/styles/cardiology-spaces-login.css"
       - "frontend/src/main.tsx"
 
 permissions:
@@ -159,8 +160,10 @@ jobs:
             ['redefinir-senha', '/redefinir-senha?token=visual-qa-token'],
           ];
           const viewports = [
+            ['desktop-amplo-2560x1440', { width: 2560, height: 1440 }],
             ['notebook-1366x768', { width: 1366, height: 768 }],
             ['desktop-baixo-1366x640', { width: 1366, height: 640 }],
+            ['desktop-critico-1280x600', { width: 1280, height: 600 }],
             ['desktop-1440x900', { width: 1440, height: 900 }],
             ['mobile-390x844', { width: 390, height: 844 }],
           ];
@@ -221,11 +224,19 @@ jobs:
                 return {
                   width: innerWidth, height: innerHeight,
                   scrollWidth: document.documentElement.scrollWidth,
+                  scrollHeight: document.documentElement.scrollHeight,
                   isLogin,
                   sampleVisible: visible(selectors.panel), brandVisible: visible(selectors.brand),
                   sampleBackground: style?.backgroundColor || '',
                   canonicalMain: visible(selectors.root), logo: visible(selectors.logo),
                   heroVisual: visible(selectors.hero),
+                  rootRect: rect(selectors.root),
+                  panelRect: rect(selectors.panel),
+                  footerRect: rect('.login-gateway__footer'),
+                  utilitiesRect: rect('.login-gateway__utilities'),
+                  metaRect: rect('.login-gateway__form-meta'),
+                  headingRect: rect('.login-gateway__hero h1'),
+                  sceneRect: rect('.login-gateway__scene'),
                   heartOverlapsEnsino: intersects(heart, ensino),
                   isMobile: viewportName.startsWith('mobile'), bodyText: document.body?.innerText || '',
                 };
@@ -239,6 +250,13 @@ jobs:
               if (!metrics.canonicalMain) report.failures.push(`${viewportName}/${name}: shell público canônico ausente`);
               if ((metrics.isLogin ? !metrics.isMobile : true) && !metrics.heroVisual) report.failures.push(`${viewportName}/${name}: elemento visual central ausente`);
               if (metrics.isLogin && !metrics.isMobile && metrics.heartOverlapsEnsino) report.failures.push(`${viewportName}/${name}: coração conflita geometricamente com o espaço Ensino`);
+              if (metrics.isLogin && !metrics.isMobile) {
+                if (metrics.scrollHeight > metrics.height + 2) report.failures.push(`${viewportName}/${name}: login excede verticalmente a área útil ${metrics.scrollHeight}px > ${metrics.height}px`);
+                for (const [part, bounds] of [['raiz', metrics.rootRect], ['console', metrics.panelRect], ['rodapé', metrics.footerRect], ['utilidades', metrics.utilitiesRect], ['metadados', metrics.metaRect]]) {
+                  if (!bounds || bounds.y < -1 || bounds.bottom > metrics.height + 1) report.failures.push(`${viewportName}/${name}: ${part} fora da área útil ${JSON.stringify(bounds)}`);
+                }
+                if (!metrics.headingRect || !metrics.sceneRect || metrics.headingRect.x < metrics.sceneRect.x - 1 || metrics.headingRect.right > metrics.sceneRect.right + 1 || metrics.headingRect.y < metrics.sceneRect.y - 1) report.failures.push(`${viewportName}/${name}: título principal cortado ${JSON.stringify({ heading:metrics.headingRect, scene:metrics.sceneRect })}`);
+              }
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });

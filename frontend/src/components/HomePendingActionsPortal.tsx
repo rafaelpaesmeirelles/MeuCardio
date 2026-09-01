@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
 import Icone, { type NomeIcone } from "./Icone";
 import { api } from "../lib/api";
+import { withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/home-pending-actions.css";
 
 type Paciente = { id: number };
@@ -60,7 +61,7 @@ export default function HomePendingActionsPortal() {
       .catch(() => { if (ativo) setPacientes(null); });
 
     api.get<Agendamento[]>("/agenda/appointments")
-      .then((items) => { if (ativo) setAgenda(Array.isArray(items) ? items : []); })
+      .then((items) => { if (ativo) setAgenda(withoutReservedSmokeTestRecords(Array.isArray(items) ? items : [])); })
       .catch(() => { if (ativo) setAgenda([]); });
 
     return () => { ativo = false; };

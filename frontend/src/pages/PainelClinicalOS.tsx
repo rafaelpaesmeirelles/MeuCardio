@@ -4,6 +4,7 @@ import Icone, { type NomeIcone } from "../components/Icone";
 import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 
 type AcaoRapida = { to: string; titulo: string; detalhe: string; icone: NomeIcone; tone: string; featured?: boolean };
 type ContextoRecente = { path: string; titulo: string; detalhe: string; icone: NomeIcone; visitadoEm: number };
@@ -220,10 +221,14 @@ export default function PainelClinicalOS() {
     api.get<Contagem>("/evidence?limit=1").then((r) => setEvidencias(r.total ?? null)).catch(() => setEvidencias(null));
     api.get<Contagem>("/studies?limit=1").then((r) => setEstudos(r.total ?? null)).catch(() => setEstudos(null));
     api.get<Paciente[]>("/round/patients").then((r) => setPacientes(r.length)).catch(() => setPacientes(null));
-    api.get<Array<{ id: number; patient_name: string | null; starts_at: string; appointment_type: string; status: string }>>("/agenda/appointments").then((items) => setAgenda(items.map((item) => ({ id: item.id, patient_name: item.patient_name, scheduled_at: item.starts_at, appointment_type: item.appointment_type, status: item.status })))).catch(() => setAgenda([]));
-    api.post<ProximoLocal | null>("/agenda/mobility/prepare-next-target", {}).catch(() => api.get<ProximoLocal | null>("/agenda/mobility/next-target")).then(setProximoAlvo).catch(() => setProximoAlvo(null));
+    api.get<Array<{ id: number; patient_name: string | null; starts_at: string; appointment_type: string; status: string }>>("/agenda/appointments").then((items) => setAgenda(withoutReservedSmokeTestRecords(items).map((item) => ({ id: item.id, patient_name: item.patient_name, scheduled_at: item.starts_at, appointment_type: item.appointment_type, status: item.status })))).catch(() => setAgenda([]));
+    api.post<ProximoLocal | null>("/agenda/mobility/prepare-next-target", {}).catch(() => api.get<ProximoLocal | null>("/agenda/mobility/next-target")).then((target) => setProximoAlvo(withoutReservedSmokeTestRecord(target))).catch(() => setProximoAlvo(null));
     api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
-    api.get<ContextoDeslocamentoDia>("/agenda/mobility/day-context").then(setContextoDeslocamento).catch(() => setContextoDeslocamento(null));
+    api.get<ContextoDeslocamentoDia>("/agenda/mobility/day-context").then((contexto) => setContextoDeslocamento({
+      ...contexto,
+      first_target: withoutReservedSmokeTestRecord(contexto.first_target),
+      last_target: withoutReservedSmokeTestRecord(contexto.last_target),
+    })).catch(() => setContextoDeslocamento(null));
     api.get<ConfigMapa>("/agenda/mobility/map-config").then(setConfigMapa).catch(() => setConfigMapa(null));
   }, []);
 

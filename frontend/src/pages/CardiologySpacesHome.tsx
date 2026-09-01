@@ -8,6 +8,7 @@ import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
 import { nomeComTratamento } from "../lib/clinicalIdentity";
+import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
 
 type Mode = "complete" | "essential" | "scientific";
@@ -768,9 +769,9 @@ export default function CardiologySpacesHome() {
     ]).then((results) => {
       if (!active) return;
       const [appointmentsResult, commitmentsResult, routinesResult] = results;
-      const appointments = appointmentsResult.status === "fulfilled" && Array.isArray(appointmentsResult.value) ? appointmentsResult.value : [];
-      const commitments = commitmentsResult.status === "fulfilled" && Array.isArray(commitmentsResult.value) ? commitmentsResult.value : [];
-      const routines = routinesResult.status === "fulfilled" && Array.isArray(routinesResult.value) ? routinesResult.value : [];
+      const appointments = withoutReservedSmokeTestRecords<AgendaItem>(appointmentsResult.status === "fulfilled" && Array.isArray(appointmentsResult.value) ? appointmentsResult.value : []);
+      const commitments = withoutReservedSmokeTestRecords<AgendaItem>(commitmentsResult.status === "fulfilled" && Array.isArray(commitmentsResult.value) ? commitmentsResult.value : []);
+      const routines = withoutReservedSmokeTestRecords<WorkRoutine>(routinesResult.status === "fulfilled" && Array.isArray(routinesResult.value) ? routinesResult.value : []);
       const routineItems = routines.map(routineToAgendaItem).filter((item): item is AgendaItem => Boolean(item));
       const merged = [...appointments, ...commitments, ...routineItems]
         .filter((item) => item?.starts_at && sameLocalDay(item.starts_at) && !/cancel|faltou/i.test(item.status || ""))
@@ -796,7 +797,7 @@ export default function CardiologySpacesHome() {
     if (!mode || mode === "scientific" || usuario?.investidor) return;
     let active = true;
     api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {})
-      .then((target) => { if (active) setMobilityTarget(target || null); })
+      .then((target) => { if (active) setMobilityTarget(withoutReservedSmokeTestRecord(target)); })
       .catch(() => { if (active) setMobilityTarget(null); });
     return () => { active = false; };
   }, [mode, usuario?.investidor]);
@@ -927,8 +928,9 @@ export default function CardiologySpacesHome() {
       }
       let target = mobilityTarget;
       if (!target) {
-        target = await api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {});
-        setMobilityTarget(target || null);
+        const preparedTarget = await api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {});
+        target = withoutReservedSmokeTestRecord(preparedTarget);
+        setMobilityTarget(target);
       }
       if (!target?.target_key) {
         setTravelError("Não há um próximo compromisso presencial com local cadastrado para traçar a rota.");

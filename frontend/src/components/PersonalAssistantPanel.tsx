@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
+import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import Icone from "./Icone";
 import MapaDeslocamento, { type RotaDeslocamento } from "./MapaDeslocamento";
 
@@ -68,7 +69,7 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
     let ativo = true;
     setResumoEmail(undefined);
     Promise.all([
-      api.get<AgendamentoIntegrado[]>("/agenda/appointments").then((items) => items.map(normalizarAgendamento)).catch(() => [] as Agendamento[]),
+      api.get<AgendamentoIntegrado[]>("/agenda/appointments").then((items) => withoutReservedSmokeTestRecords(items).map(normalizarAgendamento)).catch(() => [] as Agendamento[]),
       api.post<ProximoLocal | null>("/agenda/mobility/prepare-next-target", {}).catch(() => api.get<ProximoLocal | null>("/agenda/mobility/next-target")).catch(() => null),
       api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").catch(() => null),
       api.get<ContextoDeslocamentoDia>("/agenda/mobility/day-context").catch(() => null),
@@ -76,7 +77,13 @@ export default function PersonalAssistantPanel({ aberto, onClose }: Props) {
       api.get<ResumoEmail>("/email/resumo").catch(() => null),
     ]).then(([compromissos, alvo, preferencias, contexto, mapa, email]) => {
       if (!ativo) return;
-      setAgenda(compromissos); setProximoAlvo(alvo); setMobilidade(preferencias); setContextoDeslocamento(contexto); setConfigMapa(mapa); setResumoEmail(email);
+      setAgenda(compromissos); setProximoAlvo(withoutReservedSmokeTestRecord(alvo)); setMobilidade(preferencias);
+      setContextoDeslocamento(contexto ? {
+        ...contexto,
+        first_target: withoutReservedSmokeTestRecord(contexto.first_target),
+        last_target: withoutReservedSmokeTestRecord(contexto.last_target),
+      } : null);
+      setConfigMapa(mapa); setResumoEmail(email);
     });
     return () => { ativo = false; };
   }, [aberto]);
