@@ -27263,5 +27263,69 @@
         "por_que": "Fecha o arco com a última tentativa de resgatar a classe — tirofibana pré-hospitalar no IAMCSST: On-TIME 1 não muda o fluxo TIMI 3, e On-TIME 2 só entrega um desfecho substituto (desvio de ST), sem dado de mortalidade no resumo — reforçando por que a rotina de GPI perdeu espaço para a dupla antiagregação oral potente e o stent direto."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3",
+    "titulo": "Prevenção e lipídios: o arsenal de inibidores de Lp(a) — do mecanismo genético à fase 3",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo por que a lipoproteína(a) é um alvo causal e não apenas associativo, quando rastreá-la, por que ela importa além do LDL (inclusive na estenose aórtica calcificada), e como situar cada molécula em desenvolvimento — muvalaplina oral, olpasirana, zerlasirana e lepodisirana injetáveis — na linha do tempo que vai da fase 2 à fase 3, sem prometer ao paciente um desfecho cardiovascular que essas moléculas ainda não provaram reduzir.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-evidencia-de-causalidade-genetica-dos-estudos-de-copenhague",
+        "por_que": "Ponto de partida obrigatório: os estudos de Copenhague estabelecem por randomização mendeliana que a Lp(a) é causa e não apenas marcador de risco cardiovascular. É essa causalidade genética — e não uma associação observacional — que justifica todo o investimento em desenvolver um fármaco que a reduza."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+        "por_que": "Antes de discutir qual fármaco reduz Lp(a), é preciso saber quem dosar: o consenso EAS 2022 recomenda medir Lp(a) ao menos uma vez na vida de todo adulto, já que o nível é geneticamente fixado e não muda com dieta ou estilo de vida — diferente do LDL."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode",
+        "por_que": "Mostra por que reduzir Lp(a) importa além do eixo ASCVD clássico: a mesma base causal mendeliana liga Lp(a) alta à progressão da estenose aórtica calcificada, doença sem tratamento farmacológico hoje, e o ensaio EPISODE é o primeiro a testar um hipolipemiante para desacelerá-la — ampliando o racional clínico para os fármacos que vêm a seguir."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "muvalaplin-inibidor-oral-da-formacao-de-lipoproteina-a-ensaio-de-fase-2",
+        "por_que": "Primeira molécula do arsenal: a muvalaplina é um inibidor oral de pequena molécula que bloqueia a formação da partícula de Lp(a) (ligação apo(a)-apoB), rompendo com o paradigma injetável das demais terapias em desenvolvimento — mostra a diversidade mecanística por trás de um único alvo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose",
+        "por_que": "A olpasirana é o siRNA hepatodirigido mais adiantado clinicamente contra a Lp(a); o OCEAN(a)-DOSE define a dose e mostra reduções de até ~90% do marcador, servindo de referência de eficácia para comparar as demais moléculas injetáveis da classe."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "zerlasirana-inibicao-de-lpa-por-sirna-o-ensaio-alpacar-360",
+        "por_que": "Segunda entrada da classe siRNA: o ALPACAR-360 testa a zerlasirana com intervalos de dose ainda mais espaçados que os da olpasirana, ilustrando a competição dentro da mesma classe farmacológica por regimes posológicos mais convenientes."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3",
+        "por_que": "A lepodisirana é o siRNA de duração mais estendida do arsenal e a primeira a avançar para um ensaio de fase 3 — marco que a diferencia das demais moléculas ainda em fase 2 e sinaliza qual candidata está mais perto de gerar dado de desfecho cardiovascular."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+        "por_que": "Depois de conhecer o mecanismo e a fase de desenvolvimento de cada molécula, a etapa prática: nenhum desses fármacos tem redução de MACE comprovada ainda, então este protocolo de consultório define o que fazer com o paciente de Lp(a) alta hoje — intensificar LDL, não converter risco, não prescrever fora de ensaio clínico."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco",
+        "por_que": "Fecha a trilha consolidando rastreio, interpretação do resultado e conduta em uma árvore de decisão única — inclusive o ramo que evita tratar a promessa dos inibidores em fase 2/3 como se já fossem terapia aprovada com desfecho provado."
+      }
+    ]
   }
 ]

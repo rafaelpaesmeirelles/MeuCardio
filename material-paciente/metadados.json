@@ -33062,5 +33062,73 @@
       "Chen Y, Xu M, Wei K, Ma N. Glucose metabolic dysregulation of diabetes and its role in atrial fibrillation pathogenesis. Frontiers in Cardiovascular Medicine. 2025.",
       "Liu T, Meng Z, Li D, et al. The association between glycemic variability and atrial fibrillation/in-hospital mortality in white and non-white patients with acute myocardial infarction. Journal of the National Medical Association. 2026."
     ]
+  },
+  {
+    "slug": "relogio-pode-medir-minha-pressao",
+    "titulo": "O relógio pode medir minha pressão?",
+    "subtitulo": "O que já se sabe sobre relógios, anéis e pulseiras que prometem medir a pressão sem manguito",
+    "tema": "Hipertensão",
+    "documento_slug": "medida-de-pressao-arterial-sem-manguito-cuffless-evidencia-2025-2026",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação em linguagem simples sobre os dispositivos vestíveis (relógios, anéis, pulseiras) que medem a pressão arterial sem manguito — como funcionam, o que a evidência de 2025-2026 mostra sobre sua precisão, e por que ainda não devem substituir a medida tradicional para decisões de tratamento.",
+    "secoes": [
+      {
+        "titulo": "O que são esses aparelhos",
+        "paragrafos": [
+          "Cada vez mais relógios inteligentes, anéis e pulseiras oferecem uma função de 'medir a pressão' sem usar aquele manguito que aperta o braço. Eles são chamados de dispositivos 'sem manguito', ou cuffless.",
+          "A diferença é importante: o manguito mede a pressão de forma direta, apertando e soltando a artéria. Esses aparelhos vestíveis não fazem isso — eles usam um sensor de luz (o mesmo que mede os batimentos do coração) para captar sinais indiretos no seu pulso ou no seu dedo, e um programa de computador estima a pressão a partir desses sinais."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que isso não é tão simples quanto parece",
+        "paragrafos": [
+          "Para funcionar, esses aparelhos precisam ser calibrados: no início do uso, você mede sua pressão com um manguito de verdade, e o aparelho 'aprende' a relação entre o sinal de luz que ele capta e o número de pressão naquele momento.",
+          "O problema é que essa calibração vai perdendo precisão com o passar do tempo. Isso quer dizer que o aparelho tende a acompanhar bem se sua pressão está subindo ou descendo em relação à última calibração — mas o número exato que ele mostra na tela pode já não ser confiável depois de um tempo, especialmente se você não recalibrar com frequência."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que os estudos recentes mostraram",
+        "paragrafos": [
+          "Entre o fim de 2025 e o início de 2026, três publicações importantes — incluindo um posicionamento oficial da maior associação de cardiologia dos Estados Unidos — analisaram esses aparelhos com cuidado. O resumo é direto: eles ainda não têm precisão suficiente para serem usados sozinhos em decisões de tratamento.",
+          "Um dado prático chamou atenção: durante o dia, a diferença desses aparelhos em relação ao exame de referência (o MAPA, que mede a pressão de 24 horas com manguito automático) costuma ser pequena. Mas durante a noite, enquanto você dorme, o erro aumenta — o aparelho pode mostrar a pressão vários pontos mais alta ou mais baixa do que ela realmente está. E é justamente à noite que saber a pressão certa é mais importante, porque ela ajuda a identificar um padrão de risco chamado 'não descenso noturno'."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que isso muda para você",
+        "paragrafos": [
+          "Ter esse tipo de aparelho não é proibido nem inútil — mas ele tem um papel de apoio, não de substituto.",
+          "Se você usa um relógio ou anel que mede pressão, é importante contar isso ao seu médico. Muita gente usa e não comenta, achando que não tem importância — mas essa informação ajuda a equipe de saúde a entender melhor os dados que você traz."
+        ],
+        "itens": [
+          "Use o aparelho para observar tendências ao longo do tempo — se a pressão está subindo, descendo ou estável — e não como um número isolado e definitivo",
+          "Não inicie, troque ou pare nenhum remédio para pressão baseado apenas na leitura do relógio ou do anel",
+          "Continue medindo com um aparelho de braço validado (o de manguito) para as decisões importantes, como diagnóstico e ajuste de dose",
+          "Desconfie mais do valor mostrado durante a noite ou logo ao acordar do que do valor durante o dia",
+          "O fato de o aparelho estar autorizado para venda não significa que ele foi comprovadamente testado para guiar seu tratamento"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito",
+      "Falta de ar súbita",
+      "Fraqueza ou dormência de um lado do corpo, boca torta, dificuldade de falar — procure emergência imediatamente",
+      "Alteração súbita da visão",
+      "Dor de cabeça muito intensa e diferente do habitual, com vômito ou confusão"
+    ],
+    "perguntas": [
+      "Meu relógio mede pressão — devo confiar no número que ele mostra?",
+      "Vale a pena eu trazer os dados do meu relógio para a consulta?",
+      "Esse tipo de aparelho pode substituir o exame de 24 horas (MAPA)?",
+      "Com que frequência eu preciso recalibrar o aparelho com um manguito de verdade?",
+      "Existe algum desses aparelhos que o senhor(a) recomende mais que outros?"
+    ],
+    "fontes": [
+      "Cohen JB, Byfield RL, Hardy ST, Juraschek SP, Houston Miller N, Mukkamala R, Picone DS, Thiele RH, Yang E, Brady TM. Cuffless Devices for the Measurement of Blood Pressure: A Scientific Statement From the American Heart Association. Hypertension. 2026;83(3):e00254. PMID: 41376592",
+      "Lee I, Chang MJ. Comparing the accuracy of continuous blood pressure monitoring using wearable cuffless devices with conventional 24-hour ambulatory blood pressure monitoring: A systematic review and meta-analysis. Am J Prev Cardiol. 2025;24:101342. PMID: 41321467",
+      "Wehbe F, Hiremath S. Cuffless blood pressure in 2025: from promise to practice: a narrative review. Curr Opin Nephrol Hypertens. 2026;35(2):164-173. PMID: 41460057"
+    ]
   }
 ]

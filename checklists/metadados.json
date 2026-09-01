@@ -42046,5 +42046,116 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi.md (já publicado, review_status: revisado). Itens fiéis à árvore de decisão e ao texto de origem — inclusive a distinção entre os dois limiares numéricos da calculadora LMNA-risk-VTA (≥7% de validação estatística vs. ≥10% de ação clínica) e a ausência proposital de classe de recomendação para FLNC/PLN p.Arg14del, ambas explicitadas no documento-fonte — sem adição de critério não presente na fonte. Aguarda revisão médica independente antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao",
+    "condicao": "Manejo da recorrência de fibrilação atrial após ablação por cateter (período de blanking e decisão de reablação)",
+    "resumo": "Checklist de execução para a recorrência documentada de FA, flutter atrial ou taquicardia atrial após ablação por cateter índice — cobre a classificação dentro/fora do período de blanking (atualizado para 8 semanas pelo consenso EHRA/HRS/APHRS/LAHRS 2024), a escolha entre conduta expectante, cardioversão e ajuste de antiarrítmico, e os critérios para indicar reablação precoce ou tardia. Não decide qual antiarrítmico usar nem a manutenção/suspensão da anticoagulação após reablação bem-sucedida — temas cobertos por documentos específicos separados.",
+    "documento_origem": "fluxograma-recorrencia-fa-pos-ablacao-manejo-blanking-reablacao",
+    "theme": "Fibrilação atrial",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Tzeis S, Gerstenfeld EP, Kalman J, Saad EB, Sepehri Shamloo A, Andrade JG, et al. 2024 European Heart Rhythm Association/Heart Rhythm Society/Asia Pacific Heart Rhythm Society/Latin American Heart Rhythm Society Expert Consensus Statement on Catheter and Surgical Ablation of Atrial Fibrillation. Europace. 2024;26(4):euae043. DOI: 10.1093/europace/euae043. PMID: 38587017. PMCID: PMC11000153. Co-publicado em Heart Rhythm. 2024;21(9):e31-e149. DOI: 10.1016/j.hrthm.2024.03.017. PMID: 38597857.",
+      "Texto integral consultado via Europe PMC REST API (fullTextXML), seções 9.5.1 (incidência e fisiopatologia da recorrência precoce), 9.5.2 (duração do período de blanking) e 9.5.3 (manejo da recorrência precoce — cardioversão elétrica e reablação precoce)."
+    ],
+    "itens": [
+      {
+        "id": "it-recorr-fa-classificar-blanking",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Recorrência classificada como dentro (≤ 8 semanas) ou fora do período de blanking pós-ablação, usando o corte atualizado do consenso EHRA/HRS/APHRS/LAHRS 2024 — não mais os 3 meses usados até 2017/2021",
+        "origem_secao": "Árvore de decisão — nó inicial (D1)"
+      },
+      {
+        "id": "it-recorr-fa-nao-considerar-falha-blanking",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Recorrência dentro do blanking não registrada como falha do procedimento nem usada isoladamente como indicação de reablação de rotina",
+        "origem_secao": "Árvore de decisão — ramo B1"
+      },
+      {
+        "id": "it-recorr-fa-conduta-expectante-assintomatica",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Se o episódio dentro do blanking for assintomático ou autolimitado (reversão espontânea): conduta expectante, com manutenção do controle de frequência e da anticoagulação já estabelecidos e reavaliação clínica de rotina em 2-3 meses",
+        "origem_secao": "Árvore de decisão — ramo C1"
+      },
+      {
+        "id": "it-recorr-fa-cardioversao-30-dias",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se o episódio dentro do blanking for sintomático e sustentado (sem reversão espontânea): cardioversão elétrica considerada, preferencialmente dentro de 30 dias do início da recorrência",
+        "origem_secao": "Árvore de decisão — ramo B2"
+      },
+      {
+        "id": "it-recorr-fa-pretratamento-farmacologico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a arritmia recidivar após a primeira cardioversão dentro do blanking: pré-tratamento farmacológico com antiarrítmico prescrito e algumas semanas aguardadas antes de nova tentativa de cardioversão",
+        "origem_secao": "Árvore de decisão — ramo B2"
+      },
+      {
+        "id": "it-recorr-fa-reablacao-precoce-restrita",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Reablação ainda dentro do blanking reservada apenas a casos recorrentes, muito sintomáticos e refratários tanto ao antiarrítmico quanto à cardioversão — não indicada como conduta de rotina nesta fase",
+        "origem_secao": "Árvore de decisão — ramo C3 (D3)"
+      },
+      {
+        "id": "it-recorr-fa-reavaliacao-fim-blanking",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação formal agendada ao final da 8ª semana, com ECG de 12 derivações e/ou monitorização de ritmo dirigida por sintomas, antes de qualquer decisão sobre reablação",
+        "origem_secao": "Árvore de decisão — ramo C2 / nó D5"
+      },
+      {
+        "id": "it-recorr-fa-tardia-assintomatica-seguimento-anual",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se a recorrência tardia (> 8 semanas) for assintomática ou pouco sintomática: seguimento clínico anual com ECG de 12 derivações, ajustando apenas controle de frequência e anticoagulação conforme o risco tromboembólico — reablação não indicada neste momento",
+        "origem_secao": "Árvore de decisão — ramo C4"
+      },
+      {
+        "id": "it-recorr-fa-tardia-otimizar-antiarritmico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se a recorrência tardia for sintomática e o antiarrítmico ainda não foi tentado (ou pode ser otimizado): antiarrítmico iniciado ou otimizado em decisão compartilhada com o paciente, com reavaliação da resposta clínica antes de indicar novo procedimento",
+        "origem_secao": "Árvore de decisão — ramo C5"
+      },
+      {
+        "id": "it-recorr-fa-candidatura-redo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar reablação (redo), candidatura clínica do paciente avaliada — ausência de contraindicação proibitiva — e aceitação do paciente em repetir o procedimento confirmada, dentro da via de decisão compartilhada",
+        "origem_secao": "Árvore de decisão — nó D7"
+      },
+      {
+        "id": "it-recorr-fa-alvo-veia-pulmonar",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Quando a reablação é indicada, reconexão de veia(s) pulmonar(es) buscada e tratada como alvo primário do reprocedimento — achado mais comum na recorrência, descrito em mais de 80% dos casos após crioablação de primeira geração (reconexão de mais de uma veia em mais da metade)",
+        "origem_secao": "Árvore de decisão — ramo C7"
+      },
+      {
+        "id": "it-recorr-fa-nao-candidato-otimizar-farmaco",
+        "categoria": "conduta",
+        "obrigatorio": false,
+        "texto": "Se o paciente não for candidato clínico a novo procedimento ou recusar repetir a ablação: terapia farmacológica de controle de ritmo ou de frequência mantida/otimizada, com reavaliação periódica dentro da via de decisão compartilhada",
+        "origem_secao": "Árvore de decisão — ramo C6"
+      },
+      {
+        "id": "it-recorr-fa-nao-decidir-anticoagulacao-aqui",
+        "categoria": "anticoagulacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que esta via não é usada para decidir a manutenção ou a suspensão da anticoagulação após reablação bem-sucedida nem a escolha do antiarrítmico — temas cobertos por documentos específicos separados deste mesmo acervo",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento fluxograma-recorrencia-fa-pos-ablacao-manejo-blanking-reablacao.md (já publicado, review_status: revisado), que por sua vez segue o consenso EHRA/HRS/APHRS/LAHRS 2024 (Tzeis et al., Europace 2024, PMID 38587017), seções 9.5.1-9.5.3. Itens fiéis à árvore de decisão e ao texto de origem, inclusive a atualização do período de blanking de 3 meses para 8 semanas e a ressalva de que o dado de reconexão de veia pulmonar (>80%) vem especificamente da experiência com crioablação de primeira geração. Sem adição de critério não presente na fonte. Aguarda revisão médica independente antes de qualquer promoção de review_status."
+    }
   }
 ]
