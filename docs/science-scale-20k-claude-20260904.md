@@ -1886,3 +1886,27 @@ Segundo lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 24 | 276 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **455** | **4.445** |
+
+## Lote 88 — concluído (commit a2f5595f)
+
+Terceiro lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **2 casos clínicos**: HAS recém-diagnosticada (combinação inicial, ACC/AHA 2025); estenose aórtica bicúspide grave — SAVR como modalidade primária, corte de 70 anos só vale para tricúspide (ESC/EACTS 2025).
+- **2 checklists**: escolha TAVI vs. SAVR na estenose aórtica grave (12 itens); timing de anticoagulação pós-AVC isquêmico em FA (8 itens).
+- **2 documentos standalone**: mavacamten na CMH obstrutiva elegível para redução septal (VALOR-HCM, 3 cortes temporais, 84% livres de TRS aos 2,5 anos); qual modalidade de exercício reduz mais a PA — contraste entre isométrico (2023, consultório) e combinado/HIIT/circuito (2025-2026, dose-resposta e MAPA).
+- **1 material-paciente**: FA e problema na válvula — só duas situações realmente impedem o anticoagulante moderno.
+- **1 trilha**: complicações mecânicas pós-infarto, 7 etapas (6 documentos + 1 checklist já publicados).
+- **Verificação de integridade**: nenhum slug colide (921 casos / 474 checklists / 447 materiais / 555 trilhas / 2.773 slugs conferidos); 13 links de Tudo com Tudo re-verificados.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.718 itens.
+
+### Status consolidado (após Lote 88)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 184 | 2.216 |
+| Casos clínicos | 900 | 68 | 832 |
+| Checklists | 600 | 50 | 550 |
+| Materiais-paciente | 500 | 41 | 459 |
+| Trilhas | 300 | 25 | 275 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **463** | **4.437** |
