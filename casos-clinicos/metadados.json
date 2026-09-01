@@ -19096,5 +19096,49 @@
       "Li J, Zhang F, Fan S, et al. Association of SGLT2 inhibitors with post-ablation atrial fibrillation recurrence in individuals with heart failure or type 2 diabetes mellitus: a systematic review and meta-analysis. Front Cardiovasc Med. 2025 Nov 21. DOI: 10.3389/fcvm.2025.1710123. PMID: 41357094."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025",
+    "titulo": "Prolapso mitral com regurgitação grave assintomática: o diâmetro sistólico do VE indexado muda a conduta?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 34 anos, atleta amadora, 1,58 m e 50 kg (superfície corporal ≈ 1,45 m²), é encaminhada após sopro sistólico apical achado em exame de rotina. Nega dispneia, síncope ou palpitações mesmo em esforços intensos. Ecodopplercardiograma mostra prolapso do folheto posterior da valva mitral com regurgitação mitral primária grave (jato excêntrico, área de orifício regurgitante efetivo e volume regurgitante compatíveis com grave), fração de ejeção do VE de 61%, diâmetro sistólico final do VE (DSFVE) de 38 mm, átrio esquerdo com dilatação leve, pressão sistólica de artéria pulmonar normal e ritmo sinusal, sem fibrilação atrial.",
+    "pergunta": "Com base na diretriz ESC/EACTS 2025 para valvopatias, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Vigilância clínica e ecocardiográfica seriada, pois o DSFVE absoluto (38 mm) está abaixo do limiar de 40 mm e a paciente é assintomática",
+      "Reparo valvar mitral cirúrgico está indicado (Classe I): o DSFVE indexado pela superfície corporal (38/1,45 ≈ 26 mm/m²) já ultrapassa o novo limiar de 20 mm/m² da diretriz de 2025, mesmo com o valor absoluto abaixo de 40 mm",
+      "Aguardar o surgimento de sintomas antes de indicar qualquer intervenção, já que a fração de ejeção está preservada e não há critério de gravidade adicional",
+      "Indicar troca valvar mitral por prótese, e não reparo, para evitar reoperação em uma paciente jovem com longa expectativa de vida"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC/EACTS 2025 para doença valvar cardíaca (Praz F, Borger MA, Lanz J, et al. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295) acrescentou o DSFVE indexado ≥20 mm/m² como marcador de indicação de intervenção Classe I na regurgitação mitral primária grave assintomática, ao lado da FEVE ≤60%, DSFVE absoluto ≥40 mm, fibrilação atrial, PSAP >50 mmHg, dilatação significativa do átrio esquerdo e regurgitação tricúspide secundária concomitante — cada um desses marcadores basta isoladamente para indicar reparo. O critério indexado corrige o ponto cego do valor absoluto em pacientes de pequena superfície corporal, como esta paciente: 38 mm parece 'normal' pelo corte de 40 mm, mas corresponde a cerca de 26 mm/m², já acima do novo limiar de 20 mm/m² — nela, aguardar o corte absoluto adiaria a cirurgia para depois de o ventrículo já ter perdido reserva funcional. A opção de troca valvar está errada porque a recomendação Classe I pressupõe reparo durável em centro de alto volume (mortalidade operatória <1%), que é a via preferida na doença degenerativa com anatomia favorável — a prótese não é a primeira escolha só por causa da idade jovem.",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295.",
+      "Adamo M, Massussi M, Marsan NA, et al. 2025 ESC/EACTS valvular heart disease guidelines: practical updates on mitral and tricuspid regurgitation. Eur Heart J Suppl. 2026;28(Suppl 4):iv83-iv96. DOI: 10.1093/eurheartjsupp/suag001. PMID: 42064867."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot",
+    "titulo": "Pós-infarto com LDL fora da meta: a aplicação mensal do lerodalcibepe é motivo para preferi-lo ao PCSK9 já consolidado?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Homem, 63 anos, infarto agudo do miocárdio há 5 meses, em atorvastatina 80 mg/dia (dose máxima tolerada) associada a ezetimiba 10 mg/dia há 3 meses. LDL-C atual: 104 mg/dL (meta para prevenção secundária de muito alto risco: <55 mg/dL, com redução de ao menos 50% do basal). Sem outras comorbidades relevantes, função renal e hepática normais. O paciente trouxe uma reportagem sobre o lerodalcibepe, inibidor de PCSK9 \"de terceira geração\", recém-aprovado pela FDA (dezembro de 2025), com aplicação subcutânea mensal (vs. quinzenal do evolocumabe), e pergunta se pode começar já com essa opção em vez do inibidor de PCSK9 injetável mais tradicional.",
+    "pergunta": "Diante da evidência disponível até o momento, qual a conduta mais apropriada para intensificar o tratamento hipolipemiante deste paciente?",
+    "opcoes": [
+      "Associar evolocumabe ou alirocumabe, inibidores de PCSK9 com ensaio de desfecho cardiovascular (CVOT) prospectivo, controlado e publicado em periódico revisado por pares demonstrando redução de eventos (FOURIER e ODYSSEY OUTCOMES); o lerodalcibepe ainda não tem CVOT dedicado publicado e não possui registro na ANVISA",
+      "Iniciar lerodalcibepe, já que a classificação como inibidor de PCSK9 de \"terceira geração\" indica eficácia superior aos anticorpos monoclonais já estabelecidos",
+      "Iniciar lerodalcibepe com base na redução de eventos cardiovasculares adjudicados (MACE) relatada no pool dos três ensaios fase 3 do programa LIBerate, já que os números (RR 0,42–0,54) equivalem ao resultado de um CVOT positivo",
+      "Não intensificar o tratamento agora e aguardar o ensaio de desfecho cardiovascular dedicado ao lerodalcibepe, já que a aplicação mensal deve se tornar o padrão de PCSK9 em breve"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O paciente tem doença aterosclerótica estabelecida (IAM prévio) e LDL-C de 104 mg/dL apesar de estatina em dose máxima tolerada associada a ezetimiba — fora da meta de muito alto risco (<55 mg/dL), com indicação de associar um inibidor de PCSK9. Evolocumabe e alirocumabe têm CVOT prospectivo, controlado e publicado em periódico revisado por pares demonstrando redução de eventos cardiovasculares maiores (FOURIER: Sabatine MS et al. N Engl J Med. 2017;376(18):1713-1722, PMID 28304224; ODYSSEY OUTCOMES: Schwartz GG et al. N Engl J Med. 2018;379(22):2097-2107, PMID 30403574). O lerodalcibepe é uma terceira modalidade molecular de inibição de PCSK9 (small binding protein/adnectina fundida à albumina, não anticorpo nem siRNA) com redução de LDL-C comparável — não superior — à dos anticorpos monoclonais nos ensaios LIBerate-HR e LIBerate-HeFH (Klug EQ et al. JAMA Cardiol. 2024;9(9):800-807, PMID 38958989; Raal F et al. Eur Heart J. 2023;44(40):4272-4280, PMID 37639462); \"terceira geração\" é classificação estrutural, não hierarquia de eficácia ou de prova de desfecho. A redução de MACE (RR 0,42 em 24 semanas e 0,54 em 52 semanas) foi um desfecho exploratório de uma análise agrupada apresentada apenas como resumo de congresso (European Atherosclerosis Society, 2025), não indexada no PubMed e sem publicação revisada por pares — os três ensaios do programa LIBerate foram desenhados e têm poder estatístico para LDL-C, não para eventos cardiovasculares, o que a distingue qualitativamente de um CVOT como FOURIER ou ODYSSEY OUTCOMES. Além disso, o lerodalcibepe não tem registro localizado na ANVISA, o que inviabiliza sua prescrição no Brasil nesta data. Adiar a intensificação terapêutica também é inadequado: o paciente já tem indicação atual de inibidor de PCSK9 com evidência de desfecho estabelecida, sem necessidade de aguardar resultado de outro fármaco ainda em fase de prova de conceito cardiovascular.",
+    "source_refs": [
+      "Klug EQ, Llerena S, Burgess LJ, et al; LIBERATE-HR Investigators. Efficacy and Safety of Lerodalcibep in Patients With or at High Risk of Cardiovascular Disease: A Randomized Clinical Trial. JAMA Cardiol. 2024;9(9):800-807. DOI: 10.1001/jamacardio.2024.1659. PMID: 38958989.",
+      "Raal F, Fourie N, Scott R, et al; LIBerate-HeFH Investigators. Long-term efficacy and safety of lerodalcibep in heterozygous familial hypercholesterolaemia: the LIBerate-HeFH trial. Eur Heart J. 2023;44(40):4272-4280. DOI: 10.1093/eurheartj/ehad596. PMID: 37639462.",
+      "Zhuang-Yan A, Blair HA. Lerodalcibep: First Approval. Drugs. 2026;86(7):1133-1139. DOI: 10.1007/s40265-026-02317-x. PMID: 41945308.",
+      "Kallend D, Raal F, Kereiakes D, Klug E, Vest J, Stein E. Lerodalcibep and adjudicated cardiovascular events in a pre-defined pooled analysis of three large long term Phase III studies. Atherosclerosis. 2025;407(Suppl):119493. DOI: 10.1016/j.atherosclerosis.2025.119493."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

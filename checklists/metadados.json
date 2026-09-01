@@ -39690,5 +39690,203 @@
       }
     ],
     "revisao": "Extração a partir do fluxograma ESC 2024 já publicado nesta base; cada item rastreável por origem_secao ao texto real do documento, sem invenção de limiares além dos já citados na fonte (corte de FEVE em 40%, alvo de FC <110 bpm). Pendente de validação clínica final."
+  },
+  {
+    "slug": "decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026",
+    "condicao": "Decisão de iniciar terapia redutora de LDL em prevenção primária, na consulta de rotina, adulto de 30 a 79 anos sem doença aterosclerótica estabelecida (algoritmo ACC/AHA 2026, PREVENT-ASCVD)",
+    "resumo": "Sequência de decisão para quando considerar iniciar hipolipemiante em prevenção primária, antes de qualquer meta numérica de LDL-C entrar em jogo: condições que dispensam cálculo de risco (diabetes, DRC estágio 3-4, HIV entre 40-75 anos), via própria da hipercolesterolemia grave (LDL-C ≥190 ou ApoB ≥140), via do paciente com mais de 75 anos, cálculo de risco em 10 anos pelas equações PREVENT-ASCVD (que substituem as antigas Pooled Cohort Equations) e uso seletivo do escore de cálcio coronariano para reclassificar quando a decisão permanece incerta.",
+    "documento_origem": "fluxograma-estatina-em-prevencao-primaria-decisao-de-tratar-acc-aha-2026",
+    "theme": "Prevenção e lipídios",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624-2757. DOI: 10.1016/j.jacc.2025.11.016. PMID: 41824590."
+    ],
+    "itens": [
+      {
+        "id": "elegibilidade-populacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar que o paciente tem entre 30 e 79 anos e não tem doença aterosclerótica cardiovascular já estabelecida — população à qual se aplica esta árvore de decisão de prevenção primária",
+        "origem_secao": "Árvore de decisão — nó inicial (R0)"
+      },
+      {
+        "id": "condicoes-que-dispensam-calculo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Verificar, entre 40 e 75 anos, se há diabetes, doença renal crônica estágio 3 ou 4, ou infecção por HIV — se presente qualquer uma, terapia redutora de LDL é recomendada independentemente do risco estimado e do LDL-C basal, sem necessidade de calcular escore",
+        "origem_secao": "Árvore de decisão — nó D1/C1"
+      },
+      {
+        "id": "rastreio-hipercolesterolemia-grave",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Na ausência das condições acima, verificar LDL-C ≥190 mg/dL e/ou ApoB ≥140 mg/dL; se presente, investigar causa secundária e considerar hipercolesterolemia familiar com rastreamento em cascata quando apropriado",
+        "origem_secao": "Árvore de decisão — nó D2/P1"
+      },
+      {
+        "id": "hipercolesterolemia-grave-jovem",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em hipercolesterolemia grave, avaliar se o paciente é jovem com LDL-C ≥160 mg/dL ou tem história familiar forte de doença aterosclerótica prematura — se sim, considerar farmacoterapia hipolipemiante mais precoce, dado o alto risco de exposição cumulativa ao longo da vida",
+        "origem_secao": "Árvore de decisão — nó D3/C2"
+      },
+      {
+        "id": "hipercolesterolemia-grave-demais",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Nos demais casos de hipercolesterolemia grave (sem os critérios de tratamento mais precoce acima), basear a terapia redutora de LDL no risco global e na exposição cumulativa, já que o alto risco aterosclerótico ao longo da vida está estabelecido por este nível de LDL-C/ApoB",
+        "origem_secao": "Árvore de decisão — nó D3/C3"
+      },
+      {
+        "id": "via-idoso-acima-75",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Sem hipercolesterolemia grave, verificar se o paciente tem mais de 75 anos; se sim, considerar farmacoterapia em conjunto com estilo de vida, risco global, fragilidade, expectativa de benefício e preferência do paciente, em vez de aplicar diretamente o escore de risco",
+        "origem_secao": "Árvore de decisão — nó D4/C4"
+      },
+      {
+        "id": "calculo-risco-prevent",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Para os pacientes com 75 anos ou menos e sem os critérios anteriores, calcular o risco de doença aterosclerótica cardiovascular em 10 anos pelas equações PREVENT-ASCVD, que substituem as antigas Pooled Cohort Equations",
+        "origem_secao": "Árvore de decisão — nó D4/P2"
+      },
+      {
+        "id": "risco-3-a-5",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se o risco PREVENT-ASCVD em 10 anos for de 3% a menos de 5%: terapia redutora de LDL pode ser considerada, após discussão compartilhada entre clínico e paciente",
+        "origem_secao": "Árvore de decisão — nó D5/C5"
+      },
+      {
+        "id": "risco-5-a-10",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se o risco PREVENT-ASCVD em 10 anos for de 5% a menos de 10%: terapia redutora de LDL deve ser considerada, após discussão individualizada",
+        "origem_secao": "Árvore de decisão — nó D5/C6"
+      },
+      {
+        "id": "reclassificacao-por-cac",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o risco for menor que 3% ou 10% ou mais e a decisão terapêutica permanecer incerta, verificar elegibilidade para escore de cálcio coronariano (homens a partir de 40 anos, mulheres a partir de 45 anos) e usá-lo seletivamente para reclassificar o risco pelo modelo Calculate-Personalize-Reclassify",
+        "origem_secao": "Árvore de decisão — nó D6/P3"
+      },
+      {
+        "id": "resultado-reclassificacao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se o escore de cálcio coronariano reclassificar o risco para a faixa de 3% a menos de 10%, aplicar a decisão de discussão compartilhada ou individualizada correspondente à nova faixa; se não reclassificar, ou se o paciente não for elegível ao CAC, não há indicação adicional de terapia hipolipemiante baseada em risco nesta avaliação — manter ênfase em estilo de vida e reavaliação periódica",
+        "origem_secao": "Árvore de decisão — nós D7/C7/C8/C9"
+      },
+      {
+        "id": "lpa-uma-vez-na-vida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Medir Lp(a) ao menos uma vez em todo adulto, independentemente do ramo desta árvore — não muda a decisão inicial de tratar, mas reclassifica risco quando elevada (cerca de 1,4 vez o risco em 125 nmol/L ou mais; cerca de 2 vezes em 250 nmol/L ou mais) e reforça a intensificação dos fatores modificáveis",
+        "origem_secao": "O que a árvore não mostra"
+      },
+      {
+        "id": "apob-refinamento",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Considerar ApoB como ferramenta de refinamento, não de decisão inicial — mais útil quando há discordância entre LDL-C e a carga de partículas aterogênicas (triglicerídeos acima de 200 mg/dL, diabetes, ou LDL-C já abaixo de 70 mg/dL sem meta secundária atingida)",
+        "origem_secao": "O que a árvore não mostra"
+      },
+      {
+        "id": "hipertrigliceridemia-nao-e-ramo-a-parte",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que hipertrigliceridemia não é um ramo à parte para prevenção aterosclerótica — a estatina continua sendo a base farmacológica; triglicerídeos de 1.000 mg/dL ou mais justificam terapia específica adicional, mas com o objetivo distinto de prevenir pancreatite, não de reduzir placa",
+        "origem_secao": "O que a árvore não mostra"
+      },
+      {
+        "id": "nao-extrapolar-entre-diretrizes",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrar que esta diretriz americana (ACC/AHA 2026) não deve ser lida como equivalente à ESC/EAS 2025 — as duas convergem em princípios, mas usam estruturas e algoritmos próprios; uma meta ou classe de recomendação de uma sociedade não deve ser atribuída à outra por analogia",
+        "origem_secao": "O que a árvore não mostra"
+      }
+    ],
+    "revisao": "Checklist extraído do fluxograma de decisão de tratar (ACC/AHA 2026) já publicado no acervo. Itens rastreáveis por origem_secao (nós da árvore de decisão em mermaid). Pendente de revisão clínica formal antes de publicação."
+  },
+  {
+    "slug": "regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda",
+    "condicao": "Regurgitação mitral secundária grave em insuficiência cardíaca — seleção para reparo transcateter borda-a-borda",
+    "resumo": "Checklist de verificação para a seleção do candidato ao reparo transcateter borda-a-borda na regurgitação mitral secundária, baseado no racional de evidência COAPT versus MITRA-FR: confirma etiologia secundária, otimização prévia da terapia clínica guiada por diretriz, avaliação da proporcionalidade entre EROA e volume ventricular, e evita as armadilhas de generalizar um único ensaio para toda a população.",
+    "documento_origem": "regurgitacao-mitral-secundaria-transcateter-coapt-versus-mitra-fr-por-que-resultados-divergiram",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640. PMID: 30280640.",
+      "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374. PMID: 30145927.",
+      "Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006. PMID: 30553663."
+    ],
+    "itens": [
+      {
+        "id": "rm-sec-etiologia-secundaria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Regurgitação mitral confirmada como secundária/funcional (não primária/degenerativa) em paciente com insuficiência cardíaca sintomática, antes de aplicar o racional de seleção deste documento",
+        "origem_secao": "A pergunta que os dois ensaios tentaram responder"
+      },
+      {
+        "id": "rm-sec-gdmt-otimizada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Terapia clínica da insuficiência cardíaca confirmada como otimizada e maximizada, guiada por diretriz, antes de considerar o reparo transcateter borda-a-borda — critério de elegibilidade que caracterizou a população do COAPT",
+        "origem_secao": "COAPT — positivo, com números robustos"
+      },
+      {
+        "id": "rm-sec-seguranca-dispositivo",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Referência de segurança do dispositivo verificada: liberdade de complicações relacionadas ao dispositivo em 12 meses de 96,6% no COAPT, superando a meta de desempenho pré-especificada de 88,0%",
+        "origem_secao": "COAPT — positivo, com números robustos"
+      },
+      {
+        "id": "rm-sec-proporcionalidade-eroa-vdfve",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Área do orifício regurgitante efetivo (EROA) avaliada em relação ao volume diastólico final do VE (VDFVE), para situar a regurgitação no espectro proporcional versus desproporcional à dilatação ventricular",
+        "origem_secao": "Por que dois ensaios sobre a mesma pergunta divergiram tanto"
+      },
+      {
+        "id": "rm-sec-framework-nao-obrigatorio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Framework proporcional/desproporcional tratado como ferramenta explicativa de seleção de pacientes, não como cálculo obrigatório da equação de Gorlin à beira do leito — decisão apoiada na avaliação ecocardiográfica padrão e nos critérios de elegibilidade da diretriz vigente",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-sec-nao-generalizar-mitra-fr",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Decisão de não oferecer o reparo transcateter não baseada isoladamente no resultado neutro do MITRA-FR, ignorando o benefício demonstrado no COAPT em população com regurgitação desproporcional",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-sec-nao-encaminhar-sem-gdmt",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Encaminhamento para o reparo transcateter não realizado com base isolada no resultado positivo do COAPT sem antes confirmar que a terapia clínica já foi otimizada e maximizada — o procedimento não substitui o tratamento farmacológico e de dispositivo da insuficiência cardíaca",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-sec-endpoints-distintos",
+        "categoria": "documentacao",
+        "obrigatorio": false,
+        "texto": "Diferença de desfechos primários entre os dois ensaios reconhecida ao comparar seus resultados — composto de morte/hospitalização não planejada por IC em 12 meses no MITRA-FR versus taxa de hospitalização por IC por paciente-ano em 24 meses no COAPT",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "rm-sec-conduta-alinhada-diretriz",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Conduta de intervir na válvula versus intensificar o tratamento do ventrículo decidida pela relação entre gravidade da regurgitação e tamanho do VE, alinhada ao fluxograma ESC/EACTS 2025 que recomenda otimizar o tratamento da insuficiência cardíaca antes de considerar intervenção na regurgitação mitral secundária ventricular",
+        "origem_secao": "O que isso significa na prática clínica"
+      }
+    ],
+    "revisao": "Checklist complementar ao fluxograma já publicado (fluxograma-regurgitacao-mitral-esc-eacts-2025), extraindo os critérios de seleção e as armadilhas de interpretação da base de evidência COAPT versus MITRA-FR para o reparo transcateter borda-a-borda na regurgitação mitral secundária. Pendente de validação clínica."
   }
 ]

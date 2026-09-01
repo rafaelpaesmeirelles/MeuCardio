@@ -26103,5 +26103,69 @@
         "por_que": "Fecha a trilha situando cada uma dessas peças — padrão circadiano, horário da dose, interferência farmacológica, causa secundária — dentro da diretriz mais recente, que reafirma que o controle pressórico não se resume ao número isolado de consultório e exige olhar risco cardiovascular global, comorbidade e medidas não farmacológicas em conjunto."
       }
     ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento",
+    "titulo": "Fibrilação atrial: a evidência pivotal da ablação por cateter e a decisão de anticoagulação depois do sucesso",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo justificar a ablação por cateter com a evidência que a sustenta — do ensaio que a testou contra o antiarrítmico até a energia e a técnica usadas hoje — e decidir o que fazer com a anticoagulação quando o procedimento dá certo: suspender, trocar por antiplaquetário ou fechar o apêndice atrial.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "cabana-ablacao-por-cateter-versus-farmacos-antiarritmicos-fa",
+        "por_que": "Ponto de partida obrigatório: o ensaio que testou ablação por cateter contra terapia antiarrítmica. A divergência entre intenção de tratar e o que foi de fato feito já ensina a ler criticamente todo o resto da trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "fire-and-ice-crioballonete-versus-radiofrequencia-na-fibrilacao-atrial-paroxistica",
+        "por_que": "Com a ablação já justificada como estratégia, a pergunta seguinte é técnica: qual energia usar. FIRE AND ICE compara as duas ferramentas clássicas antes de introduzir a mais nova."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "pfa-sham-ablacao-por-campo-pulsado-versus-procedimento-simulado-na-fibrilacao-atrial",
+        "por_que": "A energia por campo pulsado é a novidade recente, e este é o teste mais rigoroso possível para ela: contra procedimento simulado, não contra outra energia. Isola o efeito real do efeito placebo do próprio procedimento."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "advent-ablacao-por-campo-pulsado-versus-ablacao-termica-na-fa-paroxistica",
+        "por_que": "Provada a eficácia da PFA contra sham, falta a comparação que decide a prática: PFA versus a energia térmica convencional (radiofrequência/criobalão), com eficácia e segurança de dispositivo lado a lado — não inferioridade ou vantagem real, não só ausência de efeito placebo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "star-af-ii-estrategias-de-ablacao-por-cateter-na-fibrilacao-atrial-persistente",
+        "por_que": "Muda o cenário para a FA persistente, onde a pergunta não é mais qual energia, mas se ablação adicional de substrato agrega algo ao isolamento de veias pulmonares isolado. Testa se 'mais ablação' é sempre melhor."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "castle-af-ablacao-por-cateter-fa-com-icfer",
+        "por_que": "Leva a indicação a uma população de maior risco: ablação de FA em paciente com insuficiência cardíaca e FEVE reduzida (≤35%), onde o risco procedimental é maior e o benefício precisa ser proporcionalmente mais claro do que na população geral dos ensaios anteriores."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "alone-af-suspensao-da-anticoagulacao-apos-ablacao-bem-sucedida-de-fibrilacao-atrial",
+        "por_que": "Com a ablação estabelecida como terapia eficaz e seus limites mapeados, a trilha vira para a pergunta que fica depois do sucesso: dá para suspender a anticoagulação só porque o procedimento funcionou. Este é o teste mais direto dessa hipótese."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "ocean-rivaroxabana-versus-aspirina-apos-ablacao-fa",
+        "por_que": "Se suspender por completo é arriscado demais para o perfil do paciente, esta é a alternativa intermediária: trocar o anticoagulante por antiplaquetário depois do sucesso do procedimento, e ver se isso realmente reduz sangramento sem perder proteção."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "option-fechamento-apendice-apos-ablacao-fa",
+        "por_que": "Fecha a trilha com a terceira estratégia possível depois da ablação bem-sucedida: em vez de suspender ou trocar o fármaco, fechar mecanicamente o apêndice atrial esquerdo no mesmo paciente de alto risco tromboembólico. As três opções — suspender, trocar, fechar — ficam lado a lado para a decisão real à beira do leito."
+      }
+    ]
   }
 ]
