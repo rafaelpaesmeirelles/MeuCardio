@@ -2522,3 +2522,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 47 | 253 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **717** | **4.183** |
+
+## Lote 112 — concluído (commit ee52184a)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para FA/Cardiomiopatias/Diabetes/Prevenção (temas do Lote 110) e completando a segunda rotação plena das demais categorias por todos os 8 temas prevalentes.
+
+- **Documentos**:
+  - Fibrilação atrial: "FA e Cirrose Hepática: Qual Anticoagulante Escolher" — coorte pareada TriNetX (PMID 42493734), coorte nacional sueca (PMID 42457162), revisão (PMID 42215007).
+  - Cardiomiopatias: "Cardiomiopatia Hipertrófica Apical: Fenótipo Distinto, Diagnóstico Diferencial e Prognóstico" — 6 fontes 2026, incluindo coorte francesa multicêntrica (PMID 42308149) e coorte internacional de aneurisma apical (PMID 42308658).
+  - Diabetes e cardiologia: "Diferenças de Sexo no Risco Cardiovascular do Diabetes Tipo 2" — Peters 2014 (DAC e AVC), trajetórias multiestado CPRD 2026 (PMID 42640878), coorte coreana de 8 milhões (PMID 40759255).
+  - Prevenção e lipídios: "PREVENT e SCORE2 em Subgrupos Raciais e Étnicos: o que a Validação de 2025-2026 Mostra" — 8 fontes, achado central de queda de elegibilidade a estatina de −81,2% em pacientes negros (PMID 40999261).
+- **Caso clínico**: FA e hipotireoidismo subclínico — TSH elevado, tratar para prevenir recorrência? (derivado do documento do Lote 110).
+- **Checklist**: orientação e conduta diante do interesse em edição de base do PCSK9 (derivado do documento do Lote 108).
+- **Material-paciente**: cardiomiopatia hipertrófica obstrutiva — aficamten ou betabloqueador? (derivado do documento MAPLE-HCM do Lote 106).
+- **Trilha**: fibrilação atrial — recorrência pós-ablação, do tratamento de comorbidades ao redo (9 etapas).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 27 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10912`.
+
+### Status consolidado (após Lote 112)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 260 | 2.140 |
+| Casos clínicos | 900 | 109 | 791 |
+| Checklists | 600 | 80 | 520 |
+| Materiais-paciente | 500 | 65 | 435 |
+| Trilhas | 300 | 48 | 252 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **725** | **4.175** |
