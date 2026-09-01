@@ -27065,5 +27065,75 @@
         "por_que": "Fecha a trilha na fronteira mais atual da estimulação do sistema de condução: o ramo esquerdo comparado à ressincronização biventricular, sucessor mais estável do feixe de His."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte",
+    "titulo": "Cardiomiopatias no atleta: da zona cinzenta diagnóstica ao retorno ao esporte",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo diferenciar o remodelamento fisiológico do coração de atleta das cardiomiopatias hipertrófica e arritmogênica quando o fenótipo cai na zona cinzenta, usando ECG, ecocardiograma e imagem avançada como critérios de desempate, e decidir com que evidência liberar, restringir ou proteger com dispositivo a participação esportiva — do jovem em triagem pré-participação ao atleta master.",
+    "nivel": "avancado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-triagem-pre-participacao-esportiva-ecg-atleta",
+        "por_que": "Ponto de entrada: a triagem pré-participação com ECG é onde a suspeita de cardiomiopatia estrutural em atleta assintomático começa a ser levantada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "coracao-atleta-feminina-remodelamento-ecg-eco",
+        "por_que": "Antes de suspeitar do anormal, é preciso conhecer os limites do remodelamento fisiológico normal — inclusive suas particularidades por sexo, que mudam o corte de alarme no ECG e no eco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+        "por_que": "Algoritmo central da trilha: organiza passo a passo os critérios que separam hipertrofia fisiológica de cardiomiopatia hipertrófica quando a espessura parietal cai na zona cinzenta (13-15 mm)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+        "por_que": "Aprofunda o fluxograma anterior em texto corrido: os critérios morfológicos, funcionais e de resposta ao destreinamento que, juntos, desempatam entre hipertrofia fisiológica e cardiomiopatia hipertrófica verdadeira."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "imagem-avancada-atleta-rmc-tc-nuclear-2026",
+        "por_que": "Quando ECG e ecocardiograma não resolvem a zona cinzenta, a RM cardíaca (fibrose por realce tardio), a TC e a imagem nuclear funcionam como critério de desempate diagnóstico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+        "por_que": "Uma vez que o diagnóstico de cardiomiopatia hipertrófica é confirmado — e não descartado como variante do coração de atleta — esta diretriz brasileira organiza a estratificação de risco e o tratamento a partir daí."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-arritmogenica-no-atleta-exercicio-risco-e-retorno-ao-esporte",
+        "por_que": "A cardiomiopatia arritmogênica é o segundo grande mimetizador do remodelamento induzido pelo exercício, com uma camada adicional: o próprio exercício acelera a penetrância da doença, o que muda a conversa sobre retorno ao esporte."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "cdi-sicd-participacao-esportiva-atleta",
+        "por_que": "Quando a cardiomiopatia confirmada carrega risco arrítmico relevante, esta é a decisão seguinte: que dispositivo (CDI transvenoso ou subcutâneo) e sob que condições a participação esportiva pode continuar."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "atleta-master-achados-cardiovasculares-e-participacao-esportiva",
+        "por_que": "A mesma pergunta diagnóstica muda de forma no atleta mais velho, em que doença aterosclerótica adquirida se soma — e às vezes se confunde com — o remodelamento induzido por décadas de treinamento."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "morte-subita-cardiaca-em-atletas-causas-por-faixa-etaria-e-custo-efetividade-do-rastreio-com-ecg",
+        "por_que": "Fecha a trilha voltando à pergunta de saúde pública por trás da etapa 1: quais causas de morte súbita predominam em cada faixa etária de atleta e se o rastreio sistemático com ECG realmente compensa o custo e os falsos positivos gerados por essa mesma zona cinzenta."
+      }
+    ]
   }
 ]

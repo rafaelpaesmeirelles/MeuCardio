@@ -41729,5 +41729,116 @@
       }
     ],
     "revisao": "Checklist extraído do documento já publicado content/Valvopatias/estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021.md em 01/09/2026, sem alteração de critério. Pendente de revisão clínica antes de publicação."
+  },
+  {
+    "slug": "suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2",
+    "condicao": "Cetoacidose diabética euglicêmica associada a inibidores de SGLT2",
+    "resumo": "Checklist para não descartar CAD euglicêmica por glicemia normal, pesquisar fatores precipitantes e conduzir a suspensão/reinício perioperatório do iSGLT2 conforme prazo por fármaco. Cobre também o cenário de cirurgia de emergência, em que a suspensão prévia não é possível.",
+    "documento_origem": "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479. DOI 10.2337/dc15-0843",
+      "Rosenstock J, Ferrannini E. Euglycemic Diabetic Ketoacidosis: A Predictable, Detectable, and Preventable Safety Concern With SGLT2 Inhibitors. Diabetes Care. 2015;38(9):1638-1642. PMID 26294774. DOI 10.2337/dc15-1380",
+      "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA warns that SGLT2 inhibitors for diabetes may result in a serious condition of too much acid in the blood. 15 de maio de 2015 (revisão de dezembro de 2015)",
+      "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA revises labels of SGLT2 inhibitors for diabetes to include warnings about too much acid in the blood and serious urinary tract infections. Atualização de 17 de março de 2020 (recomendação de suspensão perioperatória)",
+      "Morace C, Lorello G, Bellone F, et al. Ketoacidosis and SGLT2 Inhibitors: A Narrative Review. Metabolites. 2024;14(5):264. PMID 38786741. DOI 10.3390/metabo14050264",
+      "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079. DOI 10.1111/aas.70254",
+      "Marino EC, Negretto LAF, Ribeiro RS, Momesso D, Feitosa ACR, Toyoshima MTK, Silva Junior JC, Vencio S, Lauria MW, Sá JR, Malerbi DA, Valente F, Leite SAO, Amaral DEO, Guimarães GMN, Leal PC, Lopes MB, Salles LCB, Azi LMTA, Fonseca AG, Carvalho LIM, Coelho FF, Halpern B, Valerio CM, Trujilho FR, Brandão ACA, Lyra R, Bertoluci M. Rastreamento e Controle da Hiperglicemia no Perioperatório - Posicionamento Conjunto da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia (SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica (ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes. 2025. DOI 10.29327/5660187.2025-10. ISBN 978-65-5941-367-6"
+    ],
+    "itens": [
+      {
+        "id": "cad-e-suspeita-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Em paciente usando iSGLT2 com náusea, vômitos, dor abdominal, taquipneia ou mal-estar, CAD euglicêmica foi considerada mesmo com glicemia capilar normal ou apenas discretamente elevada",
+        "origem_secao": "A armadilha clínica: a tríade diagnóstica clássica pressupõe hiperglicemia franca"
+      },
+      {
+        "id": "cad-e-nao-descartar-por-glicemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de CAD não foi descartado apenas por glicemia normal ou abaixo de 300 mg/dL",
+        "origem_secao": "Por que este documento existe"
+      },
+      {
+        "id": "cad-e-cetonas-gasometria",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cetonas (sangue ou urina) e gasometria/bicarbonato solicitados independentemente do valor da glicemia capilar diante de sintomas compatíveis com acidose",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "cad-e-fatores-precipitantes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Fatores precipitantes pesquisados: jejum prolongado, cirurgia (mesmo eletiva), infecção/sepse, baixa ingesta calórica ou hídrica, redução importante da dose de insulina, desidratação, evento cardiovascular agudo, cirurgia bariátrica, uso excessivo de álcool ou trauma",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "cad-e-dm1-cautela",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente com diabetes tipo 1 em uso de iSGLT2, atenção redobrada e monitorização estreita reforçadas, dado o maior risco de casos graves nessa população",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "cad-e-suspensao-eletiva-prazo",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Antes de cirurgia eletiva, iSGLT2 suspenso com a antecedência recomendada por fármaco: pelo menos 3 dias para canagliflozina, dapagliflozina e empagliflozina; pelo menos 4 dias para ertugliflozina",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cad-e-suspensao-porte-brasil",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Para cirurgias de grande porte e procedimentos invasivos planejados com redução da ingestão calórica, suspensão de 3 a 4 dias aplicada conforme posicionamento conjunto SBD/SBA/ABESO 2025 (R6); em procedimentos de menor porte, sem redução relevante da ingesta, manutenção da medicação avaliada individualmente pelo risco-benefício",
+        "origem_secao": "Posicionamento nacional equivalente"
+      },
+      {
+        "id": "cad-e-monitorizacao-pos-suspensao",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Glicemia monitorizada e manejada adequadamente durante o intervalo entre a suspensão do iSGLT2 e o procedimento",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cad-e-reinicio-criterios",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "iSGLT2 reiniciado somente quando a ingesta oral do paciente retornou ao basal e os demais fatores de risco para cetoacidose (infecção, desidratação, jejum) estavam resolvidos",
+        "origem_secao": "Recomendação de suspensão perioperatória"
+      },
+      {
+        "id": "cad-e-emergencia-suspensao-imediata",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Em cirurgia de emergência, quando a suspensão prévia de 3-4 dias não foi possível, iSGLT2 suspenso imediatamente",
+        "origem_secao": "Posicionamento nacional equivalente"
+      },
+      {
+        "id": "cad-e-emergencia-cetonemia-diaria",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Cetonemia capilar monitorizada diariamente por 3 a 5 dias após o procedimento de emergência, ou enquanto o paciente permanecer em jejum oral",
+        "origem_secao": "Posicionamento nacional equivalente"
+      },
+      {
+        "id": "cad-e-vigilancia-clinica-ativa",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "No perioperatório de urgência, vigilância clínica ativa mantida para sinais de cetoacidose mesmo diante de glicemia normal, já que a suspensão isolada sem vigilância não elimina o risco",
+        "origem_secao": "Conduta prática à beira do leito"
+      },
+      {
+        "id": "cad-e-tratamento-principios-gerais",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Quando a CAD euglicêmica se confirmou, tratamento conduzido pelos princípios gerais de insulina e reposição volêmica/eletrolítica da CAD clássica",
+        "origem_secao": "Conduta prática à beira do leito"
+      }
+    ],
+    "revisao": "Checklist extraído do documento revisado 'Cetoacidose diabética euglicêmica associada a inibidores de SGLT2', cobrindo suspeita diagnóstica (armadilha da glicemia normal), fatores precipitantes, protocolo de suspensão/reinício perioperatório por fármaco (FDA 2020 e posicionamento SBD/SBA/ABESO 2025) e o cenário de cirurgia de emergência. Pendente de validação clínica final."
   }
 ]
