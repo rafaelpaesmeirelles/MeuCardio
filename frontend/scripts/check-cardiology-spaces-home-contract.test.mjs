@@ -2,44 +2,146 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
-const home = readFileSync(new URL("../src/pages/CardiologySpacesHome.tsx", import.meta.url), "utf8");
-const app = readFileSync(new URL("../src/App.tsx", import.meta.url), "utf8");
+const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+const home = read("src/pages/CardiologySpacesHome.tsx");
+const app = read("src/App.tsx");
+const styles = read("src/styles/cardiology-spaces-v2.css");
+const tour = read("src/pages/CardiologySpacesTour.tsx");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
 const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
-const primaryRoutes = [
+const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
+const shellStart = app.indexOf('<Route element={<Shell />}>');
+const shellEnd = app.indexOf("</Route>", shellStart);
+const shellRoutes = shellStart >= 0 && shellEnd > shellStart ? app.slice(shellStart, shellEnd) : "";
+const shellRoutePaths = [...shellRoutes.matchAll(/<Route\s+path="([^"]+)"/g)].map((match) => match[1]);
+
+const requiredCatalogRoutes = [
   "/doencas", "/medicamentos", "/exames", "/calculadoras", "/emergencia", "/cardiologia-intensiva",
   "/checklists", "/triagem-sintomas", "/interacoes", "/condicoes", "/fluxogramas", "/avaliacao-preoperatoria",
   "/exames-ia", "/prontuario", "/round", "/receituario", "/documentos", "/agenda", "/corvia-mail",
-  "/caixa-de-email", "/assistente", "/validar", "/telediagnostico", "/material-paciente", "/evidencias",
-  "/estudos", "/documentos-cientificos-ia", "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/diretrizes",
-  "/cursos", "/biblioteca", "/galeria", "/indicadores", "/apresentacao", "/exportar", "/favoritos", "/busca",
-  "/busca?modo=tudo-com-tudo", "/usuarios-online", "/sincronizacao", "/minha-conta", "/privacidade", "/termos",
-  "/tour", "/tour/cardiology-spaces", "/verificacao-identidade", "/excluir-conta", "/admin", "/admin/usuarios",
-  "/fila-telediagnostico", "/receitas-para-assinatura", "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
+  "/caixa-de-email", "/assistente", "/telediagnostico", "/material-paciente", "/evidencias", "/estudos",
+  "/documentos-cientificos-ia", "/trilhas/timeline", "/trilhas", "/casos-clinicos", "/diretrizes", "/biblioteca",
+  "/galeria", "/apresentacao", "/exportar", "/favoritos", "/busca", "/busca?modo=tudo-com-tudo",
+  "/usuarios-online", "/sincronizacao", "/minha-conta", "/privacidade", "/termos", "/tour",
+  "/verificacao-identidade", "/excluir-conta", "/admin", "/admin/usuarios", "/fila-telediagnostico",
+  "/receitas-para-assinatura", "/heart-team", "/whatsapp-assistant", "/admin/operacoes-ia",
 ];
 
-test("empty or unavailable agenda never fabricates appointments or times", () => {
-  assert.doesNotMatch(home, /appointment_type:\s*"Consultório"/);
-  assert.doesNotMatch(home, /appointment_type:\s*"Hospital"/);
-  assert.doesNotMatch(home, /appointment_type:\s*"Estudo"/);
-  assert.doesNotMatch(home, /"13:00"|"20:00"/);
-  assert.match(home, /appointmentsState === "error" \? "Agenda indisponível agora"/);
-  assert.match(home, /setAppointmentsState\("ready"\)/);
-  for (const path of ["/agenda", "/documentos", "/favoritos"]) assert.match(home, new RegExp(`to: "${path}"`));
+const nonCatalogShellRoutes = new Set([
+  "cursos", // alias histórico → Trilhas
+  "ecg-ia", // alias histórico → IA para Exames
+  "assinatura", // fluxo técnico → tour rápido de assinatura
+  "admin/usuarios-online", // alias administrativo → Rede profissional
+]);
+
+test("approved image composition is encoded as a product contract", () => {
+  assert.match(home, /spaces-choice__heart/);
+  assert.match(home, /spaces-home__heart/);
+  assert.match(home, /<CoracaoHolografico \/>/);
+  assert.match(home, /Consultório/);
+  assert.match(home, /Hospital/);
+  assert.match(home, /Ensino/);
+  assert.match(home, /Pesquisa/);
+  assert.match(home, /Gestão/);
+  assert.match(home, /spaces-context-rail/);
+  assert.doesNotMatch(home, /aria-label="Meus espaços"/);
+  assert.match(styles, /\.spaces-door\.is-active/);
+  assert.match(styles, /\.spaces-layer--now/);
+  assert.match(styles, /\.spaces-dock\{[^}]*repeat\(6,minmax\(0,1fr\)\)/);
+  assert.match(styles, /\.spaces-home__heart/);
 });
 
-test("Todas as funções contains every primary user-facing entry point exactly once", () => {
+test("portal preview is temporary on mouse and keyboard and only click persists selection", () => {
+  assert.match(home, /const \[previewSpace, setPreviewSpace\] = useState<SpaceId \| null>\(null\)/);
+  assert.match(home, /availableSpaces\.find\(\(space\) => space\.id === \(previewSpace \|\| selectedSpace\)\)/);
+  assert.match(home, /onMouseEnter=\{\(\) => setPreviewSpace\(space\.id\)\}/);
+  assert.match(home, /onFocus=\{\(\) => setPreviewSpace\(space\.id\)\}/);
+  assert.match(home, /onBlur=\{\(\) => setPreviewSpace\(null\)\}/);
+  assert.match(home, /className="spaces-doors" onMouseLeave=\{\(\) => setPreviewSpace\(null\)\}/);
+  assert.match(home, /onClick=\{\(\) => \{ setSelectedSpace\(space\.id\); setPreviewSpace\(null\); \}\}/);
+});
+
+test("user-preferred treatment replaces generic voce in the work question", () => {
+  assert.match(home, /const chamamento = usuario\?\.professional_title\?\.trim\(\) \|\| nomeComTratamento\(usuario, true\)/);
+  assert.match(home, /`Onde \$\{chamamento\} vai trabalhar agora\?`/);
+  assert.match(home, /`Como \$\{chamamento\} quer explorar o conhecimento agora\?`/);
+  assert.doesNotMatch(home, /Onde você vai trabalhar agora\?/);
+});
+
+test("Meu dia entre espaços merges all canonical agenda sources without invented appointments", () => {
+  for (const endpoint of ["/agenda/appointments", "/agenda/commitments", "/agenda/work-routines"]) {
+    assert.match(home, new RegExp(endpoint.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  assert.match(home, /Promise\.allSettled/);
+  assert.match(home, /sameLocalDay\(item\.starts_at\)/);
+  assert.match(home, /routineToAgendaItem/);
+  assert.match(home, /setDayState\(results\.every/);
+  assert.doesNotMatch(home, /appointment_type:\s*"Consultório"/);
+  assert.doesNotMatch(home, /appointment_type:\s*"Hospital"/);
+  assert.doesNotMatch(home, /"13:00"|"20:00"/);
+});
+
+test("Deslocamento uses the canonical mobility target, live geolocation and a real map escape hatch", () => {
+  assert.match(home, /"\/agenda\/mobility\/prepare-next-target"/);
+  assert.match(home, /"\/agenda\/mobility\/commute-target"/);
+  assert.match(home, /navigator\.geolocation\.getCurrentPosition/);
+  assert.match(home, /target_key: target\.target_key/);
+  assert.match(home, /https:\/\/www\.google\.com\/maps\/dir\/\?api=1&destination=/);
+  assert.match(home, /spaces-orbit/);
+  assert.match(styles, /\.spaces-orbit/);
+  assert.match(styles, /@keyframes spaces-flight/);
+});
+
+test("Essencial persists independent selections per clinical space", () => {
+  assert.match(home, /const ESSENTIAL_DEFAULTS: Record<ClinicalSpaceId, string\[\]>/);
+  assert.match(home, /cardiology-spaces:essentials:\$\{usuario\?\.id \|\| "user"\}:\$\{spaceId\}/);
+  assert.match(home, /slice\(0, 8\)/);
+  assert.match(home, /Restaurar padrão/);
+});
+
+test("catalog stays complete, unique and courses are retired safely", () => {
   assert.deepEqual([...new Set(catalogPaths)], catalogPaths, "o catálogo não pode duplicar destinos");
-  assert.deepEqual(new Set(catalogPaths), new Set(primaryRoutes));
+  for (const route of requiredCatalogRoutes) assert.ok(catalogPaths.includes(route), `${route} precisa permanecer no catálogo`);
+  assert.ok(!catalogPaths.includes("/cursos"), "Cursos não pode continuar como opção do produto");
+  assert.doesNotMatch(home, /to:\s*"\/cursos"|\["\/cursos"/);
+  assert.match(app, /<Route path="cursos" element=\{<Navigate to="\/trilhas" replace \/>\}/);
+  assert.match(app, /<Route path="cursos\/:slug" element=\{<Navigate to="\/trilhas" replace \/>\}/);
+
   for (const route of catalogPaths) {
     const path = route.split("?")[0];
     const relative = path.slice(1).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    assert.match(app, new RegExp(`<Route path="\\/?${relative}"`), `${route} precisa existir em App.tsx`);
+    assert.match(app, new RegExp(`<Route path="\\/?${relative}`), `${route} precisa existir em App.tsx`);
   }
 });
 
-test("detail, contextual, alias and authentication routes stay outside the function catalog", () => {
-  for (const excluded of ["/:slug", "/:id", "/heart-team/:caseId", "/admin/usuarios/:id", "/ecg-ia", "/assinatura", "/entrar", "/redefinir-senha", "/em-breve"]) {
+test("every authenticated primary Shell route is catalogued or explicitly classified as alias/technical", () => {
+  assert.ok(shellStart >= 0 && shellEnd > shellStart, "o bloco autenticado do Shell precisa ser localizável");
+  assert.ok(shellRoutePaths.length > 30, "o inventário autenticado não pode encolher silenciosamente");
+
+  const primaryRoutes = [...new Set(shellRoutePaths.filter((path) => !path.includes(":") && !nonCatalogShellRoutes.has(path)))];
+  const missing = primaryRoutes.filter((path) => !catalogPrimaryPaths.has(`/${path}`));
+  assert.deepEqual(missing, [], `funções autenticadas fora de Todas as funções: ${missing.join(", ")}`);
+
+  for (const alias of nonCatalogShellRoutes) {
+    assert.ok(shellRoutePaths.includes(alias), `alias/técnica classificada deixou de existir: ${alias}`);
+    assert.ok(!catalogPrimaryPaths.has(`/${alias}`), `alias/técnica ${alias} não deve virar função duplicada no catálogo`);
+  }
+});
+
+test("tour is immersive and automatically gated only for onboarding and investor sessions", () => {
+  assert.match(tour, /corvia:cardiology-spaces:tour:v3/);
+  assert.match(tour, /DESLOCAMENTO/);
+  assert.match(tour, /TUDO COM TUDO/);
+  assert.match(tour, /CIÊNCIA & ENSINO/);
+  assert.match(tour, /usuario\?\.investidor/);
+  assert.match(app, /usuario\.onboarding_pendente/);
+  assert.match(app, /usuario\.investidor/);
+  assert.match(app, /investor-tour-session:v1/);
+  assert.match(app, /tour\/cardiology-spaces\?retorno=\//);
+});
+
+test("detail and alias routes stay outside the function catalog", () => {
+  for (const excluded of ["/:slug", "/:id", "/heart-team/:caseId", "/admin/usuarios/:id", "/ecg-ia", "/assinatura", "/entrar", "/redefinir-senha", "/em-breve", "/cursos"]) {
     assert.ok(!catalogPaths.includes(excluded), `${excluded} não é um ponto de entrada primário`);
   }
 });

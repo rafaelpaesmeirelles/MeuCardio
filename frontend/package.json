@@ -11,6 +11,7 @@
     "test:heart-team-frontend-contract": "node --test scripts/check-heart-team-frontend-contract.test.mjs",
     "test:whatsapp-frontend-contract": "node --test scripts/check-whatsapp-frontend-contract.test.mjs",
     "test:cardiology-spaces-home-contract": "node --test scripts/check-cardiology-spaces-home-contract.test.mjs",
+    "test:cardiology-spaces-route-coverage": "node scripts/check-cardiology-spaces-route-coverage.mjs",
     "audit:security": "node scripts/audit-dependencies.mjs",
     "sync:mobile": "npm run build && npx cap sync"
   },

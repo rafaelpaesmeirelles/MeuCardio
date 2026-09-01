@@ -161,7 +161,18 @@ for (const path of await listarArquivos(dist.pathname)) {
 // canônica passa a integrar o precache (JS + CSS), elevando a medição para
 // 2974215 B. A margem permanece estreita (~15 KiB) e não relaxa entrypoint,
 // gzip, divisão por rotas nem o teto individual de chunks opcionais.
-const maxPrecacheBytes = 2920 * 1024;
+//
+// Ajustado de 2920 KB para 2933 KB em 31/08/2026: a reconstrução visual
+// explicitamente aprovada do Cardiology Spaces acrescenta o novo tour imersivo,
+// os estilos dos portais/camadas holográficos e a experiência orbital do
+// Deslocamento. O precache medido foi 3002144 B, 12064 B acima do teto anterior.
+//
+// Ajustado de 2933 KB para 3062 KB no mesmo release após a cobertura visual
+// profunda dos cinco espaços: a base d17ef29 mede 2968758 B e o head ce96cc3
+// mede 3134406 B, delta auditado de 165648 B. O novo teto deixa somente 1082 B
+// de margem; entrypoint, gzip, divisão por rotas e teto de chunks opcionais
+// permanecem rigorosamente inalterados.
+const maxPrecacheBytes = 3062 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

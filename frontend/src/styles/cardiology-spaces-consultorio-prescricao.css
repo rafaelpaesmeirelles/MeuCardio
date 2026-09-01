@@ -1,0 +1,43 @@
+/* CorVIA Cardiology Spaces — CONSULTÓRIO / Prescrição eletrônica. */
+body.corvia-route--prescricao .clinical-os .prescricao{position:relative;color:#dceaf0}
+body.corvia-route--prescricao .clinical-os .prescricao__cabecalho{
+  position:relative;overflow:hidden;padding:20px 22px!important;
+  background:radial-gradient(circle at 12% 18%,rgba(var(--space-rgb),.12),transparent 18rem),linear-gradient(105deg,rgba(7,28,47,.96),rgba(3,16,28,.96))!important;
+  border:1px solid rgba(var(--space-rgb),.23)!important;border-radius:14px!important;
+  box-shadow:0 18px 48px -38px rgba(var(--space-rgb),.72),inset 0 1px rgba(255,255,255,.025)!important;
+  clip-path:polygon(1% 0,99% 0,100% 100%,0 100%);
+}
+body.corvia-route--prescricao .clinical-os .prescricao__cabecalho::before{position:absolute;top:0;right:16%;left:16%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.64),transparent);box-shadow:0 0 18px rgba(var(--space-rgb),.22);content:""}
+body.corvia-route--prescricao .clinical-os .prescricao__cabecalho h1{color:#f1fbfd;text-shadow:0 0 20px rgba(var(--space-rgb),.10)}
+body.corvia-route--prescricao .clinical-os .prescricao__cabecalho p{color:#7891a3}
+body.corvia-route--prescricao .clinical-os .prescricao__cabecalho .eyebrow{color:var(--space-accent)!important}
+body.corvia-route--prescricao .clinical-os .prescricao__seguranca{color:#b7ced8!important;background:rgba(var(--space-rgb),.055)!important;border:1px solid rgba(var(--space-rgb),.18)!important;border-radius:11px!important;box-shadow:0 0 22px rgba(var(--space-rgb),.04)!important}
+body.corvia-route--prescricao .clinical-os .prescricao__seguranca svg{color:var(--space-accent)!important;filter:drop-shadow(0 0 6px rgba(var(--space-rgb),.28))}
+body.corvia-route--prescricao .clinical-os .prescricao__abas{display:flex!important;gap:6px!important;margin:12px 0!important;padding:5px!important;background:rgba(4,18,31,.72)!important;border:1px solid rgba(var(--space-rgb),.11)!important;border-radius:11px!important}
+body.corvia-route--prescricao .clinical-os .prescricao__abas button{color:#8199aa!important;background:transparent!important;border:1px solid transparent!important;border-radius:8px!important}
+body.corvia-route--prescricao .clinical-os .prescricao__abas button:hover{color:#dff9fb!important;background:rgba(var(--space-rgb),.045)!important}
+body.corvia-route--prescricao .clinical-os .prescricao__abas button.ativo,
+body.corvia-route--prescricao .clinical-os .prescricao__abas button[aria-selected="true"]{color:#f4fdff!important;background:linear-gradient(180deg,rgba(var(--space-rgb),.16),rgba(var(--space-rgb),.075))!important;border-color:rgba(var(--space-rgb),.34)!important;box-shadow:0 0 20px rgba(var(--space-rgb),.065)!important}
+body.corvia-route--prescricao .clinical-os .prescricao-workspace{gap:14px!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao__formulario,.prescricao-bloco,.prescricao__resumo,.prescricao-historico,.prescricao-preview,.prescricao-documentos){background:linear-gradient(145deg,rgba(var(--space-rgb),.032),rgba(4,18,31,.86))!important;border-color:rgba(var(--space-rgb),.14)!important;box-shadow:inset 0 1px rgba(255,255,255,.018),0 18px 46px -40px rgba(var(--space-rgb),.52)!important}
+body.corvia-route--prescricao .clinical-os .prescricao__formulario{border-radius:14px!important;overflow:visible!important}
+body.corvia-route--prescricao .clinical-os .prescricao-bloco{position:relative;padding:16px!important;border-radius:12px!important}
+body.corvia-route--prescricao .clinical-os .prescricao-bloco::before{position:absolute;top:0;right:14%;left:14%;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.28),transparent);content:""}
+body.corvia-route--prescricao .clinical-os .prescricao-bloco__titulo{border-bottom-color:rgba(var(--space-rgb),.10)!important}
+body.corvia-route--prescricao .clinical-os .prescricao-bloco__titulo>span{color:var(--space-accent)!important;background:rgba(var(--space-rgb),.08)!important;border:1px solid rgba(var(--space-rgb),.22)!important;box-shadow:0 0 14px rgba(var(--space-rgb),.055)!important}
+body.corvia-route--prescricao .clinical-os .prescricao-bloco__titulo .eyebrow{color:var(--space-accent)!important}
+body.corvia-route--prescricao .clinical-os .prescricao-campo label{color:#9eb2bf!important}
+body.corvia-route--prescricao .clinical-os .prescricao-campo label small{color:#667f90!important}
+body.corvia-route--prescricao .clinical-os .prescricao-campo__estado{color:var(--space-accent)!important}
+body.corvia-route--prescricao .clinical-os .prescricao-campo__erro{color:#ff8290!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao-item,.prescricao-farmaco,.prescricao-sugestoes,.prescricao-apresentacoes,.prescricao-marca,.prescricao-preco){background:rgba(3,16,28,.58)!important;border-color:rgba(var(--space-rgb),.095)!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao-item,.prescricao-farmaco):hover{border-color:rgba(var(--space-rgb),.20)!important;background:rgba(var(--space-rgb),.035)!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao-sugestoes,.prescricao-apresentacoes){box-shadow:0 22px 56px -34px #000,0 0 24px rgba(var(--space-rgb),.045)!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao-sugestoes button,.prescricao-apresentacoes button){color:#b8cad4!important;border-bottom-color:rgba(var(--space-rgb),.075)!important;background:transparent!important}
+body.corvia-route--prescricao .clinical-os :where(.prescricao-sugestoes button,.prescricao-apresentacoes button):hover{color:#f1fdff!important;background:rgba(var(--space-rgb),.055)!important}
+body.corvia-route--prescricao .clinical-os .prescricao .cartao{background:linear-gradient(145deg,rgba(var(--space-rgb),.028),rgba(4,18,31,.86))!important;border-color:rgba(var(--space-rgb),.14)!important}
+body.corvia-route--prescricao .clinical-os .prescricao .cartao>.eyebrow,
+body.corvia-route--prescricao .clinical-os .prescricao .eyebrow{color:var(--space-accent)!important}
+body.corvia-route--prescricao .clinical-os .prescricao :where(code,kbd){color:#bff7fa!important;background:rgba(var(--space-rgb),.07)!important;border-color:rgba(var(--space-rgb),.13)!important}
+body.corvia-route--prescricao .clinical-os .prescricao :where(.botao){box-shadow:0 12px 28px -22px rgba(var(--space-rgb),.55)}
+@media(max-width:900px){body.corvia-route--prescricao .clinical-os .prescricao__cabecalho{padding:16px!important;clip-path:none}body.corvia-route--prescricao .clinical-os .prescricao__abas{overflow-x:auto}body.corvia-route--prescricao .clinical-os .prescricao-workspace{grid-template-columns:1fr!important}}

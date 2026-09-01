@@ -33,7 +33,6 @@ const ESTUDO_EDUCACAO: LinkItem[] = [
   { to: "/casos-clinicos", label: "Casos clínicos", icon: "doencas" },
   { to: "/biblioteca", label: "Biblioteca", icon: "conhecimento" },
   { to: "/galeria", label: "Atlas & Galeria", icon: "galeria" },
-  { to: "/cursos", label: "Cursos", icon: "curso" },
   { to: "/material-paciente", label: "Material ao paciente", icon: "documento" },
 ];
 

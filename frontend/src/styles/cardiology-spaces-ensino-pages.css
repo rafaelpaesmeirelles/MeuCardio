@@ -1,0 +1,300 @@
+/* CorVIA Cardiology Spaces — ENSINO
+   Camada específica das experiências de aprendizagem, aula e comunicação.
+   Preserva semântica clínica (sucesso/alerta) e aplica o violeta apenas à
+   arquitetura do espaço Ensino. */
+
+body.corvia-space--ensino {
+  --ensino-rgb: 151, 99, 255;
+  --ensino-accent: #a986ff;
+  --ensino-line: rgba(var(--ensino-rgb), .34);
+  --ensino-soft: rgba(var(--ensino-rgb), .08);
+  --ensino-panel: linear-gradient(145deg, rgba(10, 11, 28, .88), rgba(23, 14, 48, .72));
+}
+
+/* Coleções: Casos clínicos, Trilhas e Material ao paciente. */
+body.corvia-space--ensino .filtros-conteudo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: .8rem;
+  margin: 1.1rem 0 1.35rem;
+  padding: 1rem;
+  border: 1px solid var(--ensino-line);
+  border-radius: 18px;
+  background: var(--ensino-panel);
+  box-shadow: inset 0 1px rgba(255,255,255,.035), 0 18px 45px rgba(0,0,0,.18);
+  backdrop-filter: blur(16px);
+}
+body.corvia-space--ensino .filtros-conteudo label { display: grid; gap: .42rem; }
+body.corvia-space--ensino .filtros-conteudo strong {
+  color: rgba(236, 229, 255, .82);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+body.corvia-space--ensino .colecoes-conteudo { display: grid; gap: 1.2rem; }
+body.corvia-space--ensino .colecao-conteudo {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid rgba(var(--ensino-rgb), .22);
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(var(--ensino-rgb), .075), transparent 42%),
+    rgba(7, 11, 24, .72);
+  box-shadow: 0 22px 54px rgba(0,0,0,.18);
+}
+body.corvia-space--ensino .colecao-conteudo::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--ensino-accent), transparent);
+  box-shadow: 0 0 18px rgba(var(--ensino-rgb), .45);
+}
+body.corvia-space--ensino .colecao-conteudo > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .9rem;
+  padding-bottom: .72rem;
+  border-bottom: 1px solid rgba(var(--ensino-rgb), .16);
+}
+body.corvia-space--ensino .colecao-conteudo > header h2 { margin: .12rem 0 0; }
+body.corvia-space--ensino .colecao-conteudo > header > span {
+  flex: 0 0 auto;
+  color: rgba(224, 213, 255, .7);
+  font: 700 .72rem/1 var(--fonte-dados, ui-monospace, monospace);
+  letter-spacing: .05em;
+}
+body.corvia-space--ensino .casos-patologia + .casos-patologia { margin-top: 1rem; }
+body.corvia-space--ensino .casos-patologia > h3 {
+  margin: 0 0 .58rem;
+  color: rgba(236, 229, 255, .82);
+  font-size: .84rem;
+  letter-spacing: .035em;
+}
+body.corvia-space--ensino .painel__funcoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: .72rem;
+}
+body.corvia-space--ensino .painel__funcao {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .38rem;
+  min-height: 128px;
+  border-color: rgba(var(--ensino-rgb), .24) !important;
+  background:
+    linear-gradient(145deg, rgba(var(--ensino-rgb), .09), rgba(5, 10, 24, .74)) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.035), 0 16px 36px rgba(0,0,0,.16);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+body.corvia-space--ensino .painel__funcao:hover,
+body.corvia-space--ensino .painel__funcao:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(var(--ensino-rgb), .54) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.05), 0 0 0 1px rgba(var(--ensino-rgb), .08), 0 20px 44px rgba(0,0,0,.22), 0 0 28px rgba(var(--ensino-rgb), .08);
+}
+body.corvia-space--ensino .painel__funcao--destaque {
+  margin: 1rem 0;
+  border-color: rgba(var(--ensino-rgb), .46) !important;
+  background: linear-gradient(135deg, rgba(var(--ensino-rgb), .18), rgba(7, 11, 25, .78)) !important;
+}
+
+/* Trilhas: progresso e etapas. */
+body.corvia-space--ensino .trilha__barra {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 6px;
+  margin-top: .45rem;
+  border: 1px solid rgba(var(--ensino-rgb), .18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+}
+body.corvia-space--ensino .trilha__barra > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(var(--ensino-rgb), .62), var(--ensino-accent));
+  box-shadow: 0 0 14px rgba(var(--ensino-rgb), .42);
+}
+body.corvia-space--ensino .trilha__barra--larga { display: inline-block; width: min(260px, 42vw); margin: 0 .65rem; vertical-align: middle; }
+body.corvia-space--ensino .trilha__concluida {
+  color: #b9f6d5;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+body.corvia-space--ensino .trilha__etapas {
+  position: relative;
+  display: grid;
+  gap: .72rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+body.corvia-space--ensino .trilha__etapa {
+  position: relative;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: .8rem;
+  padding: .9rem;
+  border: 1px solid rgba(var(--ensino-rgb), .22);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(var(--ensino-rgb), .07), rgba(6, 10, 23, .78));
+}
+body.corvia-space--ensino .trilha__etapa--ok { border-color: rgba(84, 215, 153, .34); }
+body.corvia-space--ensino .trilha__etapa--indisponivel { opacity: .58; filter: saturate(.7); }
+body.corvia-space--ensino .trilha__marcar {
+  display: grid;
+  place-items: center;
+  align-self: start;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(var(--ensino-rgb), .42);
+  border-radius: 12px;
+  color: #f2ecff;
+  background: rgba(var(--ensino-rgb), .11);
+  box-shadow: inset 0 1px rgba(255,255,255,.06), 0 0 20px rgba(var(--ensino-rgb), .08);
+  font-weight: 850;
+}
+body.corvia-space--ensino .trilha__etapa--ok .trilha__marcar { border-color: rgba(84,215,153,.48); color: #c9ffe3; background: rgba(84,215,153,.12); }
+body.corvia-space--ensino .trilha__corpo { min-width: 0; }
+body.corvia-space--ensino .trilha__tipo {
+  display: inline-flex;
+  margin-bottom: .28rem;
+  color: rgba(211, 195, 255, .78);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+body.corvia-space--ensino .trilha__titulo { display: block; color: #f5f1ff; font-weight: 800; }
+body.corvia-space--ensino .trilha__titulo--off { color: rgba(235,229,255,.52); }
+body.corvia-space--ensino .trilha__titulo--off em { font-weight: 500; }
+body.corvia-space--ensino .trilha__porque { margin: .45rem 0 0; color: rgba(220, 225, 242, .72); line-height: 1.55; }
+
+/* Timeline de evolução do conhecimento. */
+body.corvia-space--ensino .timeline-doenca__entrada {
+  display: grid;
+  gap: .28rem;
+  margin: .85rem 0 1rem;
+  padding: .9rem 1rem;
+  border: 1px solid rgba(var(--ensino-rgb), .24);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(var(--ensino-rgb), .10), rgba(6, 10, 24, .72));
+}
+body.corvia-space--ensino .timeline-doenca__entrada strong { color: #f2ecff; }
+body.corvia-space--ensino .timeline-doenca__entrada span { color: rgba(220,225,242,.74); line-height: 1.52; }
+body.corvia-space--ensino .timeline-doenca__seletor {
+  display: flex;
+  gap: .52rem;
+  overflow-x: auto;
+  padding: .25rem 0 .7rem;
+  scrollbar-width: thin;
+}
+body.corvia-space--ensino .timeline-doenca__chip {
+  flex: 0 0 auto;
+  display: grid;
+  gap: .15rem;
+  min-width: 145px;
+  padding: .65rem .78rem;
+  border: 1px solid rgba(var(--ensino-rgb), .22);
+  border-radius: 14px;
+  color: rgba(235,229,255,.76);
+  background: rgba(7, 11, 25, .74);
+  text-align: left;
+}
+body.corvia-space--ensino .timeline-doenca__chip span { color: rgba(196,204,226,.6); font-size: .7rem; }
+body.corvia-space--ensino .timeline-doenca__chip--ativo {
+  color: #fff;
+  border-color: rgba(var(--ensino-rgb), .64);
+  background: linear-gradient(145deg, rgba(var(--ensino-rgb), .22), rgba(8, 11, 26, .82));
+  box-shadow: inset 0 1px rgba(255,255,255,.055), 0 0 24px rgba(var(--ensino-rgb), .10);
+}
+body.corvia-space--ensino .timeline-doenca__eixo { position: relative; display: grid; gap: 1.15rem; margin-top: 1rem; }
+body.corvia-space--ensino .timeline-doenca__decada { position: relative; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: .9rem; }
+body.corvia-space--ensino .timeline-doenca__decada-rotulo {
+  position: sticky;
+  top: calc(var(--spaces-interior-top, 68px) + 16px);
+  align-self: start;
+  padding-top: .3rem;
+  color: rgba(211,195,255,.72);
+  font: 800 .74rem/1 var(--fonte-dados, ui-monospace, monospace);
+  letter-spacing: .08em;
+}
+body.corvia-space--ensino .timeline-doenca__lista { position: relative; display: grid; gap: .75rem; margin: 0; padding: 0 0 0 1.2rem; list-style: none; }
+body.corvia-space--ensino .timeline-doenca__lista::before { content: ""; position: absolute; inset: 0 auto 0 2px; width: 1px; background: linear-gradient(180deg, rgba(var(--ensino-rgb), .12), rgba(var(--ensino-rgb), .56), rgba(var(--ensino-rgb), .12)); }
+body.corvia-space--ensino .timeline-doenca__marco { position: relative; }
+body.corvia-space--ensino .timeline-doenca__marcador { position: absolute; z-index: 2; left: -1.41rem; top: 1.05rem; width: 10px; height: 10px; border: 2px solid #090d1d; border-radius: 999px; background: var(--ensino-accent); box-shadow: 0 0 16px rgba(var(--ensino-rgb), .55); }
+body.corvia-space--ensino .timeline-doenca__cartao {
+  padding: .9rem 1rem;
+  border: 1px solid rgba(var(--ensino-rgb), .21);
+  border-radius: 17px;
+  background: linear-gradient(145deg, rgba(var(--ensino-rgb), .065), rgba(6,10,23,.78));
+}
+body.corvia-space--ensino .timeline-doenca__cabecalho { display: flex; gap: .4rem; align-items: center; flex-wrap: wrap; margin-bottom: .42rem; }
+body.corvia-space--ensino .timeline-doenca__ano { color: #fff; font: 850 .78rem/1 var(--fonte-dados, ui-monospace, monospace); }
+body.corvia-space--ensino .timeline-doenca__selo { padding: .2rem .42rem; border: 1px solid rgba(var(--ensino-rgb), .25); border-radius: 999px; color: rgba(218,207,255,.75); background: rgba(var(--ensino-rgb), .07); font-size: .64rem; }
+body.corvia-space--ensino .timeline-doenca__selo--diretriz { border-color: rgba(71,200,255,.28); color: #bfeeff; background: rgba(71,200,255,.07); }
+body.corvia-space--ensino .timeline-doenca__titulo { color: #f5f1ff; font-weight: 820; }
+body.corvia-space--ensino .timeline-doenca__resumo { margin: .45rem 0; color: rgba(220,225,242,.74); }
+body.corvia-space--ensino .timeline-doenca__fonte,
+body.corvia-space--ensino a.timeline-doenca__fonte { display: block; margin: .18rem 0 0; color: rgba(183,195,220,.62); font-size: .73rem; }
+body.corvia-space--ensino a.timeline-doenca__fonte:hover { color: var(--ensino-accent); }
+body.corvia-space--ensino .timeline-doenca__alternar { margin-top: .55rem; padding: .38rem .55rem; border: 1px solid rgba(var(--ensino-rgb), .24); border-radius: 9px; color: rgba(232,224,255,.78); background: rgba(var(--ensino-rgb), .06); }
+body.corvia-space--ensino .timeline-doenca__sublista { display: grid; gap: .38rem; margin: .55rem 0 0; padding: .6rem 0 0 1rem; border-top: 1px solid rgba(var(--ensino-rgb), .12); }
+body.corvia-space--ensino .timeline-doenca__classe { display: block; color: rgba(184,195,218,.58); font-size: .68rem; }
+
+/* Galeria: aparência de atlas/teaching file. */
+body.corvia-space--ensino .conteudo a.cartao[href^="/galeria/"] {
+  border-color: rgba(var(--ensino-rgb), .22) !important;
+  background: rgba(5, 8, 20, .84) !important;
+  box-shadow: 0 16px 38px rgba(0,0,0,.18);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+body.corvia-space--ensino .conteudo a.cartao[href^="/galeria/"]:hover,
+body.corvia-space--ensino .conteudo a.cartao[href^="/galeria/"]:focus-visible { transform: translateY(-3px); border-color: rgba(var(--ensino-rgb), .52) !important; box-shadow: 0 22px 48px rgba(0,0,0,.24), 0 0 24px rgba(var(--ensino-rgb), .08); }
+body.corvia-space--ensino .conteudo a.cartao[href^="/galeria/"] img { border-bottom: 1px solid rgba(var(--ensino-rgb), .18); filter: saturate(.96) contrast(1.03); }
+body.corvia-space--ensino .conteudo > img,
+body.corvia-space--ensino .conteudo article > img { border: 1px solid rgba(var(--ensino-rgb), .24); box-shadow: 0 24px 60px rgba(0,0,0,.28), 0 0 30px rgba(var(--ensino-rgb), .06); }
+
+/* Estúdio de apresentação. */
+body.corvia-space--ensino #busca-apresentacao { border-color: rgba(var(--ensino-rgb), .28); }
+body.corvia-space--ensino button.cartao[aria-pressed="true"] {
+  border-color: rgba(var(--ensino-rgb), .62) !important;
+  background: linear-gradient(145deg, rgba(var(--ensino-rgb), .16), rgba(5,10,23,.8)) !important;
+  box-shadow: inset 3px 0 var(--ensino-accent), 0 0 24px rgba(var(--ensino-rgb), .08);
+}
+body.corvia-space--ensino button.cartao[aria-pressed] { transition: border-color .16s ease, background .16s ease, transform .16s ease; }
+body.corvia-space--ensino button.cartao[aria-pressed]:hover { transform: translateX(2px); }
+body.corvia-space--ensino fieldset { border-color: rgba(var(--ensino-rgb), .18) !important; }
+
+/* Breadcrumbs legados: a classe permanece por compatibilidade, mas a aparência
+   passa a ser a de navegação do Cardiology Spaces. */
+body.corvia-space--ensino .curso__voltar a,
+body.corvia-space--ensino article > p:first-child > a {
+  color: rgba(211,195,255,.72);
+  font-size: .78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+body.corvia-space--ensino .curso__voltar a:hover,
+body.corvia-space--ensino article > p:first-child > a:hover { color: #f2ecff; }
+
+@media (max-width: 720px) {
+  body.corvia-space--ensino .colecao-conteudo { padding: .8rem; border-radius: 16px; }
+  body.corvia-space--ensino .colecao-conteudo > header { align-items: start; }
+  body.corvia-space--ensino .trilha__etapa { grid-template-columns: 38px minmax(0, 1fr); padding: .75rem; }
+  body.corvia-space--ensino .trilha__marcar { width: 32px; height: 32px; border-radius: 10px; }
+  body.corvia-space--ensino .timeline-doenca__decada { grid-template-columns: 1fr; gap: .35rem; }
+  body.corvia-space--ensino .timeline-doenca__decada-rotulo { position: static; }
+  body.corvia-space--ensino .timeline-doenca__lista { padding-left: 1rem; }
+  body.corvia-space--ensino .timeline-doenca__marcador { left: -1.18rem; }
+}

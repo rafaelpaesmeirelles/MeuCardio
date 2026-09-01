@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import AppErrorBoundary from "./components/AppErrorBoundary";
 import { AuthProvider } from "./lib/auth";
+import "./lib/cardiologySpacesHoverBoundary";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
@@ -74,6 +75,13 @@ import "./styles/home-desktop-symmetric-personalizable.css";
 import "./styles/clinical-ecg-featured.css";
 import "./styles/tudo-com-tudo.css";
 import "./styles/clinical-ai-spaces.css";
+/* Contrato visual final dos interiores do Cardiology Spaces. Deve vir depois
+   das folhas históricas para que todas as rotas autenticadas pertençam ao
+   mesmo universo aprovado, sem reescrever cada domínio com uma linguagem
+   paralela. O contraste de controles permanece a última camada de segurança. */
+import "./styles/cardiology-spaces-interior-approved.css";
+import "./styles/cardiology-spaces-route-tones.css";
+import "./styles/cardiology-spaces-reference-fidelity.css";
 import "./styles/clinical-form-control-contrast.css";
 
 let swRecargaPendente = false;

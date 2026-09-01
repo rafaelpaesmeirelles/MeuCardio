@@ -1,0 +1,115 @@
+/* CorVIA Cardiology Spaces — primitives internos.
+   Complementa o contrato global sem alterar semântica ou fluxo das páginas. */
+.clinical-os .cs-page-header{
+  min-height:132px!important;
+  padding-top:38px!important;
+}
+.clinical-os .cs-page-header::before{
+  position:absolute;
+  z-index:0;
+  top:0;
+  right:20px;
+  left:20px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.68),transparent);
+  box-shadow:0 0 18px rgba(var(--space-rgb),.28);
+  content:"";
+}
+.clinical-os .cs-page-header__space{
+  position:absolute;
+  z-index:3;
+  top:13px;
+  left:22px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:#71899b;
+  font-size:.55rem;
+  font-weight:760;
+  letter-spacing:.14em;
+  line-height:1;
+  text-transform:uppercase;
+}
+.clinical-os .cs-page-header__space i{color:#50697b;font-style:normal}
+.clinical-os .cs-page-header__space strong{color:var(--space-accent);font-size:.58rem;font-weight:780;letter-spacing:.12em}
+.clinical-os .cs-page-header__beacon{
+  width:7px;
+  height:7px;
+  border:1px solid rgba(var(--space-rgb),.72);
+  border-radius:50%;
+  background:rgba(var(--space-rgb),.36);
+  box-shadow:0 0 10px rgba(var(--space-rgb),.62);
+}
+.clinical-os .cs-page-header .cc-page-header__identity,
+.clinical-os .cs-page-header .cc-page-header__actions{position:relative;z-index:2}
+.clinical-os .cs-page-header .cc-page-header__icon{
+  clip-path:polygon(12% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%);
+  border-radius:9px!important;
+}
+.clinical-os .cs-page-header h1{
+  text-shadow:0 0 22px rgba(var(--space-rgb),.08);
+}
+
+.clinical-os .cs-section{
+  position:relative;
+  overflow:hidden;
+  clip-path:polygon(.45% 0,99.55% 0,100% 100%,0 100%);
+}
+.clinical-os .cs-section::before{
+  position:absolute;
+  top:0;
+  right:14%;
+  left:14%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(var(--space-rgb),.34),transparent);
+  content:"";
+  pointer-events:none;
+}
+.clinical-os .cs-section>.cc-section__heading{position:relative;z-index:1}
+.clinical-os .cs-section>.cc-section__heading .eyebrow{color:var(--space-accent)!important;opacity:.82}
+
+.clinical-os .cs-metric{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,rgba(var(--space-rgb),.055),rgba(5,20,34,.78))!important;
+}
+.clinical-os .cs-metric::after{
+  position:absolute;
+  right:-20px;
+  bottom:-28px;
+  width:74px;
+  height:74px;
+  border:1px solid rgba(var(--space-rgb),.10);
+  border-radius:50%;
+  content:"";
+  pointer-events:none;
+}
+.clinical-os .cs-metric .cc-metric__top svg{color:var(--space-accent)!important}
+
+.clinical-os .cs-empty{
+  background:radial-gradient(circle at 50% 36%,rgba(var(--space-rgb),.075),transparent 10rem),rgba(4,17,29,.62)!important;
+  border-color:rgba(var(--space-rgb),.15)!important;
+}
+.clinical-os .cs-empty>span{color:var(--space-accent)!important;text-shadow:0 0 18px rgba(var(--space-rgb),.24)}
+
+.clinical-os .cs-context-link{
+  position:relative;
+  overflow:hidden;
+}
+.clinical-os .cs-context-link::before{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:2px;
+  background:linear-gradient(180deg,transparent,var(--space-accent),transparent);
+  opacity:.55;
+  content:"";
+}
+.clinical-os .cs-context-link:hover::before{opacity:1;box-shadow:0 0 12px rgba(var(--space-rgb),.42)}
+
+@media(max-width:900px){
+  .clinical-os .cs-page-header{min-height:0!important;padding-top:42px!important}
+  .clinical-os .cs-page-header__space{top:14px;left:16px;font-size:.49rem;letter-spacing:.11em}
+  .clinical-os .cs-page-header__space strong{font-size:.5rem}
+}

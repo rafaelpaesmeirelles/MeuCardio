@@ -26,7 +26,7 @@ def test_approved_home_is_isolated_from_the_internal_page_lock():
     context = CONTEXT.read_text(encoding="utf-8")
     assert 'if (pathname === "/")' in context
     assert 'document.body.dataset.corviaRoute = "home"' in context
-    assert 'document.body.classList.add(classe)' in context
+    assert 'document.body.classList.add(routeClass, spaceClass)' in context
 
 
 def test_every_internal_route_family_is_subject_to_the_same_board_canvas():

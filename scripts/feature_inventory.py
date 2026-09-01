@@ -47,7 +47,7 @@ EXPECTED_NAV_ROUTES = {
     "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
     "/triagem-sintomas", "/biblioteca", "/busca", "/busca?modo=tudo-com-tudo", "/calculadoras", "/emergencia",
     "/cardiologia-intensiva",
-    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
+    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/documentos-cientificos-ia",
     "/documentos", "/exportar", "/avaliacao-preoperatoria", "/estudos", "/evidencias", "/exames", "/favoritos",
     "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
     "/medicamentos", "/indicadores", "/receituario", "/round", "/prontuario", "/exames-ia", "/trilhas", "/trilhas/timeline",
