@@ -73,6 +73,20 @@ type MobilityResult = {
   origin_location?: CalendarLocation | null;
 };
 type MapConfiguration = { provider: string; configured: boolean; api_key: string | null };
+type MobilityPreference = {
+  enabled: boolean;
+  traffic_configured?: boolean;
+  day_start_origin_mode: "current_location" | "saved_location";
+  day_start_location_id: number | null;
+  day_start_location?: CalendarLocation | null;
+};
+type MobilityDayContext = {
+  stage: "before_first" | "active_day" | "at_last" | "no_commitments";
+  first_target: MobilityTarget | null;
+  last_target: MobilityTarget | null;
+  start_location: CalendarLocation | null;
+  end_location: CalendarLocation | null;
+};
 type MiniRoutePoint = { x: number; y: number };
 type MiniRouteGeometry = {
   path: string;
@@ -639,6 +653,13 @@ function sameLocalDay(value: string, reference = new Date()) {
   return !Number.isNaN(date.getTime()) && date.getFullYear() === reference.getFullYear() && date.getMonth() === reference.getMonth() && date.getDate() === reference.getDate();
 }
 
+function localDateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 function time(value?: string | null) {
   if (!value) return "";
   const date = new Date(value);
@@ -712,8 +733,34 @@ function currentPosition(): Promise<GeolocationPosition> {
       reject(new Error("Geolocalização não disponível neste dispositivo."));
       return;
     }
-    navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: true, timeout: 12000, maximumAge: 60000 });
+    navigator.geolocation.getCurrentPosition(resolve, reject, { enableHighAccuracy: false, timeout: 8000, maximumAge: 120000 });
   });
+}
+
+function geolocationErrorMessage(error: unknown) {
+  const code = typeof error === "object" && error !== null && "code" in error
+    ? Number((error as { code?: number }).code)
+    : 0;
+  if (code === 1) return "A localização foi negada no navegador. Autorize-a para traçar a rota a partir da sua posição atual.";
+  if (code === 2) return "O dispositivo não conseguiu determinar sua localização atual.";
+  if (code === 3) return "A localização demorou para responder. Tente novamente ou abra o destino no mapa.";
+  return error instanceof Error ? error.message : "Não foi possível obter sua localização atual.";
+}
+
+function sanitizeMobilityResult(result: MobilityResult, target: MobilityTarget) {
+  const destination = withoutReservedSmokeTestRecord(result.destination);
+  if (!destination || destination.target_key !== target.target_key) return null;
+  return { ...result, destination, routes: Array.isArray(result.routes) ? result.routes : [] };
+}
+
+function mobilityRouteError(result: MobilityResult) {
+  if (result.routes?.length) return null;
+  if (result.status === "not_configured") return "O destino está pronto, mas o provedor de trânsito ainda não está configurado.";
+  if (result.status === "origin_not_geocoded") return "Não foi possível localizar com segurança o ponto de partida salvo.";
+  if (result.status === "destination_not_geocoded") return "Não foi possível localizar o endereço deste compromisso. Revise o local cadastrado na Agenda.";
+  if (result.status === "destination_without_location") return "Este compromisso ainda não possui um local cadastrado para a rota.";
+  if (result.status === "live") return "O provedor respondeu, mas não retornou uma rota utilizável. Tente novamente.";
+  return "A rota não pôde ser calculada agora. O destino continua disponível no mapa.";
 }
 
 export default function CardiologySpacesHome() {
@@ -734,6 +781,8 @@ export default function CardiologySpacesHome() {
   const [dayState, setDayState] = useState<"loading" | "ready" | "error">("loading");
   const [mobilityTarget, setMobilityTarget] = useState<MobilityTarget | null>(null);
   const [mobilityResult, setMobilityResult] = useState<MobilityResult | null>(null);
+  const [mobilityPreference, setMobilityPreference] = useState<MobilityPreference | null>(null);
+  const [mobilityDayContext, setMobilityDayContext] = useState<MobilityDayContext | null>(null);
   const [mapConfiguration, setMapConfiguration] = useState<MapConfiguration | null>(null);
   const [travelOrigin, setTravelOrigin] = useState<{ latitude: number; longitude: number } | null>(null);
   const [travelOpen, setTravelOpen] = useState(false);
@@ -762,9 +811,10 @@ export default function CardiologySpacesHome() {
   useEffect(() => {
     let active = true;
     setDayState("loading");
+    const today = localDateKey();
     Promise.allSettled([
       api.get<AgendaItem[]>("/agenda/appointments"),
-      api.get<AgendaItem[]>("/agenda/commitments"),
+      api.get<AgendaItem[]>(`/agenda/commitments?start=${today}&end=${today}`),
       api.get<WorkRoutine[]>("/agenda/work-routines"),
     ]).then((results) => {
       if (!active) return;
@@ -805,12 +855,25 @@ export default function CardiologySpacesHome() {
   useEffect(() => {
     if (!mode || mode === "scientific" || usuario?.investidor) {
       setMapConfiguration(null);
+      setMobilityPreference(null);
+      setMobilityDayContext(null);
       return;
     }
     let active = true;
-    api.get<MapConfiguration>("/agenda/mobility/map-config")
-      .then((configuration) => { if (active) setMapConfiguration(configuration); })
-      .catch(() => { if (active) setMapConfiguration(null); });
+    Promise.allSettled([
+      api.get<MapConfiguration>("/agenda/mobility/map-config"),
+      api.get<MobilityPreference>("/agenda/mobility/preferences"),
+      api.get<MobilityDayContext>("/agenda/mobility/day-context"),
+    ]).then(([mapResult, preferenceResult, contextResult]) => {
+      if (!active) return;
+      setMapConfiguration(mapResult.status === "fulfilled" ? mapResult.value : null);
+      setMobilityPreference(preferenceResult.status === "fulfilled" ? preferenceResult.value : null);
+      setMobilityDayContext(contextResult.status === "fulfilled" ? {
+        ...contextResult.value,
+        first_target: withoutReservedSmokeTestRecord(contextResult.value.first_target),
+        last_target: withoutReservedSmokeTestRecord(contextResult.value.last_target),
+      } : null);
+    });
     return () => { active = false; };
   }, [mode, usuario?.investidor]);
 
@@ -856,19 +919,49 @@ export default function CardiologySpacesHome() {
       : "";
   const chamamentoComArtigo = [artigoDoChamamento, chamamento].filter(Boolean).join(" ");
   const question = mode === "scientific" ? `Como ${chamamentoComArtigo} quer explorar o conhecimento agora?` : `Onde ${chamamentoComArtigo} vai trabalhar agora?`;
-  const travelTarget = mobilityResult?.destination || mobilityTarget;
-  const bestRoute = mobilityResult?.routes?.[0];
+  const resultMatchesTarget = Boolean(
+    mobilityResult?.destination?.target_key
+    && mobilityTarget?.target_key
+    && mobilityResult.destination.target_key === mobilityTarget.target_key,
+  );
+  const travelTarget = resultMatchesTarget ? mobilityResult?.destination || mobilityTarget : mobilityTarget;
+  const bestRoute = resultMatchesTarget ? mobilityResult?.routes?.[0] : undefined;
   const travelMinutes = bestRoute?.duration_seconds ? Math.max(1, Math.round(bestRoute.duration_seconds / 60)) : null;
   const travelDestination = travelTarget?.location?.latitude != null && travelTarget.location.longitude != null ? {
     latitude: travelTarget.location.latitude,
     longitude: travelTarget.location.longitude,
     name: travelTarget.location.name || travelTarget.service_name || "Próximo destino",
   } : null;
-  const resultOrigin = mobilityResult?.origin_location?.latitude != null && mobilityResult.origin_location.longitude != null ? {
+  const resultOrigin = resultMatchesTarget && mobilityResult?.origin_location?.latitude != null && mobilityResult.origin_location.longitude != null ? {
     latitude: mobilityResult.origin_location.latitude,
     longitude: mobilityResult.origin_location.longitude,
   } : null;
-  const travelMapOrigin = travelOrigin || resultOrigin;
+  const usesSavedOrigin = Boolean(
+    mobilityPreference?.enabled
+    && mobilityPreference.day_start_origin_mode === "saved_location"
+    && mobilityPreference.day_start_location_id
+    && mobilityDayContext?.stage === "before_first",
+  );
+  const savedOrigin = mobilityDayContext?.start_location || mobilityPreference?.day_start_location || null;
+  const savedOriginCoordinates = usesSavedOrigin && savedOrigin?.latitude != null && savedOrigin.longitude != null ? {
+    latitude: savedOrigin.latitude,
+    longitude: savedOrigin.longitude,
+  } : null;
+  const travelMapOrigin = travelOrigin || resultOrigin || savedOriginCoordinates;
+
+  useEffect(() => {
+    if (!usesSavedOrigin || !mobilityTarget?.target_key || !mobilityPreference?.day_start_location_id || resultMatchesTarget) return;
+    let active = true;
+    api.post<MobilityResult>("/agenda/mobility/commute-target-from-location", {
+      origin_location_id: mobilityPreference.day_start_location_id,
+      target_key: mobilityTarget.target_key,
+    }).then((result) => {
+      if (!active) return;
+      const safeResult = sanitizeMobilityResult(result, mobilityTarget);
+      if (safeResult?.routes?.length) setMobilityResult(safeResult);
+    }).catch(() => undefined);
+    return () => { active = false; };
+  }, [mobilityPreference?.day_start_location_id, mobilityTarget, resultMatchesTarget, usesSavedOrigin]);
 
   const chooseMode = useCallback((nextMode: Mode) => {
     sessionStorage.setItem(MODE_KEY, nextMode);
@@ -919,8 +1012,6 @@ export default function CardiologySpacesHome() {
     setTravelOpen(true);
     setTravelBusy(true);
     setTravelError(null);
-    setMobilityResult(null);
-    setTravelOrigin(null);
     try {
       if (usuario?.investidor) {
         setTravelError("No Modo Investidor, o deslocamento é demonstrativo e não usa localização real.");
@@ -936,20 +1027,38 @@ export default function CardiologySpacesHome() {
         setTravelError("Não há um próximo compromisso presencial com local cadastrado para traçar a rota.");
         return;
       }
-      const position = await currentPosition();
-      setTravelOrigin({ latitude: position.coords.latitude, longitude: position.coords.longitude });
-      const result = await api.post<MobilityResult>("/agenda/mobility/commute-target", {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
-        target_key: target.target_key,
-      });
-      setMobilityResult(result);
-      if (!result.routes?.length && result.status !== "live") {
-        setTravelError(result.status === "not_configured" ? "O destino está pronto, mas o provedor de trânsito ainda não está configurado." : "A rota não pôde ser calculada agora. O destino pode ser aberto no mapa.");
+      if (mobilityPreference && !mobilityPreference.enabled) {
+        setTravelError("Ative o deslocamento inteligente na Agenda para calcular rotas e trânsito.");
+        return;
       }
+      let result: MobilityResult;
+      if (usesSavedOrigin && mobilityPreference?.day_start_location_id) {
+        setTravelOrigin(null);
+        result = await api.post<MobilityResult>("/agenda/mobility/commute-target-from-location", {
+          origin_location_id: mobilityPreference.day_start_location_id,
+          target_key: target.target_key,
+        });
+      } else {
+        const position = await currentPosition();
+        const liveOrigin = { latitude: position.coords.latitude, longitude: position.coords.longitude };
+        setTravelOrigin(liveOrigin);
+        result = await api.post<MobilityResult>("/agenda/mobility/commute-target", {
+          ...liveOrigin,
+          target_key: target.target_key,
+        });
+      }
+      const safeResult = sanitizeMobilityResult(result, target);
+      if (!safeResult) {
+        setTravelError("O destino retornado não corresponde ao compromisso exibido. A rota anterior foi preservada.");
+        return;
+      }
+      setMobilityResult(safeResult);
+      if (safeResult.origin_location?.latitude != null && safeResult.origin_location.longitude != null && !usesSavedOrigin) {
+        setTravelOrigin({ latitude: safeResult.origin_location.latitude, longitude: safeResult.origin_location.longitude });
+      }
+      setTravelError(mobilityRouteError(safeResult));
     } catch (error) {
-      const message = error instanceof Error ? error.message : "Não foi possível calcular o deslocamento.";
-      setTravelError(message);
+      setTravelError(geolocationErrorMessage(error));
     } finally {
       setTravelBusy(false);
     }
@@ -961,7 +1070,11 @@ export default function CardiologySpacesHome() {
       setTravelError("Este destino ainda não possui coordenadas para abrir a navegação.");
       return;
     }
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(`${location.latitude},${location.longitude}`)}&travelmode=driving`;
+    const destination = encodeURIComponent(`${location.latitude},${location.longitude}`);
+    const baseUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}&travelmode=driving`;
+    const url = travelMapOrigin
+      ? `${baseUrl}&origin=${encodeURIComponent(`${travelMapOrigin.latitude},${travelMapOrigin.longitude}`)}`
+      : baseUrl;
     window.open(url, "_blank", "noopener,noreferrer");
   }
 
@@ -1135,11 +1248,11 @@ export default function CardiologySpacesHome() {
 
           {travelDestination ? <div className="spaces-travel__map">
             <MapaDeslocamento
-              rotas={mobilityResult?.routes || []}
+              rotas={resultMatchesTarget ? mobilityResult?.routes || [] : []}
               origem={travelMapOrigin}
               destino={travelDestination}
-              provider={mobilityResult?.provider || mapConfiguration?.provider}
-              updatedAt={mobilityResult?.updated_at}
+              provider={mapConfiguration?.provider || (resultMatchesTarget ? mobilityResult?.provider : undefined)}
+              updatedAt={resultMatchesTarget ? mobilityResult?.updated_at : undefined}
               googleMapsApiKey={mapConfiguration?.api_key}
             />
           </div> : <div className="spaces-orbit" aria-hidden="true">
@@ -1151,7 +1264,7 @@ export default function CardiologySpacesHome() {
           <div className="spaces-travel__status" role="status" aria-live="polite">
             {travelBusy ? <><strong>Calculando rota…</strong><small>Consultando sua posição autorizada e o trânsito atual.</small></> : bestRoute ? <><strong>{travelMinutes} min <em>·</em> {distanceLabel(bestRoute.distance_meters)}</strong><small>{bestRoute.summary || "Rota recomendada"}{bestRoute.congestion ? ` · ${trafficLabel(bestRoute.congestion)}` : ""}{mobilityResult?.provider ? ` · ${mobilityResult.provider}` : ""}</small></> : <><strong>{travelTarget?.location?.name || travelTarget?.service_name || "Próximo destino"}</strong><small>{travelError || "Destino preparado. Calcule a rota para incluir sua origem e o trânsito atual."}</small></>}
           </div>
-          {mobilityResult?.tips?.length ? <ul>{mobilityResult.tips.slice(0, 3).map((tip) => <li key={tip}>{tip}</li>)}</ul> : null}
+          {resultMatchesTarget && mobilityResult?.tips?.length ? <ul>{mobilityResult.tips.slice(0, 3).map((tip) => <li key={tip}>{tip}</li>)}</ul> : null}
           <footer>
             <button type="button" className="spaces-travel__recalculate" onClick={() => void startTravel()} disabled={travelBusy}><Icone nome="rota" /> {travelBusy ? "Calculando…" : bestRoute ? "Recalcular rota" : "Calcular rota real"}</button>
             <button type="button" className="spaces-travel__maps" onClick={openExternalMap}><Icone nome="rota" /> Abrir navegação no mapa</button>

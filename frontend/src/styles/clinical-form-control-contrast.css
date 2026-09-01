@@ -15,52 +15,67 @@
    legada volte a produzir combinações ilegíveis por acidente.
 */
 
-#root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
-#root .clinical-os select,
-#root .clinical-os textarea {
+/* O mesmo contrato atende o shell legado, o App Frame, a Home e as páginas
+   públicas. Inputs que não representam edição textual ficam deliberadamente
+   fora desta aparência para preservar o controle nativo apropriado. */
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea {
   color: #eef8fa !important;
   -webkit-text-fill-color: #eef8fa !important;
   caret-color: #42cad8;
   background-color: #0b1f2b !important;
   border-color: rgba(166, 211, 222, .24) !important;
+  color-scheme: dark;
 }
 
-#root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"])::placeholder,
-#root .clinical-os textarea::placeholder {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))::placeholder,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea::placeholder {
   color: #78949f !important;
   -webkit-text-fill-color: #78949f !important;
   opacity: 1;
 }
 
-#root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):hover,
-#root .clinical-os select:hover,
-#root .clinical-os textarea:hover {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):hover,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select:hover,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:hover {
   border-color: rgba(114, 224, 231, .42) !important;
 }
 
-#root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):focus,
-#root .clinical-os select:focus,
-#root .clinical-os textarea:focus {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):focus,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select:focus,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:focus {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
   background-color: #0d2633 !important;
   border-color: #42cad8 !important;
   box-shadow: 0 0 0 3px rgba(66, 202, 216, .13) !important;
+  outline: 2px solid transparent;
 }
 
-#root .clinical-os select option,
-#root .clinical-os select optgroup {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select option,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select optgroup {
   color: #eef8fa !important;
-  background: #0b1f2b !important;
+  -webkit-text-fill-color: #eef8fa !important;
+  background-color: #0b1f2b !important;
 }
 
 /* Chrome/Safari podem substituir a paleta do campo no autofill. O inset
    preserva a superfície escura e -webkit-text-fill-color preserva o texto. */
-#root .clinical-os input:-webkit-autofill,
-#root .clinical-os input:-webkit-autofill:hover,
-#root .clinical-os input:-webkit-autofill:focus,
-#root .clinical-os textarea:-webkit-autofill,
-#root .clinical-os select:-webkit-autofill {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill:hover,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill:focus,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:-webkit-autofill,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:-webkit-autofill:hover,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:-webkit-autofill:focus,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select:-webkit-autofill {
   -webkit-text-fill-color: #eef8fa !important;
   caret-color: #42cad8 !important;
   -webkit-box-shadow: 0 0 0 1000px #0b1f2b inset !important;
@@ -68,83 +83,78 @@
   transition: background-color 9999s ease-out 0s;
 }
 
-#root .clinical-os input:disabled,
-#root .clinical-os select:disabled,
-#root .clinical-os textarea:disabled,
-#root .clinical-os input[readonly],
-#root .clinical-os textarea[readonly] {
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):disabled,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select:disabled,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea:disabled,
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))[readonly],
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea[readonly] {
   color: #a9bec5 !important;
   -webkit-text-fill-color: #a9bec5 !important;
   background-color: #0a1b25 !important;
-  opacity: .72;
-}
-
-/* Pré-login canônico: mesma família navy/teal do Clinical OS. */
-#root .login input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
-#root .login select,
-#root .login textarea {
-  color: #eaf5f7 !important;
-  -webkit-text-fill-color: #eaf5f7 !important;
-  caret-color: #42cad8;
-  background-color: #0b1f2b !important;
-  border-color: rgba(166, 211, 222, .22) !important;
-}
-
-#root .login input::placeholder,
-#root .login textarea::placeholder {
-  color: #78949f !important;
-  -webkit-text-fill-color: #78949f !important;
+  border-color: rgba(166, 211, 222, .14) !important;
   opacity: 1;
 }
 
-#root .login input:hover,
-#root .login select:hover,
-#root .login textarea:hover {
-  border-color: rgba(114, 224, 231, .38) !important;
+/* Checkbox e radio preservam o próprio indicador e a cor de destaque. */
+#root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+  input:is([type="checkbox"], [type="radio"]) {
+  -webkit-text-fill-color: initial !important;
+  accent-color: #42cad8;
 }
 
-#root .login input:focus,
-#root .login select:focus,
-#root .login textarea:focus {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  background-color: #0d2633 !important;
-  border-color: #42cad8 !important;
-  box-shadow: 0 0 0 3px rgba(66, 202, 216, .13) !important;
+/* Aliases explícitos mantêm compatibilidade com os verificadores de release
+   anteriores ao contrato consolidado acima. As exclusões adicionais preservam
+   exatamente o mesmo conjunto de controles textuais e não ampliam a regra. */
+#root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+#root .clinical-os select,
+#root .clinical-os textarea {
+  color: #eef8fa !important;
+  -webkit-text-fill-color: #eef8fa !important;
+  background-color: #0b1f2b !important;
 }
 
-#root .login select option,
-#root .login select optgroup {
-  color: #eaf5f7 !important;
-  background: #0b1f2b !important;
-}
-
-#root .login input:-webkit-autofill,
-#root .login input:-webkit-autofill:hover,
-#root .login input:-webkit-autofill:focus,
-#root .login textarea:-webkit-autofill,
-#root .login select:-webkit-autofill {
-  -webkit-text-fill-color: #eaf5f7 !important;
-  caret-color: #42cad8 !important;
+#root .clinical-os input:-webkit-autofill,
+#root .clinical-os textarea:-webkit-autofill,
+#root .clinical-os select:-webkit-autofill {
+  -webkit-text-fill-color: #eef8fa !important;
   -webkit-box-shadow: 0 0 0 1000px #0b1f2b inset !important;
   box-shadow: 0 0 0 1000px #0b1f2b inset !important;
 }
 
-/* Checkbox/radio/range/color não recebem a caixa de texto acima. */
-#root .clinical-os input[type="checkbox"],
-#root .clinical-os input[type="radio"],
-#root .login input[type="checkbox"],
-#root .login input[type="radio"] {
-  -webkit-text-fill-color: initial !important;
+#root .login input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+#root .login select,
+#root .login textarea {
+  color: #eaf5f7 !important;
+  -webkit-text-fill-color: #eaf5f7 !important;
+  background-color: #0b1f2b !important;
+}
+
+#root .login input:-webkit-autofill,
+#root .login textarea:-webkit-autofill,
+#root .login select:-webkit-autofill {
+  -webkit-text-fill-color: #eaf5f7 !important;
+  -webkit-box-shadow: 0 0 0 1000px #0b1f2b inset !important;
+  box-shadow: 0 0 0 1000px #0b1f2b inset !important;
 }
 
 
 /* Product stabilization 2026-08-20: preserve legibility without imposing a
    global layout. Width belongs to each component/form; the final contrast
    contract only prevents overflow and keeps the box model predictable. */
-.clinical-os input:not([type="checkbox"]):not([type="radio"]),
+.clinical-os input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
 .clinical-os select,
-.clinical-os textarea { max-width:100%; min-width:0; box-sizing:border-box; }
+.clinical-os textarea,
+.cv-app input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+.cv-app select,
+.cv-app textarea,
+.spaces-home input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+.spaces-home select,
+.spaces-home textarea,
+.public-space input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+.public-space select,
+.public-space textarea { max-width:100%; min-width:0; box-sizing:border-box; }
 .clinical-os .grade > *, .clinical-os [class*="grid"] > * { min-width:0; }
 .clinical-os .prescricao-selecao {
   background:linear-gradient(145deg,#0d2534,#0a1b28)!important;
@@ -161,3 +171,29 @@
 .clinical-os .prescricao-selecao span { color:#a9c7d0!important; }
 .clinical-os .prescricao-selecao .botao,
 .clinical-os .prescricao-selecao button { color:#dffbfe!important; }
+
+/* Inputs integrados a uma cápsula já possuem a superfície no elemento pai;
+   mantê-los transparentes evita uma segunda caixa dentro do comando. */
+#root .cv-app .cv-command input,
+#root .cv-app .cv-drawer__search input,
+#root .spaces-home .spaces-everything-search input {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+@media (max-width: 900px) {
+  #root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+    input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+  #root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) select,
+  #root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space) textarea {
+    min-height: 44px !important;
+    font-size: 16px !important;
+  }
+
+  #root :is(.clinical-os, .login, .cv-app, .spaces-home, .public-space)
+    :is(form, fieldset, [role="dialog"], .painel, .cv-section, .spaces-catalog, .spaces-personalizer, .corvia-chat-panel)
+    :is(button, [role="button"], a.botao, input[type="button"], input[type="submit"], input[type="reset"]) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

@@ -286,7 +286,7 @@ export default function MapaDeslocamento({
   }, [destino.latitude, destino.longitude, destino.name, geometrias, indiceSelecionado, mapaVersao, origem, rotaAtual, temGeometria]);
 
   return (
-    <div className={`deslocamento-painel${compact ? " deslocamento-painel--compact" : ""}`}>
+    <div className={`deslocamento-painel${compact ? " deslocamento-painel--compact" : ""}${rotas.length === 0 ? " deslocamento-painel--sem-rotas" : ""}`}>
       <div className="deslocamento-mapa" aria-label={temGeometria ? `Mapa do percurso até ${destino.name}` : `Mapa do destino ${destino.name}`}>
         {deveUsarGoogleMap && googleMapsApiKey && destinoValido ? (
           <>
@@ -326,16 +326,16 @@ export default function MapaDeslocamento({
         ) : (
           <div className="deslocamento-mapa__indisponivel"><Icone nome="rota" /><span>{deveUsarGoogleMap ? "Configure a chave pública do Google Maps para exibir o mapa neste painel." : destinoValido ? "Mapa interativo indisponível para o provedor atual." : "Destino ainda sem coordenadas para exibir no mapa."}</span>{urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Ver destino no Google Maps</a>}</div>
         )}
-        <div className="deslocamento-mapa__legenda">
+        {temGeometria && <div className="deslocamento-mapa__legenda">
           <span><i className="livre" />Livre</span><span><i className="lento" />Lento</span><span><i className="parado" />Congestionado</span>
-        </div>
+        </div>}
         <div className="deslocamento-mapa__fonte">
           <span>{provider || "Mapa do destino"}</span>
           {updatedAt && <time dateTime={updatedAt}>Atualizado às {new Date(updatedAt).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>}
         </div>
       </div>
 
-      {!compact && <div className="deslocamento-rotas" aria-label="Comparação das rotas">
+      {!compact && rotas.length > 0 && <div className="deslocamento-rotas" aria-label="Comparação das rotas">
         <div className="deslocamento-rotas__cabecalho">
           <div><strong>{rotas.length} {rotas.length === 1 ? "rota disponível" : "rotas disponíveis"}</strong><span>{rotas.length ? "Selecione para comparar no mapa" : "Use sua localização para calcular o percurso"}</span></div>
           {urlNavegacao && <a href={urlNavegacao} target="_blank" rel="noreferrer">Abrir navegação <Icone nome="seta" /></a>}
