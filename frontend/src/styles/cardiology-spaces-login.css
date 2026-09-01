@@ -599,6 +599,21 @@
   -webkit-text-fill-color: #61778c !important;
 }
 
+/* O Chromium aplica uma camada clara própria ao preview/autofill de senhas.
+   Recolore explicitamente todos os estados para preservar o console escuro,
+   inclusive antes de o usuário aceitar a credencial sugerida. */
+#root .login-gateway .login-gateway__field input:-webkit-autofill,
+#root .login-gateway .login-gateway__field input:-webkit-autofill:hover,
+#root .login-gateway .login-gateway__field input:-webkit-autofill:focus,
+#root .login-gateway .login-gateway__field input:-webkit-autofill:active {
+  color: #f0f5f9 !important;
+  -webkit-text-fill-color: #f0f5f9 !important;
+  caret-color: var(--login-blue) !important;
+  -webkit-box-shadow: 0 0 0 1000px #091c2b inset !important;
+  box-shadow: 0 0 0 1000px #091c2b inset !important;
+  transition: background-color 9999s ease-out 0s;
+}
+
 .login-gateway__field > div:hover { border-color: rgba(79, 127, 255, 0.46); }
 .login-gateway__field > div:focus-within { border-color: var(--login-blue); box-shadow: 0 0 0 3px rgba(79, 127, 255, 0.11); }
 
@@ -801,7 +816,7 @@
   50% { opacity: 0.72; transform: translate(-50%, -50%) rotate(-8.8deg) scale(1.015); }
 }
 
-@media (max-width: 1180px) and (min-width: 761px) {
+@media (max-width: 1180px) and (min-width: 901px) {
   .login-gateway { min-height: 680px; padding-inline: 24px; }
   .login-gateway__space { width: 132px; }
   .login-gateway__space--consultorio { left: 1%; }
@@ -813,7 +828,7 @@
   .login-gateway__utilities small { display: none; }
 }
 
-@media (max-height: 800px) and (min-width: 761px) {
+@media (max-height: 800px) and (min-width: 901px) {
   .login-gateway { grid-template-rows: 70px minmax(270px, 1fr) auto 57px; min-height: 650px; }
   .login-gateway__brand img { width: 42px; height: 42px; }
   .login-gateway__hero { margin-top: 6px; }
@@ -827,7 +842,7 @@
   #root .login-gateway .login-gateway__field input { min-height: 41px !important; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .login-gateway {
     display: block !important;
     width: 100%;
@@ -848,12 +863,12 @@
     padding-inline: 3px;
   }
 
-  .login-gateway__brand { gap: 8px; }
+  .login-gateway__brand { min-height: 44px; gap: 8px; }
   .login-gateway__brand img { width: 36px; height: 36px; }
   .login-gateway__brand strong { font-size: 1.34rem; }
-  .login-gateway__brand small { font-size: 0.38rem; letter-spacing: 0.25em; }
+  .login-gateway__brand small { font-size: 0.625rem; letter-spacing: 0.2em; }
   .login-gateway__security small { display: none; }
-  .login-gateway__security span { font-size: 0.49rem; }
+  .login-gateway__security span { font-size: 0.625rem; }
 
   .login-gateway__scene {
     height: 292px;
@@ -865,9 +880,9 @@
     margin-top: 8px;
   }
 
-  .login-gateway__hero p { font-size: 0.43rem; }
-  .login-gateway__hero h1 { max-width: 12ch; font-size: clamp(1.58rem, 8vw, 2.05rem); line-height: 1.02; }
-  .login-gateway__hero > span { max-width: 43ch; font-size: 0.52rem; }
+  .login-gateway__hero p { font-size: 0.625rem; }
+  .login-gateway__hero h1 { max-width: min(100%, 26ch); font-size: clamp(1.58rem, 8vw, 2.05rem); line-height: 1.02; }
+  .login-gateway__hero > span { max-width: 43ch; font-size: 0.6875rem; }
   .login-gateway__universe { inset: 97px 0 0; }
   .login-gateway__routes { display: none; }
 
@@ -889,7 +904,7 @@
     top: auto;
     bottom: 5px;
     display: grid;
-    height: 48px;
+    height: 56px;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 4px;
   }
@@ -904,7 +919,7 @@
     display: grid;
     width: auto;
     min-width: 0;
-    min-height: 45px;
+    min-height: 52px;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 1px;
@@ -922,7 +937,7 @@
   }
 
   .login-gateway__space > span svg { width: 15px; height: 15px; }
-  .login-gateway__space strong { font-size: 0.4rem; }
+  .login-gateway__space strong { font-size: 0.625rem; }
   .login-gateway__space small { display: none; }
 
   .login-gateway__console {
@@ -943,6 +958,7 @@
   }
 
   .login-gateway__console-head > span { width: 32px; height: 32px; }
+  .login-gateway__console-head p { font-size: 0.625rem; }
   .login-gateway__console-head h2 { font-size: 1.08rem; }
 
   .login-gateway__form {
@@ -950,7 +966,12 @@
     gap: 10px;
   }
 
-  .login-gateway__enter { min-height: 47px; }
+  .login-gateway__field > div { min-height: 48px; }
+  #root .login-gateway .login-gateway__field input { min-height: 46px !important; }
+  .login-gateway__password { grid-template-columns: 34px minmax(0, 1fr) 44px !important; }
+  .login-gateway__password button { width: 44px; height: 44px; }
+  .login-gateway__enter { min-height: 48px; font-size: 0.75rem; }
+  .login-gateway__error { font-size: 0.6875rem; }
   .login-gateway__form-meta,
   .login-gateway__error { grid-column: 1; }
 
@@ -958,6 +979,9 @@
     position: static;
     justify-content: center;
   }
+
+  .login-gateway__form-meta label,
+  .login-gateway__form-meta a { font-size: 0.6875rem; }
 
   .login-gateway__footer {
     display: grid;
@@ -983,22 +1007,23 @@
   }
 
   .login-gateway__utilities > a > svg { display: none; }
-  .login-gateway__utilities strong { font-size: 0.46rem; }
-  .login-gateway__utilities small { font-size: 0.41rem; }
+  .login-gateway__utilities strong { font-size: 0.6875rem; }
+  .login-gateway__utilities small { font-size: 0.625rem; }
   .login-gateway__footer nav { justify-content: center; padding-bottom: 4px; }
   .login-gateway__footer nav { position: static; right: auto; }
+  .login-gateway__footer nav a { font-size: 0.6875rem; }
 }
 
 @media (max-width: 390px) {
   .login-gateway__security span { font-size: 0; }
-  .login-gateway__security span::after { color: #8da0b2; font-size: 0.48rem; content: "Protegido"; }
+  .login-gateway__security span::after { color: #8da0b2; font-size: 0.625rem; content: "Protegido"; }
   .login-gateway__hero h1 { font-size: 1.52rem; }
-  .login-gateway__hero > span { font-size: 0.49rem; }
+  .login-gateway__hero > span { font-size: 0.6875rem; }
   .login-gateway__scene { height: 282px; }
   .login-gateway__console { padding-inline: 12px; }
   .login-gateway__form-meta { gap: 8px; }
   .login-gateway__form-meta label,
-  .login-gateway__form-meta a { font-size: 0.51rem; }
+  .login-gateway__form-meta a { font-size: 0.6875rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1010,7 +1035,7 @@
 }
 
 /* O portal de acesso também deve caber na área útil real do navegador. */
-@media (min-width: 761px) {
+@media (min-width: 901px) {
   .login-gateway {
     height: 100dvh;
     min-height: 0;
@@ -1042,7 +1067,7 @@
   }
 }
 
-@media (min-width: 761px) and (max-height: 700px) {
+@media (min-width: 901px) and (max-height: 700px) {
   .login-gateway {
     min-height: 0;
     grid-template-rows: 58px minmax(190px, 1fr) auto 48px;

@@ -745,6 +745,7 @@ body:has(.cv-app) {
 .cv-drawer__intro h2 { margin: 4px 0 0; color: #edf5f7; font-family: var(--fonte-display); font-size: 1.45rem; font-weight: 520; letter-spacing: -0.035em; }
 .cv-drawer__intro p { margin: 5px 0 0; color: #778d9c; font-size: 0.7rem; }
 .cv-drawer__search { display: grid; height: 44px; grid-template-columns: 20px minmax(0, 1fr); align-items: center; gap: 9px; margin: 0 22px 10px; padding: 0 12px; color: var(--cv-accent); background: rgba(6, 23, 38, 0.78); border: 1px solid rgba(var(--cv-rgb), 0.18); border-radius: 10px; }
+.cv-drawer__search:focus-within { border-color: rgba(var(--cv-rgb), .62); box-shadow: 0 0 0 3px rgba(var(--cv-rgb), .09); }
 .cv-drawer__search svg { width: 18px; height: 18px; }
 .cv-drawer__search input { width: 100%; height: 40px; padding: 0; color: #e6f0f3; -webkit-text-fill-color: #e6f0f3; background: transparent; border: 0; outline: 0; font-size: 0.75rem; }
 .cv-drawer__assistant { display: grid; min-height: 50px; grid-template-columns: 34px minmax(0, 1fr) 15px; align-items: center; gap: 9px; margin: 0 22px 11px; padding: 7px 10px; color: #d9c7f5; text-align: left; background: rgba(160, 109, 242, 0.07); border: 1px solid rgba(160, 109, 242, 0.22); border-radius: 10px; cursor: pointer; }
@@ -951,4 +952,58 @@ body.cv-overlay-open :where(.corvia-chat-launch, .cv-emergency-fab) {
 
 @media (prefers-reduced-motion: reduce) {
   .cv-space-horizon__orb::after { animation: none; }
+}
+
+/* O chat é montado fora de superfícies legadas e, por isso, recebe aqui os
+   mesmos tokens escuros do App Frame. Isso impede controles ou balões claros
+   de reaparecerem dentro da identidade Cardiology Spaces. */
+.corvia-chat-panel {
+  --fundo: #061522;
+  --fundo-suave: #081b2a;
+  --linha: rgba(166, 211, 222, .2);
+  --primaria: #0a3449;
+  --acao: #287ce8;
+  --acento: #42cad8;
+  --acento-suave: rgba(66, 202, 216, .1);
+  --texto: #eef8fa;
+  --texto-suave: #91a7b3;
+  color: var(--texto);
+  color-scheme: dark;
+}
+
+.corvia-chat-panel .corvia-chat-panel__message:not(.is-mine) {
+  color: var(--texto) !important;
+  background: #0b1f2b !important;
+  border-color: var(--linha) !important;
+}
+
+.corvia-chat-panel :where(button, input, select, textarea):focus-visible {
+  outline: 2px solid #42cad8;
+  outline-offset: 2px;
+}
+
+/* Piso móvel aplicado somente ao App Frame; a geometria desktop aprovada não
+   é tocada. */
+@media (max-width: 900px) {
+  .cv-command input,
+  .cv-drawer__search input { font-size: 1rem; }
+
+  .cv-space-horizon__copy p { font-size: .625rem; }
+  .cv-space-horizon__copy > span { font-size: .75rem; }
+
+  .cv-function-deck__label span,
+  .cv-function-deck__label strong,
+  .cv-function-deck .cv-nav-link { font-size: .6875rem; }
+
+  .cv-mobile-dock :where(a, button) { font-size: .6875rem; }
+  .cv-mobile-dock__assistant small { font-size: .625rem; }
+
+  .cv-page-hero__description,
+  .cv-section__heading p,
+  .cv-filter-grid label > span { font-size: .75rem; }
+
+  .cv-page-hero__space,
+  .cv-section__heading .eyebrow { font-size: .625rem; }
+
+  .cv-action { min-height: 44px; font-size: .75rem; }
 }

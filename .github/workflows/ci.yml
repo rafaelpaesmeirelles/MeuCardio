@@ -27,8 +27,8 @@ jobs:
         env:
           EXPECTED_REPOSITORY: rafaelpaesmeirelles/MeuCardio
           EXPECTED_ACTOR: rafaelpaesmeirelles
-          EXPECTED_BRANCH: codex/emergency-visual-hotfix
-          EXPECTED_BASE_SHA: 0c184868e9dd7e3e2c8cb4f39906fa9947dedcaf
+          EXPECTED_BRANCH: codex/emergency-autofill-hotfix
+          EXPECTED_BASE_SHA: 241d75802e1f097d925b7dd1c445934a02d87267
           EVENT_NAME: ${{ github.event_name }}
           ACTOR: ${{ github.actor }}
           REPOSITORY: ${{ github.repository }}
@@ -71,12 +71,16 @@ jobs:
             case "$path" in
               frontend/src/styles/cardiology-spaces-home.css|\
               frontend/src/styles/cardiology-spaces-login.css|\
+              frontend/src/styles/cardiology-spaces-app-frame.css|\
+              frontend/src/styles/clinical-form-control-contrast.css|\
               frontend/src/lib/reservedSmokeAgenda.ts|\
               frontend/src/pages/CardiologySpacesHome.tsx|\
               frontend/src/pages/Agenda.tsx|\
               frontend/src/pages/PainelClinicalOS.tsx|\
               frontend/src/components/PersonalAssistantPanel.tsx|\
               frontend/src/components/HomePendingActionsPortal.tsx|\
+              frontend/src/components/MapaDeslocamento.tsx|\
+              frontend/src/components/ChatFlutuante.tsx|\
               frontend/scripts/check-reserved-smoke-agenda.test.mjs|\
               .github/workflows/ci.yml|\
               .github/workflows/cardiology-spaces-reference-qa.yml|\

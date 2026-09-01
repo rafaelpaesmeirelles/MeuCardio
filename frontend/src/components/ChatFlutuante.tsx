@@ -280,6 +280,7 @@ export default function ChatFlutuante() {
 
       {aberto && (
         <section
+          className="corvia-chat-panel"
           aria-label="CorvIA Chat"
           style={{
             position: "fixed", right: 18, bottom: 78, zIndex: 1200,
@@ -399,6 +400,7 @@ export default function ChatFlutuante() {
                       </span>
                       {c.nao_lidas > 0 && (
                         <span
+                          className="corvia-chat-panel__unread"
                           style={{
                             background: "var(--acao)", color: "#fff", fontSize: ".7rem", fontWeight: 700,
                             minWidth: 18, height: 18, borderRadius: 9, display: "flex",
@@ -493,6 +495,7 @@ export default function ChatFlutuante() {
                     return (
                       <div key={m.id} style={{ display: "flex", justifyContent: minha ? "flex-end" : "flex-start", marginBottom: ".45rem" }}>
                         <span
+                          className={`corvia-chat-panel__message${minha ? " is-mine" : ""}`}
                           style={{
                             maxWidth: "78%", padding: ".45rem .65rem", borderRadius: 10,
                             background: minha ? "var(--primaria)" : "#fff",
