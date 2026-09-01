@@ -27513,5 +27513,69 @@
         "por_que": "Fecha a trilha estendendo o mesmo raciocínio de sequenciamento a uma terceira valva: a insuficiência tricúspide secundária frequentemente persiste ou só se manifesta depois que a valva esquerda (aórtica, mitral, ou ambas) já foi tratada, exigindo a mesma pergunta — tratar junto, tratar depois, ou não tratar — que estruturou toda a trilha."
       }
     ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo",
+    "titulo": "Fibrilação atrial: recorrência pós-ablação, do tratamento de comorbidades ao redo",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo modificar os fatores de risco que mais pesam sobre a recorrência de FA depois da ablação por cateter — peso, apneia do sono, e os adjuntos farmacológicos com evidência randomizada recente (GLP-1, SGLT2, colchicina) — e, quando a arritmia volta apesar disso, aplicar o algoritmo de blanking/cardioversão/antiarrítmico/reablação e entender o que o segundo procedimento de fato entrega.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "peso-condicionamento-e-exercicio-na-fibrilacao-atrial-legacy-cardio-fit-e-active-af",
+        "por_que": "Ponto de partida: LEGACY, CARDIO-FIT e ACTIVE-AF medem por Holter de 7 dias que perda de peso dirigida a meta e condicionamento físico reduzem a carga de FA em magnitude comparável à de intervenções que ninguém chamaria de acessórias — a base sobre a qual todo o resto da trilha se apoia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "apneia-obstrutiva-do-sono-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-o-que-o-cpap-realmente-muda",
+        "por_que": "A comorbidade modificável mais citada na via AF-CARE da ESC 2024 (classe I rastrear e tratar): a camada observacional mostra RR 0,58 de recorrência com CPAP, mas a única camada randomizada, com desfecho por monitor implantável, não mostrou diferença — as duas coisas são verdadeiras ao mesmo tempo, e é isso que o consultório precisa saber antes de prometer o benefício."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao",
+        "por_que": "A quarta via de intervenção sobre o peso, e a mais radical em magnitude e duração — obesidade classe II-III é hoje um dos fatores de risco modificáveis mais prevalentes em quem é referido para ablação, e o documento cobre também as complicações periablação específicas desse paciente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "glp-1-e-incidencia-de-fibrilacao-atrial-associacao-independente-de-perda-de-peso",
+        "por_que": "Antes de entrar no efeito pós-ablação, a pergunta de prevenção primária: agonistas de GLP-1 associam-se a menor incidência de FA (HR 0,67) por um mecanismo que parece ir além da perda de peso que induzem — coorte pareada por escore de propensão, 12.812 pacientes."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "agonistas-do-receptor-de-glp-1-e-recorrencia-de-fa-pos-ablacao-o-estudo-leaf-e-metanalise-2026",
+        "por_que": "A mesma classe farmacológica, agora testada em ensaio randomizado dedicado (LEAF, 2026): liraglutida somada à modificação de fatores de risco reduz o tecido adiposo epicárdico atrial esquerdo além da perda de peso comportamental isolada, com recorrência de FA em 1 ano como desfecho secundário."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+        "por_que": "Outra classe metabólica com sinal observacional forte (RR 0,61 em metanálise de 11 estudos) — incluída aqui porque o ensaio randomizado dedicado, DARE-AF, contraria a leitura otimista dos dados de coorte, o tipo de divergência que a trilha precisa deixar explícita, não escondida."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter",
+        "por_que": "Fecha o bloco farmacológico com o adjunto anti-inflamatório periprocedimento: o único ensaio randomizado dedicado foi neutro para recorrência de arritmia (31% vs. 32% em 2 semanas) embora positivo para a dor pós-ablação — separar os dois desfechos evita a extrapolação indevida de um para o outro."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "fluxograma-recorrencia-fa-pos-ablacao-manejo-blanking-reablacao",
+        "por_que": "Depois de esgotar a modificação de fatores de risco, a pergunta muda: a arritmia recorreu apesar de tudo, e agora? O fluxograma organiza a decisão entre observar dentro do período de blanking (8 semanas pelo consenso EHRA/HRS/APHRS/LAHRS 2024), cardioverter, ajustar antiarrítmico ou indicar reablação."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "ablacao-redo-na-fibrilacao-atrial-recorrente-reconexao-de-veias-pulmonares-e-timing-metanalise-2025",
+        "por_que": "A pergunta que fica depois que a decisão de reablacionar já foi tomada: o que o segundo procedimento de fato encontra e entrega. A metanálise de Hoevelmann et al. (2025), 57 estudos e 8.243 pacientes, mostra que a reconexão de veia pulmonar continua sendo a regra, não a exceção — fecha a trilha do zero ao redo."
+      }
+    ]
   }
 ]

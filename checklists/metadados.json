@@ -42481,5 +42481,83 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento retinopatia-diabetica-como-marcador-de-risco-cardiovascular-sistemico.md (já publicado, review_status: pendente_revisao). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9",
+    "condicao": "Orientação e conduta clínica diante do interesse do paciente pela edição de base do gene PCSK9 (plataforma VERVE, dado mais recente: VERVE-102)",
+    "resumo": "Checklist de comunicação e conduta para quando um paciente pergunta sobre ou pede acesso à edição de base do PCSK9 — uma terapia gênica experimental de dose única ainda em fase 1, sem aprovação regulatória e sem desfecho cardiovascular comprovado. Cobre o que informar, o que não prometer, e o que manter inalterado no tratamento hipolipemiante já indicado enquanto a tecnologia amadurece.",
+    "documento_origem": "edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl",
+    "theme": "Prevenção e lipídios",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Cohen JC, Boerwinkle E, Mosley TH Jr, Hobbs HH. Sequence variations in PCSK9, low LDL, and protection against coronary heart disease. N Engl J Med. 2006;354(12):1264-1272. PMID: 16554528 — base genética observacional (variantes de perda de função do PCSK9 associadas a LDL-C baixo ao longo da vida e a redução de ~88% no risco de doença coronariana) que fundamenta racionalmente a estratégia de inativação permanente do gene.",
+      "Lee RG, Mazzola AM, Braun MC, Platt C, Vafai SB, Kathiresan S, Rohde E, Bellinger AM, Khera AV. Efficacy and Safety of an Investigational Single-Course CRISPR Base-Editing Therapy Targeting PCSK9 in Nonhuman Primate and Mouse Models. Circulation. 2023;147(3):242-253. DOI: 10.1161/CIRCULATIONAHA.122.062132. PMID: 36314243 — dados pré-clínicos (camundongo e primata não humano) do candidato de primeira geração, VERVE-101, que sustentaram o avanço para estudo em humanos.",
+      "Hooper AJ, Tang XL, Burnett JR. VERVE-101, a CRISPR base-editing therapy designed to permanently inactivate hepatic PCSK9 and reduce LDL-cholesterol. Expert Opin Investig Drugs. 2024;33(8):753-756. DOI: 10.1080/13543784.2024.2369747. PMID: 38878270 — comentário de especialistas sobre o candidato de primeira geração (VERVE-101) e o racional de evolução da plataforma.",
+      "Vafai SB, Täubel J, Ashdown T, Patel RS, Diamondali S, Cegla J, Soran H, Bashir B, Abitbol A, Gaudet D, Lauzière A, Brunham LR, Newby DE, Nicholls SJ, Scott RS, Kerr J, Tardif JC, Lunken C, Humphries SE, Karsten V, Tyler PD, Zhang X, Huniti N, Flight PA, Jensen CL, Falzone R, Biedenkapp JC, Lister T, Stolz LE, Khera AV, Kathiresan S. In Vivo Base Editing of PCSK9 with VERVE-102 for Hypercholesterolemia. N Engl J Med. 2026;395(7):648-659. DOI: 10.1056/NEJMoa2601283. PMID: 42187087 — ensaio fase 1, aberto, de dose única ascendente, 35 participantes com hipercolesterolemia familiar heterozigótica ou doença coronariana prematura, seis coortes de dose (0,3-1,0 mg/kg de RNA total), sem toxicidade limitante de dose; redução média de PCSK9 de 51% a 88% e de LDL-C de 9% a 62% (redução absoluta de 78 mg/dL na dose mais alta), com efeito sustentado por pelo menos 1 ano de seguimento."
+    ],
+    "itens": [
+      {
+        "id": "it-edbase-status-experimental",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Confirmado e informado ao paciente que não existe, até o momento, aprovação regulatória em nenhuma agência (FDA, EMA, ANVISA) para nenhum candidato de edição de base do PCSK9 — é tratamento experimental, disponível apenas dentro de ensaio clínico registrado",
+        "origem_secao": "O que isto significa — e o que isto ainda não significa — na prática clínica"
+      },
+      {
+        "id": "it-edbase-nao-prometer-dose-unica-vitalicia",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Evitado prometer ao paciente 'uma injeção e nunca mais precisa de remédio para colesterol' — a durabilidade demonstrada é de pelo menos 1 ano de seguimento, não vitalícia; esse é o dado real disponível, não a promessa central ainda não verificada",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "it-edbase-nao-equiparar-ldl-a-desfecho",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Explicado que a redução de LDL-C/PCSK9 não é, para esta tecnologia especificamente, equivalente comprovada a redução de eventos cardiovasculares — não há ensaio de desfecho cardiovascular (MACE) publicado para o VERVE-102; a extrapolação é plausível por analogia mecanística com PCSK9i aprovados, mas não está comprovada para esta molécula",
+        "origem_secao": "Nota de honestidade estatística, obrigatória para este documento"
+      },
+      {
+        "id": "it-edbase-explicar-irreversibilidade",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Explicada ao paciente a irreversibilidade do procedimento — ao contrário de estatina, PCSK9i de anticorpo, siRNA ou proteína de ligação (que podem ser suspensos, com o efeito farmacológico desaparecendo em dias a meses), a edição de base é permanente no hepatócito e em suas células-filhas, sem possibilidade de reversão em caso de evento adverso tardio",
+        "origem_secao": "Por que a irreversibilidade é, ao mesmo tempo, a maior vantagem e a maior cautela"
+      },
+      {
+        "id": "it-edbase-nao-extrapolar-verve101",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Verificado que nenhum número de eficácia ou segurança do candidato de primeira geração (VERVE-101) foi atribuído ao VERVE-102, ou vice-versa — são candidatos de gerações diferentes da mesma plataforma, com dados humanos completos publicados e revisados por pares disponíveis apenas para o VERVE-102",
+        "origem_secao": "Do VERVE-101 ao VERVE-102: duas gerações da mesma plataforma"
+      },
+      {
+        "id": "it-edbase-encaminhar-apenas-via-ensaio",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se o paciente manifestar interesse concreto em participar, orientado que a única via de acesso legítima hoje é a inscrição em ensaio clínico registrado (não há programa de acesso expandido ou prescrição fora de protocolo de pesquisa)",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "it-edbase-manter-tratamento-hipolipemiante-atual",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Tratamento hipolipemiante já indicado (estatina, ezetimiba, PCSK9i aprovado ou outro, conforme meta de risco do paciente) mantido sem suspensão ou redução em função da expectativa de acesso futuro à edição de base — não há papel estabelecido para substituir terapia com CVOT positivo por tecnologia experimental sem desfecho comprovado",
+        "origem_secao": "O que já está razoavelmente estabelecido"
+      },
+      {
+        "id": "it-edbase-registrar-limites-do-estudo",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Registradas em prontuário as limitações do corpo de evidência discutido com o paciente: ensaio fase 1, aberto (sem grupo placebo cego), 35 participantes, desenhado para segurança e farmacodinâmica — não para desfecho cardiovascular —, com dados de segurança limitados a aproximadamente 1 ano de seguimento",
+        "origem_secao": "Nota de honestidade estatística, obrigatória para este documento"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md (já publicado, review_status: pendente_revisao). Como o documento de origem descreve uma terapia experimental sem aprovação regulatória e sem CVOT, o checklist foi deliberadamente desenhado como um checklist de comunicação/conduta clínica (o que informar ao paciente, o que não prometer, o que manter inalterado no tratamento já indicado) e não como protocolo de indicação terapêutica — coerente com o próprio conteúdo do documento de origem, que é normativo apenas quanto à conduta atual (manter tratamento estabelecido) e explicitamente não normativo quanto ao uso da tecnologia em si. Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
+    }
   }
 ]
