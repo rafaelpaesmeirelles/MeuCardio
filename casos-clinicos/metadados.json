@@ -19055,5 +19055,46 @@
       "Rosenstock J, Yabe D, Cox D, Li J, Denning M, et al; ACHIEVE-3 Investigators. Efficacy and safety of once-daily oral orforglipron compared with oral semaglutide in adults with type 2 diabetes (ACHIEVE-3). Lancet. 2026;407(10534):1147-1160. DOI: 10.1016/S0140-6736(26)00202-3. PMID: 41765029."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo",
+    "titulo": "Coronariopata hipertenso com PA domiciliar 118/68mmHg: reduzir a dose por medo da curva em J?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 64 anos, doença arterial coronariana estabelecida (infarto do miocárdio há 2 anos), em uso de IECA, betabloqueador, bloqueador de canal de cálcio e estatina. Assintomático, sem tontura, síncope ou outros sinais de hipoperfusão. Nas últimas semanas, a automedida domiciliar de pressão arterial vem registrando valores em torno de 118/68mmHg.",
+    "pergunta": "Diante desse achado, qual a conduta mais apropriada quanto ao esquema anti-hipertensivo atual?",
+    "opcoes": [
+      "Reduzir a dose do IECA ou do bloqueador de canal de cálcio, pois PA abaixo de 120/70mmHg em coronariopata aumenta o risco cardiovascular pela curva em J",
+      "Manter o esquema atual sem alteração: a evidência da curva em J nessa faixa vem de estudos observacionais de baixa certeza, e paciente assintomático com PA <120/70mmHg não precisa suspender ou reduzir a medicação",
+      "Suspender o betabloqueador, já que a frequência cardíaca baixa não agrega benefício adicional após o infarto",
+      "Associar um BRA ao IECA já em uso, buscando bloqueio duplo do SRAA para otimizar ainda mais o controle pressórico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Diretriz Brasileira de Hipertensão Arterial 2025 (Capítulo 8.1, Hipertensão e Doença Arterial Coronariana) recomenda meta de PA <130/80mmHg para hipertensos com DAC (força forte, certeza moderada) e afirma explicitamente que reduzir a PA a 120/70mmHg não aumenta o risco cardiovascular, e que pacientes assintomáticos com PA <120/70mmHg não precisam suspender ou reduzir a medicação. A controvérsia da curva em J é sustentada por estudos observacionais de baixa certeza, provavelmente refletindo confusão residual e/ou causalidade reversa, não uma relação causal comprovada — reduzir a dose por esse motivo, na ausência de sintomas de hipoperfusão (tontura, síncope), contraria a recomendação da diretriz. Suspender o betabloqueador também é incorreto: após IAM recente, betabloqueadores melhoram prognóstico e devem ser mantidos salvo contraindicação específica, não pela PA estar baixa. Associar BRA ao IECA (bloqueio duplo do SRAA) é explicitamente não recomendado pela mesma diretriz (força forte, certeza alta), por risco de hipercalemia e lesão renal sem benefício cardiovascular adicional.",
+    "source_refs": [
+      "Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong ADC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025 (Sociedade Brasileira de Cardiologia, Sociedade Brasileira de Nefrologia, Sociedade Brasileira de Hipertensão). Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af",
+    "titulo": "Dapagliflozina para reduzir recorrência de FA pós-ablação em paciente sem diabetes: o que mostra o DARE-AF?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Homem de 56 anos, sem diabetes, sem insuficiência cardíaca e sem doença renal crônica, é encaminhado para ablação por cateter (primeiro isolamento de veias pulmonares) por fibrilação atrial persistente sintomática, refratária a um antiarrítmico. No pré-operatório, o cardiologista assistente comenta ter lido estudos observacionais associando o uso de inibidores de SGLT2 a menor recorrência de FA após ablação, e cogita prescrever dapagliflozina 10 mg/dia por 3 meses após o procedimento, com o objetivo isolado de reduzir a chance de recorrência da arritmia — mesmo sem nenhuma indicação metabólica ou cardiovascular estabelecida para a classe nesse paciente.",
+    "pergunta": "Com base no corpo de evidência mais recente e mais robusto sobre esse cenário específico (SGLT2i em paciente sem diabetes, insuficiência cardíaca ou doença renal crônica, com o objetivo isolado de prevenir recorrência de FA pós-ablação), qual a conduta correta?",
+    "opcoes": [
+      "Iniciar dapagliflozina 10 mg/dia por pelo menos 3 meses após a ablação: o ensaio randomizado DARE-AF (2026) confirmou redução significativa da carga de FA e da taxa de recorrência de arritmia atrial nesse cenário, replicando o sinal dos estudos observacionais.",
+      "Não iniciar SGLT2i com esse objetivo isolado: o ensaio randomizado DARE-AF, desenhado especificamente para testar dapagliflozina em pacientes sem diabetes, insuficiência cardíaca ou doença renal crônica, não mostrou diferença na carga de FA aos 3 meses (7,5% vs. 8,1%; p=0,48) nem na recorrência de arritmia atrial (29,6% vs. 28,0%; HR 1,11; IC95% 0,66-1,86; p=0,70) em comparação ao cuidado padrão.",
+      "Iniciar SGLT2i é conduta obrigatória: a metanálise observacional de 2025, com mais de 7.000 pacientes, já estabeleceu esse benefício com nível de evidência equivalente a um ensaio randomizado, tornando dispensável qualquer confirmação por ensaio clínico dedicado.",
+      "A conduta correta é extrapolar diretamente para este caso os achados de recorrência de FA pós-ablação com agonistas de GLP-1 (estudo LEAF), já que SGLT2i e GLP-1 atuam pelo mesmo mecanismo antiarrítmico direto e podem ser tratados como uma única classe de evidência."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A base observacional (Li J et al., Front Cardiovasc Med. 2025 Nov 21; DOI 10.3389/fcvm.2025.1710123, PMID 41357094 — meta-análise de 11 estudos, 7.664 pacientes com diabetes tipo 2 ou IC, RR 0,61 para recorrência de FA pós-ablação) sugeria benefício de SGLT2i, mas todos os pacientes incluídos tinham indicação metabólica/cardiovascular de base para a classe, o que não permite isolar um efeito antiarrítmico direto de um efeito indireto ligado ao próprio tratamento do diabetes/IC. O DARE-AF (Jiang C et al., Circulation. 2026;153(5):297-306, DOI 10.1161/circulationaha.125.077447, PMID 41206792, NCT06433479) foi o primeiro ensaio randomizado desenhado exatamente para testar essa hipótese na população em que a extrapolação seria mais especulativa: 200 pacientes com FA persistente agendados para primeira ablação, SEM diabetes, IC ou DRC, randomizados para dapagliflozina 10 mg/dia por 3 meses vs. cuidado padrão. O resultado foi neutro em todos os desfechos pré-especificados (carga de FA aos 3 meses, recorrência de arritmia atrial, qualidade de vida, diâmetro atrial esquerdo). A opção correta (B) reflete esse achado. A opção A inverte o resultado do DARE-AF. A opção C trata evidência observacional (majoritariamente coortes retrospectivas, sujeitas a viés de indicação mesmo com pareamento por escore de propensão) como equivalente a evidência randomizada de alta qualidade. A opção D confunde duas classes farmacológicas distintas (SGLT2i e agonistas de GLP-1), com mecanismos propostos diferentes e corpos de evidência que não devem ser somados. Importante: o resultado do DARE-AF não muda a indicação já estabelecida de SGLT2i em pacientes com diabetes, IC ou doença renal crônica — apenas mostra ausência de base randomizada para iniciar a classe com o objetivo isolado de prevenir recorrência de FA pós-ablação em quem não tem essas indicações.",
+    "source_refs": [
+      "Jiang C, Zhao Z, Yang Z, et al. Dapagliflozin to Reduce Early Recurrence After Catheter Ablation for Atrial Fibrillation: The DARE-AF Randomized Clinical Trial. Circulation. 2026;153(5):297-306. DOI: 10.1161/circulationaha.125.077447. PMID: 41206792.",
+      "Li J, Zhang F, Fan S, et al. Association of SGLT2 inhibitors with post-ablation atrial fibrillation recurrence in individuals with heart failure or type 2 diabetes mellitus: a systematic review and meta-analysis. Front Cardiovasc Med. 2025 Nov 21. DOI: 10.3389/fcvm.2025.1710123. PMID: 41357094."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

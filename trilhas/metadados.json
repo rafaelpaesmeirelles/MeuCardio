@@ -26045,5 +26045,63 @@
         "por_que": "Aplicação prática do desfecho: quem sobrevive a uma ruptura reparada quase sempre sai com fração de ejeção reduzida. A trilha termina onde a crise mecânica vira insuficiência cardíaca crônica a tratar até a alta."
       }
     ]
+  },
+  {
+    "slug": "trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria",
+    "titulo": "Hipertensão: por que o controle foge do esperado — ritmo circadiano, interferência farmacológica e causa secundária",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo interpretar os três padrões de risco que a automedida domiciliar consegue sinalizar (hipertensão noturna, non-dipping, pico matinal), saber que mudar o horário da dose não corrige isso nem muda desfecho segundo dois ensaios independentes, reconhecer as duas armadilhas farmacológicas mais comuns e evitáveis que descontrolam a pressão apesar do tratamento correto, e aplicar o caminho estruturado — de quando suspeitar a qual exame pedir — para investigar causa secundária quando nenhuma dessas explicações resolve o caso.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-noturna-nao-dipping-e-pico-matinal-exagerado-o-que-a-mrpa-domiciliar-revela",
+        "por_que": "Abre pelo fenômeno: hipertensão noturna, ausência de descenso (non-dipping) e pico matinal exagerado são três padrões de maior risco cardiovascular que classicamente só a MAPA de 24 horas captura. Este estudo mostra que a automedida domiciliar, muito mais acessível, já sinaliza os três — é o ponto de partida prático para suspeitar deles sem esperar uma MAPA em todo paciente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "horario-do-anti-hipertensivo-manha-ou-noite-o-ensaio-time",
+        "por_que": "A reação intuitiva ao padrão non-dipping é mudar o horário da dose para a noite, hipótese com lastro fisiológico que já mudou prescrições no consultório. O TIME testa essa hipótese em desfecho cardiovascular duro, em mais de 21 mil pacientes, e não encontra diferença — o primeiro sinal de que o problema não se resolve só trocando o relógio da dose."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "bedmed-antihipertensivos-ao-deitar-versus-manha",
+        "por_que": "Um ensaio pragmático pode ser exceção; dois independentes que convergem mudam a conduta. O BedMed replica o resultado neutro do TIME num desenho e numa população diferentes (atenção primária canadense) e desfaz de vez a crença, herdada de estudos anteriores (Hygia), de que a dose noturna seria sistematicamente superior."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo",
+        "por_que": "Se não é o horário da dose, a pergunta seguinte é o que de fato descontrola a pressão apesar do tratamento correto. O AINE — usado por milhões junto com anti-hipertensivo, muitas vezes sem o médico saber — é o mecanismo mais comum e mais silencioso de 'hipertensão resistente' evitável em consultório, e o documento detalha a magnitude por classe de fármaco."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "hipertensao-rebote-por-suspensao-abrupta-de-clonidina",
+        "por_que": "A armadilha farmacológica espelhada: não é um fármaco que se soma e antagoniza o tratamento, é a retirada abrupta de um agente central que descontrola a pressão de forma súbita e grave, mimetizando crise adrenérgica. Reconhecer a história de uso recente de clonidina é o dado que separa esse diagnóstico dos demais."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar",
+        "por_que": "Descartadas a explicação circadiana e as duas interferências farmacológicas mais comuns, o passo seguinte é perguntar se há causa secundária. Este fluxograma organiza a primeira bifurcação — quais indicadores de alarme justificam investigar, e por qual pista clínica começar — antes de pedir qualquer exame."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+        "por_que": "Do 'quando suspeitar' para 'o que pedir': este documento é o catálogo operacional que, para cada causa secundária rastreável, define o exame de triagem inicial segundo a Diretriz Brasileira de Hipertensão Arterial 2025 — o complemento direto do fluxograma anterior, sem repetir os protocolos confirmatórios já publicados."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
+        "por_que": "Fecha a trilha situando cada uma dessas peças — padrão circadiano, horário da dose, interferência farmacológica, causa secundária — dentro da diretriz mais recente, que reafirma que o controle pressórico não se resume ao número isolado de consultório e exige olhar risco cardiovascular global, comorbidade e medidas não farmacológicas em conjunto."
+      }
+    ]
   }
 ]
