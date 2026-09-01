@@ -278,7 +278,12 @@ def test_relacionados_de_agrupa_por_tipo_e_ordena_por_relevancia(db):
     _semear_conteudo_publicado(db)
     kg.backfill_mesmo_tema(db)
 
-    resultado = kg.relacionados_de(db, entity_type="documento", slug="ic-doc-1")
+    resultado = kg.relacionados_de(
+        db,
+        entity_type="documento",
+        slug="ic-doc-1",
+        incluir_contexto_tematico=True,
+    )
 
     assert resultado is not None
     assert resultado["slug"] == "ic-doc-1"
@@ -372,7 +377,12 @@ def test_tema_em_dois_saltos_nao_trunca_origens_depois_dos_cinco_primeiros(db):
     db.commit()
 
     kg.backfill_mesmo_tema(db)
-    resultado = kg.relacionados_de(db, entity_type="documento", slug="doc-7")
+    resultado = kg.relacionados_de(
+        db,
+        entity_type="documento",
+        slug="doc-7",
+        incluir_contexto_tematico=True,
+    )
 
     assert resultado is not None
     grupo = next(g for g in resultado["grupos"] if g["tipo"] == "evidencia")

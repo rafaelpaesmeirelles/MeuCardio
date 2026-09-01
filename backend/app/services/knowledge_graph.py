@@ -1804,7 +1804,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 def relacionados_de(
     db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
-    incluir_contexto_tematico: bool = True,
+    incluir_contexto_tematico: bool = False,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
 
