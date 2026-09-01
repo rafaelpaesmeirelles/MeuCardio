@@ -40022,5 +40022,201 @@
       }
     ],
     "revisao": "Checklist extraído das seções de critérios diagnósticos e de fisiopatologia do SAM da Diretriz Brasileira de CMH 2024 (Arq Bras Cardiol 2024;121(7):e202400415), evitando sobreposição com os checklists já existentes sobre escalonamento terapêutico da LVOTO e estratificação HCM Risk-SCD/CDI, ambos originados do fluxograma ESC 2023. Pendente de revisão clínica final."
+  },
+  {
+    "slug": "ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc",
+    "condicao": "Doença coronariana",
+    "resumo": "Checklist de decisão para escolher entre angiotomografia coronariana (CCTA) e escore de cálcio (CACS) na investigação anatômica da síndrome coronariana crônica, guiado pelo modelo de probabilidade pré-teste RF-CL e pelas contraindicações técnicas da CCTA, conforme a diretriz ESC 2024.",
+    "documento_origem": "angiotomografia-coronariana-e-escore-de-calcio-no-algoritmo-diagnostico-esc-2024",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710."
+    ],
+    "itens": [
+      {
+        "id": "ccta-cacs-rfcl-estimado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Probabilidade pré-teste de doença coronariana obstrutiva estimada pelo modelo RF-CL antes de solicitar qualquer teste anatômico",
+        "origem_secao": "O modelo RF-CL decide o proximo passo"
+      },
+      {
+        "id": "ccta-cacs-rfcl-muito-baixa-adiar",
+        "categoria": "decisao",
+        "obrigatorio": false,
+        "texto": "Se probabilidade RF-CL ≤5% (muito baixa), teste adicional considerado para adiamento em vez de solicitado por rotina",
+        "origem_secao": "O modelo RF-CL decide o proximo passo"
+      },
+      {
+        "id": "ccta-cacs-rfcl-baixa-reclassificar",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Se probabilidade RF-CL >5%-15% (baixa), escore de cálcio considerado para reclassificar o paciente, não solicitado como teste diagnóstico direto",
+        "origem_secao": "O modelo RF-CL decide o proximo passo"
+      },
+      {
+        "id": "ccta-cacs-rfcl-ccta-primeira-linha",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se probabilidade RF-CL >5%-50% (baixa a moderada), angiotomografia coronariana (CCTA) solicitada como teste de primeira linha",
+        "origem_secao": "CCTA — quando pedir, e por que funciona"
+      },
+      {
+        "id": "ccta-segunda-linha-pos-funcional-inconclusivo",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "CCTA considerada como segunda linha quando um teste funcional não invasivo já realizado ficou inconclusivo",
+        "origem_secao": "CCTA — quando pedir, e por que funciona"
+      },
+      {
+        "id": "ccta-contraindicacao-tecnica-verificada",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Antes de solicitar CCTA, contraindicações técnicas verificadas: TFGe <30 mL/min/1,73m², IC descompensada, calcificação coronariana extensa, FC rápida e irregular, obesidade grave ou incapacidade de apneia",
+        "origem_secao": "Quando NAO pedir CCTA — contraindicacao tecnica, nao clinica"
+      },
+      {
+        "id": "ccta-alto-risco-anatomico-funcional",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Classificação de alto risco anatômico-funcional feita pela combinação estenose ≥70% de descendente anterior proximal + FFR-CT ≤0,8, não pelo grau de estenose isoladamente",
+        "origem_secao": "CCTA — quando pedir, e por que funciona"
+      },
+      {
+        "id": "cacs-reclassificacao-nao-diagnostico",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Resultado do escore de cálcio no algoritmo de dor torácica comunicado como reclassificação de probabilidade, não como diagnóstico direto de obstrução",
+        "origem_secao": "Escore de calcio — duas finalidades diferentes, dois pesos diferentes"
+      },
+      {
+        "id": "cacs-rastreio-assintomatico-finalidade-terapeutica",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Em paciente assintomático, escore de cálcio solicitado apenas para apoiar decisão de estatina/antiagregação, não para investigar dor torácica",
+        "origem_secao": "Escore de calcio — duas finalidades diferentes, dois pesos diferentes"
+      },
+      {
+        "id": "cacs-zero-idade-jovem-nao-exclui",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Em paciente com menos de 40 anos, escore de cálcio = 0 não foi interpretado como exclusão confiável de doença obstrutiva, dado o alto percentual de falso-negativo nessa faixa etária",
+        "origem_secao": "Escore de calcio — duas finalidades diferentes, dois pesos diferentes"
+      },
+      {
+        "id": "ccta-cacs-nao-intercambiaveis",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "CCTA e escore de cálcio não tratados como testes intercambiáveis: CCTA diagnostica obstrução, CACS reclassifica probabilidade ou orienta decisão terapêutica",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Checklist extraído da diretriz ESC 2024 (capítulo de CCTA/escore de cálcio no algoritmo diagnóstico da SCC), ainda não coberto por nenhum checklist publicado. Itens rastreados seção a seção; nenhum limiar ou classe de recomendação foi inventado. Pendente de validação clínica final."
+  },
+  {
+    "slug": "definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024",
+    "condicao": "Definição de meta pressórica e estratégia farmacológica inicial na hipertensão arterial (ESH 2023/ESC 2024)",
+    "resumo": "Sequência de verificação para o hipertenso essencial segundo ESH 2023/ESC 2024: confirmação diagnóstica com medida adequada, limiar para iniciar tratamento, meta pressórica individualizada por faixa etária, estratégia farmacológica combinada inicial com posologia, e critérios para rotular e tratar hipertensão resistente verdadeira.",
+    "documento_origem": "hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023."
+    ],
+    "itens": [
+      {
+        "id": "ht-diagnostico-confirmado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar hipertensão com valores repetidos de PA de consultório ≥140 mmHg (sistólica) e/ou ≥90 mmHg (diastólica) — não rotular o diagnóstico com medida única de consultório sem confirmação.",
+        "origem_secao": "Definicao classificacao"
+      },
+      {
+        "id": "ht-metodo-medicao",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Priorizar método automático de medição da pressão arterial, com maior ênfase em medição fora do consultório — particularmente MRPA (monitorização residencial) — para o acompanhamento de longo prazo.",
+        "origem_secao": "Metodo medicao"
+      },
+      {
+        "id": "ht-limiar-inicio-tratamento",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Iniciar tratamento anti-hipertensivo na maioria dos pacientes quando PAS ≥140 mmHg ou PAD ≥90 mmHg; em pacientes com mais de 80 anos, iniciar a partir de PAS 160 mmHg.",
+        "origem_secao": "Limiares para iniciar tratamento"
+      },
+      {
+        "id": "ht-meta-18-64",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Em pacientes de 18-64 anos, fixar meta de PAS <130/80 mmHg (Classe I, Nível A) — não mirar PAS abaixo de 120 mmHg nem PAD abaixo de 70 mmHg durante o tratamento farmacológico (Classe III, Nível C); não aplicar o princípio aberto de \"quanto menor, melhor\".",
+        "origem_secao": "Metas pressoricas"
+      },
+      {
+        "id": "ht-meta-80-mais",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Em pacientes com 80 anos ou mais, individualizar a meta de PAS e reduzi-la para a faixa de 140-150 mmHg (Classe I, Nível A), sem aplicar meta pressórica rígida sem individualização nesse grupo etário.",
+        "origem_secao": "Metas pressoricas"
+      },
+      {
+        "id": "ht-classes-base",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Selecionar a farmacoterapia entre as cinco classes principais — IECA, BRA, betabloqueadores, bloqueadores de canal de cálcio e diuréticos tiazídicos — priorizando a redução da pressão arterial em si sobre a escolha de uma classe específica.",
+        "origem_secao": "Estrategia farmacologica"
+      },
+      {
+        "id": "ht-combinacao-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Iniciar a maioria dos pacientes já em combinação de dois medicamentos — preferencialmente bloqueador do sistema renina-angiotensina (IECA ou BRA) associado a bloqueador de canal de cálcio ou diurético tiazídico — de preferência em comprimido único, para favorecer a adesão.",
+        "origem_secao": "Estrategia farmacologica"
+      },
+      {
+        "id": "ht-escalonamento-triplo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a PA não estiver controlada com a combinação inicial de dois fármacos em dose máxima tolerada, escalonar para combinação de três medicamentos antes de investigar hipertensão resistente.",
+        "origem_secao": "Estrategia farmacologica"
+      },
+      {
+        "id": "ht-posologia-manha",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Prescrever todos os anti-hipertensivos em administração única diária, preferencialmente pela manhã.",
+        "origem_secao": "Estrategia farmacologica"
+      },
+      {
+        "id": "ht-betabloqueador-restrito",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Reservar a indicação preferencial de betabloqueador como primeira linha de tratamento para pacientes com insuficiência cardíaca associada, não como escolha inicial geral.",
+        "origem_secao": "Estrategia farmacologica"
+      },
+      {
+        "id": "ht-confirmacao-resistente-verdadeira",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Antes de rotular o paciente como hipertensão resistente verdadeira, confirmar PAS ≥140 mmHg ou PAD ≥90 mmHg na vigência de doses máximas recomendadas/toleradas de combinação tripla (bloqueador do SRA + bloqueador de canal de cálcio + diurético tiazídico), com controle inadequado confirmado por MAPA (preferencial) ou MRPA, após exclusão de pseudorresistência (má adesão) e de hipertensão secundária.",
+        "origem_secao": "Hipertensao resistente verdadeira"
+      },
+      {
+        "id": "ht-desnervacao-renal-elegibilidade",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Na hipertensão resistente verdadeira confirmada e sem doença renal avançada, considerar desnervação renal como opção terapêutica adicional se TFG >40 mL/min/1,73m² (Classe II, Nível B).",
+        "origem_secao": "Hipertensao resistente verdadeira"
+      },
+      {
+        "id": "ht-clortalidona-tfg-reduzida",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Na hipertensão resistente verdadeira com TFG <30 mL/min/1,73m², utilizar clortalidona (12,5-25 mg uma vez ao dia), com ou sem diurético de alça (Classe II, Nível B).",
+        "origem_secao": "Hipertensao resistente verdadeira"
+      }
+    ],
+    "revisao": "Checklist extraído do documento já publicado hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023.md (kind: protocolo, review_status: revisado). Itens rastreáveis por origem_secao. Pendente de validação clínica individual deste checklist."
   }
 ]

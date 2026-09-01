@@ -19182,5 +19182,47 @@
       "Ali ZA, Landmesser U, Maehara A, et al.; ILUMIEN IV Investigators. Optical Coherence Tomography-Guided versus Angiography-Guided PCI. N Engl J Med. 2023;389(16):1466-1476. DOI: 10.1056/NEJMoa2305861. PMID: 37634188."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico",
+    "titulo": "Hipertenso com PA ambulatorial elevada: qual modalidade de exercício recomendar?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, hipertensão diagnosticada há 3 anos, em uso de losartana 50 mg 1x/dia. Na consulta, a pressão arterial de consultório está controlada (128/82 mmHg), mas a MRPA domiciliar da última semana mostra médias matinais de 138/88 mmHg, sugerindo carga pressórica ambulatorial ainda elevada apesar do controle aparente em consultório. Ele é sedentário, quer iniciar exercícios para ajudar a controlar a pressão e traz um artigo de blog citando uma metanálise de 2023 que aponta o treinamento isométrico (handgrip, agachamento na parede) como 'a modalidade mais eficaz para baixar a pressão'. Pergunta se deve focar exclusivamente nisso, com sessões diárias e o maior volume possível, para maximizar o efeito.",
+    "pergunta": "Com base na evidência mais atual (metanálises em rede de 2025-2026) sobre modalidade de exercício e pressão arterial, qual orientação é mais apropriada para este paciente?",
+    "opcoes": [
+      "Confirmar a escolha do treinamento isométrico exclusivo, já que a metanálise de Edwards et al. (2023) o posicionou como a modalidade mais eficaz (SUCRA 98,3%) para redução da pressão arterial",
+      "Explicar que, embora o isométrico reduza a pressão de consultório, a evidência mais recente favorece HIIT ou treinamento combinado para reduzir especificamente a pressão arterial ambulatorial — o desfecho mais relevante aqui, dado o padrão de PA elevada fora do consultório — e recomendar volume moderado, já que a relação dose-resposta é em formato de U, não linear",
+      "Orientar que exercício físico só modifica a pressão medida em consultório, sem impacto sobre a pressão ambulatorial de 24 horas, portanto a escolha da modalidade é indiferente para o objetivo do paciente",
+      "Recomendar que o paciente maximize volume e intensidade de exercício isométrico diariamente, já que quanto maior a dose de exercício, maior a redução pressórica esperada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise de Edwards et al. (Br J Sports Med. 2023;57(20):1317-1326, PMID 37491419) de fato colocou o treinamento isométrico no topo do ranking para pressão de consultório, mas a revisão dedicada de Baffour-Awuah et al. (Curr Hypertens Rep. 2023;25(4):35-49, PMID 36853479) já mostrava que esse efeito não se replicava de forma significativa na pressão arterial ambulatorial de 24h — a medida clinicamente mais relevante para este paciente, que tem MRPA elevada apesar da PA de consultório controlada. As metanálises em rede de 2025-2026 aprofundaram essa lacuna: Anderson et al. (J Hypertens. 2026;44(7):1087-1096, PMID 42159444), ao restringir a análise a estudos com MAPA, encontraram o HIIT liderando o ranqueamento (redução sistólica ambulatorial de -6,86 mmHg, SUCRA 91,4%), à frente do aeróbico contínuo e do resistido dinâmico — e o isométrico sequer teve dados ambulatoriais suficientes para entrar na rede. Já Xin et al. (J Am Heart Assoc. 2026;15(10):e044003, PMID 42132182) mostraram que o treinamento combinado tem o maior efeito absoluto sobre pressão de consultório em pré-hipertensos/hipertensos, com relação dose-resposta não linear em formato de U e benefício ótimo em torno de 830 MET-min/semana — ou seja, mais exercício não é sempre melhor, o que invalida a recomendação de maximizar volume diário. A opção de que exercício não afeta a pressão ambulatorial também é falsa, pois é exatamente esse desfecho que o HIIT e o combinado demonstraram modificar nas redes mais recentes.",
+    "source_refs": [
+      "Baffour-Awuah B, Man KNC, Goessler K, Pearson MJ, Smart NA. Isometric Resistance Training to Manage Hypertension: Systematic Review and Meta-analysis. Curr Hypertens Rep. 2023;25(4):35-49. DOI: 10.1007/s11906-023-01232-w. PMID: 36853479",
+      "Xin X, Guo Y, Wang M, Hu Z, Chen J, Xie J. Optimal Exercise Modalities and Dosages for Blood Pressure Reduction in Adults With Prehypertension and Established Hypertension: A Network Meta-Analysis and Dose-Response Relationship Study. J Am Heart Assoc. 2026;15(10):e044003. DOI: 10.1161/JAHA.125.044003. PMID: 42132182",
+      "Anderson VA, et al. The comparative effectiveness of different exercise training modes on ambulatory blood pressure: a systematic review and network meta-analysis of randomized controlled trials. J Hypertens. 2026;44(7):1087-1096. DOI: 10.1097/HJH.0000000000004320. PMID: 42159444"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026",
+    "titulo": "ICFEp já em iSGLT2: acrescentar finerenona ou espironolactona, já que são a mesma classe?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 68 anos, obesidade (IMC 34kg/m²) e hipertensão, com insuficiência cardíaca de fração de ejeção preservada (FEVE 55% ao ecocardiograma, diagnóstico confirmado por algoritmo H2FPEF) e uma visita de urgência por congestão há 4 meses. Está em dapagliflozina há 6 meses, atualmente euvolêmica, com PA 128/78mmHg, potássio 4,6mEq/L e TFGe 48mL/min/1,73m². O cardiologista discute acrescentar um antagonista do receptor mineralocorticoide (MRA) ao tratamento. Um residente sugere iniciar espironolactona, argumentando que 'é a mesma classe farmacológica da finerenona, custa menos e está mais disponível na farmácia do serviço'.",
+    "pergunta": "Com base no ACC 2026 Expert Consensus Decision Pathway para ICFEp, qual a conduta mais adequada quanto ao MRA nesta paciente?",
+    "opcoes": [
+      "Não associar MRA algum: antagonistas mineralocorticoides só têm benefício comprovado na IC com fração de ejeção reduzida, não na ICFEp",
+      "Associar finerenona (antagonista não esteroidal do receptor mineralocorticoide), sustentada pelo FINEARTS-HF em FEVE ≥40%; não extrapolar esse benefício para a espironolactona, cujo ensaio dedicado em ICFEp (SPIRIT-HF) não reproduziu redução do desfecho composto de hospitalização por IC e morte cardiovascular e teve mais hipotensão, hipercalemia e alterações renais — o ACC 2026 ECDP é explícito em rejeitar a premissa de que 'MRA é MRA'",
+      "Associar espironolactona: como pertence à mesma classe farmacológica da finerenona e tem o mesmo mecanismo de ação, o benefício de mortalidade e hospitalização do FINEARTS-HF pode ser extrapolado para ela, com a vantagem de menor custo",
+      "Adiar qualquer MRA e, em vez disso, aumentar a dose de dapagliflozina, priorizando titular o fármaco já em uso antes de acrescentar uma nova classe terapêutica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ACC 2026 Expert Consensus Decision Pathway para ICFEp (Kittleson MM et al., J Am Coll Cardiol, publicado online em 23/07/2026, DOI: 10.1016/j.jacc.2026.06.018, PMID: 42494134) incorpora a finerenona — antagonista não esteroidal do receptor mineralocorticoide — como pilar farmacológico contemporâneo em pacientes com FEVE ≥40%, apoiado no FINEARTS-HF (Solomon SD et al., N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278), que reduziu o desfecho composto de eventos totais de piora da IC e morte cardiovascular (razão de taxa 0,84; IC95% 0,74-0,95; p=0,007) em 6.001 pacientes com FEVE ≥40%. O próprio ECDP, contudo, faz uma ressalva explícita: o SPIRIT-HF, que testou espironolactona nessa mesma população (ICFEp), não demonstrou redução do composto de hospitalização por IC e morte cardiovascular e apresentou mais eventos de hipotensão, hipercalemia e alterações renais — motivo pelo qual o consenso afirma textualmente que não é cientificamente adequado tratar 'MRA como MRA' e extrapolar automaticamente o resultado da finerenona para a espironolactona, ou vice-versa, já que os agentes têm propriedades farmacológicas e bases de evidência distintas na ICFEp. Nesta paciente — FEVE 55%, potássio e TFGe compatíveis com segurança de MRA, já em iSGLT2 de base — a conduta alinhada ao ECDP é associar finerenona, não espironolactona por 'equivalência de classe'. Armadilha da opção 0: essa era a visão pré-FINEARTS-HF, superada pela evidência incorporada em 2026. Armadilha da opção 2: reproduz exatamente a extrapolação indevida que o ACC 2026 rejeita de forma explícita — mesma classe farmacológica não implica mesmo resultado clínico, como o próprio SPIRIT-HF demonstrou. Armadilha da opção 3: o ECDP organiza o tratamento por fenótipo e camadas — iSGLT2 como base para todos, com adição de MRA (ou outras camadas) conforme critérios clínicos, não titulação em dose crescente de um único fármaco antes de considerar as demais classes com benefício demonstrado.",
+    "source_refs": [
+      "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

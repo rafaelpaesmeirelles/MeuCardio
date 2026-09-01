@@ -26231,5 +26231,75 @@
         "por_que": "Quando a estatina isolada não chega à meta absoluta — o cenário que a diretriz antecipa ao valorizar a ApoB como risco residual mesmo com LDL-C/não-HDL-C aparentemente controlados — a ezetimiba é o primeiro degrau de intensificação antes de considerar um injetável."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca",
+    "titulo": "Dislipidemia pós-infarto — a sequência de ensaios que estabeleceu a estatina de alta intensidade precoce",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo por que a estatina de alta intensidade começa já na internação pós-síndrome coronariana aguda, qual fármaco e dose a evidência sustenta (e por que não é a sinvastatina em dose máxima), qual a meta absoluta de LDL vigente, e quando escalar para um inibidor de PCSK9.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "prove-it-timi-22-atorvastatina-80-versus-pravastatina-40-pos-sca",
+        "por_que": "Começa pelo ensaio que rompeu o paradigma de 'dose moderada guiada pelo colesterol basal': atorvastatina 80 mg superou pravastatina 40 mg em desfecho composto logo após a síndrome coronariana aguda. É a evidência fundadora de que, no pós-SCA, a intensidade da estatina muda prognóstico por si só."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "a-to-z-sinvastatina-precoce-intensa-versus-tardia-apos-sca",
+        "por_que": "Depois do 'quão intenso', a pergunta é 'quando começar'. O A to Z testou intensificação precoce versus tardia e, apesar do desfecho primário não significante, registrou miopatia em 0,4% no braço de 80 mg — o primeiro sinal de que a dose máxima de sinvastatina tem custo de segurança."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "search-sinvastatina-80-versus-20-pos-iam",
+        "por_que": "Confirma e amplia esse sinal: miopatia em 0,9% com sinvastatina 80 mg contra 0,03% com 20 mg, sem ganho de eficácia que justifique o risco. É o ensaio que explica por que a diretriz não usa sinvastatina 80 mg como veículo de alta intensidade."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "ideal-atorvastatina-80-versus-sinvastatina-20-apos-iam",
+        "por_que": "Fecha o contraste: atorvastatina 80 mg entrega a mesma intensidade que a sinvastatina não consegue sustentar com segurança, com mortalidade igual e tendência de benefício em desfechos maiores no pós-IAM. Os três ensaios juntos levam a uma conclusão prática única — atorvastatina, não sinvastatina, é o fármaco da alta intensidade."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-intensidade-de-estatina-apos-sca-e-na-dac-estavel",
+        "por_que": "Sintetiza os quatro ensaios em árvore de decisão: quando indicar alta intensidade, com qual fármaco e dose, e a diferença entre o paciente recém-pós-SCA e o de doença coronariana crônica estável."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "por_que": "Da intensidade da estatina para o número que ela precisa atingir: a atualização ESC/EAS 2025 fixa a meta absoluta de LDL para o paciente de risco muito alto pós-SCA — o alvo que decide se a estatina isolada é suficiente."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "atorvastatina-calcica",
+        "por_que": "Da evidência para a prescrição: dose de 80 mg, apresentação e monitorização — o fármaco que os quatro ensaios anteriores elegeram."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "ldl-muito-baixo-existe-um-piso-seguranca-de-longo-prazo-improve-it-e-sabatine",
+        "por_que": "Antes de escalar além da estatina, a dúvida mais comum à beira do leito: existe LDL baixo demais? IMPROVE-IT e a metanálise de Sabatine respondem que não há piso de segurança demonstrado — o que libera a escalada terapêutica quando a meta não é atingida."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-pcsk9-e-desfecho-cardiovascular-fourier-e-odyssey-outcomes",
+        "por_que": "A evidência de desfecho cardiovascular para quando a estatina de alta intensidade não basta: FOURIER e ODYSSEY OUTCOMES mostram redução de eventos com inibidor de PCSK9 somado à estatina, fechando o raciocínio aberto no PROVE-IT."
+      },
+      {
+        "ordem": 10,
+        "item_type": "medicamento",
+        "item_slug": "evolocumabe-e-alirocumabe-inibidores-de-pcsk9",
+        "por_que": "Termina na prescrição do escalonamento: os dois inibidores de PCSK9 disponíveis, via de administração e o cenário clínico — LDL fora da meta apesar de estatina de alta intensidade — que indica seu uso."
+      }
+    ]
   }
 ]
