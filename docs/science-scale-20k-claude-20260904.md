@@ -2096,3 +2096,27 @@ Décimo lote sob o novo direcionamento — 8 agentes em paralelo, priorizando do
 | Trilhas | 300 | 31 | 269 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **587** | **4.313** |
+
+## Lote 96 — concluído (commit 7a6fa05a)
+
+Décimo primeiro lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: tempo da revascularização completa no IAMCSST multiarterial — imediata vs. estagiada (MULTISTARS AMI e desacordo entre metanálises 2025-2026); retatrutida (agonista triplo GIP/GLP-1/glucagon) em diabetes tipo 2 — eficácia e a lacuna do desfecho cardiovascular dedicado; furosemida subcutânea para descongestão ambulatorial na IC (SUBCUT HF II, alta precoce).
+- **2 casos clínicos**: hipertensão resistente com DRC estágio 3 — espironolactona ou aprocitentana? (PRECISION); TAVI em baixo risco — balão-expansível ou autoexpansível, 7 anos de PARTNER 3 e Evolut Low Risk.
+- **1 checklist**: cardiomiopatia hipertrófica — diagnóstico, estratificação de risco e tratamento ESC 2023 (19 itens).
+- **1 material-paciente**: fibrilação atrial — o que é, anticoagulação e ablação.
+- **1 trilha**: "ANOCA/INOCA — da angiografia sem obstrução ao tratamento guiado pelo endótipo", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 20 links de Tudo com Tudo reverificados nos 3 documentos standalone; 10 item_slug da trilha reconfirmados independentemente via grep no worktree; source_refs com auto-referências não-bibliográficas removidas em 2 casos clínicos.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.782 itens.
+
+### Status consolidado (após Lote 96)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 203 | 2.197 |
+| Casos clínicos | 900 | 85 | 815 |
+| Checklists | 600 | 63 | 537 |
+| Materiais-paciente | 500 | 49 | 451 |
+| Trilhas | 300 | 32 | 268 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **595** | **4.305** |
