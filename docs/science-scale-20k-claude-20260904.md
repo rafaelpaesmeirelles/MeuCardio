@@ -2582,3 +2582,33 @@ Décimo nono lote sob o novo direcionamento — 9 agentes em paralelo (um a mais
 | Trilhas | 300 | 49 | 251 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **733** | **4.167** |
+
+## Lote 114 — concluído (commit 8d390e51)
+
+8 itens entregues, 8 agentes paralelos (documentos: 4; casos clínicos: 1; checklists: 1; materiais-paciente: 1; trilhas: 1), mantendo o foco em documentos e evidência 2025-2026, rotacionando os 4 documentos de volta para FA/Cardiomiopatias/Diabetes/Prevenção (temas do Lote 112) e iniciando a quarta rotação das demais categorias.
+
+- **Documentos**:
+  - Fibrilação atrial: "Neuromodulação Cirúrgica na Prevenção da FA Pós-Operatória: Denervação Autonômica e Gânglios Cardíacos" — metanálise + metarregressão + TSA (PMID 40189000) e 5 fontes adicionais 2025.
+  - Cardiomiopatias: "FA na Cardiomiopatia Hipertrófica: Anticoagulação Independente do CHA₂DS₂-VASc" — 6 fontes 2026 (PMID 41838376, 42269731, 41956264, 41956263, 42029363, 42074815).
+  - Diabetes e cardiologia: "Transplante de Pâncreas e de Ilhotas no Diabetes Tipo 1: Desfecho Cardiovascular" — 6 fontes, incluindo Diabetologia 2026 (PMID 42667390).
+  - Prevenção e lipídios: "Aterosclerose Subclínica de Carótida em Adultos Jovens: a Metanálise de Prevalência de 2026" — metanálise âncora de 92 estudos/204.997 participantes (PMID 41449009).
+- **Caso clínico**: candidato a transplante renal com rastreio cardíaco positivo — cateterismo de rotina? (derivado do documento do Lote 113).
+- **Checklist**: diagnóstico diferencial de estenose aórtica de baixo fluxo/baixo gradiente (derivado do documento do Lote 107).
+- **Material-paciente**: ansiedade na insuficiência cardíaca — quando é normal e quando buscar ajuda (derivado do documento do Lote 113).
+- **Trilha**: hipertensão — medida de próxima geração: cuffless, pressão central e variabilidade (7 etapas).
+
+**Verificação independente**: todos os 8 itens passaram por checagem de colisão de slug e confirmação de documento_origem/documento_slug/item_slugs via grep antes da integração; zero resíduos de entidades HTML; todos os 25 links "Tudo com Tudo" dos 4 documentos resolvidos individualmente. O documento de prevenção usa `kind: estudo` (convenção legítima, 1.072 arquivos no repositório usam esse kind). Nenhuma correção de schema foi necessária.
+
+**Gates**: `audit_tudo_com_tudo.py` → `broken_references: []`. `content_inventory.py --strict` → `invalid: []`, `missing: []`, exit 0, `total_records: 10928`.
+
+### Status consolidado (após Lote 114)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 268 | 2.132 |
+| Casos clínicos | 900 | 111 | 789 |
+| Checklists | 600 | 82 | 518 |
+| Materiais-paciente | 500 | 67 | 433 |
+| Trilhas | 300 | 50 | 250 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **741** | **4.159** |
