@@ -56,9 +56,15 @@ type WorkRoutine = {
 };
 type MobilityTarget = {
   target_key: string;
+  target_type?: string;
+  appointment_id?: number | null;
+  routine_id?: number | null;
+  commitment_id?: string | null;
   starts_at?: string;
+  ends_at?: string | null;
   service_name?: string | null;
   title?: string | null;
+  source?: string;
   arrival_buffer_minutes?: number;
   location?: CalendarLocation | null;
 };
@@ -79,6 +85,8 @@ type MobilityPreference = {
   day_start_origin_mode: "current_location" | "saved_location";
   day_start_location_id: number | null;
   day_start_location?: CalendarLocation | null;
+  day_end_destination_location_id: number | null;
+  day_end_destination_location?: CalendarLocation | null;
 };
 type MobilityDayContext = {
   stage: "before_first" | "active_day" | "at_last" | "no_commitments";
@@ -919,12 +927,37 @@ export default function CardiologySpacesHome() {
       : "";
   const chamamentoComArtigo = [artigoDoChamamento, chamamento].filter(Boolean).join(" ");
   const question = mode === "scientific" ? `Como ${chamamentoComArtigo} quer explorar o conhecimento agora?` : `Onde ${chamamentoComArtigo} vai trabalhar agora?`;
+  const returnHomeTarget = useMemo<MobilityTarget | null>(() => {
+    if (mobilityDayContext?.stage !== "at_last" || !mobilityDayContext.last_target || mobilityDayContext.end_location?.id == null) return null;
+    const lastTarget = mobilityDayContext.last_target;
+    const endLocation = mobilityDayContext.end_location;
+    return {
+      target_key: `return:${lastTarget.target_key}:${endLocation.id}`,
+      target_type: "day_return",
+      appointment_id: null,
+      routine_id: null,
+      commitment_id: null,
+      starts_at: lastTarget.ends_at || lastTarget.starts_at,
+      ends_at: null,
+      service_name: "Retorno",
+      title: `Retorno para ${endLocation.name || "casa"}`,
+      source: "return",
+      arrival_buffer_minutes: 0,
+      location: endLocation,
+    };
+  }, [mobilityDayContext]);
+  const plannedMobilityTarget = mobilityDayContext?.stage === "at_last"
+    ? returnHomeTarget
+    : mobilityDayContext?.stage === "no_commitments"
+      ? null
+      : mobilityTarget;
+  const returnHomeActive = plannedMobilityTarget?.source === "return";
   const resultMatchesTarget = Boolean(
     mobilityResult?.destination?.target_key
-    && mobilityTarget?.target_key
-    && mobilityResult.destination.target_key === mobilityTarget.target_key,
+    && plannedMobilityTarget?.target_key
+    && mobilityResult.destination.target_key === plannedMobilityTarget.target_key,
   );
-  const travelTarget = resultMatchesTarget ? mobilityResult?.destination || mobilityTarget : mobilityTarget;
+  const travelTarget = resultMatchesTarget ? mobilityResult?.destination || plannedMobilityTarget : plannedMobilityTarget;
   const bestRoute = resultMatchesTarget ? mobilityResult?.routes?.[0] : undefined;
   const travelMinutes = bestRoute?.duration_seconds ? Math.max(1, Math.round(bestRoute.duration_seconds / 60)) : null;
   const travelDestination = travelTarget?.location?.latitude != null && travelTarget.location.longitude != null ? {
@@ -947,21 +980,55 @@ export default function CardiologySpacesHome() {
     latitude: savedOrigin.latitude,
     longitude: savedOrigin.longitude,
   } : null;
-  const travelMapOrigin = travelOrigin || resultOrigin || savedOriginCoordinates;
+  const returnHomeOrigin = returnHomeActive
+    && mobilityDayContext?.last_target?.location?.latitude != null
+    && mobilityDayContext.last_target.location.longitude != null ? {
+      latitude: mobilityDayContext.last_target.location.latitude,
+      longitude: mobilityDayContext.last_target.location.longitude,
+    } : null;
+  const travelMapOrigin = resultOrigin || returnHomeOrigin || travelOrigin || savedOriginCoordinates;
 
   useEffect(() => {
-    if (!usesSavedOrigin || !mobilityTarget?.target_key || !mobilityPreference?.day_start_location_id || resultMatchesTarget) return;
+    setMobilityResult((current) => current?.destination?.target_key === plannedMobilityTarget?.target_key ? current : null);
+    setTravelOrigin(null);
+    setTravelError(null);
+  }, [plannedMobilityTarget?.target_key]);
+
+  useEffect(() => {
+    if (!usesSavedOrigin || !plannedMobilityTarget?.target_key || !mobilityPreference?.day_start_location_id || resultMatchesTarget) return;
     let active = true;
     api.post<MobilityResult>("/agenda/mobility/commute-target-from-location", {
       origin_location_id: mobilityPreference.day_start_location_id,
-      target_key: mobilityTarget.target_key,
+      target_key: plannedMobilityTarget.target_key,
     }).then((result) => {
       if (!active) return;
-      const safeResult = sanitizeMobilityResult(result, mobilityTarget);
+      const safeResult = sanitizeMobilityResult(result, plannedMobilityTarget);
       if (safeResult?.routes?.length) setMobilityResult(safeResult);
     }).catch(() => undefined);
     return () => { active = false; };
-  }, [mobilityPreference?.day_start_location_id, mobilityTarget, resultMatchesTarget, usesSavedOrigin]);
+  }, [mobilityPreference?.day_start_location_id, plannedMobilityTarget, resultMatchesTarget, usesSavedOrigin]);
+
+  useEffect(() => {
+    if (!returnHomeActive
+      || !plannedMobilityTarget?.target_key
+      || !mobilityDayContext?.last_target?.target_key
+      || !mobilityPreference?.enabled
+      || !mobilityPreference.day_end_destination_location_id
+      || resultMatchesTarget) return;
+    let active = true;
+    api.post<MobilityResult>("/agenda/mobility/commute-return", {
+      origin_target_key: mobilityDayContext.last_target.target_key,
+      destination_location_id: mobilityPreference.day_end_destination_location_id,
+    }).then((result) => {
+      if (!active) return;
+      const safeResult = sanitizeMobilityResult(result, plannedMobilityTarget);
+      if (safeResult) {
+        setMobilityResult(safeResult);
+        setTravelError(mobilityRouteError(safeResult));
+      }
+    }).catch(() => undefined);
+    return () => { active = false; };
+  }, [mobilityDayContext?.last_target?.target_key, mobilityPreference?.day_end_destination_location_id, mobilityPreference?.enabled, plannedMobilityTarget, resultMatchesTarget, returnHomeActive]);
 
   const chooseMode = useCallback((nextMode: Mode) => {
     sessionStorage.setItem(MODE_KEY, nextMode);
@@ -1017,7 +1084,15 @@ export default function CardiologySpacesHome() {
         setTravelError("No Modo Investidor, o deslocamento é demonstrativo e não usa localização real.");
         return;
       }
-      let target = mobilityTarget;
+      let target = plannedMobilityTarget;
+      if (mobilityDayContext?.stage === "at_last" && !target) {
+        setTravelError("Configure Casa ou outro destino final na Agenda para calcular o retorno após o último compromisso.");
+        return;
+      }
+      if (mobilityDayContext?.stage === "no_commitments") {
+        setTravelError("Não há compromissos presenciais hoje para calcular um deslocamento.");
+        return;
+      }
       if (!target) {
         const preparedTarget = await api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {});
         target = withoutReservedSmokeTestRecord(preparedTarget);
@@ -1032,7 +1107,13 @@ export default function CardiologySpacesHome() {
         return;
       }
       let result: MobilityResult;
-      if (usesSavedOrigin && mobilityPreference?.day_start_location_id) {
+      if (returnHomeActive && mobilityDayContext?.last_target?.target_key && mobilityPreference?.day_end_destination_location_id) {
+        setTravelOrigin(null);
+        result = await api.post<MobilityResult>("/agenda/mobility/commute-return", {
+          origin_target_key: mobilityDayContext.last_target.target_key,
+          destination_location_id: mobilityPreference.day_end_destination_location_id,
+        });
+      } else if (usesSavedOrigin && mobilityPreference?.day_start_location_id) {
         setTravelOrigin(null);
         result = await api.post<MobilityResult>("/agenda/mobility/commute-target-from-location", {
           origin_location_id: mobilityPreference.day_start_location_id,
@@ -1231,7 +1312,7 @@ export default function CardiologySpacesHome() {
       </nav>
       <p className="spaces-motto">{mode === "scientific" ? <>O conhecimento <strong>se conecta.</strong> {nomeComTratamento(usuario, true)} <strong>conduz a jornada.</strong></> : <>O ambiente <strong>muda.</strong> O Médico <strong>continua no centro.</strong></>}</p>
 
-      {catalogOpen && <div className="spaces-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setCatalogOpen(false); }}><aside ref={catalogRef} className="spaces-catalog" role="dialog" aria-modal="true" aria-label="Todas as funções"><header><div><Brand /><h2>Todas as funções</h2></div><button type="button" onClick={() => setCatalogOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header><label><Icone nome="busca" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar função" /></label><div>{visibleCatalog.map((section) => <section key={section.title}><h3>{section.title}</h3><div>{section.actions.map((action) => <ActionLink key={`${section.title}-${action.to}-${action.label}`} action={action} />)}</div></section>)}</div></aside></div>}
+      {catalogOpen && <div className="spaces-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setCatalogOpen(false); }}><aside ref={catalogRef} className="spaces-catalog" role="dialog" aria-modal="true" aria-label="Todas as funções"><header><div><Brand /><h2>Todas as funções, um único sistema.</h2></div><button type="button" onClick={() => setCatalogOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header><label><Icone nome="busca" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar função" /></label><div>{visibleCatalog.map((section) => <section key={section.title}><h3>{section.title}</h3><div>{section.actions.map((action) => <ActionLink key={`${section.title}-${action.to}-${action.label}`} action={action} />)}</div></section>)}</div></aside></div>}
 
       {personalizerOpen && mode === "essential" && <div className="spaces-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setPersonalizerOpen(false); }}><aside ref={personalizerRef} className="spaces-personalizer" role="dialog" aria-modal="true" aria-label="Personalizar essencial"><header><div><p>SEU ESPAÇO {activeSpace.label.toLocaleUpperCase("pt-BR")}</p><h2>Personalizar essencial</h2><small>Escolha até 8 funções para este espaço. O catálogo completo permanece disponível.</small></div><button type="button" onClick={() => setPersonalizerOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header><div className="spaces-personalizer__count"><span>{essentialPaths.length}/8 selecionadas</span><button type="button" onClick={restoreEssentialDefaults}>Restaurar padrão</button></div><div className="spaces-personalizer__grid">{allActions.map((action) => { const checked = essentialPaths.includes(action.to); return <button type="button" key={`pick-${action.to}-${action.label}`} className={checked ? "is-selected" : ""} onClick={() => toggleEssential(action.to)} disabled={!checked && essentialPaths.length >= 8}><Icone nome={action.icon} /><span>{action.label}</span><i><Icone nome={checked ? "check" : "adicionar"} /></i></button>; })}</div><footer><button type="button" onClick={() => setPersonalizerOpen(false)}>Salvar meus essenciais</button></footer></aside></div>}
 

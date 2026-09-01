@@ -27,8 +27,8 @@ jobs:
         env:
           EXPECTED_REPOSITORY: rafaelpaesmeirelles/MeuCardio
           EXPECTED_ACTOR: rafaelpaesmeirelles
-          EXPECTED_BRANCH: codex/emergency-autofill-hotfix
-          EXPECTED_BASE_SHA: 241d75802e1f097d925b7dd1c445934a02d87267
+          EXPECTED_BRANCH: codex/mobile-ux-agenda-hotfix
+          EXPECTED_BASE_SHA: 5c5572087f67c469f3aec7e4ee64d9744030c8f3
           EVENT_NAME: ${{ github.event_name }}
           ACTOR: ${{ github.actor }}
           REPOSITORY: ${{ github.repository }}
@@ -72,20 +72,15 @@ jobs:
               frontend/src/styles/cardiology-spaces-home.css|\
               frontend/src/styles/cardiology-spaces-login.css|\
               frontend/src/styles/cardiology-spaces-app-frame.css|\
-              frontend/src/styles/clinical-form-control-contrast.css|\
-              frontend/src/lib/reservedSmokeAgenda.ts|\
+              frontend/src/styles/cardiology-spaces-consultorio-pages.css|\
+              frontend/src/styles/cardiology-spaces-emergency.css|\
+              frontend/src/styles/cardiology-spaces-ensino-pages.css|\
+              frontend/src/styles/cardiology-spaces-gestao-pages.css|\
+              frontend/src/styles/cardiology-spaces-pesquisa-pages.css|\
+              frontend/src/styles/clinical-agenda-final-polish.css|\
               frontend/src/pages/CardiologySpacesHome.tsx|\
               frontend/src/pages/Agenda.tsx|\
-              frontend/src/pages/PainelClinicalOS.tsx|\
-              frontend/src/components/PersonalAssistantPanel.tsx|\
-              frontend/src/components/HomePendingActionsPortal.tsx|\
-              frontend/src/components/MapaDeslocamento.tsx|\
-              frontend/src/components/ChatFlutuante.tsx|\
-              frontend/scripts/check-reserved-smoke-agenda.test.mjs|\
-              .github/workflows/ci.yml|\
-              .github/workflows/cardiology-spaces-reference-qa.yml|\
-              .github/workflows/prehome-visual-qa.yml|\
-              .github/workflows/visual-qa.yml)
+              .github/workflows/ci.yml)
                 ;;
               *)
                 echo "Backend exception denied by changed path: $path"

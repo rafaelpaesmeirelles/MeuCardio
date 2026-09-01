@@ -732,3 +732,46 @@
 @media (prefers-reduced-motion:reduce) {
   .emerg--detail :where(.emerg__voltar, .emerg__secaoTitulo) { transition: none; }
 }
+
+/* Legibilidade clínica móvel: mantém a composição aprovada e eleva apenas
+   rótulos, metadados e conteúdo protocolar que ficavam abaixo do piso útil. */
+@media (max-width:900px) {
+  .emerg :is(
+    .emerg__mode small,
+    .emerg__online,
+    .emerg__offline,
+    .emerg__commandCopy > p,
+    .emerg__searchField > span,
+    .emerg__temaLinha > span,
+    .emerg__buscaLinha button,
+    .emerg__resultCount > span,
+    .emerg__resultCount small,
+    .emerg__protocols > header p,
+    .emerg__protocols > header > span,
+    .emerg__alvoNumber,
+    .emerg__safety strong,
+    .emerg__safety small,
+    .emerg__erro > button,
+    .emerg-command__heroCopy > small,
+    .emerg-command__trust small,
+    .emerg-command__step-number,
+    .emerg-command__provenance > header p,
+    .emerg-command__provenance dt,
+    .emerg-command__provenance summary strong,
+    .emerg__related > .eyebrow,
+    .emerg-command__quick > small,
+    .emerg-command__quick > a
+  ) { font-size: .75rem; }
+
+  .emerg :is(
+    .emerg__aviso,
+    .emerg__alvoCopy > strong,
+    .emerg__alvoCopy > span,
+    .emerg__loading,
+    .emerg__semResultado,
+    .emerg__erro strong,
+    .emerg__erro small,
+    .emerg__erro--compact,
+    .emerg__origem
+  ) { font-size: .8125rem; }
+}

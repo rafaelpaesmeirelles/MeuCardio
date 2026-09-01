@@ -763,3 +763,35 @@ body.corvia-space--ensino article > p:first-child > a:hover { color: #f2ecff; }
   body.corvia-space--ensino .timeline-doenca__lista { padding-left: 1rem; }
   body.corvia-space--ensino .timeline-doenca__marcador { left: -1.18rem; }
 }
+
+/* Trilhas: piso tipográfico móvel sem alterar a composição do observatório. */
+@media (max-width:900px) {
+  body.corvia-space--ensino .cv-learning-observatory :is(
+    .cv-page-hero__space,
+    .cv-page-hero .eyebrow,
+    .cv-page-hero__meta .selo,
+    .cv-section__heading .eyebrow,
+    .learning-metrics .cv-metric__top,
+    .learning-metrics .cv-metric > small,
+    .learning-clear,
+    .learning-result span,
+    .learning-timeline-link small,
+    .learning-sector > header small,
+    .learning-sector > header > span:last-child,
+    .learning-card__topline > small,
+    .learning-status,
+    .learning-card__progress-copy,
+    .learning-card__open,
+    .learning-more,
+    .learning-more button,
+    .learning-state button,
+    .learning-loading small
+  ) { font-size:.75rem; }
+
+  body.corvia-space--ensino .cv-learning-observatory :is(
+    .cv-page-hero__description,
+    .cv-section__heading p,
+    .learning-card__copy p,
+    .learning-state p
+  ) { font-size:.8125rem; }
+}

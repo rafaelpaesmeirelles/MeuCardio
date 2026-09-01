@@ -766,3 +766,50 @@ body.corvia-space--gestao .cartao [style*="background:#fff"] {
     border-radius: 14px;
   }
 }
+
+/* Indicadores: piso tipográfico móvel sem alterar grade, cor ou composição. */
+@media (max-width:900px) {
+  body.corvia-space--gestao .cv-management-observatory :is(
+    .cv-page-hero__space,
+    .cv-page-hero .eyebrow,
+    .cv-page-hero__meta .selo,
+    .cv-section__heading .eyebrow,
+    .management-window__identity p,
+    .management-window__options strong,
+    .management-window__options small,
+    .management-window__sync,
+    .management-pulse__heading .eyebrow,
+    .management-pulse__heading > span,
+    .management-lens > header p,
+    .management-lens__status,
+    .management-lens__ring small,
+    .management-lens dt,
+    .management-lens dd,
+    .management-detail__heading > span,
+    .management-metric__copy > span,
+    .management-metric__copy small,
+    .management-distribution > header p,
+    .management-distribution > header > span,
+    .management-distribution__row > div span,
+    .management-distribution__row > div strong,
+    .management-distribution__empty,
+    .management-state > div > p,
+    .management-state button,
+    .management-methodology summary strong,
+    .management-methodology summary small
+  ) { font-size:.75rem; }
+
+  body.corvia-space--gestao .cv-management-observatory :is(
+    .cv-page-hero__description,
+    .cv-section__heading p,
+    .management-window__identity h2,
+    .management-lens__primary span,
+    .management-lens__idle strong,
+    .management-lens__idle p,
+    .management-distribution > header h3,
+    .management-loading p,
+    .management-state > div > strong,
+    .management-methodology ul,
+    .management-methodology > div > p
+  ) { font-size:.8125rem; }
+}

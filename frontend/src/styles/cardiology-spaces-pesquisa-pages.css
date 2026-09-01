@@ -822,3 +822,48 @@ body.corvia-space--pesquisa .research-evidence-observatory :where(a, button, inp
   body.corvia-space--pesquisa .research-evidence-card:focus-within { transform: none; }
   body.corvia-space--pesquisa .research-evidence-loading i { animation: none; opacity: .9; transform: none; }
 }
+
+/* Evidências: piso tipográfico móvel, estritamente dentro do observatório. */
+@media (max-width:900px) {
+  body.corvia-space--pesquisa .research-evidence-observatory :is(
+    .cv-page-hero__space,
+    .cv-page-hero .eyebrow,
+    .cv-page-hero__meta .selo,
+    .cv-page-hero .cv-action,
+    .cv-section__heading .eyebrow,
+    .research-evidence-metrics .cv-metric__top,
+    .research-evidence-metrics .cv-metric > small,
+    .research-evidence-clear,
+    .research-evidence-filter-grid label > span,
+    .research-evidence-result span,
+    .research-evidence-trustline i,
+    .research-evidence-trustline strong,
+    .research-evidence-visible,
+    .research-evidence-card__source strong,
+    .research-evidence-card__source time,
+    .research-evidence-card__theme,
+    .research-evidence-grade small,
+    .research-evidence-grade strong,
+    .research-evidence-card__trace strong,
+    .research-evidence-card__trace small,
+    .research-evidence-card__actions a,
+    .research-evidence-loading strong,
+    .research-evidence-state strong,
+    .research-evidence-state button,
+    .research-evidence-pagination,
+    .research-evidence-pagination button,
+    .cv-context-link strong
+  ) { font-size:.75rem; }
+
+  body.corvia-space--pesquisa .research-evidence-observatory :is(
+    .cv-page-hero__description,
+    .cv-section__heading p,
+    .research-evidence-facet-warning,
+    .research-evidence-trustline small,
+    .research-evidence-card__statement,
+    .research-evidence-card__summary,
+    .research-evidence-loading small,
+    .research-evidence-state p,
+    .cv-context-link small
+  ) { font-size:.8125rem; }
+}
