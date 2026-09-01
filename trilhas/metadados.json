@@ -27327,5 +27327,63 @@
         "por_que": "Fecha a trilha consolidando rastreio, interpretação do resultado e conduta em uma árvore de decisão única — inclusive o ramo que evita tratar a promessa dos inibidores em fase 2/3 como se já fossem terapia aprovada com desfecho provado."
       }
     ]
+  },
+  {
+    "slug": "trilha-diabetes-variabilidade-glicemica-e-arritmia",
+    "titulo": "Diabetes e cardiologia: variabilidade glicêmica, hipoglicemia e o risco de arritmia e fibrilação atrial",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo que o diabetes eleva o risco de fibrilação atrial incidente por mecanismo próprio, que não é a glicemia média mas a variabilidade glicêmica (medida por CGM) que melhor prediz esse risco, que a hipoglicemia grave prolonga o QTc e desencadeia arritmia por si só, reconhecer a neuropatia autonômica cardíaca como o elo fisiopatológico comum — com seus testes diagnósticos e fluxo de investigação — e situar se a escolha de classe farmacológica antidiabética muda esse risco.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "diabetes-mellitus-e-risco-de-fibrilacao-atrial-metanalise-de-aune-2018",
+        "por_que": "Ponto de partida epidemiológico: a metanálise de Aune estabelece que o diabetes é fator de risco independente para fibrilação atrial incidente, distinto de qualquer efeito de classe farmacológica — a pergunta de base que o resto da trilha desdobra."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes",
+        "por_que": "Refina o mecanismo: não é a glicemia média que melhor prediz o evento, é a variabilidade glicêmica captada por monitorização contínua (CGM) e, em subgrupo selecionado, por monitor cardíaco implantável simultâneo — o elo mecanístico entre a oscilação glicêmica e o substrato arrítmico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2",
+        "por_que": "Traduz a variabilidade glicêmica na métrica prática que o CGM entrega em consultório — o tempo no alvo (time in range) — e conecta essa métrica a mortalidade cardiovascular, não apenas a controle glicêmico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes",
+        "por_que": "Isola o extremo mais perigoso da variabilidade glicêmica: a hipoglicemia grave prolonga o intervalo QTc e desencadeia arritmia por ativação simpática e neuropatia autonômica — o mecanismo mais agudo e mais evitável da trilha."
+      },
+      {
+        "ordem": 5,
+        "item_type": "calculadora",
+        "item_slug": "qtc",
+        "por_que": "Ferramenta de beira-leito para o que a etapa anterior descreveu: calcular o QTc corrigido (Bazett, Fridericia, Framingham, Hodges) diante de hipoglicemia documentada ou suspeita de risco arrítmico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "neuropatia-autonomica-cardiaca-diabetica-manifestacoes-testes-de-ewing-e-valor-prognostico",
+        "por_que": "Aprofunda o elo fisiopatológico comum às etapas anteriores — a neuropatia autonômica cardíaca — com suas manifestações clínicas, os testes de Ewing que a diagnosticam à beira-leito, e o valor prognóstico independente que ela carrega."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-investigacao-neuropatia-autonomica-cardiovascular-diabetico",
+        "por_que": "Converte a etapa anterior em árvore de decisão prática: quando e como investigar a neuropatia autonômica cardiovascular no diabético, do rastreio clínico aos testes de Ewing."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "sglt2-glp1-dpp4-e-risco-de-fibrilacao-atrial-no-diabetes-tipo-2-metanalise-em-rede-2026",
+        "por_que": "Fecha o ciclo perguntando o que a trilha de escolha de classe farmacológica cardioprotetora não cobre: será que iSGLT2, agonista de GLP-1 e inibidor de DPP-4 diferem entre si no risco de fibrilação atrial — a metanálise em rede de 2026 responde com o dado comparativo direto."
+      }
+    ]
   }
 ]

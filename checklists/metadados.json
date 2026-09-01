@@ -42157,5 +42157,112 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento fluxograma-recorrencia-fa-pos-ablacao-manejo-blanking-reablacao.md (já publicado, review_status: revisado), que por sua vez segue o consenso EHRA/HRS/APHRS/LAHRS 2024 (Tzeis et al., Europace 2024, PMID 38587017), seções 9.5.1-9.5.3. Itens fiéis à árvore de decisão e ao texto de origem, inclusive a atualização do período de blanking de 3 meses para 8 semanas e a ressalva de que o dado de reconexão de veia pulmonar (>80%) vem especificamente da experiência com crioablação de primeira geração. Sem adição de critério não presente na fonte. Aguarda revisão médica independente antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise",
+    "condicao": "Ajuste da terapia quádrupla na ICFEr em doença renal crônica avançada e diálise",
+    "resumo": "O que ajustar, manter, suspender ou considerar em cada um dos quatro pilares farmacológicos da ICFEr (IECA/BRA/ARNI, betabloqueador, antagonista mineralocorticoide, iSGLT2) quando o paciente tem TFGe < 30 mL/min/1,73m² ou está em diálise crônica — população sistematicamente excluída dos ensaios pivotais dos quatro pilares, derivado da síntese de evidência observacional e post-hoc de 2025-2026.",
+    "documento_origem": "terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sritharan A, Marchetti M, Antiochos P, et al. Renin-Angiotensin System Inhibition in Dialysis-Dependent Patients with Chronic Heart Failure due to Reduced Ejection Fraction: A Systematic Review and Meta-Analysis. Nephrol Dial Transplant. 2026 Aug 12. DOI: 10.1093/ndt/gfag184. PMID: 42584660.",
+      "Guo Y, Li W, Diao Z. Efficacy of Sacubitril/Valsartan in Treating Hemodialysis Patients with Reduced Ejection Fraction Heart Failure: A Retrospective Study. Iran J Kidney Dis. 2025;19(4):222-231. PMID: 42234894.",
+      "Peng W, Shang X, Zhang C, Liu M. Long-term efficacy and renal safety of SGLT2 inhibitors in patients with heart failure and advanced chronic kidney disease (stage 4): a propensity score-matched retrospective cohort study. Front Cardiovasc Med. 2026;13:1849205. DOI: 10.3389/fcvm.2026.1849205. PMID: 42389639.",
+      "Manunta M, Bruno GM, Ferrantelli A, Ramirez RF, Nardi F. SGLT2 inhibitor role in cardio-metabolic-renal diseases: a narrative review of recent evidence and their pharmacological, clinical and economic implications. Drugs Context. 2026;15. DOI: 10.7573/dic.2026-1-1. PMID: 42205924.",
+      "Lo KB, Ostrominski JW, Hamatani Y, et al. Finerenone Across Cardiovascular-Kidney-Metabolic Syndrome Stages: Post Hoc Analysis of the FIDELITY Randomized Clinical Trials. JAMA Cardiol. 2026;11(7):679-684. DOI: 10.1001/jamacardio.2026.1365. PMID: 42234437.",
+      "Cianciolo G, Vetrano D, Tomassetti A, Tringali E, Iacoviello M, Marazia S, Fucili A, La Manna G, De Pascalis A. Efficacy of ARNIs on hard renal outcomes in heart failure with and without chronic kidney disease: when endpoint definition matters — an updated meta-analysis. ESC Heart Fail. 2026;13(4). DOI: 10.1093/eschf/xvag148. PMID: 42247581.",
+      "Cice G, Ferrara L, D'Andrea A, et al. Carvedilol increases two-year survival in dialysis patients with dilated cardiomyopathy: a prospective, placebo-controlled trial. J Am Coll Cardiol. 2003;41(9):1438-1444. DOI: 10.1016/s0735-1097(03)00241-9. PMID: 12742278.",
+      "Liu J, Jia W, Yu C. Safety and Efficacy of Spironolactone in Dialysis-Dependent Patients: Meta-Analysis of Randomized Controlled Trials. Front Med (Lausanne). 2022;9:828189. DOI: 10.3389/fmed.2022.828189. PMID: 35372414.",
+      "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383(15):1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396.",
+      "Herrington WG, Staplin N, Wanner C, et al; EMPA-KIDNEY Collaborative Group. Empagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2023;388(2):117-127. DOI: 10.1056/NEJMoa2204233. PMID: 36331190.",
+      "Bakris GL, Agarwal R, Anker SD, et al; FIDELIO-DKD Investigators. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383(23):2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825.",
+      "Pitt B, Filippatos G, Agarwal R, et al; FIGARO-DKD Investigators. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes. N Engl J Med. 2021;385(24):2252-2263. DOI: 10.1056/NEJMoa2110956. PMID: 34449181."
+    ],
+    "itens": [
+      {
+        "id": "it-drc-dialise-sraa-nao-suspender-por-tfge-baixa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "TFGe muito baixa (< 30 mL/min/1,73m²) ou diálise crônica não usadas isoladamente como motivo automático para suspender ou não iniciar IECA/BRA/ARNI — dados observacionais (Sritharan et al. 2026; Cianciolo et al. 2026) associam a classe a menor mortalidade e a sinal de nefroproteção mesmo nessa população, ainda que com evidência de nível observacional, não de ensaio randomizado dedicado",
+        "origem_secao": "Inibição do SRAA (IECA/BRA/ARNI) em diálise: o pilar mais estudado, ainda que por via indireta"
+      },
+      {
+        "id": "it-drc-dialise-hipotensao-intradialitica-barreira-dominante",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Hipotensão intradialítica reconhecida como a barreira de segurança dominante para IECA/BRA/ARNI e betabloqueador nessa população — e não a hipercalemia, que é a preocupação predominante na DRC pré-dialítica",
+        "origem_secao": "Segurança prática: o que muda na diálise em relação à DRC pré-dialítica"
+      },
+      {
+        "id": "it-drc-dialise-ajustar-horario-dose-em-relacao-a-sessao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Horário de administração de IECA/BRA/ARNI e betabloqueador ajustado individualmente em relação à sessão de diálise, como estratégia extrapolada para mitigar hipotensão intradialítica — recomendação de extrapolação fisiológica, não achado direto de ensaio",
+        "origem_secao": "Segurança prática: o que muda na diálise em relação à DRC pré-dialítica"
+      },
+      {
+        "id": "it-drc-dialise-betabloqueador-carvedilol-mantido",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador mantido como pilar terapêutico em paciente em hemodiálise com ICFEr — carvedilol é a única classe com ensaio randomizado, placebo-controlado, dedicado a essa população (Cice et al. 2003), com aumento de sobrevida em 2 anos; nenhum ensaio maior substituiu diretamente esse achado em 2025-2026",
+        "origem_secao": "Betabloqueador e antagonista mineralocorticoide em diálise: evidência mais antiga, mas ainda a referência prática"
+      },
+      {
+        "id": "it-drc-dialise-amr-nao-retido-por-medo-de-hipercalemia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antagonista mineralocorticoide (espironolactona) não retido apenas por receio antecipado de hipercalemia em paciente já em diálise — metanálise de Liu et al. 2022 (15 ECR, 1.258 pacientes em diálise) não encontrou aumento estatisticamente significativo de hipercalemia clínica (RR 1,21; p = 0,31), possivelmente pelo efeito de \"válvula de escape\" da própria diálise sobre o potássio",
+        "origem_secao": "Betabloqueador e antagonista mineralocorticoide em diálise: evidência mais antiga, mas ainda a referência prática"
+      },
+      {
+        "id": "it-drc-dialise-amr-monitorar-ginecomastia-e-potassio",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Monitorização mantida para ginecomastia (RR 4,36) e para elevação discreta de potássio sérico (+0,22 mEq/L em média) com uso de espironolactona em diálise, apesar do risco atenuado de hipercalemia clínica franca",
+        "origem_secao": "Betabloqueador e antagonista mineralocorticoide em diálise: evidência mais antiga, mas ainda a referência prática"
+      },
+      {
+        "id": "it-drc-dialise-sglt2i-sem-extrapolar-para-dialise",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 não iniciado em paciente já dependente de diálise com base em extrapolação de estudos em DRC pré-dialítica — nenhum dos estudos revisados (DAPA-CKD, EMPA-KIDNEY, Peng et al. 2026) testou a classe em diálise, e o racional fisiológico do fármaco (inibição da reabsorção tubular de glicose e sódio) perde sustentação sem filtração glomerular residual relevante",
+        "origem_secao": "SGLT2i em DRC estágio 4: a evidência de nefroproteção parou antes da diálise — e a lacuna começou a ser preenchida"
+      },
+      {
+        "id": "it-drc-dialise-sglt2i-considerar-em-drc-estagio-4-pre-dialise",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em paciente com ICFEr e DRC estágio 4 pré-dialítica (TFGe 15-29 mL/min/1,73m², abaixo do corte de entrada de DAPA-CKD e EMPA-KIDNEY), consideração de iSGLT2 apoiada em coorte pareada por escore de propensão (Peng et al. 2026) com redução do desfecho composto de eficácia (HR 0,62) e queda anual de TFGe mais lenta, sem aumento de eventos renais adversos maiores",
+        "origem_secao": "SGLT2i em DRC estágio 4: a evidência de nefroproteção parou antes da diálise — e a lacuna começou a ser preenchida"
+      },
+      {
+        "id": "it-drc-dialise-finerenona-nao-reservada-so-para-drc-leve",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Finerenona não reservada apenas para DRC leve por receio antecipado de hipercalemia — análise post-hoc dos ensaios FIDELITY (Lo et al. 2026) mostrou benefício cardiovascular consistente mesmo no subgrupo de estágio CKM mais avançado, com maior chance de regressão de estágio; ressalva de que os ensaios de origem (FIDELIO-DKD/FIGARO-DKD) excluíram diálise",
+        "origem_secao": "Finerenona: do estadiamento CKM à titulação em IC avançada"
+      },
+      {
+        "id": "it-drc-dialise-registrar-ausencia-de-ensaio-dedicado",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado em prontuário que nenhuma das quatro classes tem, até o momento, ensaio randomizado de desfecho duro (mortalidade ou hospitalização por IC) desenhado especificamente para ICFEr em diálise — a decisão de iniciar, manter ou suspender cada pilar é apoiada em evidência indireta e extrapolada, com julgamento clínico individualizado",
+        "origem_secao": "O que ainda falta"
+      },
+      {
+        "id": "it-drc-dialise-decisao-compartilhada-nefro-cardio",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Titulação da terapia quádrupla em paciente com ICFEr em diálise discutida entre cardiologia e nefrologia, já que nenhum algoritmo de titulação validado especificamente para diálise está disponível e a extrapolação do sequenciamento geral da ICFEr é a prática mais razoável disponível",
+        "origem_secao": "Segurança prática: o que muda na diálise em relação à DRC pré-dialítica"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md (documento de origem com review_status: pendente_revisao — ainda não revisado). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento; source_refs preservados integralmente do documento de origem. Aguarda revisão médica independente antes de qualquer promoção de review_status, tanto deste checklist quanto do documento-fonte."
+    }
   }
 ]
