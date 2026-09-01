@@ -2120,3 +2120,27 @@ Décimo primeiro lote sob o novo direcionamento — 8 agentes em paralelo, prior
 | Trilhas | 300 | 32 | 268 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **595** | **4.305** |
+
+## Lote 97 — concluído (commit 426d7a75)
+
+Décimo segundo lote sob o novo direcionamento — 8 agentes em paralelo, priorizando documentos e casos clínicos.
+
+- **3 documentos standalone**: falência do ventrículo direito após implante de LVAD — predição e estratégia de RVAD upfront vs. resgate; colchicina após ablação de FA — alívio da pericardite ou redução real de recorrência?; RESHAPE-HF2 — reparo transcateter borda a borda na insuficiência mitral funcional moderada a grave (NEJM 2024).
+- **2 casos clínicos**: cardiomiopatia dilatada por variante em MYH7 — danicamtiv fase 2 não é terapia aprovada; IAM com FEVE 44% sem IC — betabloqueador de longo prazo (REBOOT/BETAMI/DANBLOCK/CAPITAL-RCT, meta-análise 2025).
+- **1 checklist**: classificação da pressão arterial e decisão de tratar ESC 2024 (15 itens).
+- **1 material-paciente**: stent na angina — o que ele realmente faz (ORBITA-2).
+- **1 trilha**: "Valvopatias — endocardite infecciosa: diagnóstico, timing cirúrgico e transição oral", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide; documentos de origem confirmados para os 2 casos, checklist e material; 20 links de Tudo com Tudo reverificados nos 3 documentos standalone; 10 item_slug da trilha reconfirmados independentemente via grep no worktree.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0, `invalid: []`, `missing: []`. Total canônico: 10.790 itens.
+
+### Status consolidado (após Lote 97)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 206 | 2.194 |
+| Casos clínicos | 900 | 87 | 813 |
+| Checklists | 600 | 64 | 536 |
+| Materiais-paciente | 500 | 50 | 450 |
+| Trilhas | 300 | 33 | 267 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **603** | **4.297** |
