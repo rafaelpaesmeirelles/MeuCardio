@@ -2024,3 +2024,27 @@ Sétimo lote sob o novo direcionamento — 8 agentes em paralelo.
 | Trilhas | 300 | 28 | 272 |
 | Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
 | **Total** | **4.900** | **496** | **4.404** |
+
+## Lote 93 — concluído (commit d653030b)
+
+Oitavo lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **2 casos clínicos**: PA ambulatorial elevada apesar de consultório controlado (HIIT/combinado superam isométrico para MAPA); ICFEp em iSGLT2 (finerenona não é extrapolável para espironolactona, ACC 2026 ECDP).
+- **2 checklists**: CCTA e escore de cálcio na investigação anatômica da SCC (11 itens); meta pressórica e estratégia farmacológica ESH 2023/ESC 2024 (13 itens).
+- **2 documentos standalone**: QUARTET — quádrupla em dose baixa como tratamento inicial da hipertensão; deficiência de ferro na SCA — prevalência 21-62%, dois estudos de coorte 2025 discordam sobre valor prognóstico (divergência mantida explícita).
+- **1 material-paciente**: estenose aórtica grave sem sintomas — vale adiantar a cirurgia?
+- **1 trilha**: "Dislipidemia pós-infarto — estatina de alta intensidade precoce", 10 etapas.
+- **Verificação de integridade**: nenhum slug colide (932 casos / 484 checklists / 452 materiais / 559 trilhas / 2.783 slugs conferidos); 12 links de Tudo com Tudo re-verificados; todos os 10 item_slug da trilha reconferidos independentemente.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.758 itens.
+
+### Status consolidado (após Lote 93)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 194 | 2.206 |
+| Casos clínicos | 900 | 79 | 821 |
+| Checklists | 600 | 60 | 540 |
+| Materiais-paciente | 500 | 46 | 454 |
+| Trilhas | 300 | 29 | 271 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **504** | **4.396** |
