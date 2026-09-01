@@ -19496,5 +19496,49 @@
       "Sociedade Brasileira de Cardiologia. Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. Texto integral em acesso aberto: PMC12981354."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever",
+    "titulo": "Hipertensão não controlada em olmesartana: vale pedir a nova injeção de siRNA?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, hipertensão diagnosticada há 4 anos, em uso de olmesartana 40mg/dia há 6 meses com boa adesão confirmada e técnica de medida domiciliar adequada. Sem diabetes, sem doença renal crônica conhecida (creatinina e potássio normais na última coleta). MAPA de 24 horas confirma PA sistólica média diurna de 148mmHg, sem padrão de jaleco branco ou mascarada — hipertensão verdadeiramente não controlada em monoterapia. O paciente traz uma reportagem sobre uma 'injeção que baixa a pressão por até 6 meses' e pergunta se pode trocar o comprimido diário por ela, citando um estudo em que essa injeção foi somada à olmesartana com resultado positivo.",
+    "pergunta": "Diante do achado dos ensaios KARDIA-2 (zilebesirana associada à olmesartana) e da situação regulatória atual da zilebesirana, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Prescrever zilebesirana como quarta droga associada à olmesartana, já que o ensaio de fase 2 mostrou redução adicional estatisticamente significativa de PA sistólica ambulatorial nessa combinação",
+      "Não prescrever zilebesirana: é fármaco investigacional, sem aprovação em qualquer agência regulatória até o momento, testado apenas em ensaios de fase 2 sem desfecho cardiovascular duro — escalonar o tratamento de forma convencional, associando um diurético tiazídico/símile ou um bloqueador de canal de cálcio à olmesartana",
+      "Solicitar uso compassivo do fabricante, dado o mecanismo promissor e a conveniência posológica descrita na reportagem",
+      "Suspender a olmesartana e iniciar zilebesirana em monoterapia, já que o ensaio KARDIA-1 mostrou reduções de até ~17mmHg vs. placebo isoladamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A zilebesirana é um siRNA conjugado a GalNAc que silencia a síntese hepática de angiotensinogênio, testado até agora apenas em ensaios de fase 2: KARDIA-1 (monoterapia, hipertensão leve a moderada, JAMA 2024) e KARDIA-2 (terapia adicional a indapamida, anlodipino ou olmesartana, JAMA 2025). No braço de olmesartana do KARDIA-2, a diferença de médias por mínimos quadrados vs. placebo foi de apenas -4,5mmHg (IC95% -8,2 a -0,8; p=0,02) — o menor efeito adicional entre as três coortes de base (indapamida -12,1mmHg; anlodipino -9,7mmHg), atribuído à sobreposição mecanística entre um siRNA que reduz o substrato do SRAA e um bloqueador do receptor de angiotensina que já atua na mesma via a jusante. Mais importante: a zilebesirana não tem registro de aprovação para uso clínico em nenhuma agência regulatória até o momento, é explicitamente descrita como 'investigational' nas fontes primárias, e os dois ensaios de fase 2 publicados estabelecem eficácia sobre PA e sinal de segurança de curto prazo (6 meses), não desfecho cardiovascular duro — esse é justamente o objetivo do ensaio de fase 3 (codinome ZENITH) anunciado por comunicado institucional em agosto de 2025, ainda sem publicação revisada por pares. Tratar um ensaio de fase 2 como evidência suficiente para prescrição rotineira, ou presumir que já existe algum mecanismo de acesso expandido/uso compassivo confirmado, extrapola além do que as fontes sustentam. A conduta correta neste paciente com hipertensão verdadeiramente não controlada (adesão e técnica de medida já confirmadas, sem sinal de jaleco branco/mascarada) é seguir o escalonamento farmacológico convencional, associando classes já aprovadas e com desfecho cardiovascular estabelecido.",
+    "source_refs": [
+      "Bakris GL, Saxena M, Gupta A, et al; KARDIA-1 Investigators. RNA Interference With Zilebesiran for Mild to Moderate Hypertension: The KARDIA-1 Randomized Clinical Trial. JAMA. 2024;331(9):740-749. DOI: 10.1001/jama.2024.0728. PMID: 38363577",
+      "Desai AS, Karns AD, Badariene J, et al. Add-On Treatment With Zilebesiran for Inadequately Controlled Hypertension: The KARDIA-2 Randomized Clinical Trial. JAMA. 2025;334(1):46-55. DOI: 10.1001/jama.2025.6681. PMID: 40434761",
+      "Desai AS, Webb DJ, Taubel J, Casey S, Cheng Y, Robbie GJ, Foster D, Huang SA, Rhyee S, Sweetser MT, Bakris GL. Zilebesiran, an RNA Interference Therapeutic Agent for Hypertension. N Engl J Med. 2023;389(3):228-238. DOI: 10.1056/NEJMoa2208391. PMID: 37467498",
+      "Addison ML, Ranasinghe P, Webb DJ. Emerging insights and future prospects for therapeutic application of siRNA targeting angiotensinogen in hypertension. Expert Rev Clin Pharmacol. 2023;16(11):1025-1033. DOI: 10.1080/17512433.2023.2277330. PMID: 37897397"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao",
+    "titulo": "ICFEr refratária: o subgrupo favorável do RELIEVE-HF autoriza o shunt interatrial agora?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, cardiomiopatia dilatada não isquêmica com FEVE de 32%, NYHA III persistente apesar de terapia quádrupla otimizada em doses-alvo (betabloqueador, sacubitril-valsartana, espironolactona e dapagliflozina) há mais de seis meses, sem indicação de CRT (QRS estreito) e ainda sem critérios de encaminhamento para IC avançada. Ele e a família trouxeram uma reportagem sobre o ensaio RELIEVE-HF, afirmando que 'o shunt interatrial reduziu em quase metade os eventos cardiovasculares em pacientes com fração de ejeção reduzida como a dele' e pedem encaminhamento imediato para implante do dispositivo.",
+    "pergunta": "Qual a conduta mais apropriada diante desse pedido, à luz dos resultados do RELIEVE-HF?",
+    "opcoes": [
+      "Encaminhar para implante do shunt interatrial agora: o RELIEVE-HF demonstrou RR de 0,55 (IC95% 0,42-0,73) para eventos cardiovasculares no subgrupo com FEVE ≤40%, evidência suficiente para indicação clínica",
+      "Explicar que o desfecho primário do RELIEVE-HF foi neutro na população geral (win ratio 0,86; IC95% 0,61-1,22; P=0,20) e que o sinal favorável no subgrupo com FEVE ≤40% foi pré-especificado, porém exploratório e gerador de hipótese — o dispositivo não está estabelecido como terapia para ICFEr fora de ensaio dedicado; manter otimização clínica e reavaliar critérios de terapia avançada",
+      "Informar que o dispositivo causou dano em todos os pacientes testados e está contraindicado de forma absoluta na insuficiência cardíaca, encerrando a discussão sobre o tema",
+      "Iniciar processo de encaminhamento para o estudo com a garantia de que a terapia já é considerada padrão de tratamento para ICFEr sintomática, já que os dados de subgrupo foram estatisticamente significativos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RELIEVE-HF randomizou 508 pacientes com IC sintomática (independente da FE) para shunt interatrial transcateter ou procedimento placebo, com desfecho hierárquico combinando morte, transplante/assistência ventricular, hospitalização por IC, piora ambulatorial e variação do KCCQ em até 2 anos. No conjunto da população, o desfecho primário foi NEUTRO (win ratio 0,86; IC95% 0,61-1,22; P=0,20), sem diferença relevante no KCCQ. A análise pré-especificada por estrato de FE mostrou direções opostas: no subgrupo FEVE ≤40%, eventos cardiovasculares anualizados de 49,0% (shunt) versus 88,6% (placebo), RR 0,55 (IC95% 0,42-0,73; P<0,0001); no subgrupo FEVE >40%, o padrão se inverteu, com mais eventos no grupo shunt (60,2% vs 35,9%; RR 1,68; IC95% 1,29-2,19; P=0,0001). Uma análise mecanística de 2026 mostrou remodelamento reverso do VE na ICFEr (sem aumento de câmaras direitas) e, na FE preservada, aumento de câmaras direitas e da pressão pulmonar sem benefício no VE — plausibilidade fisiológica para o achado, não confirmação clínica. O ponto central, explicitado no próprio estudo: um ensaio cujo desfecho primário foi neutro não se torna positivo porque um subgrupo pré-especificado mostrou sinal favorável — isso gera hipótese a ser testada em ensaio dedicado, não uma indicação clínica validada para uso rotineiro. A conduta correta é comunicar essa distinção ao paciente e à família com clareza, sem prometer um benefício ainda não estabelecido, mantendo o cuidado padrão (otimização e reavaliação de critérios de IC avançada) e considerando participação em pesquisa formal se disponível — não encaminhamento assistencial baseado no subgrupo.",
+    "source_refs": [
+      "Stone GW, Lindenfeld J, Abraham WT, et al. Interatrial Shunt Treatment for Heart Failure: The Randomized RELIEVE-HF Trial. Circulation. 2024;150(24):1931-1943. DOI: 10.1161/CIRCULATIONAHA.124.070870. PMID: 39308371. NCT03499236.",
+      "Zile MR, Lindenfeld J, Abraham WT, et al. Mechanistic Basis for Differential Effects of Interatrial Shunt Treatment in HFrEF vs HFpEF: The RELIEVE-HF Trial. JACC Cardiovasc Imaging. 2026;19(1):1-15. DOI: 10.1016/j.jcmg.2025.08.005. PMID: 40892630."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

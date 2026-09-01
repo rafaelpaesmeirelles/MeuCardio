@@ -26791,5 +26791,75 @@
         "por_que": "O caso que materializa por que a etapa anterior importa: cetoacidose euglicêmica por iSGLT2 com glicemia normal, a armadilha diagnóstica que a suspensão perioperatória bem feita evita."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular",
+    "titulo": "Prevenção e lipídios: o histórico reprodutivo como modificador de risco — da pré-eclâmpsia à terapia hormonal da menopausa",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Reconhecer complicações da gravidez (pré-eclâmpsia, hipertensão gestacional, perda gestacional, gestação na adolescência, depressão pós-parto) como \"risk enhancers\" cardiovasculares independentes, incorporá-los ao cálculo formal de risco em prevenção primária, traduzir esse risco em decisão de estatina, e conduzir com segurança as duas transições farmacológicas da vida reprodutiva feminina: hipolipemiante em nova gestação/lactação e terapia hormonal na menopausa.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "pre-eclampsia-mecanismo-de-disfuncao-endotelial-e-incorporacao-ao-calculo-de-risco-cardiovascular",
+        "por_que": "Ponto de partida conceitual: explica o mecanismo de disfunção endotelial que liga pré-eclâmpsia a doença cardiovascular futura e por que esse evento obstétrico passou a entrar como modificador no cálculo de risco, não como curiosidade epidemiológica isolada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
+        "por_que": "Quantifica a magnitude e o horizonte temporal do risco cardiovascular materno de longo prazo após hipertensão gestacional e pré-eclâmpsia, base para justificar seguimento e rastreamento lipídico pós-parto além do puerpério imediato."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "pre-eclampsia-precoce-versus-tardia-fenotipos-fisiopatologicos-distintos",
+        "por_que": "Refina o passo anterior: nem toda pré-eclâmpsia carrega o mesmo risco cardiovascular futuro — o fenótipo precoce (placentário) e o tardio (constitucional/metabólico) têm fisiopatologia distinta e implicações práticas diferentes para estratificação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "risco-cardiovascular-perda-gestacional-perinatal",
+        "por_que": "Amplia o espectro de risk enhancers obstétricos para além da pré-eclâmpsia: perda gestacional e perinatal também se associam a risco cardiovascular materno aumentado e deve ser ativamente perguntada na anamnese de prevenção."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "gravidez-adolescencia-risco-cardiovascular",
+        "por_que": "Completa o mapeamento de modificadores reprodutivos com outro extremo etário — gestação na adolescência —, mostrando que o histórico obstétrico completo (não apenas eventos hipertensivos) informa o risco cardiovascular ao longo da vida."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "depressao-pos-parto-risco-cardiovascular-materno",
+        "por_que": "Fecha o bloco de anamnese reprodutiva com um marcador não vascular — depressão pós-parto — associado a risco cardiovascular materno aumentado, reforçando que a história reprodutiva vai além dos diagnósticos hipertensivos clássicos."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "pooled-cohort-equations-e-equacoes-prevent-risco-cardiovascular-em-prevencao-primaria",
+        "por_que": "Passo de integração prática: mostra como os risk enhancers reprodutivos levantados nos passos 1-6 entram (ou não) nas equações de risco em uso — Pooled Cohort Equations e PREVENT — traduzindo história obstétrica em um número de risco em 10 anos."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026",
+        "por_que": "Converte o risco calculado no passo 7, já ponderado pelo histórico reprodutivo, em decisão estruturada de iniciar ou não estatina em prevenção primária, seguindo o algoritmo ACC/AHA 2026."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "hipolipemiantes-na-mulher-em-idade-fertil-gestacao-e-lactacao",
+        "por_que": "Trata a consequência prática imediata de tratar uma mulher em idade reprodutiva identificada como de risco: segurança e ajuste do hipolipemiante caso ocorra nova gestação ou lactação após o início da terapia decidida no passo 8."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "terapia-hormonal-da-menopausa-e-risco-cardiovascular-a-hipotese-do-momento",
+        "por_que": "Fecha o arco reprodutivo na transição seguinte da vida da mulher: a decisão sobre terapia hormonal da menopausa precisa dialogar com o risco cardiovascular já estratificado nos passos anteriores, aplicando a 'hipótese do momento' (timing hypothesis)."
+      }
+    ]
   }
 ]

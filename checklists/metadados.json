@@ -41170,5 +41170,118 @@
       }
     ],
     "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
+  },
+  {
+    "slug": "manejo-do-no-reflow-durante-a-icp-primaria",
+    "condicao": "No-reflow (obstrução microvascular) reconhecido durante a ICP primária no IAMCSST",
+    "resumo": "Checklist de execução em sala para não tratar como no-reflow verdadeiro o que ainda é causa mecânica corrigível, e para escalonar de forma ordenada — estabilidade hemodinâmica, vasodilatador intracoronário seletivo, reavaliação de fluxo e reconhecimento do limite real da terapia — quando o fluxo restaurado mecanicamente não perfunde a microcirculação.",
+    "documento_origem": "fluxograma-manejo-do-no-reflow-na-icp-primaria",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Pelliccia F, Niccoli G, Zimarino M, et al. Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment Elevation Myocardial Infarction · Reviews in Cardiovascular Medicine · 2023 · 24(12):365 · PMID: 39077094",
+      "Jolly SS, Cairns JA, Yusuf S, et al. Randomized trial of primary PCI with or without routine manual thrombectomy (TOTAL) · New England Journal of Medicine · 2015 · 372(15):1389-1398 · PMID: 25853743"
+    ],
+    "itens": [
+      {
+        "id": "no-reflow-reconhecimento",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "No-reflow reconhecido como fluxo TIMI menor que 3 ou blush miocárdico reduzido depois de a artéria culpada já estar mecanicamente aberta na ICP primária — não confundido com falha em abrir a artéria",
+        "origem_secao": "Introdução — definição do no-reflow"
+      },
+      {
+        "id": "no-reflow-excluir-causa-mecanica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de tratar como no-reflow, investigada ativamente causa mecânica corrigível: dissecção, trombo residual volumoso, espasmo focal visível ou malposição de stent",
+        "origem_secao": "Árvore de decisão — nó D1: causa mecânica corrigível?"
+      },
+      {
+        "id": "no-reflow-corrigir-causa-mecanica",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se identificada causa mecânica corrigível, esta foi corrigida (nova insuflação, stent adicional, ou aspiração de trombo se carga alta) antes de qualquer tratamento farmacológico dirigido ao no-reflow",
+        "origem_secao": "Árvore de decisão — ramo D1 Sim (conduta C1)"
+      },
+      {
+        "id": "no-reflow-avaliar-estabilidade-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Descartada causa mecânica (provável obstrução microvascular), estabilidade hemodinâmica do paciente avaliada antes de escolher a sequência terapêutica",
+        "origem_secao": "Árvore de decisão — nó D2: paciente hemodinamicamente estável?"
+      },
+      {
+        "id": "no-reflow-suporte-hemodinamico-se-instavel",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Se hemodinamicamente instável, suporte hemodinâmico (vasopressor e, se refratário, suporte circulatório mecânico) instituído antes ou junto do vasodilatador intracoronário, que é administrado em dose cautelosa nesse cenário",
+        "origem_secao": "Árvore de decisão — ramo D2 Não (conduta C2)"
+      },
+      {
+        "id": "no-reflow-vasodilatador-intracoronario",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Vasodilatador intracoronário seletivo administrado distal à lesão — adenosina, verapamil ou nitroprussiato de sódio — em bólus repetidos",
+        "origem_secao": "Árvore de decisão — passo P1"
+      },
+      {
+        "id": "no-reflow-reavaliar-fluxo-pos-vasodilatador",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fluxo TIMI (ou blush miocárdico) reavaliado após o vasodilatador intracoronário para confirmar se houve restabelecimento de TIMI 3 ou melhora substancial",
+        "origem_secao": "Árvore de decisão — nó D3: fluxo restabelecido após o vasodilatador?"
+      },
+      {
+        "id": "no-reflow-concluir-se-respondeu",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se fluxo restabelecido, procedimento concluído com vigilância mantida para reoclusão e tratamento clínico padrão do infarto instituído",
+        "origem_secao": "Árvore de decisão — ramo D3 Sim (conduta C3)"
+      },
+      {
+        "id": "no-reflow-checar-duas-classes-tentadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se não houve resposta ao primeiro vasodilatador, verificado se já foram tentadas pelo menos duas classes de vasodilatador intracoronário (ex.: adenosina e verapamil) sem resposta antes de declarar no-reflow refratário",
+        "origem_secao": "Árvore de decisão — nó D4: pelo menos duas classes já tentadas sem resposta?"
+      },
+      {
+        "id": "no-reflow-repetir-ou-associar-agente",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Se ainda não tentadas duas classes, outro vasodilatador intracoronário repetido ou associado (trocar ou combinar agente), com reavaliação subsequente do fluxo",
+        "origem_secao": "Árvore de decisão — ramo D4 Não (conduta C5)"
+      },
+      {
+        "id": "no-reflow-refratario-limite-terapeutico",
+        "categoria": "procedimento",
+        "obrigatorio": false,
+        "texto": "Diante de no-reflow refratário (sem resposta a pelo menos duas classes de vasodilatador), suporte circulatório mecânico considerado, suporte clínico otimizado, e fluxo subótimo aceito — sem administrar terapia adicional sem benefício comprovado",
+        "origem_secao": "Árvore de decisão — ramo D4 Sim (conduta C4)"
+      },
+      {
+        "id": "no-reflow-nao-tromboaspiracao-rotina",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Trombectomia por aspiração manual não usada como profilaxia de rotina do no-reflow — reservada apenas ao cenário de trombo residual volumoso identificado como causa mecânica (nó D1), conforme o ensaio TOTAL (aumento de AVC em 30 dias com aspiração de rotina, sem redução de desfechos cardiovasculares)",
+        "origem_secao": "O que a árvore não mostra — trombectomia por aspiração de rotina"
+      },
+      {
+        "id": "no-reflow-doses-protocolo-local",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Doses de adenosina, verapamil ou nitroprussiato de sódio intracoronários conferidas no protocolo institucional local antes da administração, já que a literatura descreve faixas, não uma dose única e universal",
+        "origem_secao": "O que a árvore não mostra — doses exatas não especificadas de propósito"
+      },
+      {
+        "id": "no-reflow-sem-hierarquia-entre-agentes",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Escolha entre adenosina, verapamil e nitroprussiato de sódio feita por disponibilidade e contraindicação (ex.: bloqueio atrioventricular avançado limitando o uso de verapamil), sem hierarquia de eficácia comprovada entre os três",
+        "origem_secao": "O que a árvore não mostra — ausência de hierarquia comprovada entre os agentes"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
