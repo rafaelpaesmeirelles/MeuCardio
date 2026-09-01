@@ -42559,5 +42559,84 @@
       "data_revisao": null,
       "observacoes": "Checklist extraído por curadoria do documento edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md (já publicado, review_status: pendente_revisao). Como o documento de origem descreve uma terapia experimental sem aprovação regulatória e sem CVOT, o checklist foi deliberadamente desenhado como um checklist de comunicação/conduta clínica (o que informar ao paciente, o que não prometer, o que manter inalterado no tratamento já indicado) e não como protocolo de indicação terapêutica — coerente com o próprio conteúdo do documento de origem, que é normativo apenas quanto à conduta atual (manter tratamento estabelecido) e explicitamente não normativo quanto ao uso da tecnologia em si. Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
     }
+  },
+  {
+    "slug": "prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao",
+    "condicao": "Prescrição de combinação em comprimido único (polipílula) para melhorar adesão na hipertensão arterial",
+    "resumo": "O que confirmar antes de prescrever, o que conferir na troca de esquema e o que reavaliar depois, para transformar em rotina clínica o ganho de adesão e controle pressórico demonstrado pela evidência 2025-2026 sobre combinação em comprimido único.",
+    "documento_origem": "polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Satheesh G, Salam A, Dhurjati R, et al. Triple drug antihypertensive single-pill combinations included as WHO essential medicines: an overview of efficacy, safety, and cost. J Hum Hypertens. 2026. DOI: 10.1038/s41371-026-01189-8. PMID: 42595774.",
+      "Hunjan I, Stroppa C, Umulisa A, et al. 24-month single-pill, triple antihypertensive therapy in rural Rwanda. Blood Press. 2026;35(1):2635838. DOI: 10.1080/08037051.2026.2635838. PMID: 41738761.",
+      "Rodríguez-Armesto A, Khan KS, Cinza-Sanjurjo S. Effects of polypills on cardiovascular outcomes: Meta-analysis of clinical trials and observational studies. Semergen. 2026;52(2):102680. DOI: 10.1016/j.semerg.2025.102680. PMID: 41558137.",
+      "Rao S, Segar MW, Keshvani N, et al. Association between single-pill combination therapy use and blood pressure control in the Systolic Blood Pressure Intervention Trial: a post hoc analysis. Eur J Prev Cardiol. 2026;33(7):1186-1195. DOI: 10.1093/eurjpc/zwag043. PMID: 41557471.",
+      "Morabito G, Rea F, Corrao G, Mancia G. Adherence to perindopril/amlodipine/atorvastatin combination according to the administration strategy. Eur Heart J Qual Care Clin Outcomes. 2025;11(8):1301-1309. DOI: 10.1093/ehjqcco/qcae116. PMID: 39762137."
+    ],
+    "itens": [
+      {
+        "id": "it-has-indicacao-combinada-confirmada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente já tem indicação clínica estabelecida para 2 ou mais classes de anti-hipertensivo (ou anti-hipertensivo mais estatina) antes de considerar comprimido único — a combinação não substitui a decisão de quais fármacos são necessários",
+        "origem_secao": "Implicações práticas"
+      },
+      {
+        "id": "it-has-formulacao-disponivel-verificada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Disponibilidade e acessibilidade financeira de formulação combinada equivalente às doses já definidas verificadas antes da prescrição",
+        "origem_secao": "Implicações práticas / Da evidência à política"
+      },
+      {
+        "id": "it-has-preferencia-comprimido-unico-registrada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrição em comprimido único, e não em comprimidos separados, priorizada sempre que a formulação combinada existir e for acessível — ganho de adesão consistente entre estudos (razão de risco na faixa de 1,16 a 3,29 conforme o desenho) na evidência de 2025-2026",
+        "origem_secao": "Implicações práticas"
+      },
+      {
+        "id": "it-has-equivalencia-doses-conferida",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Ao trocar de esquema multi-comprimido para comprimido único (ou vice-versa), a dose de cada componente conferida individualmente para garantir equivalência exata — não apenas a classe farmacológica",
+        "origem_secao": "O que a combinação em comprimido único muda na prática: dados de mundo real"
+      },
+      {
+        "id": "it-has-barreiras-adicionais-investigadas",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Barreiras de adesão que a formulação combinada não resolve sozinha — custo do medicamento, efeito adverso específico de uma classe, crença do paciente sobre a doença — perguntadas e registradas, não presumidas como resolvidas apenas pela troca de comprimido",
+        "origem_secao": "Implicações práticas"
+      },
+      {
+        "id": "it-has-reavaliacao-pressao-agendada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação da pressão arterial agendada em prazo curto (semanas) após início ou troca para comprimido único, já que a redução pressórica mais rápida é esperada nos primeiros meses (-2,0 mmHg/mês vs. -1,2 mmHg/mês no esquema multi-comprimido, análise post hoc do SPRINT)",
+        "origem_secao": "Da adesão ao controle pressórico: a análise post hoc do SPRINT"
+      },
+      {
+        "id": "it-has-resposta-insuficiente-nao-presume-resistencia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a resposta pressórica permanecer insuficiente mesmo em comprimido único, técnica de confirmação de adesão aplicada antes de rotular o paciente como hipertensão resistente verdadeira",
+        "origem_secao": "Implicações práticas"
+      },
+      {
+        "id": "it-has-combinacao-tripla-dose-baixa-considerada",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Combinação tripla em comprimido único de dose baixa considerada como estratégia farmacológica inicial quando indicada, alinhada à inclusão dessas formulações na Lista de Medicamentos Essenciais da OMS em 2025",
+        "origem_secao": "Da evidência à política: por que a OMS priorizou as combinações triplas"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído do documento já publicado polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa, com itens derivados fielmente das seções de origem indicadas. Ainda não recebeu aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+    }
   }
 ]

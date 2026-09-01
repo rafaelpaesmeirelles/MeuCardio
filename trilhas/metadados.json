@@ -27577,5 +27577,57 @@
         "por_que": "A pergunta que fica depois que a decisão de reablacionar já foi tomada: o que o segundo procedimento de fato encontra e entrega. A metanálise de Hoevelmann et al. (2025), 57 estudos e 8.243 pacientes, mostra que a reconexão de veia pulmonar continua sendo a regra, não a exceção — fecha a trilha do zero ao redo."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia",
+    "titulo": "Cardiomiopatia hipertrófica: o mapa de evidência do aficamteno, da monoterapia comparativa ao fenótipo não obstrutivo",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo posicionar o aficamteno na cardiomiopatia hipertrófica obstrutiva a partir de toda a cadeia de evidência do fármaco — do ensaio pivotal contra placebo (SEQUOIA-HCM), passando pela comparação direta com o betabloqueador de primeira linha (MAPLE-HCM) e pela extensão de segurança de longo prazo (FOREST-HCM, 48 semanas) — e reconhecer os limites dessa evidência ao cruzar para a forma não obstrutiva (FOREST-HCM, 96 semanas) e para o fenótipo apical, onde a obstrução mecânica não existe e a resposta terapêutica muda de lógica.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+        "por_que": "Situa a obstrução da via de saída do VE dentro do algoritmo diagnóstico geral da CMH, o ponto de partida antes de entrar na farmacologia específica do aficamteno."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+        "por_que": "Apresenta a classe dos inibidores de miosina cardíaca — mecanismo de ação e monitorização ecocardiográfica da FEVE — antes de percorrer os ensaios individuais do aficamteno que a sustentam."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "sequoia-hcm-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+        "por_que": "O ensaio pivotal de fase 3 contra placebo que estabeleceu o aficamteno como segundo inibidor de miosina com eficácia comprovada na CMH obstrutiva sintomática, com desfecho primário objetivo (pVO2)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm",
+        "por_que": "Muda a pergunta clínica: não mais aficamteno versus placebo, mas aficamteno versus o betabloqueador que as diretrizes recomendam como primeira linha, em monoterapia inicial sem tratamento de base prévio — o primeiro ensaio de fase 3 a fazer essa comparação direta na classe dos inibidores de miosina."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "forest-hcm-48-semanas-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+        "por_que": "Extensão aberta de longo prazo (48 semanas) dos pacientes de REDWOOD-HCM e SEQUOIA-HCM, testando se o benefício hemodinâmico e sintomático do SEQUOIA-HCM se sustenta com uso contínuo e se há sinais de remodelamento cardíaco favorável."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+        "por_que": "Testa a mesma molécula fora do cenário em que foi aprovada — a CMH não obstrutiva, sem gradiente de via de saída para aliviar, cerca de dois terços dos casos na prática clínica e ainda sem terapia farmacológica aprovada por nenhuma agência regulatória."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-apical-fenotipo-diagnostico-diferencial-e-prognostico",
+        "por_que": "Fecha a trilha no fenótipo onde a lógica da obstrução simplesmente não se aplica: a CMH apical, tipicamente não obstrutiva, com diagnóstico diferencial e prognóstico próprios — o extremo oposto do paciente candidato a inibidor de miosina para gradiente de via de saída."
+      }
+    ]
   }
 ]
