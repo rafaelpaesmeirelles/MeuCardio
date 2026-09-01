@@ -1821,3 +1821,39 @@ padrão de 1-3 agentes/lote usado até o Lote 36).
 ## Produção interrompida a pedido de Rafael (31/08/2026)
 
 Rafael pediu explicitamente para finalizar o trabalho em curso, salvar tudo e interromper a produção. O Lote 85 foi fechado e integrado (commit e1a3d295) antes da parada, conforme instruído. Nenhum novo lote foi despachado após esta mensagem. Estado do branch `claude/science-scale-20k-20260904`: limpo, sincronizado com `origin`, PR de rascunho não mesclada, `main` intocada. Retomar a produção requer nova instrução de Rafael.
+
+---
+
+## Produção retomada a pedido de Rafael (01/09/2026): foco em prevalência e recência
+
+Rafael solicitou reinício da produção com novo direcionamento: temas mais prevalentes em cardiologia, evidência a mais recente possível (2025-2026), priorizando as categorias com menor cota entregue no sistema, máximo de agentes em paralelo, trabalho autônomo e contínuo sem interrupções, por tempo indeterminado. Todos os lotes a partir daqui seguem essa diretriz.
+
+## Lote 86 — concluído (commit 9267070a)
+
+Primeiro lote sob o novo direcionamento — 8 agentes em paralelo.
+
+- **3 casos clínicos**:
+  - **Hipertensão**: diabetes tipo 2 e HAS não controlada — indapamida sobre HCTZ/clortalidona (Diretriz Brasileira de Hipertensão 2025, PMID 41294179).
+  - **Insuficiência cardíaca**: FINEARTS-HF — PA já controlada não contraindica finerenona na ICFEp (Ostrominski, JAMA Cardiol 2026, PMID 42418169; apenas 7,4% do efeito mediado por queda de PAS, IC cruza zero).
+  - **Fibrilação atrial**: GLP-1 pré-ablação de FA persistente — manter agonista já indicado (LEAF/JACC Clin Electrophysiol 2026, PMID 42159524).
+- **1 checklist**: classificação e diagnóstico do IAM pela Quinta Definição Universal (2026) — cenários primário/secundário/procedimento substituindo tipos 1-5, MINOCA como diagnóstico de trabalho, 10 itens.
+- **3 documentos standalone**:
+  - **Hipertensão**: medida de PA sem manguito (cuffless) — AHA 2026 recomenda não usar para diagnóstico/titulação; erro noturno de +4,5/+5,6 mmHg.
+  - **Fibrilação atrial**: SGLT2 e recorrência pós-ablação — DARE-AF (RCT 2026, negativo) vs. metanálise observacional 2025 (RR 0,61) — efeito indireto ligado à indicação, não antiarrítmico direto.
+  - **Insuficiência cardíaca**: hipocloremia — marcador prognóstico independente e modificador de efeito do tiazídico, com discordância direcional explícita entre ALCALOTIC 2025 e post-hoc do CLOROTIC 2026.
+- **1 material-paciente**: diagnóstico, faixas de pressão e meta de tratamento (Diretriz Brasileira de Hipertensão 2025).
+- **Correção de integração**: tema do documento SGLT2/FA corrigido de "Arritmias" para "Fibrilação atrial" (pasta física correta, confirmada pelos 7 links de Tudo com Tudo).
+- **Verificação de integridade**: nenhum slug colide (915 casos / 472 checklists / 445 materiais / 2.767 slugs conferidos); 19 links de Tudo com Tudo re-verificados.
+- **Gates**: `broken_references: []`; `content_inventory.py --strict` exit 0. Total canônico: 10.702 itens.
+
+### Status consolidado (após Lote 86)
+
+| Tipo | Cota Claude | Entregues | Restante |
+|---|---:|---:|---:|
+| Documentos (content/) | 2.400 | 179 | 2.221 |
+| Casos clínicos | 900 | 63 | 837 |
+| Checklists | 600 | 47 | 553 |
+| Materiais-paciente | 500 | 39 | 461 |
+| Trilhas | 300 | 24 | 276 |
+| Doenças especializadas | 200 | 163 (21 descartados por colisão) | 37 |
+| **Total** | **4.900** | **447** | **4.453** |
