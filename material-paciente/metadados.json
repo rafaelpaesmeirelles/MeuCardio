@@ -31687,5 +31687,71 @@
         ]
       }
     ]
+  },
+  {
+    "slug": "ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca",
+    "titulo": "A ordem de introdução dos remédios da insuficiência cardíaca",
+    "subtitulo": "Por que às vezes a sequência dos quatro remédios muda de pessoa para pessoa",
+    "tema": "Insuficiência cardíaca",
+    "documento_slug": "fluxograma-sequenciamento-titulacao-terapia-quadrupla-icfer",
+    "review_status": "pendente_revisao",
+    "resumo": "Explicação, sem citar dose, de por que as diretrizes atuais não exigem uma ordem fixa para começar os quatro remédios da insuficiência cardíaca com o coração enfraquecido (fração de ejeção reduzida), e de como a equipe de saúde muda essa ordem quando a pressão, a frequência cardíaca, a função dos rins ou o potássio estão no limite.",
+    "secoes": [
+      {
+        "titulo": "Por que os quatro remédios entram juntos, sem ordem fixa",
+        "paragrafos": [
+          "As diretrizes atuais não exigem uma ordem fixa para começar as quatro classes de remédio da insuficiência cardíaca com o coração enfraquecido (fração de ejeção reduzida). A recomendação é começar e aumentar a dose rapidamente, sempre que possível ainda durante uma internação e nas primeiras seis semanas depois dela.",
+          "Mas quando já na primeira consulta existe algum sinal de que o corpo está no limite — pressão arterial baixa, frequência cardíaca ou condução elétrica do coração no limite, ou função dos rins e potássio no limite —, a ordem deixa de ser indiferente. Cada um dos quatro remédios tem um efeito colateral mais provável diferente, e usar essa diferença para decidir qual começa primeiro reduz a chance de precisar parar um remédio por não tolerar."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Primeiro, tratar o que está agudo",
+        "paragrafos": [
+          "Se no momento da consulta você está com líquido acumulado ainda não tratado, pressão baixa com sintoma (tontura, desmaio), potássio muito alto no sangue, ou uma piora súbita da função dos rins, a prioridade é resolver essa situação aguda primeiro — tratar o excesso de líquido, corrigir o potássio e a função dos rins. Os quatro remédios da insuficiência cardíaca começam assim que você estiver estabilizado, seguindo o mesmo raciocínio descrito a seguir."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Sem barreira: os quatro podem começar juntos",
+        "paragrafos": [
+          "Quando não há nenhum sinal de limite — pressão, frequência cardíaca, função dos rins e potássio dentro do esperado —, os quatro remédios podem ser introduzidos prontamente, em sequência definida pela sua equipe ou até ao mesmo tempo, quando seguro. O remédio que também trata diabetes e é usado na insuficiência cardíaca (inibidor de SGLT2) não precisa de aumento gradual de dose; os outros três começam em doses toleráveis."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Quando existe uma barreira, a ordem muda para proteger você",
+        "paragrafos": [],
+        "itens": [
+          "Pressão baixa ou no limite: o remédio para diabetes usado na insuficiência cardíaca (inibidor de SGLT2) e o antagonista mineralocorticoide entram primeiro, por baixarem menos a pressão na hora; o remédio do sistema que regula a pressão e a retenção de líquido (IECA, BRA ou o remédio mais novo que combina os dois mecanismos) e o betabloqueador entram em dose mínima, com mais tempo entre um ajuste e outro.",
+          "Frequência cardíaca ou condução elétrica no limite: o remédio para diabetes usado na insuficiência cardíaca, o antagonista mineralocorticoide e o remédio do sistema que regula a pressão e a retenção de líquido entram primeiro; o betabloqueador entra em dose mínima, com acompanhamento da frequência cardíaca e do eletrocardiograma, avaliando se é necessário um marca-passo antes de aumentar a dose.",
+          "Função dos rins ou potássio no limite: o remédio para diabetes usado na insuficiência cardíaca e o betabloqueador entram primeiro, por terem menor impacto imediato nos rins e no potássio; o remédio do sistema que regula a pressão e a retenção de líquido e o antagonista mineralocorticoide entram em dose mínima, com controle do potássio e da função dos rins em uma a duas semanas antes de qualquer aumento de dose."
+        ]
+      },
+      {
+        "titulo": "Depois de cada mudança, sua equipe reavalia",
+        "paragrafos": [
+          "A cada remédio novo ou dose ajustada, a equipe reavalia pressão, frequência cardíaca, potássio e função dos rins. Se tudo foi bem tolerado, o próximo passo é continuar aumentando a dose de um ou mais remédios até a dose-alvo ou a maior dose que você tolerar bem — o intervalo entre os ajustes é individual, sempre com acompanhamento clínico e de exames de sangue."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que fazer quando algo limita o aumento da dose",
+        "paragrafos": [],
+        "itens": [
+          "Tontura ou desmaio (pressão baixa com sintoma): a equipe segue uma orientação específica para esse problema, ajustando a dose do remédio do sistema que regula a pressão e a retenção de líquido.",
+          "Potássio alto: antes de reduzir a dose do remédio do sistema que regula a pressão e a retenção de líquido ou do antagonista mineralocorticoide, a equipe pode considerar um remédio que ajuda a controlar o potássio.",
+          "Batimento cardíaco lento ou alteração na condução elétrica do coração: a dose do betabloqueador é reduzida, e prioriza-se o aumento de dose dos outros remédios.",
+          "Piora leve a moderada e isolada da função dos rins: a dose atual é mantida — uma elevação leve e isolada da creatinina, por si só, não é motivo para parar o remédio — e a função dos rins é reavaliada em uma a duas semanas."
+        ]
+      },
+      {
+        "titulo": "O que este material não substitui",
+        "paragrafos": [
+          "Não existe um número exato de pressão, frequência cardíaca ou função dos rins que defina \"no limite\" — essa é uma decisão clínica da sua equipe, não um cálculo automático. As doses de cada remédio e o ritmo exato de aumento também são individuais. Este texto explica o raciocínio geral por trás da ordem de introdução dos quatro remédios — não substitui a orientação da sua equipe de saúde, e qualquer sinal novo (piora do inchaço, falta de ar, tontura importante) deve ser informado à equipe a qualquer momento, não apenas nas consultas de reavaliação."
+        ],
+        "itens": []
+      }
+    ]
   }
 ]

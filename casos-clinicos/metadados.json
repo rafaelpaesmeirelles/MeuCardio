@@ -18994,5 +18994,66 @@
       "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto",
+    "titulo": "IC aguda descompensada nas primeiras horas de internação: iniciar dapagliflozina já, ainda com diurese ativa?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, com ICFEr conhecida (FEVE 30%), em uso ambulatorial de sacubitril-valsartana, carvedilol e espironolactona — mas ainda sem inibidor de SGLT2. É admitido por dispneia progressiva e edema de membros inferiores, com quadro compatível com IC aguda descompensada hipervolêmica. Não é diabético. TFGe atual é 42 mL/min/1,73m². Inicia-se furosemida endovenosa com titulação protocolizada. O paciente está nas primeiras horas de internação, ainda com sinais evidentes de congestão e sob diurese ativa.",
+    "pergunta": "Com base na evidência do ensaio DICTATE-AHF, qual a conduta quanto ao início de dapagliflozina neste momento da internação?",
+    "opcoes": [
+      "Adiar a dapagliflozina até a resolução completa da congestão e a suspensão do diurético endovenoso, pelo risco de interação com a diurese ativa em alta dose",
+      "Iniciar dapagliflozina 10 mg já nas primeiras 24 horas de internação, concomitante à diurese ativa com furosemida endovenosa — o início precoce mostrou-se seguro, sem excesso de eventos renais, diabéticos ou cardiovasculares, com sinais secundários favoráveis de menor dose cumulativa de diurético e maior natriurese em 24 horas",
+      "Não iniciar dapagliflozina neste paciente porque ele não é diabético, critério de elegibilidade original do estudo",
+      "Não iniciar dapagliflozina porque a TFGe de 42 mL/min/1,73m² está abaixo do corte de segurança estabelecido pelo ensaio"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O DICTATE-AHF (Cox ZL et al. J Am Coll Cardiol. 2024;83(14):1295-1306. DOI: 10.1016/j.jacc.2024.02.009. PMID: 38569758) randomizou 240 pacientes com IC aguda hipervolêmica, dentro de 24 horas da apresentação hospitalar, para dapagliflozina 10 mg/dia ou cuidado usual, com titulação protocolizada de diurético de alça — ou seja, testou exatamente o cenário deste paciente, ainda sob diurese endovenosa ativa e não estabilizado. O desfecho primário (eficiência diurética, variação de peso por dose cumulativa de diurético) ficou à margem da significância (razão de chances 0,65; IC95% 0,41-1,02; p=0,06), mas os desfechos secundários favoreceram consistentemente a dapagliflozina: menor dose cumulativa de diurético de alça (560 mg vs. 800 mg; p=0,006), menos episódios de escalonamento de dose, maior natriurese em 24h (p=0,03) e maior débito urinário em 24h (p=0,005), além de alta hospitalar mais rápida. Crucialmente, o início precoce não aumentou eventos adversos renais, diabéticos ou cardiovasculares — removendo a justificativa de 'esperar a estabilização' para não interagir com a diurese ativa. Uma emenda de protocolo de setembro de 2021 ampliou a elegibilidade para pacientes com ou sem diabetes tipo 2 (não é mais critério de exclusão) e reduziu o corte de TFGe de 30 para ≥25 mL/min/1,73m² — logo, TFGe de 42 está bem acima do corte de segurança do estudo, não configurando contraindicação.",
+    "source_refs": [
+      "Cox ZL, Collins SP, Hernandez GA, et al. Efficacy and Safety of Dapagliflozin in Patients With Acute Heart Failure. J Am Coll Cardiol. 2024;83(14):1295-1306. DOI: 10.1016/j.jacc.2024.02.009. PMID: 38569758",
+      "Cox ZL, Collins SP, Aaron M, et al. Efficacy and safety of dapagliflozin in acute heart failure: Rationale and design of the DICTATE-AHF trial. Am Heart J. 2021;232:116-124. PMID: 33144086"
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade",
+    "titulo": "LDL-C estagnado em doença coronariana estabelecida: o que a evidência mais recente recomenda?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 64 anos, com doença arterial coronariana estabelecida (angioplastia com implante de stent farmacológico há 2 anos), hipertenso e ex-tabagista, em acompanhamento em ambulatório de cardiologia da rede pública. Está em uso de atorvastatina 80 mg/dia há mais de um ano, sem relato de intolerância. Em três consultas consecutivas ao longo do último ano, o LDL-C permaneceu entre 88 e 95 mg/dL — acima da meta de prevenção secundária em paciente de risco muito alto (LDL-C <55 mg/dL e redução ≥50% do valor basal). Em nenhuma dessas consultas houve intensificação da terapia hipolipemiante: não foi acrescentada ezetimiba, não houve reavaliação estruturada da adesão nem escalonamento terapêutico documentado no prontuário — o LDL-C fora de meta simplesmente não gerou nenhuma mudança de conduta.",
+    "pergunta": "Com base no ensaio clínico brasileiro mais recente sobre esse cenário de estagnação do LDL-C em prevenção secundária de doença coronariana, qual conduta reflete corretamente a evidência disponível?",
+    "opcoes": [
+      "Não há intervenção sistêmica a oferecer: o problema é estritamente de adesão do paciente à estatina, e a conduta deve se limitar a reforçar a orientação dietética e reforçar a importância de tomar a medicação",
+      "Iniciar de imediato um inibidor de PCSK9 associado à estatina em uso, já que o ensaio mais recente sobre esse cenário demonstrou que a adição rotineira dessa classe reduziu infarto, AVC e morte cardiovascular nesses pacientes",
+      "Reorganizar o processo assistencial com uma estratégia digitalmente habilitada — rastreamento estruturado pré-consulta, apoio eletrônico à decisão clínica, auditoria com feedback e ferramentas de engajamento para médico e paciente — voltada a intensificar a terapia hipolipemiante; esse modelo, testado em ensaio cluster-randomizado pragmático brasileiro (SAPPHIRE-LDL, 28 ambulatórios, 1.465 pacientes com ASCVD), reduziu o LDL-C médio em relação ao cuidado usual, embora sem diferença demonstrada em eventos cardiovasculares maiores no seguimento de 6 meses",
+      "Suspender a atorvastatina 80 mg e reiniciar apenas ezetimiba isolada, pois esse esquema é mais eficaz que estatina de alta potência para reduzir LDL-C em pacientes com doença coronariana estabelecida"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O caso retrata inércia terapêutica: LDL-C repetidamente fora da meta sem qualquer intensificação de tratamento, um problema de processo de cuidado, não apenas farmacológico. O SAPPHIRE-LDL (Machline-Carrion MJ, Santo K, Girotto AN, et al. Digitally Enabled Quality Improvement Intervention and LDL-C Control in Atherosclerotic Cardiovascular Disease: The SAPPHIRE-LDL Cluster Randomized Clinical Trial. JAMA Cardiol. Publicado online em 22 de julho de 2026. DOI: 10.1001/jamacardio.2026.2510. PMID: 42485013. NCT05622929) é um ensaio pragmático, cluster-randomizado, conduzido em 28 ambulatórios brasileiros com 1.465 adultos com ASCVD estabelecida, seguidos por 6 meses. A intervenção combinou rastreamento estruturado antes da consulta, apoio eletrônico à decisão clínica, auditoria e feedback, e ferramentas de engajamento para médicos e pacientes, com estímulo à intensificação do tratamento hipolipemiante. Resultado: LDL-C médio de 76,3 mg/dL no braço intervenção versus 85,6 mg/dL no cuidado usual (diferença ajustada -6,62 mg/dL; IC95% -11,11 a -2,13; P=0,004), com mais pacientes atingindo LDL-C <50 mg/dL (23,5% vs 13,4%; OR 1,86) e redução ≥50% do LDL-C (18,6% vs 13,4%; OR 1,76). A opção B está incorreta porque o próprio estudo não testou um novo fármaco hipolipemiante nem demonstrou redução de infarto, AVC ou mortalidade cardiovascular — o desfecho positivo foi de biomarcador/processo, não de eventos clínicos em 6 meses; extrapolar isso para 'reduziu eventos maiores' é uma leitura equivocada dos resultados. A opção A ignora que a intervenção testada foi de reorganização sistêmica do cuidado (não apenas reforço de adesão individual) e que a ausência de intensificação terapêutica documentada, e não a adesão do paciente, foi o alvo da intervenção. A opção D inverte a farmacologia básica: ezetimiba isolada tem potência hipolipemiante bem inferior à estatina de alta intensidade e não é recomendada como substituição da atorvastatina 80 mg nesse contexto.",
+    "source_refs": [
+      "Machline-Carrion MJ, Santo K, Girotto AN, et al. Digitally Enabled Quality Improvement Intervention and LDL-C Control in Atherosclerotic Cardiovascular Disease: The SAPPHIRE-LDL Cluster Randomized Clinical Trial. JAMA Cardiol. Published online July 22, 2026. DOI: 10.1001/jamacardio.2026.2510. PMID: 42485013."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3",
+    "titulo": "Diabetes tipo 2 sob metformina, HbA1c fora da meta: orforglipron ou semaglutida oral?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, diabetes tipo 2 há 6 anos, em uso de metformina 1.000 mg 2x/dia em dose plena e bem tolerada, sem doença cardiovascular aterosclerótica estabelecida. IMC 31 kg/m². HbA1c atual de 8,3%, acima da meta individualizada de 7,0%. Recusa terapia injetável e pede uma opção em comprimido para associar à metformina. A equipe está decidindo entre associar semaglutida oral ou orforglipron (o primeiro agonista de GLP-1 oral não peptídico) como segundo agente.",
+    "pergunta": "Com base no ensaio ACHIEVE-3 — comparação direta, cabeça a cabeça, entre orforglipron e semaglutida oral em diabetes tipo 2 —, qual afirmação está correta?",
+    "opcoes": [
+      "Orforglipron 36 mg reduziu a HbA1c mais do que semaglutida oral 14 mg, com superioridade hierárquica pré-especificada demonstrada após confirmação de não inferioridade — mas à custa de mais eventos gastrointestinais e maior aumento da frequência cardíaca do que a semaglutida oral",
+      "Como o orforglipron é um comprimido não peptídico (sem o excipiente SNAC), ele já tem superioridade cardiovascular comprovada por CVOT publicado e revisado por pares, ao contrário da semaglutida oral",
+      "O ACHIEVE-3 foi um ensaio duplo-cego que demonstrou não inferioridade sem diferença estatisticamente significativa de HbA1c entre orforglipron e semaglutida oral",
+      "Como ambos são comprimidos de GLP-1, orforglipron e semaglutida oral compartilham a mesma tecnologia farmacêutica (peptídeo com excipiente SNAC), e a diferença de eficácia observada se deve apenas à dose mais alta testada de orforglipron"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ACHIEVE-3 (Rosenstock J et al., Lancet 2026;407(10534):1147-1160, DOI: 10.1016/S0140-6736(26)00202-3, PMID: 41765029) foi um ensaio fase 3, ABERTO (apenas a dose de orforglipron foi mascarada), ativo-controlado, de 52 semanas, com 1.698 participantes com HbA1c basal de 8,3% sob metformina, desenhado para não inferioridade com superioridade hierárquica pré-especificada. A redução de HbA1c a partir do basal foi de -1,91% com orforglipron 36 mg e -1,47% com semaglutida oral 14 mg, com orforglipron superior em ambas as comparações de dose (diferença -0,24 p.p. na comparação orforglipron 12 mg vs. semaglutida 14 mg; IC95% -0,41 a -0,072; p=0,0050). Em contrapartida, a frequência cardíaca aumentou mais com orforglipron (+3,7 a +4,7 bpm) do que com semaglutida oral (+1,0 a +1,5 bpm), e eventos gastrointestinais foram mais frequentes com orforglipron (58-59% vs. 37-45%), com mais descontinuações por evento adverso (9-10% vs. 4-5%). A opção B confunde o ACHIEVE-3 (desfecho glicêmico) com o ACHIEVE-4 — este sim um estudo dedicado de desfecho cardiovascular (MACE-4), mas cujos resultados até a redação do documento-fonte eram apenas dados topline divulgados pelo fabricante, sem publicação revisada por pares confirmada, e com desenho de não inferioridade (não de superioridade) contra insulina glargina, não placebo. A opção C erra o desenho do estudo, que foi ABERTO, não duplo-cego, e encontrou diferença estatisticamente significativa favorável ao orforglipron, não equivalência. A opção D erra a farmacologia: orforglipron é uma molécula pequena não peptídica, sem o excipiente SNAC necessário para a absorção gástrica da semaglutida oral (que continua sendo o mesmo peptídeo da formulação injetável) — são tecnologias diferentes dentro da categoria \"GLP-1 oral\", não a mesma molécula em doses distintas.",
+    "source_refs": [
+      "Rosenstock J, Yabe D, Cox D, Li J, Denning M, et al; ACHIEVE-3 Investigators. Efficacy and safety of once-daily oral orforglipron compared with oral semaglutide in adults with type 2 diabetes (ACHIEVE-3). Lancet. 2026;407(10534):1147-1160. DOI: 10.1016/S0140-6736(26)00202-3. PMID: 41765029."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

@@ -39352,5 +39352,182 @@
       }
     ],
     "revisao": "Checklist extraído a partir do documento já publicado sobre ELAN, TIMING, OPTIMAS e a metanálise CATALYST (2025). Itens rastreáveis às seções do documento; pendente de validação clínica final."
+  },
+  {
+    "slug": "decisao-de-betabloqueador-pos-iam-por-estrato-de-feve",
+    "condicao": "Decisão sobre betabloqueador após infarto agudo do miocárdio, estratificada por FEVE (40–49% versus ≥50%)",
+    "resumo": "Checklist para não tratar todo paciente pós-IAM com FEVE não reduzida como um grupo único: verifica a estratificação por faixa de FEVE, aplica o sinal favorável (com incerteza residual) da meta-análise individual em FEVE 40–49% e o resultado neutro da meta-análise individual em FEVE ≥50%, e evita conclusões que os próprios estudos não autorizam.",
+    "documento_origem": "betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Munkhaugen J, Kristensen AMD, Fagerland MW, et al.; BETAMI-DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716.",
+      "Rossello X, Prescott EIB, Kristensen AMD, et al. β blockers after myocardial infarction with mildly reduced ejection fraction: an individual patient data meta-analysis of randomised controlled trials. Lancet. 2025;406(10508):1128-1137. DOI: 10.1016/S0140-6736(25)01592-2. PMID: 40897190.",
+      "Kristensen AMD, Rossello X, Atar D, et al. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954."
+    ],
+    "itens": [
+      {
+        "id": "bb-feve-estrato-classificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FEVE pós-IAM classificada em um estrato específico (<40%, 40–49% ou ≥50%) antes de decidir sobre betabloqueador, em vez de tratada como um grupo único de 'FEVE não reduzida'",
+        "origem_secao": "A pergunta deixou de ser \"betabloqueador para todo pós-IAM?\""
+      },
+      {
+        "id": "bb-feve-sem-outra-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que não há insuficiência cardíaca clínica nem outra indicação independente para betabloqueador (angina, arritmia, hipertensão) antes de aplicar a evidência estratificada por FEVE a este paciente",
+        "origem_secao": "O que esses estudos não autorizam concluir"
+      },
+      {
+        "id": "bb-feve-menor-40",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se FEVE <40%: betabloqueador mantido/indicado conforme o corpo de evidência histórico da terapêutica de disfunção ventricular/insuficiência cardíaca — este estrato não foi o alvo dos ensaios de FEVE 40–49% ou ≥50%",
+        "origem_secao": "Como reconciliar os resultados"
+      },
+      {
+        "id": "bb-feve-40-49",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se FEVE 40–49% sem IC clínica: registrado que a meta-análise individual de 4 RCTs (REBOOT, BETAMI, DANBLOCK, CAPITAL-RCT; 1.885 pacientes) mostrou sinal favorável para morte/novo IAM/IC (HR 0,75; IC95% 0,58–0,97; p=0,031), interpretado como evidência promissora com incerteza residual pela base de evidência menor, não como prova definitiva",
+        "origem_secao": "FEVE 40–49%: meta-análise individual de quatro RCTs / Leitura clínica"
+      },
+      {
+        "id": "bb-feve-50-ou-mais",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se FEVE ≥50% sem outra indicação: registrado que a meta-análise individual de 5 RCTs (17.801 pacientes) foi neutra para morte/IAM/IC (HR 0,97; IC95% 0,87–1,07; p=0,54), sem benefício prognóstico demonstrado do uso rotineiro apenas pelo antecedente de IAM",
+        "origem_secao": "FEVE ≥50%: meta-análise individual de cinco RCTs / Leitura clínica"
+      },
+      {
+        "id": "bb-feve-nao-extrapolar-betami",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Resultado positivo do BETAMI–DANBLOCK (população agrupada FEVE ≥40%) não usado isoladamente para afirmar que o benefício global veio do subgrupo 40–49% — a leitura se apoia nas análises individuais separadas de cada estrato",
+        "origem_secao": "Como reconciliar os resultados"
+      },
+      {
+        "id": "bb-feve-nao-suspender-abrupto",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Se o paciente já está em uso crônico de betabloqueador: tratamento não suspenso abruptamente com base apenas nesta evidência, mesmo em FEVE ≥50%",
+        "origem_secao": "O que esses estudos não autorizam concluir"
+      },
+      {
+        "id": "bb-feve-fatores-adicionais",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Decisão não baseada apenas na FEVE isoladamente: frequência cardíaca, pressão arterial, angina, arritmia, tolerabilidade e comorbidades também avaliados",
+        "origem_secao": "O que esses estudos não autorizam concluir"
+      },
+      {
+        "id": "bb-feve-conduta-registrada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Conduta final documentada de forma estratificada por FEVE, e não como regra única aplicada a todo paciente com 'FEVE não reduzida' após IAM",
+        "origem_secao": "Mensagem prática"
+      }
+    ],
+    "revisao": "Checklist extraído do documento de síntese estratificada por FEVE, fontes conferidas em PubMed/DOI. Pendente de validação clínica final."
+  },
+  {
+    "slug": "definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025",
+    "condicao": "Definição da meta pressórica e estratégia terapêutica inicial na hipertensão arterial do adulto",
+    "resumo": "Checklist para orientar a decisão terapêutica inicial na hipertensão arterial essencial do adulto conforme a diretriz ACC/AHA 2025: fixação da meta pressórica, incorporação do risco cardiovascular global, medidas não farmacológicas, estratégia medicamentosa e exclusão de pseudorresistência antes de rotular hipertensão resistente.",
+    "documento_origem": "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
+    "theme": "Hipertensão",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242."
+    ],
+    "itens": [
+      {
+        "id": "accaha25-meta-pressorica",
+        "categoria": "meta",
+        "obrigatorio": true,
+        "texto": "Meta terapêutica geral de <130/80 mmHg estabelecida como referência para a maioria dos adultos",
+        "origem_secao": "Meta pressórica"
+      },
+      {
+        "id": "accaha25-individualizacao-meta",
+        "categoria": "meta",
+        "obrigatorio": true,
+        "texto": "Meta pressórica individualizada em situações como fragilidade, institucionalização, expectativa de vida limitada ou gestação",
+        "origem_secao": "Meta pressórica"
+      },
+      {
+        "id": "accaha25-risco-nao-isolado",
+        "categoria": "risco",
+        "obrigatorio": true,
+        "texto": "Decisão terapêutica não guiada apenas pelo número isolado da pressão arterial",
+        "origem_secao": "Risco cardiovascular"
+      },
+      {
+        "id": "accaha25-risco-cv-global",
+        "categoria": "risco",
+        "obrigatorio": true,
+        "texto": "Risco cardiovascular global, presença de doença cardiovascular, doença renal crônica, diabetes e outros modificadores clínicos incorporados à decisão",
+        "origem_secao": "Risco cardiovascular"
+      },
+      {
+        "id": "accaha25-nao-farmacologicas",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Medidas não farmacológicas orientadas como base do tratamento: redução de sódio, padrão alimentar cardioprotetor, atividade física regular, controle de peso, moderação do consumo de álcool e cessação do tabagismo",
+        "origem_secao": "Medidas não farmacológicas"
+      },
+      {
+        "id": "accaha25-determinantes-adesao",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Determinantes sociais e barreiras à adesão abordados como parte do plano terapêutico",
+        "origem_secao": "Medidas não farmacológicas"
+      },
+      {
+        "id": "accaha25-farmaco-estrategia",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Estratégia medicamentosa considera grau de elevação pressórica, risco cardiovascular global, comorbidades e tolerabilidade",
+        "origem_secao": "Tratamento farmacológico"
+      },
+      {
+        "id": "accaha25-combinacao-inicial",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Combinação inicial de fármacos de classes complementares considerada quando a pressão está claramente acima da meta, para reduzir inércia terapêutica",
+        "origem_secao": "Tratamento farmacológico"
+      },
+      {
+        "id": "accaha25-pseudorresistencia",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Antes de rotular hipertensão resistente, pseudorresistência excluída: técnica inadequada de medida, baixa adesão, efeito do avental branco, uso de fármacos/substâncias que elevam a PA e causas secundárias",
+        "origem_secao": "Hipertensão resistente"
+      },
+      {
+        "id": "accaha25-otimizacao-pos-confirmacao",
+        "categoria": "manejo",
+        "obrigatorio": true,
+        "texto": "Após confirmação de resistência, otimização farmacológica e investigação de causas secundárias mantidas como pilares do manejo",
+        "origem_secao": "Hipertensão resistente"
+      },
+      {
+        "id": "accaha25-denervacao-nao-substituto",
+        "categoria": "manejo",
+        "obrigatorio": false,
+        "texto": "Terapias intervencionistas, como denervação renal, consideradas dentro de critérios clínicos e evidência disponível, não como substitutas automáticas do tratamento medicamentoso otimizado",
+        "origem_secao": "Hipertensão resistente"
+      },
+      {
+        "id": "accaha25-cuidado-equipe",
+        "categoria": "equipe",
+        "obrigatorio": false,
+        "texto": "Cuidado multidisciplinar e monitorização da pressão arterial fora do consultório incorporados ao plano de seguimento",
+        "origem_secao": "Implementação e cuidado em equipe"
+      }
+    ],
+    "revisao": "Extraído fielmente da diretriz ACC/AHA 2025, documento ainda não utilizado como documento_origem em nenhum checklist existente. Cobre a hipertensão essencial comum do adulto, sem abordar causas secundárias raras. Pendente de validação clínica."
   }
 ]
