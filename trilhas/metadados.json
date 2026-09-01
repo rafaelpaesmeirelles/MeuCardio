@@ -26995,5 +26995,75 @@
         "por_que": "Caso de fechamento que consolida toda a trilha: troponina dinâmica num contexto de sangramento digestivo, testando se o leitor consegue evitar o rótulo automático de infarto tipo 1 diante de um cenário de desequilíbrio oferta-demanda."
       }
     ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao",
+    "titulo": "Insuficiência cardíaca com FEVE reduzida: da indicação do CDI à ressincronização e à estimulação do sistema de condução",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo quando a prevenção primária de morte súbita com CDI está indicada na ICFEr — e por que o benefício depende da proporção de morte arrítmica, não só da fração de ejeção —, quando a ressincronização cardíaca reduz mortalidade e quando ela não ajuda (QRS estreito), e como a estimulação do sistema de condução (feixe de His, ramo esquerdo) está desafiando a estimulação biventricular como sítio padrão.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "icfer-classificacao-diagnostico-quatro-pilares",
+        "por_que": "Pré-requisito: a indicação de dispositivo elétrico parte do paciente já diagnosticado como ICFEr e otimizado nos quatro pilares farmacológicos — sem essa base, a indicação de CDI ou CRT é prematura."
+      },
+      {
+        "ordem": 2,
+        "item_type": "evidencia",
+        "item_slug": "avaliar-terapia-de-ressincronizacao-sempre-que-o-cdi-for-indicado",
+        "por_que": "Princípio orientador de toda a trilha: a decisão de CDI e de ressincronização deve ser conjunta e no mesmo momento, não sequencial."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "scd-heft-amiodarona-ou-cdi-na-insuficiencia-cardiaca",
+        "por_que": "Ensaio fundador da prevenção primária de morte súbita com CDI na IC sistólica, isquêmica e não isquêmica, superior à amiodarona."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "madit-ii-cdi-profilatico-pos-iam",
+        "por_que": "Estende a indicação de CDI profilático ao substrato isquêmico pós-infarto, base histórica da recomendação nessa população."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "danish-cdi-profilatico-na-cardiomiopatia-nao-isquemica",
+        "por_que": "Contraste necessário: na cardiomiopatia não isquêmica o CDI reduziu morte súbita à metade mas não a mortalidade total, mostrando que o benefício depende de quanto da mortalidade é arrítmica."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "care-hf-ressincronizacao-cardiaca-reduz-mortalidade-na-insuficiencia-cardiaca",
+        "por_que": "Estabelece que a ressincronização cardíaca vai além do alívio sintomático e reduz mortalidade na ICFEr com QRS alargado."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "companion-crt-p-versus-crt-d-insuficiencia-cardiaca-avancada",
+        "por_que": "Decisão prática seguinte: em IC avançada já com indicação de ressincronização, compara CRT isolado (CRT-P) contra CRT associado a desfibrilador (CRT-D)."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "echocrt-ressincronizacao-cardiaca-em-insuficiencia-cardiaca-com-qrs-estreito",
+        "por_que": "Ensaio negativo que define o limite da indicação: em QRS estreito a ressincronização não ajuda e o estudo foi interrompido por sinal de dano, corrigindo a extrapolação do racional fisiológico."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "estimulacao-do-feixe-de-his-versus-biventricular-o-ensaio-his-sync",
+        "por_que": "Primeira alternativa de sítio de estimulação ao biventricular clássico: a estimulação do feixe de His comparada à ressincronização biventricular padrão."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "estimulacao-do-ramo-esquerdo-versus-biventricular-o-ensaio-lbbp-resync",
+        "por_que": "Fecha a trilha na fronteira mais atual da estimulação do sistema de condução: o ramo esquerdo comparado à ressincronização biventricular, sucessor mais estável do feixe de His."
+      }
+    ]
   }
 ]

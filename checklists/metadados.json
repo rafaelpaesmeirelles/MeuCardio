@@ -41502,5 +41502,232 @@
       }
     ],
     "revisao": "Checklist extraído e curado a partir do documento já publicado hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo.md. Itens rastreáveis por documento_origem, source_refs e origem_secao. Pendente de revisão clínica."
+  },
+  {
+    "slug": "reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia",
+    "condicao": "Taquicardiomiopatia (cardiomiopatia induzida por taquicardia/arritmia)",
+    "resumo": "Checklist para suspeitar ativamente de taquicardiomiopatia diante de disfunção ventricular com arritmia concomitante, quantificar a carga arrítmica quando aplicável e direcionar o tratamento definitivo pela etiologia da arritmia culpada.",
+    "documento_origem": "taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249 — abstract conferido no PubMed em 12/08/2026 ('Tachycardia-induced cardiomyopathy (TIC) is a reversible form of myocardial dysfunction caused by sustained or recurrent tachyarrhythmias').",
+      "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027 — abstract conferido no PubMed em 12/08/2026, números reproduzidos como no resumo: 174 pacientes, corte de 24% de carga de ExSV separando função de VE preservada de reduzida, FEVE média 0,37±0,10 em 57/174 (33%) com disfunção, cardiomiopatia reversível já descrita a partir de carga de 10%.",
+      "Roberts KE, McCrindle BW, Gopinathannair R, et al. (referência ilustrativa de vinheta clínica, não usada para definir critério numérico): casos clínicos de taquicardiomiopatia identificados nesta sessão via PubMed — criança com taquicardia persistente (Song JY et al., J Int Med Res 2026, PMID 42506924) e atleta de alto rendimento (Russell WW et al., JACC Case Rep 2026, PMID 41906563) — citados apenas como ilustração de apresentação clínica variável, não como fonte de dado quantitativo."
+    ],
+    "itens": [
+      {
+        "id": "tic-pergunta-causa-ou-incidental",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diante de disfunção de VE com taquiarritmia concomitante (FA/flutter com resposta rápida, taquicardia atrial incessante, PJRT ou extrassistolia ventricular de alta carga), formulada explicitamente a pergunta se a arritmia é a causa da cardiomiopatia ou uma consequência incidental de uma cardiomiopatia dilatada preexistente",
+        "origem_secao": "Por que a taquicardiomiopatia é subdiagnosticada"
+      },
+      {
+        "id": "tic-exclusao-outra-causa-estrutural",
+        "categoria": "diagnostico_diferencial",
+        "obrigatorio": true,
+        "texto": "Investigação inicial afastou outra causa estrutural identificável de cardiomiopatia (isquêmica, valvar, infiltrativa, genética) antes de atribuir a disfunção ventricular à arritmia",
+        "origem_secao": "Como distinguir taquicardiomiopatia de cardiomiopatia dilatada com arritmia incidental"
+      },
+      {
+        "id": "tic-cronicidade-magnitude-documentadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cronicidade e magnitude da taquiarritmia documentadas (ex.: FA/flutter com frequência ventricular persistentemente elevada por semanas a meses, incluindo casos assintomáticos ou pouco sintomáticos que mascaram a cronicidade)",
+        "origem_secao": "Como distinguir taquicardiomiopatia de cardiomiopatia dilatada com arritmia incidental"
+      },
+      {
+        "id": "tic-holter-carga-exsv",
+        "categoria": "investigacao",
+        "obrigatorio": false,
+        "texto": "Quando extrassistolia ventricular é a arritmia suspeita, carga de ExSV quantificada por Holter de 24 horas",
+        "origem_secao": "O limiar quantificado: carga de extrassístoles ventriculares e função de VE"
+      },
+      {
+        "id": "tic-limiar-carga-exsv-sem-corte-seguro",
+        "categoria": "criterios_diagnosticos",
+        "obrigatorio": false,
+        "texto": "Carga de ExSV acima de 24% considerada o corte de maior associação estatística com disfunção de VE, mas carga a partir de 10% já reconhecida como potencialmente associada a cardiomiopatia reversível — 24% não usado como limiar rígido de \"seguro\" abaixo dele",
+        "origem_secao": "O limiar quantificado: carga de extrassístoles ventriculares e função de VE"
+      },
+      {
+        "id": "tic-exsv-interpoladas",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Presença de ExSV interpoladas (sem pausa compensatória, dobrando a frequência ventricular funcional) considerada fator que aumenta o risco de cardiomiopatia mesmo com a mesma carga percentual",
+        "origem_secao": "O limiar quantificado: carga de extrassístoles ventriculares e função de VE"
+      },
+      {
+        "id": "tic-remodelamento-vs-duracao-historia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Grau de dilatação e remodelamento ventricular comparado à duração da história clínica de insuficiência cardíaca — evolução mais rápida do que se esperaria de uma cardiomiopatia dilatada primária reforça a hipótese de taquicardiomiopatia",
+        "origem_secao": "Como distinguir taquicardiomiopatia de cardiomiopatia dilatada com arritmia incidental"
+      },
+      {
+        "id": "tic-tratamento-arritmia-e-icfer-paralelo",
+        "categoria": "tratamento",
+        "obrigatorio": true,
+        "texto": "Tratamento definido como controle da arritmia causadora, e não como terapia padrão de ICFEr isolada — terapia otimizada de ICFEr iniciada em paralelo enquanto a arritmia é controlada, sem substituir o controle da arritmia",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-fa-flutter-controle-ritmo",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Para FA/flutter: controle de ritmo — inclusive por ablação por cateter — priorizado sobre controle de frequência isolado quando factível, pela maior chance de reverter a cardiomiopatia de forma definitiva",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-exsv-ablacao-foco",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Para extrassistolia ventricular de alta carga atribuída à cardiomiopatia (acima dos patamares associados a disfunção): ablação por cateter do foco ectópico considerada a conduta definitiva",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-pjrt-ta-incessante-ablacao",
+        "categoria": "tratamento",
+        "obrigatorio": false,
+        "texto": "Para PJRT e taquicardia atrial incessante: ablação da via acessória ou do foco atrial considerada curativa na maioria dos casos, com reversão da cardiomiopatia associada",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-reavaliacao-feve-sem-prazo-fixo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação da função ventricular programada em intervalo definido individualmente após o controle efetivo da arritmia, sem presumir um prazo fixo de recuperação da FEVE não confirmado contra a literatura",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-seguimento-mesmo-apos-recuperacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento cardiológico mantido mesmo após recuperação completa da FEVE, sem alta definitiva do acompanhamento, pela suscetibilidade a recidiva de disfunção se a arritmia recorrer",
+        "origem_secao": "Manejo"
+      },
+      {
+        "id": "tic-confirmacao-e-retrospectiva",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Registrado que não existe exame único capaz de separar taquicardiomiopatia de cardiomiopatia dilatada com arritmia incidental no momento da apresentação inicial — a confirmação diagnóstica é, na prática, retrospectiva, pela resposta da função ventricular ao tratamento da arritmia",
+        "origem_secao": "Como distinguir taquicardiomiopatia de cardiomiopatia dilatada com arritmia incidental"
+      }
+    ],
+    "revisao": "Checklist gerado por curadoria assistida em 01/09/2026 a partir do documento já publicado sobre reconhecimento e reversibilidade da taquicardiomiopatia, com foco na fase de suspeita diagnóstica e escolha do tratamento por etiologia da arritmia — complementar ao checklist já existente de acompanhamento pós-controle da arritmia (documento distinto, na pasta Insuficiência cardíaca). Pendente de revisão clínica."
+  },
+  {
+    "slug": "decisao-tavi-vs-savr-na-estenose-aortica-grave-esceacts-2021",
+    "condicao": "Estenose aórtica grave — decisão entre TAVI e SAVR por perfil de idade, anatomia e risco (ESC/EACTS 2021)",
+    "resumo": "Checklist de decisão para orientar TAVI vs. SAVR na estenose aórtica grave por faixa etária, situações que favorecem cirurgia independentemente da idade, limitações do TAVI e cuidados com populações não estudadas nos RCTs. Inclui alerta de que os cortes etários desta diretriz 2021 foram substituídos pela atualização 2025.",
+    "documento_origem": "estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS · 2021 · https://pmc.ncbi.nlm.nih.gov/articles/PMC9725093/",
+      "Update on TAVI Indications From 2020 ACC/AHA Valvular Guidelines · ACC · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2021/07/22/19/36/Guideline-Update-on-Indications-for-TAVI"
+    ],
+    "itens": [
+      {
+        "id": "ea-tavi-savr-heart-team",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Paciente com EA grave sintomática com indicação de tratamento referenciado ao Heart Team para avaliação individualizada",
+        "origem_secao": "Referenciamento obrigatório"
+      },
+      {
+        "id": "ea-tavi-savr-menor-65",
+        "categoria": "decisao",
+        "obrigatorio": false,
+        "texto": "Idade <65 anos com expectativa de vida >20 anos: SAVR favorecido",
+        "origem_secao": "Recomendação por idade"
+      },
+      {
+        "id": "ea-tavi-savr-65-80",
+        "categoria": "decisao",
+        "obrigatorio": false,
+        "texto": "Idade entre 65 e 80 anos, sintomático: SAVR ou TAVI podem ser considerados",
+        "origem_secao": "Recomendação por idade"
+      },
+      {
+        "id": "ea-tavi-savr-maior-75",
+        "categoria": "decisao",
+        "obrigatorio": false,
+        "texto": "Idade ≥75 anos: TAVI transfemoral (TF-TAVI) recomendado como modo preferido de intervenção, com base em avaliação de fatores clínicos, anatômicos e procedimentais — corte etário da diretriz 2021, já substituído por 70 anos na atualização 2025 (conferir documento atualizado antes de aplicar)",
+        "origem_secao": "Recomendação por idade"
+      },
+      {
+        "id": "ea-tavi-savr-maior-80",
+        "categoria": "decisao",
+        "obrigatorio": false,
+        "texto": "Idade >80 anos de qualquer categoria de risco cirúrgico com expectativa de vida <10 anos, OU alto risco/risco proibitivo para SAVR com expectativa de vida ≥1 ano: TAVI favorecido",
+        "origem_secao": "Recomendação por idade"
+      },
+      {
+        "id": "ea-tavi-savr-favorecendo-savr",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Checar situações que favorecem SAVR independentemente da idade: assintomático com outra indicação de intervenção (teste de esforço anormal, EA muito grave, progressão rápida, BNP elevado); anatomia desfavorável (acesso ilíaco-femoral inadequado para TAVI); <80 anos assintomático com FEVE <50%",
+        "origem_secao": "Situações favorecendo SAVR independente da idade"
+      },
+      {
+        "id": "ea-tavi-savr-populacoes-nao-estudadas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente <65 anos ou com valva aórtica bicúspide: reconhecer que não foi incluído nos principais RCTs de TAVI e que a recomendação não pode ser extrapolada diretamente — decisão passa pelo Heart Team",
+        "origem_secao": "Populações não estudadas nos RCTs"
+      },
+      {
+        "id": "ea-tavi-savr-limitacoes-tavi",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar TAVI isolado, verificar doença arterial coronariana concomitante, aortopatia, doença valvar mitral/tricúspide clinicamente significativa ou fibrilação atrial associada — TAVI não trata essas condições e elas podem justificar correção cirúrgica simultânea",
+        "origem_secao": "Limitações TAVI"
+      },
+      {
+        "id": "ea-tavi-savr-volume-centro",
+        "categoria": "seguranca",
+        "obrigatorio": false,
+        "texto": "Preferir encaminhamento a programa de TAVI de alto volume, particularmente em hospital que também tem alto volume de SAVR — associado a menor mortalidade em 30 dias",
+        "origem_secao": "Volume do centro"
+      },
+      {
+        "id": "ea-tavi-savr-expectativa-curta",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Expectativa de vida <1 ano: conduzir discussão cuidadosa sobre benefícios/riscos, determinar valores do paciente, decisão compartilhada e envolver equipe de cuidados paliativos",
+        "origem_secao": "Cenário de expectativa de vida curta"
+      },
+      {
+        "id": "ea-tavi-savr-armadilha-extrapolar",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Não extrapolar recomendações de TAVI para pacientes <65 anos ou com valva bicúspide sem avaliação cuidadosa do Heart Team",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ea-tavi-savr-armadilha-tavi-isolado",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Não escolher TAVI isolado quando há doença coronariana ou valvar concomitante significativa que se beneficiaria de correção cirúrgica simultânea",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ea-tavi-savr-armadilha-paliativo",
+        "categoria": "armadilhas",
+        "obrigatorio": false,
+        "texto": "Não deixar de considerar cuidados paliativos em paciente com expectativa de vida <1 ano",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "ea-tavi-savr-nota-diretriz-2025",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de aplicar os cortes etários deste documento, confirmar se a diretriz 2025 (corte de TAVI preferencial em 70 anos, Classe I Nível A, em valva tricúspide independente do risco cirúrgico) já se aplica ao caso — este documento é o registro histórico da diretriz 2021",
+        "origem_secao": "Definição / nota de atualização"
+      }
+    ],
+    "revisao": "Checklist extraído do documento já publicado content/Valvopatias/estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021.md em 01/09/2026, sem alteração de critério. Pendente de revisão clínica antes de publicação."
   }
 ]

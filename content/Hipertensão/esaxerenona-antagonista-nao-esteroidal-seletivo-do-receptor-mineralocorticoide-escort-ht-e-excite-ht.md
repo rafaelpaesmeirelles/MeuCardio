@@ -1,0 +1,71 @@
+---
+title: "Esaxerenona: o Antagonista Não Esteroidal Seletivo do Receptor Mineralocorticoide — os Ensaios ESCORT-HT e EXCITE-HT"
+slug: esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht
+theme: "Hipertensão"
+kind: documento
+review_status: pendente_revisao
+source_refs: ["Kario K, Ohbayashi H, Ishii H, Kato M, Nozaki M, Abiru N, Fukui T, Nomura K, Fukushima Y, Itabashi N, Uchiyama K, Nishizawa M, Hata Y, Nakamura N, Kodono S, Hirano K, Katsuya T, Shimosawa T, Shiosakai K, Kato G, Taguchi T, Ohishi M; ESCORT-HT investigators. Esaxerenone versus angiotensin II receptor blockers as second-line therapy in older Japanese patients with uncontrolled hypertension on calcium channel blockers: the randomized, open-label ESCORT-HT study. Hypertens Res. 2026;49:2240-2252. DOI: 10.1038/s41440-026-02634-4. PMID: 42032273", "Kario K, Ohbayashi H, Hashimoto M, Itabashi N, Kato M, Uchiyama K, Hirano K, Nakamura N, Miyamoto T, Nagashima H, Ishida H, Ebe Y, Hatta T, Fukui T, Katsuya T, Shimosawa T, Taguchi T, Tanabe A, Ohishi M; EXCITE-HT investigators. Home blood pressure-lowering effect of esaxerenone vs trichlormethiazide for uncontrolled hypertension: a prespecified subanalysis of the EXCITE-HT randomized controlled study by age subgroup. Hypertens Res. 2025;48:1586-1598. DOI: 10.1038/s41440-024-02078-8. PMID: 40189653", "Kario K, Ito S, Itoh H, Rakugi H, Okuda Y, Yamakawa S. Efficacy of Esaxerenone Plus a Renin-Angiotensin System Inhibitor or Calcium Channel Blocker for Nocturnal Hypertension: A Post Hoc Analysis. Am J Hypertens. 2025;38:605-611. DOI: 10.1093/ajh/hpaf048. PMID: 40178088", "Kishimoto S, Maruhashi T, Kajikawa M, Mizobuchi A, Harada T, Yamaji T, Nakano Y, Goto C, Yusoff FM, Higashi Y. Chronic esaxerenone treatment improves vascular function and lowers peripheral arterial stiffness in patients with idiopathic hyperaldosteronism. J Hypertens. 2025;43(7):1205-1213. DOI: 10.1097/hjh.0000000000004030. PMID: 40394919 — citado apenas para o dado de função vascular/rigidez arterial em hiperaldosteronismo idiopático, não para eficácia pressórica geral"]
+legacy_source: "Documento novo. A pasta já cobria antagonistas esteroidais do receptor mineralocorticoide (espironolactona, PATHWAY-2) e inibidores da aldosterona sintase (baxdrostat, lorundrostat), mas não havia nenhum documento sobre a esaxerenona — antagonista não esteroidal e seletivo do receptor mineralocorticoide, já aprovado e em uso clínico no Japão, com três ensaios/subanálises publicados em 2025-2026 (Hypertens Res, Am J Hypertens) ainda não cadastrados nesta biblioteca. Verificado via Europe PMC/PubMed nesta sessão, não de memória; zero ocorrências de \"esaxerenon\" em todo o diretório content/ e em doencas/metadados.json, doencas/fragmentos/*.json e doencas/correcoes/*.json antes deste documento."
+---
+
+# Esaxerenona: o Antagonista Não Esteroidal Seletivo do Receptor Mineralocorticoide — os Ensaios ESCORT-HT e EXCITE-HT
+
+## A lacuna que este documento fecha
+
+Esta biblioteca já cobre dois caminhos farmacológicos para bloquear o eixo aldosterona-receptor mineralocorticoide na hipertensão: o antagonismo esteroidal clássico do receptor (espironolactona, ver `hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2.md`) e a inibição, mais nova, da própria síntese da aldosterona pela aldosterona sintase — CYP11B2 (baxdrostat e lorundrostat, ambos já documentados). Faltava um terceiro representante, farmacologicamente distinto dos dois: a **esaxerenona**, antagonista **não esteroidal** e **altamente seletivo** do receptor mineralocorticoide, desenvolvida no Japão, já aprovada e em uso clínico ali, e posicionada como classe de segunda linha na diretriz da Sociedade Japonesa de Hipertensão (JSH) 2025 — dado citado no próprio pano de fundo do ensaio ESCORT-HT (PMID 42032273). Nenhum documento desta pasta menciona a esaxerenona até esta pesquisa.
+
+## Onde ela se encaixa mecanisticamente
+
+- **Espironolactona/eplerenona** (já cobertas): antagonistas **esteroidais** do receptor mineralocorticoide; a espironolactona tem afinidade off-target pelos receptores de andrógeno e progesterona (efeito adverso de ginecomastia/mastalgia bem documentado na literatura, não repetido aqui).
+- **Baxdrostat/lorundrostat** (já cobertos): **não bloqueiam o receptor** — inibem a **síntese** de aldosterona a montante, na enzima CYP11B2.
+- **Esaxerenona** (este documento): bloqueia o **receptor** mineralocorticoide, como a espironolactona — mas é **não esteroidal**, com alta especificidade de ligação ao receptor (Kishimoto et al., PMID 40394919, a descreve como "nonsteroidal mineralocorticoid receptor antagonist with high mineralocorticoid receptor-binding specificity"), o que reduz o potencial de efeitos off-target esteroidais. É a mesma lógica estrutural da **finerenona** (não esteroidal, já citada nesta pasta no contexto de doença renal crônica — ver `fluxograma-hipertensao-na-doenca-renal-cronica-alvo-bloqueio-do-sraa-isglt2-e-finerenona.md`), mas a esaxerenona foi desenvolvida e testada especificamente como **anti-hipertensivo de uso amplo**, não como fármaco cardiorrenal em diabetes/DRC.
+
+## ESCORT-HT (Kario, Hypertens Res 2026) — idosos, add-on à anlodipina
+Ensaio multicêntrico, randomizado, aberto, de não inferioridade, registrado como jRCTs031240300, conduzido entre setembro de 2024 e junho de 2025:
+- **População**: japoneses ≥65 anos, já em uso estável de anlodipina, com **PA sistólica domiciliar matinal ainda ≥135mmHg**
+- **402 participantes**: 202 no braço esaxerenona (add-on), 200 no braço BRA (add-on); idade média **75,5 anos** em ambos os grupos; 52,5% e 56,5% mulheres, respectivamente
+- **Desfecho primário** (variação da PAS domiciliar matinal, do início ao fim do tratamento de 12 semanas): **-10,6mmHg** (IC95% -12,0 a -9,1) com esaxerenona vs. **-9,0mmHg** (IC95% -10,4 a -7,5) com BRA — **diferença entre grupos de -1,6mmHg** (IC95% -3,7 a 0,5), dentro da margem de não inferioridade pré-especificada (3,8mmHg)
+- **Marcadores secundários**: os dois braços reduziram a razão albumina/creatinina urinária; **apenas a esaxerenona reduziu significativamente o NT-proBNP**
+- **Segurança**: eventos adversos emergentes do tratamento em 25,1% (esaxerenona) vs. 30,8% (BRA); eventos graves em 2 vs. 7 pacientes, incluindo um óbito no grupo esaxerenona; **hiperpotassemia em 1 paciente com esaxerenona e nenhum com BRA**; nenhum evento adverso grave foi julgado relacionado ao fármaco
+
+**Conclusão do próprio ensaio**: *"Esaxerenone was non-inferior to ARBs in lowering morning home SBP and showed a favorable safety profile in older Japanese patients with inadequately controlled hypertension on amlodipine."*
+
+## EXCITE-HT — subanálise por faixa etária (Kario, Hypertens Res 2025)
+Subanálise pré-especificada, por subgrupo de idade, do ensaio EXCITE-HT — multicêntrico, randomizado, aberto, de grupos paralelos, comparando **esaxerenona com tricloretiazida** (um tiazídico) para hipertensão não controlada:
+- A esaxerenona **atingiu o critério de não inferioridade em relação à tricloretiazida em ambas as faixas etárias** (menores e maiores de 65 anos) para redução da PA domiciliar
+- Nos participantes **mais velhos**, a esaxerenona mostrou **redução da PA sistólica superior** à tricloretiazida, com efeito diastólico comparável entre os grupos
+- **Risco de elevação do potássio sérico permaneceu baixo e consistente independentemente da idade**
+
+## Efeito na hipertensão noturna — análise post hoc (Kario, Am J Hypertens 2025)
+Análise post hoc de um estudo de **fase 3, multicêntrico, aberto**, avaliando o efeito da esaxerenona sobre a **PA noturna** — clinicamente relevante porque a PA noturna prediz mortalidade cardiovascular melhor que a PA diurna (premissa explícita do próprio artigo):
+- **270 pacientes**: 172 em monoterapia com esaxerenona, 49 em combinação com bloqueador de canal de cálcio (BCC), 49 em combinação com inibidor do sistema renina-angiotensina (iSRA)
+- **Redução da PAS ambulatorial de 24h** (do início à semana 28): **-10,0mmHg** (monoterapia), **-6,0mmHg** (+BCC), **-17,0mmHg** (+iSRA)
+- **PAS noturna caiu significativamente nos três grupos** (p<0,001 em cada); o grupo **esaxerenona+iSRA teve a maior queda: -20,6mmHg**
+- **NT-proBNP também caiu significativamente nos três grupos**, sinal indireto de melhora hemodinâmica associada ao bloqueio mineralocorticoide
+
+**Conclusão do próprio artigo**: *"Esaxerenone when used in combination with a CCB or RASi, but especially when used in combination with a RASi, may be a useful treatment option for patients with uncontrolled hypertension to control nocturnal BP."* Este achado dialoga diretamente com o documento já publicado sobre hipertensão noturna e não dipping desta pasta (ver `hipertensao-noturna-nao-dipping-e-pico-matinal-exagerado-o-que-a-mrpa-domiciliar-revela.md`), acrescentando uma opção farmacológica específica — o bloqueio mineralocorticoide combinado a iSRA — para esse fenótipo.
+
+## Função vascular em hiperaldosteronismo idiopático (Kishimoto, J Hypertens 2025)
+Estudo de tratamento crônico com esaxerenona em pacientes com **hiperaldosteronismo idiopático bilateral** mostrou melhora de função vascular e redução da rigidez arterial periférica (PMID 40394919) — achado mecanístico que reforça o racional de uso da classe além da simples queda numérica de PA, mas **não muda a indicação clínica**: o antagonismo do receptor mineralocorticoide já é terapia recomendada para hiperaldosteronismo idiopático bilateral, e este estudo não compara a esaxerenona a outros antagonistas do receptor (espironolactona) nesse contexto específico.
+
+## Status regulatório
+A esaxerenona está **aprovada e em uso clínico no Japão**, onde é hoje posicionada como anti-hipertensivo de **segunda linha** nas diretrizes da Sociedade Japonesa de Hipertensão (JSH) 2025 — dado citado no pano de fundo do ESCORT-HT. **Nenhuma aprovação pela Anvisa ou pela FDA foi localizada nesta pesquisa** — `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de citar a esaxerenona como disponível fora do Japão. Todos os ensaios revisados aqui foram conduzidos **exclusivamente em população japonesa**, o que limita a extrapolação direta de magnitude de efeito e de perfil de segurança para outras populações sem dados próprios.
+
+## Síntese clínica
+A esaxerenona amplia para três a lista de estratégias farmacológicas que atuam no eixo mineralocorticoide para hipertensão nesta biblioteca — antagonismo esteroidal do receptor (espironolactona), inibição da síntese de aldosterona (baxdrostat/lorundrostat) e agora antagonismo **não esteroidal e seletivo** do receptor (esaxerenona). Nos três ensaios revisados, o sinal é consistente: efeito anti-hipertensivo não inferior a comparadores ativos (BRA, tiazídico), incidência baixa de hiperpotassemia mesmo em idosos e em combinação com iSRA, e um sinal específico de eficácia sobre PA noturna quando combinada a iSRA.
+
+## Armadilhas de leitura
+- **Não confundir com finerenona** — mesma lógica estrutural (antagonista não esteroidal do receptor mineralocorticoide), mas indicação, desenho de ensaios e população-alvo são diferentes (finerenona: cardiorrenal em diabetes/DRC; esaxerenona: anti-hipertensivo de uso mais amplo, testado aqui em add-on e em combinação).
+- **Não confundir com baxdrostat/lorundrostat** — a esaxerenona bloqueia o receptor mineralocorticoide; os outros dois inibem a síntese da aldosterona. São classes farmacológicas mecanisticamente distintas, ainda que atuem no mesmo eixo hormonal.
+- **Todos os ensaios aqui revisados foram conduzidos em população exclusivamente japonesa** — extrapolar as magnitudes de efeito e o perfil de segurança (sobretudo a baixíssima taxa de hiperpotassemia observada) para outras populações sem dados próprios não é respaldado por esta evidência.
+- **A esaxerenona não tem, até esta pesquisa, aprovação registrada na Anvisa nem na FDA** — tratá-la como opção disponível para prescrição no Brasil seria erro.
+- **O estudo em hiperaldosteronismo idiopático (Kishimoto) não é um ensaio comparativo de eficácia pressórica** — é um estudo mecanístico de função vascular; não deve ser citado como evidência de superioridade sobre outros antagonistas do receptor mineralocorticoide nesse contexto.
+
+## Tudo com Tudo
+
+- [Hipertensão Resistente: Espironolactona como Quarta Droga — o Ensaio PATHWAY-2](/biblioteca/hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2) — o antagonista esteroidal do mesmo receptor que a esaxerenona bloqueia por via não esteroidal; referência histórica de eficácia da classe.
+- [Baxdrostat: Inibidor da Aldosterona Sintase — o Ensaio BrigHTN](/biblioteca/baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn) — mecanismo alternativo no mesmo eixo hormonal (inibição da síntese, não do receptor), útil para contraste direto com a esaxerenona.
+- [Lorundrostat: o Segundo Inibidor da Aldosterona Sintase — os Ensaios ADVANCE-HTN e LAUNCH-HTN](/biblioteca/lorundrostat-segundo-inibidor-da-aldosterona-sintase-advance-htn-e-launch-htn) — segundo representante da classe dos inibidores de síntese, para completar o mapa das três estratégias farmacológicas do eixo mineralocorticoide cobertas nesta pasta.
+- [Fluxograma: Hipertensão na Doença Renal Crônica — Alvo, Bloqueio do SRAA, iSGLT2 e Finerenona](/biblioteca/fluxograma-hipertensao-na-doenca-renal-cronica-alvo-bloqueio-do-sraa-isglt2-e-finerenona) — o outro antagonista não esteroidal do receptor mineralocorticoide já citado nesta biblioteca, em indicação cardiorrenal distinta da testada para a esaxerenona.
+- [Hipertensão Noturna, Não Dipping e Pico Matinal Exagerado — o que a MRPA Domiciliar Revela](/biblioteca/hipertensao-noturna-nao-dipping-e-pico-matinal-exagerado-o-que-a-mrpa-domiciliar-revela) — o fenótipo de PA noturna elevada para o qual a combinação esaxerenona+iSRA mostrou o maior efeito na análise post hoc revisada aqui.
+- [Diretriz Brasileira de Hipertensão 2025 — Hipertensão Resistente e Refratária (Capítulo 12)](/biblioteca/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12) — o capítulo nacional sobre quarta droga e bloqueio mineralocorticoide, contexto de diretriz brasileira sobre a classe farmacológica à qual a esaxerenona pertence.
