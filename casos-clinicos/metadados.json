@@ -19140,5 +19140,47 @@
       "Kallend D, Raal F, Kereiakes D, Klug E, Vest J, Stein E. Lerodalcibep and adjudicated cardiovascular events in a pre-defined pooled analysis of three large long term Phase III studies. Atherosclerosis. 2025;407(Suppl):119493. DOI: 10.1016/j.atherosclerosis.2025.119493."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm",
+    "titulo": "Cardiomiopatia hipertrófica não obstrutiva sintomática: o aficamteno já pode ser prescrito?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 54 anos, cardiomiopatia hipertrófica diagnosticada há 2 anos (espessura septal máxima 18mm, FEVE 65%). Ecocardiograma com manobra de Valsalva e teste de esforço não demonstra gradiente de via de saída do VE em repouso nem provocado — cardiomiopatia hipertrófica não obstrutiva (CMH-nO). Em uso de metoprolol em dose máxima tolerada há 8 meses, mantém dispneia aos médios esforços (NYHA II-III) e escore KCCQ-CSS reduzido. Ela viu uma reportagem sobre a aprovação do aficamteno pela FDA em dezembro de 2025 e sobre um estudo mostrando '79% de melhora de pelo menos uma classe funcional' e pergunta se pode iniciar o medicamento agora.",
+    "pergunta": "Qual a conduta mais apropriada diante desse pedido?",
+    "opcoes": [
+      "Iniciar aficamteno agora — os dados de 96 semanas do FOREST-HCM mostram melhora expressiva de classe funcional (79% com ganho de pelo menos uma classe NYHA) e de KCCQ-CSS (+11,2 pontos em média), suficientes para justificar o tratamento",
+      "Explicar que a aprovação da FDA (dez/2025) e a evidência de ensaio randomizado do aficamteno (SEQUOIA-HCM) são específicas para CMH obstrutiva; na forma não obstrutiva dela, sem gradiente de via de saída documentado, o FOREST-HCM é um estudo de fase 2 aberto, sem grupo placebo concorrente, e o uso do fármaco permanece investigacional — a conduta é otimizar a terapia padrão (associar ou trocar para bloqueador de canal de cálcio não diidropiridínico) e reservar aficamteno para participação em ensaio clínico",
+      "Como o comunicado do patrocinador do ACACIA-HCM (fase 3) já anunciou resultado topline positivo para CMH não obstrutiva, iniciar aficamteno com base nesses números enquanto aguarda a publicação revisada por pares",
+      "Como o betabloqueador em dose máxima não controlou os sintomas, encaminhar diretamente para miectomia septal cirúrgica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O aficamteno (Myqorzo) foi aprovado pela FDA em 19/12/2025 e tem evidência de ensaio randomizado controlado por placebo (SEQUOIA-HCM) apenas para CMH obstrutiva (gradiente de via de saída do VE ≥50mmHg em repouso ou provocado) — não é o caso desta paciente. Para CMH não obstrutiva, o corpo de evidência mais maduro é o FOREST-HCM, cuja análise de 96 semanas (Masri A, et al. J Card Fail. 2026;32(2):533-537. DOI: 10.1016/j.cardfail.2025.09.016. PMID: 41027504) mostrou resultados numericamente favoráveis (79% com melhora de ao menos uma classe NYHA, 74,1% assintomáticos em classe I na semana 96, KCCQ-CSS +11,2 pontos), mas é um desenho de fase 2 **aberto, sem grupo placebo concorrente** — vulnerável a viés de expectativa de paciente e avaliador, especialmente por medir desfecho subjetivo (classe funcional). Isso não equivale a eficácia estabelecida por RCT, e não há aprovação regulatória de nenhuma agência para aficamteno em CMH-nO até a data-base deste documento. A opção A trata extensão aberta como se fosse RCT positivo — erro central deste caso. A opção C cita número de comunicado de imprensa do ACACIA-HCM (fase 3), que ainda não tem manuscrito revisado por pares publicado — informação de imprensa não deve ser tratada como evidência citável para decisão clínica. A opção D ignora que redução septal (cirúrgica ou por álcool) trata gradiente mecânico de via de saída, ausente nesta paciente por definição de CMH não obstrutiva — não há indicação do procedimento aqui. A conduta correta é otimizar terapia padrão já estabelecida (bloqueador de canal de cálcio não diidropiridínico como verapamil, com disopiramida reservada a casos com componente obstrutivo latente) e considerar aficamteno apenas dentro de protocolo de pesquisa.",
+    "source_refs": [
+      "Masri A, Sherrid MV, Choudhury L, et al. Safety and Efficacy of Aficamten in Patients With Nonobstructive Hypertrophic Cardiomyopathy: A 96-Week Analysis From FOREST-HCM. J Card Fail. 2026;32(2):533-537. DOI: 10.1016/j.cardfail.2025.09.016. PMID: 41027504."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa",
+    "titulo": "PCI em lesão de bifurcação verdadeira: angiografia isolada basta, ou vale usar imagem intravascular?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 64 anos, diabetes tipo 2 em uso de metformina, angina estável CCS classe II apesar de terapia médica otimizada. Cineangiocoronariografia mostra lesão de bifurcação verdadeira (Medina 1,1,1) envolvendo descendente anterior proximal e primeira diagonal, com calcificação moderada da parede. A sala de hemodinâmica dispõe tanto de OCT (tomografia de coerência óptica) quanto de IVUS (ultrassom intravascular).",
+    "pergunta": "Com base na evidência agregada de 2025–2026 sobre orientação por imagem na PCI de lesões complexas, qual conduta é mais apropriada?",
+    "opcoes": [
+      "Guiar o implante do stent por angiografia isolada, reservando a imagem intravascular apenas para casos de resultado angiográfico subótimo após o procedimento — as metanálises de 2025–2026 não mostraram necessidade de imagem rotineira em lesão complexa",
+      "Guiar a PCI com imagem intravascular (OCT ou IVUS) — a metanálise em rede de 2026 (17 ECRs, 13.751 pacientes) mostrou que ambas reduzem MACE em relação à angiografia isolada em lesão complexa, sem diferença significativa entre OCT e IVUS entre si, permitindo escolher conforme disponibilidade e anatomia (IVUS penetra melhor em vaso calcificado; OCT tem melhor resolução para dissecção e cobertura de stent, relevante em bifurcação)",
+      "Preferir obrigatoriamente IVUS sobre OCT nesta lesão, já que o IVUS produziu área mínima de stent maior nos ensaios que compararam as duas modalidades diretamente, e essa diferença de área se traduziu em menor MACE com IVUS na metanálise em rede",
+      "Reservar a imagem intravascular apenas para pacientes diabéticos, já que o benefício de MACE demonstrado nas metanálises de 2025–2026 foi restrito a essa população"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise em rede de Carvalho PEP et al. (JACC Cardiovasc Interv. 2026;19(1):31-43; DOI: 10.1016/j.jcin.2025.11.021; PMID: 41534986), com 17 ECRs e 13.751 pacientes com lesões complexas, mostrou que tanto OCT (RR 0,63; IC95% 0,55-0,72) quanto IVUS (RR 0,67; IC95% 0,56-0,79) foram superiores à angiografia isolada para reduzir MACE, sem diferença significativa entre OCT e IVUS entre si (RR 0,94; IC95% 0,78-1,14; p=0,52) — ou seja, a pergunta relevante deixou de ser \"IVUS ou OCT\" e passou a ser \"imagem intravascular (qualquer uma) ou angiografia isolada\". Especificamente em lesão de bifurcação verdadeira, o ensaio OCTOBER (Holm NR et al. N Engl J Med. 2023;389(16):1477-1487; PMID: 37634149) já havia mostrado redução do desfecho composto com OCT versus angiografia (10,1% vs 14,1%; HR 0,70; IC95% 0,50-0,98; p=0,035). A opção que restringe o benefício a diabéticos confunde a população mista do ILUMIEN IV (que isoladamente foi neutro em MACE, HR 0,90; IC95% 0,67-1,19; p=0,45) com o resultado agregado das metanálises, que não segmentou benefício por diabetes. A opção que declara IVUS superior ao OCT usa um achado mecanístico (área mínima de stent maior com IVUS) que não se traduziu em vantagem clínica sobre OCT na metanálise em rede, confundindo desfecho substituto (imagem) com desfecho clínico (MACE).",
+    "source_refs": [
+      "Carvalho PEP, Antunes VLJ, Bittar de Pontes V, et al. IVUS, OCT, or Angiography as Guidance for PCI in Complex Coronary Artery Lesions: Network Meta-Analysis of Randomized Controlled Trials. JACC Cardiovasc Interv. 2026;19(1):31-43. DOI: 10.1016/j.jcin.2025.11.021. PMID: 41534986.",
+      "Holm NR, Andreasen LN, Neghabat O, et al.; OCTOBER Trial Group. OCT or Angiography Guidance for PCI in Complex Bifurcation Lesions. N Engl J Med. 2023;389(16):1477-1487. DOI: 10.1056/NEJMoa2307770. PMID: 37634149.",
+      "Ali ZA, Landmesser U, Maehara A, et al.; ILUMIEN IV Investigators. Optical Coherence Tomography-Guided versus Angiography-Guided PCI. N Engl J Med. 2023;389(16):1466-1476. DOI: 10.1056/NEJMoa2305861. PMID: 37634188."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

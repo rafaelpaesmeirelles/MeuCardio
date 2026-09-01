@@ -39888,5 +39888,139 @@
       }
     ],
     "revisao": "Checklist complementar ao fluxograma já publicado (fluxograma-regurgitacao-mitral-esc-eacts-2025), extraindo os critérios de seleção e as armadilhas de interpretação da base de evidência COAPT versus MITRA-FR para o reparo transcateter borda-a-borda na regurgitação mitral secundária. Pendente de validação clínica."
+  },
+  {
+    "slug": "caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026",
+    "condicao": "Insuficiência cardíaca — caracterização diagnóstica conforme a Segunda Definição Universal (AHA/ACC/ESC/WHF 2026)",
+    "resumo": "Checklist para estruturar a caracterização diagnóstica da insuficiência cardíaca segundo o consenso internacional AHA/ACC/ESC/WHF de 2026 — estágio, fenótipo por FEVE, trajetória, etiologia específica e contexto social/geográfico — evitando reduzir o diagnóstico a um único valor de fração de ejeção ou a um único achado isolado.",
+    "documento_origem": "segunda-definicao-universal-insuficiencia-cardiaca-2026",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Walsh MN, Kober L, Sliwa K, et al.; Joint AHA/ACC/ESC/WHF Task Force for the Universal Definition of Heart Failure in collaboration with HFSA, HFA and JHFS. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). J Am Coll Cardiol. Published online June 29, 2026. DOI: 10.1016/j.jacc.2026.05.036. PMID: 42370864."
+    ],
+    "itens": [
+      {
+        "id": "sduic-teste-isolado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico de IC não fechado com base em um único achado isolado — FEVE reduzida isolada, peptídeo natriurético isolado ou sintoma isolado não bastam; confirmada a convergência entre sintomas, sinais e evidência objetiva de anormalidade estrutural/funcional cardíaca",
+        "origem_secao": "O ponto mais importante"
+      },
+      {
+        "id": "sduic-estagio",
+        "categoria": "classificacao",
+        "obrigatorio": true,
+        "texto": "Estágio da síndrome (A — risco para IC, B — pré-IC, C — IC sintomática ou D — IC avançada) registrado explicitamente, não apenas a presença ou ausência atual de sintomas",
+        "origem_secao": "Os quatro estágios A → D são mantidos"
+      },
+      {
+        "id": "sduic-fenotipo-feve",
+        "categoria": "classificacao",
+        "obrigatorio": true,
+        "texto": "Fenótipo classificado em uma das três categorias amplas — IC com FE reduzida, IC com FE preservada ou IC com FE melhorada —, sem tratar o corte numérico de FEVE como grade rígida isolada",
+        "origem_secao": "A classificação por FEVE deixa de ser uma grade rígida"
+      },
+      {
+        "id": "sduic-fe-melhorada-nao-cura",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se o fenótipo atual é FE melhorada: a trajetória é registrada como melhora, remissão ou recuperação sem usar esses termos como sinônimos, e o paciente não é classificado como 'sem doença' apenas em razão do novo valor de FEVE",
+        "origem_secao": "\"FE melhorada\" não equivale automaticamente a cura"
+      },
+      {
+        "id": "sduic-etiologia-especifica",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Etiologia investigada e registrada além do binômio isquêmica/não isquêmica, situando a causa em uma categoria específica (por exemplo hipertensiva, valvar, relacionada a arritmia/dessincronia, infiltrativa, infecciosa, inflamatória, síndrome de alto débito ou idiopática)",
+        "origem_secao": "Causa: \"isquêmica versus não isquêmica\" é insuficiente"
+      },
+      {
+        "id": "sduic-etiologia-exemplos",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Etiologias com implicação terapêutica direta não escondidas sob rótulo genérico — por exemplo amiloidose cardíaca não descrita apenas como 'ICFEp não isquêmica', doença de Chagas reconhecida como etiologia infecciosa específica, doença valvar relevante não subsumida no rótulo genérico de IC",
+        "origem_secao": "Exemplos de por que isso muda conduta"
+      },
+      {
+        "id": "sduic-contexto-social-geografico",
+        "categoria": "contexto_epidemiologico",
+        "obrigatorio": false,
+        "texto": "Pré-teste etiológico ajustado ao contexto geográfico e social do paciente (acesso a diagnóstico e terapia, renda, sexo, raça/etnia, cobertura de saúde), sem presumir a mesma prevalência relativa de causas como Chagas e doença reumática em qualquer população",
+        "origem_secao": "A definição reconhece geografia e determinantes sociais"
+      },
+      {
+        "id": "sduic-estrutura-prontuario",
+        "categoria": "documentacao",
+        "obrigatorio": true,
+        "texto": "Caracterização registrada na sequência estágio → fenótipo atual → trajetória da FEVE → etiologia → estado de congestão → comorbidades → tratamento direcionado, em vez de apenas 'ICFE XX%'",
+        "origem_secao": "Aplicação prática no prontuário mental do cardiologista"
+      },
+      {
+        "id": "sduic-feve-medida",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "FEVE medida e registrada mesmo quando a classificação clínica final não depende apenas desse número — a nova definição não dispensa a medição, apenas evita reduzir o paciente a ela",
+        "origem_secao": "Mensagem prática"
+      },
+      {
+        "id": "sduic-limites-do-documento",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Uso do documento limitado ao seu escopo: não substitui diretriz terapêutica de IC, não elimina a necessidade de medir FEVE, não classifica automaticamente toda alteração estrutural como IC sintomática e não dispensa investigação etiológica",
+        "origem_secao": "O que a Segunda Definição NÃO faz"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente da Segunda Definição Universal de Insuficiência Cardíaca (Consenso AHA/ACC/ESC/WHF, junho de 2026), documento de definição/nomenclatura, não diretriz terapêutica com classes e níveis de recomendação. Pendente de validação clínica final."
+  },
+  {
+    "slug": "criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica",
+    "condicao": "Critérios diagnósticos da cardiomiopatia hipertrófica e diferenciação do movimento anterior sistólico da mitral (SAM)",
+    "resumo": "O que confirmar ao estabelecer o diagnóstico de cardiomiopatia hipertrófica pela diretriz brasileira 2024 — o critério de espessura miocárdica, o limiar reduzido no contexto de rastreamento familiar, a variabilidade de medida entre ecocardiograma e ressonância magnética, e o papel mecânico do SAM na obstrução dinâmica e na regurgitação mitral associada.",
+    "documento_origem": "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+    "theme": "Cardiomiopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e20240415. DOI: 10.36660/abc.20240415.",
+      "O'Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020."
+    ],
+    "itens": [
+      {
+        "id": "cmh-diag-espessura-limiar",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Espessura miocárdica ≥15 mm confirmada em qualquer segmento do ventrículo esquerdo ao ecocardiograma ou à ressonância magnética, com exclusão de outra causa que explique a hipertrofia (hipertensão, estenose aórtica, doença infiltrativa, coração de atleta)",
+        "origem_secao": "Criterios diagnosticos gerais"
+      },
+      {
+        "id": "cmh-diag-limiar-familiar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Se o paciente é parente de primeiro grau de portador de CMH confirmada, ou portador de variante genética patogênica conhecida: aplicado o limiar diagnóstico reduzido de ≥13 mm, e não o limiar geral de ≥15 mm",
+        "origem_secao": "Criterios diagnosticos gerais — Contexto de rastreamento familiar"
+      },
+      {
+        "id": "cmh-diag-modalidade-imagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ao comparar espessura entre exames sucessivos, confirmado que ecocardiograma e ressonância magnética não foram tratados como equivalentes — a RM tende a medir sistematicamente mais espessura que o eco (diferença mediana de ~1 mm, podendo chegar a 9 mm em casos individuais), o que pode mudar a categoria de risco calculada",
+        "origem_secao": "Criterios diagnosticos gerais — Atenção à variabilidade de método"
+      },
+      {
+        "id": "cmh-sam-exame-dinamico",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Na suspeita de forma obstrutiva, exame físico dinâmico registrado — variação da intensidade do sopro com manobras que reduzem pré-carga/pós-carga (Valsalva, ortostatismo, que pioram a obstrução por SAM) e com manobras que aumentam o volume ventricular (agachamento, handgrip, que melhoram a obstrução) documentada como parte da avaliação clínica",
+        "origem_secao": "Sam movimento anterior sistolico mitral"
+      },
+      {
+        "id": "cmh-sam-regurgitacao-mitral",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se houver regurgitação mitral associada à forma obstrutiva: padrão caracterizado — excêntrica e posterodirigida é a típica do SAM; regurgitação mitral central ou anterodirigida nesse contexto levanta suspeita de doença valvar mitral primária associada, não apenas secundária ao SAM",
+        "origem_secao": "Sam movimento anterior sistolico mitral"
+      }
+    ],
+    "revisao": "Checklist extraído das seções de critérios diagnósticos e de fisiopatologia do SAM da Diretriz Brasileira de CMH 2024 (Arq Bras Cardiol 2024;121(7):e202400415), evitando sobreposição com os checklists já existentes sobre escalonamento terapêutico da LVOTO e estratificação HCM Risk-SCD/CDI, ambos originados do fluxograma ESC 2023. Pendente de revisão clínica final."
   }
 ]

@@ -26167,5 +26167,69 @@
         "por_que": "Fecha a trilha com a terceira estratégia possível depois da ablação bem-sucedida: em vez de suspender ou trocar o fármaco, fechar mecanicamente o apêndice atrial esquerdo no mesmo paciente de alto risco tromboembólico. As três opções — suspender, trocar, fechar — ficam lado a lado para a decisão real à beira do leito."
       }
     ]
+  },
+  {
+    "slug": "trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl",
+    "titulo": "Prevenção cardiovascular e dislipidemia: a virada da ACC/AHA 2026 — PREVENT-ASCVD, Lp(a) obrigatória e metas absolutas de LDL-C",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo os quatro hábitos que a diretriz ACC/AHA 2026 muda na prática — PREVENT-ASCVD no lugar das Pooled Cohort Equations, os grupos que dispensam cálculo de risco, a medida obrigatória de Lp(a) ao menos uma vez na vida e o retorno das metas absolutas de LDL-C/não-HDL-C — e percorrer essa sequência da decisão de tratar até a prescrição e a segurança do hipolipemiante.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "acc-aha-2026-diretriz-dislipidemia-prevent-lpa-apob-e-metas-ldl",
+        "por_que": "Ponto de partida obrigatório: é o documento-fonte que introduz os quatro hábitos que mudam — PREVENT no lugar da Pooled Cohort Equations, metas absolutas de LDL-C/não-HDL-C de volta, Lp(a) medida ao menos uma vez e ApoB para risco residual. Toda a trilha deriva desses quatro pontos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-estatina-em-prevencao-primaria-decisao-de-tratar-acc-aha-2026",
+        "por_que": "O mesmo algoritmo CPR (Calculate/Personalize/Reclassify) em árvore de decisão — inclusive os grupos que dispensam cálculo de risco (diabetes, DRC 3-4, HIV) e a via própria da hipercolesterolemia grave. Ver o texto corrido e o fluxograma em sequência fixa o algoritmo melhor do que reler qualquer um dos dois duas vezes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "checklist",
+        "item_slug": "decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026",
+        "por_que": "Da árvore de decisão para a conferência de beira-leito: o mesmo algoritmo em forma de checklist, para aplicar na consulta de rotina sem pular etapa — condição que dispensa cálculo, via da hipercolesterolemia grave, faixa etária, cálculo pelo PREVENT-ASCVD e uso seletivo do escore de cálcio coronariano."
+      },
+      {
+        "ordem": 4,
+        "item_type": "calculadora",
+        "item_slug": "ckd-epi-2021",
+        "por_que": "Aplica na prática um dos grupos que a diretriz isenta do cálculo de risco: DRC estágio 3 ou 4 entre 40-75 anos já indica hipolipemiante independentemente do LDL basal. A calculadora é o que confirma o estágio antes de pular direto para a prescrição."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam",
+        "por_que": "Operacionaliza a segunda mudança da diretriz: medir Lp(a) pelo menos uma vez na vida. Este documento traduz a recomendação em conduta prática, inclusive o que não esperar do fármaco enquanto os ensaios de desfecho não chegam."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco",
+        "por_que": "O passo seguinte quando a Lp(a) vem elevada: a árvore de decisão para rastreio de risco residual, coerente com o que a diretriz recomenda — intensificar agressivamente os fatores modificáveis, sobretudo o LDL-C, já que a terapia específica de Lp(a) ainda não provou desfecho."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-estatina-avaliacao-basal-e-monitorizacao-de-seguranca",
+        "por_que": "Antes de prescrever: o que checar na avaliação basal e o que não monitorizar rotineiramente depois — inclusive o fim da dosagem seriada de transaminases e o risco real (não o relativo) de diabetes de novo, para não gerar descontinuação por medo infundado."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "rosuvastatina-calcica",
+        "por_que": "A prescrição que fecha a decisão de tratar: estatina de alta intensidade, escolhida como representante para atingir a meta de LDL-C <55 mg/dL que a diretriz de 2026 fixa para o paciente de muito alto risco."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "ezetimiba",
+        "por_que": "Quando a estatina isolada não chega à meta absoluta — o cenário que a diretriz antecipa ao valorizar a ApoB como risco residual mesmo com LDL-C/não-HDL-C aparentemente controlados — a ezetimiba é o primeiro degrau de intensificação antes de considerar um injetável."
+      }
+    ]
   }
 ]
