@@ -61,7 +61,7 @@ export const CLINICAL_SPACES: Record<FunctionalSpace, ClinicalSpaceDefinition> =
     icon: "conta",
     accent: "#2bd8e1",
     accentRgb: "43, 216, 225",
-    roomImage: "/spaces/corvia-room-consultorio-1280.webp",
+    roomImage: "/spaces/corvia-room-consultorio.jpg",
   },
   hospital: {
     id: "hospital",
@@ -71,7 +71,7 @@ export const CLINICAL_SPACES: Record<FunctionalSpace, ClinicalSpaceDefinition> =
     icon: "emergencia",
     accent: "#4b82ff",
     accentRgb: "75, 130, 255",
-    roomImage: "/spaces/corvia-room-hospital-1280.webp",
+    roomImage: "/spaces/corvia-room-hospital.jpg",
   },
   ensino: {
     id: "ensino",
@@ -81,7 +81,7 @@ export const CLINICAL_SPACES: Record<FunctionalSpace, ClinicalSpaceDefinition> =
     icon: "curso",
     accent: "#a06df2",
     accentRgb: "160, 109, 242",
-    roomImage: "/spaces/corvia-room-ensino-1280.webp",
+    roomImage: "/spaces/corvia-room-ensino.jpg",
   },
   pesquisa: {
     id: "pesquisa",
@@ -91,7 +91,7 @@ export const CLINICAL_SPACES: Record<FunctionalSpace, ClinicalSpaceDefinition> =
     icon: "evidencia",
     accent: "#f04f8b",
     accentRgb: "240, 79, 139",
-    roomImage: "/spaces/corvia-room-pesquisa-1280.webp",
+    roomImage: "/spaces/corvia-room-pesquisa.jpg",
   },
   gestao: {
     id: "gestao",
@@ -101,7 +101,7 @@ export const CLINICAL_SPACES: Record<FunctionalSpace, ClinicalSpaceDefinition> =
     icon: "gestao",
     accent: "#37c7c0",
     accentRgb: "55, 199, 192",
-    roomImage: "/spaces/corvia-room-gestao-1280.webp",
+    roomImage: "/spaces/corvia-room-gestao.jpg",
   },
 };
 
