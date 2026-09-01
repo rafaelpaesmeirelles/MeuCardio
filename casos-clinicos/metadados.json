@@ -19224,5 +19224,50 @@
       "Kittleson MM, Panjrath GS, Bates K, Breathett KK, Dixon DL, Januzzi JL Jr, Mohammed SF. Management of Heart Failure With Preserved Ejection Fraction: 2026 ACC Expert Consensus Decision Pathway. J Am Coll Cardiol. Published online July 23, 2026. DOI: 10.1016/j.jacc.2026.06.018. PMID: 42494134."
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "oct-guiada-vs-angiografia-pci-bifurcacao-complexa-decisao",
+    "titulo": "PCI de bifurcação complexa: vale a pena guiar por OCT?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, diabético tipo 2, com angina estável classe II refratária a terapia clínica otimizada. Cateterismo mostra lesão de bifurcação verdadeira (Medina 1,1,1) em artéria descendente anterior e ramo diagonal, com calcificação moderada, indicada para PCI eletiva com técnica de dois stents. O hemodinamicista tem cateter de OCT disponível na sala, mas o colega residente pergunta se vale a pena o tempo e o custo adicional do exame, já que 'a angiografia já mostra bem a lesão'.",
+    "pergunta": "Com base na evidência mais recente sobre imagem intravascular em lesões complexas, qual a conduta mais bem sustentada para este caso?",
+    "opcoes": [
+      "Não usar OCT: como o ILUMIEN IV (2023) não mostrou diferença estatisticamente significativa em falha do vaso-alvo em 2 anos (HR 0,90; IC95% 0,67–1,19), a imagem intravascular não agrega benefício clínico em nenhuma lesão complexa",
+      "Usar OCT (ou IVUS) para guiar a PCI: em bifurcação verdadeira como esta, o OCTOBER (2023) mostrou redução do desfecho composto de 14,1% para 10,1% (HR 0,70; p=0,035), e a metanálise em rede de 2026 (17 ECRs, 13.751 pacientes) confirma que tanto OCT quanto IVUS reduzem MACE frente à angiografia isolada em lesão complexa, sem diferença entre as duas modalidades entre si",
+      "Usar apenas IVUS, nunca OCT, pois a metanálise de Lingamsetty et al. (2025) demonstrou que a OCT é clinicamente inferior ao IVUS em lesões de bifurcação",
+      "A decisão deve ser adiada até haver dados de seguimento além de 5 anos especificamente para o braço OCT, já que a ausência desse dado invalida o uso da imagem intravascular hoje"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A lesão deste paciente — bifurcação verdadeira, calcificação moderada, indicação de dois stents — é exatamente o cenário em que a evidência mais recente sustenta o uso de imagem intravascular. O OCTOBER (Holm NR et al., NEJM 2023; PMID 37634149), desenhado especificamente para bifurcação complexa, mostrou redução do desfecho composto (morte cardíaca, IAM relacionado à lesão-alvo ou revascularização guiada por isquemia) de 14,1% para 10,1% com OCT (HR 0,70; IC95% 0,50–0,98; p=0,035). O resultado neutro do ILUMIEN IV (população mista de diabetes/complexidade angiográfica geral, não exclusivamente bifurcação) não contradiz isso — reflete uma população menos homogênea, e a opção 0 comete o erro de generalizar um resultado neutro de uma população mista para toda lesão complexa. A metanálise em rede de Carvalho PEP et al. (JACC Cardiovasc Interv. 2026;19(1):31-43; PMID 41534986), com 17 ECRs e 13.751 pacientes, resolve a comparação de forma direta: tanto OCT (RR 0,63; IC95% 0,55–0,72) quanto IVUS (RR 0,67; IC95% 0,56–0,79) foram superiores à angiografia isolada, sem diferença significativa entre OCT e IVUS entre si (RR 0,94; IC95% 0,78–1,14; p=0,52) — portanto a pergunta clinicamente relevante não é 'IVUS ou OCT', mas 'imagem intravascular (qualquer uma) ou angiografia isolada'. A opção 2 distorce Lingamsetty et al. (Int J Cardiol. 2025;435:133387; PMID 40373983): esse estudo mostrou área mínima do stent maior com IVUS que com OCT, um achado mecanístico/geométrico, mas sem diferença clínica correspondente — não é evidência de inferioridade clínica da OCT. A opção 3 aplica um padrão de evidência inadequado: a ausência de seguimento além de 5 anos é uma limitação citada no documento de origem, mas não invalida o uso da imagem intravascular com os dados de 2 anos já disponíveis, que são consistentes e foram obtidos em ensaios randomizados de boa qualidade.",
+    "source_refs": [
+      "Carvalho PEP, Antunes VLJ, Bittar de Pontes V, et al. IVUS, OCT, or Angiography as Guidance for PCI in Complex Coronary Artery Lesions: Network Meta-Analysis of Randomized Controlled Trials. JACC Cardiovasc Interv. 2026;19(1):31-43. DOI: 10.1016/j.jcin.2025.11.021. PMID: 41534986.",
+      "Holm NR, Andreasen LN, Neghabat O, et al.; OCTOBER Trial Group. OCT or Angiography Guidance for PCI in Complex Bifurcation Lesions. N Engl J Med. 2023;389(16):1477-1487. DOI: 10.1056/NEJMoa2307770. PMID: 37634149.",
+      "Ali ZA, Landmesser U, Maehara A, et al.; ILUMIEN IV Investigators. Optical Coherence Tomography-Guided versus Angiography-Guided PCI. N Engl J Med. 2023;389(16):1466-1476. DOI: 10.1056/NEJMoa2305861. PMID: 37634188.",
+      "Lingamsetty SSP, Doma M, Kritya M, et al. Mechanical outcomes of coronary stenting guided by intravascular ultrasound versus optical coherence tomography: a systematic review and meta-analysis with trial sequential analysis of randomized trials. Int J Cardiol. 2025;435:133387. DOI: 10.1016/j.ijcard.2025.133387. PMID: 40373983."
+    ],
+    "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "semaglutida-oral-soul-decisao-cardiovascular-t2dm",
+    "titulo": "Diabetes tipo 2 com doença aterosclerótica estabelecida e recusa a injetáveis: qual terapia reduz risco cardiovascular?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, diabetes tipo 2 há 12 anos, com infarto do miocárdio prévio há 3 anos (doença aterosclerótica estabelecida) e função renal preservada. Em uso de metformina 1.000 mg 2x/dia, com HbA1c atual de 7,8%. Já teve um agonista de GLP-1 injetável prescrito anteriormente, mas abandonou o tratamento por fobia documentada a agulhas, e recusa qualquer nova terapia injetável. O objetivo agora é reduzir risco cardiovascular adicional além do já obtido com estatina, IECA e controle glicêmico atual, mantendo boa adesão a longo prazo.",
+    "pergunta": "Com base na evidência disponível sobre terapias com ação cardiovascular comprovada em diabetes tipo 2, qual é a conduta mais adequada para este paciente?",
+    "opcoes": [
+      "Iniciar tirzepatida semanal, já que o ensaio SURPASS-CVOT (2025) demonstrou superioridade cardiovascular clara sobre um comparador ativo",
+      "Iniciar semaglutida oral, com base no ensaio SOUL (2025), que demonstrou superioridade sobre placebo em desfecho cardiovascular (HR 0,86; IC95% 0,77-0,96; p=0,006) em população com perfil semelhante ao do paciente — 50 anos ou mais, HbA1c entre 6,5% e 10,0% e doença aterosclerótica estabelecida",
+      "Intensificar o controle glicêmico adicionando sulfonilureia em dose otimizada, já que reduzir a HbA1c é o que primariamente reduz eventos cardiovasculares nessa população",
+      "Prescrever semaglutida oral com base no PIONEER 6, que demonstrou redução significativa de mortalidade cardiovascular nessa formulação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A conduta correta é iniciar semaglutida oral com base no SOUL (McGuire DK et al., N Engl J Med. 2025;392(20):2001-2012). Esse ensaio, de superioridade e controlado por placebo, incluiu 9.650 participantes com 50 anos ou mais, HbA1c entre 6,5% e 10,0% e doença aterosclerótica ou renal estabelecida — perfil que corresponde ao do paciente — e mostrou redução significativa do desfecho cardiovascular composto (HR 0,86; IC95% 0,77-0,96; p=0,006) com seguimento médio de quase 4 anos. Por ser uma formulação oral diária, resolve a barreira de adesão do paciente (fobia a agulhas) sem abrir mão de proteção cardiovascular comprovada. A opção da tirzepatida está incorreta por dois motivos: exige via injetável, que o paciente já recusou, e o SURPASS-CVOT (Nicholls SJ et al., N Engl J Med. 2025;393(24):2409-2420) foi um ensaio de não inferioridade contra comparador ATIVO (dulaglutida, agente que já reduz eventos) — a superioridade não foi demonstrada (p=0,09 para superioridade, IC95,3% chegando a 1,01), então não se pode descrever o resultado como 'superioridade clara'. Intensificar sulfonilureia é incorreta porque grandes ensaios de controle glicêmico intensivo (ACCORD, ADVANCE, VADT) não demonstraram redução consistente de eventos macrovasculares com esse alvo isolado — o benefício cardiovascular comprovado nessa classe farmacológica vem de mecanismos independentes da glicada, não da intensificação glicêmica em si. A opção do PIONEER 6 é uma armadilha clássica: esse ensaio (Husain M et al., N Engl J Med. 2019;381(9):841-851) foi desenhado como NÃO INFERIORIDADE com margem larga (1,8), e o HR de 0,51 para mortalidade cardiovascular veio de apenas 23 eventos em seguimento mediano de 15,9 meses — um achado gerador de hipótese, não uma demonstração estatisticamente robusta de redução de mortalidade. Foi exatamente o SOUL, seis anos depois, que testou essa hipótese com desenho de superioridade e amostra maior.",
+    "source_refs": [
+      "McGuire DK, Marx N, Mulvagh SL, Deanfield JE, Inzucchi SE, et al; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642",
+      "Husain M, Birkenfeld AL, Donsmark M, Dungan K, Eliaschewitz FG, et al; PIONEER 6 Investigators. Oral Semaglutide and Cardiovascular Outcomes in Patients with Type 2 Diabetes. N Engl J Med. 2019;381(9):841-851. DOI: 10.1056/NEJMoa1901118. PMID: 31185157",
+      "Nicholls SJ, Pavo I, Bhatt DL, Buse JB, Del Prato S, et al; SURPASS-CVOT Investigators. Cardiovascular Outcomes with Tirzepatide versus Dulaglutide in Type 2 Diabetes. N Engl J Med. 2025;393(24):2409-2420. DOI: 10.1056/NEJMoa2505928. PMID: 41406444"
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

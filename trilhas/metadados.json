@@ -26301,5 +26301,75 @@
         "por_que": "Termina na prescrição do escalonamento: os dois inibidores de PCSK9 disponíveis, via de administração e o cenário clínico — LDL fora da meta apesar de estatina de alta intensidade — que indica seu uso."
       }
     ]
+  },
+  {
+    "slug": "trilha-hipertensao-ensaios-comparativos-primeira-linha",
+    "titulo": "Hipertensão: os grandes ensaios comparativos da classe de primeira linha",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo ler, ensaio a ensaio, se IECA, BRA, bloqueador de canal de cálcio, betabloqueador ou diurético fazem diferença real de desfecho como primeira linha quando a queda pressórica é semelhante entre os braços — e reconhecer as duas exceções que não são empate: o ganho de AVC da LIFE e o dano da combinação dupla no ONTARGET.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-primeira-linha-cappp-nordil-insight-convince",
+        "por_que": "Abre a trilha com o mapa em árvore dos cinco grandes ensaios de primeira linha que empataram no desfecho primário (CAPPP, NORDIL, INSIGHT, CONVINCE, STOP-2) — o resumo visual antes de entrar em cada ensaio individualmente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cappp-captopril-versus-diuretico-ou-betabloqueador-na-has",
+        "por_que": "Primeiro braço da árvore: captopril (IECA) contra diurético/betabloqueador convencional em 10.985 hipertensos — composto de IAM/AVC/morte CV empatou (RR 1,05; P=0,52), com sinal isolado de mais AVC no captopril que os próprios autores atribuem a PA inicial desbalanceada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "nordil-diltiazem-versus-diuretico-ou-betabloqueador-na-has",
+        "por_que": "Mesma pergunta, agora com bloqueador de canal de cálcio não-di-hidropiridínico: diltiazem contra diurético/betabloqueador em 10.881 pacientes — primário também empatou (RR 1,00; P=0,97), reforçando que a classe testada não bateu o convencional neste desenho."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "insight-nifedipina-gits-versus-co-amilozida-na-has-de-alto-risco",
+        "por_que": "Terceira variação da mesma pergunta com um di-hidropiridínico de ação longa: nifedipina GITS contra HCTZ+amilorida em 6.321 pacientes de alto risco — primário empatou (6,3% vs 5,8%; P=0,35) com a PA caindo igual nos dois braços (173/99 → 138/82), o desenho mais limpo do bloco por ter queda pressórica simétrica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "convince-verapamil-coer-versus-atenolol-ou-hctz-na-has",
+        "por_que": "Quarto ensaio da árvore, mas com uma virada metodológica importante: o patrocinador encerrou o CONVINCE antes do descegamento e o resultado (HR 1,02; P=0,77) não chega a demonstrar equivalência formal por falta de margem pré-especificada no abstract — ensina a distinguir 'não perdeu' de 'provou ser igual'."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "invest-verapamil-versus-atenolol-na-has-com-dac",
+        "por_que": "Muda a população: mesmo verapamil de liberação prolongada do CONVINCE, agora testado especificamente em 22.576 hipertensos com doença arterial coronariana contra atenolol — composto de morte/IAM/AVC também empatou (RR 0,98) com controle pressórico equivalente aos 24 meses, mostrando que o achado se sustenta mesmo na população com DAC."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "value-valsartana-versus-anlodipino-na-has-de-alto-risco",
+        "por_que": "Passa da comparação clássica (IECA/BCC/BB/diurético) para o BRA: valsartana contra anlodipino em 15.245 hipertensos de alto risco — o composto cardíaco empatou (HR 1,04; P=0,49), mas a PA caiu menos com valsartana logo no primeiro mês (4,0/2,1 mmHg de diferença), o exemplo mais claro do bloco de que controle pressórico precoce pode pesar mais que a molécula escolhida."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "life-losartana-versus-atenolol-na-has-com-hve",
+        "por_que": "A primeira exceção real ao padrão de empate: losartana venceu atenolol no composto morte/IAM/AVC (RR 0,87; P=0,021) em 9.193 hipertensos com hipertrofia ventricular esquerda ao ECG, com queda pressórica semelhante entre os braços (~30/17 mmHg) — o ganho foi todo por AVC (RR 0,75; P=0,001), não por IAM, o detalhe que evita vender o resultado como benefício cardiovascular genérico do BRA."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "ontarget-telmisartana-versus-ramipril-versus-combinacao",
+        "por_que": "A segunda exceção, do lado oposto: telmisartana equivaleu ao ramipril no composto vascular (RR 1,01), mas a combinação dos dois não somou benefício e aumentou hipotensão sintomática, síncope e disfunção renal — a evidência que fecha por que bloqueio duplo do SRAA não é 'mais é melhor' mesmo quando cada fármaco isolado funciona igual."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "anbp2-ieca-versus-diuretico-na-has-do-idoso",
+        "por_que": "Fecha a trilha voltando à pergunta inicial (IECA vs diurético), agora especificamente no idoso de 65-84 anos: resultado no limiar da significância (HR 0,89; P=0,05; IC 95% tocando 1,00) e um sinal de interação por sexo (favorável em homens, neutro em mulheres) que os próprios autores não sustentam como conclusão — o exemplo final de como reconhecer um resultado 'quase lá' sem vender certeza que o ensaio não tem."
+      }
+    ]
   }
 ]

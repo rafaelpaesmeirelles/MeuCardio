@@ -40218,5 +40218,220 @@
       }
     ],
     "revisao": "Checklist extraído do documento já publicado hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023.md (kind: protocolo, review_status: revisado). Itens rastreáveis por origem_secao. Pendente de validação clínica individual deste checklist."
+  },
+  {
+    "slug": "checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025",
+    "condicao": "Estenose mitral (reumática e degenerativa/MAC) — diagnóstico e manejo",
+    "resumo": "Checklist de diagnóstico e manejo da estenose mitral, cobrindo avaliação ecocardiográfica e escore de Wilkins, terapia médica, indicação de comissurotomia percutânea versus cirurgia, contraindicações, casos particulares (doença multivalvar, IT concomitante, MAC) e seguimento.",
+    "documento_origem": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8, texto integral obtido e conferido diretamente em 30/07/2026."
+    ],
+    "itens": [
+      {
+        "id": "em-01",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Confirmar etiologia — reumática (espessamento/fibrose dos folhetos com fusão comissural e encurtamento do aparato subvalvular) versus degenerativa, associada a calcificação do anel mitral (MAC), sem fusão comissural.",
+        "origem_secao": "Etiologia e relevância epidemiológica"
+      },
+      {
+        "id": "em-02",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Avaliar gravidade por ecocardiografia: área valvar mitral (AVM) por planimetria 2D como medida principal, com ecocardiografia 3D e transesofágico agregando valor diagnóstico adicional.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-03",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Classificar EM reumática como clinicamente grave quando AVM ≤1,5 cm² associada a fatores clínicos (sintomas, alto risco de tromboembolismo ou de descompensação hemodinâmica).",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-04",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Realizar teste de esforço (ecocardiografia de esforço preferida à com dobutamina) em paciente assintomático ou com sintomas equívocos/discordantes da gravidade da estenose.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-05",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Realizar ecocardiograma transesofágico sistematicamente em candidato a comissurotomia mitral percutânea (CMP), para excluir trombo em átrio esquerdo ou após episódio embólico.",
+        "origem_secao": "Estenose mitral reumática — avaliação"
+      },
+      {
+        "id": "em-06",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Calcular escore de morfologia valvar de Wilkins em candidato a CMP: mobilidade do folheto, espessamento do folheto, calcificação e espessamento/calcificação do aparato subvalvular (1 a 4 pontos cada, total de 4 a 16).",
+        "origem_secao": "Escore de morfologia valvar (Wilkins)"
+      },
+      {
+        "id": "em-07",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Interpretar o escore de Wilkins: ≤8 é preditor de sucesso da CMP; 9-11 é zona cinzenta; >8 é um dos critérios de anatomia desfavorável à CMP (junto com Cormier grupo 3 e insuficiência tricúspide grave).",
+        "origem_secao": "Escore de morfologia valvar (Wilkins)"
+      },
+      {
+        "id": "em-08",
+        "categoria": "terapia_medica",
+        "obrigatorio": false,
+        "texto": "Considerar terapia sintomática com diuréticos, betabloqueadores, digoxina, bloqueadores de canal de cálcio não diidropiridínicos ou ivabradina para controlar sobrecarga de volume e frequência cardíaca.",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "em-09",
+        "categoria": "terapia_medica",
+        "obrigatorio": true,
+        "texto": "Anticoagular com antagonista de vitamina K (INR-alvo 2-3) em paciente com fibrilação atrial associada; evitar DOAC quando AVM ≤2,0 cm² (corte distinto do de gravidade clínica, ≤1,5 cm²).",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "em-10",
+        "categoria": "terapia_medica",
+        "obrigatorio": false,
+        "texto": "Considerar anticoagulação oral em ritmo sinusal após embolia sistêmica, na presença de trombo em átrio esquerdo, ou quando o ETE mostrar contraste espontâneo denso ou átrio esquerdo aumentado (diâmetro modo-M >50 mm ou volume >60 mL/m²); indicar profilaxia de endocardite infecciosa conforme apropriado.",
+        "origem_secao": "Terapia médica"
+      },
+      {
+        "id": "em-11",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": true,
+        "texto": "Limitar indicação de intervenção a paciente com EM reumática clinicamente grave (AVM <1,5 cm²) em quem a CMP deve ter impacto significativo no desfecho clínico.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-12",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": true,
+        "texto": "Indicar CMP (Classe I, Nível B) em paciente sintomático sem características desfavoráveis para o procedimento.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-13",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": true,
+        "texto": "Indicar CMP (Classe I, Nível C) em qualquer paciente sintomático com contraindicação ou alto risco para cirurgia.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-14",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": true,
+        "texto": "Indicar cirurgia da valva mitral (Classe I, Nível C) em paciente sintomático não elegível para CMP.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-15",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": false,
+        "texto": "Considerar CMP (Classe IIa, Nível C) como tratamento inicial em paciente sintomático com anatomia subótima, mas sem características clínicas desfavoráveis.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-16",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": false,
+        "texto": "Considerar CMP (Classe IIa, Nível C) em paciente assintomático sem características clínicas e anatômicas desfavoráveis, com alto risco tromboembólico (embolia sistêmica prévia, contraste espontâneo denso em AE, FA nova/paroxística) e/ou alto risco de descompensação hemodinâmica (PSAP >50 mmHg em repouso, necessidade de cirurgia não cardíaca de grande porte, gestante ou desejo de gestar).",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-17",
+        "categoria": "indicacao_intervencao",
+        "obrigatorio": false,
+        "texto": "Considerar implante transcateter de valva mitral (TMVI) (Classe IIb, Nível C) em paciente sintomático com MAC extensa e disfunção valvar mitral grave, em Centro de Válvula Cardíaca experiente.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-18",
+        "categoria": "contraindicacoes",
+        "obrigatorio": true,
+        "texto": "Verificar contraindicações à CMP antes de indicar o procedimento: AVM >1,5 cm²; trombo em átrio esquerdo (exceto trombo confinado ao apêndice atrial esquerdo, avaliar exceção); insuficiência mitral mais que leve; calcificação grave ou bicomissural.",
+        "origem_secao": "Indicações de intervenção — comissurotomia percutânea versus cirurgia"
+      },
+      {
+        "id": "em-19",
+        "categoria": "casos_particulares",
+        "obrigatorio": false,
+        "texto": "Em doença valvar múltipla, avaliar pelo Heart Team de forma individualizada; preferir cirurgia à CMP quando EM grave associada a doença aórtica grave, salvo alto risco cirúrgico; considerar CMP para postergar cirurgia dupla quando a doença aórtica associada for apenas moderada.",
+        "origem_secao": "Casos clínicos particulares"
+      },
+      {
+        "id": "em-20",
+        "categoria": "casos_particulares",
+        "obrigatorio": false,
+        "texto": "Em insuficiência tricúspide grave concomitante, considerar CMP apenas em paciente selecionado de alto risco, em ritmo sinusal, com aumento atrial moderado e IT secundária por hipertensão pulmonar pós-capilar; fora desse cenário, preferir cirurgia das duas valvas.",
+        "origem_secao": "Casos clínicos particulares"
+      },
+      {
+        "id": "em-21",
+        "categoria": "casos_particulares",
+        "obrigatorio": false,
+        "texto": "Reconhecer EM grave de baixo gradiente (AVM <1,5 cm², gradiente médio <10 mmHg) como cenário desafiador, mais comum em paciente idoso com anatomia desfavorável.",
+        "origem_secao": "Casos clínicos particulares"
+      },
+      {
+        "id": "em-22",
+        "categoria": "casos_particulares",
+        "obrigatorio": true,
+        "texto": "Não indicar CMP em estenose mitral degenerativa com MAC — não há fusão comissural para tratar; considerar intervenção (cirurgia com descalcificação e reconstrução do anel, ou TMVI em centro experiente) apenas em paciente sintomático refratário à terapia clínica.",
+        "origem_secao": "Estenose mitral degenerativa com calcificação do anel mitral (MAC)"
+      },
+      {
+        "id": "em-23",
+        "categoria": "casos_particulares",
+        "obrigatorio": false,
+        "texto": "Em EM degenerativa/MAC, usar ETE liberalmente (planimetria pelo ETT é menos confiável) e TC cardíaca sincronizada ao ECG para avaliar grau e localização das calcificações quando intervenção estiver planejada.",
+        "origem_secao": "Estenose mitral degenerativa com calcificação do anel mitral (MAC)"
+      },
+      {
+        "id": "em-24",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Realizar seguimento por ecocardiograma transtorácico anual em paciente assintomático com EM clinicamente grave sem intervenção, com intervalo maior (2-3 anos) se a estenose for moderada.",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "em-25",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Após CMP, avaliar área valvar e gradiente médio pós-procedimento e manter seguimento continuado, pelo risco de reestenose assintomática.",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "em-26",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliar periodicamente o envolvimento reumático progressivo de outras valvas, independente da modalidade terapêutica escolhida.",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "em-27",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Evitar basear a decisão de CMP apenas na área valvar, sem considerar as características clínicas e anatômicas desfavoráveis (escore de Wilkins >8, Cormier grupo 3, IT grave).",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "em-28",
+        "categoria": "armadilhas",
+        "obrigatorio": true,
+        "texto": "Evitar uso de DOAC em paciente com EM e AVM ≤2,0 cm².",
+        "origem_secao": "Armadilhas clínicas"
+      }
+    ],
+    "revisao": {
+      "status": "pendente_revisao",
+      "revisor": null,
+      "data_revisao": null,
+      "observacoes": "Checklist extraído por curadoria do documento estenose-mitral-diagnostico-e-manejo-esc-eacts-2025.md (já publicado, review_status: revisado). Itens fiéis ao texto de origem, sem adição de critérios não presentes no documento. Aguarda revisão humana antes de qualquer promoção de review_status."
+    }
   }
 ]
