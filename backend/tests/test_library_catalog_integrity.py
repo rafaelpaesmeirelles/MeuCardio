@@ -75,8 +75,10 @@ def test_rc2_monta_aprovacoes_e_reproduz_somente_o_snapshot_publico_e16():
     assert "/editorial-approvals/science-release-20260901.json" in workflow
     assert "18f4d18450cb36f46dc26dcd7c8efda446218a6fd937189a1d1fb3470393b6d0" in workflow
     assert "d779cc4de3d7a351517e0ff00cd34a1a53d96780ea9b6fe915d585aebdf40968" in workflow
+    assert "17c87689aa109248a169d580079d35141de7a04c038e49d9a1b0539f7dfb6386" in workflow
     assert "fronts['medicamentos']['published'] == 206" in workflow
     assert "fronts['emergencia']['published'] == 77" in workflow
+    assert "published_emergency_documents == 165" in workflow
 
 
 def test_catalogo_soma_as_treze_frentes_e_expõe_baselines():
