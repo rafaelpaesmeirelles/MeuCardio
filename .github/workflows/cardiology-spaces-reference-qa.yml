@@ -306,42 +306,71 @@ jobs:
             }
           }
 
-          async function certifyCompactComplete() {
-            await page.setViewportSize({ width: 1050, height: 830 });
-            await page.waitForTimeout(250);
-            const compact = await page.evaluate(() => {
+          async function certifyResponsiveMatrix() {
+            const viewports = [
+              { name:'wide-2560x1440', width:2560, height:1440 },
+              { name:'wide-1920x1080', width:1920, height:1080 },
+              { name:'zoom-1536x700', width:1536, height:700 },
+              { name:'windows-1366x768', width:1366, height:768 },
+              { name:'compact-1280x720', width:1280, height:720 },
+              { name:'low-1280x600', width:1280, height:600 },
+              { name:'narrow-1024x768', width:1024, height:768 },
+            ];
+
+            for (const viewport of viewports) {
+              await page.setViewportSize({ width:viewport.width, height:viewport.height });
+              await page.waitForTimeout(180);
+              const compact = await page.evaluate(() => {
               const q = (selector) => document.querySelector(selector);
+              const qa = (selector) => [...document.querySelectorAll(selector)];
               const r = (el) => {
                 if (!el) return null;
                 const b = el.getBoundingClientRect();
                 return { x:b.x, y:b.y, width:b.width, height:b.height, right:b.right, bottom:b.bottom };
               };
+              const workspace = q('.spaces-workspace');
               return {
                 viewport: { width:innerWidth, height:innerHeight, scrollWidth:document.documentElement.scrollWidth, scrollHeight:document.documentElement.scrollHeight },
+                root:r(q('.spaces-home')),
+                search:r(q('.spaces-everything-search')),
                 rail:r(q('.spaces-context-rail')),
-                workspace:r(q('.spaces-workspace')),
+                workspace:r(workspace),
+                workspaceScroll:workspace ? { width:workspace.scrollWidth, clientWidth:workspace.clientWidth, height:workspace.scrollHeight, clientHeight:workspace.clientHeight } : null,
                 greeting:r(q('.spaces-workspace__greeting')),
                 heading:r(q('.spaces-workspace__greeting h1')),
                 headingText:q('.spaces-workspace__greeting h1')?.textContent?.trim() || '',
                 refs:r(q('.spaces-layer--refs')),
+                doctor:r(q('.spaces-doctor')),
                 day:r(q('.spaces-day')),
                 dock:r(q('.spaces-dock')),
                 motto:r(q('.spaces-motto')),
+                doors:qa('.spaces-door').map((el) => ({ rect:r(el), active:el.classList.contains('is-active') })),
               };
             });
-            modes['complete-compact'] = compact;
-            await page.screenshot({ path:path.join(out, 'screenshots', 'complete-compact.png'), fullPage:false });
-            if (compact.viewport.scrollWidth > compact.viewport.width + 8) failures.push(`complete-compact: overflow horizontal ${compact.viewport.scrollWidth}>${compact.viewport.width}`);
+              modes[`complete-${viewport.name}`] = compact;
+              await page.screenshot({ path:path.join(out, 'screenshots', `complete-${viewport.name}.png`), fullPage:false });
+              const label = `complete-${viewport.name}`;
+              if (compact.viewport.scrollWidth > compact.viewport.width + 2) failures.push(`${label}: overflow horizontal ${compact.viewport.scrollWidth}>${compact.viewport.width}`);
+              if (compact.viewport.scrollHeight > compact.viewport.height + 2) failures.push(`${label}: conteúdo vertical fora da viewport ${compact.viewport.scrollHeight}>${compact.viewport.height}`);
+              if (!compact.root || compact.root.y < -1 || compact.root.bottom > compact.viewport.height + 1) failures.push(`${label}: raiz fora da área útil ${JSON.stringify(compact.root)}`);
             if (!compact.rail || !compact.day || !compact.workspace || !compact.refs) {
-              failures.push(`complete-compact: composição incompleta ${JSON.stringify(compact)}`);
+                failures.push(`${label}: composição incompleta ${JSON.stringify(compact)}`);
             } else {
-              if (compact.day.x <= compact.workspace.right) failures.push(`complete-compact: Meu dia não ocupa a lateral direita ${JSON.stringify(compact.day)}`);
-              if (Math.abs(compact.rail.y - compact.day.y) > 2) failures.push(`complete-compact: laterais começam em alturas diferentes ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
-              if (Math.abs(compact.rail.bottom - compact.day.bottom) > 2 || Math.abs(compact.day.bottom - compact.refs.bottom) > 2) failures.push(`complete-compact: laterais não terminam com a terceira prancha ${JSON.stringify({ rail:compact.rail, day:compact.day, refs:compact.refs })}`);
+                if (compact.day.x < compact.workspace.right - 1) failures.push(`${label}: Meu dia não ocupa a lateral direita ${JSON.stringify(compact.day)}`);
+                if (Math.abs(compact.rail.y - compact.day.y) > 1.5) failures.push(`${label}: laterais começam em alturas diferentes ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
+                if (Math.abs(compact.rail.bottom - compact.day.bottom) > 1.5 || Math.abs(compact.day.bottom - compact.refs.bottom) > 1.5) failures.push(`${label}: laterais não terminam com a terceira prancha ${JSON.stringify({ rail:compact.rail, day:compact.day, refs:compact.refs })}`);
             }
-            if (!compact.greeting || !compact.heading || Math.abs((compact.greeting.y + compact.greeting.height / 2) - (compact.heading.y + compact.heading.height / 2)) > 2) failures.push(`complete-compact: pergunta fora do eixo vertical ${JSON.stringify({ greeting:compact.greeting, heading:compact.heading })}`);
-            if (!/^Onde .+ vai trabalhar agora\?$/.test(compact.headingText)) failures.push(`complete-compact: pergunta profissional inválida ${compact.headingText}`);
-            if (!compact.dock || !compact.motto || compact.motto.y < compact.dock.bottom) failures.push(`complete-compact: dock e frase inferior colidem ${JSON.stringify({ dock:compact.dock, motto:compact.motto })}`);
+              if (!compact.search || !compact.heading || compact.search.bottom > compact.heading.y + 1) failures.push(`${label}: busca colide com a pergunta ${JSON.stringify({ search:compact.search, heading:compact.heading })}`);
+              if (!/^Onde .+ vai trabalhar agora\?$/.test(compact.headingText)) failures.push(`${label}: pergunta profissional inválida ${compact.headingText}`);
+              if (!compact.doctor || compact.refs.bottom > compact.doctor.y + 1 || compact.doctor.bottom > compact.dock.y + 1) failures.push(`${label}: pranchas/status/dock colidem ${JSON.stringify({ refs:compact.refs, doctor:compact.doctor, dock:compact.dock })}`);
+              if (!compact.dock || !compact.motto || compact.motto.y < compact.dock.bottom - 1 || compact.motto.bottom > compact.viewport.height + 1) failures.push(`${label}: dock e frase inferior colidem ${JSON.stringify({ dock:compact.dock, motto:compact.motto })}`);
+              if (compact.workspaceScroll && (compact.workspaceScroll.width > compact.workspaceScroll.clientWidth + 2 || compact.workspaceScroll.height > compact.workspaceScroll.clientHeight + 2)) failures.push(`${label}: workspace transborda ${JSON.stringify(compact.workspaceScroll)}`);
+              for (let index=1; index<compact.doors.length; index+=1) {
+                const previous=compact.doors[index-1].rect;
+                const current=compact.doors[index].rect;
+                if (!previous || !current || Math.abs(current.x - previous.right) > 1.5) failures.push(`${label}: portais não estão contíguos ${JSON.stringify({ previous, current })}`);
+              }
+            }
             await page.setViewportSize({ width: 1600, height: 900 });
             await page.waitForTimeout(250);
           }
@@ -356,7 +385,7 @@ jobs:
             await page.waitForTimeout(350);
             await certifySelectedContext('Hospital', /rotina hospitalar/i);
             certify(await measure('complete'), 'complete');
-            await certifyCompactComplete();
+            await certifyResponsiveMatrix();
 
             await choose('Essencial');
             await certifyDefaultPortal('essential-default', 'Consultório');
