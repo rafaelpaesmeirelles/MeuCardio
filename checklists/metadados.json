@@ -39010,5 +39010,89 @@
       }
     ],
     "revisao": "Checklist extraído fielmente da tabela de indicações da Diretriz Brasileira de Ergometria em População Adulta (SBC 2024) já publicada nesta base como documento de origem. Pendente de validação clínica final."
+  },
+  {
+    "slug": "classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026",
+    "condicao": "Classificação e diagnóstico de suspeita de infarto do miocárdio pela Quinta Definição Universal (2026)",
+    "resumo": "Roteiro para não confundir troponina elevada com infarto, exigir evidência objetiva de isquemia, classificar o evento em um dos três cenários clínicos da nova taxonomia (primário, secundário ou relacionado a procedimento) em vez dos antigos tipos 1–5, e reabrir a investigação quando a angiografia não mostra obstrução (MINOCA como diagnóstico de trabalho), conforme a Quinta Definição Universal de IAM (2026).",
+    "documento_origem": "quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia",
+    "theme": "Doença coronariana",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101."
+    ],
+    "itens": [
+      {
+        "id": "5adu-lesao",
+        "categoria": "criterios_diagnosticos",
+        "obrigatorio": true,
+        "texto": "Confirmada elevação de troponina cardíaca acima do limite superior de referência do percentil 99, idealmente usando limiar específico por sexo quando validado para o ensaio",
+        "origem_secao": "2. Troponina: percentil 99 específico por sexo"
+      },
+      {
+        "id": "5adu-isquemia",
+        "categoria": "criterios_diagnosticos",
+        "obrigatorio": true,
+        "texto": "Buscada evidência objetiva de isquemia miocárdica associada à lesão: sintomas/sinais clínicos de isquemia aguda, novas alterações isquêmicas ou onda Q patológica no ECG, imagem com patologia coronariana aguda, ou nova perda de miocárdio viável/alteração segmentar compatível",
+        "origem_secao": "1. Lesão miocárdica não é sinônimo de infarto"
+      },
+      {
+        "id": "5adu-nao-rotular",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "Não rotulado como infarto apenas pela troponina elevada isolada — interpretação feita em conjunto com clínica, ECG e/ou imagem",
+        "origem_secao": "1. Lesão miocárdica não é sinônimo de infarto"
+      },
+      {
+        "id": "5adu-cenario",
+        "categoria": "classificacao",
+        "obrigatorio": true,
+        "texto": "Evento classificado em um dos três cenários clínicos da nova taxonomia: IAM primário, IAM secundário ou IAM relacionado a procedimento — evitando a numeração antiga (tipos 1/2/3/4/5) como classificação corrente",
+        "origem_secao": "A mudança central"
+      },
+      {
+        "id": "5adu-primario",
+        "categoria": "investigacao",
+        "obrigatorio": false,
+        "texto": "Se classificado como IAM primário: investigado o mecanismo coronariano específico (aterotrombose, SCAD, embolia coronariana, vasoespasmo, ou reestenose/trombose de stent/falha de enxerto ocorrida há mais de 30 dias do procedimento), com imagem intravascular ou teste funcional quando apropriado",
+        "origem_secao": "3. IAM primário"
+      },
+      {
+        "id": "5adu-secundario",
+        "categoria": "criterios_diagnosticos",
+        "obrigatorio": true,
+        "texto": "Se considerado IAM secundário: identificada e documentada a condição aguda alternativa causadora do desequilíbrio oferta-demanda de oxigênio, sem rotular automaticamente qualquer elevação dinâmica de troponina em paciente grave (sepse, choque, insuficiência respiratória, taquiarritmia, anemia grave) como IAM secundário",
+        "origem_secao": "4. IAM secundário"
+      },
+      {
+        "id": "5adu-procedimento",
+        "categoria": "criterios_diagnosticos",
+        "obrigatorio": false,
+        "texto": "Se a complicação ocorreu dentro de 30 dias de procedimento cardíaco percutâneo ou cirúrgico: diagnóstico de IAM relacionado a procedimento baseado em evidência objetiva de complicação coronariana e/ou nova lesão miocárdica isquêmica por imagem, e não apenas em múltiplos fixos de troponina",
+        "origem_secao": "5. IAM relacionado a procedimento"
+      },
+      {
+        "id": "5adu-morte-subita",
+        "categoria": "classificacao",
+        "obrigatorio": false,
+        "texto": "Em morte súbita com IAM como causa provável antes de avaliação diagnóstica completa: evitado o termo 'tipo 3' (removido) e classificado o evento como primário, secundário ou relacionado a procedimento, com base no cenário clínico e em achados post mortem quando disponíveis",
+        "origem_secao": "6. O antigo \"IAM tipo 3\" deixa de existir como categoria"
+      },
+      {
+        "id": "5adu-minoca",
+        "categoria": "investigacao",
+        "obrigatorio": true,
+        "texto": "Após angiografia sem obstrução coronariana significativa: reclassificado como MINOCA (myocardial injury with non-obstructive coronary arteries) como diagnóstico de trabalho, com investigação ativa do mecanismo — causas coronarianas e não coronarianas — usando RMC, imagem intravascular e testes funcionais conforme o caso",
+        "origem_secao": "7. MINOCA: mudança conceitual importante"
+      },
+      {
+        "id": "5adu-imagem",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Nos cenários duvidosos (lesão miocárdica em doença crítica ou pós-procedimento), considerada imagem complementar — angiografia coronariana, IVUS/OCT, teste funcional invasivo, ecocardiograma, RMC, angiotomografia coronariana ou medicina nuclear — para confirmar ou refutar infarto",
+        "origem_secao": "8. Imagem tem papel decisivo nos cenários duvidosos"
+      }
+    ],
+    "revisao": "Checklist extraído fielmente do documento já publicado quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia.md, com origem_secao rastreável em cada item. Nenhum limiar numérico foi inventado. Pendente de revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
