@@ -12,6 +12,7 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.drug import Drug
+from app.services.scientific_loader_safety import enforce_safe_publication
 
 # `review_note` (e qualquer outro campo de front matter que documente a
 # verificação de fonte, sem virar dado clínico) é convenção já em uso em
@@ -42,12 +43,18 @@ def carregar(caminho_json: str) -> dict:
                 # o despublique. Preservar o status antigo poderia manter
                 # conteúdo não revisado visível depois de uma regressão.
                 for k, v in d.items():
-                    if k != "slug" and k in _COLUNAS_DRUG:
+                    if k not in {"slug", "published"} and k in _COLUNAS_DRUG:
                         setattr(existente, k, v)
+                enforce_safe_publication(existente, d, is_new=False)
                 atualizados += 1
             else:
-                campos = {k: v for k, v in d.items() if k in _COLUNAS_DRUG}
-                db.add(Drug(**campos))
+                campos = {
+                    k: v for k, v in d.items()
+                    if k != "published" and k in _COLUNAS_DRUG
+                }
+                registro = Drug(**campos)
+                enforce_safe_publication(registro, d, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

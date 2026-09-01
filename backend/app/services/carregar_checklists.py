@@ -9,10 +9,9 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.checklist import DischargeChecklist
+from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
 
-# `published` NUNCA vem do JSON, pelo mesmo motivo das outras frentes: publicar
-# é decisão humana registrada pela rota de publicação, e copiar o campo do
-# arquivo por cima do banco já tirou conteúdo do ar em silêncio neste projeto.
+# `published` só é consumido como quarentena; nunca promove pela carga.
 
 # Campos que o modelo aceita. Qualquer outro no JSON é ignorado de propósito —
 # um campo novo no arquivo deve falhar em ser gravado, e não criar coluna
@@ -51,12 +50,21 @@ def carregar(caminho_json: str) -> dict:
             existente = db.query(DischargeChecklist).filter(
                 DischargeChecklist.slug == item["slug"]
             ).first()
+            note = combined_review_note(
+                bruto,
+                existing=getattr(existente, "revisao", None),
+            )
+            if note is not None:
+                item["revisao"] = note
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(DischargeChecklist(**item))
+                registro = DischargeChecklist(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

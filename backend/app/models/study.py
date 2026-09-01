@@ -40,6 +40,8 @@ class ScientificStudy(Base):
     tags: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
 
     review_status: Mapped[str] = mapped_column(String(40), default="pendente_revisao")
+    review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
+    fonte_producao: Mapped[str | None] = mapped_column(Text, nullable=True)
     published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
     created_at: Mapped[datetime] = mapped_column(

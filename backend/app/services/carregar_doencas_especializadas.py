@@ -13,6 +13,10 @@ from app.services.clinical_rule_engine import (
     validate_rule_definitions,
 )
 from app.services.disease_manifest import load_disease_records
+from app.services.scientific_loader_safety import (
+    combined_review_note,
+    enforce_safe_publication,
+)
 
 CAMPOS = {
     "slug", "name", "aliases", "area", "category", "subtype", "cyanosis_class",
@@ -68,7 +72,11 @@ def carregar(caminho_json: str) -> dict:
             if not isinstance(raw, dict):
                 erros.append("Item do catálogo não é objeto.")
                 continue
-            item = {key: value for key, value in raw.items() if key in CAMPOS}
+            item = {
+                key: value
+                for key, value in raw.items()
+                if key in CAMPOS and key != "review_note"
+            }
             slug = str(item.get("slug") or "").strip()
             name = str(item.get("name") or "").strip()
             summary = str(item.get("summary") or "").strip()
@@ -113,12 +121,21 @@ def carregar(caminho_json: str) -> dict:
                 continue
 
             existing = db.query(SpecialtyDisease).filter(SpecialtyDisease.slug == slug).first()
+            note = combined_review_note(
+                raw,
+                existing=getattr(existing, "review_note", None),
+            )
+            if note is not None:
+                item["review_note"] = note
             if existing:
                 for field, value in item.items():
                     setattr(existing, field, value)
+                enforce_safe_publication(existing, raw, is_new=False)
                 atualizados += 1
             else:
-                db.add(SpecialtyDisease(**item))
+                record = SpecialtyDisease(**item)
+                enforce_safe_publication(record, raw, is_new=True)
+                db.add(record)
                 novos += 1
         if erros:
             db.rollback()

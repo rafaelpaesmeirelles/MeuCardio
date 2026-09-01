@@ -9,15 +9,15 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.study import ScientificStudy
+from app.services.scientific_loader_safety import (
+    enforce_safe_publication,
+    production_provenance,
+    source_review_note,
+)
 
 
-# `published` NUNCA vem do JSON. Publicar e decisao humana, registrada no banco
-# pela rota /api/admin/conteudo/publicar — e o checkpoint de revisao clinica
-# exigido para conteudo que vai a producao. Antes desta guarda, qualquer
-# recarga copiava `published: false` do arquivo por cima do banco e tirava do
-# ar tudo que ja estava publicado. Foi o que aconteceu com evidencias e
-# estudos ao recarregar uma correcao de texto. Mesmo principio que o
-# importer.py ja aplica aos documentos de content/.
+# O manifesto só pode reduzir publicação: `false` põe em quarentena, `true`
+# nunca promove. A decisão positiva continua fora do carregador.
 
 # Filtro pelas colunas reais do modelo — sem ele, um campo de documentação
 # novo no JSON (ex.: `review_note`) derruba a carga inteira com TypeError ao
@@ -32,15 +32,30 @@ def carregar(caminho_json: str) -> dict:
     db = SessionLocal()
     novos, atualizados = 0, 0
     try:
-        for item in itens:
-            item = {k: v for k, v in item.items() if k != "published" and k in _COLUNAS}
+        for bruto in itens:
+            item = {
+                k: v
+                for k, v in bruto.items()
+                if k not in {"published", "review_note", "fonte_producao"}
+                and k in _COLUNAS
+                and v is not None
+            }
+            note = source_review_note(bruto)
+            if note is not None:
+                item["review_note"] = note
+            provenance = production_provenance(bruto)
+            if provenance is not None:
+                item["fonte_producao"] = provenance
             existente = db.query(ScientificStudy).filter(ScientificStudy.slug == item["slug"]).first()
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(ScientificStudy(**item))
+                registro = ScientificStudy(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

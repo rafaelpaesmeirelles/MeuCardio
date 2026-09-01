@@ -1,63 +1,20 @@
 import re
 from pathlib import Path
 
+import pytest
+
 from app.commands import publish_preserved_content as command
 
 
-class _Field:
-    __hash__ = object.__hash__
-
-    def is_(self, value):
-        return ("is", value)
-
-    def in_(self, values):
-        return ("in", frozenset(values))
-
-    def __eq__(self, value):
-        return ("eq", value)
-
-
-class _Model:
-    slug = _Field()
-    published = _Field()
-    review_status = _Field()
-
-
-class _Query:
-    def __init__(self, amount):
-        self.amount = amount
-        self.filters = []
-        self.updated = False
-
-    def filter(self, *conditions):
-        self.filters.extend(conditions)
-        return self
-
-    def count(self):
-        return self.amount
-
-    def update(self, values, synchronize_session=False):
-        assert values.get(_Model.published) is True
-        assert synchronize_session is False
-        self.updated = True
-        return self.amount
+@pytest.fixture(autouse=True)
+def _banco_limpo():
+    """Este módulo valida contratos puros e não precisa do PostgreSQL global."""
+    yield
 
 
 class _Session:
-    def __init__(self, amounts):
-        self.amounts = iter(amounts)
-        self.queries = []
-        self.commits = 0
+    def __init__(self):
         self.rollbacks = 0
-
-    def query(self, model):
-        assert model is _Model
-        query = _Query(next(self.amounts))
-        self.queries.append(query)
-        return query
-
-    def commit(self):
-        self.commits += 1
 
     def rollback(self):
         self.rollbacks += 1
@@ -65,41 +22,131 @@ class _Session:
 
 def test_publica_preservados_revisados(monkeypatch):
     monkeypatch.setattr(command, "FRONTS", {
-        "documentos": {"model": _Model, "path": "/documentos"},
-        "evidencias": {"model": _Model, "path": "/evidencias.json"},
+        "documentos": {"model": object, "path": "/documentos"},
+        "evidencias": {"model": object, "path": "/evidencias.json"},
     })
     monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
     monkeypatch.setattr(
         command,
         "_canonical_source_slugs",
-        lambda front, source: {f"{front}-atual"},
+        lambda front, source: {
+            f"{front}-atual",
+            f"{front}-quarentena",
+            f"{front}-legado",
+        },
     )
-    db = _Session([3, 2])
+    monkeypatch.setattr(
+        command,
+        "_canonical_publication_intents",
+        lambda front, source: {
+            f"{front}-atual": True,
+            f"{front}-quarentena": False,
+            f"{front}-legado": None,
+        },
+    )
+    monkeypatch.setattr(
+        command,
+        "_load_editorial_approvals",
+        lambda: {
+            "documentos": {"documentos-atual", "documentos-quarentena"},
+            "evidencias": {"evidencias-atual", "evidencias-quarentena"},
+        },
+    )
+    captured = {}
+
+    def synchronize(db, canonical_slugs, **kwargs):
+        captured.update({"db": db, "canonical": canonical_slugs, **kwargs})
+        return (
+            {"documentos": 3, "evidencias": 2},
+            {"documentos": 1, "evidencias": 0},
+            {"documentos": 0, "evidencias": 1},
+            {"documentos": 2, "evidencias": 2},
+        )
+
+    monkeypatch.setattr(command, "_synchronize_publication", synchronize)
+    db = _Session()
     result = command.publish_preserved_reviewed(db)
 
     assert result["published_total"] == 5
     assert result["published_by_front"] == {"documentos": 3, "evidencias": 2}
-    assert db.commits == 1
+    assert result["unpublished_absent"] == {"documentos": 1, "evidencias": 0}
+    assert result["unpublished_unreviewed"] == {"documentos": 0, "evidencias": 1}
+    assert result["unpublished_ineligible"] == {"documentos": 2, "evidencias": 2}
     assert db.rollbacks == 0
-    assert all(query.updated for query in db.queries)
-    assert all(len(query.filters) == 3 for query in db.queries)
-    assert db.queries[0].filters[0] == ("in", frozenset({"documentos-atual"}))
-    assert db.queries[1].filters[0] == ("in", frozenset({"evidencias-atual"}))
+    assert captured["db"] is db
+    assert captured["publish_reviewed"] is True
+    assert captured["dry_run"] is False
+    assert captured["publication_intents"]["documentos"]["documentos-quarentena"] is False
 
 
 def test_dry_run_nao_altera_banco(monkeypatch):
     monkeypatch.setattr(command, "FRONTS", {
-        "documentos": {"model": _Model, "path": "/documentos"},
+        "documentos": {"model": object, "path": "/documentos"},
     })
     monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
     monkeypatch.setattr(command, "_canonical_source_slugs", lambda front, source: {"atual"})
-    db = _Session([4])
+    monkeypatch.setattr(
+        command, "_canonical_publication_intents", lambda front, source: {"atual": True}
+    )
+    monkeypatch.setattr(
+        command, "_load_editorial_approvals", lambda: {"documentos": {"atual"}}
+    )
+    captured = {}
+
+    def synchronize(_db, _canonical, **kwargs):
+        captured.update(kwargs)
+        return (
+            {"documentos": 4},
+            {"documentos": 1},
+            {"documentos": 2},
+            {"documentos": 3},
+        )
+
+    monkeypatch.setattr(command, "_synchronize_publication", synchronize)
+    db = _Session()
     result = command.publish_preserved_reviewed(db, dry_run=True)
 
     assert result["published_total"] == 4
-    assert db.commits == 0
+    assert captured["dry_run"] is True
+    assert db.rollbacks == 0
+
+
+def test_publicador_preservado_rejeita_aprovacao_orfa(monkeypatch):
+    monkeypatch.setattr(command, "FRONTS", {
+        "documentos": {"model": object, "path": "/documentos"},
+    })
+    monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
+    monkeypatch.setattr(command, "_canonical_source_slugs", lambda front, source: {"atual"})
+    monkeypatch.setattr(
+        command, "_canonical_publication_intents", lambda front, source: {"atual": True}
+    )
+    monkeypatch.setattr(
+        command,
+        "_load_editorial_approvals",
+        lambda: {"documentos": {"atual", "ausente"}},
+    )
+    monkeypatch.setattr(
+        command,
+        "_synchronize_publication",
+        lambda *_args, **_kwargs: pytest.fail("não deve sincronizar approval órfã"),
+    )
+    db = _Session()
+
+    with pytest.raises(RuntimeError, match="slugs ausentes"):
+        command.publish_preserved_reviewed(db)
+
     assert db.rollbacks == 1
-    assert not db.queries[0].updated
+
+
+def test_publicador_preservado_usa_a_politica_integral_do_reconcile():
+    source = Path(command.__file__).read_text(encoding="utf-8")
+    assert "_canonical_publication_intents" in source
+    assert "_load_editorial_approvals" in source
+    assert "_validate_editorial_approvals" in source
+    assert "_synchronize_publication" in source
+    assert "unpublished_absent" in source
+    assert "unpublished_unreviewed" in source
+    assert "unpublished_ineligible" in source
 
 
 def test_ordem_do_menu_alerta_e_deploy():

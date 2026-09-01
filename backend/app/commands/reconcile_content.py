@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import frontmatter
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -182,6 +183,63 @@ def _canonical_source_slugs(front: str, source: Path) -> set[str]:
     raise RuntimeError(f"Fonte da frente {front} não permite inventariar slugs: {source}")
 
 
+def _canonical_publication_intents(front: str, source: Path) -> dict[str, bool | None]:
+    """Lê intenção explícita sem transformar ausência legada em promoção.
+
+    ``True`` autoriza a etapa de publicação somente quando há também revisão e
+    aprovação versionada; ``False`` é quarentena; ausência preserva o estado
+    anterior e nunca promove um registro novo ainda falso.
+    """
+    records: list[tuple[str, dict[str, Any]]] = []
+    if source.suffix.lower() == ".json":
+        if front == "doencas_especializadas":
+            payload = load_disease_records(source)
+        elif front == "triagem_sintomas":
+            payload = load_triage_records(source)
+        else:
+            payload = json.loads(source.read_text(encoding="utf-8"))
+        if not isinstance(payload, list):
+            raise RuntimeError(f"Manifesto da frente {front} deve ser uma lista JSON.")
+        for index, item in enumerate(payload):
+            if not isinstance(item, dict):
+                raise RuntimeError(f"Frente {front} contém item inválido no índice {index}.")
+            slug = item.get("slug")
+            if not isinstance(slug, str) or not slug.strip() or slug != slug.strip():
+                raise RuntimeError(
+                    f"Frente {front} contém slug inválido no índice {index}."
+                )
+            records.append((slug, item))
+    elif source.is_dir():
+        for md in sorted(source.rglob("*.md")):
+            post = frontmatter.load(md)
+            title = post.metadata.get("title") or md.stem
+            slug = _resolve_markdown_slug(
+                post.metadata,
+                title,
+                source=f"Frente {front}, arquivo {md}",
+            )
+            records.append((slug, post.metadata))
+    else:
+        raise RuntimeError(
+            f"Fonte da frente {front} não permite ler intenção de publicação: {source}"
+        )
+
+    intents: dict[str, bool | None] = {}
+    for slug, metadata in records:
+        if slug in intents:
+            raise RuntimeError(f"Frente {front} contém slug duplicado: {slug}")
+        if "published" not in metadata:
+            intents[slug] = None
+            continue
+        value = metadata["published"]
+        if not isinstance(value, bool):
+            raise RuntimeError(
+                f"Frente {front}/{slug}: published deve ser booleano quando informado."
+            )
+        intents[slug] = value
+    return intents
+
+
 def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
     diagnostics: dict[str, Any] = {}
     if isinstance(value, dict):
@@ -210,9 +268,26 @@ def _assert_no_rejections(front: str, result: dict[str, Any]) -> None:
         )
 
 
-def _load_front(front: str, config: dict[str, Any]) -> tuple[dict, set[str]]:
+def _prepare_front(
+    front: str, config: dict[str, Any]
+) -> tuple[Path, set[str], dict[str, bool | None]]:
     source = _ensure_source(front, str(config["path"]))
     canonical_slugs = _canonical_source_slugs(front, source)
+    publication_intents = _canonical_publication_intents(front, source)
+    if set(publication_intents) != canonical_slugs:
+        raise RuntimeError(f"Frente {front}: inventário e intenção de publicação divergiram.")
+    return source, canonical_slugs, publication_intents
+
+
+def _load_front(
+    front: str,
+    config: dict[str, Any],
+    *,
+    prepared: tuple[Path, set[str], dict[str, bool | None]] | None = None,
+) -> tuple[dict, set[str], dict[str, bool | None]]:
+    source, canonical_slugs, publication_intents = (
+        prepared if prepared is not None else _prepare_front(front, config)
+    )
     if config["loader"] is None:
         result = import_directory(str(source))
     else:
@@ -220,7 +295,7 @@ def _load_front(front: str, config: dict[str, Any]) -> tuple[dict, set[str]]:
         result = module.carregar(str(source))
     result = {**result, "itens_fonte": len(canonical_slugs)}
     _assert_no_rejections(front, result)
-    return result, canonical_slugs
+    return result, canonical_slugs, publication_intents
 
 
 def _load_editorial_approvals() -> dict[str, set[str]]:
@@ -254,34 +329,21 @@ def _load_editorial_approvals() -> dict[str, set[str]]:
     return approvals
 
 
-def _apply_editorial_approvals(
-    db: Session, canonical_slugs: dict[str, set[str]]
+def _validate_editorial_approvals(
+    canonical_slugs: dict[str, set[str]],
+    approvals: dict[str, set[str]] | None = None,
 ) -> dict[str, int]:
-    """Promove no banco apenas slugs canônicos com aprovação versionada."""
-    approvals = _load_editorial_approvals()
-    applied: dict[str, int] = {}
-    try:
-        for front, slugs in approvals.items():
-            if not slugs:
-                applied[front] = 0
-                continue
-            absent = sorted(slugs - canonical_slugs[front])
-            if absent:
-                raise RuntimeError(
-                    f"Aprovação editorial de {front} aponta slugs ausentes do corpus: {absent}"
-                )
-            model = FRONTS[front]["model"]
-            changed = (
-                db.query(model)
-                .filter(model.slug.in_(slugs), model.review_status != "revisado")
-                .update({model.review_status: "revisado"}, synchronize_session=False)
+    """Valida aprovações sem convertê-las em revisão clínica."""
+    approvals = approvals if approvals is not None else _load_editorial_approvals()
+    validated: dict[str, int] = {}
+    for front, slugs in approvals.items():
+        absent = sorted(slugs - canonical_slugs[front])
+        if absent:
+            raise RuntimeError(
+                f"Aprovação editorial de {front} aponta slugs ausentes do corpus: {absent}"
             )
-            applied[front] = int(changed)
-        db.commit()
-    except Exception:
-        db.rollback()
-        raise
-    return applied
+        validated[front] = len(slugs)
+    return validated
 
 
 def _load_controlled_substances(db: Session) -> dict:
@@ -298,20 +360,38 @@ def _synchronize_publication(
     canonical_slugs: dict[str, set[str]],
     *,
     publish_reviewed: bool,
-) -> tuple[dict[str, int], dict[str, int], dict[str, int]]:
-    """Publica somente o corpus atual e despublica slugs ausentes do commit."""
+    approved_slugs: dict[str, set[str]],
+    publication_intents: dict[str, dict[str, bool | None]],
+    dry_run: bool = False,
+) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, int]]:
+    """Aplica a única política de publicação das fontes canônicas.
+
+    ``dry_run`` executa as mesmas operações e devolve as mesmas contagens, mas
+    reverte a transação inteira ao final. Isso permite que o comando operacional
+    reutilize esta política sem manter uma segunda implementação divergente.
+    """
     published: dict[str, int] = {}
     unpublished_absent: dict[str, int] = {}
     unpublished_unreviewed: dict[str, int] = {}
+    unpublished_ineligible: dict[str, int] = {}
     try:
         for front, config in FRONTS.items():
             model = config["model"]
             slugs = canonical_slugs[front]
+            intents = publication_intents[front]
+            if set(intents) != slugs:
+                raise RuntimeError(
+                    f"Frente {front}: intenção de publicação não cobre o corpus canônico."
+                )
+            explicit_true = {slug for slug, value in intents.items() if value is True}
+            explicit_false = {slug for slug, value in intents.items() if value is False}
+            approved = approved_slugs.get(front, set())
+            eligible = explicit_true & approved
             if publish_reviewed:
                 changed = (
                     db.query(model)
                     .filter(
-                        model.slug.in_(slugs),
+                        model.slug.in_(eligible),
                         model.published.is_(False),
                         model.review_status == "revisado",
                     )
@@ -321,12 +401,26 @@ def _synchronize_publication(
             else:
                 published[front] = 0
 
+            ineligible = explicit_false | (explicit_true - approved)
+            blocked = (
+                db.query(model)
+                .filter(
+                    model.slug.in_(ineligible),
+                    model.published.is_(True),
+                )
+                .update({model.published: False}, synchronize_session=False)
+            )
+            unpublished_ineligible[front] = int(blocked)
+
             demoted = (
                 db.query(model)
                 .filter(
                     model.slug.in_(slugs),
                     model.published.is_(True),
-                    model.review_status != "revisado",
+                    or_(
+                        model.review_status.is_(None),
+                        model.review_status != "revisado",
+                    ),
                 )
                 .update({model.published: False}, synchronize_session=False)
             )
@@ -338,11 +432,19 @@ def _synchronize_publication(
                 .update({model.published: False}, synchronize_session=False)
             )
             unpublished_absent[front] = int(removed)
-        db.commit()
+        if dry_run:
+            db.rollback()
+        else:
+            db.commit()
     except Exception:
         db.rollback()
         raise
-    return published, unpublished_absent, unpublished_unreviewed
+    return (
+        published,
+        unpublished_absent,
+        unpublished_unreviewed,
+        unpublished_ineligible,
+    )
 
 
 def _database_inventory(
@@ -408,17 +510,67 @@ def _migrate_study_track_progress(db: Session) -> int:
 
 def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) -> dict[str, Any]:
     loads: dict[str, Any] = {}
-    canonical_slugs: dict[str, set[str]] = {}
+    prepared = {
+        front: _prepare_front(front, config)
+        for front, config in FRONTS.items()
+    }
+    canonical_slugs = {
+        front: state[1]
+        for front, state in prepared.items()
+    }
+    publication_intents = {
+        front: state[2]
+        for front, state in prepared.items()
+    }
+    approved_slugs = _load_editorial_approvals()
+    editorial_approvals = _validate_editorial_approvals(
+        canonical_slugs, approvals=approved_slugs
+    )
+
+    # Fecha quarentena, revogação e remoção ANTES do primeiro loader. Cada
+    # loader usa sessão própria; sem esta pré-sincronização, uma falha tardia
+    # poderia impedir a política final e deixar no ar um estado já inelegível.
+    preflight_db = SessionLocal()
+    try:
+        (
+            _preflight_published,
+            preflight_absent,
+            preflight_unreviewed,
+            preflight_ineligible,
+        ) = _synchronize_publication(
+            preflight_db,
+            canonical_slugs,
+            publish_reviewed=False,
+            approved_slugs=approved_slugs,
+            publication_intents=publication_intents,
+        )
+    finally:
+        preflight_db.close()
+
     for front, config in FRONTS.items():
-        loads[front], canonical_slugs[front] = _load_front(front, config)
+        (
+            loads[front],
+            loaded_slugs,
+            loaded_intents,
+        ) = _load_front(front, config, prepared=prepared[front])
+        if loaded_slugs != canonical_slugs[front] or loaded_intents != publication_intents[front]:
+            raise RuntimeError(f"Frente {front}: estado preparado divergiu durante a carga.")
 
     db = SessionLocal()
     try:
         loads["controlados"] = _load_controlled_substances(db)
         migrated_study_track_progress = _migrate_study_track_progress(db)
-        editorial_approvals = _apply_editorial_approvals(db, canonical_slugs)
-        published, unpublished_absent, unpublished_unreviewed = _synchronize_publication(
-            db, canonical_slugs, publish_reviewed=publish_reviewed
+        (
+            published,
+            final_absent,
+            final_unreviewed,
+            final_ineligible,
+        ) = _synchronize_publication(
+            db,
+            canonical_slugs,
+            publish_reviewed=publish_reviewed,
+            approved_slugs=approved_slugs,
+            publication_intents=publication_intents,
         )
         database = _database_inventory(db, canonical_slugs)
         if database["below_minimum"] and not allow_partial:
@@ -430,12 +582,26 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     finally:
         db.close()
 
+    unpublished_absent = {
+        front: preflight_absent[front] + final_absent[front]
+        for front in FRONTS
+    }
+    unpublished_unreviewed = {
+        front: preflight_unreviewed[front] + final_unreviewed[front]
+        for front in FRONTS
+    }
+    unpublished_ineligible = {
+        front: preflight_ineligible[front] + final_ineligible[front]
+        for front in FRONTS
+    }
+
     result = {
         "loads": loads,
         "editorial_approvals": editorial_approvals,
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,
+        "unpublished_ineligible": unpublished_ineligible,
         "migrated_study_track_progress": migrated_study_track_progress,
         "database": database,
         "knowledge_graph": knowledge_graph,
@@ -446,7 +612,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--publish-reviewed", action="store_true",
-                        help="Publica somente registros com review_status=revisado.")
+                        help="Publica somente registros revisados com aprovação versionada.")
     parser.add_argument("--allow-partial", action="store_true",
                         help="Não falha quando o banco fica abaixo do baseline versionado.")
     args = parser.parse_args()

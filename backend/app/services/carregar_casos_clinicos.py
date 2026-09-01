@@ -9,8 +9,9 @@ import sys
 
 from app.core.db import SessionLocal
 from app.models.clinical_case import ClinicalCase
+from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
 
-# `published` NUNCA vem do JSON, mesmo motivo das outras frentes.
+# `published` só é consumido como quarentena; nunca promove pela carga.
 CAMPOS = {"slug", "titulo", "tema", "nivel", "enunciado", "pergunta", "opcoes",
           "resposta_correta", "explicacao", "source_refs", "review_status", "revisao"}
 
@@ -40,12 +41,21 @@ def carregar(caminho_json: str) -> dict:
             existente = db.query(ClinicalCase).filter(
                 ClinicalCase.slug == item["slug"]
             ).first()
+            note = combined_review_note(
+                bruto,
+                existing=getattr(existente, "revisao", None),
+            )
+            if note is not None:
+                item["revisao"] = note
             if existente:
                 for campo, valor in item.items():
                     setattr(existente, campo, valor)
+                enforce_safe_publication(existente, bruto, is_new=False)
                 atualizados += 1
             else:
-                db.add(ClinicalCase(**item))
+                registro = ClinicalCase(**item)
+                enforce_safe_publication(registro, bruto, is_new=True)
+                db.add(registro)
                 novos += 1
         db.commit()
     finally:

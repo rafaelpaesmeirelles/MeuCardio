@@ -62,8 +62,8 @@ def _detail(e: EvidenceRecord) -> dict:
         "reference": e.reference,
         "tags": e.tags,
         "document_slug": e.document_slug,
+        "study_slug": e.study_slug,
         "review_status": e.review_status,
-        "review_note": e.review_note,
     }
 
 

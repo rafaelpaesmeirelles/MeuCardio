@@ -83,6 +83,8 @@ def revisar(
     doc = db.query(Document).filter(Document.slug == slug).first()
     if not doc:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    if decisao.publicar and doc.review_status != "revisado":
+        raise HTTPException(status_code=422, detail="Conteúdo pendente não pode ser publicado.")
 
     doc.published = decisao.publicar
     # Publicar não é revisar. Esta rota mexia no `review_status` junto, e como o
@@ -162,9 +164,13 @@ def carregar_conteudo(
     db: Session = Depends(get_db),
     user=Depends(require_admin),
 ):
-    """Lê os JSON versionados e faz upsert por slug. Não publica nada: os itens
-    entram com published=false e só aparecem na interface depois da rota de
-    publicação abaixo — o checkpoint de revisão exigido para conteúdo clínico."""
+    """Lê os JSON versionados e faz upsert por slug sem promover publicação.
+
+    Registros novos entram despublicados. Em registros existentes, a carga
+    preserva uma publicação já aprovada somente enquanto o item continuar
+    revisado e não estiver em quarentena explícita; promoção continua restrita
+    ao fluxo editorial abaixo/reconciliação canônica.
+    """
     import importlib
 
     alvos = [frente] if frente else list(FRENTES)
@@ -214,7 +220,7 @@ def conteudo_pendente(db: Session = Depends(get_db), _=Depends(require_admin)):
 
 class PublicacaoConteudo(BaseModel):
     frente: str
-    slugs: list[str] | None = None       # vazio = todos os elegíveis da frente
+    slugs: list[str] | None = None       # seleção explícita e auditável
     somente_revisados: bool = True       # não publica o que ainda está pendente_revisao
     publicar: bool = True                # false = tira do ar
 
@@ -240,12 +246,22 @@ def publicar_conteudo(
             detail="Para despublicar, informe os slugs — despublicar a frente inteira "
                    "por engano tiraria todo o conteúdo do ar.",
         )
+    if dados.publicar and not dados.slugs:
+        raise HTTPException(
+            status_code=422,
+            detail="Para publicar, informe os slugs aprovados explicitamente.",
+        )
+    if dados.publicar and not dados.somente_revisados:
+        raise HTTPException(
+            status_code=422,
+            detail="Conteúdo pendente não pode ser publicado.",
+        )
 
     Modelo = _modelo(FRENTES[dados.frente][2])
     query = db.query(Modelo).filter(Modelo.published.is_(not dados.publicar))
     if dados.slugs:
         query = query.filter(Modelo.slug.in_(dados.slugs))
-    if dados.publicar and dados.somente_revisados:
+    if dados.publicar:
         query = query.filter(Modelo.review_status == "revisado")
 
     itens = query.all()

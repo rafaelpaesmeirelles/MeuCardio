@@ -7,25 +7,59 @@ on:
 permissions:
   contents: read
   actions: write
+  pull-requests: read
 
 jobs:
   dispatch-mandatory-gates:
     name: Dispatch all mandatory gates on main
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch mandatory workflows against current main
+      - name: Checkout the immutable merge policy
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+
+      # Branch protection must require the PR check named "CI policy". The
+      # bounded retry below covers GitHub indexing/artifact visibility only;
+      # the policy rejects any CI completion timestamp later than the merge.
+      - name: Reuse PR CI only when it completed before an equivalent merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          FINAL_SHA: ${{ github.sha }}
+        run: >-
+          python scripts/ci_release_policy.py verify-merged-pr-ci
+          --repository "$REPOSITORY"
+          --merge-sha "$FINAL_SHA"
+          --attempts 5
+          --delay 4
+
+      - name: Dispatch mandatory workflows without crossing a main update
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
           FINAL_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
-          test "$current_main" = "$FINAL_SHA"
+          assert_current_main() {
+            local current_main
+            current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+            if [[ "$current_main" != "$FINAL_SHA" ]]; then
+              echo "Dispatcher candidate $FINAL_SHA is obsolete; current main is $current_main" >&2
+              exit 1
+            fi
+          }
 
-          gh workflow run rc2-acceptance.yml --repo "$REPOSITORY" --ref main
-          gh workflow run visual-qa.yml --repo "$REPOSITORY" --ref main
-          gh workflow run corpus-database.yml --repo "$REPOSITORY" --ref main
-          gh workflow run deep-functional-and-app-gates.yml --repo "$REPOSITORY" --ref main
-
-          echo "Dispatched mandatory web/Android release gates for main SHA ${FINAL_SHA}; Windows remains pending."
+          workflows=(
+            rc2-acceptance.yml
+            visual-qa.yml
+            corpus-database.yml
+            deep-functional-and-app-gates.yml
+          )
+          assert_current_main
+          for workflow in "${workflows[@]}"; do
+            assert_current_main
+            gh workflow run "$workflow" --repo "$REPOSITORY" --ref main
+            assert_current_main
+          done
+          echo "Dispatched four mandatory post-merge gates for immutable SHA $FINAL_SHA."

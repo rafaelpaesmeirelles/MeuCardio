@@ -18,8 +18,8 @@
   ],
   "estudos": [
     {
-      "slug": "select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes",
-      "title": "SELECT — Semaglutida 2,4 mg e desfechos cardiovasculares em obesidade sem diabetes",
+      "slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
+      "title": "SELECT — Semaglutida e desfechos cardiovasculares em obesidade sem diabetes",
       "study_type": "ensaio_clinico",
       "authors": "Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, Esbjerg S, Hardt-Lindberg S, Hovingh GK, Kahn SE, Kushner RF, Lingvay I, Oral TK, Plutzky J, Tornøe CW, Ryan DH; SELECT Trial Investigators",
       "journal": "New England Journal of Medicine",
@@ -31,19 +31,20 @@
       "key_findings": "Evento do desfecho primário em 569/8.803 (6,5%) com semaglutida versus 701/8.801 (8,0%) com placebo — HR 0,80 (IC95% 0,72-0,90; P<0,001). Eventos adversos que levaram à descontinuação permanente: 1.461 (16,6%) versus 718 (8,2%); P<0,001. O abstract do PubMed não reporta os componentes isolados do composto nem a magnitude da perda de peso; estes números não devem ser inventados a partir desta entrada.",
       "clinical_implications": "Primeiro ensaio a demonstrar redução de MACE de 3 pontos com um fármaco antiobesidade em prevenção secundária na ausência de diabetes. A dose testada é 2,4 mg semanal, não 1,0 mg (FLOW) nem a formulação oral. O resultado não se extrapola para prevenção primária, para quem não tem doença cardiovascular preexistente, nem para outros agonistas de GLP-1 ou tirzepatida.",
       "limitations": "População de prevenção secundária (doença cardiovascular preexistente obrigatória); abstract não decompõe os componentes do MACE nem o mecanismo (peso versus efeitos pleiotrópicos); descontinuação por evento adverso o dobro do placebo; financiamento pelo fabricante (Novo Nordisk); não testa semaglutida 1,0 mg, formulação oral, tirzepatida nem cirurgia bariátrica.",
-      "theme": "Prevenção e lipídios",
+      "theme": "Farmacologia",
       "tags": [
-        "SELECT",
         "semaglutida",
         "GLP-1",
         "obesidade",
-        "prevenção secundária",
         "desfecho cardiovascular",
+        "prevenção secundária",
+        "SELECT",
         "sem diabetes"
       ],
+      "review_status": "revisado",
+      "published": true,
       "document_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
-      "review_status": "pendente_revisao",
-      "published": false
+      "review_note": "Revisão científica e consolidação de duplicata concluídas em 2026-09-01 contra PubMed PMID 37952131 e DOI 10.1056/NEJMoa2307563. O registro duplicado select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes foi incorporado neste canônico sem perda de resultados, limitações, identificadores ou contexto exclusivo; síntese não deve ser extrapolada além da população e dos desfechos da fonte."
     }
   ],
   "evidencias": [

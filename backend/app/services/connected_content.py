@@ -26,28 +26,21 @@ from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
 from app.services.topic_relevance import (
+    CONTEXT_MIN_RELEVANCE_SCORE,
+    CONTEXT_TAG_TOKEN_WEIGHT,
     SUPPORTED_DRUG_TOPICS,
+    ContextualRelevance,
     canonical_theme,
     drug_matches_theme,
-    normalize_text,
+    relevance_tokens,
+    score_contextual_relevance,
     theme_variants,
 )
 
 
-_GENERIC_TOPIC_TOKENS = frozenset({
-    "cardiologia", "cardiovascular", "cardiaco", "cardiaca", "doenca", "sindrome",
-    "manejo", "tratamento", "terapia", "avaliacao", "diagnostico", "risco", "estudo",
-    "evidencia", "diretriz", "clinico", "clinica", "paciente", "adulto", "adultos",
-    "crianca", "criancas", "adolescente", "agudo", "aguda", "cronico", "cronica",
-    "grave", "arterial", "atrial", "ventricular", "atleta", "esporte", "exercicio",
-    "cardiomiopatia", "cardiomiopatias",
-    "para", "pela", "pelo", "pelos", "pelas", "com", "sem", "entre", "versus",
-    "apos", "antes", "durante", "como", "quando", "qual", "quais", "uma", "umas",
-    "uns", "sobre", "este", "esta", "esse", "essa", "dos", "das", "nas", "nos",
-})
-
-
-def _merge_groups(responses: list[dict], *, limit: int = LIMITE_POR_CATEGORIA) -> list[dict]:
+def _merge_groups(
+    responses: list[dict], *, limit: int | None = LIMITE_POR_CATEGORIA,
+) -> list[dict]:
     order: list[str] = []
     by_type: dict[str, dict] = {}
     seen: dict[str, set[tuple[str, str]]] = {}
@@ -71,13 +64,15 @@ def _merge_groups(responses: list[dict], *, limit: int = LIMITE_POR_CATEGORIA) -
                 seen[kind].add(key)
                 by_type[kind]["itens"].append(item)
 
-    for group in by_type.values():
-        group["itens"] = group["itens"][:limit]
+    if limit is not None:
+        for group in by_type.values():
+            group["itens"] = group["itens"][:limit]
     return [by_type[kind] for kind in order]
 
 
 def _contextual_drugs(
     db: Session, theme: str, excluir_tipo: str | None, excluir_slug: str | None,
+    *, limit: int | None = LIMITE_POR_CATEGORIA,
 ) -> list[dict]:
     query = select(Drug).where(Drug.published.is_(True)).order_by(Drug.generic_name)
     drugs = db.execute(query).scalars().all()
@@ -93,19 +88,28 @@ def _contextual_drugs(
             "subtitulo": drug.drug_class,
             "rota": f"/medicamentos?slug={drug.slug}",
         })
-        if len(items) >= LIMITE_POR_CATEGORIA:
+        if limit is not None and len(items) >= limit:
             break
     return items
 
 
 def _tokens(value: object) -> set[str]:
-    if isinstance(value, (list, tuple, set)):
-        text = " ".join(str(item) for item in value if item)
-    else:
-        text = str(value or "")
+    return relevance_tokens(value)
+
+
+def _with_match_metadata(item: dict, match: ContextualRelevance) -> dict:
+    """Add an auditable explanation without changing legacy item fields."""
     return {
-        token for token in normalize_text(text).split()
-        if len(token) >= 3 and not token.isdigit() and token not in _GENERIC_TOPIC_TOKENS
+        **item,
+        "relation_scope": "clinical_match",
+        "relation_method": "discriminative_lexical_overlap",
+        # `relevance_score` shares the graph's public 0..1 contract. Keep the
+        # raw, auditable matcher score separately so the UI never presents an
+        # unbounded integer as a percentage/probability.
+        "relevance_score": min(1.0, match.score / CONTEXT_TAG_TOKEN_WEIGHT),
+        "match_score": match.score,
+        "match_threshold": CONTEXT_MIN_RELEVANCE_SCORE,
+        "match_reasons": match.reasons(),
     }
 
 
@@ -114,7 +118,7 @@ def _contextual_studies(
     themes: tuple[str, ...],
     origin_subject: str | None,
     excluir_slug: str | None,
-) -> list[ScientificStudy]:
+) -> list[tuple[ScientificStudy, ContextualRelevance]]:
     """Return only studies specifically connected to the origin subject.
 
     A shared broad theme is a catalogue boundary, not proof of a relationship.
@@ -136,16 +140,18 @@ def _contextual_studies(
             ScientificStudy.slug != excluir_slug,
         )
     ).scalars().all()
-    ranked: list[tuple[int, int, str, ScientificStudy]] = []
+    ranked: list[tuple[int, int, str, ScientificStudy, ContextualRelevance]] = []
     for study in studies:
-        title_overlap = origin_terms & _tokens((study.slug, study.title))
-        tag_overlap = origin_terms & _tokens(study.tags)
-        if not title_overlap and not tag_overlap:
+        match = score_contextual_relevance(
+            origin_terms,
+            title_or_slug=(study.slug, study.title),
+            tags=study.tags,
+        )
+        if not match.accepted:
             continue
-        score = 3 * len(title_overlap) + 5 * len(tag_overlap)
-        ranked.append((score, study.year or 0, study.title.casefold(), study))
+        ranked.append((match.score, study.year or 0, study.title.casefold(), study, match))
     ranked.sort(key=lambda row: (-row[0], -row[1], row[2]))
-    return [row[3] for row in ranked[:LIMITE_POR_CATEGORIA]]
+    return [(row[3], row[4]) for row in ranked[:LIMITE_POR_CATEGORIA]]
 
 
 def _filter_groups_by_subject(
@@ -171,19 +177,19 @@ def _filter_groups_by_subject(
     for group in groups:
         if group["tipo"] == "estudo":
             continue
-        matched: list[tuple[int, int, dict]] = []
+        matched: list[tuple[int, int, dict, ContextualRelevance]] = []
         for position, item in enumerate(group.get("itens", [])):
-            candidate_terms = _tokens((
-                item.get("slug"), item.get("titulo"), item.get("subtitulo"),
-            ))
-            overlap = origin_terms & candidate_terms
-            if overlap:
-                matched.append((len(overlap), position, item))
+            match = score_contextual_relevance(
+                origin_terms,
+                title_or_slug=(
+                    item.get("slug"), item.get("titulo"), item.get("subtitulo"),
+                ),
+            )
+            if match.accepted:
+                matched.append((match.score, position, item, match))
         matched.sort(key=lambda row: (-row[0], row[1]))
-        best_score = matched[0][0] if matched else 0
         group["itens"] = [
-            row[2] for row in matched
-            if row[0] == best_score
+            _with_match_metadata(row[2], row[3]) for row in matched
         ][:LIMITE_POR_CATEGORIA]
 
 
@@ -267,14 +273,18 @@ def buscar_relacionados_contextuais(
         return {"tema": "", "grupos": [], "total": 0}
 
     variants = theme_variants(canonical)
+    # Contextual matching must see the full theme pool; otherwise a relevant
+    # older item can be discarded before it receives a score. Theme catalogues
+    # retain the normal bounded query because no item-level ranking is claimed.
+    candidate_limit = None if assunto else LIMITE_POR_CATEGORIA
     responses = [
         _base(
             db, variant, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug,
-            limite_por_categoria=100,
+            limite_por_categoria=candidate_limit,
         )
         for variant in variants
     ]
-    groups = _merge_groups(responses, limit=100)
+    groups = _merge_groups(responses, limit=candidate_limit)
     origin_subject = _origin_subject(
         db,
         assunto=assunto,
@@ -293,7 +303,9 @@ def buscar_relacionados_contextuais(
             "rota_lista": "/medicamentos", "itens": [],
         }
         groups.append(drug_group)
-    drug_group["itens"] = _contextual_drugs(db, canonical, excluir_tipo, excluir_slug)
+    drug_group["itens"] = _contextual_drugs(
+        db, canonical, excluir_tipo, excluir_slug, limit=candidate_limit,
+    )
 
     study_group = next((group for group in groups if group["tipo"] == "estudo"), None)
     if study_group is None:
@@ -305,22 +317,44 @@ def buscar_relacionados_contextuais(
     if assunto:
         studies = _contextual_studies(db, variants, origin_subject, excluir_slug)
         study_group["itens"] = [
-            {
-                "slug": study.slug,
-                "titulo": study.title,
-                "subtitulo": f"{study.journal} · {study.year}",
-                "rota": f"/estudos/{study.slug}",
-            }
-            for study in studies
+            _with_match_metadata(
+                {
+                    "slug": study.slug,
+                    "titulo": study.title,
+                    "subtitulo": f"{study.journal} · {study.year}",
+                    "rota": f"/estudos/{study.slug}",
+                },
+                match,
+            )
+            for study, match in studies
         ]
         if filtrar_grupos_por_assunto:
             _filter_groups_by_subject(groups, variants, origin_subject)
+        relation_scope = (
+            "clinical_match" if filtrar_grupos_por_assunto else "structured_clinical_topic"
+        )
+        relation_method = (
+            "discriminative_lexical_overlap"
+            if filtrar_grupos_por_assunto
+            else "reviewed_drug_indication"
+        )
     else:
         for group in groups:
             group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
+        relation_scope = "theme_catalog"
+        relation_method = "structured_theme"
 
     total = sum(len(group["itens"]) for group in groups)
-    return {"tema": canonical, "grupos": groups, "total": total}
+    response = {
+        "tema": canonical,
+        "relation_scope": relation_scope,
+        "relation_method": relation_method,
+        "grupos": groups,
+        "total": total,
+    }
+    if relation_scope == "clinical_match":
+        response["match_threshold"] = CONTEXT_MIN_RELEVANCE_SCORE
+    return response
 
 
 def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
@@ -353,6 +387,8 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
     return {
         "medicamento": {"slug": drug.slug, "titulo": drug.generic_name},
         "temas": themes,
+        "relation_scope": "structured_clinical_topic",
+        "relation_method": "reviewed_drug_indication",
         "grupos": groups,
         "total": total,
     }

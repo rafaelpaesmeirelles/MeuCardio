@@ -17,8 +17,10 @@ on:
       - "doencas/**"
       - "triagem-sintomas/**"
       - "controlados/**"
+      - "editorial-approvals/**"
       - "scripts/content_inventory.py"
       - "scripts/audit_tudo_com_tudo.py"
+      - "scripts/tests/**"
       - ".github/workflows/corpus-inventory.yml"
   workflow_dispatch:
 
@@ -67,3 +69,34 @@ jobs:
           assert topic_coverage["without_explicit_topic"] == 0, topic_coverage
           assert audit["broken_references"] == [], audit["broken_references"][:10]
           PY
+
+      - name: Audit latest approved science release manifest
+        shell: bash
+        run: |
+          # Release manifests are timestamped in their filenames; LC_ALL=C makes
+          # the lexically latest filename deterministic across runners.
+          mapfile -t manifests < <(
+            find editorial-approvals -maxdepth 1 -type f \
+              -name 'science-release-*.json' -printf '%p\n' \
+              | LC_ALL=C sort
+          )
+          if (( ${#manifests[@]} == 0 )); then
+            echo "::error::No editorial-approvals/science-release-*.json manifest found"
+            exit 1
+          fi
+
+          manifest="${manifests[-1]}"
+          echo "Auditing latest lexical science release manifest: ${manifest}"
+          python scripts/audit_tudo_com_tudo.py \
+            --strict-release-manifest "$manifest" \
+            > tudo-com-tudo-release-audit.json
+
+      - name: Preserve Tudo com Tudo audit reports
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: tudo-com-tudo-audits
+          path: |
+            tudo-com-tudo-audit.json
+            tudo-com-tudo-release-audit.json
+          if-no-files-found: warn

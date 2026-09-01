@@ -9,8 +9,93 @@ an explicit phrase for that topic.
 """
 from __future__ import annotations
 
+import re
 import unicodedata
 from collections.abc import Iterable
+from dataclasses import dataclass
+
+
+# A broad clinical word is useful for search, but it is not evidence that two
+# items discuss the same clinical decision. These tokens are excluded from the
+# contextual relation score altogether. A shared word such as "pressão",
+# "risco" or "diagnóstico" can therefore never create a relation by itself.
+GENERIC_RELATION_TOKENS = frozenset({
+    "cardiologia", "cardiovascular", "cardiaco", "cardiaca", "doenca", "sindrome",
+    "manejo", "tratamento", "terapia", "avaliacao", "diagnostico", "risco", "estudo",
+    "evidencia", "diretriz", "clinico", "clinica", "paciente", "adulto", "adultos",
+    "crianca", "criancas", "adolescente", "agudo", "aguda", "cronico", "cronica",
+    "grave", "graves", "arterial", "arteriais", "atrial", "atriais", "ventricular",
+    "ventriculares", "atleta", "atletas", "esporte", "esportes", "exercicio",
+    "exercicios", "cardiomiopatia", "cardiomiopatias", "pressao", "pressoes",
+    "frequencia", "frequencias", "insuficiencia", "insuficiencias", "prevencao",
+    "prevencoes", "dor", "dores", "imagem", "imagens", "controle", "controles",
+    "conduta", "condutas", "protocolo", "protocolos", "seguimento", "seguimentos",
+    "monitorizacao", "monitorizacoes", "prognostico", "prognosticos", "recomendacao",
+    "recomendacoes", "abordagem", "abordagens", "indicacao", "indicacoes", "associacao",
+    "associacoes", "seguranca", "eficacia", "primaria", "primarias", "secundaria",
+    "secundarias", "orientacao", "orientacoes", "cuidado", "cuidados", "reabilitacao",
+    "para", "pela", "pelo", "pelos", "pelas", "com", "sem", "entre", "versus",
+    "apos", "antes", "durante", "como", "quando", "qual", "quais", "uma", "umas",
+    "uns", "sobre", "este", "esta", "esse", "essa", "dos", "das", "nas", "nos",
+})
+
+# One discriminative title/slug token is enough (3 points); a structured study
+# tag is a stronger signal (5 points). Generic tokens above are worth zero and
+# never enter the explanation.
+CONTEXT_TITLE_TOKEN_WEIGHT = 3
+CONTEXT_TAG_TOKEN_WEIGHT = 5
+CONTEXT_MIN_RELEVANCE_SCORE = 3
+
+# Two-character terms are normally unsafe after case folding. FA is retained
+# as a closed, clinically specific acronym; arbitrary short tokens remain out.
+_DISCRIMINATIVE_SHORT_TOKENS = frozenset({"fa"})
+
+
+def _is_generic_relation_token(token: str) -> bool:
+    """Recognize common Portuguese plural forms without broad stemming."""
+    variants = {token}
+    if token.endswith("oes") and len(token) > 4:
+        variants.add(f"{token[:-3]}ao")
+    if token.endswith("ais") and len(token) > 4:
+        variants.add(f"{token[:-3]}al")
+    if token.endswith("eis") and len(token) > 4:
+        variants.add(f"{token[:-3]}el")
+    if token.endswith("zes") and len(token) > 4:
+        variants.add(token[:-2])
+    if token.endswith("ns") and len(token) > 3:
+        variants.add(f"{token[:-2]}m")
+    if token.endswith("s") and len(token) > 3:
+        variants.add(token[:-1])
+    return not variants.isdisjoint(GENERIC_RELATION_TOKENS)
+
+
+@dataclass(frozen=True)
+class ContextualRelevance:
+    """Deterministic, inspectable score for one contextual candidate."""
+
+    score: int
+    title_or_slug_terms: tuple[str, ...]
+    tag_terms: tuple[str, ...]
+
+    @property
+    def accepted(self) -> bool:
+        return self.score >= CONTEXT_MIN_RELEVANCE_SCORE
+
+    def reasons(self) -> list[dict[str, object]]:
+        tag_terms = set(self.tag_terms)
+        reasons: list[dict[str, object]] = []
+        for term in sorted(set(self.title_or_slug_terms) | tag_terms):
+            source = "structured_tag" if term in tag_terms else "title_or_slug"
+            reasons.append({
+                "source": source,
+                "term": term,
+                "weight": (
+                    CONTEXT_TAG_TOKEN_WEIGHT
+                    if source == "structured_tag"
+                    else CONTEXT_TITLE_TOKEN_WEIGHT
+                ),
+            })
+        return reasons
 
 # Known historical labels found in the versioned corpus. These aliases repair
 # connectivity without rewriting or silently changing the scientific source.
@@ -92,7 +177,48 @@ SUPPORTED_DRUG_TOPICS = frozenset(DRUG_TOPIC_PHRASES)
 
 def normalize_text(value: str | None) -> str:
     normalized = unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode().lower()
-    return " ".join(normalized.replace("/", " ").replace("-", " ").split())
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", normalized).split())
+
+
+def relevance_tokens(value: object) -> set[str]:
+    """Return only terms that may justify a clinical contextual relation."""
+    if isinstance(value, (list, tuple, set, frozenset)):
+        text = " ".join(str(item) for item in value if item)
+    else:
+        text = str(value or "")
+    return {
+        token
+        for token in normalize_text(text).split()
+        if (
+            (len(token) >= 3 or token in _DISCRIMINATIVE_SHORT_TOKENS)
+            and not token.isdigit()
+            and not _is_generic_relation_token(token)
+        )
+    }
+
+
+def score_contextual_relevance(
+    origin_terms: set[str],
+    *,
+    title_or_slug: object,
+    tags: object = None,
+) -> ContextualRelevance:
+    """Score overlap using the strongest structured source for each term.
+
+    Terms present in both title and tags count once, at the structured-tag
+    weight. This prevents duplicate metadata from inflating relevance.
+    """
+    title_overlap = origin_terms & relevance_tokens(title_or_slug)
+    tag_overlap = origin_terms & relevance_tokens(tags)
+    score = sum(
+        CONTEXT_TAG_TOKEN_WEIGHT if term in tag_overlap else CONTEXT_TITLE_TOKEN_WEIGHT
+        for term in title_overlap | tag_overlap
+    )
+    return ContextualRelevance(
+        score=score,
+        title_or_slug_terms=tuple(sorted(title_overlap)),
+        tag_terms=tuple(sorted(tag_overlap)),
+    )
 
 
 def canonical_theme(theme: str | None) -> str:
