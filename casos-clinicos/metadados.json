@@ -19476,5 +19476,25 @@
       "Liu J, Li Y, Ge J, Yan X, Zhang H, et al; ESPRIT Collaborative Group. Lowering systolic blood pressure to less than 120 mm Hg versus less than 140 mm Hg in patients with high cardiovascular risk with and without diabetes or previous stroke: an open-label, blinded-outcome, randomised trial. Lancet. 2024;404(10449):245-255. DOI: 10.1016/S0140-6736(24)01028-6. PMID: 38945140"
     ],
     "review_status": "pendente_revisao"
+  },
+  {
+    "slug": "heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025",
+    "titulo": "Escore HEART: a doença arterial periférica prévia muda a conduta mesmo sem \"fatores de risco clássicos\"?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, chega à emergência com dor torácica em aperto iniciada há 90 minutos, sem irradiação típica, associada a sudorese leve — quadro classificado pelo plantonista como moderadamente suspeito. Não é hipertenso, não é diabético, não fuma e tem perfil lipídico normal, mas tem diagnóstico prévio de doença arterial periférica com claudicação intermitente há 3 anos. O ECG inicial mostra alterações inespecíficas de repolarização, sem supradesnível de ST e sem equivalentes de oclusão coronária aguda — não fecha diagnóstico. A troponina convencional de admissão está em 2 vezes o limite superior de referência. Como o paciente não apresenta os fatores de risco cardiovascular \"clássicos\" (hipertensão, diabetes, tabagismo, dislipidemia), o plantonista se prepara para liberá-lo com o escore HEART considerado baixo.",
+    "pergunta": "Qual conduta está correta em relação ao cálculo do escore HEART e ao manejo desse paciente, segundo o protocolo brasileiro de dor torácica na emergência?",
+    "opcoes": [
+      "Confirmar a alta: sem hipertensão, diabetes, tabagismo ou dislipidemia, o componente de risco do HEART fica em zero e o escore total é baixo",
+      "Recalcular o componente de Risco considerando que a história de doença aterosclerótica pontua 2 pontos sozinha (equivalente a ter três ou mais fatores de risco) — somando História (1), ECG (1), idade 45-65 anos (1), Risco (2) e Troponina 1-3x LSN (1), o escore chega a 6 (faixa intermediária/alta), e o ECG não diagnóstico deve ser repetido a cada 10 a 20 minutos antes de qualquer decisão de alta",
+      "Repetir apenas a troponina em 6 horas, sem necessidade de repetir o ECG, já que ele só precisa ser reavaliado se houver supradesnível de ST",
+      "Indicar cateterismo cardíaco de urgência imediatamente, dispensando o cálculo do HEART e a repetição do ECG, pois a troponina já está alterada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O protocolo brasileiro de dor torácica na emergência (SBC 2025) estabelece que o componente de Risco do escore HEART é pontuado com 2 pontos quando há história de doença aterosclerótica — isoladamente, mesmo sem nenhum dos fatores de risco tradicionais (hipertensão, diabetes, tabagismo, dislipidemia, história familiar) — equivalendo a ter três ou mais desses fatores presentes. Ignorar esse componente por o paciente não ser hipertenso, diabético ou tabagista é justamente a armadilha descrita na diretriz. Recalculando: História moderadamente suspeita (1) + ECG com alteração inespecífica (1) + idade 58 anos, faixa 45-65 (1) + Risco por doença aterosclerótica prévia (2) + Troponina convencional 1-3x o limite superior (1) = 6 pontos, faixa intermediária/alta que não sustenta alta imediata. Além disso, como o ECG inicial é \"não diagnóstico\", a diretriz recomenda, com Classe I, repeti-lo a cada 10 a 20 minutos, com derivações complementares se necessário — um único traçado inicial normal ou inespecífico não encerra a investigação. A diretriz também é explícita em usar troponina convencional (múltiplos do limite superior), não o algoritmo de alta sensibilidade, ao aplicar o HEART nesse formato.",
+    "source_refs": [
+      "Sociedade Brasileira de Cardiologia. Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025. Texto integral em acesso aberto: PMC12981354."
+    ],
+    "review_status": "pendente_revisao"
   }
 ]

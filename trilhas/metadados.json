@@ -26721,5 +26721,75 @@
         "por_que": "Fecha a trilha na prática clínica: como a fisiologia restritiva da amiloidose muda o manejo da descompensação aguda (resposta diurética, sensibilidade a hipotensão) em relação à IC 'comum', unindo tudo o que foi visto sobre etiologia e tratamento específico."
       }
     ]
+  },
+  {
+    "slug": "trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora",
+    "titulo": "Diabetes e cardiologia: do rastreio de risco à segurança prática da terapia cardioprotetora",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Percorrer o fluxo de consultório do início ao fim: rastrear risco cardiovascular no diabético assintomático, estimar função renal e risco em 10 anos, decidir e iniciar a terapia com proteção cardiorrenal comprovada (iSGLT2, agonista de GLP-1, finerenona) e reconhecer as armadilhas de segurança do dia a dia — da suspensão perioperatória à cetoacidose euglicêmica.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "checklist",
+        "item_slug": "rastreamento-e-estratificacao-de-risco-cardiovascular-no-diabetico-tipo-2-assintomatico",
+        "por_que": "Ponto de partida: define quando e como rastrear risco cardiovascular no diabético tipo 2 sem sintomas, antes de qualquer decisão terapêutica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "ckd-epi-2021",
+        "por_que": "A função renal estimada por CKD-EPI 2021 é o dado basal que condiciona toda a sequência seguinte: elegibilidade para iSGLT2, finerenona e ajuste de metformina dependem diretamente da TFG."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "score2-diabetes-esc-2023-estimativa-de-risco-cv-em-10-anos-no-diabetes-tipo-2",
+        "por_que": "Com o rastreio feito e a função renal em mãos, quantifica o risco cardiovascular em 10 anos com uma calculadora específica para diabetes tipo 2, informando a intensidade da intervenção."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "ada-2025-isglt2-ou-arglp1-com-beneficio-cardiovascular-no-t2dm-com-ascvd-ou-drc",
+        "por_que": "Traduz o risco estimado em decisão de classe: a recomendação ADA 2025 que aciona iSGLT2 ou agonista de GLP-1 diante de DCV estabelecida ou DRC."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-isglt2-em-cardiopata-diabetico-avaliacao-basal-e-monitorizacao",
+        "por_que": "Da recomendação à prescrição: avaliação basal e monitorização exigidas antes de iniciar um iSGLT2 no diabético cardiopata."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-agonista-de-glp-1-para-protecao-cardiovascular",
+        "por_que": "A outra classe com proteção cardiovascular comprovada: o checklist operacional de início de agonista de GLP-1, alternativa ou complemento ao iSGLT2."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "avaliacao-antes-de-iniciar-finerenona-na-drc-diabetica",
+        "por_que": "Para o diabético com albuminúria residual mesmo sob iSGLT2, a avaliação basal específica que precede a finerenona — sobretudo o risco de hipercalemia."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-terapia-combinada-com-isglt2-e-finerenona-na-drc-diabetica",
+        "por_que": "Fecha a construção farmacológica: como somar iSGLT2 e finerenona com segurança na doença renal crônica diabética, em vez de tratar as duas classes como escolhas isoladas."
+      },
+      {
+        "ordem": 9,
+        "item_type": "checklist",
+        "item_slug": "manejo-perioperatorio-de-isglt2-suspensao-e-reintroducao-no-diabetico-cardiopata",
+        "por_que": "A terapia construída nas etapas anteriores precisa sobreviver ao mundo real: quando suspender e quando reintroduzir o iSGLT2 no perioperatório do diabético cardiopata."
+      },
+      {
+        "ordem": 10,
+        "item_type": "caso_clinico",
+        "item_slug": "cetoacidose-euglicemica-por-isglt2-glicemia-normal-nao-exclui-diagnostico",
+        "por_que": "O caso que materializa por que a etapa anterior importa: cetoacidose euglicêmica por iSGLT2 com glicemia normal, a armadilha diagnóstica que a suspensão perioperatória bem feita evita."
+      }
+    ]
   }
 ]

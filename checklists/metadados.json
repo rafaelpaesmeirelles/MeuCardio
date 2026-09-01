@@ -41092,5 +41092,83 @@
       }
     ],
     "revisao": "Checklist extraído do documento esc-2024-diretriz-fibrilacao-atrial-af-care.md em 01/09/2026, sessão de produção científica (lote99). Pendente de revisão clínica final antes de qualquer promoção de review_status."
+  },
+  {
+    "slug": "disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve",
+    "condicao": "Disfunção de bioprótese valvar: classificação VARC-3 e decisão de valve-in-valve",
+    "resumo": "O que checar antes de indicar reintervenção em bioprótese degenerada: classificar o mecanismo de falha pelo VARC-3 (deterioração estrutural, disfunção não estrutural ou trombose/endocardite) e, ao considerar valve-in-valve em bioprótese aórtica cirúrgica, registrar tamanho da prótese original e modo de falha — preditores de sobrevida em 1 ano no registro VIVID.",
+    "documento_origem": "disfuncao-de-biopotese-valvar-classificacao-varc-3-e-valve-in-valve-registro-vivid",
+    "theme": "Valvopatias",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Généreux P, Piazza N, Alu MC, et al.; VARC-3 Writing Committee. Valve Academic Research Consortium 3: Updated Endpoint Definitions for Aortic Valve Clinical Research. J Am Coll Cardiol. 2021;77(21):2717-2746. PMID: 33888385 — abstract e definições estruturadas conferidos via PubMed/resumos secundários nesta sessão (06/08/2026); texto integral com a árvore completa de subclassificação não acessado — `VERIFICAÇÃO HUMANA NECESSÁRIA` para os critérios ecocardiográficos numéricos exatos de cada grau.",
+      "Dvir D, Webb JG, Bleiziffer S, et al.; Valve-in-Valve International Data Registry Investigators. Transcatheter aortic valve implantation in failed bioprosthetic surgical valves. JAMA. 2014;312(2):162-170. DOI: 10.1001/jama.2014.7246. PMID: 25005653 — abstract estruturado conferido via PubMed E-utilities nesta sessão."
+    ],
+    "itens": [
+      {
+        "id": "varc3-classificar-antes-de-decidir",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Disfunção de bioprótese classificada segundo VARC-3 antes de indicar reintervenção — deterioração estrutural da valva (irreversível), disfunção não estrutural (mismatch paciente-prótese ou regurgitação paravalvular) ou trombose/endocardite (potencialmente reversível)",
+        "origem_secao": "Classificacao varc-3 — tres categorias de disfuncao"
+      },
+      {
+        "id": "varc3-nao-equiparar-trombose-a-deterioracao-estrutural",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Trombose e endocardite excluídas ou tratadas clinicamente (anticoagulação; antibiótico ± cirurgia) antes de indicar reintervenção — essas categorias são potencialmente reversíveis e não devem ser tratadas como equivalentes à deterioração estrutural irreversível",
+        "origem_secao": "Classificacao varc-3 — tres categorias de disfuncao"
+      },
+      {
+        "id": "varc3-gradacao-regurgitacao-paravalvular",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Regurgitação paravalvular graduada pelo sistema de cinco classes do VARC-3 (leve, leve-moderada, moderada, moderada-grave, grave), mais granular que a gradação tradicional de três níveis",
+        "origem_secao": "Classificacao varc-3 — tres categorias de disfuncao"
+      },
+      {
+        "id": "vivid-avaliar-tamanho-protese-original",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de indicar valve-in-valve em bioprótese aórtica cirúrgica degenerada, tamanho da prótese original registrado — no registro VIVID a sobrevida em 1 ano foi menor em prótese ≤21 mm (74,8%) do que em prótese ≥25 mm (93,3%)",
+        "origem_secao": "Valve-in-valve — o registro vivid"
+      },
+      {
+        "id": "vivid-avaliar-modo-de-falha",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Modo de falha da bioprótese original (estenose, regurgitação ou combinada) registrado antes do valve-in-valve — no registro VIVID a sobrevida em 1 ano foi menor quando o modo de falha era estenose (76,6%) do que regurgitação (91,2%) ou combinada (83,9%)",
+        "origem_secao": "Valve-in-valve — o registro vivid"
+      },
+      {
+        "id": "vivid-risco-duplo-mismatch",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Risco de duplo mismatch paciente-prótese reconhecido quando a bioprótese original já era pequena — a válvula transcateter implantada dentro dela pode não recuperar totalmente a área valvar efetiva",
+        "origem_secao": "Leitura clinica"
+      },
+      {
+        "id": "vivid-orientacao-desfechos-esperados",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre os desfechos documentados do valve-in-valve no registro VIVID: mortalidade de 7,6% e AVC maior em 1,7% em 1 mês; sobrevida de 83,2% em 1 ano, variável conforme tamanho da prótese original e modo de falha",
+        "origem_secao": "Valve-in-valve — o registro vivid"
+      },
+      {
+        "id": "vivid-nao-tratar-como-tecnologia-atual",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Números de sobrevida do registro VIVID (2014) usados como referência histórica, não como desfecho esperado da geração atual de válvulas transcateter — ressalva registrada na discussão com o paciente ou na Heart Team",
+        "origem_secao": "Armadilhas de leitura"
+      },
+      {
+        "id": "varc3-nao-reintervir-sem-classificar",
+        "categoria": "procedimento",
+        "obrigatorio": true,
+        "texto": "Reintervenção (valve-in-valve ou cirurgia) não indicada apenas com o rótulo genérico \"bioprótese degenerada\" — a classificação VARC-3 do mecanismo de falha precisa constar da decisão",
+        "origem_secao": "Armadilhas de leitura"
+      }
+    ],
+    "revisao": "Aguardando revisão editorial independente (segundo estágio) — ainda não revisado."
   }
 ]
