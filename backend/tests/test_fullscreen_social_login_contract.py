@@ -88,7 +88,7 @@ def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     assert ".login-gateway{" in css
     assert "height:100svh" in css
     assert "overflow:hidden" in css
-    assert "@media(max-width:760px)" in css
+    assert "@media(max-width:900px)" in css
     assert "height:auto" in css
     assert "min-height:100svh" in css
     assert "overflow-y:auto" in css

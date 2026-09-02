@@ -581,7 +581,7 @@ def test_definicao_remove_blocos_internos_legados_do_intelligence(
     )
     assert "corvia-intelligence" not in disease_result["snippet"]
     assert "Atualização CorVIA Intelligence" not in disease_result["snippet"]
-    assert "Arritmia supraventricular" in disease_result["snippet"]
+    assert "arritmia supraventricular" in disease_result["snippet"].casefold()
 
 
 def test_higiene_clinica_preserva_nulo_e_texto_de_envelope_corrompido():

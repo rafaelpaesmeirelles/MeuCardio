@@ -59,7 +59,7 @@ def _card(e: EvidenceRecord) -> dict:
     }
 
 
-def _detail(db: Session, e: EvidenceRecord) -> dict:
+def _detail(e: EvidenceRecord, db: Session | None = None) -> dict:
     return {
         **_card(e),
         "guideline_title": e.guideline_title,
@@ -68,7 +68,9 @@ def _detail(db: Session, e: EvidenceRecord) -> dict:
         "document_slug": e.document_slug,
         "study_slug": e.study_slug,
         "review_status": e.review_status,
-        "clinical_updates": structured_clinical_updates(db, "evidence", e.id),
+        "clinical_updates": (
+            structured_clinical_updates(db, "evidence", e.id) if db is not None else []
+        ),
     }
 
 
@@ -132,4 +134,4 @@ def get_evidence(slug: str, db: Session = Depends(get_db), _=Depends(current_use
     ).first()
     if not evidence:
         raise HTTPException(status_code=404, detail="Registro não encontrado.")
-    return _detail(db, evidence)
+    return _detail(evidence, db)
