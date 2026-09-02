@@ -279,6 +279,131 @@ class TestExamesEAtestadoAceitamPacienteOpcional:
         assert resposta.json()["patient_profile_id"] is None
 
 
+class TestDocumentoLivreIdentificacaoNoCorpo:
+    """02/09/2026, segunda rodada: selecionar paciente no Documento em Branco
+    já gravava `patient_profile_id`/snapshot, mas o texto emitido (e por
+    tabela o PDF, que renderiza `rendered_body` sem builder próprio) não
+    identificava o paciente de jeito nenhum. Sem paciente selecionado, o
+    comportamento tem que continuar idêntico ao de antes — byte a byte."""
+
+    def test_sem_paciente_rendered_body_e_identico_ao_texto_digitado(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        texto_digitado = "Encaminhamento para avaliação especializada.\n\nSem outras observações."
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={"titulo": "Encaminhamento", "corpo": texto_digitado},
+        )
+        assert resposta.status_code == 201, resposta.text
+        corpo = resposta.json()
+        assert corpo["rendered_body"] == texto_digitado
+        assert corpo["patient_profile_id"] is None
+
+    def test_com_paciente_cadastrado_rendered_body_contem_o_nome(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+        texto_digitado = "Corpo do documento livre digitado pelo médico."
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Anotação", "corpo": texto_digitado,
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        assert resposta.status_code == 201, resposta.text
+        corpo = resposta.json()
+        assert "Paciente: Fulano de Tal da Silva" in corpo["rendered_body"]
+        # O texto digitado pelo médico continua intacto, só com a
+        # identificação na frente — nunca reescrito ou reformatado.
+        assert texto_digitado in corpo["rendered_body"]
+
+    def test_com_cpf_e_nascimento_identificacao_contem_os_dados(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Anotação", "corpo": "Corpo de teste.",
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF: 123.456.789-00" in rendered_body
+        assert "Data de nascimento: 20/05/1980" in rendered_body
+
+    def test_campos_ausentes_no_cadastro_nao_viram_linha_vazia(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token, cpf=None, birth_date=None)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Anotação", "corpo": "Corpo de teste.",
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF:" not in rendered_body
+        assert "Data de nascimento:" not in rendered_body
+        # Nenhuma linha em branco sobrando entre a identificação e o corpo
+        # além do separador de parágrafo esperado (identificação + linha
+        # em branco + corpo, nunca duas ou mais linhas em branco seguidas).
+        assert "\n\n\n" not in rendered_body
+
+    def test_patient_profile_id_e_snapshot_permanecem_gravados(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Anotação", "corpo": "Corpo de teste.",
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        assert resposta.status_code == 201, resposta.text
+        gerado_id = resposta.json()["id"]
+
+        gerado = db.get(GeneratedDocument, gerado_id)
+        assert gerado.patient_profile_id == paciente["id"]
+        assert gerado.patient_snapshot_cifrado is not None
+        assert gerado.patient_name_cifrado is not None
+
+    def test_recriar_baseado_neste_documento_nao_duplica_identificacao(self, client, db, criar_usuario):
+        """`variables["corpo"]` guarda o texto ORIGINAL sem a identificação —
+        é o que "recriar baseado neste" usa pra repopular o editor."""
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+        texto_digitado = "Corpo original digitado pelo médico."
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Anotação", "corpo": texto_digitado,
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        gerado_id = resposta.json()["id"]
+
+        detalhe = client.get(
+            f"/api/document-templates/gerados/{gerado_id}", headers=_headers(token),
+        )
+        assert detalhe.status_code == 200, detalhe.text
+        assert detalhe.json()["variables"]["corpo"] == texto_digitado
+
+
 class TestIsolamentoEntreMedicos:
     """O item que mais importa desta suíte: médico A não pode, por
     NENHUM caminho, alcançar cadastro de paciente de outro médico —

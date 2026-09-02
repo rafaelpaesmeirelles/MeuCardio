@@ -355,6 +355,27 @@ class DocumentoLivreIn(BaseModel):
     endereco: str | None = None
 
 
+def _identificacao_paciente_texto(snapshot: dict | None) -> str | None:
+    """Bloco de identificação em texto simples — mesma tipografia do corpo,
+    sem elemento visual novo (pedido do Rafael, 02/09/2026, Documento em
+    Branco). Usa `patient_profile_service.variaveis_paciente()`, a mesma
+    fonte já usada pelas variáveis `{{paciente_*}}` de modelo: nunca inventa
+    dado, nunca imprime linha vazia (campo ausente no cadastro vira string
+    vazia lá, filtrada aqui)."""
+    if not snapshot:
+        return None
+    variaveis = patient_profile_service.variaveis_paciente(snapshot)
+    nome = variaveis["paciente_nome"]
+    if not nome:
+        return None
+    linhas = [f"Paciente: {nome}"]
+    if variaveis["paciente_cpf"]:
+        linhas.append(f"CPF: {variaveis['paciente_cpf']}")
+    if variaveis["paciente_data_nascimento"]:
+        linhas.append(f"Data de nascimento: {variaveis['paciente_data_nascimento']}")
+    return "\n".join(linhas)
+
+
 @router.post("/gerar-livre", status_code=201)
 def gerar_documento_livre(
     dados: DocumentoLivreIn, db: Session = Depends(get_db), user=Depends(current_user),
@@ -363,11 +384,32 @@ def gerar_documento_livre(
     `corpo` JÁ É o "conteúdo final editável": não há builder automático
     a sobrepor, o médico controla o texto por inteiro desde o início).
     Paciente opcional. Não cria `DocumentTemplate` nenhum (é emissão
-    avulsa e imediata; "salvar como modelo" fica para uma rodada futura)."""
+    avulsa e imediata; "salvar como modelo" fica para uma rodada futura).
+
+    Quando um paciente CADASTRADO é selecionado, o corpo emitido (e por
+    tabela o PDF, que renderiza `rendered_body` sem builder próprio) ganha
+    um bloco "Paciente: ..." na frente do texto digitado — sem isso, o
+    `patient_profile_id` ficava só gravado no banco, sem aparecer no
+    documento de verdade (achado do Rafael, 02/09/2026). Sem paciente
+    selecionado, o comportamento permanece idêntico ao de antes: `corpo`
+    vira `rendered_body` sem nenhuma alteração.
+
+    `variables["corpo"]` guarda o texto ORIGINAL digitado, sem a
+    identificação prefixada — é o que "recriar baseado neste documento"
+    usa para repopular o editor; a identificação é recalculada do zero
+    a cada emissão, nunca duplicada nem congelada ali."""
     patient_name = (dados.patient_name or "").strip() or None
+    corpo = dados.corpo
+    if dados.patient_profile_id is not None:
+        _, snapshot, _ = patient_profile_service.resolver_paciente_documento(
+            db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=None,
+        )
+        identificacao = _identificacao_paciente_texto(snapshot)
+        if identificacao:
+            corpo = f"{identificacao}\n\n{dados.corpo}"
     return _persistir_gerado(
         db, user, doc_type=DOC_TYPE_DOCUMENTO_LIVRE, title=dados.titulo.strip(),
-        corpo=dados.corpo, endereco=dados.endereco, patient_name=patient_name,
+        corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
         patient_profile_id=dados.patient_profile_id,
         variables={"titulo": dados.titulo.strip(), "corpo": dados.corpo, "patient_name": patient_name},
         audit_action="gerar_documento_livre",
