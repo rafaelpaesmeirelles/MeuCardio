@@ -80,6 +80,8 @@ import "./styles/cardiology-spaces-route-tones.css";
 import "./styles/cardiology-spaces-app-frame.css";
 /* Camada pública isolada: aplica a identidade aprovada sem alterar /entrar. */
 import "./styles/cardiology-spaces-public.css";
+/* Correção responsiva final e isolada da rota Tudo com Tudo. */
+import "./styles/tudo-com-tudo-mobile-fidelity.css";
 /* Contrato de segurança visual: permanece deliberadamente como último CSS. */
 import "./styles/clinical-form-control-contrast.css";
 
