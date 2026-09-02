@@ -17,7 +17,7 @@ export const AREAS_CARDIOLOGIA: AreaCardiologia[] = [
   { id: "vascular", label: "Aorta, vascular e tromboembolismo", descricao: "Aortopatias, circulação pulmonar e doença vascular" },
   { id: "inflamatoria", label: "Pericárdio, endocardite e inflamação", descricao: "Doenças pericárdicas, infecciosas e inflamatórias" },
   { id: "esporte", label: "Cardiologia do esporte e do exercício", descricao: "Coração de atleta, triagem pré-participação e prescrição segura de exercício" },
-  { id: "outros", label: "Outras áreas", descricao: "Demais temas e conteúdos do acervo cardiológico" },
+  { id: "geral", label: "Cardiologia Geral", descricao: "Avaliação, prevenção, diagnóstico e cuidado cardiovascular integrado do adulto" },
 ];
 
 export function normalizarBusca(valor: string) {
@@ -46,4 +46,3 @@ export function areaDaCardiologia(...campos: Array<string | null | undefined>): 
   if (procurar("esporte", "exercicio", "atleta", "atletica", "treinamento fisico", "cardiologia esportiva", "morte subita no esporte", "coracao de atleta", "pre-participacao esportiva", "preparticipacao esportiva")) return AREAS_CARDIOLOGIA[11];
   return AREAS_CARDIOLOGIA[12];
 }
-

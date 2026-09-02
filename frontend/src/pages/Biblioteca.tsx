@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
+import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Doc = {
   slug: string; title: string; kind: string; theme: string;
@@ -38,12 +39,13 @@ type AreaCount = {
 type AreaCountsResponse = { areas: AreaCount[] };
 
 const AREA_ROUTES: Record<string, string> = {
-  pediatrica: "/doencas?tab=pediatrica",
-  neonatal: "/doencas?tab=pediatrica&q=neonatal",
+  geral: "/doencas?tab=catalogo&area=geral",
+  pediatrica: "/doencas?tab=catalogo&area=cardiopediatria",
+  neonatal: "/doencas?tab=catalogo&area=cardiopediatria&q=neonatal",
   congenita: "/doencas?tab=congenitas",
-  geriatria: "/doencas?tab=outros",
-  gestacao: "/doencas?tab=gestacao",
-  cardiooncologia: "/doencas?tab=oncologia",
+  geriatria: "/doencas?tab=catalogo&area=cardiogeriatria",
+  gestacao: "/doencas?tab=catalogo&area=gravidez",
+  cardiooncologia: "/doencas?tab=catalogo&area=cardiooncologia",
   fetal: "/doencas?tab=fetal",
 };
 
@@ -62,11 +64,17 @@ export default function Biblioteca() {
   const tema = params.get("tema") ?? "";
   const [catalogo, setCatalogo] = useState<Catalog | null>(null);
   const [contagensAreas, setContagensAreas] = useState<AreaCount[]>([]);
+  const [buscaArea, setBuscaArea] = useState("");
   const [temas, setTemas] = useState<{ theme: string; count: number }[]>([]);
   const [docs, setDocs] = useState<Doc[] | null>(null);
   const [totalDocs, setTotalDocs] = useState(0);
   const [proximoOffset, setProximoOffset] = useState<number | null>(null);
   const [carregandoMais, setCarregandoMais] = useState(false);
+  const areasFiltradas = useMemo(() => {
+    const termo = normalizarBusca(buscaArea);
+    if (!termo) return contagensAreas;
+    return contagensAreas.filter((area) => normalizarBusca(`${area.label} ${area.id}`).includes(termo));
+  }, [buscaArea, contagensAreas]);
 
   useEffect(() => {
     Promise.all([
@@ -150,14 +158,25 @@ export default function Biblioteca() {
             materiais e guias especializados publicados. Um conteúdo pode aparecer em mais de uma
             área relacionada, mas nunca é duplicado dentro da mesma coleção e área.
           </p>
-          <div className="hoje__temas" aria-label="Totais consolidados por área especializada">
-            {contagensAreas.map((area) => (
+          <label style={{ display: "block", margin: "0.9rem 0 1rem", maxWidth: "40rem" }}>
+            <strong>Buscar área da Cardiologia</strong>
+            <input
+              type="search"
+              value={buscaArea}
+              onChange={(event) => setBuscaArea(event.target.value)}
+              placeholder="Ex.: Cardiologia Geral, Pediátrica ou Cardio-Oncologia"
+              style={{ marginTop: "0.35rem" }}
+            />
+          </label>
+          <div className="hoje__temas" aria-label="Totais consolidados por área clínica">
+            {areasFiltradas.map((area) => (
               <Link key={area.id} to={AREA_ROUTES[area.id] || "/doencas"}>
                 <span>{area.label}</span>
                 <small>{area.count.toLocaleString("pt-BR")} · {area.collections} coleções</small>
               </Link>
             ))}
           </div>
+          {areasFiltradas.length === 0 && <Vazio titulo="Nenhuma área encontrada" acao="Revise o termo da busca." />}
         </section>
       )}
 

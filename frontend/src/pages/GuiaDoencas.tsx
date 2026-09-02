@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Carregando, Erro } from "../components/Estado";
 import { api } from "../lib/api";
+import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Disease = {
   slug: string;
@@ -36,7 +37,7 @@ const SEARCH_TABS = new Set<Tab>(["catalogo", "assistentes", "congenitas", "feta
 const GENERAL_FILTER_TABS = new Set<Tab>(["catalogo", "assistentes"]);
 
 const AREA_LABELS: Record<string, string> = {
-  geral: "Cardiologia do adulto",
+  geral: "Cardiologia Geral",
   cardiopediatria: "Cardiologia pediátrica e congênita",
   cardiogeriatria: "Cardiogeriatria",
   cardiooncologia: "Cardio-oncologia",
@@ -81,6 +82,19 @@ export default function GuiaDoencas() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [diseaseFacets, setDiseaseFacets] = useState<DiseaseFacetsResponse>({ areas: [], clinical_domains: [], categories: [] });
+  const [buscaArea, setBuscaArea] = useState("");
+
+  const areasFiltradas = useMemo(() => {
+    const termo = normalizarBusca(buscaArea);
+    if (!termo) return diseaseFacets.areas;
+    return diseaseFacets.areas.filter((item) => normalizarBusca(`${labelArea(item.id)} ${item.id}`).includes(termo));
+  }, [buscaArea, diseaseFacets.areas]);
+
+  const dominiosFiltrados = useMemo(() => {
+    const termo = normalizarBusca(buscaArea);
+    if (!termo) return diseaseFacets.clinical_domains;
+    return diseaseFacets.clinical_domains.filter((item) => normalizarBusca(`${item.label ?? ""} ${item.id}`).includes(termo));
+  }, [buscaArea, diseaseFacets.clinical_domains]);
 
   useEffect(() => {
     setQ(params.get("q") || "");
@@ -241,8 +255,18 @@ export default function GuiaDoencas() {
             </div>
             <p>São exibidas somente áreas que possuem verbetes publicados; a contagem vem diretamente do catálogo.</p>
           </div>
+          <label className="cartao" style={{ display: "block", margin: "0 0 1rem", maxWidth: "42rem" }}>
+            <strong>Buscar área ou grupo clínico</strong>
+            <input
+              type="search"
+              value={buscaArea}
+              onChange={(event) => setBuscaArea(event.target.value)}
+              placeholder="Ex.: Cardiologia Geral, arritmias ou insuficiência cardíaca"
+              style={{ marginTop: "0.35rem" }}
+            />
+          </label>
           <div className="guia-areas__grade">
-            {diseaseFacets.areas.map((item) => (
+            {areasFiltradas.map((item) => (
               <article className="cartao guia-area" key={item.id}>
                 <span className="guia-area__marca" aria-hidden="true">{labelArea(item.id).slice(0, 2).toUpperCase()}</span>
                 <div><h3>{labelArea(item.id)}</h3><p>{item.count.toLocaleString("pt-BR")} verbetes publicados.</p></div>
@@ -250,11 +274,14 @@ export default function GuiaDoencas() {
               </article>
             ))}
           </div>
+          {areasFiltradas.length === 0 && dominiosFiltrados.length === 0 && (
+            <p role="status" style={{ color: "var(--texto-secundario)" }}>Nenhuma área ou grupo clínico corresponde à busca.</p>
+          )}
           <div className="guia-areas__topo" style={{ marginTop: "1rem" }}>
             <div><p className="eyebrow">Subáreas e grupos clínicos</p><h2>Todos os grupos com conteúdo</h2></div>
           </div>
           <div className="painel__temas">
-            {diseaseFacets.clinical_domains.map((item) => (
+            {dominiosFiltrados.map((item) => (
               <button className="painel__tema" type="button" key={item.id} onClick={() => abrirDominio(item.id)}>
                 {item.label ?? item.id} ({item.count.toLocaleString("pt-BR")})
               </button>

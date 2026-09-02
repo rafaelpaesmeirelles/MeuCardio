@@ -76,7 +76,7 @@ export default function Entrar() {
         <header className="login-gateway__hero">
           <p>UM ACESSO · CINCO ESPAÇOS</p>
           <h1 id="login-title">Onde todos os seus espaços <strong>se tornam um.</strong></h1>
-          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão conectados sem romper o seu contexto.</span>
+          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão integrados para acompanhar cada decisão.</span>
         </header>
 
         <div className="login-gateway__universe" aria-hidden="true">

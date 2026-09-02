@@ -91,7 +91,7 @@ function labelOfSlug(value: string): string {
 
 function labelArea(value: string): string {
   const labels: Record<string, string> = {
-    geral: "Cardiologia do adulto",
+    geral: "Cardiologia Geral",
     cardiopediatria: "Cardiologia pediátrica e congênita",
     cardiogeriatria: "Cardiogeriatria",
     cardiooncologia: "Cardio-oncologia",

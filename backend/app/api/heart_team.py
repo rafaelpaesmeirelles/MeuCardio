@@ -87,7 +87,18 @@ def usage(user=Depends(current_user), db: Session = Depends(get_db)):
 
 @router.post("/cases", status_code=201, dependencies=[Depends(_enabled), Depends(_physician)])
 def create_case(payload: HeartTeamCaseCreate, user=Depends(current_user), db: Session = Depends(get_db)):
-    return _dump_case(db, create_case_draft(db, owner_id=user.id, created_by_id=user.id, payload=payload.model_dump(mode="json")))
+    try:
+        case = create_case_draft(
+            db,
+            owner_id=user.id,
+            created_by_id=user.id,
+            payload=payload.model_dump(mode="json"),
+        )
+    except HeartTeamSafetyError as exc:
+        # Erros esperados de autorização/vínculo do prontuário são
+        # validação clínica, não falhas internas do servidor.
+        raise HTTPException(422, str(exc)) from exc
+    return _dump_case(db, case)
 
 
 @router.get("/cases", dependencies=[Depends(_enabled), Depends(_physician)])

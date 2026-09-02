@@ -47,6 +47,10 @@ services:
       # persiste conteúdo clínico nem solicita armazenamento da resposta.
       AI_CLINICAL_MULTIMODAL_ENABLED: "true"
       AI_CLINICAL_DATA_CONTROLS_APPROVED: "true"
+      # Heart Team Virtual aprovado para esta release: permanece restrito a
+      # médico com CRM/perfil aprovado e exige desidentificação + revisão
+      # humana antes de qualquer conclusão utilizável.
+      HEART_TEAM_ENABLED: "true"
     depends_on:
       db:
         condition: service_healthy
@@ -109,6 +113,14 @@ services:
     build:
       context: ./backend
     env_file: .env
+    environment:
+      ENVIRONMENT: production
+      DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
+      AI_ENABLED: "true"
+      AI_PROVIDER: "openai"
+      AI_CLINICAL_MULTIMODAL_ENABLED: "true"
+      AI_CLINICAL_DATA_CONTROLS_APPROVED: "true"
+      HEART_TEAM_ENABLED: "true"
     depends_on:
       backend:
         condition: service_healthy
@@ -126,7 +138,7 @@ services:
         VITE_API_URL: /api
         VITE_DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
         VITE_CARDIOLOGY_SPACES_ENABLED: ${VITE_CARDIOLOGY_SPACES_ENABLED:-true}
-        VITE_HEART_TEAM_ENABLED: ${VITE_HEART_TEAM_ENABLED:-false}
+        VITE_HEART_TEAM_ENABLED: "true"
         VITE_WHATSAPP_ASSISTANT_ENABLED: ${VITE_WHATSAPP_ASSISTANT_ENABLED:-false}
     volumes:
       - sitefiles:/site

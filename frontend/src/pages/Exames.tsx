@@ -135,7 +135,8 @@ export default function Exames() {
         description="Marcadores, métodos gráficos e imagem organizados para chegar da indicação à interpretação, limitações e conexões clínicas."
         icon="clinica"
         actions={[
-          { to: "/documentos", label: "Solicitar exames", icon: "documento", tone: "primary" },
+          { to: "/exames-ia", label: "IA para Exames", icon: "ecg", tone: "primary" },
+          { to: "/documentos", label: "Solicitar exames", icon: "documento" },
           { to: "/assistente", label: "Discutir contexto", icon: "assistente" },
         ]}
         meta={<><span className="selo">{total || "—"} exames</span><span className="selo">interpretação estruturada</span></>}

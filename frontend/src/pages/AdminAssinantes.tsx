@@ -191,16 +191,19 @@ export default function AdminAssinantes() {
               <thead><tr><th>Nome / e-mail</th><th>CPF</th><th>Conselho</th><th>Profissão</th><th>Cadastro</th><th>Status conta</th><th>KYC</th><th>Assinatura</th><th>Ações</th></tr></thead>
               <tbody>
                 {resposta.items.map((u) => (
-                  <tr key={u.id} className="admin-assinantes__linha" tabIndex={0} role="link" aria-label={`Abrir ficha de ${u.full_name}`} onClick={() => navigate(`/admin/usuarios/${u.id}`)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navigate(`/admin/usuarios/${u.id}`); } }}>
-                    <td><span className="admin-assinantes__nome">{u.full_name}</span><span className="admin-assinantes__sub">{u.email}</span>{(u.convidado || u.investidor) && <span className="admin-assinantes__badges">{u.convidado && <span className="selo selo--info">Convidado</span>}{u.investidor && <span className="selo selo--info">Investidor</span>}</span>}</td>
-                    <td className="dado">{u.cpf_mascarado ?? "—"}</td>
-                    <td>{u.council_name ? `${u.council_name} ${u.council_number ?? ""}/${u.council_state ?? ""}` : "—"}</td>
-                    <td>{u.profession ?? "—"}</td>
-                    <td>{formatarData(u.created_at)}</td>
-                    <td><span className={seloContaClasse(u.status)}>{STATUS_CONTA[u.status] ?? u.status}</span></td>
-                    <td><span className={seloKycClasse(u.kyc_status)}>{u.kyc_status ? (STATUS_KYC[u.kyc_status] ?? u.kyc_status) : "Sem KYC"}</span></td>
-                    <td><span className={seloAssinaturaClasse(u.subscription_status)}>{u.subscription_status ? (STATUS_ASSINATURA[u.subscription_status] ?? u.subscription_status) : "Sem assinatura"}</span>{u.subscription_plano && <span className="admin-assinantes__sub">{PLANO_ROTULO[u.subscription_plano] ?? u.subscription_plano}{u.subscription_periodicidade ? ` · ${u.subscription_periodicidade}` : ""}</span>}</td>
-                    <td><button type="button" className="botao botao--secundario" style={{ padding: ".35rem .65rem", whiteSpace: "nowrap" }} onClick={(e) => { e.stopPropagation(); navigate(`/admin/usuarios/${u.id}/gerenciar`); }} onKeyDown={(e) => e.stopPropagation()}>Gerenciar</button></td>
+                  <tr key={u.id} className="admin-assinantes__linha">
+                    <td data-label="Nome / e-mail"><span className="admin-assinantes__nome">{u.full_name}</span><span className="admin-assinantes__sub">{u.email}</span>{(u.convidado || u.investidor) && <span className="admin-assinantes__badges">{u.convidado && <span className="selo selo--info">Convidado</span>}{u.investidor && <span className="selo selo--info">Investidor</span>}</span>}</td>
+                    <td data-label="CPF" className="dado">{u.cpf_mascarado ?? "—"}</td>
+                    <td data-label="Conselho">{u.council_name ? `${u.council_name} ${u.council_number ?? ""}/${u.council_state ?? ""}` : "—"}</td>
+                    <td data-label="Profissão">{u.profession ?? "—"}</td>
+                    <td data-label="Cadastro">{formatarData(u.created_at)}</td>
+                    <td data-label="Status conta"><span className={seloContaClasse(u.status)}>{STATUS_CONTA[u.status] ?? u.status}</span></td>
+                    <td data-label="KYC"><span className={seloKycClasse(u.kyc_status)}>{u.kyc_status ? (STATUS_KYC[u.kyc_status] ?? u.kyc_status) : "Sem KYC"}</span></td>
+                    <td data-label="Assinatura"><span className={seloAssinaturaClasse(u.subscription_status)}>{u.subscription_status ? (STATUS_ASSINATURA[u.subscription_status] ?? u.subscription_status) : "Sem assinatura"}</span>{u.subscription_plano && <span className="admin-assinantes__sub">{PLANO_ROTULO[u.subscription_plano] ?? u.subscription_plano}{u.subscription_periodicidade ? ` · ${u.subscription_periodicidade}` : ""}</span>}</td>
+                    <td data-label="Ações" className="admin-assinantes__acoes">
+                      <button type="button" className="botao botao--secundario" onClick={() => navigate(`/admin/usuarios/${u.id}`)}>Abrir ficha</button>
+                      <button type="button" className="botao admin-assinantes__gerenciar" onClick={() => navigate(`/admin/usuarios/${u.id}/gerenciar`)}>Gerenciar e excluir</button>
+                    </td>
                   </tr>
                 ))}
               </tbody>

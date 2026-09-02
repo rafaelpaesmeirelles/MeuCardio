@@ -4,9 +4,11 @@ import test from "node:test";
 
 const page = readFileSync(new URL("../src/pages/HeartTeamVirtual.tsx", import.meta.url), "utf8");
 const schema = readFileSync(new URL("../../backend/app/schemas/heart_team.py", import.meta.url), "utf8");
+const compose = readFileSync(new URL("../../docker-compose.prod.yml", import.meta.url), "utf8");
+const registry = readFileSync(new URL("../src/lib/clinicalRouteRegistry.ts", import.meta.url), "utf8");
 
 test("Heart Team uses the registered agent and case contract", () => {
-  for (const key of ["coordinator", "heart_failure", "arrhythmia", "imaging", "critical_care", "pharmacology", "evidence", "red_team"]) {
+  for (const key of ["coordinator", "heart_failure", "electrophysiology", "imaging", "critical_care", "pharmacology", "evidence", "red_team"]) {
     assert.match(page, new RegExp(`key: "${key}"`));
   }
   for (const field of ["case_text", "laboratory_tests", "source_patient_id", "source_patient_authorized", "selected_agents"]) {
@@ -48,4 +50,11 @@ test("verified sources use internal routes and never render empty anchors", () =
   assert.match(page, /if \(!href\) return <article className="cai-source"/);
   assert.match(page, /href=\{href\}/);
   assert.doesNotMatch(page, /href=\{source\.url \|\|/);
+});
+
+test("Heart Team is enabled end to end in the production release", () => {
+  assert.match(compose, /backend:[\s\S]*HEART_TEAM_ENABLED: "true"/);
+  assert.match(compose, /whatsapp-heart-team-worker:[\s\S]*HEART_TEAM_ENABLED: "true"/);
+  assert.match(compose, /frontend-build:[\s\S]*VITE_HEART_TEAM_ENABLED: "true"/);
+  assert.match(registry, /path: "\/heart-team"[\s\S]*intelligence: true[\s\S]*gate: "heart-team"/);
 });

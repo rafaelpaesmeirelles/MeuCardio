@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DicaContextual from "../components/DicaContextual";
 import Icone from "../components/Icone";
 import LogoProvedor from "../components/LogoProvedor";
@@ -89,6 +89,26 @@ type Agendamento = {
   blocks_scheduling?: boolean;
   is_exception?: boolean;
   color?: string;
+};
+
+type PacientePerfil = {
+  id: number;
+  full_name: string;
+  birth_date: string | null;
+  phone: string | null;
+};
+
+type FluxoAgendaClinica = {
+  appointment_id: number;
+  patient_profile_id: number | null;
+};
+
+type ContextoPaciente = {
+  item: Agendamento;
+  perfilVinculado: PacientePerfil | null;
+  candidatos: PacientePerfil[];
+  carregando: boolean;
+  erro: string;
 };
 
 type SerieCompromisso = {
@@ -267,9 +287,18 @@ function endereco(local: LocalAgenda) {
   ].filter(Boolean).join(" · ") || "Endereço não informado";
 }
 
-function Evento({ item, aoCancelar, aoAjustar }: {
+function normalizarNomePaciente(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").replace(/\s+/g, " ").trim();
+}
+
+function apenasDigitos(value: string | null | undefined) {
+  return (value || "").replace(/\D/g, "");
+}
+
+function Evento({ item, aoCancelar, aoAjustar, aoAbrirPaciente }: {
   item: Agendamento; aoCancelar: (item: Agendamento) => void;
   aoAjustar: (item: Agendamento) => void;
+  aoAbrirPaciente: (item: Agendamento) => void;
 }) {
   const compromisso = item.calendar_kind === "commitment";
   const rotina = item.calendar_kind === "work_routine";
@@ -293,7 +322,9 @@ function Evento({ item, aoCancelar, aoAjustar }: {
       <div className="agenda-evento__hora"><strong>{horario(item.starts_at)}</strong><span>{item.duration_minutes} min</span></div>
       <div className="agenda-evento__corpo">
         <div className="agenda-evento__linha">
-          <h3>{compromisso || rotina ? item.title : item.patient_name || "Paciente não informado"}</h3>
+          <h3>{compromisso || rotina ? item.title : item.patient_name && !["cancelado", "realizado"].includes(item.status) ? (
+            <button type="button" className="agenda-evento__paciente" onClick={(event) => { event.stopPropagation(); aoAbrirPaciente(item); }} aria-label={`Abrir opções de prontuário para ${item.patient_name}`}>{item.patient_name}</button>
+          ) : item.patient_name || "Paciente não informado"}</h3>
           <span className="agenda-pill">{rotina ? "Rotina" : STATUS[item.status] || item.status}</span>
         </div>
         <p>{compromisso || rotina ? `${item.appointment_type} · ${item.location?.name || "Sem local"}` : `${item.service?.name || item.appointment_type} · ${item.visit_mode === "teleconsulta" ? "Teleconsulta" : item.location?.name || "Local a definir"}`}</p>
@@ -305,13 +336,14 @@ function Evento({ item, aoCancelar, aoAjustar }: {
         </div>
       </div>
       {agendamento && !['cancelado', 'realizado'].includes(item.status) && (
-        <button className="agenda-evento__mais" onClick={() => aoCancelar(item)} aria-label={`Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
+        <button className="agenda-evento__mais" onClick={(event) => { event.stopPropagation(); aoCancelar(item); }} aria-label={`Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
       )}
     </article>
   );
 }
 
 export default function Agenda() {
+  const navigate = useNavigate();
   const [visao, setVisao] = useState<Visao>("semana");
   const [referencia, setReferencia] = useState(new Date());
   const [agendamentos, setAgendamentos] = useState<Agendamento[] | null>(null);
@@ -339,6 +371,8 @@ export default function Agenda() {
   const [focarContasExternas, setFocarContasExternas] = useState(false);
   const [cancelando, setCancelando] = useState<Agendamento | null>(null);
   const [motivoCancelamento, setMotivoCancelamento] = useState("");
+  const [contextoPaciente, setContextoPaciente] = useState<ContextoPaciente | null>(null);
+  const [processandoPaciente, setProcessandoPaciente] = useState<number | "novo" | null>(null);
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -378,9 +412,11 @@ export default function Agenda() {
   const configModalRef = useRef<HTMLDivElement>(null);
   const contasExternasRef = useRef<HTMLElement>(null);
   const cancelarModalRef = useRef<HTMLDivElement>(null);
+  const pacienteModalRef = useRef<HTMLDivElement>(null);
+  const contextoPacienteRequest = useRef(0);
 
   useEffect(() => {
-    const panel = ajustando ? ajusteModalRef.current : cancelando ? cancelarModalRef.current : configAberta ? configModalRef.current : compromissoAberto ? compromissoModalRef.current : novoAberto ? novoModalRef.current : null;
+    const panel = contextoPaciente ? pacienteModalRef.current : ajustando ? ajusteModalRef.current : cancelando ? cancelarModalRef.current : configAberta ? configModalRef.current : compromissoAberto ? compromissoModalRef.current : novoAberto ? novoModalRef.current : null;
     if (!panel) return;
     const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const oldOverflow = document.body.style.overflow;
@@ -392,7 +428,8 @@ export default function Agenda() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        if (ajustando) setAjustando(null);
+        if (contextoPaciente) fecharContextoPaciente();
+        else if (ajustando) setAjustando(null);
         else if (cancelando) { setCancelando(null); setMotivoCancelamento(""); }
         else if (configAberta) setConfigAberta(false);
         else if (compromissoAberto) setCompromissoAberto(false);
@@ -412,7 +449,7 @@ export default function Agenda() {
       document.body.style.overflow = oldOverflow;
       previous?.focus();
     };
-  }, [novoAberto, compromissoAberto, configAberta, cancelando, ajustando]);
+  }, [novoAberto, compromissoAberto, configAberta, cancelando, ajustando, contextoPaciente]);
 
   useEffect(() => {
     if (!configAberta || !focarContasExternas) return;
@@ -879,6 +916,78 @@ export default function Agenda() {
     setMensagem("Casa atualizada a partir do endereço residencial de Minha Conta.");
   }
 
+  async function abrirContextoPaciente(item: Agendamento) {
+    const appointmentId = Number(item.id);
+    if (!Number.isInteger(appointmentId) || !item.patient_name?.trim()) return;
+    const requestId = ++contextoPacienteRequest.current;
+    setProcessandoPaciente(null);
+    setContextoPaciente({ item, perfilVinculado: null, candidatos: [], carregando: true, erro: "" });
+    try {
+      const dia = dataApi(new Date(item.starts_at));
+      const fluxos = await api.get<FluxoAgendaClinica[]>(`/agenda-clinica/hoje?dia=${encodeURIComponent(dia)}`);
+      if (contextoPacienteRequest.current !== requestId) return;
+      const fluxo = fluxos.find((row) => row.appointment_id === appointmentId);
+      if (fluxo?.patient_profile_id) {
+        const perfil = await api.get<PacientePerfil>(`/pacientes/${fluxo.patient_profile_id}`);
+        if (contextoPacienteRequest.current !== requestId) return;
+        setContextoPaciente({ item, perfilVinculado: perfil, candidatos: [], carregando: false, erro: "" });
+        return;
+      }
+      const perfis = await api.get<PacientePerfil[]>(`/pacientes?busca=${encodeURIComponent(item.patient_name.trim())}`);
+      if (contextoPacienteRequest.current !== requestId) return;
+      const nome = normalizarNomePaciente(item.patient_name);
+      const telefone = apenasDigitos(item.patient_phone);
+      const candidatos = perfis
+        .filter((perfil) => normalizarNomePaciente(perfil.full_name) === nome)
+        .sort((a, b) => Number(apenasDigitos(b.phone) === telefone && Boolean(telefone)) - Number(apenasDigitos(a.phone) === telefone && Boolean(telefone)));
+      setContextoPaciente({ item, perfilVinculado: null, candidatos, carregando: false, erro: "" });
+    } catch (error) {
+      if (contextoPacienteRequest.current !== requestId) return;
+      setContextoPaciente((current) => current ? { ...current, carregando: false, erro: error instanceof Error ? error.message : "Não foi possível consultar o prontuário." } : current);
+    }
+  }
+
+  function fecharContextoPaciente() {
+    contextoPacienteRequest.current += 1;
+    setContextoPaciente(null);
+  }
+
+  async function vincularEAbrirProntuario(perfil: PacientePerfil) {
+    if (!contextoPaciente) return;
+    const appointmentId = Number(contextoPaciente.item.id);
+    setProcessandoPaciente(perfil.id);
+    try {
+      if (contextoPaciente.perfilVinculado?.id !== perfil.id) {
+        await api.post(`/agenda-clinica/${appointmentId}/vincular`, { patient_profile_id: perfil.id });
+      }
+      fecharContextoPaciente();
+      navigate(`/prontuario?paciente=${perfil.id}`);
+    } catch (error) {
+      setContextoPaciente((current) => current ? { ...current, erro: error instanceof Error ? error.message : "Não foi possível vincular o prontuário." } : current);
+    } finally {
+      setProcessandoPaciente(null);
+    }
+  }
+
+  async function criarProntuarioDoAgendamento() {
+    if (!contextoPaciente?.item.patient_name?.trim()) return;
+    const appointmentId = Number(contextoPaciente.item.id);
+    setProcessandoPaciente("novo");
+    try {
+      const perfil = await api.post<PacientePerfil>("/pacientes", {
+        full_name: contextoPaciente.item.patient_name.trim(),
+        phone: contextoPaciente.item.patient_phone?.trim() || null,
+      });
+      await api.post(`/agenda-clinica/${appointmentId}/vincular`, { patient_profile_id: perfil.id });
+      fecharContextoPaciente();
+      navigate(`/prontuario?paciente=${perfil.id}`);
+    } catch (error) {
+      setContextoPaciente((current) => current ? { ...current, erro: error instanceof Error ? error.message : "Não foi possível criar e vincular o prontuário." } : current);
+    } finally {
+      setProcessandoPaciente(null);
+    }
+  }
+
   const hoje = new Date();
   const conflitos = filtrados.filter((item) => item.conflict_reason).length;
   const proximos = filtrados
@@ -1002,7 +1111,7 @@ export default function Agenda() {
         >
           {agendamentos === null ? <p className="agenda-carregando">Organizando sua agenda…</p> : visao === "lista" ? (
             <div className="agenda-lista">
-              {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} /></div>)}
+              {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} aoAbrirPaciente={abrirContextoPaciente} /></div>)}
             </div>
           ) : (
             <div className={`agenda-grade agenda-grade--${visao}`}>
@@ -1011,7 +1120,7 @@ export default function Agenda() {
                 const outside = visao === "mes" && dia.getMonth() !== referencia.getMonth();
                 return <section key={dia.toISOString()} className={`agenda-dia${mesmoDia(dia, hoje) ? " agenda-dia--hoje" : ""}${outside ? " agenda-dia--fora" : ""}`}>
                   <header><span>{dataCurta(dia)}</span>{mesmoDia(dia, hoje) && <i>Hoje</i>}</header>
-                  <div>{items.length ? items.map((item) => <Evento key={item.id} item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} />) : <button className="agenda-dia__livre" onClick={() => { const slot = new Date(dia); slot.setHours(9, 0, 0, 0); setNovo((current) => ({ ...current, starts_at: localDateTime(slot) })); setNovoAberto(true); }}>Horário livre <span>+</span></button>}</div>
+                  <div>{items.length ? items.map((item) => <Evento key={item.id} item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} aoAbrirPaciente={abrirContextoPaciente} />) : <button className="agenda-dia__livre" onClick={() => { const slot = new Date(dia); slot.setHours(9, 0, 0, 0); setNovo((current) => ({ ...current, starts_at: localDateTime(slot) })); setNovoAberto(true); }}>Horário livre <span>+</span></button>}</div>
                 </section>;
               })}
             </div>
@@ -1025,6 +1134,19 @@ export default function Agenda() {
           <article><p className="eyebrow">Sincronização</p>{integracoes.length ? integracoes.map((item) => <div className="agenda-integracao-mini" key={item.id}><i className={`status-${item.status}`} /><span><strong>{item.display_name}</strong><small>{item.last_success_at ? `Atualizada ${new Date(item.last_success_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}` : item.status}</small></span></div>) : <span>Nenhum sistema externo conectado.</span>}</article>
         </aside>
       </div>
+
+      {contextoPaciente && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="agenda-paciente-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto" ref={pacienteModalRef} tabIndex={-1}>
+        <header><div><p className="eyebrow">Agenda e prontuário</p><h2 id="agenda-paciente-titulo">{contextoPaciente.item.patient_name}</h2></div><button onClick={fecharContextoPaciente} aria-label="Fechar"><Icone nome="fechar" /></button></header>
+        <div className="agenda-paciente-contexto" aria-live="polite">
+          <p>{new Date(contextoPaciente.item.starts_at).toLocaleString("pt-BR", { dateStyle: "medium", timeStyle: "short" })} · {contextoPaciente.item.service?.name || contextoPaciente.item.appointment_type}</p>
+          {contextoPaciente.carregando && <div className="agenda-paciente-contexto__estado">Consultando vínculo clínico…</div>}
+          {contextoPaciente.erro && <div className="agenda-paciente-contexto__erro" role="alert">{contextoPaciente.erro}</div>}
+          {contextoPaciente.perfilVinculado && <button type="button" className="agenda-paciente-contexto__opcao" disabled={processandoPaciente !== null} onClick={() => void vincularEAbrirProntuario(contextoPaciente.perfilVinculado!)}><span><strong>Abrir prontuário existente</strong><small>{contextoPaciente.perfilVinculado.full_name}</small></span><Icone nome="seta" /></button>}
+          {!contextoPaciente.carregando && !contextoPaciente.perfilVinculado && contextoPaciente.candidatos.length > 0 && <section className="agenda-paciente-contexto__candidatos"><h3>Cadastros com o mesmo nome</h3>{contextoPaciente.candidatos.map((perfil) => <button type="button" key={perfil.id} className="agenda-paciente-contexto__opcao" disabled={processandoPaciente !== null} onClick={() => void vincularEAbrirProntuario(perfil)}><span><strong>Vincular e abrir {perfil.full_name}</strong><small>{perfil.birth_date ? `Nascimento ${new Date(`${perfil.birth_date}T12:00:00`).toLocaleDateString("pt-BR")}` : "Data de nascimento não informada"}{perfil.phone ? ` · ${perfil.phone}` : ""}</small></span><Icone nome="seta" /></button>)}</section>}
+          {!contextoPaciente.carregando && !contextoPaciente.perfilVinculado && <button type="button" className="agenda-paciente-contexto__criar" disabled={processandoPaciente !== null} onClick={() => void criarProntuarioDoAgendamento()}><Icone nome="pacientes" /><span><strong>{processandoPaciente === "novo" ? "Criando prontuário…" : "Criar novo prontuário"}</strong><small>Usar o nome e o telefone deste agendamento</small></span></button>}
+        </div>
+        <footer><button className="botao botao--secundario" onClick={fecharContextoPaciente}>Fechar</button></footer>
+      </div></div>}
 
       {compromissoAberto && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="novo-compromisso-titulo"><div className="agenda-modal__painel" ref={compromissoModalRef} tabIndex={-1}>
         <header><div><p className="eyebrow">Agenda pessoal e profissional</p><h2 id="novo-compromisso-titulo">Novo compromisso</h2></div><button onClick={() => setCompromissoAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>

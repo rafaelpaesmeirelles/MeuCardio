@@ -329,6 +329,25 @@ def test_heart_team_rbac_requires_approved_medical_profile_and_crm():
     assert not service.is_heart_team_physician(admin_without_crm)
 
 
+def test_create_case_maps_patient_safety_error_to_422(monkeypatch):
+    from fastapi import HTTPException
+    from app.api import heart_team as api
+    from app.schemas.heart_team import HeartTeamCaseCreate
+
+    def reject(*_args, **_kwargs):
+        raise service.HeartTeamSafetyError("Prontuário não encontrado para este assinante.")
+
+    monkeypatch.setattr(api, "create_case_draft", reject)
+    with pytest.raises(HTTPException) as exc:
+        api.create_case(
+            HeartTeamCaseCreate(source_patient_id=999, source_patient_authorized=True),
+            user=SimpleNamespace(id=7),
+            db=object(),
+        )
+    assert exc.value.status_code == 422
+    assert "Prontuário não encontrado" in exc.value.detail
+
+
 def test_patient_provenance_is_append_only_and_has_no_clinical_recommendation_fields():
     assert HeartTeamPatientRecord in _IMMUTABLE
     columns = set(HeartTeamPatientRecord.__table__.columns.keys())

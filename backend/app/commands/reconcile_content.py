@@ -38,6 +38,12 @@ from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.models.study_track import StudyTrackProgress
 from app.services.carregar_triagem_sintomas import load_triage_records
+from app.services.corpus_release_authorization import (
+    build_front_fingerprint,
+    resolve_publication_policy,
+    validate_full_corpus_publication as _validate_full_corpus_publication,
+    validate_full_corpus_authorization,
+)
 from app.services.disease_manifest import load_disease_records
 from app.services.importer import _resolve_markdown_slug, import_directory
 from app.services.knowledge_graph import (
@@ -48,6 +54,9 @@ from app.services.study_track_progress import canonicalize_progress_tokens
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
+FULL_CORPUS_AUTHORIZATION_PATH = (
+    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260901.json"
+)
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
     "ignorados", "puladas", "pulados", "recusadas", "recusados",
@@ -186,13 +195,8 @@ def _canonical_source_slugs(front: str, source: Path) -> set[str]:
     raise RuntimeError(f"Fonte da frente {front} não permite inventariar slugs: {source}")
 
 
-def _canonical_publication_intents(front: str, source: Path) -> dict[str, bool | None]:
-    """Lê intenção explícita sem transformar ausência legada em promoção.
-
-    ``True`` autoriza a etapa de publicação somente quando há também revisão e
-    aprovação versionada; ``False`` é quarentena; ausência preserva o estado
-    anterior e nunca promove um registro novo ainda falso.
-    """
+def _canonical_source_metadata(front: str, source: Path) -> list[tuple[str, dict[str, Any]]]:
+    """Carrega metadados usando os mesmos manifestos e slugs dos loaders."""
     records: list[tuple[str, dict[str, Any]]] = []
     if source.suffix.lower() == ".json":
         if front == "doencas_especializadas":
@@ -224,13 +228,32 @@ def _canonical_publication_intents(front: str, source: Path) -> dict[str, bool |
             records.append((slug, post.metadata))
     else:
         raise RuntimeError(
-            f"Fonte da frente {front} não permite ler intenção de publicação: {source}"
+            f"Fonte da frente {front} não permite ler metadados canônicos: {source}"
         )
+
+    duplicates = sorted(
+        slug for slug, count in Counter(slug for slug, _metadata in records).items()
+        if count > 1
+    )
+    if duplicates:
+        raise RuntimeError(
+            f"Frente {front} contém slugs duplicados: "
+            + json.dumps(duplicates, ensure_ascii=False)
+        )
+    return records
+
+
+def _canonical_publication_intents(front: str, source: Path) -> dict[str, bool | None]:
+    """Lê intenção explícita sem transformar ausência legada em promoção.
+
+    ``True`` autoriza a etapa de publicação somente quando há também revisão e
+    aprovação versionada; ``False`` é quarentena; ausência preserva o estado
+    anterior e nunca promove um registro novo ainda falso.
+    """
+    records = _canonical_source_metadata(front, source)
 
     intents: dict[str, bool | None] = {}
     for slug, metadata in records:
-        if slug in intents:
-            raise RuntimeError(f"Frente {front} contém slug duplicado: {slug}")
         if "published" not in metadata:
             intents[slug] = None
             continue
@@ -241,6 +264,14 @@ def _canonical_publication_intents(front: str, source: Path) -> dict[str, bool |
             )
         intents[slug] = value
     return intents
+
+
+def _canonical_review_statuses(front: str, source: Path) -> dict[str, str | None]:
+    """Lê o status editorial de cada item da fonte canônica."""
+    return {
+        slug: metadata.get("review_status")
+        for slug, metadata in _canonical_source_metadata(front, source)
+    }
 
 
 def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
@@ -349,6 +380,42 @@ def _validate_editorial_approvals(
     return validated
 
 
+def _load_full_corpus_authorization(
+    canonical_slugs: dict[str, set[str]],
+    sources: dict[str, Path],
+) -> tuple[dict[str, set[str]], dict[str, Any] | None]:
+    """Valida a autorização integral ligada ao corpus exato do checkout.
+
+    O manifesto é opcional para compatibilidade com releases anteriores. Quando
+    presente, qualquer divergência de arquivo, slug, contagem ou revisão aborta a
+    reconciliação antes da primeira mutação no banco.
+    """
+    empty = {front: set() for front in FRONTS}
+    if not FULL_CORPUS_AUTHORIZATION_PATH.exists():
+        return empty, None
+    if set(sources) != set(FRONTS) or set(canonical_slugs) != set(FRONTS):
+        raise RuntimeError("Inventário incompleto para validar autorização integral.")
+
+    fingerprints = {}
+    for front in FRONTS:
+        statuses = _canonical_review_statuses(front, sources[front])
+        fingerprint_source = (
+            sources[front].parent
+            if front in {"doencas_especializadas", "triagem_sintomas"}
+            else sources[front]
+        )
+        fingerprints[front] = build_front_fingerprint(
+            fingerprint_source,
+            canonical_slugs[front],
+            statuses,
+        )
+    return validate_full_corpus_authorization(
+        FULL_CORPUS_AUTHORIZATION_PATH,
+        canonical_slugs=canonical_slugs,
+        fingerprints=fingerprints,
+    )
+
+
 def _load_controlled_substances(db: Session) -> dict:
     source = _ensure_source("controlados", "/controlados/listas-344-98.json")
     from app.services.carregar_controlados import carregar
@@ -365,6 +432,7 @@ def _synchronize_publication(
     publish_reviewed: bool,
     approved_slugs: dict[str, set[str]],
     publication_intents: dict[str, dict[str, bool | None]],
+    full_corpus_authorized_slugs: dict[str, set[str]] | None = None,
     dry_run: bool = False,
     commit: bool = True,
 ) -> tuple[dict[str, int], dict[str, int], dict[str, int], dict[str, int]]:
@@ -378,6 +446,7 @@ def _synchronize_publication(
     unpublished_absent: dict[str, int] = {}
     unpublished_unreviewed: dict[str, int] = {}
     unpublished_ineligible: dict[str, int] = {}
+    full_corpus_authorized_slugs = full_corpus_authorized_slugs or {}
     try:
         for front, config in FRONTS.items():
             model = config["model"]
@@ -387,10 +456,14 @@ def _synchronize_publication(
                 raise RuntimeError(
                     f"Frente {front}: intenção de publicação não cobre o corpus canônico."
                 )
-            explicit_true = {slug for slug, value in intents.items() if value is True}
-            explicit_false = {slug for slug, value in intents.items() if value is False}
+            release_authorized = full_corpus_authorized_slugs.get(front, set())
             approved = approved_slugs.get(front, set())
-            eligible = explicit_true & approved
+            eligible, ineligible = resolve_publication_policy(
+                slugs,
+                intents,
+                approved,
+                release_authorized,
+            )
             if publish_reviewed:
                 changed = (
                     db.query(model)
@@ -405,7 +478,6 @@ def _synchronize_publication(
             else:
                 published[front] = 0
 
-            ineligible = explicit_false | (explicit_true - approved)
             blocked = (
                 db.query(model)
                 .filter(
@@ -528,7 +600,16 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         front: state[2]
         for front, state in prepared.items()
     }
+    sources = {front: state[0] for front, state in prepared.items()}
+    (
+        full_corpus_authorized_slugs,
+        full_corpus_authorization,
+    ) = _load_full_corpus_authorization(canonical_slugs, sources)
     approved_slugs = _load_editorial_approvals()
+    approved_slugs = {
+        front: approved_slugs[front] | full_corpus_authorized_slugs[front]
+        for front in FRONTS
+    }
     editorial_approvals = _validate_editorial_approvals(
         canonical_slugs, approvals=approved_slugs
     )
@@ -550,6 +631,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
             publish_reviewed=False,
             approved_slugs=approved_slugs,
             publication_intents=publication_intents,
+            full_corpus_authorized_slugs=full_corpus_authorized_slugs,
             commit=False,
         )
         arquivar_entidades_de_conteudo_despublicado(preflight_db, commit=False)
@@ -584,6 +666,8 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
             publish_reviewed=publish_reviewed,
             approved_slugs=approved_slugs,
             publication_intents=publication_intents,
+            full_corpus_authorized_slugs=full_corpus_authorized_slugs,
+            commit=False,
         )
         database = _database_inventory(db, canonical_slugs)
         if database["below_minimum"] and not allow_partial:
@@ -591,7 +675,12 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
                 "Reconciliação incompleta: "
                 + json.dumps(database["below_minimum"], ensure_ascii=False, sort_keys=True)
             )
+        _validate_full_corpus_publication(database, full_corpus_authorization)
+        db.commit()
         knowledge_graph = backfill_mesmo_tema(db)
+    except Exception:
+        db.rollback()
+        raise
     finally:
         db.close()
 
@@ -611,6 +700,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     result = {
         "loads": loads,
         "editorial_approvals": editorial_approvals,
+        "full_corpus_authorization": full_corpus_authorization,
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,

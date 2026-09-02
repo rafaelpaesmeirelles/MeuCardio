@@ -8,7 +8,7 @@ import type { HeartTeamAgent, HeartTeamCase, HeartTeamOpinion, HeartTeamSource, 
 const AGENTS: HeartTeamAgent[] = [
   { key: "coordinator", label: "Coordenador clínico", detail: "Estrutura o problema e preserva divergências.", required: true },
   { key: "heart_failure", label: "IC e cardiomiopatias", detail: "Fenótipo, congestão, função ventricular e terapias." },
-  { key: "arrhythmia", label: "Arritmias e eletrofisiologia", detail: "Ritmo, risco arrítmico e dispositivos." },
+  { key: "electrophysiology", label: "Arritmias e eletrofisiologia", detail: "Ritmo, risco arrítmico e dispositivos." },
   { key: "imaging", label: "Imagem cardiovascular", detail: "Integra ECG, eco, TC, RM e hemodinâmica." },
   { key: "critical_care", label: "Cardiologia intensiva", detail: "Instabilidade, emergência e suporte circulatório." },
   { key: "pharmacology", label: "Farmacologia e segurança", detail: "Interações, contraindicações e ajustes orgânicos." },

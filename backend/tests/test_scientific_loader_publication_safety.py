@@ -1057,6 +1057,14 @@ def test_reconcile_fecha_publicacao_inelegivel_antes_de_loader_parcial(monkeypat
     )
     monkeypatch.setattr(
         reconciliation,
+        "_load_full_corpus_authorization",
+        lambda canonical, _sources: (
+            {front: set() for front in canonical},
+            None,
+        ),
+    )
+    monkeypatch.setattr(
+        reconciliation,
         "_validate_editorial_approvals",
         lambda *_args, **_kwargs: {"primeira": 0, "segunda": 0},
     )

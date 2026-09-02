@@ -44,6 +44,7 @@ test("offers the third experience at login and in the home selector", () => {
   assert.match(home, />Ciência & Ensino</);
   assert.match(home, /setSelectedSpace\(nextMode === "scientific" \? "descobrir" : "consultorio"\)/);
   assert.match(login, /sessionStorage\.removeItem\("corvia:cardiology-spaces:mode"\)/);
+  assert.match(login, /Consultório, Hospital, Ensino, Pesquisa e Gestão integrados para acompanhar cada decisão\./);
 });
 
 test("keeps five scientific journeys and every scientific surface discoverable", () => {

@@ -5,15 +5,21 @@ import test from "node:test";
 const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 const shell = read("src/components/Shell.tsx");
 const frame = read("src/components/CardiologySpacesAppFrame.tsx");
+const registry = read("src/lib/clinicalRouteRegistry.ts");
+const home = read("src/pages/CardiologySpacesHome.tsx");
 const chat = read("src/components/ChatFlutuante.tsx");
 const clinicalUpdates = read("src/components/ClinicalUpdates.tsx");
 const agenda = read("src/pages/Agenda.tsx");
+const exams = read("src/pages/Exames.tsx");
 const checklist = read("src/pages/ChecklistModelo.tsx");
 const evidence = read("src/pages/Evidencia.tsx");
 const disease = read("src/pages/GuiaDoenca.tsx");
 const triage = read("src/pages/TriagemSintomas.tsx");
 const emergency = read("src/pages/Emergencia.tsx");
 const styles = read("src/styles/cardiology-spaces-app-frame.css");
+const homeStyles = read("src/styles/cardiology-spaces-home.css");
+const agendaStyles = read("src/styles/clinical-agenda-final-polish.css");
+const examStyles = read("src/styles/clinical-exams-v2.css");
 const rc2 = read("../.github/workflows/rc2-acceptance.yml");
 const visualQa = read("../.github/workflows/visual-qa.yml");
 
@@ -97,4 +103,28 @@ test("clinical updates remain separate from canonical text across clinical detai
   for (const page of [disease, evidence, checklist, triage]) {
     assert.match(page, /<ClinicalUpdates updates=/);
   }
+});
+
+test("IA para Exames is prominent without changing deck or dock geometry", () => {
+  assert.match(frame, /data-feature=\{route\.path === "\/exames-ia" \? "exam-ai" : undefined\}/);
+  assert.match(registry, /hospital: \["\/round", "\/exames-ia", "\/cardiologia-intensiva"/);
+  assert.match(styles, /\.cv-function-deck \.cv-nav-link\[data-feature="exam-ai"\]:not\(\.is-current\)/);
+  assert.match(styles, /\.cv-drawer \.cv-nav-link\[data-feature="exam-ai"\]:not\(\.is-current\)/);
+  assert.match(home, /data-feature=\{action\.to === "\/exames-ia" \? "exam-ai" : undefined\}/);
+  assert.match(homeStyles, /\.spaces-catalog \.spaces-action\[data-feature="exam-ai"\]/);
+  assert.doesNotMatch(styles, /data-feature="exam-ai"[^}]*?(?:width|height|padding|grid-template|transform)\s*:/);
+});
+
+test("Exames exposes the highlighted IA action with a symmetric mobile layout", () => {
+  assert.match(exams, /to: "\/exames-ia", label: "IA para Exames", icon: "ecg", tone: "primary"/);
+  assert.match(examStyles, /\.cc-exams-page \.cv-page-hero__actions>\.cv-action\[href="\/exames-ia"\]\{grid-column:1\/-1\}/);
+});
+
+test("agenda patient names use the canonical clinical-flow link before opening the chart", () => {
+  assert.match(agenda, /className="agenda-evento__paciente"/);
+  assert.match(agenda, /\/agenda-clinica\/hoje\?dia=/);
+  assert.match(agenda, /`\/agenda-clinica\/\$\{appointmentId\}\/vincular`/);
+  assert.match(agenda, /navigate\(`\/prontuario\?paciente=\$\{perfil\.id\}`\)/);
+  assert.doesNotMatch(agenda, /patient_id[^\n]*\/prontuario/);
+  assert.match(agendaStyles, /\.agenda-evento__paciente:focus-visible/);
 });

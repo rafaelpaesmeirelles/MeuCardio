@@ -144,7 +144,7 @@ export const CLINICAL_ROUTES = [
   route({ path: "/checklists", name: "Checklists", space: "hospital", group: "ferramentas", icon: "check", layout: "data", intelligence: true, catalog: true }),
   route({ path: "/checklists/alta/:id", name: "Checklist de alta aplicado", shortName: "Checklist de alta", space: "hospital", group: "ferramentas", icon: "check", layout: "focus", intelligence: false, kind: "detail", parent: "/checklists" }),
   route({ path: "/checklists/:slug", name: "Modelo de checklist", shortName: "Checklist", space: "hospital", group: "ferramentas", icon: "check", layout: "reading", intelligence: true, kind: "detail", parent: "/checklists" }),
-  route({ path: "/heart-team", name: "Heart Team Virtual", shortName: "Heart Team", space: "hospital", group: "assistente", icon: "round", layout: "focus", intelligence: false, gate: "heart-team", catalog: true, featured: true }),
+  route({ path: "/heart-team", name: "Heart Team Virtual", shortName: "Heart Team", space: "hospital", group: "assistente", icon: "round", layout: "focus", intelligence: true, gate: "heart-team", catalog: true, featured: true }),
   route({ path: "/heart-team/:caseId", name: "Caso do Heart Team", shortName: "Caso Heart Team", space: "hospital", group: "assistente", icon: "round", layout: "focus", intelligence: false, kind: "detail", parent: "/heart-team", gate: "heart-team" }),
   route({ path: "/exames-ia", name: "IA para Exames", space: "hospital", group: "ferramentas", icon: "ecg", layout: "focus", intelligence: false, catalog: true, featured: true }),
   route({ path: "/ecg-ia", name: "ECG IA", space: "hospital", group: "ferramentas", icon: "ecg", layout: "focus", intelligence: false, kind: "alias", parent: "/exames-ia" }),
@@ -256,7 +256,7 @@ export function catalogRoutesFor(space: FunctionalSpace, isAdmin: boolean) {
 
 export const SPACE_QUICK_ROUTES: Record<FunctionalSpace, readonly string[]> = {
   consultorio: ["/agenda", "/receituario", "/prontuario", "/exames", "/medicamentos", "/calculadoras", "/doencas"],
-  hospital: ["/round", "/cardiologia-intensiva", "/emergencia", "/exames-ia", "/checklists", "/documentos", "/calculadoras", "/heart-team"],
+  hospital: ["/round", "/exames-ia", "/cardiologia-intensiva", "/emergencia", "/checklists", "/documentos", "/calculadoras", "/heart-team"],
   ensino: ["/trilhas", "/casos-clinicos", "/apresentacao", "/galeria", "/material-paciente", "/diretrizes", "/trilhas/timeline"],
   pesquisa: ["/busca", "/evidencias", "/estudos", "/diretrizes", "/biblioteca", "/documentos-cientificos-ia", "/exportar"],
   gestao: ["/indicadores", "/corvia-mail", "/usuarios-online", "/sincronizacao", "/minha-conta", "/admin"],

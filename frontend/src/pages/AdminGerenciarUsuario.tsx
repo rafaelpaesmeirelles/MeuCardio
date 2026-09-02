@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ApiError, api } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
+import "../styles/admin-assinantes.css";
 
 type CorviaMail = {
   id: number;

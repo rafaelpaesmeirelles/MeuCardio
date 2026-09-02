@@ -40,8 +40,14 @@ def test_home_nao_duplica_contagem_especializada_que_ja_e_canonica_na_biblioteca
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' not in painel
     assert 'api.get<AreaCountsResponse>("/library/area-counts")' in biblioteca
     assert "Conteúdos por área clínica" in biblioteca
+    assert 'geral: "/doencas?tab=catalogo&area=geral"' in biblioteca
+    assert 'neonatal: "/doencas?tab=catalogo&area=cardiopediatria&q=neonatal"' in biblioteca
+    assert "Buscar área da Cardiologia" in biblioteca
+    assert 'geral: "Cardiologia Geral"' in guia
+    assert "Buscar área ou grupo clínico" in guia
     assert 'api.get<DiseaseFacetsResponse>(`/specialty-guides/disease-facets' in guia
-    assert "diseaseFacets.areas.map" in guia
+    assert "areasFiltradas.map" in guia
+    assert "dominiosFiltrados.map" in guia
 
 
 def test_comunicacao_permanece_acionavel_no_shell_e_no_assistente_pessoal():

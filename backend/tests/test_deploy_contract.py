@@ -49,7 +49,9 @@ def test_deploy_exige_readiness_antes_de_migrar_e_reconciliar():
 
 def test_deploy_constroi_antes_da_indisponibilidade_e_abre_proxy_por_ultimo():
     fonte = _fonte(DEPLOY)
-    indice_build = fonte.index('"${COMPOSE[@]}" build backend frontend-build')
+    indice_build = fonte.index(
+        '"${COMPOSE[@]}" build backend frontend-build agenda-sync whatsapp-heart-team-worker'
+    )
     indice_stop_caddy = fonte.index("parar_servico_se_existir caddy", indice_build)
     indice_up_privado = fonte.index(
         '"${COMPOSE[@]}" up -d --no-build --remove-orphans db redis backend frontend-build'
@@ -60,6 +62,32 @@ def test_deploy_constroi_antes_da_indisponibilidade_e_abre_proxy_por_ultimo():
     assert indice_build < indice_stop_caddy < indice_up_privado < indice_reconcile < indice_up_caddy
     assert 'up -d --build --remove-orphans' not in fonte
     assert "Abrindo o proxy somente após banco, corpus e build estarem certificados" in fonte
+
+
+def test_deploy_ativa_e_certifica_workers_da_mesma_release_antes_do_proxy():
+    fonte = _fonte(DEPLOY)
+    indice_snapshot = fonte.index('log "Fechando o proxy e o backend antigo')
+    indice_reconcile = fonte.index("python -m app.commands.reconcile_content --publish-reviewed")
+    pre_snapshot = fonte[indice_snapshot:indice_reconcile]
+    assert "parar_servico_se_existir agenda-sync" in pre_snapshot
+    assert "parar_servico_se_existir whatsapp-heart-team-worker" in pre_snapshot
+    indice_workers = fonte.index(
+        '"${COMPOSE[@]}" up -d --no-build --no-deps --force-recreate'
+    )
+    indice_proxy = fonte.index('"${COMPOSE[@]}" up -d --no-build caddy')
+
+    assert indice_reconcile < indice_workers < indice_proxy
+    assert "agenda-sync whatsapp-heart-team-worker" in fonte[indice_workers:indice_proxy]
+    assert 'ps --status running --services | grep -Fxq agenda-sync' in fonte
+    assert 'ps --status running --services | grep -Fxq whatsapp-heart-team-worker' in fonte
+    assert 'WORKERS_ESTAVEIS=$((WORKERS_ESTAVEIS + 1))' in fonte
+    assert '[[ "$WORKERS_ESTAVEIS" -ge 5 ]]' in fonte
+    assert "não permaneceram estáveis por 10 segundos" in fonte
+    rollback = fonte[
+        fonte.index("restaurar_backup_pre_deploy()") : fonte.index("diagnosticar_erro()")
+    ]
+    assert "parar_servico_se_existir agenda-sync" in rollback
+    assert "parar_servico_se_existir whatsapp-heart-team-worker" in rollback
 
 
 def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():

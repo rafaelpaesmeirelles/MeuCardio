@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { validateAdminFichaContrast, validateHistoricoRendering, validateInlineStyleTokens } from "./check-admin-ficha-historico.mjs";
 
 // --texto/--texto-secundario/--superficie aqui deliberadamente resolvem
@@ -241,4 +242,24 @@ function PainelDecisaoKyc() {
 }
 `;
   assert.deepEqual(validateInlineStyleTokens(tsx), []);
+});
+
+test("lista administrativa expõe ficha, gestão e exclusão sem rolagem horizontal no mobile", () => {
+  const listPage = readFileSync(new URL("../src/pages/AdminAssinantes.tsx", import.meta.url), "utf8");
+  const managePage = readFileSync(new URL("../src/pages/AdminGerenciarUsuario.tsx", import.meta.url), "utf8");
+  const styles = readFileSync(new URL("../src/styles/admin-assinantes.css", import.meta.url), "utf8");
+
+  assert.match(listPage, /data-label="Nome \/ e-mail"/);
+  assert.match(listPage, /data-label="Ações"/);
+  assert.match(listPage, />Abrir ficha<\/button>/);
+  assert.match(listPage, />Gerenciar e excluir<\/button>/);
+  assert.match(listPage, /`\/admin\/usuarios\/\$\{u\.id\}\/gerenciar`/);
+  assert.doesNotMatch(listPage, /role="link"/);
+  assert.match(managePage, /import "\.\.\/styles\/admin-assinantes\.css"/);
+  assert.match(managePage, /Excluir definitivamente do Cardiology Spaces \+ CorVIA Mail/);
+  assert.match(managePage, /confirmar_email: confirmarEmail\.trim\(\)\.toLowerCase\(\)/);
+  assert.match(styles, /@media \(max-width: 900px\)[\s\S]*\.admin-assinantes__tabela \{ display: block; min-width: 0; \}/);
+  assert.match(styles, /content: attr\(data-label\)/);
+  assert.match(styles, /\.admin-assinantes__acoes \{[\s\S]*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\)/);
+  assert.match(styles, /\.admin-assinantes__acoes::before \{ grid-column: 1 \/ -1; \}/);
 });

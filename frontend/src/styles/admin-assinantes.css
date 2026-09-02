@@ -73,7 +73,6 @@
   vertical-align: top;
 }
 .admin-assinantes__linha {
-  cursor: pointer;
   transition: background-color 0.12s ease;
 }
 .admin-assinantes__linha:hover,
@@ -82,6 +81,81 @@
 .admin-assinantes__nome { display: block; color: var(--texto); font-weight: 700; }
 .admin-assinantes__sub { display: block; color: var(--texto-secundario); font-size: 0.78rem; }
 .admin-assinantes__badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
+.admin-assinantes__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.admin-assinantes__acoes .botao {
+  min-height: 38px;
+  padding: 0.4rem 0.65rem;
+  white-space: nowrap;
+}
+.admin-assinantes__gerenciar {
+  border-color: var(--alerta);
+}
+
+@media (max-width: 900px) {
+  .admin-assinantes__campo,
+  .admin-assinantes__campo--busca { flex: 1 1 100%; min-width: 0; }
+  .admin-assinantes__tabela-wrap { overflow-x: visible; background: transparent; border: 0; }
+  .admin-assinantes__tabela { display: block; min-width: 0; }
+  .admin-assinantes__tabela thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .admin-assinantes__tabela tbody { display: grid; gap: 0.8rem; }
+  .admin-assinantes__tabela tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+    color: var(--texto);
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .admin-assinantes__tabela td {
+    display: grid;
+    align-content: start;
+    gap: 0.2rem;
+    min-width: 0;
+    padding: 0.7rem 0.8rem;
+    border-bottom: 1px solid var(--borda);
+    overflow-wrap: anywhere;
+  }
+  .admin-assinantes__tabela td:first-child,
+  .admin-assinantes__tabela td:last-child { grid-column: 1 / -1; }
+  .admin-assinantes__tabela td::before {
+    content: attr(data-label);
+    color: var(--texto-secundario);
+    font-family: var(--fonte-dados);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .admin-assinantes__tabela td:last-child { border-bottom: 0; }
+  .admin-assinantes__acoes {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admin-assinantes__acoes::before { grid-column: 1 / -1; }
+  .admin-assinantes__acoes .botao { width: 100%; white-space: normal; }
+}
+
+@media (max-width: 430px) {
+  .admin-assinantes__tabela tr { grid-template-columns: 1fr; }
+  .admin-assinantes__tabela td { grid-column: 1 / -1; }
+  .admin-assinantes__acoes { grid-template-columns: 1fr; }
+}
 
 .admin-assinantes__paginacao {
   display: flex;

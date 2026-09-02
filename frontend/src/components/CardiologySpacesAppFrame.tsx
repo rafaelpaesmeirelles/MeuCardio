@@ -99,6 +99,7 @@ function RouteLink({ route, current, badge, onNavigate }: {
       to={route.path}
       onClick={onNavigate}
       className={`cv-nav-link${selected ? " is-current" : ""}${route.featured ? " is-featured" : ""}`}
+      data-feature={route.path === "/exames-ia" ? "exam-ai" : undefined}
       aria-current={selected ? "page" : undefined}
     >
       <span className="cv-nav-link__icon"><Icone nome={route.icon} /></span>

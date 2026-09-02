@@ -83,6 +83,14 @@ def test_publica_preservados_revisados(monkeypatch, tmp_path):
     }
     monkeypatch.setattr(command, "FRONTS", fronts)
     monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    monkeypatch.setattr(
+        command,
+        "_load_full_corpus_authorization",
+        lambda canonical, _sources: (
+            {front: set() for front in canonical},
+            None,
+        ),
+    )
     monkeypatch.setattr(command, "_load_editorial_approvals", lambda: approvals)
     db = _session_with(
         *(
@@ -121,6 +129,14 @@ def test_dry_run_nao_altera_banco(monkeypatch, tmp_path):
     }
     monkeypatch.setattr(command, "FRONTS", fronts)
     monkeypatch.setattr(reconciliation, "FRONTS", fronts)
+    monkeypatch.setattr(
+        command,
+        "_load_full_corpus_authorization",
+        lambda canonical, _sources: (
+            {front: set() for front in canonical},
+            None,
+        ),
+    )
     monkeypatch.setattr(
         command,
         "_load_editorial_approvals",

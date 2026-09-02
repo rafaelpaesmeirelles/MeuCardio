@@ -42,11 +42,6 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           EVENT_SHA: ${{ github.event.workflow_run.head_sha }}
           REQUESTED_SHA: ${{ inputs.sha }}
-          EXPECTED_EMERGENCY_SHA: ${{ vars.CORVIA_AGENDA_SEARCH_EMERGENCY_SHA }}
-          # SHA que passou pelos gates frontend, mas falhou antes do commit da
-          # migration. A recuperação autorizada deve ser seu descendente direto.
-          EMERGENCY_BASE_SHA: b918703065525771ee25de0f7c62a271b2af3bfb
-          EMERGENCY_MARKER: "[agenda-search-emergency]"
         run: |
           set -euo pipefail
           current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
@@ -61,97 +56,23 @@ jobs:
             exit 0
           fi
           runs_file="$RUNNER_TEMP/workflow-runs.json"
-          commit_file="$RUNNER_TEMP/candidate-commit.json"
           prior_deploy_candidates="$RUNNER_TEMP/prior-deploy-candidates"
           prior_deploy_marker="$RUNNER_TEMP/prior-certified-deploy"
-          emergency_marker="$RUNNER_TEMP/authorized-emergency-release"
+          ci_run_marker="$RUNNER_TEMP/certified-ci-run"
           gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
             "repos/${REPOSITORY}/actions/runs?branch=main&head_sha=${candidate}&per_page=100" > "$runs_file"
-          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
-            "repos/${REPOSITORY}/commits/${candidate}" > "$commit_file"
           python3 - \
-            "$runs_file" "$commit_file" "$candidate" "$GITHUB_RUN_ID" \
-            "$prior_deploy_candidates" "$emergency_marker" \
-            "$EXPECTED_EMERGENCY_SHA" "$EMERGENCY_BASE_SHA" "$EMERGENCY_MARKER" <<'PY'
+            "$runs_file" "$candidate" "$GITHUB_RUN_ID" \
+            "$prior_deploy_candidates" "$ci_run_marker" <<'PY'
           import json
           import sys
 
           (
-              runs_path, commit_path, expected_sha, current_run_id,
-              prior_deploy_candidates, emergency_marker,
-              expected_emergency_sha, emergency_base_sha, emergency_marker_text,
+              runs_path, expected_sha, current_run_id,
+              prior_deploy_candidates, ci_run_marker,
           ) = sys.argv[1:]
           with open(runs_path, encoding="utf-8") as handle:
               runs = json.load(handle)["workflow_runs"]
-          with open(commit_path, encoding="utf-8") as handle:
-              commit = json.load(handle)
-
-          allowed_emergency_paths = {
-              ".github/workflows/ci.yml",
-              ".github/workflows/deploy-production.yml",
-              "backend/app/api/agenda_integrada.py",
-              "backend/app/api/checklists.py",
-              "backend/app/api/emergencia.py",
-              "backend/app/api/evidence.py",
-              "backend/app/api/library.py",
-              "backend/app/api/search.py",
-              "backend/app/api/specialty_guides.py",
-              "backend/app/services/clinical_text.py",
-              "backend/app/services/exportacao_conteudo.py",
-              "backend/app/services/guideline_clinical_update.py",
-              "backend/app/services/guideline_clinical_update_runtime.py",
-              "backend/migrations/versions/f93s20260901_disable_reserved_smoke_agenda.py",
-              "backend/tests/test_agenda_integrada.py",
-              "backend/tests/test_guideline_clinical_update_runtime.py",
-              "backend/tests/test_search_tudo_com_tudo.py",
-              "frontend/scripts/check-cardiology-spaces-app-frame-contract.test.mjs",
-              "frontend/src/components/ChatFlutuante.tsx",
-              "frontend/src/components/ClinicalUpdates.tsx",
-              "frontend/src/pages/Agenda.tsx",
-              "frontend/src/pages/ChecklistModelo.tsx",
-              "frontend/src/pages/Evidencia.tsx",
-              "frontend/src/pages/GuiaDoenca.tsx",
-              "frontend/src/pages/TriagemSintomas.tsx",
-              "frontend/src/styles/cardiology-spaces-app-frame.css",
-              "frontend/src/styles/shell.css",
-          }
-          required_emergency_paths = {
-              ".github/workflows/ci.yml",
-              ".github/workflows/deploy-production.yml",
-              "backend/migrations/versions/f93s20260901_disable_reserved_smoke_agenda.py",
-          }
-          emergency_authorized = False
-          if expected_emergency_sha == expected_sha:
-              parents = [item.get("sha") for item in commit.get("parents", [])]
-              message = str(commit.get("commit", {}).get("message") or "")
-              files = commit.get("files") or []
-              changed_paths = {str(item.get("filename") or "") for item in files}
-              safe_statuses = all(
-                  item.get("status") in {"added", "modified"}
-                  and not item.get("previous_filename")
-                  for item in files
-              )
-              ci_green = any(
-                  run.get("name") == "CI"
-                  and run.get("head_sha") == expected_sha
-                  and run.get("head_branch") == "main"
-                  and run.get("event") == "push"
-                  and run.get("status") == "completed"
-                  and run.get("conclusion") == "success"
-                  for run in runs
-              )
-              emergency_authorized = (
-                  parents == [emergency_base_sha]
-                  and emergency_marker_text in message
-                  and bool(changed_paths)
-                  and changed_paths <= allowed_emergency_paths
-                  and required_emergency_paths <= changed_paths
-                  and safe_statuses
-                  and ci_green
-              )
-              if emergency_authorized:
-                  with open(emergency_marker, "w", encoding="utf-8") as handle:
-                      handle.write(expected_sha + "\n")
 
           required = {
               "CI": "push",
@@ -161,27 +82,32 @@ jobs:
               "Corpus inventory": "workflow_dispatch",
               "Deep functional inventory and public apps": "workflow_dispatch",
           }
-          if not emergency_authorized:
-              latest = {}
-              for run in runs:
-                  name = run.get("name")
-                  if (name not in required or run.get("head_sha") != expected_sha
-                          or run.get("head_branch") != "main" or run.get("event") != required[name]):
-                      continue
-                  previous = latest.get(name)
-                  if previous is None or run.get("created_at", "") > previous.get("created_at", ""):
-                      latest[name] = run
-              failures = []
-              for name in required:
-                  run = latest.get(name)
-                  if run is None:
-                      failures.append(f"{name}: missing")
-                  elif run.get("status") != "completed" or run.get("conclusion") != "success":
-                      failures.append(f"{name}: status={run.get('status')} conclusion={run.get('conclusion')}")
-              if failures:
-                  print("Mandatory gates are not all green for this exact SHA:")
-                  for failure in failures: print(f"- {failure}")
-                  raise SystemExit(1)
+          latest = {}
+          for run in runs:
+              name = run.get("name")
+              if (name not in required or run.get("head_sha") != expected_sha
+                      or run.get("head_branch") != "main" or run.get("event") != required[name]):
+                  continue
+              previous = latest.get(name)
+              if previous is None or run.get("created_at", "") > previous.get("created_at", ""):
+                  latest[name] = run
+          failures = []
+          for name in required:
+              run = latest.get(name)
+              if run is None:
+                  failures.append(f"{name}: missing")
+              elif run.get("status") != "completed" or run.get("conclusion") != "success":
+                  failures.append(f"{name}: status={run.get('status')} conclusion={run.get('conclusion')}")
+          if failures:
+              print("Mandatory gates are not all green for this exact SHA:")
+              for failure in failures: print(f"- {failure}")
+              raise SystemExit(1)
+          ci_run_id = latest["CI"].get("id")
+          if not isinstance(ci_run_id, int):
+              raise SystemExit("Successful CI run has no valid numeric id")
+          with open(ci_run_marker, "w", encoding="utf-8") as handle:
+              handle.write(f"{ci_run_id}\n")
+
           # Cada gate concluído dispara este workflow. A fila serial pode deixar
           # um segundo run pronto depois que o primeiro já publicou e certificou
           # a release. Só um run anterior COMPLETO e VERDE deste próprio workflow
@@ -201,11 +127,24 @@ jobs:
                   run_id = run.get("id")
                   if isinstance(run_id, int):
                       handle.write(f"{run_id}\n")
-          if emergency_authorized:
-              print(f"Single-use emergency release authorized for {expected_sha}; frontend CI is green.")
-          else:
-              print(f"All mandatory web/Android/scientific gates succeeded for {expected_sha}; Windows is pending.")
+          print(f"All mandatory web/Android/scientific gates succeeded for {expected_sha}; Windows is pending.")
           PY
+          # O sucesso agregado do workflow CI nao basta: frontend-only pode
+          # pular backend, e uma suite backend pode ser reutilizada. O job abaixo
+          # certifica que a classificacao terminou e que a evidencia exigida
+          # (execucao ou reuse do mesmo SHA+suite) foi validada fail-closed.
+          [[ -s "$ci_run_marker" ]] || { echo "No certified CI run was selected." >&2; exit 65; }
+          ci_run="$(cat "$ci_run_marker")"
+          [[ "$ci_run" =~ ^[0-9]+$ ]] || { echo "Invalid certified CI run id: $ci_run" >&2; exit 65; }
+          risk_gate_count="$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "repos/${REPOSITORY}/actions/runs/${ci_run}/jobs?filter=all&per_page=100" \
+            --jq '[.jobs[] | select(.name == "Backend risk gate" and .status == "completed" and .conclusion == "success")] | length')"
+          [[ "$risk_gate_count" =~ ^[1-9][0-9]*$ ]] || {
+            echo "CI run $ci_run has no successful Backend risk gate." >&2
+            exit 65
+          }
           # Um workflow pode terminar verde com o job de deploy pulado (por
           # exemplo, dispatch solicitado para SHA antigo). Confirme nos jobs do
           # run que a publicação + certificação de artefatos realmente executou.

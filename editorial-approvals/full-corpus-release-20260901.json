@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "release": "corvia-science-full-corpus-20260901",
+  "decision": "approved_for_full_corpus_publication",
+  "scope": "entire_canonical_reviewed_corpus",
+  "approval_basis": "Instrução explícita do responsável pelo repositório em 01/09/2026 para incorporar e publicar integralmente, no mesmo release final, o corpus científico revisado e aprovado, sem manter conteúdo científico válido em quarentena ou fora da publicação.",
+  "expected_total": 11577,
+  "inventory_sha256": "67d1fe8402afdf85bf108f9406e9d21a81996c5e33653b75f805cb9afb31b767",
+  "fronts": {
+    "casos_clinicos": {
+      "count": 915,
+      "reviewed_count": 915,
+      "slug_sha256": "3e3fcff9f57fca69bb50dc0a83724bd81a4ded27b3977bfe5447a34f63746e83",
+      "source_sha256": "b15f246628f31b3c263a2a64b9594923ba5a5f29a0311ec2bff7a9f80eaeeedd"
+    },
+    "checklists": {
+      "count": 472,
+      "reviewed_count": 472,
+      "slug_sha256": "5b8e7bb0a17300d20635e2abb793bdad8ebc7c0721295dcbd79cd18c404a2324",
+      "source_sha256": "d6c97c86d466d815140e201543f5aab7944d28fb6db3a9f93d07704671d1940a"
+    },
+    "documentos": {
+      "count": 2430,
+      "reviewed_count": 2430,
+      "slug_sha256": "d4f0533803b46f47a5db359c0c156a84d3a5db2229383ab18103835a58726c4a",
+      "source_sha256": "eb86024ef91dc45313caca20132a70333c780c807b6c9299fc30d0040572bae4"
+    },
+    "doencas_especializadas": {
+      "count": 326,
+      "reviewed_count": 326,
+      "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
+      "source_sha256": "ea65483967bc02b2b9421d9d3860e2f3dd05e42cf1a7a1c98ef85a2c3fe21e65"
+    },
+    "emergencia": {
+      "count": 77,
+      "reviewed_count": 77,
+      "slug_sha256": "d6371078a7d02a17b3952f804e3759a06e5fb4af9123bd8ce7097808ea99367c",
+      "source_sha256": "20553f82ecd40da55b27afffc16ec55c2238bc706136e820cad05870f69bffc4"
+    },
+    "estudos": {
+      "count": 2061,
+      "reviewed_count": 2061,
+      "slug_sha256": "4bc72fb6938177ba232ea8f64ebd4e96d3c34a5d98d55024d6a3ab308b55c27f",
+      "source_sha256": "cf78df9c4e6894e65d9a8343c0e0b70784aa38f9445864d854096261842fec97"
+    },
+    "evidencias": {
+      "count": 3363,
+      "reviewed_count": 3363,
+      "slug_sha256": "268560235d62920ce6e5e05f658dec773bb700f614f26a99ac55fd1b8f96b0e9",
+      "source_sha256": "681f6088b26f8719e4bdc7951126398df0b8b6f49f1e6c254008916538295d2b"
+    },
+    "exames": {
+      "count": 423,
+      "reviewed_count": 423,
+      "slug_sha256": "ddeb6914200ec45712dd4eb6e17b580bf61e85b451d4e100cf09be54a7e2ea2e",
+      "source_sha256": "e4bfa0808c2ca9fed964dc34c5b98b371f6c3cd4dbea5c9968ba83f944f94397"
+    },
+    "galeria": {
+      "count": 281,
+      "reviewed_count": 281,
+      "slug_sha256": "6573fced7b3107e150852932aee802fb1d5eb18a902191a6895b9dddef69ccbc",
+      "source_sha256": "40530e6f27ef517cd829ebc3e387f2edc65b8d5eceaf9f9c37a2007ffbc5f7d1"
+    },
+    "material_paciente": {
+      "count": 445,
+      "reviewed_count": 445,
+      "slug_sha256": "99bea4497b67628834cb73be04d5c5506d44aabf7a794ba7ffb45efe571647ff",
+      "source_sha256": "4b83cb76ea1195bbbb520a767e248adba8801769245a64234cb2139b5dd19a24"
+    },
+    "medicamentos": {
+      "count": 206,
+      "reviewed_count": 206,
+      "slug_sha256": "152405b478a5154514ee282334098f00e55b1143bf089b69d15799d7a16f452e",
+      "source_sha256": "b73c9cce12b101004297b71c75c15c075d49c5afaeafc7fd417e76294a1edd48"
+    },
+    "triagem_sintomas": {
+      "count": 23,
+      "reviewed_count": 23,
+      "slug_sha256": "fe13550a2282eb87f94650205395f5fb50ee5812818cdc8f56fefd39c1f02dd1",
+      "source_sha256": "8a422e2cea7c7448ed3c7f93bfa4bf1cd4998177a0a7ac7048ac5faddf259478"
+    },
+    "trilhas": {
+      "count": 555,
+      "reviewed_count": 555,
+      "slug_sha256": "88875df7345ba05e31247114cdd24ef2973ce12e6fdfa5a912af0773c11ce741",
+      "source_sha256": "d0d1881d1a417c3d4e5bdfcf76e3a1334809be47b83361624dc80ab8e247a967"
+    }
+  }
+}

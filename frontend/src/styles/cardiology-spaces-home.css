@@ -905,6 +905,27 @@ body.cardiology-spaces-active :where(a:hover) {
 
 .spaces-layer > header strong { color: #a5b3bd; font-size: 0.72rem; font-weight: 500; white-space: nowrap; }
 .spaces-layer--essential > header span { color: #b489f1; }
+.spaces-layer__edit {
+  position: absolute;
+  top: 7px;
+  right: 7%;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  padding: 0;
+  color: rgba(var(--space-rgb), 0.72);
+  background: rgba(3, 15, 27, 0.72);
+  border: 1px solid rgba(var(--space-rgb), 0.24);
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.72;
+  transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease, background 150ms ease;
+}
+.spaces-layer__edit svg { width: 15px; height: 15px; }
+.spaces-layer__edit:hover,
+.spaces-layer__edit:focus-visible { color: #fff; background: rgba(var(--space-rgb), 0.12); border-color: rgba(var(--space-rgb), 0.58); opacity: 1; }
+.spaces-layer__edit:focus-visible { outline: 2px solid var(--space-accent); outline-offset: 2px; }
 
 .spaces-layer > div {
   display: grid;
@@ -1433,12 +1454,14 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
 .spaces-catalog > div > section h3 { margin: 0 0 8px; color: #8aa1b1; font-family: var(--fonte-dados); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
 .spaces-catalog > div > section > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
 .spaces-catalog .spaces-action { justify-content: flex-start; min-height: 52px; padding: 8px 12px; color: #bdcbd4; background: rgba(7, 25, 42, 0.58); border: 1px solid rgba(91, 155, 198, 0.15); border-radius: 10px; font-size: 0.77rem; text-align: left; }
+.spaces-catalog .spaces-action[data-feature="exam-ai"] { color: #cef9dc; background: linear-gradient(90deg, rgba(63, 220, 137, 0.09), rgba(7, 25, 42, 0.58)); border-color: rgba(63, 220, 137, 0.32); box-shadow: inset 3px 0 rgba(63, 220, 137, 0.72); }
+.spaces-catalog .spaces-action[data-feature="exam-ai"] svg { color: #55e095; filter: drop-shadow(0 0 7px rgba(63, 220, 137, 0.34)); }
 
 .spaces-personalizer {
   display: grid;
   width: min(920px, calc(100vw - 40px));
   max-height: min(780px, calc(100dvh - 40px));
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto auto minmax(0, 1fr) auto;
   align-self: center;
   justify-self: center;
   overflow: hidden;
@@ -1451,8 +1474,19 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
 .spaces-travel > header p { margin: 0 0 5px; color: var(--space-accent); font-family: var(--fonte-dados); font-size: 0.67rem; font-weight: 600; letter-spacing: 0.14em; }
 .spaces-personalizer > header small,
 .spaces-travel > header small { display: block; max-width: 580px; margin-top: 6px; color: #8498a6; font-size: 0.75rem; line-height: 1.5; }
+.spaces-personalizer__tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-top: 18px; }
+.spaces-personalizer__tabs button { min-height: 40px; padding: 7px 10px; color: #8fa2af; background: rgba(4, 17, 30, 0.72); border: 1px solid rgba(91, 155, 198, 0.18); border-radius: 9px; font-size: 0.72rem; cursor: pointer; }
+.spaces-personalizer__tabs button.is-active { color: #f2fbfc; background: rgba(var(--space-rgb), 0.1); border-color: rgba(var(--space-rgb), 0.5); box-shadow: inset 0 -2px 0 var(--space-accent); }
 .spaces-personalizer__count { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 18px 0 12px; padding: 10px 12px; color: #aab8c1; background: rgba(4, 17, 30, 0.72); border: 1px solid rgba(91, 155, 198, 0.15); border-radius: 10px; font-size: 0.74rem; }
 .spaces-personalizer__count button { min-height: 38px; padding: 0 11px; color: #b8c7d0; background: transparent; border: 1px solid rgba(91, 155, 198, 0.22); border-radius: 8px; font-size: 0.69rem; cursor: pointer; }
+.spaces-personalizer__selected { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin-bottom: 10px; }
+.spaces-personalizer__selected article { display: grid; min-width: 0; min-height: 46px; grid-template-columns: 22px minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 7px 8px; color: #dce8ec; background: rgba(var(--space-rgb), 0.07); border: 1px solid rgba(var(--space-rgb), 0.26); border-radius: 9px; }
+.spaces-personalizer__selected article > svg { width: 18px; height: 18px; color: var(--space-accent); }
+.spaces-personalizer__selected article > span { display: flex; min-width: 0; align-items: center; gap: 7px; overflow: hidden; font-size: 0.69rem; text-overflow: ellipsis; white-space: nowrap; }
+.spaces-personalizer__selected article > span b { display: grid; width: 19px; height: 19px; flex: 0 0 auto; place-items: center; color: #071521; background: var(--space-accent); border-radius: 50%; font-size: 0.58rem; }
+.spaces-personalizer__selected article > div { display: flex; gap: 3px; }
+.spaces-personalizer__selected article button { display: grid; width: 27px; height: 27px; place-items: center; padding: 0; color: #adc0ca; background: rgba(3, 15, 27, 0.72); border: 1px solid rgba(91, 155, 198, 0.22); border-radius: 7px; cursor: pointer; }
+.spaces-personalizer__selected article button:disabled { opacity: 0.3; cursor: default; }
 .spaces-personalizer__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; overflow: auto; padding-right: 5px; }
 .spaces-personalizer__grid > button { display: grid; min-height: 60px; grid-template-columns: 26px minmax(0, 1fr) 24px; align-items: center; gap: 9px; padding: 9px 11px; color: #aabac4; text-align: left; background: rgba(7, 25, 42, 0.62); border: 1px solid rgba(91, 155, 198, 0.16); border-radius: 10px; cursor: pointer; }
 .spaces-personalizer__grid > button > svg { width: 22px; height: 22px; color: var(--space-accent); }
@@ -1462,8 +1496,9 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
 .spaces-personalizer__grid > button.is-selected { color: #eef8fa; background: rgba(var(--space-rgb), 0.08); border-color: rgba(var(--space-rgb), 0.45); }
 .spaces-personalizer__grid > button.is-selected > i { color: #fff; background: var(--space-accent); border-color: var(--space-accent); }
 .spaces-personalizer__grid > button:disabled { opacity: 0.42; cursor: not-allowed; }
-.spaces-personalizer > footer { display: flex; justify-content: flex-end; padding-top: 16px; }
+.spaces-personalizer > footer { display: flex; justify-content: flex-end; gap: 8px; padding-top: 16px; }
 .spaces-personalizer > footer button { min-height: 44px; padding: 0 18px; color: #041319; background: var(--space-accent); border: 1px solid var(--space-accent); border-radius: 10px; font-weight: 700; cursor: pointer; }
+.spaces-personalizer > footer button.is-secondary { color: #b8c7d0; background: transparent; border-color: rgba(91, 155, 198, 0.3); }
 
 .spaces-travel-overlay { place-items: center; padding: 20px; }
 .spaces-travel { width: min(1180px, 100%); max-height: calc(100dvh - 40px); overflow: auto; padding: 26px; border-radius: 20px; box-shadow: 0 34px 100px rgba(0, 0, 0, 0.54); }
@@ -1758,6 +1793,8 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
   .spaces-layer--next,
   .spaces-layer--refs { min-height: 0; }
   .spaces-layer > header { display: flex; min-height: 24px; align-items: center; justify-content: space-between; gap: 10px; padding: 0 4px; }
+  .spaces-layer > header { padding-right: 36px; }
+  .spaces-layer__edit { top: 5px; right: 4.5%; width: 28px; height: 28px; opacity: 0.9; }
   .spaces-layer > header span { font-size: 0.63rem; }
   .spaces-layer > header strong { overflow: hidden; font-size: 0.66rem; text-overflow: ellipsis; white-space: nowrap; }
   .spaces-layer > div { display: grid; grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
@@ -1861,6 +1898,9 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
   .spaces-catalog .spaces-action { display: flex; min-height: 50px; justify-content: flex-start; }
 
   .spaces-personalizer { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); padding: 17px 14px; border-radius: 16px; }
+  .spaces-personalizer__tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spaces-personalizer__count { align-items: stretch; flex-direction: column; gap: 8px; }
+  .spaces-personalizer__selected { grid-template-columns: 1fr; max-height: 170px; overflow: auto; }
   .spaces-personalizer__grid { grid-template-columns: 1fr; }
   .spaces-personalizer__grid > button { min-height: 56px; }
   .spaces-personalizer > header small { max-width: 34ch; }

@@ -51,6 +51,51 @@ body.corvia-route--agenda .clinical-os .agenda-filtro-contas__menu .logo-provedo
 body.corvia-route--agenda .clinical-os .agenda-filtro-contas__fechar {
   min-height:30px; margin-top:.4rem; padding:.2rem .6rem!important; font-size:.62rem!important;
 }
+body.corvia-route--agenda .clinical-os .agenda-evento__paciente {
+  display:block; width:100%; min-width:0; margin:0; padding:0; overflow:hidden;
+  color:inherit; background:transparent; border:0; border-radius:3px; font:inherit;
+  text-align:left; text-overflow:ellipsis; white-space:nowrap; cursor:pointer;
+}
+body.corvia-route--agenda .clinical-os .agenda-evento__paciente:hover {
+  color:#8ceaf0; text-decoration:underline; text-underline-offset:2px;
+}
+body.corvia-route--agenda .clinical-os .agenda-evento__paciente:focus-visible {
+  outline:2px solid var(--space-accent,#42cad8); outline-offset:2px;
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto {
+  display:grid; gap:.65rem; padding:1rem 1.2rem;
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto>p {
+  margin:0; color:#91abb4; font-size:.7rem;
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__estado,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__erro {
+  padding:.7rem .8rem; color:#a9c3cb; background:rgba(255,255,255,.035);
+  border:1px solid rgba(126,190,208,.1); border-radius:10px; font-size:.7rem;
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__erro {
+  color:#ffc5d3; border-color:rgba(240,91,135,.22); background:rgba(240,91,135,.06);
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__candidatos { display:grid; gap:.45rem; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__candidatos h3 { margin:0; color:#91abb4; font-size:.68rem; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar {
+  display:flex; min-height:52px; align-items:center; justify-content:space-between; gap:.7rem;
+  padding:.7rem .8rem; color:#eaf8fb; background:rgba(66,202,216,.05);
+  border:1px solid rgba(66,202,216,.16); border-radius:10px; text-align:left; cursor:pointer;
+}
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao:hover,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar:hover { border-color:rgba(66,202,216,.4); background:rgba(66,202,216,.09); }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao:focus-visible,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar:focus-visible { outline:2px solid #42cad8; outline-offset:2px; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao>span,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar>span { display:flex; min-width:0; flex:1; flex-direction:column; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao strong,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar strong { font-size:.75rem; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao small,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar small { margin-top:.12rem; color:#839da7; font-size:.62rem; }
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__opcao>svg,
+body.corvia-route--agenda .clinical-os .agenda-paciente-contexto__criar>svg { flex:0 0 auto; color:#42cad8; }
 @media (max-width:900px) {
   body.corvia-route--agenda .clinical-os .agenda-filtros { overflow:visible!important; }
   body.corvia-route--agenda .clinical-os .agenda-filtro-contas__menu {

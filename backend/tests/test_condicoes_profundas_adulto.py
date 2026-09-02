@@ -137,5 +137,5 @@ def test_tela_exibe_diagnostico_conexoes_e_filtro_adulto():
     assert "Conteúdo diretamente relacionado" in detail
     assert "related_document_slugs.map" in detail
     assert "patient_material_slug" in detail
-    assert 'geral: "Cardiologia do adulto"' in catalog
+    assert 'geral: "Cardiologia Geral"' in catalog
     assert "/specialty-guides/disease-facets" in catalog

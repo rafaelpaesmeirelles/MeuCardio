@@ -139,7 +139,7 @@ def test_detalhe_preserva_estado_trivalente_e_exibe_mensagens_e_rotulos():
     assert "if (value === undefined) delete next[question.id]" in source
     assert 'setAssessment(null);\n    setContext(next);' in source
     assert 'title="Orientações do assistente" items={assessment.messages}' in source
-    assert 'geral: "Cardiologia do adulto"' in source
+    assert 'geral: "Cardiologia Geral"' in source
     assert "{labelArea(disease.area)} · {labelCategory(disease.category)}" in source
 
 

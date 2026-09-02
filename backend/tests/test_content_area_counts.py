@@ -18,5 +18,9 @@ def test_classifica_acervos_especializados_pelos_vocabularios_do_banco():
     assert "fetal" in matching_area_ids("cardiopediatria", "cardiologia_fetal")
 
 
-def test_nao_classifica_tema_geral_por_coincidencia_inexistente():
-    assert matching_area_ids("Insuficiência cardíaca", "monitorização ambulatorial") == set()
+def test_conteudo_adulto_sem_populacao_especializada_entra_em_cardiologia_geral():
+    assert matching_area_ids("Insuficiência cardíaca", "monitorização ambulatorial") == {"geral"}
+
+
+def test_cardiologia_geral_explicita_pode_coexistir_com_faceta_especializada():
+    assert matching_area_ids("Cardiologia Geral", "Cardio-Oncologia") == {"geral", "cardiooncologia"}

@@ -118,11 +118,27 @@ test("Deslocamento uses the canonical mobility target, live geolocation and a re
   assert.match(styles, /@keyframes spaces-flight/);
 });
 
-test("Essencial persists independent selections per clinical space", () => {
+test("all shelf profiles are personalized without changing the approved geometry", () => {
   assert.match(home, /const ESSENTIAL_DEFAULTS: Record<ClinicalSpaceId, string\[\]>/);
-  assert.match(home, /cardiology-spaces:essentials:\$\{usuario\?\.id \|\| "user"\}:\$\{spaceId\}/);
-  assert.match(home, /slice\(0, 8\)/);
-  assert.match(home, /Restaurar padrão/);
+  assert.match(home, /SHELF_PREFERENCES_PREFIX = "corvia:cardiology-spaces:shelves:v1"/);
+  assert.match(home, /type ShelfId = "now" \| "next" \| "references" \| "essential"/);
+  assert.match(home, /now: 3,[\s\S]*next: 3,[\s\S]*references: 4,[\s\S]*essential: 6/);
+  assert.match(home, /shelfProfileKey\(activeMode, activeSpace\.id\)/);
+  assert.match(home, /schemaVersion: 1/);
+  assert.match(home, /window\.addEventListener\("storage", syncPreferences\)/);
+  assert.match(home, /Salvar personalização/);
+  assert.match(home, /Cancelar/);
+  assert.match(home, /Restaurar esta prateleira/);
+  assert.match(home, /moveShelfAction\(actionId, -1\)/);
+  assert.match(home, /moveShelfAction\(actionId, 1\)/);
+  assert.match(home, /selectedIds === undefined \? definition\.defaultActionIds : selectedIds/);
+  assert.doesNotMatch(home, /\.\.\.definition\.defaultActionIds, \.\.\.allowedIds/);
+  assert.match(home, /hasOwnProperty\.call\(preferences\.profiles\[profileKey\] \|\| \{\}, "essential"\)/);
+  assert.match(home, /localStorage\.removeItem\(legacyKey\)/);
+  assert.match(styles, /\.spaces-layer__edit/);
+  assert.match(styles, /\.spaces-layer__edit \{[\s\S]*right: 7%/);
+  assert.match(styles, /\.spaces-layer__edit \{ top: 5px; right: 4\.5%/);
+  assert.match(styles, /\.spaces-personalizer__tabs/);
 });
 
 test("catalog stays complete, unique and courses are retired safely", () => {

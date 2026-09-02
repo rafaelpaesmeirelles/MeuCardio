@@ -33,6 +33,14 @@ from app.models.study_track import StudyTrack
 
 AREA_DEFINITIONS = (
     {
+        "id": "geral",
+        "label": "Cardiologia Geral",
+        "terms": (
+            "cardiologia geral", "cardiologia do adulto", "cardiologia adulto",
+            "clinica cardiologica", "clinica cardiovascular",
+        ),
+    },
+    {
         "id": "pediatrica",
         "label": "Cardiologia Pediátrica",
         "terms": (
@@ -131,17 +139,27 @@ def _flatten(value: object) -> Iterable[str]:
 
 
 def matching_area_ids(*values: object) -> set[str]:
-    """Classifica metadados sem usar corpo clínico ou conteúdo não publicado."""
+    """Classifica metadados sem usar corpo clínico ou conteúdo não publicado.
+
+    ``Cardiologia Geral`` é a área canônica de todo registro que não pertence
+    a uma população especializada. Quando o próprio metadado declara a área
+    geral, ela pode coexistir com outra faceta; fora disso, o complemento evita
+    que conteúdo adulto válido desapareça da navegação por áreas.
+    """
     text = _normalizar(" ".join(
         flattened
         for value in values
         for flattened in _flatten(value)
     ))
-    return {
+    matched = {
         definition["id"]
         for definition in AREA_DEFINITIONS
         if any(term in text for term in definition["terms"])
     }
+    specialized = matched - {"geral"}
+    if not specialized:
+        matched.add("geral")
+    return matched
 
 
 def content_area_counts(db: Session) -> list[dict]:

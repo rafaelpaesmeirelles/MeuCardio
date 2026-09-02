@@ -16,7 +16,8 @@ log() { printf '[%s] %s\n' "$(date -Is)" "$*"; }
 backend_exec() { "${COMPOSE[@]}" exec -T backend "$@"; }
 mostrar_diagnostico() {
   "${COMPOSE[@]}" ps || true
-  "${COMPOSE[@]}" logs --tail=200 backend caddy frontend-build db || true
+  "${COMPOSE[@]}" logs --tail=200 \
+    backend caddy frontend-build db agenda-sync whatsapp-heart-team-worker || true
 }
 
 compose_project_name() {
@@ -33,6 +34,8 @@ parar_servico_se_existir() {
 restaurar_backup_pre_deploy() {
   echo "Bloqueando tráfego e revertendo o banco após falha na fase mutável." >&2
   parar_servico_se_existir caddy
+  parar_servico_se_existir agenda-sync
+  parar_servico_se_existir whatsapp-heart-team-worker
   parar_servico_se_existir backend
   TRAFEGO_ABERTO=0
 
@@ -351,7 +354,7 @@ fi
 
 log "Construindo imagens a partir do checkout imutável, sem interromper o tráfego atual."
 validar_checkout_imutavel
-"${COMPOSE[@]}" build backend frontend-build
+"${COMPOSE[@]}" build backend frontend-build agenda-sync whatsapp-heart-team-worker
 validar_checkout_imutavel
 
 log "Validando provedor multimodal sem enviar dados clínicos."
@@ -387,6 +390,8 @@ validar_checkout_imutavel
 log "Fechando o proxy e o backend antigo antes do snapshot usado no rollback."
 parar_servico_se_existir caddy
 TRAFEGO_ABERTO=0
+parar_servico_se_existir agenda-sync
+parar_servico_se_existir whatsapp-heart-team-worker
 parar_servico_se_existir backend
 SERVICOS_INICIADOS=1
 # Todas as requisições aceitas antes da indisponibilidade já terminaram; o dump
@@ -411,7 +416,7 @@ done
 
 log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
-log "Reconciliando as 11 coleções e publicando somente conteúdo revisado."
+log "Reconciliando as 13 frentes científicas e publicando somente conteúdo revisado."
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
 log "Publicando somente conteúdo atual que já está revisado."
 backend_exec python -m app.commands.publish_preserved_content
@@ -419,6 +424,29 @@ if [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Indexando a base reconciliada para a IA clínica."
   backend_exec python -m app.services.indexar
 fi
+
+log "Ativando os supervisores de agenda e WhatsApp/Heart Team da mesma release."
+"${COMPOSE[@]}" up -d --no-build --no-deps --force-recreate \
+  agenda-sync whatsapp-heart-team-worker
+WORKERS_PRONTOS=0
+WORKERS_ESTAVEIS=0
+for _ in $(seq 1 20); do
+  if "${COMPOSE[@]}" ps --status running --services | grep -Fxq agenda-sync \
+    && "${COMPOSE[@]}" ps --status running --services | grep -Fxq whatsapp-heart-team-worker; then
+    WORKERS_ESTAVEIS=$((WORKERS_ESTAVEIS + 1))
+    if [[ "$WORKERS_ESTAVEIS" -ge 5 ]]; then
+      WORKERS_PRONTOS=1
+      break
+    fi
+  else
+    WORKERS_ESTAVEIS=0
+  fi
+  sleep 2
+done
+[[ "$WORKERS_PRONTOS" == "1" ]] || {
+  echo "Os supervisores de agenda e WhatsApp/Heart Team não permaneceram estáveis por 10 segundos." >&2
+  false
+}
 
 log "Certificando flags e controles transitórios da central cardiovascular."
 backend_exec python - <<'PY'

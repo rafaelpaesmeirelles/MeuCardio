@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 from typing import Any
 
 from sqlalchemy.orm import Session
@@ -23,10 +24,13 @@ from app.commands.reconcile_content import (
     FRONTS,
     _canonical_publication_intents,
     _canonical_source_slugs,
+    _database_inventory,
     _ensure_source,
     _load_editorial_approvals,
+    _load_full_corpus_authorization,
     _synchronize_publication,
     _validate_editorial_approvals,
+    _validate_full_corpus_publication,
 )
 from app.core.db import SessionLocal
 
@@ -34,9 +38,12 @@ from app.core.db import SessionLocal
 def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[str, Any]:
     canonical_slugs: dict[str, set[str]] = {}
     publication_intents: dict[str, dict[str, bool | None]] = {}
+    sources: dict[str, Path] = {}
+    full_corpus_database: dict[str, Any] | None = None
     try:
         for front, config in FRONTS.items():
             source = _ensure_source(front, str(config["path"]))
+            sources[front] = source
             canonical_slugs[front] = _canonical_source_slugs(front, source)
             intents = _canonical_publication_intents(front, source)
             if set(intents) != canonical_slugs[front]:
@@ -45,7 +52,14 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
                 )
             publication_intents[front] = intents
 
+        full_corpus_authorized_slugs, full_corpus_authorization = (
+            _load_full_corpus_authorization(canonical_slugs, sources)
+        )
         approvals = _load_editorial_approvals()
+        approvals = {
+            front: approvals[front] | full_corpus_authorized_slugs[front]
+            for front in FRONTS
+        }
         _validate_editorial_approvals(canonical_slugs, approvals=approvals)
         (
             published,
@@ -58,8 +72,22 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
             publish_reviewed=True,
             approved_slugs=approvals,
             publication_intents=publication_intents,
-            dry_run=dry_run,
+            full_corpus_authorized_slugs=full_corpus_authorized_slugs,
+            # Com autorização integral, contagens por frente e total precisam
+            # ser certificadas antes de commit ou rollback do dry-run.
+            dry_run=dry_run and full_corpus_authorization is None,
+            commit=full_corpus_authorization is None,
         )
+        if full_corpus_authorization is not None:
+            full_corpus_database = _database_inventory(db, canonical_slugs)
+            _validate_full_corpus_publication(
+                full_corpus_database,
+                full_corpus_authorization,
+            )
+            if dry_run:
+                db.rollback()
+            else:
+                db.commit()
     except Exception:
         db.rollback()
         raise
@@ -69,6 +97,8 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
         "unpublished_absent": unpublished_absent,
         "unpublished_unreviewed": unpublished_unreviewed,
         "unpublished_ineligible": unpublished_ineligible,
+        "full_corpus_authorization": full_corpus_authorization,
+        "full_corpus_database": full_corpus_database,
         "dry_run": dry_run,
     }
 
