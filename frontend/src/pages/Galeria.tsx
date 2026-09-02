@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { api } from "../lib/api";
+import { api, todasAsPaginas } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Item = {
@@ -31,8 +31,8 @@ export default function Galeria() {
       if (modalidade) qs.set("modality", modalidade);
       if (busca.trim()) qs.set("q", busca.trim());
       qs.set("limit", "500");
-      api.get<{ items: Item[] }>(`/gallery/images?${qs}`)
-        .then((r) => { if (ativo) setItens(r.items); })
+      todasAsPaginas<Item>(`/gallery/images?${qs}`)
+        .then((lista) => { if (ativo) setItens(lista); })
         .catch((causa) => { if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível carregar as imagens."); });
     }, 250);
     return () => { ativo = false; clearTimeout(atraso); };

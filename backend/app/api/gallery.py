@@ -47,7 +47,7 @@ def list_images(
     theme: str | None = None,
     q: str | None = None,
     limit: int = Query(60, le=500),
-    offset: int = 0,
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
@@ -66,7 +66,14 @@ def list_images(
         ))
     total = query.count()
     items = query.order_by(GalleryImage.theme, GalleryImage.title).offset(offset).limit(limit).all()
-    return {"total": total, "items": [_card(i) for i in items]}
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "next_offset": offset + len(items) if offset + len(items) < total else None,
+        "has_more": offset + len(items) < total,
+        "items": [_card(i) for i in items],
+    }
 
 
 @router.get("/images/{slug}")
