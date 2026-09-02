@@ -8,15 +8,35 @@ tabela de destino mudam (`knowledge_chunks` em vez de `document_chunks`).
 from __future__ import annotations
 
 import hashlib
+import logging
 
 from sqlalchemy import select, union_all
 from sqlalchemy.orm import Session
 
 from app.models.rag import KnowledgeChunk
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
+from app.services.catalog_search import (
+    INTERNAL_MARKER_SQL_PATTERN,
+    INTERNAL_OVERRIDE_SQL_PATTERN,
+    LITERAL_SQL,
+    SQL,
+    calculadoras_encontradas,
+    literal_like,
+    normalizar,
+)
 from app.services.knowledge_graph import _id_estavel
 from app.services.rag import dividir, obter_provedor_embeddings
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
+
+# `catalog_search` usa 'emergencia' como rótulo de frente (mesmo texto
+# mostrado em /api/search); `rag_sources.FONTES_RAG` usa o entity_type
+# 'protocolo_emergencia' (allowlist do grafo). Único ponto onde os dois
+# vocabulários divergem — todo o resto é 1:1 (frente == entity_type).
+_FRENTE_PARA_ENTITY_TYPE = {fonte.entity_type: fonte.entity_type for fonte in FONTES_RAG if fonte.entity_type != "protocolo_emergencia"}
+_FRENTE_PARA_ENTITY_TYPE["emergencia"] = "protocolo_emergencia"
+
+
+log = logging.getLogger("corvia.rag_multi")
 
 
 def _hash(texto: str) -> str:
@@ -74,6 +94,7 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
 
     total_entidades = 0
     total_trechos = 0
+    falhas = 0
     for item in publicados(db, fonte):
         if apenas_pendentes and item.id in ja_indexadas:
             continue
@@ -81,11 +102,20 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
         if not texto or not texto.strip():
             continue
         titulo = getattr(item, fonte.titulo_attr, "") or ""
-        total_trechos += indexar_entidade(
-            db, entity_type=entity_type, entity_id=item.id, titulo=titulo, texto=texto, provedor=provedor,
-        )
+        # Parte 3 da correção coordenada de 02/09/2026: mesma resiliência de
+        # `rag.indexar_tudo()` — uma entidade que falhe (crédito, rede) não
+        # trava o lote; fica pendente pra próxima chamada (idempotente).
+        try:
+            total_trechos += indexar_entidade(
+                db, entity_type=entity_type, entity_id=item.id, titulo=titulo, texto=texto, provedor=provedor,
+            )
+        except Exception:
+            log.exception("Falha ao indexar %s id=%s — segue pendente.", entity_type, item.id)
+            db.rollback()
+            falhas += 1
+            continue
         total_entidades += 1
-    return {"entity_type": entity_type, "entidades": total_entidades, "trechos": total_trechos}
+    return {"entity_type": entity_type, "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
 
 
 def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict:
@@ -95,6 +125,7 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict
 
     total_entidades = 0
     total_trechos = 0
+    falhas = 0
     for calc in CALCULATORS_REGISTRY.values():
         entity_id = _id_estavel("calculadora", calc.slug)
         if apenas_pendentes and entity_id in ja_indexadas:
@@ -103,11 +134,17 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict
         texto = "\n\n".join(p for p in partes if p)
         if not texto.strip():
             continue
-        total_trechos += indexar_entidade(
-            db, entity_type="calculadora", entity_id=entity_id, titulo=calc.name, texto=texto, provedor=provedor,
-        )
+        try:
+            total_trechos += indexar_entidade(
+                db, entity_type="calculadora", entity_id=entity_id, titulo=calc.name, texto=texto, provedor=provedor,
+            )
+        except Exception:
+            log.exception("Falha ao indexar calculadora slug=%s — segue pendente.", calc.slug)
+            db.rollback()
+            falhas += 1
+            continue
         total_entidades += 1
-    return {"entity_type": "calculadora", "entidades": total_entidades, "trechos": total_trechos}
+    return {"entity_type": "calculadora", "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
 
 
 def indexar_tudo_multi(db: Session, *, apenas_pendentes: bool = True) -> dict:
@@ -199,3 +236,57 @@ def resolver_trechos_multi(db: Session, chunk_ids: list[int]) -> dict[int, dict]
                 "entity_type": entity_type,
             }
     return resultado
+
+
+def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
+    """Busca léxica (tsvector, com fallback literal por acento/substring —
+    mesmo comportamento de `/api/search`) nas 12 frentes de `FONTES_RAG` +
+    calculadoras, reaproveitando a MESMA consulta de `catalog_search`
+    (Parte 2 da correção coordenada de 02/09/2026): produto e IA nunca
+    divergem sobre o que é "todo o acervo elegível".
+
+    Não depende de `knowledge_chunks`/embeddings — lê direto das tabelas de
+    origem publicadas, a mesma fonte que `/api/search` usa. Por isso
+    continua funcionando mesmo com o provedor de embeddings sem crédito
+    (Parte 3): item pendente de embedding não desaparece da IA, só não
+    aparece no braço semântico.
+
+    Devolve citações no mesmo formato de `resolver_trechos_multi()` (sem
+    `secao`, que só existe para chunk — aqui a unidade é o item inteiro).
+    Frente 'documento' é ignorada: já coberta pela busca léxica de
+    `document_chunks` em `rag.py` (`SQL_LEXICO`), não duplicada aqui.
+    """
+    values = {"q": pergunta, "q_like": literal_like(pergunta), "frente": None, "limit": limite, "offset": 0}
+    search_values = {
+        **values,
+        "internal_override_pattern": INTERNAL_OVERRIDE_SQL_PATTERN,
+        "internal_marker_pattern": INTERNAL_MARKER_SQL_PATTERN,
+    }
+    linhas = db.execute(SQL, search_values).mappings().all()
+    if not linhas and normalizar(pergunta):
+        linhas = db.execute(LITERAL_SQL, search_values).mappings().all()
+
+    resultados: list[dict] = []
+    for linha in linhas:
+        entity_type = _FRENTE_PARA_ENTITY_TYPE.get(linha["frente"])
+        if entity_type is None:
+            continue  # 'documento' (já coberto em rag.py) ou frente desconhecida
+        fonte = FONTES_POR_TIPO[entity_type]
+        resultados.append({
+            "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],
+            "secao": None, "conteudo": linha["snippet"],
+            "review_status": "revisado", "gaps": [],
+            "rota": fonte.rota.format(slug=linha["slug"]), "entity_type": entity_type,
+        })
+
+    for calc_row in calculadoras_encontradas(pergunta):
+        if len(resultados) >= limite:
+            break
+        resultados.append({
+            "slug": calc_row["slug"], "titulo": calc_row["title"], "tema": calc_row["theme"],
+            "secao": None, "conteudo": calc_row["snippet"],
+            "review_status": "revisado", "gaps": [],
+            "rota": f"/calculadoras/{calc_row['slug']}", "entity_type": "calculadora",
+        })
+
+    return resultados[:limite]

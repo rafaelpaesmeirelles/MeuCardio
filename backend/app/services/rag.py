@@ -155,8 +155,23 @@ def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
     if apenas_pendentes:
         q = q.filter(~Document.id.in_(select(DocumentChunk.document_id).distinct()))
     docs = q.all()
-    total = sum(indexar_documento(db, d, provedor) for d in docs)
-    return {"documentos": len(docs), "trechos": total}
+    total = 0
+    falhas = 0
+    for d in docs:
+        # Parte 3 da correção coordenada de 02/09/2026: um documento cuja
+        # chamada ao provedor falhe (crédito, rede, provedor fora do ar) não
+        # pode travar o lote inteiro. `db.rollback()` descarta o DELETE dos
+        # chunks antigos que `indexar_documento()` já tinha emitido (mas não
+        # commitado) antes de levantar — o documento continua exatamente
+        # como estava, ainda pendente, e `apenas_pendentes` tenta de novo na
+        # próxima chamada (idempotente).
+        try:
+            total += indexar_documento(db, d, provedor)
+        except Exception:
+            log.exception("Falha ao indexar documento id=%s slug=%s — segue pendente.", d.id, d.slug)
+            db.rollback()
+            falhas += 1
+    return {"documentos": len(docs) - falhas, "trechos": total, "falhas": falhas}
 
 
 # A metade léxica da busca híbrida precisa do MESMO filtro de `published` que a
@@ -185,48 +200,80 @@ def _rrf(listas: list[list[int]], k: int = 60) -> list[int]:
 def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> list[dict]:
     # Import tardio: rag_multi importa rag (dividir/obter_provedor_embeddings)
     # — import no topo do arquivo criaria ciclo no boot do pacote.
-    from app.services.rag_multi import ids_semanticos_multi, resolver_trechos_multi
+    from app.services.rag_multi import buscar_lexico_multi, ids_semanticos_multi, resolver_trechos_multi
 
     limite = settings.ai_top_k * 3
-    vetor = obter_provedor_embeddings().embeddings([pergunta])[0]
 
-    # O join com Document é INCONDICIONAL, e não só quando há filtro por tema:
-    # é por ele que passa o `published`. Antes de 31/07/2026 o join só existia
-    # no caminho com `temas`, então uma pergunta sem tema recuperava trechos de
-    # documento não publicado — conteúdo retido esperando aval chegava à IA.
-    consulta = (
-        select(DocumentChunk.id)
-        .join(Document, Document.id == DocumentChunk.document_id)
-        .where(Document.published.is_(True))
-    )
-    if temas:
-        consulta = consulta.where(Document.theme.in_(temas))
-    consulta = consulta.order_by(DocumentChunk.embedding.cosine_distance(vetor)).limit(limite)
-    semanticos = [r[0] for r in db.execute(consulta).all()]
+    # Léxico (documento + as outras 12 frentes + calculadoras) não depende
+    # do provedor de embeddings — lê direto das tabelas publicadas, mesma
+    # consulta de `/api/search`. Roda sempre, antes de qualquer chamada ao
+    # provedor, para nunca competir por crédito/latência com a parte que
+    # pode falhar.
     lexicos = [
         r.chunk_id for r in db.execute(SQL_LEXICO, {"q": pergunta, "limite": limite}).mappings()
     ]
+    try:
+        lexicos_multi = buscar_lexico_multi(db, pergunta, limite)
+    except Exception:
+        log.exception("Falha na busca léxica multi-frente — RAG segue só com o que já tiver.")
+        lexicos_multi = []
+
+    # Semântico depende do provedor de embeddings. Sem crédito/indisponível
+    # (Parte 3 da correção coordenada de 02/09/2026 — o provedor está sem
+    # crédito HOJE), a IA não pode parar de responder: cai para léxico-only
+    # em vez de propagar a exceção pro chamador e quebrar toda pergunta.
+    semanticos: list[int] = []
+    semanticos_multi: list[int] = []
+    try:
+        vetor = obter_provedor_embeddings().embeddings([pergunta])[0]
+    except Exception:
+        log.warning("Provedor de embeddings indisponível na recuperação — RAG segue só léxico.", exc_info=True)
+        vetor = None
+    if vetor is not None:
+        # O join com Document é INCONDICIONAL, e não só quando há filtro por
+        # tema: é por ele que passa o `published`. Antes de 31/07/2026 o join
+        # só existia no caminho com `temas`, então uma pergunta sem tema
+        # recuperava trechos de documento não publicado — conteúdo retido
+        # esperando aval chegava à IA.
+        consulta = (
+            select(DocumentChunk.id)
+            .join(Document, Document.id == DocumentChunk.document_id)
+            .where(Document.published.is_(True))
+        )
+        if temas:
+            consulta = consulta.where(Document.theme.in_(temas))
+        consulta = consulta.order_by(DocumentChunk.embedding.cosine_distance(vetor)).limit(limite)
+        semanticos = [r[0] for r in db.execute(consulta).all()]
+        semanticos_multi = ids_semanticos_multi(db, vetor, limite)
+
     # Auditoria de 02/09/2026, Parte D/F: o RAG cobria só `documents`. As
-    # outras 12 frentes elegíveis entram aqui como uma terceira lista no mesmo
-    # RRF — mesmo prestígio que semântico/léxico de documento, sem virar um
-    # "blob" sem identidade (cada resultado carrega `entity_type` até
-    # `montar_contexto`, então a resposta ainda pode citar a origem certa).
+    # outras 12 frentes elegíveis entram aqui como uma segunda "gaveta" no
+    # mesmo RRF — mesmo prestígio que semântico/léxico de documento, sem
+    # virar um "blob" sem identidade (cada resultado carrega `entity_type`
+    # até `montar_contexto`, então a resposta ainda pode citar a origem
+    # certa). Dentro da gaveta multi-frente, semântico (por chunk, id
+    # inteiro) e léxico (por item inteiro, chave `(entity_type, slug)`) têm
+    # granularidades diferentes — não colidem por acaso porque um `int`
+    # nunca é igual a uma `tuple`, mas o RRF ainda funciona por serem
+    # apenas chaves hasheáveis, ranqueadas independente do tipo.
     #
     # `document_chunks.id` e `knowledge_chunks.id` são sequences INDEPENDENTES
     # — o mesmo inteiro pode existir nas duas tabelas sem relação nenhuma.
     # Cada id entra no RRF marcado com a origem ("doc"/"multi") para nunca
     # fundir por acaso a pontuação de dois chunks de tabelas diferentes.
-    semanticos_multi = ids_semanticos_multi(db, vetor, limite)
-
     ordenados_doc = _rrf([[("doc", i) for i in semanticos], [("doc", i) for i in lexicos]])
-    ordenados_multi = [("multi", i) for i in semanticos_multi]
+    lex_multi_chaves = [(item["entity_type"], item["slug"]) for item in lexicos_multi]
+    ordenados_multi_inner = _rrf([semanticos_multi, lex_multi_chaves])
+    ordenados_multi = [("multi", i) for i in ordenados_multi_inner]
     ordenados = _rrf([ordenados_doc, ordenados_multi])[: settings.ai_top_k]
 
     if not ordenados:
         return []
 
     ids_doc = [chave for origem, chave in ordenados if origem == "doc"]
-    ids_multi = [chave for origem, chave in ordenados if origem == "multi"]
+    ids_multi_raw = [chave for origem, chave in ordenados if origem == "multi"]
+    ids_multi_chunk = [i for i in ids_multi_raw if isinstance(i, int)]
+    chaves_multi_lex = [i for i in ids_multi_raw if not isinstance(i, int)]
 
     linhas = db.execute(
         select(DocumentChunk, Document)
@@ -234,7 +281,7 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         .where(DocumentChunk.id.in_(ids_doc))
     ).all() if ids_doc else []
 
-    trechos_por_chave: dict[tuple[str, int], dict] = {
+    trechos_por_chave: dict[tuple, dict] = {
         ("doc", chunk.id): {
             "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
             "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
@@ -249,8 +296,13 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         }
         for chunk, doc in linhas
     }
-    for chunk_id, trecho in resolver_trechos_multi(db, ids_multi).items():
+    for chunk_id, trecho in resolver_trechos_multi(db, ids_multi_chunk).items():
         trechos_por_chave[("multi", chunk_id)] = trecho
+    lex_multi_por_chave = {(item["entity_type"], item["slug"]): item for item in lexicos_multi}
+    for chave_lex in chaves_multi_lex:
+        trecho = lex_multi_por_chave.get(chave_lex)
+        if trecho:
+            trechos_por_chave[("multi", chave_lex)] = trecho
 
     return [trechos_por_chave[chave] for chave in ordenados if chave in trechos_por_chave]
 

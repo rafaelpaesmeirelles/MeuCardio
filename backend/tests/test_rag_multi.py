@@ -132,3 +132,41 @@ def test_indexar_tudo_multi_cobre_as_13_frentes_mais_calculadora(db, monkeypatch
     assert len(resultado) == 13
     assert "calculadora" in resultado
     assert resultado["calculadora"]["entidades"] > 0  # REGISTRY não está vazio em produção
+
+
+class _ProvedorSemCredito:
+    def embeddings(self, textos):
+        raise RuntimeError("insufficient_quota: sem crédito no provedor de embeddings")
+
+
+def test_indexar_tipo_nao_propaga_falha_do_provedor_e_deixa_pendente(db, monkeypatch):
+    """Parte 3 da correção coordenada de 02/09/2026: uma falha do provedor de
+    embeddings (crédito, rede) durante a indexação em lote não pode travar o
+    lote inteiro. A entidade continua sem chunk (pendente) e pode ser
+    retentada depois — nunca desaparece, nunca quebra a chamada."""
+    monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorSemCredito())
+    db.add(_evidencia("evidencia-sem-credito-teste"))
+    db.commit()
+
+    resultado = indexar_tipo(db, "evidencia", apenas_pendentes=False)  # não deve levantar
+
+    assert resultado["entidades"] == 0
+    assert resultado["falhas"] == 1
+    assert db.query(KnowledgeChunk).filter(KnowledgeChunk.entity_type == "evidencia").count() == 0
+
+
+def test_indexar_tipo_retoma_apos_credito_voltar(db, monkeypatch):
+    """A mesma entidade que falhou continua elegível (`apenas_pendentes`) e é
+    indexada normalmente assim que o provedor volta a funcionar."""
+    db.add(_evidencia("evidencia-retry-teste"))
+    db.commit()
+
+    monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorSemCredito())
+    primeira = indexar_tipo(db, "evidencia", apenas_pendentes=True)
+    assert primeira["falhas"] == 1
+
+    monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorFake())
+    segunda = indexar_tipo(db, "evidencia", apenas_pendentes=True)
+    assert segunda["entidades"] == 1
+    assert segunda["falhas"] == 0
+    assert db.query(KnowledgeChunk).filter(KnowledgeChunk.entity_type == "evidencia").count() > 0
