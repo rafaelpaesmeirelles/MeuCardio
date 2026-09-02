@@ -29,6 +29,7 @@ from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
 from app.models.guideline import Guideline, GuidelineLink
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
+from app.services.canonical_themes import TEMA_PADRAO, TEMAS_CANONICOS
 
 log = logging.getLogger("corvia.guideline_clinical_update")
 
@@ -56,7 +57,13 @@ ANALYSIS_SCHEMA = {
     "properties": {
         "title_pt": {"type": "string"},
         "summary_pt": {"type": "string"},
-        "theme": {"type": "string"},
+        # Restrito à taxonomia canônica de `documents.theme` (achado na
+        # auditoria de 02/09/2026): antes disso o modelo gerava uma frase
+        # livre por documento, o que deixava cada um sem tema compartilhado
+        # com qualquer outro item do acervo — isolado do cruzamento por tema
+        # ("Tudo com Tudo") mesmo publicado e indexado. `enum`, igual a
+        # `key_changes.category` e `entities.type` logo abaixo.
+        "theme": {"type": "string", "enum": list(TEMAS_CANONICOS)},
         "topics": {"type": "array", "items": {"type": "string"}},
         "entities": {"type": "array", "items": {
             "type": "object", "additionalProperties": False,
@@ -747,7 +754,7 @@ def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, 
             slug=slug,
             title=str(analysis.get("title_pt") or guideline.titulo)[:500],
             kind="diretriz",
-            theme=str(analysis.get("theme") or guideline.tema or "Cardiologia")[:80],
+            theme=str(analysis.get("theme") or guideline.tema or TEMA_PADRAO)[:80],
             summary=str(analysis.get("summary_pt") or "")[:12000],
             body_md=body,
             tags=tags,
@@ -765,7 +772,7 @@ def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, 
         db.add(DocumentRevision(document_id=doc.id, version=doc.version,
                                 body_md=doc.body_md, author_id=None))
         doc.title = str(analysis.get("title_pt") or guideline.titulo)[:500]
-        doc.theme = str(analysis.get("theme") or guideline.tema or "Cardiologia")[:80]
+        doc.theme = str(analysis.get("theme") or guideline.tema or TEMA_PADRAO)[:80]
         doc.summary = str(analysis.get("summary_pt") or "")[:12000]
         doc.body_md = body
         doc.tags = tags
