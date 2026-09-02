@@ -28,6 +28,15 @@ MANIFESTS = (
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
 PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+# Nota: NÃO incluí "atresia-pulmonar" aqui. O valor pendente_revisao
+# escrito por este lote em doencas/metadados.json é mascarado por um
+# patch pré-existente em doencas/correcoes/zz-release36h-approvals.json
+# que fixa review_status="revisado" para este slug — na composição final
+# (load_disease_records) o registro já aparece "revisado", passando o
+# gate canônico sem necessidade de allowlist. Ver nota detalhada em
+# test_vincular_atresia_pulmonar.py::test_marcacao_editorial_correta e no
+# corpo do PR — vale decisão editorial sobre se os 5 novos vínculos de
+# hoje deveriam disparar nova revisão explícita.
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 

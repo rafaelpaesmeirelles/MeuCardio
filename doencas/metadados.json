@@ -11987,11 +11987,16 @@
       "https://www.jtcvs.org/article/S0022-5223(25)00286-7/abstract"
     ],
     "review_status": "pendente_revisao",
-    "review_note": "Aprofundamento produzido por IA em 27/08/2026, separando PA/IVS de PA/VSD/MAPCAs e incorporando ACHD 2025, coortes multicêntricas e literatura de dependência coronariana/unifocalização. Exige revisão humana por cardiologia intervencionista/cirurgia pediátrica antes de publicação; manutenção ductal, coronariografia, descompressão do VD, estratégia uni/biventricular, mapa segmentar, unifocalização e antitrombose devem ser individualizados.",
-    "version": 2,
+    "review_note": "Aprofundamento produzido por IA em 27/08/2026, separando PA/IVS de PA/VSD/MAPCAs e incorporando ACHD 2025, coortes multicêntricas e literatura de dependência coronariana/unifocalização. Exige revisão humana por cardiologia intervencionista/cirurgia pediátrica antes de publicação; manutenção ductal, coronariografia, descompressão do VD, estratégia uni/biventricular, mapa segmentar, unifocalização e antitrombose devem ser individualizados. | Lote vincular Tudo com Tudo 29/08/2026: adicionados 5 related_document_slugs (tetralogia de Fallot com atresia pulmonar, colapso neonatal canal-dependente, triagem neonatal por oximetria, conduto VD-AP, cianose no RN), levando o total de 1 para 6.",
+    "version": 3,
     "fonte_producao": "chatgpt",
     "related_document_slugs": [
-      "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica"
+      "atresia-pulmonar-anatomia-dependencia-coronariana-e-estrategia-cirurgica",
+      "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
+      "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+      "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+      "conduto-ventriculo-direito-arteria-pulmonar-seguimento-reintervencao-e-valva-transcateter",
+      "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"
     ],
     "patient_material_slug": "atresia-pulmonar"
   },
