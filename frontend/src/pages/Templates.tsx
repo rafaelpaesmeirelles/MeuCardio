@@ -704,6 +704,7 @@ export default function Templates() {
   const [erroGerados, setErroGerados] = useState("");
   const [buscaGerados, setBuscaGerados] = useState("");
   const [tipoGerados, setTipoGerados] = useState("");
+  const [pacientePreSelecionado, setPacientePreSelecionado] = useState<Paciente | null>(null);
 
   const recarregar = () => api.get<Template[]>("/document-templates").then(setLista);
 
@@ -740,6 +741,16 @@ export default function Templates() {
     recarregar();
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
     api.get<Record<string, string[]>>("/document-templates/exames-sugeridos").then(setExameSugestoes).catch(() => {});
+  }, []);
+
+  // Chegando do prontuário de um paciente (Prontuario.tsx envia
+  // ?paciente=<id>&atendimento=<id>), pré-seleciona esse paciente nos
+  // fluxos abertos a partir daqui — sem isso o médico tinha que buscá-lo
+  // de novo manualmente em cada fluxo.
+  useEffect(() => {
+    const pid = new URLSearchParams(window.location.search).get("paciente");
+    if (!pid) return;
+    api.get<Paciente>(`/pacientes/${pid}`).then(setPacientePreSelecionado).catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -781,8 +792,8 @@ export default function Templates() {
     recarregar();
   }
 
-  function abrirFluxo(origem: Origem, template?: Template) {
-    setValoresIniciais(undefined);
+  function abrirFluxo(origem: Origem, template?: Template, valores?: Partial<ValoresIniciaisRecriar>) {
+    setValoresIniciais(valores ?? (pacientePreSelecionado ? { paciente: pacientePreSelecionado } : undefined));
     setFluxoAberto({ origem, template });
     setTimeout(() => document.getElementById("fluxo-documento")?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
   }
@@ -811,13 +822,12 @@ export default function Templates() {
           setErroGerados("O modelo original não existe mais.");
           return;
         }
-        setValoresIniciais({ paciente, nomeAvulso, variaveisModelo: detalhe.variables ?? {} });
-        abrirFluxo("modelo", template);
+        abrirFluxo("modelo", template, { paciente, nomeAvulso, variaveisModelo: detalhe.variables ?? {} });
         return;
       }
 
       if (detalhe.doc_type === "solicitacao_exames") {
-        setValoresIniciais({
+        abrirFluxo("exames", undefined, {
           paciente, nomeAvulso,
           exames: detalhe.variables?.exames ?? [],
           indicacao: detalhe.variables?.indicacao ?? "",
@@ -825,20 +835,18 @@ export default function Templates() {
           prioridade: (detalhe.variables?.prioridade as "rotina" | "urgente") ?? "rotina",
           observacoes: detalhe.variables?.observacoes ?? "",
         });
-        abrirFluxo("exames");
         return;
       }
       if (detalhe.doc_type === "documento_livre") {
-        setValoresIniciais({
+        abrirFluxo("livre", undefined, {
           paciente, nomeAvulso,
           tituloLivre: detalhe.variables?.titulo ?? detalhe.title ?? "",
           corpoLivre: detalhe.variables?.corpo ?? detalhe.rendered_body,
         });
-        abrirFluxo("livre");
         return;
       }
       if (detalhe.doc_type === "atestado" && !detalhe.template_id) {
-        setValoresIniciais({
+        abrirFluxo("atestado", undefined, {
           paciente, nomeAvulso,
           diasAfastamento: detalhe.variables?.dias_afastamento ? String(detalhe.variables.dias_afastamento) : "",
           dataInicio: detalhe.variables?.data_inicio ?? "",
@@ -846,7 +854,6 @@ export default function Templates() {
           cid: detalhe.variables?.cid ?? "",
           observacoes: detalhe.variables?.observacoes ?? "",
         });
-        abrirFluxo("atestado");
         return;
       }
       setErroGerados("Este documento foi gerado antes desta função existir — não dá pra recriar automaticamente.");
