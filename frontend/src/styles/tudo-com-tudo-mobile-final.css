@@ -1,0 +1,194 @@
+/* CorVIA Cardiology Spaces — Tudo com Tudo
+   Contrato final responsivo da página de resultados.
+
+   A página combina conteúdo legado, cartões aninhados e controles globais.
+   Este fechamento impede que qualquer filho aumente a largura do viewport,
+   mantém os textos legíveis e devolve ao formulário a geometria móvel correta.
+*/
+
+body.corvia-space--pesquisa .clinical-os .tct-page,
+body.corvia-space--pesquisa .clinical-os .tct-page * {
+  box-sizing: border-box;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-page > *,
+body.corvia-space--pesquisa .clinical-os .tct-page > .cartao,
+body.corvia-space--pesquisa .clinical-os .tct-page section,
+body.corvia-space--pesquisa .clinical-os .tct-page article,
+body.corvia-space--pesquisa .clinical-os .tct-page header,
+body.corvia-space--pesquisa .clinical-os .tct-page nav,
+body.corvia-space--pesquisa .clinical-os .tct-page form,
+body.corvia-space--pesquisa .clinical-os .tct-page div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-hero {
+  width: 100%;
+  max-width: 100%;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-hero h1,
+body.corvia-space--pesquisa .clinical-os .tct-hero > p:not(.eyebrow),
+body.corvia-space--pesquisa .clinical-os .tct-head :is(h2, p, a),
+body.corvia-space--pesquisa .clinical-os .tct-topic :is(h3, p, li),
+body.corvia-space--pesquisa .clinical-os .tct-group :is(h3, p, strong, small),
+body.corvia-space--pesquisa .clinical-os .tct-row :is(strong, p, small) {
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-search {
+  width: 100%;
+  max-width: min(100%, 780px);
+  min-width: 0;
+  align-items: stretch;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-search > * {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-search .botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: stretch;
+  max-width: 100%;
+  margin: 0;
+  text-align: center;
+  text-indent: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-head,
+body.corvia-space--pesquisa .clinical-os .tct-head > div,
+body.corvia-space--pesquisa .clinical-os .tct-grid,
+body.corvia-space--pesquisa .clinical-os .tct-grid > *,
+body.corvia-space--pesquisa .clinical-os .tct-topic,
+body.corvia-space--pesquisa .clinical-os .tct-group,
+body.corvia-space--pesquisa .clinical-os .tct-row {
+  min-width: 0;
+  max-width: 100%;
+}
+
+body.corvia-space--pesquisa .clinical-os .tct-nav {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+}
+
+@media (max-width: 900px) {
+  body.corvia-space--pesquisa .clinical-os .tct-page {
+    gap: .72rem;
+    padding-bottom: calc(var(--barra-inferior, 72px) + 4.75rem);
+    overflow-x: hidden;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-page > .cartao {
+    width: 100%;
+    margin-inline: 0 !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-hero {
+    padding: .95rem !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-hero h1 {
+    max-width: none !important;
+    margin-block: .12rem .38rem;
+    font-size: clamp(1.55rem, 7.2vw, 2rem) !important;
+    line-height: 1.08;
+    letter-spacing: -.035em;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-hero > p:not(.eyebrow) {
+    margin: 0;
+    font-size: .76rem;
+    line-height: 1.48;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-search {
+    grid-template-columns: minmax(0, 1fr) minmax(92px, auto) !important;
+    gap: .42rem;
+    max-width: 100%;
+    margin-top: .72rem;
+    padding: .36rem;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-search input,
+  body.corvia-space--pesquisa .clinical-os .tct-search .botao {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 44px;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-search .botao {
+    padding: .58rem .72rem;
+    line-height: 1.15;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-head {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    gap: .48rem;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-head > a {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: .62rem !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-page > section.cartao,
+  body.corvia-space--pesquisa .clinical-os .tct-time {
+    padding: .9rem !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-topic,
+  body.corvia-space--pesquisa .clinical-os .tct-group {
+    padding: .82rem !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-nav {
+    margin: .12rem 0 .68rem;
+    padding: .08rem 0 .34rem;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-time li {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    gap: .5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  body.corvia-space--pesquisa .clinical-os .tct-search {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.corvia-space--pesquisa .clinical-os .tct-hero h1 {
+    font-size: 1.48rem !important;
+  }
+}
