@@ -27,7 +27,15 @@ MANIFESTS = (
     "casos-clinicos/metadados.json", "doencas/metadados.json", "triagem-sintomas/metadados.json",
 )
 PENDENTES_MEDICAMENTOS_RC: set[str] = set()
-PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {}
+PENDENTES_LOTES_TUDO_COM_TUDO: dict[str, set[str]] = {
+    "doencas/metadados.json": {
+        # Verbete novo criado em 29/08/2026 via doencas/fragmentos/
+        # apneia-do-sono-e-coracao.json — ver review_note. Usado apenas por
+        # test_disease_fragments_canonical.py; não afeta o gate abaixo, que
+        # só reconhece pendência com status="revisado" (nunca pendente_revisao).
+        "apneia-do-sono-e-coracao",
+    },
+}
 PENDENTES_MARKDOWN_AVC: set[str] = set()
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 
