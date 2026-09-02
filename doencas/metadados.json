@@ -34105,13 +34105,18 @@
     ],
     "related_document_slugs": [
       "aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas",
-      "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade"
+      "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade",
+      "fluxograma-tep-agudo-estratificacao-de-risco-e-decisao-de-trombolise",
+      "trombolise-sistemica-em-dose-reduzida-no-tep-de-risco-intermediario-o-ensaio-mopett",
+      "trombectomia-mecanica-versus-anticoagulacao-isolada-no-tep-de-risco-intermediario-alto-storm-pe",
+      "terapia-dirigida-por-cateter-no-tep-peerless-e-o-que-ainda-nao-esta-respondido",
+      "filtro-de-veia-cava-inferior-recuperavel-no-tep-agudo-o-ensaio-prepic2"
     ],
     "patient_material_slug": "embolia-pulmonar-o-que-aconteceu-com-meu-pulmao-e-o-que-esperar-da-recuperacao",
     "review_status": "revisado",
-    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. | Lote vincular Tudo com Tudo (enriquecimento) 29/08/2026: adicionados 5 related_document_slugs (estratificação de risco/decisão de trombólise, trombólise sistêmica em dose reduzida MOPETT, trombectomia mecânica STORM-PE, terapia dirigida por cateter PEERLESS/HI-PEITHO, filtro de veia cava PREPIC2), levando o total de 2 para 7. Nenhum conteúdo clínico pré-existente foi alterado; review_status e completeness preservados por decisão editorial explícita.",
     "fonte_producao": "chatgpt",
-    "version": 2
+    "version": 3
   },
   {
     "slug": "endocardite-infecciosa",
