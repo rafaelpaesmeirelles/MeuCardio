@@ -183,6 +183,10 @@ def _rrf(listas: list[list[int]], k: int = 60) -> list[int]:
 
 
 def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> list[dict]:
+    # Import tardio: rag_multi importa rag (dividir/obter_provedor_embeddings)
+    # — import no topo do arquivo criaria ciclo no boot do pacote.
+    from app.services.rag_multi import ids_semanticos_multi, resolver_trechos_multi
+
     limite = settings.ai_top_k * 3
     vetor = obter_provedor_embeddings().embeddings([pergunta])[0]
 
@@ -202,29 +206,53 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
     lexicos = [
         r.chunk_id for r in db.execute(SQL_LEXICO, {"q": pergunta, "limite": limite}).mappings()
     ]
+    # Auditoria de 02/09/2026, Parte D/F: o RAG cobria só `documents`. As
+    # outras 12 frentes elegíveis entram aqui como uma terceira lista no mesmo
+    # RRF — mesmo prestígio que semântico/léxico de documento, sem virar um
+    # "blob" sem identidade (cada resultado carrega `entity_type` até
+    # `montar_contexto`, então a resposta ainda pode citar a origem certa).
+    #
+    # `document_chunks.id` e `knowledge_chunks.id` são sequences INDEPENDENTES
+    # — o mesmo inteiro pode existir nas duas tabelas sem relação nenhuma.
+    # Cada id entra no RRF marcado com a origem ("doc"/"multi") para nunca
+    # fundir por acaso a pontuação de dois chunks de tabelas diferentes.
+    semanticos_multi = ids_semanticos_multi(db, vetor, limite)
 
-    ordenados = _rrf([semanticos, lexicos])[: settings.ai_top_k]
+    ordenados_doc = _rrf([[("doc", i) for i in semanticos], [("doc", i) for i in lexicos]])
+    ordenados_multi = [("multi", i) for i in semanticos_multi]
+    ordenados = _rrf([ordenados_doc, ordenados_multi])[: settings.ai_top_k]
+
     if not ordenados:
         return []
+
+    ids_doc = [chave for origem, chave in ordenados if origem == "doc"]
+    ids_multi = [chave for origem, chave in ordenados if origem == "multi"]
 
     linhas = db.execute(
         select(DocumentChunk, Document)
         .join(Document, Document.id == DocumentChunk.document_id)
-        .where(DocumentChunk.id.in_(ordenados))
-    ).all()
-    posicao = {cid: i for i, cid in enumerate(ordenados)}
-    linhas = sorted(linhas, key=lambda x: posicao[x[0].id])
+        .where(DocumentChunk.id.in_(ids_doc))
+    ).all() if ids_doc else []
 
-    return [{
-        "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
-        "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
-        "review_status": doc.review_status,
-        # `gaps` é o campo que de fato marca incerteza: o importador o preenche
-        # com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA` encontrado no
-        # corpo do documento. Sem trazê-lo até aqui, `montar_contexto` não tem
-        # como avisar o modelo de que a fonte carrega ponto não conferido.
-        "gaps": list(doc.gaps or []),
-    } for chunk, doc in linhas]
+    trechos_por_chave: dict[tuple[str, int], dict] = {
+        ("doc", chunk.id): {
+            "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
+            "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
+            "review_status": doc.review_status,
+            # `gaps` é o campo que de fato marca incerteza: o importador o
+            # preenche com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA`
+            # encontrado no corpo do documento — sem trazê-lo até aqui,
+            # `montar_contexto` não tem como avisar o modelo.
+            "gaps": list(doc.gaps or []),
+            "rota": f"/biblioteca/{doc.slug}",
+            "entity_type": "documento",
+        }
+        for chunk, doc in linhas
+    }
+    for chunk_id, trecho in resolver_trechos_multi(db, ids_multi).items():
+        trechos_por_chave[("multi", chunk_id)] = trecho
+
+    return [trechos_por_chave[chave] for chave in ordenados if chave in trechos_por_chave]
 
 
 def montar_contexto(trechos: list[dict]) -> tuple[str, list[dict]]:
