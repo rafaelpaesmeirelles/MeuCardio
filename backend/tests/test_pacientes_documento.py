@@ -518,6 +518,273 @@ class TestAtestadoESolicitacaoExamesIdentificacaoNoCorpo:
         assert "Paciente: Fulano de Tal da Silva" in texto
 
 
+def _corpo_final_exames_como_o_navegador_envia(nome: str | None, exames: list[str]) -> str:
+    """Reproduz exatamente `montarCorpoExames()` de Templates.tsx — o
+    preview que o navegador REAL monta e manda como `corpo_final`. Só
+    inclui o nome (nunca CPF/nascimento, que o cliente não conhece)."""
+    linhas = []
+    if nome:
+        linhas += [f"Paciente: {nome}", ""]
+    linhas += ["Solicito a realização dos seguintes exames:", ""]
+    linhas += [f"- {e}" for e in exames]
+    return "\n".join(linhas)
+
+
+def _corpo_final_atestado_como_o_navegador_envia(nome: str, dias: int) -> str:
+    """Reproduz exatamente a montagem de `origem === "atestado"` em
+    Templates.tsx — nome sempre embutido na frase, nunca numa linha
+    "Paciente:" própria."""
+    return (
+        f"Atesto, para os devidos fins, que o(a) paciente {nome} necessita de "
+        f"afastamento de suas atividades habituais por {dias} dia(s)."
+    )
+
+
+class TestCorpoFinalDoNavegadorPreservaIdentificacao:
+    """02/09/2026, terceira rodada: `corpo_final` (o preview que o
+    navegador REAL sempre manda para Exames/Atestado) estava apagando a
+    identificação server-side que tinha acabado de ser prefixada, porque
+    a ordem de chamada estava invertida. Estes testes reproduzem
+    literalmente o que Templates.tsx envia hoje — não a API "nua" sem
+    `corpo_final` dos testes acima."""
+
+    def test_exames_com_corpo_final_do_navegador_ganha_cpf_e_nascimento_sem_duplicar_nome(
+        self, client, db, criar_usuario,
+    ):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+        corpo_final = _corpo_final_exames_como_o_navegador_envia(
+            "Fulano de Tal da Silva", ["Hemograma completo"],
+        )
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": corpo_final,
+            },
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert rendered_body.count("Paciente:") == 1  # nunca duplicado
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF: 123.456.789-00" in rendered_body
+        assert "Data de nascimento: 20/05/1980" in rendered_body
+        assert "- Hemograma completo" in rendered_body
+
+        if _TEM_PDFTOTEXT:
+            pdf = client.get(
+                f"/api/document-templates/gerados/{resposta.json()['id']}/pdf", headers=_headers(token),
+            )
+            texto = _texto_do_pdf(pdf.content)
+            assert texto.count("Paciente:") == 1
+            assert "CPF: 123.456.789-00" in texto
+
+    def test_exames_edicao_manual_do_medico_e_preservada_por_inteiro(self, client, db, criar_usuario):
+        """O médico altera o texto padrão à mão — a edição não pode se
+        perder, só a identificação canônica entra por cima dela."""
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+        corpo_final = _corpo_final_exames_como_o_navegador_envia(
+            "Fulano de Tal da Silva", ["Hemograma completo"],
+        ).replace(
+            "Solicito a realização dos seguintes exames:",
+            "Solicito, devido ao quadro clínico descrito, a realização dos seguintes exames:",
+        )
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": corpo_final,
+            },
+        )
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Solicito, devido ao quadro clínico descrito," in rendered_body
+        assert "CPF: 123.456.789-00" in rendered_body
+
+    def test_exames_cadastro_sem_cpf_nem_nascimento_com_corpo_final_do_navegador(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token, cpf=None, birth_date=None)
+        corpo_final = _corpo_final_exames_como_o_navegador_envia(
+            "Fulano de Tal da Silva", ["Hemograma completo"],
+        )
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": corpo_final,
+            },
+        )
+        rendered_body = resposta.json()["rendered_body"]
+        assert rendered_body.count("Paciente:") == 1
+        assert "CPF:" not in rendered_body
+        assert "Data de nascimento:" not in rendered_body
+
+    def test_exames_nome_avulso_com_corpo_final_nao_sofre_alteracao_server_side(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        corpo_final = _corpo_final_exames_como_o_navegador_envia("Ciclano Avulso", ["Hemograma completo"])
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_name": "Ciclano Avulso", "exames": ["Hemograma completo"], "corpo_final": corpo_final},
+        )
+        assert resposta.status_code == 201, resposta.text
+        assert resposta.json()["rendered_body"] == corpo_final  # sem patient_profile_id, nenhuma alteração
+
+    def test_exames_tenant_isolation_com_corpo_final(self, client, db, criar_usuario):
+        dono, token_dono = criar_usuario(email="dono-exames-cf@teste.local")
+        _dar_assinatura_principal(db, dono)
+        paciente = _criar_paciente(client, token_dono)
+        outro, token_outro = criar_usuario(email="outro-exames-cf@teste.local")
+        _dar_assinatura_principal(db, outro)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token_outro),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": _corpo_final_exames_como_o_navegador_envia("Fulano", ["Hemograma completo"]),
+            },
+        )
+        assert resposta.status_code == 404
+
+    def test_atestado_com_corpo_final_do_navegador_ganha_bloco_no_topo_sem_remover_nome_da_frase(
+        self, client, db, criar_usuario,
+    ):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+        corpo_final = _corpo_final_atestado_como_o_navegador_envia("Fulano de Tal da Silva", 3)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3, "corpo_final": corpo_final},
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        # O bloco no topo mais o nome dentro da frase do atestado — dois
+        # lugares é aceitável aqui (pedido explícito do Rafael): a frase é
+        # conteúdo clínico/redacional legítimo, nunca reescrita.
+        assert rendered_body.startswith("Paciente: Fulano de Tal da Silva\nCPF: 123.456.789-00\nData de nascimento: 20/05/1980\n\n")
+        assert "Atesto, para os devidos fins, que o(a) paciente Fulano de Tal da Silva necessita" in rendered_body
+
+        if _TEM_PDFTOTEXT:
+            pdf = client.get(
+                f"/api/document-templates/gerados/{resposta.json()['id']}/pdf", headers=_headers(token),
+            )
+            texto = _texto_do_pdf(pdf.content)
+            assert "CPF: 123.456.789-00" in texto
+            assert "Data de nascimento: 20/05/1980" in texto
+
+    def test_atestado_cadastro_sem_cpf_nem_nascimento_com_corpo_final_do_navegador(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token, cpf=None, birth_date=None)
+        corpo_final = _corpo_final_atestado_como_o_navegador_envia("Fulano de Tal da Silva", 3)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3, "corpo_final": corpo_final},
+        )
+        rendered_body = resposta.json()["rendered_body"]
+        assert rendered_body.startswith("Paciente: Fulano de Tal da Silva\n\n")
+        assert "CPF:" not in rendered_body.split("\n\n")[0]
+        assert "Data de nascimento:" not in rendered_body.split("\n\n")[0]
+
+    def test_atestado_nome_avulso_com_corpo_final_nao_sofre_alteracao_server_side(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        corpo_final = _corpo_final_atestado_como_o_navegador_envia("Ciclano Avulso", 3)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_name": "Ciclano Avulso", "dias_afastamento": 3, "corpo_final": corpo_final},
+        )
+        assert resposta.status_code == 201, resposta.text
+        assert resposta.json()["rendered_body"] == corpo_final
+
+    def test_atestado_tenant_isolation_com_corpo_final(self, client, db, criar_usuario):
+        dono, token_dono = criar_usuario(email="dono-atestado-cf@teste.local")
+        _dar_assinatura_principal(db, dono)
+        paciente = _criar_paciente(client, token_dono)
+        outro, token_outro = criar_usuario(email="outro-atestado-cf@teste.local")
+        _dar_assinatura_principal(db, outro)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token_outro),
+            json={
+                "patient_profile_id": paciente["id"], "dias_afastamento": 3,
+                "corpo_final": _corpo_final_atestado_como_o_navegador_envia("Fulano", 3),
+            },
+        )
+        assert resposta.status_code == 404
+
+    def test_gerar_recriar_gerar_nao_acumula_blocos_de_identificacao(self, client, db, criar_usuario):
+        """Simula gerar → reabrir a tela com o mesmo paciente já
+        selecionado (o preview volta a montar `corpo_final` do zero a
+        partir do estado, igual ao navegador faria) → gerar de novo. Nunca
+        mais de um bloco de identificação, em nenhuma das duas gerações."""
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        primeira = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": _corpo_final_exames_como_o_navegador_envia(
+                    "Fulano de Tal da Silva", ["Hemograma completo"],
+                ),
+            },
+        )
+        assert primeira.json()["rendered_body"].count("Paciente:") == 1
+
+        # "Recriar": o navegador reconstrói o preview do zero a partir dos
+        # campos estruturados + paciente selecionado de novo — nunca reusa
+        # o rendered_body anterior (que já tem o bloco). Reproduzido aqui
+        # chamando de novo com o MESMO corpo_final "cru" (sem bloco).
+        segunda = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": _corpo_final_exames_como_o_navegador_envia(
+                    "Fulano de Tal da Silva", ["Hemograma completo"],
+                ),
+            },
+        )
+        assert segunda.json()["rendered_body"].count("Paciente:") == 1
+        assert segunda.json()["rendered_body"] == primeira.json()["rendered_body"]  # idempotente
+
+    def test_idempotente_reaplicar_prefixacao_sobre_corpo_ja_prefixado_nao_duplica(self, client, db, criar_usuario):
+        """Se por algum motivo o `corpo_final` enviado já é um
+        `rendered_body` anterior (bloco completo, nome+CPF+nascimento),
+        reaplicar a prefixação não duplica nada."""
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        primeira = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "exames": ["Hemograma completo"]},
+        )
+        rendered_body_ja_prefixado = primeira.json()["rendered_body"]
+
+        segunda = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={
+                "patient_profile_id": paciente["id"], "exames": ["Hemograma completo"],
+                "corpo_final": rendered_body_ja_prefixado,
+            },
+        )
+        assert segunda.json()["rendered_body"].count("Paciente:") == 1
+        assert segunda.json()["rendered_body"] == rendered_body_ja_prefixado
+
+
 class TestDocumentoLivreIdentificacaoNoCorpo:
     """02/09/2026, segunda rodada: selecionar paciente no Documento em Branco
     já gravava `patient_profile_id`/snapshot, mas o texto emitido (e por
