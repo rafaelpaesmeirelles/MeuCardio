@@ -794,7 +794,6 @@ function FluxoDocumento({ origem, template, provedores, exameSugestoes, valoresI
     );
   }
 
-  const podeExigirPaciente = origem !== "livre";
   const medicoResumo = usuario ? [
     usuario.full_name,
     usuario.council_name && `${usuario.council_name}-${usuario.council_state ?? ""} ${usuario.council_number ?? ""}`.trim(),
@@ -803,9 +802,7 @@ function FluxoDocumento({ origem, template, provedores, exameSugestoes, valoresI
 
   return (
     <div className="cartao" style={{ marginTop: "0.8rem" }}>
-      {podeExigirPaciente && (
-        <SeletorPaciente paciente={paciente} onSelecionar={setPaciente} nomeAvulso={nomeAvulso} onNomeAvulsoChange={setNomeAvulso} />
-      )}
+      <SeletorPaciente paciente={paciente} onSelecionar={setPaciente} nomeAvulso={nomeAvulso} onNomeAvulsoChange={setNomeAvulso} />
 
       {origem === "modelo" && (
         <div style={{ marginTop: "0.8rem" }}>
