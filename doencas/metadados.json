@@ -9178,9 +9178,9 @@
       "https://www.ahajournals.org/doi/10.1161/CIR.0000000000000603",
       "https://www.acc.org/latest-in-cardiology/articles/2022/10/31/13/02/clinical-practice-algorithm-for-the-follow-up-of-unrepaired-and-repaired-pda"
     ],
-    "review_status": "revisado",
-    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026.",
-    "version": 2,
+    "review_status": "pendente_revisao",
+    "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. | Lote vincular Tudo com Tudo 29/08/2026: adicionados 5 related_document_slugs (PCA no adulto ESC 2020, fluxograma CIA/shunt E-D adulto, colapso neonatal canal-dependente + fluxograma, cianose no RN), levando o total de 1 para 6.",
+    "version": 3,
     "epidemiology": "PCA isolado em recém-nascido a termo é incomum, da ordem de poucos casos por 1.000-2.000 nascidos vivos em séries observacionais. No recém-nascido pré-termo, a persistência do canal é inversamente proporcional à idade gestacional: a resposta constritora do tecido ductal é imatura quanto menor a idade gestacional, de modo que o canal permanece amplamente patente nos primeiros dias de vida na maior parte dos prematuros extremos (<28 semanas) e fecha espontaneamente com muito mais frequência a partir de aproximadamente 32 semanas (Ambalavanan N et al.; AAP Committee on Fetus and Newborn/Section on Cardiology and Cardiac Surgery. Pediatrics 2025, PMID 40288780). Não há, nas fontes consultadas nesta revisão, dado epidemiológico brasileiro específico; os números acima são de coortes internacionais e não devem ser extrapolados diretamente ao contexto local. Peso e idade gestacional ao nascimento seguem sendo, nas fontes revisadas, os principais determinantes da prevalência e da probabilidade de fechamento espontâneo.",
     "presentation": [
       "Recém-nascido pré-termo: sopro sistólico ou contínuo ('em maquinaria') associado a piora respiratória, aumento da necessidade de suporte ventilatório, dificuldade de desmame, taquicardia, pulsos amplos e hepatomegalia — quadro compatível com PCA hemodinamicamente significativo",
@@ -9422,7 +9422,12 @@
       }
     ],
     "related_document_slugs": [
-      "canal-arterial-patente-no-prematuro-manejo-expectante-farmacologico-e-cirurgico"
+      "canal-arterial-patente-no-prematuro-manejo-expectante-farmacologico-e-cirurgico",
+      "persistencia-do-canal-arterial-no-adulto-criterios-hemodinamicos-de-fechamento-esc-2020",
+      "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+      "colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+      "fluxograma-colapso-neonatal-por-cardiopatia-congenita-critica-canal-dependente",
+      "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial"
     ],
     "patient_material_slug": "canal-arterial-persistente-no-bebe-prematuro",
     "fonte_producao": "claude"
