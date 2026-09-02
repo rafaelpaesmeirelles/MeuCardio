@@ -5,7 +5,7 @@
   "scope": "entire_canonical_reviewed_corpus",
   "approval_basis": "Instrução explícita do responsável pelo repositório em 01/09/2026 para incorporar e publicar integralmente, no mesmo release final, o corpus científico revisado e aprovado, sem manter conteúdo científico válido em quarentena ou fora da publicação.",
   "expected_total": 11577,
-  "inventory_sha256": "67d1fe8402afdf85bf108f9406e9d21a81996c5e33653b75f805cb9afb31b767",
+  "inventory_sha256": "50fa6c0c73ca0c1c495b64a07957f6ad3246c2bf8dc8ee6001907d20aeabd8f4",
   "fronts": {
     "casos_clinicos": {
       "count": 915,
@@ -35,7 +35,7 @@
       "count": 77,
       "reviewed_count": 77,
       "slug_sha256": "d6371078a7d02a17b3952f804e3759a06e5fb4af9123bd8ce7097808ea99367c",
-      "source_sha256": "20553f82ecd40da55b27afffc16ec55c2238bc706136e820cad05870f69bffc4"
+      "source_sha256": "f622efc08b923b760e339e5fc82fd5d1c8718e58a1e0f23a742369856b38d779"
     },
     "estudos": {
       "count": 2061,
