@@ -20,4 +20,10 @@
 .tct-time li { display:grid;grid-template-columns:55px 1fr;gap:.7rem;padding:.45rem 0 }
 .tct-time time { color:var(--acao);font-family:var(--fonte-dados);font-weight:700 }
 .tct-time a { display:grid;color:inherit }
-@media(max-width:759px){.tct-search{grid-template-columns:1fr}.tct-head{display:block}.tct-grid{grid-template-columns:1fr!important}}
+@media(max-width:759px){
+  .tct-page{width:100%;max-width:100%;min-width:0}
+  .tct-page>*,.tct-search,.tct-search>*,.tct-head,.tct-head>div,.tct-grid,.tct-grid>*,.tct-topic,.tct-group,.tct-row,.tct-row>*,.tct-time,.tct-time li,.tct-time li>a{min-width:0;max-width:100%}
+  .tct-search{width:100%;grid-template-columns:minmax(0,1fr)}
+  .tct-head{display:block}
+  .tct-grid{grid-template-columns:minmax(0,1fr)!important}
+}
