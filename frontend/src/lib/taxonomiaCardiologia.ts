@@ -1,3 +1,11 @@
+// Auditoria de 02/09/2026, Parte J — esta é a faceta de NAVEGAÇÃO de
+// conteúdo (filtro em Estudos/Casos Clínicos/Material ao Paciente/Guia de
+// Doenças), distinta de propósito da faceta "população especial" dos
+// cartões de área da Home (backend/app/services/content_areas.py, 8 ids).
+// Aqui agrupamos neonatal/congênita/fetal sob "pediatrica" porque é uma
+// lista de navegação mais grosseira; lá cada um é um id próprio porque é um
+// cartão de contagem. Não são a mesma classificação por design — ver a nota
+// completa em content_areas.py antes de tentar unificar as duas.
 export type AreaCardiologia = {
   id: string;
   label: string;

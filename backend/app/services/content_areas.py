@@ -9,6 +9,32 @@ As contagens abaixo são facetas: um conteúdo neonatal também pode pertencer �
 Cardiologia Pediátrica. Cada registro é contado no máximo uma vez dentro de
 cada área e de cada frente, mas os totais das áreas não devem ser somados entre
 si. O total global continua vindo de ``/api/library/catalog``.
+
+Auditoria de 02/09/2026, Parte J — duas taxonomias de área coexistem de
+propósito, não por descuido:
+
+- Esta (8 ids: geral/pediatrica/neonatal/congenita/geriatria/gestacao/
+  cardiooncologia/fetal) é a faceta "população especial" usada nos cartões
+  de área da Home — granularidade fina onde importa distinguir neonatal de
+  congênita de pediátrica em geral.
+- ``frontend/src/lib/taxonomiaCardiologia.ts`` (13 ids) é a faceta de
+  NAVEGAÇÃO de conteúdo (filtro em Estudos/Casos Clínicos/Material ao
+  Paciente/Guia de Doenças) — mistura população (pediátrica, geriátrica,
+  gestação, cardio-oncologia, geral) com sistema/patologia (coronariana,
+  arritmias, valvopatias etc.), deliberadamente mais grosseira nos ids de
+  população que aqui: agrupa neonatal/congênita/fetal sob um único
+  "pediátrica" porque é uma lista de navegação, não um cartão de contagem.
+
+Não são a mesma classificação por design — cada uma serve uma tela diferente
+com um objetivo diferente. Onde os ids realmente coincidem (pediatrica,
+geriatria, gestacao, cardiooncologia, geral), o critério textual dos dois é
+próximo mas não idêntico; nenhum dos dois é "errado", e o mesmo conteúdo
+pode legitimamente aparecer sob um card de população mais específico na Home
+e sob o balde mais amplo ao navegar por conteúdo. Se um dia fizer sentido
+unificar as duas listas, comece por reconciliar exatamente esses 5 ids
+compartilhados antes de tocar nos 8 que só existem numa das duas pontas —
+mexer nos filtros de Estudos.tsx/CasosClinicos.tsx/MaterialPaciente.tsx/
+GuiaDoencas.tsx tem alcance maior que esta contagem da Home.
 """
 
 from __future__ import annotations
