@@ -54,6 +54,7 @@ type WorkRoutine = {
   label?: string | null;
   routine_type?: string | null;
   location?: CalendarLocation | null;
+  active?: boolean;
 };
 type MobilityTarget = {
   target_key: string;
@@ -809,6 +810,7 @@ function time(value?: string | null) {
 }
 
 function routineToAgendaItem(routine: WorkRoutine): AgendaItem | null {
+  if (routine.active === false) return null;
   const today = new Date();
   const pythonWeekday = (today.getDay() + 6) % 7;
   if (routine.weekday !== pythonWeekday || !routine.start_time) return null;

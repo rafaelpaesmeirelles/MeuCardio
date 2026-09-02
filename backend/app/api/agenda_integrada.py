@@ -1048,10 +1048,37 @@ def create_resource(data: ResourceIn, professional_id: int | None = None, db: Se
 
 @router.get("/availability/rules")
 def list_rules(professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Listagem normal — só rotinas ativas.
+
+    Auditoria de 02/09 (incidente `[SMOKE-TESTE] Bloco C`): esta era a única
+    consulta de agenda sem filtro de `active`, então uma rotina desativada
+    continuava aparecendo todo dia na Home. Nenhum consumidor hoje precisa de
+    inativas aqui — a tela de gestão (`Agenda.tsx`) já filtra `active` no
+    cliente antes de exibir a lista, então isto só alinha o servidor ao que o
+    cliente já assumia. Quem precisar auditar rotinas desativadas usa
+    `list_rules_todas` abaixo, explicitamente.
+    """
+    owner_id = _owner_for(db, user, professional_id, "view")
+    return [_dump_routine(db, item) for item in db.query(AvailabilityRule).filter(
+        AvailabilityRule.owner_id == owner_id,
+        AvailabilityRule.active.is_(True),
+    ).order_by(AvailabilityRule.weekday, AvailabilityRule.start_time).all()]
+
+
+@router.get("/availability/rules/todas")
+def list_rules_todas(professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Auditoria/gestão administrativa — inclui rotinas desativadas.
+
+    Separado de `list_rules` de propósito: nenhuma tela de uso diário deve
+    misturar rotinas inativas na lista normal (foi exatamente isso que
+    causou o incidente `[SMOKE-TESTE] Bloco C`). Uma tela administrativa que
+    legitimamente precise revisar/reativar rotinas antigas deve consultar
+    esta rota explicitamente, nunca a de listagem padrão.
+    """
     owner_id = _owner_for(db, user, professional_id, "view")
     return [_dump_routine(db, item) for item in db.query(AvailabilityRule).filter(
         AvailabilityRule.owner_id == owner_id
-    ).order_by(AvailabilityRule.weekday, AvailabilityRule.start_time).all()]
+    ).order_by(AvailabilityRule.active.desc(), AvailabilityRule.weekday, AvailabilityRule.start_time).all()]
 
 
 @router.post("/availability/rules", status_code=201)

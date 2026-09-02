@@ -19,6 +19,23 @@ test("reconhece apenas o marcador reservado no início", () => {
   assert.equal(hasReservedSmokeTestMarker(null), false);
 });
 
+test("reconhece a variante histórica [SMOKE-TESTE] no início, sem alargar o casamento", () => {
+  // Incidente real: availability_rules 2/3/4, criadas em 19/08/2026 com este
+  // literal em português, invisíveis à migration e ao filtro antigo porque
+  // nenhum dos dois reconhecia "[SMOKE-TESTE]" (só "[SMOKE-TEST]", inglês).
+  assert.equal(hasReservedSmokeTestMarker("[SMOKE-TESTE] Bloco C"), true);
+  assert.equal(hasReservedSmokeTestMarker("   [SMOKE-TESTE] Bloco A"), true);
+  assert.equal(hasReservedSmokeTestMarker("[SMOKE-TESTE]"), true);
+
+  // O casamento continua sendo por literal exato no início — não deve virar
+  // um regex amplo que esconderia rotinas/compromissos legítimos que só
+  // mencionem "teste".
+  assert.equal(hasReservedSmokeTestMarker("Rotina de teste do plantão"), false);
+  assert.equal(hasReservedSmokeTestMarker("Consulta [SMOKE-TESTE] do paciente"), false);
+  assert.equal(hasReservedSmokeTestMarker("[SMOKE-TESTE-EXTRA] Bloco"), false);
+  assert.equal(hasReservedSmokeTestMarker("Maria Smoke-Teste"), false);
+});
+
 test("inspeciona somente campos de identidade do compromisso", () => {
   for (const field of ["title", "patient_name", "label", "service_name", "appointment_type"]) {
     assert.equal(isReservedSmokeTestRecord({ [field]: "[SMOKE-TEST] Item" }), true, field);
