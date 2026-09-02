@@ -10,6 +10,7 @@ from app.models.audit import AuditLog
 from app.models.clinical_docs import GeneratedDocument
 from app.services import calculators as calc
 from app.services import cofre
+from app.services import patient_profile_service
 from app.services.clinical_ownership import patient_for_user
 from app.services.professional_profile import document_identity
 
@@ -80,6 +81,13 @@ def run_calculator(slug: str, payload: dict, _=Depends(current_user)):
 class GerarDocumentoIn(BaseModel):
     patient_id: int | None = None
     patient_name: str | None = None
+    # Cadastro reutilizável (ver `app.services.patient_profile_service`),
+    # opcional — quando presente, prevalece sobre `patient_name` como fonte
+    # do nome, e congela um `patient_snapshot` no documento (Parte 1 da
+    # correção coordenada de 02/09/2026, mesma infraestrutura usada por
+    # `app/api/documents.py`, nunca uma paralela). `patient_id` acima é um
+    # campo diferente e anterior — o paciente anônimo do Round.
+    patient_profile_id: int | None = None
     # Texto livre — nem toda calculadora é sobre um procedimento cirúrgico
     # (CHA₂DS₂-VASc é sobre risco de AVC em FA, QTc é sobre segurança de
     # fármaco etc.), então o rótulo não presume cirurgia; quem preenche
@@ -158,6 +166,10 @@ def gerar_documento(
     )
     corpo = "\n".join(linhas)
 
+    nome_paciente_resolvido, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=dados.patient_name,
+    )
+
     gerado = GeneratedDocument(
         patient_id=dados.patient_id,
         template_id=None,
@@ -166,6 +178,7 @@ def gerar_documento(
         title=c.name,
         rendered_body=corpo,
         endereco_exibido=dados.endereco,
+        patient_profile_id=profile_id,
         variables={
             "slug": slug,
             "payload": dados.payload,
@@ -175,9 +188,11 @@ def gerar_documento(
     )
     db.add(gerado)
     db.flush()
-    nome_paciente = (dados.patient_name or "").strip()
+    nome_paciente = (nome_paciente_resolvido or "").strip()
     if nome_paciente:
         gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
+    if snapshot:
+        gerado.patient_snapshot_cifrado = patient_profile_service.cifrar_snapshot(snapshot, gerado.id)
 
     db.add(
         AuditLog(
@@ -197,6 +212,7 @@ def gerar_documento(
         "rendered_body": gerado.rendered_body,
         "created_at": gerado.created_at,
         "patient_name": nome_paciente or None,
+        "patient_profile_id": profile_id,
         "medico": document_identity(user),
         "result": resultado,
         "interpretation": interpretacao,

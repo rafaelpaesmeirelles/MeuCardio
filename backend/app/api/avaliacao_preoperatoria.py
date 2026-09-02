@@ -20,6 +20,7 @@ from app.models.audit import AuditLog
 from app.models.clinical_docs import GeneratedDocument
 from app.services import calculators as calc
 from app.services import cofre
+from app.services import patient_profile_service
 from app.services.clinical_ownership import patient_for_user
 from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
@@ -35,6 +36,12 @@ TITULO_DOCUMENTO = "Avaliação Cardiológica Pré-Operatória de Risco Cirúrgi
 class GerarIn(BaseModel):
     patient_id: int | None = None
     patient_name: str | None = None
+    # Cadastro reutilizável, opcional — mesma infraestrutura de
+    # `app/api/documents.py`/`app/services/patient_profile_service.py`
+    # (Parte 1 da correção coordenada de 02/09/2026). Prevalece sobre
+    # `patient_name` quando presente; `patient_id` acima é campo diferente
+    # (paciente anônimo do Round).
+    patient_profile_id: int | None = None
     idade: int | None = None
     procedimento_planejado: str
     indicacao_cirurgica: str | None = None
@@ -250,6 +257,10 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "fonte_producao_extensoes": "chatgpt",
     }
 
+    nome_paciente_resolvido, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=dados.patient_name,
+    )
+
     gerado = GeneratedDocument(
         patient_id=dados.patient_id,
         template_id=None,
@@ -258,13 +269,16 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         title=TITULO_DOCUMENTO,
         rendered_body=corpo,
         endereco_exibido=dados.endereco,
+        patient_profile_id=profile_id,
         variables=variaveis,
     )
     db.add(gerado)
     db.flush()
-    nome_paciente = (dados.patient_name or "").strip()
+    nome_paciente = (nome_paciente_resolvido or "").strip()
     if nome_paciente:
         gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
+    if snapshot:
+        gerado.patient_snapshot_cifrado = patient_profile_service.cifrar_snapshot(snapshot, gerado.id)
 
     db.add(
         AuditLog(
@@ -294,6 +308,7 @@ def gerar(dados: GerarIn, db: Session = Depends(get_db), user=Depends(current_us
         "rendered_body": gerado.rendered_body,
         "created_at": gerado.created_at,
         "patient_name": nome_paciente or None,
+        "patient_profile_id": profile_id,
         "medico": document_identity(user),
         "rcri": rcri[0] if rcri else None,
         "gupta": gupta[0] if gupta else None,
