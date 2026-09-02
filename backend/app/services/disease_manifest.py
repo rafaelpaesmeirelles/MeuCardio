@@ -7,6 +7,18 @@ contra o blob-base: somente registros que realmente divergem da base são
 aplicados, permitindo combinar produções antigas sobre o mesmo manifesto sem
 um snapshot reverter alterações independentes de outro. Correções pequenas e
 auditáveis são aplicadas por `doencas/correcoes/*.json` ao final da composição.
+
+SOURCE OF TRUTH (Parte K da correção coordenada de 02/09/2026): é o
+composto inteiro que `load_disease_records()` produz, não `metadados.json`
+isolado. Uma auditoria anterior comparou só `metadados.json` (266 registros)
+contra `specialty_diseases` (326 linhas) e concluiu, errado, que o banco
+estava "à frente" do arquivo-fonte em 60 registros. Rodar
+`load_disease_records("doencas/metadados.json")` mostra 326 — os 60
+"faltantes" já estavam versionados em `doencas/fragmentos/*.json`, só não
+apareciam contando o arquivo-base sozinho. Não há drift real: banco e fonte
+batem exatamente quando a fonte é medida pela composição completa. Mesma
+lógica vale para `triage_manifest.load_triage_records()` e
+`triagem-sintomas/`.
 """
 
 from __future__ import annotations
