@@ -67,3 +67,14 @@ def test_indexar_tudo_retoma_apos_credito_voltar(db, monkeypatch):
     assert segunda["documentos"] == 1
     assert segunda["falhas"] == 0
     assert db.query(DocumentChunk).count() > 0
+
+
+def test_indexar_tudo_interrompe_lote_apos_3_falhas_seguidas(db, monkeypatch):
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: _ProvedorSemCredito())
+    db.add_all([_documento(f"indexar-tudo-circuito-{i}") for i in range(10)])
+    db.commit()
+
+    resultado = indexar_tudo(db, apenas_pendentes=False)
+
+    assert resultado["documentos"] == 0
+    assert resultado["falhas"] == 3  # para exatamente na 3ª, não tenta os outros 7

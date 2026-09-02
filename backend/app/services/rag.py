@@ -156,8 +156,10 @@ def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
         q = q.filter(~Document.id.in_(select(DocumentChunk.document_id).distinct()))
     docs = q.all()
     total = 0
+    processados = 0
     falhas = 0
-    for d in docs:
+    falhas_seguidas = 0
+    for indice, d in enumerate(docs):
         # Parte 3 da correção coordenada de 02/09/2026: um documento cuja
         # chamada ao provedor falhe (crédito, rede, provedor fora do ar) não
         # pode travar o lote inteiro. `db.rollback()` descarta o DELETE dos
@@ -165,13 +167,30 @@ def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
         # commitado) antes de levantar — o documento continua exatamente
         # como estava, ainda pendente, e `apenas_pendentes` tenta de novo na
         # próxima chamada (idempotente).
+        #
+        # Falha seguida 3x é tratada como provedor fora do ar (crédito/rede),
+        # não como conteúdo ruim de um item específico: interrompe o lote em
+        # vez de repetir a mesma chamada fadada centenas/milhares de vezes
+        # (achado ao ligar isto em `reconcile_content`, que roda contra o
+        # acervo inteiro). Tudo que não foi tentado continua pendente e entra
+        # na próxima chamada normalmente.
         try:
             total += indexar_documento(db, d, provedor)
+            processados += 1
+            falhas_seguidas = 0
         except Exception:
             log.exception("Falha ao indexar documento id=%s slug=%s — segue pendente.", d.id, d.slug)
             db.rollback()
             falhas += 1
-    return {"documentos": len(docs) - falhas, "trechos": total, "falhas": falhas}
+            falhas_seguidas += 1
+            if falhas_seguidas >= 3:
+                log.warning(
+                    "3 falhas seguidas ao indexar documentos — provedor parece indisponível, "
+                    "lote interrompido (%d de %d ainda pendentes).",
+                    len(docs) - (indice + 1), len(docs),
+                )
+                break
+    return {"documentos": processados, "trechos": total, "falhas": falhas}
 
 
 # A metade léxica da busca híbrida precisa do MESMO filtro de `published` que a

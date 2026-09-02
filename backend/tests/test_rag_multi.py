@@ -170,3 +170,19 @@ def test_indexar_tipo_retoma_apos_credito_voltar(db, monkeypatch):
     assert segunda["entidades"] == 1
     assert segunda["falhas"] == 0
     assert db.query(KnowledgeChunk).filter(KnowledgeChunk.entity_type == "evidencia").count() > 0
+
+
+def test_indexar_tipo_interrompe_lote_apos_3_falhas_seguidas(db, monkeypatch):
+    """Provedor fora do ar é sistêmico, não um item ruim isolado — repetir a
+    mesma chamada fadada pra cada uma das N entidades pendentes (acervo real:
+    milhares) seria inútil e lento. Depois de 3 falhas seguidas o lote para;
+    o resto continua pendente pra próxima chamada (achado ao ligar isto
+    contra o acervo inteiro em `reconcile_content`)."""
+    monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorSemCredito())
+    db.add_all([_evidencia(f"evidencia-circuito-{i}-teste") for i in range(10)])
+    db.commit()
+
+    resultado = indexar_tipo(db, "evidencia", apenas_pendentes=False)
+
+    assert resultado["entidades"] == 0
+    assert resultado["falhas"] == 3  # para exatamente na 3ª, não tenta as outras 7

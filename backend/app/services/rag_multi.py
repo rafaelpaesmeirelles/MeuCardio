@@ -95,6 +95,7 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
     total_entidades = 0
     total_trechos = 0
     falhas = 0
+    falhas_seguidas = 0
     for item in publicados(db, fonte):
         if apenas_pendentes and item.id in ja_indexadas:
             continue
@@ -104,15 +105,24 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
         titulo = getattr(item, fonte.titulo_attr, "") or ""
         # Parte 3 da correção coordenada de 02/09/2026: mesma resiliência de
         # `rag.indexar_tudo()` — uma entidade que falhe (crédito, rede) não
-        # trava o lote; fica pendente pra próxima chamada (idempotente).
+        # trava o lote; fica pendente pra próxima chamada (idempotente). 3
+        # falhas seguidas são tratadas como provedor fora do ar, não item
+        # ruim isolado: interrompe em vez de repetir a mesma chamada fadada
+        # pra cada entidade restante (achado ao ligar isto contra o acervo
+        # inteiro em `reconcile_content`).
         try:
             total_trechos += indexar_entidade(
                 db, entity_type=entity_type, entity_id=item.id, titulo=titulo, texto=texto, provedor=provedor,
             )
+            falhas_seguidas = 0
         except Exception:
             log.exception("Falha ao indexar %s id=%s — segue pendente.", entity_type, item.id)
             db.rollback()
             falhas += 1
+            falhas_seguidas += 1
+            if falhas_seguidas >= 3:
+                log.warning("3 falhas seguidas ao indexar %s — provedor parece indisponível, lote interrompido.", entity_type)
+                break
             continue
         total_entidades += 1
     return {"entity_type": entity_type, "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
@@ -126,6 +136,7 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict
     total_entidades = 0
     total_trechos = 0
     falhas = 0
+    falhas_seguidas = 0
     for calc in CALCULATORS_REGISTRY.values():
         entity_id = _id_estavel("calculadora", calc.slug)
         if apenas_pendentes and entity_id in ja_indexadas:
@@ -138,10 +149,15 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict
             total_trechos += indexar_entidade(
                 db, entity_type="calculadora", entity_id=entity_id, titulo=calc.name, texto=texto, provedor=provedor,
             )
+            falhas_seguidas = 0
         except Exception:
             log.exception("Falha ao indexar calculadora slug=%s — segue pendente.", calc.slug)
             db.rollback()
             falhas += 1
+            falhas_seguidas += 1
+            if falhas_seguidas >= 3:
+                log.warning("3 falhas seguidas ao indexar calculadoras — provedor parece indisponível, lote interrompido.")
+                break
             continue
         total_entidades += 1
     return {"entity_type": "calculadora", "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
