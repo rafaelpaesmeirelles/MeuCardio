@@ -519,7 +519,7 @@ jobs:
             await page.locator('.spaces-home__topbar nav button', { hasText: 'Completo' }).click();
 
             const drugResponse = await requestJson(page, '/api/drugs');
-            const drugs = Array.isArray(drugResponse.body) ? drugResponse.body : [];
+            const drugs = Array.isArray(drugResponse.body?.items) ? drugResponse.body.items : [];
             if (!drugResponse.ok) fail(`medicamentos: HTTP ${drugResponse.status}`);
             if (drugs.length !== 206) fail(`medicamentos: esperado 206, recebido ${drugs.length}`);
             const selected = drugs.find((d) => /sacubitril/i.test(d.generic_name || '')) || drugs[0];
