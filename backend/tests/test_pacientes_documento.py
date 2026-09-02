@@ -299,6 +299,225 @@ class TestExamesEAtestadoAceitamPacienteOpcional:
         assert resposta.json()["patient_profile_id"] is None
 
 
+class TestAtestadoESolicitacaoExamesIdentificacaoNoCorpo:
+    """02/09/2026, terceira rodada: mesmo defeito confirmado em Atestado e
+    Solicitação de Exames — `patient_profile_id` era gravado, mas o corpo
+    não identificava o paciente (exames: nenhuma linha; atestado: a frase
+    "acima identificado(a)" sem nada acima). Reaproveita
+    `_com_identificacao_prefixada`, o mesmo ponto único já usado pelo
+    Documento em Branco — nunca confia em nome/CPF/nascimento vindo do
+    cliente quando há `patient_profile_id`."""
+
+    # --- Atestado ---
+
+    def test_atestado_com_cadastro_completo_tem_identificacao_no_corpo_e_no_pdf(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3},
+        )
+        assert resposta.status_code == 201, resposta.text
+        corpo = resposta.json()
+        rendered_body = corpo["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF: 123.456.789-00" in rendered_body
+        assert "Data de nascimento: 20/05/1980" in rendered_body
+        assert "acima identificado(a)" in rendered_body
+
+        if _TEM_PDFTOTEXT:
+            pdf = client.get(
+                f"/api/document-templates/gerados/{corpo['id']}/pdf", headers=_headers(token),
+            )
+            assert pdf.status_code == 200, pdf.text
+            texto = _texto_do_pdf(pdf.content)
+            assert "Paciente: Fulano de Tal da Silva" in texto
+            assert "CPF: 123.456.789-00" in texto
+            assert "Data de nascimento: 20/05/1980" in texto
+
+    def test_atestado_cadastro_sem_cpf_nem_nascimento_nao_gera_linha_vazia(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token, cpf=None, birth_date=None)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3},
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF:" not in rendered_body
+        assert "Data de nascimento:" not in rendered_body
+
+    def test_atestado_com_nome_avulso_preserva_comportamento_anterior(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_name": "Ciclano Avulso", "dias_afastamento": 3},
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Ciclano Avulso" in rendered_body
+        assert "Paciente:" not in rendered_body  # nome avulso continua só embutido na frase, como antes
+        assert resposta.json()["patient_profile_id"] is None
+
+    def test_atestado_cid_ausente_nao_aparece(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3},
+        )
+        assert "CID" not in resposta.json()["rendered_body"]
+
+    def test_atestado_cid_informado_aparece_exatamente_como_antes(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3, "cid": "M54.5"},
+        )
+        assert "CID: M54.5" in resposta.json()["rendered_body"]
+
+    def test_atestado_com_paciente_de_outro_medico_e_rejeitado(self, client, db, criar_usuario):
+        dono, token_dono = criar_usuario(email="dono-atestado@teste.local")
+        _dar_assinatura_principal(db, dono)
+        paciente = _criar_paciente(client, token_dono)
+
+        outro, token_outro = criar_usuario(email="outro-atestado@teste.local")
+        _dar_assinatura_principal(db, outro)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token_outro),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3},
+        )
+        assert resposta.status_code == 404
+
+    # --- Solicitação de Exames ---
+
+    def test_exames_com_cadastro_completo_tem_identificacao_e_preserva_exames(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "exames": ["Hemograma completo", "TSH"]},
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF: 123.456.789-00" in rendered_body
+        assert "Data de nascimento: 20/05/1980" in rendered_body
+        assert "- Hemograma completo" in rendered_body
+        assert "- TSH" in rendered_body
+
+    def test_exames_cadastro_incompleto_sem_linha_vazia(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token, cpf=None, birth_date=None)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "exames": ["Hemograma completo"]},
+        )
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Fulano de Tal da Silva" in rendered_body
+        assert "CPF:" not in rendered_body
+        assert "Data de nascimento:" not in rendered_body
+
+    def test_exames_com_nome_avulso_preserva_comportamento_anterior(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_name": "Ciclano Avulso", "exames": ["Hemograma completo"]},
+        )
+        assert resposta.status_code == 201, resposta.text
+        rendered_body = resposta.json()["rendered_body"]
+        assert "Paciente: Ciclano Avulso" in rendered_body
+        assert resposta.json()["patient_profile_id"] is None
+
+    def test_exames_com_paciente_de_outro_medico_e_rejeitado(self, client, db, criar_usuario):
+        dono, token_dono = criar_usuario(email="dono-exames@teste.local")
+        _dar_assinatura_principal(db, dono)
+        paciente = _criar_paciente(client, token_dono)
+
+        outro, token_outro = criar_usuario(email="outro-exames@teste.local")
+        _dar_assinatura_principal(db, outro)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token_outro),
+            json={"patient_profile_id": paciente["id"], "exames": ["Hemograma completo"]},
+        )
+        assert resposta.status_code == 404
+
+    # --- Gerais: snapshot, recriar, assinatura ---
+
+    def test_atestado_e_exames_snapshot_congelado(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        for rota, payload in (
+            ("/api/document-templates/gerar-atestado", {"patient_profile_id": paciente["id"], "dias_afastamento": 1}),
+            ("/api/document-templates/gerar-exames", {"patient_profile_id": paciente["id"], "exames": ["ECG"]}),
+        ):
+            resposta = client.post(rota, headers=_headers(token), json=payload)
+            gerado_id = resposta.json()["id"]
+            gerado = db.get(GeneratedDocument, gerado_id)
+            assert gerado.patient_profile_id == paciente["id"]
+            assert gerado.patient_snapshot_cifrado is not None
+
+    def test_atestado_recriar_baseado_neste_nao_duplica_identificacao(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-atestado", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "dias_afastamento": 3},
+        )
+        gerado_id = resposta.json()["id"]
+        detalhe = client.get(
+            f"/api/document-templates/gerados/{gerado_id}", headers=_headers(token),
+        ).json()
+        # As variáveis estruturadas do atestado não guardam texto de
+        # identificação nenhum — "recriar baseado neste" reconstrói o corpo
+        # do zero a partir delas mais o paciente escolhido de novo, nunca
+        # duplicando uma identificação já congelada.
+        assert "Paciente:" not in str(detalhe["variables"])
+
+    @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
+    def test_assinatura_nao_remove_identificacao_do_pdf(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-exames", headers=_headers(token),
+            json={"patient_profile_id": paciente["id"], "exames": ["Hemograma completo"]},
+        )
+        gerado_id = resposta.json()["id"]
+
+        pdf = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=MANUAL", headers=_headers(token),
+        )
+        assert pdf.status_code == 200, pdf.text
+        texto = _texto_do_pdf(pdf.content)
+        assert "Paciente: Fulano de Tal da Silva" in texto
+
+
 class TestDocumentoLivreIdentificacaoNoCorpo:
     """02/09/2026, segunda rodada: selecionar paciente no Documento em Branco
     já gravava `patient_profile_id`/snapshot, mas o texto emitido (e por
