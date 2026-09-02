@@ -19,6 +19,7 @@ from app.models.compartilhamento import DocumentShareLink
 from app.models.email_account import EmailAccount
 from app.models.user import User
 from app.services import cofre, emails, envio_documento_email
+from app.services import patient_profile_service
 from app.services.assinatura import divulgacao_email
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.professional_profile import document_identity, professional_name
@@ -176,6 +177,13 @@ def _autoriza_leitura(g: GeneratedDocument, user: User) -> bool:
 class _TextoPrescricaoMixin(BaseModel):
     patient_name: str = Field(min_length=2, max_length=200)
     body: str = Field(min_length=3, max_length=12000)
+    # Cadastro reutilizável, opcional (Parte 1 da correção coordenada de
+    # 02/09/2026) — `patient_name` continua obrigatório (prescrição
+    # controlada exige identificação por texto sempre), mas quando o
+    # cadastro é informado o snapshot é congelado também aqui, mesma
+    # infraestrutura de `app.services.patient_profile_service`. Sem UI
+    # própria ainda nesta rodada — capacidade de backend só.
+    patient_profile_id: int | None = None
 
     @field_validator("patient_name", "body", mode="before")
     @classmethod
@@ -229,6 +237,9 @@ def criar(dados: CriarIn, db: Session = Depends(get_db), user: User = Depends(cu
 
     signer = user if dados.mode == "propria" else _rafael(db)
     status = "pronta_assinatura" if dados.mode == "propria" else "pendente_assinatura"
+    nome_resolvido, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=dados.patient_name,
+    )
     g = GeneratedDocument(
         patient_id=None,
         template_id=None,
@@ -237,6 +248,7 @@ def criar(dados: CriarIn, db: Session = Depends(get_db), user: User = Depends(cu
         title=TITULO,
         rendered_body=dados.body,
         endereco_exibido="profissional",
+        patient_profile_id=profile_id,
         variables={
             "special_prescription": True,
             "originator_id": user.id,
@@ -248,7 +260,9 @@ def criar(dados: CriarIn, db: Session = Depends(get_db), user: User = Depends(cu
     )
     db.add(g)
     db.flush()
-    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name, g.id)
+    g.patient_name_cifrado = cofre.cifrar_campo(nome_resolvido or dados.patient_name, g.id)
+    if snapshot:
+        g.patient_snapshot_cifrado = patient_profile_service.cifrar_snapshot(snapshot, g.id)
     db.add(AuditLog(
         user_id=user.id,
         action="criar_prescricao_livre_especial",
@@ -297,8 +311,15 @@ def corrigir(gid: int, dados: AtualizarIn, db: Session = Depends(get_db), user: 
     if assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id):
         raise HTTPException(status_code=409, detail="Documento já emitido não pode ser alterado.")
 
+    nome_resolvido, snapshot, profile_id = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=dados.patient_name,
+    )
     g.rendered_body = dados.body
-    g.patient_name_cifrado = cofre.cifrar_campo(dados.patient_name, g.id)
+    g.patient_name_cifrado = cofre.cifrar_campo(nome_resolvido or dados.patient_name, g.id)
+    g.patient_profile_id = profile_id
+    g.patient_snapshot_cifrado = (
+        patient_profile_service.cifrar_snapshot(snapshot, g.id) if snapshot else None
+    )
     _set_meta(g, status="pendente_assinatura", review_note=None)
     db.add(AuditLog(
         user_id=user.id, action="corrigir_prescricao_livre_especial",
