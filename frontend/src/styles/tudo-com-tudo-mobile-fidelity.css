@@ -1,0 +1,67 @@
+/*
+ * Tudo com Tudo — fidelidade mobile
+ *
+ * Hotfix responsivo e estritamente local. Preserva a composição canônica e
+ * neutraliza apenas larguras intrínsecas que podem escapar do viewport quando
+ * as camadas finais do Cardiology Spaces encontram o DOM legado de /busca.
+ */
+
+@media (max-width: 759px) {
+  body.corvia-space--pesquisa .tct-page,
+  body.corvia-space--pesquisa .tct-page > *,
+  body.corvia-space--pesquisa .tct-hero,
+  body.corvia-space--pesquisa .tct-hero > *,
+  body.corvia-space--pesquisa .tct-head,
+  body.corvia-space--pesquisa .tct-head > *,
+  body.corvia-space--pesquisa .tct-grid,
+  body.corvia-space--pesquisa .tct-grid > *,
+  body.corvia-space--pesquisa .tct-row {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.corvia-space--pesquisa .tct-page,
+  body.corvia-space--pesquisa .tct-page > *,
+  body.corvia-space--pesquisa .tct-hero,
+  body.corvia-space--pesquisa .tct-search {
+    width: 100% !important;
+  }
+
+  body.corvia-space--pesquisa .tct-hero h1,
+  body.corvia-space--pesquisa .tct-hero > p,
+  body.corvia-space--pesquisa .tct-head :is(h2, p),
+  body.corvia-space--pesquisa .tct-row :is(strong, p) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  body.corvia-space--pesquisa .tct-search {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.corvia-space--pesquisa .tct-search > :is(input, .botao) {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  body.corvia-space--pesquisa .tct-search > .botao {
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  body.corvia-space--pesquisa .tct-head {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.corvia-space--pesquisa .tct-head > a {
+    align-self: flex-start;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
