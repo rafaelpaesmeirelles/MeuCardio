@@ -5,10 +5,30 @@ integração com os quatro caminhos de geração de documento
 `DocumentTemplate`, snapshot congelado na emissão, e sobretudo o
 isolamento entre médicos — o item que mais importa nesta suíte.
 """
+import shutil
+import subprocess
+
+import pytest
+
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.patient_profile import PatientProfile
 from app.services.patient_profile_service import montar_endereco_completo
 from app.models.subscription import Subscription
+
+
+def _texto_do_pdf(pdf_bytes: bytes) -> str:
+    """Extrai o texto visível de um PDF via `pdftotext` (poppler-utils) —
+    prova que a identificação do paciente está no PDF DE VERDADE, não só no
+    `rendered_body` do JSON: PDFs gerados pelo reportlab comprimem os
+    streams de conteúdo (FlateDecode), então o texto não aparece em claro
+    nos bytes brutos."""
+    resultado = subprocess.run(
+        ["pdftotext", "-", "-"], input=pdf_bytes, capture_output=True, check=True,
+    )
+    return resultado.stdout.decode("utf-8")
+
+
+_TEM_PDFTOTEXT = shutil.which("pdftotext") is not None
 
 
 def _headers(token: str) -> dict[str, str]:
@@ -402,6 +422,52 @@ class TestDocumentoLivreIdentificacaoNoCorpo:
         )
         assert detalhe.status_code == 200, detalhe.text
         assert detalhe.json()["variables"]["corpo"] == texto_digitado
+
+    @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
+    def test_pdf_real_contem_a_identificacao_do_paciente(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+        paciente = _criar_paciente(client, token)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={
+                "titulo": "Nota livre", "corpo": "Corpo do documento livre digitado pelo médico.",
+                "patient_profile_id": paciente["id"],
+            },
+        )
+        gerado_id = resposta.json()["id"]
+
+        pdf = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf", headers=_headers(token),
+        )
+        assert pdf.status_code == 200, pdf.text
+        assert pdf.content.startswith(b"%PDF-")
+
+        texto = _texto_do_pdf(pdf.content)
+        assert "Paciente: Fulano de Tal da Silva" in texto
+        assert "CPF: 123.456.789-00" in texto
+        assert "Data de nascimento: 20/05/1980" in texto
+        assert "Corpo do documento livre digitado pelo médico." in texto
+
+    @pytest.mark.skipif(not _TEM_PDFTOTEXT, reason="pdftotext (poppler-utils) não disponível neste ambiente")
+    def test_pdf_real_sem_paciente_nao_contem_identificacao(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_principal(db, user)
+
+        resposta = client.post(
+            "/api/document-templates/gerar-livre", headers=_headers(token),
+            json={"titulo": "Nota livre", "corpo": "Corpo do documento sem paciente."},
+        )
+        gerado_id = resposta.json()["id"]
+
+        pdf = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf", headers=_headers(token),
+        )
+        assert pdf.status_code == 200, pdf.text
+        texto = _texto_do_pdf(pdf.content)
+        assert "Paciente:" not in texto
+        assert "Corpo do documento sem paciente." in texto
 
 
 class TestIsolamentoEntreMedicos:
