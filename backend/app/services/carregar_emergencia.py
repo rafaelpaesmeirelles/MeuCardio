@@ -106,7 +106,12 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
             reg.gatilho = item.get("gatilho")
             reg.ordem = item.get("ordem", 99)
             reg.documento_slug = item["documento_slug"]
-            reg.fluxograma_slug = item.get("fluxograma_slug")
+            # "" e ausência de campo têm o mesmo significado (nenhum
+            # fluxograma associado) — normaliza para NULL na carga para que
+            # o contrato do modelo (Optional[str]) não fique com dois jeitos
+            # de representar "nenhum". Achado na auditoria de 02/09/2026:
+            # 2 registros do arquivo-fonte tinham "" em vez de ausente.
+            reg.fluxograma_slug = item.get("fluxograma_slug") or None
             reg.relacionados = list(item.get("relacionados") or [])
             reg.review_status = status_protocolo
             enforce_safe_publication(reg, item, is_new=is_new)
