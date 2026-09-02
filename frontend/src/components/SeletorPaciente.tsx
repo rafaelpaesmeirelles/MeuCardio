@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
-import Icone from "./Icone";
 
 // ————————————————————————————————————————————————————————————————————
 // Seleção de paciente — camada ÚNICA e reutilizável (pedido do Rafael,
@@ -185,15 +184,11 @@ export function FormularioNovoPaciente({ onCriado, onCancelar }: {
   );
 }
 
-export function SeletorPaciente({ paciente, onSelecionar, nomeAvulso, onNomeAvulsoChange, escondeNomeAvulso }: {
+export function SeletorPaciente({ paciente, onSelecionar, nomeAvulso, onNomeAvulsoChange }: {
   paciente: Paciente | null;
   onSelecionar: (p: Paciente | null) => void;
   nomeAvulso: string;
   onNomeAvulsoChange: (v: string) => void;
-  // Telas que já têm seu próprio campo de nome livre fora deste componente
-  // (ex.: o modal de seleção em Calculadora.tsx) escondem esta seção pra
-  // não duplicar o mesmo campo duas vezes na mesma tela.
-  escondeNomeAvulso?: boolean;
 }) {
   const [busca, setBusca] = useState("");
   const [resultados, setResultados] = useState<Paciente[] | null>(null);
@@ -277,84 +272,13 @@ export function SeletorPaciente({ paciente, onSelecionar, nomeAvulso, onNomeAvul
         </button>
       )}
 
-      {!escondeNomeAvulso && (
-        <div style={{ marginTop: "0.7rem", paddingTop: "0.6rem", borderTop: "1px solid var(--borda)" }}>
-          <label>Ou sem paciente cadastrado — nome livre (opcional)</label>
-          <input
-            value={nomeAvulso}
-            onChange={(e) => onNomeAvulsoChange(e.target.value)}
-            placeholder="Nome do paciente/destinatário, sem ficha cadastrada"
-          />
-        </div>
-      )}
-    </div>
-  );
-}
-
-// ————————————————————————————————————————————————————————————————————
-// Modal de seleção — para telas que nunca tiveram o card do SeletorPaciente
-// (Calculadora.tsx, AvaliacaoPreOperatoria.tsx): inserir o seletor em linha
-// mudaria a geometria já aprovada dessas páginas. Em vez disso, reaproveita
-// o MESMO padrão de diálogo já usado em Agenda.tsx (classes globais
-// `.agenda-modal`/`.agenda-modal__painel` de shell.css, foco preso,
-// Esc fecha) — nenhum modal novo é inventado, nenhuma classe nova é criada.
-// O campo de texto livre pré-existente da tela chamadora continua sendo o
-// único lugar onde o nome aparece; este modal só preenche `patient_profile_id`.
-// ————————————————————————————————————————————————————————————————————
-
-export function SeletorPacienteModal({ aberto, titulo, onFechar, onSelecionar }: {
-  aberto: boolean;
-  titulo?: string;
-  onFechar: () => void;
-  onSelecionar: (p: Paciente) => void;
-}) {
-  const painelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!aberto) return;
-    const panel = painelRef.current;
-    if (!panel) return;
-    const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    const focusables = () => Array.from(panel.querySelectorAll<HTMLElement>(
-      'button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])',
-    )).filter((element) => !element.hidden && element.getClientRects().length > 0);
-    window.requestAnimationFrame(() => (focusables()[0] || panel).focus());
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") { event.preventDefault(); onFechar(); return; }
-      if (event.key !== "Tab") return;
-      const items = focusables();
-      if (!items.length) { event.preventDefault(); panel.focus(); return; }
-      const first = items[0]; const last = items[items.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
-    };
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = oldOverflow;
-      previous?.focus();
-    };
-  }, [aberto, onFechar]);
-
-  if (!aberto) return null;
-  return (
-    <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="seletor-paciente-modal-titulo">
-      <div className="agenda-modal__painel agenda-modal__painel--compacto" ref={painelRef} tabIndex={-1}>
-        <header>
-          <div><h2 id="seletor-paciente-modal-titulo">{titulo ?? "Selecionar paciente cadastrado"}</h2></div>
-          <button onClick={onFechar} aria-label="Fechar"><Icone nome="fechar" /></button>
-        </header>
-        <div style={{ padding: "1.1rem 1.2rem" }}>
-          <SeletorPaciente
-            paciente={null}
-            onSelecionar={(p) => { if (p) onSelecionar(p); }}
-            nomeAvulso=""
-            onNomeAvulsoChange={() => {}}
-            escondeNomeAvulso
-          />
-        </div>
+      <div style={{ marginTop: "0.7rem", paddingTop: "0.6rem", borderTop: "1px solid var(--borda)" }}>
+        <label>Ou sem paciente cadastrado — nome livre (opcional)</label>
+        <input
+          value={nomeAvulso}
+          onChange={(e) => onNomeAvulsoChange(e.target.value)}
+          placeholder="Nome do paciente/destinatário, sem ficha cadastrada"
+        />
       </div>
     </div>
   );

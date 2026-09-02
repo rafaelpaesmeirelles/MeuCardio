@@ -7,7 +7,6 @@ import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import GrafoRelacionados from "../components/GrafoRelacionados";
-import { SeletorPacienteModal, type Paciente } from "../components/SeletorPaciente";
 
 /**
  * Página de calculadora única — usada pelas 32 calculadoras do catálogo
@@ -61,8 +60,6 @@ export default function Calculadora() {
   const [provedores, setProvedores] = useState<Provedor[] | null>(null);
   const [mostrarDocumento, setMostrarDocumento] = useState(false);
   const [patientName, setPatientName] = useState("");
-  const [pacienteVinculado, setPacienteVinculado] = useState<Paciente | null>(null);
-  const [modalPacienteAberto, setModalPacienteAberto] = useState(false);
   const [contexto, setContexto] = useState("");
   const [conduta, setConduta] = useState("");
   // Padrão "Profissional" quando o médico já tem esse endereço cadastrado — mesmo fix aplicado em
@@ -125,7 +122,6 @@ export default function Calculadora() {
     try {
       const r = await api.post<{ id: number }>(`/calculators/${slug}/gerar-documento`, {
         patient_name: patientName.trim() || null,
-        patient_profile_id: pacienteVinculado?.id ?? null,
         contexto_clinico: contexto.trim() || null,
         conduta_recomendada: conduta.trim() || null,
         endereco: endereco || null,
@@ -296,34 +292,8 @@ export default function Calculadora() {
       {saida && mostrarDocumento && (
         <div className="cartao" style={{ marginTop: "1rem" }}>
           <p className="eyebrow" style={{ marginTop: 0 }}>Laudo — dados do paciente e contexto</p>
-          <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            Nome do paciente (opcional)
-            <button
-              type="button"
-              className="botao botao--secundario"
-              style={{ padding: "0.15rem 0.5rem", fontSize: "0.72rem" }}
-              onClick={() => setModalPacienteAberto(true)}
-            >
-              Selecionar paciente cadastrado
-            </button>
-          </label>
-          <input
-            value={patientName}
-            onChange={(e) => {
-              setPatientName(e.target.value);
-              if (pacienteVinculado && e.target.value !== pacienteVinculado.full_name) setPacienteVinculado(null);
-            }}
-            placeholder="Usado só para organizar o histórico"
-          />
-          <SeletorPacienteModal
-            aberto={modalPacienteAberto}
-            onFechar={() => setModalPacienteAberto(false)}
-            onSelecionar={(p) => {
-              setPacienteVinculado(p);
-              setPatientName(p.full_name);
-              setModalPacienteAberto(false);
-            }}
-          />
+          <label>Nome do paciente (opcional)</label>
+          <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Usado só para organizar o histórico" />
           <label style={{ marginTop: "0.6rem" }}>Contexto clínico / procedimento (opcional)</label>
           <input
             value={contexto} onChange={(e) => setContexto(e.target.value)}

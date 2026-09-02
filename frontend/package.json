@@ -13,7 +13,6 @@
     "test:cardiology-spaces-home-contract": "node --test scripts/check-cardiology-spaces-home-contract.test.mjs",
     "test:cardiology-spaces-app-frame-contract": "node --test scripts/check-cardiology-spaces-app-frame-contract.test.mjs",
     "test:cardiology-spaces-route-coverage": "node scripts/check-cardiology-spaces-route-coverage.mjs",
-    "test:patient-identification-no-visual-regression": "node --test scripts/check-patient-identification-no-visual-regression.test.mjs",
     "audit:security": "node scripts/audit-dependencies.mjs",
     "sync:mobile": "npm run build && npx cap sync"
   },

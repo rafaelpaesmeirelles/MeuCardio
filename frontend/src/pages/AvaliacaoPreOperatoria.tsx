@@ -4,7 +4,6 @@ import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
-import { SeletorPacienteModal, type Paciente } from "../components/SeletorPaciente";
 
 /**
  * Avaliação Cardiológica Pré-Operatória de Risco Cirúrgico.
@@ -179,8 +178,6 @@ export default function AvaliacaoPreOperatoria() {
   const [provedores, setProvedores] = useState<Provedor[] | null>(null);
 
   const [patientName, setPatientName] = useState("");
-  const [pacienteVinculado, setPacienteVinculado] = useState<Paciente | null>(null);
-  const [modalPacienteAberto, setModalPacienteAberto] = useState(false);
   const [idade, setIdade] = useState("");
   const [procedimento, setProcedimento] = useState("");
   const [indicacao, setIndicacao] = useState("");
@@ -318,7 +315,6 @@ export default function AvaliacaoPreOperatoria() {
       const idadeGupta = gupta.idade || idade;
       const r = await api.post<{ id: number }>("/avaliacao-preoperatoria/gerar", {
         patient_name: patientName.trim() || null,
-        patient_profile_id: pacienteVinculado?.id ?? null,
         idade: idade ? Number(idade) : null,
         procedimento_planejado: procedimento.trim(),
         indicacao_cirurgica: indicacao.trim() || null,
@@ -376,34 +372,8 @@ export default function AvaliacaoPreOperatoria() {
 
       <div className="cartao" style={{ marginTop: "1rem" }}>
         <p className="eyebrow" style={{ marginTop: 0 }}>Dados do paciente e do procedimento</p>
-        <label style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          Nome do paciente
-          <button
-            type="button"
-            className="botao botao--secundario"
-            style={{ padding: "0.15rem 0.5rem", fontSize: "0.72rem" }}
-            onClick={() => setModalPacienteAberto(true)}
-          >
-            Selecionar paciente cadastrado
-          </button>
-        </label>
-        <input
-          value={patientName}
-          onChange={(e) => {
-            setPatientName(e.target.value);
-            if (pacienteVinculado && e.target.value !== pacienteVinculado.full_name) setPacienteVinculado(null);
-          }}
-          placeholder="Usado só para organizar o histórico"
-        />
-        <SeletorPacienteModal
-          aberto={modalPacienteAberto}
-          onFechar={() => setModalPacienteAberto(false)}
-          onSelecionar={(p) => {
-            setPacienteVinculado(p);
-            setPatientName(p.full_name);
-            setModalPacienteAberto(false);
-          }}
-        />
+        <label>Nome do paciente</label>
+        <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Usado só para organizar o histórico" />
         <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
           <div>
             <label>Idade</label>
