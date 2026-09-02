@@ -229,6 +229,102 @@ def _persistir_gerado(
     }
 
 
+def _identificacao_paciente_texto(snapshot: dict | None) -> str | None:
+    """Bloco de identificação em texto simples — mesma tipografia do corpo,
+    sem elemento visual novo (pedido do Rafael, 02/09/2026). Usa
+    `patient_profile_service.variaveis_paciente()`, a mesma fonte já usada
+    pelas variáveis `{{paciente_*}}` de modelo: nunca inventa dado, nunca
+    imprime linha vazia (campo ausente no cadastro vira string vazia lá,
+    filtrada aqui)."""
+    if not snapshot:
+        return None
+    variaveis = patient_profile_service.variaveis_paciente(snapshot)
+    nome = variaveis["paciente_nome"]
+    if not nome:
+        return None
+    linhas = [f"Paciente: {nome}"]
+    if variaveis["paciente_cpf"]:
+        linhas.append(f"CPF: {variaveis['paciente_cpf']}")
+    if variaveis["paciente_data_nascimento"]:
+        linhas.append(f"Data de nascimento: {variaveis['paciente_data_nascimento']}")
+    return "\n".join(linhas)
+
+
+def _sem_identificacao_redundante_no_inicio(corpo: str, variaveis: dict[str, str]) -> str:
+    """Se `corpo` já COMEÇA com uma ou mais linhas de identificação
+    idênticas ao que vai ser prefixado — caso do preview do navegador
+    (`corpo_final`), que hoje já mostra "Paciente: {nome}" na primeira
+    linha da Solicitação de Exames (mas nunca CPF/nascimento, que o
+    preview do cliente não conhece) —, remove só essas linhas iniciais
+    antes do bloco canônico entrar, pra nunca duplicar.
+
+    Casa o MAIOR PREFIXO consecutivo, linha a linha, contra
+    `[Paciente: <nome>, CPF: <cpf>, Data de nascimento: <nascimento>]`
+    (pulando CPF/nascimento da lista quando o cadastro não os tem) — para
+    no primeiro desencontro, então tanto faz o corpo trazer só o nome
+    quanto o bloco completo. Comparação é sempre EXATA contra os valores
+    já resolvidos (nunca regex amplo, nunca por substring): qualquer
+    "Paciente:" que apareça no MEIO do texto (conteúdo clínico legítimo,
+    ex.: a frase do atestado, "...que o(a) paciente Fulano necessita...")
+    nunca é tocado, porque só as primeiras linhas entram na comparação."""
+    linhas = corpo.split("\n")
+    esperado = [f"Paciente: {variaveis['paciente_nome']}"]
+    if variaveis["paciente_cpf"]:
+        esperado.append(f"CPF: {variaveis['paciente_cpf']}")
+    if variaveis["paciente_data_nascimento"]:
+        esperado.append(f"Data de nascimento: {variaveis['paciente_data_nascimento']}")
+
+    n = 0
+    while n < len(esperado) and n < len(linhas) and linhas[n] == esperado[n]:
+        n += 1
+    if n == 0:
+        return corpo
+
+    resto = linhas[n:]
+    if resto and resto[0] == "":
+        resto = resto[1:]
+    return "\n".join(resto)
+
+
+def _com_identificacao_prefixada(
+    db: Session, user, corpo: str, patient_profile_id: int | None,
+) -> str:
+    """Prefixa `corpo` com o bloco de identificação do paciente — nome, CPF
+    e data de nascimento, só quando existentes no cadastro — resolvido
+    SERVER-SIDE a partir de `patient_profile_id`. Nunca confia em
+    identificação vinda do cliente quando um cadastro está selecionado
+    (achado do Rafael, 02/09/2026): o frontend manda `patient_name: null`
+    de propósito quando um paciente cadastrado é escolhido, exatamente
+    para que a identidade impressa venha sempre do snapshot resolvido
+    aqui, nunca de texto arbitrário. Sem `patient_profile_id`, devolve
+    `corpo` sem nenhuma alteração — comportamento de nome avulso
+    permanece exatamente o de antes.
+
+    O CHAMADOR precisa passar o `corpo` FINAL — já com `corpo_final`
+    aplicado, se houver — nunca o contrário: o texto que o médico editou
+    manualmente é sempre preservado por inteiro, e a identificação
+    canônica entra por cima dele, nunca some por baixo de uma
+    sobrescrita posterior (achado do Rafael, 02/09/2026, segunda rodada —
+    `corpo_final` do preview do navegador estava apagando a identificação
+    que tinha acabado de ser prefixada, porque a ordem de chamada estava
+    invertida).
+
+    Ponto ÚNICO usado pelos três fluxos sem modelo (Documento em Branco,
+    Solicitação de Exames, Atestado rápido) — pedido do Rafael de evitar
+    três implementações divergentes da mesma identificação."""
+    if patient_profile_id is None:
+        return corpo
+    _, snapshot, _ = patient_profile_service.resolver_paciente_documento(
+        db, user, patient_profile_id=patient_profile_id, patient_name_avulso=None,
+    )
+    identificacao = _identificacao_paciente_texto(snapshot)
+    if not identificacao:
+        return corpo
+    variaveis = patient_profile_service.variaveis_paciente(snapshot)
+    corpo_sem_duplicata = _sem_identificacao_redundante_no_inicio(corpo, variaveis)
+    return f"{identificacao}\n\n{corpo_sem_duplicata}"
+
+
 @router.get("/exames-sugeridos")
 def exames_sugeridos(user=Depends(current_user)):
     """Lista estática de sugestão para o campo de exame da solicitação —
@@ -272,10 +368,21 @@ def gerar_solicitacao_exames(
 
     corpo = documentos_avulsos.montar_corpo_solicitacao_exames(
         exames=exames, indicacao=indicacao, cid=cid,
-        prioridade=dados.prioridade, observacoes=observacoes, patient_name=patient_name,
+        prioridade=dados.prioridade, observacoes=observacoes,
+        # `patient_name` aqui só é o nome AVULSO (sem cadastro) — quando há
+        # `patient_profile_id`, o frontend já manda `patient_name: null` de
+        # propósito, e `_com_identificacao_prefixada()` abaixo é quem
+        # resolve a identificação real, server-side, a partir do snapshot.
+        patient_name=patient_name,
     )
+    # A identificação SEMPRE entra por cima do texto FINAL — inclusive de
+    # `corpo_final`, o preview que o médico pode ter editado à mão no
+    # navegador. A ordem importa: se prefixássemos antes de aplicar
+    # `corpo_final`, a sobrescrita apagaria a identificação que acabou de
+    # ser posta (achado do Rafael, 02/09/2026, terceira rodada).
     if dados.corpo_final is not None and dados.corpo_final.strip():
         corpo = dados.corpo_final
+    corpo = _com_identificacao_prefixada(db, user, corpo, dados.patient_profile_id)
     return _persistir_gerado(
         db, user, doc_type=DOC_TYPE_SOLICITACAO_EXAMES, title=documentos_avulsos.TITULO_SOLICITACAO_EXAMES,
         corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
@@ -326,12 +433,20 @@ def gerar_atestado_rapido(
     patient_name = (dados.patient_name or "").strip() or None
 
     corpo = documentos_avulsos.montar_corpo_atestado(
+        # Idem `patient_name` de exames: só o nome AVULSO. Com
+        # `patient_profile_id`, o fallback "acima identificado(a)" abaixo
+        # passa a ser literalmente correto, porque
+        # `_com_identificacao_prefixada()` põe a identificação real ACIMA
+        # desta frase — nenhuma mudança de redação foi necessária aqui.
         patient_name=patient_name, dias_afastamento=dados.dias_afastamento,
         data_inicio=dados.data_inicio, data_fim=dados.data_fim,
         cid=cid, observacoes=observacoes,
     )
+    # Mesma ordem de exames: identificação sempre por cima do texto FINAL,
+    # depois de `corpo_final` já ter sido aplicado — nunca antes.
     if dados.corpo_final is not None and dados.corpo_final.strip():
         corpo = dados.corpo_final
+    corpo = _com_identificacao_prefixada(db, user, corpo, dados.patient_profile_id)
     return _persistir_gerado(
         db, user, doc_type=DOC_TYPE_ATESTADO, title="Atestado médico",
         corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
@@ -355,27 +470,6 @@ class DocumentoLivreIn(BaseModel):
     endereco: str | None = None
 
 
-def _identificacao_paciente_texto(snapshot: dict | None) -> str | None:
-    """Bloco de identificação em texto simples — mesma tipografia do corpo,
-    sem elemento visual novo (pedido do Rafael, 02/09/2026, Documento em
-    Branco). Usa `patient_profile_service.variaveis_paciente()`, a mesma
-    fonte já usada pelas variáveis `{{paciente_*}}` de modelo: nunca inventa
-    dado, nunca imprime linha vazia (campo ausente no cadastro vira string
-    vazia lá, filtrada aqui)."""
-    if not snapshot:
-        return None
-    variaveis = patient_profile_service.variaveis_paciente(snapshot)
-    nome = variaveis["paciente_nome"]
-    if not nome:
-        return None
-    linhas = [f"Paciente: {nome}"]
-    if variaveis["paciente_cpf"]:
-        linhas.append(f"CPF: {variaveis['paciente_cpf']}")
-    if variaveis["paciente_data_nascimento"]:
-        linhas.append(f"Data de nascimento: {variaveis['paciente_data_nascimento']}")
-    return "\n".join(linhas)
-
-
 @router.post("/gerar-livre", status_code=201)
 def gerar_documento_livre(
     dados: DocumentoLivreIn, db: Session = Depends(get_db), user=Depends(current_user),
@@ -388,25 +482,19 @@ def gerar_documento_livre(
 
     Quando um paciente CADASTRADO é selecionado, o corpo emitido (e por
     tabela o PDF, que renderiza `rendered_body` sem builder próprio) ganha
-    um bloco "Paciente: ..." na frente do texto digitado — sem isso, o
-    `patient_profile_id` ficava só gravado no banco, sem aparecer no
-    documento de verdade (achado do Rafael, 02/09/2026). Sem paciente
-    selecionado, o comportamento permanece idêntico ao de antes: `corpo`
-    vira `rendered_body` sem nenhuma alteração.
+    um bloco "Paciente: ..." na frente do texto digitado, via
+    `_com_identificacao_prefixada` — sem isso, o `patient_profile_id`
+    ficava só gravado no banco, sem aparecer no documento de verdade
+    (achado do Rafael, 02/09/2026). Sem paciente selecionado, o
+    comportamento permanece idêntico ao de antes: `corpo` vira
+    `rendered_body` sem nenhuma alteração.
 
     `variables["corpo"]` guarda o texto ORIGINAL digitado, sem a
     identificação prefixada — é o que "recriar baseado neste documento"
     usa para repopular o editor; a identificação é recalculada do zero
     a cada emissão, nunca duplicada nem congelada ali."""
     patient_name = (dados.patient_name or "").strip() or None
-    corpo = dados.corpo
-    if dados.patient_profile_id is not None:
-        _, snapshot, _ = patient_profile_service.resolver_paciente_documento(
-            db, user, patient_profile_id=dados.patient_profile_id, patient_name_avulso=None,
-        )
-        identificacao = _identificacao_paciente_texto(snapshot)
-        if identificacao:
-            corpo = f"{identificacao}\n\n{dados.corpo}"
+    corpo = _com_identificacao_prefixada(db, user, dados.corpo, dados.patient_profile_id)
     return _persistir_gerado(
         db, user, doc_type=DOC_TYPE_DOCUMENTO_LIVRE, title=dados.titulo.strip(),
         corpo=corpo, endereco=dados.endereco, patient_name=patient_name,
