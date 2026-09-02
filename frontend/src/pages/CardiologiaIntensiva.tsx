@@ -9,7 +9,7 @@ import {
 } from "../components/ClinicalCommandPrimitives";
 import { Carregando, Erro, SeloRevisao } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
-import { api } from "../lib/api";
+import { api, PaginaDe } from "../lib/api";
 
 const TEMA = "Terapia intensiva";
 const CALCULADORAS_DIRETAS = new Set([
@@ -99,7 +99,7 @@ export default function CardiologiaIntensiva() {
     Promise.allSettled([
       carregarTodosDocumentos(),
       api.get<Calculadora[]>("/calculators"),
-      api.get<Checklist[]>("/checklists"),
+      api.get<PaginaDe<Checklist>>("/checklists?limit=500"),
     ]).then(([resultadoDocumentos, resultadoCalculadoras, resultadoChecklists]) => {
       if (!ativo) return;
       if (resultadoDocumentos.status === "rejected") {
@@ -117,7 +117,7 @@ export default function CardiologiaIntensiva() {
       );
       setChecklists(
         resultadoChecklists.status === "fulfilled"
-          ? resultadoChecklists.value.filter((item) => item.theme === TEMA)
+          ? resultadoChecklists.value.items.filter((item) => item.theme === TEMA)
           : []
       );
     });

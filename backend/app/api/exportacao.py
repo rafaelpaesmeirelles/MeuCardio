@@ -16,7 +16,7 @@ import unicodedata
 from datetime import datetime, timedelta, timezone
 from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
@@ -151,13 +151,23 @@ def _dump(m: PatientMaterial) -> dict:
 
 
 @router.get("/api/material-paciente")
-def listar_materiais(db: Session = Depends(get_db), _=Depends(current_user)):
-    itens = (db.query(PatientMaterial)
-               .filter(PatientMaterial.published.is_(True))
-               .order_by(PatientMaterial.titulo)
-               .all())
-    return [{"slug": m.slug, "titulo": m.titulo, "subtitulo": m.subtitulo,
-             "tema": m.tema, "resumo": m.resumo} for m in itens]
+def listar_materiais(
+    limit: int = Query(60, ge=1, le=500),
+    offset: int = Query(0, ge=0),
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
+):
+    query = db.query(PatientMaterial).filter(PatientMaterial.published.is_(True))
+    total = query.count()
+    itens = query.order_by(PatientMaterial.titulo).offset(offset).limit(limit).all()
+    items = [{"slug": m.slug, "titulo": m.titulo, "subtitulo": m.subtitulo,
+              "tema": m.tema, "resumo": m.resumo} for m in itens]
+    return {
+        "total": total, "limit": limit, "offset": offset,
+        "next_offset": offset + len(items) if offset + len(items) < total else None,
+        "has_more": offset + len(items) < total,
+        "items": items,
+    }
 
 
 @router.get("/api/material-paciente/{slug}")

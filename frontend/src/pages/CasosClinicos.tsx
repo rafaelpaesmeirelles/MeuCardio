@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Carregando, Erro, Vazio } from "../components/Estado";
-import { api } from "../lib/api";
+import { api, todasAsPaginas } from "../lib/api";
 import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
 
 type Caso = {
@@ -35,7 +35,8 @@ export default function CasosClinicos() {
       const params = new URLSearchParams();
       if (busca.trim()) params.set("q", busca.trim());
       if (tema) params.set("theme", tema);
-      api.get<Caso[]>(`/casos-clinicos?${params}`)
+      params.set("limit", "500");
+      todasAsPaginas<Caso>(`/casos-clinicos?${params}`)
         .then((resposta) => { if (ativo) setCasos(resposta); })
         .catch((causa) => { if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível carregar os casos clínicos."); });
     }, 220);

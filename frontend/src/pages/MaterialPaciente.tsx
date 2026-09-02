@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../lib/api";
+import { api, todasAsPaginas } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
@@ -47,8 +47,7 @@ export default function MaterialPaciente() {
   const [resultado, setResultado] = useState<{ slug: string; expiraEm: string } | null>(null);
 
   useEffect(() => {
-    api
-      .get<Material[]>("/material-paciente")
+    todasAsPaginas<Material>("/material-paciente?limit=500")
       .then(setItens)
       .catch((e) => setErro(e?.message || "Não foi possível carregar."));
     api

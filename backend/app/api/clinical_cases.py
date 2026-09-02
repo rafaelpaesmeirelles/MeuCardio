@@ -49,6 +49,8 @@ def temas(db: Session = Depends(get_db), _=Depends(current_user)):
 def listar(
     q: str | None = Query(None, max_length=160),
     theme: str | None = Query(None, max_length=120),
+    limit: int = Query(60, ge=1, le=500),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     user: User = Depends(current_user),
 ):
@@ -63,10 +65,19 @@ def listar(
             ClinicalCase.enunciado.ilike(term),
             ClinicalCase.pergunta.ilike(term),
         ))
-    casos = query.order_by(ClinicalCase.tema, ClinicalCase.titulo).all()
+    total = query.count()
+    casos = query.order_by(ClinicalCase.tema, ClinicalCase.titulo).offset(offset).limit(limit).all()
+
+    def _pagina(items: list) -> dict:
+        return {
+            "total": total, "limit": limit, "offset": offset,
+            "next_offset": offset + len(items) if offset + len(items) < total else None,
+            "has_more": offset + len(items) < total,
+            "items": items,
+        }
 
     if not casos:
-        return []
+        return _pagina([])
 
     ids = [case.id for case in casos]
     contagens = dict(
@@ -94,14 +105,14 @@ def listar(
         .filter(ClinicalCaseAttempt.user_id == user.id)
         .all()
     )
-    return [
+    return _pagina([
         {
             "slug": c.slug, "titulo": c.titulo, "tema": c.tema, "nivel": c.nivel,
             "tentativas": int(contagens.get(c.id, 0)),
             "acertou_na_ultima": ultimas.get(c.id),
         }
         for c in casos
-    ]
+    ])
 
 
 @router.get("/{slug}")

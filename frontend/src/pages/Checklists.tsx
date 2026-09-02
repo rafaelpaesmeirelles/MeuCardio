@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, todasAsPaginas } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
 
 type Resumo = {
@@ -51,7 +51,8 @@ export default function Checklists() {
       const params = new URLSearchParams();
       if (tipo) params.set("scope_type", tipo);
       if (busca.trim()) params.set("q", busca.trim());
-      api.get<Resumo[]>(`/checklists?${params}`)
+      params.set("limit", "500");
+      todasAsPaginas<Resumo>(`/checklists?${params}`)
         .then((resposta) => ativo && setModelos(resposta))
         .catch((e) => {
           if (!ativo) return;

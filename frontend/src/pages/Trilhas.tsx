@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ClinicalMetric, ClinicalPageHeader } from "../components/ClinicalCommandPrimitives";
 import Icone from "../components/Icone";
-import { api } from "../lib/api";
+import { todasAsPaginas } from "../lib/api";
 import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Trilha = {
@@ -90,7 +90,7 @@ export default function Trilhas() {
   const carregar = useCallback(() => {
     setCarregando(true);
     setErro("");
-    api.get<Trilha[]>("/trilhas")
+    todasAsPaginas<Trilha>("/trilhas?limit=500")
       .then(setTrilhas)
       .catch((causa) => setErro(causa instanceof Error ? causa.message : "Não foi possível carregar as trilhas de estudo."))
       .finally(() => setCarregando(false));

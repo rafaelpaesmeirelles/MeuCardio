@@ -74,6 +74,8 @@ def _pendencias(itens: list, marcados: list) -> dict:
 def listar(
     scope_type: str | None = Query(None, max_length=20),
     q: str | None = Query(None, max_length=160),
+    limit: int = Query(60, ge=1, le=500),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     _: User = Depends(current_user),
 ):
@@ -97,14 +99,21 @@ def listar(
             cast(DischargeChecklist.itens, Text).ilike(termo),
         ))
 
+    total = query.count()
     checklists = query.order_by(
         DischargeChecklist.scope_type,
         DischargeChecklist.condicao,
-    ).all()
-    return [
+    ).offset(offset).limit(limit).all()
+    items = [
         {chave: valor for chave, valor in _dump(checklist).items() if chave != "itens"}
         for checklist in checklists
     ]
+    return {
+        "total": total, "limit": limit, "offset": offset,
+        "next_offset": offset + len(items) if offset + len(items) < total else None,
+        "has_more": offset + len(items) < total,
+        "items": items,
+    }
 
 
 @router.get("/{slug}")

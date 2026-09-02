@@ -360,6 +360,11 @@ def list_triage(
             cast(SymptomTriageGuide.aliases, Text).ilike(term),
             cast(SymptomTriageGuide.tags, Text).ilike(term),
         ))
+    # Sem paginação de propósito (auditoria de 02/09/2026, Parte I): triagem
+    # por sintoma é uma taxonomia fechada de portas de entrada clínicas (dor
+    # torácica, dispneia, síncope...), não um corpus que cresce com o ritmo
+    # de produção científica — 23 guias hoje, teto realista bem abaixo de uma
+    # centena. Mesma categoria de exceção documentada em `emergencia.py`.
     items = query.order_by(SymptomTriageGuide.name).all()
     return [_triage_list_item(item) for item in items]
 

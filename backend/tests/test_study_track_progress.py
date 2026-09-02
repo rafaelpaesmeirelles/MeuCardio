@@ -269,7 +269,7 @@ def test_trilha_publicada_sem_revisao_permanece_fechada(client, db, criar_usuari
 
         assert detail.status_code == 404
         assert listing.status_code == 200
-        assert track_slug not in {item["slug"] for item in listing.json()}
+        assert track_slug not in {item["slug"] for item in listing.json()["items"]}
     finally:
         _cleanup(db, track_slug)
 

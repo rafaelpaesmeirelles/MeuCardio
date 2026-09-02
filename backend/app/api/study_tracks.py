@@ -178,10 +178,17 @@ def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapa
 
 
 @router.get("")
-def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    ts = db.query(StudyTrack).filter(
+def listar(
+    limit: int = Query(60, ge=1, le=500),
+    offset: int = Query(0, ge=0),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    query = db.query(StudyTrack).filter(
         StudyTrack.published.is_(True), StudyTrack.review_status == "revisado"
-    ).order_by(StudyTrack.titulo).all()
+    )
+    total = query.count()
+    ts = query.order_by(StudyTrack.titulo).offset(offset).limit(limit).all()
     progressos = {
         progresso.track_id: progresso
         for progresso in db.query(StudyTrackProgress).filter(
@@ -189,7 +196,13 @@ def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
             StudyTrackProgress.track_id.in_([track.id for track in ts]),
         ).all()
     } if ts else {}
-    return [_dump(db, t, progressos.get(t.id), com_etapas=False) for t in ts]
+    items = [_dump(db, t, progressos.get(t.id), com_etapas=False) for t in ts]
+    return {
+        "total": total, "limit": limit, "offset": offset,
+        "next_offset": offset + len(items) if offset + len(items) < total else None,
+        "has_more": offset + len(items) < total,
+        "items": items,
+    }
 
 
 # --- Timeline de evolução do conhecimento por doença (tarefa #53) ----------
