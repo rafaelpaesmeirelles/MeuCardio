@@ -16,6 +16,7 @@ from .dose_calculators_pals2025_chatgpt import PALS_2025_DOSE_REGISTRY
 from .intensive_care_brash_safety import INTENSIVE_CARE_BRASH_SAFETY_REGISTRY
 from .intensive_care_calculators import INTENSIVE_CARE_CALCULATOR_REGISTRY
 from .intensive_care_hyperkalemia_safety import INTENSIVE_CARE_HYPERKALEMIA_SAFETY_REGISTRY
+from .perioperative_calculators import PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_frailty import FRAILTY_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_geriatria import GERIATRIC_PERIOPERATIVE_REGISTRY
 from .perioperative_calculators_mortalidade import MORTALITY_PERIOPERATIVE_REGISTRY
@@ -50,3 +51,16 @@ for registry in _CHATGPT_REGISTRIES:
     for calculator in registry.values():
         calculator.fonte_producao = "chatgpt"
         calculators.REGISTRY[calculator.slug] = calculator
+
+# `PERIOPERATIVE_REGISTRY` (DASI, AUB-HAS2, VSG-CRI) é anterior à leva
+# "chatgpt" e por isso não entra no laço acima nem ganha `fonte_producao` —
+# preserva a proveniência original, que não é essa. Mas precisa do mesmo
+# merge em `calculators.REGISTRY` aqui, no `__init__` do pacote `app.services`,
+# não só em `app/api/calculators.py` (achado na auditoria de 02/09/2026):
+# `app.api.calculators` só é importado quando o router HTTP é montado, mas
+# `app.commands.reconcile_content` e o backfill do grafo de conhecimento
+# importam somente `app.services.*` — nesse caminho, o merge feito só no
+# router nunca acontecia, e as 3 calculadoras eram lidas como "removidas do
+# registro" e arquivadas no grafo a cada reconciliação.
+for calculator in PERIOPERATIVE_REGISTRY.values():
+    calculators.REGISTRY[calculator.slug] = calculator

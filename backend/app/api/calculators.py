@@ -11,14 +11,14 @@ from app.models.clinical_docs import GeneratedDocument
 from app.services import calculators as calc
 from app.services import cofre
 from app.services.clinical_ownership import patient_for_user
-from app.services.perioperative_calculators import PERIOPERATIVE_REGISTRY
 from app.services.professional_profile import document_identity
 
-# Calculadoras perioperatórias produzidas pelo ChatGPT são registradas no mesmo
-# catálogo usado pelo frontend genérico e pela avaliação pré-operatória.
-# A atualização ocorre após `calculators` estar completamente importado, evitando
-# duplicar as dataclasses/infraestrutura existentes.
-calc.REGISTRY.update(PERIOPERATIVE_REGISTRY)
+# O merge de PERIOPERATIVE_REGISTRY (DASI, AUB-HAS2, VSG-CRI) em
+# calc.REGISTRY agora acontece em `app/services/__init__.py`, que roda para
+# qualquer importador de `app.services.*` — não só quando este router HTTP é
+# montado. Ver comentário lá para o porquê (achado na auditoria de
+# 02/09/2026: o reconciliador do grafo de conhecimento nunca importava este
+# módulo, então nunca via essas 3 calculadoras).
 
 router = APIRouter(prefix="/api/calculators", tags=["calculadoras"])
 
