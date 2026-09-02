@@ -107,6 +107,8 @@ class ApresentacaoComercial(BaseModel):
 def list_drugs(
     q: str | None = Query(None, max_length=160),
     drug_class: str | None = None,
+    limit: int = Query(500, ge=1, le=1000),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
@@ -127,7 +129,8 @@ def list_drugs(
         ))
     if drug_class:
         query = query.filter(Drug.drug_class == drug_class)
-    drugs = query.order_by(Drug.generic_name).limit(300).all()
+    total = query.count()
+    drugs = query.order_by(Drug.generic_name).offset(offset).limit(limit).all()
     latest_cmed_version_id = db.query(func.max(CmedVersao.id)).scalar()
     cmed_names: dict[int, list[str]] = {drug.id: [] for drug in drugs}
     if latest_cmed_version_id and drugs:
@@ -154,7 +157,14 @@ def list_drugs(
             "commercial_names": commercial_names,
             "review_status": drug.review_status,
         })
-    return results
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "next_offset": offset + len(drugs) if offset + len(drugs) < total else None,
+        "has_more": offset + len(drugs) < total,
+        "items": results,
+    }
 
 
 def _nome_legivel_substancia(bruto: str) -> str:

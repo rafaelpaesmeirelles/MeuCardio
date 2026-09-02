@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, todasAsPaginas } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import Icone from "../components/Icone";
@@ -609,7 +609,7 @@ export default function Receituario() {
   const [criado, setCriado] = useState<ReceituarioCriado | null>(null);
 
   useEffect(() => {
-    api.get<{ slug: string; generic_name: string }[]>("/drugs")
+    todasAsPaginas<{ slug: string; generic_name: string }>("/drugs")
       .then((l) => setFarmacos(l.map((d) => ({ slug: d.slug, nome: d.generic_name }))))
       .catch((e) => setErroCarregar(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});

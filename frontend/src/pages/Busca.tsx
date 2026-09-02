@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, PaginaDe } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Res = { slug: string; title: string; kind: string; frente?: string; theme: string | null; snippet: string; ano?: number; rank?: number };
@@ -197,14 +197,14 @@ export default function Busca() {
     setLoading(true); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorFrente({}); setAssunto(termo); setParams({ q: termo }, { replace: true });
     const [s, ds] = await Promise.allSettled([
       api.get<SearchResponse>(`/search?q=${encodeURIComponent(termo)}&limit=100`),
-      api.get<Drug[]>(`/drugs?q=${encodeURIComponent(termo)}`),
+      api.get<PaginaDe<Drug>>(`/drugs?q=${encodeURIComponent(termo)}`),
     ]);
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
     const itens = s.value.results; setRes(itens); setPrimaryDisease(s.value.primary_disease ?? null); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorFrente(s.value.por_frente ?? {});
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
     else {
-      const n = norm(termo), fortes = ds.value.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `) || d.brand_names?.some((marca) => norm(marca) === n) || d.commercial_names?.some((marca) => norm(marca) === n));
+      const n = norm(termo), fortes = ds.value.items.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `) || d.brand_names?.some((marca) => norm(marca) === n) || d.commercial_names?.some((marca) => norm(marca) === n));
       if (fortes.length === 1) {
         try { const d = await api.get<Insight>(`/drug-insights/${fortes[0].slug}`); if (id === seq.current) setDrug(d); }
         catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }

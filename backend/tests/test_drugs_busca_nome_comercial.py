@@ -46,4 +46,4 @@ def test_lista_busca_nome_comercial_e_mantem_apenas_publicados(
     )
 
     assert resposta.status_code == 200
-    assert [item["slug"] for item in resposta.json()] == ["metoprolol-marca-teste"]
+    assert [item["slug"] for item in resposta.json()["items"]] == ["metoprolol-marca-teste"]

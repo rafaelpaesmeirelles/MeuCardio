@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Icone from "../components/Icone";
-import { api, ApiError } from "../lib/api";
+import { api, ApiError, todasAsPaginas } from "../lib/api";
 import { Carregando, SeloRevisao } from "../components/Estado";
 import DicaContextual from "../components/DicaContextual";
 import GrafoRelacionados from "../components/GrafoRelacionados";
@@ -281,7 +281,7 @@ export default function MedicamentosClinicalCommand() {
   const [erro, setErro] = useState("");
 
   useEffect(() => {
-    api.get<Item[]>("/drugs").then(setLista).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
+    todasAsPaginas<Item>("/drugs").then(setLista).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
   }, []);
 
   const grupos = useMemo(() => {

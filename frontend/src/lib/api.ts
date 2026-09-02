@@ -132,6 +132,37 @@ async function request<T>(
   return res.status === 204 ? (undefined as T) : res.json();
 }
 
+// Contrato de paginação compartilhado pelas frentes científicas com listagem
+// paginada (documentos, evidências, estudos, exames, guia de doenças,
+// medicamentos — ver auditoria de 02/09/2026, Parte G/H).
+export type PaginaDe<T> = {
+  total: number;
+  limit: number;
+  offset: number;
+  next_offset: number | null;
+  has_more: boolean;
+  items: T[];
+};
+
+/**
+ * Percorre todas as páginas de um endpoint paginado e devolve a lista
+ * completa. Usar apenas onde a tela genuinamente precisa do catálogo inteiro
+ * (dropdown/busca client-side) — não para telas com paginação visual própria,
+ * que devem consumir uma página por vez.
+ */
+export async function todasAsPaginas<T>(caminho: string): Promise<T[]> {
+  const itens: T[] = [];
+  let offset = 0;
+  for (;;) {
+    const separador = caminho.includes("?") ? "&" : "?";
+    const pagina = await api.get<PaginaDe<T>>(`${caminho}${separador}offset=${offset}`);
+    itens.push(...pagina.items);
+    if (!pagina.has_more || pagina.next_offset == null) break;
+    offset = pagina.next_offset;
+  }
+  return itens;
+}
+
 export const api = {
   get: <T>(p: string, opcoes?: { silencioso401?: boolean }) => request<T>(p, {}, opcoes),
   post: <T>(p: string, body?: unknown) =>

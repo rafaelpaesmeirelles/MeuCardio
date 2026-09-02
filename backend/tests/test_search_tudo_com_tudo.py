@@ -504,13 +504,13 @@ def test_nome_comercial_cmed_encontra_medicamento_canonico_em_todas_as_buscas(
             "/api/drugs", params={"q": termo}, headers=headers,
         )
         assert catalog_response.status_code == 200
-        assert [item["slug"] for item in catalog_response.json()] == [drug.slug]
+        assert [item["slug"] for item in catalog_response.json()["items"]] == [drug.slug]
         assert {"Norvasc", "Pressat XR"}.issubset(
-            set(catalog_response.json()[0]["commercial_names"])
+            set(catalog_response.json()["items"][0]["commercial_names"])
         )
         assert sum(
             nome.casefold() == "norvasc"
-            for nome in catalog_response.json()[0]["commercial_names"]
+            for nome in catalog_response.json()["items"][0]["commercial_names"]
         ) == 1
 
 

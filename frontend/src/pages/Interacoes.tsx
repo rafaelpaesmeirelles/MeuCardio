@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { api } from "../lib/api";
+import { api, todasAsPaginas } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import ClinicalText from "../components/ClinicalText";
 import {
@@ -71,7 +71,7 @@ export default function Interacoes() {
   const [checando, setChecando] = useState(false);
 
   useEffect(() => {
-    api.get<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }[]>("/drugs")
+    todasAsPaginas<{ slug: string; generic_name: string; brand_names: string[]; commercial_names: string[] }>("/drugs")
       .then((l) => setLista(l.map((d) => ({ slug: d.slug, nome: d.generic_name, aliases: Array.from(new Set([...(d.brand_names ?? []), ...(d.commercial_names ?? [])])) }))))
       .catch((e) => setErro(e.message));
   }, []);

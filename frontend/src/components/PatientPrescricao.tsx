@@ -1,6 +1,6 @@
 import CabecalhoDocumento from "./CabecalhoDocumento";
 import { lazy, Suspense, useEffect, useState } from "react";
-import { api } from "../lib/api";
+import { api, PaginaDe } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
 const PrescricaoLivreEspecial = lazy(() => import("./PrescricaoLivreEspecial"));
@@ -45,7 +45,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   useEffect(() => {
     if (busca.trim().length < 2) { setSugestoes([]); return; }
     const atraso = setTimeout(() => {
-      api.get<SugestaoFarmaco[]>(`/drugs?q=${encodeURIComponent(busca)}`).then((r) => setSugestoes(r.slice(0, 6)));
+      api.get<PaginaDe<SugestaoFarmaco>>(`/drugs?q=${encodeURIComponent(busca)}`).then((r) => setSugestoes(r.items.slice(0, 6)));
     }, 250);
     return () => clearTimeout(atraso);
   }, [busca]);
