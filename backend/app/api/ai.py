@@ -79,6 +79,12 @@ def _status_rag(db: Session) -> dict:
         Document.published.is_(True),
         ~Document.id.in_(select(DocumentChunk.document_id).distinct()),
     ).count()
+    # "bloqueador residual RAG" (03/09/2026): sem esta contagem, um índice
+    # cheio de vetores LEGACY_UNVERIFIED (nunca verificados, mas ainda
+    # servíveis) parecia idêntico, no status, a um índice cheio de vetores
+    # STALE_KNOWN (sabidamente desatualizados) — as duas situações pedem
+    # ação operacional bem diferente.
+    document_chunks_por_classificacao = rag.contar_document_chunks_por_classificacao(db)
 
     ultima = db.execute(
         select(RagReindexRun).order_by(RagReindexRun.finished_at.desc()).limit(1)
@@ -106,6 +112,9 @@ def _status_rag(db: Session) -> dict:
     return {
         "knowledge_chunks_total": knowledge_chunks_total,
         "document_chunks_total": document_chunks_total,
+        "document_chunks_current_verified": document_chunks_por_classificacao["CURRENT_VERIFIED"],
+        "document_chunks_legacy_unverified": document_chunks_por_classificacao["LEGACY_UNVERIFIED"],
+        "document_chunks_stale_known": document_chunks_por_classificacao["STALE_KNOWN"],
         "documentos_publicados_sem_chunk": documentos_publicados_sem_chunk,
         "indice_vazio": knowledge_chunks_total == 0 and document_chunks_total == 0,
         "indice_parcialmente_preenchido": knowledge_chunks_total == 0 and document_chunks_total > 0,

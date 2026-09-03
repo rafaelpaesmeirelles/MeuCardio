@@ -17,6 +17,12 @@ from sqlalchemy import text
 from app.models.content import Document
 from app.models.rag import DocumentChunk
 from app.services.rag import (
+    CHUNK_LEGADO_CONTENT_HASH,
+    CHUNK_LEGADO_EMBEDDING_MODEL,
+    CURRENT_VERIFIED,
+    LEGACY_UNVERIFIED,
+    STALE_KNOWN,
+    classificar_chunk,
     esta_atualizado,
     fingerprint_fonte,
     indexar_documento,
@@ -59,10 +65,8 @@ def test_chunk_com_modelo_sentinela_legado_nunca_e_atual(db):
     linhas legadas — sentinelas, não proveniência inventada. Independente do
     que `hash_gravado` disser, `modelo_gravado` sentinela nunca bate com o
     modelo configurado agora: `esta_atualizado()` tem que recusar."""
-    from migrations.versions.b7ri20260903_rag_integridade_observabilidade import (
-        LEGADO_CONTENT_HASH,
-        LEGADO_EMBEDDING_MODEL,
-    )
+    from app.services.rag import CHUNK_LEGADO_CONTENT_HASH as LEGADO_CONTENT_HASH
+    from app.services.rag import CHUNK_LEGADO_EMBEDDING_MODEL as LEGADO_EMBEDDING_MODEL
 
     hash_atual = fingerprint_fonte("Qualquer título", "Qualquer corpo")
     # mesmo se o hash gravado, por coincidência, batesse com o atual — o
@@ -76,10 +80,8 @@ def test_chunk_legado_e_reindexado_pelo_backfill_sem_perder_vetor_ate_la(db, mon
     confirmada) precisa ser pego pela próxima passada de indexação — mas o
     vetor antigo continua servível até essa passada rodar (nenhum DELETE só
     por causa da migration)."""
-    from migrations.versions.b7ri20260903_rag_integridade_observabilidade import (
-        LEGADO_CONTENT_HASH,
-        LEGADO_EMBEDDING_MODEL,
-    )
+    from app.services.rag import CHUNK_LEGADO_CONTENT_HASH as LEGADO_CONTENT_HASH
+    from app.services.rag import CHUNK_LEGADO_EMBEDDING_MODEL as LEGADO_EMBEDDING_MODEL
 
     doc = _doc("legado-proveniencia-teste", "Documento legado", "## Seção\nTexto legado, nunca reindexado de verdade.")
     db.add(doc)
@@ -266,3 +268,146 @@ def test_chunk_realmente_atual_nao_duplica_via_fallback(db, monkeypatch):
     resultados = buscar_lexico_multi(db, "amiodarona dose manutenção fibrilação atrial", limite=10)
     slugs_documento = [r["slug"] for r in resultados if r["entity_type"] == "documento"]
     assert doc.slug not in slugs_documento, "chunk já está em dia — não deveria vir pelo fallback"
+
+
+# --- Bloqueador residual, 03/09/2026: ponte de ranking legado ≠ permanente -
+
+def _insere_chunk_legado(db, doc, *, embedding=None) -> None:
+    """Injeta um chunk com as DUAS sentinelas da migration `b7ri20260903`,
+    com um vetor REAL e determinístico (não nulo) — o ponto central do
+    bloqueador é que esse vetor precisa poder ranquear semanticamente,
+    então não pode ser um `array_fill(0.0, ...)` que empataria com tudo."""
+    if embedding is None:
+        provedor = _ProvedorFake()
+        embedding = provedor.embeddings([doc.body_md])[0]
+    db.execute(text(
+        "INSERT INTO document_chunks "
+        "(document_id, ordem, conteudo, embedding, tokens_aprox, content_hash, embedding_model) "
+        "VALUES (:did, 0, :conteudo, (:vetor)::vector, 0, :hash, :modelo)"
+    ), {
+        "did": doc.id, "conteudo": "TEXTO ANTIGO DO CHUNK LEGADO — nunca pode vazar ao contexto",
+        "vetor": str(embedding), "hash": CHUNK_LEGADO_CONTENT_HASH, "modelo": CHUNK_LEGADO_EMBEDDING_MODEL,
+    })
+    db.commit()
+
+
+def test_classificar_chunk_tres_vias():
+    """Unitário e direto, sem banco: as três classes de `classificar_chunk`."""
+    hash_atual = fingerprint_fonte("Título", "Corpo")
+    assert classificar_chunk(hash_atual, "text-embedding-3-small", hash_atual) == CURRENT_VERIFIED
+    assert classificar_chunk(CHUNK_LEGADO_CONTENT_HASH, CHUNK_LEGADO_EMBEDDING_MODEL, hash_atual) == LEGACY_UNVERIFIED
+    assert classificar_chunk("hash-antigo-real-mas-diferente", "text-embedding-3-small", hash_atual) == STALE_KNOWN
+    assert classificar_chunk(hash_atual, "modelo-diferente-qualquer", hash_atual) == STALE_KNOWN
+    # meia-sentinela (só uma das duas bater) não conta como legado — tem que
+    # ser tão inequívoco quanto a migration original grava as duas juntas.
+    assert classificar_chunk(CHUNK_LEGADO_CONTENT_HASH, "text-embedding-3-small", hash_atual) == STALE_KNOWN
+
+
+def test_legado_contribui_pro_ranking_mas_conteudo_final_e_o_atual(db, monkeypatch):
+    """TESTE OBRIGATÓRIO 1 (revisão de 03/09/2026): legacy sentinel + provider
+    DISPONÍVEL — o vetor legado pode contribuir para o ranking semântico
+    (é uma embedding real, calculada sobre o corpo atual pelo `_ProvedorFake`
+    determinístico, então bate por cosine distance com a própria pergunta),
+    mas o CONTEÚDO final entregue por `recuperar()` vem do documento
+    publicado agora — nunca o texto do chunk legado."""
+    provedor = _ProvedorFake()
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: provedor)
+
+    doc = _doc(
+        "legado-ranking-teste", "Espironolactona",
+        "## Farmacologia\nEspironolactona quarta droga na hipertensão resistente, dose 25mg.",
+    )
+    db.add(doc)
+    db.commit()
+    _insere_chunk_legado(db, doc)
+
+    trechos = recuperar(db, "espironolactona quarta droga hipertensão resistente dose 25mg")
+
+    achados = [t for t in trechos if t["slug"] == doc.slug]
+    assert achados, "chunk legado (proveniência não confirmada) tinha que contribuir para o ranking"
+    conteudos = " ".join(t["conteudo"] for t in achados)
+    assert "TEXTO ANTIGO DO CHUNK LEGADO" not in conteudos, (
+        "conteúdo do chunk legado nunca pode chegar ao contexto — só o documento atual"
+    )
+    assert "25mg" in conteudos, "tem que devolver o corpo/resumo ATUAL do documento"
+
+
+def test_legado_com_provider_indisponivel_documento_continua_recuperavel(db, monkeypatch):
+    """TESTE OBRIGATÓRIO 2: legacy sentinel + provider INDISPONÍVEL —
+    `recuperar()` cai para léxico (a busca semântica nem roda), e o
+    documento precisa continuar recuperável mesmo assim, via
+    `buscar_lexico_multi`/`SQL_LEXICO` (que não dependem do provedor)."""
+    provedor_ok = _ProvedorFake()
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: provedor_ok)
+
+    doc = _doc(
+        "legado-sem-provider-teste", "Digoxina",
+        "## Farmacologia\nDigoxina impregnação e manutenção em fibrilação atrial permanente.",
+    )
+    db.add(doc)
+    db.commit()
+    _insere_chunk_legado(db, doc, embedding=provedor_ok.embeddings([doc.body_md])[0])
+
+    monkeypatch.setattr(
+        "app.services.rag.obter_provedor_embeddings",
+        lambda: (_ for _ in ()).throw(RuntimeError("insufficient_quota")),
+    )
+
+    trechos = recuperar(db, "digoxina impregnação manutenção fibrilação atrial permanente")
+    assert doc.slug in [t["slug"] for t in trechos], "documento com só chunk legado tem que continuar recuperável sem o provedor"
+
+
+def test_legado_reindexado_vira_current_e_nao_duplica(db, monkeypatch):
+    """TESTE OBRIGATÓRIO 5: depois que o backfill reindexa um chunk legado,
+    ele passa a CURRENT_VERIFIED sozinho (mesmo `chunk.id`/slot, sem
+    entrada nova) e `recuperar()` não devolve o slug duas vezes."""
+    provedor = _ProvedorFake()
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: provedor)
+
+    doc = _doc(
+        "legado-vira-atual-teste", "Sacubitril-valsartana",
+        "## Farmacologia\nSacubitril-valsartana quatro pilares da ICFEr, titulação progressiva.",
+    )
+    db.add(doc)
+    db.commit()
+    _insere_chunk_legado(db, doc)
+
+    chunk_antes = db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).one()
+    assert classificar_chunk(chunk_antes.content_hash, chunk_antes.embedding_model, fingerprint_fonte(doc.title, doc.body_md)) == LEGACY_UNVERIFIED
+
+    trechos_do_backfill = indexar_documento(db, doc, provedor)
+    assert trechos_do_backfill > 0, "chunk legado tinha que ser reprocessado pelo backfill"
+
+    chunk_depois = db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).one()
+    assert classificar_chunk(chunk_depois.content_hash, chunk_depois.embedding_model, fingerprint_fonte(doc.title, doc.body_md)) == CURRENT_VERIFIED
+
+    trechos = recuperar(db, "sacubitril valsartana quatro pilares ICFEr titulação")
+    achados = [t for t in trechos if t["slug"] == doc.slug]
+    assert len(achados) == 1, "documento reindexado não pode aparecer duplicado (chunk atual + fallback léxico)"
+    assert "TEXTO ANTIGO DO CHUNK LEGADO" not in achados[0]["conteudo"]
+
+
+def test_contar_document_chunks_por_classificacao(db, monkeypatch):
+    """Observabilidade: a contagem separa as três classes sem precisar
+    reindexar nada — usada por `/api/ai/status`."""
+    from app.services.rag import contar_document_chunks_por_classificacao
+
+    provedor = _ProvedorFake()
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: provedor)
+
+    atual = _doc("classificacao-atual-teste", "Atual", "## Seção\nDocumento indexado agora mesmo.")
+    legado = _doc("classificacao-legado-teste", "Legado", "## Seção\nDocumento com chunk legado.")
+    stale = _doc("classificacao-stale-teste", "Stale", "## Seção\nDocumento editado depois de indexar.")
+    db.add_all([atual, legado, stale])
+    db.commit()
+
+    indexar_documento(db, atual, provedor)
+    _insere_chunk_legado(db, legado)
+    indexar_documento(db, stale, provedor)
+    stale.body_md = "## Seção\nCorpo editado DEPOIS — o chunk gravado ficou desatualizado."
+    db.commit()
+
+    contagem = contar_document_chunks_por_classificacao(db)
+    assert contagem[CURRENT_VERIFIED] == 1
+    assert contagem[LEGACY_UNVERIFIED] == 1
+    assert contagem[STALE_KNOWN] == 1

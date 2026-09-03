@@ -97,6 +97,60 @@ def esta_atualizado(hash_gravado: str | None, modelo_gravado: str | None, hash_a
     return hash_gravado == hash_atual and modelo_gravado == settings.openai_embedding_model
 
 
+# Sentinelas gravadas pela migration `b7ri20260903` nos 16.330 document_chunks
+# legados (16.330 é a contagem em produção no momento da migration — nenhuma
+# tinha proveniência de content_hash/embedding_model confirmada até então).
+# Definidas aqui, não na migration: são literais de aplicação, não de schema
+# — a migration cita os mesmos valores por extenso, sem importar deste
+# módulo, porque migration não deve depender de estado de runtime do app.
+# Nunca podem colidir por acaso com um fingerprint/modelo real: não são um
+# hex de 64 caracteres nem o nome de nenhum modelo existente.
+CHUNK_LEGADO_CONTENT_HASH = "legado_sem_procedencia_confirmada_pre_03092026___"
+CHUNK_LEGADO_EMBEDDING_MODEL = "legado_modelo_desconhecido_pre_03092026"
+
+CURRENT_VERIFIED = "CURRENT_VERIFIED"
+LEGACY_UNVERIFIED = "LEGACY_UNVERIFIED"
+STALE_KNOWN = "STALE_KNOWN"
+
+
+def classificar_chunk(hash_gravado: str | None, modelo_gravado: str | None, hash_atual: str) -> str:
+    """Classifica um chunk em três estados, em vez do binário "atual"/"não
+    atual" que `esta_atualizado()` sozinho permite — achado de revisão
+    independente do PR (03/09/2026, "bloqueador residual RAG"):
+    `recuperar()` tratava TODO chunk não-atual da mesma forma (descartado),
+    o que apagava da recuperação os 16.330 chunks legados inteiros — vetores
+    fisicamente válidos, só sem proveniência confirmada — antes mesmo de o
+    backfill ter chance de reprocessá-los.
+
+    CURRENT_VERIFIED — fingerprint bate e o modelo gravado é exatamente o
+    configurado agora. O texto do próprio chunk pode ser citado direto.
+
+    LEGACY_UNVERIFIED — as duas sentinelas da migration `b7ri20260903`.
+    Nunca foi verificado, mas o vetor é uma embedding real, gerada em algum
+    momento por algum modelo — não uma linha vazia ou fabricada. Pode servir
+    de sinal de RANKING temporário (melhor do que não rankear nada enquanto
+    o backfill não chega lá), mas o CONTEÚDO do chunk nunca é entregue como
+    se fosse atual — quem resolve este resultado busca o texto no documento
+    publicado agora (ver `recuperar()`). A ponte não é permanente: assim que
+    o backfill reindexar essa entidade, ela grava hash/modelo reais e passa
+    a ser CURRENT_VERIFIED na chamada seguinte, sem nenhuma ação adicional
+    aqui.
+
+    STALE_KNOWN — nem sentinela, nem atual: um hash ou modelo REAIS,
+    gravados por uma indexação de verdade no passado, que hoje divergem do
+    texto ou do modelo configurado (documento editado depois de indexado,
+    ou modelo de embedding trocado). Ao contrário do legado, aqui já se SABE
+    que o vetor não representa o texto atual — usá-lo como sinal de ranking
+    arriscaria promover um resultado por semelhança com um texto que não
+    existe mais. Não entra no ranking nem é citado; a recuperação depende do
+    fallback léxico (que lê o corpo atual, não o chunk)."""
+    if hash_gravado == CHUNK_LEGADO_CONTENT_HASH and modelo_gravado == CHUNK_LEGADO_EMBEDDING_MODEL:
+        return LEGACY_UNVERIFIED
+    if esta_atualizado(hash_gravado, modelo_gravado, hash_atual):
+        return CURRENT_VERIFIED
+    return STALE_KNOWN
+
+
 def verificar_dimensao_embedding(db: Session) -> None:
     """Falha de forma explícita se `settings.embedding_dim` divergir da
     dimensão real da coluna `embedding` no banco (pgvector guarda a dimensão
@@ -475,24 +529,37 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         .where(DocumentChunk.id.in_(ids_doc))
     ).all() if ids_doc else []
 
-    # Achado de revisão independente do PR (03/09/2026, seção "source
-    # fingerprint exato" / "fallback léxico para chunk stale"): SQL_LEXICO
-    # acha o documento pelo `search_vector` de `documents`, que reflete o
-    # corpo ATUAL (trigger em toda UPDATE) — mas devolvia o CONTEÚDO do
-    # chunk, que pode ser de uma versão anterior do texto. O braço semântico
-    # tem o mesmo problema: o vetor armazenado pode não representar mais o
-    # corpo atual. Um chunk desatualizado NUNCA é citado com o texto antigo
-    # — é descartado aqui (a chave simplesmente não entra no dict; o filtro
-    # final já ignora chave ausente) e o documento continua recuperável via
-    # o fallback léxico de `buscar_lexico_multi`, que passou a tratar
-    # "tem chunk desatualizado" igual a "não tem chunk" (ver lá).
+    # Correção coordenada de 03/09/2026, "bloqueador residual RAG": um chunk
+    # não-atual não é mais tratado de forma binária. `classificar_chunk()`
+    # distingue LEGACY_UNVERIFIED (sentinelas da migration `b7ri20260903` —
+    # vetor real, só sem proveniência confirmada: ainda participa do ranking
+    # que já rodou acima, e é resolvido aqui usando o conteúdo ATUAL do
+    # documento, nunca o texto antigo do chunk) de STALE_KNOWN (hash/modelo
+    # REAIS que hoje divergem — sabidamente desatualizado: descartado, e o
+    # documento segue recuperável só via o fallback léxico de
+    # `buscar_lexico_multi`, que lê o corpo atual e não depende deste chunk).
+    # Achado da revisão anterior (03/09/2026, "source fingerprint exato" /
+    # "fallback léxico para chunk stale") permanece válido para o caso
+    # STALE_KNOWN: SQL_LEXICO acha o documento pelo `search_vector` (reflete
+    # o corpo atual), mas devolvia o conteúdo do chunk, que podia ser de uma
+    # versão anterior — por isso STALE_KNOWN nunca é citado com texto do
+    # chunk, só descartado aqui.
     trechos_por_chave: dict[tuple, dict] = {}
     for chunk, doc in linhas:
-        if not esta_atualizado(chunk.content_hash, chunk.embedding_model, fingerprint_fonte(doc.title, doc.body_md)):
+        classe = classificar_chunk(
+            chunk.content_hash, chunk.embedding_model, fingerprint_fonte(doc.title, doc.body_md)
+        )
+        if classe == STALE_KNOWN:
             continue
+        atual = classe == CURRENT_VERIFIED
         trechos_por_chave[("doc", chunk.id)] = {
             "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
-            "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
+            # LEGACY_UNVERIFIED nunca entrega `chunk.conteudo`/`titulo_secao`
+            # antigos como se fossem atuais — usa um recorte do corpo
+            # PUBLICADO agora, mesma convenção de "conteúdo do documento"
+            # já usada pela frente 'documento' de `catalog_search.py`.
+            "secao": chunk.titulo_secao if atual else None,
+            "conteudo": chunk.conteudo if atual else (doc.summary or (doc.body_md or "")[:1200]),
             "review_status": doc.review_status,
             # `gaps` é o campo que de fato marca incerteza: o importador o
             # preenche com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA`
@@ -837,6 +904,32 @@ def analisar_caso(db: Session, patient) -> dict:
         "model": resposta.modelo,
         "texto_completo": resposta.texto,
     }
+
+
+def contar_document_chunks_por_classificacao(db: Session) -> dict[str, int]:
+    """Observabilidade (correção coordenada de 03/09/2026, "bloqueador
+    residual RAG"): quantos `document_chunks` estão em cada uma das três
+    classes de `classificar_chunk()` — sem isso, `/api/ai/status` só sabia
+    dizer "tem chunk ou não", nunca "esse chunk é confiável para a busca
+    semântica hoje ou só um vetor legado esperando o backfill".
+
+    Todo `content_hash`/`embedding_model` é IGUAL em todos os chunks do
+    mesmo documento (gravados juntos por `indexar_documento`), então basta
+    UM chunk por documento para classificar — `distinct(Document.id)` evita
+    reler N vezes o mesmo par hash/modelo à toa num documento com vários
+    chunks. Custo: um SELECT com JOIN, mais um sha256 em Python por
+    documento com chunk (~alguns milhares hoje) — não por chunk."""
+    linhas = db.execute(
+        select(Document.title, Document.body_md, DocumentChunk.content_hash, DocumentChunk.embedding_model)
+        .join(DocumentChunk, DocumentChunk.document_id == Document.id)
+        .distinct(Document.id)
+        .order_by(Document.id)  # exigido pelo Postgres: DISTINCT ON precisa do ORDER BY correspondente
+    ).all()
+    contagem = {CURRENT_VERIFIED: 0, LEGACY_UNVERIFIED: 0, STALE_KNOWN: 0}
+    for titulo, corpo, hash_gravado, modelo_gravado in linhas:
+        classe = classificar_chunk(hash_gravado, modelo_gravado, fingerprint_fonte(titulo, corpo))
+        contagem[classe] += 1
+    return contagem
 
 
 def contar_uso_diario(db: Session, user_id: int) -> int:
