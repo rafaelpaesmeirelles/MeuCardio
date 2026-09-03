@@ -57,7 +57,7 @@ EXPECTED_NAV_ROUTES = {
 }
 
 EXPECTED_BACKEND_ROUTERS = {
-    "health.router", "auth.router", "browser_session.router", "social_login.router", "password_reset.router",
+    "health.router", "auth.router", "identity_profile.router", "browser_session.router", "social_login.router", "password_reset.router",
     "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "admin_user_management.router", "service_orders.router",
     "partner_courses.router", "email_multibox.router", "email_api.router", "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
