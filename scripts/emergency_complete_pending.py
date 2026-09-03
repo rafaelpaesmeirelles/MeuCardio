@@ -1,0 +1,365 @@
+from __future__ import annotations
+
+from pathlib import Path
+import re
+import subprocess
+
+
+def run(*args: str) -> None:
+    subprocess.run(args, check=True)
+
+
+def must_replace(text: str, old: str, new: str, label: str) -> str:
+    if old not in text:
+        raise SystemExit(f"anchor ausente: {label}")
+    return text.replace(old, new, 1)
+
+
+run("git", "fetch", "origin", "main")
+run("git", "checkout", "origin/main", "--", "backend/tests/test_cardiologia_intensiva_uco_contract.py")
+
+# Native CorVIA mailbox delegation: authenticates the target mailbox once and
+# stores only the relationship, never its password.
+Path("backend/app/models/email_delegation.py").write_text(
+    '''from __future__ import annotations\n\nfrom sqlalchemy import BigInteger, Column, DateTime, ForeignKey, UniqueConstraint, func\n\nfrom app.core.db import Base\n\n\nclass EmailMailboxDelegation(Base):\n    __tablename__ = "email_mailbox_delegations"\n    __table_args__ = (UniqueConstraint("owner_account_id", "target_account_id", name="uq_email_mailbox_delegation"),)\n\n    id = Column(BigInteger, primary_key=True, autoincrement=True)\n    owner_account_id = Column(BigInteger, ForeignKey("email_accounts.id", ondelete="CASCADE"), nullable=False, index=True)\n    target_account_id = Column(BigInteger, ForeignKey("email_accounts.id", ondelete="CASCADE"), nullable=False, index=True)\n    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())\n''',
+    encoding="utf-8",
+)
+
+models_init = Path("backend/app/models/__init__.py")
+text = models_init.read_text(encoding="utf-8")
+line = "from app.models.email_delegation import EmailMailboxDelegation\n"
+if line not in text:
+    models_init.write_text(text + ("\n" if text and not text.endswith("\n") else "") + line, encoding="utf-8")
+
+Path("backend/migrations/versions/f96m20260903_email_mailbox_delegation.py").write_text(
+    '''"""Delegação segura entre caixas nativas CorVIA Mail.\n\nRevision ID: f96m20260903\nRevises: f95c20260902\nCreate Date: 2026-09-03\n"""\nfrom alembic import op\nimport sqlalchemy as sa\n\nrevision = "f96m20260903"\ndown_revision = "f95c20260902"\nbranch_labels = None\ndepends_on = None\n\n\ndef upgrade() -> None:\n    op.create_table(\n        "email_mailbox_delegations",\n        sa.Column("id", sa.BigInteger(), autoincrement=True, nullable=False),\n        sa.Column("owner_account_id", sa.BigInteger(), nullable=False),\n        sa.Column("target_account_id", sa.BigInteger(), nullable=False),\n        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),\n        sa.ForeignKeyConstraint(["owner_account_id"], ["email_accounts.id"], ondelete="CASCADE"),\n        sa.ForeignKeyConstraint(["target_account_id"], ["email_accounts.id"], ondelete="CASCADE"),\n        sa.PrimaryKeyConstraint("id"),\n        sa.UniqueConstraint("owner_account_id", "target_account_id", name="uq_email_mailbox_delegation"),\n    )\n    op.create_index("ix_email_mailbox_delegations_owner_account_id", "email_mailbox_delegations", ["owner_account_id"])\n    op.create_index("ix_email_mailbox_delegations_target_account_id", "email_mailbox_delegations", ["target_account_id"])\n\n\ndef downgrade() -> None:\n    op.drop_table("email_mailbox_delegations")\n''',
+    encoding="utf-8",
+)
+
+email = Path("backend/app/api/email.py")
+src = email.read_text(encoding="utf-8")
+src = must_replace(
+    src,
+    "from app.models.email_account import EmailAccount\n",
+    "from app.models.email_account import EmailAccount\nfrom app.models.email_delegation import EmailMailboxDelegation\n",
+    "email delegation import",
+)
+
+# Insert before the first external-mail route section. If the historical
+# comment changed, fall back to the first /externas route decorator.
+insert_at = src.find("# Contas externas")
+if insert_at < 0:
+    insert_at = src.find('@router.get("/externas')
+if insert_at < 0:
+    raise SystemExit("anchor ausente: external mail section")
+insert_at = src.rfind("\n", 0, insert_at)
+
+linked_code = r'''
+
+# --------------------------------------------------------------------------
+# Caixas nativas CorVIA vinculadas — segunda caixa no mesmo CorVIA Mail
+# --------------------------------------------------------------------------
+class VincularCaixaCorvia(BaseModel):
+    email_address: str = Field(min_length=3, max_length=254)
+    senha: str = Field(min_length=1, max_length=256)
+
+
+def _caixa_corvia_vinculada(db: Session, conta: EmailAccount, target_id: int) -> EmailAccount:
+    vinculo = db.query(EmailMailboxDelegation).filter(
+        EmailMailboxDelegation.owner_account_id == conta.id,
+        EmailMailboxDelegation.target_account_id == target_id,
+    ).first()
+    if not vinculo:
+        raise HTTPException(status_code=403, detail="Esta caixa CorVIA não está vinculada à sessão atual.")
+    alvo = db.get(EmailAccount, target_id)
+    if not alvo or not alvo.mail360_account_key:
+        raise HTTPException(status_code=404, detail="Caixa CorVIA vinculada não encontrada.")
+    return alvo
+
+
+@router.get("/corvia-vinculadas")
+def listar_caixas_corvia_vinculadas(db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    vinculos = db.query(EmailMailboxDelegation).filter(EmailMailboxDelegation.owner_account_id == conta.id).all()
+    ids = [v.target_account_id for v in vinculos]
+    if not ids:
+        return []
+    alvos = db.query(EmailAccount).filter(EmailAccount.id.in_(ids)).all()
+    por_id = {a.id: a for a in alvos if a.mail360_account_key}
+    return [
+        {"id": f"corvia:{target_id}", "provider": "corvia", "display_name": por_id[target_id].email_address,
+         "email_address": por_id[target_id].email_address, "native": True, "read_mail": True, "send_mail": True,
+         "padrao": False, "linked_native": True}
+        for target_id in ids if target_id in por_id
+    ]
+
+
+@router.post("/corvia-vinculadas", status_code=201)
+def vincular_caixa_corvia(dados: VincularCaixaCorvia, db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    endereco = dados.email_address.strip().casefold()
+    alvo = db.query(EmailAccount).filter(EmailAccount.email_address == endereco).first()
+    if not alvo or not alvo.password_hash or not alvo.mail360_account_key:
+        raise HTTPException(status_code=404, detail="Caixa CorVIA não encontrada.")
+    if alvo.id == conta.id:
+        raise HTTPException(status_code=409, detail="Esta já é a caixa CorVIA da sessão atual.")
+    if not verify_password(dados.senha, alvo.password_hash):
+        raise HTTPException(status_code=401, detail="Senha da caixa CorVIA vinculada inválida.")
+    existente = db.query(EmailMailboxDelegation).filter(
+        EmailMailboxDelegation.owner_account_id == conta.id,
+        EmailMailboxDelegation.target_account_id == alvo.id,
+    ).first()
+    if not existente:
+        db.add(EmailMailboxDelegation(owner_account_id=conta.id, target_account_id=alvo.id))
+        db.commit()
+    return {"id": f"corvia:{alvo.id}", "email_address": alvo.email_address}
+
+
+@router.delete("/corvia-vinculadas/{target_id}", status_code=204)
+def desvincular_caixa_corvia(target_id: int, db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    vinculo = db.query(EmailMailboxDelegation).filter(
+        EmailMailboxDelegation.owner_account_id == conta.id,
+        EmailMailboxDelegation.target_account_id == target_id,
+    ).first()
+    if vinculo:
+        db.delete(vinculo)
+        db.commit()
+
+
+@router.get("/corvia/{target_id}/pastas")
+def pastas_caixa_corvia_vinculada(target_id: int, db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    _exigir_configurado()
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        return mail360.listar_pastas(alvo.mail360_account_key)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/corvia/{target_id}/mensagens")
+def mensagens_caixa_corvia_vinculada(target_id: int, pasta: str | None = None, limite: int = 50, inicio: int = 1,
+                                     db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    if limite < 1 or limite > 200 or inicio < 1:
+        raise HTTPException(status_code=422, detail="Paginação inválida.")
+    _exigir_configurado()
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        return mail360.listar_mensagens(alvo.mail360_account_key, pasta, limite, inicio)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/corvia/{target_id}/mensagens/{message_id}")
+def mensagem_caixa_corvia_vinculada(target_id: int, message_id: str, db: Session = Depends(get_db),
+                                    conta: EmailAccount = Depends(current_email_account)):
+    _exigir_configurado()
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        return mail360.obter_mensagem(alvo.mail360_account_key, message_id)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.put("/corvia/{target_id}/mensagens/acoes", status_code=204)
+def agir_caixa_corvia_vinculada(target_id: int, dados: AcaoMensagens, db: Session = Depends(get_db),
+                                conta: EmailAccount = Depends(current_email_account)):
+    if not dados.message_ids or len(dados.message_ids) > 200:
+        raise HTTPException(status_code=422, detail="Selecione entre 1 e 200 mensagens.")
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        if dados.acao == "excluir":
+            for message_id in dados.message_ids:
+                mail360.excluir_mensagem(alvo.mail360_account_key, message_id)
+        else:
+            mail360.alterar_mensagens(alvo.mail360_account_key, dados.message_ids, dados.acao,
+                                      pasta_destino=dados.pasta_destino, sinalizador=dados.sinalizador)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.post("/corvia/{target_id}/mensagens", status_code=201)
+def enviar_caixa_corvia_vinculada(target_id: int, dados: NovaMensagem, db: Session = Depends(get_db),
+                                  conta: EmailAccount = Depends(current_email_account)):
+    _exigir_configurado()
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    titular = db.get(User, conta.user_id)
+    corpo, formato = montar_corpo_com_assinatura(dados.corpo_html, montar_assinatura_html(titular))
+    try:
+        return mail360.enviar_mensagem(alvo.mail360_account_key, alvo.email_address, dados.para, dados.assunto, corpo,
+                                       anexos=dados.anexos, cc=dados.cc, cco=dados.cco, mail_format=formato)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.post("/corvia/{target_id}/mensagens/{message_id}/responder", status_code=201)
+def responder_caixa_corvia_vinculada(target_id: int, message_id: str, dados: ResponderMensagem,
+                                     db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    _exigir_configurado()
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    titular = db.get(User, conta.user_id)
+    corpo, formato = montar_corpo_com_assinatura(dados.conteudo, montar_assinatura_html(titular))
+    try:
+        return mail360.responder_mensagem(alvo.mail360_account_key, message_id, alvo.email_address, dados.acao,
+                                          dados.assunto, corpo, para=dados.para, cc=dados.cc, cco=dados.cco,
+                                          anexos=dados.anexos, mail_format=formato)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/corvia/{target_id}/mensagens/{message_id}/anexos")
+def anexos_caixa_corvia_vinculada(target_id: int, message_id: str, db: Session = Depends(get_db),
+                                  conta: EmailAccount = Depends(current_email_account)):
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        return mail360.listar_anexos(alvo.mail360_account_key, message_id)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+
+@router.get("/corvia/{target_id}/mensagens/{message_id}/anexos/{attachment_id}")
+def baixar_anexo_caixa_corvia_vinculada(target_id: int, message_id: str, attachment_id: str, nome: str = "anexo",
+                                        db: Session = Depends(get_db), conta: EmailAccount = Depends(current_email_account)):
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        conteudo, media_type = mail360.baixar_anexo(alvo.mail360_account_key, message_id, attachment_id)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    nome_seguro = re.sub(r"[^a-zA-Z0-9._-]", "_", nome)[:180] or "anexo"
+    return Response(content=conteudo, media_type=media_type,
+                    headers={"Content-Disposition": f'attachment; filename="{nome_seguro}"'})
+
+
+@router.delete("/corvia/{target_id}/mensagens/{message_id}", status_code=204)
+def excluir_caixa_corvia_vinculada(target_id: int, message_id: str, db: Session = Depends(get_db),
+                                   conta: EmailAccount = Depends(current_email_account)):
+    alvo = _caixa_corvia_vinculada(db, conta, target_id)
+    try:
+        mail360.excluir_mensagem(alvo.mail360_account_key, message_id)
+    except Mail360Error as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+'''
+
+if "class VincularCaixaCorvia" not in src:
+    src = src[:insert_at] + linked_code + src[insert_at:]
+email.write_text(src, encoding="utf-8")
+
+# Frontend: second native mailbox, select all, mobile folder access and robust scrolling.
+page = Path("frontend/src/pages/CaixaDeEmailProfessional.tsx")
+ts = page.read_text(encoding="utf-8")
+ts = must_replace(
+    ts,
+    'const prefixo = (contaId: string) => contaId === "corvia" ? "/email" : `/email/externas/${contaId}`;',
+    'const prefixo = (contaId: string) => contaId === "corvia" ? "/email" : contaId.startsWith("corvia:") ? `/email/corvia/${contaId.slice(7)}` : `/email/externas/${contaId}`;',
+    "mail prefix",
+)
+helper_anchor = ts.index("const prefixo = (contaId: string)")
+helper_pos = ts.index("\n", helper_anchor) + 1
+if "async function carregarContasMail" not in ts:
+    ts = ts[:helper_pos] + '''\nasync function carregarContasMail(): Promise<Conta[]> {\n  const [principais, vinculadas] = await Promise.all([\n    apiEmail.get<Conta[]>("/email/contas"),\n    apiEmail.get<Conta[]>("/email/corvia-vinculadas"),\n  ]);\n  const ids = new Set<string>();\n  return [...principais, ...vinculadas].filter((conta) => { if (ids.has(conta.id)) return false; ids.add(conta.id); return true; });\n}\n'''+ ts[helper_pos:]
+# Replace only calls outside the helper.
+parts = ts.split("async function carregarContasMail", 1)
+if len(parts) == 2:
+    before, rest = parts
+    helper_end = rest.find("\n}\n")
+    helper_body, tail = rest[:helper_end+3], rest[helper_end+3:]
+    tail = tail.replace('apiEmail.get<Conta[]>("/email/contas")', 'carregarContasMail()')
+    ts = before + "async function carregarContasMail" + helper_body + tail
+
+state_match = re.search(r'(const \[contas,\s*setContas\]\s*=\s*useState<Conta\[\]>\([^\n]*\);)', ts)
+if not state_match:
+    raise SystemExit("anchor ausente: contas state")
+if "vinculoCorvia" not in ts:
+    extra = '\n  const [vinculoCorvia, setVinculoCorvia] = useState({ aberto: false, email: "", senha: "", erro: "", salvando: false });'
+    ts = ts[:state_match.end()] + extra + ts[state_match.end():]
+
+main_start = ts.find("export default function CaixaDeEmailProfessional")
+if main_start < 0:
+    raise SystemExit("anchor ausente: main mail component")
+if "async function vincularOutraCaixaCorvia" not in ts:
+    insert = ts.find("\n", state_match.end()) + 1
+    action = '''\n  async function vincularOutraCaixaCorvia() {\n    const email = vinculoCorvia.email.trim().toLowerCase();\n    if (!email || !vinculoCorvia.senha) { setVinculoCorvia((v) => ({ ...v, erro: "Informe o endereço e a senha própria da outra caixa CorVIA." })); return; }\n    setVinculoCorvia((v) => ({ ...v, salvando: true, erro: "" }));\n    try {\n      await apiEmail.post("/email/corvia-vinculadas", { email_address: email, senha: vinculoCorvia.senha });\n      setContas(await carregarContasMail());\n      setVinculoCorvia({ aberto: false, email: "", senha: "", erro: "", salvando: false });\n    } catch (err) {\n      const mensagem = err instanceof ApiEmailError ? err.message : "Não foi possível vincular esta caixa CorVIA.";\n      setVinculoCorvia((v) => ({ ...v, salvando: false, erro: mensagem }));\n    }\n  }\n'''
+    ts = ts[:insert] + action + ts[insert:]
+
+main_start = ts.find("export default function CaixaDeEmailProfessional")
+after_main = ts[main_start:]
+if "cmp-account--link" not in after_main:
+    m = re.search(r'(<section className="cmp-accounts">.*?)(\n\s*</section>)', after_main, re.S)
+    if not m:
+        raise SystemExit("anchor ausente: accounts rail")
+    pos = main_start + m.start(2)
+    ts = ts[:pos] + '\n          <button className="cmp-account cmp-account--link" onClick={() => setVinculoCorvia((v) => ({ ...v, aberto: true, erro: "" }))} title="Conectar outra caixa CorVIA" aria-label="Conectar outra caixa CorVIA">＋</button>' + ts[pos:]
+
+main_start = ts.find("export default function CaixaDeEmailProfessional")
+after_main = ts[main_start:]
+if "cmp-select-all" not in after_main:
+    sel_match = re.search(r'const \[(selecion\w*),\s*(setSelecion\w*)\]', after_main, re.I)
+    if not sel_match:
+        raise SystemExit("anchor ausente: selected messages state")
+    sel, setsel = sel_match.group(1), sel_match.group(2)
+    header = re.search(r'<div className="cmp-list__header">', after_main)
+    if not header:
+        raise SystemExit("anchor ausente: list header")
+    pos = main_start + header.end()
+    ui = f'''\n            <label className="cmp-select-all" title="Selecionar ou desmarcar todas as mensagens carregadas nesta pasta">\n              <input type="checkbox" checked={{mensagens.length > 0 && {sel}.size === mensagens.map(idMensagem).filter(Boolean).length}} onChange={{() => {{ const ids = mensagens.map(idMensagem).filter(Boolean); {setsel}({sel}.size === ids.length ? new Set() : new Set(ids)); }}}} />\n              <span>Selecionar tudo</span>\n            </label>'''
+    ts = ts[:pos] + ui + ts[pos:]
+
+main_start = ts.find("export default function CaixaDeEmailProfessional")
+if "cmp-linked-mailbox-dialog" not in ts[main_start:]:
+    pos = ts.find("{compondo &&", main_start)
+    if pos < 0:
+        pos = ts.rfind("</main>")
+    if pos < 0:
+        raise SystemExit("anchor ausente: modal insertion")
+    modal = '''{vinculoCorvia.aberto && (\n        <div className="cmp-linked-mailbox-backdrop" role="presentation" onMouseDown={(e) => { if (e.target === e.currentTarget && !vinculoCorvia.salvando) setVinculoCorvia((v) => ({ ...v, aberto: false })); }}>\n          <section className="cmp-linked-mailbox-dialog" role="dialog" aria-modal="true" aria-labelledby="titulo-vincular-corvia">\n            <h3 id="titulo-vincular-corvia">Conectar outra caixa CorVIA</h3>\n            <p>Use o endereço e a senha própria da outra caixa. A senha é validada uma vez e não é armazenada no vínculo.</p>\n            <label>E-mail<input type="email" value={vinculoCorvia.email} onChange={(e) => setVinculoCorvia((v) => ({ ...v, email: e.target.value }))} autoComplete="username" /></label>\n            <label>Senha da caixa<input type="password" value={vinculoCorvia.senha} onChange={(e) => setVinculoCorvia((v) => ({ ...v, senha: e.target.value }))} autoComplete="current-password" /></label>\n            {vinculoCorvia.erro && <p className="cmp-linked-mailbox-error" role="alert">{vinculoCorvia.erro}</p>}\n            <div className="cmp-linked-mailbox-actions">\n              <button type="button" onClick={() => setVinculoCorvia((v) => ({ ...v, aberto: false }))} disabled={vinculoCorvia.salvando}>Cancelar</button>\n              <button type="button" onClick={() => void vincularOutraCaixaCorvia()} disabled={vinculoCorvia.salvando}>{vinculoCorvia.salvando ? "Conectando…" : "Conectar"}</button>\n            </div>\n          </section>\n        </div>\n      )}\n      '''
+    ts = ts[:pos] + modal + ts[pos:]
+page.write_text(ts, encoding="utf-8")
+
+css = Path("frontend/src/styles/corvia-mail-professional.css")
+c = css.read_text(encoding="utf-8")
+if "cmp-linked-mailbox-backdrop" not in c:
+    c += r'''
+
+/* Functional mail management parity: deterministic scrolling, bulk select and mobile folders. */
+.cmp-list{min-height:0}
+.cmp-list__scroll{min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.cmp-select-all{display:inline-flex;align-items:center;gap:.4rem;font-size:.78rem;white-space:nowrap;cursor:pointer}
+.cmp-select-all input{width:1rem;height:1rem;margin:0}
+.cmp-account--link{font-weight:800;font-size:1.15rem}
+.cmp-linked-mailbox-backdrop{position:fixed;inset:0;z-index:1200;background:rgba(10,22,31,.36);display:grid;place-items:center;padding:1rem}
+.cmp-linked-mailbox-dialog{width:min(430px,100%);background:#fff;border-radius:16px;padding:1.15rem;box-shadow:0 22px 70px rgba(10,22,31,.24);display:grid;gap:.8rem}
+.cmp-linked-mailbox-dialog h3,.cmp-linked-mailbox-dialog p{margin:0}
+.cmp-linked-mailbox-dialog label{display:grid;gap:.35rem;font-size:.82rem;font-weight:700}
+.cmp-linked-mailbox-dialog input{width:100%;box-sizing:border-box;border:1px solid #d9e0e5;border-radius:10px;padding:.72rem;font:inherit}
+.cmp-linked-mailbox-actions{display:flex;justify-content:flex-end;gap:.55rem}
+.cmp-linked-mailbox-actions button{border:1px solid #d9e0e5;border-radius:10px;padding:.65rem .9rem;background:#fff;font:inherit;font-weight:700}
+.cmp-linked-mailbox-error{color:#9b1c31;font-size:.82rem}
+@media(max-width:760px){
+  .cmp-workspace{grid-template-columns:1fr;grid-template-rows:auto auto minmax(0,1fr)}
+  .cmp-sidebar{display:flex!important;min-width:0;max-height:62px;overflow-x:auto;overflow-y:hidden;gap:.35rem;padding:.45rem .55rem;scrollbar-width:thin}
+  .cmp-sidebar .cmp-compose-primary,.cmp-sidebar .cmp-sidebar__privacy{display:none!important}
+  .cmp-sidebar__section{display:flex!important;align-items:center;gap:.3rem;min-width:max-content;margin:0!important}
+  .cmp-sidebar__section>p{display:none!important}
+  .cmp-sidebar__section>button{flex:0 0 auto;white-space:nowrap;margin:0!important}
+  .cmp-list{min-height:0;height:auto}
+  .cmp-list__scroll{min-height:0;max-height:none;overflow-y:auto!important}
+  .cmp-select-all span{display:none}
+}
+'''
+    css.write_text(c, encoding="utf-8")
+
+Path("backend/tests/test_corvia_mail_linked_native.py").write_text(
+    '''from pathlib import Path\n\n\ndef test_backend_exposes_secure_linked_corvia_mailbox_routes():\n    source = Path("app/api/email.py").read_text(encoding="utf-8")\n    assert "EmailMailboxDelegation" in source\n    assert '@router.post("/corvia-vinculadas"' in source\n    assert "verify_password(dados.senha, alvo.password_hash)" in source\n    assert '@router.get("/corvia/{target_id}/pastas")' in source\n    assert '@router.put("/corvia/{target_id}/mensagens/acoes"' in source\n    assert '@router.post("/corvia/{target_id}/mensagens"' in source\n    assert '@router.delete("/corvia/{target_id}/mensagens/{message_id}"' in source\n\n\ndef test_delegation_never_stores_plaintext_password():\n    model = Path("app/models/email_delegation.py").read_text(encoding="utf-8")\n    assert "password" not in model.casefold()\n    migration = Path("migrations/versions/f96m20260903_email_mailbox_delegation.py").read_text(encoding="utf-8")\n    assert 'down_revision = "f95c20260902"' in migration\n\n\ndef test_frontend_keeps_mail_features_and_mobile_folder_access():\n    page = Path("../frontend/src/pages/CaixaDeEmailProfessional.tsx").read_text(encoding="utf-8")\n    css = Path("../frontend/src/styles/corvia-mail-professional.css").read_text(encoding="utf-8")\n    assert 'contaId.startsWith("corvia:")' in page\n    assert '"/email/corvia-vinculadas"' in page\n    assert "cmp-select-all" in page\n    assert "Conectar outra caixa CorVIA" in page\n    assert "cmp-linked-mailbox-backdrop" in css\n    assert ".cmp-list__scroll{min-height:0;overflow-y:auto" in css\n    assert ".cmp-sidebar{display:flex!important" in css\n''',
+    encoding="utf-8",
+)
+
+wf = Path(".github/workflows/cfm-registry-focused-validation.yml")
+w = wf.read_text(encoding="utf-8")
+w = w.replace(
+    "run: python -m pytest -q --tb=short tests/test_cfm_registry.py",
+    "run: python -m pytest -q --tb=short tests/test_cfm_registry.py tests/test_kyc_auto_cfm.py tests/test_corvia_mail_linked_native.py",
+)
+if "tests/test_kyc_auto_cfm.py" not in w or "tests/test_corvia_mail_linked_native.py" not in w:
+    raise SystemExit("focused workflow could not be extended")
+wf.write_text(w, encoding="utf-8")
+
+# The editor and its workflow are one-shot only and never land in the product release.
+Path(".github/workflows/emergency-complete-pending.yml").unlink(missing_ok=True)
+Path("scripts/emergency_complete_pending.py").unlink(missing_ok=True)
