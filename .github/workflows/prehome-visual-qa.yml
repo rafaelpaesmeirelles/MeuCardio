@@ -162,13 +162,14 @@ jobs:
           const viewports = [
             ['desktop-amplo-2560x1440', { width: 2560, height: 1440 }],
             ['notebook-1366x768', { width: 1366, height: 768 }],
+            ['desktop-intermediario-1366x850', { width: 1366, height: 850 }],
             ['desktop-baixo-1366x640', { width: 1366, height: 640 }],
             ['desktop-critico-1280x600', { width: 1280, height: 600 }],
             ['desktop-1440x900', { width: 1440, height: 900 }],
             ['mobile-390x844', { width: 390, height: 844 }],
           ];
           const browser = await chromium.launch({ headless: true });
-          const report = { pages: [], pageErrors: [], failures: [] };
+          const report = { pages: [], themeParity: [], pageErrors: [], failures: [] };
 
           function channel(rgb) {
             const m = String(rgb || '').match(/rgba?\((\d+)[, ]+(\d+)[, ]+(\d+)/i);
@@ -226,6 +227,7 @@ jobs:
                   scrollWidth: document.documentElement.scrollWidth,
                   scrollHeight: document.documentElement.scrollHeight,
                   isLogin,
+                  loginTheme: isLogin ? document.querySelector('.login-gateway')?.getAttribute('data-login-theme') || '' : null,
                   sampleVisible: visible(selectors.panel), brandVisible: visible(selectors.brand),
                   sampleBackground: style?.backgroundColor || '',
                   canonicalMain: visible(selectors.root), logo: visible(selectors.logo),
@@ -257,9 +259,72 @@ jobs:
                 }
                 if (!metrics.headingRect || !metrics.sceneRect || metrics.headingRect.x < metrics.sceneRect.x - 1 || metrics.headingRect.right > metrics.sceneRect.right + 1 || metrics.headingRect.y < metrics.sceneRect.y - 1) report.failures.push(`${viewportName}/${name}: título principal cortado ${JSON.stringify({ heading:metrics.headingRect, scene:metrics.sceneRect })}`);
               }
+              if (metrics.isLogin && metrics.loginTheme !== 'dark') report.failures.push(`${viewportName}/${name}: o tema escuro tradicional não é o padrão (${metrics.loginTheme || 'ausente'})`);
               if (sampleLum !== null && sampleLum > 0.15) report.failures.push(`${viewportName}/${name}: painel claro/genérico detectado (luminância=${sampleLum.toFixed(3)})`);
               if (!/CorVIA/i.test(metrics.bodyText)) report.failures.push(`${viewportName}/${name}: identidade CorVIA ausente no texto visível`);
               await page.screenshot({ path: path.join(out, `${viewportName}-${name}.png`), fullPage: false });
+
+              if (metrics.isLogin) {
+                const paritySelectors = [
+                  '.login-gateway', '.login-gateway__topbar', '.login-gateway__scene',
+                  '.login-gateway__hero h1', '.login-gateway__core',
+                  '.login-gateway__space--consultorio', '.login-gateway__space--hospital',
+                  '.login-gateway__space--ensino', '.login-gateway__space--pesquisa',
+                  '.login-gateway__space--gestao', '.login-gateway__console',
+                  '.login-gateway__console-head', '.login-gateway__theme-choice',
+                  '.login-gateway__form', '.login-gateway__footer',
+                  '.login-gateway__form-meta', '.login-gateway__utilities',
+                ];
+                const captureThemeContract = () => page.evaluate((selectors) => {
+                  const rects = Object.fromEntries(selectors.map((selector) => {
+                    const element = document.querySelector(selector);
+                    if (!element) return [selector, null];
+                    const value = element.getBoundingClientRect();
+                    return [selector, { x:value.x, y:value.y, width:value.width, height:value.height }];
+                  }));
+                  const controls = [...document.querySelectorAll('a, button, input')].map((element) => ({
+                    tag: element.tagName.toLocaleLowerCase('pt-BR'),
+                    type: element instanceof HTMLInputElement || element instanceof HTMLButtonElement ? element.type : '',
+                    name: element instanceof HTMLInputElement ? element.name : '',
+                    value: element instanceof HTMLInputElement ? element.value : '',
+                    label: element.getAttribute('aria-label') || element.getAttribute('placeholder') || element.textContent?.trim() || '',
+                    disabled: 'disabled' in element ? Boolean(element.disabled) : false,
+                  }));
+                  const panel = document.querySelector('.login-gateway__console');
+                  return {
+                    theme: document.querySelector('.login-gateway')?.getAttribute('data-login-theme') || '',
+                    scrollWidth: document.documentElement.scrollWidth,
+                    scrollHeight: document.documentElement.scrollHeight,
+                    panelBackground: panel ? getComputedStyle(panel).backgroundColor : '',
+                    rects,
+                    controls,
+                  };
+                }, paritySelectors);
+                const darkContract = await captureThemeContract();
+                const lightThemeInput = page.locator('input[name="tema-publico"][value="light"]');
+                await page.locator('label:has(input[name="tema-publico"][value="light"])').click();
+                await page.locator('.login-gateway[data-login-theme="light"]').waitFor();
+                await page.waitForTimeout(120);
+                const lightContract = await captureThemeContract();
+                const lightLuminance = luminance(lightContract.panelBackground);
+                report.themeParity.push({ viewportName, dark: darkContract, light: lightContract, lightPanelLuminance: lightLuminance });
+                if (lightContract.theme !== 'light') report.failures.push(`${viewportName}/${name}: seleção do tema claro não foi aplicada`);
+                if (!await lightThemeInput.isChecked()) report.failures.push(`${viewportName}/${name}: rádio do tema claro não refletiu a seleção`);
+                if (lightLuminance === null || lightLuminance < 0.75) report.failures.push(`${viewportName}/${name}: superfície clara não ficou inequivocamente clara (${lightLuminance})`);
+                if (JSON.stringify(darkContract.controls) !== JSON.stringify(lightContract.controls)) report.failures.push(`${viewportName}/${name}: funções ou controles divergem entre claro e escuro`);
+                if (darkContract.scrollWidth !== lightContract.scrollWidth || darkContract.scrollHeight !== lightContract.scrollHeight) report.failures.push(`${viewportName}/${name}: dimensões do documento divergem entre claro e escuro`);
+                for (const selector of paritySelectors) {
+                  const darkRect = darkContract.rects[selector];
+                  const lightRect = lightContract.rects[selector];
+                  if (!darkRect || !lightRect) {
+                    report.failures.push(`${viewportName}/${name}: elemento de paridade ausente ${selector}`);
+                    continue;
+                  }
+                  const drift = Math.max(...['x', 'y', 'width', 'height'].map((key) => Math.abs(darkRect[key] - lightRect[key])));
+                  if (drift > 0.75) report.failures.push(`${viewportName}/${name}: geometria diverge entre claro e escuro em ${selector} (${drift.toFixed(2)}px)`);
+                }
+                await page.screenshot({ path: path.join(out, `${viewportName}-${name}-light.png`), fullPage: false });
+              }
             }
             await context.close();
           }

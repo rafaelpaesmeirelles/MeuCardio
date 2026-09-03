@@ -12,6 +12,23 @@ import "../styles/cardiology-spaces-login.css";
 
 type TemaPublico = CorviaTheme;
 
+function temaPublicoInicial(): TemaPublico {
+  try {
+    return sessionStorage.getItem(CORVIA_LOGIN_THEME_KEY) === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
+function persistirTemaPublico(temaPublico: TemaPublico, limparModo = false) {
+  try {
+    sessionStorage.setItem(CORVIA_LOGIN_THEME_KEY, temaPublico);
+    if (limparModo) sessionStorage.removeItem("corvia:cardiology-spaces:mode");
+  } catch {
+    // Restrições de armazenamento do navegador não podem impedir o acesso.
+  }
+}
+
 const TEMAS_PUBLICOS: Array<{
   id: TemaPublico;
   nome: string;
@@ -48,9 +65,7 @@ function MarcaWindows() {
 
 export default function Entrar() {
   const { entrar } = useAuth();
-  const [temaPublico, setTemaPublico] = useState<TemaPublico>(() =>
-    sessionStorage.getItem(CORVIA_LOGIN_THEME_KEY) === "dark" ? "dark" : "light",
-  );
+  const [temaPublico, setTemaPublico] = useState<TemaPublico>(temaPublicoInicial);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
@@ -60,7 +75,7 @@ export default function Entrar() {
 
   function selecionarTemaPublico(proximoTema: TemaPublico) {
     setTemaPublico(proximoTema);
-    sessionStorage.setItem(CORVIA_LOGIN_THEME_KEY, proximoTema);
+    persistirTemaPublico(proximoTema);
   }
 
   async function enviar(event?: FormEvent<HTMLFormElement>) {
@@ -69,8 +84,7 @@ export default function Entrar() {
     setEnviando(true);
     setErro("");
     try {
-      sessionStorage.setItem(CORVIA_LOGIN_THEME_KEY, temaPublico);
-      sessionStorage.removeItem("corvia:cardiology-spaces:mode");
+      persistirTemaPublico(temaPublico, true);
       await entrar(email.trim().toLowerCase(), senha, permanecerConectado);
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível entrar.");

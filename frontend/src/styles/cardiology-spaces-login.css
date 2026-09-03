@@ -1769,6 +1769,16 @@
   .login-gateway--public .login-gateway__utilities small { display: none; }
 }
 
+/* Em desktops baixos, afasta o coração do portal Ensino sem alterar a
+   geometria entre os temas claro e escuro. O ajuste desaparece de forma
+   contínua ao se aproximar da composição alta já aprovada em 900px. */
+@media (min-width: 901px) and (max-height: 899px) {
+  .login-gateway--public .login-gateway__core {
+    top: calc(54% + clamp(0px, calc(324px - 36dvh), 36px));
+    max-width: clamp(270px, calc(126px + 18dvh), 288px);
+  }
+}
+
 @media (min-width: 901px) and (max-height: 760px) {
   .login-gateway--public {
     min-height: 0;
