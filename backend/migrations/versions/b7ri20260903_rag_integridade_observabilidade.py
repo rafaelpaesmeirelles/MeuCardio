@@ -29,17 +29,36 @@ Fecha três lacunas encontradas na investigação do backfill de
    sem precisar caçar log de container. Nenhuma delas grava conteúdo
    clínico nem dado de paciente — só contadores e metadados operacionais.
 
-`document_chunks` já tem 16.330 linhas em produção, todas geradas por
-`text-embedding-3-small` (nenhum outro modelo esteve em uso até hoje) — os
-dois campos novos recebem valores de backfill computados aqui: `embedding_model`
-com o literal do modelo atual, e `content_hash` com o sha256 do `body_md`
-atual do documento (mesmo algoritmo que `rag.py::_hash` usa a partir de
-agora), para que a primeira passada do backfill incremental já reconheça
-essas linhas como íntegras em vez de tratá-las como nunca-hasheadas.
+`document_chunks` já tem 16.330 linhas em produção. CORREÇÃO IMPORTANTE
+(revisão independente do PR #811, 03/09/2026): a primeira versão desta
+migration computava o `content_hash` dessas linhas a partir do `body_md`
+ATUAL de cada documento e gravava `embedding_model = 'text-embedding-3-small'`
+como se fossem fatos confirmados — não são. Não temos como provar, só lendo o
+banco hoje, que (a) o vetor já gravado foi de fato gerado a partir do texto
+ATUAL (o documento pode ter sido editado depois da última indexação real) ou
+(b) que o modelo que gerou aquele vetor específico foi genuinamente
+`text-embedding-3-small` (é a suposição mais provável — é o único modelo que
+este projeto já usou — mas suposição não é proveniência confirmada).
+Computar o hash "correto" e escrever o nome do modelo como se fossem
+verificados classificaria esses 16.330 chunks como **certificados como
+atuais** no mecanismo de freshness (`esta_atualizado()`,
+`app/services/rag.py`) — inventando exatamente o tipo de garantia que este
+projeto proíbe fabricar.
+
+Em vez disso, as 16.330 linhas recebem um par de **sentinelas explícitas**
+(`LEGADO_CONTENT_HASH`/`LEGADO_EMBEDDING_MODEL`, abaixo) — nunca combinam
+com um fingerprint/modelo real (não são hexadecimais de 64 caracteres nem o
+nome de nenhum modelo existente), então `esta_atualizado()` SEMPRE devolve
+`False` para elas — garantido só pela comparação de `embedding_model`,
+mesmo que algum dia um `content_hash` novo bata por coincidência com o
+sentinela. Os vetores continuam intactos e servíveis (nenhum `DELETE` — a
+busca semântica não fica cega enquanto o backfill incremental não passar por
+elas de novo); só deixam de ser tratados como "confirmadamente em dia". A
+primeira chamada de `app.commands.reindex_rag_completo_20260902` depois
+desta migration reindexa as 16.330 de verdade, com proveniência real desta
+vez.
 """
 from __future__ import annotations
-
-import hashlib
 
 import sqlalchemy as sa
 from alembic import op
@@ -52,10 +71,22 @@ branch_labels = None
 depends_on = None
 
 # Mesma constante de `app.core.config.Settings.openai_embedding_model` no
-# momento em que esta migration foi escrita — não importamos `app.core.config`
-# aqui de propósito (migration não deve depender do estado de runtime da
-# aplicação, só do que está gravado no arquivo).
+# momento em que esta migration foi escrita — usada só para o
+# `server_default` de `knowledge_chunks.embedding_model` (tabela vazia em
+# produção — 0 linhas confirmado por leitura direta em 03/09/2026 — então
+# não há proveniência nenhuma para inventar ali; é só o valor que uma escrita
+# hipotética sem o campo explícito receberia). Não importamos
+# `app.core.config` aqui de propósito (migration não deve depender do estado
+# de runtime da aplicação).
 MODELO_EMBEDDING_ATUAL = "text-embedding-3-small"
+
+# Sentinelas de "proveniência não confirmada" para as 16.330 linhas legadas
+# de `document_chunks`. Deliberadamente NÃO são um hex de 64 caracteres nem
+# o nome de um modelo real — nunca podem colidir por acaso com um
+# fingerprint/modelo genuíno gravado por `app/services/rag.py` a partir de
+# agora, então `esta_atualizado()` nunca as trata como atuais.
+LEGADO_CONTENT_HASH = "legado_sem_procedencia_confirmada_pre_03092026___"
+LEGADO_EMBEDDING_MODEL = "legado_modelo_desconhecido_pre_03092026"
 
 ENTITY_TYPES_PERMITIDOS = (
     "evidencia", "estudo", "caso_clinico", "trilha", "material_paciente",
@@ -81,38 +112,25 @@ def upgrade() -> None:
         ),
     )
 
-    # Backfill de document_chunks: um hash por documento (todos os chunks do
-    # mesmo documento compartilham o mesmo content_hash, mesma convenção de
-    # `knowledge_chunks`), calculado sobre o `body_md` gravado agora. Feito em
-    # Python/linha a linha (não em SQL puro) porque sha256 não é função nativa
-    # do PostgreSQL sem a extensão pgcrypto, que este projeto não tem instalada.
+    # Backfill de document_chunks: UPDATE em massa com as sentinelas de
+    # "proveniência não confirmada" — não deriva nada de `documents.body_md`
+    # (não há mais leitura por documento nem laço em Python; a versão
+    # anterior desta migration fazia isso para computar um hash que a
+    # revisão do PR apontou como falsa certeza de atualidade — ver docstring
+    # do módulo). Uma instrução só, rápida mesmo com 16.330 linhas.
     conexao = op.get_bind()
-    documentos = conexao.execute(
-        text("SELECT id, body_md FROM documents WHERE id IN (SELECT DISTINCT document_id FROM document_chunks)")
-    ).fetchall()
-    for documento_id, body_md in documentos:
-        hash_atual = hashlib.sha256((body_md or "").encode("utf-8")).hexdigest()
-        conexao.execute(
-            text(
-                "UPDATE document_chunks SET content_hash = :hash, embedding_model = :modelo "
-                "WHERE document_id = :documento_id"
-            ),
-            {"hash": hash_atual, "modelo": MODELO_EMBEDDING_ATUAL, "documento_id": documento_id},
-        )
+    conexao.execute(
+        text("UPDATE document_chunks SET content_hash = :hash, embedding_model = :modelo"),
+        {"hash": LEGADO_CONTENT_HASH, "modelo": LEGADO_EMBEDDING_MODEL},
+    )
 
     # As duas colunas nascem NOT NULL a partir de agora — nenhum chunk novo
     # pode ser gravado sem hash/modelo (é exatamente o que a idempotência real
-    # por conteúdo exige). Linhas de document_chunks cujo document_id não
-    # exista mais em documents (não deveria acontecer, FK é ON DELETE CASCADE)
-    # ficariam com content_hash NULL após o backfill acima — o ALTER abaixo
-    # falharia nesse caso, o que é o comportamento certo: expõe a inconsistência
-    # em vez de escondê-la atrás de um default artificial. Achado da revisão
-    # adversarial de 03/09/2026: se isso falhar em produção, a mensagem do
-    # Postgres não diz QUAL document_id está órfão — rode antes de tentar de
-    # novo:
-    #   SELECT c.document_id, count(*) FROM document_chunks c
-    #     LEFT JOIN documents d ON d.id = c.document_id
-    #    WHERE d.id IS NULL GROUP BY c.document_id;
+    # por conteúdo exige). Como o UPDATE acima cobre TODA linha de
+    # `document_chunks` sem depender de `documents` (nem sequer faz JOIN), a
+    # preocupação anterior de "document_id órfão ficaria com content_hash
+    # NULL" deixou de existir — o ALTER abaixo não deveria falhar por esse
+    # motivo nunca mais.
     op.alter_column("document_chunks", "content_hash", nullable=False)
     op.alter_column("document_chunks", "embedding_model", nullable=False)
 

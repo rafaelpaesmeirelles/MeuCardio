@@ -27,8 +27,9 @@ from app.services.catalog_search import (
 from app.services.knowledge_graph import _id_estavel
 from app.services.rag import (
     EmbeddingDimensionError,
-    content_hash,
     dividir,
+    esta_atualizado,
+    fingerprint_fonte,
     obter_provedor_embeddings,
     verificar_dimensao_embedding,
 )
@@ -51,30 +52,31 @@ def indexar_entidade(
     db: Session, *, entity_type: str, entity_id: int, titulo: str, texto: str, provedor=None,
     forcar: bool = False,
 ) -> int:
-    """Upsert idempotente dos chunks de uma entidade, por CONTEÚDO
-    (`content_hash`), não só por presença.
+    """Upsert idempotente dos chunks de uma entidade, por fingerprint de
+    conteúdo + modelo (`fingerprint_fonte`/`esta_atualizado`), não só por
+    presença.
 
     Mesma ordem de `rag.indexar_documento()` (correção coordenada de
-    03/09/2026): hash primeiro (sem rede), embeddings ANTES de qualquer
-    DELETE, transação curta só depois de os vetores estarem em mãos. Uma
-    falha do provedor nunca deixa uma transação destrutiva pendente aberta
-    nem apaga um chunk válido existente.
+    03/09/2026): fingerprint primeiro (sem rede), embeddings ANTES de
+    qualquer DELETE, transação curta só depois de os vetores estarem em
+    mãos. Uma falha do provedor nunca deixa uma transação destrutiva
+    pendente aberta nem apaga um chunk válido existente.
 
-    `forcar=True` pula a checagem de hash (mesmo uso de
+    `forcar=True` pula a checagem de atualidade (mesmo uso de
     `rag.indexar_documento(forcar=...)`: só depois de trocar de modelo/
     dimensão de embedding)."""
 
     provedor = provedor or obter_provedor_embeddings()
 
-    hash_atual = content_hash(texto)
+    hash_atual = fingerprint_fonte(titulo, texto)
     if not forcar:
-        hash_existente = db.execute(
-            select(KnowledgeChunk.content_hash)
+        existente = db.execute(
+            select(KnowledgeChunk.content_hash, KnowledgeChunk.embedding_model)
             .where(KnowledgeChunk.entity_type == entity_type, KnowledgeChunk.entity_id == entity_id)
             .limit(1)
-        ).scalar_one_or_none()
-        if hash_existente == hash_atual:
-            return 0  # conteúdo inalterado — zero chamadas de rede
+        ).first()
+        if existente is not None and esta_atualizado(existente[0], existente[1], hash_atual):
+            return 0  # conteúdo, título E modelo inalterados — zero chamadas de rede
 
     pedacos = dividir(texto or "")
     if not pedacos:
@@ -188,6 +190,15 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
     }
 
 
+def _texto_calculadora(calc) -> str:
+    """Texto-fonte de uma calculadora, usado tanto para indexar quanto para
+    checar atualidade — função única, sem duplicar a composição em mais de
+    um lugar (achado de revisão: `reindex_rag_completo_20260902.py` tinha
+    uma cópia própria desta mesma lógica, que podia divergir em silêncio)."""
+    partes = [calc.purpose, calc.reference, "\n".join(calc.limitations or [])]
+    return "\n\n".join(p for p in partes if p)
+
+
 def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True, limite: int | None = None) -> dict:
 
     provedor = obter_provedor_embeddings()
@@ -200,8 +211,7 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True, limite:
     calculadoras = list(CALCULATORS_REGISTRY.values())
     for indice, calc in enumerate(calculadoras):
         entity_id = _id_estavel("calculadora", calc.slug)
-        partes = [calc.purpose, calc.reference, "\n".join(calc.limitations or [])]
-        texto = "\n\n".join(p for p in partes if p)
+        texto = _texto_calculadora(calc)
         if not texto.strip():
             continue
         try:
@@ -291,6 +301,13 @@ def resolver_trechos_multi(db: Session, chunk_ids: list[int]) -> dict[int, dict]
             calc = por_id_estavel.get(chunk.entity_id)
             if calc is None:
                 continue
+            # Mesma defesa do braço "doc" em rag.recuperar() (revisão
+            # independente do PR, 03/09/2026): um chunk cujo fingerprint/
+            # modelo não bate mais com a calculadora atual nunca é citado
+            # com o texto antigo — é descartado (a chave não entra em
+            # `resultado`), e a busca léxica multi-frente cobre o resto.
+            if not esta_atualizado(chunk.content_hash, chunk.embedding_model, fingerprint_fonte(calc.name, _texto_calculadora(calc))):
+                continue
             resultado[chunk.id] = {
                 "slug": calc.slug, "titulo": calc.name, "tema": calc.theme,
                 "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
@@ -308,10 +325,13 @@ def resolver_trechos_multi(db: Session, chunk_ids: list[int]) -> dict[int, dict]
             item = linhas.get(chunk.entity_id)
             if item is None:
                 continue
+            titulo_item = getattr(item, fonte.titulo_attr) or ""
+            if not esta_atualizado(chunk.content_hash, chunk.embedding_model, fingerprint_fonte(titulo_item, fonte.texto(item))):
+                continue
             slug = getattr(item, fonte.slug_attr)
             resultado[chunk.id] = {
                 "slug": slug,
-                "titulo": getattr(item, fonte.titulo_attr) or "",
+                "titulo": titulo_item,
                 "tema": getattr(item, fonte.tema_attr) if fonte.tema_attr else None,
                 "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
                 "review_status": getattr(item, "review_status", "revisado"),
@@ -337,22 +357,31 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
     Devolve citações no mesmo formato de `resolver_trechos_multi()` (sem
     `secao`, que só existe para chunk — aqui a unidade é o item inteiro).
 
-    A frente 'documento' ENTRA aqui desde 03/09/2026, mas SÓ para documento
-    que ainda NÃO tem chunk — é exatamente o caso que faltava cobrir (backlog
-    de indexação, ou o próprio provedor de embeddings fora do ar): antes,
-    'documento' era descartada de propósito aqui, sob a premissa de que
-    `rag.py::SQL_LEXICO` já cobria documentos por léxico. Essa premissa era
-    falsa: `SQL_LEXICO` faz INNER JOIN com `document_chunks`, então um
-    documento sem chunk ficava invisível em AMBOS os braços léxicos.
-    Documento que JÁ TEM chunk é descartado aqui de propósito (achado da
-    revisão adversarial de 03/09/2026): sem esse filtro, o mesmo documento
+    A frente 'documento' ENTRA aqui desde 03/09/2026, mas SÓ quando não há
+    um chunk ATUAL para ele — cobre tanto "nunca teve chunk" (backlog de
+    indexação, ou o próprio provedor de embeddings fora do ar) quanto "tem
+    chunk, mas STALE" (conteúdo editado depois da última indexação real, ou
+    modelo trocado — achado da revisão independente do PR: o fallback
+    dependia só de "existe document_chunk", então um documento com chunk
+    ANTIGO nunca caía aqui, mesmo quando o texto já tinha mudado — o
+    consumidor ficava sem alternativa ao chunk desatualizado). Antes de
+    03/09/2026, 'documento' era descartada de propósito aqui, sob a premissa
+    de que `rag.py::SQL_LEXICO` já cobria documentos por léxico. Essa
+    premissa era falsa: `SQL_LEXICO` faz INNER JOIN com `document_chunks`, e
+    mesmo quando acha o documento (pelo `search_vector`, sempre atual),
+    devolve o CONTEÚDO do chunk — que pode ser antigo (`rag.recuperar()` já
+    filtra esse caso descartando o chunk stale antes de citar; ver lá).
+
+    Documento cujo chunk JÁ ESTÁ ATUAL é descartado aqui de propósito (achado
+    de revisão adversarial anterior): sem esse filtro, o mesmo documento
     aparecia como duas citações candidatas no RRF — uma via `SQL_LEXICO`/
-    semântico (com o texto real do chunk) e outra via este fallback (com
-    snippet de `catalog_search`) — e `montar_contexto()` NÃO deduplica o
+    semântico (com o texto real, atual, do chunk) e outra via este fallback
+    (com snippet de `catalog_search`) — e `montar_contexto()` NÃO deduplica o
     texto enviado ao modelo (só a lista de fontes visível ao usuário, por
     slug), então o modelo podia citar `[Fi]` de um bloco sem card de fonte
-    correspondente. Restringir o fallback a "sem chunk mesmo" elimina a
-    sobreposição na origem, sem precisar mexer em `montar_contexto()`.
+    correspondente. Restringir o fallback a "sem chunk ATUAL" elimina a
+    sobreposição na origem quando o chunk já serve, e garante conteúdo fresco
+    quando ele não serve mais.
     """
     values = {"q": pergunta, "q_like": literal_like(pergunta), "frente": None, "limit": limite, "offset": 0}
     search_values = {
@@ -365,22 +394,29 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
         linhas = db.execute(LITERAL_SQL, search_values).mappings().all()
 
     slugs_documento = [linha["slug"] for linha in linhas if linha["frente"] == "documento"]
-    slugs_com_chunk: set[str] = set()
+    slugs_com_chunk_atual: set[str] = set()
     if slugs_documento:
         from app.models.content import Document  # import tardio: evita ciclo no boot do pacote
 
-        slugs_com_chunk = set(db.execute(
-            select(Document.slug)
+        candidatos = db.execute(
+            select(Document.slug, Document.title, Document.body_md,
+                   DocumentChunk.content_hash, DocumentChunk.embedding_model)
             .join(DocumentChunk, DocumentChunk.document_id == Document.id)
             .where(Document.slug.in_(slugs_documento))
-            .distinct()
-        ).scalars())
+        ).all()
+        vistos: set[str] = set()
+        for slug, titulo, body_md, hash_gravado, modelo_gravado in candidatos:
+            if slug in vistos:
+                continue  # chunks de um mesmo documento compartilham hash/modelo — 1 basta
+            vistos.add(slug)
+            if esta_atualizado(hash_gravado, modelo_gravado, fingerprint_fonte(titulo, body_md)):
+                slugs_com_chunk_atual.add(slug)
 
     resultados: list[dict] = []
     for linha in linhas:
         if linha["frente"] == "documento":
-            if linha["slug"] in slugs_com_chunk:
-                continue  # já coberto por SQL_LEXICO/semântico — evita citação duplicada/órfã
+            if linha["slug"] in slugs_com_chunk_atual:
+                continue  # já coberto por SQL_LEXICO/semântico com conteúdo atual — evita citação duplicada
             resultados.append({
                 "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],
                 "secao": None, "conteudo": linha["snippet"],

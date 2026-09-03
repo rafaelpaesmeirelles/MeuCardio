@@ -50,9 +50,51 @@ class EmbeddingDimensionError(RuntimeError):
 
 
 def content_hash(texto: str) -> str:
-    """sha256 do texto-fonte, usado como `content_hash` em `DocumentChunk` e
-    `KnowledgeChunk` — mesma função para as duas tabelas, uma só definição."""
+    """sha256 puro de uma string. Primitivo de baixo nível — quem precisa
+    decidir se uma entidade está em dia usa `fingerprint_fonte()` abaixo, não
+    esta função direto (achado de revisão independente do PR: chamar isto só
+    sobre o corpo, sem o título, deixava o índice "em dia" mesmo depois de
+    renomear um documento — o título entra em TODO chunk embedado, então
+    precisa entrar no fingerprint)."""
     return hashlib.sha256((texto or "").encode("utf-8")).hexdigest()
+
+
+def fingerprint_fonte(titulo: str | None, texto: str | None) -> str:
+    """Fingerprint canônico do texto-fonte de uma entidade indexável —
+    função ÚNICA, usada tanto por documento (`indexar_documento`) quanto
+    pelas 12 frentes de `rag_sources` + calculadora (`rag_multi.
+    indexar_entidade`). Cobre exatamente o que é semanticamente enviado ao
+    provedor: `dividir(texto)` corta em seções de forma determinística a
+    partir de `texto` sozinho, e cada seção resultante leva `titulo` como
+    prefixo antes de virar embedding (`f"{titulo}\\n{secao}\\n{corpo}"`) —
+    então (titulo, texto) juntos determinam TODO chunk gerado. Hashear só
+    `texto` (como este módulo fazia antes) deixava o índice cego a mudança
+    de título: renomear um documento sem tocar no corpo nunca disparava
+    reindexação, mesmo o título aparecendo em cada trecho embedado.
+
+    O prefixo de tamanho (`len(titulo)`) antes do separador existe por
+    achado de revisão adversarial (03/09/2026): concatenar só com `"\n\n"`
+    permite, em tese, que dois pares (titulo, texto) DIFERENTES produzam a
+    mesma string final se o título contiver `"\n\n"` — ex.: titulo="A\n\nX",
+    texto="Y" e titulo="A", texto="X\n\nY" concatenam para o mesmo
+    "A\n\nX\n\nY". O prefixo de tamanho fixa isso: a posição exata em que o
+    título termina fica codificada no próprio fingerprint, então não há
+    ambiguidade de fronteira possível, qualquer que seja o conteúdo do
+    título."""
+    titulo_normalizado = titulo or ""
+    return content_hash(f"{len(titulo_normalizado)}:{titulo_normalizado}\n{texto or ''}")
+
+
+def esta_atualizado(hash_gravado: str | None, modelo_gravado: str | None, hash_atual: str) -> bool:
+    """Um índice só é considerado atual quando as DUAS condições valem ao
+    mesmo tempo: o fingerprint de conteúdo bate E o modelo que gerou o vetor
+    é exatamente o configurado agora (`settings.openai_embedding_model`).
+    Comparar só o hash (como antes) deixava a aplicação achar um índice "em
+    dia" mesmo depois de trocar de modelo de embedding com o texto-fonte
+    idêntico — misturando, em silêncio, vetores de modelos incompatíveis na
+    mesma tabela. `modelo_gravado is None` (chunk legado sem proveniência
+    confirmada, ver migration `b7ri20260903`) nunca é considerado atual."""
+    return hash_gravado == hash_atual and modelo_gravado == settings.openai_embedding_model
 
 
 def verificar_dimensao_embedding(db: Session) -> None:
@@ -156,15 +198,19 @@ def dividir(markdown: str) -> list[tuple[str | None, str]]:
 def indexar_documento(db: Session, doc: Document, provedor=None, *, forcar: bool = False) -> int:
     """Upsert idempotente por CONTEÚDO, não só por presença de chunk.
 
-    `forcar=True` pula a checagem de hash e reprocessa mesmo que o conteúdo
-    esteja idêntico ao já indexado — único caso legítimo é depois de trocar
-    de modelo/dimensão de embedding, quando o hash do TEXTO não mudou mas o
-    VETOR precisa ser regerado com o modelo novo.
+    `forcar=True` pula a checagem de atualidade e reprocessa mesmo que o
+    conteúdo esteja idêntico ao já indexado — único caso legítimo é depois
+    de trocar de modelo/dimensão de embedding, quando o fingerprint do texto
+    não mudou mas o VETOR precisa ser regerado com o modelo novo.
 
     Fluxo, nesta ordem (correção coordenada de 03/09/2026, seção "content_hash"):
-      1. calcula o hash do corpo atual — se já bate com o hash gravado no
-         chunk existente, o documento está atual: devolve sem tocar no banco
-         nem chamar o provedor.
+      1. calcula o fingerprint (título + corpo, ver `fingerprint_fonte`) —
+         se já bate com o gravado no chunk existente E o modelo gravado é o
+         mesmo configurado agora (`esta_atualizado`), o documento está
+         atual: devolve sem tocar no banco nem chamar o provedor. Chunk
+         legado sem `embedding_model` confirmado (ver migration
+         `b7ri20260903`) NUNCA passa nesta checagem — é tratado como
+         pendente de reindexação, de propósito.
       2. divide o texto em trechos (sem rede, sem banco).
       3. chama o provedor de embeddings ANTES de qualquer DELETE — uma falha
          aqui nunca apaga o índice anterior, porque o índice anterior ainda
@@ -181,15 +227,15 @@ def indexar_documento(db: Session, doc: Document, provedor=None, *, forcar: bool
     transação destrutiva nenhuma."""
     provedor = provedor or obter_provedor_embeddings()
 
-    hash_atual = content_hash(doc.body_md)
+    hash_atual = fingerprint_fonte(doc.title, doc.body_md)
     if not forcar:
-        hash_existente = db.execute(
-            select(DocumentChunk.content_hash)
+        existente = db.execute(
+            select(DocumentChunk.content_hash, DocumentChunk.embedding_model)
             .where(DocumentChunk.document_id == doc.id)
             .limit(1)
-        ).scalar_one_or_none()
-        if hash_existente == hash_atual:
-            return 0  # conteúdo inalterado desde a última indexação — zero chamadas de rede
+        ).first()
+        if existente is not None and esta_atualizado(existente[0], existente[1], hash_atual):
+            return 0  # conteúdo E modelo inalterados desde a última indexação — zero chamadas de rede
 
     pedacos = dividir(doc.body_md)
     if not pedacos:
@@ -429,8 +475,22 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         .where(DocumentChunk.id.in_(ids_doc))
     ).all() if ids_doc else []
 
-    trechos_por_chave: dict[tuple, dict] = {
-        ("doc", chunk.id): {
+    # Achado de revisão independente do PR (03/09/2026, seção "source
+    # fingerprint exato" / "fallback léxico para chunk stale"): SQL_LEXICO
+    # acha o documento pelo `search_vector` de `documents`, que reflete o
+    # corpo ATUAL (trigger em toda UPDATE) — mas devolvia o CONTEÚDO do
+    # chunk, que pode ser de uma versão anterior do texto. O braço semântico
+    # tem o mesmo problema: o vetor armazenado pode não representar mais o
+    # corpo atual. Um chunk desatualizado NUNCA é citado com o texto antigo
+    # — é descartado aqui (a chave simplesmente não entra no dict; o filtro
+    # final já ignora chave ausente) e o documento continua recuperável via
+    # o fallback léxico de `buscar_lexico_multi`, que passou a tratar
+    # "tem chunk desatualizado" igual a "não tem chunk" (ver lá).
+    trechos_por_chave: dict[tuple, dict] = {}
+    for chunk, doc in linhas:
+        if not esta_atualizado(chunk.content_hash, chunk.embedding_model, fingerprint_fonte(doc.title, doc.body_md)):
+            continue
+        trechos_por_chave[("doc", chunk.id)] = {
             "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
             "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
             "review_status": doc.review_status,
@@ -442,8 +502,6 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
             "rota": f"/biblioteca/{doc.slug}",
             "entity_type": "documento",
         }
-        for chunk, doc in linhas
-    }
     for chunk_id, trecho in resolver_trechos_multi(db, ids_multi_chunk).items():
         trechos_por_chave[("multi", chunk_id)] = trecho
     lex_multi_por_chave = {(item["entity_type"], item["slug"]): item for item in lexicos_multi}

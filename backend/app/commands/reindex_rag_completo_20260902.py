@@ -74,8 +74,8 @@ from app.core.db import SessionLocal
 from app.models.rag import DocumentChunk, KnowledgeChunk, RagReindexRun
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
 from app.services.knowledge_graph import _id_estavel
-from app.services.rag import EmbeddingDimensionError, content_hash, indexar_tudo, verificar_dimensao_embedding
-from app.services.rag_multi import _indexar_calculadoras, indexar_tipo
+from app.services.rag import EmbeddingDimensionError, esta_atualizado, fingerprint_fonte, indexar_tudo, verificar_dimensao_embedding
+from app.services.rag_multi import _indexar_calculadoras, _texto_calculadora, indexar_tipo
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
 
 log = logging.getLogger("corvia.reindex_rag")
@@ -135,22 +135,18 @@ def _parse_tipos(bruto: str | None) -> list[str]:
     return [t for t in pedidos if not (t in vistos or vistos.add(t))]
 
 
-def _texto_calculadora(calc) -> str:
-    partes = [calc.purpose, calc.reference, "\n".join(calc.limitations or [])]
-    return "\n\n".join(p for p in partes if p)
-
-
 def _preflight_documento(db) -> dict:
     from app.models.content import Document
 
     docs = db.query(Document).filter(Document.published.is_(True)).all()
     pendentes = 0
     for d in docs:
-        hash_atual = content_hash(d.body_md)
-        hash_existente = db.execute(
-            select(DocumentChunk.content_hash).where(DocumentChunk.document_id == d.id).limit(1)
-        ).scalar_one_or_none()
-        if hash_existente != hash_atual:
+        hash_atual = fingerprint_fonte(d.title, d.body_md)
+        existente = db.execute(
+            select(DocumentChunk.content_hash, DocumentChunk.embedding_model)
+            .where(DocumentChunk.document_id == d.id).limit(1)
+        ).first()
+        if existente is None or not esta_atualizado(existente[0], existente[1], hash_atual):
             pendentes += 1
     return {"entity_type": "documento", "publicados": len(docs), "pendentes": pendentes}
 
@@ -166,13 +162,13 @@ def _preflight_tipo(db, tipo: str) -> dict:
                 continue
             total += 1
             entity_id = _id_estavel("calculadora", calc.slug)
-            hash_atual = content_hash(texto)
-            hash_existente = db.execute(
-                select(KnowledgeChunk.content_hash)
+            hash_atual = fingerprint_fonte(calc.name, texto)
+            existente = db.execute(
+                select(KnowledgeChunk.content_hash, KnowledgeChunk.embedding_model)
                 .where(KnowledgeChunk.entity_type == "calculadora", KnowledgeChunk.entity_id == entity_id)
                 .limit(1)
-            ).scalar_one_or_none()
-            if hash_existente != hash_atual:
+            ).first()
+            if existente is None or not esta_atualizado(existente[0], existente[1], hash_atual):
                 pendentes += 1
         return {"entity_type": "calculadora", "publicados": total, "pendentes": pendentes}
 
@@ -185,13 +181,14 @@ def _preflight_tipo(db, tipo: str) -> dict:
         if not texto or not texto.strip():
             continue
         total += 1
-        hash_atual = content_hash(texto)
-        hash_existente = db.execute(
-            select(KnowledgeChunk.content_hash)
+        titulo_item = getattr(item, fonte.titulo_attr) or ""
+        hash_atual = fingerprint_fonte(titulo_item, texto)
+        existente = db.execute(
+            select(KnowledgeChunk.content_hash, KnowledgeChunk.embedding_model)
             .where(KnowledgeChunk.entity_type == tipo, KnowledgeChunk.entity_id == item.id)
             .limit(1)
-        ).scalar_one_or_none()
-        if hash_existente != hash_atual:
+        ).first()
+        if existente is None or not esta_atualizado(existente[0], existente[1], hash_atual):
             pendentes += 1
     return {"entity_type": tipo, "publicados": total, "pendentes": pendentes}
 
