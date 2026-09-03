@@ -1,0 +1,29 @@
+/* CorVIA — refinamento visual do GalaxyThemeToggle (03/09/2026)
+ *
+ * Mantém exatamente o footprint/área clicável do controle aprovado, mas
+ * elimina a cápsula/faixa colorida visível nas laterais do vídeo. O MP4
+ * continua usando mix-blend-mode: screen e o filtro já definido na folha
+ * canônica; aqui apenas tornamos o chrome do botão e o fundo do elemento
+ * <video> visualmente transparentes.
+ */
+.galaxy-theme-toggle,
+.galaxy-theme-toggle:hover,
+.galaxy-theme-toggle:active {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.galaxy-theme-toggle::before,
+.galaxy-theme-toggle::after {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.galaxy-theme-toggle__video {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* O foco por teclado continua vindo do outline canônico; não o removemos. */
