@@ -431,12 +431,38 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
 
 @router.post("/reindexar")
 def reindexar(
-    tudo: bool = False, db: Session = Depends(get_db), user=Depends(require_admin)
+    tudo: bool = False,
+    limite: int = 50,
+    db: Session = Depends(get_db),
+    user=Depends(require_admin),
 ):
-    """Gera embeddings dos documentos. Consome créditos do provedor."""
+    """Gera embeddings — documentos e as 12 frentes de rag_sources. Consome
+    créditos do provedor.
+
+    Correção coordenada de 03/09/2026: antes chamava `rag.indexar_tudo()`
+    direto, síncrono, cobrindo só `documents` (as outras 12 frentes ficavam
+    de fora — achado da investigação original), sem o advisory lock que o
+    comando de backfill (`app.commands.reindex_rag_completo_20260902`) ganhou
+    contra execução concorrente, e sem teto de itens — um backlog grande
+    faria esta requisição HTTP ficar pendurada por muito mais tempo do que
+    qualquer proxy/browser tolera antes de dar timeout.
+
+    Agora delega para o comando canônico, único responsável por indexação
+    incremental. `limite` (padrão 50, pequeno de propósito) mantém a
+    requisição rápida o bastante para não estourar timeout — para o backlog
+    inteiro, use o comando por `docker compose exec` (assíncrono, sem limite
+    de tempo de uma requisição HTTP), não este endpoint em loop.
+    """
     if not settings.ai_enabled:
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
-    resultado = rag.indexar_tudo(db, apenas_pendentes=not tudo)
+    from app.commands.reindex_rag_completo_20260902 import rodar
+
+    resultado, exit_code = rodar(forcar=tudo, limite=limite)
+    if exit_code == 3:
+        raise HTTPException(
+            status_code=409,
+            detail="Já existe uma indexação em andamento (advisory lock ocupado) — espere terminar.",
+        )
     db.add(AuditLog(user_id=user.id, action="reindexar", entity="ia", detail=resultado))
     db.commit()
     return resultado

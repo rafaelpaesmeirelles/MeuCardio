@@ -42,6 +42,15 @@ Contrato de exit code (nunca "0 = sucesso" por presunção):
         gravada depois que o embedding já chegou (ver `indexar_documento`/
         `indexar_entidade`), então interromper entre itens nunca corrompe
         nada; o item em voo é perdido e reentra no backlog normalmente.
+    3   já existe outra execução com o advisory lock — desiste sem tocar em
+        nada (ver `_JaEmExecucao`).
+    4   `AI_ENABLED=false` nesta instalação — a investigação original
+        (03/09/2026) achou que o comando gastava crédito mesmo com a IA
+        clínica desligada, sem guarda nenhuma (o endpoint HTTP
+        `/api/ai/reindexar` já tinha essa guarda; o comando de linha de
+        comando não tinha). `--dry-run` continua funcionando com IA
+        desligada — é só leitura, útil para preparar o backlog antes de
+        ligar.
 
 Cada execução grava uma linha em `rag_reindex_runs` (migration `b7ri20260903`)
 com contadores, duração e `exit_code` — é o que alimenta observabilidade sem
@@ -60,6 +69,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy import select, text
 
+from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.rag import DocumentChunk, KnowledgeChunk, RagReindexRun
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
@@ -75,6 +85,13 @@ TIPOS_VALIDOS = ("documento",) + tuple(f.entity_type for f in FONTES_RAG) + ("ca
 
 class _Interrompido(Exception):
     """Levantada pelo handler de sinal — nunca pelo circuit breaker interno."""
+
+
+class _IaDesligada(Exception):
+    """AI_ENABLED=false — achado da investigação original de 03/09/2026: o
+    comando gastava crédito do provedor mesmo com a IA clínica desligada
+    nesta instalação, sem nenhuma guarda (diferente do endpoint HTTP
+    equivalente, que já recusava com 503)."""
 
 
 class _JaEmExecucao(Exception):
@@ -222,6 +239,11 @@ def rodar(
 
     try:
         if not dry_run:
+            if not settings.ai_enabled:
+                raise _IaDesligada(
+                    "AI_ENABLED=false nesta instalação — o backfill não roda (gastaria "
+                    "crédito do provedor por nada). Use --dry-run para só contar backlog."
+                )
             lock_conn = SessionLocal()
             obtido = lock_conn.execute(text("SELECT pg_try_advisory_lock(:k)"), {"k": _LOCK_KEY}).scalar()
             if not obtido:
@@ -277,6 +299,10 @@ def rodar(
         resultado["trechos_totais"] = trechos_totais
         exit_code = 0 if (falhas_totais == 0 and backlog_total == 0) else 2
 
+    except _IaDesligada as exc:
+        exit_code = 4
+        erro_fatal = str(exc)
+        log.warning(erro_fatal)
     except _JaEmExecucao as exc:
         exit_code = 3
         erro_fatal = str(exc)
@@ -350,7 +376,8 @@ def main() -> None:
     print(json.dumps(resultado, ensure_ascii=False, indent=2, default=str))
     print(
         f"[reindex_rag] concluído em {time.monotonic() - t0:.1f}s — exit_code={exit_code} "
-        f"(0=sucesso completo, 1=falha operacional, 2=backlog/falha de item restante, 130=interrompido)",
+        f"(0=sucesso completo, 1=falha operacional, 2=backlog/falha de item restante, "
+        f"3=já em execução, 4=IA desligada, 130=interrompido)",
         file=sys.stderr,
     )
     raise SystemExit(exit_code)

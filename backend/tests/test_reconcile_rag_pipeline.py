@@ -17,6 +17,7 @@ from sqlalchemy import text
 
 from app.commands.reconcile_content import reconcile
 from app.commands.reindex_rag_completo_20260902 import rodar
+from app.core.config import settings
 from app.models.content import Document
 from app.models.evidence import EvidenceRecord
 from app.models.rag import DocumentChunk, KnowledgeChunk
@@ -77,6 +78,7 @@ def test_reconcile_nunca_chama_rag(db, monkeypatch):
 
 
 def test_reindex_rag_completo_indexa_documento_e_frente_multi(db, monkeypatch):
+    monkeypatch.setattr(settings, "ai_enabled", True)
     monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: _ProvedorFake())
     monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorFake())
 
@@ -112,6 +114,7 @@ def test_reindex_rag_completo_indexa_documento_e_frente_multi(db, monkeypatch):
 
 def test_reindex_rag_completo_e_idempotente(db, monkeypatch):
     """Segunda chamada não reprocessa quem já tem chunk em dia — content_hash."""
+    monkeypatch.setattr(settings, "ai_enabled", True)
     monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: _ProvedorFake())
     monkeypatch.setattr("app.services.rag_multi.obter_provedor_embeddings", lambda: _ProvedorFake())
 
@@ -143,6 +146,7 @@ def test_reindex_rag_recusa_segunda_execucao_concorrente(db, monkeypatch):
 
     from app.commands.reindex_rag_completo_20260902 import _LOCK_KEY
 
+    monkeypatch.setattr(settings, "ai_enabled", True)
     monkeypatch.setattr(
         "app.services.rag.obter_provedor_embeddings",
         lambda: (_ for _ in ()).throw(AssertionError("não devia chegar a chamar o provedor")),
@@ -157,6 +161,32 @@ def test_reindex_rag_recusa_segunda_execucao_concorrente(db, monkeypatch):
     finally:
         db.execute(sqltext("SELECT pg_advisory_unlock(:k)"), {"k": _LOCK_KEY})
         db.commit()
+
+
+def test_reindex_rag_recusa_rodar_com_ia_desligada(db, monkeypatch):
+    """Achado da investigação original de 03/09/2026: o comando gastava
+    crédito mesmo com AI_ENABLED=false, sem guarda nenhuma."""
+    monkeypatch.setattr(settings, "ai_enabled", False)
+    monkeypatch.setattr(
+        "app.services.rag.obter_provedor_embeddings",
+        lambda: (_ for _ in ()).throw(AssertionError("não devia chegar a chamar o provedor")),
+    )
+
+    resultado, exit_code = rodar()
+
+    assert exit_code == 4
+    assert "ai_enabled=false" in resultado["erro"].lower()
+
+
+def test_reindex_rag_dry_run_funciona_mesmo_com_ia_desligada(db, monkeypatch):
+    """--dry-run é só leitura — precisa continuar útil mesmo com IA desligada,
+    para preparar/estimar o backfill antes de ligar."""
+    monkeypatch.setattr(settings, "ai_enabled", False)
+
+    resultado, exit_code = rodar(dry_run=True)
+
+    assert exit_code == 0
+    assert "preflight" in resultado
 
 
 def test_reindex_rag_dry_run_nao_chama_provedor_nem_escreve(db, monkeypatch):
