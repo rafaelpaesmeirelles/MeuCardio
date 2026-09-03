@@ -1,0 +1,787 @@
+/*
+ * CorVIA — login final aprovado em 03/09/2026.
+ *
+ * Escopo deliberadamente local ao gateway público. Não altera o layout do
+ * Clinical OS autenticado. Este arquivo é importado por último em Entrar.tsx
+ * para registrar as decisões visuais finais sem reabrir o CSS histórico.
+ */
+
+.login-gateway--public {
+  --corvia-petroleum: #0f727a;
+  --login-galaxy-blue: rgba(85, 126, 255, 0.36);
+  --login-galaxy-cyan: rgba(61, 197, 218, 0.28);
+  --login-galaxy-violet: rgba(149, 101, 247, 0.27);
+  --login-galaxy-pink: rgba(240, 79, 135, 0.2);
+  --login-galaxy-star: rgba(67, 84, 174, 0.38);
+}
+
+.login-gateway--dark {
+  --corvia-petroleum: #0f727a;
+  --login-galaxy-blue: rgba(89, 137, 255, 0.66);
+  --login-galaxy-cyan: rgba(66, 211, 232, 0.48);
+  --login-galaxy-violet: rgba(169, 119, 255, 0.55);
+  --login-galaxy-pink: rgba(255, 92, 159, 0.39);
+  --login-galaxy-star: rgba(214, 232, 255, 0.86);
+}
+
+/* A palavra VIA pertence à identidade em azul-petróleo, em ambos os temas. */
+.login-gateway--public .login-gateway__brand .corvia-via {
+  color: var(--corvia-petroleum) !important;
+}
+
+/* O círculo e os antigos traços/orbitas do coração foram removidos. */
+.login-gateway--public .login-gateway__core::before,
+.login-gateway--public .login-gateway__ring,
+.login-gateway--public .login-gateway__routes {
+  display: none !important;
+}
+
+/* Galáxia espiral de pontos luminosos. O wrapper gira, o coração não. */
+.login-gateway--public .login-gateway__milky-way {
+  left: 50%;
+  top: 57%;
+  width: clamp(680px, 64vw, 1040px);
+  aspect-ratio: 1.5;
+  border-radius: 50%;
+  opacity: 0.94;
+  overflow: visible;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  transform-origin: 50% 50%;
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 0 48%, rgba(0, 0, 0, 0.88) 66%, rgba(0, 0, 0, 0.32) 78%, transparent 88%);
+  mix-blend-mode: normal;
+  filter: none;
+  animation: login-gateway-galaxy-clockwise 48s linear infinite !important;
+  will-change: transform;
+}
+
+.login-gateway--public .login-gateway__milky-way::before {
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.82) 0 3%, rgba(255, 255, 255, 0.22) 7%, transparent 18%),
+    repeating-radial-gradient(ellipse at 50% 50%, transparent 0 7%, color-mix(in srgb, var(--login-galaxy-blue) 66%, transparent) 8% 8.7%, transparent 9.5% 14%),
+    conic-gradient(
+      from 7deg at 50% 50%,
+      transparent 0 8deg,
+      var(--login-galaxy-blue) 11deg 19deg,
+      transparent 24deg 48deg,
+      var(--login-galaxy-cyan) 52deg 61deg,
+      transparent 66deg 94deg,
+      var(--login-galaxy-violet) 99deg 109deg,
+      transparent 116deg 148deg,
+      var(--login-galaxy-pink) 153deg 162deg,
+      transparent 168deg 196deg,
+      var(--login-galaxy-blue) 201deg 211deg,
+      transparent 218deg 249deg,
+      var(--login-galaxy-cyan) 254deg 263deg,
+      transparent 270deg 300deg,
+      var(--login-galaxy-violet) 305deg 315deg,
+      transparent 322deg 360deg
+    );
+  filter: blur(7px);
+  transform: scaleY(0.57);
+  opacity: 0.82;
+}
+
+.login-gateway--public .login-gateway__milky-way::after {
+  inset: 3%;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle, var(--login-galaxy-star) 0 0.9px, transparent 1.55px),
+    radial-gradient(circle, color-mix(in srgb, var(--login-galaxy-cyan) 86%, white) 0 0.75px, transparent 1.35px),
+    radial-gradient(circle, color-mix(in srgb, var(--login-galaxy-violet) 82%, white) 0 0.65px, transparent 1.2px),
+    radial-gradient(circle, color-mix(in srgb, var(--login-galaxy-pink) 78%, white) 0 0.55px, transparent 1.08px);
+  background-position: 9px 13px, 31px 7px, 17px 35px, 43px 25px;
+  background-size: 39px 31px, 59px 43px, 79px 57px, 101px 73px;
+  mask-image:
+    radial-gradient(ellipse at 50% 50%, #000 0 10%, rgba(0, 0, 0, 0.98) 52%, rgba(0, 0, 0, 0.2) 78%, transparent 88%),
+    repeating-conic-gradient(from 0deg, #000 0 12deg, rgba(0, 0, 0, 0.32) 12deg 22deg, #000 22deg 36deg);
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--login-galaxy-blue) 72%, transparent));
+  transform: scaleY(0.58) rotate(3deg);
+  opacity: 0.96;
+}
+
+.login-gateway--public .login-gateway__milky-way > span {
+  inset: 12% 8%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.46) 0 2%, transparent 13%),
+    repeating-radial-gradient(ellipse at 50% 50%, transparent 0 8%, var(--login-galaxy-violet) 9% 9.4%, transparent 10% 15%),
+    conic-gradient(from 24deg, transparent 0 19deg, var(--login-galaxy-blue) 23deg 30deg, transparent 35deg 91deg, var(--login-galaxy-cyan) 96deg 103deg, transparent 108deg 181deg, var(--login-galaxy-pink) 187deg 194deg, transparent 200deg 269deg, var(--login-galaxy-violet) 275deg 282deg, transparent 288deg 360deg);
+  filter: blur(1.1px);
+  transform: scaleY(0.54) rotate(-5deg);
+  opacity: 0.74;
+}
+
+.login-gateway--dark .login-gateway__milky-way {
+  opacity: 1;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 20px rgba(71, 112, 255, 0.15));
+}
+
+/* Traçado do ECG passa por cima da ponta inferior do coração e flui. */
+.login-gateway--public .login-gateway__pulse {
+  z-index: 7;
+  left: 50%;
+  bottom: 16%;
+  width: 126%;
+  opacity: 0.93;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.login-gateway--public .login-gateway__pulse-trace {
+  stroke-width: 1.65;
+  stroke-dasharray: 470 470;
+  stroke-dashoffset: 470;
+  animation: login-gateway-ecg-flow 4.8s linear infinite !important;
+}
+
+.login-gateway--public .login-gateway__pulse-baseline {
+  opacity: 0.56;
+}
+
+/* --------------------------------------------------------------------------
+   Desktop aprovado: título central; universo ocupando o centro e laterais;
+   console de acesso horizontal, fino, na faixa inferior.
+   -------------------------------------------------------------------------- */
+@media (min-width: 901px) {
+  .login-gateway--public {
+    display: grid !important;
+    height: 100dvh;
+    min-height: 640px;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: 98px minmax(0, 1fr) auto 54px !important;
+    gap: 0;
+    padding: 0 clamp(30px, 4vw, 68px);
+    overflow: hidden;
+  }
+
+  .login-gateway--public .login-gateway__topbar {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 98px;
+  }
+
+  /* Um pouco maior somente no desktop. */
+  .login-gateway--public .login-gateway__brand {
+    gap: 16px;
+  }
+
+  .login-gateway--public .login-gateway__brand img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .login-gateway--public .login-gateway__brand strong {
+    font-size: 2.22rem;
+  }
+
+  .login-gateway--public .login-gateway__brand small {
+    font-size: 0.53rem;
+  }
+
+  .login-gateway--public .login-gateway__scene {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .login-gateway--public .login-gateway__hero {
+    z-index: 8;
+    justify-items: center;
+    width: min(92vw, 980px);
+    max-width: 980px;
+    margin: clamp(8px, 1.4vh, 16px) auto 0;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .login-gateway--public .login-gateway__hero p {
+    font-size: 0.62rem;
+  }
+
+  .login-gateway--public .login-gateway__hero h1 {
+    max-width: none;
+    font-size: clamp(2.25rem, 3.45vw, 3.8rem);
+    line-height: 0.98;
+  }
+
+  .login-gateway--public .login-gateway__hero h1 strong {
+    display: block;
+    margin-top: 0.04em;
+  }
+
+  .login-gateway--public .login-gateway__hero > span {
+    max-width: 78ch;
+    font-size: clamp(0.68rem, 0.85vw, 0.82rem);
+    line-height: 1.45;
+  }
+
+  .login-gateway--public .login-gateway__universe {
+    inset: clamp(118px, 18vh, 150px) 0 0;
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    top: 58%;
+  }
+
+  .login-gateway--public .login-gateway__core {
+    top: 58%;
+    width: clamp(220px, 20vw, 310px);
+  }
+
+  .login-gateway--public .login-gateway__space {
+    width: clamp(132px, 11vw, 176px);
+    min-height: 58px;
+  }
+
+  .login-gateway--public .login-gateway__space--ensino {
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+  }
+
+  .login-gateway--public .login-gateway__space--hospital {
+    left: 20%;
+    top: 31%;
+  }
+
+  .login-gateway--public .login-gateway__space--pesquisa {
+    right: 20%;
+    top: 31%;
+  }
+
+  .login-gateway--public .login-gateway__space--consultorio {
+    left: 11%;
+    top: 64%;
+  }
+
+  .login-gateway--public .login-gateway__space--gestao {
+    right: 11%;
+    top: 64%;
+  }
+
+  .login-gateway--public .login-gateway__console {
+    z-index: 15;
+    display: grid;
+    width: min(95vw, 1500px);
+    max-width: none;
+    min-height: 70px;
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: 155px minmax(430px, 1.7fr) minmax(260px, 0.9fr) 170px;
+    grid-template-areas: "identity form theme join";
+    align-items: center;
+    gap: 12px;
+    justify-self: center;
+    margin: 0 auto 7px;
+    padding: 8px 12px;
+    border-radius: 14px;
+  }
+
+  .login-gateway--public .login-gateway__console-head {
+    grid-area: identity;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 0 11px 0 0;
+    border-right: 1px solid rgba(75, 79, 196, 0.14);
+    border-bottom: 0;
+  }
+
+  .login-gateway--public .login-gateway__console-head > span {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+
+  .login-gateway--public .login-gateway__console-head p {
+    font-size: 0.43rem;
+    letter-spacing: 0.1em;
+  }
+
+  .login-gateway--public .login-gateway__console-head h2 {
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .login-gateway--public .login-gateway__form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: minmax(170px, 1fr) minmax(170px, 1fr) 112px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .login-gateway--public .login-gateway__field > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter {
+    min-height: 42px;
+  }
+
+  #root .login.login-gateway--public .login-gateway__field
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+    min-height: 40px !important;
+  }
+
+  .login-gateway--public .login-gateway__enter {
+    margin: 0;
+    padding-inline: 13px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice {
+    grid-area: theme;
+    min-width: 0;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice legend,
+  .login-gateway--public .login-gateway__theme-choice > p {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    min-height: 42px;
+    grid-template-columns: 25px minmax(0, 1fr) 15px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 6px;
+    border-radius: 9px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-icon {
+    grid-column: 1;
+    grid-row: 1;
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label > span:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 1px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options strong {
+    font-size: 0.6rem;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options small {
+    font-size: 0.48rem;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label > i {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+    width: 15px;
+    height: 15px;
+  }
+
+  .login-gateway--public .login-gateway__join {
+    grid-area: join;
+    display: grid;
+    min-height: 44px;
+    grid-template-columns: 28px minmax(0, 1fr) 16px;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    color: #3c465f;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(75, 79, 196, 0.22);
+    border-radius: 9px;
+    text-decoration: none;
+  }
+
+  .login-gateway--dark .login-gateway__join {
+    color: #dce6ee;
+    background: rgba(6, 22, 37, 0.76);
+    border-color: rgba(121, 167, 255, 0.28);
+  }
+
+  .login-gateway--public .login-gateway__join > span:first-child {
+    display: grid;
+    width: 27px;
+    height: 27px;
+    place-items: center;
+    color: var(--corvia-petroleum);
+    background: color-mix(in srgb, var(--corvia-petroleum) 9%, transparent);
+    border-radius: 7px;
+  }
+
+  .login-gateway--public .login-gateway__join > span:nth-child(2) {
+    display: grid;
+    gap: 1px;
+  }
+
+  .login-gateway--public .login-gateway__join strong {
+    font-size: 0.58rem;
+    white-space: nowrap;
+  }
+
+  .login-gateway--public .login-gateway__join small {
+    color: var(--login-muted);
+    font-size: 0.49rem;
+    white-space: nowrap;
+  }
+
+  .login-gateway--public .login-gateway__join > svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .login-gateway--public .login-gateway__footer {
+    grid-column: 1;
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 0;
+  }
+
+  .login-gateway--public .login-gateway__form-meta {
+    position: static;
+    transform: none;
+  }
+
+  .login-gateway--public .login-gateway__footer nav {
+    position: static;
+    margin-left: auto;
+  }
+}
+
+/* Desktops baixos mantêm o mesmo desenho, só comprimindo sem reduzir demais a marca. */
+@media (min-width: 901px) and (max-height: 760px) {
+  .login-gateway--public {
+    grid-template-rows: 80px minmax(0, 1fr) auto 48px !important;
+  }
+
+  .login-gateway--public .login-gateway__topbar {
+    min-height: 80px;
+  }
+
+  .login-gateway--public .login-gateway__brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .login-gateway--public .login-gateway__brand strong {
+    font-size: 1.9rem;
+  }
+
+  .login-gateway--public .login-gateway__hero {
+    margin-top: 4px;
+  }
+
+  .login-gateway--public .login-gateway__hero h1 {
+    font-size: clamp(1.95rem, 3vw, 3rem);
+  }
+
+  .login-gateway--public .login-gateway__universe {
+    inset-block-start: 105px;
+  }
+
+  .login-gateway--public .login-gateway__core {
+    width: clamp(190px, 17vw, 245px);
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    width: clamp(620px, 60vw, 900px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile: mantém a composição aprovada, usa a MESMA galáxia do desktop,
+   reduz a caixa de acesso e elimina divisões visuais desnecessárias.
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .login-gateway--public .login-gateway__hero > span {
+    max-width: 46ch;
+  }
+
+  .login-gateway--public .login-gateway__scene {
+    height: 610px;
+    min-height: 610px;
+  }
+
+  .login-gateway--public .login-gateway__universe {
+    inset: 195px 0 0;
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    top: 55%;
+    width: min(720px, 154vw);
+    opacity: 0.92;
+  }
+
+  .login-gateway--public .login-gateway__core {
+    top: 56%;
+    width: 205px;
+  }
+
+  .login-gateway--public .login-gateway__pulse {
+    bottom: 16%;
+    width: 132%;
+  }
+
+  .login-gateway--public .login-gateway__space--ensino {
+    top: 7%;
+  }
+
+  .login-gateway--public .login-gateway__space--hospital,
+  .login-gateway--public .login-gateway__space--pesquisa {
+    top: 31%;
+  }
+
+  .login-gateway--public .login-gateway__space--consultorio,
+  .login-gateway--public .login-gateway__space--gestao {
+    top: 68%;
+  }
+
+  .login-gateway--public .login-gateway__console {
+    display: flex;
+    width: min(100%, 600px);
+    max-width: 600px;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px auto 16px;
+    padding: 14px 13px;
+    border-radius: 16px;
+  }
+
+  .login-gateway--public .login-gateway__console-head {
+    order: 0;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .login-gateway--public .login-gateway__console-head > span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .login-gateway--public .login-gateway__console-head h2 {
+    font-size: 1.04rem;
+  }
+
+  .login-gateway--public .login-gateway__form {
+    order: 1;
+    gap: 8px;
+  }
+
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter {
+    min-height: 46px;
+  }
+
+  #root .login.login-gateway--public .login-gateway__field
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+    min-height: 44px !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice {
+    order: 2;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice legend {
+    margin-bottom: 5px;
+    font-size: 0.68rem;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    min-height: 54px;
+    grid-template-columns: 30px minmax(0, 1fr) 17px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 8px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label > i {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-icon {
+    grid-column: 1;
+    grid-row: 1;
+    width: 30px;
+    height: 30px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label > span:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice > p {
+    display: none;
+  }
+
+  .login-gateway--public .login-gateway__join {
+    order: 3;
+    display: grid;
+    min-height: 52px;
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 10px;
+    color: #3c465f;
+    background: rgba(255, 255, 255, 0.56);
+    border: 1px solid rgba(75, 79, 196, 0.2);
+    border-radius: 11px;
+    text-decoration: none;
+  }
+
+  .login-gateway--dark .login-gateway__join {
+    color: #dce6ee;
+    background: rgba(6, 22, 37, 0.76);
+    border-color: rgba(121, 167, 255, 0.26);
+  }
+
+  .login-gateway--public .login-gateway__join > span:first-child {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    color: var(--corvia-petroleum);
+    border-radius: 9px;
+    background: color-mix(in srgb, var(--corvia-petroleum) 9%, transparent);
+  }
+
+  .login-gateway--public .login-gateway__join > span:nth-child(2) {
+    display: grid;
+    gap: 2px;
+  }
+
+  .login-gateway--public .login-gateway__join strong {
+    font-size: 0.76rem;
+  }
+
+  .login-gateway--public .login-gateway__join small {
+    color: var(--login-muted);
+    font-size: 0.66rem;
+  }
+
+  .login-gateway--public .login-gateway__join > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .login-gateway--public .login-gateway__footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 5px;
+    padding: 6px 0 18px;
+  }
+
+  .login-gateway--public .login-gateway__form-meta,
+  .login-gateway--public .login-gateway__footer nav {
+    position: static;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .login-gateway--public .login-gateway__scene {
+    height: 575px;
+    min-height: 575px;
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    width: 155vw;
+  }
+
+  .login-gateway--public .login-gateway__space {
+    width: 106px;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-gateway--public .login-gateway__scene {
+    height: 545px;
+    min-height: 545px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options {
+    gap: 5px;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    padding-inline: 6px;
+  }
+}
+
+@keyframes login-gateway-galaxy-clockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(-12deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(348deg);
+  }
+}
+
+@keyframes login-gateway-ecg-flow {
+  0% {
+    stroke-dashoffset: 470;
+    opacity: 0.42;
+  }
+  8% {
+    opacity: 0.96;
+  }
+  46% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  58% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -470;
+    opacity: 0.48;
+  }
+}
+
+/* Acessibilidade: movimento normal é obrigatório; reduce-motion é exceção do SO. */
+@media (prefers-reduced-motion: reduce) {
+  .login-gateway--public .login-gateway__milky-way,
+  .login-gateway--public .login-gateway__pulse-trace {
+    animation: none !important;
+  }
+}

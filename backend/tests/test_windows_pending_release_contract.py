@@ -9,12 +9,16 @@ def _read(relative: str) -> str:
     return (ROOT / relative).read_text(encoding="utf-8")
 
 
-def test_windows_is_pending_without_public_login_link():
+def test_native_installers_are_not_exposed_on_public_login_while_distribution_is_paused():
     login = _read("frontend/src/pages/Entrar.tsx")
-    assert "Aplicativo para Windows" in login
-    assert "pendente de assinatura" in login
+    assert "Aplicativo para Windows" not in login
+    assert "MarcaWindows" not in login
+    assert "MarcaAndroid" not in login
     assert "/downloads/corvia-cardiology-spaces-windows-1.2.0.exe" not in login
-    assert 'href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"' in login
+    assert 'href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk"' not in login
+    assert 'className="login-gateway__join" to="/solicitar-acesso"' in login
+    assert "Novo no CorVIA?" in login
+    assert "Solicite seu Acesso" in login
 
 
 def test_windows_download_routes_are_explicitly_unavailable():
