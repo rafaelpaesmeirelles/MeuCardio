@@ -49,7 +49,7 @@ def test_cockpit_carrega_colecoes_em_paralelo_com_falha_parcial_tolerada_e_usa_t
     assert 'resultadoChecklists.status === "fulfilled"' in pagina
     assert "/library/documents?theme=" in pagina
     assert 'api.get<Calculadora[]>("/calculators")' in pagina
-    assert 'api.get<Checklist[]>("/checklists")' in pagina
+    assert 'api.get<PaginaDe<Checklist>>("/checklists?limit=500")' in pagina
     assert "<TudoSobreEsteTema tema={TEMA}" in pagina
 
 
