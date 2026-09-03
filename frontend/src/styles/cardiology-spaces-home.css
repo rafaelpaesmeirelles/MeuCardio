@@ -439,19 +439,50 @@ body.cardiology-spaces-active :where(a:hover) {
   cursor: pointer;
 }
 
-.spaces-theme-cameo > img {
+/* Girar continuamente "como uma galáxia de verdade" — pedido do Rafael,
+   03/09/2026. O giro é aplicado à IMAGEM dentro de uma moldura (`__frame`)
+   com `overflow: hidden` no tamanho visual de sempre (132×44 / 88×30 no
+   mobile); a imagem em si tem o lado igual à DIAGONAL dessa moldura
+   (√(132²+44²)≈139px desktop, √(88²+30²)≈93px mobile), centralizada, com
+   `object-fit: cover`. Isso garante matematicamente que, em qualquer ângulo
+   de rotação, a imagem cobre a moldura inteira — sem isso, girar o
+   retângulo direto faria o conteúdo estourar até 132px de altura em 90°/270°
+   (W·|sinθ| + H·|cosθ|), colidindo com o que está abaixo do botão. */
+.spaces-theme-cameo__frame {
   display: block;
   width: 132px;
   height: 44px;
-  object-fit: contain;
-  opacity: 1;
-  filter: brightness(1.12) saturate(1.08) contrast(1.12) drop-shadow(0 0 14px rgba(43, 216, 225, 0.32));
-  transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
+  overflow: hidden;
+  position: relative;
 }
 
-.spaces-theme-cameo:hover > img { opacity: 1; filter: brightness(1.2) saturate(1.14) contrast(1.14) drop-shadow(0 0 17px rgba(43, 216, 225, 0.42)); }
-.spaces-theme-cameo:active > img { transform: scale(0.97); }
+.spaces-theme-cameo__img {
+  display: block;
+  position: absolute;
+  width: 139px;
+  height: 139px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  object-fit: cover;
+  opacity: 1;
+  filter: brightness(1.12) saturate(1.08) contrast(1.12) drop-shadow(0 0 14px rgba(43, 216, 225, 0.32));
+  transition: filter 160ms ease, opacity 160ms ease;
+  animation: spaces-theme-cameo-spin 26s linear infinite;
+}
+
+.spaces-theme-cameo:hover .spaces-theme-cameo__img { opacity: 1; filter: brightness(1.2) saturate(1.14) contrast(1.14) drop-shadow(0 0 17px rgba(43, 216, 225, 0.42)); }
+.spaces-theme-cameo:active .spaces-theme-cameo__img { animation-play-state: paused; }
 .spaces-theme-cameo:focus-visible { outline: 2px solid var(--space-accent); outline-offset: 1px; border-radius: 50%; }
+
+@keyframes spaces-theme-cameo-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spaces-theme-cameo__img { animation: none; }
+}
 
 @media (max-width: 900px) {
   .spaces-theme-cameo {
@@ -460,9 +491,14 @@ body.cardiology-spaces-active :where(a:hover) {
     height: 44px;
   }
 
-  .spaces-theme-cameo > img {
+  .spaces-theme-cameo__frame {
     width: 88px;
     height: 30px;
+  }
+
+  .spaces-theme-cameo__img {
+    width: 93px;
+    height: 93px;
   }
 }
 

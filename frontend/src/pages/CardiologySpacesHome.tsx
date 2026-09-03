@@ -1456,13 +1456,19 @@ export default function CardiologySpacesHome() {
             aria-label={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
             title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
           >
-            <img
-              src="/spaces/corvia-galaxy-cameo.webp"
-              alt=""
-              width="132"
-              height="44"
-              draggable="false"
-            />
+            {/* Disco circular que recorta a imagem: o giro é aplicado à imagem
+                DENTRO desse recorte fixo, nunca ao botão inteiro — uma
+                imagem larga (132×44) girando sem recorte estoura verticalmente
+                até 132px a 90°/270°, colidindo com o que está abaixo do botão.
+                O círculo é invariante à rotação, então nunca há esse estouro. */}
+            <span className="spaces-theme-cameo__frame" aria-hidden="true">
+              <img
+                src="/spaces/corvia-galaxy-cameo.webp"
+                alt=""
+                draggable="false"
+                className="spaces-theme-cameo__img"
+              />
+            </span>
           </button>
         </div>
         <form className="spaces-everything-search" role="search" onSubmit={searchEverything}>
