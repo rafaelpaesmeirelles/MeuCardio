@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useCorviaTheme } from "../lib/corviaTheme";
+import "../styles/galaxy-theme-toggle-refinement.css";
 
 /**
  * Controle canônico único de alternância claro/escuro — substitui a
