@@ -33,7 +33,7 @@ def _totalzip(*, extra_ba: str | None = None, omitir: str | None = None) -> byte
 
 
 def _soap_sucesso() -> bytes:
-    return b"""<?xml version='1.0' encoding='UTF-8'?>
+    xml = """<?xml version='1.0' encoding='UTF-8'?>
 <soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>
  <soap:Body>
   <ConsultarResponse xmlns='http://servico.cfm.org.br/'>
@@ -44,12 +44,13 @@ def _soap_sucesso() -> bytes:
     <dataAtualizacao>02/09/2026</dataAtualizacao>
     <situacao><codigo>A</codigo><descricao>REGULAR</descricao></situacao>
     <tipoInscricao><codigo>P</codigo><descricao>PRINCIPAL</descricao></tipoInscricao>
-    <especialidade>CARDIOLOGIA - RQE NÂ    <especialidade>CARDIOLOGIA - RQE N\xc2º    <especialidade>CARDIOLOGIA - RQE N\xc2\xba 123</especialidade>
-    <especialidade>CLINICA MEDICA - RQE NÂ    <especialidade>CLINICA MEDICA - RQE N\xc2º    <especialidade>CLINICA MEDICA - RQE N\xc2\xba 456</especialidade>
+    <especialidade>CARDIOLOGIA - RQE Nº 123</especialidade>
+    <especialidade>CLINICA MEDICA - RQE Nº 456</especialidade>
    </return>
   </ConsultarResponse>
  </soap:Body>
 </soap:Envelope>"""
+    return xml.encode("utf-8")
 
 
 def _soap_erro(codigo: str) -> bytes:
@@ -58,7 +59,7 @@ def _soap_erro(codigo: str) -> bytes:
  <soap:Body><ConsultarResponse xmlns='http://servico.cfm.org.br/'><return>
   <codigoErro>{codigo}</codigoErro><descricaoErro>erro controlado</descricaoErro>
  </return></ConsultarResponse></soap:Body>
-</soap:Envelope>""".encode()
+</soap:Envelope>""".encode("utf-8")
 
 
 def test_totalzip_exige_as_27_ufs_e_preserva_crm_anomalo() -> None:
@@ -86,7 +87,7 @@ def test_form_download_exige_post_e_mesmo_host() -> None:
     assert campo == "codigoAcesso"
 
 
-def test_parse_consultar_response_lê_campos_e_especialidades_repetidas() -> None:
+def test_parse_consultar_response_le_campos_e_especialidades_repetidas() -> None:
     resultado = parse_consultar_response(_soap_sucesso())
     assert resultado.crm_exibicao == "12345"
     assert resultado.uf == "SP"
