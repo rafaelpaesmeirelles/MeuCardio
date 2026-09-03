@@ -47,7 +47,13 @@ test("offers the third experience after login while login chooses only appearanc
   assert.match(login, /id: "light"/);
   assert.match(login, /id: "dark"/);
   assert.doesNotMatch(login, /id: "scientific"/);
-  assert.match(login, /Toda a cardiologia conectada/);
+  // Slogan atualizado em 03/09/2026 (commit 52224a6a4, "copy(login): atualiza
+  // slogan Cardiology Spaces", pedido direto do Rafael) — "Toda a cardiologia
+  // conectada. Você no centro." virou "Um universo de espaços. Uma só
+  // cardiologia." `test_prehome_approved_auth_flow.py` (backend) já foi
+  // atualizado no mesmo commit; esta referência ficou para trás.
+  assert.match(login, /Um universo de espaços/);
+  assert.match(login, /Uma só cardiologia/);
   assert.match(login, /Seu acesso e suas permissões não mudam/);
 });
 
