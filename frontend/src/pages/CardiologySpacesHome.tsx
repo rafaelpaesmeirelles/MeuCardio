@@ -1457,7 +1457,7 @@ export default function CardiologySpacesHome() {
             title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
           >
             <img
-              src="/spaces/corvia-galaxy-cameo.webp"
+              src={theme === "light" ? "/spaces/corvia-galaxy-cameo-light.webp" : "/spaces/corvia-galaxy-cameo.webp"}
               alt=""
               width="132"
               height="44"
