@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 from hashlib import sha256
+import os
 import sys
 
 from app.core.config import settings
@@ -42,15 +43,25 @@ def _parser() -> argparse.ArgumentParser:
     return parser
 
 
+def _chave_download() -> str:
+    # Alguns convênios recebem uma credencial própria para o arquivo completo.
+    # Se ela não existir, mantém compatibilidade com a chave única já prevista
+    # no CorVIA. Nenhuma das duas é registrada em log.
+    return (
+        os.getenv("CFM_TOTALZIP_CHAVE", "").strip()
+        or settings.cfm_webservice_chave.strip()
+    )
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     db = SessionLocal()
     try:
         if args.download:
-            chave = settings.cfm_webservice_chave.strip()
+            chave = _chave_download()
             if not chave:
                 raise CfmRegistryError(
-                    "CFM_WEBSERVICE_CHAVE não está configurada no ambiente de produção."
+                    "Credencial de download do CFM não está configurada no ambiente de produção."
                 )
             payload = baixar_totalzip(chave)
             digest = sha256(payload).hexdigest()
