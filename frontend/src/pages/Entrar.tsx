@@ -9,6 +9,7 @@ import "../styles/login-fullscreen-social.css";
 import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
 import "../styles/cardiology-spaces-login.css";
+import "../styles/cardiology-spaces-login-approved-final.css";
 
 type TemaPublico = CorviaTheme;
 
@@ -46,22 +47,6 @@ const ESPACOS = [
   { id: "pesquisa", nome: "Pesquisa", detalhe: "Evidência", icone: "evidencia" as const },
   { id: "gestao", nome: "Gestão", detalhe: "Estratégia", icone: "gestao" as const },
 ];
-
-function MarcaAndroid() {
-  return (
-    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-      <path fill="currentColor" d="m7.1 6.55-1.3-2.26a.5.5 0 0 1 .87-.5l1.32 2.3A8.1 8.1 0 0 1 12 5.05c1.45 0 2.82.38 4.01 1.04l1.32-2.3a.5.5 0 0 1 .87.5l-1.3 2.26A7.42 7.42 0 0 1 20 12H4a7.42 7.42 0 0 1 3.1-5.45ZM8 9.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm8 0A.75.75 0 1 0 16 8a.75.75 0 0 0 0 1.5ZM4 13h16v6a2 2 0 0 1-2 2h-1v1.25a.75.75 0 0 1-1.5 0V21h-7v1.25a.75.75 0 0 1-1.5 0V21H6a2 2 0 0 1-2-2v-6Z" />
-    </svg>
-  );
-}
-
-function MarcaWindows() {
-  return (
-    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-      <path fill="currentColor" d="M2 3.4 10.7 2v9.3H2V3.4Zm9.7-1.55L22 0v11.3H11.7V1.85ZM2 12.3h8.7v9.3L2 20.2v-7.9Zm9.7 0H22V24l-10.3-1.85V12.3Z" />
-    </svg>
-  );
-}
 
 export default function Entrar() {
   const { entrar } = useAuth();
@@ -116,18 +101,11 @@ export default function Entrar() {
         <header className="login-gateway__hero">
           <p>CORVIA · CARDIOLOGY SPACES</p>
           <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
-          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitam a mesma identidade clínica — com continuidade, confiança e contexto.</span>
+          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.</span>
         </header>
 
         <div className="login-gateway__universe" aria-hidden="true">
-          <svg className="login-gateway__routes" viewBox="0 0 1200 390" preserveAspectRatio="none">
-            <path d="M70 245C240 64 412 48 600 164C788 48 960 64 1130 245" />
-            <path d="M64 273C252 143 430 133 600 218C770 133 948 143 1136 273" />
-            <path d="M128 315C315 253 458 251 600 292C742 251 885 253 1072 315" />
-          </svg>
-          <div className="login-gateway__milky-way">
-            <span />
-          </div>
+          <div className="login-gateway__milky-way"><span /></div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />
             <CoracaoHolografico />
@@ -135,8 +113,6 @@ export default function Entrar() {
               <path className="login-gateway__pulse-baseline" d="M2 29H358" />
               <path className="login-gateway__pulse-trace" d="M2 29H29C35 29 37 23 43 23S52 29 59 29H81L88 32L96 8L105 42L113 29H137C148 29 151 16 164 16S181 29 195 29H224C230 29 232 23 238 23S247 29 254 29H275L282 32L290 8L299 42L307 29H329C340 29 343 17 358 17" />
             </svg>
-            <i className="login-gateway__ring login-gateway__ring--one" />
-            <i className="login-gateway__ring login-gateway__ring--two" />
           </div>
           <div className="login-gateway__spaces">
             {ESPACOS.map((espaco) => (
@@ -154,6 +130,7 @@ export default function Entrar() {
           <span><Icone nome="conta" /></span>
           <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Entre no CorVIA</h2></div>
         </header>
+
         <fieldset className="login-gateway__theme-choice" aria-describedby="login-theme-note">
           <legend>Escolha a aparência</legend>
           <div className="login-gateway__theme-choice-options">
@@ -174,6 +151,7 @@ export default function Entrar() {
           </div>
           <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão. Seu acesso e suas permissões não mudam.</p>
         </fieldset>
+
         <form className="login-gateway__form" onSubmit={enviar}>
           <label className="login-gateway__field" htmlFor="email">
             <span>E-mail profissional</span>
@@ -189,17 +167,18 @@ export default function Entrar() {
           </button>
           {erro && <p id="login-erro" className="login-gateway__error" role="alert">{erro}</p>}
         </form>
+
+        <Link className="login-gateway__join" to="/solicitar-acesso">
+          <span><Icone nome="conta" /></span>
+          <span><strong>Novo no CorVIA?</strong><small>Solicite seu Acesso</small></span>
+          <Icone nome="seta" />
+        </Link>
       </section>
 
       <footer className="login-gateway__footer">
         <div className="login-gateway__form-meta">
           <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Manter este acesso</label>
           <Link to="/esqueci-senha">Esqueci minha senha</Link>
-        </div>
-        <div className="login-gateway__utilities">
-          <a href="/downloads/corvia-cardiology-spaces-android-1.2.0.apk" download="CorVIA-Cardiology-Spaces-Android-1.2.0.apk"><span><MarcaAndroid /></span><strong>Android</strong><small>Baixar app</small><Icone nome="seta" /></a>
-          <div role="status" aria-label="Aplicativo para Windows pendente de assinatura"><span><MarcaWindows /></span><strong>Windows</strong><small>Em breve</small></div>
-          <Link to="/solicitar-acesso"><span><Icone nome="conta" /></span><strong>Novo no CorVIA?</strong><small>Solicitar acesso</small><Icone nome="seta" /></Link>
         </div>
         <nav aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
       </footer>
