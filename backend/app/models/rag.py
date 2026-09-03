@@ -1,7 +1,16 @@
 from datetime import datetime, timezone
 
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import (
+    Boolean,
+    DateTime,
+    ForeignKey,
+    Integer,
+    JSON,
+    String,
+    Text,
+    UniqueConstraint,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.config import settings
@@ -9,7 +18,17 @@ from app.core.db import Base
 
 
 class DocumentChunk(Base):
-    """Trecho indexado de um documento, com embedding para busca semântica."""
+    """Trecho indexado de um documento, com embedding para busca semântica.
+
+    `content_hash` (migration `b7ri20260903`) é o sha256 do `body_md` do
+    documento no momento da indexação — todo chunk do mesmo documento
+    compartilha o mesmo hash. Permite `rag.indexar_tudo()` detectar corpo
+    editado e reindexar sozinho, sem depender de alguém lembrar de chamar
+    `indexar_documento()` manualmente a cada edição.
+
+    `embedding_model` registra qual modelo gerou o vetor — nunca comparado
+    silenciosamente entre modelos diferentes (ver `KnowledgeChunk` abaixo,
+    mesma convenção)."""
 
     __tablename__ = "document_chunks"
 
@@ -22,6 +41,8 @@ class DocumentChunk(Base):
     conteudo: Mapped[str] = mapped_column(Text)
     embedding: Mapped[list[float]] = mapped_column(Vector(settings.embedding_dim))
     tokens_aprox: Mapped[int] = mapped_column(Integer, default=0)
+    content_hash: Mapped[str] = mapped_column(String(64), index=True)
+    embedding_model: Mapped[str] = mapped_column(String(80))
 
 
 class KnowledgeChunk(Base):
@@ -53,6 +74,8 @@ class KnowledgeChunk(Base):
     embedding: Mapped[list[float]] = mapped_column(Vector(settings.embedding_dim))
     tokens_aprox: Mapped[int] = mapped_column(Integer, default=0)
     content_hash: Mapped[str] = mapped_column(String(64), index=True)
+    # Migration `b7ri20260903` — mesma convenção de `DocumentChunk.embedding_model`.
+    embedding_model: Mapped[str] = mapped_column(String(80))
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
@@ -60,6 +83,31 @@ class KnowledgeChunk(Base):
     __table_args__ = (
         UniqueConstraint("entity_type", "entity_id", "ordem", name="uq_knowledge_chunk_posicao"),
     )
+
+
+class RagReindexRun(Base):
+    """Resumo de uma execução do backfill incremental (migration `b7ri20260903`).
+
+    Uma linha por execução de `app.commands.reindex_rag_completo_20260902`,
+    gravada ao final (sucesso ou falha) — nunca dado clínico, só contadores.
+    É o que permite `/api/ai/status` (e qualquer operador lendo o banco)
+    responder "quando rodou a última vez, com que resultado" sem depender de
+    log de container, que hoje se perde (`docker compose exec` não aparece em
+    `docker compose logs`)."""
+
+    __tablename__ = "rag_reindex_runs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    finished_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    dry_run: Mapped[bool] = mapped_column(Boolean, default=False)
+    only_types: Mapped[str | None] = mapped_column(String(400), nullable=True)
+    entidades_processadas: Mapped[int] = mapped_column(Integer, default=0)
+    trechos_gerados: Mapped[int] = mapped_column(Integer, default=0)
+    falhas: Mapped[int] = mapped_column(Integer, default=0)
+    backlog_restante: Mapped[int] = mapped_column(Integer, default=0)
+    exit_code: Mapped[int] = mapped_column(Integer, default=0)
+    detalhe: Mapped[dict | None] = mapped_column(JSON, nullable=True)
 
 
 class AIConversation(Base):

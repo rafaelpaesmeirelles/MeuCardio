@@ -50,8 +50,6 @@ from app.services.knowledge_graph import (
     arquivar_entidades_de_conteudo_despublicado,
     backfill_mesmo_tema,
 )
-from app.services import rag as rag_service
-from app.services import rag_multi
 from app.services.study_track_progress import canonicalize_progress_tokens
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
@@ -588,25 +586,6 @@ def _migrate_study_track_progress(db: Session) -> int:
     return updated
 
 
-def _reindexar_rag_pendente(db: Session) -> dict[str, Any]:
-    """Parte 3 da correção coordenada de 02/09/2026 — fecha o gap de
-    idempotência do pipeline: até aqui, `reconcile()` publicava e
-    reconciliava o grafo (`backfill_mesmo_tema`), mas nunca colocava o
-    conteúdo novo na fila de RAG/embedding — isso ficava só num comando
-    manual avulso (`reindex_rag_completo_20260902`). Chamado sempre que o
-    corpus é reconciliado (`--publish-reviewed`), com `apenas_pendentes=True`
-    (idempotente: só processa quem ainda não tem chunk).
-
-    `indexar_tudo()`/`indexar_tudo_multi()` já são resilientes a falha do
-    provedor de embeddings item a item (Part 3) — uma falha de crédito/rede
-    aqui nunca derruba a reconciliação nem faz o conteúdo desaparecer da
-    busca léxica, que não depende de embedding nenhum."""
-    return {
-        "documentos": rag_service.indexar_tudo(db, apenas_pendentes=True),
-        "multi_frente": rag_multi.indexar_tudo_multi(db, apenas_pendentes=True),
-    }
-
-
 def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) -> dict[str, Any]:
     loads: dict[str, Any] = {}
     prepared = {
@@ -699,7 +678,6 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         _validate_full_corpus_publication(database, full_corpus_authorization)
         db.commit()
         knowledge_graph = backfill_mesmo_tema(db)
-        rag = _reindexar_rag_pendente(db)
     except Exception:
         db.rollback()
         raise
@@ -730,7 +708,24 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         "migrated_study_track_progress": migrated_study_track_progress,
         "database": database,
         "knowledge_graph": knowledge_graph,
-        "rag": rag,
+        # Correção coordenada de 03/09/2026 (seção "arquitetura de deploy"):
+        # `reconcile()` NUNCA mais chama o provedor de embeddings. Publicar/
+        # reconciliar tem que ser rápido e determinístico — sem depender de
+        # rede externa — porque roda inteiramente dentro da janela em que o
+        # Caddy está fechado (`deploy.sh`, entre parar e reabrir o proxy). A
+        # indexação RAG (documentos + as 12 frentes de `rag_sources`) agora é
+        # responsabilidade exclusiva de
+        # `app.commands.reindex_rag_completo_20260902`, disparado pelo
+        # `deploy.sh` DEPOIS que o tráfego já reabriu — nunca dentro da janela
+        # crítica, e uma falha ali nunca derruba o deploy nem aciona rollback.
+        "rag": {
+            "status": "nao_executado_aqui",
+            "motivo": (
+                "reconcile() não indexa RAG desde 03/09/2026 — rode "
+                "'python -m app.commands.reindex_rag_completo_20260902' separadamente "
+                "(o deploy.sh já faz isso, fora da janela de tráfego fechado)."
+            ),
+        },
     }
     return result
 

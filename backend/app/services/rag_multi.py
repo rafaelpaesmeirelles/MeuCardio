@@ -7,12 +7,12 @@ tabela de destino mudam (`knowledge_chunks` em vez de `document_chunks`).
 """
 from __future__ import annotations
 
-import hashlib
 import logging
 
 from sqlalchemy import select, union_all
 from sqlalchemy.orm import Session
 
+from app.core.config import settings
 from app.models.rag import KnowledgeChunk
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
 from app.services.catalog_search import (
@@ -25,13 +25,15 @@ from app.services.catalog_search import (
     normalizar,
 )
 from app.services.knowledge_graph import _id_estavel
-from app.services.rag import dividir, obter_provedor_embeddings
+from app.services.rag import EmbeddingDimensionError, content_hash, dividir, obter_provedor_embeddings
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
 
 # `catalog_search` usa 'emergencia' como rótulo de frente (mesmo texto
 # mostrado em /api/search); `rag_sources.FONTES_RAG` usa o entity_type
 # 'protocolo_emergencia' (allowlist do grafo). Único ponto onde os dois
 # vocabulários divergem — todo o resto é 1:1 (frente == entity_type).
+# 'documento' é tratado à parte em `buscar_lexico_multi` (não tem FonteRAG:
+# documents continua indexado em document_chunks, ver rag_sources.py).
 _FRENTE_PARA_ENTITY_TYPE = {fonte.entity_type: fonte.entity_type for fonte in FONTES_RAG if fonte.entity_type != "protocolo_emergencia"}
 _FRENTE_PARA_ENTITY_TYPE["emergencia"] = "protocolo_emergencia"
 
@@ -39,66 +41,101 @@ _FRENTE_PARA_ENTITY_TYPE["emergencia"] = "protocolo_emergencia"
 log = logging.getLogger("corvia.rag_multi")
 
 
-def _hash(texto: str) -> str:
-    return hashlib.sha256(texto.encode("utf-8")).hexdigest()
+def indexar_entidade(
+    db: Session, *, entity_type: str, entity_id: int, titulo: str, texto: str, provedor=None,
+    forcar: bool = False,
+) -> int:
+    """Upsert idempotente dos chunks de uma entidade, por CONTEÚDO
+    (`content_hash`), não só por presença.
 
+    Mesma ordem de `rag.indexar_documento()` (correção coordenada de
+    03/09/2026): hash primeiro (sem rede), embeddings ANTES de qualquer
+    DELETE, transação curta só depois de os vetores estarem em mãos. Uma
+    falha do provedor nunca deixa uma transação destrutiva pendente aberta
+    nem apaga um chunk válido existente.
 
-def indexar_entidade(db: Session, *, entity_type: str, entity_id: int, titulo: str, texto: str, provedor=None) -> int:
-    """Upsert idempotente dos chunks de uma entidade. `content_hash` do texto
-    completo evita reprocessar quando nada mudou (chamador decide se pula)."""
+    `forcar=True` pula a checagem de hash (mesmo uso de
+    `rag.indexar_documento(forcar=...)`: só depois de trocar de modelo/
+    dimensão de embedding)."""
 
     provedor = provedor or obter_provedor_embeddings()
-    db.query(KnowledgeChunk).filter(
-        KnowledgeChunk.entity_type == entity_type, KnowledgeChunk.entity_id == entity_id,
-    ).delete()
+
+    hash_atual = content_hash(texto)
+    if not forcar:
+        hash_existente = db.execute(
+            select(KnowledgeChunk.content_hash)
+            .where(KnowledgeChunk.entity_type == entity_type, KnowledgeChunk.entity_id == entity_id)
+            .limit(1)
+        ).scalar_one_or_none()
+        if hash_existente == hash_atual:
+            return 0  # conteúdo inalterado — zero chamadas de rede
 
     pedacos = dividir(texto or "")
     if not pedacos:
-        db.commit()
+        apagados = db.query(KnowledgeChunk).filter(
+            KnowledgeChunk.entity_type == entity_type, KnowledgeChunk.entity_id == entity_id,
+        ).delete()
+        if apagados:
+            db.commit()
         return 0
 
-    hash_completo = _hash(texto)
     textos = [f"{titulo}\n{t or ''}\n{c}".strip() for t, c in pedacos]
 
     vetores: list[list[float]] = []
     for i in range(0, len(textos), 64):
         vetores.extend(provedor.embeddings(textos[i:i + 64]))
+    if len(vetores) != len(pedacos):
+        raise EmbeddingDimensionError(
+            f"Provedor devolveu {len(vetores)} vetores para {len(pedacos)} trechos "
+            f"({entity_type} id={entity_id})."
+        )
+    for vetor in vetores:
+        if len(vetor) != settings.embedding_dim:
+            raise EmbeddingDimensionError(
+                f"Vetor de dimensão {len(vetor)} não bate com embedding_dim="
+                f"{settings.embedding_dim} ({entity_type} id={entity_id})."
+            )
 
+    db.query(KnowledgeChunk).filter(
+        KnowledgeChunk.entity_type == entity_type, KnowledgeChunk.entity_id == entity_id,
+    ).delete()
     for ordem, ((secao_titulo, corpo), vetor) in enumerate(zip(pedacos, vetores)):
         db.add(KnowledgeChunk(
             entity_type=entity_type, entity_id=entity_id, ordem=ordem,
             titulo_secao=secao_titulo, conteudo=corpo, embedding=vetor,
-            tokens_aprox=len(corpo) // 4, content_hash=hash_completo,
+            tokens_aprox=len(corpo) // 4, content_hash=hash_atual,
+            embedding_model=settings.openai_embedding_model,
         ))
     db.commit()
     return len(pedacos)
 
 
-def _entidades_ja_indexadas(db: Session, entity_type: str) -> set[int]:
-    return set(
-        db.execute(
-            select(KnowledgeChunk.entity_id).where(KnowledgeChunk.entity_type == entity_type).distinct()
-        ).scalars()
-    )
+def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True, limite: int | None = None) -> dict:
+    """Indexa todas as linhas publicadas de um `entity_type` do registro.
 
+    `apenas_pendentes=True` (default): `indexar_entidade` decide sozinha, por
+    `content_hash`, se a entidade já está em dia — sem chunk OU com texto-
+    fonte alterado desde a última indexação conta como pendente. Entidade
+    inalterada nunca chama o provedor. `apenas_pendentes=False` força
+    reprocessar tudo, mesmo o que já está com hash em dia.
 
-def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True) -> dict:
-    """Indexa todas as linhas publicadas de um `entity_type` do registro."""
+    `limite`, se dado, para depois de processar essa quantidade de entidades
+    nesta chamada — não é falha, só corte de lote; `backlog_restante` reflete
+    o resto, resolvido normalmente na próxima chamada (idempotente)."""
 
     if entity_type == "calculadora":
-        return _indexar_calculadoras(db, apenas_pendentes=apenas_pendentes)
+        return _indexar_calculadoras(db, apenas_pendentes=apenas_pendentes, limite=limite)
 
     fonte = FONTES_POR_TIPO[entity_type]
     provedor = obter_provedor_embeddings()
-    ja_indexadas = _entidades_ja_indexadas(db, entity_type) if apenas_pendentes else set()
 
     total_entidades = 0
     total_trechos = 0
     falhas = 0
     falhas_seguidas = 0
-    for item in publicados(db, fonte):
-        if apenas_pendentes and item.id in ja_indexadas:
-            continue
+    backlog_restante = 0
+    itens = publicados(db, fonte)
+    for indice, item in enumerate(itens):
         texto = fonte.texto(item)
         if not texto or not texto.strip():
             continue
@@ -111,9 +148,13 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
         # pra cada entidade restante (achado ao ligar isto contra o acervo
         # inteiro em `reconcile_content`).
         try:
-            total_trechos += indexar_entidade(
-                db, entity_type=entity_type, entity_id=item.id, titulo=titulo, texto=texto, provedor=provedor,
+            trechos = indexar_entidade(
+                db, entity_type=entity_type, entity_id=item.id, titulo=titulo, texto=texto,
+                provedor=provedor, forcar=not apenas_pendentes,
             )
+            if trechos == 0 and apenas_pendentes:
+                continue  # já estava em dia
+            total_trechos += trechos
             falhas_seguidas = 0
         except Exception:
             log.exception("Falha ao indexar %s id=%s — segue pendente.", entity_type, item.id)
@@ -121,34 +162,45 @@ def indexar_tipo(db: Session, entity_type: str, *, apenas_pendentes: bool = True
             falhas += 1
             falhas_seguidas += 1
             if falhas_seguidas >= 3:
+                backlog_restante = len(itens) - (indice + 1)
                 log.warning("3 falhas seguidas ao indexar %s — provedor parece indisponível, lote interrompido.", entity_type)
                 break
             continue
         total_entidades += 1
-    return {"entity_type": entity_type, "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
+        if limite is not None and total_entidades >= limite:
+            backlog_restante = len(itens) - (indice + 1)
+            log.info("Limite de %d entidades (%s) atingido — %d ainda pendentes.", limite, entity_type, backlog_restante)
+            break
+    return {
+        "entity_type": entity_type, "entidades": total_entidades, "trechos": total_trechos,
+        "falhas": falhas, "backlog_restante": backlog_restante,
+    }
 
 
-def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict:
+def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True, limite: int | None = None) -> dict:
 
     provedor = obter_provedor_embeddings()
-    ja_indexadas = _entidades_ja_indexadas(db, "calculadora") if apenas_pendentes else set()
 
     total_entidades = 0
     total_trechos = 0
     falhas = 0
     falhas_seguidas = 0
-    for calc in CALCULATORS_REGISTRY.values():
+    backlog_restante = 0
+    calculadoras = list(CALCULATORS_REGISTRY.values())
+    for indice, calc in enumerate(calculadoras):
         entity_id = _id_estavel("calculadora", calc.slug)
-        if apenas_pendentes and entity_id in ja_indexadas:
-            continue
         partes = [calc.purpose, calc.reference, "\n".join(calc.limitations or [])]
         texto = "\n\n".join(p for p in partes if p)
         if not texto.strip():
             continue
         try:
-            total_trechos += indexar_entidade(
-                db, entity_type="calculadora", entity_id=entity_id, titulo=calc.name, texto=texto, provedor=provedor,
+            trechos = indexar_entidade(
+                db, entity_type="calculadora", entity_id=entity_id, titulo=calc.name, texto=texto,
+                provedor=provedor, forcar=not apenas_pendentes,
             )
+            if trechos == 0 and apenas_pendentes:
+                continue
+            total_trechos += trechos
             falhas_seguidas = 0
         except Exception:
             log.exception("Falha ao indexar calculadora slug=%s — segue pendente.", calc.slug)
@@ -156,11 +208,15 @@ def _indexar_calculadoras(db: Session, *, apenas_pendentes: bool = True) -> dict
             falhas += 1
             falhas_seguidas += 1
             if falhas_seguidas >= 3:
+                backlog_restante = len(calculadoras) - (indice + 1)
                 log.warning("3 falhas seguidas ao indexar calculadoras — provedor parece indisponível, lote interrompido.")
                 break
             continue
         total_entidades += 1
-    return {"entity_type": "calculadora", "entidades": total_entidades, "trechos": total_trechos, "falhas": falhas}
+    return {
+        "entity_type": "calculadora", "entidades": total_entidades, "trechos": total_trechos,
+        "falhas": falhas, "backlog_restante": backlog_restante,
+    }
 
 
 def indexar_tudo_multi(db: Session, *, apenas_pendentes: bool = True) -> dict:
@@ -269,8 +325,18 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
 
     Devolve citações no mesmo formato de `resolver_trechos_multi()` (sem
     `secao`, que só existe para chunk — aqui a unidade é o item inteiro).
-    Frente 'documento' é ignorada: já coberta pela busca léxica de
-    `document_chunks` em `rag.py` (`SQL_LEXICO`), não duplicada aqui.
+
+    A frente 'documento' ENTRA aqui desde 03/09/2026 (antes era descartada
+    de propósito, sob a premissa de que `rag.py::SQL_LEXICO` já cobria
+    documentos por léxico). Essa premissa era falsa: `SQL_LEXICO` faz INNER
+    JOIN com `document_chunks`, então um documento publicado que ainda não
+    tenha chunk (backlog de indexação, ou o próprio provedor de embeddings
+    fora do ar) ficava invisível em AMBOS os braços léxicos — o
+    `catalog_search` já o encontrava (não depende de chunk), mas o resultado
+    era jogado fora bem aqui. Manter é seguro: `montar_contexto()` deduplica
+    por slug, então um documento que já tenha chunk (e por isso já apareça
+    via `SQL_LEXICO`/semântico) não vira citação duplicada — só ganha uma
+    segunda fonte candidata no RRF, que o `setdefault` por slug já resolve.
     """
     values = {"q": pergunta, "q_like": literal_like(pergunta), "frente": None, "limit": limite, "offset": 0}
     search_values = {
@@ -284,9 +350,17 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
 
     resultados: list[dict] = []
     for linha in linhas:
+        if linha["frente"] == "documento":
+            resultados.append({
+                "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],
+                "secao": None, "conteudo": linha["snippet"],
+                "review_status": "revisado", "gaps": [],
+                "rota": f"/biblioteca/{linha['slug']}", "entity_type": "documento",
+            })
+            continue
         entity_type = _FRENTE_PARA_ENTITY_TYPE.get(linha["frente"])
         if entity_type is None:
-            continue  # 'documento' (já coberto em rag.py) ou frente desconhecida
+            continue  # frente desconhecida do allowlist do grafo
         fonte = FONTES_POR_TIPO[entity_type]
         resultados.append({
             "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],

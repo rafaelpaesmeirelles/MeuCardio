@@ -19,6 +19,7 @@ em embedding e muito bem em busca léxica.
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor
+import hashlib
 import json
 import logging
 import re
@@ -30,7 +31,7 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.models.content import Document
-from app.models.rag import AIConversation, AIMessage, DocumentChunk
+from app.models.rag import AIConversation, AIMessage, DocumentChunk, KnowledgeChunk
 from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA, executar_tool_assistente
 from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
 
@@ -38,6 +39,48 @@ log = logging.getLogger("corvia.rag")
 
 MAX_CHARS = 1400
 MIN_CHARS = 200
+
+
+class EmbeddingDimensionError(RuntimeError):
+    """Levantada quando o provedor devolve vetor de dimensão diferente da
+    configurada (`settings.embedding_dim`), ou quando o schema do banco não
+    bate com essa configuração — nunca deve ser engolida como falha
+    transitória de rede: é erro de configuração/modelo, precisa de
+    intervenção humana antes de qualquer coisa ser gravada."""
+
+
+def content_hash(texto: str) -> str:
+    """sha256 do texto-fonte, usado como `content_hash` em `DocumentChunk` e
+    `KnowledgeChunk` — mesma função para as duas tabelas, uma só definição."""
+    return hashlib.sha256((texto or "").encode("utf-8")).hexdigest()
+
+
+def verificar_dimensao_embedding(db: Session) -> None:
+    """Falha de forma explícita se `settings.embedding_dim` divergir da
+    dimensão real da coluna `embedding` no banco (pgvector guarda a dimensão
+    em `atttypmod`). Sem isto, uma mudança de `EMBEDDING_DIM` sem migration
+    correspondente só apareceria como erro de driver no primeiro INSERT —
+    esta checagem é barata (um SELECT de catálogo, sem tocar em nenhuma
+    linha de dado) e roda antes de qualquer chamada ao provedor."""
+    linhas = db.execute(
+        text(
+            "SELECT c.relname, a.atttypmod "
+            "FROM pg_attribute a JOIN pg_class c ON c.oid = a.attrelid "
+            "WHERE c.relname IN ('document_chunks', 'knowledge_chunks') "
+            "AND a.attname = 'embedding' AND a.attnum > 0 AND NOT a.attisdropped"
+        )
+    ).all()
+    for tabela, atttypmod in linhas:
+        # pgvector grava a dimensão diretamente em atttypmod (sem o desconto de
+        # 4 bytes usado por tipos varlena como varchar) — confirmado lendo o
+        # tipo `vector` da extensão: atttypmod > 0 é a dimensão em si.
+        if atttypmod > 0 and atttypmod != settings.embedding_dim:
+            raise EmbeddingDimensionError(
+                f"embedding_dim configurado ({settings.embedding_dim}) diverge da "
+                f"dimensão real da coluna {tabela}.embedding no banco ({atttypmod}). "
+                "Corrija EMBEDDING_DIM ou aplique a migration correta antes de indexar "
+                "— gravar agora misturaria vetores incompatíveis na mesma tabela."
+            )
 
 
 def dividir(markdown: str) -> list[tuple[str | None, str]]:
@@ -110,13 +153,49 @@ def dividir(markdown: str) -> list[tuple[str | None, str]]:
     return compactado
 
 
-def indexar_documento(db: Session, doc: Document, provedor=None) -> int:
+def indexar_documento(db: Session, doc: Document, provedor=None, *, forcar: bool = False) -> int:
+    """Upsert idempotente por CONTEÚDO, não só por presença de chunk.
+
+    `forcar=True` pula a checagem de hash e reprocessa mesmo que o conteúdo
+    esteja idêntico ao já indexado — único caso legítimo é depois de trocar
+    de modelo/dimensão de embedding, quando o hash do TEXTO não mudou mas o
+    VETOR precisa ser regerado com o modelo novo.
+
+    Fluxo, nesta ordem (correção coordenada de 03/09/2026, seção "content_hash"):
+      1. calcula o hash do corpo atual — se já bate com o hash gravado no
+         chunk existente, o documento está atual: devolve sem tocar no banco
+         nem chamar o provedor.
+      2. divide o texto em trechos (sem rede, sem banco).
+      3. chama o provedor de embeddings ANTES de qualquer DELETE — uma falha
+         aqui nunca apaga o índice anterior, porque o índice anterior ainda
+         nem foi tocado.
+      4. só com os vetores em mãos, abre uma transação curta: apaga os
+         chunks antigos da entidade e insere os novos, commit.
+
+    Isto substitui o desenho anterior (DELETE logo no início, embeddings
+    chamados com o DELETE já pendente na transação) — que mantinha uma
+    transação Postgres aberta pelo tempo inteiro da chamada de rede (até
+    ~30min no pior caso, sem `idle_in_transaction_session_timeout`
+    configurado no servidor) e, em caso de falha, dependia do `rollback()` do
+    CHAMADOR para desfazer o DELETE. Agora uma falha do provedor não abre
+    transação destrutiva nenhuma."""
     provedor = provedor or obter_provedor_embeddings()
-    db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).delete()
+
+    hash_atual = content_hash(doc.body_md)
+    if not forcar:
+        hash_existente = db.execute(
+            select(DocumentChunk.content_hash)
+            .where(DocumentChunk.document_id == doc.id)
+            .limit(1)
+        ).scalar_one_or_none()
+        if hash_existente == hash_atual:
+            return 0  # conteúdo inalterado desde a última indexação — zero chamadas de rede
 
     pedacos = dividir(doc.body_md)
     if not pedacos:
-        db.commit()
+        apagados = db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).delete()
+        if apagados:
+            db.commit()
         return 0
 
     # O título do documento entra em cada trecho: sem isso, um trecho "## Dose"
@@ -126,47 +205,73 @@ def indexar_documento(db: Session, doc: Document, provedor=None) -> int:
     vetores: list[list[float]] = []
     for i in range(0, len(textos), 64):  # respeita o limite de lote da API
         vetores.extend(provedor.embeddings(textos[i : i + 64]))
+    if len(vetores) != len(pedacos):
+        raise EmbeddingDimensionError(
+            f"Provedor devolveu {len(vetores)} vetores para {len(pedacos)} trechos "
+            f"(documento id={doc.id} slug={doc.slug})."
+        )
+    for vetor in vetores:
+        if len(vetor) != settings.embedding_dim:
+            raise EmbeddingDimensionError(
+                f"Vetor de dimensão {len(vetor)} não bate com embedding_dim="
+                f"{settings.embedding_dim} (documento id={doc.id} slug={doc.slug})."
+            )
 
+    db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).delete()
     for ordem, ((titulo, corpo), vetor) in enumerate(zip(pedacos, vetores)):
         db.add(DocumentChunk(
             document_id=doc.id, ordem=ordem, titulo_secao=titulo,
             conteudo=corpo, embedding=vetor, tokens_aprox=len(corpo) // 4,
+            content_hash=hash_atual, embedding_model=settings.openai_embedding_model,
         ))
     db.commit()
     return len(pedacos)
 
 
-def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
+def indexar_tudo(db: Session, apenas_pendentes: bool = True, *, limite: int | None = None) -> dict:
     """Indexa em lote. Só documentos PUBLICADOS entram no índice.
 
     O filtro por `published` aqui é defesa em profundidade: `recuperar()` já não
     devolve trecho de documento não publicado, mas manter o retido fora do índice
     evita gastar embedding com o que não pode ser servido e fecha a porta na
-    origem. Documento publicado depois é pego na chamada seguinte, porque
-    `apenas_pendentes` seleciona quem ainda não tem trecho — o fluxo de trabalho
-    (publicar e então indexar) continua funcionando sem mudança.
+    origem.
 
-    `indexar_documento()` NÃO recebeu esse filtro de propósito: ele é chamado
-    diretamente para reindexar um documento específico cujo corpo mudou, e quem
+    `apenas_pendentes=True` agora significa "sem chunk OU com corpo alterado
+    desde a última indexação" — `indexar_documento()` decide isso sozinho por
+    `content_hash` (seção "content_hash" da correção coordenada de 03/09/2026).
+    Antes, um documento com QUALQUER chunk era considerado "em dia" para
+    sempre; editar o corpo de um documento já publicado nunca disparava
+    reindexação automática, só uma chamada manual de `indexar_documento()`
+    para aquele slug específico. `apenas_pendentes=False` força reprocessar
+    mesmo quem já está com o hash em dia (raro — só faz sentido depois de
+    trocar de modelo/dimensão de embedding).
+
+    `indexar_documento()` NÃO recebeu o filtro de `published` de propósito:
+    ele é chamado diretamente para reindexar um documento específico, e quem
     chama já sabe o que está fazendo.
+
+    `limite`, se dado, para o lote depois de processar essa quantidade de
+    documentos (efetivamente reindexados, não contando os que já estavam em
+    dia) — permite ao operador rodar o backfill em lotes pequenos e seguros
+    em vez de tentar o backlog inteiro numa chamada só. Não é falha: entra em
+    `backlog_restante` normalmente, e a próxima chamada retoma de onde parou
+    (idempotente por `content_hash`, sem precisar guardar cursor).
     """
+    verificar_dimensao_embedding(db)
     provedor = obter_provedor_embeddings()
-    q = db.query(Document).filter(Document.published.is_(True))
-    if apenas_pendentes:
-        q = q.filter(~Document.id.in_(select(DocumentChunk.document_id).distinct()))
-    docs = q.all()
+    docs = db.query(Document).filter(Document.published.is_(True)).all()
     total = 0
     processados = 0
     falhas = 0
     falhas_seguidas = 0
+    pendentes_restantes = 0
     for indice, d in enumerate(docs):
-        # Parte 3 da correção coordenada de 02/09/2026: um documento cuja
-        # chamada ao provedor falhe (crédito, rede, provedor fora do ar) não
-        # pode travar o lote inteiro. `db.rollback()` descarta o DELETE dos
-        # chunks antigos que `indexar_documento()` já tinha emitido (mas não
-        # commitado) antes de levantar — o documento continua exatamente
-        # como estava, ainda pendente, e `apenas_pendentes` tenta de novo na
-        # próxima chamada (idempotente).
+        # Parte 3 da correção coordenada de 02/09/2026, preservada: um
+        # documento cuja chamada ao provedor falhe (crédito, rede, provedor
+        # fora do ar) não pode travar o lote inteiro. Como o embedding agora
+        # é obtido ANTES de qualquer DELETE (ver `indexar_documento`), uma
+        # falha aqui não deixa nenhum DML pendente para desfazer — só
+        # incrementa o contador de falha e segue.
         #
         # Falha seguida 3x é tratada como provedor fora do ar (crédito/rede),
         # não como conteúdo ruim de um item específico: interrompe o lote em
@@ -175,22 +280,36 @@ def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
         # acervo inteiro). Tudo que não foi tentado continua pendente e entra
         # na próxima chamada normalmente.
         try:
-            total += indexar_documento(db, d, provedor)
+            trechos = indexar_documento(db, d, provedor, forcar=not apenas_pendentes)
+            if trechos == 0 and apenas_pendentes:
+                # devolveu 0 porque já estava em dia (hash bateu) — não conta
+                # como "processado" nem reseta o circuito de falhas seguidas,
+                # simplesmente não havia nada a fazer aqui.
+                continue
+            total += trechos
             processados += 1
             falhas_seguidas = 0
+            if limite is not None and processados >= limite:
+                pendentes_restantes = len(docs) - (indice + 1)
+                log.info("Limite de %d documentos atingido — %d ainda pendentes para a próxima chamada.", limite, pendentes_restantes)
+                break
         except Exception:
             log.exception("Falha ao indexar documento id=%s slug=%s — segue pendente.", d.id, d.slug)
             db.rollback()
             falhas += 1
             falhas_seguidas += 1
             if falhas_seguidas >= 3:
+                pendentes_restantes = len(docs) - (indice + 1)
                 log.warning(
                     "3 falhas seguidas ao indexar documentos — provedor parece indisponível, "
                     "lote interrompido (%d de %d ainda pendentes).",
-                    len(docs) - (indice + 1), len(docs),
+                    pendentes_restantes, len(docs),
                 )
                 break
-    return {"documentos": processados, "trechos": total, "falhas": falhas}
+    return {
+        "documentos": processados, "trechos": total, "falhas": falhas,
+        "backlog_restante": pendentes_restantes,
+    }
 
 
 # A metade léxica da busca híbrida precisa do MESMO filtro de `published` que a
@@ -360,6 +479,17 @@ def montar_contexto(trechos: list[dict]) -> tuple[str, list[dict]]:
             # aquela fonte tem ponto não conferido, sem depender de o modelo
             # repetir o aviso na resposta. Inerte até o frontend consumi-lo.
             "gaps": t.get("gaps") or [],
+            # Correção coordenada de 03/09/2026: `t["rota"]`/`t["entity_type"]`
+            # já vêm preenchidos por `recuperar()` para TODAS as frentes
+            # (documento e as 12 do RAG multi-frente), mas até aqui eram
+            # descartados nesta montagem — o frontend caía sempre em
+            # `/biblioteca/{slug}`, rota que só existe de fato para
+            # `entity_type == "documento"`. Toda citação de evidência, estudo,
+            # medicamento etc. virava link quebrado. `rota` é a fonte da
+            # verdade de navegação a partir de agora; nenhum consumidor deve
+            # recompor a URL a partir do slug sozinho.
+            "rota": t.get("rota"),
+            "entity_type": t.get("entity_type"),
         })
     return "\n\n---\n\n".join(blocos), list(fontes.values())
 
