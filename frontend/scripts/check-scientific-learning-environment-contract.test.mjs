@@ -38,13 +38,17 @@ const scientificRoutes = [
   "/favoritos",
 ];
 
-test("offers the third experience at login and in the home selector", () => {
+test("offers the third experience after login while login chooses only appearance", () => {
   assert.match(home, /type Mode = "complete" \| "essential" \| "scientific"/);
   assert.match(home, /chooseMode\("scientific"\)/);
   assert.match(home, />Ciência & Ensino</);
   assert.match(home, /setSelectedSpace\(nextMode === "scientific" \? "descobrir" : "consultorio"\)/);
   assert.match(login, /sessionStorage\.removeItem\("corvia:cardiology-spaces:mode"\)/);
-  assert.match(login, /Consultório, Hospital, Ensino, Pesquisa e Gestão integrados para acompanhar cada decisão\./);
+  assert.match(login, /id: "light"/);
+  assert.match(login, /id: "dark"/);
+  assert.doesNotMatch(login, /id: "scientific"/);
+  assert.match(login, /Toda a cardiologia conectada/);
+  assert.match(login, /Seu acesso e suas permissões não mudam/);
 });
 
 test("keeps five scientific journeys and every scientific surface discoverable", () => {
@@ -58,9 +62,11 @@ test("keeps five scientific journeys and every scientific surface discoverable",
   for (const [id, sceneName] of Object.entries(approvedScenes)) {
     assert.match(home, new RegExp(`id: "${id}"`));
     assert.match(scene, new RegExp(`${id}:\\s*"/spaces/corvia-room-${sceneName}\\.jpg"`));
+    assert.match(scene, new RegExp(`${id}:\\s*"/spaces/corvia-room-${sceneName}-light(?:-640)?\\.(?:jpg|webp)"`));
   }
-  assert.match(scene, /src=\{SCENE_BY_SPACE\[space\]\}/);
-  assert.doesNotMatch(scene, /<picture|srcSet=|\.webp|fetchPriority|priority/);
+  assert.match(scene, /theme\s*===\s*"light"\s*\?\s*LIGHT_SCENE_BY_SPACE\[space\]\s*:\s*SCENE_BY_SPACE\[space\]/);
+  assert.match(scene, /src=\{scene\}/);
+  assert.match(scene, /decoding="async"/);
   assert.doesNotMatch(home, /<CardiologySpaceScene[^>]*priority=/);
   for (const route of scientificRoutes) {
     assert.ok(home.includes(`"${route}"`), `missing ${route}`);

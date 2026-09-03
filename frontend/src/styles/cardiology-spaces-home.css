@@ -413,10 +413,57 @@ body.cardiology-spaces-active :where(a:hover) {
   column-gap: 20px;
 }
 
-.spaces-home__topbar > .spaces-brand-button {
+.spaces-home__brand-cluster {
+  position: relative;
+  display: grid;
   width: max-content;
+  align-items: center;
   justify-self: start;
+  justify-items: start;
   text-align: left;
+}
+
+.spaces-theme-cameo {
+  position: absolute;
+  z-index: 4;
+  top: calc(100% + 3px);
+  left: 50%;
+  width: 140px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.spaces-theme-cameo > img {
+  display: block;
+  width: 132px;
+  height: 44px;
+  object-fit: contain;
+  opacity: 1;
+  filter: brightness(1.12) saturate(1.08) contrast(1.12) drop-shadow(0 0 14px rgba(43, 216, 225, 0.32));
+  transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.spaces-theme-cameo:hover > img { opacity: 1; filter: brightness(1.2) saturate(1.14) contrast(1.14) drop-shadow(0 0 17px rgba(43, 216, 225, 0.42)); }
+.spaces-theme-cameo:active > img { transform: scale(0.97); }
+.spaces-theme-cameo:focus-visible { outline: 2px solid var(--space-accent); outline-offset: 1px; border-radius: 50%; }
+
+@media (max-width: 900px) {
+  .spaces-theme-cameo {
+    top: calc(100% + 1px);
+    width: 92px;
+    height: 44px;
+  }
+
+  .spaces-theme-cameo > img {
+    width: 88px;
+    height: 30px;
+  }
 }
 
 .spaces-everything-search {
@@ -876,12 +923,16 @@ body.cardiology-spaces-active :where(a:hover) {
   border: 1px solid rgba(101, 166, 206, 0.26);
   clip-path: polygon(6.2% 0, 93.8% 0, 100% 100%, 0 100%);
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.15));
+  transition: background 170ms ease, border-color 170ms ease, box-shadow 170ms ease, filter 170ms ease, transform 170ms ease;
 }
 
 .spaces-layer--now {
   min-height: 94px;
-  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.18), rgba(7, 28, 48, 0.98) 52%, rgba(var(--space-rgb), 0.1));
-  border-color: rgba(var(--space-rgb), 0.55);
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(var(--space-rgb), 0.22), transparent 38%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.2), rgba(7, 28, 48, 0.98) 52%, rgba(var(--space-rgb), 0.12));
+  border-color: rgba(var(--space-rgb), 0.62);
+  box-shadow: inset 3px 0 rgba(var(--space-rgb), 0.16), 0 14px 28px -24px rgba(var(--space-rgb), 0.62);
 }
 
 .spaces-layer--next { min-height: 80px; background: linear-gradient(90deg, rgba(75, 92, 186, 0.14), rgba(6, 20, 35, 0.97), rgba(75, 92, 186, 0.08)); border-color: rgba(103, 119, 207, 0.28); }
@@ -958,6 +1009,28 @@ body.cardiology-spaces-active :where(a:hover) {
 .spaces-action:focus-visible { color: #fff; background: rgba(var(--space-rgb), 0.08); box-shadow: inset 0 0 0 1px rgba(var(--space-rgb), 0.28); }
 .spaces-action:focus-visible { outline: 2px solid var(--space-accent); outline-offset: -2px; }
 .spaces-action:active { transform: translateY(1px); }
+
+/* No tema escuro, a prateleira inteira acompanha hover e foco interno. */
+html[data-corvia-theme="dark"] .spaces-layer:hover,
+html[data-corvia-theme="dark"] .spaces-layer:focus-within {
+  background:
+    radial-gradient(ellipse at 12% 50%, rgba(var(--space-rgb), 0.3), transparent 44%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.24), rgba(6, 23, 39, 0.985) 50%, rgba(var(--space-rgb), 0.15));
+  border-color: rgba(var(--space-rgb), 0.72);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.055),
+    inset 4px 0 rgba(var(--space-rgb), 0.23),
+    0 16px 30px -20px rgba(var(--space-rgb), 0.72),
+    0 0 25px rgba(var(--space-rgb), 0.14);
+  filter: drop-shadow(0 12px 19px rgba(var(--space-rgb), 0.2));
+  transform: translateY(-1px);
+}
+
+html[data-corvia-theme="dark"] .spaces-layer:hover .spaces-action,
+html[data-corvia-theme="dark"] .spaces-layer:focus-within .spaces-action {
+  color: #f1f8fb;
+  border-color: rgba(var(--space-rgb), 0.28);
+}
 
 .spaces-personalize {
   display: inline-flex;
@@ -1678,7 +1751,9 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
     grid-column: 1;
     grid-row: 1;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: 60px 48px;
+    /* A faixa intermediária pertence ao controle-galáxia. Mantém o botão
+       abaixo da marca sem disputar ponteiro ou espaço com os três modos. */
+    grid-template-rows: 60px 38px 48px;
     column-gap: 10px;
     margin: 0 -12px;
     padding: 0 12px;
@@ -1689,13 +1764,13 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
 
   .spaces-home__topbar .spaces-brand > img { width: 39px; height: 39px; }
   .spaces-home__topbar .spaces-brand > span { display: none; }
-  .spaces-home__topbar > .spaces-brand-button { grid-column: 1; grid-row: 1; }
+  .spaces-home__brand-cluster { grid-column: 1; grid-row: 1; }
   .spaces-everything-search { width: 100%; height: 44px; grid-column: 2; grid-row: 1; grid-template-columns: 18px minmax(0, 1fr) 38px; gap: 7px; padding: 0 2px 0 11px; }
   .spaces-everything-search > input { height: 42px; font-size: 1rem; }
   .spaces-everything-search > input::placeholder { color: #788d9b; }
   .spaces-everything-search > kbd { display: none; }
   .spaces-everything-search > button { width: 38px; height: 38px; }
-  .spaces-home__topbar > nav { grid-column: 1 / -1; grid-row: 2; align-self: stretch; justify-self: stretch; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+  .spaces-home__topbar > nav { grid-column: 1 / -1; grid-row: 3; align-self: stretch; justify-self: stretch; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
   .spaces-home__topbar > nav button { min-height: 44px; padding: 0 5px; overflow: hidden; font-size: 0.69rem; text-overflow: ellipsis; white-space: nowrap; }
   .spaces-home__topbar > nav button::after { bottom: 2px; }
   .spaces-home__topbar > .spaces-user { min-width: 44px; max-width: 44px; justify-content: center; font-size: 0; }
@@ -1939,6 +2014,7 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
   .spaces-door,
   .spaces-door > i,
   .spaces-choice__cards > button,
+  .spaces-layer,
   .spaces-action,
   .spaces-stellar-route,
   .spaces-home__topbar > nav button::after { transition: none; }
@@ -2242,7 +2318,8 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
 
   .spaces-stellar-route__label { font-size: 9px; }
 
-  .spaces-home__topbar > .spaces-brand-button {
+  .spaces-home__brand-cluster,
+  .spaces-home__topbar .spaces-brand-button {
     display: grid;
     width: 44px;
     min-width: 44px;

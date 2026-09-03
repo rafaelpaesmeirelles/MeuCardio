@@ -600,6 +600,14 @@ jobs:
         working-directory: frontend
         run: node scripts/check-form-control-contrast.mjs
 
+      - name: Test Cardiology Spaces theme parity, login and clinical identity
+        working-directory: frontend
+        run: >-
+          node --test
+          scripts/check-cardiology-spaces-light-mode-contract.test.mjs
+          scripts/check-cardiology-spaces-login-gateway-contract.test.mjs
+          scripts/check-clinical-identity.test.mjs
+
       - name: Reject reserved synthetic agenda markers in user-facing surfaces
         working-directory: frontend
         run: node --test scripts/check-reserved-smoke-agenda.test.mjs

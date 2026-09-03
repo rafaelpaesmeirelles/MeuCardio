@@ -13,6 +13,7 @@ const featureFlags = read("src/lib/cardiologySpacesFeature.ts");
 const accountSync = read("src/pages/Sincronizacao.tsx");
 const agenda = read("src/pages/Agenda.tsx");
 const myAccount = read("src/pages/MinhaConta.tsx");
+const clinicalIdentity = read("src/lib/clinicalIdentity.ts");
 const catalog = home.slice(home.indexOf("const CATALOG"), home.indexOf("const ESSENTIAL_DEFAULTS"));
 const catalogPaths = [...catalog.matchAll(/(?:\["|to:\s*")((?:\/)[^"\s]+)"/g)].map((match) => match[1]);
 const catalogPrimaryPaths = new Set(catalogPaths.map((path) => path.split("?")[0]));
@@ -69,14 +70,21 @@ test("portal preview is local on mouse and keyboard and only click persists sele
   assert.match(home, /onClick=\{\(\) => \{ setSelectedSpace\(space\.id\); setPreviewSpace\(null\); \}\}/);
 });
 
-test("user-preferred treatment replaces generic voce in the work question", () => {
-  assert.match(home, /const chamamento = usuario\?\.professional_title\?\.trim\(\) \|\| nomeComTratamento\(usuario, true\)/);
-  assert.match(home, /dra\|sra\|profa/);
-  assert.match(home, /dr\|sr\|prof/);
-  assert.match(home, /const chamamentoComArtigo = \[artigoDoChamamento, chamamento\]\.filter\(Boolean\)\.join\(" "\)/);
-  assert.match(home, /`Onde \$\{chamamentoComArtigo\} vai trabalhar agora\?`/);
-  assert.match(home, /`Como \$\{chamamentoComArtigo\} quer explorar o conhecimento agora\?`/);
+test("user-preferred treatment and name replace generic professional labels", () => {
+  assert.match(home, /import \{ chamamentoComArtigo, nomeComTratamento \} from "\.\.\/lib\/clinicalIdentity"/);
+  assert.match(home, /const chamamentoNaFrase = chamamentoComArtigo\(usuario, \{ curto: true \}\)/);
+  assert.match(home, /const chamamentoNoInicio = chamamentoComArtigo\(usuario, \{ curto: true, inicioDeFrase: true \}\)/);
+  assert.match(home, /`Onde \$\{chamamentoNaFrase\} vai trabalhar agora\?`/);
+  assert.match(home, /`Como \$\{chamamentoNaFrase\} quer explorar o conhecimento agora\?`/);
+  assert.match(home, /\{chamamentoNoInicio\} continua no centro/);
   assert.doesNotMatch(home, /Onde você vai trabalhar agora\?/);
+  assert.doesNotMatch(home, /O Médico <strong>continua no centro/);
+
+  assert.match(clinicalIdentity, /\["sra", "dra", "profa", "profa dra", "ma"\]/);
+  assert.match(clinicalIdentity, /\["sr", "dr", "prof", "prof dr", "me"\]/);
+  assert.match(clinicalIdentity, /usuario\?\.gender \|\| usuario\?\.genero \|\| usuario\?\.sex \|\| usuario\?\.sexo/);
+  assert.match(clinicalIdentity, /const identidade = nomeComTratamento\(usuario, curto\)/);
+  assert.match(clinicalIdentity, /fallback = "você"/);
 });
 
 test("compact desktop keeps Meu dia entre espacos in the approved right rail", () => {

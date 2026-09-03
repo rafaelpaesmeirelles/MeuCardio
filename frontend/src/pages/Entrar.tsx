@@ -3,11 +3,24 @@ import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
 import { CoracaoHolografico } from "../components/PreHomeBrand";
 import { useAuth } from "../lib/auth";
+import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
 import "../styles/login.css";
 import "../styles/login-fullscreen-social.css";
 import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
 import "../styles/cardiology-spaces-login.css";
+
+type TemaPublico = CorviaTheme;
+
+const TEMAS_PUBLICOS: Array<{
+  id: TemaPublico;
+  nome: string;
+  detalhe: string;
+  icone: "sol" | "lua";
+}> = [
+  { id: "light", nome: "Modo claro", detalhe: "Clareza clínica", icone: "sol" },
+  { id: "dark", nome: "Modo escuro", detalhe: "Imersão cósmica", icone: "lua" },
+];
 
 const ESPACOS = [
   { id: "consultorio", nome: "Consultório", detalhe: "Assistência", icone: "clinica" as const },
@@ -35,18 +48,28 @@ function MarcaWindows() {
 
 export default function Entrar() {
   const { entrar } = useAuth();
+  const [temaPublico, setTemaPublico] = useState<TemaPublico>(() =>
+    sessionStorage.getItem(CORVIA_LOGIN_THEME_KEY) === "dark" ? "dark" : "light",
+  );
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const [permanecerConectado, setPermanecerConectado] = useState(false);
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
+
+  function selecionarTemaPublico(proximoTema: TemaPublico) {
+    setTemaPublico(proximoTema);
+    sessionStorage.setItem(CORVIA_LOGIN_THEME_KEY, proximoTema);
+  }
+
   async function enviar(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
     if (enviando || !email.trim() || !senha) return;
     setEnviando(true);
     setErro("");
     try {
+      sessionStorage.setItem(CORVIA_LOGIN_THEME_KEY, temaPublico);
       sessionStorage.removeItem("corvia:cardiology-spaces:mode");
       await entrar(email.trim().toLowerCase(), senha, permanecerConectado);
     } catch (e) {
@@ -57,7 +80,10 @@ export default function Entrar() {
   }
 
   return (
-    <main className="login login-gateway">
+    <main
+      className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}
+      data-login-theme={temaPublico}
+    >
       <div className="login-gateway__aurora" aria-hidden="true" />
       <div className="login-gateway__stars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
 
@@ -74,9 +100,9 @@ export default function Entrar() {
 
       <section className="login-gateway__scene" aria-labelledby="login-title">
         <header className="login-gateway__hero">
-          <p>UM ACESSO · CINCO ESPAÇOS</p>
-          <h1 id="login-title">Onde todos os seus espaços <strong>se tornam um.</strong></h1>
-          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão integrados para acompanhar cada decisão.</span>
+          <p>CORVIA · CARDIOLOGY SPACES</p>
+          <h1 id="login-title">Toda a cardiologia conectada. <strong>Você no centro.</strong></h1>
+          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitam a mesma identidade clínica — com continuidade, confiança e contexto.</span>
         </header>
 
         <div className="login-gateway__universe" aria-hidden="true">
@@ -112,12 +138,32 @@ export default function Entrar() {
       <section className="login-gateway__console" aria-labelledby="login-acesso-titulo">
         <header className="login-gateway__console-head">
           <span><Icone nome="conta" /></span>
-          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Abra o seu espaço</h2></div>
+          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Entre no CorVIA</h2></div>
         </header>
+        <fieldset className="login-gateway__theme-choice" aria-describedby="login-theme-note">
+          <legend>Escolha a aparência</legend>
+          <div className="login-gateway__theme-choice-options">
+            {TEMAS_PUBLICOS.map((opcao) => (
+              <label className={temaPublico === opcao.id ? "is-selected" : ""} key={opcao.id}>
+                <input
+                  type="radio"
+                  name="tema-publico"
+                  value={opcao.id}
+                  checked={temaPublico === opcao.id}
+                  onChange={() => selecionarTemaPublico(opcao.id)}
+                />
+                <span className="login-gateway__theme-choice-icon"><Icone nome={opcao.icone} /></span>
+                <span><strong>{opcao.nome}</strong><small>{opcao.detalhe}</small></span>
+                <i aria-hidden="true"><Icone nome="check" /></i>
+              </label>
+            ))}
+          </div>
+          <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão. Seu acesso e suas permissões não mudam.</p>
+        </fieldset>
         <form className="login-gateway__form" onSubmit={enviar}>
           <label className="login-gateway__field" htmlFor="email">
             <span>E-mail profissional</span>
-            <div><Icone nome="mail" /><input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required autoFocus /></div>
+            <div><Icone nome="mail" /><input id="email" type="email" inputMode="email" autoCapitalize="none" autoComplete="username" placeholder="seu@email.com" value={email} onChange={(event) => setEmail(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /></div>
           </label>
           <label className="login-gateway__field" htmlFor="senha">
             <span>Senha</span>

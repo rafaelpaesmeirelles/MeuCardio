@@ -4,6 +4,7 @@ import process from "node:process";
 
 const raiz = process.cwd();
 const cssPath = path.join(raiz, "src/styles/clinical-form-control-contrast.css");
+const lightCssPath = path.join(raiz, "src/styles/cardiology-spaces-light-mode.css");
 const assistantCssPath = path.join(raiz, "src/styles/clinical-assistant-command.css");
 const assistantPagePath = path.join(raiz, "src/pages/Assistente.tsx");
 const mainPath = path.join(raiz, "src/main.tsx");
@@ -20,14 +21,18 @@ function exigir(condicao, mensagem) {
 }
 
 const importContrato = 'import "./styles/clinical-form-control-contrast.css";';
-const indiceContrato = main.indexOf(importContrato);
-const ultimoImportCss = [...main.matchAll(/^import "\.\/styles\/[^\"]+\.css";$/gm)].at(-1)?.index ?? -1;
+const importTemaClaro = 'import "./styles/cardiology-spaces-light-mode.css";';
+const importsCss = [...main.matchAll(/^import "\.\/styles\/[^\"]+\.css";$/gm)].map((match) => match[0]);
 
 exigir(fs.existsSync(cssPath), "clinical-form-control-contrast.css precisa existir.");
+exigir(fs.existsSync(lightCssPath), "cardiology-spaces-light-mode.css precisa existir.");
 exigir(fs.existsSync(assistantCssPath), "clinical-assistant-command.css precisa existir.");
 exigir(fs.existsSync(assistantPagePath), "Assistente.tsx precisa existir.");
-exigir(indiceContrato >= 0, "main.tsx precisa importar o contrato global de contraste.");
-exigir(indiceContrato === ultimoImportCss, "o contrato de contraste precisa ser a última folha CSS importada.");
+exigir(main.includes(importContrato), "main.tsx precisa importar o contrato global de contraste.");
+exigir(importsCss.at(-2) === importContrato,
+  "o contrato escuro de contraste precisa permanecer imediatamente antes do tema claro.");
+exigir(importsCss.at(-1) === importTemaClaro,
+  "o tema claro isolado precisa ser a última folha CSS para sobrepor controles escuros com segurança.");
 
 for (const trecho of [
   ".clinical-os input:not([type=\"checkbox\"])",

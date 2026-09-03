@@ -1185,3 +1185,1045 @@
     font-size: 0.75rem;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Gateway público — primeira impressão do Cardiology Spaces.
+
+   A geometria é deliberadamente local e compartilhada: /entrar é uma
+   superfície pública e não participa do ThemeContext autenticado. Claro e
+   escuro usam a mesma composição; os modificadores alteram somente a cor.
+   -------------------------------------------------------------------------- */
+
+.login-gateway--public {
+  --login-blue: #4b4fc4;
+  --login-cyan: #0f727a;
+  --login-pink: #c42068;
+  --login-violet: #7957c8;
+  --login-green: #14705f;
+  --login-text: #1b2440;
+  --login-muted: #5e687f;
+  --login-line: rgba(75, 79, 196, 0.16);
+  width: 100%;
+  height: 100dvh;
+  min-height: 720px;
+  grid-template-columns: minmax(0, 1fr) minmax(410px, 460px);
+  grid-template-rows: 96px minmax(0, 1fr) 86px;
+  column-gap: clamp(28px, 3.4vw, 58px);
+  padding: 0 clamp(28px, 4.2vw, 68px);
+  color: var(--login-text);
+  background:
+    radial-gradient(ellipse at 20% 22%, rgba(15, 114, 122, 0.11), transparent 32%),
+    radial-gradient(ellipse at 57% 30%, rgba(75, 79, 196, 0.1), transparent 35%),
+    radial-gradient(ellipse at 76% 76%, rgba(196, 32, 104, 0.055), transparent 28%),
+    linear-gradient(142deg, #fbfafc 0%, #f7f3fa 46%, #eef2fa 100%) !important;
+}
+
+.login-gateway--public::before {
+  background-image:
+    linear-gradient(rgba(75, 79, 196, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 39% 46%, #000 4%, transparent 72%);
+}
+
+.login-gateway--public::after {
+  inset: 14px;
+  background:
+    linear-gradient(90deg, rgba(75, 79, 196, 0.3), transparent 10%) top left / 27% 1px no-repeat,
+    linear-gradient(90deg, transparent 90%, rgba(15, 114, 122, 0.28)) top right / 27% 1px no-repeat,
+    linear-gradient(90deg, rgba(121, 87, 200, 0.2), transparent 10%) bottom left / 27% 1px no-repeat,
+    linear-gradient(90deg, transparent 90%, rgba(196, 32, 104, 0.18)) bottom right / 27% 1px no-repeat;
+  opacity: 0.72;
+}
+
+.login-gateway--public .login-gateway__aurora {
+  left: 34%;
+  top: 48%;
+  width: min(920px, 67vw);
+  background:
+    radial-gradient(ellipse at 48% 44%, rgba(75, 79, 196, 0.12), transparent 42%),
+    radial-gradient(ellipse at 62% 59%, rgba(121, 87, 200, 0.09), transparent 43%),
+    radial-gradient(ellipse at 31% 62%, rgba(15, 114, 122, 0.085), transparent 40%);
+  filter: blur(22px);
+}
+
+/* Pontos de conexão, não uma fotografia do céu. */
+.login-gateway--public .login-gateway__stars::before {
+  background-image:
+    radial-gradient(circle, rgba(75, 79, 196, 0.2) 0 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(15, 114, 122, 0.18) 0 0.8px, transparent 1.25px),
+    radial-gradient(circle, rgba(121, 87, 200, 0.16) 0 0.7px, transparent 1.15px);
+  background-position: 17px 11px, 61px 87px, 103px 37px;
+  background-size: 181px 163px, 241px 223px, 307px 281px;
+  mask-image: radial-gradient(ellipse at 38% 48%, #000 2%, transparent 76%);
+  opacity: 0.58;
+}
+
+.login-gateway--public .login-gateway__stars::after {
+  background:
+    radial-gradient(circle at 15% 31%, rgba(75, 79, 196, 0.22) 0 1.3px, transparent 1.9px),
+    radial-gradient(circle at 61% 19%, rgba(15, 114, 122, 0.2) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 51% 76%, rgba(121, 87, 200, 0.18) 0 1px, transparent 1.7px),
+    linear-gradient(112deg, transparent 31%, rgba(75, 79, 196, 0.055) 49.8%, transparent 50.2%) 0 27% / 72% 38% no-repeat;
+  opacity: 0.72;
+}
+
+.login-gateway--public .login-gateway__stars i { display: none; }
+
+.login-gateway--public .login-gateway__topbar {
+  z-index: 12;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  min-height: 96px;
+  border-bottom-color: rgba(75, 79, 196, 0.11);
+}
+
+.login-gateway--public .login-gateway__brand {
+  gap: 14px;
+  color: #1b2440;
+}
+
+.login-gateway--public .login-gateway__brand img {
+  width: 62px;
+  height: 62px;
+  filter: drop-shadow(0 10px 19px rgba(75, 79, 196, 0.15));
+}
+
+.login-gateway--public .login-gateway__brand > span { gap: 5px; }
+.login-gateway--public .login-gateway__brand strong { font-size: 2rem; }
+.login-gateway--public .login-gateway__brand small { color: #5e687f; font-size: 0.5rem; }
+
+.login-gateway--public .login-gateway__security span {
+  color: #3c465f;
+  font-size: 0.7rem;
+}
+
+.login-gateway--public .login-gateway__security span i {
+  background: #14705f;
+  box-shadow: 0 0 0 4px rgba(20, 112, 95, 0.1);
+}
+
+.login-gateway--public .login-gateway__security small { color: #626c82; font-size: 0.58rem; }
+
+.login-gateway--public .login-gateway__scene {
+  grid-column: 1;
+  grid-row: 2;
+  overflow: visible;
+}
+
+.login-gateway--public .login-gateway__hero {
+  justify-items: start;
+  max-width: 790px;
+  margin: clamp(18px, 3.5vh, 40px) 0 0;
+  gap: 11px;
+  text-align: left;
+}
+
+.login-gateway--public .login-gateway__hero p {
+  color: #4b4fc4;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+}
+
+.login-gateway--public .login-gateway__hero h1 {
+  max-width: 13ch;
+  color: #1b2440;
+  font-size: clamp(2.65rem, 4vw, 4.65rem);
+  font-weight: 535;
+  line-height: 0.99;
+}
+
+.login-gateway--public .login-gateway__hero h1 strong {
+  display: block;
+  margin-top: 0.08em;
+  color: #4b4fc4;
+  font-weight: 640;
+  text-shadow: none;
+}
+
+.login-gateway--public .login-gateway__hero > span {
+  max-width: 66ch;
+  color: #4d5873;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.login-gateway--public .login-gateway__universe { inset: clamp(205px, 29vh, 260px) 0 0; }
+
+.login-gateway--public .login-gateway__routes path {
+  stroke: rgba(75, 79, 196, 0.24);
+  stroke-width: 1.15;
+  stroke-dasharray: 4 9;
+}
+
+.login-gateway--public .login-gateway__routes path:nth-child(2) { stroke: rgba(121, 87, 200, 0.2); }
+.login-gateway--public .login-gateway__routes path:nth-child(3) { stroke: rgba(15, 114, 122, 0.17); }
+
+.login-gateway--public .login-gateway__milky-way {
+  top: 55%;
+  opacity: 1;
+  mix-blend-mode: multiply;
+  filter: none;
+}
+
+.login-gateway--public .login-gateway__milky-way::before {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.92) 0, rgba(75, 79, 196, 0.12) 22%, rgba(121, 87, 200, 0.08) 43%, rgba(15, 114, 122, 0.05) 61%, transparent 76%);
+}
+
+.login-gateway--public .login-gateway__milky-way::after {
+  background-image:
+    radial-gradient(circle, rgba(75, 79, 196, 0.24) 0 0.8px, transparent 1.25px),
+    radial-gradient(circle, rgba(15, 114, 122, 0.2) 0 0.7px, transparent 1.15px),
+    radial-gradient(circle, rgba(121, 87, 200, 0.17) 0 0.65px, transparent 1.1px);
+}
+
+.login-gateway--public .login-gateway__milky-way span {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(75, 79, 196, 0.26) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 46% 44%, rgba(15, 114, 122, 0.22) 0 0.8px, transparent 1.5px),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.84), rgba(75, 79, 196, 0.05) 36%, transparent 69%);
+  background-size: 43px 31px, 61px 47px, 100% 100%;
+}
+
+.login-gateway--public .login-gateway__core {
+  top: 54%;
+  width: clamp(205px, 21vw, 288px);
+}
+
+.login-gateway--public .login-gateway__core::before {
+  position: absolute;
+  z-index: 1;
+  width: 84%;
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.67);
+  border: 1px solid rgba(75, 79, 196, 0.13);
+  border-radius: 50%;
+  box-shadow: 0 28px 70px -48px rgba(44, 50, 96, 0.55), inset 0 1px #fff;
+  content: "";
+  backdrop-filter: blur(7px);
+}
+
+.login-gateway--public .login-gateway__core-glow {
+  z-index: 2;
+  background: radial-gradient(circle, rgba(196, 32, 104, 0.1), rgba(75, 79, 196, 0.12) 43%, transparent 71%);
+}
+
+.login-gateway--public .login-gateway__core .prehome-brand__heart {
+  filter: drop-shadow(0 15px 17px rgba(61, 71, 128, 0.16));
+}
+
+.login-gateway--public .login-gateway__pulse-baseline { stroke: rgba(15, 114, 122, 0.22); }
+.login-gateway--public .login-gateway__pulse-trace { stroke: #0f727a; filter: drop-shadow(0 2px 2px rgba(15, 114, 122, 0.23)); }
+.login-gateway--public .login-gateway__ring { border-color: rgba(75, 79, 196, 0.24); box-shadow: none; }
+.login-gateway--public .login-gateway__ring--two { border-color: rgba(15, 114, 122, 0.25); }
+
+.login-gateway--public .login-gateway__space {
+  min-height: 62px;
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(75, 79, 196, 0.16);
+  box-shadow: 0 20px 45px -36px rgba(44, 50, 96, 0.52), inset 0 1px #fff;
+  backdrop-filter: blur(12px);
+}
+
+.login-gateway--public .login-gateway__space > span {
+  background: color-mix(in srgb, currentColor 8%, white);
+  border-color: color-mix(in srgb, currentColor 48%, white);
+}
+
+.login-gateway--public .login-gateway__space strong { color: #1b2440; font-size: 0.7rem; }
+.login-gateway--public .login-gateway__space small { color: #5e687f; font-size: 0.56rem; }
+.login-gateway--public .login-gateway__space--consultorio { color: #0f727a; }
+.login-gateway--public .login-gateway__space--hospital { color: #4b4fc4; }
+.login-gateway--public .login-gateway__space--ensino { color: #7957c8; }
+.login-gateway--public .login-gateway__space--pesquisa { color: #c42068; }
+.login-gateway--public .login-gateway__space--gestao { color: #14705f; }
+
+.login-gateway--public .login-gateway__console {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  max-width: 460px;
+  grid-column: 2;
+  grid-row: 2;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+  margin: 14px 0;
+  padding: clamp(22px, 2.1vw, 30px);
+  background:
+    radial-gradient(circle at 100% 0, rgba(121, 87, 200, 0.07), transparent 35%),
+    rgba(255, 255, 255, 0.8);
+  border-color: rgba(75, 79, 196, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 34px 80px -49px rgba(39, 45, 92, 0.48), inset 0 1px #fff;
+  backdrop-filter: blur(22px);
+}
+
+.login-gateway--public .login-gateway__console::before {
+  left: 40px;
+  right: 40px;
+  background: linear-gradient(90deg, transparent, #4b4fc4, #0f727a, transparent);
+}
+
+.login-gateway--public .login-gateway__console-head {
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 13px;
+  padding: 0 0 17px;
+  border-right: 0;
+  border-bottom: 1px solid rgba(75, 79, 196, 0.12);
+}
+
+.login-gateway--public .login-gateway__console-head > span {
+  width: 48px;
+  height: 48px;
+  color: #4b4fc4;
+  background: linear-gradient(145deg, rgba(75, 79, 196, 0.1), rgba(15, 114, 122, 0.06));
+  border-color: rgba(75, 79, 196, 0.2);
+  border-radius: 14px;
+}
+
+.login-gateway--public .login-gateway__console-head > span svg { width: 22px; height: 22px; }
+.login-gateway--public .login-gateway__console-head p { color: #4b4fc4; font-size: 0.57rem; }
+.login-gateway--public .login-gateway__console-head h2 { color: #1b2440; font-size: 1.35rem; }
+
+.login-gateway--public .login-gateway__theme-choice {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.login-gateway--public .login-gateway__theme-choice legend {
+  width: 100%;
+  margin: 0 0 9px;
+  padding: 0;
+  color: #3c465f;
+  font-size: 0.72rem;
+  font-weight: 720;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 94px;
+  grid-template-rows: 30px auto;
+  align-content: start;
+  gap: 7px;
+  padding: 11px 9px 9px;
+  color: #4d5873;
+  background: rgba(248, 247, 251, 0.76);
+  border: 1px solid #81899e;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label:hover {
+  background: #fff;
+  border-color: #4b4fc4;
+  transform: translateY(-1px);
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label.is-selected {
+  color: #1b2440;
+  background: linear-gradient(145deg, rgba(75, 79, 196, 0.1), rgba(255, 255, 255, 0.96));
+  border-color: #4b4fc4;
+  box-shadow: 0 10px 24px -19px rgba(75, 79, 196, 0.8), inset 0 0 0 1px rgba(75, 79, 196, 0.06);
+}
+
+.login-gateway--public .login-gateway__theme-choice-options input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label:has(input:focus-visible) {
+  outline: 3px solid #4b4fc4;
+  outline-offset: 2px;
+}
+
+.login-gateway--public .login-gateway__theme-choice-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: #4b4fc4;
+  background: #fff;
+  border: 1px solid rgba(75, 79, 196, 0.17);
+  border-radius: 9px;
+}
+
+.login-gateway--public .login-gateway__theme-choice-icon svg { width: 17px; height: 17px; }
+.login-gateway--public .login-gateway__theme-choice-options label:nth-child(2) .login-gateway__theme-choice-icon { color: #0f727a; }
+
+.login-gateway--public .login-gateway__theme-choice-options label > span:nth-of-type(2) {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  min-width: 0;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options strong {
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options small {
+  color: #626c82;
+  font-size: 0.55rem;
+  line-height: 1.25;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label > i {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  display: none;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  color: #fff;
+  background: #4b4fc4;
+  border-radius: 50%;
+}
+
+.login-gateway--public .login-gateway__theme-choice-options label.is-selected > i { display: grid; }
+.login-gateway--public .login-gateway__theme-choice-options label > i svg { width: 11px; height: 11px; stroke-width: 2.5; }
+
+.login-gateway--public .login-gateway__theme-choice > p {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 9px 0 0;
+  color: #5e687f;
+  font-size: 0.6rem;
+  line-height: 1.4;
+}
+
+.login-gateway--public .login-gateway__theme-choice > p svg {
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  color: #14705f;
+}
+
+.login-gateway--public .login-gateway__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.login-gateway--public .login-gateway__field > span {
+  position: static;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 6px;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  color: #3c465f;
+  font-size: 0.66rem;
+  font-weight: 680;
+}
+
+.login-gateway--public .login-gateway__field > div {
+  min-height: 50px;
+  background: rgba(255, 255, 255, 0.88);
+  border-color: #a1a6b7;
+  border-radius: 11px;
+}
+
+.login-gateway--public .login-gateway__field > div > svg { color: #626c82; }
+
+#root .login.login-gateway--public .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  min-height: 48px !important;
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #4b4fc4 !important;
+  background-color: transparent !important;
+  color-scheme: light;
+}
+
+#root .login.login-gateway--public .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"])::placeholder {
+  color: #626c82 !important;
+  -webkit-text-fill-color: #626c82 !important;
+  opacity: 1;
+}
+
+#root .login.login-gateway--public .login-gateway__field input:-webkit-autofill,
+#root .login.login-gateway--public .login-gateway__field input:-webkit-autofill:hover,
+#root .login.login-gateway--public .login-gateway__field input:-webkit-autofill:focus,
+#root .login.login-gateway--public .login-gateway__field input:-webkit-autofill:active {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #4b4fc4 !important;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+}
+
+.login-gateway--public .login-gateway__field > div:hover { border-color: #81899e; }
+.login-gateway--public .login-gateway__field > div:focus-within { border-color: #4b4fc4; box-shadow: 0 0 0 3px rgba(75, 79, 196, 0.13); }
+#root .login.login-gateway--public .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):focus {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #4b4fc4 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.login-gateway--public .login-gateway__password button { width: 44px; height: 44px; color: #4b4fc4; }
+.login-gateway--public .login-gateway__password button:hover { background: rgba(75, 79, 196, 0.08); }
+
+.login-gateway--public .login-gateway__enter {
+  min-height: 52px;
+  margin-top: 2px;
+  padding-inline: 17px;
+  background: linear-gradient(100deg, #393ca8, #4b4fc4 58%, #6559c8);
+  border-color: rgba(75, 79, 196, 0.72);
+  border-radius: 11px;
+  box-shadow: 0 18px 32px -22px rgba(75, 79, 196, 0.82), inset 0 1px rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+}
+
+.login-gateway--public .login-gateway__error {
+  color: #7c153b;
+  background: rgba(196, 32, 104, 0.08);
+  border-color: rgba(196, 32, 104, 0.28);
+}
+
+.login-gateway--public .login-gateway__footer {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  border-top-color: rgba(75, 79, 196, 0.11);
+}
+
+.login-gateway--public .login-gateway__form-meta {
+  position: static;
+  justify-self: start;
+  transform: none;
+}
+
+.login-gateway--public .login-gateway__form-meta label { color: #4d5873; font-size: 0.6rem; }
+.login-gateway--public .login-gateway__form-meta a { color: #4b4fc4; font-size: 0.6rem; }
+
+.login-gateway--public .login-gateway__utilities > a,
+.login-gateway--public .login-gateway__utilities > div {
+  min-height: 44px;
+  color: #3c465f;
+  background: rgba(255, 255, 255, 0.58);
+  border-color: rgba(75, 79, 196, 0.14);
+}
+
+.login-gateway--public .login-gateway__utilities > a:hover {
+  background: #fff;
+  border-color: rgba(75, 79, 196, 0.4);
+}
+
+.login-gateway--public .login-gateway__utilities strong { color: #3c465f; }
+.login-gateway--public .login-gateway__utilities small { color: #626c82; }
+.login-gateway--public .login-gateway__utilities > div > span { color: #5e687f; background: rgba(94, 104, 127, 0.08); }
+.login-gateway--public .login-gateway__utilities > a:last-child > span { color: #4b4fc4; background: rgba(75, 79, 196, 0.08); }
+.login-gateway--public .login-gateway__utilities > a > svg { color: #626c82; }
+
+.login-gateway--public .login-gateway__footer nav {
+  position: static;
+  justify-self: end;
+}
+
+.login-gateway--public .login-gateway__footer nav a { color: #4b4fc4; }
+
+@media (max-width: 1180px) and (min-width: 901px) {
+  .login-gateway--public {
+    grid-template-columns: minmax(0, 1fr) minmax(390px, 430px);
+    column-gap: 24px;
+    padding-inline: 30px;
+  }
+
+  .login-gateway--public .login-gateway__hero h1 { font-size: clamp(2.5rem, 4vw, 3.6rem); }
+  .login-gateway--public .login-gateway__space { width: 132px; }
+  .login-gateway--public .login-gateway__space--consultorio { left: 0; }
+  .login-gateway--public .login-gateway__space--gestao { right: 0; }
+  .login-gateway--public .login-gateway__utilities > :is(a, div) { padding-inline: 7px; }
+  .login-gateway--public .login-gateway__utilities small { display: none; }
+}
+
+@media (min-width: 901px) and (max-height: 760px) {
+  .login-gateway--public {
+    min-height: 0;
+    grid-template-rows: 76px minmax(0, 1fr) 58px;
+  }
+
+  .login-gateway--public .login-gateway__topbar { min-height: 76px; }
+  .login-gateway--public .login-gateway__brand img { width: 50px; height: 50px; }
+  .login-gateway--public .login-gateway__brand strong { font-size: 1.65rem; }
+  .login-gateway--public .login-gateway__hero { gap: 5px; margin-top: 12px; }
+  .login-gateway--public .login-gateway__hero h1 { font-size: clamp(2.2rem, 3.25vw, 3.5rem); }
+  .login-gateway--public .login-gateway__hero > span { font-size: 0.68rem; }
+  .login-gateway--public .login-gateway__universe { inset-block-start: 162px; }
+  .login-gateway--public .login-gateway__core { width: clamp(180px, 18vw, 232px); }
+  .login-gateway--public .login-gateway__space { min-height: 51px; padding-block: 6px; }
+  .login-gateway--public .login-gateway__console { gap: 10px; margin-block: 6px; padding: 15px 18px; }
+  .login-gateway--public .login-gateway__console-head { grid-template-columns: 40px minmax(0, 1fr); gap: 10px; padding-bottom: 9px; }
+  .login-gateway--public .login-gateway__console-head > span { width: 40px; height: 40px; }
+  .login-gateway--public .login-gateway__console-head h2 { font-size: 1.12rem; }
+  .login-gateway--public .login-gateway__theme-choice legend { margin-bottom: 5px; }
+  .login-gateway--public .login-gateway__theme-choice-options label { min-height: 75px; gap: 4px; padding: 7px; }
+  .login-gateway--public .login-gateway__theme-choice > p { margin-top: 4px; }
+  .login-gateway--public .login-gateway__form { gap: 6px; }
+  .login-gateway--public .login-gateway__field > span { margin-bottom: 3px; }
+  .login-gateway--public .login-gateway__field > div { min-height: 44px; }
+  #root .login.login-gateway--public .login-gateway__field
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) { min-height: 42px !important; }
+  .login-gateway--public .login-gateway__enter { min-height: 45px; }
+  .login-gateway--public .login-gateway__utilities > a,
+  .login-gateway--public .login-gateway__utilities > div { min-height: 42px; }
+}
+
+@media (max-width: 900px) {
+  html:has(.login-gateway--public) {
+    background: #f7f3fa;
+    scrollbar-color: rgba(75, 79, 196, 0.42) #eef2fa;
+  }
+
+  html:has(.login-gateway--public)::-webkit-scrollbar-track { background: #eef2fa; }
+  html:has(.login-gateway--public)::-webkit-scrollbar-thumb { background: rgba(75, 79, 196, 0.38); }
+
+  .login-gateway--public {
+    display: grid !important;
+    height: auto;
+    min-height: 100dvh;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 0;
+    padding: 0 clamp(18px, 4.5vw, 36px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .login-gateway--public .login-gateway__topbar {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 82px;
+  }
+
+  .login-gateway--public .login-gateway__brand img { width: 56px; height: 56px; }
+  .login-gateway--public .login-gateway__brand strong { font-size: 1.7rem; }
+  .login-gateway--public .login-gateway__scene {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .login-gateway--public .login-gateway__hero {
+    justify-items: center;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .login-gateway--public .login-gateway__hero h1 {
+    max-width: 13ch;
+    font-size: clamp(2.45rem, 8.5vw, 4rem);
+  }
+
+  .login-gateway--public .login-gateway__hero > span { max-width: 64ch; font-size: 0.75rem; }
+  .login-gateway--public .login-gateway__universe { inset: 205px 0 0; }
+  .login-gateway--public .login-gateway__core { width: 225px; }
+  .login-gateway--public .login-gateway__space--ensino {
+    left: 50%;
+    display: grid;
+    transform: translateX(-50%);
+  }
+  .login-gateway--public .login-gateway__console {
+    width: min(100%, 600px);
+    max-width: 600px;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    margin: 18px auto 26px;
+  }
+
+  .login-gateway--public .login-gateway__footer {
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+    padding: 20px 0 26px;
+  }
+
+  .login-gateway--public .login-gateway__form-meta,
+  .login-gateway--public .login-gateway__footer nav { justify-self: center; }
+}
+
+@media (max-width: 560px) {
+  .login-gateway--public { padding-inline: 15px; }
+  .login-gateway--public .login-gateway__brand { gap: 10px; }
+  .login-gateway--public .login-gateway__brand img { width: 52px; height: 52px; }
+  .login-gateway--public .login-gateway__brand strong { font-size: 1.55rem; }
+  .login-gateway--public .login-gateway__brand small { font-size: 0.44rem; }
+  .login-gateway--public .login-gateway__security small { display: none; }
+  .login-gateway--public .login-gateway__security span { font-size: 0; }
+  .login-gateway--public .login-gateway__security span::after { color: #4d5873; font-size: 0.7rem; content: "Protegido"; }
+  .login-gateway--public .login-gateway__scene { height: 450px; min-height: 450px; }
+  .login-gateway--public .login-gateway__hero { gap: 8px; margin-top: 20px; }
+  .login-gateway--public .login-gateway__hero p { font-size: 0.57rem; }
+  .login-gateway--public .login-gateway__hero h1 { font-size: clamp(2rem, 10.5vw, 2.85rem); }
+  .login-gateway--public .login-gateway__hero > span { font-size: 0.72rem; }
+  .login-gateway--public .login-gateway__universe { inset: 190px 0 0; }
+  .login-gateway--public .login-gateway__core { top: 57%; width: 185px; }
+  .login-gateway--public .login-gateway__milky-way { width: 360px; }
+  .login-gateway--public .login-gateway__space {
+    width: 105px;
+    min-height: 47px;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 5px;
+    padding: 6px;
+  }
+  .login-gateway--public .login-gateway__space > span { width: 24px; height: 24px; }
+  .login-gateway--public .login-gateway__space > span svg { width: 14px; height: 14px; }
+  .login-gateway--public .login-gateway__space strong { font-size: 0.59rem; }
+  .login-gateway--public .login-gateway__space small { display: none; }
+  .login-gateway--public .login-gateway__space--ensino { top: 8%; }
+  .login-gateway--public .login-gateway__space--hospital,
+  .login-gateway--public .login-gateway__space--pesquisa { top: 30%; }
+  .login-gateway--public .login-gateway__space--hospital { left: 2%; }
+  .login-gateway--public .login-gateway__space--pesquisa { right: 2%; }
+  .login-gateway--public .login-gateway__space--consultorio,
+  .login-gateway--public .login-gateway__space--gestao { top: 67%; }
+  .login-gateway--public .login-gateway__space--consultorio { left: 1%; }
+  .login-gateway--public .login-gateway__space--gestao { right: 1%; }
+  .login-gateway--public .login-gateway__console { gap: 18px; padding: 20px 16px; border-radius: 18px; }
+  .login-gateway--public .login-gateway__theme-choice-options { grid-template-columns: 1fr; }
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    min-height: 64px;
+    grid-template-columns: 36px minmax(0, 1fr) 20px;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 11px;
+  }
+  .login-gateway--public .login-gateway__theme-choice-options label > i {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .login-gateway--public .login-gateway__theme-choice-icon { grid-column: 1; grid-row: 1; }
+  .login-gateway--public .login-gateway__theme-choice-options label > span:nth-of-type(2) { grid-column: 2; grid-row: 1; }
+  .login-gateway--public .login-gateway__theme-choice-options strong { font-size: 0.75rem; }
+  .login-gateway--public .login-gateway__theme-choice-options small { font-size: 0.64rem; }
+  .login-gateway--public .login-gateway__utilities { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .login-gateway--public .login-gateway__utilities > :is(a, div) { min-height: 67px; }
+}
+
+@media (max-width: 380px) {
+  .login-gateway--public .login-gateway__scene { height: 425px; min-height: 425px; }
+  .login-gateway--public .login-gateway__hero h1 { font-size: 1.95rem; }
+  .login-gateway--public .login-gateway__hero > span { max-width: 42ch; }
+  .login-gateway--public .login-gateway__universe { inset-block-start: 190px; }
+  .login-gateway--public .login-gateway__space { width: 98px; }
+  .login-gateway--public .login-gateway__form-meta { gap: 7px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-gateway--public .login-gateway__theme-choice-options label { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .login-gateway--public .login-gateway__theme-choice-options label,
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__console { border: 1px solid CanvasText; }
+  .login-gateway--public .login-gateway__theme-choice-options label.is-selected { outline: 3px solid Highlight; }
+}
+
+/* Variante escura do mesmo gateway. Somente cromia, contraste e atmosfera:
+   toda a geometria permanece definida por `login-gateway--public`. */
+.login-gateway--dark {
+  --login-blue: #79a7ff;
+  --login-cyan: #54d8e7;
+  --login-pink: #ff78a5;
+  --login-violet: #b294ff;
+  --login-green: #62dca8;
+  --login-text: #f3f7fc;
+  --login-muted: #a8b8c8;
+  --login-line: rgba(121, 167, 255, 0.22);
+  color: var(--login-text);
+  color-scheme: dark;
+  background:
+    radial-gradient(ellipse at 20% 22%, rgba(50, 184, 207, 0.13), transparent 32%),
+    radial-gradient(ellipse at 57% 30%, rgba(68, 113, 235, 0.18), transparent 35%),
+    radial-gradient(ellipse at 76% 76%, rgba(183, 82, 213, 0.09), transparent 28%),
+    linear-gradient(142deg, #01050b 0%, #04111f 48%, #020812 100%) !important;
+}
+
+.login-gateway--dark::before {
+  background-image:
+    linear-gradient(rgba(121, 167, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(121, 167, 255, 0.045) 1px, transparent 1px);
+}
+
+.login-gateway--dark::after {
+  background:
+    linear-gradient(90deg, rgba(121, 167, 255, 0.45), transparent 10%) top left / 27% 1px no-repeat,
+    linear-gradient(90deg, transparent 90%, rgba(84, 216, 231, 0.4)) top right / 27% 1px no-repeat,
+    linear-gradient(90deg, rgba(178, 148, 255, 0.32), transparent 10%) bottom left / 27% 1px no-repeat,
+    linear-gradient(90deg, transparent 90%, rgba(255, 120, 165, 0.28)) bottom right / 27% 1px no-repeat;
+  opacity: 0.86;
+}
+
+.login-gateway--dark .login-gateway__aurora {
+  background:
+    radial-gradient(ellipse at 48% 44%, rgba(45, 116, 244, 0.2), transparent 42%),
+    radial-gradient(ellipse at 62% 59%, rgba(140, 85, 231, 0.14), transparent 43%),
+    radial-gradient(ellipse at 31% 62%, rgba(33, 182, 203, 0.11), transparent 40%);
+}
+
+.login-gateway--dark .login-gateway__stars::before {
+  background-image:
+    radial-gradient(circle, rgba(216, 235, 255, 0.9) 0 1px, transparent 1.45px),
+    radial-gradient(circle, rgba(104, 191, 255, 0.74) 0 0.8px, transparent 1.3px),
+    radial-gradient(circle, rgba(186, 157, 255, 0.64) 0 0.7px, transparent 1.2px);
+  opacity: 0.88;
+}
+
+.login-gateway--dark .login-gateway__stars::after {
+  background:
+    radial-gradient(circle at 15% 31%, rgba(214, 235, 255, 0.8) 0 1.3px, transparent 1.9px),
+    radial-gradient(circle at 61% 19%, rgba(84, 216, 231, 0.7) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 51% 76%, rgba(178, 148, 255, 0.64) 0 1px, transparent 1.7px),
+    linear-gradient(112deg, transparent 31%, rgba(121, 167, 255, 0.08) 49.8%, transparent 50.2%) 0 27% / 72% 38% no-repeat;
+  opacity: 0.94;
+}
+
+.login-gateway--dark .login-gateway__stars i { display: block; }
+.login-gateway--dark .login-gateway__topbar { border-bottom-color: rgba(121, 167, 255, 0.15); }
+.login-gateway--dark .login-gateway__brand { color: #f3f7fc; }
+.login-gateway--dark .login-gateway__brand img { filter: drop-shadow(0 0 18px rgba(121, 167, 255, 0.3)); }
+.login-gateway--dark .login-gateway__brand small { color: #9caec0; }
+.login-gateway--dark .login-gateway__security span { color: #d5e0e9; }
+.login-gateway--dark .login-gateway__security span i {
+  background: #62dca8;
+  box-shadow: 0 0 0 4px rgba(98, 220, 168, 0.1), 0 0 14px rgba(98, 220, 168, 0.38);
+}
+.login-gateway--dark .login-gateway__security small { color: #91a5b8; }
+
+.login-gateway--dark .login-gateway__hero p { color: #8eb4ff; }
+.login-gateway--dark .login-gateway__hero h1 { color: #f3f7fc; }
+.login-gateway--dark .login-gateway__hero h1 strong {
+  color: #8eb4ff;
+  text-shadow: 0 0 34px rgba(121, 167, 255, 0.2);
+}
+.login-gateway--dark .login-gateway__hero > span { color: #afbdca; }
+.login-gateway--dark .login-gateway__routes path { stroke: rgba(121, 167, 255, 0.3); }
+.login-gateway--dark .login-gateway__routes path:nth-child(2) { stroke: rgba(178, 148, 255, 0.25); }
+.login-gateway--dark .login-gateway__routes path:nth-child(3) { stroke: rgba(84, 216, 231, 0.22); }
+
+.login-gateway--dark .login-gateway__milky-way {
+  opacity: 0.86;
+  mix-blend-mode: screen;
+}
+
+.login-gateway--dark .login-gateway__milky-way::before {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(224, 239, 255, 0.24) 0, rgba(99, 150, 255, 0.17) 22%, rgba(158, 110, 239, 0.11) 43%, rgba(43, 191, 214, 0.06) 61%, transparent 76%);
+}
+
+.login-gateway--dark .login-gateway__milky-way::after {
+  background-image:
+    radial-gradient(circle, rgba(226, 240, 255, 0.94) 0 0.8px, transparent 1.3px),
+    radial-gradient(circle, rgba(112, 193, 255, 0.82) 0 0.7px, transparent 1.2px),
+    radial-gradient(circle, rgba(193, 164, 255, 0.72) 0 0.65px, transparent 1.15px);
+}
+
+.login-gateway--dark .login-gateway__milky-way span {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(230, 242, 255, 0.52) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 46% 44%, rgba(108, 206, 241, 0.46) 0 0.8px, transparent 1.6px),
+    radial-gradient(ellipse at 50% 50%, rgba(99, 155, 255, 0.14), rgba(139, 92, 224, 0.07) 36%, transparent 69%);
+}
+
+.login-gateway--dark .login-gateway__core::before {
+  background: rgba(5, 20, 34, 0.76);
+  border-color: rgba(121, 167, 255, 0.24);
+  box-shadow: 0 28px 72px -44px #000, inset 0 1px rgba(255, 255, 255, 0.06);
+}
+.login-gateway--dark .login-gateway__core-glow { background: radial-gradient(circle, rgba(255, 120, 165, 0.16), rgba(75, 132, 245, 0.2) 43%, transparent 71%); }
+.login-gateway--dark .login-gateway__core .prehome-brand__heart { filter: drop-shadow(0 0 20px rgba(83, 160, 255, 0.36)); }
+.login-gateway--dark .login-gateway__pulse-baseline { stroke: rgba(84, 216, 231, 0.3); }
+.login-gateway--dark .login-gateway__pulse-trace { stroke: #61d8e8; filter: drop-shadow(0 0 5px rgba(97, 216, 232, 0.72)); }
+.login-gateway--dark .login-gateway__ring { border-color: rgba(121, 167, 255, 0.34); box-shadow: 0 0 22px rgba(69, 136, 244, 0.09); }
+.login-gateway--dark .login-gateway__ring--two { border-color: rgba(84, 216, 231, 0.34); }
+
+.login-gateway--dark .login-gateway__space {
+  background: rgba(6, 22, 37, 0.82);
+  border-color: rgba(121, 167, 255, 0.26);
+  box-shadow: 0 20px 45px -30px #000, inset 0 1px rgba(255, 255, 255, 0.045);
+}
+.login-gateway--dark .login-gateway__space > span {
+  background: color-mix(in srgb, currentColor 10%, #061625);
+  border-color: color-mix(in srgb, currentColor 66%, #061625);
+}
+.login-gateway--dark .login-gateway__space strong { color: #edf4fa; }
+.login-gateway--dark .login-gateway__space small { color: #9daebe; }
+.login-gateway--dark .login-gateway__space--consultorio { color: #54d8e7; }
+.login-gateway--dark .login-gateway__space--hospital { color: #79a7ff; }
+.login-gateway--dark .login-gateway__space--ensino { color: #b294ff; }
+.login-gateway--dark .login-gateway__space--pesquisa { color: #ff78a5; }
+.login-gateway--dark .login-gateway__space--gestao { color: #62dca8; }
+
+.login-gateway--dark .login-gateway__console {
+  background:
+    radial-gradient(circle at 100% 0, rgba(178, 148, 255, 0.1), transparent 35%),
+    rgba(5, 19, 33, 0.88);
+  border-color: rgba(121, 167, 255, 0.28);
+  box-shadow: 0 34px 82px -43px #000, inset 0 1px rgba(255, 255, 255, 0.055);
+}
+.login-gateway--dark .login-gateway__console::before { background: linear-gradient(90deg, transparent, #79a7ff, #54d8e7, transparent); }
+.login-gateway--dark .login-gateway__console-head { border-bottom-color: rgba(121, 167, 255, 0.18); }
+.login-gateway--dark .login-gateway__console-head > span {
+  color: #8eb4ff;
+  background: linear-gradient(145deg, rgba(121, 167, 255, 0.14), rgba(84, 216, 231, 0.08));
+  border-color: rgba(121, 167, 255, 0.3);
+}
+.login-gateway--dark .login-gateway__console-head p { color: #8eb4ff; }
+.login-gateway--dark .login-gateway__console-head h2 { color: #f3f7fc; }
+.login-gateway--dark .login-gateway__theme-choice legend,
+.login-gateway--dark .login-gateway__field > span { color: #d5e0e9; }
+
+.login-gateway--dark .login-gateway__theme-choice-options label {
+  color: #b3c1ce;
+  background: rgba(7, 25, 42, 0.76);
+  border-color: #58728a;
+}
+.login-gateway--dark .login-gateway__theme-choice-options label:hover {
+  background: #0c263e;
+  border-color: #8eb4ff;
+}
+.login-gateway--dark .login-gateway__theme-choice-options label.is-selected {
+  color: #f4f8fc;
+  background: linear-gradient(145deg, rgba(77, 127, 224, 0.28), rgba(7, 25, 42, 0.96));
+  border-color: #8eb4ff;
+  box-shadow: 0 13px 28px -20px rgba(121, 167, 255, 0.78), inset 0 0 0 1px rgba(121, 167, 255, 0.09);
+}
+.login-gateway--dark .login-gateway__theme-choice-options label:has(input:focus-visible) { outline-color: #8eb4ff; }
+.login-gateway--dark .login-gateway__theme-choice-icon {
+  color: #8eb4ff;
+  background: #0b2034;
+  border-color: rgba(121, 167, 255, 0.28);
+}
+.login-gateway--dark .login-gateway__theme-choice-options label:nth-child(2) .login-gateway__theme-choice-icon { color: #54d8e7; }
+.login-gateway--dark .login-gateway__theme-choice-options small { color: #a8b8c8; }
+.login-gateway--dark .login-gateway__theme-choice-options label > i { color: #06111d; background: #8eb4ff; }
+.login-gateway--dark .login-gateway__theme-choice > p { color: #a8b8c8; }
+.login-gateway--dark .login-gateway__theme-choice > p svg { color: #62dca8; }
+
+.login-gateway--dark .login-gateway__field > div {
+  background: rgba(4, 18, 31, 0.92);
+  border-color: #58728a;
+}
+.login-gateway--dark .login-gateway__field > div > svg { color: #9dafc0; }
+.login-gateway--dark .login-gateway__field > div:hover { border-color: #7592ad; }
+.login-gateway--dark .login-gateway__field > div:focus-within { border-color: #8eb4ff; box-shadow: 0 0 0 3px rgba(121, 167, 255, 0.18); }
+
+#root .login.login-gateway--dark .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  color: #f3f7fc !important;
+  -webkit-text-fill-color: #f3f7fc !important;
+  caret-color: #8eb4ff !important;
+  background-color: transparent !important;
+  color-scheme: dark;
+}
+
+#root .login.login-gateway--dark .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"])::placeholder {
+  color: #9caec0 !important;
+  -webkit-text-fill-color: #9caec0 !important;
+}
+
+#root .login.login-gateway--dark .login-gateway__field input:-webkit-autofill,
+#root .login.login-gateway--dark .login-gateway__field input:-webkit-autofill:hover,
+#root .login.login-gateway--dark .login-gateway__field input:-webkit-autofill:focus,
+#root .login.login-gateway--dark .login-gateway__field input:-webkit-autofill:active {
+  color: #f3f7fc !important;
+  -webkit-text-fill-color: #f3f7fc !important;
+  caret-color: #8eb4ff !important;
+  -webkit-box-shadow: 0 0 0 1000px #071725 inset !important;
+  box-shadow: 0 0 0 1000px #071725 inset !important;
+}
+
+#root .login.login-gateway--dark .login-gateway__field
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):focus {
+  color: #f3f7fc !important;
+  -webkit-text-fill-color: #f3f7fc !important;
+  caret-color: #8eb4ff !important;
+  background-color: transparent !important;
+}
+
+.login-gateway--dark .login-gateway__password button { color: #8eb4ff; }
+.login-gateway--dark .login-gateway__password button:hover { background: rgba(121, 167, 255, 0.12); }
+.login-gateway--dark .login-gateway__enter {
+  background: linear-gradient(100deg, #315fc9, #477ce0 58%, #6562d9);
+  border-color: rgba(142, 180, 255, 0.78);
+  box-shadow: 0 18px 34px -21px rgba(80, 126, 237, 0.72), inset 0 1px rgba(255, 255, 255, 0.2);
+}
+.login-gateway--dark .login-gateway__error {
+  color: #ffdce7;
+  background: rgba(150, 31, 72, 0.3);
+  border-color: rgba(255, 120, 165, 0.45);
+}
+
+.login-gateway--dark .login-gateway__footer { border-top-color: rgba(121, 167, 255, 0.15); }
+.login-gateway--dark .login-gateway__form-meta label { color: #b3c1ce; }
+.login-gateway--dark .login-gateway__form-meta a,
+.login-gateway--dark .login-gateway__footer nav a { color: #9bbcff; }
+.login-gateway--dark .login-gateway__utilities > a,
+.login-gateway--dark .login-gateway__utilities > div {
+  color: #d5e0e9;
+  background: rgba(6, 22, 37, 0.72);
+  border-color: rgba(121, 167, 255, 0.22);
+}
+.login-gateway--dark .login-gateway__utilities > a:hover {
+  background: #0b263e;
+  border-color: rgba(142, 180, 255, 0.56);
+}
+.login-gateway--dark .login-gateway__utilities strong { color: #dce6ee; }
+.login-gateway--dark .login-gateway__utilities small { color: #9caec0; }
+.login-gateway--dark .login-gateway__utilities > div > span { color: #9fb2c5; background: rgba(159, 178, 197, 0.1); }
+.login-gateway--dark .login-gateway__utilities > a:last-child > span { color: #9bbcff; background: rgba(121, 167, 255, 0.12); }
+.login-gateway--dark .login-gateway__utilities > a > svg { color: #9caec0; }
+
+@media (max-width: 900px) {
+  html:has(.login-gateway--dark) {
+    background: #020812;
+    scrollbar-color: rgba(121, 167, 255, 0.5) #020812;
+  }
+  html:has(.login-gateway--dark)::-webkit-scrollbar-track { background: #020812; }
+  html:has(.login-gateway--dark)::-webkit-scrollbar-thumb { background: rgba(121, 167, 255, 0.48); }
+}
+
+@media (max-width: 560px) {
+  .login-gateway--dark .login-gateway__security span::after { color: #b3c1ce; }
+}
