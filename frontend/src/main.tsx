@@ -83,13 +83,13 @@ import "./styles/cardiology-spaces-app-frame.css";
 import "./styles/cardiology-spaces-public.css";
 /* Geometria e aparência escura do seletor; o tema claro só troca a paleta. */
 import "./styles/corvia-theme-selector.css";
+/* Correções finais do lote atual. Permanecem antes do contrato escuro e do
+   tema claro, que por segurança precisam encerrar a cascata nesta ordem. */
+import "./styles/cardiology-spaces-pending-fixes.css";
 /* Contrato de segurança visual do universo escuro. */
 import "./styles/clinical-form-control-contrast.css";
 /* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
 import "./styles/cardiology-spaces-light-mode.css";
-/* Correções finais do lote atual; deliberadamente após as duas paletas para
-   valer igualmente em claro/escuro sem reabrir a composição canônica. */
-import "./styles/cardiology-spaces-pending-fixes.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
