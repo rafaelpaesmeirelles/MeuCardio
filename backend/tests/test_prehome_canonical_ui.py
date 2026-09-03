@@ -15,7 +15,8 @@ def test_all_public_auth_pages_use_canonical_prehome_shell():
 
     # /entrar tem a prancha sideral própria aprovada; os demais fluxos de
     # autenticação compartilham o frame público do Cardiology Spaces.
-    assert '<main className="login login-gateway">' in login
+    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
+    assert 'data-login-theme={temaPublico}' in login
     assert 'import "../styles/cardiology-spaces-login.css";' in login
     assert "PublicCardiologyFrame" not in login
     assert "login prehome" not in login
@@ -99,8 +100,12 @@ def test_no_browser_scale_or_zoom_workaround():
     assert "scale(" not in css
 
 
-def test_global_contrast_guard_remains_last_global_stylesheet():
+def test_scoped_light_theme_remains_after_global_contrast_guard():
     main = _read("main.tsx")
     imports = [line.strip() for line in main.splitlines() if line.strip().startswith('import "./styles/')]
-    assert imports[-1] == 'import "./styles/clinical-form-control-contrast.css";'
+    assert imports[-2:] == [
+        'import "./styles/clinical-form-control-contrast.css";',
+        'import "./styles/cardiology-spaces-light-mode.css";',
+    ]
+    assert 'html[data-corvia-theme="light"]' in _read("styles/cardiology-spaces-light-mode.css")
     assert not any("prehome-register-bridge" in line or "prehome-fidelity-polish" in line for line in imports)

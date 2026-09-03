@@ -7,7 +7,8 @@ import { CoracaoHolografico } from "../components/PreHomeBrand";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
-import { nomeComTratamento } from "../lib/clinicalIdentity";
+import { chamamentoComArtigo, nomeComTratamento } from "../lib/clinicalIdentity";
+import { useCorviaTheme } from "../lib/corviaTheme";
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
 
@@ -909,6 +910,7 @@ function mobilityRouteError(result: MobilityResult) {
 
 export default function CardiologySpacesHome() {
   const { usuario } = useAuth();
+  const { theme, toggleTheme } = useCorviaTheme();
   const navigate = useNavigate();
   const [mode, setMode] = useState<Mode | null>(() => {
     const saved = sessionStorage.getItem(MODE_KEY);
@@ -1118,15 +1120,9 @@ export default function CardiologySpacesHome() {
   const activePersonalizerDefinition = activeShelfDefinitions.find((definition) => definition.id === personalizerShelf)
     || activeShelfDefinitions[0];
   const activeDraftIds = shelfDraft[activePersonalizerDefinition.id] || [];
-  const chamamento = usuario?.professional_title?.trim() || nomeComTratamento(usuario, true);
-  const tratamentoNormalizado = usuario?.professional_title?.trim().toLocaleLowerCase("pt-BR").replaceAll(".", "") || "";
-  const artigoDoChamamento = /\b(?:dra|sra|profa)\b/.test(tratamentoNormalizado)
-    ? "a"
-    : /\b(?:dr|sr|prof)\b/.test(tratamentoNormalizado)
-      ? "o"
-      : "";
-  const chamamentoComArtigo = [artigoDoChamamento, chamamento].filter(Boolean).join(" ");
-  const question = mode === "scientific" ? `Como ${chamamentoComArtigo} quer explorar o conhecimento agora?` : `Onde ${chamamentoComArtigo} vai trabalhar agora?`;
+  const chamamentoNaFrase = chamamentoComArtigo(usuario, { curto: true });
+  const chamamentoNoInicio = chamamentoComArtigo(usuario, { curto: true, inicioDeFrase: true });
+  const question = mode === "scientific" ? `Como ${chamamentoNaFrase} quer explorar o conhecimento agora?` : `Onde ${chamamentoNaFrase} vai trabalhar agora?`;
   const returnHomeTarget = useMemo<MobilityTarget | null>(() => {
     if (mobilityDayContext?.stage !== "at_last" || !mobilityDayContext.last_target || mobilityDayContext.end_location?.id == null) return null;
     const lastTarget = mobilityDayContext.last_target;
@@ -1422,7 +1418,7 @@ export default function CardiologySpacesHome() {
         <header><Brand /><span className="spaces-user"><UserIdentity usuario={usuario} /></span></header>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">CARDIOLOGY SPACES</p>
-          <h1>Como {chamamento} quer trabalhar hoje?</h1>
+          <h1>Como {chamamentoNaFrase} quer trabalhar hoje?</h1>
           <p>Escolha a experiência que acompanha o seu momento. O CorVIA reorganiza cada ambiente ao redor do que importa agora.</p>
           <div className="spaces-choice__cards">
             <button type="button" onClick={() => chooseMode("complete")}>
@@ -1442,7 +1438,7 @@ export default function CardiologySpacesHome() {
             </button>
           </div>
         </section>
-        <footer>O ambiente muda. <strong>O Médico continua no centro.</strong></footer>
+        <footer>O ambiente muda. <strong>{chamamentoNoInicio} continua no centro.</strong></footer>
       </main>
     );
   }
@@ -1451,7 +1447,24 @@ export default function CardiologySpacesHome() {
     <main className={`spaces-home spaces-home--${activeSpace.tone} spaces-home--mode-${mode}${mode === "scientific" ? " spaces-home--scientific" : ""}`}>
       <div className="spaces-home__heart" aria-hidden="true"><CoracaoHolografico /></div>
       <header className="spaces-home__topbar">
-        <button type="button" className="spaces-brand-button" onClick={resetMode} aria-label="Voltar à escolha de experiência"><Brand /></button>
+        <div className="spaces-home__brand-cluster">
+          <button type="button" className="spaces-brand-button" onClick={resetMode} aria-label="Voltar à escolha de experiência"><Brand /></button>
+          <button
+            type="button"
+            className="spaces-theme-cameo"
+            onClick={toggleTheme}
+            aria-label={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
+            title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
+          >
+            <img
+              src="/spaces/corvia-galaxy-cameo.webp"
+              alt=""
+              width="132"
+              height="44"
+              draggable="false"
+            />
+          </button>
+        </div>
         <form className="spaces-everything-search" role="search" onSubmit={searchEverything}>
           <Icone nome="busca" />
           <input ref={globalSearchRef} value={globalQuery} onChange={(event) => setGlobalQuery(event.target.value)} placeholder="Tudo com Tudo — relações, evidências e funções" aria-label="Buscar no Tudo com Tudo" />
@@ -1566,7 +1579,7 @@ export default function CardiologySpacesHome() {
           <Link to="/assistente"><Icone nome="assistente" /><span>Apoio CorVIA</span></Link>
         </>}
       </nav>
-      <p className="spaces-motto">{mode === "scientific" ? <>O conhecimento <strong>se conecta.</strong> {nomeComTratamento(usuario, true)} <strong>conduz a jornada.</strong></> : <>O ambiente <strong>muda.</strong> O Médico <strong>continua no centro.</strong></>}</p>
+      <p className="spaces-motto">{mode === "scientific" ? <>O conhecimento <strong>se conecta.</strong> {chamamentoNoInicio} <strong>conduz a jornada.</strong></> : <>O ambiente <strong>muda.</strong> {chamamentoNoInicio} <strong>continua no centro.</strong></>}</p>
 
       {catalogOpen && <div className="spaces-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setCatalogOpen(false); }}><aside ref={catalogRef} className="spaces-catalog" role="dialog" aria-modal="true" aria-label="Todas as funções"><header><div><Brand /><h2>Todas as funções, um único sistema.</h2></div><button type="button" onClick={() => setCatalogOpen(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header><label><Icone nome="busca" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar função" /></label><div>{visibleCatalog.map((section) => <section key={section.title}><h3>{section.title}</h3><div>{section.actions.map((action) => <ActionLink key={`${section.title}-${action.to}-${action.label}`} action={action} />)}</div></section>)}</div></aside></div>}
 

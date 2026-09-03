@@ -13,7 +13,7 @@ from app.core.uploads import UploadRejected, validate_file
 from app.models.kyc import KycVerification
 from app.models.user import User
 from app.services.investidor_demo import MENSAGEM_MODO_INVESTIDOR
-from app.services.kyc import verificacao
+from app.services.kyc import auto_flow, verificacao
 
 router = APIRouter(prefix="/api/kyc", tags=["verificação de identidade"])
 
@@ -53,10 +53,9 @@ def _status_publico(registro: KycVerification | None, *, waivers: dict[str, bool
         "liberado": verificacao.liberado_para_uso(registro),
         "conselho_check_status": registro.conselho_check_status,
         "criado_em": registro.criado_em,
-        # "reenvio_solicitado" (11/08/2026, ficha administrativa do
-        # assinante) é uma segunda decisão definitiva além de "rejeitado" —
-        # também precisa mostrar a nota, senão o assinante não sabe o que
-        # corrigir antes de reenviar.
+        # A justificativa interna da validação automática fica restrita ao
+        # admin. O assinante recebe nota apenas quando há uma decisão humana
+        # explícita de rejeição/reenvio, como já ocorria antes.
         "nota_revisao": (
             registro.nota_revisao if registro.status in ("rejeitado", "reenvio_solicitado") else None
         ),
@@ -85,8 +84,10 @@ async def submeter_verificacao(
 ):
     """Submete KYC apenas para contas reais.
 
-    Investidor é demonstração sem KYC e recebe 403 também aqui, além da
-    barreira global do middleware, para defesa em profundidade.
+    Para médico CRM normal, a mesma requisição consulta o CFM e compara
+    cadastro + documentos. Só uma validação inequívoca termina em ``aprovado``
+    e libera o uso. Negativo ou inconclusivo permanece bloqueado e cai na
+    fila administrativa com todos os arquivos cifrados disponíveis ao admin.
     """
     if user.investidor:
         raise HTTPException(status_code=403, detail=MENSAGEM_MODO_INVESTIDOR)
@@ -100,7 +101,7 @@ async def submeter_verificacao(
         doc_pessoal_digital=await _ler(doc_pessoal_digital),
     )
     try:
-        registro = verificacao.submeter(db, user, docs)
+        registro = auto_flow.submeter_com_auto_validacao(db, user, docs)
     except (
         verificacao.DocumentoPessoalIncompleto,
         verificacao.DocumentoProfissionalIncompleto,

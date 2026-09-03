@@ -22,12 +22,13 @@ def test_prehome_approved_visual_contract_precedes_global_contrast_guard():
 def test_prehome_brand_matches_approved_corvia_identity():
     login = read("pages/Entrar.tsx")
     for token in (
-        '<main className="login login-gateway">',
+        'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}',
+        'data-login-theme={temaPublico}',
         'src="/corvia-mark-canonical.svg"',
         "CARDIOLOGY SPACES",
-        "UM ACESSO · CINCO ESPAÇOS",
-        "Onde todos os seus espaços",
-        "se tornam um.",
+        "CORVIA · CARDIOLOGY SPACES",
+        "Toda a cardiologia conectada.",
+        "Você no centro.",
         "Consultório, Hospital, Ensino, Pesquisa e Gestão",
         "CoracaoHolografico",
         "login-gateway__stars",
@@ -52,7 +53,11 @@ def test_prehome_brand_matches_approved_corvia_identity():
 def test_login_copy_and_all_real_auth_controls_remain_available():
     login = read("pages/Entrar.tsx")
     for token in (
-        "Abra o seu espaço",
+        "Entre no CorVIA",
+        'name="tema-publico"',
+        "Modo claro",
+        "Modo escuro",
+        "Seu acesso e suas permissões não mudam.",
         '<form className="login-gateway__form" onSubmit={enviar}>',
         'id="email" type="email"',
         'id="senha" type={mostrarSenha ? "text" : "password"}',

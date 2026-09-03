@@ -45,3 +45,4 @@ from app.models.heart_team import (  # noqa: F401
     HeartTeamCostLedger, HeartTeamFinalReview, HeartTeamOpinion,
     HeartTeamPatientRecord, HeartTeamSuggestion, HeartTeamSuggestionReview,
 )
+from app.models.cfm_registry import CfmPhysician, CfmSyncRun  # noqa: F401

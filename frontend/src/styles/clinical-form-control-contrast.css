@@ -3,8 +3,9 @@
    Causa raiz do bug visto em Prescrição/Admin: módulos antigos às vezes
    aplicam fundo claro/literal a um input, enquanto `.clinical-os` redefine
    `--texto` para quase branco. O resultado calculado vira texto branco em
-   fundo branco. Esta folha é importada POR ÚLTIMO e fecha o contrato visual
-   dos controles editáveis do sistema, inclusive autofill do navegador.
+   fundo branco. Esta folha fecha o contrato visual do universo escuro,
+   inclusive autofill; somente a camada clara, estritamente escopada pelo
+   atributo do tema, pode vir depois dela.
 
    A prancha canônica aprovada também define as superfícies PRÉ-LOGIN como
    navy/teal. Portanto login, cadastro e recuperação usam o MESMO par escuro +

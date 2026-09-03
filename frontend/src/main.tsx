@@ -5,6 +5,7 @@ import App from "./App";
 import AppErrorBoundary from "./components/AppErrorBoundary";
 import { AuthProvider } from "./lib/auth";
 import "./lib/cardiologySpacesHoverBoundary";
+import { CorviaThemeProvider } from "./lib/corviaTheme";
 import { liberarRecargaPendente, verificarVersaoAtual } from "./lib/freshness";
 import "./styles/tokens.css";
 import "./styles/shell.css";
@@ -80,8 +81,12 @@ import "./styles/cardiology-spaces-route-tones.css";
 import "./styles/cardiology-spaces-app-frame.css";
 /* Camada pública isolada: aplica a identidade aprovada sem alterar /entrar. */
 import "./styles/cardiology-spaces-public.css";
-/* Contrato de segurança visual: permanece deliberadamente como último CSS. */
+/* Geometria e aparência escura do seletor; o tema claro só troca a paleta. */
+import "./styles/corvia-theme-selector.css";
+/* Contrato de segurança visual do universo escuro. */
 import "./styles/clinical-form-control-contrast.css";
+/* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
+import "./styles/cardiology-spaces-light-mode.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
@@ -131,7 +136,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <AppErrorBoundary>
       <BrowserRouter>
         <AuthProvider>
-          <App />
+          <CorviaThemeProvider>
+            <App />
+          </CorviaThemeProvider>
         </AuthProvider>
       </BrowserRouter>
     </AppErrorBoundary>

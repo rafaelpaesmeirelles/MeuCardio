@@ -22,11 +22,11 @@ const buscaTudoComTudoSomenteOnline = /(?:^|\/)Busca-[^/]*\.js$/;
 // chunks não os torna utilizáveis offline; eles permanecem disponíveis pelo
 // cache NetworkFirst de assets quando acessados.
 const conteudoConectadoSomenteOnline = /(?:^|\/)(?:ChecklistModelo|ChecklistAlta|MaterialPaciente|MaterialPacienteDetalhe|Trilha)-[^/]*\.js$/;
-// Agenda, prontuário, prescrição e round dependem de sessão, dados clínicos
-// atuais e APIs transacionais. Manter seus chunks no precache não cria um modo
-// offline seguro e ainda pode exibir informação clínica desatualizada. Eles
-// continuam cobertos pelo cache NetworkFirst de assets depois do primeiro uso.
-const operacaoClinicaSomenteOnline = /(?:^|\/)(?:Agenda|Prontuario|Receituario|RoundGerenciavel)-[^/]*\.(?:js|css)$/;
+// Agenda, prontuário, prescrição, round, e-mail, sincronização e conta dependem
+// de sessão, dados atuais e APIs transacionais. Manter seus chunks no precache
+// não cria um modo offline seguro e ainda pode exibir informação desatualizada.
+// Eles continuam cobertos pelo cache NetworkFirst depois do primeiro uso.
+const operacaoClinicaSomenteOnline = /(?:^|\/)(?:Agenda|Prontuario|Receituario|RoundGerenciavel|CaixaDeEmail|CorviaMail|MinhaConta|ExcluirConta|Sincronizacao)-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [

@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-do
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
 import { api, assetUrl } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { useCorviaTheme } from "../lib/corviaTheme";
 import {
   catalogRoutesFor,
   CLINICAL_SPACES,
@@ -14,6 +15,8 @@ import {
 import { nomeComTratamento } from "../lib/clinicalIdentity";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
+import ClinicalFunctionFigure from "./ClinicalFunctionFigure";
+import CorviaThemeSelector from "./CorviaThemeSelector";
 import Credito from "./Credito";
 import Icone from "./Icone";
 import { IconeEmergencia } from "./IdentidadeClinica";
@@ -158,6 +161,7 @@ function ContextIntelligence({ route, space, routes }: {
 
 export default function CardiologySpacesAppFrame() {
   const { usuario, sair } = useAuth();
+  const { theme } = useCorviaTheme();
   const location = useLocation();
   const navigate = useNavigate();
   const route = resolveClinicalRoute(location.pathname);
@@ -203,6 +207,7 @@ export default function CardiologySpacesAppFrame() {
 
   const emergency = route.group === "emergencia";
   const nativePage = NATIVE_PAGE_PATHS.has(location.pathname);
+  const logoSrc = theme === "light" ? "/corvia-logo-spaces.svg" : "/corvia-logo-spaces-dark.svg";
 
   useEffect(() => {
     if (!isAdmin) return;
@@ -362,7 +367,7 @@ export default function CardiologySpacesAppFrame() {
       <div className="cv-shell">
         <header className="cv-topbar">
           <button type="button" className="cv-topbar__menu" onClick={(event) => openDrawer(event.currentTarget)} aria-label="Abrir navegação"><Icone nome="menu" /></button>
-          <NavLink to="/" className="cv-topbar__brand" aria-label="CorVIA — início"><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" /></NavLink>
+          <NavLink to="/" className="cv-topbar__brand" aria-label="CorVIA — início"><img src={logoSrc} alt="CorVIA Cardiology Spaces" /></NavLink>
           <div className="cv-topbar__context"><span>{spaceMeta.label}</span><i>·</i><strong>{route.shortName || route.name}</strong></div>
           <form className="cv-command" role="search" onSubmit={executeCommand}>
             <Icone nome="sincronizar" />
@@ -392,6 +397,7 @@ export default function CardiologySpacesAppFrame() {
               {accountOpen && (
                 <div className="cv-account-menu" id="cv-account-panel">
                   <header><strong>{nomeComTratamento(usuario)}</strong><small>{usuario?.email}</small></header>
+                  <CorviaThemeSelector variant="menu" />
                   <NavLink to="/minha-conta"><Icone nome="conta" />Minha conta</NavLink>
                   <NavLink to="/sincronizacao"><Icone nome="sincronizar" />Contas conectadas</NavLink>
                   <NavLink to="/favoritos"><Icone nome="favorito" />Notas & Favoritos</NavLink>
@@ -405,14 +411,21 @@ export default function CardiologySpacesAppFrame() {
 
         <div className="cv-workspace">
           <section className="cv-stage" aria-label={`Espaço ${spaceMeta.label}`}>
-            <header className="cv-space-horizon" style={{ "--cv-room": `url(${spaceMeta.roomImage})` } as React.CSSProperties}>
+            <header
+              className={`cv-space-horizon${theme === "light" ? " cv-space-horizon--function" : ""}`}
+              style={theme === "dark" ? { "--cv-room": `url(${spaceMeta.roomImage})` } as React.CSSProperties : undefined}
+            >
               <div className="cv-space-horizon__signal" aria-hidden="true"><span /><i /><b /></div>
               <div className="cv-space-horizon__copy">
                 <p><Icone nome={spaceMeta.icon} /> {spaceMeta.label} <i>·</i> {spaceMeta.eyebrow}</p>
                 <strong>{route.shortName || route.name}</strong>
                 <span>{spaceMeta.description}</span>
               </div>
-              <div className="cv-space-horizon__orb" aria-hidden="true"><span>∑</span><i /><b /></div>
+              {theme === "light" ? (
+                <ClinicalFunctionFigure key={location.pathname} icon={route.icon} group={route.group} space={space} />
+              ) : (
+                <div className="cv-space-horizon__orb" aria-hidden="true"><span>∑</span><i /><b /></div>
+              )}
             </header>
 
             <nav className="cv-function-deck" aria-label={`Funções rápidas de ${spaceMeta.label}`}>
@@ -452,7 +465,7 @@ export default function CardiologySpacesAppFrame() {
       <div className={`cv-drawer-backdrop${drawerOpen ? " is-open" : ""}`} aria-hidden="true" onClick={() => closeDrawer(true)} />
       <aside ref={drawerRef} className={`cv-drawer${drawerOpen ? " is-open" : ""}`} role="dialog" aria-modal={drawerOpen ? "true" : undefined} aria-hidden={!drawerOpen} aria-label="Todas as funções">
         <header className="cv-drawer__header">
-          <NavLink to="/" onClick={() => setDrawerOpen(false)}><img src="/corvia-logo-spaces-dark.svg" alt="CorVIA Cardiology Spaces" /></NavLink>
+          <NavLink to="/" onClick={() => setDrawerOpen(false)}><img src={logoSrc} alt="CorVIA Cardiology Spaces" /></NavLink>
           <button ref={drawerCloseRef} type="button" onClick={() => closeDrawer(true)} aria-label="Fechar"><Icone nome="fechar" /></button>
         </header>
         <div className="cv-drawer__intro"><span>UNIVERSO CORVIA</span><h2>Todas as funções, um único sistema.</h2><p>O ambiente muda. Suas ferramentas continuam conectadas.</p></div>

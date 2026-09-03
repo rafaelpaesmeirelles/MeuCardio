@@ -297,6 +297,9 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert upload_modules == {
         "auth.py",
         "email.py",
+        # As caixas CorVIA delegadas reutilizam o mesmo pipeline canônico de
+        # anexos e precisam do mesmo corte ASGI antes do multipart.
+        "email_multibox.py",
         "partner_courses.py",
         "patient_profiles.py",
         "service_orders.py",
@@ -364,6 +367,8 @@ def test_inventario_de_rotas_upload_exige_politica_central():
     assert heart_team_policy.max_file_bytes == 20 * 1024 * 1024
     assert heart_team_policy.max_total_file_bytes == 40 * 1024 * 1024
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
+    assert policy_for("POST", "/api/email/externas/corvia-42/mensagens/anexos") is not None
+    assert policy_for("POST", "/api/email/externas/corvia-42/mensagens/anexos/verificar-assinatura") is not None
     assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None
     assert not is_course_upload("GET", "/api/cursos/admin/cardiologia/material")

@@ -1,0 +1,3144 @@
+/* ======================================================================
+   CorVIA Cardiology Spaces — modo claro
+
+   Aurora Lunar: pérola, lavanda e vidro branco atravessados por auroras,
+   órbitas e profundidade abstrata — sem substituir a cenografia original.
+   Esta folha é carregada por último e todo seletor fica deliberadamente sob
+   `data-corvia-theme="light"`: o modo escuro e as páginas públicas não mudam.
+   ====================================================================== */
+
+html[data-corvia-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-corvia-theme="light"] body.cardiology-spaces-active,
+html[data-corvia-theme="light"] body:has(.cv-app),
+html[data-corvia-theme="light"] body:has(.clinical-os) {
+  color: #1b2440;
+  background: #f7f3fa;
+  color-scheme: light;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) {
+  --corvia-light-bg: #f7f3fa;
+  --corvia-light-bg-soft: #eef2fa;
+  --corvia-light-panel: rgba(255, 255, 255, 0.86);
+  --corvia-light-panel-strong: rgba(255, 255, 255, 0.96);
+  --corvia-light-line: rgba(75, 79, 196, 0.2);
+  --corvia-light-line-soft: rgba(75, 79, 196, 0.11);
+  --corvia-light-text: #1b2440;
+  --corvia-light-text-2: #4d5873;
+  --corvia-light-text-3: #5e687f;
+  --corvia-light-text-subtle: #626c82;
+  --corvia-light-cyan: #0f727a;
+  --corvia-light-blue: #4b4fc4;
+  --corvia-light-violet: #7957c8;
+  --corvia-light-rose: #c42068;
+  --corvia-light-teal: #0f727a;
+  --corvia-light-teal-decorative: #137a80;
+  --corvia-light-rose-decorative: #d12870;
+  --corvia-light-champagne: #b78a52;
+  --corvia-light-focus: #4b4fc4;
+  --corvia-light-shadow: 0 22px 58px -36px rgba(45, 45, 100, 0.34), 0 2px 9px rgba(57, 53, 107, 0.08);
+  --fundo: #f7f3fa;
+  --superficie: #ffffff;
+  --superficie-suave: #eef2fa;
+  --texto: #1b2440;
+  --texto-secundario: #4d5873;
+  --texto-terciario: #5e687f;
+  --borda: #ccd1e3;
+  --borda-forte: #81899e;
+  --primaria: #30376e;
+  --primaria-escura: #1b2440;
+  --acao: #0f727a;
+  --acao-hover: #0f666b;
+  --acento: #4b4fc4;
+  --acento-tinta: #efedfb;
+  --acao-tinta: #e8f4f4;
+  --line: #ccd1e3;
+  --muted: #4d5873;
+  color: var(--corvia-light-text);
+  color-scheme: light;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) ::selection {
+  color: #1b2440;
+  background: #bfe7ee;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) :focus-visible {
+  outline-color: var(--corvia-light-focus);
+}
+
+/* ----------------------------------------------------------------------
+   Escolha de experiência + seletor de universo
+   ---------------------------------------------------------------------- */
+html[data-corvia-theme="light"] .spaces-choice,
+html[data-corvia-theme="light"] .spaces-home {
+  --spaces-bg: #f7f3fa;
+  --spaces-panel: rgba(255, 255, 255, 0.87);
+  --spaces-panel-strong: rgba(255, 255, 255, 0.97);
+  --spaces-line: rgba(75, 79, 196, 0.22);
+  --spaces-line-soft: rgba(75, 79, 196, 0.12);
+  --spaces-text: #1b2440;
+  --spaces-text-2: #4d5873;
+  --spaces-text-3: #5e687f;
+  --spaces-cyan: #0f727a;
+  --spaces-blue: #4b4fc4;
+  --spaces-brand-blue: #4b4fc4;
+  --spaces-violet: #7957c8;
+  --spaces-rose: #c42068;
+  --spaces-teal: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-home--cyan { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
+html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #4b4fc4; }
+html[data-corvia-theme="light"] .spaces-home--violet { --space-rgb: 121, 87, 200; --space-accent: #7957c8; }
+html[data-corvia-theme="light"] .spaces-home--rose { --space-rgb: 209, 40, 112; --space-accent: #c42068; }
+html[data-corvia-theme="light"] .spaces-home--teal { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
+
+html[data-corvia-theme="light"] :is(.spaces-door--cyan, .spaces-context-rail__space--cyan) { --door-rgb: 19, 122, 128; }
+html[data-corvia-theme="light"] :is(.spaces-door--blue, .spaces-context-rail__space--blue) { --door-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] :is(.spaces-door--violet, .spaces-context-rail__space--violet) { --door-rgb: 121, 87, 200; }
+html[data-corvia-theme="light"] :is(.spaces-door--rose, .spaces-context-rail__space--rose) { --door-rgb: 209, 40, 112; }
+html[data-corvia-theme="light"] :is(.spaces-door--teal, .spaces-context-rail__space--teal) { --door-rgb: 19, 122, 128; }
+
+html[data-corvia-theme="light"] .spaces-choice {
+  background:
+    radial-gradient(circle at 50% 47%, rgba(75, 79, 196, 0.2), transparent 31rem),
+    radial-gradient(circle at 76% 70%, rgba(121, 87, 200, 0.1), transparent 27rem),
+    radial-gradient(circle at 13% 16%, rgba(19, 122, 128, 0.09), transparent 22rem),
+    linear-gradient(145deg, #f7f3fa 0%, #eef2fa 53%, #eef2fa 100%);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home)::before {
+  opacity: 0.8;
+  background-image:
+    radial-gradient(circle at 13% 18%, rgba(75, 79, 196, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 13%, rgba(75, 79, 196, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 67%, rgba(121, 87, 200, 0.24) 0 0.7px, transparent 1.1px),
+    linear-gradient(rgba(75, 79, 196, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.03) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__heart,
+html[data-corvia-theme="light"] .spaces-home__heart {
+  opacity: 0.055;
+  filter: drop-shadow(0 0 54px rgba(75, 79, 196, 0.18)) saturate(0.9);
+}
+
+html[data-corvia-theme="light"] .spaces-brand {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-brand > img {
+  filter: drop-shadow(0 7px 16px rgba(49, 45, 100, 0.14));
+}
+
+html[data-corvia-theme="light"] .spaces-brand strong,
+html[data-corvia-theme="light"] .spaces-brand strong i {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-brand strong b {
+  color: #4b4fc4;
+  text-shadow: none;
+}
+
+html[data-corvia-theme="light"] .spaces-brand small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-brand-button:focus-visible {
+  outline-color: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] .spaces-user {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-user__avatar {
+  color: #303956;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 242, 250, 0.96));
+  border-color: rgba(75, 79, 196, 0.28);
+  box-shadow: inset 0 1px #fff, 0 8px 24px rgba(49, 45, 100, 0.11);
+}
+
+html[data-corvia-theme="light"] .spaces-user > svg:last-child {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-eyebrow {
+  color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__content > h1 {
+  color: #1b2440;
+  text-shadow: 0 1px #fff;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__content > p:not(.spaces-eyebrow) {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > button {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(19, 122, 128, 0.11), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(244, 242, 249, 0.98));
+  border-color: #81899e;
+  box-shadow: inset 0 1px #fff, 0 26px 65px -45px rgba(49, 45, 100, 0.44);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > button::after {
+  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), transparent 67%);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > button:hover,
+html[data-corvia-theme="light"] .spaces-choice__cards > button:focus-visible {
+  border-color: rgba(19, 122, 128, 0.62);
+  box-shadow: inset 0 1px #fff, 0 28px 62px -37px rgba(75, 79, 196, 0.43);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__icon {
+  color: #0f727a;
+  background: rgba(19, 122, 128, 0.08);
+  border-color: rgba(19, 122, 128, 0.28);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards strong {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards small {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards em {
+  color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > .spaces-choice__science {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(19, 122, 128, 0.12), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(238, 248, 246, 0.98));
+  border-color: rgba(19, 122, 128, 0.3);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > .spaces-choice__science :is(.spaces-choice__icon, em) {
+  color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > .spaces-choice__science .spaces-choice__icon {
+  background: rgba(19, 122, 128, 0.08);
+  border-color: rgba(19, 122, 128, 0.27);
+}
+
+html[data-corvia-theme="light"] .spaces-choice > footer {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-choice > footer strong {
+  color: #4b4fc4;
+}
+
+/* Controle compartilhado. Os dois radios continuam explicitamente visíveis
+   e com alvos de 44px, inclusive quando inseridos no menu compacto da conta. */
+html[data-corvia-theme="light"] .corvia-theme-selector {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--choice {
+  display: grid;
+  width: min(100%, 690px);
+  grid-template-columns: minmax(170px, 0.74fr) minmax(320px, 1.26fr);
+  align-items: center;
+  gap: 14px;
+  margin: 22px auto 0;
+  padding: 11px 12px;
+  text-align: left;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(19, 122, 128, 0.1), transparent 10rem),
+    rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(75, 79, 196, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 18px 45px -38px rgba(49, 45, 100, 0.42), inset 0 1px rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(18px) saturate(115%);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__orbit {
+  position: relative;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #4b4fc4;
+  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), rgba(121, 87, 200, 0.04));
+  border: 1px solid rgba(75, 79, 196, 0.25);
+  border-radius: 50%;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__orbit::after {
+  position: absolute;
+  width: 42px;
+  height: 16px;
+  border: 1px solid rgba(121, 87, 200, 0.3);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__orbit svg {
+  width: 17px;
+  height: 17px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro strong {
+  color: #303956;
+  font-family: var(--fonte-dados);
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro small {
+  color: #5e687f;
+  font-size: 0.63rem;
+  line-height: 1.35;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__options {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  grid-template-columns: 30px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 9px;
+  color: #4d5873;
+  text-align: left;
+  background: rgba(247, 243, 250, 0.8);
+  border: 1px solid #81899e;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:hover {
+  color: #1b2440;
+  background: #fff;
+  border-color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:focus-visible {
+  outline: 3px solid #4b4fc4;
+  outline-offset: 2px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
+  color: #1b2440;
+  background: linear-gradient(145deg, rgba(238, 242, 250, 0.96), rgba(244, 242, 249, 0.96));
+  border-color: #4b4fc4;
+  box-shadow: inset 0 -2px #4b4fc4, 0 8px 22px -17px rgba(49, 45, 100, 0.4);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: #4d5873;
+  background: rgba(75, 79, 196, 0.08);
+  border: 1px solid rgba(75, 79, 196, 0.14);
+  border-radius: 8px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected .corvia-theme-selector__icon,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] .corvia-theme-selector__icon {
+  color: #0f727a;
+  background: rgba(19, 122, 128, 0.09);
+  border-color: rgba(19, 122, 128, 0.22);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] > span:nth-child(2) {
+  display: grid;
+  min-width: 0;
+  gap: 1px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] strong {
+  overflow: hidden;
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] small {
+  overflow: hidden;
+  color: #5e687f;
+  font-size: 0.56rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] > i {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  color: transparent;
+  border: 1px solid rgba(75, 79, 196, 0.34);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-style: normal;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected > i,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] > i {
+  color: #fff;
+  background: #0f727a;
+  border-color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__status {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu {
+  display: grid;
+  gap: 7px;
+  margin: 2px 0 6px;
+  padding: 8px;
+  background: rgba(238, 242, 250, 0.76);
+  border: 1px solid rgba(75, 79, 196, 0.14);
+  border-radius: 10px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu .corvia-theme-selector__intro {
+  grid-template-columns: 28px minmax(0, 1fr);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu .corvia-theme-selector__orbit {
+  width: 28px;
+  height: 28px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu .corvia-theme-selector__orbit::after {
+  width: 34px;
+  height: 13px;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu .corvia-theme-selector__intro small {
+  display: none;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu .corvia-theme-selector__options {
+  grid-template-columns: 1fr;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--menu button[role="radio"] {
+  min-height: 46px;
+}
+
+/* ----------------------------------------------------------------------
+   Home — profundidade orbital iluminada
+   ---------------------------------------------------------------------- */
+html[data-corvia-theme="light"] .spaces-home {
+  background:
+    radial-gradient(ellipse 540px 330px at 0% 0%, rgba(4, 43, 57, 0.29) 0%, rgba(10, 77, 87, 0.15) 43%, transparent 78%),
+    radial-gradient(circle at 49% 35%, rgba(var(--space-rgb), 0.11), transparent 31rem),
+    radial-gradient(circle at 82% 78%, rgba(121, 87, 200, 0.07), transparent 27rem),
+    linear-gradient(151deg, #f7f3fa 0%, #eef2fa 57%, #eef2fa 100%);
+}
+
+html[data-corvia-theme="light"] .spaces-home__topbar {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search {
+  color: #4d5873;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 242, 249, 0.94));
+  border-color: rgba(75, 79, 196, 0.24);
+  box-shadow: inset 0 1px #fff, 0 18px 42px -34px rgba(49, 45, 100, 0.32);
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search:focus-within {
+  border-color: rgba(var(--space-rgb), 0.58);
+  box-shadow: inset 0 1px #fff, 0 0 0 3px rgba(var(--space-rgb), 0.1);
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search > input {
+  color: #1b2440;
+  -webkit-text-fill-color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search > input::placeholder {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search > kbd {
+  color: #4d5873;
+  background: rgba(75, 79, 196, 0.08);
+  border-color: rgba(75, 79, 196, 0.18);
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search > button,
+html[data-corvia-theme="light"] .spaces-home__topbar > nav button {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-everything-search > button {
+  background: rgba(var(--space-rgb), 0.08);
+  border-color: rgba(var(--space-rgb), 0.22);
+}
+
+html[data-corvia-theme="light"] .spaces-home__topbar > nav button.is-active {
+  color: var(--space-accent);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-context-rail, .spaces-day) {
+  color: #4d5873;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 242, 249, 0.93));
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: inset 0 1px #fff, 0 21px 50px -42px rgba(49, 45, 100, 0.4);
+}
+
+html[data-corvia-theme="light"] .spaces-context-rail > span strong,
+html[data-corvia-theme="light"] .spaces-day h2 {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-context-rail__space, .spaces-context-rail__all, .spaces-context-rail__personalize) {
+  color: rgba(var(--door-rgb, 19, 122, 128), 0.82);
+  background: rgba(255, 255, 255, 0.64);
+  border-color: rgba(var(--door-rgb, 19, 122, 128), 0.2);
+}
+
+html[data-corvia-theme="light"] .spaces-context-rail__space.is-active {
+  color: rgb(var(--door-rgb));
+  background: rgba(var(--door-rgb), 0.1);
+  border-color: rgba(var(--door-rgb), 0.48);
+  box-shadow: 0 0 20px rgba(var(--door-rgb), 0.11), inset 0 0 16px rgba(var(--door-rgb), 0.05);
+}
+
+html[data-corvia-theme="light"] .spaces-context-rail__all::before {
+  background: rgba(75, 79, 196, 0.14);
+}
+
+html[data-corvia-theme="light"] .spaces-workspace__greeting h1,
+html[data-corvia-theme="light"] .spaces-title > span {
+  color: #252e4b;
+}
+
+html[data-corvia-theme="light"] .spaces-workspace__greeting > span,
+html[data-corvia-theme="light"] .spaces-title > small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-door > span {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-door > i {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(238, 242, 250, 0.38)),
+    radial-gradient(circle at 50% 35%, rgba(var(--door-rgb), 0.12), transparent 70%);
+  border-color: rgba(var(--door-rgb), 0.31);
+  box-shadow: inset 0 0 38px rgba(var(--door-rgb), 0.055), 0 20px 38px -31px rgba(var(--door-rgb), 0.4);
+}
+
+html[data-corvia-theme="light"] .spaces-door.is-active > span {
+  color: rgb(var(--door-rgb));
+  text-shadow: none;
+}
+
+html[data-corvia-theme="light"] .spaces-door.is-active > i {
+  border-color: rgba(var(--door-rgb), 0.62);
+  box-shadow: inset 0 0 45px rgba(var(--door-rgb), 0.1), 0 24px 42px -29px rgba(var(--door-rgb), 0.52);
+}
+
+html[data-corvia-theme="light"] .spaces-layer {
+  color: #1b2440;
+  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.11), rgba(255, 255, 255, 0.93), rgba(var(--space-rgb), 0.055));
+  border-color: rgba(var(--space-rgb), 0.25);
+  filter: drop-shadow(0 14px 21px rgba(49, 45, 100, 0.09));
+}
+
+html[data-corvia-theme="light"] :is(.spaces-layer--next, .spaces-layer--refs, .spaces-layer--essential) {
+  background: linear-gradient(90deg, rgba(121, 87, 200, 0.09), rgba(255, 255, 255, 0.94), rgba(121, 87, 200, 0.04));
+  border-color: rgba(121, 87, 200, 0.22);
+}
+
+html[data-corvia-theme="light"] .spaces-layer > header strong,
+html[data-corvia-theme="light"] .spaces-action,
+html[data-corvia-theme="light"] .spaces-personalize {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-action {
+  border-color: rgba(75, 79, 196, 0.14);
+}
+
+html[data-corvia-theme="light"] .spaces-action:hover,
+html[data-corvia-theme="light"] .spaces-action:focus-visible {
+  color: #1b2440;
+  background: rgba(var(--space-rgb), 0.075);
+}
+
+html[data-corvia-theme="light"] .spaces-personalize {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(121, 87, 200, 0.25);
+}
+
+html[data-corvia-theme="light"] .spaces-doctor {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.74);
+  border-color: rgba(var(--space-rgb), 0.18);
+}
+
+html[data-corvia-theme="light"] .spaces-doctor small {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .spaces-day::before {
+  background: rgba(75, 79, 196, 0.17);
+}
+
+html[data-corvia-theme="light"] .spaces-day__item strong,
+html[data-corvia-theme="light"] .spaces-day__travel strong,
+html[data-corvia-theme="light"] .spaces-day__empty strong {
+  color: #303956;
+}
+
+html[data-corvia-theme="light"] .spaces-day__item small,
+html[data-corvia-theme="light"] .spaces-day__travel small,
+html[data-corvia-theme="light"] .spaces-day__empty small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-day__travel,
+html[data-corvia-theme="light"] .spaces-day__empty {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.67);
+  border-color: rgba(75, 79, 196, 0.17);
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route {
+  color: #4d5873;
+  background:
+    radial-gradient(circle at 72% 25%, rgba(121, 87, 200, 0.11), transparent 8rem),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.91), rgba(238, 242, 250, 0.94));
+  border-color: rgba(75, 79, 196, 0.2);
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__heading strong,
+html[data-corvia-theme="light"] .spaces-stellar-route__metrics > strong {
+  color: #303956;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__heading small,
+html[data-corvia-theme="light"] .spaces-stellar-route__label {
+  color: #5e687f;
+  fill: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__label {
+  stroke: rgba(247, 243, 250, 0.94);
+}
+
+html[data-corvia-theme="light"] .spaces-dock {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(244, 242, 249, 0.9), rgba(255, 255, 255, 0.94));
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: 0 17px 45px -35px rgba(49, 45, 100, 0.35), inset 0 1px #fff;
+}
+
+html[data-corvia-theme="light"] .spaces-dock :is(a, button) {
+  color: #4d5873;
+  border-color: rgba(75, 79, 196, 0.12);
+}
+
+html[data-corvia-theme="light"] .spaces-dock :is(a, button):hover,
+html[data-corvia-theme="light"] .spaces-dock :is(a, button).active {
+  color: #1b2440;
+  background: rgba(var(--space-rgb), 0.07);
+}
+
+html[data-corvia-theme="light"] .spaces-motto {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-motto strong {
+  color: #4b4fc4;
+}
+
+/* Overlays da Home. */
+html[data-corvia-theme="light"] .spaces-overlay {
+  background: rgba(31, 56, 78, 0.28);
+  backdrop-filter: blur(16px) saturate(90%);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 85% 7%, rgba(var(--space-rgb), 0.09), transparent 18rem),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.985), rgba(244, 242, 249, 0.99));
+  border-color: rgba(75, 79, 196, 0.25);
+  box-shadow: -30px 0 90px rgba(49, 45, 100, 0.2);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) h2 {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) > header button {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(75, 79, 196, 0.22);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) > header button:hover {
+  color: #1b2440;
+  border-color: rgba(var(--space-rgb), 0.48);
+}
+
+html[data-corvia-theme="light"] .spaces-catalog > label {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.83);
+  border-color: rgba(75, 79, 196, 0.22);
+}
+
+html[data-corvia-theme="light"] .spaces-catalog > div {
+  scrollbar-color: rgba(19, 122, 128, 0.48) rgba(238, 242, 250, 0.76);
+}
+
+html[data-corvia-theme="light"] .spaces-catalog > div::-webkit-scrollbar-track {
+  background: rgba(238, 242, 250, 0.76);
+}
+
+html[data-corvia-theme="light"] .spaces-catalog > div::-webkit-scrollbar-thumb {
+  background: rgba(19, 122, 128, 0.45);
+  border-color: rgba(238, 242, 250, 0.76);
+}
+
+html[data-corvia-theme="light"] .spaces-catalog > div > section h3,
+html[data-corvia-theme="light"] :is(.spaces-personalizer, .spaces-travel) > header small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-catalog .spaces-action,
+html[data-corvia-theme="light"] .spaces-personalizer__tabs button,
+html[data-corvia-theme="light"] .spaces-personalizer__count,
+html[data-corvia-theme="light"] .spaces-personalizer__grid > button,
+html[data-corvia-theme="light"] .spaces-travel__status,
+html[data-corvia-theme="light"] .spaces-travel > footer button {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(75, 79, 196, 0.17);
+}
+
+html[data-corvia-theme="light"] .spaces-personalizer__tabs button.is-active,
+html[data-corvia-theme="light"] .spaces-personalizer__grid > button.is-selected {
+  color: #1b2440;
+  background: rgba(var(--space-rgb), 0.09);
+  border-color: rgba(var(--space-rgb), 0.4);
+}
+
+html[data-corvia-theme="light"] .spaces-personalizer__selected article {
+  color: #303956;
+  background: rgba(var(--space-rgb), 0.075);
+  border-color: rgba(var(--space-rgb), 0.24);
+}
+
+html[data-corvia-theme="light"] .spaces-personalizer__selected article button {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(75, 79, 196, 0.2);
+}
+
+html[data-corvia-theme="light"] .spaces-travel__map :is(.deslocamento-mapa, .deslocamento-rotas) {
+  color: #1b2440;
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(75, 79, 196, 0.2);
+}
+
+html[data-corvia-theme="light"] .spaces-travel__map :is(.deslocamento-mapa__legenda, .deslocamento-mapa__fonte) {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(75, 79, 196, 0.16);
+}
+
+html[data-corvia-theme="light"] .spaces-travel__map .deslocamento-rotas__cabecalho strong,
+html[data-corvia-theme="light"] .spaces-travel__status {
+  color: #303956;
+}
+
+/* ----------------------------------------------------------------------
+   App Frame — shell, superfícies, navegação e drawers
+   ---------------------------------------------------------------------- */
+html[data-corvia-theme="light"] .cv-app {
+  --cv-accent: #0f727a;
+  --cv-rgb: 19, 122, 128;
+  --cv-text: #1b2440;
+  --cv-text-2: #4d5873;
+  --cv-text-3: #5e687f;
+  --cv-line: rgba(75, 79, 196, 0.21);
+  --cv-line-soft: rgba(75, 79, 196, 0.11);
+  --cv-panel: rgba(255, 255, 255, 0.87);
+  --cv-panel-strong: rgba(255, 255, 255, 0.97);
+  --cos-line: rgba(75, 79, 196, 0.18);
+  --cos-line-strong: rgba(75, 79, 196, 0.28);
+  --cos-text: #1b2440;
+  --cos-muted: #4d5873;
+  --cos-muted-2: #5e687f;
+  --cos-cyan: #0f727a;
+  --cos-cyan-2: #0f727a;
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 49% 34%, rgba(var(--cv-rgb), 0.1), transparent 31rem),
+    radial-gradient(circle at 82% 78%, rgba(121, 87, 200, 0.07), transparent 27rem),
+    linear-gradient(151deg, #f7f3fa 0%, #eef2fa 57%, #eef2fa 100%);
+}
+
+html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #4b4fc4; --cv-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] .cv-app--ensino { --cv-accent: #7957c8; --cv-rgb: 121, 87, 200; }
+html[data-corvia-theme="light"] .cv-app--pesquisa { --cv-accent: #c42068; --cv-rgb: 209, 40, 112; }
+html[data-corvia-theme="light"] .cv-app--gestao { --cv-accent: #0f727a; --cv-rgb: 19, 122, 128; }
+
+html[data-corvia-theme="light"] .cv-app::before {
+  opacity: 0.78;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(24, 70, 108, 0.37) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 14%, rgba(75, 79, 196, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 88% 69%, rgba(121, 87, 200, 0.23) 0 0.7px, transparent 1.1px),
+    linear-gradient(rgba(75, 79, 196, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.028) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] .cv-app::after {
+  opacity: 0.04;
+  filter: drop-shadow(0 0 55px rgba(var(--cv-rgb), 0.18)) saturate(0.86);
+}
+
+html[data-corvia-theme="light"] .cv-topbar::after {
+  background: linear-gradient(90deg, transparent, rgba(var(--cv-rgb), 0.28), rgba(75, 79, 196, 0.17), transparent);
+}
+
+html[data-corvia-theme="light"] .cv-topbar__brand img {
+  filter: drop-shadow(0 7px 16px rgba(49, 45, 100, 0.13));
+}
+
+html[data-corvia-theme="light"] .cv-topbar__context,
+html[data-corvia-theme="light"] .cv-topbar__context strong,
+html[data-corvia-theme="light"] .cv-topbar__context i {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] :is(.cv-command, .cv-account__trigger) {
+  color: #4d5873;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(239, 247, 252, 0.94));
+  border-color: rgba(75, 79, 196, 0.22);
+  box-shadow: inset 0 1px #fff, 0 18px 42px -35px rgba(49, 45, 100, 0.33);
+}
+
+html[data-corvia-theme="light"] .cv-command:focus-within {
+  border-color: rgba(var(--cv-rgb), 0.58);
+  box-shadow: inset 0 1px #fff, 0 0 0 3px rgba(var(--cv-rgb), 0.1);
+}
+
+html[data-corvia-theme="light"] .cv-command input,
+html[data-corvia-theme="light"] .cv-drawer__search input {
+  color: #1b2440;
+  -webkit-text-fill-color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .cv-command input::placeholder {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-command kbd {
+  color: #4d5873;
+  background: rgba(78, 117, 147, 0.08);
+  border-color: rgba(78, 117, 147, 0.17);
+}
+
+html[data-corvia-theme="light"] :is(.cv-command button, .cv-icon-button, .cv-topbar__menu) {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(75, 79, 196, 0.18);
+}
+
+html[data-corvia-theme="light"] :is(.cv-command button, .cv-icon-button, .cv-topbar__menu):hover {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.08);
+  border-color: rgba(var(--cv-rgb), 0.38);
+}
+
+html[data-corvia-theme="light"] .cv-account__trigger :is(.cv-account__copy strong) {
+  color: #303956;
+}
+
+html[data-corvia-theme="light"] .cv-account__copy small,
+html[data-corvia-theme="light"] .cv-account__trigger > svg {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] :is(.cv-account__trigger > img, .cv-account__avatar) {
+  color: #303956;
+  background: radial-gradient(circle at 35% 30%, #fff, rgba(var(--cv-rgb), 0.1));
+  border-color: rgba(var(--cv-rgb), 0.3);
+}
+
+html[data-corvia-theme="light"] .cv-account-menu {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 88% 5%, rgba(var(--cv-rgb), 0.1), transparent 11rem),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.99), rgba(235, 245, 251, 0.995));
+  border-color: rgba(var(--cv-rgb), 0.24);
+  box-shadow: 0 24px 70px rgba(49, 45, 100, 0.22);
+}
+
+html[data-corvia-theme="light"] .cv-account-menu header {
+  background: rgba(var(--cv-rgb), 0.055);
+  border-color: rgba(var(--cv-rgb), 0.12);
+}
+
+html[data-corvia-theme="light"] .cv-account-menu header strong {
+  color: #252e4b;
+}
+
+html[data-corvia-theme="light"] .cv-account-menu header small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-account-menu :is(a, button) {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .cv-account-menu :is(a, button):hover {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.075);
+}
+
+html[data-corvia-theme="light"] .cv-sidebar,
+html[data-corvia-theme="light"] .cv-intelligence {
+  color: #4d5873;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(237, 246, 251, 0.94));
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: inset 0 1px #fff, 0 22px 55px -42px rgba(49, 45, 100, 0.4);
+}
+
+html[data-corvia-theme="light"] .cv-sidebar__title :is(small, strong) {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] :is(.cv-space-switcher a, .cv-all-functions, .cv-assistant-launch) {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: #81899e;
+}
+
+html[data-corvia-theme="light"] :is(.cv-space-switcher a:hover, .cv-space-switcher a.is-active) {
+  color: #1b2440;
+  background: rgba(var(--cv-switch-rgb), 0.09);
+  border-color: #81899e;
+}
+
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(1):is(:hover, .is-active) { color: #0f727a; border-color: #0f727a; }
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(2):is(:hover, .is-active) { color: #4b4fc4; border-color: #4b4fc4; }
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(3):is(:hover, .is-active) { color: #7957c8; border-color: #7957c8; }
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(4):is(:hover, .is-active) { color: #c42068; border-color: #c42068; }
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(5):is(:hover, .is-active) { color: #0f727a; border-color: #0f727a; }
+
+html[data-corvia-theme="light"] .cv-sidebar__footer {
+  border-color: rgba(75, 79, 196, 0.14);
+}
+
+html[data-corvia-theme="light"] .cv-space-horizon {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(242, 248, 253, 0.8) 47%, rgba(255, 255, 255, 0.91)),
+    var(--cv-room) center 53% / cover no-repeat;
+  border-color: rgba(var(--cv-rgb), 0.3);
+  box-shadow: inset 0 1px #fff, 0 18px 48px -38px rgba(var(--cv-rgb), 0.45);
+}
+
+html[data-corvia-theme="light"] .cv-space-horizon::before {
+  background: radial-gradient(circle at 76% 50%, rgba(var(--cv-rgb), 0.13), transparent 16rem), linear-gradient(90deg, rgba(var(--cv-rgb), 0.07), transparent 35%, rgba(var(--cv-rgb), 0.04));
+}
+
+html[data-corvia-theme="light"] .cv-space-horizon__copy p i,
+html[data-corvia-theme="light"] .cv-space-horizon__copy > span {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-space-horizon__copy strong {
+  color: #1b2440;
+  text-shadow: 0 1px #fff;
+}
+
+html[data-corvia-theme="light"] .cv-function-deck,
+html[data-corvia-theme="light"] .cv-metrics {
+  color: #1b2440;
+  background: linear-gradient(90deg, rgba(var(--cv-rgb), 0.12), rgba(255, 255, 255, 0.94) 48%, rgba(var(--cv-rgb), 0.055));
+  border-color: rgba(var(--cv-rgb), 0.28);
+  filter: drop-shadow(0 12px 18px rgba(27, 71, 106, 0.08));
+}
+
+html[data-corvia-theme="light"] .cv-function-deck__label strong,
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link {
+  border-color: rgba(75, 79, 196, 0.13);
+}
+
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link:hover,
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link.is-current {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.085);
+}
+
+html[data-corvia-theme="light"] .cv-function-deck > button {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.66);
+  border-color: rgba(var(--cv-rgb), 0.2);
+}
+
+html[data-corvia-theme="light"] .cv-content {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__status,
+html[data-corvia-theme="light"] .cv-intelligence__route small,
+html[data-corvia-theme="light"] .cv-intelligence__hero > span:not(.cv-intelligence__spark),
+html[data-corvia-theme="light"] .cv-intelligence__safety {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] :is(.cv-intelligence__route, .cv-intelligence__hero, .cv-intelligence__related a) {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(var(--cv-rgb), 0.15);
+}
+
+html[data-corvia-theme="light"] :is(.cv-intelligence__route strong, .cv-intelligence__hero h2, .cv-intelligence__related a strong) {
+  color: #303956;
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__hero > a {
+  color: #303956;
+  background: rgba(var(--cv-rgb), 0.08);
+  border-color: rgba(var(--cv-rgb), 0.24);
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__related a:hover {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.075);
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__ask {
+  color: #7957c8;
+  background: rgba(121, 87, 200, 0.07);
+  border-color: rgba(121, 87, 200, 0.22);
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__ask strong {
+  color: #7957c8;
+}
+
+html[data-corvia-theme="light"] .cv-intelligence__ask small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-global-dock,
+html[data-corvia-theme="light"] .cv-mobile-dock {
+  background: rgba(255, 255, 255, 0.91);
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: 0 15px 38px -30px rgba(49, 45, 100, 0.34);
+  backdrop-filter: blur(18px) saturate(110%);
+}
+
+html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) :is(a, button) {
+  color: #4d5873;
+  border-color: rgba(75, 79, 196, 0.11);
+}
+
+html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) :is(a, button):hover,
+html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) a.active {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.07);
+}
+
+html[data-corvia-theme="light"] .cv-page-hero,
+html[data-corvia-theme="light"] .cv-section {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(var(--cv-rgb), 0.12), transparent 16rem),
+    linear-gradient(106deg, rgba(255, 255, 255, 0.92), rgba(238, 246, 252, 0.94));
+  border-color: rgba(var(--cv-rgb), 0.21);
+  box-shadow: inset 0 1px #fff, 0 18px 45px -38px rgba(var(--cv-rgb), 0.42);
+}
+
+html[data-corvia-theme="light"] .cv-page-hero__space,
+html[data-corvia-theme="light"] .cv-page-hero__space i,
+html[data-corvia-theme="light"] .cv-page-hero__description,
+html[data-corvia-theme="light"] .cv-section__heading p {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-page-hero h1,
+html[data-corvia-theme="light"] .cv-section__heading h2 {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .cv-page-hero__meta .selo {
+  color: #4d5873;
+  background: rgba(var(--cv-rgb), 0.055);
+  border-color: rgba(var(--cv-rgb), 0.16);
+}
+
+html[data-corvia-theme="light"] .cv-action {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(var(--cv-rgb), 0.18);
+}
+
+html[data-corvia-theme="light"] .cv-action:hover,
+html[data-corvia-theme="light"] .cv-action--primary {
+  color: #1b2440;
+  background: rgba(var(--cv-rgb), 0.09);
+  border-color: rgba(var(--cv-rgb), 0.34);
+}
+
+html[data-corvia-theme="light"] .cv-action--danger {
+  color: #9e254c;
+  background: #fff1f4;
+  border-color: rgba(209, 40, 112, 0.28);
+}
+
+html[data-corvia-theme="light"] .cv-filter-grid label > span,
+html[data-corvia-theme="light"] .cv-filter-summary,
+html[data-corvia-theme="light"] .cv-metric__top,
+html[data-corvia-theme="light"] .cv-metric > small {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-filterbar__result {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.67);
+  border-color: rgba(var(--cv-rgb), 0.15);
+}
+
+html[data-corvia-theme="light"] .cv-metric {
+  border-color: rgba(75, 79, 196, 0.12);
+}
+
+html[data-corvia-theme="light"] .cv-metric > strong,
+html[data-corvia-theme="light"] .cv-tool-group__heading h3,
+html[data-corvia-theme="light"] .cv-tool-card__copy strong,
+html[data-corvia-theme="light"] .cv-context-link strong,
+html[data-corvia-theme="light"] .cv-empty strong {
+  color: #303956;
+}
+
+html[data-corvia-theme="light"] .cv-tool-group__heading {
+  border-color: rgba(var(--cv-rgb), 0.1);
+}
+
+html[data-corvia-theme="light"] :is(.cv-tool-card, .cv-context-link, .cv-empty) {
+  color: #4d5873;
+  background: linear-gradient(112deg, rgba(var(--cv-rgb), 0.06), rgba(255, 255, 255, 0.82) 44%);
+  border-color: rgba(75, 79, 196, 0.16);
+  box-shadow: inset 0 1px #fff;
+}
+
+html[data-corvia-theme="light"] .cv-tool-card:not(.is-disabled):hover,
+html[data-corvia-theme="light"] .cv-context-link:hover {
+  color: #1b2440;
+  background: linear-gradient(112deg, rgba(var(--cv-rgb), 0.11), rgba(255, 255, 255, 0.9) 46%);
+  border-color: rgba(var(--cv-rgb), 0.34);
+}
+
+html[data-corvia-theme="light"] :is(.cv-tool-card__copy small, .cv-tool-card__copy p, .cv-context-link small, .cv-empty p) {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-drawer-backdrop {
+  background: rgba(31, 56, 78, 0.28);
+}
+
+html[data-corvia-theme="light"] .cv-drawer {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(var(--cv-rgb), 0.1), transparent 20rem),
+    linear-gradient(155deg, #f7f3fa, #eef2fa);
+  border-color: rgba(var(--cv-rgb), 0.24);
+  box-shadow: -35px 0 100px rgba(49, 45, 100, 0.2);
+}
+
+html[data-corvia-theme="light"] .cv-drawer__header,
+html[data-corvia-theme="light"] .cv-drawer__footer {
+  border-color: rgba(var(--cv-rgb), 0.13);
+}
+
+html[data-corvia-theme="light"] .cv-drawer__header button,
+html[data-corvia-theme="light"] .cv-drawer__search {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(var(--cv-rgb), 0.18);
+}
+
+html[data-corvia-theme="light"] .cv-drawer__intro h2,
+html[data-corvia-theme="light"] .cv-drawer__space > header strong,
+html[data-corvia-theme="light"] .cv-drawer__empty strong {
+  color: #252e4b;
+}
+
+html[data-corvia-theme="light"] .cv-drawer__intro p,
+html[data-corvia-theme="light"] .cv-drawer__space > header small,
+html[data-corvia-theme="light"] .cv-drawer__empty {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .cv-drawer__assistant {
+  color: #7957c8;
+  background: rgba(121, 87, 200, 0.07);
+  border-color: rgba(121, 87, 200, 0.22);
+}
+
+html[data-corvia-theme="light"] .cv-drawer__assistant strong {
+  color: #7957c8;
+}
+
+html[data-corvia-theme="light"] .cv-drawer__space {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(var(--cv-drawer-rgb), 0.18);
+}
+
+html[data-corvia-theme="light"] .cv-drawer .cv-nav-link {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .cv-drawer .cv-nav-link:hover,
+html[data-corvia-theme="light"] .cv-drawer .cv-nav-link.is-current {
+  color: #1b2440;
+  background: rgba(var(--cv-drawer-rgb), 0.08);
+}
+
+/* Emergência segue vermelha e inequívoca nos dois temas. */
+html[data-corvia-theme="light"] .cv-emergency-fab {
+  color: #fff;
+  background: radial-gradient(circle at 35% 30%, #df5a77, #9f1736);
+  border-color: rgba(145, 18, 48, 0.25);
+  box-shadow: 0 0 0 5px rgba(169, 13, 36, 0.07), 0 14px 34px rgba(118, 10, 29, 0.25);
+}
+
+/* ----------------------------------------------------------------------
+   Interiores legados — contrato claro global e semanticamente seguro
+   ---------------------------------------------------------------------- */
+html[data-corvia-theme="light"] .clinical-os {
+  --space-rgb: 19, 122, 128;
+  --space-accent: #0f727a;
+  --space-accent-2: #0f727a;
+  --space-violet: #7957c8;
+  --space-rose: #c42068;
+  --space-blue: #4b4fc4;
+  --space-teal: #0f727a;
+  --space-panel: rgba(255, 255, 255, 0.86);
+  --space-panel-strong: rgba(255, 255, 255, 0.96);
+  --space-line: rgba(75, 79, 196, 0.21);
+  --space-line-soft: rgba(75, 79, 196, 0.11);
+  --space-muted: #5e687f;
+  --space-text: #1b2440;
+  --cos-bg: #f7f3fa;
+  --cos-bg-2: #f7f3fa;
+  --cos-panel: rgba(255, 255, 255, 0.86);
+  --cos-text: #1b2440;
+  --cos-muted: #4d5873;
+  --cos-muted-2: #5e687f;
+  --cos-line: rgba(75, 79, 196, 0.18);
+  --cos-line-strong: rgba(75, 79, 196, 0.28);
+  --cos-cyan: #0f727a;
+  --cos-cyan-2: #0f727a;
+  color: #1b2440 !important;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(var(--space-rgb), 0.1), transparent 31rem),
+    radial-gradient(circle at 78% 68%, rgba(121, 87, 200, 0.07), transparent 26rem),
+    linear-gradient(150deg, #f7f3fa 0%, #eef2fa 52%, #eef2fa 100%) !important;
+  color-scheme: light;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--pacientes .clinical-os,
+html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os,
+html[data-corvia-theme="light"] body.corvia-route--telediagnostico .clinical-os {
+  --space-rgb: 75, 79, 196;
+  --space-accent: #4b4fc4;
+  --space-accent-2: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--conhecimento .clinical-os {
+  --space-rgb: 121, 87, 200;
+  --space-accent: #7957c8;
+  --space-accent-2: #6645af;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--ferramentas .clinical-os {
+  --space-rgb: 209, 40, 112;
+  --space-accent: #c42068;
+  --space-accent-2: #a51d56;
+}
+
+html[data-corvia-theme="light"] body:is(.corvia-route--admin, .corvia-route--conta, .corvia-route--integracoes, .corvia-route--rede, .corvia-route--mail) .clinical-os {
+  --space-rgb: 19, 122, 128;
+  --space-accent: #0f727a;
+  --space-accent-2: #0f666b;
+}
+
+html[data-corvia-theme="light"] .clinical-os::before {
+  opacity: 0.045;
+  filter: drop-shadow(0 0 42px rgba(var(--space-rgb), 0.18)) saturate(0.9);
+}
+
+html[data-corvia-theme="light"] .clinical-os::after {
+  opacity: 0.7;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(24, 70, 108, 0.35) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 68% 12%, rgba(75, 79, 196, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 62%, rgba(121, 87, 200, 0.23) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 36% 84%, rgba(19, 122, 128, 0.2) 0 0.7px, transparent 1.1px),
+    linear-gradient(rgba(75, 79, 196, 0.034) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.03) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-topbar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(238, 247, 252, 0.9)) !important;
+  border-color: rgba(var(--space-rgb), 0.14) !important;
+  box-shadow: 0 12px 38px rgba(49, 45, 100, 0.08) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini {
+  color: #4d5873 !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(235, 245, 251, 0.9)) !important;
+  border-color: rgba(var(--space-rgb), 0.2) !important;
+  box-shadow: inset 0 1px #fff, 0 10px 30px -24px rgba(var(--space-rgb), 0.28) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini input {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini input::placeholder {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar__icon, .cos-account__trigger) {
+  color: #4d5873 !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(var(--space-rgb), 0.14) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar__icon, .cos-account__trigger):hover {
+  color: #1b2440 !important;
+  background: rgba(var(--space-rgb), 0.08) !important;
+  border-color: rgba(var(--space-rgb), 0.34) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-workspace,
+html[data-corvia-theme="light"] .clinical-os .cos-content {
+  background: transparent !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-intelligence {
+  color: #4d5873 !important;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(237, 246, 251, 0.95)) !important;
+  border-color: rgba(var(--space-rgb), 0.17) !important;
+  box-shadow: 0 22px 56px -42px rgba(49, 45, 100, 0.42), inset 0 1px #fff !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-intelligence :is(h2, h3, strong) {
+  color: #303956 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-intelligence :is(p, small) {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-intelligence a {
+  color: #4d5873 !important;
+  background: rgba(255, 255, 255, 0.64) !important;
+  border-color: rgba(var(--space-rgb), 0.13) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-intelligence a:hover {
+  color: #1b2440 !important;
+  background: rgba(var(--space-rgb), 0.075) !important;
+  border-color: rgba(var(--space-rgb), 0.34) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cc-page-header,
+html[data-corvia-theme="light"] .clinical-os .cc-section {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(var(--space-rgb), 0.12), transparent 16rem),
+    linear-gradient(105deg, rgba(255, 255, 255, 0.93), rgba(238, 246, 252, 0.95)) !important;
+  border-color: rgba(var(--space-rgb), 0.21) !important;
+  box-shadow: 0 18px 45px -38px rgba(var(--space-rgb), 0.45), inset 0 1px #fff !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cc-page-header h1,
+html[data-corvia-theme="light"] .clinical-os .cc-section__heading h2 {
+  color: #1b2440 !important;
+  text-shadow: 0 1px #fff !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cc-page-header__description, .cc-page-header__meta, .cc-section__heading p) {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cc-metric, .cc-context-link, .cc-empty) {
+  color: #303956 !important;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(235, 245, 251, 0.91)) !important;
+  border-color: rgba(var(--space-rgb), 0.14) !important;
+  box-shadow: inset 0 1px #fff !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cc-metric > strong {
+  color: #252e4b !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cc-metric__top, .cc-metric > small, .cc-empty) {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(h1, h2, h3, h4) {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(p, li, dd, figcaption) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(
+  article,
+  [class$="__card"], [class*="__card "], [class*="-card"],
+  [class$="__panel"], [class*="__panel "], [class*="-panel"],
+  [class$="__box"], [class*="__box "],
+  [class$="__tile"], [class*="__tile "]
+) {
+  border-color: rgba(var(--space-rgb), 0.14) !important;
+  box-shadow: inset 0 1px #fff, 0 14px 38px -36px rgba(49, 45, 100, 0.35) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(article, [class$="__card"], [class*="__card "], [class*="-card"]):not(.cc-page-header):not(.emerg) {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(article, [class$="__card"], [class*="__card "], [class*="-card"]):hover {
+  border-color: rgba(var(--space-rgb), 0.27) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(button, a)[class*="primary"]:not([class*="danger"]):not([class*="emerg"]) {
+  color: #303956 !important;
+  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.17), rgba(var(--space-rgb), 0.07)) !important;
+  border-color: rgba(var(--space-rgb), 0.28) !important;
+  box-shadow: 0 8px 22px -18px rgba(var(--space-rgb), 0.45) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content table {
+  color: #1b2440;
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-color: rgba(var(--space-rgb), 0.15) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content thead {
+  background: rgba(var(--space-rgb), 0.075) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content th {
+  color: #4d5873 !important;
+  border-color: rgba(var(--space-rgb), 0.13) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content td {
+  color: #4d5873 !important;
+  border-color: rgba(var(--space-rgb), 0.09) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content tr:hover td {
+  background: rgba(var(--space-rgb), 0.045) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is([class*="chip"], [class*="pill"], [class*="tag"], [class*="badge"]):not(.cos-account-menu__badge) {
+  color: #4d5873 !important;
+  background: rgba(var(--space-rgb), 0.07) !important;
+  border-color: rgba(var(--space-rgb), 0.18) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is([role="tab"], nav button).is-active {
+  color: #1b2440 !important;
+  background: rgba(var(--space-rgb), 0.1) !important;
+  border-color: rgba(var(--space-rgb), 0.34) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.mc-command__header, .mc-command__tabs, .mc-command__primary, .mc-command__intelligence, .mc-command__facts > article) {
+  color: #1b2440 !important;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(235, 245, 251, 0.93)) !important;
+  border-color: rgba(var(--space-rgb), 0.16) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .mc-command__prescribe {
+  color: #303956 !important;
+  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.18), rgba(var(--space-rgb), 0.08)) !important;
+  border-color: rgba(var(--space-rgb), 0.3) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(
+  [role="dialog"], dialog,
+  [class*="modal"], [class*="drawer"], [class*="popover"],
+  [class*="dropdown"], [class*="menu"]
+) {
+  color: #1b2440;
+  --texto: #1b2440;
+  --texto-secundario: #4d5873;
+  --superficie: #fff;
+  --fundo: #f7f3fa;
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(dialog, [role="dialog"], [class*="modal__content"], [class*="modal-content"], [class*="drawer__content"], [class*="popover"], [class*="dropdown"], [class*="menu"]) {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  border-color: rgba(var(--space-rgb), 0.19) !important;
+  box-shadow: 0 24px 70px rgba(49, 45, 100, 0.2) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .prescricao-selecao {
+  color: #1b2440 !important;
+  background: linear-gradient(145deg, #f7f3fa, #eef2fa) !important;
+  border-color: rgba(19, 122, 128, 0.25) !important;
+  box-shadow: 0 12px 28px rgba(49, 45, 100, 0.1) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(strong, b, h2, h3) {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(small, p, span) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(.botao, button) {
+  color: #303956 !important;
+}
+
+/* Rail legado, quando uma rota ainda o renderiza. */
+@media (min-width: 901px) {
+  html[data-corvia-theme="light"] .ccc-nav--reference {
+    background:
+      radial-gradient(circle at 50% 8%, rgba(var(--space-rgb), 0.08), transparent 12rem),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(235, 245, 251, 0.99)) !important;
+    border-color: rgba(var(--space-rgb), 0.14) !important;
+    box-shadow: 18px 0 54px rgba(49, 45, 100, 0.09) !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__section > p {
+    color: #5e687f !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item {
+    color: #4d5873 !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item svg {
+    color: #4d5873 !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item:hover {
+    color: #1b2440 !important;
+    background: rgba(var(--space-rgb), 0.06) !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item.is-active {
+    color: #1b2440 !important;
+    background: linear-gradient(90deg, rgba(var(--space-rgb), 0.17), rgba(var(--space-rgb), 0.055)) !important;
+  }
+
+  html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__footer {
+    background: rgba(220, 234, 244, 0.42) !important;
+  }
+}
+
+/* Emergência permanece vermelha no interior claro. */
+html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os {
+  --space-rgb: 184, 40, 61;
+  --space-accent: #b8283d;
+  --space-accent-2: #9e1e33;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os .cos-content .emerg {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(circle at 25% 5%, rgba(184, 40, 61, 0.11), transparent 20rem),
+    linear-gradient(150deg, rgba(255, 251, 252, 0.96), rgba(244, 248, 252, 0.96)) !important;
+}
+
+html[data-corvia-theme="light"] :is(.clinical-os, .cv-app) :is(.botao--perigo, [class*="danger"], [class*="emerg"])[role="button"],
+html[data-corvia-theme="light"] :is(.clinical-os, .cv-app) :is(button, a).botao--perigo {
+  color: #fff !important;
+  background-color: #b31f3a !important;
+  border-color: #99172f !important;
+}
+
+/* ----------------------------------------------------------------------
+   Contrato final dos formulários — vence a folha escura de contraste
+   ---------------------------------------------------------------------- */
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #0f727a !important;
+  background-color: #ffffff !important;
+  border-color: #81899e !important;
+  color-scheme: light !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))::placeholder,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea::placeholder {
+  color: #626c82 !important;
+  -webkit-text-fill-color: #626c82 !important;
+  opacity: 1;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):hover,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:hover,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:hover {
+  border-color: #7d869c !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):focus,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:focus,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:focus {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: #ffffff !important;
+  border-color: #0f727a !important;
+  box-shadow: 0 0 0 3px rgba(19, 122, 128, 0.14) !important;
+  outline: 2px solid transparent;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select :is(option, optgroup),
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) :is(option, optgroup) {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: #ffffff !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:-webkit-autofill,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:-webkit-autofill {
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #0f727a !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):disabled,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:disabled,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:disabled,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))[readonly],
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea[readonly] {
+  color: #4d5873 !important;
+  -webkit-text-fill-color: #4d5873 !important;
+  background-color: #eef2f6 !important;
+  border-color: #d3d7e4 !important;
+  opacity: 1;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) input:is([type="checkbox"], [type="radio"]) {
+  -webkit-text-fill-color: initial !important;
+  accent-color: #0f727a;
+}
+
+/* Cápsulas de busca já fornecem a superfície; o input continua transparente. */
+html[data-corvia-theme="light"] #root .cv-app .cv-command input,
+html[data-corvia-theme="light"] #root .cv-app .cv-drawer__search input,
+html[data-corvia-theme="light"] #root .spaces-home .spaces-everything-search input,
+html[data-corvia-theme="light"] #root .clinical-os .cos-command-mini input {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/*
+ * O contrato escuro mantém aliases históricos com nove :not() separados.
+ * Repetimos deliberadamente esse alias, acrescido do atributo de tema, para
+ * que os interiores legados fiquem claros mesmo sob !important. Não ampliar:
+ * esta regra existe apenas dentro de .clinical-os autenticado.
+ */
+html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+html[data-corvia-theme="light"] #root .clinical-os select,
+html[data-corvia-theme="light"] #root .clinical-os textarea {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: #ffffff !important;
+}
+
+html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):disabled,
+html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"])[readonly] {
+  color: #4d5873 !important;
+  -webkit-text-fill-color: #4d5873 !important;
+  background-color: #eef2f6 !important;
+}
+
+/* A busca usa a superfície da cápsula; o alias acima não pode criar um bloco. */
+html[data-corvia-theme="light"] #root .clinical-os .cos-command-mini input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini {
+  min-height: 46px !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini:focus-within {
+  border-color: #0f727a !important;
+  box-shadow: 0 0 0 3px rgba(7, 119, 133, 0.18) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-command-mini button {
+  min-width: 44px;
+  min-height: 44px;
+  color: #0f727a !important;
+  background: #e8f4f4 !important;
+  border-left: 1px solid #81899e !important;
+}
+
+/* Destaque sustentável do atalho Exame com IA em superfícies claras. */
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link[data-feature="exam-ai"]:not(.is-current),
+html[data-corvia-theme="light"] .cv-drawer .cv-nav-link[data-feature="exam-ai"]:not(.is-current) {
+  color: #14764c;
+  background: linear-gradient(180deg, rgba(31, 128, 82, 0.11), rgba(31, 128, 82, 0.035));
+  box-shadow: inset 0 -2px rgba(20, 118, 76, 0.72);
+}
+
+html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link[data-feature="exam-ai"] .cv-nav-link__icon,
+html[data-corvia-theme="light"] .cv-drawer .cv-nav-link[data-feature="exam-ai"] .cv-nav-link__icon {
+  color: #176c48;
+  background: rgba(23, 108, 72, 0.09);
+}
+
+/* Alvos críticos e foco não textual WCAG 2.2 no universo claro. */
+html[data-corvia-theme="light"] :is(.cv-account-menu :is(a, button), .cv-drawer .cv-nav-link, .cv-drawer__footer :is(a, button)) {
+  min-height: 44px;
+}
+
+html[data-corvia-theme="light"] :is(.cv-function-deck > button, .cv-emergency-fab) {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+}
+
+html[data-corvia-theme="light"] :is(.cv-icon-button, .cv-topbar__menu, .cv-command > button, .cv-action) {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+html[data-corvia-theme="light"] :is(
+  .cv-account-menu :is(a, button),
+  .cv-drawer :is(a, button, input),
+  .cv-function-deck :is(a, button),
+  .cv-space-switcher a,
+  .cv-emergency-fab,
+  .cv-icon-button,
+  .cv-topbar__menu,
+  .cv-action
+):focus-visible {
+  outline: 3px solid #0f727a;
+  outline-offset: 2px;
+}
+
+/* ----------------------------------------------------------------------
+   Responsividade e movimento
+   ---------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  html[data-corvia-theme="light"] .spaces-home__topbar {
+    background: linear-gradient(90deg, rgba(13, 70, 82, 0.2), rgba(247, 251, 255, 0.93) 34%, rgba(247, 251, 255, 0.93));
+    border-color: rgba(75, 79, 196, 0.16);
+    box-shadow: 0 10px 28px rgba(49, 45, 100, 0.08);
+  }
+
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin-top: 18px;
+    padding: 10px;
+  }
+
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice .corvia-theme-selector__intro {
+    max-width: 390px;
+    margin-inline: auto;
+  }
+
+  html[data-corvia-theme="light"] .cv-mobile-dock {
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 -13px 34px rgba(49, 45, 100, 0.12);
+  }
+
+  html[data-corvia-theme="light"] .clinical-os .cos-topbar {
+    background: rgba(247, 251, 255, 0.95) !important;
+  }
+
+  html[data-corvia-theme="light"] .cc-mobile-nav {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-color: rgba(var(--space-rgb), 0.14) !important;
+    box-shadow: 0 -14px 34px rgba(49, 45, 100, 0.13) !important;
+  }
+
+  html[data-corvia-theme="light"] .cc-mobile-nav :is(a, button) {
+    min-width: 44px;
+    min-height: 44px;
+    color: #4d5873 !important;
+  }
+
+  html[data-corvia-theme="light"] .cc-mobile-nav :is(.active, a[aria-current="page"]) {
+    color: #1b2440 !important;
+  }
+
+  html[data-corvia-theme="light"] .cc-mobile-more {
+    color: #1b2440;
+    background: radial-gradient(circle at 50% 0%, rgba(var(--space-rgb), 0.08), transparent 15rem), linear-gradient(180deg, #f7f3fa, #eef2fa) !important;
+  }
+
+  html[data-corvia-theme="light"] .cc-mobile-more__grid > a {
+    color: #4d5873;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(235, 245, 251, 0.98)) !important;
+    border-color: rgba(var(--space-rgb), 0.12) !important;
+  }
+
+  html[data-corvia-theme="light"] :is(.corvia-theme-selector button[role="radio"], .cv-account-menu :is(a, button)) {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 560px) {
+  html[data-corvia-theme="light"] .corvia-theme-selector__options {
+    grid-template-columns: 1fr;
+  }
+
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice {
+    width: 100%;
+  }
+
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice .corvia-theme-selector__intro small {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 901px) {
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice {
+    margin-top: 14px;
+    padding-block: 8px;
+  }
+
+  html[data-corvia-theme="light"] .corvia-theme-selector--choice button[role="radio"] {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) *,
+  html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) *::before,
+  html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ======================================================================
+   AURORA LUNAR — decisão visual final
+
+   Esta seção finaliza a paleta sem alterar geometria, imagens, conteúdo ou
+   comportamento. A espacialidade vem apenas de luz difusa, órbitas, campo
+   estelar abstrato e profundidade do vidro.
+   ====================================================================== */
+html[data-corvia-theme="light"] body.cardiology-spaces-active,
+html[data-corvia-theme="light"] body:has(.cv-app),
+html[data-corvia-theme="light"] body:has(.clinical-os) {
+  color: #1b2440;
+  background: #f7f3fa;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) {
+  --corvia-light-bg: #f7f3fa;
+  --corvia-light-bg-soft: #eef2fa;
+  --corvia-light-panel: rgba(255, 255, 255, 0.84);
+  --corvia-light-panel-strong: rgba(255, 255, 255, 0.96);
+  --corvia-light-line: rgba(75, 79, 196, 0.2);
+  --corvia-light-line-soft: rgba(75, 79, 196, 0.11);
+  --corvia-light-text: #1b2440;
+  --corvia-light-text-2: #4d5873;
+  --corvia-light-text-3: #5e687f;
+  --corvia-light-cyan: #0f727a;
+  --corvia-light-blue: #4b4fc4;
+  --corvia-light-violet: #7957c8;
+  --corvia-light-rose: #c42068;
+  --corvia-light-teal: #0f727a;
+  --corvia-light-teal-decorative: #137a80;
+  --corvia-light-rose-decorative: #d12870;
+  --corvia-light-champagne: #b78a52;
+  --corvia-light-focus: #4b4fc4;
+  --fundo: #f7f3fa;
+  --superficie: #ffffff;
+  --superficie-suave: #eef2fa;
+  --texto: #1b2440;
+  --texto-secundario: #4d5873;
+  --texto-terciario: #5e687f;
+  --borda: #ccd1e3;
+  --borda-forte: #81899e;
+  --primaria: #30376e;
+  --primaria-escura: #1b2440;
+  --acao: #0f727a;
+  --acao-hover: #0f666b;
+  --acento: #4b4fc4;
+  --line: #ccd1e3;
+  --muted: #4d5873;
+  color: #1b2440;
+  color-scheme: light;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home) {
+  --spaces-bg: #f7f3fa;
+  --spaces-panel: rgba(255, 255, 255, 0.84);
+  --spaces-panel-strong: rgba(255, 255, 255, 0.96);
+  --spaces-line: rgba(75, 79, 196, 0.2);
+  --spaces-line-soft: rgba(75, 79, 196, 0.1);
+  --spaces-text: #1b2440;
+  --spaces-text-2: #4d5873;
+  --spaces-text-3: #5e687f;
+  --spaces-cyan: #0f727a;
+  --spaces-blue: #4b4fc4;
+  --spaces-brand-blue: #4b4fc4;
+  --spaces-violet: #7957c8;
+  --spaces-rose: #c42068;
+  --spaces-teal: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-home--cyan { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
+html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #4b4fc4; }
+html[data-corvia-theme="light"] .spaces-home--violet { --space-rgb: 121, 87, 200; --space-accent: #7957c8; }
+html[data-corvia-theme="light"] .spaces-home--rose { --space-rgb: 209, 40, 112; --space-accent: #c42068; }
+html[data-corvia-theme="light"] .spaces-home--teal { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
+
+html[data-corvia-theme="light"] :is(.spaces-door--cyan, .spaces-context-rail__space--cyan) { --door-rgb: 19, 122, 128; }
+html[data-corvia-theme="light"] :is(.spaces-door--blue, .spaces-context-rail__space--blue) { --door-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] :is(.spaces-door--violet, .spaces-context-rail__space--violet) { --door-rgb: 121, 87, 200; }
+html[data-corvia-theme="light"] :is(.spaces-door--rose, .spaces-context-rail__space--rose) { --door-rgb: 209, 40, 112; }
+html[data-corvia-theme="light"] :is(.spaces-door--teal, .spaces-context-rail__space--teal) { --door-rgb: 19, 122, 128; }
+
+html[data-corvia-theme="light"] .spaces-choice {
+  background:
+    radial-gradient(ellipse at 22% 9%, rgba(121, 87, 200, 0.14), transparent 32rem),
+    radial-gradient(ellipse at 76% 25%, rgba(75, 79, 196, 0.13), transparent 34rem),
+    radial-gradient(ellipse at 64% 88%, rgba(209, 40, 112, 0.055), transparent 28rem),
+    radial-gradient(circle at 11% 80%, rgba(183, 138, 82, 0.045), transparent 18rem),
+    linear-gradient(145deg, #f7f3fa 0%, #f3f2fa 46%, #eef2fa 100%);
+}
+
+html[data-corvia-theme="light"] .spaces-home {
+  background:
+    radial-gradient(ellipse at 45% 20%, rgba(var(--space-rgb), 0.1), transparent 34rem),
+    radial-gradient(ellipse at 83% 70%, rgba(121, 87, 200, 0.09), transparent 29rem),
+    radial-gradient(circle at 15% 82%, rgba(183, 138, 82, 0.04), transparent 17rem),
+    linear-gradient(151deg, #f7f3fa 0%, #f3f2fa 55%, #eef2fa 100%);
+}
+
+/* Assinatura orbital discreta: presente nas bordas, nunca sobre o trabalho. */
+html[data-corvia-theme="light"] .spaces-home::after {
+  position: absolute;
+  z-index: -1;
+  inset: 13% 7% 18% 9%;
+  background:
+    radial-gradient(circle at 8% 54%, rgba(var(--space-rgb), 0.68) 0 1.7px, transparent 2.8px),
+    radial-gradient(circle at 61% 1%, rgba(121, 87, 200, 0.56) 0 1.5px, transparent 2.6px),
+    radial-gradient(circle at 94% 58%, rgba(209, 40, 112, 0.42) 0 1.6px, transparent 2.7px);
+  border: 1px solid rgba(var(--space-rgb), 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 38px rgba(var(--space-rgb), 0.035);
+  content: "";
+  opacity: 0.88;
+  outline: 1px solid rgba(121, 87, 200, 0.06);
+  outline-offset: 34px;
+  transform: rotate(-7deg);
+  -webkit-mask-image: linear-gradient(98deg, transparent 1%, #000 16%, #000 78%, transparent 98%);
+  mask-image: linear-gradient(98deg, transparent 1%, #000 16%, #000 78%, transparent 98%);
+  pointer-events: none;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home)::before {
+  opacity: 0.72;
+  background-image:
+    radial-gradient(circle at 13% 18%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 13%, rgba(121, 87, 200, 0.26) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 67%, rgba(209, 40, 112, 0.2) 0 0.65px, transparent 1px),
+    radial-gradient(circle at 31% 79%, rgba(183, 138, 82, 0.23) 0 0.6px, transparent 1px),
+    linear-gradient(rgba(75, 79, 196, 0.027) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.024) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice__heart, .spaces-home__heart) {
+  opacity: 0.05;
+  filter: drop-shadow(0 0 58px rgba(75, 79, 196, 0.19)) saturate(0.86);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-brand, .spaces-brand strong, .spaces-brand strong i, .spaces-choice__content > h1, .spaces-choice__cards strong) {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-brand strong b,
+html[data-corvia-theme="light"] .spaces-choice > footer strong {
+  color: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-brand small, .spaces-user, .spaces-choice__content > p:not(.spaces-eyebrow), .spaces-choice__cards small, .spaces-choice > footer) {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-eyebrow, .spaces-choice__icon, .spaces-choice__cards em) {
+  color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > button {
+  color: #1b2440;
+  background:
+    radial-gradient(circle at 9% 5%, rgba(75, 79, 196, 0.09), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(247, 245, 251, 0.86));
+  border-color: #81899e;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.96), 0 26px 68px -46px rgba(52, 47, 105, 0.34);
+  backdrop-filter: blur(18px) saturate(108%);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > button:hover,
+html[data-corvia-theme="light"] .spaces-choice__cards > button:focus-visible {
+  border-color: #4b4fc4;
+  box-shadow: inset 0 1px #fff, 0 28px 66px -39px rgba(75, 79, 196, 0.38);
+}
+
+html[data-corvia-theme="light"] .spaces-choice__cards > .spaces-choice__science {
+  background:
+    radial-gradient(circle at 10% 6%, rgba(19, 122, 128, 0.1), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(241, 247, 248, 0.88));
+  border-color: rgba(19, 122, 128, 0.4);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector--choice,
+html[data-corvia-theme="light"] .corvia-theme-selector--menu {
+  color: #1b2440;
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(121, 87, 200, 0.095), transparent 11rem),
+    rgba(255, 255, 255, 0.72);
+  border-color: rgba(75, 79, 196, 0.22);
+  box-shadow: 0 18px 48px -38px rgba(55, 48, 110, 0.4), inset 0 1px rgba(255, 255, 255, 0.96);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__orbit {
+  color: #4b4fc4;
+  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), rgba(121, 87, 200, 0.04));
+  border-color: rgba(75, 79, 196, 0.3);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__orbit::after {
+  border-color: rgba(183, 138, 82, 0.42);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro strong,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector__intro small,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] small {
+  color: #4d5873;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
+  color: #46516b;
+  background: rgba(255, 255, 255, 0.7);
+  border-color: #81899e;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:hover {
+  color: #1b2440;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
+  background: linear-gradient(145deg, rgba(238, 242, 250, 0.96), rgba(244, 239, 250, 0.96));
+  border-color: #4b4fc4;
+  box-shadow: inset 0 -2px #4b4fc4, 0 8px 22px -17px rgba(75, 79, 196, 0.52);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected .corvia-theme-selector__icon,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] .corvia-theme-selector__icon {
+  color: #4b4fc4;
+  background: rgba(75, 79, 196, 0.1);
+  border-color: rgba(75, 79, 196, 0.27);
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected > i,
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] > i {
+  color: #fff;
+  background: #4b4fc4;
+  border-color: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:focus-visible {
+  outline: 3px solid #4b4fc4;
+  outline-offset: 2px;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-everything-search, .spaces-context-rail, .spaces-day, .spaces-dock) {
+  color: #4d5873;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(241, 242, 249, 0.8));
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: inset 0 1px #fff, 0 20px 50px -40px rgba(50, 47, 103, 0.34);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-workspace__greeting h1, .spaces-title > span, .spaces-day__item strong, .spaces-day__travel strong, .spaces-day__empty strong) {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-workspace__greeting > span, .spaces-title > small, .spaces-day__item small, .spaces-day__travel small, .spaces-day__empty small) {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] .spaces-layer {
+  color: #1b2440;
+  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.88), rgba(121, 87, 200, 0.045));
+  border-color: rgba(var(--space-rgb), 0.28);
+  filter: drop-shadow(0 15px 22px rgba(49, 45, 100, 0.09));
+}
+
+html[data-corvia-theme="light"] :is(.spaces-overlay, .cv-drawer-backdrop) {
+  background: rgba(41, 39, 73, 0.26);
+  backdrop-filter: blur(16px) saturate(92%);
+}
+
+html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) {
+  color: #1b2440;
+  background:
+    radial-gradient(ellipse at 86% 8%, rgba(var(--space-rgb), 0.09), transparent 19rem),
+    radial-gradient(circle at 12% 88%, rgba(183, 138, 82, 0.04), transparent 15rem),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.97), rgba(239, 241, 249, 0.98));
+  border-color: rgba(75, 79, 196, 0.23);
+  box-shadow: -30px 0 90px rgba(43, 40, 86, 0.2);
+}
+
+html[data-corvia-theme="light"] .cv-app {
+  --cv-accent: #0f727a;
+  --cv-rgb: 19, 122, 128;
+  --cv-text: #1b2440;
+  --cv-text-2: #4d5873;
+  --cv-text-3: #5e687f;
+  --cv-line: rgba(75, 79, 196, 0.2);
+  --cv-line-soft: rgba(75, 79, 196, 0.1);
+  --cv-panel: rgba(255, 255, 255, 0.84);
+  --cv-panel-strong: rgba(255, 255, 255, 0.96);
+  --cos-line: rgba(75, 79, 196, 0.18);
+  --cos-line-strong: rgba(75, 79, 196, 0.28);
+  --cos-text: #1b2440;
+  --cos-muted: #4d5873;
+  --cos-muted-2: #5e687f;
+  --cos-cyan: #0f727a;
+  --cos-cyan-2: #0f666b;
+  color: #1b2440;
+  background:
+    radial-gradient(ellipse at 45% 19%, rgba(var(--cv-rgb), 0.1), transparent 34rem),
+    radial-gradient(ellipse at 84% 71%, rgba(121, 87, 200, 0.09), transparent 29rem),
+    radial-gradient(circle at 13% 83%, rgba(183, 138, 82, 0.04), transparent 18rem),
+    linear-gradient(151deg, #f7f3fa 0%, #f3f2fa 55%, #eef2fa 100%);
+}
+
+html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #4b4fc4; --cv-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] .cv-app--ensino { --cv-accent: #7957c8; --cv-rgb: 121, 87, 200; }
+html[data-corvia-theme="light"] .cv-app--pesquisa { --cv-accent: #c42068; --cv-rgb: 209, 40, 112; }
+html[data-corvia-theme="light"] .cv-app--gestao { --cv-accent: #0f727a; --cv-rgb: 19, 122, 128; }
+
+html[data-corvia-theme="light"] .cv-app::before {
+  opacity: 0.7;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 14%, rgba(121, 87, 200, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 88% 69%, rgba(209, 40, 112, 0.19) 0 0.65px, transparent 1px),
+    radial-gradient(circle at 29% 81%, rgba(183, 138, 82, 0.22) 0 0.6px, transparent 1px),
+    linear-gradient(rgba(75, 79, 196, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.023) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] :is(.cv-command, .cv-account__trigger, .cv-sidebar, .cv-intelligence, .cv-global-dock, .cv-mobile-dock) {
+  color: #4d5873;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(240, 241, 249, 0.82));
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: inset 0 1px #fff, 0 20px 52px -41px rgba(49, 45, 100, 0.34);
+}
+
+html[data-corvia-theme="light"] .cv-space-horizon {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(244, 242, 249, 0.66) 47%, rgba(255, 255, 255, 0.8)),
+    var(--cv-room) center 53% / cover no-repeat;
+  border-color: rgba(var(--cv-rgb), 0.32);
+}
+
+html[data-corvia-theme="light"] :is(.cv-space-horizon__copy strong, .cv-page-hero h1, .cv-section__heading h2, .cv-metric > strong, .cv-tool-card__copy strong, .cv-context-link strong, .cv-empty strong) {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] :is(.cv-space-horizon__copy > span, .cv-page-hero__description, .cv-section__heading p, .cv-metric__top, .cv-metric > small, .cv-tool-card__copy p, .cv-context-link small) {
+  color: #5e687f;
+}
+
+html[data-corvia-theme="light"] :is(.cv-function-deck, .cv-metrics, .cv-page-hero, .cv-section, .cv-tool-card, .cv-context-link, .cv-empty) {
+  color: #1b2440;
+  background:
+    radial-gradient(ellipse at 88% 10%, rgba(var(--cv-rgb), 0.075), transparent 18rem),
+    linear-gradient(112deg, rgba(255, 255, 255, 0.87), rgba(240, 241, 249, 0.82));
+  border-color: rgba(var(--cv-rgb), 0.22);
+  box-shadow: inset 0 1px #fff, 0 17px 44px -38px rgba(49, 45, 100, 0.34);
+}
+
+html[data-corvia-theme="light"] :is(.cv-account-menu, .cv-drawer) {
+  color: #1b2440;
+  background:
+    radial-gradient(ellipse at 88% 5%, rgba(var(--cv-rgb), 0.1), transparent 17rem),
+    radial-gradient(circle at 10% 92%, rgba(183, 138, 82, 0.035), transparent 14rem),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.99), rgba(238, 240, 249, 0.99));
+  border-color: rgba(var(--cv-rgb), 0.24);
+  box-shadow: 0 24px 72px rgba(43, 40, 86, 0.21);
+}
+
+html[data-corvia-theme="light"] .clinical-os {
+  --space-rgb: 19, 122, 128;
+  --space-accent: #0f727a;
+  --space-accent-2: #0f666b;
+  --space-violet: #7957c8;
+  --space-rose: #c42068;
+  --space-blue: #4b4fc4;
+  --space-teal: #0f727a;
+  --space-panel: rgba(255, 255, 255, 0.84);
+  --space-panel-strong: rgba(255, 255, 255, 0.96);
+  --space-line: rgba(75, 79, 196, 0.2);
+  --space-line-soft: rgba(75, 79, 196, 0.1);
+  --space-muted: #5e687f;
+  --space-text: #1b2440;
+  --cos-bg: #f7f3fa;
+  --cos-bg-2: #eef2fa;
+  --cos-panel: rgba(255, 255, 255, 0.84);
+  --cos-text: #1b2440;
+  --cos-muted: #4d5873;
+  --cos-muted-2: #5e687f;
+  --cos-line: rgba(75, 79, 196, 0.18);
+  --cos-line-strong: rgba(75, 79, 196, 0.28);
+  --cos-cyan: #0f727a;
+  --cos-cyan-2: #0f666b;
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 47% 22%, rgba(var(--space-rgb), 0.1), transparent 34rem),
+    radial-gradient(ellipse at 82% 70%, rgba(121, 87, 200, 0.09), transparent 28rem),
+    radial-gradient(circle at 12% 84%, rgba(183, 138, 82, 0.04), transparent 17rem),
+    linear-gradient(150deg, #f7f3fa 0%, #f3f2fa 53%, #eef2fa 100%) !important;
+}
+
+html[data-corvia-theme="light"] body:is(.corvia-route--pacientes, .corvia-route--telediagnostico) .clinical-os {
+  --space-rgb: 75, 79, 196;
+  --space-accent: #4b4fc4;
+  --space-accent-2: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--conhecimento .clinical-os {
+  --space-rgb: 121, 87, 200;
+  --space-accent: #7957c8;
+  --space-accent-2: #6645af;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--ferramentas .clinical-os {
+  --space-rgb: 209, 40, 112;
+  --space-accent: #c42068;
+  --space-accent-2: #b62261;
+}
+
+html[data-corvia-theme="light"] body:is(.corvia-route--admin, .corvia-route--conta, .corvia-route--integracoes, .corvia-route--rede, .corvia-route--mail) .clinical-os {
+  --space-rgb: 19, 122, 128;
+  --space-accent: #0f727a;
+  --space-accent-2: #0f666b;
+}
+
+html[data-corvia-theme="light"] .clinical-os::after {
+  opacity: 0.68;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 68% 12%, rgba(121, 87, 200, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 62%, rgba(209, 40, 112, 0.18) 0 0.65px, transparent 1px),
+    radial-gradient(circle at 36% 84%, rgba(183, 138, 82, 0.22) 0 0.6px, transparent 1px),
+    linear-gradient(rgba(75, 79, 196, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 79, 196, 0.023) 1px, transparent 1px);
+}
+
+html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar, .cos-intelligence, .cc-page-header, .cc-section) {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 88% 8%, rgba(var(--space-rgb), 0.075), transparent 18rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(240, 241, 249, 0.84)) !important;
+  border-color: rgba(var(--space-rgb), 0.2) !important;
+  box-shadow: inset 0 1px #fff, 0 18px 46px -39px rgba(49, 45, 100, 0.34) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(h1, h2, h3, h4),
+html[data-corvia-theme="light"] .clinical-os :is(.cc-page-header h1, .cc-section__heading h2, .cos-intelligence h2, .cos-intelligence h3, .cos-intelligence strong) {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(p, li, dd, figcaption),
+html[data-corvia-theme="light"] .clinical-os :is(.cc-page-header__description, .cc-page-header__meta, .cc-section__heading p, .cos-intelligence p, .cos-intelligence small) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content :is(
+  article,
+  [class$="__card"], [class*="__card "], [class*="-card"],
+  [class$="__panel"], [class*="__panel "], [class*="-panel"],
+  [class$="__box"], [class*="__box "],
+  [class$="__tile"], [class*="__tile "]
+):not(.emerg) {
+  color: #1b2440 !important;
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  border-color: rgba(var(--space-rgb), 0.16) !important;
+  box-shadow: inset 0 1px #fff, 0 14px 38px -35px rgba(49, 45, 100, 0.28) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content table {
+  color: #1b2440;
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-color: rgba(var(--space-rgb), 0.17) !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content th {
+  color: #46516b !important;
+}
+
+html[data-corvia-theme="light"] .clinical-os .cos-content td {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea,
+html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
+html[data-corvia-theme="light"] #root .clinical-os select,
+html[data-corvia-theme="light"] #root .clinical-os textarea {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #4b4fc4 !important;
+  background-color: #ffffff !important;
+  border-color: #81899e !important;
+  color-scheme: light !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))::placeholder,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea::placeholder {
+  color: #5e687f !important;
+  -webkit-text-fill-color: #5e687f !important;
+  opacity: 1;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):focus,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:focus,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:focus {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: #ffffff !important;
+  border-color: #4b4fc4 !important;
+  box-shadow: 0 0 0 3px rgba(75, 79, 196, 0.16) !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
+  input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:-webkit-autofill,
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:-webkit-autofill {
+  -webkit-text-fill-color: #1b2440 !important;
+  caret-color: #4b4fc4 !important;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  box-shadow: 0 0 0 1000px #ffffff inset !important;
+}
+
+html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) input:is([type="checkbox"], [type="radio"]) {
+  accent-color: #4b4fc4;
+}
+
+html[data-corvia-theme="light"] #root :is(.cv-app .cv-command, .cv-app .cv-drawer__search, .spaces-home .spaces-everything-search, .clinical-os .cos-command-mini) input {
+  color: #1b2440 !important;
+  -webkit-text-fill-color: #1b2440 !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-corvia-theme="light"] :is(
+  .corvia-theme-selector button[role="radio"],
+  .cv-account-menu :is(a, button),
+  .cv-drawer :is(a, button),
+  .cv-function-deck :is(a, button),
+  .cv-space-switcher a,
+  .cv-icon-button,
+  .cv-topbar__menu,
+  .cv-action
+):focus-visible {
+  outline: 3px solid #4b4fc4;
+  outline-offset: 2px;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) :focus-visible {
+  outline-color: #4b4fc4 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os {
+  --space-rgb: 184, 40, 61;
+  --space-accent: #b8283d;
+  --space-accent-2: #9e1e33;
+}
+
+html[data-corvia-theme="light"] :is(.cv-action--danger, .cv-emergency-fab, .botao--perigo) {
+  color: #fff !important;
+}
+
+@media (max-width: 900px) {
+  html[data-corvia-theme="light"] :is(.spaces-home__topbar, .cv-mobile-dock, .cc-mobile-nav) {
+    background: rgba(250, 248, 252, 0.94) !important;
+    border-color: rgba(75, 79, 196, 0.18) !important;
+    box-shadow: 0 -10px 32px rgba(49, 45, 100, 0.1) !important;
+    backdrop-filter: blur(18px) saturate(108%);
+  }
+}
+
+/*
+ * Cartoes legados ainda podem carregar um `background-image` escuro com
+ * `!important`. `background-color` nao remove esse gradiente; por isso a
+ * camada final redefine o shorthand completo. A rota de emergencia fica fora
+ * desta neutralizacao para preservar sua hierarquia de risco dedicada.
+ */
+html[data-corvia-theme="light"] body:not(.corvia-route--emergencia) .clinical-os .cos-content :is(
+  .cartao,
+  .cartao--clinico,
+  article,
+  [class$="__card"], [class*="__card "], [class*="-card"],
+  [class$="__panel"], [class*="__panel "], [class*="-panel"],
+  [class$="__box"], [class*="__box "],
+  [class$="__tile"], [class*="__tile "]
+) {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(var(--space-rgb), 0.07), transparent 16rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(240, 241, 249, 0.86)) !important;
+  border-color: rgba(var(--space-rgb), 0.18) !important;
+  box-shadow: inset 0 1px #ffffff, 0 15px 38px -35px rgba(49, 45, 100, 0.3) !important;
+}
+
+/* Emergencia no claro: cockpit luminoso, com vermelho reservado ao risco. */
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg {
+  --e-blue: #4b4fc4;
+  --e-blue-rgb: 75, 79, 196;
+  --e-red: #b8283d;
+  --e-red-rgb: 184, 40, 61;
+  --e-text: #1b2440;
+  --e-text-2: #4d5873;
+  --e-text-3: #5e687f;
+  --e-line: rgba(184, 40, 61, 0.18);
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
+  .emerg__topo,
+  .emerg__command,
+  .emerg__protocols,
+  .emerg__safety
+) {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 88% 8%, rgba(184, 40, 61, 0.08), transparent 18rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(244, 240, 247, 0.9)) !important;
+  border-color: rgba(184, 40, 61, 0.24) !important;
+  box-shadow: inset 0 1px #ffffff, 0 16px 40px -36px rgba(91, 35, 60, 0.38) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
+  .emerg__mode strong,
+  .emerg__commandCopy h1,
+  .emerg__protocols > header h2,
+  .emerg__alvoCopy > strong,
+  .emerg__safety strong
+) {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
+  .emerg__mode small,
+  .emerg__aviso,
+  .emerg__protocols > header > span,
+  .emerg__alvoCopy > span,
+  .emerg__safety small
+) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
+  .emerg__online,
+  .emerg__offline,
+  .emerg__buscaLinha,
+  .emerg__temaLinha select,
+  .emerg__resultCount,
+  .emerg__alvo,
+  .emerg__loading,
+  .emerg__semResultado
+) {
+  color: #4d5873 !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-color: rgba(184, 40, 61, 0.23) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .emerg__alvo:hover {
+  color: #1b2440 !important;
+  background: linear-gradient(108deg, rgba(184, 40, 61, 0.11), rgba(255, 255, 255, 0.94) 48%) !important;
+  border-color: #b8283d !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .emerg__erro {
+  color: #83172b !important;
+  background: #fff1f4 !important;
+  border-color: rgba(158, 30, 51, 0.42) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .emerg__erro small {
+  color: #6f3f4a !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .emerg__erro > button {
+  color: #83172b !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-color: #9e1e33 !important;
+}
+
+/*
+ * As cinco matrizes nativas possuem herois especializados com seletor mais
+ * forte que o primitivo compartilhado. Este alias garante a mesma Aurora
+ * Lunar em Ensino, Pesquisa e Gestao sem alterar sua geometria.
+ */
+html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero {
+  color: #1b2440 !important;
+  background:
+    linear-gradient(90deg, rgba(var(--cv-rgb), 0.032) 1px, transparent 1px),
+    linear-gradient(rgba(var(--cv-rgb), 0.026) 1px, transparent 1px),
+    radial-gradient(ellipse at 86% 16%, rgba(var(--cv-rgb), 0.1), transparent 18rem),
+    linear-gradient(108deg, rgba(255, 255, 255, 0.93), rgba(240, 241, 249, 0.88)) !important;
+  background-size: 46px 46px, 46px 46px, auto, auto !important;
+  border-color: rgba(var(--cv-rgb), 0.24) !important;
+  box-shadow: inset 0 1px #ffffff, 0 17px 42px -37px rgba(49, 45, 100, 0.34) !important;
+}
+
+html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero :is(h1, h2, strong) {
+  color: #1b2440 !important;
+  text-shadow: none !important;
+}
+
+html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero :is(.cv-page-hero__space, .cv-page-hero__description) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] body:not(.corvia-route--emergencia) .cv-app .cv-content :is(
+  article,
+  [class$="__card"], [class*="__card "], [class*="-card"],
+  [class$="__panel"], [class*="__panel "], [class*="-panel"],
+  [class$="__box"], [class*="__box "],
+  [class$="__tile"], [class*="__tile "]
+) {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(var(--cv-rgb), 0.07), transparent 16rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(240, 241, 249, 0.86)) !important;
+  border-color: rgba(var(--cv-rgb), 0.18) !important;
+  box-shadow: inset 0 1px #ffffff, 0 15px 38px -35px rgba(49, 45, 100, 0.3) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline,
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card__source {
+  color: #1b2440 !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  border-color: rgba(var(--cv-rgb), 0.16) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline strong,
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card :is(.research-evidence-card__statement, .research-evidence-card__source strong) {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline small,
+html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card :is(.research-evidence-card__summary, time) {
+  color: #4d5873 !important;
+}
+
+/*
+ * Indicadores: a tela executiva possui uma linguagem de observatorio propria.
+ * No claro, preservamos sua geometria e o teal de Gestao, mas trocamos todas as
+ * superfícies noturnas por perola/lavanda e reservamos cores fortes para dados,
+ * estados e foco. O escopo duplo evita qualquer alteracao no tema escuro.
+ */
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory {
+  --management-accent: #0f727a;
+  --management-rgb: 15, 114, 122;
+  --management-panel: rgba(255, 255, 255, 0.94);
+  --management-panel-soft: rgba(240, 241, 249, 0.88);
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-private {
+  color: #0f727a !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  border-color: rgba(15, 114, 122, 0.32) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-app .cv-content .cv-management-observatory :is(
+  .management-window,
+  .management-pulse,
+  .management-lens,
+  .management-detail,
+  .management-metric,
+  .management-distribution,
+  .management-loading,
+  .management-state,
+  .management-methodology
+) {
+  color: #1b2440 !important;
+  background:
+    radial-gradient(ellipse at 91% 8%, rgba(15, 114, 122, 0.075), transparent 17rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 241, 249, 0.88)) !important;
+  border-color: rgba(15, 114, 122, 0.2) !important;
+  box-shadow: inset 0 1px #ffffff, 0 16px 40px -36px rgba(49, 45, 100, 0.34) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory :is(
+  .management-window__identity h2,
+  .management-pulse__heading h2,
+  .management-lens > header h2,
+  .management-lens__primary strong,
+  .management-lens__idle strong,
+  .management-detail .cv-section__heading h2,
+  .management-metric__copy strong,
+  .management-distribution > header h3,
+  .management-loading strong,
+  .management-state h2,
+  .management-methodology summary strong
+) {
+  color: #1b2440 !important;
+  text-shadow: none !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory :is(
+  .management-window__sync,
+  .management-pulse__heading > span,
+  .management-lens__primary span,
+  .management-lens__idle p,
+  .management-detail .cv-section__heading > div > p:not(.eyebrow),
+  .management-metric__copy > span,
+  .management-metric__copy small,
+  .management-distribution > header p,
+  .management-distribution__row > div span,
+  .management-distribution__empty,
+  .management-loading p,
+  .management-state > div > strong,
+  .management-methodology summary small,
+  .management-methodology ul,
+  .management-methodology > div > p
+) {
+  color: #4d5873 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory :is(
+  .management-window__identity p,
+  .management-pulse__heading .eyebrow,
+  .management-lens > header p,
+  .management-state > div > p
+) {
+  color: #0f727a !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button {
+  color: #4d5873 !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-color: #81899e !important;
+  box-shadow: inset 0 1px #ffffff !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button:hover {
+  color: #1b2440 !important;
+  background: rgba(15, 114, 122, 0.08) !important;
+  border-color: #0f727a !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button.is-active {
+  color: #1b2440 !important;
+  background: linear-gradient(135deg, rgba(15, 114, 122, 0.13), rgba(255, 255, 255, 0.94)) !important;
+  border-color: #0f727a !important;
+  box-shadow: inset 0 -3px #0f727a, inset 0 1px #ffffff !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options small,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options .is-active small {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory :is(
+  .management-window__identity > span,
+  .management-lens__idle > span,
+  .management-metric__icon,
+  .management-distribution > header > span,
+  .management-state > span,
+  .management-methodology summary > span:first-child
+) {
+  color: #0f727a !important;
+  background: rgba(15, 114, 122, 0.075) !important;
+  border-color: rgba(15, 114, 122, 0.26) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens > header,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-distribution > header,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-methodology > div {
+  border-color: rgba(15, 114, 122, 0.16) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__status {
+  color: #0f727a !important;
+  background: rgba(15, 114, 122, 0.07) !important;
+  border-color: rgba(15, 114, 122, 0.25) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .is-idle .management-lens__status {
+  color: #4d5873 !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  border-color: rgba(129, 137, 158, 0.52) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .is-idle .management-lens__status i {
+  background: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring {
+  background:
+    radial-gradient(circle at center, #ffffff 0 56%, transparent 57%),
+    conic-gradient(#0f727a var(--management-progress), rgba(15, 114, 122, 0.12) 0) !important;
+  border-color: rgba(15, 114, 122, 0.25) !important;
+  box-shadow: 0 8px 22px -18px rgba(49, 45, 100, 0.45) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring.is-neutral {
+  background:
+    radial-gradient(circle at center, #ffffff 0 56%, transparent 57%),
+    conic-gradient(rgba(15, 114, 122, 0.16) 0 100%) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring span {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring small,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens dt {
+  color: #5e687f !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens dl > div {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(15, 114, 122, 0.2) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens dd,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-distribution__row > div strong,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-detail__heading > span {
+  color: #1b2440 !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-detail__heading > span {
+  background: rgba(15, 114, 122, 0.07) !important;
+  border-color: rgba(15, 114, 122, 0.23) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-distribution__track {
+  background: rgba(15, 114, 122, 0.12) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state button {
+  color: #0f727a !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-color: #0f727a !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state button:hover {
+  color: #1b2440 !important;
+  background: rgba(15, 114, 122, 0.1) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state--error > span,
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state--error > div > p {
+  color: #83172b !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state--error > span {
+  background: #fff1f4 !important;
+  border-color: rgba(131, 23, 43, 0.38) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-methodology > div > p {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(15, 114, 122, 0.18) !important;
+}
+
+html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-methodology summary > svg {
+  color: #4d5873 !important;
+}
+
+/*
+ * Homes Completo, Essencial e Ciencia & Ensino: os atalhos da jornada e os
+ * controles compactos abaixo das prateleiras ainda herdavam placas noturnas.
+ * Mantemos forma, ritmo e acentos de cada espaco; apenas trazemos as superficies
+ * para o mesmo perola/lavanda do restante do modo claro.
+ */
+html[data-corvia-theme="light"] .spaces-day__item {
+  color: #1b2440;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(238, 242, 250, 0.8));
+  border-color: rgba(75, 79, 196, 0.24);
+  box-shadow: inset 0 1px #ffffff, 0 9px 22px -21px rgba(49, 45, 100, 0.42);
+}
+
+html[data-corvia-theme="light"] .spaces-day__item:hover,
+html[data-corvia-theme="light"] .spaces-day__item:focus-visible {
+  color: #1b2440;
+  background: linear-gradient(145deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.94));
+  border-color: rgba(var(--space-rgb), 0.5);
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__metrics > * {
+  color: #4d5873;
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(75, 79, 196, 0.2);
+  box-shadow: inset 0 1px #ffffff;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__metrics > strong {
+  color: #1b2440;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route[data-traffic="light"] .spaces-stellar-route__metrics > :last-child {
+  color: #0f727a;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route[data-traffic="moderate"] .spaces-stellar-route__metrics > :last-child {
+  color: #8a6030;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route[data-traffic="heavy"] .spaces-stellar-route__metrics > :last-child {
+  color: #c42068;
+}
+
+/* Halo funcional: o espaco selecionado volta a iluminar as prateleiras. */
+html[data-corvia-theme="light"] .spaces-layer {
+  background:
+    radial-gradient(ellipse at 8% 50%, rgba(var(--space-rgb), 0.17), transparent 32%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.105), rgba(255, 255, 255, 0.96) 43%, rgba(var(--space-rgb), 0.065));
+  border-color: rgba(var(--space-rgb), 0.38);
+  box-shadow: inset 0 1px #ffffff, inset 3px 0 rgba(var(--space-rgb), 0.11);
+  filter:
+    drop-shadow(0 12px 18px rgba(var(--space-rgb), 0.15))
+    drop-shadow(0 0 13px rgba(var(--space-rgb), 0.08));
+}
+
+html[data-corvia-theme="light"] .spaces-layer--now {
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(var(--space-rgb), 0.29), transparent 38%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.2), rgba(255, 255, 255, 0.97) 46%, rgba(var(--space-rgb), 0.12));
+  border-color: rgba(var(--space-rgb), 0.62);
+  box-shadow: inset 0 1px #ffffff, inset 4px 0 rgba(var(--space-rgb), 0.17), 0 14px 28px -22px rgba(var(--space-rgb), 0.54);
+  filter:
+    drop-shadow(0 14px 20px rgba(var(--space-rgb), 0.22))
+    drop-shadow(0 0 18px rgba(var(--space-rgb), 0.14));
+}
+
+html[data-corvia-theme="light"] :is(.spaces-layer--next, .spaces-layer--refs) {
+  background:
+    radial-gradient(ellipse at 9% 50%, rgba(var(--space-rgb), 0.15), transparent 34%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.09), rgba(255, 255, 255, 0.95) 45%, rgba(121, 87, 200, 0.045));
+  border-color: rgba(var(--space-rgb), 0.34);
+}
+
+html[data-corvia-theme="light"] .spaces-layer--essential {
+  background:
+    radial-gradient(ellipse at 9% 50%, rgba(var(--space-rgb), 0.17), transparent 35%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.95) 44%, rgba(121, 87, 200, 0.08));
+  border-color: rgba(var(--space-rgb), 0.38);
+}
+
+/*
+ * Personalizacao das prateleiras: alvo real de 44 px, com uma pastilha visual
+ * de 30 px. Assim o comando permanece discreto sem sacrificar toque ou foco.
+ */
+html[data-corvia-theme="light"] .spaces-layer__edit {
+  top: 0;
+  right: calc(7% - 7px);
+  width: 44px;
+  height: 44px;
+  color: #303956;
+  background: transparent;
+  border: 0;
+  border-radius: 13px;
+  box-shadow: none;
+  opacity: 1;
+}
+
+html[data-corvia-theme="light"] .spaces-layer__edit::before {
+  position: absolute;
+  inset: 7px;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.98), transparent 42%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(var(--space-rgb), 0.1));
+  border: 1px solid rgba(var(--space-rgb), 0.38);
+  border-radius: 10px;
+  box-shadow: inset 0 1px #ffffff, 0 7px 16px -12px rgba(var(--space-rgb), 0.68);
+  content: "";
+  transition: background 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+html[data-corvia-theme="light"] .spaces-layer__edit svg {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+}
+
+html[data-corvia-theme="light"] .spaces-layer__edit:hover,
+html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible {
+  color: #1b2440;
+  background: transparent;
+  border: 0;
+}
+
+html[data-corvia-theme="light"] .spaces-layer__edit:hover::before,
+html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible::before {
+  background: linear-gradient(145deg, #ffffff, rgba(var(--space-rgb), 0.18));
+  border-color: rgb(var(--space-rgb));
+  box-shadow: inset 0 1px #ffffff, 0 8px 18px -10px rgba(var(--space-rgb), 0.72), 0 0 0 3px rgba(var(--space-rgb), 0.08);
+  transform: translateY(-1px);
+}
+
+html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible {
+  outline: 3px solid #4b4fc4 !important;
+  outline-offset: -1px;
+}
+
+/* A marca ganha presenca sem roubar espaco da busca ou dos modos. */
+html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand {
+  gap: 12px;
+}
+
+html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand > img {
+  width: 68px;
+  height: 68px;
+}
+
+html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand strong {
+  font-size: 1.82rem;
+}
+
+html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand {
+  gap: 8px;
+}
+
+html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand > img {
+  width: 48px;
+  height: 48px;
+}
+
+html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand strong {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  html[data-corvia-theme="light"] .spaces-home__topbar {
+    grid-template-columns: 204px minmax(260px, 1fr) auto minmax(116px, 166px);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  html[data-corvia-theme="light"] .spaces-home__topbar {
+    grid-template-columns: 174px minmax(220px, 1fr) auto 44px;
+  }
+}
+
+@media (max-width: 900px) {
+  html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand {
+    gap: 8px;
+  }
+
+  html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand > img {
+    width: 54px;
+    height: 54px;
+  }
+
+  html[data-corvia-theme="light"] .spaces-choice > header .spaces-brand strong {
+    font-size: 1.42rem;
+  }
+
+  html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand > img {
+    width: 44px;
+    height: 44px;
+  }
+
+  html[data-corvia-theme="light"] .spaces-layer__edit {
+    top: -2px;
+    right: calc(4.5% - 7px);
+  }
+}
+
+/*
+ * As cenas claras possuem iluminacao natural renderizada na propria imagem.
+ * O CSS preserva cor, contraste e materiais em vez de simular luz com filtros.
+ */
+html[data-corvia-theme="light"] .spaces-door > i {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98), rgba(var(--door-rgb), 0.09) 72%),
+    linear-gradient(180deg, #ffffff, #eef2fa);
+  border-color: rgba(var(--door-rgb), 0.46);
+  box-shadow: inset 0 1px #ffffff, inset 0 0 42px rgba(var(--door-rgb), 0.08), 0 18px 36px -27px rgba(var(--door-rgb), 0.52);
+}
+
+html[data-corvia-theme="light"] .spaces-door .spaces-door__scene {
+  opacity: 1;
+  filter: none;
+}
+
+html[data-corvia-theme="light"] :is(.spaces-door:hover, .spaces-door.is-preview) .spaces-door__scene {
+  opacity: 1;
+  filter: brightness(1.025) saturate(1.02);
+}
+
+html[data-corvia-theme="light"] .spaces-door.is-active .spaces-door__scene {
+  opacity: 1;
+  filter: brightness(1.035) saturate(1.025) drop-shadow(0 0 9px rgba(var(--door-rgb), 0.2));
+}
+
+html[data-corvia-theme="light"] .spaces-door > i::before {
+  background: radial-gradient(ellipse at 50% 3%, rgba(255, 255, 255, 0.055), transparent 54%);
+}
+
+html[data-corvia-theme="light"] .spaces-door.is-active > i::before {
+  background: radial-gradient(ellipse at 50% 2%, rgba(255, 255, 255, 0.075), transparent 56%);
+}
+
+html[data-corvia-theme="light"] .spaces-door.is-active > i {
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 1), rgba(var(--door-rgb), 0.13) 76%),
+    linear-gradient(180deg, #ffffff, #eef2fa);
+  border-color: rgba(var(--door-rgb), 0.78);
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 0 0 54px rgba(var(--door-rgb), 0.11),
+    0 23px 46px -24px rgba(var(--door-rgb), 0.7),
+    0 0 28px rgba(var(--door-rgb), 0.1);
+}
+
+/* A prateleira inteira responde ao apontador e ao foco de teclado. */
+html[data-corvia-theme="light"] .spaces-layer {
+  transition: background 170ms ease, border-color 170ms ease, box-shadow 170ms ease, filter 170ms ease, transform 170ms ease;
+}
+
+html[data-corvia-theme="light"] .spaces-layer:hover,
+html[data-corvia-theme="light"] .spaces-layer:focus-within {
+  background:
+    radial-gradient(ellipse at 13% 50%, rgba(var(--space-rgb), 0.3), transparent 43%),
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.2), rgba(255, 255, 255, 0.99) 47%, rgba(var(--space-rgb), 0.13));
+  border-color: rgba(var(--space-rgb), 0.7);
+  box-shadow:
+    inset 0 1px #ffffff,
+    inset 4px 0 rgba(var(--space-rgb), 0.2),
+    0 16px 30px -22px rgba(var(--space-rgb), 0.72),
+    0 0 26px rgba(var(--space-rgb), 0.13);
+  filter: drop-shadow(0 11px 18px rgba(var(--space-rgb), 0.18));
+  transform: translateY(-1px);
+}
+
+html[data-corvia-theme="light"] .spaces-layer:hover .spaces-action,
+html[data-corvia-theme="light"] .spaces-layer:focus-within .spaces-action {
+  color: #303956;
+  border-color: rgba(var(--space-rgb), 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-corvia-theme="light"] .spaces-layer {
+    transition: none;
+  }
+}

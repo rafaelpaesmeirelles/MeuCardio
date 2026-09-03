@@ -114,7 +114,10 @@ def policy_for(method: str, path: str) -> UploadPolicy | None:
         return _SCIENTIFIC_DOCUMENT_POLICY
     if re.fullmatch(r"/api/heart-team/cases/\d+/attachments", path):
         return _HEART_TEAM_POLICY
-    if path == "/api/email/mensagens/anexos":
+    if path == "/api/email/mensagens/anexos" or re.fullmatch(
+        r"/api/email/externas/corvia-\d+/mensagens/anexos(?:/verificar-assinatura)?",
+        path,
+    ):
         return _EMAIL_POLICY
     return None
 

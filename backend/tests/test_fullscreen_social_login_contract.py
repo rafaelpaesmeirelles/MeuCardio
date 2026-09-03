@@ -79,7 +79,8 @@ def test_login_screen_uses_dynamic_viewport_without_social_buttons():
         if line.strip().startswith('import "../styles/')
     ]
 
-    assert '<main className="login login-gateway">' in login
+    assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
+    assert 'data-login-theme={temaPublico}' in login
     assert 'prehome--login prehome--fullscreen' not in login
     assert local_styles[-1] == 'import "../styles/cardiology-spaces-login.css";'
     assert '/auth/social/providers' not in login
