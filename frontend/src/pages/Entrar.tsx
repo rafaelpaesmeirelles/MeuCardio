@@ -115,7 +115,7 @@ export default function Entrar() {
       <section className="login-gateway__scene" aria-labelledby="login-title">
         <header className="login-gateway__hero">
           <p>CORVIA · CARDIOLOGY SPACES</p>
-          <h1 id="login-title">Toda a cardiologia conectada. <strong>Você no centro.</strong></h1>
+          <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
           <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitam a mesma identidade clínica — com continuidade, confiança e contexto.</span>
         </header>
 
