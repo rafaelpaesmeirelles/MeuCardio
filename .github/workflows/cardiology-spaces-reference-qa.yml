@@ -228,6 +228,17 @@ jobs:
           }
 
           async function measure(mode) {
+            // A troca de modo ativa primeiro o portal padrao e pode ser seguida
+            // imediatamente pela escolha de outro portal. Aguarde a geometria
+            // animada final em vez de capturar um frame intermediario.
+            await page.waitForFunction(() => {
+              const doors = [...document.querySelectorAll('.spaces-door')];
+              const active = doors.find((door) => door.classList.contains('is-active'));
+              const inactive = doors.filter((door) => !door.classList.contains('is-active'));
+              if (!active || inactive.length !== doors.length - 1 || inactive.length === 0) return false;
+              const averageInactiveWidth = inactive.reduce((sum, door) => sum + door.getBoundingClientRect().width, 0) / inactive.length;
+              return active.getBoundingClientRect().width >= averageInactiveWidth * 1.28;
+            }, undefined, { timeout: 2000 });
             const metrics = await page.evaluate((modeName) => {
               const q = (selector) => document.querySelector(selector);
               const qa = (selector) => [...document.querySelectorAll(selector)];
