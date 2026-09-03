@@ -87,6 +87,9 @@ import "./styles/corvia-theme-selector.css";
 import "./styles/clinical-form-control-contrast.css";
 /* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
 import "./styles/cardiology-spaces-light-mode.css";
+/* Correções finais do lote atual; deliberadamente após as duas paletas para
+   valer igualmente em claro/escuro sem reabrir a composição canônica. */
+import "./styles/cardiology-spaces-pending-fixes.css";
 
 let swRecargaPendente = false;
 function tentarRecarregarPorNovoSW() {
