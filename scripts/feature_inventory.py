@@ -59,7 +59,7 @@ EXPECTED_NAV_ROUTES = {
 EXPECTED_BACKEND_ROUTERS = {
     "health.router", "auth.router", "browser_session.router", "social_login.router", "password_reset.router",
     "sessions.router", "billing.router", "account_access_admin.router", "admin.router", "admin_user_management.router", "service_orders.router",
-    "partner_courses.router", "email_api.router", "email_session.router", "documentos_publicos.router",
+    "partner_courses.router", "email_multibox.router", "email_api.router", "email_session.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
     "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
     "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
@@ -126,6 +126,7 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/styles/cardiology-spaces-home.css",
     "frontend/src/styles/cardiology-spaces-interior-approved.css",
     "backend/app/api/account_access_admin.py",
+    "backend/app/api/email_multibox.py",
     "backend/app/api/admin_user_management.py",
     "backend/app/api/assinatura.py",
     "backend/app/api/avaliacao_preoperatoria.py",
