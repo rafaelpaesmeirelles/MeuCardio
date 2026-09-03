@@ -6,11 +6,11 @@ from sqlalchemy import (
     DateTime,
     ForeignKey,
     Integer,
-    JSON,
     String,
     Text,
     UniqueConstraint,
 )
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.config import settings
@@ -107,7 +107,7 @@ class RagReindexRun(Base):
     falhas: Mapped[int] = mapped_column(Integer, default=0)
     backlog_restante: Mapped[int] = mapped_column(Integer, default=0)
     exit_code: Mapped[int] = mapped_column(Integer, default=0)
-    detalhe: Mapped[dict | None] = mapped_column(JSON, nullable=True)
+    detalhe: Mapped[dict | None] = mapped_column(JSONB, nullable=True)
 
 
 class AIConversation(Base):

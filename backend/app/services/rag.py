@@ -202,6 +202,16 @@ def indexar_documento(db: Session, doc: Document, provedor=None, *, forcar: bool
     # perde a informação de qual fármaco é.
     textos = [f"{doc.title}\n{t or ''}\n{c}".strip() for t, c in pedacos]
 
+    # Achado da revisão adversarial de 03/09/2026: `indexar_tudo()` chama
+    # `verificar_dimensao_embedding()` uma vez no início do lote, mas quem
+    # chama `indexar_documento()` DIRETO (ex.: `guideline_clinical_update.py`,
+    # fora de qualquer lote) nunca passava por essa checagem — uma
+    # EMBEDDING_DIM divergente do schema real só apareceria como erro de
+    # driver no INSERT, sem a mensagem clara de `EmbeddingDimensionError`.
+    # Barato (um SELECT de catálogo, sem tocar em dado) e só roda quando há
+    # algo pendente de verdade (depois do hash bater "sem mudança" acima).
+    verificar_dimensao_embedding(db)
+
     vetores: list[list[float]] = []
     for i in range(0, len(textos), 64):  # respeita o limite de lote da API
         vetores.extend(provedor.embeddings(textos[i : i + 64]))

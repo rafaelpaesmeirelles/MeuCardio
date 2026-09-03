@@ -125,6 +125,32 @@ def test_documento_publicado_sem_chunk_aparece_no_fallback_lexico(db, monkeypatc
     assert achado["rota"] == "/biblioteca/fallback-lexico-sem-chunk-metoprolol-teste"
 
 
+def test_documento_com_chunk_nao_duplica_via_fallback_lexico(db, monkeypatch):
+    """Achado de revisão adversarial em 03/09/2026: sem este filtro, um
+    documento que JÁ tem chunk (coberto por SQL_LEXICO/semântico) também
+    aparecia via o fallback léxico de `buscar_lexico_multi` — duas entradas
+    candidatas no RRF para o mesmo documento, e `montar_contexto()` não
+    deduplica o TEXTO enviado ao modelo (só a lista de fontes por slug), o
+    que podia deixar uma citação `[Fi]` sem card de fonte correspondente."""
+    from app.services.rag_multi import buscar_lexico_multi
+
+    provedor = _ProvedorFake()
+    monkeypatch.setattr("app.services.rag.obter_provedor_embeddings", lambda: provedor)
+
+    doc = _doc(
+        "documento-com-chunk-nao-duplica-teste",
+        "## Farmacologia\nDigoxina uso em fibrilação atrial permanente.",
+    )
+    db.add(doc)
+    db.commit()
+    assert indexar_documento(db, doc, provedor) > 0  # agora tem chunk
+
+    resultados = buscar_lexico_multi(db, "digoxina fibrilação atrial permanente", limite=10)
+
+    slugs_documento = [r["slug"] for r in resultados if r["entity_type"] == "documento"]
+    assert "documento-com-chunk-nao-duplica-teste" not in slugs_documento
+
+
 def test_citacao_de_documento_carrega_rota_e_entity_type(db):
     """Seção 7: montar_contexto() precisa preservar rota/entity_type mesmo
     quando o trecho vem só do caminho léxico de documento (sem embedding)."""

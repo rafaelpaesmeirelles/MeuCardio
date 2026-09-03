@@ -132,6 +132,33 @@ def test_reindex_rag_completo_e_idempotente(db, monkeypatch):
     assert segundo["por_frente"]["evidencia"]["entidades"] == 0  # já em dia, nenhuma chamada de rede
 
 
+def test_reindex_rag_recusa_segunda_execucao_concorrente(db, monkeypatch):
+    """Achado do revisor adversarial de deploy/rollback em 03/09/2026: nada
+    impedia duas execuções do backfill rodarem ao mesmo tempo (deploy.sh
+    dispara em background; um operador podia rodar de novo manualmente
+    achando que a primeira não tinha disparado). Simula o lock já ocupado
+    por outra sessão — a segunda chamada tem que desistir rápido, com exit
+    code próprio, sem tocar em nada."""
+    from sqlalchemy import text as sqltext
+
+    from app.commands.reindex_rag_completo_20260902 import _LOCK_KEY
+
+    monkeypatch.setattr(
+        "app.services.rag.obter_provedor_embeddings",
+        lambda: (_ for _ in ()).throw(AssertionError("não devia chegar a chamar o provedor")),
+    )
+
+    obtido = db.execute(sqltext("SELECT pg_try_advisory_lock(:k)"), {"k": _LOCK_KEY}).scalar()
+    assert obtido is True
+    try:
+        resultado, exit_code = rodar()
+        assert exit_code == 3
+        assert "execução" in resultado["erro"].lower()
+    finally:
+        db.execute(sqltext("SELECT pg_advisory_unlock(:k)"), {"k": _LOCK_KEY})
+        db.commit()
+
+
 def test_reindex_rag_dry_run_nao_chama_provedor_nem_escreve(db, monkeypatch):
     def _explode():
         raise AssertionError("--dry-run chamou o provedor de embeddings")

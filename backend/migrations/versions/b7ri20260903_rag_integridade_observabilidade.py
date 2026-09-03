@@ -44,6 +44,7 @@ import hashlib
 import sqlalchemy as sa
 from alembic import op
 from sqlalchemy import text
+from sqlalchemy.dialects import postgresql
 
 revision = "b7ri20260903"
 down_revision = "f96m20260903"
@@ -105,7 +106,13 @@ def upgrade() -> None:
     # exista mais em documents (não deveria acontecer, FK é ON DELETE CASCADE)
     # ficariam com content_hash NULL após o backfill acima — o ALTER abaixo
     # falharia nesse caso, o que é o comportamento certo: expõe a inconsistência
-    # em vez de escondê-la atrás de um default artificial.
+    # em vez de escondê-la atrás de um default artificial. Achado da revisão
+    # adversarial de 03/09/2026: se isso falhar em produção, a mensagem do
+    # Postgres não diz QUAL document_id está órfão — rode antes de tentar de
+    # novo:
+    #   SELECT c.document_id, count(*) FROM document_chunks c
+    #     LEFT JOIN documents d ON d.id = c.document_id
+    #    WHERE d.id IS NULL GROUP BY c.document_id;
     op.alter_column("document_chunks", "content_hash", nullable=False)
     op.alter_column("document_chunks", "embedding_model", nullable=False)
 
@@ -135,7 +142,7 @@ def upgrade() -> None:
         sa.Column("falhas", sa.Integer(), nullable=False, server_default="0"),
         sa.Column("backlog_restante", sa.Integer(), nullable=False, server_default="0"),
         sa.Column("exit_code", sa.Integer(), nullable=False, server_default="0"),
-        sa.Column("detalhe", sa.JSON(), nullable=True),
+        sa.Column("detalhe", postgresql.JSONB(astext_type=sa.Text()), nullable=True),
         sa.PrimaryKeyConstraint("id"),
     )
     op.create_index(

@@ -58,7 +58,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-from sqlalchemy import select
+from sqlalchemy import select, text
 
 from app.core.db import SessionLocal
 from app.models.rag import DocumentChunk, KnowledgeChunk, RagReindexRun
@@ -75,6 +75,24 @@ TIPOS_VALIDOS = ("documento",) + tuple(f.entity_type for f in FONTES_RAG) + ("ca
 
 class _Interrompido(Exception):
     """Levantada pelo handler de sinal — nunca pelo circuit breaker interno."""
+
+
+class _JaEmExecucao(Exception):
+    """Outra execução (deploy.sh em background, cron, ou operador manual)
+    já segura o lock. Achado da revisão adversarial de 03/09/2026: nada
+    impedia duas execuções concorrentes de indexar a MESMA entidade ao mesmo
+    tempo — sem constraint em `document_chunks` (só `knowledge_chunks` tem
+    UniqueConstraint entity_type/entity_id/ordem), a corrida podia deixar
+    chunk duplicado servido brevemente ao assistente clínico até a próxima
+    passada corrigir por content_hash. Cenário real: o próprio AVISO que
+    `deploy.sh` imprime quando `exec -d` falha ao DISPARAR instrui rodar o
+    comando manualmente — se isso for feito enquanto o disparo automático na
+    verdade tinha funcionado, colide."""
+
+
+# Chave fixa e arbitrária do advisory lock — Postgres exige bigint, não
+# string; nunca reaproveitar este número para outro lock do sistema.
+_LOCK_KEY = 771103090
 
 
 def _instalar_handler_interrupcao() -> None:
@@ -196,8 +214,23 @@ def rodar(
     resultado: dict = {"tipos": tipos, "dry_run": dry_run, "forcar": forcar, "por_frente": {}}
     exit_code = 0
     erro_fatal: str | None = None
+    # Conexão dedicada, mantida aberta pelo run inteiro — advisory lock é
+    # amarrado à SESSÃO/conexão, não sobrevive a `with SessionLocal(): ...`
+    # fechando no meio (que é o padrão usado por tipo, abaixo). dry-run é
+    # só leitura e nunca chama o provedor: não precisa do lock.
+    lock_conn = None
 
     try:
+        if not dry_run:
+            lock_conn = SessionLocal()
+            obtido = lock_conn.execute(text("SELECT pg_try_advisory_lock(:k)"), {"k": _LOCK_KEY}).scalar()
+            if not obtido:
+                raise _JaEmExecucao(
+                    "Já existe um backfill em execução (advisory lock ocupado) — "
+                    "não inicia um segundo em paralelo. Espere o outro terminar "
+                    "(rag_reindex_runs mostra a execução em andamento) e rode de novo."
+                )
+
         with SessionLocal() as db:
             # Falha explícita e cedo, antes de qualquer chamada de rede — uma
             # divergência de EMBEDDING_DIM contra o schema real não pode ser
@@ -244,6 +277,10 @@ def rodar(
         resultado["trechos_totais"] = trechos_totais
         exit_code = 0 if (falhas_totais == 0 and backlog_total == 0) else 2
 
+    except _JaEmExecucao as exc:
+        exit_code = 3
+        erro_fatal = str(exc)
+        log.warning(erro_fatal)
     except _Interrompido:
         exit_code = 130
         erro_fatal = "interrompido (SIGINT/SIGTERM) — seguro, nenhuma escrita parcial: retome rodando de novo"
@@ -257,6 +294,14 @@ def rodar(
         erro_fatal = f"{type(exc).__name__}: {exc}"
         log.exception("Falha operacional inesperada no backfill.")
     finally:
+        if lock_conn is not None:
+            try:
+                lock_conn.execute(text("SELECT pg_advisory_unlock(:k)"), {"k": _LOCK_KEY})
+                lock_conn.commit()
+            except Exception:
+                log.exception("Falha ao liberar o advisory lock do backfill (a conexão será fechada mesmo assim).")
+            finally:
+                lock_conn.close()
         fim = datetime.now(timezone.utc)
         resultado["duracao_segundos"] = round((fim - inicio).total_seconds(), 1)
         resultado["exit_code"] = exit_code

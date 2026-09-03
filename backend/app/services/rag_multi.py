@@ -13,7 +13,7 @@ from sqlalchemy import select, union_all
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
-from app.models.rag import KnowledgeChunk
+from app.models.rag import DocumentChunk, KnowledgeChunk
 from app.services.calculators import REGISTRY as CALCULATORS_REGISTRY
 from app.services.catalog_search import (
     INTERNAL_MARKER_SQL_PATTERN,
@@ -25,7 +25,13 @@ from app.services.catalog_search import (
     normalizar,
 )
 from app.services.knowledge_graph import _id_estavel
-from app.services.rag import EmbeddingDimensionError, content_hash, dividir, obter_provedor_embeddings
+from app.services.rag import (
+    EmbeddingDimensionError,
+    content_hash,
+    dividir,
+    obter_provedor_embeddings,
+    verificar_dimensao_embedding,
+)
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
 
 # `catalog_search` usa 'emergencia' como rótulo de frente (mesmo texto
@@ -80,6 +86,11 @@ def indexar_entidade(
         return 0
 
     textos = [f"{titulo}\n{t or ''}\n{c}".strip() for t, c in pedacos]
+
+    # Mesma defesa de `rag.indexar_documento()` (revisão adversarial de
+    # 03/09/2026): protege quem chamar `indexar_entidade()` direto, fora de
+    # `indexar_tipo()`/`indexar_tudo_multi()`.
+    verificar_dimensao_embedding(db)
 
     vetores: list[list[float]] = []
     for i in range(0, len(textos), 64):
@@ -326,17 +337,22 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
     Devolve citações no mesmo formato de `resolver_trechos_multi()` (sem
     `secao`, que só existe para chunk — aqui a unidade é o item inteiro).
 
-    A frente 'documento' ENTRA aqui desde 03/09/2026 (antes era descartada
-    de propósito, sob a premissa de que `rag.py::SQL_LEXICO` já cobria
-    documentos por léxico). Essa premissa era falsa: `SQL_LEXICO` faz INNER
-    JOIN com `document_chunks`, então um documento publicado que ainda não
-    tenha chunk (backlog de indexação, ou o próprio provedor de embeddings
-    fora do ar) ficava invisível em AMBOS os braços léxicos — o
-    `catalog_search` já o encontrava (não depende de chunk), mas o resultado
-    era jogado fora bem aqui. Manter é seguro: `montar_contexto()` deduplica
-    por slug, então um documento que já tenha chunk (e por isso já apareça
-    via `SQL_LEXICO`/semântico) não vira citação duplicada — só ganha uma
-    segunda fonte candidata no RRF, que o `setdefault` por slug já resolve.
+    A frente 'documento' ENTRA aqui desde 03/09/2026, mas SÓ para documento
+    que ainda NÃO tem chunk — é exatamente o caso que faltava cobrir (backlog
+    de indexação, ou o próprio provedor de embeddings fora do ar): antes,
+    'documento' era descartada de propósito aqui, sob a premissa de que
+    `rag.py::SQL_LEXICO` já cobria documentos por léxico. Essa premissa era
+    falsa: `SQL_LEXICO` faz INNER JOIN com `document_chunks`, então um
+    documento sem chunk ficava invisível em AMBOS os braços léxicos.
+    Documento que JÁ TEM chunk é descartado aqui de propósito (achado da
+    revisão adversarial de 03/09/2026): sem esse filtro, o mesmo documento
+    aparecia como duas citações candidatas no RRF — uma via `SQL_LEXICO`/
+    semântico (com o texto real do chunk) e outra via este fallback (com
+    snippet de `catalog_search`) — e `montar_contexto()` NÃO deduplica o
+    texto enviado ao modelo (só a lista de fontes visível ao usuário, por
+    slug), então o modelo podia citar `[Fi]` de um bloco sem card de fonte
+    correspondente. Restringir o fallback a "sem chunk mesmo" elimina a
+    sobreposição na origem, sem precisar mexer em `montar_contexto()`.
     """
     values = {"q": pergunta, "q_like": literal_like(pergunta), "frente": None, "limit": limite, "offset": 0}
     search_values = {
@@ -348,9 +364,23 @@ def buscar_lexico_multi(db: Session, pergunta: str, limite: int) -> list[dict]:
     if not linhas and normalizar(pergunta):
         linhas = db.execute(LITERAL_SQL, search_values).mappings().all()
 
+    slugs_documento = [linha["slug"] for linha in linhas if linha["frente"] == "documento"]
+    slugs_com_chunk: set[str] = set()
+    if slugs_documento:
+        from app.models.content import Document  # import tardio: evita ciclo no boot do pacote
+
+        slugs_com_chunk = set(db.execute(
+            select(Document.slug)
+            .join(DocumentChunk, DocumentChunk.document_id == Document.id)
+            .where(Document.slug.in_(slugs_documento))
+            .distinct()
+        ).scalars())
+
     resultados: list[dict] = []
     for linha in linhas:
         if linha["frente"] == "documento":
+            if linha["slug"] in slugs_com_chunk:
+                continue  # já coberto por SQL_LEXICO/semântico — evita citação duplicada/órfã
             resultados.append({
                 "slug": linha["slug"], "titulo": linha["title"], "tema": linha["theme"],
                 "secao": None, "conteudo": linha["snippet"],
