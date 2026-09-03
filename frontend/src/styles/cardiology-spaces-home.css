@@ -163,6 +163,16 @@ body.cardiology-spaces-active :where(a:hover) {
   justify-content: space-between;
 }
 
+/* Ancora o GalaxyThemeToggle só sob a marca, não sob o header inteiro (que
+   também contém a identidade do usuário, à direita, por causa do
+   justify-content: space-between acima) — sem isto, `left: 50%` do toggle
+   centralizaria em relação à largura total do header, não da marca. */
+.spaces-choice__brand-cluster {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
 .spaces-choice > header .spaces-brand {
   gap: 13px;
 }
@@ -423,7 +433,12 @@ body.cardiology-spaces-active :where(a:hover) {
   text-align: left;
 }
 
-.spaces-theme-cameo {
+/* GalaxyThemeToggle — substitui a astrofotografia estática
+   (WebP estático) por vídeo em loop (fechamento do PR #811,
+   03/09/2026). Mesmo footprint/posição aprovados de sempre: 140×52 de área
+   de toque, 132×44 de chip visual (92×44 / 88×30 no mobile) — só a
+   representação mudou de WebP para MP4. */
+.galaxy-theme-toggle {
   position: absolute;
   z-index: 4;
   top: calc(100% + 3px);
@@ -439,45 +454,41 @@ body.cardiology-spaces-active :where(a:hover) {
   cursor: pointer;
 }
 
-/* Estático — a rotação foi tentada e descartada a pedido do Rafael
-   (03/09/2026: "não gostei da rotação, pode aplicar fixa mesmo"). Mesmo
-   enquadramento de sempre (contain, sem corte); o `<span __frame>` que
-   envolve a imagem no JSX ficou só como wrapper neutro, sem efeito visual. */
-.spaces-theme-cameo__frame {
+.galaxy-theme-toggle__video {
   display: block;
   width: 132px;
   height: 44px;
-}
-
-.spaces-theme-cameo__img {
-  display: block;
-  width: 132px;
-  height: 44px;
+  aspect-ratio: 132 / 44; /* fixo — nada muda de tamanho quando o vídeo carrega/toca, sem CLS */
   object-fit: contain;
-  opacity: 1;
-  filter: brightness(1.12) saturate(1.08) contrast(1.12) drop-shadow(0 0 14px rgba(43, 216, 225, 0.32));
+  border-radius: 22px;
+  pointer-events: none; /* decorativo — o clique é sempre do <button> pai */
+  /* Fundo escuro (cor de acento do espaço) por trás do vídeo é o que dá
+     contraste ao "screen" no tema claro — testado: sem isso, a galáxia
+     lava quase por completo sobre um fundo claro (#f7f3fa). Calibração
+     aprovada: azul sóbrio, menos intenso que a primeira tentativa, sem
+     cinza, sem retângulo preto visível, sem clarear o entorno. */
+  background: var(--space-accent);
+  mix-blend-mode: screen;
+  filter: brightness(0.80) saturate(0.72) contrast(1.08);
+  opacity: 0.84;
   transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
 }
 
-.spaces-theme-cameo:hover .spaces-theme-cameo__img { opacity: 1; filter: brightness(1.2) saturate(1.14) contrast(1.14) drop-shadow(0 0 17px rgba(43, 216, 225, 0.42)); }
-.spaces-theme-cameo:active .spaces-theme-cameo__img { transform: scale(0.97); }
-.spaces-theme-cameo:focus-visible { outline: 2px solid var(--space-accent); outline-offset: 1px; border-radius: 50%; }
+.galaxy-theme-toggle:hover .galaxy-theme-toggle__video { opacity: 0.94; }
+.galaxy-theme-toggle:active .galaxy-theme-toggle__video { transform: scale(0.97); }
+.galaxy-theme-toggle:focus-visible { outline: 2px solid var(--space-accent); outline-offset: 1px; border-radius: 22px; }
 
 @media (max-width: 900px) {
-  .spaces-theme-cameo {
+  .galaxy-theme-toggle {
     top: calc(100% + 1px);
     width: 92px;
     height: 44px;
   }
 
-  .spaces-theme-cameo__frame {
+  .galaxy-theme-toggle__video {
     width: 88px;
     height: 30px;
-  }
-
-  .spaces-theme-cameo__img {
-    width: 88px;
-    height: 30px;
+    aspect-ratio: 88 / 30;
   }
 }
 
