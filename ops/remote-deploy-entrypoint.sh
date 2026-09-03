@@ -5,7 +5,8 @@
 #   deploy-release <current-main SHA> <Windows SHA-256> <Android cert SHA-256>
 #   deploy-web-android <current-main SHA> <Android cert SHA-256>
 # Operational maintenance remains limited to intelligence/intelligence-force
-# for the exact already-deployed SHA. Web/APK release bypasses are not accepted.
+# and cfm-sync for the exact already-deployed SHA. Web/APK release bypasses
+# are not accepted.
 set -Eeuo pipefail
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -31,6 +32,8 @@ elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="intelligence"; EXPECTED_SHA="${BASH_REMATCH[1]}"
 elif [[ "$ORIGINAL_COMMAND" =~ ^intelligence-force[[:space:]]([0-9a-f]{40})$ ]]; then
   REQUEST_KIND="intelligence"; EXPECTED_SHA="${BASH_REMATCH[1]}"; INTELLIGENCE_FORCE="1"
+elif [[ "$ORIGINAL_COMMAND" =~ ^cfm-sync[[:space:]]([0-9a-f]{40})$ ]]; then
+  REQUEST_KIND="cfm-sync"; EXPECTED_SHA="${BASH_REMATCH[1]}"
 else deny "command is not on the production allow-list"; fi
 readonly REQUEST_KIND EXPECTED_SHA EXPECTED_WINDOWS_SHA EXPECTED_ANDROID_CERT_SHA INTELLIGENCE_FORCE
 
@@ -85,6 +88,11 @@ if [[ "$REQUEST_KIND" == "intelligence" ]]; then
     exec docker compose -f docker-compose.prod.yml exec -T -e CORVIA_INTELLIGENCE_FORCE=1 backend python -m app.services.guideline_discovery_cli
   fi
   exec docker compose -f docker-compose.prod.yml exec -T backend python -m app.services.guideline_discovery_cli
+fi
+if [[ "$REQUEST_KIND" == "cfm-sync" ]]; then
+  require_deployed_sha
+  docker compose -f docker-compose.prod.yml exec -T backend true >/dev/null 2>&1 || deny "backend not running"
+  exec docker compose -f docker-compose.prod.yml exec -T backend python -m app.commands.sync_cfm_registry --download
 fi
 if [[ "$REQUEST_KIND" == "deploy-release" || "$REQUEST_KIND" == "deploy-web-android" ]]; then
   if [[ "$REQUEST_KIND" == "deploy-release" ]]; then
