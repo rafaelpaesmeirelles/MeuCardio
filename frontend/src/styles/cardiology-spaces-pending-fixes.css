@@ -1,0 +1,153 @@
+/*
+ * CorVIA Cardiology Spaces — lote de correções pendentes 2026-09-03
+ *
+ * Camada final, pequena e reversível. Não altera backend, modelos de dados,
+ * autenticação ou conteúdo clínico. Concentra apenas correções de composição
+ * solicitadas para Home/Cardiology Spaces e a contenção responsiva de /busca.
+ */
+
+/* O cartão redundante "Dr. ... Meu espaço/Minha jornada ativa" não acrescenta
+ * navegação nem estado. Remove-o em todas as experiências, temas e viewports.
+ */
+.spaces-home .spaces-doctor {
+  display: none !important;
+}
+
+/* Sem o cartão acima, não reservar uma faixa vazia no rodapé do workspace. */
+@media (min-width: 901px) {
+  .spaces-home .spaces-workspace {
+    grid-template-rows:
+      clamp(36px, 6dvh, 54px)
+      clamp(154px, 29.35dvh, 264px)
+      clamp(44px, 7.45dvh, 67px)
+      minmax(0, 1fr)
+      0 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .spaces-home .spaces-workspace {
+    grid-template-rows:
+      clamp(34px, 5.5dvh, 48px)
+      clamp(146px, 25dvh, 210px)
+      clamp(43px, 7dvh, 64px)
+      minmax(0, 1fr)
+      0 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 650px) {
+  .spaces-home .spaces-workspace {
+    grid-template-rows: 34px minmax(136px, 27dvh) 42px minmax(0, 1fr) 0 !important;
+  }
+}
+
+/* No Essencial mobile cada prateleira já possui o seu botão de engrenagem.
+ * O CTA duplicado abaixo de "Meus essenciais" é removido somente no mobile.
+ */
+@media (max-width: 900px) {
+  .spaces-home--mode-essential .spaces-personalize {
+    display: none !important;
+  }
+}
+
+/* Deslocamento no miniuniverso: a geometria real devolvida pelo provedor deve
+ * ser inequívoca. A rota calculada fica contínua, mais espessa e luminosa;
+ * enquanto ainda não houve cálculo, a prévia permanece tracejada. Isso evita
+ * que tema claro/baixo contraste faça a trajetória parecer ausente.
+ */
+.spaces-stellar-route__orbit[data-geometry="real"] {
+  stroke: #5d8fff !important;
+  stroke-width: 2.8 !important;
+  stroke-dasharray: none !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 4px rgba(70, 130, 255, 0.9)) !important;
+}
+
+.spaces-stellar-route__orbit[data-geometry="preview"] {
+  stroke-width: 2.15 !important;
+  stroke-dasharray: 5 4 !important;
+  opacity: 0.9 !important;
+}
+
+.spaces-stellar-route__orbit-glow {
+  stroke-width: 9 !important;
+  opacity: 0.9;
+}
+
+.spaces-stellar-route[data-state="ready"] .spaces-stellar-route__map {
+  filter: saturate(1.15) contrast(1.05);
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__orbit[data-geometry="real"] {
+  stroke: #326fe7 !important;
+  filter: drop-shadow(0 0 3px rgba(50, 111, 231, 0.72)) !important;
+}
+
+html[data-corvia-theme="light"] .spaces-stellar-route__orbit[data-geometry="preview"] {
+  stroke: #557bc4 !important;
+  opacity: 0.96 !important;
+}
+
+/* PR #807 refeito sobre a main atual: /busca (Tudo com Tudo) não pode criar
+ * largura intrínseca maior que o viewport em celulares.
+ */
+@media (max-width: 759px) {
+  body.corvia-space--pesquisa .tct-page,
+  body.corvia-space--pesquisa .tct-page > *,
+  body.corvia-space--pesquisa .tct-hero,
+  body.corvia-space--pesquisa .tct-hero > *,
+  body.corvia-space--pesquisa .tct-head,
+  body.corvia-space--pesquisa .tct-head > *,
+  body.corvia-space--pesquisa .tct-grid,
+  body.corvia-space--pesquisa .tct-grid > *,
+  body.corvia-space--pesquisa .tct-row {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  body.corvia-space--pesquisa .tct-page,
+  body.corvia-space--pesquisa .tct-page > *,
+  body.corvia-space--pesquisa .tct-hero,
+  body.corvia-space--pesquisa .tct-search {
+    width: 100% !important;
+  }
+
+  body.corvia-space--pesquisa .tct-hero h1,
+  body.corvia-space--pesquisa .tct-hero > p,
+  body.corvia-space--pesquisa .tct-head :is(h2, p),
+  body.corvia-space--pesquisa .tct-row :is(strong, p) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  body.corvia-space--pesquisa .tct-search {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.corvia-space--pesquisa .tct-search > :is(input, .botao) {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  body.corvia-space--pesquisa .tct-search > .botao {
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  body.corvia-space--pesquisa .tct-head {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  body.corvia-space--pesquisa .tct-head > a {
+    align-self: flex-start;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
