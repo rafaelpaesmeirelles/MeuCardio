@@ -353,3 +353,34 @@
   box-shadow:inset 0 1px rgba(255,255,255,.92) !important;
 }
 
+
+/* EMERGENCY 04/09 — movimento físico: disco fixo, braços/luz giram dentro dele. */
+#root .login.login-gateway--public .login-gateway__milky-way {
+  animation: none !important;
+  rotate: 0deg !important;
+}
+#root .login.login-gateway--public .login-gateway__galaxy-image {
+  animation: none !important;
+  rotate: 0deg !important;
+  will-change: auto !important;
+}
+#root .login.login-gateway--public .login-gateway__galaxy-motion {
+  position:absolute !important;
+  inset:0 !important;
+  z-index:2 !important;
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  pointer-events:none !important;
+  mix-blend-mode:screen !important;
+  opacity:.34 !important;
+  filter:saturate(1.22) contrast(1.08) brightness(.94) !important;
+  transform:scale(1.06) !important;
+  transform-origin:50% 50% !important;
+}
+#root .login.login-gateway--dark .login-gateway__galaxy-image { opacity:.88 !important; }
+#root .login.login-gateway--light .login-gateway__galaxy-image { opacity:.76 !important; }
+#root .login.login-gateway--light .login-gateway__galaxy-motion {
+  opacity:.24 !important;
+  filter:saturate(1.35) contrast(1.12) brightness(.86) !important;
+}
