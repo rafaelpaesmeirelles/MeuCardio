@@ -138,13 +138,13 @@ export default function Entrar() {
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
             <img className="login-gateway__galaxy-image" src="/spaces/corvia-galaxy-cameo.webp" alt="" aria-hidden="true" draggable={false} />
-            <video
-              className="login-gateway__galaxy-motion"
-              src="/spaces/galaxy-loop-v2.mp4"
-              autoPlay muted loop playsInline preload="auto"
-              aria-hidden="true" tabIndex={-1}
-              onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.20; }}
-            />
+            <span className="login-gateway__galaxy-rotor-clip" aria-hidden="true">
+              <img
+                className="login-gateway__galaxy-rotor"
+                src="/spaces/corvia-galaxy-cameo.webp"
+                alt="" aria-hidden="true" draggable={false}
+              />
+            </span>
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />

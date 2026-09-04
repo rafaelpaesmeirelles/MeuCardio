@@ -354,36 +354,52 @@
 }
 
 
-/* EMERGENCY 04/09 — movimento físico: disco fixo, braços/luz giram dentro dele. */
+/* EMERGENCY 04/09 — disco sempre horizontal; apenas braços externos giram no próprio eixo. */
 #root .login.login-gateway--public .login-gateway__milky-way {
-  animation: none !important;
-  rotate: 0deg !important;
+  animation:none !important;
+  rotate:0deg !important;
 }
 #root .login.login-gateway--public .login-gateway__galaxy-image {
-  animation: none !important;
-  rotate: 0deg !important;
-  will-change: auto !important;
+  animation:none !important;
+  rotate:0deg !important;
+  will-change:auto !important;
 }
-#root .login.login-gateway--public .login-gateway__galaxy-motion {
+#root .login.login-gateway--public .login-gateway__galaxy-rotor-clip {
+  display:block !important;
   position:absolute !important;
   inset:0 !important;
   z-index:2 !important;
   width:100% !important;
   height:100% !important;
-  object-fit:contain !important;
-  object-position:50% 56% !important;
+  overflow:hidden !important;
   pointer-events:none !important;
-  mix-blend-mode:screen !important;
-  opacity:.28 !important;
-  filter:saturate(1.28) contrast(1.12) brightness(.90) !important;
-  transform:scale(1.06) !important;
-  transform-origin:50% 50% !important;
-  -webkit-mask-image:radial-gradient(ellipse 58% 31% at 50% 56%,#000 0 58%,rgba(0,0,0,.82) 72%,transparent 100%) !important;
-  mask-image:radial-gradient(ellipse 58% 31% at 50% 56%,#000 0 58%,rgba(0,0,0,.82) 72%,transparent 100%) !important;
+  animation:none !important;
+  transform:none !important;
+  will-change:auto !important;
+  clip-path:ellipse(49% 29% at 50% 56%) !important;
 }
-#root .login.login-gateway--dark .login-gateway__galaxy-image { opacity:.88 !important; }
-#root .login.login-gateway--light .login-gateway__galaxy-image { opacity:.76 !important; }
-#root .login.login-gateway--light .login-gateway__galaxy-motion {
-  opacity:.20 !important;
-  filter:saturate(1.38) contrast(1.14) brightness(.86) !important;
+#root .login.login-gateway--public .login-gateway__galaxy-rotor {
+  position:absolute !important;
+  inset:-10% !important;
+  width:120% !important;
+  height:120% !important;
+  object-fit:contain !important;
+  transform-origin:50% 50% !important;
+  animation:corvia-login-galaxy-arms-clockwise 80s linear infinite !important;
+  opacity:.36 !important;
+  mix-blend-mode:screen !important;
+  filter:saturate(1.32) contrast(1.14) brightness(.98) drop-shadow(0 0 24px rgba(45,145,255,.22)) !important;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 0 20%,rgba(0,0,0,.82) 33%,#000 62%,rgba(0,0,0,.78) 78%,transparent 96%) !important;
+  mask-image:radial-gradient(circle at 50% 50%,transparent 0 20%,rgba(0,0,0,.82) 33%,#000 62%,rgba(0,0,0,.78) 78%,transparent 96%) !important;
+  will-change:transform !important;
+}
+#root .login.login-gateway--dark .login-gateway__galaxy-image { opacity:.92 !important; }
+#root .login.login-gateway--light .login-gateway__galaxy-image { opacity:.78 !important; }
+#root .login.login-gateway--light .login-gateway__galaxy-rotor {
+  opacity:.26 !important;
+  filter:saturate(1.24) contrast(1.10) brightness(1.08) drop-shadow(0 0 20px rgba(78,145,238,.15)) !important;
+}
+@keyframes corvia-login-galaxy-arms-clockwise {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
 }
