@@ -7,9 +7,9 @@ Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correçã
 ## Totais
 
 - **accepted**: 3
-- **conflict**: 100
-- **duplicate**: 3471
-- **needs_manual_review**: 153
+- **conflict**: 204
+- **duplicate**: 2402
+- **needs_manual_review**: 135
 
 ## PRs com itens aceitos
 
@@ -71,7 +71,21 @@ Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correçã
 - PR #685 · `doencas` · `insuficiencia-mitral` · `doencas/fragmentos/insuficiencia-mitral.json` — slug já existe como fragmento canônico no baseline
 - PR #684 · `doencas` · `obesidade-e-coracao` · `doencas/fragmentos/obesidade-e-coracao.json` — slug já existe como fragmento canônico no baseline
 - PR #649 · `doencas` · `avaliacao-basal-cardiooncologica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `defeito-septo-atrioventricular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `estenose-pulmonar-congenita` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `retorno-venoso-pulmonar-anomalo` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `atresia-pulmonar` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `febre-reumatica-cardite` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `endocardite-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #649 · `doencas` · `hipertensao-pulmonar-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #648 · `doencas` · `avaliacao-cardiovascular-pre-concepcional` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `defeito-septo-atrioventricular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `estenose-pulmonar-congenita` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `retorno-venoso-pulmonar-anomalo` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `atresia-pulmonar` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `febre-reumatica-cardite` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `endocardite-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `hipertensao-pulmonar-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #599 · `doencas` · `dispositivos-cardiacos-implantaveis` · `doencas/fragmentos/pr599-dispositivos-cardiacos-implantaveis.json` — slug já existe como fragmento canônico no baseline
 - PR #597 · `doencas` · `hipertensao-resistente-e-refrataria` · `doencas/fragmentos/pr597-hipertensao-resistente-refrataria.json` — slug já existe como fragmento canônico no baseline
 - PR #596 · `doencas` · `cardiopatia-congenita-do-adulto` · `doencas/fragmentos/pr596-cardiopatia-congenita-adulto.json` — slug já existe como fragmento canônico no baseline
@@ -82,19 +96,103 @@ Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correçã
 - PR #580 · `doencas` · `doenca-da-aorta` · `doencas/fragmentos/pr580-doenca-da-aorta.snapshot.json` — slug já existe como fragmento canônico no baseline
 - PR #578 · `doencas` · `doenca-arterial-periferica-de-membros` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
 - PR #574 · `doencas` · `tromboembolismo-venoso` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #572 · `doencas` · `hipertensao-arterial-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `doenca-de-kawasaki` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `miocardite-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `taquicardia-supraventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `hipotensao-ortostatica-no-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `valva-aortica-bicuspide-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `fisiologia-ventriculo-unico` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `dislipidemias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `sopros-na-infancia` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `dor-toracica-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `arritmias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `indicacoes-ecocardiograma-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `bloqueio-atrioventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `flutter-atrial-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `hidropisia-fetal-cardiovascular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `coarctacao-aorta-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `tetralogia-fallot-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `transposicao-grandes-arterias-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `retorno-venoso-pulmonar-anomalo-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `avaliacao-multidimensional-cardiogeriatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `estenose-aortica-tavi-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `doenca-coronariana-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `cuidados-paliativos-cardiovasculares` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `cardiotoxicidade-bcr-abl` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `trombose-associada-cancer` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `cardiopatia-congenita-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `hipertensao-pulmonar-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `medicamentos-cardiovasculares-gestacao-lactacao` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `plano-parto-cardiopatia-materna` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #572 · `doencas` · `seguimento-cardiovascular-pos-parto` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #572 · `doencas` · `diabetes-mellitus-tipo-2` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #570 · `doencas` · `hipertensao-arterial-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `doenca-de-kawasaki` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `miocardite-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `taquicardia-supraventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `hipotensao-ortostatica-no-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `valva-aortica-bicuspide-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `fisiologia-ventriculo-unico` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `dislipidemias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `sopros-na-infancia` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `dor-toracica-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `arritmias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `indicacoes-ecocardiograma-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `bloqueio-atrioventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `flutter-atrial-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `hidropisia-fetal-cardiovascular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `coarctacao-aorta-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `tetralogia-fallot-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `transposicao-grandes-arterias-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `retorno-venoso-pulmonar-anomalo-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `avaliacao-multidimensional-cardiogeriatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `estenose-aortica-tavi-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `doenca-coronariana-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `cuidados-paliativos-cardiovasculares` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `cardiotoxicidade-bcr-abl` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `trombose-associada-cancer` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `cardiopatia-congenita-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `hipertensao-pulmonar-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `medicamentos-cardiovasculares-gestacao-lactacao` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `plano-parto-cardiopatia-materna` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #570 · `doencas` · `seguimento-cardiovascular-pos-parto` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #570 · `doencas` · `dislipidemia` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #568 · `doencas` · `hipertensao-arterial-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `doenca-de-kawasaki` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `miocardite-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `taquicardia-supraventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `hipotensao-ortostatica-no-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `valva-aortica-bicuspide-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `fisiologia-ventriculo-unico` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `dislipidemias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `sopros-na-infancia` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `dor-toracica-pediatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `arritmias-pediatricas` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `indicacoes-ecocardiograma-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `bloqueio-atrioventricular-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `flutter-atrial-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `hidropisia-fetal-cardiovascular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `coarctacao-aorta-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `tetralogia-fallot-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `transposicao-grandes-arterias-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `retorno-venoso-pulmonar-anomalo-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `avaliacao-multidimensional-cardiogeriatrica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `estenose-aortica-tavi-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `doenca-coronariana-idoso` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `cuidados-paliativos-cardiovasculares` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `cardiotoxicidade-bcr-abl` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `trombose-associada-cancer` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `cardiopatia-congenita-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `hipertensao-pulmonar-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `medicamentos-cardiovasculares-gestacao-lactacao` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `plano-parto-cardiopatia-materna` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #568 · `doencas` · `seguimento-cardiovascular-pos-parto` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #568 · `doencas` · `miocardite` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
 - PR #564 · `doencas` · `sindrome-coracao-esquerdo-hipoplasico-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #564 · `doencas` · `arritmias-na-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #564 · `doencas` · `comunicacao-interatrial` · `doencas/metadados.json` — slug existe com conteúdo divergente
 - PR #535 · `triagem` · `colapso-subito-inconsciencia-e-respiracao-anormal` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
-- PR #526 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #526 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #526 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #526 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #526 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #526 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
 - PR #526 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
 - PR #526 · `documento` · `fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022` · `content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md` — slug já existe com conteúdo divergente
 - PR #526 · `documento` · `fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia` · `content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md` — slug já existe com conteúdo divergente
@@ -106,12 +204,6 @@ Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correçã
 - PR #526 · `documento` · `fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025` · `content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md` — slug já existe com conteúdo divergente
 - PR #526 · `documento` · `fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025` · `content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md` — slug já existe com conteúdo divergente
 - PR #526 · `documento` · `trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia` · `content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md` — slug já existe com conteúdo divergente
-- PR #525 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #525 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #525 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #525 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #525 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #525 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
 - PR #525 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
 - PR #525 · `documento` · `fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022` · `content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md` — slug já existe com conteúdo divergente
 - PR #525 · `documento` · `fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia` · `content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md` — slug já existe com conteúdo divergente
@@ -123,12 +215,6 @@ Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correçã
 - PR #525 · `documento` · `fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025` · `content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md` — slug já existe com conteúdo divergente
 - PR #525 · `documento` · `fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025` · `content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md` — slug já existe com conteúdo divergente
 - PR #525 · `documento` · `trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia` · `content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md` — slug já existe com conteúdo divergente
-- PR #524 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #524 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #524 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #524 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #524 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
-- PR #524 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
 - PR #524 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
 - PR #524 · `documento` · `fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio` · `content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md` — slug já existe com conteúdo divergente
 - PR #524 · `documento` · `fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao` · `content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md` — slug já existe com conteúdo divergente
