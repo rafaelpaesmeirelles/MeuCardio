@@ -1,0 +1,127 @@
+name: Resolve scientific residuals
+
+on:
+  push:
+    branches:
+      - science/reconcile-open-pr-corpus-20260904
+    paths:
+      - scripts/resolve_science_residuals.py
+      - .github/workflows/resolve-science-residuals.yml
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: science-residual-resolution-20260904
+  cancel-in-progress: true
+
+jobs:
+  resolve:
+    name: Resolver conflitos e proveniência residual
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout isolated science branch
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: science/reconcile-open-pr-corpus-20260904
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install lightweight dependency
+        run: python -m pip install --disable-pip-version-check 'PyYAML>=6,<7'
+
+      - name: Fetch main and pull-request heads
+        run: |
+          git fetch origin main --prune
+          git fetch origin '+refs/pull/*/head:refs/remotes/pr/*'
+
+      - name: Snapshot PR metadata and fetch exact bases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "/repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" > /tmp/open-pr-pages.jsonl
+          jq -s 'add | map({number, base_sha: .base.sha, head_sha: .head.sha, base_ref: .base.ref, head_ref: .head.ref}) | unique_by(.number) | sort_by(.number)' \
+            /tmp/open-pr-pages.jsonl > /tmp/open-pr-metadata.json
+          jq -r '.[].base_sha' /tmp/open-pr-metadata.json | sort -u | while read -r sha; do
+            if ! git cat-file -e "${sha}^{commit}" 2>/dev/null; then
+              git fetch --no-tags origin "${sha}"
+            fi
+          done
+
+      - name: Compile resolver
+        run: |
+          python -m py_compile scripts/reconcile_open_science_prs.py
+          python -m py_compile scripts/resolve_science_residuals.py
+
+      - name: Resolve residuals in three-way mode
+        run: |
+          python scripts/resolve_science_residuals.py \
+            --pr-metadata /tmp/open-pr-metadata.json
+          jq '.summary, .changed_manifests' artifacts/science-residual-resolution.json
+
+      - name: Validate JSON and front matter
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+
+          for rel in [
+              'casos-clinicos/metadados.json', 'checklists/metadados.json',
+              'doencas/metadados.json', 'emergencia/metadados.json',
+              'estudos/metadados.json', 'evidencias/metadados.json',
+              'exames/metadados.json', 'galeria/metadados.json',
+              'material-paciente/metadados.json', 'medicamentos/metadados.json',
+              'triagem-sintomas/metadados.json', 'trilhas/metadados.json',
+          ]:
+              path = Path(rel)
+              if path.exists():
+                  json.loads(path.read_text(encoding='utf-8'))
+
+          for path in Path('content').rglob('*.md'):
+              text = path.read_text(encoding='utf-8')
+              if not text.startswith('---\n'):
+                  continue
+              end = text.find('\n---\n', 4)
+              if end < 0:
+                  raise SystemExit(f'front matter incompleto: {path}')
+              meta = yaml.safe_load(text[4:end])
+              if not isinstance(meta, dict):
+                  raise SystemExit(f'front matter inválido: {path}')
+          PY
+
+      - name: Strict corpus inventory
+        run: python scripts/content_inventory.py --strict
+
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: science-residual-resolution
+          path: |
+            artifacts/science-residual-resolution.json
+            docs/RESOLUCAO-CIENTIFICA-RESIDUAL-20260904.md
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit resolved corpus to isolated branch
+        run: |
+          git config user.name 'CorVIA Science Resolver'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            casos-clinicos checklists doencas emergencia estudos evidencias exames galeria \
+            material-paciente medicamentos triagem-sintomas trilhas \
+            artifacts/science-residual-resolution.json \
+            docs/RESOLUCAO-CIENTIFICA-RESIDUAL-20260904.md
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração residual segura a gravar.'
+            exit 0
+          fi
+          git commit -m 'science: resolve conflitos residuais do corpus pendente'
+          git push origin HEAD:science/reconcile-open-pr-corpus-20260904
