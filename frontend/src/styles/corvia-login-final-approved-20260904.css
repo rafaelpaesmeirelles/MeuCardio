@@ -371,16 +371,19 @@
   width:100% !important;
   height:100% !important;
   object-fit:contain !important;
+  object-position:50% 56% !important;
   pointer-events:none !important;
   mix-blend-mode:screen !important;
-  opacity:.34 !important;
-  filter:saturate(1.22) contrast(1.08) brightness(.94) !important;
+  opacity:.28 !important;
+  filter:saturate(1.28) contrast(1.12) brightness(.90) !important;
   transform:scale(1.06) !important;
   transform-origin:50% 50% !important;
+  -webkit-mask-image:radial-gradient(ellipse 58% 31% at 50% 56%,#000 0 58%,rgba(0,0,0,.82) 72%,transparent 100%) !important;
+  mask-image:radial-gradient(ellipse 58% 31% at 50% 56%,#000 0 58%,rgba(0,0,0,.82) 72%,transparent 100%) !important;
 }
 #root .login.login-gateway--dark .login-gateway__galaxy-image { opacity:.88 !important; }
 #root .login.login-gateway--light .login-gateway__galaxy-image { opacity:.76 !important; }
 #root .login.login-gateway--light .login-gateway__galaxy-motion {
-  opacity:.24 !important;
-  filter:saturate(1.35) contrast(1.12) brightness(.86) !important;
+  opacity:.20 !important;
+  filter:saturate(1.38) contrast(1.14) brightness(.86) !important;
 }

@@ -143,7 +143,7 @@ export default function Entrar() {
               src="/spaces/galaxy-loop-v2.mp4"
               autoPlay muted loop playsInline preload="auto"
               aria-hidden="true" tabIndex={-1}
-              onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.125; }}
+              onLoadedMetadata={(event) => { event.currentTarget.playbackRate = 0.20; }}
             />
           </div>
           <div className="login-gateway__core">
