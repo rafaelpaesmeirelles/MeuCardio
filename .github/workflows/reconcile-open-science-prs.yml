@@ -50,11 +50,31 @@ jobs:
       - name: Compile reconciliation tool
         run: python -m py_compile scripts/reconcile_open_science_prs.py
 
+      - name: Snapshot canonical corpus baseline
+        run: |
+          set +e
+          python scripts/content_inventory.py --strict > /tmp/science-baseline.json 2> /tmp/science-baseline.err
+          echo $? > /tmp/science-baseline.exit
+          set -e
+          echo "Baseline strict exit: $(cat /tmp/science-baseline.exit)"
+          jq '{total_records, missing, invalid, duplicate_keys: [.fronts | to_entries[] | select((.value.duplicate_keys | length) > 0) | {front: .key, keys: .value.duplicate_keys}]}' /tmp/science-baseline.json
+
       - name: Reconcile, deduplicate and mark accepted units reviewed
         run: |
           python scripts/reconcile_open_science_prs.py \
             --base origin/main \
             --open-prs /tmp/open-prs.json
+
+      - name: Preserve reconciliation report even if a later gate fails
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: science-open-pr-reconciliation
+          path: |
+            artifacts/science-reconcile-report.json
+            docs/REVISAO-CIENTIFICA-PRS-PENDENTES-20260904.md
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Validate all touched JSON and YAML front matter
         run: |
@@ -87,8 +107,63 @@ jobs:
                       raise SystemExit(f'front matter inválido: {path}')
           PY
 
-      - name: Run strict corpus inventory
-        run: python scripts/content_inventory.py --strict
+      - name: Inventory prepared corpus without masking baseline defects
+        run: |
+          set +e
+          python scripts/content_inventory.py --strict > /tmp/science-prepared.json 2> /tmp/science-prepared.err
+          echo $? > /tmp/science-prepared.exit
+          set -e
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          before = json.loads(Path('/tmp/science-baseline.json').read_text())
+          after = json.loads(Path('/tmp/science-prepared.json').read_text())
+
+          def duplicate_map(payload):
+              return {
+                  name: tuple(data.get('duplicate_keys') or [])
+                  for name, data in payload.get('fronts', {}).items()
+                  if data.get('duplicate_keys')
+              }
+
+          problems = []
+          before_missing = set(before.get('missing') or [])
+          after_missing = set(after.get('missing') or [])
+          new_missing = sorted(after_missing - before_missing)
+          if new_missing:
+              problems.append(f'novos caminhos ausentes: {new_missing}')
+
+          before_invalid = set(before.get('invalid') or [])
+          after_invalid = set(after.get('invalid') or [])
+          new_invalid = sorted(after_invalid - before_invalid)
+          if new_invalid:
+              problems.append(f'novas invalidezes: {new_invalid}')
+
+          before_dup = duplicate_map(before)
+          after_dup = duplicate_map(after)
+          for front, keys in after_dup.items():
+              new_keys = sorted(set(keys) - set(before_dup.get(front, ())))
+              if new_keys:
+                  problems.append(f'novas chaves duplicadas em {front}: {new_keys[:20]}')
+
+          if int(after.get('total_records') or 0) < int(before.get('total_records') or 0):
+              problems.append(
+                  f"corpus encolheu: {before.get('total_records')} -> {after.get('total_records')}"
+              )
+
+          print(json.dumps({
+              'baseline_strict_was_clean': not bool(before_missing or before_invalid or before_dup),
+              'baseline_invalid': sorted(before_invalid),
+              'prepared_invalid': sorted(after_invalid),
+              'records_before': before.get('total_records'),
+              'records_after': after.get('total_records'),
+              'new_regressions': problems,
+          }, ensure_ascii=False, indent=2))
+
+          if problems:
+              raise SystemExit('Corpus preparado introduziu regressão estrutural: ' + '; '.join(problems))
+          PY
 
       - name: Show consolidation summary
         run: |
