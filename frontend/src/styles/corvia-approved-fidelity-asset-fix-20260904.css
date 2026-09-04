@@ -1,0 +1,177 @@
+/*
+ * Correção final de fidelidade dos assets aprovados — 04/09/2026.
+ * Importada por último. Não altera conteúdo nem fluxo funcional.
+ */
+
+/* Login: a galáxia passa a ser uma imagem estática real girando como um todo.
+   O blend screen faz o preto do poster desaparecer sobre claro e escuro, sem
+   recorte oval, polígono ou canvas de threshold. */
+.login-gateway--public .login-gateway__milky-way {
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  isolation: auto !important;
+}
+
+.login-gateway--public .login-gateway__galaxy-video { display: none !important; }
+
+.login-gateway--public .login-gateway__galaxy-image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: .98 !important;
+  mix-blend-mode: screen !important;
+  filter: brightness(1.04) saturate(1.34) contrast(1.08) drop-shadow(0 0 28px rgba(43, 131, 255, .23)) !important;
+}
+
+.login-gateway--light .login-gateway__milky-way { opacity: .88 !important; }
+.login-gateway--light .login-gateway__galaxy-image {
+  opacity: .94 !important;
+  mix-blend-mode: screen !important;
+  filter: brightness(1.22) saturate(.92) contrast(.92) drop-shadow(0 0 18px rgba(63, 125, 211, .12)) !important;
+}
+
+/* Coração: bitmap transparente extraído da arte aprovada, sem redesenho SVG. */
+.login-gateway--public .login-gateway__approved-heart {
+  position: relative !important;
+  z-index: 3 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  filter: drop-shadow(0 0 10px rgba(30, 207, 239, .48)) drop-shadow(0 0 15px rgba(245, 71, 126, .24)) !important;
+}
+
+/* Desktop aprovado: coração proporcional e barra de acesso realmente fina. */
+@media (min-width: 901px) {
+  .login-gateway--public .login-gateway__core {
+    width: 156px !important;
+    height: 170px !important;
+  }
+
+  .login-gateway--public .login-gateway__console {
+    min-height: 104px !important;
+    padding-block: 10px !important;
+  }
+
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter {
+    min-height: 40px !important;
+    height: 40px !important;
+  }
+
+  #root .login.login-gateway--public .login-gateway__field input:not([type="checkbox"]):not([type="radio"]) {
+    min-height: 38px !important;
+    height: 38px !important;
+  }
+
+  .login-gateway--public .login-gateway__join { min-height: 50px !important; }
+}
+
+/* Mobile aprovado: os cinco espaços ficam livres do texto e o card de login
+   ocupa menos altura, mantendo Novo no CorVIA / Solicite seu Acesso. */
+@media (max-width: 900px) {
+  .login-gateway--public .login-gateway__scene { min-height: 520px !important; }
+  .login-gateway--public .login-gateway__universe { inset-block-start: 146px !important; height: 350px !important; }
+  .login-gateway--public .login-gateway__milky-way { width: min(490px, 132vw) !important; top: 55% !important; }
+  .login-gateway--public .login-gateway__core { width: 122px !important; height: 136px !important; top: 56% !important; }
+
+  .login-gateway--public .login-gateway__space--ensino { top: 1% !important; }
+  .login-gateway--public .login-gateway__space--hospital,
+  .login-gateway--public .login-gateway__space--pesquisa { top: 30% !important; }
+  .login-gateway--public .login-gateway__space--consultorio,
+  .login-gateway--public .login-gateway__space--gestao { top: 71% !important; }
+
+  .login-gateway--public .login-gateway__console {
+    gap: 8px !important;
+    padding: 11px 12px !important;
+    border-radius: 16px !important;
+  }
+
+  .login-gateway--public .login-gateway__console-head {
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+  .login-gateway--public .login-gateway__console-head > span { width: 34px !important; height: 34px !important; }
+
+  .login-gateway--public .login-gateway__form { gap: 6px !important; }
+  .login-gateway--public .login-gateway__field { gap: 3px !important; }
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter { min-height: 42px !important; height: 42px !important; }
+  #root .login.login-gateway--public .login-gateway__field input:not([type="checkbox"]):not([type="radio"]) {
+    min-height: 40px !important;
+    height: 40px !important;
+  }
+  .login-gateway--public .login-gateway__join { min-height: 46px !important; padding-block: 6px !important; }
+}
+
+/* Cardiology Spaces: mesmo poster real, sem canvas/vídeo e sem retângulo preto. */
+.galaxy-theme-toggle__canvas,
+.galaxy-theme-toggle__video { display: none !important; }
+
+.galaxy-theme-toggle__image {
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: .96 !important;
+  mix-blend-mode: screen !important;
+  filter: brightness(1.06) saturate(1.18) contrast(1.06) drop-shadow(0 0 7px rgba(62, 151, 255, .24)) !important;
+  transform-origin: 50% 50% !important;
+}
+
+.spaces-home .galaxy-theme-toggle__image,
+.spaces-choice .galaxy-theme-toggle__image {
+  animation: corvia-approved-mini-galaxy-counterclockwise 120s linear infinite !important;
+}
+
+html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
+  opacity: .9 !important;
+  mix-blend-mode: screen !important;
+  filter: brightness(1.34) saturate(.78) contrast(.9) drop-shadow(0 0 6px rgba(67, 132, 211, .13)) !important;
+}
+
+@media (max-width: 900px) {
+  .spaces-home__brand-cluster .galaxy-theme-toggle__image {
+    width: 58px !important;
+    height: 38px !important;
+  }
+  .spaces-choice__brand-cluster .galaxy-theme-toggle__image {
+    width: 68px !important;
+    height: 42px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .spaces-home__brand-cluster .galaxy-theme-toggle__image { width: 50px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-gateway--public .login-gateway__milky-way,
+  .spaces-home .galaxy-theme-toggle__image,
+  .spaces-choice .galaxy-theme-toggle__image { animation: none !important; }
+}
