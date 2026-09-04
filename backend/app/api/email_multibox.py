@@ -60,7 +60,7 @@ def _linked_account(db: Session, conta: EmailAccount, account_id: int) -> EmailA
     return alvo
 
 
-@router.get("/contas")
+@router.get("/contas", operation_id="email_multibox_contas")
 def contas_da_caixa_unificada(
     db: Session = Depends(get_db),
     conta: EmailAccount = Depends(current_email_account),
@@ -88,7 +88,7 @@ def contas_da_caixa_unificada(
     return resultado
 
 
-@router.put("/conta-padrao-envio")
+@router.put("/conta-padrao-envio", operation_id="email_multibox_conta_padrao_envio")
 def definir_conta_padrao_envio(
     dados: email_api.ContaPadraoEnvioIn,
     db: Session = Depends(get_db),
@@ -105,7 +105,7 @@ def definir_conta_padrao_envio(
     return {"conta_padrao_envio": dados.conta_id}
 
 
-@router.get("/mensagens/todas")
+@router.get("/mensagens/todas", operation_id="email_multibox_mensagens_todas")
 def mensagens_todas(
     limite: int = 20,
     contas: str | None = None,

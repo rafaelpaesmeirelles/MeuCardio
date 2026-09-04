@@ -48,7 +48,8 @@ test("offers the third experience after login while login chooses only appearanc
   assert.match(login, /id: "dark"/);
   assert.doesNotMatch(login, /id: "scientific"/);
   assert.match(login, /Um universo de espaços\./);
-  assert.match(login, /Seu acesso e suas permissões não mudam/);
+  assert.match(login, /Novo no CorVIA/);
+  assert.match(login, /Solicite seu Acesso/);
 });
 
 test("keeps five scientific journeys and every scientific surface discoverable", () => {

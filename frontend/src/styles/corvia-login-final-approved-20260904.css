@@ -62,7 +62,7 @@
 .login-gateway--light .login-gateway__galaxy-image { opacity:.74 !important; filter:saturate(.88) brightness(1.22) drop-shadow(0 0 25px rgba(92,150,225,.12)) !important; }
 .login-gateway--public .login-gateway__core { top:57% !important; width:152px !important; height:170px !important; }
 .login-gateway--public .login-gateway__approved-heart { filter:drop-shadow(0 0 12px rgba(19,206,237,.46)) drop-shadow(0 0 15px rgba(242,67,130,.25)) !important; }
-.login-gateway--public .login-gateway__pulse { display:none !important; }
+.login-gateway--public .login-gateway__pulse { display:block !important; pointer-events:none !important; }
 @keyframes corvia-final-galaxy-clockwise { from{transform:translate(-50%,-50%) rotate(0)} to{transform:translate(-50%,-50%) rotate(360deg)} }
 .login-gateway--public .login-gateway__space {
   width:190px !important; min-height:58px !important; grid-template-columns:44px minmax(0,1fr) !important;
@@ -164,11 +164,11 @@
   .login-gateway--public .login-gateway__field:nth-of-type(2) { grid-row:2 !important; }
   .login-gateway--public .login-gateway__forgot { grid-column:1 !important; grid-row:3 !important; justify-self:end !important; }
   .login-gateway--public .login-gateway__enter { grid-column:1 !important; grid-row:4 !important; }
-  .login-gateway--public .login-gateway__join { min-height:66px !important; grid-template-columns:42px minmax(0,1fr) 18px !important; padding:10px 12px !important; }
+  .login-gateway--public .login-gateway__join { min-height:88px !important; grid-template-columns:42px minmax(0,1fr) 18px !important; padding:10px 12px !important; }
   .login-gateway--public .login-gateway__join>span:first-child { width:42px !important; height:42px !important; }
   .login-gateway--public .login-gateway__join strong { font-size:.74rem !important; }
   .login-gateway--public .login-gateway__join small { font-size:.82rem !important; }
-  .login-gateway--public .login-gateway__join em { display:none !important; }
+  .login-gateway--public .login-gateway__join em { display:block !important; margin-top:5px !important; font-size:.66rem !important; line-height:1.3 !important; }
   .login-gateway--public .login-gateway__footer { width:calc(100% - 28px) !important; min-height:62px !important; flex-direction:column !important; justify-content:center !important; gap:8px !important; margin-top:12px !important; padding:12px 0 18px !important; text-align:center !important; font-size:.48rem !important; line-height:1.7 !important; }
   .login-gateway--public .login-gateway__footer>div:last-child { display:none !important; }
 }
@@ -244,4 +244,29 @@
 .login-gateway--public .login-gateway__milky-way {
   transform-style: flat !important;
   animation: corvia-final-galaxy-clockwise 120s linear infinite !important;
+}
+
+/* FINAL 04/09 — indicador de segurança presente somente nas referências mobile aprovadas. */
+@media (max-width:900px) {
+  #root .login.login-gateway--public .login-gateway__topbar { position:relative !important; }
+  #root .login.login-gateway--public .login-gateway__top-actions { gap:0 !important; }
+  #root .login.login-gateway--public .login-gateway__security {
+    position:absolute !important; z-index:12 !important; top:54px !important; right:16px !important;
+    bottom:auto !important; left:auto !important; display:inline-flex !important; align-items:center !important; gap:6px !important;
+    min-height:32px !important; padding:5px 8px !important; border-radius:10px !important; white-space:nowrap !important;
+    font-size:.60rem !important; font-weight:650 !important; line-height:1 !important; letter-spacing:.01em !important;
+    background:rgba(4,20,36,.72) !important; color:#bfeefa !important; border:1px solid rgba(34,211,238,.34) !important;
+    box-shadow:none !important; backdrop-filter:blur(8px) !important;
+  }
+  #root .login.login-gateway--public .login-gateway__security svg { width:15px !important; height:15px !important; }
+  #root .login.login-gateway--public .login-gateway__security > span { font-size:.60rem !important; line-height:1 !important; }
+  #root .login.login-gateway--public .login-gateway__security > span::after { display:none !important; content:none !important; }
+  #root .login.login-gateway--light .login-gateway__security {
+    background:rgba(255,255,255,.78) !important; color:#0f8f9c !important; border-color:rgba(28,196,204,.42) !important;
+  }
+}
+
+/* Desktop congelado não exibe o selo mobile; preserva slogan + seletor exatamente como aprovado. */
+@media (min-width:901px) {
+  #root .login.login-gateway--public .login-gateway__security { display:none !important; }
 }

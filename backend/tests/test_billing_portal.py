@@ -25,7 +25,7 @@ class TestPortalEFaturasParaAssinanteSoDeEmail:
         db.add(sub)
         db.commit()
 
-        with patch("app.api.billing.stripe.billing_portal.Session.create") as criar_sessao:
+        with patch("app.api.billing.stripe.Customer.retrieve", return_value={"id": "ok"}), patch("app.api.billing.stripe.billing_portal.Session.create") as criar_sessao:
             criar_sessao.return_value = {"url": "https://billing.stripe.com/session/fake"}
             resp = client.post("/api/billing/portal", headers={"Authorization": f"Bearer {token}"})
 
@@ -44,7 +44,7 @@ class TestPortalEFaturasParaAssinanteSoDeEmail:
         ))
         db.commit()
 
-        with patch("app.api.billing.stripe.billing_portal.Session.create") as criar_sessao:
+        with patch("app.api.billing.stripe.Customer.retrieve", return_value={"id": "ok"}), patch("app.api.billing.stripe.billing_portal.Session.create") as criar_sessao:
             criar_sessao.return_value = {"url": "https://billing.stripe.com/session/fake"}
             resp = client.post("/api/billing/portal", headers={"Authorization": f"Bearer {token}"})
 
@@ -73,3 +73,47 @@ class TestPortalEFaturasParaAssinanteSoDeEmail:
 
         assert resp.status_code == 200
         assert listar.call_args.kwargs["customer"] == "cus_email_only_2"
+
+
+def test_portal_ignora_customer_obsoleto_e_usa_outro_valido(client, db, criar_usuario):
+    import stripe
+
+    user, token = criar_usuario()
+    db.add(Subscription(user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", stripe_customer_id="cus_stale"))
+    db.add(Subscription(user_id=user.id, kind=TIPO_EMAIL, status="ativo", stripe_customer_id="cus_valid"))
+    db.commit()
+
+    def retrieve(customer_id):
+        if customer_id == "cus_stale":
+            raise stripe.error.InvalidRequestError("No such customer", "customer")
+        return {"id": customer_id}
+
+    with patch("app.api.billing.stripe.Customer.retrieve", side_effect=retrieve), patch(
+        "app.api.billing.stripe.billing_portal.Session.create",
+        return_value={"url": "https://billing.stripe.com/session/fallback"},
+    ) as criar_sessao:
+        resp = client.post("/api/billing/portal", headers={"Authorization": f"Bearer {token}"})
+
+    assert resp.status_code == 200
+    assert criar_sessao.call_args.kwargs["customer"] == "cus_valid"
+
+
+def test_faturas_ignora_customer_obsoleto_sem_virar_503(client, db, criar_usuario):
+    import stripe
+
+    user, token = criar_usuario()
+    db.add(Subscription(user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", stripe_customer_id="cus_stale"))
+    db.add(Subscription(user_id=user.id, kind=TIPO_EMAIL, status="ativo", stripe_customer_id="cus_valid"))
+    db.commit()
+
+    def listar(*, customer, limit):
+        assert limit == 24
+        if customer == "cus_stale":
+            raise stripe.error.InvalidRequestError("No such customer", "customer")
+        return {"data": []}
+
+    with patch("app.api.billing.stripe.Invoice.list", side_effect=listar):
+        resp = client.get("/api/billing/faturas", headers={"Authorization": f"Bearer {token}"})
+
+    assert resp.status_code == 200
+    assert resp.json() == {"faturas": []}

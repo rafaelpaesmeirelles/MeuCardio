@@ -11,7 +11,10 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
-from app.core.security import create_access_token, current_user, hash_password, verify_password
+from app.core.security import (
+    AUTH_COOKIE_NAME, create_access_token, current_user, hash_password, oauth2_scheme,
+    usuario_por_token_app, verify_password,
+)
 from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 from app.core.validators import UFS, cpf_mascarado, cpf_valido, limpar_cpf
 from app.models.audit import AuditLog
@@ -182,6 +185,16 @@ def _perfil(db: Session, user: User) -> dict:
         "kyc_required": _kyc_required(db, user),
         "onboarding_pendente": _onboarding_pendente(db, user),
     }
+
+
+@router.get("/session-status")
+def session_status(
+    request: Request,
+    token_bearer: str | None = Depends(oauth2_scheme),
+    db: Session = Depends(get_db),
+):
+    token = token_bearer or request.cookies.get(AUTH_COOKIE_NAME)
+    return {"authenticated": usuario_por_token_app(db, token) is not None}
 
 
 @router.get("/me")

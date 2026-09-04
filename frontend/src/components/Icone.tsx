@@ -8,7 +8,7 @@ export type NomeIcone =
   | "evidencia" | "curso" | "galeria" | "favorito" | "conta" | "sair"
   | "indicadores" | "check" | "mais" | "seta" | "pin" | "rota"
   | "relogio" | "sincronizar" | "filtro" | "configuracao" | "olho" | "olho-fechado"
-  | "adicionar" | "notificacao" | "ecg" | "camera" | "sol" | "lua";
+  | "adicionar" | "notificacao" | "ecg" | "camera" | "sol" | "lua" | "cadeado" | "seguranca";
 
 const caminhos: Record<NomeIcone, ReactNode> = {
   hoje: <><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9 20v-6h6v6"/></>,
@@ -24,6 +24,8 @@ const caminhos: Record<NomeIcone, ReactNode> = {
   fechar: <path d="m6 6 12 12M18 6 6 18"/>,
   chevron: <path d="m9 7 5 5-5 5"/>,
   mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></>,
+  cadeado: <><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></>,
+  seguranca: <><path d="M12 2 20 5v6c0 5-3.3 8.6-8 11-4.7-2.4-8-6-8-11V5Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></>,
   prescricao: <><path d="M5 3h10l4 4v14H5Z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></>,
   documento: <><path d="M6 2h9l4 4v16H6Z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></>,
   triagem: <><path d="M9 4h6M12 1v6"/><path d="M5 8h14v13H5Z"/><path d="m8 15 2 2 5-5"/></>,

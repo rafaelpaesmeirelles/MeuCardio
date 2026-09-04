@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 
+import logging
 import stripe
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Request
 from sqlalchemy.exc import IntegrityError
@@ -56,6 +57,7 @@ PLANO_DO_VALOR_CENTAVOS = {v: k[0] for k, v in PRECO_CENTAVOS.items()}
 router = APIRouter(prefix="/api/billing", tags=["billing"])
 
 stripe.api_key = settings.stripe_secret_key
+log = logging.getLogger("meucardio.billing")
 
 # Tradução dos status do Stripe para o vocabulário em português usado no banco
 # e na interface. Sem isso o valor cru em inglês vaza para a tela do assinante.
@@ -605,59 +607,65 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     return {"checkout_url": session["url"]}
 
 
-def _customer_id_do_usuario(db: Session, user_id: int) -> str | None:
-    """O primeiro `stripe_customer_id` não nulo entre as assinaturas do
-    médico — plataforma, CorvIA Mail ou curso, nessa ordem.
-
-    Existe porque `abrir_portal`/`listar_faturas` olhavam só para
-    `_assinatura_meucardio`: um médico que assina SÓ o CorvIA Mail (o
-    add-on foi desenhado em 30/07/2026 para não depender da assinatura
-    principal — ver Tarefa 28) nunca teria `sub.stripe_customer_id` ali, e
-    o botão "Gerenciar assinatura" da Minha Conta devolvia 404 sempre,
-    mesmo com uma assinatura de e-mail paga e ativa. `criar_checkout_email`
-    já reaproveita o cliente Stripe da assinatura principal quando ela
-    existe, então na prática quem tem as duas continua caindo no mesmo
-    `customer_id` — o portal do Stripe lista todas as assinaturas ativas de
-    um cliente na mesma tela, então um único portal já basta para gerenciar
-    as duas."""
+def _customer_ids_do_usuario(db: Session, user_id: int) -> list[str]:
+    ids: list[str] = []
     for kind in (TIPO_MEUCARDIO, TIPO_EMAIL, TIPO_CURSO):
-        sub = (
+        rows = (
             db.query(Subscription)
             .filter(
                 Subscription.user_id == user_id, Subscription.kind == kind,
                 Subscription.stripe_customer_id.isnot(None),
             )
             .order_by(Subscription.id)
-            .first()
+            .all()
         )
-        if sub:
-            return sub.stripe_customer_id
-    return None
+        for sub in rows:
+            customer_id = (sub.stripe_customer_id or "").strip()
+            if customer_id and customer_id not in ids:
+                ids.append(customer_id)
+    return ids
+
+
+def _customer_id_do_usuario(db: Session, user_id: int) -> str | None:
+    ids = _customer_ids_do_usuario(db, user_id)
+    return ids[0] if ids else None
 
 
 @router.post("/portal")
 def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Customer Portal do Stripe: é por ele que o assinante troca o cartão,
-    baixa recibo e cancela. Diferente do Checkout, que só serve pra assinar."""
-    customer_id = _customer_id_do_usuario(db, user.id)
-    if not customer_id:
-        raise HTTPException(
-            status_code=404,
-            detail="Você ainda não tem uma assinatura para gerenciar.",
-        )
-    try:
-        session = stripe.billing_portal.Session.create(
-            customer=customer_id,
-            return_url=f"{settings.public_url}/minha-conta",
-        )
-    except stripe.error.InvalidRequestError:
-        # Caso clássico: o portal ainda não teve as configurações salvas no
-        # painel do Stripe. É erro de configuração nossa, não do assinante.
-        raise HTTPException(
-            status_code=503,
-            detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.",
-        )
-    return {"portal_url": session["url"]}
+    """Abre o Customer Portal usando o primeiro cliente Stripe ainda válido.
+
+    Cadastros antigos podem conter um customer id removido no Stripe. Isso não
+    pode impedir a conta inteira de usar outro customer id válido já associado.
+    """
+    customer_ids = _customer_ids_do_usuario(db, user.id)
+    if not customer_ids:
+        raise HTTPException(status_code=404, detail="Você ainda não tem uma assinatura para gerenciar.")
+
+    encontrou_cliente_valido = False
+    for customer_id in customer_ids:
+        try:
+            stripe.Customer.retrieve(customer_id)
+            encontrou_cliente_valido = True
+        except stripe.error.InvalidRequestError:
+            log.warning("stripe_customer_stale", extra={"user_id": user.id})
+            continue
+        except stripe.error.StripeError:
+            raise HTTPException(status_code=503, detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.")
+        try:
+            session = stripe.billing_portal.Session.create(
+                customer=customer_id, return_url=f"{settings.public_url}/minha-conta",
+            )
+            return {"portal_url": session["url"]}
+        except stripe.error.InvalidRequestError:
+            # Cliente existe: aqui o erro é de configuração do Customer Portal.
+            raise HTTPException(status_code=503, detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.")
+        except stripe.error.StripeError:
+            raise HTTPException(status_code=503, detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.")
+
+    if not encontrou_cliente_valido:
+        raise HTTPException(status_code=404, detail="Seu cadastro de cobrança precisa ser atualizado antes de abrir o portal.")
+    raise HTTPException(status_code=503, detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.")
 
 
 @router.post("/trocar-plano")
@@ -723,35 +731,48 @@ def trocar_plano(
 
 @router.get("/faturas")
 def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Histórico de cobranças. Lê direto do Stripe em vez de espelhar faturas no
-    banco: o Stripe é a fonte da verdade sobre cobrança, e espelhar criaria uma
-    segunda versão que sai de sincronia no primeiro estorno ou ajuste."""
-    customer_id = _customer_id_do_usuario(db, user.id)
-    if not customer_id:
+    """Histórico de cobranças, tolerante a customer ids antigos/removidos.
+
+    Consulta todos os clientes Stripe associados à conta, deduplica as faturas
+    e só devolve 503 quando o Stripe falha de fato — um id obsoleto isolado é
+    ignorado e não derruba a Minha Conta.
+    """
+    customer_ids = _customer_ids_do_usuario(db, user.id)
+    if not customer_ids:
         return {"faturas": []}
 
-    try:
-        faturas = stripe.Invoice.list(customer=customer_id, limit=24)
-    except stripe.error.StripeError:
-        raise HTTPException(
-            status_code=503,
-            detail="Não foi possível consultar o histórico de cobranças agora.",
-        )
+    por_id: dict[str, object] = {}
+    consultas_validas = 0
+    houve_erro_transitorio = False
+    for customer_id in customer_ids:
+        try:
+            resposta = stripe.Invoice.list(customer=customer_id, limit=24)
+            consultas_validas += 1
+            for fatura in resposta["data"]:
+                por_id[fatura["id"]] = fatura
+        except stripe.error.InvalidRequestError:
+            log.warning("stripe_customer_stale", extra={"user_id": user.id})
+            continue
+        except stripe.error.StripeError:
+            houve_erro_transitorio = True
+            continue
 
+    if consultas_validas == 0 and houve_erro_transitorio:
+        raise HTTPException(status_code=503, detail="Não foi possível consultar o histórico de cobranças agora.")
+
+    faturas = sorted(
+        por_id.values(), key=lambda item: int(_campo(item, "created") or 0), reverse=True,
+    )[:24]
     return {
         "faturas": [
             {
-                "id": f["id"],
-                "numero": _campo(f, "number"),
-                "status": _campo(f, "status"),
+                "id": f["id"], "numero": _campo(f, "number"), "status": _campo(f, "status"),
                 "total_centavos": _campo(f, "total"),
                 "moeda": (_campo(f, "currency") or "brl").upper(),
-                "criada_em": datetime.fromtimestamp(_campo(f, "created"), tz=timezone.utc)
-                if _campo(f, "created") else None,
-                "url_fatura": _campo(f, "hosted_invoice_url"),
-                "url_pdf": _campo(f, "invoice_pdf"),
+                "criada_em": datetime.fromtimestamp(_campo(f, "created"), tz=timezone.utc) if _campo(f, "created") else None,
+                "url_fatura": _campo(f, "hosted_invoice_url"), "url_pdf": _campo(f, "invoice_pdf"),
             }
-            for f in faturas["data"]
+            for f in faturas
         ]
     }
 

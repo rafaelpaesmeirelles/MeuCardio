@@ -35,11 +35,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    api
-      .get<Usuario>("/auth/me", { silencioso401: true })
-      .then(setUsuario)
-      .catch(() => setUsuario(null))
-      .finally(() => setCarregando(false));
+    let ativo = true;
+    void (async () => {
+      try {
+        const status = await api.get<{ authenticated: boolean }>("/auth/session-status");
+        const perfil = status.authenticated
+          ? await api.get<Usuario>("/auth/me", { silencioso401: true })
+          : null;
+        if (ativo) setUsuario(perfil);
+      } catch {
+        if (ativo) setUsuario(null);
+      } finally {
+        if (ativo) setCarregando(false);
+      }
+    })();
+    return () => { ativo = false; };
   }, []);
 
   async function entrar(email: string, senha: string, permanecerConectado = true) {

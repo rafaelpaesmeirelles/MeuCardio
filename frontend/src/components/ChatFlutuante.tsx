@@ -353,7 +353,7 @@ export default function ChatFlutuante() {
                   <Avatar nome={suporte.full_name} foto={suporte.photo_url} tamanho={40} />
                   <span style={{ flex: 1, minWidth: 0 }}>
                     <strong style={{ display: "block", fontSize: ".92rem", color: "var(--primaria)" }}>
-                      Fale com o Dr. Rafael
+                      Fale com {suporte.full_name}
                     </strong>
                     <span style={{ fontSize: ".8rem", color: "var(--texto-suave, #5a6b78)" }}>
                       {suporte.online ? "Online agora" : "Responde assim que puder"}
@@ -378,7 +378,7 @@ export default function ChatFlutuante() {
               {conversas.length === 0 ? (
                 <p style={{ padding: "1.25rem .9rem", color: "var(--texto-suave, #5a6b78)", fontSize: ".9rem", margin: 0 }}>
                   Nenhuma conversa ainda. Use “Procurar outro profissional” para começar, ou fale
-                  direto com o Dr.&nbsp;Rafael.
+                  direto com {suporte?.full_name ?? "o suporte CorVIA"}.
                 </p>
               ) : (
                 conversas.map((c) => (

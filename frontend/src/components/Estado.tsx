@@ -1,5 +1,13 @@
+import "../styles/estado-loading.css";
+
 export function Carregando({ texto = "Carregando…" }: { texto?: string }) {
-  return <p className="eyebrow" role="status">{texto}</p>;
+  return (
+    <div className="corvia-loading-state" role="status" aria-live="polite">
+      <img src="/corvia-mark-canonical.svg" alt="" aria-hidden="true" />
+      <span className="corvia-loading-state__orbit" aria-hidden="true" />
+      <p>{texto}</p>
+    </div>
+  );
 }
 
 export function Erro({ mensagem }: { mensagem: string }) {

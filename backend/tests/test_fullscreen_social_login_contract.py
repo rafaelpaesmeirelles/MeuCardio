@@ -82,13 +82,14 @@ def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
     assert 'data-login-theme={temaPublico}' in login
     assert 'prehome--login prehome--fullscreen' not in login
-    # A disciplina de cascata do login: a folha histórica do gateway entra por
-    # penúltima e a camada final aprovada (03/09/2026) por última — nada além
-    # dessas duas pode sobrescrever o gateway público. Fixar as DUAS posições
-    # mantém a garantia original (nada entra depois do CSS do login) agora que
-    # o desenho aprovado tem uma camada final própria.
-    assert local_styles[-2] == 'import "../styles/cardiology-spaces-login.css";'
-    assert local_styles[-1] == 'import "../styles/cardiology-spaces-login-approved-final.css";'
+    # A disciplina de cascata final congelada em 04/09/2026: as duas camadas
+    # de fidelidade e o lock visual ficam por último. Testes não podem voltar
+    # a exigir uma arte intermediária rejeitada.
+    assert local_styles[-3:] == [
+        'import "../styles/corvia-approved-fidelity-20260904.css";',
+        'import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";',
+        'import "../styles/corvia-login-final-approved-20260904.css";',
+    ]
     assert '/auth/social/providers' not in login
     assert '/auth/social/${provider}/start' not in login
     assert 'prehome-social' not in login

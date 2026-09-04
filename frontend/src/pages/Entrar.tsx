@@ -121,6 +121,10 @@ export default function Entrar() {
             </div>
             <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão.</p>
           </fieldset>
+          <div className="login-gateway__security" aria-label={temaPublico === "light" ? "Sistema seguro" : "Ambiente Protegido"}>
+            <Icone nome="seguranca" />
+            <span>{temaPublico === "light" ? "Sistema seguro" : "Ambiente Protegido"}</span>
+          </div>
 
         </div>
       </header>
@@ -167,7 +171,7 @@ export default function Entrar() {
           </label>
           <label className="login-gateway__field" htmlFor="senha">
             <span>Senha</span>
-            <div className="login-gateway__password"><Icone nome="configuracao" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
+            <div className="login-gateway__password"><Icone nome="cadeado" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
           </label>
           <Link className="login-gateway__forgot" to="/esqueci-senha">Esqueceu sua senha?</Link>
           <button className="login-gateway__enter" type="submit" disabled={enviando}>

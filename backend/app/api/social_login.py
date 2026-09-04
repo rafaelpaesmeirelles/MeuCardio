@@ -318,8 +318,7 @@ def start(provider: str) -> RedirectResponse:
     return response
 
 
-@router.api_route("/{provider}/callback", methods=["GET", "POST"])
-async def callback(
+async def _callback_impl(
     provider: str,
     request: Request,
     background_tasks: BackgroundTasks,
@@ -373,3 +372,13 @@ async def callback(
     )
     _clear_flow_cookies(response)
     return response
+
+
+@router.get("/{provider}/callback", operation_id="social_provider_callback_get")
+async def callback_get(provider: str, request: Request, background_tasks: BackgroundTasks, db: Session = Depends(get_db)) -> RedirectResponse:
+    return await _callback_impl(provider, request, background_tasks, db)
+
+
+@router.post("/{provider}/callback", operation_id="social_provider_callback_post")
+async def callback_post(provider: str, request: Request, background_tasks: BackgroundTasks, db: Session = Depends(get_db)) -> RedirectResponse:
+    return await _callback_impl(provider, request, background_tasks, db)
