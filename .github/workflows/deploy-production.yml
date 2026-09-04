@@ -108,11 +108,6 @@ jobs:
           with open(ci_run_marker, "w", encoding="utf-8") as handle:
               handle.write(f"{ci_run_id}\n")
 
-          # Cada gate concluído dispara este workflow. A fila serial pode deixar
-          # um segundo run pronto depois que o primeiro já publicou e certificou
-          # a release. Só um run anterior COMPLETO e VERDE deste próprio workflow
-          # é prova suficiente para deduplicar: /api/version isoladamente não
-          # certifica health, readiness nem o APK público.
           prior_successes = [
               run for run in runs
               if run.get("name") == "Deploy production"
@@ -127,12 +122,8 @@ jobs:
                   run_id = run.get("id")
                   if isinstance(run_id, int):
                       handle.write(f"{run_id}\n")
-          print(f"All mandatory web/Android/scientific gates succeeded for {expected_sha}; Windows is pending.")
+          print(f"All mandatory web/scientific gates succeeded for {expected_sha}.")
           PY
-          # O sucesso agregado do workflow CI nao basta: frontend-only pode
-          # pular backend, e uma suite backend pode ser reutilizada. O job abaixo
-          # certifica que a classificacao terminou e que a evidencia exigida
-          # (execucao ou reuse do mesmo SHA+suite) foi validada fail-closed.
           [[ -s "$ci_run_marker" ]] || { echo "No certified CI run was selected." >&2; exit 65; }
           ci_run="$(cat "$ci_run_marker")"
           [[ "$ci_run" =~ ^[0-9]+$ ]] || { echo "Invalid certified CI run id: $ci_run" >&2; exit 65; }
@@ -145,16 +136,13 @@ jobs:
             echo "CI run $ci_run has no successful Backend risk gate." >&2
             exit 65
           }
-          # Um workflow pode terminar verde com o job de deploy pulado (por
-          # exemplo, dispatch solicitado para SHA antigo). Confirme nos jobs do
-          # run que a publicação + certificação de artefatos realmente executou.
           while IFS= read -r prior_run; do
             [[ "$prior_run" =~ ^[0-9]+$ ]] || continue
             certified_jobs="$(gh api \
               -H "Accept: application/vnd.github+json" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "repos/${REPOSITORY}/actions/runs/${prior_run}/jobs?per_page=100" \
-              --jq '[.jobs[] | select(.name == "Deploy certified web and Android release" and .status == "completed" and .conclusion == "success")] | length')"
+              --jq '[.jobs[] | select(.name == "Deploy certified web release" and .status == "completed" and .conclusion == "success")] | length')"
             if [[ "$certified_jobs" =~ ^[1-9][0-9]*$ ]]; then
               printf '%s\n' "$prior_run" > "$prior_deploy_marker"
               break
@@ -163,13 +151,13 @@ jobs:
           if [[ -s "$prior_deploy_marker" ]]; then
             prior_run="$(cat "$prior_deploy_marker")"
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Certified deploy run $prior_run already completed for $candidate; skipping duplicate deployment."
+            echo "Certified web deploy run $prior_run already completed for $candidate; skipping duplicate deployment."
             exit 0
           fi
           echo "ready=true" >> "$GITHUB_OUTPUT"
 
   deploy:
-    name: Deploy certified web and Android release
+    name: Deploy certified web release
     needs: certify
     if: needs.certify.outputs.ready == 'true'
     runs-on: ubuntu-latest
@@ -177,10 +165,6 @@ jobs:
     environment: production
     env:
       TARGET_SHA: ${{ needs.certify.outputs.sha }}
-      # Public fingerprint of the existing production release certificate.
-      # The repository variable remains an explicit override for a controlled
-      # certificate rotation; no private signing material is stored in Git.
-      ANDROID_CERT_SHA256: ${{ vars.CORVIA_ANDROID_CERT_SHA256 || '1344fed66fce26841b5fbb6a302a27ad5cd207c1b8fb989005e9be370148ce5e' }}
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -199,37 +183,27 @@ jobs:
           : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
           : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
           : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
-          [[ "$ANDROID_CERT_SHA256" =~ ^[0-9A-Fa-f:]{64,95}$ ]] \
-            || { echo "CORVIA_ANDROID_CERT_SHA256 repository variable is missing or invalid" >&2; exit 65; }
           ssh_dir="$RUNNER_TEMP/corvia-ssh"
           install -m 0700 -d "$ssh_dir"
           printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
 
-      - name: Build and stage signed Android, then deploy certified web release
-        id: release
+      - name: Deploy certified web release
         run: |
           set -euo pipefail
           SSH_PORT="${SSH_PORT:-22}"
-          cert="$(printf '%s' "$ANDROID_CERT_SHA256" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
-          [[ "$cert" =~ ^[0-9a-f]{64}$ ]] || { echo "Invalid normalized Android certificate SHA-256" >&2; exit 65; }
-          release_log="$RUNNER_TEMP/corvia-release.log"
+          [[ "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Invalid main SHA" >&2; exit 65; }
           timeout 3000s ssh -p "$SSH_PORT" -i "$RUNNER_TEMP/corvia-ssh/deploy_key" \
             -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
             -o ServerAliveInterval=30 -o ServerAliveCountMax=10 -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$RUNNER_TEMP/corvia-ssh/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            "deploy-web-android $TARGET_SHA $cert" | tee "$release_log"
-          android_sha="$(sed -n 's/^ANDROID_SHA256=//p' "$release_log" | tail -n 1)"
-          [[ "$android_sha" =~ ^[0-9a-f]{64}$ ]] \
-            || { echo "Remote release did not return a valid Android digest" >&2; exit 65; }
-          echo "android_sha256=$android_sha" >> "$GITHUB_OUTPUT"
+            "deploy-web $TARGET_SHA"
 
-      - name: Verify exact production release and public artifacts
+      - name: Verify exact production web release
         env:
           PUBLIC_URL: https://corvia.med.br
-          EXPECTED_ANDROID_SHA256: ${{ steps.release.outputs.android_sha256 }}
         run: |
           set -euo pipefail
           cache_buster="${TARGET_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
@@ -248,13 +222,4 @@ jobs:
           PY
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health?release=$cache_buster" > /dev/null
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready?release=$cache_buster" > /dev/null
-          python3 scripts/validate_public_app_artifacts.py --base-url "$PUBLIC_URL" \
-            --artifacts android \
-            --expected-android-sha256 "$EXPECTED_ANDROID_SHA256" \
-            --cache-buster "$cache_buster"
-          windows_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
-            -H 'Cache-Control: no-cache' \
-            "$PUBLIC_URL/downloads/corvia-cardiology-spaces-windows-1.2.0.exe?release=$cache_buster")"
-          [[ "$windows_status" == "410" ]] \
-            || { echo "Windows download returned HTTP $windows_status; expected pending status 410" >&2; exit 65; }
-          echo "Production SHA, Android 1.2.0 digest and Windows-pending login confirmed."
+          echo "Production web SHA, health and readiness confirmed."
