@@ -1,0 +1,241 @@
+/*
+ * CorVIA — acabamento final aprovado do login (04/09/2026).
+ * Escopo: somente /entrar. Preserva a composição aprovada e consolida:
+ * - galáxia real com rotação horária lenta em desktop/mobile, claro/escuro;
+ * - coração central sem rotação;
+ * - caixa de login mais fina;
+ * - seletor de tema compacto e visível no mobile;
+ * - CTA "Novo no CorVIA / Solicite seu Acesso".
+ */
+
+.login-gateway--public {
+  --corvia-login-galaxy-duration: 96s;
+}
+
+/* Galáxia real: usa o asset já publicado e gira apenas o disco. */
+.login-gateway--public .login-gateway__milky-way {
+  background: url('/spaces/galaxy-loop-poster.webp') 50% 50% / cover no-repeat !important;
+  border-radius: 50% !important;
+  animation: corvia-login-real-galaxy-clockwise var(--corvia-login-galaxy-duration) linear infinite !important;
+  transform-origin: 50% 50% !important;
+  will-change: transform;
+  mask-image: radial-gradient(ellipse at center, #000 0 55%, rgba(0,0,0,.92) 68%, rgba(0,0,0,.35) 82%, transparent 94%) !important;
+}
+
+/* Desliga as camadas sintéticas antigas; o asset real passa a ser a fonte visual. */
+.login-gateway--public .login-gateway__milky-way::before,
+.login-gateway--public .login-gateway__milky-way::after,
+.login-gateway--public .login-gateway__milky-way > span {
+  display: none !important;
+}
+
+.login-gateway--dark .login-gateway__milky-way {
+  opacity: .98 !important;
+  mix-blend-mode: screen !important;
+  filter: saturate(1.16) contrast(1.08) brightness(.96) drop-shadow(0 0 28px rgba(66,116,255,.17)) !important;
+}
+
+/* No claro, o mesmo universo é convertido para fundo claro sem retângulo preto. */
+.login-gateway--light .login-gateway__milky-way {
+  opacity: .34 !important;
+  mix-blend-mode: multiply !important;
+  filter: invert(1) hue-rotate(180deg) saturate(1.04) contrast(.84) brightness(1.12) !important;
+}
+
+/* O coração fica fixo no centro enquanto a galáxia gira. */
+.login-gateway--public .login-gateway__core {
+  z-index: 8 !important;
+  animation: none !important;
+}
+
+.login-gateway--public .login-gateway__core .prehome-brand__heart {
+  opacity: 1 !important;
+  filter: saturate(1.12) brightness(1.04) drop-shadow(0 0 14px rgba(35,188,255,.28)) drop-shadow(0 0 12px rgba(255,55,129,.2)) !important;
+}
+
+.login-gateway--light .login-gateway__core .prehome-brand__heart {
+  filter: saturate(1.08) brightness(1.02) drop-shadow(0 0 12px rgba(36,135,255,.22)) drop-shadow(0 0 10px rgba(242,88,177,.18)) !important;
+}
+
+/* Desktop: preserva a barra horizontal aprovada, só mais fina. */
+@media (min-width: 901px) {
+  .login-gateway--public .login-gateway__console {
+    min-height: 60px !important;
+    padding: 6px 10px !important;
+    gap: 9px !important;
+    border-radius: 12px !important;
+  }
+
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter {
+    min-height: 38px !important;
+  }
+
+  #root .login.login-gateway--public .login-gateway__field
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+    min-height: 36px !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    min-height: 38px !important;
+    padding: 4px 5px !important;
+  }
+
+  .login-gateway--public .login-gateway__join {
+    min-height: 40px !important;
+    padding: 5px 7px !important;
+  }
+}
+
+/* Mobile aprovado: universo completo + login compacto abaixo, sem sobreposição. */
+@media (max-width: 900px) {
+  .login-gateway--public .login-gateway__scene {
+    height: 600px !important;
+    min-height: 600px !important;
+    overflow: hidden !important;
+  }
+
+  .login-gateway--public .login-gateway__universe {
+    inset: 188px 0 0 !important;
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    top: 55% !important;
+    width: min(690px, 150vw) !important;
+    aspect-ratio: 1.54 !important;
+  }
+
+  .login-gateway--public .login-gateway__core {
+    top: 56% !important;
+    width: 198px !important;
+  }
+
+  .login-gateway--public .login-gateway__space--ensino { top: 8% !important; }
+  .login-gateway--public .login-gateway__space--hospital,
+  .login-gateway--public .login-gateway__space--pesquisa { top: 32% !important; }
+  .login-gateway--public .login-gateway__space--consultorio,
+  .login-gateway--public .login-gateway__space--gestao { top: 69% !important; }
+
+  .login-gateway--public .login-gateway__console {
+    width: min(calc(100% - 20px), 560px) !important;
+    max-width: 560px !important;
+    gap: 7px !important;
+    margin: 6px auto 12px !important;
+    padding: 10px 11px !important;
+    border-radius: 14px !important;
+  }
+
+  .login-gateway--public .login-gateway__console-head {
+    grid-template-columns: 30px minmax(0,1fr) !important;
+    gap: 8px !important;
+  }
+
+  .login-gateway--public .login-gateway__console-head > span {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .login-gateway--public .login-gateway__console-head p {
+    font-size: .56rem !important;
+  }
+
+  .login-gateway--public .login-gateway__console-head h2 {
+    font-size: .98rem !important;
+  }
+
+  .login-gateway--public .login-gateway__form {
+    gap: 6px !important;
+  }
+
+  .login-gateway--public .login-gateway__field > div,
+  .login-gateway--public .login-gateway__enter {
+    min-height: 42px !important;
+  }
+
+  #root .login.login-gateway--public .login-gateway__field
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
+    min-height: 40px !important;
+  }
+
+  /* Alternância claro/escuro em formato compacto por ícones. */
+  .login-gateway--public .login-gateway__theme-choice {
+    margin-top: 1px !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice legend {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label {
+    width: 44px !important;
+    min-height: 38px !important;
+    grid-template-columns: 1fr !important;
+    padding: 4px !important;
+    border-radius: 10px !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-icon {
+    grid-column: 1 !important;
+    width: 28px !important;
+    height: 28px !important;
+    margin: auto !important;
+  }
+
+  .login-gateway--public .login-gateway__theme-choice-options label > span:nth-of-type(2),
+  .login-gateway--public .login-gateway__theme-choice-options label > i {
+    display: none !important;
+  }
+
+  .login-gateway--public .login-gateway__join {
+    min-height: 46px !important;
+    grid-template-columns: 30px minmax(0,1fr) 18px !important;
+    padding: 6px 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .login-gateway--public .login-gateway__join > span:first-child {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .login-gateway--public .login-gateway__join strong {
+    font-size: .72rem !important;
+  }
+
+  .login-gateway--public .login-gateway__join small {
+    font-size: .62rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .login-gateway--public .login-gateway__scene {
+    height: 570px !important;
+    min-height: 570px !important;
+  }
+
+  .login-gateway--public .login-gateway__milky-way {
+    width: 154vw !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-gateway--public .login-gateway__milky-way {
+    animation-duration: 220s !important;
+  }
+}
+
+@keyframes corvia-login-real-galaxy-clockwise {
+  from { transform: translate(-50%, -50%) rotate(-12deg); }
+  to   { transform: translate(-50%, -50%) rotate(348deg); }
+}
