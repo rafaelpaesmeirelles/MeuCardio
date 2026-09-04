@@ -369,8 +369,8 @@ export default function AdminGerenciarUsuario() {
         <p className="eyebrow" style={{ color: "#fb7185" }}>Zona de exclusão definitiva</p>
         <h2 style={{ marginTop: 4 }}>Excluir definitivamente do Cardiology Spaces + CorVIA Mail</h2>
         <p style={{ color: "var(--texto-secundario)" }}>
-          Esta ação é irreversível. Remove a conta local e, se houver, a caixa nativa do CorVIA Mail.
-          Contas administrativas e qualquer conta com cobrança Stripe relevante são bloqueadas.
+          Esta ação é irreversível. Remove acesso, credenciais, dados cadastrais e, se houver, a caixa nativa do CorVIA Mail.
+          Histórico sujeito a retenção fica desidentificado. Contas administrativas ou com cobrança Stripe relevante são bloqueadas.
         </p>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
           <span className={`selo ${usuario.gratuito ? "selo--sucesso" : "selo--atencao"}`}>{usuario.gratuito ? "Conta sem cobrança ativa" : "Revisar cobrança"}</span>
