@@ -1,0 +1,274 @@
+# Revisão científica dos PRs pendentes — 04/09/2026
+
+Consolidação preparatória, sem deploy. Itens aceitos foram deduplicados contra o baseline e entre os PRs,
+validados estruturalmente, varridos para placeholders e fontes rastreáveis e marcados `review_status: revisado`.
+Conflitos ou itens sem fonte suficiente permanecem fora do corpus até correção manual.
+
+## Totais
+
+- **accepted**: 3
+- **conflict**: 100
+- **duplicate**: 3471
+- **needs_manual_review**: 153
+
+## PRs com itens aceitos
+
+- #367: 1
+- #345: 1
+- #332: 1
+
+## Pendências para revisão manual
+
+- PR #798 · `casos_clinicos` · `estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto` · `casos-clinicos/metadados.json` — sem fonte rastreável
+- PR #798 · `triagem` · `distensao-abdominal-ascite-congestao-cardiaca` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #798 · `triagem` · `sopro-cardiaco-incidental` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #798 · `triagem` · `tontura-vertigem-persistente` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #798 · `trilhas` · `trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-cardiomiopatias-metabolicas-reversiveis-do-adulto` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-comunicacao-clinica-reanimacao-recusa-de-tratamento-e-decisor-substituto` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-dispositivos-interferencia-eletromagnetica-e-disfuncao-tecnica-do-implante` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-cafeina-bebidas-energeticas-e-suplementos-risco-cardiovascular-no-atleta` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-cardiologia-pediatrica-erros-inatos-do-metabolismo-e-cardiomiopatia` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #798 · `trilhas` · `trilha-hipertensao-pulmonar-pipeline-experimental-alem-das-quatro-classes` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #761 · `checklists` · `investigacao-por-imagem-e-ecg-na-cardiomiopatia-chagasica-do-rastreio-a-estratificacao-de-risco` · `checklists/metadados.json` — placeholder detectado: TODO
+- PR #761 · `doencas` · `aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos` · `doencas/fragmentos/aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `arritmia-atrial-na-circulacao-de-fontan` · `doencas/fragmentos/arritmia-atrial-na-circulacao-de-fontan.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `cardiomiopatia-por-sobrecarga-de-ferro` · `doencas/fragmentos/cardiomiopatia-por-sobrecarga-de-ferro.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `cardiomiopatia-restritiva-nao-amiloide` · `doencas/fragmentos/cardiomiopatia-restritiva-nao-amiloide.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `dissecao-aortica-tipo-b` · `doencas/fragmentos/dissecao-aortica-tipo-b.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `endocardite-de-protese-valvar` · `doencas/fragmentos/endocardite-de-protese-valvar.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `esclerose-sistemica-com-acometimento-cardiaco` · `doencas/fragmentos/esclerose-sistemica-com-acometimento-cardiaco.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade` · `doencas/fragmentos/estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `estenose-tricuspide` · `doencas/fragmentos/estenose-tricuspide.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2` · `doencas/fragmentos/fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `manejo-perioperatorio-de-dispositivo-cardiaco-implantavel` · `doencas/fragmentos/manejo-perioperatorio-de-dispositivo-cardiaco-implantavel.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `sarcoidose-cardiaca` · `doencas/fragmentos/sarcoidose-cardiaca.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `valvopatia-elegibilidade-esportiva-atleta` · `doencas/fragmentos/valvopatia-elegibilidade-esportiva-atleta.json` — slug já existe como fragmento canônico no baseline
+- PR #761 · `doencas` · `valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia` · `doencas/fragmentos/valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia.json` — slug já existe como fragmento canônico no baseline
+- PR #723 · `doencas` · `cardiomiopatia-arritmogenica` · `doencas/fragmentos/cardiomiopatia-arritmogenica.json` — slug já existe como fragmento canônico no baseline
+- PR #719 · `doencas` · `sarcoidose-cardiaca` · `doencas/fragmentos/sarcoidose-cardiaca.json` — slug já existe como fragmento canônico no baseline
+- PR #718 · `doencas` · `estenose-aortica` · `doencas/fragmentos/estenose-aortica.json` — slug já existe como fragmento canônico no baseline
+- PR #717 · `doencas` · `insuficiencia-aortica` · `doencas/fragmentos/insuficiencia-aortica.json` — slug já existe como fragmento canônico no baseline
+- PR #716 · `doencas` · `torsades-de-pointes-qt-longo-adquirido` · `doencas/fragmentos/torsades-de-pointes-qt-longo-adquirido.json` — slug já existe como fragmento canônico no baseline
+- PR #715 · `doencas` · `protese-valvar-mecanica` · `doencas/fragmentos/protese-valvar-mecanica.json` — slug já existe como fragmento canônico no baseline
+- PR #714 · `doencas` · `cteph` · `doencas/fragmentos/cteph.json` — slug já existe como fragmento canônico no baseline
+- PR #713 · `doencas` · `emergencia-hipertensiva` · `doencas/fragmentos/emergencia-hipertensiva.json` — slug já existe como fragmento canônico no baseline
+- PR #712 · `triagem` · `complicacao-local-pos-cateterismo-procedimento-vascular` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #711 · `triagem` · `suspeita-infeccao-dispositivo-cardiaco-implantavel` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #710 · `doencas` · `insuficiencia-tricuspide` · `doencas/fragmentos/insuficiencia-tricuspide.json` — slug já existe como fragmento canônico no baseline
+- PR #700 · `doencas` · `amiloidose-cardiaca-cadeia-leve` · `doencas/fragmentos/amiloidose-cardiaca-cadeia-leve.json` — slug já existe como fragmento canônico no baseline
+- PR #699 · `doencas` · `cardiotoxicidade-por-cocaina-e-estimulantes` · `doencas/fragmentos/cardiotoxicidade-por-cocaina-e-estimulantes.json` — slug já existe como fragmento canônico no baseline
+- PR #698 · `doencas` · `cardiomiopatia-de-takotsubo` · `doencas/fragmentos/cardiomiopatia-de-takotsubo.json` — slug já existe como fragmento canônico no baseline
+- PR #697 · `doencas` · `minoca-e-disseccao-espontanea-arteria-coronaria` · `doencas/fragmentos/minoca-e-disseccao-espontanea-arteria-coronaria.json` — slug já existe como fragmento canônico no baseline
+- PR #696 · `doencas` · `cardiomiopatia-chagasica` · `doencas/fragmentos/cardiomiopatia-chagasica.json` — slug já existe como fragmento canônico no baseline
+- PR #694 · `doencas` · `avaliacao-cardiovascular-pre-concepcional` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #693 · `doencas` · `polifarmacia-e-desprecricao-cardiovascular` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #692 · `doencas` · `sindrome-cardiorrenal` · `doencas/fragmentos/sindrome-cardiorrenal.json` — slug já existe como fragmento canônico no baseline
+- PR #690 · `doencas` · `apneia-do-sono-e-coracao` · `doencas/fragmentos/apneia-do-sono-e-coracao.json` — slug já existe como fragmento canônico no baseline
+- PR #689 · `doencas` · `cardiomiopatia-dilatada` · `doencas/fragmentos/cardiomiopatia-dilatada.json` — slug já existe como fragmento canônico no baseline
+- PR #688 · `doencas` · `estenose-mitral` · `doencas/fragmentos/estenose-mitral.json` — slug já existe como fragmento canônico no baseline
+- PR #686 · `doencas` · `bloqueio-atrioventricular` · `doencas/fragmentos/bloqueio-atrioventricular.json` — slug já existe como fragmento canônico no baseline
+- PR #685 · `doencas` · `insuficiencia-mitral` · `doencas/fragmentos/insuficiencia-mitral.json` — slug já existe como fragmento canônico no baseline
+- PR #684 · `doencas` · `obesidade-e-coracao` · `doencas/fragmentos/obesidade-e-coracao.json` — slug já existe como fragmento canônico no baseline
+- PR #649 · `doencas` · `avaliacao-basal-cardiooncologica` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #648 · `doencas` · `avaliacao-cardiovascular-pre-concepcional` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #599 · `doencas` · `dispositivos-cardiacos-implantaveis` · `doencas/fragmentos/pr599-dispositivos-cardiacos-implantaveis.json` — slug já existe como fragmento canônico no baseline
+- PR #597 · `doencas` · `hipertensao-resistente-e-refrataria` · `doencas/fragmentos/pr597-hipertensao-resistente-refrataria.json` — slug já existe como fragmento canônico no baseline
+- PR #596 · `doencas` · `cardiopatia-congenita-do-adulto` · `doencas/fragmentos/pr596-cardiopatia-congenita-adulto.json` — slug já existe como fragmento canônico no baseline
+- PR #594 · `doencas` · `insuficiencia-cardiaca-avancada` · `doencas/fragmentos/pr594-insuficiencia-cardiaca-avancada.json` — slug já existe como fragmento canônico no baseline
+- PR #590 · `doencas` · `choque-cardiogenico` · `doencas/fragmentos/pr590-choque-cardiogenico.json` — slug já existe como fragmento canônico no baseline
+- PR #585 · `doencas` · `canalopatias-cardiacas-hereditarias` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #581 · `doencas` · `taquicardia-supraventricular` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #580 · `doencas` · `doenca-da-aorta` · `doencas/fragmentos/pr580-doenca-da-aorta.snapshot.json` — slug já existe como fragmento canônico no baseline
+- PR #578 · `doencas` · `doenca-arterial-periferica-de-membros` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #574 · `doencas` · `tromboembolismo-venoso` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #572 · `doencas` · `diabetes-mellitus-tipo-2` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #570 · `doencas` · `dislipidemia` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #568 · `doencas` · `miocardite` · `doencas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #564 · `doencas` · `sindrome-coracao-esquerdo-hipoplasico-fetal` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #564 · `doencas` · `arritmias-na-gravidez` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #564 · `doencas` · `comunicacao-interatrial` · `doencas/metadados.json` — slug existe com conteúdo divergente
+- PR #535 · `triagem` · `colapso-subito-inconsciencia-e-respiracao-anormal` · `triagem-sintomas/metadados.json` — slug já existe como fragmento canônico no baseline
+- PR #526 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #526 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022` · `content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia` · `content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio` · `content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao` · `content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024` · `content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-cuidado-pos-parada-e-coronariografia` · `content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-hipercalemia-grave` · `content/Terapia_intensiva/fluxograma-hipercalemia-grave.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025` · `content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025` · `content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md` — slug já existe com conteúdo divergente
+- PR #526 · `documento` · `trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia` · `content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md` — slug já existe com conteúdo divergente
+- PR #525 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #525 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022` · `content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia` · `content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio` · `content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao` · `content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024` · `content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-cuidado-pos-parada-e-coronariografia` · `content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-hipercalemia-grave` · `content/Terapia_intensiva/fluxograma-hipercalemia-grave.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025` · `content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025` · `content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md` — slug já existe com conteúdo divergente
+- PR #525 · `documento` · `trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia` · `content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md` — slug já existe com conteúdo divergente
+- PR #524 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #524 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio` · `content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao` · `content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024` · `content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `fluxograma-cuidado-pos-parada-e-coronariografia` · `content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `fluxograma-hipercalemia-grave` · `content/Terapia_intensiva/fluxograma-hipercalemia-grave.md` — slug já existe com conteúdo divergente
+- PR #524 · `documento` · `trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia` · `content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md` — slug já existe com conteúdo divergente
+- PR #523 · `trilhas` · `trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `trilhas` · `trilha-febre-reumatica-evidencia-por-tras-da-pratica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `trilhas` · `trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `trilhas` · `trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `trilhas` · `trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `trilhas` · `trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica` · `trilhas/metadados.json` — sem fonte rastreável
+- PR #523 · `documento` · `fluxograma-intoxicacao-digitalica` · `content/Arritmias/fluxograma-intoxicacao-digitalica.md` — slug já existe com conteúdo divergente
+- PR #523 · `documento` · `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024` · `content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md` — slug já existe com conteúdo divergente
+- PR #523 · `documento` · `fluxograma-cuidado-pos-parada-e-coronariografia` · `content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md` — slug já existe com conteúdo divergente
+- PR #523 · `documento` · `fluxograma-hipercalemia-grave` · `content/Terapia_intensiva/fluxograma-hipercalemia-grave.md` — slug já existe com conteúdo divergente
+- PR #522 · `documento` · `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024` · `content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md` — slug já existe com conteúdo divergente
+- PR #522 · `documento` · `fluxograma-cuidado-pos-parada-e-coronariografia` · `content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md` — slug já existe com conteúdo divergente
+- PR #516 · `documento` · `fluxograma-taquicardia-de-qrs-largo-esc-2019` · `content/Arritmias/fluxograma-taquicardia-de-qrs-largo-esc-2019.md` — slug já existe com conteúdo divergente
+- PR #436 · `material_paciente` · `amiodarona-cuidados-com-interacoes-e-o-periodo-apos-parar-de-tomar` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #435 · `material_paciente` · `valvuloplastia-mitral-por-balao-o-que-esperar-do-procedimento` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #408 · `medicamentos` · `flecainida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #398 · `medicamentos` · `amiodarona-cloridrato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #398 · `medicamentos` · `bisoprolol-hemifumarato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #398 · `medicamentos` · `hidroclorotiazida` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #395 · `medicamentos` · `bisoprolol-hemifumarato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #395 · `medicamentos` · `diltiazem-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #395 · `medicamentos` · `verapamil-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #389 · `medicamentos` · `amiodarona-cloridrato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #389 · `medicamentos` · `dobutamina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #389 · `medicamentos` · `eplerenona` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #389 · `medicamentos` · `felodipino` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #387 · `medicamentos` · `benazepril-cloridrato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #387 · `medicamentos` · `olmesartana-medoxomila` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #383 · `medicamentos` · `bisoprolol-hemifumarato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #383 · `medicamentos` · `mononitrato-de-isossorbida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #383 · `medicamentos` · `olmesartana-medoxomila` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #379 · `medicamentos` · `eplerenona` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #379 · `medicamentos` · `felodipino` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #379 · `medicamentos` · `hidroclorotiazida` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #379 · `medicamentos` · `lisinopril` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #366 · `checklists` · `duracao-da-profilaxia-secundaria-antibiotica-na-febre-reumatica-por-categoria-de-risco` · `checklists/metadados.json` — sem fonte rastreável
+- PR #365 · `medicamentos` · `disopiramida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #365 · `medicamentos` · `esmolol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #365 · `medicamentos` · `flecainida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #365 · `medicamentos` · `perindopril-argininaerbumina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #361 · `medicamentos` · `idarucizumabe` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #361 · `medicamentos` · `nitroglicerina-trinitrato-de-glicerila` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #361 · `medicamentos` · `omeprazol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #361 · `medicamentos` · `paracetamol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #361 · `medicamentos` · `salbutamol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #357 · `medicamentos` · `nitroprussiato-de-sodio` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #357 · `medicamentos` · `sotalol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #353 · `medicamentos` · `candesartana-cilexetila` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #353 · `medicamentos` · `fondaparinux-sodico` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #349 · `medicamentos` · `eplerenona` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #349 · `medicamentos` · `felodipino` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #349 · `medicamentos` · `verapamil-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #349 · `medicamentos` · `dalteparina-sodica` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #348 · `checklists` · `estenose-tricuspide-reumatica-avaliacao-diagnostica-e-decisao-de-manejo-combinado` · `checklists/metadados.json` — sem fonte rastreável
+- PR #346 · `material_paciente` · `amiodarona-cuidados-e-exames-de-acompanhamento` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #346 · `material_paciente` · `diuretico-de-alca-furosemida-cuidados-no-dia-a-dia` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #345 · `checklists` · `diagnostico-de-ic-e-elegibilidade-a-farmaco-no-sus-pcdt-2024` · `checklists/metadados.json` — sem fonte rastreável
+- PR #344 · `material_paciente` · `colesterol-alto-que-vem-de-familia-o-que-e-hipercolesterolemia-familiar` · `material-paciente/metadados.json` — material ao paciente contém dose numérica; revisão manual obrigatória
+- PR #342 · `medicamentos` · `diltiazem-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #338 · `medicamentos` · `enoxaparina-sodica` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #338 · `medicamentos` · `ticagrelor` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #338 · `medicamentos` · `insulina-humana-nph` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #338 · `medicamentos` · `diclofenaco` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #333 · `medicamentos` · `sildenafila-citrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #328 · `material_paciente` · `pericardite-por-infeccao-bacteriana-uma-forma-grave-e-diferente-de-tratar` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #320 · `material_paciente` · `flutter-atrial-o-que-e-e-por-que-a-ablacao-costuma-curar` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #297 · `material_paciente` · `hipoglicemia-e-o-coracao-por-que-controlar-sem-exagerar` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #292 · `checklists` · `diagnostico-e-tratamento-da-pericardite-purulenta-bacteriana` · `checklists/metadados.json` — sem fonte rastreável
+- PR #290 · `medicamentos` · `hidroclorotiazida-cloridrato-de-amilorida` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #288 · `material_paciente` · `quando-a-pressao-alta-e-uma-emergencia` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #286 · `medicamentos` · `rosuvastatina-calcica` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #283 · `medicamentos` · `metformina-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #283 · `medicamentos` · `protamina` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #283 · `medicamentos` · `dipiridamol` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #279 · `medicamentos` · `heparina-nao-fracionada` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #276 · `checklists` · `pericardite-purulenta-bacteriana-diagnostico-e-drenagem` · `checklists/metadados.json` — sem fonte rastreável
+- PR #275 · `medicamentos` · `adenosina` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #271 · `medicamentos` · `dobutamina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #265 · `medicamentos` · `olmesartana-medoxomila` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #265 · `medicamentos` · `ramipril` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #265 · `medicamentos` · `azilsartana-medoxomila` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #262 · `medicamentos` · `milrinona` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #262 · `medicamentos` · `mononitrato-de-isossorbida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #262 · `medicamentos` · `nitroprussiato-de-sodio` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #262 · `medicamentos` · `indapamida-perindopril-argininaerbumina` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #261 · `material_paciente` · `estatina-o-remedio-para-baixar-o-colesterol-e-proteger-o-coracao` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #259 · `medicamentos` · `clonidina` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #259 · `medicamentos` · `lisinopril` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #256 · `material_paciente` · `hipoglicemia-e-o-coracao` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #255 · `material_paciente` · `via-eletrica-extra-no-coracao-o-que-e-wolff-parkinson-white` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #252 · `medicamentos` · `amiodarona-cloridrato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #252 · `medicamentos` · `diltiazem-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #252 · `medicamentos` · `indapamida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #252 · `medicamentos` · `metildopa-alfa-metildopa` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #245 · `medicamentos` · `nifedipina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #245 · `medicamentos` · `trimetazidina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #244 · `medicamentos` · `anlodipino-besilato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #244 · `medicamentos` · `clortalidona` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #244 · `medicamentos` · `verapamil-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #244 · `medicamentos` · `indapamida-perindopril` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #237 · `checklists` · `ajuste-de-dose-de-doac-apixabana-e-rivaroxabana-por-funcao-renal` · `checklists/metadados.json` — sem fonte rastreável
+- PR #234 · `checklists` · `drenagem-pericardica-na-pericardite-purulenta-bacteriana` · `checklists/metadados.json` — sem fonte rastreável
+- PR #230 · `medicamentos` · `captopril` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #230 · `medicamentos` · `enalapril-maleato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #222 · `medicamentos` · `hidroclorotiazida-cloridrato-de-amilorida` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #222 · `medicamentos` · `hidroclorotiazida-ramipril` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #222 · `medicamentos` · `anlodipino-besilato-benazepril-cloridrato` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #222 · `medicamentos` · `anlodipino-besilato-hidroclorotiazida-valsartana` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #222 · `medicamentos` · `hidroclorotiazida-propranolol` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #222 · `medicamentos` · `metformina-cloridrato-glibenclamida` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #215 · `medicamentos` · `valsartana` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #214 · `medicamentos` · `rosuvastatina-calcica` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #210 · `material_paciente` · `sinais-de-infeccao-no-marca-passo-ou-cdi-o-que-observar` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #206 · `material_paciente` · `coracao-fraco-por-causa-do-diabetes-a-cardiomiopatia-diabetica` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #206 · `material_paciente` · `hipoglicemia-e-o-risco-para-o-coracao-por-que-evitar-o-acucar-muito-baixo` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #203 · `medicamentos` · `esmolol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #203 · `medicamentos` · `fenilefrina-cloridrato` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #203 · `medicamentos` · `dipiridamol` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #195 · `medicamentos` · `perindopril-argininaerbumina` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #195 · `medicamentos` · `azilsartana-medoxomila` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #190 · `medicamentos` · `enalapril-maleato` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #190 · `medicamentos` · `mononitrato-de-isossorbida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #190 · `medicamentos` · `olmesartana-medoxomila` · `medicamentos/metadados.json` — sem fonte rastreável
+- PR #190 · `medicamentos` · `ramipril` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #186 · `medicamentos` · `indapamida-perindopril-argininaerbumina` · `medicamentos/metadados.json` — placeholder detectado: TODO
+- PR #186 · `medicamentos` · `anlodipino-besilato-perindopril-argininaerbumina` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #180 · `medicamentos` · `diclofenaco` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #180 · `medicamentos` · `salbutamol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #177 · `material_paciente` · `ansiedade-pode-parecer-problema-de-coracao` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #177 · `material_paciente` · `burnout-no-trabalho-e-o-seu-coracao` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #177 · `material_paciente` · `sindrome-do-coracao-partido-o-que-e-o-takotsubo` · `material-paciente/metadados.json` — sem fonte rastreável
+- PR #175 · `medicamentos` · `disopiramida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #175 · `medicamentos` · `flecainida` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #175 · `medicamentos` · `omeprazol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #175 · `medicamentos` · `insulina-humana-nph` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
+- PR #175 · `medicamentos` · `paracetamol` · `medicamentos/metadados.json` — slug existe com conteúdo divergente
