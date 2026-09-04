@@ -1,0 +1,8 @@
+/* Ajuste final deliberadamente mínimo do Cardiology Spaces.
+ * Não altera layout, cards, textos, paleta ou geometria da página publicada.
+ * Apenas torna o coração já existente um pouco mais perceptível no tema claro.
+ */
+html[data-corvia-theme="light"] .spaces-choice__heart,
+html[data-corvia-theme="light"] .spaces-home__heart {
+  opacity: 0.075 !important;
+}
