@@ -210,3 +210,8 @@
 @media (min-width:901px) {
   .login-gateway--public .login-gateway__space--ensino { top:17% !important; }
 }
+
+/* Último ajuste geométrico do desktop aprovado: Ensino totalmente abaixo do subtítulo. */
+@media (min-width:901px) {
+  .login-gateway--public .login-gateway__space--ensino { top:32% !important; }
+}
