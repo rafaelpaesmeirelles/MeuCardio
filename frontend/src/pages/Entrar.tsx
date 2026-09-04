@@ -10,7 +10,6 @@ import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
 import "../styles/cardiology-spaces-login.css";
 import "../styles/cardiology-spaces-login-approved-final.css";
-import "../styles/cardiology-spaces-login-motion-fidelity.css";
 
 type TemaPublico = CorviaTheme;
 
@@ -99,7 +98,6 @@ export default function Entrar() {
       </header>
 
       <section className="login-gateway__scene" aria-labelledby="login-title">
-        <p className="login-gateway__desktop-kicker" aria-hidden="true">CORVIA · CARDIOLOGY SPACES</p>
         <header className="login-gateway__hero">
           <p>CORVIA · CARDIOLOGY SPACES</p>
           <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
@@ -111,13 +109,9 @@ export default function Entrar() {
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />
             <CoracaoHolografico />
-            <svg className="login-gateway__pulse" viewBox="0 0 420 44">
-              <path className="login-gateway__pulse-baseline" d="M2 28H418" />
-              <path
-                className="login-gateway__pulse-trace"
-                pathLength="1"
-                d="M2 28H32C39 28 42 24 48 24S57 28 64 28H84L91 30L97 18L104 35L111 28H143C153 28 158 21 168 21S186 28 198 28H230C237 28 240 24 246 24S255 28 262 28H282L289 30L295 18L302 35L309 28H341C351 28 356 21 366 21S384 28 396 28H418"
-              />
+            <svg className="login-gateway__pulse" viewBox="0 0 360 48">
+              <path className="login-gateway__pulse-baseline" d="M2 29H358" />
+              <path className="login-gateway__pulse-trace" d="M2 29H29C35 29 37 23 43 23S52 29 59 29H81L88 32L96 8L105 42L113 29H137C148 29 151 16 164 16S181 29 195 29H224C230 29 232 23 238 23S247 29 254 29H275L282 32L290 8L299 42L307 29H329C340 29 343 17 358 17" />
             </svg>
           </div>
           <div className="login-gateway__spaces">
