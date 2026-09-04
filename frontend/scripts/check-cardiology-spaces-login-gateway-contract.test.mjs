@@ -7,6 +7,8 @@ const entrar = read("src/pages/Entrar.tsx");
 const styles = read("src/styles/cardiology-spaces-login.css");
 const finalStyles = read("src/styles/cardiology-spaces-login-approved-final.css");
 const approvedStyles = read("src/styles/corvia-approved-fidelity-20260904.css");
+const assetFixStyles = read("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
+const heartAsset = read("src/assets/approvedHeartData.ts");
 const publicStart = styles.indexOf("Gateway público — primeira impressão");
 const publicStyles = styles.slice(publicStart);
 
@@ -51,9 +53,9 @@ test("as duas aparências preservam o mesmo login, links e garantias", () => {
 test("claro e escuro compartilham a geometria e mudam somente a cromia", () => {
   assert.match(approvedStyles, /\.login-gateway--public\s*\{/);
   assert.match(approvedStyles, /\.login-gateway--light\s*\{/);
-  assert.match(approvedStyles, /@media \(max-width: 900px\)/);
-  assert.match(approvedStyles, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.doesNotMatch(`${entrar}\n${approvedStyles}`, /telesc[oó]pio|observat[oó]rio|montanha|planeta|lua cheia|versão 2\.0/i);
+  assert.match(assetFixStyles, /@media \(max-width: 900px\)/);
+  assert.match(assetFixStyles, /@media \(prefers-reduced-motion: reduce\)/);
+  assert.doesNotMatch(`${entrar}\n${approvedStyles}\n${assetFixStyles}`, /telesc[oó]pio|observat[oó]rio|montanha|planeta|lua cheia|versão 2\.0/i);
 });
 
 test("campos claros continuam vencendo o contrato global de formulário", () => {
@@ -65,7 +67,7 @@ test("campos claros continuam vencendo o contrato global de formulário", () => 
 test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login fino e associação", () => {
   assert.match(entrar, /Um universo de espaços\. <strong>Uma só cardiologia\.<\/strong>/);
   assert.match(entrar, /Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional\./);
-  assert.match(entrar, /corvia-approved-fidelity-20260904\.css/);
+  assert.match(entrar, /corvia-approved-fidelity-asset-fix-20260904\.css/);
 
   assert.doesNotMatch(entrar, /login-gateway__routes|login-gateway__ring/,
     "círculos e traços curvos antigos não podem voltar ao coração central");
@@ -77,18 +79,20 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
   assert.match(entrar, /className="login-gateway__join" to="\/solicitar-acesso"/);
   assert.match(entrar, /<strong>Novo no CorVIA\?<\/strong><small>Solicite seu Acesso<\/small>/);
 
-  assert.match(entrar, /className="login-gateway__galaxy-video"/);
-  assert.match(entrar, /src="\/spaces\/galaxy-loop-v2\.mp4"/);
-  assert.match(entrar, /poster="\/spaces\/galaxy-loop-poster\.webp"/);
+  assert.match(entrar, /className="login-gateway__galaxy-image"/);
+  assert.match(entrar, /src="\/spaces\/galaxy-loop-poster\.webp"/);
+  assert.doesNotMatch(entrar, /login-gateway__galaxy-video|galaxy-loop-v2\.mp4/);
   assert.match(approvedStyles, /animation:\s*corvia-approved-login-galaxy-clockwise 120s linear infinite !important/,
     "as quatro variantes precisam girar lentamente em sentido horário");
   assert.match(approvedStyles, /@keyframes corvia-approved-login-galaxy-clockwise[\s\S]*?rotate\(0deg\)[\s\S]*?rotate\(360deg\)/,
     "a rotação precisa completar exatamente 360 graus, sem vai-e-volta");
+  assert.match(assetFixStyles, /mask:\s*none !important/,
+    "a galáxia real não pode voltar a ser recortada em oval");
 
-  assert.match(entrar, /function CoracaoLoginAprovado\(\)/);
+  assert.match(entrar, /approvedHeartDataUri/);
   assert.match(entrar, /login-gateway__approved-heart/);
-  assert.doesNotMatch(entrar, /<CoracaoHolografico\s*\/>/,
-    "o login precisa usar o novo coração anatômico aprovado, não o coração anterior");
+  assert.match(heartAsset, /data:image\/webp;base64,/,
+    "o coração aprovado precisa estar incorporado como asset transparente real");
 
   assert.match(approvedStyles, /\.login-gateway--public \.login-gateway__pulse\s*\{[\s\S]*?z-index:\s*7 !important[\s\S]*?bottom:\s*16px !important/,
     "o ECG deve cruzar visualmente a ponta inferior do coração");
@@ -97,8 +101,8 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
 
   assert.match(approvedStyles, /grid-template-areas:\s*"head form join" !important/,
     "o desktop precisa usar a barra inferior horizontal fina aprovada");
-  assert.match(approvedStyles, /min-height:\s*116px !important/,
-    "a caixa de acesso desktop deve permanecer compacta");
+  assert.match(assetFixStyles, /min-height:\s*104px !important/,
+    "a caixa de acesso desktop deve permanecer fina");
 
   for (const space of ["ensino", "hospital", "pesquisa", "consultorio", "gestao"]) {
     assert.match(approvedStyles, new RegExp(`login-gateway__space--${space}`), `o espaço ${space} precisa manter posição explícita`);
