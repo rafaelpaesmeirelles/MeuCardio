@@ -5,15 +5,14 @@
  * Corrige apenas o movimento: a inclinação projetada da galáxia permanece fixa
  * e o conteúdo do disco gira no próprio plano, lentamente.
  *
- * Direção final aprovada:
- * - tema claro: sentido anti-horário;
- * - tema escuro: sentido horário.
+ * Direção final aprovada em todas as quatro telas:
+ * - tema claro desktop/mobile: sentido horário;
+ * - tema escuro desktop/mobile: sentido horário.
  */
 
 /*
- * O erro anterior vinha de girar o wrapper elíptico inteiro: a elipse mudava de
- * orientação na tela e parecia uma placa inclinada rodando. Aqui o wrapper fica
- * estável em -12deg; somente as camadas internas do disco fazem a rotação.
+ * O wrapper elíptico permanece estável em -12deg; somente as camadas internas
+ * do disco giram. Assim a galáxia não parece uma placa inclinada rodando.
  */
 .login-gateway--public .login-gateway__milky-way {
   animation: none !important;
@@ -46,16 +45,10 @@
   will-change: transform, opacity, filter;
 }
 
-/*
- * Mantém exatamente a mesma aparência e velocidade. Só inverte a primeira
- * animação (rotação do disco) no tema claro; o brilho continua no mesmo fluxo.
- */
+/* Todas as variantes giram no mesmo sentido horário aprovado. */
 .login-gateway--light .login-gateway__milky-way::before,
 .login-gateway--light .login-gateway__milky-way::after,
-.login-gateway--light .login-gateway__milky-way > span {
-  animation-direction: reverse, normal !important;
-}
-
+.login-gateway--light .login-gateway__milky-way > span,
 .login-gateway--dark .login-gateway__milky-way::before,
 .login-gateway--dark .login-gateway__milky-way::after,
 .login-gateway--dark .login-gateway__milky-way > span {
@@ -63,8 +56,8 @@
 }
 
 /*
- * transform order is deliberate: rotate() happens in the disk plane and the
- * following scaleY() projection keeps the apparent inclination fixed.
+ * A ordem do transform é deliberada: rotate() acontece no plano do disco e o
+ * scaleY() mantém fixa a projeção inclinada da galáxia.
  */
 @keyframes corvia-login-galaxy-disc-cloud-rotate {
   from { transform: scaleY(0.57) rotate(0deg); }
