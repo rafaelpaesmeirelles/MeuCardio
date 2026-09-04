@@ -47,7 +47,7 @@ test("offers the third experience after login while login chooses only appearanc
   assert.match(login, /id: "light"/);
   assert.match(login, /id: "dark"/);
   assert.doesNotMatch(login, /id: "scientific"/);
-  assert.match(login, /Toda a cardiologia conectada/);
+  assert.match(login, /Um universo de espaços\./);
   assert.match(login, /Seu acesso e suas permissões não mudam/);
 });
 
