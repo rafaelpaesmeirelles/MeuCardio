@@ -4,6 +4,7 @@ import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
 import "../styles/galaxy-theme-toggle-refinement.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
+import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 
 const SPACES_CANONICAL_MOTTO = "O Ambiente muda. O Médico Continua no Centro.";
 
