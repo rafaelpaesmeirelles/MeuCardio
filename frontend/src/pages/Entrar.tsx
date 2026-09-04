@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
+import { approvedHeartDataUri } from "../assets/approvedHeartData";
 import { useAuth } from "../lib/auth";
 import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
 import "../styles/login.css";
@@ -49,74 +50,6 @@ const ESPACOS = [
   { id: "pesquisa", nome: "Pesquisa", detalhe: "Evidência", icone: "evidencia" as const },
   { id: "gestao", nome: "Gestão", detalhe: "Estratégia", icone: "gestao" as const },
 ];
-
-function CoracaoLoginAprovado() {
-  return (
-    <svg
-      className="prehome-brand__heart login-gateway__approved-heart"
-      viewBox="0 0 260 310"
-      role="img"
-      aria-label="Coração anatômico luminoso do CorVIA"
-    >
-      <defs>
-        <linearGradient id="approved-heart-shell" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#0dd9ee" />
-          <stop offset=".42" stopColor="#176dff" />
-          <stop offset=".72" stopColor="#7348f4" />
-          <stop offset="1" stopColor="#ff4c86" />
-        </linearGradient>
-        <linearGradient id="approved-heart-red" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#ff8ca8" />
-          <stop offset=".45" stopColor="#ff4e76" />
-          <stop offset="1" stopColor="#ff2758" />
-        </linearGradient>
-        <linearGradient id="approved-heart-blue" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#6af5ff" />
-          <stop offset=".45" stopColor="#1ba2ff" />
-          <stop offset="1" stopColor="#365cff" />
-        </linearGradient>
-        <radialGradient id="approved-heart-fill" cx="48%" cy="42%" r="66%">
-          <stop offset="0" stopColor="#0a2448" stopOpacity=".98" />
-          <stop offset=".58" stopColor="#051428" stopOpacity=".98" />
-          <stop offset="1" stopColor="#020912" stopOpacity=".98" />
-        </radialGradient>
-        <filter id="approved-heart-glow" x="-80%" y="-80%" width="260%" height="260%">
-          <feGaussianBlur stdDeviation="3.2" result="blur" />
-          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-        </filter>
-      </defs>
-
-      <g filter="url(#approved-heart-glow)">
-        <path d="M103 92C88 66 89 39 104 20c10-12 26-15 37-7 12 9 11 25 4 39-8 15-12 29-8 45" fill="none" stroke="url(#approved-heart-blue)" strokeWidth="12" strokeLinecap="round" />
-        <path d="M142 88c2-27 12-54 31-70 14-12 32-10 40 3 9 14 0 29-13 40-15 12-24 26-27 44" fill="none" stroke="url(#approved-heart-red)" strokeWidth="13" strokeLinecap="round" />
-        <path d="M166 100c13-25 29-40 47-43 15-2 28 7 28 20 0 14-14 21-27 26-11 4-20 12-26 22" fill="none" stroke="#9e62ff" strokeWidth="10" strokeLinecap="round" />
-        <path d="M87 104c-20-17-42-21-57-11-14 9-16 25-7 36 10 11 25 6 38 4 13-2 25 1 36 10" fill="none" stroke="#25dce9" strokeWidth="9" strokeLinecap="round" />
-      </g>
-
-      <path d="M116 88c-31-15-68-3-85 26-18 30-11 67 7 95 15 25 36 40 52 59 12 14 20 31 26 46 3 7 12 8 16 2 14-20 32-38 48-57 22-27 39-58 43-92 3-33-11-65-40-79-21-10-46-7-67 0Z" fill="url(#approved-heart-fill)" stroke="url(#approved-heart-shell)" strokeWidth="4" filter="url(#approved-heart-glow)" />
-
-      <path d="M120 101c-14 18-22 39-23 62-1 42 25 77 31 118 6-30 3-63 16-89 12-23 33-37 57-47-12-29-36-50-65-52-6 0-11 3-16 8Z" fill="rgba(255,70,105,.08)" stroke="#ff5478" strokeWidth="1.5" />
-      <path d="M115 103c-29-9-56 3-68 27-11 22-4 48 10 68 15 21 35 36 47 58-3-30-10-60-5-89 4-26 12-45 16-64Z" fill="rgba(32,157,255,.07)" stroke="#2ed9ea" strokeWidth="1.5" />
-
-      <g fill="none" strokeLinecap="round" filter="url(#approved-heart-glow)">
-        <path d="M119 111c-8 27-7 54 2 80 10 30 9 62 6 94" stroke="#ff4f74" strokeWidth="3.5" />
-        <path d="M114 114c-16 18-24 39-25 63-1 29 12 57 18 85" stroke="#36dfea" strokeWidth="3" />
-        <path d="M121 132c19 4 36 15 48 31 12 18 19 40 18 63" stroke="#ff567b" strokeWidth="2.6" />
-        <path d="M112 140c-20 3-37 14-47 30-9 15-13 33-11 51" stroke="#41e5f1" strokeWidth="2.4" />
-        <path d="M131 171c20 8 34 23 42 42M101 180c-18 7-30 19-38 35M138 198c15 7 25 18 31 32M100 210c-14 6-24 16-30 27M133 229c13 8 20 18 25 28" stroke="#82efff" strokeWidth="1.55" opacity=".72" />
-        <path d="M143 125c7 16 7 32 2 48" stroke="#ff6683" strokeWidth="2.8" />
-      </g>
-
-      <g filter="url(#approved-heart-glow)">
-        <circle cx="97" cy="144" r="3.2" fill="#56efff" />
-        <circle cx="145" cy="158" r="3.2" fill="#ff5b7e" />
-        <circle cx="126" cy="201" r="3" fill="#a56fff" />
-        <circle cx="90" cy="214" r="2.4" fill="#58e9f7" />
-        <circle cx="161" cy="216" r="2.4" fill="#ff5275" />
-      </g>
-    </svg>
-  );
-}
 
 export default function Entrar() {
   const { entrar } = useAuth();
@@ -184,9 +117,7 @@ export default function Entrar() {
             <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão.</p>
           </fieldset>
 
-          <div className="login-gateway__security">
-            <span><i /> Protegido</span>
-          </div>
+          <div className="login-gateway__security"><span><i /> Protegido</span></div>
         </div>
       </header>
 
@@ -199,23 +130,17 @@ export default function Entrar() {
 
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
-            <video
-              className="login-gateway__galaxy-video"
-              src="/spaces/galaxy-loop-v2.mp4"
-              poster="/spaces/galaxy-loop-poster.webp"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              tabIndex={-1}
-              controls={false}
-              disablePictureInPicture
+            <img
+              className="login-gateway__galaxy-image"
+              src="/spaces/galaxy-loop-poster.webp"
+              alt=""
+              aria-hidden="true"
+              draggable={false}
             />
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />
-            <CoracaoLoginAprovado />
+            <img className="login-gateway__approved-heart" src={approvedHeartDataUri} alt="" aria-hidden="true" draggable={false} />
             <svg className="login-gateway__pulse" viewBox="0 0 360 48">
               <path className="login-gateway__pulse-baseline" d="M2 29H358" />
               <path className="login-gateway__pulse-trace" d="M2 29H29C35 29 37 23 43 23S52 29 59 29H81L88 32L96 8L105 42L113 29H137C148 29 151 16 164 16S181 29 195 29H224C230 29 232 23 238 23S247 29 254 29H275L282 32L290 8L299 42L307 29H329C340 29 343 17 358 17" />
