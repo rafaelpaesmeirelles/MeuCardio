@@ -3,7 +3,11 @@
  *
  * NÃO altera layout, escala, posições, cores, coração, cards, ECG ou composição.
  * Corrige apenas o movimento: a inclinação projetada da galáxia permanece fixa
- * e o conteúdo do disco gira no próprio plano, lentamente, em sentido horário.
+ * e o conteúdo do disco gira no próprio plano, lentamente.
+ *
+ * Direção final aprovada:
+ * - tema claro: sentido anti-horário;
+ * - tema escuro: sentido horário.
  */
 
 /*
@@ -40,6 +44,22 @@
     corvia-login-galaxy-disc-inner-rotate 120s linear infinite,
     corvia-login-galaxy-inner-glow 16.4s cubic-bezier(0.45, 0, 0.55, 1) -7.2s infinite !important;
   will-change: transform, opacity, filter;
+}
+
+/*
+ * Mantém exatamente a mesma aparência e velocidade. Só inverte a primeira
+ * animação (rotação do disco) no tema claro; o brilho continua no mesmo fluxo.
+ */
+.login-gateway--light .login-gateway__milky-way::before,
+.login-gateway--light .login-gateway__milky-way::after,
+.login-gateway--light .login-gateway__milky-way > span {
+  animation-direction: reverse, normal !important;
+}
+
+.login-gateway--dark .login-gateway__milky-way::before,
+.login-gateway--dark .login-gateway__milky-way::after,
+.login-gateway--dark .login-gateway__milky-way > span {
+  animation-direction: normal, normal !important;
 }
 
 /*
