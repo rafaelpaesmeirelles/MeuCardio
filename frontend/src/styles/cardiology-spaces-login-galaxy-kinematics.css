@@ -1,0 +1,106 @@
+/*
+ * CorVIA — cinemática realista da galáxia do login.
+ *
+ * NÃO altera layout, escala, posições, cores, coração, cards, ECG ou composição.
+ * Corrige apenas o movimento: a inclinação projetada da galáxia permanece fixa
+ * e o conteúdo do disco gira no próprio plano, lentamente, em sentido horário.
+ */
+
+/*
+ * O erro anterior vinha de girar o wrapper elíptico inteiro: a elipse mudava de
+ * orientação na tela e parecia uma placa inclinada rodando. Aqui o wrapper fica
+ * estável em -12deg; somente as camadas internas do disco fazem a rotação.
+ */
+.login-gateway--public .login-gateway__milky-way {
+  animation: none !important;
+  transform: translate(-50%, -50%) rotate(-12deg) !important;
+  transform-origin: 50% 50%;
+  will-change: auto;
+}
+
+.login-gateway--public .login-gateway__milky-way::before {
+  transform-origin: 50% 50%;
+  animation:
+    corvia-login-galaxy-disc-cloud-rotate 120s linear infinite,
+    corvia-login-galaxy-cloud-glow 13.7s cubic-bezier(0.42, 0, 0.58, 1) -4.1s infinite !important;
+  will-change: transform, opacity, filter;
+}
+
+.login-gateway--public .login-gateway__milky-way::after {
+  transform-origin: 50% 50%;
+  animation:
+    corvia-login-galaxy-disc-stars-rotate 120s linear infinite,
+    corvia-login-galaxy-stars-glow 9.3s cubic-bezier(0.37, 0, 0.63, 1) -2.6s infinite !important;
+  will-change: transform, opacity, filter;
+}
+
+.login-gateway--public .login-gateway__milky-way > span {
+  transform-origin: 50% 50%;
+  animation:
+    corvia-login-galaxy-disc-inner-rotate 120s linear infinite,
+    corvia-login-galaxy-inner-glow 16.4s cubic-bezier(0.45, 0, 0.55, 1) -7.2s infinite !important;
+  will-change: transform, opacity, filter;
+}
+
+/*
+ * transform order is deliberate: rotate() happens in the disk plane and the
+ * following scaleY() projection keeps the apparent inclination fixed.
+ */
+@keyframes corvia-login-galaxy-disc-cloud-rotate {
+  from { transform: scaleY(0.57) rotate(0deg); }
+  to   { transform: scaleY(0.57) rotate(360deg); }
+}
+
+@keyframes corvia-login-galaxy-disc-stars-rotate {
+  from { transform: scaleY(0.58) rotate(3deg); }
+  to   { transform: scaleY(0.58) rotate(363deg); }
+}
+
+@keyframes corvia-login-galaxy-disc-inner-rotate {
+  from { transform: scaleY(0.54) rotate(-5deg); }
+  to   { transform: scaleY(0.54) rotate(355deg); }
+}
+
+/* Brilho difuso e assíncrono, sem pulsação mecânica. */
+@keyframes corvia-login-galaxy-cloud-glow {
+  0%, 100% { opacity: 0.80; filter: blur(7px) brightness(0.98) saturate(1); }
+  19%      { opacity: 0.86; filter: blur(7.3px) brightness(1.03) saturate(1.02); }
+  43%      { opacity: 0.82; filter: blur(6.9px) brightness(1) saturate(1.01); }
+  68%      { opacity: 0.89; filter: blur(7.5px) brightness(1.05) saturate(1.03); }
+  84%      { opacity: 0.83; filter: blur(7.1px) brightness(0.99) saturate(1); }
+}
+
+@keyframes corvia-login-galaxy-stars-glow {
+  0%, 100% { opacity: 0.90; filter: drop-shadow(0 0 3px color-mix(in srgb, var(--login-galaxy-blue) 58%, transparent)) brightness(0.98); }
+  23%      { opacity: 0.97; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--login-galaxy-cyan) 60%, transparent)) brightness(1.06); }
+  49%      { opacity: 0.92; filter: drop-shadow(0 0 3px color-mix(in srgb, var(--login-galaxy-violet) 54%, transparent)) brightness(1.01); }
+  74%      { opacity: 0.98; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--login-galaxy-pink) 46%, transparent)) brightness(1.05); }
+  88%      { opacity: 0.93; filter: drop-shadow(0 0 4px color-mix(in srgb, var(--login-galaxy-blue) 54%, transparent)) brightness(1); }
+}
+
+@keyframes corvia-login-galaxy-inner-glow {
+  0%, 100% { opacity: 0.70; filter: blur(1.1px) brightness(0.97); }
+  27%      { opacity: 0.77; filter: blur(1px) brightness(1.04); }
+  54%      { opacity: 0.72; filter: blur(1.2px) brightness(1); }
+  79%      { opacity: 0.80; filter: blur(0.95px) brightness(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-gateway--public .login-gateway__milky-way::before,
+  .login-gateway--public .login-gateway__milky-way::after,
+  .login-gateway--public .login-gateway__milky-way > span {
+    animation: none !important;
+  }
+
+  .login-gateway--public .login-gateway__milky-way::before {
+    transform: scaleY(0.57) rotate(0deg);
+  }
+
+  .login-gateway--public .login-gateway__milky-way::after {
+    transform: scaleY(0.58) rotate(3deg);
+  }
+
+  .login-gateway--public .login-gateway__milky-way > span {
+    transform: scaleY(0.54) rotate(-5deg);
+  }
+}
