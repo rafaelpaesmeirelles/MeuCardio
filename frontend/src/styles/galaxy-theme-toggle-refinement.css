@@ -2,7 +2,7 @@
  *
  * A página e sua geometria permanecem intactas. Este refinamento atua apenas
  * no GalaxyThemeToggle compartilhado entre a escolha de experiência e os
- * ambientes internos: mesmo asset em loop, maior, sem fundo preto aparente,
+ * ambientes internos: mesmo asset em loop, sem fundo preto aparente,
  * azul mais sóbrio e brilhos estelares discretos.
  */
 .galaxy-theme-toggle,
@@ -18,6 +18,14 @@
   isolation: isolate;
 }
 
+/* Na tela de escolha, o universo fica um pouco menor, como aprovado. */
+.spaces-choice .galaxy-theme-toggle,
+.spaces-choice .galaxy-theme-toggle:hover,
+.spaces-choice .galaxy-theme-toggle:active {
+  width: 158px !important;
+  height: 86px !important;
+}
+
 .galaxy-theme-toggle__canvas {
   position: relative;
   z-index: 1;
@@ -30,7 +38,13 @@
   filter: brightness(0.9) saturate(0.92) contrast(1.08) drop-shadow(0 0 8px rgba(57, 126, 221, 0.17));
   opacity: 0.96;
   transform: translateZ(0);
+  transform-origin: 50% 50%;
   transition: filter 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.spaces-choice .galaxy-theme-toggle__canvas {
+  width: 150px;
+  height: 79px;
 }
 
 html[data-corvia-theme="light"] .galaxy-theme-toggle__canvas {
@@ -46,6 +60,33 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas {
 .galaxy-theme-toggle:focus-visible .galaxy-theme-toggle__canvas {
   filter: brightness(0.98) saturate(1) contrast(1.08) drop-shadow(0 0 13px rgba(78, 164, 255, 0.26));
   opacity: 1;
+}
+
+/* Direção aprovada:
+ * - escolha escura: horário;
+ * - escolha clara: anti-horário;
+ * - ambientes internos: anti-horário nos dois temas.
+ */
+.spaces-choice .galaxy-theme-toggle__canvas {
+  animation: corvia-mini-universe-spin-clockwise 120s linear infinite;
+}
+
+html[data-corvia-theme="light"] .spaces-choice .galaxy-theme-toggle__canvas {
+  animation-name: corvia-mini-universe-spin-counterclockwise;
+}
+
+.spaces-home .galaxy-theme-toggle__canvas {
+  animation: corvia-mini-universe-spin-counterclockwise 120s linear infinite;
+}
+
+@keyframes corvia-mini-universe-spin-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes corvia-mini-universe-spin-counterclockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
 /* O H.264 original continua sendo a fonte do loop, mas fica fora da camada
@@ -139,9 +180,21 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas {
     height: 70px !important;
   }
 
+  .spaces-choice .galaxy-theme-toggle,
+  .spaces-choice .galaxy-theme-toggle:hover,
+  .spaces-choice .galaxy-theme-toggle:active {
+    width: 116px !important;
+    height: 64px !important;
+  }
+
   .galaxy-theme-toggle__canvas {
     width: 118px;
     height: 62px;
+  }
+
+  .spaces-choice .galaxy-theme-toggle__canvas {
+    width: 108px;
+    height: 57px;
   }
 
   .spaces-home__topbar > .spaces-user,
@@ -180,9 +233,21 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas {
     height: 62px !important;
   }
 
+  .spaces-choice .galaxy-theme-toggle,
+  .spaces-choice .galaxy-theme-toggle:hover,
+  .spaces-choice .galaxy-theme-toggle:active {
+    width: 104px !important;
+    height: 58px !important;
+  }
+
   .galaxy-theme-toggle__canvas {
     width: 104px;
     height: 55px;
+  }
+
+  .spaces-choice .galaxy-theme-toggle__canvas {
+    width: 96px;
+    height: 51px;
   }
 
   .spaces-home__topbar > .spaces-user,
@@ -202,7 +267,8 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas {
 
 @media (prefers-reduced-motion: reduce) {
   .galaxy-theme-toggle::before,
-  .galaxy-theme-toggle::after {
+  .galaxy-theme-toggle::after,
+  .galaxy-theme-toggle__canvas {
     animation: none !important;
   }
 
