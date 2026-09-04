@@ -270,3 +270,9 @@
 @media (min-width:901px) {
   #root .login.login-gateway--public .login-gateway__security { display:none !important; }
 }
+/* HOTFIX 04/09 — ECG centralizado exatamente no eixo do coração aprovado. */
+#root .login.login-gateway--public .login-gateway__pulse {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+}
