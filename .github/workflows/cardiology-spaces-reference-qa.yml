@@ -294,7 +294,24 @@ jobs:
             if (!m.rail || m.rail.width < 82 || m.rail.width > 125 || m.rail.x > 150) failures.push(`${mode}: rail fora da geometria aprovada ${JSON.stringify(m.rail)}`);
             if (!m.day || m.day.width < 160 || m.day.width > 225 || m.day.right < 1534) failures.push(`${mode}: painel do dia fora da coluna direita ${JSON.stringify(m.day)}`);
             if (m.rail && m.day && (Math.abs(m.rail.y - m.day.y) > 2 || Math.abs(m.rail.bottom - m.day.bottom) > 2)) failures.push(`${mode}: painéis laterais perderam a simetria aprovada ${JSON.stringify({ rail:m.rail, day:m.day })}`);
-            if (m.refs && m.day && Math.abs(m.refs.bottom - m.day.bottom) > 2) failures.push(`${mode}: painéis laterais não terminam com a terceira prancha ${JSON.stringify({ refs:m.refs, day:m.day })}`);
+            // Referência atualizada em 03/09/2026 (PR #810, aprovado: remoção do
+            // cartão "Dr. ... Meu espaço/Minha jornada ativa" e da última linha do
+            // grid de `.spaces-workspace`, que ele reservava — vira 0 !important em
+            // cardiology-spaces-pending-fixes.css). Medido ao vivo, antes/depois do
+            // PR (docker compose + build real + Playwright): `day`/`rail` NÃO mudam
+            // de posição — mas não por terem altura fixa (achado de revisão
+            // adversarial: em >=901px elas são `height:auto` + `margin-bottom:
+            // var(--spaces-side-end)`, definido só pelo grid EXTERNO `.spaces-home`,
+            // que não depende de nada dentro de `.spaces-workspace`). `refs` (a
+            // terceira prancha, dentro de `.spaces-layers`, numa linha `fr` do
+            // grid interno) é quem CRESCE para absorver o espaço que a linha zerada
+            // liberou, terminando exatamente onde `.spaces-dock` começa — `dock.y`
+            // também vem só do grid externo, logo já estava na mesma posição antes
+            // e depois do PR. É arquitetural (vale nos 7 viewports da matriz
+            // responsiva, confirmado por revisão adversarial), não coincidência de
+            // um viewport específico. A invariante real que importa é não sobrepor
+            // o dock, não mais casar com `day`.
+            if (m.refs && m.dock && Math.abs(m.refs.bottom - m.dock.y) > 2) failures.push(`${mode}: terceira prancha não termina exatamente onde o dock começa ${JSON.stringify({ refs:m.refs, dock:m.dock })}`);
             if (!m.now || m.now.width < 760) failures.push(`${mode}: camada AGORA estreita ${JSON.stringify(m.now)}`);
             const expectedDockBottom = m.viewport.height - 77;
             if (!m.dock || m.dock.width < 1450 || Math.abs(m.dock.bottom - expectedDockBottom) > 4) failures.push(`${mode}: dock fora da base proporcional aprovada (esperado ${expectedDockBottom}) ${JSON.stringify(m.dock)}`);
@@ -369,11 +386,24 @@ jobs:
             } else {
                 if (compact.day.x < compact.workspace.right - 1) failures.push(`${label}: Meu dia não ocupa a lateral direita ${JSON.stringify(compact.day)}`);
                 if (Math.abs(compact.rail.y - compact.day.y) > 1.5) failures.push(`${label}: laterais começam em alturas diferentes ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
-                if (Math.abs(compact.rail.bottom - compact.day.bottom) > 1.5 || Math.abs(compact.day.bottom - compact.refs.bottom) > 1.5) failures.push(`${label}: laterais não terminam com a terceira prancha ${JSON.stringify({ rail:compact.rail, day:compact.day, refs:compact.refs })}`);
+                if (Math.abs(compact.rail.bottom - compact.day.bottom) > 1.5) failures.push(`${label}: laterais perderam a simetria aprovada ${JSON.stringify({ rail:compact.rail, day:compact.day })}`);
+                // Mesma referência atualizada da checagem desktop (ver certify(), e
+                // o comentário lá com o mecanismo exato confirmado por revisão
+                // adversarial) — desde o PR #810 (aprovado), a terceira prancha
+                // cresce para preencher o espaço que o cartão do médico ocupava e
+                // termina exatamente onde o dock começa; `day`/`rail` não
+                // acompanham esse crescimento porque sua posição vem do grid
+                // EXTERNO (`.spaces-home`), não do grid interno que mudou.
+                if (compact.dock && Math.abs(compact.refs.bottom - compact.dock.y) > 1.5) failures.push(`${label}: terceira prancha não termina exatamente onde o dock começa ${JSON.stringify({ refs:compact.refs, dock:compact.dock })}`);
             }
               if (!compact.search || !compact.heading || compact.search.bottom > compact.heading.y + 1) failures.push(`${label}: busca colide com a pergunta ${JSON.stringify({ search:compact.search, heading:compact.heading })}`);
               if (!/^Onde .+ vai trabalhar agora\?$/.test(compact.headingText)) failures.push(`${label}: pergunta profissional inválida ${compact.headingText}`);
-              if (!compact.doctor || compact.refs.bottom > compact.doctor.y + 1 || compact.doctor.bottom > compact.dock.y + 1) failures.push(`${label}: pranchas/status/dock colidem ${JSON.stringify({ refs:compact.refs, doctor:compact.doctor, dock:compact.dock })}`);
+              // Checagem antiga (`compact.doctor`) ficou obsoleta com a remoção
+              // aprovada do cartão "Dr. ... Meu espaço/Minha jornada ativa" (PR
+              // #810) — `.spaces-doctor` está sempre oculto agora, então
+              // `compact.doctor` é sempre um retângulo zerado; a checagem real que
+              // importa (a prancha de referências não invade o dock) já está
+              // coberta acima, comparando refs.bottom com dock.y diretamente.
               if (!compact.dock || !compact.motto || compact.motto.y < compact.dock.bottom - 1 || compact.motto.bottom > compact.viewport.height + 1) failures.push(`${label}: dock e frase inferior colidem ${JSON.stringify({ dock:compact.dock, motto:compact.motto })}`);
               if (compact.workspaceScroll && (compact.workspaceScroll.width > compact.workspaceScroll.clientWidth + 2 || compact.workspaceScroll.height > compact.workspaceScroll.clientHeight + 2)) failures.push(`${label}: workspace transborda ${JSON.stringify(compact.workspaceScroll)}`);
               for (let index=1; index<compact.doors.length; index+=1) {

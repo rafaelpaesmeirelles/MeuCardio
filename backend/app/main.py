@@ -5,7 +5,7 @@ from app.api import (
     account_access_admin, account_sync, admin, admin_user_delete as _admin_user_delete, admin_user_management, ai, appointments, assinatura, auth, avaliacao_preoperatoria, browser_session,
     calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, email_multibox, email_session, evidence,
-    favorites, gallery, guideline_updates, health, kyc, lab_tests, library, mail360_status,
+    favorites, gallery, guideline_updates, health, identity_profile, kyc, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
     service_orders, sessions, social_login, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, exportacao_universal, emergencia, receituario, prescricao_especial, clinical_cases, agenda_integrada, agenda_clinica,
@@ -85,7 +85,7 @@ ADMIN_USER_DELETE_ROUTER = getattr(_admin_user_delete, "router")
 PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER = getattr(_patient_multimodal_delete_guard, "router")
 
 ROUTERS_LIVRES = (
-    health.router, auth.router, browser_session.router, social_login.router, password_reset.router,
+    health.router, auth.router, identity_profile.router, browser_session.router, social_login.router, password_reset.router,
     sessions.router, billing.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
     # acrescentar a notificação transacional sem quebrar o frontend existente.

@@ -24,15 +24,21 @@ function normalizarMarcador(valor?: string | null): string {
 }
 
 function artigoDoTratamento(usuario?: FonteIdentidadeClinica | null): "a" | "o" | "" {
-  const tratamento = normalizarMarcador(usuario?.professional_title);
-  if (!tratamento) return "";
-
-  if (["sra", "dra", "profa", "profa dra", "ma"].includes(tratamento)) return "a";
-  if (["sr", "dr", "prof", "prof dr", "me"].includes(tratamento)) return "o";
-
+  // Regra canônica: quando há sexo cadastrado, ELE decide o artigo. O título
+  // escolhido continua exatamente como o assinante cadastrou e nunca é usado
+  // para sobrescrever o sexo. Isto impede exibir "o/a" e também evita inferir
+  // sexo pelo primeiro nome.
   const marcador = normalizarMarcador(usuario?.gender || usuario?.genero || usuario?.sex || usuario?.sexo);
   if (["f", "feminino", "feminina", "female", "mulher"].includes(marcador)) return "a";
   if (["m", "masculino", "masculina", "male", "homem"].includes(marcador)) return "o";
+
+  // Compatibilidade transitória para contas legadas ainda sem sexo salvo:
+  // títulos inequivocamente flexionados continuam produzindo uma frase
+  // gramatical até o titular escolher o sexo em Minha Conta.
+  const tratamento = normalizarMarcador(usuario?.professional_title);
+  if (!tratamento) return "";
+  if (["sra", "dra", "profa", "profa dra", "ma"].includes(tratamento)) return "a";
+  if (["sr", "dr", "prof", "prof dr", "me"].includes(tratamento)) return "o";
   return "";
 }
 

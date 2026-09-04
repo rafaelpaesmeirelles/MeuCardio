@@ -304,42 +304,96 @@ test("os portais claros usam ambientes com luz natural sem alterar as cenas escu
     "a luz natural deve vir do asset, não de um clareamento CSS global");
 });
 
-test("a assinatura espacial realista fica abaixo da marca e fora do centro clínico", () => {
+test("o GalaxyThemeToggle (vídeo em loop) fica abaixo da marca, nos dois temas e nas duas telas", () => {
+  // Substitui o contrato anterior, escrito para a astrofotografia estática
+  // (corvia-galaxy-cameo.webp) — fechamento do PR #811, 03/09/2026: o
+  // asset antigo ficou deliberadamente obsoleto, a representação virou
+  // vídeo em loop contínuo, mas o propósito do gate é o mesmo — proteger o
+  // desenho aprovado (footprint, tema, decoratividade).
+  const toggle = readRequired("src/components/GalaxyThemeToggle.tsx");
   const home = readRequired("src/pages/CardiologySpacesHome.tsx");
   const homeStyles = readRequired("src/styles/cardiology-spaces-home.css");
   const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
-  const cameo = "public/spaces/corvia-galaxy-cameo.webp";
-  const cameoBytes = readFileSync(sourceUrl(cameo));
+  const video = "public/spaces/galaxy-loop-v2.mp4";
+  const poster = "public/spaces/galaxy-loop-poster.webp";
 
-  assert.ok(existsSync(fileURLToPath(sourceUrl(cameo))), "a astrofotografia compacta precisa existir");
-  assert.equal(cameoBytes.toString("ascii", 0, 4), "RIFF", "o cameo precisa ser um WebP válido");
-  assert.ok(cameoBytes.includes(Buffer.from("ALPH")), "o cameo precisa conter transparência real");
-  assert.match(home, /\buseCorviaTheme\s*\(\s*\)/);
-  assert.match(home, /className="spaces-theme-cameo"[\s\S]{0,220}onClick=\{toggleTheme\}/,
-    "a astrofotografia precisa alternar o tema dentro da Home");
-  assert.match(home, /aria-label=\{`Ativar modo \$\{theme === "light" \? "escuro" : "claro"\}`\}/,
-    "o controle precisa anunciar o tema que será ativado");
+  // 1-2: o componente existe e usa o vídeo aprovado.
+  assert.ok(existsSync(fileURLToPath(sourceUrl(video))), "galaxy-loop-v2.mp4 precisa existir em public/spaces");
+  assert.match(toggle, /src="\/spaces\/galaxy-loop-v2\.mp4"/,
+    "o componente precisa apontar para o vídeo aprovado");
+
+  // 3: atributos nativos obrigatórios do <video> — autoplay em mobile
+  // depende da combinação exata autoPlay+muted+playsInline.
+  for (const atributo of ["autoPlay", "muted", "loop", "playsInline"]) {
+    assert.match(toggle, new RegExp(`\\b${atributo}\\b`), `<video> precisa do atributo ${atributo}`);
+  }
+
+  // 4-5: decorativo, nunca rouba o clique do botão pai; tema continua ligado.
+  assert.match(toggle, /aria-hidden=\{?["']true["']\}?/, "o <video> precisa ser aria-hidden (decorativo)");
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*pointer-events:\s*none/s,
+    "o vídeo não pode roubar o clique do <button> pai");
+  assert.match(toggle, /useCorviaTheme\s*\(\s*\)/, "precisa reutilizar useCorviaTheme(), não um segundo mecanismo de tema");
+  assert.match(toggle, /onClick=\{toggleTheme\}/, "o controle precisa alternar o tema");
+
+  // 6: aria-label dinâmico, refletindo o tema OPOSTO ao atual.
+  assert.match(toggle, /aria-label=\{`Ativar modo \$\{theme === "light" \? "escuro" : "claro"\}`\}/,
+    "o controle precisa anunciar o tema que será ativado, não o atual");
+
+  // 7: footprint aprovado preservado — mesmas dimensões/posição do cameo antigo.
   assert.match(
     homeStyles,
-    /\.spaces-theme-cameo\s*\{[^}]*left:\s*50%[^}]*height:\s*52px[^}]*transform:\s*translateX\(-50%\)/s,
-    "a astrofotografia precisa permanecer centralizada abaixo da marca CorVIA nos dois temas",
+    /\.galaxy-theme-toggle\s*\{[^}]*left:\s*50%[^}]*width:\s*140px[^}]*height:\s*52px[^}]*transform:\s*translateX\(-50%\)/s,
+    "a área de toque precisa manter o footprint aprovado (140×52, centralizada abaixo da marca)",
   );
-  assert.match(home, /src="\/spaces\/corvia-galaxy-cameo\.webp"/,
-    "claro e escuro devem usar exatamente o mesmo arquivo aprovado");
-  assert.match(home, /alt=""[\s\S]{0,80}width="132"[\s\S]{0,40}height="44"/,
-    "o cameo precisa continuar decorativo e manter o tamanho aprovado");
-  assert.match(homeStyles, /\.spaces-theme-cameo\s*>\s*img\s*\{[^}]*width:\s*132px[^}]*height:\s*44px[^}]*opacity:\s*1/s,
-    "a galáxia precisa ter destaque suficiente no tema escuro");
-  assert.doesNotMatch(lightStyles, /\.spaces-theme-cameo\s*>\s*img/,
-    "o tema claro não pode filtrar ou reinterpretar a galáxia aprovada no escuro");
-  assert.match(lightStyles, /\.spaces-home\s*\{[\s\S]{0,420}radial-gradient\(ellipse 540px 330px at 0% 0%, rgba\(4, 43, 57, 0\.29\)/,
-    "o destaque claro deve vir do degradê azul-petróleo atrás da mesma imagem");
+  assert.match(
+    homeStyles,
+    /\.galaxy-theme-toggle__video\s*\{[^}]*width:\s*132px[^}]*height:\s*44px/s,
+    "o chip visual precisa manter as dimensões aprovadas (132×44)",
+  );
+  // width/height/aspect-ratio fixos de antemão — sem isso, o <video> pode
+  // causar layout shift ao carregar/começar a tocar.
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*aspect-ratio:\s*132\s*\/\s*44/s,
+    "aspect-ratio fixo evita CLS quando o vídeo carrega");
+
+  // 8-9: mix-blend-mode + fundo de acento — a calibração de cor aprovada.
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*mix-blend-mode:\s*screen/s,
+    "precisa usar mix-blend-mode: screen para remover o fundo preto do vídeo");
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*background:\s*var\(--space-accent\)/s,
+    "o fundo precisa ser a cor de acento do espaço, não transparente nem cinza");
+
+  // 10: tratamento de intensidade/cromia (sóbrio, não a cor crua do vídeo).
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*filter:\s*brightness\([^)]+\)\s*saturate\([^)]+\)\s*contrast\([^)]+\)/s,
+    "precisa calibrar brilho/saturação/contraste para o azul sóbrio aprovado");
+  assert.match(homeStyles, /\.galaxy-theme-toggle__video\s*\{[^}]*opacity:\s*0\.\d+/s,
+    "a intensidade deve ficar discretamente reduzida, não em opacidade total");
+
+  // 11: nenhum uso visual do asset antigo resta em código-fonte.
+  assert.doesNotMatch(`${home}\n${homeStyles}\n${lightStyles}`, /corvia-galaxy-cameo\.webp|spaces-theme-cameo/,
+    "não pode restar referência ao cameo estático antigo");
+
+  // 12: a página de decisão (Completo/Essencial/Ciência & Ensino) também tem o controle.
+  assert.match(home, /<GalaxyThemeToggle\s+className="spaces-choice__theme-toggle"\s*\/>/,
+    "a tela de escolha de experiência precisa ter o mesmo controle, abaixo do logo");
+  assert.match(homeStyles, /\.spaces-choice__brand-cluster\s*\{[^}]*position:\s*relative/s,
+    "o toggle da tela de escolha precisa ancorar só sob a marca, não sob o header inteiro");
+
+  // 13: reduced-motion e poster de fallback protegidos.
+  assert.match(toggle, /prefers-reduced-motion:\s*reduce/,
+    "precisa respeitar prefers-reduced-motion (pausar o vídeo)");
+  assert.match(toggle, /poster="\/spaces\/galaxy-loop-poster\.webp"/,
+    "precisa ter poster estático de fallback, nunca área vazia nem o cameo antigo");
+  assert.ok(existsSync(fileURLToPath(sourceUrl(poster))), "o poster precisa existir em public/spaces");
+
+  // Layout não pode ter se movido: os mesmos marcos estruturais de antes
+  // (faixa mobile reservada para a galáxia, nav abaixo dela) continuam.
   assert.match(homeStyles, /grid-template-rows:\s*60px\s+38px\s+48px/,
-    "o mobile precisa reservar uma faixa própria para a galáxia ampliada");
+    "o mobile precisa manter a faixa reservada para a galáxia (layout não pode ter mudado)");
   assert.match(homeStyles, /\.spaces-home__topbar\s*>\s*nav\s*\{[^}]*grid-row:\s*3/s,
-    "os três modos precisam ficar abaixo da galáxia sem sobreposição de alvos");
+    "os três modos continuam abaixo da galáxia, sem sobreposição de alvos");
   assert.doesNotMatch(lightStyles, /\.spaces-workspace__greeting::(?:before|after)/,
     "o cabeçalho clínico central não deve receber a ilustração espacial");
+  assert.match(lightStyles, /\.spaces-home\s*\{[\s\S]{0,420}radial-gradient\(ellipse 540px 330px at 0% 0%, rgba\(4, 43, 57, 0\.29\)/,
+    "o destaque claro por trás do controle continua vindo do mesmo degradê azul-petróleo");
 });
 
 test("a paleta textual e os indicadores essenciais mantêm contraste WCAG no canvas claro", () => {

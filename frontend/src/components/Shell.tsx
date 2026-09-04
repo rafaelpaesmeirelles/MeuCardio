@@ -7,6 +7,7 @@ import ClinicalPresentationGuard from "./ClinicalPresentationGuard";
 import ClinicalRouteContext from "./ClinicalRouteContext";
 import HomePendingActionsPortal from "./HomePendingActionsPortal";
 import InvestorDemoBanner from "./InvestorDemoBanner";
+import SexProfileFieldPortal from "./SexProfileFieldPortal";
 import ShellClinicalOSLaunch from "./ShellClinicalOSLaunch";
 import "../styles/canonical-brand-standard.css";
 
@@ -30,6 +31,7 @@ export default function Shell() {
           <ClinicalMobileNav />
         </>
       )}
+      <SexProfileFieldPortal active={pathname === "/minha-conta"} />
       <ClinicalPresentationGuard />
       <InvestorDemoBanner />
     </>

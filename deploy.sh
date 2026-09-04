@@ -420,10 +420,15 @@ log "Reconciliando as 13 frentes científicas e publicando somente conteúdo rev
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
 log "Publicando somente conteúdo atual que já está revisado."
 backend_exec python -m app.commands.publish_preserved_content
-if [[ "${AI_ENABLED:-false}" == "true" ]]; then
-  log "Indexando a base reconciliada para a IA clínica."
-  backend_exec python -m app.services.indexar
-fi
+# Correção coordenada de 03/09/2026 (seção "arquitetura de deploy"): a indexação
+# RAG (chamada de rede ao provedor de embeddings) NUNCA roda aqui dentro —
+# `reconcile_content`/`publish_preserved_content` acima só mexem em Postgres
+# local, então continuam rápidos e determinísticos. Até esta correção, a
+# indexação rodava exatamente nesta linha, com ROLLBACK_NECESSARIO=1 e o Caddy
+# ainda fechado: uma falha de crédito/rede no provedor prolongava o downtime e,
+# em caso de erro não tratado, acionava o `pg_restore` do rollback por causa de
+# uma falha que não tinha nada a ver com a saúde do banco/app. A indexação real
+# está mais abaixo, DEPOIS do tráfego reaberto — ver "Indexação RAG incremental".
 
 log "Ativando os supervisores de agenda e WhatsApp/Heart Team da mesma release."
 "${COMPOSE[@]}" up -d --no-build --no-deps --force-recreate \
@@ -496,6 +501,25 @@ VERSAO_PUBLICA="$(curl -fsS --max-time 10 "https://${DOMAIN}/api/version")"
   echo "ERRO: /api/version não confirmou o commit $COMMIT_ATUAL: $VERSAO_PUBLICA" >&2; false;
 }
 validar_checkout_imutavel
+
+# Indexação RAG incremental — DELIBERADAMENTE fora da janela crítica.
+# Neste ponto: tráfego já está público (TRAFEGO_ABERTO=1), rollback já foi
+# desarmado (ROLLBACK_NECESSARIO=0, linha acima) e a release já foi certificada
+# como saudável. A partir daqui, nenhuma chamada ao provedor de embeddings pode
+# influenciar o tempo de indisponibilidade do deploy nem disparar pg_restore —
+# ela roda DEPOIS de tudo isso já ter acontecido, então uma falha aqui (quota
+# esgotada, rede, rate limit) é só um aviso, nunca uma falha do deploy.
+# `exec -d` dispara em background e retorna na hora — o script não espera o
+# backlog inteiro terminar; progresso e falhas ficam em `rag_reindex_runs`
+# (auditável por SQL) e nos logs do container (`docker compose logs backend`).
+# Responsável único pela indexação incremental: `app.commands.
+# reindex_rag_completo_20260902` — cobre documentos E as 12 frentes de
+# `rag_sources` + calculadoras num só comando, idempotente por content_hash.
+if [[ "${AI_ENABLED:-false}" == "true" ]]; then
+  log "Disparando indexação RAG incremental em segundo plano (não bloqueia nem reverte o deploy)."
+  "${COMPOSE[@]}" exec -d backend python -m app.commands.reindex_rag_completo_20260902 \
+    || log "AVISO: não foi possível disparar a indexação RAG incremental agora; rode manualmente: docker compose -f docker-compose.prod.yml exec backend python -m app.commands.reindex_rag_completo_20260902"
+fi
 
 "${COMPOSE[@]}" ps
 TRAFEGO_ABERTO=0

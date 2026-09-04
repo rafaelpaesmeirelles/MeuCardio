@@ -14,7 +14,8 @@ from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
 from app.models.audit import AuditLog
-from app.models.rag import AIConversation, AIMessage
+from app.models.content import Document
+from app.models.rag import AIConversation, AIMessage, DocumentChunk, KnowledgeChunk, RagReindexRun
 from app.services import rag
 
 log = logging.getLogger("corvia.ai")
@@ -65,10 +66,80 @@ class ConsentimentoFerramentas(BaseModel):
     ativar: bool
 
 
+def _status_rag(db: Session) -> dict:
+    """Correção coordenada de 03/09/2026, seção "observabilidade": distingue
+    explicitamente "chave configurada" de "embeddings realmente funcionando".
+    Nunca chama o provedor ao vivo aqui (custaria dinheiro e tempo a cada
+    carregamento de tela) — o sinal é a última execução real do backfill
+    (`rag_reindex_runs`, gravada por `app.commands.reindex_rag_completo_20260902`),
+    mais contagens baratas de índice. Nunca expõe API key nem saldo/custo."""
+    knowledge_chunks_total = db.query(KnowledgeChunk).count()
+    document_chunks_total = db.query(DocumentChunk).count()
+    documentos_publicados_sem_chunk = db.query(Document).filter(
+        Document.published.is_(True),
+        ~Document.id.in_(select(DocumentChunk.document_id).distinct()),
+    ).count()
+    # "bloqueador residual RAG" (03/09/2026): sem esta contagem, um índice
+    # cheio de vetores LEGACY_UNVERIFIED (nunca verificados, mas ainda
+    # servíveis) parecia idêntico, no status, a um índice cheio de vetores
+    # STALE_KNOWN (sabidamente desatualizados) — as duas situações pedem
+    # ação operacional bem diferente.
+    document_chunks_por_classificacao = rag.contar_document_chunks_por_classificacao(db)
+
+    ultima = db.execute(
+        select(RagReindexRun).order_by(RagReindexRun.finished_at.desc()).limit(1)
+    ).scalar_one_or_none()
+
+    if ultima is None:
+        embeddings_operacionais = None  # desconhecido: backfill nunca rodou nesta base
+        motivo = "backfill_nunca_executado"
+    elif ultima.exit_code == 0:
+        embeddings_operacionais = True
+        motivo = None
+    else:
+        embeddings_operacionais = False
+        detalhe = ultima.detalhe or {}
+        erro = str(detalhe.get("erro") or "")
+        if "insufficient_quota" in erro or "credit_balance_exhausted" in erro:
+            motivo = "quota_insuficiente"
+        elif "EmbeddingDimensionError" in erro or "embedding_dim" in erro.lower():
+            motivo = "erro_dimensao_ou_modelo"
+        elif ultima.falhas > 0:
+            motivo = "falhas_no_provedor_durante_o_backfill"
+        else:
+            motivo = "backlog_nao_concluido"
+
+    return {
+        "knowledge_chunks_total": knowledge_chunks_total,
+        "document_chunks_total": document_chunks_total,
+        "document_chunks_current_verified": document_chunks_por_classificacao["CURRENT_VERIFIED"],
+        "document_chunks_legacy_unverified": document_chunks_por_classificacao["LEGACY_UNVERIFIED"],
+        "document_chunks_stale_known": document_chunks_por_classificacao["STALE_KNOWN"],
+        "documentos_publicados_sem_chunk": documentos_publicados_sem_chunk,
+        "indice_vazio": knowledge_chunks_total == 0 and document_chunks_total == 0,
+        "indice_parcialmente_preenchido": knowledge_chunks_total == 0 and document_chunks_total > 0,
+        "embeddings_operacionais": embeddings_operacionais,
+        "motivo_indisponibilidade": motivo,
+        "fallback_lexico_disponivel": True,  # busca léxica não depende de embedding — ver rag_multi.buscar_lexico_multi
+        "ultimo_backfill": None if ultima is None else {
+            "finished_at": ultima.finished_at.isoformat(),
+            "exit_code": ultima.exit_code,
+            "dry_run": ultima.dry_run,
+            "entidades_processadas": ultima.entidades_processadas,
+            "trechos_gerados": ultima.trechos_gerados,
+            "falhas": ultima.falhas,
+            "backlog_restante": ultima.backlog_restante,
+        },
+    }
+
+
 @router.get("/status")
 def status(db: Session = Depends(get_db), user=Depends(current_user)):
     usado = rag.contar_uso_diario(db, user.id)
     return {
+        # "ativo" reflete só se HÁ chave configurada e a feature está ligada
+        # — NUNCA presuma que isso significa "embeddings funcionando". Use
+        # `rag.embeddings_operacionais` para essa pergunta.
         "ativo": settings.ai_enabled and bool(settings.openai_api_key or settings.anthropic_api_key),
         "provedor": settings.ai_provider,
         "modelo": settings.openai_model if settings.ai_provider == "openai" else settings.anthropic_model,
@@ -83,6 +154,7 @@ def status(db: Session = Depends(get_db), user=Depends(current_user)):
         # para decidir se mostra o convite ao consentimento.
         "ferramentas_disponiveis_instalacao": settings.ai_assistant_tools_enabled,
         "ferramentas_consentidas": user.ia_ferramentas_consent_em is not None,
+        "rag": _status_rag(db),
     }
 
 
@@ -368,12 +440,38 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
 
 @router.post("/reindexar")
 def reindexar(
-    tudo: bool = False, db: Session = Depends(get_db), user=Depends(require_admin)
+    tudo: bool = False,
+    limite: int = 50,
+    db: Session = Depends(get_db),
+    user=Depends(require_admin),
 ):
-    """Gera embeddings dos documentos. Consome créditos do provedor."""
+    """Gera embeddings — documentos e as 12 frentes de rag_sources. Consome
+    créditos do provedor.
+
+    Correção coordenada de 03/09/2026: antes chamava `rag.indexar_tudo()`
+    direto, síncrono, cobrindo só `documents` (as outras 12 frentes ficavam
+    de fora — achado da investigação original), sem o advisory lock que o
+    comando de backfill (`app.commands.reindex_rag_completo_20260902`) ganhou
+    contra execução concorrente, e sem teto de itens — um backlog grande
+    faria esta requisição HTTP ficar pendurada por muito mais tempo do que
+    qualquer proxy/browser tolera antes de dar timeout.
+
+    Agora delega para o comando canônico, único responsável por indexação
+    incremental. `limite` (padrão 50, pequeno de propósito) mantém a
+    requisição rápida o bastante para não estourar timeout — para o backlog
+    inteiro, use o comando por `docker compose exec` (assíncrono, sem limite
+    de tempo de uma requisição HTTP), não este endpoint em loop.
+    """
     if not settings.ai_enabled:
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
-    resultado = rag.indexar_tudo(db, apenas_pendentes=not tudo)
+    from app.commands.reindex_rag_completo_20260902 import rodar
+
+    resultado, exit_code = rodar(forcar=tudo, limite=limite)
+    if exit_code == 3:
+        raise HTTPException(
+            status_code=409,
+            detail="Já existe uma indexação em andamento (advisory lock ocupado) — espere terminar.",
+        )
     db.add(AuditLog(user_id=user.id, action="reindexar", entity="ia", detail=resultado))
     db.commit()
     return resultado

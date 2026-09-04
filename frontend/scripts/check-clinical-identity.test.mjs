@@ -18,6 +18,15 @@ test("treatment, article and first name form the clinical call name", () => {
   assert.equal(nomeComTratamento({ full_name: "Dr. Rafael Paes", professional_title: "Dr." }, true), "Dr. Rafael");
 });
 
+test("registered sex chooses exactly one article and has priority over the title", () => {
+  assert.equal(chamamentoComArtigo({ full_name: "Rafael Paes", professional_title: "Dr.", sex: "M" }, { curto: true }), "o Dr. Rafael");
+  assert.equal(chamamentoComArtigo({ full_name: "Ana Souza", professional_title: "Dra.", sex: "F" }, { curto: true }), "a Dra. Ana");
+  // Mesmo que o título escolhido seja flexionado de outro modo, o artigo
+  // vem do sexo cadastrado — nunca mostramos "o/a" nem inferimos pelo nome.
+  assert.equal(chamamentoComArtigo({ full_name: "Maria Souza", professional_title: "Dr.", sex: "F" }, { curto: true }), "a Dr. Maria");
+  assert.equal(chamamentoComArtigo({ full_name: "João Lima", professional_title: "Dra.", sex: "M" }, { curto: true }), "o Dra. João");
+});
+
 test("neutral treatment uses an explicit gender marker but never infers from the name", () => {
   assert.equal(chamamentoComArtigo({ full_name: "Ana Souza", professional_title: "Esp.", sex: "F" }, { curto: true }), "a Esp. Ana");
   assert.equal(chamamentoComArtigo({ full_name: "João Lima", professional_title: "Esp.", genero: "masculino" }, { curto: true }), "o Esp. João");

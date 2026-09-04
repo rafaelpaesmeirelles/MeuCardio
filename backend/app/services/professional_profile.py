@@ -29,6 +29,20 @@ def normalize_professional_title(value: str | None) -> str | None:
     return value
 
 
+def normalize_sex(value: str | None) -> str | None:
+    value = (value or "").strip().upper()
+    if not value:
+        return None
+    aliases = {
+        "M": "M", "MASCULINO": "M", "HOMEM": "M", "MALE": "M",
+        "F": "F", "FEMININO": "F", "MULHER": "F", "FEMALE": "F",
+    }
+    normalized = aliases.get(value)
+    if normalized is None:
+        raise ValueError("Sexo inválido — selecione Masculino ou Feminino.")
+    return normalized
+
+
 def normalize_council(value: str | None) -> str | None:
     value = (value or "").strip().upper()
     if not value:
@@ -167,6 +181,7 @@ def rendered_logo_png(document_logo_url: str | None) -> Path | None:
 
 def profile_payload(user: Any) -> dict:
     return {
+        "sex": user.sex,
         "professional_title": user.professional_title,
         "workplace_name": user.workplace_name,
         "workplace_department": user.workplace_department,

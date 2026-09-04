@@ -21,6 +21,11 @@ class User(Base):
     )
 
     birth_date: Mapped[date | None] = mapped_column(Date, nullable=True)
+    # Sexo cadastral usado exclusivamente para concordância de tratamento
+    # nas interfaces personalizadas ("o Dr." / "a Dra."). Nunca inferido do
+    # nome. Valores canônicos: "M" ou "F"; legado permanece nullable até o
+    # próprio titular preencher em Minha Conta.
+    sex: Mapped[str | None] = mapped_column(String(1), nullable=True)
     cpf: Mapped[str | None] = mapped_column(String(14), unique=True, nullable=True, index=True)
     profession: Mapped[str | None] = mapped_column(String(80), nullable=True)
     council_name: Mapped[str | None] = mapped_column(String(20), nullable=True)
