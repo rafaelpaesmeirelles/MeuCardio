@@ -199,3 +199,23 @@ html[data-corvia-theme="light"] .spaces-choice__cards > button {
   .spaces-home__topbar .spaces-everything-search > kbd { display: none !important; }
   .spaces-home__topbar .spaces-everything-search input { font-size: .72rem !important; }
 }
+
+/* Miniuniverso congelado conforme as referências finais aprovadas. */
+@media (max-width:900px) {
+  .spaces-choice__brand-cluster .galaxy-theme-toggle,
+  .spaces-choice__brand-cluster .galaxy-theme-toggle:hover,
+  .spaces-choice__brand-cluster .galaxy-theme-toggle:active {
+    width:118px !important; height:68px !important;
+  }
+  .spaces-choice__brand-cluster .galaxy-theme-toggle__image {
+    width:118px !important; height:68px !important;
+  }
+  .spaces-home__brand-cluster .galaxy-theme-toggle,
+  .spaces-home__brand-cluster .galaxy-theme-toggle:hover,
+  .spaces-home__brand-cluster .galaxy-theme-toggle:active {
+    flex:0 0 74px !important; width:74px !important; height:46px !important;
+  }
+  .spaces-home__brand-cluster .galaxy-theme-toggle__image {
+    width:74px !important; height:46px !important;
+  }
+}

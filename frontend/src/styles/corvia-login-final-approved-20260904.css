@@ -182,3 +182,26 @@
   .login-gateway--public .login-gateway__scene { min-height:565px !important; }
   .login-gateway--public .login-gateway__universe { inset:132px 0 0 !important; }
 }
+
+/* Fidelidade final congelada: somente aproxima a renderização ao modelo aprovado. */
+.login-gateway--public .login-gateway__galaxy-image {
+  transform: scale(1.28,1.20) !important;
+  transform-origin: 50% 50% !important;
+}
+.login-gateway--public .login-gateway__universe::before,
+.login-gateway--public .login-gateway__universe::after {
+  position:absolute; z-index:2; left:50%; top:56%; content:""; pointer-events:none;
+  border:1px solid rgba(72,153,255,.38); border-radius:50%; transform:translate(-50%,-50%) rotate(-5deg);
+}
+.login-gateway--public .login-gateway__universe::before { width:min(980px,74vw); height:235px; }
+.login-gateway--public .login-gateway__universe::after { width:min(760px,59vw); height:190px; opacity:.65; }
+.login-gateway--public .login-gateway__space--consultorio>span { color:var(--final-cyan)!important; background:rgba(24,207,224,.11)!important; }
+.login-gateway--public .login-gateway__space--hospital>span { color:var(--final-blue)!important; background:rgba(31,125,245,.12)!important; }
+.login-gateway--public .login-gateway__space--ensino>span { color:var(--final-violet)!important; background:rgba(141,87,232,.13)!important; }
+.login-gateway--public .login-gateway__space--pesquisa>span { color:var(--final-pink)!important; background:rgba(239,63,134,.12)!important; }
+.login-gateway--public .login-gateway__space--gestao>span { color:var(--final-green)!important; background:rgba(32,201,152,.12)!important; }
+@media(max-width:900px){
+ .login-gateway--public .login-gateway__galaxy-image{transform:scale(1.18,1.14)!important}
+ .login-gateway--public .login-gateway__universe::before{width:620px;height:185px}
+ .login-gateway--public .login-gateway__universe::after{width:480px;height:145px}
+}
