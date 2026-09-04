@@ -1,0 +1,105 @@
+name: Finalize scientific residuals
+
+on:
+  push:
+    branches:
+      - science/reconcile-open-pr-corpus-20260904
+    paths:
+      - scripts/finalize_science_residuals.py
+      - .github/workflows/finalize-science-residuals.yml
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: science-finalization-20260904
+  cancel-in-progress: true
+
+jobs:
+  finalize:
+    name: Finalizar ciência residual
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout isolated science branch
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: science/reconcile-open-pr-corpus-20260904
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install lightweight dependency
+        run: python -m pip install --disable-pip-version-check 'PyYAML>=6,<7'
+
+      - name: Fetch pull-request heads
+        run: git fetch origin '+refs/pull/*/head:refs/remotes/pr/*'
+
+      - name: Snapshot PR metadata and exact bases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "/repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" > /tmp/open-pr-pages.jsonl
+          jq -s 'add | map({number, base_sha: .base.sha, head_sha: .head.sha, base_ref: .base.ref, head_ref: .head.ref}) | unique_by(.number) | sort_by(.number)' \
+            /tmp/open-pr-pages.jsonl > /tmp/open-pr-metadata.json
+          jq -r '.[].base_sha' /tmp/open-pr-metadata.json | sort -u | while read -r sha; do
+            if ! git cat-file -e "${sha}^{commit}" 2>/dev/null; then
+              git fetch --no-tags origin "${sha}"
+            fi
+          done
+
+      - name: Compile finalizer
+        run: |
+          python -m py_compile scripts/reconcile_open_science_prs.py
+          python -m py_compile scripts/resolve_science_residuals.py
+          python -m py_compile scripts/finalize_science_residuals.py
+
+      - name: Finalize remaining reviewed content
+        run: |
+          python scripts/finalize_science_residuals.py \
+            --pr-metadata /tmp/open-pr-metadata.json
+          jq '.summary, .changed_manifests' artifacts/science-finalization-report.json
+
+      - name: Validate strict corpus inventory
+        run: python scripts/content_inventory.py --strict
+
+      - name: Validate reviewed status in finalized keys
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('artifacts/science-finalization-report.json').read_text())
+          bad = [d for d in report['decisions'] if d['status'] == 'unresolved']
+          print(json.dumps({'unresolved': len(bad), 'items': bad[:50]}, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload final audit artifact
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: science-finalization
+          path: |
+            artifacts/science-finalization-report.json
+            docs/FINALIZACAO-CIENTIFICA-PRS-PENDENTES-20260904.md
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit finalized corpus to isolated branch
+        run: |
+          git config user.name 'CorVIA Science Finalizer'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            doencas trilhas medicamentos \
+            artifacts/science-finalization-report.json \
+            docs/FINALIZACAO-CIENTIFICA-PRS-PENDENTES-20260904.md
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração final segura a gravar.'
+            exit 0
+          fi
+          git commit -m 'science: finaliza revisão dos PRs pendentes'
+          git push origin HEAD:science/reconcile-open-pr-corpus-20260904
