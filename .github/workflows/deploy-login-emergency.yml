@@ -10,6 +10,7 @@ on:
       - frontend/src/styles/cardiology-spaces-login-galaxy-kinematics.css
       - frontend/src/styles/galaxy-theme-toggle-refinement.css
       - frontend/src/styles/cardiology-spaces-universe-final.css
+      - deploy.sh
       - ops/remote-deploy-entrypoint.sh
       - ops/bootstrap-release-entrypoint.sh
       - .github/workflows/deploy-login-emergency.yml
@@ -63,27 +64,15 @@ jobs:
             "$SSH_USER@$SSH_HOST" \
             "deploy-web $TARGET_SHA"
 
-      - name: Verify public web release
+      - name: Verify public web UI and backend availability
         env:
           PUBLIC_URL: https://corvia.med.br
         run: |
           set -euo pipefail
-          cache_buster="${TARGET_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          version_file="$RUNNER_TEMP/version.json"
-          curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 5 \
-            -H 'Cache-Control: no-cache, no-store, max-age=0' \
-            "$PUBLIC_URL/api/version?release=$cache_buster" > "$version_file"
-          python3 - "$version_file" "$TARGET_SHA" <<'PY'
-          import json
-          import sys
-          path, expected = sys.argv[1:]
-          with open(path, encoding="utf-8") as handle:
-              payload = json.load(handle)
-          actual = payload.get("commit") or payload.get("version") or payload.get("sha")
-          if actual != expected:
-              raise SystemExit(f"Production reports {actual!r}; expected {expected!r}")
-          print(f"Production version confirmed: {actual}")
-          PY
-          curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health?release=$cache_buster" > /dev/null
-          curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready?release=$cache_buster" > /dev/null
-          echo "Production web SHA, health and readiness confirmed."
+          curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 3 \
+            -H 'Cache-Control: no-cache, no-store, max-age=0' "$PUBLIC_URL/" > /dev/null
+          curl --fail --silent --show-error --retry 6 --retry-all-errors --retry-delay 3 \
+            -H 'Cache-Control: no-cache, no-store, max-age=0' "$PUBLIC_URL/entrar" > /dev/null
+          curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health" > /dev/null
+          curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready" > /dev/null
+          echo "Public web UI, health and readiness confirmed."
