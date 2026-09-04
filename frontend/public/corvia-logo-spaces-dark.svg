@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-labelledby="title desc">
-  <title id="title">CorVIA Cardiology Spaces</title><desc id="desc">Identidade CorVIA para fundos escuros com VIA ciano e símbolo cardíaco canônico</desc>
+  <title id="title">CorVIA Cardiology Spaces</title><desc id="desc">Identidade CorVIA para fundos escuros com VIA azul-escuro e símbolo cardíaco canônico</desc>
   <defs>
     <linearGradient id="blue" x1="36" y1="52" x2="126" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#16D9F5"/><stop offset="1" stop-color="#168DFF"/></linearGradient>
     <linearGradient id="pink" x1="96" y1="30" x2="126" y2="205" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4C75"/><stop offset="1" stop-color="#E454E8"/></linearGradient>
     <linearGradient id="violet" x1="118" y1="88" x2="210" y2="201" gradientUnits="userSpaceOnUse"><stop stop-color="#5267FF"/><stop offset="1" stop-color="#9A4CF4"/></linearGradient>
   </defs>
   <g><path d="M120 205C101 184 49 136 39 98c-8-31 12-52 42-52 23 0 38 13 45 32" fill="none" stroke="url(#blue)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 205C110 171 96 124 95 83c-1-32 13-54 35-54 22 0 35 16 34 38-1 21-17 42-44 69" fill="none" stroke="url(#pink)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><path d="M120 205c15-39 38-85 66-105 20-14 39-9 44 9 6 22-12 47-37 66-22 17-48 27-73 30" fill="none" stroke="url(#violet)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/></g>
-  <text x="250" y="126" font-family="Arial,Helvetica,sans-serif" font-size="92" font-weight="700" letter-spacing="-4"><tspan fill="#F4F8FF">Cor</tspan><tspan fill="#16D9F5">VIA</tspan></text>
+  <text x="250" y="126" font-family="Arial,Helvetica,sans-serif" font-size="92" font-weight="700" letter-spacing="-4"><tspan fill="#F4F8FF">Cor</tspan><tspan fill="#17335D">VIA</tspan></text>
   <text x="252" y="188" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="600" letter-spacing="8" fill="#C7D7EC">CARDIOLOGY SPACES</text>
 </svg>
