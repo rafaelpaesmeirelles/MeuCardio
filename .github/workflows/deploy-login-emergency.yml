@@ -76,3 +76,5 @@ jobs:
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health" > /dev/null
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready" > /dev/null
           echo "Public web UI, health and readiness confirmed."
+
+# Emergency redeploy marker: approved UI only; no visual source changed.
