@@ -3,6 +3,7 @@ import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
 import "../styles/galaxy-theme-toggle-refinement.css";
+import "../styles/cardiology-spaces-universe-final.css";
 
 const SPACES_CANONICAL_MOTTO = "O Ambiente muda. O Médico Continua no Centro.";
 const GALAXY_RENDER_WIDTH = 342;
