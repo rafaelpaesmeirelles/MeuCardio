@@ -41,7 +41,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
     >
       <img
         className="galaxy-theme-toggle__image"
-        src="/spaces/galaxy-loop-poster.webp"
+        src="/spaces/corvia-galaxy-cameo.webp"
         alt=""
         aria-hidden="true"
         draggable={false}

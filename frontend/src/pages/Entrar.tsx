@@ -14,6 +14,7 @@ import "../styles/cardiology-spaces-login-galaxy-kinematics.css";
 import "../styles/cardiology-spaces-login-production-approved.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
+import "../styles/corvia-login-final-approved-20260904.css";
 
 type TemaPublico = CorviaTheme;
 
@@ -45,11 +46,11 @@ const TEMAS_PUBLICOS: Array<{
 ];
 
 const ESPACOS = [
-  { id: "consultorio", nome: "Consultório", detalhe: "Assistência", icone: "clinica" as const },
-  { id: "hospital", nome: "Hospital", detalhe: "Decisão", icone: "emergencia" as const },
-  { id: "ensino", nome: "Ensino", detalhe: "Formação", icone: "curso" as const },
-  { id: "pesquisa", nome: "Pesquisa", detalhe: "Evidência", icone: "evidencia" as const },
-  { id: "gestao", nome: "Gestão", detalhe: "Estratégia", icone: "gestao" as const },
+  { id: "consultorio", nome: "Consultório", icone: "clinica" as const },
+  { id: "hospital", nome: "Hospital", icone: "emergencia" as const },
+  { id: "ensino", nome: "Ensino", icone: "curso" as const },
+  { id: "pesquisa", nome: "Pesquisa", icone: "evidencia" as const },
+  { id: "gestao", nome: "Gestão", icone: "gestao" as const },
 ];
 
 export default function Entrar() {
@@ -96,7 +97,10 @@ export default function Entrar() {
           <span><strong><span>Cor</span><span className="corvia-via">VIA</span></strong><small>CARDIOLOGY SPACES</small></span>
         </Link>
 
+        <div className="login-gateway__motto" aria-hidden="true">CIÊNCIA · PRÁTICA · PESSOAS · SEMPRE JUNTOS</div>
+
         <div className="login-gateway__top-actions">
+          <p className="login-gateway__slogan">UM UNIVERSO<br />MAIS SAUDÁVEL<br />COMEÇA AQUI</p>
           <fieldset className="login-gateway__theme-choice login-gateway__theme-choice--top" aria-describedby="login-theme-note">
             <legend>Escolha a aparência</legend>
             <div className="login-gateway__theme-choice-options">
@@ -118,20 +122,18 @@ export default function Entrar() {
             <p id="login-theme-note"><Icone nome="check" /> Preferência visual desta sessão.</p>
           </fieldset>
 
-          <div className="login-gateway__security"><span><i /> Protegido</span></div>
         </div>
       </header>
 
       <section className="login-gateway__scene" aria-labelledby="login-title">
         <header className="login-gateway__hero">
-          <p>CORVIA · CARDIOLOGY SPACES</p>
           <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
           <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.</span>
         </header>
 
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
-            <img className="login-gateway__galaxy-image" src="/spaces/galaxy-loop-poster.webp" alt="" aria-hidden="true" draggable={false} />
+            <img className="login-gateway__galaxy-image" src="/spaces/corvia-galaxy-cameo.webp" alt="" aria-hidden="true" draggable={false} />
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />
@@ -145,7 +147,7 @@ export default function Entrar() {
             {ESPACOS.map((espaco) => (
               <article className={`login-gateway__space login-gateway__space--${espaco.id}`} key={espaco.id}>
                 <span><Icone nome={espaco.icone} /></span>
-                <div><strong>{espaco.nome}</strong><small>{espaco.detalhe}</small></div>
+                <div><strong>{espaco.nome}</strong></div>
               </article>
             ))}
           </div>
@@ -155,7 +157,7 @@ export default function Entrar() {
       <section className="login-gateway__console" aria-labelledby="login-acesso-titulo">
         <header className="login-gateway__console-head">
           <span><Icone nome="conta" /></span>
-          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Entre no CorVIA</h2></div>
+          <div><p>IDENTIDADE PROFISSIONAL</p><h2 id="login-acesso-titulo">Entre no CorVIA</h2><small>Seu universo profissional em um só lugar.</small></div>
         </header>
 
         <form className="login-gateway__form" onSubmit={enviar}>
@@ -167,6 +169,7 @@ export default function Entrar() {
             <span>Senha</span>
             <div className="login-gateway__password"><Icone nome="configuracao" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
           </label>
+          <Link className="login-gateway__forgot" to="/esqueci-senha">Esqueceu sua senha?</Link>
           <button className="login-gateway__enter" type="submit" disabled={enviando}>
             <span>{enviando ? "Abrindo seus espaços…" : "Entrar"}</span>
             {!enviando ? <Icone nome="seta" /> : <i className="login-formulario__carregando" aria-hidden="true" />}
@@ -176,17 +179,14 @@ export default function Entrar() {
 
         <Link className="login-gateway__join" to="/solicitar-acesso">
           <span><Icone nome="conta" /></span>
-          <span><strong>Novo no CorVIA?</strong><small>Solicite seu Acesso</small></span>
+          <span><strong>Novo no CorVIA?</strong><small>Solicite seu Acesso</small><em>Faça parte de um universo de conhecimento, prática e pessoas.</em></span>
           <Icone nome="seta" />
         </Link>
       </section>
 
       <footer className="login-gateway__footer">
-        <div className="login-gateway__form-meta">
-          <label htmlFor="permanecer"><input id="permanecer" type="checkbox" checked={permanecerConectado} onChange={(event) => setPermanecerConectado(event.target.checked)} />Manter este acesso</label>
-          <Link to="/esqueci-senha">Esqueci minha senha</Link>
-        </div>
-        <nav aria-label="Links institucionais"><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><a href="mailto:contato@corvia.med.br">Suporte</a></nav>
+        <div>CONTEÚDO · FERRAMENTAS · INTELIGÊNCIA ARTIFICIAL · CONECTIVIDADE · TUDO COM TUDO</div>
+        <div><strong>CorVIA</strong><span>|</span>CARDIOLOGY SPACES<span>|</span>VERSÃO 2.0</div>
       </footer>
     </main>
   );

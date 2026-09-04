@@ -175,3 +175,31 @@ html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
   .spaces-home .galaxy-theme-toggle__image,
   .spaces-choice .galaxy-theme-toggle__image { animation: none !important; }
 }
+
+/* Freeze final approved login labels and light palette. */
+.login-gateway--public .login-gateway__space { min-height: 50px !important; }
+.login-gateway--public .login-gateway__space > div { display: flex !important; align-items: center !important; min-height: 34px !important; }
+.login-gateway--public .login-gateway__space small { display: none !important; }
+
+.login-gateway--light {
+  --approved-panel: rgba(255,255,255,.90) !important;
+  --approved-text: #10264d !important;
+  --approved-muted: #64779b !important;
+  --approved-line: rgba(91,130,193,.18) !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(115,187,255,.25), transparent 36rem),
+    radial-gradient(circle at 68% 58%, rgba(174,137,255,.15), transparent 29rem),
+    linear-gradient(145deg,#ffffff 0%,#f7fbff 54%,#eef6ff 100%) !important;
+}
+.login-gateway--light .login-gateway__space {
+  background: rgba(255,255,255,.86) !important;
+  border-color: rgba(79,125,194,.18) !important;
+  color: #132a52 !important;
+}
+
+.login-gateway--light .login-gateway__console {
+  background: rgba(255,255,255,.90) !important;
+  border-color: rgba(91,130,193,.18) !important;
+  box-shadow: 0 18px 50px -36px rgba(52,89,148,.32) !important;
+}
+.login-gateway--light .login-gateway__join { background: rgba(127,90,222,.07) !important; }

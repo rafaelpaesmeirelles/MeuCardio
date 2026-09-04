@@ -1,0 +1,184 @@
+/* FINAL VISUAL LOCK — approved CorVIA login, 04/09/2026. */
+.login-gateway--public {
+  --final-cyan:#18cfe0; --final-blue:#1f7df5; --final-violet:#8d57e8;
+  --final-pink:#ef3f86; --final-green:#20c998;
+  min-height:100dvh !important; overflow-x:hidden !important;
+}
+.login-gateway--dark {
+  --approved-text:#f7f9fc !important; --approved-muted:#aebbd0 !important;
+  --approved-panel:rgba(3,20,35,.92) !important; --approved-line:rgba(91,169,220,.32) !important;
+  background:radial-gradient(circle at 50% 40%,rgba(16,91,164,.18),transparent 36rem),linear-gradient(145deg,#020914,#031528 58%,#020914) !important;
+}
+.login-gateway--light {
+  --approved-text:#10264d !important; --approved-muted:#64779b !important;
+  --approved-panel:rgba(255,255,255,.90) !important; --approved-line:rgba(91,130,193,.18) !important;
+  background:radial-gradient(circle at 50% 42%,rgba(115,187,255,.22),transparent 36rem),radial-gradient(circle at 70% 58%,rgba(174,137,255,.14),transparent 29rem),linear-gradient(145deg,#fff,#f8fbff 56%,#eef6ff) !important;
+}
+.login-gateway--public .login-gateway__aurora { opacity:.22 !important; }
+.login-gateway--light .login-gateway__aurora { opacity:.10 !important; }
+.login-gateway--public .login-gateway__security { display:none !important; }
+.login-gateway--public .login-gateway__topbar {
+  display:grid !important; grid-template-columns:minmax(260px,320px) minmax(360px,1fr) minmax(300px,360px) !important;
+  align-items:start !important; gap:24px !important; min-height:108px !important;
+  padding:24px clamp(36px,5vw,78px) 8px !important; background:transparent !important;
+}
+.login-gateway--public .login-gateway__brand { align-items:flex-start !important; gap:14px !important; }
+.login-gateway--public .login-gateway__brand>img { width:76px !important; height:76px !important; }
+.login-gateway--public .login-gateway__brand strong { font-size:2.65rem !important; line-height:.95 !important; letter-spacing:-.05em !important; }
+.login-gateway--public .login-gateway__brand small { font-size:.68rem !important; letter-spacing:.25em !important; margin-top:8px !important; }
+.login-gateway--public .login-gateway__motto {
+  align-self:start !important; justify-self:center !important; width:min(100%,430px) !important;
+  padding:12px 6px 11px !important; border-bottom:1px solid rgba(93,147,204,.35) !important;
+  color:var(--approved-muted) !important; text-align:center !important; font-size:.66rem !important;
+  font-weight:650 !important; letter-spacing:.24em !important; white-space:nowrap !important;
+}
+.login-gateway--public .login-gateway__top-actions { justify-self:end !important; display:flex !important; align-items:flex-start !important; gap:22px !important; }
+.login-gateway--public .login-gateway__slogan { margin:4px 0 0 !important; color:var(--approved-muted) !important; font-size:.65rem !important; line-height:1.55 !important; letter-spacing:.20em !important; }
+.login-gateway--public .login-gateway__theme-choice--top { margin-top:2px !important; }
+.login-gateway--public .login-gateway__theme-choice--top .login-gateway__theme-choice-options { padding:3px !important; border-radius:999px !important; }
+.login-gateway--dark .login-gateway__theme-choice--top .login-gateway__theme-choice-options { background:rgba(5,20,36,.78) !important; border-color:rgba(91,154,205,.30) !important; }
+.login-gateway--light .login-gateway__theme-choice--top .login-gateway__theme-choice-options { background:rgba(246,249,255,.92) !important; border-color:rgba(93,128,188,.22) !important; }
+.login-gateway--public .login-gateway__theme-choice--top label { width:40px !important; height:40px !important; min-height:40px !important; }
+.login-gateway--public .login-gateway__theme-choice--top label.is-selected { background:linear-gradient(135deg,var(--final-blue),var(--final-cyan)) !important; color:#fff !important; }
+.login-gateway--light .login-gateway__theme-choice--top label.is-selected { background:#fff !important; color:#1d70e9 !important; box-shadow:0 4px 14px rgba(53,93,157,.14) !important; }
+.login-gateway--public .login-gateway__scene { width:min(calc(100% - 44px),1360px) !important; min-height:500px !important; margin:0 auto !important; padding:0 !important; }
+.login-gateway--public .login-gateway__hero { top:0 !important; gap:8px !important; }
+.login-gateway--public .login-gateway__hero>p { display:none !important; }
+.login-gateway--public .login-gateway__hero h1 { max-width:980px !important; font-size:clamp(2.65rem,4vw,3.65rem) !important; line-height:.94 !important; }
+.login-gateway--public .login-gateway__hero h1 strong { color:var(--final-cyan) !important; }
+.login-gateway--light .login-gateway__hero h1 strong { color:#20a8e9 !important; }
+.login-gateway--public .login-gateway__hero>span { max-width:680px !important; font-size:1rem !important; line-height:1.35 !important; }
+.login-gateway--public .login-gateway__universe { inset:128px 0 0 !important; height:355px !important; }
+.login-gateway--public .login-gateway__milky-way {
+  top:56% !important; left:50% !important; width:min(980px,74vw) !important; height:auto !important;
+  aspect-ratio:1366/720 !important; background:transparent !important; border:0 !important; border-radius:0 !important;
+  mask:none !important; -webkit-mask:none !important; box-shadow:none !important; overflow:visible !important;
+  animation:corvia-final-galaxy-clockwise 120s linear infinite !important;
+}
+.login-gateway--public .login-gateway__galaxy-image {
+  display:block !important; width:100% !important; height:100% !important; object-fit:contain !important;
+  opacity:.96 !important; mix-blend-mode:normal !important; filter:saturate(1.20) brightness(1.06) drop-shadow(0 0 32px rgba(56,144,255,.20)) !important;
+}
+.login-gateway--light .login-gateway__galaxy-image { opacity:.74 !important; filter:saturate(.88) brightness(1.22) drop-shadow(0 0 25px rgba(92,150,225,.12)) !important; }
+.login-gateway--public .login-gateway__core { top:57% !important; width:152px !important; height:170px !important; }
+.login-gateway--public .login-gateway__approved-heart { filter:drop-shadow(0 0 12px rgba(19,206,237,.46)) drop-shadow(0 0 15px rgba(242,67,130,.25)) !important; }
+.login-gateway--public .login-gateway__pulse { display:none !important; }
+@keyframes corvia-final-galaxy-clockwise { from{transform:translate(-50%,-50%) rotate(0)} to{transform:translate(-50%,-50%) rotate(360deg)} }
+.login-gateway--public .login-gateway__space {
+  width:190px !important; min-height:58px !important; grid-template-columns:44px minmax(0,1fr) !important;
+  gap:10px !important; padding:8px 12px !important; border-radius:14px !important;
+}
+.login-gateway--dark .login-gateway__space { background:rgba(4,20,36,.88) !important; border-color:rgba(94,165,220,.33) !important; }
+.login-gateway--light .login-gateway__space { background:rgba(255,255,255,.88) !important; border-color:rgba(80,120,190,.18) !important; color:#132a52 !important; }
+.login-gateway--public .login-gateway__space>span { width:40px !important; height:40px !important; }
+.login-gateway--public .login-gateway__space strong { font-size:.92rem !important; line-height:1 !important; }
+.login-gateway--public .login-gateway__space small { display:none !important; }
+.login-gateway--public .login-gateway__space--ensino { top:2% !important; left:50% !important; transform:translateX(-50%) !important; }
+.login-gateway--public .login-gateway__space--hospital { top:32% !important; left:14% !important; }
+.login-gateway--public .login-gateway__space--pesquisa { top:32% !important; right:14% !important; }
+.login-gateway--public .login-gateway__space--consultorio { top:72% !important; left:16% !important; }
+.login-gateway--public .login-gateway__space--gestao { top:72% !important; right:16% !important; }
+.login-gateway--public .login-gateway__console {
+  display:grid !important; width:min(calc(100% - 72px),1220px) !important; min-height:188px !important;
+  grid-template-columns:minmax(0,1fr) 340px !important; grid-template-rows:auto 1fr !important;
+  grid-template-areas:"head join" "form join" !important; align-items:stretch !important;
+  gap:10px 28px !important; margin:-4px auto 0 !important; padding:18px 24px !important;
+  border-radius:18px !important; background:var(--approved-panel) !important; border:1px solid var(--approved-line) !important;
+}
+.login-gateway--public .login-gateway__console-head {
+  grid-area:head !important; grid-template-columns:58px minmax(0,1fr) !important; gap:14px !important; align-items:center !important;
+}
+.login-gateway--public .login-gateway__console-head>span { width:58px !important; height:58px !important; border:1px solid rgba(64,132,223,.33) !important; }
+.login-gateway--public .login-gateway__console-head p { font-size:.61rem !important; letter-spacing:.20em !important; margin:0 0 2px !important; }
+.login-gateway--public .login-gateway__console-head h2 { font-size:1.35rem !important; line-height:1.05 !important; }
+.login-gateway--public .login-gateway__console-head small { display:block !important; margin-top:4px !important; color:var(--approved-muted) !important; font-size:.78rem !important; }
+.login-gateway--public .login-gateway__form {
+  grid-area:form !important; display:grid !important; grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  grid-template-rows:auto 18px 44px !important; gap:5px 16px !important; align-items:end !important; margin:0 !important;
+}
+.login-gateway--public .login-gateway__field { gap:4px !important; }
+.login-gateway--public .login-gateway__field>span { font-size:.68rem !important; }
+.login-gateway--public .login-gateway__field>div { min-height:42px !important; height:42px !important; border-radius:9px !important; }
+#root .login.login-gateway--public .login-gateway__field input:not([type="checkbox"]):not([type="radio"]) { min-height:40px !important; height:40px !important; font-size:.82rem !important; }
+.login-gateway--public .login-gateway__forgot { grid-column:2 !important; grid-row:2 !important; align-self:center !important; justify-self:end !important; font-size:.67rem !important; color:#1786ef !important; text-decoration:none !important; }
+.login-gateway--public .login-gateway__enter { grid-column:1 / -1 !important; grid-row:3 !important; width:100% !important; min-height:44px !important; height:44px !important; border-radius:9px !important; font-size:1rem !important; background:linear-gradient(90deg,#2479f5 0%,#20b7ee 64%,#1fd9dc 100%) !important; }
+.login-gateway--public .login-gateway__join {
+  grid-area:join !important; align-self:center !important; min-height:150px !important;
+  grid-template-columns:58px minmax(0,1fr) 22px !important; gap:14px !important;
+  padding:18px 20px !important; border-radius:16px !important;
+  background:linear-gradient(135deg,rgba(96,60,187,.17),rgba(220,65,144,.10)) !important;
+  border:1px solid rgba(137,91,216,.33) !important;
+}
+.login-gateway--light .login-gateway__join { background:linear-gradient(135deg,rgba(122,87,222,.10),rgba(235,111,171,.10)) !important; }
+.login-gateway--public .login-gateway__join>span:first-child { width:58px !important; height:58px !important; border-radius:50% !important; }
+.login-gateway--public .login-gateway__join strong { font-size:.86rem !important; }
+.login-gateway--public .login-gateway__join small { display:block !important; margin-top:3px !important; color:#2c7ee8 !important; font-size:1.05rem !important; font-weight:700 !important; }
+.login-gateway--public .login-gateway__join em { display:block !important; margin-top:8px !important; color:var(--approved-muted) !important; font-size:.68rem !important; line-height:1.35 !important; font-style:normal !important; }
+.login-gateway--public .login-gateway__footer {
+  display:flex !important; width:min(calc(100% - 72px),1380px) !important; min-height:58px !important;
+  align-items:center !important; justify-content:space-between !important; gap:24px !important;
+  margin:14px auto 0 !important; padding:12px 0 8px !important; border-top:1px solid rgba(91,145,198,.38) !important;
+  color:var(--approved-muted) !important; font-size:.62rem !important; letter-spacing:.18em !important;
+}
+.login-gateway--public .login-gateway__footer>div:last-child { display:flex !important; align-items:center !important; gap:14px !important; white-space:nowrap !important; }
+.login-gateway--public .login-gateway__footer strong { color:var(--approved-text) !important; letter-spacing:0 !important; font-size:.72rem !important; }
+.login-gateway--public .login-gateway__footer span { opacity:.55 !important; }
+@media (prefers-reduced-motion:reduce){.login-gateway--public .login-gateway__milky-way{animation:none !important;}}
+
+@media (max-width:900px){
+  .login-gateway--public .login-gateway__topbar { display:grid !important; grid-template-columns:1fr auto !important; grid-template-areas:"brand actions" "motto motto" !important; gap:8px 10px !important; min-height:116px !important; padding:14px 16px 6px !important; }
+  .login-gateway--public .login-gateway__brand { grid-area:brand !important; }
+  .login-gateway--public .login-gateway__brand>img { width:52px !important; height:52px !important; }
+  .login-gateway--public .login-gateway__brand strong { font-size:1.85rem !important; }
+  .login-gateway--public .login-gateway__brand small { font-size:.46rem !important; margin-top:4px !important; }
+  .login-gateway--public .login-gateway__motto { grid-area:motto !important; width:100% !important; padding:6px 2px 8px !important; font-size:.48rem !important; letter-spacing:.18em !important; }
+  .login-gateway--public .login-gateway__top-actions { grid-area:actions !important; align-self:start !important; gap:0 !important; }
+  .login-gateway--public .login-gateway__slogan { display:none !important; }
+}
+@media (max-width:900px){
+  .login-gateway--public .login-gateway__scene { width:100% !important; min-height:590px !important; margin:0 auto !important; }
+  .login-gateway--public .login-gateway__hero { top:2px !important; padding:0 18px !important; gap:7px !important; }
+  .login-gateway--public .login-gateway__hero h1 { font-size:clamp(2rem,9vw,2.55rem) !important; line-height:.98 !important; }
+  .login-gateway--public .login-gateway__hero>span { max-width:360px !important; font-size:.82rem !important; line-height:1.35 !important; }
+  .login-gateway--public .login-gateway__universe { inset:142px 0 0 !important; height:410px !important; overflow:hidden !important; }
+  .login-gateway--public .login-gateway__milky-way { top:55% !important; width:650px !important; max-width:none !important; }
+  .login-gateway--public .login-gateway__core { top:56% !important; width:122px !important; height:138px !important; }
+  .login-gateway--public .login-gateway__space { width:136px !important; min-height:50px !important; grid-template-columns:36px minmax(0,1fr) !important; gap:7px !important; padding:6px 8px !important; border-radius:12px !important; }
+  .login-gateway--public .login-gateway__space>span { width:34px !important; height:34px !important; }
+  .login-gateway--public .login-gateway__space strong { font-size:.72rem !important; }
+  .login-gateway--public .login-gateway__space--ensino { top:4% !important; }
+  .login-gateway--public .login-gateway__space--hospital { top:31% !important; left:4% !important; }
+  .login-gateway--public .login-gateway__space--pesquisa { top:31% !important; right:4% !important; }
+  .login-gateway--public .login-gateway__space--consultorio { top:70% !important; left:5% !important; }
+  .login-gateway--public .login-gateway__space--gestao { top:70% !important; right:5% !important; }
+}
+@media (max-width:900px){
+  .login-gateway--public .login-gateway__console { display:grid !important; width:min(calc(100% - 24px),520px) !important; min-height:0 !important; grid-template-columns:1fr !important; grid-template-rows:auto auto auto !important; grid-template-areas:"head" "form" "join" !important; gap:12px !important; margin:4px auto 0 !important; padding:14px !important; border-radius:16px !important; }
+  .login-gateway--public .login-gateway__console-head { grid-template-columns:44px minmax(0,1fr) !important; gap:10px !important; }
+  .login-gateway--public .login-gateway__console-head>span { width:44px !important; height:44px !important; }
+  .login-gateway--public .login-gateway__console-head p { font-size:.54rem !important; }
+  .login-gateway--public .login-gateway__console-head h2 { font-size:1.15rem !important; }
+  .login-gateway--public .login-gateway__console-head small { font-size:.70rem !important; }
+  .login-gateway--public .login-gateway__form { grid-template-columns:1fr !important; grid-template-rows:auto auto 18px 44px !important; gap:7px !important; }
+  .login-gateway--public .login-gateway__field:nth-of-type(1) { grid-row:1 !important; }
+  .login-gateway--public .login-gateway__field:nth-of-type(2) { grid-row:2 !important; }
+  .login-gateway--public .login-gateway__forgot { grid-column:1 !important; grid-row:3 !important; justify-self:end !important; }
+  .login-gateway--public .login-gateway__enter { grid-column:1 !important; grid-row:4 !important; }
+  .login-gateway--public .login-gateway__join { min-height:66px !important; grid-template-columns:42px minmax(0,1fr) 18px !important; padding:10px 12px !important; }
+  .login-gateway--public .login-gateway__join>span:first-child { width:42px !important; height:42px !important; }
+  .login-gateway--public .login-gateway__join strong { font-size:.74rem !important; }
+  .login-gateway--public .login-gateway__join small { font-size:.82rem !important; }
+  .login-gateway--public .login-gateway__join em { display:none !important; }
+  .login-gateway--public .login-gateway__footer { width:calc(100% - 28px) !important; min-height:62px !important; flex-direction:column !important; justify-content:center !important; gap:8px !important; margin-top:12px !important; padding:12px 0 18px !important; text-align:center !important; font-size:.48rem !important; line-height:1.7 !important; }
+  .login-gateway--public .login-gateway__footer>div:last-child { display:none !important; }
+}
+@media (max-width:900px){
+  .login-gateway--public .login-gateway__topbar { grid-template-columns:minmax(0,1fr) auto !important; grid-template-areas:"brand actions" !important; min-height:84px !important; padding:14px 16px 6px !important; }
+  .login-gateway--public .login-gateway__motto { display:none !important; }
+  .login-gateway--public .login-gateway__brand { align-items:center !important; }
+  .login-gateway--public .login-gateway__brand>img { width:48px !important; height:48px !important; }
+  .login-gateway--public .login-gateway__brand strong { font-size:1.7rem !important; }
+  .login-gateway--public .login-gateway__brand small { font-size:.43rem !important; }
+  .login-gateway--public .login-gateway__scene { min-height:565px !important; }
+  .login-gateway--public .login-gateway__universe { inset:132px 0 0 !important; }
+}

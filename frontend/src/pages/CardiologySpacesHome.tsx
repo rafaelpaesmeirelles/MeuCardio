@@ -11,6 +11,7 @@ import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo, nomeComTratamento } from "../lib/clinicalIdentity";
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
+import "../styles/corvia-internal-final-approved-20260904.css";
 
 type Mode = "complete" | "essential" | "scientific";
 type ClinicalSpaceId = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
@@ -1421,24 +1422,25 @@ export default function CardiologySpacesHome() {
           </span>
           <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
         </header>
+        <div className="spaces-choice__change" aria-hidden="true"><span><Icone nome="seta" /></span><div><strong>Mudar universo</strong><small>Clique para explorar</small></div></div>
         <section className="spaces-choice__content">
-          <p className="spaces-eyebrow">CARDIOLOGY SPACES</p>
-          <h1>Como {chamamentoNaFrase} quer trabalhar hoje?</h1>
-          <p>Escolha a experiência que acompanha o seu momento. O CorVIA reorganiza cada ambiente ao redor do que importa agora.</p>
+          <p className="spaces-eyebrow">ESCOLHA SEU ESPAÇO</p>
+          <h1>Onde {chamamentoNaFrase} vai trabalhar agora?</h1>
+          <p>Escolha o ambiente que acompanha o seu momento. O CorVIA organiza cada universo ao redor do que realmente importa.</p>
           <div className="spaces-choice__cards">
             <button type="button" onClick={() => chooseMode("complete")}>
-              <span className="spaces-choice__icon"><Icone nome="gestao" /></span>
-              <strong>Completo</strong><small>Todos os ambientes e as três camadas funcionais: Agora, Em seguida e Referências.</small>
-              <em>Entrar no sistema completo <Icone nome="seta" /></em>
+              <span className="spaces-choice__icon"><Icone nome="favorito" /></span>
+              <strong>Completo</strong><small>Todas as evidências e as três camadas funcionais para um planejamento estruturado.</small>
+              <em>Entrar no ambiente completo <Icone nome="seta" /></em>
             </button>
             <button type="button" onClick={() => chooseMode("essential")}>
-              <span className="spaces-choice__icon"><Icone nome="configuracao" /></span>
-              <strong>Essencial</strong><small>A mesma potência, com a rotina em foco e essenciais personalizados por espaço.</small>
-              <em>Entrar no sistema essencial <Icone nome="seta" /></em>
+              <span className="spaces-choice__icon spaces-choice__icon--essential"><span className="spaces-choice__target" /></span>
+              <strong>Essencial</strong><small>A ciência precisa, com o ativo que foca o essencial para decisões com precisão.</small>
+              <em>Entrar no ambiente essencial <Icone nome="seta" /></em>
             </button>
             <button type="button" className="spaces-choice__science" onClick={() => chooseMode("scientific")}>
               <span className="spaces-choice__icon"><Icone nome="conhecimento" /></span>
-              <strong>Ciência & Ensino</strong><small>Descobrir, validar evidências, aprender, ensinar e produzir no mesmo universo visual.</small>
+              <strong>Ciência & Ensino</strong><small>Conteúdos, estudos e ensino, conectando ciência e prática para formar e transformar.</small>
               <em>Entrar no ambiente científico <Icone nome="seta" /></em>
             </button>
           </div>
