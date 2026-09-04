@@ -10,6 +10,7 @@ import "../styles/prehome-reference-final.css";
 import "../styles/login-viewport-refinement.css";
 import "../styles/cardiology-spaces-login.css";
 import "../styles/cardiology-spaces-login-approved-final.css";
+import "../styles/cardiology-spaces-login-galaxy-kinematics.css";
 
 type TemaPublico = CorviaTheme;
 
