@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: science/reconcile-open-pr-corpus-20260904
-      - name: Extract TODO fields from remaining medication records
+      - name: Extract final medication fields
         run: |
           python - <<'PY' > /tmp/final-science-todos.json
           import json, re
@@ -54,19 +54,21 @@ jobs:
                   output.append({
                       'slug': record['slug'],
                       'review_status': record.get('review_status'),
+                      'sbp_reduction_mmhg': record.get('sbp_reduction_mmhg'),
+                      'dbp_reduction_mmhg': record.get('dbp_reduction_mmhg'),
+                      'half_life_hours': record.get('half_life_hours'),
+                      'duration_of_action_hours': record.get('duration_of_action_hours'),
                       'todo_fields': walk(record),
                       'references': record.get('references'),
                       'source_refs': record.get('source_refs'),
-                      'commercial_presentations': record.get('commercial_presentations'),
                       'half_life_note': record.get('half_life_note'),
                       'duration_of_action_note': record.get('duration_of_action_note'),
                       'bp_evidence_source': record.get('bp_evidence_source'),
                   })
           print(json.dumps(output, ensure_ascii=False, indent=2))
           PY
-          cat /tmp/final-science-todos.json
       - uses: actions/upload-artifact@v6
         with:
-          name: final-science-todos
+          name: final-science-todos-values
           path: /tmp/final-science-todos.json
           retention-days: 7
