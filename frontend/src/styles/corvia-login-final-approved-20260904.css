@@ -239,3 +239,9 @@
     top: 32% !important;
   }
 }
+
+/* FINAL: login mantém a rotação lenta horária aprovada, sem flip 3D. */
+.login-gateway--public .login-gateway__milky-way {
+  transform-style: flat !important;
+  animation: corvia-final-galaxy-clockwise 120s linear infinite !important;
+}

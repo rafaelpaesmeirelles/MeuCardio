@@ -1,15 +1,10 @@
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const BUILD_COMMIT = String(import.meta.env.VITE_DEPLOY_COMMIT ?? "unknown");
-const CHAVE_ULTIMA_RECARGA = "corvia.freshness.reload";
-const INTERVALO_MINIMO_CHECK_MS = 5000;
+const CHAVE_ATUALIZACAO_PENDENTE = "corvia.freshness.pending";
+const INTERVALO_MINIMO_CHECK_MS = 60_000;
 
 let verificando = false;
-let recargaPendente = false;
 let ultimoCheckEm = 0;
-
-function streamAtivo() {
-  return Boolean((window as unknown as { __streamAtivo?: boolean }).__streamAtivo);
-}
 
 async function limparCachesDoApp() {
   if (!("caches" in window)) return;
@@ -22,26 +17,18 @@ async function limparCachesDoApp() {
 }
 
 async function prepararNovaVersao(commit: string) {
-  const agora = Date.now();
-  const ultimo = Number(sessionStorage.getItem(CHAVE_ULTIMA_RECARGA) || "0");
-  if (agora - ultimo < 5000) return;
-
-  if (streamAtivo()) {
-    recargaPendente = true;
-    return;
-  }
-
-  sessionStorage.setItem(CHAVE_ULTIMA_RECARGA, String(agora));
+  // Nunca interrompe uma consulta, digitação ou fluxo clínico com reload automático.
+  // A nova versão será usada na próxima navegação/reabertura normal da página.
+  if (sessionStorage.getItem(CHAVE_ATUALIZACAO_PENDENTE) === commit) return;
+  sessionStorage.setItem(CHAVE_ATUALIZACAO_PENDENTE, commit);
   try {
     await limparCachesDoApp();
     if ("serviceWorker" in navigator) {
       const registro = await navigator.serviceWorker.getRegistration();
       await registro?.update().catch(() => undefined);
     }
-  } finally {
-    const url = new URL(window.location.href);
-    url.searchParams.set("__corvia_build", commit.slice(0, 12));
-    window.location.replace(url.toString());
+  } catch {
+    // Falha ao preparar atualização não pode interromper o uso atual.
   }
 }
 
@@ -71,7 +58,5 @@ export async function verificarVersaoAtual(forcar = false) {
 }
 
 export function liberarRecargaPendente() {
-  if (!recargaPendente) return;
-  recargaPendente = false;
-  void verificarVersaoAtual(true);
+  // Mantido por compatibilidade com streams existentes; não força recarga.
 }

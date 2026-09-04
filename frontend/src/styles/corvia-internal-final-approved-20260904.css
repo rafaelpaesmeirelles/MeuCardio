@@ -238,3 +238,60 @@ html[data-corvia-theme="dark"] .spaces-brand strong b {
   from { transform: scale(var(--corvia-mini-galaxy-scale)) rotateY(0deg); }
   to { transform: scale(var(--corvia-mini-galaxy-scale)) rotateY(360deg); }
 }
+
+/* FINAL: tema claro usa a paleta clara aprovada, nunca inversão do escuro. */
+html[data-corvia-theme="light"] .spaces-choice,
+html[data-corvia-theme="light"] .spaces-home {
+  --spaces-bg: #f7f3fa !important;
+  --spaces-panel: rgba(255,255,255,.87) !important;
+  --spaces-panel-strong: rgba(255,255,255,.97) !important;
+  --spaces-line: rgba(75,79,196,.22) !important;
+  --spaces-line-soft: rgba(75,79,196,.12) !important;
+  --spaces-text: #1b2440 !important;
+  --spaces-text-2: #4d5873 !important;
+  --spaces-text-3: #5e687f !important;
+  --spaces-cyan: #0f727a !important;
+  --spaces-blue: #4b4fc4 !important;
+  --spaces-brand-blue: #4b4fc4 !important;
+  --spaces-violet: #7957c8 !important;
+  --spaces-rose: #c42068 !important;
+  --spaces-teal: #0f727a !important;
+}
+html[data-corvia-theme="light"] .spaces-choice {
+  background:
+    radial-gradient(circle at 50% 47%, rgba(75,79,196,.20), transparent 31rem),
+    radial-gradient(circle at 76% 70%, rgba(121,87,200,.10), transparent 27rem),
+    radial-gradient(circle at 13% 16%, rgba(19,122,128,.09), transparent 22rem),
+    linear-gradient(145deg,#f7f3fa 0%,#eef2fa 53%,#eef2fa 100%) !important;
+}
+html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
+  mix-blend-mode: normal !important;
+  opacity: .94 !important;
+  filter: brightness(1.04) saturate(.90) contrast(.94) drop-shadow(0 0 7px rgba(75,79,196,.14)) !important;
+}
+/* FINAL: minigaláxias internas preservam a rotação anti-horária aprovada. */
+.spaces-home .galaxy-theme-toggle__image,
+.spaces-choice .galaxy-theme-toggle__image {
+  transform-style: flat !important;
+  animation: corvia-internal-galaxy-ccw 120s linear infinite !important;
+}
+
+/* FINAL: Ensino permanece inteiro no trio inicial do carrossel clínico mobile. */
+@media (max-width:900px) {
+  .spaces-home:not(.spaces-home--scientific) .spaces-doors {
+    width: calc(100% + 24px) !important;
+    gap: 8px !important;
+    margin: 0 -12px !important;
+    padding: 0 12px 5px !important;
+  }
+  .spaces-home:not(.spaces-home--scientific) .spaces-door {
+    width: 104px !important;
+    min-width: 104px !important;
+    flex: 0 0 104px !important;
+  }
+  .spaces-home:not(.spaces-home--scientific) .spaces-door.is-active {
+    width: 140px !important;
+    min-width: 140px !important;
+    flex: 0 0 140px !important;
+  }
+}
