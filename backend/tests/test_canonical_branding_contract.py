@@ -18,7 +18,7 @@ def test_canonical_brand_assets_exist_and_are_named_explicitly():
     assert "CorVIA" in mark.read_text(encoding="utf-8")
     wordmark_source = wordmark.read_text(encoding="utf-8")
     assert "Cardiology Spaces" in wordmark_source
-    assert "#18D5F4" in wordmark_source
+    assert "#17335D" in wordmark_source
     assert "Clinical OS" not in wordmark_source
 
 
