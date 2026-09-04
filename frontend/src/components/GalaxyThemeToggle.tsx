@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
@@ -36,7 +36,21 @@ function useCanonicalSpacesIdentityCopy() {
  */
 export default function GalaxyThemeToggle({ className = "" }: { className?: string }) {
   const { theme, toggleTheme } = useCorviaTheme();
+  const videoRef = useRef<HTMLVideoElement>(null);
   useCanonicalSpacesIdentityCopy();
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotionPreference = () => {
+      if (reducedMotion.matches) video.pause();
+      else void video.play().catch(() => undefined);
+    };
+    syncMotionPreference();
+    reducedMotion.addEventListener?.("change", syncMotionPreference);
+    return () => reducedMotion.removeEventListener?.("change", syncMotionPreference);
+  }, []);
 
   return (
     <button
@@ -47,6 +61,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
       title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
     >
       <video
+        ref={videoRef}
         className="galaxy-theme-toggle__video"
         src="/spaces/galaxy-loop-v2.mp4"
         poster="/spaces/galaxy-loop-poster.webp"
