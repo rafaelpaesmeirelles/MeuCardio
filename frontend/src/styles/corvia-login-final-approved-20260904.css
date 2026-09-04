@@ -215,3 +215,20 @@
 @media (min-width:901px) {
   .login-gateway--public .login-gateway__space--ensino { top:32% !important; }
 }
+
+/* FINAL 04/09: sem alterar layout — VIA discretamente mais claro no modo escuro. */
+.login-gateway--dark .corvia-via {
+  color: #5f8fe8 !important;
+  text-shadow: 0 0 16px rgba(95,143,232,.22) !important;
+}
+
+/* FINAL 04/09: galáxia do login gira horizontalmente no próprio eixo. */
+.login-gateway--public .login-gateway__milky-way {
+  transform-origin: 50% 50% !important;
+  transform-style: preserve-3d !important;
+  animation: corvia-final-login-galaxy-horizontal 120s linear infinite !important;
+}
+@keyframes corvia-final-login-galaxy-horizontal {
+  from { transform: translate(-50%, -50%) rotateY(0deg); }
+  to { transform: translate(-50%, -50%) rotateY(360deg); }
+}

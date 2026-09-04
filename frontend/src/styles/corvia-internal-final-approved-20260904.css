@@ -219,3 +219,22 @@ html[data-corvia-theme="light"] .spaces-choice__cards > button {
     width:74px !important; height:46px !important;
   }
 }
+
+/* FINAL 04/09: sem alterar layout — VIA discretamente mais claro no modo escuro. */
+html[data-corvia-theme="dark"] .spaces-brand strong b {
+  color: #5f8fe8 !important;
+  text-shadow: 0 0 16px rgba(95,143,232,.22) !important;
+}
+
+/* FINAL 04/09: minigaláxias um pouco maiores visualmente, mesmo footprint. */
+.spaces-home .galaxy-theme-toggle__image,
+.spaces-choice .galaxy-theme-toggle__image {
+  --corvia-mini-galaxy-scale: 1.05;
+  transform-origin: 50% 50% !important;
+  transform-style: preserve-3d !important;
+  animation: corvia-final-mini-galaxy-horizontal 120s linear infinite !important;
+}
+@keyframes corvia-final-mini-galaxy-horizontal {
+  from { transform: scale(var(--corvia-mini-galaxy-scale)) rotateY(0deg); }
+  to { transform: scale(var(--corvia-mini-galaxy-scale)) rotateY(360deg); }
+}
