@@ -39065,5 +39065,97 @@
     "revisao": "Revisão científica independente concluída em 2026-09-01: critérios, condutas, doses, contraindicações, monitorização e referências conferidos; aplicar com julgamento clínico, bula vigente, protocolos locais e decisão multidisciplinar quando indicada.",
     "published": true,
     "review_note": "Revisão final 31/08/2026: referências auditadas por fontes públicas disponíveis; PMIDs cruzados incorretos corrigidos; conflitos preservam a main; marcadores editoriais removidos."
+  },
+  {
+    "slug": "seguranca-pre-teste-ergometrico-contraindicacoes-e-interrupcao",
+    "condicao": "Avaliação de segurança antes e durante o teste ergométrico",
+    "resumo": "Rastreio de contraindicações absolutas e relativas antes de indicar o teste ergométrico, e os critérios objetivos de interrupção do esforço, conforme a Diretriz Brasileira de Ergometria (SBC 2024).",
+    "documento_origem": "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabelas de contraindicações absolutas, contraindicações relativas e critérios de interrupção do esforço transcritas item a item"
+    ],
+    "itens": [
+      {
+        "id": "te-seg-contraindicacoes-absolutas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações absolutas rastreadas antes de iniciar o teste — embolia pulmonar aguda, IAM antes de 5 dias ou com complicações, angina instável, arritmia cardíaca não controlada, IC descompensada, miocardite ou pericardite aguda, dissecção aguda da aorta, BAV de risco, entre outras",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "te-seg-pa-repouso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Pressão arterial de repouso conferida — PAS ≥ 180 mmHg ou PAD > 110 mmHg persistentes, ou crise/urgência hipertensiva, são contraindicação absoluta",
+        "origem_secao": "Contraindicacoes ABSOLUTAS"
+      },
+      {
+        "id": "te-seg-aneurisma-aorta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Distinção feita entre aneurisma de aorta com indicação de intervenção (contraindicação absoluta) e sem indicação de intervenção (contraindicação relativa, cuidados especiais)",
+        "origem_secao": "Contraindicacoes ABSOLUTAS / Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-estenose-aortica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Estenose aórtica classificada por gravidade e sintoma antes do teste — grave e sintomática é contraindicação absoluta; grave e assintomática é relativa, em ambiente hospitalar",
+        "origem_secao": "Contraindicacoes ABSOLUTAS / Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-relativas-hospitalar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações relativas que exigem ambiente hospitalar identificadas — dor torácica aguda, IAM não complicado a partir do 5º dia, angina instável após 72h de estabilização, doença de tronco em assintomático, entre outras",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-cdi-identificar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Portador de cardiodesfibrilador implantado identificado, com a frequência de acionamento do dispositivo registrada antes do teste",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      },
+      {
+        "id": "te-seg-sintomas-interrupcao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Critérios de interrupção por sintomas monitorados durante o esforço — Borg ≥ 18, dor torácica crescente e limitante, dispneia precoce e desproporcional, vertigem persistente, pré-síncope ou síncope",
+        "origem_secao": "Criterios de interrupcao do esforco — Sintomas"
+      },
+      {
+        "id": "te-seg-ecg-interrupcao",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Critérios eletrocardiográficos de interrupção monitorados — infradesnivelamento de ST ≥ 0,3 mV, supradesnivelamento ≥ 0,2 mV sem infarto prévio, TVNS, BAV de 2º/3º grau induzido, bloqueio de ramo induzido",
+        "origem_secao": "Criterios de interrupcao do esforco — Eletrocardiograficos"
+      },
+      {
+        "id": "te-seg-pas-queda-confirmar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Queda de PAS ≥ 20 mmHg após elevação inicial, se assintomática, confirmada em pelo menos mais uma medida antes de encerrar o teste",
+        "origem_secao": "Criterios de interrupcao do esforco — Exame fisico e variaveis cardiovasculares"
+      },
+      {
+        "id": "te-seg-cdi-interrupcao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Em portador de CDI, teste interrompido 10 batimentos abaixo da frequência de acionamento do desfibrilador, sem levar o paciente à exaustão",
+        "origem_secao": "Criterios de interrupcao do esforco — Eletrocardiograficos"
+      },
+      {
+        "id": "te-seg-ambiente-hospitalar",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Teste realizado em ambiente hospitalar, idealmente unidade de dor torácica, quando indicado por contraindicação relativa de maior risco",
+        "origem_secao": "Contraindicacoes RELATIVAS"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam da diretriz citada em source_refs, com a seção de origem registrada em cada item.",
+    "review_note": "Revisão técnica, documental e de consistência assistida concluída em 04/09/2026; fontes, duplicidade, integridade estrutural e segurança editorial verificadas para preparação do corpus sob autorização do responsável médico."
   }
 ]

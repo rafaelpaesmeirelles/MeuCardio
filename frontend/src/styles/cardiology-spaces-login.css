@@ -269,6 +269,9 @@
 }
 
 .login-gateway__routes {
+  /* Removidos a pedido do Rafael, 03/09/2026: os 3 traços curvos pontilhados
+     saindo do círculo do coração, em claro e escuro. */
+  display: none;
   position: absolute;
   z-index: 1;
   inset: 1% 2% 0;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
 import PatientPrescricao from "../components/PatientPrescricao";
@@ -9,7 +10,12 @@ type Problema = { id: number; label: string; status: string };
 type Sugestao = {
   id: number; created_at: string; model: string;
   differential_diagnosis: string; suggested_workup: string;
-  treatment_considerations: string; sources: { slug: string; titulo: string }[];
+  treatment_considerations: string;
+  // `rota`/`entity_type` vêm de montar_contexto() (app/services/rag.py) desde
+  // 03/09/2026 — analisar_caso() só repassa o que recuperar()/montar_contexto()
+  // já produzem, sem montar URL própria. Opcionais para tolerar resposta em
+  // cache de sessão anterior a essa correção.
+  sources: { slug: string; titulo: string; rota?: string | null; entity_type?: string | null }[];
   sources_pubmed: { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string }[];
 };
 type Paciente = {
@@ -422,7 +428,16 @@ export default function Round() {
                           <p style={{ fontSize: "0.88rem", whiteSpace: "pre-wrap" }}>{s.treatment_considerations}</p>
                           {s.sources.length > 0 && (
                             <p style={{ fontSize: "0.78rem", color: "var(--texto-secundario)" }}>
-                              Fontes: {s.sources.map((f) => f.titulo).join(", ")}
+                              Fontes:{" "}
+                              {s.sources.map((f, i) => {
+                                const href = f.rota && f.rota.startsWith("/") ? f.rota : `/biblioteca/${f.slug}`;
+                                return (
+                                  <span key={`${f.entity_type ?? "documento"}-${f.slug}`}>
+                                    {i > 0 && ", "}
+                                    <Link to={href}>{f.titulo}</Link>
+                                  </span>
+                                );
+                              })}
                             </p>
                           )}
                           {s.sources_pubmed && s.sources_pubmed.length > 0 && (

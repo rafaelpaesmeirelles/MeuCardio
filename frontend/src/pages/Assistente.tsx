@@ -11,6 +11,14 @@ type Modo = "clinica" | "pessoal";
 
 type Fonte = {
   referencia: string; slug: string; titulo: string; tema: string; review_status: string;
+  // Correção coordenada de 03/09/2026: `rota`/`entity_type` já vêm do backend
+  // (`montar_contexto()`, app/services/rag.py) para TODAS as frentes — não só
+  // documento. `rota` é a fonte da verdade de navegação; nunca recompor a URL
+  // a partir do slug sozinho (era exatamente esse o bug: link sempre montado
+  // como /biblioteca/{slug}, quebrado para qualquer citação que não fosse
+  // documento — evidência, estudo, medicamento, calculadora etc.).
+  rota?: string | null;
+  entity_type?: string | null;
 };
 type FontePubmed = { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string };
 type Mensagem = {
@@ -464,15 +472,25 @@ export default function Assistente() {
                 {m.fontes && m.fontes.length > 0 && (
                   <div className="ia__fontes">
                     <p className="eyebrow">Fontes consultadas</p>
-                    {m.fontes.map((f) => (
-                      <Link key={f.slug} to={`/biblioteca/${f.slug}`} className="ia__fonte">
-                        <span className="dado ia__fonte__marca">{f.referencia}</span>
-                        <span>{f.titulo}</span>
-                        {f.review_status === "verificacao_humana_necessaria" && (
-                          <span className="selo selo--pendente">verificar</span>
-                        )}
-                      </Link>
-                    ))}
+                    {m.fontes.map((f) => {
+                      // `rota` é a fonte da verdade — vem do backend e é a
+                      // única forma correta de linkar cada entity_type
+                      // (evidência, estudo, medicamento, calculadora, etc. NÃO
+                      // usam /biblioteca/{slug}). Só cai no fallback antigo
+                      // se a resposta vier sem `rota` (ex.: cache de sessão
+                      // antiga) — nesse caso é melhor que nada, mas pode
+                      // quebrar para quem não é documento.
+                      const href = f.rota && f.rota.startsWith("/") ? f.rota : `/biblioteca/${f.slug}`;
+                      return (
+                        <Link key={`${f.entity_type ?? "documento"}-${f.slug}`} to={href} className="ia__fonte">
+                          <span className="dado ia__fonte__marca">{f.referencia}</span>
+                          <span>{f.titulo}</span>
+                          {f.review_status === "verificacao_humana_necessaria" && (
+                            <span className="selo selo--pendente">verificar</span>
+                          )}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
                 {m.fontesPubmed && m.fontesPubmed.length > 0 && (

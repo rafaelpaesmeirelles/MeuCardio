@@ -235,7 +235,7 @@ jobs:
                   rootRect: rect(selectors.root),
                   panelRect: rect(selectors.panel),
                   footerRect: rect('.login-gateway__footer'),
-                  utilitiesRect: rect('.login-gateway__utilities'),
+                  utilitiesRect: rect('.login-gateway__join'),
                   metaRect: rect('.login-gateway__form-meta'),
                   headingRect: rect('.login-gateway__hero h1'),
                   sceneRect: rect('.login-gateway__scene'),
@@ -273,7 +273,7 @@ jobs:
                   '.login-gateway__space--gestao', '.login-gateway__console',
                   '.login-gateway__console-head', '.login-gateway__theme-choice',
                   '.login-gateway__form', '.login-gateway__footer',
-                  '.login-gateway__form-meta', '.login-gateway__utilities',
+                  '.login-gateway__form-meta', '.login-gateway__join',
                 ];
                 const captureThemeContract = () => page.evaluate((selectors) => {
                   const rects = Object.fromEntries(selectors.map((selector) => {
@@ -300,11 +300,39 @@ jobs:
                     controls,
                   };
                 }, paritySelectors);
+                // Zera o scroll antes de cada captura: o console de acesso é mais alto
+                // que o viewport em telas móveis estreitas, então o rádio de tema (o
+                // rádio nativo fica oculto 1x1px atrás do ícone) pode ficar abaixo da
+                // dobra — focar um controle assim faz o navegador rolar a página para
+                // revelá-lo (`html { scroll-behavior: smooth }` é política global do
+                // site, `tokens.css`), mesmo em clique que não troca de tema. Sem este
+                // reset, a comparação claro×escuro compara uma captura no topo (antes
+                // de qualquer interação) contra outra já rolada (depois do clique),
+                // acusando "geometria divergente" que é só posição de scroll, não
+                // diferença real de layout entre temas.
+                //
+                // `window.scrollTo(0, 0)` sozinho NÃO basta: como o scroll do
+                // navegador é suave (smooth) e o elemento focado permanece focado, o
+                // navegador reafirma a rolagem quadro a quadro por cima de qualquer
+                // reset síncrono. É preciso 1) esperar a rolagem suave nativa
+                // terminar, 2) desfocar o controle, e só então 3) forçar
+                // `behavior: 'instant'`, que ignora o `scroll-behavior: smooth` global
+                // (a opção do método tem precedência sobre a propriedade CSS).
+                async function zerarScrollAposFoco() {
+                  await page.waitForTimeout(500);
+                  await page.evaluate(() => {
+                    if (document.activeElement && document.activeElement !== document.body) {
+                      document.activeElement.blur();
+                    }
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                  });
+                }
+                await zerarScrollAposFoco();
                 const darkContract = await captureThemeContract();
                 const lightThemeInput = page.locator('input[name="tema-publico"][value="light"]');
                 await page.locator('label:has(input[name="tema-publico"][value="light"])').click();
                 await page.locator('.login-gateway[data-login-theme="light"]').waitFor();
-                await page.waitForTimeout(120);
+                await zerarScrollAposFoco();
                 const lightContract = await captureThemeContract();
                 const lightLuminance = luminance(lightContract.panelBackground);
                 report.themeParity.push({ viewportName, dark: darkContract, light: lightContract, lightPanelLuminance: lightLuminance });

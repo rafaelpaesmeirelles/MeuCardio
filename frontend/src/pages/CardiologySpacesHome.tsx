@@ -4,11 +4,11 @@ import CardiologySpaceScene from "../components/CardiologySpaceScene";
 import Icone, { type NomeIcone } from "../components/Icone";
 import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
 import { CoracaoHolografico } from "../components/PreHomeBrand";
+import GalaxyThemeToggle from "../components/GalaxyThemeToggle";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo, nomeComTratamento } from "../lib/clinicalIdentity";
-import { useCorviaTheme } from "../lib/corviaTheme";
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
 
@@ -910,7 +910,6 @@ function mobilityRouteError(result: MobilityResult) {
 
 export default function CardiologySpacesHome() {
   const { usuario } = useAuth();
-  const { theme, toggleTheme } = useCorviaTheme();
   const navigate = useNavigate();
   const [mode, setMode] = useState<Mode | null>(() => {
     const saved = sessionStorage.getItem(MODE_KEY);
@@ -1415,7 +1414,13 @@ export default function CardiologySpacesHome() {
     return (
       <main className="spaces-choice">
         <div className="spaces-choice__heart" aria-hidden="true"><CoracaoHolografico /></div>
-        <header><Brand /><span className="spaces-user"><UserIdentity usuario={usuario} /></span></header>
+        <header>
+          <span className="spaces-choice__brand-cluster">
+            <Brand />
+            <GalaxyThemeToggle className="spaces-choice__theme-toggle" />
+          </span>
+          <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
+        </header>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">CARDIOLOGY SPACES</p>
           <h1>Como {chamamentoNaFrase} quer trabalhar hoje?</h1>
@@ -1449,21 +1454,7 @@ export default function CardiologySpacesHome() {
       <header className="spaces-home__topbar">
         <div className="spaces-home__brand-cluster">
           <button type="button" className="spaces-brand-button" onClick={resetMode} aria-label="Voltar à escolha de experiência"><Brand /></button>
-          <button
-            type="button"
-            className="spaces-theme-cameo"
-            onClick={toggleTheme}
-            aria-label={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
-            title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
-          >
-            <img
-              src="/spaces/corvia-galaxy-cameo.webp"
-              alt=""
-              width="132"
-              height="44"
-              draggable="false"
-            />
-          </button>
+          <GalaxyThemeToggle />
         </div>
         <form className="spaces-everything-search" role="search" onSubmit={searchEverything}>
           <Icone nome="busca" />

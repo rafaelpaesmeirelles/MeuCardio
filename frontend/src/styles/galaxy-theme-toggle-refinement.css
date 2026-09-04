@@ -1,0 +1,83 @@
+/* CorVIA — refinamento visual do GalaxyThemeToggle (03/09/2026)
+ *
+ * Mantém exatamente o footprint/área clicável do controle aprovado, mas
+ * elimina a cápsula/faixa colorida visível nas laterais do vídeo. O MP4
+ * continua usando mix-blend-mode: screen e o filtro já definido na folha
+ * canônica; aqui apenas tornamos o chrome do botão e o fundo do elemento
+ * <video> visualmente transparentes.
+ */
+.galaxy-theme-toggle,
+.galaxy-theme-toggle:hover,
+.galaxy-theme-toggle:active {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.galaxy-theme-toggle::before,
+.galaxy-theme-toggle::after {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.galaxy-theme-toggle__video {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/*
+ * Identidade canônica no canto superior direito.
+ *
+ * No desktop a Home já exibe foto + nome com tratamento. No mobile a folha
+ * original reduzia o alvo a 44px e ocultava o texto para preservar a busca.
+ * O pedido atual exige foto + título escolhido + primeiro nome também no
+ * mobile. Mantemos a mesma célula do topo e apenas reservamos largura para o
+ * texto curto; o chevron é dispensável em telas estreitas.
+ */
+@media (max-width: 900px) {
+  .spaces-home__topbar > .spaces-user,
+  .spaces-choice > header .spaces-user {
+    width: min(132px, 31vw) !important;
+    min-width: 92px !important;
+    max-width: min(132px, 31vw) !important;
+    justify-content: flex-end !important;
+    gap: 6px !important;
+    overflow: hidden !important;
+  }
+
+  .spaces-home__topbar > .spaces-user .spaces-user__name,
+  .spaces-choice > header .spaces-user .spaces-user__name {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: 82px !important;
+    overflow: hidden !important;
+    font-size: 0.66rem !important;
+    font-weight: 600 !important;
+    line-height: 1.15 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .spaces-home__topbar > .spaces-user > svg:last-child {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .spaces-home__topbar > .spaces-user,
+  .spaces-choice > header .spaces-user {
+    width: min(112px, 29vw) !important;
+    min-width: 86px !important;
+    max-width: min(112px, 29vw) !important;
+    gap: 5px !important;
+  }
+
+  .spaces-home__topbar > .spaces-user .spaces-user__name,
+  .spaces-choice > header .spaces-user .spaces-user__name {
+    max-width: 67px !important;
+    font-size: 0.62rem !important;
+  }
+}
+
+/* O foco por teclado continua vindo do outline canônico; não o removemos. */
