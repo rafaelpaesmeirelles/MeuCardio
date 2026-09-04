@@ -81,10 +81,13 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
   assert.match(entrar, /className="login-gateway__galaxy-image"/);
   assert.match(entrar, /src="\/spaces\/corvia-galaxy-cameo\.webp"/);
   assert.doesNotMatch(entrar, /login-gateway__galaxy-video|galaxy-loop-v2\.mp4/);
-  assert.match(read("src/styles/corvia-login-final-approved-20260904.css"), /animation:\s*corvia-final-galaxy-clockwise 120s linear infinite !important/,
-    "as quatro variantes precisam girar lentamente em sentido horário");
-  assert.match(read("src/styles/corvia-login-final-approved-20260904.css"), /@keyframes corvia-final-galaxy-clockwise[\s\S]*?rotate\(0\)[\s\S]*?rotate\(360deg\)/,
-    "a rotação precisa completar exatamente 360 graus, sem vai-e-volta");
+  const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");
+  assert.match(finalLoginStyles, /login-gateway__milky-way \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
+    "o contêiner posicionado da galáxia deve permanecer imóvel");
+  assert.match(finalLoginStyles, /login-gateway__galaxy-image \{[\s\S]*?animation:\s*corvia-login-galaxy-self-axis-clockwise 100s linear infinite !important/,
+    "somente a imagem interna deve girar lentamente em sentido horário");
+  assert.match(finalLoginStyles, /@keyframes corvia-login-galaxy-self-axis-clockwise[\s\S]*?rotate:\s*0deg[\s\S]*?rotate:\s*360deg/,
+    "a rotação no próprio eixo precisa completar exatamente 360 graus, sem translação");
   assert.match(assetFixStyles, /mask:\s*none !important/,
     "a galáxia real não pode voltar a ser recortada em oval");
 
