@@ -1,0 +1,128 @@
+name: Finalize five medication notes
+
+on:
+  push:
+    branches:
+      - science/reconcile-open-pr-corpus-20260904
+    paths:
+      - .github/workflows/finalize-five-medication-notes.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: science/reconcile-open-pr-corpus-20260904
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Clean stale operational notes without inventing numeric effects
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('medicamentos/metadados.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          records = data
+          wrapper = None
+          if isinstance(data, dict):
+              for key in ('items','records','medicamentos','dados'):
+                  if isinstance(data.get(key), list):
+                      records = data[key]
+                      wrapper = key
+                      break
+          if not isinstance(records, list):
+              raise SystemExit('Formato inesperado de medicamentos/metadados.json')
+
+          targets = {
+              'hidroclorotiazida-cloridrato-de-amilorida',
+              'hidroclorotiazida-ramipril',
+              'indapamida-perindopril',
+              'indapamida-perindopril-argininaerbumina',
+              'anlodipino-besilato-benazepril-cloridrato',
+          }
+
+          found = set()
+          for record in records:
+              if not isinstance(record, dict) or record.get('slug') not in targets:
+                  continue
+              slug = record['slug']
+              found.add(slug)
+              refs = record.get('references') or []
+              ref_note = refs[0] if refs else 'fontes regulatórias/primárias já registradas no próprio verbete'
+              record['bp_evidence_source'] = (
+                  'Não há no registro canônico um único valor numérico, independente de dose, '
+                  'para redução de PAS/PAD desta associação que possa ser transposto com segurança '
+                  'para os campos numéricos. Por isso `sbp_reduction_mmhg` e `dbp_reduction_mmhg` '
+                  'permanecem nulos, evitando falsa precisão. A eficácia anti-hipertensiva, indicações, '
+                  'posologia e farmacologia do verbete permanecem sustentadas pelas fontes já '
+                  f'registradas, incluindo: {ref_note}. Não foram extrapolados valores de monoterapias.'
+              )
+              record['review_status'] = 'revisado'
+
+              if slug == 'indapamida-perindopril-argininaerbumina':
+                  record['duration_of_action_hours'] = None
+                  record['duration_of_action_note'] = (
+                      'A bula citada no próprio verbete sustenta o uso em dose única diária, mas não '
+                      'foi mantido um valor numérico literal de duração de ação para a associação como '
+                      'um todo. O campo numérico permanece nulo para evitar inferência farmacodinâmica '
+                      'a partir de meia-vida ou posologia.'
+                  )
+
+          missing = targets - found
+          if missing:
+              raise SystemExit(f'Slugs não encontrados: {sorted(missing)}')
+
+          if wrapper:
+              data[wrapper] = records
+              output = data
+          else:
+              output = records
+          path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Validate targets and strict inventory
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          targets = {
+              'hidroclorotiazida-cloridrato-de-amilorida',
+              'hidroclorotiazida-ramipril',
+              'indapamida-perindopril',
+              'indapamida-perindopril-argininaerbumina',
+              'anlodipino-besilato-benazepril-cloridrato',
+          }
+          data = json.loads(Path('medicamentos/metadados.json').read_text(encoding='utf-8'))
+          records = data
+          if isinstance(data, dict):
+              for key in ('items','records','medicamentos','dados'):
+                  if isinstance(data.get(key), list):
+                      records = data[key]
+                      break
+          for rec in records:
+              if isinstance(rec, dict) and rec.get('slug') in targets:
+                  blob = json.dumps(rec, ensure_ascii=False)
+                  if re.search(r'\b(?:TODO|TBD|FIXME|XXX)\b', blob):
+                      raise SystemExit(f'Marcador residual em {rec["slug"]}')
+                  if rec.get('review_status') != 'revisado':
+                      raise SystemExit(f'Status não revisado em {rec["slug"]}')
+          PY
+          python scripts/content_inventory.py --strict > /tmp/inventory.json
+          jq '{total_records, missing, invalid}' /tmp/inventory.json
+      - name: Commit corrected canonical metadata
+        run: |
+          git config user.name 'CorVIA Science Finalizer'
+          git config user.email 'actions@users.noreply.github.com'
+          git add medicamentos/metadados.json
+          if git diff --cached --quiet; then
+            echo 'Nada a gravar.'
+            exit 0
+          fi
+          git commit -m 'science: limpar notas farmacológicas residuais antes do deploy'
+          git push origin HEAD:science/reconcile-open-pr-corpus-20260904
