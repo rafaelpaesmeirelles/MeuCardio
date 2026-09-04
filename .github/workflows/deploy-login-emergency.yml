@@ -1,0 +1,63 @@
+name: Emergency login hotfix deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - frontend/src/pages/Entrar.tsx
+      - frontend/src/styles/cardiology-spaces-login-motion-fidelity.css
+      - .github/workflows/deploy-login-emergency.yml
+
+permissions:
+  contents: read
+
+# Usa a mesma fila serial da publicação normal. Se houver uma publicação em
+# curso, este hotfix aguarda e entra imediatamente depois, sem interrompê-la.
+concurrency:
+  group: corvia-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy-login-hotfix:
+    name: Deploy approved login screens without test suites
+    if: contains(github.event.head_commit.message, '[login-emergency-deploy]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment: production
+    env:
+      TARGET_SHA: ${{ github.sha }}
+      ANDROID_CERT_SHA256: ${{ vars.CORVIA_ANDROID_CERT_SHA256 || '1344fed66fce26841b5fbb6a302a27ad5cd207c1b8fb989005e9be370148ce5e' }}
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+
+    steps:
+      - name: Prepare restricted production SSH transport
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          install -m 0700 -d "$ssh_dir"
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
+
+      - name: Publish exact main SHA immediately after the active release
+        run: |
+          set -euo pipefail
+          SSH_PORT="${SSH_PORT:-22}"
+          cert="$(printf '%s' "$ANDROID_CERT_SHA256" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
+          [[ "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Invalid main SHA" >&2; exit 65; }
+          [[ "$cert" =~ ^[0-9a-f]{64}$ ]] || { echo "Invalid Android certificate fingerprint" >&2; exit 65; }
+          timeout 3000s ssh -p "$SSH_PORT" -i "$RUNNER_TEMP/corvia-ssh/deploy_key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes \
+            -o "UserKnownHostsFile=$RUNNER_TEMP/corvia-ssh/known_hosts" \
+            "$SSH_USER@$SSH_HOST" \
+            "deploy-web-android $TARGET_SHA $cert"
