@@ -23,9 +23,11 @@ cleanup() { rm -rf "$tmpdir"; }
 trap cleanup EXIT
 git show "$EXPECTED_SHA:ops/remote-deploy-entrypoint.sh" > "$tmpdir/entrypoint"
 bash -n "$tmpdir/entrypoint"
-grep -Fq 'windows-stage' "$tmpdir/entrypoint"
-grep -Fq 'deploy-release' "$tmpdir/entrypoint"
-grep -Fq 'deploy-web-android' "$tmpdir/entrypoint"
+grep -Fq 'deploy-web' "$tmpdir/entrypoint"
+if grep -Eq 'deploy-web-android|windows-stage|deploy-release' "$tmpdir/entrypoint"; then
+  echo "Native release commands are still present; refusing web-only bootstrap." >&2
+  exit 65
+fi
 install -d -o root -g root -m 0755 "$(dirname "$STABLE_ENTRYPOINT")"
 install -o root -g root -m 0755 "$tmpdir/entrypoint" "$tmpdir/entrypoint.installed"
 
@@ -56,5 +58,5 @@ if ! install -o root -g root -m 0600 "$tmpdir/authorized_keys.new" "$AUTHORIZED_
   install -o root -g root -m 0600 "$tmpdir/authorized_keys.backup" "$AUTHORIZED_KEYS"
   exit 1
 fi
-printf 'Forced command bootstrapped from %s without checkout or deploy. SHA256=%s\n' \
+printf 'Web-only forced command bootstrapped from %s without checkout or deploy. SHA256=%s\n' \
   "$EXPECTED_SHA" "$(sha256sum "$STABLE_ENTRYPOINT" | cut -d' ' -f1)"
