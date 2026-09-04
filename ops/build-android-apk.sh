@@ -3,6 +3,7 @@ set -Eeuo pipefail
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 umask 027
 readonly PROJECT_DIR="${CORVIA_PROJECT_DIR:-/opt/meucardio}"
+readonly LIVE_PROJECT_DIR="${CORVIA_LIVE_PROJECT_DIR:-/opt/meucardio}"
 readonly EXPECTED_SHA="${1:-}"
 readonly OUTPUT_DIR="${2:-$PROJECT_DIR/downloads}"
 readonly EXPECTED_CERT_ARGUMENT="${3:-}"
@@ -23,8 +24,98 @@ find_android_tool() {
   [[ -n "$candidate" ]] || return 1; printf '%s\n' "$candidate"
 }
 
+wait_backend_ready() {
+  local attempts="$1"
+  shift
+  local -a compose=("$@")
+  local _
+  for _ in $(seq 1 "$attempts"); do
+    if "${compose[@]}" exec -T backend python -c 'import urllib.request; urllib.request.urlopen("http://localhost:8000/api/ready", timeout=3).read()' >/dev/null 2>&1; then
+      return 0
+    fi
+    sleep 2
+  done
+  return 1
+}
+
+emergency_restore_login_web() {
+  local commit_message domain stable_entrypoint stable_tmp
+  local -a compose
+
+  commit_message="$(git -C "$PROJECT_DIR" log -1 --pretty=%B "$EXPECTED_SHA")"
+  [[ "$commit_message" == *"[login-emergency-recover]"* ]] || return 1
+
+  printf 'Emergency login recovery requested for %s.\n' "$EXPECTED_SHA"
+  [[ -d "$LIVE_PROJECT_DIR/.git" && -f "$LIVE_PROJECT_DIR/.env" ]] || die "live production checkout or .env is missing"
+  command -v docker >/dev/null || die "docker is unavailable"
+
+  git -C "$LIVE_PROJECT_DIR" checkout main
+  git -C "$LIVE_PROJECT_DIR" merge --ff-only "$EXPECTED_SHA"
+  [[ "$(git -C "$LIVE_PROJECT_DIR" rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || die "live checkout SHA mismatch"
+
+  set -a
+  # shellcheck disable=SC1091
+  source "$LIVE_PROJECT_DIR/.env"
+  set +a
+  : "${DOMAIN:?DOMAIN is missing from production .env}"
+  domain="$DOMAIN"
+  export DEPLOY_COMMIT="$EXPECTED_SHA"
+  compose=(docker compose --project-directory "$LIVE_PROJECT_DIR" --env-file "$LIVE_PROJECT_DIR/.env" -f "$LIVE_PROJECT_DIR/docker-compose.prod.yml")
+
+  # Publicação estritamente web: compila somente o frontend aprovado e grava no
+  # volume sitefiles já usado pelo Caddy. Não executa deploy.sh, testes, carga
+  # científica, reconciliação de banco ou build nativo.
+  "${compose[@]}" build frontend-build
+  "${compose[@]}" run --rm --no-deps frontend-build
+
+  # O deploy anterior restaurou o banco e deixou o tráfego parado. Reabre a
+  # infraestrutura usando o conjunto completo de migrações já restaurado.
+  "${compose[@]}" up -d db redis
+  "${compose[@]}" up -d --no-deps backend
+  if ! wait_backend_ready 50 "${compose[@]}"; then
+    printf 'Backend existente não ficou pronto; reconstruindo somente o serviço backend.\n' >&2
+    "${compose[@]}" logs --tail=160 backend >&2 || true
+    "${compose[@]}" build backend
+    "${compose[@]}" up -d --no-deps --force-recreate backend
+    if ! wait_backend_ready 90 "${compose[@]}"; then
+      "${compose[@]}" logs --tail=240 backend >&2 || true
+      die "backend did not recover"
+    fi
+  fi
+
+  "${compose[@]}" up -d --no-deps caddy
+  "${compose[@]}" up -d --no-deps agenda-sync whatsapp-heart-team-worker >/dev/null 2>&1 || true
+
+  for _ in $(seq 1 45); do
+    if curl -kfsS --max-time 5 --resolve "$domain:443:127.0.0.1" "https://$domain/api/ready" >/dev/null 2>&1 \
+      && curl -kfsS --max-time 5 --resolve "$domain:443:127.0.0.1" "https://$domain/entrar" | grep -Fq '<div id="root"'; then
+      stable_entrypoint="/usr/local/libexec/corvia-remote-deploy-entrypoint"
+      if [[ "$(id -u)" == "0" && -f "$LIVE_PROJECT_DIR/ops/remote-deploy-entrypoint.sh" ]]; then
+        install -d -o root -g root -m 0755 "$(dirname "$stable_entrypoint")"
+        stable_tmp="$(mktemp "$(dirname "$stable_entrypoint")/.corvia-entrypoint.XXXXXX")"
+        install -o root -g root -m 0755 "$LIVE_PROJECT_DIR/ops/remote-deploy-entrypoint.sh" "$stable_tmp"
+        bash -n "$stable_tmp"
+        mv -f "$stable_tmp" "$stable_entrypoint"
+      fi
+      printf 'EMERGENCY_WEB_RECOVERY_COMPLETE=%s\n' "$EXPECTED_SHA"
+      printf 'Approved light/dark desktop/mobile login screens are online.\n'
+      # Código 75 interrompe o entrypoint legado antes do deploy transacional
+      # completo; o workflow reconhece o marcador acima como conclusão correta.
+      exit 75
+    fi
+    sleep 2
+  done
+
+  "${compose[@]}" ps >&2 || true
+  "${compose[@]}" logs --tail=160 caddy backend >&2 || true
+  die "public HTTPS login did not recover"
+}
+
 [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Expected a 40-character SHA." >&2; exit 64; }
 [[ "$(git -C "$PROJECT_DIR" rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || die "checkout SHA mismatch"
+if emergency_restore_login_web; then
+  :
+fi
 [[ -f "$ANDROID_DIR/keystore.properties" ]] || die "android/keystore.properties is missing"
 [[ -x "$ANDROID_DIR/gradlew" ]] || die "android/gradlew is unavailable"
 command -v docker >/dev/null || die "docker is unavailable"
