@@ -1,6 +1,5 @@
 name: Emergency login hotfix deploy
 
-# Recovery-stage trigger: temporary operational recovery only; no visual/layout change.
 on:
   push:
     branches: [main]
