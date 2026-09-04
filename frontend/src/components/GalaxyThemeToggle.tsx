@@ -1,5 +1,4 @@
 import { useLayoutEffect } from "react";
-import { approvedGalaxyDataUri } from "../assets/approvedGalaxyData";
 import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
@@ -42,7 +41,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
     >
       <img
         className="galaxy-theme-toggle__image"
-        src={approvedGalaxyDataUri}
+        src="/spaces/galaxy-loop-poster.webp"
         alt=""
         aria-hidden="true"
         draggable={false}
