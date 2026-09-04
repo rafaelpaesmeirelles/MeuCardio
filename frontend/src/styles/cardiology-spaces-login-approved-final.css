@@ -150,7 +150,7 @@
   .login-gateway--public {
     display: grid !important;
     height: 100dvh;
-    min-height: 640px;
+    min-height: 560px;
     grid-template-columns: minmax(0, 1fr) !important;
     grid-template-rows: 98px minmax(0, 1fr) auto 54px !important;
     gap: 0;
@@ -484,6 +484,14 @@
 
   .login-gateway--public .login-gateway__topbar {
     min-height: 80px;
+  }
+
+  /* A trilha do rodapé encolhe para 48px acima (grid-template-rows), mas o
+     rodapé mantinha `min-height: 54px` do desenho para telas altas — sobrando
+     6px além da própria trilha e estourando a área útil em janelas de
+     600-640px (reproduzido com Playwright, corrigido em 04/09/2026). */
+  .login-gateway--public .login-gateway__footer {
+    min-height: 48px;
   }
 
   .login-gateway--public .login-gateway__brand img {
