@@ -1,4 +1,8 @@
-/* Identidade CorVIA: em wordmarks textuais legadas, "VIA" permanece azul canônico. */
+/* Identidade CorVIA: "VIA" usa um único azul-escuro canônico em todo o site. */
+:root {
+  --corvia-via-blue: #17335d;
+}
+
 .cc-mobile-more__head>div>span>strong,
 .cos-brand__text>strong,
 .cos-topbar__mobile-brand>span,
@@ -15,7 +19,7 @@
   top:0;
   right:0;
   content:"VIA";
-  color:#16d9f5;
+  color:var(--corvia-via-blue) !important;
   pointer-events:none;
 }
 
@@ -26,10 +30,20 @@
   content:none;
 }
 
-.corvia-via { color:#3e7bff; }
+/* O id #root garante precedência sobre folhas locais antigas que ainda
+   carreguem azul vivo/ciano com !important. */
+#root .corvia-via {
+  color:var(--corvia-via-blue) !important;
+}
 
-/* Sidebar desktop: nunca reconstruir a wordmark com pseudo-elementos.
-   Usa diretamente o ativo Cardiology Spaces, com VIA ciano. */
+/* A Home/Cardiology Spaces usa <b>VIA</b> em vez da classe .corvia-via. */
+#root .spaces-brand strong b {
+  color:var(--corvia-via-blue) !important;
+  text-shadow:none !important;
+}
+
+/* Sidebar desktop: usa diretamente o ativo Cardiology Spaces, agora também
+   com VIA azul-escuro canônico. */
 .ccc-nav__brand {
   background-image:url('/corvia-logo-spaces-dark.svg');
   background-repeat:no-repeat;
