@@ -412,11 +412,13 @@
       "**ANCORON** — Libbs, comprimido revestido 200 mg, embalagem com 30 comprimidos: PMC (ICMS 18%) R$ 33,91; PMC (ICMS 20%) R$ 34,75. Preço de mercado observado na Revista Farmacêutica K@iros — Suplemento de Preços nº 453 (competência 2026-08), fonte complementar licenciada. O PF/PMC oficial e vigente continua sob autoridade CMED/ANVISA; em caso de divergência, prevalece a fonte regulatória oficial (ver medicamentos/kairos-453-2026-08.json)."
     ],
     "commercial_presentations": [
-      "Amioron® (Geolab Indústria Farmacêutica S/A) — cloridrato de amiodarona, medicamento similar: comprimidos de 100 mg (embalagem com 30 comprimidos) e comprimidos de 200 mg (embalagens com 10 ou 30 comprimidos). Fonte: bula do profissional de saúde (Geolab Indústria Farmacêutica S/A, PDF 'Amioron-PF.pdf', geolab.com.br/wp-content/uploads/2021/05/Amioron-PF.pdf, v.07 05/2019) e bula extraída da ANVISA (bula.gratis/geolab_industria_farmaceutica_s_a/0/amioron); conferido via WebSearch em 20/08/2026."
+      "Amioron® (Geolab Indústria Farmacêutica S/A) — cloridrato de amiodarona, medicamento similar: comprimidos de 100 mg (embalagem com 30 comprimidos) e comprimidos de 200 mg (embalagens com 10 ou 30 comprimidos). Fonte: bula do profissional de saúde (Geolab Indústria Farmacêutica S/A, PDF 'Amioron-PF.pdf', geolab.com.br/wp-content/uploads/2021/05/Amioron-PF.pdf, v.07 05/2019) e bula extraída da ANVISA (bula.gratis/geolab_industria_farmaceutica_s_a/0/amioron); conferido via WebSearch em 20/08/2026.",
+      "Miodaron® (amiodarona), Aché Laboratórios Farmacêuticos S.A., comprimidos, 200mg, embalagens com 20 comprimidos (comprimido rosa, circular, convexo, sulco de bipartição). Fonte: ConsultaRemedios (consultaremedios.com.br/miodaron/bula) e Bula.Gratis (bula.gratis/ache_laboratorios_farmaceuticos_s_a/0/miodaron_bula), busca em 21/08/2026."
     ],
     "brand_names": [
       "Ancoron",
-      "Amioron"
+      "Amioron",
+      "Miodaron — Aché Laboratórios Farmacêuticos S.A."
     ]
   },
   {
@@ -625,7 +627,8 @@
     "generic_name": "Atorvastatina (cálcica)",
     "brand_names": [
       "Lipitor",
-      "Citalor"
+      "Citalor",
+      "Zarator — Laboratórios Pfizer Ltda. (registrado por Wyeth Indústria Farmacêutica Ltda.)"
     ],
     "drug_class": "Estatina — inibidor da HMG-CoA redutase",
     "mechanism": "Inibição competitiva da HMG-CoA redutase, etapa limitante na biossíntese hepática de colesterol, aumentando expressão de receptores de LDL hepáticos e depuração plasmática de LDL-C; estatina lipofílica com meia-vida mais longa que sinvastatina, permitindo maior flexibilidade de horário de administração",
@@ -676,7 +679,10 @@
     "duration_of_action_source": "Inferido da meia-vida de atividade inibitória de 20-30h (rótulo FDA LIPITOR®) e do padrão farmacológico já bem descrito na literatura de estatinas quanto à flexibilidade de horário de dose. Consultado via WebSearch em 10/08/2026.",
     "sbp_reduction_mmhg": -1.6,
     "dbp_reduction_mmhg": -0.96,
-    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo."
+    "bp_evidence_source": "**Efeito modesto, não constante em bula, e NÃO é indicação da atorvastatina** — a estatina não é prescrita para tratar hipertensão. Metanálise sistemática de ensaios clínicos randomizados, placebo-controlados, sobre efeito hipotensor de estatinas como classe: redução média de PA sistólica de **-1,6 mmHg** (IC95% -2,50 a -0,60) e diastólica de **-0,96 mmHg**, com o próprio estudo concluindo que \"the BP-lowering effect of the statins was independent of the dose or type of statin (p > 0.05)\" — ou seja, o efeito é de CLASSE, não específico da atorvastatina nem dose-dependente, conforme confirmado nesta sessão pela leitura direta do abstract. Fonte: Alghamdi J, Alqadi A, Alharf A, Almuzzaini B, Mahmud A, Barhoumi T, Badreldin HA, Alaamery M, Padmanabhan S. Blood pressure-lowering activity of statins: a systematic literature review and meta-analysis of placebo-randomized controlled trials. Eur J Clin Pharmacol. 2020;76(12):1745-1754. DOI: 10.1007/s00228-020-02965-2. PMID 32696233 — abstract lido diretamente via PubMed E-utilities (efetch) nesta sessão (12/08/2026). **Correção em relação ao registro anterior**: os valores dose-estratificados específicos de atorvastatina citados antes (-1,17/-5,82/-3,58/-2,98 mmHg por dose, atribuídos a um resumo de congresso JACC \"GW26-e4665\") não puderam ser confirmados no PubMed nesta sessão (busca por título exato retornou zero resultados) — substituídos pelos valores de classe acima, de fonte verificada e lida diretamente. Mecanismo proposto para o efeito de classe: melhora da função endotelial e redução de estresse oxidativo vascular, não um efeito anti-hipertensivo farmacológico direto. Efeito de magnitude pequena e não deve ser usado como justificativa clínica para prescrever atorvastatina como anti-hipertensivo.",
+    "commercial_presentations": [
+      "Zarator® (atorvastatina cálcica), Laboratórios Pfizer Ltda. (Guarulhos-SP), registrado por Wyeth Indústria Farmacêutica Ltda., comprimidos revestidos, 10mg/20mg, embalagens com 10 ou 30 comprimidos, bula padrão ANVISA de 28/03/2013. Fonte: ConsultaRemedios (consultaremedios.com.br/zarator/bula) e bula profissional hospedada em drogariasp.vteximg.com.br, busca em 21/08/2026."
+    ]
   },
   {
     "slug": "benazepril-cloridrato",
@@ -751,7 +757,8 @@
     "generic_name": "Bisoprolol (hemifumarato)",
     "brand_names": [
       "Bizo",
-      "Concor"
+      "Concor",
+      "Concárdio — EMS S/A"
     ],
     "drug_class": "Betabloqueador altamente cardiosseletivo (beta-1 seletivo)",
     "mechanism": "Agente bloqueador seletivo dos receptores beta-1, sem ação estimulante intrínseca ou efeito de estabilização de membrana relevante; afinidade muito baixa a receptores beta-2, com seletividade beta-1 que se estende além da faixa terapêutica; não possui efeito inotrópico negativo pronunciado",
@@ -805,7 +812,10 @@
     "duration_of_action_source": "Rótulo FDA/DailyMed do ZEBETA® (bisoprolol fumarate), seção CLINICAL PHARMACOLOGY/CLINICAL STUDIES, consultado via WebSearch em 10/08/2026. **Reconfirmado por fonte independente em 12/08/2026**: mirror de bula brasileira do CONCOR® (Merck) confirma dose única diária com cobertura de 24h, sustentada pela meia-vida de 10-12h — resolvendo a verificação pendente anterior.",
     "sbp_reduction_mmhg": -10.5,
     "dbp_reduction_mmhg": -7.5,
-    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026."
+    "bp_evidence_source": "**Resolvido nesta sessão (12/08/2026), lendo diretamente a seção CLINICAL STUDIES do rótulo FDA/DailyMed** de bisoprolol fumarato comprimidos (Micro Labs Limited, SPL setid c3ee566c-74c4-45f4-a947-526a7313e326) — a tabela existe, e o problema da versão anterior era mesmo a fonte secundária inconsistente usada antes, não ausência do dado no rótulo. O rótulo relata DOIS estudos de hipertensão, ambos com efeito do fármaco já calculado como bisoprolol MENOS placebo (dose-resposta, texto do rótulo: \"Drug effect is calculated by subtracting the placebo effect from the overall change in blood pressure and heart rate\"): **Estudo A** — 5 mg: 5,0/4,8 mmHg; 10 mg: 5,8/7,7 mmHg; 20 mg: 7,4/8,7 mmHg (sistólica/diastólica). **Estudo B** — 2,5 mg: 4,6/4,4 mmHg; 10 mg: 10,5/7,5 mmHg. Os dois estudos DIVERGEM entre si na dose de 10 mg (5,8/7,7 no Estudo A vs. 10,5/7,5 no Estudo B) — divergência real entre dois ensaios do próprio rótulo, não erro de transcrição como se suspeitava da fonte secundária anterior. Valor registrado nos campos numéricos (-10,5/-7,5) é o do Estudo B na dose de 10 mg, por ser a dose mais usada na prática cardiológica (início 2,5-5 mg, alvo comum 10 mg) com efeito sistólico mais robusto entre os dois estudos nessa dose; o Estudo A, na mesma dose, mostra efeito sistólico menor (5,8 mmHg) — divergência declarada, não escondida. Consultado via API pública do DailyMed em 12/08/2026.",
+    "commercial_presentations": [
+      "Concárdio® (hemifumarato de bisoprolol), EMS S/A, comprimidos revestidos, 1,25mg/2,5mg/5mg/10mg, embalagens de 10/30/100/140 unidades, registro ANVISA nº 1.0235.1306 (bula aprovada em 21/08/2019). Fonte: Panvel Farmácias (panvel.com, bulas de Concardio 2,5mg/5mg/10mg) e Bulas Farmadelivery / AGMedico (minibula EMS), busca em 21/08/2026."
+    ]
   },
   {
     "slug": "bivalirudina",
@@ -2757,7 +2767,8 @@
       "ALDACTONE® 25 mg — comprimido, embalagem com 30 unidades (Pfizer).",
       "ALDACTONE® 50 mg — comprimido, embalagem com 30 unidades (Pfizer).",
       "ALDACTONE® 100 mg — comprimido, embalagem com 16 unidades (Pfizer).",
-      "Diacqua® (espironolactona) — Laboratório Momenta Farmacêutica Ltda. (empresa do grupo Eurofarma; registro em nome de Eurofarma Laboratórios S.A.): comprimidos de 25 mg e 50 mg, em embalagens com 30 comprimidos. **fonte**: bula do paciente hospedada em momentafarma.com.br (site oficial do laboratório) e réplicas convergentes em Drogasil, Droga Raia, Farma22, Farmaindex e Pedpharma — consultado via WebSearch em 20/08/2026; bula oficial completa (versão profissional) não lida diretamente nesta sessão."
+      "Diacqua® (espironolactona) — Laboratório Momenta Farmacêutica Ltda. (empresa do grupo Eurofarma; registro em nome de Eurofarma Laboratórios S.A.): comprimidos de 25 mg e 50 mg, em embalagens com 30 comprimidos. **fonte**: bula do paciente hospedada em momentafarma.com.br (site oficial do laboratório) e réplicas convergentes em Drogasil, Droga Raia, Farma22, Farmaindex e Pedpharma — consultado via WebSearch em 20/08/2026; bula oficial completa (versão profissional) não lida diretamente nesta sessão.",
+      "NOTA (não é apresentação comercial nova): busca extensa (múltiplas queries cruzando ConsultaRemedios, Drogasil, Droga Raia, BulasMed, Eurofarma, Geolab e InfoSUS-SC, incluindo tentativas dirigidas a nomes hipotéticos como Espirotone, Practon, Espirovit, Aldopur e Diaqua) não encontrou nenhum nome de fantasia brasileiro para espironolactona além dos dois já cadastrados neste registro (Aldactone — Pfizer/Wyeth, e Diacqua). Todas as demais apresentações localizadas (EMS, Eurofarma, Germed, Geolab, Cimed, Neo Química) são rotuladas pelo próprio nome genérico + laboratório fabricante, sem nome de fantasia distinto — portanto não contam como `brand_names` pela regra deste levantamento. Busca em 21/08/2026."
     ]
   },
   {
@@ -3545,7 +3556,9 @@
       "Clorana (Sanofi Medley — já citada como fonte de bula neste registro)",
       "Diurix (outro nome comercial registrado na ANVISA, localizado nesta sessão — bula não consultada diretamente para os demais campos deste registro)"
     ],
-    "commercial_presentations": [],
+    "commercial_presentations": [
+      "NOTA (não é apresentação comercial nova): busca extensa (múltiplas queries cruzando ConsultaRemedios, Drogasil, Droga Raia, BulasMed, InfoSUS-SC e a página de informações técnicas da ANVISA, incluindo tentativas dirigidas a nomes hipotéticos como Hidroclor, Diurex, Hidrenox, Hidrodiuril e Diazida) não encontrou nenhum nome de fantasia brasileiro para hidroclorotiazida em monoterapia além dos dois já cadastrados neste registro (Clorana — Sanofi Medley, e Diurix). As únicas outras marcas de fantasia localizadas contendo hidroclorotiazida no Brasil (Naprix D, Venzer HCT) são associações de dose fixa com outro princípio ativo, não hidroclorotiazida isolada, e por isso não foram incluídas aqui. As demais apresentações em monoterapia (EMS, Legrand, Brainfarma/Neo Química, Sanofi-Aventis genérico, Medley) são rotuladas pelo próprio nome genérico + laboratório, sem nome de fantasia distinto. Busca em 21/08/2026."
+    ],
     "interactions": [
       "**AINE**: podem reduzir o efeito diurético/antihipertensivo da hidroclorotiazida e aumentar o risco de lesão renal — mesma classe de interação já registrada para outros diuréticos/antihipertensivos desta base (ex.: `indapamida.interactions`, já cadastrado).",
       "**Digitálicos (digoxina)**: a hipocalemia/hipomagnesemia induzida pela hidroclorotiazida (já listada em `adverse_effects` deste registro) aumenta o risco de toxicidade digitálica — atenção redobrada ao eletrólito sérico já recomendada em `monitoring`.",
@@ -5658,7 +5671,8 @@
     "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca).",
     "brand_names": [
       "Inderal",
-      "Rebaten LA"
+      "Rebaten LA",
+      "Uni Propranolol (Uni Propralol) — União Química Farmacêutica Nacional S/A"
     ],
     "presentations": [
       "Comprimido 40 mg (embalagem com 30 comprimidos)",
@@ -5685,7 +5699,8 @@
       "fonte: extrapolado do perfil de segurança já documentado nos campos `contraindications`/`adverse_effects` deste registro — prática de monitorização padrão de classe farmacológica, não citação de bula específica adicional."
     ],
     "commercial_presentations": [
-      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente)."
+      "Genérico de múltiplos fabricantes (EMS, Neo Química, Teuto, entre outros). **Confirmado por busca direcionada em 12/08/2026**: EMS Sigma Pharma Ltda. comercializa cloridrato de propranolol nas concentrações de **10 mg, 40 mg e 80 mg**, comprimidos, sob o **Registro MS 1.3569.0710** — resolvendo a verificação pendente anterior para este fabricante específico (o número pode variar para outros genéricos do mesmo princípio ativo, não conferidos individualmente).",
+      "Uni Propranolol® (Uni Propralol®) (cloridrato de propranolol), União Química Farmacêutica Nacional S/A, comprimidos, 40mg (dose usual inicial de 40mg 2x/dia). Nota de nomenclatura: União Química usa o prefixo 'Uni' + nome do princípio ativo como convenção de marca para vários produtos do seu portfólio — registrado aqui como nome de fantasia da convenção da própria fabricante, não como rótulo genérico cru. Fonte: ConsultaRemedios (consultaremedios.com.br/uni-propralol/bula e consultaremedios.com.br/cloridrato-de-propranolol-uniao-quimica/bula) e bula hospedada em saudedireta.com.br/catinc/drugs/bulas/unipropralol.pdf, busca em 21/08/2026."
     ]
   },
   {
