@@ -39,18 +39,32 @@ jobs:
           git fetch origin main --prune
           git fetch origin '+refs/pull/*/head:refs/remotes/pr/*'
 
-      - name: Snapshot open pull requests
+      - name: Snapshot open pull requests with their real bases
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api --paginate "/repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" \
-            --jq '.[].number' | jq -s 'unique | sort' > /tmp/open-prs.json
-          echo "Open PRs: $(jq length /tmp/open-prs.json)"
+          gh api --paginate "/repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" > /tmp/open-pr-pages.jsonl
+          jq -s 'add | map({number, base_sha: .base.sha, head_sha: .head.sha, base_ref: .base.ref, head_ref: .head.ref}) | unique_by(.number) | sort_by(.number)' \
+            /tmp/open-pr-pages.jsonl > /tmp/open-pr-metadata.json
+          jq '[.[].number]' /tmp/open-pr-metadata.json > /tmp/open-prs.json
+          jq 'map({key:(.number|tostring), value:.base_sha}) | from_entries' /tmp/open-pr-metadata.json > /tmp/pr-bases.json
+          echo "Open PRs: $(jq length /tmp/open-pr-metadata.json)"
+          jq '.[0:5]' /tmp/open-pr-metadata.json
+
+      - name: Fetch exact base commits for stacked PRs
+        run: |
+          jq -r '.[].base_sha' /tmp/open-pr-metadata.json | sort -u | while read -r sha; do
+            if ! git cat-file -e "${sha}^{commit}" 2>/dev/null; then
+              git fetch --no-tags origin "${sha}"
+            fi
+          done
 
       - name: Compile reconciliation tool
         run: |
           python -m py_compile scripts/reconcile_open_science_prs.py
           python -m py_compile scripts/reconcile_open_science_prs_v2.py
+          python -m py_compile scripts/reconcile_open_science_prs_v3.py
+          python -m py_compile scripts/reconcile_open_science_prs_v4.py
 
       - name: Snapshot canonical corpus baseline
         run: |
@@ -61,7 +75,9 @@ jobs:
           echo "Baseline strict exit: $(cat /tmp/science-baseline.exit)"
           jq '{total_records, missing, invalid, duplicate_keys: [.fronts | to_entries[] | select((.value.duplicate_keys | length) > 0) | {front: .key, keys: .value.duplicate_keys}]}' /tmp/science-baseline.json
 
-      - name: Reconcile, deduplicate and mark accepted units reviewed
+      - name: Reconcile only each PR's own delta
+        env:
+          CORVIA_PR_BASES_JSON: /tmp/pr-bases.json
         run: |
           python scripts/reconcile_open_science_prs_v2.py \
             --base origin/main \
