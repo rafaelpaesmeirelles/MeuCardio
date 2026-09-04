@@ -48,7 +48,9 @@ jobs:
           echo "Open PRs: $(jq length /tmp/open-prs.json)"
 
       - name: Compile reconciliation tool
-        run: python -m py_compile scripts/reconcile_open_science_prs.py
+        run: |
+          python -m py_compile scripts/reconcile_open_science_prs.py
+          python -m py_compile scripts/reconcile_open_science_prs_v2.py
 
       - name: Snapshot canonical corpus baseline
         run: |
@@ -61,7 +63,7 @@ jobs:
 
       - name: Reconcile, deduplicate and mark accepted units reviewed
         run: |
-          python scripts/reconcile_open_science_prs.py \
+          python scripts/reconcile_open_science_prs_v2.py \
             --base origin/main \
             --open-prs /tmp/open-prs.json
 
