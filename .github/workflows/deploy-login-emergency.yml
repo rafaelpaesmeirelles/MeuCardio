@@ -6,6 +6,7 @@ on:
     paths:
       - frontend/src/pages/Entrar.tsx
       - frontend/src/styles/cardiology-spaces-login-motion-fidelity.css
+      - frontend/src/styles/cardiology-spaces-login-galaxy-kinematics.css
       - .github/workflows/deploy-login-emergency.yml
 
 permissions:
