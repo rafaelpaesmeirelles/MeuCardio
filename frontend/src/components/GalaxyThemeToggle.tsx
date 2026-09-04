@@ -3,7 +3,6 @@ import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
 import "../styles/galaxy-theme-toggle-refinement.css";
-import "../styles/cardiology-spaces-universe-final.css";
 
 const SPACES_CANONICAL_MOTTO = "O Ambiente muda. O Médico Continua no Centro.";
 const GALAXY_RENDER_WIDTH = 342;
@@ -86,9 +85,6 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
         const chroma = maximum - minimum;
         const luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
 
-        // Preto puro/compressão do fundo desaparece; azuis escuros saturados
-        // da própria galáxia são preservados. A faixa intermediária é
-        // suavizada para evitar qualquer halo ou recorte duro.
         if (maximum <= 12) {
           pixels[index + 3] = 0;
         } else if (luminance < 38 && chroma < 22) {
