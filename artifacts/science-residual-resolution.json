@@ -1,0 +1,3906 @@
+{
+  "schema_version": 1,
+  "input_report": "artifacts/science-reconcile-report.json",
+  "summary": {
+    "current_wins": 221,
+    "merged": 89,
+    "unresolved": 29
+  },
+  "changed_manifests": [
+    "doencas",
+    "material_paciente",
+    "medicamentos"
+  ],
+  "resolutions": [
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "casos_clinicos",
+      "key": "estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto",
+      "path": "casos-clinicos/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "triagem",
+      "key": "distensao-abdominal-ascite-congestao-cardiaca",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "triagem",
+      "key": "sopro-cardiaco-incidental",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "triagem",
+      "key": "tontura-vertigem-persistente",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-cardiomiopatias-metabolicas-reversiveis-do-adulto",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-comunicacao-clinica-reanimacao-recusa-de-tratamento-e-decisor-substituto",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-dispositivos-interferencia-eletromagnetica-e-disfuncao-tecnica-do-implante",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-cafeina-bebidas-energeticas-e-suplementos-risco-cardiovascular-no-atleta",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-cardiologia-pediatrica-erros-inatos-do-metabolismo-e-cardiomiopatia",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 798,
+      "kind": "trilhas",
+      "key": "trilha-hipertensao-pulmonar-pipeline-experimental-alem-das-quatro-classes",
+      "path": "trilhas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "checklists",
+      "key": "investigacao-por-imagem-e-ecg-na-cardiomiopatia-chagasica-do-rastreio-a-estratificacao-de-risco",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos",
+      "path": "doencas/fragmentos/aortopatia-genetica-pediatrica-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "arritmia-atrial-na-circulacao-de-fontan",
+      "path": "doencas/fragmentos/arritmia-atrial-na-circulacao-de-fontan.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "cardiomiopatia-por-sobrecarga-de-ferro",
+      "path": "doencas/fragmentos/cardiomiopatia-por-sobrecarga-de-ferro.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "cardiomiopatia-restritiva-nao-amiloide",
+      "path": "doencas/fragmentos/cardiomiopatia-restritiva-nao-amiloide.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "dissecao-aortica-tipo-b",
+      "path": "doencas/fragmentos/dissecao-aortica-tipo-b.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "endocardite-de-protese-valvar",
+      "path": "doencas/fragmentos/endocardite-de-protese-valvar.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "esclerose-sistemica-com-acometimento-cardiaco",
+      "path": "doencas/fragmentos/esclerose-sistemica-com-acometimento-cardiaco.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade",
+      "path": "doencas/fragmentos/estenose-aortica-no-idoso-fragilidade-tavi-e-futilidade.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "estenose-tricuspide",
+      "path": "doencas/fragmentos/estenose-tricuspide.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2",
+      "path": "doencas/fragmentos/fenocopias-glicogenicas-da-cardiomiopatia-hipertrofica-danon-e-prkag2.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "manejo-perioperatorio-de-dispositivo-cardiaco-implantavel",
+      "path": "doencas/fragmentos/manejo-perioperatorio-de-dispositivo-cardiaco-implantavel.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "sarcoidose-cardiaca",
+      "path": "doencas/fragmentos/sarcoidose-cardiaca.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "valvopatia-elegibilidade-esportiva-atleta",
+      "path": "doencas/fragmentos/valvopatia-elegibilidade-esportiva-atleta.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 761,
+      "kind": "doencas",
+      "key": "valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia",
+      "path": "doencas/fragmentos/valvopatia-pulmonar-do-adulto-estenose-e-insuficiencia.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 723,
+      "kind": "doencas",
+      "key": "cardiomiopatia-arritmogenica",
+      "path": "doencas/fragmentos/cardiomiopatia-arritmogenica.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 719,
+      "kind": "doencas",
+      "key": "sarcoidose-cardiaca",
+      "path": "doencas/fragmentos/sarcoidose-cardiaca.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 718,
+      "kind": "doencas",
+      "key": "estenose-aortica",
+      "path": "doencas/fragmentos/estenose-aortica.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 717,
+      "kind": "doencas",
+      "key": "insuficiencia-aortica",
+      "path": "doencas/fragmentos/insuficiencia-aortica.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 716,
+      "kind": "doencas",
+      "key": "torsades-de-pointes-qt-longo-adquirido",
+      "path": "doencas/fragmentos/torsades-de-pointes-qt-longo-adquirido.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 715,
+      "kind": "doencas",
+      "key": "protese-valvar-mecanica",
+      "path": "doencas/fragmentos/protese-valvar-mecanica.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 714,
+      "kind": "doencas",
+      "key": "cteph",
+      "path": "doencas/fragmentos/cteph.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 713,
+      "kind": "doencas",
+      "key": "emergencia-hipertensiva",
+      "path": "doencas/fragmentos/emergencia-hipertensiva.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 712,
+      "kind": "triagem",
+      "key": "complicacao-local-pos-cateterismo-procedimento-vascular",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 711,
+      "kind": "triagem",
+      "key": "suspeita-infeccao-dispositivo-cardiaco-implantavel",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 710,
+      "kind": "doencas",
+      "key": "insuficiencia-tricuspide",
+      "path": "doencas/fragmentos/insuficiencia-tricuspide.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 700,
+      "kind": "doencas",
+      "key": "amiloidose-cardiaca-cadeia-leve",
+      "path": "doencas/fragmentos/amiloidose-cardiaca-cadeia-leve.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 699,
+      "kind": "doencas",
+      "key": "cardiotoxicidade-por-cocaina-e-estimulantes",
+      "path": "doencas/fragmentos/cardiotoxicidade-por-cocaina-e-estimulantes.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 698,
+      "kind": "doencas",
+      "key": "cardiomiopatia-de-takotsubo",
+      "path": "doencas/fragmentos/cardiomiopatia-de-takotsubo.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 697,
+      "kind": "doencas",
+      "key": "minoca-e-disseccao-espontanea-arteria-coronaria",
+      "path": "doencas/fragmentos/minoca-e-disseccao-espontanea-arteria-coronaria.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 696,
+      "kind": "doencas",
+      "key": "cardiomiopatia-chagasica",
+      "path": "doencas/fragmentos/cardiomiopatia-chagasica.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 694,
+      "kind": "doencas",
+      "key": "avaliacao-cardiovascular-pre-concepcional",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 693,
+      "kind": "doencas",
+      "key": "polifarmacia-e-desprecricao-cardiovascular",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 692,
+      "kind": "doencas",
+      "key": "sindrome-cardiorrenal",
+      "path": "doencas/fragmentos/sindrome-cardiorrenal.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 690,
+      "kind": "doencas",
+      "key": "apneia-do-sono-e-coracao",
+      "path": "doencas/fragmentos/apneia-do-sono-e-coracao.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 689,
+      "kind": "doencas",
+      "key": "cardiomiopatia-dilatada",
+      "path": "doencas/fragmentos/cardiomiopatia-dilatada.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 688,
+      "kind": "doencas",
+      "key": "estenose-mitral",
+      "path": "doencas/fragmentos/estenose-mitral.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 686,
+      "kind": "doencas",
+      "key": "bloqueio-atrioventricular",
+      "path": "doencas/fragmentos/bloqueio-atrioventricular.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 685,
+      "kind": "doencas",
+      "key": "insuficiencia-mitral",
+      "path": "doencas/fragmentos/insuficiencia-mitral.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 684,
+      "kind": "doencas",
+      "key": "obesidade-e-coracao",
+      "path": "doencas/fragmentos/obesidade-e-coracao.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "avaliacao-basal-cardiooncologica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "defeito-septo-atrioventricular",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "estenose-pulmonar-congenita",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "retorno-venoso-pulmonar-anomalo",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "atresia-pulmonar",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "febre-reumatica-cardite",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "endocardite-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 649,
+      "kind": "doencas",
+      "key": "hipertensao-pulmonar-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "avaliacao-cardiovascular-pre-concepcional",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "defeito-septo-atrioventricular",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "estenose-pulmonar-congenita",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "retorno-venoso-pulmonar-anomalo",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "atresia-pulmonar",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "febre-reumatica-cardite",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "endocardite-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 648,
+      "kind": "doencas",
+      "key": "hipertensao-pulmonar-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 599,
+      "kind": "doencas",
+      "key": "dispositivos-cardiacos-implantaveis",
+      "path": "doencas/fragmentos/pr599-dispositivos-cardiacos-implantaveis.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 597,
+      "kind": "doencas",
+      "key": "hipertensao-resistente-e-refrataria",
+      "path": "doencas/fragmentos/pr597-hipertensao-resistente-refrataria.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 596,
+      "kind": "doencas",
+      "key": "cardiopatia-congenita-do-adulto",
+      "path": "doencas/fragmentos/pr596-cardiopatia-congenita-adulto.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 594,
+      "kind": "doencas",
+      "key": "insuficiencia-cardiaca-avancada",
+      "path": "doencas/fragmentos/pr594-insuficiencia-cardiaca-avancada.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 590,
+      "kind": "doencas",
+      "key": "choque-cardiogenico",
+      "path": "doencas/fragmentos/pr590-choque-cardiogenico.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 585,
+      "kind": "doencas",
+      "key": "canalopatias-cardiacas-hereditarias",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 581,
+      "kind": "doencas",
+      "key": "taquicardia-supraventricular",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 580,
+      "kind": "doencas",
+      "key": "doenca-da-aorta",
+      "path": "doencas/fragmentos/pr580-doenca-da-aorta.snapshot.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 578,
+      "kind": "doencas",
+      "key": "doenca-arterial-periferica-de-membros",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 574,
+      "kind": "doencas",
+      "key": "tromboembolismo-venoso",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "hipertensao-arterial-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "doenca-de-kawasaki",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "miocardite-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "taquicardia-supraventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "hipotensao-ortostatica-no-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "valva-aortica-bicuspide-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "fisiologia-ventriculo-unico",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "dislipidemias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "sopros-na-infancia",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "dor-toracica-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "arritmias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "indicacoes-ecocardiograma-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "bloqueio-atrioventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "flutter-atrial-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "hidropisia-fetal-cardiovascular",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "coarctacao-aorta-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "tetralogia-fallot-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "transposicao-grandes-arterias-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "retorno-venoso-pulmonar-anomalo-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "avaliacao-multidimensional-cardiogeriatrica",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "estenose-aortica-tavi-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "doenca-coronariana-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "cuidados-paliativos-cardiovasculares",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "cardiotoxicidade-bcr-abl",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "placeholder detectado: todo",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "cardiopatia-congenita-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "hipertensao-pulmonar-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "medicamentos-cardiovasculares-gestacao-lactacao",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "plano-parto-cardiopatia-materna",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "seguimento-cardiovascular-pos-parto",
+      "path": "doencas/metadados.json",
+      "reason": "upgrade sem conflito do registro canônico",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "diabetes-mellitus-tipo-2",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "hipertensao-arterial-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "doenca-de-kawasaki",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "miocardite-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "taquicardia-supraventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "hipotensao-ortostatica-no-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "valva-aortica-bicuspide-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "fisiologia-ventriculo-unico",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "dislipidemias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "sopros-na-infancia",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "dor-toracica-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "arritmias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "indicacoes-ecocardiograma-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "bloqueio-atrioventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "flutter-atrial-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "hidropisia-fetal-cardiovascular",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "coarctacao-aorta-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "tetralogia-fallot-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "transposicao-grandes-arterias-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "retorno-venoso-pulmonar-anomalo-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "avaliacao-multidimensional-cardiogeriatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "estenose-aortica-tavi-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "doenca-coronariana-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "cuidados-paliativos-cardiovasculares",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "cardiotoxicidade-bcr-abl",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "placeholder detectado: todo",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "cardiopatia-congenita-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "hipertensao-pulmonar-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "medicamentos-cardiovasculares-gestacao-lactacao",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "plano-parto-cardiopatia-materna",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "seguimento-cardiovascular-pos-parto",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "dislipidemia",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "hipertensao-arterial-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "doenca-de-kawasaki",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "miocardite-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "taquicardia-supraventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "hipotensao-ortostatica-no-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "valva-aortica-bicuspide-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "fisiologia-ventriculo-unico",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "dislipidemias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "sopros-na-infancia",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "dor-toracica-pediatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "arritmias-pediatricas",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "indicacoes-ecocardiograma-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "bloqueio-atrioventricular-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "flutter-atrial-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "hidropisia-fetal-cardiovascular",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "coarctacao-aorta-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "tetralogia-fallot-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "transposicao-grandes-arterias-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "retorno-venoso-pulmonar-anomalo-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "avaliacao-multidimensional-cardiogeriatrica",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "estenose-aortica-tavi-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "doenca-coronariana-idoso",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "cuidados-paliativos-cardiovasculares",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "cardiotoxicidade-bcr-abl",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "placeholder detectado: todo",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "cardiopatia-congenita-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "hipertensao-pulmonar-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "medicamentos-cardiovasculares-gestacao-lactacao",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "plano-parto-cardiopatia-materna",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "seguimento-cardiovascular-pos-parto",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "miocardite",
+      "path": "doencas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 564,
+      "kind": "doencas",
+      "key": "sindrome-coracao-esquerdo-hipoplasico-fetal",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 564,
+      "kind": "doencas",
+      "key": "arritmias-na-gravidez",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 564,
+      "kind": "doencas",
+      "key": "comunicacao-interatrial",
+      "path": "doencas/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 535,
+      "kind": "triagem",
+      "key": "colapso-subito-inconsciencia-e-respiracao-anormal",
+      "path": "triagem-sintomas/metadados.json",
+      "reason": "slug já existe como fragmento canônico composto",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-intoxicacao-digitalica",
+      "path": "content/Arritmias/fluxograma-intoxicacao-digitalica.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+      "path": "content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia",
+      "path": "content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio",
+      "path": "content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao",
+      "path": "content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "path": "content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-cuidado-pos-parada-e-coronariografia",
+      "path": "content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-hipercalemia-grave",
+      "path": "content/Terapia_intensiva/fluxograma-hipercalemia-grave.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025",
+      "path": "content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025",
+      "path": "content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 526,
+      "kind": "documento",
+      "key": "trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia",
+      "path": "content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-intoxicacao-digitalica",
+      "path": "content/Arritmias/fluxograma-intoxicacao-digitalica.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+      "path": "content/Cardio-oncologia/fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia",
+      "path": "content/Cardio-oncologia/fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio",
+      "path": "content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao",
+      "path": "content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "path": "content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-cuidado-pos-parada-e-coronariografia",
+      "path": "content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-hipercalemia-grave",
+      "path": "content/Terapia_intensiva/fluxograma-hipercalemia-grave.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025",
+      "path": "content/Valvopatias/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025",
+      "path": "content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 525,
+      "kind": "documento",
+      "key": "trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia",
+      "path": "content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "fluxograma-intoxicacao-digitalica",
+      "path": "content/Arritmias/fluxograma-intoxicacao-digitalica.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio",
+      "path": "content/Gravidez/fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao",
+      "path": "content/Gravidez/fluxograma-trombose-de-protese-valvar-mecanica-na-gestacao.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "path": "content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "fluxograma-cuidado-pos-parada-e-coronariografia",
+      "path": "content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "fluxograma-hipercalemia-grave",
+      "path": "content/Terapia_intensiva/fluxograma-hipercalemia-grave.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 524,
+      "kind": "documento",
+      "key": "trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia",
+      "path": "content/Valvopatias/trombose-de-protese-valvar-mecanica-diagnostico-e-decisao-entre-fibrinolise-e-cirurgia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-evidencia-por-tras-da-pratica",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica",
+      "path": "trilhas/metadados.json",
+      "reason": "sem fonte rastreável",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 523,
+      "kind": "documento",
+      "key": "fluxograma-intoxicacao-digitalica",
+      "path": "content/Arritmias/fluxograma-intoxicacao-digitalica.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 523,
+      "kind": "documento",
+      "key": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "path": "content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 523,
+      "kind": "documento",
+      "key": "fluxograma-cuidado-pos-parada-e-coronariografia",
+      "path": "content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 523,
+      "kind": "documento",
+      "key": "fluxograma-hipercalemia-grave",
+      "path": "content/Terapia_intensiva/fluxograma-hipercalemia-grave.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 522,
+      "kind": "documento",
+      "key": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+      "path": "content/Terapia_intensiva/falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 522,
+      "kind": "documento",
+      "key": "fluxograma-cuidado-pos-parada-e-coronariografia",
+      "path": "content/Terapia_intensiva/fluxograma-cuidado-pos-parada-e-coronariografia.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 516,
+      "kind": "documento",
+      "key": "fluxograma-taquicardia-de-qrs-largo-esc-2019",
+      "path": "content/Arritmias/fluxograma-taquicardia-de-qrs-largo-esc-2019.md",
+      "reason": "documento canônico atual já revisado e com fonte; versão antiga superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 436,
+      "kind": "material_paciente",
+      "key": "amiodarona-cuidados-com-interacoes-e-o-periodo-apos-parar-de-tomar",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 435,
+      "kind": "material_paciente",
+      "key": "valvuloplastia-mitral-por-balao-o-que-esperar-do-procedimento",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 408,
+      "kind": "medicamentos",
+      "key": "flecainida",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 398,
+      "kind": "medicamentos",
+      "key": "amiodarona-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 398,
+      "kind": "medicamentos",
+      "key": "bisoprolol-hemifumarato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 398,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 395,
+      "kind": "medicamentos",
+      "key": "bisoprolol-hemifumarato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 395,
+      "kind": "medicamentos",
+      "key": "diltiazem-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations",
+        "brand_names"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 395,
+      "kind": "medicamentos",
+      "key": "verapamil-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 389,
+      "kind": "medicamentos",
+      "key": "amiodarona-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]",
+        "brand_names[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 389,
+      "kind": "medicamentos",
+      "key": "dobutamina",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 389,
+      "kind": "medicamentos",
+      "key": "eplerenona",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 389,
+      "kind": "medicamentos",
+      "key": "felodipino",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 387,
+      "kind": "medicamentos",
+      "key": "benazepril-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 387,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 383,
+      "kind": "medicamentos",
+      "key": "bisoprolol-hemifumarato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 383,
+      "kind": "medicamentos",
+      "key": "mononitrato-de-isossorbida",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 383,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names[+]",
+        "brand_names[+]",
+        "brand_names[+]",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 379,
+      "kind": "medicamentos",
+      "key": "eplerenona",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 379,
+      "kind": "medicamentos",
+      "key": "felodipino",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 379,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]",
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 379,
+      "kind": "medicamentos",
+      "key": "lisinopril",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 366,
+      "kind": "checklists",
+      "key": "duracao-da-profilaxia-secundaria-antibiotica-na-febre-reumatica-por-categoria-de-risco",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 365,
+      "kind": "medicamentos",
+      "key": "disopiramida",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 365,
+      "kind": "medicamentos",
+      "key": "esmolol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 365,
+      "kind": "medicamentos",
+      "key": "flecainida",
+      "path": "medicamentos/metadados.json",
+      "reason": "candidato antigo contém placeholder (Todo); canônico atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 365,
+      "kind": "medicamentos",
+      "key": "perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 361,
+      "kind": "medicamentos",
+      "key": "idarucizumabe",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 361,
+      "kind": "medicamentos",
+      "key": "nitroglicerina-trinitrato-de-glicerila",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 361,
+      "kind": "medicamentos",
+      "key": "omeprazol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 361,
+      "kind": "medicamentos",
+      "key": "paracetamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 361,
+      "kind": "medicamentos",
+      "key": "salbutamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 357,
+      "kind": "medicamentos",
+      "key": "nitroprussiato-de-sodio",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 357,
+      "kind": "medicamentos",
+      "key": "sotalol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 353,
+      "kind": "medicamentos",
+      "key": "candesartana-cilexetila",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 353,
+      "kind": "medicamentos",
+      "key": "fondaparinux-sodico",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 349,
+      "kind": "medicamentos",
+      "key": "eplerenona",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 349,
+      "kind": "medicamentos",
+      "key": "felodipino",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 349,
+      "kind": "medicamentos",
+      "key": "verapamil-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 349,
+      "kind": "medicamentos",
+      "key": "dalteparina-sodica",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 348,
+      "kind": "checklists",
+      "key": "estenose-tricuspide-reumatica-avaliacao-diagnostica-e-decisao-de-manejo-combinado",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 346,
+      "kind": "material_paciente",
+      "key": "amiodarona-cuidados-e-exames-de-acompanhamento",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 346,
+      "kind": "material_paciente",
+      "key": "diuretico-de-alca-furosemida-cuidados-no-dia-a-dia",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 345,
+      "kind": "checklists",
+      "key": "diagnostico-de-ic-e-elegibilidade-a-farmaco-no-sus-pcdt-2024",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 344,
+      "kind": "material_paciente",
+      "key": "colesterol-alto-que-vem-de-familia-o-que-e-hipercolesterolemia-familiar",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 342,
+      "kind": "medicamentos",
+      "key": "diltiazem-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]",
+        "brand_names[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 338,
+      "kind": "medicamentos",
+      "key": "enoxaparina-sodica",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 338,
+      "kind": "medicamentos",
+      "key": "ticagrelor",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 338,
+      "kind": "medicamentos",
+      "key": "insulina-humana-nph",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 338,
+      "kind": "medicamentos",
+      "key": "diclofenaco",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "<root>"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 333,
+      "kind": "medicamentos",
+      "key": "sildenafila-citrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 328,
+      "kind": "material_paciente",
+      "key": "pericardite-por-infeccao-bacteriana-uma-forma-grave-e-diferente-de-tratar",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 320,
+      "kind": "material_paciente",
+      "key": "flutter-atrial-o-que-e-e-por-que-a-ablacao-costuma-curar",
+      "path": "material-paciente/metadados.json",
+      "reason": "material derivado validado e revisado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 297,
+      "kind": "material_paciente",
+      "key": "hipoglicemia-e-o-coracao-por-que-controlar-sem-exagerar",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 292,
+      "kind": "checklists",
+      "key": "diagnostico-e-tratamento-da-pericardite-purulenta-bacteriana",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 290,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-cloridrato-de-amilorida",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 288,
+      "kind": "material_paciente",
+      "key": "quando-a-pressao-alta-e-uma-emergencia",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 286,
+      "kind": "medicamentos",
+      "key": "rosuvastatina-calcica",
+      "path": "medicamentos/metadados.json",
+      "reason": "candidato antigo contém placeholder (todo); canônico atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 283,
+      "kind": "medicamentos",
+      "key": "metformina-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_source",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 283,
+      "kind": "medicamentos",
+      "key": "protamina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_hours",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 283,
+      "kind": "medicamentos",
+      "key": "dipiridamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names",
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 279,
+      "kind": "medicamentos",
+      "key": "heparina-nao-fracionada",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 276,
+      "kind": "checklists",
+      "key": "pericardite-purulenta-bacteriana-diagnostico-e-drenagem",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 275,
+      "kind": "medicamentos",
+      "key": "adenosina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_note",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 271,
+      "kind": "medicamentos",
+      "key": "dobutamina",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_hours",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 265,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 265,
+      "kind": "medicamentos",
+      "key": "ramipril",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": []
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 265,
+      "kind": "medicamentos",
+      "key": "azilsartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "candidato antigo contém placeholder (todo); canônico atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 262,
+      "kind": "medicamentos",
+      "key": "milrinona",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_note",
+          "duration_of_action_note",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 262,
+      "kind": "medicamentos",
+      "key": "mononitrato-de-isossorbida",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 262,
+      "kind": "medicamentos",
+      "key": "nitroprussiato-de-sodio",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 262,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "half_life_note",
+          "duration_of_action_hours",
+          "duration_of_action_source"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 261,
+      "kind": "material_paciente",
+      "key": "estatina-o-remedio-para-baixar-o-colesterol-e-proteger-o-coracao",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "unresolved",
+      "pr": 259,
+      "kind": "medicamentos",
+      "key": "clonidina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_note",
+          "bp_evidence_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 259,
+      "kind": "medicamentos",
+      "key": "lisinopril",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "brand_names[+]",
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 256,
+      "kind": "material_paciente",
+      "key": "hipoglicemia-e-o-coracao",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 255,
+      "kind": "material_paciente",
+      "key": "via-eletrica-extra-no-coracao-o-que-e-wolff-parkinson-white",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 252,
+      "kind": "medicamentos",
+      "key": "amiodarona-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_hours",
+          "duration_of_action_hours",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 252,
+      "kind": "medicamentos",
+      "key": "diltiazem-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_note",
+          "sbp_reduction_mmhg",
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 252,
+      "kind": "medicamentos",
+      "key": "indapamida",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 252,
+      "kind": "medicamentos",
+      "key": "metildopa-alfa-metildopa",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 245,
+      "kind": "medicamentos",
+      "key": "nifedipina",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 245,
+      "kind": "medicamentos",
+      "key": "trimetazidina",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_note",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "clortalidona",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "verapamil-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_note"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 237,
+      "kind": "checklists",
+      "key": "ajuste-de-dose-de-doac-apixabana-e-rivaroxabana-por-funcao-renal",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 234,
+      "kind": "checklists",
+      "key": "drenagem-pericardica-na-pericardite-purulenta-bacteriana",
+      "path": "checklists/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "merged",
+      "pr": 230,
+      "kind": "medicamentos",
+      "key": "captopril",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_note",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "merged",
+      "pr": 230,
+      "kind": "medicamentos",
+      "key": "enalapril-maleato",
+      "path": "medicamentos/metadados.json",
+      "reason": "delta aditivo reconciliado sem regressão",
+      "changed_paths": [
+        "commercial_presentations[+]",
+        "commercial_presentations[+]"
+      ],
+      "details": {
+        "preserved_conflicts": [
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-cloridrato-de-amilorida",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-ramipril",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-benazepril-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-hidroclorotiazida-valsartana",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source",
+          "half_life_hours"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-propranolol",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "metformina-cloridrato-glibenclamida",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "half_life_hours",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 215,
+      "kind": "medicamentos",
+      "key": "valsartana",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 214,
+      "kind": "medicamentos",
+      "key": "rosuvastatina-calcica",
+      "path": "medicamentos/metadados.json",
+      "reason": "candidato antigo contém placeholder (todo); canônico atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 210,
+      "kind": "material_paciente",
+      "key": "sinais-de-infeccao-no-marca-passo-ou-cdi-o-que-observar",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 206,
+      "kind": "material_paciente",
+      "key": "coracao-fraco-por-causa-do-diabetes-a-cardiomiopatia-diabetica",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 206,
+      "kind": "material_paciente",
+      "key": "hipoglicemia-e-o-risco-para-o-coracao-por-que-evitar-o-acucar-muito-baixo",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 203,
+      "kind": "medicamentos",
+      "key": "esmolol",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 203,
+      "kind": "medicamentos",
+      "key": "fenilefrina-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 203,
+      "kind": "medicamentos",
+      "key": "dipiridamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 195,
+      "kind": "medicamentos",
+      "key": "perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "bp_evidence_source",
+          "brand_names",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 195,
+      "kind": "medicamentos",
+      "key": "azilsartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "candidato antigo contém placeholder (todo); canônico atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 190,
+      "kind": "medicamentos",
+      "key": "enalapril-maleato",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "bp_evidence_source",
+          "brand_names",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 190,
+      "kind": "medicamentos",
+      "key": "mononitrato-de-isossorbida",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "brand_names",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 190,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "brand_names",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 190,
+      "kind": "medicamentos",
+      "key": "ramipril",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "brand_names",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 186,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "half_life_hours",
+          "half_life_note",
+          "duration_of_action_hours",
+          "duration_of_action_source",
+          "commercial_presentations"
+        ]
+      }
+    },
+    {
+      "status": "unresolved",
+      "pr": 186,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "medicamento sem delta seguro e ficha canônica não certificada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "bp_evidence_source",
+          "half_life_hours"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 180,
+      "kind": "medicamentos",
+      "key": "diclofenaco",
+      "path": "medicamentos/metadados.json",
+      "reason": "base do PR não continha o registro; canônico revisado atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 180,
+      "kind": "medicamentos",
+      "key": "salbutamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "base do PR não continha o registro; canônico revisado atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 177,
+      "kind": "material_paciente",
+      "key": "ansiedade-pode-parecer-problema-de-coracao",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 177,
+      "kind": "material_paciente",
+      "key": "burnout-no-trabalho-e-o-seu-coracao",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 177,
+      "kind": "material_paciente",
+      "key": "sindrome-do-coracao-partido-o-que-e-o-takotsubo",
+      "path": "material-paciente/metadados.json",
+      "reason": "registro canônico atual já revisado/aprovado; delta antigo superseded",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 175,
+      "kind": "medicamentos",
+      "key": "disopiramida",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_note",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "brand_names"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 175,
+      "kind": "medicamentos",
+      "key": "flecainida",
+      "path": "medicamentos/metadados.json",
+      "reason": "nenhum delta adicional seguro; ficha canônica revisada preservada",
+      "changed_paths": [],
+      "details": {
+        "preserved_conflicts": [
+          "duration_of_action_hours",
+          "sbp_reduction_mmhg",
+          "dbp_reduction_mmhg",
+          "brand_names"
+        ]
+      }
+    },
+    {
+      "status": "current_wins",
+      "pr": 175,
+      "kind": "medicamentos",
+      "key": "omeprazol",
+      "path": "medicamentos/metadados.json",
+      "reason": "base do PR não continha o registro; canônico revisado atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 175,
+      "kind": "medicamentos",
+      "key": "insulina-humana-nph",
+      "path": "medicamentos/metadados.json",
+      "reason": "base do PR não continha o registro; canônico revisado atual preservado",
+      "changed_paths": [],
+      "details": {}
+    },
+    {
+      "status": "current_wins",
+      "pr": 175,
+      "kind": "medicamentos",
+      "key": "paracetamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "base do PR não continha o registro; canônico revisado atual preservado",
+      "changed_paths": [],
+      "details": {}
+    }
+  ]
+}
