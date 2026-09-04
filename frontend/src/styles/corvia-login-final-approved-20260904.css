@@ -232,3 +232,10 @@
   from { transform: translate(-50%, -50%) rotateY(0deg); }
   to { transform: translate(-50%, -50%) rotateY(360deg); }
 }
+
+/* Guarda de fidelidade: mantém Ensino abaixo do subtítulo no desktop aprovado. */
+@media (min-width:901px) {
+  #root .login.login-gateway--public .login-gateway__space--ensino {
+    top: 32% !important;
+  }
+}
