@@ -1,0 +1,72 @@
+name: Report final science TODO fields
+
+on:
+  push:
+    branches:
+      - science/reconcile-open-pr-corpus-20260904
+    paths:
+      - .github/workflows/report-final-science-todos.yml
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: science/reconcile-open-pr-corpus-20260904
+      - name: Extract TODO fields from remaining medication records
+        run: |
+          python - <<'PY' > /tmp/final-science-todos.json
+          import json, re
+          from pathlib import Path
+
+          wanted = {
+            'anlodipino-besilato-benazepril-cloridrato',
+            'hidroclorotiazida-cloridrato-de-amilorida',
+            'hidroclorotiazida-ramipril',
+            'indapamida-perindopril',
+            'indapamida-perindopril-argininaerbumina',
+          }
+          records = json.loads(Path('medicamentos/metadados.json').read_text(encoding='utf-8'))
+          if isinstance(records, dict):
+              for key in ('items','records','medicamentos','dados'):
+                  if isinstance(records.get(key), list):
+                      records = records[key]
+                      break
+          def walk(value, path=''):
+              hits = []
+              if isinstance(value, dict):
+                  for k, v in value.items():
+                      hits += walk(v, f'{path}.{k}' if path else k)
+              elif isinstance(value, list):
+                  for i, v in enumerate(value):
+                      hits += walk(v, f'{path}[{i}]')
+              elif isinstance(value, str) and re.search(r'\b(?:TODO|TBD|FIXME|XXX)\b', value):
+                  hits.append({'path': path, 'value': value})
+              return hits
+
+          output = []
+          for record in records:
+              if isinstance(record, dict) and record.get('slug') in wanted:
+                  output.append({
+                      'slug': record['slug'],
+                      'review_status': record.get('review_status'),
+                      'todo_fields': walk(record),
+                      'references': record.get('references'),
+                      'source_refs': record.get('source_refs'),
+                      'commercial_presentations': record.get('commercial_presentations'),
+                      'half_life_note': record.get('half_life_note'),
+                      'duration_of_action_note': record.get('duration_of_action_note'),
+                      'bp_evidence_source': record.get('bp_evidence_source'),
+                  })
+          print(json.dumps(output, ensure_ascii=False, indent=2))
+          PY
+          cat /tmp/final-science-todos.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: final-science-todos
+          path: /tmp/final-science-todos.json
+          retention-days: 7
