@@ -1,0 +1,113 @@
+name: Reconcile open scientific PR corpus
+
+on:
+  push:
+    branches:
+      - science/reconcile-open-pr-corpus-20260904
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: science-reconcile-open-pr-corpus-20260904
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    name: Consolidar conteúdo científico pendente
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout preparation branch
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: science/reconcile-open-pr-corpus-20260904
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install lightweight reconciliation dependency
+        run: python -m pip install --disable-pip-version-check 'PyYAML>=6,<7'
+
+      - name: Fetch canonical main and every pull-request head
+        run: |
+          git fetch origin main --prune
+          git fetch origin '+refs/pull/*/head:refs/remotes/pr/*'
+
+      - name: Snapshot open pull requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --paginate "/repos/${GITHUB_REPOSITORY}/pulls?state=open&per_page=100" \
+            --jq '.[].number' | jq -s 'unique | sort' > /tmp/open-prs.json
+          echo "Open PRs: $(jq length /tmp/open-prs.json)"
+
+      - name: Compile reconciliation tool
+        run: python -m py_compile scripts/reconcile_open_science_prs.py
+
+      - name: Reconcile, deduplicate and mark accepted units reviewed
+        run: |
+          python scripts/reconcile_open_science_prs.py \
+            --base origin/main \
+            --open-prs /tmp/open-prs.json
+
+      - name: Validate all touched JSON and YAML front matter
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+
+          manifests = [
+              'casos-clinicos/metadados.json', 'checklists/metadados.json',
+              'doencas/metadados.json', 'emergencia/metadados.json',
+              'estudos/metadados.json', 'evidencias/metadados.json',
+              'exames/metadados.json', 'galeria/metadados.json',
+              'material-paciente/metadados.json', 'medicamentos/metadados.json',
+              'triagem-sintomas/metadados.json', 'trilhas/metadados.json',
+          ]
+          for item in manifests:
+              path = Path(item)
+              if path.exists():
+                  json.loads(path.read_text(encoding='utf-8'))
+
+          for path in Path('content').rglob('*.md'):
+              text = path.read_text(encoding='utf-8')
+              if text.startswith('---\n'):
+                  end = text.find('\n---\n', 4)
+                  if end < 0:
+                      raise SystemExit(f'front matter incompleto: {path}')
+                  meta = yaml.safe_load(text[4:end])
+                  if not isinstance(meta, dict):
+                      raise SystemExit(f'front matter inválido: {path}')
+          PY
+
+      - name: Run strict corpus inventory
+        run: python scripts/content_inventory.py --strict
+
+      - name: Show consolidation summary
+        run: |
+          jq '.summary, .accepted_by_pr' artifacts/science-reconcile-report.json
+          git diff --stat
+
+      - name: Commit prepared corpus to isolated branch
+        run: |
+          git config user.name 'CorVIA Science Reconciler'
+          git config user.email 'actions@users.noreply.github.com'
+          git add \
+            content \
+            casos-clinicos checklists doencas emergencia estudos evidencias exames galeria \
+            material-paciente medicamentos triagem-sintomas trilhas \
+            artifacts/science-reconcile-report.json \
+            docs/REVISAO-CIENTIFICA-PRS-PENDENTES-20260904.md
+          if git diff --cached --quiet; then
+            echo 'Nenhum conteúdo novo seguro para gravar nesta rodada.'
+            exit 0
+          fi
+          git commit -m 'science: consolida corpus revisado dos PRs pendentes'
+          git push origin HEAD:science/reconcile-open-pr-corpus-20260904
