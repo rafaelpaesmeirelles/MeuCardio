@@ -1,0 +1,175 @@
+name: Prepare predeploy UI RAG science
+
+on:
+  push:
+    branches:
+      - release/predeploy-20260903-ui-rag-science
+    paths:
+      - .github/workflows/prepare-predeploy-20260903.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prepare-predeploy-20260903-ui-rag-science
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BASE_MAIN_SHA: 82c525a360b67afc456acafb44928120cdc0cf2a
+      PR811_SHA: 3bc423049e2ccd94977c755dade67f6ec9a8ab26
+      SCIENCE_SHA: 9114284c4f5db87cdce9a8eb78f9a275a27975a1
+      RELEASE_BRANCH: release/predeploy-20260903-ui-rag-science
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: release/predeploy-20260903-ui-rag-science
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Freeze exact sources
+        run: |
+          git fetch origin main --prune
+          git fetch origin corvia-correcao-coordenada-rag-20260903
+          git fetch origin science/reconcile-open-pr-corpus-20260904
+          test "$(git rev-parse origin/main)" = "$BASE_MAIN_SHA" || {
+            echo "main moved: expected $BASE_MAIN_SHA got $(git rev-parse origin/main)" >&2
+            exit 31
+          }
+          git cat-file -e "${PR811_SHA}^{commit}"
+          git cat-file -e "${SCIENCE_SHA}^{commit}"
+          test "$(git rev-parse HEAD^)" = "$BASE_MAIN_SHA" || true
+
+      - name: Integrate PR 811 preserving approved login from main
+        run: |
+          git config user.name 'CorVIA Predeploy Builder'
+          git config user.email 'actions@users.noreply.github.com'
+          set +e
+          git merge --no-ff --no-commit "$PR811_SHA"
+          rc=$?
+          set -e
+          if [ "$rc" -ne 0 ]; then
+            allowed='frontend/scripts/check-scientific-learning-environment-contract.test.mjs frontend/src/pages/Entrar.tsx frontend/src/styles/cardiology-spaces-login-approved-final.css'
+            for f in $allowed; do
+              if git diff --name-only --diff-filter=U | grep -Fxq "$f"; then
+                git checkout --ours -- "$f"
+                git add "$f"
+              fi
+            done
+            remaining="$(git diff --name-only --diff-filter=U)"
+            if [ -n "$remaining" ]; then
+              echo "Conflitos não autorizados:" >&2
+              echo "$remaining" >&2
+              exit 32
+            fi
+          fi
+          git commit -m 'release: integrar PR #811 preservando login final aprovado'
+
+          # Contract: the three final-login files must remain byte-identical to frozen main.
+          git diff --exit-code "$BASE_MAIN_SHA" -- \
+            frontend/scripts/check-scientific-learning-environment-contract.test.mjs \
+            frontend/src/pages/Entrar.tsx \
+            frontend/src/styles/cardiology-spaces-login-approved-final.css
+
+      - name: Apply only reviewed canonical science and audit notes
+        run: |
+          git diff --binary "$BASE_MAIN_SHA" "$SCIENCE_SHA" -- \
+            checklists/metadados.json \
+            doencas/metadados.json \
+            material-paciente/metadados.json \
+            medicamentos/metadados.json \
+            trilhas/metadados.json \
+            docs/FINALIZACAO-CIENTIFICA-PRS-PENDENTES-20260904.md \
+            docs/RESOLUCAO-CIENTIFICA-RESIDUAL-20260904.md \
+            docs/REVISAO-CIENTIFICA-PRS-PENDENTES-20260904.md \
+            > /tmp/science-reviewed.patch
+          if [ -s /tmp/science-reviewed.patch ]; then
+            git apply --3way --index /tmp/science-reviewed.patch
+            git commit -m 'science: incorporar corpus consolidado e revisado para predeploy'
+          else
+            echo 'Nenhum delta científico a aplicar.'
+          fi
+
+      - name: Validate scientific corpus without backend pytest
+        run: |
+          python scripts/content_inventory.py --strict > /tmp/predeploy-inventory.json
+          jq '{total_records, missing, invalid}' /tmp/predeploy-inventory.json
+          if [ -f scripts/audit_tudo_com_tudo.py ]; then
+            python scripts/audit_tudo_com_tudo.py > /tmp/predeploy-tct.json
+            tail -n 40 /tmp/predeploy-tct.json || true
+          fi
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          targets = {
+              'hidroclorotiazida-cloridrato-de-amilorida',
+              'hidroclorotiazida-ramipril',
+              'indapamida-perindopril',
+              'indapamida-perindopril-argininaerbumina',
+              'anlodipino-besilato-benazepril-cloridrato',
+          }
+          data = json.loads(Path('medicamentos/metadados.json').read_text(encoding='utf-8'))
+          records = data
+          if isinstance(data, dict):
+              for key in ('items','records','medicamentos','dados'):
+                  if isinstance(data.get(key), list):
+                      records = data[key]
+                      break
+          seen = set()
+          for rec in records:
+              if isinstance(rec, dict) and rec.get('slug') in targets:
+                  seen.add(rec['slug'])
+                  if rec.get('review_status') != 'revisado':
+                      raise SystemExit(f'not reviewed: {rec["slug"]}')
+                  if re.search(r'\b(?:TODO|TBD|FIXME|XXX)\b', json.dumps(rec, ensure_ascii=False)):
+                      raise SystemExit(f'residual marker: {rec["slug"]}')
+          if seen != targets:
+              raise SystemExit(f'missing target slugs: {sorted(targets-seen)}')
+          PY
+
+      - name: Lightweight backend syntax gate only
+        run: |
+          python -m compileall -q backend/app backend/migrations/versions
+
+      - name: Frontend directed contracts and production build
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund
+          node scripts/check-cardiology-spaces-login-gateway-contract.test.mjs
+          node scripts/check-cardiology-spaces-light-mode-contract.test.mjs
+          node scripts/check-scientific-learning-environment-contract.test.mjs
+          npm run build
+
+      - name: Final diff integrity and deploy manifest
+        run: |
+          git diff --check "$BASE_MAIN_SHA"..HEAD
+          records="$(jq -r '.total_records' /tmp/predeploy-inventory.json)"
+          cat > docs/PREDEPLOY-20260903-UI-RAG-SCIENCE.md <<EOF
+          # CorVIA — pacote preparado para deploy
+
+          - Base main congelada: \`${BASE_MAIN_SHA}\`
+          - PR #811 congelado: \`${PR811_SHA}\`
+          - Consolidação científica congelada: \`${SCIENCE_SHA}\`
+          - Corpus estrito no pacote: **${records} registros**
+          - Login final aprovado: preservado byte a byte da main congelada
+          - Apps nativos: sem reativação de downloads/atualizações
+          - Backend: sem suíte pytest completa nesta preparação; PR #811 já possuía validação dirigida anterior
+          - Gates executados aqui: inventário científico estrito, auditoria Tudo com Tudo quando disponível, ausência de marcadores residuais nos cinco verbetes finais, compileall backend, contratos frontend dirigidos, build de produção e diff-check
+          - Backfill RAG: **não executado**
+          - Deploy: **não executado**
+          - Merge em main: **não executado**
+          EOF
+          git add docs/PREDEPLOY-20260903-UI-RAG-SCIENCE.md
+          git rm .github/workflows/prepare-predeploy-20260903.yml
+          git commit -m 'release: certificar pacote predeploy sem publicar'
+          git push origin HEAD:"$RELEASE_BRANCH"
