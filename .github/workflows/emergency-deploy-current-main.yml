@@ -1,0 +1,60 @@
+name: Emergency deploy current main
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Run CorVIA Intelligence on current production
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.title == 'ops: emergency deploy current main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production
+    env:
+      TARGET_SHA: f90d0f30f8cfef44f474ec46b8b3a325b9372e48
+      SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
+      SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
+      SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
+      SSH_PRIVATE_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
+      SSH_KNOWN_HOSTS: ${{ secrets.PRODUCTION_SSH_KNOWN_HOSTS }}
+    steps:
+      - name: Confirm target is still current main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          current_main="$(gh api "repos/${REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
+          test "$current_main" = "$TARGET_SHA"
+          echo "CorVIA Intelligence target: $TARGET_SHA"
+
+      - name: Prepare restricted SSH client
+        run: |
+          set -euo pipefail
+          : "${SSH_HOST:?Missing PRODUCTION_SSH_HOST}"
+          : "${SSH_USER:?Missing PRODUCTION_SSH_USER}"
+          : "${SSH_PRIVATE_KEY:?Missing PRODUCTION_SSH_PRIVATE_KEY}"
+          : "${SSH_KNOWN_HOSTS:?Missing PRODUCTION_SSH_KNOWN_HOSTS}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          install -m 0700 -d "$ssh_dir"
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$ssh_dir/key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
+          chmod 0600 "$ssh_dir/key" "$ssh_dir/known_hosts"
+
+      - name: Run CorVIA Intelligence inside production backend
+        run: |
+          set -euo pipefail
+          SSH_PORT="${SSH_PORT:-22}"
+          ssh_dir="$RUNNER_TEMP/corvia-ssh"
+          ssh -p "$SSH_PORT" -i "$ssh_dir/key" \
+            -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
+            -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
+            -o StrictHostKeyChecking=yes -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            "$SSH_USER@$SSH_HOST" "intelligence $TARGET_SHA"
