@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "input_unresolved": 29,
+  "summary": {
+    "current_wins": 3,
+    "finalized": 19,
+    "unresolved": 7
+  },
+  "changed_manifests": [
+    "doencas",
+    "medicamentos",
+    "trilhas"
+  ],
+  "decisions": [
+    {
+      "status": "finalized",
+      "pr": 572,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "status revisado materializado no canônico",
+      "changed_paths": []
+    },
+    {
+      "status": "current_wins",
+      "pr": 570,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "mesmo conteúdo já finalizado nesta rodada: verbete canônico revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "current_wins",
+      "pr": 568,
+      "kind": "doencas",
+      "key": "trombose-associada-cancer",
+      "path": "doencas/metadados.json",
+      "reason": "mesmo conteúdo já finalizado nesta rodada: verbete canônico revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-evidencia-por-tras-da-pratica",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-gestacao-e-puerperio-da-cardiopatia-reumatica",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-farmacologia-da-profilaxia-secundaria-e-anticoagulacao",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 523,
+      "kind": "trilhas",
+      "key": "trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica",
+      "path": "trilhas/metadados.json",
+      "reason": "trilha validada por integridade referencial",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 290,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-cloridrato-de-amilorida",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 283,
+      "kind": "medicamentos",
+      "key": "metformina-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 283,
+      "kind": "medicamentos",
+      "key": "protamina",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 275,
+      "kind": "medicamentos",
+      "key": "adenosina",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 265,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 262,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 259,
+      "kind": "medicamentos",
+      "key": "clonidina",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 244,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-cloridrato-de-amilorida",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-ramipril",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-benazepril-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-hidroclorotiazida-valsartana",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "hidroclorotiazida-propranolol",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 222,
+      "kind": "medicamentos",
+      "key": "metformina-cloridrato-glibenclamida",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 203,
+      "kind": "medicamentos",
+      "key": "fenilefrina-cloridrato",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 203,
+      "kind": "medicamentos",
+      "key": "dipiridamol",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    },
+    {
+      "status": "current_wins",
+      "pr": 190,
+      "kind": "medicamentos",
+      "key": "olmesartana-medoxomila",
+      "path": "medicamentos/metadados.json",
+      "reason": "mesmo conteúdo já finalizado nesta rodada: ficha farmacológica canônica revisada",
+      "changed_paths": []
+    },
+    {
+      "status": "unresolved",
+      "pr": 186,
+      "kind": "medicamentos",
+      "key": "indapamida-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "placeholder técnico real permanece: TODO",
+      "changed_paths": []
+    },
+    {
+      "status": "finalized",
+      "pr": 186,
+      "kind": "medicamentos",
+      "key": "anlodipino-besilato-perindopril-argininaerbumina",
+      "path": "medicamentos/metadados.json",
+      "reason": "ficha canônica certificada e marcada revisado",
+      "changed_paths": []
+    }
+  ]
+}
