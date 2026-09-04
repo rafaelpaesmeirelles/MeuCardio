@@ -13,6 +13,7 @@ import "../styles/cardiology-spaces-login-approved-final.css";
 import "../styles/cardiology-spaces-login-galaxy-kinematics.css";
 import "../styles/cardiology-spaces-login-production-approved.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
+import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 
 type TemaPublico = CorviaTheme;
 
@@ -130,13 +131,7 @@ export default function Entrar() {
 
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
-            <img
-              className="login-gateway__galaxy-image"
-              src="/spaces/galaxy-loop-poster.webp"
-              alt=""
-              aria-hidden="true"
-              draggable={false}
-            />
+            <img className="login-gateway__galaxy-image" src="/spaces/galaxy-loop-poster.webp" alt="" aria-hidden="true" draggable={false} />
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />
