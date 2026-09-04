@@ -11,6 +11,8 @@ import "../styles/login-viewport-refinement.css";
 import "../styles/cardiology-spaces-login.css";
 import "../styles/cardiology-spaces-login-approved-final.css";
 
+// Marcador operacional sem efeito visual: publicação emergencial do login final aprovado.
+
 type TemaPublico = CorviaTheme;
 
 function temaPublicoInicial(): TemaPublico {
