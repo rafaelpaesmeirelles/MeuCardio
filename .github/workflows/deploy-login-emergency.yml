@@ -7,6 +7,7 @@ on:
       - frontend/src/pages/Entrar.tsx
       - frontend/src/styles/cardiology-spaces-login-motion-fidelity.css
       - frontend/src/styles/cardiology-spaces-login-galaxy-kinematics.css
+      - ops/build-android-apk.sh
       - ops/remote-deploy-entrypoint.sh
       - ops/bootstrap-release-entrypoint.sh
       - .github/workflows/deploy-login-emergency.yml
@@ -29,6 +30,7 @@ jobs:
     environment: production
     env:
       TARGET_SHA: ${{ github.sha }}
+      ANDROID_CERT_SHA256: 1344fed66fce26841b5fbb6a302a27ad5cd207c1b8fb989005e9be370148ce5e
       SSH_HOST: ${{ secrets.PRODUCTION_SSH_HOST }}
       SSH_PORT: ${{ secrets.PRODUCTION_SSH_PORT }}
       SSH_USER: ${{ secrets.PRODUCTION_SSH_USER }}
@@ -49,15 +51,26 @@ jobs:
           printf '%s\n' "$SSH_KNOWN_HOSTS" > "$ssh_dir/known_hosts"
           chmod 0600 "$ssh_dir/deploy_key" "$ssh_dir/known_hosts"
 
-      - name: Publish exact main SHA web-only immediately after the active release
+      - name: Restore and publish the approved login through the legacy restricted command
         run: |
           set -euo pipefail
           SSH_PORT="${SSH_PORT:-22}"
+          cert="$(printf '%s' "$ANDROID_CERT_SHA256" | tr -d '[:space:]:' | tr '[:upper:]' '[:lower:]')"
           [[ "$TARGET_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "Invalid main SHA" >&2; exit 65; }
+          [[ "$cert" =~ ^[0-9a-f]{64}$ ]] || { echo "Invalid Android certificate fingerprint" >&2; exit 65; }
+          log="$RUNNER_TEMP/corvia-login-emergency.log"
+          set +e
           timeout 3000s ssh -p "$SSH_PORT" -i "$RUNNER_TEMP/corvia-ssh/deploy_key" \
             -o BatchMode=yes -o ConnectTimeout=20 -o IdentitiesOnly=yes \
             -o ServerAliveInterval=30 -o ServerAliveCountMax=10 \
             -o StrictHostKeyChecking=yes \
             -o "UserKnownHostsFile=$RUNNER_TEMP/corvia-ssh/known_hosts" \
             "$SSH_USER@$SSH_HOST" \
-            "deploy-web $TARGET_SHA"
+            "deploy-web-android $TARGET_SHA $cert" 2>&1 | tee "$log"
+          status=${PIPESTATUS[0]}
+          set -e
+          if [[ "$status" == "75" ]] && grep -Fq "EMERGENCY_WEB_RECOVERY_COMPLETE=$TARGET_SHA" "$log"; then
+            echo "Emergency web-only login publication completed."
+            exit 0
+          fi
+          exit "$status"
