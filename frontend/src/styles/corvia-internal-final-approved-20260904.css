@@ -392,3 +392,74 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
     drop-shadow(0 0 3px rgba(var(--corvia-mini-glow-primary), .60))
     drop-shadow(0 0 10px rgba(var(--corvia-mini-glow-secondary), .27)) !important;
 }
+
+/* ==================================================================
+ * HOTFIX 05/09/2026 — marca completa + miniuniverso sem sobrepor
+ *
+ * Causa raiz: `cardiology-spaces-home.css:441` posiciona o toggle como
+ * `position: absolute` com `top: calc(100% + 3px); left: 50%;
+ * transform: translateX(-50%)`. A linha 364 deste arquivo passou a forçar
+ * `position: relative !important` — mas SEM neutralizar top/left/transform.
+ * Em `relative`, top/left deixam de ancorar e passam a DESLOCAR o elemento
+ * da posição natural: ele desce 100% da própria altura e anda 50% para o
+ * lado, caindo por cima da marca. Aqui o resíduo é zerado.
+ *
+ * Não altera tamanho, escala, brilho, rotação nem tema do miniuniverso —
+ * só o posicionamento. Nada de layout, cards, tabs ou conteúdo muda.
+ * ================================================================== */
+
+.galaxy-theme-toggle {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  flex: 0 0 auto !important;
+  margin-left: 10px !important;
+  z-index: 1 !important;
+}
+
+/*
+ * Os dois clusters reais do produto. Fora de media query o da Home é
+ * `display: grid` de uma coluna (home.css:426), o que empilha marca e
+ * miniuniverso na mesma célula — daí a sobreposição. Em linha, lado a lado.
+ */
+.spaces-home__brand-cluster,
+.spaces-choice__brand-cluster {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: max-content !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  flex-wrap: nowrap !important;
+}
+
+/*
+ * A marca nunca encolhe nem trunca. `.spaces-brand-button` traz
+ * `min-width: 0` (home.css:112), que autoriza o item flex/grid a encolher
+ * abaixo do próprio conteúdo — é isso que corta o "CorVIA".
+ */
+.spaces-home__brand-cluster .spaces-brand-button,
+.spaces-choice__brand-cluster .spaces-brand-button,
+.spaces-home__brand-cluster .spaces-brand,
+.spaces-choice__brand-cluster .spaces-brand {
+  flex: 0 0 auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 768px) {
+  .spaces-home__brand-cluster,
+  .spaces-choice__brand-cluster {
+    gap: 7px !important;
+  }
+
+  .galaxy-theme-toggle {
+    margin-left: 5px !important;
+  }
+}
