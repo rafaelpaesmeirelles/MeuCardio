@@ -41,7 +41,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
     >
       <img
         className="galaxy-theme-toggle__image"
-        src="/spaces/galaxy-approved-alpha.png"
+        src="/spaces/galaxy-approved-canonical.webp"
         alt=""
         aria-hidden="true"
         draggable={false}

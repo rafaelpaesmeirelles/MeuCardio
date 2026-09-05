@@ -296,47 +296,66 @@ html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
   }
 }
 
-/* HOTFIX 04/09 — modo claro interno: mini-galáxia nítida, sem aparência lavada.
- * Geometria, asset, posição, tamanho e rotação permanecem congelados. */
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle__image {
-  opacity: .98 !important;
-  mix-blend-mode: normal !important;
-  filter: saturate(1.12) contrast(1.10) brightness(.97) drop-shadow(0 0 4px rgba(75,79,196,.08)) !important;
-  image-rendering: -webkit-optimize-contrast;
+/* CANONICAL 04/09 — miniuniverso aprovado pelo usuário.
+ * Referência visual: mockup claro/escuro aprovado em 04/09/2026.
+ * Regra: não altera layout, footprint, posição ou navegação; somente o miniuniverso.
+ * Asset canônico já vem recortado, nítido e sem padding transparente excessivo. */
+.galaxy-theme-toggle {
+  --corvia-mini-galaxy-scale: 1.14;
+  --corvia-mini-glow-primary: 33, 205, 233;
+  --corvia-mini-glow-secondary: 83, 100, 226;
 }
+.spaces-home--cyan .galaxy-theme-toggle { --corvia-mini-glow-primary: 28, 215, 228; --corvia-mini-glow-secondary: 69, 143, 232; }
+.spaces-home--blue .galaxy-theme-toggle { --corvia-mini-glow-primary: 46, 143, 255; --corvia-mini-glow-secondary: 75, 79, 196; }
+.spaces-home--violet .galaxy-theme-toggle { --corvia-mini-glow-primary: 111, 91, 235; --corvia-mini-glow-secondary: 54, 180, 238; }
+.spaces-home--rose .galaxy-theme-toggle { --corvia-mini-glow-primary: 210, 67, 137; --corvia-mini-glow-secondary: 78, 133, 238; }
+.spaces-home--teal .galaxy-theme-toggle { --corvia-mini-glow-primary: 31, 174, 178; --corvia-mini-glow-secondary: 71, 122, 222; }
 
-/* No claro, reduzimos apenas o halo decorativo que fazia a imagem parecer borrada. */
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::before {
-  opacity: .10 !important;
-}
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::after {
-  display: none !important;
-}
-
-
-/* HOTFIX 04/09 v3 — miniuniverso discretamente maior em todas as telas. */
 .galaxy-theme-toggle__image {
-  --corvia-mini-galaxy-scale: 1.16;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
   transform-origin: 50% 50% !important;
-  animation: corvia-internal-galaxy-ccw-large 120s linear infinite !important;
+  transform-style: flat !important;
+  image-rendering: auto !important;
+  will-change: transform, filter !important;
+  animation: corvia-canonical-mini-universe-ccw 120s linear infinite !important;
 }
-@keyframes corvia-internal-galaxy-ccw-large {
+@keyframes corvia-canonical-mini-universe-ccw {
   from { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(0deg); }
   to { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(-360deg); }
 }
 
 html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: brightness(.96) saturate(1.58) contrast(1.20)
-    drop-shadow(0 0 3px rgba(24,151,224,.46))
-    drop-shadow(0 0 9px rgba(75,79,196,.24)) !important;
-  image-rendering: auto !important;
+  filter:
+    brightness(.76)
+    saturate(1.72)
+    contrast(1.34)
+    drop-shadow(0 0 2px rgba(var(--corvia-mini-glow-primary), .48))
+    drop-shadow(0 0 8px rgba(var(--corvia-mini-glow-secondary), .22)) !important;
 }
-html[data-corvia-theme="light"] .galaxy-theme-toggle::before {
-  opacity: .19 !important;
-  filter: none !important;
+html[data-corvia-theme="dark"] .galaxy-theme-toggle__image {
+  filter:
+    brightness(1.18)
+    saturate(1.35)
+    contrast(1.16)
+    drop-shadow(0 0 3px rgba(var(--corvia-mini-glow-primary), .62))
+    drop-shadow(0 0 10px rgba(var(--corvia-mini-glow-secondary), .28)) !important;
 }
-html[data-corvia-theme="light"] .galaxy-theme-toggle::after {
-  display: none !important;
+
+/* Mantém estrelas discretas, sem halo borrado no claro. */
+html[data-corvia-theme="light"] .galaxy-theme-toggle::before { opacity: .13 !important; filter: none !important; }
+html[data-corvia-theme="light"] .galaxy-theme-toggle::after { display: none !important; }
+html[data-corvia-theme="dark"] .galaxy-theme-toggle::before { opacity: .18 !important; }
+html[data-corvia-theme="dark"] .galaxy-theme-toggle::after { opacity: .10 !important; filter: blur(.45px) !important; }
+
+/* O tamanho cresce discretamente em todas as instâncias sem aumentar o footprint do header. */
+@media (max-width: 900px) {
+  .galaxy-theme-toggle { --corvia-mini-galaxy-scale: 1.16; }
+}
+@media (min-width: 901px) {
+  .galaxy-theme-toggle { --corvia-mini-galaxy-scale: 1.12; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galaxy-theme-toggle__image { animation: none !important; transform: scale(var(--corvia-mini-galaxy-scale)) !important; }
 }
