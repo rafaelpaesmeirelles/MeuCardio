@@ -186,7 +186,7 @@ class WorkflowPolicyContractTests(unittest.TestCase):
             "/api/health",
             "/api/ready",
             "validate_public_app_artifacts.py",
-            'expected pending status 410',
+            "--retired android windows",
         ):
             self.assertIn(public_certificate, workflow)
 

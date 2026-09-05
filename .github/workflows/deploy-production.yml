@@ -222,4 +222,12 @@ jobs:
           PY
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/health?release=$cache_buster" > /dev/null
           curl --fail --silent --show-error -H 'Cache-Control: no-cache' "$PUBLIC_URL/api/ready?release=$cache_buster" > /dev/null
-          echo "Production web SHA, health and readiness confirmed."
+          python3 scripts/validate_public_app_artifacts.py \
+            --base-url "$PUBLIC_URL" --retired android windows \
+            --cache-buster "$cache_buster" --report "$RUNNER_TEMP/retired-apps.json"
+          for private_path in /api/docs /api/redoc /api/openapi.json /docs /redoc /openapi.json /.vite/manifest.json; do
+            status="$(curl --silent --show-error --max-time 30 -o /dev/null -w '%{http_code}' \
+              -H 'Cache-Control: no-cache, no-store, max-age=0' "$PUBLIC_URL$private_path?release=$cache_buster")"
+            [[ "$status" == 404 ]] || { echo "Private metadata $private_path: expected 404, got $status" >&2; exit 1; }
+          done
+          echo "Production SHA, health, readiness, retired apps and private metadata confirmed."
