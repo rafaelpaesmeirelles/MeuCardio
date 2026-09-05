@@ -439,10 +439,15 @@ def test_ecossistema_doenca_mescla_tema_exato_com_grafo_sem_truncar(monkeypatch)
         def execute(self, _query):
             return FakeResult()
 
+    # Reproduces the production gap: the disease graph knows only the broad
+    # topic, while the corpus has an exact disease topic discoverable by name.
     monkeypatch.setattr(
-        connected,
-        "_disease_topic_titles",
-        lambda *_args, **_kwargs: ["Fibrilação atrial", "Arritmias"],
+        connected, "_disease_topic_titles",
+        lambda *_args, **_kwargs: ["Arritmias"],
+    )
+    monkeypatch.setattr(
+        connected, "_disease_exact_topic_titles",
+        lambda *_args, **_kwargs: ["Fibrilação atrial"],
     )
     monkeypatch.setattr(
         connected,
@@ -510,6 +515,7 @@ def test_ecossistema_doenca_nao_promove_tema_amplo_a_relacao_direta(monkeypatch)
             return FakeResult()
 
     monkeypatch.setattr(connected, "_disease_topic_titles", lambda *_args, **_kwargs: ["Valvopatias"])
+    monkeypatch.setattr(connected, "_disease_exact_topic_titles", lambda *_args, **_kwargs: [])
     monkeypatch.setattr(connected, "_direct_graph_groups", lambda *_args, **_kwargs: [])
     captured = {}
     def fake_contextual(_db, tema, **kwargs):

@@ -731,6 +731,32 @@ def _disease_topic_titles(db: Session, disease: SpecialtyDisease) -> list[str]:
     return _entity_topic_titles(db, entity_type="doenca", slug=disease.slug)
 
 
+def _disease_exact_topic_titles(db: Session, disease: SpecialtyDisease) -> list[str]:
+    """Discover exact disease topics even when the graph edge is missing.
+
+    Topic membership for content is authoritative structured metadata. A disease
+    name/slug/alias that exactly matches an active topic must therefore traverse
+    that full topic catalogue even if an older backfill failed to create the
+    disease -> topic edge. Broad topics still require an explicit graph edge and
+    retain the stricter contextual filter below.
+    """
+    exact_keys = {
+        normalize_text(disease.name),
+        normalize_text(disease.slug.replace("-", " ")),
+        *(normalize_text(alias) for alias in (disease.aliases or [])),
+    } - {""}
+    rows = db.execute(
+        select(KnowledgeEntity.title).where(
+            KnowledgeEntity.entity_type == "tema",
+            KnowledgeEntity.status == "ativo",
+        ).order_by(KnowledgeEntity.title)
+    ).scalars().all()
+    return list(dict.fromkeys(
+        title for title in rows
+        if title and normalize_text(title) in exact_keys
+    ))
+
+
 def _disease_anchor_phrases(disease: SpecialtyDisease) -> tuple[str, ...]:
     """Nomes inequívocos que um vizinho de tópico amplo precisa mencionar.
 
@@ -816,12 +842,14 @@ def buscar_relacionados_da_doenca(
     if disease is None:
         return None
 
-    topics = _disease_topic_titles(db, disease)
+    graph_topics = _disease_topic_titles(db, disease)
+    discovered_exact_topics = _disease_exact_topic_titles(db, disease)
+    topics = list(dict.fromkeys([*discovered_exact_topics, *graph_topics]))
     exact_keys = {
         normalize_text(disease.name),
         normalize_text(disease.slug.replace("-", " ")),
         *(normalize_text(alias) for alias in (disease.aliases or [])),
-    }
+    } - {""}
     subject = " ".join(filter(None, [
         disease.slug,
         disease.name,
