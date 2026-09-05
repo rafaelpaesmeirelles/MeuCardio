@@ -367,7 +367,7 @@ jobs:
 
       - name: Upload pre-home QA artifacts
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: corvia-prehome-canonical-visual-qa
           path: prehome-qa/

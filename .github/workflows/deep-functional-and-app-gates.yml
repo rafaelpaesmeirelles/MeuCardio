@@ -46,7 +46,7 @@ jobs:
           fi
       - name: Upload functional inventory
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: deep-functional-inventory
           path: deep-gates/functional-inventory.json
@@ -74,7 +74,7 @@ jobs:
             --report deep-gates/public-app-artifacts.json
       - name: Upload public application report
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: public-app-artifacts
           path: deep-gates/public-app-artifacts.json

@@ -148,7 +148,7 @@ jobs:
 
       - name: Preserve Tudo com Tudo audit reports
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: tudo-com-tudo-audits
           path: |
