@@ -4,9 +4,19 @@
 
 	# API nunca é cacheada pelo proxy do site. A aplicação também usa
 	# `cache: no-store`/NetworkOnly para as rotas de dados dinâmicos.
+	@private_backend_docs path /api/docs /api/docs/* /api/redoc /api/redoc/* /api/openapi.json
 	handle /api/* {
 		header Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+		respond @private_backend_docs 404
 		reverse_proxy backend:8000
+	}
+
+
+	# A documentação interna e os metadados de build não são páginas públicas.
+	@private_public_metadata path /docs /docs/* /redoc /redoc/* /openapi.json /.vite /.vite/*
+	handle @private_public_metadata {
+		header Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+		respond 404
 	}
 
 	# /galeria serve dois propósitos: assets de imagem e rota SPA /galeria/:slug.
@@ -39,46 +49,13 @@
 		header Cache-Control "public, max-age=300"
 	}
 
-	# Artefatos nativos ficam fora do volume efêmero do frontend. Rotas
-	# explícitas impedem que um arquivo ausente caia no fallback da SPA e seja
-	# baixado como index.html com extensão .apk/.exe.
-	redir /downloads/corvia-os-android.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
-	redir /downloads/corvia-os-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
-	redir /downloads/corvia-os-android-1.0.1.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
-	redir /downloads/corvia-os-android-1.0.1.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
-	redir /downloads/corvia-cardiology-spaces-android.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
-	redir /downloads/corvia-cardiology-spaces-android.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
-	redir /downloads/corvia-cardiology-spaces-android-1.1.0.apk /downloads/corvia-cardiology-spaces-android-1.2.0.apk 308
-	redir /downloads/corvia-cardiology-spaces-android-1.1.0.apk.sha256 /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 308
-
-	handle /downloads/corvia-cardiology-spaces-android-1.2.0.apk {
-		root * /downloads
-		rewrite * /corvia-cardiology-spaces-android-1.2.0.apk
-		header Content-Type "application/vnd.android.package-archive"
-		header Content-Disposition "attachment; filename=CorVIA-Cardiology-Spaces-Android-1.2.0.apk"
-		header Cache-Control "public, max-age=31536000, immutable"
-		file_server
-	}
-
-	handle /downloads/corvia-cardiology-spaces-android-1.2.0.apk.sha256 {
-		root * /downloads
-		rewrite * /corvia-cardiology-spaces-android-1.2.0.apk.sha256
-		header Content-Type "text/plain; charset=utf-8"
-		header Cache-Control "public, max-age=31536000, immutable"
-		file_server
-	}
-
-	# Windows está pendente de identidade Authenticode. O matcher precisa
-	# participar da mesma cadeia de handle do fallback SPA; diretivas respond
-	# soltas são reordenadas pelo adaptador do Caddy e podem perder para o SPA.
-	@windows_pending path \
-		/downloads/corvia-os-windows.zip \
-		/downloads/corvia-os-windows.exe \
-		/downloads/corvia-os-windows.exe.sha256 \
-		/downloads/corvia-cardiology-spaces-windows-1.2.0.exe \
-		/downloads/corvia-cardiology-spaces-windows-1.2.0.exe.sha256
-	handle @windows_pending {
-		respond "Aplicativo Windows em preparação" 410
+	# Android e Windows foram cancelados. Bloquear a própria URL, inclusive
+	# aliases históricos e sidecars, sem redirects nem fallback da SPA.
+	# A expressão cobre versões antigas e futuras das duas famílias de nomes.
+	@native_apps_retired path_regexp retired_apps ^/downloads/corvia-(os|cardiology-spaces)-(android[^/]*[.]apk|windows[^/]*[.](exe|zip))([.]sha256)?$
+	handle @native_apps_retired {
+		header Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+		respond "Aplicativos Android e Windows descontinuados" 410
 	}
 
 	# Hash de conteúdo: é seguro manter imutável. Cada build gera URLs novas.

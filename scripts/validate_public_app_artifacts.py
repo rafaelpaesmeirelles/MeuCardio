@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate explicitly selected public application artifacts."""
+"""Validate published binaries or prove explicitly retired public apps are gone."""
 
 from __future__ import annotations
 
@@ -39,6 +39,98 @@ SPECS = (
                  ("application/vnd.microsoft.portable-executable", "application/x-msdownload", "application/octet-stream"),
                  b"MZ", "CORVIA_WINDOWS_EXPECTED_SHA256"),
 )
+
+
+# Canonical and previously advertised aliases. Sidecars are checked separately.
+RETIRED_PATHS = {
+    "android": (
+        "/downloads/corvia-cardiology-spaces-android-1.2.0.apk",
+        "/downloads/corvia-os-android.apk",
+        "/downloads/corvia-os-android-1.0.1.apk",
+        "/downloads/corvia-cardiology-spaces-android.apk",
+        "/downloads/corvia-cardiology-spaces-android-1.1.0.apk",
+    ),
+    "windows": (
+        "/downloads/corvia-cardiology-spaces-windows-1.2.0.exe",
+        "/downloads/corvia-os-windows.exe",
+        "/downloads/corvia-os-windows.zip",
+    ),
+}
+
+
+class _NoRedirects(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, request, fp, code, msg, headers, newurl):
+        # A retired alias must itself return 410, not redirect to a live binary
+        # or hide a stale route behind a terminal 410 on a different URL.
+        return None
+
+
+def validate_retired(
+    base_url: str,
+    apps: tuple[str, ...],
+    cache_buster: str | None = None,
+) -> dict[str, object]:
+    """Require 410/no-store on every selected native route and its checksum.
+
+    No binary is downloaded. Redirects are rejected, not followed. With a
+    release marker, both the original and cache-busted URLs are tested so a
+    stale CDN response cannot be hidden by testing only a new query string.
+    """
+    base_url = base_url.rstrip("/")
+    _require_https(base_url)
+    parsed = urllib.parse.urlsplit(base_url)
+    if (parsed.path or parsed.query or parsed.fragment or parsed.username
+            or parsed.password or parsed.port not in (None, 443)):
+        raise AssertionError("Retirement gate requires the authorized HTTPS origin")
+    selected = tuple(dict.fromkeys(apps))
+    if not selected or any(name not in RETIRED_PATHS for name in selected):
+        raise AssertionError("Select at least one known retired application")
+    opener = urllib.request.build_opener(
+        urllib.request.HTTPSHandler(context=ssl.create_default_context()),
+        _NoRedirects(),
+    )
+    checked: dict[str, list[dict[str, object]]] = {}
+    for name in selected:
+        checked[name] = []
+        for path in RETIRED_PATHS[name]:
+            for suffix in ("", ".sha256"):
+                source_url = f"{base_url}{path}{suffix}"
+                urls = tuple(dict.fromkeys((
+                    source_url, _cache_busted(source_url, cache_buster),
+                )))
+                for url in urls:
+                    try:
+                        with opener.open(_request(url), timeout=30) as response:
+                            status = response.getcode()
+                            headers = response.headers
+                    except urllib.error.HTTPError as exc:
+                        status, headers = exc.code, exc.headers
+                        exc.close()
+                    if status != 410:
+                        raise AssertionError(
+                            f"{name}: expected retired status 410, got {status}: {url}"
+                        )
+                    if headers.get("Location"):
+                        raise AssertionError(f"{name}: retired response has Location: {url}")
+                    directives = {
+                        value.strip().casefold().split("=", 1)[0]
+                        for value in headers.get("Cache-Control", "").split(",")
+                    }
+                    if "no-store" not in directives:
+                        raise AssertionError(f"{name}: retired response lacks no-store: {url}")
+                    checked[name].append({
+                        "url": url, "status": status, "cache_control": headers.get("Cache-Control"),
+                    })
+    return {
+        "base_url": base_url,
+        "retired_routes": checked,
+        "release_status": {
+            spec.name: "retired" if spec.name in selected else "not_checked"
+            for spec in SPECS
+        },
+    }
+
+
 
 def _request(url: str) -> urllib.request.Request:
     return urllib.request.Request(url, headers={
@@ -123,26 +215,37 @@ def validate(base_url: str, specs: tuple[ArtifactSpec, ...] = SPECS,
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default=DEFAULT_BASE_URL)
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
         "--artifacts", nargs="+", choices=tuple(spec.name for spec in SPECS),
-        default=[spec.name for spec in SPECS],
+        default=None,
         help="Artifacts to validate explicitly (default: all).",
+    )
+    mode.add_argument(
+        "--retired", nargs="+", choices=tuple(RETIRED_PATHS),
+        help="Require HTTP 410/no-store for cancelled apps and all known aliases.",
     )
     parser.add_argument("--expected-android-sha256")
     parser.add_argument("--expected-windows-sha256")
     parser.add_argument("--cache-buster")
     parser.add_argument("--report", type=Path)
     args = parser.parse_args()
-    selected = tuple(spec for spec in SPECS if spec.name in set(args.artifacts))
+    if args.retired and (args.expected_android_sha256 or args.expected_windows_sha256):
+        parser.error("Expected binary digests cannot be used with --retired")
     try:
-        report = validate(args.base_url, specs=selected,
-                          expected_shas={"android": args.expected_android_sha256 or "",
-                                         "windows": args.expected_windows_sha256 or ""},
-                          cache_buster=args.cache_buster)
-        report["release_status"] = {
-            "android": "published" if "android" in args.artifacts else "not_checked",
-            "windows": "published" if "windows" in args.artifacts else "pending",
-        }
+        if args.retired:
+            report = validate_retired(args.base_url, tuple(args.retired), args.cache_buster)
+        else:
+            names = args.artifacts or [spec.name for spec in SPECS]
+            selected = tuple(spec for spec in SPECS if spec.name in set(names))
+            report = validate(args.base_url, specs=selected,
+                              expected_shas={"android": args.expected_android_sha256 or "",
+                                             "windows": args.expected_windows_sha256 or ""},
+                              cache_buster=args.cache_buster)
+            report["release_status"] = {
+                "android": "published" if "android" in names else "not_checked",
+                "windows": "published" if "windows" in names else "pending",
+            }
     except (AssertionError, OSError, urllib.error.URLError, ValueError) as exc:
         print(f"ERRO: validação pública dos apps falhou: {exc}", file=sys.stderr); return 1
     if args.report:
