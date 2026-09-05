@@ -359,3 +359,36 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle::after { opacity: .10 !impor
 @media (prefers-reduced-motion: reduce) {
   .galaxy-theme-toggle__image { animation: none !important; transform: scale(var(--corvia-mini-galaxy-scale)) !important; }
 }
+
+/* HOTFIX FINAL 04/09 — rotação física do miniuniverso, sem alterar layout. */
+.galaxy-theme-toggle { position: relative !important; }
+.galaxy-theme-toggle__image {
+  animation: none !important;
+  transform: scale(var(--corvia-mini-galaxy-scale)) !important;
+  transition: none !important;
+}
+.galaxy-theme-toggle__canvas-live {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transform: scale(var(--corvia-mini-galaxy-scale)) !important;
+  transform-origin: 50% 50% !important;
+  transition: none !important;
+}
+.galaxy-theme-toggle__canvas-live[data-ready="true"] { opacity: 1 !important; }
+.galaxy-theme-toggle[data-galaxy-ready="true"] .galaxy-theme-toggle__image { opacity: 0 !important; }
+html[data-corvia-theme="light"] .galaxy-theme-toggle__canvas-live {
+  filter: brightness(.84) saturate(1.58) contrast(1.28)
+    drop-shadow(0 0 2px rgba(var(--corvia-mini-glow-primary), .48))
+    drop-shadow(0 0 8px rgba(var(--corvia-mini-glow-secondary), .20)) !important;
+}
+html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
+  filter: brightness(1.16) saturate(1.30) contrast(1.14)
+    drop-shadow(0 0 3px rgba(var(--corvia-mini-glow-primary), .60))
+    drop-shadow(0 0 10px rgba(var(--corvia-mini-glow-secondary), .27)) !important;
+}

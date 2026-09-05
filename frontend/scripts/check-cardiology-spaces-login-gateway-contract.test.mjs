@@ -81,7 +81,7 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
   assert.match(entrar, /className="login-gateway__galaxy-image"/);
   assert.match(entrar, /src="\/spaces\/corvia-galaxy-cameo\.webp"/);
   assert.match(entrar, /className="login-gateway__galaxy-canvas"/);
-  assert.match(entrar, /const durationMs = 100_000/);
+  assert.match(entrar, /const durationMs = 85_000/);
   assert.match(entrar, /context\.scale\(1, projectionY\)/);
   assert.match(entrar, /context\.rotate\(angle\)/);
   const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");

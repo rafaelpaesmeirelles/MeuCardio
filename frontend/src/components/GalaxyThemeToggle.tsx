@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useAuth } from "../lib/auth";
 import { chamamentoComArtigo } from "../lib/clinicalIdentity";
 import { useCorviaTheme } from "../lib/corviaTheme";
+import MiniUniverseCanvas from "./MiniUniverseCanvas";
 import "../styles/galaxy-theme-toggle-refinement.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
@@ -46,6 +47,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
         aria-hidden="true"
         draggable={false}
       />
+      <MiniUniverseCanvas />
     </button>
   );
 }

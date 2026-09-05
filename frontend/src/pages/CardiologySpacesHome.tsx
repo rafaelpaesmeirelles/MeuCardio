@@ -1422,7 +1422,6 @@ export default function CardiologySpacesHome() {
           </span>
           <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
         </header>
-        <div className="spaces-choice__change" aria-hidden="true"><span><Icone nome="seta" /></span><div><strong>Mudar universo</strong><small>Clique para explorar</small></div></div>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">ESCOLHA SEU ESPAÇO</p>
           <h1>Onde {chamamentoNaFrase} vai trabalhar agora?</h1>

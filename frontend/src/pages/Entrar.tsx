@@ -61,7 +61,7 @@ function LoginGalaxy() {
 
       const startedAt = performance.now();
       let lastPaint = 0;
-      const durationMs = 100_000;
+      const durationMs = 85_000;
       const draw = (now: number) => {
         if (cancelled) return;
         if (!lastPaint || now - lastPaint >= 32) {
