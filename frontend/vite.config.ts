@@ -52,6 +52,8 @@ export default defineConfig({
       workbox: {
         skipWaiting: true,
         clientsClaim: true,
+        // Retira respostas clínicas deixadas por versões antigas do worker.
+        importScripts: ["corvia-cache-cleanup.js"],
         // Uma navegação digitada diretamente para /api precisa chegar ao
         // backend. Sem esta negação, o fallback SPA pode devolver index.html
         // no lugar de JSON e esconder falhas de sessão em PWA/mobile.
@@ -126,15 +128,6 @@ export default defineConfig({
               cacheName: "corvia-assets-v2",
               networkTimeoutSeconds: 4,
               expiration: { maxEntries: 160, maxAgeSeconds: 2592000 },
-              cacheableResponse: { statuses: [200] }
-            }
-          },
-          {
-            urlPattern: /\/api\/emergencia/,
-            handler: "StaleWhileRevalidate",
-            options: {
-              cacheName: "corvia-emergencia-v2",
-              expiration: { maxEntries: 8 },
               cacheableResponse: { statuses: [200] }
             }
           },
