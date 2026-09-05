@@ -314,10 +314,9 @@ html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::after {
 }
 
 
-/* HOTFIX 04/09 v2 — miniuniverso maior em todas as telas e claro com presença do escuro. */
-.spaces-home .galaxy-theme-toggle__image,
-.spaces-choice .galaxy-theme-toggle__image {
-  --corvia-mini-galaxy-scale: 1.26;
+/* HOTFIX 04/09 v3 — miniuniverso discretamente maior em todas as telas. */
+.galaxy-theme-toggle__image {
+  --corvia-mini-galaxy-scale: 1.16;
   transform-origin: 50% 50% !important;
   animation: corvia-internal-galaxy-ccw-large 120s linear infinite !important;
 }
@@ -326,8 +325,7 @@ html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::after {
   to { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(-360deg); }
 }
 
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle__image,
-html[data-corvia-theme="light"] .spaces-choice .galaxy-theme-toggle__image {
+html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
   opacity: 1 !important;
   mix-blend-mode: normal !important;
   filter: brightness(.90) saturate(1.42) contrast(1.20)
@@ -335,12 +333,10 @@ html[data-corvia-theme="light"] .spaces-choice .galaxy-theme-toggle__image {
     drop-shadow(0 0 9px rgba(82,91,190,.14)) !important;
   image-rendering: auto !important;
 }
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::before,
-html[data-corvia-theme="light"] .spaces-choice .galaxy-theme-toggle::before {
+html[data-corvia-theme="light"] .galaxy-theme-toggle::before {
   opacity: .14 !important;
   filter: none !important;
 }
-html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::after,
-html[data-corvia-theme="light"] .spaces-choice .galaxy-theme-toggle::after {
+html[data-corvia-theme="light"] .galaxy-theme-toggle::after {
   display: none !important;
 }
