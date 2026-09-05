@@ -15,6 +15,7 @@ import logging
 import re
 import unicodedata
 import urllib.request
+from urllib.parse import urljoin, urlparse
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
@@ -69,7 +70,10 @@ COLUNAS_PMC_MEDIA_NACIONAL = [
     "PMC 20%", "PMC 20,5%", "PMC 21%", "PMC 22%", "PMC 22,5%", "PMC 23%",
 ]
 
-RE_LINK_XLSX = re.compile(r'href="(https://[^"]*xls_conformidade_site[^"]*\.xlsx/@@download/file)"')
+RE_LINK_XLSX = re.compile(
+    r'href=["\']([^"\']*xls_conformidade_site_\d{8}_[^"\']*\.xlsx(?:/@@download/file)?)["\']',
+    re.IGNORECASE,
+)
 RE_DATA_URL = re.compile(r"xls_conformidade_site_(\d{8})_")
 
 
@@ -81,14 +85,25 @@ def localizar_url_planilha() -> tuple[str, str]:
     req = urllib.request.Request(PAGINA_PRECOS, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=30) as resp:
         html = resp.read().decode("utf-8", errors="replace")
-    m = RE_LINK_XLSX.search(html)
-    if not m:
+    candidatos: list[tuple[str, str]] = []
+    for href in RE_LINK_XLSX.findall(html):
+        url = urljoin(PAGINA_PRECOS, href)
+        parsed = urlparse(url)
+        # O href vem de HTML externo: mantenha a cadeia de download presa ao
+        # host oficial e à árvore pública de preços da CMED.
+        if parsed.scheme != "https" or parsed.hostname != "www.gov.br":
+            continue
+        if not parsed.path.startswith("/anvisa/pt-br/assuntos/medicamentos/cmed/precos/"):
+            continue
+        m_data = RE_DATA_URL.search(parsed.path)
+        if m_data:
+            candidatos.append((m_data.group(1), url))
+    if not candidatos:
         raise RuntimeError("Link da planilha CMED não encontrado na página — o layout pode ter mudado.")
-    url = m.group(1)
-    m_data = RE_DATA_URL.search(url)
-    if not m_data:
-        raise RuntimeError(f"URL da planilha sem o timestamp esperado: {url}")
-    return url, m_data.group(1)
+    # Durante a virada mensal podem coexistir cards antigos e novos. A data
+    # embutida no nome é a chave canônica para escolher a edição mais recente.
+    publicado_em, url = max(candidatos, key=lambda item: (item[0], item[1]))
+    return url, publicado_em
 
 
 def baixar_planilha(url: str, destino: Path) -> bytes:
