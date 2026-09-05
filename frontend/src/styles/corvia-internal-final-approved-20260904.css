@@ -295,3 +295,20 @@ html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
     flex: 0 0 140px !important;
   }
 }
+
+/* HOTFIX 04/09 — modo claro interno: mini-galáxia nítida, sem aparência lavada.
+ * Geometria, asset, posição, tamanho e rotação permanecem congelados. */
+html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle__image {
+  opacity: .98 !important;
+  mix-blend-mode: normal !important;
+  filter: saturate(1.12) contrast(1.10) brightness(.97) drop-shadow(0 0 4px rgba(75,79,196,.08)) !important;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* No claro, reduzimos apenas o halo decorativo que fazia a imagem parecer borrada. */
+html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::before {
+  opacity: .10 !important;
+}
+html[data-corvia-theme="light"] .spaces-home .galaxy-theme-toggle::after {
+  display: none !important;
+}
