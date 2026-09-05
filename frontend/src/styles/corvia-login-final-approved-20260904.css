@@ -397,3 +397,13 @@
 #root .login.login-gateway--public .login-gateway__space--ensino {
   transform:translateX(-50%) translateY(10px) !important;
 }
+
+/* 05/09: o universo termina em 146 + 350 px; manter somente 16 px até o formulário.
+   Não altera posições ou dimensões do título, coração e cinco espaços. */
+@media (max-width: 900px) {
+  #root .login.login-gateway--public .login-gateway__scene {
+    height: 512px !important;
+    min-height: 512px !important;
+    flex: 0 0 auto !important;
+  }
+}
