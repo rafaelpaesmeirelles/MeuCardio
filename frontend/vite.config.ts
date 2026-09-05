@@ -50,6 +50,9 @@ export default defineConfig({
         ]
       },
       workbox: {
+        // Clinical API responses are NetworkOnly, including emergency doses.
+        // Remove caches created by earlier service workers on activation.
+        importScripts: ["/corvia-clinical-cache-cleanup-v1.js"],
         skipWaiting: true,
         clientsClaim: true,
         // Uma navegação digitada diretamente para /api precisa chegar ao
@@ -126,15 +129,6 @@ export default defineConfig({
               cacheName: "corvia-assets-v2",
               networkTimeoutSeconds: 4,
               expiration: { maxEntries: 160, maxAgeSeconds: 2592000 },
-              cacheableResponse: { statuses: [200] }
-            }
-          },
-          {
-            urlPattern: /\/api\/emergencia/,
-            handler: "StaleWhileRevalidate",
-            options: {
-              cacheName: "corvia-emergencia-v2",
-              expiration: { maxEntries: 8 },
               cacheableResponse: { statuses: [200] }
             }
           },

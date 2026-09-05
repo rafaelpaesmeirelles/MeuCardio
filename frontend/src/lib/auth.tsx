@@ -86,9 +86,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   async function sair() {
-    await api.logout();
-    window.sessionStorage.removeItem(INVESTOR_TOUR_SESSION_KEY);
-    setUsuario(null);
+    try {
+      await api.logout();
+    } finally {
+      // Do not leave the previous user's clinical UI open after a network error.
+      setUsuario(null);
+      window.sessionStorage.removeItem(INVESTOR_TOUR_SESSION_KEY);
+    }
   }
 
   async function recarregar() {

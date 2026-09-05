@@ -16,7 +16,8 @@
     "test:cardiology-spaces-login-gateway-contract": "node --test scripts/check-cardiology-spaces-login-gateway-contract.test.mjs",
     "test:cardiology-spaces-route-coverage": "node scripts/check-cardiology-spaces-route-coverage.mjs",
     "audit:security": "node scripts/audit-dependencies.mjs",
-    "sync:mobile": "npm run build && npx cap sync"
+    "sync:mobile": "npm run build && npx cap sync",
+    "test:clinical-cache-safety": "node --test scripts/check-clinical-cache-safety.test.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.4.2",
