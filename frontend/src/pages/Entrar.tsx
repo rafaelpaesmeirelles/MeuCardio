@@ -33,7 +33,7 @@ function LoginGalaxy() {
 
     const image = new Image();
     image.decoding = "async";
-    image.src = "/spaces/corvia-galaxy-cameo.webp";
+    image.src = "/spaces/galaxy-approved-canonical.webp";
     let animationFrame = 0;
     let cancelled = false;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -102,7 +102,7 @@ function LoginGalaxy() {
 
   return (
     <>
-      <img ref={fallbackRef} className="login-gateway__galaxy-image" src="/spaces/corvia-galaxy-cameo.webp" alt="" aria-hidden="true" draggable={false} />
+      <img ref={fallbackRef} className="login-gateway__galaxy-image" src="/spaces/galaxy-approved-canonical.webp" alt="" aria-hidden="true" draggable={false} />
       <canvas ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />
     </>
   );

@@ -206,3 +206,95 @@
   #root #corvia-login .login-gateway__universe { height:210px !important; margin-top:8px !important; }
   #root #corvia-login .login-gateway__footer { display:none !important; }
 }
+
+/* 05/09 — alinhamento final com as quatro referências congeladas de 04/09. */
+#root #corvia-login .login-gateway__pulse { display:none !important; }
+#root #corvia-login .login-gateway__brand { position:relative !important; inset:auto !important; left:0 !important; }
+#root #corvia-login.login-gateway--dark .login-gateway__milky-way {
+  background:radial-gradient(ellipse at 50% 50%,rgba(255,247,255,.34) 0 5%,rgba(211,88,255,.22) 10%,rgba(104,66,255,.22) 22%,rgba(26,120,255,.08) 40%,transparent 68%) !important;
+}
+#root #corvia-login.login-gateway--dark .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity:1 !important; filter:saturate(1.36) contrast(1.06) brightness(1.16) hue-rotate(34deg) drop-shadow(0 0 44px rgba(138,84,255,.36)) !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__milky-way {
+  background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,.94) 0 7%,rgba(222,171,255,.24) 15%,rgba(137,114,255,.15) 29%,rgba(87,177,255,.07) 45%,transparent 68%) !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity:.72 !important; filter:saturate(.86) contrast(.95) brightness(1.58) hue-rotate(30deg) drop-shadow(0 0 36px rgba(153,117,245,.18)) !important;
+}
+@media (min-width:901px) {
+  #root #corvia-login .login-gateway__universe { height:306px !important; margin-top:10px !important; }
+  #root #corvia-login .login-gateway__console { margin-top:7px !important; padding:16px 26px !important; gap:10px 30px !important; }
+  #root #corvia-login .login-gateway__console-head { grid-template-columns:48px minmax(0,1fr) !important; gap:12px !important; }
+  #root #corvia-login .login-gateway__console-head > span { width:48px !important; height:48px !important; }
+  #root #corvia-login .login-gateway__console-head h2 { font-size:1.28rem !important; }
+  #root #corvia-login .login-gateway__console-head small { font-size:.82rem !important; }
+  #root #corvia-login .login-gateway__field > div { height:38px !important; min-height:38px !important; }
+  #root #corvia-login .login-gateway__field input { height:36px !important; min-height:36px !important; }
+  #root #corvia-login .login-gateway__enter { height:40px !important; min-height:40px !important; }
+  #root #corvia-login .login-gateway__join { min-height:124px !important; padding:16px 18px !important; }
+  #root #corvia-login .login-gateway__footer { margin-top:8px !important; padding-top:8px !important; }
+}
+@media (max-width:900px) {
+  #root #corvia-login .login-gateway__brand { margin-left:20px !important; }
+  #root #corvia-login .login-gateway__brand > img { width:40px !important; height:40px !important; }
+  #root #corvia-login .login-gateway__brand strong { font-size:1.62rem !important; }
+  #root #corvia-login .login-gateway__universe { height:232px !important; margin-top:9px !important; }
+  #root #corvia-login .login-gateway__milky-way { width:calc(100% + 108px) !important; }
+  #root #corvia-login .login-gateway__core { width:92px !important; height:104px !important; }
+  #root #corvia-login .login-gateway__space { width:clamp(106px,30.5vw,120px) !important; min-height:46px !important; }
+  #root #corvia-login .login-gateway__space > span { width:27px !important; height:27px !important; }
+  #root #corvia-login .login-gateway__space > span svg { width:21px !important; height:21px !important; }
+  #root #corvia-login .login-gateway__space strong { font-size:.74rem !important; }
+}
+
+/* 05/09 — densidade estelar e CTA conforme referências congeladas. */
+#root #corvia-login.login-gateway--dark .login-gateway__stars::before {
+  opacity:.72 !important;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.92) 0 1px,transparent 1.25px),
+    radial-gradient(circle,rgba(62,170,255,.74) 0 .8px,transparent 1.1px),
+    radial-gradient(circle,rgba(185,103,255,.66) 0 .85px,transparent 1.15px) !important;
+  background-size:73px 73px,109px 109px,151px 151px !important;
+  background-position:7px 19px,31px 47px,59px 11px !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__stars::before {
+  opacity:.34 !important;
+  background-image:
+    radial-gradient(circle,rgba(100,139,255,.62) 0 .8px,transparent 1.1px),
+    radial-gradient(circle,rgba(188,126,255,.5) 0 .75px,transparent 1px),
+    radial-gradient(circle,rgba(255,178,224,.46) 0 .7px,transparent 1px) !important;
+  background-size:89px 89px,137px 137px,173px 173px !important;
+  background-position:11px 23px,41px 17px,67px 61px !important;
+}
+#root #corvia-login .login-gateway__join {
+  border-color:rgba(143,91,244,.48) !important;
+  background:linear-gradient(135deg,rgba(92,36,172,.18),rgba(30,102,210,.10) 55%,rgba(222,61,150,.12)) !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join {
+  background:linear-gradient(135deg,rgba(135,96,233,.08),rgba(91,151,255,.05) 55%,rgba(238,120,177,.09)) !important;
+  border-color:rgba(139,101,224,.28) !important;
+}
+#root #corvia-login .login-gateway__join > span:first-child {
+  color:#c0a1ff !important;
+  background:radial-gradient(circle at 35% 30%,rgba(184,110,255,.42),rgba(101,42,207,.25) 54%,rgba(44,26,103,.34)) !important;
+  border:1px solid rgba(162,92,255,.48) !important;
+  box-shadow:0 0 24px rgba(126,67,235,.24),inset 0 0 18px rgba(182,112,255,.16) !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join > span:first-child {
+  color:#5f42df !important;
+  background:radial-gradient(circle at 35% 30%,rgba(202,176,255,.62),rgba(162,125,244,.28) 58%,rgba(128,97,224,.13)) !important;
+}
+#root #corvia-login .login-gateway__join small {
+  color:transparent !important;
+  background:linear-gradient(90deg,#b67aff,#4baeff) !important;
+  background-clip:text !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join small {
+  background:linear-gradient(90deg,#633ce2,#148eff) !important;
+  background-clip:text !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+}
