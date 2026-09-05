@@ -1,3 +1,4 @@
+import { clearLegacyClinicalCaches } from "./clinicalCache";
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const LEGACY_TOKEN_KEY = "meucardio.token";
 
@@ -299,6 +300,12 @@ export const api = {
       });
     } finally {
       removerTokenLegado();
+      try {
+        await clearLegacyClinicalCaches();
+      } catch {
+        // Local logout must still complete when Cache Storage is unavailable.
+        console.warn("Não foi possível limpar o cache clínico legado.");
+      }
     }
   },
 };
