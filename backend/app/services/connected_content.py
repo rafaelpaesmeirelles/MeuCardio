@@ -10,7 +10,9 @@ missing launch guarantees at the boundary exposed to the UI:
    requested clinical topic;
 3. a medication can ask for its own connected ecosystem: only clinical topics
    explicitly supported by its indications are traversed, then all published
-   fronts from those topics are merged and deduplicated.
+   fronts from those topics are merged and deduplicated;
+4. direct, policy-checked graph links are preserved across every content
+   front, even when their titles or broad themes do not overlap.
 
 No fuzzy semantic similarity is used here. A missing relation is preferable to
 a clinically irrelevant relation.
@@ -29,7 +31,7 @@ from app.models.knowledge import TIPOS_ENTIDADE_PERMITIDOS
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
-from app.services.knowledge_graph import relacionados_de
+from app.services.knowledge_graph import ROTA_LISTA_POR_TIPO, relacionados_de
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
     CONTEXT_TAG_TOKEN_WEIGHT,
@@ -76,19 +78,18 @@ def _merge_groups(
     return [by_type[kind] for kind in order]
 
 
-def _specialty_direct_groups(
+def _direct_graph_groups(
     db: Session,
     *,
     entity_type: str | None,
     slug: str | None,
 ) -> list[dict]:
-    """Expose specialty content only through direct, policy-checked edges.
+    """Project policy-checked direct links for every published content front.
 
-    Diseases and symptom-triage guides do not carry the canonical ``theme``
-    field used by the legacy catalogue. Their ``area`` metadata is deliberately
-    broad and cannot prove a clinical relationship. Reusing the knowledge
-    graph here preserves only explicit/structured links that already passed
-    the relation policy; thematic expansion remains disabled.
+    The graph remains the authority for publication and relationship policy.
+    This projection never expands themes or upgrades a pending relation to
+    reviewed. A valid direct link must not disappear merely because its
+    destination is not a disease/triage or lacks a lexical title overlap.
     """
     if (
         not entity_type
@@ -108,29 +109,68 @@ def _specialty_direct_groups(
         return []
 
     labels = {
-        "doenca": ("Doenças", "/doencas"),
-        "triagem_sintoma": ("Triagem por sintomas", "/triagem-sintomas"),
+        "documento": "Documentos",
+        "fluxograma": "Fluxogramas",
+        "evidencia": "Evidências",
+        "estudo": "Estudos",
+        "medicamento": "Medicamentos",
+        "exame": "Exames",
+        "caso_clinico": "Casos clínicos",
+        "trilha": "Trilhas",
+        "galeria": "Galeria",
+        "checklist": "Checklists",
+        "material_paciente": "Material ao paciente",
+        "protocolo_emergencia": "Protocolos de emergência",
+        "calculadora": "Calculadoras",
+        "doenca": "Doenças",
+        "triagem_sintoma": "Triagem por sintomas",
     }
     groups: list[dict] = []
     for group in graph.get("grupos", []):
         kind = group.get("tipo")
         if kind not in labels:
             continue
-        label, list_route = labels[kind]
         items = [{
             **item,
-            "subtitulo": None,
+            "subtitulo": item.get("subtitulo"),
             "relation_scope": "direct_graph_relation",
+            "relation_method": "policy_checked_graph",
             "context_only": False,
-        } for item in group.get("itens", [])]
+        } for item in group.get("itens", []) if (
+            item.get("slug")
+            and (kind, item["slug"]) != (entity_type, slug)
+            and not item.get("context_only")
+            and item.get("review_status") != "rejeitado"
+            and item.get("relation_type")
+            not in {None, "same_theme", "belongs_to_topic"}
+        )]
         if items:
             groups.append({
                 "tipo": kind,
-                "rotulo": label,
-                "rota_lista": list_route,
+                "rotulo": labels[kind],
+                "rota_lista": ROTA_LISTA_POR_TIPO[kind],
                 "itens": items,
             })
     return groups
+
+
+def _merge_with_direct_groups(groups: list[dict], direct: list[dict]) -> list[dict]:
+    """Give direct links the bounded slots without changing category layout.
+
+    Deduplicate by (type, slug), prefer the graph's actual relationship
+    metadata to lexical explanations, and preserve existing group labels and
+    ordering. Truncation happens only after direct links have taken priority.
+    """
+    original = {group["tipo"]: group for group in groups}
+    order = list(dict.fromkeys(group["tipo"] for group in groups + direct))
+    positions = {kind: index for index, kind in enumerate(order)}
+    merged = _merge_groups([{"grupos": direct}, {"grupos": groups}])
+    for group in merged:
+        previous = original.get(group["tipo"])
+        if previous is not None:
+            group["rotulo"] = previous["rotulo"]
+            group["rota_lista"] = previous["rota_lista"]
+    return sorted(merged, key=lambda group: positions[group["tipo"]])
 
 
 def _contextual_drugs(
@@ -578,21 +618,19 @@ def buscar_relacionados_contextuais(
         relation_scope = "theme_catalog"
         relation_method = "structured_theme"
 
-    # Doenças e triagens entram somente por aresta direta e auditável do
-    # grafo. A anexação ocorre depois do filtro lexical para que metadados
-    # amplos (área, alias ou resumo) nunca sejam promovidos a nexo clínico.
-    groups = _merge_groups([
-        {"grupos": groups},
-        {"grupos": (
-            _specialty_direct_groups(
-                db,
-                entity_type=excluir_tipo,
-                slug=excluir_slug,
-            )
-            if assunto and excluir_slug and assunto == excluir_slug
-            else []
-        )},
-    ])
+    # Relações diretas de TODAS as frentes entram depois do filtro lexical,
+    # mas antes do corte final. Um vínculo auditável não depende de repetir
+    # palavras no título nem pode perder sua vaga para um candidato lexical.
+    groups = _merge_with_direct_groups(
+        groups,
+        _direct_graph_groups(
+            db,
+            entity_type=excluir_tipo,
+            slug=excluir_slug,
+        )
+        if assunto and excluir_slug and assunto == excluir_slug
+        else [],
+    )
 
     total = sum(len(group["itens"]) for group in groups)
     response = {
@@ -610,9 +648,9 @@ def buscar_relacionados_contextuais(
 def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
     """Traverse all explicit clinical topics for one published medication.
 
-    Returns None only when the drug itself is not published/found. A drug with
-    no safely inferable clinical topic returns an empty ecosystem rather than
-    unrelated content.
+    Returns None only when the drug itself is not published/found. Without
+    a safely inferable topic, only policy-checked direct graph links are
+    returned; absent those, the ecosystem remains empty.
     """
     drug = db.execute(
         select(Drug).where(Drug.slug == slug, Drug.published.is_(True))
@@ -633,12 +671,19 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
         for theme in themes
     ]
     groups = _merge_groups(responses)
+    # With topics, each contextual response already includes the direct
+    # graph. Without topics, still retrieve genuine links exactly once.
+    if not themes:
+        groups = _merge_with_direct_groups(
+            groups,
+            _direct_graph_groups(db, entity_type="medicamento", slug=drug.slug),
+        )
     total = sum(len(group["itens"]) for group in groups)
     return {
         "medicamento": {"slug": drug.slug, "titulo": drug.generic_name},
         "temas": themes,
-        "relation_scope": "structured_clinical_topic",
-        "relation_method": "reviewed_drug_indication",
+        "relation_scope": "structured_clinical_topic" if themes else "direct_graph_relation",
+        "relation_method": "reviewed_drug_indication" if themes else "policy_checked_graph",
         "grupos": groups,
         "total": total,
     }
