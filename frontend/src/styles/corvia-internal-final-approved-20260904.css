@@ -125,7 +125,7 @@ html[data-corvia-theme="light"] .spaces-choice__cards > button {
   .spaces-choice > header .spaces-user { width: 58px !important; min-width: 58px !important; max-width: 58px !important; }
   .spaces-choice > header .spaces-user__avatar { width: 56px !important; height: 56px !important; flex-basis: 56px !important; }
   .spaces-choice__change { top: 122px !important; left: 28px !important; }
-  .spaces-choice__content { align-self: start !important; width: 100% !important; padding-top: 138px !important; }
+  .spaces-choice__content { align-self: start !important; width: 100% !important; padding-top: 24px !important; }
   .spaces-choice__content > h1 { max-width: 760px !important; font-size: clamp(2.2rem,8vw,3.8rem) !important; line-height: 1.08 !important; }
   .spaces-choice__content > p:not(.spaces-eyebrow) { max-width: 690px !important; margin-top: 20px !important; font-size: .92rem !important; line-height: 1.55 !important; }
   .spaces-choice__cards { grid-template-columns: 1fr !important; gap: 14px !important; margin-top: 34px !important; }

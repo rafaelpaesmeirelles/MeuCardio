@@ -1418,7 +1418,7 @@ export default function CardiologySpacesHome() {
         <header>
           <span className="spaces-choice__brand-cluster">
             <Brand />
-            <GalaxyThemeToggle className="spaces-choice__theme-toggle" />
+            <GalaxyThemeToggle className="spaces-choice__theme-toggle" context="choice" />
           </span>
           <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
         </header>

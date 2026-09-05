@@ -28,7 +28,7 @@ function useCanonicalSpacesIdentityCopy() {
   });
 }
 
-export default function GalaxyThemeToggle({ className = "" }: { className?: string }) {
+export default function GalaxyThemeToggle({ className = "", context = "internal" }: { className?: string; context?: "choice" | "internal" }) {
   const { theme, toggleTheme } = useCorviaTheme();
   useCanonicalSpacesIdentityCopy();
 
@@ -47,7 +47,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
         aria-hidden="true"
         draggable={false}
       />
-      <MiniUniverseCanvas />
+      <MiniUniverseCanvas direction={context === "choice" && theme === "dark" ? "clockwise" : "counterclockwise"} />
     </button>
   );
 }
