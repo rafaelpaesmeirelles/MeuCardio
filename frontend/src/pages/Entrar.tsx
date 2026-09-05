@@ -15,6 +15,7 @@ import "../styles/cardiology-spaces-login-production-approved.css";
 import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 import "../styles/corvia-login-final-approved-20260904.css";
+import "../styles/corvia-login-fidelity-20260905.css";
 
 type TemaPublico = CorviaTheme;
 
@@ -35,8 +36,13 @@ function LoginGalaxy() {
     image.src = "/spaces/corvia-galaxy-cameo.webp";
     let animationFrame = 0;
     let cancelled = false;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let repaint: (() => void) | undefined;
+    const motionChanged = () => repaint?.();
+    reducedMotion.addEventListener("change", motionChanged);
 
     image.onload = () => {
+      if (cancelled) return;
       const width = 683;
       const height = 360;
       const square = width;
@@ -65,7 +71,7 @@ function LoginGalaxy() {
       const draw = (now: number) => {
         if (cancelled) return;
         if (!lastPaint || now - lastPaint >= 32) {
-          const angle = ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
+          const angle = reducedMotion.matches ? 0 : ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
           context.clearRect(0, 0, width, height);
           context.save();
           context.translate(coreTargetX, coreTargetY);
@@ -74,16 +80,22 @@ function LoginGalaxy() {
           context.drawImage(deprojected, -coreSquareX, -coreSquareY);
           context.restore();
           lastPaint = now;
-          if (fallback) fallback.style.opacity = "0";
+          if (fallback) fallback.dataset.replaced = "true";
           canvas.dataset.ready = "true";
         }
-        animationFrame = requestAnimationFrame(draw);
+        if (!reducedMotion.matches) animationFrame = requestAnimationFrame(draw);
+      };
+      repaint = () => {
+        cancelAnimationFrame(animationFrame);
+        lastPaint = 0;
+        draw(performance.now());
       };
       draw(startedAt);
     };
 
     return () => {
       cancelled = true;
+      reducedMotion.removeEventListener("change", motionChanged);
       cancelAnimationFrame(animationFrame);
     };
   }, []);
@@ -163,6 +175,7 @@ export default function Entrar() {
 
   return (
     <main
+      id="corvia-login"
       className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}
       data-login-theme={temaPublico}
     >

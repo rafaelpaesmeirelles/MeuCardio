@@ -504,3 +504,26 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
 @media (min-width: 901px) and (max-width: 1199px) {
   #root .spaces-home__topbar .spaces-brand > img { width: 34px !important; height: 34px !important; }
 }
+
+
+/* 05/09 — fidelidade mobile congelada: compacta apenas espaços residuais.
+   Não muda a composição aprovada; restaura a densidade da referência 04/09. */
+@media (max-width: 900px) {
+  #root .spaces-choice { grid-template-rows: 104px auto 44px !important; padding: 0 16px 12px !important; }
+  #root .spaces-choice > header { min-height: 104px !important; }
+  #root .spaces-choice__change { top: 100px !important; left: 18px !important; gap: 8px !important; transform: scale(.82) !important; transform-origin: left top !important; }
+  #root .spaces-choice__content { padding-top: 66px !important; padding-bottom: 10px !important; }
+  #root .spaces-choice__content > .spaces-eyebrow { margin-bottom: 10px !important; font-size: .61rem !important; }
+  #root .spaces-choice__content > h1 { max-width: 350px !important; font-size: 1.82rem !important; line-height: 1.08 !important; }
+  #root .spaces-choice__content > p:not(.spaces-eyebrow) { max-width: 342px !important; margin-top: 13px !important; font-size: .78rem !important; line-height: 1.48 !important; }
+  #root .spaces-choice__cards { gap: 11px !important; margin-top: 22px !important; }
+  #root .spaces-choice__cards > button { min-height: 142px !important; grid-template-columns: 60px minmax(0,1fr) !important; grid-template-rows: auto auto auto !important; column-gap: 14px !important; row-gap: 6px !important; padding: 16px 17px !important; border-radius: 16px !important; }
+  #root .spaces-choice__cards .spaces-choice__icon { width: 54px !important; height: 54px !important; grid-row: 1 / 4 !important; }
+  #root .spaces-choice__cards .spaces-choice__icon svg { width: 25px !important; height: 25px !important; }
+  #root .spaces-choice__cards strong { font-size: 1.16rem !important; line-height: 1.15 !important; }
+  #root .spaces-choice__cards small { font-size: .76rem !important; line-height: 1.42 !important; }
+  #root .spaces-choice__cards em { margin-top: 2px !important; font-size: .72rem !important; }
+  #root .spaces-choice > footer { padding: 8px 0 4px !important; font-size: .72rem !important; }
+  html[data-corvia-theme="light"] #root .spaces-home__topbar .spaces-brand > span { display: none !important; }
+  html[data-corvia-theme="dark"] #root .spaces-home__topbar .spaces-brand > span { display: flex !important; }
+}
