@@ -80,19 +80,17 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
 
   assert.match(entrar, /className="login-gateway__galaxy-image"/);
   assert.match(entrar, /src="\/spaces\/corvia-galaxy-cameo\.webp"/);
-  assert.match(entrar, /className="login-gateway__galaxy-rotor-clip"/);
-  assert.match(entrar, /className="login-gateway__galaxy-rotor"/);
+  assert.match(entrar, /className="login-gateway__galaxy-canvas"/);
+  assert.match(entrar, /const durationMs = 100_000/);
+  assert.match(entrar, /context\.scale\(1, projectionY\)/);
+  assert.match(entrar, /context\.rotate\(angle\)/);
   const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");
   assert.match(finalLoginStyles, /login-gateway__milky-way \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
     "o contêiner posicionado da galáxia deve permanecer imóvel");
   assert.match(finalLoginStyles, /login-gateway__galaxy-image \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
-    "o bitmap base precisa permanecer horizontal e imóvel");
-  assert.match(finalLoginStyles, /login-gateway__galaxy-rotor-clip \{[\s\S]*?clip-path:\s*ellipse\(49% 29% at 50% 56%\) !important/,
-    "o contorno do disco precisa permanecer uma elipse horizontal fixa");
-  assert.match(finalLoginStyles, /login-gateway__galaxy-rotor \{[\s\S]*?animation:\s*corvia-login-galaxy-arms-clockwise 80s linear infinite !important/,
-    "somente os braços externos devem girar no próprio eixo");
-  assert.match(finalLoginStyles, /@keyframes corvia-login-galaxy-arms-clockwise[\s\S]*?rotate\(0deg\)[\s\S]*?rotate\(360deg\)/,
-    "a rotação dos braços precisa ser horária e completar 360 graus");
+    "o fallback aprovado precisa permanecer horizontal e imóvel");
+  assert.match(finalLoginStyles, /login-gateway__galaxy-canvas\[data-ready="true"\]/,
+    "o canvas animado só pode substituir a imagem depois do primeiro frame pronto");
   assert.match(assetFixStyles, /mask:\s*none !important/,
     "a galáxia real não pode voltar a ser recortada em oval");
 

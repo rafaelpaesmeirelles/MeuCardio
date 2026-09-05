@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
 import { approvedHeartDataUri } from "../assets/approvedHeartData";
@@ -17,6 +17,84 @@ import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 import "../styles/corvia-login-final-approved-20260904.css";
 
 type TemaPublico = CorviaTheme;
+
+function LoginGalaxy() {
+  const fallbackRef = useRef<HTMLImageElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const fallback = fallbackRef.current;
+    if (!canvas) return;
+
+    const context = canvas.getContext("2d", { alpha: true });
+    if (!context) return;
+
+    const image = new Image();
+    image.decoding = "async";
+    image.src = "/spaces/corvia-galaxy-cameo.webp";
+    let animationFrame = 0;
+    let cancelled = false;
+
+    image.onload = () => {
+      const width = 683;
+      const height = 360;
+      const square = width;
+      const coreXRatio = 386.62 / 768;
+      const coreYRatio = 119.25 / 256;
+      const projectedHeight = width * image.naturalHeight / image.naturalWidth;
+      const projectionY = projectedHeight / square;
+      const top = (height - projectedHeight) / 2;
+      const coreSquareX = coreXRatio * square;
+      const coreSquareY = coreYRatio * square;
+      const coreTargetX = coreXRatio * width;
+      const coreTargetY = top + coreYRatio * projectedHeight;
+
+      canvas.width = width;
+      canvas.height = height;
+      const deprojected = document.createElement("canvas");
+      deprojected.width = square;
+      deprojected.height = square;
+      const sourceContext = deprojected.getContext("2d", { alpha: true });
+      if (!sourceContext) return;
+      sourceContext.drawImage(image, 0, 0, square, square);
+
+      const startedAt = performance.now();
+      let lastPaint = 0;
+      const durationMs = 100_000;
+      const draw = (now: number) => {
+        if (cancelled) return;
+        if (!lastPaint || now - lastPaint >= 32) {
+          const angle = ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
+          context.clearRect(0, 0, width, height);
+          context.save();
+          context.translate(coreTargetX, coreTargetY);
+          context.scale(1, projectionY);
+          context.rotate(angle);
+          context.drawImage(deprojected, -coreSquareX, -coreSquareY);
+          context.restore();
+          lastPaint = now;
+          if (fallback) fallback.style.opacity = "0";
+          canvas.dataset.ready = "true";
+        }
+        animationFrame = requestAnimationFrame(draw);
+      };
+      draw(startedAt);
+    };
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
+  return (
+    <>
+      <img ref={fallbackRef} className="login-gateway__galaxy-image" src="/spaces/corvia-galaxy-cameo.webp" alt="" aria-hidden="true" draggable={false} />
+      <canvas ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />
+    </>
+  );
+}
 
 function temaPublicoInicial(): TemaPublico {
   try {
@@ -137,14 +215,7 @@ export default function Entrar() {
 
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
-            <img className="login-gateway__galaxy-image" src="/spaces/corvia-galaxy-cameo.webp" alt="" aria-hidden="true" draggable={false} />
-            <span className="login-gateway__galaxy-rotor-clip" aria-hidden="true">
-              <img
-                className="login-gateway__galaxy-rotor"
-                src="/spaces/corvia-galaxy-cameo.webp"
-                alt="" aria-hidden="true" draggable={false}
-              />
-            </span>
+            <LoginGalaxy />
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />

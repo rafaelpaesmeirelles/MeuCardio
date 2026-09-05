@@ -354,52 +354,46 @@
 }
 
 
-/* EMERGENCY 04/09 — disco sempre horizontal; apenas braços externos giram no próprio eixo. */
+/* FINAL INVESTIDOR 04/09 — mesmo visual aprovado, rotação física no plano do disco. */
 #root .login.login-gateway--public .login-gateway__milky-way {
   animation:none !important;
   rotate:0deg !important;
+  will-change:auto !important;
 }
 #root .login.login-gateway--public .login-gateway__galaxy-image {
   animation:none !important;
   rotate:0deg !important;
   will-change:auto !important;
 }
-#root .login.login-gateway--public .login-gateway__galaxy-rotor-clip {
-  display:block !important;
+#root .login.login-gateway--public .login-gateway__galaxy-canvas {
   position:absolute !important;
   inset:0 !important;
   z-index:2 !important;
+  display:block !important;
   width:100% !important;
   height:100% !important;
-  overflow:hidden !important;
   pointer-events:none !important;
-  animation:none !important;
-  transform:none !important;
-  will-change:auto !important;
-  clip-path:ellipse(49% 29% at 50% 56%) !important;
-}
-#root .login.login-gateway--public .login-gateway__galaxy-rotor {
-  position:absolute !important;
-  inset:-10% !important;
-  width:120% !important;
-  height:120% !important;
-  object-fit:contain !important;
+  opacity:0 !important;
+  transform:scale(1.28,1.20) !important;
   transform-origin:50% 50% !important;
-  animation:corvia-login-galaxy-arms-clockwise 80s linear infinite !important;
-  opacity:.36 !important;
-  mix-blend-mode:screen !important;
-  filter:saturate(1.32) contrast(1.14) brightness(.98) drop-shadow(0 0 24px rgba(45,145,255,.22)) !important;
-  -webkit-mask-image:radial-gradient(circle at 50% 50%,transparent 0 20%,rgba(0,0,0,.82) 33%,#000 62%,rgba(0,0,0,.78) 78%,transparent 96%) !important;
-  mask-image:radial-gradient(circle at 50% 50%,transparent 0 20%,rgba(0,0,0,.82) 33%,#000 62%,rgba(0,0,0,.78) 78%,transparent 96%) !important;
-  will-change:transform !important;
+  transition:none !important;
+}
+#root .login.login-gateway--dark .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity:.92 !important;
+  filter:saturate(1.30) contrast(1.10) brightness(1.03) drop-shadow(0 0 34px rgba(56,144,255,.24)) !important;
+}
+#root .login.login-gateway--light .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity:.78 !important;
+  filter:saturate(1.02) contrast(1.08) brightness(1.14) drop-shadow(0 0 27px rgba(92,150,225,.15)) !important;
 }
 #root .login.login-gateway--dark .login-gateway__galaxy-image { opacity:.92 !important; }
 #root .login.login-gateway--light .login-gateway__galaxy-image { opacity:.78 !important; }
-#root .login.login-gateway--light .login-gateway__galaxy-rotor {
-  opacity:.26 !important;
-  filter:saturate(1.24) contrast(1.10) brightness(1.08) drop-shadow(0 0 20px rgba(78,145,238,.15)) !important;
+@media(max-width:900px) {
+  #root .login.login-gateway--public .login-gateway__galaxy-canvas {
+    transform:scale(1.18,1.14) !important;
+  }
 }
-@keyframes corvia-login-galaxy-arms-clockwise {
-  from { transform:rotate(0deg); }
-  to { transform:rotate(360deg); }
+/* Pedido final: Ensino apenas um pouco mais baixo, sem alterar a composição. */
+#root .login.login-gateway--public .login-gateway__space--ensino {
+  transform:translateX(-50%) translateY(10px) !important;
 }
