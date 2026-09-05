@@ -463,3 +463,16 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
     margin-left: 5px !important;
   }
 }
+
+/* Complemento do hotfix: neutraliza conflitos de especificidade no mobile. */
+.spaces-home__brand-cluster .galaxy-theme-toggle,
+.spaces-home__brand-cluster .galaxy-theme-toggle:hover,
+.spaces-home__brand-cluster .galaxy-theme-toggle:active {
+  position: relative !important;
+}
+@media (max-width: 900px) {
+  html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand > span,
+  html[data-corvia-theme="light"] .spaces-home__brand-cluster .spaces-brand > span {
+    display: flex !important;
+  }
+}
