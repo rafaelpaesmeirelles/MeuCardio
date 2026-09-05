@@ -65,7 +65,11 @@ test("campos claros continuam vencendo o contrato global de formulário", () => 
 
 test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login fino e associação", () => {
   assert.match(entrar, /Um universo de espaços\. <strong>Uma só cardiologia\.<\/strong>/);
-  assert.match(entrar, /Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional\./);
+  // Final frozen PNGs contain "juntos", not the superseded "orbitando juntos".
+  const frozenCopy = entrar.replace(/<br\s*\/?>/g, " ");
+  assert.match(frozenCopy, /Consultório, Hospital, Ensino, Pesquisa e Gestão\s+juntos no seu Universo Profissional\./);
+  assert.doesNotMatch(entrar, /Gestão orbitando juntos/, "não restaurar copy intermediária para satisfazer um teste antigo");
+  assert.match(entrar, /placeholder="Sua senha"/);
   assert.match(entrar, /corvia-approved-fidelity-asset-fix-20260904\.css/);
 
   assert.doesNotMatch(entrar, /login-gateway__routes|login-gateway__ring/,

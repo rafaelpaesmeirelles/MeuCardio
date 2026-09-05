@@ -223,7 +223,7 @@ export default function Entrar() {
       <section className="login-gateway__scene" aria-labelledby="login-title">
         <header className="login-gateway__hero">
           <h1 id="login-title">Um universo de espaços. <strong>Uma só cardiologia.</strong></h1>
-          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão orbitando juntos no seu Universo Profissional.</span>
+          <span>Consultório, Hospital, Ensino, Pesquisa e Gestão<br /> juntos no seu Universo Profissional.</span>
         </header>
 
         <div className="login-gateway__universe" aria-hidden="true">
@@ -262,7 +262,7 @@ export default function Entrar() {
           </label>
           <label className="login-gateway__field" htmlFor="senha">
             <span>Senha</span>
-            <div className="login-gateway__password"><Icone nome="cadeado" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Digite sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
+            <div className="login-gateway__password"><Icone nome="cadeado" /><input id="senha" type={mostrarSenha ? "text" : "password"} autoComplete="current-password" placeholder="Sua senha" value={senha} onChange={(event) => setSenha(event.target.value)} aria-invalid={Boolean(erro)} aria-describedby={erro ? "login-erro" : undefined} required /><button type="button" onClick={() => setMostrarSenha((visivel) => !visivel)} aria-label={mostrarSenha ? "Ocultar senha" : "Mostrar senha"} aria-pressed={mostrarSenha}><Icone nome={mostrarSenha ? "olho-fechado" : "olho"} /></button></div>
           </label>
           <Link className="login-gateway__forgot" to="/esqueci-senha">Esqueceu sua senha?</Link>
           <button className="login-gateway__enter" type="submit" disabled={enviando}>
