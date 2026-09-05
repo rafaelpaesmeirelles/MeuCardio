@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import frontmatter
-from sqlalchemy import or_
+from sqlalchemy import or_, select
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -32,7 +32,9 @@ from app.models.emergency import EmergencyProtocol
 from app.models.evidence import EvidenceRecord
 from app.models.gallery import GalleryImage
 from app.models.lab_test import LabTest
+from app.models.guideline import GuidelineLink
 from app.models.patient_material import PatientMaterial
+from app.models.scientific_user_document import ScientificUserDocument
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
@@ -55,7 +57,7 @@ from app.services.study_track_progress import canonicalize_progress_tokens
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 FULL_CORPUS_AUTHORIZATION_PATH = (
-    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260901.json"
+    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260905.json"
 )
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
@@ -425,6 +427,26 @@ def _load_controlled_substances(db: Session) -> dict:
     return result
 
 
+def _runtime_managed_document_filter():
+    """Documentos científicos criados em runtime não pertencem ao corpus Git.
+
+    O reconcile canônico deve arquivar documentos estáticos removidos do commit,
+    mas não pode despublicar sínteses CorVIA Intelligence nem documentos
+    incorporados explicitamente a partir do acervo privado do assinante.
+    """
+    incorporated_ids = select(ScientificUserDocument.incorporated_document_id).where(
+        ScientificUserDocument.incorporated_document_id.is_not(None)
+    )
+    guideline_summary_ids = select(GuidelineLink.item_id).where(
+        GuidelineLink.item_type == "intelligence_document"
+    )
+    return or_(
+        Document.slug.like("corvia-intelligence-%"),
+        Document.id.in_(incorporated_ids),
+        Document.id.in_(guideline_summary_ids),
+    )
+
+
 def _synchronize_publication(
     db: Session,
     canonical_slugs: dict[str, set[str]],
@@ -502,10 +524,19 @@ def _synchronize_publication(
             )
             unpublished_unreviewed[front] = int(demoted)
 
-            removed = (
-                db.query(model)
-                .filter(model.published.is_(True), model.slug.notin_(slugs))
-                .update({model.published: False}, synchronize_session=False)
+            # Documentos CorVIA Intelligence são produzidos em runtime pelo
+            # pipeline científico e não vivem na árvore Markdown canônica.
+            # Ausência no Git não significa remoção editorial para esse namespace.
+            removed_query = db.query(model).filter(
+                model.published.is_(True),
+                model.slug.notin_(slugs),
+            )
+            if front == "documentos":
+                removed_query = removed_query.filter(
+                    ~_runtime_managed_document_filter()
+                )
+            removed = removed_query.update(
+                {model.published: False}, synchronize_session=False
             )
             unpublished_absent[front] = int(removed)
         if dry_run:
@@ -542,12 +573,19 @@ def _database_inventory(
             model.slug.in_(slugs), model.published.is_(True)
         ).count()
         stored = db.query(model).count()
+        runtime_managed = 0
+        if front == "documentos":
+            runtime_managed = db.query(model).filter(
+                _runtime_managed_document_filter(),
+                model.slug.notin_(slugs),
+            ).count()
         minimum = int(config["minimum"])
         fronts[front] = {
             "database": canonical,
             "published": published,
             "stored": stored,
-            "archived_absent": max(stored - canonical, 0),
+            "runtime_managed": runtime_managed,
+            "archived_absent": max(stored - canonical - runtime_managed, 0),
             "minimum": minimum,
         }
         total += canonical
@@ -559,7 +597,12 @@ def _database_inventory(
         "total": total,
         "published_total": published_total,
         "stored_total": stored_total,
-        "archived_absent_total": max(stored_total - total, 0),
+        "archived_absent_total": sum(
+            item["archived_absent"] for item in fronts.values()
+        ),
+        "runtime_managed_total": sum(
+            item["runtime_managed"] for item in fronts.values()
+        ),
         "minimum": SCIENTIFIC_MINIMUM,
         "fronts": fronts,
         "below_minimum": below_minimum,

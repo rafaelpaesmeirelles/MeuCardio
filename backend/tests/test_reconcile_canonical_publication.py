@@ -37,6 +37,7 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
         _document("legado-novo", published=False),
         _document("rebaixado-para-revisao", published=True, review_status="pendente_revisao"),
         _document("removido-do-commit", published=True),
+        _document("corvia-intelligence-runtime", published=True),
     ])
     db.commit()
 
@@ -100,6 +101,7 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
     legado_novo = db.query(Document).filter_by(slug="legado-novo").one()
     rebaixado = db.query(Document).filter_by(slug="rebaixado-para-revisao").one()
     removido = db.query(Document).filter_by(slug="removido-do-commit").one()
+    runtime = db.query(Document).filter_by(slug="corvia-intelligence-runtime").one()
 
     assert atual.published is True
     assert aprovado.published is True
@@ -108,6 +110,7 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
     assert legado_novo.published is False
     assert rebaixado.published is False
     assert removido.published is False
+    assert runtime.published is True
     assert publicados == {"documentos": 1}
     assert despublicados == {"documentos": 1}
     assert despublicados_sem_revisao == {"documentos": 1}
@@ -115,13 +118,15 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
 
     assert inventario["total"] == 6
     assert inventario["published_total"] == 2
-    assert inventario["stored_total"] == 7
+    assert inventario["stored_total"] == 8
     assert inventario["archived_absent_total"] == 1
+    assert inventario["runtime_managed_total"] == 1
     assert inventario["below_minimum"] == {}
     assert inventario["fronts"]["documentos"] == {
         "database": 6,
         "published": 2,
-        "stored": 7,
+        "stored": 8,
+        "runtime_managed": 1,
         "archived_absent": 1,
         "minimum": 2,
     }
@@ -140,6 +145,7 @@ def test_autorizacao_integral_supera_flag_legada_mas_exige_revisao_e_canonicalid
             review_status="pendente_revisao",
         ),
         _document("historico-fora-do-corpus", published=True),
+        _document("corvia-intelligence-release", published=True),
     ])
     db.commit()
     monkeypatch.setattr(
@@ -171,6 +177,7 @@ def test_autorizacao_integral_supera_flag_legada_mas_exige_revisao_e_canonicalid
         "canonico-nao-revisado": False,
         "canonico-revisado": True,
         "historico-fora-do-corpus": False,
+        "corvia-intelligence-release": True,
     }
 
 
