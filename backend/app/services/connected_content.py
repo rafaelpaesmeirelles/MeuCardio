@@ -18,6 +18,7 @@ a clinically irrelevant relation.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from urllib.parse import quote_plus
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -33,7 +34,7 @@ from app.models.knowledge import (
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
-from app.services.knowledge_graph import ROTA_LISTA_POR_TIPO, relacionados_de
+from app.services.knowledge_graph import ROTA_LISTA_POR_TIPO, _rota_item, relacionados_de
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
     CONTEXT_TAG_TOKEN_WEIGHT,
@@ -820,6 +821,181 @@ def _mark_exact_topic_items(response: dict) -> None:
             item.setdefault("context_only", True)
 
 
+def _structured_test_query(value: str) -> str:
+    """Compact the verbatim test instruction only for the destination search URL.
+
+    The relation itself comes from `SpecialtyDisease.tests`; this helper never
+    decides clinical relevance. It merely avoids sending an entire explanatory
+    sentence to the exam catalogue when a concise leading exam name is present.
+    """
+    text = " ".join(str(value or "").split()).strip()
+    lowered = text.casefold()
+    cut = len(text)
+    for separator in (" — ", ";", ". ", " para ", " quando ", " diante de ", " se houver "):
+        pos = lowered.find(separator.casefold())
+        if 2 <= pos < cut:
+            cut = pos
+    compact = text[:cut].strip(" .;,:—-")
+    return compact or text
+
+
+def _structured_disease_test_group(disease: SpecialtyDisease) -> dict | None:
+    """Expose tests explicitly listed in the reviewed disease record.
+
+    These are not inferred LabTest entities. They remain verbatim structured
+    recommendations from the disease model and route into the exam catalogue.
+    """
+    items = []
+    seen: set[str] = set()
+    for position, raw in enumerate(disease.tests or [], start=1):
+        if not isinstance(raw, str):
+            continue
+        title = " ".join(raw.split()).strip()
+        key = normalize_text(title)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        query = _structured_test_query(title)
+        items.append({
+            "slug": f"{disease.slug}--teste-estruturado-{position}",
+            "titulo": title,
+            "subtitulo": "Exame explicitamente listado no verbete revisado da doença",
+            "rota": f"/exames?q={quote_plus(query)}",
+            "relation_scope": "structured_disease_field",
+            "relation_method": "SpecialtyDisease.tests",
+            "relevance_score": 1.0,
+            "context_only": False,
+        })
+    if not items:
+        return None
+    return {
+        "tipo": "exame",
+        "rotulo": "Exames",
+        "rota_lista": "/exames",
+        "itens": items,
+    }
+
+
+def _structured_disease_differential_group(
+    db: Session, disease: SpecialtyDisease,
+) -> dict | None:
+    """Resolve only exact, unambiguous differential diagnoses to disease nodes."""
+    keys = {normalize_text(raw) for raw in (disease.differentials or []) if isinstance(raw, str)} - {""}
+    if not keys:
+        return None
+    targets = db.execute(
+        select(SpecialtyDisease).where(SpecialtyDisease.published.is_(True))
+    ).scalars().all()
+    by_key: dict[str, list[SpecialtyDisease]] = {}
+    for target in targets:
+        if target.slug == disease.slug:
+            continue
+        for value in (target.name, target.slug.replace("-", " "), *(target.aliases or [])):
+            key = normalize_text(value)
+            if key:
+                by_key.setdefault(key, []).append(target)
+    items = []
+    seen: set[str] = set()
+    for key in keys:
+        matches = {target.slug: target for target in by_key.get(key, [])}
+        if len(matches) != 1:
+            continue
+        target = next(iter(matches.values()))
+        if target.slug in seen:
+            continue
+        seen.add(target.slug)
+        items.append({
+            "slug": target.slug,
+            "titulo": target.name,
+            "subtitulo": "Diagnóstico diferencial explicitamente listado no verbete revisado",
+            "rota": f"/doencas/{target.slug}",
+            "relation_scope": "structured_disease_field",
+            "relation_method": "SpecialtyDisease.differentials",
+            "relevance_score": 1.0,
+            "context_only": False,
+        })
+    if not items:
+        return None
+    items.sort(key=lambda item: item["titulo"].casefold())
+    return {
+        "tipo": "doenca",
+        "rotulo": "Doenças",
+        "rota_lista": "/doencas",
+        "itens": items,
+    }
+
+
+def _global_disease_identity_groups(
+    db: Session, disease: SpecialtyDisease, *, limit: int | None = None,
+) -> list[dict]:
+    """Last-resort contextual discovery for a disease with no structured links.
+
+    It inspects only active entity title/slug identity, never body text. A full
+    disease name/alias may match directly; additionally, a one-word tag may be
+    used only when that same word is part of the disease's own name/slug/alias
+    and is at least five characters long. Returned items are explicitly labeled
+    contextual, not direct clinical relations.
+    """
+    identity_text = normalize_text(" ".join([
+        disease.name, disease.slug.replace("-", " "), *(disease.aliases or []),
+    ]))
+    identity_tokens = set(identity_text.split())
+    tag_tokens = {
+        normalize_text(tag) for tag in (disease.tags or [])
+        if isinstance(tag, str)
+        and " " not in normalize_text(tag)
+        and len(normalize_text(tag)) >= 5
+        and normalize_text(tag) in identity_tokens
+    }
+    phrases = _disease_anchor_phrases(disease)
+    entities = db.execute(
+        select(KnowledgeEntity).where(
+            KnowledgeEntity.status == "ativo",
+            KnowledgeEntity.entity_type.notin_(("tema", "doenca")),
+        ).order_by(KnowledgeEntity.entity_type, KnowledgeEntity.title)
+    ).scalars().all()
+    labels = {
+        "documento": "Documentos", "fluxograma": "Fluxogramas",
+        "evidencia": "Evidências", "estudo": "Estudos",
+        "medicamento": "Medicamentos", "exame": "Exames",
+        "caso_clinico": "Casos clínicos", "trilha": "Trilhas",
+        "galeria": "Galeria clínica", "checklist": "Checklists",
+        "material_paciente": "Material para pacientes",
+        "protocolo_emergencia": "Protocolos de emergência",
+        "calculadora": "Calculadoras", "triagem_sintoma": "Triagem por sintomas",
+    }
+    grouped: dict[str, dict] = {}
+    for entity in entities:
+        item_identity = {"slug": entity.slug, "titulo": entity.title}
+        item_tokens = set(normalize_text(f"{entity.slug} {entity.title}").split())
+        if not (
+            _item_mentions_disease_anchor(item_identity, phrases)
+            or bool(tag_tokens & item_tokens)
+        ):
+            continue
+        kind = entity.entity_type
+        group = grouped.setdefault(kind, {
+            "tipo": kind,
+            "rotulo": labels.get(kind, kind.replace("_", " ").title()),
+            "rota_lista": ROTA_LISTA_POR_TIPO.get(kind, ""),
+            "itens": [],
+        })
+        group["itens"].append({
+            "slug": entity.slug,
+            "titulo": entity.title,
+            "subtitulo": "Correspondência inequívoca de identidade clínica no título/slug",
+            "rota": _rota_item(kind, entity.slug),
+            "relation_scope": "clinical_match",
+            "relation_method": "global_disease_identity_fallback",
+            "relevance_score": 1.0,
+            "context_only": True,
+        })
+    if limit is not None:
+        for group in grouped.values():
+            group["itens"] = group["itens"][:limit]
+    return [group for group in grouped.values() if group["itens"]]
+
+
 def buscar_relacionados_da_doenca(
     db: Session,
     slug: str,
@@ -884,11 +1060,26 @@ def buscar_relacionados_da_doenca(
         db, entity_type="doenca", slug=disease.slug,
         limite_por_tipo=limite_por_categoria,
     )
+    structured_groups = [
+        group for group in (
+            _structured_disease_test_group(disease),
+            _structured_disease_differential_group(db, disease),
+        ) if group is not None
+    ]
     groups = _merge_groups(
-        [{"grupos": direct}, *responses],
+        [{"grupos": direct}, {"grupos": structured_groups}, *responses],
         limit=limite_por_categoria,
     )
     total = sum(len(group.get("itens", [])) for group in groups)
+    if total == 0:
+        contextual_fallback = _global_disease_identity_groups(
+            db, disease, limit=limite_por_categoria,
+        )
+        groups = _merge_groups(
+            [{"grupos": groups}, {"grupos": contextual_fallback}],
+            limit=limite_por_categoria,
+        )
+        total = sum(len(group.get("itens", [])) for group in groups)
     return {
         "doenca": {"slug": disease.slug, "titulo": disease.name},
         "temas": topics,

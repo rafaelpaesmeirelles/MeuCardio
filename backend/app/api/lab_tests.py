@@ -1,7 +1,9 @@
 import unicodedata
 
+import re
+
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import Text, cast, func, or_, select
+from sqlalchemy import Text, and_, case, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -90,20 +92,46 @@ def list_tests(
     if theme:
         query = query.filter(LabTest.theme == theme)
     if q and q.strip():
-        query = query.filter(or_(
-            _contem_sem_acentos(LabTest.name, q),
-            _contem_sem_acentos(LabTest.category, q),
-            _contem_sem_acentos(LabTest.theme, q),
-            _contem_sem_acentos(LabTest.tags, q),
-            _contem_sem_acentos(LabTest.what_it_measures, q),
-        ))
+        # Cada termo digitado precisa aparecer em algum campo pesquisável, mas
+        # não necessariamente como uma única substring contínua. Assim
+        # "holter 24h" encontra o registro canônico `holter-24h` mesmo quando
+        # o nome editorial é "Holter — monitorização eletrocardiográfica...".
+        stopwords = {"a", "as", "com", "da", "das", "de", "do", "dos", "e", "em", "na", "nas", "no", "nos", "o", "os", "para", "por"}
+        terms = [
+            term for term in re.split(r"[^a-z0-9]+", _termo_sem_acentos(q))
+            if term and term not in stopwords
+        ]
+        term_filters = [
+            or_(
+                _contem_sem_acentos(LabTest.name, term),
+                _contem_sem_acentos(LabTest.slug, term),
+                _contem_sem_acentos(LabTest.category, term),
+                _contem_sem_acentos(LabTest.theme, term),
+                _contem_sem_acentos(LabTest.tags, term),
+                _contem_sem_acentos(LabTest.what_it_measures, term),
+                _contem_sem_acentos(LabTest.indications, term),
+                _contem_sem_acentos(LabTest.interpretation, term),
+            )
+            for term in terms
+        ]
+        if term_filters:
+            query = query.filter(and_(*term_filters))
     total = query.count()
-    items = (
-        query.order_by(LabTest.category, LabTest.theme, LabTest.name)
-        .offset(offset)
-        .limit(limit)
-        .all()
-    )
+    if q and q.strip():
+        normalized_q = _termo_sem_acentos(q)
+        normalized_name = func.unaccent(func.lower(LabTest.name))
+        normalized_slug = func.unaccent(func.lower(func.replace(LabTest.slug, "-", " ")))
+        identity_rank = case(
+            (normalized_slug == normalized_q, 0),
+            (normalized_name == normalized_q, 0),
+            (normalized_slug.like(normalized_q + "%"), 1),
+            (normalized_name.like(normalized_q + "%"), 1),
+            else_=2,
+        )
+        query = query.order_by(identity_rank, func.length(LabTest.slug), LabTest.name, LabTest.slug)
+    else:
+        query = query.order_by(LabTest.category, LabTest.theme, LabTest.name)
+    items = query.offset(offset).limit(limit).all()
     has_more = offset + len(items) < total
     return {
         "total": total,

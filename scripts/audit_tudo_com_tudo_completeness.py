@@ -16,6 +16,9 @@ from app.models.specialty_guide import SpecialtyDisease
 from app.services.connected_content import buscar_relacionados_da_doenca
 from app.services.knowledge_graph import _itens_por_tema, _normalizar_chave_clinica
 from app.services.topic_relevance import drug_matches_theme
+from app.services.catalog_search import (
+    INTERNAL_MARKER_SQL_PATTERN, INTERNAL_OVERRIDE_SQL_PATTERN, SQL, literal_like,
+)
 from app.models.drug import Drug
 
 
@@ -44,12 +47,47 @@ def main() -> int:
                 if missing:
                     errors.append(f"{disease.slug}:{entity_type}:missing={sorted(missing)[:8]} count={len(missing)}")
 
+        # Busca transversal por identidade: um exame básico não pode sumir
+        # porque a duração esteja no slug e não no título editorial.
+        q = "holter 24h"
+        search_rows = db.execute(SQL, {
+            "q": q, "q_like": literal_like(q), "frente": None,
+            "limit": 10, "offset": 0,
+            "internal_override_pattern": INTERNAL_OVERRIDE_SQL_PATTERN,
+            "internal_marker_pattern": INTERNAL_MARKER_SQL_PATTERN,
+        }).mappings().all()
+        if not search_rows or not (
+            search_rows[0]["frente"] == "exame"
+            and search_rows[0]["slug"] == "holter-24h"
+        ):
+            errors.append("search:holter-24h-not-first")
+
         fa = buscar_relacionados_da_doenca(db, "fibrilacao-atrial", limite_por_categoria=None) or {}
         fa_calc = next((g for g in fa.get("grupos", []) if g["tipo"] == "calculadora"), {"itens": []})
         got = {x["slug"] for x in fa_calc["itens"]}
         need = {"cha2ds2-vasc", "has-bled", "orbit"}
         if not need <= got:
             errors.append(f"fibrilacao-atrial:calculadoras:missing={sorted(need-got)}")
+
+        dns = buscar_relacionados_da_doenca(
+            db, "disfuncao-do-no-sinusal", limite_por_categoria=None
+        ) or {}
+        structured_tests = [
+            item for group in dns.get("grupos", []) if group["tipo"] == "exame"
+            for item in group.get("itens", [])
+            if item.get("relation_method") == "SpecialtyDisease.tests"
+        ]
+        if not structured_tests:
+            errors.append("disfuncao-do-no-sinusal:structured-tests-missing")
+
+        sarcopenia = buscar_relacionados_da_doenca(
+            db, "sarcopenia-cardiovascular", limite_por_categoria=None
+        ) or {}
+        if not any(
+            item.get("relation_method") == "global_disease_identity_fallback"
+            for group in sarcopenia.get("grupos", []) for item in group.get("itens", [])
+        ):
+            errors.append("sarcopenia-cardiovascular:global-context-missing")
 
         dup = db.execute(
             select(KnowledgeEntity.slug, func.count(KnowledgeEntity.id))

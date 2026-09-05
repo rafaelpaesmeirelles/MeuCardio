@@ -232,7 +232,9 @@ WITH cmed_atual AS (
   SELECT achados.*,
          coalesce(ts_rank(v, consulta.tsq), 0)
            + CASE WHEN unaccent(lower(title)) = unaccent(lower(CAST(:q AS text))) THEN 3.0
+                  WHEN unaccent(lower(replace(slug, '-', ' '))) = unaccent(lower(CAST(:q AS text))) THEN 4.0
                   WHEN unaccent(lower(title)) LIKE unaccent(lower(CAST(:q AS text))) || '%' THEN 1.2
+                  WHEN unaccent(lower(replace(slug, '-', ' '))) LIKE unaccent(lower(CAST(:q AS text))) || '%' THEN 1.5
                   ELSE 0.0 END AS rank
   FROM achados CROSS JOIN consulta
   WHERE (CAST(:frente AS text) IS NULL OR frente = CAST(:frente AS text))
@@ -290,7 +292,11 @@ ORDER BY frente
 # `LIKE '%...%'` sobre todos os corpos. A busca literal — necessária para
 # fragmentos, fórmulas e grafias parciais — só é executada quando a consulta
 # indexada não encontra nenhum item.
-FULL_TEXT_MATCH = "v @@ consulta.tsq"
+# O slug é parte da identidade canônica e precisa participar da busca indexada
+# mesmo quando o `search_vector` persistido de uma frente foi construído antes
+# dessa regra. Isso mantém buscas como "holter 24h" e nomes com números/siglas
+# encontrando o item exato sem depender do fallback literal de catálogo inteiro.
+FULL_TEXT_MATCH = "(v || to_tsvector('simple', coalesce(slug, ''))) @@ consulta.tsq"
 LITERAL_MATCH = (
     "unaccent(lower(translate(pesquisavel, '₀₁₂₃₄₅₆₇₈₉', "
     "'0123456789'))) LIKE consulta.trecho ESCAPE '!'"
