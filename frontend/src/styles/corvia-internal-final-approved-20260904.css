@@ -476,3 +476,38 @@ html[data-corvia-theme="dark"] .galaxy-theme-toggle__canvas-live {
     display: flex !important;
   }
 }
+
+/* 05/09 — corrigir somente as colisões do cabeçalho, sem mover sua grade.
+   O canvas absoluto precisa do botão como âncora; o toque continua 44×44.
+   Escopo com #root vence folhas históricas carregadas em chunks posteriores. */
+#root .spaces-home__topbar .spaces-home__brand-cluster { gap: 8px !important; }
+#root .spaces-home__topbar .spaces-home__brand-cluster .galaxy-theme-toggle {
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  margin-left: 0 !important;
+}
+#root .spaces-home__topbar .spaces-home__brand-cluster .galaxy-theme-toggle__image {
+  width: 100% !important;
+  height: 100% !important;
+}
+@media (max-width: 1199px) {
+  #root .spaces-home__topbar .spaces-brand > span { display: flex !important; }
+  #root .spaces-home__topbar .spaces-brand { gap: 6px !important; }
+  #root .spaces-home__topbar .spaces-brand strong { font-size: .98rem !important; line-height: 1 !important; }
+  #root .spaces-home__topbar .spaces-brand small { display: block !important; margin-top: 3px !important; font-size: .28rem !important; letter-spacing: .16em !important; }
+  #root .spaces-home__topbar .spaces-brand > img { width: 40px !important; height: 40px !important; }
+}
+@media (min-width: 901px) and (max-width: 1199px) {
+  #root .spaces-home__topbar .spaces-brand > img { width: 34px !important; height: 34px !important; }
+}
+@media (max-width: 900px) {
+  /* A troca real para claro não pode reativar os 118px da regra histórica. */
+  #root .spaces-choice > header .galaxy-theme-toggle {
+    width: 70px !important;
+    height: 44px !important;
+  }
+}
