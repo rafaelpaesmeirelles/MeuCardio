@@ -29,7 +29,7 @@ from app.models.knowledge import TIPOS_ENTIDADE_PERMITIDOS
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
-from app.services.knowledge_graph import relacionados_de
+from app.services.knowledge_graph import ROTA_LISTA_POR_TIPO, relacionados_de
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
     CONTEXT_TAG_TOKEN_WEIGHT,
@@ -76,19 +76,17 @@ def _merge_groups(
     return [by_type[kind] for kind in order]
 
 
-def _specialty_direct_groups(
+def _direct_graph_groups(
     db: Session,
     *,
     entity_type: str | None,
     slug: str | None,
 ) -> list[dict]:
-    """Expose specialty content only through direct, policy-checked edges.
+    """Expose every content front through direct, policy-checked edges.
 
-    Diseases and symptom-triage guides do not carry the canonical ``theme``
-    field used by the legacy catalogue. Their ``area`` metadata is deliberately
-    broad and cannot prove a clinical relationship. Reusing the knowledge
-    graph here preserves only explicit/structured links that already passed
-    the relation policy; thematic expansion remains disabled.
+    Explicit relations can cross canonical themes and need not repeat the
+    origin's title. Reuse the bidirectional graph's publication/review policy;
+    never turn theme membership or lexical resemblance into a direct edge.
     """
     if (
         not entity_type
@@ -108,21 +106,35 @@ def _specialty_direct_groups(
         return []
 
     labels = {
-        "doenca": ("Doenças", "/doencas"),
-        "triagem_sintoma": ("Triagem por sintomas", "/triagem-sintomas"),
+        "documento": "Documentos", "fluxograma": "Fluxogramas",
+        "evidencia": "Evidências", "estudo": "Estudos",
+        "medicamento": "Medicamentos", "exame": "Exames",
+        "caso_clinico": "Casos clínicos", "trilha": "Trilhas",
+        "galeria": "Galeria", "checklist": "Checklists",
+        "material_paciente": "Material para o paciente",
+        "protocolo_emergencia": "Protocolos de emergência",
+        "calculadora": "Calculadoras", "doenca": "Doenças",
+        "triagem_sintoma": "Triagem por sintomas",
     }
     groups: list[dict] = []
     for group in graph.get("grupos", []):
         kind = group.get("tipo")
         if kind not in labels:
             continue
-        label, list_route = labels[kind]
+        label = labels[kind]
+        list_route = ROTA_LISTA_POR_TIPO[kind]
         items = [{
             **item,
-            "subtitulo": None,
+            "subtitulo": item.get("subtitulo"),
             "relation_scope": "direct_graph_relation",
             "context_only": False,
-        } for item in group.get("itens", [])]
+        } for item in group.get("itens", [])
+            if item.get("slug")
+            and (kind, item["slug"]) != (entity_type, slug)
+            and not item.get("context_only")
+            and item.get("review_status") != "rejeitado"
+            and item.get("relation_type") not in {None, "same_theme", "belongs_to_topic"}
+        ]
         if items:
             groups.append({
                 "tipo": kind,
@@ -131,6 +143,19 @@ def _specialty_direct_groups(
                 "itens": items,
             })
     return groups
+
+
+def _merge_direct_groups(groups: list[dict], direct: list[dict]) -> list[dict]:
+    """Rank direct links first without rearranging the approved group order."""
+    merged = {group["tipo"]: group for group in _merge_groups([
+        {"grupos": direct}, {"grupos": groups},
+    ])}
+    for group in groups:
+        # Preserve existing UI labels/routes as well as their ordering.
+        merged[group["tipo"]]["rotulo"] = group["rotulo"]
+        merged[group["tipo"]]["rota_lista"] = group["rota_lista"]
+    order = dict.fromkeys(group["tipo"] for group in [*groups, *direct])
+    return [merged[kind] for kind in order]
 
 
 def _contextual_drugs(
@@ -578,21 +603,16 @@ def buscar_relacionados_contextuais(
         relation_scope = "theme_catalog"
         relation_method = "structured_theme"
 
-    # Doenças e triagens entram somente por aresta direta e auditável do
-    # grafo. A anexação ocorre depois do filtro lexical para que metadados
-    # amplos (área, alias ou resumo) nunca sejam promovidos a nexo clínico.
-    groups = _merge_groups([
-        {"grupos": groups},
-        {"grupos": (
-            _specialty_direct_groups(
-                db,
-                entity_type=excluir_tipo,
-                slug=excluir_slug,
-            )
-            if assunto and excluir_slug and assunto == excluir_slug
-            else []
-        )},
-    ])
+    # Arestas diretas atravessam temas e todas as frentes. Entram depois do
+    # filtro lexical, mas antes dele no ranking e na deduplicação final.
+    # Isso preserva a proveniência do vínculo e impede que cinco resultados
+    # textuais escondam uma referência editorial explícita.
+    direct = (
+        _direct_graph_groups(db, entity_type=excluir_tipo, slug=excluir_slug)
+        if assunto and excluir_slug and assunto == excluir_slug
+        else []
+    )
+    groups = _merge_direct_groups(groups, direct)
 
     total = sum(len(group["itens"]) for group in groups)
     response = {
@@ -632,13 +652,19 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
         )
         for theme in themes
     ]
+    if not themes:
+        # A drug outside the supported indication taxonomy can still have
+        # explicit reviewed graph links. Do not invent a theme to expose them.
+        responses.append({"grupos": _direct_graph_groups(
+            db, entity_type="medicamento", slug=drug.slug,
+        )})
     groups = _merge_groups(responses)
     total = sum(len(group["itens"]) for group in groups)
     return {
         "medicamento": {"slug": drug.slug, "titulo": drug.generic_name},
         "temas": themes,
-        "relation_scope": "structured_clinical_topic",
-        "relation_method": "reviewed_drug_indication",
+        "relation_scope": "structured_clinical_topic" if themes else "direct_graph_relation",
+        "relation_method": "reviewed_drug_indication" if themes else "typed_graph_relation",
         "grupos": groups,
         "total": total,
     }
