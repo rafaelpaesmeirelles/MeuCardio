@@ -25,7 +25,11 @@ from sqlalchemy.orm import Session
 from app.models.content import Document
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
-from app.models.knowledge import TIPOS_ENTIDADE_PERMITIDOS
+from app.models.knowledge import (
+    TIPOS_ENTIDADE_PERMITIDOS,
+    KnowledgeEntity,
+    KnowledgeRelation,
+)
 from app.models.specialty_guide import SpecialtyDisease
 from app.models.study import ScientificStudy
 from app.services.related_content import LIMITE_POR_CATEGORIA, buscar_relacionados as _base
@@ -81,6 +85,7 @@ def _direct_graph_groups(
     *,
     entity_type: str | None,
     slug: str | None,
+    limite_por_tipo: int | None = LIMITE_POR_CATEGORIA,
 ) -> list[dict]:
     """Expose every content front through direct, policy-checked edges.
 
@@ -99,7 +104,7 @@ def _direct_graph_groups(
         db,
         entity_type=entity_type,
         slug=slug,
-        limite_por_tipo=LIMITE_POR_CATEGORIA,
+        limite_por_tipo=(limite_por_tipo if limite_por_tipo is not None else 1000),
         incluir_contexto_tematico=False,
     )
     if not graph:
@@ -145,11 +150,14 @@ def _direct_graph_groups(
     return groups
 
 
-def _merge_direct_groups(groups: list[dict], direct: list[dict]) -> list[dict]:
+def _merge_direct_groups(
+    groups: list[dict], direct: list[dict], *,
+    limit: int | None = LIMITE_POR_CATEGORIA,
+) -> list[dict]:
     """Rank direct links first without rearranging the approved group order."""
     merged = {group["tipo"]: group for group in _merge_groups([
         {"grupos": direct}, {"grupos": groups},
-    ])}
+    ], limit=limit)}
     for group in groups:
         # Preserve existing UI labels/routes as well as their ordering.
         merged[group["tipo"]]["rotulo"] = group["rotulo"]
@@ -285,6 +293,8 @@ def _contextual_studies(
     themes: tuple[str, ...],
     origin_subject: str | None,
     excluir_slug: str | None,
+    *,
+    limit: int | None = LIMITE_POR_CATEGORIA,
 ) -> list[tuple[ScientificStudy, ContextualRelevance]]:
     """Return only studies specifically connected to the origin subject.
 
@@ -318,7 +328,8 @@ def _contextual_studies(
             continue
         ranked.append((match.score, study.year or 0, study.title.casefold(), study, match))
     ranked.sort(key=lambda row: (-row[0], -row[1], row[2]))
-    return [(row[3], row[4]) for row in ranked[:LIMITE_POR_CATEGORIA]]
+    selected = ranked if limit is None else ranked[:limit]
+    return [(row[3], row[4]) for row in selected]
 
 
 def _has_absolute_editorial_support(
@@ -345,6 +356,7 @@ def _filter_groups_by_subject(
     *, exigir_suporte_editorial_absoluto: bool = False,
     strong_origin_tag_term_groups: tuple[frozenset[str], ...] = (),
     explicit_item_keys: frozenset[tuple[str, str]] = frozenset(),
+    limit: int | None = LIMITE_POR_CATEGORIA,
 ) -> None:
     """Remove theme-only neighbours from every non-study content front.
 
@@ -400,7 +412,7 @@ def _filter_groups_by_subject(
                 -row[0],
                 row[1],
             ))
-        group["itens"] = [
+        items = [
             (
                 _with_explicit_link_metadata(row[2])
                 if (group["tipo"], row[2].get("slug", ""))
@@ -408,7 +420,8 @@ def _filter_groups_by_subject(
                 else _with_match_metadata(row[2], row[3])
             )
             for row in matched
-        ][:LIMITE_POR_CATEGORIA]
+        ]
+        group["itens"] = items if limit is None else items[:limit]
 
 
 def _origin_context(
@@ -502,6 +515,7 @@ def buscar_relacionados_contextuais(
     excluir_slug: str | None = None,
     assunto: str | None = None,
     filtrar_grupos_por_assunto: bool = True,
+    limite_por_categoria: int | None = LIMITE_POR_CATEGORIA,
 ) -> dict:
     canonical = canonical_theme(tema)
     if not canonical:
@@ -511,7 +525,7 @@ def buscar_relacionados_contextuais(
     # Contextual matching must see the full theme pool; otherwise a relevant
     # older item can be discarded before it receives a score. Theme catalogues
     # retain the normal bounded query because no item-level ranking is claimed.
-    candidate_limit = None if assunto else LIMITE_POR_CATEGORIA
+    candidate_limit = None if assunto else limite_por_categoria
     responses = [
         _base(
             db, variant, excluir_tipo=excluir_tipo, excluir_slug=excluir_slug,
@@ -558,7 +572,9 @@ def buscar_relacionados_contextuais(
         }
         groups.append(study_group)
     if assunto:
-        studies = _contextual_studies(db, variants, origin_subject, excluir_slug)
+        studies = _contextual_studies(
+            db, variants, origin_subject, excluir_slug, limit=limite_por_categoria,
+        )
         study_group["itens"] = [
             _with_match_metadata(
                 {
@@ -588,6 +604,7 @@ def buscar_relacionados_contextuais(
                     origin_context.strong_tag_term_groups
                 ),
                 explicit_item_keys=origin_context.explicit_item_keys,
+                limit=limite_por_categoria,
             )
         relation_scope = (
             "clinical_match" if filtrar_grupos_por_assunto else "structured_clinical_topic"
@@ -598,8 +615,9 @@ def buscar_relacionados_contextuais(
             else "reviewed_drug_indication"
         )
     else:
-        for group in groups:
-            group["itens"] = group["itens"][:LIMITE_POR_CATEGORIA]
+        if limite_por_categoria is not None:
+            for group in groups:
+                group["itens"] = group["itens"][:limite_por_categoria]
         relation_scope = "theme_catalog"
         relation_method = "structured_theme"
 
@@ -608,11 +626,14 @@ def buscar_relacionados_contextuais(
     # Isso preserva a proveniência do vínculo e impede que cinco resultados
     # textuais escondam uma referência editorial explícita.
     direct = (
-        _direct_graph_groups(db, entity_type=excluir_tipo, slug=excluir_slug)
+        _direct_graph_groups(
+            db, entity_type=excluir_tipo, slug=excluir_slug,
+            limite_por_tipo=limite_por_categoria,
+        )
         if assunto and excluir_slug and assunto == excluir_slug
         else []
     )
-    groups = _merge_direct_groups(groups, direct)
+    groups = _merge_direct_groups(groups, direct, limit=limite_por_categoria)
 
     total = sum(len(group["itens"]) for group in groups)
     response = {
@@ -627,7 +648,235 @@ def buscar_relacionados_contextuais(
     return response
 
 
-def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
+def _entity_topic_titles(db: Session, *, entity_type: str, slug: str) -> list[str]:
+    origin = db.execute(
+        select(KnowledgeEntity).where(
+            KnowledgeEntity.entity_type == entity_type,
+            KnowledgeEntity.slug == slug,
+            KnowledgeEntity.status == "ativo",
+        )
+    ).scalar_one_or_none()
+    if origin is None:
+        return []
+    rows = db.execute(
+        select(KnowledgeEntity.title)
+        .join(KnowledgeRelation, KnowledgeRelation.target_entity_id == KnowledgeEntity.id)
+        .where(
+            KnowledgeRelation.source_entity_id == origin.id,
+            KnowledgeRelation.relation_type == "belongs_to_topic",
+            KnowledgeRelation.review_status != "rejeitado",
+            KnowledgeEntity.entity_type == "tema",
+            KnowledgeEntity.status == "ativo",
+        )
+        .order_by(KnowledgeEntity.title)
+    ).scalars().all()
+    return list(dict.fromkeys(canonical_theme(title) for title in rows if title))
+
+
+def buscar_ecossistema_de_entidade(
+    db: Session,
+    *,
+    entity_type: str,
+    slug: str,
+    limite_por_categoria: int | None = None,
+) -> dict | None:
+    """Expande um item exato por arestas diretas + tópicos estruturados.
+
+    Diferente da doença, um item genérico não transforma um tema inteiro em
+    relação direta. Os vizinhos temáticos passam pelo matcher contextual
+    determinístico usando o próprio slug/título como assunto.
+    """
+    if entity_type not in TIPOS_ENTIDADE_PERMITIDOS or entity_type == "tema":
+        return None
+    origin = db.execute(
+        select(KnowledgeEntity).where(
+            KnowledgeEntity.entity_type == entity_type,
+            KnowledgeEntity.slug == slug,
+            KnowledgeEntity.status == "ativo",
+        )
+    ).scalar_one_or_none()
+    if origin is None:
+        return None
+    topics = _entity_topic_titles(db, entity_type=entity_type, slug=slug)
+    subject = " ".join(filter(None, [origin.slug, origin.title]))
+    responses = []
+    for topic in topics:
+        response = buscar_relacionados_contextuais(
+            db, topic,
+            excluir_tipo=entity_type, excluir_slug=slug,
+            assunto=subject,
+            limite_por_categoria=limite_por_categoria,
+        )
+        if response.get("total"):
+            responses.append(response)
+    direct = _direct_graph_groups(
+        db, entity_type=entity_type, slug=slug,
+        limite_por_tipo=limite_por_categoria,
+    )
+    groups = _merge_groups(
+        [{"grupos": direct}, *responses],
+        limit=limite_por_categoria,
+    )
+    return {
+        "entidade": {"tipo": entity_type, "slug": slug, "titulo": origin.title},
+        "temas": topics,
+        "relation_scope": "entity_ecosystem",
+        "relation_method": "direct_plus_structured_topic_contextual_match",
+        "grupos": groups,
+        "total": sum(len(group.get("itens", [])) for group in groups),
+    }
+
+
+def _disease_topic_titles(db: Session, disease: SpecialtyDisease) -> list[str]:
+    return _entity_topic_titles(db, entity_type="doenca", slug=disease.slug)
+
+
+def _disease_anchor_phrases(disease: SpecialtyDisease) -> tuple[str, ...]:
+    """Nomes inequívocos que um vizinho de tópico amplo precisa mencionar.
+
+    O tópico amplo só delimita o catálogo candidato. Para virar contexto da
+    doença, o item precisa mencionar o próprio nome, slug legível ou alias do
+    verbete como sequência de tokens — nunca apenas um termo clínico vizinho.
+    """
+    values = [
+        disease.name,
+        disease.slug.replace("-", " "),
+        *(disease.aliases or []),
+    ]
+    phrases = []
+    for value in values:
+        normalized = normalize_text(value)
+        if not normalized or normalized in phrases:
+            continue
+        # Alias de uma letra é ambíguo demais para sustentar contexto clínico.
+        if len(normalized.replace(" ", "")) < 2:
+            continue
+        phrases.append(normalized)
+    return tuple(sorted(phrases, key=lambda value: (-len(value.split()), -len(value), value)))
+
+
+def _item_mentions_disease_anchor(item: dict, phrases: tuple[str, ...]) -> bool:
+    slug_text = normalize_text(str(item.get("slug") or ""))
+    title_text = normalize_text(str(item.get("titulo") or ""))
+    haystack = " ".join(filter(None, (slug_text, title_text)))
+    if not haystack:
+        return False
+    padded = f" {haystack} "
+    slug_tokens = set(slug_text.split())
+    for phrase in phrases:
+        parts = phrase.split()
+        if len(parts) == 1:
+            # Acrônimos e aliases de uma palavra só provam identidade quando
+            # fazem parte do slug; no título podem ser mero desfecho citado.
+            if parts[0] in slug_tokens:
+                return True
+        elif f" {phrase} " in padded:
+            return True
+    return False
+
+
+def _filter_broad_topic_to_disease(response: dict, disease: SpecialtyDisease) -> None:
+    """Remove ruído de um tópico amplo usando a doença como âncora explícita."""
+    phrases = _disease_anchor_phrases(disease)
+    for group in response.get("grupos", []):
+        group["itens"] = [
+            item for item in group.get("itens", [])
+            if _item_mentions_disease_anchor(item, phrases)
+        ]
+    response["total"] = sum(len(group.get("itens", [])) for group in response.get("grupos", []))
+
+
+def _mark_exact_topic_items(response: dict) -> None:
+    for group in response.get("grupos", []):
+        for item in group.get("itens", []):
+            item.setdefault("relation_scope", "structured_clinical_topic")
+            item.setdefault("relation_method", "exact_disease_topic")
+            item.setdefault("context_only", True)
+
+
+def buscar_relacionados_da_doenca(
+    db: Session,
+    slug: str,
+    *,
+    limite_por_categoria: int | None = None,
+) -> dict | None:
+    """Ecossistema completo de uma doença sem promover tema amplo a fato clínico.
+
+    Tema que casa exatamente com nome/slug/alias da doença é catálogo estruturado
+    e pode ser percorrido integralmente. Temas mais amplos já ligados ao verbete
+    são filtrados por relevância contextual determinística. Arestas diretas do
+    grafo entram sempre em primeiro lugar.
+    """
+    disease = db.execute(
+        select(SpecialtyDisease).where(
+            SpecialtyDisease.slug == slug,
+            SpecialtyDisease.published.is_(True),
+        )
+    ).scalar_one_or_none()
+    if disease is None:
+        return None
+
+    topics = _disease_topic_titles(db, disease)
+    exact_keys = {
+        normalize_text(disease.name),
+        normalize_text(disease.slug.replace("-", " ")),
+        *(normalize_text(alias) for alias in (disease.aliases or [])),
+    }
+    subject = " ".join(filter(None, [
+        disease.slug,
+        disease.name,
+        *(disease.aliases or []),
+    ]))
+    responses: list[dict] = []
+    exact_topics: list[str] = []
+    contextual_topics: list[str] = []
+    for topic in topics:
+        exact = normalize_text(topic) in exact_keys
+        if exact:
+            exact_topics.append(topic)
+            response = buscar_relacionados_contextuais(
+                db, topic,
+                excluir_tipo="doenca", excluir_slug=disease.slug,
+                limite_por_categoria=limite_por_categoria,
+            )
+            _mark_exact_topic_items(response)
+        else:
+            contextual_topics.append(topic)
+            response = buscar_relacionados_contextuais(
+                db, topic,
+                excluir_tipo="doenca", excluir_slug=disease.slug,
+                assunto=subject,
+                limite_por_categoria=limite_por_categoria,
+            )
+            _filter_broad_topic_to_disease(response, disease)
+        if response.get("total"):
+            responses.append(response)
+
+    direct = _direct_graph_groups(
+        db, entity_type="doenca", slug=disease.slug,
+        limite_por_tipo=limite_por_categoria,
+    )
+    groups = _merge_groups(
+        [{"grupos": direct}, *responses],
+        limit=limite_por_categoria,
+    )
+    total = sum(len(group.get("itens", [])) for group in groups)
+    return {
+        "doenca": {"slug": disease.slug, "titulo": disease.name},
+        "temas": topics,
+        "temas_exatos": exact_topics,
+        "temas_contextuais": contextual_topics,
+        "relation_scope": "disease_ecosystem",
+        "relation_method": "direct_plus_structured_topic_plus_contextual_match",
+        "grupos": groups,
+        "total": total,
+    }
+
+
+def buscar_relacionados_do_medicamento(
+    db: Session, slug: str, *,
+    limite_por_categoria: int | None = LIMITE_POR_CATEGORIA,
+) -> dict | None:
     """Traverse all explicit clinical topics for one published medication.
 
     Returns None only when the drug itself is not published/found. A drug with
@@ -645,20 +894,27 @@ def buscar_relacionados_do_medicamento(db: Session, slug: str) -> dict | None:
         buscar_relacionados_contextuais(
             db, theme, excluir_tipo="medicamento", excluir_slug=drug.slug,
             assunto=drug.slug,
-            # Structured indications already prove the clinical-topic link.
-            # Preserve each supported topic's documents and other fronts;
-            # studies still require explicit overlap with the medication.
+            # Structured indication/dosing labels already prove the topic link.
+            # Preserve each supported topic's published ecosystem.
             filtrar_grupos_por_assunto=False,
+            limite_por_categoria=limite_por_categoria,
         )
         for theme in themes
     ]
+    for response in responses:
+        for group in response.get("grupos", []):
+            for item in group.get("itens", []):
+                item.setdefault("relation_scope", "structured_clinical_topic")
+                item.setdefault("relation_method", "reviewed_drug_structured_metadata")
+                item.setdefault("context_only", True)
     if not themes:
         # A drug outside the supported indication taxonomy can still have
         # explicit reviewed graph links. Do not invent a theme to expose them.
         responses.append({"grupos": _direct_graph_groups(
             db, entity_type="medicamento", slug=drug.slug,
+            limite_por_tipo=limite_por_categoria,
         )})
-    groups = _merge_groups(responses)
+    groups = _merge_groups(responses, limit=limite_por_categoria)
     total = sum(len(group["itens"]) for group in groups)
     return {
         "medicamento": {"slug": drug.slug, "titulo": drug.generic_name},

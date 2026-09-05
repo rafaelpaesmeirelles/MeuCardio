@@ -137,7 +137,8 @@ THEME_ALIASES: dict[str, str] = {
 # infer a drug relation". This is stricter than a search engine by design.
 DRUG_TOPIC_PHRASES: dict[str, tuple[str, ...]] = {
     "Insuficiência cardíaca": (
-        "insuficiencia cardiaca", "icfer", "icfep", "insuficiencia ventricular esquerda",
+        "insuficiencia cardiaca", "icfer", "icfep", "ic cronica",
+        "insuficiencia ventricular esquerda",
     ),
     "Hipertensão": (
         "hipertensao arterial", "hipertensao resistente", "emergencia hipertensiva",
@@ -146,11 +147,11 @@ DRUG_TOPIC_PHRASES: dict[str, tuple[str, ...]] = {
         "hipertensao arterial pulmonar", "hipertensao pulmonar",
     ),
     "Fibrilação atrial": (
-        "fibrilacao atrial", "flutter atrial",
+        "fibrilacao atrial", "flutter atrial", "fa", "fa nao valvular",
     ),
     "Tromboembolismo": (
         "tromboembolismo venoso", "trombose venosa profunda", "embolia pulmonar",
-        "profilaxia de tvp", "profilaxia de tep",
+        "profilaxia de tvp", "profilaxia de tep", "tvp ep",
     ),
     "Doença coronariana": (
         "sindrome coronariana", "doenca coronariana", "angina pectoris", "angina estavel",
@@ -239,6 +240,22 @@ def indication_text(indications: Iterable[str] | None) -> str:
     return normalize_text(" | ".join(str(item) for item in (indications or []) if item))
 
 
+def structured_drug_topic_text(drug) -> str:
+    """Only reviewed structured indication/dosing labels may create a drug topic."""
+    parts = [str(item) for item in (getattr(drug, "indications", None) or []) if item]
+    dosing = getattr(drug, "dosing", None)
+    if isinstance(dosing, dict):
+        # Keys are editorially structured indication/scenario labels. Values
+        # contain doses and free explanatory prose and are intentionally ignored.
+        parts.extend(str(key) for key in dosing if key)
+    return normalize_text(" | ".join(parts))
+
+
+def _contains_normalized_phrase(haystack: str, phrase: str) -> bool:
+    needle = normalize_text(phrase)
+    return bool(needle) and f" {needle} " in f" {haystack} "
+
+
 def drug_matches_theme(drug, theme: str | None) -> bool:
     canonical = canonical_theme(theme)
     if canonical == "Farmacologia":
@@ -246,7 +263,7 @@ def drug_matches_theme(drug, theme: str | None) -> bool:
     phrases = DRUG_TOPIC_PHRASES.get(canonical)
     if not phrases:
         return False
-    haystack = indication_text(getattr(drug, "indications", None))
+    haystack = structured_drug_topic_text(drug)
     if not haystack:
         return False
-    return any(normalize_text(phrase) in haystack for phrase in phrases)
+    return any(_contains_normalized_phrase(haystack, phrase) for phrase in phrases)

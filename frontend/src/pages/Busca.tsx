@@ -19,6 +19,7 @@ type RelItem = {
   slug: string; titulo: string; subtitulo?: string; rota: string;
   relation_type?: string; relevance_score?: number; confidence?: string;
   provenance_type?: string; review_status?: string;
+  relation_scope?: string; relation_method?: string; context_only?: boolean;
 };
 type Rel = { tipo: string; rotulo?: string; rota_lista: string; total_disponivel?: number; itens: RelItem[] };
 type GraphResponse = { grupos: Rel[]; total: number };
@@ -119,10 +120,12 @@ function mergeGraphGroups(respostas: GraphResponse[], resultados: Res[]): Rel[] 
     for (const grupo of resposta.grupos ?? []) {
       const atual = grupos.get(grupo.tipo) ?? {
         tipo: grupo.tipo,
+        rotulo: grupo.rotulo,
         rota_lista: grupo.rota_lista,
         total_disponivel: 0,
         itens: [],
       };
+      if (!atual.rotulo && grupo.rotulo) atual.rotulo = grupo.rotulo;
       const existentes = new Set(atual.itens.map((item) => item.slug));
       for (const item of grupo.itens ?? []) {
         if (visiveis.has(`${grupo.tipo}:${item.slug}`) || existentes.has(item.slug)) continue;
@@ -201,19 +204,50 @@ export default function Busca() {
     ]);
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
-    const itens = s.value.results; setRes(itens); setPrimaryDisease(s.value.primary_disease ?? null); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorFrente(s.value.por_frente ?? {});
+    const itens = s.value.results; const disease = s.value.primary_disease ?? null; setRes(itens); setPrimaryDisease(disease); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorFrente(s.value.por_frente ?? {});
+    let medicamentoSlug: string | null = null;
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
     else {
       const n = norm(termo), fortes = ds.value.items.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `) || d.brand_names?.some((marca) => norm(marca) === n) || d.commercial_names?.some((marca) => norm(marca) === n));
       if (fortes.length === 1) {
+        medicamentoSlug = fortes[0].slug;
         try { const d = await api.get<Insight>(`/drug-insights/${fortes[0].slug}`); if (id === seq.current) setDrug(d); }
         catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }
       }
     }
+    let ecossistemaDoenca: GraphResponse | null = null;
+    let ecossistemaEntidade: GraphResponse | null = null;
+    if (disease) {
+      try { ecossistemaDoenca = await api.get<GraphResponse>(`/relacionados/doenca/${encodeURIComponent(disease.slug)}`); }
+      catch (e) { if (id === seq.current) setAviso((atual) => atual || (e instanceof ApiError ? e.message : "Ecossistema clínico da doença temporariamente indisponível.")); }
+      if (id !== seq.current) return;
+    }
+    let ecossistemaMedicamento: GraphResponse | null = null;
+    if (!disease && medicamentoSlug) {
+      try { ecossistemaMedicamento = await api.get<GraphResponse>(`/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`); }
+      catch (e) { if (id === seq.current) setAviso((atual) => atual || (e instanceof ApiError ? e.message : "Ecossistema clínico do medicamento temporariamente indisponível.")); }
+      if (id !== seq.current) return;
+    }
+    if (!disease && !medicamentoSlug) {
+      const termoNormalizado = norm(termo);
+      const exatos = itens.filter((item) => norm(item.title) === termoNormalizado || norm(item.slug.replaceAll("-", " ")) === termoNormalizado);
+      if (exatos.length === 1) {
+        const entidade = graphEntity(exatos[0]);
+        if (entidade) {
+          try {
+            const query = new URLSearchParams({ entity_type: entidade, slug: exatos[0].slug });
+            ecossistemaEntidade = await api.get<GraphResponse>(`/relacionados/ecossistema?${query.toString()}`);
+          } catch (e) {
+            if (id === seq.current) setAviso((atual) => atual || (e instanceof ApiError ? e.message : "Ecossistema do item temporariamente indisponível."));
+          }
+          if (id !== seq.current) return;
+        }
+      }
+    }
+    const fontesRelacionadas: GraphResponse[] = [];
     if (itens.length > 0) {
-      // O mapa complementar nasce apenas de arestas diretas, curadas ou
-      // estruturadas do grafo. Similaridade textual e tema amplo não são
-      // promovidos a relação clínica pela interface.
+      // Arestas diretas continuam prioritárias. O ecossistema da doença
+      // complementa com tema estruturado e match contextual auditável.
       const candidatos: Res[] = [];
       const frentesVisitadas = new Set<string>();
       for (const item of itens) {
@@ -224,20 +258,19 @@ export default function Busca() {
         if (candidatos.length === 8) break;
       }
       const conexoes = await Promise.allSettled(candidatos.map((item) => {
-        const query = new URLSearchParams({
-          entity_type: graphEntity(item) as string,
-          slug: item.slug,
-          limite_por_tipo: "6",
-        });
+        const query = new URLSearchParams({ entity_type: graphEntity(item) as string, slug: item.slug, limite_por_tipo: "6" });
         return api.get<GraphResponse>(`/grafo/relacionados?${query.toString()}`);
       }));
       if (id !== seq.current) return;
-      const disponiveis = conexoes.flatMap((x) => x.status === "fulfilled" && x.value.total > 0 ? [x.value] : []);
-      setRel(mergeGraphGroups(disponiveis, itens));
+      fontesRelacionadas.push(...conexoes.flatMap((x) => x.status === "fulfilled" && x.value.total > 0 ? [x.value] : []));
       if (conexoes.length > 0 && conexoes.every((x) => x.status === "rejected")) {
         setAviso((atual) => atual || "Conteúdo encontrado; as conexões verificáveis estão temporariamente indisponíveis.");
       }
     }
+    if (ecossistemaDoenca?.total) fontesRelacionadas.push(ecossistemaDoenca);
+    if (ecossistemaMedicamento?.total) fontesRelacionadas.push(ecossistemaMedicamento);
+    if (ecossistemaEntidade?.total) fontesRelacionadas.push(ecossistemaEntidade);
+    setRel(mergeGraphGroups(fontesRelacionadas, itens));
     if (id === seq.current) setLoading(false);
   }
 
@@ -279,7 +312,7 @@ export default function Busca() {
       <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {porFrente[s] ?? xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
         {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.frente || r.kind}-${r.slug}`}><small>{r.theme || SECOES[s][0]} · {ROTULOS[r.frente || r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
-        {rel.map((g) => <section className="cartao tct-group" key={`grafo-${g.tipo}`}><header><p className="eyebrow">Conexão clínica verificável</p><h3>{g.rotulo || REL_LABELS[g.tipo] || g.tipo}</h3>{g.rota_lista && <Link to={g.rota_lista}>Ver área →</Link>}</header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={`${g.tipo}-${x.slug}`}><small>{x.relation_type === "belongs_to_topic" ? "Contexto temático" : "Relação direta"}</small><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
+        {rel.map((g) => <section className="cartao tct-group" key={`grafo-${g.tipo}`}><header><p className="eyebrow">Conteúdo conectado</p><h3>{g.rotulo || REL_LABELS[g.tipo] || g.tipo}</h3>{g.rota_lista && <Link to={g.rota_lista}>Ver área →</Link>}</header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={`${g.tipo}-${x.slug}`}><small>{x.context_only || x.relation_scope === "structured_clinical_topic" ? "Mesmo tema clínico" : x.relation_scope === "clinical_match" ? "Relação contextual determinística" : "Relação direta"}</small><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
       </div>
       {nextOffset != null && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button className="botao botao--secundario" type="button" disabled={loadingMore} onClick={() => void carregarMais()}>{loadingMore ? "Conectando mais conteúdo…" : `Carregar mais · ${Math.max(total - res.length, 0)} restantes`}</button></div>}
     </section>}

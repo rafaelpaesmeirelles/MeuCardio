@@ -15,16 +15,57 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.services.connected_content import (
+    buscar_ecossistema_de_entidade,
     buscar_relacionados_contextuais,
+    buscar_relacionados_da_doenca,
     buscar_relacionados_do_medicamento,
 )
 
 router = APIRouter(prefix="/api/relacionados", tags=["relacionados"])
 
 
+@router.get("/ecossistema")
+def ecossistema_entidade(
+    entity_type: str = Query(..., min_length=1, max_length=40),
+    slug: str = Query(..., min_length=1, max_length=255),
+    limite_por_categoria: int | None = Query(None, ge=1, le=1000),
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
+):
+    resultado = buscar_ecossistema_de_entidade(
+        db, entity_type=entity_type, slug=slug,
+        limite_por_categoria=limite_por_categoria,
+    )
+    if resultado is None:
+        raise HTTPException(status_code=404, detail="Entidade não encontrada.")
+    return resultado
+
+
+@router.get("/doenca/{slug}")
+def relacionados_doenca(
+    slug: str,
+    limite_por_categoria: int | None = Query(
+        None, ge=1, le=1000,
+        description=(
+            "Limite por frente. Vazio devolve o ecossistema completo da doença; "
+            "a resposta continua deduplicada por tipo e slug."
+        ),
+    ),
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
+):
+    resultado = buscar_relacionados_da_doenca(
+        db, slug, limite_por_categoria=limite_por_categoria,
+    )
+    if resultado is None:
+        raise HTTPException(status_code=404, detail="Doença não encontrada.")
+    return resultado
+
+
 @router.get("/medicamento/{slug}")
 def relacionados_medicamento(
     slug: str,
+    limite_por_categoria: int | None = Query(None, ge=1, le=1000),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
@@ -33,7 +74,9 @@ def relacionados_medicamento(
     The traversal starts only from explicit clinical topics supported by the
     medication's structured indications. It never uses generic text similarity.
     """
-    resultado = buscar_relacionados_do_medicamento(db, slug)
+    resultado = buscar_relacionados_do_medicamento(
+        db, slug, limite_por_categoria=limite_por_categoria,
+    )
     if resultado is None:
         raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
     return resultado

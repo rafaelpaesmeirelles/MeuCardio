@@ -11,6 +11,7 @@ import pytest
 from app.services import connected_content as connected
 from app.services.topic_relevance import (
     CONTEXT_MIN_RELEVANCE_SCORE,
+    drug_matches_theme,
     relevance_tokens,
     score_contextual_relevance,
 )
@@ -185,7 +186,7 @@ def test_tag_unitaria_revisada_da_origem_sustenta_match_pelo_caminho_real(
         lambda *_args, **_kwargs: {"grupos": [_group([target])]},
     )
     monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
-    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args, **_kwargs: [])
 
     result = connected.buscar_relacionados_contextuais(
         FakeDB(),
@@ -244,7 +245,7 @@ def test_evidencia_preserva_apenas_documento_explicito_com_um_termo(
         lambda *_args, **_kwargs: {"grupos": [_group([linked, neighbour])]},
     )
     monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
-    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args, **_kwargs: [])
 
     result = connected.buscar_relacionados_contextuais(
         FakeDB(),
@@ -274,7 +275,7 @@ def test_filtro_contextual_pontua_pool_completo_antes_do_top_5(monkeypatch):
 
     monkeypatch.setattr(connected, "_base", fake_base)
     monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
-    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args, **_kwargs: [])
 
     result = connected.buscar_relacionados_contextuais(
         object(), "Cardiomiopatias", assunto="mavacamten",
@@ -360,7 +361,7 @@ def test_doenca_e_triagem_entram_somente_por_relacao_direta_do_grafo(monkeypatch
         lambda *_args, **_kwargs: {"grupos": [_group([])]},
     )
     monkeypatch.setattr(connected, "_contextual_drugs", lambda *_args, **_kwargs: [])
-    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args: [])
+    monkeypatch.setattr(connected, "_contextual_studies", lambda *_args, **_kwargs: [])
 
     result = connected.buscar_relacionados_contextuais(
         object(),
@@ -420,3 +421,203 @@ def test_catalogo_tematico_nao_promove_area_a_relacao_clinica(monkeypatch):
         group["tipo"] in {"doenca", "triagem_sintoma"}
         for group in result["grupos"]
     )
+
+
+def test_ecossistema_doenca_mescla_tema_exato_com_grafo_sem_truncar(monkeypatch):
+    disease = SimpleNamespace(
+        slug="fibrilacao-atrial",
+        name="Fibrilação atrial",
+        aliases=["FA"],
+        tags=["anticoagulação"],
+    )
+
+    class FakeResult:
+        def scalar_one_or_none(self):
+            return disease
+
+    class FakeDB:
+        def execute(self, _query):
+            return FakeResult()
+
+    monkeypatch.setattr(
+        connected,
+        "_disease_topic_titles",
+        lambda *_args, **_kwargs: ["Fibrilação atrial", "Arritmias"],
+    )
+    monkeypatch.setattr(
+        connected,
+        "_direct_graph_groups",
+        lambda *_args, **_kwargs: [{
+            "tipo": "documento",
+            "rotulo": "Documentos",
+            "rota_lista": "/biblioteca",
+            "itens": [_item("diretriz-fa", "Diretriz de FA")],
+        }],
+    )
+
+    calls = []
+    def fake_contextual(_db, tema, **kwargs):
+        calls.append((tema, kwargs))
+        if tema == "Fibrilação atrial":
+            return {
+                "tema": tema,
+                "total": 3,
+                "grupos": [{
+                    "tipo": "calculadora",
+                    "rotulo": "Calculadoras",
+                    "rota_lista": "/calculadoras",
+                    "itens": [
+                        {"slug": "cha2ds2-vasc", "titulo": "CHA₂DS₂-VASc", "rota": "/calculadoras/cha2ds2-vasc"},
+                        {"slug": "has-bled", "titulo": "HAS-BLED", "rota": "/calculadoras/has-bled"},
+                        {"slug": "orbit", "titulo": "ORBIT", "rota": "/calculadoras/orbit"},
+                    ],
+                }],
+            }
+        return {"tema": tema, "total": 0, "grupos": []}
+
+    monkeypatch.setattr(connected, "buscar_relacionados_contextuais", fake_contextual)
+
+    result = connected.buscar_relacionados_da_doenca(
+        FakeDB(), "fibrilacao-atrial", limite_por_categoria=None,
+    )
+    calculators = next(g for g in result["grupos"] if g["tipo"] == "calculadora")
+    assert {item["slug"] for item in calculators["itens"]} == {
+        "cha2ds2-vasc", "has-bled", "orbit",
+    }
+    assert all(item["context_only"] is True for item in calculators["itens"])
+    assert result["temas_exatos"] == ["Fibrilação atrial"]
+    assert result["temas_contextuais"] == ["Arritmias"]
+    exact_call = next(kwargs for tema, kwargs in calls if tema == "Fibrilação atrial")
+    assert exact_call["limite_por_categoria"] is None
+    broad_call = next(kwargs for tema, kwargs in calls if tema == "Arritmias")
+    assert "fibrilacao-atrial" in broad_call["assunto"]
+
+
+def test_ecossistema_doenca_nao_promove_tema_amplo_a_relacao_direta(monkeypatch):
+    disease = SimpleNamespace(
+        slug="estenose-mitral",
+        name="Estenose mitral",
+        aliases=[],
+        tags=[],
+    )
+
+    class FakeResult:
+        def scalar_one_or_none(self):
+            return disease
+
+    class FakeDB:
+        def execute(self, _query):
+            return FakeResult()
+
+    monkeypatch.setattr(connected, "_disease_topic_titles", lambda *_args, **_kwargs: ["Valvopatias"])
+    monkeypatch.setattr(connected, "_direct_graph_groups", lambda *_args, **_kwargs: [])
+    captured = {}
+    def fake_contextual(_db, tema, **kwargs):
+        captured.update(kwargs)
+        return {"tema": tema, "total": 0, "grupos": []}
+    monkeypatch.setattr(connected, "buscar_relacionados_contextuais", fake_contextual)
+
+    result = connected.buscar_relacionados_da_doenca(FakeDB(), disease.slug)
+    assert result["temas_exatos"] == []
+    assert result["temas_contextuais"] == ["Valvopatias"]
+    assert captured["assunto"].startswith("estenose-mitral Estenose mitral")
+
+
+def test_doenca_topico_amplo_exige_ancora_composta_no_titulo_ou_slug():
+    disease = SimpleNamespace(
+        slug="estenose-mitral",
+        name="Estenose mitral",
+        aliases=["Estenose valvar mitral"],
+    )
+    phrases = connected._disease_anchor_phrases(disease)
+    assert connected._item_mentions_disease_anchor(
+        {"slug": "eco-estresse-na-estenose-mitral", "titulo": "Eco de estresse na estenose mitral"},
+        phrases,
+    )
+    assert not connected._item_mentions_disease_anchor(
+        {"slug": "insuficiencia-mitral", "titulo": "Insuficiência mitral"},
+        phrases,
+    )
+
+
+def test_alias_curto_so_prova_identidade_quando_esta_no_slug():
+    disease = SimpleNamespace(
+        slug="sindrome-coronariana-aguda",
+        name="Síndrome coronariana aguda",
+        aliases=["SCA", "IAM", "NSTEMI"],
+    )
+    phrases = connected._disease_anchor_phrases(disease)
+    assert not connected._item_mentions_disease_anchor(
+        {"slug": "iona-nicorandil-na-angina-estavel", "titulo": "IONA — morte/IAM sem diferença"},
+        phrases,
+    )
+    assert connected._item_mentions_disease_anchor(
+        {"slug": "riddle-nstemi-intervencao-imediata", "titulo": "RIDDLE-NSTEMI"},
+        phrases,
+    )
+
+
+def test_drug_topic_usa_chaves_estruturadas_de_posologia_sem_inventar_indicacao():
+    apixabana = SimpleNamespace(
+        indications=[],
+        dosing={
+            "fa nao valvular padrao": "5 mg 2x/dia",
+            "tvp ep tratamento inicial 7 dias": "10 mg 2x/dia",
+        },
+    )
+    assert drug_matches_theme(apixabana, "Fibrilação atrial")
+    assert drug_matches_theme(apixabana, "Tromboembolismo")
+    assert not drug_matches_theme(apixabana, "Insuficiência cardíaca")
+
+
+def test_drug_topic_nao_casa_sigla_curta_dentro_de_outra_palavra():
+    fake = SimpleNamespace(
+        indications=[],
+        dosing={"falencia renal ajuste": "texto livre"},
+    )
+    assert not drug_matches_theme(fake, "Fibrilação atrial")
+
+
+def test_drug_topic_preserva_indicacao_estruturada_existente():
+    amiodarona = SimpleNamespace(
+        indications=["Boa eficácia para reversão de ritmo em FA"],
+        dosing={},
+    )
+    assert drug_matches_theme(amiodarona, "Fibrilação atrial")
+
+
+def test_drug_topic_reconhece_ic_cronica_estruturada():
+    sacubitril_valsartana = SimpleNamespace(
+        indications=["IC crônica sintomática avançada com fração de ejeção reduzida"],
+        dosing={},
+    )
+    assert drug_matches_theme(sacubitril_valsartana, "Insuficiência cardíaca")
+
+
+def test_ecossistema_generico_mescla_direto_e_topico_contextual(monkeypatch):
+    origin = SimpleNamespace(
+        entity_type="calculadora", slug="cha2ds2-vasc", title="CHA₂DS₂-VASc",
+    )
+
+    class FakeResult:
+        def scalar_one_or_none(self): return origin
+    class FakeDB:
+        def execute(self, _query): return FakeResult()
+
+    monkeypatch.setattr(connected, "_entity_topic_titles", lambda *_args, **_kwargs: ["Fibrilação atrial"])
+    monkeypatch.setattr(connected, "_direct_graph_groups", lambda *_args, **_kwargs: [{
+        "tipo": "evidencia", "rotulo": "Evidências", "rota_lista": "/evidencias",
+        "itens": [{"slug": "cha2-va", "titulo": "CHA2DS2-VA na FA", "rota": "/evidencias/cha2-va", "relation_type": "mentioned_in"}],
+    }])
+    monkeypatch.setattr(connected, "buscar_relacionados_contextuais", lambda *_args, **_kwargs: {
+        "total": 1, "grupos": [{
+            "tipo": "checklist", "rotulo": "Checklists", "rota_lista": "/checklists",
+            "itens": [{"slug": "fa-anticoagulacao", "titulo": "Anticoagulação na FA", "rota": "/checklists/fa-anticoagulacao", "relation_scope": "clinical_match"}],
+        }],
+    })
+    result = connected.buscar_ecossistema_de_entidade(
+        FakeDB(), entity_type="calculadora", slug="cha2ds2-vasc", limite_por_categoria=None,
+    )
+    assert result["temas"] == ["Fibrilação atrial"]
+    assert {g["tipo"] for g in result["grupos"]} == {"evidencia", "checklist"}
+    assert result["total"] == 2
