@@ -429,11 +429,19 @@ def test_ecossistema_doenca_mescla_tema_exato_com_grafo_sem_truncar(monkeypatch)
         name="Fibrilação atrial",
         aliases=["FA"],
         tags=["anticoagulação"],
+        related_document_slugs=[],
+        patient_material_slug=None,
+        tests=[],
+        differentials=[],
     )
 
     class FakeResult:
         def scalar_one_or_none(self):
             return disease
+        def scalars(self):
+            return self
+        def all(self):
+            return []
 
     class FakeDB:
         def execute(self, _query):
@@ -504,11 +512,19 @@ def test_ecossistema_doenca_nao_promove_tema_amplo_a_relacao_direta(monkeypatch)
         name="Estenose mitral",
         aliases=[],
         tags=[],
+        related_document_slugs=[],
+        patient_material_slug=None,
+        tests=[],
+        differentials=[],
     )
 
     class FakeResult:
         def scalar_one_or_none(self):
             return disease
+        def scalars(self):
+            return self
+        def all(self):
+            return []
 
     class FakeDB:
         def execute(self, _query):
