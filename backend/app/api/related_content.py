@@ -45,10 +45,10 @@ def ecossistema_entidade(
 def relacionados_doenca(
     slug: str,
     limite_por_categoria: int | None = Query(
-        None, ge=1, le=1000,
+        12, ge=1, le=1000,
         description=(
-            "Limite por frente. Vazio devolve o ecossistema completo da doença; "
-            "a resposta continua deduplicada por tipo e slug."
+            "Limite por frente. O padrão de 12 prioriza o núcleo clínico; "
+            "use um valor explícito para ampliar a exploração."
         ),
     ),
     db: Session = Depends(get_db),

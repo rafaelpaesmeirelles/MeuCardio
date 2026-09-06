@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Release gate for clinical completeness of Tudo com Tudo.
+"""Release gate for clinical precision and minimum completeness of Tudo com Tudo.
 
-Fails on missing exact-theme members, duplicated active calculator nodes,
-missing AF risk calculators, or broken structured drug-topic sentinels.
+Exact-theme membership is only a candidate pool, never clinical proof. This gate
+checks high-impact false positives, minimum structured disease cores, canonical
+search precision, duplicated calculators, and structured drug-topic sentinels.
 """
 from __future__ import annotations
-
-from collections import defaultdict
 
 from sqlalchemy import func, select
 
@@ -14,8 +13,8 @@ from app.core.db import SessionLocal
 from app.models.knowledge import KnowledgeEntity
 from app.models.specialty_guide import SpecialtyDisease
 from app.services.connected_content import buscar_relacionados_da_doenca
-from app.services.knowledge_graph import _itens_por_tema, _normalizar_chave_clinica
 from app.services.topic_relevance import drug_matches_theme
+from app.api.search import search as search_api
 from app.services.catalog_search import (
     INTERNAL_MARKER_SQL_PATTERN, INTERNAL_OVERRIDE_SQL_PATTERN, SQL, literal_like,
 )
@@ -26,26 +25,95 @@ def main() -> int:
     errors: list[str] = []
     checked = 0
     with SessionLocal() as db:
-        por_tema, _ = _itens_por_tema(db)
-        diseases = db.execute(select(SpecialtyDisease).where(SpecialtyDisease.published.is_(True))).scalars().all()
-        for disease in diseases:
-            keys = {_normalizar_chave_clinica(disease.name), _normalizar_chave_clinica(disease.slug.replace("-", " "))}
-            keys.update(_normalizar_chave_clinica(alias) for alias in (disease.aliases or []))
-            exact = [items for theme, items in por_tema.items() if _normalizar_chave_clinica(theme) in keys]
-            if not exact:
-                continue
+        checked = 0
+
+        def groups_for(slug: str) -> dict[str, list[dict]]:
+            nonlocal checked
             checked += 1
-            expected: dict[str, set[str]] = defaultdict(set)
-            for items in exact:
-                for item in items:
-                    if item.tipo not in {"tema", "doenca"}:
-                        expected[item.tipo].add(item.slug)
-            result = buscar_relacionados_da_doenca(db, disease.slug, limite_por_categoria=None)
-            actual = {g["tipo"]: {x["slug"] for x in g.get("itens", [])} for g in (result or {}).get("grupos", [])}
-            for entity_type, slugs in expected.items():
-                missing = slugs - actual.get(entity_type, set())
-                if missing:
-                    errors.append(f"{disease.slug}:{entity_type}:missing={sorted(missing)[:8]} count={len(missing)}")
+            result = buscar_relacionados_da_doenca(
+                db, slug, limite_por_categoria=12
+            ) or {}
+            return {
+                group["tipo"]: list(group.get("itens", []))
+                for group in result.get("grupos", [])
+            }
+
+        # FA: the original regression mixed unrelated exact-theme items and
+        # omitted the minimum antithrombotic/risk-stratification nucleus.
+        fa_groups = groups_for("fibrilacao-atrial")
+        fa_slugs = {
+            item["slug"] for items in fa_groups.values() for item in items
+        }
+        fa_calc = {item["slug"] for item in fa_groups.get("calculadora", [])}
+        need_calc = {"cha2ds2-vasc", "has-bled", "orbit"}
+        if not need_calc <= fa_calc:
+            errors.append(
+                f"fibrilacao-atrial:calculadoras:missing={sorted(need_calc-fa_calc)}"
+            )
+        for forbidden in {
+            "tight-k-limiar-de-reposicao-de-potassio-pos-crm-implicacao-do-ensaio",
+            "berlin-vt-primario-nulo",
+        }:
+            if forbidden in fa_slugs:
+                errors.append(f"fibrilacao-atrial:false-positive={forbidden}")
+        fa_drugs = {item["slug"] for item in fa_groups.get("medicamento", [])}
+        if not ({"apixabana", "dabigatrana-etexilato", "varfarina-sodica"} & fa_drugs):
+            errors.append("fibrilacao-atrial:anticoagulant-core-missing")
+
+        # SCA: the minimum structured core must not be empty.
+        sca_groups = groups_for("sindrome-coronariana-aguda")
+        sca_calc = {item["slug"] for item in sca_groups.get("calculadora", [])}
+        sca_need = {"crusade", "grace", "timi-stemi", "timi-ua-nstemi"}
+        if not sca_need <= sca_calc:
+            errors.append(f"sca:calculadoras:missing={sorted(sca_need-sca_calc)}")
+        sca_material = {item["slug"] for item in sca_groups.get("material_paciente", [])}
+        if "doenca-coronariana-e-infarto" not in sca_material:
+            errors.append("sca:patient-material-missing")
+        sca_drugs = {item["slug"] for item in sca_groups.get("medicamento", [])}
+        sca_drug_need = {"acido-acetilsalicilico-aas", "fondaparinux-sodico", "ticagrelor"}
+        if not sca_drug_need <= sca_drugs:
+            errors.append(f"sca:drug-core:missing={sorted(sca_drug_need-sca_drugs)}")
+
+        # Systemic hypertension must not inherit pulmonary-hypertension therapy.
+        has_groups = groups_for("hipertensao-arterial-sistemica")
+        has_drugs = {item["slug"] for item in has_groups.get("medicamento", [])}
+        pulmonary_drugs = {"ambrisentana", "bosentana"} & has_drugs
+        if pulmonary_drugs:
+            errors.append(f"has:pulmonary-drug-leak={sorted(pulmonary_drugs)}")
+        has_material = {item["slug"] for item in has_groups.get("material_paciente", [])}
+        if "hipertensao-arterial" not in has_material:
+            errors.append("has:patient-material-missing")
+
+        # Pericarditis: explicit material + colchicine must survive the limit.
+        peri_groups = groups_for("pericardite")
+        peri_drugs = {item["slug"] for item in peri_groups.get("medicamento", [])}
+        peri_material = {item["slug"] for item in peri_groups.get("material_paciente", [])}
+        if "colchicina" not in peri_drugs:
+            errors.append("pericardite:colchicina-missing")
+        if "pericardite-aguda" not in peri_material:
+            errors.append("pericardite:patient-material-missing")
+
+        # Exact disease queries use a high-precision search view.
+        for query, slug in {
+            "fibrilacao atrial": "fibrilacao-atrial",
+            "sindrome coronariana aguda": "sindrome-coronariana-aguda",
+            "hipertensao arterial sistemica": "hipertensao-arterial-sistemica",
+            "pericardite": "pericardite",
+        }.items():
+            payload = search_api(q=query, frente=None, limit=100, offset=0, db=db, _=None)
+            if payload.get("count", 0) > 36:
+                errors.append(f"search:{slug}:over-cap={payload.get('count')}")
+            if slug == "hipertensao-arterial-sistemica":
+                identity = " ".join(
+                    f"{row.get('title','')} {row.get('slug','')}".casefold()
+                    for row in payload.get("results", [])
+                )
+                if (
+                    "hipertensão pulmonar" in identity
+                    or "hipertensao-pulmonar" in identity
+                    or "hipertensão arterial pulmonar" in identity
+                ):
+                    errors.append("search:has:pulmonary-leak")
 
         # Busca transversal por identidade: um exame básico não pode sumir
         # porque a duração esteja no slug e não no título editorial.
@@ -61,13 +129,6 @@ def main() -> int:
             and search_rows[0]["slug"] == "holter-24h"
         ):
             errors.append("search:holter-24h-not-first")
-
-        fa = buscar_relacionados_da_doenca(db, "fibrilacao-atrial", limite_por_categoria=None) or {}
-        fa_calc = next((g for g in fa.get("grupos", []) if g["tipo"] == "calculadora"), {"itens": []})
-        got = {x["slug"] for x in fa_calc["itens"]}
-        need = {"cha2ds2-vasc", "has-bled", "orbit"}
-        if not need <= got:
-            errors.append(f"fibrilacao-atrial:calculadoras:missing={sorted(need-got)}")
 
         dns = buscar_relacionados_da_doenca(
             db, "disfuncao-do-no-sinusal", limite_por_categoria=None
@@ -110,7 +171,7 @@ def main() -> int:
             if missing:
                 errors.append(f"{slug}:missing_themes={sorted(missing)}")
 
-    print(f"TCT_EXACT_DISEASES_CHECKED={checked}")
+    print(f"TCT_CLINICAL_SENTINELS_CHECKED={checked}")
     print(f"TCT_ERRORS={len(errors)}")
     for error in errors:
         print("ERROR", error)

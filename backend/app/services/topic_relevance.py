@@ -153,6 +153,10 @@ DRUG_TOPIC_PHRASES: dict[str, tuple[str, ...]] = {
         "tromboembolismo venoso", "trombose venosa profunda", "embolia pulmonar",
         "profilaxia de tvp", "profilaxia de tep", "tvp ep",
     ),
+    "Síndrome coronariana aguda": (
+        "sindrome coronariana aguda", "angina instavel", "infarto agudo do miocardio",
+        "iam com supradesnivelamento", "iam sem supradesnivelamento", "stemi", "nstemi",
+    ),
     "Doença coronariana": (
         "sindrome coronariana", "doenca coronariana", "angina pectoris", "angina estavel",
         "angina instavel", "infarto agudo do miocardio", "infarto do miocardio",

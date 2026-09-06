@@ -26,6 +26,7 @@ from sqlalchemy.orm import Session
 from app.models.content import Document
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
+from app.models.patient_material import PatientMaterial
 from app.models.knowledge import (
     TIPOS_ENTIDADE_PERMITIDOS,
     KnowledgeEntity,
@@ -184,6 +185,10 @@ def _contextual_drugs(
             "titulo": drug.generic_name,
             "subtitulo": drug.drug_class,
             "rota": f"/medicamentos?slug={drug.slug}",
+            "relation_scope": "structured_clinical_link",
+            "relation_method": "reviewed_drug_indication",
+            "relevance_score": 1.0,
+            "context_only": False,
         })
         if limit is not None and len(items) >= limit:
             break
@@ -287,6 +292,13 @@ def _with_explicit_link_metadata(item: dict) -> dict:
         "relation_method": "evidence_document_slug",
         "relevance_score": 1.0,
     }
+
+def _is_reviewed_structured_clinical_item(item: dict) -> bool:
+    """Keep only relations proved by reviewed structured drug indications."""
+    return (
+        item.get("relation_scope") == "structured_clinical_link"
+        and item.get("relation_method") == "reviewed_drug_indication"
+    )
 
 
 def _contextual_studies(
@@ -813,12 +825,33 @@ def _filter_broad_topic_to_disease(response: dict, disease: SpecialtyDisease) ->
     response["total"] = sum(len(group.get("itens", [])) for group in response.get("grupos", []))
 
 
-def _mark_exact_topic_items(response: dict) -> None:
+def _filter_exact_topic_to_disease(response: dict, disease: SpecialtyDisease) -> None:
+    """Use an exact disease theme as a candidate pool, not as clinical proof."""
+    phrases = _disease_anchor_phrases(disease)
+    explicit_slugs = set(disease.related_document_slugs or [])
+    if disease.patient_material_slug:
+        explicit_slugs.add(disease.patient_material_slug)
+
     for group in response.get("grupos", []):
+        kept: list[dict] = []
         for item in group.get("itens", []):
-            item.setdefault("relation_scope", "structured_clinical_topic")
-            item.setdefault("relation_method", "exact_disease_topic")
-            item.setdefault("context_only", True)
+            slug = item.get("slug", "")
+            safe = (
+                slug in explicit_slugs
+                or group["tipo"] == "calculadora"
+                or _is_reviewed_structured_clinical_item(item)
+                or _item_mentions_disease_anchor(item, phrases)
+            )
+            if not safe:
+                continue
+            if not _is_reviewed_structured_clinical_item(item):
+                item.setdefault("relation_scope", "structured_clinical_topic")
+                item.setdefault("relation_method", "exact_disease_topic_anchored")
+                item.setdefault("relevance_score", 1.0)
+                item.setdefault("context_only", True)
+            kept.append(item)
+        group["itens"] = kept
+    response["total"] = sum(len(group.get("itens", [])) for group in response.get("grupos", []))
 
 
 def _structured_test_query(value: str) -> str:
@@ -925,6 +958,235 @@ def _structured_disease_differential_group(
     }
 
 
+
+def _structured_disease_document_groups(
+    db: Session, disease: SpecialtyDisease,
+) -> list[dict]:
+    """Expose documents/flows explicitly curated on the disease record."""
+    slugs = list(dict.fromkeys(disease.related_document_slugs or []))
+    if not slugs:
+        return []
+    rows = db.execute(
+        select(Document).where(
+            Document.slug.in_(slugs),
+            Document.published.is_(True),
+        )
+    ).scalars().all()
+    by_slug = {row.slug: row for row in rows}
+    grouped: dict[str, list[dict]] = {"documento": [], "fluxograma": []}
+    for slug in slugs:
+        row = by_slug.get(slug)
+        if row is None:
+            continue
+        kind = "fluxograma" if row.kind == "fluxograma" else "documento"
+        grouped[kind].append({
+            "slug": row.slug,
+            "titulo": row.title,
+            "subtitulo": "Vínculo explícito do verbete revisado da doença",
+            "rota": _rota_item(kind, row.slug),
+            "relation_scope": "structured_disease_field",
+            "relation_method": "SpecialtyDisease.related_document_slugs",
+            "relevance_score": 1.0,
+            "context_only": False,
+        })
+    labels = {"documento": "Documentos", "fluxograma": "Fluxogramas"}
+    return [
+        {
+            "tipo": kind,
+            "rotulo": labels[kind],
+            "rota_lista": ROTA_LISTA_POR_TIPO.get(kind, ""),
+            "itens": grouped[kind],
+        }
+        for kind in ("documento", "fluxograma")
+        if grouped[kind]
+    ]
+
+
+def _structured_disease_patient_material_group(
+    db: Session, disease: SpecialtyDisease,
+) -> dict | None:
+    """Expose the patient material explicitly curated on the disease record."""
+    slug = (disease.patient_material_slug or "").strip()
+    if not slug:
+        return None
+    row = db.execute(
+        select(PatientMaterial).where(
+            PatientMaterial.slug == slug,
+            PatientMaterial.published.is_(True),
+        )
+    ).scalar_one_or_none()
+    if row is None:
+        return None
+    return {
+        "tipo": "material_paciente",
+        "rotulo": "Materiais para o paciente",
+        "rota_lista": ROTA_LISTA_POR_TIPO.get("material_paciente", ""),
+        "itens": [{
+            "slug": row.slug,
+            "titulo": row.titulo,
+            "subtitulo": row.subtitulo or "Material explicitamente vinculado ao verbete",
+            "rota": _rota_item("material_paciente", row.slug),
+            "relation_scope": "structured_disease_field",
+            "relation_method": "SpecialtyDisease.patient_material_slug",
+            "relevance_score": 1.0,
+            "context_only": False,
+        }],
+    }
+
+
+def _drug_structured_segments(drug: Drug) -> tuple[tuple[str, str], ...]:
+    values: list[tuple[str, str]] = []
+    values.extend((normalize_text(str(value)), "indication") for value in (drug.indications or []) if normalize_text(str(value)))
+    if isinstance(drug.dosing, dict):
+        values.extend((normalize_text(str(key)), "dosing") for key in drug.dosing.keys() if normalize_text(str(key)))
+    return tuple(values)
+
+
+def _disease_structured_acronyms(disease: SpecialtyDisease) -> set[str]:
+    acronyms: set[str] = set()
+    for alias in (disease.aliases or []):
+        raw = str(alias or "").strip()
+        compact = raw.replace("-", "").replace("/", "")
+        if (
+            2 <= len(compact) <= 8
+            and compact.upper() == compact
+            and any(char.isalpha() for char in compact)
+        ):
+            normalized = normalize_text(raw)
+            if normalized and " " not in normalized:
+                acronyms.add(normalized)
+    return acronyms
+
+
+def _segment_matches_disease_drug_indication(
+    segment: str, disease: SpecialtyDisease,
+) -> bool:
+    """Require the drug's structured indication itself to name this disease.
+
+    This intentionally does not inherit broad themes such as Arrhythmias,
+    Hypertension or Coronary Disease. Ambiguous systemic hypertension is kept
+    separate from pulmonary hypertension, and ACS requires an acute-coronary
+    phrase rather than generic stable CAD.
+    """
+    if not segment:
+        return False
+
+    if disease.slug == "hipertensao-arterial-sistemica":
+        if "hipertensao pulmonar" in segment or "hipertensao arterial pulmonar" in segment:
+            return False
+        return any(phrase in f" {segment} " for phrase in (
+            " hipertensao arterial sistemica ",
+            " hipertensao sistemica ",
+            " hipertensao essencial ",
+            " hipertensao arterial ",
+            " pressao alta ",
+        ))
+
+    if disease.slug == "sindrome-coronariana-aguda":
+        padded = f" {segment} "
+        return any(phrase in padded for phrase in (
+            " sindrome coronariana aguda ",
+            " angina instavel ",
+            " infarto agudo do miocardio ",
+            " iamcsst ",
+            " iamssst ",
+            " stemi ",
+            " nstemi ",
+        ))
+
+    phrases = _disease_anchor_phrases(disease)
+    padded = f" {segment} "
+    tokens = set(segment.split())
+    safe_acronyms = _disease_structured_acronyms(disease)
+    for phrase in phrases:
+        parts = phrase.split()
+        if len(parts) == 1:
+            # Long disease terms are safe directly. Short tokens are accepted
+            # only when they are explicit uppercase aliases of the disease and
+            # appear as whole tokens inside structured drug metadata.
+            if (len(parts[0]) >= 7 or parts[0] in safe_acronyms) and parts[0] in tokens:
+                return True
+        elif f" {phrase} " in padded:
+            return True
+    return False
+
+
+def _disease_drug_match_score(
+    segment: str, source: str, disease: SpecialtyDisease,
+) -> int | None:
+    if not _segment_matches_disease_drug_indication(segment, disease):
+        return None
+
+    if disease.slug == "hipertensao-arterial-sistemica":
+        phrases = (
+            "hipertensao arterial sistemica", "hipertensao sistemica",
+            "hipertensao essencial", "hipertensao arterial", "pressao alta",
+        )
+    elif disease.slug == "sindrome-coronariana-aguda":
+        phrases = (
+            "sindrome coronariana aguda", "angina instavel",
+            "infarto agudo do miocardio", "iamcsst", "iamssst", "stemi", "nstemi",
+        )
+    else:
+        phrases = _disease_anchor_phrases(disease)
+
+    normalized = " ".join(segment.split())
+    exact = any(normalized == phrase for phrase in phrases)
+    starts = any(normalized.startswith(f"{phrase} ") for phrase in phrases)
+    acronym_hit = bool(_disease_structured_acronyms(disease) & set(normalized.split()))
+    base = 100 if exact else 85 if starts else 82 if acronym_hit else 70
+    if source == "dosing":
+        base -= 15
+    return base
+
+
+def _structured_disease_drug_group(
+    db: Session, disease: SpecialtyDisease,
+) -> dict | None:
+    """Core medications supported by published structured drug indications."""
+    rows = db.execute(
+        select(Drug).where(Drug.published.is_(True))
+    ).scalars().all()
+    ranked: list[tuple[int, bool, str, dict]] = []
+    for drug in rows:
+        scores = [
+            score
+            for segment, source in _drug_structured_segments(drug)
+            if (score := _disease_drug_match_score(segment, source, disease)) is not None
+        ]
+        if not scores:
+            continue
+        best_score = max(scores)
+        item = {
+            "slug": drug.slug,
+            "titulo": drug.generic_name,
+            "subtitulo": drug.drug_class,
+            "rota": f"/medicamentos?slug={drug.slug}",
+            "relation_scope": "structured_disease_field",
+            "relation_method": "Drug.indications/dosing",
+            "relevance_score": round(best_score / 100, 2),
+            "context_only": False,
+        }
+        is_combination = "+" in (drug.generic_name or "")
+        effective_score = best_score - (20 if is_combination else 0)
+        ranked.append((
+            effective_score,
+            is_combination,
+            normalize_text(drug.generic_name or drug.slug),
+            item,
+        ))
+    ranked.sort(key=lambda row: (-row[0], row[1], row[2]))
+    items = [row[3] for row in ranked]
+    if not items:
+        return None
+    return {
+        "tipo": "medicamento",
+        "rotulo": "Medicamentos",
+        "rota_lista": ROTA_LISTA_POR_TIPO.get("medicamento", "/medicamentos"),
+        "itens": items,
+    }
+
+
 def _global_disease_identity_groups(
     db: Session, disease: SpecialtyDisease, *, limit: int | None = None,
 ) -> list[dict]:
@@ -1004,10 +1266,10 @@ def buscar_relacionados_da_doenca(
 ) -> dict | None:
     """Ecossistema completo de uma doença sem promover tema amplo a fato clínico.
 
-    Tema que casa exatamente com nome/slug/alias da doença é catálogo estruturado
-    e pode ser percorrido integralmente. Temas mais amplos já ligados ao verbete
-    são filtrados por relevância contextual determinística. Arestas diretas do
-    grafo entram sempre em primeiro lugar.
+    Um tema que casa com nome/slug/alias da doença é apenas um pool estruturado:
+    cada item ainda precisa de âncora clínica ou proveniência explícita. Temas
+    amplos são filtrados por relevância determinística. Arestas diretas e campos
+    estruturados do verbete entram primeiro para garantir o núcleo clínico.
     """
     disease = db.execute(
         select(SpecialtyDisease).where(
@@ -1043,7 +1305,7 @@ def buscar_relacionados_da_doenca(
                 excluir_tipo="doenca", excluir_slug=disease.slug,
                 limite_por_categoria=limite_por_categoria,
             )
-            _mark_exact_topic_items(response)
+            _filter_exact_topic_to_disease(response, disease)
         else:
             contextual_topics.append(topic)
             response = buscar_relacionados_contextuais(
@@ -1061,13 +1323,16 @@ def buscar_relacionados_da_doenca(
         limite_por_tipo=limite_por_categoria,
     )
     structured_groups = [
-        group for group in (
+        *_structured_disease_document_groups(db, disease),
+        *[group for group in (
+            _structured_disease_patient_material_group(db, disease),
+            _structured_disease_drug_group(db, disease),
             _structured_disease_test_group(disease),
             _structured_disease_differential_group(db, disease),
-        ) if group is not None
+        ) if group is not None],
     ]
     groups = _merge_groups(
-        [{"grupos": direct}, {"grupos": structured_groups}, *responses],
+        [{"grupos": structured_groups}, {"grupos": direct}, *responses],
         limit=limite_por_categoria,
     )
     total = sum(len(group.get("itens", [])) for group in groups)
