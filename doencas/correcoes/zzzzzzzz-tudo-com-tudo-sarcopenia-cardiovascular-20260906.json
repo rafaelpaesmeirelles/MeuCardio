@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "sarcopenia-cardiovascular",
+    "set": {
+      "tests": [
+        "Dinamometria de preensão manual para avaliar força muscular; baixa força sustenta sarcopenia provável no algoritmo EWGSOP2.",
+        "Avaliação de quantidade ou qualidade muscular por DXA, bioimpedância, tomografia ou ressonância quando necessária para confirmar sarcopenia.",
+        "Avaliação de desempenho físico, incluindo velocidade de marcha, para identificar maior gravidade funcional quando clinicamente apropriado."
+      ],
+      "related_document_slugs": [
+        "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
+        "sarcopenia-e-caquexia-cardiaca-no-idoso-com-insuficiencia-cardiaca-definicoes-prevalencia-e-prognostico"
+      ]
+    },
+    "append": {
+      "source_refs": [
+        "Cruz-Jentoft AJ, Bahat G, Bauer J, et al. Sarcopenia: revised European consensus on definition and diagnosis. Age Ageing. 2019;48(1):16-31. PMID: 30312372."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30312372/"
+      ]
+    }
+  }
+]

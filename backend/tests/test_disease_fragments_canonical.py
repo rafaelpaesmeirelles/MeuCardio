@@ -65,3 +65,18 @@ def test_fragmentos_nao_podem_marcar_registro_nao_revisado_como_publicado():
         if item.get("review_status") != "revisado" and item.get("published") is True
     ]
     assert conflitos == []
+
+
+def test_toda_doenca_revisada_tem_ancora_estruturada_tudo_com_tudo():
+    """Evita verbete publicado que exista no catálogo, mas fique isolado na UI."""
+    orfas = [
+        str(item["slug"])
+        for item in load_disease_records(BASE)
+        if item.get("review_status") == "revisado"
+        and not (
+            item.get("tests")
+            or item.get("related_document_slugs")
+            or item.get("patient_material_slug")
+        )
+    ]
+    assert orfas == []

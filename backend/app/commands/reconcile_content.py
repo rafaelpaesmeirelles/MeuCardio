@@ -57,7 +57,7 @@ from app.services.study_track_progress import canonicalize_progress_tokens
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 EDITORIAL_APPROVALS_DIR = REPOSITORY_ROOT / "editorial-approvals"
 FULL_CORPUS_AUTHORIZATION_PATH = (
-    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260905.json"
+    EDITORIAL_APPROVALS_DIR / "full-corpus-release-20260906.json"
 )
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
