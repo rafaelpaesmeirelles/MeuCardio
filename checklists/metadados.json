@@ -32950,7 +32950,7 @@
     "condicao": "Avaliação cardiovascular pré-operatória para cirurgia bariátrica",
     "resumo": "Checklist de avaliação cardiovascular perioperatória dirigido à população candidata à cirurgia bariátrica/metabólica, cobrindo estratificação de risco (incluindo limitações do RCRI nessa população e escore específico OS-MRS), rastreio e otimização de apneia obstrutiva do sono, avaliação seletiva de cardiomiopatia da obesidade/hipertensão pulmonar, ajuste de medicações cardiovasculares crônicas diante de alterações farmacocinéticas pós-operatórias e profilaxia de tromboembolismo venoso nessa população de alto risco. Não foi identificada diretriz específica da Sociedade Brasileira de Cardiologia (SBC) dedicada a este cenário; as recomendações baseiam-se em diretrizes internacionais (ACC/AHA, ASMBS, ESA-VTE) e estudos primários indexados no PubMed, verificados via NCBI e-utils.",
     "documento_origem": null,
-    "theme": "Perioperatório cardiovascular",
+    "theme": "Perioperatório",
     "review_status": "revisado",
     "source_refs": [
       "Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150(19):e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661.",
@@ -33072,7 +33072,7 @@
     "condicao": "Segurança cardiovascular do exercício físico e esporte na gestação sem cardiopatia estrutural conhecida",
     "resumo": "Checklist sobre a segurança cardiovascular do exercício físico aeróbico na gestante sem cardiopatia estrutural conhecida, incluindo a atleta competitiva que engravida: recomendações gerais de atividade física, contraindicações absolutas e relativas, sinais de alarme para interrupção imediata, particularidades da fisiologia cardiovascular gestacional que modificam a resposta ao esforço, e considerações específicas de treinamento vigoroso na atleta grávida. Baseado no Committee Opinion No. 804 do ACOG e em revisões/consensos de medicina esportiva (IOC, BJSM, Can J Cardiol); não foi localizada diretriz específica da SBC sobre exercício físico na gestação.",
     "documento_origem": null,
-    "theme": "Gestação e cardiopatia",
+    "theme": "Gravidez",
     "review_status": "revisado",
     "source_refs": [
       "American College of Obstetricians and Gynecologists' Committee on Obstetric Practice. Physical Activity and Exercise During Pregnancy and the Postpartum Period: ACOG Committee Opinion, Number 804. Obstet Gynecol. 2020 Apr;135(4):e178-e188. doi:10.1097/AOG.0000000000003772. PMID: 32217980.",
@@ -33246,7 +33246,7 @@
     "condicao": "Triagem cardiovascular pré-participação esportiva — interpretação do ECG em atletas negros/de ascendência africana",
     "resumo": "Checklist sobre as particularidades da interpretação do ECG de 12 derivações em atletas negros/de ascendência africana, distinguindo padrões de repolarização e de voltagem que constituem variantes normais relacionadas ao treinamento daqueles que exigem investigação para cardiomiopatia estrutural. Baseado no consenso internacional de Sharma et al. (2017) e em estudos de referência de Papadakis, Sheikh, Malhotra e Riding em coortes de atletas negros; não foi localizada, na busca realizada, uma diretriz específica da Sociedade Brasileira de Cardiologia (SBC) sobre este ponto em particular — a orientação aqui reproduz o consenso internacional.",
     "documento_origem": null,
-    "theme": "Cardiologia do esporte",
+    "theme": "Cardiologia do Esporte e do Exercício",
     "review_status": "revisado",
     "source_refs": [
       "Sharma S, Drezner JA, Baggish A, et al. International Recommendations for Electrocardiographic Interpretation in Athletes. J Am Coll Cardiol. 2017;69(8):1057-1075. DOI: 10.1016/j.jacc.2017.01.015. PMID: 28231933.",
@@ -33302,7 +33302,7 @@
     "condicao": "Avaliação cardiovascular do candidato a transplante hepático",
     "resumo": "Checklist clínico de avaliação cardiovascular do candidato a transplante hepático, cobrindo a fisiopatologia e o diagnóstico da cardiomiopatia cirrótica, o papel e as limitações do ecocardiograma de estresse com dobutamina, a estratificação de risco para rastreio de doença arterial coronariana, o rastreio ecocardiográfico da hipertensão porto-pulmonar com confirmação obrigatória por cateterismo direito, e as implicações dessa avaliação no manejo hemodinâmico peri-transplante. Preenche uma lacuna do corpus, que já cobre avaliação cardiovascular perioperatória geral (ESC 2022) e a janela terapêutica do betabloqueador não seletivo na cirrose, mas não tinha conteúdo dedicado à avaliação cardíaca pré-transplante hepático propriamente dita. Nota de rigor: não foi localizada diretriz da Sociedade Brasileira de Cardiologia (SBC) específica sobre avaliação cardíaca pré-transplante hepático, nem um documento de consenso autônomo e indexado da International Liver Transplantation Society (ILTS) sobre o tema — as referências normativas usadas são o guideline AASLD/AST 2013, o guidance document do Cirrhotic Cardiomyopathy Consortium (2019/2020) e a declaração científica da American Heart Association (2022).",
     "documento_origem": null,
-    "theme": "Perioperatório cardiovascular",
+    "theme": "Perioperatório",
     "review_status": "revisado",
     "source_refs": [
       "Izzy M, VanWagner LB, Lin G, Altieri M, Findlay JY, Oh JK, Watt KD, Lee SS; Cirrhotic Cardiomyopathy Consortium. Redefining Cirrhotic Cardiomyopathy for the Modern Era. Hepatology. 2020;71(1):334-345. DOI: 10.1002/hep.30875. PMID: 31342529.",
@@ -33361,7 +33361,7 @@
     "condicao": "Avaliação cardiovascular do candidato a transplante renal",
     "resumo": "Checklist sobre a avaliação cardiovascular do candidato a transplante renal, população com prevalência muito elevada de doença cardiovascular por uremia, calcificação vascular acelerada e sobrecarga crônica de volume/pressão da diálise. Cobre o valor limitado do rastreio sistemático de DAC assintomática, o papel da calcificação vascular e do escore de cálcio coronariano, a avaliação de hipertrofia ventricular esquerda e função ventricular, a doença valvar calcificada relacionada à DRC, e particularidades perioperatórias ligadas à diálise (momento da última sessão, potássio, volume e proteção da fístula arteriovenosa).",
     "documento_origem": null,
-    "theme": "Perioperatório cardiovascular",
+    "theme": "Perioperatório",
     "review_status": "revisado",
     "source_refs": [
       "Cheng XS, VanWagner LB, Costa SP, Axelrod DA, Bangalore S, Norman SP, Herzog CA, Lentine KL; American Heart Association Council on the Kidney in Cardiovascular Disease and Council on Cardiovascular Radiology and Intervention. Emerging Evidence on Coronary Heart Disease Screening in Kidney and Liver Transplantation Candidates: A Scientific Statement From the American Heart Association. Circulation. 2022;146(21):e299-e324. DOI: 10.1161/CIR.0000000000001104. PMID: 36252095.",
