@@ -4,6 +4,70 @@
 # prévio. Não executa testes, não altera conteúdo científico e não toca apps nativos.
 set -Eeuo pipefail
 
+# Fast path operacional: reanexa o Remote Desktop Commander após reboot do host.
+# Só é ativado por commit explicitamente marcado com [rdc-recovery]; não toca
+# frontend, backend, banco, migrations ou conteúdo científico.
+COMMIT_MESSAGE="$(git log -1 --pretty=%B 2>/dev/null || true)"
+if [[ "$COMMIT_MESSAGE" == *"[rdc-recovery]"* ]]; then
+  echo "[RDC] Reativando agente remoto sem redeploy da aplicação."
+  command -v systemctl >/dev/null || { echo "systemctl ausente" >&2; exit 1; }
+  install -d -m 0755 /usr/local/libexec
+
+  cat > /usr/local/libexec/corvia-rdc-agent <<'EOF'
+#!/usr/bin/env bash
+set -Eeuo pipefail
+export HOME=/root
+export NVM_DIR=/root/.nvm
+node_dir=""
+if [[ -d "$NVM_DIR/versions/node" ]]; then
+  node_dir="$(find "$NVM_DIR/versions/node" -maxdepth 1 -mindepth 1 -type d -name 'v22.*' | sort -V | tail -n 1 || true)"
+fi
+if [[ -n "$node_dir" && -x "$node_dir/bin/node" ]]; then
+  export PATH="$node_dir/bin:$PATH"
+fi
+command -v npx >/dev/null || { echo "npx indisponível para o Remote Desktop Commander" >&2; exit 1; }
+exec npx -y @wonderwhy-er/desktop-commander@latest remote
+EOF
+  chmod 0755 /usr/local/libexec/corvia-rdc-agent
+
+  cat > /etc/systemd/system/corvia-rdc-agent.service <<'EOF'
+[Unit]
+Description=CorVIA Remote Desktop Commander agent
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+Environment=HOME=/root
+Environment=NVM_DIR=/root/.nvm
+ExecStart=/usr/local/libexec/corvia-rdc-agent
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+  systemctl daemon-reload
+  systemctl enable corvia-rdc-agent.service >/dev/null
+  systemctl restart corvia-rdc-agent.service
+
+  for _ in $(seq 1 20); do
+    if systemctl is-active --quiet corvia-rdc-agent.service; then
+      echo "[RDC] Serviço ativo e habilitado para reinícios futuros."
+      systemctl --no-pager --full status corvia-rdc-agent.service | sed -n '1,12p' || true
+      exit 0
+    fi
+    sleep 1
+  done
+
+  echo "[RDC] Serviço não ficou ativo." >&2
+  systemctl --no-pager --full status corvia-rdc-agent.service >&2 || true
+  journalctl -u corvia-rdc-agent.service -n 80 --no-pager >&2 || true
+  exit 1
+fi
+
 COMPOSE=(docker compose -f docker-compose.prod.yml)
 log() { printf '[%s] %s\n' "$(date -Is)" "$*"; }
 
