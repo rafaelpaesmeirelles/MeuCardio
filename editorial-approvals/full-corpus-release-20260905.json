@@ -5,7 +5,7 @@
   "scope": "entire_canonical_reviewed_corpus",
   "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar o conteúdo científico válido sem deixá-lo em quarentena; em 05/09/2026 foi reiterada a correção de todas as pendências, com prioridade para o Tudo com Tudo e deploys emergenciais. Esta autorização fica vinculada ao inventário canônico atual, integralmente marcado como revisado e aprovado nos gates estrutural e semântico; não substitui os guardrails clínicos de verificação humana existentes no conteúdo.",
   "expected_total": 11581,
-  "inventory_sha256": "e9cb827b9980dc46644440251ed594661db4cabf2ba0ac182abf3a8ccf0b3593",
+  "inventory_sha256": "97e22b30cc4d14f61523d166d4bbf4d20a8fc789913228fe9ba2c8d15b96a478",
   "fronts": {
     "casos_clinicos": {
       "count": 915,
@@ -17,7 +17,7 @@
       "count": 473,
       "reviewed_count": 473,
       "slug_sha256": "40aa99725cba8f143479ed2b0babc96dba60a59296b813b664a995c7e207c8ab",
-      "source_sha256": "6086cced238240ecb12e6d97d33da5768ef6e5d2b31630c7465c4913edf0573a"
+      "source_sha256": "8a94c10d465f004e4f2435061f28b015444a42e0cde96e7e0b6b6442e34376ed"
     },
     "documentos": {
       "count": 2430,
@@ -41,13 +41,13 @@
       "count": 2061,
       "reviewed_count": 2061,
       "slug_sha256": "4bc72fb6938177ba232ea8f64ebd4e96d3c34a5d98d55024d6a3ab308b55c27f",
-      "source_sha256": "cf78df9c4e6894e65d9a8343c0e0b70784aa38f9445864d854096261842fec97"
+      "source_sha256": "5c7298a45e5d25d2818e20c9f3f360c71f9603efef7d6394d5b5a9d608957d9d"
     },
     "evidencias": {
       "count": 3363,
       "reviewed_count": 3363,
       "slug_sha256": "268560235d62920ce6e5e05f658dec773bb700f614f26a99ac55fd1b8f96b0e9",
-      "source_sha256": "681f6088b26f8719e4bdc7951126398df0b8b6f49f1e6c254008916538295d2b"
+      "source_sha256": "71b83a76e80272b9aa3eb788d2f4160dd9737fd9dcc11ced142bf23224fc5abb"
     },
     "exames": {
       "count": 423,
