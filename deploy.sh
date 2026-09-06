@@ -26,6 +26,7 @@ if [[ -n "$node_dir" && -x "$node_dir/bin/node" ]]; then
   export PATH="$node_dir/bin:$PATH"
 fi
 command -v npx >/dev/null || { echo "npx indisponível para o Remote Desktop Commander" >&2; exit 1; }
+echo "[RDC-AGENT] node=$(node --version 2>/dev/null || true) npx=$(command -v npx)"
 exec npx -y @wonderwhy-er/desktop-commander@latest remote
 EOF
   chmod 0755 /usr/local/libexec/corvia-rdc-agent
@@ -44,6 +45,8 @@ Environment=NVM_DIR=/root/.nvm
 ExecStart=/usr/local/libexec/corvia-rdc-agent
 Restart=always
 RestartSec=5
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
@@ -53,18 +56,22 @@ EOF
   systemctl enable corvia-rdc-agent.service >/dev/null
   systemctl restart corvia-rdc-agent.service
 
-  for _ in $(seq 1 20); do
-    if systemctl is-active --quiet corvia-rdc-agent.service; then
-      echo "[RDC] Serviço ativo e habilitado para reinícios futuros."
-      systemctl --no-pager --full status corvia-rdc-agent.service | sed -n '1,12p' || true
-      exit 0
-    fi
-    sleep 1
-  done
+  # O systemd pode considerar o wrapper ativo antes de o agente concluir OAuth/relay.
+  # Aguarde alguns segundos e exponha apenas logs operacionais (sem ler arquivos de segredo).
+  sleep 12
+  echo "[RDC] Estado após estabilização:"
+  systemctl --no-pager --full status corvia-rdc-agent.service | sed -n '1,18p' || true
+  echo "[RDC] Journal recente:"
+  journalctl -u corvia-rdc-agent.service -n 120 --no-pager -o cat || true
+  echo "[RDC] Artefatos de configuração encontrados (nomes apenas):"
+  find /root -maxdepth 4 -type f \( -iname '*desktop*commander*' -o -iname '*remote*commander*' \) -printf '%p\n' 2>/dev/null | head -n 40 || true
+
+  if systemctl is-active --quiet corvia-rdc-agent.service; then
+    echo "[RDC] Serviço ativo e habilitado para reinícios futuros."
+    exit 0
+  fi
 
   echo "[RDC] Serviço não ficou ativo." >&2
-  systemctl --no-pager --full status corvia-rdc-agent.service >&2 || true
-  journalctl -u corvia-rdc-agent.service -n 80 --no-pager >&2 || true
   exit 1
 fi
 
