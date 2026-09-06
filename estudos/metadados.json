@@ -44703,7 +44703,7 @@
     "key_findings": "Primário 53,2% vs 51,1%; OR 1,09; IC95% 0,95-1,25 — não NI (p=0,51). HIC sintomática maior 1,0% vs 2,1% (p=0,01); morte fatal em 7 dias 0,5% vs 1,5% (p=0,01). Mortalidade 90 dias 8,5% vs 10,3% (p=0,07).",
     "clinical_implications": "Baixa dose não provou NI para morte/incapacidade. Menos HIC. Não substituir 0,9 mg/kg como padrão com base neste ensaio.",
     "limitations": "Aberto, 63% asiáticos. Fatorial com PA. NI falhou no primário.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "enchanted",
       "alteplase",
@@ -44731,7 +44731,7 @@
     "key_findings": "OHS 0-2: 37% vs 35%; OR 1,13; IC95% 0,95-1,35; p=0,181. Análise ordinal: OR comum 1,27 (p=0,001). HIC sintomática em 7 dias 7% vs 1% (OR 6,94). Mortes em 7 dias 11% vs 7%; aos 6 meses 27% vs 27%.",
     "clinical_implications": "Primário dicotômico NS; deslocamento ordinal favorável apesar de HIC precoce. Inclui >80 anos e janela até 6 h — não apagar o excesso hemorrágico.",
     "limitations": "Aberto. Primário NS. Janela até 6 h mistura <4,5 e 4,5-6 h.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "ist-3",
       "rtpa",
@@ -44759,7 +44759,7 @@
     "key_findings": "Reperfusão 24 h: mediana 100% vs 37% (p<0,001). Melhora neurológica dia 3: 80% vs 37% (p=0,002). Independência (mRS 0-2) 71% vs 40% (p=0,01). Morte e HIC sintomática sem diferença significativa. Início mediano 210 min.",
     "clinical_implications": "Seleção por perfusão e dispositivo Solitaire FR, n=70 parado cedo. Confirma trombectomia precoce nesta anatomia — não generalizar a core grande sem imagem.",
     "limitations": "n=70, parado cedo. Austrália/Nova Zelândia. Coprimários de imagem e NIHSS.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "extend-ia",
       "trombectomia",
@@ -44787,7 +44787,7 @@
     "key_findings": "Deslocamento de mRS: OR 1,7; IC95% 1,05-2,8. Independência 43,7% vs 28,2% (OR 2,1). HIC sintomática 1,9% vs 1,9%. Morte 18,4% vs 15,5% (p=0,60).",
     "clinical_implications": "Ganho funcional até 8 h nesta anatomia. Parado cedo. Só 4 centros. Alteplase falhou ou era contraindicada.",
     "limitations": "Parado cedo. n=206. Financiamento irrestrito do fabricante do dispositivo.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "revascat",
       "trombectomia",
@@ -44815,7 +44815,7 @@
     "key_findings": "Independência 53% vs 42% (OR 1,55; IC95% 1,05-2,30; p=0,028). Morte 13% vs 12% (p=0,70). HIC 2% vs 2%. Vasoespasmo 23% e embolização em novo território 6% no braço invasivo.",
     "clinical_implications": "Bridging melhorou independência sem excesso de morte. Eventos do procedimento (vasoespasmo, embolização) constam do abstract.",
     "limitations": "França, 26 centros. mITT exclui perda de seguimento. Janela trombectomia 5 h.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "thrace",
       "trombectomia",
@@ -44843,7 +44843,7 @@
     "key_findings": "Deslocamento de mRS: OR comum 2,58; IC95% 1,60-4,15; p=0,0001. Mortalidade HR 0,67; IC95% 0,46-0,98; p=0,038. HIC sintomática 6% vs 5%.",
     "clinical_implications": "Trombectomia ajudou mesmo com infarto já visível em TC simples. HIC semelhante. n=253 parado cedo.",
     "limitations": "Aberto, parado cedo. ASPECTS 3-5. Até 12 h. Não cobre infartos ainda maiores.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "tension",
       "trombectomia",
@@ -44871,7 +44871,7 @@
     "key_findings": "Deslocamento de mRS OR 1,37; IC95% 1,11-1,69; p=0,004. HIC sintomática 6,1% vs 2,7%; qualquer HIC 49,1% vs 17,3%.",
     "clinical_implications": "Melhor mRS com mais hemorragia. População chinesa, janela 24 h. Não apagar o excesso hemorrágico.",
     "limitations": "Aberto, China, parado cedo. Financiado em parte pelo fabricante.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "angel-aspect",
       "trombectomia",
@@ -44899,7 +44899,7 @@
     "key_findings": "OR comum 0,86; IC95% 0,76-0,97; p=0,015 contra pior mRS. Eventos graves 16,0% vs 20,1% (p=0,0098).",
     "clinical_implications": "Protocolo fisiológico precoce melhorou mRS em HIC. Cluster, não cego para o sítio. Não é só alvo de PA isolado.",
     "limitations": "Cluster stepped-wedge. Muitos centros de renda média/baixa. 22 hospitais saíram antes de enrolar.",
-    "theme": "avc",
+    "theme": "Hipertensão",
     "tags": [
       "interact3",
       "hic",
@@ -44927,7 +44927,7 @@
     "key_findings": "PAS na chegada 159 vs 170 mmHg. mRS global OR 1,00; IC95% 0,87-1,15. HIC: OR 0,75 (0,60-0,92); isquemia: OR 1,30 (1,06-1,60). Eventos graves semelhantes.",
     "clinical_implications": "Não tratar PA às cegas no AVC indiferenciado: ajuda HIC e piora isquemia. Sem imagem, o composto anula.",
     "limitations": "China. Aberto. Análise de subtipo é pós-imagem, não o primário.",
-    "theme": "avc",
+    "theme": "Hipertensão",
     "tags": [
       "interact4",
       "pre-hospitalar",
@@ -45466,7 +45466,7 @@
     "key_findings": "Independência 39,4% vs 54,4% (OR ajustado 0,56; p=0,03). HIC sintomática 9,0% vs 8,1%. Morte pelo AVC 7,7% vs 5,4%.",
     "clinical_implications": "Baixar PAS <140 nas 24 h pós-EVT piorou independência. Não protocolar intensivo após reperfusão bem-sucedida.",
     "limitations": "Parado cedo. Coreia. Aberto com desfecho cego.",
-    "theme": "avc",
+    "theme": "Hipertensão",
     "tags": [
       "optimal-bp",
       "trombectomia",
@@ -45493,7 +45493,7 @@
     "key_findings": "Primário 72% vs 75% (RR 0,96; p=0,29). Mortes 5% vs 1% (HR 3,8; p=0,0085). HIC sintomática 2% vs <1% (RR 4,2; p=0,059).",
     "clinical_implications": "Sem benefício e possível dano. Não trombolisar rotina o AVC menor com oclusão com base no TEMPO-2.",
     "limitations": "Parado por futilidade. Aberto. NIHSS 0-5.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "tempo-2",
       "tenecteplase",
@@ -45576,7 +45576,7 @@
     "key_findings": "mRS 0-1: 72,7% vs 70,3% (RR 1,03; NI cumprida). HIC sintomática 1,2% vs 1,2%. Mortalidade 4,6% vs 5,8%.",
     "clinical_implications": "TNK não-inferior à alteplase na China nesta janela. Bolus único. Não extrapolar a oclusão de grande vaso com trombectomia planejada.",
     "limitations": "Aberto, China. NIHSS 1-25 inclui déficits leves.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "original",
       "tenecteplase",
@@ -45658,7 +45658,7 @@
     "key_findings": "Primário 40% vs 26% (RR 1,52; p=0,004). HIC sintomática 3,8% vs 0,51% (p=0,01). Mortalidade 11% vs 11%.",
     "clinical_implications": "Ganho funcional com mais HIC na janela tardia selecionada por perfusão. China, sem trombectomia inicial. Não substituir EVT quando indicada.",
     "limitations": "Aberto. China. Mais HIC. Homônimo do HOPE-ramipril — outro ensaio.",
-    "theme": "avc",
+    "theme": "Tromboembolismo",
     "tags": [
       "hope-stroke",
       "alteplase",
@@ -45767,7 +45767,7 @@
     "key_findings": "UACR −22,8% (15 mg) e −32,8% (40 mg) vs dapa (p=0,0038 e p<0,0001). Hipercalemia 6% e 7%. TFG média 42,2.",
     "clinical_implications": "Fase 2b de albuminúria, não de eventos. Hipercalemia 6-7%. Não antecipar desfecho CV/renal duro.",
     "limitations": "Fase 2b. n=324. 12 semanas. Desfecho de UACR.",
-    "theme": "doenca-renal",
+    "theme": "Cardiorrenal",
     "tags": [
       "miro-ckd",
       "balcinrenona",
@@ -45875,7 +45875,7 @@
     "key_findings": "AVC isquêmico HR 0,05 (p<0,0001); 0,83 vs 8,60/100 pacientes-ano. HIC recorrente HR 10,89 — NI não cumprida (margem 1,735). HIC 5,00 vs 0,82/100 pacientes-ano. Mortes 10% vs 13%.",
     "clinical_implications": "DOAC previne isquemia mas não cumpriu NI para HIC recorrente — excesso hemorrágico. Decisão individualíssima; não protocolar DOAC rotina pós-HIC com FA com base neste n=319.",
     "limitations": "n=319. Aberto. NI de HIC falhou. Europa.",
-    "theme": "avc",
+    "theme": "Fibrilação atrial",
     "tags": [
       "prestige-af",
       "doac",
@@ -45958,7 +45958,7 @@
     "key_findings": "107 vs 99. mRS ponderado 5,5 vs 3,4 (diferença ajustada 2,0; IC crível 1,1-3,0). Independência 49% vs 13% (diferença 33 pontos percentuais). HIC sintomática 6% vs 3% (p=0,50). Morte aos 90 dias 19% vs 18% (p=1,00).",
     "clinical_implications": "Janela 6-24 h com mismatch seleciona quem ainda ganha com trombectomia. Não generalizar sem mismatch. Morte e HIC sem diferença neste n.",
     "limitations": "Parado cedo. n=206. Seleção por mismatch é o ensaio, não a hora isolada.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "dawn",
       "trombectomia",
@@ -45986,7 +45986,7 @@
     "key_findings": "OR comum ajustado 1,67 (IC95% 1,21-2,30). Independência (mRS 0-2) 32,6% vs 19,1% (diferença 13,5 pontos; IC95% 5,9-21,2). Sem diferença significativa em morte ou HIC sintomática.",
     "clinical_implications": "Fundou a era da trombectomia anterior. Alteplase prévia era a regra. Não extrapolar a oclusão distal sem evidência deste ensaio.",
     "limitations": "Holanda, 16 centros. Janela e dispositivos da época.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "mr-clean",
       "trombectomia",
@@ -46068,7 +46068,7 @@
     "key_findings": "mRS 0-2 60% vs 35% (p<0,001). Mortalidade 9% vs 12% (p=0,50). HIC sintomática 0% vs 3% (p=0,12).",
     "clinical_implications": "Trombectomia após t-PA na oclusão proximal anterior aumentou independência funcional neste desenho. Mortalidade NS.",
     "limitations": "Parado cedo. n=196. Dispositivos da época.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "swift-prime",
       "trombectomia",
@@ -46149,7 +46149,7 @@
     "key_findings": "Parte 2: OR global 1,7 (IC95% 1,2-2,6) a favor de melhor desfecho. Pelo menos 30% mais chance de deficiência mínima ou nenhuma. HIC sintomática em 36 h: 6,4% vs 0,6% (p<0,001). Mortalidade a 3 meses 17% vs 21% (p=0,30).",
     "clinical_implications": "Base histórica da trombólise IV até 3 h. Ganho funcional com custo hemorrágico. Não é o ensaio de janela mais longa.",
     "limitations": "Era 1995. HIC sintomática multiplicada. Janela deste ensaio é a aguda clássica de 3 h.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "ninds",
       "alteplase",
@@ -46176,7 +46176,7 @@
     "key_findings": "mRS 0-1 aos 90-120 dias: 36,9% (296/802) vs 34,8% (266/765); diferença 2,1% (IC95% −2,6 a 6,9), atingiu NI. HIC sintomática 24 h: 3,4% vs 3,2%. Morte em 90 dias: 15,3% vs 15,4%.",
     "clinical_implications": "TNK em bolus 0,25 mg/kg é alternativa operacional à alteplase neste ensaio. NI, não superioridade. Não muda a janela de 4,5 h.",
     "limitations": "Aberto. Margem de NI −5%. Análise ITT 1577 de 1600.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "act",
       "tenecteplase",
@@ -46311,7 +46311,7 @@
     "key_findings": "407 intensivo vs 409 menos intensivo (404 e 406 com primário). Pior desfecho funcional no intensivo (OR comum 1,37; IC95% 1,07-1,76). Mais deterioração neurológica precoce (OR 1,53) e deficiência maior aos 90 dias (OR 2,07). HIC sintomática, eventos graves e morte sem diferença significativa.",
     "clinical_implications": "Evitar PAS <120 mmHg após trombectomia bem-sucedida. O alvo intensivo piorou recuperação funcional.",
     "limitations": "Parado cedo. Aberto. China. Alvos de PA, não fármaco específico.",
-    "theme": "avc_agudo",
+    "theme": "Hipertensão",
     "tags": [
       "enchanted2",
       "pressao-arterial",
@@ -46419,7 +46419,7 @@
     "key_findings": "mRS 0-1: 59,0% (36/61) vs 40,4% (21/52); diferença ajustada 18,4% (p=0,047). HIC sintomática 24 h: 0% vs 3,8%. Morte aos 90 dias: 8% vs 15%.",
     "clinical_implications": "Sinal de melhor desfecho excelente com alteplase IA após reperfusão, mas n=121 e parado cedo. Tratar como preliminar (o próprio abstract pede replicação).",
     "limitations": "Parado por COVID. n=121. Achado preliminar.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "choice",
       "alteplase-intra-arterial",
@@ -46499,7 +46499,7 @@
     "key_findings": "mRS mediano 3 (1-4) vs 3 (1-4). OR comum ajustado 1,08 (IC95% 0,86-1,36). HIC sintomática 9,7% vs 6,4% (diferença 3,3%).",
     "clinical_implications": "Tirofiban IV antes da trombectomia não melhorou deficiência aos 90 dias. Não usar neste pré-procedimento com base neste ensaio.",
     "limitations": "HIC pontualmente maior. China.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "tirofiban",
       "trombectomia",
@@ -46660,7 +46660,7 @@
     "key_findings": "93,8% (346/369) vs 91,4% (320/350); diferença 2,3%; limite inferior do IC 97,5% unilateral −1,5% (p de NI <0,001). HIC sintomática 0,3% (1/371) vs 0,9% (3/351).",
     "clinical_implications": "DAPT não foi inferior à alteplase no AVC menor não incapacitante até 4,5 h. Não extrapolar a déficit incapacitante.",
     "limitations": "Aberto. NIHSS 2. China. NI, não superioridade.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "aramis",
       "dapt",
@@ -46687,7 +46687,7 @@
     "key_findings": "Primário 8,6% vs 12,3% (HR 0,71; p=0,39). AVC/morte em 30 dias 6,2% vs 1,8%. AVC ipsilateral após 30 dias 2,0% vs 10,3%. Qualquer AVC ou morte em 2 anos 9,9% vs 15,3% (p=0,30).",
     "clinical_implications": "Somar bypass não mudou o composto. Há troca: mais eventos precoces na cirurgia, menos AVC ipsilateral tardio. Não indicar bypass de rotina.",
     "limitations": "China. Hemodinâmica insuficiente como critério. Primário NS.",
-    "theme": "avc_agudo",
+    "theme": "Aorta e doença arterial periférica",
     "tags": [
       "cmoss",
       "bypass",
@@ -46714,7 +46714,7 @@
     "key_findings": "902 com AVC (737 isquêmico, 165 HIC). mRS mediano 2 vs 1; OR 0,95 (p=0,67). Eventos graves 23,7% vs 24,3%. Dor/petéquia 7,2% vs 1,5%. TIA 10%; mímica 27%.",
     "clinical_implications": "RIC pré-hospitalar não melhorou desfecho funcional. Não protocolar.",
     "limitations": "Muita mímica e TIA. Primário NS.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "resist",
       "condicionamento-isquemico",
@@ -46794,7 +46794,7 @@
     "key_findings": "mRS aos 90 dias pior com balão (OR comum ajustado 0,66; IC95% 0,45-0,98; p=0,037). Morte 24% vs 16% (numérico). HIC e eventos graves sem diferença estatística.",
     "clinical_implications": "Cateter-guia com balão piorou mRS e o ensaio foi interrompido. Não usar como rotina com base neste resultado.",
     "limitations": "Parado por segurança. n=329. China.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "protect-mt",
       "balloon-guide",
@@ -46821,7 +46821,7 @@
     "key_findings": "45,1% (120/266) vs 40,2% (107/266); RR ajustado 1,13 (p=0,19). Morte 18,4% vs 17,3% (p=0,77). HIC sintomática 4,1% vs 4,1% (p=0,91).",
     "clinical_implications": "Uroquinase IA após reperfusão quase completa não aumentou independência. Não protocolar.",
     "limitations": "Primário NS. China.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "post-uk",
       "uroquinase",
@@ -46848,7 +46848,7 @@
     "key_findings": "49,1% (132/269) vs 44,1% (119/270); RR ajustado 1,15 (p=0,11). Morte 16,0% vs 19,3% (p=0,16). HIC sintomática 6,3% vs 4,4% (p=0,35).",
     "clinical_implications": "TNK IA após reperfusão quase completa não aumentou liberdade de deficiência. Não protocolar.",
     "limitations": "Primário NS. HIC pontualmente maior.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "post-tnk",
       "tenecteplase-intra-arterial"
@@ -46874,7 +46874,7 @@
     "key_findings": "40,5% vs 26,4% (RR 1,44; IC95% 1,06-1,95; p=0,02). Nenhum dos 7 secundários de eficácia diferiu. HIC 5,6% vs 6,2% (p=0,92). Morte 21,4% vs 21,7% (p=0,78).",
     "clinical_implications": "Sinal no primário de desfecho excelente, mas nenhum secundário acompanhou. Abstract pede novos ensaios. Não protocolar só com este n.",
     "limitations": "n=256. Primário isolado. China. Janela 4,5-24 h.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "angel-tnk",
       "tenecteplase-intra-arterial"
@@ -46900,7 +46900,7 @@
     "key_findings": "Desfecho excelente 43,6% (123/282) vs 34,2% (97/284); RR 1,28 (p=0,02). HIC sintomática 2,8% vs 0% (p=0,004). Morte 5,0% vs 3,2% (p=0,28).",
     "clinical_implications": "TNK tardia em não-LVO com tecido salvável melhorou desfecho excelente e aumentou HIC. Não copiar para LVO nem para quem não tem mismatch.",
     "limitations": "Aberto. China. HIC 2,8% vs 0%.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "option",
       "tenecteplase",
@@ -46927,7 +46927,7 @@
     "key_findings": "57,5% (123/214) vs 42,5% (93/219); diferença ajustada 15,0% (p=0,002). Hipoperfusão residual 28,6% vs 50,5% (p<0,001). HIC 1,4% vs 0,5% (p=0,33). Morte 12,1% vs 6,4% (p=0,03).",
     "clinical_implications": "Alteplase IA aumentou desfecho excelente e reduziu hipoperfusão residual, com morte maior no braço ativo (p=0,03). Não protocolar sem sopesar mortalidade. Abstract pede mais estudo da morte.",
     "limitations": "Aberto. Morte maior no ativo. 4 de 6 secundários NS.",
-    "theme": "avc_agudo",
+    "theme": "Tromboembolismo",
     "tags": [
       "choice-2",
       "alteplase-intra-arterial"
@@ -47007,7 +47007,7 @@
     "key_findings": "AVC fatal/incapacitante 6,4% vs 6,5% em 5 anos (HR 1,06; p=0,77). Qualquer AVC mais frequente com stent (15,2% vs 9,4%; HR 1,71; p<0,001), sobretudo não incapacitante. mRS sem diferença.",
     "clinical_implications": "Desfecho funcional e AVC fatal/incapacitante semelhantes. Stent teve mais AVC (não incapacitante). Escolher técnica pelo risco periprocedimento e anatomia, não por sobrevida a 5 anos.",
     "limitations": "Aberto. Mais AVC não incapacitante no stent.",
-    "theme": "avc_agudo",
+    "theme": "Aorta e doença arterial periférica",
     "tags": [
       "icss",
       "stent-carotideo",
