@@ -430,5 +430,53 @@
     "relevance_score": 1.0,
     "evidence_source": "ACC/AHA ACHD 2025",
     "review_note": "Vínculo direto: anatomia coronariana, MAPCAs e estratégia cirúrgica exigem centro congênito terciário."
+  },
+  {
+    "source_disease_slug": "reacao-anafilactoide-a-contraste-iodado",
+    "target_type": "evidencia",
+    "target_slug": "scc25-t32-contraste-isosmolar-ou-hiposmolar-na-profilaxia-eletiva",
+    "relation_type": "supported_by",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#reacao-anafilactoide-a-contraste-iodado:evidencia:scc25-t32-contraste-isosmolar-ou-hiposmolar-na-profilaxia-eletiva",
+    "review_note": "Vínculo direto: evidência específica de profilaxia eletiva após reação alérgica a contraste iodado."
+  },
+  {
+    "source_disease_slug": "reacao-anafilactoide-a-contraste-iodado",
+    "target_type": "evidencia",
+    "target_slug": "scc25-t33-hidrocortisona-500mg-iv-na-emergencia",
+    "relation_type": "supported_by",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#reacao-anafilactoide-a-contraste-iodado:evidencia:scc25-t33-hidrocortisona-500mg-iv-na-emergencia",
+    "review_note": "Vínculo direto: evidência específica de profilaxia em procedimento de emergência com reação alérgica prévia ao contraste."
+  },
+  {
+    "source_disease_slug": "reacao-anafilactoide-a-contraste-iodado",
+    "target_type": "evidencia",
+    "target_slug": "scc25-t33-difenidramina-na-emergencia",
+    "relation_type": "supported_by",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#reacao-anafilactoide-a-contraste-iodado:evidencia:scc25-t33-difenidramina-na-emergencia",
+    "review_note": "Vínculo direto: evidência específica de profilaxia em procedimento de emergência com reação alérgica prévia ao contraste."
+  },
+  {
+    "source_disease_slug": "reacao-anafilactoide-a-contraste-iodado",
+    "target_type": "evidencia",
+    "target_slug": "scc25-t33-fexofenadina-na-emergencia",
+    "relation_type": "supported_by",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#reacao-anafilactoide-a-contraste-iodado:evidencia:scc25-t33-fexofenadina-na-emergencia",
+    "review_note": "Vínculo direto: evidência específica de profilaxia em procedimento de emergência com reação alérgica prévia ao contraste."
   }
 ]

@@ -105,7 +105,7 @@ class FullCorpusReleaseAuthorizationTests(unittest.TestCase):
         canonical, fingerprints = _repository_inventory()
 
         authorized, metadata = validate_full_corpus_authorization(
-            ROOT / "editorial-approvals" / "full-corpus-release-20260906.json",
+            ROOT / "editorial-approvals" / "full-corpus-release-20260907.json",
             canonical_slugs=canonical,
             fingerprints=fingerprints,
         )

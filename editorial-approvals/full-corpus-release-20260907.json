@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "release": "corvia-science-full-corpus-20260907",
+  "decision": "approved_for_full_corpus_publication",
+  "scope": "entire_canonical_reviewed_corpus",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo; em 06/09/2026 foi ordenada a continuidade da auditoria e correção end-to-end. Esta autorização atualiza o inventário apenas para incorporar duas correções estruturadas já revisadas da auditoria de baixa densidade: teratoma intrapericárdico fetal ligado ao material e documentos específicos, e reação a contraste iodado ligada a quatro evidências específicas de profilaxia; preserva os demais slugs, contagens, status editoriais e guardrails clínicos.",
+  "expected_total": 11581,
+  "inventory_sha256": "598e05aaf01800ef93704d4f6a9f72b3d4676b38851bcf6d86a05641d56a26cd",
+  "fronts": {
+    "casos_clinicos": {
+      "count": 915,
+      "reviewed_count": 915,
+      "slug_sha256": "3e3fcff9f57fca69bb50dc0a83724bd81a4ded27b3977bfe5447a34f63746e83",
+      "source_sha256": "b15f246628f31b3c263a2a64b9594923ba5a5f29a0311ec2bff7a9f80eaeeedd"
+    },
+    "checklists": {
+      "count": 473,
+      "reviewed_count": 473,
+      "slug_sha256": "40aa99725cba8f143479ed2b0babc96dba60a59296b813b664a995c7e207c8ab",
+      "source_sha256": "2d897e262a591732d066bff4b3b019465020718138c337a36f89f41be9e2577e"
+    },
+    "documentos": {
+      "count": 2430,
+      "reviewed_count": 2430,
+      "slug_sha256": "d4f0533803b46f47a5db359c0c156a84d3a5db2229383ab18103835a58726c4a",
+      "source_sha256": "eb86024ef91dc45313caca20132a70333c780c807b6c9299fc30d0040572bae4"
+    },
+    "doencas_especializadas": {
+      "count": 326,
+      "reviewed_count": 326,
+      "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
+      "source_sha256": "c17f7e5779b84c93f53fcaac26ad8b4c170034fc35bc0cdce26a916dbf155211"
+    },
+    "emergencia": {
+      "count": 77,
+      "reviewed_count": 77,
+      "slug_sha256": "d6371078a7d02a17b3952f804e3759a06e5fb4af9123bd8ce7097808ea99367c",
+      "source_sha256": "f622efc08b923b760e339e5fc82fd5d1c8718e58a1e0f23a742369856b38d779"
+    },
+    "estudos": {
+      "count": 2061,
+      "reviewed_count": 2061,
+      "slug_sha256": "4bc72fb6938177ba232ea8f64ebd4e96d3c34a5d98d55024d6a3ab308b55c27f",
+      "source_sha256": "517734a6acc43f74f49bc1601ed43c59f1786d5cc43392ed478e0e92e89313e9"
+    },
+    "evidencias": {
+      "count": 3363,
+      "reviewed_count": 3363,
+      "slug_sha256": "268560235d62920ce6e5e05f658dec773bb700f614f26a99ac55fd1b8f96b0e9",
+      "source_sha256": "71b83a76e80272b9aa3eb788d2f4160dd9737fd9dcc11ced142bf23224fc5abb"
+    },
+    "exames": {
+      "count": 423,
+      "reviewed_count": 423,
+      "slug_sha256": "ddeb6914200ec45712dd4eb6e17b580bf61e85b451d4e100cf09be54a7e2ea2e",
+      "source_sha256": "90df25d7bb2a26b3d50c89cc7581412d82c412ef4e0a3e6aa49ae1ebd6f5c45a"
+    },
+    "galeria": {
+      "count": 281,
+      "reviewed_count": 281,
+      "slug_sha256": "6573fced7b3107e150852932aee802fb1d5eb18a902191a6895b9dddef69ccbc",
+      "source_sha256": "40530e6f27ef517cd829ebc3e387f2edc65b8d5eceaf9f9c37a2007ffbc5f7d1"
+    },
+    "material_paciente": {
+      "count": 448,
+      "reviewed_count": 448,
+      "slug_sha256": "777ede711e53f5001bbaf621c16c9581423a1f15450887eb5c742a06ca0304e6",
+      "source_sha256": "a6afb7f1ae29461387a5c2f7fc8e07321480617ba98e95c20c0fe358e1a8b550"
+    },
+    "medicamentos": {
+      "count": 206,
+      "reviewed_count": 206,
+      "slug_sha256": "152405b478a5154514ee282334098f00e55b1143bf089b69d15799d7a16f452e",
+      "source_sha256": "808984addb6d6a647ffbecca42103ee333177a5180d937739bd62a5a367e95bd"
+    },
+    "triagem_sintomas": {
+      "count": 23,
+      "reviewed_count": 23,
+      "slug_sha256": "fe13550a2282eb87f94650205395f5fb50ee5812818cdc8f56fefd39c1f02dd1",
+      "source_sha256": "8a422e2cea7c7448ed3c7f93bfa4bf1cd4998177a0a7ac7048ac5faddf259478"
+    },
+    "trilhas": {
+      "count": 555,
+      "reviewed_count": 555,
+      "slug_sha256": "88875df7345ba05e31247114cdd24ef2973ce12e6fdfa5a912af0773c11ce741",
+      "source_sha256": "184eacf9b99c6be3a8025f26c8d98e9576504bdfcd93f669eb73bcf0bdaa3a74"
+    }
+  }
+}
