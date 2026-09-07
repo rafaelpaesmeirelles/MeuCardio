@@ -1,0 +1,219 @@
+[
+  {
+    "source_disease_slug": "amiloidose-relacionada-a-dialise-beta2-microglobulina",
+    "target_type": "checklist",
+    "target_slug": "rastreio-de-amiloidose-relacionada-a-dialise-beta2-microglobulina-com-acometimento-cardiovascular",
+    "target_title": "Rastreio de amiloidose relacionada à diálise (beta-2-microglobulina) com acometimento cardiovascular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "anticoagulacao-idoso",
+    "target_type": "checklist",
+    "target_slug": "anticoagulacao-no-idoso-com-risco-de-queda-decisao-e-ajuste-de-dose",
+    "target_title": "Decisão de anticoagulação oral em idoso com fibrilação atrial e risco de queda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "arritmia-atrial-na-circulacao-de-fontan",
+    "target_type": "exame",
+    "target_slug": "holter-de-vigilancia-de-arritmia-atrial-na-circulacao-de-fontan",
+    "target_title": "Holter (monitorização ambulatorial do ritmo) de vigilância de arritmia atrial na circulação de Fontan",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "ateroembolismo-por-colesterol",
+    "target_type": "checklist",
+    "target_slug": "doenca-ateroembolica-cristais-colesterol-checklist",
+    "target_title": "Doença ateroembólica por cristais de colesterol",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-acromegalica",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-acromegalica",
+    "target_title": "Cardiomiopatia acromegálica: hipertrofia biventricular e valvopatia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre",
+    "target_type": "checklist",
+    "target_slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-investigacao-e-manejo",
+    "target_title": "Cardiomiopatia dilatada com suspeita de deficiência de cobre",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-restritiva-nao-amiloide",
+    "target_type": "checklist",
+    "target_slug": "rastreio-diagnostico-e-conduta-na-fibrose-endomiocardica-por-sindrome-hipereosinofilica",
+    "target_title": "Fibrose endomiocárdica associada à síndrome hipereosinofílica (endocardite de Löffler) — cardiomiopatia restritiva não amiloide",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiotoxicidade-anti-her2",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiotoxicidade-anti-her2-queda-de-feve-suspender-ou-manter-trastuzumabe",
+    "target_title": "Queda assintomática da FEVE em uso de trastuzumabe: suspender ou manter?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiotoxicidade-inibidor-proteassoma",
+    "target_type": "material_paciente",
+    "target_slug": "cardiotoxicidade-inibidor-proteassoma",
+    "target_title": "Remédios para mieloma múltiplo e o cuidado com a pressão e o coração",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "coarctacao-da-aorta",
+    "target_type": "galeria",
+    "target_slug": "coarctacao-aorta-multimodalidade",
+    "target_title": "Coarctação da aorta — avaliação multimodalidade após correção",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "diabetes-mellitus-tipo-2",
+    "target_type": "evidencia",
+    "target_slug": "score2-diabetes-esc-2023-estimativa-de-risco-cv-em-10-anos-no-diabetes-tipo-2",
+    "target_title": "Em pacientes com diabetes mellitus tipo 2, sem doença cardiovascular aterosclerótica sintomática ou lesão grave de órgão-alvo, é recomendado…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-coronariana-idoso",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-populacoes-especiais-idoso-drc-e-fe-preservada",
+    "target_title": "Doença coronariana: idoso, doença renal crônica avançada e FE preservada — quando a evidência clássica não se aplica direto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-pompe-cardiaca",
+    "target_type": "checklist",
+    "target_slug": "acometimento-cardiaco-na-doenca-de-pompe-cardiomiopatia-infantil-e-terapia-de-reposicao-enzimatica",
+    "target_title": "Doença de Pompe — acometimento cardíaco, forma infantil e tardia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "tep-hemodinamicamente-estavel-rivaroxabana-isolada-einstein-pe",
+    "target_title": "Embolia pulmonar aguda sintomática, hemodinamicamente estável: dá para tratar só com rivaroxabana oral, sem heparina inicial?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "fisiologia-ventriculo-unico",
+    "target_type": "estudo",
+    "target_slug": "mathur2020-seguranca-do-enalapril-em-lactentes-com-ventriculo-unico",
+    "target_title": "Mathur 2020 — Segurança do enalapril em lactentes com fisiologia de ventrículo único: dados do Infant Single Ventricle Trial",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "fragilidade-pre-procedimento-cardiovascular",
+    "target_type": "exame",
+    "target_slug": "escore-de-fragilidade-pre-procedimento-cardiovascular",
+    "target_title": "Escore de fragilidade pré-procedimento cardiovascular (Essential Frailty Toolset)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "granulomatose-eosinofilica-com-poliangiite-egpa",
+    "target_type": "checklist",
+    "target_slug": "rastreio-cardiovascular-ativo-na-egpa-recem-diagnosticada",
+    "target_title": "Rastreio cardiovascular ativo na granulomatose eosinofílica com poliangiite (EGPA) recém-diagnosticada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-cronica-gravidez",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-cronica-gravidez",
+    "target_title": "Hipertensão crônica na gravidez",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar-pediatrica",
+    "target_type": "estudo",
+    "target_slug": "starts-2-sildenafila-sobrevida-hipertensao-pulmonar-pediatrica",
+    "target_title": "STARTS-2 — Sobrevida em longo prazo com sildenafila oral em monoterapia na hipertensão arterial pulmonar pediátrica virgem de tratamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipotensao-ortostatica-no-idoso",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-hipotensao-ortostatica-no-idoso-e-o-anti-hipertensivo",
+    "target_title": "Síncope e hipotensão ortostática no idoso: diagnóstico diferencial e a decisão sobre manter o anti-hipertensivo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipotermia-acidental",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "hipotermia-acidental-e-parada-cardiorrespiratoria",
+    "target_title": "Hipotermia acidental e parada cardiorrespiratória",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-cardiaca-no-idoso",
+    "target_type": "estudo",
+    "target_slug": "seniors-nebivolol-insuficiencia-cardiaca-no-idoso",
+    "target_title": "SENIORS — Nebivolol em pacientes idosos com insuficiência cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "intoxicacao-por-bufotoxinas",
+    "target_type": "caso_clinico",
+    "target_slug": "cha-de-sapo-bufotoxina-mimetiza-toxicidade-digitalica",
+    "target_title": "Chá de sapo-cururu: intoxicação por bufotoxinas mimetizando toxicidade digitálica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "laminopatia-cardiaca-lmna",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-e-manejo-da-cardiomiopatia-por-lmna-risco-arritmico-e-cdi",
+    "target_title": "Cardiomiopatia por LMNA (laminopatia cardíaca) e Distrofia Muscular de Emery-Dreifuss",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "polifarmacia-e-desprecricao-cardiovascular",
+    "target_type": "trilha",
+    "target_slug": "trilha-farmacologia-polifarmacia-e-desprescricao-cardiovascular-no-idoso",
+    "target_title": "Farmacologia da desprescrição: polifarmácia cardiovascular no idoso, da cascata de prescrição à retirada segura",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-de-alagille",
+    "target_type": "checklist",
+    "target_slug": "cardiopatia-congenita-associada-a-sindrome-de-alagille-vacterl-e-charge-espectro-e-manejo",
+    "target_title": "Cardiopatia congênita associada a síndromes genéticas — Alagille, VACTERL/VATER e CHARGE",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-de-alstrom",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-dilatada-infantil-sindrome-de-alstrom",
+    "target_title": "Cardiomiopatia Dilatada Infantil na Síndrome de Alström",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-de-timothy",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-de-timothy-cacna1c-sindactilia-qt-longo",
+    "target_title": "Síndrome de Timothy: sindactilia e QT longo extremo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-poems",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-poems-hipertensao-pulmonar-derrame-pericardico",
+    "target_title": "Síndrome POEMS: hipertensão pulmonar e derrame pericárdico como pista diagnóstica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular-fetal",
+    "target_type": "caso_clinico",
+    "target_slug": "taquicardia-supraventricular-fetal-com-hidropisia-qual-antiarritmico-transplacentario-de-primeira-linha",
+    "target_title": "Taquicardia supraventricular fetal com hidropisia: qual antiarrítmico transplacentário escolher primeiro?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tempestade-tireotoxica",
+    "target_type": "checklist",
+    "target_slug": "checklist-tempestade-tireotoxica-diagnostico-e-tratamento-sequenciado",
+    "target_title": "Tempestade tireotóxica: reconhecimento clínico e tratamento sequenciado da emergência cardiovascular",
+    "relation_type": "associated_with"
+  }
+]

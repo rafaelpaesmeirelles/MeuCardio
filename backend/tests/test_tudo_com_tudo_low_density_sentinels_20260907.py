@@ -73,3 +73,44 @@ def test_candidatos_exatos_de_baixa_densidade_nao_ficam_desconectados():
     checklist_slugs = {x["slug"] for x in checklists}
     assert {x[2] for x in EXACT_LOW_DENSITY_LINKS if x[1] == "caso_clinico"} <= case_slugs
     assert {x[2] for x in EXACT_LOW_DENSITY_LINKS if x[1] == "checklist"} <= checklist_slugs
+
+
+def test_coorte_exact_single_curada_esta_inteira_no_manifesto():
+    fixture = json.loads(
+        (ROOT / "scripts/fixtures/tudo_com_tudo_exact_single_candidates_20260907.json").read_text(encoding="utf-8")
+    )
+    assert len(fixture) == 31
+    relations = json.loads(RELACOES.read_text(encoding="utf-8"))
+    by_key = {
+        (x["source_disease_slug"], x["target_type"], x["target_slug"]): x
+        for x in relations
+    }
+    for expected in fixture:
+        key = (
+            expected["source_disease_slug"], expected["target_type"], expected["target_slug"],
+        )
+        assert key in by_key
+        relation = by_key[key]
+        assert relation["relation_type"] == "associated_with"
+        assert relation["review_status"] == "revisado"
+        assert relation["provenance_type"] == "editorial"
+        assert relation["confidence"] == "explicit"
+        assert relation["relevance_score"] == 1.0
+
+
+def test_coorte_exact_single_respeita_matriz_clinica_tipificada():
+    fixture = json.loads(
+        (ROOT / "scripts/fixtures/tudo_com_tudo_exact_single_candidates_20260907.json").read_text(encoding="utf-8")
+    )
+    for item in fixture:
+        validar_relacao_clinica(
+            source_type="doenca",
+            relation_type="associated_with",
+            target_type=item["target_type"],
+            relevance_score=1.0,
+            provenance_type="editorial",
+            confidence="explicit",
+            review_status="revisado",
+            evidence_source="doencas/relacoes-explicitas.json#exact-single-sentinela",
+            extra={"review_note": "coorte exact-single revisada"},
+        )

@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo; em 06/09/2026 foi ordenada a continuidade da auditoria e correção end-to-end. Esta autorização atualiza o inventário somente para correções estruturadas já revisadas da auditoria de baixa densidade: teratoma intrapericárdico fetal ligado a documentos e material específicos; reação a contraste iodado ligada a quatro evidências específicas de profilaxia; e três vínculos inequívocos já existentes no corpus para beribéri cardíaco, distrofia miotônica tipo 1 e fibroelastoma papilar cardíaco. Preserva os demais slugs, contagens, status editoriais e guardrails clínicos.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo; em 06/09/2026 foi ordenada a continuidade da auditoria e correção end-to-end. Esta autorização atualiza o inventário somente para correções estruturadas já revisadas da auditoria de baixa densidade: teratoma intrapericárdico fetal ligado a documentos e material específicos; reação a contraste iodado ligada a quatro evidências específicas de profilaxia; e três vínculos inequívocos já existentes no corpus para beribéri cardíaco, distrofia miotônica tipo 1 e fibroelastoma papilar cardíaco. Preserva os demais slugs, contagens, status editoriais e guardrails clínicos. Adicionalmente, a coorte curada exact-single incorpora 31 vínculos em que havia exatamente um item publicado com identidade clínica inequívoca ainda desconectado, todos como associação editorial explícita e revisada.",
   "expected_total": 11581,
-  "inventory_sha256": "8e125693b82616c1a6f1795618800705e054f8df11526b81d08ac9153f6dd961",
+  "inventory_sha256": "8d2ca229dce64a561bff618d7f23f45a36fa78573126a6670e3b90af4b1ce5ff",
   "fronts": {
     "casos_clinicos": {
       "count": 915,
@@ -29,7 +29,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "8e89cee5914a2c4466eeedb4554c96f6015f0e72cce24094a48d6969d1802e76"
+      "source_sha256": "a68b8cb0f4c769a990e4d7e55c64e6281747c94334beebcb340feb963df7f43b"
     },
     "emergencia": {
       "count": 77,
