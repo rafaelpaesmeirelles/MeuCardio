@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria de baixa densidade avançou para a coorte exact 4–5: 45 relações de 10 doenças foram conferidas como vínculos clínicos inequívocos entre itens já publicados e persistidas como relações editoriais explícitas/revisadas. Nenhum slug, contagem ou status editorial foi alterado; apenas a impressão da frente de doenças muda porque o manifesto de relações explícitas foi ampliado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria de baixa densidade avançou para a coorte exact 6–7: 45 relações de 7 doenças foram conferidas como vínculos clínicos inequívocos entre itens já publicados e persistidas como relações editoriais explícitas/revisadas. Nenhum slug, contagem ou status editorial foi alterado; apenas a impressão da frente de doenças muda porque o manifesto de relações explícitas foi ampliado.",
   "expected_total": 11581,
-  "inventory_sha256": "e4a9b20a88f4c85207372cc62dcaa7e9f14ec37b71964a42eed48bdf6ec73b19",
+  "inventory_sha256": "7a33ee24ea7885834fcfbb055ab890eafcbb0a8821e590f2f7b7dc705e0eba01",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "a5c0c724f86442e10ca5cc5f9f75d41a2d2634bccb79cad833519e90d1c32f64"
+      "source_sha256": "22699ccc03dfc101793e8bcb757b1191380615d0b1fb75965c44aea7daabc692"
     },
     "triagem_sintomas": {
       "count": 23,

@@ -1,0 +1,317 @@
+[
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "evidencia",
+    "target_slug": "albumina-modificada-baixo-valor-incremental-miocardite-pediatrica-achado",
+    "target_title": "Na suspeita clínica de miocardite pediátrica, a albumina modificada pela isquemia teve desempenho isolado modesto e acrescentou pouco aos bi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "evidencia",
+    "target_slug": "cmr-miocardite-pediatrica-covid-melhora-temporal-achado",
+    "target_title": "Em pequena coorte pediátrica relacionada à COVID-19, edema, realce tardio e derrame pericárdico geralmente regrediram, com função biventricu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "estudo",
+    "target_slug": "albumina-modificada-isquemia-miocardite-pediatrica-diagnostico-2026",
+    "target_title": "Ischemia-modified albumin in children with clinically suspected acute myocarditis: diagnostic performance and incremental value beyond conventional biomarkers",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "estudo",
+    "target_slug": "ressonancia-longo-prazo-miocardite-pediatrica-covid-2026",
+    "target_title": "Long-term CMR Findings in Pediatric COVID-19 Related Myocarditis",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "caso_clinico",
+    "target_slug": "miocardite-pediatrica-biopsia-endomiocardica-estratifica-prognostico-registro-mykke",
+    "target_title": "Miocardite pediátrica: a biópsia endomiocárdica estratifica prognóstico? O registro MYKKE",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "miocardite-pediatrica",
+    "target_type": "estudo",
+    "target_slug": "seidel-2022-mykke-registro-de-miocardite-biopsiada-pediatrica",
+    "target_title": "Registro MYKKE — características clínicas e desfecho da miocardite pediátrica comprovada por biópsia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "caso_clinico",
+    "target_slug": "af-doac-vs-varfarina-paciente-fragil-idoso-combine-af",
+    "target_title": "DOAC é sempre a melhor escolha em fibrilação atrial no idoso frágil?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "documento",
+    "target_slug": "rastreio-populacional-de-fibrilacao-atrial-no-idoso-loop-e-strokestop",
+    "target_title": "Rastreio Populacional de Fibrilação Atrial no Idoso: LOOP e STROKESTOP",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "evidencia",
+    "target_slug": "fibrilacao-atrial-no-idoso-ecg-de-12-derivacoes-mesmo-assintomatico",
+    "target_title": "Recomenda-se eletrocardiograma de 12 derivações em todo paciente idoso com ritmo irregular ao exame clínico, para diagnóstico de fibrilação …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "evidencia",
+    "target_slug": "fibrilacao-atrial-no-idoso-ecocardiograma-transtoracico-sem-diagnostico-previo-de-ic",
+    "target_title": "O ecocardiograma transtorácico é recomendado em todo paciente idoso com fibrilação atrial e sem diagnóstico prévio de insuficiência cardíaca…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "evidencia",
+    "target_slug": "fibrilacao-atrial-no-idoso-maior-75-anos-em-varfarina-monitorizacao-mais-frequente-do-inr",
+    "target_title": "Em idosos em uso de varfarina para fibrilação atrial, especialmente acima de 75 anos, recomenda-se monitorização mais regular e com interval…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial-no-idoso",
+    "target_type": "exame",
+    "target_slug": "tsh-e-funcao-tireoidiana-no-diagnostico-inicial-da-fibrilacao-atrial-no-idoso",
+    "target_title": "TSH e função tireoidiana na avaliação inicial da fibrilação atrial no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "evidencia",
+    "target_slug": "esc2024-scc-ccta-primeira-linha-em-probabilidade-baixa-a-moderada",
+    "target_title": "Em indivíduos com suspeita de síndrome coronariana crônica (SCC) e probabilidade pré-teste baixa ou moderada (>5%-50%) de doença arterial co…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-imagem-anatomica-na-investigacao-e-na-alta",
+    "target_title": "Doença coronariana: a imagem anatômica na investigação da síndrome coronariana crônica, e o que muda na alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "evidencia",
+    "target_slug": "aas-em-dose-baixa-na-sindrome-coronariana-cronica-com-infarto-ou-revascularizacao-previos",
+    "target_title": "Recomenda-se ácido acetilsalicílico em dose baixa (75-100 mg/dia) em pacientes com síndrome coronariana crônica e antecedente de infarto do …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "evidencia",
+    "target_slug": "estatina-recomendada-para-todos-os-pacientes-com-sindrome-coronariana-cronica",
+    "target_title": "Recomenda-se terapia com estatina para todos os pacientes com síndrome coronariana crônica.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "evidencia",
+    "target_slug": "ieca-recomendado-na-sindrome-coronariana-cronica-com-comorbidades-associadas",
+    "target_title": "Recomenda-se o uso de inibidor da enzima conversora de angiotensina (IECA) em pacientes com síndrome coronariana crônica que apresentem hipe…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-cronica",
+    "target_type": "evidencia",
+    "target_slug": "esc-2024-ccs-semaglutida-sobrepeso-obesidade-sem-diabetes",
+    "target_title": "O agonista do receptor de GLP-1 semaglutida deve ser considerado em pacientes com síndrome coronariana crônica, sobrepeso (IMC >27 kg/m²) ou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-takotsubo-e-transtornos-de-ansiedade-como-diagnostico-diferencial-cardiaco",
+    "target_title": "Cardiomiopatia de Takotsubo e Transtornos de Ansiedade como Diagnóstico Diferencial Cardíaco",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "caso_clinico",
+    "target_slug": "estresse-agudo-como-gatilho-de-sindrome-coronariana-aguda-e-de-takotsubo",
+    "target_title": "Estresse agudo como gatilho: síndrome coronariana aguda e cardiomiopatia de takotsubo",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "galeria",
+    "target_slug": "takotsubo-abaulamento-apical-ventriculografia",
+    "target_title": "Ventriculografia esquerda — Abaulamento apical na cardiomiopatia de takotsubo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "evidencia",
+    "target_slug": "rmc-na-suspeita-de-cardiomiopatia-de-takotsubo",
+    "target_title": "A ressonância magnética cardíaca é recomendada na avaliação da suspeita diagnóstica de cardiomiopatia de Takotsubo, incluindo a avaliação da…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "evidencia",
+    "target_slug": "rmc-para-avaliacao-de-trombo-apical-no-takotsubo",
+    "target_title": "A ressonância magnética cardíaca é recomendada para avaliação de trombo apical em paciente com diagnóstico de cardiomiopatia de Takotsubo. O…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "exame",
+    "target_slug": "razao-nt-probnp-troponina-na-cardiomiopatia-de-takotsubo",
+    "target_title": "Razão NT-proBNP/troponina e NT-proBNP/mioglobina no diagnóstico diferencial da cardiomiopatia de Takotsubo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-de-takotsubo",
+    "target_type": "galeria",
+    "target_slug": "ventriculografia-takotsubo-balonamento-apical",
+    "target_title": "Ventriculografia esquerda — Balonamento apical na cardiomiopatia de Takotsubo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "jcs2022-operar-a-insuficiencia-valvar-grave-assintomatica-com-funcao-preservada",
+    "target_title": "Em pacientes com insuficiência aórtica ou mitral grave ASSINTOMÁTICA e função ventricular esquerda preservada, deve-se considerar realizar a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-insuficiencia-aortica-grave-assintomatica-sbc-2024",
+    "target_title": "Na insuficiência aórtica GRAVE, assintomática ou com sintomas duvidosos, o ecocardiograma sob estresse deve ser considerado para avaliar sin…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-nao-recomendado-para-quantificar-insuficiencia-aortica-sbc-2024",
+    "target_title": "O ecocardiograma sob estresse — exercício ou dobutamina — NÃO é recomendado para QUANTIFICAR a insuficiência aórtica quando há discordância …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "valv-cortes-de-diametro-para-cirurgia-na-insuficiencia-aortica",
+    "target_title": "Na insuficiência aórtica, a cirurgia de troca valvar deve ser considerada por DIÂMETRO ventricular, e a SBC é a única das três a separar por…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "valv-seguimento-mais-curto-da-esc-na-insuficiencia-aortica-importante",
+    "target_title": "DIVERGÊNCIA DE SEGUIMENTO. Na insuficiência aórtica importante assintomática e sem complicadores, SBC e AHA reavaliam a cada 6 MESES A 1 ANO…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-aortica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-cirurgia-na-insuficiencia-aortica-e-os-diametros",
+    "target_title": "No idoso com insuficiência aórtica, a cirurgia é recomendada no SINTOMÁTICO — independentemente da função sistólica — e no assintomático com…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-doenca-estrutural-atras-do-rotulo-generico",
+    "target_title": "Cardiologia geriátrica: doença estrutural escondida atrás de rótulos genéricos — amiloidose, síndrome cardiorrenal e insuficiência tricúspide negligenciada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "trilha",
+    "target_slug": "trilha-insuficiencia-cardiaca-cardiorrenal-obesidade-e-reabilitacao-fisica",
+    "target_title": "Insuficiência cardíaca: síndrome cardiorrenal, obesidade na ICFEp e reabilitação física pós-alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "trilha",
+    "target_slug": "trilha-insuficiencia-cardiaca-direita-tricuspide-e-congestao",
+    "target_title": "Insuficiência cardíaca direita e congestão: da doença tricúspide ao manejo clínico da síndrome cardiorrenal",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-diuretico-resistente-na-sindrome-cardiorrenal",
+    "target_title": "Fluxograma: diurético resistente na síndrome cardiorrenal",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-cardiorrenal-tipo-1-creatinina-subindo-suspender-ieca-espironolactona",
+    "target_title": "IC aguda com creatinina subindo sob diurético: suspender IECA e espironolactona por reflexo?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-da-sindrome-cardiorrenal-na-insuficiencia-cardiaca",
+    "target_title": "Piora da função renal em paciente com insuficiência cardíaca (síndrome cardiorrenal)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-cardiorrenal",
+    "target_type": "exame",
+    "target_slug": "bioimpedancia-vetorial-biva-na-avaliacao-de-congestao-na-insuficiencia-cardiaca-com-doenca-renal-cronica",
+    "target_title": "Bioimpedância vetorial (BIVA) na avaliação de congestão em pacientes com insuficiência cardíaca e doença renal crônica (síndrome cardiorrenal)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto",
+    "target_title": "Estenose tricúspide reumática achada no pré-operatório de cirurgia mitral: operar as duas valvas juntas?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-et-grave-tratar-cirurgicamente-se-sintomatica-ou-junto-com-lado-esquerdo",
+    "target_title": "Estenose tricúspide grave deve ser tratada cirurgicamente se sintomática ou no contexto de cirurgia valvar do lado esquerdo.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-et-valvuloplastia-por-balao-em-casos-selecionados",
+    "target_title": "A valvuloplastia por balão para estenose tricúspide pode ser considerada pela equipe de coração em casos selecionados, como pacientes de alt…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "checklist",
+    "target_slug": "estenose-tricuspide-reumatica-avaliacao-diagnostica-e-decisao-de-manejo-combinado",
+    "target_title": "Estenose tricúspide reumática — avaliação diagnóstica e decisão de manejo combinado com a valvopatia do lado esquerdo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "evidencia",
+    "target_slug": "cirurgia-na-estenose-tricuspide-associada-a-intervencao-valvar-esquerda",
+    "target_title": "A cirurgia é recomendada em paciente com estenose tricúspide grave submetido a intervenção de valva esquerda — recomendação distinta da indi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "evidencia",
+    "target_slug": "cirurgia-na-estenose-tricuspide-grave-sintomatica",
+    "target_title": "A cirurgia é recomendada no paciente sintomático com estenose tricúspide grave.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-tricuspide",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-estenose-tricuspide-isolada-sintomatica",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na estenose tricúspide importante ISOLADA e SINTOMÁTICA, a SBC dá à troca ou plástica valvar Classe IIa nível …",
+    "relation_type": "supported_by"
+  }
+]
