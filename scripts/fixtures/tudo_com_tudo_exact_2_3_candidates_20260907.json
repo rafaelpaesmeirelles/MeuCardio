@@ -1,0 +1,268 @@
+[
+  {
+    "source_disease_slug": "doenca-arterial-periferica-de-membros",
+    "target_type": "evidencia",
+    "target_slug": "sbacv2024-c7-antitrombotico-de-rotina-nao-recomendado-em-dap-assintomatica-isolada",
+    "target_title": "Terapia antitrombótica de rotina (antiplaquetária ou anticoagulante) NÃO é recomendada para doença arterial periférica de membros inferiores…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-arterial-periferica-de-membros",
+    "target_type": "evidencia",
+    "target_slug": "sbacv2024-c2-cessacao-de-tabagismo-para-prevenir-dap-e-mace-male",
+    "target_title": "Cessação do tabagismo é recomendada para prevenir doença arterial periférica de membros inferiores e para prevenir eventos cardiovasculares …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-arterial-periferica-de-membros",
+    "target_type": "evidencia",
+    "target_slug": "exercicio-fisico-supervisionado-claudicacao-intermitente",
+    "target_title": "Treinamento com exercício físico supervisionado é recomendado para pacientes com doença arterial periférica de membros inferiores e claudica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "torsades-de-pointes-qt-longo-adquirido",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "torsades-de-pointes-e-qt-longo-adquirido",
+    "target_title": "Torsades de pointes e QT longo adquirido",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "torsades-de-pointes-qt-longo-adquirido",
+    "target_type": "checklist",
+    "target_slug": "manejo-agudo-de-torsades-de-pointes-e-qt-longo-adquirido",
+    "target_title": "Torsades de pointes (TdP) em curso ou risco elevado de TdP por QT longo adquirido (fármaco, distúrbio eletrolítico ou combinação dos dois) em paciente internado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia",
+    "target_title": "Endocardite infecciosa em adolescente com tetralogia de Fallot corrigida: o perfil microbiológico muda com a cardiopatia de base?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-pediatrica",
+    "target_type": "material_paciente",
+    "target_slug": "endocardite-pediatrica",
+    "target_title": "Endocardite infecciosa em crianças: entenda a infecção do coração",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-behcet",
+    "target_type": "checklist",
+    "target_slug": "anticoagulacao-em-trombose-venosa-ou-trombo-intracardiaco-na-doenca-de-behcet",
+    "target_title": "Decisão de anticoagular trombose venosa profunda ou trombo intracardíaco em paciente com doença de Behçet confirmada ou suspeita",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-behcet",
+    "target_type": "material_paciente",
+    "target_slug": "doenca-de-behcet-e-o-coracao-por-que-ela-causa-trombose-e-aneurismas-ao-mesmo-tempo",
+    "target_title": "Doença de Behçet e o coração: por que ela pode causar trombose e aneurismas ao mesmo tempo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "aldosteronismo-primario",
+    "target_type": "checklist",
+    "target_slug": "aldosteronismo-primario-subtipagem-avs-adrenalectomia-ou-mra",
+    "target_title": "Aldosteronismo primário confirmado — subtipagem por TC/AVS e decisão entre adrenalectomia e antagonista mineralocorticoide",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "aldosteronismo-primario",
+    "target_type": "evidencia",
+    "target_slug": "esc2024-considerar-rastreio-de-aldosteronismo-primario-em-todo-hipertenso",
+    "target_title": "O rastreio de aldosteronismo primário por dosagem de renina e aldosterona deve ser considerado em todo adulto com hipertensão confirmada — n…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope-pediatrica",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-pediatrica-e-do-adolescente",
+    "target_title": "Síncope na criança e no adolescente: diagnóstico, o que a farmacoterapia do adulto não repete, e quando monitorizar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope-pediatrica",
+    "target_type": "estudo",
+    "target_slug": "salim-disessa-2005-fludrocortisona-e-sal-na-sincope-pediatrica",
+    "target_title": "Fludrocortisona e sal na prevenção de recorrência de síncope em crianças — ensaio randomizado, duplo-cego, controlado por placebo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "miocardite-por-inibidor-checkpoint",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "miocardite-por-inibidor-de-checkpoint-imune",
+    "target_title": "Miocardite por inibidor de checkpoint imune",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "miocardite-por-inibidor-checkpoint",
+    "target_type": "checklist",
+    "target_slug": "miocardite-por-ici-emergencia",
+    "target_title": "Miocardite por inibidor de checkpoint imune — atendimento de emergência",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "retorno-venoso-pulmonar-anomalo",
+    "target_type": "documento",
+    "target_slug": "retorno-venoso-pulmonar-anomalo-papvr-tapvr-no-adulto",
+    "target_title": "Retorno Venoso Pulmonar Anômalo (PAPVR/TAPVR) no Adulto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "retorno-venoso-pulmonar-anomalo",
+    "target_type": "documento",
+    "target_slug": "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos",
+    "target_title": "Retorno Venoso Pulmonar Anômalo no Período Fetal: Limitações Diagnósticas e Sinais Indiretos",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "retorno-venoso-pulmonar-anomalo",
+    "target_type": "material_paciente",
+    "target_slug": "retorno-venoso-pulmonar-anomalo-fetal",
+    "target_title": "Quando as Veias dos Pulmões do Bebê Precisam de um Olhar Mais Atento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "atresia-tricuspide",
+    "target_type": "checklist",
+    "target_slug": "atresia-tricuspide-classificacao-edwards-burchell-e-via-cirurgica-estagiada-ao-fontan",
+    "target_title": "Atresia tricúspide — classificação anatômica e via cirúrgica estagiada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "atresia-tricuspide",
+    "target_type": "galeria",
+    "target_slug": "angiotomografia-fontan-e-glenn-em-atresia-tricuspide",
+    "target_title": "Angiotomografia — conduto de Fontan e shunt de Glenn em atresia tricúspide operada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "atresia-tricuspide",
+    "target_type": "galeria",
+    "target_slug": "atresia-tricuspide-diagrama-anatomico",
+    "target_title": "Atresia tricúspide — diagrama anatômico com fluxo compensatório (CIA + CIV)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "amiloidose-cardiaca-idoso",
+    "target_type": "exame",
+    "target_slug": "cadeias-leves-livres-e-imunofixacao-no-algoritmo-nao-invasivo-da-amiloidose-cardiaca-no-idoso",
+    "target_title": "Cadeias leves livres séricas (kappa/lambda) e imunofixação sérica/urinária no algoritmo diagnóstico da amiloidose cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "amiloidose-cardiaca-idoso",
+    "target_type": "galeria",
+    "target_slug": "eco-strain-apical-sparing-amiloidose-cardiaca-idoso",
+    "target_title": "Ecocardiograma com strain — padrão de \"apical sparing\" (cherry on top) na amiloidose cardíaca do idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-resistente-e-refrataria",
+    "target_type": "checklist",
+    "target_slug": "escalonamento-terapeutico-na-hipertensao-resistente-e-refrataria-sbc-2025",
+    "target_title": "Hipertensão resistente e refratária — algoritmo terapêutico passo a passo (SBC/SBN/SBH 2025)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-resistente-e-refrataria",
+    "target_type": "evidencia",
+    "target_slug": "clonidina-para-metas-rigorosas-de-pa-na-hipertensao-resistente-e-refrataria-sbc-2025",
+    "target_title": "A clonidina é recomendada para atingir metas rigorosas de PA (<130/80mmHg) e reduzir eventos cardiovasculares e renais quando essas metas nã…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-resistente-e-refrataria",
+    "target_type": "evidencia",
+    "target_slug": "uso-concomitante-de-ieca-e-bra-nao-e-recomendado-sbc-2025-has",
+    "target_title": "O uso concomitante de IECA e BRA não é recomendado, inclusive na abordagem da hipertensão resistente e refratária e da hipertensão com doenç…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-por-sobrecarga-de-ferro",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatia-sobrecarga-de-ferro-hemocromatose-e-talassemia",
+    "target_title": "Cardiomiopatia por Sobrecarga de Ferro: da Hemocromatose e da Talassemia ao T2* e à Quelação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-por-sobrecarga-de-ferro",
+    "target_type": "checklist",
+    "target_slug": "cardiomiopatia-sobrecarga-de-ferro",
+    "target_title": "Cardiomiopatia por Sobrecarga de Ferro (Hemocromatose Hereditária e Sobrecarga de Ferro Secundária/Transfusional)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-por-sobrecarga-de-ferro",
+    "target_type": "evidencia",
+    "target_slug": "ferro-t1-nativo-reduzido-distingue-a-sobrecarga",
+    "target_title": "Na cardiomiopatia por sobrecarga de ferro o mapa T1 nativo é REDUZIDO — ao contrário da amiloidose e da maior parte das cardiomiopatias infi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "dissecao-aortica-tipo-b",
+    "target_type": "caso_clinico",
+    "target_slug": "dissecao-aortica-tipo-b-nao-complicada-tevar-preemptivo-instead-xl",
+    "target_title": "Dissecção aórtica tipo B estável, sem complicação: vale associar um stent endovascular ao tratamento clínico?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "dissecao-aortica-tipo-b",
+    "target_type": "evidencia",
+    "target_slug": "instead-endoprotese-na-dissecao-aortica-tipo-b-implicacao-do-ensaio",
+    "target_title": "No INSTEAD, TEVAR eletivo na dissecção tipo B não complicada não melhorou mortalidade em 2 anos vs terapia médica (sobrevida 88,9% vs 95,6%;…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "dissecao-aortica-tipo-b",
+    "target_type": "estudo",
+    "target_slug": "instead-endoprotese-na-dissecao-aortica-tipo-b",
+    "target_title": "INSTEAD — Comparação randomizada de estratégias na dissecção aórtica tipo B",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-antifosfolipide-catastrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-antifosfolipide-catastrofica-minoca-perioperatorio",
+    "target_title": "SAF catastrófica (CAPS) com MINOCA perioperatória",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-antifosfolipide-catastrofica",
+    "target_type": "checklist",
+    "target_slug": "acometimento-cardiaco-sindrome-antifosfolipide-catastrofica",
+    "target_title": "Acometimento cardíaco na síndrome antifosfolípide catastrófica (CAPS)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertireoidismo-apatico-idoso",
+    "target_type": "checklist",
+    "target_slug": "nao-perder-hipertireoidismo-apatico-no-idoso",
+    "target_title": "Suspeita de hipertireoidismo apático no idoso diante de fibrilação atrial nova, perda de peso involuntária ou insuficiência cardíaca de início/piora recente",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertireoidismo-apatico-idoso",
+    "target_type": "material_paciente",
+    "target_slug": "hipertireoidismo-apatico-no-idoso-por-que-parece-so-cansaco",
+    "target_title": "Hipertireoidismo silencioso no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "gaucher-tipo-3c",
+    "target_type": "checklist",
+    "target_slug": "calcificacao-valvar-grave-em-paciente-jovem-suspeita-de-gaucher-tipo-3c",
+    "target_title": "Calcificação valvar aórtica/mitral grave em paciente jovem — suspeita de doença de Gaucher tipo 3c",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "gaucher-tipo-3c",
+    "target_type": "material_paciente",
+    "target_slug": "doenca-de-gaucher-tipo-3c-cuidando-do-coracao",
+    "target_title": "Doença de Gaucher tipo 3c: por que cuidar do coração também",
+    "relation_type": "associated_with"
+  }
+]
