@@ -9,7 +9,7 @@ review_status: pendente_revisao
 review_note: "Pacote Tudo-com-Tudo 07/09/2026: lacuna além de #854 (SAMS) e #875 (AOS). Protocolo HF/DLCN e fluxograma DLCN já cobrem diagnóstico/manejo; este doc densifica o braço operacional de cascata ambulatorial. ESC/EAS 2019 PMID 31504418; ESC/EAS 2025 PMID 40878289; Nordestgaard EAS 2013 PMID 23956253; Cuchel HoFH 2023 PMID 37130090. Sem doses."
 source_refs:
   - "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418"
-  - "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J.. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289"
+  - "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289"
   - "Nordestgaard BG, Chapman MJ, Humphries SE, et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: EAS consensus. Eur Heart J. 2013;34(45):3478-3490. DOI: 10.1093/eurheartj/eht273. PMID: 23956253"
   - "Cuchel M, Raal FJ, Hegele RA, et al. 2023 Update on EAS Consensus Statement on Homozygous Familial Hypercholesterolaemia. Eur Heart J. 2023;44(25):2277-2291. DOI: 10.1093/eurheartj/ehad197. PMID: 37130090"
 ---
@@ -36,7 +36,7 @@ Cascata **não** é: painel genômico de rotina em toda a família sem caso-índ
 | Situação do índice | Cascata agora? |
 |---|---|
 | HF **definitiva** ou **provável** (DLCN ≥6) | Sim — familiares de 1º grau |
-| Mutacao patogênica conhecida em *LDLR*/*APOB*/*PCSK9* | Sim — preferir teste dirigido à variante do índice quando disponível |
+| Mutação patogênica conhecida em *LDLR*/*APOB*/*PCSK9* | Sim — preferir teste dirigido à variante do índice quando disponível |
 | Suspeita de **HoFH** (LDL sem tratamento muito alto + xantomas precoces / pais com HF) | Sim, **urgente** — pais e irmãos; escalar lipidologia (doc irmão) |
 | HF **possível** (DLCN 3–5) sem DNA | Ainda não fechar cascata ampla: excluir secundárias, repetir perfil, considerar DNA antes de expandir |
 | DLCN ≤2 / HF improvável | Não iniciar cascata de HF |
