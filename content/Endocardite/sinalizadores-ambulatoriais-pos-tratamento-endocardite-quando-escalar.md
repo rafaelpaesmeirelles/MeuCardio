@@ -8,7 +8,7 @@ summary: "Pacote operacional de consultório após alta por EI tratada: quais al
 review_status: pendente_revisao
 review_note: "Pacote Tudo-com-Tudo 07/09/2026: lacuna fina de FOLLOW-UP ambulatorial pós-EI (além de #853 suspeita). Anti-colisão: não duplica suspeita pré-diagnóstico, recidiva relapso vs reinfecção (definições), profilaxia odontológica com regimes, Duke nem timing cirúrgico. Fontes: ESC 2023 PMID 37622656. Sem doses; sem PMID inventado. Evita PRs #853/#866 e faixa #854–887+."
 source_refs:
-  - "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J.. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656"
+  - "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656"
 ---
 
 # Sinalizadores ambulatoriais pós-tratamento de endocardite: quando escalar e quando reavaliar
