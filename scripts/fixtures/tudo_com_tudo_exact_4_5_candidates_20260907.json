@@ -1,0 +1,317 @@
+[
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "recem-nascido-cianotico-com-atresia-pulmonar-e-septo-interventricular-integro-anatomia-do-vd-decide-a-via-cirurgica",
+    "target_title": "Recém-nascido cianótico com atresia pulmonar e septo interventricular íntegro: a anatomia do ventrículo direito decide entre reparo biventricular ou via univentricular?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "estudo",
+    "target_slug": "ashburn-2004-determinantes-de-mortalidade-e-tipo-de-reparo-em-atresia-pulmonar-com-septo-intacto",
+    "target_title": "Determinantes de mortalidade e do tipo de reparo definitivo em neonatos com atresia pulmonar e septo interventricular íntegro",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "estudo",
+    "target_slug": "guleserian-2006-historia-natural-da-atresia-pulmonar-com-circulacao-coronariana-dependente-do-vd",
+    "target_title": "História natural da atresia pulmonar com septo íntegro e circulação coronariana dependente do ventrículo direito manejada pela via de ventrículo único",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "galeria",
+    "target_slug": "atresia-pulmonar-com-civ-tetralogia-de-fallot-extrema-diagrama-cdc",
+    "target_title": "Atresia pulmonar com comunicação interventricular (tetralogia de Fallot extrema) — diagrama anatômico (CDC)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "atresia-pulmonar",
+    "target_type": "galeria",
+    "target_slug": "atresia-pulmonar-septo-ventricular-intacto-diagrama-cdc",
+    "target_title": "Atresia pulmonar com septo ventricular intacto — diagrama anatômico (CDC)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tronco-arterial-comum",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-tc-tronco-arterial-comum-defeito-residual-ou-estenose-de-conduto",
+    "target_title": "A angiotomografia é recomendada no pós-operatório de tronco arterial comum (truncus arteriosus) para investigar defeito septal residual conh…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tronco-arterial-comum",
+    "target_type": "caso_clinico",
+    "target_slug": "recem-nascido-cianotico-com-sopro-holossistolico-e-segunda-bulha-unica-suspeita-de-tronco-arterial-comum",
+    "target_title": "Recém-nascido cianótico com sopro holossistólico rude e segunda bulha única: por que pensar em tronco arterial comum antes da alta da maternidade?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tronco-arterial-comum",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-tronco-arterial-comum-diagnostico-cirurgia-e-complicacoes",
+    "target_title": "Tronco arterial comum: do diagnóstico diferencial da cianose neonatal às complicações da cirurgia complexa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tronco-arterial-comum",
+    "target_type": "galeria",
+    "target_slug": "tronco-arterial-comum-truncus-arteriosus-radiografia-de-torax",
+    "target_title": "Tronco arterial comum (truncus arteriosus) não corrigido — radiografia de tórax com cardiomegalia e plethora pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-gestacional",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-limiares-de-inicio-de-anti-hipertensivo-na-gestacao",
+    "target_title": "Em hipertensão gestacional, hipertensão prévia com hipertensão gestacional sobreposta, ou hipertensão com lesão subclínica de órgão-alvo ou …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-gestacional",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-metildopa-no-tratamento-da-hipertensao-gestacional",
+    "target_title": "Metildopa é recomendada para o tratamento da hipertensão na gestação.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-gestacional",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-labetalol-e-antagonista-de-calcio-no-tratamento-da-hipertensao-gestacional",
+    "target_title": "Labetalol e antagonistas do canal de cálcio são recomendados para o tratamento da hipertensão na gestação.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-gestacional",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-parto-em-37-semanas-na-hipertensao-gestacional-ou-pre-eclampsia-leve",
+    "target_title": "Em hipertensão gestacional ou pré-eclâmpsia leve, parto é recomendado com 37 semanas de gestação.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-gestacional",
+    "target_type": "estudo",
+    "target_slug": "hypitat-inducao-do-parto-versus-conduta-expectante-na-hipertensao-gestacional",
+    "target_title": "HYPITAT — Indução do parto versus monitorização expectante na hipertensão gestacional ou pré-eclâmpsia leve a termo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "persistencia-canal-arterial",
+    "target_type": "evidencia",
+    "target_slug": "sbc2020-nao-repetir-eco-em-operado-sem-defeito-residual",
+    "target_title": "Exames ecocardiográficos periódicos NÃO são recomendados em pacientes operados de persistência do canal arterial, comunicação interatrial, c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "persistencia-canal-arterial",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-tc-pca-avaliacao-pos-tratamento-de-complicacao",
+    "target_title": "A angiotomografia é recomendada na avaliação pós-tratamento da persistência do canal arterial quando há suspeita de complicação aórtica ou d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "persistencia-canal-arterial",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-nao-repetir-eco-em-operado-sem-defeito-residual",
+    "target_title": "O ecocardiograma NÃO é recomendado como exame periódico em pacientes OPERADOS de persistência do canal arterial, comunicação interatrial, co…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "persistencia-canal-arterial",
+    "target_type": "galeria",
+    "target_slug": "persistencia-do-canal-arterial-no-adulto-doppler-colorido",
+    "target_title": "Persistência do canal arterial não tratada no adulto — Doppler colorido com fluxo anormal para a artéria pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "persistencia-canal-arterial",
+    "target_type": "evidencia",
+    "target_slug": "eco-no-recem-nascido-com-suspeita-clinica-de-persistencia-do-canal-arterial",
+    "target_title": "No recém-nascido, o ecocardiograma é recomendado diante de suspeita clínica de persistência do canal arterial (PCA), tanto para avaliar sua …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-tc-defeito-do-septo-atrioventricular-com-sinais-de-ic",
+    "target_title": "A angiotomografia é indicada no seguimento pós-operatório de defeito do septo atrioventricular (canal atrioventricular) em paciente que evol…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "defeito-do-septo-atrioventricular-total-reparo-primario-precoce-versus-bandagem-de-arteria-pulmonar-coorte-australiana",
+    "target_title": "Canal AV total em lactente com síndrome de Down: bandagem paliativa ou reparo primário precoce?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "estudo",
+    "target_slug": "fong2021-preditores-de-reoperacao-e-mortalidade-apos-reparo-do-defeito-do-septo-atrioventricular-total",
+    "target_title": "Fong 2021 — Preditores de reoperação e mortalidade após reparo do defeito do septo atrioventricular total (Australian CAVSD study)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "defeito-septo-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "canal-atrioventricular-completo-eco-4-camaras",
+    "target_title": "Defeito do septo atrioventricular completo (canal atrioventricular completo) — corte ecocardiográfico setorial",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-arterial-sistemica",
+    "target_type": "documento",
+    "target_slug": "hipertensao-arterial-sistemica-na-crianca-e-no-adolescente-diagnostico-por-percentil-causas-secundarias-e-tratamento-aap-2017",
+    "target_title": "Hipertensão Arterial Sistêmica na Criança e no Adolescente: Diagnóstico por Percentil, Causas Secundárias e Tratamento (AAP 2017)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-arterial-sistemica",
+    "target_type": "evidencia",
+    "target_slug": "tratamento-anti-hipertensivo-no-idoso-com-estenose-aortica-assintomatica",
+    "target_title": "Em idosos com estenose aórtica assintomática, a hipertensão arterial sistêmica deve ser tratada, iniciando com dose baixa de anti-hipertensi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-arterial-sistemica",
+    "target_type": "evidencia",
+    "target_slug": "has-controle-rigoroso-reduz-recorrencia-de-fa",
+    "target_title": "O tratamento da hipertensão arterial sistêmica com controle rigoroso dos níveis pressóricos está indicado para reduzir a recorrência de fibr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-arterial-sistemica",
+    "target_type": "evidencia",
+    "target_slug": "eco-na-crianca-e-adolescente-com-hipertensao-arterial",
+    "target_title": "Em crianças e adolescentes com hipertensão arterial sistêmica, o ecocardiograma é recomendado para avaliação de repercussão cardíaca da sobr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "dispositivos-cardiacos-implantaveis",
+    "target_type": "evidencia",
+    "target_slug": "chagas-holter-no-seguimento-de-portador-de-dispositivo",
+    "target_title": "Na cardiomiopatia chagásica, o Holter é recomendação FORTE no seguimento de portadores de dispositivos cardíacos implantáveis — marca-passo,…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "dispositivos-cardiacos-implantaveis",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-manejo-perioperatorio-marcapasso-cdi-cied",
+    "target_title": "Fluxograma: Manejo perioperatório de marca-passo, CDI e outros dispositivos cardíacos eletrônicos implantáveis (CIED)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "dispositivos-cardiacos-implantaveis",
+    "target_type": "checklist",
+    "target_slug": "indicacoes-de-dispositivo-cardiaco-eletronico-implantavel-em-pediatria-paces-2021",
+    "target_title": "Dispositivos cardíacos eletrônicos implantáveis em pediatria — indicações PACES 2021",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "dispositivos-cardiacos-implantaveis",
+    "target_type": "evidencia",
+    "target_slug": "ressonancia-magnetica-em-dispositivo-condicional-exige-modo-rm-e-fluxo-padronizado",
+    "target_title": "Dispositivos cardíacos eletrônicos implantáveis (DCEI) condicionais para ressonância magnética (RM) só devem ser considerados seguros para o…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-tricuspide",
+    "target_type": "caso_clinico",
+    "target_slug": "indicacao-de-teer-tricuspide-em-octogenario-fragil-com-insuficiencia-tricuspide-grave",
+    "target_title": "Insuficiência tricúspide grave aos 83 anos: a idade isolada contraindica o reparo percutâneo?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "insuficiencia-tricuspide",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-doenca-estrutural-atras-do-rotulo-generico",
+    "target_title": "Cardiologia geriátrica: doença estrutural escondida atrás de rótulos genéricos — amiloidose, síndrome cardiorrenal e insuficiência tricúspide negligenciada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-tricuspide",
+    "target_type": "caso_clinico",
+    "target_slug": "valvopatia-mitral-reumatica-com-insuficiencia-tricuspide-leve-operar-a-tricuspide-junto",
+    "target_title": "Cirurgia mitral reumática com insuficiência tricúspide apenas leve: operar a tricúspide junto?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "insuficiencia-tricuspide",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-mitral-e-tricuspide",
+    "target_title": "Valvopatias: regurgitação mitral e insuficiência tricúspide",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-tricuspide",
+    "target_type": "galeria",
+    "target_slug": "eco-insuficiencia-tricuspide-torrencial-doppler-colorido-no-idoso",
+    "target_title": "Ecocardiograma — Insuficiência tricúspide torrencial ao Doppler colorido, pré-reparo percutâneo, no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-de-protese-valvar",
+    "target_type": "estudo",
+    "target_slug": "pet-ct-metanalise-ipd-endocardite-de-protese-valvar",
+    "target_title": "Metanálise de dados de paciente individual — acurácia do PET-CT/FDG na endocardite de prótese valvar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-de-protese-valvar",
+    "target_type": "estudo",
+    "target_slug": "pizzi-2015-pet-ct-em-endocardite-de-protese-e-dispositivo-coorte-de-barcelona",
+    "target_title": "PET-CT/FDG na endocardite de prótese valvar e dispositivo — coorte prospectiva de centro de referência (Barcelona)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-de-protese-valvar",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-de-protese-valvar-pet-ct-como-criterio-diagnostico-maior",
+    "target_title": "Prótese valvar com PET-CT positivo e hemoculturas negativas: o que isso muda no diagnóstico?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-de-protese-valvar",
+    "target_type": "exame",
+    "target_slug": "pet-ct-com-fdg-na-endocardite-de-protese-valvar",
+    "target_title": "PET-CT com ¹⁸F-FDG na endocardite de prótese valvar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-de-protese-valvar",
+    "target_type": "exame",
+    "target_slug": "cintilografia-com-leucocitos-marcados-na-endocardite-de-protese",
+    "target_title": "Cintilografia com leucócitos marcados (WBC SPECT/CT) na endocardite de prótese valvar/dispositivo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "crise-adrenal",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-sheehan-crise-adrenal-secundaria-choque-refratario",
+    "target_title": "Choque refratário anos após hemorragia pós-parto: crise adrenal por síndrome de Sheehan",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "crise-adrenal",
+    "target_type": "checklist",
+    "target_slug": "choque-refratario-volume-vasopressor-suspeitar-crise-adrenal",
+    "target_title": "Choque cardiovascular refratário a volume e vasopressor com suspeita de crise adrenal (insuficiência adrenal aguda)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "crise-adrenal",
+    "target_type": "material_paciente",
+    "target_slug": "corticoide-cronico-e-crise-adrenal-o-que-voce-precisa-saber",
+    "target_title": "Corticoide crônico e crise adrenal: o que você precisa saber",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "crise-adrenal",
+    "target_type": "caso_clinico",
+    "target_slug": "crise-adrenal-choque-refratario-vasopressor",
+    "target_title": "Choque refratario a vasopressor: quando pensar em crise adrenal",
+    "relation_type": "used_in_case"
+  }
+]
