@@ -1,0 +1,69 @@
+---
+title: "Sinalizadores ambulatoriais de CMD: quando referir aconselhamento genético"
+slug: sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico
+theme: "Cardiomiopatias"
+kind: protocolo
+fonte_producao: grok
+summary: "Filtro de consultório na cardiomiopatia dilatada (CMD/NDLVC): quando disparar aconselhamento genético e rastreio familiar, quais red flags clínicas (LMNA/FLNC, história familiar, condução), e o que não é ‘pedido solto de painel’ — sem doses e sem reabrir estratificação completa de CDI."
+review_status: pendente_revisao
+review_note: "Pacote ambulatory DCM/ACM além de #844 (HCM/amiloide) e #862 (Chagas); anti-colisão com #849 Gravidez/PPCM e hubs #689/#723. Fontes: ESC 2023 PMID 37622657; EHRA 2022 PMID 35373836; Wahbi LMNA PMID 31155932. Sem doses."
+source_refs:
+  - "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194. PMID: 37622657"
+  - "Wilde AAM, Semsarian C, Márquez MF, et al. EHRA/HRS/APHRS/LAHRS Expert Consensus Statement on the State of Genetic Testing for Cardiac Diseases. Europace. 2022;24(8):1307-1367. DOI: 10.1093/europace/euac030. PMID: 35373836"
+  - "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. DOI: 10.1161/CIRCULATIONAHA.118.039410. PMID: 31155932"
+---
+
+# Sinalizadores ambulatoriais de CMD: quando referir aconselhamento genético
+
+Pergunta de **consultório**: paciente com **cardiomiopatia dilatada (CMD)** ou fenótipo **NDLVC** — **quando o próximo passo ambulatorial é aconselhamento genético** (e não “pedir painel sem plano familiar”), e quais sinais pedem **escalada urgente** antes da genética.
+
+Não substitui:
+- protocolo completo — [`cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023`](cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023.md);
+- árvore genética MS — [`fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita`](fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita.md);
+- CDI / risco — [`fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi`](fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi.md);
+- pacote HCM/amiloide (#844) nem Chagas (#862).
+
+Árvore irmã: [`fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar`](fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar.md). ACM: [`sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar`](sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar.md).
+
+## Princípio
+
+A ESC 2023 (PMID 37622657) e o consenso EHRA/HRS/APHRS/LAHRS 2022 (PMID 35373836) tratam **aconselhamento genético como pré-requisito** do teste — educação sobre herança, penetrância incompleta, implicações familiares/reprodutivas e direito de não testar. No ambulatorial, o gate é: **fenótipo de alta probabilidade + impacto em cuidado ou família** → referir aconselhamento; **não** “painel solto” em fenótipo fraco.
+
+## Encaminhar AGORA (PS / urgência) — antes da genética
+
+| Domínio | Sinalizadores |
+|---|---|
+| Arrítmico | Síncope / quase-síncope; TV sustentada; choque de CDI |
+| Condução | Bradicardia sintomática; BAV avançado novo |
+| IC | Ortopneia, DPN, hipoperfusão, edema agudo |
+| Familiar agudo | Morte súbita recente em 1º grau + sintoma novo no probando |
+
+**Conduta:** estabilizar e encaminhar. Genética **não** atrasa o PS.
+
+## Quando referir aconselhamento genético (ambulatorial)
+
+Disparar referência a **cardiogenética / aconselhamento estruturado** quando houver ≥1 dos gatilhos abaixo (ESC 2023 + EHRA 2022):
+
+1. **CMD/NDLVC de alta probabilidade** com intenção de teste (diagnóstico etiológico, prognóstico ou cascata familiar).
+2. **História familiar** de CMD, MS precoce inexplicada, marcapasso precoce, ou miopatia esquelética associada.
+3. **Pistas de genótipo de alto risco arrítmico** (pensar LMNA/FLNC e afins): BAV de 1º grau ou mais, TVNS, FA precoce, história familiar de condução/MS — a calculadora LMNA (Wahbi, PMID 31155932) **só após** genótipo confirmado; neste doc só o **gatilho de referência**.
+4. **Idade jovem / apresentação familiar** ou suspeita de cardiomiopatia hereditária mesmo se o paciente “ainda não quer o teste” — o aconselhamento informa a decisão.
+5. **Planejamento reprodutivo** com CMD/NDLVC ou variante conhecida na família.
+
+## O que NÃO fazer no consultório
+
+- Pedir painel amplo **sem** aconselhamento prévio.
+- Testar genes de evidência limitada/disputada em **fenótipo fraco** (EHRA 2022 — “não fazer”).
+- Usar **VUS** para liberar ou “fechar” rastreio em cascata — VUS → rastreio **clínico** dos parentes (ver fluxograma genética MS).
+- Substituir este filtro pelo hub de doenças (#689) ou pela estratificação completa de CDI.
+
+## Checklist de 90 segundos
+
+1. Alarme da tabela (síncope/TV/BAV/IC aguda)? → **PS agora**.
+2. Fenótipo CMD/NDLVC claro + (família / planejamento / suspeita hereditária)? → **aconselhamento genético**.
+3. Já há variante P/LP na família? → cascata dirigida + rastreio clínico dos portadores (EHRA).
+4. Sem doses / sem indicação de CDI neste pacote.
+
+## Limite da evidência
+
+Este texto é um **filtro de destino ambulatorial**. Classes de teste genético, listas de genes e calculadoras (LMNA) ficam nos documentos revisados linkados; prazos de retorno são operacionais, não classes inventadas.
