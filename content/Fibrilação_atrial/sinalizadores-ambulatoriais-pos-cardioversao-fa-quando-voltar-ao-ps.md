@@ -8,7 +8,7 @@ summary: "Pacote operacional pós-cardioversão elétrica ou química de FA: qua
 review_status: pendente_revisao
 review_note: "PIVOT 07/09/2026: lacuna ambulatorial PÓS-CARDIOVERSÃO (retorno ao PS) em Fibrilação_atrial. Além de #827 (anticoag pós-ablação/DRC) e #852 (falha de frequência/IC + complicação pós-ablação). Não reescreve cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024 nem fluxograma peri. Fontes: ESC AF 2024 PMID 39210723; SBC/SOBRAC 2025 PMID 41294177. Sem doses; sem PMID inventado."
 source_refs:
-  - "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: sabidamente 10.1093/eurheartj/ehae176. PMID: 39210723"
+  - "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
   - "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177"
 ---
 
