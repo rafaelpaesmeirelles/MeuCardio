@@ -1,0 +1,106 @@
+[
+  {
+    "source_disease_slug": "fibrilacao-atrial",
+    "source_disease_name": "fibrilacao atrial",
+    "target_type": "calculadora",
+    "target_slug": "cha2ds2-vasc",
+    "target_title": "CHA₂DS₂-VASc",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial",
+    "source_disease_name": "fibrilacao atrial",
+    "target_type": "calculadora",
+    "target_slug": "has-bled",
+    "target_title": "HAS-BLED",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "fibrilacao-atrial",
+    "source_disease_name": "fibrilacao atrial",
+    "target_type": "calculadora",
+    "target_slug": "orbit",
+    "target_title": "ORBIT",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "sindrome coronariana aguda",
+    "target_type": "calculadora",
+    "target_slug": "grace",
+    "target_title": "GRACE",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "sindrome coronariana aguda",
+    "target_type": "calculadora",
+    "target_slug": "crusade",
+    "target_title": "CRUSADE",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "sindrome coronariana aguda",
+    "target_type": "calculadora",
+    "target_slug": "timi-stemi",
+    "target_title": "TIMI (STEMI)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "sindrome coronariana aguda",
+    "target_type": "calculadora",
+    "target_slug": "timi-ua-nstemi",
+    "target_title": "TIMI (UA/NSTEMI)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "source_disease_name": "embolia pulmonar aguda",
+    "target_type": "calculadora",
+    "target_slug": "wells-tep",
+    "target_title": "Wells (TEP)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "source_disease_name": "embolia pulmonar aguda",
+    "target_type": "calculadora",
+    "target_slug": "geneva-revisado",
+    "target_title": "Genebra revisado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "source_disease_name": "embolia pulmonar aguda",
+    "target_type": "calculadora",
+    "target_slug": "geneva-simplificado",
+    "target_title": "Genebra simplificado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "source_disease_name": "embolia pulmonar aguda",
+    "target_type": "calculadora",
+    "target_slug": "pesi",
+    "target_title": "PESI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "embolia-pulmonar-aguda",
+    "source_disease_name": "embolia pulmonar aguda",
+    "target_type": "calculadora",
+    "target_slug": "spesi",
+    "target_title": "sPESI (simplificado)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "source_disease_name": "tromboembolismo venoso",
+    "target_type": "calculadora",
+    "target_slug": "wells-tvp",
+    "target_title": "Wells (TVP)",
+    "relation_type": "associated_with"
+  }
+]
