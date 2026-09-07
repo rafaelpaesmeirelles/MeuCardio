@@ -1,0 +1,2890 @@
+[
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "phino-oxido-nitrico-inalatorio-falencia-direita-aguda-hipertensao-pulmonar-achado-principal",
+    "target_title": "No PHiNO, o óxido nítrico inalatório reduziu agudamente a resistência vascular pulmonar em comparação ao controle, sem evento adverso grave …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "phino-oxido-nitrico-inalatorio-falencia-direita-aguda-hipertensao-pulmonar",
+    "target_title": "A Phase 2, Randomized, Clinical Trial of Inhaled Nitric Oxide for Acute Severe Right Heart Failure With Pulmonary Hypertension (PHiNO Study)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-pipeline-experimental-alem-das-quatro-classes",
+    "target_title": "Hipertensão pulmonar: o pipeline experimental além das quatro classes aprovadas — do proof-of-concept ao ensaio negativo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-tromboembolismo-cteph-sequela-tardia-do-tep-nao-resolvido",
+    "target_title": "Tromboembolismo: CTEPH, a hipertensão pulmonar tromboembólica crônica como sequela tardia do TEP não resolvido",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "tecnica-e-seguranca-do-cateterismo-cardiaco-direito-na-hipertensao-pulmonar",
+    "target_title": "Cateterismo cardíaco direito na hipertensão pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "hipertensao-pulmonar-arterial-induzida-por-dasatinibe",
+    "target_title": "Hipertensão Pulmonar Arterial Induzida por Dasatinibe",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "hipertensao-pulmonar-por-bosutinibe-e-ponatinibe-comparacao-de-risco-entre-inibidores-de-bcr-abl",
+    "target_title": "Hipertensão Pulmonar por Bosutinibe e Ponatinibe: Comparação de Risco entre Inibidores de BCR-ABL",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-hipertensao-pulmonar-arterial-por-dasatinibe-com-descompensacao",
+    "target_title": "Fluxograma: HAP por dasatinibe com dispneia, síncope ou falência de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "hipertensao-pulmonar-por-dasatinibe-com-descompensacao",
+    "target_title": "Hipertensão pulmonar por dasatinibe com síncope ou falência de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hp-grupo-3-dpi-treprostinil-inalado-ensaio-increase",
+    "target_title": "Hipertensão pulmonar do Grupo 3 por doença pulmonar intersticial: há tratamento vasodilatador?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hipertensao-pulmonar-do-grupo-2-tratar-a-hp-ou-a-doenca-cardiaca-esquerda",
+    "target_title": "Hipertensão pulmonar do grupo 2: tratar a HP ou a doença cardíaca esquerda?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hipertensao-pulmonar-tromboembolica-cronica-inoperavel-riociguat-ensaio-chest-1",
+    "target_title": "HP tromboembólica crônica inoperável: riociguat muda a capacidade de exercício? O ensaio CHEST-1",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hipertensao-pulmonar-em-paciente-de-area-endemica-de-esquistossomose",
+    "target_title": "Dispneia progressiva e hipertensão pulmonar em paciente do nordeste brasileiro com história de contato com água doce: pensar em quê?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "teste-de-caminhada-de-6-minutos-como-preditor-independente-de-mortalidade-na-hipertensao-pulmonar",
+    "target_title": "Hipertensão arterial pulmonar: por que a distância caminhada em 6 minutos prediz sobrevida melhor que a pressão pulmonar medida no cateterismo?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-farmacoterapia-e-causas-tropicais",
+    "target_title": "Hipertensão pulmonar: da monoterapia à terapia combinada, e as causas que o Brasil vê mais",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-causas-associadas-e-cteph",
+    "target_title": "Hipertensão pulmonar: causas associadas e a fronteira intervencionista da CTEPH",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-seguimento-e-escalonamento-guiado-por-risco",
+    "target_title": "Hipertensão pulmonar: reavaliação de risco seriada e escalonamento terapêutico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-leitura-critica-dos-ensaios",
+    "target_title": "Hipertensão pulmonar: leitura crítica dos ensaios — retratação, desfecho substituto e racional que não se confirmou",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-algoritmo-diagnostico-e-causa-associada",
+    "target_title": "Hipertensão pulmonar: o algoritmo diagnóstico inicial e a causa associada por trás do fenótipo pré-capilar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-armadilhas-diagnosticas-e-desfecho-centrado-no-paciente",
+    "target_title": "Hipertensão pulmonar: armadilhas diagnósticas — doença veno-oclusiva, vasorreatividade e o que o CAMPHOR mede",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-populacoes-especiais-hiv-gestacao-e-cuidado-longitudinal",
+    "target_title": "Hipertensão pulmonar: populações especiais — HIV e gestação — e o cuidado longitudinal pós-alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-doenca-grave-terapia-de-resgate-e-alta-hospitalar",
+    "target_title": "Hipertensão pulmonar grave: terapia de resgate — epoprostenol, septostomia — e a alta hospitalar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-etiologias-menos-classicas",
+    "target_title": "Hipertensão pulmonar: etiologias menos clássicas — grupo 5 hematológico, doença veno-oclusiva e causas associadas",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-pelos-cinco-grupos-clinicos",
+    "target_title": "Hipertensão pulmonar pelos cinco grupos clínicos: o que muda no tratamento de cada um",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-alvos-moleculares-quatro-classes-de-terapia-dirigida",
+    "target_title": "Hipertensão pulmonar: as quatro vias moleculares da terapia dirigida, do receptor de endotelina à via da ativina",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-cteph-inoperavel-escada-terapeutica",
+    "target_title": "Hipertensão pulmonar: CTEPH inoperável — a escada terapêutica entre a cirurgia negada e o transplante",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-do-rastreio-ecocardiografico-ao-desfecho-que-importa-ao-paciente",
+    "target_title": "Hipertensão pulmonar: do rastreio ecocardiográfico ao desfecho que importa ao paciente",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-quando-a-terapia-de-grupo-1-e-a-escolha-errada",
+    "target_title": "Hipertensão pulmonar: quando a terapia específica do grupo 1 é a escolha errada — grupo 3, causas por droga/toxina e a lição da PVOD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-respondedor-ao-bloqueador-de-canal-de-calcio-e-o-resgate-quando-falha",
+    "target_title": "Hipertensão pulmonar: o respondedor ao bloqueador de canal de cálcio, e o resgate quando ele deixa de responder",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar",
+    "target_title": "Hipertensão pulmonar — diagnóstico, classificação e terapia dirigida",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "alta-pos-internacao-por-hipertensao-pulmonar",
+    "target_title": "Alta após internação por hipertensão arterial pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-hp-por-doenca-esquerda-tratar-a-causa-de-base",
+    "target_title": "O tratamento da hipertensão pulmonar associada à doença cardíaca esquerda (reumática) é focado no manejo e na reversão da patologia cardíaca…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-hp-terapia-especifica-de-hap-nao-recomendada",
+    "target_title": "Terapias específicas para hipertensão arterial pulmonar não são recomendadas na hipertensão pulmonar devida à doença cardíaca esquerda (reum…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
+    "target_title": "Hipertensão arterial pulmonar descompensada na gestação e no puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-hipertensao-pulmonar-descompensada-na-gestacao-e-puerperio",
+    "target_title": "Fluxograma: HAP descompensada na gestação e no puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "anticoncepcao-em-valvopatia-complicada-por-hipertensao-pulmonar-criterios-oms",
+    "target_title": "Valvopatia mitral com hipertensão pulmonar: qual método contraceptivo é seguro?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-gravidez-hipertensao-pulmonar-eisenmenger-e-cardiopatia-congenita-nao-corrigida",
+    "target_title": "Gravidez em hipertensão arterial pulmonar e síndrome de Eisenmenger: quando a contraindicação absoluta é ignorada ou desconhecida",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "reveal-registry-hipertensao-pulmonar-associada-a-cardiopatia-congenita",
+    "target_title": "REVEAL Registry — hipertensão arterial pulmonar associada a cardiopatia congênita, incluindo Eisenmenger, em 4 e 7 anos",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-hipertensao-pulmonar-associada-e-fechamento-por-dispositivo",
+    "target_title": "Cardiopatia congênita: hipertensão pulmonar associada, fechamento por dispositivo e otimização do Fontan pelo teste de exercício",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade",
+    "target_title": "Hipertensão Pulmonar Pediátrica: Causas Específicas da Infância (DBP e HPPRN), Diferenças do Algoritmo do Adulto e Teste de Vasorreatividade na Criança",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "hipertensao-pulmonar-persistente-do-recem-nascido-fisiopatologia-diagnostico-e-escada-terapeutica",
+    "target_title": "Hipertensão Pulmonar Persistente do Recém-Nascido: Fisiopatologia, Diagnóstico à Beira do Leito e Escada Terapêutica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico",
+    "target_title": "Defeito do Septo Atrioventricular na Síndrome de Down: Classificação, Hipertensão Pulmonar Precoce e Timing Cirúrgico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "documento",
+    "target_slug": "crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+    "target_title": "Crise de hipertensão pulmonar pediátrica e falência aguda de ventrículo direito",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-crise-de-hipertensao-pulmonar-pediatrica-e-falencia-aguda-de-vd",
+    "target_title": "Fluxograma: Crise de hipertensão pulmonar pediátrica e falência aguda de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-crise-de-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "target_title": "Fluxograma: Crise de hipertensão pulmonar persistente do recém-nascido",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hipertensao-pulmonar-persistente-do-recem-nascido-oxido-nitrico-inalatorio",
+    "target_title": "Hipertensão pulmonar persistente do recém-nascido: qual terapia reduz a necessidade de ECMO?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
+    "target_title": "Cardiologia pediátrica: farmacoterapia da insuficiência cardíaca e da hipertensão pulmonar crônicas na criança",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "crise-de-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "target_title": "Crise de hipertensão pulmonar persistente do recém-nascido",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "crise-de-hipertensao-pulmonar-pediatrica",
+    "target_title": "Crise de hipertensão pulmonar pediátrica e falência aguda de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-hipertensao-pulmonar-associada-a-cardiopatia-congenita-terapia-e-treat-and-repair-jcs-2022",
+    "target_title": "Fluxograma: Hipertensão arterial pulmonar associada à cardiopatia congênita — terapia farmacológica e estratégia Treat and Repair (JCS 2022)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "hipertensao-pulmonar-mal-controlada-apesar-de-tripla-terapia-denervacao-da-arteria-pulmonar-e-opcao",
+    "target_title": "HAP mal controlada apesar de terapia otimizada: a denervação da artéria pulmonar já é opção validada?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-pulmonar-cteph-operavel-do-cateterismo-a-decisao-cirurgica",
+    "target_title": "Hipertensão pulmonar: CTEPH operável — do cateterismo cardíaco direito à decisão do Heart Team",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "algoritmo-diagnostico-da-hipertensao-pulmonar-esc-ers-2022",
+    "target_title": "Avaliação diagnóstica da hipertensão pulmonar — dos três passos da suspeita clínica à confirmação hemodinâmica (ESC/ERS 2022)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-de-operabilidade-cirurgica-na-cteph-encaminhamento-ao-heart-team",
+    "target_title": "Hipertensão pulmonar tromboembólica crônica (CTEPH) — avaliação de operabilidade",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-perioperatoria-de-hipertensao-pulmonar-em-cirurgia-nao-cardiaca",
+    "target_title": "Avaliação perioperatória do paciente com hipertensão pulmonar submetido a cirurgia não cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "cteph-hipertensao-pulmonar-por-coagulos-antigos",
+    "target_title": "Hipertensão pulmonar por coágulos antigos (CTEPH): a única forma da doença com chance real de cura",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-pulmonar-e-cirurgias-por-que-avisar-sempre-antes-de-qualquer-procedimento",
+    "target_title": "Hipertensão pulmonar e cirurgias: por que avisar sempre, antes de qualquer procedimento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "atividade-fisica-supervisionada-na-hipertensao-pulmonar-grave",
+    "target_title": "Atividade física supervisionada na hipertensão pulmonar grave: pode ajudar, sim",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-pulmonar-hereditaria-o-que-significa-para-a-familia",
+    "target_title": "Hipertensão pulmonar hereditária: o que isso significa para você e sua família",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "o-ecocardiograma-mostrou-suspeita-de-hipertensao-pulmonar-e-agora",
+    "target_title": "O ecocardiograma mostrou suspeita de hipertensão pulmonar: e agora?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "vivendo-com-hipertensao-pulmonar-remedios-e-acompanhamento",
+    "target_title": "Vivendo com hipertensão pulmonar: os remédios, o acompanhamento e a atividade física",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-pulmonar-e-gravidez-por-que-planejar-com-antecedencia",
+    "target_title": "Hipertensão pulmonar e gravidez: por que planejar com antecedência importa tanto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-pulmonar-por-esquistossomose-o-que-e-e-por-que-e-comum-no-brasil",
+    "target_title": "Hipertensão pulmonar causada pela esquistossomose: por que é uma causa importante no Brasil",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "material_paciente",
+    "target_slug": "hipertensao-pulmonar-pediatrica",
+    "target_title": "Hipertensão pulmonar em bebês e crianças: entenda o diagnóstico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "acometimento-cardiovascular-na-doenca-falciforme-hipertensao-pulmonar-e-cardiomiopatia",
+    "target_title": "Doença falciforme — acometimento cardiovascular: hipertensão pulmonar, cardiomiopatia e risco de morte súbita",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-poems-hipertensao-pulmonar-derrame-pericardico",
+    "target_title": "Síndrome POEMS: hipertensão pulmonar e derrame pericárdico como pista diagnóstica",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "checklist",
+    "target_slug": "hipertensao-pulmonar-neoplasias-mieloproliferativas-mielofibrose",
+    "target_title": "Acometimento cardiovascular nas neoplasias mieloproliferativas Philadelphia-negativas (policitemia vera, trombocitemia essencial e mielofibrose primária), com ênfase em hipertensão pulmonar, insuficiência cardíaca de alto débito e risco tromboembólico associados à mielofibrose",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo2-sildenafila-nao-recomendada",
+    "target_title": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), sugere-se NÃO USAR sildenafila. Recomendação CONDICIONAL (Ponderado), qualid…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo2-bosentana-nao-recomendada",
+    "target_title": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), sugere-se NÃO USAR bosentana. Recomendação CONDICIONAL (Ponderado), qualidad…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo2-macitentana-contraindicada",
+    "target_title": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), recomenda-se NÃO USAR macitentana. Recomendação FORTE, qualidade de evidênci…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo2-riociguate-sem-evidencia-suficiente",
+    "target_title": "Na hipertensão pulmonar por doença cardíaca esquerda (grupo 2), NÃO HÁ EVIDÊNCIA SUFICIENTE para recomendar ou não recomendar o uso de rioci…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo3-pde5i-sem-evidencia-suficiente-em-dpoc",
+    "target_title": "Na hipertensão pulmonar do grupo 3 associada a DPOC, NÃO HÁ EVIDÊNCIA SUFICIENTE para recomendar ou não recomendar o uso de inibidores da fo…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo3-riociguate-contraindicado-em-fpi",
+    "target_title": "Na hipertensão pulmonar do grupo 3 associada a fibrose pulmonar idiopática (FPI), RECOMENDA-SE NÃO USAR riociguate associado ao manejo clíni…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo3-bosentana-nao-recomendada-em-doenca-pulmonar-fibrosante",
+    "target_title": "Na hipertensão pulmonar do grupo 3 associada a doença pulmonar fibrosante (FPI, doença intersticial não específica e pneumonia por hipersens…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo3-bosentana-nao-recomendada-em-dpoc",
+    "target_title": "Na hipertensão pulmonar do grupo 3 associada a DPOC, SUGERE-SE NÃO USAR bosentana associada ao manejo clínico da doença de base. Recomendaçã…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "hp-grupo3-treprostinil-inalatorio-em-doenca-intersticial-pulmonar",
+    "target_title": "Na hipertensão pulmonar do grupo 3 associada a doença intersticial pulmonar (DIP), SUGERE-SE O USO de treprostinil inalatório associado ao m…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-cintilografia-v-q-para-avaliar-cteph-em-hp",
+    "target_title": "Recomenda-se realizar cintilografia de ventilação-perfusão (V/Q) ou cintilografia de perfusão pulmonar para avaliar hipertensão pulmonar tro…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-cateterismo-direito-para-confirmar-diagnostico-classificacao-e-gravidade-da-hp",
+    "target_title": "Recomenda-se realizar cateterismo cardíaco direito (RHC) para confirmar o diagnóstico, a classificação e a gravidade da hipertensão pulmonar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-aconselhamento-genetico-antes-do-teste-de-genes-associados-a-hap",
+    "target_title": "Recomenda-se realizar aconselhamento genético por especialista em hipertensão pulmonar e/ou geneticista clínico ao realizar teste genético p…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-tratar-plenamente-a-doenca-do-coracao-esquerdo-antes-de-avaliar-hp-lhd",
+    "target_title": "Recomenda-se tratar plenamente a doença do coração esquerdo causadora de insuficiência cardíaca antes de avaliar a hipertensão pulmonar, qua…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-tratar-a-doenca-de-base-responsavel-pela-hp-lhd",
+    "target_title": "Recomenda-se tratar a doença do coração esquerdo de base responsável pela hipertensão pulmonar associada à doença do coração esquerdo.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-vasodilatador-pulmonar-nao-recomendado-na-hp-por-doenca-do-coracao-esquerdo",
+    "target_title": "O uso de vasodilatadores pulmonares não é recomendado para o tratamento da hipertensão pulmonar causada por doença do coração esquerdo — rec…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-otimizar-tratamento-da-doenca-de-base-antes-de-avaliar-hp-na-dce",
+    "target_title": "Recomenda-se otimizar o tratamento da doença de base antes de considerar a avaliação de hipertensão pulmonar em pacientes com doença do cora…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-individualizar-tratamento-na-hp-combinada-pre-e-pos-capilar-com-componente-precapilar-grave",
+    "target_title": "Pode-se considerar individualizar o tratamento em pacientes com doença do coração esquerdo e hipertensão pulmonar combinada pré- e pós-capil…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-epoprostenol-nao-recomendado-para-melhorar-prognostico-na-hp-lhd",
+    "target_title": "A administração de epoprostenol não é recomendada com o objetivo de melhorar o prognóstico em pacientes com hipertensão pulmonar associada à…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-bosentana-nao-recomendada-para-melhorar-prognostico-na-hp-lhd",
+    "target_title": "A administração de bosentana não é recomendada com o objetivo de melhorar o prognóstico em pacientes com hipertensão pulmonar associada à do…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "barst-1996-epoprostenol-e-sobrevida-na-hipertensao-pulmonar-primaria",
+    "target_title": "Barst 1996 — Primeiro ensaio randomizado a demonstrar ganho de sobrevida na hipertensão pulmonar primária (epoprostenol)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "chest-1-riociguate-na-hipertensao-pulmonar-tromboembolica-cronica",
+    "target_title": "CHEST-1 — Riociguate na hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "nathan-2019-rise-iip-riociguate-em-hp-associada-a-fibrose-pulmonar-idiopatica",
+    "target_title": "RISE-IIP — Riociguate na hipertensão pulmonar associada a pneumonia intersticial idiopática (interrompido por dano)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "corte-2014-bosentana-em-hp-associada-a-pneumonia-intersticial-fibrosante",
+    "target_title": "Corte 2014 — Bosentana na hipertensão pulmonar associada a pneumonia intersticial idiopática fibrosante",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "stolz-2008-bosentana-na-dpoc-grave",
+    "target_title": "Stolz 2008 — Bosentana na DPOC grave com hipertensão pulmonar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "waxman-2021-increase-treprostinil-inalatorio-na-hp-por-doenca-intersticial-pulmonar",
+    "target_title": "INCREASE — Treprostinil inalatório na hipertensão pulmonar por doença pulmonar intersticial",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "maron-2022-tadalafila-em-veteranos-com-dpoc-e-hipertensao-pulmonar",
+    "target_title": "Maron 2022 — Tadalafila em veteranos com DPOC e hipertensão pulmonar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "goudie-2014-tadalafila-na-dpoc",
+    "target_title": "Goudie 2014 — Tadalafila na DPOC com suspeita de hipertensão pulmonar por ecocardiografia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "ecocardiograma-transtoracico-probabilidade-de-hipertensao-pulmonar-pela-velocidade-de-regurgitacao-tricuspide",
+    "target_title": "Ecocardiograma transtorácico — probabilidade de hipertensão pulmonar pela velocidade de regurgitação tricúspide (VRT)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "cintilografia-de-ventilacao-perfusao-na-triagem-de-hipertensao-pulmonar-tromboembolica-cronica",
+    "target_title": "Cintilografia de ventilação-perfusão (V/Q) na triagem de hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "tomografia-de-alta-resolucao-de-torax-na-investigacao-etiologica-da-hipertensao-pulmonar",
+    "target_title": "Tomografia computadorizada de alta resolução de tórax na investigação etiológica da hipertensão pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "teste-de-caminhada-de-6-minutos-na-hipertensao-pulmonar",
+    "target_title": "Teste de caminhada de 6 minutos (TC6M) na hipertensão pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "galeria",
+    "target_slug": "endarterectomia-pulmonar-especime-cteph",
+    "target_title": "Espécime cirúrgico — Endarterectomia pulmonar na hipertensão pulmonar tromboembólica crônica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-valvoplastia-no-assintomatico-com-hipertensao-pulmonar",
+    "target_title": "No idoso com estenose mitral reumática e área valvar igual ou inferior a 1,5 cm², a valvoplastia por balão é indicada MESMO SE ASSINTOMÁTICO…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "esclerose-sistemica-rastreio-de-hipertensao-pulmonar-pelo-jato-tricuspide",
+    "target_title": "Na esclerose sistêmica, a avaliação diagnóstica de HIPERTENSÃO PULMONAR pelo ecocardiograma, por meio da estimativa da velocidade do jato de…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "contraindicar-gravidez-na-cardiopatia-congenita-com-hipertensao-pulmonar-pre-capilar",
+    "target_title": "É recomendado que a paciente com cardiopatia congênita e hipertensão pulmonar pré-capilar confirmada seja aconselhada contra engravidar. A r…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "estratificacao-de-risco-em-todo-paciente-com-hipertensao-pulmonar-associada-a-cardiopatia-congenita",
+    "target_title": "A estratificação de risco é recomendada em todos os pacientes com hipertensão arterial pulmonar associada a cardiopatia congênita. É o passo…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "achd2018-fechamento-de-civ-contraindicado-com-hipertensao-pulmonar-grave",
+    "target_title": "O fechamento de comunicação interventricular (CIV) não deve ser realizado em adultos com hipertensão arterial pulmonar grave — pressão sistó…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "teste-de-vasorreatividade-aguda-criterios-de-sitbon",
+    "target_title": "Teste de vasorreatividade pulmonar aguda (critérios de Sitbon) na avaliação de hipertensão pulmonar associada a shunt congênito",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "starts-2-sildenafila-sobrevida-hipertensao-pulmonar-pediatrica",
+    "target_title": "STARTS-2 — Sobrevida em longo prazo com sildenafila oral em monoterapia na hipertensão arterial pulmonar pediátrica virgem de tratamento",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "espirometria-e-prova-de-funcao-pulmonar-em-crianca-com-hipertensao-pulmonar",
+    "target_title": "Espirometria e prova de função pulmonar em criança com hipertensão pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "exame",
+    "target_slug": "ecocardiograma-no-diagnostico-da-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "target_title": "Ecocardiograma no diagnóstico e estratificação da hipertensão pulmonar persistente do recém-nascido (PPHN)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-vasodilatadores-pulmonares-para-hp-residual-recorrente-apos-pea",
+    "target_title": "Recomenda-se administrar vasodilatadores pulmonares (riociguate ou selexipague) para hipertensão pulmonar residual ou recorrente após endart…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-bpa-em-cteph-nao-candidato-a-cirurgia",
+    "target_title": "Recomenda-se realizar angioplastia pulmonar por balão (BPA) em pacientes com hipertensão pulmonar tromboembólica crônica (CTEPH) que não são…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-pea-sob-parada-circulatoria-hipotermica-profunda-em-cteph-operavel",
+    "target_title": "Recomenda-se realizar endarterectomia pulmonar (PEA) sob parada circulatória hipotérmica profunda em pacientes com hipertensão pulmonar trom…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-anticoagulacao-vitalicia-com-antagonista-de-vitamina-k-em-cteph",
+    "target_title": "Recomenda-se administrar terapia anticoagulante vitalícia com antagonistas da vitamina K para pacientes com hipertensão pulmonar tromboemból…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "cekirdekci-2026-metanalise-denervacao-da-arteria-pulmonar-padn",
+    "target_title": "Cekirdekci & Onar (2026) — Metanálise atualizada da denervação da artéria pulmonar (PADN) na hipertensão pulmonar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "air-iloprosta-inalatoria-hipertensao-pulmonar-grave",
+    "target_title": "AIR — Iloprosta inalatória na hipertensão pulmonar grave",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "badesch-2000-epoprostenol-hipertensao-pulmonar-esclerodermia",
+    "target_title": "Badesch 2000 — Epoprostenol intravenoso contínuo na hipertensão pulmonar associada ao espectro da esclerodermia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "pepke-zaba-2011-registro-internacional-cteph",
+    "target_title": "Pepke-Zaba 2011 — Registro internacional prospectivo de hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "dalonzo-1991-registro-nih-sobrevida-hipertensao-pulmonar-primaria",
+    "target_title": "D'Alonzo 1991 — Sobrevida na hipertensão pulmonar primária: resultados do registro nacional prospectivo do NIH",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "rich-1992-bloqueadores-canal-calcio-sobrevida-hipertensao-pulmonar-primaria",
+    "target_title": "Rich 1992 — Efeito de altas doses de bloqueadores de canal de cálcio na sobrevida da hipertensão pulmonar primária",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "siovac-sildenafila-hipertensao-pulmonar-pos-valvular",
+    "target_title": "SIOVAC — Sildenafila na hipertensão pulmonar persistente após correção de valvopatia (grupo 2)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "serenade-macitentana-hipertensao-pulmonar-icfep",
+    "target_title": "SERENADE — Macitentana na insuficiência cardíaca com fração de ejeção preservada e doença vascular pulmonar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "perfect-treprostinil-inalado-hipertensao-pulmonar-dpoc",
+    "target_title": "PERFECT — Treprostinil inalado na hipertensão pulmonar associada à DPOC",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "estudo",
+    "target_slug": "guazzi-2011-sildenafila-hipertensao-pulmonar-icfep",
+    "target_title": "Guazzi 2011 — Sildenafila na hipertensão pulmonar associada à insuficiência cardíaca com fração de ejeção preservada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "hipertensao-pulmonar",
+    "source_disease_name": "Hipertensão pulmonar",
+    "target_type": "galeria",
+    "target_slug": "cteph-angiografia-pulmonar-subtracao-digital",
+    "target_title": "Angiografia pulmonar por subtração digital — hipertensão pulmonar tromboembólica crônica (CTEPH)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+    "target_title": "Estenose Aórtica Grave no Idoso Frágil: Quando o TAVI Muda o Prognóstico e Quando a Fragilidade Contraindica a Intervenção",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-descompensada-e-choque-no-idoso",
+    "target_title": "Estenose aórtica grave descompensada e choque cardiogênico no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-estenose-aortica-grave-descompensada-e-choque-no-idoso",
+    "target_title": "Fluxograma: Estenose aórtica grave descompensada e choque no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-doenca-valvar-degenerativa-aortica-e-mitral",
+    "target_title": "Cardiologia geriátrica: doença valvar degenerativa do idoso — da estenose aórtica frágil à calcificação anular mitral",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "estenose-aortica-grave-descompensada-no-idoso",
+    "target_title": "Estenose aórtica grave descompensada e choque no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "ia-generativa-para-simplificar-material-educativo-limites-da-legibilidade",
+    "target_title": "Usar ChatGPT para simplificar um folheto sobre estenose aórtica: o que a evidência mostra?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-grave-idoso-avaliacao-de-risco-cirurgico-euroscore-ii",
+    "target_title": "Estenose aórtica grave em idoso: o EuroSCORE II ajuda a decidir entre TAVI e cirurgia?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-ea-hipertensao-tratar-com-monitorizacao-de-efeitos-colaterais",
+    "target_title": "Pacientes com estenose aórtica (EA) assintomática e hipertensão devem ser tratados conforme diretrizes padrão, com monitorização frequente d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "partner-2a-10-anos-tavr-versus-cirurgia-em-risco-intermediario",
+    "target_title": "PARTNER 2A em 10 Anos: TAVR versus Cirurgia na Estenose Aórtica de Risco Intermediário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "accaha2020-vhd-ea-avr-indicado-em-sintomatico-grave-alto-gradiente",
+    "target_title": "Em adultos com estenose aórtica (EA) grave de alto gradiente (Estágio D1) e sintomas de dispneia ao esforço, IC, angina, síncope ou pré-sínc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "monin-2003-reserva-contratil-na-estenose-aortica-de-baixo-gradiente",
+    "target_title": "Monin 2003 — Reserva contrátil à dobutamina na estenose aórtica de baixo fluxo e baixo gradiente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "recovery-cirurgia-precoce-na-estenose-aortica-muito-grave-assintomatica",
+    "target_title": "RECOVERY — Cirurgia precoce versus tratamento conservador na estenose aórtica MUITO grave assintomática",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "avatar-troca-valvar-precoce-na-estenose-aortica-grave-assintomatica",
+    "target_title": "AVATAR — Troca valvar aórtica precoce versus conservador na estenose aórtica grave assintomática com teste de esforço negativo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-grave-sintomatica-tavi-vs-savr-corte-etario-atualizado",
+    "target_title": "Estenose aórtica grave sintomática aos 72 anos: TAVI ou cirurgia, pelo corte etário atual?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-muito-grave-assintomatica-cirurgia-precoce-recovery",
+    "target_title": "Estenose aórtica muito grave sem sintomas: operar agora ou vigiar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "tavr-unload-estenose-aortica-moderada-icfer",
+    "target_title": "Estenose aórtica moderada com insuficiência cardíaca de fração reduzida: TAVI antecipado ou vigilância até estenose grave?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-grave-assintomatica-criterios-convencionais-cirurgia-precoce-avatar",
+    "target_title": "Estenose aórtica grave assintomática por critérios convencionais (não 'muito grave'): cirurgia já ou vigilância clínica?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-grave-baixo-risco-cirurgico-tavi-vs-cirurgia-partner-3",
+    "target_title": "Estenose aórtica grave sintomática em paciente de baixo risco cirúrgico: a TAVI transfemoral compete com a cirurgia?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-assintomatica-intervencao-precoce",
+    "target_title": "Estenose aórtica grave assintomática: a evidência que antecipou a intervenção",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-aortica-protese-mecanica-e-estenose-mitral-reumatica",
+    "target_title": "Valvopatias além da estenose aórtica e do TAVI: regurgitação aórtica, prótese mecânica em 15 anos e a estenose mitral reumática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-alem-do-ensaio-mundo-real-e-endocardite-pos-tavi",
+    "target_title": "Estenose aórtica além do ensaio clínico: o desempenho no mundo real do NHS e a endocardite pós-TAVI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-e-escolha-de-protese",
+    "target_title": "Valvopatias: da estenose aórtica grave à escolha de prótese",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "checklist",
+    "target_slug": "acompanhamento-apos-tavi-ou-savr-na-estenose-aortica-grave",
+    "target_title": "Acompanhamento após TAVI ou SAVR por estenose aórtica grave",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-sintomatica-na-gestacao",
+    "target_title": "Estenose aórtica grave sintomática na gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-estenose-aortica-grave-sintomatica-na-gestacao",
+    "target_title": "Fluxograma: estenose aórtica grave sintomática na gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "jcs2022-operar-a-estenose-aortica-grave-assintomatica-sob-monitorizacao",
+    "target_title": "Em pacientes com estenose aórtica grave ASSINTOMÁTICA, deve-se considerar realizar a cirurgia não cardíaca sob monitorização hemodinâmica ap…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-grave-sintomatica-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "target_title": "Estenose aórtica grave sintomática antes de artroplastia de quadril eletiva",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "sbc2020-strain-do-ve-na-estenose-aortica-congenita",
+    "target_title": "A avaliação da função do ventrículo esquerdo por strain na estenose aórtica pode ser considerada (Classe IIb, Nível B).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "sindrome-de-williams-estenose-aortica-supravalvar-obstrucao-biventricular-e-risco-de-morte-subita-relacionada-a-anestesia",
+    "target_title": "Síndrome de Williams: Estenose Aórtica Supravalvar, Obstrução Biventricular e Risco de Morte Súbita Relacionada a Anestesia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-com-choque-cardiogenico-tavi-urgente-versus-valvuloplastia-ponte",
+    "target_title": "Estenose Aórtica Grave com Choque Cardiogênico: TAVI Urgente, Valvuloplastia-Ponte e Estabilização na UCO",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-valvar-isolada-na-crianca-apresentacao-por-idade-e-criterios-de-valvoplastia-por-balao",
+    "target_title": "Estenose Aórtica Valvar Isolada na Criança: Apresentação por Idade e Critérios de Valvoplastia por Balão",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao-esc-eacts-2021",
+    "target_title": "Fluxograma: Estenose Aórtica Grave Assintomática — Quando Intervir (ESC/EACTS 2021)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "troca-valvar-aortica-precoce-na-estenose-aortica-assintomatica-grave-metanalise-de-4-rcts",
+    "target_title": "Troca Valvar Aórtica Precoce na Estenose Aórtica Assintomática Grave: Metanálise de 4 Ensaios Randomizados",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-aortica-fetal-leve-gradiente-acima-de-12-5-mmhg-preve-intervencao-pos-natal",
+    "target_title": "Estenose aórtica fetal \"leve\": o gradiente que prevê intervenção pós-natal",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "caso_clinico",
+    "target_slug": "partner-2a-10-anos-risco-intermediario-tavi-vs-cirurgia",
+    "target_title": "Estenose aórtica de risco intermediário: o que os 10 anos do PARTNER 2A ensinam sobre via de acesso",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-transcateter-alem-da-estenose-aortica-2026",
+    "target_title": "Terapia estrutural transcateter além da estenose aórtica clássica (2024-2026)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "checklist",
+    "target_slug": "seguimento-e-decisao-de-intervencao-em-estenose-aortica-fetal",
+    "target_title": "Seguimento de estenose aórtica fetal — do rastreio inicial à decisão sobre intervenção cardíaca fetal (valvuloplastia aórtica por balão)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "checklist",
+    "target_slug": "estenose-aortica-de-baixo-fluxo-e-baixo-gradiente-avaliacao",
+    "target_title": "Estenose aórtica de baixo fluxo/baixo gradiente — avaliação diagnóstica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "checklist",
+    "target_slug": "seguranca-anestesica-e-vigilancia-cardiologica-na-sindrome-de-williams",
+    "target_title": "Síndrome de Williams — estenose aórtica supravalvar, obstrução biventricular, hipertensão por estenose de artéria renal, hipercalcemia e risco de morte súbita relacionada a anestesia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "material_paciente",
+    "target_slug": "sindrome-coracao-esquerdo-hipoplasico-fetal",
+    "target_title": "Estenose Aórtica Fetal Grave e Risco de Síndrome do Coração Esquerdo Hipoplásico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "exame",
+    "target_slug": "teste-ergometrico-na-estenose-aortica-pediatrica-e-na-valva-aortica-bicuspide",
+    "target_title": "Teste ergométrico na estenose aórtica pediátrica e na valva aórtica bicúspide",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-e-amiloidose-cardiaca-por-transtirretina-overlap-no-idoso",
+    "target_title": "O Overlap entre Estenose Aórtica Calcificada Degenerativa e Amiloidose Cardíaca por Transtirretina no Idoso: Diagnóstico, Prognóstico e Decisão sobre TAVI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "checklist",
+    "target_slug": "rastreio-de-amiloidose-cardiaca-por-transtirretina-em-idoso-encaminhado-para-tavi",
+    "target_title": "Rastreio de amiloidose cardíaca por transtirretina (ATTR) em idoso encaminhado para TAVI por estenose aórtica grave",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "material_paciente",
+    "target_slug": "estenose-aortica-e-amiloidose-ao-mesmo-tempo-o-que-significa-para-o-tavi",
+    "target_title": "Estenose aórtica e amiloidose ao mesmo tempo: o que isso muda no TAVI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "estatinas-nao-indicadas-para-frear-progressao-da-estenose-aortica-calcificada-leve-a-moderada",
+    "target_title": "O uso de estatinas não é indicado para prevenção da progressão da estenose aórtica em idosos com lesões valvares calcificadas leves a modera…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "estatina-nao-indicada-para-frear-progressao-da-estenose-aortica-no-idoso",
+    "target_title": "O uso de estatina NÃO é indicado com o objetivo de prevenir a progressão da estenose aórtica em pacientes idosos com lesões valvares calcifi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "cirurgia-de-troca-valvar-na-estenose-aortica-grave-sintomatica-no-idoso",
+    "target_title": "Em pacientes idosos com estenose aórtica grave sintomática, o tratamento cirúrgico da valva aórtica (troca valvar, por via cirúrgica convenc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "tratamento-anti-hipertensivo-no-idoso-com-estenose-aortica-assintomatica",
+    "target_title": "Em idosos com estenose aórtica assintomática, a hipertensão arterial sistêmica deve ser tratada, iniciando com dose baixa de anti-hipertensi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "troca-valvar-cirurgica-preferencial-sobre-tavi-no-idoso-de-baixo-risco",
+    "target_title": "Em pacientes idosos com indicação de tratamento cirúrgico da estenose aórtica e risco cirúrgico baixo ou intermediário, a troca valvar aórti…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "troca-valvar-aortica-cirurgica-preferida-no-idoso-com-risco-baixo-ou-intermediario",
+    "target_title": "A troca valvar aórtica cirúrgica é recomendada em pacientes idosos com indicação de tratamento cirúrgico para estenose aórtica grave e risco…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-tavi-recomendado-em-idoso-com-risco-cirurgico-proibitivo",
+    "target_title": "O implante transcateter de valva aórtica (TAVI) é recomendado em pacientes idosos com indicação de troca valvar aórtica por estenose aórtica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-tavi-nao-recomendado-quando-comorbidades-impedem-beneficio",
+    "target_title": "O TAVI não é recomendado em pacientes idosos cujas comorbidades existentes impediriam o benefício esperado da correção da estenose aórtica.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-estatina-nao-indicada-para-prevenir-progressao-de-estenose-aortica-leve-a-moderada",
+    "target_title": "O uso de estatina não é indicado para prevenir a progressão da estenose aórtica em pacientes idosos com lesões valvares calcificadas de grau…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "corevalve-extreme-risk-tavi-autoexpansivel-idoso-risco-proibitivo",
+    "target_title": "CoreValve US Pivotal Extreme Risk — TAVI autoexpansível em pacientes com estenose aórtica grave e risco cirúrgico proibitivo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "partner-tavi-em-estenose-aortica-inoperavel",
+    "target_title": "PARTNER (coorte B) — Implante transcateter de valva aórtica em pacientes inoperáveis com estenose aórtica grave",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "exame",
+    "target_slug": "ecocardiograma-de-estresse-com-dobutamina-em-baixa-dose-na-estenose-aortica-de-baixo-fluxo-baixo-gradiente-com-fe-reduzida",
+    "target_title": "Ecocardiograma de estresse com dobutamina em baixa dose (reserva contrátil) na estenose aórtica de baixo fluxo, baixo gradiente com fração de ejeção reduzida no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "estenose-aortica-grave-doppler-nonagenaria",
+    "target_title": "Ecocardiograma — Estenose aórtica grave ao Doppler colorido e contínuo, em paciente de 90 anos",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "estenose-aortica-calcifica-degenerativa-histologia-valva-idoso",
+    "target_title": "Histopatologia — Estenose aórtica calcífica degenerativa (valva aórtica, coloração hematoxilina-eosina)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "configuracao-aortica-do-coracao-estenose-aortica-idosa",
+    "target_title": "Configuração aórtica do coração na estenose aórtica grave do idoso — radiografia de tórax",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "rouhi-2024-ia-generativa-reescreve-material-educativo-de-estenose-aortica",
+    "target_title": "Inteligência artificial melhora a legibilidade de material educativo do paciente sobre estenose aórtica? Um estudo piloto",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "acod-preferencial-a-varfarina-em-estenose-aortica-regurgitacao-aortica-e-mitral",
+    "target_title": "Em pacientes com fibrilação atrial e estenose aórtica, regurgitação aórtica ou regurgitação mitral, os anticoagulantes orais diretos são rec…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "estenose-aortica-savr-recomendada-em-jovem-baixo-risco-cirurgico-sts-prom",
+    "target_title": "Na estenose aórtica grave, a cirurgia (SAVR) é recomendada em pacientes mais jovens (<75 anos) e de baixo risco cirúrgico (STS-PROM/EuroSCOR…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "estenose-aortica-tavi-recomendada-em-idoso-ou-alto-risco-sts-prom",
+    "target_title": "Na estenose aórtica grave, a TAVI é recomendada em pacientes mais velhos (≥75 anos) OU de alto risco cirúrgico (STS-PROM/EuroSCORE II >8%). …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "estenose-aortica-reumatica-peca-anatomica",
+    "target_title": "Espécime patológico — Estenose aórtica reumática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "tavi-indicado-em-alto-risco-cirurgico-estenose-aortica",
+    "target_title": "Implante de válvula aórtica transcateter (TAVI) é indicado como alternativa à cirurgia convencional em pacientes com estenose aórtica grave …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "angiotomografia-quando-ha-duvida-sobre-a-gravidade-da-estenose-aortica-ao-eco",
+    "target_title": "Em paciente com dúvida sobre a gravidade da estenose aórtica pela ecocardiografia, a angiotomografia do coração pode ser realizada para aval…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "eco-de-estresse-na-estenose-aortica-de-baixo-fluxo-e-na-discrepancia-sintoma-exame",
+    "target_title": "Na doença valvar, a ecocardiografia de estresse tem recomendação FORTE, com certeza ALTA, em duas situações: com dobutamina em BAIXA dose, n…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "rm-para-fibrose-miocardica-no-prognostico-da-estenose-aortica",
+    "target_title": "A pesquisa de fibrose miocárdica por ressonância deve ser considerada na avaliação PROGNÓSTICA da estenose valvar aórtica. Não é sobre gradu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "teste-ergometrico-no-seguimento-da-estenose-aortica-grave-assintomatica",
+    "target_title": "Na estenose aórtica grave ASSINTOMÁTICA, o teste ergométrico deve ser considerado no seguimento, pelo menos A CADA 6 MESES, para detecção pr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "teste-ergometrico-contraindicado-na-estenose-aortica-ou-mitral-grave-sintomatica",
+    "target_title": "O teste ergométrico é CONTRAINDICADO na estenose aórtica ou mitral grave SINTOMÁTICA — Classe III. Note o par com a recomendação anterior, d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "tcpe-na-estenose-aortica-grave-assintomatica-sbc-2024",
+    "target_title": "Na estenose aórtica grave ASSINTOMÁTICA, o teste cardiopulmonar de exercício deve ser considerado para orientar a decisão terapêutica. O pap…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-estenose-aortica-moderada-a-acentuada-assintomatica-sbc-2024",
+    "target_title": "Na estenose aórtica moderada ou acentuada (estágios B e C1) ASSINTOMÁTICA, o ecocardiograma sob estresse deve ser considerado para avaliar s…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-estenose-aortica-de-baixo-fluxo-e-baixo-gradiente-sbc-2024",
+    "target_title": "Na estenose aórtica assintomática ou com sintomas leves/duvidosos, com BAIXO FLUXO e BAIXO GRADIENTE e fração de ejeção PRESERVADA, o ecocar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-contraindicado-na-estenose-aortica-grave-sintomatica-sbc-2024",
+    "target_title": "O ecocardiograma sob estresse — de esforço ou com dobutamina — NÃO é recomendado na estenose aórtica grave SINTOMÁTICA. O sintoma já define …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-tavi-em-risco-cirurgico-intermediario",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na estenose aórtica de risco cirúrgico INTERMEDIÁRIO, a SBC dá ao TAVI Classe I nível A e à cirurgia Classe II…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-teste-ergometrico-positivo-na-estenose-aortica-assintomatica",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na estenose aórtica grave ASSINTOMÁTICA com TESTE ERGOMÉTRICO POSITIVO, SBC e AHA dão Classe IIa B à intervenç…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "valv-intervalos-de-seguimento-por-gravidade-na-estenose-aortica",
+    "target_title": "Os INTERVALOS de reavaliação na estenose aórtica assintomática sem complicadores, pela SBC: a cada 6 MESES na importante, a cada 1 ANO na mo…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "valv-criterios-de-valvopatia-critica-na-estenose-aortica-assintomatica",
+    "target_title": "Na estenose aórtica ASSINTOMÁTICA considerada CRÍTICA, a intervenção deve ser considerada pela SBC (Classe IIa, C) com os seguintes cortes: …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-teste-ergometrico-na-estenose-aortica-e-subaortica",
+    "target_title": "Na ESTENOSE AÓRTICA, na estenose aórtica SUPRAVALVULAR e na estenose SUBAÓRTICA, o teste ergométrico deve ser considerado para avaliação de …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-teste-ergometrico-contraindicado-na-estenose-grave-sintomatica",
+    "target_title": "O teste ergométrico NÃO é recomendado na ESTENOSE AÓRTICA OU MITRAL GRAVE SINTOMÁTICA para avaliação da aptidão cardiorrespiratória — Classe…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-tratar-hipertensao-na-estenose-aortica-comecando-baixo",
+    "target_title": "No idoso ASSINTOMÁTICO com estenose aórtica, a hipertensão arterial DEVE ser tratada — começando com dose BAIXA de anti-hipertensivo e aumen…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-estatina-nao-freia-a-progressao-da-estenose-aortica",
+    "target_title": "A ESTATINA NÃO está indicada para prevenir a PROGRESSÃO da estenose aórtica em paciente com lesão calcificada leve a moderada — Classe III, …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-cirurgia-na-estenose-aortica-do-idoso-e-o-corte-de-5-metros-por-segundo",
+    "target_title": "No idoso, a cirurgia da estenose aórtica é recomendada no paciente SINTOMÁTICO, no assintomático com fração de ejeção ABAIXO DE 50%, e em qu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-tavi-e-cirurgia-por-faixa-de-risco-no-idoso",
+    "target_title": "No idoso com indicação de tratamento da estenose aórtica: a cirurgia é recomendada em risco cirúrgico BAIXO ou INTERMEDIÁRIO (Classe I, níve…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-tavi-nao-indicado-quando-a-comorbidade-anula-o-beneficio",
+    "target_title": "O TAVI NÃO é recomendado no paciente cujas comorbidades existentes impediriam o benefício esperado da correção da estenose aórtica — Classe …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "partner-3-tavi-baixo-risco",
+    "target_title": "PARTNER 3 — TAVI versus troca cirúrgica em pacientes de baixo risco com estenose aórtica grave",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "early-tavr-troca-valvar-precoce-na-estenose-aortica-grave-assintomatica",
+    "target_title": "EARLY TAVR — Troca valvar aórtica transcateter precoce versus vigilância na estenose aórtica grave assintomática",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "partner-2a-tavi-versus-cirurgia-em-risco-cirurgico-intermediario",
+    "target_title": "PARTNER 2A — TAVI versus cirurgia na estenose aórtica de risco cirúrgico intermediário",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "exame",
+    "target_slug": "escore-de-calcio-da-valva-aortica-na-estenose-aortica-de-baixo-fluxo-baixo-gradiente",
+    "target_title": "Escore de cálcio da valva aórtica (Agatston) na estenose aórtica de baixo fluxo/baixo gradiente",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "exame",
+    "target_slug": "peptideo-natriuretico-na-estenose-aortica-grave-assintomatica",
+    "target_title": "Peptídeo natriurético (BNP/NT-proBNP) na estenose aórtica grave assintomática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "exame",
+    "target_slug": "ergometria-na-estenose-aortica-assintomatica-grave",
+    "target_title": "Ergometria (teste de esforço) na estenose aórtica assintomática grave",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "estenose-aortica-gradiente-pressorico-cateterismo",
+    "target_title": "Estenose aórtica — gradiente pressórico entre VE e aorta ao cateterismo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-intervencao-pre-gestacional-na-estenose-aortica-sintomatica",
+    "target_title": "Intervenção é recomendada antes da gestação em pacientes com estenose aórtica grave sintomática.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-valvuloplastia-aortica-por-balao-na-gestante-com-estenose-grave-sintomatica",
+    "target_title": "Valvuloplastia aórtica por balão deve ser considerada durante a gestação em pacientes com estenose aórtica grave e sintomas graves.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "ecocardiograma-fetal-estenose-aortica-critica",
+    "target_title": "Ecocardiograma fetal — estenose aórtica crítica com sofrimento miocárdico do ventrículo esquerdo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "troca-valvar-aortica-em-estenose-grave-sintomatica-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "target_title": "Troca valvar aórtica (cirúrgica ou transcateter) é recomendada em paciente sintomático com estenose aórtica grave agendado para cirurgia não…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "estenose-aortica-importante-assintomatica-intervir-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "target_title": "Paciente com estenose aórtica importante ASSINTOMÁTICA, em programação de cirurgia não cardíaca eletiva de risco intermediário ou alto, deve…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "ecg-hipertrofia-ventricular-esquerda-extrema",
+    "target_title": "ECG — Hipertrofia ventricular esquerda extrema (secundária a estenose aórtica grave)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "galeria",
+    "target_slug": "estenose-aortica-supravalvar-sindrome-de-williams-doppler",
+    "target_title": "Estenose aórtica supravalvar e estenose de ramo pulmonar na síndrome de Williams — ecocardiograma com Doppler colorido e pulsado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "valvuloplastia-aortica-fetal-desfechos-pos-natais-dos-primeiros-100-pacientes",
+    "target_title": "Valvuloplastia aórtica fetal na estenose aórtica grave em evolução para síndrome do coração esquerdo hipoplásico: desfechos pós-natais dos primeiros 100 pacientes",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-grave-recreativo-moderada-alta-classe-iii",
+    "target_title": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício recreativo de intensidade moderada a alta não é recomendado.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-leve-recreativo-classe-i",
+    "target_title": "Em atletas assintomáticos com estenose aórtica leve, a participação em todos os esportes recreativos é recomendada, se desejado.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-moderada-recreativo-classe-iia",
+    "target_title": "Em atletas assintomáticos com estenose aórtica moderada, esportes recreativos de intensidade leve a moderada devem ser considerados quando a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-grave-recreativo-leve-classe-iib",
+    "target_title": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício recreativo de intensidade leve pode ser considerado quando a fraç…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-leve-competitivo-classe-i",
+    "target_title": "Em atletas assintomáticos com estenose aórtica leve, a participação em todos os esportes competitivos é recomendada, se desejado.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-moderada-competitivo-classe-iib",
+    "target_title": "Em atletas assintomáticos com estenose aórtica moderada, esportes competitivos de esforço leve a moderado podem ser considerados quando a fr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-grave-competitivo-habilidade-classe-iib",
+    "target_title": "Em atletas assintomáticos com estenose aórtica grave e fração de ejeção ≥50%, esportes de habilidade de baixa intensidade podem ser consider…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-aortica-grave-competitivo-moderada-alta-classe-iii",
+    "target_title": "Em atletas assintomáticos com estenose aórtica grave, esporte ou exercício de intensidade moderada ou alta não é recomendado.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "heart-team-discute-recomendacao-com-paciente-na-estenose-aortica",
+    "target_title": "Na estenose aórtica grave, a escolha entre intervenção cirúrgica e transcateter deve ser baseada em avaliação cuidadosa de fatores clínicos,…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2025-tavi-recomendado-em-pacientes-70-anos-ou-mais-com-estenose-aortica-tricuspide",
+    "target_title": "Em pacientes com estenose aórtica grave e válvula aórtica tricúspide, o TAVI é recomendado a partir dos 70 anos de idade, desde que a anatom…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "esc2025-escolha-do-modo-de-intervencao-na-estenose-aortica-baseada-em-heart-team",
+    "target_title": "A escolha entre TAVI e cirurgia deve ser baseada na avaliação da Heart Team quanto às características clínicas, anatômicas e do procedimento…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "estenose-aortica-fetal-leve-preditores-de-intervencao-pos-natal-no-primeiro-ano",
+    "target_title": "Estenose aórtica fetal 'leve': gradiente de pico da valva aórtica >12,5 mmHg no exame inicial prediz intervenção pós-natal no primeiro ano de vida",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "lv-2022-metanalise-de-tecnicas-cirurgicas-para-estenose-aortica-supravalvar",
+    "target_title": "Lv et al. 2022 — Metanálise em Rede de Técnicas Cirúrgicas para Estenose Aórtica Supravalvar",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "mcelhinney-2005-valvoplastia-aortica-por-balao-na-estenose-aortica-neonatal",
+    "target_title": "McElhinney 2005 — Crescimento e função do coração esquerdo e necessidade de reintervenção após valvoplastia aórtica por balão na estenose aórtica neonatal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "sbc2025-lpa-dosar-uma-vez-populacoes-especificas",
+    "target_title": "Em populações específicas — DAC precoce, estenose aórtica, hipercolesterolemia familiar, história familiar de DCVA precoce ou de Lp(a) aumen…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "evidencia",
+    "target_slug": "tavr-unload-tavi-na-icfer-com-estenose-aortica-moderada-implicacao-do-ensaio",
+    "target_title": "TAVR UNLOAD: TAVI vs vigilância na ICFER com EA moderada — win ratio 1,31 (p=0,14). KCCQ +12,8 vs +3,2 em 1 ano. Primário nulo.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "partner-tavi-versus-cirurgia-em-alto-risco-cirurgico",
+    "target_title": "PARTNER — TAVI versus troca cirúrgica em estenose aórtica de alto risco",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "evolved-intervencao-precoce-na-ea-grave-assintomatica-com-fibrose",
+    "target_title": "EVOLVED — intervenção precoce na estenose aórtica grave assintomática com fibrose",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "estudo",
+    "target_slug": "tavr-unload-tavi-na-icfer-com-estenose-aortica-moderada",
+    "target_title": "TAVR UNLOAD — TAVI na ICFER com estenose aórtica moderada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-aortica",
+    "source_disease_name": "Estenose aórtica",
+    "target_type": "documento",
+    "target_slug": "corvia-intelligence-europe_pmc-2026-early-and-late-tavi-outcomes-in-aortic-stenosis-with-transthyretin-cardiac-amyloidosis-a-systematic-review-1d09594e1c",
+    "target_title": "Desfechos precoces e tardios da TAVI na estenose aórtica com amiloidose cardíaca por transtirretina: revisão sistemática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita",
+    "target_title": "Síndrome Coronariana Aguda sem Supradesnível do Segmento ST no Muito Idoso: Estratégia Invasiva versus Conservadora — o que After Eighty e SENIOR-RITA Mostram, e Não Mostram",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "terapia-antiplaquetaria-dupla-no-muito-idoso-apos-sindrome-coronariana-aguda-escolha-e-duracao-popular-age-e-senior",
+    "target_title": "Terapia Antiplaquetária Dupla no Muito Idoso Após Síndrome Coronariana Aguda: Escolha do P2Y12 e Duração — POPular AGE e SENIOR",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+    "target_title": "Síndrome coronariana aguda no idoso frágil e apresentação atípica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sindrome-coronariana-aguda-no-idoso-fragil-e-apresentacao-atipica",
+    "target_title": "Fluxograma: SCA no idoso frágil e apresentação atípica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-coronariana-aguda-sem-supra-em-paciente-com-80-anos-ou-mais-invasiva-ou-conservadora",
+    "target_title": "SCA sem supra de ST em paciente com 80 anos ou mais: estratégia invasiva ou conservadora?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-doenca-coronariana-cronica-e-aguda",
+    "target_title": "Cardiologia geriátrica: doença coronariana no muito idoso, da angina refratária à síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sindrome-coronariana-aguda-no-idoso-fragil-ou-atipica",
+    "target_title": "Síndrome coronariana aguda no idoso frágil ou com apresentação atípica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-de-kounis-sindrome-coronariana-aguda-alergica",
+    "target_title": "Síndrome de Kounis — síndrome coronariana aguda de causa alérgica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "angina-refrataria-apos-sca-sem-supra-de-st-ranolazina-reduz-eventos-cardiovasculares-merlin-timi-36",
+    "target_title": "Angina recorrente após síndrome coronariana aguda sem supra de ST: a ranolazina reduz eventos cardiovasculares maiores?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "comunicacao-consentimento-e-alta-na-sindrome-coronariana-aguda-esc-2023",
+    "target_title": "Comunicação, consentimento e alta na síndrome coronariana aguda (ESC 2023)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "trilha",
+    "target_slug": "trilha-fibrilacao-atrial-antitrombotico-apos-sca-ou-icp",
+    "target_title": "Fibrilação atrial com síndrome coronariana aguda ou angioplastia: a terapia antitrombótica combinada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "manejo-antitrombotico-e-prevencao-secundaria-na-sca-acc-aha-2025",
+    "target_title": "Antitrombose, revascularização e prevenção secundária na síndrome coronariana aguda (ACC/AHA 2025)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas-5fu-capecitabina",
+    "target_title": "Síndrome coronariana aguda e vasoespasmo por fluoropirimidinas (5-FU/capecitabina)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia",
+    "target_title": "Síndrome coronariana aguda em paciente oncológico com trombocitopenia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
+    "target_title": "Fluxograma: SCA e vasoespasmo coronariano por fluoropirimidinas",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sindrome-coronariana-aguda-em-paciente-oncologico-com-trombocitopenia",
+    "target_title": "Fluxograma: SCA em paciente oncológico com trombocitopenia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sindrome-coronariana-aguda-e-vasoespasmo-por-fluoropirimidinas",
+    "target_title": "SCA e vasoespasmo por fluoropirimidinas (5-FU/capecitabina)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "escore-grace-o-que-ele-mede-e-o-que-nao-mede-na-sca",
+    "target_title": "Escore GRACE na síndrome coronariana aguda: o que ele estima, exatamente?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "grace-2-0-versus-grace-original-discriminacao-nao-linear-na-sca",
+    "target_title": "Escore GRACE 2.0: por que ele discrimina melhor do que o GRACE original na síndrome coronariana aguda?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "pos-sca-ldl-acima-do-alvo-em-estatina-potente-ezetimiba-improve-it",
+    "target_title": "LDL ainda acima do alvo depois da síndrome coronariana aguda: ezetimiba muda desfecho?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "pos-sca-alirocumabe-reduz-mortalidade-odyssey-outcomes",
+    "target_title": "Após síndrome coronariana aguda, sob estatina de alta intensidade: o alirocumabe reduz mortalidade?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "pos-sca-estatina-intensiva-versus-moderada-prove-it-timi-22",
+    "target_title": "Após síndrome coronariana aguda: estatina de alta intensidade ou moderada?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "vacinacao-antiinfluenza-apos-sindrome-coronariana-aguda",
+    "target_title": "Paciente pós-infarto ainda não vacinado contra influenza: vale a pena priorizar antes da alta?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "ensaio-copes-cuidado-otimizado-de-depressao-apos-sindrome-coronariana-aguda",
+    "target_title": "Ensaio COPES: Cuidado Otimizado de Depressão Após Síndrome Coronariana Aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "depressao-persistente-pos-sca-cuidado-escalonado-copes",
+    "target_title": "Depressão persistente após síndrome coronariana aguda: só medicar, ou organizar o cuidado?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "estresse-agudo-como-gatilho-de-sindrome-coronariana-aguda-e-de-takotsubo",
+    "target_title": "Estresse agudo como gatilho: síndrome coronariana aguda e cardiomiopatia de takotsubo",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "ensaio-copes-cuidado-escalonado-depressao-sca-caso",
+    "target_title": "Cuidado escalonado de depressão após síndrome coronariana aguda: o ensaio COPES",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "takotsubo-perioperatorio-em-cirurgia-nao-cardiaca-confundido-com-sindrome-coronariana-aguda",
+    "target_title": "Takotsubo Perioperatório em Cirurgia Não Cardíaca — Confundido com Síndrome Coronariana Aguda e o Risco de Cateterismo Desnecessário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
+    "target_title": "Síndrome Coronariana Aguda — Timing da Estratégia Invasiva e Duração de DAPT (ESC 2023)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-estratificacao-de-risco-grace-complemento-numerico",
+    "target_title": "Síndrome Coronariana Aguda: Estratificação de Risco GRACE (Complemento Numérico)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
+    "target_title": "Síndrome Coronariana Aguda: Duração de DAPT (Complemento Final)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "choque-cardiogenico-na-sindrome-coronariana-aguda-culprit-shock-e-iabp-shock-ii",
+    "target_title": "Choque Cardiogênico na Síndrome Coronariana Aguda: CULPRIT-SHOCK e IABP-SHOCK II",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "neo-mindset-retirada-precoce-aspirina-apos-pci-sca",
+    "target_title": "NEO-MINDSET: retirada muito precoce do AAS após PCI por síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "tico-ticagrelor-isolado-apos-tres-meses-na-sindrome-coronariana-aguda",
+    "target_title": "TICO — Monoterapia com ticagrelor após 3 meses de dupla antiagregação na síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "host-reduce-polytech-acs-desescalonamento-por-dose-do-prasugrel",
+    "target_title": "HOST-REDUCE-POLYTECH-ACS — Desescalonamento por REDUÇÃO DE DOSE do prasugrel na síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-farmacologia-antitrombotica-da-sca",
+    "target_title": "Doença coronariana: a farmacologia antitrombótica da síndrome coronariana aguda, fármaco a fármaco",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-sindrome-coronariana-aguda-no-paciente-oncologico",
+    "target_title": "Síndrome coronariana aguda no paciente oncológico: quando o câncer muda a antiagregação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025",
+    "target_title": "Síndrome coronariana aguda por SCAD na gestação e no puerpério — manejo de emergência (ESC 2025)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "sindrome-coronariana-aguda-na-gestacao-e-puerperio",
+    "target_title": "Síndrome coronariana aguda na gestação e no puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio-esc-2025",
+    "target_title": "Fluxograma: SCA por SCAD na gestação e no puerpério (ESC 2025)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sindrome-coronariana-aguda-na-gestacao-e-puerperio",
+    "target_title": "Fluxograma: síndrome coronariana aguda na gestação e puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sindrome-coronariana-aguda-por-scad-na-gestacao-e-puerperio",
+    "target_title": "Síndrome coronariana aguda por SCAD na gestação e puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "jcs2022-po-cirurgia-eletiva-evitar-1-mes-apos-sca",
+    "target_title": "Cirurgia não cardíaca eletiva deve ser evitada até 1 mês após o início de síndrome coronariana aguda (SCA).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "jcs2022-adiar-cirurgia-eletiva-por-1-mes-apos-sindrome-coronariana-aguda",
+    "target_title": "A cirurgia não cardíaca ELETIVA deve ser evitada até 1 MÊS após o início de uma síndrome coronariana aguda (Classe I, Nível C). No paciente …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-de-takotsubo-o-registro-internacional-e-o-que-a-diferencia-da-sindrome-coronariana-aguda",
+    "target_title": "Cardiomiopatia de Takotsubo: o Registro Internacional e o Que a Diferencia da Síndrome Coronariana Aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-de-takotsubo-apresentacao-clinica-e-prognostico-intertak",
+    "target_title": "Síndrome de Takotsubo: ela é realmente mais \"benigna\" que a síndrome coronariana aguda?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-rastreio-e-manejo-da-depressao-pos-sindrome-coronariana-aguda",
+    "target_title": "Fluxograma: Rastreio e Manejo da Depressão Após Síndrome Coronariana Aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "neo-mindset-retirada-precoce-aspirina-apos-pci-sca",
+    "target_title": "NEO-MINDSET: Retirada Muito Precoce do AAS após PCI por Síndrome Coronariana Aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "rastreamento-de-depressao-apos-infarto-ou-sindrome-coronariana-aguda",
+    "target_title": "Rastreamento e conduta diante de depressão após infarto do miocárdio ou síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "duracao-de-dapt-apos-sca-decisao-por-risco-hemorragico-e-isquemico",
+    "target_title": "Duração da dupla antiagregação (DAPT) após síndrome coronariana aguda — decisão por risco hemorrágico e isquêmico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "aplicacao-do-escore-grace-na-sindrome-coronariana-aguda",
+    "target_title": "Aplicação do escore GRACE 2.0 na síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "terapia-antitrombotica-apos-sca-ou-icp-na-fibrilacao-atrial-augustus",
+    "target_title": "Terapia antitrombótica no paciente com fibrilação atrial e síndrome coronariana aguda recente ou ICP",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "vacinacao-contra-influenza-antes-da-alta-pos-infarto",
+    "target_title": "Vacinação contra influenza como prevenção cardiovascular secundária, antes da alta após infarto ou síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "checklist",
+    "target_slug": "reconhecimento-e-manejo-inicial-da-sindrome-de-kounis",
+    "target_title": "Suspeita de síndrome de Kounis (síndrome coronariana aguda de causa alérgica)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+    "target_title": "Prevenção secundária integrada após síndrome coronariana aguda — o playbook da alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "plato-ticagrelor-versus-clopidogrel-na-sca",
+    "target_title": "PLATO: ticagrelor versus clopidogrel na síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-escolha-do-p2y12-na-sca",
+    "target_title": "Fluxograma: escolha do inibidor de P2Y12 na síndrome coronariana aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "ptt-troponina-elevada-armadilha-sca",
+    "target_title": "PTT com troponina elevada: a armadilha da síndrome coronariana aguda",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "caso_clinico",
+    "target_slug": "sca-hemofilia-a-grave-escolha-stent-dapt",
+    "target_title": "Síndrome Coronariana Aguda em Hemofilia A Grave: Stent e DAPT",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "aas-indicado-para-todo-idoso-com-sindrome-coronariana-aguda",
+    "target_title": "O ácido acetilsalicílico é indicado para todos os pacientes idosos com síndrome coronariana aguda, na ausência de contraindicações, com bene…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "ticagrelor-preferencial-sobre-clopidogrel-na-sca-do-idoso-independente-da-idade",
+    "target_title": "Em idosos com síndrome coronariana aguda, o ticagrelor apresenta evolução melhor que o clopidogrel tanto em pacientes com 75 anos ou mais qu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "avaliar-sintomas-por-metodos-que-ajudem-o-paciente-a-descrever-a-experiencia",
+    "target_title": "Na síndrome coronariana aguda, é recomendado avaliar os sintomas do paciente por métodos que o ajudem a descrever sua experiência — recomend…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "pacientes-anticoagulados-com-sca-encaminhados-preferencialmente-a-angioplastia-primaria",
+    "target_title": "Pacientes com fibrilação atrial anticoagulados que apresentam síndrome coronariana aguda devem ser encaminhados preferencialmente à estratég…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "sca-com-supra-st-e-aco-recebe-dose-usual-de-anticoagulacao-parenteral",
+    "target_title": "Pacientes com síndrome coronariana aguda com supradesnivelamento do segmento ST em uso de anticoagulação oral devem receber dose usual de an…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "sca-sem-supra-st-sem-alto-risco-suspende-aco-e-transiciona-para-parenteral",
+    "target_title": "Pacientes com síndrome coronariana aguda sem supradesnivelamento do segmento ST e sem critérios de alto risco devem ter o anticoagulante ora…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "tripla-terapia-por-1-semana-em-sca-tratada-clinicamente-com-fa",
+    "target_title": "Pacientes com necessidade de anticoagulação por fibrilação atrial internados por síndrome coronariana aguda em estratégia de tratamento clín…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "augustus-apixabana-e-aspirina-em-fibrilacao-atrial-com-sca-ou-icp",
+    "target_title": "AUGUSTUS — Apixabana e aspirina em fibrilação atrial com síndrome coronariana aguda ou intervenção coronária percutânea",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "avaliacao-coronariana-e-reexposicao-cautelosa-apos-sindrome-coronariana-por-5-fluorouracila",
+    "target_title": "Para pacientes que desenvolveram síndrome coronariana aguda com o uso de 5-fluorouracila, deve-se considerar a avaliação da anatomia coronar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "grace-derivacao-do-escore-de-risco-em-sindrome-coronariana-aguda",
+    "target_title": "GRACE — Derivação e validação do escore de risco em síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "odyssey-outcomes-alirocumabe-pos-sca",
+    "target_title": "ODYSSEY OUTCOMES — Alirocumabe após síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "prove-it-timi-22-cannon-2004-atorvastatina-intensiva-vs-pravastatina-apos-sca",
+    "target_title": "PROVE IT-TIMI 22 (Cannon et al. 2004) — Terapia hipolipemiante intensiva versus moderada após síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "improve-it-cannon-2015-ezetimiba-associada-a-estatina-apos-sca",
+    "target_title": "IMPROVE-IT (Cannon et al. 2015) — Ezetimiba associada a estatina após síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "dal-outcomes-schwartz-2012-dalcetrapibe-apos-sindrome-coronariana-aguda",
+    "target_title": "dal-OUTCOMES (Schwartz et al. 2012) — Dalcetrapibe em pacientes com síndrome coronariana aguda recente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "sadhart-sertralina-na-depressao-apos-sindrome-coronariana-aguda",
+    "target_title": "SADHART — Sertralina no tratamento da depressão maior após infarto ou angina instável",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "davidson-2010-ensaio-copes-cuidado-de-depressao-pos-sca",
+    "target_title": "Davidson et al. 2010 — Ensaio COPES: cuidado otimizado de depressão em síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "examine-alogliptina-apos-sindrome-coronariana-aguda-no-diabetes-tipo-2",
+    "target_title": "EXAMINE — Alogliptina após síndrome coronariana aguda no diabetes tipo 2",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "elixa-lixisenatida-apos-sindrome-coronariana-aguda-no-diabetes-tipo-2",
+    "target_title": "ELIXA — Lixisenatida após síndrome coronariana aguda no diabetes tipo 2",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "intensificar-hipolipemiante-durante-a-internacao-por-sca",
+    "target_title": "Em paciente que já vinha em uso de qualquer terapia hipolipemiante e interna por síndrome coronariana aguda, a intensificação do tratamento …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "estatina-de-alta-intensidade-com-ezetimiba-na-internacao-por-sca",
+    "target_title": "No paciente virgem de tratamento hipolipemiante que interna por síndrome coronariana aguda, iniciar terapia combinada de estatina de alta in…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "nao-desescalar-antiagregante-nos-primeiros-30-dias-apos-sca",
+    "target_title": "A desescalada da terapia antiagregante nos primeiros 30 dias após uma síndrome coronariana aguda **não** é recomendada. É recomendação contr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "prasugrel-e-ticagrelor-nao-recomendados-com-plaquetas-abaixo-de-50-mil",
+    "target_title": "Em paciente com síndrome coronariana aguda e câncer com contagem de plaquetas abaixo de 50.000/µL, prasugrel e ticagrelor **não** são recome…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "estrategia-invasiva-no-paciente-oncologico-com-sca-de-alto-risco",
+    "target_title": "A estratégia invasiva é recomendada em paciente oncológico que se apresenta com síndrome coronariana aguda de alto risco e expectativa de so…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "scassst-triagem-inicial-com-ecg-em-ate-10-minutos",
+    "target_title": "A triagem inicial da síndrome coronariana aguda sem supradesnível de ST deve ser feita com base em história clínica, exame físico, ELETROCAR…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "scassst-nao-associar-aas-a-anti-inflamatorio-nao-esteroidal",
+    "target_title": "NÃO combinar ácido acetilsalicílico com outros ANTI-INFLAMATÓRIOS NÃO ESTEROIDAIS na síndrome coronariana aguda sem supradesnível de ST.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "te-apos-72-horas-de-estabilizacao-da-sindrome-coronariana-aguda-sbc-2024",
+    "target_title": "O teste ergométrico é RECOMENDADO nas síndromes coronarianas agudas após, no mínimo, 72 HORAS de completa estabilização clínica e hemodinâmi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "cintilografia-em-repouso-na-sindrome-coronariana-aguda-possivel-sbc-2024",
+    "target_title": "Na DOR TORÁCICA AGUDA com síndrome coronariana aguda POSSÍVEL, a cintilografia de perfusão em REPOUSO deve ser considerada quando o ECG é no…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "dapt-de-12-meses-na-sindrome-coronariana-aguda-sbc-2019",
+    "target_title": "Na SÍNDROME CORONARIANA AGUDA tratada com intervenção percutânea, a dupla antiagregação deve ser mantida por período MÍNIMO DE 12 MESES, IND…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-prasugrel-contraindicado-acima-de-75-anos",
+    "target_title": "No idoso com síndrome coronariana aguda, o PRASUGREL é CONTRAINDICADO em pacientes com 75 ANOS OU MAIS, em quem pesa MENOS DE 60 kg e em que…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-doses-reduzidas-de-enoxaparina-e-tenecteplase-no-idoso",
+    "target_title": "No idoso com síndrome coronariana aguda, dois ajustes de dose são recomendados e frequentemente esquecidos: a ENOXAPARINA pode ser administr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-estatina-individualizada-acima-dos-75-anos",
+    "target_title": "No idoso com síndrome coronariana aguda, o tratamento da dislipidemia até os 75 ANOS deve seguir as mesmas orientações do não idoso (Classe …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-ticagrelor-mantem-beneficio-acima-dos-75-anos",
+    "target_title": "No idoso com síndrome coronariana aguda, o TICAGRELOR mostrou melhor evolução que o clopidogrel comparando grupos acima e abaixo de 75 anos,…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-cateterismo-precoce-e-a-lacuna-acima-dos-80-anos",
+    "target_title": "No idoso com síndrome coronariana aguda, o cateterismo PRECOCE associa-se a melhor evolução a curto e longo prazo, e deve ser considerado le…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "matrix-access-acesso-radial-versus-femoral-na-sindrome-coronariana-aguda",
+    "target_title": "MATRIX Access — Acesso radial versus femoral na síndrome coronariana aguda sob manejo invasivo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "timacs-angiografia-precoce-vs-tardia-na-sca-sem-supra",
+    "target_title": "TIMACS — Angiografia precoce vs. tardia na síndrome coronariana aguda sem supradesnivelamento de ST",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "isar-react-5-ticagrelor-vs-prasugrel-na-sca",
+    "target_title": "ISAR-REACT 5 — Comparação direta entre ticagrelor e prasugrel na síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "gradiente-de-tempo-entre-icp-por-sindrome-coronariana-aguda-e-cirurgia-nao-cardiaca",
+    "target_title": "Após intervenção coronária percutânea realizada por SÍNDROME CORONARIANA AGUDA, o intervalo recomendado até a cirurgia não cardíaca é de 12 …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "perio-manter-dapt-em-procedimento-oftalmologico-de-menor-risco",
+    "target_title": "Paciente em dupla antiagregação por stent recente, ou com síndrome coronariana aguda há MENOS DE 1 ANO, que precise de intervenção oftalmoló…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "perio-em-vitrectomia-ou-trabeculectomia-sob-dapt-manter-so-o-aas",
+    "target_title": "Paciente em dupla antiagregação por stent recente, ou com síndrome coronariana aguda há menos de 1 ano, que precise de VITRECTOMIA ou TRABEC…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "antiarritmico-profilatico-alem-de-betabloqueador-nao-recomendado-na-sindrome-coronariana-aguda",
+    "target_title": "O tratamento profilático com antiarrítmicos, além dos betabloqueadores, não é recomendado na síndrome coronariana aguda.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-acs-vacinacao-anual-contra-influenza",
+    "target_title": "A vacinação anual contra influenza é recomendada para todos os pacientes com síndrome coronariana aguda.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "escore-grace-deve-ser-considerado-para-estimativa-prognostica-na-sca",
+    "target_title": "Nos pacientes com síndrome coronariana aguda, o uso de escores de risco estabelecidos (por exemplo, o escore de risco GRACE) para estimativa…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "ticagrelor-ou-prasugrel-preferidos-sobre-clopidogrel-na-sindrome-coronariana-aguda-sem-supra-de-st",
+    "target_title": "Na ausência de contraindicações, ticagrelor ou prasugrel são recomendados preferencialmente ao clopidogrel, em associação ao ácido acetilsal…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "plato-ticagrelor-versus-clopidogrel-sindrome-coronariana-aguda",
+    "target_title": "PLATO — Ticagrelor versus clopidogrel na síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "triton-timi-38-prasugrel-versus-clopidogrel-sindrome-coronariana-aguda",
+    "target_title": "TRITON-TIMI 38 — Prasugrel versus clopidogrel na síndrome coronariana aguda com ICP planejada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "cure-clopidogrel-associado-a-aas-na-sca-sem-supra-de-st",
+    "target_title": "CURE — Clopidogrel associado ao AAS na síndrome coronariana aguda sem supra de ST",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "matrix-bivalirudina-vs-heparina-sindrome-coronariana-aguda",
+    "target_title": "MATRIX — Bivalirudina vs. heparina não fracionada em síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "victorion-inception-inclisirana-pos-sindrome-coronariana-aguda",
+    "target_title": "VICTORION-INCEPTION — Inclisirana precoce após síndrome coronariana aguda recente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "sbc-2025-heart-escore-preferencial-na-dor-toracica-da-emergencia-apos-ecg",
+    "target_title": "O escore HEART é o escore clínico preferencial na avaliação de paciente com dor torácica em investigação de síndrome coronariana aguda (Clas…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-reparo-emergencial-complicacao-mecanica-sca-heart-team",
+    "target_title": "Na instabilidade hemodinâmica, o reparo cirúrgico ou por cateter, de emergência, das complicações mecânicas da síndrome coronariana aguda é …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-iabp-rotina-nao-recomendado-choque-sem-complicacao-mecanica",
+    "target_title": "O uso rotineiro de balão intra-aórtico em pacientes com síndrome coronariana aguda e choque cardiogênico, sem complicação mecânica, não é re…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-acs-individualizar-tratamento-hipoglicemiante-conforme-comorbidade",
+    "target_title": "Na síndrome coronariana aguda, o tratamento hipoglicemiante deve ser individualizado conforme as comorbidades do paciente. É a única recomen…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "sbc2025-dislip-iniciar-estatina-potente-nas-primeiras-24h-da-sca",
+    "target_title": "Em pacientes com síndrome coronariana aguda, recomenda-se iniciar estatinas potentes nas primeiras 24 horas após a internação.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "sbc2025-dislip-estatina-potente-com-ezetimiba-na-fase-aguda-da-sca",
+    "target_title": "Em pacientes com síndrome coronariana aguda, recomenda-se iniciar estatinas potentes associadas à ezetimiba ainda na fase aguda e considerar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc-2023-ecg-ate-10-minutos-na-dispneia-suspeita-de-sca",
+    "target_title": "Na suspeita de síndrome coronariana aguda, o ECG de 12 derivações deve ser obtido o mais cedo possível, operacionalmente nos primeiros 10 mi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "evidencia",
+    "target_slug": "esc-2023-ecg-ate-10-minutos-na-dor-toracica-suspeita-de-sca",
+    "target_title": "Na suspeita de síndrome coronariana aguda, o registro e a interpretação do ECG de 12 derivações são recomendados o mais cedo possível no pri…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "appraise-2-apixabana-com-antiagregacao-apos-sca",
+    "target_title": "APPRAISE-2 — Apixabana com antiagregação após síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "estudo",
+    "target_slug": "ivus-acs-ivus-versus-angiografia-para-guiar-icp-na-sca",
+    "target_title": "IVUS-ACS — IVUS versus angiografia para guiar ICP na síndrome coronariana aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sindrome-coronariana-aguda",
+    "source_disease_name": "Síndrome coronariana aguda",
+    "target_type": "documento",
+    "target_slug": "corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
+    "target_title": "Terapia antitrombótica dupla com inibidores plaquetários potentes em pacientes com fibrilação atrial e síndrome coronariana aguda: ensaio clínico randomizado EPIDAURUS",
+    "relation_type": "associated_with"
+  }
+]

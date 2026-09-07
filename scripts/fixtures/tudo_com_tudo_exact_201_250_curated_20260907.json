@@ -1,0 +1,1802 @@
+[
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-no-idoso-diferencial-ampliado-e-a-fronteira-do-inexplicado",
+    "target_title": "Síncope no Idoso: Diferencial Ampliado, Múltiplas Causas Concomitantes e a Fronteira do Inexplicado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+    "target_title": "Síncope e queda no idoso — estratificação de risco na emergência",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+    "target_title": "Fluxograma: síncope e queda no idoso — estratificação de risco na emergência",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-no-idoso-por-hipotensao-ortostatica-relacionada-a-polifarmacia",
+    "target_title": "Síncope no idoso: quando a lista de anti-hipertensivos é a causa, não a solução",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-taquicardia-bradicardia-no-idoso-indicar-marca-passo-nao-encerra-a-decisao-de-anticoagular",
+    "target_title": "Idosa com síncope, pausa sinusal ao Holter e fibrilação atrial paroxística: implantar o marca-passo resolve o problema todo?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-valvopatia-mitral-e-sincope",
+    "target_title": "Cardiologia geriátrica: valvopatia mitral e síncope no muito idoso — da estenose reumática residual ao paradoxo COAPT-MITRA-FR",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sincope-ou-queda-de-alto-risco-no-idoso",
+    "target_title": "Síncope ou queda de alto risco no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "monitor-cardiaco-implantavel-na-sincope-inexplicada-o-registro-picture",
+    "target_title": "Monitor Cardíaco Implantável na Síncope Inexplicada: o Registro PICTURE e o Momento de Implantar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-relacionada-ao-exercicio-diferenciando-a-causa-maligna-no-atleta",
+    "target_title": "Síncope relacionada ao exercício: diferenciando a causa estrutural/elétrica maligna no atleta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-hipertensao-pulmonar-arterial-por-dasatinibe-com-descompensacao",
+    "target_title": "Fluxograma: HAP por dasatinibe com dispneia, síncope ou falência de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "hipertensao-pulmonar-por-dasatinibe-com-descompensacao",
+    "target_title": "Hipertensão pulmonar por dasatinibe com síncope ou falência de VD",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-situacional-miccional-defecatoria-e-tussigena-mecanismo-por-gatilho-e-quando-investigar",
+    "target_title": "Síncope Situacional: Mecanismo Específico por Gatilho (Miccional, Defecatória, Tussígena) e Quando Investigar Além do Padrão Típico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "teste-ergometrico-negativo-nao-exclui-cpvt-o-limite-da-sensibilidade-de-50",
+    "target_title": "Adolescente com síncope aos esforços e teste ergométrico negativo — a CPVT está descartada?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sindrome-do-qt-longo-tipo-2-com-sincope-recorrente-apesar-do-betabloqueador",
+    "target_title": "Síndrome do QT longo tipo 2 com síncope recorrente em uso de betabloqueador: o genótipo importa?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "accaha2020-vhd-ea-avr-indicado-em-sintomatico-grave-alto-gradiente",
+    "target_title": "Em adultos com estenose aórtica (EA) grave de alto gradiente (Estágio D1) e sintomas de dispneia ao esforço, IC, angina, síncope ou pré-sínc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-durante-exercicio-atleta-avaliacao-retorno-esporte",
+    "target_title": "Síncope durante o exercício no atleta: avaliação, sinais de alarme e retorno ao esporte",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-cardiaca-com-sincope-inexplicada",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável deve ser considerado diante de síncope inexplicada de provável causa arrítmica (Cl…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-irreversivel-com-sintomas-claramente-relacionados",
+    "target_title": "Na cardiomiopatia chagásica, o implante de marca-passo é recomendação FORTE na disfunção do nó sinusal espontânea e irreversível com síncope…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-por-farmaco-essencial-com-sintomas-claros",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE na disfunção do nó sinusal INDUZIDA POR FÁRMACOS ESSENCIAIS, com síncope, pr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-bloqueio-bifascicular-com-sincope-de-repeticao",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação PONDERADA no bloqueio bifascicular sem documentação de bloqueio atrioventricular t…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-ablacao-tvs-induzida-ao-eef-para-esclarecer-sincope",
+    "target_title": "Na cardiomiopatia chagásica, a ablação por cateter é recomendação PONDERADA na taquicardia ventricular sustentada monomórfica induzida ao es…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-ablacao-tvs-mal-tolerada-induzida-para-esclarecer-sincope",
+    "target_title": "Na cardiomiopatia chagásica, a ablação por cateter é recomendação PONDERADA na taquicardia ventricular sustentada monomórfica MAL TOLERADA, …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-holter-na-investigacao-de-palpitacao-e-sincope",
+    "target_title": "Na cardiomiopatia chagásica, o Holter de 24 horas é recomendação FORTE na investigação de sintomas como palpitação, pré-síncope e síncope (F…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-estudo-eletrofisiologico-na-sincope-com-nao-invasivo-inconclusivo",
+    "target_title": "Na cardiomiopatia chagásica, o estudo eletrofisiológico intracardíaco é recomendação FORTE na avaliação de síncope, ou pré-síncope inquestio…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-amiodarona-na-tvs-com-sincope-e-fe-acima-de-40",
+    "target_title": "Na cardiomiopatia chagásica, a amiodarona é recomendação PONDERADA no tratamento da taquicardia ventricular sustentada COM SÍNCOPE e fração …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "chagas-amiodarona-na-sincope-com-tvs-induzida-e-fe-acima-de-40",
+    "target_title": "Na cardiomiopatia chagásica, a amiodarona é recomendação PONDERADA no tratamento de pacientes com síncope, taquicardia ventricular sustentad…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t68-cdi-em-tv-sustentada-com-criterio-de-risco",
+    "target_title": "CDI é recomendado em taquicardia ventricular sustentada sem fator reversível, quando presente pelo menos um critério de risco: síncope assoc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sincope-ou-parada-cardiaca-abortada-em-cardiomiopatia-hipertrofica",
+    "target_title": "Síncope ou parada cardíaca abortada em cardiomiopatia hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "sbc2020-eco-na-sincope-pos-exercicio-nao-explicada",
+    "target_title": "O ecocardiograma é recomendado na avaliação de SÍNCOPE PÓS-EXERCÍCIO não explicada, para definição diagnóstica inicial (Classe I, Nível C).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-cdi-ou-eef-na-sincope-inexplicada-da-congenita-operada",
+    "target_title": "No adulto com cardiopatia congênita de complexidade MODERADA OU GRAVE já operada, que apresenta SÍNCOPE INEXPLICADA com disfunção ventricula…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
+    "target_title": "Síncope e Morte Súbita em Crianças e Atletas Jovens: Diferencial e Triagem de Canalopatias e Cardiomiopatias",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "origem-aortica-anomala-de-coronaria-com-sincope-ou-isquemia-de-esforco",
+    "target_title": "Origem aórtica anômala de coronária com síncope ou isquemia de esforço",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-origem-aortica-anomala-de-coronaria-com-sincope-ou-isquemia-de-esforco",
+    "target_title": "Fluxograma: AAOCA com síncope/isquemia de esforço",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-durante-natacao-em-adolescente-atleta-suspeita-de-sindrome-do-qt-longo-tipo-1",
+    "target_title": "Síncope durante a natação em adolescente atleta: quando suspeitar de síndrome do QT longo",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "sincope-neuromediada-em-criancas-e-adolescentes-diagnostico-e-tratamento-2024",
+    "target_title": "Síncope Neuromediada em Crianças e Adolescentes: Diagnóstico e Tratamento (2024)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-teste-de-sentar-ativo-triagem",
+    "target_title": "O teste de sentar ativo pode ser usado como triagem preliminar de etiologia básica de síncope/intolerância ortostática em crianças e adolesc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-mp-nao-indicado-na-sincope-sem-resposta-cardioinibidora",
+    "target_title": "O marca-passo NÃO é indicado no paciente com síncope e AUSÊNCIA de resposta cardioinibidora documentada (Classe III, Nível B). Sem documenta…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-mp-na-sincope-recorrente-com-pausa-espontanea-documentada",
+    "target_title": "Na síncope recorrente em paciente com mais de 40 anos, o implante de marca-passo definitivo é recomendado quando há documentação de PAUSA SI…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-mp-com-resposta-cardioinibidora-a-massagem-do-seio-carotideo",
+    "target_title": "Na síncope recorrente em paciente com mais de 40 anos, o marca-passo definitivo deve ser considerado quando a massagem do seio carotídeo pro…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-mp-com-pausa-induzida-no-teste-de-inclinacao-ou-queda-recorrente",
+    "target_title": "Na síncope recorrente em paciente com mais de 40 anos e pausa sintomática maior que 3 segundos INDUZIDA NO TESTE DE INCLINAÇÃO, e na queda r…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-modo-bicameral-na-sincope-reflexa",
+    "target_title": "Na síndrome da hipersensibilidade do seio carotídeo e na síncope vasovagal, o marca-passo BICAMERAL (DDD,O/R) deve ser considerado (Classe I…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-monitor-implantavel-na-sincope-recorrente-de-origem-indeterminada",
+    "target_title": "O monitor de eventos implantável é recomendado na SÍNCOPE RECORRENTE DE ORIGEM INDETERMINADA, sem indicação formal de marca-passo ou cardiod…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-monitor-implantavel-na-sincope-reflexa-frequente-e-severa",
+    "target_title": "O monitor de eventos implantável deve ser considerado na suspeita de síncope REFLEXA recorrente com episódios frequentes e severos (Classe I…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-hutt-indicacao-para-confirmar-nms-suspeita",
+    "target_title": "O teste de inclinação (HUTT) é recomendado para confirmar clinicamente síncope neuromediada (NMS) suspeita, quando não diagnosticável por ou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-hutt-diferencial-com-pseudossincope",
+    "target_title": "O teste de inclinação (HUTT) é indicado para diagnóstico diferencial entre síncope neuromediada e pseudossíncope psicogênica.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-pots-diagnostico-completo-quatro-criterios",
+    "target_title": "O diagnóstico de POTS exige: (1) duração >1 mês, geralmente associada a fatores desencadeantes semelhantes aos da síncope vasovagal, com fat…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-vvs-criterios-hemodinamicos-e-cortes-por-idade",
+    "target_title": "Critérios de positividade para síncope vasovagal (VVS) no HUTT, junto com síncope ou pré-síncope: (1) PA sistólica ≤80 mmHg OU PA diastólica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-vvs-maligna-parada-maior-que-3-segundos",
+    "target_title": "Síncope vasovagal maligna é caracterizada por parada cardíaca com duração maior que 3 segundos durante um episódio de síncope espontâneo ou …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-manejo-nao-farmacologico-educacao-e-contrapressao",
+    "target_title": "Educação sobre reconhecimento de gatilhos e manobras físicas de contrapressão são recomendadas como primeira linha no manejo da síncope neur…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-indicacao-de-farmacoterapia",
+    "target_title": "Farmacoterapia é indicada quando há síncope recorrente (mais de 2 episódios em 6 meses ou mais de 3 por ano), risco de lesão, e resposta ins…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-midodrina-posologia-vvs-e-pots",
+    "target_title": "Midodrina pode ser recomendada para síncope vasovagal e POTS: dose inicial 1,25-2,5 mg 1-2x/dia, podendo aumentar para 2,5 mg 3x/dia após 2-…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-metoprolol-posologia-em-vvs",
+    "target_title": "Metoprolol pode ser recomendado na síncope vasovagal: 0,5 mg/kg/dia VO 2x/dia, até no máximo 2 mg/kg/dia ou a dose máxima do adulto. Contrai…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-fludrocortisona-e-sertralina-em-vvs-refrataria",
+    "target_title": "Fludrocortisona pode reduzir a probabilidade de eventos de síncope vasovagal. Sertralina tem experiência limitada em crianças/adolescentes c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "nms-ped2024-marca-passo-em-pausa-maior-que-4-segundos-ou-pos-rcp",
+    "target_title": "Marca-passo pode ser considerado em síncope recorrente com pausa cardíaca maior que 4 segundos documentada ou em sobreviventes de reanimação…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-tilt-test-em-suspeita-vvs-sem-diagnostico-confiante",
+    "target_title": "O teste de inclinação (tilt-table) pode ser útil para avaliar pacientes com suspeita de síncope vasovagal que carecem de diagnóstico confian…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-tilt-test-diferencial-convulsiva-epilepsia-pseudossincope",
+    "target_title": "O teste de inclinação é uma opção razoável para diferenciar entre síncope convulsiva e epilepsia, para estabelecer diagnóstico de pseudossín…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-ilr-em-idoso-com-sincope-recorrente-baixo-risco",
+    "target_title": "Registradores de eventos implantáveis (ILR) podem ser úteis para avaliar pacientes idosos com síncope recorrente e problemática que carecem …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-tilt-test-nao-preve-resposta-a-tratamento",
+    "target_title": "O teste de inclinação NÃO é recomendado para prever a resposta a tratamentos médicos específicos para síncope vasovagal.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-educacao-sal-e-liquidos-primeira-linha",
+    "target_title": "Educação, reasseguramento e estímulo à ingestão de sal e líquidos estão indicados para pacientes com síncope vasovagal, salvo contraindicaçã…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-reduzir-medicacao-hipotensora-pode-ser-benefico",
+    "target_title": "Reduzir ou retirar medicações que podem causar hipotensão pode ser benéfico para pacientes com síncope vasovagal.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-manobras-de-contrapressao-com-prodromo-longo",
+    "target_title": "Manobras de contrapressão física podem ser úteis para pacientes com síncope vasovagal que têm pródromo suficientemente longo.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-fludrocortisona-em-sincope-vasovagal-frequente",
+    "target_title": "O uso de fludrocortisona parece razoável para pacientes com síncope vasovagal frequente sem contraindicação ao seu uso.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-betabloqueador-acima-de-40-anos",
+    "target_title": "Betabloqueadores podem ser considerados para pacientes com mais de 40 anos com síncope vasovagal frequente.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-midodrina-sem-hipertensao-ou-retencao-urinaria",
+    "target_title": "O uso de midodrina parece razoável para pacientes com síncope vasovagal frequente, sem hipertensão ou retenção urinária.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-marca-passo-dupla-camara-acima-de-40-anos-com-pausa-documentada",
+    "target_title": "A estimulação de dupla câmara pode ser efetiva para pacientes com 40 anos ou mais com síncope recorrente e imprevisível que têm pausa docume…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-tilt-test-para-selecionar-candidato-a-marca-passo",
+    "target_title": "O teste de inclinação pode ser considerado para identificar pacientes com resposta hipotensiva, que teriam menor probabilidade de responder …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-marca-passo-pediatrico-com-assistolia-refrataria",
+    "target_title": "A estimulação pode ser considerada para pacientes pediátricos com síncope recorrente com assistolia sintomática documentada, refratários à t…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-marca-passo-em-sincope-adenosina-sensivel-no-idoso",
+    "target_title": "A estimulação de dupla câmara pode ser considerada em pacientes idosos adenosina-sensíveis com síncope inexplicada sem pródromo, ECG normal …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-tilt-test-pediatrico-altamente-selecionado",
+    "target_title": "O teste de inclinação é razoável para pacientes pediátricos altamente selecionados com suspeita de síncope vasovagal.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-midodrina-em-pediatria-selecionada",
+    "target_title": "Parece razoável tratar pacientes pediátricos selecionados com síncope vasovagal com midodrina.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "hrs2015-sincope-extrapolar-conduta-adulta-para-pediatria-em-vvs-ou-pots",
+    "target_title": "Parece razoável tratar pacientes pediátricos com síncope vasovagal ou POTS com as intervenções recomendadas para adultos com esses distúrbio…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "csrs-escore-canadense-de-risco-na-sincope",
+    "target_title": "Canadian Syncope Risk Score (CSRS) — derivação de escore para predizer evento adverso grave após avaliação de síncope na emergência",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "stand-trial-midodrina-na-sincope-vasovagal-refrataria",
+    "target_title": "STAND-trial — midodrina na síncope vasovagal recorrente refratária ao tratamento não farmacológico (resultado negativo)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "csars-escore-canadense-de-risco-de-arritmia-na-sincope",
+    "target_title": "Canadian Syncope Arrhythmia Risk Score (CSARS) — predição de risco de arritmia de curto prazo na síncope",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "duracao-de-monitorizacao-ecg-pos-alta-por-estrato-de-risco",
+    "target_title": "Duração ideal de monitorização eletrocardiográfica após alta de pacientes com síncope, por estrato de risco (CSRS)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "egsys-escore-de-predicao-de-sincope-cardiaca",
+    "target_title": "EGSYS — Escore de predição clínica de síncope cardíaca na avaliação inicial de emergência",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "picture-registry-monitor-implantavel-em-sincope-inexplicada",
+    "target_title": "PICTURE Registry — Rendimento diagnóstico do monitor de eventos implantável na síncope inexplicada recorrente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "zhang-2008-metoprolol-versus-tratamento-convencional-em-sincope-vasovagal-pediatrica",
+    "target_title": "Metoprolol vs. tratamento convencional na prevenção de recorrência de síncope vasovagal em crianças e adolescentes — ensaio negativo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-bav-mobitz-ii-criterio-maior-ecg-eusem",
+    "target_title": "Síncope com BAV Mobitz II: baixo risco ou internação?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-recorrente-inexplicada-monitor-de-eventos-implantavel",
+    "target_title": "Síncope recorrente inexplicada: qual o próximo passo diagnóstico?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-reflexa-cardioinibitoria-grave-candidata-a-cardioneuroablacao",
+    "target_title": "Síncope reflexa cardioinibitória grave e recorrente: é candidata à cardioneuroablação?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-recorrente-midodrina-post-4",
+    "target_title": "Síncope vasovagal que não cede com medidas gerais: existe droga com evidência?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-no-pronto-socorro-estratificacao-de-risco-pelo-escore-canadense-de-sincope",
+    "target_title": "Síncope no pronto-socorro sem causa clara: o Escore Canadense de Síncope muda a decisão de internar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-internada-investigar-embolia-pulmonar-de-rotina-pesit",
+    "target_title": "Síncope internada, sem causa óbvia: deve-se investigar embolia pulmonar de rotina?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-neuromediada-grave-com-assistolia-documentada-marca-passo-o-ensaio-issue-3",
+    "target_title": "Síncope neuromediada grave com assistolia documentada: marca-passo reduz a recorrência? O ensaio ISSUE-3",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-recorrente-refrataria-fludrocortisona-ensaio-post-2",
+    "target_title": "Síncope vasovagal recorrente refratária a medidas gerais: fludrocortisona é eficaz? O ensaio POST 2",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "hipotensao-ortostatica-neurogenica-tontura-ao-levantar-midodrina-tem-evidencia",
+    "target_title": "Tontura ao levantar por hipotensão ortostática neurogênica, não síncope reflexa: a midodrina tem respaldo próprio?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-no-pronto-socorro-estratificacao-de-causa-cardiaca-pelo-escore-egsys",
+    "target_title": "Síncope de causa incerta no pronto-socorro: o escore EGSYS ajuda a identificar origem cardíaca?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-recorrente-metoprolol-tem-respaldo-ensaio-post",
+    "target_title": "Síncope vasovagal recorrente e tilt test positivo: o betabloqueador metoprolol previne novos episódios?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-recorrente-sem-assistolia-documentada-marca-passo-reduz-recorrencia-vps-ii",
+    "target_title": "Síncope vasovagal recorrente sem assistolia documentada: o marca-passo reduz a recorrência? O ensaio VPS II",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-com-prodromo-reconhecivel-manobras-de-contrapressao-fisica-pc-trial",
+    "target_title": "Síncope vasovagal com pródromo reconhecível: as manobras físicas de contrapressão reduzem a recorrência? O PC-Trial",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-de-risco-intermediario-no-pronto-socorro-unidade-dedicada-de-sincope-reduz-internacao-seeds",
+    "target_title": "Síncope de risco intermediário no pronto-socorro: uma unidade dedicada de avaliação reduz internação sem piorar o desfecho?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-no-pronto-socorro-regra-de-sao-francisco-para-sincope-derivacao-quinn-2004",
+    "target_title": "Síncope sem causa evidente no pronto-socorro: o que a Regra de São Francisco para Síncope acrescenta à decisão de internar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-cardioinibitoria-marca-passo-com-estimulacao-em-malha-fechada-estudo-spain",
+    "target_title": "Síncope vasovagal cardioinibitória grave e refratária: a estimulação em malha fechada (DDD-CLS) reduz a recorrência?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-ou-crise-convulsiva-mordedura-lingua-mioclonia",
+    "target_title": "Perda transitória da consciência com abalos: síncope ou crise epiléptica?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-no-pronto-socorro-regra-de-decisao-de-boston-para-identificar-risco",
+    "target_title": "Síncope no pronto-socorro: a Regra de Boston identifica quem tem risco real de complicação em 30 dias?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "perda-de-consciencia-atipica-em-jovem-escore-de-calgary-sindrome-versus-crise",
+    "target_title": "Perda de consciência com abalos musculares em jovem: síncope convulsiva ou crise epiléptica?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-vasovagal-recorrente-jovem-vs-idoso-decisao-de-betabloqueador",
+    "target_title": "Betabloqueador para síncope vasovagal recorrente: em quem considerar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-da-avaliacao-inicial-ao-tratamento-da-vasovagal",
+    "target_title": "Síncope: da avaliação inicial na emergência ao tratamento da forma vasovagal",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-processo-assistencial-na-emergencia",
+    "target_title": "Síncope: organizando o processo assistencial na emergência, da triagem à unidade de observação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-reflexa-refrataria-farmacoterapia-marcapasso-e-cardioneuroablacao",
+    "target_title": "Síncope reflexa cardioinibitória refratária: da farmacoterapia à estimulação em alça fechada e à cardioneuroablação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-situacoes-especiais",
+    "target_title": "Síncope: situações especiais — POTS, seio carotídeo, atleta e o ECG de alto risco",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-farmacoterapia-vasovagal-ensaio-a-ensaio",
+    "target_title": "Síncope vasovagal: a farmacoterapia ensaio a ensaio, e a armadilha do quase-homônimo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-escores-de-risco-canadenses-e-duracao-de-monitorizacao",
+    "target_title": "Síncope: os escores de risco canadenses e por quanto tempo monitorizar depois da alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-hipotensao-ortostatica-no-idoso-e-o-anti-hipertensivo",
+    "target_title": "Síncope e hipotensão ortostática no idoso: diagnóstico diferencial e a decisão sobre manter o anti-hipertensivo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-restricao-de-direcao-e-retorno-a-atividade",
+    "target_title": "Síncope: quando o paciente pode voltar a dirigir ou competir — hipersensibilidade do seio carotídeo, atleta e risco quantificado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-cardioinibitoria-no-idoso-seio-carotideo-marcapasso-e-cardioneuroablacao",
+    "target_title": "Síncope reflexa cardioinibitória no idoso: hipersensibilidade do seio carotídeo, marca-passo e a alternativa da cardioneuroablação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-pediatrica-e-do-adolescente",
+    "target_title": "Síncope na criança e no adolescente: diagnóstico, o que a farmacoterapia do adulto não repete, e quando monitorizar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-vasovagal-a-serie-historica-do-marcapasso-convencional-e-a-contrapressao-fisica",
+    "target_title": "Síncope vasovagal: a série histórica do marca-passo convencional — do sinal positivo ao desmentido duplo-cego — e a contrapressão física",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-inexplicada-escore-preditivo-e-monitor-implantavel",
+    "target_title": "Síncope inexplicada: escore preditivo, monitor implantável e o achado que leva ao marca-passo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-ensaios-negativos-e-a-diretriz-esc-2018-na-integra",
+    "target_title": "Síncope: os ensaios que não confirmaram benefício farmacológico, lidos ao lado da diretriz ESC 2018 completa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-vasovagal-farmacoterapia-dependente-da-idade",
+    "target_title": "Síncope vasovagal por faixa etária: por que o metoprolol funciona em alguns adultos e falha em crianças",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-marcapasso-convencional-versus-estimulacao-em-alca-fechada",
+    "target_title": "Síncope vasovagal refratária: por que o marca-passo convencional falhou e a estimulação em alça fechada funcionou",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-disposicao-na-emergencia-observacao-alta-e-monitorizacao-prolongada",
+    "target_title": "Síncope na emergência: decidindo entre alta, unidade de observação e monitorização prolongada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-de-sincope-no-pronto-socorro-triagem-de-alto-risco",
+    "target_title": "Avaliação de síncope no pronto-socorro — triagem de alto risco",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "documento",
+    "target_slug": "consenso-arritmias-no-atleta-hrs-2024",
+    "target_title": "HRS 2024: síncope, extrassístoles, fibrilação atrial, canalopatias e dispositivos no atleta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-sincope-durante-exercicio-atleta",
+    "target_title": "Síncope durante o exercício no atleta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-durante-corrida-competitiva-anomalia-coronaria-suspeita",
+    "target_title": "Síncope durante prova de corrida em jovem atleta: quando suspeitar de anomalia coronária congênita",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "caso_clinico",
+    "target_slug": "sincope-atividade-sexual-poppers-pde5i",
+    "target_title": "Síncope durante atividade sexual em uso de tadalafila",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "trilha",
+    "target_slug": "trilha-sincope-no-idoso-diagnostico-diferencial-biomarcadores-e-risco-de-queda",
+    "target_title": "Síncope no idoso: diagnóstico diferencial ampliado, biomarcadores e o desfecho da queda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "escore-romeo-indicacao-de-ecocardiograma-na-sincope-do-idoso",
+    "target_title": "Indicação de ecocardiograma no idoso com síncope na emergência (escore ROMEO)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "manejo-da-sincope-vasovagal-recorrente",
+    "target_title": "Manejo ambulatorial da síncope vasovagal recorrente",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "sincope-no-atleta-avaliacao-antes-do-retorno-ao-esporte",
+    "target_title": "Avaliação de síncope no atleta antes de decidir o retorno à prática esportiva",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "investigacao-de-sincope-inexplicada-tilt-test-monitor-implantavel-e-eps",
+    "target_title": "Investigação de síncope inexplicada — indicação de teste de inclinação (tilt test), monitor de eventos implantável e estudo eletrofisiológico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-diferencial-de-hipotensao-ortostatica-e-pots-na-sincope",
+    "target_title": "Diagnóstico diferencial de hipotensão ortostática e síndrome de taquicardia postural (POTS) na síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "sincope-e-queda-inexplicada-no-idoso-avaliacao-estruturada",
+    "target_title": "Avaliação estruturada de síncope e queda inexplicada no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "escolha-de-regra-de-decisao-clinica-na-sincope-de-emergencia",
+    "target_title": "Síncope na emergência — escolha de regra de decisão clínica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "investigacao-diagnostica-de-canalopatia-em-jovem-com-sincope-ou-parada-cardiaca-inexplicada",
+    "target_title": "Suspeita de canalopatia (síndrome do QT longo, síndrome de Brugada ou TVPC) em jovem com síncope ou parada cardíaca inexplicada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-diferencial-de-sincope-e-crise-epileptica",
+    "target_title": "Diagnóstico diferencial entre síncope e crise epiléptica (perda transitória da consciência)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "uso-de-biomarcadores-cardiacos-na-estratificacao-de-risco-da-sincope",
+    "target_title": "Decisão sobre pedir NT-proBNP e/ou troponina na estratificação de risco da síncope no pronto-socorro",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-e-manejo-da-sincope-situacional-miccional-defecatoria-tussigena-e-de-degluticao",
+    "target_title": "Síncope situacional — miccional, defecatória, tussígena e de deglutição",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "checklist",
+    "target_slug": "diferenciacao-clinica-entre-pseudossincope-psicogenica-e-sincope-vasovagal",
+    "target_title": "Pseudossíncope psicogênica versus síncope vasovagal verdadeira",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-vasovagal-por-que-geralmente-nao-e-perigosa",
+    "target_title": "Síncope vasovagal: por que a maioria dos desmaios não é perigosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-durante-ou-apos-o-esforco-quando-procurar-avaliacao-urgente",
+    "target_title": "Desmaiei fazendo exercício: preciso me preocupar?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-vasovagal-recorrente-o-que-ajuda-alem-de-remedio",
+    "target_title": "Desmaios Recorrentes: O Que Realmente Ajuda a Prevenir",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-situacional-miccao-tosse-e-outros-gatilhos-do-dia-a-dia",
+    "target_title": "Desmaio ligado a fazer xixi, tossir ou engolir: o que é o desmaio situacional",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "desmaio-ao-urinar-evacuar-ou-tossir-o-que-e-a-sincope-situacional",
+    "target_title": "Desmaio ao urinar, evacuar ou tossir",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-e-risco-de-queda-por-que-prevenir-a-lesao-tambem-importa",
+    "target_title": "Desmaio e risco de queda: por que prevenir a lesão também importa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "material_paciente",
+    "target_slug": "sincope-pediatrica",
+    "target_title": "Desmaio (síncope) em crianças e adolescentes",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "triagem_sintoma",
+    "target_slug": "sincope-e-pre-sincope",
+    "target_title": "Síncope e pré-síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "holter-24h-para-palpitacao-sincope-e-quedas-inexplicadas-no-idoso",
+    "target_title": "Em idosos, o Holter de 24 horas é recomendado para a avaliação de sintomas de palpitação, síncope e quedas inexplicadas.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-holter-de-eventos-de-7-dias-para-sintomas-infrequentes-no-idoso",
+    "target_title": "Em pacientes idosos com pré-síncope, síncope, palpitações, dispneia aos esforços, fadiga desproporcional ao esforço ou tontura não rotatória…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "massagem-do-seio-carotideo-com-monitorizacao-eletrocardiografica-no-idoso-com-sincope",
+    "target_title": "Massagem do seio carotídeo com monitorização eletrocardiográfica no idoso com síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cdi-prevencao-primaria-qt-longo-refratario-a-betabloqueador-ou-simpatectomia-com-sincope-ou-tv-polimorfica",
+    "target_title": "Em pacientes com síndrome do QT longo refratários a betabloqueadores e/ou a simpatectomia, com síncope ou taquicardia ventricular polimórfic…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cdi-prevencao-primaria-brugada-tvs-ou-sincope-com-padrao-tipo-1-espontaneo",
+    "target_title": "Em pacientes com taquicardia ventricular sustentada ou síncope de provável causa arrítmica e ECG com padrão de Brugada tipo 1 ESPONTÂNEO, o …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cdi-prevencao-primaria-tvpc-com-sincope-ou-tvs-apesar-de-betabloqueador-em-dose-maxima",
+    "target_title": "Em pacientes com taquicardia ventricular polimórfica catecolaminérgica (TVPC) com síncope ou taquicardia ventricular sustentada apesar do us…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "monitor-de-eventos-implantavel-na-sincope-recorrente-de-origem-indeterminada",
+    "target_title": "O monitor de eventos implantável (loop recorder) é recomendação Classe I, Nível A na síncope recorrente de origem indeterminada, sem indicaç…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-em-pausa-assintomatica-maior-que-6s-por-parada-sinusal",
+    "target_title": "Em pacientes com síncope, a estimulação cardíaca pode ser considerada para reduzir a recorrência de síncope quando pausa(s) assintomática(s)…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-em-sincope-inexplicada-e-bloqueio-bifascicular-com-hv-70ms-ou-mais",
+    "target_title": "Em pacientes com síncope inexplicada e bloqueio bifascicular, o marca-passo é indicado na presença de intervalo HV basal ≥70 ms, bloqueio in…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-em-sincope-inexplicada-e-bifascicular-sem-eps-em-idosos-frageis",
+    "target_title": "A estimulação cardíaca pode ser considerada em pacientes selecionados com síncope inexplicada e bloqueio bifascicular, sem estudo eletrofisi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-bicameral-na-sincope-reflexa-grave-recorrente-maior-40-anos",
+    "target_title": "A estimulação cardíaca bicameral é indicada para reduzir a síncope recorrente em pacientes com mais de 40 anos, com síncope grave, imprevisí…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-pode-ser-considerado-na-sincope-sensivel-a-adenosina",
+    "target_title": "A estimulação cardíaca bicameral pode ser considerada para reduzir recorrências de síncope em pacientes com características clínicas de sínc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "eps-em-sincope-com-bloqueio-de-ramo-ou-qrs-alargado-sem-ecg-anormal-jcs-2022",
+    "target_title": "O estudo eletrofisiológico (EPS) pode ser considerado em casos de síncope, bloqueio de ramo ou complexo QRS alargado ao ECG, quando bradicar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "eps-para-avaliar-inducibilidade-de-taquicardia-em-sincope-de-origem-desconhecida-ou-tvns-jcs-2022",
+    "target_title": "O estudo eletrofisiológico (EPS) pode ser considerado para a avaliação de indutibilidade de taquicardia em síncope de origem desconhecida ou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "looper-para-avaliacao-precoce-de-sincope-recorrente-sem-sinais-de-causa-cardiogenica-jcs-2022",
+    "target_title": "O monitor de eventos implantável (looper) é usado para a avaliação precoce de pacientes com episódios irregulares ou raros de síncope recorr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "looper-quando-avaliacao-abrangente-nao-identifica-causa-de-sincope-com-sinais-cardiogenicos-jcs-2022",
+    "target_title": "O monitor de eventos implantável (looper) é usado em pacientes com sinais clínicos sugestivos de síncope cardiogênica, quando a avaliação ab…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "looper-em-sincope-reflexa-recorrente-ou-com-trauma-antes-de-marca-passo-jcs-2022",
+    "target_title": "O uso do monitor de eventos implantável (looper) é considerado para avaliação em pacientes com suspeita de síncope reflexa de recorrência fr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cmh-reducao-septal-na-sincope-de-esforco",
+    "target_title": "A terapia de redução septal é RECOMENDADA no paciente com SÍNCOPE DE ESFORÇO causada por gradiente — de repouso ou provocado — acima de 50 m…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cmh-indicacao-de-cdi-decai-com-a-idade-para-os-mesmos-fatores",
+    "target_title": "Diante dos MESMOS fatores de risco — síncope inexplicada, hipertrofia acentuada com espessura igual ou maior que 28 mm, entre outros —, a fo…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-eco-na-sincope-pos-exercicio-e-nas-coronarias",
+    "target_title": "O ecocardiograma é RECOMENDADO na avaliação da SÍNCOPE PÓS-EXERCÍCIO não explicada, para definição diagnóstica inicial; e para identificação…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cdi-razoavel-na-congenita-com-feve-sistemica-abaixo-de-35-e-tv-ou-sincope-arritmica",
+    "target_title": "Em pacientes com cardiopatia congênita, o implante de CDI é razoável quando a fração de ejeção do ventrículo sistêmico é inferior a 35%, ass…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-acm-cdi-classe-iia-em-tv-tolerada-sincope-ou-feve-35",
+    "target_title": "Em pacientes pediátricos com cardiomiopatia arritmogênica, é razoável considerar o implante de cardioversor-desfibrilador quando há taquicar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "eco-na-sincope-de-esforco-ou-com-ecg-alterado-em-criancas",
+    "target_title": "Em crianças e adolescentes, o ecocardiograma é recomendado na síncope relacionada ao esforço físico ou associada a eletrocardiograma anormal…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-marca-passo-nao-indicado-na-sincope-neurocardiogenica-so-por-tilt-test-positivo",
+    "target_title": "O implante de marca-passo permanente não é indicado para síncope neurocardiogênica em crianças e adolescentes com base isolada em resposta c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cardiomiopatia-hipertrofica-pediatrica-cdi-primario-com-fator-de-risco",
+    "target_title": "Para crianças com cardiomiopatia hipertrófica que têm um ou mais fatores de risco primários — síncope inexplicada, hipertrofia ventricular e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cpvt-cdi-apos-parada-cardiaca-ou-sincope-apesar-de-betabloqueador-e-flecainida",
+    "target_title": "O implante de cardioversor-desfibrilador implantável (CDI) é indicado em pacientes com diagnóstico de taquicardia ventricular polimórfica ca…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-monitor-cardiaco-implantavel-na-sincope-de-alto-risco-sem-causa-definida",
+    "target_title": "O monitor cardíaco implantável está indicado em pacientes pediátricos com síncope e critérios de alto risco, quando uma avaliação abrangente…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cdi-razoavel-em-cardiomiopatia-arritmogenica-pediatrica-com-tv-tolerada-sincope-ou-feve-35",
+    "target_title": "Em pacientes pediátricos com cardiomiopatia arritmogênica, o implante de cardioversor-desfibrilador implantável (CDI) é razoável quando há t…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "teste-de-inclinacao-tilt-test-em-criancas-e-adolescentes-com-sincope",
+    "target_title": "Teste de inclinação (tilt test) em crianças e adolescentes com síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "monitor-de-eventos-implantavel-looper-em-criancas-com-sincope-e-palpitacoes",
+    "target_title": "Monitor de eventos implantável (looper) em crianças e adolescentes com síncope e palpitações",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "marca-passo-sincope-reflexa-cardioinibitoria-documentada",
+    "target_title": "Estimulação cardíaca por marca-passo é recomendada em pacientes com 40 anos ou mais, com apresentação clínica grave de síncope reflexa recor…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "educacao-e-modificacao-de-estilo-de-vida-na-sincope-reflexa",
+    "target_title": "Explicação do diagnóstico, reasseguramento e orientação sobre o risco de recorrência e a evitação de gatilhos e situações são indicados em t…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "manobras-isometricas-de-contrapressao-na-sincope-reflexa",
+    "target_title": "Manobras isométricas de contrapressão física (das pernas ou dos braços) devem ser consideradas em pacientes com pródromos reconhecíveis e id…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "marca-passo-em-sincope-com-bloqueio-de-ramo-e-eef-ou-ilr-positivo",
+    "target_title": "Marca-passo é indicado em paciente com síncope, bloqueio de ramo bifascicular, e estudo eletrofisiológico positivo ou bloqueio atrioventricu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "criterio-diagnostico-de-hipotensao-ortostatica-confirmada-versus-provavel",
+    "target_title": "Síncope por hipotensão ortostática (OH) é confirmada quando há queda da pressão arterial sistólica basal ≥20 mmHg, ou diastólica ≥10 mmHg, o…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "monitor-cardiaco-implantavel-ilr-na-sincope-inexplicada-recorrente",
+    "target_title": "O monitor cardíaco implantável (ILR) é indicado numa fase precoce da investigação em paciente com síncope recorrente de origem incerta, sem …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "alta-do-departamento-de-emergencia-em-sincope-de-baixo-risco",
+    "target_title": "É recomendado que pacientes com características de baixo risco, com provável síncope reflexa, situacional ou por hipotensão ortostática, rec…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "internacao-ou-unidade-de-sincope-para-caracteristicas-de-alto-risco",
+    "target_title": "É recomendado que pacientes com características de alto risco recebam avaliação precoce, intensiva e imediata numa unidade de síncope ou uni…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "massagem-do-seio-carotideo-em-sincope-de-origem-desconhecida-acima-de-40-anos",
+    "target_title": "Massagem do seio carotídeo é indicada em pacientes com mais de 40 anos com síncope de origem desconhecida compatível com mecanismo reflexo. …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "teste-de-inclinacao-na-suspeita-de-sincope-reflexa-hipotensao-ortostatica-ou-pots",
+    "target_title": "O teste de inclinação (tilt test) deve ser considerado em pacientes com suspeita de síncope reflexa, hipotensão ortostática, síndrome da taq…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "biosync-cls-marcapasso-com-estimulacao-em-alca-fechada-na-sincope-reflexa",
+    "target_title": "BIOSync CLS — Marca-passo com estimulação em alça fechada na síncope reflexa grave com assistolia induzida no tilt",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "post-2-fludrocortisona-sincope-vasovagal",
+    "target_title": "POST 2 — Fludrocortisona para prevenção de síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "spain-marcapasso-com-estimulacao-em-alca-fechada-na-sincope-vasovagal-recorrente",
+    "target_title": "SPAIN — Marca-passo de dupla câmara com estimulação em alça fechada na síncope vasovagal recorrente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "post-4-midodrina-na-prevencao-da-sincope-vasovagal",
+    "target_title": "POST 4 — Midodrina na prevenção da síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "roman-cardioneuroablacao-na-sincope-reflexa",
+    "target_title": "ROMAN — Cardioneuroablação na síncope reflexa cardioinibitória",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "issue-3-marca-passo-na-sincope-reflexa-com-assistolia-documentada",
+    "target_title": "ISSUE-3 — Marca-passo na síncope reflexa com assistolia documentada por monitor implantável",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "post-metoprolol-sincope-vasovagal-efeito-dependente-da-idade",
+    "target_title": "POST — Metoprolol para prevenção de síncope vasovagal, com efeito dependente da idade",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "rast-monitor-implantavel-versus-testagem-convencional-na-sincope",
+    "target_title": "RAST — Monitor cardíaco implantável versus testagem diagnóstica convencional na síncope inexplicada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "seeds-unidade-de-sincope-no-departamento-de-emergencia",
+    "target_title": "SEEDS — Unidade dedicada de síncope no departamento de emergência versus cuidado padrão",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "vps-north-american-vasovagal-pacemaker-study",
+    "target_title": "VPS (North American Vasovagal Pacemaker Study) — primeiro ensaio randomizado de marca-passo na síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "synpace-ensaio-de-marca-passo-na-sincope-vasovagal",
+    "target_title": "SYNPACE — terceiro ensaio duplo-cego sem confirmar benefício da estimulação convencional na síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "pc-trial-manobras-de-contrapressao-fisica-na-sincope-vasovagal",
+    "target_title": "PC-Trial — manobras de contrapressão física reduzem recorrência de síncope vasovagal com pródromo reconhecível",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "sheldon-2002-escore-de-calgary-para-diferenciar-sincope-de-crise-epileptica",
+    "target_title": "Derivação do escore de Calgary — critérios históricos que distinguem síncope de crise epiléptica com 94% de sensibilidade e especificidade",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "quinn-2004-derivacao-do-escore-san-francisco-syncope-rule",
+    "target_title": "Quinn et al. 2004 — Derivação da San Francisco Syncope Rule para prever desfecho grave de curto prazo na síncope",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "betabloqueador-idade-dependente-sincope-vasovagal-sheldon-2012",
+    "target_title": "Efeito dependente da idade de betabloqueadores na prevenção de síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "holter-e-monitor-de-eventos-externo-na-sincope",
+    "target_title": "Holter e monitor de eventos externo (looper) na síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "monitor-de-eventos-implantavel-ilr-na-sincope",
+    "target_title": "Monitor de eventos implantável (ILR) na síncope de origem indeterminada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "monitor-de-eventos-implantavel-rendimento-diagnostico-na-sincope",
+    "target_title": "Monitor de eventos implantável (ILR) — rendimento diagnóstico na síncope inexplicada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "teste-de-atp-no-diagnostico-diferencial-de-sincope",
+    "target_title": "Teste de ATP (adenosina trifosfato) no diagnóstico diferencial de síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "escore-egsys-probabilidade-de-sincope-cardiaca",
+    "target_title": "Escore EGSYS — probabilidade de síncope de origem cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "holter-versus-monitor-de-eventos-externo-na-sincope",
+    "target_title": "Holter de 24-48h vs. monitor de eventos externo — rendimento diagnóstico comparado na síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "protocolo-combinado-de-tilt-test-e-massagem-do-seio-carotideo",
+    "target_title": "Protocolo combinado de tilt test e massagem do seio carotídeo na investigação de síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "exame",
+    "target_slug": "estudo-eletrofisiologico-eps-na-sincope-inexplicada",
+    "target_title": "Estudo eletrofisiológico (EPS) na síncope inexplicada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "galeria",
+    "target_slug": "tilt-test-sincope-vasodepressora",
+    "target_title": "Teste de inclinação (tilt test) — padrão vasodepressor de síncope",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-brugada-cdi-classe-i",
+    "target_title": "O implante de cardioversor-desfibrilador implantável é recomendado em pacientes com síndrome de Brugada com episódios de síncope arrítmica e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "zhang-2026-cardioneuroablacao-anatomica-empirica-versus-guiada-por-hafe-na-sincope-vasovagal",
+    "target_title": "Cardioneuroablação anatômica empírica versus guiada por eletrogramas fracionados de alta amplitude (HAFE) na síncope vasovagal refratária",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "fahim-2026-metanalise-marca-passo-empirico-na-sincope-inexplicada-com-bloqueio-bifascicular",
+    "target_title": "Marca-passo empírico versus estratégias alternativas na síncope inexplicada com bloqueio bifascicular — revisão sistemática e metanálise",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "puel-2026-apneia-obstrutiva-do-sono-e-sincope-vasovagal-recorrente-estudo-multicentrico",
+    "target_title": "Apneia obstrutiva do sono e síncope vasovagal recorrente — impacto do tratamento com CPAP em estudo observacional multicêntrico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "archontakis-2026-sincope-cardiaca-subestimada-em-idosos-unidade-de-sincope",
+    "target_title": "Síncope cardíaca como causa subestimada de síncope inexplicada em idosos — dados de uma unidade de síncope de alto volume",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "harshuk-2026-diagnostico-precoce-apos-implante-de-monitor-de-eventos-em-sincope-inexplicada",
+    "target_title": "Incidência e preditores de diagnóstico precoce após implante de monitor de eventos implantável (ILR) em síncope inexplicada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "ungar-2009-manejo-da-sincope-em-idosos-abordagem-estruturada-e-quedas-inexplicadas",
+    "target_title": "O Manejo da Síncope em Idosos: Abordagem Estruturada e o Diferencial com Quedas Inexplicadas",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "salim-disessa-2005-fludrocortisona-e-sal-na-sincope-pediatrica",
+    "target_title": "Fludrocortisona e sal na prevenção de recorrência de síncope em crianças — ensaio randomizado, duplo-cego, controlado por placebo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "tu-2025-cardioneuroablacao-atrial-esquerda-versus-biatrial-na-sincope-vasovagal",
+    "target_title": "Cardioneuroablação atrial esquerda versus biatrial na síncope vasovagal — ensaio clínico randomizado",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "reed-2010-rose-escore-de-risco-de-sincope-na-emergencia",
+    "target_title": "ROSE — Escore de estratificação de risco de síncope no departamento de emergência, com valor preditivo do BNP",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "post-5-betabloqueador-sincope-vasovagal-em-idosos",
+    "target_title": "POST 5 — Metoprolol na prevenção da síncope vasovagal em pacientes com 40 anos ou mais, com metanálise de dados individuais",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "sulke-2016-easyas-ii-monitor-de-eventos-implantavel-de-primeira-linha-na-sincope",
+    "target_title": "EaSyAS II — Monitor de eventos implantável remotamente monitorizado como investigação de primeira linha na síncope inexplicada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "bartoletti-2000-protocolo-italiano-tilt-test-potencializado-com-nitroglicerina",
+    "target_title": "'Protocolo Italiano' — padronização do tilt test potencializado por nitroglicerina sublingual na síncope inexplicada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "issue-2-terapia-guiada-por-monitor-implantavel-na-sincope-neuralmente-mediada",
+    "target_title": "ISSUE-2 — Terapia guiada por monitor de eventos implantável na síncope neuralmente mediada recorrente",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "oesil-escore-de-risco-de-mortalidade-na-sincope",
+    "target_title": "OESIL — Escore de risco de mortalidade em pacientes com síncope na emergência",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "raviele-2000-nitroglicerina-versus-isoproterenol-no-tilt-test",
+    "target_title": "Nitroglicerina sublingual versus isoproterenol em baixa dose no tilt test para síncope inexplicada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "forleo-2013-metanalise-da-acuracia-diagnostica-do-tilt-test",
+    "target_title": "Metanálise da acurácia diagnóstica do tilt test para síncope vasovagal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "alvarez-ortiz-2026-cardioneuroablacao-versus-marcapasso-na-sincope-vasovagal-refrataria",
+    "target_title": "Cardioneuroablação versus marca-passo com estimulação em alça fechada na síncope vasovagal cardioinibitória refratária",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "estudo",
+    "target_slug": "mu-2024-comparacao-de-cinco-escores-de-risco-de-sincope-em-idosos",
+    "target_title": "Comparação de cinco escores de risco de síncope em idosos no departamento de emergência",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "sprint-hipotensao-lra-e-sincope",
+    "target_title": "SPRINT final: hipotensão, distúrbio eletrolítico, LRA/falência e síncope foram mais frequentes no alvo <120 mmHg. Com follow-up pós-ensaio, …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sincope",
+    "source_disease_name": "Síncope",
+    "target_type": "evidencia",
+    "target_slug": "esprit-china-alvo-pas-120-versus-140-em-alto-risco-com-ou-sem-dm-ou-avc-implicacao-do-ensaio",
+    "target_title": "ESPRIT China: PAS <120 vs <140 em alto risco — MACE 9,7% vs 11,1% (HR 0,88; p=0,028), inclusive com DM ou AVC. Mais síncope (0,4% vs 0,1%).",
+    "relation_type": "supported_by"
+  }
+]

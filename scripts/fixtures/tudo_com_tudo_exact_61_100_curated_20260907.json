@@ -1,0 +1,1934 @@
+[
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-e-manejo-de-endocardite-infecciosa-na-gestante-e-puerpera",
+    "target_title": "Endocardite infecciosa na gestação e no puerpério",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "regueiro-2016-endocardite-apos-tavi",
+    "target_title": "Registro internacional — Endocardite infecciosa após TAVI: incidência, agentes e desfecho",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "documento",
+    "target_slug": "esc-2023-diretriz-endocardite-infecciosa",
+    "target_title": "ESC 2023: diretriz de endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "documento",
+    "target_slug": "remove-hemoadsorcao-citocinas-cirurgia-endocardite",
+    "target_title": "REMOVE: hemoadsorção de citocinas durante cirurgia por endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-endocardite-infecciosa-esc-2023",
+    "target_title": "Fluxograma: Endocardite infecciosa — da suspeita à indicação cirúrgica (ESC 2023)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-rm-de-cranio-imediata-na-ei-com-sintoma-neurologico-focal",
+    "target_title": "Na suspeita de endocardite infecciosa com sintomas neurológicos FOCAIS, a ressonância magnética de crânio é recomendada PRONTAMENTE para ava…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-imagem-vascular-cerebral-na-ei-com-hemorragia",
+    "target_title": "Na suspeita de endocardite infecciosa que se apresenta com hemorragia cerebral ou subaracnóidea, a imagem vascular cerebral — angiografia ce…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-rm-de-cranio-mesmo-sem-sintoma-neurologico",
+    "target_title": "Na suspeita de endocardite infecciosa, a ressonância magnética de crânio é recomendada para avaliar complicações do sistema nervoso central …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-tc-de-cranio-quando-a-rm-nao-e-possivel",
+    "target_title": "Quando a ressonância magnética não pode ser obtida na suspeita de endocardite infecciosa, ou quando o paciente está instável, a tomografia d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-sequencias-de-rm-a-considerar-na-ei",
+    "target_title": "Como métodos de imagem por ressonância na endocardite infecciosa, podem ser consideradas as sequências de difusão, FLAIR, T2 estrela ou susc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-suspender-imediatamente-antiagregante-e-anticoagulante-na-hemorragia-intracraniana",
+    "target_title": "Na endocardite infecciosa acompanhada de HEMORRAGIA INTRACRANIANA — exceto micro-hemorragias cerebrais —, a suspensão IMEDIATA da terapia an…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-tratar-aneurisma-infeccioso-roto-ou-que-cresce",
+    "target_title": "Na endocardite infecciosa, o tratamento cirúrgico ou endovascular é recomendado para aneurisma infeccioso ROTO, para aneurisma não roto GRAN…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-tratar-conservadoramente-o-aneurisma-pequeno-que-nao-cresce",
+    "target_title": "Na endocardite infecciosa, é recomendado tratar CONSERVADORAMENTE os aneurismas intracranianos infecciosos pequenos e não rotos que NÃO aume…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-trombectomia-no-avc-por-oclusao-de-grande-arteria-na-ei",
+    "target_title": "Quando a endocardite infecciosa se complica com infarto cerebral por oclusão de artéria de grande calibre, a trombectomia PODE ser considera…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-nao-iniciar-antiagregante-para-prevenir-embolia-na-ei",
+    "target_title": "Na endocardite infecciosa, NÃO é recomendado iniciar terapia antiplaquetária com o objetivo de prevenir embolia (Classe III sem benefício, N…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-trombolise-endovenosa-nao-e-recomendada-no-avc-da-ei",
+    "target_title": "A trombólise endovenosa NÃO é recomendada no infarto cerebral agudo que acompanha endocardite infecciosa (Classe III sem benefício, Nível B)…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-nao-iniciar-anticoagulante-para-prevenir-embolia-na-ei",
+    "target_title": "Na endocardite infecciosa, NÃO é recomendado iniciar terapia anticoagulante com o objetivo de prevenir embolia (Classe III sem benefício, Ní…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-ei-t25-estreptococo-viridans-valva-protetica-penicilina-gentamicina",
+    "target_title": "Na endocardite infecciosa (EI) de VALVA PROTÉTICA por estreptococos do grupo viridans/Streptococcus gallolyticus: penicilina G (2-4 milhões …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-ei-t9-ett-recomendado-todos-suspeita",
+    "target_title": "Ecocardiograma transtorácico (ETT) é recomendado para todos os casos suspeitos de endocardite infecciosa (EI).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-ei-t48-ete-ett-em-suspeita-de-cdrie",
+    "target_title": "ETT/ETE é recomendado em caso de suspeita de endocardite infecciosa relacionada a dispositivo (CDRIE) para identificar vegetações.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "dayer-2015-incidencia-de-endocardite-apos-a-restricao-da-profilaxia",
+    "target_title": "Dayer 2015 — Incidência de endocardite infecciosa na Inglaterra após a restrição da profilaxia antibiótica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-com-vegetacao-grande-cirurgia-precoce-em-48-horas-ou-tratamento-convencional-ease",
+    "target_title": "Endocardite infecciosa com vegetação grande: operar dentro de 48 horas reduz embolia, mesmo sem embolia prévia?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-infecciosa-aas-em-dose-plena-como-adjuvante-reduz-embolia-chan",
+    "target_title": "Endocardite infecciosa já em antibioticoterapia: acrescentar AAS em dose plena reduz o risco de embolia?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-infecciosa-apos-tavi-fatores-de-risco-e-mortalidade-regueiro",
+    "target_title": "Febre e novo sopro meses após TAVI: quão grave é a endocardite infecciosa nesse contexto?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico",
+    "target_title": "Endocardite infecciosa: do diagnóstico ao momento da cirurgia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-evidencia-epidemiologica-e-observacional-por-tras-da-pratica",
+    "target_title": "Endocardite infecciosa: a evidência epidemiológica e observacional por trás da profilaxia e do momento cirúrgico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-ensaios-de-antibioticoterapia-por-agente",
+    "target_title": "Endocardite infecciosa: a evidência por trás do antibiótico escolhido, agente a agente",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-transicao-para-antibiotico-oral-e-o-percurso-ate-a-alta",
+    "target_title": "Endocardite infecciosa: a transição para antibiótico oral e o percurso até a alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-antitrombotico-e-a-diferenca-entre-nbte-e-endocardite-infecciosa",
+    "target_title": "Endocardite: antitrombótico na prática — por que a aspirina não virou rotina, e o que muda na endocardite trombótica não bacteriana",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "trilha",
+    "target_slug": "trilha-endocardite-evolucao-dos-criterios-diagnosticos-de-duke-1994-ao-duke-iscvid-2023",
+    "target_title": "Endocardite infecciosa: a evolução dos critérios diagnósticos — de Duke 1994 ao Duke-ISCVID 2023, passando pelo ecocardiograma transesofágico e pelo PET-CT",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "endocardite-infecciosa-com-instabilidade-ou-complicacao-aguda",
+    "target_title": "Endocardite infecciosa com instabilidade ou complicação aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "conclusao-do-tratamento-de-endocardite-infecciosa",
+    "target_title": "Conclusão do tratamento de endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "documento",
+    "target_slug": "profilaxia-antibiotica-de-endocardite-infecciosa-especifica-por-lesao-congenita-aha-2007-2021",
+    "target_title": "Profilaxia Antibiótica de Endocardite Infecciosa em Cardiopatia Congênita: Indicações Específicas por Lesão (AHA 2007, reafirmado em 2021)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "documento",
+    "target_slug": "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento",
+    "target_title": "Endocardite Infecciosa em Criança e Adolescente: Fatores de Risco, Microbiologia e Tratamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia",
+    "target_title": "Endocardite infecciosa em adolescente com tetralogia de Fallot corrigida: o perfil microbiológico muda com a cardiopatia de base?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "caso_clinico",
+    "target_slug": "avc-embolico-em-paciente-com-cancer-e-vegetacao-mitral-hemocultura-negativa-nbte",
+    "target_title": "AVC embólico em paciente com câncer pancreático e vegetação mitral: endocardite infecciosa ou NBTE?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-de-timing-cirurgico-apos-avc-na-endocardite-infecciosa",
+    "target_title": "Timing cirúrgico após AVC na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "manejo-multidisciplinar-de-endocardite-em-usuario-de-drogas-injetaveis",
+    "target_title": "Endocardite infecciosa em usuário de drogas injetáveis (PWID)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "profilaxia-antibiotica-odontologica-em-paciente-de-alto-risco-de-endocardite",
+    "target_title": "Profilaxia antibiótica antes de procedimento odontológico em paciente de alto risco de endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "aplicacao-dos-criterios-de-duke-iscvid-2023-a-beira-do-leito",
+    "target_title": "Aplicação dos critérios diagnósticos de Duke-ISCVID 2023 à beira do leito na suspeita de endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-timing-de-cirurgia-na-endocardite-complicada",
+    "target_title": "Indicação e timing de cirurgia na endocardite infecciosa complicada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "investigacao-de-endocardite-com-hemocultura-negativa",
+    "target_title": "Investigação de endocardite infecciosa com hemocultura negativa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-timing-de-cirurgia-na-endocardite-infecciosa-esc-2023",
+    "target_title": "Endocardite infecciosa com indicação cirúrgica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-de-profilaxia-antibiotica-em-procedimento-nao-odontologico-de-alto-risco-de-endocardite",
+    "target_title": "Prevenção de endocardite infecciosa em procedimento não odontológico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-timing-cirurgico-na-endocardite-infecciosa",
+    "target_title": "Endocardite infecciosa com indicação de cirurgia cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "rastreamento-de-aneurisma-micotico-intracraniano-na-endocardite",
+    "target_title": "Rastreamento e manejo do aneurisma micótico intracraniano na endocardite infecciosa antes de cirurgia valvar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "material_paciente",
+    "target_slug": "endocardite-pediatrica",
+    "target_title": "Endocardite infecciosa em crianças: entenda a infecção do coração",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "exame",
+    "target_slug": "selecao-de-modalidade-de-imagem-na-avaliacao-diagnostica-inicial-da-endocardite-infecciosa",
+    "target_title": "Seleção de Modalidade de Imagem na Avaliação Diagnóstica Inicial da Endocardite Infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "ecocardiograma-seriado-no-tratamento-da-endocardite-infecciosa-quando-repetir",
+    "target_title": "Endocardite infecciosa — monitorização ecocardiográfica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "checklist",
+    "target_slug": "profilaxia-antibiotica-para-prevencao-de-endocardite-infecciosa-indicacoes-por-cenario",
+    "target_title": "Profilaxia antibiótica para prevenção de endocardite infecciosa — indicações por cenário clínico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "profilaxia-antibiotica-alto-risco-procedimento-dentario",
+    "target_title": "Profilaxia antibiótica é recomendada em pacientes de alto risco de endocardite infecciosa antes de procedimentos odontológicos que envolvam …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "ecocardiograma-transtoracico-como-primeira-imagem-na-suspeita-de-endocardite",
+    "target_title": "O ecocardiograma transtorácico é recomendado como primeira modalidade de imagem na suspeita de endocardite infecciosa. É o exame que abre a …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "ecocardiograma-transesofagico-quando-o-transtoracico-e-negativo-ou-inconclusivo",
+    "target_title": "O ecocardiograma transesofágico é recomendado em todo paciente com suspeita clínica de endocardite infecciosa e transtorácico negativo ou nã…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "profilaxia-antibiotica-em-paciente-com-endocardite-previa",
+    "target_title": "A profilaxia antibiótica é recomendada em paciente com endocardite infecciosa prévia, antes de procedimento odontológico de risco. Endocardi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "nao-fazer-profilaxia-antibiotica-em-paciente-de-baixo-risco-de-endocardite",
+    "target_title": "A profilaxia antibiótica **não** é recomendada nos demais pacientes, de baixo risco de endocardite infecciosa. É recomendação contra, e deli…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "eco2019-transtoracico-como-primeiro-exame-na-suspeita-de-endocardite",
+    "target_title": "O ecocardiograma TRANSTORÁCICO é indicado como PRIMEIRO exame na suspeita clínica de endocardite infecciosa. O transesofágico entra quando o…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "eco2019-transesofagico-intraoperatorio-em-toda-cirurgia-por-endocardite",
+    "target_title": "O ecocardiograma transesofágico INTRAOPERATÓRIO é indicado em TODOS os casos de cirurgia valvar por endocardite infecciosa. E ao final do tr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "eco2019-endocardite-de-protese-o-que-procurar",
+    "target_title": "Na endocardite infecciosa em portador de PRÓTESE valvar, o ecocardiograma é indicado para detectar e caracterizar a lesão valvar e avaliar a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "aspirina-na-endocardite-infecciosa-ensaio-multicentrico",
+    "target_title": "Aspirina na endocardite infecciosa — ensaio multicêntrico randomizado",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "cirurgia-precoce-na-endocardite-infecciosa-com-vegetacao-grande",
+    "target_title": "Cirurgia precoce versus tratamento convencional na endocardite infecciosa com vegetação grande",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "poet-antibiotico-oral-versus-intravenoso-endocardite",
+    "target_title": "POET — Antibiótico oral parcial versus intravenoso na endocardite infecciosa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "durack-1994-criterios-de-duke-originais",
+    "target_title": "Durack, Lukes, Bright 1994 — Critérios de Duke originais para diagnóstico de endocardite infecciosa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "murdoch-2009-ice-pcs-perfil-contemporaneo-da-endocardite",
+    "target_title": "ICE-PCS (Murdoch et al. 2009) — Perfil clínico contemporâneo da endocardite infecciosa em coorte internacional de 2.781 pacientes",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "exame",
+    "target_slug": "ecocardiograma-transesofagico-na-endocardite-infecciosa",
+    "target_title": "Ecocardiograma transesofágico (ETE) na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "exame",
+    "target_slug": "acuracia-do-ecocardiograma-transtoracico-vs-transesofagico-na-endocardite",
+    "target_title": "Acurácia diagnóstica do ecocardiograma transtorácico (ETT) comparado ao transesofágico (ETE) na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "exame",
+    "target_slug": "angiotomografia-cardiaca-na-endocardite-infecciosa",
+    "target_title": "Angiotomografia cardíaca (CT) na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "exame",
+    "target_slug": "procalcitonina-como-marcador-prognostico-a-admissao-na-endocardite",
+    "target_title": "Procalcitonina como marcador prognóstico à admissão na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "lesoes-de-janeway-endocardite",
+    "target_title": "Lesões de Janeway na endocardite infecciosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "nodulos-de-osler-endocardite",
+    "target_title": "Nódulos de Osler na endocardite infecciosa subaguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "vegetacao-endocardite-infecciosa-peca-cirurgica",
+    "target_title": "Peça cirúrgica — Vegetação de endocardite infecciosa (macroscopia)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "embolos-septicos-pulmonares-em-tc-de-torax-contexto-de-endocardite",
+    "target_title": "Êmbolos sépticos pulmonares em TC de tórax — associados a endocardite infecciosa por MRSA",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "vegetacao-de-endocardite-peca-de-patologia",
+    "target_title": "Vegetação de endocardite infecciosa — fragmentos de peça cirúrgica/patológica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-profilaxia-antibiotica-de-endocardite-no-parto-nao-recomendada",
+    "target_title": "Antibioticoprofilaxia de rotina para prevenir endocardite infecciosa durante o parto não é recomendada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "eco-na-suspeita-de-endocardite-infecciosa-em-criancas-e-adolescentes",
+    "target_title": "Em lactentes, crianças e adolescentes, o ecocardiograma é recomendado diante de sinais e sintomas de endocardite infecciosa, para identifica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "galeria",
+    "target_slug": "ecocardiograma-vegetacao-mitral-endocardite-infecciosa-crianca",
+    "target_title": "Ecocardiograma — Vegetação em valva mitral e óstio de veia pulmonar na endocardite infecciosa em criança sem cardiopatia prévia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "evidencia",
+    "target_slug": "profilaxia-antibiotica-pode-ser-considerada-em-procedimento-nao-odontologico-de-alto-risco",
+    "target_title": "Em pacientes de alto risco para endocardite infecciosa submetidos a procedimentos médicos não odontológicos (gastrointestinais, geniturinári…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "graupner-2002-extensao-perianular-da-endocardite-infecciosa",
+    "target_title": "Extensão Perianular da Endocardite Infecciosa: Frequência e Fatores de Risco Independentes",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "hryniewiecki-2019-tomografia-cardiaca-no-diagnostico-de-complicacoes-perivalvulares-da-endocardite",
+    "target_title": "Utilidade da Tomografia Computadorizada Cardíaca no Diagnóstico de Complicações Perivalvulares da Endocardite Infecciosa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "day-2009-caracteristicas-de-criancas-hospitalizadas-com-endocardite-infecciosa",
+    "target_title": "Day 2009 — Características de crianças hospitalizadas com endocardite infecciosa: análise de base de dados administrativa nacional",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "games-opat-terapia-antibiotica-parenteral-ambulatorial-endocardite",
+    "target_title": "Coorte GAMES — Terapia Antibiótica Parenteral Ambulatorial (OPAT) na Endocardite Infecciosa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "euro-endo-registro-esc-eorp-endocardite-infecciosa",
+    "target_title": "Registro EURO-ENDO (ESC-EORP) — Apresentação Clínica, Etiologia e Desfecho da Endocardite Infecciosa na Europa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "alhakak-2026-remocao-de-cied-na-endocardite-nao-tratada-cirurgicamente",
+    "target_title": "Remoção de dispositivo cardíaco eletrônico implantável em endocardite infecciosa tratada sem cirurgia valvar — coorte nacional dinamarquesa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "pet-ct-fdg-dual-time-point-diagnostico-de-endocardite",
+    "target_title": "PET/CT com 18F-FDG em dois tempos de aquisição (dual-time-point) no diagnóstico de endocardite infecciosa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "thuny-2005-comprimento-da-vegetacao-como-preditor-de-embolia-e-mortalidade",
+    "target_title": "Thuny et al. 2005 — Risco de embolia e morte na endocardite infecciosa: valor prognóstico da ecocardiografia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "scheggi-2021-endocardite-em-usuarios-de-drogas-injetaveis-recidiva-italia",
+    "target_title": "Scheggi 2021 — Endocardite infecciosa em usuários de drogas injetáveis: recidiva e mortalidade em coorte italiana",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "kocazeybek-2003-procalcitonina-e-pcr-na-endocardite-infecciosa",
+    "target_title": "Kocazeybek 2003 — Procalcitonina e proteína C-reativa na endocardite infecciosa: correlação com etiologia e prognóstico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "endocardite-infecciosa",
+    "target_type": "estudo",
+    "target_slug": "mchugh-2025-terapia-oral-parcial-na-endocardite-inquerito-nacional-infectologistas-eua",
+    "target_title": "McHugh 2025 — Terapia oral parcial na endocardite infecciosa: inquérito nacional com infectologistas dos EUA sobre adoção pós-POET",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-descompensada-e-choque-no-idoso",
+    "target_title": "Estenose aórtica grave descompensada e choque cardiogênico no idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "box-alvos-pressao-choque-cardiogenico-pos-parada-achado-principal",
+    "target_title": "No subestudo BOX com choque cardiogênico pós-parada, alvo de pressão arterial média mais alto elevou índice cardíaco e pressão de enchimento…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-no-idoso-decisao-de-suporte-circulatorio-mecanico-por-idade",
+    "target_title": "Choque cardiogênico no idoso: a idade isolada contraindica o suporte circulatório mecânico?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-choque-cardiogenico-suporte-hemodinamico",
+    "target_title": "Cardiologia geriátrica: suporte hemodinâmico no choque cardiogênico do muito idoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-geriatrica-choque-cardiogenico-fragilidade-e-futilidade",
+    "target_title": "Cardiologia geriátrica: suporte circulatório mecânico no choque cardiogênico — quando a fragilidade pesa mais que a idade cronológica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "box-alvos-pressao-choque-cardiogenico-pos-parada",
+    "target_title": "The impact of blood pressure targets on haemodynamics in patients with cardiogenic shock caused by infarction-related out-of-hospital cardiac arrest: a substudy of the BOX-trial",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "escore-save-sobrevida-apos-ecmo-venoarterial-no-choque-cardiogenico-refratario",
+    "target_title": "Escore SAVE: Sobrevida Após ECMO Venoarterial no Choque Cardiogênico Refratário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "drogas-vasoativas-no-choque-cardiogenico-norepinefrina-dobutamina-milrinona-e-epinefrina",
+    "target_title": "Drogas Vasoativas no Choque Cardiogênico: Norepinefrina, Dobutamina, Milrinona e Epinefrina",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-ic-inotropico-em-choque-refratario",
+    "target_title": "A terapia inotrópica pode ser necessária em pacientes com IC por DCR e hipotensão progressiva, congestão ou choque cardiogênico refratário a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "escalonamento-e-desmame-do-suporte-circulatorio-mecanico-temporario-no-choque",
+    "target_title": "Escalonamento e Desmame do Suporte Circulatório Mecânico Temporário no Choque Cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "miocardite-fulminante-viral-choque-de-inicio-rapido-e-o-paradoxo-do-prognostico-a-longo-prazo",
+    "target_title": "Miocardite Fulminante Viral: Choque Cardiogênico de Início Rápido e o Paradoxo do Prognóstico a Longo Prazo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-pos-iam-iabp-de-rotina-ou-nao-iabp-shock-ii",
+    "target_title": "Choque cardiogênico pós-IAM: balão intra-aórtico de rotina?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-multivaso-so-a-culpada-ou-tudo-culprit-shock",
+    "target_title": "Infarto com choque cardiogênico e doença multiarterial: tratar todas as lesões na mesma sessão?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-por-iam-bomba-de-fluxo-microaxial-versus-tratamento-padrao-o-ensaio-danger-shock",
+    "target_title": "Choque cardiogênico por IAM: bomba de fluxo microaxial de rotina reduz mortalidade? O ensaio DanGer Shock",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-dopamina-ou-noradrenalina-o-ensaio-soap-ii",
+    "target_title": "Choque cardiogênico: dopamina ou noradrenalina como vasopressor inicial? O ensaio SOAP II",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "iam-com-choque-cardiogenico-suporte-com-ecls-precoce-ensaio-ecls-shock",
+    "target_title": "IAM com choque cardiogênico: suporte circulatório com ECLS precoce reduz mortalidade? O ensaio ECLS-SHOCK",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-grave-ou-em-rapida-deterioracao-ecmo-va-imediata-ou-conservadora-ecmo-cs",
+    "target_title": "Choque cardiogênico grave ou em rápida deterioração: ECMO veno-arterial imediata ou estratégia inicialmente conservadora?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-pos-iam-epinefrina-ou-noradrenalina-o-ensaio-optimacc",
+    "target_title": "Choque cardiogênico pós-infarto: epinefrina ou noradrenalina? O ensaio OptimaCC",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-choque-cardiogenico",
+    "target_title": "Choque cardiogênico — classificação e suporte",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-suporte-hemodinamico-critico-alem-do-choque-cardiogenico",
+    "target_title": "Suporte hemodinâmico crítico além do choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "choque-cardiogenico",
+    "target_title": "Choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "checklist",
+    "target_slug": "alta-pos-choque-cardiogenico",
+    "target_title": "Alta após internação por choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "jcs2026-ei-t34-emergencia-no-choque-cardiogenico-por-disfuncao-valvar-aguda",
+    "target_title": "Cirurgia precoce (emergência) é recomendada no choque cardiogênico por disfunção valvar aguda grave ou formação de shunt, no edema pulmonar …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "choque-cardiogenico-na-sindrome-coronariana-aguda-culprit-shock-e-iabp-shock-ii",
+    "target_title": "Choque Cardiogênico na Síndrome Coronariana Aguda: CULPRIT-SHOCK e IABP-SHOCK II",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "danger-shock-impella-choque-cardiogenico-stemi",
+    "target_title": "DanGer-Shock: bomba microaxial no STEMI com choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "ecls-shock-va-ecmo-choque-cardiogenico-iam",
+    "target_title": "ECLS-SHOCK: VA-ECMO precoce no choque cardiogênico relacionado ao IAM",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "culprit-shock-revascularizacao-so-da-culpada-no-choque-cardiogenico",
+    "target_title": "CULPRIT-SHOCK — Angioplastia só da artéria culpada versus multiarterial imediata no choque cardiogênico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "choque-cardiogenico-doenca-multiarterial-quanto-revascularizar",
+    "target_title": "Choque cardiogênico com doença multiarterial: revascularizar tudo no mesmo procedimento?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-stemi-trombectomia-revascularizacao-completa-e-choque",
+    "target_title": "Doença coronariana: STEMI — trombectomia, revascularização completa e o choque cardiogênico, três decisões dentro da reperfusão",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-doenca-coronariana-choque-cardiogenico-e-angina-sem-obstrucao",
+    "target_title": "Doença coronariana nos dois extremos: choque cardiogênico e angina sem obstrução",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+    "target_title": "Miocardite fulminante pediátrica e choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-miocardite-fulminante-pediatrica-e-choque-cardiogenico",
+    "target_title": "Fluxograma: Miocardite fulminante pediátrica e choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "miocardite-viral-aguda-na-crianca-reconhecendo-o-choque-cardiogenico-atras-do-quadro-gripal",
+    "target_title": "Miocardite viral aguda na criança: reconhecendo o choque cardiogênico escondido atrás de um quadro \"gripal\"",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "estenose-aortica-grave-com-choque-cardiogenico-tavi-urgente-versus-valvuloplastia-ponte",
+    "target_title": "Estenose Aórtica Grave com Choque Cardiogênico: TAVI Urgente, Valvuloplastia-Ponte e Estabilização na UCO",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "miocardite-fulminante-pediatrica",
+    "target_title": "Miocardite fulminante pediátrica e choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "choque-cardiogenico-vasoativos-acc-2025-arvore-de-dose",
+    "target_title": "Choque cardiogênico — vasoativos ACC 2025 e árvore de dose",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "calculadora",
+    "target_slug": "vasoativos-choque-cardiogenico-acc-2025",
+    "target_title": "Choque cardiogênico — vasoativos e conversão para mL/h (ACC 2025)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "cateter-de-arteria-pulmonar-no-choque-cardiogenico-cpo-papi-e-ra-pcwp",
+    "target_title": "Cateter de Artéria Pulmonar no Choque Cardiogênico: CPO, PAPi, RAP/PCWP e Tendências",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "predicao-pre-hospitalar-de-choque-cardiogenico-no-iamcst-o-escore-early-shock",
+    "target_title": "Antes de chegar ao hospital: dá para prever quem vai chocar no IAMCST?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "pre-choque-cardiogenico-scai-b-istaroxime-versus-inotropico-adrenergico-classico",
+    "target_title": "IC descompensada em pré-choque cardiogênico (SCAI B): por que não usar dobutamina 'de qualquer jeito'?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "trilha",
+    "target_slug": "trilha-terapia-intensiva-choque-cardiogenico-predicao-precoce-e-neuroprognostico-pos-parada",
+    "target_title": "Choque cardiogênico: predição precoce, suporte circulatório mecânico e neuroprognóstico pós-parada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "risco-pre-hospitalar-de-choque-cardiogenico-no-iamcst-escore-early-shock",
+    "target_title": "Risco pré-hospitalar de choque cardiogênico no IAMCST (escore EARLY SHOCK)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "checklist",
+    "target_slug": "manejo-diario-e-desmame-de-suporte-circulatorio-mecanico-no-choque-cardiogenico",
+    "target_title": "Suporte circulatório mecânico temporário no choque cardiogênico (IABP, Impella ou ECMO-VA)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "checklist",
+    "target_slug": "reconhecimento-e-manejo-inicial-do-choque-cardiogenico",
+    "target_title": "Reconhecimento e manejo inicial do choque cardiogênico (diagnóstico, estadiamento SCAI e escolha de droga vasoativa)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "checklist",
+    "target_slug": "choque-cardiogenico-no-iam-revascularizacao-e-suporte-circulatorio-mecanico",
+    "target_title": "Choque cardiogênico complicando o infarto agudo do miocárdio — extensão da revascularização e suporte circulatório mecânico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "checklist",
+    "target_slug": "ecmo-va-indicacao-choque-cardiogenico-infarto",
+    "target_title": "Decisão de indicar ECMO venoarterial no choque cardiogênico do infarto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "material_paciente",
+    "target_slug": "balao-intra-aortico-no-choque-cardiogenico-o-que-a-familia-precisa-saber",
+    "target_title": "O balão intra-aórtico: o que essa opção significa para o choque cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "calculadora",
+    "target_slug": "estadiamento-scai-choque-cardiogenico",
+    "target_title": "Choque cardiogênico — estadiamento SCAI e reavaliação seriada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "choque-cardiogenico-na-sindrome-de-takotsubo-lvoto-falencia-de-bomba-e-vasoplegia",
+    "target_title": "Choque Cardiogênico na Síndrome de Takotsubo: LVOTO, Falência de Bomba, VD e Vasoplegia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "impella-cp-no-stemi-com-choque-cardiogenico-danger-shock-selecao-beneficio-e-complicacoes",
+    "target_title": "Impella CP no STEMI com Choque Cardiogênico após DanGer-Shock: Quem Foi Estudado, Benefício e Riscos",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "shock-team-e-transferencia-para-centro-de-choque-cardiogenico-niveis-de-cuidado-acc-2025",
+    "target_title": "Shock Team e Transferência para Centro de Choque Cardiogênico: Níveis de Cuidado ACC 2025",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "va-ecmo-no-choque-cardiogenico-distensao-do-ve-e-descompressao-seletiva",
+    "target_title": "VA-ECMO no Choque Cardiogênico: Distensão do VE, Descompressão Seletiva e Hipoxemia Diferencial",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "ventilacao-mecanica-no-choque-cardiogenico-e-falencia-de-vd",
+    "target_title": "Ventilação Mecânica no Choque Cardiogênico e na Falência de VD: Interações Coração-Pulmão",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "lactato-seriado-e-trajetoria-de-perfusao-no-choque-cardiogenico",
+    "target_title": "Lactato Seriado e Trajetória de Perfusão no Choque Cardiogênico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "documento",
+    "target_slug": "shock-revascularizacao-precoce-versus-estabilizacao-no-choque-cardiogenico",
+    "target_title": "SHOCK: revascularização de emergência no choque cardiogênico do IAM não reduz morte aos 30 d (P=0,11)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "caso_clinico",
+    "target_slug": "miocardite-de-celulas-gigantes-choque-cardiogenico-bloqueio-av-refratario-imunossupressao-combinada",
+    "target_title": "Homem jovem em choque cardiogênico e bloqueio AV total refratário: miocardite de células gigantes ou sarcoidose cardíaca?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "danger-shock-microaxial-flow-pump-no-choque-cardiogenico-por-iamcst",
+    "target_title": "DanGer Shock — Bomba de fluxo microaxial (Impella CP) associada a cuidado padrão no choque cardiogênico por IAM com supra de ST",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "ecls-shock-suporte-de-vida-extracorporeo-no-choque-cardiogenico-por-infarto",
+    "target_title": "ECLS-SHOCK — Suporte de vida extracorpóreo (ECMO venoarterial) precoce no choque cardiogênico relacionado a infarto",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "ecmo-cs-ecmo-imediata-versus-conservadora-no-choque-cardiogenico-grave",
+    "target_title": "ECMO-CS — ECMO venoarterial imediata versus estratégia inicialmente conservadora no choque cardiogênico grave ou em rápida deterioração",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "scassst-betabloqueador-intravenoso-contraindicado-no-risco-de-choque",
+    "target_title": "NÃO administrar betabloqueador INTRAVENOSO em paciente com fatores de risco para CHOQUE CARDIOGÊNICO. É Classe III com nível A — uma das pou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "scassst-nao-revascularizar-lesoes-nao-culpadas-no-choque-cardiogenico",
+    "target_title": "NÃO realizar intervenção coronária percutânea de ROTINA em lesões NÃO relacionadas ao infarto no paciente em CHOQUE CARDIOGÊNICO. É a recome…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "iabp-shock-ii-balao-intra-aortico-no-choque-cardiogenico",
+    "target_title": "IABP-SHOCK II — Balão intra-aórtico no choque cardiogênico complicando infarto agudo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "eco-no-recem-nascido-com-cianose-central-ou-choque-cardiogenico",
+    "target_title": "No recém-nascido, o ecocardiograma é recomendado diante de cianose central, insuficiência cardíaca, choque cardiogênico ou desconforto respi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-balao-intra-aortico-rotineiro-nao-indicado",
+    "target_title": "O uso rotineiro do balão intra-aórtico não é indicado no choque cardiogênico complicando o infarto com supradesnivelamento do ST, na ausênci…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-cateter-de-arteria-pulmonar",
+    "target_title": "No choque cardiogênico complicando o infarto com supradesnivelamento do ST, a avaliação hemodinâmica com cateter de artéria pulmonar pode se…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-suporte-circulatorio-mecanico-de-curto-prazo-no-choque-refratario",
+    "target_title": "O suporte circulatório mecânico de curto prazo — dispositivos percutâneos de suporte cardíaco, suporte de vida extracorpóreo ou ECMO — pode …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-inotropicos-vasopressores-para-estabilizacao",
+    "target_title": "No choque cardiogênico complicando o infarto com supradesnivelamento do ST, agentes inotrópicos e/ou vasopressores podem ser considerados pa…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "balao-intra-aortico-nao-recomendado-de-rotina-no-choque-cardiogenico",
+    "target_title": "O uso rotineiro de balão intra-aórtico NÃO é recomendado em pacientes com choque cardiogênico, pela ausência de benefício de sobrevida demon…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "suporte-circulatorio-mecanico-de-curto-prazo-no-choque-cardiogenico",
+    "target_title": "O suporte circulatório mecânico de curto prazo pode ser considerado em pacientes com choque cardiogênico, como ponte para a recuperação, par…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-pci-ou-cabg-imediatos",
+    "target_title": "No infarto agudo do miocárdio com supradesnivelamento do segmento ST complicado por choque cardiogênico, a angioplastia primária imediata é …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-monitorizacao-invasiva-pressao-arterial",
+    "target_title": "No choque cardiogênico complicando o infarto com supradesnivelamento do ST, a monitorização invasiva da pressão arterial com cateter arteria…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-ecocardiografia-doppler-imediata",
+    "target_title": "No choque cardiogênico complicando o infarto com supradesnivelamento do ST, a ecocardiografia Doppler imediata é indicada para avaliar a fun…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-tratamento-precoce-complicacoes-mecanicas",
+    "target_title": "As complicações mecânicas do infarto com supradesnivelamento do ST associadas a choque cardiogênico devem ser tratadas o mais precocemente p…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "choque-cardiogenico-stemi-balao-intra-aortico-em-complicacao-mecanica",
+    "target_title": "O balão intra-aórtico deve ser considerado em pacientes com instabilidade hemodinâmica ou choque cardiogênico decorrente de complicação mecâ…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "levoecmo-levosimendana-para-desmame-de-ecmo-va-no-choque-cardiogenico",
+    "target_title": "LEVOECMO: Levosimendana para Desmame de ECMO Venoarterial no Choque Cardiogênico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "escore-early-shock-derivacao-e-desempenho-na-predicao-pre-hospitalar-de-choque-cardiogenico",
+    "target_title": "Escore EARLY SHOCK: Derivação e Desempenho na Predição Pré-Hospitalar de Choque Cardiogênico no IAMCST",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "istaroxime-seismic-analise-hemodinamica-pre-choque-cardiogenico",
+    "target_title": "Istaroxime no Pré-Choque Cardiogênico: Análise Hemodinâmica Invasiva do Subestudo de Extensão SEISMiC",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "metanalise-ipd-ecmo-va-choque-cardiogenico-infarto",
+    "target_title": "ECMO Venoarterial no Choque Cardiogênico do Infarto: Metanálise de Dados Individuais de Pacientes",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "doremi-milrinona-dobutamina-choque-cardiogenico",
+    "target_title": "Milrinona versus Dobutamina no Choque Cardiogênico: o Ensaio DOREMI",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "isar-shock-impella-versus-balao-intra-aortico-no-choque-cardiogenico",
+    "target_title": "ISAR-SHOCK — Dispositivo de assistência ventricular percutâneo (Impella) versus balão intra-aórtico no choque cardiogênico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "shock-trial-revascularizacao-precoce-no-infarto-complicado-por-choque-cardiogenico",
+    "target_title": "SHOCK trial — Revascularização precoce no infarto do miocárdio complicado por choque cardiogênico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "cardshock-registro-europeu-de-perfil-clinico-e-mortalidade-no-choque-cardiogenico",
+    "target_title": "CardShock — Registro europeu de perfil clínico e predição de mortalidade a curto prazo no choque cardiogênico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-iabp-considerar-choque-por-complicacao-mecanica-sca",
+    "target_title": "O balão intra-aórtico deve ser considerado em pacientes com instabilidade hemodinâmica ou choque cardiogênico decorrente de complicação mecâ…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-iabp-rotina-nao-recomendado-choque-sem-complicacao-mecanica",
+    "target_title": "O uso rotineiro de balão intra-aórtico em pacientes com síndrome coronariana aguda e choque cardiogênico, sem complicação mecânica, não é re…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "esc2023-fibrinolise-no-choque-so-apos-excluir-complicacao-mecanica",
+    "target_title": "A fibrinólise deve ser considerada em pacientes com STEMI e choque cardiogênico se a estratégia de ICP primária não estiver disponível em 12…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "shock-registry-ruptura-septal-ventricular-pos-iam-menon-2000",
+    "target_title": "SHOCK Trial Registry — Perfil e desfecho da ruptura septal ventricular com choque cardiogênico após infarto",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "commit-metoprolol-precoce-excesso-de-choque-cardiogenico",
+    "target_title": "No COMMIT, o metoprolol IV/oral precoce aumentou choque cardiogênico (5,0% vs 3,9%; OR 1,30; IC95% 1,19-1,41; p<0,00001), sobretudo nos dias…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "optimacc-epinefrina-versus-norepinefrina-no-choque-cardiogenico-pos-iam-implicacao-do-ensaio",
+    "target_title": "OptimaCC: epinefrina vs norepinefrina no choque pós-IAM — choque refratário 37% vs 7% (p=0,008); ensaio parado. Índice cardíaco NS.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "evidencia",
+    "target_slug": "optimacc-epinefrina-mais-choque-refratario",
+    "target_title": "OptimaCC: epinefrina teve 37% vs 7% de choque refratário (p=0,008) e foi interrompida. Preferir norepinefrina no choque cardiogênico pós-IAM…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "choque-cardiogenico",
+    "target_type": "estudo",
+    "target_slug": "optimacc-epinefrina-versus-norepinefrina-no-choque-cardiogenico-pos-iam",
+    "target_title": "OptimaCC — epinefrina versus norepinefrina no choque cardiogênico após IAM",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "doenca-de-pompe-acometimento-cardiaco-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-de-reposicao-enzimatica",
+    "target_title": "Doença de Pompe: Acometimento Cardíaco, Fenocópia de Cardiomiopatia Hipertrófica e Terapia de Reposição Enzimática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "bisoprolol-verapamil-cardiomiopatia-hipertrofica-nao-obstrutiva-achado-principal",
+    "target_title": "Em pequeno ensaio crossover na cardiomiopatia hipertrófica não obstrutiva, bisoprolol reduziu o pico de VO2 versus verapamil e placebo.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "telereabilitacao-hibrida-cardiomiopatia-hipertrofica-nao-obstrutiva-achado-principal",
+    "target_title": "Em ensaio unicêntrico, 12 semanas de telereabilitação híbrida aumentaram modestamente o pico de VO2 na cardiomiopatia hipertrófica não obstr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "bisoprolol-verapamil-cardiomiopatia-hipertrofica-nao-obstrutiva",
+    "target_title": "Beta-Blocker (Bisoprolol) vs Calcium-Channel Blocker (Verapamil) in Nonobstructive Hypertrophic Cardiomyopathy: A Randomized Triple-Crossover Physiologic Trial",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "telereabilitacao-hibrida-cardiomiopatia-hipertrofica-nao-obstrutiva",
+    "target_title": "Efficacy and safety of hybrid cardiac telerehabilitation in patients with hypertrophic cardiomyopathy without left ventricular outflow tract obstruction and preserved ejection fraction: A randomized clinical trial",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-lvoto-hipotensao-intraoperatoria-fenilefrina-versus-efedrina",
+    "target_title": "Hipotensão intraoperatória em paciente com cardiomiopatia hipertrófica obstrutiva: qual vasopressor escolher?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "diante-de-lactente-com-hipertrofia-ventricular-importante-red-flags-para-doenca-de-pompe",
+    "target_title": "Lactente com hipertrofia ventricular importante: diferenciação entre doença de Pompe e cardiomiopatia hipertrófica sarcomérica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofica",
+    "target_title": "HCM Risk-SCD: Estratificação de Risco de Morte Súbita na Cardiomiopatia Hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "coracao-de-atleta-versus-cardiomiopatia-hipertrofica-diferenciacao-na-zona-cinzenta",
+    "target_title": "Coração de Atleta versus Cardiomiopatia Hipertrófica: Diferenciação na Zona Cinzenta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-hipertrofica-exercicio-esporte-competitivo",
+    "target_title": "Cardiomiopatia hipertrófica: exercício, esporte competitivo e decisão compartilhada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-hipertrofica-na-gestacao-desfechos-maternos-e-fetais-no-ropac",
+    "target_title": "Cardiomiopatia Hipertrófica na Gestação: Desfechos Maternos e Fetais no ROPAC",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-hipertrofica-na-gestacao-manejo-do-betabloqueador-e-conduta-no-trabalho-de-parto",
+    "target_title": "Cardiomiopatia Hipertrófica na Gestação: Manejo do Betabloqueador e Conduta no Trabalho de Parto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-hipertrofica-com-lvoto-descompensada-na-gestacao",
+    "target_title": "Cardiomiopatia hipertrófica com LVOTO descompensada na gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-cardiomiopatia-hipertrofica-com-lvoto-descompensada-na-gestacao",
+    "target_title": "Fluxograma: CMH com LVOTO descompensada na gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "trilha",
+    "target_slug": "trilha-gravidez-cardiopatia-estrutural-pre-existente-e-o-registro-ropac",
+    "target_title": "Gravidez: cardiomiopatia hipertrófica e outras cardiopatias estruturais pré-existentes — o que o ROPAC ensina",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "trilha",
+    "target_slug": "trilha-gravidez-limiar-de-intervencao-em-lesao-estrutural-de-alto-risco",
+    "target_title": "Gravidez: quando a lesão estrutural exige limiar de intervenção — estenose valvar, cardiomiopatia hipertrófica, Marfan e Fontan",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "hcm-risk-scd-derivacao-do-escore",
+    "target_title": "HCM Risk-SCD — Derivação do modelo de risco de morte súbita na cardiomiopatia hipertrófica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "metanalise-ablacao-septal-alcoolica-versus-miectomia",
+    "target_title": "Metanálise 2023 — Ablação septal alcoólica versus miectomia cirúrgica na cardiomiopatia hipertrófica obstrutiva",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "maverick-hcm-mavacamteno-na-cmh-nao-obstrutiva",
+    "target_title": "MAVERICK-HCM — Mavacamteno na cardiomiopatia hipertrófica NÃO obstrutiva",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-obstrutiva-sintomatica-refrataria-mavacamteno-explorer-hcm",
+    "target_title": "Cardiomiopatia hipertrófica obstrutiva ainda sintomática: o que existe antes da septostomia?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-obstrutiva-sintomatica-aficamteno-melhora-capacidade-de-exercicio-sequoia-hcm",
+    "target_title": "Cardiomiopatia hipertrófica obstrutiva sintomática apesar de betabloqueador: o aficamteno é uma opção além do mavacamteno?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "eplerenona-fibrose-difusa-cmh-nao-obstrutiva",
+    "target_title": "Cardiomiopatia hipertrófica não obstrutiva com fibrose difusa: a eplerenona reverte o substrato antes dos sintomas piorarem?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-obstrutiva-referida-para-reducao-septal-mavacamten-evita-a-cirurgia-valor-hcm",
+    "target_title": "Cardiomiopatia hipertrófica obstrutiva já encaminhada para redução septal: o mavacamten pode evitar o procedimento?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-variante-patogenica-identificada-rastreamento-em-cascata-dos-filhos",
+    "target_title": "Cardiomiopatia hipertrófica com variante patogênica: e os filhos, testar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatia-hipertrofica-escore-de-risco-e-inibidores-de-miosina",
+    "target_title": "Cardiomiopatia hipertrófica: o escore HCM Risk-SCD e a evidência comparativa dos inibidores de miosina",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatia-hipertrofica-inibidores-de-miosina-versus-reducao-septal",
+    "target_title": "Cardiomiopatia hipertrófica obstrutiva: farmacologia com inibidores de miosina versus redução septal, ensaio a ensaio",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sincope-ou-parada-cardiaca-abortada-em-cardiomiopatia-hipertrofica",
+    "target_title": "Síncope ou parada cardíaca abortada em cardiomiopatia hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "inicio-de-inibidor-de-miosina-cardiaca-mavacamten-na-cmh-obstrutiva",
+    "target_title": "Início de inibidor de miosina cardíaca (mavacamten) na cardiomiopatia hipertrófica obstrutiva",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "mavacamten-em-adolescentes-com-cardiomiopatia-hipertrofica-obstrutiva-o-ensaio-scout-hcm",
+    "target_title": "Mavacamten em Adolescentes com Cardiomiopatia Hipertrófica Obstrutiva: o Ensaio SCOUT-HCM",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-hipertrofica-pediatrica-triagem-familiar-abaixo-dos-10-anos",
+    "target_title": "Triagem familiar de cardiomiopatia hipertrófica: esperar até os 10-12 anos?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-hipertrofica-pediatrica-a-etiologia-muda-o-prognostico",
+    "target_title": "Cardiomiopatia hipertrófica na criança: a causa por trás do diagnóstico muda o prognóstico?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-pediatrica-sindrome-de-noonan-quando-suspeitar-de-rasopatia",
+    "target_title": "Cardiomiopatia hipertrófica em lactente com fenótipo dismórfico: quando suspeitar de síndrome de Noonan?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "documento",
+    "target_slug": "sindrome-de-noonan-na-crianca-espectro-cardiaco-genetica-ras-mapk-e-inibidores-de-mek-na-cardiomiopatia-hipertrofica",
+    "target_title": "Síndrome de Noonan na Criança: Espectro Cardíaco, Genética da Via RAS-MAPK e Inibidores de MEK na Cardiomiopatia Hipertrófica Refratária",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+    "target_title": "Coração de atleta versus cardiomiopatia hipertrófica: diferenciação na zona cinzenta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "aficamten-na-cardiomiopatia-hipertrofica-nao-obstrutiva-forest-hcm-96-semanas",
+    "target_title": "Safety and Efficacy of Aficamten in Patients With Nonobstructive Hypertrophic Cardiomyopathy: A 96-Week Analysis From FOREST-HCM",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "espessura-parietal-13mm-atleta-endurance-cmh-versus-coracao-de-atleta",
+    "target_title": "Espessura parietal de 13 mm em corredor de endurance: coração de atleta ou cardiomiopatia hipertrófica?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cmh-baixo-risco-atleta-adulto-competicao-decisao-compartilhada",
+    "target_title": "Cardiomiopatia hipertrófica de baixo risco no triatleta: pode competir?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "estratificacao-de-risco-de-morte-subita-e-decisao-de-cdi-na-cardiomiopatia-hipertrofica",
+    "target_title": "Estratificação de risco de morte súbita e decisão sobre CDI na cardiomiopatia hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-e-escalonamento-terapeutico-da-obstrucao-de-via-de-saida-na-cardiomiopatia-hipertrofica",
+    "target_title": "Diagnóstico e escalonamento terapêutico da obstrução da via de saída do VE (LVOTO) na cardiomiopatia hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "diferenciacao-coracao-de-atleta-versus-cardiomiopatia-hipertrofica",
+    "target_title": "Diferenciação entre coração de atleta e cardiomiopatia hipertrófica na zona cinzenta de remodelamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "diferenciacao-coracao-de-atleta-e-cardiomiopatia-hipertrofica-na-triagem-esportiva",
+    "target_title": "Diferenciação entre coração de atleta e cardiomiopatia hipertrófica (zona cinzenta)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "manejo-perioperatorio-de-cardiomiopatia-hipertrofica-obstrutiva-em-cirurgia-nao-cardiaca",
+    "target_title": "Cardiomiopatia hipertrófica obstrutiva (CMH com LVOTO) em cirurgia não cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "material_paciente",
+    "target_slug": "cardiomiopatia-hipertrofica-e-gravidez-planejamento-e-acompanhamento",
+    "target_title": "Tenho cardiomiopatia hipertrófica e quero engravidar: o que esperar do acompanhamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "checklist",
+    "target_slug": "teste-ergometrico-e-tcpe-seriado-na-cardiomiopatia-hipertrofica-e-apos-miocardite-sbc-2024",
+    "target_title": "Teste ergométrico e TCPE em cardiomiopatia hipertrófica e após miocardite",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-hipertrofica-ataxia-friedreich",
+    "target_title": "Ataxia progressiva e hipertrofia ventricular concêntrica em adolescente",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "anticoagulacao-oral-independente-de-escore-em-cmh-amiloidose-e-hipertireoidismo",
+    "target_title": "Anticoagulação oral é recomendada para todos os pacientes com fibrilação atrial e cardiomiopatia hipertrófica, amiloidose cardíaca ou hipert…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "resposta-pressorica-anormal-ao-esforco-na-cardiomiopatia-hipertrofica-para-risco-de-morte-subita-jcs-2022",
+    "target_title": "O uso da resposta pressórica anormal ao esforço em pacientes com cardiomiopatia hipertrófica durante teste ergométrico pode ser considerado …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "hcm-risk-scd-alto-risco-cdi-deve-ser-considerado",
+    "target_title": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos ≥6% (alto risco) pelo escore HCM Risk-SCD, o implante de cardiode…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "hcm-risk-scd-risco-intermediario-cdi-pode-ser-considerado",
+    "target_title": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos entre 4% e <6% (risco intermediário) pelo escore HCM Risk-SCD, o …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "hcm-risk-scd-baixo-risco-com-lge-extenso-cdi-pode-ser-considerado",
+    "target_title": "Na cardiomiopatia hipertrófica, para paciente com risco estimado em 5 anos <4% (baixo risco) pelo escore HCM Risk-SCD, o CDI profilático não…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "hcm-risk-scd-prevencao-secundaria-cdi-independente-do-escore",
+    "target_title": "Na cardiomiopatia hipertrófica, em prevenção secundária — sobrevivente de parada cardíaca por taquicardia/fibrilação ventricular, ou taquica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-avaliacao-perioperatoria-eco-biomarcadores-e-betabloqueador",
+    "target_title": "No perioperatório de cirurgia não cardíaca do portador de cardiomiopatia hipertrófica: é recomendado ECOCARDIOGRAMA na suspeita da doença, q…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "imagem-multimodal-para-diferenciar-cardiomiopatia-restritiva",
+    "target_title": "É recomendado usar imagem multimodal para diferenciar cardiomiopatia restritiva da cardiomiopatia hipertrófica e da dilatada com fisiologia …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-manobras-provocativas-quando-o-gradiente-e-menor-que-50",
+    "target_title": "Nos pacientes com cardiomiopatia hipertrófica e gradiente na via de saída ABAIXO DE 50 mmHg, é recomendado realizar o ecocardiograma com MAN…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-eco-inicial-e-repeticao-a-cada-1-a-2-anos",
+    "target_title": "O ecocardiograma transtorácico é RECOMENDADO na avaliação inicial do paciente com suspeita de cardiomiopatia hipertrófica, e deve ser REPETI…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-cmh-assintomatica-sem-obstrucao-em-repouso-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica ASSINTOMÁTICA e sem obstrução dinâmica em repouso, o ecocardiograma sob estresse pode ser considerado quando …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "te-com-protocolo-atenuado-na-cardiomiopatia-hipertrofica-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica e na insuficiência cardíaca compensada, o teste ergométrico em PROTOCOLO ATENUADO deve ser considerado para e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "te-seriado-na-cardiomiopatia-hipertrofica-para-ajuste-de-exercicio-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica, o teste ergométrico SERIADO deve ser considerado para ajustes de programa de exercícios e de atividade espor…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-eco-de-esforco-no-sintomatico-sem-gradiente-provocado",
+    "target_title": "É RECOMENDADO o ecocardiograma COM ESFORÇO no paciente com cardiomiopatia hipertrófica SINTOMÁTICO que não apresente gradiente de via de saí…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "te-seriado-para-avaliar-resposta-pressorica-e-intervencoes-na-cmh-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica ou na insuficiência cardíaca compensada, o teste ergométrico seriado pode ser considerado para avaliação do c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "tcpe-na-cardiomiopatia-hipertrofica-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica, o teste cardiopulmonar de exercício deve ser considerado para avaliar aptidão cardiorrespiratória, estratifi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-cmh-sintomatica-com-gradiente-de-repouso-baixo-sbc-2024",
+    "target_title": "Na cardiomiopatia hipertrófica SINTOMÁTICA com gradiente intraventricular de repouso — ou provocável por manobra de Valsalva — MENOR que 50 …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-eco-como-rastreamento-inicial-em-parente-de-primeiro-grau",
+    "target_title": "É RECOMENDADO o ecocardiograma transtorácico em PARENTES DE PRIMEIRO GRAU de paciente com cardiomiopatia hipertrófica, como estratégia INICI…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-teste-genetico-para-diferenciar-fenocopias",
+    "target_title": "Em paciente com apresentação fenotípica de cardiomiopatia hipertrófica em que se suspeite de OUTRA condição genética, é RECOMENDADA a invest…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-teste-genetico-para-identificar-familiares-em-risco",
+    "target_title": "O teste genético deve ser considerado no paciente com cardiomiopatia hipertrófica para facilitar a identificação de FAMILIARES em risco de d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-nao-testar-familia-quando-o-caso-indice-nao-tem-variante-patogenica",
+    "target_title": "Em paciente com cardiomiopatia hipertrófica que realizou teste genético e NÃO apresentou variantes patogênicas — ou seja, abriga apenas vari…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-reducao-septal-com-gradiente-acima-de-50-e-classe-iii-iv",
+    "target_title": "A terapia de redução septal é RECOMENDADA no paciente com cardiomiopatia hipertrófica obstrutiva com gradiente — em repouso ou provocado — A…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-reducao-septal-nao-indicada-em-assintomatico",
+    "target_title": "Em paciente com cardiomiopatia hipertrófica obstrutiva ASSINTOMÁTICO e com capacidade normal ao exercício, a terapia de redução septal NÃO e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-os-seis-fatores-de-risco-a-pesquisar-em-toda-avaliacao",
+    "target_title": "Em TODA avaliação clínica do paciente com cardiomiopatia hipertrófica devem ser pesquisados os seguintes fatores de risco de morte súbita: p…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-escolha-do-dispositivo-e-coil-unico",
+    "target_title": "Havendo indicação de cardiodesfibrilador na cardiomiopatia hipertrófica, são recomendados dispositivos transvenosos de câmara única, de câma…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-anticoagulacao-na-fa-independe-do-cha2ds2-vasc",
+    "target_title": "No portador de cardiomiopatia hipertrófica com fibrilação atrial, a anticoagulação é RECOMENDADA com anticoagulante oral direto em PRIMEIRA …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-anticoagulacao-na-fa-subclinica-por-duracao-do-episodio",
+    "target_title": "Na fibrilação atrial ASSINTOMÁTICA detectada por dispositivo implantável ou externo em portador de cardiomiopatia hipertrófica, a duração do…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-anticoagulacao-no-aneurisma-apical-independe-do-tamanho",
+    "target_title": "O anticoagulante oral é RECOMENDADO para profilaxia de eventos embólicos no paciente com cardiomiopatia hipertrófica e ANEURISMA APICAL de v…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-antiplaquetario-nao-substitui-anticoagulante",
+    "target_title": "Os agentes ANTIPLAQUETÁRIOS não fornecem prevenção adequada de acidente vascular cerebral no paciente com cardiomiopatia hipertrófica e fibr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-controle-de-frequencia-e-de-ritmo-na-fibrilacao-atrial",
+    "target_title": "Na estratégia de controle de FREQUÊNCIA em portador de cardiomiopatia hipertrófica com fibrilação atrial, são recomendados betabloqueador ou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-com-disfuncao-ventricular-tratar-como-insuficiencia-cardiaca",
+    "target_title": "O paciente com cardiomiopatia hipertrófica que desenvolve DISFUNÇÃO ventricular — fração de ejeção abaixo de 50% — e insuficiência cardíaca …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "cmh-gravidez-classificacao-da-oms-modificada-e-farmacos",
+    "target_title": "Na gestante portadora de cardiomiopatia hipertrófica, é RECOMENDADO o emprego da classificação da OMS MODIFICADA para estratificação do risc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-teste-ergometrico-na-cardiomiopatia-hipertrofica-e-nas-compensadas",
+    "target_title": "Na CARDIOMIOPATIA HIPERTRÓFICA, o teste ergométrico deve ser considerado para avaliação da aptidão cardiorrespiratória e de marcadores progn…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "explorer-hcm-mavacamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "target_title": "EXPLORER-HCM — Mavacamteno na cardiomiopatia hipertrófica obstrutiva sintomática",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "sequoia-hcm-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "target_title": "SEQUOIA-HCM — Aficamteno na cardiomiopatia hipertrófica obstrutiva sintomática",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "valor-hcm-mavacanteno-em-candidatos-a-terapia-de-reducao-septal",
+    "target_title": "VALOR-HCM — Mavacanteno em pacientes com cardiomiopatia hipertrófica obstrutiva já encaminhados à terapia de redução septal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "exame",
+    "target_slug": "painel-genetico-de-genes-sarcomericos-na-cardiomiopatia-hipertrofica",
+    "target_title": "Painel genético de genes sarcoméricos na cardiomiopatia hipertrófica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "galeria",
+    "target_slug": "cardiomiopatia-hipertrofica-septo-assimetrico-diagrama",
+    "target_title": "Cardiomiopatia hipertrófica — hipertrofia septal assimétrica (comparação com coração normal)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cardiomiopatia-hipertrofica-pediatrica-cdi-primario-com-fator-de-risco",
+    "target_title": "Para crianças com cardiomiopatia hipertrófica que têm um ou mais fatores de risco primários — síncope inexplicada, hipertrofia ventricular e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "hcm-risk-kids-modelo-de-predicao-de-morte-subita-na-cardiomiopatia-hipertrofica-pediatrica",
+    "target_title": "HCM Risk-Kids — Modelo de predição de risco de morte súbita cardíaca na cardiomiopatia hipertrófica da infância",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "colan-2007-registro-cardiomiopatia-hipertrofica-pediatrica",
+    "target_title": "Colan 2007 — Epidemiologia e desfecho por causa da cardiomiopatia hipertrófica em crianças: achados do Registro Pediátrico de Cardiomiopatia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "exame",
+    "target_slug": "ressonancia-magnetica-cardiaca-com-realce-tardio-na-cardiomiopatia-hipertrofica-pediatrica",
+    "target_title": "Ressonância magnética cardíaca com realce tardio de gadolínio na cardiomiopatia hipertrófica pediátrica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-cardiomiopatia-hipertrofica-alto-risco-classe-iii",
+    "target_title": "A participação em exercício de alta intensidade (incluindo esportes recreativos e competitivos) não é recomendada em indivíduos com cardiomi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "evidencia",
+    "target_slug": "hcm-risk-kids-cdi-deve-ser-considerado-em-criancas-risco-maior-igual-6",
+    "target_title": "Em crianças com menos de 16 anos de idade com cardiomiopatia hipertrófica e risco estimado em 5 anos de morte súbita ≥6% (calculado pelo esc…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "tempest-trientina-na-cardiomiopatia-hipertrofica",
+    "target_title": "TEMPEST — Trientina na Cardiomiopatia Hipertrófica: Ensaio de Fase 2",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "lcz-in-nhcm-sacubitril-valsartana-na-cardiomiopatia-hipertrofica-nao-obstrutiva",
+    "target_title": "Sacubitril/Valsartana na Cardiomiopatia Hipertrófica Não Obstrutiva: Ensaio Randomizado (LCZ in nHCM)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "corrado-1998-triagem-cardiomiopatia-hipertrofica-jovens-atletas-italia",
+    "target_title": "Corrado et al. 1998 — Triagem Pré-Participação e Cardiomiopatia Hipertrófica em Jovens Atletas Italianos",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "scout-hcm-mavacamten-em-adolescentes-com-cmh-obstrutiva",
+    "target_title": "SCOUT-HCM — Mavacamten em Adolescentes com Cardiomiopatia Hipertrófica Obstrutiva",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "wolf-2025-inibicao-de-mek-na-cardiomiopatia-hipertrofica-da-sindrome-de-noonan",
+    "target_title": "Wolf et al. 2025 — Inibição de MEK na Cardiomiopatia Hipertrófica Grave por RASopatia",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "goland-2017-ropac-cardiomiopatia-hipertrofica-gestacao",
+    "target_title": "Goland et al. 2017 — Cardiomiopatia hipertrófica na gestação: dados do registro ROPAC",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "redwood-hcm-aficamteno-fase-2-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "target_title": "REDWOOD-HCM — Estudo de Fase 2 de Aficamteno na Cardiomiopatia Hipertrófica Obstrutiva",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "forest-hcm-48-semanas-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "target_title": "FOREST-HCM (48 semanas) — Segurança e Eficácia de Longo Prazo do Aficamteno na Cardiomiopatia Hipertrófica Obstrutiva",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "pioneer-ole-mavacamteno-longo-prazo-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "target_title": "PIONEER-OLE — Segurança e Eficácia de Longo Prazo do Mavacamteno na Cardiomiopatia Hipertrófica Obstrutiva Sintomática",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-hipertrofica",
+    "target_type": "estudo",
+    "target_slug": "explorer-lte-mava-lte-mavacamteno-extensao-de-longo-prazo-na-cmh-obstrutiva",
+    "target_title": "EXPLORER-LTE (MAVA-LTE) — Segurança e Eficácia de Longo Prazo do Mavacamteno na Cardiomiopatia Hipertrófica Obstrutiva",
+    "relation_type": "supported_by"
+  }
+]
