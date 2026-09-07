@@ -30,8 +30,8 @@ def test_coorte_paralela_61_500_tem_dimensao_e_chaves_unicas():
         (x["source_disease_slug"], x["target_type"], x["target_slug"], x["relation_type"])
         for x in rows
     }
-    assert len(rows) == 2205
-    assert len(keys) == 2205
+    assert len(rows) == 2199
+    assert len(keys) == 2199
     assert len({x["source_disease_slug"] for x in rows}) == 12
 
 

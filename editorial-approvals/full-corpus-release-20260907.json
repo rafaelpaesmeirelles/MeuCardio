@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 41–60: 193 relações de 4 doenças foram revisadas e promovidas como vínculos editoriais explícitos/revisados. No bloqueio atrioventricular, evidências restritas a Chagas, sarcoidose, miocardite ou contexto específico de TRC foram tipadas como associated_with para evitar superafirmação; recomendações diretamente sobre BAV mantiveram supported_by. Nenhum slug, contagem ou status editorial do corpus foi alterado. Nesta rodada paralela de auditoria, seis agentes independentes validaram e promoveram 2.205 vínculos adicionais com identidade clínica exata, cobrindo as coortes de 61 a 500 candidatos por doença. Todos os vínculos foram tipados, tiveram política clínica validada, nós ativos confirmados e ausência de duplicidade antes da promoção; candidatos contextualmente enganosos permanecem excluídos.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 41–60: 193 relações de 4 doenças foram revisadas e promovidas como vínculos editoriais explícitos/revisados. No bloqueio atrioventricular, evidências restritas a Chagas, sarcoidose, miocardite ou contexto específico de TRC foram tipadas como associated_with para evitar superafirmação; recomendações diretamente sobre BAV mantiveram supported_by. Nenhum slug, contagem ou status editorial do corpus foi alterado. Nesta rodada paralela de auditoria, seis agentes independentes validaram e promoveram 2.199 vínculos canônicos adicionais com identidade clínica exata, cobrindo as coortes de 61 a 500 candidatos por doença. Todos os vínculos foram tipados, tiveram política clínica validada, nós ativos confirmados e ausência de duplicidade antes da promoção; candidatos contextualmente enganosos permanecem excluídos. Sete relações inicialmente candidatas foram retiradas após o gate integral detectar alvos runtime-managed corvia-intelligence sem fonte canônica no repositório; elas não fazem parte da autorização editorial e devem permanecer fora do grafo clínico persistente.",
   "expected_total": 11581,
-  "inventory_sha256": "35e2face47fe7688acf4b83b14ac38406457509123d626f690f94946937d3a31",
+  "inventory_sha256": "5b307bf44f976972ecc5c5ddafe14651a06fc7b8c2f873c3acfb021867f187d1",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "971173e34c91687f14e54a2846dd996a5b15f357db0bf3d8b9d13fed92acab93"
+      "source_sha256": "eab539a1b151edbc50620aab2668feee2d2010ad682e167814c43f9674ccc6eb"
     },
     "triagem_sintomas": {
       "count": 23,

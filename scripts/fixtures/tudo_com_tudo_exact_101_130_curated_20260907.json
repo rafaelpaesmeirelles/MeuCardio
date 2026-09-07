@@ -1936,14 +1936,6 @@
     "relation_type": "supported_by"
   },
   {
-    "source_disease_slug": "estenose-aortica",
-    "source_disease_name": "Estenose aórtica",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-early-and-late-tavi-outcomes-in-aortic-stenosis-with-transthyretin-cardiac-amyloidosis-a-systematic-review-1d09594e1c",
-    "target_title": "Desfechos precoces e tardios da TAVI na estenose aórtica com amiloidose cardíaca por transtirretina: revisão sistemática",
-    "relation_type": "associated_with"
-  },
-  {
     "source_disease_slug": "sindrome-coronariana-aguda",
     "source_disease_name": "Síndrome coronariana aguda",
     "target_type": "documento",
@@ -2878,13 +2870,5 @@
     "target_slug": "ivus-acs-ivus-versus-angiografia-para-guiar-icp-na-sca",
     "target_title": "IVUS-ACS — IVUS versus angiografia para guiar ICP na síndrome coronariana aguda",
     "relation_type": "supported_by"
-  },
-  {
-    "source_disease_slug": "sindrome-coronariana-aguda",
-    "source_disease_name": "Síndrome coronariana aguda",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
-    "target_title": "Terapia antitrombótica dupla com inibidores plaquetários potentes em pacientes com fibrilação atrial e síndrome coronariana aguda: ensaio clínico randomizado EPIDAURUS",
-    "relation_type": "associated_with"
   }
 ]

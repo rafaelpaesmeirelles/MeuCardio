@@ -290,14 +290,6 @@
   {
     "source_disease_slug": "insuficiencia-cardiaca",
     "source_disease_name": "Insuficiência cardíaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-weekly-journal-scan-simplifying-guideline-directed-medical-therapy-with-a-once-daily-polypill-improves-treatme-2600ada6db",
-    "target_title": "Polipílula uma vez ao dia para simplificar a terapia da insuficiência cardíaca com fração de ejeção reduzida",
-    "relation_type": "associated_with"
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
-    "source_disease_name": "Insuficiência cardíaca",
     "target_type": "caso_clinico",
     "target_slug": "fa-com-ic-fe-reduzida-ablacao-por-cateter-castle-af",
     "target_title": "Fibrilação atrial em portador de insuficiência cardíaca com fração de ejeção reduzida: ablação muda desfecho?",
@@ -2042,14 +2034,6 @@
   {
     "source_disease_slug": "insuficiencia-cardiaca",
     "source_disease_name": "Insuficiência cardíaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-pubmed-2026-dipeptidyl-peptidase-4-inhibitors-associated-heart-failure-events-in-adult-patients-with-type-2-diabetes-melli-d21042f5ef",
-    "target_title": "Inibidores da DPP-4 e eventos de insuficiência cardíaca em adultos com diabetes tipo 2: revisão sistemática e metanálise",
-    "relation_type": "associated_with"
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
-    "source_disease_name": "Insuficiência cardíaca",
     "target_type": "evidencia",
     "target_slug": "heart-team-com-especialista-em-ic-recomendado-na-avaliacao-para-ablacao-de-fa",
     "target_title": "A utilização de um Heart Team incluindo médico com experiência em insuficiência cardíaca deve ser recomendada nos pacientes com insuficiênci…",
@@ -3430,14 +3414,6 @@
     "target_slug": "vheft-ii-enalapril-versus-hidralazina-dinitrato-na-ic",
     "target_title": "V-HeFT II — enalapril versus hidralazina-dinitrato de isossorbida na insuficiência cardíaca crônica",
     "relation_type": "supported_by"
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
-    "source_disease_name": "Insuficiência cardíaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-prevalence-and-risk-of-heart-failure-among-older-adults-experiencing-homelessness-a-systematic-review-and-meta-38a9e504db",
-    "target_title": "Prevalência e risco de insuficiência cardíaca em idosos em situação de rua: identidade bibliográfica não confirmada",
-    "relation_type": "associated_with"
   },
   {
     "source_disease_slug": "insuficiencia-cardiaca",
@@ -6854,14 +6830,6 @@
     "target_slug": "afire-antithromboticos-na-fa-com-dac-estavel",
     "target_title": "AFIRE — Antitrombóticos na fibrilação atrial com doença coronariana estável",
     "relation_type": "supported_by"
-  },
-  {
-    "source_disease_slug": "fibrilacao-atrial",
-    "source_disease_name": "Fibrilação atrial",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
-    "target_title": "Terapia antitrombótica dupla com inibidores plaquetários potentes em pacientes com fibrilação atrial e síndrome coronariana aguda: ensaio clínico randomizado EPIDAURUS",
-    "relation_type": "associated_with"
   },
   {
     "source_disease_slug": "fibrilacao-atrial",

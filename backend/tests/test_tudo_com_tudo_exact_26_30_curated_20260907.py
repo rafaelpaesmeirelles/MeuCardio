@@ -20,9 +20,9 @@ def _relations():
     return json.loads(RELATIONS.read_text(encoding="utf-8"))
 
 
-def test_fixture_exact_26_30_tem_166_relacoes_em_6_doencas():
+def test_fixture_exact_26_30_tem_165_relacoes_em_6_doencas():
     rows = _fixture()
-    assert len(rows) == 166
+    assert len(rows) == 165
     assert len({row["source_disease_slug"] for row in rows}) == 6
 
 

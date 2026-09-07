@@ -763,13 +763,6 @@
     "relation_type": "associated_with"
   },
   {
-    "source_disease_slug": "cardiomiopatias",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-pubmed-2026-antiarrhythmic-drug-therapy-in-cardiomyopathies-a-comparative-synthesis-of-guidelines-and-consensus-documents-622fd62fa8",
-    "target_title": "Terapia farmacológica antiarrítmica nas cardiomiopatias: síntese comparativa de diretrizes e documentos de consenso",
-    "relation_type": "associated_with"
-  },
-  {
     "source_disease_slug": "cteph",
     "target_type": "trilha",
     "target_slug": "trilha-tromboembolismo-cteph-sequela-tardia-do-tep-nao-resolvido",

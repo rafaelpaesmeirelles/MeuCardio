@@ -6300,18 +6300,6 @@
     "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
   },
   {
-    "source_disease_slug": "cardiomiopatias",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-pubmed-2026-antiarrhythmic-drug-therapy-in-cardiomyopathies-a-comparative-synthesis-of-guidelines-and-consensus-documents-622fd62fa8",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_26_30_curated_20260907.json#cardiomiopatias:documento:corvia-intelligence-pubmed-2026-antiarrhythmic-drug-therapy-in-cardiomyopathies-a-comparative-synthesis-of-guidelines-and-consensus-documents-622fd62fa8",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
     "source_disease_slug": "cteph",
     "target_type": "trilha",
     "target_slug": "trilha-tromboembolismo-cteph-sequela-tardia-do-tep-nao-resolvido",
@@ -16332,18 +16320,6 @@
     "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
   },
   {
-    "source_disease_slug": "estenose-aortica",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-early-and-late-tavi-outcomes-in-aortic-stenosis-with-transthyretin-cardiac-amyloidosis-a-systematic-review-1d09594e1c",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_101_130_curated_20260907.json#estenose-aortica:documento:corvia-intelligence-europe_pmc-2026-early-and-late-tavi-outcomes-in-aortic-stenosis-with-transthyretin-cardiac-amyloidosis-a-systematic-review-1d09594e1c",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
     "source_disease_slug": "sindrome-coronariana-aguda",
     "target_type": "documento",
     "target_slug": "sindrome-coronariana-aguda-sem-supra-de-st-no-muito-idoso-estrategia-invasiva-versus-conservadora-after-eighty-e-senior-rita",
@@ -17745,18 +17721,6 @@
     "confidence": "explicit",
     "relevance_score": 1.0,
     "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_101_130_curated_20260907.json#sindrome-coronariana-aguda:estudo:ivus-acs-ivus-versus-angiografia-para-guiar-icp-na-sca",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
-    "source_disease_slug": "sindrome-coronariana-aguda",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_101_130_curated_20260907.json#sindrome-coronariana-aguda:documento:corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
     "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
   },
   {
@@ -26701,18 +26665,6 @@
   },
   {
     "source_disease_slug": "insuficiencia-cardiaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-weekly-journal-scan-simplifying-guideline-directed-medical-therapy-with-a-once-daily-polypill-improves-treatme-2600ada6db",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#insuficiencia-cardiaca:documento:corvia-intelligence-europe_pmc-2026-weekly-journal-scan-simplifying-guideline-directed-medical-therapy-with-a-once-daily-polypill-improves-treatme-2600ada6db",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
     "target_type": "caso_clinico",
     "target_slug": "fa-com-ic-fe-reduzida-ablacao-por-cateter-castle-af",
     "relation_type": "used_in_case",
@@ -29329,18 +29281,6 @@
   },
   {
     "source_disease_slug": "insuficiencia-cardiaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-pubmed-2026-dipeptidyl-peptidase-4-inhibitors-associated-heart-failure-events-in-adult-patients-with-type-2-diabetes-melli-d21042f5ef",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#insuficiencia-cardiaca:documento:corvia-intelligence-pubmed-2026-dipeptidyl-peptidase-4-inhibitors-associated-heart-failure-events-in-adult-patients-with-type-2-diabetes-melli-d21042f5ef",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
     "target_type": "evidencia",
     "target_slug": "heart-team-com-especialista-em-ic-recomendado-na-avaliacao-para-ablacao-de-fa",
     "relation_type": "supported_by",
@@ -31413,18 +31353,6 @@
     "confidence": "explicit",
     "relevance_score": 1.0,
     "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#insuficiencia-cardiaca:estudo:vheft-ii-enalapril-versus-hidralazina-dinitrato-na-ic",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
-    "source_disease_slug": "insuficiencia-cardiaca",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-europe_pmc-2026-prevalence-and-risk-of-heart-failure-among-older-adults-experiencing-homelessness-a-systematic-review-and-meta-38a9e504db",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#insuficiencia-cardiaca:documento:corvia-intelligence-europe_pmc-2026-prevalence-and-risk-of-heart-failure-among-older-adults-experiencing-homelessness-a-systematic-review-and-meta-38a9e504db",
     "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
   },
   {
@@ -36549,18 +36477,6 @@
     "confidence": "explicit",
     "relevance_score": 1.0,
     "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#fibrilacao-atrial:estudo:afire-antithromboticos-na-fa-com-dac-estavel",
-    "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
-  },
-  {
-    "source_disease_slug": "fibrilacao-atrial",
-    "target_type": "documento",
-    "target_slug": "corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
-    "relation_type": "associated_with",
-    "review_status": "revisado",
-    "provenance_type": "editorial",
-    "confidence": "explicit",
-    "relevance_score": 1.0,
-    "evidence_source": "scripts/fixtures/tudo_com_tudo_exact_251_500_curated_20260907.json#fibrilacao-atrial:documento:corvia-intelligence-nature_medicine-2026-dual-antithrombotic-therapy-using-potent-antiplatelet-inhibitors-in-atrial-fibrillation-and-acute-coronary-syn-9552d8a095",
     "review_note": "Vínculo clínico confirmado na auditoria Tudo com Tudo de identidade exata; relação revisada e tipada antes da promoção."
   },
   {
