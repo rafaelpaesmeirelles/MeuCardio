@@ -11,7 +11,7 @@ source_refs:
   - "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722"
   - "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165"
   - "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150"
-  - "Michelena HI, Della Corte A, Evangelista A, et al. International Consensus Statement on Nomenclature and Classification of the Congenital Bicuspid Aortic Valve and Its Aortopathy. Radiol Cardiothorac Imaging. 2021;3(4):e200496. DOI: 10.1148/ryct.202200496. PMID: 34505060"
+  - "Michelena HI, Della Corte A, Evangelista A, et al. International Consensus Statement on Nomenclature and Classification of the Congenital Bicuspid Aortic Valve and Its Aortopathy. Radiol Cardiothorac Imaging. 2021;3(4):e200496. DOI: 10.1148/ryct.2021200496. PMID: 34505060"
 ---
 
 # Sinalizadores ambulatoriais de aortopatia em valva aórtica bicúspide: quando escalar
@@ -28,7 +28,7 @@ Não substitui:
 ## Princípio
 
 - ESC 2024 PAAD (PMID 39210722): aortopatia da VAB é **própria** — fenótipo (raiz vs. ascendente vs. estendido) e fatores de risco mudam o destino, não só o diâmetro absoluto.
-- ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): dilatação aórtica com VAB exige vigilância e, em limiares definidos, discussão cirúrgica — o ambulatoacute;rio **reconhece e encaminha**.
+- ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): dilatação aórtica com VAB exige vigilância e, em limiares definidos, discussão cirúrgica — o ambulatório **reconhece e encaminha**.
 - Consenso Michelena (PMID 34505060): nomenclatura unificada (fusão / dois seios / fusão parcial + fenótipos de dilatação) — o consultório deve registrar se o laudo descreve **raiz** vs. **tubular**.
 
 ## Encaminhar agora (PS / emergência)
