@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 31–40: 68 relações de 2 doenças foram revisadas e promovidas como vínculos editoriais explícitos/revisados. A coorte cobre Tetralogia de Fallot e tromboembolismo venoso em seus subcenários clínicos já publicados. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 41–60: 193 relações de 4 doenças foram revisadas e promovidas como vínculos editoriais explícitos/revisados. No bloqueio atrioventricular, evidências restritas a Chagas, sarcoidose, miocardite ou contexto específico de TRC foram tipadas como associated_with para evitar superafirmação; recomendações diretamente sobre BAV mantiveram supported_by. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
   "expected_total": 11581,
-  "inventory_sha256": "7cedd95c2e12e3aa169506ecf451ee6f653d809d6bb5f1bebaefcf4edb846c17",
+  "inventory_sha256": "1824048ec4a05b6f35bf4fabddd3e417397f13c18b1e94c4fc31111f8f995b87",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "978a98a49576da45bb80b32dcbaa455612942cb328153aa49e8c1b77f2bf7ffb"
+      "source_sha256": "bf0de18c4eb2c5f7635929f00b1da8eb6e6555d37c56fc03716700dcb433ee76"
     },
     "triagem_sintomas": {
       "count": 23,

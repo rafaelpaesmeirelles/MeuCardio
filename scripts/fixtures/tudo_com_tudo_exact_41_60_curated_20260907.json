@@ -1,0 +1,1353 @@
+[
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "caso_clinico",
+    "target_slug": "kawasaki-dose-unica-ou-quatro-doses-diarias-de-imunoglobulina",
+    "target_title": "Doença de Kawasaki aguda: imunoglobulina em dose única ou em quatro infusões diárias?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "caso_clinico",
+    "target_slug": "doenca-de-kawasaki-criterios-diagnosticos-e-janela-para-imunoglobulina-antes-do-decimo-dia",
+    "target_title": "Doença de Kawasaki: reconhecendo os critérios clássicos e a janela para imunoglobulina",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "caso_clinico",
+    "target_slug": "doenca-de-kawasaki-refrataria-a-imunoglobulina-infliximabe-versus-segunda-dose-kidcare",
+    "target_title": "Doença de Kawasaki refratária à imunoglobulina: infliximabe ou segunda dose de IVIG?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "caso_clinico",
+    "target_slug": "escore-de-kobayashi-predizendo-resistencia-a-imunoglobulina-na-doenca-de-kawasaki",
+    "target_title": "Escore de Kobayashi: prevendo resistência à imunoglobulina na doença de Kawasaki",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-febre-e-achado-cardiaco-diferencial",
+    "target_title": "Cardiologia pediátrica: febre e achado cardíaco — diferencial entre doença de Kawasaki, febre reumática e endocardite",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-doenca-de-kawasaki-da-fase-aguda-a-refrataria",
+    "target_title": "Cardiologia pediátrica: doença de Kawasaki, da fase aguda à refratária ao tratamento com imunoglobulina",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "sindrome-do-choque-da-doenca-de-kawasaki",
+    "target_title": "Síndrome do choque da doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-e-conduta-inicial-na-doenca-de-kawasaki",
+    "target_title": "Diagnóstico e conduta inicial na doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "caso_clinico",
+    "target_slug": "crianca-com-febre-prolongada-conjuntivite-e-rash-febre-reumatica-ou-doenca-de-kawasaki",
+    "target_title": "Criança com febre prolongada, conjuntivite e rash: febre reumática ou doença de Kawasaki?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "checklist",
+    "target_slug": "diferenciacao-entre-febre-reumatica-aguda-e-doenca-de-kawasaki-na-crianca-febril",
+    "target_title": "Diferenciação entre febre reumática aguda e doença de Kawasaki na criança com febre prolongada, rash e poliartrite",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "material_paciente",
+    "target_slug": "febre-reumatica-ou-doenca-de-kawasaki-como-diferenciar",
+    "target_title": "Febre alta, manchas na pele e dor nas juntas: febre reumática ou doença de Kawasaki?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "checklist",
+    "target_slug": "manejo-de-longo-prazo-de-aneurisma-coronariano-de-kawasaki-da-infancia-a-vida-adulta",
+    "target_title": "Doença de Kawasaki — manejo de longo prazo do aneurisma coronariano, da infância à vida adulta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-kawasaki-indicado-para-funcao-e-arritmia-mas-nao-isolado-para-isquemia",
+    "target_title": "Na DOENÇA DE KAWASAKI, o teste ergométrico é RECOMENDADO (Classe I, B) para investigação de arritmias esforço-induzidas, avaliação funcional…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "eco-na-avaliacao-inicial-e-reavaliacao-da-doenca-de-kawasaki",
+    "target_title": "A avaliação ecocardiográfica inicial e as reavaliações são recomendadas em pacientes com suspeita ou diagnóstico confirmado de doença de Kaw…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "eco-nao-indicado-no-seguimento-tardio-de-kawasaki-sem-alteracao-coronaria",
+    "target_title": "O ecocardiograma NÃO é recomendado como exame de rotina no seguimento tardio da doença de Kawasaki em pacientes sem evidência de alteração d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "eco-sob-estresse-na-avaliacao-tardia-de-kawasaki-com-alteracao-coronariana-na-fase-aguda",
+    "target_title": "A ecocardiografia sob estresse é recomendada na avaliação tardia de crianças com doença de Kawasaki que tiveram alterações coronarianas docu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "kawasaki-com-sequela-coronariana-aguda-ecocardiograma-sob-estresse-no-seguimento-tardio",
+    "target_title": "A ecocardiografia sob estresse pode ser considerada na avaliação tardia de crianças com doença de Kawasaki que apresentaram alterações coron…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "strain-ventricular-na-avaliacao-da-doenca-de-kawasaki",
+    "target_title": "A análise de strain ventricular pode ser considerada na avaliação de crianças com doença de Kawasaki.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "kawasaki-ivig-inicial-de-2-gkg-dentro-de-10-dias",
+    "target_title": "Pacientes com critérios completos de doença de Kawasaki, e aqueles que preenchem os critérios do algoritmo para Kawasaki incompleta, devem s…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "kawasaki-segunda-dose-de-ivig-na-febre-persistente-ou-recorrente",
+    "target_title": "É razoável administrar uma segunda dose de imunoglobulina intravenosa (IVIG 2 g/kg) a pacientes com doença de Kawasaki que apresentem febre …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-aspirina-em-dose-moderada-na-fase-febril-aguda",
+    "target_title": "Na fase febril aguda da doença de Kawasaki, aspirina em dose moderada (30-50 mg/kg/dia, três vezes ao dia) deve ser administrada por via ora…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-aspirina-em-baixa-dose-mantida-em-aneurisma-persistente",
+    "target_title": "Na doença de Kawasaki com aneurisma de artéria coronária (CAA) persistente, a administração oral de aspirina em baixa dose deve ser mantida …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-antiplaquetario-combinado-em-aneurisma-medio-ou-grande",
+    "target_title": "Na doença de Kawasaki com aneurisma coronário de médio ou grande porte, antiplaquetários adicionais (clopidogrel, ticlopidina ou dipiridamol…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-varfarina-associada-a-aspirina-em-aneurisma-grande",
+    "target_title": "Na doença de Kawasaki com aneurisma coronário grande, história prévia de infarto do miocárdio ou trombose no próprio aneurisma, varfarina de…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-estatina-considerada-em-lesao-coronariana",
+    "target_title": "Na doença de Kawasaki com lesão de artéria coronária (CAL), estatinas podem ser consideradas para prevenção de eventos cardiovasculares, pel…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "evidencia",
+    "target_slug": "jcs2020-kawasaki-ieca-ou-bra-para-prevenir-estenose-coronariana",
+    "target_title": "Na doença de Kawasaki com lesão de artéria coronária (CAL), inibidor da enzima conversora de angiotensina (IECA) ou bloqueador do receptor d…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "tremoulet2014-infliximab-na-intensificacao-da-terapia-primaria-da-doenca-de-kawasaki",
+    "target_title": "Infliximab for intensification of primary therapy for Kawasaki disease: a phase 3 randomised, double-blind, placebo-controlled trial",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "newburger-1991-ivig-dose-unica-versus-quatro-doses-kawasaki",
+    "target_title": "Newburger 1991 — Dose única versus quatro doses diárias de imunoglobulina intravenosa na doença de Kawasaki aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "raise-prednisolona-associada-a-imunoglobulina-na-doenca-de-kawasaki-grave",
+    "target_title": "RAISE — Prednisolona associada à imunoglobulina intravenosa na doença de Kawasaki grave",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "kobayashi2006-escore-preditor-de-resistencia-a-imunoglobulina-na-doenca-de-kawasaki",
+    "target_title": "Kobayashi 2006 — Modelo preditivo de resistência à imunoglobulina intravenosa na doença de Kawasaki",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "kato1996-consequencias-a-longo-prazo-da-doenca-de-kawasaki",
+    "target_title": "Kato 1996 — Consequências a longo prazo da doença de Kawasaki: seguimento de 10 a 21 anos de 594 pacientes",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "eatak-etanercepte-associado-a-ivig-na-doenca-de-kawasaki-aguda",
+    "target_title": "EATAK — Etanercepte associado à imunoglobulina intravenosa na doença de Kawasaki aguda",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "kaica-trial-ciclosporina-associada-a-imunoglobulina-em-kawasaki",
+    "target_title": "KAICA — Imunoglobulina associada a ciclosporina em pacientes com doença de Kawasaki de alto risco para não resposta",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "broderick-2023-cochrane-ivig-doenca-de-kawasaki",
+    "target_title": "Revisão Cochrane — Imunoglobulina intravenosa no tratamento da doença de Kawasaki",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "exame",
+    "target_slug": "escores-laboratoriais-de-predicao-de-resistencia-a-imunoglobulina-na-doenca-de-kawasaki",
+    "target_title": "Escores laboratoriais de predição de resistência à imunoglobulina na doença de Kawasaki (Kobayashi/Egami/Sano)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "exame",
+    "target_slug": "vigilancia-ecocardiografica-por-escore-z-na-doenca-de-kawasaki",
+    "target_title": "Vigilância ecocardiográfica seriada por escore Z na doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "angiotomografia-aneurisma-coronariano-sequela-de-doenca-de-kawasaki",
+    "target_title": "Angiotomografia coronariana — aneurisma coronariano como sequela tardia da doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "ecocardiograma-aneurisma-coronariano-doenca-de-kawasaki-crianca",
+    "target_title": "Ecocardiograma — Aneurisma de artéria coronária esquerda na doença de Kawasaki atípica em criança",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "kawasaki-lingua-em-morango-labios-fissurados",
+    "target_title": "Achado clínico — Língua em morango e lábios fissurados na doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "reacao-inflamatoria-sitio-bcg-doenca-de-kawasaki",
+    "target_title": "Reação inflamatória no sítio de vacinação BCG na doença de Kawasaki",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "kawasaki-eritema-palmar-e-edema-do-dorso-das-maos",
+    "target_title": "Achado clínico — Eritema palmar e edema endurecido do dorso das mãos na doença de Kawasaki (fase aguda)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "angiotc-aneurisma-coronariano-gigante-multivascular-kawasaki-infantil",
+    "target_title": "Angiotomografia coronariana — aneurisma coronariano gigante da artéria coronária direita na doença de Kawasaki infantil aguda",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "galeria",
+    "target_slug": "kawasaki-desquamacao-periungueal-dedos",
+    "target_title": "Fotografia clínica — Descamação periungueal dos dedos na doença de Kawasaki (fase subaguda)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "doenca-de-kawasaki",
+    "target_type": "estudo",
+    "target_slug": "aha-2017-diagnostico-tratamento-e-manejo-de-longo-prazo-da-doenca-de-kawasaki",
+    "target_title": "AHA 2017 — Diagnóstico, Tratamento e Manejo de Longo Prazo da Doença de Kawasaki (Scientific Statement)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "documento",
+    "target_slug": "miocardite-difterica-bloqueio-atrioventricular-total-e-marca-passo-temporario",
+    "target_title": "Miocardite Diftérica: Toxina, Bloqueio Atrioventricular Total e o Papel do Marca-Passo Temporário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "bloqueio-av-com-disfuncao-sistolica-marca-passo-biventricular-ou-convencional-block-hf",
+    "target_title": "Bloqueio atrioventricular com disfunção sistólica: marca-passo biventricular ou estimulação de ventrículo direito?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "documento",
+    "target_slug": "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica",
+    "target_title": "Bradiarritmias, Bloqueio Atrioventricular e Tempestade Elétrica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "bloqueio-atrioventricular-total-em-jovem-com-artralgia-migratoria-cardite-de-lyme",
+    "target_title": "Bloqueio atrioventricular total em paciente jovem com artralgia migratória recente: implantar marca-passo definitivo já, ou esperar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "bradiarritmia-e-bloqueio-av",
+    "target_title": "Bradiarritmia e bloqueio atrioventricular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "marca-passo-provisorio-na-bradiarritmia-da-fase-aguda-da-miocardite",
+    "target_title": "O marca-passo provisório é recomendado para bradiarritmias sintomáticas e/ou bloqueio atrioventricular avançado durante a FASE AGUDA da mioc…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-bavt-bav-avancado-e-mobitz-ii",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE no bloqueio atrioventricular total, no bloqueio atrioventricular avançado e …",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-mobitz-i-irreversivel-com-sintomas-de-baixo-fluxo",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE no bloqueio atrioventricular de segundo grau Mobitz I, de causa irreversível…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-bav-intra-ou-infra-his-induzido-ao-eef",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE no bloqueio atrioventricular total ou avançado INTRA ou INFRA-HISSIANO induz…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-mobitz-i-assintomatico-com-indicacao-de-antiarritmico",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação PONDERADA no bloqueio atrioventricular de segundo grau Mobitz I, até períodos de c…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-nao-indicado-em-bav-reversivel-ou-por-medicacao-nao-essencial",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo NÃO é indicado no bloqueio atrioventricular total ou avançado INTERMITENTE E REVERSÍVEL, ou decor…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-nao-indicado-em-bav-de-1-grau-e-mobitz-i-assintomaticos",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo NÃO é indicado no bloqueio atrioventricular de primeiro grau, no de segundo grau Mobitz I e no 2:…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-bloqueio-bifascicular-com-sincope-de-repeticao",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação PONDERADA no bloqueio bifascicular sem documentação de bloqueio atrioventricular t…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-nao-indicado-em-bloqueio-de-ramo-assintomatico",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo NÃO é indicado no bloqueio de ramo ou bifascicular, com ou sem bloqueio atrioventricular de prime…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-marca-passo-no-bav-congenito-de-3-grau-sintomatico",
+    "target_title": "O implante de marca-passo definitivo é recomendado no bloqueio atrioventricular de terceiro grau CONGÊNITO SINTOMÁTICO (Classe I, Nível B).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-marca-passo-no-bav-congenito-assintomatico-com-fatores-de-risco",
+    "target_title": "O implante de marca-passo definitivo é recomendado no bloqueio atrioventricular de terceiro grau congênito ASSINTOMÁTICO quando associado a …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-marca-passo-no-bav-congenito-assintomatico-do-adulto",
+    "target_title": "O implante de marca-passo definitivo deve ser considerado no bloqueio atrioventricular de terceiro grau congênito em ADULTOS acima de 18 ano…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "documento",
+    "target_slug": "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+    "target_title": "Arritmias Fetais: Taquicardia Supraventricular e Bloqueio Atrioventricular Total Congênito — Diagnóstico e Tratamento Transplacentário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "bloqueio-atrioventricular-congenito-recorrencia-em-gestacao-subsequente-e-a-hidroxicloroquina",
+    "target_title": "Bloqueio atrioventricular congênito por anti-Ro: existe algo que reduza o risco de recorrência na próxima gestação?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-selecao-de-modalidade-de-estimulacao-permanente-no-bav",
+    "target_title": "Fluxograma: Seleção entre marca-passo convencional, estimulação do sistema de condução (His/ramo esquerdo) e TRC no bloqueio atrioventricular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-aortica-com-bloqueio-atrioventricular-novo-extensao-perianular",
+    "target_title": "Endocardite de prótese aórtica com bloqueio atrioventricular novo: o TEE negativo encerra a investigação?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "extrassistole-fetal-bloqueada-vs-bav-caso",
+    "target_title": "Frequência cardíaca fetal de 45 bpm ao Doppler obstétrico de rotina: bloqueio atrioventricular ou outra coisa?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "bloqueio-atrioventricular-agudo-e-sangramento-maior-apos-troca-valvar-transcateter-tricuspide-evoque",
+    "target_title": "Bloqueio atrioventricular agudo ou sangramento maior após troca valvar transcateter tricúspide (sistema EVOQUE)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "exame",
+    "target_slug": "teste-ergometrico-na-sindrome-do-qt-longo-sindrome-de-brugada-e-no-bavt-congenito-pediatrico",
+    "target_title": "Teste ergométrico na síndrome do QT longo congênita, na síndrome de Brugada e no bloqueio atrioventricular total congênito",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "bloqueio-atrioventricular-inexplicado-em-adulto-jovem-investigacao-de-sarcoidose-cardiaca",
+    "target_title": "Bloqueio atrioventricular completo em homem de 47 anos com linfadenopatia hilar prévia: sarcoidose cardíaca não isolada, diagnóstico pela via do grupo clínico",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "ecg-bloqueio-atrioventricular-total-por-tep-macico-idosa",
+    "target_title": "ECG — Bloqueio atrioventricular total transitório por tromboembolismo pulmonar maciço em paciente idosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "ecg-bloqueio-atrioventricular-completo-por-toxicidade-digitalica-no-idoso",
+    "target_title": "ECG — flutter atrial com bloqueio atrioventricular completo por interação digoxina-betabloqueador em paciente idosa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "marca-passo-definitivo-bav-adquirido-segundo-grau-mobitz-ii-ou-terceiro-grau",
+    "target_title": "Implante de marca-passo definitivo é recomendado no bloqueio atrioventricular (BAV) adquirido de 2º grau Mobitz II, de grau avançado ou de 3…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "estimulacao-fisiologica-do-feixe-de-his-ou-ramo-esquerdo-no-bav-sem-disfuncao-sistolica-de-ve",
+    "target_title": "Em pacientes com bloqueio atrioventricular sem disfunção sistólica de ventrículo esquerdo, a estimulação fisiológica (feixe de His ou ramo e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-indicado-no-bavt-ou-bav-2-tipo-2-independente-de-sintomas",
+    "target_title": "A estimulação cardíaca é indicada em pacientes em ritmo sinusal com bloqueio atrioventricular de terceiro grau, ou de segundo grau tipo 2 in…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-indicado-em-fa-com-bavt-ou-bav-de-alto-grau-independente-de-sintomas",
+    "target_title": "A estimulação cardíaca é indicada em pacientes com arritmia atrial (principalmente fibrilação atrial) e bloqueio atrioventricular de terceir…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-no-bav-2-tipo-1-sintomatico-ou-infra-hissiano-no-eps",
+    "target_title": "A estimulação cardíaca deve ser considerada em pacientes com bloqueio atrioventricular de segundo grau tipo 1 (Mobitz I) que causa sintomas …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-ddd-preferido-a-estimulacao-ventricular-unica-no-bav-para-evitar-sindrome-do-marca-passo",
+    "target_title": "Em pacientes com bloqueio atrioventricular, a estimulação DDD deve ser preferida à estimulação ventricular unicameral, para evitar a síndrom…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-nao-recomendado-no-bav-por-causa-transitoria",
+    "target_title": "A estimulação cardíaca não é recomendada em pacientes com bloqueio atrioventricular devido a causas transitórias que possam ser corrigidas e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "estudo",
+    "target_slug": "block-hf-estimulacao-biventricular-no-bloqueio-atrioventricular-com-disfuncao-sistolica",
+    "target_title": "BLOCK HF — Estimulação biventricular versus estimulação de VD convencional no bloqueio AV com disfunção sistólica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "trc-nao-recomendada-qrs-menor-130ms",
+    "target_title": "TRC NÃO é recomendada em pacientes com duração do QRS <130 ms que não tenham indicação de marca-passo por bloqueio atrioventricular de alto …",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "exame",
+    "target_slug": "holter-no-pos-operatorio-de-cirurgia-cardiaca-congenita-risco-de-bloqueio-av-tardio",
+    "target_title": "Holter (ECG ambulatorial de 24-48h) no seguimento pós-operatório de cirurgia cardíaca congênita — vigilância de bloqueio atrioventricular tardio",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "bloqueio-atrioventricular-total-congenito-eco-doppler-fetal",
+    "target_title": "Ecocardiograma fetal com Doppler pulsado — bloqueio atrioventricular total congênito por anticorpos anti-Ro/La maternos",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-bavt-congenito-indicacao-de-marca-passo",
+    "target_title": "No bloqueio atrioventricular total (BAVT) congênito, o teste ergométrico está indicado para avaliação da resposta ventricular ao esforço e c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-bavt-congenito-marca-passo-em-neonato-ou-lactente-assintomatico-com-fc-menor-ou-igual-a-50",
+    "target_title": "O implante de marca-passo permanente é indicado para bloqueio atrioventricular total congênito isolado em neonatos ou lactentes assintomátic…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-marca-passo-no-bav-pos-operatorio-persistente-por-7-a-10-dias",
+    "target_title": "O implante de marca-passo permanente é indicado para bloqueio atrioventricular de segundo ou terceiro grau avançado no pós-operatório de cir…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-chagas-marca-passo-razoavel-no-bavt-avancado",
+    "target_title": "Na doença de Chagas com bloqueio atrioventricular avançado de segundo ou terceiro grau, o implante de marca-passo definitivo é razoável, já …",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "ecg-bloqueio-atrioventricular-total-congenito-neonatal",
+    "target_title": "ECG — Bloqueio atrioventricular total congênito em recém-nascido",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+    "target_title": "Bloqueio atrioventricular de alto grau transitório ao Holter — sarcoidose cardíaca recém-diagnosticada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "ecg-bloqueio-atrioventricular-terceiro-grau",
+    "target_title": "ECG — Bloqueio atrioventricular total (tira de monitor, 2 derivações)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "galeria",
+    "target_slug": "bloqueio-atrioventricular-total-dissociacao-atrioventricular-completa",
+    "target_title": "Bloqueio atrioventricular total (terceiro grau) — dissociação atrioventricular completa",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "evidencia",
+    "target_slug": "cdi-sarcoidose-cardiaca-com-indicacao-de-marca-passo-por-bav-de-alto-grau-esc-2022",
+    "target_title": "Em pacientes com sarcoidose cardíaca que têm indicação de estimulação cardíaca permanente relacionada a bloqueio atrioventricular de alto gr…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "bloqueio-atrioventricular",
+    "target_type": "estudo",
+    "target_slug": "fredi-2019-registro-lune-de-bloqueio-atrioventricular-congenito-imunomediado",
+    "target_title": "Fredi 2019 — Registro Lu.Ne (Registro Italiano de Bloqueio Cardíaco Congênito Imunomediado): primeiro relato",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-dilatada-na-distrofia-muscular-de-becker-genetica-da-distrofina-e-rastreio-cardiaco-independente-da-gravidade-muscular",
+    "target_title": "Cardiomiopatia Dilatada na Distrofia Muscular de Becker: Genética da Distrofina e Rastreio Cardíaco Independente da Gravidade Muscular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "sindrome-de-barth-cardiomiopatia-dilatada-nao-compactacao-do-ve-e-a-triade-com-neutropenia-e-miopatia",
+    "target_title": "Síndrome de Barth: Cardiomiopatia Dilatada, Não Compactação do Ventrículo Esquerdo e a Tríade Mitocondrial com Neutropenia e Miopatia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "checklist",
+    "target_slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-investigacao-e-manejo",
+    "target_title": "Cardiomiopatia dilatada com suspeita de deficiência de cobre",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "fibrilacao-atrial-cronica-e-cardiomiopatia-dilatada-pre-existente-na-gestacao",
+    "target_title": "Fibrilação Atrial Crônica e Cardiomiopatia Dilatada Pré-Existente na Gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "biopsia-endomiocardica-na-cardiomiopatia-dilatada-com-suspeita-alergica-ou-eosinofilia",
+    "target_title": "A biópsia endomiocárdica deve ser considerada na insuficiência cardíaca decorrente de cardiomiopatia dilatada de QUALQUER duração, quando ho…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-fase-cronica-da-miocardite-com-cardiomiopatia-dilatada",
+    "target_title": "O implante de cardiodesfibrilador para prevenção primária de morte súbita deve ser considerado em pacientes com cardiomiopatia dilatada na F…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t56-teste-genetico-para-variante-truncante-de-titina",
+    "target_title": "Teste genético para detecção de variante truncante no gene da titina (TTN) deve ser considerado na cardiomiopatia dilatada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t56-teste-genetico-para-variante-de-lamina-a-c",
+    "target_title": "Teste genético para detecção de variante do gene lamina A/C (LMNA) é recomendado na cardiomiopatia dilatada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t57-aconselhamento-genetico-para-todo-paciente-com-dcm",
+    "target_title": "Aconselhamento genético é recomendado para todo paciente com cardiomiopatia dilatada, independentemente de haver rastreio familiar.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t45-eco-na-suspeita-de-dcm-avaliacao-funcional",
+    "target_title": "Ecocardiograma é recomendado na suspeita de cardiomiopatia dilatada, para avaliar função cardíaca, motilidade do ventrículo esquerdo, valvop…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t60-ieca-em-todos-os-pacientes-com-dcm-icfer",
+    "target_title": "IECA é recomendado em todos os pacientes com cardiomiopatia dilatada e ICFEr, incluindo os assintomáticos, salvo contraindicação.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t60-bra-nos-intolerantes-a-ieca",
+    "target_title": "BRA é recomendado nos pacientes com cardiomiopatia dilatada intolerantes a IECA.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t60-betabloqueador-em-sintomatico",
+    "target_title": "Betabloqueador é recomendado em paciente sintomático com cardiomiopatia dilatada, para melhorar o prognóstico.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t60-bloqueador-de-canal-de-calcio-nao-recomendado-em-uso-prolongado",
+    "target_title": "Bloqueador de canal de cálcio em uso prolongado NÃO é recomendado na cardiomiopatia dilatada, na ausência de angina ou hipertensão associada…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t45-eco-para-diagnostico-diferencial",
+    "target_title": "Ecocardiograma é recomendado para o diagnóstico diferencial da cardiomiopatia dilatada (secundária vs. idiopática).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t45-eco-de-reavaliacao-com-mudanca-clinica",
+    "target_title": "Ecocardiograma de reavaliação é recomendado em paciente com cardiomiopatia dilatada que apresenta mudança do quadro clínico, para orientar o…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t46-cine-rm-para-anatomia-e-funcao",
+    "target_title": "Cine-ressonância magnética cardíaca é recomendada para avaliar anatomia e função cardíaca na cardiomiopatia dilatada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "jcs2018-dcm-t46-t1-mapping-para-fibrose-miocardica",
+    "target_title": "Mapeamento T1 por ressonância magnética deve ser considerado para estimar a quantidade de fibrose miocárdica na cardiomiopatia dilatada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "tred-hf-retirada-do-tratamento-na-cardiomiopatia-dilatada-recuperada",
+    "target_title": "TRED-HF — Retirada do tratamento farmacológico na cardiomiopatia dilatada recuperada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-dilatada-recuperada-suspender-medicacao-de-ic-tred-hf",
+    "target_title": "Cardiomiopatia dilatada com recuperação completa da FE: dá para suspender a medicação de insuficiência cardíaca?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatia-dilatada-arritmogenica-e-chagasica",
+    "target_title": "Cardiomiopatia dilatada, arritmogênica e a origem chagásica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatia-dilatada-nao-isquemica-da-prevencao-de-morte-subita-ao-suporte-circulatorio",
+    "target_title": "Cardiomiopatia dilatada não isquêmica: da prevenção de morte súbita ao suporte circulatório mecânico, e a pergunta de retirar o tratamento se a função recuperar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-induzida-por-taquicardia-em-lactente-disfuncao-reversivel-apos-controle-da-arritmia",
+    "target_title": "Lactente com quadro de cardiomiopatia dilatada: por que investigar arritmia antes de rotular como primária?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "danicamtiv-ativador-seletivo-da-miosina-cardiaca-na-cardiomiopatia-dilatada-ensaio-de-fase-2",
+    "target_title": "Danicamtiv, Ativador Seletivo da Miosina Cardíaca, na Cardiomiopatia Dilatada: Ensaio de Fase 2",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "danicamtiv-ativador-de-miosina-cardiaca-na-cardiomiopatia-dilatada-fase-2",
+    "target_title": "Danicamtiv, Ativador Seletivo da Miosina Cardíaca, na Cardiomiopatia Dilatada: Ensaio Fase 2 Aberto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "danicamtiv-cardiomiopatia-dilatada-ensaio-fase-2",
+    "target_title": "Danicamtiv, Ativador Seletivo da Miosina Cardíaca, na Cardiomiopatia Dilatada: Ensaio de Fase 2 Aberto",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "checklist",
+    "target_slug": "cardiomiopatia-dilatada-investigacao-genetica-e-aconselhamento-familiar",
+    "target_title": "Cardiomiopatia dilatada — investigação genética e aconselhamento familiar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-e-conduta-na-suspeita-de-cardiomiopatia-alcoolica",
+    "target_title": "Suspeita de cardiomiopatia alcoólica diante de cardiomiopatia dilatada de etiologia não esclarecida",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-dilatada-por-deficiencia-de-cobre-causas-adquiridas-doenca-de-menkes-e-reversibilidade",
+    "target_title": "Cardiomiopatia Dilatada por Deficiência de Cobre: Causas Adquiridas, Doença de Menkes e Reversibilidade com Reposição",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "documento",
+    "target_slug": "cardiomiopatia-dilatada-reversivel-por-hipocalcemia-grave",
+    "target_title": "Cardiomiopatia Dilatada Reversível por Hipocalcemia Grave: Mecanismo, Causas e Recuperação da Função Ventricular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-dilatada-por-deficiencia-de-selenio-em-npt-prolongada",
+    "target_title": "Cardiomiopatia dilatada e miopatia esquelética por deficiência de selênio em NPT prolongada",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-dilatada-hipocalcemia-hipoparatireoidismo-pos-tireoidectomia",
+    "target_title": "Cardiomiopatia dilatada reversível por hipoparatireoidismo pós-tireoidectomia",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "caso_clinico",
+    "target_slug": "cardiomiopatia-dilatada-infantil-sindrome-de-alstrom",
+    "target_title": "Cardiomiopatia Dilatada Infantil na Síndrome de Alström",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "checklist",
+    "target_slug": "investigacao-de-cardiomiopatia-dilatada-com-suspeita-de-hipocalcemia-grave",
+    "target_title": "Investigação de cardiomiopatia dilatada de etiologia não esclarecida com suspeita de hipocalcemia grave",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "galeria",
+    "target_slug": "cardiomiopatia-dilatada-peca-anatomica-fenotipo-cardiotoxicidade",
+    "target_title": "Peça anatômica — Cardiomiopatia dilatada com fibrose subendocárdica (fenótipo final da cardiotoxicidade avançada)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "galeria",
+    "target_slug": "realce-tardio-mesocardico-em-cardiomiopatia-dilatada",
+    "target_title": "RM cardíaca — realce tardio de padrão mesocárdico (não isquêmico) na cardiomiopatia dilatada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "rm-cardiaca-na-cardiomiopatia-dilatada-com-suspeita-de-miocardite-cronica",
+    "target_title": "A ressonância magnética cardíaca é recomendada em portador de cardiomiopatia dilatada com suspeita de miocardite de mais de 6 meses de evolu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "towbin2006-incidencia-causas-e-desfechos-da-cardiomiopatia-dilatada-em-criancas",
+    "target_title": "Incidence, causes, and outcomes of dilated cardiomyopathy in children",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "galeria",
+    "target_slug": "radiografia-cardiomegalia-em-crianca-por-cardiomiopatia-dilatada-familiar",
+    "target_title": "Radiografia de tórax — cardiomegalia acentuada em criança de 2 anos com cardiomiopatia dilatada familiar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-cardiomiopatia-dilatada-alto-risco-classe-iii",
+    "target_title": "A participação em exercício de intensidade alta ou muito alta, incluindo esportes competitivos, não é recomendada para indivíduos com cardio…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "cdi-em-cardiomiopatia-dilatada-com-mutacao-lmna-e-risco-em-5-anos-10-por-cento-ou-mais-esc-2022",
+    "target_title": "A implantação de CDI deve ser considerada em pacientes com cardiomiopatia dilatada/hipocinética não dilatada portadores de mutação patogênic…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "evidencia",
+    "target_slug": "lmna-risk-vta-cdi-deve-ser-considerado-risco-5-anos-maior-igual-10",
+    "target_title": "Em pacientes com cardiomiopatia dilatada ou cardiomiopatia hipocinética não dilatada e mutação patogênica no gene LMNA, o implante de cardio…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "imunoglobulina-intravenosa-e-desfecho-em-dez-anos-na-cardiomiopatia-dilatada-por-parvovirus-b19",
+    "target_title": "Imunoglobulina Intravenosa e Desfecho Clínico em Dez Anos na Cardiomiopatia Dilatada com Persistência de Parvovírus B19",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "variantes-raras-em-genes-de-cardiomiopatia-dilatada-e-arritmogenica-e-risco-arritmico-no-uk-biobank",
+    "target_title": "Risco Arrítmico em Portadores de Variantes Raras Potencialmente Deletérias em Genes de Cardiomiopatia Dilatada e Arritmogênica — Coorte UK Biobank",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "avila-2026-incor-registro-cardiomiopatia-dilatada-gestacao",
+    "target_title": "Avila et al. 2026 — Registro InCor de gravidez e cardiopatia: cardiomiopatia dilatada na gestação",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "definite-cdi-profilatico-na-cardiomiopatia-nao-isquemica",
+    "target_title": "DEFINITE — Cardiodesfibrilador implantável profilático na cardiomiopatia dilatada não isquêmica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-dilatada",
+    "target_type": "estudo",
+    "target_slug": "gaaloul-2014-deteccao-de-coxsackievirus-b-em-miocardite-miopericardite-e-pericardite",
+    "target_title": "Detecção de Coxsackievirus B em casos de miocardite, miopericardite, pericardite e cardiomiopatia dilatada — estudo caso-controle tunisiano",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-mitral-degenerativa-por-calcificacao-anular-no-muito-idoso-diagnostico-e-conduta",
+    "target_title": "Estenose mitral no nonagenário: é a mesma doença da estenose mitral reumática?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-tricuspide-reumatica-concomitante-a-estenose-mitral-operar-junto",
+    "target_title": "Estenose tricúspide reumática achada no pré-operatório de cirurgia mitral: operar as duas valvas juntas?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-em-reducao-de-fc-alivia-sintoma-mesmo-em-ritmo-sinusal",
+    "target_title": "A redução da frequência cardíaca pode reduzir sintomas na estenose mitral (EM) mesmo em pacientes em ritmo sinusal.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-fa-em-moderada-grave-ou-protese-mecanica-varfarina-sempre",
+    "target_title": "Pacientes com fibrilação atrial e estenose mitral moderada ou grave (independentemente do escore CHA₂DS₂-VA), ou com prótese valvar mecânica…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "rhd2020-vp-em-noac-so-em-casos-especificos-com-adesao-demonstrada",
+    "target_title": "O uso de anticoagulante oral não antagonista da vitamina K (NOAC) em pacientes com estenose mitral significativa pode ser considerado em cas…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-mitral-reumatica-jovem-valvuloplastia-por-balao-versus-comissurotomia-cirurgica",
+    "target_title": "Estenose mitral reumática em paciente jovem com anatomia favorável: valvuloplastia por balão ou comissurotomia cirúrgica?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "gestante-com-estenose-mitral-reumatica-grave-risco-de-descompensacao-ropac",
+    "target_title": "Gestante com estenose mitral reumática grave: qual o risco de descompensação na gravidez? O registro ROPAC",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "trilha",
+    "target_slug": "trilha-febre-reumatica-estenose-mitral-grave-e-coreia-de-sydenham",
+    "target_title": "Febre reumática: a evidência comparativa na estenose mitral grave e no tratamento da coreia de Sydenham",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "fa-com-estenose-mitral-moderada-a-grave-doac-ou-varfarina",
+    "target_title": "FA com estenose mitral moderada a grave: DOAC ou varfarina?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "estenose-mitral-reumatica-com-valva-pliavel-comissurotomia-fechada-ou-valvuloplastia-por-balao",
+    "target_title": "Estenose mitral reumática grave com valva pliável: comissurotomia fechada ou valvuloplastia por balão?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-doenca-reumatica-estenose-mitral-e-anticoagulacao-na-fa",
+    "target_title": "Valvopatia reumática: da estenose mitral ao porquê de a varfarina continuar vencendo o DOAC nessa população específica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-aortica-protese-mecanica-e-estenose-mitral-reumatica",
+    "target_title": "Valvopatias além da estenose aórtica e do TAVI: regurgitação aórtica, prótese mecânica em 15 anos e a estenose mitral reumática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "documento",
+    "target_slug": "estenose-mitral-e-aortica-na-gestacao-limiares-de-intervencao-e-tecnica-percutanea",
+    "target_title": "Estenose Mitral e Aórtica na Gestação: Limiares de Intervenção e Técnica Percutânea",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-estenose-mitral-descompensada-na-gestacao-e-edema-pulmonar",
+    "target_title": "Fluxograma: estenose mitral descompensada na gestação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "checklist",
+    "target_slug": "decisao-entre-valvuloplastia-por-balao-percutanea-e-cirurgia-na-estenose-mitral-reumatica-cronica-grave",
+    "target_title": "Estenose mitral reumática crônica grave — escolha entre valvuloplastia por balão percutânea e cirurgia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "checklist",
+    "target_slug": "estenose-mitral-indicacao-de-intervencao-cmp-ou-cirurgia",
+    "target_title": "Estenose mitral grave — indicação de comissurotomia mitral percutânea (CMP) ou cirurgia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-e-decisao-terapeutica-na-estenose-mitral-reumatica",
+    "target_title": "Estenose mitral reumática grave — avaliação e decisão entre comissurotomia percutânea e cirurgia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-diagnostica-e-decisao-de-intervencao-na-estenose-mitral",
+    "target_title": "Estenose mitral reumática ou degenerativa — avaliação diagnóstica e decisão entre comissurotomia mitral percutânea e cirurgia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-profilaxia-secundaria-de-febre-reumatica-nao-indicada-no-idoso-com-estenose-mitral",
+    "target_title": "Em pacientes idosos com estenose mitral de etiologia reumática, a profilaxia secundária para febre reumática não é indicada — pacientes idos…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valvuloplastia-mitral-por-balao-no-idoso-com-estenose-mitral-reumatica-sintomatica",
+    "target_title": "Em pacientes idosos com estenose mitral reumática sintomática (classe funcional II a IV) e área valvar mitral igual ou inferior a 1,5 cm², a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-varfarina-indefinida-na-fa-associada-a-estenose-mitral-reumatica-no-idoso",
+    "target_title": "Independentemente da gravidade da estenose mitral, pacientes idosos que apresentam fibrilação atrial — permanente, persistente ou paroxístic…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-troca-valvar-mitral-razoavel-na-estenose-mitral-degenerativa-refrataria-no-idoso",
+    "target_title": "Em pacientes idosos com estenose mitral degenerativa (calcificação do anel mitral) que não respondem adequadamente ao tratamento clínico, a …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "varfarina-preferida-na-fa-com-estenose-mitral-moderada-a-grave",
+    "target_title": "Em pacientes com fibrilação atrial e estenose mitral moderada a grave, a varfarina é o fármaco de escolha para anticoagulação; os anticoagul…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "acod-preferiveis-a-varfarina-exceto-valva-mecanica-ou-estenose-mitral",
+    "target_title": "Em pacientes com fibrilação atrial elegíveis a terapia antitrombótica, os anticoagulantes orais de ação direta (ACOD) são preferíveis aos an…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-profilaxia-de-febre-reumatica-nao-recomendada-no-idoso",
+    "target_title": "No idoso com estenose mitral REUMÁTICA, a profilaxia para prevenir febre reumática NÃO é recomendada — Classe III, nível C. É a recomendação…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "galeria",
+    "target_slug": "estenose-mitral-reumatica-sinal-hockey-stick",
+    "target_title": "Estenose mitral reumática — sinal do \"hockey stick\" ao ecocardiograma",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "nao-usar-doac-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+    "target_title": "Anticoagulante oral direto **não** é recomendado em paciente com fibrilação atrial e estenose mitral moderada a grave — nesse cenário o anta…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "doac-preferido-ao-avk-na-fibrilacao-atrial-com-valvopatia-que-nao-estenose-mitral",
+    "target_title": "Em paciente com fibrilação atrial e indicação de anticoagulação oral, o anticoagulante oral direto é recomendado preferencialmente ao antago…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "comissurotomia-mitral-percutanea-na-estenose-mitral-sintomatica-sem-caracteristicas-desfavoraveis",
+    "target_title": "Na estenose mitral clinicamente significativa — moderada ou grave, com área valvar de 1,5 cm² ou menos —, a comissurotomia mitral percutânea…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-estenose-mitral-com-discordancia-entre-sintomas-e-area-sbc-2024",
+    "target_title": "Na estenose mitral, o ecocardiograma sob estresse é RECOMENDADO quando há discordância entre os sintomas e a área/gradiente valvar, especifi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-estenose-mitral-assintomatica-com-area-menor-que-1-cm2-sbc-2024",
+    "target_title": "Na estenose mitral ASSINTOMÁTICA com área menor que 1 cm², o ecocardiograma sob estresse deve ser considerado. É o espelho da recomendação a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-estenose-mitral-antes-de-gravidez-ou-cirurgia-de-grande-porte-sbc-2024",
+    "target_title": "Na estenose mitral assintomática com área entre 1 e 1,5 cm², o ecocardiograma sob estresse pode ser considerado quando há programação de GRA…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-valvoplastia-mitral-em-assintomatico-com-complicadores",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na estenose mitral reumática ASSINTOMÁTICA com fatores complicadores e sem contraindicações, a SBC recomenda a…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-doac-contraindicado-na-estenose-mitral-com-fibrilacao-atrial",
+    "target_title": "Na valva NATIVA com estenose mitral e fibrilação atrial e/ou trombo em átrio esquerdo, a VARFARINA é recomendada (Classe I, B) e os anticoag…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-anticoagular-a-estenose-mitral-em-ritmo-sinusal-pelo-atrio-esquerdo",
+    "target_title": "Em nota de rodapé do quadro de anticoagulação, a diretriz orienta CONSIDERAR anticoagulação com varfarina no portador de estenose mitral em …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-varfarina-indefinida-na-estenose-mitral-com-fa",
+    "target_title": "No idoso com estenose mitral e FIBRILAÇÃO ATRIAL — permanente, persistente ou paroxística —, a varfarina é recomendada por tempo INDEFINIDO,…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-diuretico-de-alca-na-estenose-mitral-sintomatica",
+    "target_title": "O idoso com estenose mitral e área valvar IGUAL OU INFERIOR A 1,5 cm², em classe funcional II, III ou IV, e/ou com sinais de falência de ven…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-valvoplastia-por-balao-na-estenose-mitral-reumatica-do-idoso",
+    "target_title": "No idoso SINTOMÁTICO com estenose mitral reumática em classe funcional II a IV, com área valvar IGUAL OU INFERIOR A 1,5 cm², morfologia valv…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-valvoplastia-no-assintomatico-com-hipertensao-pulmonar",
+    "target_title": "No idoso com estenose mitral reumática e área valvar igual ou inferior a 1,5 cm², a valvoplastia por balão é indicada MESMO SE ASSINTOMÁTICO…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-estenose-mitral-degenerativa-tem-outra-conduta",
+    "target_title": "Na estenose mitral DEGENERATIVA do idoso — entidade distinta da reumática —, a troca valvar mitral deve ser considerada em quem não responde…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "exame",
+    "target_slug": "tempo-de-meia-pressao-na-estenose-mitral",
+    "target_title": "Tempo de meia-pressão (pressure half-time) na estenose mitral",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "galeria",
+    "target_slug": "estenose-mitral-reumatica-patologia",
+    "target_title": "Espécime patológico — Estenose mitral reumática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "galeria",
+    "target_slug": "estenose-mitral-reumatica-boca-de-peixe-ete-3d",
+    "target_title": "Estenose mitral reumática grave — aspecto em \"boca de peixe\" ao ecocardiograma transesofágico 3D",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "galeria",
+    "target_slug": "estenose-mitral-cardiomegalia-e-congestao-radiografia",
+    "target_title": "Radiografia de tórax na estenose mitral reumática grave — cardiomegalia e congestão pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-intervencao-pre-gestacional-na-estenose-mitral-grave",
+    "target_title": "Intervenção é recomendada antes da gestação em pacientes com estenose mitral e área valvar <1,0 cm².",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "estenose-mitral-importante-assintomatica-com-psap-elevada-tratar-antes-da-cirurgia",
+    "target_title": "Paciente com estenose mitral importante, assintomática e com complicadores — pressão sistólica na artéria pulmonar (PSAP) ≥ 50 mmHg em repou…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-grave-competitivo-classe-iii",
+    "target_title": "Esporte competitivo não é recomendado em estenose mitral grave (área valvar mitral <1,0 cm²).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-leve-recreativo-classe-i",
+    "target_title": "Em estenose mitral leve (área valvar mitral 1,5-2,0 cm²), todos os esportes recreativos são recomendados quando a pressão sistólica de artér…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-moderada-recreativo-classe-iib",
+    "target_title": "Em estenose mitral moderada (área valvar mitral 1,0-1,5 cm²), esportes recreativos de intensidade leve e moderada podem ser considerados qua…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-grave-recreativo-classe-iii",
+    "target_title": "Esporte de lazer de intensidade moderada ou alta não é recomendado em estenose mitral grave (área valvar mitral <1,0 cm²).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-leve-competitivo-classe-i",
+    "target_title": "Em estenose mitral leve (área valvar mitral 1,5-2,0 cm²), todos os esportes competitivos são recomendados quando a pressão sistólica de arté…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-estenose-mitral-moderada-competitivo-classe-iib",
+    "target_title": "Em estenose mitral moderada (área valvar mitral 1,0-1,5 cm²), esportes competitivos de intensidade leve podem ser considerados quando a pres…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "evidencia",
+    "target_slug": "doac-nao-recomendado-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+    "target_title": "O uso de anticoagulantes orais diretos (DOACs) não é recomendado em pacientes com fibrilação atrial associada a estenose mitral moderada a g…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "estenose-mitral",
+    "target_type": "estudo",
+    "target_slug": "amador-2024-seguimento-de-20-anos-apos-comissurotomia-mitral-percutanea-na-estenose-mitral-reumatica",
+    "target_title": "Seguimento de 20 anos após comissurotomia mitral percutânea na estenose mitral reumática: gradiente transmitral invasivo como preditor de eventos",
+    "relation_type": "supported_by"
+  }
+]
