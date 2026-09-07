@@ -1,40 +1,40 @@
 ---
-title: "Albuminuria e TFGe como eixo transversal de risco cardiovascular"
+title: "Albuminúria e TFGe como eixo transversal de risco cardiovascular"
 slug: albuminuria-e-tfge-como-eixo-transversal-de-risco-cardiovascular
-theme: "Insuficiencia cardiaca"
+theme: "Insuficiência cardíaca"
 kind: documento
 fonte_producao: grok
 review_status: pendente_revisao
-review_note: "Eixo TFGe + albuminuria (CGA/KDIGO e STAMP). Complementa ESC 2026 da pasta. Fontes por DOI. Requer revisao humana."
-source_refs: ["ESC 2026 CVD+CKD. DOI: 10.1093/eurheartj/ehag098.", "KDIGO 2024 CKD. DOI: 10.1016/j.kint.2023.10.018.", "ESC 2026 HF. DOI: 10.1093/eurheartj/ehag100."]
+review_note: "Eixo TFGe + albuminúria (CGA/KDIGO e STAMP). Complementa ESC 2026 da pasta. Fontes por DOI. Requer revisão humana."
+source_refs: ["European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098.", "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018.", "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100."]
 ---
 
-# Albuminuria e TFGe como eixo transversal de risco cardiovascular
+# Albuminúria e TFGe como eixo transversal de risco cardiovascular
 
 ## Por que densificar
 
-Creatinina isolada nao define rim normal. Este documento aprofunda o eixo TFGe + albuminuria como linguagem comum — nao como novo hub de doenca.
+Creatinina isolada não define rim normal. Este documento aprofunda o eixo TFGe + albuminúria como linguagem comum — não como novo hub de doença.
 
 ## KDIGO 2024 (CGA)
 
-DOI 10.1016/j.kint.2023.10.018: classifica DRC por Causa, GFR (G1-G5) e Albuminuria (A1-A3). Os dois eixos somam informacao. TFGe preservada com albuminuria elevada nao e rim normal.
+DOI 10.1016/j.kint.2023.10.018: classifica DRC por Causa, GFR (G1–G5) e Albuminúria (A1–A3). Os dois eixos somam informação. TFGe preservada com albuminúria elevada não é rim normal.
 
-Principios (sem doses): testar risco com TFGe e albuminuria urinaria; confirmar achados incidentais; preferir modelos de risco CV validados em DRC ou que incorporem TFGe e albuminuria.
+Princípios (sem doses): testar risco com TFGe e albuminúria urinária; confirmar achados incidentais; preferir modelos de risco CV validados em DRC ou que incorporem TFGe e albuminúria.
 
 ## ESC 2026 CVD+CKD (STAMP)
 
-Rastrear DRC com TFGe e albuminuria; incorporar funcao renal aos modelos; DRC grave = risco CV muito elevado. Regra: TFGe e albuminuria como dados transversais em IC, SCA, FA, prevencao, diabetes e hipertensao.
+Rastrear DRC com TFGe e albuminúria; incorporar função renal aos modelos; DRC grave = risco CV muito elevado. Regra: TFGe e albuminúria como dados transversais em IC, SCA, FA, prevenção, diabetes e hipertensão.
 
 ## Armadilhas
 
-Declarar rim normal so pela creatinina; medir so um eixo; escore aterosclerotico generico sem considerar DRC.
+Declarar rim normal só pela creatinina; medir só um eixo; escore aterosclerótico genérico sem considerar DRC.
 
-## Conexoes
+## Conexões Tudo com Tudo
 
-- esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd
-- hiperpotassemia-e-farmacos-prognosticos-na-ic-com-drc-seguranca-sem-abandonar-beneficio
-- sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca
+- `esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd`
+- `hiperpotassemia-e-farmacos-prognosticos-na-ic-com-drc-seguranca-sem-abandonar-beneficio`
+- `sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca`
 
 ## Limite editorial
 
-Tabelas G/A e metas numericas nas diretrizes oficiais. Nenhuma dose.
+Tabelas G/A e metas numéricas nas diretrizes oficiais. Nenhuma dose.

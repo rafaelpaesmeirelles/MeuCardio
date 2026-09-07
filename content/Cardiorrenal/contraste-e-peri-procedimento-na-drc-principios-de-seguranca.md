@@ -1,37 +1,37 @@
 ---
-title: "Contraste e peri-procedimento na DRC: principios de seguranca"
+title: "Contraste e peri-procedimento na DRC: princípios de segurança"
 slug: contraste-e-peri-procedimento-na-drc-principios-de-seguranca
-theme: "Insuficiencia cardiaca"
+theme: "Insuficiência cardíaca"
 kind: documento
 fonte_producao: grok
 review_status: pendente_revisao
-review_note: "Principios peri-procedimento/contraste em DRC (ESC 2026 CVD+CKD; KDIGO 2024). Sem volumes, sem hidratacao inventada, sem doses. Requer revisao humana."
-source_refs: ["ESC 2026 CVD+CKD. DOI: 10.1093/eurheartj/ehag098.", "KDIGO 2024 CKD. DOI: 10.1016/j.kint.2023.10.018."]
+review_note: "Princípios peri-procedimento/contraste em DRC (ESC 2026 CVD+CKD; KDIGO 2024). Sem volumes, sem hidratação inventada, sem doses. Requer revisão humana."
+source_refs: ["European Society of Cardiology, in collaboration with the European Renal Association. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098.", "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. DOI: 10.1016/j.kint.2023.10.018."]
 ---
 
-# Contraste e peri-procedimento na DRC: principios de seguranca
+# Contraste e peri-procedimento na DRC: princípios de segurança
 
 ## Escopo
 
-Densifica principios — nao protocolo de hidratacao, nao tabela de volumes, nao fluxograma institucional.
+Densifica princípios — não protocolo de hidratação, não tabela de volumes, não fluxograma institucional.
 
 ## Por que importa
 
-Na DRC sobe o risco de LRA peri-procedimento, mas tambem o risco de subtratar indicacao CV urgente. ESC 2026 CVD+CKD (DOI 10.1093/eurheartj/ehag098) dedica recomendacoes a uso seguro de contraste e reconhecimento de LRA peri-procedimento.
+Na DRC sobe o risco de LRA peri-procedimento, mas também o risco de subtratar indicação CV urgente. ESC 2026 CVD+CKD (DOI 10.1093/eurheartj/ehag098) dedica recomendações a uso seguro de contraste e reconhecimento de LRA peri-procedimento.
 
-## Principios
+## Princípios
 
-1. Indicacao antes da tecnica — o exame muda conduta? Urgencia CV nao e anulada pela DRC.
-2. Conhecer reserva renal — TFGe, trajetoria, albuminuria, potassio, dialise (CGA/KDIGO).
-3. Estado volemico e medicamentos — revisar lista; nao pacote unico de suspender tudo sem contexto.
-4. Minimizar exposicao necessaria — sem mL neste documento.
-5. Vigilancia pos-procedimento quando indicada — protocolo local.
-6. Nao transformar medo de contraste em iniquidade — individualizar.
+1. Indicação antes da técnica — o exame muda conduta? Urgência CV não é anulada pela DRC.
+2. Conhecer reserva renal — TFGe, trajetória, albuminúria, potássio, diálise (CGA/KDIGO).
+3. Estado volêmico e medicamentos — revisar lista; não pacote único de suspender tudo sem contexto.
+4. Minimizar exposição necessária — sem mL neste documento.
+5. Vigilância pós-procedimento quando indicada — protocolo local.
+6. Não transformar medo de contraste em iniquidade — individualizar.
 
-## Conexoes
+## Conexões Tudo com Tudo
 
-- esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd
-- albuminuria-e-tfge-como-eixo-transversal-de-risco-cardiovascular
+- `esc-2026-doenca-cardiovascular-e-doenca-renal-cronica-stamp-on-ckd`
+- `albuminuria-e-tfge-como-eixo-transversal-de-risco-cardiovascular`
 
 ## Limite editorial
 
