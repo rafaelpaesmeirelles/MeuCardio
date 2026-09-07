@@ -1,0 +1,254 @@
+[
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "documento",
+    "target_slug": "modo-de-estimulacao-na-disfuncao-do-no-sinusal-dupla-camara-ou-ventricular-most",
+    "target_title": "Modo de Estimulação na Disfunção do Nó Sinusal: Dupla Câmara ou Ventricular? (MOST)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "caso_clinico",
+    "target_slug": "disfuncao-do-no-sinusal-escolha-do-modo-de-estimulacao-most",
+    "target_title": "Marca-passo na disfunção do nó sinusal: dupla câmara ou ventricular?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-irreversivel-com-sintomas-claramente-relacionados",
+    "target_title": "Na cardiomiopatia chagásica, o implante de marca-passo é recomendação FORTE na disfunção do nó sinusal espontânea e irreversível com síncope…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-por-farmaco-essencial-com-sintomas-claros",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE na disfunção do nó sinusal INDUZIDA POR FÁRMACOS ESSENCIAIS, com síncope, pr…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-incompetencia-cronotropica-sintomatica",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação FORTE na disfunção do nó sinusal com sintomas de baixo fluxo cerebral claramente r…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-com-sintomas-provavelmente-relacionados",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação PONDERADA na disfunção do nó sinusal espontânea e irreversível em paciente com sín…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-dns-por-farmaco-essencial-com-sintomas-provaveis",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo é recomendação PONDERADA na disfunção do nó sinusal induzida por fármacos essenciais, em paciente…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-mp-nao-indicado-na-dns-assintomatica",
+    "target_title": "Na cardiomiopatia chagásica, o marca-passo NÃO é indicado na disfunção do nó sinusal assintomática, ou com sintomas comprovadamente não rela…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "chagas-holter-no-seguimento-de-disturbio-de-conducao",
+    "target_title": "Na cardiomiopatia chagásica, o Holter é recomendação PONDERADA no seguimento de pacientes com disfunção do nó sinusal ou distúrbios da condu…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "documento",
+    "target_slug": "marca-passo-sem-eletrodo-atrial-isolado-para-disfuncao-do-no-sinusal-aveir-ar-e-o-registro-arrive",
+    "target_title": "Marca-passo Sem Eletrodo Atrial Isolado para Disfunção do Nó Sinusal: AVEIR AR e o Registro ARRIVE",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "documento",
+    "target_slug": "disfuncao-do-no-sinusal-na-crianca-e-no-adolescente-etiologia-pos-cirurgica-holter-e-indicacao-de-marca-passo",
+    "target_title": "Disfunção do Nó Sinusal na Criança e no Adolescente: Etiologia (Congênita, Pós-Cirúrgica e Familiar), Holter, Teste de Esforço e Indicação de Marca-Passo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-minimiza-estimulacao-ventricular-desnecessaria-na-dnsa",
+    "target_title": "Em pacientes com disfunção do nó sinusal e marca-passo DDD, a minimização da estimulação ventricular desnecessária por meio de programação é…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-indicado-na-dnsa-quando-sintomas-atribuiveis-a-bradiarritmia",
+    "target_title": "A estimulação cardíaca é indicada na disfunção do nó sinusal quando os sintomas podem ser claramente atribuídos a bradiarritmias.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-na-forma-bradicardia-taquicardia-da-dnsa",
+    "target_title": "A estimulação cardíaca é indicada em pacientes sintomáticos com a forma bradicardia-taquicardia da disfunção do nó sinusal, para corrigir as…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "esc-2021-marca-passo-nao-recomendado-em-bradiarritmia-assintomatica-ou-por-causa-transitoria",
+    "target_title": "A estimulação cardíaca não é recomendada em pacientes com bradiarritmias relacionadas à disfunção do nó sinusal que sejam assintomáticas ou …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-marca-passo-na-disfuncao-do-no-sinusal-com-sintomas-correlacionados-a-bradicardia",
+    "target_title": "Em crianças, adolescentes e pacientes com cardiopatia congênita, a implantação de marcapasso definitivo atrial ou de dupla câmara está indic…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-marca-passo-nao-indicado-na-disfuncao-do-no-sinusal-assintomatica",
+    "target_title": "Em crianças, adolescentes e pacientes com cardiopatia congênita, a implantação de marcapasso definitivo não está indicada na disfunção isola…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "estudo",
+    "target_slug": "aveir-ar-registro-arrive-marca-passo-sem-eletrodo-atrial-isolado-na-disfuncao-do-no-sinusal",
+    "target_title": "AVEIR AR — Registro ARRIVE: Marca-passo Sem Eletrodo Atrial Isolado versus Transvenoso na Disfunção do Nó Sinusal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "disfuncao-do-no-sinusal",
+    "target_type": "estudo",
+    "target_slug": "most-estimulacao-bicameral-versus-ventricular-na-disfuncao-do-no-sinusal",
+    "target_title": "MOST — Estimulação bicameral versus estimulação ventricular isolada na disfunção do nó sinusal",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "taquicardia-supraventricular",
+    "target_title": "Taquicardia supraventricular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "taquicardia-supraventricular-fetal-com-hidropisia-qual-antiarritmico-transplacentario-de-primeira-linha",
+    "target_title": "Taquicardia supraventricular fetal com hidropisia: qual antiarrítmico transplacentário escolher primeiro?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "documento",
+    "target_slug": "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+    "target_title": "Taquicardia Supraventricular no Lactente e na Criança: Manejo Agudo e Crônico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "documento",
+    "target_slug": "arritmias-fetais-taquicardia-supraventricular-e-bloqueio-atrioventricular-total-tratamento-transplacentario",
+    "target_title": "Arritmias Fetais: Taquicardia Supraventricular e Bloqueio Atrioventricular Total Congênito — Diagnóstico e Tratamento Transplacentário",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "caso_clinico",
+    "target_slug": "taquicardia-supraventricular-em-lactente-manobra-vagal-e-adenosina-em-bolus-rapido",
+    "target_title": "Taquicardia supraventricular no lactente: manobra vagal primeiro, depois adenosina em bolus rápido",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "checklist",
+    "target_slug": "avaliacao-e-manejo-agudo-de-taquicardia-supraventricular-paroxistica-na-emergencia",
+    "target_title": "Avaliação e manejo agudo de taquicardia supraventricular paroxística (TSVP) na emergência",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "material_paciente",
+    "target_slug": "taquicardia-supraventricular-fetal",
+    "target_title": "Taquicardia supraventricular no bebê antes de nascer",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "material_paciente",
+    "target_slug": "ablacao-de-taquicardia-supraventricular-o-que-esperar",
+    "target_title": "Vou fazer uma ablação por cateter para taquicardia: o que esperar do procedimento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "exame",
+    "target_slug": "manobra-de-valsalva-modificada-revert-no-tratamento-agudo-da-taquicardia-supraventricular",
+    "target_title": "Manobra de Valsalva modificada (REVERT) no tratamento agudo da taquicardia supraventricular",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "evidencia",
+    "target_slug": "rcp-sbc-2019-verapamil-e-diltiazem-na-svt-refrataria-a-adenosina",
+    "target_title": "Verapamil e diltiazem são indicados para taquicardia supraventricular refratária à adenosina ou à manobra vagal, ou recorrente após adenosin…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-manobras-vagais-e-adenosina-na-taquicardia-supraventricular-paroxistica-aguda",
+    "target_title": "Manobras vagais e, se ineficazes, adenosina são recomendadas para reversão aguda de taquicardia supraventricular paroxística.",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-flecainida-ou-propafenona-na-taquicardia-supraventricular-com-wpw",
+    "target_title": "Flecainida ou propafenona são recomendadas para prevenção de taquicardia supraventricular em pacientes com síndrome de Wolff-Parkinson-White…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "galeria",
+    "target_slug": "ecg-taquicardia-supraventricular-neonato",
+    "target_title": "ECG — Taquicardia supraventricular em recém-nascido, com onda P retrógrada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-ablacao-por-cateter-em-taquicardia-supraventricular-refrataria-a-farmacos",
+    "target_title": "Ablação por cateter com sistemas de mapeamento eletroanatômico deve ser considerada em centros experientes nos casos de taquicardia supraven…",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-betabloqueador-beta1-seletivo-ou-verapamil-na-prevencao-de-tsv-sem-pre-excitacao",
+    "target_title": "Betabloqueador beta1-seletivo ou verapamil é recomendado para a prevenção de taquicardia supraventricular em pacientes sem pré-excitação no …",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "estudo",
+    "target_slug": "van-hare-2004-papca-recorrencia-em-1-ano-apos-ablacao-de-tsv-pediatrica",
+    "target_title": "PAPCA — Avaliação prospectiva após ablação cardíaca pediátrica: recorrência em 1 ano após ablação inicialmente bem-sucedida de taquicardia supraventricular",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "taquicardia-supraventricular",
+    "target_type": "estudo",
+    "target_slug": "node-1-etripamil-intranasal-para-reversao-aguda-da-taquicardia-supraventricular-paroxistica",
+    "target_title": "NODE-1 — Spray nasal de etripamil para reversão aguda da taquicardia supraventricular paroxística",
+    "relation_type": "supported_by"
+  }
+]
