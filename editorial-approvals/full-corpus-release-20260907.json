@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 8–10: 18 candidatos em 2 doenças foram revisados individualmente; 16 vínculos clínicos inequívocos foram promovidos e 2 candidatos limítrofes foram deliberadamente excluídos da promoção. Os vínculos mantidos são editoriais, explícitos e revisados; nenhum slug, contagem ou status editorial do corpus foi alterado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 13–15: 70 relações de 5 doenças foram revisadas individualmente e promovidas como vínculos editoriais explícitos/revisados. Um caso contextual (controle de dislipidemia em cardiomiopatia chagásica) foi tipado como associated_with, e não supported_by, para evitar superafirmação semântica. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
   "expected_total": 11581,
-  "inventory_sha256": "83ea7a2dc366f5052bf17eca28381a0d06bd666a90052769461bece9f8213a41",
+  "inventory_sha256": "f81429ae917ea6bd379024690a3a1bbbe7ddf9f213da4b18d8412147dc9688c2",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "4313710f4878130b1a4972509a5175a772b7ddff65be939a3b51415dff95592b"
+      "source_sha256": "8cfc9a8ce404fab5babf29bfef3b0693129c542cd595b779e2ec0a69f3583aba"
     },
     "triagem_sintomas": {
       "count": 23,
