@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 21–25: 92 relações de 4 doenças foram revisadas individualmente e promovidas como vínculos editoriais explícitos/revisados, com estudos/evidências diretamente sustentadores tipados como supported_by e casos como used_in_case. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 26–30: 166 relações de 6 doenças foram revisadas individualmente e promovidas. Relações contextuais de parada cardiorrespiratória e evidências/estudos específicos de subtipos no hub geral de cardiomiopatias foram tipadas como associated_with quando supported_by superafirmaria o nexo. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
   "expected_total": 11581,
-  "inventory_sha256": "43fdee4acb9dbe6a88863282ee30b0eb964684b66447b2df13fcc97bc6eabcb1",
+  "inventory_sha256": "3a84f23c95a4b7357d8671cdfd99370ba43b85d92cfbdb7a368babdb0f1d0310",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "c46cfd3335af773cc3933e1a8632f3fe74543b5e05755d0d9b761fb2086fa2a8"
+      "source_sha256": "03f8ce1d74af5aaffa35cf60ca92bfaf1621e2db7acf2a06463394bbbf07b71d"
     },
     "triagem_sintomas": {
       "count": 23,
