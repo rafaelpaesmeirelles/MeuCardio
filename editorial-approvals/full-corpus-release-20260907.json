@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 16–20: 36 relações de 2 doenças foram revisadas e promovidas. Evidências restritas a Chagas ou gestação foram tipadas como associated_with quando a extrapolação para a doença geral seria excessiva; relações diretamente sustentadoras mantiveram supported_by. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 21–25: 92 relações de 4 doenças foram revisadas individualmente e promovidas como vínculos editoriais explícitos/revisados, com estudos/evidências diretamente sustentadores tipados como supported_by e casos como used_in_case. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
   "expected_total": 11581,
-  "inventory_sha256": "b1d7452d840ba625e36ab93794d5174a4a2e287d32a3e1a1deb583f81a16b014",
+  "inventory_sha256": "43fdee4acb9dbe6a88863282ee30b0eb964684b66447b2df13fcc97bc6eabcb1",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "d78f83728fef1687fa809bd1766d78827c170fc45c019b469993a9e47566d6bd"
+      "source_sha256": "c46cfd3335af773cc3933e1a8632f3fe74543b5e05755d0d9b761fb2086fa2a8"
     },
     "triagem_sintomas": {
       "count": 23,

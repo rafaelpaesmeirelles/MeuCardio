@@ -1,0 +1,646 @@
+[
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "azatioprina-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "target_title": "Na sarcoidose cardíaca, a azatioprina 50 a 200 mg/dia pode ser considerada como imunossupressor adicional em caso de uso de corticosteroide …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "metotrexato-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "target_title": "Na sarcoidose cardíaca, o metotrexato 10 a 20 mg por semana pode ser considerado como imunossupressor adicional em caso de uso de corticoste…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "leflunomida-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "target_title": "Na sarcoidose cardíaca, a leflunomida 10 a 20 mg/dia pode ser considerada como imunossupressor adicional em caso de uso de corticosteroide (…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-cardiaca-apos-tv-ou-morte-abortada",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável é recomendado após taquicardia ventricular ou morte cardíaca abortada (Classe I, N…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-cardiaca-com-feve-abaixo-de-35",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável é recomendado quando a FEVE for menor que 35% a despeito de tratamento otimizado e…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-cardiaca-com-sincope-inexplicada",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável deve ser considerado diante de síncope inexplicada de provável causa arrítmica (Cl…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-com-fe-35-a-49-e-cicatriz-extensa-em-rm-ou-pet",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável deve ser considerado quando a fração de ejeção estiver entre 35% e 49% e/ou a FEVD…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-na-sarcoidose-com-fe-35-a-49-sem-cicatriz-extensa",
+    "target_title": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável PODE ser considerado quando a fração de ejeção estiver entre 35% e 49% e/ou a FEVD…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiomiopatias-miocardite-imunomediada-celulas-gigantes-e-sarcoidose",
+    "target_title": "Cardiomiopatias: miocardite imunomediada — células gigantes e sarcoidose cardíaca, versus a etiologia infecciosa chagásica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "caso_clinico",
+    "target_slug": "bavt-em-adulto-jovem-sarcoidose-cardiaca-isolada-com-biopsia-negativa",
+    "target_title": "BAVT em mulher de 34 anos, biópsia endomiocárdica sem granuloma: descarta sarcoidose cardíaca?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "checklist",
+    "target_slug": "investigacao-diagnostica-de-sarcoidose-cardiaca-sbc-2022",
+    "target_title": "Sarcoidose cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "caso_clinico",
+    "target_slug": "bloqueio-atrioventricular-inexplicado-em-adulto-jovem-investigacao-de-sarcoidose-cardiaca",
+    "target_title": "Bloqueio atrioventricular completo em homem de 47 anos com linfadenopatia hilar prévia: sarcoidose cardíaca não isolada, diagnóstico pela via do grupo clínico",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "checklist",
+    "target_slug": "diferenciacao-entre-sarcoidose-cardiaca-e-miocardite-de-celulas-gigantes",
+    "target_title": "Diagnóstico diferencial entre sarcoidose cardíaca e miocardite de células gigantes",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "caso_clinico",
+    "target_slug": "miocardite-de-celulas-gigantes-choque-cardiogenico-bloqueio-av-refratario-imunossupressao-combinada",
+    "target_title": "Homem jovem em choque cardiogênico e bloqueio AV total refratário: miocardite de células gigantes ou sarcoidose cardíaca?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "caso_clinico",
+    "target_slug": "bav-jovem-sarcoidose-cardiaca-cdi-vs-marcapasso",
+    "target_title": "BAV avançado em jovem: suspeitar de sarcoidose cardíaca",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-preparo-para-biopsia-endomiocardica-na-suspeita-de-miocardite-de-celulas-gigantes-ou-sarcoidose-cardiaca",
+    "target_title": "Indicação e preparo para biópsia endomiocárdica na suspeita de miocardite de células gigantes ou sarcoidose cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "sarcoidose-ressonancia-e-pet-fdg-no-diagnostico",
+    "target_title": "Na suspeita clínica de SARCOIDOSE CARDÍACA, a ressonância magnética deve ser realizada para avaliação diagnóstica, e o PET/CT com 18F-FDG de…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "sarcoidose-preparo-rigoroso-e-condicao-do-exame",
+    "target_title": "O PET/CT com 18F-FDG para pesquisa de sarcoidose cardíaca deve SEMPRE ser feito com PREPARO CARDÍACO RIGOROSO do paciente — recomendação for…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "sarcoidose-pet-no-monitoramento-e-strain-no-rastreio",
+    "target_title": "O PET/CT com 18F-FDG pode ser realizado no MONITORAMENTO da resposta ao tratamento da sarcoidose cardíaca (recomendação fraca, certeza baixa…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "prednisona-na-sarcoidose-cardiaca",
+    "target_title": "Na sarcoidose cardíaca, a prednisona em dose de 30 a 40 mg por dia, por 4 a 6 meses, deve ser considerada como terapia imunossupressora. Os …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "galeria",
+    "target_slug": "holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+    "target_title": "Bloqueio atrioventricular de alto grau transitório ao Holter — sarcoidose cardíaca recém-diagnosticada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-sarcoidose-cardiaca-com-feve-35-por-cento-ou-menos-esc-2022",
+    "target_title": "A implantação de CDI é recomendada em pacientes com sarcoidose cardíaca que têm FEVE ≤35%.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-sarcoidose-cardiaca-prevencao-secundaria-tv-sustentada-ou-pcr-abortada-esc-2022",
+    "target_title": "A implantação de CDI é recomendada em pacientes com sarcoidose cardíaca que (1) têm taquicardia ventricular sustentada documentada, ou (2) p…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "evidencia",
+    "target_slug": "cdi-sarcoidose-cardiaca-com-indicacao-de-marca-passo-por-bav-de-alto-grau-esc-2022",
+    "target_title": "Em pacientes com sarcoidose cardíaca que têm indicação de estimulação cardíaca permanente relacionada a bloqueio atrioventricular de alto gr…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "sarcoidose-cardiaca",
+    "target_type": "exame",
+    "target_slug": "pet-ct-com-fdg-na-sarcoidose-cardiaca",
+    "target_title": "PET-CT com ¹⁸F-FDG na sarcoidose cardíaca",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-doenca-sistemica-rara-mecanismos-nao-ateroscleroticos",
+    "target_title": "Valvopatias por doença sistêmica rara: quando o mecanismo foge do script degenerativo comum",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-antitrombotico-apos-intervencao-valvar",
+    "target_title": "Antitrombótico após intervenção valvar: o que os ensaios realmente mostraram",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-tavi-pelo-espectro-de-risco-cirurgico-e-a-valva-bicuspide",
+    "target_title": "TAVI ao longo do espectro de risco cirúrgico: da estenose bicúspide ao mundo real",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-mitral-e-tricuspide",
+    "target_title": "Valvopatias: regurgitação mitral e insuficiência tricúspide",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-assintomatica-intervencao-precoce",
+    "target_title": "Estenose aórtica grave assintomática: a evidência que antecipou a intervenção",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-mitral-secundaria-evidencia-comparativa-teer",
+    "target_title": "Valvopatias: regurgitação mitral secundária — por que COAPT e MITRA-FR discordaram",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-doenca-reumatica-estenose-mitral-e-anticoagulacao-na-fa",
+    "target_title": "Valvopatia reumática: da estenose mitral ao porquê de a varfarina continuar vencendo o DOAC nessa população específica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-tricuspide-reparo-versus-troca-transcateter",
+    "target_title": "Valvopatias: regurgitação tricúspide grave — reparo transcateter borda a borda ou troca valvar?",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-regurgitacao-aortica-protese-mecanica-e-estenose-mitral-reumatica",
+    "target_title": "Valvopatias além da estenose aórtica e do TAVI: regurgitação aórtica, prótese mecânica em 15 anos e a estenose mitral reumática",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-comunicacao-de-risco-e-decisao-compartilhada",
+    "target_title": "Valvopatias: comunicar o risco cirúrgico e decidir junto com o paciente antes de intervir",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-alem-do-ensaio-mundo-real-e-endocardite-pos-tavi",
+    "target_title": "Estenose aórtica além do ensaio clínico: o desempenho no mundo real do NHS e a endocardite pós-TAVI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-populacoes-especiais-gestante-e-idoso-fragil",
+    "target_title": "Valvopatias em populações especiais: a gestante e o idoso frágil na decisão de intervir",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-escore-de-risco-cirurgico-e-evidencia-independente-da-industria",
+    "target_title": "Valvopatias: o escore de risco cirúrgico pesa tanto quanto a anatomia — STS, EuroSCORE II e o ensaio sem patrocínio da indústria",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-ecocardiograma-sob-estresse-quando-o-repouso-nao-decide",
+    "target_title": "Valvopatias: quando o ecocardiograma de repouso não decide — o papel do teste sob estresse na estenose de baixo gradiente e na regurgitação aórtica limítrofe",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-tavi-por-plataforma-de-valva-sapien-versus-autoexpansivel",
+    "target_title": "Valvopatias: TAVI por plataforma de válvula — o programa SAPIEN (PARTNER) e o autoexpansível (Evolut/SURTAVI), lado a lado através do risco cirúrgico",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-anticoagulacao-e-intervencao-valvar-na-gestacao",
+    "target_title": "Valvopatia na gestação: limiares de intervenção, escolha de prótese e o dilema da anticoagulação",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-estenose-aortica-e-escolha-de-protese",
+    "target_title": "Valvopatias: da estenose aórtica grave à escolha de prótese",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "documento",
+    "target_slug": "prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas",
+    "target_title": "Prescrição de exercício e retorno ao esporte em cardiopatas: coronariopatia, insuficiência cardíaca e valvopatias",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "trilha",
+    "target_slug": "trilha-valvopatias-transcateter-alem-da-estenose-aortica-2026",
+    "target_title": "Terapia estrutural transcateter além da estenose aórtica clássica (2024-2026)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "checklist",
+    "target_slug": "retorno-ao-esporte-e-prescricao-de-exercicio-no-cardiopata",
+    "target_title": "Prescrição de exercício e retorno ao esporte em cardiopatas — doença coronariana, insuficiência cardíaca e valvopatias",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "valvopatias",
+    "target_type": "material_paciente",
+    "target_slug": "valvopatias-na-gravidez",
+    "target_title": "Doença de válvula do coração na gravidez",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "exercicio-e-penetrancia-na-cardiomiopatia-arritmogenica-de-vd",
+    "target_title": "Exercício e penetrância na cardiomiopatia arritmogênica de ventrículo direito em portadores de mutação desmossômica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "caso_clinico",
+    "target_slug": "cavd-gene-elusiva-sem-mutacao-desmossomica-exercicio-de-endurance-e-restricao",
+    "target_title": "Cardiomiopatia arritmogênica de ventrículo direito sem mutação desmossômica identificada: o exercício intenso é inocente?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-do-esporte-canalopatias-e-cardiomiopatias-arritmogenicas",
+    "target_title": "Cardiologia do Esporte: canalopatias, cardiomiopatia arritmogênica e o atleta com CDI",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "checklist",
+    "target_slug": "diagnostico-e-estratificacao-de-risco-arritmico-na-cardiomiopatia-arritmogenica",
+    "target_title": "Cardiomiopatia arritmogênica (ACM/ARVC/ALVC/NDLVC)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "material_paciente",
+    "target_slug": "cardiomiopatia-arritmogenica-surtos-restricao-esportes",
+    "target_title": "Cardiomiopatia Arritmogênica: Por Que a Doença Tem 'Crises' e Por Que o Esporte Competitivo é Restrito",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "exame",
+    "target_slug": "ecg-de-alta-resolucao-potenciais-tardios-na-cardiomiopatia-arritmogenica",
+    "target_title": "ECG de alta resolução — potenciais tardios (signal-averaged ECG) na cardiomiopatia arritmogênica",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "holter-anual-na-cardiomiopatia-arritmogenica",
+    "target_title": "Monitorização ambulatorial do ECG por 24 horas, anual, é recomendada no paciente com cardiomiopatia arritmogênica do ventrículo direito, par…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "betabloqueador-na-cardiomiopatia-arritmogenica-com-arritmia-ventricular",
+    "target_title": "Betabloqueador é recomendado no paciente com cardiomiopatia arritmogênica do ventrículo direito que apresenta extrassístoles ventriculares, …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "rm-na-suspeita-de-cardiomiopatia-arritmogenica",
+    "target_title": "A ressonância magnética cardíaca é recomendada na avaliação de paciente com suspeita de displasia/cardiomiopatia arritmogênica do ventrículo…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "rm-para-avaliar-acometimento-do-ventriculo-esquerdo-na-cardiomiopatia-arritmogenica",
+    "target_title": "A ressonância magnética cardíaca é recomendada para avaliação do acometimento do VENTRÍCULO ESQUERDO em paciente com suspeita ou diagnóstico…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "galeria",
+    "target_slug": "arvd-rm-parede-livre-de-vd",
+    "target_title": "RM cardíaca em cardiomiopatia arritmogênica de VD — corte axial da via de entrada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "galeria",
+    "target_slug": "cardiomiopatia-arritmogenica-pediatrica-realce-tardio-de-vd",
+    "target_title": "Cardiomiopatia arritmogênica de início precoce (deficiência de MCAD) — realce tardio de gadolínio em ventrículo direito",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-acm-cdi-classe-i-em-sobrevivente-de-parada-cardiaca-ou-tv-nao-tolerada",
+    "target_title": "Em pacientes pediátricos com cardiomiopatia arritmogênica (incluindo a forma predominantemente de ventrículo direito, antes chamada displasi…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-acm-cdi-classe-iia-em-tv-tolerada-sincope-ou-feve-35",
+    "target_title": "Em pacientes pediátricos com cardiomiopatia arritmogênica, é razoável considerar o implante de cardioversor-desfibrilador quando há taquicar…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cdi-em-cardiomiopatia-arritmogenica-pediatrica-apos-parada-cardiaca-ou-tv-instavel",
+    "target_title": "O implante de cardioversor-desfibrilador implantável (CDI) é indicado em pacientes pediátricos com cardiomiopatia arritmogênica que foram re…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "paces2021-cdi-razoavel-em-cardiomiopatia-arritmogenica-pediatrica-com-tv-tolerada-sincope-ou-feve-35",
+    "target_title": "Em pacientes pediátricos com cardiomiopatia arritmogênica, o implante de cardioversor-desfibrilador implantável (CDI) é razoável quando há t…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "evidencia",
+    "target_slug": "esc2020-esporte-cardiomiopatia-arritmogenica-classe-iii",
+    "target_title": "A participação em exercício recreativo de alta intensidade ou em qualquer esporte competitivo não é recomendada em indivíduos com cardiomiop…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "calculadora-de-risco-de-cadrin-tourigny-derivacao-multinacional-cardiomiopatia-arritmogenica",
+    "target_title": "Calculadora de Risco de Morte Súbita na Cardiomiopatia Arritmogênica de Ventrículo Direito — Derivação Multinacional de Cadrin-Tourigny et al.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "cardiomiopatia-arritmogenica-por-desmoplaquina-limite-da-calculadora-de-cadrin-tourigny",
+    "target_title": "Cardiomiopatia Arritmogênica por Desmoplaquina (DSP): Estratificação de Risco e o Limite da Calculadora de Cadrin-Tourigny",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "realce-tardio-de-ventriculo-esquerdo-na-cardiomiopatia-arritmogenica-sem-valor-preditivo-incremental",
+    "target_title": "Realce Tardio de Gadolínio no Ventrículo Esquerdo Não Agrega Valor Preditivo Incremental à Calculadora de Risco na Cardiomiopatia Arritmogênica",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "cdi-na-prevencao-de-morte-subita-na-cardiomiopatia-arritmogenica-de-vd",
+    "target_title": "CDI na Prevenção de Morte Súbita na Cardiomiopatia Arritmogênica de Ventrículo Direito — Estudo Multicêntrico",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "ruwald-2015-participacao-esportiva-e-eventos-cardiacos-na-cardiomiopatia-arritmogenica-de-vd",
+    "target_title": "Ruwald et al. 2015 — Participação Esportiva Competitiva e Recreacional e Eventos Cardíacos na Cardiomiopatia Arritmogênica de Ventrículo Direito",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "smedsrud-2022-penetrancia-idade-dependente-da-cardiomiopatia-arritmogenica-de-inicio-infantil",
+    "target_title": "Smedsrud et al. 2022 — Penetrância Idade-Dependente da Cardiomiopatia Arritmogênica de Início Infantil",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "cardiomiopatia-arritmogenica",
+    "target_type": "estudo",
+    "target_slug": "flecainida-na-cardiomiopatia-arritmogenica-de-vd-estudo-multicentrico-de-longo-prazo",
+    "target_title": "Flecainida como Antiarrítmico na Cardiomiopatia Arritmogênica de Ventrículo Direito — Seguimento Multicêntrico de Longo Prazo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "fluxograma",
+    "target_slug": "fluxograma-falha-aguda-de-teer-mitral-slda-e-insuficiencia-mitral-recorrente",
+    "target_title": "Fluxograma: falha aguda de TEER mitral/SLDA",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "documento",
+    "target_slug": "insuficiencia-mitral-funcional-secundaria-por-que-a-selecao-de-paciente-decide-mitra-fr-versus-coapt",
+    "target_title": "Insuficiência Mitral Funcional Secundária à Dilatação do Ventrículo Esquerdo: Por Que a Seleção do Paciente Decide — MITRA-FR versus COAPT",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "ctsn-reparo-versus-troca-na-insuficiencia-mitral-isquemica-1-ano",
+    "target_title": "CTSN — Reparo versus troca valvar na insuficiência mitral isquêmica grave: 1 ano e 2 anos",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "everest-ii-clipe-percutaneo-versus-cirurgia-na-insuficiencia-mitral",
+    "target_title": "EVEREST II — Reparo mitral percutâneo borda a borda versus cirurgia na insuficiência mitral",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "reshape-hf2-teer-na-insuficiencia-mitral-funcional-moderada-a-grave",
+    "target_title": "RESHAPE-HF2 — Reparo transcateter borda a borda na insuficiência mitral funcional MODERADA A GRAVE",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "matterhorn-teer-versus-cirurgia-na-insuficiencia-mitral-secundaria",
+    "target_title": "MATTERHORN — Reparo transcateter versus CIRURGIA mitral na insuficiência mitral secundária",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "gammie-anuloplastia-tricuspide-concomitante-na-cirurgia-mitral",
+    "target_title": "CTSN Gammie — Anuloplastia tricúspide concomitante na cirurgia de insuficiência mitral degenerativa",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "caso_clinico",
+    "target_slug": "alcapa-lactente-com-insuficiencia-mitral-e-disfuncao-de-ve-e-a-disfuncao-subclinica-apos-o-reparo",
+    "target_title": "ALCAPA no lactente: a fração de ejeção normaliza após o reparo, mas o strain conta outra história",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "falha-aguda-de-teer-mitral-com-choque-ou-edema-pulmonar",
+    "target_title": "Falha aguda de TEER mitral (SLDA) com recorrência de insuficiência mitral e choque/edema pulmonar",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-plastia-mitral-preferivel-a-troca-na-insuficiencia-mitral-primaria-grave-cronica-no-idoso",
+    "target_title": "Em pacientes idosos com insuficiência mitral primária crônica grave, a plastia mitral (reparo) é preferível à troca valvar mitral, sempre qu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "sbc2019-troca-valvar-mitral-preferivel-a-plastia-na-insuficiencia-mitral-secundaria-isquemica-no-idoso",
+    "target_title": "Em pacientes idosos com insuficiência mitral crônica secundária de etiologia isquêmica, a troca valvar mitral é preferível à plastia mitral.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-insuficiencia-mitral-com-discrepancia-entre-gravidade-e-sintomas-sbc-2024",
+    "target_title": "Na insuficiência mitral, o ecocardiograma sob estresse deve ser considerado para avaliar discrepância entre a gravidade da doença valvar e o…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "eco-estresse-na-insuficiencia-mitral-grave-assintomatica-sbc-2024",
+    "target_title": "Na insuficiência mitral GRAVE e ASSINTOMÁTICA, o ecocardiograma sob estresse deve ser considerado para avaliação da tolerância ao esforço e …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-clipagem-percutanea-na-insuficiencia-mitral",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na insuficiência mitral NÃO reumática com alto risco ou contraindicação cirúrgica e sintomas refratários, a SB…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-divergencia-revascularizacao-associada-na-insuficiencia-mitral-isquemica",
+    "target_title": "DIVERGÊNCIA ENTRE SOCIEDADES. Na insuficiência mitral secundária ISQUÊMICA com revascularização associada, SBC e AHA dão Classe IIa B à abor…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-plastica-preferida-a-troca-na-insuficiencia-mitral-nao-reumatica",
+    "target_title": "Na insuficiência mitral primária NÃO reumática, a plástica valvar é recomendada com Classe I B no sintomático em classe funcional II ou mais…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "valv-insuficiencia-mitral-reumatica-tem-recomendacao-mais-fraca-que-a-nao-reumatica",
+    "target_title": "Na insuficiência mitral primária REUMÁTICA, a plástica valvar é apenas Classe IIb mesmo no sintomático, enquanto a troca valvar é Classe I B…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-plastia-preferivel-a-troca-na-insuficiencia-mitral-primaria",
+    "target_title": "No idoso com insuficiência mitral primária crônica GRAVE, a PLASTIA é preferível à troca valvar — Classe I, nível B. A cirurgia é recomendad…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "geriatria-nao-operar-a-insuficiencia-mitral-assintomatica-com-funcao-normal",
+    "target_title": "NÃO se opera o idoso com insuficiência mitral grave ASSINTOMÁTICO e com função ventricular PRESERVADA — fração de ejeção acima de 60% e diâm…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "galeria",
+    "target_slug": "insuficiencia-mitral-doppler-continuo",
+    "target_title": "Insuficiência mitral ao Doppler contínuo",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "evidencia",
+    "target_slug": "clasp-iid-pascal-versus-mitraclip-na-insuficiencia-mitral-degenerativa-implicacao-do-ensaio",
+    "target_title": "CLASP IID: PASCAL vs MitraClip no DMR de risco proibitivo — MAE 3,4% vs 4,8%; IM ≤2+ 96,5% vs 96,8% (NI).",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "insuficiencia-mitral",
+    "target_type": "estudo",
+    "target_slug": "clasp-iid-pascal-versus-mitraclip-na-insuficiencia-mitral-degenerativa",
+    "target_title": "CLASP IID — PASCAL versus MitraClip na insuficiência mitral degenerativa de risco cirúrgico proibitivo",
+    "relation_type": "supported_by"
+  }
+]
