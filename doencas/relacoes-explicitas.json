@@ -479,4 +479,41 @@
     "evidence_source": "doencas/relacoes-explicitas.json#reacao-anafilactoide-a-contraste-iodado:evidencia:scc25-t33-fexofenadina-na-emergencia",
     "review_note": "Vínculo direto: evidência específica de profilaxia em procedimento de emergência com reação alérgica prévia ao contraste."
   }
+,
+  {
+    "source_disease_slug": "beriberi-cardiaco",
+    "target_type": "caso_clinico",
+    "target_slug": "beriberi-cardiaco-pos-cirurgia-bariatrica-ic-alto-debito-reversivel-com-tiamina",
+    "relation_type": "used_in_case",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#beriberi-cardiaco:caso_clinico:beriberi-cardiaco-pos-cirurgia-bariatrica-ic-alto-debito-reversivel-com-tiamina",
+    "review_note": "Vínculo direto: caso clínico dedicado ao beribéri cardíaco com insuficiência cardíaca de alto débito e resposta à tiamina."
+  },
+  {
+    "source_disease_slug": "distrofia-miotonica-tipo-1",
+    "target_type": "caso_clinico",
+    "target_slug": "distrofia-miotonica-tipo-1-conducao-cardiaca-estudo-eletrofisiologico",
+    "relation_type": "used_in_case",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#distrofia-miotonica-tipo-1:caso_clinico:distrofia-miotonica-tipo-1-conducao-cardiaca-estudo-eletrofisiologico",
+    "review_note": "Vínculo direto: caso clínico dedicado à doença de condução e estratificação eletrofisiológica na distrofia miotônica tipo 1."
+  },
+  {
+    "source_disease_slug": "fibroelastoma-papilar-cardiaco",
+    "target_type": "checklist",
+    "target_slug": "fibroelastoma-papilar-cardiaco-decisao-ressecao-vs-vigilancia",
+    "relation_type": "associated_with",
+    "review_status": "revisado",
+    "provenance_type": "editorial",
+    "confidence": "explicit",
+    "relevance_score": 1.0,
+    "evidence_source": "doencas/relacoes-explicitas.json#fibroelastoma-papilar-cardiaco:checklist:fibroelastoma-papilar-cardiaco-decisao-ressecao-vs-vigilancia",
+    "review_note": "Vínculo direto: checklist específico de decisão entre ressecção e vigilância no fibroelastoma papilar cardíaco."
+  }
 ]

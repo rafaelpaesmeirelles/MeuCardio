@@ -51,3 +51,25 @@ def test_politica_clinica_aceita_doenca_sustentada_por_evidencia_curada():
         review_status="revisado", evidence_source="doencas/relacoes-explicitas.json#sentinela",
         extra={"review_note": "sentinela de política clínica"},
     )
+
+EXACT_LOW_DENSITY_LINKS = {
+    ("beriberi-cardiaco", "caso_clinico", "beriberi-cardiaco-pos-cirurgia-bariatrica-ic-alto-debito-reversivel-com-tiamina", "used_in_case"),
+    ("distrofia-miotonica-tipo-1", "caso_clinico", "distrofia-miotonica-tipo-1-conducao-cardiaca-estudo-eletrofisiologico", "used_in_case"),
+    ("fibroelastoma-papilar-cardiaco", "checklist", "fibroelastoma-papilar-cardiaco-decisao-ressecao-vs-vigilancia", "associated_with"),
+}
+
+
+def test_candidatos_exatos_de_baixa_densidade_nao_ficam_desconectados():
+    relations = json.loads(RELACOES.read_text(encoding="utf-8"))
+    actual = {
+        (x["source_disease_slug"], x["target_type"], x["target_slug"], x["relation_type"])
+        for x in relations
+    }
+    assert EXACT_LOW_DENSITY_LINKS <= actual
+
+    cases = json.loads((ROOT / "casos-clinicos/metadados.json").read_text(encoding="utf-8"))
+    checklists = json.loads((ROOT / "checklists/metadados.json").read_text(encoding="utf-8"))
+    case_slugs = {x["slug"] for x in cases}
+    checklist_slugs = {x["slug"] for x in checklists}
+    assert {x[2] for x in EXACT_LOW_DENSITY_LINKS if x[1] == "caso_clinico"} <= case_slugs
+    assert {x[2] for x in EXACT_LOW_DENSITY_LINKS if x[1] == "checklist"} <= checklist_slugs
