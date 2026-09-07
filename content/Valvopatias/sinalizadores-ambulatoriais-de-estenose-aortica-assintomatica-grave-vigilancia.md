@@ -25,7 +25,7 @@ Não substitui:
 
 ## Princípio
 
-ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): na EA grave, **ausência de queixa espontânea não basta** — muitos reduziram a atividade sem perceber. Sintomas desmascarados no esforço, FEVE caindo, EA “muito grave”, progressão rápida e biomarcadores elevados mudam o destino para avaliação de intervenção. O ambulatoacute;rio **triagem de destino**; o timing fino e a modalidade ficam com o especialista/Heart Team.
+ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): na EA grave, **ausência de queixa espontânea não basta** — muitos reduziram a atividade sem perceber. Sintomas desmascarados no esforço, FEVE caindo, EA “muito grave”, progressão rápida e biomarcadores elevados mudam o destino para avaliação de intervenção. O ambulatório **triagem de destino**; o timing fino e a modalidade ficam com o especialista/Heart Team.
 
 ## Encaminhar agora (PS / emergência)
 
@@ -46,7 +46,7 @@ ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): na EA grave, **au
 5. **BNP/NT-proBNP** marcadamente elevado sem outra explicação, ou hipertensão pulmonar grave em repouso atribuível.
 6. Cirurgia cardíaca já indicada por outro motivo + EA grave — discutir troca concomitante.
 
-## O que o ambulatoacute;rio registra na vigilância “estável”
+## O que o ambulatório registra na vigilância “estável”
 
 - Confirmar que “assintomático” = atividade preservada, não apenas “sem queixa”.
 - Último eco: Vmax, gradiente médio, AVA, FEVE, comparação com o prévio.
