@@ -1,0 +1,114 @@
+[
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "checklist",
+    "target_slug": "civ-adulto-decisao-fechamento-esc-2020",
+    "target_title": "Comunicação interventricular no adulto — decisão de fechamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "evidencia",
+    "target_slug": "sbc2020-eco-no-acompanhamento-da-comunicacao-interventricular",
+    "target_title": "O ecocardiograma é recomendado no acompanhamento de pacientes com comunicação interventricular, para avaliação de modificações morfológicas …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-tc-civ-anatomia-complexa-antes-do-reparo",
+    "target_title": "A angiotomografia é recomendada, antes do reparo de comunicação interventricular (CIV), quando a anatomia é complexa e o ecocardiograma não …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "material_paciente",
+    "target_slug": "comunicacao-interventricular-civ-no-adulto-acompanhamento-ao-longo-da-vida",
+    "target_title": "Comunicação interventricular (CIV): o acompanhamento continua na vida adulta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "evidencia",
+    "target_slug": "achd2018-fechamento-de-civ-contraindicado-com-hipertensao-pulmonar-grave",
+    "target_title": "O fechamento de comunicação interventricular (CIV) não deve ser realizado em adultos com hipertensão arterial pulmonar grave — pressão sistó…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "galeria",
+    "target_slug": "comunicacao-interventricular-tipos-anatomicos",
+    "target_title": "Comunicação interventricular — tipos anatômicos",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "comunicacao-interventricular",
+    "target_type": "galeria",
+    "target_slug": "comunicacao-interventricular-cinco-posicoes-anatomicas-eco",
+    "target_title": "Comunicação interventricular — cinco posições anatômicas ao ecocardiograma, figura composta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-emergencia-hipertensiva",
+    "target_title": "Hipertensão: emergência hipertensiva — do reconhecimento ao tratamento parenteral e alta",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-primeira-linha-oral-a-emergencia-e-alta",
+    "target_title": "Hipertensão: da primeira linha oral à emergência hipertensiva e à alta guiada por checklist",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "trilha",
+    "target_slug": "trilha-hipertensao-emergencia-crise-adrenergica-e-cognicao",
+    "target_title": "Hipertensão: emergência hipertensiva, crise adrenérgica do feocromocitoma, e o efeito do controle intensivo sobre a cognição",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "emergencia-hipertensiva",
+    "target_title": "Emergência hipertensiva",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "checklist",
+    "target_slug": "alta-pos-emergencia-hipertensiva",
+    "target_title": "Alta após emergência hipertensiva",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "checklist",
+    "target_slug": "infusao-de-nitroprussiato-na-emergencia-hipertensiva-dose-e-toxicidade",
+    "target_title": "Infusão de nitroprussiato de sódio na emergência hipertensiva — dose e vigilância de toxicidade",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "evidencia",
+    "target_slug": "internacao-em-uti-e-anti-hipertensivo-iv-na-emergencia-hipertensiva-sbc-2025",
+    "target_title": "Recomenda-se que o paciente com emergência hipertensiva (EH) seja admitido em UTI, use anti-hipertensivos intravenosos com monitorização con…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "evidencia",
+    "target_slug": "gravidez-esc-2018-pas-170-ou-pad-110-e-emergencia-hipertensiva",
+    "target_title": "Pressão arterial sistólica ≥170 mmHg ou diastólica ≥110 mmHg em gestante é uma emergência, e internação hospitalar é recomendada.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "emergencia-hipertensiva",
+    "target_type": "evidencia",
+    "target_slug": "sbc2025-ntg-iv-nas-primeiras-48h-no-eap-por-emergencia-hipertensiva",
+    "target_title": "Recomenda-se, em pacientes com edema agudo de pulmão por emergência hipertensiva, o uso de nitroglicerina intravenosa nas primeiras 48 horas…",
+    "relation_type": "supported_by"
+  }
+]
