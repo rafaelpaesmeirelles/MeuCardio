@@ -1,0 +1,478 @@
+[
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "evidencia",
+    "target_slug": "cc-adulto-tc-tetralogia-de-fallot-vias-de-saida-e-arritmia",
+    "target_title": "A angiotomografia é recomendada em paciente com tetralogia de Fallot operada que apresenta obstrução da via de saída do ventrículo direito, …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "evidencia",
+    "target_slug": "sbc2020-strain-do-vd-subpulmonar-na-tetralogia-de-fallot",
+    "target_title": "A avaliação da função do ventrículo direito SUBPULMONAR por strain — por exemplo na tetralogia de Fallot — pode ser considerada (Classe IIb,…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "evidencia",
+    "target_slug": "dcei2023-cdi-na-tetralogia-de-fallot-corrigida-com-tv-induzida-ou-espontanea",
+    "target_title": "No adulto com tetralogia de Fallot CORRIGIDA e taquicardia ou fibrilação ventricular INDUZIDA, ou taquicardia ventricular sustentada espontâ…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "van-arsdell-idade-otima-para-correcao-da-tetralogia-de-fallot",
+    "target_title": "Qual a idade ótima para correção da tetralogia de Fallot?",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "tetralogia-de-fallot-existe-uma-idade-ideal-para-a-correcao-primaria",
+    "target_title": "Correção primária da Tetralogia de Fallot: existe uma idade ideal para operar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "tetralogia-de-fallot-operada-regurgitacao-pulmonar-grave-assintomatica-quando-trocar-a-valva",
+    "target_title": "Tetralogia de Fallot operada, regurgitação pulmonar grave e paciente assintomático: quando trocar a valva?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "vsvd-nativa-dilatada-pos-tetralogia-de-fallot-valva-harmony-e-uma-opcao-viavel",
+    "target_title": "Via de saída de VD nativa e dilatada após Tetralogia de Fallot: a valva pulmonar transcateter Harmony é uma opção viável?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "tetralogia-de-fallot-reparada-no-adulto-quando-a-troca-valvar-pulmonar-reduz-desfecho-duro-registro-indicator",
+    "target_title": "Troca valvar pulmonar assintomática na Tetralogia de Fallot reparada: quando o registro INDICATOR sustenta operar?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiopatia-congenita-momento-cirurgico-e-desfecho-tardio-fallot-e-tga",
+    "target_title": "Cardiopatia congênita: o momento cirúrgico certo e o desfecho décadas depois — Tetralogia de Fallot e transposição das grandes artérias",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "crise-hipoxemica-tet-spell-em-lactente-com-tetralogia-de-fallot-nao-corrigida",
+    "target_title": "Crise hipoxêmica (\"Tet spell\") em lactente com Tetralogia de Fallot não corrigida",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia",
+    "target_title": "Endocardite infecciosa em adolescente com tetralogia de Fallot corrigida: o perfil microbiológico muda com a cardiopatia de base?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "tetralogia-de-fallot-operada-qrs-alargado-e-regurgitacao-pulmonar-risco-de-arritmia-ventricular-tardia",
+    "target_title": "Tetralogia de Fallot operada: o QRS alargado importa mais do que parece?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "diagnostico-pre-natal-de-tetralogia-de-fallot-o-rastreio-obstetrico-de-rotina-basta",
+    "target_title": "Diagnóstico pré-natal de Tetralogia de Fallot só no terceiro trimestre: é sinal de falha do rastreio?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "trilha",
+    "target_slug": "trilha-cardiologia-pediatrica-tetralogia-de-fallot-do-pre-natal-ao-seguimento-adulto",
+    "target_title": "Tetralogia de Fallot: do diagnóstico pré-natal à decisão de reoperar no adulto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "crise-hipercianotica-na-tetralogia-de-fallot",
+    "target_title": "Crise hipercianótica na Tetralogia de Fallot",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "caso_clinico",
+    "target_slug": "tetralogia-fallot-operada-assintomatica-qrs-prolongado-qual-escore-de-risco-arritmico-usar",
+    "target_title": "Tetralogia de Fallot operada, assintomática, com QRS prolongado: qual escore de risco decide o CDI?",
+    "relation_type": "used_in_case"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "checklist",
+    "target_slug": "seguimento-tardio-pos-reparo-de-tetralogia-de-fallot-e-coarctacao-de-aorta",
+    "target_title": "Seguimento tardio pós-reparo de Tetralogia de Fallot e pós-reparo de Coarctação de Aorta no adulto",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "checklist",
+    "target_slug": "estratificacao-de-risco-arritmico-e-decisao-de-cdi-na-tetralogia-de-fallot-operada",
+    "target_title": "Estratificação de risco arrítmico e decisão de CDI em prevenção primária na Tetralogia de Fallot operada (rTOF), sem indicação de CDI por prevenção secundária",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "material_paciente",
+    "target_slug": "tetralogia-fallot-fetal",
+    "target_title": "Tetralogia de Fallot Diagnosticada na Gravidez",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "evidencia",
+    "target_slug": "troca-valvar-pulmonar-na-tetralogia-de-fallot-operada-com-sintomas",
+    "target_title": "Após correção de tetralogia de Fallot, a troca valvar pulmonar é recomendada no paciente sintomático com regurgitação pulmonar grave e/ou ob…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "evidencia",
+    "target_slug": "erg-ped-teste-ergometrico-na-tetralogia-de-fallot-reparada",
+    "target_title": "Na TETRALOGIA DE FALLOT REPARADA, o teste ergométrico pode ser considerado para estratificação de risco e prognóstico, e também no paciente …",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "bokma-2023-indicator-troca-valvar-pulmonar-na-tetralogia-de-fallot",
+    "target_title": "Registro INDICATOR — desfecho após troca valvar pulmonar na tetralogia de Fallot reparada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "exame",
+    "target_slug": "rm-cardiaca-regurgitacao-pulmonar-e-criterios-de-troca-valvar-em-tetralogia-de-fallot",
+    "target_title": "Ressonância magnética cardíaca — quantificação da regurgitação pulmonar e critérios de troca valvar pulmonar na tetralogia de Fallot reparada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "exame",
+    "target_slug": "rm-cardiaca-realce-tardio-fibrose-ventricular-direita-em-tetralogia-de-fallot-reparada",
+    "target_title": "RM cardíaca com realce tardio (LGE) — fibrose ventricular direita na tetralogia de Fallot reparada",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "galeria",
+    "target_slug": "tetralogia-de-fallot-civ-e-cavalgamento-aortico-angiotc",
+    "target_title": "Tetralogia de Fallot — CIV e cavalgamento aórtico à angiotomografia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "galeria",
+    "target_slug": "atresia-pulmonar-com-civ-tetralogia-de-fallot-extrema-diagrama-cdc",
+    "target_title": "Atresia pulmonar com comunicação interventricular (tetralogia de Fallot extrema) — diagrama anatômico (CDC)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "gatzoulis-1995-qrs-prolongado-preve-arritmia-maligna-na-tetralogia-de-fallot",
+    "target_title": "Gatzoulis et al. (1995) — QRS ≥ 180 ms prediz arritmia ventricular maligna e morte súbita na tetralogia de Fallot operada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "correlate-wald-2025-escore-de-risco-por-rmc-na-tetralogia-de-fallot-reparada",
+    "target_title": "CORRELATE (Wald et al., 2025) — Escore de risco baseado em ressonância magnética cardíaca na tetralogia de Fallot reparada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "kakarla-2026-discordancia-entre-escores-de-risco-arritmico-na-tetralogia-de-fallot",
+    "target_title": "Kakarla et al. (2026) — Escores de risco discordam entre si na predição de morte súbita e arritmia ventricular na tetralogia de Fallot reparada",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "estudo",
+    "target_slug": "wang-2019-tetralogia-fallot-gestacao-coorte",
+    "target_title": "Wang et al. 2019 — Gestação em mulheres com tetralogia de Fallot corrigida e não corrigida",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tetralogia-de-fallot",
+    "target_type": "galeria",
+    "target_slug": "rx-tetralogia-de-fallot-coracao-em-bota",
+    "target_title": "Radiografia de tórax — Tetralogia de Fallot (coração em bota)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "documento",
+    "target_slug": "anticoagulacao-no-tromboembolismo-venoso-oncologico-com-trombocitopenia",
+    "target_title": "Anticoagulação no Tromboembolismo Venoso Oncológico com Trombocitopenia",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "trilha",
+    "target_slug": "trilha-tromboembolismo-venoso",
+    "target_title": "Tromboembolismo venoso — do diagnóstico à duração do tratamento",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "checklist",
+    "target_slug": "alta-pos-tromboembolismo-venoso-agudo",
+    "target_title": "Alta após tromboembolismo venoso agudo (TVP/TEP)",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "trilha",
+    "target_slug": "trilha-calculadoras-risco-de-sangramento-em-tres-cenarios",
+    "target_title": "Calculadoras: risco de sangramento em três cenários diferentes — fibrilação atrial, síndrome coronariana e tromboembolismo venoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "documento",
+    "target_slug": "amivantamabe-e-lazertinibe-tromboembolismo-venoso-e-reacoes-relacionadas-a-infusao",
+    "target_title": "Amivantamabe e Lazertinibe: Tromboembolismo Venoso e Reações Relacionadas à Infusão",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "protocolo_emergencia",
+    "target_slug": "tromboembolismo-venoso-agudo-por-amivantamabe-e-lazertinibe",
+    "target_title": "Tromboembolismo venoso agudo em uso de amivantamabe + lazertinibe",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "checklist",
+    "target_slug": "profilaxia-de-tev-no-paciente-clinico-internado-escore-de-padua",
+    "target_title": "Indicação e duração da profilaxia de tromboembolismo venoso (TEV) no paciente clínico hospitalizado — escore de Padua",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "checklist",
+    "target_slug": "tromboembolismo-venoso-associado-ao-cancer-escolha-do-anticoagulante",
+    "target_title": "Tromboembolismo venoso associado ao câncer — escolha e duração do anticoagulante",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "checklist",
+    "target_slug": "indicacao-e-plano-de-retirada-de-filtro-de-veia-cava-inferior-recuperavel",
+    "target_title": "Indicação de filtro de veia cava inferior recuperável no tromboembolismo venoso",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "anticoagulacao-de-rotina-nao-recomendada-em-ambulatorial-oncologico-de-baixo-risco",
+    "target_title": "Para pacientes ambulatoriais oncológicos de baixo risco de tromboembolismo venoso, a anticoagulação de rotina para prevenção não é recomenda…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "profilaxia-farmacologica-de-tev-em-grande-cirurgia-oncologica",
+    "target_title": "Pacientes submetidos a grandes cirurgias oncológicas devem receber profilaxia farmacológica contra tromboembolismo venoso (enoxaparina ou he…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "anticoagulacao-de-longo-prazo-por-pelo-menos-6-meses-no-tev-associado-a-cancer",
+    "target_title": "A anticoagulação de longo prazo no tromboembolismo venoso associado a câncer pode ser realizada preferencialmente com heparina de baixo peso…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-mobilizacao-precoce-recomendada-em-todo-paciente-de-risco-para-tev-perioperatorio",
+    "target_title": "A mobilização precoce e o exercício ativo são recomendados para todos os pacientes em risco de tromboembolismo venoso perioperatório.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-meia-de-compressao-deve-ser-considerada-no-risco-intermediario-perioperatorio",
+    "target_title": "Deve-se considerar o uso de meias de compressão elástica em pacientes de risco intermediário para tromboembolismo venoso perioperatório.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-compressao-pneumatica-intermitente-usada-no-risco-intermediario-perioperatorio",
+    "target_title": "A compressão pneumática intermitente é usada em pacientes de risco intermediário para tromboembolismo venoso perioperatório.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-compressao-pneumatica-ou-anticoagulacao-recomendada-no-alto-risco-perioperatorio",
+    "target_title": "Para pacientes de alto risco de tromboembolismo venoso perioperatório, é recomendada compressão pneumática intermitente ou terapia anticoagu…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "jcs-2025-profilaxia-farmacologica-combinada-no-risco-mais-alto-perioperatorio",
+    "target_title": "Para pacientes de risco mais alto de tromboembolismo venoso perioperatório, usa-se profilaxia farmacológica combinada com compressão pneumát…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "caravaggio-apixabana-versus-dalteparina-tev-associado-a-cancer",
+    "target_title": "Caravaggio — Apixabana versus dalteparina no tromboembolismo venoso associado a câncer",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "hokusai-vte-cancer-edoxabana-versus-dalteparina",
+    "target_title": "Hokusai VTE Cancer — Edoxabana versus dalteparina no tromboembolismo venoso associado a câncer",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "amplify-apixabana-oral-no-tratamento-do-tev-agudo",
+    "target_title": "AMPLIFY — Apixabana oral no tratamento do tromboembolismo venoso agudo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "einstein-dvt-rivaroxabana-oral-na-trombose-venosa-profunda-sintomatica",
+    "target_title": "EINSTEIN-DVT — Rivaroxabana oral no tromboembolismo venoso sintomático",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "re-cover-dabigatrana-versus-varfarina-no-tratamento-do-tev-agudo",
+    "target_title": "RE-COVER — Dabigatrana versus varfarina no tratamento do tromboembolismo venoso agudo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "hokusai-vte-2013-edoxabana-versus-varfarina-no-tev-sintomatico",
+    "target_title": "Hokusai-VTE (2013) — Edoxabana versus varfarina no tromboembolismo venoso sintomático (população geral, não oncológica)",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "bhalla-2020-metanalise-contemporanea-de-tromboprofilaxia-estendida-com-doac",
+    "target_title": "Bhalla et al. 2020 — Metanálise contemporânea de tromboprofilaxia estendida com anticoagulante oral direto para prevenção de tromboembolismo venoso",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "exame",
+    "target_slug": "painel-de-trombofilia-hereditaria-na-investigacao-do-tromboembolismo-venoso-nao-provocado",
+    "target_title": "Painel de trombofilia hereditária na investigação do tromboembolismo venoso não provocado",
+    "relation_type": "associated_with"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "barbar-2010-escore-de-padua-derivacao-do-risco-de-tev-no-paciente-clinico",
+    "target_title": "Barbar et al. 2010 — Modelo de avaliação de risco para identificação de pacientes clínicos hospitalizados com risco de tromboembolismo venoso: o Escore de Padua",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "avaliacao-diagnostica-imediata-de-tev-em-gestante-ou-puerpera",
+    "target_title": "Em gestante ou puérpera com suspeita de tromboembolismo venoso (TVP e/ou TEP), é recomendada avaliação diagnóstica formal imediata por métod…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "hbpm-para-profilaxia-de-tev-em-mieloma-multiplo-com-fatores-de-risco",
+    "target_title": "A profilaxia de tromboembolismo venoso com heparina de baixo peso molecular é recomendada em pacientes com mieloma múltiplo que apresentam f…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "evidencia",
+    "target_slug": "tratamento-de-tev-com-hbpm-em-cancer-e-plaquetas-acima-de-50-mil",
+    "target_title": "O tratamento do tromboembolismo venoso associado ao câncer com heparina de baixo peso molecular é recomendado, em dose plena, em pacientes c…",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "mantha-2012-progestagenio-isolado-risco-tromboembolismo-venoso",
+    "target_title": "Mantha et al. 2012 — Risco de tromboembolismo venoso com contracepção de progestágeno isolado: metanálise",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "trombofilia-hereditaria-e-risco-de-recorrencia-do-tev-a-coorte-lets-de-christiansen",
+    "target_title": "Trombofilia hereditária e risco de recorrência do tromboembolismo venoso — coorte LETS de Christiansen et al.",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "select-d-rivaroxabana-versus-dalteparina-no-tev-associado-a-cancer",
+    "target_title": "SELECT-D — Rivaroxabana versus dalteparina no tromboembolismo venoso associado a câncer",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "clot-dalteparina-versus-anticoagulante-oral-no-tev-associado-a-cancer",
+    "target_title": "CLOT — Dalteparina versus anticoagulante oral no tromboembolismo venoso associado a câncer, o ensaio fundador da era da heparina em câncer",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "catch-tinzaparina-versus-varfarina-no-tev-associado-a-cancer-ativo",
+    "target_title": "CATCH — Tinzaparina versus varfarina no tratamento do tromboembolismo venoso agudo em pacientes com câncer ativo",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "amplify-ext-apixabana-tratamento-estendido-tev",
+    "target_title": "AMPLIFY-EXT — Apixabana em tratamento estendido do tromboembolismo venoso",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "mariposa-amivantamabe-lazertinibe-tev-cpnpc-egfr",
+    "target_title": "MARIPOSA — Amivantamabe mais Lazertinibe em Primeira Linha no CPNPC com Mutação de EGFR: Tromboembolismo Venoso e Sobrevida Global",
+    "relation_type": "supported_by"
+  },
+  {
+    "source_disease_slug": "tromboembolismo-venoso",
+    "target_type": "estudo",
+    "target_slug": "carrier-2011-metanalise-tev-talidomida-lenalidomida",
+    "target_title": "Taxas de Tromboembolismo Venoso em Pacientes com Mieloma Múltiplo sob Terapia Imunomoduladora com Talidomida ou Lenalidomida — Revisão Sistemática e Metanálise",
+    "relation_type": "supported_by"
+  }
+]

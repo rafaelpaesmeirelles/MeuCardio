@@ -3,9 +3,9 @@
   "release": "corvia-science-full-corpus-20260907",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 26–30: 166 relações de 6 doenças foram revisadas individualmente e promovidas. Relações contextuais de parada cardiorrespiratória e evidências/estudos específicos de subtipos no hub geral de cardiomiopatias foram tipadas como associated_with quando supported_by superafirmaria o nexo. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
+  "approval_basis": "Instrução vigente do responsável pelo repositório para revisar, corrigir e publicar todo conteúdo científico válido e todas as relações Tudo com Tudo. Esta autorização permanece vinculada ao mesmo corpus canônico de 11.581 itens. Em 07/09/2026, a auditoria avançou para a coorte exact 31–40: 68 relações de 2 doenças foram revisadas e promovidas como vínculos editoriais explícitos/revisados. A coorte cobre Tetralogia de Fallot e tromboembolismo venoso em seus subcenários clínicos já publicados. Nenhum slug, contagem ou status editorial do corpus foi alterado.",
   "expected_total": 11581,
-  "inventory_sha256": "3a84f23c95a4b7357d8671cdfd99370ba43b85d92cfbdb7a368babdb0f1d0310",
+  "inventory_sha256": "7cedd95c2e12e3aa169506ecf451ee6f653d809d6bb5f1bebaefcf4edb846c17",
   "fronts": {
     "documentos": {
       "count": 2430,
@@ -77,7 +77,7 @@
       "count": 326,
       "reviewed_count": 326,
       "slug_sha256": "b253c65e3f9ffa28dd99582bc7225030b9237e3b90e5cd5f73f405a2ddbfd788",
-      "source_sha256": "03f8ce1d74af5aaffa35cf60ca92bfaf1621e2db7acf2a06463394bbbf07b71d"
+      "source_sha256": "978a98a49576da45bb80b32dcbaa455612942cb328153aa49e8c1b77f2bf7ffb"
     },
     "triagem_sintomas": {
       "count": 23,
