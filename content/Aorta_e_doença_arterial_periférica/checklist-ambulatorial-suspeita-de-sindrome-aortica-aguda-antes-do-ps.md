@@ -4,74 +4,60 @@ slug: checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps
 theme: "Aorta e doença arterial periférica"
 kind: checklist
 fonte_producao: grok
-summary: "Lista curta para o consultório: o que registrar e comunicar ao PS quando há suspeita de SAA — categorias do ADD-RS, sinais vitais/assimetria, o que NÃO fazer ambulatorialmente. Sem doses; destino é sempre transferência imediata."
-review_status: pendente_revisao
-review_note: "Doc 2/3 do pacote SAA ambulatorial além #833/#868. ESC 2024 PMID 39210722; ADD-RS PMID 21555704; ADvISED PMID 29030346. Sem doses."
+summary: "Checklist de transferência para SAA: registrar categorias ADD-RS corretamente sem pontuar localização de dor, síncope isolada ou déficit focal sem dor como itens indevidos."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Corrigida a estrutura do ADD-RS: localização da dor não pontua; déficit focal só integra a categoria de exame quando associado à dor; síncope permanece alerta clínico fora da pontuação. O escore não substitui julgamento nem via AVC aguda."
 source_refs:
-  - "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722"
-  - "Rogers AM, Hermann LK, Booher AM, et al. Sensitivity of the aortic dissection detection risk score, a novel guideline-based tool for identification of acute aortic dissection at initial presentation: results from the international registry of acute aortic dissection. Circulation. 2011;123(20):2213-2218. DOI: 10.1161/CIRCULATIONAHA.110.988568. PMID: 21555704"
-  - "Nazerian P, Mueller C, Soeiro AM, et al. Diagnostic Accuracy of the Aortic Dissection Detection Risk Score Plus D-Dimer for Acute Aortic Syndromes: The ADvISED Prospective Multicenter Study. Circulation. 2018;137(3):250-258. DOI: 10.1161/CIRCULATIONAHA.117.029457. PMID: 29030346"
+  - "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for peripheral arterial and aortic diseases. PMID: 39210722"
+  - "Rogers AM, Hermann LK, Booher AM, et al. Aortic dissection detection risk score. PMID: 21555704"
+  - "Nazerian P, Mueller C, Soeiro AM, et al. ADvISED. PMID: 29030346"
 ---
 
 # Checklist ambulatorial: suspeita de SAA antes do PS
 
-Usar **junto** com [`sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato`](sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato.md). Objetivo: acelerar o handoff — **não** rule-out no consultório.
+Usar apenas para organizar **handoff/transferência**. Não usar para excluir SAA no consultório.
 
-## 1. Decisão gate (sim/não)
+## Categorias ADD-RS
 
-- [ ] Suspeita de SAA permanece após história + exame rápido? → **PS agora** (pare aqui se não; caso contrário continue registrando enquanto organiza a transferência).
-
-## 2. Categorias ADD-RS (marcar o que houver)
-
-O escore conta **quantas categorias** têm ≥1 item (0–3), não a soma de itens (PMID 21555704; ESC 2024 PMID 39210722).
+O escore conta categorias positivas, não número de itens.
 
 ### A) Predisposição de alto risco
-
-- [ ] Síndrome de Marfan / outra doença hereditária do tecido conjuntivo
-- [ ] História familiar de doença aórtica
-- [ ] Doença valvar aórtica conhecida / bicúspide
-- [ ] Aneurisma de aorta torácica conhecido
-- [ ] Manipulação aórtica recente
+- síndrome de Marfan/outra doença do tecido conjuntivo;
+- história familiar de doença aórtica;
+- doença valvar aórtica conhecida/bicúspide;
+- aneurisma torácico conhecido;
+- manipulação aórtica recente.
 
 ### B) Dor de alto risco
+A categoria é positiva por **característica da dor**, não por localização isolada:
+- início abrupto;
+- intensidade grave/máxima desde o início;
+- qualidade rasgante/dilacerante.
 
-- [ ] Início abrupto
-- [ ] Intensidade grave / máxima cedo
-- [ ] Qualidade dilacerante, rasgante ou em pontada
-- [ ] Local: tórax / dorso / abdome (registrar)
+Registrar se a dor é torácica/dorsal/abdominal, mas **localização sozinha não pontua**.
 
 ### C) Exame de alto risco
+- déficit de pulso ou diferencial de PA;
+- **déficit neurológico focal associado à dor**;
+- novo sopro de insuficiência aórtica associado à dor;
+- hipotensão/choque.
 
-- [ ] Déficit de pulso ou diferencial de PA entre membros
-- [ ] Déficit neurológico focal novo
-- [ ] Sopro novo de insuficiência aórtica com a dor
-- [ ] Hipotensão ou choque
-- [ ] Síncope associada
+**Síncope não é item independente da categoria C do ADD-RS.** Registrar como alerta clínico geral e contextualizar.
 
-**Estimativa verbal ao PS:** ADD-RS aproximado = N categorias positivas (útil para priorização; o PS completa o algoritmo).
+## Alertas fora do ADD-RS
 
-## 3. Dados vitais e contexto a transmitir
+- Déficit focal súbito/persistente sem dor aórtica → via AVC agudo imediata.
+- Síncope de alto risco → avaliação urgente própria, ainda que não pontue no ADD-RS.
+- AAA doloroso/massa pulsátil dolorosa → emergência vascular.
+- Isquemia aguda de membro → emergência vascular.
 
-- [ ] PA em **ambos** os braços (se factível sem atrasar)
-- [ ] FC, estado mental, saturação (se disponível)
-- [ ] Horário de início da dor / síncope
-- [ ] Anticoagulação / antiagregante em uso (nome apenas — **sem doses** neste checklist)
-- [ ] Alergia a contraste / função renal conhecida (se souber — não atrasa transferência)
-- [ ] ECG feito no consultório? (se sim, enviar cópia; **não** atrasa PS)
+## Handoff
 
-## 4. O que NÃO fazer no ambulatorial
+Transmitir horário de início, características da dor, categorias ADD-RS positivas, sinais vitais, anticoagulantes/antiagregantes em uso, alergia a contraste/função renal conhecida e ECG disponível — **sem atrasar a transferência**.
 
-- [ ] Não liberar para casa se a dor melhorar
-- [ ] Não marcar D-dímero / angio-TC eletiva como plano único
-- [ ] Não tentar estabilização pressórica prolongada no consultório
-- [ ] Não confundir com fila eletiva de AAA (#833) ou com via carótida sem dor aórtica (#868)
+## Não fazer
 
-## 5. Frase de transferência (modelo)
-
-> Adulto com suspeita ambulatorial de síndrome aórtica aguda: dor [local] de início súbito + [predissão/exame]. ADD-RS categorias positivas: [A/B/C]. Encaminhado agora para PS — favor priorizar algoritmo SAA (imagem ECG-gated conforme protocolo local).
-
-## Limite
-
-Este checklist **não** substitui o fluxograma hospitalar [`fluxograma-sindrome-aortica-aguda-esc-2024`](fluxograma-sindrome-aortica-aguda-esc-2024.md). ADvISED (PMID 29030346) valida ADD-RS ± D-dímero no **fluxo de emergência**, não no consultório.
-
-`review_status: pendente_revisao`.
+- usar ADD-RS baixo como autorização de alta ambulatorial;
+- pedir D-dímero para “ver amanhã”;
+- pontuar qualquer dor torácica/dorsal/abdominal só pela localização;
+- pontuar síncope isolada como categoria C.
