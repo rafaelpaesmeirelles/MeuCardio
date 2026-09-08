@@ -4,12 +4,11 @@ slug: sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar
 theme: "Hipertensão"
 kind: protocolo
 fonte_producao: grok
-summary: "Pacote operacional de consultório: quais sintomas exigem encaminhamento imediato (suspeita de lesão aguda de órgão-alvo), quais pedem reavaliação ambulatorial precoce (PA muito elevada sem lesão aguda) e o que MAPA/MRPA acrescentam — sem duplicar o protocolo de emergência hipertensiva."
-review_status: pendente_revisao
-review_note: "PIVOT 07/09/2026: Lp(a)/risco residual já coberto em main e PR #741. Lacuna ambulatorial em Hipertensão. Fontes: ESC 2024 PMID 39210715; AHA/ACC 2025 PMID 40815242; SBC 2025 DOI 10.36660/abc.20250624 PMID 41294179; ESC Council PMID 30165588; ESH 2023 PMID 37345492. Sem doses IV."
+summary: "Triagem ambulatorial de hipertensão: lesão aguda de órgão-alvo, exceção obstétrica ≥160/110 persistente, retinopatia hipertensiva grave, suspeita adrenérgica e PA muito elevada sem lesão aguda."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Corrigidos: ramo gestação/puerpério com PA persistente ≥160/110; achados fundoscópicos de retinopatia grave; crise adrenérgica somente com deterioração/lesão aguda; nifedipina sublingual proibida sem exceção."
 source_refs:
   - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715"
-  - "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC Multisociety Guideline for High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242"
   - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179"
   - "van den Born BJM, Lip GYH, Brguljan-Hitij J, et al. ESC Council on hypertension position document on the management of hypertensive emergencies. Eur Heart J Cardiovasc Pharmacother. 2019;5(1):37-46. DOI: 10.1093/ehjcvp/pvy032. PMID: 30165588"
   - "Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492"
@@ -17,63 +16,63 @@ source_refs:
 
 # Sinais de alarme ambulatoriais na hipertensão: quando encaminhar e quando reavaliar em dias
 
-Este protocolo responde a uma pergunta de **consultório**: diante de hipertensão conhecida ou de PA elevada na consulta, **quais sinais exigem pronto-socorro agora**, e quais pedem ajuste oral com **reavaliação ambulatorial precoce**?
+Este protocolo responde a uma pergunta de **consultório**: diante de PA elevada, quais achados exigem via aguda agora e quais permitem manejo oral ambulatorial com reavaliação precoce?
 
 Não substitui:
-- emergência hipertensiva — [`emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria`](emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria.md) e [`fluxograma-emergencia-hipertensiva`](fluxograma-emergencia-hipertensiva.md);
-- quando pedir MAPA/MRPA — [`fluxograma-jaleco-branco-e-mascarada-mapa-mrpa`](fluxograma-jaleco-branco-e-mascarada-mapa-mrpa.md);
-- classificação/metas — [`hipertensao-arterial-classificacao-diagnostico-metas`](hipertensao-arterial-classificacao-diagnostico-metas.md).
-
-Árvore: [`fluxograma-sinais-de-alarme-ambulatoriais-hipertensao`](fluxograma-sinais-de-alarme-ambulatoriais-hipertensao.md). Braço PA muito elevada sem lesão aguda: [`pa-muito-elevada-no-consultorio-sem-lesao-aguda-conduta-ambulatorial`](pa-muito-elevada-no-consultorio-sem-lesao-aguda-conduta-ambulatorial.md).
+- [`emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria`](emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria.md)
+- [`fluxograma-emergencia-hipertensiva`](fluxograma-emergencia-hipertensiva.md)
+- [`fluxograma-jaleco-branco-e-mascarada-mapa-mrpa`](fluxograma-jaleco-branco-e-mascarada-mapa-mrpa.md)
+- [`hipertensao-arterial-classificacao-diagnostico-metas`](hipertensao-arterial-classificacao-diagnostico-metas.md)
 
 ## Princípio
 
-**Não é o número isolado que define emergência — é a lesão aguda de órgão-alvo em curso.**
+**No adulto não gestante, o número da PA isoladamente não define emergência hipertensiva; é necessário procurar lesão aguda de órgão-alvo.** Há exceções sindrômicas importantes — especialmente **gestação/puerpério com PA grave persistente**, que exige via obstétrica urgente mesmo sem cefaleia ou sintoma visual.
 
-- ESC 2024 (PMID 39210715): PA ≥180/110 mmHg → primeiro excluir emergência; sem lesão aguda, trata-se de hipertensão severa não controlada (termo “urgência hipertensiva” abandonado).
-- SBC 2025 (PMID 41294179): PAS ≥180 e/ou PAD ≥110 sem lesão progressiva → oral + reavaliação ambulatorial em até **7 dias**; com lesão aguda → emergência.
-- ESC Council 2019 (PMID 30165588): sem lesão aguda mediada por hipertensão não há emergência hipertensiva; em geral, agentes orais e observação breve.
+## Sinais/achados de alarme → encaminhar agora
 
-## Sinais de alarme → encaminhar agora
-
-| Domínio | Sinais |
+| Domínio | Achados |
 |---|---|
 | Neurológico | Déficit focal súbito, confusão nova, convulsão, cefaleia em trovão, alteração de consciência |
-| Visual | Perda visual aguda, escotomas novos, diplopia aguda |
-| Cardíaco | Dor torácica anginosa, dispneia súbita, ortopneia, síncope |
-| Vascular | Dor torácica/dorsal súbita lancinante, assimetria de pulsos/PA |
-| Renal | Oligúria aguda, piora rápida de creatinina |
-| Obstétrico | Gestação/puerpério com cefaleia intensa, distúrbio visual, dor em hipocôndrio direito/epigástrio, convulsão |
-| Adrenérgico | Cefaleia + sudorese + palpitação com PA lábil |
+| Oftalmológico | Perda visual aguda **ou fundoscopia com papiledema, hemorragias/exsudatos extensos ou outra retinopatia hipertensiva grave** |
+| Cardíaco/pulmonar | Dor torácica sugestiva de SCA, dispneia súbita, edema pulmonar, ortopneia importante, síncope com instabilidade |
+| Aórtico/vascular | Dor torácica ou dorsal súbita intensa, déficit de pulso, assimetria relevante de PA ou suspeita de síndrome aórtica aguda |
+| Renal | Oligúria aguda ou deterioração renal rápida compatível com lesão aguda mediada por hipertensão |
+| Obstétrico | **Gestação ou puerpério com PA persistente ≥160/110 mmHg**: via obstétrica urgente e tratamento em 30–60 min; sintomas de pré-eclâmpsia/eclâmpsia aumentam ainda mais a urgência |
+| Adrenérgico | Cefaleia + sudorese + palpitações com PA lábil **aumentam suspeita de PPGL**, mas só definem emergência se houver deterioração clínica ou lesão aguda de órgão-alvo |
 
-**Conduta:** não normalizar com nifedipina sublingual no consultório. Encaminhar; meta/velocidade dependem da síndrome-alvo.
+### PPGL/feocromocitoma — não supertriagem
 
-## Sem lesão aguda → retorno precoce
+A tríade clássica com PA lábil em paciente estável deve levar a **investigação acelerada de PPGL**, não automaticamente ao PS. Encaminhamento emergencial é apropriado quando coexistem lesão aguda de órgão-alvo, deterioração clínica, dor torácica, edema pulmonar, alteração neurológica, isquemia, choque ou outro sinal de instabilidade.
 
-1. Confirmar técnica (repouso, manguito, ≥2 medidas).
-2. Investigar dor, ansiedade, estimulantes, má adesão.
-3. Iniciar/intensificar terapia oral (SBC 2025 / ESC 2024), sem IV.
-4. Retorno em **até 7 dias** (SBC 2025); mais cedo se fragilidade ou sem acesso a medicação.
-5. Orientação escrita dos sinais da tabela.
+## PA muito elevada sem lesão aguda — adulto não gestante
+
+Após confirmar técnica e excluir os alarmes acima:
+
+1. Repetir medidas após repouso e manguito adequado.
+2. Investigar adesão, dor, ansiedade, estimulantes e causas transitórias.
+3. Iniciar/intensificar tratamento **oral** conforme guideline e contexto clínico.
+4. Programar reavaliação em até **7 dias** quando aplicável; antecipar se houver fragilidade, acesso precário ou dúvida residual.
+5. Dar orientação escrita para retorno imediato se surgir qualquer alarme.
+
+**Nifedipina sublingual de liberação imediata não deve ser utilizada em crise hipertensiva.** Não há exceção ambulatorial segura para essa via.
 
 ## MAPA/MRPA
 
-Não substituem triagem de lesão aguda. Usar (ESH 2023, PMID 37345492) para jaleco branco/mascarada/WUCH/MUCH quando a decisão terapêutica muda **e** não há emergência. Não atrasar PS por “esperar o MAPA”.
+Úteis para jaleco branco/mascarada depois que emergência foi excluída. Não devem atrasar via aguda nem a abordagem de PA persistentemente muito elevada em contexto de alto risco.
 
 ## Checklist de 90 segundos
 
-1. Alarme da tabela? → PS agora.
-2. PA ≥180/110 sem lesão aguda? → oral + retorno ≤7 dias.
-3. Precisa MAPA/MRPA? → só se decisão muda e sem emergência.
-4. Critério de secundária? → investigar após estabilizar — [`fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar`](fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar.md).
+1. Gestante/puerpério com PA persistente ≥160/110? → **via obstétrica urgente**.
+2. Déficit neurológico, SCA/EAP, síndrome aórtica, lesão renal aguda ou retinopatia hipertensiva grave? → **PS/emergência**.
+3. Tríade adrenérgica sem lesão aguda e paciente estável? → investigação PPGL acelerada, não PS automático.
+4. Adulto não gestante com PA ≥180/110 e sem lesão aguda? → oral + retorno precoce.
+5. MAPA/MRPA mudará a decisão? → usar apenas depois de excluir urgência real.
 
-## Slugs relacionados (existentes)
+## Slugs relacionados
 
 - `emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria`
 - `fluxograma-emergencia-hipertensiva`
 - `hipertensao-arterial-classificacao-diagnostico-metas`
 - `fluxograma-jaleco-branco-e-mascarada-mapa-mrpa`
-- `hipertensao-do-jaleco-branco-e-mascarada-mapa-mrpa-prevalencia-e-decisao-terapeutica`
-- `automedida-domiciliar-de-pressao-arterial-guiando-titulacao-tasminh4-e-home-bp`
-- `hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco`
+- `fluxograma-crise-hipertensiva-adrenergica-do-feocromocitoma`
 - `fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar`
