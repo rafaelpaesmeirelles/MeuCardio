@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 25,
-  "pending_count": 138,
+  "reviewed_count": 26,
+  "pending_count": 137,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -814,8 +814,22 @@
     {
       "index": 97,
       "path": "content/Hipertensão/esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "bb5300dcc78949ed9a808b7a0acb9fac4a324e9494f30b4231503cd52b9768b1"
+      "status": "corrected_reviewed",
+      "source_sha256": "bb5300dcc78949ed9a808b7a0acb9fac4a324e9494f30b4231503cd52b9768b1",
+      "findings": [
+        "NT-proBNP intragrupo não demonstra superioridade entre tratamentos; redução pressórica não desfecho CV.",
+        "Combinações noturnas não randomizadas entre si, post hoc; removida superioridade causal e três ensaios equivalentes.",
+        "Coorte vascular44/12semanas observacional, não benefício clínico comprovado.",
+        "Adicionada monitorização K/renal e contraindicação combinações poupadorasK segundo PMDA; não inferir aprovação foraJapão por ausência de busca.",
+        "Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável."
+      ],
+      "sources": [
+        "PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão",
+        "https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização",
+        "https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024"
+      ],
+      "reviewed_sha256": "ee88f20537ebb73886e65aec6c3665f7c6d845dfea6d63d416d433c163758439"
     },
     {
       "index": 98,

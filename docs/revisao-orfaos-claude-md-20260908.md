@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 25 documentos lidos integralmente e corrigidos; 138 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 26 documentos lidos integralmente e corrigidos; 137 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -149,6 +149,16 @@ Fontes verificadas: Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tava
 - semextrapolarPA não controlada
 
 Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Reduction of Antihypertensive Treatment in Nursing Home Residents. N Engl J Med. 2025;393(20):1990-2000. DOI: 10.1056/NEJMoa2508157. PMID: 40879421, Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131, Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392.
+
+## 97 — content/Hipertensão/esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht.md
+
+- NT-proBNP intragrupo não demonstra superioridade entre tratamentos; redução pressórica não desfecho CV.
+- Combinações noturnas não randomizadas entre si, post hoc; removida superioridade causal e três ensaios equivalentes.
+- Coorte vascular44/12semanas observacional, não benefício clínico comprovado.
+- Adicionada monitorização K/renal e contraindicação combinações poupadorasK segundo PMDA; não inferir aprovação foraJapão por ausência de busca.
+- Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável.
+
+Fontes verificadas: PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados, https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão, https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização, https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024.
 
 ## 110 — content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md
 
