@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr903-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr903": "5d8c5ae28ba65578166a02e4e0142dc9f91df28b"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-timing-encaminhamento-ambulatorial-hipertensao-resistente",
+      "ponte-ambulatorial-enquanto-espera-centro-has-na-resistente",
+      "timing-de-encaminhamento-ambulatorial-na-hipertensao-resistente"
+    ]
+  }
+}
