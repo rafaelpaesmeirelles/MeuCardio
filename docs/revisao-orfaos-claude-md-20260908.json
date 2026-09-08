@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 26,
-  "pending_count": 137,
+  "reviewed_count": 27,
+  "pending_count": 136,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -964,8 +964,20 @@
     {
       "index": 117,
       "path": "content/Insuficiência_cardíaca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "2603332f10bdc9b284e3abd8f0807b52afe2c58869761a11012f0876be542037"
+      "status": "corrected_reviewed",
+      "source_sha256": "2603332f10bdc9b284e3abd8f0807b52afe2c58869761a11012f0876be542037",
+      "findings": [
+        "Falsa inexistência RCT corrigida: CHANCE-HF380 e estudo diurético160. Protocolo multicomponente não efeito puro biomarcador; não rotina obrigatória.",
+        "ENACT-HF não randomizado, diferenciado PUSH-AHF.",
+        "HR1,27 por unidade log, não U/mL; idosos desfecho mortalidade/composito, não reinternação isolada; limiar100 exploratório não obrigatório.",
+        "CA125 inespecífico não exclui neoplasia; DPOC não explica automaticamente derrame; sST2 interação observacional não mecanismo causal."
+      ],
+      "sources": [
+        "PMIDs42235631,39809935,42418867,41899087,41524052,42425178: abstracts primários",
+        "10.1016/j.jchf.2016.06.007: CHANCE-HF artigo primário",
+        "PMID31422111 DOI10.1016/j.amjmed.2019.07.041: ensaio diurético randomizado"
+      ],
+      "reviewed_sha256": "dc4e7a7c3ec378040b48c93e42b829c9b4df242a04531213133438ddf849b171"
     },
     {
       "index": 118,

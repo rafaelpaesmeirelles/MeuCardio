@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 26 documentos lidos integralmente e corrigidos; 137 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 27 documentos lidos integralmente e corrigidos; 136 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -168,6 +168,15 @@ Fontes verificadas: PMIDs42032273,40189653,40178088,40394919: abstracts primári
 - Retirada recomendação empírica de reproduzir quatro classes separadas e alegação Anvisa não verificada; título deixa de prescrever início universal.
 
 Fontes verificadas: PMID34469767, PMID38501351, PMID38477128, PMID38584159, PMID40178246, PMID39881316, PMID40283054.
+
+## 117 — content/Insuficiência_cardíaca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca.md
+
+- Falsa inexistência RCT corrigida: CHANCE-HF380 e estudo diurético160. Protocolo multicomponente não efeito puro biomarcador; não rotina obrigatória.
+- ENACT-HF não randomizado, diferenciado PUSH-AHF.
+- HR1,27 por unidade log, não U/mL; idosos desfecho mortalidade/composito, não reinternação isolada; limiar100 exploratório não obrigatório.
+- CA125 inespecífico não exclui neoplasia; DPOC não explica automaticamente derrame; sST2 interação observacional não mecanismo causal.
+
+Fontes verificadas: PMIDs42235631,39809935,42418867,41899087,41524052,42425178: abstracts primários, 10.1016/j.jchf.2016.06.007: CHANCE-HF artigo primário, PMID31422111 DOI10.1016/j.amjmed.2019.07.041: ensaio diurético randomizado.
 
 ## 125 — content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md
 
