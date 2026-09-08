@@ -4,9 +4,9 @@ slug: fluxograma-sinais-de-alarme-ambulatoriais-hipertensao
 theme: "Hipertensão"
 kind: fluxograma
 fonte_producao: grok
-summary: "Árvore ambulatorial: triagem de lesão aguda, encaminhamento imediato, PA ≥180/110 sem lesão aguda (oral + retorno ≤7 dias) e papel do MAPA/MRPA."
-review_status: pendente_revisao
-review_note: "Irmão do protocolo sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar (07/09/2026). ESC 2024 PMID 39210715; SBC 2025 PMID 41294179; ESC Council PMID 30165588; ESH 2023 PMID 37345492."
+summary: "Árvore ambulatorial com ramo obstétrico ≥160/110 persistente, triagem de lesão aguda incluindo retinopatia grave e manejo oral da PA muito elevada sem lesão aguda no adulto não gestante."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Inserido ramo gestação/puerpério antes do limiar geral ≥180/110; adicionada retinopatia hipertensiva grave ao gate de lesão aguda; preservada distinção PPGL suspeito estável vs emergência."
 source_refs:
   - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715"
   - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179"
@@ -23,14 +23,20 @@ Prosa: [`sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar`](sinai
 
 ```mermaid
 flowchart TD
-  R0["Consulta ambulatorial com PA elevada<br/>ou hipertensão em seguimento"] --> D1{"Há sinal/sintoma de lesão aguda<br/>de órgão-alvo?"}
+  R0["Consulta ambulatorial com PA elevada<br/>ou hipertensão em seguimento"] --> D0{"Gestação/puerpério e PA<br/>persistente ≥160/110 mmHg?"}
 
-  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS / emergência<br/>Não baixar PA agressivamente no consultório<br/>Seguir fluxograma-emergencia-hipertensiva"])
+  D0 -->|"Sim"| C0(["Via obstétrica URGENTE<br/>Tratar em 30–60 min conforme protocolo<br/>Não aplicar a regra ambulatorial ≥180/110"])
+  D0 -->|"Não"| D1{"Há lesão aguda de órgão-alvo<br/>ou forte suspeita clínica?"}
 
-  D1 -->|"Não"| D2{"PA de consultório ≥180/110 mmHg?"}
+  D1 -->|"Sim"| C1(["Encaminhar AGORA ao PS / emergência<br/>Inclui déficit neurológico, SCA/EAP,<br/>síndrome aórtica, LRA ou retinopatia grave<br/>Seguir fluxograma-emergencia-hipertensiva"])
+
+  D1 -->|"Não"| D1B{"Tríade adrenérgica / PA lábil<br/>sem lesão aguda ou deterioração?"}
+  D1B -->|"Sim"| C1B(["Suspeita PPGL: investigação acelerada<br/>Não classificar como emergência apenas pela tríade"])
+  D1B -->|"Não"| D2{"Adulto não gestante com<br/>PA ≥180/110 mmHg?"}
+  C1B --> D2
 
   D2 -->|"Sim"| P1["Confirmar técnica e causas transitórias<br/>(dor, ansiedade, estimulantes, má adesão)"]
-  P1 --> C2(["Iniciar/intensificar anti-hipertensivo ORAL<br/>Retorno ambulatorial em até 7 dias (SBC 2025)<br/>Orientação escrita dos sinais de alarme"])
+  P1 --> C2(["Iniciar/intensificar tratamento ORAL<br/>Retorno ambulatorial em até 7 dias quando aplicável<br/>Orientação escrita dos sinais de alarme"])
 
   D2 -->|"Não"| D3{"A decisão terapêutica muda com<br/>medida fora do consultório?"}
 
@@ -38,18 +44,19 @@ flowchart TD
   D3 -->|"Não"| C4(["Ajustar plano conforme meta vigente<br/>Definir retorno usual<br/>Reforçar sinais de alarme e adesão"])
 
   C2 --> D4{"Acesso a medicação e retorno garantidos?"}
-  D4 -->|"Não / fragilidade / PA persiste muito elevada"| C5(["Antecipar retorno 24–72 h ou observar<br/>com suporte; PS se surgirem alarmes"])
+  D4 -->|"Não / fragilidade / dúvida residual"| C5(["Antecipar retorno 24–72 h ou observar<br/>com suporte; PS se surgirem alarmes"])
   D4 -->|"Sim"| C6(["Manter plano oral + retorno ≤7 dias<br/>MRPA domiciliar se disponível"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
-  class C1,C5 alerta;
-  class C2,C3,C4,C6 conduta;
+  class C0,C1,C5 alerta;
+  class C1B,C2,C3,C4,C6 conduta;
 ```
 
 ## Notas
 
-- **D1** = gate de segurança (ESC 2024 / SBC 2025).
-- **D2** = limiar operacional ≥180/110 mmHg.
-- **D3** = fenótipo (jaleco branco/mascarada) só após excluir emergência.
-- Não decide metas IV por síndrome-alvo nem quarta droga na resistente.
+- **D0** vem antes de qualquer regra geral: na gestação/puerpério, PA persistente ≥160/110 mmHg requer manejo obstétrico urgente mesmo sem sintomas neurológicos/visuais.
+- **D1** inclui lesão objetiva assintomática, como retinopatia hipertensiva grave ao exame de fundo de olho.
+- **D1B** evita classificar PPGL estável como emergência apenas pela tríade cefaleia-sudorese-palpitacões/PA lábil.
+- **D2** aplica-se ao adulto não gestante depois de excluir os ramos anteriores.
+- Nifedipina **sublingual** não integra nenhuma via deste fluxograma.
