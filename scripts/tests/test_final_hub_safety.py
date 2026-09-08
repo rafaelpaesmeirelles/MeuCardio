@@ -260,3 +260,50 @@ def test_two_to_one_avb_not_equated_with_mobitz2(hubs):
     assert not result['invalid_fields']
     assert 'bav-2-1-definir-nivel' in result['matched_rules']
     assert 'bav-avancado-indicacao-permanente' not in result['matched_rules']
+
+def test_remote_arrest_history_does_not_send_stable_patient_to_emergency(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',sudden_cardiac_arrest_history=True,
+        acute_arrhythmic_event=False)
+    assert result['risk']=='prioritario'
+    assert 'canal-parada-remota-seguimento' in result['matched_rules']
+    assert 'canal-parada-cardiaca-abortada' not in result['matched_rules']
+
+@pytest.mark.parametrize('shock,risk', [('unico_estavel','prioritario'),('multiplos_24h','emergencia'),('choque_com_sintomas','emergencia')])
+def test_channelopathy_icd_shock_context(hubs,shock,risk):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',icd_shock_context=shock,
+        acute_arrhythmic_event=False)
+    assert not result['invalid_fields']
+    assert result['risk']==risk
+
+@pytest.mark.parametrize('subtype,expected', [('lqts',True),('cpvt',False),('brugada',False)])
+def test_postpartum_lqts_risk_not_extrapolated_to_all_channelopathies(hubs,subtype,expected):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',confirmed_channelopathy=subtype,
+        pregnancy_postpartum_status='puerperio_ate_9_meses',acute_arrhythmic_event=False)
+    assert ('canal-gestacao-puerperio' in result['matched_rules'])==expected
+    assert result['risk'] not in {'urgente','emergencia'}
+
+def test_family_history_alone_does_not_trigger_emergency(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',family_sudden_death_young=True)
+    assert result['risk']=='prioritario'
+
+def test_cpvt_without_syncope_still_gets_prevention_assessment(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',confirmed_channelopathy='cpvt',
+        has_syncope_history=False,beta_blocker_adherence='nao_prescrito')
+    assert 'canal-cpvt-prevencao-sem-sintomas' in result['matched_rules']
+
+def test_trigger_without_syncope_does_not_order_provocation(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',has_syncope_history=False,
+        syncope_triggers=['esforco_fisico'],acute_arrhythmic_event=False)
+    assert 'canal-sincope-esforco-ou-emocao' not in result['matched_rules']
+
+def test_acute_channelopathy_event_has_emergency_flow(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',acute_arrhythmic_event=True)
+    assert result['risk']=='emergencia'
+    assert result['recommended_flow']
+
+def test_recurrent_remote_syncope_not_automatic_icd(hubs):
+    result=evaluate(hubs,'canalopatias-cardiacas-hereditarias',recurrent_syncope=True,
+        ecg_channelopathy_pattern='qt_longo_documentado',confirmed_channelopathy='lqts',
+        syncope_despite_optimized_therapy=False,acute_arrhythmic_event=False)
+    assert result['risk']=='prioritario'
+    assert 'canal-sincope-apesar-terapia' not in result['matched_rules']
