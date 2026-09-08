@@ -4,9 +4,9 @@ slug: exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial
 theme: "Cardiologia do Esporte e do Exercício"
 kind: protocolo
 fonte_producao: grok
-summary: "Braço operacional do gate de liberação: o que precisa estar disponível na visita (sintomas, biomarcadores, eco, Holter, teste de esforço, RMC quando indicada) e o que fazer se faltar — sem inventar critérios novos nem doses."
-review_status: pendente_revisao
-review_note: "Doc 2/3 do pacote gate-liberação pós-miocardite ambulatorial além #848/#877 (07/09/2026). Complementa gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta. Fontes: AHA/ACC 2025 PMID 39973614; ESC sports 2020 PMID 32860412; HRS 2024 PMID 38763377; ACC ECDP 2024 PMID 39665703. Sem doses."
+summary: "Checklist da reavaliação pós-miocardite: sintomas, biomarcadores, eco, monitorização, teste de esforço e RMC quando indicada; qualquer exame necessário ainda pendente mantém restrição até revisão do resultado."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Tornada obrigatória a conclusão/revisão da RMC quando indicada para fechar o gate; biomarcador precisa normalizar antes do gate verde; removida ambiguidade que permitia liberar enquanto exame necessário ainda estava pendente."
 source_refs:
   - "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614"
   - "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412"
@@ -16,54 +16,65 @@ source_refs:
 
 # Exames pendentes antes da liberação pós-miocardite: checklist ambulatorial
 
-Cenário: atleta em **consulta de reavaliação** para retorno ao esporte após miocardite, **sem** instabilidade aguda.
+Cenário: atleta estável em reavaliação para retorno ao esporte após miocardite.
 
-Contexto: [`gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta`](gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta.md). Árvore: [`fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta`](fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta.md). Fundo: [`miocardite-retorno-ao-esporte`](miocardite-retorno-ao-esporte.md).
+Contexto: [`gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta`](gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta.md) e [`fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta`](fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta.md).
 
 ## Princípio
 
-AHA/ACC 2025 (PMID 39973614), ESC sports 2020 (PMID 32860412) e ACC ECDP 2024 (PMID 39665703) convergem: antes de atividade intensa/competitiva, a reavaliação integra **clínica + biomarcadores + função + ritmo (Holter e esforço) ± RMC**. Faltar peça do pacote = **não liberar hoje**.
+A liberação só pode ser considerada quando o **pacote de reavaliação que foi julgado necessário para aquele atleta estiver completo e revisado**. Não basta que o exame tenha sido solicitado; o resultado precisa estar disponível e incorporado à decisão.
 
-Este documento **não** redefine limiares de FEVE, carga de LGE nem doses.
-
-## Pacote mínimo na visita
+## Pacote de reavaliação
 
 | Item | Papel no gate |
 |---|---|
-| História dirigida | Sintomas ativos, síncope, recorrência, genética familiar |
-| Biomarcadores | Troponina / inflamação quando previamente elevados |
-| Ecocardiograma | Função ventricular / recuperação |
-| Holter (ambulatorial) | Arritmia ventricular clinicamente relevante |
-| Teste de esforço | Intensidade relevante à modalidade; ectopia / TVNS |
-| RMC de reavaliação | Quando houve inflamação documentada / LGE / dúvida de atividade — tipicamente no horizonte de 3–6 meses (ECDP 2024) |
+| História e exame | confirmar resolução de sintomas e ausência de sinais de atividade/instabilidade |
+| Biomarcadores | quando pertinentes ao episódio, devem estar **normalizados** antes do gate verde |
+| Ecocardiograma | documentar função ventricular e recuperação quando houve alteração |
+| Holter/monitorização | pesquisar arritmia ventricular clinicamente relevante |
+| Teste de esforço | avaliar resposta ao exercício e arritmias em intensidade adequada ao contexto |
+| RMC de seguimento | quando indicada por inflamação/LGE prévio, dúvida de atividade, função ou decisão de retorno, deve ser concluída e **revisada antes da liberação** |
 
-## Se faltar exame
+## Se faltar exame necessário
 
-| Falta | Destino |
+| Situação | Destino |
 |---|---|
-| Holter ou teste de esforço | **Manter restrição**; agendar antes de nova visita de liberação |
-| Eco de reavaliação com FEVE previamente reduzida | Não liberar até documentar recuperação |
-| RMC pendente e índice com inflamação/LGE | Decisão compartilhada: em geral aguardar se a RMC mudaria a liberação; não “liberar para não atrasar a prova” |
-| Biomarcadores ainda elevados | Manter restrição; investigar fase ativa |
-| Pacote completo com red flag elétrico | Escalar EP (HRS 2024); ver árvore RTP |
+| Holter/monitorização ou teste de esforço considerados necessários ainda pendentes | **manter restrição**; completar antes de nova decisão |
+| Eco pendente após disfunção ventricular prévia | não liberar até documentar recuperação/estado atual |
+| **RMC indicada para fechar o gate ainda pendente** | **não liberar**; aguardar o resultado e interpretá-lo no contexto clínico |
+| Biomarcador ainda acima do limite de referência | manter restrição e reavaliar atividade de doença; tendência de queda isolada não equivale a normalização |
+| Pacote completo, mas arritmia complexa ou outro marcador de risco | escalar EP/cardiomiopatias conforme achado |
 
-## Orientação escrita (enquanto espera)
+## RMC: evitar dois erros opostos
 
-PS / reavaliação urgente se: dor torácica no esforço, dispneia desproporcional, síncope, palpitações sustentadas, pré-síncope no treino.
+1. **Não ignorar RMC indicada:** se a RMC foi considerada necessária para decidir retorno, ela deve estar disponível antes da liberação.
+2. **Não pedir RMC indiscriminadamente para todos:** a indicação de seguimento deve vir do fenótipo, achados prévios e guideline; este documento não cria RMC obrigatória universal.
 
-Manter afastamento de HIIT / competição até o gate verde.
+## Enquanto aguarda
+
+Manter afastamento de exercício intenso/competição. Orientar reavaliação urgente se houver dor torácica no esforço, dispneia importante, pré-síncope/síncope, palpitações sustentadas ou piora clínica.
+
+## Checklist final da visita
+
+- [ ] sintomas resolvidos;
+- [ ] biomarcadores pertinentes **normalizados**;
+- [ ] função ventricular avaliada quando necessária;
+- [ ] monitorização/Holter revisados;
+- [ ] teste de esforço revisado;
+- [ ] RMC indicada concluída e revisada;
+- [ ] LGE residual, se presente, interpretado separadamente de edema/inflamação ativa;
+- [ ] nenhuma avaliação especializada necessária permanece pendente.
+
+Se qualquer item **aplicável** estiver incompleto → não fechar o gate verde.
 
 ## O que não fazer
 
-- Liberar com Holter “depois, se der tempo”.
-- Substituir teste de esforço por “subiu escada sem dor”.
-- Confundir pericardite resolvida com miocardite (ver [`pericardite-retorno-esporte-atleta`](pericardite-retorno-esporte-atleta.md)).
-- Usar só o calendário (3 ou 6 meses) como critério único.
+- Liberar com Holter ou esforço “para depois”.
+- Liberar com biomarcador ainda elevado apenas porque está caindo.
+- Liberar enquanto RMC indicada está pendente porque “talvez não mude a decisão”.
+- Usar o calendário isoladamente.
+- Confundir LGE residual com inflamação ativa ou com autorização automática.
 
-## Armadilhas
+## Limite
 
-Pedir RMC e manter treino intenso “enquanto espera o laudo”; aceitar Holter de baixa qualidade como “normal”; esquecer que LGE residual ≠ inflamação ativa, mas também ≠ liberação automática.
-
-## Limite da evidência
-
-O pacote mínimo acima espelha as fontes citadas; a ordem dos nós clínicos permanece nos fluxogramas RTP já revisados. Aqui só se decide se a visita pode **fechar o gate** ou deve **reagendar**.
+Este checklist não redefine FEVE, carga de LGE, intervalos de seguimento nem dose. Ele apenas garante que a decisão seja tomada com os dados considerados necessários já disponíveis.
