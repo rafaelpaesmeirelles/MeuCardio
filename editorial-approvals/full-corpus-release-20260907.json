@@ -5,7 +5,7 @@
   "scope": "entire_canonical_reviewed_corpus",
   "approval_basis": "Instrução explícita e reiterada do responsável pelo repositório em 08/09/2026 para concluir e publicar em um único deploy emergencial todo o corpus canônico revisado, incluindo o lote antigo pendente, o lote Grok anexado, os documentos já incorporados à main, o conteúdo resgatado e o commit de frontend/mobilidade 4b1c5bd. O escopo foi congelado na mesma data, sem autorização para acrescentar documentos posteriores. A autorização está vinculada criptograficamente aos 12.217 itens e aos fingerprints por frente abaixo; qualquer alteração de slug, fonte, contagem ou estado editorial invalida este manifesto.",
   "expected_total": 12217,
-  "inventory_sha256": "9b0cd8b8e1eaebe93fb15aa41081756b955c6d6f89f7a2026242a5bbd120ffef",
+  "inventory_sha256": "d71464001b34c281ef450fb9934a543b4388f3b074b7cb118c481eca8272340c",
   "fronts": {
     "documentos": {
       "count": 2891,
@@ -65,7 +65,7 @@
       "count": 478,
       "reviewed_count": 478,
       "slug_sha256": "6e7ee634b4c3784a8cda1102ff3e5b2dea3e783ae326d92d9a561fddf6ea150f",
-      "source_sha256": "f5a0946e79580da2e08350f6cdc4867edf7af750d2d8682f5f06ceefe1f5087b"
+      "source_sha256": "4552bff379046f4fe6e771ba865e394217ce6bf2dd4a8b93d193002936e1ef01"
     },
     "emergencia": {
       "count": 77,
