@@ -4,53 +4,53 @@ slug: sinalizadores-ambulatoriais-pos-tmcs-sitio-vascular-ic-avancada
 theme: "Terapia intensiva"
 kind: protocolo
 fonte_producao: grok
-summary: "Dois eixos de alarme no consultório após explante de tMCS: complicação de sítio/acesso de grande calibre (sangramento, isquemia, infecção) e trajetória que exige retorno/re-referral a IC avançada ou centro de choque — com destino PS vs retorno precoce, sem doses."
-review_status: pendente_revisao
-review_note: "Irmão do protocolo seguimento pós-tMCS 07/09/2026. Lacuna fina BEYOND #861: sítio vascular pós-acesso large-bore + re-referral IC avançada pós-ponte. Anti-colisão #861 (pós-UTI geral) e Dispositivos #835/#870 (CIED — não reescreve). Fontes: ACVC/ESC tMCS PMID 37315190; ACC 2025 CS PMID 40100174; HFA/ESC CS PMID 32469155; ESC HF 2021 PMID 34447992. Sem doses; sem PMID inventado."
+summary: "Dois eixos pós-tMCS: complicação vascular/acesso e trajetória de IC/choque; define PS, avaliação vascular precoce ou reavaliação com time implantador/IC avançada."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Separados acesso femoral/axilar e tipo de dispositivo; incluída hemorragia retroperitoneal oculta; alteração local sem alarme vai para avaliação vascular, não centro de choque; sinais de IC apenas reencaminham para avaliação e não inferem LVAD/transplante/reimplantação de tMCS."
 source_refs:
-  - "Møller JE, Sionis A, Aissaoui N, et al. Step by step daily management of short-term mechanical circulatory support for cardiogenic shock in adults in the intensive cardiac care unit: a clinical consensus statement of the Association for Acute CardioVascular Care of the ESC, the European Society of Intensive Care Medicine, the European branch of the Extracorporeal Life Support Organization, and the European Association for Cardio-Thoracic Surgery. Eur Heart J Acute Cardiovasc Care. 2023;12(7):475-485. DOI: 10.1093/ehjacc/zuad064. PMID: 37315190"
-  - "Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. 2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on the Evaluation and Management of Cardiogenic Shock. J Am Coll Cardiol. 2025;85(16):1618-1641. DOI: 10.1016/j.jacc.2025.02.018. PMID: 40100174"
-  - "Chioncel O, Parissis J, Mebazaa A, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock – a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. DOI: 10.1002/ejhf.1922. PMID: 32469155"
-  - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992"
+  - "Møller JE, Sionis A, Aissaoui N, et al. ACVC/ESC short-term MCS consensus. PMID: 37315190"
+  - "Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. ACC cardiogenic shock guidance 2025. PMID: 40100174"
+  - "Chioncel O, Parissis J, Mebazaa A, et al. HFA/ESC cardiogenic shock position statement. PMID: 32469155"
+  - "McDonagh TA, Metra M, Adamo M, et al. ESC HF 2021. PMID: 34447992"
 ---
 
 # Sinalizadores ambulatoriais pós-tMCS: sítio vascular e IC avançada
 
-Complemento operacional de [`seguimento-ambulatorial-pos-tmcs-ponte-temporaria-quando-escalar`](seguimento-ambulatorial-pos-tmcs-ponte-temporaria-quando-escalar.md). Foco nos **dois motivos** mais específicos do pós-explante de tMCS quando a clínica precisa **escalar** — além do pacote pós-UTI geral (#861).
+## 1. Complicação vascular / acesso
+O perfil depende do dispositivo e do acesso: **femoral ou axilar**, IABP, bomba microaxial, VA-ECMO etc. Não tratar todo “sítio vascular” como equivalente.
 
-Não substitui [`acesso-vascular-large-bore-em-tmcs-prevencao-de-sangramento-isquemia-e-fechamento`](acesso-vascular-large-bore-em-tmcs-prevencao-de-sangramento-isquemia-e-fechamento.md) (hospitalar) nem o pacote de Dispositivos sobre CIED (#835/#870).
+### PS agora
+- sangramento ativo/hematoma expansivo;
+- isquemia aguda de membro (dor, palidez, frialdade, ausência de pulso, déficit sensitivo-motor);
+- infecção sistêmica/sepse;
+- dor súbita intensa no trajeto vascular com instabilidade;
+- após acesso femoral large-bore: **dor nova lombar/flanco/abdome, distensão abdominal ou hipotensão inexplicada mesmo com virilha seca** → suspeitar hemorragia retroperitoneal.
 
-## 1. Sítio vascular / acesso de grande calibre pós-tMCS
+### Avaliação vascular/de acesso precoce
+- dor/equimose estável;
+- edema local sem progressão importante;
+- suspeita de pseudoaneurisma/trombose sem isquemia aguda;
+- ferida local duvidosa sem sepse.
 
-Complicações de acesso, sangramento, isquemia de membro e infecção são custos centrais do tMCS no consenso ACVC/ESC (PMID 37315190) e no ACC 2025 (PMID 40100174). No ambulatorial precoce, o filtro é destino — não técnica de fechamento.
+Esses achados **não** devem ser encaminhados automaticamente ao programa de IC avançada.
 
-| Destino | Sinais |
-|---|---|
-| **PS agora** | Sangramento ativo / hematoma expansivo; isquemia de membro (dor, palidez, frialdade, déficit sensitivo-motor, ausência de pulso); febre + eritema expansivo / secreção purulenta / suspeita de sepse de sítio; dor súbita intensa no trajeto vascular |
-| **Retorno precoce** | Dor local sem expansão; edema assimétrico leve; equimose estável; dúvida de infecção local sem sepse; claudicação nova leve sem sinais de isquemia aguda |
-| **Plano** | Sítio cicatrizando, sem febre, sem assimentria progressiva, educação escrita de alarmes |
+## 2. Trajetória de IC/choque pós-ponte
+### PS agora
+- edema pulmonar/hipoxemia;
+- hipoperfusão/síncope;
+- dor isquêmica em curso;
+- arritmia instável.
 
-**Não iniciar** “antibiótico de consultório” nem ajustar anticoagulação neste documento.
+### Reavaliação prioritária com o time implantador/programa local de IC avançada/choque
+- congestão progressiva sem instabilidade;
+- intolerância funcional nova;
+- bridge-to-decision sem plano de seguimento explícito;
+- dúvida de recuperação miocárdica.
 
-## 2. Trajetória de IC / re-referral a IC avançada ou centro de choque
+Se a reavaliação prioritária necessária **não estiver acessível**, usar rota alternativa presencial urgente/serviço de referência, e PS se houver piora ou alarme.
 
-Após ponte temporária, a pergunta ambulatorial não é só “está congesto?” — é **a trajetória pós-desmame exige reavaliação de recuperação, LVAD durável, transplante ou paliativo?** ACC 2025 (PMID 40100174) enfatiza níveis de cuidado e transferência oportuna; HFA/ESC (PMID 32469155) e ESC HF 2021 (PMID 34447992) sustentam continuidade e vigilância.
+## Não inferir terapia avançada
+Nenhum sinal ambulatorial, isoladamente, estabelece indicação de LVAD, transplante, novo tMCS ou paliativo. O papel deste protocolo é **reencaminhar para avaliação especializada**.
 
-| Destino | Sinais |
-|---|---|
-| **PS agora** | Edema pulmonar, ortopneia grave, hipoperfusão, síncope, dor isquêmica em curso |
-| **Retorno precoce + IC avançada** | Ganho de peso / edema progressivo / dispneia de esforço nova sem hipoxemia; intolerância funcional clara; dúvida sobre recuperação miocárdica; ponte foi *bridge-to-decision* sem plano ambulatorial explícito; necessidade de reavaliar candidatura a terapia avançada |
-| **Plano** | Compensado, sítio OK, plano de IC e data com cardiologia/IC já definidos, alarmes escritos |
-
-**Não protocolar doses** de diurético/GDMT neste texto.
-
-## Checklist rápido dos 2 eixos
-
-1. Sítio com sangramento, isquemia ou infecção agressiva? → **PS**.
-2. IC com congestão aguda ou hipoperfusão? → **PS**; congestão leve / dúvida de trajetória pós-ponte → **retorno precoce + IC avançada**.
-3. Bridge-to-decision sem follow-up avançado agendado? → **não liberar só com “retorno de rotina”** — acionar rede.
-4. Sem alarme nos dois eixos e estável? → plano escrito + data de retorno.
-
-## Limite
-
-Só define **destino**. Diagnóstico vascular hospitalar, imagem de sítio, culturas e ajuste farmacológico ficam fora. Para sinalizadores pós-UTI gerais (infecção/dispositivo/IC/cognição sem foco tMCS), ver o pacote #861.
+## Tudo com Tudo
+Relações fortes devem ser restritas a choque cardiogênico/tMCS/IC avançada/complicações vasculares explicitamente sustentadas; não conectar automaticamente a todo conteúdo de Terapia Intensiva por tema.
