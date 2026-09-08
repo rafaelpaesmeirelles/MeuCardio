@@ -54,6 +54,11 @@ from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services import calculators as calc
+from app.services.clinical_markdown_links import parse_clinical_markdown_target
+from app.services.transversal_manifest import (
+    load_transversal_relations,
+    resolve_transversal_relations,
+)
 from app.services.knowledge_relation_policy import (
     RelacaoClinicaInvalida,
     validar_relacao_clinica,
@@ -1035,11 +1040,12 @@ def _registrar_referencias_explicitas(
             documento.slug,
         )
         for destino in _LINK_MARKDOWN.findall(_markdown_sem_codigo(documento.body_md or "")):
-            slug = _slug_de_link_markdown(destino)
-            if not slug:
+            reference = parse_clinical_markdown_target(destino)
+            if not reference:
                 continue
+            tipos, slug = reference
             _ligar(
-                _no(("documento", "fluxograma"), slug),
+                _no(tipos, slug),
                 no_origem,
                 "mentioned_in",
                 score=0.9,
@@ -1067,6 +1073,8 @@ def _registrar_referencias_explicitas(
         raise RuntimeError(f"Fonte curada de interações não é uma lista: {arquivo_interacoes}")
     for interacao in interacoes:
         if not isinstance(interacao, dict):
+            continue
+        if interacao.get("interaction_present") is False:
             continue
         farmacos = interacao.get("farmacos") or []
         if len(farmacos) != 2 or interacao.get("review_status") != "revisado":
@@ -1733,6 +1741,23 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
             publicados_por_slug=publicados_por_slug,
         )
     )
+    transversal_path = Path("/doencas/relacoes-transversais.json")
+    if not transversal_path.is_file():
+        transversal_path = Path(__file__).resolve().parents[3] / "doencas/relacoes-transversais.json"
+    transversais, transversais_nao_resolvidas = resolve_transversal_relations(
+        load_transversal_relations(transversal_path), entidades_por_slug, publicados_por_slug,
+    )
+    transversais_criadas = 0
+    for item, source, target in transversais:
+        transversais_criadas += _registrar_relacao_estruturada(
+            db, source=source, target=target, lote=lote,
+            relation_type=item["relation_type"], relevance_score=item["relevance_score"],
+            provenance_type=item["provenance_type"], confidence=item["confidence"],
+            review_status=item["review_status"], evidence_source=item["evidence_source"],
+            extra={"campo": "doencas/relacoes-transversais.json",
+                   "origem_slug": item["source_slug"], "destino_slug": item["target_slug"],
+                   "review_note": item["review_note"]},
+        )
     # As arestas do manifesto acima entram no lote por IDs de FK. Enquanto
     # ainda estão ``pending``, os relacionamentos ORM ``source_entity`` e
     # ``target_entity`` não são carregáveis e a auditoria de política abaixo
@@ -1762,6 +1787,9 @@ def backfill_mesmo_tema(db: Session, *, commit: bool = True) -> dict:
         "entidades_especializadas_criadas": entidades_especializadas,
         "relacoes_estruturadas_especializadas_criadas": relacoes_especializadas,
         "relacoes_doenca_explicitas_criadas": relacoes_doenca_explicitas,
+        "relacoes_transversais_criadas": transversais_criadas,
+        "relacoes_transversais_nao_resolvidas": len(transversais_nao_resolvidas),
+        "amostra_relacoes_transversais_nao_resolvidas": transversais_nao_resolvidas[:25],
         "relacoes_doenca_explicitas_nao_resolvidas": len(relacoes_doenca_nao_resolvidas),
         "amostra_relacoes_doenca_nao_resolvidas": relacoes_doenca_nao_resolvidas[:25],
         "relacoes_automaticas_rejeitadas": relacoes_automaticas_rejeitadas,
