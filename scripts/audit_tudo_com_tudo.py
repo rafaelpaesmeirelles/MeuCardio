@@ -21,6 +21,8 @@ sys.path.insert(0, str(ROOT / "backend"))
 
 from app.services.disease_manifest import load_disease_records  # noqa: E402
 from app.services.triage_manifest import load_triage_records  # noqa: E402
+from app.services.transversal_manifest import load_transversal_relations  # noqa: E402
+from app.services.clinical_markdown_links import parse_clinical_markdown_target  # noqa: E402
 
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)")
 CODE_BLOCK = re.compile(r"```.*?```|~~~.*?~~~", re.DOTALL)
@@ -759,12 +761,14 @@ def audit(
     for study in manifests["estudo"]:
         studies_by_slug[str(study["slug"])].append(study)
 
-    # Calculadoras vivem em registro Python e não compõem os itens do corpus.
-    calculator_source = "\n".join(
-        path.read_text(encoding="utf-8")
-        for path in sorted((ROOT / "backend/app/services").glob("*calculators*.py"))
-    )
-    slugs["calculadora"] = set(re.findall(r'\bslug\s*=\s*["\']([^"\']+)', calculator_source))
+    # Use the same assembled registry and availability gate as the graph.
+    # Filename globs miss registered safety tools (hyperkalemia/BRASH), and
+    # source regexes can accept declarations that never enter the registry.
+    from app.services import calculators as calculator_service
+    slugs["calculadora"] = {
+        calculator.slug for calculator in calculator_service.REGISTRY.values()
+        if calculator.status == "implementada"
+    }
 
     stats: dict[str, Counter] = defaultdict(Counter)
     broken: list[dict[str, Any]] = []
@@ -841,9 +845,10 @@ def audit(
 
     for slug, document in documents.items():
         for target in LINK.findall(_markdown_without_code(document["body"])):
-            target_slug = _link_slug(target)
-            if target_slug:
-                add("Document.body_md.link", slug, target_slug, ("documento", "fluxograma"))
+            reference = parse_clinical_markdown_target(target)
+            if reference:
+                allowed, target_slug = reference
+                add("Document.body_md.link", slug, target_slug, allowed)
 
     for item in manifests["evidencia"]:
         if item.get("document_slug"):
@@ -898,6 +903,12 @@ def audit(
         if len(drugs) == 2 and item.get("review_status") == "revisado":
             add("DrugInteraction.farmacos[2]", item["slug"], drugs[0], ("medicamento",))
             add("DrugInteraction.farmacos[2]", item["slug"], drugs[1], ("medicamento",))
+
+    transversal_relations = load_transversal_relations(ROOT / "doencas/relacoes-transversais.json")
+    for item in transversal_relations:
+        for side in ("source", "target"):
+            add("TransversalRelation." + side, item["source_slug"],
+                item[side + "_slug"], (item[side + "_type"],))
 
     disease_names: dict[str, set[str]] = defaultdict(set)
     for disease in manifests["doenca"]:
@@ -999,6 +1010,12 @@ def audit(
             "by_provenance_type": dict(Counter(
                 relation["provenance_type"] for relation in explicit_relations
             )),
+        },
+        "explicit_transversal_relations": {
+            "total": len(transversal_relations),
+            "by_relation_type": dict(Counter(item["relation_type"] for item in transversal_relations)),
+            "by_source_type": dict(Counter(item["source_type"] for item in transversal_relations)),
+            "by_target_type": dict(Counter(item["target_type"] for item in transversal_relations)),
         },
         "exact_unambiguous_triage_differentials": exact_differentials,
         "topic_coverage": {

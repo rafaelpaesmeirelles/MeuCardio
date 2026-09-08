@@ -428,6 +428,8 @@ def checar_interacoes(
     verificadas: list[dict] = []
     avisos_de_classe: list[dict] = []
     for i in _interacoes_curadas():
+        if i.get("interaction_present") is False:
+            continue
         farmacos = i.get("farmacos", [])
         envolvidos = [f for f in farmacos if f in selecionados]
         registro = {
