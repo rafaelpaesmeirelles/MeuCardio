@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 41,
-  "pending_count": 122,
+  "reviewed_count": 42,
+  "pending_count": 121,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -174,8 +174,22 @@
     {
       "index": 9,
       "path": "content/Arritmias/bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "335f107d8e9b9e060b971c1fe85b0194ea6ec79ea73e839386d438e896cc481c"
+      "status": "corrected_reviewed",
+      "source_sha256": "335f107d8e9b9e060b971c1fe85b0194ea6ec79ea73e839386d438e896cc481c",
+      "findings": [
+        "Removida exigência de sintomas para marca-passo em MobitzII/BAV avançado sem causa reversível.",
+        "Incluída laminopatia e possível CDI com estimulação; etiologia genética pode alterar seleção do dispositivo.",
+        "Provocação com bloqueador de sódio não rotineira em portadores SCN5A; consenso2025, contexto diagnóstico e segurança incorporados.",
+        "Mapeamento19q13 pertence à linha TRPM4, não SCN5A; variabilidade e penetrância substituem cronologia inevitável.",
+        "VUS não confirma doença nem orienta dispositivo isoladamente."
+      ],
+      "sources": [
+        "14 referências originais: identidades conferidas; abstracts disponíveis lidos, sem alegar leitura integral dos históricos sem abstract.",
+        "AHA texto online de recomendação2018 confirmado; erratum31424988 identificado, texto integral inacessível, sem alegar sua revisão.",
+        "Consenso genético2022 DOIeuac030; corrigendum euac106 lido: autoria/afiliações apenas.",
+        "ESC2021 DOIehab364 recomendação LMNA consultada; consenso provocação2025 DOIeuaf067 seções indicação, rastreio familiar e segurança consultadas."
+      ],
+      "reviewed_sha256": "4d06a65e782bc2ff7872e8c25aaed151791a838fed4c1a2de0420252a6c5a7f3"
     },
     {
       "index": 10,
