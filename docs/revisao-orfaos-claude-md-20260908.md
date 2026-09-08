@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 40 documentos lidos integralmente e corrigidos; 123 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 41 documentos lidos integralmente e corrigidos; 122 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -81,6 +81,16 @@ Fontes verificadas: 11PMIDs originais: identidade conferida;2679075/33744210/355
 - 45mmpré-gestacional é extrapolaçãoMarfan, não limiar validadoATS; removidas prevalências/certezas mecanísticas excessivas.
 
 Fontes verificadas: 4referências originais: abstracts conferidos; GeneReviews integral das seções mecanismo/diferencial/manejo/vigilância/gestação consultadas online., SpinardiDOI10.3174/ajnr.A6732 primária; StephensDOI10.1161/JAHA.123.029518 PMID37776192 primária..
+
+## 8 — content/Aorta_e_doença_arterial_periférica/sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica.md
+
+- Chapel Hill classifica Cogan como vasculite de vasos variáveis; apresentação atípica não é estratificador cardiovascular validado.
+- Durtette: 126 linhas em 61 pessoas, não grupos independentes; OR infliximabe com IC 1,65–260 e primeira linha sem diferença.
+- Ross é autoenxerto; caso único não demonstra superioridade universal de prótese mecânica ou falha das biopróteses.
+- Exclusão de sífilis não exige ambos testes negativos; imagem e imunossupressão individualizadas, sem calendário universal provado.
+- Removidas extrapolações de relato pós-COVID e caso único de GN como série pediátrica.
+
+Fontes verificadas: 12 PMIDs originais/citados: identidade e abstracts disponíveis conferidos; Saiin34866099 apenas identidade, sem alegação de leitura integral., Chapel Hill PMID23045170 DOI10.1002/art.37715 e classificação publicada pelo consenso consultados., CDC Laboratory Recommendations2024; Durtette29037902, Marrero39110231 e Gad40843044 abstracts primários..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
