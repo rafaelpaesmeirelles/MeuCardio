@@ -307,3 +307,41 @@ def test_recurrent_remote_syncope_not_automatic_icd(hubs):
         syncope_despite_optimized_therapy=False,acute_arrhythmic_event=False)
     assert result['risk']=='prioritario'
     assert 'canal-sincope-apesar-terapia' not in result['matched_rules']
+
+@pytest.mark.parametrize('adequacy',['unico_apropriado','suspeita_inapropriado'])
+def test_single_recovered_cied_shock_not_automatic_emergency(hubs,adequacy):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',device_type='cdi',
+        icd_shock_history=adequacy,shock_timing_count='unico_recuperado',acute_instability=False)
+    assert result['risk']=='prioritario'
+
+@pytest.mark.parametrize('adequacy',['multiplos_apropriados','suspeita_inapropriado'])
+def test_repeated_cied_shocks_emergency_without_waiting_for_appropriateness(hubs,adequacy):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',device_type='cdi',
+        icd_shock_history=adequacy,shock_timing_count='multiplos_24h',acute_instability=False)
+    assert result['risk']=='emergencia'
+    assert result['recommended_flow']
+
+def test_old_cied_shocks_do_not_trigger_current_storm(hubs):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',device_type='cdi',
+        icd_shock_history='multiplos_apropriados',shock_timing_count='fora_janela',acute_instability=False)
+    assert 'cdi-multiplos-choques-apropriados' not in result['matched_rules']
+
+@pytest.mark.parametrize('battery,dependent,risk',[('eri',True,'prioritario'),('eol',False,'urgente'),('eol',True,'emergencia')])
+def test_battery_eri_and_eol_not_same_route(hubs,battery,dependent,risk):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',battery_status=battery,
+        pacing_dependent=dependent,acute_instability=False)
+    assert result['risk']==risk
+    if battery=='eol':assert 'cied-gerador-proximo-eri' not in result['matched_rules']
+
+def test_nonconditional_complex_mri_does_not_get_generic_clearance(hubs):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',mri_needed=True,
+        device_mri_conditional='nao_condicional',mri_high_risk_lead_context=True)
+    assert 'cied-rm-contexto-lead-alto-risco' in result['matched_rules']
+    assert 'cied-rm-nao-condicional' not in result['matched_rules']
+
+def test_shock_lead_failure_not_reassured_by_pacing_independence(hubs):
+    result=evaluate(hubs,'dispositivos-cardiacos-implantaveis',device_type='cdi',
+        lead_dysfunction_signs=True,pacing_dependent=False,shock_lead_involved_or_suspected=True)
+    assert 'cied-disfuncao-lead-choque' in result['matched_rules']
+    assert 'cied-disfuncao-eletrodo-nao-dependente' not in result['matched_rules']
+    assert result['risk']=='urgente'

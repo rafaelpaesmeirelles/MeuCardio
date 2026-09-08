@@ -3021,5 +3021,1747 @@
       "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
       "snapshot_sha256": "7315355725387eb9a4db43b2ba1e45f655a1434b16c8e58a0f1285f5dadf11d5"
     }
+  ],
+  "scientific_pr_snapshot": [
+    {
+      "number": 910,
+      "headRefName": "feat/tudo-com-tudo-geral-vacinacao-cardiopata-20260907-0324",
+      "headRefOid": "a2c10408dc9849490e31f8a896cd52121aab3c1c",
+      "state": "OPEN"
+    },
+    {
+      "number": 909,
+      "headRefName": "feat/tudo-com-tudo-coronariana-inoca-minoca-ambulatorial-20260907",
+      "headRefOid": "ebe50ee8ce9e568e61d2d017f6a8808cf7c97404",
+      "state": "OPEN"
+    },
+    {
+      "number": 908,
+      "headRefName": "feat/tudo-com-tudo-esporte-miocardite-gate-liberacao-20260907-0319",
+      "headRefOid": "26177f4899c99d72db87d14ea25704de0a5cdcbb",
+      "state": "OPEN"
+    },
+    {
+      "number": 907,
+      "headRefName": "feat/tudo-com-tudo-arritmias-qt-longo-sinalizadores-20260907",
+      "headRefOid": "01bc9ec0a4c875d28d9297d00ee7cba2eeff2952",
+      "state": "OPEN"
+    },
+    {
+      "number": 906,
+      "headRefName": "feat/tudo-com-tudo-dispositivos-alerta-remoto-ambulatorial-20260907",
+      "headRefOid": "6aefa9d69fd4b31edb56552b1b81cc303cbe9795",
+      "state": "OPEN"
+    },
+    {
+      "number": 905,
+      "headRefName": "feat/tudo-com-tudo-valvopatias-sinalizadores-3-20260907",
+      "headRefOid": "a969ce8607cfe98045d105144570284a975607c0",
+      "state": "MERGED"
+    },
+    {
+      "number": 904,
+      "headRefName": "feat/tudo-com-tudo-cardio-oncologia-vegf-tki-htn-ambulatorial-20260907",
+      "headRefOid": "52cfa702d9e1fae3628f1b36a911fb1e412f34fd",
+      "state": "MERGED"
+    },
+    {
+      "number": 903,
+      "headRefName": "grok/tudo-com-tudo-hipertensao-resistente-encaminhamento-ambulatorial-20260907",
+      "headRefOid": "5d8c5ae28ba65578166a02e4e0142dc9f91df28b",
+      "state": "MERGED"
+    },
+    {
+      "number": 902,
+      "headRefName": "feat/tudo-com-tudo-prevencao-estatina-sams-sinalizadores-20260907-0309",
+      "headRefOid": "c26113387a8a9c9225274c23cdfa68a485ee1b4d",
+      "state": "MERGED"
+    },
+    {
+      "number": 901,
+      "headRefName": "feat/tudo-com-tudo-aorta-saa-ambulatorial-20260907",
+      "headRefOid": "54b1ccb47cd3f487b5790c1d52644ce1a61dee88",
+      "state": "MERGED"
+    },
+    {
+      "number": 900,
+      "headRefName": "feat/tudo-com-tudo-tromboembolismo-cat-destino-20260907",
+      "headRefOid": "02fc4bbc4cf7bdcca64d3fcb4ad1f7493e523b78",
+      "state": "MERGED"
+    },
+    {
+      "number": 899,
+      "headRefName": "feat/tudo-com-tudo-arritmias-pvc-carga-sinalizadores-20260907",
+      "headRefOid": "fc0cede0b878c2555fd0a57fddd329cc12fa4547",
+      "state": "MERGED"
+    },
+    {
+      "number": 898,
+      "headRefName": "feat/tudo-com-tudo-ic-ferro-ambulatorial-20260907-0255",
+      "headRefOid": "8d532e59152ed0455caf4ba2b2a0c1add32746c4",
+      "state": "MERGED"
+    },
+    {
+      "number": 897,
+      "headRefName": "grok/tudo-com-tudo-cardiorrenal-sinalizadores-ambulatoriais-lab-20260907",
+      "headRefOid": "8ce3457221cc1c4c37b3ad5b3012180ecc4b420f",
+      "state": "MERGED"
+    },
+    {
+      "number": 896,
+      "headRefName": "feat/tudo-com-tudo-terapia-intensiva-tmcs-ambulatorial-20260907",
+      "headRefOid": "76fd33f81beccb55c09157144f7e0d1d5ea9d9d7",
+      "state": "MERGED"
+    },
+    {
+      "number": 895,
+      "headRefName": "feat/tudo-com-tudo-reabilitacao-domiciliar-rtw-20260907",
+      "headRefOid": "75ca08e60caf771cfa5547abc0b68084bc5421ea",
+      "state": "OPEN"
+    },
+    {
+      "number": 894,
+      "headRefName": "feat/tudo-com-tudo-prevencao-cascata-hf-lipidologia-20260907-0250",
+      "headRefOid": "b5863b76a0fd64abfaf5a0dfd5feb9debb29b6e2",
+      "state": "OPEN"
+    },
+    {
+      "number": 893,
+      "headRefName": "grok/tudo-com-tudo-sincope-eps-ambulatorial-20260907",
+      "headRefOid": "38bcb10b07dfc3a5c68dd00bfab2c9efad3dfec4",
+      "state": "MERGED"
+    },
+    {
+      "number": 892,
+      "headRefName": "feat/tudo-com-tudo-gravidez-ppcm-ambulatorial-20260907-0250",
+      "headRefOid": "d958fbe81d52402809326107f3737b5bdccbcfc4",
+      "state": "OPEN"
+    },
+    {
+      "number": 891,
+      "headRefName": "feat/tudo-com-tudo-farmacologia-pde5-nitrato-20260907-0245",
+      "headRefOid": "37221736962fcf51b54462bae89e9d9249309c4e",
+      "state": "OPEN"
+    },
+    {
+      "number": 890,
+      "headRefName": "feat/tudo-com-tudo-comunicacao-discordancia-familiar-etica-20260907",
+      "headRefOid": "06de9c5ea6138517bb130a80a4c76676b6249479",
+      "state": "OPEN"
+    },
+    {
+      "number": 889,
+      "headRefName": "feat/tudo-com-tudo-endocardite-pos-tratamento-ambulatorial-20260907",
+      "headRefOid": "4afb7d1322f36f663ede9bcfea35283061956db4",
+      "state": "OPEN"
+    },
+    {
+      "number": 888,
+      "headRefName": "feat/tudo-com-tudo-cardiomiopatias-dcm-acm-ambulatorial-20260907",
+      "headRefOid": "6655d754ced5d04a838e74f3591cd43978657c34",
+      "state": "OPEN"
+    },
+    {
+      "number": 887,
+      "headRefName": "feat/tudo-com-tudo-farmacologia-aine-sinalizadores-20260907-0240",
+      "headRefOid": "70337a72bb196e293c911dff1c6f2f5983d46c0d",
+      "state": "OPEN"
+    },
+    {
+      "number": 886,
+      "headRefName": "feat/tudo-com-tudo-diabetes-ascvd-encaminhamento-20260907",
+      "headRefOid": "990d4bc3c3defd9186c4d2a760281eb729ffaf03",
+      "state": "OPEN"
+    },
+    {
+      "number": 885,
+      "headRefName": "feat/tudo-com-tudo-febre-reumatica-suspeita-hospital-20260907",
+      "headRefOid": "4e8fb138f2af81662f283300d60ab1b54dd36acb",
+      "state": "OPEN"
+    },
+    {
+      "number": 884,
+      "headRefName": "feat/tudo-com-tudo-pediatrica-kawasaki-misc-ambulatorial-20260907",
+      "headRefOid": "83fc164efac8a1aea62d64d4ecae155af2774e0d",
+      "state": "OPEN"
+    },
+    {
+      "number": 883,
+      "headRefName": "feat/tudo-com-tudo-fa-pos-cardioversao-ambulatorial-20260907",
+      "headRefOid": "d552bf96872c19a48adf98f8f6ba07c5682ea8d9",
+      "state": "OPEN"
+    },
+    {
+      "number": 882,
+      "headRefName": "feat/tudo-com-tudo-geriatrica-oh-ambulatorial-20260907",
+      "headRefOid": "8aa756de90184b51cae18ff6e4a7b885ebc917a2",
+      "state": "OPEN"
+    },
+    {
+      "number": 881,
+      "headRefName": "feat/tudo-com-tudo-saude-mental-qt-escalacao-ambulatorial-20260907",
+      "headRefOid": "72b23bf29c4cd09f30bd98c681d146abb2925746",
+      "state": "OPEN"
+    },
+    {
+      "number": 880,
+      "headRefName": "feat/tudo-com-tudo-pericardio-constricao-suspeita-20260907-0226",
+      "headRefOid": "41b493f42bc8bc75ac26ff69334437f0fc02ec73",
+      "state": "OPEN"
+    },
+    {
+      "number": 879,
+      "headRefName": "feat/tudo-com-tudo-tireoide-sinalizadores-ambulatoriais-20260907-0222",
+      "headRefOid": "aa5f8b71c6071bf84fa85bbef653e10f3cbc46ee",
+      "state": "OPEN"
+    },
+    {
+      "number": 878,
+      "headRefName": "feat/tudo-com-tudo-ic-avancada-sinalizadores-ambulatoriais-20260907",
+      "headRefOid": "e8ae431bee31a3556d09c8fd8639cc9da7eb7e50",
+      "state": "OPEN"
+    },
+    {
+      "number": 877,
+      "headRefName": "feat/tudo-com-tudo-esporte-hipertensao-escalacao-20260907-0220",
+      "headRefOid": "f73f0752092a411d6e95ddd7158fb4541ec4a14e",
+      "state": "OPEN"
+    },
+    {
+      "number": 876,
+      "headRefName": "feat/tudo-com-tudo-achd-eisenmenger-cianose-ambulatorial-20260907",
+      "headRefOid": "48a2b44b668843170ee558a1676afee7d7419b1f",
+      "state": "OPEN"
+    },
+    {
+      "number": 875,
+      "headRefName": "feat/tudo-com-tudo-aos-saos-sinalizadores-ambulatoriais-20260907-0215",
+      "headRefOid": "f3598856b5055409c3b289ed83d1ba39ec161384",
+      "state": "OPEN"
+    },
+    {
+      "number": 874,
+      "headRefName": "feat/tudo-com-tudo-coronariana-pos-pci-ambulatorial-20260907",
+      "headRefOid": "654fbdbe3f98f7da148dc5d1d521917dfb4a8bd0",
+      "state": "OPEN"
+    },
+    {
+      "number": 873,
+      "headRefName": "feat/tudo-com-tudo-hap-cteph-vd-sincope-20260907-0210",
+      "headRefOid": "52dae89749da15799aa7e8f7689ddc4b0433fc2d",
+      "state": "OPEN"
+    },
+    {
+      "number": 872,
+      "headRefName": "feat/tudo-com-tudo-perioperatorio-sintomas-pos-op-ambulatorial-20260907",
+      "headRefOid": "bd72ae46b87d909af8348448053d46c760aaa66a",
+      "state": "OPEN"
+    },
+    {
+      "number": 871,
+      "headRefName": "feat/tudo-com-tudo-tromboembolismo-tvp-sinalizadores-20260907",
+      "headRefOid": "0406aad0910294ee37f7dfc5ddc0f455e6b49e34",
+      "state": "OPEN"
+    },
+    {
+      "number": 870,
+      "headRefName": "feat/tudo-com-tudo-dispositivos-pre-rm-ambulatorial-20260907-0509",
+      "headRefOid": "6dcaafae3fac6f81536db730ab8e1720f46b5d72",
+      "state": "OPEN"
+    },
+    {
+      "number": 869,
+      "headRefName": "feat/tudo-com-tudo-cardio-oncologia-rihd-ambulatorial-20260907",
+      "headRefOid": "4f231b55ca41c1c85519723822c5f8ca93eddf1d",
+      "state": "OPEN"
+    },
+    {
+      "number": 868,
+      "headRefName": "feat/tudo-com-tudo-aorta-carotida-ambulatorial-20260907-0505",
+      "headRefOid": "281ffddd8d7a741b84a70fd034b4c6d2e17176e4",
+      "state": "OPEN"
+    },
+    {
+      "number": 867,
+      "headRefName": "feat/tudo-com-tudo-arritmias-bradicardia-sinalizadores-20260907-0154",
+      "headRefOid": "26891461acfb531ee13218477915ecf3e15a9890",
+      "state": "OPEN"
+    },
+    {
+      "number": 866,
+      "headRefName": "feat/tudo-com-tudo-valvopatias-sinalizadores-2-20260907-0155",
+      "headRefOid": "33a17df2b912250ae6683eab5f902dd2bcd834db",
+      "state": "OPEN"
+    },
+    {
+      "number": 865,
+      "headRefName": "feat/tudo-com-tudo-hipertensao-secundaria-sinalizadores-1788756781",
+      "headRefOid": "c2a2eba9c1b67731a22e08457dd16925c09cf578",
+      "state": "OPEN"
+    },
+    {
+      "number": 864,
+      "headRefName": "feat/tudo-com-tudo-arritmias-svt-sinalizadores-202609070453",
+      "headRefOid": "32dd67182dd60c6ccc45907d3676b45247e37446",
+      "state": "OPEN"
+    },
+    {
+      "number": 863,
+      "headRefName": "feat/tudo-com-tudo-pediatrica-sinalizadores-20260907-0452",
+      "headRefOid": "6443324e618b6f4214ebb5e4ddc1b0d58e20c8c8",
+      "state": "OPEN"
+    },
+    {
+      "number": 862,
+      "headRefName": "feat/tudo-com-tudo-chagas-sinalizadores-ambulatoriais-20260907-0147",
+      "headRefOid": "d3974573c70c5d65f19e9fc58ad23a8711282ca1",
+      "state": "OPEN"
+    },
+    {
+      "number": 861,
+      "headRefName": "feat/tudo-com-tudo-terapia-intensiva-sinalizadores-202609070448",
+      "headRefOid": "136e750d4837ee8c8ac3f98aa2172cba59c7fe29",
+      "state": "OPEN"
+    },
+    {
+      "number": 860,
+      "headRefName": "feat/tudo-com-tudo-farmacologia-doac-sinalizadores-20260907-0145",
+      "headRefOid": "211782ed6c62621eeb0a56a08825fa96494fb41d",
+      "state": "OPEN"
+    },
+    {
+      "number": 859,
+      "headRefName": "feat/tudo-com-tudo-sincope-sinalizadores-ambulatoriais-20260907-0145",
+      "headRefOid": "3549473ca63e8cd73e81dfa048e0885b5f8b1c6e",
+      "state": "OPEN"
+    },
+    {
+      "number": 858,
+      "headRefName": "feat/tudo-com-tudo-reabilitacao-sinalizadores-20260907-0445",
+      "headRefOid": "e5ebcb690ff8ccc454997a2cb3ef70317d04f18d",
+      "state": "OPEN"
+    },
+    {
+      "number": 857,
+      "headRefName": "feat/tudo-com-tudo-miocardite-sinalizadores-20260907-0140",
+      "headRefOid": "2003b9b51abc9565ad0b8b52bcdeaa55bd88fa14",
+      "state": "OPEN"
+    },
+    {
+      "number": 856,
+      "headRefName": "feat/tudo-com-tudo-comunicacao-sinalizadores-20260907-0139",
+      "headRefOid": "bd42191ee7cbef235c58ac69a4f591186b517ce7",
+      "state": "OPEN"
+    },
+    {
+      "number": 855,
+      "headRefName": "feat/tudo-com-tudo-diabetes-sinalizadores-202609070439",
+      "headRefOid": "2941563482d4d12d14a1500d8f77875382b50e8f",
+      "state": "OPEN"
+    },
+    {
+      "number": 854,
+      "headRefName": "feat/tudo-com-tudo-prevencao-sinalizadores-20260907-0433",
+      "headRefOid": "4e70c2586437dbe8822649ccf2aa7bff78380bd1",
+      "state": "OPEN"
+    },
+    {
+      "number": 853,
+      "headRefName": "feat/tudo-com-tudo-endocardite-sinalizadores-20260907-0136",
+      "headRefOid": "8681918675ca670fd4e10a2ff4110d638a151a2e",
+      "state": "OPEN"
+    },
+    {
+      "number": 852,
+      "headRefName": "feat/tudo-com-tudo-fa-sinalizadores-ambulatoriais-202609070435",
+      "headRefOid": "f2e51bd500d2c1c3aae06e984319296881ce6bde",
+      "state": "OPEN"
+    },
+    {
+      "number": 851,
+      "headRefName": "feat/tudo-com-tudo-geriatrica-sinalizadores-20260907-0434",
+      "headRefOid": "e76c8f94804be7d4ca24c987f30aeecfa8537a85",
+      "state": "OPEN"
+    },
+    {
+      "number": 850,
+      "headRefName": "feat/tudo-com-tudo-febre-reumatica-sinalizadores-20260907-0130",
+      "headRefOid": "bffa86f5123c233671fb768fccc53f252a1b6204",
+      "state": "OPEN"
+    },
+    {
+      "number": 849,
+      "headRefName": "feat/tudo-com-tudo-gravidez-sinalizadores-20260907-0129",
+      "headRefOid": "ab2c23ba6e158aadd7b9678b515148b9f190566b",
+      "state": "OPEN"
+    },
+    {
+      "number": 848,
+      "headRefName": "feat/tudo-com-tudo-esporte-sinalizadores-20260907043010",
+      "headRefOid": "56cc9c32c3e5a4c8ade3d8ba3b567b4aaca364cf",
+      "state": "OPEN"
+    },
+    {
+      "number": 847,
+      "headRefName": "feat/tudo-com-tudo-saude-mental-sinalizadores-20260907-0129",
+      "headRefOid": "e162a2765285acc7d0bc2edb32014ab9b6810882",
+      "state": "OPEN"
+    },
+    {
+      "number": 846,
+      "headRefName": "feat/tudo-com-tudo-pericardio-sinalizadores-20260907-0125",
+      "headRefOid": "30ae1c2647af7655a7fa1da350cd773bfb172bd9",
+      "state": "OPEN"
+    },
+    {
+      "number": 845,
+      "headRefName": "feat/tudo-com-tudo-achd-sinalizadores-202609070425",
+      "headRefOid": "43f646b878518a098655d811a1d5bd6a72fe5e14",
+      "state": "OPEN"
+    },
+    {
+      "number": 844,
+      "headRefName": "feat/tudo-com-tudo-cardiomiopatias-sinalizadores-20260907-0424",
+      "headRefOid": "0718284a4adb90c7d8190398e601bbdb2d379cf3",
+      "state": "OPEN"
+    },
+    {
+      "number": 843,
+      "headRefName": "feat/tudo-com-tudo-coronariana-sinalizadores-20260907",
+      "headRefOid": "b08e33b2c20270f1cd047dc0c26cf2f77e384dd7",
+      "state": "OPEN"
+    },
+    {
+      "number": 842,
+      "headRefName": "feat/tudo-com-tudo-ic-sinalizadores-ambulatoriais-20260907-0423",
+      "headRefOid": "bbbb701a52a9ca607e07af597243ddd958e87494",
+      "state": "OPEN"
+    },
+    {
+      "number": 841,
+      "headRefName": "feat/tudo-com-tudo-hap-sinalizadores-20260907-0118",
+      "headRefOid": "3d93069aaf8031102a0917861bc24eda7e70a3ee",
+      "state": "OPEN"
+    },
+    {
+      "number": 840,
+      "headRefName": "feat/tudo-com-tudo-valvopatias-sinalizadores-20260907",
+      "headRefOid": "8a8f0622f798a0600f2f0f113064df13fb3e8fb0",
+      "state": "OPEN"
+    },
+    {
+      "number": 839,
+      "headRefName": "feat/tudo-com-tudo-arritmias-sinalizadores-202609070418",
+      "headRefOid": "e7397c8bddeaa601ecf794acc1c4a56b60603c05",
+      "state": "OPEN"
+    },
+    {
+      "number": 838,
+      "headRefName": "feat/tudo-com-tudo-farmacologia-monitoramento-20260907041331",
+      "headRefOid": "2dbec90001ddc947ce5a9da70f56d47ddde90bd2",
+      "state": "OPEN"
+    },
+    {
+      "number": 837,
+      "headRefName": "feat/tudo-com-tudo-tromboembolismo-sinalizadores-20260907-0416",
+      "headRefOid": "8d46d9b52e3fbda6d65353a8cb022d09c3b2f87f",
+      "state": "OPEN"
+    },
+    {
+      "number": 836,
+      "headRefName": "feat/tudo-com-tudo-perioperatorio-sinalizadores-20260907-0115",
+      "headRefOid": "b6d5d44b72be551c2730065c888ddb248fe01313",
+      "state": "OPEN"
+    },
+    {
+      "number": 835,
+      "headRefName": "feat/tudo-com-tudo-dispositivos-eletrodo-choque-20260907-0415",
+      "headRefOid": "256e286c761679c7762a9099c400b7ce170524e6",
+      "state": "OPEN"
+    },
+    {
+      "number": 834,
+      "headRefName": "feat/tudo-com-tudo-cardio-oncologia-vigilancia-1788754416",
+      "headRefOid": "383365ac1545d9d925372fff36a87180c78d5e3c",
+      "state": "OPEN"
+    },
+    {
+      "number": 833,
+      "headRefName": "feat/tudo-com-tudo-aorta-dap-sinalizadores-20260907-0413",
+      "headRefOid": "afaf526e8b9f005d8f5c24086841fbe20788e66e",
+      "state": "MERGED"
+    },
+    {
+      "number": 832,
+      "headRefName": "grok/tudo-com-tudo-teach-back-alta-20260907",
+      "headRefOid": "0ae5b47658f33d981f4f060fdde37b1dbc7b9163",
+      "state": "OPEN"
+    },
+    {
+      "number": 831,
+      "headRefName": "agent/tudo-com-tudo-reabilitacao-cardiaca-20260907",
+      "headRefOid": "069799203dc6303d515e5e57f3c34c1753b4643a",
+      "state": "OPEN"
+    },
+    {
+      "number": 830,
+      "headRefName": "grok/tudo-com-tudo-material-reabilitacao-20260907",
+      "headRefOid": "b43162afcd9a46279c63e35a5e631bd91dc0d185",
+      "state": "CLOSED"
+    },
+    {
+      "number": 829,
+      "headRefName": "agent/tudo-com-tudo-cardiorrenal-densidade-20260907",
+      "headRefOid": "1653c3da307984373e4696ad8a59b91fa26bd2d8",
+      "state": "OPEN"
+    },
+    {
+      "number": 828,
+      "headRefName": "grok/tudo-com-tudo-hipertensao-sinalizadores-ambulatoriais-20260907",
+      "headRefOid": "f035a5396f54e33c5ce7331648adef25e5354d77",
+      "state": "MERGED"
+    },
+    {
+      "number": 827,
+      "headRefName": "grok/tudo-com-tudo-fa-anticoagulacao-densidade-20260907",
+      "headRefOid": "66c562b4a2e8afe36b605106637f4dcf0314e559",
+      "state": "OPEN"
+    },
+    {
+      "number": 826,
+      "headRefName": "grok/tudo-com-tudo-diabetes-cv-densidade-20260907",
+      "headRefOid": "250edcb06e2e0ae5879667b52d1c1d92709552a8",
+      "state": "MERGED"
+    },
+    {
+      "number": 798,
+      "headRefName": "release/corvia-science-semantic-20260901",
+      "headRefOid": "6da8f9f913aa81e0b9b29e185ac75b9f8a3a1e7e",
+      "state": "OPEN"
+    },
+    {
+      "number": 761,
+      "headRefName": "release/reviewed-science-grok-claude-20260829",
+      "headRefOid": "97ba95e825a801fad57fce66e9fef34880e5cc74",
+      "state": "OPEN"
+    },
+    {
+      "number": 742,
+      "headRefName": "codex/100-pacotes-012-016-integracoes-20260829",
+      "headRefOid": "c7076a70c2aeaa85deaca565e9279c2c7ef8387f",
+      "state": "OPEN"
+    },
+    {
+      "number": 741,
+      "headRefName": "codex/100-pacotes-007-011-integracoes-20260829",
+      "headRefOid": "429fb9ac11dfa7faf15fc88442ec61ffda0393ad",
+      "state": "OPEN"
+    },
+    {
+      "number": 740,
+      "headRefName": "codex/100-pacotes-002-006-integracoes-20260829",
+      "headRefOid": "65965953b75b811302edbd7d39d8ca8994384cac",
+      "state": "OPEN"
+    },
+    {
+      "number": 739,
+      "headRefName": "codex/100-pacotes-001-tabagismo-20260829",
+      "headRefOid": "4ea57690a0ca36be567a04ef7c60614a798c51d7",
+      "state": "OPEN"
+    },
+    {
+      "number": 725,
+      "headRefName": "codex/guia-fa-tudo-com-tudo-20260829",
+      "headRefOid": "21835b9456acc0c9eee763d141de2ceaaa2abe16",
+      "state": "OPEN"
+    },
+    {
+      "number": 723,
+      "headRefName": "claude/novo-verbete-cardiomiopatia-arritmogenica-20260829",
+      "headRefOid": "60adeb2682e2cc7c585e13077dcedf830597a69c",
+      "state": "OPEN"
+    },
+    {
+      "number": 719,
+      "headRefName": "claude/novo-verbete-sarcoidose-cardiaca-20260829",
+      "headRefOid": "9f0e2bf9cf8e72406f8d47d2c0ca0df0c2a67ca9",
+      "state": "OPEN"
+    },
+    {
+      "number": 718,
+      "headRefName": "claude/novo-verbete-estenose-aortica-20260829",
+      "headRefOid": "bea5c1bafad45d451094b07413f46051e46db1ab",
+      "state": "OPEN"
+    },
+    {
+      "number": 717,
+      "headRefName": "claude/novo-verbete-insuficiencia-aortica-20260829",
+      "headRefOid": "45b008b515960f9a67e95a1894fa275436d81363",
+      "state": "OPEN"
+    },
+    {
+      "number": 716,
+      "headRefName": "claude/novo-verbete-torsades-de-pointes-qt-longo-adquirido-20260829",
+      "headRefOid": "bbc14cf5619a5de9694a6f9ca8ca5709a23d6f8d",
+      "state": "OPEN"
+    },
+    {
+      "number": 715,
+      "headRefName": "claude/novo-verbete-protese-valvar-mecanica-20260829",
+      "headRefOid": "5821962cfa746e805a9e7ce42f082f58dd8b61fb",
+      "state": "OPEN"
+    },
+    {
+      "number": 714,
+      "headRefName": "claude/novo-verbete-cteph-20260829",
+      "headRefOid": "8c022138182a7a97a684e5c29d8c5f4fcb13aeec",
+      "state": "OPEN"
+    },
+    {
+      "number": 713,
+      "headRefName": "claude/novo-verbete-emergencia-hipertensiva-20260829",
+      "headRefOid": "44636777a969a563642b778aaeed95c4c50317a4",
+      "state": "OPEN"
+    },
+    {
+      "number": 712,
+      "headRefName": "claude/novo-sintoma-complicacao-local-pos-cateterismo-procedimento-vascular-20260829",
+      "headRefOid": "94d9343ab9cad08fbdf48361f19ce32bdfce81ec",
+      "state": "OPEN"
+    },
+    {
+      "number": 711,
+      "headRefName": "claude/novo-sintoma-suspeita-infeccao-dispositivo-cardiaco-implantavel-20260829",
+      "headRefOid": "5618ad10b5e3049f2f12e3713f9ee6e667ee8711",
+      "state": "OPEN"
+    },
+    {
+      "number": 710,
+      "headRefName": "claude/novo-verbete-insuficiencia-tricuspide-20260829",
+      "headRefOid": "351ec153d9027111ccbd57d8fca455f2a058d6c9",
+      "state": "OPEN"
+    },
+    {
+      "number": 706,
+      "headRefName": "claude/vincular-tudo-com-tudo-embolia-pulmonar-aguda-20260829",
+      "headRefOid": "d3b5aab567e9d6faf819a7d55da308519b4e90dc",
+      "state": "OPEN"
+    },
+    {
+      "number": 705,
+      "headRefName": "claude/vincular-tudo-com-tudo-parada-cardiorrespiratoria-e-morte-subita-abortada-20260829",
+      "headRefOid": "cedb7afb5f54e93e9099f5e7aaa4c35407a4a153",
+      "state": "OPEN"
+    },
+    {
+      "number": 700,
+      "headRefName": "claude/novo-verbete-amiloidose-cardiaca-cadeia-leve-20260829",
+      "headRefOid": "6cd754860476f0907d116c350f3e4a7dc709a489",
+      "state": "OPEN"
+    },
+    {
+      "number": 699,
+      "headRefName": "claude/novo-verbete-cardiotoxicidade-por-cocaina-e-estimulantes-20260829",
+      "headRefOid": "658246f70c77f38514287db0da843bb225c67e70",
+      "state": "OPEN"
+    },
+    {
+      "number": 698,
+      "headRefName": "claude/novo-verbete-cardiomiopatia-de-takotsubo-20260829",
+      "headRefOid": "4e77803df0eb78ee07436c55b17e514791596e95",
+      "state": "OPEN"
+    },
+    {
+      "number": 697,
+      "headRefName": "claude/novo-verbete-minoca-e-disseccao-espontanea-arteria-coronaria-20260829",
+      "headRefOid": "eb0fe68d7e5e70633afa4f1a950f25d7b793b767",
+      "state": "OPEN"
+    },
+    {
+      "number": 696,
+      "headRefName": "claude/novo-verbete-cardiomiopatia-chagasica-20260829",
+      "headRefOid": "a20d413140a60687ddf31e293193d9c079d279a3",
+      "state": "OPEN"
+    },
+    {
+      "number": 694,
+      "headRefName": "claude/vincular-tudo-com-tudo-avaliacao-cardiovascular-pre-concepcional-20260829",
+      "headRefOid": "d78c8f8f5995899a703f25916b87bb1898680226",
+      "state": "OPEN"
+    },
+    {
+      "number": 693,
+      "headRefName": "claude/vincular-tudo-com-tudo-polifarmacia-e-desprecricao-cardiovascular-20260829",
+      "headRefOid": "15844bf67e09a22198fa3f86ee8f29f0ba636cbf",
+      "state": "OPEN"
+    },
+    {
+      "number": 692,
+      "headRefName": "claude/novo-verbete-sindrome-cardiorrenal-20260829",
+      "headRefOid": "5e107e75c0ad5a04303d2976666e3fda58a08278",
+      "state": "OPEN"
+    },
+    {
+      "number": 690,
+      "headRefName": "claude/novo-verbete-apneia-sono-e-coracao-20260829",
+      "headRefOid": "2d67e7977d61549998e4dd675486e162f3177b04",
+      "state": "OPEN"
+    },
+    {
+      "number": 689,
+      "headRefName": "claude/novo-verbete-cardiomiopatia-dilatada-20260829",
+      "headRefOid": "afeb6a8d209b0f1bd1f3b8ff1f6ba07511caec02",
+      "state": "OPEN"
+    },
+    {
+      "number": 688,
+      "headRefName": "claude/novo-verbete-estenose-mitral-20260829",
+      "headRefOid": "870fdbae359cd5ec7bda14bad2c27cb8462cbfb0",
+      "state": "OPEN"
+    },
+    {
+      "number": 686,
+      "headRefName": "claude/novo-verbete-bloqueio-atrioventricular-20260829",
+      "headRefOid": "62194b5c89d1359befa1cf6691a17f6bc9cfcce7",
+      "state": "OPEN"
+    },
+    {
+      "number": 685,
+      "headRefName": "claude/novo-verbete-insuficiencia-mitral-20260829",
+      "headRefOid": "9e2f18cb93b245af3b6356fef6adcd013cd6e4f8",
+      "state": "OPEN"
+    },
+    {
+      "number": 684,
+      "headRefName": "claude/novo-verbete-obesidade-e-coracao-20260829",
+      "headRefOid": "4d5c58827c9f6eb412434d100e126a7e325fabd2",
+      "state": "OPEN"
+    },
+    {
+      "number": 680,
+      "headRefName": "claude/vincular-tudo-com-tudo-atresia-pulmonar-20260829",
+      "headRefOid": "31287ab93e0f514ce5aeaed91d526346b45a6aa3",
+      "state": "OPEN"
+    },
+    {
+      "number": 679,
+      "headRefName": "claude/vincular-tudo-com-tudo-persistencia-canal-arterial-20260829",
+      "headRefOid": "fbf38f7f3079b603508c01f218d973fdd8629dab",
+      "state": "OPEN"
+    },
+    {
+      "number": 649,
+      "headRefName": "claude/aprofundar-avaliacao-basal-cardiooncologica-20260828",
+      "headRefOid": "44ce5683cea7a0b1c14e8929fe13c97e4cd44be7",
+      "state": "OPEN"
+    },
+    {
+      "number": 648,
+      "headRefName": "claude/vincular-tudo-com-tudo-avaliacao-cardiovascular-pre-concepcional-20260828",
+      "headRefOid": "3523b02225fac72bcf117dd80171684897eb86de",
+      "state": "OPEN"
+    },
+    {
+      "number": 601,
+      "headRefName": "claude/tudo-com-tudo-lacuna-20-20260827",
+      "headRefOid": "fdc67d68f1d22f3456b76d744e1eb430ae8ea0b6",
+      "state": "OPEN"
+    },
+    {
+      "number": 599,
+      "headRefName": "claude/tudo-com-tudo-lacuna-19-20260827",
+      "headRefOid": "2bf33ade4b7265622c0da5e8982e5423b2db0f72",
+      "state": "OPEN"
+    },
+    {
+      "number": 597,
+      "headRefName": "claude/tudo-com-tudo-lacuna-18-20260827",
+      "headRefOid": "4d3ff5f67bc57b3f6a330906bd6660a4cbebf37a",
+      "state": "OPEN"
+    },
+    {
+      "number": 596,
+      "headRefName": "claude/tudo-com-tudo-lacuna-17-20260827",
+      "headRefOid": "a3d5e3ab414d0a20c3c9908f057986bc82657dce",
+      "state": "OPEN"
+    },
+    {
+      "number": 595,
+      "headRefName": "codex/guia-transicao-conotruncal-achd-20260827",
+      "headRefOid": "1d3eda98acc086e335db8bfeb68787396db3a187",
+      "state": "OPEN"
+    },
+    {
+      "number": 594,
+      "headRefName": "claude/tudo-com-tudo-lacuna-16-20260827",
+      "headRefOid": "e3c772b061526c4ee96187c7af441bce5131af01",
+      "state": "OPEN"
+    },
+    {
+      "number": 592,
+      "headRefName": "codex/guia-22q11-cardiovascular-20260827",
+      "headRefOid": "fdcb104214951995bb5562404724ce36f5433c3a",
+      "state": "OPEN"
+    },
+    {
+      "number": 590,
+      "headRefName": "claude/tudo-com-tudo-lacuna-15-20260827",
+      "headRefOid": "0defdd23bac87a4c268e04455b7c6d2fc96c3ffd",
+      "state": "OPEN"
+    },
+    {
+      "number": 589,
+      "headRefName": "codex/guia-valva-truncal-neoaortica-20260827",
+      "headRefOid": "3a160d5659e925a213334a8e57fa8ac96e59a2d4",
+      "state": "OPEN"
+    },
+    {
+      "number": 587,
+      "headRefName": "codex/guia-conduto-vd-ap-20260827",
+      "headRefOid": "4539352974297b6c76f0b262cd93926e0d56c21e",
+      "state": "OPEN"
+    },
+    {
+      "number": 586,
+      "headRefName": "codex/guia-interrupcao-arco-aortico-20260827",
+      "headRefOid": "3e89a33b33d3111e0af41886134677927b383281",
+      "state": "OPEN"
+    },
+    {
+      "number": 585,
+      "headRefName": "claude/tudo-com-tudo-lacuna-14-20260827",
+      "headRefOid": "fc92f4ad30adb5dc0729f7b67b2044ed80dd920d",
+      "state": "OPEN"
+    },
+    {
+      "number": 583,
+      "headRefName": "codex/uco-lactato-perfusao-seriada-20260827",
+      "headRefOid": "9f6a8852e5f34600a97a9a34bba4987525dd79fb",
+      "state": "OPEN"
+    },
+    {
+      "number": 582,
+      "headRefName": "codex/guia-tronco-arterial-comum-operacional-20260827",
+      "headRefOid": "520c492b432771c19c5a4d87759bd282c82fd375",
+      "state": "OPEN"
+    },
+    {
+      "number": 581,
+      "headRefName": "claude/tudo-com-tudo-lacuna-13-20260827",
+      "headRefOid": "df1648f768916159a5c9cfec52bbf8527ede545a",
+      "state": "OPEN"
+    },
+    {
+      "number": 580,
+      "headRefName": "claude/tudo-com-tudo-lacuna-12-20260827",
+      "headRefOid": "a04682dafd0b3bce5e3db026ddef326c935a703a",
+      "state": "OPEN"
+    },
+    {
+      "number": 579,
+      "headRefName": "codex/uco-hipercalemia-seguranca-20260828",
+      "headRefOid": "5716d59a9037ae31bcb8304e577c94f68706047f",
+      "state": "OPEN"
+    },
+    {
+      "number": 578,
+      "headRefName": "claude/tudo-com-tudo-lacuna-11-20260827",
+      "headRefOid": "eb21be83b91c2ac40f120e9fa02ee72f115df560",
+      "state": "OPEN"
+    },
+    {
+      "number": 574,
+      "headRefName": "claude/tudo-com-tudo-lacuna-10-20260827",
+      "headRefOid": "4277d5355178d8dc9c21d73468240a93886602f5",
+      "state": "OPEN"
+    },
+    {
+      "number": 572,
+      "headRefName": "claude/tudo-com-tudo-lacuna-9-20260827",
+      "headRefOid": "0a34c081a119c5a753b6a4172dfc5f3bed0f00b8",
+      "state": "OPEN"
+    },
+    {
+      "number": 570,
+      "headRefName": "claude/tudo-com-tudo-lacuna-8-20260827",
+      "headRefOid": "750e4598483ccde7ea367afe46f92480bc7e7e4d",
+      "state": "OPEN"
+    },
+    {
+      "number": 568,
+      "headRefName": "claude/tudo-com-tudo-lacuna-7-20260827",
+      "headRefOid": "b4771ba835ddf245a5961df3c40d84b9a023a6f8",
+      "state": "OPEN"
+    },
+    {
+      "number": 535,
+      "headRefName": "codex/tudo-com-tudo-colapso-pcr-20260826",
+      "headRefOid": "b9eaa493c34d44d0dd7e9190775702cc557dbffa",
+      "state": "OPEN"
+    },
+    {
+      "number": 526,
+      "headRefName": "codex/overnight-reviewed-batch9-20260826",
+      "headRefOid": "838efc4123ea4cf57a50fd3b9bd4abf25706afcf",
+      "state": "OPEN"
+    },
+    {
+      "number": 525,
+      "headRefName": "codex/overnight-reviewed-batch8-20260826",
+      "headRefOid": "0aa12d5fa51b1d67f12a87a88d3ed8b3e3cb263e",
+      "state": "OPEN"
+    },
+    {
+      "number": 524,
+      "headRefName": "codex/overnight-reviewed-batch7-20260826",
+      "headRefOid": "931c6042829452fbdc6e9d2c881ab237348a3c8d",
+      "state": "OPEN"
+    },
+    {
+      "number": 523,
+      "headRefName": "codex/overnight-reviewed-batch6-20260826",
+      "headRefOid": "2e1880445ee9726bac52d0e6e29df1d3c1ec352f",
+      "state": "OPEN"
+    },
+    {
+      "number": 522,
+      "headRefName": "codex/overnight-reviewed-batch5-20260826",
+      "headRefOid": "01b499a6c9c4c841329c44661a72e91de3f5a71b",
+      "state": "OPEN"
+    },
+    {
+      "number": 521,
+      "headRefName": "codex/overnight-reviewed-batch4-20260826",
+      "headRefOid": "99f3b2dacd528e3b2f2087cd702941dceee9bc11",
+      "state": "OPEN"
+    },
+    {
+      "number": 516,
+      "headRefName": "fix/corpus-qrs-largo-aha2025-20260826",
+      "headRefOid": "b973f1457da713e994c54e1913c20439e3231eb4",
+      "state": "OPEN"
+    },
+    {
+      "number": 444,
+      "headRefName": "content/checklists-round6-dispositivos-reumatica",
+      "headRefOid": "2fd394fb4555c7023e1fe99a5aa5932cb01bc29e",
+      "state": "OPEN"
+    },
+    {
+      "number": 441,
+      "headRefName": "content/checklists-round6-fa-farmacologia-v2",
+      "headRefOid": "b9254369270ed151189dfb8c3563beba888c70ab",
+      "state": "OPEN"
+    },
+    {
+      "number": 440,
+      "headRefName": "content/checklists-round6-valvopatias-pericardio",
+      "headRefOid": "51c3ec5536be1e2f08363eb2357cd27f0c0ddf56",
+      "state": "OPEN"
+    },
+    {
+      "number": 437,
+      "headRefName": "content/checklists-round6-diabetes",
+      "headRefOid": "7938e7da46b9d29e26e7a85d51e861c2328e30c6",
+      "state": "OPEN"
+    },
+    {
+      "number": 434,
+      "headRefName": "content/checklists-round6-ic-dac-v2",
+      "headRefOid": "01d66c7afbe6befb6766606d055e42222227c6f6",
+      "state": "OPEN"
+    },
+    {
+      "number": 432,
+      "headRefName": "content/checklists-round6-gravidez-perioperatorio",
+      "headRefOid": "f21a968778b17204f24fdc854058a02db342890f",
+      "state": "OPEN"
+    },
+    {
+      "number": 431,
+      "headRefName": "content/checklists-round6-aorta",
+      "headRefOid": "606d5fe98215ddb2fd1636acbb8608a126697b9f",
+      "state": "OPEN"
+    },
+    {
+      "number": 429,
+      "headRefName": "content/checklists-round6-hipertensao-valvopatias",
+      "headRefOid": "21c043dcf159c52d9a637d59da242c9d8fa9ce27",
+      "state": "OPEN"
+    },
+    {
+      "number": 428,
+      "headRefName": "content/checklists-round6-prevencao",
+      "headRefOid": "8821de0ca9f0b7e5ca8abfde3da4c1a69b7931b7",
+      "state": "OPEN"
+    },
+    {
+      "number": 425,
+      "headRefName": "content/checklists-round6-farmacologia-fa",
+      "headRefOid": "4549092eabe56e4aba67d659ef638acaab602b0c",
+      "state": "OPEN"
+    },
+    {
+      "number": 415,
+      "headRefName": "content/medicamentos-lote45-ultimos-cinco",
+      "headRefOid": "e778746f38bcf02102e9c30a04e5f881f5632c7c",
+      "state": "OPEN"
+    },
+    {
+      "number": 408,
+      "headRefName": "content/medicamentos-lote43-buscas-negativas",
+      "headRefOid": "a620e5d7cd36e2b83bbe353ba159dc77e3761ff3",
+      "state": "OPEN"
+    },
+    {
+      "number": 405,
+      "headRefName": "content/checklists-round5-hp-cardiooncologia",
+      "headRefOid": "9f7737dba5183c527387770b229bbb8dcb02d802",
+      "state": "OPEN"
+    },
+    {
+      "number": 404,
+      "headRefName": "content/checklists-round5-diabetes-ic",
+      "headRefOid": "68cc2399a33957e1e728a0333fbeb7235dab26cd",
+      "state": "OPEN"
+    },
+    {
+      "number": 402,
+      "headRefName": "content/checklists-round5-perioperatorio-gravidez",
+      "headRefOid": "cbbfb0d3bcca3814f26c94cdc66fe296805df29e",
+      "state": "OPEN"
+    },
+    {
+      "number": 401,
+      "headRefName": "content/checklists-round5-reumatica-arritmias",
+      "headRefOid": "aae5313ac05506f25e8812d74ccaf5cb6b2cda4b",
+      "state": "OPEN"
+    },
+    {
+      "number": 400,
+      "headRefName": "content/checklists-round5-dispositivos-farmacologia",
+      "headRefOid": "3a419f1fb5fe33a42f65a3cd771b28235084c102",
+      "state": "OPEN"
+    },
+    {
+      "number": 399,
+      "headRefName": "content/checklists-round5-fa-hipertensao",
+      "headRefOid": "29cc7f005e0f56c9db42e9781bd1a4df23948deb",
+      "state": "OPEN"
+    },
+    {
+      "number": 398,
+      "headRefName": "content/medicamentos-lote42-marcas-adicionais",
+      "headRefOid": "4ba0dda428b596ee26057cc7941209484be9542e",
+      "state": "OPEN"
+    },
+    {
+      "number": 395,
+      "headRefName": "content/medicamentos-lote41-marcas-adicionais",
+      "headRefOid": "c76e870463acba34e647ebe837a776acf653bacb",
+      "state": "OPEN"
+    },
+    {
+      "number": 394,
+      "headRefName": "content/checklists-round5-valvopatias-prevencao",
+      "headRefOid": "787baa60c53ce23a9bdfb3c9cf2cde4b14dffb15",
+      "state": "OPEN"
+    },
+    {
+      "number": 392,
+      "headRefName": "content/checklists-round5-dac-cardiomiopatias",
+      "headRefOid": "d036b0bacf3bfd13c50619c2faf3a49cb9c81b32",
+      "state": "OPEN"
+    },
+    {
+      "number": 391,
+      "headRefName": "content/checklists-round5-sincope-ti",
+      "headRefOid": "f80e901fc858135f6dfd393e0d8c258f6affac12",
+      "state": "OPEN"
+    },
+    {
+      "number": 389,
+      "headRefName": "content/medicamentos-lote40-marcas-adicionais",
+      "headRefOid": "4af7df83ef336fae3dff1e03ad17bb3611927d54",
+      "state": "OPEN"
+    },
+    {
+      "number": 388,
+      "headRefName": "content/checklists-round5-endocardite-pericardio",
+      "headRefOid": "ebed169e2d06ebf14b1c8976ba26573a73004734",
+      "state": "OPEN"
+    },
+    {
+      "number": 387,
+      "headRefName": "content/medicamentos-lote39-marcas-adicionais",
+      "headRefOid": "acbb2cd57d5b9703c6477acbcbe2d237dc299cb0",
+      "state": "OPEN"
+    },
+    {
+      "number": 384,
+      "headRefName": "content/checklists-round5-aorta-congenitas",
+      "headRefOid": "02ac2115e26d41a163606347022b354e68dac822",
+      "state": "OPEN"
+    },
+    {
+      "number": 383,
+      "headRefName": "content/medicamentos-lote38-marcas-adicionais",
+      "headRefOid": "2143423b894754b34afc8aa69f9d3262117b5247",
+      "state": "OPEN"
+    },
+    {
+      "number": 379,
+      "headRefName": "content/medicamentos-lote37-marcas-adicionais",
+      "headRefOid": "2665b320ce0105aa2897e100bd0abd03e3d7047a",
+      "state": "OPEN"
+    },
+    {
+      "number": 374,
+      "headRefName": "content/medicamentos-lote36-marcas-adicionais",
+      "headRefOid": "a4850476d0bc4a0ffd99a76981749287ac00d5c6",
+      "state": "OPEN"
+    },
+    {
+      "number": 370,
+      "headRefName": "content/checklists-round4-arritmias-calculadoras",
+      "headRefOid": "ad37a0b5e475c7b05d97d65caab97554206544c9",
+      "state": "OPEN"
+    },
+    {
+      "number": 369,
+      "headRefName": "content/checklists-round4-saudemental-esporte",
+      "headRefOid": "fbc336854bbe5077a4b457aec7e6eefa835f3430",
+      "state": "OPEN"
+    },
+    {
+      "number": 368,
+      "headRefName": "content/checklists-round4-pediatrica-geriatrica",
+      "headRefOid": "7d1e981da3789b5e9cbe9fb7f863bd164e4860a8",
+      "state": "OPEN"
+    },
+    {
+      "number": 366,
+      "headRefName": "content/checklists-round4-reumatica-trombo",
+      "headRefOid": "48b902ff5d7c83650cdb6f89e29f16613713fcaf",
+      "state": "OPEN"
+    },
+    {
+      "number": 365,
+      "headRefName": "content/medicamentos-lote35-marcas-adicionais",
+      "headRefOid": "8d7950b68ddf546da1979ef5d597eedf7aa27eda",
+      "state": "OPEN"
+    },
+    {
+      "number": 364,
+      "headRefName": "content/checklists-round4-diabetes-cardiooncologia",
+      "headRefOid": "20a825d3b0f430c5559e1d30779ca2b09bb1ac8e",
+      "state": "OPEN"
+    },
+    {
+      "number": 363,
+      "headRefName": "content/checklists-round4-comunicacao-geral",
+      "headRefOid": "61174fcd0d9292d2b5b9a3675b7277437dea18d4",
+      "state": "OPEN"
+    },
+    {
+      "number": 361,
+      "headRefName": "content/medicamentos-lote34-marcas-adicionais",
+      "headRefOid": "13019f90cbd8e6877eb52a27395a30f92aa15809",
+      "state": "OPEN"
+    },
+    {
+      "number": 360,
+      "headRefName": "content/checklists-round4-farmacologia-perioperatorio",
+      "headRefOid": "ab8a4128ea42d8a94e8658aeafca3b14931ebe4a",
+      "state": "OPEN"
+    },
+    {
+      "number": 359,
+      "headRefName": "content/checklists-round4-gravidez-hp",
+      "headRefOid": "bde99ee98130ab76e454b7c57c5be7fc0516d32e",
+      "state": "OPEN"
+    },
+    {
+      "number": 357,
+      "headRefName": "content/medicamentos-lote33-marcas-adicionais",
+      "headRefOid": "ba417fc25b98a71c12a5ce52341092333d68ece6",
+      "state": "OPEN"
+    },
+    {
+      "number": 356,
+      "headRefName": "content/checklists-round4-sincope-ti",
+      "headRefOid": "594e68dd7f718fcb0031cb0f7dae92eaf86b7f12",
+      "state": "OPEN"
+    },
+    {
+      "number": 355,
+      "headRefName": "content/checklists-round4-aorta-congenitas",
+      "headRefOid": "734b3191f290a139afaa1f016e6e88d3c6b516b5",
+      "state": "OPEN"
+    },
+    {
+      "number": 353,
+      "headRefName": "content/medicamentos-lote32-marcas-adicionais",
+      "headRefOid": "caf4e37f56f393573e0bd13e76ad222349bd1dc6",
+      "state": "OPEN"
+    },
+    {
+      "number": 351,
+      "headRefName": "content/checklists-round4-pericardio-endocardite",
+      "headRefOid": "a1e61015b70234d185a6ccfad35a5b6556ef812d",
+      "state": "OPEN"
+    },
+    {
+      "number": 350,
+      "headRefName": "content/checklists-round4-dispositivos-cardiomiopatias",
+      "headRefOid": "cacb393dea459570ea4097938283b5b9f963cb5a",
+      "state": "OPEN"
+    },
+    {
+      "number": 349,
+      "headRefName": "content/medicamentos-lote31-marcas-adicionais",
+      "headRefOid": "c4877bd25f3cb557a9c5940ed7fc915dbd79ad84",
+      "state": "OPEN"
+    },
+    {
+      "number": 348,
+      "headRefName": "content/checklists-round4-prevencao-valvopatias",
+      "headRefOid": "2b544489407dedc528e792fd08a3344593548977",
+      "state": "OPEN"
+    },
+    {
+      "number": 347,
+      "headRefName": "content/checklists-round4-fa-has",
+      "headRefOid": "98ee6d9e2ef361fbea0c742ab7be9096e07642dd",
+      "state": "OPEN"
+    },
+    {
+      "number": 345,
+      "headRefName": "content/checklists-round4-ic-dac",
+      "headRefOid": "e794a1491f4526ffcc06d0cb138513e722ca37d7",
+      "state": "OPEN"
+    },
+    {
+      "number": 342,
+      "headRefName": "content/medicamentos-lote30-marcas-adicionais",
+      "headRefOid": "271f4a928a5be36bc0abaa59b320637e14c24bef",
+      "state": "OPEN"
+    },
+    {
+      "number": 338,
+      "headRefName": "content/medicamentos-lote29-marcas-adicionais",
+      "headRefOid": "7af7c83340062ef11df09288e82f71d9174b7d3f",
+      "state": "OPEN"
+    },
+    {
+      "number": 333,
+      "headRefName": "content/medicamentos-lote28-sildenafila",
+      "headRefOid": "3defc1e9a8f3a984acc9df72be166ac18f8cc996",
+      "state": "OPEN"
+    },
+    {
+      "number": 330,
+      "headRefName": "content/checklists-round3-perioperatorio-farmacologia",
+      "headRefOid": "00f66da5d274cf67268d229d51e38e1f932a2539",
+      "state": "OPEN"
+    },
+    {
+      "number": 329,
+      "headRefName": "content/medicamentos-lote27-fenofibrato-liraglutida",
+      "headRefOid": "23b288ef08e65b9de00a25eb07b6e0a537a15215",
+      "state": "OPEN"
+    },
+    {
+      "number": 327,
+      "headRefName": "content/checklists-round3-comunicacao-geral",
+      "headRefOid": "68b7fd34b1cad44c2ffa891cc1a7a119df5b17ab",
+      "state": "OPEN"
+    },
+    {
+      "number": 326,
+      "headRefName": "content/checklists-round3-saudemental-esporte",
+      "headRefOid": "06b50d04faa817aea74c429ea61f30aaaa61d048",
+      "state": "OPEN"
+    },
+    {
+      "number": 325,
+      "headRefName": "content/medicamentos-lote26-epikabi",
+      "headRefOid": "075889f37b03eeaf5d6b110ae86842dc50b1ce0e",
+      "state": "OPEN"
+    },
+    {
+      "number": 324,
+      "headRefName": "content/checklists-round3-gravidez-hp",
+      "headRefOid": "ac03fb773d1e91bdf29e81ccf26a621f5b8c7e61",
+      "state": "OPEN"
+    },
+    {
+      "number": 322,
+      "headRefName": "content/checklists-round3-calculadoras-cardiooncologia",
+      "headRefOid": "a05c37c817c568328b30dff7d7fc5bdd7cc87dd3",
+      "state": "OPEN"
+    },
+    {
+      "number": 319,
+      "headRefName": "content/checklists-round3-ti-dispositivos",
+      "headRefOid": "d4a29750667e121d17e26cb6f674bf8ea7ea235e",
+      "state": "OPEN"
+    },
+    {
+      "number": 318,
+      "headRefName": "content/checklists-round3-aorta-congenitas",
+      "headRefOid": "d0b96abb8b1cf242a5fcbe4a9c01e6ca6b975e8e",
+      "state": "OPEN"
+    },
+    {
+      "number": 296,
+      "headRefName": "content/checklists-round3-cardiomiopatias-endocardite",
+      "headRefOid": "3352009fad3156913eea9844ef16b67f1c66ba39",
+      "state": "OPEN"
+    },
+    {
+      "number": 292,
+      "headRefName": "content/checklists-round3-pericardio-sincope",
+      "headRefOid": "46639fe8c2cba165a0c82dd511139d86a0b78674",
+      "state": "OPEN"
+    },
+    {
+      "number": 290,
+      "headRefName": "content/medicamentos-lote24-moduretic-neparvis",
+      "headRefOid": "7ba369b2e5ee791a75c81541ddb01c5f94c40cfd",
+      "state": "OPEN"
+    },
+    {
+      "number": 289,
+      "headRefName": "content/checklists-round3-arritmias-valvopatias",
+      "headRefOid": "802f5f87ecd08aef97b91f0dc742e44e4ddaf462",
+      "state": "OPEN"
+    },
+    {
+      "number": 287,
+      "headRefName": "content/checklists-round3-prevencao-diabetes",
+      "headRefOid": "a7482221fac9bed593ebaba9df2557e3a6109b40",
+      "state": "OPEN"
+    },
+    {
+      "number": 286,
+      "headRefName": "content/medicamentos-lote23-rosuvastatina",
+      "headRefOid": "75726eb60cb693fe00220a33c762d2525b07e3cb",
+      "state": "OPEN"
+    },
+    {
+      "number": 284,
+      "headRefName": "content/checklists-round3-dac-ic-ht-fa",
+      "headRefOid": "da4eeed70af551c15e657cbdc4375aac3f4c7728",
+      "state": "OPEN"
+    },
+    {
+      "number": 283,
+      "headRefName": "claude/medicamentos-lote22",
+      "headRefOid": "3fd39e6d435ef750792bd4c3d37499354d55862b",
+      "state": "OPEN"
+    },
+    {
+      "number": 281,
+      "headRefName": "claude/checklists-geral-esporte-2",
+      "headRefOid": "1d9ba9e9726c89e54e8fea8cf471fd4e953cd84b",
+      "state": "OPEN"
+    },
+    {
+      "number": 280,
+      "headRefName": "claude/checklists-calculadoras-comunicacao-2",
+      "headRefOid": "32c2ea9924855dddfd714d08d96f73168ceeca9f",
+      "state": "OPEN"
+    },
+    {
+      "number": 279,
+      "headRefName": "claude/medicamentos-lote21",
+      "headRefOid": "b6d59ee8781497d8e6a86a4aa067b0f0ef328ea6",
+      "state": "OPEN"
+    },
+    {
+      "number": 278,
+      "headRefName": "claude/checklists-hp-saudemental-2",
+      "headRefOid": "93fda84c629442ebc0309c3f82811ee73cc7a4b5",
+      "state": "OPEN"
+    },
+    {
+      "number": 276,
+      "headRefName": "claude/checklists-pericardio-sincope-2",
+      "headRefOid": "a76b48cc24f7c157c5fe11182c90c2f34ba69261",
+      "state": "OPEN"
+    },
+    {
+      "number": 275,
+      "headRefName": "claude/medicamentos-lote20",
+      "headRefOid": "8ed1a2c5a033ee2c55fc24bc7cf19d9f63769ee9",
+      "state": "OPEN"
+    },
+    {
+      "number": 273,
+      "headRefName": "claude/checklists-ti-cardiooncologia-2",
+      "headRefOid": "88f0b2b98db635e0ff3a657b424a88df67a552f7",
+      "state": "OPEN"
+    },
+    {
+      "number": 272,
+      "headRefName": "claude/checklists-diabetes-arritmias-2",
+      "headRefOid": "a83943027a154e129c5c76a177536619f9698102",
+      "state": "OPEN"
+    },
+    {
+      "number": 271,
+      "headRefName": "claude/medicamentos-lote19",
+      "headRefOid": "7a7b33a268ad4e789a3d98288c04fd84322a44d3",
+      "state": "OPEN"
+    },
+    {
+      "number": 269,
+      "headRefName": "claude/checklists-congenitas-reumatica-2",
+      "headRefOid": "de4b32a4d5f8fff797abd5ede76705f1545f591a",
+      "state": "OPEN"
+    },
+    {
+      "number": 268,
+      "headRefName": "claude/medicamentos-lote18",
+      "headRefOid": "503f521402b384301eef59d1e913acfd8d3b49b8",
+      "state": "OPEN"
+    },
+    {
+      "number": 267,
+      "headRefName": "claude/checklists-hipertensao-fa-2",
+      "headRefOid": "60e4eb74fd33de49c50e3b616610ee6daf9a7685",
+      "state": "OPEN"
+    },
+    {
+      "number": 265,
+      "headRefName": "claude/medicamentos-lote17",
+      "headRefOid": "2d9bc891cee4a4b2dbdcd006a47c82e8f97c7483",
+      "state": "OPEN"
+    },
+    {
+      "number": 263,
+      "headRefName": "claude/checklists-aorta-gravidez-2",
+      "headRefOid": "383759287fdb6caee46efcba3296cf9a2d730bc7",
+      "state": "OPEN"
+    },
+    {
+      "number": 262,
+      "headRefName": "claude/medicamentos-lote16",
+      "headRefOid": "e6b84e50bfa260b42e4ce7c63f180f9f08b4d0ec",
+      "state": "OPEN"
+    },
+    {
+      "number": 260,
+      "headRefName": "claude/checklists-cardiomiopatias-endocardite-2",
+      "headRefOid": "3e81fc30fe8204c6c86868eb66d627ceae6cae41",
+      "state": "OPEN"
+    },
+    {
+      "number": 259,
+      "headRefName": "claude/medicamentos-lote15",
+      "headRefOid": "01febd9fbade643460d7f95433456b3cbd2bbbe8",
+      "state": "OPEN"
+    },
+    {
+      "number": 257,
+      "headRefName": "claude/checklists-trombo-valvo-2",
+      "headRefOid": "a3a74c7cb2203c3922a097a8c86e94b0518bf702",
+      "state": "OPEN"
+    },
+    {
+      "number": 254,
+      "headRefName": "content/checklists-dispositivos-2",
+      "headRefOid": "b3f023db9d9970b6e5458e34f3bac3aa1bb47134",
+      "state": "OPEN"
+    },
+    {
+      "number": 253,
+      "headRefName": "content/checklists-prevencao-2",
+      "headRefOid": "101e3e95ac0603bf595dcfdd5e42da6b5a47a013",
+      "state": "OPEN"
+    },
+    {
+      "number": 252,
+      "headRefName": "content/medicamentos-lote14",
+      "headRefOid": "fdb93a25036f84bff707e5e9b9ab9b2647c4478c",
+      "state": "OPEN"
+    },
+    {
+      "number": 249,
+      "headRefName": "content/checklists-ic-2",
+      "headRefOid": "70e53a0aa0473f6302c67cd01058db0cd80cca96",
+      "state": "OPEN"
+    },
+    {
+      "number": 248,
+      "headRefName": "content/checklists-doenca-coronariana-2",
+      "headRefOid": "409adb69bab94da446b8df339179ce69505b01f2",
+      "state": "OPEN"
+    },
+    {
+      "number": 246,
+      "headRefName": "content/checklists-fa-2",
+      "headRefOid": "d83b57fdc4e97bcc1aa15648ebd7bb5e8ed8e7bd",
+      "state": "OPEN"
+    },
+    {
+      "number": 245,
+      "headRefName": "content/medicamentos-lote13",
+      "headRefOid": "8f06e2189e5e655bdac81855295abdc39f195743",
+      "state": "OPEN"
+    },
+    {
+      "number": 244,
+      "headRefName": "content/medicamentos-lote12",
+      "headRefOid": "615d2c2c86839f6d7dc52c171a2586440e072eb7",
+      "state": "OPEN"
+    },
+    {
+      "number": 238,
+      "headRefName": "content/checklists-esporte",
+      "headRefOid": "75b1d7229562a4e58b8b800deaff0b81b63a9461",
+      "state": "OPEN"
+    },
+    {
+      "number": 237,
+      "headRefName": "content/checklists-farmacologia",
+      "headRefOid": "ebc4e09ba826e45da9f05f1083ecd96261f8a8f5",
+      "state": "OPEN"
+    },
+    {
+      "number": 236,
+      "headRefName": "content/checklists-hipertensao-pulmonar",
+      "headRefOid": "0a8a8678ba0530ceb48f06e8744b5392c7875939",
+      "state": "OPEN"
+    },
+    {
+      "number": 235,
+      "headRefName": "content/checklists-geral",
+      "headRefOid": "f5301fe1282276a032c956ffeafc9a9fb7cec181",
+      "state": "OPEN"
+    },
+    {
+      "number": 234,
+      "headRefName": "content/checklists-pericardio",
+      "headRefOid": "b5f66094b0a3a6b7b58c2662eb6ccc88b490d741",
+      "state": "OPEN"
+    },
+    {
+      "number": 233,
+      "headRefName": "content/checklists-cardiopatias-congenitas",
+      "headRefOid": "18898b413b24f31cc025a61989f9480753c6ae6f",
+      "state": "OPEN"
+    },
+    {
+      "number": 232,
+      "headRefName": "content/checklists-comunicacao-clinica",
+      "headRefOid": "1bd73056cf35453fb1db13f8efae32aeebb66450",
+      "state": "OPEN"
+    },
+    {
+      "number": 231,
+      "headRefName": "content/checklists-terapia-intensiva",
+      "headRefOid": "7831fe050343c6d80ae034eab3f03a5e5bea9c9e",
+      "state": "OPEN"
+    },
+    {
+      "number": 230,
+      "headRefName": "content/medicamentos-lote11-doac-ieca",
+      "headRefOid": "12c6f74153eeb46f5d7590e13bf68efda6f9c018",
+      "state": "OPEN"
+    },
+    {
+      "number": 227,
+      "headRefName": "content/checklists-calculadoras",
+      "headRefOid": "1aa9144924fe4b0785d53c062a3bd0d71bcaac10",
+      "state": "OPEN"
+    },
+    {
+      "number": 226,
+      "headRefName": "content/checklists-cardio-oncologia",
+      "headRefOid": "42433f81223477afedb6d5c75b5da1b670839c64",
+      "state": "OPEN"
+    },
+    {
+      "number": 225,
+      "headRefName": "content/checklists-febre-reumatica",
+      "headRefOid": "8c457f90e0f76db3f8a0bccda8fe3cf3cdea6907",
+      "state": "OPEN"
+    },
+    {
+      "number": 223,
+      "headRefName": "content/checklists-hipertensao-2",
+      "headRefOid": "a2f1a53503807aa4bd2a7f0a241460f01b708baa",
+      "state": "OPEN"
+    },
+    {
+      "number": 222,
+      "headRefName": "content/medicamentos-lote10-combos",
+      "headRefOid": "4bc9164c6e42cd735b86e32f96ab29f00ee95963",
+      "state": "OPEN"
+    },
+    {
+      "number": 221,
+      "headRefName": "content/checklists-gravidez",
+      "headRefOid": "437ed72a0d0423e544632b7812f5a02ab415f933",
+      "state": "OPEN"
+    },
+    {
+      "number": 219,
+      "headRefName": "content/checklists-pediatrica",
+      "headRefOid": "d986c66fa9f682373e154d0261821a6e1e0ce56b",
+      "state": "OPEN"
+    },
+    {
+      "number": 216,
+      "headRefName": "content/checklists-aorta-dap",
+      "headRefOid": "3e9e39a6377268974e4e7181d9a229358fe857a2",
+      "state": "OPEN"
+    },
+    {
+      "number": 215,
+      "headRefName": "content/medicamentos-lote9-beta-diuretico",
+      "headRefOid": "0375db6a7bcd3ceb7ea53e800ddbbed4015bc273",
+      "state": "OPEN"
+    },
+    {
+      "number": 214,
+      "headRefName": "content/medicamentos-lote8-estatinas-doac",
+      "headRefOid": "7a36efb7d55de2fc2c33312351c18fe75a2ae3b6",
+      "state": "OPEN"
+    },
+    {
+      "number": 213,
+      "headRefName": "content/checklists-cardiomiopatias",
+      "headRefOid": "a5ea76a36815c84e5f5e31851eee0346d698c207",
+      "state": "OPEN"
+    },
+    {
+      "number": 209,
+      "headRefName": "content/checklists-endocardite",
+      "headRefOid": "68844440721c5438b1d9ab33f401ea1b512e6576",
+      "state": "OPEN"
+    },
+    {
+      "number": 208,
+      "headRefName": "content/checklists-valvopatias",
+      "headRefOid": "337f0c95f3a25d2e8cde37eb35d4dae480e7926e",
+      "state": "OPEN"
+    },
+    {
+      "number": 207,
+      "headRefName": "content/checklists-geriatrica",
+      "headRefOid": "09ce61402fb76f8d6f414bf4f1565926b9ea8a12",
+      "state": "OPEN"
+    },
+    {
+      "number": 203,
+      "headRefName": "content/medicamentos-brandnames-lote7",
+      "headRefOid": "51ee53101c6b4e36f018ddd7d549093b06f51e98",
+      "state": "OPEN"
+    },
+    {
+      "number": 202,
+      "headRefName": "content/checklists-sincope",
+      "headRefOid": "271056b810dd935cb3aaee55df7b2d372399376d",
+      "state": "OPEN"
+    },
+    {
+      "number": 201,
+      "headRefName": "content/checklists-perioperatorio",
+      "headRefOid": "690ab6574a6037c309afb280ddb7b6ab27bdbac8",
+      "state": "OPEN"
+    },
+    {
+      "number": 197,
+      "headRefName": "claude/corvia-medicamentos-brandnames-lote6",
+      "headRefOid": "01e2e36246c840fff3a03c7dd4668cbbab3ed40e",
+      "state": "OPEN"
+    },
+    {
+      "number": 195,
+      "headRefName": "claude/corvia-medicamentos-brandnames-lote5",
+      "headRefOid": "b21d116bee87ef07b97e14957dfa1dbf23868dbc",
+      "state": "OPEN"
+    },
+    {
+      "number": 194,
+      "headRefName": "claude/corvia-checklists-dispositivos-lote",
+      "headRefOid": "ef27e617d00dd8fe5b3567997de81b8cafcdb1b6",
+      "state": "OPEN"
+    },
+    {
+      "number": 193,
+      "headRefName": "claude/corvia-checklists-tromboembolismo-lote",
+      "headRefOid": "f04fb86cc58e869cbcd95d259cafd539491a2903",
+      "state": "OPEN"
+    },
+    {
+      "number": 190,
+      "headRefName": "claude/corvia-medicamentos-brandnames-lote4",
+      "headRefOid": "eef24dca1942befb149896d8ae311d695e0c3148",
+      "state": "OPEN"
+    },
+    {
+      "number": 188,
+      "headRefName": "claude/corvia-checklists-dac-lote",
+      "headRefOid": "31964b2055082df7a99a3eeb59e7a2852499d598",
+      "state": "OPEN"
+    },
+    {
+      "number": 187,
+      "headRefName": "claude/corvia-checklists-fa-lote",
+      "headRefOid": "24785771698c7849e23256b0ad84af778c664558",
+      "state": "OPEN"
+    },
+    {
+      "number": 186,
+      "headRefName": "claude/corvia-medicamentos-kairos-lote",
+      "headRefOid": "e047bed37c08a3f20d708f2ebca3199e456ffabc",
+      "state": "OPEN"
+    },
+    {
+      "number": 180,
+      "headRefName": "claude/corvia-medicamentos-lote4-antibiotico-aine-broncodilatador",
+      "headRefOid": "1a984fba9a9a5b0230d9064f57728c8bab4caf45",
+      "state": "OPEN"
+    },
+    {
+      "number": 178,
+      "headRefName": "claude/corvia-checklists-insuficiencia-cardiaca-lote2",
+      "headRefOid": "12dda0cacfcf0d22d00086d7bdd0ca3321737a24",
+      "state": "OPEN"
+    },
+    {
+      "number": 176,
+      "headRefName": "claude/corvia-checklists-saude-mental-lote2",
+      "headRefOid": "e9d18df85efa64f77a9bf9a9eec7559ca739eb14",
+      "state": "OPEN"
+    },
+    {
+      "number": 175,
+      "headRefName": "claude/corvia-medicamentos-lote3-nao-cardio",
+      "headRefOid": "fd28c48886d6bae16b3f979114b82b84d4dc1235",
+      "state": "OPEN"
+    },
+    {
+      "number": 170,
+      "headRefName": "claude/corvia-checklists-diabetes-cardiologia",
+      "headRefOid": "305857415a88ef579a44ebd5aa9bb7101232d8e5",
+      "state": "OPEN"
+    },
+    {
+      "number": 169,
+      "headRefName": "claude/corvia-checklists-hipertensao-lote2",
+      "headRefOid": "550e756eff8a659b6276e6512bbd69dd01927115",
+      "state": "OPEN"
+    },
+    {
+      "number": 168,
+      "headRefName": "claude/corvia-checklists-prevencao-lipidios",
+      "headRefOid": "fb63065fda7f80fdb4ec15be59216f44bb579b4a",
+      "state": "OPEN"
+    }
   ]
 }
