@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 43,
-  "pending_count": 120,
+  "reviewed_count": 44,
+  "pending_count": 119,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -213,8 +213,22 @@
     {
       "index": 11,
       "path": "content/Cardiologia_geriátrica/hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "eb6947e0a8d095895f91d4f14166482719d65165a72b716cd3845bef0c760ec9"
+      "status": "corrected_reviewed",
+      "source_sha256": "eb6947e0a8d095895f91d4f14166482719d65165a72b716cd3845bef0c760ec9",
+      "findings": [
+        "Incluída anticoagulação por risco em FA tireotóxica e urgência cardiovascular; não aguardar eutireoidismo se instável.",
+        "Hipertireoidismo subclínico exige persistência e exclusão de causas transitórias; TSH baixo não é necessariamente indetectável.",
+        "Collet FA n8711, não52674; Gencer apenas subclínicos e coortes compartilhadas; associação não prova benefício de tratar.",
+        "PIRAHTES2024 ITT neutro p0,238; pós-hoc de normalização não preserva randomização e radioiodo pode causar hipotireoidismo.",
+        "Amiodarona não é terapia tireoidiana rotineira; AIT mista pode precisar combinação inicial e deterioração rápida de tireoidectomia."
+      ],
+      "sources": [
+        "13 referências originais: identidades e abstracts disponíveis conferidos; Lahey1931 sem abstract, sem alegar leitura integral.",
+        "ATA2016 recomendações2/3/83 e diagnóstico consultados no editor; errata2017 (RAI pediátrico) e2025 (tabela Burch-Wartofsky) lidos, sem alteração relevante nas recomendações usadas.",
+        "ETA2015 DOI000438750; AIT2018 PMID29594056; ACC/AHA2023 seção10.11 e PIRAHTES39159264 primárias consultadas.",
+        "Klein2007 tem aviso de erratum sem PMID no XML; não utilizado para magnitudes/recomendações específicas."
+      ],
+      "reviewed_sha256": "b8450269ca29fbcc67f5078f2a97cdf5609430af30e656d190524f93d4f0ecf7"
     },
     {
       "index": 12,

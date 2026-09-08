@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 43 documentos lidos integralmente e corrigidos; 120 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 44 documentos lidos integralmente e corrigidos; 119 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -111,6 +111,16 @@ Fontes verificadas: 14 referências originais: identidades conferidas; abstracts
 - HepatiteB não usa ribavirina padrão; resposta molecular não prova modificação de história natural; dois casos gestacionais não validam classe.
 
 Fontes verificadas: 12 PMIDs originais: identidade e abstracts conferidos individualmente., Bulas oficiais DailyMed BESREMi/PEGASYS seções5.3 e advertências da associação com ribavirina consultadas em08/09/2026., AASLD/IDSA HCV Guidance atual consultada; não alegada aprovação local específica de formulações..
+
+## 11 — content/Cardiologia_geriátrica/hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca.md
+
+- Incluída anticoagulação por risco em FA tireotóxica e urgência cardiovascular; não aguardar eutireoidismo se instável.
+- Hipertireoidismo subclínico exige persistência e exclusão de causas transitórias; TSH baixo não é necessariamente indetectável.
+- Collet FA n8711, não52674; Gencer apenas subclínicos e coortes compartilhadas; associação não prova benefício de tratar.
+- PIRAHTES2024 ITT neutro p0,238; pós-hoc de normalização não preserva randomização e radioiodo pode causar hipotireoidismo.
+- Amiodarona não é terapia tireoidiana rotineira; AIT mista pode precisar combinação inicial e deterioração rápida de tireoidectomia.
+
+Fontes verificadas: 13 referências originais: identidades e abstracts disponíveis conferidos; Lahey1931 sem abstract, sem alegar leitura integral., ATA2016 recomendações2/3/83 e diagnóstico consultados no editor; errata2017 (RAI pediátrico) e2025 (tabela Burch-Wartofsky) lidos, sem alteração relevante nas recomendações usadas., ETA2015 DOI000438750; AIT2018 PMID29594056; ACC/AHA2023 seção10.11 e PIRAHTES39159264 primárias consultadas., Klein2007 tem aviso de erratum sem PMID no XML; não utilizado para magnitudes/recomendações específicas..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
