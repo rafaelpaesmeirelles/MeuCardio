@@ -4,6 +4,7 @@ slug: "cetoacidose-euglicemica-associada-a-inibidores-de-sglt2"
 theme: "Diabetes e cardiologia"
 kind: farmacologia
 review_status: revisado
+review_note: "Revisão adversarial Codex 08/09/2026: definição euglicêmica2024, reinício após CAD versus pausa cirúrgica, DM1 e cronologia FAERS corrigidos. Consenso ADA/EASD2024 e comunicado FDA primários conferidos."
 source_refs: [
   "Peters AL, Buschur EO, Buse JB, Cohan P, Diner JC, Hirsch IB. Euglycemic Diabetic Ketoacidosis: A Potential Complication of Treatment With Sodium-Glucose Cotransporter 2 Inhibition. Diabetes Care. 2015;38(9):1687-1693. PMID 26078479. DOI 10.2337/dc15-0843",
   "Rosenstock J, Ferrannini E. Euglycemic Diabetic Ketoacidosis: A Predictable, Detectable, and Preventable Safety Concern With SGLT2 Inhibitors. Diabetes Care. 2015;38(9):1638-1642. PMID 26294774. DOI 10.2337/dc15-1380",
@@ -23,11 +24,8 @@ source_refs: [
 ## Por que este documento existe
 
 A cetoacidose diabética (CAD) associada a inibidores de SGLT2 (iSGLT2 — canagliflozina,
-dapagliflozina, empagliflozina, ertugliflozina) tem uma característica que a torna
-perigosa precisamente por não parecer perigosa: cursa com **glicemia normal ou apenas
-discretamente elevada** na maioria dos casos descritos, tipicamente **abaixo de 300 mg/dL**
-— valor bem inferior ao que costuma disparar a suspeita clínica de CAD (Morace C et al.,
-Metabolites 2024;14(5):264, PMID 38786741). Um médico treinado a associar CAD a glicemia
+dapagliflozina, empagliflozina, ertugliflozina) pode ocorrer com glicemia pouco elevada. O consenso ADA/EASD de 2024 define CAD euglicêmica por **glicose abaixo de 200 mg/dL**, com cetose e acidose compatíveis. Valores maiores também podem acompanhar CAD por iSGLT2; 300 mg/dL não é o limiar que define euglicemia.
+Um médico treinado a associar CAD a glicemia
 "nos 400-500" pode descartar o diagnóstico diante de um paciente cetótico, acidótico e com
 glicemia de 180 mg/dL — exatamente o cenário que a literatura chama de armadilha central
 desta entidade.
@@ -41,10 +39,9 @@ comprometida ou a ingesta calórica cai, de modo que a glicemia plasmática se m
 relativamente contida enquanto o metabolismo já está desviado para a via cetogênica
 (Rosenstock J, Ferrannini E, Diabetes Care 2015;38(9):1638-1642, PMID 26294774).
 
-Paralelamente, o bloqueio do SGLT2 reduz a demanda de insulina pelas células beta — menos
-glicose filtrada precisando ser reabsorvida significa menos estímulo insulinotrópico — e
+Paralelamente, o bloqueio do SGLT2 reduz a demanda de insulina pelas células beta — a redução da glicemia diminui o estímulo à secreção de insulina — e
 está associado a **elevação do glucagon circulante**. O resultado é uma relação
-insulina/glucagon desfavorável à lipólise: cai a ação antilipolítica da insulina, sobe a
+insulina/glucagon que favorece a lipólise: cai a ação antilipolítica da insulina, sobe a
 liberação de ácidos graxos livres, e o fígado os converte em corpos cetônicos com um
 glucagon já predisposto à cetogênese (Peters AL et al., Diabetes Care 2015;38(9):1687-1693,
 PMID 26078479; Morace C et al., Metabolites 2024;14(5):264, PMID 38786741).
@@ -81,11 +78,10 @@ gasometria/bicarbonato independentemente do valor glicêmico.
 
 ## Magnitude do problema: da vigilância pós-comercialização às séries mais recentes
 
-O alerta inicial da FDA (15 de maio de 2015) nasceu de uma revisão do banco de
+O comunicado atualizado da FDA em dezembro de 2015 descreveu uma revisão do banco de
 farmacovigilância FAERS entre março de 2013 e maio de 2015, que identificou **73 casos**
 de cetoacidose em pacientes com diabetes tipo 1 ou tipo 2 em uso de iSGLT2 — todos com
-necessidade de internação ou atendimento em pronto-socorro, e com glicemias descritas
-como apenas discretamente elevadas em comparação com a CAD típica. Com base nesse
+necessidade de internação ou atendimento em pronto-socorro, e com ampla variação da glicemia, inclusive valores muito elevados. Não eram todos euglicêmicos. Com base nesse
 levantamento, a FDA revisou a bula dos inibidores de SGLT2 em dezembro de 2015 para incluir
 o alerta de risco de acidose metabólica grave (U.S. FDA, Drug Safety Communication,
 maio/dezembro de 2015).
@@ -133,12 +129,7 @@ a demanda metabólica enquanto a glicosúria induzida pelo fármaco continua ati
 - Desidratação, evento cardiovascular agudo, cirurgia bariátrica, uso excessivo de álcool
   e trauma também constam como gatilhos descritos.
 
-Vale reforçar: diabetes tipo 1 concentra desproporcionalmente os casos graves da série
-original (7 de 9 pacientes de Peters et al. tinham diabetes tipo 1), e os autores
-recomendam textualmente que iSGLT2 "só deve ser usado com grande cautela, orientação
-extensa e monitorização estreita" nesse contexto (Peters AL et al., PMID 26078479) —
-uso que, de qualquer forma, é off-label na maioria dos cenários de diabetes tipo 1 no
-Brasil.
+O consenso de 2024 **não recomenda iSGLT2 no diabetes tipo 1**. A série histórica com uso nessa população não constitui autorização de prescrição. Nunca suspender insulina basal por conta própria durante doença aguda ou jejum.
 
 ## Recomendação de suspensão perioperatória
 
@@ -154,7 +145,7 @@ fármaco (U.S. FDA, Drug Safety Communication, atualização de 17/03/2020):
 | Ertugliflozina | pelo menos **4 dias** antes |
 
 A orientação da FDA é monitorizar a glicemia após a suspensão e manejá-la adequadamente
-até o procedimento, e **reiniciar o iSGLT2 somente quando a ingesta oral do paciente tiver
+até o procedimento, e **considerar reinício após pausa perioperatória sem CAD somente quando a ingesta oral tiver
 retornado ao basal** e os demais fatores de risco para cetoacidose (infecção, desidratação,
 jejum) estiverem resolvidos.
 
@@ -194,6 +185,9 @@ brasileira de cada iSGLT2 individualmente não foi conferida nesta sessão.
 
 ## Conduta prática à beira do leito
 
+Suspeita de CAD requer avaliação urgente e interrupção do iSGLT2, com investigação de cetose/acidose e tratamento monitorizado. Preferir beta-hidroxibutirato sanguíneo; cetonas urinárias têm limitações. Insulina, glicose, fluidos e eletrólitos devem seguir protocolo, com cuidado adicional na IC e DRC.
+
+
 - Em paciente em uso de iSGLT2 com sintomas compatíveis com acidose (náusea, vômitos, dor
   abdominal, taquipneia, mal-estar, fadiga desproporcional), **solicitar cetonas
   (sangue ou urina) e gasometria/bicarbonato independentemente do valor da glicemia
@@ -201,8 +195,7 @@ brasileira de cada iSGLT2 individualmente não foi conferida nesta sessão.
 - Antes de cirurgia eletiva, suspender o iSGLT2 conforme a tabela acima (3 dias para
   canagliflozina/dapagliflozina/empagliflozina, 4 dias para ertugliflozina), monitorizando
   a glicemia no intervalo (U.S. FDA, 17/03/2020).
-- Reiniciar o iSGLT2 só quando a ingesta oral estiver de volta ao basal e outros fatores
-  de risco (infecção, desidratação, jejum) estiverem resolvidos.
+- Após pausa cirúrgica **sem CAD**, reavaliar estabilidade e ingesta antes de retomar. **Após CAD, reinício não é rotina**: requer avaliação especializada de causa, recorrência e benefício; recuperação da alimentação não basta.
 - No perioperatório de urgência, quando a suspensão prévia não foi possível, manter
   vigilância clínica ativa para os sinais de cetoacidose mesmo com glicemia normal — é
   justamente esse cenário que a série de 128 casos de 2026 identifica como o de maior
@@ -211,3 +204,5 @@ brasileira de cada iSGLT2 individualmente não foi conferida nesta sessão.
   tratamento com insulina e reposição volêmica/eletrolítica da CAD clássica — na série de
   2026, o tratamento com insulina foi eficaz e a cetoacidose se resolveu em todos os
   pacientes que sobreviveram (Snel LIP et al., PMID 42130079).
+
+Fonte atual: [Consenso ADA/EASD 2024 — critérios diagnósticos e Tabela 4](https://doi.org/10.2337/dci24-0032).
