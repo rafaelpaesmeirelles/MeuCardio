@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr895-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr895": "75ca08e60caf771cfa5547abc0b68084bc5421ea"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-destino-modelo-de-entrega-reabilitacao-cardiaca-ambulatorial",
+      "reabilitacao-cardiaca-domiciliar-ou-hibrida-quando-escalar-para-presencial",
+      "retorno-ao-trabalho-apos-evento-cardiaco-liberacao-ambulatorial-na-reabilitacao"
+    ]
+  }
+}

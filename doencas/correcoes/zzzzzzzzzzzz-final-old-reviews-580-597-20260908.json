@@ -1,0 +1,154 @@
+[
+  {
+    "slug": "doenca-da-aorta",
+    "append": {
+      "related_document_slugs": [
+        "doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024"
+      ],
+      "source_refs": [
+        "Farber MA, Matsumura JS, Han S, et al. Early outcomes from the pivotal trial of a four-branch off-the-shelf solution to treat complex abdominal and type IV thoracoabdominal aortic aneurysms. J Vasc Surg. 2024;80(5):1326-1335.e4. DOI: 10.1016/j.jvs.2024.05.020. PMID: 38904579.",
+        "Farber MA, Han S, Makaroun MS, et al. One-year outcomes from the pivotal trial of a four-branch off-the-shelf solution to treat pararenal and extent IV thoracoabdominal aortic aneurysms. J Vasc Surg. 2025;82(3):740-749.e2. DOI: 10.1016/j.jvs.2025.05.016. PMID: 40480617.",
+        "Bhatia D, Erabelli N, House K, et al. Safety and Feasibility of Moderate-Intensity Home-Based Guided Exercise in Aortic Dissection Survivors in the United States: A Multicenter Randomized Controlled Trial. Circ Popul Health Outcomes. 2026 Jul 2:e013292. DOI: 10.1161/CIRCOUTCOMES.126.013292. PMID: 42389778."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/38904579/",
+        "https://pubmed.ncbi.nlm.nih.gov/40480617/",
+        "https://pubmed.ncbi.nlm.nih.gov/42389778/"
+      ]
+    },
+    "replace": [
+      {
+        "old": "o mesmo corte se aplica ao fenótipo ascendente da valva aórtica bicúspide, mas no fenótipo de raiz da bicúspide o corte cai para ≥50 mm",
+        "new": "na valva aórtica bicúspide com fenótipo ascendente o limiar padrão também é ≥55 mm, mas o reparo pode ser considerado a partir de 50 mm diante de agravantes em centro experiente; no fenótipo de raiz, o limiar é ≥50 mm"
+      },
+      {
+        "old": "A mesma lógica territorial vale para hematoma intramural (tipo B complicado com indicação de reparo endovascular torácico) e úlcera aterosclerótica penetrante (cirurgia se tipo A, tratamento endovascular se tipo B).",
+        "new": "O hematoma intramural segue a distinção entre tipo A e tipo B complicado. Na úlcera aterosclerótica penetrante, o acometimento da aorta ascendente em geral direciona reparo aberto; no tipo B, reparo é indicado diante de ruptura, dor persistente correlacionada ou características de imagem de alto risco. A forma tipo B assintomática e não complicada pode permanecer sob tratamento clínico e vigilância estruturada, e a escolha entre reparo endovascular ou aberto depende de anatomia e comorbidades."
+      },
+      {
+        "old": "Valva bicúspide, fenótipo ascendente: mesmo corte da tricúspide (≥55 mm, ou >52 mm em centro experiente)",
+        "new": "Valva bicúspide, fenótipo ascendente: limiar padrão ≥55 mm; considerar reparo a partir de 50 mm em centro experiente quando houver agravante (crescimento ≥3 mm/ano, história familiar de dissecção, coarctação, hipertensão resistente, baixa estatura ou planejamento gestacional), após decisão compartilhada"
+      }
+    ]
+  },
+  {
+    "slug": "choque-cardiogenico",
+    "replace": [
+      {
+        "old": "com escalonamento programado de suporte circulatório mecânico temporário (balão intra-aórtico, Impella, ECMO-VA) conforme estágio SCAI e resposta inicial",
+        "new": "com avaliação precoce e seletiva de suporte circulatório mecânico temporário conforme etiologia, fenótipo ventricular, oxigenação, anatomia, contraindicações, suporte já instalado, possibilidade de recuperação ou terapia avançada e experiência da equipe — o estágio SCAI isolado não seleciona dispositivo"
+      },
+      {
+        "old": "Escalonar para suporte circulatório mecânico (balão intra-aórtico, Impella ou ECMO-VA, conforme estágio SCAI, etiologia e disponibilidade) diante de deterioração hemodinâmica apesar de suporte vasoativo já otimizado, com finalidade declarada do suporte definida antes do implante",
+        "new": "Acionar a equipe de choque e reavaliar etiologia, fenótipo de falência de VE/VD/biventricular, oxigenação, anatomia, contraindicações, suporte já instalado, possibilidade de recuperação ou terapia avançada e objetivo do cuidado; selecionar suporte circulatório mecânico temporário apenas quando apropriado, sem escolha automática de dispositivo pelo estágio SCAI"
+      },
+      {
+        "old": "Escore vasoativo-inotrópico e tempo de exposição a droga vasoativa/inotrópica, sinalizando necessidade de suporte mecânico quando prolongado além de 48 horas",
+        "new": "Escore vasoativo-inotrópico e tempo de exposição a droga vasoativa/inotrópica; necessidade persistente ou crescente exige reavaliação hemodinâmica e discussão de escalonamento ou terapia avançada, mas não constitui indicação automática de suporte mecânico por um corte temporal de 48 horas"
+      }
+    ]
+  },
+  {
+    "slug": "insuficiencia-cardiaca-avancada",
+    "replace": [
+      {
+        "old": "Paciente com LVAD e descompensação aguda (dispneia súbita, hipotensão, alarme do controlador do dispositivo) — contato imediato com o centro implantador ou equipe de suporte circulatório mecânico de plantão, sem tentar ajustar parâmetros do dispositivo fora do protocolo do centro",
+        "new": "Paciente com LVAD e descompensação aguda (dispneia súbita, hipotensão, alarme do controlador do dispositivo) — estabilizar imediatamente choque, sangramento, sepse, arritmia e outras ameaças à vida no serviço local enquanto se contata precocemente o centro implantador ou a equipe de suporte circulatório mecânico; o contato não deve atrasar a estabilização e os parâmetros do dispositivo não devem ser ajustados fora do protocolo do centro"
+      }
+    ],
+    "assistant_rules": {
+      "ica-avancada-lvad-trombose": {
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Possível trombose de bomba do LVAD"
+          ],
+          "emergency_flow": [
+            "Estabilizar imediatamente ameaças à vida no serviço local e contatar em paralelo o centro implantador de LVAD; o contato não deve retardar tratamento de choque, sangramento, sepse ou arritmia, e parâmetros do dispositivo não devem ser ajustados fora do protocolo do centro"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "slug": "cardiopatia-congenita-do-adulto",
+    "assistant_questions_add": [
+      {
+        "id": "contraception_contains_estrogen",
+        "label": "O método contraceptivo atual ou planejado contém estrogênio?",
+        "type": "boolean",
+        "required": false,
+        "section": "Saúde reprodutiva"
+      }
+    ],
+    "assistant_rules": {
+      "achd-contracepcao-estrogenio": {
+        "when": {
+          "all": [
+            {
+              "field": "contraception_contains_estrogen",
+              "op": "truthy"
+            }
+          ],
+          "any": [
+            {
+              "field": "cyanosis_eisenmenger",
+              "op": "truthy"
+            },
+            {
+              "field": "eisenmenger_documented",
+              "op": "truthy"
+            },
+            {
+              "field": "fontan_circulation",
+              "op": "truthy"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "slug": "hipertensao-resistente-e-refrataria",
+    "append": {
+      "source_refs": [
+        "Laffin LJ, Kopjar B, Melgaard C, et al; ADVANCE-HTN Investigators. Lorundrostat Efficacy and Safety in Patients with Uncontrolled Hypertension. N Engl J Med. 2025;392(18):1813-1823. DOI: 10.1056/NEJMoa2501440. PMID: 40267417.",
+        "Saxena M, Laffin L, Borghi C, et al; LAUNCH-HTN Investigators. Lorundrostat in Participants With Uncontrolled Hypertension and Treatment-Resistant Hypertension: The LAUNCH-HTN Randomized Clinical Trial. JAMA. 2025;334(5):409-418. DOI: 10.1001/jama.2025.9413. PMID: 40587141.",
+        "Mineralys Therapeutics. FDA Acceptance of NDA for Lorundrostat for Treatment of Adults with Hypertension. Comunicado institucional de 9 mar 2026; fonte regulatória não revisada por pares, usada apenas para registrar NDA aceito e PDUFA de 22 dez 2026.",
+        "Kandzari DE, Böhm M, Mahfoud F, et al. Effect of renal denervation on blood pressure in the presence of antihypertensive drugs: 6-month results from SPYRAL HTN-ON MED. Lancet. 2018;391(10137):2346-2355. DOI: 10.1016/S0140-6736(18)30951-6. PMID: 29803589.",
+        "Azizi M, Schmieder RE, Mahfoud F, et al. Endovascular ultrasound renal denervation to treat hypertension (RADIANCE-HTN SOLO). Lancet. 2018;391(10137):2335-2345. DOI: 10.1016/S0140-6736(18)31082-1. PMID: 29803590.",
+        "U.S. Food and Drug Administration. Paradise Ultrasound Renal Denervation System, PMA P220023. Approval date: 7 Nov 2023.",
+        "Bisognano JD, Bakris G, Nadim MK, et al. Baroreflex activation therapy lowers blood pressure in patients with resistant hypertension: Rheos Pivotal Trial. J Am Coll Cardiol. 2011;58(7):765-773. DOI: 10.1016/j.jacc.2011.06.008. PMID: 21816315.",
+        "U.S. Food and Drug Administration. Barostim neo Legacy System, Humanitarian Device Exemption H130007. Approval order: 12 Dec 2014; indicação limitada a respondedores previamente implantados com leads Rheos obsoletos."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40267417/",
+        "https://pubmed.ncbi.nlm.nih.gov/40587141/",
+        "https://ir.mineralystx.com/news-events/press-releases/detail/93/mineralys-therapeutics-announces-fda-acceptance-of-nda-for",
+        "https://pubmed.ncbi.nlm.nih.gov/29803589/",
+        "https://pubmed.ncbi.nlm.nih.gov/29803590/",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P220023",
+        "https://pubmed.ncbi.nlm.nih.gov/21816315/",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfhde/hde.cfm?id=H130007"
+      ]
+    },
+    "assistant_questions": {
+      "secondary_cause_investigated": {
+        "required": true
+      }
+    },
+    "assistant_rules": {
+      "har-avental-branco": {
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "MAPA/MRPA normal sugere efeito do avental branco, não hipertensão resistente verdadeira"
+          ],
+          "messages": [
+            "Não intensificar tratamento apenas pela pressão de consultório; reavaliar cada fármaco segundo a pressão fora do consultório, tolerância, sintomas ortostáticos e risco de hipotensão, sem manter automaticamente todo o esquema atual"
+          ]
+        }
+      }
+    }
+  }
+]

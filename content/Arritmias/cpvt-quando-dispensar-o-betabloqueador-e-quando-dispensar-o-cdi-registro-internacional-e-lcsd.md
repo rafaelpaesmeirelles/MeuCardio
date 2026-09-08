@@ -1,14 +1,16 @@
 ---
-title: "CPVT: Quando Dispensar o Betabloqueador e Quando Dispensar o CDI"
+title: "CPVT: Estratégias sem Betabloqueador e o Papel da LCSD na Decisão sobre CDI"
 slug: cpvt-quando-dispensar-o-betabloqueador-e-quando-dispensar-o-cdi-registro-internacional-e-lcsd
 theme: "Arritmias"
 kind: estudo
 review_status: revisado
-source_refs: ["Neves R, Bains S, Bos JM, van der Werf C, Bergeman AT, Peltenburg P, Blom NA, Sanatani S, Swan H, Probst V, Kannankeril PJ, Skinner JR, Brugada R, Robyns T, Borggrefe M, Shimizu W, Kammeraad JAE, Krahn AD, Wilde AAM, Ackerman MJ. International Multicenter Cohort Study on Beta-Blocker-Free Treatment Strategies for Catecholaminergic Polymorphic Ventricular Tachycardia Patients. JACC Clin Electrophysiol. 2025;11(2):270-278. DOI: 10.1016/j.jacep.2024.10.005. PMID: 39708032 — International CPVT Registry, 1017 pacientes RYR2-positivos, 100 (10%) em estratégia sem betabloqueador por pelo menos 6 meses", "Bos JM, Dusi V, Viskin D, Paul T, Rosés I Noguer F, Till J, Khoury A, Emkanjoo Z, Dalili M, Termosesov SA, Bereznitskaya VV, Rordorf R, Musu G, Crotti L, Polites SF, Ackerman MJ, Schwartz PJ. How Many CPVT Patients Need an ICD? The Impact of Left Cardiac Sympathetic Denervation. JACC Clin Electrophysiol. 2026 May 11 [Epub ahead of print]. DOI: 10.1016/j.jacep.2026.03.027. PMID: 42138682 — estudo retrospectivo multicêntrico mundial, 162 pacientes submetidos a LCSD, subanálise principal de 118"]
+published: false
+review_note: "Revisão clínica individual em 2026-09-08: PMIDs 39708032 e 42138682 conferidos; coortes observacionais separadas de recomendações de diretriz, sem autorizar retirada de betabloqueador ou CDI fora de centro especializado."
+source_refs: ["Neves R, Bains S, Bos JM, van der Werf C, Bergeman AT, Peltenburg P, Blom NA, Sanatani S, Swan H, Probst V, Kannankeril PJ, Skinner JR, Brugada R, Robyns T, Borggrefe M, Shimizu W, Kammeraad JAE, Krahn AD, Wilde AAM, Ackerman MJ. International Multicenter Cohort Study on Beta-Blocker-Free Treatment Strategies for Catecholaminergic Polymorphic Ventricular Tachycardia Patients. JACC Clin Electrophysiol. 2025;11(2):270-278. DOI: 10.1016/j.jacep.2024.10.005. PMID: 39708032 — International CPVT Registry, 1017 pacientes RYR2-positivos, 100 (10%) em estratégia sem betabloqueador por pelo menos 6 meses", "Bos JM, Dusi V, Viskin D, Paul T, Rosés I Noguer F, Till J, Khoury A, Emkanjoo Z, Dalili M, Termosesov SA, Bereznitskaya VV, Rordorf R, Musu G, Crotti L, Polites SF, De Ferrari GM, Pugliese L, Ackerman MJ, Schwartz PJ. How Many CPVT Patients Need an ICD? The Impact of Left Cardiac Sympathetic Denervation. JACC Clin Electrophysiol. 2026 May 11 [Epub ahead of print]. DOI: 10.1016/j.jacep.2026.03.027. PMID: 42138682 — estudo retrospectivo multicêntrico mundial, 162 pacientes submetidos a LCSD, subanálise principal de 118", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572."]
 legacy_source: "Documento novo, escrito em 09/09/2026. A pasta já tinha `qt-curto-e-cpvt-duas-canalopatias-em-que-a-parada-e-a-primeira-manifestacao.md`, que cobre o ensaio randomizado da flecainida como ADIÇÃO ao betabloqueador (Kannankeril 2017, PMID 28492868) para suprimir ectopia ao esforço — uma pergunta farmacológica de eficácia aditiva. Este documento traz duas perguntas distintas e mais recentes (2024-2026): dá para TIRAR o betabloqueador de vez em algum subgrupo, e a denervação simpática cardíaca esquerda (LCSD) permite dispensar o CDI. Nenhuma das duas fontes constava no repositório."
 ---
 
-# CPVT: Quando Dispensar o Betabloqueador e Quando Dispensar o CDI
+# CPVT: Estratégias sem Betabloqueador e o Papel da LCSD na Decisão sobre CDI
 
 ## As duas perguntas que faltavam
 O documento já existente sobre CPVT nesta pasta responde "o que somar ao betabloqueador quando ele não basta" (flecainida, RCT cruzado de 2017). As duas fontes aqui respondem duas perguntas diferentes e mais práticas no seguimento de longo prazo:
@@ -29,7 +31,7 @@ Neves R et al., JACC Clin Electrophysiol. 2025;11(2):270-278 (PMID 39708032). Do
 - **Grupo tratado sem betabloqueador: 27 pacientes** (22 mulheres, 81%) — **25 (93%) já haviam usado betabloqueador antes**. As 3 configurações usadas foram: **flecainida em monoterapia (n=21)**, **LCSD em monoterapia (n=2)**, e **flecainida + LCSD (n=4)**
 - **Seguimento mediano de 6 anos (IQ 3-9 anos): apenas 2 pacientes (2%) tiveram evento associado à CPVT**
 
-**Conclusão literal:** os betabloqueadores não seletivos continuam sendo o tratamento-base da CPVT, mas **10% dos pacientes precisaram de estratégia sem betabloqueador** — e, após avaliação de risco cuidadosa, **estratégias seguras e eficazes sem betabloqueador podem ser configuradas**.
+**Conclusão dos autores:** os betabloqueadores não seletivos continuam sendo o tratamento-base da CPVT, mas **10% dos pacientes do registro receberam uma estratégia sem betabloqueador**. O baixo número de eventos apoia a viabilidade dessa conduta em pacientes cuidadosamente selecionados; não demonstra equivalência à terapia padrão.
 
 **O que sustenta essa conclusão — e o que não sustenta:**
 - A maior parte do grupo sem betabloqueador (90% do INT) é **não-terapia deliberada em assintomáticos de baixo risco**, não substituição de tratamento em quem precisa de tratamento — isso é seleção de paciente, não equivalência terapêutica
@@ -47,11 +49,11 @@ Bos JM et al., JACC Clin Electrophysiol. 2026 May 11 [ahead of print] (PMID 4213
 - **Nos 41 com síncope apesar da terapia medicamentosa**: **6 (15%) tiveram eventos após LCSD**, incluindo a morte súbita apesar de CDI (3%)
 - **LCSD melhorou qualidade de vida, reduzindo choques do CDI em 67% e tempestades elétricas em 80%**
 
-**Conclusão literal:** os dados sugerem que **provavelmente menos de 5% dos pacientes sintomáticos com CPVT aderentes à terapia medicamentosa precisam de CDI depois da LCSD**. E, ponto que os próprios autores destacam: **o CDI não previne morte súbita de forma confiável** nessa população — houve morte súbita cardíaca mesmo com o dispositivo implantado.
+**Conclusão dos autores:** os dados sugerem que **provavelmente menos de 5% dos pacientes sintomáticos com CPVT, aderentes à terapia medicamentosa, precisariam de CDI após LCSD**. Os autores também afirmam que o CDI não preveniu morte súbita de modo confiável nessa coorte. Ambas as proposições derivam de uma análise retrospectiva selecionada e não devem ser convertidas isoladamente em regra para não implantar ou retirar um dispositivo.
 
 **O que isso muda — e os limites que vêm junto:**
 - **Não-aderência foi responsável por mais de um terço dos eventos recorrentes** — o dado central antes de qualquer decisão de reduzir dispositivo é a aderência real ao betabloqueador
-- **A afirmação "CDI não previne morte súbita de forma confiável" não é motivo para não implantar** — é motivo para não tratar o CDI como suficiente isoladamente, já que a fisiopatologia da CPVT (tempestade elétrica com múltiplos choques inapropriados/dolorosos) é conhecidamente mal servida por CDI sem controle farmacológico e cirúrgico associado
+- **A afirmação "CDI não previne morte súbita de forma confiável" não revoga as indicações de diretriz** — sobreviventes de parada cardíaca e pacientes com eventos apesar de terapia otimizada exigem decisão especializada; o CDI não deve ser tratado como terapia isolada da CPVT
 - É **estudo retrospectivo, sem braço randomizado contra "manter o CDI em todos"** — a estimativa de "<5%" é uma inferência da própria coorte tratada com LCSD, não um número validado prospectivamente
 - **A subanálise principal já pré-seleciona** pacientes sem genótipo de alto risco e aderentes — a extrapolação para genótipo de alto risco ou aderência incerta não é sustentada pelos dados
 
@@ -65,15 +67,15 @@ Bos JM et al., JACC Clin Electrophysiol. 2026 May 11 [ahead of print] (PMID 4213
 | Limite maior | Maioria é não-terapia em baixo risco, não substituição real | Sem braço randomizado; morte súbita ocorreu mesmo com CDI |
 
 ## O que isso muda na prática
-- **Dispensar o betabloqueador** só tem lastro nestas fontes em **pacientes cuidadosamente estratificados como muito baixo risco** (assintomáticos, sem fenótipo relevante ao teste de esforço) — não é estratégia genérica para quem não tolera o efeito colateral
-- **A flecainida em monoterapia** aparece como a alternativa mais usada quando o betabloqueador precisa ser trocado (21 dos 27 casos), mas a amostra é pequena e não randomizada
-- **LCSD reduz substancialmente choques e tempestade elétrica**, e os autores sugerem que a maioria dos pacientes sintomáticos aderentes, sem genótipo de alto risco, **não precisaria de CDI depois dela** — mas isso não é recomendação para remover CDI já implantado, e não vale para quem não é aderente à terapia medicamentosa
-- **Em ambas as fontes, a aderência ao tratamento medicamentosa é o fator que mais separa quem teve e quem não teve evento** — é o dado prático mais replicável das duas coortes
+- **Não iniciar betabloqueador** teve suporte observacional sobretudo em **portadores RYR2-positivos assintomáticos, sem fenótipo relevante no teste de esforço e estratificados em centro especializado**; isso não autoriza suspender o fármaco em um paciente previamente sintomático
+- **A flecainida em monoterapia** foi a alternativa mais usada quando o betabloqueador não era tolerado (21 dos 27 casos tratados), mas a amostra pequena e não randomizada não substitui a recomendação de betabloqueador não seletivo como base do tratamento
+- **A LCSD foi associada a menos choques e tempestades elétricas**. A estimativa dos autores sobre menor necessidade de CDI após LCSD gera hipótese para decisão individualizada; não valida omissão ou explante rotineiro do CDI
+- **Aderência à terapia é um modificador central na coorte de LCSD**: 36% dos eventos pós-LCSD ocorreram durante não adesão. O registro sem betabloqueador, porém, não permite afirmar que aderência foi o principal discriminador de eventos em ambas as coortes
 
 ## Armadilhas clínicas
-- **Ler "10% sem betabloqueador" como "10% tratados com sucesso sem betabloqueador"** — a maior parte desse grupo nunca precisou de tratamento (não-terapia intencional em baixo risco), não é substituição terapêutica bem-sucedida
+- **Ler "10% sem betabloqueador" como "10% tratados com sucesso sem betabloqueador"** — a maior parte desse grupo não havia recebido indicação de tratamento (não-terapia intencional em baixo risco), não é substituição terapêutica bem-sucedida
 - **Extrapolar "<5% precisam de CDI após LCSD" para quem não é aderente ou tem genótipo de alto risco** — a subanálise principal exclui exatamente esses perfis
-- **Interpretar "CDI não previne morte súbita de forma confiável" como argumento contra implantar** — os próprios dados mostram 85% da coorte de LCSD com evento prévio a ela, população de alto risco por construção; o ponto dos autores é sobre insuficiência do CDI isolado, não sobre sua dispensa
+- **Interpretar "CDI não previne morte súbita de forma confiável" como argumento autônomo contra implantar ou a favor de explantar** — os dados mostram uma população de alto risco e reforçam a insuficiência do CDI isolado; não testaram uma estratégia randomizada sem CDI
 - **Tratar estas duas coortes retrospectivas como equivalentes a um ensaio randomizado** — nenhuma tem braço comparador contemporâneo com alocação aleatória; são hipóteses geradoras de estudo prospectivo, não prática validada em bula
 
 ## Tudo com Tudo

@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr898-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr898": "8d532e59152ed0455caf4ba2b2a0c1add32746c4"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-encaminhar-ferro-endovenoso-na-ic",
+      "fluxograma-ambulatorial-deficiencia-de-ferro-destino",
+      "sinalizadores-ambulatoriais-deficiencia-de-ferro-na-ic-quando-escalar"
+    ]
+  }
+}

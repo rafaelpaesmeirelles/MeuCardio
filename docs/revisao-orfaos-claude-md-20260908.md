@@ -1,0 +1,504 @@
+# Revisão individual dos Markdown antigos Claude — 08/09/2026
+
+Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
+
+Checkpoint: 53 documentos lidos integralmente e corrigidos; 110 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+
+Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
+
+## 0 — content/Aorta_e_doença_arterial_periférica/doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo.md
+
+- Belenfant não comparou estatina versus ausência: removida atribuição falsa de sobrevida.
+- Causalidade anticoagulação incerta; não suspender indicação independente automaticamente.
+- Umemoto mostrou vasculite coexistente, não apenas mimetismo; pulsos preservados não excluem urgência.
+- Doença pode ser aguda; eosinofilia não obrigatória; recuperação renal e modalidade dialítica observacionais.
+
+Fontes verificadas: Todos os 12 PMIDs originais: identidade e abstracts conferidos no cache PubMed., Kronzon/Saric Circulation2010 DOI10.1161/CIRCULATIONAHA.109.886465 PMID20697039: revisão primária de manejo., PMIDs10213638 e39639413 reconferidos diretamente no PubMed..
+
+## 1 — content/Aorta_e_doença_arterial_periférica/eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa.md
+
+- Primária não equivale obrigatoriamente a SCN9A hereditária; formas idiopáticas e teste negativo preservados.
+- AAS não é teste diagnóstico binário; risco hemorrágico/von Willebrand adquirido e indicação hematológica antes de uso.
+- Farrar estudou excitabilidade axonal, não prova de biópsia cutânea.
+- Dor paroxística não é ganho mais extremo; tratamentos e mecanismo não universais.
+
+Fontes verificadas: 18 PMIDs originais: identidade e abstracts individualmente conferidos., GeneReviews SCN9A PMID20301342 e Cattaneo DOI10.3324/haematol.2022.281388 consultados online..
+
+## 2 — content/Aorta_e_doença_arterial_periférica/osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio.md
+
+- Consenso Delphi2025 omitido restaurado: avaliação clínica, não eco universal assintomático; risco por tipo/genótipo não estabelecido.
+- Sullivan invertido: nenhuma fratura por manguito/torniquete; uma por posicionamento.
+- Removidas alegações herdadas de leitura integral não demonstrada nesta auditoria e falsas lacunas de consenso.
+- Demais genes não são todos recessivos; coortes99/52 do mesmo grupo não replicação independente; hemostasia1984 não protocolo universal.
+
+Fontes verificadas: 9 referências originais: identidade e abstracts conferidos., Folkestad DOI10.1093/jbmr/zjae197 PMID39665364: recomendações completas acessíveis em resultado primário PMC11789389., Sullivan PMID29189536 reconferido no PubMed; GeneReviews tabela de vigilância online..
+
+## 3 — content/Aorta_e_doença_arterial_periférica/poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva.md
+
+- GLOBAL-PAN excluiu VHB; não demonstra sua prevalência atual.
+- Günal15 não encontrou isquemia/infarto: removida extrapolação de coronarite.
+- Biópsia e imagem complementares; ACR2021 omitida restaurada e terapia não grave poupadora de corticoide.
+- Samson118 iniciou GC em todos; CHUSPAN vantagem não sustentada10anos; idosos somente10PAN.
+- PAN-VHB não proibida pela nomenclatura; anticoagulação e corticoide não protocolo universal; mortalidade antiviral115 não significativa.
+
+Fontes verificadas: 19 referências originais: abstracts individualmente lidos;23045170/34353474 somente metadados, sem abstract disponível., ACR/VF DOI10.1002/art.41776 PDF primário e publicação simultânea acr.24633 consultados., GLOBAL-PAN38343337 eVHB16148731 relidos completos no cache para exclusões e significância..
+
+## 4 — content/Aorta_e_doença_arterial_periférica/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma.md
+
+- PMID15380048 corrigido para estudo murino2004 DOIar1218, não autoanticorpos humanos2001.
+- Resposta agrupada de biológicos não superioridade; mielodisplasia tendência em2018, não VEXAS identificado.
+- Broncoscopia seletiva por risco, biópsia traqueal desaconselhada; ECG/eco basal sustentados pelo PNDS.
+- Erdogan114 selecionados por aorta; IQR não amplitude; não angioTC fixa indefinida universal.
+- Ruptura de cúspide pode exigir cirurgia urgente apesar de aparente controle inflamatório.
+
+Fontes verificadas: 19 PMIDs originais obtidos diretamente por Eutils; 29200026 somente metadados sem abstract., PNDS2021 primário páginas19–20 e26 (PDF físico): avaliação, segurança e cirurgia., Arnaud2023 PMID37236870 e revisão traqueobrônquica2019 PII S1568997219301533 primárias online., Cache1620 auditado: ArticleIdList correto; extrator temporário novo tinha campo ids amplo, não usado no documento..
+
+## 5 — content/Aorta_e_doença_arterial_periférica/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado.md
+
+- Campens32pacientes+23portadores+28controles; Pingel28,6% entre35, não46 e não incidência.
+- Kranenburg rigidez maior queDM2, não menor; PXE não exclui aterosclerose.
+- Aspirina evitar quando possível não veto absoluto após indicação cardiovascular; diagnóstico molecular não depende de sinais universais.
+- TEMP74RCT primárioPETneutro, TCsecundário favorável e hiperfosfatemia; coorte326eventos2025 restaurada sem extrapolar benefício.
+- GenesENPP1/ABCC6nãoalélicos entre si; excluídas generalizações calcifilaxia/idade.
+
+Fontes verificadas: 10referências originais: abstracts individuais; GeneReviews online para manejo., TEMP PMID29519353 DOI10.1016/j.jacc.2017.12.062 eHarmsen39581064 DOI10.1016/j.atherosclerosis.2024.119051: abstracts primários online..
+
+## 6 — content/Aorta_e_doença_arterial_periférica/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial.md
+
+- CDC líquor/HIV antes da terapia terciária e esquema porresultado restaurados; benzatina não universal.
+- Aneurismas tambémfusiformes; sífilis adquirida não prevê inevitavelmenteaortite futura.
+- Costa qualidadepré-natal não significativa; removidosMoseley/idososnãoidentificados.
+- Positividade treponêmica não prova etiologia doaneurisma; antimicrobiano não garante estabilizaçãoestrutural.
+- Limiar cirúrgico não deve ignorar etiologiainfecciosa/morfologia/urgência.
+
+Fontes verificadas: 11PMIDs originais: identidade conferida;2679075/33744210/35550616/32580086 semabstract, sem alegar integral lido., CDC páginas sífilis terciária e neurossífilis consultadas diretamente08/09/2026., Kallash39902879, Yuan30073493, Costa38917233 abstracts completos conferidos..
+
+## 7 — content/Aorta_e_doença_arterial_periférica/sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular.md
+
+- Tortuosidade não exclui Marfan/vEDS; estudos primários AJNR2020 eJAHA2023 contradizem regra do original.
+- Coucke2006 mostrouTGFβ aumentado; hipóteseascorbato não exclui essa via.
+- Ecoanual requer dimensõesnormais, não apenas estáveis; imagem3anos exige ausência dedilataçãoraiz também.
+- 45mmpré-gestacional é extrapolaçãoMarfan, não limiar validadoATS; removidas prevalências/certezas mecanísticas excessivas.
+
+Fontes verificadas: 4referências originais: abstracts conferidos; GeneReviews integral das seções mecanismo/diferencial/manejo/vigilância/gestação consultadas online., SpinardiDOI10.3174/ajnr.A6732 primária; StephensDOI10.1161/JAHA.123.029518 PMID37776192 primária..
+
+## 8 — content/Aorta_e_doença_arterial_periférica/sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica.md
+
+- Chapel Hill classifica Cogan como vasculite de vasos variáveis; apresentação atípica não é estratificador cardiovascular validado.
+- Durtette: 126 linhas em 61 pessoas, não grupos independentes; OR infliximabe com IC 1,65–260 e primeira linha sem diferença.
+- Ross é autoenxerto; caso único não demonstra superioridade universal de prótese mecânica ou falha das biopróteses.
+- Exclusão de sífilis não exige ambos testes negativos; imagem e imunossupressão individualizadas, sem calendário universal provado.
+- Removidas extrapolações de relato pós-COVID e caso único de GN como série pediátrica.
+
+Fontes verificadas: 12 PMIDs originais/citados: identidade e abstracts disponíveis conferidos; Saiin34866099 apenas identidade, sem alegação de leitura integral., Chapel Hill PMID23045170 DOI10.1002/art.37715 e classificação publicada pelo consenso consultados., CDC Laboratory Recommendations2024; Durtette29037902, Marrero39110231 e Gad40843044 abstracts primários..
+
+## 9 — content/Arritmias/bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo.md
+
+- Removida exigência de sintomas para marca-passo em MobitzII/BAV avançado sem causa reversível.
+- Incluída laminopatia e possível CDI com estimulação; etiologia genética pode alterar seleção do dispositivo.
+- Provocação com bloqueador de sódio não rotineira em portadores SCN5A; consenso2025, contexto diagnóstico e segurança incorporados.
+- Mapeamento19q13 pertence à linha TRPM4, não SCN5A; variabilidade e penetrância substituem cronologia inevitável.
+- VUS não confirma doença nem orienta dispositivo isoladamente.
+
+Fontes verificadas: 14 referências originais: identidades conferidas; abstracts disponíveis lidos, sem alegar leitura integral dos históricos sem abstract., AHA texto online de recomendação2018 confirmado; erratum31424988 identificado, texto integral inacessível, sem alegar sua revisão., Consenso genético2022 DOIeuac030; corrigendum euac106 lido: autoria/afiliações apenas., ESC2021 DOIehab364 recomendação LMNA consultada; consenso provocação2025 DOIeuaf067 seções indicação, rastreio familiar e segurança consultadas..
+
+## 10 — content/Cardio-oncologia/cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica.md
+
+- Série44 era de câncer, não majoritariamente hepatite; não há ranking robusto de isquemia como manifestação mais rara.
+- Reversibilidade não garantida nem prova causal; removido contraste mecanístico simplista com antraciclinas.
+- Anemia por ribavirina no caso com reexposição e hipotireoidismo como contribuinte restaurados.
+- Incluídas advertências cardiovasculares BESREMi/PEGASYS e limites à reexposição; risco vai além de cardiopatia estrutural inespecífica.
+- HepatiteB não usa ribavirina padrão; resposta molecular não prova modificação de história natural; dois casos gestacionais não validam classe.
+
+Fontes verificadas: 12 PMIDs originais: identidade e abstracts conferidos individualmente., Bulas oficiais DailyMed BESREMi/PEGASYS seções5.3 e advertências da associação com ribavirina consultadas em08/09/2026., AASLD/IDSA HCV Guidance atual consultada; não alegada aprovação local específica de formulações..
+
+## 11 — content/Cardiologia_geriátrica/hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca.md
+
+- Incluída anticoagulação por risco em FA tireotóxica e urgência cardiovascular; não aguardar eutireoidismo se instável.
+- Hipertireoidismo subclínico exige persistência e exclusão de causas transitórias; TSH baixo não é necessariamente indetectável.
+- Collet FA n8711, não52674; Gencer apenas subclínicos e coortes compartilhadas; associação não prova benefício de tratar.
+- PIRAHTES2024 ITT neutro p0,238; pós-hoc de normalização não preserva randomização e radioiodo pode causar hipotireoidismo.
+- Amiodarona não é terapia tireoidiana rotineira; AIT mista pode precisar combinação inicial e deterioração rápida de tireoidectomia.
+
+Fontes verificadas: 13 referências originais: identidades e abstracts disponíveis conferidos; Lahey1931 sem abstract, sem alegar leitura integral., ATA2016 recomendações2/3/83 e diagnóstico consultados no editor; errata2017 (RAI pediátrico) e2025 (tabela Burch-Wartofsky) lidos, sem alteração relevante nas recomendações usadas., ETA2015 DOI000438750; AIT2018 PMID29594056; ACC/AHA2023 seção10.11 e PIRAHTES39159264 primárias consultadas., Klein2007 tem aviso de erratum sem PMID no XML; não utilizado para magnitudes/recomendações específicas..
+
+## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
+
+- monoterapia não equivale a população sem exposição prévia; washout supervisionado
+- massa VE não significativamente diferente; publicação online agosto
+
+Fontes verificadas: https://www.jacc.org/doi/10.1016/j.jchf.2024.11.011, https://www.nejm.org/doi/full/10.1056/NEJMoa2504654, PMID40932433.
+
+## 38 — content/Cardiomiopatias/fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc.md
+
+- Limitada anticoagulação universal à FA clínica; acrescentados limiares e decisão específica para FA subclínica.
+- Corrigida exceção valvar genérica para prótese mecânica/estenose mitral moderada-grave, preservando DOAC na insuficiência mitral.
+- Retirada preferência universal por ablação; explicitadas indicações e preferência do paciente.
+- Coorte DOAC restrita à CMH obstrutiva sem AVC prévio; associação não causal e ausência de diferença não equivalência.
+- Trombo8,5% em amostra selecionada para ETE não prevalência de toda CMH; recorrência definida por nova intervenção em1 ano.
+
+Fontes verificadas: PMID41838376, PMID42269731, PMID42029363, DOI10.1161/CIR.0000000000001250, DOI10.1161/CIR.0000000000001193.
+
+## 39 — content/Cardiomiopatias/mavacamten-em-cmh-obstrutiva-elegivel-para-reducao-septal-o-ensaio-valor-hcm.md
+
+- dose/atribuição permaneciam cegas após16sem
+- elegibilidade não cirurgia inevitável
+- erratum tabela4 5(4,6%)
+- limitações segurança/encaminhamento
+
+Fontes verificadas: PMID35798455, PMID37639243, PMID39556124, PMID40354453, PMID40100181.
+
+## 41 — content/Cardiomiopatias/preditores-de-recuperacao-da-feve-na-cardiomiopatia-dilatada-nao-isquemica-rm-lge-strain-e-genetica.md
+
+- TRED-HF44% em6 meses não maioria; data futura de busca removida como comprovação.
+- Metanálises podem compartilhar estudos; Berdibekov avaliaLGE/T1/ECV, não strain; removido melhor VPP universal e antecipação automática CDI.
+- Setti: padrão anelar LGE, não qualquerLGE; definição de remodelamento não normalização completa.
+- Kan ganhoAUC não significativo; LACI validação interna/coorte64; ApoA1/BRE recuperação>35% não normalização.
+- Removidas menções sem fonte identificada a Passo/ivabradina; genética por variantes P/LP e não VUS; mantida terapia após melhora.
+
+Fontes verificadas: PMID30429050, PMID39955068, PMID39941566, PMID40460665, PMID40296583, PMID37697922, PMID39890030, PMID39375197, PMID41067410, PMID40988625, PMID42155308, PMID42204922, PMID42368855.
+
+## 42 — content/Cardiomiopatias/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1.md
+
+- tríade corrigida
+- CDI individualizado não extrapolado LMNA
+- segurança fase2 óbito/hold/retomada separados da fase1
+- comunicados não promovidos a eficácia
+
+Fontes verificadas: Greenberg B, Taylor M, Rossano JW, et al. Phase 1 Study of AAV9.LAMP2B Gene Therapy in Danon Disease. N Engl J Med. 2025;392(10):972-983. DOI: 10.1056/NEJMoa2412392. PMID: 39556016., ClinicalTrials.gov. Gene Therapy for Male Patients With Danon Disease Using RP-A501 (AAV9.LAMP2B). NCT03882437., Taylor MRG, Adler ED. Danon Disease. GeneReviews. Revisão23/05/2024. https://www.ncbi.nlm.nih.gov/books/NBK554742/, Rocket Pharmaceuticals. Atualização de segurança fase2 e retomada do protocolo, 2025–2026. https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-provides-update-phase-2-clinical-trial-rp ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/ ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update.
+
+## 52 — content/Diabetes_e_cardiologia/insulina-semanal-icodec-seguranca-cardiovascular-e-hipoglicemia.md
+
+- HR ICamplo não prova segurança/noninferiority
+- IcoSema não isola icodec
+- composto hipoglicemia não apenasgrave
+- DM1 maiorhipo EMA
+
+Fontes verificadas: PMID42119975, PMID40482670, https://www.ema.europa.eu/en/medicines/human/EPAR/awiqli.
+
+## 54 — content/Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular.md
+
+- superioridade indireta removida
+- HbA1c24semanas;exceção0,5mg
+- TRIUMPH3ponderalvs4OA
+- TRIUMPH-Outcomes existente semresultados
+
+Fontes verificadas: PMID37385280, PMID42250575, PMID41090431, https://clinicaltrials.gov/study/NCT06383390.
+
+## 57 — content/Diabetes_e_cardiologia/tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2.md
+
+- Dez pontos percentuais não10% relativo; HR relativo não risco absoluto; ORmeta nãoRR causal.
+- Cai subgruposHbA1c ejejum separados, mortalidade total nãoCV automaticamente; CGMbasal não longitudinal10anos.
+- Qu inclui CGM/flash/capilar e desfechos heterogêneos; aterosclerose não necessariamenteobstrução; removida equivalênciaCAC.
+- Lu33097560 precede2025; TIR/TITR nãointercambiáveis, sem ensaio mortalidade ou meta intensiva independente.
+
+Fontes verificadas: Duas fontes originais: abstracts/identidade conferidos., Lu33097560 primário ADA ePubMed consultados., Textos integraisCaiPMC/QuMDPI indisponíveis nesta consulta; não conservados detalhes além de resultados verificáveis..
+
+## 59 — content/Diabetes_e_cardiologia/variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes.md
+
+- CADDY CGM10dias a cada2meses, não contínuo18meses; FA detectada inclui prévia, associação agregada não específicaFA.
+- Retirada hipótese contrarregulação/neuropatia como explicação comprovada e generalização de risco maior foraDM.
+- Zeng discriminação retrospectiva não previsão prospectiva validada; DCA não ensaio utilidade; CGM/ambulatorial/unidadeOR não confirmados pelo abstract.
+- MIMIC variabilidade pós-admissão não CGM; sem indicação automáticaILR ou intervenção antiFA.
+
+Fontes verificadas: Quatro referências originais: abstracts/identidades conferidos., CADDY texto integral Springer métodos/desfechos/discussão consultados., Zeng resumo primário QJM/PubMed consultado; texto completo não acessível, detalhes não comprovados removidos..
+
+## 62 — content/Doença_coronariana/clear-synergy-oasis-9-espironolactona-rotineira-apos-infarto-agudo-do-miocardio.md
+
+- IC95%coprimário2adicionado
+- GPC exploratória e componentes dano explícitos
+- ausência diferença composta não prova nulidade cada componente
+
+Fontes verificadas: Jolly SS, d'Entremont MA, Pitt B, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, et al. Routine Spironolactone in Acute Myocardial Infarction. N Engl J Med. 2025;392(7):643-652. DOI: 10.1056/NEJMoa2405923. PMID: 39555814., d'Entremont MA, Jolly SS, Alharthi F, Shah B, Austin D, Yi Q, Storey RF, Bossard M, Cornel J, Jaspers Focks J, Kedev S, Asani V, Stankovic G, Tsang M, Valettas N, Tyrwhitt J, Betz J, Lee SF, Mian R, Silvain J, Beygui F, Czarnecki A, Dehghani P, Cantor W, Lavi S, Spratt JC, Belley-Côté EP, Eikelboom JW. Benefit-risk of colchicine and spironolactone in acute myocardial infarction: prespecified generalised pairwise comparisons analysis of the CLEAR-SYNERGY trial. Heart. 2026;112(6):326-332. DOI: 10.1136/heartjnl-2025-326218. PMID: 40908114., d'Entremont MA, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, Skuriat E, Tyrwhitt J, Mehta SR, Devereaux PJ, Eikelboom J, Cairns JA, Pitt B, Jolly SS. Design and rationale of the CLEAR SYNERGY (OASIS 9) trial: a 2x2 factorial randomized controlled trial of colchicine versus placebo and spironolactone versus placebo in patients with myocardial infarction. Am Heart J. 2024;275:173-182. DOI: 10.1016/j.ahj.2024.06.007. PMID: 38936755..
+
+## 63 — content/Doença_coronariana/deficiencia-de-ferro-na-sindrome-coronariana-aguda.md
+
+- Incluído ajuste por hs-CRP que elimina significância em Masini; retirada falsa divergência prognóstica independente.
+- Retirada inferência de menor resposta no subgrupo isquêmico: interações não significativas.
+- Corrigida formulação IRONMAN para derisomaltose.
+- Identificados INFERRCT randomizado e iCHF-2 encerrado; removida alegação de inexistência de ensaios.
+- Preservadas investigação e reposição por anemia/deficiência sem exigir IC; não promovido benefício prognóstico para SCA.
+
+Fontes verificadas: PMID40120841, PMID39780944, PMID41027507, NCT05759078, NCT03991000.
+
+## 64 — content/Doença_coronariana/desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026.md
+
+- DAN-DAPT: portadores LOF permanecem prasugrel/ticagrelor; protocolo não troca todos; dois coprimários distintos e amostras planejadas contextualizadas.
+- Modelo econômico deriva de FORCE-ACS, não POPular Genetics; resultados não prova de segurança.
+- TAILOR-PCI não confirmou superioridade primária; retirado agrupamento de ensaios como prova universal.
+- Incluído sinal isquêmico STOPDAPT-2 ACS e retirada equivalência entre estratégias pelo intervalo25–65%.
+- Explicitado limite temporal ESC e painel CRT não normativo.
+
+Fontes verificadas: PMID40015616, PMID39537191, PMID42410742, PMID42443024, NCT05262803, DOI10.1001/jama.2020.12443, DOI10.1093/eurheartj/ehad191.
+
+## 68 — content/Doença_coronariana/inibicao-do-fator-xia-apos-sindrome-coronariana-aguda-racional-do-librexia-acs.md
+
+- Substituída narrativa sem resultado pelo LIBREXIA-ACS publicado29/08/2026, interrompido por futilidade; definido sangramento BARC3c/5 sem universalizar segurança.
+- Corrigida dose OCEANIC-AF100→50mg e separada falha dessa molécula/dose/indicação de efeito de classe.
+- Incluída existência de OCEANIC-STROKE positivo em população não cardioembólica; não extrapolado a FA/SCA.
+
+Fontes verificadas: PMID39986336, PMID36030390, PMID41791675, PMID42670965, DOI10.1056/NEJMoa2407105, DOI10.1056/NEJMoa2513880.
+
+## 81 — content/Fibrilação_atrial/finerenona-e-prevencao-de-fibrilacao-atrial-incidente-a-analise-agrupada-fine-heart.md
+
+- FINEARTS isolado FAincidenteHR0,77 IC0,57–1,04 p0,09 omitido no original; adicionado e separado do composto IC.
+- Sobreposição de participantes impede chamar análise isolada de replicação independente.
+- FINE-HEART pré-especificado com adjudicação cega; monitorização não contínua não permite afirmar direção do viés.
+- Removido NNT125 como horizonte fixo e erro de decompor soma randomizados só por FA prévia; mantida não indicação isolada prevenir FA.
+
+Fontes verificadas: PMID40306837, PMID40156827, PMID33264825, PMID34449181, PMID39225278, FDA215341s0092025.
+
+## 86 — content/Fibrilação_atrial/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025.md
+
+- DARE-AF inclui FA persistente em todos; não majoritariamente.
+- Diferença entre coortes e RCT não isola mecanismos indiretos/diretos nem prova interação por comorbidade.
+- Retiradas magnitudes TriNetX por RR com orientação ambígua e erratum integral inacessível; identidade41697582 registrada sem alegar leitura.
+- Mantidos dados RCT e limitações observacionais; não promover SGLT2 isoladamente prevenir recorrência nem invalidar indicação cardiorrenal.
+
+Fontes verificadas: PMID41206792, PMID41357094, PMID41134438, PMID41697582identidade_apenas, PMID42289243.
+
+## 87 — content/Fibrilação_atrial/timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst.md
+
+- Corrigida regra1–3–6–12: dia1éAIT, não AVC leve.
+- Corrigidas falsas exclusões universais: ELAN inclui infarto maior; OPTIMAS permite HI1/HI2/PH1, excluiPH2.
+- Distinguidos gravidade radiológica ELAN e NIHSS; CATALYST não inclui todas as janelas ELAN.
+- Removida falsa contagem tripla de eventos e conclusão universal baseada só em TC sem sangue.
+- START reconhecido como RCT publicado; mantidos números dos quatro abstracts primários.
+
+Fontes verificadas: PMID36065821, PMID37222476, PMID39491870, PMID40570866, DOI10.1001/jamaneurol.2025.0285, DOI10.1186/s13063-025-08761-6.
+
+## 93 — content/Geral/sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto.md
+
+- Barendregt e Tumiati tinham resultados invertidos; restaurada heterogeneidade autonômica e denominadores.
+- ESSDAI não possui domínio cardiopulmonar; pericardite/disautonomia não captadas adequadamente.
+- Liu transversal não prova ineficácia preventiva de HCQ; rituximabe individualizado para manifestações graves/refratárias.
+- Lai e001993 corrigido;58862 são conjunto IMID; critérios classificatórios e limites de rastreio explicitados.
+
+Fontes verificadas: 19 referências originais: identidade e abstracts conferidos individualmente., EULAR2020 texto do editor consultado sobre ESSDAI e tratamento sistêmico., BSR DOIkeae152 texto integral do editor consultado em prevenção cardiovascular e imunossupressão., ESSDAI2010 possui erratum sem PMID no cache; não acessado conteúdo, não se reproduzem pesos ou tabela corrigível..
+
+## 94 — content/Hipertensão/amilorida-5-versus-10-mg-e-a-razao-clortalidona-hidroclorotiazida-ensaio-fatorial-brasileiro-jaha-2026.md
+
+- superioridadenegativa nãoequivalência
+- sem braço semamilorida nãoefeitofraco
+- nãodefinequarta droga universal
+
+Fontes verificadas: Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tavares AL, Valter LK, Soares RB, Martins VM, Fuchs FD. Comparative Effectiveness of Chlorthalidone Versus Hydrochlorothiazide and Dose-Response of Amiloride on Blood Pressure and Biochemical Parameters. J Am Heart Assoc. 2026 Aug 30:e047583. DOI: 10.1161/JAHA.125.047583. PMID: 42669885. Abstract estruturado (Background/Methods/Results/Conclusions) conferido na íntegra via PubMed/E-utilities em 01/09/2026..
+
+## 95 — content/Hipertensão/desprescricao-de-anti-hipertensivos-no-idoso-fragil-mortalidade-hospitalizacao-e-o-ensaio-retreat-frail.md
+
+- ausênciadiferença nãoequivalência
+- população-alvoestimada nãonovoRCT798mil
+- indicaçõesIC/FA/anginaantesretirar
+- semextrapolarPA não controlada
+
+Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Reduction of Antihypertensive Treatment in Nursing Home Residents. N Engl J Med. 2025;393(20):1990-2000. DOI: 10.1056/NEJMoa2508157. PMID: 40879421, Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131, Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392.
+
+## 97 — content/Hipertensão/esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht.md
+
+- NT-proBNP intragrupo não demonstra superioridade entre tratamentos; redução pressórica não desfecho CV.
+- Combinações noturnas não randomizadas entre si, post hoc; removida superioridade causal e três ensaios equivalentes.
+- Coorte vascular44/12semanas observacional, não benefício clínico comprovado.
+- Adicionada monitorização K/renal e contraindicação combinações poupadorasK segundo PMDA; não inferir aprovação foraJapão por ausência de busca.
+- Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável.
+
+Fontes verificadas: PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados, https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão, https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização, https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024.
+
+## 98 — content/Hipertensão/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular.md
+
+- Wang21872294 mostra persistência de risco décadas após cessação; original inverteu resultado e inventou efeito em blackfoot.
+- Newman27810857 associação ITB>1,4, não ITB<0,9; distinção de não compressibilidade restaurada.
+- Abir meta inconclusiva/heterogênea; Chiou prevalência nordeste, não coorte mesma população sudoeste.
+- Moon2018 longitudinal apenas estudo familiar; coorte principal sem mudança anual.
+- Urina exige especiação/considerar frutos do mar, cabelo/unhas limitados; ATO não bolus, PDH não cadeia respiratória; quelação especializada.
+
+Fontes verificadas: 16 fontes originais: abstracts/identidades conferidos individualmente., ATSDR Clinician Brief2025 e Clinical Assessment consultados diretamente..
+
+## 100 — content/Hipertensão/hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo.md
+
+- PATH-BP contradiz paracetamol regular como alternativa pressoricamente neutra; incorporadoRCT110, sistólica diurna+4,7mmHg.
+- IncluídoPRECISION-ABPM444; retirado ranking definitivo e alegação de risco isquêmico somente após uso prolongado.
+- Metanálises coxibes versus não seletivos tinham incidência de hipertensão sem diferença significativa; não efeito uniforme.
+- Inserida combinação AINE+diurético+IECA/BRA e lesão renal precoce; retirar AINE não exclui investigar outra causa persistente.
+- DOIAw normalizado conforme ArticleIdList; textoSowers com erratum inacessível mantido apenas como contexto histórico semmagnitudes.
+
+Fontes verificadas: Oito PMIDs originais/citados: abstracts e identidades conferidos., PRECISION-ABPM29020251 primária; PATH-BP35130054 DOI10.1161/CIRCULATIONAHA.121.056015; Lapi23299844 DOI10.1136/bmj.e8525., FDA alerta cardiovascular2015 consultado; Sowers erratum ArchInternMed2005;165:551 identificado, não alegada leitura integral..
+
+## 101 — content/Hipertensão/hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio.md
+
+- HAARLEM100 prospectivo mede PA e recuperação: contradiz alegação de ausência de dados; reversão média não é garantia individual.
+- Henriksen55%vs19% não é prevalência isolada de hipertensão; resumo descreve FEVE reduzida em combinação com PA/HVE.
+- Busca de cuidado não era exclusivamente por sintoma cardiovascular; removida prevalência populacional não sustentada.
+- Estudo transversal de ex-usuários não prova irreversibilidade; avaliação pressórica/manguito e manejo sem presumir cura incorporados.
+
+Fontes verificadas: Cinco referências originais: abstracts/identidades conferidos., HenriksenDOI10.1111/sms.14554 texto indexado do editor seções resultados/discussão consultado, tabelas integrais não acessíveis; removidas magnitudes ambíguas., Smit35014715 DOI10.1111/and.14372 abstract primário e PDF publicado pela autoridade antidoping consultados..
+
+## 103 — content/Hipertensão/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular.md
+
+- Yu2021 resultado HRV predominantemente negativo, não disautonomia precoce confirmada; abstract PubMed ausente exigiu primária institucional.
+- TACT2 randomizou1000;959 análise≥1infusão; baixoPb0,92µg/dL não saturnismo ocupacional grave.
+- EDTA cálcio-dissódico e dissódico não intercambiáveis; quelação toxicologista e sem retirar indicação de intoxicação.
+- Mecanismos experimentais não dose-resposta humana universal; vias de absorção e limites Brasil versus recomendação externa esclarecidos.
+
+Fontes verificadas: Nove referências originais conferidas; Yu texto/abstract primário UTRGV lido porque PubMed contém apenas Figure., TACT2 texto completo PMC11325247 método, denominadores e resultados consultado., NIOSH2024 Blood Lead Guidance lido; NR7 página oficial consultada sem converter limiares clínicos estrangeiros em lei brasileira..
+
+## 110 — content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md
+
+- QUARTET52 semanas7,7mmHg (417continuaram), não6,7; segurança não equivalente por p negativo.
+- QUARTET USA sistólica−4,8 IC−10,8 a1,3 não equivalência.
+- QUADUAL períodos4 semanas e dupla dose padrão não algoritmo ESC completo.
+- Retirada recomendação empírica de reproduzir quatro classes separadas e alegação Anvisa não verificada; título deixa de prescrever início universal.
+
+Fontes verificadas: PMID34469767, PMID38501351, PMID38477128, PMID38584159, PMID40178246, PMID39881316, PMID40283054.
+
+## 117 — content/Insuficiência_cardíaca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca.md
+
+- Falsa inexistência RCT corrigida: CHANCE-HF380 e estudo diurético160. Protocolo multicomponente não efeito puro biomarcador; não rotina obrigatória.
+- ENACT-HF não randomizado, diferenciado PUSH-AHF.
+- HR1,27 por unidade log, não U/mL; idosos desfecho mortalidade/composito, não reinternação isolada; limiar100 exploratório não obrigatório.
+- CA125 inespecífico não exclui neoplasia; DPOC não explica automaticamente derrame; sST2 interação observacional não mecanismo causal.
+
+Fontes verificadas: PMIDs42235631,39809935,42418867,41899087,41524052,42425178: abstracts primários, 10.1016/j.jchf.2016.06.007: CHANCE-HF artigo primário, PMID31422111 DOI10.1016/j.amjmed.2019.07.041: ensaio diurético randomizado.
+
+## 118 — content/Insuficiência_cardíaca/cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao.md
+
+- Glicose urgente não deve aguardar tiamina; via oral não equivalente em choque/vômitos.
+- Transcetolase é citosólica e não produz NADPH diretamente; ETKAC é indireto.
+- Seligmann não placebo; Shimon extensão aberta não efeito randomizado de22%; RCT69 negativo incluído.
+- Nisar31=12gestantes+19puérperas; resposta em24h não garantia nem exclusão, shoshin não exige alto débito.
+- Retirada suplementação empírica universal de selênio e certezas comparativas sem respaldo.
+
+Fontes verificadas: 23 referências originais: abstracts e identidade conferidos individualmente., StatPearls capítulo atualizado31jan2026 lido diretamente, doses tratadas como variáveis por contexto., ASAM2020 recomendação primária V.7 e EFNS20642790 consultadas., RCT31504093 PubMed e texto primário AJCN consultados..
+
+## 125 — content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md
+
+- monoterapiatafamidisbasal
+- nãoinferebenefícioincrementalcombinação
+- aprovaçãoFDA2025+vitaminaA
+
+Fontes verificadas: Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, Damy T, Garcia-Pavia P, Taubel J, Solomon SD, Sheikh FH, Tahara N, González-Costello J, Tsujita K, Morbach C, Pozsonyi Z, Petrie MC, Delgado D, Van der Meer P, Jabbour A, Bondue A, Kim D, Azevedo O, Hvitfeldt Poulsen S, Yilmaz A, Jankowska EA, Algalarrondo V, Slugg A, Garg PP, Boyle KL, Yureneva E, Silliman N, Yang L, Chen J, Eraly SA, Vest J, Maurer MS; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194 — resumo estruturado (Background/Methods/Results/Conclusions) conferido via NCBI E-utilities (efetch, retmode=xml) nesta sessão, com todos os números do desfecho primário, mortalidade, 6MWT, KCCQ-OS e segurança extraídos diretamente do abstract estruturado do artigo., FDA. Amvuttra prescribing information, março2025, seções1.2 e5.1. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf.
+
+## 126 — content/Insuficiência_cardíaca/hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico.md
+
+- CLOROTIC cloreto contínuo sem interação, omitido; resultado categórico isolado não permite direção prescritiva.
+- ALCALOTIC386dos665 completos, associação não benefício causal.
+- Cloreto sérico não oferta luminal; removida hipótese simplista de falta substrato tiazídico.
+- Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina.
+
+Fontes verificadas: PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários, https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral.
+
+## 127 — content/Insuficiência_cardíaca/manejo-farmacologico-da-insuficiencia-cardiaca-na-amiloidose-cardiaca-digoxina-e-bloqueadores-de-canal-de-calcio-al-versus-attr.md
+
+- Digoxina não contraindicação absoluta: coorte69 e ESC-HFA2025/26 permitem uso selecionado monitorado; não negar literatura contemporânea.
+- Removida afirmação in vitro provou concentração livre no tecido condução.
+- Coorte2371MRA/betabloqueador acrescentada como associação, sem neuropatia, sem extrapolarAL.
+- DisautonomiaATTRv pode ser precoce/importante, não hierarquiaAL>todaATTR.
+- Biomarcador respostaNTproBNP distinto troponina prognóstica; estágioAL não corte automático transplante.
+- SGLT2 hospitalizaçãoIC não significativa; causalidade limitada.
+
+Fontes verificadas: PMIDs7014028,8339658,42110711,41347328: abstracts verificados;4003314 identidade título, PMID32800294: coorte69digoxina, PMID37216684 DOIehad347: coorte2371; erratum ehae140 lido integral, somente disponibilidade de dados, PMID41055898 DOIehaf710: consenso integral viaGUARD-HEART, seções suporte/ratecontrol, PMID38769233: coorte disautonomiaATTRv.
+
+## 128 — content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md
+
+- IMPROVE-HCM: VO2pico p0,90 e KCCQglobal p0,30 negativos omitidos; subgrupo35 post hoc; segurança não definitiva4/34vs2/33SAE.
+- CMH sintomática não exclui IC; removida separação absoluta.
+- DiCE coortes antes/depois sem controle, idadeparte1 72; débitoL/min não volume; ausênciaNTproBNP não prova mecanismo.
+- Não negar genericamente toda investigação mitotrópica; FORTITUDEphase2b reconhecido; não afirmar que toda combinação nunca estudada.
+
+Fontes verificadas: PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract primário, PMID38599256 DOI10.1016/j.jacc.2024.03.387: abstract primário, PMIDs38752753,42250280: revisões mecanísticas, não evidência desfechos, NCT07023614: registro FORTITUDE-HCM fase2b; sem inferência eficácia, Detalhes gastrointestinais do DiCE não revalidados no integral: retirados sem inferir segurança.
+
+## 131 — content/Insuficiência_cardíaca/terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md
+
+- ACHIEVE/ALCHEMIST2025 neutros restaurados; não recomendar ARMrotineiro por meta2022 nem tratar diálise como proteçãohiperK.
+- EMPERORReduced≥20; EMPAKIDNEY20–<45independentealbuminúria; DAPA/EMPA incluemparteDRC4.
+- KDIGO iniciar/manterdistintos; coortePeng faixa15–29sobrepostaRCTnão prova<20/diálise.
+- CKM4nãoDRC4; FIDELITYnãoquádruplaICFEr; finerenonanãotrocaARMautomática.
+- Cice114RCTdiálise existe; não alegar ausência absoluta.
+- Guo30 resposta agregada não decisão, metaARNIrenalnãoexclusivadiálise; mortalidadeCVARni nãosignificativa.
+
+Fontes verificadas: PMIDs42584660,42234894,42389639,42234437,42247581,12742278: abstracts primários, ACHIEVE PMID40818850 DOI10.1016/S0140-6736(25)01198-5, ALCHEMIST PMID40818851 DOI10.1016/S0140-6736(25)01194-8, KDIGO2024 original; EMPAKIDNEY NEJMoa2204233 e DAPACKD NEJMoa2024816, Dependência checklist JSON correspondente conferida: mesmo finding estrutural corrigido noMD.
+
+## 142 — content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md
+
+- DIFFERENCEfase4
+- eritema não todasreações
+- rosuvastatina40diferente nãoefeito muscularintrínseco
+- ORION4 semresultados
+
+Fontes verificadas: Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck C, Lesogor A, Ott D, Mena-Madrazo J, Zang X, Wright RS. Safety and Lipid-Lowering Efficacy of Inclisiran Monotherapy in Patients Without ASCVD: The VICTORION-Mono Randomized Clinical Trial. J Am Coll Cardiol. 2025;86(3):196-208. DOI: 10.1016/j.jacc.2025.04.049. PMID: 40392667, Landmesser U, Laufs U, Schatz U, Winzer EB, Nowak B, Kassner U, Gouni-Berthold I, Esteban A, Lubyayi L, Krueger A, Hentschke C, Wilke A, Winkelmann BR, Achouba A, Banach M. Inclisiran-based treatment strategy in hypercholesterolaemia: the VICTORION-difference trial. Eur Heart J. 2026;47(25):3241-3253. DOI: 10.1093/eurheartj/ehaf685. PMID: 40884558, Steg PG, Goodman SG, Jukema JW, Martens P, Zirlik A, Bhatt DL, Menon V, Szarek M, Lesogor A, Stratz C, O'Donoghue F, Mena-Madrazo J, Shao Q, Liu K, Mehran R; VICTORION-2 Prevent Investigators. Design of VICTORION-2 Prevent: a randomized double-blind, placebo-controlled trial, assessing the impact of inclisiran on major adverse cardiovascular events in patients with established cardiovascular disease. Am Heart J. 2026. DOI: 10.1016/j.ahj.2026.107493. PMID: 42203164, Ray KK, Wright RS, Kallend D, Koenig W, Leiter LA, Raal FJ, et al; ORION-10 and ORION-11 Investigators. Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol. N Engl J Med. 2020;382(16):1507-1519. DOI: 10.1056/NEJMoa1912387. PMID: 32187462, VICTORION-Difference, texto completo: https://academic.oup.com/eurheartj/article/47/25/3241/8243858 ; distribuição de rosuvastatina40mg e eritema no local de injeção conferidos., ClinicalTrials.gov. ORION-4, NCT03705234. https://clinicaltrials.gov/study/NCT03705234?tab=results. Sem resultados postados em08/09/2026..
+
+## 143 — content/Prevenção_e_lipídios/lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3.md
+
+- Falsa precedência fase3: OCEAN(a)olpasirana registrado2022, antes ACCLAIM2024.
+- Estatinas não reduzem Lpa consistentemente/podem elevar; não suspender LDLterapia.
+- ALPACA inclui braço400mgseguido placebo180, omitido.
+- Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.
+- Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados.
+- Atualização focal: HORIZON topline04set2026 separado de evidência siRNA e de artigo completo.
+
+Fontes verificadas: PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados, NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026, EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa.
+
+## 144 — content/Prevenção_e_lipídios/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode.md
+
+- LDL genético não excluído por ensaios negativos de estatina em progressão; EPISODE não primeiro hipolipemiante nem mecanismo Lp(a) isolado.
+- Girard seguimento2,5–5 anos e associação não efeito terapêutico; removida conversão fixa nmol/mg.
+- FRONTIERS CAVS fase2 incluído; OCEAN-DOSE separado de Outcomes.
+- HORIZON comunicado negativo04set2026 incorporado sem inventar HR/subgrupo nem extrapolar à válvula.
+
+Fontes verificadas: Nove fontes originais conferidas em abstracts e identidade PubMed., Smith25344734 primário consultado., ClinicalTrials.gov APIs de quatro registros consultadas., Comunicado primário Novartis04set2026 lido integralmente..
+
+## 157 — content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md
+
+- EAmoderada sintomas nãoindicamintervençãoautomática
+- exceçãoSAVR concomitante
+- EVOLVED neutro
+- 43%crossover eprimárioincluiKCCQ
+
+Fontes verificadas: Van Mieghem NM, Elmariah S, Spitzer E, et al. Transcatheter Aortic Valve Replacement in Patients With Systolic Heart Failure and Moderate Aortic Stenosis: TAVR UNLOAD. J Am Coll Cardiol. 2025;85(9):878-890. DOI: 10.1016/j.jacc.2024.10.070. PMID: 39480381., Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291., Loganath K, et al. EVOLVED randomized trial. JAMA.2024. DOI:10.1001/jama.2024.22730. https://jamanetwork.com/journals/jama/fullarticle/2825540.
+
+## 158 — content/Valvopatias/regurgitacao-aortica-aguda-emergencia-endocardite-e-dissecacao.md
+
+- Corrigida inversão endocardite/dissecção no reparo e desbridamento.
+- Emergência por edema refratário/choque separada de urgência por IC sem colapso; não esperar cultura negativa.
+- ECMO convencional não recomendada genericamente: piora da pós-carga; LAVA-ECMO apenas estratégia especializada com evidência limitada.
+- Vasodilatação condicionada à pressão/perfusão; retirada taquicardia como única sustentação de débito e taxa fixa de mortalidade.
+- BSE confirma término prematuro do fluxo aórtico com fechamento aórtico precoce; preservado sem reinterpretar incorretamente como jato regurgitante.
+
+Fontes verificadas: 10.1186/s44156-024-00067-8: texto integral, seção acute AR, 10.1093/eurheartj/ehad193: diretriz ESC 2023, indicação e timing cirúrgico, 10.1093/eurheartj/ehae179: diretriz aórtica ESC 2024, 10.1080/14796678.2025.2472551: suporte e LAVA-ECMO, PMC10242569: relato técnico, contraindicação VA-ECMO convencional na IA grave; não RCT.
+
+## 159 — content/Valvopatias/reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave.md
+
+- COAPT também3+/4+; falsa exclusividade removida
+- três primários eKCCQ12meses
+- segurançaespecífica não todosEA
+- proporcionalidade hipótesenãogate
+
+Fontes verificadas: Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 Investigators. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation. N Engl J Med. 2024;391(19):1799-1809. DOI: 10.1056/NEJMoa2314328 · PMID: 39216092 — abstract conferido via PubMed E-utilities nesta sessão., Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640., Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927., Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663..
+
+## 160 — content/Valvopatias/tavi-anel-aortico-pequeno-escolha-de-protese-ensaio-smart-2024.md
+
+- Corrigida inversão da regurgitação residual: menor com SEV no subgrupo feminino.
+- BVD hemodinâmica não igual a degeneração anatômica/durabilidade; removida recomendação universal de plataforma.
+- Subgrupo não replicação; contextualizada idade média80anos e limiar geral de diretriz não específico de anel pequeno.
+- Acrescentado seguimento3anos como apresentação EuroPCR2026, não artigo integral revisado por pares; sem superioridade clínica.
+
+Fontes verificadas: PMID38587261 DOI10.1056/NEJMoa2312573: abstract primário, PMID39382856 DOI10.1001/jamacardio.2024.3241: abstract primário; retirados detalhes numéricos não revalidados no texto integral, https://europcr2026.europa-inviteo.com/gws/index.php?langue=en&onglet=33&paramProjet=107923 : resumo investigador,3anos, https://www.pcronline.com/Cases-resources-images/Resources/Course-videos-slides/2026/EuroPCR/TAVI-head-to-head-trials : programação20maio2026.
+
+## 161 — content/Valvopatias/tavi-em-valva-aortica-bicuspide-evidencia-especifica-alem-dos-ensaios-pivotais.md
+
+- NOTION-2 subgrupo100bicúspides acrescentado: evidência randomizada existe, mas limitada; interação0,10 não prova heterogeneidade.
+- Observação de condução não posterga MP por BAV alto grau persistente24–48h ou ramo alternante.
+- PVL requer avaliação e correção intraprocedural; pré-alta confirma residual, não substitui intervenção inicial.
+- Metas podem sobrepor estudos; associação tardia não causal, meta-regressão ecológica; registro de durabilidade não equivalência.
+- Removida afirmação MP bicúspide consistentemente maior confundindo comparadores.
+
+Fontes verificadas: PMIDs42657854,42534253,42485121,42576591,42601268,42585416,42621122,42604179: abstracts primários verificados, PMIDs42454205,42409619: identidades editoriais; nenhuma magnitude atribuída, 10.1093/eurheartj/ehae331: NOTION-2 resultados primários, 10.1093/eurheartj/ehab364: ESC estimulação, recomendação pósTAVI.
+
+## 162 — content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md
+
+- HALT pode ou não restringir mobilidade; coorte não prova ausência universal de gradiente ou causalidade cerebrovascular.
+- ADAPT-TAVR primário p0,076: não significativo, sem diferença qualquer/maior sangramento; removido falso sangramento menor.
+- GALILEO composto/mortalidade e sangramento p0,08 separados; AAS/clopidogrel duração3 meses.
+- Removida ideia de que profilaxia se baseia só em consenso; ESC2025 distingue HALT incidental e aumento relevante gradiente/restrição confirmada, com anticoagulação a considerar.
+- BVD distribuição60,9/39,1 entre casos não incidência por plataforma.
+
+Fontes verificadas: PMID40967263, PMID40353875, PMID31733180, PMID31733182, PMID35373583, PMID39736458, DOI10.1093/ejcts/ezaf276.

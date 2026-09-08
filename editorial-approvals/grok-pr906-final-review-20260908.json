@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr906-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr906": "6aefa9d69fd4b31edb56552b1b81cc303cbe9795"
+  },
+  "fronts": {
+    "documentos": [
+      "alerta-remoto-de-cied-no-ambulatorio-quando-ligar-clinica-vs-ps",
+      "fluxograma-alerta-remoto-cied-destino-ambulatorial",
+      "monitoramento-remoto-nao-e-servico-de-emergencia-24h"
+    ]
+  }
+}

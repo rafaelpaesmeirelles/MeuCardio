@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr893-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr893": "38bcb10b07dfc3a5c68dd00bfab2c9efad3dfec4"
+  },
+  "fronts": {
+    "documentos": [
+      "candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar",
+      "fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino",
+      "sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia"
+    ]
+  }
+}

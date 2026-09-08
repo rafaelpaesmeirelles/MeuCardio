@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr886-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings remotos e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr886": "990d4bc3c3defd9186c4d2a760281eb729ffaf03"
+  },
+  "fronts": {
+    "documentos": [
+      "angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao",
+      "fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento",
+      "sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar"
+    ]
+  }
+}

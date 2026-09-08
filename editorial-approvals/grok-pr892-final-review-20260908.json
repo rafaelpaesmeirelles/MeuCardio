@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr892-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr892": "d958fbe81d52402809326107f3737b5bdccbcfc4"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-ppcm-puerperio-destino",
+      "ppcm-checklist-ambulatorial-alarme-pos-parto",
+      "sinalizadores-ambulatoriais-ppcm-puerperio-quando-encaminhar"
+    ]
+  }
+}

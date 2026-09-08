@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "sindrome-cardiorrenal",
+    "set": {
+      "review_note": "Revisão clínica adicional em 08/09/2026 dos achados do PR #692: comparação de creatinina atual versus basal, população elegível à finerenona, bloqueio sequencial agudo, condicionamento de ajuste do SRAA ao uso atual e metadados PubMed corrigidos. Publicação autorizada no release consolidado, condicionada aos gates finais.",
+      "source_refs": [
+        "Ronco C, McCullough P, Anker SD, et al. Cardio-renal syndromes: report from the consensus conference of the Acute Dialysis Quality Initiative. Eur Heart J. 2010;31(6):703-711. DOI: 10.1093/eurheartj/ehp507. PMID: 20037146.",
+        "Ronco C, Haapio M, House AA, et al. Cardiorenal syndrome. J Am Coll Cardiol. 2008;52(19):1527-1539. DOI: 10.1016/j.jacc.2008.07.051. PMID: 19007588.",
+        "Rangaswami J, Bhalla V, Blair JEA, et al. Cardiorenal Syndrome: Classification, Pathophysiology, Diagnosis, and Treatment Strategies: A Scientific Statement From the American Heart Association. Circulation. 2019;139(16):e840-e878. DOI: 10.1161/CIR.0000000000000664. PMID: 30852913.",
+        "Testani JM, Chen J, McCauley BD, et al. Potential effects of aggressive decongestion during the treatment of decompensated heart failure on renal function and survival. Circulation. 2010;122(3):265-272. DOI: 10.1161/CIRCULATIONAHA.109.933275. PMID: 20606118.",
+        "Mullens W, Damman K, Harjola VP, et al. The use of diuretics in heart failure with congestion: a position statement from the Heart Failure Association of the ESC. Eur J Heart Fail. 2019;21(2):137-155. DOI: 10.1002/ejhf.1369. PMID: 30600580.",
+        "Trullàs JC, Morales-Rull JL, Casado J, et al. Combining loop with thiazide diuretics for decompensated heart failure: the CLOROTIC trial. Eur Heart J. 2023;44(5):411-421. DOI: 10.1093/eurheartj/ehac689. PMID: 36423214.",
+        "Mullens W, Dauw J, Martens P, et al. Acetazolamide in Acute Decompensated Heart Failure with Volume Overload. N Engl J Med. 2022;387(13):1185-1195. DOI: 10.1056/NEJMoa2203094. PMID: 36027559.",
+        "Bakris GL, Agarwal R, Anker SD, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383(23):2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825.",
+        "Pitt B, Filippatos G, Agarwal R, et al. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes. N Engl J Med. 2021;385(24):2252-2263. DOI: 10.1056/NEJMoa2110956. PMID: 34449181."
+      ]
+    },
+    "replace": [
+      {
+        "old": "bloqueio sequencial do néfron com associação de diurético tiazídico ou poupador de potássio",
+        "new": "bloqueio sequencial do néfron com associação de tiazídico ou acetazolamida, conforme perfil clínico, função renal e eletrólitos; antagonista mineralocorticoide não deve ser acrescentado como resgate agudo de rotina"
+      },
+      {
+        "old": "antagonistas mineralocorticoides não esteroidais, conforme avaliação médica individualizada",
+        "new": "finerenona somente quando o paciente preencher a população e os critérios de segurança da evidência aplicável, especialmente DRC associada a diabetes tipo 2, albuminúria, função renal e potássio compatíveis"
+      },
+      {
+        "old": "antagonistas mineralocorticoides não esteroidais, no contexto mais amplo",
+        "new": "finerenona na população elegível estudada — não para toda síndrome cardiorrenal —, no contexto mais amplo"
+      }
+    ],
+    "assistant_questions_add": [
+      {
+        "id": "creatinina_aumentou_em_relacao_basal",
+        "label": "A creatinina atual aumentou em relação ao valor basal comparável?",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "assistant_rules": {
+      "elevacao_creatinina_com_descongestao_eficaz": {
+        "when": {
+          "all": [
+            {"field": "contexto_atual", "op": "eq", "value": "icad_em_descongestao"},
+            {"field": "creatinina_basal_mg_dl", "op": "gt", "value": 0},
+            {"field": "creatinina_atual_mg_dl", "op": "gt", "value": 0},
+            {"field": "creatinina_aumentou_em_relacao_basal", "op": "truthy"},
+            {"field": "sinais_congestao_presentes", "op": "truthy"}
+          ]
+        }
+      },
+      "creatinina_progressiva_sem_descongestao": {
+        "when": {
+          "all": [
+            {"field": "creatinina_basal_mg_dl", "op": "gt", "value": 0},
+            {"field": "creatinina_atual_mg_dl", "op": "gt", "value": 0},
+            {"field": "creatinina_aumentou_em_relacao_basal", "op": "truthy"},
+            {"field": "sinais_congestao_presentes", "op": "truthy"},
+            {"field": "resposta_diuretico_alca_inicial", "op": "falsy"}
+          ]
+        }
+      },
+      "hiperpotassemia_alerta": {
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Hiperpotassemia significativa — confirmar o resultado, obter ECG conforme gravidade e revisar função renal, causas e todas as medicações com urgência."]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "hiperpotassemia_em_uso_sraa_reavaliar",
+        "priority": 86,
+        "when": {
+          "all": [
+            {"field": "potassio_serico_meq_l", "op": "gte", "value": 5.5},
+            {"field": "uso_bloqueio_sra_atual", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "supporting": ["Como há bloqueador do SRAA em uso, reavaliar temporização e dose no contexto da hiperpotassemia; não presumir uso nem recomendar ajuste de dose quando o fármaco não está prescrito."]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "cardiomiopatia-chagasica",
+    "set": {
+      "review_note": "Revisão clínica adicional em 08/09/2026 dos achados do PR #696: limiar de FEVE preservado em 35%, NYHA IV condicionada a refratariedade, tripanocida excluído na gestação, síncope contextualizada por recência, categoria de Rassi derivada dos pontos e regras cardíacas condicionadas à forma cardíaca confirmada. Publicação autorizada no release consolidado, condicionada aos gates finais."
+    },
+    "replace": [
+      {
+        "old": "com fração de ejeção abaixo de 35%",
+        "new": "com fração de ejeção igual ou inferior a 35%"
+      },
+      {
+        "old": "com fração de ejeção acima de 35%",
+        "new": "com fração de ejeção superior a 35%"
+      },
+      {
+        "old": "Fração de ejeção de ventrículo esquerdo abaixo de 35%",
+        "new": "Fração de ejeção de ventrículo esquerdo igual ou inferior a 35%"
+      },
+      {
+        "old": "FEVE abaixo de 35%",
+        "new": "FEVE igual ou inferior a 35%"
+      },
+      {
+        "old": "FEVE acima de 35%",
+        "new": "FEVE superior a 35%"
+      }
+    ],
+    "assistant_questions": {
+      "feve_abaixo_35": {"label": "A fração de ejeção do ventrículo esquerdo é igual ou inferior a 35%?"},
+      "categoria_risco_rassi": {"label": "Qual a categoria derivada da pontuação total de Rassi (0–6 baixo, 7–11 intermediário, 12–20 alto)?"},
+      "sincope_inexplicada": {"label": "Houve síncope recente ou ainda não esclarecida, com possibilidade arrítmica?"},
+      "gestante_ou_planeja_gestacao": {"label": "Há gestação atual?"}
+    },
+    "assistant_questions_add": [
+      {"id": "nyha_iv_refrataria", "label": "A classe NYHA IV persiste apesar de tratamento otimizado (refratária)?", "type": "boolean", "required": true},
+      {"id": "planejamento_gestacao_futura", "label": "Há planejamento de gestação futura, sem gestação atual?", "type": "boolean"}
+    ],
+    "assistant_rules": {
+      "tvs_feve_baixa_cdi_classe_1": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "tvs_documentada", "op": "truthy"}, {"field": "feve_abaixo_35", "op": "truthy"}]}},
+      "tvs_feve_preservada_cdi_classe_2a": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "tvs_documentada", "op": "truthy"}, {"field": "feve_abaixo_35", "op": "falsy"}]}},
+      "tvns_feve_baixa_cdi_classe_2b": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "tvns_documentada", "op": "truthy"}, {"field": "feve_abaixo_35", "op": "truthy"}, {"field": "tvs_documentada", "op": "falsy"}]}},
+      "nyha_iv_sem_transplante_cdi_nao_indicado": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "classe_funcional_nyha", "op": "eq", "value": "IV"}, {"field": "nyha_iv_refrataria", "op": "truthy"}, {"field": "candidato_transplante_cardiaco", "op": "falsy"}]}},
+      "risco_alto_rassi": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "escore_rassi_pontos", "op": "gte", "value": 12}]}},
+      "aneurisma_ou_trombo_investigar": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "aneurisma_apical_ou_trombo_ve", "op": "truthy"}]}},
+      "avc_cardioembolico_previo_recorrencia": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "avc_cardioembolico_previo", "op": "truthy"}]}},
+      "sincope_com_tvns_emergencia": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "sincope_inexplicada", "op": "truthy"}, {"field": "tvns_documentada", "op": "truthy"}]}},
+      "tratamento_etiologico_elegivel": {"when": {"all": [{"field": "idade_anos", "op": "lt", "value": 50}, {"field": "lesao_organica_avancada", "op": "falsy"}, {"field": "sorologia_dupla_positiva", "op": "truthy"}, {"field": "gestante_ou_planeja_gestacao", "op": "falsy"}]}},
+      "lesao_avancada_tratamento_etiologico_controverso": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "lesao_organica_avancada", "op": "truthy"}]}},
+      "fibrilacao_atrial_tromboembolismo": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "fibrilacao_atrial", "op": "truthy"}]}},
+      "bloqueio_av_avancado_marcapasso": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "bloqueio_atrioventricular_avancado", "op": "truthy"}]}},
+      "gestante_rastreio_transmissao": {"when": {"all": [{"field": "gestante_ou_planeja_gestacao", "op": "truthy"}, {"field": "sorologia_dupla_positiva", "op": "truthy"}]}, "add": {"risk": "prioritario", "messages": ["Gestação atual com doença de Chagas: não iniciar benznidazol/nifurtimox durante a gestação; organizar acompanhamento obstétrico-infectológico, prevenção de transmissão vertical e rastreio do recém-nascido."]}},
+      "esporte_competitivo_avaliacao_individualizada": {"when": {"all": [{"field": "forma_clinica", "op": "in", "value": ["cardiaca", "mista"]}, {"field": "pratica_esporte_competitivo_intenso", "op": "truthy"}]}}
+    },
+    "assistant_rules_add": [
+      {
+        "id": "planejamento_gestacional_tratamento_preconcepcional",
+        "priority": 52,
+        "when": {"all": [{"field": "planejamento_gestacao_futura", "op": "truthy"}, {"field": "gestante_ou_planeja_gestacao", "op": "falsy"}, {"field": "sorologia_dupla_positiva", "op": "truthy"}]},
+        "add": {"risk": "rotina", "supporting": ["Discutir tratamento tripanocida antes da concepção, com contracepção durante o esquema e intervalo recomendado pelo protocolo; não iniciar durante gestação."]}
+      }
+    ]
+  },
+  {
+    "slug": "minoca-e-disseccao-espontanea-arteria-coronaria",
+    "set": {
+      "review_note": "Revisão clínica adicional em 08/09/2026 dos achados do PR #697: estado explícito de RMC não realizada, alto risco anatômico de SCAD, imagem intracoronária restrita à etiologia indefinida, recorrência separada de aconselhamento gestacional e alerta puerperal condicionado a evento agudo. Publicação autorizada no release consolidado, condicionada aos gates finais."
+    },
+    "assistant_questions_add": [
+      {"id": "evento_coronariano_agudo_atual", "label": "Há dor/isquemia ou outro evento coronariano agudo na avaliação atual?", "type": "boolean", "required": true}
+    ],
+    "assistant_rules": {
+      "diagnostico_minoca_investigar_rm": {"when": {"all": [{"field": "diagnostico_de_trabalho", "op": "truthy"}, {"field": "causa_alternativa_evidente", "op": "falsy"}, {"field": "rm_cardiaca_realizada", "op": "eq", "value": "nao_realizada"}]}},
+      "rm_padrao_isquemico_investigar_scad": {"when": {"all": [{"field": "rm_cardiaca_realizada", "op": "eq", "value": "sim_padrao_isquemico"}, {"field": "etiologia_identificada", "op": "eq", "value": "nao_definida"}, {"field": "imagem_intracoronaria_realizada", "op": "falsy"}]}, "add": {"suggested_tests": ["Considerar OCT ou IVUS somente se a etiologia permanecer indefinida e o benefício diagnóstico superar o risco de instrumentação; não instrumentar SCAD já reconhecida de rotina."]}},
+      "primeira_semana_pos_parto_alerta": {"when": {"all": [{"field": "evento_coronariano_agudo_atual", "op": "truthy"}, {"field": "tempo_pos_parto", "op": "in", "value": ["primeira_semana", "ate_primeiro_mes"]}]}},
+      "recorrencia_scad_aconselhamento": {"when": {"all": [{"field": "episodio_scad_previo", "op": "truthy"}]}, "add": {"risk": "rotina", "supporting": ["Episódio prévio de SCAD requer seguimento e discussão de recorrência; isso é distinto do aconselhamento sobre uma futura gestação."]}}
+    },
+    "assistant_rules_add": [
+      {
+        "id": "scad_anatomia_proximal_ou_multivaso",
+        "priority": 96,
+        "when": {"all": [{"field": "etiologia_identificada", "op": "eq", "value": "scad"}, {"field": "localizacao_disseccao", "op": "in", "value": ["multivaso", "vaso_unico_proximal"]}]},
+        "add": {"risk": "urgente", "red_flags": ["SCAD multivaso ou proximal envolve maior território potencial e exige avaliação urgente em centro experiente."], "emergency_flow": ["Monitorizar e discutir prontamente anatomia, fluxo distal, isquemia e estratégia com cardiologia intervencionista; anatomia de alto risco não significa angioplastia automática."]}
+      },
+      {
+        "id": "scad_planejamento_gestacional",
+        "priority": 46,
+        "when": {"all": [{"field": "planejamento_gestacao_futura", "op": "truthy"}]},
+        "add": {"risk": "rotina", "messages": ["Aconselhamento reprodutivo após SCAD deve ser individualizado por equipe cardio-obstétrica, separado da estimativa de recorrência espontânea e sem contraindicação automática baseada apenas no diagnóstico prévio."]}
+      }
+    ]
+  },
+  {
+    "slug": "cardiomiopatia-de-takotsubo",
+    "set": {
+      "review_note": "Revisão clínica adicional em 08/09/2026 dos achados do PR #698: Takotsubo tratado como diagnóstico alternativo que exclui MINOCA final, recorrência RETAKO não anualizada, interrupção oncológica condicionada à causalidade, suspeita de feocromocitoma preservada e preditores agudos separados de histórico psíquico. Publicação autorizada no release consolidado, condicionada aos gates finais."
+    },
+    "replace": [
+      {"old": "MINOCA (infarto do miocárdio com artérias coronárias não obstrutivas) — takotsubo é uma das causas de MINOCA, não um diagnóstico mutuamente exclusivo dele", "new": "MINOCA (infarto do miocárdio com artérias coronárias não obstrutivas) — é diagnóstico de trabalho; quando Takotsubo é confirmado como explicação alternativa, o rótulo final de MINOCA é retirado"},
+      {"old": "taxa de recorrência de cerca de 4% ao ano (maior sem gatilho identificável)", "new": "recorrência de cerca de 4% durante o seguimento do registro RETAKO (maior sem gatilho identificável)"},
+      {"old": "a taxa de recorrência do próprio takotsubo, medida no registro espanhol RETAKO (1.097 pacientes), foi de aproximadamente 4% ao ano", "new": "a recorrência do próprio takotsubo, medida no registro espanhol RETAKO (1.097 pacientes), ocorreu em aproximadamente 4% durante o seguimento"},
+      {"old": "Informar ao paciente o risco real de recorrência (aproximadamente 4% ao ano no registro RETAKO), maior se não houve gatilho identificável no episódio índice, em vez de deixá-lo com estimativa própria e tipicamente mais catastrófica.", "new": "Informar que cerca de 4% dos participantes tiveram recorrência durante o seguimento do RETAKO, maior quando não houve gatilho identificável, sem apresentar esse percentual cumulativo como taxa anual."},
+      {"old": "o aconselhamento sobre risco real de recorrência (cerca de 4% ao ano) completam o manejo além da fase aguda", "new": "o aconselhamento sobre recorrência (cerca de 4% durante o seguimento do RETAKO, não por ano) completam o manejo além da fase aguda"},
+      {"old": "Seguimento estruturado de risco de recorrência (~4% ao ano; maior sem gatilho identificável), com orientação explícita ao paciente sobre esse número.", "new": "Seguimento estruturado de recorrência (~4% durante o seguimento do RETAKO; maior sem gatilho identificável), explicitando que não se trata de taxa anual."},
+      {"old": "Feocromocitoma/paraganglioma secretor como causa identificada: risco de recorrência de takotsubo maior que em outras causas catecolaminérgicas (16,8% vs. recorrência geral de ~4% ao ano), justificando seguimento estruturado.", "new": "Feocromocitoma/paraganglioma secretor confirmado como causa: séries de casos sugerem recorrência mais frequente, mas os percentuais acumulados não são taxas anuais e exigem seguimento individualizado."},
+      {"old": "Episódio prévio de takotsubo: taxa de recorrência de aproximadamente 4% ao ano no registro RETAKO, maior quando não há gatilho identificável no episódio índice.", "new": "Episódio prévio de takotsubo: no registro RETAKO, cerca de 4% tiveram recorrência durante o seguimento, maior quando não havia gatilho identificável; esse percentual não é taxa anual."},
+      {"old": "Doença neurológica ou psiquiátrica aguda concomitante — preditor independente de complicação intra-hospitalar, presente em mais da metade dos pacientes do InterTAK", "new": "Evento neurológico agudo concomitante — marcador de maior risco na fase hospitalar; histórico psiquiátrico prévio é frequente, mas não deve ser fundido com o preditor agudo"},
+      {"old": "Diante de quadro sugestivo (dor torácica/dispneia aguda, alteração eletrocardiográfica nova, troponina elevada), investigar com coronariografia e ventriculografia esquerda urgentes (ou angiotomografia em paciente estável/baixo risco/takotsubo recorrente) se a disfunção contrátil regional se estende além do território de qualquer artéria obstruída, ou ocorre sem obstrução coronariana associada.", "new": "Diante de dor torácica/dispneia aguda, alteração eletrocardiográfica nova ou troponina elevada, conduzir inicialmente como possível síndrome coronariana aguda e excluir obstrução coronariana conforme risco e estabilidade. Integrar coronariografia/ventriculografia ou, em casos estáveis selecionados, angiotomografia, ao padrão ecocardiográfico e à ressonância para confirmar Takotsubo e excluir diagnósticos alternativos."},
+      {"old": "Quando o gatilho é uma terapia antineoplásica (fluoropirimidinas, inibidor de checkpoint imune, inibidor de angiogênese/VEGF), a diretriz ESC 2022 de cardio-oncologia recomenda interrupção do fármaco causal na fase aguda", "new": "Quando a avaliação multidisciplinar considera provável a causalidade de uma terapia antineoplásica, após excluir síndrome coronariana e toxicidades alternativas como miocardite por inibidor de checkpoint, a diretriz ESC 2022 de cardio-oncologia recomenda interromper o fármaco implicado na fase aguda"}
+    ],
+    "assistant_questions": {
+      "comorbidade_neuropsiquiatrica_aguda": {"label": "Há evento neurológico agudo concomitante (por exemplo, HSA, AVC ou crise convulsiva)?"}
+    },
+    "assistant_questions_add": [
+      {"id": "historico_psiquiatrico_previo", "label": "Há histórico psiquiátrico prévio, separado de evento neurológico agudo?", "type": "boolean"},
+      {"id": "causalidade_oncologica_provavel", "label": "Após avaliação diferencial, a terapia antineoplásica é considerada causa provável do episódio?", "type": "boolean", "required": true}
+    ],
+    "assistant_rules": {
+      "comorbidade_neuropsiquiatrica_investigar": {"add": {"risk": "prioritario", "supporting": ["Evento neurológico agudo concomitante associa-se a maior risco na fase hospitalar; histórico psiquiátrico prévio, embora frequente, é informação distinta e não deve ser tratado como o mesmo preditor agudo."]}},
+      "suspeita_pheo_seguimento_recorrencia": {"add": {"risk": "prioritario", "supporting": ["Suspeita de feocromocitoma/paraganglioma deve ser preservada até investigação apropriada; não rotular como gatilho confirmado apenas pelo padrão de Takotsubo."], "suggested_tests": ["Metanefrinas plasmáticas livres ou urinárias fracionadas em condições apropriadas, seguidas de investigação endocrinológica conforme o resultado."]}},
+      "oncologico_interromper_farmaco_causal": {"when": {"all": [{"field": "contexto_oncologico_terapia_suspeita", "op": "truthy"}, {"field": "causalidade_oncologica_provavel", "op": "truthy"}]}, "add": {"risk": "prioritario", "supporting": ["Com causalidade considerada provável após avaliação de alternativas, interromper temporariamente o fármaco implicado na fase aguda e discutir eventual reintrodução entre oncologia e cardio-oncologia; suspeita isolada não basta para abandono definitivo da terapia."]}},
+      "episodio_previo_recorrencia": {"add": {"risk": "rotina", "supporting": ["No registro RETAKO, cerca de 4% tiveram recorrência durante o seguimento; esse percentual não foi uma taxa anual."]}}
+    },
+    "assistant_rules_add": [
+      {
+        "id": "historico_psiquiatrico_seguimento",
+        "priority": 28,
+        "when": {"all": [{"field": "historico_psiquiatrico_previo", "op": "truthy"}]},
+        "add": {"risk": "rotina", "ambulatory_flow": ["Documentar histórico psiquiátrico e oferecer seguimento apropriado, sem convertê-lo em marcador de instabilidade aguda por si só."]}
+      }
+    ]
+  }
+]

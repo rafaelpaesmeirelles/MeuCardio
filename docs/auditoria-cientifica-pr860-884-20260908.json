@@ -1,0 +1,1421 @@
+{
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "scope": "PR860–884, todos estados;25abertos não merged,75documentos clínicos",
+  "provenance": "fonte_producao:grok preservada; sem push, merge, deploy ou full-corpus",
+  "method": "APIs paginadas pr/comments/reviews/inline/timeline/files e refs HEAD exatas; confronto clínico dos findings com texto. Identidade bibliográfica em PubMed e fontes primárias atuais para recomendações. Resolver não substitui julgamento clínico.",
+  "limitations": "Revisão de conteúdo e Mermaid, sem validação UI/runtime de publicação. Não promete cobertura total do corpus ou verdade de todos os detalhes dos documentos canônicos reutilizados.",
+  "scientific_gate": {
+    "documents": 75,
+    "error_documents": [],
+    "resolved_pmids": 77,
+    "unique_pmids": 77,
+    "unique_slugs": 75,
+    "warning_documents": [
+      "content/Arritmias/sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar.md",
+      "content/Arritmias/sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar.md",
+      "content/Doença_coronariana/acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses.md",
+      "content/Doença_coronariana/fluxograma-ambulatorial-pos-pci-destino-ps-vs-retorno.md",
+      "content/Doença_coronariana/sinalizadores-ambulatoriais-pos-pci-quando-encaminhar.md",
+      "content/Prevenção_e_lipídios/checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes.md",
+      "content/Prevenção_e_lipídios/fluxograma-ambulatorial-aos-rastreio-destino.md",
+      "content/Prevenção_e_lipídios/sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar.md",
+      "content/Cardiopatias_congênitas/fluxograma-ambulatorial-eisenmenger-cianose-destino.md",
+      "content/Cardiopatias_congênitas/sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar.md",
+      "content/Pericárdio/constricao-pericardica-checklist-ambulatorial-de-alarme.md",
+      "content/Pericárdio/sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar.md",
+      "content/Cardiologia_pediátrica/dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial.md",
+      "content/Cardiologia_pediátrica/sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista.md"
+    ]
+  },
+  "prs": [
+    {
+      "n": 860,
+      "state": "open",
+      "merged": false,
+      "sha": "211782ed6c62621eeb0a56a08825fa96494fb41d",
+      "title": "content(Farmacologia): Tudo-com-Tudo — sinalizadores ambulatoriais DOAC/sangramento",
+      "files": [
+        "content/Farmacologia/fluxograma-sinalizadores-ambulatoriais-doac-sangramento.md",
+        "content/Farmacologia/sangramento-menor-doac-no-consultorio-conduta-ambulatorial.md",
+        "content/Farmacologia/sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 4,
+      "finding_disposition": "Separar maior/CRNM/nuisance; trauma craniano e melena; exposição e dose realmente usada; não interromper ou manter automaticamente em CRNM.",
+      "timeline_events": 18,
+      "evidence_sha256": "82940e1095c2fb5cf6818f1b1689f404b5248aad514e07efedbe77a4e8abac15",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Farmacologia/fluxograma-sinalizadores-ambulatoriais-doac-sangramento.md",
+          "sha256": "0c7bffd951a6906a8f495f7c22456fa9863cbdfc9be52d650946b6bf34c1719c",
+          "source_refs": "- \"Tomaselli GF et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. JACC. DOI: 10.1016/j.jacc.2020.04.053.\"\n  - \"NICE NG232. Head injury: assessment and early management. 2023. https://www.nice.org.uk/guidance/ng232/chapter/recommendations\"\n  - \"Steffel J, Collins R, Antz M, et al. 2021 European Heart Rhythm Association Practical Guide on the Use of Non-Vitamin K Antagonist Oral Anticoagulants in Patients with Atrial Fibrillation. Europace. 2021;23(10):1612-1676. DOI: 10.1093/europace/euab065. PMID: 33895845\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723\"\n  - \"Corpus MeuCardio: sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar.md; sangramento-menor-doac-no-consultorio-conduta-ambulatorial.md; fluxograma-sangramento-maior-em-anticoagulante-reversao-emergencial.md.\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar",
+            "sangramento-menor-doac-no-consultorio-conduta-ambulatorial",
+            "fluxograma-sangramento-maior-em-anticoagulante-reversao-emergencial"
+          ]
+        },
+        {
+          "path": "content/Farmacologia/sangramento-menor-doac-no-consultorio-conduta-ambulatorial.md",
+          "sha256": "c02b7ac2f61b944af8f5ad3c1d292e4f36728fc8c9a8a185a2449ad09d305260",
+          "source_refs": "- \"Tomaselli GF et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. JACC. DOI: 10.1016/j.jacc.2020.04.053.\"\n  - \"NICE NG232. Head injury: assessment and early management. 2023. https://www.nice.org.uk/guidance/ng232/chapter/recommendations\"\n  - \"Steffel J, Collins R, Antz M, et al. 2021 European Heart Rhythm Association Practical Guide on the Use of Non-Vitamin K Antagonist Oral Anticoagulants in Patients with Atrial Fibrillation. Europace. 2021;23(10):1612-1676. DOI: 10.1093/europace/euab065. PMID: 33895845\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723\"\n  - \"Corpus MeuCardio: sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar.md; fluxograma-sinalizadores-ambulatoriais-doac-sangramento.md.\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Farmacologia/sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar.md",
+          "sha256": "364a06c93a186d69ed0b2e6bbcaf699565d78cd8f04465d0cd716a26361a6e32",
+          "source_refs": "- \"Tomaselli GF et al. 2020 ACC Expert Consensus Decision Pathway on Management of Bleeding in Patients on Oral Anticoagulants. JACC. DOI: 10.1016/j.jacc.2020.04.053.\"\n  - \"NICE NG232. Head injury: assessment and early management. 2023. https://www.nice.org.uk/guidance/ng232/chapter/recommendations\"\n  - \"Steffel J, Collins R, Antz M, et al. 2021 European Heart Rhythm Association Practical Guide on the Use of Non-Vitamin K Antagonist Oral Anticoagulants in Patients with Atrial Fibrillation. Europace. 2021;23(10):1612-1676. DOI: 10.1093/europace/euab065. PMID: 33895845 — classificação nuisance/menor vs. maior não ameaçador vs. ameaçador à vida; orientação de não pular dose sem consulta; reavaliar fatores modificáveis.\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723 — anticoagulação na FA, segurança e acompanhamento; sangramento como oportunidade de revisar plano.\"\n  - \"Corpus MeuCardio: fluxograma-sangramento-maior-em-anticoagulante-reversao-emergencial.md (fase aguda/reversão — fora do escopo deste protocolo); apixabana.md; rivaroxabana.md; dabigatrana-etexilato.md; edoxabana.md.\"",
+          "navigation_reuse": [
+            "fluxograma-sangramento-maior-em-anticoagulante-reversao-emergencial",
+            "fluxograma-manejo-perioperatorio-da-anticoagulacao-suspensao-bridging-e-retomada",
+            "fluxograma-sinalizadores-ambulatoriais-doac-sangramento",
+            "sangramento-menor-doac-no-consultorio-conduta-ambulatorial"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 861,
+      "state": "open",
+      "merged": false,
+      "sha": "136e750d4837ee8c8ac3f98aa2172cba59c7fe29",
+      "title": "content(Terapia_intensiva): Tudo-com-Tudo — sinalizadores ambulatoriais pós-UTI",
+      "files": [
+        "content/Terapia_intensiva/fluxograma-ambulatorial-sinalizadores-pos-uti-cardiologia-destino.md",
+        "content/Terapia_intensiva/sinalizadores-ambulatoriais-pos-alta-uti-infeccao-dispositivo-ic-cognicao.md",
+        "content/Terapia_intensiva/sinalizadores-ambulatoriais-pos-uti-choque-cardiogenico-quando-escalar.md",
+        "docs/tudo-com-tudo-terapia-intensiva-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 6,
+      "finding_disposition": "Pós-choque focado; diferenciar nova instabilidade, infecção CIED e disfunção cognitiva; encaminhamentos individuais sem duplicar PICS.",
+      "timeline_events": 13,
+      "evidence_sha256": "7e2b8dc68fd178ed70255ee053ce645a609aa7c6edd0c77fb3cb6bc0c2728114",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Terapia_intensiva/fluxograma-ambulatorial-sinalizadores-pos-uti-cardiologia-destino.md",
+          "sha256": "fffb5ba0cf45fd81a3a9779542e3b5bb507032d8e253a44980a6aa1c31491d4e",
+          "source_refs": "- \"Chioncel O, Parissis J, Mebazaa A, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock – a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. DOI: 10.1002/ejhf.1922. PMID: 32469155\"\n  - \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pos-uti-choque-cardiogenico-quando-escalar",
+            "sinalizadores-ambulatoriais-pos-alta-uti-infeccao-dispositivo-ic-cognicao"
+          ]
+        },
+        {
+          "path": "content/Terapia_intensiva/sinalizadores-ambulatoriais-pos-alta-uti-infeccao-dispositivo-ic-cognicao.md",
+          "sha256": "9e93f49f94912c76f0bc3debee2a17dc123627ac05352f81bb953e72de36c08c",
+          "source_refs": "- \"Chioncel O, Parissis J, Mebazaa A, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock – a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. DOI: 10.1002/ejhf.1922. PMID: 32469155\"\n  - \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pos-uti-choque-cardiogenico-quando-escalar",
+            "infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico"
+          ]
+        },
+        {
+          "path": "content/Terapia_intensiva/sinalizadores-ambulatoriais-pos-uti-choque-cardiogenico-quando-escalar.md",
+          "sha256": "e2ef9315656797af616745dbe6c060decbd20022ec0a828ff81feb7d6d989c2a",
+          "source_refs": "- \"Chioncel O, Parissis J, Mebazaa A, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock – a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. DOI: 10.1002/ejhf.1922. PMID: 32469155\"\n  - \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"",
+          "navigation_reuse": [
+            "infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico",
+            "choque-cardiogenico-fisiopatologia-e-manejo",
+            "classificacao-scai-de-estagios-do-choque-cardiogenico",
+            "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+            "fluxograma-ambulatorial-sinalizadores-pos-uti-cardiologia-destino",
+            "sinalizadores-ambulatoriais-pos-alta-uti-infeccao-dispositivo-ic-cognicao"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 862,
+      "state": "open",
+      "merged": false,
+      "sha": "d3974573c70c5d65f19e9fc58ad23a8711282ca1",
+      "title": "content(Cardiomiopatias): Tudo-com-Tudo — sinalizadores ambulatoriais Chagas/CCC",
+      "files": [
+        "content/Cardiomiopatias/chagas-ambulatorial-forma-indeterminada-quando-escalar-avaliacao.md",
+        "content/Cardiomiopatias/fluxograma-ambulatorial-cardiomiopatia-chagasica-destino.md",
+        "content/Cardiomiopatias/sinalizadores-ambulatoriais-cardiomiopatia-chagasica-quando-escalar.md",
+        "docs/reports/tudo-com-tudo-chagas-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 7,
+      "finding_disposition": "Forma indeterminada e etiologia CCC; benznidazol até50; ECG periódico; BAV/TV versus risco crônico; PMID AHA corrigido.",
+      "timeline_events": 13,
+      "evidence_sha256": "e00ccf9ffbe517bf928cea0070c7f25496af568bdb49cec5439dd61adf97316f",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiomiopatias/chagas-ambulatorial-forma-indeterminada-quando-escalar-avaliacao.md",
+          "sha256": "f31789df8c08419a6c78c23984299d41e8a4198287c5c8a3283c531215f761cd",
+          "source_refs": "- \"Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6). DOI: 10.36660/abc.20230269\"\n  - \"Nunes MCP, Beaton A, Acquatella H, et al. Chagas Cardiomyopathy: An Update of Current Clinical Knowledge and Management: A Scientific Statement From the American Heart Association. Circulation. 2018;138(12):e169-e209. DOI: 10.1161/CIR.0000000000000599. PMID: 30354432\"\n  - \"Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-cardiomiopatia-chagasica-quando-escalar",
+            "miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022",
+            "tratamento-etiologico-da-doenca-de-chagas-cronica-benznidazol-e-nifurtimox"
+          ]
+        },
+        {
+          "path": "content/Cardiomiopatias/fluxograma-ambulatorial-cardiomiopatia-chagasica-destino.md",
+          "sha256": "92d41d85bfb3e2428ff1ce8182ae92e4a49e07fab43b82e8e963494e9a825f8f",
+          "source_refs": "- \"Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6). DOI: 10.36660/abc.20230269\"\n  - \"Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892\"\n  - \"Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-cardiomiopatia-chagasica-quando-escalar",
+            "chagas-ambulatorial-forma-indeterminada-quando-escalar-avaliacao",
+            "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi"
+          ]
+        },
+        {
+          "path": "content/Cardiomiopatias/sinalizadores-ambulatoriais-cardiomiopatia-chagasica-quando-escalar.md",
+          "sha256": "d477d3f6a390639d7828a79ededa98b2938c71b731d5f46ebe66f898a62bdc16",
+          "source_refs": "- \"Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6). DOI: 10.36660/abc.20230269\"\n  - \"Teixeira RA, Fagundes AA, Baggio Junior JM, et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892. DOI: 10.36660/abc.20220892\"\n  - \"Rassi A Jr, Rassi A, Little WC, et al. Development and validation of a risk score for predicting death in Chagas' heart disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995\"\n  - \"Nunes MCP, Beaton A, Acquatella H, et al. Chagas Cardiomyopathy: An Update of Current Clinical Knowledge and Management: A Scientific Statement From the American Heart Association. Circulation. 2018;138(12):e169-e209. DOI: 10.1161/CIR.0000000000000599. PMID: 30354432\"",
+          "navigation_reuse": [
+            "miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022",
+            "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi",
+            "aneurisma-apical-trombo-de-ve-e-avc-cardioembolico-na-cardiomiopatia-chagasica",
+            "reativacao-da-doenca-de-chagas-apos-transplante-cardiaco",
+            "fluxograma-ambulatorial-cardiomiopatia-chagasica-destino",
+            "chagas-ambulatorial-forma-indeterminada-quando-escalar-avaliacao"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 863,
+      "state": "open",
+      "merged": false,
+      "sha": "6443324e618b6f4214ebb5e4ddc1b0d58e20c8c8",
+      "title": "content(Cardiologia_pediátrica): Tudo-com-Tudo — sinalizadores ambulatoriais",
+      "files": [
+        "content/Cardiologia_pediátrica/fluxograma-ambulatorial-pediatria-dor-sincope-palpitacoes-destino.md",
+        "content/Cardiologia_pediátrica/palpitacoes-ambulatoriais-na-crianca-quando-ps-vs-cardiologista-pediatrico.md",
+        "content/Cardiologia_pediátrica/sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista.md",
+        "docs/tudo-com-tudo-pediatrica-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 3,
+      "finding_disposition": "Red flag recuperada estável versus emergência atual; síncope esforço/família exige avaliação pediátrica; ECG/monitorização dirigidos.",
+      "timeline_events": 13,
+      "evidence_sha256": "dccadb0d6dd03f07759478141f855d5bd5ba37c1c4c25fff51f4b5c9f2108394",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiologia_pediátrica/fluxograma-ambulatorial-pediatria-dor-sincope-palpitacoes-destino.md",
+          "sha256": "6d19b193b361b4ea9014622364edff778fe2981cded615fe979ce1449376be9d",
+          "source_refs": "- \"Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231\"\n  - \"Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"Fogliazza F, Cifaldi M, Antoniol G, Canducci N, Esposito S. Approaches to Pediatric Chest Pain: A Narrative Review. J Clin Med. 2024;13(22):6659. DOI: 10.3390/jcm13226659. PMID: 39597803\"\n  - \"Sanatani S, Chau V, Fournier A, et al. Canadian Cardiovascular Society and Canadian Pediatric Cardiology Association Position Statement on the Approach to Syncope in the Pediatric Patient. Can J Cardiol. 2017;33(2):189-198. DOI: 10.1016/j.cjca.2016.09.006. PMID: 27838109\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista",
+            "palpitacoes-ambulatoriais-na-crianca-quando-ps-vs-cardiologista-pediatrico"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_pediátrica/palpitacoes-ambulatoriais-na-crianca-quando-ps-vs-cardiologista-pediatrico.md",
+          "sha256": "88564102a73655b7bb0ff20d945ec80af6ba0f0a70ec2c61d9de310382e126b5",
+          "source_refs": "- \"Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231\"\n  - \"Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"Sanatani S, Chau V, Fournier A, et al. Canadian Cardiovascular Society and Canadian Pediatric Cardiology Association Position Statement on the Approach to Syncope in the Pediatric Patient. Can J Cardiol. 2017;33(2):189-198. DOI: 10.1016/j.cjca.2016.09.006. PMID: 27838109\"\n  - \"Yeom JS, Woo HO. Pediatric syncope: pearls and pitfalls in history taking. Clin Exp Pediatr. 2023;66(3):88-97. DOI: 10.3345/cep.2022.00451. PMID: 36789491\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista",
+            "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+            "extrassistoles-ventriculares-e-supraventriculares-na-crianca-e-no-adolescente-limiar-de-carga-historia-natural-e-tratamento",
+            "fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_pediátrica/sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista.md",
+          "sha256": "6dbddc5256b8a862a0316755f83b03e2b13b7e8f97c20526e160345b52d15081",
+          "source_refs": "- \"Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231\"\n  - \"Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"Fogliazza F, Cifaldi M, Antoniol G, Canducci N, Esposito S. Approaches to Pediatric Chest Pain: A Narrative Review. J Clin Med. 2024;13(22):6659. DOI: 10.3390/jcm13226659. PMID: 39597803\"\n  - \"Karatza AA, Fouzas S, Gkentzi D, et al. Missed or Delayed Diagnosis of Heart Disease by the General Pediatrician. Children (Basel). 2025;12(3):366. DOI: 10.3390/children12030366. PMID: 40150649\"\n  - \"Sanatani S, Chau V, Fournier A, et al. Canadian Cardiovascular Society and Canadian Pediatric Cardiology Association Position Statement on the Approach to Syncope in the Pediatric Patient. Can J Cardiol. 2017;33(2):189-198. DOI: 10.1016/j.cjca.2016.09.006. PMID: 27838109\"",
+          "navigation_reuse": [
+            "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca",
+            "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
+            "extrassistoles-ventriculares-e-supraventriculares-na-crianca-e-no-adolescente-limiar-de-carga-historia-natural-e-tratamento",
+            "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+            "palpitacoes-ambulatoriais-na-crianca-quando-ps-vs-cardiologista-pediatrico",
+            "fluxograma-ambulatorial-pediatria-dor-sincope-palpitacoes-destino"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 864,
+      "state": "open",
+      "merged": false,
+      "sha": "32dd67182dd60c6ccc45907d3676b45247e37446",
+      "title": "content(Arritmias): Tudo-com-Tudo — sinalizadores ambulatoriais SVT/pré-excitação (além #839)",
+      "files": [
+        "content/Arritmias/fluxograma-sinalizadores-ambulatoriais-svt-e-pre-excitacao.md",
+        "content/Arritmias/pre-excitacao-wpw-no-consultorio-sinais-vermelhos-quando-ir-ao-ps.md",
+        "content/Arritmias/sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar.md",
+        "docs/reports/tudo-com-tudo-arritmias-svt-sinalizadores.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 6,
+      "finding_disposition": "Via manifesta intermitente versus oculta; padrão versus síndrome WPW; TSV persistente aguda; proibir bloqueadores AV e amiodarona IV na FA pré-excitada.",
+      "timeline_events": 17,
+      "evidence_sha256": "7f9f7c7d7ee1934a3741ecdb11c85db0bbbceef2387923e1cb44378da157dea2",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Arritmias/fluxograma-sinalizadores-ambulatoriais-svt-e-pre-excitacao.md",
+          "sha256": "7ff3b13796dde296c336e34bebd5ee9d41509115218f6b315cacfcbfecf4ce17",
+          "source_refs": "- \"Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425\"\n  - \"Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016;133(14):e506-e574. DOI: 10.1161/CIR.0000000000000311. PMID: 26399663\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar",
+            "pre-excitacao-wpw-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+            "fluxograma-taquicardia-supraventricular-qrs-estreito-esc-2019"
+          ]
+        },
+        {
+          "path": "content/Arritmias/pre-excitacao-wpw-no-consultorio-sinais-vermelhos-quando-ir-ao-ps.md",
+          "sha256": "19e4247162fb07caa2413e6bba86068556d46cb9013f2ee8de927b9c5989db7c",
+          "source_refs": "- \"Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425\"\n  - \"Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016;133(14):e506-e574. DOI: 10.1161/CIR.0000000000000311. PMID: 26399663\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar",
+            "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+            "wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassistoles",
+            "fluxograma-sinalizadores-ambulatoriais-svt-e-pre-excitacao"
+          ]
+        },
+        {
+          "path": "content/Arritmias/sinalizadores-ambulatoriais-de-svt-recorrente-quando-escalar.md",
+          "sha256": "c4accb9b862270dcf5462ca59e3d14ad82500f9b9d34fe8d32ac953ea4ac057a",
+          "source_refs": "- \"Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425\"\n  - \"Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016;133(14):e506-e574. DOI: 10.1161/CIR.0000000000000311. PMID: 26399663\"",
+          "navigation_reuse": [
+            "fluxograma-taquicardia-supraventricular-qrs-estreito-esc-2019",
+            "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+            "pre-excitacao-wpw-no-consultorio-sinais-vermelhos-quando-ir-ao-ps"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 865,
+      "state": "open",
+      "merged": false,
+      "sha": "c2a2eba9c1b67731a22e08457dd16925c09cf578",
+      "title": "content(Hipertensão): Tudo-com-Tudo — suspeita ambulatorial de secundária (além #828)",
+      "files": [
+        "content/Hipertensão/destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia.md",
+        "content/Hipertensão/fluxograma-destino-ambulatorial-suspeita-hipertensao-secundaria.md",
+        "content/Hipertensão/suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao.md",
+        "docs/tudo-com-tudo-hipertensao-secundaria-sinalizadores-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 10,
+      "finding_disposition": "Endocrine2025 versus AHA2025 explicitados; rastreio, confirmação e AVS separados; classes de causas, interferentes e AOS resistente.",
+      "timeline_events": 16,
+      "evidence_sha256": "c840ed7c57c8a3a99654733be2ad946c44d4c41ebfc3145295410a68b47776c6",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Hipertensão/destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia.md",
+          "sha256": "af400a2a6dad7242b60d1ea866017195205bdc6cadf8ede065acdf6604bc6cdb",
+          "source_refs": "- \"Endocrine Society. Primary Aldosteronism Clinical Practice Guideline. 2025. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2\"\n  - \"Jones DW et al. 2025 AHA/ACC High Blood Pressure Guideline. DOI: 10.1161/CIR.0000000000001356.\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"\n  - \"Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179\"\n  - \"Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492\"\n  - \"Charles L, Triscott J, Dobbs B. Secondary Hypertension: Discovering the Underlying Cause. Am Fam Physician. 2017;96(7):453-461. PMID: 29094913\"",
+          "navigation_reuse": [
+            "suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao",
+            "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society",
+            "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+            "fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar"
+          ]
+        },
+        {
+          "path": "content/Hipertensão/fluxograma-destino-ambulatorial-suspeita-hipertensao-secundaria.md",
+          "sha256": "db85d6c121b3c541f29577d13271bef6eeb23b1519ab5c954fe0c5443e63981e",
+          "source_refs": "- \"Endocrine Society. Primary Aldosteronism Clinical Practice Guideline. 2025. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2\"\n  - \"Jones DW et al. 2025 AHA/ACC High Blood Pressure Guideline. DOI: 10.1161/CIR.0000000000001356.\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"\n  - \"Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179\"\n  - \"Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492\"\n  - \"Charles L, Triscott J, Dobbs B. Secondary Hypertension: Discovering the Underlying Cause. Am Fam Physician. 2017;96(7):453-461. PMID: 29094913\"",
+          "navigation_reuse": [
+            "suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao",
+            "destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia",
+            "fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar"
+          ]
+        },
+        {
+          "path": "content/Hipertensão/suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao.md",
+          "sha256": "7f4264893712b68f939596db3a125cc5f1d4f061c8806ee112cfa42be037217c",
+          "source_refs": "- \"Endocrine Society. Primary Aldosteronism Clinical Practice Guideline. 2025. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2\"\n  - \"Jones DW et al. 2025 AHA/ACC High Blood Pressure Guideline. DOI: 10.1161/CIR.0000000000001356.\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"\n  - \"Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179\"\n  - \"Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492\"\n  - \"Charles L, Triscott J, Dobbs B. Secondary Hypertension: Discovering the Underlying Cause. Am Fam Physician. 2017;96(7):453-461. PMID: 29094913\"",
+          "navigation_reuse": [
+            "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society",
+            "hipertensao-secundaria-causas-rastreaveis-no-adulto",
+            "fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar",
+            "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
+            "fluxograma-destino-ambulatorial-suspeita-hipertensao-secundaria",
+            "destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 866,
+      "state": "open",
+      "merged": false,
+      "sha": "33a17df2b912250ae6683eab5f902dd2bcd834db",
+      "title": "content(Valvopatias): Tudo-com-Tudo — sinalizadores ambulatoriais (além #840)",
+      "files": [
+        "content/Valvopatias/sinalizadores-ambulatoriais-de-disfuncao-de-protese-valvar-quando-escalar.md",
+        "content/Valvopatias/sinalizadores-ambulatoriais-de-estenose-mitral-reumatica-quando-encaminhar.md",
+        "content/Valvopatias/sinalizadores-ambulatoriais-de-insuficiencia-tricuspide-red-flags.md",
+        "docs/reports/tudo-com-tudo-valvopatias-sinalizadores-2.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 9,
+      "finding_disposition": "ESC2025 e corrigendum2026; prótese multimodal; EM anticoagulação condicional; PMC; TR e embolização séptica pulmonar.",
+      "timeline_events": 15,
+      "evidence_sha256": "fd59e02e61bdf2d3a3ae345009340dd62de4233476f16a9f1af7c72157a66b90",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Valvopatias/sinalizadores-ambulatoriais-de-disfuncao-de-protese-valvar-quando-escalar.md",
+          "sha256": "4b3f89980eb85e2c092ed207adbc8368d50fdc6ea61c9d8c6894f15b1e5bbead",
+          "source_refs": "- \"Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295\"\n  - \"Corrigendum to the parallel EJCTS 2025 guideline edition. 2026. DOI: 10.1093/ejcts/ezag193. Correction removes duplicated pregnancy text in gaps in evidence; no clinical threshold change.\"\n  - \"Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150\"",
+          "navigation_reuse": [
+            "fluxograma-trombose-de-protese-valvar-mecanica-fibrinolise-vs-cirurgia-esc-eacts-2025"
+          ]
+        },
+        {
+          "path": "content/Valvopatias/sinalizadores-ambulatoriais-de-estenose-mitral-reumatica-quando-encaminhar.md",
+          "sha256": "8dfdcca55328be7f80fb1c52274a007dc42840d56376e94394b81de50981bd8c",
+          "source_refs": "- \"Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295\"\n  - \"Corrigendum to the parallel EJCTS 2025 guideline edition. 2026. DOI: 10.1093/ejcts/ezag193. Correction removes duplicated pregnancy text in gaps in evidence; no clinical threshold change.\"\n  - \"Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150\"",
+          "navigation_reuse": [
+            "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+            "fluxograma-estenose-mitral-grave-comissurotomia-vs-cirurgia-esc-eacts-2025"
+          ]
+        },
+        {
+          "path": "content/Valvopatias/sinalizadores-ambulatoriais-de-insuficiencia-tricuspide-red-flags.md",
+          "sha256": "81389b1dc67873a477faaa4199a6a682a5fbd035429a36101c533cb6d1bdb9bf",
+          "source_refs": "- \"Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295\"\n  - \"Corrigendum to the parallel EJCTS 2025 guideline edition. 2026. DOI: 10.1093/ejcts/ezag193. Correction removes duplicated pregnancy text in gaps in evidence; no clinical threshold change.\"\n  - \"Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150\"",
+          "navigation_reuse": [
+            "fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 867,
+      "state": "open",
+      "merged": false,
+      "sha": "26891461acfb531ee13218477915ecf3e15a9890",
+      "title": "content(Arritmias): Tudo-com-Tudo — sinalizadores ambulatoriais de bradicardia/BAV (além #839/#864)",
+      "files": [
+        "content/Arritmias/bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar.md",
+        "content/Arritmias/fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av.md",
+        "content/Arritmias/sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar.md",
+        "docs/reports/tudo-com-tudo-arritmias-bradicardia-sinalizadores.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 9,
+      "finding_disposition": "Bifascicular correto; localizar BAV2:1; indicação de pacing independente de sintomas nos bloqueios de risco; sinusal exige correlação.",
+      "timeline_events": 15,
+      "evidence_sha256": "ef60f6c6419cd0f0f4ea4bd562420010ea94938f9dbb9df0499c45aa369e1b2d",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Arritmias/bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar.md",
+          "sha256": "1a7f83a2c1fe85d21f14d1af4374932ce99443288dab3057927231854b07345e",
+          "source_refs": "- \"Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430\"\n  - \"Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. DOI: 10.1161/CIR.0000000000000628. PMID: 30586772\"",
+          "navigation_reuse": [
+            "bloqueio-bifascicular-e-risco-de-progressao-para-bloqueio-atrioventricular-total",
+            "sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar",
+            "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021",
+            "fluxograma-sincope-avaliacao-inicial-esc-2018"
+          ]
+        },
+        {
+          "path": "content/Arritmias/fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av.md",
+          "sha256": "7d77a9a0286cf3fb07c779481b72908e7f4501b8b8e632e8f5e7f538c97b6932",
+          "source_refs": "- \"Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430\"\n  - \"Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. DOI: 10.1161/CIR.0000000000000628. PMID: 30586772\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar",
+            "bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar",
+            "fluxograma-bradicardia-sintomatica-manejo-agudo",
+            "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021"
+          ]
+        },
+        {
+          "path": "content/Arritmias/sinalizadores-ambulatoriais-de-bradicardia-e-bloqueio-av-quando-escalar.md",
+          "sha256": "dc53d73f3d6d7634237f0218b313b5cfe0ae11aa1ae199d6ba64f960a9926a60",
+          "source_refs": "- \"Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430\"\n  - \"Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. DOI: 10.1161/CIR.0000000000000628. PMID: 30586772\"",
+          "navigation_reuse": [
+            "fluxograma-bradicardia-sintomatica-manejo-agudo",
+            "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021",
+            "bloqueio-bifascicular-no-consultorio-sinais-vermelhos-quando-escalar",
+            "fluxograma-sinalizadores-ambulatoriais-bradicardia-e-bloqueio-av",
+            "fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta",
+            "bradicardia-sinusal-do-atleta-versus-doenca-do-no-sinusal-criterios-de-diferenciacao"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 868,
+      "state": "open",
+      "merged": false,
+      "sha": "281ffddd8d7a741b84a70fd034b4c6d2e17176e4",
+      "title": "content(Aorta_DAP): Tudo-com-Tudo — sinalizadores ambulatoriais carótida/AIT (além #833)",
+      "files": [
+        "content/Aorta_e_doença_arterial_periférica/estenose-carotidea-sintomatica-janela-de-14-dias-destino-ambulatorial.md",
+        "content/Aorta_e_doença_arterial_periférica/fluxograma-ambulatorial-carotida-ps-versus-vascular-neurovascular.md",
+        "content/Aorta_e_doença_arterial_periférica/sinalizadores-ambulatoriais-ait-deficit-focal-estenose-carotidea-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-aorta-carotida-sinalizadores-ambulatoriais.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 3,
+      "finding_disposition": "AIT recente avaliação no mesmo dia mesmo resolvido; lateralidade; CEA precoce ideal14dias sem estender regra a CAS; AVC extenso individual.",
+      "timeline_events": 13,
+      "evidence_sha256": "a3c11927d2f509d5d9e40f230678d00b6a6115d00219c5b91d251cf11bf9b78e",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/estenose-carotidea-sintomatica-janela-de-14-dias-destino-ambulatorial.md",
+          "sha256": "f0336f0a8a211d998a8b05f71782f924d0fc41e0dff6cad76b3d9bd6f61b9d9d",
+          "source_refs": "- \"Amin HP et al. Diagnosis, Workup, Risk Reduction of Transient Ischemic Attack in the Emergency Department Setting. AHA Scientific Statement. 2023. DOI: 10.1161/STR.0000000000000418.\"\n  - \"Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722\"\n  - \"Kleindorfer DO, Towfighi A, Chaturvedi S, et al. 2021 Guideline for the Prevention of Stroke in Patients With Stroke and Transient Ischemic Attack: A Guideline From the American Heart Association/American Stroke Association. Stroke. 2021;52(7):e364-e467. DOI: 10.1161/STR.0000000000000375. PMID: 34024117\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-ait-deficit-focal-estenose-carotidea-quando-encaminhar",
+            "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024"
+          ]
+        },
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/fluxograma-ambulatorial-carotida-ps-versus-vascular-neurovascular.md",
+          "sha256": "3b72e66cefb829b22b15007ba715cf1c573ce8a45e4b08621fd4dd51ad802f9e",
+          "source_refs": "- \"Amin HP et al. Diagnosis, Workup, Risk Reduction of Transient Ischemic Attack in the Emergency Department Setting. AHA Scientific Statement. 2023. DOI: 10.1161/STR.0000000000000418.\"\n  - \"Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722\"\n  - \"Kleindorfer DO, Towfighi A, Chaturvedi S, et al. 2021 Guideline for the Prevention of Stroke in Patients With Stroke and Transient Ischemic Attack: A Guideline From the American Heart Association/American Stroke Association. Stroke. 2021;52(7):e364-e467. DOI: 10.1161/STR.0000000000000375. PMID: 34024117\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-ait-deficit-focal-estenose-carotidea-quando-encaminhar",
+            "estenose-carotidea-sintomatica-janela-de-14-dias-destino-ambulatorial",
+            "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024"
+          ]
+        },
+        {
+          "path": "content/Aorta_e_doença_arterial_periférica/sinalizadores-ambulatoriais-ait-deficit-focal-estenose-carotidea-quando-encaminhar.md",
+          "sha256": "4951e058d607ceb5afec90030dc24659aaea214e84f1c8ebcdad08d8161f3a31",
+          "source_refs": "- \"Amin HP et al. Diagnosis, Workup, Risk Reduction of Transient Ischemic Attack in the Emergency Department Setting. AHA Scientific Statement. 2023. DOI: 10.1161/STR.0000000000000418.\"\n  - \"Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722\"\n  - \"Kleindorfer DO, Towfighi A, Chaturvedi S, et al. 2021 Guideline for the Prevention of Stroke in Patients With Stroke and Transient Ischemic Attack: A Guideline From the American Heart Association/American Stroke Association. Stroke. 2021;52(7):e364-e467. DOI: 10.1161/STR.0000000000000375. PMID: 34024117\"",
+          "navigation_reuse": [
+            "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024",
+            "fluxograma-ambulatorial-carotida-ps-versus-vascular-neurovascular",
+            "estenose-carotidea-sintomatica-janela-de-14-dias-destino-ambulatorial",
+            "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+            "disseccao-de-arteria-cervical-carotida-e-vertebral-diagnostico-e-antitrombotico-cadiss",
+            "sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo",
+            "doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 869,
+      "state": "open",
+      "merged": false,
+      "sha": "4f231b55ca41c1c85519723822c5f8ca93eddf1d",
+      "title": "content(Cardio-oncologia): Tudo-com-Tudo — sinalizadores ambulatoriais RIHD (além #834)",
+      "files": [
+        "content/Cardio-oncologia/doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme.md",
+        "content/Cardio-oncologia/fluxograma-ambulatorial-doenca-cardiaca-por-radiacao-destino.md",
+        "content/Cardio-oncologia/sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-cardio-oncologia-rihd-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 5,
+      "finding_disposition": "Risco contextual da RT, alarmes após exames; angina progressiva, pericárdio e decisões HeartTeam; eliminar prazo universal.",
+      "timeline_events": 13,
+      "evidence_sha256": "50cc9428ad09839a273ec54c5670a0578e430889c5f855312db5a4514a66459f",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardio-oncologia/doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme.md",
+          "sha256": "e28a39280667c11189233a9848e841b864eaa4330b1ef579824fdf14a82de084",
+          "source_refs": "- \"Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568\"\n  - \"Desai MY, Windecker S, Lancellotti P, et al. Prevention, Diagnosis, and Management of Radiation-Associated Cardiac Disease: JACC Scientific Expert Panel. J Am Coll Cardiol. 2019;74(7):905-927. DOI: 10.1016/j.jacc.2019.07.006. PMID: 31416535\"\n  - \"Mitchell JD, Cehic DA, Morgia M, et al. Cardiovascular Manifestations From Therapeutic Radiation: A Multidisciplinary Expert Consensus Statement From the International Cardio-Oncology Society. JACC CardioOncol. 2021;3(3):360-380. DOI: 10.1016/j.jaccao.2021.06.003. PMID: 34604797\"\n  - \"van Nimwegen FA, Schaapveld M, Janus CP, et al. Cardiovascular Disease After Hodgkin Lymphoma Treatment: 40-Year Follow-up Study. JAMA Intern Med. 2015;175(6):1007-1017. DOI: 10.1001/jamainternmed.2015.1180. PMID: 25915855\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Cardio-oncologia/fluxograma-ambulatorial-doenca-cardiaca-por-radiacao-destino.md",
+          "sha256": "4a7be058ed850e1fccb578faf2174205f4b2d01cbbb3fd3cbc68db3b706c9167",
+          "source_refs": "- \"Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568\"\n  - \"Desai MY, Windecker S, Lancellotti P, et al. Prevention, Diagnosis, and Management of Radiation-Associated Cardiac Disease: JACC Scientific Expert Panel. J Am Coll Cardiol. 2019;74(7):905-927. DOI: 10.1016/j.jacc.2019.07.006. PMID: 31416535\"\n  - \"Mitchell JD, Cehic DA, Morgia M, et al. Cardiovascular Manifestations From Therapeutic Radiation: A Multidisciplinary Expert Consensus Statement From the International Cardio-Oncology Society. JACC CardioOncol. 2021;3(3):360-380. DOI: 10.1016/j.jaccao.2021.06.003. PMID: 34604797\"\n  - \"van Nimwegen FA, Schaapveld M, Janus CP, et al. Cardiovascular Disease After Hodgkin Lymphoma Treatment: 40-Year Follow-up Study. JAMA Intern Med. 2015;175(6):1007-1017. DOI: 10.1001/jamainternmed.2015.1180. PMID: 25915855\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar",
+            "doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme",
+            "rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin"
+          ]
+        },
+        {
+          "path": "content/Cardio-oncologia/sinalizadores-ambulatoriais-doenca-cardiaca-por-radiacao-quando-encaminhar.md",
+          "sha256": "2f01078ae038e5aa8857a6cc30d0f298e14a950bfefec1a7f0f651cb169337ab",
+          "source_refs": "- \"Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568\"\n  - \"Desai MY, Windecker S, Lancellotti P, et al. Prevention, Diagnosis, and Management of Radiation-Associated Cardiac Disease: JACC Scientific Expert Panel. J Am Coll Cardiol. 2019;74(7):905-927. DOI: 10.1016/j.jacc.2019.07.006. PMID: 31416535\"\n  - \"Mitchell JD, Cehic DA, Morgia M, et al. Cardiovascular Manifestations From Therapeutic Radiation: A Multidisciplinary Expert Consensus Statement From the International Cardio-Oncology Society. JACC CardioOncol. 2021;3(3):360-380. DOI: 10.1016/j.jaccao.2021.06.003. PMID: 34604797\"\n  - \"van Nimwegen FA, Schaapveld M, Janus CP, et al. Cardiovascular Disease After Hodgkin Lymphoma Treatment: 40-Year Follow-up Study. JAMA Intern Med. 2015;175(6):1007-1017. DOI: 10.1001/jamainternmed.2015.1180. PMID: 25915855\"",
+          "navigation_reuse": [
+            "rastreio-de-doenca-arterial-coronariana-tardia-pos-radioterapia-mediastinal-em-linfoma-de-hodgkin",
+            "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
+            "protecao-cardiaca-na-radioterapia-de-mama-esquerda-inspiracao-profunda-sustentada",
+            "fluxograma-ambulatorial-doenca-cardiaca-por-radiacao-destino",
+            "doenca-cardiaca-por-radiacao-checklist-ambulatorial-de-alarme"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 870,
+      "state": "open",
+      "merged": false,
+      "sha": "6dcaafae3fac6f81536db730ab8e1720f46b5d72",
+      "title": "content(Dispositivos): Tudo-com-Tudo — checklist ambulatorial pré-RM em CIED (além #835)",
+      "files": [
+        "content/Dispositivos/checklist-ambulatorial-pre-rm-em-portador-de-cied-destino.md",
+        "content/Dispositivos/fluxograma-pre-rm-com-cied-destino-ambulatorial.md",
+        "content/Dispositivos/rm-urgente-em-portador-de-cied-quando-nao-esperar-o-centro.md",
+        "docs/tudo-com-tudo-dispositivos-pre-rm-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 3,
+      "finding_disposition": "SCMR2024; sistema completo MRcondicional; programação antes/depois, eletrodos e recursos; RM urgente não equivale a PS automático.",
+      "timeline_events": 13,
+      "evidence_sha256": "60c616905445f0b3ac8bd9f29d5616ea71366867eb32af92fdb50ce21c7666de",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Dispositivos/checklist-ambulatorial-pre-rm-em-portador-de-cied-destino.md",
+          "sha256": "15c19e87033c1145b483ab4baad574e0b8367694ef89659c879e183516454675",
+          "source_refs": "- \"Kim D et al. SCMR expert consensus statement for cardiovascular magnetic resonance of patients with a cardiac implantable electronic device. J Cardiovasc Magn Reson. 2024;26:100995. DOI: 10.1016/j.jocmr.2024.100995. PMID: 38219955.\"\n  - \"Russo RJ, Costa HS, Silva PD, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684\"\n  - \"Nazarian S, Hansford R, Rahsepar AA, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579\"\n  - \"Indik JH, Gimbel JR, Abe H, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708\"",
+          "navigation_reuse": [
+            "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+            "manejo-de-marcapasso-e-cdi-durante-radioterapia-oncologica",
+            "fluxograma-pre-rm-com-cied-destino-ambulatorial",
+            "rm-urgente-em-portador-de-cied-quando-nao-esperar-o-centro",
+            "fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta",
+            "fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo"
+          ]
+        },
+        {
+          "path": "content/Dispositivos/fluxograma-pre-rm-com-cied-destino-ambulatorial.md",
+          "sha256": "eeb3b7bbcdee2674d51711de14b4c89f8f599efd484d4ca16fe6bd58036f3033",
+          "source_refs": "- \"Kim D et al. SCMR expert consensus statement for cardiovascular magnetic resonance of patients with a cardiac implantable electronic device. J Cardiovasc Magn Reson. 2024;26:100995. DOI: 10.1016/j.jocmr.2024.100995. PMID: 38219955.\"\n  - \"Russo RJ, Costa HS, Silva PD, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684\"\n  - \"Nazarian S, Hansford R, Rahsepar AA, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579\"\n  - \"Indik JH, Gimbel JR, Abe H, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708\"",
+          "navigation_reuse": [
+            "checklist-ambulatorial-pre-rm-em-portador-de-cied-destino",
+            "rm-urgente-em-portador-de-cied-quando-nao-esperar-o-centro",
+            "ressonancia-magnetica-em-pacientes-com-marcapasso-ou-cdi-nao-condicional-o-registro-magnasafe",
+            "fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta",
+            "fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo"
+          ]
+        },
+        {
+          "path": "content/Dispositivos/rm-urgente-em-portador-de-cied-quando-nao-esperar-o-centro.md",
+          "sha256": "c0ad476177cf1af56b48b5f54c066b28d15f4d381b2a76fad40534519a6408f1",
+          "source_refs": "- \"Kim D et al. SCMR expert consensus statement for cardiovascular magnetic resonance of patients with a cardiac implantable electronic device. J Cardiovasc Magn Reson. 2024;26:100995. DOI: 10.1016/j.jocmr.2024.100995. PMID: 38219955.\"\n  - \"Russo RJ, Costa HS, Silva PD, et al. Assessing the Risks Associated with MRI in Patients with a Pacemaker or Defibrillator. N Engl J Med. 2017;376(8):755-764. DOI: 10.1056/NEJMoa1603265. PMID: 28225684\"\n  - \"Nazarian S, Hansford R, Rahsepar AA, et al. Safety of Magnetic Resonance Imaging in Patients with Cardiac Devices. N Engl J Med. 2017;377(26):2555-2564. DOI: 10.1056/NEJMoa1604267. PMID: 29281579\"\n  - \"Indik JH, Gimbel JR, Abe H, et al. 2017 HRS expert consensus statement on magnetic resonance imaging and radiation exposure in patients with cardiovascular implantable electronic devices. Heart Rhythm. 2017;14(7):e97-e153. DOI: 10.1016/j.hrthm.2017.04.025. PMID: 28502708\"",
+          "navigation_reuse": [
+            "checklist-ambulatorial-pre-rm-em-portador-de-cied-destino",
+            "fluxograma-disfuncao-de-eletrodo-fratura-e-falha-de-isolamento-conduta",
+            "fluxograma-choque-inapropriado-de-cdi-investigacao-e-manejo"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 871,
+      "state": "open",
+      "merged": false,
+      "sha": "0406aad0910294ee37f7dfc5ddc0f455e6b49e34",
+      "title": "content(Tromboembolismo): Tudo-com-Tudo — sinalizadores ambulatoriais TVP (além #837)",
+      "files": [
+        "content/Tromboembolismo/fluxograma-sinalizadores-ambulatoriais-tvp-destino.md",
+        "content/Tromboembolismo/sinalizadores-ambulatoriais-tvp-quando-escalar-urgencia.md",
+        "content/Tromboembolismo/tvp-confirmada-no-consultorio-ambulatorial-versus-internacao.md",
+        "docs/reports/tudo-com-tudo-tromboembolismo-tvp-sinalizadores-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 5,
+      "finding_disposition": "TVP provável diagnóstico rápido e anticoagulação interina quando segura; distal seletiva; excluir recorrência/gestação/membro superior da regra genérica.",
+      "timeline_events": 18,
+      "evidence_sha256": "d79ec1dcef159490c7f17764a2e37fbd94351572edbbea6680780f827460ff76",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Tromboembolismo/fluxograma-sinalizadores-ambulatoriais-tvp-destino.md",
+          "sha256": "3c0fe89945c36637bda43209386f0b2fc4ef158d2778cd12f87929a1c656f0e5",
+          "source_refs": "- \"NICE NG158. Venous thromboembolic diseases: diagnosis, management and thrombophilia testing. Updated 2023. https://www.nice.org.uk/guidance/ng158/chapter/recommendations\"\n  - \"Lim W, Le Gal G, Bates SM, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism. Blood Adv. 2018;2(22):3226-3256. DOI: 10.1182/bloodadvances.2018024828. PMID: 30482764\"\n  - \"Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077\"\n  - \"Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic Therapy for VTE Disease: Second Update of the CHEST Guideline and Expert Panel Report. Chest. 2021;160(6):e545-e608. DOI: 10.1016/j.chest.2021.07.055. PMID: 34352278\"\n  - \"Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-tvp-quando-escalar-urgencia",
+            "tvp-confirmada-no-consultorio-ambulatorial-versus-internacao",
+            "fluxograma-trombose-venosa-profunda-suspeita-wells-d-dimero-e-ultrassom",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Tromboembolismo/sinalizadores-ambulatoriais-tvp-quando-escalar-urgencia.md",
+          "sha256": "bd113650792a84eb3aefb49b8b37a6d61febde74cade7f5dfe0b77577c54fc08",
+          "source_refs": "- \"NICE NG158. Venous thromboembolic diseases: diagnosis, management and thrombophilia testing. Updated 2023. https://www.nice.org.uk/guidance/ng158/chapter/recommendations\"\n  - \"Lim W, Le Gal G, Bates SM, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism. Blood Adv. 2018;2(22):3226-3256. DOI: 10.1182/bloodadvances.2018024828. PMID: 30482764\"\n  - \"Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077\"\n  - \"Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic Therapy for VTE Disease: Second Update of the CHEST Guideline and Expert Panel Report. Chest. 2021;160(6):e545-e608. DOI: 10.1016/j.chest.2021.07.055. PMID: 34352278\"\n  - \"Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429\"",
+          "navigation_reuse": [
+            "aha-acc-2026-tep-agudo-categorias-clinicas-anticoagulacao-e-terapias-avancadas",
+            "fluxograma-trombose-venosa-profunda-suspeita-wells-d-dimero-e-ultrassom",
+            "fluxograma-escolha-do-anticoagulante-no-tev-doac-varfarina-ou-hbpm",
+            "fluxograma-sinalizadores-ambulatoriais-tvp-destino",
+            "tvp-confirmada-no-consultorio-ambulatorial-versus-internacao",
+            "fluxograma-sangramento-maior-em-paciente-anticoagulado",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Tromboembolismo/tvp-confirmada-no-consultorio-ambulatorial-versus-internacao.md",
+          "sha256": "476190d89385411d3c3c877a0bfcafcf95ce0668366f367c01222af5122677b0",
+          "source_refs": "- \"NICE NG158. Venous thromboembolic diseases: diagnosis, management and thrombophilia testing. Updated 2023. https://www.nice.org.uk/guidance/ng158/chapter/recommendations\"\n  - \"Ortel TL, Neumann I, Ageno W, et al. American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism. Blood Adv. 2020;4(19):4693-4738. DOI: 10.1182/bloodadvances.2020001830. PMID: 33007077\"\n  - \"Stevens SM, Woller SC, Kreuziger LB, et al. Antithrombotic Therapy for VTE Disease: Second Update of the CHEST Guideline and Expert Panel Report. Chest. 2021;160(6):e545-e608. DOI: 10.1016/j.chest.2021.07.055. PMID: 34352278\"\n  - \"Lim W, Le Gal G, Bates SM, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism. Blood Adv. 2018;2(22):3226-3256. DOI: 10.1182/bloodadvances.2018024828. PMID: 30482764\"\n  - \"Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-tvp-quando-escalar-urgencia",
+            "tev-recorrente-sob-anticoagulacao-em-dose-terapeutica-conduta",
+            "trombose-venosa-profunda-distal-isolada-duracao-da-anticoagulacao-e-vigilancia",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 872,
+      "state": "open",
+      "merged": false,
+      "sha": "bd72ae46b87d909af8348448053d46c760aaa66a",
+      "title": "content(Perioperatório): Tudo-com-Tudo — sintomas cardíacos pós-op ambulatoriais (além #836)",
+      "files": [
+        "content/Perioperatório/fluxograma-ambulatorial-sintomas-cardiacos-pos-operatorios-destino.md",
+        "content/Perioperatório/mins-apos-alta-seguimento-ambulatorial-alarme-e-retorno.md",
+        "content/Perioperatório/sinalizadores-ambulatoriais-sintomas-cardiacos-pos-cirurgia-nao-cardiaca-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-perioperatorio-sintomas-pos-op-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 8,
+      "finding_disposition": "MINS isquêmico versus troponina inespecífica; PE/hemorragia mesmo normotenso; reavaliar exames; MANAGE não universal.",
+      "timeline_events": 13,
+      "evidence_sha256": "e7728d41f0ca4467c292fffd7c64b95647c4e390a11335963a17995cef7e993e",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Perioperatório/fluxograma-ambulatorial-sintomas-cardiacos-pos-operatorios-destino.md",
+          "sha256": "71ec7e34fcb13333ec0500686fd89b2410f49f252a648744059ae3d868c7b81c",
+          "source_refs": "- \"Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661\"\n  - \"Halvorsen S, Mehilli J, Cassese S, et al; ESC Scientific Document Group. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553\"\n  - \"Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. DOI: 10.1001/jama.2017.4360. PMID: 28444280\"\n  - \"Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-sintomas-cardiacos-pos-cirurgia-nao-cardiaca-quando-encaminhar",
+            "mins-apos-alta-seguimento-ambulatorial-alarme-e-retorno",
+            "mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao"
+          ]
+        },
+        {
+          "path": "content/Perioperatório/mins-apos-alta-seguimento-ambulatorial-alarme-e-retorno.md",
+          "sha256": "da4d18a01137f3735030a781d7f12e13fcac6008d9ba23887724d764c1b61342",
+          "source_refs": "- \"Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661\"\n  - \"Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. DOI: 10.1001/jama.2017.4360. PMID: 28444280\"\n  - \"Devereaux PJ, Duceppe E, Guyatt G, et al; MANAGE Investigators. Dabigatran in patients with myocardial injury after non-cardiac surgery (MANAGE): an international, randomised, placebo-controlled trial. Lancet. 2018;391(10137):2325-2334. DOI: 10.1016/S0140-6736(18)30832-8. PMID: 29900874\"\n  - \"Halvorsen S, Mehilli J, Cassese S, et al; ESC Scientific Document Group. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553\"\n  - \"Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590\"",
+          "navigation_reuse": [
+            "mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao",
+            "sinalizadores-ambulatoriais-sintomas-cardiacos-pos-cirurgia-nao-cardiaca-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Perioperatório/sinalizadores-ambulatoriais-sintomas-cardiacos-pos-cirurgia-nao-cardiaca-quando-encaminhar.md",
+          "sha256": "baaf3d8e40957de2c1a60b6b015768bfda28825d99933227d85dda91d29d522e",
+          "source_refs": "- \"Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. Circulation. 2024;150:e351-e442. DOI: 10.1161/CIR.0000000000001285. PMID: 39316661\"\n  - \"Halvorsen S, Mehilli J, Cassese S, et al; ESC Scientific Document Group. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553\"\n  - \"Writing Committee for the VISION Study Investigators; Devereaux PJ, Biccard BM, Sigamani A, et al. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. DOI: 10.1001/jama.2017.4360. PMID: 28444280\"\n  - \"Devereaux PJ, Duceppe E, Guyatt G, et al; MANAGE Investigators. Dabigatran in patients with myocardial injury after non-cardiac surgery (MANAGE): an international, randomised, placebo-controlled trial. Lancet. 2018;391(10137):2325-2334. DOI: 10.1016/S0140-6736(18)30832-8. PMID: 29900874\"\n  - \"Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590\"",
+          "navigation_reuse": [
+            "mins-lesao-miocardica-pos-operatoria-vigilancia-e-arvore-de-decisao",
+            "fluxograma-mins-lesao-miocardica-pos-operatoria",
+            "sbc-2024-monitorizacao-troponina-ecg-bnp-pos-operatorio",
+            "fibrilacao-atrial-perioperatoria-pos-operatoria-arvore-aha-acc-2024",
+            "algoritmo-integrado-avaliacao-cardiovascular-pre-operatoria-aha-acc-2024",
+            "fluxograma-ambulatorial-sintomas-cardiacos-pos-operatorios-destino",
+            "mins-apos-alta-seguimento-ambulatorial-alarme-e-retorno"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 873,
+      "state": "open",
+      "merged": false,
+      "sha": "52dae89749da15799aa7e8f7689ddc4b0433fc2d",
+      "title": "content(Hipertensão_pulmonar): Tudo-com-Tudo — CTEPH suspeita, falência VD e síncope→PS (além #841)",
+      "files": [
+        "content/Hipertensão_pulmonar/fluxograma-ambulatorial-sincope-na-hap-para-ps.md",
+        "content/Hipertensão_pulmonar/sinalizadores-ambulatoriais-falencia-de-vd-na-hp.md",
+        "content/Hipertensão_pulmonar/sinalizadores-ambulatoriais-suspeita-de-cteph-quando-referenciar.md",
+        "docs/reports/tudo-com-tudo-hap-cteph-vd-sincope-ambulatorial.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "V/Q em HP suspeita nova; CTPA não excluiCTEPH; não esperar3meses se piora; síncope contextual; interrupção prostaciclina emergência.",
+      "timeline_events": 16,
+      "evidence_sha256": "fc2d33e42ac932dab3074b354a031af4d7bf3ae92f37b02404cad2a56442f689",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Hipertensão_pulmonar/fluxograma-ambulatorial-sincope-na-hap-para-ps.md",
+          "sha256": "24224ae1250157907273daafbcbb43366a77210242b7fb19bad5168028408335",
+          "source_refs": "- \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"\n  - \"Corpus MeuCardio: hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022.md; estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar.md; escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap.md; sinalizadores-ambulatoriais-falencia-de-vd-na-hp.md.\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-falencia-de-vd-na-hp",
+            "sinalizadores-ambulatoriais-suspeita-de-cteph-quando-referenciar"
+          ]
+        },
+        {
+          "path": "content/Hipertensão_pulmonar/sinalizadores-ambulatoriais-falencia-de-vd-na-hp.md",
+          "sha256": "79329995001ebf570aa551327390b9c9268c24c2aa04805be6794502b311a9a8",
+          "source_refs": "- \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"\n  - \"Corpus MeuCardio: hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022.md; estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar.md; escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap.md; hipertensao-pulmonar-e-cirurgia-nao-cardiaca-risco-perioperatorio-e-estratificacao.md; ecocardiograma-na-triagem-da-hap-sinais-e-limites-de-acuracia.md.\"",
+          "navigation_reuse": [
+            "estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar",
+            "escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap",
+            "ecocardiograma-na-triagem-da-hap-sinais-e-limites-de-acuracia",
+            "hipertensao-pulmonar-e-cirurgia-nao-cardiaca-risco-perioperatorio-e-estratificacao",
+            "sinalizadores-ambulatoriais-suspeita-de-cteph-quando-referenciar",
+            "fluxograma-ambulatorial-sincope-na-hap-para-ps"
+          ]
+        },
+        {
+          "path": "content/Hipertensão_pulmonar/sinalizadores-ambulatoriais-suspeita-de-cteph-quando-referenciar.md",
+          "sha256": "0d677502e689d2fe30097dc9c2e06cf9c05710644bc27b81cbe759a0a637f6b3",
+          "source_refs": "- \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"\n  - \"Delcroix M, Lang I, Pepke-Zaba J, et al. Long-Term Outcome of Patients With Chronic Thromboembolic Pulmonary Hypertension: Results From an International Prospective Registry. Circulation. 2016;133(9):859-871. DOI: 10.1161/CIRCULATIONAHA.115.016522. PMID: 26826181\"\n  - \"Corpus MeuCardio: hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022.md; fluxograma-cteph-operabilidade-bpa-riociguate.md; cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado.md; cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016.md; hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar.md; fluxograma-classificacao-hipertensao-pulmonar-cinco-grupos-esc-ers-2022.md.\"",
+          "navigation_reuse": [
+            "fluxograma-cteph-operabilidade-bpa-riociguate",
+            "cteph-criterios-de-operabilidade-e-a-decisao-do-heart-team-especializado",
+            "hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022",
+            "cteph-sobrevida-em-longo-prazo-o-registro-internacional-de-delcroix-2016",
+            "sinalizadores-ambulatoriais-falencia-de-vd-na-hp",
+            "fluxograma-ambulatorial-sincope-na-hap-para-ps"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 874,
+      "state": "open",
+      "merged": false,
+      "sha": "654fbdbe3f98f7da148dc5d1d521917dfb4a8bd0",
+      "title": "content(Doença_coronariana): Tudo-com-Tudo — sinalizadores ambulatoriais pós-PCI (além #843)",
+      "files": [
+        "content/Doença_coronariana/acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses.md",
+        "content/Doença_coronariana/fluxograma-ambulatorial-pos-pci-destino-ps-vs-retorno.md",
+        "content/Doença_coronariana/sinalizadores-ambulatoriais-pos-pci-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-coronariana-pos-pci-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "Nitrato não diagnóstico; SCA, mecânico/arrítmico, retroperitônio; pseudoaneurisma/FAV contextual; DAPT acesso no mesmo dia e sangramento maior.",
+      "timeline_events": 16,
+      "evidence_sha256": "e453950f1288d4ec221b21f1b4405552d7e569f1fea2a2c23c4af933966aa7c0",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Doença_coronariana/acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses.md",
+          "sha256": "67b478533f53a1ee7b6c5d4ba8417694cac8bbc50c5269c172a4c5503bcc75fe",
+          "source_refs": "- \"Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654\"\n  - \"Neumann FJ, Sousa-Uva M, Ahlsson A, et al; ESC Scientific Document Group. 2018 ESC/EACTS Guidelines on myocardial revascularization. Eur Heart J. 2019;40(2):87-165. DOI: 10.1093/eurheartj/ehy394. PMID: 30165437\"\n  - \"Feres F, Costa RA, Siqueira D, et al. Diretriz da Sociedade Brasileira de Cardiologia e da Sociedade Brasileira de Hemodinâmica e Cardiologia Intervencionista sobre Intervenção Coronária Percutânea. Arq Bras Cardiol. 2017;109(1 Suppl 1):1-81. PMID: 28792984\"\n  - \"Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710\"",
+          "navigation_reuse": [
+            "complicacoes-vasculares-acesso-cateterismo-hematoma-pseudoaneurisma-fistula-av",
+            "sinalizadores-ambulatoriais-pos-pci-quando-encaminhar",
+            "fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Doença_coronariana/fluxograma-ambulatorial-pos-pci-destino-ps-vs-retorno.md",
+          "sha256": "0d5be50376a59c1b677229c28c83910a1fb6fc2ed4f4042e77df3b41a237a5f9",
+          "source_refs": "- \"Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654\"\n  - \"Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710\"\n  - \"Neumann FJ, Sousa-Uva M, Ahlsson A, et al; ESC Scientific Document Group. 2018 ESC/EACTS Guidelines on myocardial revascularization. Eur Heart J. 2019;40(2):87-165. DOI: 10.1093/eurheartj/ehy394. PMID: 30165437\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pos-pci-quando-encaminhar",
+            "acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses",
+            "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        },
+        {
+          "path": "content/Doença_coronariana/sinalizadores-ambulatoriais-pos-pci-quando-encaminhar.md",
+          "sha256": "a6370471cd1976b1fdcf702cd815f179547e42e291a5e81842f8c61104246c91",
+          "source_refs": "- \"Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654\"\n  - \"Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710\"\n  - \"Neumann FJ, Sousa-Uva M, Ahlsson A, et al; ESC Scientific Document Group. 2018 ESC/EACTS Guidelines on myocardial revascularization. Eur Heart J. 2019;40(2):87-165. DOI: 10.1093/eurheartj/ehy394. PMID: 30165437\"\n  - \"Feres F, Costa RA, Siqueira D, et al. Diretriz da Sociedade Brasileira de Cardiologia e da Sociedade Brasileira de Hemodinâmica e Cardiologia Intervencionista sobre Intervenção Coronária Percutânea. Arq Bras Cardiol. 2017;109(1 Suppl 1):1-81. PMID: 28792984\"",
+          "navigation_reuse": [
+            "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+            "sinalizadores-ambulatoriais-pos-pci-quando-encaminhar",
+            "fluxograma-sindrome-coronariana-aguda-esc-2023",
+            "fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp",
+            "complicacoes-vasculares-acesso-cateterismo-hematoma-pseudoaneurisma-fistula-av",
+            "fluxograma-ambulatorial-pos-pci-destino-ps-vs-retorno",
+            "acesso-e-sangramento-pos-pci-ambulatorial-alarme-sem-doses",
+            "sinalizadores-ambulatoriais-doac-sangramento-quando-encaminhar"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 875,
+      "state": "open",
+      "merged": false,
+      "sha": "f3598856b5055409c3b289ed83d1ba39ec161384",
+      "title": "content(Prevenção_e_lipídios): Tudo-com-Tudo — sinalizadores ambulatoriais de AOS/SAOS",
+      "files": [
+        "content/Prevenção_e_lipídios/checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes.md",
+        "content/Prevenção_e_lipídios/fluxograma-ambulatorial-aos-rastreio-destino.md",
+        "content/Prevenção_e_lipídios/sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar.md",
+        "docs/reports/tudo-com-tudo-aos-saos-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "STOPBang não diagnóstico; PSG versus HSAT; apneia central; CPAP paralelo aoCV; SAVE não excluir benefício sintomático.",
+      "timeline_events": 15,
+      "evidence_sha256": "9113552366674f8b20f3dfc961e6fe6532dcf2911f57e701b608d096c100fd48",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Prevenção_e_lipídios/checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes.md",
+          "sha256": "7f814f13e0a11166290a29eabae50e593694b1dabf4cf75ded612b6d483a6e19",
+          "source_refs": "- \"Kapur VK et al. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea. J Clin Sleep Med. 2017. DOI: 10.5664/jcsm.6506. PMID: 28162150.\"\n  - \"Yeghiazarians Y, Jneid H, Tietjens JR, et al. Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2021;144(3):e56-e67. DOI: 10.1161/CIR.0000000000000988. PMID: 34148375\"\n  - \"McEvoy RD, Antic NA, Heeley E, et al. CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea. N Engl J Med. 2016;375(10):919-931. DOI: 10.1056/NEJMoa1606599. PMID: 27571048\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar",
+            "fluxograma-ambulatorial-aos-rastreio-destino"
+          ]
+        },
+        {
+          "path": "content/Prevenção_e_lipídios/fluxograma-ambulatorial-aos-rastreio-destino.md",
+          "sha256": "b2b0526a0fedf4548cf07479212ea885a244cb829f3f5348c2a544b16b7e38cb",
+          "source_refs": "- \"Kapur VK et al. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea. J Clin Sleep Med. 2017. DOI: 10.5664/jcsm.6506. PMID: 28162150.\"\n  - \"Yeghiazarians Y, Jneid H, Tietjens JR, et al. Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2021;144(3):e56-e67. DOI: 10.1161/CIR.0000000000000988. PMID: 34148375\"\n  - \"Chung F, Yegneswaran B, Liao P, et al. STOP Questionnaire: A Tool to Screen Patients for Obstructive Sleep Apnea. Anesthesiology. 2008;108(5):812-821. DOI: 10.1097/ALN.0b013e31816d83e4. PMID: 18431116\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"\n  - \"McEvoy RD, Antic NA, Heeley E, et al. CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea. N Engl J Med. 2016;375(10):919-931. DOI: 10.1056/NEJMoa1606599. PMID: 27571048\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar",
+            "checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes",
+            "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca"
+          ]
+        },
+        {
+          "path": "content/Prevenção_e_lipídios/sinalizadores-ambulatoriais-de-aos-quando-rastrear-e-encaminhar.md",
+          "sha256": "ad09a0df9e1b41e263df1bbaa460f9d1ddbf9f1e76d5964ba3a28940d1143754",
+          "source_refs": "- \"Kapur VK et al. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea. J Clin Sleep Med. 2017. DOI: 10.5664/jcsm.6506. PMID: 28162150.\"\n  - \"Yeghiazarians Y, Jneid H, Tietjens JR, et al. Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2021;144(3):e56-e67. DOI: 10.1161/CIR.0000000000000988. PMID: 34148375\"\n  - \"McEvoy RD, Antic NA, Heeley E, et al. CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea. N Engl J Med. 2016;375(10):919-931. DOI: 10.1056/NEJMoa1606599. PMID: 27571048\"\n  - \"Chung F, Yegneswaran B, Liao P, et al. STOP Questionnaire: A Tool to Screen Patients for Obstructive Sleep Apnea. Anesthesiology. 2008;108(5):812-821. DOI: 10.1097/ALN.0b013e31816d83e4. PMID: 18431116\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"",
+          "navigation_reuse": [
+            "aplicacao-do-stop-bang-na-triagem-de-apneia-obstrutiva-do-sono-pre-operatoria-em-cirurgia-cardiaca",
+            "fluxograma-ambulatorial-aos-rastreio-destino",
+            "checklist-ambulatorial-aos-conhecida-adesao-cpap-e-alarmes"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 876,
+      "state": "open",
+      "merged": false,
+      "sha": "48a2b44b668843170ee558a1676afee7d7419b1f",
+      "title": "content(Cardiopatias_congênitas): Tudo-com-Tudo — Eisenmenger/cianose ambulatorial (além #845)",
+      "files": [
+        "content/Cardiopatias_congênitas/eisenmenger-cianose-ambulatorial-o-que-nao-fazer-sem-doses.md",
+        "content/Cardiopatias_congênitas/fluxograma-ambulatorial-eisenmenger-cianose-destino.md",
+        "content/Cardiopatias_congênitas/sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar.md",
+        "docs/reports/tudo-com-tudo-achd-eisenmenger-cianose-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 6,
+      "finding_disposition": "Basal cianótico individual; hemoptise no mesmo dia; gestaçãoES/HAP; flebotomia, oxigênio e anticoagulação contextuais.",
+      "timeline_events": 10,
+      "evidence_sha256": "a6e5f0306041586d87708b293f0d9719bca1b035d46fc1d7df864a4845bccb35",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiopatias_congênitas/eisenmenger-cianose-ambulatorial-o-que-nao-fazer-sem-doses.md",
+          "sha256": "8462c3a338bd2343c4ef5af14ec98c4945569171027b37e54a1e2fc9866166d6",
+          "source_refs": "- \"Baumgartner H, De Backer J, Babu-Narayan SV, et al; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028\"\n  - \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar",
+            "descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+            "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto"
+          ]
+        },
+        {
+          "path": "content/Cardiopatias_congênitas/fluxograma-ambulatorial-eisenmenger-cianose-destino.md",
+          "sha256": "6833e4705208d36c1608022ef6b7c93f3d1384c81b88301744474a65ea1e32ac",
+          "source_refs": "- \"Baumgartner H, De Backer J, Babu-Narayan SV, et al; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028\"\n  - \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar",
+            "eisenmenger-cianose-ambulatorial-o-que-nao-fazer-sem-doses",
+            "descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica"
+          ]
+        },
+        {
+          "path": "content/Cardiopatias_congênitas/sinalizadores-ambulatoriais-eisenmenger-cianose-quando-escalar.md",
+          "sha256": "f5efaaae0fac157c0c88b94a739532bd06be3392072da505d6edb74e49c61acb",
+          "source_refs": "- \"Baumgartner H, De Backer J, Babu-Narayan SV, et al; ESC Scientific Document Group. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028\"\n  - \"Humbert M, Kovacs G, Hoeper MM, et al; ESC/ERS Scientific Document Group. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548\"",
+          "navigation_reuse": [
+            "descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+            "fluxograma-descompensacao-aguda-da-sindrome-de-eisenmenger-e-cardiopatia-cianotica",
+            "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto",
+            "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+            "fluxograma-ambulatorial-eisenmenger-cianose-destino",
+            "eisenmenger-cianose-ambulatorial-o-que-nao-fazer-sem-doses"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 877,
+      "state": "open",
+      "merged": false,
+      "sha": "f73f0752092a411d6e95ddd7158fb4541ec4a14e",
+      "title": "content(Cardiologia_do_Esporte): Tudo-com-Tudo — hipertensão no atleta escalação ambulatorial (além #848)",
+      "files": [
+        "content/Cardiologia_do_Esporte_e_do_Exercício/fluxograma-ambulatorial-hipertensao-atleta-destino.md",
+        "content/Cardiologia_do_Esporte_e_do_Exercício/pa-nao-controlada-no-atleta-ambulatorial-destino-esporte.md",
+        "content/Cardiologia_do_Esporte_e_do_Exercício/sinalizadores-ambulatoriais-hipertensao-no-atleta-quando-restringir-e-escalar.md",
+        "docs/reports/tudo-com-tudo-esporte-hipertensao-escalacao-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "Adulto não gestante; confirmação PA; participação esportiva individualizada; dano agudo e substâncias; WADA atual.",
+      "timeline_events": 12,
+      "evidence_sha256": "8ff04899e0f833c150c23102a8342a6ddb39a31870f9bf513a155857f4914167",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiologia_do_Esporte_e_do_Exercício/fluxograma-ambulatorial-hipertensao-atleta-destino.md",
+          "sha256": "82ce09401d878aa49d101db2f7c9b2dffa81957e81dc26b7679513a28e54813a",
+          "source_refs": "- \"Niebauer J, Börjesson M, Carré F, et al. Brief recommendations for participation in competitive sports of athletes with arterial hypertension. Eur J Prev Cardiol. 2019;26(14):1549-1555. DOI: 10.1177/2047487319852807. PMID: 31122039\"\n  - \"Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412\"\n  - \"Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-hipertensao-no-atleta-quando-restringir-e-escalar",
+            "pa-nao-controlada-no-atleta-ambulatorial-destino-esporte",
+            "hipertensao-arterial-no-atleta-diagnostico-manejo-e-elegibilidade-esportiva"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_do_Esporte_e_do_Exercício/pa-nao-controlada-no-atleta-ambulatorial-destino-esporte.md",
+          "sha256": "e7b112e98f952baeafb2716c73b8b5d86b815fc2c084ea399f22c39a14110c7c",
+          "source_refs": "- \"Niebauer J, Börjesson M, Carré F, et al. Brief recommendations for participation in competitive sports of athletes with arterial hypertension. Eur J Prev Cardiol. 2019;26(14):1549-1555. DOI: 10.1177/2047487319852807. PMID: 31122039\"\n  - \"Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412\"\n  - \"Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-hipertensao-no-atleta-quando-restringir-e-escalar",
+            "fluxograma-ambulatorial-hipertensao-atleta-destino",
+            "hipertensao-arterial-no-atleta-diagnostico-manejo-e-elegibilidade-esportiva"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_do_Esporte_e_do_Exercício/sinalizadores-ambulatoriais-hipertensao-no-atleta-quando-restringir-e-escalar.md",
+          "sha256": "6af75364363eb6f928fdd0b08b5335228226159a757716f33e1a1871a7908706",
+          "source_refs": "- \"Niebauer J, Börjesson M, Carré F, et al. Brief recommendations for participation in competitive sports of athletes with arterial hypertension. Eur J Prev Cardiol. 2019;26(14):1549-1555. DOI: 10.1177/2047487319852807. PMID: 31122039\"\n  - \"Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412\"\n  - \"Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614\"",
+          "navigation_reuse": [
+            "hipertensao-arterial-no-atleta-diagnostico-manejo-e-elegibilidade-esportiva",
+            "resposta-pressorica-exagerada-exercicio-atleta",
+            "fluxograma-ambulatorial-hipertensao-atleta-destino",
+            "pa-nao-controlada-no-atleta-ambulatorial-destino-esporte"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 878,
+      "state": "open",
+      "merged": false,
+      "sha": "e8ae431bee31a3556d09c8fd8639cc9da7eb7e50",
+      "title": "content(Insuficiência_cardíaca): Tudo-com-Tudo — sinalizadores ambulatoriais de IC avançada (além #842)",
+      "files": [
+        "content/Insuficiência_cardíaca/checklist-ambulatorial-i-need-help-encaminhamento-ic-avancada.md",
+        "content/Insuficiência_cardíaca/fluxograma-ambulatorial-ic-avancada-destino-centro-especializado.md",
+        "content/Insuficiência_cardíaca/sinalizadores-ambulatoriais-de-ic-avancada-quando-encaminhar-centro-lvad-transplante.md",
+        "docs/reports/tudo-com-tudo-ic-avancada-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 4,
+      "finding_disposition": "I NEED HELP é encaminhamento não elegibilidade; órgão-alvo isolado suficiente; HFpEF/VD; não esperar testes ou excluir por fragilidade.",
+      "timeline_events": 19,
+      "evidence_sha256": "07ca38d02f35eacd02562d29a94277b0dca0420bfb99ffe3d5c7e49278897089",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Insuficiência_cardíaca/checklist-ambulatorial-i-need-help-encaminhamento-ic-avancada.md",
+          "sha256": "77870a23a5ddce91a5a1f742661e0b06fba6689cfff3789e04e9df25b2e7de97",
+          "source_refs": "- \"Baumwol J. \\\"I Need Help\\\"-A mnemonic to aid timely referral in advanced heart failure. J Heart Lung Transplant. 2017;36(5):593-594. DOI: 10.1016/j.healun.2017.02.010. PMID: 28258792\"\n  - \"Pagnesi M, Ghiraldin D, Vizzardi E, et al. Detailed Assessment of the \\\"I Need Help\\\" Criteria in Patients With Heart Failure: Insights From the HELP-HF Registry. Circ Heart Fail. 2023;16(12):e011003. DOI: 10.1161/CIRCHEARTFAILURE.123.011003. PMID: 37909222\"\n  - \"Morris AA, Khazanie P, Drazner MH, et al. Guidance for Timely and Appropriate Referral of Patients With Advanced Heart Failure: A Scientific Statement From the American Heart Association. Circulation. 2021;144(15):e238-e250. DOI: 10.1161/CIR.0000000000001016. PMID: 34503343\"\n  - \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"\n  - \"Baudry G, et al. Identifying and overcoming barriers to referral in advanced heart failure. A scientific statement of the Heart Failure Association (HFA) of the ESC. Eur J Heart Fail. 2025. DOI: 10.1002/ejhf.70003. PMID: 40819957\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-ic-avancada-quando-encaminhar-centro-lvad-transplante",
+            "fluxograma-ambulatorial-ic-avancada-destino-centro-especializado"
+          ]
+        },
+        {
+          "path": "content/Insuficiência_cardíaca/fluxograma-ambulatorial-ic-avancada-destino-centro-especializado.md",
+          "sha256": "807d3587971b5c814b13d09bdce98d2d159cd0d2f94fa84f659eee4c8f833a95",
+          "source_refs": "- \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"\n  - \"Baumwol J. \\\"I Need Help\\\"-A mnemonic to aid timely referral in advanced heart failure. J Heart Lung Transplant. 2017;36(5):593-594. DOI: 10.1016/j.healun.2017.02.010. PMID: 28258792\"\n  - \"Pagnesi M, Ghiraldin D, Vizzardi E, et al. Detailed Assessment of the \\\"I Need Help\\\" Criteria in Patients With Heart Failure: Insights From the HELP-HF Registry. Circ Heart Fail. 2023;16(12):e011003. DOI: 10.1161/CIRCHEARTFAILURE.123.011003. PMID: 37909222\"\n  - \"Morris AA, Khazanie P, Drazner MH, et al. Guidance for Timely and Appropriate Referral of Patients With Advanced Heart Failure: A Scientific Statement From the American Heart Association. Circulation. 2021;144(15):e238-e250. DOI: 10.1161/CIR.0000000000001016. PMID: 34503343\"\n  - \"Baudry G, et al. Identifying and overcoming barriers to referral in advanced heart failure. A scientific statement of the Heart Failure Association (HFA) of the ESC. Eur J Heart Fail. 2025. DOI: 10.1002/ejhf.70003. PMID: 40819957\"\n  - \"Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-ic-avancada-quando-encaminhar-centro-lvad-transplante",
+            "checklist-ambulatorial-i-need-help-encaminhamento-ic-avancada",
+            "fluxograma-encaminhamento-ic-avancada-lvad-transplante",
+            "fluxograma-insuficiencia-cardiaca-aguda-descompensada"
+          ]
+        },
+        {
+          "path": "content/Insuficiência_cardíaca/sinalizadores-ambulatoriais-de-ic-avancada-quando-encaminhar-centro-lvad-transplante.md",
+          "sha256": "e9b2ecb7680915aeb9a862f27129517744a9de3ac6af509a9e544deeef031c79",
+          "source_refs": "- \"McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992\"\n  - \"Baumwol J. \\\"I Need Help\\\"-A mnemonic to aid timely referral in advanced heart failure. J Heart Lung Transplant. 2017;36(5):593-594. DOI: 10.1016/j.healun.2017.02.010. PMID: 28258792\"\n  - \"Pagnesi M, Ghiraldin D, Vizzardi E, et al. Detailed Assessment of the \\\"I Need Help\\\" Criteria in Patients With Heart Failure: Insights From the HELP-HF Registry. Circ Heart Fail. 2023;16(12):e011003. DOI: 10.1161/CIRCHEARTFAILURE.123.011003. PMID: 37909222\"\n  - \"Morris AA, Khazanie P, Drazner MH, et al. Guidance for Timely and Appropriate Referral of Patients With Advanced Heart Failure: A Scientific Statement From the American Heart Association. Circulation. 2021;144(15):e238-e250. DOI: 10.1161/CIR.0000000000001016. PMID: 34503343\"\n  - \"Baudry G, et al. Identifying and overcoming barriers to referral in advanced heart failure. A scientific statement of the Heart Failure Association (HFA) of the ESC. Eur J Heart Fail. 2025. DOI: 10.1002/ejhf.70003. PMID: 40819957\"\n  - \"Peled Y, Ducharme A, Kittleson M, et al. ISHLT Guidelines for the Evaluation and Care of Cardiac Transplant Candidates—2024. J Heart Lung Transplant. 2024;43(10):1529-1628.e54. DOI: 10.1016/j.healun.2024.05.010. PMID: 39115488\"",
+          "navigation_reuse": [
+            "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+            "fluxograma-encaminhamento-ic-avancada-lvad-transplante",
+            "indicacoes-de-transplante-cardiaco-adulto-ishlt-2016",
+            "fluxograma-ambulatorial-ic-avancada-destino-centro-especializado",
+            "checklist-ambulatorial-i-need-help-encaminhamento-ic-avancada"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 879,
+      "state": "open",
+      "merged": false,
+      "sha": "aa5f8b71c6071bf84fa85bbef653e10f3cbc46ee",
+      "title": "content(Geral): Tudo-com-Tudo — sinalizadores ambulatoriais de disfunção tireoidiana",
+      "files": [
+        "content/Geral/checklist-ambulatorial-tireoide-no-paciente-cardiologico.md",
+        "content/Geral/fluxograma-ambulatorial-tireoide-quando-pedir-tsh-e-escalar.md",
+        "content/Geral/sinalizadores-ambulatoriais-de-disfuncao-tireoidiana-no-retorno-cardiologico.md",
+        "docs/reports/tudo-com-tudo-tireoide-sinalizadores-ambulatoriais-2026-09-07.md"
+      ],
+      "comments": 4,
+      "reviews": 1,
+      "inline": 4,
+      "finding_disposition": "Crise tireoidiana clínica; TSH/FT4/T3 contextual; FA paralela; referência hipotireoidismo e DOI Klein corrigido.",
+      "timeline_events": 13,
+      "evidence_sha256": "d00d95101086d1e53efeb90688f88fab752b0afdf3294907a414d9f844a14d17",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Geral/checklist-ambulatorial-tireoide-no-paciente-cardiologico.md",
+          "sha256": "b656875ebbf383944fe089060c66a6038dc1f835df83d71a963e2b40da95de0b",
+          "source_refs": "- \"Garber JR et al. Clinical practice guidelines for hypothyroidism in adults. Endocr Pract. 2012;18:988-1028. DOI: 10.4158/EP12280.GL. PMID: 23246686.\"\n  - \"Klein I, Danzi S. Thyroid disease and the heart. Circulation. 2007;116(15):1725-1735. DOI: 10.1161/CIRCULATIONAHA.106.678326. PMID: 17923583\"\n  - \"Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067\"\n  - \"Jabbar A, Pingitore A, Pearce SH, Zaman A, Iervasi G, Razvi S. Thyroid hormones and cardiovascular disease. Nat Rev Cardiol. 2017;14(1):39-55. DOI: 10.1038/nrcardio.2016.174. PMID: 27811932\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-disfuncao-tireoidiana-no-retorno-cardiologico",
+            "fluxograma-ambulatorial-tireoide-quando-pedir-tsh-e-escalar",
+            "disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender"
+          ]
+        },
+        {
+          "path": "content/Geral/fluxograma-ambulatorial-tireoide-quando-pedir-tsh-e-escalar.md",
+          "sha256": "38d6400be803750d7691de4cd35feed82996d938230354f018f9c5bec70e10db",
+          "source_refs": "- \"Garber JR et al. Clinical practice guidelines for hypothyroidism in adults. Endocr Pract. 2012;18:988-1028. DOI: 10.4158/EP12280.GL. PMID: 23246686.\"\n  - \"Klein I, Danzi S. Thyroid disease and the heart. Circulation. 2007;116(15):1725-1735. DOI: 10.1161/CIRCULATIONAHA.106.678326. PMID: 17923583\"\n  - \"Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176\"\n  - \"Jabbar A, Pingitore A, Pearce SH, Zaman A, Iervasi G, Razvi S. Thyroid hormones and cardiovascular disease. Nat Rev Cardiol. 2017;14(1):39-55. DOI: 10.1038/nrcardio.2016.174. PMID: 27811932\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-de-disfuncao-tireoidiana-no-retorno-cardiologico",
+            "checklist-ambulatorial-tireoide-no-paciente-cardiologico",
+            "disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender"
+          ]
+        },
+        {
+          "path": "content/Geral/sinalizadores-ambulatoriais-de-disfuncao-tireoidiana-no-retorno-cardiologico.md",
+          "sha256": "478f82a5347b8f8e4e87c12df218ecc8775214481f4ec535f7a9ca0683de83a3",
+          "source_refs": "- \"Garber JR et al. Clinical practice guidelines for hypothyroidism in adults. Endocr Pract. 2012;18:988-1028. DOI: 10.4158/EP12280.GL. PMID: 23246686.\"\n  - \"Klein I, Danzi S. Thyroid disease and the heart. Circulation. 2007;116(15):1725-1735. DOI: 10.1161/CIRCULATIONAHA.106.678326. PMID: 17923583\"\n  - \"Jabbar A, Pingitore A, Pearce SH, Zaman A, Iervasi G, Razvi S. Thyroid hormones and cardiovascular disease. Nat Rev Cardiol. 2017;14(1):39-55. DOI: 10.1038/nrcardio.2016.174. PMID: 27811932\"\n  - \"Ross DS, Burch HB, Cooper DS, et al. 2016 American Thyroid Association Guidelines for Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis. Thyroid. 2016;26(10):1343-1421. DOI: 10.1089/thy.2016.0229. PMID: 27521067\"\n  - \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176\"",
+          "navigation_reuse": [
+            "hipotireoidismo-sistema-cardiovascular-bradicardia-dislipidemia",
+            "fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao",
+            "fluxograma-ambulatorial-tireoide-quando-pedir-tsh-e-escalar",
+            "checklist-ambulatorial-tireoide-no-paciente-cardiologico",
+            "disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 880,
+      "state": "open",
+      "merged": false,
+      "sha": "41b493f42bc8bc75ac26ff69334437f0fc02ec73",
+      "title": "content(Pericárdio): Tudo-com-Tudo — suspeita ambulatorial de constrição (além #846/#857)",
+      "files": [
+        "content/Pericárdio/constricao-pericardica-checklist-ambulatorial-de-alarme.md",
+        "content/Pericárdio/fluxograma-ambulatorial-suspeita-constricao-destino.md",
+        "content/Pericárdio/sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-pericardio-constricao-suspeita-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 3,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "Beck é tamponamento; eco multiparamétrico; FE não obrigatória; inflamação não garante reversibilidade; ramo normal/alternativo.",
+      "timeline_events": 11,
+      "evidence_sha256": "1da6dac7e2fd103efb06ea473c10d5e6b9d453ef5ecfcea014d13539a248419a",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Pericárdio/constricao-pericardica-checklist-ambulatorial-de-alarme.md",
+          "sha256": "2ce6752753dab7ca2ad664fdecb591bb217c5751320d7a8c6d3cc42f050c4bdc",
+          "source_refs": "- \"Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297\"\n  - \"Klein AL, Wang TKM, Cremer PC, Abbate A, Adler Y, et al. Pericardial Diseases: International Position Statement on New Concepts and Advances in Multimodality Cardiac Imaging. JACC Cardiovasc Imaging. 2024;17(8):937-988. DOI: 10.1016/j.jcmg.2024.04.010. PMID: 39111992\"\n  - \"Feng D, Glockner J, Kim K, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-1837. DOI: 10.1161/CIRCULATIONAHA.111.026070. PMID: 21969014\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar",
+            "fluxograma-ambulatorial-suspeita-constricao-destino"
+          ]
+        },
+        {
+          "path": "content/Pericárdio/fluxograma-ambulatorial-suspeita-constricao-destino.md",
+          "sha256": "17efa98c9a59fe81b8c1e5bccc1c8940945b91231bee7ecde1d6a76f24c10e97",
+          "source_refs": "- \"Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297\"\n  - \"Klein AL, Wang TKM, Cremer PC, Abbate A, Adler Y, et al. Pericardial Diseases: International Position Statement on New Concepts and Advances in Multimodality Cardiac Imaging. JACC Cardiovasc Imaging. 2024;17(8):937-988. DOI: 10.1016/j.jcmg.2024.04.010. PMID: 39111992\"\n  - \"Feng D, Glockner J, Kim K, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-1837. DOI: 10.1161/CIRCULATIONAHA.111.026070. PMID: 21969014\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar",
+            "constricao-pericardica-checklist-ambulatorial-de-alarme",
+            "fluxograma-pericardite-constritiva-versus-cardiomiopatia-restritiva"
+          ]
+        },
+        {
+          "path": "content/Pericárdio/sinalizadores-ambulatoriais-suspeita-constricao-pericardica-quando-encaminhar.md",
+          "sha256": "3889c54250b343beed214fbe7fbf3991765c5bdf4aeb519e47838d4203b6ab01",
+          "source_refs": "- \"Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297\"\n  - \"Klein AL, Wang TKM, Cremer PC, Abbate A, Adler Y, et al. Pericardial Diseases: International Position Statement on New Concepts and Advances in Multimodality Cardiac Imaging. JACC Cardiovasc Imaging. 2024;17(8):937-988. DOI: 10.1016/j.jcmg.2024.04.010. PMID: 39111992\"\n  - \"Feng D, Glockner J, Kim K, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-1837. DOI: 10.1161/CIRCULATIONAHA.111.026070. PMID: 21969014\"",
+          "navigation_reuse": [
+            "fluxograma-pericardite-constritiva-versus-cardiomiopatia-restritiva",
+            "pericardite-constritiva-e-tamponamento-criterios-numericos-por-imagem-2024",
+            "fluxograma-tamponamento-cardiaco",
+            "fluxograma-ambulatorial-suspeita-constricao-destino",
+            "constricao-pericardica-checklist-ambulatorial-de-alarme"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 881,
+      "state": "open",
+      "merged": false,
+      "sha": "72b23bf29c4cd09f30bd98c681d146abb2925746",
+      "title": "content(Saúde_mental_e_cardiologia): Tudo-com-Tudo — escalada ambulatorial QT/psicofármaco (além #847)",
+      "files": [
+        "content/Saúde_mental_e_cardiologia/checklist-ambulatorial-alarme-qt-psicofarmaco-cardiopata.md",
+        "content/Saúde_mental_e_cardiologia/fluxograma-ambulatorial-qt-psicofarmaco-destino-cardiologia.md",
+        "content/Saúde_mental_e_cardiologia/sinalizadores-ambulatoriais-preocupacao-qt-psicofarmaco-quando-escalar.md",
+        "docs/reports/tudo-com-tudo-saude-mental-qt-escalacao-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 2,
+      "reviews": 2,
+      "inline": 5,
+      "finding_disposition": "Validar QT e QRS largo/JTc; ação urgente versus PS clínico; intoxicação intencional sempre avalia crise; sem algoritmo farmacológico duplicado.",
+      "timeline_events": 12,
+      "evidence_sha256": "d35509636d8d107e0bc928bfea523975fad661afed53700f6888f01e2dbf085a",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Saúde_mental_e_cardiologia/checklist-ambulatorial-alarme-qt-psicofarmaco-cardiopata.md",
+          "sha256": "3a60485a2876489eb8849163df93cbf65fc467b773aa6a4c2df16fc2c7bea946",
+          "source_refs": "- \"Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease: developed under the auspices of the ESC Clinical Practice Guidelines Committee. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270\"\n  - \"Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060. DOI: 10.1161/CIRCULATIONAHA.109.192704. PMID: 20142454\"\n  - \"Wenzel-Seifert K, Wittmann M, Haen E. QTc prolongation by psychotropic drugs and the risk of Torsade de Pointes. Dtsch Arztebl Int. 2011;108(41):687-693. DOI: 10.3238/arztebl.2011.0687. PMID: 22114630\"\n  - \"Ray WA, Chung CP, Murray KT, Hall K, Stein CM. Atypical antipsychotic drugs and the risk of sudden cardiac death. N Engl J Med. 2009;360(3):225-235. DOI: 10.1056/NEJMoa0806994. PMID: 19144938\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-preocupacao-qt-psicofarmaco-quando-escalar"
+          ]
+        },
+        {
+          "path": "content/Saúde_mental_e_cardiologia/fluxograma-ambulatorial-qt-psicofarmaco-destino-cardiologia.md",
+          "sha256": "8b82298f28b031da88429b2c0897db8d3d318e53f53ea00cc3e6b14077e42b6e",
+          "source_refs": "- \"Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease: developed under the auspices of the ESC Clinical Practice Guidelines Committee. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270\"\n  - \"Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060. DOI: 10.1161/CIRCULATIONAHA.109.192704. PMID: 20142454\"\n  - \"Wenzel-Seifert K, Wittmann M, Haen E. QTc prolongation by psychotropic drugs and the risk of Torsade de Pointes. Dtsch Arztebl Int. 2011;108(41):687-693. DOI: 10.3238/arztebl.2011.0687. PMID: 22114630\"\n  - \"Ray WA, Chung CP, Murray KT, Hall K, Stein CM. Atypical antipsychotic drugs and the risk of sudden cardiac death. N Engl J Med. 2009;360(3):225-235. DOI: 10.1056/NEJMoa0806994. PMID: 19144938\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-preocupacao-qt-psicofarmaco-quando-escalar",
+            "checklist-ambulatorial-alarme-qt-psicofarmaco-cardiopata",
+            "fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt"
+          ]
+        },
+        {
+          "path": "content/Saúde_mental_e_cardiologia/sinalizadores-ambulatoriais-preocupacao-qt-psicofarmaco-quando-escalar.md",
+          "sha256": "f9c7fc624cfad66b3a7b9286cb4211c48b5f3be0f92641494e7aee645b51106b",
+          "source_refs": "- \"Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease: developed under the auspices of the ESC Clinical Practice Guidelines Committee. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270\"\n  - \"Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060. DOI: 10.1161/CIRCULATIONAHA.109.192704. PMID: 20142454\"\n  - \"Wenzel-Seifert K, Wittmann M, Haen E. QTc prolongation by psychotropic drugs and the risk of Torsade de Pointes. Dtsch Arztebl Int. 2011;108(41):687-693. DOI: 10.3238/arztebl.2011.0687. PMID: 22114630\"\n  - \"Ray WA, Chung CP, Murray KT, Hall K, Stein CM. Atypical antipsychotic drugs and the risk of sudden cardiac death. N Engl J Med. 2009;360(3):225-235. DOI: 10.1056/NEJMoa0806994. PMID: 19144938\"",
+          "navigation_reuse": [
+            "fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt",
+            "seguranca-cardiovascular-de-psicofarmacos-antidepressivos-e-doenca-cardiaca",
+            "antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca",
+            "fluxograma-rastreamento-saude-mental-cuidado-escalonado-esc-2025",
+            "fluxograma-ambulatorial-qt-psicofarmaco-destino-cardiologia",
+            "checklist-ambulatorial-alarme-qt-psicofarmaco-cardiopata"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 882,
+      "state": "open",
+      "merged": false,
+      "sha": "8aa756de90184b51cae18ff6e4a7b885ebc917a2",
+      "title": "content(Cardiologia_geriátrica): Tudo-com-Tudo — HO ambulatorial (além #851)",
+      "files": [
+        "content/Cardiologia_geriátrica/fluxograma-ambulatorial-hipotensao-ortostatica-idoso-destino.md",
+        "content/Cardiologia_geriátrica/quedas-farmacos-cv-ortostatismo-idoso-quando-encaminhar-ambulatorial.md",
+        "content/Cardiologia_geriátrica/sinalizadores-ambulatoriais-hipotensao-ortostatica-idoso-quando-encaminhar.md",
+        "docs/reports/tudo-com-tudo-geriatrica-oh-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 6,
+      "reviews": 2,
+      "inline": 7,
+      "finding_disposition": "Supino5min e em pé1/3; reavaliar ECG; formas inicial/tardia; HPP coexistente; FC confusa por drogas/ritmo; revisar sem retirada abrupta.",
+      "timeline_events": 19,
+      "evidence_sha256": "ff65b275863f640ba275f1aa295eac64e80955da983aaa7a2fcd89253506df5e",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiologia_geriátrica/fluxograma-ambulatorial-hipotensao-ortostatica-idoso-destino.md",
+          "sha256": "068a3025bcc142c3d4dbfe05b974a31dc89ed39eee7177cda1dc0854de71f433",
+          "source_refs": "- \"AHA. Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement. Hypertension. 2024. DOI: 10.1161/HYP.0000000000000236. URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11067441/\"\n  - \"Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-hipotensao-ortostatica-idoso-quando-encaminhar",
+            "quedas-farmacos-cv-ortostatismo-idoso-quando-encaminhar-ambulatorial",
+            "sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_geriátrica/quedas-farmacos-cv-ortostatismo-idoso-quando-encaminhar-ambulatorial.md",
+          "sha256": "912b940ebcd71f75c053a2edb629af33629a1358c813ea24821e168f1c8cdd25",
+          "source_refs": "- \"AHA. Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement. Hypertension. 2024. DOI: 10.1161/HYP.0000000000000236. URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11067441/\"\n  - \"Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"\n  - \"Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-hipotensao-ortostatica-idoso-quando-encaminhar",
+            "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+            "fluxograma-desprescricao-cardiovascular-no-idoso-polifarmacia-e-fim-de-vida",
+            "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_geriátrica/sinalizadores-ambulatoriais-hipotensao-ortostatica-idoso-quando-encaminhar.md",
+          "sha256": "2e097e91d7218c8d7ff7376c2381d7fc1eb34a55db34e501df4982c449b2a091",
+          "source_refs": "- \"AHA. Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement. Hypertension. 2024. DOI: 10.1161/HYP.0000000000000236. URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11067441/\"\n  - \"Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304\"\n  - \"Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947\"\n  - \"McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715\"",
+          "navigation_reuse": [
+            "sincope-e-queda-no-idoso-estratificacao-de-risco-na-emergencia",
+            "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+            "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+            "fluxograma-ambulatorial-hipotensao-ortostatica-idoso-destino",
+            "quedas-farmacos-cv-ortostatismo-idoso-quando-encaminhar-ambulatorial"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 883,
+      "state": "open",
+      "merged": false,
+      "sha": "d552bf96872c19a48adf98f8f6ba07c5682ea8d9",
+      "title": "content(Fibrilação_atrial): Tudo-com-Tudo — pós-cardioversão ambulatorial → PS (além #827/#852)",
+      "files": [
+        "content/Fibrilação_atrial/fluxograma-ambulatorial-pos-cardioversao-fa-destino.md",
+        "content/Fibrilação_atrial/recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps.md",
+        "content/Fibrilação_atrial/sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps.md",
+        "docs/reports/tudo-com-tudo-fa-pos-cardioversao-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 6,
+      "reviews": 2,
+      "inline": 10,
+      "finding_disposition": "AVC e embolia não cerebral; sangramento maior mesmo estável; RVR sintomática; proarritmia; OAC risco não sucesso; acesso inseguro escala.",
+      "timeline_events": 20,
+      "evidence_sha256": "e8b2f870b1d28a16d6df9c9b4cd358bd2051b133552ce2c1d37d69b60aa1ad90",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Fibrilação_atrial/fluxograma-ambulatorial-pos-cardioversao-fa-destino.md",
+          "sha256": "d175dacb3855490e65c81df3ae1f61b81acce78f26d273fca40a98281759a6fb",
+          "source_refs": "- \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723\"\n  - \"Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps",
+            "recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps",
+            "fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento"
+          ]
+        },
+        {
+          "path": "content/Fibrilação_atrial/recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps.md",
+          "sha256": "8bbac6f1921c17c33ff6d3fae1dcddc6f5738f724cbb5ac0478048c342939adb",
+          "source_refs": "- \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723\"\n  - \"Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps",
+            "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024"
+          ]
+        },
+        {
+          "path": "content/Fibrilação_atrial/sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps.md",
+          "sha256": "8f98b6359882a200db342cdfb7e393f1f838c4125184e95dc3828ec70a1157fc",
+          "source_refs": "- \"Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723\"\n  - \"Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177\"",
+          "navigation_reuse": [
+            "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024",
+            "fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento",
+            "wait-and-see-versus-cardioversao-precoce-na-fa-de-inicio-recente-race-7-acwas",
+            "pill-in-the-pocket-cardioversao-quimica-ambulatorial-na-fa-de-inicio-recente",
+            "esc-2024-diretriz-fibrilacao-atrial-af-care",
+            "fluxograma-ambulatorial-pos-cardioversao-fa-destino",
+            "recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    },
+    {
+      "n": 884,
+      "state": "open",
+      "merged": false,
+      "sha": "83fc164efac8a1aea62d64d4ecae155af2774e0d",
+      "title": "content(Cardiologia_pediátrica): Tudo-com-Tudo — seguimento Kawasaki/MIS-C ambulatorial (além #863)",
+      "files": [
+        "content/Cardiologia_pediátrica/dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial.md",
+        "content/Cardiologia_pediátrica/fluxograma-ambulatorial-seguimento-kawasaki-mis-c-destino.md",
+        "content/Cardiologia_pediátrica/sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista.md",
+        "docs/tudo-com-tudo-pediatrica-kawasaki-misc-ambulatorial-2026-09-07.md"
+      ],
+      "comments": 5,
+      "reviews": 2,
+      "inline": 3,
+      "finding_disposition": "AHA2024; histórico maiorZ e aneurisma regressivo não equivale normal; dor benigna com dilatação transitória não PS universal; achados novos prioridade.",
+      "timeline_events": 18,
+      "evidence_sha256": "a7dacbac06220efda7a9328d0bba1b0519171921404863b058ecfe50a7411ca8",
+      "disposition": "integrar correção clínica local; publicação depende gate final",
+      "files_reviewed": [
+        {
+          "path": "content/Cardiologia_pediátrica/dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial.md",
+          "sha256": "12ddd39a16111ca428201091b776b40a08c7528f7c94053ceb2106432f54cd64",
+          "source_refs": "- \"AHA. Update on Diagnosis and Management of Kawasaki Disease: A Scientific Statement. Circulation. 2024. DOI: 10.1161/CIR.0000000000001295. URL: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001295\"\n  - \"McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445\"\n  - \"Brogan P, Burns JC, Cornish J, et al. Lifetime cardiovascular management of patients with previous Kawasaki disease. Heart. 2020;106(6):411-420. DOI: 10.1136/heartjnl-2019-315925. PMID: 31843876\"\n  - \"Fukazawa R, Kobayashi J, Ayusawa M, et al. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. DOI: 10.1253/circj.CJ-19-1094. PMID: 32641591\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista",
+            "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+            "sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_pediátrica/fluxograma-ambulatorial-seguimento-kawasaki-mis-c-destino.md",
+          "sha256": "99ba2eccf7f08291f8b66a7137ade17eedc02dfb61a76efa3ab5a9ef919a776f",
+          "source_refs": "- \"AHA. Update on Diagnosis and Management of Kawasaki Disease: A Scientific Statement. Circulation. 2024. DOI: 10.1161/CIR.0000000000001295. URL: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001295\"\n  - \"McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445\"\n  - \"Fukazawa R, Kobayashi J, Ayusawa M, et al. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. DOI: 10.1253/circj.CJ-19-1094. PMID: 32641591\"\n  - \"Brogan P, Burns JC, Cornish J, et al. Lifetime cardiovascular management of patients with previous Kawasaki disease. Heart. 2020;106(6):411-420. DOI: 10.1136/heartjnl-2019-315925. PMID: 31843876\"\n  - \"Alvarado-Gamarra G, Alcala-Marcos K, Celis CR, et al. Post-MIS-C cardiovascular outcomes: a systematic review. Eur J Pediatr. 2026;185(3). DOI: 10.1007/s00431-026-06798-6. PMID: 41721085\"",
+          "navigation_reuse": [
+            "sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista",
+            "dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial"
+          ]
+        },
+        {
+          "path": "content/Cardiologia_pediátrica/sinalizadores-ambulatoriais-seguimento-pos-kawasaki-e-mis-c-ps-vs-especialista.md",
+          "sha256": "b8a834291abab8094c443e396ee18b0a187c3d903231633357ec19d129e788c7",
+          "source_refs": "- \"AHA. Update on Diagnosis and Management of Kawasaki Disease: A Scientific Statement. Circulation. 2024. DOI: 10.1161/CIR.0000000000001295. URL: https://www.ahajournals.org/doi/10.1161/CIR.0000000000001295\"\n  - \"McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445\"\n  - \"Fukazawa R, Kobayashi J, Ayusawa M, et al. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. DOI: 10.1253/circj.CJ-19-1094. PMID: 32641591\"\n  - \"Brogan P, Burns JC, Cornish J, et al. Lifetime cardiovascular management of patients with previous Kawasaki disease. Heart. 2020;106(6):411-420. DOI: 10.1136/heartjnl-2019-315925. PMID: 31843876\"\n  - \"Alvarado-Gamarra G, Alcala-Marcos K, Celis CR, et al. Post-MIS-C cardiovascular outcomes: a systematic review. Eur J Pediatr. 2026;185(3). DOI: 10.1007/s00431-026-06798-6. PMID: 41721085\"\n  - \"Yasuhara J, Masuda K, Watanabe K, et al. Longitudinal Cardiac Outcomes of Multisystem Inflammatory Syndrome in Children: A Systematic Review and Meta-Analysis. Pediatr Cardiol. 2023;44(4):892-907. DOI: 10.1007/s00246-022-03052-2. PMID: 36416893\"",
+          "navigation_reuse": [
+            "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+            "trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+            "fluxograma-trombose-coronaria-e-infarto-em-aneurisma-de-kawasaki",
+            "sindrome-do-choque-da-doenca-de-kawasaki",
+            "mis-c-com-disfuncao-miocardica-e-choque",
+            "desfechos-cardiovasculares-de-longo-prazo-pos-mis-c-revisao-sistematica-2026",
+            "sinalizadores-ambulatoriais-pediatria-dor-sincope-palpitacoes-ps-vs-especialista",
+            "fluxograma-ambulatorial-seguimento-kawasaki-mis-c-destino",
+            "dor-toracica-ou-sincope-no-seguimento-pos-cal-kawasaki-destino-ambulatorial"
+          ]
+        }
+      ],
+      "duplicate_handling": "Reutilizados documentos canônicos na navegação. Documentos irmãos repartem protocolo, fluxo e checklist; não importados relatórios originais nem alterações de autorização/publicação."
+    }
+  ],
+  "validation": {
+    "mermaid_real": "24/24 blocos válidos; mermaid11,jsdom26; Node22 ajuste navigator apenas harness temporário",
+    "internal_biblioteca_links": "0 destinos inexistentes no conjunto base+75; slugsfrontmatter",
+    "publication": "não executada; gate integral e revisão integrada permanecem com coordenador"
+  }
+}

@@ -5,7 +5,7 @@ theme: "Insuficiência cardíaca"
 kind: fluxograma
 summary: "Do momento da alta por IC aguda às primeiras seis semanas: confirmar euvolemia e terapia oral iniciada com PA, potássio e creatinina estáveis; escolher entre a estratégia intensiva do STRONG-HF, com metade da dose-alvo na alta e visitas nas semanas 1, 2, 3 e 6, e o cuidado habitual com consulta em 1 a 2 semanas; e o que fazer quando um indicador de segurança aparece na visita."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
+review_note: "Revisão adversarial Codex 08/09/2026: retirada espera semanal automática em instabilidade, critérios de ensaio separados de contraindicações universais e NT-proBNP não aciona diurético isoladamente; ESC 2026, Table 8 e seção 7.4.3 conferidas. Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666. https://academic.oup.com/eurheartj/article/44/37/3627/7246292"
   - "2023 Focused Update of ESC Guidelines for Acute and Chronic HF: Key Points. American College of Cardiology, 2023. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/58/2023-focused-update-esc-guidelines-hf-esc-2023"
@@ -32,23 +32,27 @@ flowchart TD
   C2(["Iniciar ou ajustar a terapia oral<br/>ainda internado, corrigir potássio<br/>e função renal e só então rediscutir a alta<br/>ver fluxograma de sequenciamento"])
   D3{"Candidato à estratégia intensiva<br/>tipo STRONG-HF: NT-proBNP elevado,<br/>hemodinamicamente estável, sem indicador<br/>de segurança presente e capaz de<br/>comparecer às visitas semanais?"}
   C3(["Alta com cuidado habitual reforçado:<br/>consulta em 1 a 2 semanas para congestão,<br/>tolerância e titulação em ritmo<br/>individualizado, educação e reconciliação<br/>medicamentosa"])
-  P1["Alta com pelo menos metade da dose-alvo<br/>de IECA, BRA ou ARNI, betabloqueador e ARM,<br/>ajustada nas 48 h antes da alta,<br/>visitas nas semanas 1, 2, 3 e 6 com exame,<br/>PA, FC, potássio, TFGe e NT-proBNP"]
+  P1["No protocolo do estudo, se tolerado:<br/>alta com pelo menos metade da dose-alvo<br/>de IECA, BRA ou ARNI, betabloqueador e ARM,<br/>ajustada nas 48 h antes da alta,<br/>visitas nas semanas 1, 2, 3 e 6 com exame,<br/>PA, FC, potássio, TFGe e NT-proBNP"]
   D4{"Na visita: algum indicador de<br/>segurança presente?"}
-  C4(["Titular até a dose plena, meta de<br/>2 semanas após a alta, manter as visitas<br/>das semanas 3 e 6 e seguir no ambulatório<br/>de IC com iSGLT2 conforme indicação"])
+  C4(["Titular conforme tolerância e monitorização<br/>Meta de 2 semanas pertence ao protocolo do ensaio, manter as visitas<br/>das semanas 3 e 6 e seguir no ambulatório<br/>de IC com iSGLT2 conforme indicação"])
   D5{"Qual indicador?"}
-  C5(["Congestão clínica ou NT-proBNP<br/>mais de 10% acima do valor pré-alta:<br/>aumentar diurético, não subir<br/>betabloqueador nesta visita e reavaliar<br/>na visita seguinte"])
-  C6(["PAS abaixo de 95 mmHg ou hipotensão<br/>sintomática: não titular IECA, BRA ou<br/>ARNI, ARM e betabloqueador, investigar<br/>a causa e rever em uma semana<br/>ver fluxograma de hipotensão sintomática"])
-  C7(["Potássio acima de 5,0 mmol/L ou<br/>TFGe abaixo de 30: não titular IECA,<br/>BRA ou ARNI e ARM, repetir laboratório<br/>em uma semana e, se hipercalemia, considerar<br/>quelante antes de reduzir dose"])
+  C5(["Congestão ou elevação de NT-proBNP:<br/>reavaliar causas, perfusão e volume<br/>Ajustar diurético se congestão confirmada<br/>Sem escalonamento automático por biomarcador"])
+  C6(["PAS abaixo de 95 mmHg ou hipotensão<br/>sintomática: não titular IECA, BRA ou<br/>ARNI, ARM e betabloqueador, investigar<br/>a causa e definir prazo conforme gravidade<br/>Sem espera semanal automática<br/>ver fluxograma de hipotensão sintomática"])
+  C7(["Potássio acima de 5,0 mmol/L ou<br/>TFGe abaixo de 30: não titular IECA,<br/>BRA ou ARNI e ARM, avaliar gravidade, tendência e causas<br/>Definir repetição e manejo oportunos<br/>Não aguardar uma semana em alto risco"])
   C8(["FC abaixo de 55 bpm: não titular<br/>betabloqueador, fazer ECG e seguir<br/>titulando os demais pilares<br/>conforme tolerância"])
 
-  R0 --> D1
+  R0 --> EM{"Instabilidade, hipoperfusão, síncope,<br/>arritmia grave ou distúrbio eletrolítico grave?"}
+  EM -->|Sim ou suspeita relevante| URG["Avaliação imediata pela equipe de emergência<br/>Não aguardar próxima visita de titulação"]
+  EM -->|Não| D1
   D1 -->|"Não"| C1
   D1 -->|"Sim"| D2
   D2 -->|"Não"| C2
   D2 -->|"Sim"| D3
-  D3 -->|"Não: contraindicação, fragilidade<br/>ou sem acesso a visitas frequentes"| C3
+  D3 -->|"Não: adaptar protocolo e suporte<br/>às condições clínicas e de acesso"| C3
   D3 -->|"Sim"| P1
-  P1 --> D4
+  P1 --> RE{"Na visita há instabilidade ou sinal de gravidade?"}
+  RE -->|Sim ou suspeita relevante| URG
+  RE -->|Não| D4
   D4 -->|"Não"| C4
   D4 -->|"Sim"| D5
   D5 -->|"Congestão ou NT-proBNP em alta"| C5
@@ -62,9 +66,12 @@ flowchart TD
 
 ## Antes da alta: o que precisa estar pronto
 
-Os dois primeiros nós vêm da ESC 2021, que recomenda em classe I, nível C, excluir cuidadosamente sobrecarga de volume antes da alta e testar a terapia oral guiada por diretriz ainda no hospital. Congestão residual na alta é o cenário em que a titulação rápida vira problema, não solução: o STRONG-HF só randomizou pacientes hemodinamicamente estáveis, com NT-proBNP acima de 2.500 pg/mL na triagem e queda de mais de 10% entre triagem e randomização, ou seja, pacientes que estavam de fato descongestionando. Quem não está euvolêmico volta ao fluxograma da IC aguda descompensada; quem está euvolêmico mas ainda não iniciou a terapia oral, ou tem potássio e creatinina instáveis, resolve isso internado, na ordem que o fluxograma de sequenciamento da terapia quádrupla propõe.
+Os dois primeiros nós vêm da ESC 2021, que recomenda em classe I, nível C, excluir cuidadosamente sobrecarga de volume antes da alta e testar a terapia oral guiada por diretriz ainda no hospital. A avaliação da congestão é essencial para a alta; entretanto, iniciar ou manter terapia apropriada durante a descongestão após estabilização pode ser possível. No ensaio, o STRONG-HF só randomizou pacientes hemodinamicamente estáveis, com NT-proBNP acima de 2.500 pg/mL na triagem e queda de mais de 10% entre triagem e randomização, ou seja, pacientes que estavam de fato descongestionando. Quem não está euvolêmico volta ao fluxograma da IC aguda descompensada; quem está euvolêmico mas ainda não iniciou a terapia oral, ou tem potássio e creatinina instáveis, resolve isso internado, na ordem que o fluxograma de sequenciamento da terapia quádrupla propõe.
 
 ## Quem entra na estratégia intensiva
+
+**Elegibilidade do estudo não equivale a contraindicação clínica universal.** Fora da população ou da logística do STRONG-HF, adaptar tratamento e apoio ao seguimento; fragilidade, idade ou dificuldade de transporte não significam abandonar otimização. Os limites abaixo descrevem o ensaio e não devem ser aplicados indistintamente a todos os fármacos.
+
 
 A recomendação da ESC 2023 é classe I nível B para todos os internados por IC, mas a evidência vem de uma população definida. Na atualização focada, o STRONG-HF é descrito assim: 1.078 pacientes hospitalizados por IC aguda, estáveis, com NT-proBNP elevado, ainda sem doses plenas de terapia baseada em evidência, randomizados para cuidado habitual ou cuidado de alta intensidade. Os critérios que o nó D3 pede são os que o ensaio usou para entrar e para titular. O registro do ensaio (NCT03412201) e o resumo do Lancet trazem critérios explícitos: idade de 18 a 85 anos; PAS de 100 mmHg ou mais, FC de 60 bpm ou mais e potássio de 5,0 mmol/L ou menos nas 24 h antes da randomização; NT-proBNP acima de 1.500 pg/mL na randomização; exclusão de TFGe abaixo de 30 mL/min/1,73 m2 na triagem ou diálise, intolerância documentada a doses altas de betabloqueador ou de bloqueador do SRAA, expectativa de vida abaixo de 6 meses, alta prevista para instituição de longa permanência e incapacidade de cumprir o seguimento por comorbidade, condição social ou histórico de não adesão. Fragilidade em si não é critério nominal do protocolo; o que o ramo de cuidado habitual traduz é essa combinação de idade acima de 85 anos, intolerância documentada, TFGe abaixo de 30 e inviabilidade de quatro visitas com laboratório em seis semanas.
 
@@ -92,7 +99,7 @@ Os cinco indicadores do protocolo, conforme a análise de Tomasoni e colaborador
 
 | Indicador | Conduta no diagrama |
 |---|---|
-| Congestão ou NT-proBNP mais de 10% acima do pré-alta | Aumentar diurético, não subir betabloqueador nesta visita |
+| Congestão ou NT-proBNP mais de 10% acima do pré-alta | Reavaliar clinicamente; ajuste de diurético depende de congestão confirmada, não de NT-proBNP isolado |
 | PAS abaixo de 95 mmHg | Não titular IECA, BRA ou ARNI, ARM nem betabloqueador |
 | Potássio acima de 5,0 mmol/L ou TFGe abaixo de 30 | Não titular IECA, BRA ou ARNI nem ARM |
 | FC abaixo de 55 bpm | Não titular betabloqueador |
@@ -101,7 +108,7 @@ A atribuição de cada indicador a fármacos específicos, tal como aparece nas 
 
 ## O que vale para todos os ramos
 
-Quatro pontos não estão no diagrama porque se aplicam a qualquer alta por IC: iSGLT2 iniciado conforme a indicação por fração de ejeção, independentemente da estratégia de titulação, porque não exige titulação nem foi parte do protocolo do STRONG-HF; plano diurético oral por escrito, com peso-alvo e instrução de quando ligar; reconciliação medicamentosa e educação com teach-back na alta; e retorno imediato ao hospital diante de congestão franca, que reabre o fluxograma da IC aguda descompensada em qualquer ponto desta árvore.
+Quatro pontos não estão no diagrama porque se aplicam a qualquer alta por IC: iSGLT2 iniciado conforme a indicação por fração de ejeção, independentemente da estratégia de titulação, porque não exige titulação nem foi parte do protocolo do STRONG-HF; plano diurético oral por escrito, com peso-alvo e instrução de quando ligar; reconciliação medicamentosa e educação com teach-back na alta; e instruções explícitas para piora: sinais de gravidade exigem emergência; piora estável requer contato e reavaliação rápida conforme quadro.
 
 ## Limitações e o que confirmar
 
@@ -121,3 +128,7 @@ Quatro pontos não estão no diagrama porque se aplicam a qualquer alta por IC: 
 - [Atualização Focada 2023 das Diretrizes ESC 2021 de Insuficiência Cardíaca](/biblioteca/atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca)
 - [Transição Hospital-Domicílio na Insuficiência Cardíaca: o Ensaio PACT-HF](/biblioteca/transicao-hospital-domicilio-na-ic-o-ensaio-pact-hf)
 - [Fluxograma: Reconciliação Medicamentosa na Transição de Cuidado](/biblioteca/fluxograma-reconciliacao-medicamentosa-na-transicao-de-cuidado)
+
+## Atualização ESC 2026
+
+A Tabela 8 mantém a avaliação cuidadosa antes da alta (I C) e a estratégia de titulação com acompanhamento frequente por seis semanas (I B2). O STRONG-HF não estabelece benefício de uma sequência universal de classes, nem autoriza forçar doses diante de intolerância. [Texto oficial, seção 7.4.3 e Tabela 8](https://academic.oup.com/eurheartj/advance-article-pdf/doi/10.1093/eurheartj/ehag100/70807529/ehag100.pdf).

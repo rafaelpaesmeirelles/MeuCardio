@@ -1,0 +1,34 @@
+{
+  "batch": "claude-overnight-frozen-20260829-part1",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal Codex do snapshot congelado antigo; produção nova excluída. Gates centrais obrigatórios.",
+  "fronts": {
+    "casos_clinicos": [
+      "flutter-atrial-tipico-primeiro-episodio-ablacao-do-istmo-como-primeira-linha"
+    ],
+    "checklists": [
+      "escolha-do-metodo-de-imagem-para-viabilidade-miocardica-pre-revascularizacao",
+      "flutter-atrial-tipico-cardioversao-anticoagulacao-e-ablacao-do-istmo",
+      "planejamento-e-triagem-pre-tavi-consolidado"
+    ],
+    "exames": [
+      "caracterizacao-de-massas-cardiacas-e-pericardicas-por-tc-e-rm",
+      "cateterismo-hemodinamico-invasivo-em-valvopatia-aortica-e-mitral",
+      "ecocardiograma-doppler-criterios-de-mayo-para-constricao-pericardica",
+      "ecocardiograma-transesofagico-tridimensional-no-planejamento-pre-tavi-e-pre-teer",
+      "imagem-intravascular-coronariana-ivus-oct-para-guiar-intervencao-coronaria-percutanea",
+      "pet-perfusao-miocardica-e-reserva-de-fluxo-coronario",
+      "ressonancia-cardiaca-com-strain-miocardico-feature-tracking",
+      "ultrassonografia-vascular-de-carotidas-e-vertebrais"
+    ],
+    "material_paciente": [
+      "valvopatias-entendendo-as-doencas-das-valvas-do-coracao"
+    ]
+  },
+  "disease_slugs": [
+    "doenca-renovascular-e-displasia-fibromuscular",
+    "flutter-atrial-adulto",
+    "hematoma-intramural-aortico-e-ulcera-penetrante"
+  ]
+}

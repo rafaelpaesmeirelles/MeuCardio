@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr890-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr890": "06de9c5ea6138517bb130a80a4c76676b6249479"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-discordancia-familiar-quando-escalar-etica",
+      "fluxograma-ambulatorial-discordancia-familiar-escalada-etica",
+      "sinalizadores-ambulatoriais-discordancia-familiar-escalada-etica-cardiologia"
+    ]
+  }
+}

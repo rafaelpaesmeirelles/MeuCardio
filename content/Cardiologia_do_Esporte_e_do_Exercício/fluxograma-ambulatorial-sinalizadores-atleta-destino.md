@@ -1,0 +1,66 @@
+---
+title: 'Fluxograma ambulatorial: sinalizadores no atleta — PS agora vs. restrição + investigação vs. individualizar participação com plano'
+slug: fluxograma-ambulatorial-sinalizadores-atleta-destino
+theme: Cardiologia do Esporte e do Exercício
+kind: fluxograma
+fonte_producao: grok
+summary: 'Árvore ambulatorial de destino no atleta sintomático: gate de alarme para PS/suspensão imediata, braço de restrição com investigação dirigida,
+  e braço de decisão compartilhada com educação de alarmes — sem duplicar o fluxograma de síncope no esforço.'
+review_status: revisado
+review_note: 'Revisão clínica e editorial focal em 08/09/2026 do PR #848, desde seu HEAD remoto. Correções e fontes verificadas registradas em docs/revisao-cientifica-pr826-859-20260908.md.
+  Prazos operacionais não equivalem a recomendações normativas; preservar avaliação individual e vias de emergência.'
+source_refs:
+- 'Pelliccia A; Sharma S; Gati S. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42:17.
+  DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412.'
+- 'Kim JH; Baggish AL; Levine BD. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific
+  Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151:e716. DOI: 10.1161/CIR.0000000000001297. PMID:
+  39973614.'
+- 'Lampert R; Chung EH; Ackerman MJ. 2024 HRS expert consensus statement on arrhythmias in the athlete: Evaluation, treatment, and return to play. Heart
+  Rhythm. 2024;21:e151. DOI: 10.1016/j.hrthm.2024.05.018. PMID: 38763377.'
+---
+
+# Fluxograma ambulatorial: sinalizadores no atleta — destino
+
+Prosa: [[sinalizadores-ambulatoriais-no-atleta-quando-suspender-e-encaminhar](/biblioteca/sinalizadores-ambulatoriais-no-atleta-quando-suspender-e-encaminhar)](/biblioteca/sinalizadores-ambulatoriais-no-atleta-quando-suspender-e-encaminhar). Dor torácica: [[dor-toracica-no-atleta-ambulatorial-quando-escalar](/biblioteca/dor-toracica-no-atleta-ambulatorial-quando-escalar)](/biblioteca/dor-toracica-no-atleta-ambulatorial-quando-escalar). Síncope (não duplicar): [[fluxograma-sincope-durante-exercicio-atleta](/biblioteca/fluxograma-sincope-durante-exercicio-atleta)](/biblioteca/fluxograma-sincope-durante-exercicio-atleta).
+
+## Árvore de decisão
+
+```mermaid
+flowchart TD
+  R0["Consulta / contato ambulatorial<br/>atleta com sintoma ou achado novo"] --> D1{"Alarme imediato?<br/>síncope no esforço / dor em curso<br/>arritmia com pré-síncope<br/>instabilidade / ECG vermelho + sintoma"}
+
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["Suspender exercício AGORA<br/>PS se instável / dor em curso / síncope recente<br/>Se síncope: usar fluxograma-sincope-durante-exercicio-atleta"])
+
+  D1 -->|"Não"| D2{"Sintoma relacionado ao esforço<br/>sem instabilidade?<br/>dor de esforço / dispneia desproporcional<br/>palpitação significativa / queda de performance"}
+
+  D2 -->|"Sim"| P1["ECG + exame; história dirigida<br/>Suspender competição / HIIT"]
+  P1 --> C2["Investigação dirigida<br/>Selecionar exames pela hipótese clínica<br/>Retorno só com plano diagnóstico"]
+
+  D2 -->|"Não"| D3{"Avaliação clínica completa compatível<br/>com causa não cardíaca e baixo risco?"}
+
+  D3 -->|"Sim"| C3(["Individualizar participação com plano escrito de alarmes<br/>Reavaliar se o quadro mudar"])
+  D3 -->|"Não / dúvida"| C4(["Restrição temporária prudente<br/>Reavaliação em prazo proporcional ao risco<br/>ou cardiologia do esporte"])
+
+  C2 --> D4{"Acesso a investigação e suporte OK?"}
+  D4 -->|"Não / sintoma recorrente / master de alto risco"| C5(["Antecipar cardiologia / PS<br/>se surgir alarme da tabela"])
+  D4 -->|"Sim"| C6(["Manter restrição até esclarecer<br/>Não liberar por calendário de prova"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
+  class C1,C5 alerta;
+  class C2,C3,C4,C6 conduta;
+```
+
+## Notas
+
+- **D1** = gate de segurança (ESC sports 2020 / AHA/ACC 2025 / HRS 2024).
+- **D2** = sintoma de esforço sem instabilidade → restrição + investigação (não “treinar até o exame”).
+- **D3** = liberação só com ausência convincente de red flags.
+- Síncope no esforço: **não** decidir neste fluxograma — ir ao pacote já publicado.
+- Não decide doses, elegibilidade definitiva por doença estrutural nem protocolo de SCA.
+
+## Condições para decidir participação
+
+Dor reproduzível e ECG normal não excluem isquemia, anomalia coronária, miocardite ou cardiomiopatia. História preocupante de esforço, recorrência, antecedente familiar ou alteração estrutural impedem liberar apenas por esses dois achados. Troponina é indicada por suspeita de lesão miocárdica em fluxo capaz de interpretar e seriá-la, sem atrasar urgência; não é rastreamento de toda dor.
+
+Dor suspeita em curso, instabilidade, síncope associada, dispneia importante ou suspeita aórtica exigem emergência. Dor de esforço resolvida no atleta estável pede investigação prioritária, não PS apenas por idade ou fatores de risco. Enquanto sintoma cardíaco relevante permanece inexplicado, suspender competição e treino intenso; atividade leve/moderada depende da avaliação individual. A decisão de retorno é compartilhada, apoiada no diagnóstico e no risco; 24–72 horas é apenas eventual prazo operacional.

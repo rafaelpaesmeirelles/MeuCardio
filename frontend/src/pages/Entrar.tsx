@@ -16,6 +16,7 @@ import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 import "../styles/corvia-login-final-approved-20260904.css";
 import "../styles/corvia-login-fidelity-20260905.css";
+import "../styles/corvia-ui-consistency-20260908.css";
 
 type TemaPublico = CorviaTheme;
 

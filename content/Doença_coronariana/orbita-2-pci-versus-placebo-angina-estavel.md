@@ -1,11 +1,15 @@
 ---
-title: "ORBITA-2: PCI versus placebo na angina estável sem antianginosos de rotina"
+title: 'ORBITA-2: PCI versus placebo na angina estável sem antianginosos de rotina'
 slug: orbita-2-pci-versus-placebo-angina-estavel
-theme: "Doença coronariana"
+theme: Doença coronariana
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:38015442", "DOI:10.1056/NEJMoa2310610", "NCT03742050"]
-legacy_source: "ORBITA-2"
+source_refs:
+- PMID:38015442
+- DOI:10.1056/NEJMoa2310610
+- NCT03742050
+legacy_source: ORBITA-2
+review_note: 'Revisão independente de dependência em08/09/2026: Escores2,9/5,6compostosnãoescalaintensidade; ORnãochanceabsolutaduplicada.'
 ---
 
 # ORBITA-2: PCI versus placebo na angina estável
@@ -22,12 +26,12 @@ A isquemia envolvia um território em 80% dos pacientes, dois em 17% e três em 
 
 ## Resultado principal
 
-Em 12 semanas, o escore médio de sintomas de angina foi:
+Em 12 semanas, o escore médio composto de sintomas de angina (episódios, uso de antianginosos e eventos clínicos; não uma escala simples de intensidade de dor) foi:
 
 - **2,9 com PCI**;
 - **5,6 com placebo**.
 
-O odds ratio favoreceu PCI: **2,21 (IC95% 1,41–3,47; P<0,001)**.
+O odds ratio da análise ordinal favoreceu PCI; não significa duplicação direta da probabilidade individual de melhora: **2,21 (IC95% 1,41–3,47; P<0,001)**.
 
 Portanto, quando a pergunta é alívio sintomático em paciente com angina verdadeira e isquemia documentada, a PCI apresentou benefício além do efeito placebo do procedimento.
 

@@ -190,6 +190,25 @@ class WorkflowPolicyContractTests(unittest.TestCase):
         ):
             self.assertIn(public_certificate, workflow)
 
+    def test_restricted_entrypoint_serializes_operations_and_skips_deployed_sha(self):
+        entrypoint = (ROOT / "ops" / "remote-deploy-entrypoint.sh").read_text(
+            encoding="utf-8"
+        )
+        lock = "corvia-production-operation.lock"
+        self.assertIn(lock, entrypoint)
+        self.assertIn('flock -n 8 || deny "another production operation is already running"', entrypoint)
+        self.assertLess(entrypoint.index(lock), entrypoint.index("git fetch --prune origin main"))
+        self.assertIn("running backend SHA differs", entrypoint)
+        marker = "corvia-last-successful-web-sha"
+        self.assertIn(marker, entrypoint)
+        self.assertLess(entrypoint.index("bash ./deploy.sh"), entrypoint.index('mv -f "$marker_tmp"'))
+        self.assertIn("Release %s is already deployed; no-op.", entrypoint)
+        self.assertLess(entrypoint.index(marker), entrypoint.index("Release %s is already deployed; no-op."))
+        self.assertLess(
+            entrypoint.index("Release %s is already deployed; no-op."),
+            entrypoint.index("git checkout main"),
+        )
+
 
 class BackendSuiteReuseTests(unittest.TestCase):
     sha = "1" * 40

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function MiniUniverseCanvas() {
+export default function MiniUniverseCanvas({ clockwise = false }: { clockwise?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -49,7 +49,8 @@ export default function MiniUniverseCanvas() {
         if (cancelled) return;
         if (now - lastPaint >= 32) {
           lastPaint = now;
-          const angle = -(((now - startedAt) % durationMs) / durationMs) * Math.PI * 2;
+          const rotationDirection = clockwise ? 1 : -1;
+          const angle = rotationDirection * (((now - startedAt) % durationMs) / durationMs) * Math.PI * 2;
           ctx.clearRect(0, 0, width, height);
           ctx.save();
           ctx.translate(coreTargetX, coreTargetY);
@@ -71,7 +72,7 @@ export default function MiniUniverseCanvas() {
       canvas.parentElement?.removeAttribute("data-galaxy-ready");
       cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [clockwise]);
 
   return <canvas ref={canvasRef} className="galaxy-theme-toggle__canvas-live" aria-hidden="true" />;
 }

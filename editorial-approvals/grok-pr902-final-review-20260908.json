@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr902-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; #854 consolidado neste pacote. Gates finais centralizados permanecem obrigatórios.",
+  "source_heads": {
+    "pr902": "c26113387a8a9c9225274c23cdfa68a485ee1b4d"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-sinalizadores-ambulatoriais-intolerancia-estatina",
+      "sams-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+      "sinalizadores-ambulatoriais-de-intolerancia-a-estatina-quando-escalar"
+    ]
+  }
+}

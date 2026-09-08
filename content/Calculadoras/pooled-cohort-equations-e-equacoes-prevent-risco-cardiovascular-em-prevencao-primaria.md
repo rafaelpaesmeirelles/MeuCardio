@@ -51,7 +51,7 @@ Publicadas em *Circulation* (PMID 37947085), nasceram de três limitações expl
 
 **Variáveis do modelo-base**: idade, sexo, PAS, HDL-C, colesterol não-HDL, **eGFR** (entra no modelo-base, não como opcional), tabagismo, uso de anti-hipertensivo ou estatina, diabetes. Três **preditores adicionais opcionais**: UACR, HbA1c e índice de privação social (SDI).
 
-**Alcance maior que o da PCE**: faixa etária de **30 a 79 anos** (vs. 40-79); estima risco em **10 e em 30 anos**; equações separadas para **DCV total** (composto de ASCVD e IC — definida literalmente pela fonte como *"composto de eventos ASCVD e IC fatais e não fatais"*), ASCVD isolada, IC isolada e os componentes de ASCVD em separado.
+**Alcance maior que o da PCE**: estima risco em **10 anos dos 30 aos 79 anos** e em **30 anos somente dos 30 aos 59 anos**; há equações separadas para **DCV total** (composto de ASCVD e IC — definida literalmente pela fonte como *"composto de eventos ASCVD e IC fatais e não fatais"*), ASCVD isolada, IC isolada e os componentes de ASCVD em separado.
 
 **Escala da derivação/validação**: **3.281.919 participantes em 25 bases** na derivação e **3.330.085 participantes em 21 bases** na validação — **6.612.004 adultos** ao todo.
 
@@ -61,7 +61,7 @@ Publicadas em *Circulation* (PMID 37947085), nasceram de três limitações expl
 
 | | Pooled Cohort Equations (2013) | PREVENT (2024) |
 |---|---|---|
-| Faixa etária | 40-79 anos | 30-79 anos |
+| Faixa etária | 40-79 anos | 30-79 anos (risco em 10 anos); 30-59 anos (risco em 30 anos) |
 | Raça como variável | Sim (branco/afro-americano) | **Não** — removida deliberadamente |
 | Horizonte | 10 anos | 10 e 30 anos |
 | Desfecho | ASCVD "duro" (IAM não fatal, morte coronariana, AVC) | DCV total (ASCVD + IC), com submodelos separados |
