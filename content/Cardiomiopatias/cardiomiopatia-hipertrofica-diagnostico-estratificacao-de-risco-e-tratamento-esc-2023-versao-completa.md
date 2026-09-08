@@ -1,11 +1,22 @@
 ---
-title: "Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa"
+title: 'Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa'
 slug: cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa
-theme: "Cardiomiopatias"
+theme: Cardiomiopatias
 kind: protocolo
 review_status: revisado
-source_refs: ["Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194", "PMID 37622657"]
-legacy_source: "Fusão com cardiomiopatias-diagnostico-e-tratamento-esc-2023-foco-em-cardiomiopatia-hipertrofica.md, que cobria o mesmo recorte da mesma diretriz. A visão geral, que trata de todos os fenótipos, segue em manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023.md e não é duplicata. A fonte anterior era um slide set da ESC hospedado em site de terceiro; trocada pela citação do artigo, com DOI conferido no Crossref. Revisado a fundo em 30/07/2026: os cortes de risco do HCM Risk-SCD (<4%/4-6%/≥6%) e o gradiente de VSVE (30/50 mmHg) foram conferidos de forma independente contra síntese de múltiplas fontes secundárias concordantes (ACC, ecgwaves, Medscape) — batem com o texto já presente. Documento aprovado sem alteração de conteúdo, só do status."
+source_refs:
+- 'Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur
+  Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194'
+- PMID 37622657
+legacy_source: 'Fusão com cardiomiopatias-diagnostico-e-tratamento-esc-2023-foco-em-cardiomiopatia-hipertrofica.md,
+  que cobria o mesmo recorte da mesma diretriz. A visão geral, que trata de todos os fenótipos, segue em manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023.md
+  e não é duplicata. A fonte anterior era um slide set da ESC hospedado em site de terceiro; trocada pela citação
+  do artigo, com DOI conferido no Crossref. Revisado a fundo em 30/07/2026: os cortes de risco do HCM Risk-SCD (<4%/4-6%/≥6%)
+  e o gradiente de VSVE (30/50 mmHg) foram conferidos de forma independente contra síntese de múltiplas fontes secundárias
+  concordantes (ACC, ecgwaves, Medscape) — batem com o texto já presente. Documento aprovado sem alteração de conteúdo,
+  só do status.'
+review_note: 'Revisão independente de dependência em08/09/2026: 13–14mm adulto; ausênciaLGE nãoexclui; SRT excepcional;
+  monoterapia mavacamten não qualquer intolerância isolada; ablaçãoFA não universalmente preferida; fenótipoNDLVC.'
 ---
 
 # Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa
@@ -15,7 +26,7 @@ European Heart Journal 2023, doi:10.1093/eurheartj/ehad194
 
 ## Criterios diagnosticos
 - **definicao padrao**: Espessura de parede do VE ≥15 mm em qualquer segmento, não explicada apenas por condições de carga anormal
-- **zona intermediaria**: Espessura de 13-15mm requer avaliação adicional: ECG, história familiar e testes genéticos
+- **zona intermediaria**: Em adultos, espessura de 13–14 mm requer avaliação adicional: ECG, história familiar e testes genéticos
 - **familiares primeiro grau**: Em parentes de primeiro grau de paciente com CMH, espessura ≥13mm já é considerada diagnóstica
 - **fonte**: diretriz ESC 2023 de cardiomiopatias, citada nas referências
 
@@ -23,7 +34,7 @@ European Heart Journal 2023, doi:10.1093/eurheartj/ehad194
 - **ecocardiografia inicial**: TTE 2D e Doppler recomendados (Classe IB) em todos os pacientes na avaliação inicial, em repouso e durante manobra de Valsalva, nas posições sentada e semi-supina, e depois em pé se nenhum gradiente for provocado, para detectar LVOTO
 - **ecocardiografia exercicio**: Recomendada (Classe IB) em pacientes sintomáticos com gradiente de repouso/provocado <50 mmHg, para detectar LVOTO provocável e regurgitação mitral induzida por exercício
 - **ressonancia cardiaca cmr**: Superior na detecção de hipertrofia apical e anterolateral, aneurismas de VE e trombos; mais sensível para marcadores sutis em portadores de variantes de genes sarcoméricos (criptas miocárdicas, anormalidades do músculo papilar)
-- **realce tardio gadolinio lge**: Presente em 65% dos pacientes; padrão médio-parietal em áreas de hipertrofia e pontos de inserção do VD; ausente em atletas, pacientes jovens e CMH leve; associado a remodelamento adverso, RWMA e disfunção diastólica
+- **realce tardio gadolinio lge**: Presente em 65% dos pacientes; padrão médio-parietal em áreas de hipertrofia e pontos de inserção do VD; pode estar ausente em pacientes jovens ou com CMH leve; ausência de LGE não exclui CMH e sua presença não é específica; associado a remodelamento adverso, RWMA e disfunção diastólica
 - **fonte**: diretriz ESC 2023 de cardiomiopatias, citada nas referências
 
 ## Achados sugestivos etiologias especificas
@@ -39,7 +50,7 @@ Em 50% dos pacientes com CMH, padrão autossômico dominante (sarcomérico); ide
 
 ## Obstrucao via saida vsvo lvoto
 - **definicao convencao**: Gradiente instantâneo de pico ≥30 mmHg por Doppler; limiar para tratamento invasivo geralmente ≥50 mmHg
-- **manejo 30 a 50mmHg**: Entre 30-50 mmHg sem outra causa óbvia de sintomas, redução invasiva do gradiente pode ser considerada
+- **manejo 30 a 50mmHg**: Entre 30 e <50 mmHg, redução septal é excepcional em pacientes selecionados com sintomas atribuíveis à obstrução apesar de tratamento, após avaliação especializada; não constitui indicação rotineira
 - **fonte**: diretriz ESC 2023 de cardiomiopatias, citada nas referências
 
 ## Tratamento farmacologico com lvot
@@ -47,7 +58,7 @@ Em 50% dos pacientes com CMH, padrão autossômico dominante (sarcomérico); ide
 - **alternativa intolerancia bb**: Verapamil ou diltiazem, titulados até dose máxima tolerada (Classe IB)
 - **adicao disopiramida**: Disopiramida titulada até dose máxima tolerada, adicionada a betabloqueador (ou verapamil/diltiazem) (Classe IB)
 - **mavacamten combinado**: Inibidor de miosina cardíaca ATPase (mavacamten), titulado com vigilância ecocardiográfica de FEVE, deve ser considerado em adição a betabloqueador/verapamil/diltiazem (Classe IIa, Nível A)
-- **mavacamten monoterapia**: Considerado como monoterapia em pacientes intolerantes a betabloqueador, verapamil/diltiazem OU disopiramida (Classe IIa, Nível B)
+- **mavacamten monoterapia**: Considerado como monoterapia em pacientes intolerantes às opções convencionais apropriadas (betabloqueador, verapamil/diltiazem e disopiramida), após avaliação das alternativas e monitorização ecocardiográfica (Classe IIa, Nível B)
 - **contraindicacao mavacamten**: Não usar concomitantemente com disopiramida
 - **evitar com lvot**: Digoxina e dilatadores arteriais/venosos, incluindo nitratos e inibidores de fosfodiesterase, devem ser evitados (Classe IIa, Nível C)
 - **fonte**: diretriz ESC 2023 de cardiomiopatias, citada nas referências
@@ -72,12 +83,12 @@ Em 50% dos pacientes com CMH, padrão autossômico dominante (sarcomérico); ide
 - **fonte**: diretriz ESC 2023 de cardiomiopatias, citada nas referências
 
 ## Manejo fibrilacao atrial em cmh
-Controle de ritmo é preferido sobre controle de frequência; ablação por cateter preferida sobre antiarrítmicos (classe III como amiodarona/sotalol preferidos sobre classe I); indicações incluem sintomas não controlados com AAD I/III, taquicardiomiopatia, estágio inicial sem fatores de risco maiores; anticoagulação indicada independentemente do escore CHA₂DS₂-VASc
+Controle de ritmo é preferido sobre controle de frequência; ablação pode ser considerada conforme sintomas, resposta a antiarrítmicos, tamanho atrial e preferência, sem superioridade universal em todo paciente; escolha de antiarrítmico exige avaliação da cardiopatia e contraindicações; anticoagulação indicada independentemente do escore CHA₂DS₂-VASc
 
 ## Sintese pontos chave
 - Diagnóstico requer espessura de parede ≥15mm (ou ≥13mm em familiares de 1º grau)
 - Mavacamten representa nova classe terapêutica para LVOTO sintomático
-- HCM Risk-SCD é ferramenta central e obrigatória de estratificação, reavaliada periodicamente
+- HCM Risk-SCD é ferramenta recomendada para a população elegível, com limitações; decisão compartilhada e fatores clínicos complementam o número
 - Anticoagulação em FA associada a CMH é indicada independentemente do CHA₂DS₂-VASc
 
 ## Definicao
@@ -105,4 +116,4 @@ Diretrizes mais recentes (ESC 2023 e AHA 2024) incorporam nova classe farmacoló
 
 ## Outras cardiomiopatias nao detalhadas
 
-Diretriz também aborda cardiomiopatia dilatada, restritiva, arritmogênica de ventrículo direito e não compactada — módulos específicos de cada fenótipo
+Diretriz também aborda cardiomiopatia dilatada, restritiva, arritmogênica de ventrículo direito e cardiomiopatia ventricular esquerda não dilatada — fenótipos próprios; hipertrabeculação não deve ser tratada automaticamente como cardiomiopatia independente

@@ -1,12 +1,32 @@
 ---
-title: "Taquicardiomiopatia (Cardiomiopatia Induzida por Taquicardia): Reconhecimento e Reversibilidade"
+title: 'Taquicardiomiopatia (Cardiomiopatia Induzida por Taquicardia): Reconhecimento e Reversibilidade'
 slug: taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade
-theme: "Cardiomiopatias"
+theme: Cardiomiopatias
 kind: protocolo
 review_status: revisado
-review_note: "Verificado em 12/08/2026: definição geral conferida contra o abstract da revisão de Sato N, Heart Fail Rev 2026 (PMID 42412249), lida no PubMed nesta sessão. Limiar de carga de extrassístoles ventriculares associado a disfunção de VE conferido contra o abstract completo de Baman et al., Heart Rhythm 2010 (PMID 20348027), com os números reproduzidos exatamente como no resumo publicado. Onde a fonte revisada nesta sessão não permitiu confirmar um número específico (ex. prazo médio de recuperação da FEVE após controle de frequência/ablação), o documento sinaliza isso explicitamente em vez de citar um valor não verificado."
-source_refs: ["Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249 — abstract conferido no PubMed em 12/08/2026 ('Tachycardia-induced cardiomyopathy (TIC) is a reversible form of myocardial dysfunction caused by sustained or recurrent tachyarrhythmias').", "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027 — abstract conferido no PubMed em 12/08/2026, números reproduzidos como no resumo: 174 pacientes, corte de 24% de carga de ExSV separando função de VE preservada de reduzida, FEVE média 0,37±0,10 em 57/174 (33%) com disfunção, cardiomiopatia reversível já descrita a partir de carga de 10%.", "Roberts KE, McCrindle BW, Gopinathannair R, et al. (referência ilustrativa de vinheta clínica, não usada para definir critério numérico): casos clínicos de taquicardiomiopatia identificados nesta sessão via PubMed — criança com taquicardia persistente (Song JY et al., J Int Med Res 2026, PMID 42506924) e atleta de alto rendimento (Russell WW et al., JACC Case Rep 2026, PMID 41906563) — citados apenas como ilustração de apresentação clínica variável, não como fonte de dado quantitativo."]
-legacy_source: "Documento novo, 12/08/2026. A pasta cita 'taquicardiomiopatia' apenas de passagem, uma vez, dentro do documento de cardiomiopatia hipertrófica (como uma das indicações de ablação de FA associada), sem nenhum documento dedicado à taquicardiomiopatia como entidade diagnóstica própria — apesar de ser causa reconhecidamente reversível de disfunção ventricular, frequentemente confundida com cardiomiopatia dilatada idiopática quando a arritmia de base não é ativamente procurada."
+review_note: 'Verificado em 12/08/2026: definição geral conferida contra o abstract da revisão de Sato N, Heart
+  Fail Rev 2026 (PMID 42412249), lida no PubMed nesta sessão. Limiar de carga de extrassístoles ventriculares associado
+  a disfunção de VE conferido contra o abstract completo de Baman et al., Heart Rhythm 2010 (PMID 20348027), com
+  os números reproduzidos exatamente como no resumo publicado. Onde a fonte revisada nesta sessão não permitiu confirmar
+  um número específico (ex. prazo médio de recuperação da FEVE após controle de frequência/ablação), o documento
+  sinaliza isso explicitamente em vez de citar um valor não verificado. Revisão independente de dependência em08/09/2026:
+  Coorte encaminhada paraablação; sem corteuniversal; cardiopatiaestrutural podecoexistir; interpolação≠duplaFCmecânica;
+  retirada falsa autoriaRoberts.'
+source_refs:
+- 'Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart
+  Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249 — abstract conferido no PubMed em 12/08/2026
+  (''Tachycardia-induced cardiomyopathy (TIC) is a reversible form of myocardial dysfunction caused by sustained
+  or recurrent tachyarrhythmias'').'
+- 'Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular
+  function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027 — abstract conferido no PubMed em 12/08/2026, números
+  reproduzidos como no resumo: 174 pacientes, corte de 24% de carga de ExSV separando função de VE preservada de
+  reduzida, FEVE média 0,37±0,10 em 57/174 (33%) com disfunção, cardiomiopatia reversível já descrita a partir de
+  carga de 10%.'
+legacy_source: Documento novo, 12/08/2026. A pasta cita 'taquicardiomiopatia' apenas de passagem, uma vez, dentro
+  do documento de cardiomiopatia hipertrófica (como uma das indicações de ablação de FA associada), sem nenhum documento
+  dedicado à taquicardiomiopatia como entidade diagnóstica própria — apesar de ser causa reconhecidamente reversível
+  de disfunção ventricular, frequentemente confundida com cardiomiopatia dilatada idiopática quando a arritmia de
+  base não é ativamente procurada.
 ---
 
 # Taquicardiomiopatia (Cardiomiopatia Induzida por Taquicardia): Reconhecimento e Reversibilidade
@@ -34,9 +54,7 @@ reciprocante persistente — PJRT — ou extrassistolia ventricular de alta
 carga), a pergunta clínica que precisa ser feita e nem sempre é feita é: **a
 arritmia é a causa da cardiomiopatia, ou é uma consequência incidental de uma
 cardiomiopatia dilatada que já existia por outro motivo?** A resposta muda o
-prognóstico e a conduta por completo — e só a resposta ao tratamento da
-arritmia (recuperação da função ventricular) confirma retrospectivamente qual
-das duas hipóteses estava correta.
+prognóstico e a conduta por completo — e a melhora após controle da arritmia apoia retrospectivamente sua contribuição. A arritmia também pode agravar uma cardiomiopatia estrutural preexistente; as duas hipóteses não são mutuamente excludentes.
 
 ## Etiologias mais associadas a taquicardiomiopatia
 
@@ -60,8 +78,8 @@ das duas hipóteses estava correta.
 
 O trabalho de referência que quantifica a relação entre carga arrítmica e
 disfunção ventricular no contexto de ExSV frequentes é o de Baman et al.
-(Heart Rhythm, 2010, PMID 20348027), com 174 pacientes com ExSV idiopáticas
-frequentes avaliados por Holter de 24 horas e ecocardiograma:
+(Heart Rhythm, 2010, PMID 20348027), com 174 pacientes encaminhados para ablação de ExSV idiopáticas
+frequentes, avaliados por Holter de 24 horas e ecocardiograma:
 
 - **Disfunção sistólica de VE (FEVE reduzida) estava presente em 57 dos 174
   pacientes (33%)**, com FEVE média de **0,37 ± 0,10** nesse subgrupo.
@@ -81,8 +99,7 @@ al., citado na literatura de eletrofisiologia como o trabalho que descreveu o
 papel da **interpolação** de ExSV — PMID 21376837, identificado nesta sessão
 mas não usado para número de corte, apenas para contexto): a presença de
 **ExSV interpoladas** (que se inserem entre dois batimentos sinusais sem
-pausa compensatória, efetivamente dobrando a frequência ventricular
-funcional) está associada a maior risco de cardiomiopatia mesmo com a mesma
+pausa compensatória, sem implicar duplicação da frequência mecânica efetiva) está associada a maior risco de cardiomiopatia mesmo com a mesma
 carga percentual — achado consistente com o mecanismo de que não é só a
 frequência média, mas o padrão de acoplamento da arritmia que determina o
 dano.
@@ -130,9 +147,7 @@ elementos pesam a favor de taquicardiomiopatia:
   contexto, pela maior chance de reverter a cardiomiopatia de forma
   definitiva ao eliminar a arritmia (não apenas controlar a frequência).
 - Para **ExSV de alta carga**: ablação por cateter do foco ectópico é a
-  conduta definitiva quando a carga está acima dos patamares associados a
-  disfunção (referência: Baman et al., 2010, acima) e a cardiomiopatia é
-  atribuída a essa arritmia.
+  opção recomendada quando há cardiomiopatia atribuída às ExSV, após avaliação especializada. Os cortes observacionais de Baman não são limiares universais de indicação nem garantia de reversibilidade.
 - Para **PJRT e taquicardia atrial incessante**: ablação da via acessória ou
   do foco atrial é curativa na maioria dos casos, com reversão da
   cardiomiopatia associada.

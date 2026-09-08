@@ -1,13 +1,25 @@
 ---
-title: "Fluxograma: Manejo do no-reflow durante a ICP primária"
+title: 'Fluxograma: Manejo do no-reflow durante a ICP primária'
 slug: fluxograma-manejo-do-no-reflow-na-icp-primaria
-theme: "Doença coronariana"
+theme: Doença coronariana
 kind: fluxograma
 fonte_producao: chatgpt
-summary: "Do reconhecimento do no-reflow (fluxo TIMI reduzido sem lesão mecânica residual) ao manejo escalonado com vasodilatador intracoronário seletivo, suporte hemodinâmico e o limite real da terapia disponível quando o fluxo não responde."
+summary: Do reconhecimento do no-reflow (fluxo TIMI reduzido sem lesão mecânica residual) ao manejo escalonado com
+  vasodilatador intracoronário seletivo, suporte hemodinâmico e o limite real da terapia disponível quando o fluxo
+  não responde.
 review_status: revisado
-review_note: "PMIDs conferidos nesta sessão via PubMed E-utilities (esearch/esummary): 39077094 (Pelliccia F et al., Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment Elevation Myocardial Infarction, Rev Cardiovasc Med. 2023;24(12):365) e 25853743 (TOTAL trial, Jolly SS et al., NEJM. 2015;372(15):1389-1398) — título, revista, ano e volume/páginas batendo exatamente com o texto do documento. Doses exatas de vasodilatador intracoronário não são detalhadas (variam por protocolo institucional) e isso está declarado abaixo."
-source_refs: ["Pelliccia F, Niccoli G, Zimarino M, et al. Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment Elevation Myocardial Infarction · Reviews in Cardiovascular Medicine · 2023 · 24(12):365 · PMID: 39077094", "Jolly SS, Cairns JA, Yusuf S, et al. Randomized trial of primary PCI with or without routine manual thrombectomy (TOTAL) · New England Journal of Medicine · 2015 · 372(15):1389-1398 · PMID: 25853743"]
+review_note: 'PMIDs conferidos nesta sessão via PubMed E-utilities (esearch/esummary): 39077094 (Pelliccia F et
+  al., Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment Elevation Myocardial Infarction,
+  Rev Cardiovasc Med. 2023;24(12):365) e 25853743 (TOTAL trial, Jolly SS et al., NEJM. 2015;372(15):1389-1398) —
+  título, revista, ano e volume/páginas batendo exatamente com o texto do documento. Doses exatas de vasodilatador
+  intracoronário não são detalhadas (variam por protocolo institucional) e isso está declarado abaixo. Revisão independente
+  de dependência em08/09/2026: Retirado limiar inventado de duasclasses; suporte mecânico pelochoque nãoTIMI; drogas
+  nãointercambiáveis.'
+source_refs:
+- 'Pelliccia F, Niccoli G, Zimarino M, et al. Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment
+  Elevation Myocardial Infarction · Reviews in Cardiovascular Medicine · 2023 · 24(12):365 · PMID: 39077094'
+- 'Jolly SS, Cairns JA, Yusuf S, et al. Randomized trial of primary PCI with or without routine manual thrombectomy
+  (TOTAL) · New England Journal of Medicine · 2015 · 372(15):1389-1398 · PMID: 25853743'
 ---
 
 # Fluxograma: Manejo do no-reflow durante a ICP primária
@@ -38,11 +50,11 @@ flowchart TD
 
   D3 -->|"Sim"| C3(["Concluir o procedimento; manter vigilância<br/>para reoclusão e tratamento clínico padrão do infarto"])
 
-  D3 -->|"Não"| D4{"Já foram tentadas pelo menos duas classes de<br/>vasodilatador intracoronário (ex. adenosina e<br/>verapamil), sem resposta?"}
+  D3 -->|"Não"| D4{"Persistência após reavaliar causa, perfusão<br/>e tratamento distal escolhido conforme<br/>pressão, função ventricular e condução?"}
 
-  D4 -->|"Sim"| C4(["No-reflow refratário: considerar suporte<br/>circulatório mecânico, otimizar o suporte clínico e<br/>aceitar fluxo subótimo — sem terapia adicional com<br/>benefício comprovado"])
+  D4 -->|"Sim"| C4(["No-reflow persistente: reavaliar mecanismo e<br/>otimizar perfusão. Suporte mecânico apenas<br/>se indicado pelo choque, não pelo TIMI isolado.<br/>Resgates individualizados; benefício prognóstico incerto"])
 
-  D4 -->|"Não"| C5(["Repetir ou associar outro vasodilatador<br/>intracoronário (trocar ou combinar agente) e<br/>reavaliar o fluxo"])
+  D4 -->|"Não"| C5(["Reavaliar dose, entrega distal e segurança;<br/>considerar agente alternativo conforme contexto,<br/>sem número obrigatório de classes"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   class C1,C2,C3,C4,C5 conduta;
@@ -71,6 +83,7 @@ em que esta árvore começa.
 
 **Não há hierarquia comprovada entre adenosina, verapamil e nitroprussiato.**
 A escolha costuma depender de disponibilidade e de contraindicação (por
-exemplo, bloqueio atrioventricular avançado limita o uso de verapamil) — a
-árvore trata as três como intercambiáveis dentro do mesmo passo, o que
-reflete a ausência de comparação direta de qualidade na literatura.
+exemplo, bloqueio atrioventricular avançado limita o uso de verapamil) — não são clinicamente intercambiáveis: pressão arterial, função ventricular e condução devem orientar a escolha. Melhora de fluxo não equivale a benefício comprovado em mortalidade ou reinfarto.
+
+## Fonte adicional de conduta
+SCAI Expert Consensus Statement on the Management of Patients With STEMI Referred for Primary PCI (2024), seção de no-reflow: https://pmc.ncbi.nlm.nih.gov/articles/PMC11624394/. O consenso apoia entrega distal e otimização da pressão de perfusão, sem exigir falha de duas classes para definir refratariedade.

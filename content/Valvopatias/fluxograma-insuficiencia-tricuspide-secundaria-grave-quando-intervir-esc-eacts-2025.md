@@ -1,12 +1,26 @@
 ---
-title: "Fluxograma: Insuficiência Tricúspide Secundária Grave — Quando Intervir (ESC/EACTS 2025 e TRILUMINATE Pivotal)"
+title: 'Fluxograma: Insuficiência Tricúspide Secundária Grave — Quando Intervir (ESC/EACTS 2025 e TRILUMINATE Pivotal)'
 slug: fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025
-theme: "Valvopatias"
+theme: Valvopatias
 kind: fluxograma
 fonte_producao: chatgpt
 review_status: revisado
-review_note: "Árvore construída a partir do documento já publicado e revisado nesta pasta 'insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md', da Recommendation Table 9 da ESC/EACTS 2025 e do TRILUMINATE Pivotal (PMID 36876753). Corrigida em 26/08/2026 a omissão da cirurgia tricúspide isolada: em paciente sintomático com IT secundária grave, operável e sem disfunção grave de VD/VE ou hipertensão pulmonar impeditiva, cirurgia deve ser considerada (IIa/B), mesmo sem outra cirurgia cardíaca concomitante. Tratamento transcateter (IIa/A) permanece para alto risco cirúrgico e anatomia apropriada; T-TEER é uma modalidade, não sinônimo de toda intervenção transcateter. Pendente revisão médica independente antes de uso assistencial."
-source_refs: ["Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — já citada e verificada em 'insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md' desta pasta; título/revista/ano reconferidos nesta sessão via PubMed E-utilities.", "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Recommendation Table 9, texto integral já conferido em 30/07/2026 por sessão anterior; título/revista/ano reconferidos nesta sessão via PubMed E-utilities."]
+review_note: 'Árvore construída a partir do documento já publicado e revisado nesta pasta ''insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md'',
+  da Recommendation Table 9 da ESC/EACTS 2025 e do TRILUMINATE Pivotal (PMID 36876753). Corrigida em 26/08/2026
+  a omissão da cirurgia tricúspide isolada: em paciente sintomático com IT secundária grave, operável e sem disfunção
+  grave de VD/VE ou hipertensão pulmonar impeditiva, cirurgia deve ser considerada (IIa/B), mesmo sem outra cirurgia
+  cardíaca concomitante. Tratamento transcateter (IIa/A) permanece para alto risco cirúrgico e anatomia apropriada;
+  T-TEER é uma modalidade, não sinônimo de toda intervenção transcateter. Pendente revisão médica independente antes
+  de uso assistencial. Revisão independente de dependência em08/09/2026: Ramo assintomático com progressãoVD; critérioscirurgia/transcateter
+  separados; atualizaçãoTRILUMINATE2anos; cabo≠causa/exclusão.'
+source_refs:
+- 'Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl
+  J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — já citada e verificada em ''insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md''
+  desta pasta; título/revista/ano reconferidos nesta sessão via PubMed E-utilities.'
+- 'Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management
+  of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295
+  — Recommendation Table 9, texto integral já conferido em 30/07/2026 por sessão anterior; título/revista/ano reconferidos
+  nesta sessão via PubMed E-utilities.'
 ---
 
 # Fluxograma: Insuficiência Tricúspide Secundária Grave — Quando Intervir (ESC/EACTS 2025 e TRILUMINATE Pivotal)
@@ -25,30 +39,15 @@ hipertensão pulmonar, fibrilação atrial ou doença do coração esquerdo).
 
 ```mermaid
 flowchart TD
-  R0["Insuficiência tricúspide secundária<br/>grave, confirmada por ecocardiograma"] --> D1{"Sintomática apesar de terapia<br/>clínica otimizada — diurético e<br/>tratamento da causa: controle de<br/>ritmo da fibrilação atrial,<br/>tratamento da insuficiência cardíaca<br/>esquerda, manejo da hipertensão<br/>pulmonar?"}
-
-  D1 -->|"Não"| C1(["Manter tratamento clínico<br/>otimizado e reavaliar<br/>periodicamente"])
-
-  D1 -->|"Sim"| D2{"Disfunção grave de ventrículo<br/>direito, ou disfunção grave de<br/>ventrículo esquerdo, ou hipertensão<br/>pulmonar pré-capilar?"}
-
-  D2 -->|"Sim"| C2(["Tratamento clínico otimizado<br/>preferido — risco de futilidade<br/>do procedimento; considerar<br/>manejo avançado de insuficiência<br/>cardíaca"])
-
-  D2 -->|"Não"| D3{"Risco cirúrgico aceitável e<br/>indicação concomitante de cirurgia<br/>cardíaca — por exemplo, cirurgia<br/>de valva mitral?"}
-
-  D3 -->|"Sim"| C3(["Cirurgia da valva tricúspide,<br/>concomitante à cirurgia<br/>já indicada"])
-
-  D3 -->|"Não"| D3B{"Cirurgia tricúspide isolada:<br/>paciente operável, com risco aceitável<br/>após avaliação pelo Heart Team?"}
-
-  D3B -->|"Sim"| C3B(["Cirurgia tricúspide isolada deve ser<br/>considerada — Classe IIa, Nível B;<br/>preferir reparo quando tecnicamente viável"])
-
-  D3B -->|"Não — alto risco cirúrgico"| D4{"Anatomia adequada a tratamento<br/>transcateter selecionado pelo Heart Team,<br/>em Centro de Válvula Cardíaca<br/>experiente?"}
-
-  D4 -->|"Sim"| C4(["Tratamento transcateter da valva<br/>tricúspide — T-TEER quando a anatomia<br/>é adequada — para melhorar qualidade<br/>de vida e promover remodelamento de VD:<br/>Classe IIa, Nível A"])
-
-  D4 -->|"Não"| C5(["Tratamento clínico otimizado<br/>e reavaliação — sem opção<br/>segura de intervenção<br/>no momento"])
-
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
-  class C1,C2,C3,C3B,C4,C5 conduta;
+ R["IT secundária grave confirmada;<br/>tratar causa e congestão sem atrasar encaminhamento"] --> A{"Cirurgia cardíaca esquerda indicada?"}
+ A -->|Sim| B["Avaliar cirurgia tricúspide concomitante pelo Heart Team"]
+ A -->|Não| C{"Sintomas OU dilatação/deterioração progressiva do VD?"}
+ C -->|Não| D["Seguimento clínico e ecocardiográfico"]
+ C -->|Sim| E{"Cirurgia isolada viável, sem disfunção<br/>grave de VD/VE ou hipertensão pulmonar grave?"}
+ E -->|Sim| F["Considerar cirurgia tricúspide isolada<br/>Classe IIa B; preferir reparo quando viável"]
+ E -->|Não| G{"Sintomático apesar de tratamento,<br/>alto risco cirúrgico, sem disfunção grave<br/>de VD ou hipertensão pulmonar pré-capilar?"}
+ G -->|Sim| H["Heart Team avalia anatomia e benefício:<br/>considerar intervenção transcateter Classe IIa A"]
+ G -->|Não| I["Individualizar terapêutica e avaliação de IC avançada;<br/>não presumir benefício nem futilidade por um achado isolado"]
 ```
 
 ## O que o TRILUMINATE Pivotal realmente mostrou
@@ -62,17 +61,10 @@ insuficiência cardíaca (0,21 vs. 0,17 evento por paciente-ano) foram
 praticamente iguais entre os grupos. A melhora de qualidade de vida pelo KCCQ
 foi grande e consistente (+11,7 pontos de diferença, p<0,001). Dizer ao
 paciente que o procedimento "melhora sintomas e qualidade de vida" é o que o
-ensaio sustenta; dizer que "reduz mortalidade ou internação" não é.
+ensaio sustenta; o resultado inicial de um ano não demonstrou redução desses componentes. A análise randomizada de dois anos publicada em2025 mostrou redução de hospitalizações recorrentes por IC, mantendo ausência de benefício demonstrado em mortalidade (PMID40159089; DOI:10.1161/CIRCULATIONAHA.125.074536). Não apresentar o seguimento inicial como toda a evidência atual.
 
-## Por que a disfunção grave de VD interrompe o caminho
-
-O nó D2 não é uma checagem de segurança genérica — é a qualificação explícita
-que a própria diretriz coloca ao lado da recomendação Classe IIa: em disfunção
-grave de ventrículo direito, disfunção grave de ventrículo esquerdo, ou
-hipertensão pulmonar pré-capilar, tratar a válvula tende a não mudar o curso da
-doença, porque o problema principal não é mais a regurgitação — é a falência
-que ela deixou para trás. Intervir nesse cenário arrisca o procedimento sem
-benefício real, e a diretriz é explícita em preferir manejo clínico.
+## Limites de elegibilidade
+Os critérios da cirurgia isolada e da intervenção transcateter não são idênticos na Tabela9. A cirurgia considera ausência de disfunção grave de VD/VE e hipertensão pulmonar grave; a recomendação transcateter destaca ausência de disfunção grave de VD ou hipertensão pulmonar pré-capilar. Avaliar reversibilidade, gravidade e benefício esperado em Heart Team, sem converter a árvore em declaração automática de futilidade.
 
 ## Por que a cirurgia isolada não pode desaparecer da árvore
 
@@ -101,3 +93,5 @@ transcateter.
   tamanho e mobilidade dos folhetos, e a relação entre gravidade da IT e o
   grau de remodelamento do VD são avaliados caso a caso antes de qualquer
   intervenção.
+
+Cabo de marca-passo/CDI pode coexistir com IT secundária: sua presença não prova lesão causal nem exclui automaticamente tratamento transcateter. Definir mecanismo e interferência com a anatomia/procedimento.

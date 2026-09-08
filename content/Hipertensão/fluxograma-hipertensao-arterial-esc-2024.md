@@ -1,11 +1,24 @@
 ---
-title: "Fluxograma: Pressão arterial elevada e hipertensão — da medida ao alvo (ESC 2024)"
+title: 'Fluxograma: Pressão arterial elevada e hipertensão — da medida ao alvo (ESC 2024)'
 slug: fluxograma-hipertensao-arterial-esc-2024
-theme: "Hipertensão"
+theme: Hipertensão
 kind: fluxograma
-summary: "Caminho decisório da nova classificação ESC 2024: as três categorias de pressão arterial, a decisão de tratar na faixa de pressão elevada com base no risco cardiovascular em 10 anos pelo SCORE2, e o alvo sistólico de 120–129 mmHg."
+summary: 'Caminho decisório da nova classificação ESC 2024: as três categorias de pressão arterial, a decisão de
+  tratar na faixa de pressão elevada com base no risco cardiovascular em 10 anos pelo SCORE2, e o alvo sistólico
+  de 120–129 mmHg.'
 review_status: revisado
-source_refs: ["2024 ESC Guidelines for the management of elevated blood pressure and hypertension · European Heart Journal · 2024 · 10.1093/eurheartj/ehae178 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/", "2024 ESC Guidelines for Management of Elevated BP and Hypertension: Key Points · American College of Cardiology · 2024 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2024/09/05/14/11/2024-esc-guidelines-for-bp-esc-2024", "New Definition of Elevated Blood Pressure in the 2024 ESC Guidelines: Increased Prevalence, Uncertain Evidence · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.124.072696", "Navigating the 2024 ESC Hypertension Guidelines: What Is New, Context, and Future Directions · Journal of the American College of Cardiology · 2024 · https://www.jacc.org/doi/10.1016/j.jacc.2024.10.114"]
+source_refs:
+- 2024 ESC Guidelines for the management of elevated blood pressure and hypertension · European Heart Journal ·
+  2024 · 10.1093/eurheartj/ehae178 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/
+- '2024 ESC Guidelines for Management of Elevated BP and Hypertension: Key Points · American College of Cardiology
+  · 2024 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2024/09/05/14/11/2024-esc-guidelines-for-bp-esc-2024'
+- 'New Definition of Elevated Blood Pressure in the 2024 ESC Guidelines: Increased Prevalence, Uncertain Evidence
+  · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.124.072696'
+- 'Navigating the 2024 ESC Hypertension Guidelines: What Is New, Context, and Future Directions · Journal of the
+  American College of Cardiology · 2024 · https://www.jacc.org/doi/10.1016/j.jacc.2024.10.114'
+- ESC2024hipertensão. DOI:10.1093/eurheartj/ehae178. PMID:39210715.
+review_note: 'Revisão independente de dependência em08/09/2026: Corrigidos operadoresE/OU, diastólica80 na árvore,
+  risco≥10 e idade≥85; incorporadas condições de alto risco omitidas e tolerabilidade.'
 ---
 
 # Fluxograma: Pressão arterial elevada e hipertensão (ESC 2024)
@@ -22,30 +35,30 @@ documento inverteu a lógica anterior, em que a intensificação era a exceção
 
 ```mermaid
 flowchart TD
-  R0["Medida de pressão arterial<br/>em consultório, confirmada por medida<br/>fora do consultório"] --> D1{"Categoria"}
+  R0["Medida de pressão arterial<br/>em consultório, preferencialmente confirmada<br/>fora do consultório"] --> D1{"Categoria"}
 
-  D1 -->|"Menor que 120/70 mmHg"| C1(["Pressão não elevada — tratamento<br/>medicamentoso não recomendado"])
+  D1 -->|"PAS menor que 120 E PAD menor que70"| C1(["Pressão não elevada — tratamento<br/>medicamentoso não recomendado"])
 
-  D1 -->|"Maior ou igual a 140/90 mmHg"| P1["Hipertensão — confirmar prontamente<br/>e tratar na maioria dos indivíduos"]
+  D1 -->|"PAS ≥140 OU PAD ≥90 mmHg"| P1["Hipertensão — confirmar prontamente<br/>e tratar na maioria dos indivíduos"]
 
   D1 -->|"120-139 sistólica ou<br/>70-89 diastólica"| P2["Pressão elevada — medidas de<br/>estilo de vida por 3 meses"]
 
-  P2 --> D2{"Sistólica permanece<br/>entre 130 e 139 mmHg?"}
+  P2 --> D2{"PA permanece ≥130 sistólica<br/>OU ≥80 diastólica?"}
 
   D2 -->|Não| C2(["Manter estilo de vida<br/>e reavaliação periódica"])
 
-  D2 -->|Sim| D3{"Alto risco? DCV estabelecida, diabetes<br/>em adulto de 60 anos ou mais, SCORE2 ou<br/>SCORE2-OP acima de 10% em 10 anos, ou<br/>5% a 10% com modificadores de risco"}
+  D2 -->|Sim| D3{"Alto risco? DCV, DRC moderada/grave,<br/>lesão de órgão-alvo, diabetes conforme<br/>estratificação, SCORE2 ou<br/>SCORE2-OP ≥10% em 10 anos, ou<br/>5% a menor que10% com modificadores de risco"}
 
   D3 -->|Não| C3(["Manter estilo de vida<br/>e reavaliação periódica"])
 
-  D3 -->|Sim| D4{"Idade acima de 85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
+  D3 -->|Sim| D4{"Idade ≥85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
 
-  D4 -->|Não| C4(["Tratamento medicamentoso<br/>alvo sistólico de 120 a 129 mmHg"])
+  D4 -->|Não| C4(["Tratamento medicamentoso<br/>alvo120–129/70–79 mmHg<br/>se tolerado"])
   D4 -->|Sim| C5(["Tratamento medicamentoso com<br/>alvo individualizado, menos intensivo"])
 
-  P1 --> D5{"Idade acima de 85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
+  P1 --> D5{"Idade ≥85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
 
-  D5 -->|Não| C6(["Tratamento medicamentoso<br/>alvo sistólico de 120 a 129 mmHg"])
+  D5 -->|Não| C6(["Tratamento medicamentoso<br/>alvo120–129/70–79 mmHg<br/>se tolerado"])
   D5 -->|Sim| C7(["Tratamento medicamentoso com<br/>alvo individualizado, menos intensivo"])
 
   classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
@@ -56,9 +69,9 @@ flowchart TD
 
 | Categoria | Definição em consultório | Conduta medicamentosa |
 |---|---|---|
-| Pressão não elevada | < 120/70 mmHg | Não recomendada |
+| Pressão não elevada | PAS <120 **e** PAD <70 mmHg | Não recomendada |
 | Pressão elevada | 120–139 mmHg sistólica **ou** 70–89 mmHg diastólica | Recomendada em indivíduos selecionados, conforme risco cardiovascular e pressão no seguimento |
-| Hipertensão | ≥ 140/90 mmHg | Confirmação pronta e tratamento na maioria |
+| Hipertensão | PAS ≥140 **ou** PAD ≥90 mmHg | Confirmação pronta e tratamento na maioria |
 
 A categoria intermediária foi criada justamente para viabilizar alvos mais
 intensivos em quem já tem risco cardiovascular aumentado — não para
@@ -67,14 +80,12 @@ transformar toda a faixa em doença tratável com fármaco.
 ## Quem trata na faixa de pressão elevada
 
 A regra tem três degraus, e o tempo faz parte dela: **3 meses de medidas de
-estilo de vida primeiro**. Se, depois desse período, a sistólica permanecer
-entre 130 e 139 mmHg, o tratamento medicamentoso é recomendado quando houver:
+estilo de vida primeiro**. Se, depois desse período, a PA permanecer ≥130 mmHg sistólica ou ≥80 mmHg diastólica, o tratamento medicamentoso é recomendado quando houver:
 
-- condição de alto risco — doença cardiovascular estabelecida, ou diabetes
-  em adultos com 60 anos ou mais; **ou**
-- risco cardiovascular estimado em 10 anos acima de 10% pelo **SCORE2**
+- condição de alto risco — DCV, DRC moderada/grave ou lesão de órgão-alvo. No diabetes, considerar idade e estratificação específica; abaixo de60 anos o risco não deve ser presumido idêntico em todos; **ou**
+- risco cardiovascular estimado em 10 anos ≥10% pelo **SCORE2**
   (40–69 anos) ou **SCORE2-OP** (70 anos ou mais); **ou**
-- risco estimado entre 5% e 10% na presença de modificadores de risco.
+- risco estimado de 5% a <10% na presença de modificadores de risco.
 
 Na prática, quem tem risco em 10 anos de 10% ou mais, ou comorbidade que já
 o coloca em alto risco — diabetes, por exemplo —, começa terapia
@@ -83,8 +94,7 @@ anti-hipertensiva a partir de 130/80 mmHg.
 ## O alvo
 
 O alvo sistólico para adultos em uso de medicação é de **120–129 mmHg**. A
-diretriz prevê flexibilização explícita em quatro situações: idade acima de
-85 anos, fragilidade, sintomas ortostáticos e expectativa de vida limitada.
+diretriz prevê flexibilização explícita em quatro situações: idade ≥85 anos, fragilidade, sintomas ortostáticos e expectativa de vida limitada.
 
 A inversão de lógica é o ponto: o alvo intensivo é o primeiro passo do
 manejo da maioria, e sai-se dele por circunstância definida ou por
@@ -106,6 +116,6 @@ hipercolesterolemia familiar — grupos em que a mesma cifra de pressão tem
 consequência maior.
 
 ## Como esta meta se relaciona com a diretriz brasileira
-O alvo descrito aqui é o da ESC 2024. A **Diretriz Brasileira de Hipertensão Arterial de 2025** (SBC/SBH/SBN) fixa meta diferente: **< 130/80 mmHg para todos**, sem estratificação por risco, e reclassifica 120/80 mmHg como pré-hipertensão.
+O alvo descrito aqui é o da ESC 2024. A **Diretriz Brasileira de Hipertensão Arterial de 2025** (SBC/SBH/SBN) fixa meta diferente: **<130/80 mmHg se tolerado**, com individualização clínica, e reclassifica 120/80 mmHg como pré-hipertensão.
 
 Não é contradição por erro — são sociedades distintas. Mas, **para a prática no Brasil, a referência é a diretriz da SBC**, detalhada em `hipertensao-arterial-classificacao-diagnostico-metas.md`, nesta mesma pasta. Ela também traz três mudanças que a europeia não tem: o abandono do termo "urgência hipertensiva", a substituição do escore de Framingham/ERG pelo PREVENT e a divisão da hipertensão em três estágios.

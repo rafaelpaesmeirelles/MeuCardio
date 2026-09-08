@@ -1,11 +1,31 @@
 ---
-title: "Cardiomiopatia Hipertrófica: Diagnóstico e Tratamento (Diretriz Brasileira 2024)"
+title: 'Cardiomiopatia Hipertrófica: Diagnóstico e Tratamento (Diretriz Brasileira 2024)'
 slug: cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024
-theme: "Cardiomiopatias"
+theme: Cardiomiopatias
 kind: diretriz
 review_status: revisado
-source_refs: ["Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024 · Arquivos Brasileiros de Cardiologia · 2024 · 10.36660/abc.20240415 · https://www.scielo.br/j/abc/a/ZCS9yyxrVK8H7qgFTbn9rvH/?lang=pt", "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC12092053/", "ESC 2023: Highlights da Diretriz de Cardiomiopatias · Afya Cardiologia · 2023 · https://portal.afya.com.br/cardiologia/esc-2023-highlights-da-diretriz-de-cardiomiopatias", "O'Mahony C et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020.", "Hypertrophic cardiomyopathy management: systematic review of clinical practice guidelines. Eur Heart J Qual Care Clin Outcomes. 2025;11(7):919.", "Sudden cardiac death risk in HCM: echocardiography vs. MRI comparison. 2021, PMC8009882.", "Arbelo E et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626, DOI 10.1093/eurheartj/ehad194 — dados de gradiente de VSVE e SAM extraídos do documento desta pasta 'cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md', já sourced diretamente dessa diretriz."]
-legacy_source: "protocolos/protocolo-clinico-cardiomiopatia-hipertrofica-diretriz-brasileira-2024.md · Revisado a fundo em 30/07/2026: as duas lacunas explicitamente declaradas ('Obstrucao via saida ve' e 'Tratamento farmacologico') foram preenchidas com os dados já verificados nesta mesma pasta, no documento 'versão completa' da ESC 2023 (que é a diretriz internacional contemporânea à brasileira e compartilha os mesmos critérios de VSVE). A seção 'Sam movimento anterior sistólico mitral' ganhou o mecanismo fisiopatológico, de fonte padrão de fisiopatologia cardíaca. Nada foi removido."
+source_refs:
+- Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024 · Arquivos Brasileiros de Cardiologia
+  · 2024 · 10.36660/abc.20240415 · https://www.scielo.br/j/abc/a/ZCS9yyxrVK8H7qgFTbn9rvH/?lang=pt
+- Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC12092053/
+- 'ESC 2023: Highlights da Diretriz de Cardiomiopatias · Afya Cardiologia · 2023 · https://portal.afya.com.br/cardiologia/esc-2023-highlights-da-diretriz-de-cardiomiopatias'
+- O'Mahony C et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy
+  (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020.
+- 'Hypertrophic cardiomyopathy management: systematic review of clinical practice guidelines. Eur Heart J Qual Care
+  Clin Outcomes. 2025;11(7):919.'
+- 'Sudden cardiac death risk in HCM: echocardiography vs. MRI comparison. 2021, PMC8009882.'
+- Arbelo E et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626,
+  DOI 10.1093/eurheartj/ehad194 — dados de gradiente de VSVE e SAM extraídos do documento desta pasta 'cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md',
+  já sourced diretamente dessa diretriz.
+- SBC2024CMH. DOI:10.36660/abc.20240415. PMID:39082572.
+legacy_source: 'protocolos/protocolo-clinico-cardiomiopatia-hipertrofica-diretriz-brasileira-2024.md · Revisado
+  a fundo em 30/07/2026: as duas lacunas explicitamente declaradas (''Obstrucao via saida ve'' e ''Tratamento farmacologico'')
+  foram preenchidas com os dados já verificados nesta mesma pasta, no documento ''versão completa'' da ESC 2023
+  (que é a diretriz internacional contemporânea à brasileira e compartilha os mesmos critérios de VSVE). A seção
+  ''Sam movimento anterior sistólico mitral'' ganhou o mecanismo fisiopatológico, de fonte padrão de fisiopatologia
+  cardíaca. Nada foi removido.'
+review_note: 'Revisão independente de dependência em08/09/2026: Critério adulto e coexistência hipertensão; comparação
+  entre métodos não sistematicamente maior; handgrip pós-carga; redução septal intermediária excepcional.'
 ---
 
 # Cardiomiopatia Hipertrófica: Diagnóstico e Tratamento (Diretriz Brasileira 2024)
@@ -21,16 +41,16 @@ Diretriz brasileira 2024 é contemporânea à diretriz ESC 2023 sobre cardiomiop
 
 ## Criterios diagnosticos gerais
 
-Espessura miocárdica ≥ 15 mm em qualquer segmento do ventrículo esquerdo, ao ecocardiograma ou ressonância magnética, na ausência de outra causa que explique a hipertrofia (hipertensão, estenose aórtica, doença infiltrativa, atleta) — é o critério clássico usado pela ESC.
+Em adultos, espessura miocárdica ≥ 15 mm em qualquer segmento do ventrículo esquerdo, ao ecocardiograma ou ressonância magnética, não explicada apenas pelas condições de carga; hipertensão ou valvopatia podem coexistir com CMH, e fenocópias devem ser investigadas — é o critério clássico usado pela ESC.
 
 **Contexto de rastreamento familiar**: em parente de primeiro grau de paciente com CMH confirmada, ou portador de variante genética patogênica conhecida, o limiar diagnóstico cai para **≥ 13 mm** — reflete que, nesse contexto, a probabilidade pré-teste já é alta e um grau menor de hipertrofia já é significativo.
 
-**Atenção à variabilidade de método**: a espessura medida por ressonância magnética tende a ser sistematicamente maior que a medida por ecocardiograma (diferença mediana de ~1 mm num estudo com 673 pacientes, podendo chegar a 9 mm em casos individuais) — isso pode mudar a categoria de risco calculada. Não comparar espessura de exames diferentes como se fossem a mesma medida.
+**Atenção à variabilidade de método**: ecocardiograma e ressonância podem discordar em magnitude e direção conforme o segmento e a técnica. Rever imagens e metodologia antes de interpretar mudança de espessura ou recalcular risco; não assumir uma diferença fixa nem que a ressonância seja sempre maior.
 
 ## Obstrucao via saida ve
 
 - **definicao convencao**: gradiente instantâneo de pico ≥30 mmHg ao Doppler (repouso ou provocado por Valsalva/exercício) define obstrução; o limiar considerado hemodinamicamente significativo, e que orienta redução septal invasiva, é ≥50 mmHg.
-- **faixa intermediaria 30-50 mmHg**: sem outra causa óbvia de sintomas, redução invasiva do gradiente pode ser considerada mesmo nessa faixa.
+- **faixa intermediaria 30-50 mmHg**: a redução septal é excepcional em pacientes selecionados, com sintomas atribuíveis à obstrução apesar de tratamento, após avaliação especializada; não é indicação rotineira apenas pelo gradiente.
 - **tratamento farmacologico de primeira linha**: betabloqueador não vasodilatador titulado até dose máxima tolerada (Classe IB); na intolerância, verapamil ou diltiazem (Classe IB); disopiramida pode ser adicionada a um dos dois anteriores (Classe IB); mavacamten pode ser associado (Classe IIa, Nível A) ou usado em monoterapia no paciente intolerante às demais opções (Classe IIa, Nível B) — não usar mavacamten concomitante à disopiramida.
 - **evitar**: digoxina e vasodilatadores (nitratos, inibidores de fosfodiesterase) pioram a obstrução dinâmica e devem ser evitados (Classe IIa, Nível C).
 - **redução septal (miectomia ou ablação alcoólica)**: indicada com gradiente ≥50 mmHg e classe funcional III-IV apesar de terapia médica otimizada (Classe IB); miectomia preferida a ablação alcoólica em crianças e quando há lesão valvar mitral associada que também exige correção cirúrgica (Classe IC). Taxa de sucesso da miectomia >80%, com bons preditores (idade <50 anos, átrio esquerdo <46 mm, ausência de FA, sexo masculino); ablação alcoólica tem taxa de reintervenção de 7-20% e resultado pior quando a hipertrofia septal excede 30 mm.
@@ -38,7 +58,7 @@ Espessura miocárdica ≥ 15 mm em qualquer segmento do ventrículo esquerdo, ao
 
 ## Sam movimento anterior sistolico mitral
 
-Movimento sistólico anterior (SAM) da valva mitral é o mecanismo mecânico central da obstrução dinâmica da via de saída do VE na CMH obstrutiva: o folheto anterior da mitral é tracionado para dentro do trato de saída durante a sístole (efeito Venturi somado ao septo hipertrófico redirecionando o fluxo), criando obstrução dinâmica que piora com manobras que reduzem a pré-carga ou pós-carga (Valsalva, ortostatismo) e melhora com manobras que aumentam volume ventricular (agachamento, handgrip) — é a base fisiopatológica de por que o exame físico dinâmico (mudança de intensidade do sopro com manobras) é parte do diagnóstico clínico da forma obstrutiva. O SAM também é responsável pela regurgitação mitral tipicamente excêntrica, posterodirigida, que acompanha a CMH obstrutiva — regurgitação mitral central ou anterodirigida nesse contexto deve levantar suspeita de doença valvar mitral primária associada, não só secundária ao SAM.
+Movimento sistólico anterior (SAM) da valva mitral é o mecanismo mecânico central da obstrução dinâmica da via de saída do VE na CMH obstrutiva: o folheto anterior da mitral é tracionado para dentro do trato de saída durante a sístole (efeito Venturi somado ao septo hipertrófico redirecionando o fluxo), criando obstrução dinâmica que piora com manobras que reduzem a pré-carga ou pós-carga (Valsalva, ortostatismo) e melhora com manobras que aumentam pré-carga e/ou pós-carga (agachamento; no handgrip, o principal efeito é aumento da pós-carga) — é a base fisiopatológica de por que o exame físico dinâmico (mudança de intensidade do sopro com manobras) é parte do diagnóstico clínico da forma obstrutiva. O SAM também é responsável pela regurgitação mitral tipicamente excêntrica, posterodirigida, que acompanha a CMH obstrutiva — regurgitação mitral central ou anterodirigida nesse contexto deve levantar suspeita de doença valvar mitral primária associada, não só secundária ao SAM.
 
 ## Risco morte subita cdi — HCM Risk-SCD
 

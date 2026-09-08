@@ -1,11 +1,20 @@
 ---
 kind: diretriz
-legacy_source: 'Protocolo de Cardiomiopatias (ESC 2023) · Revisado a fundo em 30/07/2026: documento é uma visão geral de escopo/estrutura da diretriz (quais fenótipos cobre, o que cada seção aborda), não faz afirmação clínica numérica isolada que exija verificação de PMID — as afirmações quantitativas específicas (gradiente de VSVE, HCM Risk-SCD, calculadoras de risco de ACM/CMD) já foram verificadas nos documentos dedicados desta mesma pasta. "Criterios internacao" ficou vazio de propósito: é um resumo de diretriz, não um protocolo de uma doença específica, e critério de internação não se aplica a esse recorte.'
+legacy_source: 'Protocolo de Cardiomiopatias (ESC 2023) · Revisado a fundo em 30/07/2026: documento é uma visão
+  geral de escopo/estrutura da diretriz (quais fenótipos cobre, o que cada seção aborda), não faz afirmação clínica
+  numérica isolada que exija verificação de PMID — as afirmações quantitativas específicas (gradiente de VSVE, HCM
+  Risk-SCD, calculadoras de risco de ACM/CMD) já foram verificadas nos documentos dedicados desta mesma pasta. "Criterios
+  internacao" ficou vazio de propósito: é um resumo de diretriz, não um protocolo de uma doença específica, e critério
+  de internação não se aplica a esse recorte.'
 review_status: revisado
-review_note: "Conexões revisadas em 26/08/2026. Este arquivo permanece como nó abrangente da diretriz ESC 2023 e aponta para documentos fenotípicos e fluxogramas locais; as decisões quantitativas continuam nos módulos específicos, evitando repetição sem contexto."
+review_note: 'Conexões revisadas em 26/08/2026. Este arquivo permanece como nó abrangente da diretriz ESC 2023 e
+  aponta para documentos fenotípicos e fluxogramas locais; as decisões quantitativas continuam nos módulos específicos,
+  evitando repetição sem contexto. Revisão independente de dependência em08/09/2026: Coexistênciacausas; genéticanegativa/VUSnãoencerra
+  família.'
 slug: manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023
 source_refs:
-- Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657.
+- Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart
+  J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657.
 theme: Cardiomiopatias
 title: 'Manejo das Cardiomiopatias: Primeira Diretriz Abrangente ESC 2023'
 ---
@@ -63,7 +72,7 @@ Recomendações sobre transplante cardíaco e dispositivos de assistência ventr
 Não se aplica a este documento de visão geral — critérios de internação são específicos por fenótipo e estão nos documentos dedicados a cada cardiomiopatia nesta mesma pasta.
 
 ## Armadilhas clinicas
-Diagnosticar cardiomiopatia sem excluir adequadamente causas secundárias (DAC, hipertensão, valvopatia); negligenciar rastreamento familiar em cascata após diagnóstico de cardiomiopatia geneticamente determinada; não oferecer suporte psicológico estruturado à família
+Atribuir toda alteração miocárdica à cardiomiopatia sem avaliar DAC e condições de carga; elas podem coexistir e não excluem automaticamente o diagnóstico; negligenciar rastreamento familiar em cascata após diagnóstico de cardiomiopatia geneticamente determinada; não oferecer suporte psicológico estruturado à família
 
 ## Tudo com Tudo
 
@@ -76,3 +85,5 @@ Diagnosticar cardiomiopatia sem excluir adequadamente causas secundárias (DAC, 
 - [Fluxograma de diagnóstico não invasivo da amiloidose cardíaca](fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo.md)
 - [Cardiomiopatia periparto](cardiomiopatia-periparto-criterios-diagnosticos-recuperacao-e-manejo.md)
 - [Reclassificação fenotípica ESC 2023: NDLVC, hipertrabeculação e Takotsubo](reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia.md)
+
+Teste genético negativo não exclui cardiomiopatia nem dispensa rastreamento clínico familiar. Variante de significado incerto não equivale a diagnóstico genético causal; testar familiares preditivamente requer variante patogênica/provavelmente patogênica interpretada no contexto.
