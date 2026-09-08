@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 31,
-  "pending_count": 132,
+  "reviewed_count": 32,
+  "pending_count": 131,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -734,7 +734,11 @@
         "DOI10.1001/jamaneurol.2025.0285",
         "DOI10.1186/s13063-025-08761-6"
       ],
-      "reviewed_sha256": "d2e61f6aa4012586a2924f6fc972cb1fe84ae04b1b77b4827ba0979ae0d7a680"
+      "reviewed_sha256": "d2e61f6aa4012586a2924f6fc972cb1fe84ae04b1b77b4827ba0979ae0d7a680",
+      "dependency_intersection": {
+        "source": "docs/auditoria-dependencias-json-orfaos-20260908.json",
+        "resolution": "já corrigida: OPTIMAS HI1/HI2/PH1 permitidos, PH2 excluído; ELAN maior6–7dias"
+      }
     },
     {
       "index": 88,
@@ -1111,8 +1115,29 @@
     {
       "index": 131,
       "path": "content/Insuficiência_cardíaca/terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "011e40e65454969f687dda8a6abd109ba5cffed9e52b8760b3d97890e9717f01"
+      "status": "corrected_reviewed",
+      "source_sha256": "011e40e65454969f687dda8a6abd109ba5cffed9e52b8760b3d97890e9717f01",
+      "findings": [
+        "ACHIEVE/ALCHEMIST2025 neutros restaurados; não recomendar ARMrotineiro por meta2022 nem tratar diálise como proteçãohiperK.",
+        "EMPERORReduced≥20; EMPAKIDNEY20–<45independentealbuminúria; DAPA/EMPA incluemparteDRC4.",
+        "KDIGO iniciar/manterdistintos; coortePeng faixa15–29sobrepostaRCTnão prova<20/diálise.",
+        "CKM4nãoDRC4; FIDELITYnãoquádruplaICFEr; finerenonanãotrocaARMautomática.",
+        "Cice114RCTdiálise existe; não alegar ausência absoluta.",
+        "Guo30 resposta agregada não decisão, metaARNIrenalnãoexclusivadiálise; mortalidadeCVARni nãosignificativa."
+      ],
+      "sources": [
+        "PMIDs42584660,42234894,42389639,42234437,42247581,12742278: abstracts primários",
+        "ACHIEVE PMID40818850 DOI10.1016/S0140-6736(25)01198-5",
+        "ALCHEMIST PMID40818851 DOI10.1016/S0140-6736(25)01194-8",
+        "KDIGO2024 original; EMPAKIDNEY NEJMoa2204233 e DAPACKD NEJMoa2024816",
+        "Dependência checklist JSON correspondente conferida: mesmo finding estrutural corrigido noMD"
+      ],
+      "dependency_intersection": {
+        "source": "docs/auditoria-dependencias-json-orfaos-20260908.json",
+        "slug": "terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise",
+        "resolution": "corrigida individualmente com primárias"
+      },
+      "reviewed_sha256": "7437027c7f5821c7e2dda8e7f76cfe875850fbdff1f16000a9d144ef8d685235"
     },
     {
       "index": 132,
