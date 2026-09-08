@@ -1,45 +1,32 @@
-# Tudo com Tudo — Arritmias: sinalizadores ambulatoriais de QT longo congênito/adquirido (2026-09-07)
+# Tudo com Tudo — Arritmias: QT longo congênito/adquirido — revisão final 2026-09-08
 
-## Pivô (anti-duplicação)
+## Escopo
 
-**Alvo:** densificar `content/Arritmias` com lacuna ambulatorial **além de TVNS (#839), SVT/WPW (#864), bradicardia/BAV (#867) e PVC carga/ablation (#899)**.
+Pacote ambulatorial para distinguir **emergência atual**, suspeita congênita/genética e QT adquirido por fármaco, evitando tanto subtriagem quanto suspensão farmacológica reflexa.
 
-**Preferido do brief:** QT longo congênito/adquirido — red flags ambulatoriais de **quando escalar** e **quando suspender fármacos prolongadores de QT** **sem inventar regimes**.
+## Conteúdos
 
-**Escolhido:** pacote de 3 conteúdos + este relatório (estilo #828/#899).
+| Arquivo | Status final |
+|---|---|
+| `content/Arritmias/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md` | `revisado` |
+| `content/Arritmias/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt.md` | `revisado` |
+| `content/Arritmias/fluxograma-sinalizadores-ambulatoriais-qt-longo.md` | `revisado` |
 
-**Evitar / anti-colisão:**
-- #881 QT/psicofármaco (`Saúde_mental_e_cardiologia`) — não reescrever; apenas ponte de destino.
-- #839 TVNS; #864 SVT/pré-excitação; #867 bradicardia/BAV; #899 PVC.
-- FA (#827/#852/#883); outros temas #900–#906 (Tromboembolismo, Aorta, Prevenção, Hipertensão, Cardio-oncologia, Valvopatias, Dispositivos).
-- Não duplicar prosa revisada de canalopatias (Schwartz/classes ESC) — só gate de destino ambulatorial.
+## Correções adversariais incorporadas
 
-## Anti-colisão (busca)
+- fármaco prolongador deixou de levar automaticamente a “suspender”: decisão agora usa QTc, ΔQTc, sintomas/precursores, fatores acumulados e benefício terapêutico;
+- QTc >500 ms / Δ≥60 ms passaram a ser tratados como **marcadores de ação/revisão de risco**, não regra cega de PS ou suspensão para todo paciente estável;
+- psicofármaco essencial ganhou link funcional para o documento canônico já publicado de Saúde Mental/Cardiologia;
+- síncope muito recente e ainda de alto risco foi separada de evento remoto já esclarecido;
+- genética não exige fenótipo previamente confirmado quando existe variante familiar conhecida ou indicação de teste em cascata;
+- evento agudo em familiar não envia automaticamente paciente assintomático estável ao PS; aumenta prioridade de avaliação de canalopatias/genética.
 
-- Code search: zero hits para `sinalizadores-ambulatoriais-de-qt` / `qt-longo-ambulatorial-quando-suspender`.
-- Open PRs Arritmias overnight: #839/#864/#867/#899 — nenhum QT ambulatory red-flag em `content/Arritmias`.
-- Anti-colisão através de **#906+**.
+## Fontes
 
-## Arquivos
+- ESC 2022 VA/SCD — PMID **36017572**
+- HRS/EHRA/APHRS inherited arrhythmia syndromes 2013 — PMID **24011539**
+- AHA/ACCF Prevention of TdP 2010 — PMID **20142454**
 
-| Arquivo | Slug | Kind |
-|---|---|---|
-| `content/Arritmias/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md` | `sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar` | protocolo |
-| `content/Arritmias/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt.md` | `qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt` | protocolo |
-| `content/Arritmias/fluxograma-sinalizadores-ambulatoriais-qt-longo.md` | `fluxograma-sinalizadores-ambulatoriais-qt-longo` | fluxograma |
+## Governança
 
-`review_status: pendente_revisao`. Sem doses. Sem auto-merge. Sem regime substituto inventado.
-
-## Slugs relacionados (existentes)
-
-`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`, `arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022`, `qt-curto-e-cpvt-duas-canalopatias-em-que-a-parada-e-a-primeira-manifestacao`, `estratificacao-de-risco-na-sindrome-de-brugada-assintomatica-quando-indicar-eef-e-cdi`.
-
-## Fontes (PMIDs verificados Europe PMC)
-
-- ESC 2022 VA/SCD PMID **36017572** (DOI 10.1093/eurheartj/ehac262)
-- Priori HRS/EHRA/APHRS 2013 PMID **24011539** (DOI 10.1016/j.hrthm.2013.05.014)
-- Drew AHA/ACCF 2010 (Circulation) PMID **20142454** (DOI 10.1161/CIRCULATIONAHA.109.192704)
-
-## Branch
-
-`feat/tudo-com-tudo-arritmias-qt-longo-sinalizadores-20260907` → `main`
+Pacote preparado para release consolidado. **Sem merge e sem deploy isolado.** A autorização global do corpus será recalculada somente após o congelamento de todos os lotes revisados.
