@@ -4,54 +4,30 @@ legacy_source: 'protocolos/protocolo-detalhado-estenose-aortica-grave-tavi-vs-sa
 review_status: revisado
 slug: estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021
 source_refs:
+- "ESC/EACTS 2025. Guidelines for the management of valvular heart disease. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295."
 - 2021 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS
   · 2021 · https://pmc.ncbi.nlm.nih.gov/articles/PMC9725093/
 - Update on TAVI Indications From 2020 ACC/AHA Valvular Guidelines · ACC · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2021/07/22/19/36/Guideline-Update-on-Indications-for-TAVI
 theme: Valvopatias
-title: 'Estenose Aórtica Grave: Decisão TAVI vs. SAVR (ESC/EACTS 2021)'
+title: 'Estenose aórtica: transição das recomendações TAVI/SAVR de 2021 para 2025'
+review_note: "Revisão adversarial Codex 08/09/2026: substituída mistura incorreta de cortes ACC/AHA e ESC por contextualização histórica e encaminhamento à decisão ESC/EACTS 2025; slug legado preservado."
 ---
 
-# Estenose Aórtica Grave: Decisão TAVI vs. SAVR (ESC/EACTS 2021)
+# Estenose aórtica: decisão TAVI/SAVR e atualização da diretriz
 
-## Definicao
-Decisão de tratar EA grave com SAVR ou TAVI deve considerar fatores do paciente (idade, comorbidades, expectativa de vida, preferência), fatores procedimentais (risco perioperatório antecipado, anatomia, experiência do operador/instituição) e fatores da prótese (mecânica vs. biológica, durabilidade)
+Este endereço foi preservado para manter os links históricos. O texto anterior misturava faixas etárias americanas e europeias e não deve orientar a escolha atual. A diretriz ESC/EACTS de 2021 foi atualizada em 2025.
 
-**Atenção — este documento reflete a diretriz ESC/EACTS 2021. Os cortes etários abaixo foram substituídos pela diretriz 2025**: o corte de TAVI preferencial caiu de 75 para 70 anos (Classe I, Nível A, em valva tricúspide, independente do risco cirúrgico) — ver `valvopatias-atualizacao-diretriz-esceacts-2025.md`, nesta mesma pasta, para a conduta atual.
+Para a decisão clínica, usar o [fluxograma atual de escolha entre TAVI e cirurgia](/biblioteca/fluxograma-estenose-aortica-grave-sintomatica-tavi-vs-cirurgia-escolha-da-modalidade-esc-eacts-2025), após confirmar a gravidade e a indicação de intervenção.
 
-## Referenciamento obrigatorio
-Todos os pacientes com EA grave sintomática com indicação de tratamento devem ser referenciados ao Heart Team para avaliação individualizada
+Na ESC/EACTS 2025, TAVI é recomendado a partir de 70 anos em estenose de valva tricúspide com anatomia adequada, incluindo acesso transfemoral. Abaixo de 70 anos, SAVR é recomendado quando o risco cirúrgico é baixo. Nos demais candidatos a bioprótese, o Heart Team integra anatomia, risco, intervenções concomitantes, perspectiva de vida e preferência informada. A idade sozinha não decide o procedimento.
 
-## Recomendacao por idade
-- **menor 65 anos**: SAVR favorecido em pacientes mais jovens com expectativa de vida >20 anos
-- **65 a 80 anos**: SAVR ou TAVI podem ser considerados para pacientes sintomáticos nesta faixa etária
-- **maior 75 80 anos**: TF-TAVI (TAVI transfemoral) recomendado como modo preferido de intervenção em pacientes ≥75 anos, baseado em avaliação de fatores clínicos, anatômicos e procedimentais
-- **maior 80 anos alto risco**: TAVI favorecido em pacientes mais velhos (>80 anos) de qualquer categoria de risco cirúrgico com expectativa de vida <10 anos, e em pacientes de alto/risco proibitivo para SAVR com expectativa de vida ≥1 ano
-- **fonte**: ACC Ten Points ; TAVI Today
+A bicúspide exige avaliação própria. Inviabilidade de acesso transfemoral difere de anatomia valvar desfavorável; o acesso alternativo não resolve automaticamente toda contraindicação anatômica. Quando nenhuma via é factível ou o benefício esperado é insuficiente, discutir cuidado clínico e paliativo.
 
-## Situacoes favorecendo savr independente idade
-- Pacientes assintomáticos com EA grave com outras indicações de intervenção (teste de esforço anormal, EA muito grave, progressão rápida, BNP elevado)
-- Anatomia desfavorável, especialmente acesso vascular ilíaco-femoral inadequado para TAVI
-- Pacientes <80 anos assintomáticos com FEVE <50%
+## Como ler referências antigas
 
-## Populacoes nao estudadas rcts
-Pacientes <65 anos e aqueles com válvula aórtica bicúspide não foram incluídos nos principais RCTs; recomendações não podem ser diretamente extrapoladas para recomendar TAVI nesses grupos, tornando avaliação do Heart Team crucial
+O corte europeu preferencial de 75 anos em 2021 não deve ser combinado com faixas de outra sociedade nem apresentado como recomendação atual. Ensaios de durabilidade também precisam ser identificados por dispositivo, população e tempo real de seguimento; a frase antiga “dados apenas até cinco anos” deixou de representar todo o acervo.
 
-## Limitacoes tavi
-TAVI não trata doença arterial coronariana concomitante ou aortopatia, e pode não impactar doença valvar mitral/tricúspide clinicamente significativa ou fibrilação atrial associada, todas passíveis de abordagem cirúrgica simultânea
+- [Atualização das valvopatias ESC/EACTS 2025](/biblioteca/valvopatias-atualizacao-diretriz-esceacts-2025)
+- [Escolha entre prótese mecânica e biológica](/biblioteca/fluxograma-escolha-de-protese-valvar-mecanica-vs-biologica-esc-eacts-2025)
 
-## Durabilidade protese
-Dados de durabilidade de válvula TAVI estabelecidos até 5 anos; necessário mais tempo de seguimento para determinar durabilidade a 10+ anos — consideração incorporada nas faixas etárias das recomendações
-
-## Volume centro
-Programas de TAVI de alto volume associados a menor mortalidade em 30 dias, particularmente em hospitais com também alto volume de SAVR — reforça importância de centros especializados
-
-## Cenario expectativa vida curta
-Pacientes com EA grave sintomática e expectativa de vida <1 ano requerem discussão cuidadosa sobre benefícios/riscos, determinação de valores do paciente, decisão compartilhada e envolvimento de equipe de cuidados paliativos
-
-## Contexto latino americano
-Diretriz específica para América Latina sugere TAVI sobre SAVR em idosos ≥75 anos com EA grave sintomática candidatos a via transfemoral (recomendação condicional, certeza moderada de evidência)
-
-## Criterios internacao
-
-## Armadilhas clinicas
-Extrapolar recomendações de TAVI para pacientes <65 anos ou com válvula bicúspide sem avaliação cuidadosa do Heart Team; escolher TAVI isolado quando há doença coronariana ou valvar concomitante significativa que se beneficiaria de correção cirúrgica simultânea; não considerar cuidados paliativos em paciente com expectativa de vida <1 ano
+Fonte atual: ESC/EACTS 2025, DOI 10.1093/eurheartj/ehaf194, Recommendation Table 4 e Figure 9. As referências de 2021 nos metadados documentam a origem histórica, não a vigência da conduta.

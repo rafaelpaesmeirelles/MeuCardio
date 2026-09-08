@@ -43,3 +43,8 @@ Validação: 2/2 blocos Mermaid analisados pelo parser real; YAML dos dois docum
 ## Dependências de insuficiência cardíaca — 08/09/2026
 
 Segunda Definição Universal: leitura integral PMC13330914, Tabela 1 e definição da síndrome; esclarecidos sintomas OU sinais, sem exigir ambos na consulta, e limites dos testes isolados. ESC 2026 descompensada: PDF oficial de 112 páginas conferido via navegador, seções 7.1 e 7.4.2–3 e Tabela 8 p.47. Confirmadas classes I C e I B2. Corrigida exclusão indevida de apresentação de novo, comparação STRONG-HF com sequência fixa e bloqueio universal da terapia fundacional pela congestão. Links internos convertidos à rota canônica; YAML e todos os alvos dos dois documentos verificados, sem ausentes. Preservada fonte_producao grok. Não constitui aprovação global.
+
+
+## Dependências: infarto, TAVI e alta STRONG-HF
+
+Quinta definição de IAM: seções 6–8/11 do artigo primário ehag101 conferidas; qualificadas agudeza, confirmação do IAM secundário, nexo e requisitos periprocedimento, incerteza na morte súbita e MINOCA. TAVI: corrigido escores STS-PROM E EuroSCORE II (nota e, Table4); inoperabilidade com anatomia inviável não gera indicação automática. Documento histórico misturava recomendações americanas/europeias: texto substituído com justificativa e encaminhamento atual, slug preservado. STRONG-HF: acrescentado gate de emergência em toda visita; retirada espera semanal automática, escalonamento por NT-proBNP isolado e equivalência entre exclusão de ensaio e contraindicação universal. Mermaid real dos dois fluxogramas válido; quatro documentos com YAML/status e links conferidos. Fonte_producao preservada, autorização global ainda pendente.
