@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 23,
-  "pending_count": 140,
+  "reviewed_count": 24,
+  "pending_count": 139,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1273,8 +1273,21 @@
     {
       "index": 160,
       "path": "content/Valvopatias/tavi-anel-aortico-pequeno-escolha-de-protese-ensaio-smart-2024.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "5088867fdf04bfbee03afadc8f98f19125afc185241e73fb012c7e3851ed1f37"
+      "status": "corrected_reviewed",
+      "source_sha256": "5088867fdf04bfbee03afadc8f98f19125afc185241e73fb012c7e3851ed1f37",
+      "findings": [
+        "Corrigida inversão da regurgitação residual: menor com SEV no subgrupo feminino.",
+        "BVD hemodinâmica não igual a degeneração anatômica/durabilidade; removida recomendação universal de plataforma.",
+        "Subgrupo não replicação; contextualizada idade média80anos e limiar geral de diretriz não específico de anel pequeno.",
+        "Acrescentado seguimento3anos como apresentação EuroPCR2026, não artigo integral revisado por pares; sem superioridade clínica."
+      ],
+      "sources": [
+        "PMID38587261 DOI10.1056/NEJMoa2312573: abstract primário",
+        "PMID39382856 DOI10.1001/jamacardio.2024.3241: abstract primário; retirados detalhes numéricos não revalidados no texto integral",
+        "https://europcr2026.europa-inviteo.com/gws/index.php?langue=en&onglet=33&paramProjet=107923 : resumo investigador,3anos",
+        "https://www.pcronline.com/Cases-resources-images/Resources/Course-videos-slides/2026/EuroPCR/TAVI-head-to-head-trials : programação20maio2026"
+      ],
+      "reviewed_sha256": "397537a8fad0285593cdc2a8a22412224b620b4318f930dc2c83dbd73782e44f"
     },
     {
       "index": 161,
