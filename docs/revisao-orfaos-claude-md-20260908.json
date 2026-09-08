@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 36,
-  "pending_count": 127,
+  "reviewed_count": 37,
+  "pending_count": 126,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -81,8 +81,22 @@
     {
       "index": 4,
       "path": "content/Aorta_e_doença_arterial_periférica/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "f0f9062a1b187519965dd12d0048d96f20be01a3f920a7ea6eee98d05d7c54c8"
+      "status": "corrected_reviewed",
+      "source_sha256": "f0f9062a1b187519965dd12d0048d96f20be01a3f920a7ea6eee98d05d7c54c8",
+      "findings": [
+        "PMID15380048 corrigido para estudo murino2004 DOIar1218, não autoanticorpos humanos2001.",
+        "Resposta agrupada de biológicos não superioridade; mielodisplasia tendência em2018, não VEXAS identificado.",
+        "Broncoscopia seletiva por risco, biópsia traqueal desaconselhada; ECG/eco basal sustentados pelo PNDS.",
+        "Erdogan114 selecionados por aorta; IQR não amplitude; não angioTC fixa indefinida universal.",
+        "Ruptura de cúspide pode exigir cirurgia urgente apesar de aparente controle inflamatório."
+      ],
+      "sources": [
+        "19 PMIDs originais obtidos diretamente por Eutils; 29200026 somente metadados sem abstract.",
+        "PNDS2021 primário páginas19–20 e26 (PDF físico): avaliação, segurança e cirurgia.",
+        "Arnaud2023 PMID37236870 e revisão traqueobrônquica2019 PII S1568997219301533 primárias online.",
+        "Cache1620 auditado: ArticleIdList correto; extrator temporário novo tinha campo ids amplo, não usado no documento."
+      ],
+      "reviewed_sha256": "322bbcd72ee1cd9aad561b52ad2b480cd20f0cf909ab9276d791305a44af31e2"
     },
     {
       "index": 5,
