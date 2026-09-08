@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 31 documentos lidos integralmente e corrigidos; 132 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 32 documentos lidos integralmente e corrigidos; 131 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -214,6 +214,17 @@ Fontes verificadas: PMIDs7014028,8339658,42110711,41347328: abstracts verificado
 - Não negar genericamente toda investigação mitotrópica; FORTITUDEphase2b reconhecido; não afirmar que toda combinação nunca estudada.
 
 Fontes verificadas: PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract primário, PMID38599256 DOI10.1016/j.jacc.2024.03.387: abstract primário, PMIDs38752753,42250280: revisões mecanísticas, não evidência desfechos, NCT07023614: registro FORTITUDE-HCM fase2b; sem inferência eficácia, Detalhes gastrointestinais do DiCE não revalidados no integral: retirados sem inferir segurança.
+
+## 131 — content/Insuficiência_cardíaca/terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md
+
+- ACHIEVE/ALCHEMIST2025 neutros restaurados; não recomendar ARMrotineiro por meta2022 nem tratar diálise como proteçãohiperK.
+- EMPERORReduced≥20; EMPAKIDNEY20–<45independentealbuminúria; DAPA/EMPA incluemparteDRC4.
+- KDIGO iniciar/manterdistintos; coortePeng faixa15–29sobrepostaRCTnão prova<20/diálise.
+- CKM4nãoDRC4; FIDELITYnãoquádruplaICFEr; finerenonanãotrocaARMautomática.
+- Cice114RCTdiálise existe; não alegar ausência absoluta.
+- Guo30 resposta agregada não decisão, metaARNIrenalnãoexclusivadiálise; mortalidadeCVARni nãosignificativa.
+
+Fontes verificadas: PMIDs42584660,42234894,42389639,42234437,42247581,12742278: abstracts primários, ACHIEVE PMID40818850 DOI10.1016/S0140-6736(25)01198-5, ALCHEMIST PMID40818851 DOI10.1016/S0140-6736(25)01194-8, KDIGO2024 original; EMPAKIDNEY NEJMoa2204233 e DAPACKD NEJMoa2024816, Dependência checklist JSON correspondente conferida: mesmo finding estrutural corrigido noMD.
 
 ## 142 — content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md
 
