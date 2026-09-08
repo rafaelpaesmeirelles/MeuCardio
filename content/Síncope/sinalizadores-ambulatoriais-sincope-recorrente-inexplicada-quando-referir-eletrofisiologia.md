@@ -4,64 +4,78 @@ slug: sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-
 theme: "Síncope"
 kind: protocolo
 fonte_producao: grok
-summary: "Consultório após avaliação inicial: quais perfis de síncope recorrente inexplicada pedem encaminhamento a eletrofisiologia (EPS selecionado), quais seguem monitoramento/ILR, e o que não indica EPS de rotina — além do pacote pós-alta (#859) e do fluxograma de ILR."
-review_status: pendente_revisao
-review_note: "Pacote Tudo-com-Tudo 07/09/2026: lacuna ambulatorial nova além de #859 (pós-avaliação/pós-alta). Anti-colisão com fluxograma ILR, tilt/ILR prosa, EGSYS/CSRS, HO geriátrica #882. Fontes: ESC 2018 PMID 29562304; Practical Instructions DOI ehy071; ACC/AHA/HRS 2017 PMID 28280231. Sem doses; sem PMID inventado."
+summary: "Após avaliação inicial não diagnóstica, separa alto risco que exige via urgente, substratos selecionados para EPS e pacientes de menor risco em que monitorização prolongada/ILR é preferível."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Corrigidos: síncope sem pródromos como marcador independente; história familiar de morte súbita jovem antes do ramo de baixo risco; EPS Classe I-B restrito a IAM/outra condição relacionada a cicatriz; removidas dependências de #859 ausentes; CDI e canalopatias remetidos a critérios específicos da doença."
 source_refs:
   - "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304"
   - "Brignole M, Moya A, de Lange FJ, et al. Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):e43-e80. DOI: 10.1093/eurheartj/ehy071"
   - "Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231"
+  - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572."
 ---
 
 # Sinalizadores ambulatoriais: síncope recorrente inexplicada — quando referir eletrofisiologia
 
-Pergunta de **consultório**: após avaliação inicial (história, exame, ECG, PA ortostática e, quando indicado, eco/Holter), a síncope **permanece inexplicada e recorrente**. **Quando encaminhar a eletrofisiologia** para estudo eletrofisiológico (EPS) selecionado, e quando o caminho preferencial é **monitorização / ILR**?
+Pergunta de **consultório**: após história, exame físico, ECG, PA ortostática e exames dirigidos, a síncope permanece **recorrente e inexplicada**. Quando o paciente precisa de via urgente, quando vale encaminhar para eletrofisiologia/EPS e quando monitorização prolongada é preferível?
 
 Não substitui:
-- pós-alta / retorno urgente — [`sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar`](sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar.md) (pacote #859);
-- escolha de Holter / loop externo / ILR — [`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md);
-- tilt / ILR prosa — [`estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope`](estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope.md);
-- estratificação no DE — [`fluxograma-sincope-criterios-de-alto-risco-emergencia-esc-2018-eusem-2024`](fluxograma-sincope-criterios-de-alto-risco-emergencia-esc-2018-eusem-2024.md).
+- escolha Holter / loop externo / ILR — [`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md);
+- tilt / ILR — [`estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope`](estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope.md);
+- estratificação de alto risco — [`fluxograma-sincope-criterios-de-alto-risco-emergencia-esc-2018-eusem-2024`](fluxograma-sincope-criterios-de-alto-risco-emergencia-esc-2018-eusem-2024.md).
 
-Árvore: [`fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino`](fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino.md). Gate CDI/MSC: [`candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar`](candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar.md).
+Árvore: [`fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino`](fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino.md). Gate de risco de MSC: [`candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar`](candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar.md).
 
-## Princípio (ESC 2018 / ACC-AHA-HRS 2017)
+## Primeiro gate: não mandar alto risco para a fila eletiva
 
-A ESC 2018 (PMID 29562304) restringe o **EPS** a uma minoria de pacientes com síncope de origem incerta: o valor diagnóstico é limitado e o uso rotineiro **não** está indicado quando o ECG é normal, não há cardiopatia estrutural e não há palpitações. O ACC/AHA/HRS 2017 (PMID 28280231) reforça o papel **selecionado** do EPS após avaliação inicial não diagnóstica, sobretudo quando a pré-teste de arritmia é elevada.
+Considerar avaliação urgente/PS/unidade de síncope, conforme estabilidade, quando houver um ou mais marcadores relevantes, incluindo:
 
-**EPS selecionado ≠ ILR precoce.** Em baixo risco sem alto critério, a ESC favorece monitorização prolongada (incluindo ILR em fase precoce quando a recorrência é provável). EPS entra quando há **substrato elétrico/estrutural** que muda a probabilidade pré-teste.
+- síncope **sem pródromos**;
+- síncope durante esforço ou em decúbito;
+- ECG de alto risco ou nova arritmia relevante;
+- hipotensão/hipoperfusão ou deterioração clínica;
+- trauma importante associado ao episódio;
+- **história familiar de morte súbita em idade jovem**;
+- cardiopatia conhecida com suspeita de mecanismo arrítmico e novo evento preocupante.
 
-## Encaminhar a eletrofisiologia (EPS / EP ambulatorial)
+**Ausência de pródromo e trauma são critérios separados**; não exigir que ocorram juntos.
 
-| Perfil ambulatorial | Por que referir (âncora) |
+## Quando encaminhar para eletrofisiologia / EPS selecionado
+
+| Perfil | Interpretação prática |
 |---|---|
-| Bloqueio bifascicular + síncope inexplicada | Avaliar risco de BAV avançado (HV / bloqueio induzido) — ESC 2018 |
-| IAM prévio / cicatriz / cardiopatia estrutural + síncope de origem incerta após não invasivos | EPS Classe I B na ESC 2018 quando há substrato de cicatriz e suspeita de taquiarritmia |
-| Síncope precedida de palpitações (selecionados) | EPS pode ser diagnóstico se induzir TSV/TV monomórfica com correlação clínica — indicação mais fraca (ESC IIb C) |
-| Bradicardia sinusal assintomática + síncope sem correlação não invasiva | EPS selecionado (ESC IIb B) para tempo de recuperação do nó sinusal corrigido quando a correlação permanece incerta |
-| Dúvida de arritmia com ECG/estrutura anormais e investigação não invasiva esgotada | Discussão EP antes de “só esperar o próximo Holter” |
+| Bloqueio bifascicular + síncope inexplicada | EPS pode esclarecer doença de condução avançada em paciente selecionado |
+| **IAM prévio ou outra condição relacionada a cicatriz miocárdica** + síncope inexplicada após avaliação não invasiva | Este é o contexto ao qual a ESC 2018 atribui a recomendação mais forte para EPS; não extrapolar para toda cardiopatia estrutural |
+| Síncope precedida por palpitações abruptas, em paciente selecionado | EPS pode ser considerado quando o mecanismo taquiarritmico é plausível |
+| Bradicardia sinusal/suspeita de doença do nó sem correlação não invasiva | EPS pode ser útil em casos selecionados; não é exame de rotina |
+| ECG/estrutura anormais com suspeita arrítmica e avaliação não invasiva inconclusiva | Discussão com eletrofisiologia pode ser apropriada, mas a classe/força depende do substrato específico |
 
-**Conduta:** encaminhar a **eletrofisiologia / unidade de síncope**; não protocolar ablação, marca-passo empírico nem doses neste documento.
+### O que NÃO deve ser feito
 
-## Não é indicação de EPS de rotina (seguir monitoramento / ILR)
+- Chamar qualquer **cardiopatia estrutural** de indicação Classe I-B para EPS.
+- Pedir EPS “para tranquilizar” em ECG normal, coração estruturalmente normal e baixa probabilidade pré-teste de arritmia.
+- Atrasar via urgente para aguardar consulta eletiva de eletrofisiologia.
 
-- ECG normal, **sem** cardiopatia estrutural, **sem** palpitações — EPS geralmente **não acrescenta** (já anotado no fluxograma de ILR desta pasta).
-- Baixo risco com causa reflexa/situacional/ortostática plausível — educação e plano ambulatorial; ver pacote pós-avaliação.
-- Recorrência rara sem alto risco e alta chance de captura com ILR — preferir estratégia de monitorização (ESC Classe I A em perfis adequados).
-- Novo alarme de alto risco no consultório (esforço, decúbito, sem pródromo + trauma, ECG alarmante, hipoperfusão) → **PS agora**, não “fila eletiva de EPS”.
+## Quando monitorização/ILR é preferível
 
-## Checklist de 90 segundos (consultório)
+Na ausência de marcadores de alto risco e de um substrato que aumente claramente a probabilidade pré-teste do EPS, a estratégia de **monitorização prolongada** costuma ser mais informativa, escolhendo Holter, loop externo ou ILR conforme frequência e previsibilidade dos sintomas.
 
-1. Algum alarme de PS / alto risco novo? → **PS** ([`sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar`](sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar.md)).
-2. Substrato da tabela de EPS? → **referir eletrofisiologia**.
-3. Sem substrato, recorrência provável, sem indicação convencional de CDI/MP? → caminho **ILR / monitorização** ([`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md)).
-4. Cardiomiopatia com FE reduzida / canalopatia / VA documentada? → gate CDI ([`candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar`](candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar.md)) — EPS **não** é pré-requisito automático para discutir CDI quando já há indicação de prevenção primária por FE (ACC/AHA/HRS 2017).
-5. Não inventar indicação de EPS “para tranquilizar” nem doses.
+Antes de classificar como baixo risco para ILR, confirmar que **não existe história familiar de morte súbita jovem**, síncope sem pródromos ou outro marcador de alto risco negligenciado.
 
-## Armadilhas
+## CDI não é consequência automática da síncope
 
-Pedir EPS em ECG normal sem estrutura; atrasar PS por “aguardar o eletrofisiologista”; confundir indicação de ILR precoce com falha de EPS; tratar síncope + FE ≤35% com cardiomiopatia como “só EPS” quando a questão é elegibilidade a CDI; duplicar escores do DE neste pacote.
+- **Síncope isolada não é indicação de CDI.**
+- FEVE levemente reduzida, por exemplo 40–49%, isoladamente, não cria uma via automática para CDI.
+- Em cardiomiopatias, doença isquêmica, HCM, Brugada, QT longo, CPVT ou outras doenças de risco arrítmico, aplicar os **critérios específicos da doença** e a diretriz contemporânea de arritmias ventriculares/morte súbita.
+- Quando houver possível indicação convencional de prevenção primária/secundária, considerar FEVE, tratamento otimizado, timing pós-IAM/revascularização, expectativa/prognóstico e demais critérios pertinentes.
+
+## Checklist de 90 segundos
+
+1. Sem pródromos, esforço/decúbito, ECG de alto risco, hipoperfusão, trauma importante ou história familiar de MSC jovem? → **reclassificar risco antes de qualquer fila eletiva**.
+2. IAM/cicatriz ou outro substrato específico para EPS? → **eletrofisiologia/EPS selecionado**.
+3. Baixo risco sem substrato? → **monitorização/ILR** conforme frequência dos eventos.
+4. Doença com possível indicação de CDI? → aplicar **guideline específico**, não usar a síncope como atalho para implante.
+5. Não inventar ablação, marca-passo, CDI ou doses neste documento.
 
 ## Limite da evidência
 
-Classes e níveis citados seguem ESC 2018 (PMID 29562304) e o papel selecionado do EPS no ACC/AHA/HRS 2017 (PMID 28280231). Este texto **não** redefine sensibilidade/especificidade do EPS nem indica ablação ou dispositivo — apenas o **gate ambulatorial de encaminhamento**.
+As classes de recomendação não devem ser transportadas entre substratos. O objetivo aqui é selecionar o **destino diagnóstico/assistencial**; decisão de dispositivo ou terapia segue a doença de base e diretrizes próprias.
