@@ -36,3 +36,7 @@ infra/backup/backup.log
 # fora do controle de versão evita que reapareçam em git status a cada ciclo
 infra/agenda_sync_cron.lock
 infra/agenda_sync_cron.log
+
+# worktrees temporários criados pelo Agent tool (isolation: "worktree") para
+# subagentes em paralelo — checkouts transitórios, nunca versionados
+.claude/worktrees/
