@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 37 documentos lidos integralmente e corrigidos; 126 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 38 documentos lidos integralmente e corrigidos; 125 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -52,6 +52,16 @@ Fontes verificadas: 19 referências originais: abstracts individualmente lidos;2
 - Ruptura de cúspide pode exigir cirurgia urgente apesar de aparente controle inflamatório.
 
 Fontes verificadas: 19 PMIDs originais obtidos diretamente por Eutils; 29200026 somente metadados sem abstract., PNDS2021 primário páginas19–20 e26 (PDF físico): avaliação, segurança e cirurgia., Arnaud2023 PMID37236870 e revisão traqueobrônquica2019 PII S1568997219301533 primárias online., Cache1620 auditado: ArticleIdList correto; extrator temporário novo tinha campo ids amplo, não usado no documento..
+
+## 5 — content/Aorta_e_doença_arterial_periférica/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado.md
+
+- Campens32pacientes+23portadores+28controles; Pingel28,6% entre35, não46 e não incidência.
+- Kranenburg rigidez maior queDM2, não menor; PXE não exclui aterosclerose.
+- Aspirina evitar quando possível não veto absoluto após indicação cardiovascular; diagnóstico molecular não depende de sinais universais.
+- TEMP74RCT primárioPETneutro, TCsecundário favorável e hiperfosfatemia; coorte326eventos2025 restaurada sem extrapolar benefício.
+- GenesENPP1/ABCC6nãoalélicos entre si; excluídas generalizações calcifilaxia/idade.
+
+Fontes verificadas: 10referências originais: abstracts individuais; GeneReviews online para manejo., TEMP PMID29519353 DOI10.1016/j.jacc.2017.12.062 eHarmsen39581064 DOI10.1016/j.atherosclerosis.2024.119051: abstracts primários online..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
