@@ -4,52 +4,66 @@ slug: vacinacao-cardiopata-no-consultorio-pos-sca-ic-checklist
 theme: "Geral"
 kind: protocolo
 fonte_producao: grok
-summary: "Checklist de uma visita ambulatorial: influenza (prioridade pós-SCA), pneumococo na IC, COVID conforme calendário local, documentação de oferta/recusa e quando não vacinar hoje."
-review_status: pendente_revisao
-review_note: "Irmão operacional dos sinalizadores de vacinação cardiopata; além IAMI/Udell/ESC já no hub Geral/geriátrica — 07/09/2026. Sem doses, marcas ou esquemas inventados."
+summary: "Checklist ambulatorial para influenza, pneumococo e demais vacinas no cardiopata: prioridade pós-SCA/IC, contraindicações específicas e quando adiar por doença aguda clinicamente relevante."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Corrigidos adiamento por doença leve, contraindicação por produto/componente e continuidade da checagem de outras vacinas na mesma visita. Sem doses, marcas ou esquemas congelados."
 source_refs:
   - "Fröbert O, Götberg M, Erlinge D, et al.; IAMI Investigators. Influenza Vaccination After Myocardial Infarction: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Trial. Circulation. 2021;144(18):1476-1484. DOI: 10.1161/CIRCULATIONAHA.121.057042. PMID: 34459211"
   - "Udell JA, Zawi R, Bhatt DL, et al. Association between influenza vaccination and cardiovascular outcomes in high-risk patients: a meta-analysis. JAMA. 2013;310(16):1711-1720. DOI: 10.1001/jama.2013.279206. PMID: 24150467"
   - "Visseren FLJ, Mach F, Smulders YM, et al.; ESC Scientific Document Group. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484. PMID: 34458905"
   - "McDonagh TA, Metra M, Adamo M, et al.; ESC Scientific Document Group. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992"
+  - "Brasil. Ministério da Saúde. Manual de Normas e Procedimentos para Vacinação. 2ª ed. Brasília: Ministério da Saúde; 2024."
 ---
 
 # Vacinação do cardiopata no consultório: checklist pós-SCA e IC
 
-Uso: **uma consulta** de seguimento pós-SCA, IC ou ASCVD. Complementa [`sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar`](sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar.md) e o fluxograma irmão.
+Uso: consulta de seguimento em **SCA/IAM recente, IC ou ASCVD**. Complementa [`sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar`](sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar.md) e [`fluxograma-sinalizadores-ambulatoriais-vacinacao-cardiopata`](fluxograma-sinalizadores-ambulatoriais-vacinacao-cardiopata.md).
 
-## Antes de falar em vacina
+## 1. Antes de vacinar
 
-- [ ] Paciente **hemodinamicamente estável**, sem dor torácica em investigação, sem IC aguda, sem sepse suspeita.
-- [ ] Se algum item falhar → **PS / via aguda**; remarcar vacinação depois.
+- [ ] Há **emergência cardiovascular** ou doença aguda **moderada/grave** com repercussão clínica? Se sim, priorizar avaliação/tratamento e adiar vacinação até melhora.
+- [ ] É apenas resfriado/doença leve, eventualmente com febre baixa, sem instabilidade? Isso **não é motivo isolado para adiar**.
+- [ ] Houve reação alérgica grave prévia? Identificar **qual vacina e qual componente**; não bloquear automaticamente imunobiológicos sem o componente implicado.
 
-## Influenza (temporada atual)
+## 2. Influenza — temporada atual
 
-- [ ] Status da temporada documentado no prontuário?
-- [ ] **Pós-SCA / IAM ≤1 ano** sem vacina → **oferecer hoje** (IAMI PMID 34459211; Udell PMID 24150467).
-- [ ] ASCVD / alto risco sem SCA recente → oferecer (ESC Prevenção 2021 PMID 34458905).
-- [ ] Idoso ≥65 a → lembrar discussão de formulação disponível no documento geriátrico (sem escolher marca aqui).
-- [ ] Oferta / aplicação / recusa **registrada**.
+- [ ] Status da temporada documentado?
+- [ ] SCA/IAM recente ou internação por DAC de alto risco sem vacina da temporada → **priorizar oferta/aplicação hoje**, se clinicamente estável e elegível.
+- [ ] ASCVD estabelecida → oferecer conforme prevenção cardiovascular vigente.
+- [ ] IC → verificar influenza como parte do pacote preventivo.
+- [ ] Oferta / aplicação / recusa / encaminhamento **registrados**.
 
-## Pneumococo (sobretudo IC)
+## 3. Pneumococo — quando indicado
 
-- [ ] Paciente com **IC** → verificar status pneumocócico (ESC HF 2021 PMID 34447992).
-- [ ] Outras indicações (idade, DPOC, asplenia etc.) → seguir calendário nacional — **não inventar esquema PCV/PPSV neste checklist**.
-- [ ] Se desatualizado: encaminhar com **prazo curto** se não aplicar no consultório.
+- [ ] IC, idade e comorbidades tornam o paciente elegível pelo calendário vigente?
+- [ ] Se indicado e disponível, atualizar conforme PNI/calendário oficial.
+- [ ] Se o consultório não aplica, encaminhar com **prazo definido**.
+- [ ] Não inventar neste checklist sequência PCV/PPSV, produto ou intervalo: usar o calendário vigente.
 
-## COVID e demais
+## 4. COVID e demais vacinas
 
-- [ ] Status COVID conforme **calendário local vigente** (sem esquemas inventados).
-- [ ] Diferencial: sintomas de miopericardite pós-mRNA recente → avaliar, não reforçar hoje.
+- [ ] Verificar COVID e demais imunobiológicos aplicáveis pelos critérios atuais.
+- [ ] Depois de aplicar influenza, **continuar o checklist**: não encerrar a visita antes de avaliar outras vacinas simultaneamente indicadas.
+- [ ] Quando mais de uma vacina estiver indicada, avaliar **coadministração na mesma visita** conforme regras específicas vigentes.
 
-## Educação em 30 segundos
+## 5. Alergia/contraindicação
 
-- [ ] Explicar que influenza pode **desencadear** evento coronariano / descompensação de IC — por isso entra na consulta de cardiologia.
-- [ ] Alarmes pós-infecção: dispneia nova, dor torácica, ortopneia, síncope → **PS**, não “esperar o retorno”.
+- [ ] A reação foi realmente anafilática?
+- [ ] A qual vacina/dose ocorreu?
+- [ ] Qual componente é suspeito ou confirmado?
+- [ ] Bloquear **somente** o produto/rota que contenha o componente implicado até esclarecimento.
+- [ ] Se necessário, encaminhar para sala de vacinação de referência/alergologia sem abandonar as demais vacinas elegíveis.
+
+## 6. Educação em 30 segundos
+
+- [ ] Explicar que infecções respiratórias podem precipitar descompensação e eventos cardiovasculares.
+- [ ] Reforçar alarmes: dor torácica, dispneia importante, síncope, hipotensão ou deterioração sistêmica → **via aguda**.
+- [ ] Entregar/registrar onde e quando completar o que não foi aplicado hoje.
 
 ## O que não fazer
 
-- Inventar doses, lotes, marcas ou intervalos.
-- Vacinar na vigência de instabilidade.
-- Deixar “orientei verbalmente” sem registro no pós-IAM.
-- Tratar recusa sem documentar e sem reoferecer na próxima visita.
+- Adiar vacinação por **doença leve** sem outra razão clínica.
+- Vacinar durante instabilidade cardiovascular ou doença aguda moderada/grave sem avaliação apropriada.
+- Transformar anafilaxia a um componente em contraindicação universal a todas as vacinas.
+- Encerrar a checagem após a primeira vacina quando outras também estão indicadas.
+- Inventar doses, marcas, intervalos ou esquemas dentro deste documento.
