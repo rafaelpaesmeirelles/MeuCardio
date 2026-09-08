@@ -4,11 +4,11 @@ slug: sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar
 theme: "Cardio-oncologia"
 kind: protocolo
 fonte_producao: grok
-summary: "Pacote operacional de consultório sob bevacizumabe/VEGF-TKI: reconhecer alarme de lesão aguda (incluindo PRES), quando pausar a terapia oncológica por PA grave, e quando retorno precoce com anti-hipertensivo oral — sem doses e sem reescrever a crise hipertensiva por TKI já revisada."
-review_status: pendente_revisao
-review_note: "Pacote Tudo-com-Tudo 07/09/2026: lacuna ambulatorial VEGF/TKI-HTN (destino PS vs pausa vs retorno) além de #834 (antraciclina/HER2/ICI) e #869 (RIHD). Pivô: cardiomiopatia tardia pós-antraciclina já coberta em #834. Anti-colisão com hipertensao-grave-e-crise-hipertensiva-induzida-por-tki, PRES antiangiogênico e #828 (HTN geral). Fontes: ESC 2022 PMID 36017568; Maitland PMID 20351338; Steingart PMID 22305831; Hamnvik PMID 25236375. Sem doses; sem PMID inventado."
+summary: "Pacote operacional de consultório sob bevacizumabe/inibidores da via VEGF: reconhecer lesão aguda/PRES, quando pausar temporariamente a terapia por PA grave e quando tratar no ambulatório — sem doses e sem duplicar o protocolo de crise por TKI."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Corrigidos limiares para PAS >=180 OU PAD >=110 na pausa, regra ESC específica PAS >=160 E PAD >=100 para associação IECA/BRA + BCC di-hidropiridínico salvo contraindicação, separação entre sintoma CV e intensificação anti-HTA, gate renal agudo para emergência, vigilância domiciliar para inibidores da via VEGF em geral e retirada da atribuição incorreta de eficácia a Hamnvik. Fontes: ESC 2022 PMID 36017568; Maitland PMID 20351338; Steingart PMID 22305831; Hamnvik PMID 25236375. Sem doses."
 source_refs:
-  - "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568"
+  - "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568"
   - "Maitland ML, Bakris GL, Black HR, et al. Initial Assessment, Surveillance, and Management of Blood Pressure in Patients Receiving Vascular Endothelial Growth Factor Signaling Pathway Inhibitors. J Natl Cancer Inst. 2010;102(9):596-604. DOI: 10.1093/jnci/djq091. PMID: 20351338"
   - "Steingart RM, Bakris GL, Chen HX, et al. Management of cardiac toxicity in patients receiving vascular endothelial growth factor signaling pathway inhibitors. Am Heart J. 2012;163(2):156-163. DOI: 10.1016/j.ahj.2011.10.018. PMID: 22305831"
   - "Hamnvik OP, Choueiri TK, Turchin A, et al. Clinical risk factors for the development of hypertension in patients treated with inhibitors of the VEGF signaling pathway. Cancer. 2015;121(2):311-319. DOI: 10.1002/cncr.28972. PMID: 25236375"
@@ -16,85 +16,79 @@ source_refs:
 
 # Sinalizadores ambulatoriais de hipertensão por VEGF/TKI: quando encaminhar, pausar e reavaliar
 
-Este protocolo responde a uma pergunta de **consultório / ciclo oncológico**: diante de bevacizumabe, aflibercepte, ramucirumabe ou VEGF-TKI (sunitinibe, sorafenibe, pazopanibe, axitinibe, cabozantinibe, lenvatinibe, entre outros), **quais sinais exigem pronto-socorro agora**, quando **pausar temporariamente** a terapia antiangiogênica por PA grave, e quais pedem **ajuste oral com retorno precoce** — sem reescrever a ficha de crise hipertensiva por TKI nem o PRES por antiangiogênicos.
+Este protocolo responde a uma pergunta de **consultório / ciclo oncológico**: diante de bevacizumabe, aflibercepte, ramucirumabe ou VEGF-TKI (sunitinibe, sorafenibe, pazopanibe, axitinibe, cabozantinibe, lenvatinibe, entre outros), **quais sinais exigem pronto-socorro agora**, quando **pausar temporariamente** a terapia associada à hipertensão grave e quais cenários podem ser manejados no ambulatório com monitorização precoce.
 
 Não substitui:
-- crise hipertensiva / TKI — [`hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md) e [`fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md);
-- PRES por antiangiogênicos — [`sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva`](sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva.md);
-- hipertensão antineoplásica geral / paradoxo de eficácia — [`hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia`](hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia.md);
-- sinalizadores ambulatoriais de hipertensão **fora** do contexto oncológico — pacote #828;
-- vigilância antraciclina / trastuzumabe / ICI (#834) nem RIHD (#869).
+- [`hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md) e [`fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md);
+- [`sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva`](sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva.md);
+- [`hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia`](hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia.md).
 
 Árvore: [`fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino`](fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino.md). Checklist: [`hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme`](hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme.md).
 
 ## Princípio
 
-**Hipertensão por inibição da via VEGF é efeito de classe mecanístico**, comum e muitas vezes precoce (Maitland et al., PMID 20351338; Steingart et al., PMID 22305831). A ESC 2022 (PMID 36017568) recomenda meta pressórica durante terapia oncológica tipicamente **&lt;140/90 mmHg** (considerar &lt;130/80 se bem tolerado), vigilância domiciliar nos primeiros meses sob VEGF-TKI, e **pausa temporária** da terapia associada à hipertensão se PAS &gt;180 mmHg **ou** PAD &gt;110 mmHg, com discussão multidisciplinar. Hamnvik et al. (PMID 25236375) mostram que hipertensão prévia, idade ≥60 anos e IMC ≥25 kg/m² predizem elevação sob anti-VEGF — limiar mais baixo de atenção nesses pacientes.
+A hipertensão por inibição da via VEGF é efeito de classe, frequentemente precoce. A ESC 2022 recomenda vigilância pressórica ativa e, quando a PA atinge **PAS >=180 mmHg OU PAD >=110 mmHg**, **interrupção temporária da terapia associada à hipertensão**, otimização do tratamento anti-hipertensivo e decisão multidisciplinar sobre reinício. **Lesão aguda de órgão-alvo**, e não o valor isolado da PA, define emergência hipertensiva.
 
-**Não é o número isolado que define emergência — é a lesão aguda de órgão-alvo (ou suspeita de PRES) em curso.**
+## Encaminhar agora ao PS / emergência
 
-## Sinalizadores → encaminhar agora (PS / emergência)
-
-| Domínio | Sinais |
+| Domínio | Sinalizador |
 |---|---|
-| Neurológico / PRES | Cefaleia intensa nova, alteração visual aguda, confusão, convulsão, déficit focal — pensar PRES sob anti-VEGF mesmo com PA só moderadamente elevada |
-| Cardíaco | Dor torácica anginosa, dispneia súbita, ortopneia, edema agudo, síncope |
-| Vascular | Dor torácica/dorsal lancinante, assimetria de pulsos/PA (síndrome aórtica) |
-| Renal | Oligúria aguda, piora rápida de creatinina com PA muito elevada |
-| Emergência hipertensiva | Qualquer lesão aguda de órgão-alvo + PA elevada — seguir via de emergência; pausar o antiangiogênico causal |
+| Neurológico / PRES | Cefaleia intensa nova, alteração visual aguda, confusão, convulsão ou déficit focal |
+| Cardíaco | Dor torácica anginosa, dispneia súbita, ortopneia/edema pulmonar, síncope ou hipoperfusão |
+| Vascular | Dor torácica/dorsal súbita com suspeita de síndrome aórtica aguda |
+| Renal | Oligúria aguda ou **deterioração rápida da função renal/IRA** associada à PA elevada |
+| Emergência hipertensiva | Qualquer lesão aguda de órgão-alvo + PA elevada |
 
-**Conduta:** não “esperar o próximo ciclo”. Encaminhar; não protocolar doses IV neste documento.
+**Conduta:** PS agora e suspensão temporária do agente causal enquanto se esclarece a toxicidade; manejo agudo conforme o órgão-alvo. Suspeita de PRES deve ser tratada como emergência neurológica mesmo quando a PA não é extremamente elevada.
 
-## PA elevada sem lesão aguda → o que fazer no ambulatório
+## PA elevada sem lesão aguda
 
-### 1. Confirmar a medida e caçar pseudocrise
-Repouso, manguito adequado, ≥2 medidas; dor, ansiedade, AINE, corticosteroide, má adesão, retenção hídrica.
+### Confirmar a medida e fatores reversíveis
+Repouso, manguito adequado e medidas repetidas; revisar dor, ansiedade, AINE, corticosteroide, retenção hídrica e adesão.
 
-### 2. Alinhar aos limiares ESC 2022 (conceito, sem doses)
+### Alinhar aos limiares ESC 2022
 
 | Situação | Direção ambulatorial |
 |---|---|
-| Meta habitual sob terapia | Manter PA tipicamente &lt;140/90; reforçar MRPA/diário nos primeiros meses (VEGF-TKI) |
-| PA ≥160/100 sem lesão aguda | Intensificar anti-hipertensivo oral (IECA/BRA ± BCC di-hidropiridínico conforme ESC); retorno precoce; discutir com oncologia se persistir |
-| PAS &gt;180 **ou** PAD &gt;110 sem lesão aguda | **Pausar temporariamente** o agente antiangiogênico associado; otimizar oral; retorno 24–72 h e discussão cardio-oncológica antes de reiniciar |
-| Sintoma cardiovascular novo + PA elevada | Antecipar ECG ± biomarcadores ± eco se suspeita de CTRCD / isquemia |
+| Abaixo dos limiares graves | Tratar conforme risco CV/contexto oncológico e manter monitorização seriada/domiciliar |
+| **PAS >=160 E PAD >=100 mmHg**, sem lesão aguda e abaixo do limiar de pausa | A recomendação ESC específica é **IECA ou BRA associado a BCC di-hidropiridínico**, salvo contraindicação/interação; retorno precoce |
+| Elevação isolada de apenas um componente abaixo do limiar de pausa | Tratar conforme risco e contexto; não ignorar, mas não aplicar automaticamente a regra combinada PAS>=160 E PAD>=100 |
+| **PAS >=180 OU PAD >=110 mmHg**, sem lesão aguda | **Pausar temporariamente** o agente associado à hipertensão, otimizar anti-HTA oral e discutir reinício com oncologia/cardio-oncologia |
+| Sintoma cardiovascular novo sem emergência | **Não intensificar anti-HTA apenas pelo sintoma**. Avaliar o sintoma em ramo próprio: ECG, biomarcadores, eco e investigação de CTRCD/isquemia conforme apresentação |
 
-### 3. Retorno precoce
-- **24–72 h** se PA grave, fragilidade, dúvida residual ou pausa do TKI/VEGF;
-- **≤7 dias** se elevação moderada já com plano oral e acesso garantido;
-- Orientação escrita dos alarmes da tabela (incluindo sintomas de PRES).
+Evitar verapamil/diltiazem como rotina quando houver potencial de interação com o TKI. Este documento não prescreve doses.
 
-### 4. Classe de anti-hipertensivo (qualitativa)
-ESC 2022: IECA/BRA como base; di-hidropiridínico como segunda linha; **evitar verapamil/diltiazem** por interações com vários TKI. **Não protocolar doses** neste pacote.
+## Monitorização e retorno
 
-## Referência especializada (sem PS)
+- Monitorização domiciliar/seriadas de PA deve ser considerada para **inibidores da via VEGF em geral**, não apenas TKIs, especialmente no início do tratamento.
+- Após pausa por PA grave, o reinício não é automático: requer controle pressórico e decisão multidisciplinar.
+- Proteinúria relevante ou deterioração renal **sem** critérios de IRA/lesão aguda pode motivar avaliação especializada; deterioração renal aguda/rápida entra no gate de emergência.
 
-Encaminhar **cardio-oncologia** quando:
-- PA refratária apesar de intensificação oral e adesão confirmada;
-- necessidade de decidir reinício / redução / troca do antiangiogênico após pausa por PA ≥180/110;
-- suspeita de CTRCD concomitante (dispneia, queda funcional, biomarcador/eco anormais);
-- proteinúria nova relevante ou vasculotoxicidade arterial sob bevacizumabe (contexto em [`toxicidade-cardiovascular-do-bevacizumabe-e-inibidores-de-vegf`](toxicidade-cardiovascular-do-bevacizumabe-e-inibidores-de-vegf.md)).
+## PRES: suspeita versus diagnóstico confirmado
+
+- **Suspeita de PRES:** PS/emergência, imagem e suspensão do antiangiogênico enquanto se investiga.
+- **PRES confirmado sob bevacizumabe:** o documento canônico baseado na bula do Avastin registra **descontinuação do bevacizumabe**; a segurança de reinício após PRES é desconhecida. Não tratar como simples “pausa e reinício”.
 
 ## Checklist de 90 segundos
 
-1. Alarme neurológico/PRES, SCA, IC aguda, aórtica, renal agudo? → **PS agora** + pausar antiangiogênico.
-2. PAS &gt;180 ou PAD &gt;110 sem lesão aguda? → **pausa temporária** + oral + retorno 24–72 h.
-3. PA ≥160/100 controlável? → intensificar oral + retorno precoce; não inventar dose aqui.
-4. Não usar este pacote no lugar de #834, #869 ou #828.
+1. Há lesão aguda/PRES/SCA/IC aguda/síndrome aórtica/IRA? → **PS agora**.
+2. Sem lesão aguda, PAS >=180 ou PAD >=110? → **pausa temporária** + otimização oral + discussão multidisciplinar.
+3. PAS >=160 **e** PAD >=100? → associação IECA/BRA + BCC di-hidropiridínico, salvo contraindicação, conforme protocolo ESC canônico.
+4. Sintoma CV novo sem PA elevada? → investigar o sintoma; **não** intensificar anti-HTA por reflexo.
+5. PRES confirmado sob bevacizumabe? → **descontinuar bevacizumabe**; não presumir reinício seguro.
 
 ## Armadilhas
 
-Chamar toda PA ≥180/110 de “emergência” sem procurar lesão aguda; manter VEGF-TKI em PA grave sem discussão; liberar cefaleia + flashs visuais “para a próxima consulta”; usar verapamil/diltiazem; confundir hipertensão (às vezes marcador de eficácia — Hamnvik) com licença para negligenciar o controle pressórico.
+- Usar `>` em vez de `>=` nos limiares de pausa.
+- Tratar sintoma cardiovascular isolado como indicação automática de intensificar anti-hipertensivo.
+- Mandar deterioração renal aguda para “retorno precoce” em vez de emergência.
+- Limitar diário domiciliar de PA apenas aos TKIs quando o risco existe em outros inibidores da via VEGF.
+- Atribuir a Hamnvik evidência de hipertensão como marcador de eficácia antitumoral; esse estudo avaliou fatores de risco para hipertensão, não eficácia.
 
-## Limite da evidência
-
-Prazos de retorno (24–72 h / ≤7 dias) são **marcos operacionais** deste pacote. Limiares de meta e de pausa vêm da ESC 2022; vigilância precoce da PA, de Maitland 2010 / Steingart 2012. Não há ensaio único que fixe horas universais de retorno ambulatorial sob VEGF.
-
-## Slugs relacionados (existentes)
+## Slugs relacionados
 
 - `hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`
 - `fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`
 - `sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva`
 - `hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia`
 - `toxicidade-cardiovascular-do-bevacizumabe-e-inibidores-de-vegf`
-- `insuficiencia-cardiaca-e-disfuncao-de-ve-por-inibidores-de-vegfr-sunitinibe-e-classe`
