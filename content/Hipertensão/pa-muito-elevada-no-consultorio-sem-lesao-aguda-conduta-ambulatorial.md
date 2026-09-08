@@ -4,9 +4,9 @@ slug: pa-muito-elevada-no-consultorio-sem-lesao-aguda-conduta-ambulatorial
 theme: "Hipertensão"
 kind: protocolo
 fonte_producao: grok
-summary: "Braço mais comum do pacote: PAS ≥180 e/ou PAD ≥110 mmHg sem lesão aguda — o que ESC 2024 e SBC 2025 pedem, o que não fazer, e como usar MRPA/adesão."
-review_status: pendente_revisao
-review_note: "Doc 3/3 do pacote ambulatory red flags (07/09/2026), pivô de Lp(a). Fontes: ESC 2024 PMID 39210715; SBC 2025 PMID 41294179; AHA/ACC 2025 PMID 40815242; ESC Council PMID 30165588."
+summary: "Conduta no adulto não gestante com PAS ≥180 e/ou PAD ≥110 mmHg sem lesão aguda de órgão-alvo, após excluir retinopatia grave e outros alarmes; tratamento oral, retorno precoce e proibição de nifedipina sublingual."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. O cenário foi limitado ao adulto não gestante, acrescentada busca de retinopatia hipertensiva grave e tornada absoluta a proibição de nifedipina sublingual; gestação/puerpério ≥160/110 persistente foi removida deste ramo e direcionada à via obstétrica urgente."
 source_refs:
   - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715"
   - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179"
@@ -16,37 +16,63 @@ source_refs:
 
 # PA muito elevada no consultório sem lesão aguda: conduta ambulatorial prática
 
-Cenário: adulto com **PAS ≥180 e/ou PAD ≥110 mmHg**, **sem** déficit neurológico, dor torácica/dorsal súbita, dispneia aguda, alteração visual aguda, oligúria, alarme obstétrico ou crise adrenérgica.
+Cenário: **adulto não gestante** com PAS ≥180 e/ou PAD ≥110 mmHg, após medida confirmatória adequada, **sem evidência de lesão aguda de órgão-alvo**.
 
-ESC 2024 (PMID 39210715) pede excluir emergência; SBC 2025 (PMID 41294179) recomenda oral + reavaliação em até **7 dias**. Contexto: [`sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar`](sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar.md).
+> **Não aplicar este ramo à gestação/puerpério com PA persistente ≥160/110 mmHg.** Esse cenário exige via obstétrica urgente, conforme o fluxograma de emergência hipertensiva.
 
-## Passo a passo
+Contexto: [`sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar`](sinais-de-alarme-ambulatoriais-na-hipertensao-quando-encaminhar.md) e [`fluxograma-emergencia-hipertensiva`](fluxograma-emergencia-hipertensiva.md).
 
-### 1. Confirmar a medida
-Repouso ≥5 min, manguito adequado, ≥2 medidas; documentar negativa da checklist de alarme.
+## 1. Confirmar a medida
 
-### 2. Caçar pseudocrise
-Adesão nas últimas 24–48 h? Dor, abstinência, estimulantes, AINE? Ansiedade? Técnica domiciliar — [`automedida-domiciliar-de-pressao-arterial-guiando-titulacao-tasminh4-e-home-bp`](automedida-domiciliar-de-pressao-arterial-guiando-titulacao-tasminh4-e-home-bp.md). Ver também [`hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco`](hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco.md).
+- repouso adequado;
+- manguito correto;
+- repetir ≥2 medidas;
+- revisar medicações, dor, ansiedade, estimulantes e adesão.
 
-### 3. Oral, não IV
-Iniciar ou intensificar esquema oral. Não nifedipina sublingual de rotina. Não IV ambulatorial. ESC Council 2019 (PMID 30165588): sem lesão aguda → orais.
+## 2. Confirmar que realmente não há lesão aguda
 
-### 4. Retorno
+Perguntar e examinar ativamente:
+
+- déficit focal, alteração de consciência, convulsão ou cefaleia em trovão;
+- dor torácica sugestiva de SCA, edema pulmonar/dispneia aguda;
+- dor torácica/dorsal súbita ou sinais de síndrome aórtica;
+- oligúria ou deterioração renal aguda;
+- **fundoscopia com papiledema, hemorragias/exsudatos extensos ou outra retinopatia hipertensiva grave**, mesmo sem queixa visual.
+
+Se qualquer item estiver presente ou houver dúvida fundamentada → **via de emergência**, não este protocolo.
+
+## 3. Tratar por via oral
+
+Sem lesão aguda, iniciar ou intensificar terapia **oral** conforme o contexto clínico e a diretriz vigente.
+
+**Não utilizar nifedipina sublingual de liberação imediata.** Essa via é contraindicada em crises hipertensivas por poder produzir queda abrupta e imprevisível da PA e hipoperfusão/isquemia. A proibição é absoluta neste contexto — não apenas “evitar de rotina”.
+
+Também não usar terapia IV em consultório para “normalizar” a PA sem lesão aguda.
+
+## 4. Retorno
 
 | Situação | Prazo |
 |---|---|
-| PA ≥180/110 sem lesão aguda, acesso OK | ≤7 dias (SBC 2025) |
-| Sem acesso / fragilidade / dúvida residual | 24–72 h ou observação com suporte |
-| Sintoma de alarme após a consulta | PS imediato |
+| PA ≥180/110 sem lesão aguda, acesso e adesão possíveis | reavaliação em até 7 dias conforme referência SBC 2025 |
+| Fragilidade, acesso precário, dúvida residual ou PA persistindo muito elevada após medidas iniciais | antecipar para 24–72 h ou observação clínica adequada |
+| Novo sinal de alarme | **PS imediato** |
 
-### 5. Orientação escrita
-PS se: déficit focal, fala enrolada, confusão; dor no peito/costas súbita; falta de ar intensa; perda visual; convulsão; na gestação/puerpério — cefaleia forte, flashs, dor em hipocôndrio direito.
+## 5. MAPA/MRPA
 
-### 6. MAPA/MRPA
-Só após excluir emergência, se jaleco branco for hipótese forte. Não atrasa oral se risco já alto. [`fluxograma-jaleco-branco-e-mascarada-mapa-mrpa`](fluxograma-jaleco-branco-e-mascarada-mapa-mrpa.md).
+Podem ajudar quando há suspeita de jaleco branco ou necessidade de documentar controle fora do consultório, **depois de excluir lesão aguda**. Não devem atrasar tratamento oral quando este já está indicado nem investigação de emergência.
+
+## 6. PPGL/feocromocitoma
+
+Cefaleia + sudorese + palpitações e PA lábil, em paciente estável **sem lesão aguda**, sugerem PPGL e justificam investigação acelerada; não são, sozinhas, critério para enviar todo paciente ao PS.
 
 ## Armadilhas
-Tratar ≥180/110 como emergência automática; liberar sem retorno/orientação; intensificar sem checar adesão; pedir MAPA e ignorar sintomas de alarme.
 
-## Limite da evidência
-O prazo de até 7 dias é marco operacional da SBC 2025; antecipar o retorno é prudência clínica, não nova classe inventada aqui.
+- Aplicar este protocolo à gestante/puerpério com PA grave persistente.
+- Concluir “sem lesão aguda” sem considerar fundoscopia/retinopatia grave quando clinicamente indicada.
+- Usar nifedipina sublingual.
+- Tentar normalizar rapidamente a PA com medicação IV fora de ambiente apropriado.
+- Dar alta sem retorno definido e sinais de alarme por escrito.
+
+## Limite
+
+O prazo de até 7 dias é referência operacional; deve ser encurtado conforme contexto clínico, acesso, fragilidade e persistência da elevação. Este documento não define dose nem escolha farmacológica individual.
