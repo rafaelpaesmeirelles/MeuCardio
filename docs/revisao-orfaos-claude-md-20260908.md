@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 36 documentos lidos integralmente e corrigidos; 127 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 37 documentos lidos integralmente e corrigidos; 126 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -42,6 +42,16 @@ Fontes verificadas: 9 referências originais: identidade e abstracts conferidos.
 - PAN-VHB não proibida pela nomenclatura; anticoagulação e corticoide não protocolo universal; mortalidade antiviral115 não significativa.
 
 Fontes verificadas: 19 referências originais: abstracts individualmente lidos;23045170/34353474 somente metadados, sem abstract disponível., ACR/VF DOI10.1002/art.41776 PDF primário e publicação simultânea acr.24633 consultados., GLOBAL-PAN38343337 eVHB16148731 relidos completos no cache para exclusões e significância..
+
+## 4 — content/Aorta_e_doença_arterial_periférica/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma.md
+
+- PMID15380048 corrigido para estudo murino2004 DOIar1218, não autoanticorpos humanos2001.
+- Resposta agrupada de biológicos não superioridade; mielodisplasia tendência em2018, não VEXAS identificado.
+- Broncoscopia seletiva por risco, biópsia traqueal desaconselhada; ECG/eco basal sustentados pelo PNDS.
+- Erdogan114 selecionados por aorta; IQR não amplitude; não angioTC fixa indefinida universal.
+- Ruptura de cúspide pode exigir cirurgia urgente apesar de aparente controle inflamatório.
+
+Fontes verificadas: 19 PMIDs originais obtidos diretamente por Eutils; 29200026 somente metadados sem abstract., PNDS2021 primário páginas19–20 e26 (PDF físico): avaliação, segurança e cirurgia., Arnaud2023 PMID37236870 e revisão traqueobrônquica2019 PII S1568997219301533 primárias online., Cache1620 auditado: ArticleIdList correto; extrator temporário novo tinha campo ids amplo, não usado no documento..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
