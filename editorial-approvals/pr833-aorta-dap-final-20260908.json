@@ -1,0 +1,61 @@
+{
+  "batch": "pr833-aorta-dap-final-20260908",
+  "base": "e7b7c35def95831f2745f5e5810f477de6a6da28",
+  "pr_head_before_review": "db373c46ba8497d70ea1d4688bae30ee00acc0fe",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão clínica/editorial e auditoria adversarial por Codex, sob instrução explícita do responsável em 08/09/2026; aprovação restrita aos três documentos identificados pelos hashes abaixo. Não atribui revisão humana independente.",
+  "review_date": "2026-09-08",
+  "fronts": {
+    "documentos": [
+      "sinalizadores-ambulatoriais-de-isquemia-critica-ameacadora-de-membro-clti",
+      "sinalizadores-ambulatoriais-de-aneurisma-de-aorta-abdominal-ameaca-de-rotura",
+      "fluxograma-ambulatorial-dap-quando-encaminhar-urgencia-versus-vascular"
+    ]
+  },
+  "content_sha256": {
+    "content/Aorta_e_doença_arterial_periférica/sinalizadores-ambulatoriais-de-isquemia-critica-ameacadora-de-membro-clti.md": "e20ec0a264b663c2f5514532219a20bf703b1925bf43d7455c46d7b59885c6f8",
+    "content/Aorta_e_doença_arterial_periférica/sinalizadores-ambulatoriais-de-aneurisma-de-aorta-abdominal-ameaca-de-rotura.md": "b2791280128b0f3730b03e968107afa30aa8ca6097fe3fffb001f1a11d80fe58",
+    "content/Aorta_e_doença_arterial_periférica/fluxograma-ambulatorial-dap-quando-encaminhar-urgencia-versus-vascular.md": "010d493b1950ba8fd8842432d39e019bdcf55bc3bd691267a7f9e18b21a5f55e"
+  },
+  "report": "docs/reports/tudo-com-tudo-aorta-dap-sinalizadores.md",
+  "release_constraints": [
+    "Sem merge ou deploy neste PR.",
+    "Manifesto global full-corpus preservado em relação à main; consolidar total e fingerprints somente no release integrado.",
+    "Aprovação editorial do lote não certifica publicação no banco nem o release integral."
+  ],
+  "validation": {
+    "focused_tests_passed": 12,
+    "audit_gate_tests_passed": 25,
+    "audit_gate_subtests_passed": 4,
+    "inventory_records": 11584,
+    "inventory_files": 2886,
+    "tudo_com_tudo_gate": {
+      "approval_manifest_blockers": 0,
+      "approval_manifest_reasons": {},
+      "blocker_count": 0,
+      "broken_markdown_links": 0,
+      "editorial_blockers": 0,
+      "editorial_reasons": {},
+      "passed": true,
+      "reference_blockers": 0,
+      "reference_reasons": {}
+    },
+    "batch_approval_gate": {
+      "approval_manifest": "editorial-approvals\\pr833-aorta-dap-final-20260908.json",
+      "approval_manifest_blockers": 0,
+      "approval_manifest_items": 3,
+      "approval_manifest_reasons": {},
+      "blocker_count": 0,
+      "broken_markdown_links": 0,
+      "editorial_blockers": 0,
+      "editorial_reasons": {},
+      "passed": true,
+      "reference_blockers": 0,
+      "reference_reasons": {}
+    },
+    "semantic_residual_errors": [],
+    "semantic_invariant_errors": [],
+    "semantic_after_f1": 1.0,
+    "scope": "Local corpus and production link normalizer; no database publication or deployed UI test."
+  }
+}
