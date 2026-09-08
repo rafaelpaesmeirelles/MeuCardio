@@ -1,12 +1,12 @@
 ---
 title: "Suspeita ambulatorial de INOCA/MINOCA: quando escalar (PS vs. via especializada)"
 slug: suspeita-ambulatorial-inoca-minoca-quando-escalar
-theme: "Doença_coronariana"
+theme: "Doença coronariana"
 kind: protocolo
 fonte_producao: grok
-summary: "Consultório: após angiografia sem obstrução (ou SCC com alta suspeita de ANOCA/INOCA), quais sinais exigem PS agora (SCA/MINOCA em curso) e quais pedem escalada eletiva para RM/teste funcional invasivo — sem doses e sem reabrir os verbetes diagnósticos."
-review_status: pendente_revisao
-review_note: "Pacote Tudo-com-Tudo Doença_coronariana 07/09/2026: lacuna ambulatorial INOCA/MINOCA (destino) além de #843 (angina instabilizando) e #874 (pós-PCI). Não duplica anoca-inoca-…-esc-2024, fluxograma-minoca-investigacao-diagnostica nem #697 (verbete). Fontes: ESC 2024 CCS PMID 39210710; ESC 2023 ACS PMID 37622654; AHA MINOCA 2019 PMID 30913893; COVADIS MVA PMID 29031990; COVADIS VSA PMID 26245334; CorMicA PMID 30266608. Sem doses."
+summary: "Consultório: após angiografia sem obstrução ou alta suspeita de ANOCA/INOCA, quais sinais exigem PS agora e quais pedem escalada eletiva para RM/teste funcional invasivo — sem doses e sem reabrir os verbetes diagnósticos."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Corrigidos tema canônico, handoffs quebrados para PRs ainda ausentes, sobretriagem de dor de repouso crônica estável e separação entre urgência e via especializada ANOCA/INOCA. Fontes: ESC 2024 CCS PMID 39210710; ESC 2023 ACS PMID 37622654; AHA MINOCA PMID 30913893; COVADIS; CorMicA PMID 30266608."
 source_refs:
   - "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710"
   - "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
@@ -18,78 +18,52 @@ source_refs:
 
 # Suspeita ambulatorial de INOCA/MINOCA: quando escalar
 
-Pergunta de **consultório**: paciente com **angina/isquemia persistente** e coronárias **sem obstrução significativa** (ou alta suspeita clínica de ANOCA/INOCA antes/depois da angiografia) — **quando ir ao PS agora**, e quando **escalar** para via especializada (RM cardíaca, teste funcional invasivo / centro com expertise), sem encerrar como “coronárias normais = sem doença”?
+Pergunta de **consultório**: paciente com **angina/isquemia persistente** e coronárias **sem obstrução significativa** — **quando ir ao PS agora**, e quando **escalar** para via especializada (RM cardíaca, teste funcional invasivo / centro com expertise)?
 
 Não substitui:
-- diagnóstico/endótipos ANOCA/INOCA — [`anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024`](anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024.md), [`angina-microvascular-endotipo-cmd-na-pratica`](angina-microvascular-endotipo-cmd-na-pratica.md), [`angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento`](angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento.md);
-- algoritmo hospitalar MINOCA — [`fluxograma-minoca-investigacao-diagnostica`](fluxograma-minoca-investigacao-diagnostica.md), [`minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea`](minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea.md);
-- angina instabilizando / pós-IAM (#843) — [`sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar`](sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar.md);
-- pós-PCI (#874) — [`sinalizadores-ambulatoriais-pos-pci-quando-encaminhar`](sinalizadores-ambulatoriais-pos-pci-quando-encaminhar.md).
+- [`anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024`](anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024.md);
+- [`angina-microvascular-endotipo-cmd-na-pratica`](angina-microvascular-endotipo-cmd-na-pratica.md);
+- [`angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento`](angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento.md);
+- [`fluxograma-minoca-investigacao-diagnostica`](fluxograma-minoca-investigacao-diagnostica.md).
 
 Árvore: [`fluxograma-ambulatorial-suspeita-inoca-minoca-destino`](fluxograma-ambulatorial-suspeita-inoca-minoca-destino.md). Braço pós-angiografia: [`pos-angiografia-sem-obstrucao-ambulatorial-alarme-e-encaminhamento`](pos-angiografia-sem-obstrucao-ambulatorial-alarme-e-encaminhamento.md).
 
 ## Princípio
 
-**“Angiografia sem obstrução” não encerra a história clínica — decide o próximo destino.**
-
-- ESC 2024 CCS (PMID 39210710): ANOCA/INOCA entra cedo na estratificação; teste funcional invasivo tem papel Classe I quando o mecanismo permanece incerto ou os sintomas persistem com má qualidade de vida.
-- ESC 2023 ACS (PMID 37622654): dor em repouso/crescendo com suspeita de SCA → via de emergência (ECG, troponina), independentemente da anatomia prévia.
-- AHA MINOCA 2019 (PMID 30913893): MINOCA é **diagnóstico de trabalho**; exige excluir mimickers e buscar etiologia — não “alta com coronárias limpas” sem plano.
-- COVADIS (PMID 29031990; 26245334): critérios padronizados de angina microvascular e vasoespástica — úteis para **nomear a suspeita**, não para inventar tratamento no consultório.
-- CorMicA (PMID 30266608): estratificação por teste funcional invasivo melhora angina/QoL em angina estável selecionada — reforça **escalada eletiva**, não urgência indiscriminada.
+**Angiografia sem obstrução não encerra a investigação.** ESC 2024 CCS reconhece ANOCA/INOCA como entidade que pode exigir caracterização funcional; AHA MINOCA reforça MINOCA como diagnóstico de trabalho. O destino depende de estabilidade clínica e da hipótese etiológica.
 
 ## Encaminhar AGORA ao PS / emergência
 
-| Domínio | Sinalizadores |
+| Situação | Destino |
 |---|---|
-| SCA / MINOCA em curso | Dor/equivalente em **repouso** ou **crescendo**; angina que **não cede** ao nitrato habitual; sudorese + náusea; síncope |
-| Pós-“cateterismo limpo” recente | Recorrência isquêmica precoce com suspeita de SCA/MINOCA — **não** liberar só porque a angiografia foi sem obstrução |
-| ECG (se disponível) | Supra/infra novo, BRE novo, alteração isquêmica nova com sintoma |
-| Mimickers graves | Dispneia súbita + hipoxemia (EP?), déficit focal, dor dorsal lancinante, choque, edema pulmonar |
-| Troponina (se já colhida fora) | Elevação/dinâmica com sintoma isquêmico → tratar como SCA/MINOCA de trabalho até prova em contrário |
+| Dor/equivalente **atual, novo, prolongado, progressivamente pior ou claramente instável**, especialmente em repouso | **PS agora** |
+| ECG isquêmico novo com sintomas | **PS agora** |
+| Troponina elevada/dinâmica + quadro compatível | **PS agora** — SCA/MINOCA de trabalho |
+| Dispneia súbita, síncope de alto risco, edema pulmonar, choque, déficit focal ou síndrome aórtica/TEP suspeitos | **PS agora** |
 
-**Conduta:** PS agora; ECG na porta; **não** teste ergométrico ambulatorial; **não** “aguardar a RM eletiva” se o quadro é agudo. Após estabilizar, a investigação etiológica segue [`fluxograma-minoca-investigacao-diagnostica`](fluxograma-minoca-investigacao-diagnostica.md).
+**Não usar “qualquer dor em repouso” como critério isolado de emergência.** Dor noturna/cíclica crônica, reprodutível no padrão habitual, sem agravamento e com paciente estável pode representar vasoespasmo e seguir via especializada — desde que o gate de SCA/MINOCA agudo esteja negativo.
 
-## Escalar ambulatorialmente (via especializada — sem PS imediato)
+## Escalar ambulatorialmente
 
-Critérios **todos** presentes:
-1. Sem alarme de SCA/MINOCA agudo da tabela.
-2. Sintomas isquêmicos **persistentes** ou recorrentes apesar de prevenção/risco controlados, **ou** teste não invasivo incompatível com “ausência de doença”.
-3. Angiografia recente sem obstrução significativa **ou** alta probabilidade pré-teste de ANOCA/INOCA com investigação incompleta.
-4. Acesso a retorno e a centro capaz de RM cardíaca e/ou teste funcional invasivo.
+Quando não há alarme agudo e os sintomas persistem ou comprometem qualidade de vida:
 
-Ações típicas (**sem doses**):
-- nomear a hipótese (ANOCA/INOCA / angina microvascular / vasoespástica) e **não** rotular como “ansiedade” sem checklist;
-- revisar mimickers ambulatoriais estáveis (anemia, tireoide, PA, refluxo) sem atrasar a via se a suspeita isquêmica permanece alta;
-- encaminhar para **RM cardíaca** quando houver história de troponina/MINOCA ou dúvida de miocardite/Takotsubo no seguimento;
-- encaminhar para **teste funcional invasivo / centro com expertise** se sintomas refratários e má QoL (ESC 2024; CorMicA);
-- retorno em **dias a poucas semanas** conforme gravidade sintomática — com orientação escrita de alarmes → PS.
+- **RM cardíaca**: priorizar quando existe história de troponina/MINOCA ou dúvida de miocardite/Takotsubo/mimicker estrutural.
+- **Teste funcional invasivo / CFT**: considerar em centro com expertise quando sintomas persistem e o mecanismo de ANOCA/INOCA permanece incerto.
+- **Vasoespasmo estável**: encaminhar para caracterização apropriada; não realizar provocação com acetilcolina no consultório.
+
+A disponibilidade do **exame escolhido** importa: falta de RM não é falha de acesso a CFT, e vice-versa.
 
 ## Checklist de 90 segundos
 
-1. Repouso / crescendo / ECG isquêmico novo / equivalentes? → **PS agora** (SCA/MINOCA até prova em contrário).
-2. Só sintoma crônico após angiografia sem obstrução, estável no consultório? → **não encerrar**; escalar para via ANOCA/INOCA (RM / CFT).
-3. Já tem verbete/endótipo definido? → cruzar docs diagnósticos; este pacote só decide **destino**.
-4. Pós-PCI com stent? → pacote #874, não este.
+1. Sintoma atual novo/prolongado/crescente, ECG novo ou troponina dinâmica? → **PS**.
+2. Padrão crônico estável de vasoespasmo, sem alarme atual? → via especializada, não PS automático.
+3. História de MINOCA/troponina? → avaliar RM.
+4. Angina persistente com anatomia não obstrutiva e mecanismo incerto? → avaliar CFT em centro especializado.
+5. Não inventar doses nem tratar “cateterismo limpo” como ausência de doença.
 
 ## Armadilhas
 
-- Alta com “coronárias normais” e sintoma ativo sem plano de RM/CFT.
-- Pedir teste de esforço na suspeita de instabilização/MINOCA agudo.
-- Confundir este hub com #843 (DAC obstrutiva instabilizando) ou #874 (stent/acesso).
-- Inventar doses de CCB/nitrato/betabloqueador aqui — tratamento por endótipo está nos docs revisados de ANOCA/INOCA.
-
-## Limite da evidência
-
-Limiares de “repouso/crescendo” vêm de ESC ACS/CCS. A decisão de **quando** referir para CFT/RM é operacional (disponibilidade local + persistência sintomática); CorMicA informa benefício da estratificação em selecionados, não obriga invasivo em todo consultório.
-
-## Slugs relacionados (existentes)
-
-- `anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024`
-- `angina-microvascular-endotipo-cmd-na-pratica`
-- `angina-vasoespastica-criterios-covadis-diagnostico-e-tratamento`
-- `fluxograma-minoca-investigacao-diagnostica`
-- `minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea`
-- `sinalizadores-ambulatoriais-de-angina-instabilizando-quando-encaminhar`
-- `sinalizadores-ambulatoriais-pos-pci-quando-encaminhar`
-- `fluxograma-sindrome-coronariana-cronica-esc-2024`
+- Rotular qualquer dor noturna de repouso como SCA sem avaliar estabilidade e mudança do padrão.
+- Encerrar investigação após angiografia não obstrutiva.
+- Misturar disponibilidade de RM com disponibilidade de CFT.
+- Criar links para conteúdos ainda não publicados.
