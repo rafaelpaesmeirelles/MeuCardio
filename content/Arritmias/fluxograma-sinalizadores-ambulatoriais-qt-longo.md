@@ -1,12 +1,12 @@
 ---
-title: "Fluxograma: sinalizadores ambulatoriais de QT longo — PS vs. EP/genética vs. suspender ofensor"
+title: "Fluxograma: sinalizadores ambulatoriais de QT longo — urgência vs. canalopatias vs. revisão farmacológica"
 slug: fluxograma-sinalizadores-ambulatoriais-qt-longo
 theme: "Arritmias"
 kind: fluxograma
 fonte_producao: grok
-summary: "Árvore ambulatorial: QTc longo / SQTL no consultório — gate de PS; braço congênito (EP/genética eletiva); braço adquirido (suspender prolongador sem inventar regime)."
-review_status: pendente_revisao
-review_note: "Árvore irmã dos protocolos de QT longo ambulatorial (07/09/2026), além #839/#864/#867/#899. Anti-colisão #881. ESC 2022 PMID 36017572; Priori 2013 PMID 24011539; Drew 2010 PMID 20142454. Sem doses."
+summary: "Árvore ambulatorial de QT longo: emergência clínica atual; contexto congênito/genético; QT adquirido por fármaco com decisão baseada em QTc, ΔQTc, fatores acumulados e benefício, sem suspensão automática."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. A suspensão farmacológica passou a depender de risco QT mensurado e benefício; síncope remota foi separada de evento atual de alto risco; genética não exige fenótipo confirmado quando há variante familiar/forte suspeita; psicofármaco ganhou link funcional canônico; evento em familiar não é PS automático."
 source_refs:
   - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572"
   - "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963. DOI: 10.1016/j.hrthm.2013.05.014. PMID: 24011539"
@@ -15,41 +15,51 @@ source_refs:
 
 # Fluxograma: sinalizadores ambulatoriais de QT longo
 
-Prosa: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md) e [`qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt`](qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt.md). Canalopatias (diagnóstico/manejo): [`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`](canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md). Psicofármaco: **#881**.
+Prosa: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md) e [`qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt`](qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt.md).
+
+Canalopatias: [`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`](canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo.md).
+
+Psicofármacos: [`fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt`](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Consulta: QTc prolongado<br/>ou SQTL conhecida/suspeita"] --> D1{"Alarme?<br/>síncope / TdP / TV polimórfica<br/>QTc >500 ms ou ↑≥60 ms com risco<br/>eletrólito grave / instabilidade"}
+  R0["Consulta: QTc prolongado<br/>ou SQTL conhecida/suspeita"] --> D1{"Há emergência no paciente AGORA?<br/>TdP/TV polimórfica/FV, instabilidade,<br/>overdose, eletrólito grave ou síncope<br/>muito recente ainda de alto risco"}
 
-  D1 -->|"Sim"| C1(["PS / emergência AGORA<br/>ECG 12 derivações<br/>Suspender ofensor se houver<br/>Sem doses neste fluxo"])
+  D1 -->|"Sim"| C1(["PS / urgência / monitorização adequada<br/>ECG e causas reversíveis<br/>Rever ofensor imediatamente"])
 
-  D1 -->|"Não"| D2{"Contexto congênito?<br/>QTc ≥480 repetido / familiar<br/>escore alto / SQTL conhecida"}
+  D1 -->|"Não"| D2{"Contexto congênito/familiar?<br/>QTc persistente compatível, escore clínico,<br/>variante familiar ou forte suspeita"}
 
-  D2 -->|"Sim"| C2(["EP / genética eletiva<br/>Evitar prolongadores de QT<br/>Não inventar betabloqueador aqui"])
+  D2 -->|"Sim"| C2(["Canalopatias / EP / genética<br/>Teste em cascata pode ser indicado<br/>mesmo sem fenótipo confirmado"])
 
-  D2 -->|"Não / predominantemente adquirido"| D3{"Há fármaco prolongador de QT<br/>(ou início/↑ recente)?"}
+  D2 -->|"Não / predominantemente adquirido"| D3{"Há fármaco prolongador de QT?"}
 
-  D3 -->|"Sim"| P1["Confirmar QTc e basal<br/>Revisar eletrólitos / bradicardia<br/>Polifarmácia QT"]
-  P1 --> C3(["Suspender ofensor<br/>(sem inventar substituto)<br/>Retorno 24–72 h + ECG"])
+  D3 -->|"Não"| C3(["Rever técnica QTc e causas secundárias<br/>Reavaliar conforme risco e sintomas"])
 
-  D3 -->|"Não"| C4(["Investigar causa secundária<br/>Reavaliar técnica de QTc<br/>Educar alarmes · retorno usual"])
+  D3 -->|"Sim"| P1["Confirmar QTc + basal<br/>Eletrólitos, bradicardia, interações<br/>e outros prolongadores"]
+  P1 --> D4{"QTc >500 ms ou Δ≥60 ms<br/>OU precursores/sintomas/fatores acumulados<br/>que elevem materialmente o risco?"}
 
-  C3 --> D4{"Ofensor é psicofármaco<br/>essencial / risco de crise?"}
-  D4 -->|"Sim"| C5(["Usar também pacote #881<br/>Psycho-Cardio — não interromper<br/>só por receio genérico neste fluxo"])
-  D4 -->|"Não"| C6(["Manter suspensão + retorno<br/>Prescritor original decide substituto"])
+  D4 -->|"Sim"| D5{"Fármaco é essencial / alto benefício<br/>e interrupção também traz risco?"}
+  D5 -->|"Não / substituível"| C4(["Retirar/pausar ofensor quando apropriado<br/>Definir monitorização/urgência pelo quadro<br/>Prescritor decide substituto"])
+  D5 -->|"Sim"| C5(["Decisão risco-benefício coordenada<br/>Não suspender abruptamente por regra genérica<br/>Monitorar e discutir alternativa segura"])
+
+  D4 -->|"Não"| C6(["Não suspender reflexamente<br/>Revisar risco-benefício e reavaliar ECG<br/>Educar sinais de alarme"])
+
+  C5 --> D6{"É psicofármaco essencial?"}
+  D6 -->|"Sim"| C7(["Usar orientação canônica Psycho-Cardio/QT<br/>Co-manejo com prescritor"])
+  D6 -->|"Não"| C8(["Seguir plano coordenado com prescritor"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
   class C1 alerta;
-  class C2,C3,C4,C5,C6 conduta;
+  class C2,C3,C4,C5,C6,C7,C8 conduta;
 ```
 
 ## Notas
 
-- **D1** = gate de segurança (Drew 2010 + sintoma/TdP).
-- **D2** = braço congênito (ESC 2022 / Priori 2013) → EP/genética, não “ Holter daqui a um ano”.
-- **D3/C3** = braço adquirido → **suspender ofensor** sem regime inventado.
-- **D4** = ponte explícita anti-colisão com **#881**.
-- Não decide doses, CDI, mexiletina nem classes de betabloqueador.
+- Evento agudo **em familiar** não transforma paciente assintomático estável em emergência; aumenta prioridade para avaliação genética/canalopatias.
+- Síncope remota já esclarecida é diferente de síncope muito recente ainda de alto risco.
+- QTc >500 ms ou Δ≥60 ms são marcadores de ação/risk review; não significam “suspender tudo” sem considerar benefício e contexto.
+- Genética pode ser indicada por variante familiar conhecida ou rastreamento em cascata mesmo com QTc normal.
+- O ramo psicofármaco aponta para documento já publicado, não para número de PR.
