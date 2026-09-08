@@ -4,57 +4,62 @@ slug: candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar
 theme: "Síncope"
 kind: protocolo
 fonte_producao: grok
-summary: "Gate de consultório: síncope + substrato de alto risco de morte súbita — quando encaminhar para avaliação de elegibilidade a CDI / EP, sem decidir implante, sem doses e sem duplicar disfunção de dispositivo já coberto em Dispositivos."
-review_status: pendente_revisao
-review_note: "Doc 3/3 do pacote ambulatory Síncope EPS/CDI (07/09/2026), além de #859. Lacuna ausente em main/PRs abertos de Síncope. Anti-colisão com #835 (disfunção eletrodo/choque CDI). ESC 2018 PMID 29562304; ACC/AHA/HRS 2017 PMID 28280231. Sem doses; sem inventar classes de implante."
+summary: "Gate de consultório: quando síncope em paciente com substrato arrítmico deve reabrir estratificação de morte súbita/avaliação de CDI, sem transformar síncope ou FE levemente reduzida em indicação automática de implante."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Acrescentada ESC 2022 VA/SCD; removida dependência de #859; eliminado atalho 'FE reduzida + síncope = CDI'; critérios passaram a ser específicos da doença, tratamento, timing e risco."
 source_refs:
   - "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304"
   - "Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231"
-  - "Brignole M, Moya A, de Lange FJ, et al. Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):e43-e80. DOI: 10.1093/eurheartj/ehy071"
+  - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572."
 ---
 
 # Candidatos ambulatoriais à avaliação de CDI após síncope: quando encaminhar
 
-Uso: paciente com **síncope** (recente ou recorrente) em **consultório**, sem indicação imediata de PS, mas com **substrato** que levanta risco de morte súbita cardíaca (MSC). A pergunta é **quando encaminhar para avaliação de elegibilidade a CDI / eletrofisiologia**, não “implantar CDI neste encontro”.
+Uso: paciente com **síncope** em consultório, sem instabilidade que exija PS naquele momento, mas com doença de base que possa conferir risco de morte súbita cardíaca. A pergunta é **quando reabrir estratificação especializada**, não decidir implante no consultório.
 
 Não substitui:
-- disfunção de eletrodo / choque em quem **já tem** CDI — pasta Dispositivos / pacote #835;
-- pós-alta baixo risco — [`sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar`](sinalizadores-ambulatoriais-sincope-pos-alta-quando-retornar.md);
-- EPS selecionado sem questão de CDI — [`sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia`](sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md);
-- ILR após investigação negativa sem indicação convencional de CDI/MP — [`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md).
+- EPS selecionado — [`sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia`](sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md);
+- monitorização/ILR — [`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md);
+- manejo de choque/disfunção em quem já possui CIED, disponível na pasta Dispositivos.
 
-## Princípio
+## Regra central de segurança
 
-A ESC 2018 dedica manejo específico à **síncope inexplicada em pacientes com alto risco de MSC** e separa isso da síncope reflexa de baixo risco. O ACC/AHA/HRS 2017 (PMID 28280231) observa que o papel do EPS na avaliação de arritmias ventriculares na síncope **diminuiu** porque o CDI de **prevenção primária** em cardiomiopatia com disfunção ventricular grave já é indicação estabelecida: **EPS não é exigido** antes de considerar CDI nesse cenário. CDI pode reduzir risco de morte e **ainda assim não impedir** nova síncope.
+**Síncope, isoladamente, não é indicação de CDI.** O encaminhamento para avaliação de CDI só faz sentido quando existe um **substrato clínico específico** em que a síncope possa representar marcador de maior risco ou quando critérios convencionais de prevenção primária/secundária possam estar preenchidos.
 
-Este gate só decide: **encaminhar agora para avaliação especializada** versus **não misturar com o caminho reflexo/ILR puro**.
+Da mesma forma, **FEVE levemente reduzida (por exemplo 40–49%) não equivale a indicação de CDI**. Em prevenção primária por disfunção ventricular, devem ser conferidos o limiar de FEVE aplicável, tratamento otimizado, tempo após IAM/revascularização quando pertinente, expectativa de sobrevida funcional e demais critérios da diretriz da doença.
 
-## Encaminhar avaliação de CDI / risco de MSC (consultório)
+## Quando reabrir avaliação de risco de MSC / CDI
 
-| Contexto clínico | Sinal para escalar |
+| Contexto | O que a síncope deve provocar |
 |---|---|
-| Cardiomiopatia com FE reduzida já conhecida | Síncope (mesmo sem VA documentada no consultório) → discutir elegibilidade / timing com EP/IC avançada |
-| VA sustentada documentada + síncope | Encaminhamento prioritário (não “aguardar Holter de rotina”) |
-| Canalopatia / Brugada / QT longo / CPVT / MCH de alto risco já rotulados | Síncope arrítmica suspeita → reabrir estratificação com centro de referência |
-| Cicatriz isquêmica + síncope inexplicada | Avaliar com EP (EPS selecionado **e/ou** caminho de dispositivo conforme substrato) |
-| Recuperação de PCR / síncope com TV/FV abortada | Urgência / EP — fora do “plano ambulatorial estável” |
+| TV/FV sustentada documentada, PCR recuperada ou arritmia ventricular grave documentada | Via de prevenção secundária / EP com prioridade apropriada; não aguardar monitorização ambulatorial de rotina |
+| Doença isquêmica/cardiomiopatia com **critérios potenciais de prevenção primária** já próximos ou preenchidos | Confirmar FEVE, tratamento otimizado, timing, etiologia e prognóstico; encaminhar EP/IC para decisão baseada em guideline |
+| Cardiomiopatia hipertrófica | Recalcular/atualizar estratificação específica de MCH; síncope presumivelmente arrítmica é apenas um componente do risco |
+| Brugada, QT longo, CPVT e outras canalopatias | Reavaliar no centro especializado segundo critérios próprios; não usar uma regra genérica de “canalopatia + síncope = CDI” |
+| Cardiomiopatia arritmogênica ou outras cardiomiopatias genéticas de risco | Aplicar estratificação específica de fenótipo/genótipo/arritmia e guideline correspondente |
+| Cicatriz miocárdica + síncope inexplicada | Encaminhar EP; EPS pode fazer parte da avaliação em substratos selecionados, mas não é sinônimo de indicação de CDI |
 
-**Conduta mínima:** história + ECG + documentação da FE/estrutura; **encaminhar**; orientar sinais de PS; **não** protocolar zona de terapia, drogas antiarrítmicas com dose, nem “CDI empírico” neste texto.
+## Alto risco clínico continua sendo alto risco
 
-## Não é este gate
+Se houver síncope no esforço/decúbito, sem pródromos, ECG de alto risco, hipoperfusão, arritmia sustentada, trauma grave ou história familiar de morte súbita jovem, reavaliar **urgência do destino** antes da discussão eletiva de dispositivo.
 
-- Síncope vasovagal típica, ECG normal, estrutura normal → educação / pacote pós-avaliação; **não** rotular como candidato a CDI.
-- Quem **já tem** CDI e apresenta choque, ruído ou síncope → interrogação / Dispositivos (#835), não “nova elegibilidade”.
-- Após investigação completa negativa, **sem** indicação convencional de CDI/MP → ILR (ESC Classe I A no fluxograma da pasta), não CDI “por exclusão”.
+## O que NÃO deve acontecer
 
-## Checklist de 90 segundos
+- “Síncope + cardiomiopatia = CDI”.
+- “Síncope + qualquer FE reduzida = CDI”.
+- Usar FEVE 40–49% como equivalente a disfunção ventricular grave de prevenção primária.
+- Agrupar MCH, Brugada, QT longo e CPVT em uma única regra de implante.
+- Implantar por exclusão depois de investigação negativa sem substrato de risco.
+- Adiar investigação urgente de TV/FV, PCR recuperada ou instabilidade para “consulta de CDI”.
 
-1. Alarme de PS? → PS.
-2. Substrato de MSC / FE reduzida / VA / canalopatia de risco? → **encaminhar avaliação de CDI/EP**.
-3. Sem substrato de MSC, mas bifascicular/cicatriz selecionados? → EPS ([protocolo irmão](sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md)).
-4. Sem substrato? → ILR/monitorização ou plano reflexo — não inventar CDI.
-5. Sem doses; sem laudo de implante neste encontro.
+## Checklist de encaminhamento
+
+1. Há alarme de PS/urgência? → tratar a urgência primeiro.
+2. Existe TV/FV/PCR ou outra indicação potencial de prevenção secundária? → EP prioritária.
+3. Existe doença com **critério convencional potencial** de prevenção primária? → confirmar critérios completos da doença antes de rotular elegibilidade.
+4. É MCH/canalopatia/cardiomiopatia genética? → usar ferramenta/estratificação própria.
+5. Sem substrato de MSC? → monitorização/ILR/avaliação de síncope, não CDI empírico.
 
 ## Limite da evidência
 
-Critérios formais de implante (FE numérica, tempo pós-IAM, prevenção secundária) pertencem às diretrizes de dispositivos/MSC e à decisão do especialista. Este documento **ancora** o encaminhamento ambulatorial na lógica ESC 2018 + ACC/AHA/HRS 2017 e **não** cria classes de recomendação de implante novas.
+Este documento é um **gate de encaminhamento**, não uma tabela de indicação de implante. A decisão final deve seguir a diretriz contemporânea de arritmias ventriculares/morte súbita e a recomendação específica para a doença de base.
