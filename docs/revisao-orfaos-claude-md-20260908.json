@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 27,
-  "pending_count": 136,
+  "reviewed_count": 28,
+  "pending_count": 135,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1040,8 +1040,19 @@
     {
       "index": 126,
       "path": "content/Insuficiência_cardíaca/hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "4dedf623179ef75729b4e62c4d2ec341ff16fb9378bb39b57ee1ed3f1e757d8e"
+      "status": "corrected_reviewed",
+      "source_sha256": "4dedf623179ef75729b4e62c4d2ec341ff16fb9378bb39b57ee1ed3f1e757d8e",
+      "findings": [
+        "CLOROTIC cloreto contínuo sem interação, omitido; resultado categórico isolado não permite direção prescritiva.",
+        "ALCALOTIC386dos665 completos, associação não benefício causal.",
+        "Cloreto sérico não oferta luminal; removida hipótese simplista de falta substrato tiazídico.",
+        "Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina."
+      ],
+      "sources": [
+        "PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários",
+        "https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral"
+      ],
+      "reviewed_sha256": "5c67aa0aef419fc8b9763e5328114e301441f37070aaaadbb5a4d351d6871a0f"
     },
     {
       "index": 127,

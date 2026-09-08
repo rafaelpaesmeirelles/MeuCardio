@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 27 documentos lidos integralmente e corrigidos; 136 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 28 documentos lidos integralmente e corrigidos; 135 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -185,6 +185,15 @@ Fontes verificadas: PMIDs42235631,39809935,42418867,41899087,41524052,42425178: 
 - aprovaçãoFDA2025+vitaminaA
 
 Fontes verificadas: Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, Damy T, Garcia-Pavia P, Taubel J, Solomon SD, Sheikh FH, Tahara N, González-Costello J, Tsujita K, Morbach C, Pozsonyi Z, Petrie MC, Delgado D, Van der Meer P, Jabbour A, Bondue A, Kim D, Azevedo O, Hvitfeldt Poulsen S, Yilmaz A, Jankowska EA, Algalarrondo V, Slugg A, Garg PP, Boyle KL, Yureneva E, Silliman N, Yang L, Chen J, Eraly SA, Vest J, Maurer MS; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194 — resumo estruturado (Background/Methods/Results/Conclusions) conferido via NCBI E-utilities (efetch, retmode=xml) nesta sessão, com todos os números do desfecho primário, mortalidade, 6MWT, KCCQ-OS e segurança extraídos diretamente do abstract estruturado do artigo., FDA. Amvuttra prescribing information, março2025, seções1.2 e5.1. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf.
+
+## 126 — content/Insuficiência_cardíaca/hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico.md
+
+- CLOROTIC cloreto contínuo sem interação, omitido; resultado categórico isolado não permite direção prescritiva.
+- ALCALOTIC386dos665 completos, associação não benefício causal.
+- Cloreto sérico não oferta luminal; removida hipótese simplista de falta substrato tiazídico.
+- Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina.
+
+Fontes verificadas: PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários, https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral.
 
 ## 142 — content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md
 
