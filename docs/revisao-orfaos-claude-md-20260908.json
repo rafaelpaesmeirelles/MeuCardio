@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 44,
-  "pending_count": 119,
+  "reviewed_count": 45,
+  "pending_count": 118,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1002,8 +1002,21 @@
     {
       "index": 100,
       "path": "content/Hipertensão/hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "e5b896320c0fa1b5fda405ac3de8d2c2fe22eda68612c3825daf4b466fe97f0f"
+      "status": "corrected_reviewed",
+      "source_sha256": "e5b896320c0fa1b5fda405ac3de8d2c2fe22eda68612c3825daf4b466fe97f0f",
+      "findings": [
+        "PATH-BP contradiz paracetamol regular como alternativa pressoricamente neutra; incorporadoRCT110, sistólica diurna+4,7mmHg.",
+        "IncluídoPRECISION-ABPM444; retirado ranking definitivo e alegação de risco isquêmico somente após uso prolongado.",
+        "Metanálises coxibes versus não seletivos tinham incidência de hipertensão sem diferença significativa; não efeito uniforme.",
+        "Inserida combinação AINE+diurético+IECA/BRA e lesão renal precoce; retirar AINE não exclui investigar outra causa persistente.",
+        "DOIAw normalizado conforme ArticleIdList; textoSowers com erratum inacessível mantido apenas como contexto histórico semmagnitudes."
+      ],
+      "sources": [
+        "Oito PMIDs originais/citados: abstracts e identidades conferidos.",
+        "PRECISION-ABPM29020251 primária; PATH-BP35130054 DOI10.1161/CIRCULATIONAHA.121.056015; Lapi23299844 DOI10.1136/bmj.e8525.",
+        "FDA alerta cardiovascular2015 consultado; Sowers erratum ArchInternMed2005;165:551 identificado, não alegada leitura integral."
+      ],
+      "reviewed_sha256": "57284f5568d2194181053bc68a0316fbe572ead84d5cff5df4f2f3e923591aae"
     },
     {
       "index": 101,

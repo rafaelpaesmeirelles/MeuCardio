@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 44 documentos lidos integralmente e corrigidos; 119 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 45 documentos lidos integralmente e corrigidos; 118 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -275,6 +275,16 @@ Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Re
 - Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável.
 
 Fontes verificadas: PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados, https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão, https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização, https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024.
+
+## 100 — content/Hipertensão/hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo.md
+
+- PATH-BP contradiz paracetamol regular como alternativa pressoricamente neutra; incorporadoRCT110, sistólica diurna+4,7mmHg.
+- IncluídoPRECISION-ABPM444; retirado ranking definitivo e alegação de risco isquêmico somente após uso prolongado.
+- Metanálises coxibes versus não seletivos tinham incidência de hipertensão sem diferença significativa; não efeito uniforme.
+- Inserida combinação AINE+diurético+IECA/BRA e lesão renal precoce; retirar AINE não exclui investigar outra causa persistente.
+- DOIAw normalizado conforme ArticleIdList; textoSowers com erratum inacessível mantido apenas como contexto histórico semmagnitudes.
+
+Fontes verificadas: Oito PMIDs originais/citados: abstracts e identidades conferidos., PRECISION-ABPM29020251 primária; PATH-BP35130054 DOI10.1161/CIRCULATIONAHA.121.056015; Lapi23299844 DOI10.1136/bmj.e8525., FDA alerta cardiovascular2015 consultado; Sowers erratum ArchInternMed2005;165:551 identificado, não alegada leitura integral..
 
 ## 110 — content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md
 
