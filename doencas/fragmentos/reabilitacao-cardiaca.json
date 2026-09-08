@@ -1,0 +1,557 @@
+[
+  {
+    "slug": "reabilitacao-cardiaca",
+    "name": "Reabilitação cardíaca",
+    "aliases": [
+      "Programa de reabilitação cardíaca",
+      "Reabilitação cardiovascular",
+      "Cardiac rehabilitation",
+      "Prevenção secundária com reabilitação cardíaca",
+      "RC multicomponente"
+    ],
+    "area": "geral",
+    "category": "prevencao_e_risco",
+    "subtype": "programa_multicomponente_de_prevencao_secundaria",
+    "cyanosis_class": null,
+    "prevalence_rank": null,
+    "completeness": "completo",
+    "summary": "A reabilitação cardíaca é um programa multicomponente de exercício, educação, prevenção secundária e suporte psicossocial. A evidência de redução de eventos em doença coronariana não deve ser extrapolada automaticamente à cirurgia valvar ou à insuficiência cardíaca. Na ICFEr estável, HF-ACTION sustenta segurança e benefício funcional modesto, sem redução significativa do composto primário. Indicação, estabilidade, estratificação de risco e capacidade de supervisão orientam o modelo presencial, híbrido ou remoto.",
+    "epidemiology": "A reabilitação cardíaca baseada em exercício é recomendação de classe I em prevenção secundária após evento aterosclerótico e/ou revascularização (ESC 2021) e permanece central na diretriz ESC 2026 de RC. Revisões Cochrane em doença coronariana mostram redução de mortalidade cardiovascular e de internações com RC baseada em exercício; a atualização Dibben 2021 (85 ensaios, 23.430 participantes) reportou, em 6–12 meses, RR 0,72 para infarto (certeza alta) e RR 0,58 para internação por qualquer causa (certeza moderada), com sinal mais fraco para mortalidade por todas as causas no curto prazo. A participação em RC é limitada por barreiras de acesso e adesão; fragilidade requer adaptação, não exclusão automática. Após alta de SCA, o encaminhamento formal com data — e não apenas orientação verbal — é um dos cinco pilares modificáveis da alta. Em ICFEr estável, o HF-ACTION sustentou a segurança do treinamento aeróbico e ganho modesto de qualidade de vida, sem redução significativa do composto primário de morte ou hospitalização, reforçando que RC na IC não deve ser vendida como redução de mortalidade e sim como intervenção sintomática/funcional segura quando o paciente está clinicamente estável.",
+    "presentation": [
+      "Paciente pós-SCA ou pós-revascularização (PCI/CABG) em fase de convalescença, com ou sem sintomas residuais de angina ou dispneia",
+      "Insuficiência cardíaca crônica estável (especialmente ICFEr) com intolerância ao esforço e descondicionamento",
+      "Pós-cirurgia ou intervenção valvar com perda funcional e risco de sarcopenia",
+      "Baixa capacidade funcional (METs reduzidos) documentada em teste ergométrico ou teste cardiopulmonar",
+      "Medo de esforço, ansiedade ou depressão limitando retorno à atividade",
+      "Fatores de risco residual não otimizados na alta: tabagismo ativo, LDL fora da meta, sedentarismo, obesidade",
+      "Idoso ou muito idoso com fragilidade, em quem a RC é frequentemente omitida por viés de encaminhamento",
+      "Paciente com barreira de acesso (transporte, distância, trabalho) candidato a modelo híbrido ou remoto após estratificação de risco",
+      "Portador de dispositivo cardíaco ou cardiomiopatia estável encaminhado para condicionamento supervisionado",
+      "Retorno precoce ao trabalho ou às atividades domésticas sem plano de progressão de intensidade"
+    ],
+    "diagnostic_approach": "A avaliação na RC confirma indicação clínica, exclui contraindicações absolutas e estratifica risco para exercício antes de prescrever. Etapa 1 — indicação e timing: identificar o evento/procedimento índice (SCA, PCI, CABG, cirurgia/intervenção valvar, IC estável) e o intervalo desde a estabilização; instabilidade não resolvida bloqueia o início. Etapa 2 — anamnese e exame dirigidos a congestão, angina, arritmia, ortostase, ferida operatória e dispositivos. Etapa 3 — capacidade funcional basal: preferir teste ergométrico ou teste cardiopulmonar; na ausência, teste de caminhada de 6 minutos e classe funcional. Etapa 4 — estratificação de risco para exercício (baixo, intermediário, alto) com base em FEVE, arritmias, isquemia residual, capacidade em METs e comorbidades — define supervisão e elegibilidade a modelo presencial versus híbrido/remoto. Etapa 5 — avaliação multicomponente: adesão farmacológica, pressão, lipídios, glicemia, tabagismo, nutrição, saúde mental, fragilidade e barreiras sociais. Etapa 6 — definir fase (I intra-hospitalar, II ambulatorial, III manutenção) e metas incluindo PROs quando possível.",
+    "differentials": [
+      "Restrição de esforço por angina instável ou SCA não estabilizada",
+      "Descondicionamento puro sem doença cardiovascular estrutural",
+      "Limitação pulmonar predominante (DPOC grave) mimetizando intolerância ao esforço cardíaca",
+      "Claudicação por doença arterial periférica como limitante principal do exercício",
+      "Fragilidade/sarcopenia isolada sem evento cardiovascular índice",
+      "Medo de movimento (cinesiofobia) sem contraindicação objetiva",
+      "Programa de fisioterapia ortopédica sem componentes de prevenção secundária cardiovascular",
+      "Atividade física recreativa não supervisionada sem estratificação de risco em paciente de alto risco"
+    ],
+    "tests": [
+      "Eletrocardiograma de repouso e, quando indicado, monitorização durante exercício",
+      "Teste ergométrico para capacidade funcional, resposta pressórica e isquemia",
+      "Teste cardiopulmonar de exercício (VO2 pico) quando disponível e em IC ou casos complexos",
+      "Teste de caminhada de 6 minutos como alternativa funcional ambulatorial",
+      "Ecocardiograma com FEVE numérica e avaliação de valvopatia residual",
+      "Perfil lipídico e HbA1c/glicemia no contexto de prevenção secundária",
+      "Peptídeos natriuréticos quando há dúvida sobre congestão ou IC",
+      "Avaliação de fragilidade no idoso",
+      "Rastreio de depressão/ansiedade e de tabagismo ativo",
+      "Oximetria de esforço quando há suspeita de limitação respiratória associada"
+    ],
+    "red_flags": [
+      "Angina instável, SCA em evolução ou isquemia em repouso/mínimo esforço",
+      "Descompensação aguda de insuficiência cardíaca",
+      "Arritmia ventricular complexa não controlada ou tempestade elétrica recente",
+      "Estenose aórtica sintomática grave não corrigida",
+      "Miocardite aguda ou pericardite com atividade inflamatória",
+      "Trombose venosa profunda aguda ou embolia pulmonar não tratada",
+      "Infecção sistêmica febril ou ferida operatória com deiscência",
+      "Hipotensão sintomática ou hipertensão severa descontrolada no momento da sessão",
+      "Sinais neurológicos focais novos sugerindo AVC/AIT",
+      "Queda da saturação ou síncope no esforço",
+      "Síndrome aórtica aguda ou aneurisma com indicação de intervenção antes da liberação de exercício"
+    ],
+    "ambulatory_flow": [
+      "Confirmar indicação e ausência de contraindicação absoluta",
+      "Obter FEVE e estratificar risco para exercício antes de escolher modelo presencial, híbrido ou remoto",
+      "Encaminhar formalmente ao programa com data de início",
+      "Prescrever treinamento aeróbico e resistido individualizado, com progressão documentada",
+      "Integrar otimização de prevenção secundária: LDL, pressão, tabagismo e eixo diabetes/obesidade",
+      "Avaliar e tratar barreira psicossocial que reduz adesão",
+      "No idoso/frágil, intensificar retenção: transporte, horários, adaptação de intensidade",
+      "Reavaliar capacidade funcional e fatores de risco ao longo da fase II; planejar transição para manutenção",
+      "Registrar PROs/qualidade de vida quando houver instrumento validado",
+      "Comunicar ao cardiologista assistente lacunas de terapia e eventos adversos nas sessões"
+    ],
+    "emergency_flow": [
+      "Interromper imediatamente o exercício diante de dor torácica típica, síncope, arritmia sustentada ou dessaturação importante",
+      "Estabilizar via aérea/circulação conforme ACLS se houver PCR ou instabilidade hemodinâmica na sessão",
+      "Obter ECG e comparar com basal; acionar via de SCA se houver critérios de urgência",
+      "Tratar congestão aguda ou hipotensão sintomática e suspender novas sessões até reavaliação médica",
+      "Não reiniciar RC enquanto houver instabilidade não resolvida",
+      "Documentar o evento, comunicar o cardiologista responsável e reestratificar risco antes de retomar"
+    ],
+    "treatment_summary": "O manejo da RC organiza um programa multicomponente, não apenas liberar caminhada. Após confirmação de indicação e exclusão de contraindicações absolutas, a pedra angular é o treinamento físico estruturado (aeróbico e resistido) com frequência, intensidade, tempo e tipo individualizados conforme a estratificação de risco. A supervisão é mais intensa no alto risco e nas primeiras sessões; modelos híbridos e remotos ampliam acesso quando a segurança e a monitorização forem adequadas ao perfil. Em paralelo, a RC implementa prevenção secundária: adesão, intensificação lipídica, cessação do tabagismo, controle pressórico e mudanças de estilo de vida. Em ICFEr estável, o HF-ACTION sustenta segurança e ganho funcional/qualidade de vida modesto, sem autorização para prometer redução de mortalidade. No idoso e no paciente frágil, adaptar intensidade, supervisão e apoio de acesso sem prometer ganho causal de sobrevida. Nenhuma dose de fármaco é definida neste hub.",
+    "monitoring": [
+      "Frequência cardíaca, pressão arterial e sintomas em cada sessão supervisionada",
+      "Progressão de carga/METs e adesão ao número de sessões prescritas",
+      "Controle de fatores de risco: tabagismo, peso, LDL, pressão arterial, glicemia",
+      "Sinais de congestão, angina ou arritmia entre sessões",
+      "Evolução de fragilidade e capacidade funcional no idoso",
+      "Qualidade de vida / PROs quando medidos pelo programa",
+      "Eventos adversos relacionados ao exercício e necessidade de reestratificação",
+      "Conclusão da fase II e plano de manutenção na fase III"
+    ],
+    "special_populations": [
+      "Muito idoso e paciente frágil — avaliar indicação, adaptação, objetivos e barreiras de acesso",
+      "ICFEr estável ambulatorial — segurança apoiada pelo HF-ACTION; expectativa funcional/sintomática",
+      "Pós-CABG ou cirurgia valvar — respeito a restrições esternais e timing cirúrgico",
+      "Portadores de CDI/marca-passo — conhecer zonas de frequência do dispositivo",
+      "Pacientes com barreira geográfica ou laboral — candidatos a modelo híbrido/remoto após estratificação",
+      "Depressão ou ansiedade comórbida — RC e suporte psicológico podem ser complementares"
+    ],
+    "assistant_questions": [
+      {
+        "id": "indicacao_indice",
+        "label": "Qual é a indicação índice para reabilitação cardíaca?",
+        "type": "select",
+        "options": [
+          {
+            "value": "pos_sca",
+            "label": "Pós-síndrome coronariana aguda"
+          },
+          {
+            "value": "pos_pci",
+            "label": "Pós-PCI"
+          },
+          {
+            "value": "pos_cabg",
+            "label": "Pós-CABG"
+          },
+          {
+            "value": "pos_valvar",
+            "label": "Pós-cirurgia ou intervenção valvar"
+          },
+          {
+            "value": "ic_estavel",
+            "label": "Insuficiência cardíaca estável"
+          },
+          {
+            "value": "outra",
+            "label": "Outra / múltiplas"
+          }
+        ]
+      },
+      {
+        "id": "fase_programa",
+        "label": "Em qual fase do programa o paciente se encontra?",
+        "type": "select",
+        "options": [
+          {
+            "value": "fase_i",
+            "label": "Fase I (intra-hospitalar)"
+          },
+          {
+            "value": "fase_ii",
+            "label": "Fase II (ambulatorial supervisionada)"
+          },
+          {
+            "value": "fase_iii",
+            "label": "Fase III (manutenção)"
+          },
+          {
+            "value": "nao_iniciado",
+            "label": "Ainda não iniciado"
+          }
+        ],
+        "required": true
+      },
+      {
+        "id": "risco_exercicio",
+        "label": "Qual a estratificação de risco para exercício?",
+        "type": "select",
+        "options": [
+          {
+            "value": "baixo",
+            "label": "Baixo"
+          },
+          {
+            "value": "intermediario",
+            "label": "Intermediário"
+          },
+          {
+            "value": "alto",
+            "label": "Alto"
+          },
+          {
+            "value": "nao_estratificado",
+            "label": "Ainda não estratificado"
+          }
+        ],
+        "required": true
+      },
+      {
+        "id": "contraindicacao_absoluta",
+        "label": "Há contraindicação absoluta atual à RC/exercício?",
+        "type": "boolean",
+        "required": true
+      },
+      {
+        "id": "feve_conhecida",
+        "label": "A FEVE numérica está disponível?",
+        "type": "boolean"
+      },
+      {
+        "id": "capacidade_funcional_avaliada",
+        "label": "Já houve avaliação objetiva de capacidade funcional?",
+        "type": "boolean"
+      },
+      {
+        "id": "modelo_entrega",
+        "label": "Qual modelo de entrega está em consideração?",
+        "type": "select",
+        "options": [
+          {
+            "value": "presencial",
+            "label": "Presencial supervisionado"
+          },
+          {
+            "value": "hibrido",
+            "label": "Híbrido"
+          },
+          {
+            "value": "remoto",
+            "label": "Remoto/telemonitorizado"
+          },
+          {
+            "value": "indefinido",
+            "label": "Ainda indefinido"
+          }
+        ],
+        "required": true
+      },
+      {
+        "id": "idoso_fragil",
+        "label": "O paciente é muito idoso e/ou frágil?",
+        "type": "boolean"
+      },
+      {
+        "id": "tabagismo_ativo",
+        "label": "Há tabagismo ativo?",
+        "type": "boolean"
+      },
+      {
+        "id": "depressao_ansiedade",
+        "label": "Há depressão ou ansiedade clinicamente relevantes?",
+        "type": "boolean"
+      },
+      {
+        "id": "encaminhamento_com_data",
+        "label": "Já existe encaminhamento formal ao programa com data de início?",
+        "type": "boolean"
+      },
+      {
+        "id": "instabilidade_clinica",
+        "label": "Há instabilidade clínica não resolvida?",
+        "type": "boolean",
+        "required": true
+      }
+    ],
+    "assistant_rules": [
+      {
+        "id": "contraindicacao_bloqueia_inicio",
+        "priority": 100,
+        "when": {
+          "any": [
+            {
+              "field": "contraindicacao_absoluta",
+              "op": "truthy"
+            },
+            {
+              "field": "instabilidade_clinica",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "Contraindicação absoluta ou instabilidade não resolvida — não iniciar ou suspender RC até reavaliação"
+          ],
+          "opposing": [
+            "Iniciar exercício estruturado na presença de instabilidade clínica"
+          ]
+        }
+      },
+      {
+        "id": "alto_risco_bloqueia_inicio_remoto",
+        "priority": 95,
+        "when": {
+          "all": [
+            {
+              "field": "risco_exercicio",
+              "op": "eq",
+              "value": "alto"
+            },
+            {
+              "field": "modelo_entrega",
+              "op": "eq",
+              "value": "remoto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "opposing": [
+            "Não iniciar modelo exclusivamente remoto em paciente de alto risco; organizar avaliação e supervisão presencial"
+          ],
+          "ambulatory_flow": [
+            "Redefinir modelo com núcleo presencial antes da primeira sessão"
+          ]
+        }
+      },
+      {
+        "id": "sem_estratificacao_antes_remoto",
+        "priority": 90,
+        "when": {
+          "all": [
+            {
+              "field": "risco_exercicio",
+              "op": "eq",
+              "value": "nao_estratificado"
+            },
+            {
+              "field": "modelo_entrega",
+              "op": "eq",
+              "value": "remoto"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Estratificação de risco para exercício pendente"
+          ],
+          "opposing": [
+            "Modelo remoto sem estratificação prévia de risco"
+          ]
+        }
+      },
+      {
+        "id": "alto_risco_prefere_presencial",
+        "priority": 85,
+        "when": {
+          "all": [
+            {
+              "field": "risco_exercicio",
+              "op": "eq",
+              "value": "alto"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Alto risco para exercício geralmente requer supervisão presencial mais intensa, ao menos no início"
+          ],
+          "ambulatory_flow": [
+            "Priorizar fase II presencial ou híbrida com componente supervisionado forte"
+          ]
+        }
+      },
+      {
+        "id": "encaminhamento_sem_data",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "encaminhamento_com_data",
+              "op": "falsy"
+            },
+            {
+              "field": "contraindicacao_absoluta",
+              "op": "falsy"
+            },
+            {
+              "field": "fase_programa",
+              "op": "in",
+              "value": [
+                "fase_i",
+                "nao_iniciado"
+              ]
+            },
+            {
+              "field": "instabilidade_clinica",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "missing_information": [
+            "Encaminhamento formal com data de início ainda não realizado"
+          ],
+          "ambulatory_flow": [
+            "Agendar início do programa com data e contato explícitos"
+          ]
+        }
+      },
+      {
+        "id": "feve_ausente",
+        "priority": 75,
+        "when": {
+          "all": [
+            {
+              "field": "feve_conhecida",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "missing_information": [
+            "FEVE numérica não disponível para estratificação"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma com FEVE numérica"
+          ]
+        }
+      },
+      {
+        "id": "sem_avaliacao_funcional",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "capacidade_funcional_avaliada",
+              "op": "falsy"
+            }
+          ]
+        },
+        "add": {
+          "suggested_tests": [
+            "Teste ergométrico, teste cardiopulmonar ou teste de caminhada de 6 minutos"
+          ],
+          "missing_information": [
+            "Capacidade funcional objetiva ainda não mensurada"
+          ]
+        }
+      },
+      {
+        "id": "idoso_fragil_nao_excluir",
+        "priority": 65,
+        "when": {
+          "all": [
+            {
+              "field": "idoso_fragil",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Fragilidade e idade avançada não são critérios isolados para negar RC"
+          ],
+          "ambulatory_flow": [
+            "Avaliar transporte, horários e adaptação de intensidade para sustentar adesão"
+          ]
+        }
+      },
+      {
+        "id": "tabagismo_integrar_cessacao",
+        "priority": 60,
+        "when": {
+          "all": [
+            {
+              "field": "tabagismo_ativo",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Cessação tabágica é componente da RC e da prevenção secundária"
+          ],
+          "ambulatory_flow": [
+            "Integrar farmacoterapia e suporte de cessação ao plano de RC"
+          ]
+        }
+      },
+      {
+        "id": "saude_mental_adesao",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "depressao_ansiedade",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Depressão/ansiedade podem se associar a dificuldades de adesão e justificam avaliação e suporte"
+          ],
+          "ambulatory_flow": [
+            "Acionar suporte psicossocial"
+          ]
+        }
+      },
+      {
+        "id": "ic_estavel_expectativa",
+        "priority": 50,
+        "when": {
+          "all": [
+            {
+              "field": "indicacao_indice",
+              "op": "eq",
+              "value": "ic_estavel"
+            }
+          ]
+        },
+        "add": {
+          "messages": [
+            "Em ICFEr estável, enfatizar segurança e ganho funcional; não prometer redução de mortalidade com base no HF-ACTION"
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "reabilitação cardíaca",
+      "prevenção secundária",
+      "exercício supervisionado",
+      "estratificação de risco",
+      "modelo híbrido",
+      "fase I II III",
+      "fragilidade",
+      "HF-ACTION",
+      "ESC 2026"
+    ],
+    "source_refs": [
+      "European Society of Cardiology. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag099",
+      "Visseren FLJ, Mach F, Smulders YM, et al. 2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. PMID: 34458905",
+      "Dibben G, Faulkner J, Oldridge N, et al. Exercise-based cardiac rehabilitation for coronary heart disease. Cochrane Database Syst Rev. 2021;11(11):CD001800. PMID: 34741536",
+      "O'Connor CM, Whellan DJ, Lee KL, et al; HF-ACTION Investigators. Efficacy and safety of exercise training in patients with chronic heart failure: HF-ACTION randomized controlled trial. JAMA. 2009;301(14):1439-1450. PMID: 19351941",
+      "Hammill BG, Curtis LH, Schulman KA, Whellan DJ. Relationship between cardiac rehabilitation and long-term risks of death and myocardial infarction among elderly Medicare beneficiaries. Circulation. 2010;121(1):63-70. PMID: 20026778"
+    ],
+    "source_urls": [
+      "https://doi.org/10.1093/eurheartj/ehag099",
+      "https://pubmed.ncbi.nlm.nih.gov/34458905/",
+      "https://pubmed.ncbi.nlm.nih.gov/34741536/",
+      "https://pubmed.ncbi.nlm.nih.gov/19351941/",
+      "https://pubmed.ncbi.nlm.nih.gov/20026778/"
+    ],
+    "related_document_slugs": [
+      "esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia",
+      "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao",
+      "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+      "exercicio-supervisionado-na-icfer-o-ensaio-hf-action",
+      "prevencao-secundaria-integrada-apos-sindrome-coronariana-aguda",
+      "fluxograma-alta-apos-sca-os-cinco-pilares-modificaveis",
+      "fluxograma-cessacao-do-tabagismo-no-cardiopata-farmacoterapia-e-seguimento",
+      "exercicio-e-intervencao-psicologica-na-depressao-do-cardiopata-upbeat-e-as-revisoes-cochrane",
+      "indicacoes-contraindicacoes-e-fases-da-reabilitacao-cardiaca",
+      "estratificacao-de-risco-para-exercicio-na-reabilitacao-cardiaca",
+      "quando-pausar-o-exercicio-na-sessao-de-reabilitacao-cardiaca-sintomas-de-alarme",
+      "retorno-ao-programa-de-reabilitacao-cardiaca-apos-doenca-intercorrente",
+      "risco-de-abandono-na-reabilitacao-cardiaca-ambulatorial-sinais-e-retencao"
+    ],
+    "patient_material_slug": "reabilitacao-cardiaca",
+    "review_status": "revisado",
+    "review_note": "Revisão clínica focal 08/09/2026: indicações, contraindicações, estratificação obrigatória, núcleo presencial no alto risco, fase no encaminhamento, linguagem observacional e material do paciente reconciliados. ESC 2026 ehag099 e fontes por desenho; dependência geriátrica revisada conservadoramente.",
+    "version": 1,
+    "fonte_producao": "grok"
+  }
+]
