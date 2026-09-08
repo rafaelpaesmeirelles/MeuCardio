@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 51,
-  "pending_count": 112,
+  "reviewed_count": 52,
+  "pending_count": 111,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -615,8 +615,20 @@
     {
       "index": 59,
       "path": "content/Diabetes_e_cardiologia/variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "dbfa37dff90a603d4afa597d3bb7ca10eae658ea11132d4f947c6a701fb07dda"
+      "status": "corrected_reviewed",
+      "source_sha256": "dbfa37dff90a603d4afa597d3bb7ca10eae658ea11132d4f947c6a701fb07dda",
+      "findings": [
+        "CADDY CGM10dias a cada2meses, não contínuo18meses; FA detectada inclui prévia, associação agregada não específicaFA.",
+        "Retirada hipótese contrarregulação/neuropatia como explicação comprovada e generalização de risco maior foraDM.",
+        "Zeng discriminação retrospectiva não previsão prospectiva validada; DCA não ensaio utilidade; CGM/ambulatorial/unidadeOR não confirmados pelo abstract.",
+        "MIMIC variabilidade pós-admissão não CGM; sem indicação automáticaILR ou intervenção antiFA."
+      ],
+      "sources": [
+        "Quatro referências originais: abstracts/identidades conferidos.",
+        "CADDY texto integral Springer métodos/desfechos/discussão consultados.",
+        "Zeng resumo primário QJM/PubMed consultado; texto completo não acessível, detalhes não comprovados removidos."
+      ],
+      "reviewed_sha256": "ce8d5a66b58d8e6f54078e3e57b2ba601430a5c961fae32286469d4f628dab8a"
     },
     {
       "index": 60,

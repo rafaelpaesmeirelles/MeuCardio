@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 51 documentos lidos integralmente e corrigidos; 112 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 52 documentos lidos integralmente e corrigidos; 111 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -184,6 +184,15 @@ Fontes verificadas: PMID42119975, PMID40482670, https://www.ema.europa.eu/en/med
 - TRIUMPH-Outcomes existente semresultados
 
 Fontes verificadas: PMID37385280, PMID42250575, PMID41090431, https://clinicaltrials.gov/study/NCT06383390.
+
+## 59 — content/Diabetes_e_cardiologia/variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes.md
+
+- CADDY CGM10dias a cada2meses, não contínuo18meses; FA detectada inclui prévia, associação agregada não específicaFA.
+- Retirada hipótese contrarregulação/neuropatia como explicação comprovada e generalização de risco maior foraDM.
+- Zeng discriminação retrospectiva não previsão prospectiva validada; DCA não ensaio utilidade; CGM/ambulatorial/unidadeOR não confirmados pelo abstract.
+- MIMIC variabilidade pós-admissão não CGM; sem indicação automáticaILR ou intervenção antiFA.
+
+Fontes verificadas: Quatro referências originais: abstracts/identidades conferidos., CADDY texto integral Springer métodos/desfechos/discussão consultados., Zeng resumo primário QJM/PubMed consultado; texto completo não acessível, detalhes não comprovados removidos..
 
 ## 62 — content/Doença_coronariana/clear-synergy-oasis-9-espironolactona-rotineira-apos-infarto-agudo-do-miocardio.md
 
