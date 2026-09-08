@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 38 documentos lidos integralmente e corrigidos; 125 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 39 documentos lidos integralmente e corrigidos; 124 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -62,6 +62,16 @@ Fontes verificadas: 19 PMIDs originais obtidos diretamente por Eutils; 29200026 
 - GenesENPP1/ABCC6nãoalélicos entre si; excluídas generalizações calcifilaxia/idade.
 
 Fontes verificadas: 10referências originais: abstracts individuais; GeneReviews online para manejo., TEMP PMID29519353 DOI10.1016/j.jacc.2017.12.062 eHarmsen39581064 DOI10.1016/j.atherosclerosis.2024.119051: abstracts primários online..
+
+## 6 — content/Aorta_e_doença_arterial_periférica/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial.md
+
+- CDC líquor/HIV antes da terapia terciária e esquema porresultado restaurados; benzatina não universal.
+- Aneurismas tambémfusiformes; sífilis adquirida não prevê inevitavelmenteaortite futura.
+- Costa qualidadepré-natal não significativa; removidosMoseley/idososnãoidentificados.
+- Positividade treponêmica não prova etiologia doaneurisma; antimicrobiano não garante estabilizaçãoestrutural.
+- Limiar cirúrgico não deve ignorar etiologiainfecciosa/morfologia/urgência.
+
+Fontes verificadas: 11PMIDs originais: identidade conferida;2679075/33744210/35550616/32580086 semabstract, sem alegar integral lido., CDC páginas sífilis terciária e neurossífilis consultadas diretamente08/09/2026., Kallash39902879, Yuan30073493, Costa38917233 abstracts completos conferidos..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
