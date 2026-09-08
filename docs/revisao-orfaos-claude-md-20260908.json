@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 29,
-  "pending_count": 134,
+  "reviewed_count": 30,
+  "pending_count": 133,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1182,8 +1182,21 @@
     {
       "index": 143,
       "path": "content/Prevenção_e_lipídios/lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "a4aceabf97329e8d9613f2d32146bbf1466b6654c6afc58a17a43f03d8e86991"
+      "status": "corrected_reviewed",
+      "source_sha256": "a4aceabf97329e8d9613f2d32146bbf1466b6654c6afc58a17a43f03d8e86991",
+      "findings": [
+        "Falsa precedência fase3: OCEAN(a)olpasirana registrado2022, antes ACCLAIM2024.",
+        "Estatinas não reduzem Lpa consistentemente/podem elevar; não suspender LDLterapia.",
+        "ALPACA inclui braço400mgseguido placebo180, omitido.",
+        "Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.",
+        "Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados."
+      ],
+      "sources": [
+        "PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados",
+        "NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026",
+        "EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa"
+      ],
+      "reviewed_sha256": "106614e9e93d970ab3534b548a6b40a0d0cd24fa085f91370a78bd8d4f6b5a8a"
     },
     {
       "index": 144,

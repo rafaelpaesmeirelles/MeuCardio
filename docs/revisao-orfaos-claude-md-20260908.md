@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 29 documentos lidos integralmente e corrigidos; 134 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 30 documentos lidos integralmente e corrigidos; 133 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -212,6 +212,16 @@ Fontes verificadas: PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract 
 - ORION4 semresultados
 
 Fontes verificadas: Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck C, Lesogor A, Ott D, Mena-Madrazo J, Zang X, Wright RS. Safety and Lipid-Lowering Efficacy of Inclisiran Monotherapy in Patients Without ASCVD: The VICTORION-Mono Randomized Clinical Trial. J Am Coll Cardiol. 2025;86(3):196-208. DOI: 10.1016/j.jacc.2025.04.049. PMID: 40392667, Landmesser U, Laufs U, Schatz U, Winzer EB, Nowak B, Kassner U, Gouni-Berthold I, Esteban A, Lubyayi L, Krueger A, Hentschke C, Wilke A, Winkelmann BR, Achouba A, Banach M. Inclisiran-based treatment strategy in hypercholesterolaemia: the VICTORION-difference trial. Eur Heart J. 2026;47(25):3241-3253. DOI: 10.1093/eurheartj/ehaf685. PMID: 40884558, Steg PG, Goodman SG, Jukema JW, Martens P, Zirlik A, Bhatt DL, Menon V, Szarek M, Lesogor A, Stratz C, O'Donoghue F, Mena-Madrazo J, Shao Q, Liu K, Mehran R; VICTORION-2 Prevent Investigators. Design of VICTORION-2 Prevent: a randomized double-blind, placebo-controlled trial, assessing the impact of inclisiran on major adverse cardiovascular events in patients with established cardiovascular disease. Am Heart J. 2026. DOI: 10.1016/j.ahj.2026.107493. PMID: 42203164, Ray KK, Wright RS, Kallend D, Koenig W, Leiter LA, Raal FJ, et al; ORION-10 and ORION-11 Investigators. Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol. N Engl J Med. 2020;382(16):1507-1519. DOI: 10.1056/NEJMoa1912387. PMID: 32187462, VICTORION-Difference, texto completo: https://academic.oup.com/eurheartj/article/47/25/3241/8243858 ; distribuição de rosuvastatina40mg e eritema no local de injeção conferidos., ClinicalTrials.gov. ORION-4, NCT03705234. https://clinicaltrials.gov/study/NCT03705234?tab=results. Sem resultados postados em08/09/2026..
+
+## 143 — content/Prevenção_e_lipídios/lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3.md
+
+- Falsa precedência fase3: OCEAN(a)olpasirana registrado2022, antes ACCLAIM2024.
+- Estatinas não reduzem Lpa consistentemente/podem elevar; não suspender LDLterapia.
+- ALPACA inclui braço400mgseguido placebo180, omitido.
+- Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.
+- Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados.
+
+Fontes verificadas: PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados, NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026, EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa.
 
 ## 157 — content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md
 
