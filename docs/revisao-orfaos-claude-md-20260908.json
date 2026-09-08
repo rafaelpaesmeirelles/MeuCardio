@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 12,
-  "pending_count": 151,
+  "reviewed_count": 17,
+  "pending_count": 146,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -229,7 +229,8 @@
         "https://www.nejm.org/doi/full/10.1056/NEJMoa2504654",
         "PMID40932433"
       ],
-      "source_sha256": "29e97526a23917a394fa22b378648366c109435245c58006b516f69c7123914f"
+      "source_sha256": "29e97526a23917a394fa22b378648366c109435245c58006b516f69c7123914f",
+      "reviewed_sha256": "98aff1bdcaba5d4102fdd3360c67632e2b658cdd995b763eb2356597ebb54bf8"
     },
     {
       "index": 36,
@@ -246,8 +247,23 @@
     {
       "index": 38,
       "path": "content/Cardiomiopatias/fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "e85436904e60e389606d1a8a1f3ecfdc2e48ff7c165494959349ede50a58f23a"
+      "status": "corrected_reviewed",
+      "source_sha256": "e85436904e60e389606d1a8a1f3ecfdc2e48ff7c165494959349ede50a58f23a",
+      "findings": [
+        "Limitada anticoagulação universal à FA clínica; acrescentados limiares e decisão específica para FA subclínica.",
+        "Corrigida exceção valvar genérica para prótese mecânica/estenose mitral moderada-grave, preservando DOAC na insuficiência mitral.",
+        "Retirada preferência universal por ablação; explicitadas indicações e preferência do paciente.",
+        "Coorte DOAC restrita à CMH obstrutiva sem AVC prévio; associação não causal e ausência de diferença não equivalência.",
+        "Trombo8,5% em amostra selecionada para ETE não prevalência de toda CMH; recorrência definida por nova intervenção em1 ano."
+      ],
+      "sources": [
+        "PMID41838376",
+        "PMID42269731",
+        "PMID42029363",
+        "DOI10.1161/CIR.0000000000001250",
+        "DOI10.1161/CIR.0000000000001193"
+      ],
+      "reviewed_sha256": "d98ba04040571db7a88723929946ea3d46ad265de59705152b59727d67a9681f"
     },
     {
       "index": 39,
@@ -266,7 +282,8 @@
         "PMID40354453",
         "PMID40100181"
       ],
-      "source_sha256": "46f3fb5fc0da78f6fb06838f3ff4b4faabb0b4a3c68b27f67b8e5d1d31c591d2"
+      "source_sha256": "46f3fb5fc0da78f6fb06838f3ff4b4faabb0b4a3c68b27f67b8e5d1d31c591d2",
+      "reviewed_sha256": "2d8739f82b8d93f86ab304082b6c9d70bc17035e7070c3e92fa852290bab7076"
     },
     {
       "index": 40,
@@ -296,7 +313,8 @@
         "Taylor MRG, Adler ED. Danon Disease. GeneReviews. Revisão23/05/2024. https://www.ncbi.nlm.nih.gov/books/NBK554742/",
         "Rocket Pharmaceuticals. Atualização de segurança fase2 e retomada do protocolo, 2025–2026. https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-provides-update-phase-2-clinical-trial-rp ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/ ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update"
       ],
-      "source_sha256": "c4eedc48650e37f091da202a188e61a49cf86acc46dabbd1d72ac83a0c7e6da0"
+      "source_sha256": "c4eedc48650e37f091da202a188e61a49cf86acc46dabbd1d72ac83a0c7e6da0",
+      "reviewed_sha256": "d7573aecba505a8a48cd52f9b50d67349f778dd76e7bc86b86916c61bcdfaabb"
     },
     {
       "index": 43,
@@ -367,7 +385,8 @@
         "PMID40482670",
         "https://www.ema.europa.eu/en/medicines/human/EPAR/awiqli"
       ],
-      "source_sha256": "7d4b4ad09699142db0b13e242607c26faf5350e201c9e59cdb61f306517991d5"
+      "source_sha256": "7d4b4ad09699142db0b13e242607c26faf5350e201c9e59cdb61f306517991d5",
+      "reviewed_sha256": "7f47b792823f9f09a054c7787c9342a4bb3d268ac98f2d6bd89f709b5ea9d8f2"
     },
     {
       "index": 53,
@@ -391,7 +410,8 @@
         "PMID41090431",
         "https://clinicaltrials.gov/study/NCT06383390"
       ],
-      "source_sha256": "f44c7c588a54a5f83449ccd76937374bd3fc4ffbf3c33d23049bbaf47be9c92c"
+      "source_sha256": "f44c7c588a54a5f83449ccd76937374bd3fc4ffbf3c33d23049bbaf47be9c92c",
+      "reviewed_sha256": "fd0e122f85b1f166a07e39d2fa8ca6ee484e32784cee04368b84fd2c72b9ed80"
     },
     {
       "index": 55,
@@ -449,19 +469,52 @@
         "d'Entremont MA, Jolly SS, Alharthi F, Shah B, Austin D, Yi Q, Storey RF, Bossard M, Cornel J, Jaspers Focks J, Kedev S, Asani V, Stankovic G, Tsang M, Valettas N, Tyrwhitt J, Betz J, Lee SF, Mian R, Silvain J, Beygui F, Czarnecki A, Dehghani P, Cantor W, Lavi S, Spratt JC, Belley-Côté EP, Eikelboom JW. Benefit-risk of colchicine and spironolactone in acute myocardial infarction: prespecified generalised pairwise comparisons analysis of the CLEAR-SYNERGY trial. Heart. 2026;112(6):326-332. DOI: 10.1136/heartjnl-2025-326218. PMID: 40908114.",
         "d'Entremont MA, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, Skuriat E, Tyrwhitt J, Mehta SR, Devereaux PJ, Eikelboom J, Cairns JA, Pitt B, Jolly SS. Design and rationale of the CLEAR SYNERGY (OASIS 9) trial: a 2x2 factorial randomized controlled trial of colchicine versus placebo and spironolactone versus placebo in patients with myocardial infarction. Am Heart J. 2024;275:173-182. DOI: 10.1016/j.ahj.2024.06.007. PMID: 38936755."
       ],
-      "source_sha256": "8dd8fc7623ec8156f0e8ae30ad1fa6da4d64b41f14f2a874135ae9276845ae24"
+      "source_sha256": "8dd8fc7623ec8156f0e8ae30ad1fa6da4d64b41f14f2a874135ae9276845ae24",
+      "reviewed_sha256": "077d44396818707effcc04c82dafb7c758ced8bf8c6c90d599a335e032011ade"
     },
     {
       "index": 63,
       "path": "content/Doença_coronariana/deficiencia-de-ferro-na-sindrome-coronariana-aguda.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "5ab20f0e6aed7c08978712469567afbd5899c1881572a55db02f56d36ca6e6d4"
+      "status": "corrected_reviewed",
+      "source_sha256": "5ab20f0e6aed7c08978712469567afbd5899c1881572a55db02f56d36ca6e6d4",
+      "findings": [
+        "Incluído ajuste por hs-CRP que elimina significância em Masini; retirada falsa divergência prognóstica independente.",
+        "Retirada inferência de menor resposta no subgrupo isquêmico: interações não significativas.",
+        "Corrigida formulação IRONMAN para derisomaltose.",
+        "Identificados INFERRCT randomizado e iCHF-2 encerrado; removida alegação de inexistência de ensaios.",
+        "Preservadas investigação e reposição por anemia/deficiência sem exigir IC; não promovido benefício prognóstico para SCA."
+      ],
+      "sources": [
+        "PMID40120841",
+        "PMID39780944",
+        "PMID41027507",
+        "NCT05759078",
+        "NCT03991000"
+      ],
+      "reviewed_sha256": "15b966a9c97828259f4eabe61700b4bce9c22eed32a28052eddb67ee7dc4039f"
     },
     {
       "index": 64,
       "path": "content/Doença_coronariana/desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "4104d57226c263a548bf117de39787afad4c2c1a5ddf2b297559506b277188e9"
+      "status": "corrected_reviewed",
+      "source_sha256": "4104d57226c263a548bf117de39787afad4c2c1a5ddf2b297559506b277188e9",
+      "findings": [
+        "DAN-DAPT: portadores LOF permanecem prasugrel/ticagrelor; protocolo não troca todos; dois coprimários distintos e amostras planejadas contextualizadas.",
+        "Modelo econômico deriva de FORCE-ACS, não POPular Genetics; resultados não prova de segurança.",
+        "TAILOR-PCI não confirmou superioridade primária; retirado agrupamento de ensaios como prova universal.",
+        "Incluído sinal isquêmico STOPDAPT-2 ACS e retirada equivalência entre estratégias pelo intervalo25–65%.",
+        "Explicitado limite temporal ESC e painel CRT não normativo."
+      ],
+      "sources": [
+        "PMID40015616",
+        "PMID39537191",
+        "PMID42410742",
+        "PMID42443024",
+        "NCT05262803",
+        "DOI10.1001/jama.2020.12443",
+        "DOI10.1093/eurheartj/ehad191"
+      ],
+      "reviewed_sha256": "8f06f303807a8a981708b5b37ad9a2d7eb684828cc43c1753981ad43034f09bd"
     },
     {
       "index": 65,
@@ -484,8 +537,22 @@
     {
       "index": 68,
       "path": "content/Doença_coronariana/inibicao-do-fator-xia-apos-sindrome-coronariana-aguda-racional-do-librexia-acs.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "b2181cec393e80775de594e2382f013ad74c52b32ec5eed494c41f95af5f5a08"
+      "status": "corrected_reviewed",
+      "source_sha256": "b2181cec393e80775de594e2382f013ad74c52b32ec5eed494c41f95af5f5a08",
+      "findings": [
+        "Substituída narrativa sem resultado pelo LIBREXIA-ACS publicado29/08/2026, interrompido por futilidade; definido sangramento BARC3c/5 sem universalizar segurança.",
+        "Corrigida dose OCEANIC-AF100→50mg e separada falha dessa molécula/dose/indicação de efeito de classe.",
+        "Incluída existência de OCEANIC-STROKE positivo em população não cardioembólica; não extrapolado a FA/SCA."
+      ],
+      "sources": [
+        "PMID39986336",
+        "PMID36030390",
+        "PMID41791675",
+        "PMID42670965",
+        "DOI10.1056/NEJMoa2407105",
+        "DOI10.1056/NEJMoa2513880"
+      ],
+      "reviewed_sha256": "9d048dd23e486721b0d95f3eb4c19b365a385d3c47a54e46238f16e8d1f9a220"
     },
     {
       "index": 69,
@@ -598,8 +665,24 @@
     {
       "index": 87,
       "path": "content/Fibrilação_atrial/timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "a041d835569e99ffa38777cfadf2b10926491c0f9a18cbd14e348c7c68b33c6d"
+      "status": "corrected_reviewed",
+      "source_sha256": "a041d835569e99ffa38777cfadf2b10926491c0f9a18cbd14e348c7c68b33c6d",
+      "findings": [
+        "Corrigida regra1–3–6–12: dia1éAIT, não AVC leve.",
+        "Corrigidas falsas exclusões universais: ELAN inclui infarto maior; OPTIMAS permite HI1/HI2/PH1, excluiPH2.",
+        "Distinguidos gravidade radiológica ELAN e NIHSS; CATALYST não inclui todas as janelas ELAN.",
+        "Removida falsa contagem tripla de eventos e conclusão universal baseada só em TC sem sangue.",
+        "START reconhecido como RCT publicado; mantidos números dos quatro abstracts primários."
+      ],
+      "sources": [
+        "PMID36065821",
+        "PMID37222476",
+        "PMID39491870",
+        "PMID40570866",
+        "DOI10.1001/jamaneurol.2025.0285",
+        "DOI10.1186/s13063-025-08761-6"
+      ],
+      "reviewed_sha256": "d2e61f6aa4012586a2924f6fc972cb1fe84ae04b1b77b4827ba0979ae0d7a680"
     },
     {
       "index": 88,
@@ -649,7 +732,8 @@
       "sources": [
         "Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tavares AL, Valter LK, Soares RB, Martins VM, Fuchs FD. Comparative Effectiveness of Chlorthalidone Versus Hydrochlorothiazide and Dose-Response of Amiloride on Blood Pressure and Biochemical Parameters. J Am Heart Assoc. 2026 Aug 30:e047583. DOI: 10.1161/JAHA.125.047583. PMID: 42669885. Abstract estruturado (Background/Methods/Results/Conclusions) conferido na íntegra via PubMed/E-utilities em 01/09/2026."
       ],
-      "source_sha256": "89d9ee96c243616e15d7a07845936da94aa5901dfcafda81542ad40a5c665cdc"
+      "source_sha256": "89d9ee96c243616e15d7a07845936da94aa5901dfcafda81542ad40a5c665cdc",
+      "reviewed_sha256": "a75fec030dddf685495442ef9baf8a8533ced7cc24639bf5212c324d0860724a"
     },
     {
       "index": 95,
@@ -666,7 +750,8 @@
         "Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131",
         "Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392"
       ],
-      "source_sha256": "c7938e40c0b6e0c0832da8036343ff4c859cc4252e29443a3f187fc81adcd2d8"
+      "source_sha256": "c7938e40c0b6e0c0832da8036343ff4c859cc4252e29443a3f187fc81adcd2d8",
+      "reviewed_sha256": "d9098a2f08f987ca1ddfe638220dfb96dff88062942e0a7d0e48154a69c4e679"
     },
     {
       "index": 96,
@@ -855,7 +940,8 @@
         "Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, Damy T, Garcia-Pavia P, Taubel J, Solomon SD, Sheikh FH, Tahara N, González-Costello J, Tsujita K, Morbach C, Pozsonyi Z, Petrie MC, Delgado D, Van der Meer P, Jabbour A, Bondue A, Kim D, Azevedo O, Hvitfeldt Poulsen S, Yilmaz A, Jankowska EA, Algalarrondo V, Slugg A, Garg PP, Boyle KL, Yureneva E, Silliman N, Yang L, Chen J, Eraly SA, Vest J, Maurer MS; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194 — resumo estruturado (Background/Methods/Results/Conclusions) conferido via NCBI E-utilities (efetch, retmode=xml) nesta sessão, com todos os números do desfecho primário, mortalidade, 6MWT, KCCQ-OS e segurança extraídos diretamente do abstract estruturado do artigo.",
         "FDA. Amvuttra prescribing information, março2025, seções1.2 e5.1. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf"
       ],
-      "source_sha256": "a33eff05539152c6ce54a2827851631c088062d26fe97e3a61ce5d57922b03d6"
+      "source_sha256": "a33eff05539152c6ce54a2827851631c088062d26fe97e3a61ce5d57922b03d6",
+      "reviewed_sha256": "95df6b0302352f7e6a0b10904a4e58c81628f3f064c5e8397870c97a7c002aba"
     },
     {
       "index": 126,
@@ -971,7 +1057,8 @@
         "VICTORION-Difference, texto completo: https://academic.oup.com/eurheartj/article/47/25/3241/8243858 ; distribuição de rosuvastatina40mg e eritema no local de injeção conferidos.",
         "ClinicalTrials.gov. ORION-4, NCT03705234. https://clinicaltrials.gov/study/NCT03705234?tab=results. Sem resultados postados em08/09/2026."
       ],
-      "source_sha256": "e7be1cfeba0366f4ea65b2d0ddc2e3e15b1bd4d36fa0b027073e83046d436aeb"
+      "source_sha256": "e7be1cfeba0366f4ea65b2d0ddc2e3e15b1bd4d36fa0b027073e83046d436aeb",
+      "reviewed_sha256": "36c8d78297e3410c4080247a8e228483a8d175a26060b5ab724100abc6b904ec"
     },
     {
       "index": 143,
@@ -1072,7 +1159,8 @@
         "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.",
         "Loganath K, et al. EVOLVED randomized trial. JAMA.2024. DOI:10.1001/jama.2024.22730. https://jamanetwork.com/journals/jama/fullarticle/2825540"
       ],
-      "source_sha256": "10a4d02b31a8c20969426a5aa09c878aa2143f86c8dc9ef5d7f9fa46fd4eef19"
+      "source_sha256": "10a4d02b31a8c20969426a5aa09c878aa2143f86c8dc9ef5d7f9fa46fd4eef19",
+      "reviewed_sha256": "5052a071b2378d470cf0235d9ba675680c4c8f8487e036c541a01a4d4223b2c9"
     },
     {
       "index": 158,
@@ -1096,7 +1184,8 @@
         "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927.",
         "Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663."
       ],
-      "source_sha256": "389504766630647cd0f9c311b214c35ca75e1045ae1052e1f87cfbf43af10c0e"
+      "source_sha256": "389504766630647cd0f9c311b214c35ca75e1045ae1052e1f87cfbf43af10c0e",
+      "reviewed_sha256": "ea447927dc52d1de2ab19ed81ac042a43827e89ad510d5d19a3ee2ab61a9f22a"
     },
     {
       "index": 160,

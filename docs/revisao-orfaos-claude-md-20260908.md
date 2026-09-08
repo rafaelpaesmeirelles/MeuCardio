@@ -1,20 +1,27 @@
 # Revisão individual dos Markdown antigos Claude — 08/09/2026
 
-Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. São 163 arquivos extraídos antes das novas sessões Claude. O hash SHA256 de cada arquivo original consta no ledger. Nenhum conteúdo produzido depois dessa extração está incluído.
+Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Neste checkpoint: 12 documentos lidos integralmente e corrigidos, mais a dependência canônica FOREST-HCM atualizada com ACACIA publicado (PMID42663312). Os outros151 permanecem explicitamente pendentes de revisão contextual. A busca de identidade não encontrou slugs exatos repetidos nos163; aproximação lexical não foi usada para aprovação ou descarte. Fontes PubMed foram confrontadas com cada texto e, quando necessário, artigos integrais, bulas e registros.
+Checkpoint: 17 documentos lidos integralmente e corrigidos; 146 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+
+Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
 - monoterapia não equivale a população sem exposição prévia; washout supervisionado
 - massa VE não significativamente diferente; publicação online agosto
 
-## 54 — content/Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular.md
+Fontes verificadas: https://www.jacc.org/doi/10.1016/j.jchf.2024.11.011, https://www.nejm.org/doi/full/10.1056/NEJMoa2504654, PMID40932433.
 
-- superioridade indireta removida
-- HbA1c24semanas;exceção0,5mg
-- TRIUMPH3ponderalvs4OA
-- TRIUMPH-Outcomes existente semresultados
+## 38 — content/Cardiomiopatias/fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc.md
+
+- Limitada anticoagulação universal à FA clínica; acrescentados limiares e decisão específica para FA subclínica.
+- Corrigida exceção valvar genérica para prótese mecânica/estenose mitral moderada-grave, preservando DOAC na insuficiência mitral.
+- Retirada preferência universal por ablação; explicitadas indicações e preferência do paciente.
+- Coorte DOAC restrita à CMH obstrutiva sem AVC prévio; associação não causal e ausência de diferença não equivalência.
+- Trombo8,5% em amostra selecionada para ETE não prevalência de toda CMH; recorrência definida por nova intervenção em1 ano.
+
+Fontes verificadas: PMID41838376, PMID42269731, PMID42029363, DOI10.1161/CIR.0000000000001250, DOI10.1161/CIR.0000000000001193.
 
 ## 39 — content/Cardiomiopatias/mavacamten-em-cmh-obstrutiva-elegivel-para-reducao-septal-o-ensaio-valor-hcm.md
 
@@ -23,12 +30,7 @@ Neste checkpoint: 12 documentos lidos integralmente e corrigidos, mais a depend�
 - erratum tabela4 5(4,6%)
 - limitações segurança/encaminhamento
 
-## 52 — content/Diabetes_e_cardiologia/insulina-semanal-icodec-seguranca-cardiovascular-e-hipoglicemia.md
-
-- HR ICamplo não prova segurança/noninferiority
-- IcoSema não isola icodec
-- composto hipoglicemia não apenasgrave
-- DM1 maiorhipo EMA
+Fontes verificadas: PMID35798455, PMID37639243, PMID39556124, PMID40354453, PMID40100181.
 
 ## 42 — content/Cardiomiopatias/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1.md
 
@@ -37,31 +39,79 @@ Neste checkpoint: 12 documentos lidos integralmente e corrigidos, mais a depend�
 - segurança fase2 óbito/hold/retomada separados da fase1
 - comunicados não promovidos a eficácia
 
+Fontes verificadas: Greenberg B, Taylor M, Rossano JW, et al. Phase 1 Study of AAV9.LAMP2B Gene Therapy in Danon Disease. N Engl J Med. 2025;392(10):972-983. DOI: 10.1056/NEJMoa2412392. PMID: 39556016., ClinicalTrials.gov. Gene Therapy for Male Patients With Danon Disease Using RP-A501 (AAV9.LAMP2B). NCT03882437., Taylor MRG, Adler ED. Danon Disease. GeneReviews. Revisão23/05/2024. https://www.ncbi.nlm.nih.gov/books/NBK554742/, Rocket Pharmaceuticals. Atualização de segurança fase2 e retomada do protocolo, 2025–2026. https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-provides-update-phase-2-clinical-trial-rp ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/ ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update.
+
+## 52 — content/Diabetes_e_cardiologia/insulina-semanal-icodec-seguranca-cardiovascular-e-hipoglicemia.md
+
+- HR ICamplo não prova segurança/noninferiority
+- IcoSema não isola icodec
+- composto hipoglicemia não apenasgrave
+- DM1 maiorhipo EMA
+
+Fontes verificadas: PMID42119975, PMID40482670, https://www.ema.europa.eu/en/medicines/human/EPAR/awiqli.
+
+## 54 — content/Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular.md
+
+- superioridade indireta removida
+- HbA1c24semanas;exceção0,5mg
+- TRIUMPH3ponderalvs4OA
+- TRIUMPH-Outcomes existente semresultados
+
+Fontes verificadas: PMID37385280, PMID42250575, PMID41090431, https://clinicaltrials.gov/study/NCT06383390.
+
 ## 62 — content/Doença_coronariana/clear-synergy-oasis-9-espironolactona-rotineira-apos-infarto-agudo-do-miocardio.md
 
 - IC95%coprimário2adicionado
 - GPC exploratória e componentes dano explícitos
 - ausência diferença composta não prova nulidade cada componente
 
-## 157 — content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md
+Fontes verificadas: Jolly SS, d'Entremont MA, Pitt B, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, et al. Routine Spironolactone in Acute Myocardial Infarction. N Engl J Med. 2025;392(7):643-652. DOI: 10.1056/NEJMoa2405923. PMID: 39555814., d'Entremont MA, Jolly SS, Alharthi F, Shah B, Austin D, Yi Q, Storey RF, Bossard M, Cornel J, Jaspers Focks J, Kedev S, Asani V, Stankovic G, Tsang M, Valettas N, Tyrwhitt J, Betz J, Lee SF, Mian R, Silvain J, Beygui F, Czarnecki A, Dehghani P, Cantor W, Lavi S, Spratt JC, Belley-Côté EP, Eikelboom JW. Benefit-risk of colchicine and spironolactone in acute myocardial infarction: prespecified generalised pairwise comparisons analysis of the CLEAR-SYNERGY trial. Heart. 2026;112(6):326-332. DOI: 10.1136/heartjnl-2025-326218. PMID: 40908114., d'Entremont MA, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, Skuriat E, Tyrwhitt J, Mehta SR, Devereaux PJ, Eikelboom J, Cairns JA, Pitt B, Jolly SS. Design and rationale of the CLEAR SYNERGY (OASIS 9) trial: a 2x2 factorial randomized controlled trial of colchicine versus placebo and spironolactone versus placebo in patients with myocardial infarction. Am Heart J. 2024;275:173-182. DOI: 10.1016/j.ahj.2024.06.007. PMID: 38936755..
 
-- EAmoderada sintomas nãoindicamintervençãoautomática
-- exceçãoSAVR concomitante
-- EVOLVED neutro
-- 43%crossover eprimárioincluiKCCQ
+## 63 — content/Doença_coronariana/deficiencia-de-ferro-na-sindrome-coronariana-aguda.md
 
-## 159 — content/Valvopatias/reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave.md
+- Incluído ajuste por hs-CRP que elimina significância em Masini; retirada falsa divergência prognóstica independente.
+- Retirada inferência de menor resposta no subgrupo isquêmico: interações não significativas.
+- Corrigida formulação IRONMAN para derisomaltose.
+- Identificados INFERRCT randomizado e iCHF-2 encerrado; removida alegação de inexistência de ensaios.
+- Preservadas investigação e reposição por anemia/deficiência sem exigir IC; não promovido benefício prognóstico para SCA.
 
-- COAPT também3+/4+; falsa exclusividade removida
-- três primários eKCCQ12meses
-- segurançaespecífica não todosEA
-- proporcionalidade hipótesenãogate
+Fontes verificadas: PMID40120841, PMID39780944, PMID41027507, NCT05759078, NCT03991000.
+
+## 64 — content/Doença_coronariana/desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026.md
+
+- DAN-DAPT: portadores LOF permanecem prasugrel/ticagrelor; protocolo não troca todos; dois coprimários distintos e amostras planejadas contextualizadas.
+- Modelo econômico deriva de FORCE-ACS, não POPular Genetics; resultados não prova de segurança.
+- TAILOR-PCI não confirmou superioridade primária; retirado agrupamento de ensaios como prova universal.
+- Incluído sinal isquêmico STOPDAPT-2 ACS e retirada equivalência entre estratégias pelo intervalo25–65%.
+- Explicitado limite temporal ESC e painel CRT não normativo.
+
+Fontes verificadas: PMID40015616, PMID39537191, PMID42410742, PMID42443024, NCT05262803, DOI10.1001/jama.2020.12443, DOI10.1093/eurheartj/ehad191.
+
+## 68 — content/Doença_coronariana/inibicao-do-fator-xia-apos-sindrome-coronariana-aguda-racional-do-librexia-acs.md
+
+- Substituída narrativa sem resultado pelo LIBREXIA-ACS publicado29/08/2026, interrompido por futilidade; definido sangramento BARC3c/5 sem universalizar segurança.
+- Corrigida dose OCEANIC-AF100→50mg e separada falha dessa molécula/dose/indicação de efeito de classe.
+- Incluída existência de OCEANIC-STROKE positivo em população não cardioembólica; não extrapolado a FA/SCA.
+
+Fontes verificadas: PMID39986336, PMID36030390, PMID41791675, PMID42670965, DOI10.1056/NEJMoa2407105, DOI10.1056/NEJMoa2513880.
+
+## 87 — content/Fibrilação_atrial/timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst.md
+
+- Corrigida regra1–3–6–12: dia1éAIT, não AVC leve.
+- Corrigidas falsas exclusões universais: ELAN inclui infarto maior; OPTIMAS permite HI1/HI2/PH1, excluiPH2.
+- Distinguidos gravidade radiológica ELAN e NIHSS; CATALYST não inclui todas as janelas ELAN.
+- Removida falsa contagem tripla de eventos e conclusão universal baseada só em TC sem sangue.
+- START reconhecido como RCT publicado; mantidos números dos quatro abstracts primários.
+
+Fontes verificadas: PMID36065821, PMID37222476, PMID39491870, PMID40570866, DOI10.1001/jamaneurol.2025.0285, DOI10.1186/s13063-025-08761-6.
 
 ## 94 — content/Hipertensão/amilorida-5-versus-10-mg-e-a-razao-clortalidona-hidroclorotiazida-ensaio-fatorial-brasileiro-jaha-2026.md
 
 - superioridadenegativa nãoequivalência
 - sem braço semamilorida nãoefeitofraco
 - nãodefinequarta droga universal
+
+Fontes verificadas: Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tavares AL, Valter LK, Soares RB, Martins VM, Fuchs FD. Comparative Effectiveness of Chlorthalidone Versus Hydrochlorothiazide and Dose-Response of Amiloride on Blood Pressure and Biochemical Parameters. J Am Heart Assoc. 2026 Aug 30:e047583. DOI: 10.1161/JAHA.125.047583. PMID: 42669885. Abstract estruturado (Background/Methods/Results/Conclusions) conferido na íntegra via PubMed/E-utilities em 01/09/2026..
 
 ## 95 — content/Hipertensão/desprescricao-de-anti-hipertensivos-no-idoso-fragil-mortalidade-hospitalizacao-e-o-ensaio-retreat-frail.md
 
@@ -70,11 +120,15 @@ Neste checkpoint: 12 documentos lidos integralmente e corrigidos, mais a depend�
 - indicaçõesIC/FA/anginaantesretirar
 - semextrapolarPA não controlada
 
+Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Reduction of Antihypertensive Treatment in Nursing Home Residents. N Engl J Med. 2025;393(20):1990-2000. DOI: 10.1056/NEJMoa2508157. PMID: 40879421, Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131, Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392.
+
 ## 125 — content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md
 
 - monoterapiatafamidisbasal
 - nãoinferebenefícioincrementalcombinação
 - aprovaçãoFDA2025+vitaminaA
+
+Fontes verificadas: Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, Damy T, Garcia-Pavia P, Taubel J, Solomon SD, Sheikh FH, Tahara N, González-Costello J, Tsujita K, Morbach C, Pozsonyi Z, Petrie MC, Delgado D, Van der Meer P, Jabbour A, Bondue A, Kim D, Azevedo O, Hvitfeldt Poulsen S, Yilmaz A, Jankowska EA, Algalarrondo V, Slugg A, Garg PP, Boyle KL, Yureneva E, Silliman N, Yang L, Chen J, Eraly SA, Vest J, Maurer MS; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194 — resumo estruturado (Background/Methods/Results/Conclusions) conferido via NCBI E-utilities (efetch, retmode=xml) nesta sessão, com todos os números do desfecho primário, mortalidade, 6MWT, KCCQ-OS e segurança extraídos diretamente do abstract estruturado do artigo., FDA. Amvuttra prescribing information, março2025, seções1.2 e5.1. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf.
 
 ## 142 — content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md
 
@@ -83,6 +137,22 @@ Neste checkpoint: 12 documentos lidos integralmente e corrigidos, mais a depend�
 - rosuvastatina40diferente nãoefeito muscularintrínseco
 - ORION4 semresultados
 
-## Limites
+Fontes verificadas: Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck C, Lesogor A, Ott D, Mena-Madrazo J, Zang X, Wright RS. Safety and Lipid-Lowering Efficacy of Inclisiran Monotherapy in Patients Without ASCVD: The VICTORION-Mono Randomized Clinical Trial. J Am Coll Cardiol. 2025;86(3):196-208. DOI: 10.1016/j.jacc.2025.04.049. PMID: 40392667, Landmesser U, Laufs U, Schatz U, Winzer EB, Nowak B, Kassner U, Gouni-Berthold I, Esteban A, Lubyayi L, Krueger A, Hentschke C, Wilke A, Winkelmann BR, Achouba A, Banach M. Inclisiran-based treatment strategy in hypercholesterolaemia: the VICTORION-difference trial. Eur Heart J. 2026;47(25):3241-3253. DOI: 10.1093/eurheartj/ehaf685. PMID: 40884558, Steg PG, Goodman SG, Jukema JW, Martens P, Zirlik A, Bhatt DL, Menon V, Szarek M, Lesogor A, Stratz C, O'Donoghue F, Mena-Madrazo J, Shao Q, Liu K, Mehran R; VICTORION-2 Prevent Investigators. Design of VICTORION-2 Prevent: a randomized double-blind, placebo-controlled trial, assessing the impact of inclisiran on major adverse cardiovascular events in patients with established cardiovascular disease. Am Heart J. 2026. DOI: 10.1016/j.ahj.2026.107493. PMID: 42203164, Ray KK, Wright RS, Kallend D, Koenig W, Leiter LA, Raal FJ, et al; ORION-10 and ORION-11 Investigators. Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol. N Engl J Med. 2020;382(16):1507-1519. DOI: 10.1056/NEJMoa1912387. PMID: 32187462, VICTORION-Difference, texto completo: https://academic.oup.com/eurheartj/article/47/25/3241/8243858 ; distribuição de rosuvastatina40mg e eritema no local de injeção conferidos., ClinicalTrials.gov. ORION-4, NCT03705234. https://clinicaltrials.gov/study/NCT03705234?tab=results. Sem resultados postados em08/09/2026..
 
-Este checkpoint não aprova o corpus inteiro. Links e integração transversal serão reconciliados depois da seleção final. Segurança de RP-A501 posterior à fase1 foi documentada como comunicado do patrocinador, sem tratá-la como evidência de eficácia. FOREST continua extensão aberta; ACACIA é o ensaio randomizado publicado, com efeito médio modesto e mais redução da FEVE.
+## 157 — content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md
+
+- EAmoderada sintomas nãoindicamintervençãoautomática
+- exceçãoSAVR concomitante
+- EVOLVED neutro
+- 43%crossover eprimárioincluiKCCQ
+
+Fontes verificadas: Van Mieghem NM, Elmariah S, Spitzer E, et al. Transcatheter Aortic Valve Replacement in Patients With Systolic Heart Failure and Moderate Aortic Stenosis: TAVR UNLOAD. J Am Coll Cardiol. 2025;85(9):878-890. DOI: 10.1016/j.jacc.2024.10.070. PMID: 39480381., Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291., Loganath K, et al. EVOLVED randomized trial. JAMA.2024. DOI:10.1001/jama.2024.22730. https://jamanetwork.com/journals/jama/fullarticle/2825540.
+
+## 159 — content/Valvopatias/reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave.md
+
+- COAPT também3+/4+; falsa exclusividade removida
+- três primários eKCCQ12meses
+- segurançaespecífica não todosEA
+- proporcionalidade hipótesenãogate
+
+Fontes verificadas: Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 Investigators. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation. N Engl J Med. 2024;391(19):1799-1809. DOI: 10.1056/NEJMoa2314328 · PMID: 39216092 — abstract conferido via PubMed E-utilities nesta sessão., Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640., Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927., Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663..
