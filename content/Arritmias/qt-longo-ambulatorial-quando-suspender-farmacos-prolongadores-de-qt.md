@@ -4,9 +4,9 @@ slug: qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt
 theme: "Arritmias"
 kind: protocolo
 fonte_producao: grok
-summary: "Braço adquirido do pacote: no consultório, quando suspender (ou não reiniciar) fármaco que prolonga o QT — limiares de ação pronta, fatores acumulados e o que NÃO inventar (sem doses, sem regime substituto)."
-review_status: pendente_revisao
-review_note: "Doc 2/3 do pacote ambulatory QT longo Arritmias (07/09/2026), além #839/#864/#867/#899. Anti-colisão #881 (psicofármaco). Fontes: Drew AHA/ACCF 2010 PMID 20142454; ESC 2022 PMID 36017572; Priori 2013 PMID 24011539. Sem doses; sem inventar substitutos."
+summary: "No QT adquirido, orienta quando retirar/pausar um prolongador com base em QTc, ΔQTc, sintomas, precursores de TdP, fatores acumulados e benefício terapêutico — sem suspensão reflexa nem regime substituto inventado."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. A suspensão deixou de ser automática para qualquer prolongador: passou a depender de risco mensurado, fatores acumulados, sintomas/precursores e benefício. Psicofármaco essencial ganhou link funcional para orientação canônica existente."
 source_refs:
   - "Drew BJ, Ackerman MJ, Funk M, et al. Prevention of torsade de pointes in hospital settings: a scientific statement from the American Heart Association and the American College of Cardiology Foundation. Circulation. 2010;121(8):1047-1060. DOI: 10.1161/CIRCULATIONAHA.109.192704. PMID: 20142454"
   - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572"
@@ -15,65 +15,77 @@ source_refs:
 
 # QT longo ambulatorial: quando suspender fármacos prolongadores de QT
 
-Cenário: adulto no **consultório** com **QTc prolongado** e uso (ou início recente) de fármaco conhecido por prolongar o QT — antibiótico, antiarrítmico, antiemético, antifúngico, outro — **sem** protocolar dose nem escolher o substituto.
+Cenário: QTc prolongado em paciente usando fármaco que pode prolongar QT. O objetivo é decidir **retirar/pausar, manter com vigilância ou encaminhar com urgência**, sem escolher substituto ou dose.
 
-Contexto: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md). Psicofármaco como pivô de destino: **#881**.
+Contexto: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar.md).
 
-## Princípio
+Psicofármacos: [`fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt`](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
 
-**Suspender o ofensor é decisão de segurança; substituir o ofensor é decisão terapêutica separada** — e **não** cabe neste documento inventar o regime substituto.
+## Regra central
 
-- Drew AHA/ACCF 2010 (PMID 20142454): QTc **>500 ms** ou aumento **≥60 ms** em relação ao basal → **ação pronta**, incluindo **retirar o fármaco ofensor** e corrigir eletrólitos/bradicardia no ambiente adequado.
-- ESC 2022 (PMID 36017572): em SQTL (congênita ou contexto de risco), **evitar** fármacos que prolongam o QT é medida geral de manejo.
-- Priori 2013 (PMID 24011539): causa secundária de prolongamento do QT deve ser excluída antes de fechar diagnóstico de SQTL congênita; o inverso também vale — ofensor + QTc longo exige ação sobre o ofensor.
+**Ter um fármaco prolongador de QT não significa que ele deva ser suspenso automaticamente.** A decisão deve integrar:
 
-## Quando suspender AGORA (e reavaliar destino)
+- QTc absoluto e mudança em relação ao basal;
+- sintomas e precursores de TdP;
+- eletrólitos e bradicardia;
+- múltiplos fármacos/interações;
+- função renal/hepática e comorbidades;
+- benefício e risco da interrupção do medicamento.
 
-| Situação | Ação neste protocolo |
+## Marcadores que aumentam a necessidade de ação
+
+- QTc **>500 ms**;
+- aumento **≥60 ms** em relação ao basal;
+- TdP/TV polimórfica, alternância de T, padrão short-long-short, ectopia ventricular nova relevante;
+- síncope/pré-síncope compatível com arritmia;
+- hipocalemia/hipomagnesemia importante;
+- bradicardia relevante;
+- overdose/intoxicação;
+- associação de múltiplos prolongadores/interações.
+
+Esses achados exigem **revisão imediata do ofensor e das causas reversíveis**. O destino (PS/monitorização urgente versus manejo coordenado ambulatorial) depende da gravidade clínica.
+
+## Quando retirar/pausar o ofensor é a conduta mais segura
+
+| Situação | Conduta |
 |---|---|
-| QTc **>500 ms** (mesmo método) sob fármaco prolongador | **Suspender o ofensor**; se síncope/TdP/instabilidade → **PS** |
-| ↑ QTc **≥60 ms** vs. basal pré-fármaco | **Suspender o ofensor**; PS se sintoma ou precursor de TdP |
-| Precursor de TdP (ectopia nova, couplets, alternância T, short-long-short) | **Suspender** + **PS** |
-| Hipocalemia / hipomagnesemia grave + QTc longo | **Suspender ofensor** + **PS** (correção no ambiente adequado — **sem doses aqui**) |
-| Overdose / intoxicação por prolongador | **PS** |
-| SQTL congênita conhecida + qualquer prolongador novo | **Não iniciar / suspender** o prolongador; acionar time que segue a SQTL |
+| TdP/TV polimórfica, instabilidade ou síncope de alto risco associada | interromper ofensor quando possível + **via urgente/monitorada** |
+| QTc >500 ms ou Δ≥60 ms com risco acumulado importante | rever e, em geral, retirar/pausar o ofensor clinicamente substituível; corrigir causas reversíveis e definir monitorização |
+| Distúrbio eletrolítico importante + QT longo | retirar/pausar ofensor quando apropriado e corrigir em ambiente compatível com o risco |
+| Overdose/intoxicação | **PS/urgência** |
+| SQTL congênita conhecida + prolongador não essencial | evitar/retirar o prolongador e discutir alternativa com o prescritor |
 
-## Quando NÃO basta “só suspender no consultório”
+## Quando NÃO suspender de forma reflexa
 
-- Já houve síncope, TdP ou instabilidade → **PS**, não observação ambulatorial isolada.
-- Sem acesso a retorno/ECG em 24–72 h e QTc ainda muito longo → antecipar observação/PS conforme rede.
-- Ofensor é **psicofármaco** essencial (risco de descompensação psiquiátrica) → **não** interromper de forma abrupta só por receio genérico neste documento; usar destino conjunto de **#881** + este limiar elétrico.
+Paciente estável, assintomático, sem precursor de TdP, QTc abaixo dos marcadores de maior risco, sem Δ importante e com **benefício clínico claro** do medicamento: confirmar técnica, rever fatores acumulados, conversar com o prescritor e definir ECG/eletrólitos de reavaliação conforme risco.
 
-## Sem limiar de ação pronta → prudência estruturada
+Isso é especialmente importante para **psicofármacos essenciais**, nos quais interrupção abrupta pode causar dano. Nesses casos, usar co-manejo com a orientação canônica de Saúde Mental/Cardiologia, em vez de uma ordem genérica de suspensão.
 
-1. Confirmar técnica de QTc e comparar com basal.
-2. Revisar **fatores acumulados**: idade, sexo feminino, DCV estrutural, bradicardia, outros prolongadores, interações, eletrólitos.
-3. Se QTc elevado mas < limiar Drew e **assintomático**: considerar **adiar/evitar** novo prolongador; se já em uso e benefício incerto, discutir com o prescritor **sem inventar substituto aqui**.
-4. Retorno **24–72 h** com ECG ± eletrólitos quando houver dúvida residual.
-5. Educar alarmes (síncope, palpitação com mal-estar, tontura grave) → PS.
+## Passo a passo
+
+1. Confirmar QT/QTc e método; comparar com basal.
+2. Procurar sintomas/precursores e fatores acumulados.
+3. Rever eletrólitos, frequência, função renal/hepática e interações.
+4. Classificar benefício do fármaco: essencial / substituível / benefício incerto.
+5. Alto risco elétrico ou clínico → retirar/pausar quando apropriado e definir monitorização/urgência.
+6. Risco baixo/intermediário + benefício alto → não interromper por medo genérico; coordenar e reavaliar.
+7. Quem decide o substituto é o prescritor/time responsável — **não este protocolo**.
 
 ## O que este documento NÃO faz
 
-- Não lista doses de nenhum fármaco.
-- Não elege “o” antibiótico/antiemético/antiarrítmico substituto.
-- Não protocola reposição de K/Mg com valores-alvo inventados.
-- Não substitui CredibleMeds® / listas institucionais de prolongadores.
-- Não reescreve escolha de antidepressivo/antipsicótico (#881 e fluxogramas de Saúde mental).
-
-## Checklist de 90 segundos
-
-1. QTc >500 ms, ∆≥60 ms, TdP/precursor ou sintoma? → **suspender ofensor** + **PS** se alarme.
-2. SQTL congênita conhecida? → **evitar/suspender** prolongador; EP/time de canalopatias.
-3. Estável, limiar não atingido, benefício do fármaco claro? → não suspender por medo isolado; documentar e reavaliar.
-4. Precisa de substituto? → **prescritor original / especialidade** — fora do escopo deste protocolo.
+- não define dose;
+- não escolhe antibiótico, antiemético, antiarrítmico ou psicofármaco substituto;
+- não cria alvo de K/Mg;
+- não substitui lista atualizada de fármacos com risco de TdP;
+- não transforma >500 ms/Δ60 ms em regra automática de PS para todo paciente estável.
 
 ## Armadilhas
 
-- Suspender todo fármaco “um pouco QT” sem medir QTc nem basal.
-- Inventar esquema substituto neste texto.
-- Liberar QTc >500 ms sob ofensor “para ver na próxima semana”.
-- Confundir suspensão segura de antibiótico pontual com interrupção abrupta de psicofármaco (#881).
+- suspender todo prolongador sem medir QTc/basal e risco acumulado;
+- manter ofensor claramente não essencial apesar de QTc marcadamente prolongado e fatores múltiplos;
+- interromper psicofármaco essencial abruptamente sem plano conjunto;
+- mandar paciente instável para “retorno em 48 h”.
 
-## Limite da evidência
+## Limite
 
-Os limiares Drew 2010 nasceram no contexto hospitalar de prevenção de TdP; aqui são **marcos operacionais de destino ambulatorial**. A decisão de manter um fármaco de benefício vital com QTc limítrofe é individualizada e **não** recebe algoritmo de substituição neste pacote.
+Os marcos >500 ms e Δ≥60 ms são sinais de **ação pronta** e maior risco; a decisão sobre interrupção e ambiente de cuidado exige contexto clínico e relação risco/benefício.
