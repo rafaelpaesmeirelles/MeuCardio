@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 42,
-  "pending_count": 121,
+  "reviewed_count": 43,
+  "pending_count": 120,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -194,8 +194,21 @@
     {
       "index": 10,
       "path": "content/Cardio-oncologia/cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "3bb7ee0c705c83fdbd6759bf1b03c7c54634c69c9f6b0d5a83d07ea886341ff3"
+      "status": "corrected_reviewed",
+      "source_sha256": "3bb7ee0c705c83fdbd6759bf1b03c7c54634c69c9f6b0d5a83d07ea886341ff3",
+      "findings": [
+        "Série44 era de câncer, não majoritariamente hepatite; não há ranking robusto de isquemia como manifestação mais rara.",
+        "Reversibilidade não garantida nem prova causal; removido contraste mecanístico simplista com antraciclinas.",
+        "Anemia por ribavirina no caso com reexposição e hipotireoidismo como contribuinte restaurados.",
+        "Incluídas advertências cardiovasculares BESREMi/PEGASYS e limites à reexposição; risco vai além de cardiopatia estrutural inespecífica.",
+        "HepatiteB não usa ribavirina padrão; resposta molecular não prova modificação de história natural; dois casos gestacionais não validam classe."
+      ],
+      "sources": [
+        "12 PMIDs originais: identidade e abstracts conferidos individualmente.",
+        "Bulas oficiais DailyMed BESREMi/PEGASYS seções5.3 e advertências da associação com ribavirina consultadas em08/09/2026.",
+        "AASLD/IDSA HCV Guidance atual consultada; não alegada aprovação local específica de formulações."
+      ],
+      "reviewed_sha256": "c3394e808ed8ba93a2e6b62e3eee32900455e58775a9cab9e8b438d974d80367"
     },
     {
       "index": 11,

@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 42 documentos lidos integralmente e corrigidos; 121 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 43 documentos lidos integralmente e corrigidos; 120 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -101,6 +101,16 @@ Fontes verificadas: 12 PMIDs originais/citados: identidade e abstracts disponív
 - VUS não confirma doença nem orienta dispositivo isoladamente.
 
 Fontes verificadas: 14 referências originais: identidades conferidas; abstracts disponíveis lidos, sem alegar leitura integral dos históricos sem abstract., AHA texto online de recomendação2018 confirmado; erratum31424988 identificado, texto integral inacessível, sem alegar sua revisão., Consenso genético2022 DOIeuac030; corrigendum euac106 lido: autoria/afiliações apenas., ESC2021 DOIehab364 recomendação LMNA consultada; consenso provocação2025 DOIeuaf067 seções indicação, rastreio familiar e segurança consultadas..
+
+## 10 — content/Cardio-oncologia/cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica.md
+
+- Série44 era de câncer, não majoritariamente hepatite; não há ranking robusto de isquemia como manifestação mais rara.
+- Reversibilidade não garantida nem prova causal; removido contraste mecanístico simplista com antraciclinas.
+- Anemia por ribavirina no caso com reexposição e hipotireoidismo como contribuinte restaurados.
+- Incluídas advertências cardiovasculares BESREMi/PEGASYS e limites à reexposição; risco vai além de cardiopatia estrutural inespecífica.
+- HepatiteB não usa ribavirina padrão; resposta molecular não prova modificação de história natural; dois casos gestacionais não validam classe.
+
+Fontes verificadas: 12 PMIDs originais: identidade e abstracts conferidos individualmente., Bulas oficiais DailyMed BESREMi/PEGASYS seções5.3 e advertências da associação com ribavirina consultadas em08/09/2026., AASLD/IDSA HCV Guidance atual consultada; não alegada aprovação local específica de formulações..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
