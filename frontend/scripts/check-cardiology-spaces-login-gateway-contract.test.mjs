@@ -79,11 +79,17 @@ test("layout final aprovado: copy, galaxia real horaria, ECG, coração, login f
   assert.match(entrar, /<strong>Novo no CorVIA\?<\/strong><small>Solicite seu Acesso<\/small>/);
 
   assert.match(entrar, /className="login-gateway__galaxy-image"/);
-  assert.match(entrar, /src="\/spaces\/corvia-galaxy-cameo\.webp"/);
+  assert.match(entrar, /src="\/spaces\/galaxy-approved-canonical\.webp"/);
+  assert.match(entrar, /image\.src = "\/spaces\/galaxy-approved-canonical\.webp"/,
+    "o canvas e a imagem de fallback devem usar a mesma galáxia canônica");
   assert.match(entrar, /className="login-gateway__galaxy-canvas"/);
   assert.match(entrar, /const durationMs = 85_000/);
   assert.match(entrar, /context\.scale\(1, projectionY\)/);
   assert.match(entrar, /context\.rotate\(angle\)/);
+  assert.match(entrar, /const angle = reducedMotion\.matches \? 0 :/,
+    "a preferência por movimento reduzido deve manter a galáxia parada");
+  assert.match(entrar, /if \(!reducedMotion\.matches\) animationFrame = requestAnimationFrame\(draw\)/);
+  assert.match(entrar, /reducedMotion\.removeEventListener\("change", motionChanged\)/);
   const finalLoginStyles = read("src/styles/corvia-login-final-approved-20260904.css");
   assert.match(finalLoginStyles, /login-gateway__milky-way \{[\s\S]*?animation:\s*none !important[\s\S]*?rotate:\s*0deg !important/,
     "o contêiner posicionado da galáxia deve permanecer imóvel");

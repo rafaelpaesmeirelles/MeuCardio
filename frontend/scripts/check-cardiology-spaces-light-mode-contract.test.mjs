@@ -304,18 +304,24 @@ test("os portais claros usam ambientes com luz natural sem alterar as cenas escu
     "a luz natural deve vir do asset, não de um clareamento CSS global");
 });
 
-test("o GalaxyThemeToggle usa a minigaláxia transparente congelada, sem retângulo preto", () => {
+test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da minigaláxia", () => {
   const toggle = readRequired("src/components/GalaxyThemeToggle.tsx");
   const home = readRequired("src/pages/CardiologySpacesHome.tsx");
   const internalStyles = readRequired("src/styles/corvia-internal-final-approved-20260904.css");
   const assetFixStyles = readRequired("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
-  const imagePath = "public/spaces/galaxy-approved-alpha.png";
+  const imagePath = "public/spaces/galaxy-approved-canonical.webp";
   const image = readFileSync(sourceUrl(imagePath));
 
   assert.ok(existsSync(fileURLToPath(sourceUrl(imagePath))), "a minigaláxia transparente aprovada precisa existir");
-  assert.equal(image.toString("hex", 0, 8), "89504e470d0a1a0a", "o asset aprovado precisa ser PNG válido");
+  assert.equal(image.toString("ascii", 0, 4), "RIFF", "o asset aprovado precisa ser WebP válido");
+  assert.equal(image.toString("ascii", 8, 12), "WEBP");
+  assert.equal(image.toString("ascii", 12, 16), "VP8L", "a imagem canônica usa WebP sem perdas");
+  assert.equal(image[20], 0x2f, "o fluxo VP8L precisa manter a assinatura válida");
+  assert.ok(image.readUInt32LE(21) & (1 << 28), "o WebP canônico precisa preservar o canal alfa");
   assert.match(toggle, /<img[\s\S]*?className="galaxy-theme-toggle__image"/);
-  assert.match(toggle, /src="\/spaces\/galaxy-approved-alpha\.png"/);
+  assert.match(toggle, /src="\/spaces\/galaxy-approved-canonical\.webp"/);
+  assert.match(toggle, /<MiniUniverseCanvas\s*\/>/);
+  assert.match(toggle, /alt=""\s*aria-hidden="true"\s*draggable=\{false\}/);
   assert.doesNotMatch(toggle, /<video|galaxy-loop-v2\.mp4|galaxy-loop-poster\.webp/);
   assert.match(toggle, /useCorviaTheme\s*\(\s*\)/);
   assert.match(toggle, /onClick=\{toggleTheme\}/);
