@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 34 documentos lidos integralmente e corrigidos; 129 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 35 documentos lidos integralmente e corrigidos; 128 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -23,6 +23,15 @@ Fontes verificadas: Todos os 12 PMIDs originais: identidade e abstracts conferid
 - Dor paroxística não é ganho mais extremo; tratamentos e mecanismo não universais.
 
 Fontes verificadas: 18 PMIDs originais: identidade e abstracts individualmente conferidos., GeneReviews SCN9A PMID20301342 e Cattaneo DOI10.3324/haematol.2022.281388 consultados online..
+
+## 2 — content/Aorta_e_doença_arterial_periférica/osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio.md
+
+- Consenso Delphi2025 omitido restaurado: avaliação clínica, não eco universal assintomático; risco por tipo/genótipo não estabelecido.
+- Sullivan invertido: nenhuma fratura por manguito/torniquete; uma por posicionamento.
+- Removidas alegações herdadas de leitura integral não demonstrada nesta auditoria e falsas lacunas de consenso.
+- Demais genes não são todos recessivos; coortes99/52 do mesmo grupo não replicação independente; hemostasia1984 não protocolo universal.
+
+Fontes verificadas: 9 referências originais: identidade e abstracts conferidos., Folkestad DOI10.1093/jbmr/zjae197 PMID39665364: recomendações completas acessíveis em resultado primário PMC11789389., Sullivan PMID29189536 reconferido no PubMed; GeneReviews tabela de vigilância online..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
