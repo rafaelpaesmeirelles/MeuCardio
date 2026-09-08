@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 38,
-  "pending_count": 125,
+  "reviewed_count": 39,
+  "pending_count": 124,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -119,8 +119,21 @@
     {
       "index": 6,
       "path": "content/Aorta_e_doença_arterial_periférica/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "dd355e388521ea16363a8d2f4ace2ad47b5704d4bffbc65225210c2faa313ed2"
+      "status": "corrected_reviewed",
+      "source_sha256": "dd355e388521ea16363a8d2f4ace2ad47b5704d4bffbc65225210c2faa313ed2",
+      "findings": [
+        "CDC líquor/HIV antes da terapia terciária e esquema porresultado restaurados; benzatina não universal.",
+        "Aneurismas tambémfusiformes; sífilis adquirida não prevê inevitavelmenteaortite futura.",
+        "Costa qualidadepré-natal não significativa; removidosMoseley/idososnãoidentificados.",
+        "Positividade treponêmica não prova etiologia doaneurisma; antimicrobiano não garante estabilizaçãoestrutural.",
+        "Limiar cirúrgico não deve ignorar etiologiainfecciosa/morfologia/urgência."
+      ],
+      "sources": [
+        "11PMIDs originais: identidade conferida;2679075/33744210/35550616/32580086 semabstract, sem alegar integral lido.",
+        "CDC páginas sífilis terciária e neurossífilis consultadas diretamente08/09/2026.",
+        "Kallash39902879, Yuan30073493, Costa38917233 abstracts completos conferidos."
+      ],
+      "reviewed_sha256": "27db3ae33bbe4523af68442c5520276b0256ce3423d193380cfb80a9bd511d07"
     },
     {
       "index": 7,
