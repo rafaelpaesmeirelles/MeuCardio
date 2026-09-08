@@ -16,6 +16,12 @@ source_refs:
   - "Derivado de ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman.md, ferro-oral-nao-substitui-o-endovenoso-na-icfer-o-ensaio-ironout-hf.md, heart-fid-carboximaltose-ferrica-icfer-deficiencia-ferro.md e atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca.md, já publicados no acervo (Insuficiência cardíaca)."
 ---
 
+## Atualização clínica ESC 2026
+
+A seção 10.4 apoia TSAT <20% para identificar deficiência de ferro na IC; ferritina continua útil na investigação. Ferritina baixa isolada com TSAT ≥20% não aciona automaticamente infusão. A Recommendation Table 19 indica ferro IV para sintomas e qualidade de vida na ICFEr sintomática (FEVE <50%; I B1), e considera seu uso para reduzir hospitalizações (IIa B1). Os critérios de entrada dos ensaios permanecem históricos e não são ampliados por mudança de nomenclatura. Reação grave prévia a qualquer ferro parenteral bloqueia encaminhamento rotineiro e exige revisão especializada/bula local; recursos de emergência não eliminam contraindicações.
+
+Fonte: Køber L, Adamo M et al. ESC 2026, DOI 10.1093/eurheartj/ehag100, seção 10.4 e tabela 19; EMA intravenous iron referral.
+
 # Fluxograma: Deficiência de ferro na insuficiência cardíaca — rastreio e reposição endovenosa (ESC 2023)
 
 A deficiência de ferro na insuficiência cardíaca é definida por ferritina e saturação de transferrina, não pela hemoglobina: o paciente pode ter estoque de ferro esgotado com hemograma normal, e é esse paciente que os ensaios trataram. A diretriz ESC 2021 já mandava rastrear todo paciente com IC periodicamente, e a atualização focada de 2023 elevou a reposição endovenosa a recomendação Classe I para sintomas e qualidade de vida na ICFEr e na ICFElr sintomáticas, com Classe IIa para reduzir hospitalização por IC. A decisão que este fluxograma organiza é dupla: quem tem deficiência, e quem, entre os que têm, recebe ferro endovenoso — lembrando que a via oral não substitui a endovenosa (IRONOUT-HF) e que a deficiência absoluta pede investigação de causa sem atrasar a reposição.
@@ -25,15 +31,19 @@ A deficiência de ferro na insuficiência cardíaca é definida por ferritina e 
 ```mermaid
 flowchart TD
   R0["Paciente com insuficiência cardíaca crônica<br/>ou internado por IC aguda, com ou sem anemia"]
+  D0{"Instabilidade, sangramento relevante<br/>ou reação aguda grave?"}
+  U0(["Avaliação urgente, não infusão eletiva"])
+  D7{"Reação grave prévia a ferro parenteral?"}
+  U7(["Bloquear infusão rotineira<br/>Avaliação especializada e bula local"])
   P1["Rastreio periódico: hemograma,<br/>ferritina sérica e saturação de transferrina"]
-  D1{"Ferritina abaixo de 100 μg/L, ou entre 100 e 299 μg/L<br/>com saturação de transferrina abaixo de 20%?"}
+  D1{"Saturação de transferrina abaixo de 20%?<br/>Interpretar ferritina e investigar a causa"}
   C1(["Sem deficiência de ferro: ferro IV não indicado<br/>repetir o rastreio periodicamente<br/>e a cada descompensação"])
-  D2{"FEVE abaixo de 50%<br/>ICFEr ou ICFElr?"}
+  D2{"FEVE abaixo de 50%<br/>ICFEr pela classificação ESC 2026?"}
   C2(["ICFEp: sem recomendação ESC de ferro IV<br/>tratar anemia e comorbidade pela causa<br/>e decidir caso a caso"])
   D3{"Sintomático, NYHA II a IV?"}
   C3(["Assintomático: sem recomendação formal<br/>pesquisar causa da deficiência<br/>e repetir ferritina e saturação"])
   D4{"Deficiência absoluta: ferritina abaixo de 100 μg/L,<br/>anemia associada ou suspeita de perda de sangue?"}
-  P2["Investigar causa em paralelo: sangramento digestivo,<br/>antitrombóticos, dieta, inibidor de bomba de prótons,<br/>doença renal crônica — sem adiar a reposição"]
+  P2["Investigar causa em paralelo: sangramento digestivo,<br/>antitrombóticos, dieta, inibidor de bomba de prótons,<br/>doença renal crônica — timing conforme estabilidade e sangramento"]
   D5{"Internado ou alta recente<br/>por IC aguda?"}
   C4(["Ferro IV antes da alta ou logo após:<br/>carboximaltose férrica, esquema AFFIRM-AHF<br/>reavaliar ferritina e saturação em cerca de 3 meses"])
   C5(["Ferro IV ambulatorial: carboximaltose<br/>ou derisomaltose férrica, dose por peso e hemoglobina<br/>reavaliar ferritina e saturação em cerca de 3 meses"])
@@ -41,7 +51,11 @@ flowchart TD
   C6(["Ferro IV antes da alta ou logo após:<br/>carboximaltose férrica, esquema AFFIRM-AHF<br/>reavaliar ferritina e saturação em cerca de 3 meses"])
   C7(["Ferro IV ambulatorial: carboximaltose<br/>ou derisomaltose férrica, dose por peso e hemoglobina<br/>reavaliar ferritina e saturação em cerca de 3 meses"])
 
-  R0 --> P1
+  R0 --> D0
+  D0 -->|"Sim"| U0
+  D0 -->|"Não"| D7
+  D7 -->|"Sim"| U7
+  D7 -->|"Não"| P1
   P1 --> D1
   D1 -->|"Não"| C1
   D1 -->|"Sim"| D2
@@ -107,13 +121,13 @@ O ramo D4 separa a deficiência absoluta (ferritina abaixo de 100 μg/L, sobretu
 | Carboximaltose férrica, IC NYHA II–III | Dia 1: 1.000 mg se Hb até 14 g/dL, 500 mg se Hb acima de 14 e abaixo de 15 g/dL; semana 6: 500 mg (< 70 kg) ou 1.000 mg (≥ 70 kg) se Hb < 10, 500 mg se Hb 10–14 e ≥ 70 kg, nenhuma dose se Hb > 14; semanas 12, 24 e 36: 500 mg se ferritina < 100 ou 100–300 μg/L com saturação < 20% | Esquema de bula específico para IC NYHA II–III; sem dose prevista com Hb ≥ 15 g/dL |
 | Derisomaltose férrica | 1.000 mg em dose única em infusão de pelo menos 20 minutos se peso ≥ 50 kg; 20 mg/kg se < 50 kg; repetir se a deficiência recorrer | Bula de anemia ferropriva; não atribuído ao protocolo do IRONMAN |
 
-Segurança da infusão, pela bula DailyMed lida: a única contraindicação formal da carboximaltose férrica é hipersensibilidade ao produto; a bula pede observação por pelo menos 30 minutos após cada administração, alerta para hipertensão transitória e traz, na versão de agosto de 2026, advertência em destaque para hipofosfatemia sintomática — dosar fosfato antes de repetir o ciclo em paciente de risco (doença renal, má nutrição, uso prolongado). A hipofosfatemia é mais frequente com a carboximaltose do que com a derisomaltose, o que pesa na escolha entre as duas quando o paciente precisará de ciclos repetidos.
+Segurança da infusão, pela bula DailyMed lida: hipersensibilidade ao produto contraindica sua administração; a EMA também contraindica ferro parenteral após reação grave a outro produto parenteral, exigindo avaliação especializada e conferência da bula local; a bula pede observação por pelo menos 30 minutos após cada administração, alerta para hipertensão transitória e traz, na versão de agosto de 2026, advertência em destaque para hipofosfatemia sintomática — dosar fosfato antes de repetir o ciclo em paciente de risco (doença renal, má nutrição, uso prolongado). A hipofosfatemia é mais frequente com a carboximaltose do que com a derisomaltose, o que pesa na escolha entre as duas quando o paciente precisará de ciclos repetidos.
 
 A reavaliação de ferritina e saturação de transferrina deve ocorrer cerca de 3 meses após a reposição, evitando dosagem nas primeiras 4 semanas, quando a ferritina ainda reflete a infusão recente. A repetição da dose segue os mesmos critérios de deficiência. No IRONMAN, pacientes com hemoglobina acima de 13 g/dL (mulheres) ou 14 g/dL (homens) foram excluídos; a bula da carboximaltose não prevê dose com hemoglobina de 15 g/dL ou mais — na prática, hemoglobina alta exige reavaliação da indicação.
 
 ## Limitações e o que confirmar
 
-- A árvore usa a recomendação ESC 2023 para ICFEr ou ICFElr e não reproduz os antigos cortes da versão 2021.
+- A árvore foi harmonizada com ESC 2026: ICFEr com FEVE <50% e TSAT <20%; os cortes próprios dos ensaios e esquemas de bula não mudam por renomeação de fenótipo.
 - Classe e nível da atualização 2023 (I/A para sintomas, IIa/A para hospitalização): a tabela do artigo no European Heart Journal renderiza como imagem; os valores usados vêm dos Key Points do ACC e do documento do acervo sobre a atualização, que os conferiu no texto primário. O parágrafo de texto lido confirma "recomendada" e "deve ser considerada", mas não as letras de nível.
 - Seção 13.5 da ESC 2021 (deficiência de ferro e anemia) não lida na íntegra: a menção à investigação de sangramento gastrointestinal e à contraindicação do ferro oral vem de fonte secundária (Sindone et al.) e da tabela de novas recomendações.
 - Intervalo de reavaliação: 3 meses está documentado; 6 meses não foi confirmado.
