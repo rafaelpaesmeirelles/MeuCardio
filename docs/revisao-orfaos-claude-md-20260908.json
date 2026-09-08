@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 40,
-  "pending_count": 123,
+  "reviewed_count": 41,
+  "pending_count": 122,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -155,8 +155,21 @@
     {
       "index": 8,
       "path": "content/Aorta_e_doença_arterial_periférica/sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "40a5e7ca66c1dbc6526cf3fe584910f58aac08e76eeba3b9da71cf938c462fdd"
+      "status": "corrected_reviewed",
+      "source_sha256": "40a5e7ca66c1dbc6526cf3fe584910f58aac08e76eeba3b9da71cf938c462fdd",
+      "findings": [
+        "Chapel Hill classifica Cogan como vasculite de vasos variáveis; apresentação atípica não é estratificador cardiovascular validado.",
+        "Durtette: 126 linhas em 61 pessoas, não grupos independentes; OR infliximabe com IC 1,65–260 e primeira linha sem diferença.",
+        "Ross é autoenxerto; caso único não demonstra superioridade universal de prótese mecânica ou falha das biopróteses.",
+        "Exclusão de sífilis não exige ambos testes negativos; imagem e imunossupressão individualizadas, sem calendário universal provado.",
+        "Removidas extrapolações de relato pós-COVID e caso único de GN como série pediátrica."
+      ],
+      "sources": [
+        "12 PMIDs originais/citados: identidade e abstracts disponíveis conferidos; Saiin34866099 apenas identidade, sem alegação de leitura integral.",
+        "Chapel Hill PMID23045170 DOI10.1002/art.37715 e classificação publicada pelo consenso consultados.",
+        "CDC Laboratory Recommendations2024; Durtette29037902, Marrero39110231 e Gad40843044 abstracts primários."
+      ],
+      "reviewed_sha256": "94b64fe1c539340ef60b508f0aaf11b26f9072a456a822124de80598a53d71b3"
     },
     {
       "index": 9,
