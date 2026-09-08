@@ -4,61 +4,52 @@ slug: fluxograma-ambulatorial-suspeita-saa-consultorio-para-ps
 theme: "Aorta e doença arterial periférica"
 kind: fluxograma
 fonte_producao: grok
-summary: "Árvore curta de destino no consultório diante de dor torácica/dorsal/abdominal súbita ou síncope com traços de SAA: PS agora vs outros pacotes ambulatoriais (CLTI/AAA, carótida) vs investigação eletiva quando a suspeita de SAA for descartada clinicamente."
-review_status: pendente_revisao
-review_note: "Irmão do protocolo sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato (07/09/2026). ESC 2024 PMID 39210722; ADD-RS PMID 21555704; ADvISED PMID 29030346. Além de #833 e #868."
+summary: "Árvore de destino no consultório: SAA, AVC agudo, isquemia aguda de membro, AAA sintomático e síncope de alto risco recebem destinos emergenciais distintos; ramos crônicos permanecem ambulatoriais."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Déficit focal súbito foi roteado diretamente à via AVC; isquemia aguda de membro foi separada de CLTI; AAA doloroso/tenderness foi encaminhado à emergência; síncope ganhou gate próprio de alto risco; removidas referências por número de PR."
 source_refs:
-  - "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722"
-  - "Rogers AM, Hermann LK, Booher AM, et al. Sensitivity of the aortic dissection detection risk score, a novel guideline-based tool for identification of acute aortic dissection at initial presentation: results from the international registry of acute aortic dissection. Circulation. 2011;123(20):2213-2218. DOI: 10.1161/CIRCULATIONAHA.110.988568. PMID: 21555704"
-  - "Nazerian P, Mueller C, Soeiro AM, et al. Diagnostic Accuracy of the Aortic Dissection Detection Risk Score Plus D-Dimer for Acute Aortic Syndromes: The ADvISED Prospective Multicenter Study. Circulation. 2018;137(3):250-258. DOI: 10.1161/CIRCULATIONAHA.117.029457. PMID: 29030346"
+  - "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for peripheral arterial and aortic diseases. PMID: 39210722"
+  - "Rogers AM, Hermann LK, Booher AM, et al. Aortic dissection detection risk score. PMID: 21555704"
+  - "Nazerian P, Mueller C, Soeiro AM, et al. ADvISED. PMID: 29030346"
 ---
 
 # Fluxograma ambulatorial: suspeita de SAA — consultório → PS
 
-Prosa: [`sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato`](sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato.md). Checklist: [`checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps`](checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps.md). Hub hospitalar: [`sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo`](sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo.md).
-
-## Árvore de decisão
-
 ```mermaid
 flowchart TD
-  R0["Consulta ambulatorial:<br/>dor tórax/dorso/abdome,<br/>síncope ou déficit de perfusão"] --> D1{"Há traços de SAA?<br/>dor súbita máxima ± predisposição<br/>± exame de alto risco (ADD-RS)"}
+  R0["Consulta: dor tórax/dorso/abdome,<br/>síncope ou déficit de perfusão"] --> D1{"Suspeita de SAA?<br/>dor abrupta/máxima + predisposição<br/>ou exame/malperfusão compatíveis"}
 
-  D1 -->|"Sim / dúvida com SAA no diferencial"| C1(["PS IMEDIATO<br/>Comunicar suspeita de SAA<br/>Não aguardar D-dímero/TC eletiva"])
+  D1 -->|"Sim/dúvida fundamentada"| C1(["PS IMEDIATO<br/>Comunicar suspeita de SAA<br/>Não aguardar D-dímero/TC eletiva"])
 
-  D1 -->|"Não"| D2{"Déficit neurológico focal<br/>sem dor aórtica?"}
+  D1 -->|"Não"| D2{"Déficit neurológico focal<br/>súbito ou ainda presente?"}
+  D2 -->|"Sim"| C2(["Ativar via AVC AGUDO agora<br/>Avaliação carotídea eletiva só depois"])
 
-  D2 -->|"Sim"| C2(["Pacote carótida/AIT (#868)<br/>ou via AVC — não esta árvore"])
+  D2 -->|"Não"| D3{"Membro com início súbito:<br/>frio/pálido/sem pulso/dormente/fraco?"}
+  D3 -->|"Sim"| C3(["Isquemia AGUDA de membro<br/>emergência vascular"])
 
-  D2 -->|"Não"| D3{"CLTI, ameaça de membro<br/>ou AAA com sinais de ameaça?"}
+  D3 -->|"Não"| D4{"AAA conhecido + nova dor abd/lombar<br/>ou massa pulsátil dolorosa/tenderness?"}
+  D4 -->|"Sim"| C4(["PS / emergência vascular<br/>suspeita AAA sintomático/rotura contida"])
 
-  D3 -->|"Sim"| C3(["Pacote CLTI/AAA (#833)"])
+  D4 -->|"Não"| D5{"Síncope de alto risco?<br/>esforço/decúbito, palpitação abrupta,<br/>cardiopatia estrutural relevante ou instabilidade?"}
+  D5 -->|"Sim"| C5(["Avaliação urgente / PS<br/>seguir fluxo de síncope de alto risco"])
 
-  D3 -->|"Não"| D4{"Dor anginosa típica<br/>sem traços de SAA?"}
+  D5 -->|"Não"| D6{"CLTI crônica sem deterioração aguda?"}
+  D6 -->|"Sim"| C6(["Fluxo crônico DAP/CLTI<br/>Ver fluxograma canônico"])
 
-  D4 -->|"Sim"| C4(["Fluxo SCA / coronária:<br/>PS se instável ou SCA suspeita"])
-  D4 -->|"Não"| C5(["Ambulatorial dirigido<br/>ao diagnóstico alternativo;<br/>reabrir SAA se surgirem alarmes"])
+  D6 -->|"Não"| D7{"Dor anginosa/SCA suspeita?"}
+  D7 -->|"Sim"| C7(["Fluxo SCA / coronária<br/>PS conforme risco"])
+  D7 -->|"Não"| C8(["Investigação ambulatorial dirigida<br/>Reabrir gate se surgirem alarmes"])
 
-  C1 --> N1["No PS: algoritmo ESC 2024<br/>ADD-RS ± D-dímero + angio-TC<br/>ECG-gated (hub/fluxograma SAA)"]
-
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
-  class C1,C2 alerta;
-  class C3,C4,C5,N1 conduta;
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C7 alerta;
+  class C6,C8 conduta;
 ```
 
-## Resumo de destinos
+## Links canônicos
 
-| Achado | Destino |
-|---|---|
-| Suspeita de SAA (dor súbita ± predisposição ± exame) | **PS imediato** |
-| Déficit focal isolado | #868 / via AVC |
-| CLTI ou AAA com ameaça | #833 |
-| Angina típica sem SAA | Fluxo SCA |
-| Sem alarmes aórticos | Ambulatorial etiológico |
+- [`fluxograma-sindrome-aortica-aguda-esc-2024`](fluxograma-sindrome-aortica-aguda-esc-2024.md)
+- [`fluxograma-dor-membro-claudicacao-clti-isquemia-aguda`](fluxograma-dor-membro-claudicacao-clti-isquemia-aguda.md)
+- [`fluxograma-aneurisma-de-aorta-abdominal-seguimento-e-indicacao-de-reparo`](fluxograma-aneurisma-de-aorta-abdominal-seguimento-e-indicacao-de-reparo.md)
 
-## Notas
-
-- **D1** = gate de segurança aórtica: na dúvida, PS.
-- ADD-RS + D-dímero (ADvISED) pertence ao **PS**, não ao consultório.
-- Não lista doses; não decide tipo A/B nem TEVAR.
-- `review_status: pendente_revisao`.
+ADD-RS + D-dímero pertence ao ambiente de emergência; este fluxo só decide **destino**.
