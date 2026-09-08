@@ -1,5 +1,5 @@
 {
-  "instruction": "Produção nova das duas sessões Claude iniciadas após a instrução do usuário fica fora deste release. Revisar somente inventário prévio e snapshots identificados. Não atualizar fontes a partir de novos commits.",
+  "instruction": "Produção nova das duas sessões Claude e da produção Grok reiniciada após as instruções do usuário fica fora deste release e não deve ser alterada. Revisar somente inventário prévio e snapshots identificados. Não atualizar fontes a partir de novos commits de produção científica.",
   "base_main": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
   "orphan_snapshot": [
     {
