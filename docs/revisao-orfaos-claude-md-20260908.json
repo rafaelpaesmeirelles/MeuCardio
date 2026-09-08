@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 47,
-  "pending_count": 116,
+  "reviewed_count": 48,
+  "pending_count": 115,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -925,8 +925,21 @@
     {
       "index": 93,
       "path": "content/Geral/sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "d6ad81942555f6c0190b8f7ef5ff76189d9f6efb17450c86ef356d38aa2531f5"
+      "status": "corrected_reviewed",
+      "source_sha256": "d6ad81942555f6c0190b8f7ef5ff76189d9f6efb17450c86ef356d38aa2531f5",
+      "findings": [
+        "Barendregt e Tumiati tinham resultados invertidos; restaurada heterogeneidade autonômica e denominadores.",
+        "ESSDAI não possui domínio cardiopulmonar; pericardite/disautonomia não captadas adequadamente.",
+        "Liu transversal não prova ineficácia preventiva de HCQ; rituximabe individualizado para manifestações graves/refratárias.",
+        "Lai e001993 corrigido;58862 são conjunto IMID; critérios classificatórios e limites de rastreio explicitados."
+      ],
+      "sources": [
+        "19 referências originais: identidade e abstracts conferidos individualmente.",
+        "EULAR2020 texto do editor consultado sobre ESSDAI e tratamento sistêmico.",
+        "BSR DOIkeae152 texto integral do editor consultado em prevenção cardiovascular e imunossupressão.",
+        "ESSDAI2010 possui erratum sem PMID no cache; não acessado conteúdo, não se reproduzem pesos ou tabela corrigível."
+      ],
+      "reviewed_sha256": "81da2949f265b0ad692640b835d6386fb8e97d5983d572dd9b07dd41bc2bcf59"
     },
     {
       "index": 94,

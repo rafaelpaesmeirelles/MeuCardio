@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 47 documentos lidos integralmente e corrigidos; 116 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 48 documentos lidos integralmente e corrigidos; 115 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -248,6 +248,15 @@ Fontes verificadas: PMID41206792, PMID41357094, PMID41134438, PMID41697582identi
 - START reconhecido como RCT publicado; mantidos números dos quatro abstracts primários.
 
 Fontes verificadas: PMID36065821, PMID37222476, PMID39491870, PMID40570866, DOI10.1001/jamaneurol.2025.0285, DOI10.1186/s13063-025-08761-6.
+
+## 93 — content/Geral/sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto.md
+
+- Barendregt e Tumiati tinham resultados invertidos; restaurada heterogeneidade autonômica e denominadores.
+- ESSDAI não possui domínio cardiopulmonar; pericardite/disautonomia não captadas adequadamente.
+- Liu transversal não prova ineficácia preventiva de HCQ; rituximabe individualizado para manifestações graves/refratárias.
+- Lai e001993 corrigido;58862 são conjunto IMID; critérios classificatórios e limites de rastreio explicitados.
+
+Fontes verificadas: 19 referências originais: identidade e abstracts conferidos individualmente., EULAR2020 texto do editor consultado sobre ESSDAI e tratamento sistêmico., BSR DOIkeae152 texto integral do editor consultado em prevenção cardiovascular e imunossupressão., ESSDAI2010 possui erratum sem PMID no cache; não acessado conteúdo, não se reproduzem pesos ou tabela corrigível..
 
 ## 94 — content/Hipertensão/amilorida-5-versus-10-mg-e-a-razao-clortalidona-hidroclorotiazida-ensaio-fatorial-brasileiro-jaha-2026.md
 
