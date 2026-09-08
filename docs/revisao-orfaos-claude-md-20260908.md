@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 21 documentos lidos integralmente e corrigidos; 142 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 23 documentos lidos integralmente e corrigidos; 140 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -185,6 +185,16 @@ Fontes verificadas: Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck 
 
 Fontes verificadas: Van Mieghem NM, Elmariah S, Spitzer E, et al. Transcatheter Aortic Valve Replacement in Patients With Systolic Heart Failure and Moderate Aortic Stenosis: TAVR UNLOAD. J Am Coll Cardiol. 2025;85(9):878-890. DOI: 10.1016/j.jacc.2024.10.070. PMID: 39480381., Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291., Loganath K, et al. EVOLVED randomized trial. JAMA.2024. DOI:10.1001/jama.2024.22730. https://jamanetwork.com/journals/jama/fullarticle/2825540.
 
+## 158 — content/Valvopatias/regurgitacao-aortica-aguda-emergencia-endocardite-e-dissecacao.md
+
+- Corrigida inversão endocardite/dissecção no reparo e desbridamento.
+- Emergência por edema refratário/choque separada de urgência por IC sem colapso; não esperar cultura negativa.
+- ECMO convencional não recomendada genericamente: piora da pós-carga; LAVA-ECMO apenas estratégia especializada com evidência limitada.
+- Vasodilatação condicionada à pressão/perfusão; retirada taquicardia como única sustentação de débito e taxa fixa de mortalidade.
+- BSE confirma término prematuro do fluxo aórtico com fechamento aórtico precoce; preservado sem reinterpretar incorretamente como jato regurgitante.
+
+Fontes verificadas: 10.1186/s44156-024-00067-8: texto integral, seção acute AR, 10.1093/eurheartj/ehad193: diretriz ESC 2023, indicação e timing cirúrgico, 10.1093/eurheartj/ehae179: diretriz aórtica ESC 2024, 10.1080/14796678.2025.2472551: suporte e LAVA-ECMO, PMC10242569: relato técnico, contraindicação VA-ECMO convencional na IA grave; não RCT.
+
 ## 159 — content/Valvopatias/reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave.md
 
 - COAPT também3+/4+; falsa exclusividade removida
@@ -193,3 +203,13 @@ Fontes verificadas: Van Mieghem NM, Elmariah S, Spitzer E, et al. Transcatheter 
 - proporcionalidade hipótesenãogate
 
 Fontes verificadas: Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 Investigators. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation. N Engl J Med. 2024;391(19):1799-1809. DOI: 10.1056/NEJMoa2314328 · PMID: 39216092 — abstract conferido via PubMed E-utilities nesta sessão., Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640., Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927., Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663..
+
+## 162 — content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md
+
+- HALT pode ou não restringir mobilidade; coorte não prova ausência universal de gradiente ou causalidade cerebrovascular.
+- ADAPT-TAVR primário p0,076: não significativo, sem diferença qualquer/maior sangramento; removido falso sangramento menor.
+- GALILEO composto/mortalidade e sangramento p0,08 separados; AAS/clopidogrel duração3 meses.
+- Removida ideia de que profilaxia se baseia só em consenso; ESC2025 distingue HALT incidental e aumento relevante gradiente/restrição confirmada, com anticoagulação a considerar.
+- BVD distribuição60,9/39,1 entre casos não incidência por plataforma.
+
+Fontes verificadas: PMID40967263, PMID40353875, PMID31733180, PMID31733182, PMID35373583, PMID39736458, DOI10.1093/ejcts/ezaf276.

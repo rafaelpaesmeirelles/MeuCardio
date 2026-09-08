@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 21,
-  "pending_count": 142,
+  "reviewed_count": 23,
+  "pending_count": 140,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1233,8 +1233,23 @@
     {
       "index": 158,
       "path": "content/Valvopatias/regurgitacao-aortica-aguda-emergencia-endocardite-e-dissecacao.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "bbf3d56b70fe6d17584861fcbe4efb960cca52dac0b8854867ed8b53d1bb15f2"
+      "status": "corrected_reviewed",
+      "source_sha256": "bbf3d56b70fe6d17584861fcbe4efb960cca52dac0b8854867ed8b53d1bb15f2",
+      "findings": [
+        "Corrigida inversão endocardite/dissecção no reparo e desbridamento.",
+        "Emergência por edema refratário/choque separada de urgência por IC sem colapso; não esperar cultura negativa.",
+        "ECMO convencional não recomendada genericamente: piora da pós-carga; LAVA-ECMO apenas estratégia especializada com evidência limitada.",
+        "Vasodilatação condicionada à pressão/perfusão; retirada taquicardia como única sustentação de débito e taxa fixa de mortalidade.",
+        "BSE confirma término prematuro do fluxo aórtico com fechamento aórtico precoce; preservado sem reinterpretar incorretamente como jato regurgitante."
+      ],
+      "sources": [
+        "10.1186/s44156-024-00067-8: texto integral, seção acute AR",
+        "10.1093/eurheartj/ehad193: diretriz ESC 2023, indicação e timing cirúrgico",
+        "10.1093/eurheartj/ehae179: diretriz aórtica ESC 2024",
+        "10.1080/14796678.2025.2472551: suporte e LAVA-ECMO",
+        "PMC10242569: relato técnico, contraindicação VA-ECMO convencional na IA grave; não RCT"
+      ],
+      "reviewed_sha256": "8c00ed872666dc0e81ae0b891ba75475b8c8e1b37649c7851c42f8577481f66f"
     },
     {
       "index": 159,
@@ -1270,8 +1285,25 @@
     {
       "index": 162,
       "path": "content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "77e5ccc5e89a515fe35fa10da7d38af0cdf61bb8644561ee68e6d040cd9b87e3"
+      "status": "corrected_reviewed",
+      "source_sha256": "77e5ccc5e89a515fe35fa10da7d38af0cdf61bb8644561ee68e6d040cd9b87e3",
+      "findings": [
+        "HALT pode ou não restringir mobilidade; coorte não prova ausência universal de gradiente ou causalidade cerebrovascular.",
+        "ADAPT-TAVR primário p0,076: não significativo, sem diferença qualquer/maior sangramento; removido falso sangramento menor.",
+        "GALILEO composto/mortalidade e sangramento p0,08 separados; AAS/clopidogrel duração3 meses.",
+        "Removida ideia de que profilaxia se baseia só em consenso; ESC2025 distingue HALT incidental e aumento relevante gradiente/restrição confirmada, com anticoagulação a considerar.",
+        "BVD distribuição60,9/39,1 entre casos não incidência por plataforma."
+      ],
+      "sources": [
+        "PMID40967263",
+        "PMID40353875",
+        "PMID31733180",
+        "PMID31733182",
+        "PMID35373583",
+        "PMID39736458",
+        "DOI10.1093/ejcts/ezaf276"
+      ],
+      "reviewed_sha256": "b43de27fd41f95db98be2c043c93471ab58daaa178ca2039fefdef23c9254929"
     }
   ]
 }
