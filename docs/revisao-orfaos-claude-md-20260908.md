@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 30 documentos lidos integralmente e corrigidos; 133 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 31 documentos lidos integralmente e corrigidos; 132 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -194,6 +194,17 @@ Fontes verificadas: Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drac
 - Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina.
 
 Fontes verificadas: PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários, https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral.
+
+## 127 — content/Insuficiência_cardíaca/manejo-farmacologico-da-insuficiencia-cardiaca-na-amiloidose-cardiaca-digoxina-e-bloqueadores-de-canal-de-calcio-al-versus-attr.md
+
+- Digoxina não contraindicação absoluta: coorte69 e ESC-HFA2025/26 permitem uso selecionado monitorado; não negar literatura contemporânea.
+- Removida afirmação in vitro provou concentração livre no tecido condução.
+- Coorte2371MRA/betabloqueador acrescentada como associação, sem neuropatia, sem extrapolarAL.
+- DisautonomiaATTRv pode ser precoce/importante, não hierarquiaAL>todaATTR.
+- Biomarcador respostaNTproBNP distinto troponina prognóstica; estágioAL não corte automático transplante.
+- SGLT2 hospitalizaçãoIC não significativa; causalidade limitada.
+
+Fontes verificadas: PMIDs7014028,8339658,42110711,41347328: abstracts verificados;4003314 identidade título, PMID32800294: coorte69digoxina, PMID37216684 DOIehad347: coorte2371; erratum ehae140 lido integral, somente disponibilidade de dados, PMID41055898 DOIehaf710: consenso integral viaGUARD-HEART, seções suporte/ratecontrol, PMID38769233: coorte disautonomiaATTRv.
 
 ## 128 — content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md
 
