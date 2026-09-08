@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr899-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr899": "fc0cede0b878c2555fd0a57fddd329cc12fa4547"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-sinalizadores-ambulatoriais-pvc-frequente",
+      "pvc-frequente-no-consultorio-sinais-vermelhos-quando-ir-ao-ps",
+      "sinalizadores-ambulatoriais-de-carga-de-pvc-quando-escalar-ablacao"
+    ]
+  }
+}
