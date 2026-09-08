@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr901-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr901": "54b1ccb47cd3f487b5790c1d52644ce1a61dee88"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-suspeita-de-sindrome-aortica-aguda-antes-do-ps",
+      "fluxograma-ambulatorial-suspeita-saa-consultorio-para-ps",
+      "sinalizadores-ambulatoriais-suspeita-sindrome-aortica-aguda-ps-imediato"
+    ]
+  }
+}
