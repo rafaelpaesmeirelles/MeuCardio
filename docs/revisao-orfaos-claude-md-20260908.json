@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 50,
-  "pending_count": 113,
+  "reviewed_count": 51,
+  "pending_count": 112,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1070,8 +1070,20 @@
     {
       "index": 103,
       "path": "content/Hipertensão/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "619b8ec5dce78eb9ca8aaa25d5b35b79c99b1cd7c7553c3153ebb05bac102335"
+      "status": "corrected_reviewed",
+      "source_sha256": "619b8ec5dce78eb9ca8aaa25d5b35b79c99b1cd7c7553c3153ebb05bac102335",
+      "findings": [
+        "Yu2021 resultado HRV predominantemente negativo, não disautonomia precoce confirmada; abstract PubMed ausente exigiu primária institucional.",
+        "TACT2 randomizou1000;959 análise≥1infusão; baixoPb0,92µg/dL não saturnismo ocupacional grave.",
+        "EDTA cálcio-dissódico e dissódico não intercambiáveis; quelação toxicologista e sem retirar indicação de intoxicação.",
+        "Mecanismos experimentais não dose-resposta humana universal; vias de absorção e limites Brasil versus recomendação externa esclarecidos."
+      ],
+      "sources": [
+        "Nove referências originais conferidas; Yu texto/abstract primário UTRGV lido porque PubMed contém apenas Figure.",
+        "TACT2 texto completo PMC11325247 método, denominadores e resultados consultado.",
+        "NIOSH2024 Blood Lead Guidance lido; NR7 página oficial consultada sem converter limiares clínicos estrangeiros em lei brasileira."
+      ],
+      "reviewed_sha256": "57c0eeacb728b146d1adf84aa9c6a1e8f2209c63d253eed2a442e5f0ae109dfa"
     },
     {
       "index": 104,

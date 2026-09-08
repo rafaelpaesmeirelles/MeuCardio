@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 50 documentos lidos integralmente e corrigidos; 113 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 51 documentos lidos integralmente e corrigidos; 112 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -313,6 +313,15 @@ Fontes verificadas: Oito PMIDs originais/citados: abstracts e identidades confer
 - Estudo transversal de ex-usuários não prova irreversibilidade; avaliação pressórica/manguito e manejo sem presumir cura incorporados.
 
 Fontes verificadas: Cinco referências originais: abstracts/identidades conferidos., HenriksenDOI10.1111/sms.14554 texto indexado do editor seções resultados/discussão consultado, tabelas integrais não acessíveis; removidas magnitudes ambíguas., Smit35014715 DOI10.1111/and.14372 abstract primário e PDF publicado pela autoridade antidoping consultados..
+
+## 103 — content/Hipertensão/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular.md
+
+- Yu2021 resultado HRV predominantemente negativo, não disautonomia precoce confirmada; abstract PubMed ausente exigiu primária institucional.
+- TACT2 randomizou1000;959 análise≥1infusão; baixoPb0,92µg/dL não saturnismo ocupacional grave.
+- EDTA cálcio-dissódico e dissódico não intercambiáveis; quelação toxicologista e sem retirar indicação de intoxicação.
+- Mecanismos experimentais não dose-resposta humana universal; vias de absorção e limites Brasil versus recomendação externa esclarecidos.
+
+Fontes verificadas: Nove referências originais conferidas; Yu texto/abstract primário UTRGV lido porque PubMed contém apenas Figure., TACT2 texto completo PMC11325247 método, denominadores e resultados consultado., NIOSH2024 Blood Lead Guidance lido; NR7 página oficial consultada sem converter limiares clínicos estrangeiros em lei brasileira..
 
 ## 110 — content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md
 
