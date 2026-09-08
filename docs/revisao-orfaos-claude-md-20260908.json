@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 45,
-  "pending_count": 118,
+  "reviewed_count": 46,
+  "pending_count": 117,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1021,8 +1021,20 @@
     {
       "index": 101,
       "path": "content/Hipertensão/hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "426d677b873afe12aa0af453d79bdf9bc43a19293920ed0ee3902861a02e4c2b"
+      "status": "corrected_reviewed",
+      "source_sha256": "426d677b873afe12aa0af453d79bdf9bc43a19293920ed0ee3902861a02e4c2b",
+      "findings": [
+        "HAARLEM100 prospectivo mede PA e recuperação: contradiz alegação de ausência de dados; reversão média não é garantia individual.",
+        "Henriksen55%vs19% não é prevalência isolada de hipertensão; resumo descreve FEVE reduzida em combinação com PA/HVE.",
+        "Busca de cuidado não era exclusivamente por sintoma cardiovascular; removida prevalência populacional não sustentada.",
+        "Estudo transversal de ex-usuários não prova irreversibilidade; avaliação pressórica/manguito e manejo sem presumir cura incorporados."
+      ],
+      "sources": [
+        "Cinco referências originais: abstracts/identidades conferidos.",
+        "HenriksenDOI10.1111/sms.14554 texto indexado do editor seções resultados/discussão consultado, tabelas integrais não acessíveis; removidas magnitudes ambíguas.",
+        "Smit35014715 DOI10.1111/and.14372 abstract primário e PDF publicado pela autoridade antidoping consultados."
+      ],
+      "reviewed_sha256": "64f96556bc4c3614ff6bc47af4940e5211101c05df19400e2f6bec62ba27a28e"
     },
     {
       "index": 102,
