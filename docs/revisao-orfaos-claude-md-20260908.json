@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 37,
-  "pending_count": 126,
+  "reviewed_count": 38,
+  "pending_count": 125,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -101,8 +101,20 @@
     {
       "index": 5,
       "path": "content/Aorta_e_doença_arterial_periférica/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "31c042edefe6c29ac2ad161bcc4db346b1081207b314f3cd1c750005643ee542"
+      "status": "corrected_reviewed",
+      "source_sha256": "31c042edefe6c29ac2ad161bcc4db346b1081207b314f3cd1c750005643ee542",
+      "findings": [
+        "Campens32pacientes+23portadores+28controles; Pingel28,6% entre35, não46 e não incidência.",
+        "Kranenburg rigidez maior queDM2, não menor; PXE não exclui aterosclerose.",
+        "Aspirina evitar quando possível não veto absoluto após indicação cardiovascular; diagnóstico molecular não depende de sinais universais.",
+        "TEMP74RCT primárioPETneutro, TCsecundário favorável e hiperfosfatemia; coorte326eventos2025 restaurada sem extrapolar benefício.",
+        "GenesENPP1/ABCC6nãoalélicos entre si; excluídas generalizações calcifilaxia/idade."
+      ],
+      "sources": [
+        "10referências originais: abstracts individuais; GeneReviews online para manejo.",
+        "TEMP PMID29519353 DOI10.1016/j.jacc.2017.12.062 eHarmsen39581064 DOI10.1016/j.atherosclerosis.2024.119051: abstracts primários online."
+      ],
+      "reviewed_sha256": "65e1de5d60ee1ee541e3b0727011803294584db2c388137706d82de92077c910"
     },
     {
       "index": 6,
