@@ -3,60 +3,69 @@ title: "Lesão de órgão-alvo e classificação de muito alto risco cardiovascu
 slug: lesao-de-orgao-alvo-e-muito-alto-risco-cv-no-diabetes-esc-2023
 theme: "Diabetes e cardiologia"
 kind: protocolo
-summary: "Como a ESC 2023 define lesão grave de órgão-alvo no diabetes tipo 2, quando o paciente já é muito alto risco sem SCORE2-Diabetes, e o que muda na intensidade de metas lipídicas, pressóricas e na prioridade de iSGLT2/GLP-1RA."
-review_status: pendente_revisao
+summary: "Critérios exatos da ESC 2023 para lesão grave de órgão-alvo no diabetes tipo 2, quando não usar SCORE2-Diabetes e quais metas preventivas se tornam prioritárias."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Corrigidos PMID da ESC, limiares exatos de TFGe/UACR para lesão grave de órgão-alvo, meta dupla de LDL-C (<55 mg/dL e redução ≥50% do basal) e interpretação da albuminúria A2/A3."
 fonte_producao: grok
 source_refs:
-  - "Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622656."
+  - "Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663."
   - "American Diabetes Association Professional Practice Committee. Cardiovascular Disease and Risk Management: Standards of Care in Diabetes—2026. Diabetes Care. 2026;49(Suppl 1):S216-S245. DOI: 10.2337/dc26-S010. PMID: 41358899."
-legacy_source: "Densificação Tudo-com-Tudo 07/09/2026. Hub de DM2+CV já em PR aberto (#572) — este lote só adiciona conteúdo narrativo, sem novo fragmento de doença. Fontes primárias ESC 2023 e ADA SoC 2026 Cap. 10 com DOI/PMID conferidos."
+legacy_source: "Densificação Tudo-com-Tudo 07/09/2026. Hub de DM2+CV já em PR aberto (#572); este lote adiciona conteúdo narrativo sem novo fragmento de doença. Revisão científica final 08/09/2026."
 ---
 
 # Lesão de órgão-alvo e muito alto risco cardiovascular no diabetes (ESC 2023)
 
 ## Por que este documento existe
 
-A pasta já cobre SCORE2-Diabetes, fluxogramas ESC 2023 e CVOTs de iSGLT2/GLP-1. A lacuna prática é **quando o paciente já é automaticamente muito alto risco** — sem precisar calcular o escore — porque há **lesão grave de órgão-alvo** ou doença aterosclerótica estabelecida. Essa distinção muda metas de LDL-C, intensidade de prevenção e a urgência de terapias com benefício cardiovascular independente da HbA1c.
+A lacuna prática é distinguir o paciente com diabetes tipo 2 que deve ser classificado como **muito alto risco** por ASCVD estabelecida ou **lesão grave de órgão-alvo (TOD)** daquele em quem o SCORE2-Diabetes ainda é apropriado.
 
-## Definição operacional (ESC 2023)
+## Definição operacional — critérios exatos da ESC 2023
 
-Na ESC 2023, risco **muito alto** inclui, entre outros:
+Em diabetes tipo 2, **lesão grave de órgão-alvo** é definida por pelo menos um dos seguintes:
 
-- Doença cardiovascular aterosclerótica (DCVA) estabelecida (coronariana, cerebrovascular ou arterial periférica clínica ou documentada por imagem).
-- **Lesão grave de órgão-alvo** em diabetes tipo 2, tipicamente reconhecida por:
-  - TFGe reduzida (DRC avançada) e/ou
-  - albuminúria significativa (UACR elevada) e/ou
-  - doença microvascular em **≥3 sítios** (ex.: microalbuminúria + retinopatia + neuropatia).
+- **TFGe <45 mL/min/1,73 m²**, independentemente da albuminúria; ou
+- **TFGe 45–59 mL/min/1,73 m² + UACR 30–300 mg/g** (A2); ou
+- **UACR >300 mg/g** (A3/proteinúria), independentemente da TFGe; ou
+- **doença microvascular em ≥3 sítios**, por exemplo albuminúria A2 + retinopatia + neuropatia.
 
-O SCORE2-Diabetes destina-se a pessoas com diabetes tipo 2 **sem** DCVA e **sem** lesão grave de órgão-alvo. Usá-lo nesses cenários subestima a categoria de risco e atrasa intensificação terapêutica.
+Também é muito alto risco quem já apresenta **ASCVD estabelecida**.
 
-## O que muda na conduta quando já é muito alto risco
+### O que não deve ser classificado como TOD grave por esses critérios
 
-| Domínio | Implicação prática (síntese ESC 2023 / alinhamento ADA 2026) |
+- TFGe 45–59 mL/min/1,73 m² **sem** albuminúria A2/A3, isoladamente;
+- UACR 30–300 mg/g com TFGe preservada, isoladamente, salvo se fizer parte de doença microvascular em ≥3 sítios.
+
+O SCORE2-Diabetes deve ser usado em pacientes elegíveis **sem ASCVD e sem TOD grave**, respeitando a faixa etária e o contexto previstos pela ferramenta.
+
+## O que muda quando o paciente é muito alto risco
+
+| Domínio | Implicação prática |
 |---|---|
-| Lipídios | Meta de LDL-C mais agressiva (tipicamente <55 mg/dL na ESC para muito alto risco / DCVA); estatina de alta intensidade ± ezetimiba/PCSK9 conforme lacuna residual |
-| Pressão | Meta individualizada; ESC sugere PAS em torno de 130 mmHg (evitar <120 mmHg de forma indiscriminada); ADA 2026 discute <130/80 e, em alto risco, possibilidade de PAS <120 se seguro |
-| Terapia glicêmica cardioprotetora | iSGLT2 e/ou agonista de GLP-1 com benefício CV demonstrado **independentemente** do controle glicêmico |
-| Cardiorrenal | Priorizar iSGLT2 ± finerenona quando houver DRC albuminúrica (respeitar TFGe, K+ e contraindicações) |
-| Antitrombóticos | Em DCVA estabelecida, antiagregante conforme indicação; prevenção primária com aspirina permanece seletiva |
+| Lipídios | Na estratégia ESC para muito alto risco: **LDL-C <55 mg/dL E redução ≥50% em relação ao basal**; intensificar terapia conforme tolerância e guideline vigente se qualquer um dos dois componentes não for atingido |
+| Pressão arterial | Meta individualizada segundo guideline vigente, tolerabilidade, idade, fragilidade, DRC e risco de hipotensão |
+| Terapia cardioprotetora no diabetes | Em ASCVD/alto risco apropriado, priorizar fármacos com benefício cardiovascular/renal demonstrado, sem depender apenas da HbA1c |
+| Cardiorrenal | TFGe e UACR devem ser avaliadas conjuntamente; DRC albuminúrica muda risco e opções terapêuticas |
+| Antitrombóticos | Usar apenas quando houver indicação específica; não transformar a classificação de risco em indicação automática de antiagregação |
 
 ## Checklist rápido na consulta
 
-1. Há DCVA clínica ou por imagem? → **muito alto risco** (não depender do SCORE2-Diabetes).
-2. Calcular TFGe e UACR (rastreio anual ou mais frequente se alterados).
-3. Documentar retinopatia e neuropatia — o “≥3 sítios” só funciona se o exame microvascular estiver registrado.
-4. Se lesão grave de órgão-alvo ou DCVA: iniciar/otimizar iSGLT2 e/ou GLP-1RA com benefício CV, estatina intensiva e metas pressóricas/lipídicas de alto risco.
-5. Se **sem** DCVA e **sem** lesão grave: aí sim SCORE2-Diabetes para estratificar baixo/moderado/alto/muito alto.
+1. Há ASCVD estabelecida? → **muito alto risco**; não depender do SCORE2-Diabetes.
+2. Calcular TFGe e medir UACR.
+3. Aplicar os quatro critérios exatos de TOD grave acima — não usar “TFGe reduzida e/ou albuminúria” de forma genérica.
+4. Documentar retinopatia, neuropatia e outros sítios microvasculares quando relevantes.
+5. Se muito alto risco: conferir se **ambos** os componentes da meta de LDL-C foram atingidos: valor absoluto <55 mg/dL **e** redução ≥50% do basal.
+6. Se sem ASCVD e sem TOD grave: usar SCORE2-Diabetes quando aplicável.
 
 ## Armadilhas clínicas
 
-- **Calcular SCORE2-Diabetes em quem já tem DAC, AVC ou DAP** — ferramenta errada para esse perfil.
-- **Ignorar UACR “só porque a creatinina está normal”** — albuminúria isolada já redefine risco e abre indicação cardiorrenal.
-- **Aguardar HbA1c elevada para iniciar iSGLT2/GLP-1RA** em DCVA ou muito alto risco — a indicação é de redução de desfecho, não apenas de glicemia.
-- **Misturar metas ESC e ADA sem declarar a fonte** — convergentes em princípio, diferentes em detalhes numéricos de PA; documentar qual arcabouço está sendo seguido.
+- Classificar TFGe 45–59 sem albuminúria como TOD grave automaticamente.
+- Classificar UACR 30–300 mg/g isolada com TFGe preservada como TOD grave automaticamente.
+- Considerar LDL-C 54 mg/dL como “meta completa” se a queda em relação ao basal foi <50%.
+- Ignorar UACR porque a creatinina sérica parece normal; UACR >300 mg/g é, por si só, critério de TOD grave, e A2 modifica risco quando combinada aos critérios acima.
+- Calcular SCORE2-Diabetes em quem já tem ASCVD ou TOD grave.
 
-## Limitações deste documento
+## Limites
 
-Síntese operacional para densificar o tema; não substitui o texto integral da ESC 2023 (PMID 37622656) nem o Standards of Care ADA 2026 Cap. 10 (PMID 41358899). Limiares exatos de TFGe/UACR e classes de recomendação devem ser conferidos na diretriz/fonte primária antes de publicação com `review_status: revisado`.
+Este documento operacionaliza a ESC 2023 para classificação de risco; não substitui o texto integral da diretriz nem define doses. Mudanças posteriores em metas ou terapias devem ser incorporadas por revisão científica versionada.
 
 Ver também: `doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md`, `fluxograma-diabetes-e-doenca-cardiovascular-esc-2023.md`, `ada-standards-of-care-2026-capitulo-10-doenca-cardiovascular-e-manejo-de-risco.md`.
