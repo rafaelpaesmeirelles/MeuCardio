@@ -49,6 +49,7 @@ let precacheBytes = 0;
 let precacheEntries = 0;
 const maxOptionalPrecacheJs = 160 * 1024;
 const forbiddenLegacyBrandAssets = new Set([
+  "spaces/galaxy-approved-alpha.png",
   "corvia-logo-compacta.png",
   "logo-marca.png",
   "logo.png",

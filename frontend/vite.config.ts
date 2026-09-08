@@ -65,6 +65,8 @@ export default defineConfig({
         // shell offline e duplicá-los no precache acrescenta mais de 1 MiB sem
         // melhorar a experiência depois que o PWA já foi instalado.
         globIgnores: [
+          // Substituída pelo WebP canônico, carregado pelo cache de cenas.
+          "spaces/galaxy-approved-alpha.png",
           "corvia-logo-canonical.png",
           "corvia-logo.png",
           "corvia-logo-compacta.png",
