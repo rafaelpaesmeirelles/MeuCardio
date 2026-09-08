@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 49,
-  "pending_count": 114,
+  "reviewed_count": 50,
+  "pending_count": 113,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1003,8 +1003,20 @@
     {
       "index": 98,
       "path": "content/Hipertensão/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "b1f51b8102a89104d49a4dcd95ac10af2cf301d349ee066aa59caeaa30c65050"
+      "status": "corrected_reviewed",
+      "source_sha256": "b1f51b8102a89104d49a4dcd95ac10af2cf301d349ee066aa59caeaa30c65050",
+      "findings": [
+        "Wang21872294 mostra persistência de risco décadas após cessação; original inverteu resultado e inventou efeito em blackfoot.",
+        "Newman27810857 associação ITB>1,4, não ITB<0,9; distinção de não compressibilidade restaurada.",
+        "Abir meta inconclusiva/heterogênea; Chiou prevalência nordeste, não coorte mesma população sudoeste.",
+        "Moon2018 longitudinal apenas estudo familiar; coorte principal sem mudança anual.",
+        "Urina exige especiação/considerar frutos do mar, cabelo/unhas limitados; ATO não bolus, PDH não cadeia respiratória; quelação especializada."
+      ],
+      "sources": [
+        "16 fontes originais: abstracts/identidades conferidos individualmente.",
+        "ATSDR Clinician Brief2025 e Clinical Assessment consultados diretamente."
+      ],
+      "reviewed_sha256": "6c19755f28d0ea7ab94e085d587473aeb20716175a41aa3cd5180ea3a867f3e8"
     },
     {
       "index": 99,

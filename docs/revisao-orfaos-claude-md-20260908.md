@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 49 documentos lidos integralmente e corrigidos; 114 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 50 documentos lidos integralmente e corrigidos; 113 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -284,6 +284,16 @@ Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Re
 - Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável.
 
 Fontes verificadas: PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados, https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão, https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização, https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024.
+
+## 98 — content/Hipertensão/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular.md
+
+- Wang21872294 mostra persistência de risco décadas após cessação; original inverteu resultado e inventou efeito em blackfoot.
+- Newman27810857 associação ITB>1,4, não ITB<0,9; distinção de não compressibilidade restaurada.
+- Abir meta inconclusiva/heterogênea; Chiou prevalência nordeste, não coorte mesma população sudoeste.
+- Moon2018 longitudinal apenas estudo familiar; coorte principal sem mudança anual.
+- Urina exige especiação/considerar frutos do mar, cabelo/unhas limitados; ATO não bolus, PDH não cadeia respiratória; quelação especializada.
+
+Fontes verificadas: 16 fontes originais: abstracts/identidades conferidos individualmente., ATSDR Clinician Brief2025 e Clinical Assessment consultados diretamente..
 
 ## 100 — content/Hipertensão/hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo.md
 
