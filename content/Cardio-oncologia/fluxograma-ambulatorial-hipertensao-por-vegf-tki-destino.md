@@ -37,7 +37,7 @@ flowchart TD
 
   D4 -->|"Não"| C5(["Tratar PA conforme risco/contexto oncológico<br/>MRPA/diário também para outros inibidores VEGF<br/>Reforçar adesão e alarmes"])
 
-  C1 --> D5{"PRES confirmado sob bevacizumabe?"}
+  C1 --> D5{"Bevacizumabe: PRES, crise hipertensiva<br/>ou encefalopatia hipertensiva confirmada?"}
   D5 -->|"Sim"| C6(["Descontinuar bevacizumabe<br/>segurança de reinício desconhecida"])
   D5 -->|"Não / suspeita"| C7(["Manter suspensão enquanto investiga<br/>seguir protocolo específico"])
 
@@ -56,3 +56,5 @@ flowchart TD
 - O fluxograma não define doses nem redução percentual da terapia oncológica.
 
 Sintomas cardiovasculares novos devem ser investigados também quando coexistem com PA elevada: os ramos de tratamento pressórico não substituem ECG/biomarcadores/eco conforme a hipótese. Após pausa por hipertensão grave sem complicação, a ESC orienta controle abaixo de PAS 160 e PAD 100 antes de considerar reinício coordenado; isso não é a meta definitiva de PA nem autoriza reiniciar após PRES confirmado. Sem avaliação/monitorização ambulatorial rápida e segura, usar serviço de urgência. A equipe deve ser avisada imediatamente sobre qualquer suspensão; não atrasar atendimento emergencial enquanto aguarda contato.
+
+A bula do bevacizumabe determina descontinuação também em crise hipertensiva ou encefalopatia hipertensiva confirmada, além de PRES. O reinício após simples hipertensão grave controlada não se aplica a essas complicações. Fonte: https://www.gene.com/download/pdf/avastin_prescribing.pdf.

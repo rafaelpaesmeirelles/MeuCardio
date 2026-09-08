@@ -22,11 +22,11 @@ Pergunta de **consultório / teleatendimento**: paciente com **diabetes e ASCVD*
 **Fora de escopo deliberado:**
 - lesão de órgão-alvo / rastreio IC-FA — [#826](https://github.com/rafaelpaesmeirelles/MeuCardio/pull/826);
 - hipoglicemia grave e alarmes iSGLT2/GLP-1 — [#855](https://github.com/rafaelpaesmeirelles/MeuCardio/pull/855);
-- ensaio FREEDOM (CABG vs PCI) — [`revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom`](/biblioteca/revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom);
-- BARI-2D — [`bari-2d-revascularizacao-versus-terapia-medica-no-diabetes-com-dac-estavel`](/biblioteca/bari-2d-revascularizacao-versus-terapia-medica-no-diabetes-com-dac-estavel);
+- ensaio FREEDOM (CABG vs PCI) — [revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom](/biblioteca/revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom);
+- BARI-2D — [bari-2d-revascularizacao-versus-terapia-medica-no-diabetes-com-dac-estavel](/biblioteca/bari-2d-revascularizacao-versus-terapia-medica-no-diabetes-com-dac-estavel);
 - **miligramas** de antianginoso, antitrombótico ou hipoglicemiante.
 
-Árvore: [`fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento`](/biblioteca/fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento). Braço CCS: [`angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao`](/biblioteca/angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao).
+Árvore: [fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento](/biblioteca/fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento). Braço CCS: [angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao](/biblioteca/angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao).
 
 ## Princípio
 

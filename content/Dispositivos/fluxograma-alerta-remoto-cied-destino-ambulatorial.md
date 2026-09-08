@@ -23,7 +23,7 @@ Prosa: [alerta-remoto-de-cied-no-ambulatorio-quando-ligar-clinica-vs-ps](/biblio
 
 ```mermaid
 flowchart TD
-  A["Alerta remoto / ligação: paciente com CIED"] --> D1{"Há sintoma de alarme ou instabilidade?<br/>síncope/pré-síncope, dor torácica,<br/>dispneia aguda, IC descompensada"}
+  A["Alerta remoto / ligação: paciente com CIED"] --> D1{"TV sustentada em curso,<br/>sintoma de alarme ou instabilidade?<br/>síncope/pré-síncope, dor torácica,<br/>dispneia aguda, IC descompensada"}
 
   D1 -->|"Sim"| C1(["PS / emergência agora<br/>Não esperar retorno da clínica remota"])
 

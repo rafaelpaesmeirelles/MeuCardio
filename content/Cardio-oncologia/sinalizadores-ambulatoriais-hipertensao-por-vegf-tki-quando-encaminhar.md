@@ -75,7 +75,7 @@ Evitar verapamil/diltiazem como rotina quando houver potencial de interação co
 2. Sem lesão aguda, PAS >=180 ou PAD >=110? → **pausa temporária** + otimização oral + discussão multidisciplinar.
 3. PAS >=160 **e** PAD >=100? → associação IECA/BRA + BCC di-hidropiridínico, salvo contraindicação, conforme protocolo ESC canônico.
 4. Sintoma CV novo sem PA elevada? → investigar o sintoma; **não** intensificar anti-HTA por reflexo.
-5. PRES confirmado sob bevacizumabe? → **descontinuar bevacizumabe**; não presumir reinício seguro.
+5. Bevacizumabe: PRES, crise hipertensiva<br/>ou encefalopatia hipertensiva confirmada? → **descontinuar bevacizumabe**; não presumir reinício seguro.
 
 ## Armadilhas
 
@@ -94,3 +94,5 @@ Evitar verapamil/diltiazem como rotina quando houver potencial de interação co
 - [toxicidade-cardiovascular-do-bevacizumabe-e-inibidores-de-vegf](/biblioteca/toxicidade-cardiovascular-do-bevacizumabe-e-inibidores-de-vegf)
 
 Sintomas cardiovasculares novos devem ser investigados também quando coexistem com PA elevada: os ramos de tratamento pressórico não substituem ECG/biomarcadores/eco conforme a hipótese. Após pausa por hipertensão grave sem complicação, a ESC orienta controle abaixo de PAS 160 e PAD 100 antes de considerar reinício coordenado; isso não é a meta definitiva de PA nem autoriza reiniciar após PRES confirmado. Sem avaliação/monitorização ambulatorial rápida e segura, usar serviço de urgência. A equipe deve ser avisada imediatamente sobre qualquer suspensão; não atrasar atendimento emergencial enquanto aguarda contato.
+
+A bula do bevacizumabe determina descontinuação também em crise hipertensiva ou encefalopatia hipertensiva confirmada, além de PRES. O reinício após simples hipertensão grave controlada não se aplica a essas complicações. Fonte: https://www.gene.com/download/pdf/avastin_prescribing.pdf.

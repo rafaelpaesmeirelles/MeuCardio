@@ -18,12 +18,12 @@ source_refs:
 Pergunta de **consultório**: diante de **ACM/ARVC conhecida** ou **alta suspeita** (critérios de Task Force/Padua em discussão), **quais sinais pedem PS agora**, quais pedem **retorno precoce / EF**, e quando **abrir rastreamento familiar** — sem reescrever o protocolo diagnóstico completo.
 
 Não substitui:
-- protocolo completo — [`cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023`](/biblioteca/cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023);
-- genética MS — [`fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita`](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita);
+- protocolo completo — [cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023](/biblioteca/cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023);
+- genética MS — [fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita);
 - esporte — ver pasta Cardiologia do Esporte / restrição de exercício no protocolo ACM;
 - hub `doencas` (#723) — este pacote **não** edita verbete-hub.
 
-Árvore: [`fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar`](/biblioteca/fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar). CMD: [`sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico`](/biblioteca/sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico).
+Árvore: [fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar](/biblioteca/fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar). CMD: [sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico](/biblioteca/sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico).
 
 ## Princípio
 

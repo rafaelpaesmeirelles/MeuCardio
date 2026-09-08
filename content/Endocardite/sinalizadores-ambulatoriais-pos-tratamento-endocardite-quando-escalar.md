@@ -16,12 +16,12 @@ source_refs:
 Este protocolo responde a uma pergunta de **consultório após a alta**: paciente com **endocardite infecciosa recentemente tratada** (ou em seguimento no primeiro ano) — **quais sinais exigem pronto-socorro agora**, quais pedem **hemoculturas + via urgente**, e o que reforçar sobre **higiene oral / aviso ao dentista** sem protocolar esquemas?
 
 Não substitui:
-- suspeita ambulatorial **pré-diagnóstico** (febre + material cardíaco em quem ainda não tem EI documentada) — [`esc-2023-diretriz-endocardite-infecciosa`](/biblioteca/esc-2023-diretriz-endocardite-infecciosa) (PR #853);
-- distinção formal **relapso vs reinfecção** — [`recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao`](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao);
-- profilaxia antibiótica com regimes — [`profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos`](/biblioteca/profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos);
+- suspeita ambulatorial **pré-diagnóstico** (febre + material cardíaco em quem ainda não tem EI documentada) — [esc-2023-diretriz-endocardite-infecciosa](/biblioteca/esc-2023-diretriz-endocardite-infecciosa) (PR #853);
+- distinção formal **relapso vs reinfecção** — [recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao);
+- profilaxia antibiótica com regimes — [profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos](/biblioteca/profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos);
 - Duke / timing cirúrgico / esquemas por agente.
 
-Árvore: [`fluxograma-ambulatorial-pos-tratamento-endocardite-destino`](/biblioteca/fluxograma-ambulatorial-pos-tratamento-endocardite-destino). Checklist de educação: [`checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes`](/biblioteca/checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes). Contexto canônico: [`esc-2023-diretriz-endocardite-infecciosa`](/biblioteca/esc-2023-diretriz-endocardite-infecciosa).
+Árvore: [fluxograma-ambulatorial-pos-tratamento-endocardite-destino](/biblioteca/fluxograma-ambulatorial-pos-tratamento-endocardite-destino). Checklist de educação: [checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes](/biblioteca/checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes). Contexto canônico: [esc-2023-diretriz-endocardite-infecciosa](/biblioteca/esc-2023-diretriz-endocardite-infecciosa).
 
 ## Princípio
 

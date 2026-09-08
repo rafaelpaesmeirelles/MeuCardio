@@ -20,12 +20,12 @@ source_refs:
 Pergunta de **consultório**: o paciente (ou familiar) compra ibuprofeno/diclofenaco “para a dor das costas” — **quando isso muda o plano cardiovascular**, e o que não dá para deixar para o próximo retorno.
 
 Não substitui:
-- magnitude e comparação entre moléculas — [`anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt`](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt);
+- magnitude e comparação entre moléculas — [anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt);
 - descompensação de IC em geral — pacote [Via clínica](/biblioteca/fluxograma-insuficiencia-cardiaca-aguda-descompensada);
 - HAS / sinalizadores de crise — [Via clínica](/biblioteca/fluxograma-emergencia-hipertensiva);
 - sangramento sob DOAC — [Via clínica](/biblioteca/fluxograma-sangramento-maior-em-paciente-anticoagulado).
 
-Árvore: [`fluxograma-ambulatorial-aine-quando-evitar-e-escalar`](/biblioteca/fluxograma-ambulatorial-aine-quando-evitar-e-escalar). Checklist: [`checklist-ambulatorial-aine-no-retorno-cardiologico`](/biblioteca/checklist-ambulatorial-aine-no-retorno-cardiologico).
+Árvore: [fluxograma-ambulatorial-aine-quando-evitar-e-escalar](/biblioteca/fluxograma-ambulatorial-aine-quando-evitar-e-escalar). Checklist: [checklist-ambulatorial-aine-no-retorno-cardiologico](/biblioteca/checklist-ambulatorial-aine-no-retorno-cardiologico).
 
 ## Princípio
 

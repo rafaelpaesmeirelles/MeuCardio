@@ -15,11 +15,11 @@ source_refs:
 
 # Fluxograma: sinalizadores ambulatoriais de QT longo
 
-Prosa: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar) e [`qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt`](/biblioteca/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt).
+Prosa: [sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar) e [qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt](/biblioteca/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt).
 
-Canalopatias: [`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`](/biblioteca/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo).
+Canalopatias: [canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo](/biblioteca/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo).
 
-Psicofármacos: [`fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt`](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
+Psicofármacos: [fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
 
 ## Árvore de decisão
 

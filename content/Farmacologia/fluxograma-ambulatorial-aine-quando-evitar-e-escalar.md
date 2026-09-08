@@ -17,28 +17,28 @@ source_refs:
 
 # Fluxograma ambulatorial: AINE — quando evitar e escalar
 
-Prosa: [`sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico`](/biblioteca/sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico). Checklist: [`checklist-ambulatorial-aine-no-retorno-cardiologico`](/biblioteca/checklist-ambulatorial-aine-no-retorno-cardiologico). Magnitude CNT: [`anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt`](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt).
+Prosa: [sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico](/biblioteca/sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico). Checklist: [checklist-ambulatorial-aine-no-retorno-cardiologico](/biblioteca/checklist-ambulatorial-aine-no-retorno-cardiologico). Magnitude CNT: [anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt).
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Retorno cardiológico\nIC / DAC / HAS / anticoagulado / idoso"] --> D0{"Usa ou pede AINE\n(OTC ou prescrito)?"}
+  R0["Retorno cardiológico<br/>IC / DAC / HAS / anticoagulado / idoso"] --> D0{"Usa ou pede AINE<br/>(OTC ou prescrito)?"}
 
-  D0 -->|"Não"| C0(["Plano habitual\nReforçar: evitar automedicação\nem IC/SCA"])
+  D0 -->|"Não"| C0(["Plano habitual<br/>Reforçar: evitar automedicação<br/>em IC/SCA"])
 
-  D0 -->|"Sim"| D1{"Filtro duro?\nIC / SCA-stent recente /\nHAS descontrolada / DRC grave /\nsangramento recente / anticoagulação com alto risco GI"}
+  D0 -->|"Sim"| D1{"Filtro duro?<br/>IC / SCA-stent recente /<br/>HAS descontrolada / DRC grave /<br/>sangramento recente / anticoagulação com alto risco GI"}
 
-  D1 -->|"Sim"| D2{"Já há alarme clínico?\nedema+dispneia / dor torácica /\nHDA ou anemia aguda / déficit focal / encefalopatia / oligúria"}
+  D1 -->|"Sim"| D2{"Já há alarme clínico?<br/>edema+dispneia / dor torácica /<br/>HDA ou anemia aguda / déficit focal / encefalopatia / oligúria"}
 
-  D2 -->|"Sim"| C1(["Suspender AINE agora\n+ via IC aguda ou SCA\nou sangramento maior"])
-  D2 -->|"Não"| C2(["Não iniciar; revisar retirada com prescritor\nAlternativa analgésica\nCoordenar prescritor se crônico"])
+  D2 -->|"Sim"| C1(["Suspender AINE agora<br/>+ via IC aguda ou SCA<br/>ou sangramento maior"])
+  D2 -->|"Não"| C2(["Não iniciar; revisar retirada com prescritor<br/>Alternativa analgésica<br/>Coordenar prescritor se crônico"])
 
   D1 -->|"Não"| DA{"AAS / antiplaquetário / anticoagulante?"}
-  DA -->|"Sim"| CA(["Revisar interação, horários e risco GI\nPreferir alternativa antes de liberar uso"])
-  DA -->|"Não"| D3{"Uso contínuo\npor outra especialidade?"}
-  D3 -->|"Sim"| C3(["Contato coordenado\nMenor exposição possível\nGastroproteção se indicada\nDocumentar freio CV"])
-  D3 -->|"Não / esporádico"| C4(["Educar OTC\nPreferir não-AINE\nSe inevitável e sem IC:\nmenor tempo; naproxeno\nrelativo na CNT — não isento"])
+  DA -->|"Sim"| CA(["Revisar interação, horários e risco GI<br/>Preferir alternativa antes de liberar uso"])
+  DA -->|"Não"| D3{"Uso contínuo<br/>por outra especialidade?"}
+  D3 -->|"Sim"| C3(["Contato coordenado<br/>Menor exposição possível<br/>Gastroproteção se indicada<br/>Documentar freio CV"])
+  D3 -->|"Não / esporádico"| C4(["Educar OTC<br/>Preferir não-AINE<br/>Se inevitável e sem IC:<br/>menor tempo; naproxeno<br/>relativo na CNT — não isento"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;

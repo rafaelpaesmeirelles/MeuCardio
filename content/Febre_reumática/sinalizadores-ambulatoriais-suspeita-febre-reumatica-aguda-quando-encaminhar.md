@@ -20,13 +20,13 @@ source_refs:
 Pergunta de **consultório / atenção primária**: diante de **febre + artrite/artralgia migratória, coreia, sopro novo ou pistas cutâneas** em criança/adolescente (ou adulto jovem em área endêmica), **quando suspeitar de febre reumática aguda (FRA)**, quando ir ao **PS agora**, e quando **encaminhar ao hospital** para eco e investigação — sem fechar critérios de Jones nem protocolar doses aqui.
 
 Não substitui:
-- árvore diagnóstica Jones 2015 e cardite ao Doppler — [`fluxograma-febre-reumatica-aguda-criterios-de-jones-2015`](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015);
-- graduação/tratamento da cardite aguda — [`cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022`](/biblioteca/cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022) e [`fluxograma-cardite-reumatica-aguda-graduacao-e-tratamento`](/biblioteca/fluxograma-cardite-reumatica-aguda-graduacao-e-tratamento);
-- duração/esquema de profilaxia secundária — [`fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema`](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema);
-- dose perdida de benzatina / adesão ambulatorial — [`febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda`](/biblioteca/febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda) (**#850**);
+- árvore diagnóstica Jones 2015 e cardite ao Doppler — [fluxograma-febre-reumatica-aguda-criterios-de-jones-2015](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015);
+- graduação/tratamento da cardite aguda — [cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022](/biblioteca/cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022) e [fluxograma-cardite-reumatica-aguda-graduacao-e-tratamento](/biblioteca/fluxograma-cardite-reumatica-aguda-graduacao-e-tratamento);
+- duração/esquema de profilaxia secundária — [fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema](/biblioteca/fluxograma-profilaxia-secundaria-febre-reumatica-duracao-e-esquema);
+- dose perdida de benzatina / adesão ambulatorial — [febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda](/biblioteca/febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda) (**#850**);
 - valvopatia mitral crônica ambulatorial — pacote Valvopatias (**#866**).
 
-Árvore: [`fluxograma-ambulatorial-suspeita-fra-destino-hospital`](/biblioteca/fluxograma-ambulatorial-suspeita-fra-destino-hospital). Checklist de cardite/alarme: [`checklist-ambulatorial-alarme-cardite-suspeita-fra`](/biblioteca/checklist-ambulatorial-alarme-cardite-suspeita-fra).
+Árvore: [fluxograma-ambulatorial-suspeita-fra-destino-hospital](/biblioteca/fluxograma-ambulatorial-suspeita-fra-destino-hospital). Checklist de cardite/alarme: [checklist-ambulatorial-alarme-cardite-suspeita-fra](/biblioteca/checklist-ambulatorial-alarme-cardite-suspeita-fra).
 
 ## Princípio
 
@@ -60,7 +60,7 @@ A erradicação estreptocócica faz parte do cuidado da suspeita: iniciar confor
 
 1. Exame focado: vitais, articulações, pele, sopro, congestão, movimentos involuntários.
 2. **Não protocolar AINE** até fechar ou afastar FRA de forma razoável — preferir analgésico sem anti-inflamatório potente enquanto a suspeita estiver aberta (Ralph 2021 / alinhamento internacional); a decisão terapêutica da artrite fica no hospital/especialista.
-3. Encaminhar para **avaliação hospitalar** (internação curta ou observação conforme rede) com **eco Doppler + ECG + provas de fase aguda + evidência estreptocócica** — ponte ao [`fluxograma-febre-reumatica-aguda-criterios-de-jones-2015`](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015).
+3. Encaminhar para **avaliação hospitalar** (internação curta ou observação conforme rede) com **eco Doppler + ECG + provas de fase aguda + evidência estreptocócica** — ponte ao [fluxograma-febre-reumatica-aguda-criterios-de-jones-2015](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015).
 4. Se a rede só permitir retorno ambulatorial com eco **já agendado em ≤48 h** e paciente estável: retorno **24–48 h** + alarmes escritos; qualquer deterioração → PS.
 5. Após confirmação, a profilaxia secundária e a duração ficam nos documentos de profilaxia — **sem doses neste texto**.
 

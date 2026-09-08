@@ -15,7 +15,7 @@ source_refs:
 
 Uso: **paciente após tratamento de endocardite infecciosa** (alta recente, OPAT/parcial oral concluído ou em curso, seguimento do 1º ano). A ESC 2023 (PMID 37622656) recomenda educação sobre recorrência com ênfase em saúde dentária; **este checklist cobre alarmes e coordenação**, não regimes.
 
-Contexto: [`sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar). Regimes (outro documento): [`profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos`](/biblioteca/profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos).
+Contexto: [sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar). Regimes (outro documento): [profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos](/biblioteca/profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos).
 
 ## O que vigiar
 
@@ -48,7 +48,7 @@ Contexto: [`sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escala
 
 1. Sinais vitais e exame (sopro, congestão, bolso, estigmas).
 2. Confirmar fase do seguimento e se há OPAT/parcial oral em curso.
-3. Se febre/suspeita de recidiva: **hemoculturas antes de antibiótico**; ver também [`recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao`](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao).
+3. Se febre/suspeita de recidiva: **hemoculturas antes de antibiótico**; ver também [recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao).
 4. Não protocolar esquema empírico nem dose de profilaxia neste checklist.
 5. Entregar orientação escrita de alarmes (tabela).
 
