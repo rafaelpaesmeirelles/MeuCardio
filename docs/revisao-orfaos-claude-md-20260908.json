@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 30,
-  "pending_count": 133,
+  "reviewed_count": 31,
+  "pending_count": 132,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1057,8 +1057,24 @@
     {
       "index": 127,
       "path": "content/Insuficiência_cardíaca/manejo-farmacologico-da-insuficiencia-cardiaca-na-amiloidose-cardiaca-digoxina-e-bloqueadores-de-canal-de-calcio-al-versus-attr.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "326cb8f95179b64f74f9c09d068b3d29a21e12680dd0ee4855d035e889666c91"
+      "status": "corrected_reviewed",
+      "source_sha256": "326cb8f95179b64f74f9c09d068b3d29a21e12680dd0ee4855d035e889666c91",
+      "findings": [
+        "Digoxina não contraindicação absoluta: coorte69 e ESC-HFA2025/26 permitem uso selecionado monitorado; não negar literatura contemporânea.",
+        "Removida afirmação in vitro provou concentração livre no tecido condução.",
+        "Coorte2371MRA/betabloqueador acrescentada como associação, sem neuropatia, sem extrapolarAL.",
+        "DisautonomiaATTRv pode ser precoce/importante, não hierarquiaAL>todaATTR.",
+        "Biomarcador respostaNTproBNP distinto troponina prognóstica; estágioAL não corte automático transplante.",
+        "SGLT2 hospitalizaçãoIC não significativa; causalidade limitada."
+      ],
+      "sources": [
+        "PMIDs7014028,8339658,42110711,41347328: abstracts verificados;4003314 identidade título",
+        "PMID32800294: coorte69digoxina",
+        "PMID37216684 DOIehad347: coorte2371; erratum ehae140 lido integral, somente disponibilidade de dados",
+        "PMID41055898 DOIehaf710: consenso integral viaGUARD-HEART, seções suporte/ratecontrol",
+        "PMID38769233: coorte disautonomiaATTRv"
+      ],
+      "reviewed_sha256": "b34c822ff3d6f804c9d6afe646bdbc9b9bb72075937a2c62544acd56ee78e23d"
     },
     {
       "index": 128,
