@@ -2,9 +2,18 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 32 documentos lidos integralmente e corrigidos; 131 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 33 documentos lidos integralmente e corrigidos; 130 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
+
+## 0 — content/Aorta_e_doença_arterial_periférica/doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo.md
+
+- Belenfant não comparou estatina versus ausência: removida atribuição falsa de sobrevida.
+- Causalidade anticoagulação incerta; não suspender indicação independente automaticamente.
+- Umemoto mostrou vasculite coexistente, não apenas mimetismo; pulsos preservados não excluem urgência.
+- Doença pode ser aguda; eosinofilia não obrigatória; recuperação renal e modalidade dialítica observacionais.
+
+Fontes verificadas: Todos os 12 PMIDs originais: identidade e abstracts conferidos no cache PubMed., Kronzon/Saric Circulation2010 DOI10.1161/CIRCULATIONAHA.109.886465 PMID20697039: revisão primária de manejo., PMIDs10213638 e39639413 reconferidos diretamente no PubMed..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 

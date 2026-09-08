@@ -2,15 +2,27 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 32,
-  "pending_count": 131,
+  "reviewed_count": 33,
+  "pending_count": 130,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
       "index": 0,
       "path": "content/Aorta_e_doença_arterial_periférica/doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "bd0d29fdd39f14cb9a5910731cab213d2d676d86bfb79eae7fa01088ed314b2f"
+      "status": "corrected_reviewed",
+      "source_sha256": "bd0d29fdd39f14cb9a5910731cab213d2d676d86bfb79eae7fa01088ed314b2f",
+      "findings": [
+        "Belenfant não comparou estatina versus ausência: removida atribuição falsa de sobrevida.",
+        "Causalidade anticoagulação incerta; não suspender indicação independente automaticamente.",
+        "Umemoto mostrou vasculite coexistente, não apenas mimetismo; pulsos preservados não excluem urgência.",
+        "Doença pode ser aguda; eosinofilia não obrigatória; recuperação renal e modalidade dialítica observacionais."
+      ],
+      "sources": [
+        "Todos os 12 PMIDs originais: identidade e abstracts conferidos no cache PubMed.",
+        "Kronzon/Saric Circulation2010 DOI10.1161/CIRCULATIONAHA.109.886465 PMID20697039: revisão primária de manejo.",
+        "PMIDs10213638 e39639413 reconferidos diretamente no PubMed."
+      ],
+      "reviewed_sha256": "2007db07f030e01dce68bb7fc83d323c4d8b43534174c9e0966ebadf69f119dd"
     },
     {
       "index": 1,
