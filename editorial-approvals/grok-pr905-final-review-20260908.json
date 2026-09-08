@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr905-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr905": "a969ce8607cfe98045d105144570284a975607c0"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar",
+      "sinalizadores-ambulatoriais-de-aortopatia-em-valva-aortica-bicuspide-quando-escalar",
+      "sinalizadores-ambulatoriais-de-estenose-aortica-assintomatica-grave-vigilancia"
+    ]
+  }
+}
