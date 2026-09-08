@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 52,
-  "pending_count": 111,
+  "reviewed_count": 53,
+  "pending_count": 110,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -603,8 +603,20 @@
     {
       "index": 57,
       "path": "content/Diabetes_e_cardiologia/tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "7e3a659bc132723d38e8abe9e12bc0745c42ba174bce34a2f9b1ea507c598ab5"
+      "status": "corrected_reviewed",
+      "source_sha256": "7e3a659bc132723d38e8abe9e12bc0745c42ba174bce34a2f9b1ea507c598ab5",
+      "findings": [
+        "Dez pontos percentuais não10% relativo; HR relativo não risco absoluto; ORmeta nãoRR causal.",
+        "Cai subgruposHbA1c ejejum separados, mortalidade total nãoCV automaticamente; CGMbasal não longitudinal10anos.",
+        "Qu inclui CGM/flash/capilar e desfechos heterogêneos; aterosclerose não necessariamenteobstrução; removida equivalênciaCAC.",
+        "Lu33097560 precede2025; TIR/TITR nãointercambiáveis, sem ensaio mortalidade ou meta intensiva independente."
+      ],
+      "sources": [
+        "Duas fontes originais: abstracts/identidade conferidos.",
+        "Lu33097560 primário ADA ePubMed consultados.",
+        "Textos integraisCaiPMC/QuMDPI indisponíveis nesta consulta; não conservados detalhes além de resultados verificáveis."
+      ],
+      "reviewed_sha256": "0e800c2696f2b5042649cbc200c69e8ba12a33a60e8a1f6c1e83bd4159784132"
     },
     {
       "index": 58,

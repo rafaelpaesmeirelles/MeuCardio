@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 52 documentos lidos integralmente e corrigidos; 111 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 53 documentos lidos integralmente e corrigidos; 110 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -184,6 +184,15 @@ Fontes verificadas: PMID42119975, PMID40482670, https://www.ema.europa.eu/en/med
 - TRIUMPH-Outcomes existente semresultados
 
 Fontes verificadas: PMID37385280, PMID42250575, PMID41090431, https://clinicaltrials.gov/study/NCT06383390.
+
+## 57 — content/Diabetes_e_cardiologia/tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2.md
+
+- Dez pontos percentuais não10% relativo; HR relativo não risco absoluto; ORmeta nãoRR causal.
+- Cai subgruposHbA1c ejejum separados, mortalidade total nãoCV automaticamente; CGMbasal não longitudinal10anos.
+- Qu inclui CGM/flash/capilar e desfechos heterogêneos; aterosclerose não necessariamenteobstrução; removida equivalênciaCAC.
+- Lu33097560 precede2025; TIR/TITR nãointercambiáveis, sem ensaio mortalidade ou meta intensiva independente.
+
+Fontes verificadas: Duas fontes originais: abstracts/identidade conferidos., Lu33097560 primário ADA ePubMed consultados., Textos integraisCaiPMC/QuMDPI indisponíveis nesta consulta; não conservados detalhes além de resultados verificáveis..
 
 ## 59 — content/Diabetes_e_cardiologia/variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes.md
 
