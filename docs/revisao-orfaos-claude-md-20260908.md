@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 28 documentos lidos integralmente e corrigidos; 135 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 29 documentos lidos integralmente e corrigidos; 134 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -194,6 +194,15 @@ Fontes verificadas: Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drac
 - Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina.
 
 Fontes verificadas: PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários, https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral.
+
+## 128 — content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md
+
+- IMPROVE-HCM: VO2pico p0,90 e KCCQglobal p0,30 negativos omitidos; subgrupo35 post hoc; segurança não definitiva4/34vs2/33SAE.
+- CMH sintomática não exclui IC; removida separação absoluta.
+- DiCE coortes antes/depois sem controle, idadeparte1 72; débitoL/min não volume; ausênciaNTproBNP não prova mecanismo.
+- Não negar genericamente toda investigação mitotrópica; FORTITUDEphase2b reconhecido; não afirmar que toda combinação nunca estudada.
+
+Fontes verificadas: PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract primário, PMID38599256 DOI10.1016/j.jacc.2024.03.387: abstract primário, PMIDs38752753,42250280: revisões mecanísticas, não evidência desfechos, NCT07023614: registro FORTITUDE-HCM fase2b; sem inferência eficácia, Detalhes gastrointestinais do DiCE não revalidados no integral: retirados sem inferir segurança.
 
 ## 142 — content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md
 
