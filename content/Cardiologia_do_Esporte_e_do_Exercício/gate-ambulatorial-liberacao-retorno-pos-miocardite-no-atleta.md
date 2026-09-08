@@ -4,9 +4,9 @@ slug: gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta
 theme: "Cardiologia do Esporte e do Exercício"
 kind: protocolo
 fonte_producao: grok
-summary: "Pacote operacional de consultório além de #848/#877: na visita de reavaliação pós-miocardite, quando liberar retorno progressivo, quando manter restrição e quando escalar (EP/cardiomiopatias/PS) — sem reescrever o estudo nem os fluxogramas de RTP já revisados."
-review_status: pendente_revisao
-review_note: "Pacote Tudo-com-Tudo 07/09/2026 além #848 (sinalizadores gerais) e #877 (HTN-atleta). Lacuna fina: miocardite-retorno-ao-esporte + fluxogramas RTP já densos em critérios clínicos — faltava gate ambulatorial de destino na visita de liberação. Fontes: AHA/ACC 2025 PMID 39973614; ESC sports 2020 PMID 32860412; HRS 2024 PMID 38763377; ACC ECDP 2024 PMID 39665703. Sem doses; sem PMID inventado."
+summary: "Na reavaliação pós-miocardite, define quando manter restrição, quando encaminhar a EP/cardiomiopatias e quando iniciar retorno progressivo, exigindo resolução clínica, biomarcadores normalizados e pacote de reavaliação indicado completo."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Corrigidos: biomarcadores devem estar normalizados no gate verde; RMC de seguimento indicada deve estar concluída/revisada antes da liberação; síncope histórica estável não equivale a emergência atual; LGE residual ganhou ramo próprio; fatores históricos podem reentrar no gate após reavaliação especializada satisfatória."
 source_refs:
   - "Kim JH, Baggish AL, Levine BD, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities: A Scientific Statement From the American Heart Association and American College of Cardiology. Circulation. 2025;151(11):e716-e761. DOI: 10.1161/CIR.0000000000001297. PMID: 39973614"
   - "Pelliccia A, Sharma S, Gati S, et al. 2020 ESC Guidelines on sports cardiology and exercise in patients with cardiovascular disease. Eur Heart J. 2021;42(1):17-96. DOI: 10.1093/eurheartj/ehaa605. PMID: 32860412"
@@ -16,83 +16,90 @@ source_refs:
 
 # Gate ambulatorial de liberação: retorno ao esporte após miocardite no atleta
 
-Este protocolo responde à pergunta da **visita de reavaliação**: o atleta pós-miocardite está pronto para **liberar retorno progressivo**, deve **manter restrição** ou precisa **escalar** (eletrofisiologia / cardiomiopatias / PS)?
+Este protocolo organiza a **visita de reavaliação**: o atleta deve permanecer afastado de esforço intenso, precisa de avaliação especializada, ou já pode iniciar **retorno progressivo**?
 
 Não substitui:
-- estudo multiparamétrico — [`miocardite-retorno-ao-esporte`](miocardite-retorno-ao-esporte.md);
-- árvore clínica de RTP — [`fluxograma-miocardite-retorno-esporte-atleta`](fluxograma-miocardite-retorno-esporte-atleta.md);
-- caminho suspeita→retorno — [`fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025`](fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025.md);
-- miocardite aguda ambulatorial (risco ESC → PS) — pasta Pericárdio (#857);
-- sinalizadores gerais do atleta (#848) nem hipertensão-atleta (#877).
+- [`miocardite-retorno-ao-esporte`](miocardite-retorno-ao-esporte.md);
+- [`fluxograma-miocardite-retorno-esporte-atleta`](fluxograma-miocardite-retorno-esporte-atleta.md);
+- [`fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025`](fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025.md).
 
-Árvore: [`fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta`](fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta.md). Braço exames: [`exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial`](exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial.md).
+Árvore desta leva: [`fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta`](fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta.md). Exames: [`exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial`](exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial.md).
 
 ## Princípio
 
-**Liberação pós-miocardite não é por calendário — é por gate multiparamétrico na consulta, com destino explícito.**
+**Retorno ao esporte não é liberado pelo simples transcurso do tempo.** A decisão é multiparamétrica: resolução clínica, função ventricular, biomarcadores, avaliação elétrica com monitorização/teste de esforço e RMC quando indicada.
 
-- AHA/ACC 2025 (PMID 39973614): retorno competitivo exige ausência de sintomas, função ventricular normalizada (quando havia disfunção), resolução de inflamação/edema (RMC T2 ou biomarcadores) e ausência de arritmias clinicamente relevantes em Holter e teste de esforço; timing pode ser ≥3 meses se houve disfunção, ou 4–6 semanas após resolução completa em casos selecionados com FEVE preservada.
-- ESC sports 2020 (PMID 32860412): restrição durante fase ativa; reavaliação antes de retomada.
-- ACC ECDP 2024 (PMID 39665703): reassessment típico em 3–6 meses com RMC de seguimento, monitorização e teste de esforço antes de atividade intensa/competitiva.
-- HRS 2024 (PMID 38763377): arritmia ventricular complexa no Holter/esforço eleva cautela e pode exigir avaliação eletrofisiológica antes de RTP.
+## 1. Primeiro separar emergência atual de história de risco
 
-Este pacote **não** inventa intervalo fixo novo, **não** lista doses e **não** autoriza liberação sem o pacote mínimo de reavaliação.
+### Via urgente agora
 
-## Gate vermelho → não liberar hoje (escalar / manter restrição)
+Encaminhar para PS/urgência se houver **situação atual** como:
+- instabilidade hemodinâmica;
+- IC aguda/descompensada;
+- arritmia sustentada ou sintomas arrítmicos com instabilidade;
+- dor torácica/dispneia/síncope **em curso ou acompanhadas de sinais de alto risco atuais**.
 
-| Domínio | Achado na visita |
+### Não confundir com história prévia estável
+
+Síncope ocorrida dias/semanas antes, parada cardíaca prévia ou recorrência de miocardite são **marcadores de risco que exigem avaliação especializada e mantêm restrição**, mas não obrigam PS “agora” se o atleta está atualmente estável. Após investigação por EP/cardiomiopatias/genética, um fator histórico pode ser **reavaliado**; ele não deve funcionar como bloqueio vitalício automático.
+
+## 2. Gate vermelho — não liberar
+
+| Domínio | Achado |
 |---|---|
-| Sintomas | Dor torácica, dispneia, síncope, palpitações novas/recorrentes, queda inexplicada de desempenho |
-| Biomarcadores | Troponina / marcadores inflamatórios ainda elevados ou em piora |
-| Função | FEVE ainda reduzida ou disfunção residual relevante |
-| Elétrico | TVNS, ectopia frequente/polimórfica, arritmia complexa no Holter ou no teste |
-| Inflamação | Edema/inflamação ativa em RMC (T2) ou clínica compatível com fase ativa |
-| História | Recorrência de miocardite; síncope/parada associada ao índice; suspeita de cardiomiopatia/genética |
-| Segurança | Instabilidade, IC descompensada, arritmia sustentada → **PS / urgência agora** |
+| Sintomas atuais | dor torácica, dispneia, palpitação importante, pré-síncope/síncope não esclarecida, queda de desempenho ainda sugestiva de atividade |
+| Biomarcadores | **troponina ou biomarcador relevante ainda acima do limite de referência**, mesmo em queda, quando relacionado ao episódio |
+| Função | disfunção ventricular residual relevante |
+| Elétrico | TVNS/ectopia ventricular complexa ou outra arritmia clinicamente relevante em Holter/esforço |
+| Inflamação | edema/inflamação ativa em RMC ou outro dado convincente de atividade |
+| Pacote diagnóstico | exame considerado necessário para a decisão ainda não concluído/revisado |
 
-**Conduta:** manter restrição de esforço intenso/competição; completar exames faltantes (braço irmão); escalar EP/cardiomiopatias quando arritmia complexa, síncope, recorrência ou LGE extenso com outros marcadores — ver árvore clínica já publicada.
+**Biomarcador “caindo” não é gate verde se ainda está elevado.** Se a fonte clínica exige normalização para retorno, a normalização deve estar documentada.
 
-## Gate amarelo → restrição continua + plano ambulatorial
+## 3. Gate amarelo — restrição continua, mas sem confundir com doença ativa
 
-1. Exames do pacote mínimo incompletos (eco, Holter, teste de esforço ± RMC) → **não liberar**; agendar e retornar.
-2. LGE residual discreto isolado, sem demais red flags → decisão compartilhada com monitorização adicional (não é “sim automático”).
-3. FEVE preservada no índice, sintomas resolvidos, mas janela precoce demais sem reavaliação completa → aguardar pacote; não usar calendário de prova.
+### LGE residual isolado
 
-## Gate verde → liberar retorno progressivo com plano escrito
+LGE residual, sem edema/inflamação ativa e sem outros red flags, **não deve cair diretamente no gate verde nem ser tratado como contraindicação absoluta**. Deve passar por decisão compartilhada, contexto de extensão/localização, função ventricular, arritmias e intensidade/modalidade esportiva, com monitorização adicional quando apropriada.
 
-Só quando, na mesma visita (ou com laudos disponíveis e revisados):
+### Histórico de maior risco já investigado
+
+Recorrência prévia, síncope histórica ou parada cardíaca passada exigem avaliação especializada. Se a investigação específica foi concluída e o centro responsável não identifica contraindicação residual, o atleta **pode reentrar na avaliação multiparamétrica**, em vez de permanecer bloqueado apenas pela existência histórica do evento.
+
+## 4. Gate verde — retorno progressivo
+
+Considerar retorno progressivo somente quando **todos os itens aplicáveis** estiverem satisfeitos:
 
 - assintomático para doença ativa;
-- biomarcadores normalizados / em tendência clara de normalização;
-- FEVE normal (ou recuperada);
-- Holter + teste de esforço **sem** arritmia ventricular clinicamente relevante;
-- sem inflamação ativa impeditiva (clínica ± RMC quando indicada);
-- sem recorrência / síncope-parada / suspeita genética não esclarecida.
+- **biomarcadores relevantes normalizados**;
+- função ventricular normalizada/adequadamente recuperada conforme o caso;
+- Holter/monitorização e teste de esforço sem arritmia ventricular clinicamente relevante;
+- ausência de inflamação ativa impeditiva;
+- **RMC de seguimento concluída e revisada quando ela foi considerada indicada para fechar o gate**;
+- qualquer fator histórico de maior risco foi avaliado pela especialidade apropriada, com plano documentado;
+- eventual LGE residual foi interpretado no contexto, e não ignorado.
 
-Então: retorno **gradual** (leve → moderado → específico da modalidade → competição), educação de alarmes e reavaliação se sintomas, arritmia ou queda de desempenho.
+A retomada deve ser **gradual**, com progressão de carga e instruções claras para interromper e reavaliar se houver sintomas.
 
-## Checklist de 90 segundos (visita de liberação)
+## Checklist de 90 segundos
 
-1. Sintoma / instabilidade da tabela? → **não liberar**; PS se urgente.
-2. Pacote mínimo completo? → se não, braço exames + nova data.
-3. FEVE / Holter / esforço / inflamação OK? → se não, restrição + escalar conforme domínio.
-4. LGE residual só? → decisão compartilhada; não confundir cicatriz com inflamação ativa.
-5. Não protocolar doses, WADA nem elegibilidade definitiva de doença estrutural neste documento.
+1. Há emergência **atual**? → PS/urgência.
+2. Há biomarcador ainda elevado? → **não liberar**.
+3. Exames considerados necessários — inclusive RMC indicada — estão concluídos e revisados? → se não, **não liberar**.
+4. FEVE, Holter e esforço estão adequados? → se não, manter restrição/escalar.
+5. LGE residual isolado? → decisão compartilhada/monitorização; não pular diretamente para verde.
+6. Síncope/PCR/recorrência histórica já foram adequadamente investigadas? → se sim, reavaliar o conjunto; se não, completar avaliação especializada.
+7. Gate verde completo? → retorno progressivo, nunca retorno abrupto à competição.
 
 ## Armadilhas
 
-Liberar só porque “já passaram 3 meses”; liberar com Holter/teste pendentes “para não perder a temporada”; tratar LGE residual como proibição absoluta sem contexto; aplicar regras de pericardite pura à miocardite; confundir este gate com o pacote #857 de miocardite aguda em Pericárdio.
+- Liberar com troponina ainda acima do limite porque “está caindo”.
+- Liberar enquanto uma RMC **indicada para a decisão** ainda está pendente.
+- Mandar ao PS apenas porque houve síncope histórica, sem avaliar o estado atual.
+- Tornar um fator histórico bloqueio permanente mesmo após reavaliação especializada satisfatória.
+- Ignorar LGE residual ou tratá-lo como proibição absoluta sem contexto.
+- Usar apenas “passaram 3 meses” como critério.
 
-## Limite da evidência
+## Limite
 
-Critérios detalhados, nós de LGE e individualização permanecem em [`miocardite-retorno-ao-esporte`](miocardite-retorno-ao-esporte.md) e nos fluxogramas RTP. Este pacote só organiza o **destino ambulatorial da visita de liberação**.
-
-## Slugs relacionados (existentes)
-
-- `miocardite-retorno-ao-esporte`
-- `fluxograma-miocardite-retorno-esporte-atleta`
-- `fluxograma-miocardite-retorno-progressivo-ao-esporte-aha-acc-2025`
-- `covid-19-miocardite-pos-viral-atleta-triagem-retorno-esporte`
-- `pericardite-retorno-esporte-atleta`
-- `sinalizadores-ambulatoriais-no-atleta-quando-suspender-e-encaminhar`
-- `diretriz-participacao-esportiva-aha-acc-2025`
+O protocolo organiza o **destino da consulta**. Critérios específicos de elegibilidade, modalidades, cardiomiopatias e arritmias permanecem nas diretrizes e fluxos dedicados.
