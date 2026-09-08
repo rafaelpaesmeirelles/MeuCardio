@@ -1,65 +1,81 @@
 ---
-title: "Sinalizadores ambulatoriais de estenose aórtica assintomática grave: vigilância e red flags"
+title: "Sinalizadores ambulatoriais de estenose aórtica grave assintomática: vigilância e quando discutir intervenção"
 slug: sinalizadores-ambulatoriais-de-estenose-aortica-assintomatica-grave-vigilancia
 theme: "Valvopatias"
 kind: protocolo
 fonte_producao: grok
-summary: "Red flags de consultório na EA grave sem sintomas espontâneos: quando o ‘assintomático’ vira PS/cardiologia em dias (sintomas mascarados, teste de esforço anormal, queda de FEVE, progressão rápida, BNP) — complementar aos fluxogramas de timing de intervenção e sem duplicar #840 (EA sintomática)."
-review_status: pendente_revisao
-review_note: "Pacote ambulatory Valvopatias além #840/#866 (07/09/2026). Não compete com hub #718. Não duplica fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao (pergunta é destino de consultório, não Classe I/IIa completa). Fontes: ESC/EACTS 2021 PMID 34453165; ACC/AHA 2020 PMID 33332150. Sem doses."
+summary: "Na EA grave sem sintomas espontâneos, separa sintomas provocados, queda pressórica isolada, FEVE e demais modificadores de risco, além da coorte atual em que intervenção precoce pode ser discutida com o Heart Team."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026 e alinhada ao fluxograma ESC/EACTS 2025 já revisado no corpus. Sintomas no esforço foram separados de queda sustentada de PA >20 mmHg; FEVE <50% manteve Classe I, FEVE <55% fator IIa/B; incorporada coorte de alto gradiente/FEVE ≥50%/baixo risco/teste normal para discussão de intervenção precoce IIa/A; removidos links #840 ausentes."
 source_refs:
-  - "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395. PMID: 34453165"
+  - "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — seção 8.4.2 e Recommendation Table 4."
   - "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923. PMID: 33332150"
 ---
 
-# Sinalizadores ambulatoriais de estenose aórtica assintomática grave: vigilância e red flags
+# Sinalizadores ambulatoriais de estenose aórtica grave assintomática
 
-Pergunta de **consultório**: EA **grave** documentada, paciente **sem sintomas espontâneos** relatados — o que exige **PS agora**, o que pede **cardiologia / Heart Team em dias**, e o que pode seguir vigilância estruturada?
+Pergunta de consultório: EA **grave confirmada**, paciente sem sintomas espontâneos claros. Quando a vigilância continua apropriada e quando é necessário abrir discussão formal de intervenção?
 
-Não substitui:
-- [`sinalizadores-ambulatoriais-de-estenose-aortica-sintomatica-quando-encaminhar`](sinalizadores-ambulatoriais-de-estenose-aortica-sintomatica-quando-encaminhar.md) (#840) — braço **sintomático**;
-- `fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao-esc-eacts-2021` / `...-2025` — árvore de **indicação** Classe I/IIa;
-- hub #718.
+Árvore canônica de timing: [`fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao-esc-eacts-2025`](fluxograma-estenose-aortica-assintomatica-grave-timing-de-intervencao-esc-eacts-2025.md).
 
-Árvore irmã: [`fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar`](fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar.md).
+Árvore ambulatorial desta leva: [`fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar`](fluxograma-ambulatorial-bicuspide-aortopatia-e-ea-assintomatica-quando-escalar.md).
 
-## Princípio
+## 1. Emergência atual é outra via
 
-ESC/EACTS 2021 (PMID 34453165) e ACC/AHA 2020 (PMID 33332150): na EA grave, **ausência de queixa espontânea não basta** — muitos reduziram a atividade sem perceber. Sintomas desmascarados no esforço, FEVE caindo, EA “muito grave”, progressão rápida e biomarcadores elevados mudam o destino para avaliação de intervenção. O ambulatório **triagem de destino**; o timing fino e a modalidade ficam com o especialista/Heart Team.
+Síncope com instabilidade, edema pulmonar, choque, angina aguda sugestiva de SCA ou deterioração hemodinâmica exigem via aguda. Este documento não substitui o manejo da EA sintomática descompensada.
 
-## Encaminhar agora (PS / emergência)
+## 2. Confirmar se é realmente assintomático
 
-| Domínio | Sinalizadores |
-|---|---|
-| Sintoma agudo novo | Síncope/pré-síncope, edema pulmonar, angina em repouso, hipotensão sintomática |
-| Baixo débito | Confusão, oligúria, sinais de choque |
-| Arritmia com instabilidade | TV, FA de alta resposta com falência |
+Paciente sedentário pode ter reduzido atividade progressivamente. Em quem **não apresenta sintoma espontâneo e está clinicamente estável**, teste de esforço supervisionado pode revelar limitação não reconhecida.
 
-**Conduta:** tratar como EA sintomática descompensando — PS; ver também #840. Não “esperar o teste ergométrico eletivo da semana que vem”.
+- **Sintoma provocado pelo esforço atribuível à EA** → reclassifica como sintomático e segue o ramo formal de intervenção.
+- **Queda sustentada da PA >20 mmHg sem sintoma** → continua sendo categoria separada; na ESC/EACTS 2025 é critério para considerar intervenção, **não deve ser rotulada como sintoma/Classe I**.
+- Não realizar teste de esforço para “provar assintomático” em quem já apresenta sintomas claros atribuíveis à EA.
 
-## Antecipar cardiologia / Heart Team (dias, não meses)
+## 3. Critérios objetivos — manter a hierarquia atual
 
-1. **Dúvida de sintomas** (idoso, sedentário, “descondição” nova) — reclassificar; considerar teste funcional **supervisionado** se realmente sem sintoma espontâneo (contraindicado se já sintomático claro).
-2. **Teste de esforço anormal** (sintoma, queda de PA ou resposta pressórica inadequada) — equivale a sintomático na prática (ESC/EACTS 2021).
-3. **FEVE ≤50%** (ou queda documentada) sem outra causa — escalar (Classe I no timing).
-4. **Progressão hemodinâmica rápida** (Vmax/gradiente) ou EA muito grave no eco de vigilância.
-5. **BNP/NT-proBNP** marcadamente elevado sem outra explicação, ou hipertensão pulmonar grave em repouso atribuível.
-6. Cirurgia cardíaca já indicada por outro motivo + EA grave — discutir troca concomitante.
+Segundo o caminho ESC/EACTS 2025 já revisado no corpus:
 
-## O que o ambulatório registra na vigilância “estável”
+- **FEVE <50%**, sem outra causa identificável → intervenção recomendada (Classe I/B).
+- **FEVE <55%** sem outra explicação é fator de alto risco distinto, inserido no conjunto IIa/B; não confundir com o corte Classe I.
+- queda sustentada da PA >20 mmHg no esforço, sem sintomas → IIa/C.
+- em paciente com **EA grave de alto gradiente, FEVE ≥50%, baixo risco procedimental e teste de esforço normal quando factível**, intervenção precoce **deve ser considerada como alternativa à vigilância ativa** por decisão compartilhada do Heart Team (IIa/A).
+- outros fatores de alto risco — estenose muito grave, progressão rápida documentada, BNP/NT-proBNP marcadamente elevado repetido sem outra causa, ou FEVE <55% — devem levar à árvore formal de timing, não ser tratados como equivalentes entre si.
 
-- Confirmar que “assintomático” = atividade preservada, não apenas “sem queixa”.
-- Último eco: Vmax, gradiente médio, AVA, FEVE, comparação com o prévio.
-- Intervalo de reavaliação clínica/eco acordado; educação escrita dos sinais de alarme (#840).
-- Baixo fluxo/baixo gradiente discordante → **não** decidir no consultório; eco de estresse/cálcio conforme documentos da pasta.
+## 4. O que fazer no consultório
+
+### Abrir discussão Heart Team / intervenção
+
+Quando houver qualquer critério formal acima, encaminhar para avaliação especializada e abrir o fluxograma 2025. Não criar um prazo universal em dias; prioridade depende do critério, contexto clínico e acesso local.
+
+### Vigilância ativa
+
+Se nenhum critério de intervenção estiver presente:
+
+- confirmar atividade funcional real;
+- registrar eco seriado com parâmetros comparáveis;
+- manter reavaliação clínica/ecocardiográfica ativa;
+- educar para novos sintomas;
+- repetir teste de esforço quando apropriado e factível.
+
+## Checklist de consulta
+
+1. Sintoma espontâneo claro? → não é mais “assintomática”.
+2. Teste de esforço factível em paciente realmente assintomático/estável? → considerar supervisão adequada.
+3. Surgiu sintoma no teste? → reclassificar sintomático.
+4. Houve queda sustentada de PA >20 mmHg sem sintoma? → manter categoria própria; discutir IIa/C.
+5. FEVE <50% sem outra causa? → Classe I/B.
+6. Alto gradiente + FEVE ≥50% + baixo risco + teste normal? → discutir intervenção precoce IIa/A como alternativa à vigilância.
+7. FEVE <55%, Vmax/gradiente muito altos, progressão rápida ou BNP repetidamente >3× normal? → abrir nó IIa/B da árvore formal.
 
 ## Armadilhas
 
-- Aceitar “assintomático” em quem já não sobe escada.
-- Pedir teste de esforço em quem **já** tem sintoma claro (contraindicado).
-- Atrasar FEVE caindo / progresso rápido com “mais 6 meses de observação”.
-- Decidir TAVI vs. SAVR no consultório isolado (#840 / Heart Team).
+- chamar queda pressórica isolada de “sintoma”.
+- usar FEVE ≤50% como corte Classe I; o corte atual é **<50%**.
+- deixar o paciente da coorte IIa/A em vigilância automática sem discussão Heart Team.
+- misturar critérios IIa/B como se fossem uma única indicação homogênea.
+- usar números de diretriz antiga quando o corpus já contém caminho ESC/EACTS 2025 revisado.
 
-## Limite da evidência
+## Limite
 
-Sinalizadores de **destino**. Não substitui a árvore de Classes I/IIa nem a metanálise de intervenção precoce já na pasta. Sem doses.
+Este conteúdo organiza a **triagem ambulatorial**. A decisão final de intervir e a escolha TAVI/SAVR pertencem ao Heart Team e aos fluxos canônicos dedicados.
