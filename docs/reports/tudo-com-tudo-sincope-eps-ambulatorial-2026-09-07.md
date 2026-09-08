@@ -1,35 +1,39 @@
-# Tudo-com-Tudo — Síncope: EPS / ILR / CDI ambulatorial (além #859) — 2026-09-07
+# Tudo-com-Tudo — Síncope: EPS / ILR / CDI ambulatorial — revisão final 2026-09-08
 
 ## Escopo
 
-Lacuna fina **além de #859** (sinalizadores pós-alta / pós-avaliação / gate trabalho-direção):
-**quando referir eletrofisiologia** na síncope recorrente inexplicada; árvore **EPS vs ILR vs PS**; gate **candidatos à avaliação de CDI** após síncope (ausente em main).
+Pacote ambulatorial para três decisões distintas:
 
-## Pivô / anti-colisão
-
-- `#859` = destino pós-alta baixo risco (PS vs retorno precoce vs plano estável).
-- Fluxograma ILR em main cobre Holter/loop/ILR, menciona EPS só de passagem — faltava o **gate ambulatorial de encaminhamento a EP** e o **gate CDI**.
-- `#882` = HO geriátrica (outra pasta) — não usado como pivô ortostático vs reflexo.
-- `#835` = disfunção de eletrodo/choque em CDI **já implantado** — distinto de candidatura pós-síncope.
-- Open PRs re-checados até **#891+**; único Síncope ambulatory aberto = **#859** (tema distinto).
-- Slugs novos (livres em main): `sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia`, `fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino`, `candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar`.
+1. identificar paciente de **alto risco** que não deve entrar em fila eletiva;
+2. selecionar quando **EPS** pode acrescentar informação versus monitorização/ILR;
+3. reconhecer quando a síncope deve **reabrir estratificação específica de morte súbita/CDI**, sem transformar síncope em indicação de implante.
 
 ## Arquivos
 
-| Arquivo | Kind |
+| Arquivo | Status final |
 |---|---|
-| `content/Síncope/sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md` | protocolo |
-| `content/Síncope/fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino.md` | fluxograma |
-| `content/Síncope/candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar.md` | protocolo |
+| `content/Síncope/sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md` | `revisado` |
+| `content/Síncope/fluxograma-ambulatorial-sincope-recorrente-eps-versus-ilr-destino.md` | `revisado` |
+| `content/Síncope/candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar.md` | `revisado` |
 
-Todos: `review_status: pendente_revisao`, `fonte_producao: grok`, PT, **sem doses**, **sem auto-merge**.
+## Correções adversariais incorporadas
 
-## Fontes (reais)
+- síncope **sem pródromos** passou a ser marcador de alto risco independente de trauma;
+- história familiar de morte súbita em idade jovem é checada antes do ramo de baixo risco;
+- EPS de maior força ficou restrito a **IAM prévio/outra condição relacionada a cicatriz**, sem extrapolar para toda cardiopatia estrutural;
+- links para documentos de #859 ausentes da árvore desta PR foram removidos;
+- “FE reduzida” deixou de ser atalho para CDI; FEVE levemente reduzida isoladamente não define elegibilidade;
+- síncope isolada ficou explicitamente definida como **não indicação de CDI**;
+- MCH, Brugada, QT longo, CPVT e outras doenças de risco devem seguir critérios próprios;
+- incorporada referência contemporânea ESC 2022 de arritmias ventriculares/morte súbita (PMID **36017572**).
 
-- ESC 2018 syncope — PMID **29562304**, DOI 10.1093/eurheartj/ehy037
-- Practical Instructions ESC 2018 — DOI 10.1093/eurheartj/ehy071 (sem PMID inventado)
-- ACC/AHA/HRS 2017 syncope — PMID **28280231**, DOI 10.1161/CIR.0000000000000499
+## Fontes principais
 
-## Branch
+- ESC 2018 Syncope — PMID **29562304**
+- Practical Instructions ESC 2018 — DOI 10.1093/eurheartj/ehy071
+- ACC/AHA/HRS 2017 Syncope — PMID **28280231**
+- ESC 2022 Ventricular Arrhythmias/SCD — PMID **36017572**
 
-`grok/tudo-com-tudo-sincope-eps-ambulatorial-20260907` → `main`
+## Governança
+
+Conteúdo preparado para o release consolidado. **Sem merge e sem deploy isolado.** A autorização global do corpus será recalculada uma única vez após congelamento de todos os lotes revisados.
