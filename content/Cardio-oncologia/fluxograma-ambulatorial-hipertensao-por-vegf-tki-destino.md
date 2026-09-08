@@ -4,51 +4,53 @@ slug: fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino
 theme: "Cardio-oncologia"
 kind: fluxograma
 fonte_producao: grok
-summary: "Árvore ambulatorial sob anti-VEGF/VEGF-TKI: gate de alarme (lesão aguda/PRES), braço PA grave com pausa temporária da terapia oncológica, e braço de intensificação oral com retorno precoce — complemento ao fluxograma de crise hipertensiva por TKI."
-review_status: pendente_revisao
-review_note: "Irmão do protocolo sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar (07/09/2026). ESC 2022 PMID 36017568; Maitland PMID 20351338; Steingart PMID 22305831; Hamnvik PMID 25236375. Sem doses; anti-colisão com #834/#869 e crise TKI."
+summary: "Árvore ambulatorial sob inibidores da via VEGF: gate de lesão aguda/PRES, pausa por PA grave, ramo específico PAS>=160 E PAD>=100 e avaliação separada de sintomas cardiovasculares."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Corrigidos operadores ESC (PAS >=180 OU PAD >=110 para pausa; PAS >=160 E PAD >=100 para associação anti-HTA específica), removida intensificação anti-HTA disparada por sintoma CV isolado, reforçado gate renal agudo e diferenciada suspeita de PRES de PRES confirmado sob bevacizumabe."
 source_refs:
-  - "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568"
+  - "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568"
   - "Maitland ML, Bakris GL, Black HR, et al. Initial Assessment, Surveillance, and Management of Blood Pressure in Patients Receiving Vascular Endothelial Growth Factor Signaling Pathway Inhibitors. J Natl Cancer Inst. 2010;102(9):596-604. DOI: 10.1093/jnci/djq091. PMID: 20351338"
   - "Steingart RM, Bakris GL, Chen HX, et al. Management of cardiac toxicity in patients receiving vascular endothelial growth factor signaling pathway inhibitors. Am Heart J. 2012;163(2):156-163. DOI: 10.1016/j.ahj.2011.10.018. PMID: 22305831"
-  - "Hamnvik OP, Choueiri TK, Turchin A, et al. Clinical risk factors for the development of hypertension in patients treated with inhibitors of the VEGF signaling pathway. Cancer. 2015;121(2):311-319. DOI: 10.1002/cncr.28972. PMID: 25236375"
 ---
 
 # Fluxograma ambulatorial: hipertensão por VEGF/TKI — destino
 
-Prosa: [`sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar`](sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar.md). Checklist: [`hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme`](hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme.md). Crise/TKI já revisado: [`fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md).
-
-## Árvore de decisão
+Prosa: [`sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar`](sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar.md). Checklist: [`hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme`](hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme.md). Crise/TKI: [`fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki`](fluxograma-hipertensao-grave-e-crise-hipertensiva-induzida-por-tki.md).
 
 ```mermaid
 flowchart TD
-  R0["Consulta / contato ambulatorial<br/>sob bevacizumabe ou VEGF-TKI<br/>com PA elevada ou sintoma"] --> D1{"Há alarme de PS?<br/>déficit/cefaleia visual/convulsão PRES<br/>SCA, IC aguda, aórtica<br/>oligúria aguda / lesão de órgão-alvo"}
+  R0["Consulta/contato sob inibidor da via VEGF<br/>PA elevada e/ou sintoma"] --> D1{"Lesão aguda de órgão-alvo ou PRES?<br/>SCA · IC aguda · síndrome aórtica<br/>déficit/convulsão/alteração visual<br/>oligúria/IRA ou rápida piora renal"}
 
-  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS / emergência<br/>Pausar antiangiogênico causal<br/>Seguir crise TKI / PRES conforme quadro"])
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["PS / emergência AGORA<br/>Suspender temporariamente agente causal<br/>Manejo conforme órgão-alvo / PRES"])
 
-  D1 -->|"Não"| D2{"PAS >180 ou PAD >110 mmHg?<br/>(ESC 2022: hipertensão grave sob terapia)"}
+  D1 -->|"Não"| D2{"PAS >=180 OU PAD >=110 mmHg?"}
 
-  D2 -->|"Sim"| P1["Confirmar técnica e causas transitórias<br/>Iniciar/intensificar anti-hipertensivo ORAL<br/>IECA/BRA ± DHP-CCB; evitar verapamil/diltiazem"]
-  P1 --> C2(["Pausar TEMPORARIAMENTE o VEGF/TKI<br/>Retorno 24–72 h + discussão cardio-oncologia<br/>Orientação escrita de alarmes"])
+  D2 -->|"Sim"| C2(["Pausar TEMPORARIAMENTE terapia associada à HTN<br/>Otimizar anti-HTA oral<br/>Discussão oncologia/cardio-oncologia antes de reinício"])
 
-  D2 -->|"Não"| D3{"PA ≥160/100 ou sintoma CV novo<br/>sem hipoperfusão?"}
+  D2 -->|"Não"| D3{"PAS >=160 E PAD >=100 mmHg?"}
 
-  D3 -->|"Sim"| C3(["Intensificar oral (conceito ESC)<br/>MRPA/diário se disponível<br/>Retorno precoce ≤7 dias<br/>Antecipar se fragilidade"])
-  D3 -->|"Não / PA controlável"| C4(["Manter vigilância (Maitland/Steingart)<br/>Meta tipicamente <140/90<br/>Reforçar adesão e alarmes"])
+  D3 -->|"Sim"| C3(["IECA ou BRA + BCC di-hidropiridínico<br/>salvo contraindicação/interação<br/>Monitorização e retorno precoce"])
 
-  C2 --> D4{"Acesso e suporte garantidos?"}
-  D4 -->|"Não / piora / sintoma de alarme"| C5(["Antecipar retorno 24 h ou PS<br/>se surgir alarme da tabela"])
-  D4 -->|"Sim"| C6(["Manter pausa + retorno 24–72 h<br/>Não reiniciar VEGF/TKI no corredor"])
+  D3 -->|"Não"| D4{"Há sintoma cardiovascular novo<br/>sem critério de emergência?"}
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  D4 -->|"Sim"| C4(["Investigar sintoma: ECG +/- biomarcador/eco<br/>CTRCD/isquemia conforme apresentação<br/>NÃO intensificar anti-HTA apenas pelo sintoma"])
+
+  D4 -->|"Não"| C5(["Tratar PA conforme risco/contexto oncológico<br/>MRPA/diário também para outros inibidores VEGF<br/>Reforçar adesão e alarmes"])
+
+  C1 --> D5{"PRES confirmado sob bevacizumabe?"}
+  D5 -->|"Sim"| C6(["Descontinuar bevacizumabe<br/>segurança de reinício desconhecida"])
+  D5 -->|"Não / suspeita"| C7(["Manter suspensão enquanto investiga<br/>seguir protocolo específico"])
+
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
-  class C1,C5 alerta;
-  class C2,C3,C4,C6 conduta;
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C6 alerta;
+  class C2,C3,C4,C5,C7 conduta;
 ```
 
 ## Notas
 
-- **D1** = gate de segurança (lesão aguda / PRES — Steingart 2012; ESC 2022).
-- **D2** = limiar operacional de **pausa** da terapia oncológica associada à hipertensão (ESC 2022).
-- **D3** = elevação significativa controlável no ambulatório com retorno precoce (Maitland 2010).
-- Não decide doses de anti-hipertensivo IV/oral nem redução percentual da dose oncológica.
+- **D1**: lesão aguda/PRES define urgência; o número isolado da PA não.
+- **D2**: pausa da terapia associada à hipertensão em **PAS >=180 OU PAD >=110 mmHg**.
+- **D3**: recomendação ESC específica para **PAS >=160 E PAD >=100 mmHg** exige ambos os componentes.
+- **D4**: sintoma cardiovascular tem investigação própria; não é sinônimo de necessidade de mais anti-hipertensivo.
+- O fluxograma não define doses nem redução percentual da terapia oncológica.
