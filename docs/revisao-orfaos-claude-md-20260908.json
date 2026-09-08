@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 34,
-  "pending_count": 129,
+  "reviewed_count": 35,
+  "pending_count": 128,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -44,8 +44,20 @@
     {
       "index": 2,
       "path": "content/Aorta_e_doença_arterial_periférica/osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "a7ea1aa5f78fe7b429e013f0be676a2064931f005ddfaaa94d3a38482dccb0fe"
+      "status": "corrected_reviewed",
+      "source_sha256": "a7ea1aa5f78fe7b429e013f0be676a2064931f005ddfaaa94d3a38482dccb0fe",
+      "findings": [
+        "Consenso Delphi2025 omitido restaurado: avaliação clínica, não eco universal assintomático; risco por tipo/genótipo não estabelecido.",
+        "Sullivan invertido: nenhuma fratura por manguito/torniquete; uma por posicionamento.",
+        "Removidas alegações herdadas de leitura integral não demonstrada nesta auditoria e falsas lacunas de consenso.",
+        "Demais genes não são todos recessivos; coortes99/52 do mesmo grupo não replicação independente; hemostasia1984 não protocolo universal."
+      ],
+      "sources": [
+        "9 referências originais: identidade e abstracts conferidos.",
+        "Folkestad DOI10.1093/jbmr/zjae197 PMID39665364: recomendações completas acessíveis em resultado primário PMC11789389.",
+        "Sullivan PMID29189536 reconferido no PubMed; GeneReviews tabela de vigilância online."
+      ],
+      "reviewed_sha256": "49e24c04ab05c9afa314f96116865931c0bfed99c5b75375c5e1c2657e2f4ac2"
     },
     {
       "index": 3,
