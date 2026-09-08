@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 28,
-  "pending_count": 135,
+  "reviewed_count": 29,
+  "pending_count": 134,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1063,8 +1063,22 @@
     {
       "index": 128,
       "path": "content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "6f6759437e0485c7404264738477a9eddffb68dc01f2b378e7861b67aab54933"
+      "status": "corrected_reviewed",
+      "source_sha256": "6f6759437e0485c7404264738477a9eddffb68dc01f2b378e7861b67aab54933",
+      "findings": [
+        "IMPROVE-HCM: VO2pico p0,90 e KCCQglobal p0,30 negativos omitidos; subgrupo35 post hoc; segurança não definitiva4/34vs2/33SAE.",
+        "CMH sintomática não exclui IC; removida separação absoluta.",
+        "DiCE coortes antes/depois sem controle, idadeparte1 72; débitoL/min não volume; ausênciaNTproBNP não prova mecanismo.",
+        "Não negar genericamente toda investigação mitotrópica; FORTITUDEphase2b reconhecido; não afirmar que toda combinação nunca estudada."
+      ],
+      "sources": [
+        "PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract primário",
+        "PMID38599256 DOI10.1016/j.jacc.2024.03.387: abstract primário",
+        "PMIDs38752753,42250280: revisões mecanísticas, não evidência desfechos",
+        "NCT07023614: registro FORTITUDE-HCM fase2b; sem inferência eficácia",
+        "Detalhes gastrointestinais do DiCE não revalidados no integral: retirados sem inferir segurança"
+      ],
+      "reviewed_sha256": "918be6e1905cc4043fd30a126eaaeefd206ac5abd5a3ad1d9df4d02a69696103"
     },
     {
       "index": 129,
