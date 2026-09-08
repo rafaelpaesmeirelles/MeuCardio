@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 17 documentos lidos integralmente e corrigidos; 146 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 21 documentos lidos integralmente e corrigidos; 142 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -31,6 +31,16 @@ Fontes verificadas: PMID41838376, PMID42269731, PMID42029363, DOI10.1161/CIR.000
 - limitações segurança/encaminhamento
 
 Fontes verificadas: PMID35798455, PMID37639243, PMID39556124, PMID40354453, PMID40100181.
+
+## 41 — content/Cardiomiopatias/preditores-de-recuperacao-da-feve-na-cardiomiopatia-dilatada-nao-isquemica-rm-lge-strain-e-genetica.md
+
+- TRED-HF44% em6 meses não maioria; data futura de busca removida como comprovação.
+- Metanálises podem compartilhar estudos; Berdibekov avaliaLGE/T1/ECV, não strain; removido melhor VPP universal e antecipação automática CDI.
+- Setti: padrão anelar LGE, não qualquerLGE; definição de remodelamento não normalização completa.
+- Kan ganhoAUC não significativo; LACI validação interna/coorte64; ApoA1/BRE recuperação>35% não normalização.
+- Removidas menções sem fonte identificada a Passo/ivabradina; genética por variantes P/LP e não VUS; mantida terapia após melhora.
+
+Fontes verificadas: PMID30429050, PMID39955068, PMID39941566, PMID40460665, PMID40296583, PMID37697922, PMID39890030, PMID39375197, PMID41067410, PMID40988625, PMID42155308, PMID42204922, PMID42368855.
 
 ## 42 — content/Cardiomiopatias/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1.md
 
@@ -95,6 +105,24 @@ Fontes verificadas: PMID40015616, PMID39537191, PMID42410742, PMID42443024, NCT0
 
 Fontes verificadas: PMID39986336, PMID36030390, PMID41791675, PMID42670965, DOI10.1056/NEJMoa2407105, DOI10.1056/NEJMoa2513880.
 
+## 81 — content/Fibrilação_atrial/finerenona-e-prevencao-de-fibrilacao-atrial-incidente-a-analise-agrupada-fine-heart.md
+
+- FINEARTS isolado FAincidenteHR0,77 IC0,57–1,04 p0,09 omitido no original; adicionado e separado do composto IC.
+- Sobreposição de participantes impede chamar análise isolada de replicação independente.
+- FINE-HEART pré-especificado com adjudicação cega; monitorização não contínua não permite afirmar direção do viés.
+- Removido NNT125 como horizonte fixo e erro de decompor soma randomizados só por FA prévia; mantida não indicação isolada prevenir FA.
+
+Fontes verificadas: PMID40306837, PMID40156827, PMID33264825, PMID34449181, PMID39225278, FDA215341s0092025.
+
+## 86 — content/Fibrilação_atrial/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025.md
+
+- DARE-AF inclui FA persistente em todos; não majoritariamente.
+- Diferença entre coortes e RCT não isola mecanismos indiretos/diretos nem prova interação por comorbidade.
+- Retiradas magnitudes TriNetX por RR com orientação ambígua e erratum integral inacessível; identidade41697582 registrada sem alegar leitura.
+- Mantidos dados RCT e limitações observacionais; não promover SGLT2 isoladamente prevenir recorrência nem invalidar indicação cardiorrenal.
+
+Fontes verificadas: PMID41206792, PMID41357094, PMID41134438, PMID41697582identidade_apenas, PMID42289243.
+
 ## 87 — content/Fibrilação_atrial/timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst.md
 
 - Corrigida regra1–3–6–12: dia1éAIT, não AVC leve.
@@ -121,6 +149,15 @@ Fontes verificadas: Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tava
 - semextrapolarPA não controlada
 
 Fontes verificadas: Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Reduction of Antihypertensive Treatment in Nursing Home Residents. N Engl J Med. 2025;393(20):1990-2000. DOI: 10.1056/NEJMoa2508157. PMID: 40879421, Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131, Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392.
+
+## 110 — content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md
+
+- QUARTET52 semanas7,7mmHg (417continuaram), não6,7; segurança não equivalente por p negativo.
+- QUARTET USA sistólica−4,8 IC−10,8 a1,3 não equivalência.
+- QUADUAL períodos4 semanas e dupla dose padrão não algoritmo ESC completo.
+- Retirada recomendação empírica de reproduzir quatro classes separadas e alegação Anvisa não verificada; título deixa de prescrever início universal.
+
+Fontes verificadas: PMID34469767, PMID38501351, PMID38477128, PMID38584159, PMID40178246, PMID39881316, PMID40283054.
 
 ## 125 — content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md
 

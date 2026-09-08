@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 17,
-  "pending_count": 146,
+  "reviewed_count": 21,
+  "pending_count": 142,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -294,8 +294,31 @@
     {
       "index": 41,
       "path": "content/Cardiomiopatias/preditores-de-recuperacao-da-feve-na-cardiomiopatia-dilatada-nao-isquemica-rm-lge-strain-e-genetica.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "8ecc2edccd6840d97451dc69c7164a7c6d31b50fb6bdd0b1caf8f20ff67e39ad"
+      "status": "corrected_reviewed",
+      "source_sha256": "8ecc2edccd6840d97451dc69c7164a7c6d31b50fb6bdd0b1caf8f20ff67e39ad",
+      "findings": [
+        "TRED-HF44% em6 meses não maioria; data futura de busca removida como comprovação.",
+        "Metanálises podem compartilhar estudos; Berdibekov avaliaLGE/T1/ECV, não strain; removido melhor VPP universal e antecipação automática CDI.",
+        "Setti: padrão anelar LGE, não qualquerLGE; definição de remodelamento não normalização completa.",
+        "Kan ganhoAUC não significativo; LACI validação interna/coorte64; ApoA1/BRE recuperação>35% não normalização.",
+        "Removidas menções sem fonte identificada a Passo/ivabradina; genética por variantes P/LP e não VUS; mantida terapia após melhora."
+      ],
+      "sources": [
+        "PMID30429050",
+        "PMID39955068",
+        "PMID39941566",
+        "PMID40460665",
+        "PMID40296583",
+        "PMID37697922",
+        "PMID39890030",
+        "PMID39375197",
+        "PMID41067410",
+        "PMID40988625",
+        "PMID42155308",
+        "PMID42204922",
+        "PMID42368855"
+      ],
+      "reviewed_sha256": "6a7fc6164ebe87c454d13a963768a70e0d03ff2f36a878640f570ce023c70e44"
     },
     {
       "index": 42,
@@ -629,8 +652,23 @@
     {
       "index": 81,
       "path": "content/Fibrilação_atrial/finerenona-e-prevencao-de-fibrilacao-atrial-incidente-a-analise-agrupada-fine-heart.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "23953eb897c8488ec88401a683b3b311f6cc5744b0532a735cc9a86c325746dd"
+      "status": "corrected_reviewed",
+      "source_sha256": "23953eb897c8488ec88401a683b3b311f6cc5744b0532a735cc9a86c325746dd",
+      "findings": [
+        "FINEARTS isolado FAincidenteHR0,77 IC0,57–1,04 p0,09 omitido no original; adicionado e separado do composto IC.",
+        "Sobreposição de participantes impede chamar análise isolada de replicação independente.",
+        "FINE-HEART pré-especificado com adjudicação cega; monitorização não contínua não permite afirmar direção do viés.",
+        "Removido NNT125 como horizonte fixo e erro de decompor soma randomizados só por FA prévia; mantida não indicação isolada prevenir FA."
+      ],
+      "sources": [
+        "PMID40306837",
+        "PMID40156827",
+        "PMID33264825",
+        "PMID34449181",
+        "PMID39225278",
+        "FDA215341s0092025"
+      ],
+      "reviewed_sha256": "e0fcbd6bd73bf2003a65349a4b49691b8588694daf34accf8638ccbff65f5756"
     },
     {
       "index": 82,
@@ -659,8 +697,22 @@
     {
       "index": 86,
       "path": "content/Fibrilação_atrial/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "40113f6e61e44c8798898b01a5964096371ea5475b166dd737dc6aab223be102"
+      "status": "corrected_reviewed",
+      "source_sha256": "40113f6e61e44c8798898b01a5964096371ea5475b166dd737dc6aab223be102",
+      "findings": [
+        "DARE-AF inclui FA persistente em todos; não majoritariamente.",
+        "Diferença entre coortes e RCT não isola mecanismos indiretos/diretos nem prova interação por comorbidade.",
+        "Retiradas magnitudes TriNetX por RR com orientação ambígua e erratum integral inacessível; identidade41697582 registrada sem alegar leitura.",
+        "Mantidos dados RCT e limitações observacionais; não promover SGLT2 isoladamente prevenir recorrência nem invalidar indicação cardiorrenal."
+      ],
+      "sources": [
+        "PMID41206792",
+        "PMID41357094",
+        "PMID41134438",
+        "PMID41697582identidade_apenas",
+        "PMID42289243"
+      ],
+      "reviewed_sha256": "7fffb5a59fc68814257856f46406f4bb0c3404284f322a0da005d8cf76d215fa"
     },
     {
       "index": 87,
@@ -840,8 +892,24 @@
     {
       "index": 110,
       "path": "content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "3acfbda6cce406957b975666c904b597e11dab780d11798c76308f310e2ba59f"
+      "status": "corrected_reviewed",
+      "source_sha256": "3acfbda6cce406957b975666c904b597e11dab780d11798c76308f310e2ba59f",
+      "findings": [
+        "QUARTET52 semanas7,7mmHg (417continuaram), não6,7; segurança não equivalente por p negativo.",
+        "QUARTET USA sistólica−4,8 IC−10,8 a1,3 não equivalência.",
+        "QUADUAL períodos4 semanas e dupla dose padrão não algoritmo ESC completo.",
+        "Retirada recomendação empírica de reproduzir quatro classes separadas e alegação Anvisa não verificada; título deixa de prescrever início universal."
+      ],
+      "sources": [
+        "PMID34469767",
+        "PMID38501351",
+        "PMID38477128",
+        "PMID38584159",
+        "PMID40178246",
+        "PMID39881316",
+        "PMID40283054"
+      ],
+      "reviewed_sha256": "885ca717c665b9633525c137d0bda8d0ba6dd494d9c2e23ac1a832d2ccc03488"
     },
     {
       "index": 111,
