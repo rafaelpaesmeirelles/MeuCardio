@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 33 documentos lidos integralmente e corrigidos; 130 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 34 documentos lidos integralmente e corrigidos; 129 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -14,6 +14,15 @@ Anticolisão: não foram encontrados slugs idênticos na comparação inicial; s
 - Doença pode ser aguda; eosinofilia não obrigatória; recuperação renal e modalidade dialítica observacionais.
 
 Fontes verificadas: Todos os 12 PMIDs originais: identidade e abstracts conferidos no cache PubMed., Kronzon/Saric Circulation2010 DOI10.1161/CIRCULATIONAHA.109.886465 PMID20697039: revisão primária de manejo., PMIDs10213638 e39639413 reconferidos diretamente no PubMed..
+
+## 1 — content/Aorta_e_doença_arterial_periférica/eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa.md
+
+- Primária não equivale obrigatoriamente a SCN9A hereditária; formas idiopáticas e teste negativo preservados.
+- AAS não é teste diagnóstico binário; risco hemorrágico/von Willebrand adquirido e indicação hematológica antes de uso.
+- Farrar estudou excitabilidade axonal, não prova de biópsia cutânea.
+- Dor paroxística não é ganho mais extremo; tratamentos e mecanismo não universais.
+
+Fontes verificadas: 18 PMIDs originais: identidade e abstracts individualmente conferidos., GeneReviews SCN9A PMID20301342 e Cattaneo DOI10.3324/haematol.2022.281388 consultados online..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 

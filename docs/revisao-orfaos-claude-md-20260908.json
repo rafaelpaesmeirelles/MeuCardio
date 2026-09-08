@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 33,
-  "pending_count": 130,
+  "reviewed_count": 34,
+  "pending_count": 129,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -27,8 +27,19 @@
     {
       "index": 1,
       "path": "content/Aorta_e_doença_arterial_periférica/eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "68e0689a6700de4f296e2fb58f9bbad4d4654a215350366d9cdb10cc55a72c86"
+      "status": "corrected_reviewed",
+      "source_sha256": "68e0689a6700de4f296e2fb58f9bbad4d4654a215350366d9cdb10cc55a72c86",
+      "findings": [
+        "Primária não equivale obrigatoriamente a SCN9A hereditária; formas idiopáticas e teste negativo preservados.",
+        "AAS não é teste diagnóstico binário; risco hemorrágico/von Willebrand adquirido e indicação hematológica antes de uso.",
+        "Farrar estudou excitabilidade axonal, não prova de biópsia cutânea.",
+        "Dor paroxística não é ganho mais extremo; tratamentos e mecanismo não universais."
+      ],
+      "sources": [
+        "18 PMIDs originais: identidade e abstracts individualmente conferidos.",
+        "GeneReviews SCN9A PMID20301342 e Cattaneo DOI10.3324/haematol.2022.281388 consultados online."
+      ],
+      "reviewed_sha256": "63aa4eacafa83c676b4b50f52bab070d913c1f40fe8df65a52d58613af2ce13b"
     },
     {
       "index": 2,
