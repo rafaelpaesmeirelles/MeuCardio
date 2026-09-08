@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 23 documentos lidos integralmente e corrigidos; 140 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 24 documentos lidos integralmente e corrigidos; 139 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -203,6 +203,15 @@ Fontes verificadas: 10.1186/s44156-024-00067-8: texto integral, seção acute AR
 - proporcionalidade hipótesenãogate
 
 Fontes verificadas: Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 Investigators. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation. N Engl J Med. 2024;391(19):1799-1809. DOI: 10.1056/NEJMoa2314328 · PMID: 39216092 — abstract conferido via PubMed E-utilities nesta sessão., Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640., Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927., Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663..
+
+## 160 — content/Valvopatias/tavi-anel-aortico-pequeno-escolha-de-protese-ensaio-smart-2024.md
+
+- Corrigida inversão da regurgitação residual: menor com SEV no subgrupo feminino.
+- BVD hemodinâmica não igual a degeneração anatômica/durabilidade; removida recomendação universal de plataforma.
+- Subgrupo não replicação; contextualizada idade média80anos e limiar geral de diretriz não específico de anel pequeno.
+- Acrescentado seguimento3anos como apresentação EuroPCR2026, não artigo integral revisado por pares; sem superioridade clínica.
+
+Fontes verificadas: PMID38587261 DOI10.1056/NEJMoa2312573: abstract primário, PMID39382856 DOI10.1001/jamacardio.2024.3241: abstract primário; retirados detalhes numéricos não revalidados no texto integral, https://europcr2026.europa-inviteo.com/gws/index.php?langue=en&onglet=33&paramProjet=107923 : resumo investigador,3anos, https://www.pcronline.com/Cases-resources-images/Resources/Course-videos-slides/2026/EuroPCR/TAVI-head-to-head-trials : programação20maio2026.
 
 ## 162 — content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md
 
