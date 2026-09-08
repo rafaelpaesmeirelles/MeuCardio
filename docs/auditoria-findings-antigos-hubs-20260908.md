@@ -31,3 +31,10 @@ Validação: 19/19 PMIDs do hub resolvidos pelo PubMed; nenhum par PMID/DOI dive
 ### Dispositivos — PR #599
 
 A composição atual já contém DANISH na bibliografia e separa disfunção do circuito de choque de mera independência de pacing, além de encaminhar RM com eletrodos de risco para avaliação específica. Esses achados foram confirmados, sem refazer correções já presentes. Corrigidos os residuais: choque isolado com recuperação completa requer contato rápido/interrogação; choques repetidos em 24 horas ou instabilidade exigem emergência sem depender de adequação ou de terceiro choque. ERI foi separado de EOL e o estado de dependência modifica a resposta. Condicionalidade de RM se refere ao sistema completo/rotulagem; a segurança não foi reduzida a reset reversível. Referências SCMR 2024 e HRS clínica remota 2023 adicionadas. Preservadas as fontes e as relações já presentes.
+
+
+## Dependências documentais: SCA e estatina — 08/09/2026
+
+Dois fluxogramas canônicos corrigidos após revisão adversarial das dependências dos checklists. SCA: janela e contraindicações da fibrinólise, NSTEMI confirmado como alto risco, rule-in sem confirmação etiológica automática, rule-out sem excluir angina instável e encaminhamento hospitalar quando suspeita forte. Fonte: ESC 2023, Recommendation Table 4 e seções 5.1–5.3, artigo primário em repisalud.isciii.es. Estatina: alto risco PREVENT e LDL ≥190 não terminam sem tratamento; risco limítrofe/intermediário e risco de 30 anos separados; CAC sem conversão inventada; via individual após 75 anos. Fonte: material oficial AHA/ACC 2026 PREVENT para clínicos (731B2098BB23427F9EA8EDDF98E08145), não alegada leitura integral dos slides indisponíveis. Limiar ApoB 140 não confirmado e removido.
+
+Validação: 2/2 blocos Mermaid analisados pelo parser real; YAML dos dois documentos e diff verificados. Preservados slugs e fonte_producao preexistente. Esta revisão focal não constitui autorização global do corpus.
