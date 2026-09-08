@@ -1,0 +1,65 @@
+---
+title: "Candidatos ambulatoriais à avaliação de CDI após síncope: quando encaminhar"
+slug: candidatos-ambulatoriais-avaliacao-cdi-apos-sincope-quando-encaminhar
+theme: "Síncope"
+kind: protocolo
+fonte_producao: grok
+summary: "Gate de consultório: quando síncope em paciente com substrato arrítmico deve reabrir estratificação de morte súbita/avaliação de CDI, sem transformar síncope ou FE levemente reduzida em indicação automática de implante."
+review_status: revisado
+review_note: "Revisão clínica/editorial concluída em 08/09/2026. Acrescentada ESC 2022 VA/SCD; removida dependência de #859; eliminado atalho 'FE reduzida + síncope = CDI'; critérios passaram a ser específicos da doença, tratamento, timing e risco."
+source_refs:
+  - "Brignole M, Moya A, de Lange FJ, et al.; ESC Scientific Document Group. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304"
+  - "Shen WK, Sheldon RS, Benditt DG, et al. 2017 ACC/AHA/HRS Guideline for the Evaluation and Management of Patients With Syncope. Circulation. 2017;136(5):e60-e122. DOI: 10.1161/CIR.0000000000000499. PMID: 28280231"
+  - "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID: 36017572."
+---
+
+# Candidatos ambulatoriais à avaliação de CDI após síncope: quando encaminhar
+
+Uso: paciente com **síncope** em consultório, sem instabilidade que exija PS naquele momento, mas com doença de base que possa conferir risco de morte súbita cardíaca. A pergunta é **quando reabrir estratificação especializada**, não decidir implante no consultório.
+
+Não substitui:
+- EPS selecionado — [`sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia`](sinalizadores-ambulatoriais-sincope-recorrente-inexplicada-quando-referir-eletrofisiologia.md);
+- monitorização/ILR — [`fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel`](fluxograma-sincope-inexplicada-recorrente-monitor-de-eventos-implantavel.md);
+- manejo de choque/disfunção em quem já possui CIED, disponível na pasta Dispositivos.
+
+## Regra central de segurança
+
+**Síncope, isoladamente, não é indicação de CDI.** O encaminhamento para avaliação de CDI só faz sentido quando existe um **substrato clínico específico** em que a síncope possa representar marcador de maior risco ou quando critérios convencionais de prevenção primária/secundária possam estar preenchidos.
+
+Da mesma forma, **FEVE levemente reduzida (por exemplo 40–49%) não equivale a indicação de CDI**. Em prevenção primária por disfunção ventricular, devem ser conferidos o limiar de FEVE aplicável, tratamento otimizado, tempo após IAM/revascularização quando pertinente, expectativa de sobrevida funcional e demais critérios da diretriz da doença.
+
+## Quando reabrir avaliação de risco de MSC / CDI
+
+| Contexto | O que a síncope deve provocar |
+|---|---|
+| TV/FV sustentada documentada, PCR recuperada ou arritmia ventricular grave documentada | Via de prevenção secundária / EP com prioridade apropriada; não aguardar monitorização ambulatorial de rotina |
+| Doença isquêmica/cardiomiopatia com **critérios potenciais de prevenção primária** já próximos ou preenchidos | Confirmar FEVE, tratamento otimizado, timing, etiologia e prognóstico; encaminhar EP/IC para decisão baseada em guideline |
+| Cardiomiopatia hipertrófica | Recalcular/atualizar estratificação específica de MCH; síncope presumivelmente arrítmica é apenas um componente do risco |
+| Brugada, QT longo, CPVT e outras canalopatias | Reavaliar no centro especializado segundo critérios próprios; não usar uma regra genérica de “canalopatia + síncope = CDI” |
+| Cardiomiopatia arritmogênica ou outras cardiomiopatias genéticas de risco | Aplicar estratificação específica de fenótipo/genótipo/arritmia e guideline correspondente |
+| Cicatriz miocárdica + síncope inexplicada | Encaminhar EP; EPS pode fazer parte da avaliação em substratos selecionados, mas não é sinônimo de indicação de CDI |
+
+## Alto risco clínico continua sendo alto risco
+
+Se houver síncope no esforço/decúbito, sem pródromos, ECG de alto risco, hipoperfusão, arritmia sustentada, trauma grave ou história familiar de morte súbita jovem, reavaliar **urgência do destino** antes da discussão eletiva de dispositivo.
+
+## O que NÃO deve acontecer
+
+- “Síncope + cardiomiopatia = CDI”.
+- “Síncope + qualquer FE reduzida = CDI”.
+- Usar FEVE 40–49% como equivalente a disfunção ventricular grave de prevenção primária.
+- Agrupar MCH, Brugada, QT longo e CPVT em uma única regra de implante.
+- Implantar por exclusão depois de investigação negativa sem substrato de risco.
+- Adiar investigação urgente de TV/FV, PCR recuperada ou instabilidade para “consulta de CDI”.
+
+## Checklist de encaminhamento
+
+1. Há alarme de PS/urgência? → tratar a urgência primeiro.
+2. Existe TV/FV/PCR ou outra indicação potencial de prevenção secundária? → EP prioritária.
+3. Existe doença com **critério convencional potencial** de prevenção primária? → confirmar critérios completos da doença antes de rotular elegibilidade.
+4. É MCH/canalopatia/cardiomiopatia genética? → usar ferramenta/estratificação própria.
+5. Sem substrato de MSC? → monitorização/ILR/avaliação de síncope, não CDI empírico.
+
+## Limite da evidência
+
+Este documento é um **gate de encaminhamento**, não uma tabela de indicação de implante. A decisão final deve seguir a diretriz contemporânea de arritmias ventriculares/morte súbita e a recomendação específica para a doença de base.
