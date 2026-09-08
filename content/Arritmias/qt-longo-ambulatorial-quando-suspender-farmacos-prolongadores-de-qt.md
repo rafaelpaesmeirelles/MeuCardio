@@ -17,9 +17,9 @@ source_refs:
 
 Cenário: QTc prolongado em paciente usando fármaco que pode prolongar QT. O objetivo é decidir **retirar/pausar, manter com vigilância ou encaminhar com urgência**, sem escolher substituto ou dose.
 
-Contexto: [`sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar).
+Contexto: [sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar).
 
-Psicofármacos: [`fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt`](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
+Psicofármacos: [fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
 
 ## Regra central
 

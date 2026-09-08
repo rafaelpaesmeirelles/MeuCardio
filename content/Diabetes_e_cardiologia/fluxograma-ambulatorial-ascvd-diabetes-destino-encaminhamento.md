@@ -16,7 +16,7 @@ source_refs:
 
 # Fluxograma ambulatorial: ASCVD no diabetes — destino de encaminhamento
 
-Prosa: [`sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar`](/biblioteca/sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar) · [`angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao`](/biblioteca/angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao).
+Prosa: [sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar) · [angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao](/biblioteca/angina-ccs-persistente-no-diabetes-quando-discutir-revascularizacao).
 
 Não substitui #826 (lesão de órgão-alvo / IC-FA), #855 (hipoglicemia / iSGLT2-GLP1), FREEDOM detalhado nem vias hospitalares de SCA.
 
@@ -33,7 +33,8 @@ flowchart TD
   D2 -->|"Sim"| DA{"Obstrução epicárdica significativa<br/>passível de revascularização?"}
   DA -->|"Confirmada"| P1
   DA -->|"Anatomia não definida"| CA(["Cardiologia: definir anatomia/fisiologia<br/>antes de indicar intervenção"])
-  DA -->|"Não: ANOCA/INOCA"| CN(["Avaliação coronária funcional<br/>tratamento conforme mecanismo"])["Confirmar estabilidade<br/>Listar alarmes por escrito"]
+  DA -->|"Não: ANOCA/INOCA"| CN(["Avaliação coronária funcional<br/>tratamento conforme mecanismo"])
+  P1["Confirmar estabilidade<br/>Listar alarmes por escrito"]
   P1 --> C2(["Heart Team / discussão de<br/>revascularização em prazo CURTO<br/>dias–poucas semanas conforme rede<br/>Sem escolher CABG vs PCI isolado"])
 
   D2 -->|"Não"| D3{"Sintoma limítrofe ou dúvida<br/>de adesão / precipitanes?"}

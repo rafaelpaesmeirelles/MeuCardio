@@ -1,12 +1,14 @@
 ---
-title: "Fluxograma: Deficiência de ferro na insuficiência cardíaca — rastreio e reposição endovenosa (ESC 2023)"
+title: "Fluxograma: Deficiência de ferro na insuficiência cardíaca — rastreio e reposição endovenosa (ESC 2026)"
 slug: fluxograma-deficiencia-de-ferro-na-insuficiencia-cardiaca-rastreio-e-reposicao-endovenosa-esc-2023
 theme: "Insuficiência cardíaca"
 kind: fluxograma
-summary: "Rastreio periódico de deficiência de ferro em todo paciente com IC por ferritina e saturação de transferrina, definição operacional da deficiência, e a decisão de repor ferro endovenoso na ICFEr e na ICFElr sintomáticas conforme a atualização focada ESC 2023, com investigação de causa quando a deficiência é absoluta."
+summary: "Rastreio de ferro na IC e decisão de reposição IV na ICFEr sintomática conforme ESC 2026; critérios históricos dos ensaios e esquemas de bula são apresentados separadamente."
 review_status: revisado
 review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
+  - "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. DOI: 10.1093/eurheartj/ehag100. Seção 10.4 e Recommendation Table 19. https://doi.org/10.1093/eurheartj/ehag100"
+  - "EMA. Intravenous iron-containing medicinal products: referral. https://www.ema.europa.eu/en/medicines/human/referrals/intravenous-iron-containing-medicinal-products"
   - "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666. https://academic.oup.com/eurheartj/article/44/37/3627/7246292"
   - "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992. Tabela de novas recomendações lida em https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2333 (publicação companheira, Eur J Heart Fail)"
   - "2023 Focused Update of ESC Guidelines for Acute and Chronic HF: Key Points. American College of Cardiology, 2023. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/58/2023-focused-update-esc-guidelines-hf-esc-2023"
@@ -16,15 +18,15 @@ source_refs:
   - "Derivado de ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman.md, ferro-oral-nao-substitui-o-endovenoso-na-icfer-o-ensaio-ironout-hf.md, heart-fid-carboximaltose-ferrica-icfer-deficiencia-ferro.md e atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca.md, já publicados no acervo (Insuficiência cardíaca)."
 ---
 
+# Fluxograma: Deficiência de ferro na insuficiência cardíaca — rastreio e reposição endovenosa (ESC 2026)
+
 ## Atualização clínica ESC 2026
 
 A seção 10.4 apoia TSAT <20% para identificar deficiência de ferro na IC; ferritina continua útil na investigação. Ferritina baixa isolada com TSAT ≥20% não aciona automaticamente infusão. A Recommendation Table 19 indica ferro IV para sintomas e qualidade de vida na ICFEr sintomática (FEVE <50%; I B1), e considera seu uso para reduzir hospitalizações (IIa B1). Os critérios de entrada dos ensaios permanecem históricos e não são ampliados por mudança de nomenclatura. Reação grave prévia a qualquer ferro parenteral bloqueia encaminhamento rotineiro e exige revisão especializada/bula local; recursos de emergência não eliminam contraindicações.
 
 Fonte: Køber L, Adamo M et al. ESC 2026, DOI 10.1093/eurheartj/ehag100, seção 10.4 e tabela 19; EMA intravenous iron referral.
 
-# Fluxograma: Deficiência de ferro na insuficiência cardíaca — rastreio e reposição endovenosa (ESC 2023)
-
-A deficiência de ferro na insuficiência cardíaca é definida por ferritina e saturação de transferrina, não pela hemoglobina: o paciente pode ter estoque de ferro esgotado com hemograma normal, e é esse paciente que os ensaios trataram. A diretriz ESC 2021 já mandava rastrear todo paciente com IC periodicamente, e a atualização focada de 2023 elevou a reposição endovenosa a recomendação Classe I para sintomas e qualidade de vida na ICFEr e na ICFElr sintomáticas, com Classe IIa para reduzir hospitalização por IC. A decisão que este fluxograma organiza é dupla: quem tem deficiência, e quem, entre os que têm, recebe ferro endovenoso — lembrando que a via oral não substitui a endovenosa (IRONOUT-HF) e que a deficiência absoluta pede investigação de causa sem atrasar a reposição.
+A deficiência de ferro pode existir sem anemia. Esta árvore organiza a identificação da deficiência e a elegibilidade para reposição IV, com investigação da causa e avaliação de segurança antes da infusão. A evidência dos ensaios é descrita abaixo com seus critérios originais.
 
 ## Árvore de decisão
 
@@ -37,12 +39,12 @@ flowchart TD
   U7(["Bloquear infusão rotineira<br/>Avaliação especializada e bula local"])
   P1["Rastreio periódico: hemograma,<br/>ferritina sérica e saturação de transferrina"]
   D1{"Saturação de transferrina abaixo de 20%?<br/>Interpretar ferritina e investigar a causa"}
-  C1(["Sem deficiência de ferro: ferro IV não indicado<br/>repetir o rastreio periodicamente<br/>e a cada descompensação"])
+  C1(["TSAT não confirma deficiência neste critério<br/>Investigar ferritina discordante; sem ferro IV automático<br/>repetir o rastreio periodicamente<br/>e a cada descompensação"])
   D2{"FEVE abaixo de 50%<br/>ICFEr pela classificação ESC 2026?"}
   C2(["ICFEp: sem recomendação ESC de ferro IV<br/>tratar anemia e comorbidade pela causa<br/>e decidir caso a caso"])
   D3{"Sintomático, NYHA II a IV?"}
   C3(["Assintomático: sem recomendação formal<br/>pesquisar causa da deficiência<br/>e repetir ferritina e saturação"])
-  D4{"Deficiência absoluta: ferritina abaixo de 100 μg/L,<br/>anemia associada ou suspeita de perda de sangue?"}
+  D4{"Ferritina abaixo de 100 μg/L,<br/>anemia associada ou suspeita de perda de sangue?"}
   P2["Investigar causa em paralelo: sangramento digestivo,<br/>antitrombóticos, dieta, inibidor de bomba de prótons,<br/>doença renal crônica — timing conforme estabilidade e sangramento"]
   D5{"Internado ou alta recente<br/>por IC aguda?"}
   C4(["Ferro IV antes da alta ou logo após:<br/>carboximaltose férrica, esquema AFFIRM-AHF<br/>reavaliar ferritina e saturação em cerca de 3 meses"])
@@ -67,7 +69,7 @@ flowchart TD
   P2 --> D5
   D5 -->|"Sim"| C4
   D5 -->|"Não"| C5
-  D4 -->|"Não, deficiência funcional isolada"| D6
+  D4 -->|"Não"| D6
   D6 -->|"Sim"| C6
   D6 -->|"Não"| C7
 
@@ -81,19 +83,19 @@ A ESC 2021 recomenda que todo paciente com IC seja rastreado periodicamente para
 
 ## Definição operacional da deficiência
 
-| Marcador | Deficiência de ferro | Fonte |
-|---|---|---|
-| Ferritina sérica < 100 μg/L | Sim, independentemente da saturação de transferrina | ESC 2021 (tabela de novas recomendações) e Sindone 2022 |
-| Ferritina 100–299 μg/L com saturação de transferrina < 20% | Sim (deficiência funcional) | ESC 2021 e Sindone 2022 |
-| Ferritina ≥ 300 μg/L, ou 100–299 μg/L com saturação ≥ 20% | Não, pelo critério das diretrizes | mesma tabela |
+| Contexto | Interpretação prática |
+|---|---|
+| TSAT <20% | Critério apoiado pela ESC 2026; avaliar ferritina, causa e elegibilidade clínica antes de infundir |
+| TSAT ≥20% com ferritina baixa | Investigar o achado; não acionar ferro IV automaticamente pelo critério histórico |
+| Ferritina elevada | Interpretar inflamação e causas alternativas; não excluir deficiência apenas por ferritina ≥300 |
 
-A ferritina é reagente de fase aguda: na IC congesta ou inflamada ela pode estar normal com estoque funcional insuficiente — daí o segundo critério, que depende da saturação. O IRONMAN usou definição um pouco mais ampla (saturação < 20% ou ferritina < 100 μg/L, qualquer uma das duas), e é essa a frase da atualização de 2023 ao descrever como a deficiência foi diagnosticada nos ensaios. A árvore usa o critério da tabela de recomendação de 2021, que é o mais restritivo dos dois e o que consta na recomendação com classe.
+Historicamente, CONFIRM-HF e AFFIRM-AHF usaram ferritina <100 μg/L ou ferritina 100–299 μg/L com TSAT <20%. IRONMAN usou TSAT <20% ou ferritina <100 μg/L. Esses critérios de inclusão não são a definição operacional atual desta árvore. A ferritina, reagente de fase aguda, permanece útil na investigação.
 
 ## Quem recebe ferro endovenoso: fração de ejeção e sintoma
 
-A atualização focada 2023 recomenda suplementação IV de ferro em pacientes sintomáticos com ICFEr ou ICFElr e deficiência de ferro para aliviar sintomas e melhorar qualidade de vida (Classe I, nível A), e considera carboximaltose férrica ou derisomaltose férrica para reduzir hospitalização por IC (Classe IIa, nível A). A árvore usa essa recomendação mais recente e não depende dos antigos cortes numéricos de FEVE de 2021.
+A Recommendation Table 19 da ESC 2026 recomenda ferro IV para sintomas e qualidade de vida na ICFEr sintomática com deficiência (I B1) e considera seu uso para reduzir hospitalizações por IC (IIa B1). A classificação atual de ICFEr usa FEVE <50%; isso não altera retrospectivamente os cortes dos ensaios nem amplia esquemas de bula.
 
-Dois ramos ficam fora da recomendação: a ICFEp (C2), para a qual não há ensaio de desfecho e a ESC não recomenda ferro IV, e o paciente assintomático (C3), porque toda a evidência de benefício é em sintomático. Nos dois casos a deficiência ainda merece explicação e seguimento — o que não há é indicação formal da infusão. Ver fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023 para a classificação por FEVE que alimenta D2.
+ICFEp e ausência de sintomas não têm indicação rotineira de ferro IV por esta recomendação. Deficiência ou anemia ainda exigem investigação e tratamento conforme a causa, inclusive por outras indicações específicas.
 
 ## Por que a evidência sustenta Classe I para sintoma e IIa para hospitalização
 
@@ -104,15 +106,15 @@ Dois ramos ficam fora da recomendação: a ICFEp (C2), para a qual não há ensa
 | IRONMAN (2022) | IC, FEVE ≤ 45%, derisomaltose férrica, seguimento mediano 2,7 anos | Hospitalizações recorrentes por IC e morte CV | RR 0,82, IC95% 0,66–1,02, p = 0,070; análise pré-COVID RR 0,76, p = 0,047 |
 | HEART-FID (2023) | ICFEr ambulatorial, FEVE ≤ 40% | Composto hierárquico morte, hospitalização por IC, caminhada de 6 minutos | Win ratio 1,10, p = 0,02 com alfa pré-especificado de 0,01 — não significativo |
 
-O padrão é consistente: sintoma e capacidade funcional melhoram de forma clara (CONFIRM-HF), hospitalização por IC cai de forma reprodutível mas sem fechar o composto primário em nenhum ensaio isolado, e mortalidade não muda. A atualização de 2023 apoia a Classe IIa para hospitalização na metanálise de Graham et al. (10 ensaios, 3.373 pacientes: hospitalizações totais por IC e morte CV RR 0,75, IC95% 0,61–0,93), sem efeito sobre mortalidade cardiovascular ou total. Os números por ensaio estão em ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman e heart-fid-carboximaltose-ferrica-icfer-deficiencia-ferro.
+Nos ensaios resumidos, há benefício sintomático e sinais de redução de hospitalizações, com resultados primários neutros em AFFIRM-AHF e IRONMAN e sem redução demonstrada de mortalidade. Não se deve generalizar neutralidade do desfecho primário a todos os ensaios de ferro IV. A atualização de 2023 apoia a Classe IIa para hospitalização na metanálise de Graham et al. (10 ensaios, 3.373 pacientes: hospitalizações totais por IC e morte CV RR 0,75, IC95% 0,61–0,93), sem efeito sobre mortalidade cardiovascular ou total. Os números por ensaio estão em ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman e heart-fid-carboximaltose-ferrica-icfer-deficiencia-ferro.
 
 ## Ferro oral não substitui, e o agente estimulador da eritropoiese não entra
 
 O IRONOUT-HF testou ferro polissacarídeo oral 150 mg duas vezes ao dia por 16 semanas contra placebo em ICFEr com deficiência de ferro: o VO2 de pico não mudou (diferença 21 mL/min, p = 0,46) e todos os desfechos secundários foram neutros. A orientação prática de Sindone et al. registra que, por isso, a diretriz ESC 2021 não recomenda ferro oral na IC. Para a anemia em si, o tratamento com agente estimulador da eritropoiese não é recomendado na ausência de outra indicação (ESC 2021, Classe III) — o RED-HF mostrou neutralidade com mais tromboembolismo. Ver ferro-oral-nao-substitui-o-endovenoso-na-icfer-o-ensaio-ironout-hf e anemia-na-insuficiencia-cardiaca-por-que-nao-tratar-com-agente-estimulador-da-eritropoiese-red-hf.
 
-## Deficiência absoluta: investigar a causa sem adiar a reposição
+## Investigar a causa e definir o momento seguro da reposição
 
-O ramo D4 separa a deficiência absoluta (ferritina abaixo de 100 μg/L, sobretudo quando há anemia ou pista de perda de sangue) da deficiência funcional isolada. Na absoluta, a pergunta "por que este paciente perdeu ferro?" é obrigatória: sangramento digestivo oculto sob antiagregante ou anticoagulante, ingestão reduzida, inibidor de bomba de prótons e doença renal crônica são contribuintes possíveis. A investigação corre em paralelo e não é motivo automático para adiar a infusão. Indicação de endoscopia depende de idade, sintomas, anemia, perdas e risco clínico; a diretriz não fornece um corte de ferritina para encaminhamento.
+O ramo D4 destaca ferritina baixa, anemia ou suspeita de perda; o valor isolado de ferritina não classifica de forma infalível deficiência absoluta ou funcional. Nesses casos, a pergunta "por que este paciente perdeu ferro?" é obrigatória: sangramento digestivo oculto sob antiagregante ou anticoagulante, ingestão reduzida, inibidor de bomba de prótons e doença renal crônica são contribuintes possíveis. A investigação pode ocorrer em paralelo no paciente estável; sangramento relevante ou instabilidade exigem atendimento e definição do momento seguro antes de infusão eletiva. Indicação de endoscopia depende de idade, sintomas, anemia, perdas e risco clínico; a diretriz não fornece um corte de ferritina para encaminhamento.
 
 ## Doses e reavaliação
 
@@ -128,7 +130,7 @@ A reavaliação de ferritina e saturação de transferrina deve ocorrer cerca de
 ## Limitações e o que confirmar
 
 - A árvore foi harmonizada com ESC 2026: ICFEr com FEVE <50% e TSAT <20%; os cortes próprios dos ensaios e esquemas de bula não mudam por renomeação de fenótipo.
-- Classe e nível da atualização 2023 (I/A para sintomas, IIa/A para hospitalização): a tabela do artigo no European Heart Journal renderiza como imagem; os valores usados vêm dos Key Points do ACC e do documento do acervo sobre a atualização, que os conferiu no texto primário. O parágrafo de texto lido confirma "recomendada" e "deve ser considerada", mas não as letras de nível.
+- A recomendação atual e seu nível foram conferidos diretamente na tabela 19 da ESC 2026; os resultados de 2021/2023 abaixo têm contexto histórico.
 - Seção 13.5 da ESC 2021 (deficiência de ferro e anemia) não lida na íntegra: a menção à investigação de sangramento gastrointestinal e à contraindicação do ferro oral vem de fonte secundária (Sindone et al.) e da tabela de novas recomendações.
 - Intervalo de reavaliação: 3 meses está documentado; 6 meses não foi confirmado.
 - Esquema de dose da derisomaltose no IRONMAN não conferido; a bula lida é a de anemia ferropriva.

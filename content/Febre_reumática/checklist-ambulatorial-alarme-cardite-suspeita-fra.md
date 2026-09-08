@@ -19,7 +19,7 @@ source_refs:
 
 Uso: **primeira avaliação** ou **intervalo curto** enquanto se organiza eco hospitalar na suspeita de febre reumática aguda. A AHA 2015 (PMID 25908771) exige Doppler em todo caso suspeito; Ralph 2021 (PMID 33190309) orienta avaliação hospitalar — **este checklist cobre vigilância e destino**, não a contagem Jones completa nem a graduação terapêutica da cardite.
 
-Contexto: [`sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar`](/biblioteca/sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar). Árvore: [`fluxograma-ambulatorial-suspeita-fra-destino-hospital`](/biblioteca/fluxograma-ambulatorial-suspeita-fra-destino-hospital).
+Contexto: [sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar). Árvore: [fluxograma-ambulatorial-suspeita-fra-destino-hospital](/biblioteca/fluxograma-ambulatorial-suspeita-fra-destino-hospital).
 
 ## O que vigiar
 

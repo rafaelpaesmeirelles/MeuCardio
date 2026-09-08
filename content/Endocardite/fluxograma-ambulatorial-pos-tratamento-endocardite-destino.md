@@ -13,27 +13,27 @@ source_refs:
 
 # Fluxograma ambulatorial: pós-tratamento de endocardite — destino
 
-Prosa: [`sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar). Checklist: [`checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes`](/biblioteca/checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes). Suspeita pré-diagnóstico (não confundir): [`esc-2023-diretriz-endocardite-infecciosa`](/biblioteca/esc-2023-diretriz-endocardite-infecciosa). Recidiva (definições): [`recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao`](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao).
+Prosa: [sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar). Checklist: [checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes](/biblioteca/checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes). Suspeita pré-diagnóstico (não confundir): [esc-2023-diretriz-endocardite-infecciosa](/biblioteca/esc-2023-diretriz-endocardite-infecciosa). Recidiva (definições): [recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao](/biblioteca/recidiva-da-endocardite-infecciosa-relapso-versus-reinfeccao).
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Consulta / contato ambulatorial\npós-EI tratada ou em seguimento\n(1º ano / pós-alta)"] --> D1{"Há alarme de PS?\nhipotensão / IC aguda / embolia\ndéficit neurológico / bacteremia já\nerosão-secreção de bolso / toxemia"}
+  R0["Consulta / contato ambulatorial<br/>pós-EI tratada ou em seguimento<br/>(1º ano / pós-alta)"] --> D1{"Há alarme de PS?<br/>hipotensão / IC aguda / embolia<br/>déficit neurológico / bacteremia já<br/>erosão-secreção de bolso / toxemia"}
 
-  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS / emergência\nCulturas prontamente se viável\nNÃO atrasar ressuscitação/ATB para completar pares\nAvisar lab + Endocarditis Team"])
+  D1 -->|"Sim ou dúvida fundamentada"| C1(["Encaminhar AGORA ao PS / emergência<br/>Culturas prontamente se viável<br/>NÃO atrasar ressuscitação/ATB para completar pares<br/>Avisar lab + Endocarditis Team"])
 
-  D1 -->|"Não"| D2{"Febre / síndrome infecciosa\nsem foco alternativo convincente?"}
+  D1 -->|"Não"| D2{"Febre / síndrome infecciosa<br/>sem foco alternativo convincente?"}
 
-  D2 -->|"Sim"| P1["NÃO iniciar antibiótico ambulatorial\nPriorizar hemoculturas + via de EI\nConsiderar recidiva (ver slug dedicado)"]
-  P1 --> D3{"Há coleta estruturada +\nencaminhamento no mesmo dia?"}
+  D2 -->|"Sim"| P1["NÃO iniciar antibiótico ambulatorial<br/>Priorizar hemoculturas + via de EI<br/>Considerar recidiva (ver slug dedicado)"]
+  P1 --> D3{"Há coleta estruturada +<br/>encaminhamento no mesmo dia?"}
 
-  D3 -->|"Não"| C2(["PS / urgência no mesmo dia\nCulturas antes de novo ATB se viável\nSem atrasar tratamento urgente"])
-  D3 -->|"Sim"| C3(["Coletar hemoculturas agora\nAcionar eco/Endocarditis Team\nNão protocolar doses neste fluxo"])
+  D3 -->|"Não"| C2(["PS / urgência no mesmo dia<br/>Culturas antes de novo ATB se viável<br/>Sem atrasar tratamento urgente"])
+  D3 -->|"Sim"| C3(["Coletar hemoculturas agora<br/>Acionar eco/Endocarditis Team<br/>Não protocolar doses neste fluxo"])
 
-  D2 -->|"Foco alternativo claro e estável"| C4(["Avaliar culturas antes de novo ATB\nTratar o foco com prudência\nPlano escrito de alarmes\nReavaliar se febre persiste 24–48 h"])
+  D2 -->|"Foco alternativo claro e estável"| C4(["Avaliar culturas antes de novo ATB<br/>Tratar o foco com prudência<br/>Plano escrito de alarmes<br/>Reavaliar se febre persiste 24–48 h"])
 
-  D2 -->|"Sem infecção — consulta eletiva"| C5(["Reforçar higiene oral + alarmes\nCoordenar dentista/cardiologia\nantes de procedimento de risco\n(sem regimes neste fluxo)"])
+  D2 -->|"Sem infecção — consulta eletiva"| C5(["Reforçar higiene oral + alarmes<br/>Coordenar dentista/cardiologia<br/>antes de procedimento de risco<br/>(sem regimes neste fluxo)"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;

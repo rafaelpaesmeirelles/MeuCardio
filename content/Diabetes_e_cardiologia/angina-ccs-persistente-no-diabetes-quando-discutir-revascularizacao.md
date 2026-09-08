@@ -18,7 +18,7 @@ source_refs:
 
 Cenário: adulto com **diabetes** e **síndrome coronariana crônica (CCS)** — **sem** critério de SCA no momento da consulta. A pergunta é de **timing de discussão de revascularização**, não de protocolar miligramas de antianginoso.
 
-Contexto geral: [`sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar`](/biblioteca/sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar). Árvore: [`fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento`](/biblioteca/fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento). Evidência CABG vs PCI: [`revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom`](/biblioteca/revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom).
+Contexto geral: [sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-ascvd-no-diabetes-quando-encaminhar). Árvore: [fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento](/biblioteca/fluxograma-ambulatorial-ascvd-diabetes-destino-encaminhamento). Evidência CABG vs PCI: [revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom](/biblioteca/revascularizacao-multiarterial-no-diabetes-cabg-versus-pci-o-ensaio-freedom).
 
 ## Por que este braço existe
 

@@ -14,46 +14,46 @@ source_refs:
 
 # Fluxograma ambulatorial: CMD e ACM — genética e rastreio familiar
 
-Prosa: [`sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico`](/biblioteca/sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico) e [`sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar).
+Prosa: [sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico](/biblioteca/sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico) e [sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar).
 
-Não substitui [`fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita`](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita) (árvore EHRA completa, já revisada).
+Não substitui [fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita) (árvore EHRA completa, já revisada).
 
 ## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  R0["Consulta: CMD/NDLVC ou ACM/ARVC\nconhecida ou alta suspeita"] --> D1{"Alarme urgente?\nsíncope recente inexplicada / TV sustentada atual\nchoques repetidos ou com sintomas\nBAV avançado / IC aguda"}
+  R0["Consulta: CMD/NDLVC ou ACM/ARVC<br/>conhecida ou alta suspeita"] --> D1{"Alarme urgente?<br/>síncope recente inexplicada / TV sustentada atual<br/>choques repetidos ou com sintomas<br/>BAV avançado / IC aguda"}
 
-  D1 -->|"Sim"| C1(["Encaminhar AGORA\nPS / urgência\nGenética NÃO atrasa"])
+  D1 -->|"Sim"| C1(["Encaminhar AGORA<br/>PS / urgência<br/>Genética NÃO atrasa"])
 
-  D1 -->|"Não"| D2{"Fenótipo de alta probabilidade\n(diagnóstico ou Task Force/Padua\nem discussão estruturada)?"}
+  D1 -->|"Não"| D2{"Fenótipo de alta probabilidade<br/>(diagnóstico ou Task Force/Padua<br/>em discussão estruturada)?"}
 
-  D2 -->|"Não — fenótipo fraco"| C2(["Não pedir painel amplo\nReavaliar clínica/imagem\nEHRA: não testar evidência fraca"])
+  D2 -->|"Não — fenótipo fraco"| C2(["Não pedir painel amplo<br/>Reavaliar clínica/imagem<br/>EHRA: não testar evidência fraca"])
 
-  D2 -->|"Sim"| C3(["Referir ACONSELHAMENTO genético\nantes de qualquer amostra\nEducação + direito de não testar"])
+  D2 -->|"Sim"| C3(["Referir ACONSELHAMENTO genético<br/>antes de qualquer amostra<br/>Educação + direito de não testar"])
 
-  C3 --> D3{"Após aconselhamento:\nsegue teste no índice?"}
+  C3 --> D3{"Após aconselhamento:<br/>segue teste no índice?"}
 
-  D3 -->|"Não"| C4(["Vigilância do índice\n+ rastreio CLÍNICO\ndos parentes de 1º grau"])
+  D3 -->|"Não"| C4(["Vigilância do índice<br/>+ rastreio CLÍNICO<br/>dos parentes de 1º grau"])
 
   D3 -->|"Sim"| D4{"Resultado no índice?"}
 
-  D4 -->|"P/LP"| C5(["Cascata dirigida à variante\nConfirmar causalidade familiar\nSeparar resultado e fenótipo"])
-  D4 -->|"VUS"| C6(["VUS não autoriza cascata preditiva\nSegregação especializada se informativa\nParentes → rastreio CLÍNICO"])
-  D4 -->|"Negativo / inconclusivo"| C7(["Sem cascata genética\nParentes → rastreio CLÍNICO\nperiódico"])
+  D4 -->|"P/LP"| C5(["Cascata dirigida à variante<br/>Confirmar causalidade familiar<br/>Separar resultado e fenótipo"])
+  D4 -->|"VUS"| C6(["VUS não autoriza cascata preditiva<br/>Segregação especializada se informativa<br/>Parentes → rastreio CLÍNICO"])
+  D4 -->|"Negativo / inconclusivo"| C7(["Sem cascata genética<br/>Parentes → rastreio CLÍNICO<br/>periódico"])
 
   C5 --> DP{"Portador ou fenótipo presente?"}
   DP -->|"Sim"| D5
-  DP -->|"Não"| DC{"Variante causal familiar\nbem estabelecida?"}
-  DC -->|"Sim"| CF(["Alta do rastreio periódico\nOrientar novos sintomas"])
+  DP -->|"Não"| DC{"Variante causal familiar<br/>bem estabelecida?"}
+  DC -->|"Sim"| CF(["Alta do rastreio periódico<br/>Orientar novos sintomas"])
   DC -->|"Não / dúvida"| C7
-  D5{"Parente em rastreio\ncom sintoma/ECG/imagem novos?"}
+  D5{"Parente em rastreio<br/>com sintoma/ECG/imagem novos?"}
   C6 --> D5
   C7 --> D5
   C4 --> D5
 
-  D5 -->|"Sim"| C8(["Reaplicar gate D1\nno rastreado\nPS ou retorno curto"])
-  D5 -->|"Não"| C9(["Manter plano familiar\nRetorno conforme rede\nSem doses neste fluxograma"])
+  D5 -->|"Sim"| C8(["Reaplicar gate D1<br/>no rastreado<br/>PS ou retorno curto"])
+  D5 -->|"Não"| C9(["Manter plano familiar<br/>Retorno conforme rede<br/>Sem doses neste fluxograma"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;

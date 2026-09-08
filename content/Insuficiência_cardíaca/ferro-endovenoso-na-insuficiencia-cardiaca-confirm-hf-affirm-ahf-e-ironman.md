@@ -7,13 +7,13 @@ review_status: revisado
 source_refs: ["Ponikowski P, van Veldhuisen DJ, Comin-Colet J, et al. Beneficial effects of long-term intravenous iron therapy with ferric carboxymaltose in patients with symptomatic heart failure and iron deficiency (CONFIRM-HF). Eur Heart J. 2015;36(11):657-668. DOI: 10.1093/eurheartj/ehu385. PMID: 25176939", "Ponikowski P, Kirwan BA, Anker SD, et al. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure (AFFIRM-AHF). Lancet. 2020;396(10266):1895-1904. DOI: 10.1016/S0140-6736(20)32339-4. PMID: 33197395", "Kalra PR, Cleland JGF, Petrie MC, et al; IRONMAN Study Group. Intravenous ferric derisomaltose in patients with heart failure and iron deficiency in the UK (IRONMAN): an investigator-initiated, prospective, randomised, open-label, blinded-endpoint trial. Lancet. 2022;400(10369):2199-2209. DOI: 10.1016/S0140-6736(22)02083-9. PMID: 36347265"]
 ---
 
+# Ferro Endovenoso na Insuficiência Cardíaca: CONFIRM-HF, AFFIRM-AHF e IRONMAN
+
 ## Atualização clínica ESC 2026
 
 A seção 10.4 apoia TSAT <20% para identificar deficiência de ferro na IC; ferritina continua útil na investigação. Ferritina baixa isolada com TSAT ≥20% não aciona automaticamente infusão. A Recommendation Table 19 indica ferro IV para sintomas e qualidade de vida na ICFEr sintomática (FEVE <50%; I B1), e considera seu uso para reduzir hospitalizações (IIa B1). Os critérios de entrada dos ensaios permanecem históricos e não são ampliados por mudança de nomenclatura. Reação grave prévia a qualquer ferro parenteral bloqueia encaminhamento rotineiro e exige revisão especializada/bula local; recursos de emergência não eliminam contraindicações.
 
 Fonte: Køber L, Adamo M et al. ESC 2026, DOI 10.1093/eurheartj/ehag100, seção 10.4 e tabela 19; EMA intravenous iron referral.
-
-# Ferro Endovenoso na Insuficiência Cardíaca: CONFIRM-HF, AFFIRM-AHF e IRONMAN
 
 ## Definicao
 O documento de atualização focada 2023 desta biblioteca já registra as recomendações de classe I e IIa para ferro endovenoso na IC com deficiência de ferro, e nomeia os três ensaios que as sustentam (CONFIRM-HF, AFFIRM-AHF, IRONMAN) — mas sem número nenhum. Este documento traz o resultado de cada um, porque os três respondem perguntas diferentes: sintoma/capacidade funcional (CONFIRM-HF), desfecho clínico pós-alta de IC aguda (AFFIRM-AHF) e desfecho clínico de longo prazo com outra formulação (IRONMAN).

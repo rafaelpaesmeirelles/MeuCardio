@@ -37,3 +37,5 @@ PVC monomórfico frequente em paciente estável, sem canalopatia/estrutura aguda
 Este documento não prescreve antiarrítmicos em doses.
 
 FEVE preservada não exclui cicatriz, cardiomiopatia do VD ou valvopatia: achados estruturais/atípicos exigem investigação e RM quando indicada antes de atribuir baixo risco. Evento remoto sem instabilidade atual requer avaliação especializada célere, sem tornar toda história prévia uma emergência. Sintomas leves inespecíficos isolados em padrão de Brugada não equivalem a síncope arrítmica.
+
+A carga de PVC varia entre dias. Um Holter isolado deve ser interpretado com duração e representatividade da gravação; discordância com sintomas ou suspeita de cardiomiopatia pode exigir repetição ou monitorização mais longa antes de atribuir causalidade ou decidir intervenção.

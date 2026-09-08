@@ -17,7 +17,7 @@ source_refs:
 
 # Fluxograma ambulatorial: suspeita de FRA — destino hospitalar
 
-Prosa: [`sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar`](/biblioteca/sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar). Checklist: [`checklist-ambulatorial-alarme-cardite-suspeita-fra`](/biblioteca/checklist-ambulatorial-alarme-cardite-suspeita-fra). Diagnóstico: [`fluxograma-febre-reumatica-aguda-criterios-de-jones-2015`](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015). Adesão benzatina (#850): [`febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda`](/biblioteca/febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda).
+Prosa: [sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar](/biblioteca/sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar). Checklist: [checklist-ambulatorial-alarme-cardite-suspeita-fra](/biblioteca/checklist-ambulatorial-alarme-cardite-suspeita-fra). Diagnóstico: [fluxograma-febre-reumatica-aguda-criterios-de-jones-2015](/biblioteca/fluxograma-febre-reumatica-aguda-criterios-de-jones-2015). Adesão benzatina (#850): [febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda](/biblioteca/febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda).
 
 ## Árvore de decisão
 

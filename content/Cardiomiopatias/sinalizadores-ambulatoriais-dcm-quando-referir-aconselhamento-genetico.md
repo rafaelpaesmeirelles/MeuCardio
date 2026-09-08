@@ -18,12 +18,12 @@ source_refs:
 Pergunta de **consultório**: paciente com **cardiomiopatia dilatada (CMD)** ou fenótipo **NDLVC** — **quando o próximo passo ambulatorial é aconselhamento genético** (e não “pedir painel sem plano familiar”), e quais sinais pedem **escalada urgente** antes da genética.
 
 Não substitui:
-- protocolo completo — [`cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023`](/biblioteca/cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023);
-- árvore genética MS — [`fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita`](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita);
-- CDI / risco — [`fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi`](/biblioteca/fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi);
+- protocolo completo — [cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023](/biblioteca/cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023);
+- árvore genética MS — [fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita](/biblioteca/fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita);
+- CDI / risco — [fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi](/biblioteca/fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi);
 - pacote HCM/amiloide (#844) nem Chagas (#862).
 
-Árvore irmã: [`fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar`](/biblioteca/fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar). ACM: [`sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar`](/biblioteca/sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar).
+Árvore irmã: [fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar](/biblioteca/fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar). ACM: [sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar](/biblioteca/sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar).
 
 ## Princípio
 

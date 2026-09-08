@@ -18,10 +18,10 @@ source_refs:
 Pergunta de consultório: diante de **QTc prolongado**, SQTL conhecida/suspeita ou uso de fármaco que prolonga QT, qual é o destino seguro?
 
 Não substitui:
-- [`canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo`](/biblioteca/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo);
-- [`arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022`](/biblioteca/arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022);
-- [`fluxograma-sinalizadores-ambulatoriais-qt-longo`](/biblioteca/fluxograma-sinalizadores-ambulatoriais-qt-longo);
-- [`qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt`](/biblioteca/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt).
+- [canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo](/biblioteca/canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo);
+- [arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022](/biblioteca/arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022);
+- [fluxograma-sinalizadores-ambulatoriais-qt-longo](/biblioteca/fluxograma-sinalizadores-ambulatoriais-qt-longo);
+- [qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt](/biblioteca/qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt).
 
 ## 1. Emergência é definida pelo paciente atual, não por um familiar
 
@@ -69,7 +69,7 @@ Encaminhar a eletrofisiologia/clínica de canalopatias e considerar aconselhamen
 5. Se houver alto risco, retirar/pausar o ofensor quando clinicamente apropriado e definir urgência do monitoramento.
 6. Se risco for baixo/intermediário e o benefício for claro, não suspender de modo reflexo; coordenar com o prescritor e reavaliar.
 
-Psicofármacos essenciais devem ser manejados em conjunto com a orientação existente: [`fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt`](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
+Psicofármacos essenciais devem ser manejados em conjunto com a orientação existente: [fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt](/biblioteca/fluxograma-escolha-de-antidepressivo-e-antipsicotico-no-cardiopata-risco-de-qt).
 
 ## Checklist de 90 segundos
 

@@ -19,9 +19,9 @@ source_refs:
 
 Cenário: adulto no retorno (IC, DAC, HAS, FA anticoagulada, prevenção, geriatria) com dor musculoesquelética ou uso de “anti-inflamatório da farmácia”.
 
-Complementa: [`sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico`](/biblioteca/sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico) · [`fluxograma-ambulatorial-aine-quando-evitar-e-escalar`](/biblioteca/fluxograma-ambulatorial-aine-quando-evitar-e-escalar).
+Complementa: [sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico](/biblioteca/sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico) · [fluxograma-ambulatorial-aine-quando-evitar-e-escalar](/biblioteca/fluxograma-ambulatorial-aine-quando-evitar-e-escalar).
 
-Ensaio de magnitude: [`anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt`](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt).
+Ensaio de magnitude: [anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt](/biblioteca/anti-inflamatorios-nao-esteroidais-aines-e-risco-cardiovascular-metanalise-cnt).
 
 ## Checklist de 60–90 segundos
 
