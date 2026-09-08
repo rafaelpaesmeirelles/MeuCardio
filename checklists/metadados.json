@@ -39157,5 +39157,314 @@
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam da diretriz citada em source_refs, com a seção de origem registrada em cada item.",
     "review_note": "Revisão técnica, documental e de consistência assistida concluída em 04/09/2026; fontes, duplicidade, integridade estrutural e segurança editorial verificadas para preparação do corpus sob autorização do responsável médico."
+  },
+  {
+    "slug": "escolha-do-metodo-de-imagem-para-viabilidade-miocardica-pre-revascularizacao",
+    "condicao": "Escolha de método de imagem para avaliação de viabilidade miocárdica antes de revascularização",
+    "resumo": "Checklist comparativo para apoiar a escolha entre os métodos de imagem disponíveis para avaliar viabilidade miocárdica em disfunção ventricular esquerda isquêmica antes de decidir revascularização — ecocardiograma com dobutamina em baixa dose (contratilidade de reserva), cintilografia de perfusão com tálio-201 ou tecnécio-99m (captação em repouso), PET com FDG (metabolismo glicolítico residual) e ressonância magnética cardíaca com realce tardio (extensão transmural da fibrose) —, organizado por critérios práticos de decisão (disponibilidade local, função renal, dispositivo cardíaco implantável não condicional, objetivo clínico do exame) e não como protocolo de execução de um único método. Não aborda se revascularizar nem o manejo da síndrome coronariana crônica em si.",
+    "documento_origem": null,
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mastrocola LE, Amorim BJ, Vitola JV, Brandão SCS, Grossman GB, Lima RSL, Lopes RW, Chalela WA, Carreira LCTF, Araújo JRN, Mesquita CT, Meneghetti JC, et al. Atualização da Diretriz de Cardiologia Nuclear da SBC – 2020 · Arquivos Brasileiros de Cardiologia · 2020 · 114(2):325-429 · DOI: 10.36660/abc.20200087 · PMID: 32215507",
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, Lopes MMU, Cerci RJ, Nacif MS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC e do Colégio Brasileiro de Radiologia – 2024 · Arquivos Brasileiros de Cardiologia · 2024 · 121(9):e20240608 · DOI: 10.36660/abc.20240608 · PMID: 39475988",
+      "Knuuti J, Wijns W, Saraste A, Capodanno D, Barbato E, Funck-Brentano C, et al. 2019 ESC Guidelines for the diagnosis and management of chronic coronary syndromes · European Heart Journal · 2020 · 41(3):407-477 · DOI: 10.1093/eurheartj/ehz425 · PMID: 31504439",
+      "Dilsizian V, Bacharach SL, Beanlands RS, Bergmann SR, Delbeke D, Dorbala S, Gropler RJ, Knuuti J, Schelbert HR, Travin MI. ASNC imaging guidelines/SNMMI procedure standard for positron emission tomography (PET) nuclear cardiology procedures · Journal of Nuclear Cardiology · 2016 · 23(5):1187-1226 · DOI: 10.1007/s12350-016-0522-3 · PMID: 27392702",
+      "Kim RJ, Wu E, Rafael A, Chen EL, Parker MA, Simonetti O, Klocke FJ, Bonow RO, Judd RM. The use of contrast-enhanced magnetic resonance imaging to identify reversible myocardial dysfunction · New England Journal of Medicine · 2000 · 343(20):1445-1453 · DOI: 10.1056/NEJM200011163432003 · PMID: 11078769",
+      "STICH viability substudy. https://doi.org/10.1056/NEJMoa1100358",
+      "REVIVED-BCIS2. https://doi.org/10.1056/NEJMoa2206606"
+    ],
+    "itens": [
+      {
+        "id": "vmi-decisao-nao-automatica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Solicitar apenas se a informação puder mudar a decisão. Viabilidade não é gate obrigatório para CABG nem demonstra benefício prognóstico de PCI por si só: STICH não mostrou interação do benefício cirúrgico com viabilidade e REVIVED foi neutro apesar de miocárdio viável. Integrar anatomia, sintomas, risco e tratamento clínico.",
+        "origem_secao": "STICH viability; REVIVED-BCIS2"
+      },
+      {
+        "id": "vmi-objetivo-clinico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Objetivo do exame definido antes de escolher o método: pesquisar contratilidade de reserva (resposta inotrópica a estímulo farmacológico), captação/perfusão em repouso, metabolismo glicolítico residual, ou extensão transmural de fibrose — cada objetivo aponta para um método diferente, não para uma escala única de 'melhor exame'",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, capítulo de avaliação de viabilidade miocárdica"
+      },
+      {
+        "id": "vmi-disponibilidade-local",
+        "categoria": "estrutura",
+        "obrigatorio": true,
+        "texto": "Disponibilidade local e experiência da equipe com cada método verificadas antes de indicar — ecocardiograma com dobutamina e cintilografia de perfusão são amplamente acessíveis na maioria dos serviços; PET com FDG depende de produção do 18F em cíclotron e logística de fornecimento do radiofármaco, que pode vir de centro regional; gerador de rubídio não produz FDG, e está concentrado em poucos centros",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear; ASNC/SNMMI 2016 — guideline de PET, considerações de infraestrutura"
+      },
+      {
+        "id": "vmi-funcao-renal-contraste",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Função renal (taxa de filtração glomerular estimada) verificada antes de indicar ressonância magnética cardíaca com contraste à base de gadolínio para realce tardio — necessária para avaliar o risco de fibrose sistêmica nefrogênica em disfunção renal grave; ecocardiograma, cintilografia e PET não dependem de contraste nefrotóxico para avaliar viabilidade Em disfunção renal grave, gadolínio de grupo II pode ser utilizado quando o benefício justificar o risco muito baixo de FSN; avaliar agente, LRA e protocolo local, sem excluir RM automaticamente.",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de segurança do contraste"
+      },
+      {
+        "id": "vmi-cied-nao-condicional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Presença de marca-passo, CDI ou outro dispositivo cardíaco eletrônico implantável pesquisada antes de indicar ressonância magnética — dispositivo não condicional para RM não é contraindicação absoluta, mas exige protocolo de segurança dedicado (reprogramação, monitorização, equipe capacitada); quando esse protocolo não está disponível no serviço, a RM deixa de ser a opção prática mesmo sendo a mais informativa",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular; protocolo institucional correspondente a dispositivo não condicional"
+      },
+      {
+        "id": "vmi-contraindicacao-dobutamina",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Contraindicações ao estresse farmacológico com dobutamina pesquisadas antes de indicar o ecocardiograma sob dobutamina — arritmia ventricular significativa não controlada, hipertensão grave não controlada, e obstrução dinâmica relevante da via de saída do ventrículo esquerdo — quando presentes, deslocam a escolha para um método sem estímulo inotrópico",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de testes de estresse farmacológico"
+      },
+      {
+        "id": "vmi-janela-acustica",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Qualidade da janela acústica avaliada antes de indicar ecocardiograma com dobutamina — janela tecnicamente limitada (obesidade, doença pulmonar, deformidade torácica) reduz a confiabilidade da leitura de contratilidade segmentar e favorece um método de imagem tomográfica (cintilografia, PET ou ressonância) em vez de insistir no eco",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de limitações técnicas do ecocardiograma sob estresse"
+      },
+      {
+        "id": "vmi-radiacao-ionizante",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Necessidade de evitar radiação ionizante ponderada quando aplicável (paciente jovem, gestante, exames repetidos previstos no seguimento) — cintilografia de perfusão e PET expõem o paciente a radiação ionizante; ecocardiograma com dobutamina e ressonância magnética não Ausência de radiação não torna dobutamina ou gadolínio automaticamente adequados na gestação; evitar exame eletivo sem impacto clínico e discutir com equipe obstétrica.",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear, seção de radioproteção"
+      },
+      {
+        "id": "vmi-extensao-transmural-fibrose",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Se a decisão exige quantificar a extensão transmural da fibrose (e não apenas classificar o segmento como viável ou não), a ressonância cardíaca com realce tardio é o método com maior resolução espacial disponível para essa graduação — quanto maior a extensão transmural do realce tardio em um segmento, menor a probabilidade de recuperação contrátil após revascularização",
+        "origem_secao": "Kim RJ et al., NEJM 2000 (PMID 11078769); SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular"
+      },
+      {
+        "id": "vmi-pet-fdg-referencia",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Quando disponível e o resultado de outro método for discordante da apresentação clínica, ou a decisão envolver alto risco cirúrgico, considerar PET com FDG — avalia o metabolismo glicolítico residual do miocárdio hibernado e é tratado pela ASNC/SNMMI como método de referência para viabilidade entre os exames de medicina nuclear, sobretudo quando combinado a estudo de perfusão em repouso para caracterizar o padrão de descompasso perfusão-metabolismo",
+        "origem_secao": "ASNC/SNMMI 2016 — guideline de PET em cardiologia nuclear, seção de avaliação de viabilidade miocárdica"
+      },
+      {
+        "id": "vmi-informacao-etiologica-adicional",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a etiologia da disfunção ventricular ainda não está esclarecida (dúvida entre origem isquêmica e não isquêmica — miocardite, doença infiltrativa, cardiomiopatia não compactada), considerar que a ressonância cardíaca soma essa informação ao mesmo exame que avalia viabilidade, o que nenhum dos outros três métodos oferece isoladamente",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de caracterização tecidual"
+      },
+      {
+        "id": "vmi-capacidade-cooperacao-exame",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Capacidade do paciente de cooperar com o protocolo verificada antes de indicar ressonância magnética — apneias repetidas, permanência prolongada no túnel (claustrofobia) e ritmo cardíaco estável para sincronização com o ECG são necessários; fibrilação atrial não controlada ou incapacidade de cooperar tornam a aquisição tecnicamente difícil e podem inviabilizar a leitura",
+        "origem_secao": "SBC 2024 — Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular, seção de preparo e limitações técnicas"
+      },
+      {
+        "id": "vmi-custo-tempo-execucao",
+        "categoria": "estrutura",
+        "obrigatorio": false,
+        "texto": "Custo e tempo de execução comparados entre os métodos disponíveis no serviço quando mais de um atende ao objetivo clínico — ecocardiograma com dobutamina costuma ser o mais rápido e de menor custo direto; PET com FDG costuma ser o mais restrito por custo e logística de radiofármaco, o que pesa na escolha quando a informação adicional não muda a conduta",
+        "origem_secao": "SBC 2020 — Atualização da Diretriz de Cardiologia Nuclear; ASNC/SNMMI 2016 — guideline de PET, considerações de custo-efetividade"
+      }
+    ],
+    "revisao": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Viabilidade não decide revascularização isoladamente; FDG não vem de gerador de rubídio; RM/gestação/renal individualizados.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Viabilidade não decide revascularização isoladamente; FDG não vem de gerador de rubídio; RM/gestação/renal individualizados."
+  },
+  {
+    "slug": "flutter-atrial-tipico-cardioversao-anticoagulacao-e-ablacao-do-istmo",
+    "condicao": "Flutter atrial típico — cardioversão, anticoagulação e ablação do istmo cavotricuspídeo",
+    "resumo": "Sequência de decisão do flutter atrial típico istmo-dependente: cardioversão elétrica imediata no instável, anticoagulação pelo mesmo princípio da FA (CHA2DS2-VA) no estável, janela segura para reverter o ritmo (24h, 3 semanas de anticoagulação ou ETE sem trombo), 4 semanas de anticoagulação após qualquer reversão e ablação do istmo cavotricuspídeo como tratamento definitivo, não de resgate.",
+    "documento_origem": "fluxograma-flutter-atrial-tipico-anticoagulacao-cardioversao-e-ablacao-do-istmo",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Brugada J, Katritsis DG, Arbelo E, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. Eur Heart J. 2020;41(5):655-720. DOI: 10.1093/eurheartj/ehz467. PMID: 31504425",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723",
+      "Da Costa A, Thévenin J, Roche F, et al. Results from the Loire-Ardèche-Drôme-Isère-Puy-de-Dôme (LADIP) trial on atrial flutter — comparison between amiodarone and radiofrequency ablation after the first episode of symptomatic atrial flutter. Circulation. 2006;114(16):1676-1681. PMID: 17030680",
+      "Enriquez A, Sarrias A, Villuendas R, et al. New-onset atrial fibrillation after cavotricuspid isthmus ablation: identification of advanced interatrial block is key. Europace. 2015;17(8):1289-1293. PMID: 25672984",
+      "Joglar JA et al. 2023 ACC/AHA/ACCP/HRS AF guideline, seção de anticoagulação no flutter típico. https://doi.org/10.1161/CIR.0000000000001193"
+    ],
+    "itens": [
+      {
+        "id": "flt-diagnostico-tipico",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Flutter atrial compatível com típico — istmo-dependente: morfologia típica sugere o circuito, confirmado na avaliação eletrofisiológica quando realizada; ondas F em serrilhado nas derivações inferiores ao ECG, macrorreentrada obrigatoriamente dependente do istmo cavotricuspídeo (ICT). Distinto do flutter atípico (circuito fora do ICT, tipicamente pós-cirurgia cardíaca ou pós-ablação de FA), que segue via de conduta própria",
+        "origem_secao": "Abertura / Limitações e o que confirmar"
+      },
+      {
+        "id": "flt-instabilidade-hemodinamica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Instabilidade hemodinâmica avaliada de imediato — hipotensão, choque, isquemia ou insuficiência cardíaca aguda atribuíveis ao flutter. Se presente: cardioversão elétrica sincronizada imediata (Classe I, nível B), sem aguardar fármaco ou anticoagulação prévia",
+        "origem_secao": "Instável: cardioversão sincronizada sem esperar fármaco"
+      },
+      {
+        "id": "flt-anticoagulacao-apos-cardioversao-urgencia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se cardioversão de urgência por instabilidade: anticoagulação iniciada a partir daí e mantida por pelo menos 4 semanas, sem exceção pela urgência do procedimento (ESC 2024, Classe I, nível B) Iniciar assim que viável, considerando contraindicação absoluta/sangramento ativo; isso não deve atrasar a cardioversão salvadora.",
+        "origem_secao": "Instável: cardioversão sincronizada sem esperar fármaco"
+      },
+      {
+        "id": "flt-estavel-anticoagulacao-cha2ds2va",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente estável: anticoagulação decidida pelo mesmo princípio da fibrilação atrial, calculada pelo escore CHA2DS2-VA (sem o ponto de sexo feminino, ESC 2024) — escore 2 ou mais: iniciar anticoagulante oral (I, C); escore 1: considerar anticoagulante (IIa, C); escore 0: sem indicação pelo escore, mas ainda assim 4 semanas obrigatórias após qualquer cardioversão",
+        "origem_secao": "Estável: anticoagular como na FA antes de decidir o resto"
+      },
+      {
+        "id": "flt-decisao-reverter-ou-controlar",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Documentar estratégia. Antes de bloqueador do nó AV, excluir pré-excitação/ritmo largo irregular e avaliar pressão, perfusão e função ventricular. Evitar verapamil/diltiazem em disfunção sistólica importante ou IC descompensada; betabloqueador IV também exige cautela ou contraindicação em choque/IC aguda. Amiodarona pode converter o ritmo: não a tratar como controle de frequência sem risco tromboembólico. Flutter pré-excitado segue emergência/eletrofisiologia, sem bloqueadores AV empíricos. Controle de frequência pode ser difícil e o alvo deve considerar sintomas e função ventricular.",
+        "origem_secao": "Controle de frequência: por que costuma falhar"
+      },
+      {
+        "id": "flt-janela-segura-reversao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "No estável, documentar início, risco e anticoagulação periprocedimento. Duração >24h ou incerta exige três semanas terapêuticas comprovadas ou ETE excluindo trombo antes da reversão eletiva; ETE negativo não dispensa anticoagulação. Início seguramente <24h permite considerar reversão precoce com avaliação do risco e anticoagulação adequada; não é autorização automática. Trombo detectado adia reversão eletiva. Instabilidade mantém cardioversão imediata.",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-metodo-reversao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Método de reversão escolhido conforme preferência clínica e disponibilidade: cardioversão elétrica sincronizada de baixa energia, até 100 J bifásico (I, B — geralmente mais eficaz e com menos energia que na FA); ibutilida IV, ou dofetilida IV/oral em hospital (I, B — contraindicadas se QTc prolongado); ou estimulação atrial de alta frequência se marcapasso/CDI com eletrodo atrial já implantado (I, B). Flecainida e propafenona não recomendadas nesse contexto (Classe III, nível B)",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-anticoagulacao-4-semanas-apos-reversao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica prescrita por pelo menos 4 semanas após qualquer método de reversão bem-sucedido, independentemente do CHA2DS2-VA — mesma regra da cardioversão eletiva de fibrilação atrial",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-nao-suspender-por-escore-zero",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a não suspender a anticoagulação logo após reversão bem-sucedida só porque o CHA2DS2-VA é 0 — a regra das 4 semanas não depende do risco tromboembólico crônico",
+        "origem_secao": "Reversão no estável: elétrica, farmacológica ou por estimulação"
+      },
+      {
+        "id": "flt-indicacao-ablacao-ict",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Ablação do istmo cavotricuspídeo discutida como tratamento definitivo do flutter típico, não como recurso de resgate: Classe I, nível A no flutter sintomático recorrente; Classe IIa, nível B já após o primeiro episódio sintomático, dentro de decisão compartilhada com o paciente",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-farmaco-se-nao-ablacao",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se ablação recusada ou indisponível: betabloqueador, verapamil ou diltiazem para controle de longo prazo (IIa, C), amiodarona se falharem (IIb, C) As mesmas restrições por pré-excitação, função ventricular e instabilidade se aplicam ao seguimento; decisão farmacológica individualizada por especialista.",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-informar-riscos-ablacao",
+        "categoria": "comunicacao",
+        "obrigatorio": false,
+        "texto": "Paciente informado de que a ablação do ICT com bloqueio bidirecional confirmado deixa recorrência abaixo de 10%, com mortalidade de 0,2 a 0,34% e AVC de 0,19 a 0,5% em séries recentes",
+        "origem_secao": "Longo prazo: ablação do ICT é primeira linha, não resgate"
+      },
+      {
+        "id": "flt-seguimento-fa-pos-ablacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Manter acompanhamento para FA após ablação CTI. A incidência varia amplamente com população, FA prévia, duração e intensidade da monitorização; não aplicar 50–70% universalmente. Anticoagular pelo menos quatro semanas após cardioversão/ablação de flutter e reavaliar tratamento prolongado conforme risco, FA prévia e monitorização, sem suspender automaticamente pelo sucesso técnico.",
+        "origem_secao": "Depois da ablação: a anticoagulação segue o escore, não o procedimento"
+      },
+      {
+        "id": "flt-distinguir-atipico",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "texto": "Confirmado que não se trata de flutter atípico — circuito fora do istmo cavotricuspídeo, tipicamente pós-cirurgia cardíaca ou pós-ablação de fibrilação atrial — cujo controle de frequência é ainda mais difícil e cuja ablação é restrita a centros experientes, com mapeamento mais complexo",
+        "origem_secao": "Limitações e o que confirmar"
+      }
+    ],
+    "revisao": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Gates pré-excitação/IC e conversão por amiodarona; Anticoagulação não dispensada por ETE/janela; FA pós-ablação não tem incidência universal.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Gates pré-excitação/IC e conversão por amiodarona; Anticoagulação não dispensada por ETE/janela; FA pós-ablação não tem incidência universal."
+  },
+  {
+    "slug": "planejamento-e-triagem-pre-tavi-consolidado",
+    "condicao": "Planejamento e triagem pré-TAVI consolidado",
+    "resumo": "Checklist que consolida, em sequência acionável, o workup pré-procedimento da estenose aórtica grave já indicada para TAVI pelo Heart Team: confirmação de gravidade/indicação, discussão em Heart Team com escore de risco cirúrgico (STS-PROM), angiotomografia de planejamento (anel aórtico e vias de acesso), avaliação de fragilidade, avaliação odontológica, consentimento informado sobre riscos específicos do procedimento e definição de via de acesso e tipo de prótese. Não repete os checklists já publicados por eixo específico (decisão do Heart Team guiada pelo STS-PROM, critérios de internação e encaminhamento, fragilidade pré-procedimento genérica, seguimento pós-TAVI) — organiza a sequência entre a indicação já estabelecida e o agendamento do procedimento, etapa hoje sem checklist próprio que a consolide de ponta a ponta.",
+    "documento_origem": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291 — versão dual-publicada em Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295. Título e periódico confirmados individualmente via PubMed E-utilities (esummary) para ambos os PMIDs antes do uso.",
+      "O'Brien SM, Feng L, He X, et al. The Society of Thoracic Surgeons 2018 Adult Cardiac Surgery Risk Models: Part 2-Statistical Methods and Results. Ann Thorac Surg. 2018;105(5):1419-1428. PMID: 29577924 — título, periódico e ano confirmados via PubMed E-utilities antes do uso.",
+      "Blanke P, Weir-McCall JR, Achenbach S, et al. Computed Tomography Imaging in the Context of Transcatheter Aortic Valve Implantation (TAVI)/Transcatheter Aortic Valve Replacement (TAVR): An Expert Consensus Document of the Society of Cardiovascular Computed Tomography. JACC Cardiovasc Imaging. 2019;12(1):1-24. PMID: 30621986 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; documento de referência para o conteúdo mínimo da angiotomografia de planejamento (anel aórtico, via de saída do ventrículo esquerdo, calcificação da zona de implante, risco de obstrução coronária e trajeto vascular de acesso).",
+      "Afilalo J, Lauck S, Kim DH, et al. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; já usado no checklist publicado 'fragilidade-avaliacao-pre-procedimento-cardiovascular-invasivo-no-idoso', ao qual este item de fragilidade remete sem repetir o conteúdo.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; recomendação de eliminar focos de sepse dentária antes do implante de prótese valvar ou outro material intracardíaco/intravascular, já citada no documento publicado 'fluxograma-endocardite-profilaxia-antibiotica-procedimento-odontologico-invasivo-esc-2023' desta base.",
+      "Mack MJ, Leon MB, Thourani VH, et al. Transcatheter Aortic-Valve Replacement with a Balloon-Expandable Valve in Low-Risk Patients (PARTNER 3). N Engl J Med. 2019;380(18):1695-1705. PMID: 30883058 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; um dos ensaios pivotais que caracterizam os riscos específicos do TAVI (marcapasso definitivo, vazamento paravalvular, AVC) citados no item de consentimento informado, sem atribuição de taxa numérica não verificada individualmente para este documento.",
+      "Popma JJ, Deeb GM, Yakubov SJ, et al. Transcatheter Aortic-Valve Replacement with a Self-Expanding Valve in Low-Risk Patients (Evolut Low Risk). N Engl J Med. 2019;380(18):1706-1715. PMID: 30883053 — título, periódico e ano confirmados via PubMed E-utilities antes do uso; mesmo uso do PARTNER 3 acima, para a plataforma autoexpansível."
+    ],
+    "itens": [
+      {
+        "id": "pretavi-confirmar-gravidade-indicacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmar, antes de iniciar o workup pré-procedimento, que a estenose aórtica grave está confirmada e que a indicação formal de intervenção já foi estabelecida — este checklist parte de indicação já definida pelo Heart Team e não substitui a avaliação de gravidade nem a decisão de quando intervir, cobertas em checklists e fluxogramas próprios já publicados.",
+        "origem_secao": "Estenose aortica"
+      },
+      {
+        "id": "pretavi-heart-team-sts-prom",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Discutir o caso em Heart Team com o escore de risco cirúrgico calculado (STS-PROM, complementado por EuroSCORE II quando disponível) como um dos eixos objetivos da escolha entre TAVI e SAVR — nunca como critério isolado nem substituto do julgamento clínico, anatômico e da preferência informada do paciente.",
+        "origem_secao": "Estenose aortica selecao intervencao"
+      },
+      {
+        "id": "pretavi-angiotc-anel-acesso",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Realizar angiotomografia de planejamento cobrindo o anel aórtico (dimensionamento da prótese), a via de saída do ventrículo esquerdo, o padrão de calcificação da zona de implante, o risco de obstrução coronária e o trajeto vascular de acesso (ilíaco-femoral e vias alternativas) antes da definição final de modalidade e de via de acesso. Se contraste/TC inviável, o Heart Team define estratégia alternativa multimodal e proteção renal; não se trata de exigência cega de contraste em todos.",
+        "origem_secao": "Principios diagnosticos"
+      },
+      {
+        "id": "pretavi-avaliar-fragilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar fragilidade por instrumento formal e padronizado — não pela idade cronológica isolada nem por impressão clínica subjetiva — como um dos parâmetros que o Heart Team integra na decisão em paciente idoso, junto a expectativa de vida, qualidade de vida antecipada e comorbidades; ver checklist dedicado de fragilidade pré-procedimento para o detalhamento do instrumento.",
+        "origem_secao": "Idosos tomada decisao"
+      },
+      {
+        "id": "pretavi-avaliacao-odontologica",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Solicitar avaliação odontológica e eliminar focos de sepse dentária antes do implante da prótese valvar, com antecedência suficiente para a cicatrização — medida de prevenção geral de endocardite infecciosa, distinta da profilaxia antibiótica de dose única do dia de um eventual procedimento odontológico. Em procedimento eletivo, buscar pelo menos duas semanas quando possível; não atrasar intervenção urgente necessária para completar tratamento odontológico. Infecção ativa relevante exige decisão conjunta.",
+        "origem_secao": "Papel equipe multidisciplinar"
+      },
+      {
+        "id": "pretavi-consentimento-informado-riscos",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Obter e documentar consentimento informado com discussão específica dos riscos característicos do TAVI — necessidade de marcapasso definitivo por distúrbio de condução, vazamento (leak) paravalvular e acidente vascular cerebral periprocedural — junto ao registro da preferência informada do paciente, sem atribuir ao caso individual uma taxa numérica de risco não calculada especificamente para ele.",
+        "origem_secao": "Estenose aortica selecao intervencao"
+      },
+      {
+        "id": "pretavi-definir-via-acesso-tipo-protese",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir, com base no planejamento anatômico da angiotomografia e na decisão do Heart Team, a via de acesso (transfemoral preferencial, com via alternativa nas contraindicações identificadas) e, quando a modalidade cirúrgica for a escolhida, o tipo de prótese (mecânica vs. biológica) antes de agendar o procedimento.",
+        "origem_secao": "Escolha protese"
+      },
+      {
+        "id": "pretavi-nao-pular-etapas-caso-aparentemente-obvio",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Documentar planejamento anatômico, fragilidade e prevenção de infecção, incluindo justificativa de adaptações em urgência ou contraindicação. Não atrasar procedimento salvador para completar etapas eletivas.",
+        "origem_secao": "Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Planejamento e avaliação dental não atrasam urgência; Alternativa a angioTC contraindicada.",
+    "fonte_producao": "claude",
+    "review_note": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Planejamento e avaliação dental não atrasam urgência; Alternativa a angioTC contraindicada."
   }
 ]
