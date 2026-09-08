@@ -1,0 +1,46 @@
+---
+title: "Fluxograma ambulatorial: pós-tMCS — PS vs avaliação vascular vs reavaliação pós-ponte"
+slug: fluxograma-ambulatorial-pos-tmcs-destino
+theme: "Terapia intensiva"
+kind: fluxograma
+fonte_producao: grok
+summary: "Árvore pós-explante de tMCS: gates independentes de hipoperfusão, congestão, isquemia/arritmia, complicação vascular e continuidade com o time implantador/IC avançada."
+review_status: revisado
+review_note: "Revisão clínica final 08/09/2026. Acrescentados sangramento retroperitoneal oculto, isquemia/arritmia instável, gate vascular independente e fallback urgente quando reavaliação necessária não está disponível. Removido centro de choque como destino universal; sem inferir terapia avançada."
+source_refs:
+  - "Møller JE, Sionis A, Aissaoui N, et al. ACVC/ESC short-term MCS consensus. PMID: 37315190"
+  - "Sinha SS, Morrow DA, Kapur NK, Kataria R, Roswell RO. ACC cardiogenic shock guidance 2025. PMID: 40100174"
+  - "Chioncel O, Parissis J, Mebazaa A, et al. HFA/ESC cardiogenic shock statement. PMID: 32469155"
+  - "McDonagh TA, Metra M, Adamo M, et al. ESC HF 2021. PMID: 34447992"
+---
+
+# Fluxograma ambulatorial: pós-tMCS — destino
+
+```mermaid
+flowchart TD
+  R0["Após desmame/explante de tMCS"] --> D1{"Hipoperfusão, congestão aguda,<br/>isquemia miocárdica, arritmia instável<br/>ou déficit neurológico?"}
+  D1 -->|"Sim/dúvida"| C1(["PS / urgência AGORA"])
+
+  D1 -->|"Não"| D2{"Complicação vascular grave?<br/>sangramento/hematoma expansivo · isquemia de membro<br/>sepse · ou pós-femoral large-bore:<br/>dor flanco/lombar/abdome, distensão ou hipotensão inexplicada"}
+  D2 -->|"Sim"| C2(["PS / emergência vascular<br/>suspeitar hemorragia retroperitoneal mesmo com virilha seca"])
+
+  D2 -->|"Não"| D3{"Alteração local de acesso sem alarme?<br/>dor/equimose, pseudoaneurisma/trombose suspeitos"}
+  D3 -->|"Sim"| C3(["Avaliação vascular/de acesso precoce<br/>considerar tipo e local do dispositivo"])
+
+  D3 -->|"Não"| D4{"Trajetória pós-ponte preocupante?<br/>congestão leve/moderada, queda funcional,<br/>bridge-to-decision sem plano"}
+  D4 -->|"Sim"| C4(["Reavaliação prioritária com time implantador<br/>ou programa local de IC avançada/choque"])
+
+  C4 --> D5{"Reavaliação acessível e quadro estável?"}
+  D5 -->|"Não / piora"| C5(["Rota alternativa presencial urgente<br/>serviço de referência ou PS conforme gravidade"])
+  D5 -->|"Sim"| C6(["Completar investigação dirigida<br/>sem inferir LVAD/transplante/novo tMCS"])
+
+  D4 -->|"Não"| C7(["Plano escrito + seguimento já definido<br/>com cardiologia/time responsável"])
+
+  classDef alerta fill:#fdecea,stroke:#b3261e,color:#3b0a0a;
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C5 alerta;
+  class C3,C4,C6,C7 conduta;
+```
+
+## Limite
+Este é um fluxo operacional de segurança pós-alta; não há protocolo universal ambulatorial pós-tMCS diretamente validado nos consensos citados. Não decide dispositivo, doses, LVAD/transplante ou reimplantação de tMCS.
