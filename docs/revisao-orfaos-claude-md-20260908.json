@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 24,
-  "pending_count": 139,
+  "reviewed_count": 25,
+  "pending_count": 138,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1292,8 +1292,22 @@
     {
       "index": 161,
       "path": "content/Valvopatias/tavi-em-valva-aortica-bicuspide-evidencia-especifica-alem-dos-ensaios-pivotais.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "0d94502f044e0452a554a607bdfe06bc8edc0bbbaa645cb11a28404ee2bc73da"
+      "status": "corrected_reviewed",
+      "source_sha256": "0d94502f044e0452a554a607bdfe06bc8edc0bbbaa645cb11a28404ee2bc73da",
+      "findings": [
+        "NOTION-2 subgrupo100bicúspides acrescentado: evidência randomizada existe, mas limitada; interação0,10 não prova heterogeneidade.",
+        "Observação de condução não posterga MP por BAV alto grau persistente24–48h ou ramo alternante.",
+        "PVL requer avaliação e correção intraprocedural; pré-alta confirma residual, não substitui intervenção inicial.",
+        "Metas podem sobrepor estudos; associação tardia não causal, meta-regressão ecológica; registro de durabilidade não equivalência.",
+        "Removida afirmação MP bicúspide consistentemente maior confundindo comparadores."
+      ],
+      "sources": [
+        "PMIDs42657854,42534253,42485121,42576591,42601268,42585416,42621122,42604179: abstracts primários verificados",
+        "PMIDs42454205,42409619: identidades editoriais; nenhuma magnitude atribuída",
+        "10.1093/eurheartj/ehae331: NOTION-2 resultados primários",
+        "10.1093/eurheartj/ehab364: ESC estimulação, recomendação pósTAVI"
+      ],
+      "reviewed_sha256": "4419bc73d9a1d455eadb75980dc38eed4b93f7e4de92e8b9570251e2d732dfb4"
     },
     {
       "index": 162,

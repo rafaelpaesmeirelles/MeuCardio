@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 24 documentos lidos integralmente e corrigidos; 139 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 25 documentos lidos integralmente e corrigidos; 138 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -212,6 +212,16 @@ Fontes verificadas: Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 I
 - Acrescentado seguimento3anos como apresentação EuroPCR2026, não artigo integral revisado por pares; sem superioridade clínica.
 
 Fontes verificadas: PMID38587261 DOI10.1056/NEJMoa2312573: abstract primário, PMID39382856 DOI10.1001/jamacardio.2024.3241: abstract primário; retirados detalhes numéricos não revalidados no texto integral, https://europcr2026.europa-inviteo.com/gws/index.php?langue=en&onglet=33&paramProjet=107923 : resumo investigador,3anos, https://www.pcronline.com/Cases-resources-images/Resources/Course-videos-slides/2026/EuroPCR/TAVI-head-to-head-trials : programação20maio2026.
+
+## 161 — content/Valvopatias/tavi-em-valva-aortica-bicuspide-evidencia-especifica-alem-dos-ensaios-pivotais.md
+
+- NOTION-2 subgrupo100bicúspides acrescentado: evidência randomizada existe, mas limitada; interação0,10 não prova heterogeneidade.
+- Observação de condução não posterga MP por BAV alto grau persistente24–48h ou ramo alternante.
+- PVL requer avaliação e correção intraprocedural; pré-alta confirma residual, não substitui intervenção inicial.
+- Metas podem sobrepor estudos; associação tardia não causal, meta-regressão ecológica; registro de durabilidade não equivalência.
+- Removida afirmação MP bicúspide consistentemente maior confundindo comparadores.
+
+Fontes verificadas: PMIDs42657854,42534253,42485121,42576591,42601268,42585416,42621122,42604179: abstracts primários verificados, PMIDs42454205,42409619: identidades editoriais; nenhuma magnitude atribuída, 10.1093/eurheartj/ehae331: NOTION-2 resultados primários, 10.1093/eurheartj/ehab364: ESC estimulação, recomendação pósTAVI.
 
 ## 162 — content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md
 
