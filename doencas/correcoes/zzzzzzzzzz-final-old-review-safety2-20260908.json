@@ -1,0 +1,941 @@
+[
+  {
+    "slug": "sarcoidose-cardiaca",
+    "set": {
+      "summary": "Sarcoidose cardíaca é acometimento inflamatório granulomatoso do miocárdio, sistêmico ou isolado, que pode causar bloqueio atrioventricular, arritmias ventriculares e disfunção ventricular. A avaliação combina apresentação clínica, ECG, imagem multimodal e, quando necessária, histologia, excluindo causas alternativas. Os sistemas diagnósticos têm requisitos diferentes; critérios de envolvimento cardíaco não bastam isoladamente para diagnosticar a forma isolada. A urgência depende da apresentação e da estabilidade, e não apenas da classe de recomendação de um tratamento.",
+      "diagnostic_approach": {
+        "criterios_sjc_visao_geral": "A diretriz brasileira de miocardites (SBC 2022) reproduz os critérios da Japanese Circulation Society (SJC) para envolvimento cardíaco. O envolvimento cardíaco é fortemente sugerido quando dois ou mais critérios MAIORES são atendidos, ou um critério maior somado a dois ou mais critérios MENORES.",
+        "criterios_maiores": "(a) bloqueio atrioventricular de alto grau, incluindo bloqueio atrioventricular completo, ou arritmia ventricular fatal (taquicardia ventricular sustentada ou fibrilação ventricular); (b) afinamento basal do septo ventricular ou anatomia anormal da parede ventricular — aneurisma ventricular, afinamento do septo ventricular superior ou médio, espessamento regional da parede; (c) disfunção contrátil do ventrículo esquerdo — fração de ejeção abaixo de 50% ou assinergia focal da parede; (d) cintilografia com citrato de gálio-67 ou PET com 18F-FDG revelando acúmulo anormalmente alto de marcador no coração; (e) ressonância magnética com gadolínio revelando realce tardio do miocárdio.",
+        "criterios_menores": "(f) achados anormais ao eletrocardiograma — arritmias ventriculares (taquicardia ventricular não sustentada, extrassístoles ventriculares multifocais ou frequentes), desvio de eixo ou ondas Q anormais; (g) defeitos de perfusão na cintilografia de perfusão miocárdica; (h) biópsia endomiocárdica com infiltração de monócitos e fibrose intersticial miocárdica moderada ou grave.",
+        "grupo_histologico_vs_clinico": "Granulomas não caseosos no miocárdio, sem causa alternativa, sustentam diagnóstico histológico. Na via clínica, os requisitos dependem do sistema: HRS exige sarcoidose extracardíaca histológica e manifestações cardíacas compatíveis, enquanto JCS permite combinações específicas de achados sistêmicos e critérios cardíacos. Dois maiores ou um maior e pelo menos dois menores sugerem envolvimento cardíaco; não dispensam os requisitos sistêmicos nem os critérios próprios da forma isolada. Biópsia miocárdica negativa não exclui doença focal.",
+        "sarcoidose_cardiaca_isolada": "Categoria própria, com pré-requisitos que precisam ser cumpridos antes de qualquer critério diagnóstico: (1) ausência de características clínicas de sarcoidose em outros órgãos além do coração, com investigação detalhada de envolvimento respiratório, oftalmológico e cutâneo; (2) cintilografia com gálio-67 ou PET com 18F-FDG sem acúmulo anormal em nenhum outro órgão além do coração; (3) tomografia de tórax sem alteração pulmonar nem linfadenopatia hilar/mediastinal (eixo menor maior que 10 mm). Cumpridos os pré-requisitos: diagnóstico histológico exige granuloma não caseoso em biópsia endomiocárdica ou amostra cirúrgica; diagnóstico clínico exige o critério (d) — captação anormal à cintilografia com gálio ou ao PET-FDG — mais pelo menos três outros critérios maiores. Quando o paciente atende pelo menos quatro critérios de envolvimento cardíaco que não incluam o (d), ou atende os critérios (b) e (d) mais um dos restantes, suspeita-se de sarcoidose cardíaca isolada sem fechar o diagnóstico.",
+        "pet_fdg_e_cintilografia_papel_e_limitacoes": "O PET com 18F-FDG (ou, alternativamente, a cintilografia com citrato de gálio-67) é critério MAIOR isolado (critério d) e permite pesquisar atividade inflamatória extracardíaca no estudo de corpo inteiro — passo indispensável para caracterizar a forma isolada. O padrão sugestivo de sarcoidose cardíaca ativa é a captação focal ou focal-em-difusa de FDG associada a defeito de perfusão em repouso (padrão de \"descompasso\" perfusão-metabolismo), conforme o documento conjunto de consenso SNMMI-ASNC sobre o papel do PET-FDG na detecção e monitoramento terapêutico da sarcoidose cardíaca (Chareonthaitawee et al., J Nucl Med 2017;58(8):1341-53; publicado simultaneamente em J Nucl Cardiol 2017;24(5):1741-58).\n\nPreparo do paciente (protocolo de supressão da captação fisiológica): o miocárdio normal, em jejum curto ou alimentação regular, utiliza preferencialmente glicose como substrato energético, gerando captação fisiológica difusa de FDG em todo o ventrículo esquerdo que, quando não suprimida, mascara a captação patológica inflamatória e torna o exame não interpretável. O racional é induzir mudança metabólica do miocárdio normal para utilização predominante de ácidos graxos livres — efeito que não ocorre (ou ocorre de forma atenuada) nas células inflamatórias/granulomas, que permanecem predominantemente glicolíticas, ampliando o contraste entre tecido normal (baixa captação) e tecido inflamado (alta captação). O consenso conjunto SNMMI-ASNC recomenda dieta preparatória rica em gordura e pobre em carboidrato (\"dieta cetogênica\" de preparo, distinta de dietas cetogênicas terapêuticas prolongadas) nas 24 horas antecedentes ao exame, associada a jejum antes da aquisição. Estudo do Mayo Clinic (Christopoulos et al., J Nucl Cardiol 2021;28(2):661-71) avaliando protocolo estruturado (≥2 refeições ricas em gordura [>35g] e pobres em carboidrato [<3g] no dia anterior, seguidas de jejum) mostrou que reforço estruturado das instruções dietéticas aumentou a taxa de supressão adequada de 78% para 91% dos pacientes, com redução do padrão de captação difusa (preparo inadequado) de 12% para 2%. Não há número único e universalmente padronizado de horas de jejum ou percentual exato de macronutrientes aplicável a todos os protocolos institucionais — os documentos de consenso descrevem faixas (jejum da ordem de várias horas, tipicamente citado como intervalo de aproximadamente 4 a 12 horas ou mais, variável por protocolo local) e o princípio geral; a adesão rigorosa às instruções pré-exame é o determinante mais importante da qualidade diagnóstica do estudo. É também o exame usado para monitorar resposta à imunossupressão ao longo do seguimento (ver campo monitoring).",
+        "biopsia_limitacoes": "Não há indicação Classe I de biópsia endomiocárdica para toda suspeita estável de sarcoidose. A amostragem é individualizada quando pode mudar o manejo, especialmente em imagem inconclusiva ou necessidade de excluir miocardite de células gigantes/outro diagnóstico tratável; apresentações instáveis ou de rápida deterioração exigem avaliação precoce em centro capaz de suporte e biópsia. Em casos não urgentes, integrar RMC e PET-FDG e buscar sítio extracardíaco acessível quando apropriado. Biópsia negativa não exclui doença focal. Granuloma não caseoso no miocárdio apoia confirmação histológica após excluir causas alternativas, incluindo infecciosas; leitura por patologista experiente é essencial.",
+        "diferenciacao_celulas_gigantes": "Miocardite de células gigantes pode se apresentar com rápida deterioração, bloqueio e arritmias. A distinção histológica deve ser feita por patologista cardíaco experiente e orienta imunossupressão especializada. A gravidade clínica determina a urgência em ambas as doenças; não usar diferença de classe de recomendação para adiar cuidado de sarcoidose instável. Transplante é considerado em insuficiência cardíaca refratária selecionada, não automaticamente por uma hipótese histológica.",
+        "indicacao_de_cdi": "A avaliação de risco de morte súbita em cardiomiopatia deixou de depender só da fração de ejeção — a diretriz ESC 2022 de arritmias ventriculares e prevenção de morte súbita passou a reconhecer etiologia, ressonância cardíaca, apresentação arrítmica e marcadores específicos de cada cardiomiopatia como preditores robustos adicionais, citando explicitamente doença inflamatória — sarcoidose cardíaca incluída — como cenário em que a FEVE isolada não é suficiente para a decisão. Na prática, isso significa que bloqueio atrioventricular avançado, arritmia ventricular sustentada ou realce tardio relevante à ressonância podem justificar indicação de cardiodesfibrilador implantável mesmo com FEVE preservada ou pouco reduzida — avaliação que deve ser individualizada com a equipe de arritmia, e não decidida apenas pelos critérios diagnósticos SJC de envolvimento cardíaco."
+      },
+      "treatment_summary": "O tratamento depende da probabilidade diagnóstica, manifestações, atividade inflamatória e risco arrítmico/hemodinâmico. A AHA 2024 recomenda abordagem escalonada em pacientes com manifestações clínicas e inflamação ativa, com corticosteroides como primeira linha; imunossupressores poupadores de corticoide são individualizados pela equipe. Não há base para transformar diferença de classe de recomendação entre documentos em menor urgência de toda sarcoidose em relação à miocardite de células gigantes. Choque, arritmia ventricular em curso e bloqueio avançado exigem atendimento imediato apropriado. Tratar insuficiência cardíaca e avaliar CDI/pacing conforme apresentação, função, cicatriz e recomendações específicas, além da FEVE isolada. O corrigendum AHA 2024 descreve os cenários Classe IIa de CDI com FEVE >35% e síncope ou cicatriz miocárdica, entre outras indicações específicas; decisão individual de eletrofisiologia. Transplante se reserva a casos selecionados refratários e elegíveis.",
+      "assistant_questions": [
+        {
+          "id": "bloqueio_av_avancado_jovem",
+          "label": "Há bloqueio atrioventricular de alto grau ou completo em paciente jovem, sem causa isquêmica ou degenerativa óbvia?",
+          "type": "boolean"
+        },
+        {
+          "id": "arritmia_ventricular_sustentada",
+          "label": "Há TV sustentada/FV em curso ou episódio recente ainda sem estabilização e avaliação especializada?",
+          "type": "boolean"
+        },
+        {
+          "id": "instabilidade_hemodinamica",
+          "label": "Há choque cardiogênico ou instabilidade hemodinâmica na apresentação atual?",
+          "type": "boolean"
+        },
+        {
+          "id": "sarcoidose_extracardiaca_conhecida",
+          "label": "O paciente já tem diagnóstico prévio de sarcoidose extracardíaca (pulmonar, ocular, cutânea, linfonodal)?",
+          "type": "boolean"
+        },
+        {
+          "id": "investigacao_extracardiaca_completa",
+          "label": "A investigação extracardíaca (TC de tórax, avaliação pulmonar/oftalmológica/cutânea) já foi completada e é negativa, sustentando possível forma isolada?",
+          "type": "boolean"
+        },
+        {
+          "id": "criterios_maiores_sjc_atendidos",
+          "label": "Quantos critérios MAIORES da SJC estão atendidos?",
+          "type": "select",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            }
+          ]
+        },
+        {
+          "id": "biopsia_realizada_resultado",
+          "label": "Biópsia endomiocárdica foi realizada? Qual o achado?",
+          "type": "select",
+          "options": [
+            {
+              "value": "nao_realizada",
+              "label": "Não realizada"
+            },
+            {
+              "value": "granuloma_nao_caseoso",
+              "label": "Granuloma não caseoso (sarcoidose)"
+            },
+            {
+              "value": "celulas_gigantes",
+              "label": "Células gigantes sem granuloma bem formado (sugestivo de GCM)"
+            },
+            {
+              "value": "negativa_inconclusiva",
+              "label": "Negativa/inconclusiva"
+            }
+          ]
+        },
+        {
+          "id": "refratariedade_tratamento_convencional",
+          "label": "Há refratariedade a tratamento antiarrítmico ou de insuficiência cardíaca convencional, com deterioração rápida?",
+          "type": "boolean"
+        },
+        {
+          "id": "criterios_menores_sjc_atendidos",
+          "label": "Quantos critérios MENORES JCS estão atendidos (sem duplicar achados da mesma categoria)?",
+          "type": "select",
+          "options": [
+            {
+              "value": "0",
+              "label": "Nenhum"
+            },
+            {
+              "value": "1",
+              "label": "Um"
+            },
+            {
+              "value": "2",
+              "label": "Dois"
+            },
+            {
+              "value": "3",
+              "label": "Três"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "instabilidade_hemodinamica_emergencia",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "instabilidade_hemodinamica",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Choque cardiogênico ou instabilidade hemodinâmica em suspeita de sarcoidose cardíaca"
+            ],
+            "emergency_flow": [
+              "Estabilização hemodinâmica imediata e avaliação precoce para suporte circulatório mecânico, com encaminhamento a centro terciário capaz de biópsia endomiocárdica precoce"
+            ],
+            "supporting": [
+              "Quadro compatível com forma aguda grave, que exige suporte hemodinâmico agressivo e biópsia precoce para diferenciar de miocardite de células gigantes, dada a diferença de urgência terapêutica entre as duas condições"
+            ]
+          }
+        },
+        {
+          "id": "arritmia_ventricular_sustentada_urgente",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "arritmia_ventricular_sustentada",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Taquicardia ventricular sustentada ou fibrilação ventricular em suspeita de sarcoidose cardíaca"
+            ],
+            "supporting": [
+              "Arritmia ventricular maligna é critério maior de envolvimento cardíaco e justifica avaliação urgente de biópsia e de indicação de cardiodesfibrilador implantável"
+            ],
+            "emergency_flow": [
+              "Acionar atendimento de emergência e suporte avançado conforme ritmo e pulso. Após estabilização, avaliar causa e prevenção secundária com eletrofisiologia."
+            ]
+          }
+        },
+        {
+          "id": "bloqueio_av_jovem_alerta",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "bloqueio_av_avancado_jovem",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Bloqueio atrioventricular avançado em paciente jovem sem causa isquêmica ou degenerativa óbvia — critério maior isolado de envolvimento cardíaco"
+            ],
+            "supporting": [
+              "Não atribuir a bloqueio atrioventricular a degeneração do sistema de condução sem investigar sarcoidose cardíaca; a investigação muda o tratamento"
+            ],
+            "emergency_flow": [
+              "Avaliação monitorizada urgente do bloqueio avançado e da necessidade de pacing, com investigação de etiologias reversíveis/inflamatórias em paralelo."
+            ]
+          }
+        },
+        {
+          "id": "biopsia_celulas_gigantes_diferencial",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "biopsia_realizada_resultado",
+                "op": "eq",
+                "value": "celulas_gigantes"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "differentials": [
+              "Miocardite de células gigantes — achado histológico distinto de granuloma não caseoso, mas pode ser confundido na lâmina; releitura por patologista cardíaco experiente é recomendada em caso de dúvida"
+            ],
+            "supporting": [
+              "Suspeita histológica de miocardite de células gigantes requer confirmação especializada e planejamento rápido de imunossupressão; avaliar suporte conforme gravidade, sem indicação automática de transplante."
+            ],
+            "emergency_flow": [
+              "Encaminhar prontamente a centro especializado para revisão histológica e tratamento; na instabilidade, suporte emergencial em paralelo."
+            ]
+          }
+        },
+        {
+          "id": "refratariedade_sugere_diferencial_grave",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "refratariedade_tratamento_convencional",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "differentials": [
+              "Miocardite de células gigantes"
+            ],
+            "suggested_tests": [
+              "Biópsia endomiocárdica precoce, com leitura por patologista cardíaco experiente"
+            ],
+            "supporting": [
+              "Deterioração rápida refratária a tratamento convencional em paciente jovem é sinal de alerta compartilhado entre sarcoidose cardíaca e miocardite de células gigantes; as duas podem ser clinicamente indistinguíveis sem biópsia"
+            ],
+            "emergency_flow": [
+              "Avaliação hospitalar urgente de deterioração rápida, suporte hemodinâmico/arrítmico e discussão de biópsia com equipe especializada."
+            ]
+          }
+        },
+        {
+          "id": "rastreio_cardiaco_em_sarcoidose_extracardiaca_conhecida",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "sarcoidose_extracardiaca_conhecida",
+                "op": "truthy"
+              },
+              {
+                "field": "investigacao_extracardiaca_completa",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "missing_information": [
+              "Rastreamento cardíaco ativo (ECG, ecocardiograma e, se indicado, ressonância cardíaca ou PET-FDG) em paciente com sarcoidose extracardíaca já conhecida, mesmo sem sintoma cardíaco declarado"
+            ],
+            "supporting": [
+              "A prevalência de acometimento cardíaco histológico/por imagem é maior que a prevalência clínica aparente — o rastreamento ativo é o que evita o subdiagnóstico característico desta condição"
+            ]
+          }
+        },
+        {
+          "id": "criterios_maiores_suficientes",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "criterios_maiores_sjc_atendidos",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Dois ou mais critérios MAIORES da SJC atendidos — envolvimento cardíaco fortemente sugerido; prosseguir com estadiamento extracardíaco (TC de tórax, avaliação pulmonar/oftalmológica/cutânea) para caracterizar forma isolada versus sistêmica"
+            ]
+          }
+        },
+        {
+          "id": "jcs_um_maior_dois_menores",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "criterios_maiores_sjc_atendidos",
+                "op": "eq",
+                "value": "1"
+              },
+              {
+                "field": "criterios_menores_sjc_atendidos",
+                "op": "gte",
+                "value": 2
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Um critério maior e pelo menos dois menores JCS sugerem envolvimento cardíaco. Verificar requisitos sistêmicos ou a via específica da forma isolada e excluir diagnósticos alternativos."
+            ]
+          }
+        },
+        {
+          "id": "biopsia_granuloma_nao_caseoso",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "biopsia_realizada_resultado",
+                "op": "eq",
+                "value": "granuloma_nao_caseoso"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Granuloma não caseoso miocárdico sustenta sarcoidose histológica após exclusão de outras causas; correlacionar com imagem, apresentação e atividade inflamatória."
+            ]
+          }
+        },
+        {
+          "id": "biopsia_negativa_nao_exclui",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "biopsia_realizada_resultado",
+                "op": "eq",
+                "value": "negativa_inconclusiva"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Biópsia negativa/inconclusiva não exclui doença focal. Reavaliar probabilidade diagnóstica, qualidade/amostragem, RMC/PET e eventual tecido extracardíaco com equipe especializada."
+            ]
+          }
+        }
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08: PR #719: biópsia individualizada, caminho um maior/dois menores, resultados histológicos completos e fluxos urgentes. AHA 2024 corrigida e primer diagnóstico 2026."
+    },
+    "append": {
+      "source_refs": [
+        "Diagnostic Approach to Cardiac Sarcoidosis DOI: 10.1161/CIRCULATIONAHA.126.079275. PMID: 42475441.",
+        "Cheng RK et al. Diagnosis and Management of Cardiac Sarcoidosis: A Scientific Statement From the American Heart Association. Circulation. 2024. DOI: 10.1161/CIR.0000000000001240. Corrigido por DOI: 10.1161/CIR.0000000000001275."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42475441/",
+        "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001240",
+        "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001275"
+      ]
+    }
+  },
+  {
+    "slug": "torsades-de-pointes-qt-longo-adquirido",
+    "set": {
+      "summary": "QT longo adquirido é prolongamento da repolarização por causas como medicamentos, distúrbios eletrolíticos e bradicardia/bloqueio, isolados ou combinados; predisposição genética pode coexistir. Torsades de pointes é uma TV polimórfica associada a QT prolongado, frequentemente pausa-dependente. Nenhum fármaco específico é condição necessária. Diferenciar QT longo congênito e protocolos de terapias oncológicas. Tisdale prediz prolongamento de QT em pacientes hospitalizados, não TdP ou morte súbita. TV polimórfica sustentada em curso exige choque não sincronizado imediato; prevenção de recorrência depende da causa.",
+      "epidemiology": "O QT longo adquirido é, na prática clínica, muito mais frequente que a forma congênita: pode decorrer de medicamentos, alterações eletrolíticas e bradicardia, com susceptibilidade individual variável; causas adquiridas e predisposição hereditária podem coexistir. O escore de Tisdale et al. (Circ Cardiovasc Qual Outcomes 2013, PMID 23716032), derivado e validado em unidades de cuidado cardíaco de um único centro, documentou incidência de QTc prolongado (definido como QTc >500 ms ou aumento >60 ms do basal) de aproximadamente 15% no estrato de baixo risco (0-6 pontos), 37% no moderado (7-10 pontos) e 73% no alto risco (11-21 pontos) — uma gradação de risco diretamente proporcional ao número de fatores predisponentes acumulados, não um evento de tudo-ou-nada ligado a um único fármaco. Entre as classes de fármacos mais estudadas, o antipsicótico ilustra bem a magnitude do risco populacional: a coorte de Ray et al. (Arch Gen Psychiatry 2001, PMID 11735845), com 481.744 beneficiários do Medicaid do Tennessee e 1.282.996 pessoas-ano de seguimento, documentou risco de morte súbita cardíaca dose-dependente em uso corrente de antipsicótico, com razão de taxa de 2,39 (IC95% 1,77-3,22) em dose moderada a alta ; a estimativa de 367 mortes adicionais por 10.000 pessoas-ano se refere especificamente aos usuários de doses moderadas/altas com doença cardiovascular prévia grave (razão de taxa 3,53), não a todos os usuários dessas doses. O seguimento de Ray et al. (N Engl J Med 2009, PMID 19144938), com 44.218 usuários de antipsicótico típico e 46.089 de atípico comparados a 186.600 não usuários, mostrou que a divisão típico/atípico não protege: razão de incidência de 1,99 para típicos e 2,26 para atípicos, sem diferença estatisticamente relevante entre as classes. O documento de consenso científico da AHA/ACC Foundation sobre prevenção de torsades em ambiente hospitalar (Drew et al., Circulation 2010, PMID 20142454) define QTc acima do percentil 99 (470 ms em homens, 480 ms em mulheres) como anormalmente prolongado e acima de 500 ms como altamente anormal em ambos os sexos — essa assimetria de corte por sexo reflete um achado consistente na literatura: o QTc basal é, em média, mais longo em mulheres, e sexo feminino soma 1 ponto no Tisdale, o mesmo peso de idade e diurético de alça. O prolongamento de QT induzido por fármaco raramente ocorre por um único fator isolado: a combinação de múltiplos fármacos pró-QT, distúrbio eletrolítico não corrigido, disfunção renal/hepática que retarda a depuração do agente causal e bradicardia de base é o padrão mais comumente descrito nos casos de torsades induzida por fármaco relatados na literatura.",
+      "diagnostic_approach": {
+        "mecanismo_fisiopatologico": "Redução da reserva de repolarização favorece QT prolongado, pós-despolarizações precoces e atividade deflagrada. Bloqueio farmacológico de IKr/hERG é mecanismo frequente, mas não necessário: hipocalemia importante e bradicardia/bloqueio atrioventricular também podem produzir QT longo adquirido sem fármaco causal. Múltiplos fatores e predisposição genética podem coexistir; identificar a combinação de mecanismos orienta prevenção de recorrência.",
+        "causas_farmacologicas_comuns": "Nenhuma dose ou esquema posológico é reproduzido nesta ficha; a lista abaixo é qualitativa, por classe farmacológica, e serve apenas para orientar reconhecimento de risco, não prescrição. Classes reconhecidamente associadas a bloqueio de hERG e prolongamento de QT incluem: antipsicóticos típicos e atípicos (com heterogeneidade de risco dentro da própria classe, conforme detalhado no verbete dedicado de psicofarmacologia cardiovascular); antiarrítmicos das classes IA e III, cujo próprio mecanismo terapêutico de bloqueio de corrente de potássio os torna intrinsecamente pró-QT (efeito de classe, não uma reação idiossincrática); alguns antimicrobianos, incluindo determinados macrolídeos e fluoroquinolonas; antieméticos antagonistas de receptor 5-HT3; metadona, um opioide com bloqueio de hERG documentado e risco que aumenta com a dose acumulada e com interações farmacocinéticas que elevam seu nível sérico; e alguns antidepressivos, com citalopram citado na literatura por alerta regulatório específico de prolongamento de QT dose-dependente. A lista de fármacos de risco muda com o tempo, conforme farmacovigilância pós-comercialização; a conduta prática mais robusta não é memorizar uma lista fixa, mas revisar sistematicamente toda prescrição em busca de fármacos pró-QT antes de somar um novo agente, e reconhecer que o risco de um fármaco isolado se multiplica quando somado a outro fármaco pró-QT, a distúrbio eletrolítico ou a disfunção de depuração renal/hepática.",
+        "disturbios_eletroliticos_predisponentes": "Hipocalemia, hipomagnesemia e hipocalcemia reduzem a reserva de repolarização ventricular e podem causar ou agravar QT longo e aumentar a susceptibilidade a torsades, inclusive sem fármaco causal identificado. A ESC 2022 de arritmias ventriculares e prevenção de morte súbita (Zeppenfeld et al., Eur Heart J 2022, PMID 36017572) recomenda explicitamente a correção desses três eletrólitos como parte do manejo do QT longo adquirido. Um ponto frequentemente mal compreendido na prática: o magnésio intravenoso é reconhecidamente eficaz para suprimir recorrência de torsades mesmo quando o magnésio sérico do paciente NÃO está baixo — o efeito antiarrítmico do magnésio na torsades não depende de o paciente estar hipomagnesêmico. Já a hipocalemia tem relação mais direta com o próprio mecanismo: potássio sérico baixo aumenta paradoxalmente a afinidade de vários fármacos pelo canal hERG, de modo que a mesma dose de um fármaco pró-QT prolonga mais o QT em paciente hipocalêmico do que em paciente normocalêmico. Por isso a correção eletrolítica antes ou durante o uso de fármaco pró-QT reconhecido não é apenas prudência genérica, é modulação direta do risco farmacodinâmico.",
+        "escore_de_tisdale_estratificacao_de_risco": "O escore de Tisdale et al. (Circ Cardiovasc Qual Outcomes 2013, PMID 23716032) foi desenvolvido e validado para PREDIZER prolongamento de QTc em paciente hospitalizado — não para diagnosticar torsades, não para decidir choque elétrico e não para definir dose de qualquer fármaco. É uma ferramenta de estratificação de risco, a ser somada em pontos: idade igual ou superior a 68 anos (1 ponto); sexo feminino (1 ponto); uso de diurético de alça (1 ponto); potássio sérico igual ou inferior a 3,5 mEq/L (2 pontos); QTc na admissão igual ou superior a 450 ms (2 pontos); infarto agudo do miocárdio (2 pontos); sepse (3 pontos); insuficiência cardíaca (3 pontos); e a variável medicamentosa, que tem uma regra própria frequentemente mal aplicada: um único fármaco prolongador de QTc soma 3 pontos, mas se houver DOIS OU MAIS fármacos prolongadores de QTc simultâneos, a pontuação medicamentosa total sobe para 6 pontos (3 do primeiro fármaco mais 3 adicionais pela combinação) — não 3 pontos por fármaco somados linearmente, e não uma pontuação fixa de 3 independentemente do número de agentes. A pontuação máxima do instrumento é 21. No estudo original, os estratos de risco corresponderam a incidência de QTc prolongado de aproximadamente 15% (baixo risco, 0-6 pontos), 37% (moderado, 7-10 pontos) e 73% (alto risco, 11-21 pontos). O escore foi derivado e validado em unidades de cuidado cardíaco de um único centro; não deve ser extrapolado sem crítica para ambulatório, população pediátrica, ou para estimar diretamente a probabilidade de torsades ou de morte súbita — ele estratifica o risco de um achado eletrocardiográfico (QTc prolongado), um passo anterior ao evento arrítmico clínico.",
+        "reconhecimento_da_torsades_no_ecg": "O nome torsades de pointes ('torção das pontas') descreve o padrão eletrocardiográfico característico: os complexos QRS parecem girar progressivamente em torno da linha isoelétrica, mudando de amplitude e polaridade a cada poucos batimentos, em vez de manter morfologia constante como em outras taquicardias ventriculares monomórficas. O início costuma ser pausa-dependente: uma extrassístole seguida de pausa compensatória, com o batimento seguinte caindo sobre a onda T ainda prolongada ('fenômeno R sobre T'), disparando a sequência. Os episódios podem ser autolimitados, recorrentes em salvas, ou evoluir para taquicardia ventricular polimórfica sustentada instável — e é exatamente essa variabilidade morfológica batimento a batimento que torna a sincronização confiável com a onda R impossível, motivo pelo qual a AHA 2025 orienta choque NÃO sincronizado imediato diante de TV polimórfica sustentada, com ou sem pulso (Wigginton et al., Circulation 2025, PMID 41122884). QTc muito prolongado (a AHA 2025 destaca maior risco acima de 500 ms, sobretudo com bradicardia associada) é marcador de risco aumentado, não um limiar absoluto abaixo do qual a torsades seja impossível nem acima do qual seja inevitável."
+      },
+      "assistant_questions": [
+        {
+          "id": "tv_polimorfica_sustentada_em_curso",
+          "label": "Há taquicardia ventricular polimórfica SUSTENTADA em curso agora (com ou sem pulso)?",
+          "type": "boolean"
+        },
+        {
+          "id": "qtc_medido_ms",
+          "label": "QTc confirmado manualmente (ms), com método apropriado à frequência e ajuste especializado se QRS largo/pacing",
+          "type": "number",
+          "min": 100,
+          "max": 1000
+        },
+        {
+          "id": "aumento_qtc_60ms_do_basal",
+          "label": "Houve aumento de 60 ms ou mais do QTc em relação ao basal do próprio paciente?",
+          "type": "boolean"
+        },
+        {
+          "id": "evento_pausa_bradicardia_dependente",
+          "label": "O episódio de torsades/arritmia foi precedido por pausa ou bradicardia significativa?",
+          "type": "boolean"
+        },
+        {
+          "id": "numero_farmacos_prolongadores_qt",
+          "label": "Quantos fármacos reconhecidamente prolongadores de QT o paciente está usando simultaneamente?",
+          "type": "select",
+          "options": [
+            {
+              "value": "nenhum",
+              "label": "Nenhum identificado"
+            },
+            {
+              "value": "um",
+              "label": "Um fármaco"
+            },
+            {
+              "value": "dois_ou_mais",
+              "label": "Dois ou mais fármacos"
+            }
+          ]
+        },
+        {
+          "id": "farmaco_pro_qt_recente_ou_dose_aumentada",
+          "label": "Algum fármaco pró-QT foi iniciado ou teve a dose aumentada recentemente?",
+          "type": "boolean"
+        },
+        {
+          "id": "eletrolito_alterado_nao_corrigido",
+          "label": "Há hipocalemia, hipomagnesemia ou hipocalcemia identificada e ainda não corrigida?",
+          "type": "boolean"
+        },
+        {
+          "id": "disfuncao_renal_ou_hepatica_relevante",
+          "label": "Há disfunção renal ou hepática relevante que possa reduzir a depuração do fármaco suspeito?",
+          "type": "boolean"
+        },
+        {
+          "id": "idade_68_ou_mais",
+          "label": "Idade igual ou superior a 68 anos?",
+          "type": "boolean"
+        },
+        {
+          "id": "sexo_feminino",
+          "label": "Sexo feminino?",
+          "type": "boolean"
+        },
+        {
+          "id": "uso_diuretico_de_alca",
+          "label": "Uso de diurético de alça?",
+          "type": "boolean"
+        },
+        {
+          "id": "contexto_hospitalar_sepse_iam_ic",
+          "label": "Há sepse, infarto agudo do miocárdio ou insuficiência cardíaca descompensada concomitante?",
+          "type": "boolean"
+        },
+        {
+          "id": "contexto_psiquiatrico_antipsicotico",
+          "label": "O contexto envolve uso de antipsicótico em paciente psiquiátrico?",
+          "type": "boolean"
+        },
+        {
+          "id": "evento_previo_qt_longo_por_farmaco",
+          "label": "Há episódio prévio documentado de QT longo ou torsades induzida por fármaco?",
+          "type": "boolean"
+        },
+        {
+          "id": "qt_persiste_apos_remocao_fator_adquirido",
+          "label": "O QT longo ou a arritmia persistem mesmo após remoção completa do fator adquirido identificado?",
+          "type": "boolean"
+        },
+        {
+          "id": "tisdale_total_conferido",
+          "label": "Se calculado integralmente no contexto hospitalar, qual o total CONFERIDO do Tisdale? Deixar sem resposta se incompleto; as perguntas deste guia não calculam automaticamente a soma.",
+          "type": "select",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            },
+            {
+              "value": "11",
+              "label": "11"
+            },
+            {
+              "value": "12",
+              "label": "12"
+            },
+            {
+              "value": "13",
+              "label": "13"
+            },
+            {
+              "value": "14",
+              "label": "14"
+            },
+            {
+              "value": "15",
+              "label": "15"
+            },
+            {
+              "value": "16",
+              "label": "16"
+            },
+            {
+              "value": "17",
+              "label": "17"
+            },
+            {
+              "value": "18",
+              "label": "18"
+            },
+            {
+              "value": "19",
+              "label": "19"
+            },
+            {
+              "value": "20",
+              "label": "20"
+            },
+            {
+              "value": "21",
+              "label": "21"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "tv_polimorfica_sustentada_choque_imediato",
+          "priority": 97,
+          "when": {
+            "all": [
+              {
+                "field": "tv_polimorfica_sustentada_em_curso",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Taquicardia ventricular polimórfica sustentada em curso — choque NÃO sincronizado imediato indicado (AHA 2025, Classe 1, B-NR); não atrasar para eletrólitos, sincronização ou magnésio."
+            ],
+            "supporting": [
+              "A variação morfológica batimento a batimento impede sincronização confiável com a onda R."
+            ],
+            "emergency_flow": [
+              "Acionar suporte avançado e aplicar choque não sincronizado imediato na TV polimórfica sustentada; se sem pulso, iniciar RCP conforme protocolo. Não atrasar o choque para exames ou magnésio.",
+              "Após controle do ritmo, identificar QT longo versus mecanismo sem QT longo, corrigir fatores reversíveis e orientar prevenção de recorrência."
+            ]
+          }
+        },
+        {
+          "id": "qtc_muito_prolongado",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "qtc_medido_ms",
+                "op": "gte",
+                "value": 500
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "QTc ≥500 ms exige avaliação e ação prontas, confirmação da medida, revisão de medicamentos/interações e eletrólitos. Valor isolado em pessoa estável não indica automaticamente pronto-socorro."
+            ],
+            "ambulatory_flow": [
+              "Providenciar avaliação rápida com prescritor/cardiologia e definir monitorização conforme sintomas e fatores associados. Síncope recente, arritmia em curso ou instabilidade requer emergência. Não suspender psicofármaco essencial por conta própria."
+            ]
+          }
+        },
+        {
+          "id": "aumento_qtc_significativo_do_basal",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "aumento_qtc_60ms_do_basal",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Aumento de 60 ms ou mais do QTc em relação ao basal é critério de ação pronta mesmo sem o valor absoluto ultrapassar 500 ms."
+            ]
+          }
+        },
+        {
+          "id": "evento_pausa_dependente_recorrente",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "evento_pausa_bradicardia_dependente",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Torsades pausa/bradicardia-dependente recorrente: consulta especializada para overdrive pacing ou isoproterenol pode ser indicada especificamente no QT longo adquirido."
+            ]
+          }
+        },
+        {
+          "id": "combinacao_dois_ou_mais_farmacos_pro_qt",
+          "priority": 68,
+          "when": {
+            "all": [
+              {
+                "field": "numero_farmacos_prolongadores_qt",
+                "op": "eq",
+                "value": "dois_ou_mais"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Revisar a prescrição em busca de alternativa de menor risco QT sempre que clinicamente possível.",
+              "Dois ou mais fármacos prolongadores de QT simultâneos — no escore de Tisdale essa combinação soma 6 pontos no total (3 do primeiro fármaco mais 3 adicionais), não 3 pontos isolados."
+            ]
+          }
+        },
+        {
+          "id": "farmaco_pro_qt_recente_suspender_se_possivel",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "farmaco_pro_qt_recente_ou_dose_aumentada",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Revisar com o prescritor necessidade, dose, interações e alternativas do fármaco pró-QT; uma mudança recente isolada não obriga suspensão. Não interromper psicofármaco essencial abruptamente sem plano clínico."
+            ]
+          }
+        },
+        {
+          "id": "eletrolito_nao_corrigido",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "eletrolito_alterado_nao_corrigido",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Hipocalemia, hipomagnesemia ou hipocalcemia identificada e ainda não corrigida — correção reduz diretamente o risco farmacodinâmico de prolongamento de QT."
+            ],
+            "ambulatory_flow": [
+              "Corrigir o distúrbio conhecido conforme magnitude, sintomas, ECG e função renal; definir necessidade de monitorização e repetir eletrólitos."
+            ]
+          }
+        },
+        {
+          "id": "disfuncao_organo_reduz_depuracao",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "disfuncao_renal_ou_hepatica_relevante",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Disfunção renal ou hepática relevante pode prolongar a exposição sistêmica ao fármaco pró-QT mesmo sem alteração de dose — reavaliar função de órgão."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_multiplos_fatores_hospitalares",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "contexto_hospitalar_sepse_iam_ic",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Sepse, infarto agudo ou insuficiência cardíaca somam pontos relevantes no escore de Tisdale — considerar vigilância eletrocardiográfica mais próxima."
+            ]
+          }
+        },
+        {
+          "id": "contexto_psiquiatrico_nao_adiar_tratamento",
+          "priority": 35,
+          "when": {
+            "all": [
+              {
+                "field": "contexto_psiquiatrico_antipsicotico",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Contexto psiquiátrico com antipsicótico: monitorização eletrocardiográfica basal/seriada quando o quadro permite, sem adiar o tratamento de emergência psiquiátrica quando houver risco iminente de auto ou heteroagressão."
+            ]
+          }
+        },
+        {
+          "id": "evento_previo_documentar_evitar_reexposicao",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "evento_previo_qt_longo_por_farmaco",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Episódio prévio de QT longo/torsades por fármaco: documentar de forma explícita e acessível para evitar reexposição inadvertida ao agente causal identificado."
+            ]
+          }
+        },
+        {
+          "id": "suspeita_canalopatia_congenita_subjacente",
+          "priority": 58,
+          "when": {
+            "all": [
+              {
+                "field": "qt_persiste_apos_remocao_fator_adquirido",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "QT longo ou arritmia persistente apesar da remoção completa do fator adquirido identificado: investigar canalopatia congênita subjacente, incluindo história familiar."
+            ],
+            "suggested_tests": [
+              "Avaliação especializada de canalopatia hereditária (escore de Schwartz, avaliação genética quando indicada)."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_fator_idade_68_ou_mais",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "idade_68_ou_mais",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Idade ≥68 anos: 1 ponto no Tisdale hospitalar. Este fator isolado não define estrato nem probabilidade de TdP; conferir o escore completo quando aplicável."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_fator_sexo_feminino",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "sexo_feminino",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Sexo feminino: 1 ponto no Tisdale hospitalar. Este fator isolado não define estrato nem probabilidade de TdP; conferir o escore completo quando aplicável."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_fator_uso_diuretico_de_alca",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "uso_diuretico_de_alca",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Diurético de alça: 1 ponto no Tisdale hospitalar. Este fator isolado não define estrato nem probabilidade de TdP; conferir o escore completo quando aplicável."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_total_baixo",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "tisdale_total_conferido",
+                "op": "gte",
+                "value": 0
+              },
+              {
+                "field": "tisdale_total_conferido",
+                "op": "lte",
+                "value": 6
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Total Tisdale conferido no estrato baixo de risco de prolongamento de QT hospitalar. Ajustar vigilância ao contexto; não prediz diretamente TdP nem substitui a triagem aguda."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_total_moderado",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "tisdale_total_conferido",
+                "op": "gte",
+                "value": 7
+              },
+              {
+                "field": "tisdale_total_conferido",
+                "op": "lte",
+                "value": 10
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Total Tisdale conferido no estrato moderado de risco de prolongamento de QT hospitalar. Ajustar vigilância ao contexto; não prediz diretamente TdP nem substitui a triagem aguda."
+            ]
+          }
+        },
+        {
+          "id": "tisdale_total_alto",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "tisdale_total_conferido",
+                "op": "gte",
+                "value": 11
+              },
+              {
+                "field": "tisdale_total_conferido",
+                "op": "lte",
+                "value": 21
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Total Tisdale conferido no estrato alto de risco de prolongamento de QT hospitalar. Ajustar vigilância ao contexto; não prediz diretamente TdP nem substitui a triagem aguda."
+            ]
+          }
+        }
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08: PR #716: causas não farmacológicas, subgrupo Ray, peso feminino Tisdale, fatores usados e escore manual explicitado, eletrólitos como achado conhecido, fluxo TV polimórfica e limites QTc. Harmonização com #881/#907 sem suspensão automática de psicofármacos."
+    }
+  }
+]

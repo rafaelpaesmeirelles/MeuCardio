@@ -1253,6 +1253,16 @@
       ],
       "review_status": "revisado",
       "review_note": "Revisão adversarial Codex 2026-09-08: Findings PR #723: modelos ARVC 2019/2021 separados, evidência pediátrica limitada explicitada, terapias de IC separadas de antiarrítmicos, restrição esportiva/rastreio condicionados a diagnóstico ou variante causal, critérios elétricos sem pontuação automática."
+    },
+    "append": {
+      "source_refs": [
+        "Arrhythmogenic cardiomyopathy in children according to \"Padua criteria\": Single pediatric center experience. DOI: 10.1016/j.ijcard.2022.01.008. PMID: 34998950.",
+        "The phenotypic and genetic features of arrhythmogenic cardiomyopathy in the pediatric population. DOI: 10.3389/fcvm.2023.1216976. PMID: 37781308."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34998950/",
+        "https://pubmed.ncbi.nlm.nih.gov/37781308/"
+      ]
     }
   },
   {
