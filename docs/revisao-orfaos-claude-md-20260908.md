@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 48 documentos lidos integralmente e corrigidos; 115 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 49 documentos lidos integralmente e corrigidos; 114 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -321,6 +321,16 @@ Fontes verificadas: PMID34469767, PMID38501351, PMID38477128, PMID38584159, PMID
 - CA125 inespecífico não exclui neoplasia; DPOC não explica automaticamente derrame; sST2 interação observacional não mecanismo causal.
 
 Fontes verificadas: PMIDs42235631,39809935,42418867,41899087,41524052,42425178: abstracts primários, 10.1016/j.jchf.2016.06.007: CHANCE-HF artigo primário, PMID31422111 DOI10.1016/j.amjmed.2019.07.041: ensaio diurético randomizado.
+
+## 118 — content/Insuficiência_cardíaca/cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao.md
+
+- Glicose urgente não deve aguardar tiamina; via oral não equivalente em choque/vômitos.
+- Transcetolase é citosólica e não produz NADPH diretamente; ETKAC é indireto.
+- Seligmann não placebo; Shimon extensão aberta não efeito randomizado de22%; RCT69 negativo incluído.
+- Nisar31=12gestantes+19puérperas; resposta em24h não garantia nem exclusão, shoshin não exige alto débito.
+- Retirada suplementação empírica universal de selênio e certezas comparativas sem respaldo.
+
+Fontes verificadas: 23 referências originais: abstracts e identidade conferidos individualmente., StatPearls capítulo atualizado31jan2026 lido diretamente, doses tratadas como variáveis por contexto., ASAM2020 recomendação primária V.7 e EFNS20642790 consultadas., RCT31504093 PubMed e texto primário AJCN consultados..
 
 ## 125 — content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md
 

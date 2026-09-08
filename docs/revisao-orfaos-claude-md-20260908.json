@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 48,
-  "pending_count": 115,
+  "reviewed_count": 49,
+  "pending_count": 114,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1176,8 +1176,22 @@
     {
       "index": 118,
       "path": "content/Insuficiência_cardíaca/cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "9e2a80c794d4958e5aaefd223c971771eb3a1b9d4b5bae5b391601a098446b9e"
+      "status": "corrected_reviewed",
+      "source_sha256": "9e2a80c794d4958e5aaefd223c971771eb3a1b9d4b5bae5b391601a098446b9e",
+      "findings": [
+        "Glicose urgente não deve aguardar tiamina; via oral não equivalente em choque/vômitos.",
+        "Transcetolase é citosólica e não produz NADPH diretamente; ETKAC é indireto.",
+        "Seligmann não placebo; Shimon extensão aberta não efeito randomizado de22%; RCT69 negativo incluído.",
+        "Nisar31=12gestantes+19puérperas; resposta em24h não garantia nem exclusão, shoshin não exige alto débito.",
+        "Retirada suplementação empírica universal de selênio e certezas comparativas sem respaldo."
+      ],
+      "sources": [
+        "23 referências originais: abstracts e identidade conferidos individualmente.",
+        "StatPearls capítulo atualizado31jan2026 lido diretamente, doses tratadas como variáveis por contexto.",
+        "ASAM2020 recomendação primária V.7 e EFNS20642790 consultadas.",
+        "RCT31504093 PubMed e texto primário AJCN consultados."
+      ],
+      "reviewed_sha256": "10169b726a1ecb82531654993e2160ff0cfa485e2224a3c4464d0c97c5d5d8ea"
     },
     {
       "index": 119,
