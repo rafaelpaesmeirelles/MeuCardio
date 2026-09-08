@@ -1,21 +1,61 @@
 ---
-title: "Lepodisiran: o siRNA de Duração Estendida para Lipoproteína(a) e a Entrada na Fase 3"
+title: 'Lepodisiran: o siRNA de Duração Estendida para Lipoproteína(a) e a Entrada
+  na Fase 3'
 slug: lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3
-theme: "Prevenção e lipídios"
+theme: Prevenção e lipídios
 kind: documento
 review_status: revisado
 fonte_producao: claude
 source_refs:
-  - "ClinicalTrials.gov. OCEAN(a)-Outcomes, NCT05581303. Início14dez2022; ativo sem recrutamento; atualização27fev2026. https://clinicaltrials.gov/study/NCT05581303"
-  - "Nissen SE, Wolski K, Watts GF, Koren MJ, Baum SJ, Verma S, et al. Lepodisiran, an Extended-Duration Short Interfering RNA Targeting Lipoprotein(a): A Randomized Dose-Ascending Clinical Trial. JAMA. 2023;330(21):2075-2083. DOI: 10.1001/jama.2023.21835. PMID: 37952254."
-  - "Nissen SE, et al. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643. Registro: ClinicalTrials.gov NCT05565742."
-  - "O'Donoghue ML, Rosenson RS, Gencer B, López JAG, Lepor NE, Baum SJ, et al; OCEAN(a)-DOSE Trial Investigators. Small Interfering RNA to Reduce Lipoprotein(a) in Cardiovascular Disease. N Engl J Med. 2022;387(20):1855-1864. DOI: 10.1056/NEJMoa2211023. PMID: 36342163."
-  - "Nissen SE, Wang Q, Nicholls SJ, Navar AM, Ray KK, Schwartz GG, et al. Zerlasiran-A Small-Interfering RNA Targeting Lipoprotein(a): A Phase 2 Randomized Clinical Trial. JAMA. 2024;332(23):1992-2002. DOI: 10.1001/jama.2024.21957. PMID: 39556769."
-  - "Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785."
-  - "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289."
-  - "ClinicalTrials.gov. A Study to Investigate the Effect of Lepodisiran on the Reduction of Major Adverse Cardiovascular Events in Adults With Elevated Lipoprotein(a) (ACCLAIM-Lp(a)). NCT06292013. Fase 3, ativo sem recrutamento, N estimado 17.300, desfecho primário MACE-4, conclusão primária estimada em março de 2029. Conferido em ClinicalTrials.gov nesta sessão."
-  - "ClinicalTrials.gov. A Study to See if Lepodisiran Can Reduce Plaque in Coronary Arteries of Adults With Elevated Lp(a) (ACCLAIM-CTA). NCT07613294. Fase 3, recrutando, N estimado 252, desfecho primário variação percentual do volume de placa não calcificada em angiotomografia coronariana na semana 104, conclusão primária estimada em dezembro de 2029. Conferido em ClinicalTrials.gov nesta sessão."
-legacy_source: "Documento novo. Busca anti-colisão em content/Prevenção_e_lipídios/**/*.md (e content/**/*.md) em 01/09/2026 confirmou que a pasta já cobre extensamente a classe de siRNA contra Lp(a) — olpasirana (OCEAN(a)-DOSE), zerlasirana (ALPACAR-360) — e o inibidor oral muvalaplin, mas nenhum arquivo menciona lepodisiran. É molécula farmacologicamente distinta dentro da mesma classe: desenhada para duração de efeito muito mais longa (redução de Lp(a) ainda expressiva aos 337 dias em fase 1, com esquema de aplicação a cada 6-12 meses em vez de mensal/trimestral), e integra os programas da classe siRNA anti-Lp(a) com ensaio de desfecho cardiovascular de fase 3 em andamento, sem precedência sobre olpasirana (ACCLAIM-Lp(a), NCT06292013) — marco de maturidade clínica que os documentos já existentes sobre olpasirana e zerlasirana (ambos ainda em fase 2 quando escritos) não cobrem. Também não há, nesta pasta, nenhum documento sobre o ensaio de imagem de placa coronariana (ACCLAIM-CTA). Estatinas clássicas, PCSK9i injetáveis clássicos, ezetimiba e fibra dietética/LDL não são tocados aqui."
+- ClinicalTrials.gov. OCEAN(a)-Outcomes, NCT05581303. Início14dez2022; ativo sem recrutamento;
+  atualização27fev2026. https://clinicaltrials.gov/study/NCT05581303
+- 'Nissen SE, Wolski K, Watts GF, Koren MJ, Baum SJ, Verma S, et al. Lepodisiran,
+  an Extended-Duration Short Interfering RNA Targeting Lipoprotein(a): A Randomized
+  Dose-Ascending Clinical Trial. JAMA. 2023;330(21):2075-2083. DOI: 10.1001/jama.2023.21835.
+  PMID: 37952254.'
+- 'Nissen SE, et al. Lepodisiran — A Long-Duration Small Interfering RNA Targeting
+  Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818.
+  PMID: 40162643. Registro: ClinicalTrials.gov NCT05565742.'
+- 'O''Donoghue ML, Rosenson RS, Gencer B, López JAG, Lepor NE, Baum SJ, et al; OCEAN(a)-DOSE
+  Trial Investigators. Small Interfering RNA to Reduce Lipoprotein(a) in Cardiovascular
+  Disease. N Engl J Med. 2022;387(20):1855-1864. DOI: 10.1056/NEJMoa2211023. PMID:
+  36342163.'
+- 'Nissen SE, Wang Q, Nicholls SJ, Navar AM, Ray KK, Schwartz GG, et al. Zerlasiran-A
+  Small-Interfering RNA Targeting Lipoprotein(a): A Phase 2 Randomized Clinical Trial.
+  JAMA. 2024;332(23):1992-2002. DOI: 10.1001/jama.2024.21957. PMID: 39556769.'
+- 'Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al.
+  Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a
+  European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946.
+  DOI: 10.1093/eurheartj/ehac361. PMID: 36036785.'
+- 'Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019
+  ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378.
+  DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289.'
+- ClinicalTrials.gov. A Study to Investigate the Effect of Lepodisiran on the Reduction
+  of Major Adverse Cardiovascular Events in Adults With Elevated Lipoprotein(a) (ACCLAIM-Lp(a)).
+  NCT06292013. Fase 3, ativo sem recrutamento, N estimado 17.300, desfecho primário
+  MACE-4, conclusão primária estimada em março de 2029. Conferido em ClinicalTrials.gov
+  nesta sessão.
+- ClinicalTrials.gov. A Study to See if Lepodisiran Can Reduce Plaque in Coronary
+  Arteries of Adults With Elevated Lp(a) (ACCLAIM-CTA). NCT07613294. Fase 3, recrutando,
+  N estimado 252, desfecho primário variação percentual do volume de placa não calcificada
+  em angiotomografia coronariana na semana 104, conclusão primária estimada em dezembro
+  de 2029. Conferido em ClinicalTrials.gov nesta sessão.
+- Novartis. Lp(a)HORIZON phase III topline results. 04/09/2026. Comunicado primário
+  do patrocinador, sem resultados detalhados de artigo completo. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd
+legacy_source: 'Documento novo. Busca anti-colisão em content/Prevenção_e_lipídios/**/*.md
+  (e content/**/*.md) em 01/09/2026 confirmou que a pasta já cobre extensamente a
+  classe de siRNA contra Lp(a) — olpasirana (OCEAN(a)-DOSE), zerlasirana (ALPACAR-360)
+  — e o inibidor oral muvalaplin, mas nenhum arquivo menciona lepodisiran. É molécula
+  farmacologicamente distinta dentro da mesma classe: desenhada para duração de efeito
+  muito mais longa (redução de Lp(a) ainda expressiva aos 337 dias em fase 1, com
+  esquema de aplicação a cada 6-12 meses em vez de mensal/trimestral), e integra os
+  programas da classe siRNA anti-Lp(a) com ensaio de desfecho cardiovascular de fase
+  3 em andamento, sem precedência sobre olpasirana (ACCLAIM-Lp(a), NCT06292013) —
+  marco de maturidade clínica que os documentos já existentes sobre olpasirana e zerlasirana
+  (ambos ainda em fase 2 quando escritos) não cobrem. Também não há, nesta pasta,
+  nenhum documento sobre o ensaio de imagem de placa coronariana (ACCLAIM-CTA). Estatinas
+  clássicas, PCSK9i injetáveis clássicos, ezetimiba e fibra dietética/LDL não são
+  tocados aqui.'
 ---
 
 # Lepodisiran: o siRNA de Duração Estendida para Lipoproteína(a) e a Entrada na Fase 3
@@ -52,6 +92,10 @@ Lepodisiran não foi o primeiro siRNA anti-Lp(a) a entrar em ensaio de desfechos
 
 Em paralelo, o ACCLAIM-CTA (NCT07613294) é um ensaio de fase 3 menor (cerca de 252 participantes, ainda recrutando), desenhado para avaliar o efeito de lepodisiran sobre a progressão de placa coronariana não calcificada por angiotomografia ao longo de 104 semanas — um desfecho de imagem intermediário que pode gerar sinal mecanístico antes da leitura de eventos clínicos do ACCLAIM-Lp(a).
 
+## Atualização de outro programa: HORIZON
+
+Em04/09/2026, o patrocinador anunciou resultado preliminar negativo para o desfecho primário do HORIZON, com pelacarsena. O comunicado não contém HR/IC ou análise detalhada; não deve ser tratado como publicação completa. Pelacarsena é um antissenso, e esse resultado não demonstra falha do lepodisiran ou de toda a classe de siRNA. Os ensaios próprios continuam necessários.
+
 ## Implicações clínicas atuais
 
 Para a prática de hoje, três pontos seguem válidos independentemente do resultado futuro desses ensaios:
@@ -69,5 +113,5 @@ O interesse clínico de lepodisiran não está, portanto, no que ele já mudou n
 - [Muvalaplin — Inibidor Oral da Formação de Lipoproteína(a), o Ensaio de Fase 2](/biblioteca/muvalaplin-inibidor-oral-da-formacao-de-lipoproteina-a-ensaio-de-fase-2)
 - [Lipoproteína(a): Rastreamento ao Menos Uma Vez na Vida — o Consenso EAS 2022](/biblioteca/lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022)
 - [Lipoproteína(a): a Evidência de Causalidade Genética dos Estudos de Copenhague](/biblioteca/lipoproteina-a-evidencia-de-causalidade-genetica-dos-estudos-de-copenhague)
-- [Lipoproteína(a) elevada: o que fazer HOJE, enquanto os desfechos de pelacarsena e olpasirana não chegam](/biblioteca/lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam)
-- [Lipoproteína(a) e estenose aórtica calcificada: da causalidade genética ao primeiro ensaio com PCSK9i (EPISODE)](/biblioteca/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode)
+- [Lipoproteína(a) elevada: o que fazer HOJE, evidência disponível e conduta prática](/biblioteca/lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam)
+- [Lipoproteína(a) e estenose aórtica calcificada: da causalidade genética aos ensaios EPISODE e FRONTIERS CAVS](/biblioteca/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode)

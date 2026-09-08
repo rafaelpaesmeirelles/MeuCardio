@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 46,
-  "pending_count": 117,
+  "reviewed_count": 47,
+  "pending_count": 116,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -1407,20 +1407,34 @@
         "Estatinas não reduzem Lpa consistentemente/podem elevar; não suspender LDLterapia.",
         "ALPACA inclui braço400mgseguido placebo180, omitido.",
         "Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.",
-        "Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados."
+        "Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados.",
+        "Atualização focal: HORIZON topline04set2026 separado de evidência siRNA e de artigo completo."
       ],
       "sources": [
         "PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados",
         "NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026",
         "EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa"
       ],
-      "reviewed_sha256": "106614e9e93d970ab3534b548a6b40a0d0cd24fa085f91370a78bd8d4f6b5a8a"
+      "reviewed_sha256": "45bcfabc166f79144bcc7fb0e197a8b0779350a5b74bb39ed098b9e9ab1340c0"
     },
     {
       "index": 144,
       "path": "content/Prevenção_e_lipídios/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "dff65d514aecf008b2307a8b19d4c40b4ff527ace55b8738276325009175ddfb"
+      "status": "corrected_reviewed",
+      "source_sha256": "dff65d514aecf008b2307a8b19d4c40b4ff527ace55b8738276325009175ddfb",
+      "findings": [
+        "LDL genético não excluído por ensaios negativos de estatina em progressão; EPISODE não primeiro hipolipemiante nem mecanismo Lp(a) isolado.",
+        "Girard seguimento2,5–5 anos e associação não efeito terapêutico; removida conversão fixa nmol/mg.",
+        "FRONTIERS CAVS fase2 incluído; OCEAN-DOSE separado de Outcomes.",
+        "HORIZON comunicado negativo04set2026 incorporado sem inventar HR/subgrupo nem extrapolar à válvula."
+      ],
+      "sources": [
+        "Nove fontes originais conferidas em abstracts e identidade PubMed.",
+        "Smith25344734 primário consultado.",
+        "ClinicalTrials.gov APIs de quatro registros consultadas.",
+        "Comunicado primário Novartis04set2026 lido integralmente."
+      ],
+      "reviewed_sha256": "69645d0de2470bcf840240da2c31a3b089c8e3659448dc76cf92d28c32170077"
     },
     {
       "index": 145,

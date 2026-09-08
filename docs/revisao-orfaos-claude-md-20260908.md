@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 46 documentos lidos integralmente e corrigidos; 117 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 47 documentos lidos integralmente e corrigidos; 116 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -377,8 +377,18 @@ Fontes verificadas: Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck 
 - ALPACA inclui braço400mgseguido placebo180, omitido.
 - Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.
 - Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados.
+- Atualização focal: HORIZON topline04set2026 separado de evidência siRNA e de artigo completo.
 
 Fontes verificadas: PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados, NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026, EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa.
+
+## 144 — content/Prevenção_e_lipídios/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode.md
+
+- LDL genético não excluído por ensaios negativos de estatina em progressão; EPISODE não primeiro hipolipemiante nem mecanismo Lp(a) isolado.
+- Girard seguimento2,5–5 anos e associação não efeito terapêutico; removida conversão fixa nmol/mg.
+- FRONTIERS CAVS fase2 incluído; OCEAN-DOSE separado de Outcomes.
+- HORIZON comunicado negativo04set2026 incorporado sem inventar HR/subgrupo nem extrapolar à válvula.
+
+Fontes verificadas: Nove fontes originais conferidas em abstracts e identidade PubMed., Smith25344734 primário consultado., ClinicalTrials.gov APIs de quatro registros consultadas., Comunicado primário Novartis04set2026 lido integralmente..
 
 ## 157 — content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md
 
