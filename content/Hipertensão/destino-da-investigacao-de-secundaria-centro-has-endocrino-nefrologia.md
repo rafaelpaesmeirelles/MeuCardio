@@ -1,0 +1,45 @@
+---
+title: "Destino da investigação de hipertensão secundária: centro de HAS, endocrino ou nefrologia"
+slug: destino-da-investigacao-de-secundaria-centro-has-endocrino-nefrologia
+theme: "Hipertensão"
+kind: protocolo
+fonte_producao: grok
+summary: "Destino da investigação de causas secundárias com política explícita de rastreio de aldosteronismo 2025, causas renais, AOS e encaminhamento dirigido."
+review_status: revisado
+review_note: "Revisão científica/adversarial 08/09/2026: findings PR865 reconstruídos; urgência, bibliografia e limites revistos. Fonte grok preservada."
+source_refs:
+  - "Endocrine Society. Primary Aldosteronism Clinical Practice Guideline. 2025. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
+  - "Jones DW et al. 2025 AHA/ACC High Blood Pressure Guideline. DOI: 10.1161/CIR.0000000000001356."
+  - "McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715"
+  - "Brandão AA, Rodrigues CIS, Bortolotto LA, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624. PMID: 41294179"
+  - "Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. DOI: 10.1097/HJH.0000000000003480. PMID: 37345492"
+  - "Charles L, Triscott J, Dobbs B. Secondary Hypertension: Discovering the Underlying Cause. Am Fam Physician. 2017;96(7):453-461. PMID: 29094913"
+---
+
+# Destino da investigação de hipertensão secundária: centro de HAS, endocrino ou nefrologia
+
+Confirmar estabilidade e a política de rastreio com o [protocolo de suspeita](/biblioteca/suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao). Este documento organiza o responsável pela investigação; não redefine testes ou suspensão medicamentosa.
+
+## Pista e destino
+
+| Pista | Investigação/destino |
+|---|---|
+| Aldosteronismo | Protocolo de aldosterona-renina e endocrinologia/centro de HAS |
+| Creatinina basal alterada, albuminúria, hematúria/sedimento, edema ou morfologia renal anormal | Função renal, urina/albuminúria e ultrassom conforme contexto; nefrologia |
+| Início abrupto, edema pulmonar recorrente ou deterioração renal expressiva após IECA/BRA | Rever volume, fármacos e magnitude/tendência; investigar renovascular conforme probabilidade. Pequena elevação isolada não indica angioTC. Distinguir aterosclerose de displasia fibromuscular |
+| AOS: sintomas ou HAS resistente mesmo sem queixa espontânea | Avaliação de sono e teste adequado; CPAP e otimização da HAS em paralelo |
+| Metanefrinas positivas em estável | Endocrinologia; imagem geralmente após evidência bioquímica, salvo contexto específico |
+| Fenótipo de Cushing | Testes selecionados pelo contexto endócrino; não painel indiscriminado |
+| Gradiente braço-perna/pulsos compatíveis com coarctação | Cardiologia congênita/ACHD e imagem apropriada |
+| Suspeita tireoidiana | Avaliação hormonal dirigida |
+
+Não solicitar painel de imagem/bioquímica indiscriminado por qualquer PA alta. Definir responsável, resultados pendentes e prazo conforme gravidade e acesso. Hipocalemia é pista, não diagnóstico determinístico.
+
+Ver [protocolo de aldosteronismo e feocromocitoma](/biblioteca/aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society) e [causas rastreáveis](/biblioteca/hipertensao-secundaria-causas-rastreaveis-no-adulto).
+
+
+## Navegação
+
+- [`suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao`](/biblioteca/suspeita-ambulatorial-de-hipertensao-secundaria-quando-escalar-investigacao)
+- [`aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society`](/biblioteca/aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society)
+- [`fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar`](/biblioteca/fluxograma-investigacao-hipertensao-secundaria-quando-suspeitar)

@@ -1,0 +1,37 @@
+---
+title: "Sinalizadores ambulatoriais pós-cardioversão de FA: quando voltar ao pronto-socorro"
+slug: sinalizadores-ambulatoriais-pos-cardioversao-fa-quando-voltar-ao-ps
+theme: "Fibrilação atrial"
+kind: protocolo
+fonte_producao: grok
+summary: "Destino clínico individualizado e limites de segurança; critérios detalhados no protocolo e navegação canônica do pacote."
+review_status: revisado
+review_note: "Revisão científica/adversarial 08/09/2026: findings PR883 reconstruídos; urgência, bibliografia e limites revistos. Fonte grok preservada."
+source_refs:
+  - "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
+  - "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177"
+---
+
+# Sinalizadores ambulatoriais pós-cardioversão de FA: quando voltar ao pronto-socorro
+
+## Reavaliar sintomas após cardioversão elétrica ou farmacológica
+
+Déficit neurológico súbito, mesmo transitório, ou cefaleia abrupta e muito intensa exigem emergência; acionar SAMU 192 quando apropriado, sem dirigir. Considerar embolia também diante de dor abdominal aguda intensa ou membro subitamente doloroso, frio ou sem pulso. Isquemia, congestão aguda, síncope, bradicardia com repercussão e taquiarritmia sustentada sintomática requerem avaliação urgente monitorizada, mesmo sem hipotensão. Após cardioversão farmacológica, considerar QT prolongado e pró-arritmia.
+
+Sangramento em local crítico, queda de Hb ≥2 g/dL ou necessidade de ≥2 unidades de hemácias caracteriza sangramento maior, ainda que a PA esteja normal. Encaminhar para avaliação urgente e manejo da anticoagulação; a orientação habitual de não interromper o anticoagulante não se aplica cegamente ao sangramento maior. Sangramento menor requer classificação e contato com a equipe conforme persistência, sem retirada automática.
+
+Na palpitação leve e estável, confirmar ritmo com ECG e avaliar frequência, duração, sintomas, cardiopatia estrutural/IC, precipitantes e acesso ao cuidado. Recorrência após cardioversão não é um período de blanking que permita ignorar sintomas. FA com resposta rápida persistente e sintomática não pertence ao braço de simples retorno eletivo. Se não houver acesso suficientemente rápido à avaliação necessária, utilizar serviço de urgência; não esperar surgir instabilidade.
+
+Anticoagulação peri e pós-procedimento segue o plano específico da cardioversão; a decisão de longo prazo depende do risco tromboembólico, não apenas da manutenção do ritmo sinusal. Revisar adesão e doses esquecidas com a equipe, sem compensação empírica. Este roteiro não substitui o protocolo de cardioversão e anticoagulação.
+
+Ablação recente é um contexto adicional: suspeita de complicação exige avaliação urgente própria, mesmo se o encaminhamento eletrônico estiver indisponível. Não confundir o seguimento pós-ablação com o pós-cardioversão.
+
+## Navegação
+
+- [`cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024`](/biblioteca/cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024)
+- [`fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento`](/biblioteca/fluxograma-cardioversao-eletiva-anticoagulacao-periprocedimento)
+- [`wait-and-see-versus-cardioversao-precoce-na-fa-de-inicio-recente-race-7-acwas`](/biblioteca/wait-and-see-versus-cardioversao-precoce-na-fa-de-inicio-recente-race-7-acwas)
+- [`pill-in-the-pocket-cardioversao-quimica-ambulatorial-na-fa-de-inicio-recente`](/biblioteca/pill-in-the-pocket-cardioversao-quimica-ambulatorial-na-fa-de-inicio-recente)
+- [`esc-2024-diretriz-fibrilacao-atrial-af-care`](/biblioteca/esc-2024-diretriz-fibrilacao-atrial-af-care)
+- [`fluxograma-ambulatorial-pos-cardioversao-fa-destino`](/biblioteca/fluxograma-ambulatorial-pos-cardioversao-fa-destino)
+- [`recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps`](/biblioteca/recorrencia-leve-pos-cardioversao-fa-retorno-precoce-nao-ps)
