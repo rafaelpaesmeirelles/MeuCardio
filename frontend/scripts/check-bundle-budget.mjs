@@ -187,7 +187,12 @@ for (const path of await listarArquivos(distPath)) {
 // mede 3134406 B, delta auditado de 165648 B. O novo teto deixa somente 1082 B
 // de margem; entrypoint, gzip, divisão por rotas e teto de chunks opcionais
 // permanecem rigorosamente inalterados.
-const maxPrecacheBytes = 3062 * 1024;
+//
+// Ajustado de 3062 KB para 3070 KB em 08/09/2026: a mobilidade móvel e a
+// consistência dos temas claro/escuro aprovadas no commit 4b1c5bd elevaram o
+// precache a 3143264 B. O aumento é limitado a 8 KiB, deixa apenas 416 B de
+// margem e preserva todos os demais tetos sem alteração.
+const maxPrecacheBytes = 3070 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }
