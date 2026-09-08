@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 41 documentos lidos integralmente e corrigidos; 122 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 42 documentos lidos integralmente e corrigidos; 121 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -91,6 +91,16 @@ Fontes verificadas: 4referências originais: abstracts conferidos; GeneReviews i
 - Removidas extrapolações de relato pós-COVID e caso único de GN como série pediátrica.
 
 Fontes verificadas: 12 PMIDs originais/citados: identidade e abstracts disponíveis conferidos; Saiin34866099 apenas identidade, sem alegação de leitura integral., Chapel Hill PMID23045170 DOI10.1002/art.37715 e classificação publicada pelo consenso consultados., CDC Laboratory Recommendations2024; Durtette29037902, Marrero39110231 e Gad40843044 abstracts primários..
+
+## 9 — content/Arritmias/bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo.md
+
+- Removida exigência de sintomas para marca-passo em MobitzII/BAV avançado sem causa reversível.
+- Incluída laminopatia e possível CDI com estimulação; etiologia genética pode alterar seleção do dispositivo.
+- Provocação com bloqueador de sódio não rotineira em portadores SCN5A; consenso2025, contexto diagnóstico e segurança incorporados.
+- Mapeamento19q13 pertence à linha TRPM4, não SCN5A; variabilidade e penetrância substituem cronologia inevitável.
+- VUS não confirma doença nem orienta dispositivo isoladamente.
+
+Fontes verificadas: 14 referências originais: identidades conferidas; abstracts disponíveis lidos, sem alegar leitura integral dos históricos sem abstract., AHA texto online de recomendação2018 confirmado; erratum31424988 identificado, texto integral inacessível, sem alegar sua revisão., Consenso genético2022 DOIeuac030; corrigendum euac106 lido: autoria/afiliações apenas., ESC2021 DOIehab364 recomendação LMNA consultada; consenso provocação2025 DOIeuaf067 seções indicação, rastreio familiar e segurança consultadas..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
