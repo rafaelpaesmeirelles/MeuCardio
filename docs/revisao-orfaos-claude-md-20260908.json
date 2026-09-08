@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 39,
-  "pending_count": 124,
+  "reviewed_count": 40,
+  "pending_count": 123,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -138,8 +138,19 @@
     {
       "index": 7,
       "path": "content/Aorta_e_doença_arterial_periférica/sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "8d7743dda44c0ee1d54400e49a8b5cacf012b37656794226c0b95cc07d4ad788"
+      "status": "corrected_reviewed",
+      "source_sha256": "8d7743dda44c0ee1d54400e49a8b5cacf012b37656794226c0b95cc07d4ad788",
+      "findings": [
+        "Tortuosidade não exclui Marfan/vEDS; estudos primários AJNR2020 eJAHA2023 contradizem regra do original.",
+        "Coucke2006 mostrouTGFβ aumentado; hipóteseascorbato não exclui essa via.",
+        "Ecoanual requer dimensõesnormais, não apenas estáveis; imagem3anos exige ausência dedilataçãoraiz também.",
+        "45mmpré-gestacional é extrapolaçãoMarfan, não limiar validadoATS; removidas prevalências/certezas mecanísticas excessivas."
+      ],
+      "sources": [
+        "4referências originais: abstracts conferidos; GeneReviews integral das seções mecanismo/diferencial/manejo/vigilância/gestação consultadas online.",
+        "SpinardiDOI10.3174/ajnr.A6732 primária; StephensDOI10.1161/JAHA.123.029518 PMID37776192 primária."
+      ],
+      "reviewed_sha256": "0ba85b23fbc95fc5d5d44b39227ed946efb0161e044829f31bac20773e5d01d6"
     },
     {
       "index": 8,
