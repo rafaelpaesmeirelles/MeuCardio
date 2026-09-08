@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr887-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr887": "70337a72bb196e293c911dff1c6f2f5983d46c0d"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-aine-no-retorno-cardiologico",
+      "fluxograma-ambulatorial-aine-quando-evitar-e-escalar",
+      "sinalizadores-ambulatoriais-de-aine-no-paciente-cardiologico"
+    ]
+  }
+}
