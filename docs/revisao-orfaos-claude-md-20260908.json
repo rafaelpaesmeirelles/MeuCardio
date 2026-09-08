@@ -2,8 +2,8 @@
   "source_branch": "claude/science-scale-20k-20260904",
   "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
   "snapshot_count": 163,
-  "reviewed_count": 35,
-  "pending_count": 128,
+  "reviewed_count": 36,
+  "pending_count": 127,
   "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
   "records": [
     {
@@ -62,8 +62,21 @@
     {
       "index": 3,
       "path": "content/Aorta_e_doença_arterial_periférica/poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva.md",
-      "status": "pending_contextual_review",
-      "source_sha256": "c1ae9b456f78048c659f117f104168afe633a62b6c4ddc50ea6724ca922eb255"
+      "status": "corrected_reviewed",
+      "source_sha256": "c1ae9b456f78048c659f117f104168afe633a62b6c4ddc50ea6724ca922eb255",
+      "findings": [
+        "GLOBAL-PAN excluiu VHB; não demonstra sua prevalência atual.",
+        "Günal15 não encontrou isquemia/infarto: removida extrapolação de coronarite.",
+        "Biópsia e imagem complementares; ACR2021 omitida restaurada e terapia não grave poupadora de corticoide.",
+        "Samson118 iniciou GC em todos; CHUSPAN vantagem não sustentada10anos; idosos somente10PAN.",
+        "PAN-VHB não proibida pela nomenclatura; anticoagulação e corticoide não protocolo universal; mortalidade antiviral115 não significativa."
+      ],
+      "sources": [
+        "19 referências originais: abstracts individualmente lidos;23045170/34353474 somente metadados, sem abstract disponível.",
+        "ACR/VF DOI10.1002/art.41776 PDF primário e publicação simultânea acr.24633 consultados.",
+        "GLOBAL-PAN38343337 eVHB16148731 relidos completos no cache para exclusões e significância."
+      ],
+      "reviewed_sha256": "ffd7584ade639fdfb32a398e8ffb1a33673d33a1561f1a3918e4207a5866d5bc"
     },
     {
       "index": 4,

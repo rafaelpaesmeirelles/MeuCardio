@@ -2,7 +2,7 @@
 
 Snapshot congelado: `deeccd771955810f02c770fc58b3034fbf51bbc5`, branch `claude/science-scale-20k-20260904`. Somente os 163 arquivos inventariados antes das novas sessões Claude; nenhum fetch nem conteúdo posterior. SHA256 original e revisado constam no ledger.
 
-Checkpoint: 35 documentos lidos integralmente e corrigidos; 128 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
+Checkpoint: 36 documentos lidos integralmente e corrigidos; 127 explicitamente pendentes de revisão contextual. A dependência canônica FOREST-HCM foi atualizada com ACACIA publicado (PMID42663312). Não há aprovação científica global dos 163.
 
 Anticolisão: não foram encontrados slugs idênticos na comparação inicial; similaridade lexical não foi utilizada para aprovar nem descartar conteúdo. Links e referências cruzadas ainda dependem da integração final do corpus. Bibliografia foi conferida no nível permitido pelas fontes acessíveis; acesso a abstract não equivale a leitura integral nem aprovação de recomendações derivadas.
 
@@ -32,6 +32,16 @@ Fontes verificadas: 18 PMIDs originais: identidade e abstracts individualmente c
 - Demais genes não são todos recessivos; coortes99/52 do mesmo grupo não replicação independente; hemostasia1984 não protocolo universal.
 
 Fontes verificadas: 9 referências originais: identidade e abstracts conferidos., Folkestad DOI10.1093/jbmr/zjae197 PMID39665364: recomendações completas acessíveis em resultado primário PMC11789389., Sullivan PMID29189536 reconferido no PubMed; GeneReviews tabela de vigilância online..
+
+## 3 — content/Aorta_e_doença_arterial_periférica/poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva.md
+
+- GLOBAL-PAN excluiu VHB; não demonstra sua prevalência atual.
+- Günal15 não encontrou isquemia/infarto: removida extrapolação de coronarite.
+- Biópsia e imagem complementares; ACR2021 omitida restaurada e terapia não grave poupadora de corticoide.
+- Samson118 iniciou GC em todos; CHUSPAN vantagem não sustentada10anos; idosos somente10PAN.
+- PAN-VHB não proibida pela nomenclatura; anticoagulação e corticoide não protocolo universal; mortalidade antiviral115 não significativa.
+
+Fontes verificadas: 19 referências originais: abstracts individualmente lidos;23045170/34353474 somente metadados, sem abstract disponível., ACR/VF DOI10.1002/art.41776 PDF primário e publicação simultânea acr.24633 consultados., GLOBAL-PAN38343337 eVHB16148731 relidos completos no cache para exclusões e significância..
 
 ## 35 — content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md
 
