@@ -1,0 +1,766 @@
+[
+  {
+    "slug": "bloqueio-atrioventricular",
+    "set": {
+      "assistant_questions": [
+        {
+          "id": "grau_bav",
+          "label": "Qual o grau do bloqueio atrioventricular identificado?",
+          "type": "select",
+          "options": [
+            {
+              "value": "primeiro_grau",
+              "label": "Primeiro grau"
+            },
+            {
+              "value": "segundo_grau_mobitz_1",
+              "label": "Segundo grau Mobitz I"
+            },
+            {
+              "value": "segundo_grau_mobitz_2",
+              "label": "Segundo grau Mobitz II"
+            },
+            {
+              "value": "alto_grau",
+              "label": "Alto grau"
+            },
+            {
+              "value": "terceiro_grau_completo",
+              "label": "Terceiro grau (completo)"
+            },
+            {
+              "value": "bav_2_1_indeterminado",
+              "label": "BAV 2:1, nível ainda não definido (não equivale a Mobitz II)"
+            }
+          ],
+          "required": true
+        },
+        {
+          "id": "sintomatico",
+          "label": "O paciente apresenta sintomas atribuíveis à bradicardia?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "sintomas_associados",
+          "label": "Quais sintomas estão presentes?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "sincope",
+              "label": "Síncope"
+            },
+            {
+              "value": "pre_sincope",
+              "label": "Pré-síncope"
+            },
+            {
+              "value": "tontura",
+              "label": "Tontura"
+            },
+            {
+              "value": "dispneia",
+              "label": "Dispneia"
+            },
+            {
+              "value": "fadiga",
+              "label": "Fadiga"
+            },
+            {
+              "value": "dor_toracica",
+              "label": "Dor torácica"
+            },
+            {
+              "value": "confusao_mental",
+              "label": "Confusão mental"
+            }
+          ]
+        },
+        {
+          "id": "instabilidade_hemodinamica_aguda",
+          "label": "Há instabilidade hemodinâmica aguda no momento da avaliação?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "frequencia_cardiaca",
+          "label": "Qual a frequência cardíaca atual (bpm)?",
+          "type": "number",
+          "min": 0,
+          "max": 300
+        },
+        {
+          "id": "uso_farmaco_bradicardizante",
+          "label": "O paciente utiliza algum fármaco com efeito bradicardizante ou dromotrópico negativo?",
+          "type": "boolean"
+        },
+        {
+          "id": "classe_farmaco_bradicardizante",
+          "label": "Qual classe de fármaco bradicardizante está em uso?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "betabloqueador",
+              "label": "Betabloqueador"
+            },
+            {
+              "value": "bloqueador_canal_calcio_nao_diidropiridinico",
+              "label": "Bloqueador de canal de cálcio não-diidropiridínico"
+            },
+            {
+              "value": "digoxina",
+              "label": "Digoxina"
+            },
+            {
+              "value": "antiarritmico",
+              "label": "Antiarrítmico"
+            },
+            {
+              "value": "outro",
+              "label": "Outro"
+            }
+          ]
+        },
+        {
+          "id": "funcao_renal_alterada",
+          "label": "Há disfunção renal aguda ou hipercalemia documentada?",
+          "type": "boolean"
+        },
+        {
+          "id": "suspeita_brash",
+          "label": "Há suspeita clínica de síndrome BRASH?",
+          "type": "boolean"
+        },
+        {
+          "id": "causa_reversivel_identificada",
+          "label": "Foi identificada alguma causa reversível para o bloqueio atrioventricular?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "tipo_causa_reversivel",
+          "label": "Qual causa reversível foi identificada?",
+          "type": "multiselect",
+          "options": [
+            {
+              "value": "farmaco_bradicardizante",
+              "label": "Fármaco bradicardizante"
+            },
+            {
+              "value": "doenca_de_lyme",
+              "label": "Doença de Lyme"
+            },
+            {
+              "value": "disturbio_eletrolitico",
+              "label": "Distúrbio eletrolítico"
+            },
+            {
+              "value": "isquemia_miocardica_aguda",
+              "label": "Isquemia miocárdica aguda"
+            },
+            {
+              "value": "hipotireoidismo",
+              "label": "Hipotireoidismo"
+            },
+            {
+              "value": "pos_operatorio_cardiaco",
+              "label": "Pós-operatório cardíaco"
+            },
+            {
+              "value": "outra",
+              "label": "Outra"
+            }
+          ]
+        },
+        {
+          "id": "suspeita_epidemiologica_lyme",
+          "label": "Há exposição epidemiológica compatível com doença de Lyme?",
+          "type": "boolean"
+        },
+        {
+          "id": "sorologia_lyme_realizada",
+          "label": "A sorologia para doença de Lyme foi realizada?",
+          "type": "select",
+          "options": [
+            {
+              "value": "sim_positiva",
+              "label": "Sim, positiva"
+            },
+            {
+              "value": "sim_negativa",
+              "label": "Sim, negativa"
+            },
+            {
+              "value": "nao_realizada",
+              "label": "Não realizada"
+            }
+          ]
+        },
+        {
+          "id": "necessidade_marca_passo_temporario",
+          "label": "Há necessidade de marca-passo temporário/transcutâneo?",
+          "type": "boolean"
+        },
+        {
+          "id": "indicacao_marca_passo_definitivo",
+          "label": "Há indicação de marca-passo definitivo?",
+          "type": "boolean"
+        },
+        {
+          "id": "instabilidade_atribuivel_bradicardia",
+          "label": "A instabilidade aguda é atribuível à bradicardia/BAV após avaliação clínica, e não apenas um BAV incidental?",
+          "type": "boolean"
+        },
+        {
+          "id": "investigacao_reversibilidade_concluida",
+          "label": "A equipe concluiu a avaliação de causas reversíveis ou fisiológicas para decidir sobre dispositivo permanente?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "cardite_lyme_clinicamente_compativel",
+          "label": "Além da sorologia, o quadro clínico e a exposição epidemiológica são compatíveis com cardite de Lyme?",
+          "type": "boolean"
+        },
+        {
+          "id": "mobitz1_infranodal_suspeito",
+          "label": "Em Mobitz I, há suspeita/documentação de localização infranodal ou doença de condução de risco?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "bav_alto_grau_instavel_emergencia",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "instabilidade_hemodinamica_aguda",
+                "op": "truthy"
+              },
+              {
+                "field": "instabilidade_atribuivel_bradicardia",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Instabilidade hemodinâmica aguda associada a bloqueio atrioventricular"
+            ],
+            "emergency_flow": [
+              "Acionar suporte de emergência, monitorizar e tratar bradicardia com comprometimento cardiopulmonar pelo algoritmo AHA 2025, corrigindo causas reversíveis em paralelo. Preparar estimulação transcutânea e suporte farmacológico conforme resposta; se instabilidade persistir apesar do tratamento, organizar estimulação transvenosa temporária. Não atrasar estimulação necessária no BAV avançado instável."
+            ]
+          }
+        },
+        {
+          "id": "bav_completo_sintomatico_emergencia",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "eq",
+                "value": "terceiro_grau_completo"
+              },
+              {
+                "field": "sintomatico",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "BAV completo sintomático"
+            ],
+            "suggested_tests": [
+              "Eletrocardiograma seriado",
+              "Avaliação eletrofisiológica urgente"
+            ],
+            "emergency_flow": [
+              "Encaminhar imediatamente para avaliação monitorizada do BAV completo sintomático, com ECG e capacidade de estimulação. Tratar causas reversíveis e definir necessidade de suporte temporário conforme perfusão e estabilidade; não aguardar Holter ambulatorial."
+            ]
+          }
+        },
+        {
+          "id": "bav_alto_grau_ou_completo_assintomatico",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "in",
+                "value": [
+                  "alto_grau",
+                  "terceiro_grau_completo"
+                ]
+              },
+              {
+                "field": "sintomatico",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "BAV avançado ou completo documentado exige avaliação rápida e monitorizada, mesmo sem sintomas. Na ausência de causa reversível/fisiológica, há indicação de marca-passo permanente independentemente de sintomas."
+            ],
+            "emergency_flow": [
+              "Organizar avaliação monitorizada com capacidade de estimulação e investigar reversibilidade; Holter ambulatorial não deve atrasar a conduta diante de BAV avançado já documentado."
+            ]
+          }
+        },
+        {
+          "id": "suspeita_brash_manejo",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "suspeita_brash",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Combinação de bradicardia, disfunção renal e uso de fármaco bloqueador do nó atrioventricular sugere síndrome BRASH"
+            ],
+            "messages": [
+              "Investigar a combinação de bradicardia, disfunção renal, uso de bloqueador nodal AV, choque e hipercalemia; corrigir causas em ambiente monitorizado. Suspensão de fármaco é decisão da equipe conforme causalidade, com suporte metabólico/hemodinâmico em paralelo."
+            ],
+            "emergency_flow": [
+              "Avaliar prontamente em ambiente monitorizado; instabilidade/choque exige suporte emergencial e tratamento da hipercalemia e demais fatores contribuintes."
+            ]
+          }
+        },
+        {
+          "id": "farmaco_bradicardizante_causa_reversivel",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "uso_farmaco_bradicardizante",
+                "op": "truthy"
+              },
+              {
+                "field": "causa_reversivel_identificada",
+                "op": "truthy"
+              },
+              {
+                "field": "tipo_causa_reversivel",
+                "op": "contains",
+                "value": "farmaco_bradicardizante"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Uso de fármaco bradicardizante identificado como possível causa reversível do bloqueio"
+            ],
+            "missing_information": [
+              "Confirmar se houve resolução do bloqueio após suspensão temporária do fármaco"
+            ]
+          }
+        },
+        {
+          "id": "suspeita_lyme_investigacao",
+          "priority": 65,
+          "when": {
+            "any": [
+              {
+                "field": "suspeita_epidemiologica_lyme",
+                "op": "truthy"
+              },
+              {
+                "field": "tipo_causa_reversivel",
+                "op": "contains",
+                "value": "doenca_de_lyme"
+              }
+            ]
+          },
+          "add": {
+            "differentials": [
+              "Cardite de Lyme"
+            ],
+            "suggested_tests": [
+              "Sorologia para doença de Lyme"
+            ]
+          }
+        },
+        {
+          "id": "lyme_confirmada_tratamento",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "sorologia_lyme_realizada",
+                "op": "eq",
+                "value": "sim_positiva"
+              },
+              {
+                "field": "cardite_lyme_clinicamente_compativel",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Quadro clínico-epidemiológico e sorologia compatíveis: tratar cardite de Lyme conforme gravidade e protocolo especializado. Bloqueio avançado requer hospitalização/monitorização e pode exigir estimulação temporária; não decidir por dispositivo permanente antes da avaliação de reversibilidade. Sorologia positiva isolada não define cardite ativa."
+            ]
+          }
+        },
+        {
+          "id": "primeiro_grau_ou_mobitz1_assintomatico_rotina",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "in",
+                "value": [
+                  "primeiro_grau",
+                  "segundo_grau_mobitz_1"
+                ]
+              },
+              {
+                "field": "sintomatico",
+                "op": "falsy"
+              },
+              {
+                "field": "instabilidade_hemodinamica_aguda",
+                "op": "eq",
+                "value": false
+              }
+            ],
+            "none": [
+              {
+                "field": "mobitz1_infranodal_suspeito",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "suspeita_brash",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "opposing": [
+              "BAV de primeiro grau ou Mobitz I nodal assintomático, sem instabilidade ou sinais de doença de condução de risco, costuma permitir acompanhamento."
+            ],
+            "ambulatory_flow": [
+              "Manter observação clínica e eletrocardiográfica periódica sem intervenção imediata"
+            ]
+          }
+        },
+        {
+          "id": "mobitz2_sempre_atencao",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "eq",
+                "value": "segundo_grau_mobitz_2"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Mobitz II confirmado exige avaliação rápida e monitorizada. Sem causa reversível/fisiológica, marca-passo permanente é indicado mesmo sem sintomas; estudo eletrofisiológico não é requisito rotineiro para confirmar indicação já estabelecida."
+            ],
+            "emergency_flow": [
+              "Encaminhar para avaliação monitorizada e investigação de causas reversíveis, com capacidade de estimulação. Se houver instabilidade, ativar a via emergencial."
+            ]
+          }
+        },
+        {
+          "id": "marca_passo_temporario_necessario",
+          "priority": 92,
+          "when": {
+            "all": [
+              {
+                "field": "necessidade_marca_passo_temporario",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Providenciar estimulação temporária (transcutânea ou transvenosa) até resolução da causa ou implante definitivo"
+            ]
+          }
+        },
+        {
+          "id": "causa_reversivel_nao_identificada_faltando_investigacao",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "causa_reversivel_identificada",
+                "op": "missing"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Investigar causas reversíveis (fármacos, distúrbios eletrolíticos, doença de Lyme, isquemia) antes de definir conduta final"
+            ]
+          }
+        },
+        {
+          "id": "instabilidade-investigar-causa",
+          "priority": 101,
+          "when": {
+            "all": [
+              {
+                "field": "instabilidade_hemodinamica_aguda",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Acionar emergência, estabilizar via aérea, respiração e circulação e investigar a causa da instabilidade. BAV incidental não determina estimulação automaticamente; estabelecer contribuição da bradicardia e seguir o algoritmo apropriado."
+            ]
+          }
+        },
+        {
+          "id": "bav-avancado-indicacao-permanente",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "in",
+                "value": [
+                  "segundo_grau_mobitz_2",
+                  "alto_grau",
+                  "terceiro_grau_completo"
+                ]
+              },
+              {
+                "field": "investigacao_reversibilidade_concluida",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "causa_reversivel_identificada",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Mobitz II, BAV de alto grau ou completo, sem causa reversível/fisiológica após investigação: indicação de marca-passo permanente independentemente de sintomas (ESC 2021). Definir sistema e momento conforme condição clínica."
+            ]
+          }
+        },
+        {
+          "id": "bav-avancado-causa-reversivel",
+          "priority": 86,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "in",
+                "value": [
+                  "segundo_grau_mobitz_2",
+                  "alto_grau",
+                  "terceiro_grau_completo"
+                ]
+              },
+              {
+                "field": "causa_reversivel_identificada",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "emergency_flow": [
+              "Tratar a causa reversível em ambiente monitorizado e avaliar suporte temporário conforme estabilidade. Reavaliar condução antes de decidir implante permanente; não aguardar em casa por resolução de bloqueio avançado."
+            ]
+          }
+        },
+        {
+          "id": "bav-2-1-definir-nivel",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "eq",
+                "value": "bav_2_1_indeterminado"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "BAV 2:1 não pode ser classificado automaticamente como Mobitz I ou II. Definir nível e contexto com cardiologia; considerar ECG, comportamento do bloqueio e investigação dirigida em paciente estável. Sintomas agudos ou instabilidade exigem avaliação urgente/emergencial."
+            ]
+          }
+        },
+        {
+          "id": "lyme-sorologia-isolada",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "sorologia_lyme_realizada",
+                "op": "eq",
+                "value": "sim_positiva"
+              }
+            ],
+            "none": [
+              {
+                "field": "cardite_lyme_clinicamente_compativel",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Sorologia positiva isolada pode refletir infecção passada ou resultado falso positivo. Correlacionar apresentação, exposição e testagem apropriada; não prescrever tratamento de cardite apenas pelo resultado."
+            ]
+          }
+        },
+        {
+          "id": "mobitz1-suspeita-infranodal",
+          "priority": 72,
+          "when": {
+            "all": [
+              {
+                "field": "grau_bav",
+                "op": "eq",
+                "value": "segundo_grau_mobitz_1"
+              },
+              {
+                "field": "mobitz1_infranodal_suspeito",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Suspeita de Mobitz I infranodal exige avaliação especializada; não aplicar a orientação de benignidade do bloqueio nodal."
+            ]
+          }
+        },
+        {
+          "id": "lyme-suspeita-clinica-nao-esperar-sorologia",
+          "priority": 76,
+          "when": {
+            "all": [
+              {
+                "field": "cardite_lyme_clinicamente_compativel",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "none": [
+              {
+                "field": "sorologia_lyme_realizada",
+                "op": "eq",
+                "value": "sim_positiva"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Na suspeita clínica consistente de cardite de Lyme, iniciar manejo e antibioticoterapia apropriados pela equipe sem aguardar a sorologia. BAV avançado ou sintomas relevantes exige hospitalização/monitorização."
+            ]
+          }
+        }
+      ],
+      "treatment_summary": "No BAV adquirido Mobitz II, de alto grau ou completo, sem causa reversível ou fisiológica, o marca-passo permanente é indicado independentemente de sintomas (ESC 2021); não exigir pausas adicionais, escape instável ou sintomas para reconhecer a indicação. Definir o dispositivo e o momento com a equipe conforme função ventricular, necessidade de estimulação e contexto clínico. O BAV 2:1 não equivale automaticamente a Mobitz II: esclarecer nível e risco. BAV de primeiro grau e Mobitz I nodal assintomático geralmente admitem observação; localização infranodal, sintomas ou doença de condução associada mudam a avaliação. Na instabilidade, determinar se a bradicardia causa o comprometimento, estabilizar, tratar causas reversíveis e seguir o algoritmo de bradicardia AHA 2025 com suporte farmacológico/estimulação conforme resposta; persistência apesar do tratamento pode exigir estimulação transvenosa temporária. Não indicar pacing só porque uma pessoa instável tem BAV de primeiro grau incidental. BRASH envolve bradicardia, disfunção renal, uso de bloqueador nodal AV, choque e hipercalemia; tratar componentes e rever fármacos em ambiente monitorizado. Cardite de Lyme exige compatibilidade clínico-epidemiológica, e não sorologia isolada; bloqueio avançado pode demandar hospitalização e estimulação temporária enquanto se trata a infecção. BAV pós-infarto, pós-TAVI/cirurgia, congênito e infiltrativo exigem recomendações específicas; não extrapolar os tempos de observação entre etiologias.",
+      "differentials": [
+        "Doença do nó sinusal (bradicardia sinusal, pausas e parada sinusal) sem bloqueio atrioventricular verdadeiro",
+        "Bloqueio de saída sinoatrial",
+        "Extrassístoles atriais bloqueadas (não conduzidas) simulando pausa ou falso BAV",
+        "Bloqueio atrioventricular vagal/fisiológico do atleta, tipicamente noturno e revertido ao esforço",
+        "Intoxicação digitálica com bloqueio atrioventricular associado",
+        "Hipercalemia isolada com alentecimento da condução AV",
+        "Síndrome BRASH (bradicardia, insuficiência renal, uso de bloqueador nodal AV, choque e hipercalemia)",
+        "Ritmo idioventricular acelerado confundido com ritmo de escape de BAV completo",
+        "Bloqueio atrioventricular fetal/congênito (entidade distinta, de apresentação pré-natal ou neonatal)"
+      ],
+      "special_populations": [
+        "Paciente com bloqueio bifascicular assintomático (estratificação de risco de progressão para bloqueio atrioventricular total)",
+        "Paciente com doença de Lyme e bloqueio atrioventricular agudo (frequentemente reversível com antibioticoterapia)",
+        "Paciente com síndrome de BRASH (bradicardia, insuficiência renal, uso de bloqueador nodal AV, choque e hipercalemia)",
+        "Paciente com bloqueio atrioventricular pós-TAVI ou pós-cirurgia valvar",
+        "Paciente com bloqueio atrioventricular completo congênito no adulto jovem",
+        "Idoso com bloqueio atrioventricular de alto grau assintomático"
+      ],
+      "monitoring": [
+        "Monitorização eletrocardiográfica contínua durante episódios de instabilidade ou suspeita de progressão do bloqueio",
+        "Reavaliação periódica do ECG de 12 derivações em pacientes acompanhados ambulatorialmente com BAV de baixo grau",
+        "Acompanhamento seriado da função renal e dos níveis de potássio em pacientes com suspeita de síndrome BRASH ou disfunção renal associada",
+        "Monitorização de sintomas relacionados a bradicardia (síncope, pré-síncope, fadiga, dispneia) a cada consulta de seguimento",
+        "Acompanhamento clínico e eletrocardiográfico da recuperação da condução na cardite de Lyme; sorologia não serve para medir resposta ou confirmar cura",
+        "Verificação periódica de interações medicamentosas e reintrodução cautelosa de fármacos bradicardizantes previamente suspensos, quando clinicamente indicado",
+        "Avaliação programada de funcionamento do dispositivo em pacientes já submetidos a implante de marca-passo definitivo",
+        "Monitorização de eventos arrítmicos e progressão do bloqueio por meio de dispositivos de monitorização ambulatorial prolongada quando indicado"
+      ],
+      "diagnostic_approach": "O eletrocardiograma de 12 derivações é o exame inicial e define a classificação do grau de bloqueio: primeiro grau (PR maior que 200 ms, todas as ondas P conduzidas), segundo grau Mobitz I/Wenckebach (prolongamento progressivo do PR até uma onda P bloqueada, tipicamente nodal e de melhor prognóstico), segundo grau Mobitz II (onda P bloqueada isolada com PR constante antes e depois, geralmente infra-hissiano e de pior prognóstico), BAV 2:1 (indistinguível de Mobitz I ou II apenas pelo padrão, exige contexto adicional) e terceiro grau/completo (dissociação atrioventricular total, com ritmo de escape juncional ou ventricular). A largura do QRS ajuda a estimar o nível do bloqueio: QRS estreito sugere bloqueio nodal (melhor prognóstico, ritmo de escape mais estável), QRS largo sugere bloqueio infra-hissiano (pior prognóstico, ritmo de escape lento e instável). Quando o bloqueio é intermitente ou os sintomas não coincidem com o ECG de repouso, indica-se monitorização prolongada — Holter de 24-48h, monitor de eventos externo por dias a semanas, ou monitor de eventos implantável (looper) para sintomas esparsos e recorrentes ao longo de meses. O estudo eletrofisiológico invasivo, com medida do intervalo HV, é reservado a casos selecionados — sobretudo bloqueio bifascicular ou trifascicular com síncope inexplicada — sendo o achado de HV igual ou maior que 70 ms o principal marcador de alto risco de progressão para BAV avançado. A investigação etiológica deve ser sempre paralela à classificação eletrocardiográfica: eletrólitos e função renal, função tireoidiana, revisão de fármacos cronotrópicos/dromotrópicos negativos, avaliação de isquemia (troponina, história de dor torácica), sorologia para doença de Lyme quando há contexto epidemiológico compatível (viagem/exposição em área endêmica, eritema migratório, sintomas constitucionais), e avaliação dirigida para doença infiltrativa (ressonância cardíaca, PET-CT, eventualmente biópsia) quando há suspeita de sarcoidose cardíaca ou amiloidose, especialmente em BAV avançado de adulto jovem sem outra explicação. Ecocardiograma transtorácico é indicado para avaliar função ventricular e doença estrutural associada, e teste ergométrico pode ajudar a diferenciar bloqueio nodal (melhora tipicamente com o esforço) de infra-hissiano (piora ou surge com a frequência cardíaca mais alta). Holter não deve atrasar avaliação monitorizada e tratamento de Mobitz II/BAV avançado já documentado. Teste de esforço só em contexto estável e supervisionado, quando útil para esclarecer nível; não é etapa obrigatória antes de tratar bloqueio de alto risco.",
+      "ambulatory_flow": [
+        "Confirmar o grau do bloqueio atrioventricular por eletrocardiograma de 12 derivações e, quando disponível, correlacionar com traçados prévios",
+        "Avaliar presença e caracterização de sintomas relacionados a bradicardia (síncope, pré-síncope, tontura, dispneia, fadiga, intolerância a esforço)",
+        "Revisar história medicamentosa detalhada em busca de fármacos com efeito bradicardizante ou dromotrópico negativo",
+        "Investigar fatores de risco e exposição epidemiológica para doença de Lyme quando clinicamente pertinente",
+        "Solicitar exames laboratoriais básicos incluindo função renal e eletrólitos para rastreio de causas metabólicas reversíveis",
+        "Considerar monitorização ambulatorial prolongada do ritmo (Holter ou monitor de eventos) em pacientes com BAV intermitente ou sintomas não documentados no ECG de repouso",
+        "Mobitz II, BAV avançado ou completo documentado: organizar avaliação rápida monitorizada, sem esperar Holter ambulatorial; investigar reversibilidade e reconhecer indicação de dispositivo independente de sintomas quando não há causa reversível/fisiológica.",
+        "Indicação de dispositivo permanente em Mobitz II/BAV avançado/completo sem reversibilidade não depende de sintomas; outros graus exigem correlação clínica e localização.",
+        "Reavaliar clinicamente pacientes com BAV de primeiro grau ou Mobitz I assintomático em intervalos regulares, sem intervenção imediata",
+        "Orientar o paciente sobre sinais de alarme que indicam necessidade de avaliação urgente (síncope, pré-síncope recorrente, dispneia súbita)"
+      ],
+      "source_refs": [
+        "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay. Circulation. 2019;140(8):e382-e482. PMID 30586772",
+        "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. PMID 34455430",
+        "Glikson M, et al. ESC clinical consensus statement on indications for conduction system pacing. Europace. 2025;27(4):euaf050. PMID 40159278",
+        "McAnulty JH, Rahimtoola SH, Murphy E, et al. Natural history of \"high-risk\" bundle-branch block: final report of a prospective study. N Engl J Med. 1982;307(3):137-143. PMID 7088050",
+        "Scheinman MM, Peters RW, Modin G, et al. Prognostic value of infranodal conduction time in patients with chronic bundle branch block. Circulation. 1977;56(2):240-244. PMID 872316",
+        "Yeung C, Baranchuk A. Diagnosis and Treatment of Lyme Carditis: JACC Review Topic of the Week. J Am Coll Cardiol. 2019;73(6):717-726. PMID 30765038",
+        "Farkas JD, Long B, Koyfman A, Menson K. BRASH Syndrome: Bradycardia, Renal Failure, AV Blockade, Shock, and Hyperkalemia. J Emerg Med. 2020;59(2):216-223. PMID 32565167",
+        "Wigginton JG, et al. Part 9: Adult Advanced Life Support: 2025 AHA Guidelines. Circulation. DOI: 10.1161/CIR.0000000000001376."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30586772/",
+        "https://pubmed.ncbi.nlm.nih.gov/34455430/",
+        "https://pubmed.ncbi.nlm.nih.gov/40159278/",
+        "https://pubmed.ncbi.nlm.nih.gov/7088050/",
+        "https://pubmed.ncbi.nlm.nih.gov/872316/",
+        "https://pubmed.ncbi.nlm.nih.gov/30765038/",
+        "https://pubmed.ncbi.nlm.nih.gov/32565167/",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support",
+        "https://www.cdc.gov/lyme/diagnosis-testing/index.html",
+        "https://www.cdc.gov/lyme/hcp/clinical-care/lyme-carditis.html"
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08, PR #686: indicação permanente independente de sintomas após excluir reversibilidade, instabilidade atribuível à bradicardia, BAV 2:1 separado, BRASH corretamente definido e sorologia de Lyme contextual. ESC 2021 e AHA 2025."
+    }
+  }
+]

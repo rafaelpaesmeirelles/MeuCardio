@@ -150,3 +150,113 @@ def test_as_modality_uses_age_after_indication(hubs, age, expected):
     result = evaluate(hubs, 'estenose-aortica', gravidade_ecocardiograma='grave', intervencao_valvar_indicada_heart_team=True,
         idade_anos=age,morfologia_valvar='tricuspide', anatomia_adequada_tavi=True,risco_cirurgico_estimado='baixo')
     assert expected in result['matched_rules']
+
+def test_adult_respiratory_arrest_with_pulse_does_not_start_compressions(hubs):
+    result = evaluate(hubs, 'parada-cardiorrespiratoria-e-morte-subita-abortada', unresponsive=True,
+        abnormal_breathing=True,pulse_status='definite',ems_and_aed=False)
+    assert result['risk'] == 'emergencia'
+    assert 'pulso-presente-ventilacao' in result['matched_rules']
+    assert not {'presumir-parada','pulso-ausente-ou-incerto','cadeia-ainda-incompleta'} & set(result['matched_rules'])
+
+@pytest.mark.parametrize('pulse',['lay_or_not_checked','absent_or_uncertain'])
+def test_collapse_without_definite_pulse_starts_cpr(hubs,pulse):
+    result = evaluate(hubs,'parada-cardiorrespiratoria-e-morte-subita-abortada',unresponsive=True,
+        abnormal_breathing=True,pulse_status=pulse)
+    assert 'presumir-parada' in result['matched_rules']
+
+def test_unconscious_normal_breathing_has_emergency_route(hubs):
+    result = evaluate(hubs,'parada-cardiorrespiratoria-e-morte-subita-abortada',unresponsive=True,
+        abnormal_breathing=False,pulse_status='definite')
+    assert result['risk']=='emergencia'
+    assert 'inconsciente-respiracao-normal' in result['matched_rules']
+    assert 'presumir-parada' not in result['matched_rules']
+
+def test_rosc_does_not_continue_initial_compression_instruction(hubs):
+    result = evaluate(hubs,'parada-cardiorrespiratoria-e-morte-subita-abortada',unresponsive=True,
+        abnormal_breathing=True,pulse_status='absent_or_uncertain',rosc=True,ems_and_aed=False)
+    assert result['risk']=='emergencia'
+    assert 'pos-retorno-circulacao' in result['matched_rules']
+    assert not {'presumir-parada','pulso-ausente-ou-incerto','cadeia-ainda-incompleta'} & set(result['matched_rules'])
+
+@pytest.fixture(scope='module')
+def collapse_triage():
+    from app.services.triage_manifest import load_triage_records
+    return next(x for x in load_triage_records(ROOT/'triagem-sintomas/metadados.json')
+        if x['slug']=='colapso-subito-inconsciencia-e-respiracao-anormal')
+
+def assess_collapse(x,**answers):
+    return evaluate_rules(questions=x['questions'],rules=x['rules'],answers=answers,
+        base_emergency_flow=x['emergency_flow'],base_ambulatory_flow=x['ambulatory_flow'])
+
+@pytest.mark.parametrize('adult',[True,False])
+def test_triage_definite_pulse_excludes_cpr_rules(collapse_triage,adult):
+    result=assess_collapse(collapse_triage,scene_safe=True,adult_patient=adult,responsive=False,
+        breathing_normally=False,definite_pulse_professional='definite_pulse',aed_requested=False)
+    assert 'pulso-com-apneia-profissional' in result['matched_rules']
+    assert not {'respiracao-anormal-nao-e-respiracao-normal','dea-ainda-nao-solicitado',
+        'possivel-parada-leigo','possivel-parada-profissional','pediatrico-sem-resposta-respiracao-anormal'} & set(result['matched_rules'])
+
+def test_child_collapse_no_longer_falls_through(collapse_triage):
+    result=assess_collapse(collapse_triage,scene_safe=True,adult_patient=False,responsive=False,
+        breathing_normally=False,definite_pulse_professional='not_assessed_lay')
+    assert result['risk']=='emergencia'
+    assert 'pediatrico-sem-resposta-respiracao-anormal' in result['matched_rules']
+    assert 'possivel-parada-leigo' not in result['matched_rules']
+
+def test_pregnancy_alone_is_not_collapse_emergency(collapse_triage):
+    result=assess_collapse(collapse_triage,scene_safe=True,adult_patient=True,responsive=True,
+        breathing_normally=True,special_cause=True)
+    assert not result['matched_rules']
+    assert result['risk'] not in {'urgente','emergencia'}
+
+def test_unsafe_scene_does_not_instruct_approach(collapse_triage):
+    result=assess_collapse(collapse_triage,scene_safe=False,adult_patient=True,responsive=False,
+        breathing_normally=False,definite_pulse_professional='definite_pulse',special_cause=True)
+    assert result['matched_rules']==['cena-insegura']
+
+def test_triage_normal_breathing_unconscious_not_reassured(collapse_triage):
+    result=assess_collapse(collapse_triage,scene_safe=True,responsive=False,breathing_normally=True)
+    assert 'inconsciente-com-respiracao-normal' in result['matched_rules']
+    assert result['risk']=='emergencia'
+
+@pytest.mark.parametrize('degree',['segundo_grau_mobitz_2','alto_grau','terceiro_grau_completo'])
+def test_advanced_avb_permanent_pacing_does_not_require_symptoms(hubs,degree):
+    result=evaluate(hubs,'bloqueio-atrioventricular',grau_bav=degree,sintomatico=False,
+        instabilidade_hemodinamica_aguda=False,causa_reversivel_identificada=False,
+        investigacao_reversibilidade_concluida=True)
+    assert 'bav-avancado-indicacao-permanente' in result['matched_rules']
+    assert result['risk']=='urgente'
+    assert result['recommended_flow']
+    assert not any('ambulatorial prolongada' in str(x) for x in result['suggested_tests'])
+
+def test_reversible_avb_has_support_without_automatic_permanent_implant(hubs):
+    result=evaluate(hubs,'bloqueio-atrioventricular',grau_bav='terceiro_grau_completo',sintomatico=False,
+        causa_reversivel_identificada=True,investigacao_reversibilidade_concluida=True)
+    assert 'bav-avancado-causa-reversivel' in result['matched_rules']
+    assert 'bav-avancado-indicacao-permanente' not in result['matched_rules']
+
+def test_incidental_first_degree_avb_does_not_trigger_pacing_for_other_shock(hubs):
+    result=evaluate(hubs,'bloqueio-atrioventricular',grau_bav='primeiro_grau',sintomatico=False,
+        instabilidade_hemodinamica_aguda=True,instabilidade_atribuivel_bradicardia=False)
+    assert result['risk']=='emergencia'
+    assert 'instabilidade-investigar-causa' in result['matched_rules']
+    assert 'bav_alto_grau_instavel_emergencia' not in result['matched_rules']
+    assert 'primeiro_grau_ou_mobitz1_assintomatico_rotina' not in result['matched_rules']
+
+def test_lyme_serology_alone_does_not_prescribe_antibiotic(hubs):
+    result=evaluate(hubs,'bloqueio-atrioventricular',sorologia_lyme_realizada='sim_positiva',
+        cardite_lyme_clinicamente_compativel=False)
+    assert 'lyme_confirmada_tratamento' not in result['matched_rules']
+    assert 'lyme-sorologia-isolada' in result['matched_rules']
+
+def test_suspected_lyme_carditis_does_not_wait_for_serology(hubs):
+    result=evaluate(hubs,'bloqueio-atrioventricular',sorologia_lyme_realizada='nao_realizada',
+        cardite_lyme_clinicamente_compativel=True)
+    assert 'lyme-suspeita-clinica-nao-esperar-sorologia' in result['matched_rules']
+
+def test_two_to_one_avb_not_equated_with_mobitz2(hubs):
+    result=evaluate(hubs,'bloqueio-atrioventricular',grau_bav='bav_2_1_indeterminado',
+        causa_reversivel_identificada=False,investigacao_reversibilidade_concluida=True)
+    assert not result['invalid_fields']
+    assert 'bav-2-1-definir-nivel' in result['matched_rules']
+    assert 'bav-avancado-indicacao-permanente' not in result['matched_rules']

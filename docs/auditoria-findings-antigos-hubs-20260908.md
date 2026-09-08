@@ -13,3 +13,11 @@ Escopo desta etapa: PRs 700, 715–719 e 723. Foram confrontadas as regras efeti
 Validação: 46 cenários no motor real, incluindo respostas representativas do renderer (select envia strings), passaram. A composição atual de doenças foi usada pelos testes. Os gates de inventário/editorial globais ainda aguardam o fechamento de todo o corpus; este documento não certifica que todos os demais PRs antigos estejam resolvidos.
 
 Fontes: ESC/EACTS VHD2025, erratum EHJ2026 ehag625 (NYHA II–IV, sem mudança de trombo); ESC aorta2024; estudos primários ARVC30915475/33296238 e pediátricos34998950/37781308; AL41353737/38095141; AHA sarcoidose1240/corrigendum1275, primer42475441; Tisdale23716032, AHA ALS2025; PROACT Xa38320162. Identidades bibliográficas e fontes estão nos registros compostos.
+
+### Colapso/PCR e BAV — PRs #535 e #686
+
+Correção adicional do hub de PCR, triagem de colapso e checklist: pulso definido com apneia segue ventilação/reavaliação, inconsciência com respiração normal aciona emergência sem compressões automáticas, antes da puberdade há via pediátrica, cena insegura impede instruções de aproximação e gestação isolada não dispara emergência. ROSC atual muda a fase para cuidado pós-parada. Fontes: AHA/AAP BLS 2025 (DOIs 1369/1370) e AHA/Red Cross primeiros socorros 2024. O checklist passa a procedimento e o carregador preserva `scope_type`, coluna já existente; criação/recarga verificadas sem promover publicação automaticamente (2 cenários).
+
+No BAV, a indicação de dispositivo permanente em Mobitz II/alto grau/completo sem causa reversível/fisiológica independe de sintomas; os fluxos não mandam esperar Holter ambulatorial para bloqueio avançado documentado. Instabilidade geral é separada de bradicardia causadora da instabilidade antes de recomendar estimulação. BAV 2:1 não equivale a Mobitz II. BRASH inclui uso de bloqueador nodal AV. Sorologia de Lyme isolada não define cardite ativa, nem serve para confirmar cura; suspeita clínica consistente não deve aguardar resultado para manejo. Fontes: ESC pacing 2021, AHA ALS 2025, CDC diagnóstico e cardite de Lyme, URLs versionadas no hub.
+
+A revisão é restrita aos itens descritos; demais findings e lotes continuam pendentes, sem autorização global ou deploy nesta etapa.

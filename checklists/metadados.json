@@ -30,7 +30,7 @@
         "id": "pcr-pulso-profissional",
         "categoria": "avaliacao",
         "obrigatorio": false,
-        "texto": "Se profissional de saúde, pulso avaliado por no máximo 10 segundos; se ausente ou incerto, RCP iniciada sem prolongar a checagem",
+        "texto": "Se profissional, pulso avaliado por no máximo 10 segundos na pessoa sem resposta e sem respiração normal: ausente/incerto leva a RCP; definido com apneia leva a ventilação de resgate e reavaliação.",
         "origem_secao": "AHA 2025 — Recognition of Cardiac Arrest"
       },
       {
@@ -44,7 +44,7 @@
         "id": "pcr-compressoes",
         "categoria": "procedimento",
         "obrigatorio": true,
-        "texto": "Compressões iniciadas imediatamente no centro do tórax e mantidas com profundidade e frequência adequadas, retorno completo e mínima interrupção",
+        "texto": "Na PCR reconhecida, compressões iniciadas imediatamente no centro do tórax, com profundidade/frequência adequadas, retorno completo e mínima interrupção; pulso definido com apneia no adulto exige ventilação de resgate, não compressões automáticas.",
         "origem_secao": "RCP de alta qualidade — os números que definem a compressão"
       },
       {
@@ -83,7 +83,8 @@
         "origem_secao": "AHA 2025 — Systems of Care and Quality Management"
       }
     ],
-    "revisao": "Revisão técnica assistida em 26/08/2026, pendente de validação clínica final no PR. O checklist atualiza o reconhecimento e a ativação para AHA 2025 e reutiliza o protocolo canônico SBC existente para a execução avançada."
+    "revisao": "Revisão adversarial Codex 2026-09-08: checklist de resposta à PCR, separado de checklist de alta; pulso definido com apneia recebe ventilação/reavaliação, sem compressões automáticas. AHA 2025.",
+    "scope_type": "procedimento"
   },
   {
     "slug": "acompanhamento-apos-tavi-ou-savr-na-estenose-aortica-grave",

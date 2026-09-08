@@ -17,7 +17,7 @@ from app.services.scientific_loader_safety import combined_review_note, enforce_
 # um campo novo no arquivo deve falhar em ser gravado, e não criar coluna
 # fantasma ou estourar erro no meio da carga das outras condições.
 CAMPOS = {"slug", "condicao", "resumo", "theme", "documento_origem",
-          "itens", "source_refs", "review_status", "revisao"}
+          "itens", "source_refs", "review_status", "revisao", "scope_type"}
 
 
 def carregar(caminho_json: str) -> dict:
