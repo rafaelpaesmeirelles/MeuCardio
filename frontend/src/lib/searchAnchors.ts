@@ -2,7 +2,7 @@
  * A neighbour of a search hit is not necessarily relevant to the user's query.
  */
 export function searchIdentity(value: string): string {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
     .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 

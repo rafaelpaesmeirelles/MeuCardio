@@ -5,19 +5,21 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.specialty_guide import SpecialtyDisease
+from app.models.drug import Drug
 from app.services.catalog_search import (
     DISEASE_SQL,
     INTERNAL_MARKER_SQL_PATTERN,
     INTERNAL_OVERRIDE_SQL_PATTERN,
     LITERAL_PAGE_SQL,
     PRIMARY_DISEASE_SQL,
+    PRIMARY_DRUG_SQL,
     PAGE_SQL,
     calculadoras_encontradas,
     literal_like,
     normalizar,
 )
 from app.services.clinical_text import clinical_text_without_internal_overrides
-from app.services.connected_content import buscar_relacionados_da_doenca
+from app.services.connected_content import buscar_relacionados_da_doenca, buscar_relacionados_do_medicamento
 
 router = APIRouter(prefix="/api/search", tags=["busca"])
 
@@ -73,7 +75,17 @@ def search(
             primary_disease.get("summary")
         )
 
-    query = disease_model.name if disease_model is not None else q
+    drug_model = None
+    if disease_model is None:
+        drug_rows = db.execute(PRIMARY_DRUG_SQL, {"q": q}).mappings().all()
+        if len(drug_rows) == 1:
+            drug_model = db.execute(select(Drug).where(
+                Drug.slug == drug_rows[0]["slug"], Drug.published.is_(True),
+            )).scalar_one_or_none()
+    primary_drug = ({"slug": drug_model.slug, "generic_name": drug_model.generic_name}
+                    if drug_model is not None else None)
+    query = (disease_model.name if disease_model is not None
+             else drug_model.generic_name if drug_model is not None else q)
     calculadoras = calculadoras_encontradas(query) if frente in (None, "calculadora") else []
     if disease_model is not None and frente in (None, "calculadora"):
         seen_calculators = {item["slug"] for item in calculadoras}
@@ -86,8 +98,10 @@ def search(
     disease_links: list[str] = []
     supplementary_groups: list[dict] = []
     connection_metadata: dict[str, dict] = {}
-    if disease_model is not None:
-        ecosystem = buscar_relacionados_da_doenca(db, disease_model.slug)
+    if disease_model is not None or drug_model is not None:
+        ecosystem = (buscar_relacionados_da_doenca(db, disease_model.slug)
+                     if disease_model is not None else buscar_relacionados_do_medicamento(
+                         db, drug_model.slug, limite_por_categoria=None))
         for group in (ecosystem or {}).get("grupos", []):
             kind = {"fluxograma": "documento", "protocolo_emergencia": "emergencia"}.get(
                 group["tipo"], group["tipo"]
@@ -115,7 +129,8 @@ def search(
                              if item["slug"] == calculator.slug]
                     calculadoras.extend(exact)
                     existing.add(calculator.slug)
-        disease_links.append(f"doenca:{disease_model.slug}")
+        disease_links.append(f"doenca:{disease_model.slug}" if disease_model is not None
+                             else f"medicamento:{drug_model.slug}")
 
     if frente == "calculadora":
         rows = calculadoras[offset:offset + limit]
@@ -136,12 +151,16 @@ def search(
         "limit": database_limit, "offset": database_offset,
     }
     sql = PAGE_SQL
-    if disease_model is not None:
+    if disease_model is not None or drug_model is not None:
         sql = DISEASE_SQL
         values.update({
-            "disease_phrases": list(_disease_identity_phrases(disease_model)),
+            "disease_phrases": (list(_disease_identity_phrases(disease_model))
+                                if disease_model is not None else list(dict.fromkeys(
+                                    normalizar(value) for value in [drug_model.generic_name,
+                                    drug_model.slug, *(drug_model.brand_names or [])]
+                                    if len(normalizar(value)) >= 2))),
             "disease_links": list(dict.fromkeys(disease_links)),
-            "systemic_hypertension": disease_model.slug == "hipertensao-arterial-sistemica",
+            "systemic_hypertension": disease_model is not None and disease_model.slug == "hipertensao-arterial-sistemica",
         })
     search_values = {
         **values,
@@ -151,7 +170,7 @@ def search(
     page = db.execute(sql, search_values).mappings().one()
     raw_rows = page["results"]
     por_frente = page["por_frente"]
-    if disease_model is None and not por_frente and normalizar(q):
+    if disease_model is None and drug_model is None and not por_frente and normalizar(q):
         page = db.execute(LITERAL_PAGE_SQL, search_values).mappings().one()
         raw_rows = page["results"]
         por_frente = page["por_frente"]
@@ -172,7 +191,7 @@ def search(
     return {
         "query": q, "count": len(rows), "total": total, "limit": limit, "offset": offset,
         "next_offset": next_offset if next_offset < total else None,
-        "por_frente": por_frente, "primary_disease": primary_disease,
+        "por_frente": por_frente, "primary_disease": primary_disease, "primary_drug": primary_drug,
         "supplementary_groups": supplementary_groups,
         "results": rows,
     }

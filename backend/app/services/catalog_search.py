@@ -322,7 +322,11 @@ ORDER BY frente
 # mesmo quando o `search_vector` persistido de uma frente foi construído antes
 # dessa regra. Isso mantém buscas como "holter 24h" e nomes com números/siglas
 # encontrando o item exato sem depender do fallback literal de catálogo inteiro.
-FULL_TEXT_MATCH = "(v || to_tsvector('simple', coalesce(slug, ''))) @@ consulta.tsq"
+FULL_TEXT_MATCH = (
+    "(coalesce(v, ''::tsvector) || "
+    "to_tsvector('portuguese', coalesce(title, '')) || "
+    "to_tsvector('portuguese', replace(coalesce(slug, ''), '-', ' '))) @@ consulta.tsq"
+)
 LITERAL_MATCH = (
     "unaccent(lower(translate(pesquisavel, '₀₁₂₃₄₅₆₇₈₉', "
     "'0123456789'))) LIKE consulta.trecho ESCAPE '!'"
@@ -345,51 +349,68 @@ DISEASE_MATCH = """
       CROSS JOIN LATERAL (SELECT
         ' ' || regexp_replace(unaccent(lower(translate(
           coalesce(title, '') || ' ' || slug, '₀₁₂₃₄₅₆₇₈₉', '0123456789'
-        ))), '[^a-z0-9]+', ' ', 'g') || ' ' AS identity_text
-      ) identity
+        ))), '[^a-z0-9]+', ' ', 'g') || ' ' AS raw_identity_text
+      ) identity_raw
+      CROSS JOIN LATERAL (SELECT CASE WHEN CAST(:systemic_hypertension AS boolean)
+        THEN regexp_replace(raw_identity_text, 'hipertensao (arterial )?pulmonar', '', 'g')
+        ELSE raw_identity_text END AS identity_text) identity
       WHERE position(' ' || phrase || ' ' IN CASE
         WHEN phrase = 'has' THEN replace(identity_text, 'has bled', '')
         WHEN phrase = 'ic' THEN regexp_replace(identity_text, 'ic (95|99|90)', '', 'g')
         ELSE identity_text END) > 0
-    )
-    AND NOT (
-      CAST(:systemic_hypertension AS boolean)
-      AND unaccent(lower(title || ' ' || replace(slug, '-', ' ')))
-          ~ 'hipertensao (arterial )?pulmonar'
     )
   )
 """
 DISEASE_SQL = _search_sql(DISEASE_MATCH, disease=True)
 
 
-PRIMARY_DISEASE_SQL = text("""
-WITH candidatas AS (
+def _identity_sql(value: str) -> str:
+    return ("trim(regexp_replace(unaccent(lower(translate(coalesce(" + value
+            + ", ''), '₀₁₂₃₄₅₆₇₈₉', '0123456789'))), '[^a-z0-9]+', ' ', 'g'))")
+
+
+PRIMARY_DISEASE_SQL = text(f"""
+WITH consulta AS (SELECT {_identity_sql('CAST(:q AS text)')} AS identity),
+candidatas AS (
   SELECT slug, name, summary, area, category, prevalence_rank,
-         CASE
-           WHEN unaccent(lower(name)) = unaccent(lower(CAST(:q AS text))) THEN 0
-           WHEN unaccent(lower(replace(slug, '-', ' '))) = unaccent(lower(CAST(:q AS text))) THEN 1
-           ELSE 2
-         END AS match_priority
-  FROM specialty_diseases
-  WHERE published = true
-    AND (
-      unaccent(lower(name)) = unaccent(lower(CAST(:q AS text)))
-      OR unaccent(lower(replace(slug, '-', ' '))) = unaccent(lower(CAST(:q AS text)))
-      OR EXISTS (
-        SELECT 1
-        FROM unnest(coalesce(aliases, ARRAY[]::varchar[])) AS alias
-        WHERE unaccent(lower(alias)) = unaccent(lower(CAST(:q AS text)))
-      )
-    )
-), melhor_nivel AS (
-  SELECT min(match_priority) AS match_priority
-  FROM candidatas
+         CASE WHEN {_identity_sql('name')} = consulta.identity THEN 0
+              WHEN {_identity_sql('slug')} = consulta.identity THEN 1
+              ELSE 2 END AS match_priority
+  FROM specialty_diseases CROSS JOIN consulta
+  WHERE published = true AND consulta.identity <> '' AND (
+    {_identity_sql('name')} = consulta.identity
+    OR {_identity_sql('slug')} = consulta.identity
+    OR EXISTS (SELECT 1 FROM unnest(coalesce(aliases, ARRAY[]::varchar[])) AS alias
+               WHERE {_identity_sql('alias')} = consulta.identity)
+  )
 )
-SELECT slug, name, summary, area, category
-FROM candidatas
-WHERE match_priority = (SELECT match_priority FROM melhor_nivel)
-ORDER BY prevalence_rank, name
-LIMIT 2
+SELECT slug, name, summary, area, category FROM candidatas
+WHERE match_priority = (SELECT min(match_priority) FROM candidatas)
+ORDER BY prevalence_rank, name LIMIT 2
+""")
+
+PRIMARY_DRUG_SQL = text(f"""
+WITH consulta AS (SELECT {_identity_sql('CAST(:q AS text)')} AS identity),
+candidatas AS (
+  SELECT d.slug, d.generic_name,
+         CASE WHEN {_identity_sql('d.generic_name')} = consulta.identity THEN 0
+              WHEN {_identity_sql('d.slug')} = consulta.identity THEN 1
+              ELSE 2 END AS match_priority
+  FROM drugs d CROSS JOIN consulta
+  WHERE d.published = true AND consulta.identity <> '' AND (
+    {_identity_sql('d.generic_name')} = consulta.identity
+    OR {_identity_sql('d.slug')} = consulta.identity
+    OR EXISTS (SELECT 1 FROM unnest(coalesce(d.brand_names, ARRAY[]::varchar[])) AS brand
+               WHERE {_identity_sql('brand')} = consulta.identity)
+    OR EXISTS (SELECT 1 FROM cmed_apresentacoes a
+               WHERE a.drug_id = d.id
+                 AND a.cmed_versao_id = (SELECT max(id) FROM cmed_versoes)
+                 AND {_identity_sql('a.produto')} = consulta.identity)
+  )
+)
+SELECT slug, generic_name FROM candidatas
+WHERE match_priority = (SELECT min(match_priority) FROM candidatas)
+ORDER BY generic_name, slug LIMIT 2
 """)
 
 
@@ -421,7 +442,8 @@ def calculadoras_encontradas(q: str) -> list[dict]:
         pesquisavel = normalizar(
             " ".join((
                 calculator.slug, calculator.name, calculator.theme,
-                calculator.purpose, calculator.reference,
+                calculator.purpose,
+                calculator.reference if len(consulta) > 3 else "",
             ))
         )
         if consulta == "has":

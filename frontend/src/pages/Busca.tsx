@@ -6,7 +6,7 @@ import { exactSearchAnchors } from "../lib/searchAnchors";
 
 type Res = { slug: string; title: string; kind: string; frente?: string; theme: string | null; snippet: string; ano?: number; rank?: number; relation_type?: string | null; context_only?: boolean };
 type PrimaryDisease = { slug: string; name: string; summary: string; area: string; category: string };
-type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; primary_disease?: PrimaryDisease | null; supplementary_groups?: Rel[] };
+type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; primary_disease?: PrimaryDisease | null; primary_drug?: { slug: string; generic_name: string } | null; supplementary_groups?: Rel[] };
 type Drug = { slug: string; generic_name: string; drug_class: string; brand_names?: string[]; commercial_names?: string[] };
 type Insight = Drug & {
   mechanism: string | null; presentations: string[]; dosing: Record<string, unknown>;
@@ -214,7 +214,7 @@ export default function Busca() {
   async function buscar(valor: string) {
     const termo = valor.trim(); if (termo.length < 2) return;
     const id = ++seq.current;
-    setLoading(true); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorFrente({}); setAssunto(termo); setParams({ q: termo }, { replace: true });
+    setLoading(true); setLoadingMore(false); setErro(""); setAviso(""); setDrug(null); setPrimaryDisease(null); setRel([]); setTotal(0); setNextOffset(null); setPorFrente({}); setAssunto(termo); setParams({ q: termo }, { replace: true });
     const [s, ds] = await Promise.allSettled([
       api.get<SearchResponse>(`/search?q=${encodeURIComponent(termo)}&limit=100`),
       api.get<PaginaDe<Drug>>(`/drugs?q=${encodeURIComponent(termo)}`),
@@ -222,15 +222,18 @@ export default function Busca() {
     if (id !== seq.current) return;
     if (s.status === "rejected") { setRes(null); setErro(s.reason instanceof ApiError ? s.reason.message : "Não foi possível consultar o conteúdo."); setLoading(false); return; }
     const itens = s.value.results; const disease = s.value.primary_disease ?? null; setRes(itens); setPrimaryDisease(disease); setTotal(s.value.total ?? itens.length); setNextOffset(s.value.next_offset ?? null); setPorFrente(s.value.por_frente ?? {});
-    let medicamentoSlug: string | null = null;
+    let medicamentoSlug: string | null = s.value.primary_drug?.slug ?? null;
     if (ds.status === "rejected") setAviso("Conteúdo carregado; catálogo de medicamentos indisponível.");
     else {
       const n = norm(termo), fortes = ds.value.items.filter((d) => norm(d.generic_name) === n || norm(d.slug) === n || norm(d.generic_name).startsWith(`${n} `) || d.brand_names?.some((marca) => norm(marca) === n) || d.commercial_names?.some((marca) => norm(marca) === n));
-      if (fortes.length === 1) {
+      if (!medicamentoSlug && fortes.length === 1) {
         medicamentoSlug = fortes[0].slug;
-        try { const d = await api.get<Insight>(`/drug-insights/${fortes[0].slug}`); if (id === seq.current) setDrug(d); }
-        catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }
       }
+    }
+    if (!disease && medicamentoSlug) {
+      try { const d = await api.get<Insight>(`/drug-insights/${medicamentoSlug}`); if (id === seq.current) setDrug(d); }
+      catch (e) { if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Resumo farmacológico indisponível."); }
+      if (id !== seq.current) return;
     }
     let ecossistemaDoenca: GraphResponse | null = null;
     let ecossistemaEntidade: GraphResponse | null = null;
@@ -243,7 +246,7 @@ export default function Busca() {
       if (id !== seq.current) return;
     }
     let ecossistemaMedicamento: GraphResponse | null = null;
-    if (!disease && medicamentoSlug) {
+    if (!disease && medicamentoSlug && !s.value.primary_drug) {
       try { ecossistemaMedicamento = await api.get<GraphResponse>(`/relacionados/medicamento/${encodeURIComponent(medicamentoSlug)}`); }
       catch (e) { if (id === seq.current) setAviso((atual) => atual || (e instanceof ApiError ? e.message : "Ecossistema clínico do medicamento temporariamente indisponível.")); }
       if (id !== seq.current) return;
@@ -298,6 +301,7 @@ export default function Busca() {
         return [...mapa.values()];
       });
       setNextOffset(pagina.next_offset ?? null);
+      setRel((atuais) => mergeGraphGroups([{ grupos: atuais, total: 0 }], pagina.results));
     } catch (e) {
       if (id === seq.current) setAviso(e instanceof ApiError ? e.message : "Não foi possível carregar a próxima página.");
     } finally {

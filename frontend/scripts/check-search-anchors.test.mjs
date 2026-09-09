@@ -18,3 +18,11 @@ test('identity normalization preserves accents, punctuation and exact titles', (
   assert.deepEqual(exactSearchAnchors(hits, '  FIBRILACAO-ATRIAL  '), hits);
   assert.deepEqual(exactSearchAnchors(hits, ''), []);
 });
+
+
+test('subscript score names preserve exact numeric identity', () => {
+  const hits = [{ title: 'CHA₂DS₂-VASc', slug: 'cha2ds2-vasc' }];
+  assert.deepEqual(exactSearchAnchors(hits, 'CHA2DS2-VASc'), hits);
+  assert.deepEqual(exactSearchAnchors(hits, 'CHA₂DS₂-VASc'), hits);
+  assert.deepEqual(exactSearchAnchors(hits, 'CHADS-VASc'), []);
+});
