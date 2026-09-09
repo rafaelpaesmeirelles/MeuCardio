@@ -116,6 +116,10 @@ def list_tests(
         ]
         if term_filters:
             query = query.filter(and_(*term_filters))
+        else:
+            # A supplied query with no searchable tokens is not an unfiltered
+            # catalogue request (e.g. '__' must not return every examination).
+            query = query.filter(False)
     total = query.count()
     if q and q.strip():
         normalized_q = _termo_sem_acentos(q)

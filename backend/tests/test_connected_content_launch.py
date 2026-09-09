@@ -83,11 +83,11 @@ def test_pagina_de_medicamento_agrega_so_tematicas_clinicas_sustentadas(client, 
         review_status="revisado", published=True,
     ))
     db.add(Document(
-        slug="fa-doc", title="Fibrilação atrial", kind="modulo", theme="Fibrilação atrial",
+        slug="fa-doc", title="Apixabana na fibrilação atrial", kind="modulo", theme="Fibrilação atrial",
         body_md="conteúdo", source_tier="A", review_status="revisado", published=True,
     ))
     db.add(Document(
-        slug="tev-doc", title="Tromboembolismo venoso", kind="modulo", theme="Tromboembolismo",
+        slug="tev-doc", title="Apixabana no tromboembolismo venoso", kind="modulo", theme="Tromboembolismo",
         body_md="conteúdo", source_tier="A", review_status="revisado", published=True,
     ))
     db.add(Document(

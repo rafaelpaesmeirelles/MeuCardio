@@ -1,0 +1,2146 @@
+{
+  "created_at": "2026-09-09T22:21:27.023773+00:00",
+  "status": "blocked_embedding_provider",
+  "fixture_sha256": "80d2b45d94b0bee4d914aa365ab5f30793a4731ee444258d8418ed0c34c166ea",
+  "query_count": 16,
+  "evaluation_k": 8,
+  "configured_ai_top_k": 8,
+  "method": "rag.recuperar real; provider unavailable vs precomputed query vector",
+  "scope": "Agent-labeled sample of document retrieval, not exhaustive clinical certification",
+  "latency_scope": "Retrieval excludes the single embedding batch; its latency is reported separately",
+  "precision_note": "Not calculated: unlabelled results are not automatically irrelevant",
+  "duplicates_note": "Metrics use raw first-k positions; deduplication does not hide consumed slots",
+  "database_writes": false,
+  "chat_generation_calls": 0,
+  "embedding_batch": {
+    "attempts": 1,
+    "input_count": 16,
+    "max_retries": 0,
+    "timeout_seconds": 20,
+    "requested_model": "text-embedding-3-small",
+    "status": "blocked",
+    "error": {
+      "type": "RateLimitError",
+      "status_code": 429,
+      "code": "credit_balance_exhausted"
+    },
+    "latency_seconds": 2.650464
+  },
+  "results": [
+    {
+      "id": "fa_stroke_exact",
+      "query": "FA prevenção de AVC",
+      "group": "exact",
+      "pair_id": "fa_stroke",
+      "required_any": [
+        "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+        "documento:esc-2024-diretriz-fibrilacao-atrial-af-care"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 4,
+        "duplicate_count": 4,
+        "duplicate_identities": {
+          "documento:oceanic-af-asundexiana-versus-apixabana": 5
+        },
+        "unique_typed_identities": [
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "evidencia:amalfi-sem-reducao-de-avc",
+          "estudo:artesia-apixabana-em-fibrilacao-atrial-subclinica",
+          "estudo:laaos-iii-oclusao-cirurgica-do-apendice-atrial-esquerdo"
+        ],
+        "top_k_raw_identities": [
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "evidencia:amalfi-sem-reducao-de-avc",
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "estudo:artesia-apixabana-em-fibrilacao-atrial-subclinica",
+          "documento:oceanic-af-asundexiana-versus-apixabana",
+          "estudo:laaos-iii-oclusao-cirurgica-do-apendice-atrial-esquerdo"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:oceanic-af-asundexiana-versus-apixabana",
+                "title": "OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial",
+                "section": null,
+                "route": "/biblioteca/oceanic-af-asundexiana-versus-apixabana",
+                "review_status": "revisado",
+                "content_excerpt": "# OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial\n\n## Pergunta clínica\nEm pacientes com fibrilação atrial e indicação de anticoagulação, inibir seletivamente o fator XIa com asundexiana pode manter proteção contra AVC/embolia sistêmica com menos sangramento do que apixabana?\n\n## Desenho\nEnsaio clínico fase 3, internacional, randomizado e duplo-cego, com **14.810 pacientes** na população por intenção de tratar.\n\nIntervenções:\n- asundexiana **50 mg uma vez ao dia**;\n- apixabana em dose padrão conforme indicação clínica.\n\nO estudo foi interrompido precocemente po"
+              },
+              {
+                "rank": 2,
+                "key": "evidencia:amalfi-sem-reducao-de-avc",
+                "title": "AMALFI aumentou diagnóstico de FA mas não reduziu AVC (2,7% vs 2,5%). Rastreio não é prevenção de AVC neste ensaio.",
+                "section": null,
+                "route": "/evidencias/amalfi-sem-reducao-de-avc",
+                "review_status": "revisado",
+                "content_excerpt": "AMALFI aumentou diagnóstico de <mark>FA</mark> mas não reduziu <mark>AVC</mark> (2,7% vs 2,5%). Rastreio não é <mark>prevenção</mark> de <mark>AVC</mark> neste ensaio"
+              },
+              {
+                "rank": 3,
+                "key": "documento:oceanic-af-asundexiana-versus-apixabana",
+                "title": "OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial",
+                "section": null,
+                "route": "/biblioteca/oceanic-af-asundexiana-versus-apixabana",
+                "review_status": "revisado",
+                "content_excerpt": "# OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial\n\n## Pergunta clínica\nEm pacientes com fibrilação atrial e indicação de anticoagulação, inibir seletivamente o fator XIa com asundexiana pode manter proteção contra AVC/embolia sistêmica com menos sangramento do que apixabana?\n\n## Desenho\nEnsaio clínico fase 3, internacional, randomizado e duplo-cego, com **14.810 pacientes** na população por intenção de tratar.\n\nIntervenções:\n- asundexiana **50 mg uma vez ao dia**;\n- apixabana em dose padrão conforme indicação clínica.\n\nO estudo foi interrompido precocemente po"
+              },
+              {
+                "rank": 4,
+                "key": "documento:oceanic-af-asundexiana-versus-apixabana",
+                "title": "OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial",
+                "section": null,
+                "route": "/biblioteca/oceanic-af-asundexiana-versus-apixabana",
+                "review_status": "revisado",
+                "content_excerpt": "# OCEANIC-AF: asundexiana versus apixabana na <mark>prevenção</mark> de <mark>AVC</mark> na fibrilação atrial\n\n## Pergunta clínica\nEm"
+              },
+              {
+                "rank": 5,
+                "key": "documento:oceanic-af-asundexiana-versus-apixabana",
+                "title": "OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial",
+                "section": null,
+                "route": "/biblioteca/oceanic-af-asundexiana-versus-apixabana",
+                "review_status": "revisado",
+                "content_excerpt": "# OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial\n\n## Pergunta clínica\nEm pacientes com fibrilação atrial e indicação de anticoagulação, inibir seletivamente o fator XIa com asundexiana pode manter proteção contra AVC/embolia sistêmica com menos sangramento do que apixabana?\n\n## Desenho\nEnsaio clínico fase 3, internacional, randomizado e duplo-cego, com **14.810 pacientes** na população por intenção de tratar.\n\nIntervenções:\n- asundexiana **50 mg uma vez ao dia**;\n- apixabana em dose padrão conforme indicação clínica.\n\nO estudo foi interrompido precocemente po"
+              },
+              {
+                "rank": 6,
+                "key": "estudo:artesia-apixabana-em-fibrilacao-atrial-subclinica",
+                "title": "ARTESiA — Apixabana versus aspirina na prevenção de AVC em fibrilação atrial subclínica",
+                "section": null,
+                "route": "/estudos/artesia-apixabana-em-fibrilacao-atrial-subclinica",
+                "review_status": "revisado",
+                "content_excerpt": "Ensaio randomizado, duplo-cego, duplo-simulado, com 4.012 pacientes com fibrilação atrial subclínica de 6"
+              },
+              {
+                "rank": 7,
+                "key": "documento:oceanic-af-asundexiana-versus-apixabana",
+                "title": "OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial",
+                "section": null,
+                "route": "/biblioteca/oceanic-af-asundexiana-versus-apixabana",
+                "review_status": "revisado",
+                "content_excerpt": "# OCEANIC-AF: asundexiana versus apixabana na prevenção de AVC na fibrilação atrial\n\n## Pergunta clínica\nEm pacientes com fibrilação atrial e indicação de anticoagulação, inibir seletivamente o fator XIa com asundexiana pode manter proteção contra AVC/embolia sistêmica com menos sangramento do que apixabana?\n\n## Desenho\nEnsaio clínico fase 3, internacional, randomizado e duplo-cego, com **14.810 pacientes** na população por intenção de tratar.\n\nIntervenções:\n- asundexiana **50 mg uma vez ao dia**;\n- apixabana em dose padrão conforme indicação clínica.\n\nO estudo foi interrompido precocemente po"
+              },
+              {
+                "rank": 8,
+                "key": "estudo:laaos-iii-oclusao-cirurgica-do-apendice-atrial-esquerdo",
+                "title": "LAAOS III — Oclusão cirúrgica do apêndice atrial esquerdo durante cirurgia cardíaca para prevenção de AVC",
+                "section": null,
+                "route": "/estudos/laaos-iii-oclusao-cirurgica-do-apendice-atrial-esquerdo",
+                "review_status": "revisado",
+                "content_excerpt": "Ensaio multicêntrico e randomizado com 4.770 pacientes com fibrilação atrial e escore CHA2DS2-VASc de"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.475363
+      }
+    },
+    {
+      "id": "fa_stroke_paraphrase",
+      "query": "Paciente com arritmia atrial confirmada: como estimar o risco de derrame e decidir se precisa de anticoagulante por longo prazo?",
+      "group": "paraphrase",
+      "pair_id": "fa_stroke",
+      "required_any": [
+        "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+        "documento:esc-2024-diretriz-fibrilacao-atrial-af-care"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 9.681678
+      }
+    },
+    {
+      "id": "ambulatory_monitoring_exact",
+      "query": "Holter",
+      "group": "exact",
+      "pair_id": "ambulatory_monitoring",
+      "required_any": [
+        "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+        "documento:holter-nao-e-ilr-nao-e-cdi"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 5,
+        "duplicate_count": 3,
+        "duplicate_identities": {
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura": 4
+        },
+        "unique_typed_identities": [
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+          "galeria:holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+          "evidencia:holter-24h-para-palpitacao-sincope-e-quedas-inexplicadas-no-idoso",
+          "evidencia:holter-na-miocardite-de-risco-intermediario-ou-alto",
+          "evidencia:holter-de-24-horas-na-avaliacao-inicial-da-cardiomiopatia-chagasica"
+        ],
+        "top_k_raw_identities": [
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+          "galeria:holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+          "evidencia:holter-24h-para-palpitacao-sincope-e-quedas-inexplicadas-no-idoso",
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+          "evidencia:holter-na-miocardite-de-risco-intermediario-ou-alto",
+          "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+          "evidencia:holter-de-24-horas-na-avaliacao-inicial-da-cardiomiopatia-chagasica"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "title": "Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura: o Estudo de Holter de Copenhague",
+                "section": null,
+                "route": "/biblioteca/extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "review_status": "revisado",
+                "content_excerpt": "# Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura\n\n## A pergunta de consultório\nExtrassístole supraventricular (PAC, *premature atrial contraction*) isolada e pouco frequente é achado comum e benigno em qualquer Holter. Mas quando a carga é alta — ou aparecem salvas —, surge a pergunta: esse achado incidental, num paciente ainda sem fibrilação atrial (FA) documentada, já significa risco aumentado de desenvolver FA e de sofrer AVC? Dois estudos da mesma coorte de base populacional, com 6,3 e depois 15 anos de seguimento, respondem que sim, e quantificam o risco.\n\n##"
+              },
+              {
+                "rank": 2,
+                "key": "galeria:holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+                "title": "Bloqueio atrioventricular de alto grau transitório ao Holter — sarcoidose cardíaca recém-diagnosticada",
+                "section": null,
+                "route": "/galeria/holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+                "review_status": "revisado",
+                "content_excerpt": "Trecho de <mark>Holter</mark> (derivação única) mostrando complexos QRS espaçados de forma irregular, com um período de menor frequência de condução destacado em verde na tira de ritmo contínuo abaixo — registrado em paciente com sarcoidose cardíaca"
+              },
+              {
+                "rank": 3,
+                "key": "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "title": "Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura: o Estudo de Holter de Copenhague",
+                "section": null,
+                "route": "/biblioteca/extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "review_status": "revisado",
+                "content_excerpt": "# Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura\n\n## A pergunta de consultório\nExtrassístole supraventricular (PAC, *premature atrial contraction*) isolada e pouco frequente é achado comum e benigno em qualquer Holter. Mas quando a carga é alta — ou aparecem salvas —, surge a pergunta: esse achado incidental, num paciente ainda sem fibrilação atrial (FA) documentada, já significa risco aumentado de desenvolver FA e de sofrer AVC? Dois estudos da mesma coorte de base populacional, com 6,3 e depois 15 anos de seguimento, respondem que sim, e quantificam o risco.\n\n##"
+              },
+              {
+                "rank": 4,
+                "key": "evidencia:holter-24h-para-palpitacao-sincope-e-quedas-inexplicadas-no-idoso",
+                "title": "Em idosos, o Holter de 24 horas é recomendado para a avaliação de sintomas de palpitação, síncope e quedas inexplicadas.",
+                "section": null,
+                "route": "/evidencias/holter-24h-para-palpitacao-sincope-e-quedas-inexplicadas-no-idoso",
+                "review_status": "revisado",
+                "content_excerpt": "idosos, o <mark>Holter</mark> de 24 horas é recomendado para a avaliação de sintomas de palpitação, síncope e quedas inexplicadas"
+              },
+              {
+                "rank": 5,
+                "key": "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "title": "Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura: o Estudo de Holter de Copenhague",
+                "section": null,
+                "route": "/biblioteca/extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "review_status": "revisado",
+                "content_excerpt": "# Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura\n\n## A pergunta de consultório\nExtrassístole supraventricular (PAC, *premature atrial contraction*) isolada e pouco frequente é achado comum e benigno em qualquer Holter. Mas quando a carga é alta — ou aparecem salvas —, surge a pergunta: esse achado incidental, num paciente ainda sem fibrilação atrial (FA) documentada, já significa risco aumentado de desenvolver FA e de sofrer AVC? Dois estudos da mesma coorte de base populacional, com 6,3 e depois 15 anos de seguimento, respondem que sim, e quantificam o risco.\n\n##"
+              },
+              {
+                "rank": 6,
+                "key": "evidencia:holter-na-miocardite-de-risco-intermediario-ou-alto",
+                "title": "Na miocardite aguda, o Holter é recomendado para pacientes de risco prognóstico intermediário e alto (Classe I, Nível C).",
+                "section": null,
+                "route": "/evidencias/holter-na-miocardite-de-risco-intermediario-ou-alto",
+                "review_status": "revisado",
+                "content_excerpt": "miocardite aguda, o <mark>Holter</mark> é recomendado para pacientes de risco prognóstico intermediário e alto (Classe I, Nível"
+              },
+              {
+                "rank": 7,
+                "key": "documento:extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "title": "Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura: o Estudo de Holter de Copenhague",
+                "section": null,
+                "route": "/biblioteca/extrassistole-supraventricular-frequente-e-risco-de-fibrilacao-atrial-futura",
+                "review_status": "revisado",
+                "content_excerpt": "# Extrassístole Supraventricular Frequente e Risco de Fibrilação Atrial Futura\n\n## A pergunta de consultório\nExtrassístole supraventricular (PAC, *premature atrial contraction*) isolada e pouco frequente é achado comum e benigno em qualquer Holter. Mas quando a carga é alta — ou aparecem salvas —, surge a pergunta: esse achado incidental, num paciente ainda sem fibrilação atrial (FA) documentada, já significa risco aumentado de desenvolver FA e de sofrer AVC? Dois estudos da mesma coorte de base populacional, com 6,3 e depois 15 anos de seguimento, respondem que sim, e quantificam o risco.\n\n##"
+              },
+              {
+                "rank": 8,
+                "key": "evidencia:holter-de-24-horas-na-avaliacao-inicial-da-cardiomiopatia-chagasica",
+                "title": "O Holter de 24 horas é recomendação FORTE na avaliação diagnóstica e prognóstica inicial de todo indivíduo com cardiomiopatia crônica da doença de Chagas, e também na investigação ",
+                "section": null,
+                "route": "/evidencias/holter-de-24-horas-na-avaliacao-inicial-da-cardiomiopatia-chagasica",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Holter</mark> de 24 horas é recomendação FORTE na avaliação diagnóstica e prognóstica inicial de todo indivíduo com cardiomiopatia crônica da doença de Chagas, e também na investigação de sintomas como palpitação, pré-síncope e síncope"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 3.992067
+      }
+    },
+    {
+      "id": "ambulatory_monitoring_paraphrase",
+      "query": "Palpitações intermitentes em paciente estável, mas o traçado feito no consultório veio normal. Como escolher a duração do registro para capturar o episódio?",
+      "group": "paraphrase",
+      "pair_id": "ambulatory_monitoring",
+      "required_any": [
+        "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+        "documento:holter-nao-e-ilr-nao-e-cdi"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 8.454837
+      }
+    },
+    {
+      "id": "hf_four_pillars_exact",
+      "query": "ICFEr quatro pilares",
+      "group": "exact",
+      "pair_id": "hf_four_pillars",
+      "required_any": [
+        "documento:icfer-classificacao-diagnostico-quatro-pilares",
+        "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+        "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 4,
+        "duplicate_count": 4,
+        "duplicate_identities": {
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore": 5
+        },
+        "unique_typed_identities": [
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "evidencia:amiloidose-nao-usar-os-quatro-pilares-da-icfer",
+          "documento:insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+          "documento:icfer-classificacao-diagnostico-quatro-pilares"
+        ],
+        "top_k_raw_identities": [
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "evidencia:amiloidose-nao-usar-os-quatro-pilares-da-icfer",
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "documento:insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+          "documento:icfer-classificacao-diagnostico-quatro-pilares"
+        ],
+        "eligible_reference_count": 3,
+        "ineligible_references": [],
+        "matched_references": [
+          "documento:icfer-classificacao-diagnostico-quatro-pilares",
+          "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore"
+        ],
+        "hit_at_k": 1,
+        "first_reference_rank": 1,
+        "reciprocal_rank_at_k": 1.0,
+        "partial_label_recall_at_k": 0.6666666666666666,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+                "section": null,
+                "route": "/biblioteca/icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "review_status": "revisado",
+                "content_excerpt": "# ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares\n\nA diretriz AHA/ACC/HFSA orienta que as classes fundamentais da ICFER podem ser iniciadas **simultaneamente em baixas doses** ou sequencialmente conforme fatores clínicos. **Não é necessário atingir a dose-alvo de uma classe antes de iniciar outra.** Depois, cada fármaco deve ser titulado à dose-alvo dos ensaios clínicos conforme tolerância.\n\n```mermaid\nflowchart TD\n    A[Paciente com ICFER e indicação de terapia modificadora de prognóstico] --> B[Iniciar/otimizar os 4 pilares conforme tolerância]\n    B --> C[ARNI preferencial / "
+              },
+              {
+                "rank": 2,
+                "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+                "section": null,
+                "route": "/biblioteca/icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>ICFER</mark> — doses iniciais, doses-alvo e árvore dos <mark>quatro</mark> <mark>pilares</mark>\n\nA diretriz AHA/ACC/HFSA orienta que as classes fundamentais da <mark>ICFER</mark> podem ser iniciadas **simultaneamente em baixas doses** ou sequencialmente conforme fatores clínicos. **Não é necessário"
+              },
+              {
+                "rank": 3,
+                "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+                "section": null,
+                "route": "/biblioteca/icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "review_status": "revisado",
+                "content_excerpt": "# ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares\n\nA diretriz AHA/ACC/HFSA orienta que as classes fundamentais da ICFER podem ser iniciadas **simultaneamente em baixas doses** ou sequencialmente conforme fatores clínicos. **Não é necessário atingir a dose-alvo de uma classe antes de iniciar outra.** Depois, cada fármaco deve ser titulado à dose-alvo dos ensaios clínicos conforme tolerância.\n\n```mermaid\nflowchart TD\n    A[Paciente com ICFER e indicação de terapia modificadora de prognóstico] --> B[Iniciar/otimizar os 4 pilares conforme tolerância]\n    B --> C[ARNI preferencial / "
+              },
+              {
+                "rank": 4,
+                "key": "evidencia:amiloidose-nao-usar-os-quatro-pilares-da-icfer",
+                "title": "O uso ROTINEIRO dos fármacos modificadores de prognóstico da insuficiência cardíaca com fração de ejeção reduzida — betabloqueador, inibidor da enzima conversora, bloqueador do rec",
+                "section": null,
+                "route": "/evidencias/amiloidose-nao-usar-os-quatro-pilares-da-icfer",
+                "review_status": "revisado",
+                "content_excerpt": "O uso ROTINEIRO dos fármacos modificadores de prognóstico da insuficiência cardíaca com fração de ejeção"
+              },
+              {
+                "rank": 5,
+                "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+                "section": null,
+                "route": "/biblioteca/icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "review_status": "revisado",
+                "content_excerpt": "# ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares\n\nA diretriz AHA/ACC/HFSA orienta que as classes fundamentais da ICFER podem ser iniciadas **simultaneamente em baixas doses** ou sequencialmente conforme fatores clínicos. **Não é necessário atingir a dose-alvo de uma classe antes de iniciar outra.** Depois, cada fármaco deve ser titulado à dose-alvo dos ensaios clínicos conforme tolerância.\n\n```mermaid\nflowchart TD\n    A[Paciente com ICFER e indicação de terapia modificadora de prognóstico] --> B[Iniciar/otimizar os 4 pilares conforme tolerância]\n    B --> C[ARNI preferencial / "
+              },
+              {
+                "rank": 6,
+                "key": "documento:insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+                "title": "Insuficiência Cardíaca com Fração de Ejeção Reduzida no Muito Idoso: Por que os Quatro Pilares Precisam de Sequenciamento e Titulação Diferentes",
+                "section": null,
+                "route": "/biblioteca/insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+                "review_status": "revisado",
+                "content_excerpt": "Idoso: Por que os <mark>Quatro</mark> <mark>Pilares</mark> Precisam de Sequenciamento e Titulação Diferentes\n\n## Por que isso importa na prática\nAs diretrizes atuais de insuficiência cardíaca com fração de ejeção reduzida (<mark>ICFEr</mark>) — a europeia (ESC 2021, PMID"
+              },
+              {
+                "rank": 7,
+                "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+                "section": null,
+                "route": "/biblioteca/icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+                "review_status": "revisado",
+                "content_excerpt": "# ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares\n\nA diretriz AHA/ACC/HFSA orienta que as classes fundamentais da ICFER podem ser iniciadas **simultaneamente em baixas doses** ou sequencialmente conforme fatores clínicos. **Não é necessário atingir a dose-alvo de uma classe antes de iniciar outra.** Depois, cada fármaco deve ser titulado à dose-alvo dos ensaios clínicos conforme tolerância.\n\n```mermaid\nflowchart TD\n    A[Paciente com ICFER e indicação de terapia modificadora de prognóstico] --> B[Iniciar/otimizar os 4 pilares conforme tolerância]\n    B --> C[ARNI preferencial / "
+              },
+              {
+                "rank": 8,
+                "key": "documento:icfer-classificacao-diagnostico-quatro-pilares",
+                "title": "Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos",
+                "section": null,
+                "route": "/biblioteca/icfer-classificacao-diagnostico-quatro-pilares",
+                "review_status": "revisado",
+                "content_excerpt": "# Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os <mark>Quatro</mark> <mark>Pilares</mark> Terapêuticos\n\n## Estadiamento"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 3.650101
+      }
+    },
+    {
+      "id": "hf_four_pillars_paraphrase",
+      "query": "Paciente estável com coração dilatado e fração de ejeção de 32%. Quais classes de remédio mudam o prognóstico e preciso terminar de aumentar uma antes de começar as outras?",
+      "group": "paraphrase",
+      "pair_id": "hf_four_pillars",
+      "required_any": [
+        "documento:icfer-classificacao-diagnostico-quatro-pilares",
+        "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+        "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 3,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 8.305446
+      }
+    },
+    {
+      "id": "apixaban_dose_exact",
+      "query": "Apixabana ajuste renal",
+      "group": "exact",
+      "pair_id": "apixaban_dose",
+      "required_any": [
+        "documento:apixabana",
+        "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 4,
+        "duplicate_count": 4,
+        "duplicate_identities": {
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal": 5
+        },
+        "unique_typed_identities": [
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "estudo:renal-af-apixabana-versus-varfarina-em-fibrilacao-atrial-e-hemodialise",
+          "evidencia:ajuste-de-dose-do-doac-por-funcao-renal-e-idade-no-idoso",
+          "evidencia:anticoagulantes-nao-antagonistas-da-vitamina-k-preferencia-no-idoso-com-fibrilacao-atrial-e-alto-risco-hemorragico"
+        ],
+        "top_k_raw_identities": [
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "estudo:renal-af-apixabana-versus-varfarina-em-fibrilacao-atrial-e-hemodialise",
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "evidencia:ajuste-de-dose-do-doac-por-funcao-renal-e-idade-no-idoso",
+          "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+          "evidencia:anticoagulantes-nao-antagonistas-da-vitamina-k-preferencia-no-idoso-com-fibrilacao-atrial-e-alto-risco-hemorragico"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "title": "Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso",
+                "section": null,
+                "route": "/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "review_status": "revisado",
+                "content_excerpt": "# Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso\n\n## Por que isso importa na prática\n\"Ele cai muito, não posso anticoagular\" é provavelmente a frase mais repetida — e mais equivocada — na decisão de anticoagulação do idoso com fibrilação atrial (FA). A prevalência de quedas recorrentes sobe com a idade e é especialmente alta no paciente com FA, que reúne fatores de risco de queda (polifarmácia, doença cerebrovascular, sarcopenia, hipotensão ortostática) com a própria indicação de anticoagulação. O medo do médico é concreto — hematoma sub"
+              },
+              {
+                "rank": 2,
+                "key": "estudo:renal-af-apixabana-versus-varfarina-em-fibrilacao-atrial-e-hemodialise",
+                "title": "RENAL-AF — Apixabana versus varfarina em fibrilação atrial e doença renal terminal em hemodiálise",
+                "section": null,
+                "route": "/estudos/renal-af-apixabana-versus-varfarina-em-fibrilacao-atrial-e-hemodialise",
+                "review_status": "revisado",
+                "content_excerpt": "Ensaio prospectivo, randomizado, aberto com avaliação cega de desfecho (PROBE), com 154 pacientes em hemodiálise"
+              },
+              {
+                "rank": 3,
+                "key": "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "title": "Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso",
+                "section": null,
+                "route": "/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "review_status": "revisado",
+                "content_excerpt": "# Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso\n\n## Por que isso importa na prática\n\"Ele cai muito, não posso anticoagular\" é provavelmente a frase mais repetida — e mais equivocada — na decisão de anticoagulação do idoso com fibrilação atrial (FA). A prevalência de quedas recorrentes sobe com a idade e é especialmente alta no paciente com FA, que reúne fatores de risco de queda (polifarmácia, doença cerebrovascular, sarcopenia, hipotensão ortostática) com a própria indicação de anticoagulação. O medo do médico é concreto — hematoma sub"
+              },
+              {
+                "rank": 4,
+                "key": "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "title": "Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso",
+                "section": null,
+                "route": "/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "review_status": "revisado",
+                "content_excerpt": "# Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e <mark>Ajuste</mark> de Dose <mark>Renal</mark> no"
+              },
+              {
+                "rank": 5,
+                "key": "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "title": "Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso",
+                "section": null,
+                "route": "/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "review_status": "revisado",
+                "content_excerpt": "# Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso\n\n## Por que isso importa na prática\n\"Ele cai muito, não posso anticoagular\" é provavelmente a frase mais repetida — e mais equivocada — na decisão de anticoagulação do idoso com fibrilação atrial (FA). A prevalência de quedas recorrentes sobe com a idade e é especialmente alta no paciente com FA, que reúne fatores de risco de queda (polifarmácia, doença cerebrovascular, sarcopenia, hipotensão ortostática) com a própria indicação de anticoagulação. O medo do médico é concreto — hematoma sub"
+              },
+              {
+                "rank": 6,
+                "key": "evidencia:ajuste-de-dose-do-doac-por-funcao-renal-e-idade-no-idoso",
+                "title": "No idoso em uso de anticoagulante oral direto, a dose deve ser ajustada conforme a função renal (clearance de creatinina) e a faixa etária (menor ou maior que 75 anos), conforme as",
+                "section": null,
+                "route": "/evidencias/ajuste-de-dose-do-doac-por-funcao-renal-e-idade-no-idoso",
+                "review_status": "revisado",
+                "content_excerpt": "deve ser <mark>ajustada</mark> conforme a função <mark>renal</mark> (clearance de creatinina) e a faixa etária (menor ou maior que 75 anos), conforme as apresentações e cortes específicos de cada fármaco (dabigatrana, rivaroxabana, <mark>apixabana</mark> e edoxabana"
+              },
+              {
+                "rank": 7,
+                "key": "documento:fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "title": "Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso",
+                "section": null,
+                "route": "/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+                "review_status": "revisado",
+                "content_excerpt": "# Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso\n\n## Por que isso importa na prática\n\"Ele cai muito, não posso anticoagular\" é provavelmente a frase mais repetida — e mais equivocada — na decisão de anticoagulação do idoso com fibrilação atrial (FA). A prevalência de quedas recorrentes sobe com a idade e é especialmente alta no paciente com FA, que reúne fatores de risco de queda (polifarmácia, doença cerebrovascular, sarcopenia, hipotensão ortostática) com a própria indicação de anticoagulação. O medo do médico é concreto — hematoma sub"
+              },
+              {
+                "rank": 8,
+                "key": "evidencia:anticoagulantes-nao-antagonistas-da-vitamina-k-preferencia-no-idoso-com-fibrilacao-atrial-e-alto-risco-hemorragico",
+                "title": "Os anticoagulantes não antagonistas da vitamina K (dabigatrana, rivaroxabana, apixabana, edoxabana) constituem a opção mais segura de anticoagulação em idosos com fibrilação atrial",
+                "section": null,
+                "route": "/evidencias/anticoagulantes-nao-antagonistas-da-vitamina-k-preferencia-no-idoso-com-fibrilacao-atrial-e-alto-risco-hemorragico",
+                "review_status": "revisado",
+                "content_excerpt": "anticoagulantes não antagonistas da vitamina K (dabigatrana, rivaroxabana, <mark>apixabana</mark>, edoxabana) constituem a opção mais segura de anticoagulação em idosos com fibrilação atrial e maior risco de sangramento, com dificuldade…adesão à monitorização do INR ou em uso de múltiplas medicações, devendo suas doses ser <mark>ajustadas</mark> à função <mark>renal</mark> e à idade"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.641375
+      }
+    },
+    {
+      "id": "apixaban_dose_paraphrase",
+      "query": "Uma pessoa de 82 anos, 58 kg e creatinina 1,6 usa Eliquis por arritmia atrial. Onde consultar os critérios brasileiros de redução da dose?",
+      "group": "paraphrase",
+      "pair_id": "apixaban_dose",
+      "required_any": [
+        "documento:apixabana",
+        "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 8.652701
+      }
+    },
+    {
+      "id": "resistant_hypertension_exact",
+      "query": "Hipertensão resistente",
+      "group": "exact",
+      "pair_id": "resistant_hypertension",
+      "required_any": [
+        "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+        "documento:fluxograma-hipertensao-resistente-quarta-droga"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 5,
+        "duplicate_count": 3,
+        "duplicate_identities": {
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12": 4
+        },
+        "unique_typed_identities": [
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+          "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+          "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+          "caso_clinico:hipertensao-resistente-quarto-farmaco-quando-espironolactona-nao-e-tolerada-diretriz-brasileira-2025",
+          "doenca:hipertensao-resistente-e-refrataria"
+        ],
+        "top_k_raw_identities": [
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+          "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+          "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+          "caso_clinico:hipertensao-resistente-quarto-farmaco-quando-espironolactona-nao-e-tolerada-diretriz-brasileira-2025",
+          "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+          "doenca:hipertensao-resistente-e-refrataria"
+        ],
+        "eligible_reference_count": 3,
+        "ineligible_references": [],
+        "matched_references": [
+          "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+          "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco"
+        ],
+        "hit_at_k": 1,
+        "first_reference_rank": 2,
+        "reciprocal_rank_at_k": 0.5,
+        "partial_label_recall_at_k": 0.6666666666666666,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "title": "Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária — Definição, Epidemiologia e Algoritmo Terapêutico (Capítulo 12)",
+                "section": null,
+                "route": "/biblioteca/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "review_status": "revisado",
+                "content_excerpt": "# Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária (Capítulo 12)\n\n> Metodologia da diretriz (SBC/SBN/SBH, 2025): GRADE. As recomendações abaixo trazem **força de\n> recomendação** (Forte/Fraca) e **certeza da evidência** (Alta/Moderada/Baixa) — vocabulário\n> diferente do sistema Classe I-III/Nível A-C usado pelas diretrizes ESC/AHA-ACC já citadas nesta\n> pasta. Não é erro de transcrição.\n\n## 12.1. Definição e classificação\nA diretriz brasileira de 2025 redefine a classificação de hipertensão resistente (HR) e refratária (HRf) considerando **ao mesmo tempo o número de"
+              },
+              {
+                "rank": 2,
+                "key": "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+                "title": "Hipertensão Resistente Verdadeira × Pseudorresistente: o Que Excluir Antes de Escalonar",
+                "section": null,
+                "route": "/biblioteca/hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Hipertensão</mark> <mark>Resistente</mark> Verdadeira × Pseudorresistente\n\n## Por que esta distinção vem antes de qualquer outra decisão\n\"<mark>Hipertensão</mark> <mark>resistente</mark>\" não é um diagnóstico que se faz olhando três receitas na tela. É um rótulo que só deveria…paciente cuja pressão real já está controlada ou seria controlada com aderência adequada.\n\n## Definição de <mark>hipertensão</mark> <mark>resistente</mark> verdadeira\nPela definição do *scientific statement* da American Heart Association (Carey RM et al., Hypertension"
+              },
+              {
+                "rank": 3,
+                "key": "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "title": "Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária — Definição, Epidemiologia e Algoritmo Terapêutico (Capítulo 12)",
+                "section": null,
+                "route": "/biblioteca/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "review_status": "revisado",
+                "content_excerpt": "# Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária (Capítulo 12)\n\n> Metodologia da diretriz (SBC/SBN/SBH, 2025): GRADE. As recomendações abaixo trazem **força de\n> recomendação** (Forte/Fraca) e **certeza da evidência** (Alta/Moderada/Baixa) — vocabulário\n> diferente do sistema Classe I-III/Nível A-C usado pelas diretrizes ESC/AHA-ACC já citadas nesta\n> pasta. Não é erro de transcrição.\n\n## 12.1. Definição e classificação\nA diretriz brasileira de 2025 redefine a classificação de hipertensão resistente (HR) e refratária (HRf) considerando **ao mesmo tempo o número de"
+              },
+              {
+                "rank": 4,
+                "key": "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+                "title": "Hipertensão Resistente: Espironolactona como Quarta Droga — o Ensaio PATHWAY-2",
+                "section": null,
+                "route": "/biblioteca/hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Hipertensão</mark> <mark>Resistente</mark>: Espironolactona como Quarta Droga (PATHWAY-2)\n\n## A pergunta que o ensaio resolveu\nPaciente em **dose máxima tolerada de três fármacos** e ainda com pressão fora da meta. Qual é a quarta droga?\n\nAntes…resposta era opinião. Os autores abrem exatamente assim: **\"o tratamento farmacológico ideal para pacientes com <mark>hipertensão</mark> <mark>resistente</mark> não está definido\"**. E propõem uma hipótese fisiopatológica testável — a de que a <mark>hipertensão</mark> <mark>resistente</mark> é, na maioria"
+              },
+              {
+                "rank": 5,
+                "key": "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "title": "Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária — Definição, Epidemiologia e Algoritmo Terapêutico (Capítulo 12)",
+                "section": null,
+                "route": "/biblioteca/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "review_status": "revisado",
+                "content_excerpt": "# Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária (Capítulo 12)\n\n> Metodologia da diretriz (SBC/SBN/SBH, 2025): GRADE. As recomendações abaixo trazem **força de\n> recomendação** (Forte/Fraca) e **certeza da evidência** (Alta/Moderada/Baixa) — vocabulário\n> diferente do sistema Classe I-III/Nível A-C usado pelas diretrizes ESC/AHA-ACC já citadas nesta\n> pasta. Não é erro de transcrição.\n\n## 12.1. Definição e classificação\nA diretriz brasileira de 2025 redefine a classificação de hipertensão resistente (HR) e refratária (HRf) considerando **ao mesmo tempo o número de"
+              },
+              {
+                "rank": 6,
+                "key": "caso_clinico:hipertensao-resistente-quarto-farmaco-quando-espironolactona-nao-e-tolerada-diretriz-brasileira-2025",
+                "title": "Ginecomastia dolorosa com espironolactona em hipertensão resistente: qual a próxima alternativa validada?",
+                "section": null,
+                "route": "/casos-clinicos/hipertensao-resistente-quarto-farmaco-quando-espironolactona-nao-e-tolerada-diretriz-brasileira-2025",
+                "review_status": "revisado",
+                "content_excerpt": "Paciente com <mark>hipertensão</mark> <mark>resistente</mark> confirmada por MAPA (após exclusão de pseudorresistência), em terapia tripla otimizada com IECA + bloqueador de canal de cálcio di-hidropiridínico de ação prolongada + clortalidona, desenvolve ginecomastia dolorosa após espironolactona 25mg/dia introduzida…e20250624, PMID 41294179), no Capítulo 12, recomenda espironolactona 25-50mg/dia como quarto fármaco preferencial na <mark>hipertensão</mark> <mark>resistente</mark>, considerando o estado de hiperaldosteronismo relativo que caracteriza essa condição. Quando a ginecomastia doloros"
+              },
+              {
+                "rank": 7,
+                "key": "documento:diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "title": "Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária — Definição, Epidemiologia e Algoritmo Terapêutico (Capítulo 12)",
+                "section": null,
+                "route": "/biblioteca/diretriz-brasileira-de-hipertensao-2025-hipertensao-resistente-e-refrataria-capitulo-12",
+                "review_status": "revisado",
+                "content_excerpt": "# Diretriz Brasileira de Hipertensão 2025: Hipertensão Resistente e Refratária (Capítulo 12)\n\n> Metodologia da diretriz (SBC/SBN/SBH, 2025): GRADE. As recomendações abaixo trazem **força de\n> recomendação** (Forte/Fraca) e **certeza da evidência** (Alta/Moderada/Baixa) — vocabulário\n> diferente do sistema Classe I-III/Nível A-C usado pelas diretrizes ESC/AHA-ACC já citadas nesta\n> pasta. Não é erro de transcrição.\n\n## 12.1. Definição e classificação\nA diretriz brasileira de 2025 redefine a classificação de hipertensão resistente (HR) e refratária (HRf) considerando **ao mesmo tempo o número de"
+              },
+              {
+                "rank": 8,
+                "key": "doenca:hipertensao-resistente-e-refrataria",
+                "title": "Hipertensão resistente e refratária",
+                "section": null,
+                "route": "/doencas/hipertensao-resistente-e-refrataria",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Hipertensão</mark> <mark>resistente</mark> (pressão não controlada apesar de 3+ classes em dose otimizada incluindo diurético, ou controlada com 4+ classes) e refratária (não controlada apesar de 5+ classes incluindo antagonista mineralocorticoide). Cerca de metade dos rótulos…denervação renal em pacientes selecionados após confirmação de <mark>resistência</mark> verdadeira; outras neuromodulações, como ativação de barorreflexo, não são recomendadas rotineiramente. Distinto do hub geral de <mark>hipertensão</mark> arterial sistêmica, que cobre classificação/diagnóstico/metas gerais"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.33179
+      }
+    },
+    {
+      "id": "resistant_hypertension_paraphrase",
+      "query": "A pressão continua alta apesar de três remédios, incluindo um diurético. O que confirmar antes de acrescentar outro e qual evidência orienta a quarta opção?",
+      "group": "paraphrase",
+      "pair_id": "resistant_hypertension",
+      "required_any": [
+        "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+        "documento:fluxograma-hipertensao-resistente-quarta-droga"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 3,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 8.886625
+      }
+    },
+    {
+      "id": "minoca_exact",
+      "query": "MINOCA",
+      "group": "exact",
+      "pair_id": "minoca",
+      "required_any": [
+        "documento:fluxograma-minoca-investigacao-diagnostica",
+        "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 5,
+        "duplicate_count": 3,
+        "duplicate_identities": {
+          "documento:fluxograma-minoca-investigacao-diagnostica": 4
+        },
+        "unique_typed_identities": [
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "evidencia:minoca-rm-apos-angiografia-se-diagnostico-incerto-esc-2023",
+          "evidencia:minoca-seguir-algoritmo-diagnostico-esc-2023",
+          "evidencia:minoca-tratar-conforme-diagnostico-final-esc-2023",
+          "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+        ],
+        "top_k_raw_identities": [
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "evidencia:minoca-rm-apos-angiografia-se-diagnostico-incerto-esc-2023",
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "evidencia:minoca-seguir-algoritmo-diagnostico-esc-2023",
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "evidencia:minoca-tratar-conforme-diagnostico-final-esc-2023",
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [
+          "documento:fluxograma-minoca-investigacao-diagnostica",
+          "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+        ],
+        "hit_at_k": 1,
+        "first_reference_rank": 1,
+        "reciprocal_rank_at_k": 1.0,
+        "partial_label_recall_at_k": 1.0,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+                "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+                "section": null,
+                "route": "/biblioteca/fluxograma-minoca-investigacao-diagnostica",
+                "review_status": "revisado",
+                "content_excerpt": "MINOCA é mais frequente em mulheres e sistematicamente subinvestigado quando a angiografia normal é lida como 'sem doença coronariana' em vez de como início de uma segunda investigação. O fluxograma organiza os passos do diagnóstico de trabalho até a etiologia específica, com a ressonância cardíaca como divisor entre causa isquêmica e não isquêmica."
+              },
+              {
+                "rank": 2,
+                "key": "evidencia:minoca-rm-apos-angiografia-se-diagnostico-incerto-esc-2023",
+                "title": "Em pacientes com diagnóstico de trabalho de MINOCA, a ressonância magnética cardíaca é recomendada após a angiografia invasiva se o diagnóstico final não estiver claro.",
+                "section": null,
+                "route": "/evidencias/minoca-rm-apos-angiografia-se-diagnostico-incerto-esc-2023",
+                "review_status": "revisado",
+                "content_excerpt": "pacientes com diagnóstico de trabalho de <mark>MINOCA</mark>, a ressonância magnética cardíaca é recomendada após a angiografia invasiva se o diagnóstico final não estiver claro"
+              },
+              {
+                "rank": 3,
+                "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+                "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+                "section": null,
+                "route": "/biblioteca/fluxograma-minoca-investigacao-diagnostica",
+                "review_status": "revisado",
+                "content_excerpt": "MINOCA é mais frequente em mulheres e sistematicamente subinvestigado quando a angiografia normal é lida como 'sem doença coronariana' em vez de como início de uma segunda investigação. O fluxograma organiza os passos do diagnóstico de trabalho até a etiologia específica, com a ressonância cardíaca como divisor entre causa isquêmica e não isquêmica."
+              },
+              {
+                "rank": 4,
+                "key": "evidencia:minoca-seguir-algoritmo-diagnostico-esc-2023",
+                "title": "Em todo paciente com diagnóstico de trabalho de MINOCA, é recomendado seguir um algoritmo diagnóstico para determinar o diagnóstico final subjacente.",
+                "section": null,
+                "route": "/evidencias/minoca-seguir-algoritmo-diagnostico-esc-2023",
+                "review_status": "revisado",
+                "content_excerpt": "todo paciente com diagnóstico de trabalho de <mark>MINOCA</mark>, é recomendado seguir um algoritmo diagnóstico para determinar o diagnóstico final subjacente"
+              },
+              {
+                "rank": 5,
+                "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+                "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+                "section": null,
+                "route": "/biblioteca/fluxograma-minoca-investigacao-diagnostica",
+                "review_status": "revisado",
+                "content_excerpt": "MINOCA é mais frequente em mulheres e sistematicamente subinvestigado quando a angiografia normal é lida como 'sem doença coronariana' em vez de como início de uma segunda investigação. O fluxograma organiza os passos do diagnóstico de trabalho até a etiologia específica, com a ressonância cardíaca como divisor entre causa isquêmica e não isquêmica."
+              },
+              {
+                "rank": 6,
+                "key": "evidencia:minoca-tratar-conforme-diagnostico-final-esc-2023",
+                "title": "O manejo do MINOCA deve seguir o diagnóstico final estabelecido, de acordo com as diretrizes específicas da doença identificada.",
+                "section": null,
+                "route": "/evidencias/minoca-tratar-conforme-diagnostico-final-esc-2023",
+                "review_status": "revisado",
+                "content_excerpt": "manejo do <mark>MINOCA</mark> deve seguir o diagnóstico final estabelecido, de acordo com as diretrizes específicas da doença identificada"
+              },
+              {
+                "rank": 7,
+                "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+                "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+                "section": null,
+                "route": "/biblioteca/fluxograma-minoca-investigacao-diagnostica",
+                "review_status": "revisado",
+                "content_excerpt": "MINOCA é mais frequente em mulheres e sistematicamente subinvestigado quando a angiografia normal é lida como 'sem doença coronariana' em vez de como início de uma segunda investigação. O fluxograma organiza os passos do diagnóstico de trabalho até a etiologia específica, com a ressonância cardíaca como divisor entre causa isquêmica e não isquêmica."
+              },
+              {
+                "rank": 8,
+                "key": "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+                "title": "MINOCA e SCAD: Infarto sem Doença Coronariana Obstrutiva e Dissecção Espontânea de Artéria Coronária",
+                "section": null,
+                "route": "/biblioteca/minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>MINOCA</mark> e SCAD: Infarto sem Doença Coronariana Obstrutiva e Dissecção Espontânea de Artéria Coronária\n\n## <mark>MINOCA</mark> — o que é\nInfarto agudo do miocárdio com artérias coronárias não obstrutivas (estenose <50% em qualquer vaso epicárdico maior…investigação subsequente é identificar a causa real, que pode ser coronariana, cardíaca não coronariana ou não cardíaca.\n\n## <mark>MINOCA</mark> — investigação diagnóstica\nQuando o diagnóstico final permanece incerto após a angiografia invasiva, a ressonância magnética cardíaca"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.010658
+      }
+    },
+    {
+      "id": "minoca_paraphrase",
+      "query": "O quadro preencheu critérios de infarto, mas o cateterismo não mostrou obstrução importante. Quais exames ajudam a descobrir a causa e diferenciar miocardite ou Takotsubo?",
+      "group": "paraphrase",
+      "pair_id": "minoca",
+      "required_any": [
+        "documento:fluxograma-minoca-investigacao-diagnostica",
+        "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 8.734293
+      }
+    },
+    {
+      "id": "pericarditis_colchicine_exact",
+      "query": "Pericardite colchicina",
+      "group": "exact",
+      "pair_id": "pericarditis_colchicine",
+      "required_any": [
+        "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+        "documento:colchicina-na-pericardite-o-que-esperar"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 4,
+        "duplicate_count": 4,
+        "duplicate_identities": {
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta": 5
+        },
+        "unique_typed_identities": [
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "evidencia:corp-pericardite-recorrente",
+          "documento:colchicina-na-pericardite-o-que-esperar",
+          "estudo:colchicina-em-doenca-renal-cronica-dose-baixa-vs-alta"
+        ],
+        "top_k_raw_identities": [
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "evidencia:corp-pericardite-recorrente",
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "documento:colchicina-na-pericardite-o-que-esperar",
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+          "estudo:colchicina-em-doenca-renal-cronica-dose-baixa-vs-alta"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [
+          "documento:colchicina-na-pericardite-o-que-esperar"
+        ],
+        "hit_at_k": 1,
+        "first_reference_rank": 4,
+        "reciprocal_rank_at_k": 0.25,
+        "partial_label_recall_at_k": 0.5,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "title": "Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "review_status": "revisado",
+                "content_excerpt": "# Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta\n\n## Pergunta clínica\n\nA colchicina é terapia de primeira linha, junto com AAS/AINE, para reduzir recorrência de pericardite aguda. Sua depuração é parcialmente renal, e a insuficiência renal é um fator de risco reconhecido para toxicidade — mas a maioria dos ensaios que embasam seu uso (incluindo os de prevenção cardiovascular) exclui ou sub-representa pacientes com doença renal crônica (DRC) avançada. Este estudo retrospectivo multicêntrico comparou diretamente dose baixa versus dose alta de colchicina em pacientes c"
+              },
+              {
+                "rank": 2,
+                "key": "evidencia:corp-pericardite-recorrente",
+                "title": "No CORP (Imazio et al., Ann Intern Med. 2011;155:409-414; PMID 21873705; NCT00128414), ensaio prospectivo, randomizado, duplo-cego, placebo-controlado, multicêntrico (4 hospitais n",
+                "section": null,
+                "route": "/evidencias/corp-pericardite-recorrente",
+                "review_status": "revisado",
+                "content_excerpt": "Não misturar com ICAP (PMID 23992557; primeiro episódio; 3 meses; sem ataque) nem com CORP"
+              },
+              {
+                "rank": 3,
+                "key": "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "title": "Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "review_status": "revisado",
+                "content_excerpt": "# Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta\n\n## Pergunta clínica\n\nA colchicina é terapia de primeira linha, junto com AAS/AINE, para reduzir recorrência de pericardite aguda. Sua depuração é parcialmente renal, e a insuficiência renal é um fator de risco reconhecido para toxicidade — mas a maioria dos ensaios que embasam seu uso (incluindo os de prevenção cardiovascular) exclui ou sub-representa pacientes com doença renal crônica (DRC) avançada. Este estudo retrospectivo multicêntrico comparou diretamente dose baixa versus dose alta de colchicina em pacientes c"
+              },
+              {
+                "rank": 4,
+                "key": "documento:colchicina-na-pericardite-o-que-esperar",
+                "title": "Colchicina na pericardite: o que esperar",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-o-que-esperar",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Pericardite</mark> é a inflamação da membrana que envolve o coração. A <mark>colchicina</mark> costuma ser associada ao anti-inflamatório escolhido pela equipe para reduzir a chance de a inflamação persistir ou voltar"
+              },
+              {
+                "rank": 5,
+                "key": "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "title": "Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "review_status": "revisado",
+                "content_excerpt": "# Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta\n\n## Pergunta clínica\n\nA colchicina é terapia de primeira linha, junto com AAS/AINE, para reduzir recorrência de pericardite aguda. Sua depuração é parcialmente renal, e a insuficiência renal é um fator de risco reconhecido para toxicidade — mas a maioria dos ensaios que embasam seu uso (incluindo os de prevenção cardiovascular) exclui ou sub-representa pacientes com doença renal crônica (DRC) avançada. Este estudo retrospectivo multicêntrico comparou diretamente dose baixa versus dose alta de colchicina em pacientes c"
+              },
+              {
+                "rank": 6,
+                "key": "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "title": "Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "review_status": "revisado",
+                "content_excerpt": "<mark>Colchicina</mark> na <mark>Pericardite</mark> com Doença Renal Crônica: Dose Baixa versus Alta\n\n## Pergunta clínica\n\nA <mark>colchicina</mark> é terapia de primeira linha, junto com AAS/AINE, para reduzir recorrência de <mark>pericardite</mark> aguda. Sua depuração é parcialmente renal…estimada <60 mL/min/1,73m², ajustada por idade e sexo) tratados para <mark>pericardite</mark>.\n- Excluídos: <mark>pericardite</mark> recorrente e uso prévio de <mark>colchicina</mark> antes da admissão.\n- Dois grupos: **dose alta** (≥0,6 mg/dia) e **dose baixa"
+              },
+              {
+                "rank": 7,
+                "key": "documento:colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "title": "Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta",
+                "section": null,
+                "route": "/biblioteca/colchicina-na-pericardite-com-doenca-renal-cronica-dose-baixa-versus-alta",
+                "review_status": "revisado",
+                "content_excerpt": "# Colchicina na Pericardite com Doença Renal Crônica: Dose Baixa versus Alta\n\n## Pergunta clínica\n\nA colchicina é terapia de primeira linha, junto com AAS/AINE, para reduzir recorrência de pericardite aguda. Sua depuração é parcialmente renal, e a insuficiência renal é um fator de risco reconhecido para toxicidade — mas a maioria dos ensaios que embasam seu uso (incluindo os de prevenção cardiovascular) exclui ou sub-representa pacientes com doença renal crônica (DRC) avançada. Este estudo retrospectivo multicêntrico comparou diretamente dose baixa versus dose alta de colchicina em pacientes c"
+              },
+              {
+                "rank": 8,
+                "key": "estudo:colchicina-em-doenca-renal-cronica-dose-baixa-vs-alta",
+                "title": "Colchicina na pericardite em pacientes com doença renal crônica — dose baixa versus alta em coorte retrospectiva",
+                "section": null,
+                "route": "/estudos/colchicina-em-doenca-renal-cronica-dose-baixa-vs-alta",
+                "review_status": "revisado",
+                "content_excerpt": "tratados para <mark>pericardite</mark> entre 2015 e 2024 — população historicamente excluída ou subrepresentada nos grandes ensaios de <mark>colchicina</mark> em <mark>pericardite</mark>. Entre 93 pacientes (53 em dose alta, 40 em dose baixa), a dose alta associou"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.645107
+      }
+    },
+    {
+      "id": "pericarditis_colchicine_paraphrase",
+      "query": "A inflamação da membrana que envolve o coração voltou depois de melhorar. Que evidências existem para acrescentar colchicina e evitar novos episódios?",
+      "group": "paraphrase",
+      "pair_id": "pericarditis_colchicine",
+      "required_any": [
+        "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+        "documento:colchicina-na-pericardite-o-que-esperar"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 10.14116
+      }
+    },
+    {
+      "id": "statin_intolerance_exact",
+      "query": "Intolerância a estatinas",
+      "group": "exact",
+      "pair_id": "statin_intolerance",
+      "required_any": [
+        "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+        "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 8,
+        "unique_identity_count": 4,
+        "duplicate_count": 4,
+        "duplicate_identities": {
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015": 5
+        },
+        "unique_typed_identities": [
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "evidencia:reintroducao-de-estatina-para-confirmar-intolerancia",
+          "estudo:clear-outcomes-acido-bempedoico-em-intolerantes-a-estatina",
+          "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+        ],
+        "top_k_raw_identities": [
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "evidencia:reintroducao-de-estatina-para-confirmar-intolerancia",
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "estudo:clear-outcomes-acido-bempedoico-em-intolerantes-a-estatina",
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+          "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+        ],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [
+          "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+          "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015"
+        ],
+        "hit_at_k": 1,
+        "first_reference_rank": 1,
+        "reciprocal_rank_at_k": 1.0,
+        "partial_label_recall_at_k": 1.0,
+        "required_all_satisfied": null,
+        "source_pages": [
+          {
+            "offset": 0,
+            "limit": 8,
+            "next_offset": null,
+            "items": [
+              {
+                "rank": 1,
+                "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "review_status": "revisado",
+                "content_excerpt": "Como o Consenso da European Atherosclerosis Society (2015) define sintoma muscular associado a estatina (SAMS), os cortes de CK que decidem suspender ou continuar, e o protocolo estruturado de reexposição (dechallenge-rechallenge) antes de rotular um paciente como intolerante."
+              },
+              {
+                "rank": 2,
+                "key": "evidencia:reintroducao-de-estatina-para-confirmar-intolerancia",
+                "title": "Em pacientes com suspeita de intolerância à estatina, a reintrodução (rechallenge) da estatina é recomendada para estabelecer uma relação causal entre o sintoma e o tratamento ante",
+                "section": null,
+                "route": "/evidencias/reintroducao-de-estatina-para-confirmar-intolerancia",
+                "review_status": "revisado",
+                "content_excerpt": "pacientes com suspeita de <mark>intolerância</mark> à <mark>estatina</mark>, a reintrodução (rechallenge) da <mark>estatina</mark> é recomendada para estabelecer uma relação causal entre o sintoma e o tratamento antes de concluir por <mark>intolerância</mark> definitiva"
+              },
+              {
+                "rank": 3,
+                "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "review_status": "revisado",
+                "content_excerpt": "Como o Consenso da European Atherosclerosis Society (2015) define sintoma muscular associado a estatina (SAMS), os cortes de CK que decidem suspender ou continuar, e o protocolo estruturado de reexposição (dechallenge-rechallenge) antes de rotular um paciente como intolerante."
+              },
+              {
+                "rank": 4,
+                "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "review_status": "revisado",
+                "content_excerpt": "sintoma muscular associado a <mark>estatina</mark> (SAMS), os cortes de CK que decidem suspender ou continuar, e o protocolo estruturado de reexposição (dechallenge-rechallenge) antes de rotular um paciente como <mark>intolerante</mark>"
+              },
+              {
+                "rank": 5,
+                "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "review_status": "revisado",
+                "content_excerpt": "Como o Consenso da European Atherosclerosis Society (2015) define sintoma muscular associado a estatina (SAMS), os cortes de CK que decidem suspender ou continuar, e o protocolo estruturado de reexposição (dechallenge-rechallenge) antes de rotular um paciente como intolerante."
+              },
+              {
+                "rank": 6,
+                "key": "estudo:clear-outcomes-acido-bempedoico-em-intolerantes-a-estatina",
+                "title": "CLEAR Outcomes — Ácido bempedoico e desfechos cardiovasculares em pacientes intolerantes a estatina",
+                "section": null,
+                "route": "/estudos/clear-outcomes-acido-bempedoico-em-intolerantes-a-estatina",
+                "review_status": "revisado",
+                "content_excerpt": "Ensaio randomizado, duplo-cego, controlado por placebo, com 13.970 pacientes <mark>intolerantes</mark> a <mark>estatina</mark> — com doença cardiovascular estabelecida ou sob alto risco — que não conseguiam ou não queriam usar <mark>estatina</mark> em dose eficaz. Comparou ácido bempedoico…fármaco ativado apenas no fígado — motivo pelo qual não produz o efeito muscular que define a <mark>intolerância</mark> a <mark>estatina</mark>. Desfecho primário, composto de quatro componentes (morte cardiovascular, infarto não fatal, AVC não fatal ou revascularização"
+              },
+              {
+                "rank": 7,
+                "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+                "review_status": "revisado",
+                "content_excerpt": "Como o Consenso da European Atherosclerosis Society (2015) define sintoma muscular associado a estatina (SAMS), os cortes de CK que decidem suspender ou continuar, e o protocolo estruturado de reexposição (dechallenge-rechallenge) antes de rotular um paciente como intolerante."
+              },
+              {
+                "rank": 8,
+                "key": "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+                "title": "Fluxograma: Intolerância a Estatina — Definição por CK e Protocolo de Reexposição (EAS 2015)",
+                "section": null,
+                "route": "/biblioteca/fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+                "review_status": "revisado",
+                "content_excerpt": "Fluxograma: <mark>Intolerância</mark> a <mark>Estatina</mark> — Definição por CK e Protocolo de Reexposição (EAS 2015)\n\n\"<mark>Intolerância</mark> a <mark>estatina</mark>\" costuma ser declarada depois de uma única queixa muscular, sem CK medida nem reexposição documentada. O Consenso da European…suspensão imediata — e reserva o rótulo de \"<mark>intolerante</mark> à classe\" para depois de um protocolo estruturado de suspensão e reexposição, geralmente com ao menos três <mark>estatinas</mark> diferentes.\n\n## Árvore de decisão\n\n```mermaid\nflowchart TD\n  R0[\"Paciente"
+              }
+            ]
+          }
+        ],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 4.387364
+      }
+    },
+    {
+      "id": "statin_intolerance_paraphrase",
+      "query": "A paciente relata dor muscular depois de iniciar o remédio para colesterol. Como investigar causalidade e tentar outra dose ou molécula antes de abandonar toda a classe?",
+      "group": "paraphrase",
+      "pair_id": "statin_intolerance",
+      "required_any": [
+        "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+        "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+      ],
+      "hybrid": null,
+      "execution_order": [
+        "lexical"
+      ],
+      "lexical": {
+        "raw_result_count": 0,
+        "unique_identity_count": 0,
+        "duplicate_count": 0,
+        "duplicate_identities": {},
+        "unique_typed_identities": [],
+        "top_k_raw_identities": [],
+        "eligible_reference_count": 2,
+        "ineligible_references": [],
+        "matched_references": [],
+        "hit_at_k": 0,
+        "first_reference_rank": null,
+        "reciprocal_rank_at_k": 0.0,
+        "partial_label_recall_at_k": 0.0,
+        "required_all_satisfied": null,
+        "source_pages": [],
+        "status": "ok",
+        "diagnostics": [
+          {
+            "logger": "corvia.rag",
+            "level": "WARNING",
+            "message": "Provedor de embeddings indisponível na recuperação — RAG segue só léxico."
+          }
+        ],
+        "embedding_provider_calls": 1,
+        "retrieval_seconds": 10.137539
+      }
+    }
+  ],
+  "snapshot": "120114:120114:",
+  "preflight": {
+    "references": [
+      {
+        "key": "documento:apixabana",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Apixabana",
+        "source_fingerprint": "a65f3f43c2f2b85bc8e58a76cc2db66b40cb547deaef60ca867db37f56c684be",
+        "chunk_count": 12,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 12
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Apixabana e rivaroxabana — seleção de dose pela bula brasileira 2025",
+        "source_fingerprint": "8bb53501ff7825e5e7cf0046cef5efd936ddbf668f5662a80ead8a8360d618e1",
+        "chunk_count": 7,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 7
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:colchicina-na-pericardite-o-que-esperar",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Colchicina na pericardite: o que esperar",
+        "source_fingerprint": "4344245358be89784bebafd139f88cda16a461c04e440144a5bcd2d130218a6e",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Colchicina na pericardite recorrente: o que o ensaio mostra",
+        "source_fingerprint": "5680c6141bcacd25bf650649ee64a79ba255f026362e9fe3d686199a37269c7f",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:esc-2024-diretriz-fibrilacao-atrial-af-care",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "ESC 2024: diretriz de fibrilação atrial e o modelo AF-CARE",
+        "source_fingerprint": "1a92c6d1bcfde1a054c7a56b3dd65f770a664c5708608281d121f0b337dda38a",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: anticoagulação pelo CHA₂DS₂-VA — ESC 2024",
+        "source_fingerprint": "af02b4e382b3aaff80ef645ccaf7cfd55cd456832e419c9ccb61fc1b40cd6e7e",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:fluxograma-hipertensao-resistente-quarta-droga",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Hipertensão Resistente — da Pseudorresistência à Quarta Droga",
+        "source_fingerprint": "3a00af45a06d5b3fc5fc6d085f857390c83a786a9c20804b6a9960acfe931ba8",
+        "chunk_count": 4,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 4
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Intolerância a Estatina — Definição por CK e Protocolo de Reexposição (EAS 2015)",
+        "source_fingerprint": "6d9f1f1e98d54516d0b9002d77ca91a76d38846c77288274b58d5a67ee7bfdb2",
+        "chunk_count": 6,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 6
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+        "source_fingerprint": "140e2924363ef26ca64ec7914d322f06733731c5989be6b30f1abcf2573d941a",
+        "chunk_count": 4,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 4
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Palpitações — avaliação inicial ambulatorial sem diagnóstico prévio",
+        "source_fingerprint": "97ba388c220c3ae446b4033d47c7e761d7c339244c1ad75601b4ee147e5afcc9",
+        "chunk_count": 9,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 9
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Hipertensão Resistente: Espironolactona como Quarta Droga — o Ensaio PATHWAY-2",
+        "source_fingerprint": "47497426566e1c3b789e9ec543f42fade2b6968bfac2045c3411fd3102cb6ac7",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Hipertensão Resistente Verdadeira × Pseudorresistente: o Que Excluir Antes de Escalonar",
+        "source_fingerprint": "059959224a94186a7f2044e4c3da9abd16012eb751db6e43c6df60be3bf96de2",
+        "chunk_count": 12,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 12
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:holter-nao-e-ilr-nao-e-cdi",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Holter não é ILR e não é CDI",
+        "source_fingerprint": "cf21941480a775bb6cb974faedd73e68e2bcf5cc968bc0378d71991f2be47a56",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:icfer-classificacao-diagnostico-quatro-pilares",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos",
+        "source_fingerprint": "e566d717e8bd06be0dc9348b0b3c92918ec4448280e48e4db8bd50e1549db6bc",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+        "source_fingerprint": "9e64267e193e36049bbb33f3d7604364084411b6ec9a80d77be9b7983ae7da38",
+        "chunk_count": 5,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 5
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Inibidores de SGLT2 na ICFEr: DAPA-HF e EMPEROR-Reduced",
+        "source_fingerprint": "0c0d58573807cceabac0d68c105c0747543db27179de68631e4c9c6c482569ec",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+        "source_fingerprint": "5874a86e0584911181a246eb6b38b9ced14a1273d43117bb9d5536449ff53f01",
+        "chunk_count": 11,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 11
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "MINOCA e SCAD: Infarto sem Doença Coronariana Obstrutiva e Dissecção Espontânea de Artéria Coronária",
+        "source_fingerprint": "8ca31d4f4d24d9f315fd7e6f97d19c1d23d085cb7db617864ecac0c3d4625eef",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      }
+    ],
+    "eligible_count": 18,
+    "ineligible_keys": [],
+    "semantic_ready_count": 14,
+    "schema_dimensions": [
+      {
+        "table_name": "document_chunks",
+        "vector_dimension": 1536
+      },
+      {
+        "table_name": "knowledge_chunks",
+        "vector_dimension": 1536
+      }
+    ],
+    "configured_model": "text-embedding-3-small",
+    "configured_dimension": 1536,
+    "publication_policy": "Only published labels enter metric denominators; labels are never replaced",
+    "index_policy": "Missing/stale chunks remain retrieval gaps; publication eligibility does not require embeddings"
+  },
+  "lexical_baseline_started_at": "2026-09-09T22:24:23.156611+00:00",
+  "lexical_baseline_embedding_network_calls": 0,
+  "lexical_baseline_snapshot": "120126:120126:",
+  "lexical_baseline_preflight": {
+    "references": [
+      {
+        "key": "documento:apixabana",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Apixabana",
+        "source_fingerprint": "a65f3f43c2f2b85bc8e58a76cc2db66b40cb547deaef60ca867db37f56c684be",
+        "chunk_count": 12,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 12
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Apixabana e rivaroxabana — seleção de dose pela bula brasileira 2025",
+        "source_fingerprint": "8bb53501ff7825e5e7cf0046cef5efd936ddbf668f5662a80ead8a8360d618e1",
+        "chunk_count": 7,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 7
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:colchicina-na-pericardite-o-que-esperar",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Colchicina na pericardite: o que esperar",
+        "source_fingerprint": "4344245358be89784bebafd139f88cda16a461c04e440144a5bcd2d130218a6e",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Colchicina na pericardite recorrente: o que o ensaio mostra",
+        "source_fingerprint": "5680c6141bcacd25bf650649ee64a79ba255f026362e9fe3d686199a37269c7f",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:esc-2024-diretriz-fibrilacao-atrial-af-care",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "ESC 2024: diretriz de fibrilação atrial e o modelo AF-CARE",
+        "source_fingerprint": "1a92c6d1bcfde1a054c7a56b3dd65f770a664c5708608281d121f0b337dda38a",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: anticoagulação pelo CHA₂DS₂-VA — ESC 2024",
+        "source_fingerprint": "af02b4e382b3aaff80ef645ccaf7cfd55cd456832e419c9ccb61fc1b40cd6e7e",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:fluxograma-hipertensao-resistente-quarta-droga",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Hipertensão Resistente — da Pseudorresistência à Quarta Droga",
+        "source_fingerprint": "3a00af45a06d5b3fc5fc6d085f857390c83a786a9c20804b6a9960acfe931ba8",
+        "chunk_count": 4,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 4
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Intolerância a Estatina — Definição por CK e Protocolo de Reexposição (EAS 2015)",
+        "source_fingerprint": "6d9f1f1e98d54516d0b9002d77ca91a76d38846c77288274b58d5a67ee7bfdb2",
+        "chunk_count": 6,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 6
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-minoca-investigacao-diagnostica",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: MINOCA — investigação diagnóstica do infarto sem doença coronariana obstrutiva",
+        "source_fingerprint": "140e2924363ef26ca64ec7914d322f06733731c5989be6b30f1abcf2573d941a",
+        "chunk_count": 4,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 4
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Fluxograma: Palpitações — avaliação inicial ambulatorial sem diagnóstico prévio",
+        "source_fingerprint": "97ba388c220c3ae446b4033d47c7e761d7c339244c1ad75601b4ee147e5afcc9",
+        "chunk_count": 9,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 9
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Hipertensão Resistente: Espironolactona como Quarta Droga — o Ensaio PATHWAY-2",
+        "source_fingerprint": "47497426566e1c3b789e9ec543f42fade2b6968bfac2045c3411fd3102cb6ac7",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Hipertensão Resistente Verdadeira × Pseudorresistente: o Que Excluir Antes de Escalonar",
+        "source_fingerprint": "059959224a94186a7f2044e4c3da9abd16012eb751db6e43c6df60be3bf96de2",
+        "chunk_count": 12,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 12
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:holter-nao-e-ilr-nao-e-cdi",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Holter não é ILR e não é CDI",
+        "source_fingerprint": "cf21941480a775bb6cb974faedd73e68e2bcf5cc968bc0378d71991f2be47a56",
+        "chunk_count": 0,
+        "chunk_states": {},
+        "index_state": "STALE_OR_MISSING",
+        "has_usable_semantic_chunk": false
+      },
+      {
+        "key": "documento:icfer-classificacao-diagnostico-quatro-pilares",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos",
+        "source_fingerprint": "e566d717e8bd06be0dc9348b0b3c92918ec4448280e48e4db8bd50e1549db6bc",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "ICFER — doses iniciais, doses-alvo e árvore dos quatro pilares",
+        "source_fingerprint": "9e64267e193e36049bbb33f3d7604364084411b6ec9a80d77be9b7983ae7da38",
+        "chunk_count": 5,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 5
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Inibidores de SGLT2 na ICFEr: DAPA-HF e EMPEROR-Reduced",
+        "source_fingerprint": "0c0d58573807cceabac0d68c105c0747543db27179de68631e4c9c6c482569ec",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "Intolerância a Estatina: Definição Operacional e Protocolo de Reexposição (EAS 2015)",
+        "source_fingerprint": "5874a86e0584911181a246eb6b38b9ced14a1273d43117bb9d5536449ff53f01",
+        "chunk_count": 11,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 11
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      },
+      {
+        "key": "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+        "exists": true,
+        "published": true,
+        "eligible": true,
+        "review_status": "revisado",
+        "title": "MINOCA e SCAD: Infarto sem Doença Coronariana Obstrutiva e Dissecção Espontânea de Artéria Coronária",
+        "source_fingerprint": "8ca31d4f4d24d9f315fd7e6f97d19c1d23d085cb7db617864ecac0c3d4625eef",
+        "chunk_count": 8,
+        "chunk_states": {
+          "LEGACY_UNVERIFIED": 8
+        },
+        "index_state": "LEGACY_UNVERIFIED",
+        "has_usable_semantic_chunk": true
+      }
+    ],
+    "eligible_count": 18,
+    "ineligible_keys": [],
+    "semantic_ready_count": 14,
+    "schema_dimensions": [
+      {
+        "table_name": "document_chunks",
+        "vector_dimension": 1536
+      },
+      {
+        "table_name": "knowledge_chunks",
+        "vector_dimension": 1536
+      }
+    ],
+    "configured_model": "text-embedding-3-small",
+    "configured_dimension": 1536,
+    "publication_policy": "Only published labels enter metric denominators; labels are never replaced",
+    "index_policy": "Missing/stale chunks remain retrieval gaps; publication eligibility does not require embeddings"
+  },
+  "lexical_baseline_summary": {
+    "all": {
+      "requested_cases": 16,
+      "valid_cases": 16,
+      "hit_at_k": 0.3125,
+      "mrr_at_k": 0.234375,
+      "partial_label_recall_at_k": 0.23958333333333331,
+      "median_retrieval_seconds": 6.4752765,
+      "duplicate_total": 29
+    },
+    "exact": {
+      "requested_cases": 8,
+      "valid_cases": 8,
+      "hit_at_k": 0.625,
+      "mrr_at_k": 0.46875,
+      "partial_label_recall_at_k": 0.47916666666666663,
+      "median_retrieval_seconds": 4.359577,
+      "duplicate_total": 29
+    },
+    "paraphrase": {
+      "requested_cases": 8,
+      "valid_cases": 8,
+      "hit_at_k": 0,
+      "mrr_at_k": 0.0,
+      "partial_label_recall_at_k": 0.0,
+      "median_retrieval_seconds": 8.810459,
+      "duplicate_total": 0
+    }
+  },
+  "lexical_baseline_status": "completed",
+  "lexical_baseline_elapsed_seconds": 107.612,
+  "comparison_note": "Hybrid was not executed; no semantic contribution estimate can be derived from this lexical baseline",
+  "summary": {
+    "all": {
+      "requested_cases": 16,
+      "valid_paired_cases": 0,
+      "lexical": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid_only_hits": [],
+      "lexical_only_hits": []
+    },
+    "exact": {
+      "requested_cases": 8,
+      "valid_paired_cases": 0,
+      "lexical": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid_only_hits": [],
+      "lexical_only_hits": []
+    },
+    "paraphrase": {
+      "requested_cases": 8,
+      "valid_paired_cases": 0,
+      "lexical": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid": {
+        "hit_at_k": null,
+        "mrr_at_k": null,
+        "partial_label_recall_at_k": null,
+        "median_retrieval_seconds": null,
+        "mean_retrieval_seconds": null,
+        "duplicate_total": 0
+      },
+      "hybrid_only_hits": [],
+      "lexical_only_hits": []
+    }
+  }
+}

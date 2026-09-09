@@ -61,7 +61,15 @@ class TransversalSearchSentinels(unittest.TestCase):
         self.assertEqual(FUNCTIONS["normalizar"](matches[0]["slug"]), "holter 24h")
         tree = ast.parse(SERVICE.read_text(encoding="utf-8"))
         assignment = next(n for n in tree.body if isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "FULL_TEXT_MATCH" for t in n.targets))
-        self.assertIn("to_tsvector('simple', coalesce(slug, ''))", ast.literal_eval(assignment.value))
+        matcher = ast.literal_eval(assignment.value)
+        # Use the same Portuguese dictionary as consulta.tsq and split canonical
+        # hyphens so "holter 24h" matches "holter-24h". NULL legacy vectors must
+        # not discard either identity component when other full-text hits exist.
+        self.assertIn("coalesce(v, ''::tsvector)", matcher)
+        self.assertIn("to_tsvector('portuguese', coalesce(title, ''))", matcher)
+        self.assertIn("to_tsvector('portuguese', replace(coalesce(slug, ''), '-', ' '))", matcher)
+        self.assertIn("@@ consulta.tsq", matcher)
+        self.assertIn("plainto_tsquery('portuguese', CAST(:q AS text))", SERVICE.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

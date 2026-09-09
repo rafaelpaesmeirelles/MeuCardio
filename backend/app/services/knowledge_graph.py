@@ -1831,7 +1831,7 @@ def _arquivar_entidades_sem_conteudo_publicado_correspondente(
 
 
 def relacionados_de(
-    db: Session, *, entity_type: str, slug: str, limite_por_tipo: int = 5,
+    db: Session, *, entity_type: str, slug: str, limite_por_tipo: int | None = 5,
     incluir_contexto_tematico: bool = False,
 ) -> dict | None:
     """Devolve relacionados ativos nas duas direções da aresta.
@@ -2042,7 +2042,7 @@ def relacionados_de(
                 i["slug"],
             ),
         )
-        pagina = itens_ordenados[:limite_por_tipo]
+        pagina = itens_ordenados if limite_por_tipo is None else itens_ordenados[:limite_por_tipo]
         total += len(itens_ordenados)
         grupos.append({
             "tipo": tipo,
