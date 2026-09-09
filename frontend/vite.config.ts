@@ -112,7 +112,7 @@ export default defineConfig({
             handler: "StaleWhileRevalidate",
             options: {
               cacheName: "corvia-space-scenes-v1",
-              expiration: { maxEntries: 15, maxAgeSeconds: 60 * 60 * 24 * 60 },
+              expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 60 },
               cacheableResponse: { statuses: [200] }
             }
           },

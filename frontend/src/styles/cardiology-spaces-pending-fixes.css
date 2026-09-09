@@ -151,26 +151,6 @@ html[data-corvia-theme="light"] .spaces-stellar-route__orbit[data-geometry="prev
     overflow-wrap: anywhere;
   }
 }
-/* Jornada científica: símbolos próprios, com materiais e contraste por tema. */
-.spaces-home .spaces-science-scene {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  color: rgb(var(--door-rgb));
-  opacity: .76;
-}
-.spaces-home .spaces-door.is-active .spaces-science-scene,
-.spaces-home .spaces-door:hover .spaces-science-scene { opacity: 1; }
-.spaces-science-scene__background { fill: #051322; }
-.spaces-science-scene__glass { stop-color: #19334a; }
-.spaces-science-scene__glass-end { stop-color: #071827; }
-.spaces-science-scene__symbol { filter: drop-shadow(0 0 5px rgba(var(--door-rgb), .22)); }
-html[data-corvia-theme="light"] .spaces-science-scene__background { fill: #edf4fc; }
-html[data-corvia-theme="light"] .spaces-science-scene__glass { stop-color: #fff; }
-html[data-corvia-theme="light"] .spaces-science-scene__glass-end { stop-color: #dceafa; }
-html[data-corvia-theme="light"] .spaces-home .spaces-science-scene { opacity: 1; }
-
 /* Horários continuam legíveis acima do mapa em qualquer altura de painel. */
 .spaces-home .spaces-stellar-route {
   grid-template-rows: auto auto minmax(48px, 1fr) auto;
