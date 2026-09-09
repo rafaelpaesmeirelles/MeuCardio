@@ -29,3 +29,12 @@
 ## Publicação autorizada
 
 O solicitante autorizou publicar após concluir os ajustes, sem CI de backend e sem repetir testes. A publicação usa o fluxo direto existente, acionado manualmente para o SHA aprovado, com backup, build e checagens de disponibilidade do próprio deploy. O commit usa `[skip ci]` para esta publicação; a política normal de CI não foi desativada.
+
+## Revisão visual após a primeira publicação
+
+- Fundo, campos e cartões claros em azul gelo, azul acinzentado e ciano, sem superfícies rosadas ou lilases. Pequenos acentos cromáticos da marca e dos ícones preservados.
+- Nova coloração da galáxia clara: azul, ciano e lilás, preservando a estrutura da imagem. Dimensões ampliadas em aproximadamente 10% nos dois temas e tamanhos de tela.
+- Projeção da galáxia separada da inclinação original da imagem: disco horizontal fixo, com textura girando no próprio plano em 120 segundos. Sentido anti-horário no claro e horário no escuro. Verificação das duas imagens em oito fases: razão vertical constante de 0,34 e desvio do centro inferior a 0,002 pixel.
+- Superfície única para campos de login, ícones e preenchimento automático do navegador. Contorno de foco no campo externo, sem retângulo de outra cor dentro do input; campos mobile com 44 px e texto de 16 px.
+- Estrelas estáticas, discretas e em posições irregulares no login e nos fundos dos ambientes internos e formulários públicos. A camada não recebe cliques e é ocultada na impressão.
+- Conferência visual dos dois temas em desktop/celular, sem envio de formulário. Compilação do frontend; nenhuma alteração adicional de backend e nenhuma repetição das suítes anteriores.

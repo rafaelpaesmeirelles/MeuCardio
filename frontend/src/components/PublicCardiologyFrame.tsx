@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Icone, { type NomeIcone } from "./Icone";
+import UniverseStars from "./UniverseStars";
 
 export type PublicFrameFeature = {
   icon: NomeIcone;
@@ -32,14 +33,6 @@ export function PublicCorviaBrand({ to = "/entrar" }: { to?: string }) {
   );
 }
 
-function StarField() {
-  return (
-    <div className="public-space__stars" aria-hidden="true">
-      <i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /><i />
-    </div>
-  );
-}
-
 export default function PublicCardiologyFrame({
   children,
   eyebrow,
@@ -54,7 +47,7 @@ export default function PublicCardiologyFrame({
     <div className={`public-space public-space--${variant} public-space--${tone}`}>
       <a className="public-space__skip" href="#conteudo-principal">Ir para o conteúdo</a>
       <div className="public-space__aurora" aria-hidden="true" />
-      <StarField />
+      <UniverseStars />
 
       <header className="public-space__topbar">
         <PublicCorviaBrand />

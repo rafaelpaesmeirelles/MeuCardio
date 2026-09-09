@@ -10,6 +10,7 @@ import Credito from "./Credito";
 import Icone, { type NomeIcone } from "./Icone";
 import { IconeEmergencia, IconeHoje } from "./IdentidadeClinica";
 import PersonalAssistantPanel from "./PersonalAssistantPanel";
+import UniverseStars from "./UniverseStars";
 
 type Item = { to: string; rotulo: string; icone: NomeIcone; badge?: number };
 type Secao = { id: string; rotulo: string; icone: NomeIcone; itens: Item[] };
@@ -334,6 +335,7 @@ export default function ShellClinicalOSLaunch() {
 
   return (
     <div className={`app-clinico clinical-os${foco ? " clinical-os--focus" : ""}${naEmergencia ? " clinical-os--emergency" : ""}`}>
+      <UniverseStars />
       <a className="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
       <aside className="cos-sidebar" aria-label="Navegação principal">
         <NavLink to="/" className="cos-brand" aria-label="CorVIA — início"><span className="cos-brand__mark"><img src="/corvia-mark-canonical.svg" alt="" /></span><span className="cos-brand__text"><strong>Cor<span className="corvia-via">VIA</span></strong><small>Cardiology Spaces</small></span></NavLink>

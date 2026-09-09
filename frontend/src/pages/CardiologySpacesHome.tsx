@@ -5,6 +5,7 @@ import Icone, { type NomeIcone } from "../components/Icone";
 import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
 import { CoracaoHolografico } from "../components/PreHomeBrand";
 import GalaxyThemeToggle from "../components/GalaxyThemeToggle";
+import UniverseStars from "../components/UniverseStars";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
@@ -1414,6 +1415,7 @@ export default function CardiologySpacesHome() {
   if (!mode) {
     return (
       <main className="spaces-choice">
+        <UniverseStars />
         <div className="spaces-choice__heart" aria-hidden="true"><CoracaoHolografico /></div>
         <header>
           <span className="spaces-choice__brand-cluster">
@@ -1452,6 +1454,7 @@ export default function CardiologySpacesHome() {
 
   return (
     <main className={`spaces-home spaces-home--${activeSpace.tone} spaces-home--mode-${mode}${mode === "scientific" ? " spaces-home--scientific" : ""}`}>
+      <UniverseStars />
       <div className="spaces-home__heart" aria-hidden="true"><CoracaoHolografico /></div>
       <header className="spaces-home__topbar">
         <div className="spaces-home__brand-cluster">

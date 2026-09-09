@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
+import UniverseStars from "../components/UniverseStars";
 import { approvedHeartDataUri } from "../assets/approvedHeartData";
 import { useAuth } from "../lib/auth";
 import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
@@ -21,7 +22,7 @@ import "../styles/login-universe-refinement-20260909.css";
 type TemaPublico = CorviaTheme;
 
 function LoginGalaxy({ theme }: { theme: TemaPublico }) {
-  const source = theme === "light" ? "/spaces/galaxy-light-soft-20260909.png" : "/spaces/galaxy-approved-canonical.webp";
+  const source = theme === "light" ? "/spaces/galaxy-light-color-20260909.png" : "/spaces/galaxy-approved-canonical.webp";
   const fallbackRef = useRef<HTMLImageElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -52,13 +53,14 @@ function LoginGalaxy({ theme }: { theme: TemaPublico }) {
       const height = Math.round(width * image.naturalHeight / image.naturalWidth);
       const dark = theme === "dark";
       const square = width * 2;
-      // Measured stellar centroid and ellipse for these two source images.
-      // Undo that projection before turning, then restore the same fixed axis.
-      const coreXRatio = dark ? 0.518405 : 0.488094;
-      const coreYRatio = dark ? 0.496900 : 0.476065;
+      // Rectify each photograph into its own disk before moving the stars.
+      // The screen projection is independent of the source photograph's tilt.
+      const coreXRatio = dark ? 0.519617 : 0.485368;
+      const coreYRatio = dark ? 0.497165 : 0.471192;
       const projectedHeight = width * image.naturalHeight / image.naturalWidth;
-      const projectionY = dark ? 0.443852 : 0.320397;
-      const inclination = (dark ? -10.988542 : 1.345618) * Math.PI / 180;
+      const sourceProjectionY = dark ? 0.454819 : 0.321819;
+      const sourceInclination = (dark ? -12.242524 : 1.951326) * Math.PI / 180;
+      const diskProjectionY = 0.34;
       const coreSquareX = square / 2;
       const coreSquareY = square / 2;
       const coreTargetX = width / 2;
@@ -72,13 +74,13 @@ function LoginGalaxy({ theme }: { theme: TemaPublico }) {
       const sourceContext = deprojected.getContext("2d", { alpha: true });
       if (!sourceContext) return;
       sourceContext.translate(coreSquareX, coreSquareY);
-      sourceContext.scale(1, 1 / projectionY);
-      sourceContext.rotate(-inclination);
+      sourceContext.scale(1, 1 / sourceProjectionY);
+      sourceContext.rotate(-sourceInclination);
       sourceContext.drawImage(image, -coreXRatio * width, -coreYRatio * projectedHeight, width, projectedHeight);
 
       const startedAt = performance.now();
       let lastPaint = 0;
-      const durationMs = 85_000;
+      const durationMs = 120_000;
       const draw = (now: number) => {
         if (cancelled) return;
         if (!lastPaint || now - lastPaint >= 32) {
@@ -87,9 +89,9 @@ function LoginGalaxy({ theme }: { theme: TemaPublico }) {
           context.clearRect(0, 0, width, height);
           context.save();
           context.translate(coreTargetX, coreTargetY);
-          context.rotate(inclination);
-          // Reserve diagonal clearance so the spiral is never cut as it turns.
-          context.scale(0.72, projectionY * 0.72);
+          // Keep the horizontal disk fixed; only its texture turns in that plane.
+          // Applying this projection AFTER the local rotation prevents tumbling.
+          context.scale(0.72, diskProjectionY * 0.72);
           context.rotate(angle);
           context.drawImage(deprojected, -coreSquareX, -coreSquareY);
           context.restore();
@@ -194,7 +196,7 @@ export default function Entrar() {
       data-login-theme={temaPublico}
     >
       <div className="login-gateway__aurora" aria-hidden="true" />
-      <div className="login-gateway__stars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+      <UniverseStars />
 
       <header className="login-gateway__topbar">
         <Link to="/" className="login-gateway__brand" aria-label="CorVIA — página inicial">

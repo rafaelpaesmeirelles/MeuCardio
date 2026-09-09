@@ -1,0 +1,35 @@
+/* Static decoration behind controls and reading surfaces. */
+#root .universe-stars {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: #c6e6ff;
+  opacity: .65;
+}
+#root .universe-stars > i {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: currentColor;
+}
+#root .universe-stars > i[data-tone="1"] { color: #79d8e4; }
+#root .universe-stars > i[data-tone="2"] { color: #c7b5f5; }
+#root .universe-stars > i[data-glow] { box-shadow: 0 0 6px 1px currentColor; }
+#root #corvia-login > .universe-stars { z-index: 0; opacity: .85; }
+#root .clinical-os:has(> .universe-stars) { position: relative; isolation: isolate; }
+html[data-corvia-theme="light"] #root :is(.cv-app, .spaces-home, .spaces-choice, .clinical-os) > .universe-stars,
+#root #corvia-login[data-login-theme="light"] > .universe-stars {
+  color: #4b4fc4;
+  opacity: .65;
+}
+html[data-corvia-theme="light"] #root :is(.cv-app, .spaces-home, .spaces-choice, .clinical-os) > .universe-stars > i[data-tone="1"],
+#root #corvia-login[data-login-theme="light"] > .universe-stars > i[data-tone="1"] { color: #137a80; }
+html[data-corvia-theme="light"] #root :is(.cv-app, .spaces-home, .spaces-choice, .clinical-os) > .universe-stars > i[data-tone="2"],
+#root #corvia-login[data-login-theme="light"] > .universe-stars > i[data-tone="2"] { color: #7957c8; }
+#root :is(.cv-app, .spaces-home, .spaces-choice):has(> .universe-stars)::before {
+  background-image: none !important;
+}
+@media print { #root .universe-stars { display: none !important; } }

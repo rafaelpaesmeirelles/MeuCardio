@@ -1,6 +1,7 @@
 import { type FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import usePrescriptionQueueBadge from "../hooks/usePrescriptionQueueBadge";
+import UniverseStars from "./UniverseStars";
 import { api, assetUrl } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { useCorviaTheme } from "../lib/corviaTheme";
@@ -333,6 +334,7 @@ export default function CardiologySpacesAppFrame() {
       data-layout={route.layout}
       data-has-intelligence={route.intelligence ? "true" : "false"}
     >
+      <UniverseStars />
       <a className="cv-skip" href="#conteudo-principal">Pular para o conteúdo</a>
 
       <aside className="cv-sidebar" aria-label={`Navegação do espaço ${spaceMeta.label}`}>

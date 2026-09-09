@@ -68,6 +68,7 @@ export default defineConfig({
           // Substituída pelo WebP canônico, carregado pelo cache de cenas.
           "spaces/galaxy-approved-alpha.png",
           "spaces/galaxy-light-soft-20260909.png",
+          "spaces/galaxy-light-color-20260909.png",
           "corvia-logo-canonical.png",
           "corvia-logo.png",
           "corvia-logo-compacta.png",
