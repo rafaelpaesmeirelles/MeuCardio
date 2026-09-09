@@ -526,7 +526,6 @@ body:has(.cv-app) {
   scrollbar-color: rgba(var(--cv-rgb), 0.32) transparent;
 }
 
-.cv-intelligence::before { position: absolute; top: 44px; right: 18px; bottom: 18px; width: 1px; opacity: 0.52; background: linear-gradient(180deg, var(--cv-accent), rgba(160, 109, 242, 0.56), transparent); box-shadow: 0 0 9px rgba(var(--cv-rgb), 0.2); content: ""; }
 .cv-intelligence__status { display: flex; align-items: center; gap: 7px; color: #708897; font-family: var(--fonte-dados); font-size: 0.56rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .cv-intelligence__status i { width: 6px; height: 6px; background: var(--cv-accent); border-radius: 50%; box-shadow: 0 0 9px rgba(var(--cv-rgb), 0.8); }
 .cv-intelligence__route { display: grid; grid-template-columns: 36px minmax(0, 1fr); align-items: center; gap: 9px; margin-top: 12px; padding: 10px; background: rgba(7, 24, 40, 0.68); border: 1px solid rgba(var(--cv-rgb), 0.14); border-radius: 10px; }

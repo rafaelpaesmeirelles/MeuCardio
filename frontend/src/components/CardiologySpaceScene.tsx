@@ -1,33 +1,25 @@
 import { useCorviaTheme } from "../lib/corviaTheme";
+import ScientificJourneyScene, { type ScientificJourney } from "./ScientificJourneyScene";
 
 export type CardiologySpaceSceneId =
   | "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao"
   | "descobrir" | "evidencias" | "aprender" | "ensinar" | "produzir";
 
-const SCENE_BY_SPACE: Record<CardiologySpaceSceneId, string> = {
+type ClinicalScene = Exclude<CardiologySpaceSceneId, ScientificJourney>;
+const SCENE_BY_SPACE: Record<ClinicalScene, string> = {
   consultorio: "/spaces/corvia-room-consultorio.jpg",
   hospital: "/spaces/corvia-room-hospital.jpg",
   ensino: "/spaces/corvia-room-ensino.jpg",
   pesquisa: "/spaces/corvia-room-pesquisa.jpg",
   gestao: "/spaces/corvia-room-gestao.jpg",
-  descobrir: "/spaces/corvia-room-consultorio.jpg",
-  evidencias: "/spaces/corvia-room-hospital.jpg",
-  aprender: "/spaces/corvia-room-ensino.jpg",
-  ensinar: "/spaces/corvia-room-pesquisa.jpg",
-  produzir: "/spaces/corvia-room-gestao.jpg",
 };
 
-const LIGHT_SCENE_BY_SPACE: Record<CardiologySpaceSceneId, string> = {
+const LIGHT_SCENE_BY_SPACE: Record<ClinicalScene, string> = {
   consultorio: "/spaces/corvia-room-consultorio-light-640.webp",
   hospital: "/spaces/corvia-room-hospital-light-640.webp",
   ensino: "/spaces/corvia-room-ensino-light-640.webp",
   pesquisa: "/spaces/corvia-room-pesquisa-light-640.webp",
   gestao: "/spaces/corvia-room-gestao-light-640.webp",
-  descobrir: "/spaces/corvia-room-consultorio-light-640.webp",
-  evidencias: "/spaces/corvia-room-hospital-light-640.webp",
-  aprender: "/spaces/corvia-room-ensino-light-640.webp",
-  ensinar: "/spaces/corvia-room-pesquisa-light-640.webp",
-  produzir: "/spaces/corvia-room-gestao-light-640.webp",
 };
 
 /**
@@ -37,7 +29,8 @@ const LIGHT_SCENE_BY_SPACE: Record<CardiologySpaceSceneId, string> = {
  */
 export default function CardiologySpaceScene({ space }: { space: CardiologySpaceSceneId }) {
   const { theme } = useCorviaTheme();
-  const scene = theme === "light" ? LIGHT_SCENE_BY_SPACE[space] : SCENE_BY_SPACE[space];
+  if (!(space in SCENE_BY_SPACE)) return <ScientificJourneyScene journey={space as ScientificJourney} />;
+  const scene = theme === "light" ? LIGHT_SCENE_BY_SPACE[space as ClinicalScene] : SCENE_BY_SPACE[space as ClinicalScene];
 
   return (
     <img

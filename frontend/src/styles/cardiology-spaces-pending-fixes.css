@@ -151,3 +151,101 @@ html[data-corvia-theme="light"] .spaces-stellar-route__orbit[data-geometry="prev
     overflow-wrap: anywhere;
   }
 }
+/* Jornada científica: símbolos próprios, com materiais e contraste por tema. */
+.spaces-home .spaces-science-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(var(--door-rgb));
+  opacity: .76;
+}
+.spaces-home .spaces-door.is-active .spaces-science-scene,
+.spaces-home .spaces-door:hover .spaces-science-scene { opacity: 1; }
+.spaces-science-scene__background { fill: #051322; }
+.spaces-science-scene__glass { stop-color: #19334a; }
+.spaces-science-scene__glass-end { stop-color: #071827; }
+.spaces-science-scene__symbol { filter: drop-shadow(0 0 5px rgba(var(--door-rgb), .22)); }
+html[data-corvia-theme="light"] .spaces-science-scene__background { fill: #edf4fc; }
+html[data-corvia-theme="light"] .spaces-science-scene__glass { stop-color: #fff; }
+html[data-corvia-theme="light"] .spaces-science-scene__glass-end { stop-color: #dceafa; }
+html[data-corvia-theme="light"] .spaces-home .spaces-science-scene { opacity: 1; }
+
+/* Horários continuam legíveis acima do mapa em qualquer altura de painel. */
+.spaces-home .spaces-stellar-route {
+  grid-template-rows: auto auto minmax(48px, 1fr) auto;
+  min-height: 244px;
+  flex-basis: 244px;
+}
+.spaces-stellar-route__schedule { display: grid; gap: 7px; position: relative; z-index: 2; }
+.spaces-stellar-route__schedule > span { display: grid; gap: 2px; color: #9db5c9; font-size: .65rem; line-height: 1.3; }
+.spaces-stellar-route__schedule time { color: #e0effb; font-size: .72rem; font-weight: 650; white-space: normal; }
+.spaces-stellar-route__schedule small { font-size: inherit; }
+html[data-corvia-theme="light"] .spaces-stellar-route__schedule > span { color: #516987; }
+html[data-corvia-theme="light"] .spaces-stellar-route__schedule time { color: #193960; }
+.spaces-home .spaces-day__item > i { left: 9px; width: 6px; height: 6px; box-shadow: none; }
+
+.spaces-scientific-timeline {
+  display: grid; gap: 10px; margin-top: 8px; padding: 12px 9px;
+  color: #aebdd4; background: rgba(126, 84, 193, .06);
+  border: 1px solid rgba(160, 109, 242, .23); border-radius: 10px;
+}
+.spaces-scientific-timeline h3 { display: flex; align-items: center; gap: 7px; margin: 0; color: #e4d9fa; font-size: .76rem; }
+.spaces-scientific-timeline h3 svg { width: 18px; height: 18px; color: #b496ef; }
+.spaces-scientific-timeline label { display: grid; gap: 5px; font-size: .65rem; }
+.spaces-scientific-timeline select { width: 100%; min-width: 0; height: 38px; padding: 4px; font-size: .7rem; }
+.spaces-scientific-timeline p { margin: 0; font-size: .69rem; line-height: 1.45; }
+.spaces-scientific-timeline ul { display: grid; gap: 9px; padding: 0; margin: 0; list-style: none; }
+.spaces-scientific-timeline li { display: grid; gap: 3px; }
+.spaces-scientific-timeline li > span { color: #b79aec; font-size: .66rem; font-weight: 650; }
+.spaces-scientific-timeline li a { color: #d6e3f1; font-size: .7rem; line-height: 1.4; overflow-wrap: anywhere; }
+.spaces-scientific-timeline a:hover { text-decoration: underline; }
+.spaces-scientific-timeline__open { display: flex; align-items: center; gap: 6px; color: #c7abfa; font-size: .7rem; min-height: 32px; }
+.spaces-scientific-timeline__open svg { width: 15px; flex-shrink: 0; }
+html[data-corvia-theme="light"] .spaces-scientific-timeline { color: #556986; background: #f5f6ff; }
+html[data-corvia-theme="light"] .spaces-scientific-timeline :is(h3, li a) { color: #253955; }
+html[data-corvia-theme="light"] .spaces-scientific-timeline :is(li > span, h3 svg, .spaces-scientific-timeline__open) { color: #704ab1; }
+
+/* Chat e emergência ocupam parte do dock já reservada fora da leitura. */
+.cv-app--utilities .cv-global-dock { right: 206px; }
+.cv-utility-dock {
+  position: fixed; z-index: 70; right: 22px; bottom: 10px;
+  display: grid; grid-template-columns: 1fr 1fr; width: 174px; height: 50px;
+  color: #b7c8da; background: #061522; border: 1px solid rgba(94, 147, 183, .24); border-radius: 11px;
+}
+.cv-app .cv-utility-dock :is(.corvia-chat-launch--dock, .cv-utility-dock__emergency) {
+  position: relative; inset: auto; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 3px;
+  width: 100%; min-width: 0; height: 100%; min-height: 44px; margin: 0; padding: 3px;
+  color: inherit; background: transparent; border: 0; border-radius: 9px;
+  box-shadow: none; transform: none; filter: none; cursor: pointer;
+}
+.cv-app .cv-utility-dock :is(.corvia-chat-launch--dock, .cv-utility-dock__emergency)::after { content: none; }
+.cv-utility-dock :is(svg, .corvia-chat-launch svg) { width: 22px; height: 22px; flex: none; }
+.cv-utility-dock :is(.corvia-chat-launch__label, .cv-utility-dock__emergency > span) { display: block; color: inherit; font-size: .64rem; line-height: 1; }
+.cv-utility-dock .cv-utility-dock__emergency svg { color: #ec6686; }
+.cv-utility-dock .corvia-chat-launch__badge { right: 4px; top: 1px; }
+.cv-utility-dock :is(a, button):focus-visible { outline: 2px solid var(--cv-accent); outline-offset: -3px; }
+.cv-utility-dock :is(a, button):hover { background: rgba(var(--cv-rgb), .09); }
+html[data-corvia-theme="light"] .cv-utility-dock { color: #344f70; background: #f5f9ff; border-color: #c7d7ed; }
+@media (min-width: 901px) and (max-height: 699px) {
+  .cv-utility-dock { bottom: 8px; height: 44px; }
+}
+@media (max-width: 900px) {
+  .cv-app--utilities .cv-mobile-dock { right: 114px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cv-app--utilities .cv-mobile-dock > a:nth-child(2) { display: none; }
+  .cv-utility-dock { right: 8px; bottom: 8px; width: 100px; height: 64px; border-radius: 15px; }
+  .cv-utility-dock :is(.corvia-chat-launch__label, .cv-utility-dock__emergency > span) { font-size: .56rem; }
+  .spaces-home .spaces-stellar-route { min-height: 260px; flex-basis: auto; }
+  .spaces-stellar-route__schedule { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spaces-stellar-route__schedule time { font-size: .8rem; }
+  .spaces-scientific-timeline { padding: 14px; }
+  .spaces-scientific-timeline select { min-height: 44px; font-size: .85rem; }
+  .spaces-scientific-timeline :is(p, li a, .spaces-scientific-timeline__open) { font-size: .8rem; }
+}
+@media (max-width: 900px) and (max-height: 619px) {
+  .cv-utility-dock { bottom: 5px; height: 56px; }
+}
+.scientific-timeline-page__topic { display: grid; gap: 8px; margin: 16px 0; max-width: 620px; font-size: .85rem; }
+.scientific-timeline-page__topic select { width: 100%; min-width: 0; min-height: 44px; font-size: .9rem; }
+.cv-intelligence > * { flex-shrink: 0; }

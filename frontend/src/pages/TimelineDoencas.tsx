@@ -3,6 +3,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 import TudoSobreEsteTema from "../components/TudoSobreEsteTema";
 import { api } from "../lib/api";
+import { useAuth } from "../lib/auth";
+import { lastTimelineTopic, rememberTimelineTopic } from "../lib/scientificTimeline";
 
 type Tema = { tema: string; total_marcos: number };
 type EixoResumo = { eixo: string; total: number };
@@ -147,6 +149,7 @@ function CartaoMarco({ grupo }: { grupo: Grupo }) {
 }
 
 export default function TimelineDoencas() {
+  const { usuario } = useAuth();
   const [temas, setTemas] = useState<Tema[] | null>(null);
   const [erroTemas, setErroTemas] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
@@ -170,7 +173,8 @@ export default function TimelineDoencas() {
           setSearchParams((atuais) => {
             if (atuais.get("tema")) return atuais;
             const proximos = new URLSearchParams(atuais);
-            proximos.set("tema", lista[0].tema);
+            const remembered = lastTimelineTopic(usuario?.id);
+            proximos.set("tema", lista.find((item) => item.tema === remembered)?.tema || lista[0].tema);
             return proximos;
           }, { replace: true });
         }
@@ -179,7 +183,11 @@ export default function TimelineDoencas() {
         if (ativo) setErroTemas(causa instanceof Error ? causa.message : "Não foi possível carregar os temas.");
       });
     return () => { ativo = false; };
-  }, [setSearchParams]);
+  }, [setSearchParams, usuario?.id]);
+
+  useEffect(() => {
+    if (timeline?.tema === temaAtivo) rememberTimelineTopic(usuario?.id, timeline.tema);
+  }, [timeline, temaAtivo, usuario?.id]);
 
   useEffect(() => {
     const idRequisicao = ++requisicaoTimeline.current;
@@ -252,17 +260,15 @@ export default function TimelineDoencas() {
   );
 
   return (
-    <div>
+    <div className="scientific-timeline-page">
       <p className="eyebrow">Trilhas de estudo</p>
       <h1>Timeline de evolução do conhecimento</h1>
 
       <div className="timeline-doenca__entrada">
         <strong>Como cada tema avançou — da investigação à decisão terapêutica</strong>
         <span>
-          A linha do tempo é construída exclusivamente a partir de estudos, trabalhos científicos e
-          recomendações já publicados e revisados na CorVIA. Ela organiza a evolução de fundamentos,
-          investigação/diagnóstico, estratificação, tratamento, procedimentos, prevenção, segurança e
-          diretrizes sem criar marcos narrativos artificiais. Cada ponto abre a evidência real que o sustenta.
+          Escolha um tema para acompanhar estudos e recomendações publicados na CorVIA.
+          Cada marco abre a evidência que o sustenta.
         </span>
       </div>
 
@@ -272,25 +278,19 @@ export default function TimelineDoencas() {
         <Vazio titulo="Nenhuma timeline disponível ainda" acao="Assim que houver evidência ou estudo publicado com tema e ano, a timeline aparece aqui." />
       ) : (
         <>
-          <div className="timeline-doenca__seletor" role="tablist" aria-label="Escolha a doença/tema">
-            {temas.map((tema) => (
-              <button
-                key={tema.tema}
-                type="button"
-                role="tab"
-                aria-selected={tema.tema === temaAtivo}
-                className={`timeline-doenca__chip${tema.tema === temaAtivo ? " timeline-doenca__chip--ativo" : ""}`}
-                onClick={() => setSearchParams((atuais) => {
+          <label className="scientific-timeline-page__topic">Tema científico
+            <select aria-label="Escolha a doença/tema" value={temaAtivo} onChange={(event) => {
+              const selected = event.target.value;
+              setSearchParams((atuais) => {
                   const proximos = new URLSearchParams(atuais);
-                  proximos.set("tema", tema.tema);
+                  proximos.set("tema", selected);
                   return proximos;
-                })}
-              >
-                <strong>{tema.tema}</strong>
-                <span>{tema.total_marcos} marco{tema.total_marcos === 1 ? "" : "s"}</span>
-              </button>
-            ))}
-          </div>
+              });
+            }}>
+              {temaAtivo && !temas.some((item) => item.tema === temaAtivo) && <option value={temaAtivo}>{temaAtivo}</option>}
+              {temas.map((tema) => <option key={tema.tema} value={tema.tema}>{tema.tema} · {tema.total_marcos} marco{tema.total_marcos === 1 ? "" : "s"}</option>)}
+            </select>
+          </label>
 
           {erroTimeline ? <Erro mensagem={erroTimeline} /> : carregandoTimeline || !timelineExibida ? (
             <Carregando texto="Carregando a timeline…" />

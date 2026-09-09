@@ -184,16 +184,13 @@
 
 /* Cool light palette: ice blue and cyan surfaces, without pink/lilac washes. */
 #root #corvia-login.login-gateway--light {
-  --approved-text: #18354b !important;
-  --approved-muted: #49677b !important;
-  --approved-panel: #e1eff6 !important;
-  --approved-line: rgba(51, 120, 153, .28) !important;
-  --approved-border: rgba(51, 120, 153, .28) !important;
+  --approved-text: var(--corvia-daylight-text) !important;
+  --approved-muted: var(--corvia-daylight-muted) !important;
+  --approved-panel: var(--corvia-daylight-panel) !important;
+  --approved-line: var(--corvia-daylight-line) !important;
+  --approved-border: var(--corvia-daylight-line) !important;
   color-scheme: light;
-  background:
-    radial-gradient(ellipse at 52% 49%, rgba(75, 188, 215, .2), transparent 48%),
-    radial-gradient(ellipse at 12% 32%, rgba(90, 160, 205, .12), transparent 48%),
-    linear-gradient(135deg, #e5f3f8, #d6edf4 52%, #e2eff7) !important;
+  background: var(--corvia-daylight-background) !important;
 }
 #root #corvia-login.login-gateway--light .login-gateway__aurora { display: none !important; }
 #root #corvia-login.login-gateway--light .login-gateway__hero h1 { color: #18354b !important; }
@@ -222,7 +219,7 @@
   background: rgb(var(--login-space-rgb) / .11) !important;
 }
 #root #corvia-login.login-gateway--light .login-gateway__console {
-  background: linear-gradient(110deg, #daeaf3, #e4f1f6) !important;
+  background: var(--corvia-daylight-surface) !important;
   border-color: rgba(51, 120, 153, .28) !important;
   box-shadow: 0 14px 36px -28px rgba(44, 110, 153, .4) !important;
 }

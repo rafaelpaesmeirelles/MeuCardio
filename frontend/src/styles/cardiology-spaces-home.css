@@ -1127,17 +1127,6 @@ html[data-corvia-theme="dark"] .spaces-layer:focus-within .spaces-action {
   scrollbar-color: rgba(var(--space-rgb), 0.35) transparent;
 }
 
-.spaces-day::before {
-  position: absolute;
-  top: 58px;
-  bottom: 64px;
-  left: 18px;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(75, 130, 255, 0.75), rgba(43, 216, 225, 0.55), rgba(160, 109, 242, 0.55));
-  box-shadow: 0 0 8px rgba(83, 164, 226, 0.18);
-  content: "";
-}
-
 .spaces-day h2 { margin: 0 8px 14px; color: #b0b8bf; font-size: 0.74rem; font-weight: 500; line-height: 1.25; }
 
 .spaces-day__item {
@@ -1927,8 +1916,6 @@ body.cardiology-spaces-active:has(.spaces-overlay) { overflow: hidden; }
     border-radius: 13px;
   }
 
-  .spaces-day::before { top: 51px; bottom: 208px; left: 17px; }
-  .spaces-home--mode-scientific .spaces-day::before { bottom: 60px; }
   .spaces-day h2 { margin: 0 4px 4px; font-size: 0.78rem; }
   .spaces-day__item { min-height: 52px; margin: 0; }
   .spaces-day__travel { min-height: 48px; }

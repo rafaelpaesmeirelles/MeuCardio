@@ -329,7 +329,7 @@ export default function CardiologySpacesAppFrame() {
 
   return (
     <div
-      className={`cv-app cv-app--${space}${emergency ? " cv-app--emergency" : ""}`}
+      className={`cv-app cv-app--${space}${emergency ? " cv-app--emergency" : " cv-app--utilities"}`}
       data-space={space}
       data-layout={route.layout}
       data-has-intelligence={route.intelligence ? "true" : "false"}
@@ -499,8 +499,10 @@ export default function CardiologySpacesAppFrame() {
 
       <PersonalAssistantPanel aberto={assistantOpen} onClose={() => setAssistantOpen(false)} />
       <BoasVindas />
-      {!emergency && <ChatFlutuante />}
-      {!emergency && <NavLink className="cv-emergency-fab" to="/emergencia" aria-label="Abrir Modo Emergência"><IconeEmergencia /></NavLink>}
+      {!emergency && <nav className="cv-utility-dock" aria-label="Chat e emergência">
+        <ChatFlutuante placement="dock" />
+        <NavLink className="cv-utility-dock__emergency" to="/emergencia" aria-label="Abrir Modo Emergência"><IconeEmergencia /><span>Emergência</span></NavLink>
+      </nav>}
     </div>
   );
 }

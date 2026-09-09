@@ -90,6 +90,7 @@ import "./styles/cardiology-spaces-pending-fixes.css";
 import "./styles/clinical-form-control-contrast.css";
 /* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
 import "./styles/cardiology-spaces-light-mode.css";
+import "./styles/corvia-daylight-palette.css";
 
 async function verificarAtualizacaoCompleta(forcar = false) {
   await verificarVersaoAtual(forcar);

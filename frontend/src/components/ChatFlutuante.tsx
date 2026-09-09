@@ -94,7 +94,7 @@ function Avatar({ nome, foto, tamanho = 38 }: { nome: string; foto: string | nul
   );
 }
 
-export default function ChatFlutuante() {
+export default function ChatFlutuante({ placement = "floating" }: { placement?: "floating" | "dock" }) {
   const { usuario } = useAuth();
   const [aberto, setAberto] = useState(false);
   const [vista, setVista] = useState<Vista>("lista");
@@ -271,10 +271,11 @@ export default function ChatFlutuante() {
     <>
       {/* Acesso ao chat deliberadamente não circular: o rótulo e a geometria de
           conversa evitam confundi-lo com o atalho clínico de Emergência. */}
-      {!aberto && (
+      {(!aberto || placement === "dock") && (
         <button
-          className="corvia-chat-launch"
-          onClick={() => setAberto(true)}
+          className={`corvia-chat-launch${placement === "dock" ? " corvia-chat-launch--dock" : ""}`}
+          onClick={() => setAberto((value) => !value)}
+          aria-expanded={aberto}
           aria-label={naoLidas > 0 ? `Abrir o CorvIA Chat, ${naoLidas} mensagens não lidas` : "Abrir o CorvIA Chat"}
           title="CorvIA Chat"
         >

@@ -2,6 +2,7 @@ import type { ReactNode, SVGProps } from "react";
 
 export type NomeIcone =
   | "hoje" | "clinica" | "pacientes" | "conhecimento" | "comunicacao"
+  | "descobrir" | "validar-evidencia" | "aprender" | "ensinar" | "produzir"
   | "gestao" | "agenda" | "busca" | "emergencia" | "menu" | "fechar"
   | "chevron" | "mail" | "prescricao" | "documento" | "triagem"
   | "assistente" | "doencas" | "calculadora" | "medicamento" | "round"
@@ -11,6 +12,11 @@ export type NomeIcone =
   | "adicionar" | "notificacao" | "ecg" | "camera" | "sol" | "lua" | "cadeado" | "seguranca";
 
 const caminhos: Record<NomeIcone, ReactNode> = {
+  descobrir: <><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M7 11l3-4 3 4"/><circle cx="7" cy="11" r=".6"/><circle cx="10" cy="7" r=".6"/><circle cx="13" cy="11" r=".6"/></>,
+  "validar-evidencia": <><path d="M14 21H4V3h11l4 4v5M14 3v5h5M7 8h3M7 12h6M7 16h3"/><circle cx="17" cy="17" r="5"/><path d="m14.5 17 1.7 1.7 3.3-3.4"/></>,
+  aprender: <><path d="M12 8C9 5 5 5 2 6v14c4-1 7-1 10 1 3-2 6-2 10-1V6c-3-1-7-1-10 2Zm0 0v13M5 10l4 1M5 14l4 1M15 11l4-1M15 15l4-1M12 2v2M7 2l1 2M17 2l-1 2"/></>,
+  ensinar: <><rect x="8" y="3" width="14" height="11" rx="1"/><path d="m12 10 3-3 2 2 2-3M15 14v5M12 21l3-2 3 2M3 21v-6h4l4-4"/><circle cx="5" cy="10" r="2"/></>,
+  produzir: <><path d="M12 3H4v18h14v-7M7 7h3M7 11h2M7 17h4"/><path d="m11 13 1-4 7-7 3 3-7 7-4 1Zm6-9 3 3"/></>,
   hoje: <><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9 20v-6h6v6"/></>,
   clinica: <><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M4 3h4M12 3h4M10 16a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11.5" r="2"/></>,
   pacientes: <><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 20v-2.5A4.5 4.5 0 0 1 8 13h2a4.5 4.5 0 0 1 4.5 4.5V20M14 14.5a4 4 0 0 1 6.5 3V20"/></>,

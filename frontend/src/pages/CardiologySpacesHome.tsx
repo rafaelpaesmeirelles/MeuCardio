@@ -6,6 +6,8 @@ import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslo
 import { CoracaoHolografico } from "../components/PreHomeBrand";
 import GalaxyThemeToggle from "../components/GalaxyThemeToggle";
 import UniverseStars from "../components/UniverseStars";
+import ScientificTimelineCard from "../components/ScientificTimelineCard";
+import { mobilitySchedule, scheduleDateTime } from "../lib/mobilitySchedule";
 import { api, assetUrl, type Usuario } from "../lib/api";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { useAuth } from "../lib/auth";
@@ -236,7 +238,7 @@ const SPACES: Space[] = [
 
 const SCIENTIFIC_SPACES: Space[] = [
   {
-    id: "descobrir", label: "Descobrir", icon: "busca", tone: "cyan",
+    id: "descobrir", label: "Descobrir", icon: "descobrir", tone: "cyan",
     description: "Todo o conhecimento cardiovascular conectado em uma única entrada.",
     now: [
       { to: "/busca?modo=tudo-com-tudo", label: "Explorar Tudo com Tudo", icon: "sincronizar" },
@@ -256,7 +258,7 @@ const SCIENTIFIC_SPACES: Space[] = [
     ],
   },
   {
-    id: "evidencias", label: "Evidências", icon: "evidencia", tone: "blue",
+    id: "evidencias", label: "Evidências", icon: "validar-evidencia", tone: "blue",
     description: "Diretrizes, estudos e evidências organizados para decisões fundamentadas.",
     now: [
       { to: "/evidencias", label: "Revisar evidências", icon: "evidencia" },
@@ -276,7 +278,7 @@ const SCIENTIFIC_SPACES: Space[] = [
     ],
   },
   {
-    id: "aprender", label: "Aprender", icon: "curso", tone: "violet",
+    id: "aprender", label: "Aprender", icon: "aprender", tone: "violet",
     description: "Aprendizagem contínua por trilhas, casos e conteúdo multimodal.",
     now: [
       { to: "/trilhas", label: "Minhas trilhas", icon: "seta" },
@@ -296,7 +298,7 @@ const SCIENTIFIC_SPACES: Space[] = [
     ],
   },
   {
-    id: "ensinar", label: "Ensinar", icon: "curso", tone: "rose",
+    id: "ensinar", label: "Ensinar", icon: "ensinar", tone: "rose",
     description: "Ferramentas para transformar conhecimento em aulas e educação em saúde.",
     now: [
       { to: "/apresentacao", label: "Modo apresentação", icon: "documento" },
@@ -316,7 +318,7 @@ const SCIENTIFIC_SPACES: Space[] = [
     ],
   },
   {
-    id: "produzir", label: "Produzir", icon: "documento", tone: "teal",
+    id: "produzir", label: "Produzir", icon: "produzir", tone: "teal",
     description: "Crie, apresente e exporte conteúdo científico com rastreabilidade.",
     now: [
       { to: "/documentos-cientificos-ia", label: "Criar documento científico", icon: "assistente" },
@@ -683,6 +685,7 @@ function StellarRouteMiniMap({
   const hasRoute = Boolean(route && minutes);
   const level = trafficLevel(route?.congestion);
   const miniRoute = useMemo(() => buildMiniRouteGeometry(route), [route]);
+  const schedule = mobilitySchedule(target, route?.duration_seconds);
   const accessibleStatus = busy
     ? `Calculando deslocamento para ${destination}`
     : hasRoute
@@ -697,13 +700,19 @@ function StellarRouteMiniMap({
       data-state={busy ? "loading" : hasRoute ? "ready" : "pending"}
       onClick={onOpen}
       aria-busy={busy}
-      aria-label={accessibleStatus}
+      aria-label={`${accessibleStatus}. ${schedule ? `${schedule.returning ? "Retorno" : "Compromisso"}: ${scheduleDateTime(schedule.start)}${schedule.departure ? `. Saída: ${scheduleDateTime(schedule.departure)}` : ""}` : "Sem horário de deslocamento definido"}`}
       disabled={busy}
     >
       <span className="spaces-stellar-route__heading">
         <span><Icone nome="rota" /></span>
         <span><strong>Deslocamento</strong><small>{destination}</small></span>
         <Icone nome="seta" />
+      </span>
+      <span className="spaces-stellar-route__schedule">
+        {schedule ? <>
+          <span>{schedule.returning ? "Retorno previsto" : "Compromisso"}<time dateTime={schedule.start.toISOString()}>{scheduleDateTime(schedule.start)}</time></span>
+          {!schedule.returning && <span>{schedule.departure ? "Saída sugerida" : "Saída"}{schedule.departure ? <time dateTime={schedule.departure.toISOString()}>{scheduleDateTime(schedule.departure)}</time> : <small>Calcule a rota para estimar</small>}</span>}
+        </> : <span>{target ? "Horário não informado na agenda" : "Nenhum deslocamento agendado"}</span>}
       </span>
       <span className="spaces-stellar-route__map" aria-hidden="true">
         <i className="spaces-stellar-route__star spaces-stellar-route__star--one" />
@@ -1154,7 +1163,14 @@ export default function CardiologySpacesHome() {
     && plannedMobilityTarget?.target_key
     && mobilityResult.destination.target_key === plannedMobilityTarget.target_key,
   );
-  const travelTarget = resultMatchesTarget ? mobilityResult?.destination || plannedMobilityTarget : plannedMobilityTarget;
+  // Provider destination data may omit the agenda's date/buffer. Keep the
+  // schedule tied to the selected commitment even after a route is calculated.
+  const travelTarget = resultMatchesTarget && plannedMobilityTarget ? {
+    ...plannedMobilityTarget,
+    ...mobilityResult?.destination,
+    starts_at: plannedMobilityTarget.starts_at || mobilityResult?.destination?.starts_at,
+    arrival_buffer_minutes: plannedMobilityTarget.arrival_buffer_minutes ?? mobilityResult?.destination?.arrival_buffer_minutes,
+  } : plannedMobilityTarget;
   const bestRoute = resultMatchesTarget ? mobilityResult?.routes?.[0] : undefined;
   const travelMinutes = bestRoute?.duration_seconds ? Math.max(1, Math.round(bestRoute.duration_seconds / 60)) : null;
   const travelDestination = travelTarget?.location?.latitude != null && travelTarget.location.longitude != null ? {
@@ -1424,7 +1440,6 @@ export default function CardiologySpacesHome() {
           </span>
           <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
         </header>
-        <div className="spaces-choice__change" aria-hidden="true"><span><Icone nome="seta" /></span><div><strong>Mudar universo</strong><small>Clique para explorar</small></div></div>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">ESCOLHA SEU ESPAÇO</p>
           <h1>Onde {chamamentoNaFrase} vai trabalhar agora?</h1>
@@ -1538,7 +1553,7 @@ export default function CardiologySpacesHome() {
           <Link to="/busca?modo=tudo-com-tudo" className="spaces-day__item spaces-day__item--cyan"><i /><span><strong>Tudo com Tudo</strong><small>Explorar relações</small></span></Link>
           <Link to="/trilhas" className="spaces-day__item spaces-day__item--violet"><i /><span><strong>Trilhas</strong><small>Continuar aprendizagem</small></span></Link>
           <Link to="/favoritos" className="spaces-day__item spaces-day__item--rose"><i /><span><strong>Favoritos</strong><small>Retomar leituras</small></span></Link>
-          <Link to="/trilhas/timeline" className="spaces-day__travel"><Icone nome="relogio" /><span><strong>Minha timeline</strong><small>Ver evolução do conhecimento</small></span></Link>
+          <ScientificTimelineCard />
         </> : <>
           {dayItems.length ? dayItems.slice(0, 3).map((item) => {
             const itemSpace = inferClinicalSpace(item);

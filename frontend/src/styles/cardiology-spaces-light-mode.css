@@ -14,55 +14,55 @@ html[data-corvia-theme="light"] {
 html[data-corvia-theme="light"] body.cardiology-spaces-active,
 html[data-corvia-theme="light"] body:has(.cv-app),
 html[data-corvia-theme="light"] body:has(.clinical-os) {
-  color: #1b2440;
-  background: #f7f3fa;
+  color: #18354b;
+  background: #e5f3f8;
   color-scheme: light;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) {
-  --corvia-light-bg: #f7f3fa;
-  --corvia-light-bg-soft: #eef2fa;
+  --corvia-light-bg: #e5f3f8;
+  --corvia-light-bg-soft: #e2eff7;
   --corvia-light-panel: rgba(255, 255, 255, 0.86);
   --corvia-light-panel-strong: rgba(255, 255, 255, 0.96);
   --corvia-light-line: rgba(75, 79, 196, 0.2);
   --corvia-light-line-soft: rgba(75, 79, 196, 0.11);
-  --corvia-light-text: #1b2440;
-  --corvia-light-text-2: #4d5873;
+  --corvia-light-text: #18354b;
+  --corvia-light-text-2: #49677b;
   --corvia-light-text-3: #5e687f;
   --corvia-light-text-subtle: #626c82;
   --corvia-light-cyan: #0f727a;
-  --corvia-light-blue: #4b4fc4;
+  --corvia-light-blue: #246ac1;
   --corvia-light-violet: #7957c8;
   --corvia-light-rose: #c42068;
   --corvia-light-teal: #0f727a;
   --corvia-light-teal-decorative: #137a80;
   --corvia-light-rose-decorative: #d12870;
   --corvia-light-champagne: #b78a52;
-  --corvia-light-focus: #4b4fc4;
+  --corvia-light-focus: #246ac1;
   --corvia-light-shadow: 0 22px 58px -36px rgba(45, 45, 100, 0.34), 0 2px 9px rgba(57, 53, 107, 0.08);
-  --fundo: #f7f3fa;
+  --fundo: #e5f3f8;
   --superficie: #ffffff;
-  --superficie-suave: #eef2fa;
-  --texto: #1b2440;
-  --texto-secundario: #4d5873;
+  --superficie-suave: #e2eff7;
+  --texto: #18354b;
+  --texto-secundario: #49677b;
   --texto-terciario: #5e687f;
   --borda: #ccd1e3;
   --borda-forte: #81899e;
   --primaria: #30376e;
-  --primaria-escura: #1b2440;
+  --primaria-escura: #18354b;
   --acao: #0f727a;
   --acao-hover: #0f666b;
-  --acento: #4b4fc4;
+  --acento: #246ac1;
   --acento-tinta: #efedfb;
   --acao-tinta: #e8f4f4;
   --line: #ccd1e3;
-  --muted: #4d5873;
+  --muted: #49677b;
   color: var(--corvia-light-text);
   color-scheme: light;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) ::selection {
-  color: #1b2440;
+  color: #18354b;
   background: #bfe7ee;
 }
 
@@ -75,24 +75,24 @@ html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clin
    ---------------------------------------------------------------------- */
 html[data-corvia-theme="light"] .spaces-choice,
 html[data-corvia-theme="light"] .spaces-home {
-  --spaces-bg: #f7f3fa;
+  --spaces-bg: #e5f3f8;
   --spaces-panel: rgba(255, 255, 255, 0.87);
   --spaces-panel-strong: rgba(255, 255, 255, 0.97);
   --spaces-line: rgba(75, 79, 196, 0.22);
   --spaces-line-soft: rgba(75, 79, 196, 0.12);
-  --spaces-text: #1b2440;
-  --spaces-text-2: #4d5873;
+  --spaces-text: #18354b;
+  --spaces-text-2: #49677b;
   --spaces-text-3: #5e687f;
   --spaces-cyan: #0f727a;
-  --spaces-blue: #4b4fc4;
-  --spaces-brand-blue: #4b4fc4;
+  --spaces-blue: #246ac1;
+  --spaces-brand-blue: #246ac1;
   --spaces-violet: #7957c8;
   --spaces-rose: #c42068;
   --spaces-teal: #0f727a;
 }
 
 html[data-corvia-theme="light"] .spaces-home--cyan { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
-html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #4b4fc4; }
+html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #246ac1; }
 html[data-corvia-theme="light"] .spaces-home--violet { --space-rgb: 121, 87, 200; --space-accent: #7957c8; }
 html[data-corvia-theme="light"] .spaces-home--rose { --space-rgb: 209, 40, 112; --space-accent: #c42068; }
 html[data-corvia-theme="light"] .spaces-home--teal { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
@@ -105,20 +105,20 @@ html[data-corvia-theme="light"] :is(.spaces-door--teal, .spaces-context-rail__sp
 
 html[data-corvia-theme="light"] .spaces-choice {
   background:
-    radial-gradient(circle at 50% 47%, rgba(75, 79, 196, 0.2), transparent 31rem),
-    radial-gradient(circle at 76% 70%, rgba(121, 87, 200, 0.1), transparent 27rem),
+    radial-gradient(circle at 50% 47%, rgba(90, 160, 205, 0.2), transparent 31rem),
+    radial-gradient(circle at 76% 70%, rgba(75, 188, 215, 0.1), transparent 27rem),
     radial-gradient(circle at 13% 16%, rgba(19, 122, 128, 0.09), transparent 22rem),
-    linear-gradient(145deg, #f7f3fa 0%, #eef2fa 53%, #eef2fa 100%);
+    linear-gradient(145deg, #e5f3f8 0%, #e2eff7 53%, #e2eff7 100%);
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home)::before {
   opacity: 0.8;
   background-image:
-    radial-gradient(circle at 13% 18%, rgba(75, 79, 196, 0.24) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 72% 13%, rgba(75, 79, 196, 0.25) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 84% 67%, rgba(121, 87, 200, 0.24) 0 0.7px, transparent 1.1px),
-    linear-gradient(rgba(75, 79, 196, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.03) 1px, transparent 1px);
+    radial-gradient(circle at 13% 18%, rgba(90, 160, 205, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 13%, rgba(90, 160, 205, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 67%, rgba(75, 188, 215, 0.24) 0 0.7px, transparent 1.1px),
+    linear-gradient(rgba(90, 160, 205, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.03) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] .spaces-choice__heart,
@@ -128,7 +128,7 @@ html[data-corvia-theme="light"] .spaces-home__heart {
 }
 
 html[data-corvia-theme="light"] .spaces-brand {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-brand > img {
@@ -137,11 +137,11 @@ html[data-corvia-theme="light"] .spaces-brand > img {
 
 html[data-corvia-theme="light"] .spaces-brand strong,
 html[data-corvia-theme="light"] .spaces-brand strong i {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-brand strong b {
-  color: #4b4fc4;
+  color: #246ac1;
   text-shadow: none;
 }
 
@@ -150,11 +150,11 @@ html[data-corvia-theme="light"] .spaces-brand small {
 }
 
 html[data-corvia-theme="light"] .spaces-brand-button:focus-visible {
-  outline-color: #4b4fc4;
+  outline-color: #246ac1;
 }
 
 html[data-corvia-theme="light"] .spaces-user {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-user__avatar {
@@ -173,25 +173,25 @@ html[data-corvia-theme="light"] .spaces-eyebrow {
 }
 
 html[data-corvia-theme="light"] .spaces-choice__content > h1 {
-  color: #1b2440;
+  color: #18354b;
   text-shadow: 0 1px #fff;
 }
 
 html[data-corvia-theme="light"] .spaces-choice__content > p:not(.spaces-eyebrow) {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards > button {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 12% 8%, rgba(19, 122, 128, 0.11), transparent 12rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(244, 242, 249, 0.98));
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(224, 241, 246, 0.98));
   border-color: #81899e;
   box-shadow: inset 0 1px #fff, 0 26px 65px -45px rgba(49, 45, 100, 0.44);
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards > button::after {
-  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), transparent 67%);
+  background: radial-gradient(circle, rgba(90, 160, 205, 0.13), transparent 67%);
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards > button:hover,
@@ -207,11 +207,11 @@ html[data-corvia-theme="light"] .spaces-choice__icon {
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards strong {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards small {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards em {
@@ -239,13 +239,13 @@ html[data-corvia-theme="light"] .spaces-choice > footer {
 }
 
 html[data-corvia-theme="light"] .spaces-choice > footer strong {
-  color: #4b4fc4;
+  color: #246ac1;
 }
 
 /* Controle compartilhado. Os dois radios continuam explicitamente visíveis
    e com alvos de 44px, inclusive quando inseridos no menu compacto da conta. */
 html[data-corvia-theme="light"] .corvia-theme-selector {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector--choice {
@@ -280,8 +280,8 @@ html[data-corvia-theme="light"] .corvia-theme-selector__orbit {
   width: 34px;
   height: 34px;
   place-items: center;
-  color: #4b4fc4;
-  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), rgba(121, 87, 200, 0.04));
+  color: #246ac1;
+  background: radial-gradient(circle, rgba(90, 160, 205, 0.13), rgba(75, 188, 215, 0.04));
   border: 1px solid rgba(75, 79, 196, 0.25);
   border-radius: 50%;
 }
@@ -339,9 +339,9 @@ html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
   align-items: center;
   gap: 8px;
   padding: 6px 9px;
-  color: #4d5873;
+  color: #49677b;
   text-align: left;
-  background: rgba(247, 243, 250, 0.8);
+  background: rgba(229, 243, 248, 0.8);
   border: 1px solid #81899e;
   border-radius: 10px;
   cursor: pointer;
@@ -349,22 +349,22 @@ html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:hover {
-  color: #1b2440;
+  color: #18354b;
   background: #fff;
   border-color: #0f727a;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:focus-visible {
-  outline: 3px solid #4b4fc4;
+  outline: 3px solid #246ac1;
   outline-offset: 2px;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
-  color: #1b2440;
-  background: linear-gradient(145deg, rgba(238, 242, 250, 0.96), rgba(244, 242, 249, 0.96));
-  border-color: #4b4fc4;
-  box-shadow: inset 0 -2px #4b4fc4, 0 8px 22px -17px rgba(49, 45, 100, 0.4);
+  color: #18354b;
+  background: linear-gradient(145deg, rgba(238, 242, 250, 0.96), rgba(224, 241, 246, 0.96));
+  border-color: #246ac1;
+  box-shadow: inset 0 -2px #246ac1, 0 8px 22px -17px rgba(49, 45, 100, 0.4);
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector__icon {
@@ -372,8 +372,8 @@ html[data-corvia-theme="light"] .corvia-theme-selector__icon {
   width: 30px;
   height: 30px;
   place-items: center;
-  color: #4d5873;
-  background: rgba(75, 79, 196, 0.08);
+  color: #49677b;
+  background: rgba(90, 160, 205, 0.08);
   border: 1px solid rgba(75, 79, 196, 0.14);
   border-radius: 8px;
 }
@@ -487,17 +487,17 @@ html[data-corvia-theme="light"] .spaces-home {
   background:
     radial-gradient(ellipse 540px 330px at 0% 0%, rgba(4, 43, 57, 0.29) 0%, rgba(10, 77, 87, 0.15) 43%, transparent 78%),
     radial-gradient(circle at 49% 35%, rgba(var(--space-rgb), 0.11), transparent 31rem),
-    radial-gradient(circle at 82% 78%, rgba(121, 87, 200, 0.07), transparent 27rem),
-    linear-gradient(151deg, #f7f3fa 0%, #eef2fa 57%, #eef2fa 100%);
+    radial-gradient(circle at 82% 78%, rgba(75, 188, 215, 0.07), transparent 27rem),
+    linear-gradient(151deg, #e5f3f8 0%, #e2eff7 57%, #e2eff7 100%);
 }
 
 html[data-corvia-theme="light"] .spaces-home__topbar {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search {
-  color: #4d5873;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 242, 249, 0.94));
+  color: #49677b;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(224, 241, 246, 0.94));
   border-color: rgba(75, 79, 196, 0.24);
   box-shadow: inset 0 1px #fff, 0 18px 42px -34px rgba(49, 45, 100, 0.32);
 }
@@ -508,8 +508,8 @@ html[data-corvia-theme="light"] .spaces-everything-search:focus-within {
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search > input {
-  color: #1b2440;
-  -webkit-text-fill-color: #1b2440;
+  color: #18354b;
+  -webkit-text-fill-color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search > input::placeholder {
@@ -517,14 +517,14 @@ html[data-corvia-theme="light"] .spaces-everything-search > input::placeholder {
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search > kbd {
-  color: #4d5873;
-  background: rgba(75, 79, 196, 0.08);
+  color: #49677b;
+  background: rgba(90, 160, 205, 0.08);
   border-color: rgba(75, 79, 196, 0.18);
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search > button,
 html[data-corvia-theme="light"] .spaces-home__topbar > nav button {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-everything-search > button {
@@ -537,15 +537,15 @@ html[data-corvia-theme="light"] .spaces-home__topbar > nav button.is-active {
 }
 
 html[data-corvia-theme="light"] :is(.spaces-context-rail, .spaces-day) {
-  color: #4d5873;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 242, 249, 0.93));
+  color: #49677b;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(224, 241, 246, 0.93));
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: inset 0 1px #fff, 0 21px 50px -42px rgba(49, 45, 100, 0.4);
 }
 
 html[data-corvia-theme="light"] .spaces-context-rail > span strong,
 html[data-corvia-theme="light"] .spaces-day h2 {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-context-rail__space, .spaces-context-rail__all, .spaces-context-rail__personalize) {
@@ -562,7 +562,7 @@ html[data-corvia-theme="light"] .spaces-context-rail__space.is-active {
 }
 
 html[data-corvia-theme="light"] .spaces-context-rail__all::before {
-  background: rgba(75, 79, 196, 0.14);
+  background: rgba(90, 160, 205, 0.14);
 }
 
 html[data-corvia-theme="light"] .spaces-workspace__greeting h1,
@@ -576,7 +576,7 @@ html[data-corvia-theme="light"] .spaces-title > small {
 }
 
 html[data-corvia-theme="light"] .spaces-door > span {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-door > i {
@@ -598,21 +598,21 @@ html[data-corvia-theme="light"] .spaces-door.is-active > i {
 }
 
 html[data-corvia-theme="light"] .spaces-layer {
-  color: #1b2440;
+  color: #18354b;
   background: linear-gradient(90deg, rgba(var(--space-rgb), 0.11), rgba(255, 255, 255, 0.93), rgba(var(--space-rgb), 0.055));
   border-color: rgba(var(--space-rgb), 0.25);
   filter: drop-shadow(0 14px 21px rgba(49, 45, 100, 0.09));
 }
 
 html[data-corvia-theme="light"] :is(.spaces-layer--next, .spaces-layer--refs, .spaces-layer--essential) {
-  background: linear-gradient(90deg, rgba(121, 87, 200, 0.09), rgba(255, 255, 255, 0.94), rgba(121, 87, 200, 0.04));
+  background: linear-gradient(90deg, rgba(75, 188, 215, 0.09), rgba(255, 255, 255, 0.94), rgba(75, 188, 215, 0.04));
   border-color: rgba(121, 87, 200, 0.22);
 }
 
 html[data-corvia-theme="light"] .spaces-layer > header strong,
 html[data-corvia-theme="light"] .spaces-action,
 html[data-corvia-theme="light"] .spaces-personalize {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-action {
@@ -621,7 +621,7 @@ html[data-corvia-theme="light"] .spaces-action {
 
 html[data-corvia-theme="light"] .spaces-action:hover,
 html[data-corvia-theme="light"] .spaces-action:focus-visible {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--space-rgb), 0.075);
 }
 
@@ -631,17 +631,17 @@ html[data-corvia-theme="light"] .spaces-personalize {
 }
 
 html[data-corvia-theme="light"] .spaces-doctor {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.74);
   border-color: rgba(var(--space-rgb), 0.18);
 }
 
 html[data-corvia-theme="light"] .spaces-doctor small {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .spaces-day::before {
-  background: rgba(75, 79, 196, 0.17);
+  background: rgba(90, 160, 205, 0.17);
 }
 
 html[data-corvia-theme="light"] .spaces-day__item strong,
@@ -658,15 +658,15 @@ html[data-corvia-theme="light"] .spaces-day__empty small {
 
 html[data-corvia-theme="light"] .spaces-day__travel,
 html[data-corvia-theme="light"] .spaces-day__empty {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.67);
   border-color: rgba(75, 79, 196, 0.17);
 }
 
 html[data-corvia-theme="light"] .spaces-stellar-route {
-  color: #4d5873;
+  color: #49677b;
   background:
-    radial-gradient(circle at 72% 25%, rgba(121, 87, 200, 0.11), transparent 8rem),
+    radial-gradient(circle at 72% 25%, rgba(75, 188, 215, 0.11), transparent 8rem),
     linear-gradient(150deg, rgba(255, 255, 255, 0.91), rgba(238, 242, 250, 0.94));
   border-color: rgba(75, 79, 196, 0.2);
 }
@@ -687,19 +687,19 @@ html[data-corvia-theme="light"] .spaces-stellar-route__label {
 }
 
 html[data-corvia-theme="light"] .spaces-dock {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(244, 242, 249, 0.9), rgba(255, 255, 255, 0.94));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), rgba(224, 241, 246, 0.9), rgba(255, 255, 255, 0.94));
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: 0 17px 45px -35px rgba(49, 45, 100, 0.35), inset 0 1px #fff;
 }
 
 html[data-corvia-theme="light"] .spaces-dock :is(a, button) {
-  color: #4d5873;
+  color: #49677b;
   border-color: rgba(75, 79, 196, 0.12);
 }
 
 html[data-corvia-theme="light"] .spaces-dock :is(a, button):hover,
 html[data-corvia-theme="light"] .spaces-dock :is(a, button).active {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--space-rgb), 0.07);
 }
 
@@ -708,7 +708,7 @@ html[data-corvia-theme="light"] .spaces-motto {
 }
 
 html[data-corvia-theme="light"] .spaces-motto strong {
-  color: #4b4fc4;
+  color: #246ac1;
 }
 
 /* Overlays da Home. */
@@ -718,31 +718,31 @@ html[data-corvia-theme="light"] .spaces-overlay {
 }
 
 html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 85% 7%, rgba(var(--space-rgb), 0.09), transparent 18rem),
-    linear-gradient(160deg, rgba(255, 255, 255, 0.985), rgba(244, 242, 249, 0.99));
+    linear-gradient(160deg, rgba(255, 255, 255, 0.985), rgba(224, 241, 246, 0.99));
   border-color: rgba(75, 79, 196, 0.25);
   box-shadow: -30px 0 90px rgba(49, 45, 100, 0.2);
 }
 
 html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) h2 {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) > header button {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.72);
   border-color: rgba(75, 79, 196, 0.22);
 }
 
 html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) > header button:hover {
-  color: #1b2440;
+  color: #18354b;
   border-color: rgba(var(--space-rgb), 0.48);
 }
 
 html[data-corvia-theme="light"] .spaces-catalog > label {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.83);
   border-color: rgba(75, 79, 196, 0.22);
 }
@@ -771,14 +771,14 @@ html[data-corvia-theme="light"] .spaces-personalizer__count,
 html[data-corvia-theme="light"] .spaces-personalizer__grid > button,
 html[data-corvia-theme="light"] .spaces-travel__status,
 html[data-corvia-theme="light"] .spaces-travel > footer button {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.68);
   border-color: rgba(75, 79, 196, 0.17);
 }
 
 html[data-corvia-theme="light"] .spaces-personalizer__tabs button.is-active,
 html[data-corvia-theme="light"] .spaces-personalizer__grid > button.is-selected {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--space-rgb), 0.09);
   border-color: rgba(var(--space-rgb), 0.4);
 }
@@ -790,19 +790,19 @@ html[data-corvia-theme="light"] .spaces-personalizer__selected article {
 }
 
 html[data-corvia-theme="light"] .spaces-personalizer__selected article button {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.76);
   border-color: rgba(75, 79, 196, 0.2);
 }
 
 html[data-corvia-theme="light"] .spaces-travel__map :is(.deslocamento-mapa, .deslocamento-rotas) {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(255, 255, 255, 0.82);
   border-color: rgba(75, 79, 196, 0.2);
 }
 
 html[data-corvia-theme="light"] .spaces-travel__map :is(.deslocamento-mapa__legenda, .deslocamento-mapa__fonte) {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.9);
   border-color: rgba(75, 79, 196, 0.16);
 }
@@ -818,8 +818,8 @@ html[data-corvia-theme="light"] .spaces-travel__status {
 html[data-corvia-theme="light"] .cv-app {
   --cv-accent: #0f727a;
   --cv-rgb: 19, 122, 128;
-  --cv-text: #1b2440;
-  --cv-text-2: #4d5873;
+  --cv-text: #18354b;
+  --cv-text-2: #49677b;
   --cv-text-3: #5e687f;
   --cv-line: rgba(75, 79, 196, 0.21);
   --cv-line-soft: rgba(75, 79, 196, 0.11);
@@ -827,19 +827,19 @@ html[data-corvia-theme="light"] .cv-app {
   --cv-panel-strong: rgba(255, 255, 255, 0.97);
   --cos-line: rgba(75, 79, 196, 0.18);
   --cos-line-strong: rgba(75, 79, 196, 0.28);
-  --cos-text: #1b2440;
-  --cos-muted: #4d5873;
+  --cos-text: #18354b;
+  --cos-muted: #49677b;
   --cos-muted-2: #5e687f;
   --cos-cyan: #0f727a;
   --cos-cyan-2: #0f727a;
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 49% 34%, rgba(var(--cv-rgb), 0.1), transparent 31rem),
-    radial-gradient(circle at 82% 78%, rgba(121, 87, 200, 0.07), transparent 27rem),
-    linear-gradient(151deg, #f7f3fa 0%, #eef2fa 57%, #eef2fa 100%);
+    radial-gradient(circle at 82% 78%, rgba(75, 188, 215, 0.07), transparent 27rem),
+    linear-gradient(151deg, #e5f3f8 0%, #e2eff7 57%, #e2eff7 100%);
 }
 
-html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #4b4fc4; --cv-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #246ac1; --cv-rgb: 75, 79, 196; }
 html[data-corvia-theme="light"] .cv-app--ensino { --cv-accent: #7957c8; --cv-rgb: 121, 87, 200; }
 html[data-corvia-theme="light"] .cv-app--pesquisa { --cv-accent: #c42068; --cv-rgb: 209, 40, 112; }
 html[data-corvia-theme="light"] .cv-app--gestao { --cv-accent: #0f727a; --cv-rgb: 19, 122, 128; }
@@ -848,10 +848,10 @@ html[data-corvia-theme="light"] .cv-app::before {
   opacity: 0.78;
   background-image:
     radial-gradient(circle at 12% 20%, rgba(24, 70, 108, 0.37) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 72% 14%, rgba(75, 79, 196, 0.25) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 88% 69%, rgba(121, 87, 200, 0.23) 0 0.7px, transparent 1.1px),
-    linear-gradient(rgba(75, 79, 196, 0.032) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.028) 1px, transparent 1px);
+    radial-gradient(circle at 72% 14%, rgba(90, 160, 205, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 88% 69%, rgba(75, 188, 215, 0.23) 0 0.7px, transparent 1.1px),
+    linear-gradient(rgba(90, 160, 205, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.028) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] .cv-app::after {
@@ -860,7 +860,7 @@ html[data-corvia-theme="light"] .cv-app::after {
 }
 
 html[data-corvia-theme="light"] .cv-topbar::after {
-  background: linear-gradient(90deg, transparent, rgba(var(--cv-rgb), 0.28), rgba(75, 79, 196, 0.17), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--cv-rgb), 0.28), rgba(90, 160, 205, 0.17), transparent);
 }
 
 html[data-corvia-theme="light"] .cv-topbar__brand img {
@@ -874,7 +874,7 @@ html[data-corvia-theme="light"] .cv-topbar__context i {
 }
 
 html[data-corvia-theme="light"] :is(.cv-command, .cv-account__trigger) {
-  color: #4d5873;
+  color: #49677b;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(239, 247, 252, 0.94));
   border-color: rgba(75, 79, 196, 0.22);
   box-shadow: inset 0 1px #fff, 0 18px 42px -35px rgba(49, 45, 100, 0.33);
@@ -887,8 +887,8 @@ html[data-corvia-theme="light"] .cv-command:focus-within {
 
 html[data-corvia-theme="light"] .cv-command input,
 html[data-corvia-theme="light"] .cv-drawer__search input {
-  color: #1b2440;
-  -webkit-text-fill-color: #1b2440;
+  color: #18354b;
+  -webkit-text-fill-color: #18354b;
 }
 
 html[data-corvia-theme="light"] .cv-command input::placeholder {
@@ -896,19 +896,19 @@ html[data-corvia-theme="light"] .cv-command input::placeholder {
 }
 
 html[data-corvia-theme="light"] .cv-command kbd {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(78, 117, 147, 0.08);
   border-color: rgba(78, 117, 147, 0.17);
 }
 
 html[data-corvia-theme="light"] :is(.cv-command button, .cv-icon-button, .cv-topbar__menu) {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.68);
   border-color: rgba(75, 79, 196, 0.18);
 }
 
 html[data-corvia-theme="light"] :is(.cv-command button, .cv-icon-button, .cv-topbar__menu):hover {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.08);
   border-color: rgba(var(--cv-rgb), 0.38);
 }
@@ -929,7 +929,7 @@ html[data-corvia-theme="light"] :is(.cv-account__trigger > img, .cv-account__ava
 }
 
 html[data-corvia-theme="light"] .cv-account-menu {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 88% 5%, rgba(var(--cv-rgb), 0.1), transparent 11rem),
     linear-gradient(155deg, rgba(255, 255, 255, 0.99), rgba(235, 245, 251, 0.995));
@@ -951,40 +951,40 @@ html[data-corvia-theme="light"] .cv-account-menu header small {
 }
 
 html[data-corvia-theme="light"] .cv-account-menu :is(a, button) {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .cv-account-menu :is(a, button):hover {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.075);
 }
 
 html[data-corvia-theme="light"] .cv-sidebar,
 html[data-corvia-theme="light"] .cv-intelligence {
-  color: #4d5873;
+  color: #49677b;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(237, 246, 251, 0.94));
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: inset 0 1px #fff, 0 22px 55px -42px rgba(49, 45, 100, 0.4);
 }
 
 html[data-corvia-theme="light"] .cv-sidebar__title :is(small, strong) {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] :is(.cv-space-switcher a, .cv-all-functions, .cv-assistant-launch) {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.62);
   border-color: #81899e;
 }
 
 html[data-corvia-theme="light"] :is(.cv-space-switcher a:hover, .cv-space-switcher a.is-active) {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-switch-rgb), 0.09);
   border-color: #81899e;
 }
 
 html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(1):is(:hover, .is-active) { color: #0f727a; border-color: #0f727a; }
-html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(2):is(:hover, .is-active) { color: #4b4fc4; border-color: #4b4fc4; }
+html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(2):is(:hover, .is-active) { color: #246ac1; border-color: #246ac1; }
 html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(3):is(:hover, .is-active) { color: #7957c8; border-color: #7957c8; }
 html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(4):is(:hover, .is-active) { color: #c42068; border-color: #c42068; }
 html[data-corvia-theme="light"] .cv-space-switcher a:nth-child(5):is(:hover, .is-active) { color: #0f727a; border-color: #0f727a; }
@@ -1011,13 +1011,13 @@ html[data-corvia-theme="light"] .cv-space-horizon__copy > span {
 }
 
 html[data-corvia-theme="light"] .cv-space-horizon__copy strong {
-  color: #1b2440;
+  color: #18354b;
   text-shadow: 0 1px #fff;
 }
 
 html[data-corvia-theme="light"] .cv-function-deck,
 html[data-corvia-theme="light"] .cv-metrics {
-  color: #1b2440;
+  color: #18354b;
   background: linear-gradient(90deg, rgba(var(--cv-rgb), 0.12), rgba(255, 255, 255, 0.94) 48%, rgba(var(--cv-rgb), 0.055));
   border-color: rgba(var(--cv-rgb), 0.28);
   filter: drop-shadow(0 12px 18px rgba(27, 71, 106, 0.08));
@@ -1025,7 +1025,7 @@ html[data-corvia-theme="light"] .cv-metrics {
 
 html[data-corvia-theme="light"] .cv-function-deck__label strong,
 html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link {
@@ -1034,18 +1034,18 @@ html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link {
 
 html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link:hover,
 html[data-corvia-theme="light"] .cv-function-deck .cv-nav-link.is-current {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.085);
 }
 
 html[data-corvia-theme="light"] .cv-function-deck > button {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.66);
   border-color: rgba(var(--cv-rgb), 0.2);
 }
 
 html[data-corvia-theme="light"] .cv-content {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .cv-intelligence__status,
@@ -1056,7 +1056,7 @@ html[data-corvia-theme="light"] .cv-intelligence__safety {
 }
 
 html[data-corvia-theme="light"] :is(.cv-intelligence__route, .cv-intelligence__hero, .cv-intelligence__related a) {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.65);
   border-color: rgba(var(--cv-rgb), 0.15);
 }
@@ -1072,13 +1072,13 @@ html[data-corvia-theme="light"] .cv-intelligence__hero > a {
 }
 
 html[data-corvia-theme="light"] .cv-intelligence__related a:hover {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.075);
 }
 
 html[data-corvia-theme="light"] .cv-intelligence__ask {
   color: #7957c8;
-  background: rgba(121, 87, 200, 0.07);
+  background: rgba(75, 188, 215, 0.07);
   border-color: rgba(121, 87, 200, 0.22);
 }
 
@@ -1099,19 +1099,19 @@ html[data-corvia-theme="light"] .cv-mobile-dock {
 }
 
 html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) :is(a, button) {
-  color: #4d5873;
+  color: #49677b;
   border-color: rgba(75, 79, 196, 0.11);
 }
 
 html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) :is(a, button):hover,
 html[data-corvia-theme="light"] :is(.cv-global-dock, .cv-mobile-dock) a.active {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.07);
 }
 
 html[data-corvia-theme="light"] .cv-page-hero,
 html[data-corvia-theme="light"] .cv-section {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 84% 18%, rgba(var(--cv-rgb), 0.12), transparent 16rem),
     linear-gradient(106deg, rgba(255, 255, 255, 0.92), rgba(238, 246, 252, 0.94));
@@ -1128,24 +1128,24 @@ html[data-corvia-theme="light"] .cv-section__heading p {
 
 html[data-corvia-theme="light"] .cv-page-hero h1,
 html[data-corvia-theme="light"] .cv-section__heading h2 {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .cv-page-hero__meta .selo {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(var(--cv-rgb), 0.055);
   border-color: rgba(var(--cv-rgb), 0.16);
 }
 
 html[data-corvia-theme="light"] .cv-action {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.68);
   border-color: rgba(var(--cv-rgb), 0.18);
 }
 
 html[data-corvia-theme="light"] .cv-action:hover,
 html[data-corvia-theme="light"] .cv-action--primary {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-rgb), 0.09);
   border-color: rgba(var(--cv-rgb), 0.34);
 }
@@ -1164,7 +1164,7 @@ html[data-corvia-theme="light"] .cv-metric > small {
 }
 
 html[data-corvia-theme="light"] .cv-filterbar__result {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.67);
   border-color: rgba(var(--cv-rgb), 0.15);
 }
@@ -1186,7 +1186,7 @@ html[data-corvia-theme="light"] .cv-tool-group__heading {
 }
 
 html[data-corvia-theme="light"] :is(.cv-tool-card, .cv-context-link, .cv-empty) {
-  color: #4d5873;
+  color: #49677b;
   background: linear-gradient(112deg, rgba(var(--cv-rgb), 0.06), rgba(255, 255, 255, 0.82) 44%);
   border-color: rgba(75, 79, 196, 0.16);
   box-shadow: inset 0 1px #fff;
@@ -1194,7 +1194,7 @@ html[data-corvia-theme="light"] :is(.cv-tool-card, .cv-context-link, .cv-empty) 
 
 html[data-corvia-theme="light"] .cv-tool-card:not(.is-disabled):hover,
 html[data-corvia-theme="light"] .cv-context-link:hover {
-  color: #1b2440;
+  color: #18354b;
   background: linear-gradient(112deg, rgba(var(--cv-rgb), 0.11), rgba(255, 255, 255, 0.9) 46%);
   border-color: rgba(var(--cv-rgb), 0.34);
 }
@@ -1208,10 +1208,10 @@ html[data-corvia-theme="light"] .cv-drawer-backdrop {
 }
 
 html[data-corvia-theme="light"] .cv-drawer {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(circle at 80% 8%, rgba(var(--cv-rgb), 0.1), transparent 20rem),
-    linear-gradient(155deg, #f7f3fa, #eef2fa);
+    linear-gradient(155deg, #e5f3f8, #e2eff7);
   border-color: rgba(var(--cv-rgb), 0.24);
   box-shadow: -35px 0 100px rgba(49, 45, 100, 0.2);
 }
@@ -1223,7 +1223,7 @@ html[data-corvia-theme="light"] .cv-drawer__footer {
 
 html[data-corvia-theme="light"] .cv-drawer__header button,
 html[data-corvia-theme="light"] .cv-drawer__search {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.7);
   border-color: rgba(var(--cv-rgb), 0.18);
 }
@@ -1242,7 +1242,7 @@ html[data-corvia-theme="light"] .cv-drawer__empty {
 
 html[data-corvia-theme="light"] .cv-drawer__assistant {
   color: #7957c8;
-  background: rgba(121, 87, 200, 0.07);
+  background: rgba(75, 188, 215, 0.07);
   border-color: rgba(121, 87, 200, 0.22);
 }
 
@@ -1256,12 +1256,12 @@ html[data-corvia-theme="light"] .cv-drawer__space {
 }
 
 html[data-corvia-theme="light"] .cv-drawer .cv-nav-link {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .cv-drawer .cv-nav-link:hover,
 html[data-corvia-theme="light"] .cv-drawer .cv-nav-link.is-current {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(var(--cv-drawer-rgb), 0.08);
 }
 
@@ -1282,29 +1282,29 @@ html[data-corvia-theme="light"] .clinical-os {
   --space-accent-2: #0f727a;
   --space-violet: #7957c8;
   --space-rose: #c42068;
-  --space-blue: #4b4fc4;
+  --space-blue: #246ac1;
   --space-teal: #0f727a;
   --space-panel: rgba(255, 255, 255, 0.86);
   --space-panel-strong: rgba(255, 255, 255, 0.96);
   --space-line: rgba(75, 79, 196, 0.21);
   --space-line-soft: rgba(75, 79, 196, 0.11);
   --space-muted: #5e687f;
-  --space-text: #1b2440;
-  --cos-bg: #f7f3fa;
-  --cos-bg-2: #f7f3fa;
+  --space-text: #18354b;
+  --cos-bg: #e5f3f8;
+  --cos-bg-2: #e5f3f8;
   --cos-panel: rgba(255, 255, 255, 0.86);
-  --cos-text: #1b2440;
-  --cos-muted: #4d5873;
+  --cos-text: #18354b;
+  --cos-muted: #49677b;
   --cos-muted-2: #5e687f;
   --cos-line: rgba(75, 79, 196, 0.18);
   --cos-line-strong: rgba(75, 79, 196, 0.28);
   --cos-cyan: #0f727a;
   --cos-cyan-2: #0f727a;
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(circle at 50% 44%, rgba(var(--space-rgb), 0.1), transparent 31rem),
-    radial-gradient(circle at 78% 68%, rgba(121, 87, 200, 0.07), transparent 26rem),
-    linear-gradient(150deg, #f7f3fa 0%, #eef2fa 52%, #eef2fa 100%) !important;
+    radial-gradient(circle at 78% 68%, rgba(75, 188, 215, 0.07), transparent 26rem),
+    linear-gradient(150deg, #e5f3f8 0%, #e2eff7 52%, #e2eff7 100%) !important;
   color-scheme: light;
 }
 
@@ -1312,8 +1312,8 @@ html[data-corvia-theme="light"] body.corvia-route--pacientes .clinical-os,
 html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os,
 html[data-corvia-theme="light"] body.corvia-route--telediagnostico .clinical-os {
   --space-rgb: 75, 79, 196;
-  --space-accent: #4b4fc4;
-  --space-accent-2: #4b4fc4;
+  --space-accent: #246ac1;
+  --space-accent-2: #246ac1;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--conhecimento .clinical-os {
@@ -1343,11 +1343,11 @@ html[data-corvia-theme="light"] .clinical-os::after {
   opacity: 0.7;
   background-image:
     radial-gradient(circle at 12% 18%, rgba(24, 70, 108, 0.35) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 68% 12%, rgba(75, 79, 196, 0.24) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 84% 62%, rgba(121, 87, 200, 0.23) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 68% 12%, rgba(90, 160, 205, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 84% 62%, rgba(75, 188, 215, 0.23) 0 0.7px, transparent 1.1px),
     radial-gradient(circle at 36% 84%, rgba(19, 122, 128, 0.2) 0 0.7px, transparent 1.1px),
-    linear-gradient(rgba(75, 79, 196, 0.034) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(90, 160, 205, 0.034) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.03) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-topbar {
@@ -1357,15 +1357,15 @@ html[data-corvia-theme="light"] .clinical-os .cos-topbar {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-command-mini {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(235, 245, 251, 0.9)) !important;
   border-color: rgba(var(--space-rgb), 0.2) !important;
   box-shadow: inset 0 1px #fff, 0 10px 30px -24px rgba(var(--space-rgb), 0.28) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-command-mini input {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-command-mini input::placeholder {
@@ -1373,13 +1373,13 @@ html[data-corvia-theme="light"] .clinical-os .cos-command-mini input::placeholde
 }
 
 html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar__icon, .cos-account__trigger) {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(255, 255, 255, 0.7) !important;
   border-color: rgba(var(--space-rgb), 0.14) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar__icon, .cos-account__trigger):hover {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(var(--space-rgb), 0.08) !important;
   border-color: rgba(var(--space-rgb), 0.34) !important;
 }
@@ -1390,7 +1390,7 @@ html[data-corvia-theme="light"] .clinical-os .cos-content {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-intelligence {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(237, 246, 251, 0.95)) !important;
   border-color: rgba(var(--space-rgb), 0.17) !important;
   box-shadow: 0 22px 56px -42px rgba(49, 45, 100, 0.42), inset 0 1px #fff !important;
@@ -1405,20 +1405,20 @@ html[data-corvia-theme="light"] .clinical-os .cos-intelligence :is(p, small) {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-intelligence a {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(255, 255, 255, 0.64) !important;
   border-color: rgba(var(--space-rgb), 0.13) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-intelligence a:hover {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(var(--space-rgb), 0.075) !important;
   border-color: rgba(var(--space-rgb), 0.34) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cc-page-header,
 html[data-corvia-theme="light"] .clinical-os .cc-section {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(circle at 14% 18%, rgba(var(--space-rgb), 0.12), transparent 16rem),
     linear-gradient(105deg, rgba(255, 255, 255, 0.93), rgba(238, 246, 252, 0.95)) !important;
@@ -1428,7 +1428,7 @@ html[data-corvia-theme="light"] .clinical-os .cc-section {
 
 html[data-corvia-theme="light"] .clinical-os .cc-page-header h1,
 html[data-corvia-theme="light"] .clinical-os .cc-section__heading h2 {
-  color: #1b2440 !important;
+  color: #18354b !important;
   text-shadow: 0 1px #fff !important;
 }
 
@@ -1452,11 +1452,11 @@ html[data-corvia-theme="light"] .clinical-os :is(.cc-metric__top, .cc-metric > s
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(h1, h2, h3, h4) {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(p, li, dd, figcaption) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(
@@ -1486,7 +1486,7 @@ html[data-corvia-theme="light"] .clinical-os .cos-content :is(button, a)[class*=
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content table {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(255, 255, 255, 0.84) !important;
   border-color: rgba(var(--space-rgb), 0.15) !important;
 }
@@ -1496,12 +1496,12 @@ html[data-corvia-theme="light"] .clinical-os .cos-content thead {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content th {
-  color: #4d5873 !important;
+  color: #49677b !important;
   border-color: rgba(var(--space-rgb), 0.13) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content td {
-  color: #4d5873 !important;
+  color: #49677b !important;
   border-color: rgba(var(--space-rgb), 0.09) !important;
 }
 
@@ -1510,19 +1510,19 @@ html[data-corvia-theme="light"] .clinical-os .cos-content tr:hover td {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is([class*="chip"], [class*="pill"], [class*="tag"], [class*="badge"]):not(.cos-account-menu__badge) {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(var(--space-rgb), 0.07) !important;
   border-color: rgba(var(--space-rgb), 0.18) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is([role="tab"], nav button).is-active {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(var(--space-rgb), 0.1) !important;
   border-color: rgba(var(--space-rgb), 0.34) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os :is(.mc-command__header, .mc-command__tabs, .mc-command__primary, .mc-command__intelligence, .mc-command__facts > article) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(235, 245, 251, 0.93)) !important;
   border-color: rgba(var(--space-rgb), 0.16) !important;
 }
@@ -1538,11 +1538,11 @@ html[data-corvia-theme="light"] .clinical-os :is(
   [class*="modal"], [class*="drawer"], [class*="popover"],
   [class*="dropdown"], [class*="menu"]
 ) {
-  color: #1b2440;
-  --texto: #1b2440;
-  --texto-secundario: #4d5873;
+  color: #18354b;
+  --texto: #18354b;
+  --texto-secundario: #49677b;
   --superficie: #fff;
-  --fundo: #f7f3fa;
+  --fundo: #e5f3f8;
 }
 
 html[data-corvia-theme="light"] .clinical-os :is(dialog, [role="dialog"], [class*="modal__content"], [class*="modal-content"], [class*="drawer__content"], [class*="popover"], [class*="dropdown"], [class*="menu"]) {
@@ -1552,18 +1552,18 @@ html[data-corvia-theme="light"] .clinical-os :is(dialog, [role="dialog"], [class
 }
 
 html[data-corvia-theme="light"] .clinical-os .prescricao-selecao {
-  color: #1b2440 !important;
-  background: linear-gradient(145deg, #f7f3fa, #eef2fa) !important;
+  color: #18354b !important;
+  background: linear-gradient(145deg, #e5f3f8, #e2eff7) !important;
   border-color: rgba(19, 122, 128, 0.25) !important;
   box-shadow: 0 12px 28px rgba(49, 45, 100, 0.1) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(strong, b, h2, h3) {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(small, p, span) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(.botao, button) {
@@ -1585,20 +1585,20 @@ html[data-corvia-theme="light"] .clinical-os .prescricao-selecao :is(.botao, but
   }
 
   html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item {
-    color: #4d5873 !important;
+    color: #49677b !important;
   }
 
   html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item svg {
-    color: #4d5873 !important;
+    color: #49677b !important;
   }
 
   html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item:hover {
-    color: #1b2440 !important;
+    color: #18354b !important;
     background: rgba(var(--space-rgb), 0.06) !important;
   }
 
   html[data-corvia-theme="light"] .ccc-nav--reference .ccc-nav__item.is-active {
-    color: #1b2440 !important;
+    color: #18354b !important;
     background: linear-gradient(90deg, rgba(var(--space-rgb), 0.17), rgba(var(--space-rgb), 0.055)) !important;
   }
 
@@ -1615,7 +1615,7 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os {
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os .cos-content .emerg {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(circle at 25% 5%, rgba(184, 40, 61, 0.11), transparent 20rem),
     linear-gradient(150deg, rgba(255, 251, 252, 0.96), rgba(244, 248, 252, 0.96)) !important;
@@ -1635,8 +1635,8 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])),
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   caret-color: #0f727a !important;
   background-color: #ffffff !important;
   border-color: #81899e !important;
@@ -1662,8 +1662,8 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):focus,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:focus,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:focus {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: #ffffff !important;
   border-color: #0f727a !important;
   box-shadow: 0 0 0 3px rgba(19, 122, 128, 0.14) !important;
@@ -1672,8 +1672,8 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) t
 
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select :is(option, optgroup),
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) :is(option, optgroup) {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: #ffffff !important;
 }
 
@@ -1681,7 +1681,7 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:-webkit-autofill,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:-webkit-autofill {
-  -webkit-text-fill-color: #1b2440 !important;
+  -webkit-text-fill-color: #18354b !important;
   caret-color: #0f727a !important;
   -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
   box-shadow: 0 0 0 1000px #ffffff inset !important;
@@ -1694,8 +1694,8 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) t
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"]))[readonly],
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea[readonly] {
-  color: #4d5873 !important;
-  -webkit-text-fill-color: #4d5873 !important;
+  color: #49677b !important;
+  -webkit-text-fill-color: #49677b !important;
   background-color: #eef2f6 !important;
   border-color: #d3d7e4 !important;
   opacity: 1;
@@ -1711,8 +1711,8 @@ html[data-corvia-theme="light"] #root .cv-app .cv-command input,
 html[data-corvia-theme="light"] #root .cv-app .cv-drawer__search input,
 html[data-corvia-theme="light"] #root .spaces-home .spaces-everything-search input,
 html[data-corvia-theme="light"] #root .clinical-os .cos-command-mini input {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
@@ -1727,22 +1727,22 @@ html[data-corvia-theme="light"] #root .clinical-os .cos-command-mini input {
 html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
 html[data-corvia-theme="light"] #root .clinical-os select,
 html[data-corvia-theme="light"] #root .clinical-os textarea {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: #ffffff !important;
 }
 
 html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):disabled,
 html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"])[readonly] {
-  color: #4d5873 !important;
-  -webkit-text-fill-color: #4d5873 !important;
+  color: #49677b !important;
+  -webkit-text-fill-color: #49677b !important;
   background-color: #eef2f6 !important;
 }
 
 /* A busca usa a superfície da cápsula; o alias acima não pode criar um bloco. */
 html[data-corvia-theme="light"] #root .clinical-os .cos-command-mini input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]) {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
@@ -1850,20 +1850,20 @@ html[data-corvia-theme="light"] :is(
   html[data-corvia-theme="light"] .cc-mobile-nav :is(a, button) {
     min-width: 44px;
     min-height: 44px;
-    color: #4d5873 !important;
+    color: #49677b !important;
   }
 
   html[data-corvia-theme="light"] .cc-mobile-nav :is(.active, a[aria-current="page"]) {
-    color: #1b2440 !important;
+    color: #18354b !important;
   }
 
   html[data-corvia-theme="light"] .cc-mobile-more {
-    color: #1b2440;
-    background: radial-gradient(circle at 50% 0%, rgba(var(--space-rgb), 0.08), transparent 15rem), linear-gradient(180deg, #f7f3fa, #eef2fa) !important;
+    color: #18354b;
+    background: radial-gradient(circle at 50% 0%, rgba(var(--space-rgb), 0.08), transparent 15rem), linear-gradient(180deg, #e5f3f8, #e2eff7) !important;
   }
 
   html[data-corvia-theme="light"] .cc-mobile-more__grid > a {
-    color: #4d5873;
+    color: #49677b;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(235, 245, 251, 0.98)) !important;
     border-color: rgba(var(--space-rgb), 0.12) !important;
   }
@@ -1919,67 +1919,67 @@ html[data-corvia-theme="light"] :is(
 html[data-corvia-theme="light"] body.cardiology-spaces-active,
 html[data-corvia-theme="light"] body:has(.cv-app),
 html[data-corvia-theme="light"] body:has(.clinical-os) {
-  color: #1b2440;
-  background: #f7f3fa;
+  color: #18354b;
+  background: #e5f3f8;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) {
-  --corvia-light-bg: #f7f3fa;
-  --corvia-light-bg-soft: #eef2fa;
+  --corvia-light-bg: #e5f3f8;
+  --corvia-light-bg-soft: #e2eff7;
   --corvia-light-panel: rgba(255, 255, 255, 0.84);
   --corvia-light-panel-strong: rgba(255, 255, 255, 0.96);
   --corvia-light-line: rgba(75, 79, 196, 0.2);
   --corvia-light-line-soft: rgba(75, 79, 196, 0.11);
-  --corvia-light-text: #1b2440;
-  --corvia-light-text-2: #4d5873;
+  --corvia-light-text: #18354b;
+  --corvia-light-text-2: #49677b;
   --corvia-light-text-3: #5e687f;
   --corvia-light-cyan: #0f727a;
-  --corvia-light-blue: #4b4fc4;
+  --corvia-light-blue: #246ac1;
   --corvia-light-violet: #7957c8;
   --corvia-light-rose: #c42068;
   --corvia-light-teal: #0f727a;
   --corvia-light-teal-decorative: #137a80;
   --corvia-light-rose-decorative: #d12870;
   --corvia-light-champagne: #b78a52;
-  --corvia-light-focus: #4b4fc4;
-  --fundo: #f7f3fa;
+  --corvia-light-focus: #246ac1;
+  --fundo: #e5f3f8;
   --superficie: #ffffff;
-  --superficie-suave: #eef2fa;
-  --texto: #1b2440;
-  --texto-secundario: #4d5873;
+  --superficie-suave: #e2eff7;
+  --texto: #18354b;
+  --texto-secundario: #49677b;
   --texto-terciario: #5e687f;
   --borda: #ccd1e3;
   --borda-forte: #81899e;
   --primaria: #30376e;
-  --primaria-escura: #1b2440;
+  --primaria-escura: #18354b;
   --acao: #0f727a;
   --acao-hover: #0f666b;
-  --acento: #4b4fc4;
+  --acento: #246ac1;
   --line: #ccd1e3;
-  --muted: #4d5873;
-  color: #1b2440;
+  --muted: #49677b;
+  color: #18354b;
   color-scheme: light;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home) {
-  --spaces-bg: #f7f3fa;
+  --spaces-bg: #e5f3f8;
   --spaces-panel: rgba(255, 255, 255, 0.84);
   --spaces-panel-strong: rgba(255, 255, 255, 0.96);
   --spaces-line: rgba(75, 79, 196, 0.2);
   --spaces-line-soft: rgba(75, 79, 196, 0.1);
-  --spaces-text: #1b2440;
-  --spaces-text-2: #4d5873;
+  --spaces-text: #18354b;
+  --spaces-text-2: #49677b;
   --spaces-text-3: #5e687f;
   --spaces-cyan: #0f727a;
-  --spaces-blue: #4b4fc4;
-  --spaces-brand-blue: #4b4fc4;
+  --spaces-blue: #246ac1;
+  --spaces-brand-blue: #246ac1;
   --spaces-violet: #7957c8;
   --spaces-rose: #c42068;
   --spaces-teal: #0f727a;
 }
 
 html[data-corvia-theme="light"] .spaces-home--cyan { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
-html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #4b4fc4; }
+html[data-corvia-theme="light"] .spaces-home--blue { --space-rgb: 75, 79, 196; --space-accent: #246ac1; }
 html[data-corvia-theme="light"] .spaces-home--violet { --space-rgb: 121, 87, 200; --space-accent: #7957c8; }
 html[data-corvia-theme="light"] .spaces-home--rose { --space-rgb: 209, 40, 112; --space-accent: #c42068; }
 html[data-corvia-theme="light"] .spaces-home--teal { --space-rgb: 19, 122, 128; --space-accent: #0f727a; }
@@ -1992,19 +1992,19 @@ html[data-corvia-theme="light"] :is(.spaces-door--teal, .spaces-context-rail__sp
 
 html[data-corvia-theme="light"] .spaces-choice {
   background:
-    radial-gradient(ellipse at 22% 9%, rgba(121, 87, 200, 0.14), transparent 32rem),
-    radial-gradient(ellipse at 76% 25%, rgba(75, 79, 196, 0.13), transparent 34rem),
+    radial-gradient(ellipse at 22% 9%, rgba(75, 188, 215, 0.14), transparent 32rem),
+    radial-gradient(ellipse at 76% 25%, rgba(90, 160, 205, 0.13), transparent 34rem),
     radial-gradient(ellipse at 64% 88%, rgba(209, 40, 112, 0.055), transparent 28rem),
     radial-gradient(circle at 11% 80%, rgba(183, 138, 82, 0.045), transparent 18rem),
-    linear-gradient(145deg, #f7f3fa 0%, #f3f2fa 46%, #eef2fa 100%);
+    linear-gradient(145deg, #e5f3f8 0%, #f3f2fa 46%, #e2eff7 100%);
 }
 
 html[data-corvia-theme="light"] .spaces-home {
   background:
     radial-gradient(ellipse at 45% 20%, rgba(var(--space-rgb), 0.1), transparent 34rem),
-    radial-gradient(ellipse at 83% 70%, rgba(121, 87, 200, 0.09), transparent 29rem),
+    radial-gradient(ellipse at 83% 70%, rgba(75, 188, 215, 0.09), transparent 29rem),
     radial-gradient(circle at 15% 82%, rgba(183, 138, 82, 0.04), transparent 17rem),
-    linear-gradient(151deg, #f7f3fa 0%, #f3f2fa 55%, #eef2fa 100%);
+    linear-gradient(151deg, #e5f3f8 0%, #f3f2fa 55%, #e2eff7 100%);
 }
 
 /* Assinatura orbital discreta: presente nas bordas, nunca sobre o trabalho. */
@@ -2014,7 +2014,7 @@ html[data-corvia-theme="light"] .spaces-home::after {
   inset: 13% 7% 18% 9%;
   background:
     radial-gradient(circle at 8% 54%, rgba(var(--space-rgb), 0.68) 0 1.7px, transparent 2.8px),
-    radial-gradient(circle at 61% 1%, rgba(121, 87, 200, 0.56) 0 1.5px, transparent 2.6px),
+    radial-gradient(circle at 61% 1%, rgba(75, 188, 215, 0.56) 0 1.5px, transparent 2.6px),
     radial-gradient(circle at 94% 58%, rgba(209, 40, 112, 0.42) 0 1.6px, transparent 2.7px);
   border: 1px solid rgba(var(--space-rgb), 0.18);
   border-radius: 50%;
@@ -2032,12 +2032,12 @@ html[data-corvia-theme="light"] .spaces-home::after {
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home)::before {
   opacity: 0.72;
   background-image:
-    radial-gradient(circle at 13% 18%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 72% 13%, rgba(121, 87, 200, 0.26) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 13% 18%, rgba(90, 160, 205, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 13%, rgba(75, 188, 215, 0.26) 0 0.7px, transparent 1.1px),
     radial-gradient(circle at 84% 67%, rgba(209, 40, 112, 0.2) 0 0.65px, transparent 1px),
     radial-gradient(circle at 31% 79%, rgba(183, 138, 82, 0.23) 0 0.6px, transparent 1px),
-    linear-gradient(rgba(75, 79, 196, 0.027) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.024) 1px, transparent 1px);
+    linear-gradient(rgba(90, 160, 205, 0.027) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.024) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice__heart, .spaces-home__heart) {
@@ -2046,16 +2046,16 @@ html[data-corvia-theme="light"] :is(.spaces-choice__heart, .spaces-home__heart) 
 }
 
 html[data-corvia-theme="light"] :is(.spaces-brand, .spaces-brand strong, .spaces-brand strong i, .spaces-choice__content > h1, .spaces-choice__cards strong) {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-brand strong b,
 html[data-corvia-theme="light"] .spaces-choice > footer strong {
-  color: #4b4fc4;
+  color: #246ac1;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-brand small, .spaces-user, .spaces-choice__content > p:not(.spaces-eyebrow), .spaces-choice__cards small, .spaces-choice > footer) {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-eyebrow, .spaces-choice__icon, .spaces-choice__cards em) {
@@ -2063,9 +2063,9 @@ html[data-corvia-theme="light"] :is(.spaces-eyebrow, .spaces-choice__icon, .spac
 }
 
 html[data-corvia-theme="light"] .spaces-choice__cards > button {
-  color: #1b2440;
+  color: #18354b;
   background:
-    radial-gradient(circle at 9% 5%, rgba(75, 79, 196, 0.09), transparent 12rem),
+    radial-gradient(circle at 9% 5%, rgba(90, 160, 205, 0.09), transparent 12rem),
     linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(247, 245, 251, 0.86));
   border-color: #81899e;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.96), 0 26px 68px -46px rgba(52, 47, 105, 0.34);
@@ -2074,7 +2074,7 @@ html[data-corvia-theme="light"] .spaces-choice__cards > button {
 
 html[data-corvia-theme="light"] .spaces-choice__cards > button:hover,
 html[data-corvia-theme="light"] .spaces-choice__cards > button:focus-visible {
-  border-color: #4b4fc4;
+  border-color: #246ac1;
   box-shadow: inset 0 1px #fff, 0 28px 66px -39px rgba(75, 79, 196, 0.38);
 }
 
@@ -2087,17 +2087,17 @@ html[data-corvia-theme="light"] .spaces-choice__cards > .spaces-choice__science 
 
 html[data-corvia-theme="light"] .corvia-theme-selector--choice,
 html[data-corvia-theme="light"] .corvia-theme-selector--menu {
-  color: #1b2440;
+  color: #18354b;
   background:
-    radial-gradient(ellipse at 8% 10%, rgba(121, 87, 200, 0.095), transparent 11rem),
+    radial-gradient(ellipse at 8% 10%, rgba(75, 188, 215, 0.095), transparent 11rem),
     rgba(255, 255, 255, 0.72);
   border-color: rgba(75, 79, 196, 0.22);
   box-shadow: 0 18px 48px -38px rgba(55, 48, 110, 0.4), inset 0 1px rgba(255, 255, 255, 0.96);
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector__orbit {
-  color: #4b4fc4;
-  background: radial-gradient(circle, rgba(75, 79, 196, 0.13), rgba(121, 87, 200, 0.04));
+  color: #246ac1;
+  background: radial-gradient(circle, rgba(90, 160, 205, 0.13), rgba(75, 188, 215, 0.04));
   border-color: rgba(75, 79, 196, 0.3);
 }
 
@@ -2108,12 +2108,12 @@ html[data-corvia-theme="light"] .corvia-theme-selector__orbit::after {
 html[data-corvia-theme="light"] .corvia-theme-selector__intro strong,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector__intro small,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] small {
-  color: #4d5873;
+  color: #49677b;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
@@ -2123,46 +2123,46 @@ html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"] {
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:hover {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(255, 255, 255, 0.94);
-  border-color: #4b4fc4;
+  border-color: #246ac1;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] {
   background: linear-gradient(145deg, rgba(238, 242, 250, 0.96), rgba(244, 239, 250, 0.96));
-  border-color: #4b4fc4;
-  box-shadow: inset 0 -2px #4b4fc4, 0 8px 22px -17px rgba(75, 79, 196, 0.52);
+  border-color: #246ac1;
+  box-shadow: inset 0 -2px #246ac1, 0 8px 22px -17px rgba(75, 79, 196, 0.52);
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected .corvia-theme-selector__icon,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] .corvia-theme-selector__icon {
-  color: #4b4fc4;
-  background: rgba(75, 79, 196, 0.1);
+  color: #246ac1;
+  background: rgba(90, 160, 205, 0.1);
   border-color: rgba(75, 79, 196, 0.27);
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"].is-selected > i,
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"][aria-checked="true"] > i {
   color: #fff;
-  background: #4b4fc4;
-  border-color: #4b4fc4;
+  background: #246ac1;
+  border-color: #246ac1;
 }
 
 html[data-corvia-theme="light"] .corvia-theme-selector button[role="radio"]:focus-visible {
-  outline: 3px solid #4b4fc4;
+  outline: 3px solid #246ac1;
   outline-offset: 2px;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-everything-search, .spaces-context-rail, .spaces-day, .spaces-dock) {
-  color: #4d5873;
+  color: #49677b;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(241, 242, 249, 0.8));
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: inset 0 1px #fff, 0 20px 50px -40px rgba(50, 47, 103, 0.34);
 }
 
 html[data-corvia-theme="light"] :is(.spaces-workspace__greeting h1, .spaces-title > span, .spaces-day__item strong, .spaces-day__travel strong, .spaces-day__empty strong) {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-workspace__greeting > span, .spaces-title > small, .spaces-day__item small, .spaces-day__travel small, .spaces-day__empty small) {
@@ -2170,8 +2170,8 @@ html[data-corvia-theme="light"] :is(.spaces-workspace__greeting > span, .spaces-
 }
 
 html[data-corvia-theme="light"] .spaces-layer {
-  color: #1b2440;
-  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.88), rgba(121, 87, 200, 0.045));
+  color: #18354b;
+  background: linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.88), rgba(75, 188, 215, 0.045));
   border-color: rgba(var(--space-rgb), 0.28);
   filter: drop-shadow(0 15px 22px rgba(49, 45, 100, 0.09));
 }
@@ -2182,7 +2182,7 @@ html[data-corvia-theme="light"] :is(.spaces-overlay, .cv-drawer-backdrop) {
 }
 
 html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spaces-travel) {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(ellipse at 86% 8%, rgba(var(--space-rgb), 0.09), transparent 19rem),
     radial-gradient(circle at 12% 88%, rgba(183, 138, 82, 0.04), transparent 15rem),
@@ -2194,8 +2194,8 @@ html[data-corvia-theme="light"] :is(.spaces-catalog, .spaces-personalizer, .spac
 html[data-corvia-theme="light"] .cv-app {
   --cv-accent: #0f727a;
   --cv-rgb: 19, 122, 128;
-  --cv-text: #1b2440;
-  --cv-text-2: #4d5873;
+  --cv-text: #18354b;
+  --cv-text-2: #49677b;
   --cv-text-3: #5e687f;
   --cv-line: rgba(75, 79, 196, 0.2);
   --cv-line-soft: rgba(75, 79, 196, 0.1);
@@ -2203,20 +2203,20 @@ html[data-corvia-theme="light"] .cv-app {
   --cv-panel-strong: rgba(255, 255, 255, 0.96);
   --cos-line: rgba(75, 79, 196, 0.18);
   --cos-line-strong: rgba(75, 79, 196, 0.28);
-  --cos-text: #1b2440;
-  --cos-muted: #4d5873;
+  --cos-text: #18354b;
+  --cos-muted: #49677b;
   --cos-muted-2: #5e687f;
   --cos-cyan: #0f727a;
   --cos-cyan-2: #0f666b;
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(ellipse at 45% 19%, rgba(var(--cv-rgb), 0.1), transparent 34rem),
-    radial-gradient(ellipse at 84% 71%, rgba(121, 87, 200, 0.09), transparent 29rem),
+    radial-gradient(ellipse at 84% 71%, rgba(75, 188, 215, 0.09), transparent 29rem),
     radial-gradient(circle at 13% 83%, rgba(183, 138, 82, 0.04), transparent 18rem),
-    linear-gradient(151deg, #f7f3fa 0%, #f3f2fa 55%, #eef2fa 100%);
+    linear-gradient(151deg, #e5f3f8 0%, #f3f2fa 55%, #e2eff7 100%);
 }
 
-html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #4b4fc4; --cv-rgb: 75, 79, 196; }
+html[data-corvia-theme="light"] .cv-app--hospital { --cv-accent: #246ac1; --cv-rgb: 75, 79, 196; }
 html[data-corvia-theme="light"] .cv-app--ensino { --cv-accent: #7957c8; --cv-rgb: 121, 87, 200; }
 html[data-corvia-theme="light"] .cv-app--pesquisa { --cv-accent: #c42068; --cv-rgb: 209, 40, 112; }
 html[data-corvia-theme="light"] .cv-app--gestao { --cv-accent: #0f727a; --cv-rgb: 19, 122, 128; }
@@ -2224,30 +2224,30 @@ html[data-corvia-theme="light"] .cv-app--gestao { --cv-accent: #0f727a; --cv-rgb
 html[data-corvia-theme="light"] .cv-app::before {
   opacity: 0.7;
   background-image:
-    radial-gradient(circle at 12% 20%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 72% 14%, rgba(121, 87, 200, 0.25) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 12% 20%, rgba(90, 160, 205, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 72% 14%, rgba(75, 188, 215, 0.25) 0 0.7px, transparent 1.1px),
     radial-gradient(circle at 88% 69%, rgba(209, 40, 112, 0.19) 0 0.65px, transparent 1px),
     radial-gradient(circle at 29% 81%, rgba(183, 138, 82, 0.22) 0 0.6px, transparent 1px),
-    linear-gradient(rgba(75, 79, 196, 0.026) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.023) 1px, transparent 1px);
+    linear-gradient(rgba(90, 160, 205, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.023) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] :is(.cv-command, .cv-account__trigger, .cv-sidebar, .cv-intelligence, .cv-global-dock, .cv-mobile-dock) {
-  color: #4d5873;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(240, 241, 249, 0.82));
+  color: #49677b;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(218, 234, 243, 0.82));
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: inset 0 1px #fff, 0 20px 52px -41px rgba(49, 45, 100, 0.34);
 }
 
 html[data-corvia-theme="light"] .cv-space-horizon {
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(244, 242, 249, 0.66) 47%, rgba(255, 255, 255, 0.8)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(224, 241, 246, 0.66) 47%, rgba(255, 255, 255, 0.8)),
     var(--cv-room) center 53% / cover no-repeat;
   border-color: rgba(var(--cv-rgb), 0.32);
 }
 
 html[data-corvia-theme="light"] :is(.cv-space-horizon__copy strong, .cv-page-hero h1, .cv-section__heading h2, .cv-metric > strong, .cv-tool-card__copy strong, .cv-context-link strong, .cv-empty strong) {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] :is(.cv-space-horizon__copy > span, .cv-page-hero__description, .cv-section__heading p, .cv-metric__top, .cv-metric > small, .cv-tool-card__copy p, .cv-context-link small) {
@@ -2255,20 +2255,20 @@ html[data-corvia-theme="light"] :is(.cv-space-horizon__copy > span, .cv-page-her
 }
 
 html[data-corvia-theme="light"] :is(.cv-function-deck, .cv-metrics, .cv-page-hero, .cv-section, .cv-tool-card, .cv-context-link, .cv-empty) {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(ellipse at 88% 10%, rgba(var(--cv-rgb), 0.075), transparent 18rem),
-    linear-gradient(112deg, rgba(255, 255, 255, 0.87), rgba(240, 241, 249, 0.82));
+    linear-gradient(112deg, rgba(255, 255, 255, 0.87), rgba(218, 234, 243, 0.82));
   border-color: rgba(var(--cv-rgb), 0.22);
   box-shadow: inset 0 1px #fff, 0 17px 44px -38px rgba(49, 45, 100, 0.34);
 }
 
 html[data-corvia-theme="light"] :is(.cv-account-menu, .cv-drawer) {
-  color: #1b2440;
+  color: #18354b;
   background:
     radial-gradient(ellipse at 88% 5%, rgba(var(--cv-rgb), 0.1), transparent 17rem),
     radial-gradient(circle at 10% 92%, rgba(183, 138, 82, 0.035), transparent 14rem),
-    linear-gradient(155deg, rgba(255, 255, 255, 0.99), rgba(238, 240, 249, 0.99));
+    linear-gradient(155deg, rgba(255, 255, 255, 0.99), rgba(224, 241, 246, 0.99));
   border-color: rgba(var(--cv-rgb), 0.24);
   box-shadow: 0 24px 72px rgba(43, 40, 86, 0.21);
 }
@@ -2279,36 +2279,36 @@ html[data-corvia-theme="light"] .clinical-os {
   --space-accent-2: #0f666b;
   --space-violet: #7957c8;
   --space-rose: #c42068;
-  --space-blue: #4b4fc4;
+  --space-blue: #246ac1;
   --space-teal: #0f727a;
   --space-panel: rgba(255, 255, 255, 0.84);
   --space-panel-strong: rgba(255, 255, 255, 0.96);
   --space-line: rgba(75, 79, 196, 0.2);
   --space-line-soft: rgba(75, 79, 196, 0.1);
   --space-muted: #5e687f;
-  --space-text: #1b2440;
-  --cos-bg: #f7f3fa;
-  --cos-bg-2: #eef2fa;
+  --space-text: #18354b;
+  --cos-bg: #e5f3f8;
+  --cos-bg-2: #e2eff7;
   --cos-panel: rgba(255, 255, 255, 0.84);
-  --cos-text: #1b2440;
-  --cos-muted: #4d5873;
+  --cos-text: #18354b;
+  --cos-muted: #49677b;
   --cos-muted-2: #5e687f;
   --cos-line: rgba(75, 79, 196, 0.18);
   --cos-line-strong: rgba(75, 79, 196, 0.28);
   --cos-cyan: #0f727a;
   --cos-cyan-2: #0f666b;
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 47% 22%, rgba(var(--space-rgb), 0.1), transparent 34rem),
-    radial-gradient(ellipse at 82% 70%, rgba(121, 87, 200, 0.09), transparent 28rem),
+    radial-gradient(ellipse at 82% 70%, rgba(75, 188, 215, 0.09), transparent 28rem),
     radial-gradient(circle at 12% 84%, rgba(183, 138, 82, 0.04), transparent 17rem),
-    linear-gradient(150deg, #f7f3fa 0%, #f3f2fa 53%, #eef2fa 100%) !important;
+    linear-gradient(150deg, #e5f3f8 0%, #f3f2fa 53%, #e2eff7 100%) !important;
 }
 
 html[data-corvia-theme="light"] body:is(.corvia-route--pacientes, .corvia-route--telediagnostico) .clinical-os {
   --space-rgb: 75, 79, 196;
-  --space-accent: #4b4fc4;
-  --space-accent-2: #4b4fc4;
+  --space-accent: #246ac1;
+  --space-accent-2: #246ac1;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--conhecimento .clinical-os {
@@ -2332,31 +2332,31 @@ html[data-corvia-theme="light"] body:is(.corvia-route--admin, .corvia-route--con
 html[data-corvia-theme="light"] .clinical-os::after {
   opacity: 0.68;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(75, 79, 196, 0.3) 0 0.7px, transparent 1.1px),
-    radial-gradient(circle at 68% 12%, rgba(121, 87, 200, 0.24) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 12% 18%, rgba(90, 160, 205, 0.3) 0 0.7px, transparent 1.1px),
+    radial-gradient(circle at 68% 12%, rgba(75, 188, 215, 0.24) 0 0.7px, transparent 1.1px),
     radial-gradient(circle at 84% 62%, rgba(209, 40, 112, 0.18) 0 0.65px, transparent 1px),
     radial-gradient(circle at 36% 84%, rgba(183, 138, 82, 0.22) 0 0.6px, transparent 1px),
-    linear-gradient(rgba(75, 79, 196, 0.026) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(75, 79, 196, 0.023) 1px, transparent 1px);
+    linear-gradient(rgba(90, 160, 205, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90, 160, 205, 0.023) 1px, transparent 1px);
 }
 
 html[data-corvia-theme="light"] .clinical-os :is(.cos-topbar, .cos-intelligence, .cc-page-header, .cc-section) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 88% 8%, rgba(var(--space-rgb), 0.075), transparent 18rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(240, 241, 249, 0.84)) !important;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(218, 234, 243, 0.84)) !important;
   border-color: rgba(var(--space-rgb), 0.2) !important;
   box-shadow: inset 0 1px #fff, 0 18px 46px -39px rgba(49, 45, 100, 0.34) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(h1, h2, h3, h4),
 html[data-corvia-theme="light"] .clinical-os :is(.cc-page-header h1, .cc-section__heading h2, .cos-intelligence h2, .cos-intelligence h3, .cos-intelligence strong) {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(p, li, dd, figcaption),
 html[data-corvia-theme="light"] .clinical-os :is(.cc-page-header__description, .cc-page-header__meta, .cc-section__heading p, .cos-intelligence p, .cos-intelligence small) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content :is(
@@ -2366,14 +2366,14 @@ html[data-corvia-theme="light"] .clinical-os .cos-content :is(
   [class$="__box"], [class*="__box "],
   [class$="__tile"], [class*="__tile "]
 ):not(.emerg) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background-color: rgba(255, 255, 255, 0.82) !important;
   border-color: rgba(var(--space-rgb), 0.16) !important;
   box-shadow: inset 0 1px #fff, 0 14px 38px -35px rgba(49, 45, 100, 0.28) !important;
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content table {
-  color: #1b2440;
+  color: #18354b;
   background: rgba(255, 255, 255, 0.86) !important;
   border-color: rgba(var(--space-rgb), 0.17) !important;
 }
@@ -2383,7 +2383,7 @@ html[data-corvia-theme="light"] .clinical-os .cos-content th {
 }
 
 html[data-corvia-theme="light"] .clinical-os .cos-content td {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
@@ -2393,9 +2393,9 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) t
 html[data-corvia-theme="light"] #root .clinical-os input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]),
 html[data-corvia-theme="light"] #root .clinical-os select,
 html[data-corvia-theme="light"] #root .clinical-os textarea {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
-  caret-color: #4b4fc4 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
+  caret-color: #246ac1 !important;
   background-color: #ffffff !important;
   border-color: #81899e !important;
   color-scheme: light !important;
@@ -2413,10 +2413,10 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):focus,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:focus,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:focus {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: #ffffff !important;
-  border-color: #4b4fc4 !important;
+  border-color: #246ac1 !important;
   box-shadow: 0 0 0 3px rgba(75, 79, 196, 0.16) !important;
 }
 
@@ -2424,19 +2424,19 @@ html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home)
   input:not(:is([type="checkbox"], [type="radio"], [type="range"], [type="color"], [type="file"], [type="button"], [type="submit"], [type="reset"], [type="image"])):-webkit-autofill,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) textarea:-webkit-autofill,
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) select:-webkit-autofill {
-  -webkit-text-fill-color: #1b2440 !important;
-  caret-color: #4b4fc4 !important;
+  -webkit-text-fill-color: #18354b !important;
+  caret-color: #246ac1 !important;
   -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
   box-shadow: 0 0 0 1000px #ffffff inset !important;
 }
 
 html[data-corvia-theme="light"] #root :is(.clinical-os, .cv-app, .spaces-home) input:is([type="checkbox"], [type="radio"]) {
-  accent-color: #4b4fc4;
+  accent-color: #246ac1;
 }
 
 html[data-corvia-theme="light"] #root :is(.cv-app .cv-command, .cv-app .cv-drawer__search, .spaces-home .spaces-everything-search, .clinical-os .cos-command-mini) input {
-  color: #1b2440 !important;
-  -webkit-text-fill-color: #1b2440 !important;
+  color: #18354b !important;
+  -webkit-text-fill-color: #18354b !important;
   background-color: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
@@ -2452,12 +2452,12 @@ html[data-corvia-theme="light"] :is(
   .cv-topbar__menu,
   .cv-action
 ):focus-visible {
-  outline: 3px solid #4b4fc4;
+  outline: 3px solid #246ac1;
   outline-offset: 2px;
 }
 
 html[data-corvia-theme="light"] :is(.spaces-choice, .spaces-home, .cv-app, .clinical-os) :focus-visible {
-  outline-color: #4b4fc4 !important;
+  outline-color: #246ac1 !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .clinical-os {
@@ -2494,25 +2494,25 @@ html[data-corvia-theme="light"] body:not(.corvia-route--emergencia) .clinical-os
   [class$="__box"], [class*="__box "],
   [class$="__tile"], [class*="__tile "]
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 92% 8%, rgba(var(--space-rgb), 0.07), transparent 16rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(240, 241, 249, 0.86)) !important;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(218, 234, 243, 0.86)) !important;
   border-color: rgba(var(--space-rgb), 0.18) !important;
   box-shadow: inset 0 1px #ffffff, 0 15px 38px -35px rgba(49, 45, 100, 0.3) !important;
 }
 
 /* Emergencia no claro: cockpit luminoso, com vermelho reservado ao risco. */
 html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg {
-  --e-blue: #4b4fc4;
+  --e-blue: #246ac1;
   --e-blue-rgb: 75, 79, 196;
   --e-red: #b8283d;
   --e-red-rgb: 184, 40, 61;
-  --e-text: #1b2440;
-  --e-text-2: #4d5873;
+  --e-text: #18354b;
+  --e-text-2: #49677b;
   --e-text-3: #5e687f;
   --e-line: rgba(184, 40, 61, 0.18);
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
@@ -2521,7 +2521,7 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is
   .emerg__protocols,
   .emerg__safety
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 88% 8%, rgba(184, 40, 61, 0.08), transparent 18rem),
     linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(244, 240, 247, 0.9)) !important;
@@ -2536,7 +2536,7 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is
   .emerg__alvoCopy > strong,
   .emerg__safety strong
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
@@ -2546,7 +2546,7 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is
   .emerg__alvoCopy > span,
   .emerg__safety small
 ) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is(
@@ -2559,13 +2559,13 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg :is
   .emerg__loading,
   .emerg__semResultado
 ) {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(255, 255, 255, 0.82) !important;
   border-color: rgba(184, 40, 61, 0.23) !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .emerg__alvo:hover {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: linear-gradient(108deg, rgba(184, 40, 61, 0.11), rgba(255, 255, 255, 0.94) 48%) !important;
   border-color: #b8283d !important;
 }
@@ -2592,24 +2592,24 @@ html[data-corvia-theme="light"] body.corvia-route--emergencia .cv-app .emerg .em
  * Lunar em Ensino, Pesquisa e Gestao sem alterar sua geometria.
  */
 html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     linear-gradient(90deg, rgba(var(--cv-rgb), 0.032) 1px, transparent 1px),
     linear-gradient(rgba(var(--cv-rgb), 0.026) 1px, transparent 1px),
     radial-gradient(ellipse at 86% 16%, rgba(var(--cv-rgb), 0.1), transparent 18rem),
-    linear-gradient(108deg, rgba(255, 255, 255, 0.93), rgba(240, 241, 249, 0.88)) !important;
+    linear-gradient(108deg, rgba(255, 255, 255, 0.93), rgba(218, 234, 243, 0.88)) !important;
   background-size: 46px 46px, 46px 46px, auto, auto !important;
   border-color: rgba(var(--cv-rgb), 0.24) !important;
   box-shadow: inset 0 1px #ffffff, 0 17px 42px -37px rgba(49, 45, 100, 0.34) !important;
 }
 
 html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero :is(h1, h2, strong) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   text-shadow: none !important;
 }
 
 html[data-corvia-theme="light"] body[class*="corvia-space--"] .cv-app .cv-content .cv-page-hero :is(.cv-page-hero__space, .cv-page-hero__description) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] body:not(.corvia-route--emergencia) .cv-app .cv-content :is(
@@ -2619,29 +2619,29 @@ html[data-corvia-theme="light"] body:not(.corvia-route--emergencia) .cv-app .cv-
   [class$="__box"], [class*="__box "],
   [class$="__tile"], [class*="__tile "]
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 92% 8%, rgba(var(--cv-rgb), 0.07), transparent 16rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(240, 241, 249, 0.86)) !important;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.91), rgba(218, 234, 243, 0.86)) !important;
   border-color: rgba(var(--cv-rgb), 0.18) !important;
   box-shadow: inset 0 1px #ffffff, 0 15px 38px -35px rgba(49, 45, 100, 0.3) !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline,
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card__source {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(255, 255, 255, 0.76) !important;
   border-color: rgba(var(--cv-rgb), 0.16) !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline strong,
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card :is(.research-evidence-card__statement, .research-evidence-card__source strong) {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-trustline small,
 html[data-corvia-theme="light"] body.corvia-space--pesquisa .cv-app .research-evidence-card :is(.research-evidence-card__summary, time) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 /*
@@ -2655,7 +2655,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
   --management-rgb: 15, 114, 122;
   --management-panel: rgba(255, 255, 255, 0.94);
   --management-panel-soft: rgba(240, 241, 249, 0.88);
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-private {
@@ -2675,10 +2675,10 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-app .cv-content .c
   .management-state,
   .management-methodology
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background:
     radial-gradient(ellipse at 91% 8%, rgba(15, 114, 122, 0.075), transparent 17rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(240, 241, 249, 0.88)) !important;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(218, 234, 243, 0.88)) !important;
   border-color: rgba(15, 114, 122, 0.2) !important;
   box-shadow: inset 0 1px #ffffff, 0 16px 40px -36px rgba(49, 45, 100, 0.34) !important;
 }
@@ -2696,7 +2696,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
   .management-state h2,
   .management-methodology summary strong
 ) {
-  color: #1b2440 !important;
+  color: #18354b !important;
   text-shadow: none !important;
 }
 
@@ -2717,7 +2717,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
   .management-methodology ul,
   .management-methodology > div > p
 ) {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory :is(
@@ -2730,20 +2730,20 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(255, 255, 255, 0.82) !important;
   border-color: #81899e !important;
   box-shadow: inset 0 1px #ffffff !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button:hover {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(15, 114, 122, 0.08) !important;
   border-color: #0f727a !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-window__options button.is-active {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: linear-gradient(135deg, rgba(15, 114, 122, 0.13), rgba(255, 255, 255, 0.94)) !important;
   border-color: #0f727a !important;
   box-shadow: inset 0 -3px #0f727a, inset 0 1px #ffffff !important;
@@ -2780,7 +2780,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .is-idle .management-lens__status {
-  color: #4d5873 !important;
+  color: #49677b !important;
   background: rgba(255, 255, 255, 0.65) !important;
   border-color: rgba(129, 137, 158, 0.52) !important;
 }
@@ -2804,7 +2804,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring span {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens__ring small,
@@ -2820,7 +2820,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-lens dd,
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-distribution__row > div strong,
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-detail__heading > span {
-  color: #1b2440 !important;
+  color: #18354b !important;
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-detail__heading > span {
@@ -2839,7 +2839,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-state button:hover {
-  color: #1b2440 !important;
+  color: #18354b !important;
   background: rgba(15, 114, 122, 0.1) !important;
 }
 
@@ -2859,7 +2859,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
 }
 
 html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observatory .management-methodology summary > svg {
-  color: #4d5873 !important;
+  color: #49677b !important;
 }
 
 /*
@@ -2869,7 +2869,7 @@ html[data-corvia-theme="light"] body.corvia-space--gestao .cv-management-observa
  * para o mesmo perola/lavanda do restante do modo claro.
  */
 html[data-corvia-theme="light"] .spaces-day__item {
-  color: #1b2440;
+  color: #18354b;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(238, 242, 250, 0.8));
   border-color: rgba(75, 79, 196, 0.24);
   box-shadow: inset 0 1px #ffffff, 0 9px 22px -21px rgba(49, 45, 100, 0.42);
@@ -2877,20 +2877,20 @@ html[data-corvia-theme="light"] .spaces-day__item {
 
 html[data-corvia-theme="light"] .spaces-day__item:hover,
 html[data-corvia-theme="light"] .spaces-day__item:focus-visible {
-  color: #1b2440;
+  color: #18354b;
   background: linear-gradient(145deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.94));
   border-color: rgba(var(--space-rgb), 0.5);
 }
 
 html[data-corvia-theme="light"] .spaces-stellar-route__metrics > * {
-  color: #4d5873;
+  color: #49677b;
   background: rgba(255, 255, 255, 0.82);
   border-color: rgba(75, 79, 196, 0.2);
   box-shadow: inset 0 1px #ffffff;
 }
 
 html[data-corvia-theme="light"] .spaces-stellar-route__metrics > strong {
-  color: #1b2440;
+  color: #18354b;
 }
 
 html[data-corvia-theme="light"] .spaces-stellar-route[data-traffic="light"] .spaces-stellar-route__metrics > :last-child {
@@ -2931,14 +2931,14 @@ html[data-corvia-theme="light"] .spaces-layer--now {
 html[data-corvia-theme="light"] :is(.spaces-layer--next, .spaces-layer--refs) {
   background:
     radial-gradient(ellipse at 9% 50%, rgba(var(--space-rgb), 0.15), transparent 34%),
-    linear-gradient(90deg, rgba(var(--space-rgb), 0.09), rgba(255, 255, 255, 0.95) 45%, rgba(121, 87, 200, 0.045));
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.09), rgba(255, 255, 255, 0.95) 45%, rgba(75, 188, 215, 0.045));
   border-color: rgba(var(--space-rgb), 0.34);
 }
 
 html[data-corvia-theme="light"] .spaces-layer--essential {
   background:
     radial-gradient(ellipse at 9% 50%, rgba(var(--space-rgb), 0.17), transparent 35%),
-    linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.95) 44%, rgba(121, 87, 200, 0.08));
+    linear-gradient(90deg, rgba(var(--space-rgb), 0.1), rgba(255, 255, 255, 0.95) 44%, rgba(75, 188, 215, 0.08));
   border-color: rgba(var(--space-rgb), 0.38);
 }
 
@@ -2982,7 +2982,7 @@ html[data-corvia-theme="light"] .spaces-layer__edit svg {
 
 html[data-corvia-theme="light"] .spaces-layer__edit:hover,
 html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible {
-  color: #1b2440;
+  color: #18354b;
   background: transparent;
   border: 0;
 }
@@ -2996,7 +2996,7 @@ html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible::before {
 }
 
 html[data-corvia-theme="light"] .spaces-layer__edit:focus-visible {
-  outline: 3px solid #4b4fc4 !important;
+  outline: 3px solid #246ac1 !important;
   outline-offset: -1px;
 }
 
@@ -3071,7 +3071,7 @@ html[data-corvia-theme="light"] .spaces-home__topbar .spaces-brand strong {
 html[data-corvia-theme="light"] .spaces-door > i {
   background:
     radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.98), rgba(var(--door-rgb), 0.09) 72%),
-    linear-gradient(180deg, #ffffff, #eef2fa);
+    linear-gradient(180deg, #ffffff, #e2eff7);
   border-color: rgba(var(--door-rgb), 0.46);
   box-shadow: inset 0 1px #ffffff, inset 0 0 42px rgba(var(--door-rgb), 0.08), 0 18px 36px -27px rgba(var(--door-rgb), 0.52);
 }
@@ -3102,7 +3102,7 @@ html[data-corvia-theme="light"] .spaces-door.is-active > i::before {
 html[data-corvia-theme="light"] .spaces-door.is-active > i {
   background:
     radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 1), rgba(var(--door-rgb), 0.13) 76%),
-    linear-gradient(180deg, #ffffff, #eef2fa);
+    linear-gradient(180deg, #ffffff, #e2eff7);
   border-color: rgba(var(--door-rgb), 0.78);
   box-shadow:
     inset 0 1px #ffffff,
@@ -3142,3 +3142,19 @@ html[data-corvia-theme="light"] .spaces-layer:focus-within .spaces-action {
     transition: none;
   }
 }
+/* A timeline também usa superfícies claras, inclusive seus cartões legados. */
+html[data-corvia-theme="light"] .scientific-timeline-page :is(.timeline-doenca__entrada, .timeline-doenca__cartao) {
+  background: linear-gradient(135deg, #ffffff, #eef2fc);
+  border-color: #cdd5eb;
+  box-shadow: 0 5px 18px rgba(49, 63, 105, .04);
+}
+html[data-corvia-theme="light"] .scientific-timeline-page :is(.timeline-doenca__entrada strong, .timeline-doenca__titulo, .timeline-doenca__ano, .timeline-doenca__sublista a) { color: #253452; }
+html[data-corvia-theme="light"] .scientific-timeline-page :is(.timeline-doenca__entrada span, .timeline-doenca__resumo, .timeline-doenca__fonte, .timeline-doenca__classe, .scientific-timeline-page__topic) { color: #50627e; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__seletor { background: transparent; border-color: #d6dded; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__chip { color: #354765; background: #f7f9ff; border-color: #cdd5eb; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__chip span { color: #596b86; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__chip--ativo { color: #623ca1; background: #eee7fc; border-color: #a58acd; }
+html[data-corvia-theme="light"] .scientific-timeline-page :is(.timeline-doenca__selo, .timeline-doenca__alternar) { color: #66469c; background: #f0eafa; border-color: #c8b5e4; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__selo--diretriz { color: #23627e; background: #e5f5fc; border-color: #afd4e8; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__decada-rotulo { color: #7449ac; }
+html[data-corvia-theme="light"] .scientific-timeline-page .timeline-doenca__marcador { background: #8655c1; border-color: #f5f8fe; box-shadow: none; }
