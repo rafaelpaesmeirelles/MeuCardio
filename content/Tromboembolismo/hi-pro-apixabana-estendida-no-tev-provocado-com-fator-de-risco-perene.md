@@ -20,7 +20,7 @@ O subgrupo "provocado" do AMPLIFY-EXT (~9% da amostra, cerca de 200 pacientes) e
 
 ## Desenho do estudo
 
-Ensaio de centro único (Brigham and Women's Hospital, EUA), randomizado, duplo-cego, controlado por placebo, financiado pela aliança Bristol-Myers Squibb–Pfizer (ClinicalTrials.gov NCT04600492 [NCT04168203]; PMID 40888734).
+Ensaio de centro único (Brigham and Women's Hospital, EUA), randomizado, duplo-cego, controlado por placebo, financiado pela aliança Bristol-Myers Squibb–Pfizer (ClinicalTrials.gov NCT04168203; PMID 40888734).
 
 **População**: adultos com TEV provocado (TVP e/ou TEP), confirmado objetivamente, tratados por pelo menos 3 meses com anticoagulação terapêutica padrão, sem recorrência sintomática durante esse tratamento, com **pelo menos um** dos seguintes fatores de risco perenes:
 
