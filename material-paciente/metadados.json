@@ -1614,15 +1614,15 @@
         "paragrafos": [
           "O ecocardiograma mede a gravidade do estreitamento. Quando a estenose é grave e causa sintomas, o tratamento (troca da valva) é recomendado — remédio sozinho não resolve o estreitamento mecânico.",
           "A decisão entre operar (cirurgia aberta, chamada SAVR) ou implantar uma valva por cateter (TAVI, sem abrir o tórax) é discutida por uma equipe (o chamado 'Heart Team'), levando em conta idade, outras doenças, formato da sua aorta e valva, e a sua própria preferência.",
-          "Um dos fatores mais importantes na decisão hoje é a idade: a diretriz mais atual (2025) recomenda o TAVI como via preferencial a partir dos 70 anos em valva de três folhetos, e a cirurgia continua sendo a primeira escolha em quem é mais jovem e tem baixo risco cirúrgico."
+          "A idade é um dos fatores da escolha. A equipe também considera expectativa de vida, anatomia da valva e dos vasos de acesso, risco da cirurgia, outras doenças e suas preferências; a idade isolada não define o melhor procedimento."
         ],
         "itens": []
       },
       {
         "titulo": "O que esperar depois do procedimento",
         "paragrafos": [
-          "Nos primeiros meses após o implante de uma valva biológica (seja por cirurgia ou por cateter), costuma ser usado um medicamento para reduzir o risco de coágulo na valva nova, enquanto ela ainda está 'se acomodando' — essa fase de maior risco dura cerca de três meses.",
-          "Depois disso, se você não tiver outro motivo para usar anticoagulante (como fibrilação atrial), o remédio costuma ser suspenso.",
+          "Não existe uma regra de parar os medicamentos aos três meses. Após TAVI, cirurgia com valva biológica ou cirurgia com valva mecânica, o plano para prevenir coágulos é diferente. Na valva mecânica, é necessário anticoagulante antagonista da vitamina K, como varfarina, de uso contínuo e com controle do exame INR; na biológica, a escolha e a duração dependem também do procedimento, de outras doenças e do risco de sangramento.",
+          "Fibrilação atrial e outras condições podem exigir anticoagulação continuada. Peça à equipe um plano escrito e não suspenda, troque ou associe medicamentos por conta própria.",
           "É importante avisar qualquer profissional de saúde — inclusive o dentista — que você tem uma prótese valvar, porque em alguns procedimentos é recomendado usar antibiótico antes, para reduzir o risco de infecção na valva."
         ],
         "itens": []
@@ -1643,8 +1643,10 @@
     ],
     "fontes": [
       "Diretriz de valvopatias da Sociedade Europeia de Cardiologia e da Associação Europeia de Cirurgia Cardiotorácica, 2025 (atualização) e 2021",
-      "Consórcio de Pesquisa Acadêmica de Valva (VARC-3), 2021"
-    ]
+      "Consórcio de Pesquisa Acadêmica de Valva (VARC-3), 2021",
+      "Vahanian A et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43:561-632. DOI: 10.1093/eurheartj/ehab395. Seções 5.1 e 11.3 consultadas em 09/09/2026. https://pmc.ncbi.nlm.nih.gov/articles/PMC9725093/"
+    ],
+    "review_note": "Correção focal em 09/09/2026: removida suspensão generalizada de antitrombóticos após três meses; não representa revisão integral dos demais parágrafos. Revisão cruzada concluída., sem validação humana declarada. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   },
   {
     "slug": "febre-reumatica-e-cardiopatia-reumatica",
@@ -6804,78 +6806,69 @@
   {
     "slug": "por-que-tomar-dois-remedios-para-o-sangue-depois-do-infarto-ou-stent",
     "titulo": "Por que preciso tomar dois remédios para o sangue depois do meu infarto ou stent",
-    "subtitulo": "O que é a dupla antiagregação, por quanto tempo ela dura, e por que o momento de parar é decisão do seu médico — nunca sua, sozinho",
+    "subtitulo": "Entenda a combinação e confira com a equipe quando ela será reavaliada",
     "tema": "Doença coronariana",
     "documento_slug": "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
-    "resumo": "Explicação em linguagem simples sobre por que, depois de um infarto ou da colocação de um stent, costuma-se tomar dois remédios diferentes para o sangue ao mesmo tempo (dupla antiagregação plaquetária), por quanto tempo isso dura, e por que parar antes da hora — mesmo se sentindo bem — é um dos erros mais perigosos dessa fase.",
+    "resumo": "Orientação sobre medicamentos que evitam coágulos após infarto ou stent, com plano individual e sem interrupção por conta própria.",
     "review_status": "revisado",
     "secoes": [
       {
-        "titulo": "O que é a dupla antiagregação, e por que dois remédios em vez de um",
+        "titulo": "O que são os dois remédios",
         "paragrafos": [
-          "As plaquetas são as células do sangue responsáveis por formar coágulos. Depois de um infarto ou da colocação de um stent, existe um período em que o risco de um coágulo se formar bem naquele ponto do coração — onde a placa se rompeu, ou onde o stent foi colocado — é maior do que o normal.",
-          "Os dois remédios usados (o AAS e um segundo remédio de outra classe, chamado inibidor de P2Y12) agem sobre as plaquetas por caminhos diferentes. Usados juntos, eles bloqueiam a formação de coágulo de forma bem mais eficaz do que qualquer um dos dois sozinho — é por isso que a combinação é usada, e não porque 'quanto mais remédio, melhor'."
+          "Depois de um infarto ou de um stent, é comum usar AAS junto de outro medicamento que reduz a ação das plaquetas, como clopidogrel ou ticagrelor. Essa combinação ajuda a prevenir coágulos. Não significa juntar todas as receitas que você recebeu."
         ],
         "itens": []
       },
       {
-        "titulo": "Por que o momento de parar é tão importante",
+        "titulo": "O prazo depende do seu caso",
         "paragrafos": [
-          "Um coágulo que se forma dentro de um stent recém-colocado é chamado de trombose de stent — é uma emergência, com gravidade comparável à de um novo infarto, e é justamente isso que a dupla antiagregação existe para evitar enquanto a artéria ainda está se recuperando ao redor do stent.",
-          "Um estudo recente testou parar um dos dois remédios (o AAS) já nos primeiros dias depois do stent, em vez de esperar o tempo padrão. O resultado: sangramento realmente diminuiu, mas o número de casos de trombose de stent foi maior no grupo que parou cedo (12 pacientes) do que no grupo que manteve os dois remédios (4 pacientes) — e o estudo não conseguiu comprovar que a proteção contra novos eventos ficou preservada. Por isso, entre as diretrizes atuais, reduzir a intensidade do tratamento nos primeiros 30 dias depois de um evento coronariano agudo é formalmente contraindicado.",
-          "Essa é a razão prática por trás da orientação que você provavelmente já ouviu: não pare nenhum dos dois remédios por conta própria, mesmo se sentir que está bem — o risco que eles previnem não avisa antes de acontecer."
+          "Na síndrome coronariana aguda sem alto risco de sangramento, a estratégia habitual é manter a combinação por pelo menos 12 meses. Há alternativas selecionadas pela equipe para reduzir sangramento. Quem também precisa de anticoagulante, por exemplo por fibrilação atrial, pode receber orientação para retirar AAS já nas primeiras semanas após o stent. Portanto, não existe uma proibição universal de qualquer ajuste no primeiro mês.",
+          "Uma mudança planejada pelo médico é diferente de parar sozinho. Peça o nome do medicamento, a data e o motivo de cada alteração por escrito."
         ],
         "itens": []
       },
       {
-        "titulo": "Por quanto tempo você vai tomar os dois",
+        "titulo": "Não interrompa nem duplique por conta própria",
         "paragrafos": [
-          "Para a maioria das pessoas depois de uma síndrome coronariana aguda (infarto ou angina instável), o tempo padrão de dupla antiagregação é de 12 meses — essa é, até hoje, a única recomendação com o grau mais alto de confiança nessa área, depois de quase duas décadas de estudo.",
-          "Em pacientes com risco de sangramento maior que a média, avaliado com cuidado pelo médico, estudos mostraram que é possível, em casos selecionados e sob supervisão, encurtar esse prazo — por exemplo, para cerca de um mês — sem aumento nos eventos de coágulo e com menos sangramento. Em outros pacientes considerados estáveis depois do primeiro mês, um estudo mostrou que trocar a estratégia (mantendo só um dos dois remédios, em vez dos dois) também reduziu sangramento sem prejuízo de proteção.",
-          "Já em quem tem risco maior de um novo evento, o médico pode recomendar manter os dois remédios por mais tempo do que os 12 meses padrão.",
-          "O ponto comum a todas essas situações: quem decide encurtar, prolongar ou trocar a estratégia é o seu médico, avaliando o seu risco específico de sangramento e de novo evento — nunca é uma decisão para fazer sozinho, nem mesmo para 'testar' como você se sente sem um dos remédios."
+          "Após um stent recente, ficar sem a proteção prescrita pode ser perigoso. Se aparecerem manchas ou algum sintoma novo, comunique à equipe. Sangramento importante exige atendimento imediato; a equipe decidirá como tratar e ajustar a prescrição.",
+          "Leve as caixas e receitas para conferência. Avise se não conseguiu comprar um produto ou se juntou uma receita antiga com a nova. A equipe precisa saber o que você tomou de verdade."
         ],
         "itens": []
       },
       {
-        "titulo": "Antes de qualquer procedimento, mesmo simples",
+        "titulo": "Antes de cirurgia ou tratamento dentário",
         "paragrafos": [
-          "Extração de dente, pequenas cirurgias, endoscopia — qualquer procedimento que alguém sugerir que você pare os remédios do sangue antes precisa passar primeiro pelo médico que os prescreveu, não só por quem vai realizar o procedimento.",
-          "Existe um plano específico para cada situação, que leva em conta há quanto tempo você colocou o stent ou teve o infarto, e o risco de sangramento do procedimento em si. Parar por conta própria, mesmo por poucos dias, pode coincidir justamente com o período de maior risco."
+          "Informe a data do infarto e do stent e apresente a lista completa. Peça que o profissional e a equipe do coração combinem o plano quando houver proposta de alterar os remédios. Não use a orientação de outra pessoa como se valesse para você."
         ],
         "itens": []
       },
       {
-        "titulo": "Se esquecer uma dose ou tiver dúvida",
+        "titulo": "Se esquecer uma dose",
         "paragrafos": [
-          "Se você esquecer de tomar um dos remédios, ou tiver qualquer dúvida sobre o que fazer, o caminho certo é entrar em contato com sua equipe médica em vez de decidir por conta própria — inclusive sobre se deve tomar a dose esquecida assim que lembrar."
+          "Consulte a orientação específica daquele medicamento ou sua equipe; não compense automaticamente com dose dupla. Registre a dúvida para receber instrução clara sobre o que fazer se acontecer novamente."
         ],
         "itens": []
       }
     ],
     "sinais_de_alerta": [
-      "Dor no peito nova ou parecida com a do seu infarto — procure emergência imediatamente, principalmente nas primeiras semanas depois do stent",
-      "Sangramento que não para depois de dez a quinze minutos de compressão",
-      "Fezes pretas como piche, sangue nas fezes, ou vômito com sangue ou com aspecto de borra de café",
-      "Urina avermelhada ou muito escura",
-      "Manchas roxas que aparecem com muita facilidade, ou muito maiores do que o esperado para o que causou",
-      "Dor de cabeça muito forte e diferente do habitual, principalmente depois de uma queda ou batida"
+      "Dor torácica nova, falta de ar intensa ou súbita, desmaio ou sintomas semelhantes aos do infarto: atendimento imediato; ligue 192.",
+      "Sangramento importante ou persistente, vômito com sangue ou fezes negras com fraqueza/tontura: procure emergência.",
+      "Boca torta, dificuldade súbita para falar ou perda de força em um lado do corpo: ligue 192.",
+      "Manchas pequenas sem outros sintomas: comunique à equipe; não use isso como motivo para suspender o tratamento sozinho."
     ],
     "perguntas": [
-      "Quais são exatamente os dois remédios que estou tomando, e o que cada um faz?",
-      "Por quanto tempo devo tomar os dois juntos no meu caso específico?",
-      "Eu tenho risco de sangramento maior que o normal? Isso muda meu tratamento?",
-      "O que eu faço se precisar de uma cirurgia ou ir ao dentista antes do prazo previsto?",
-      "O que fazer se eu esquecer uma dose?",
-      "Quando e como essa combinação vai ser reavaliada?"
+      "Quais são os nomes e horários exatos dos medicamentos do meu plano?",
+      "Qual receita substitui as anteriores?",
+      "Tenho indicação de anticoagulante além dos remédios para as plaquetas?",
+      "Quando a combinação será reavaliada e quem fará isso?",
+      "Como entro em contato se sangrar, sentir falta de ar ou não conseguir comprar um medicamento?"
     ],
     "fontes": [
-      "Valgimigli M, Frigoli E, Heg D, et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk (MASTER DAPT). N Engl J Med. 2021;385(18):1643-1655. PMID: 34449185.",
-      "Ge Z, Kan J, Gao X, et al. Extended Clopidogrel Monotherapy vs DAPT in Patients With Acute Coronary Syndromes at High Ischemic and Bleeding Risk (OPT-BIRISK). JAMA Cardiol. 2024;9(6):523-531. PMID: 38630489.",
-      "Guimarães PO, et al. Early Withdrawal of Aspirin after PCI in Acute Coronary Syndromes (NEO-MINDSET). N Engl J Med. 2025;393:2095-2106. PMID: 40888723.",
-      "Ge Z, et al. Ticagrelor alone versus ticagrelor plus aspirin from month 1 to month 12 after PCI in ACS (ULTIMATE-DAPT). Lancet. 2024;403:1866-1878. PMID: 38599220.",
-      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. PMID: 37622654 — Classe III contra desescalonamento nos primeiros 30 dias."
-    ]
+      "Rao SV, et al. 2025 ACC/AHA Guideline for Acute Coronary Syndromes. DOI: 10.1161/CIR.0000000000001309. Síntese oficial, item 2: https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know",
+      "FDA. BRILINTA (ticagrelor), informação de prescrição, revisão 03/2024, orientação ao paciente e risco de interrupção: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf",
+      "Ministério da Saúde. SAMU 192: https://www.gov.br/saude/pt-br/composicao/saes/samu-192"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   },
   {
     "slug": "infarto-sem-entupimento-da-arteria-o-que-e-minoca-e-a-dissecacao-espontanea-scad",
@@ -31670,5 +31663,399 @@
       "New-onset atrial fibrillation after cavotricuspid isthmus ablation: identification of advanced interatrial block is key. EP Europace."
     ],
     "review_note": "Revisão técnica, documental e de consistência assistida concluída em 04/09/2026; fontes, duplicidade, integridade estrutural e segurança editorial verificadas para preparação do corpus sob autorização do responsável médico. Proveniência validada pelo documento canônico `flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo`."
+  },
+  {
+    "slug": "apos-trocar-remedio-da-pressao-como-organizar-retorno-e-observar-inchaco",
+    "titulo": "Troquei o remédio da pressão: o que levar e observar até o retorno",
+    "subtitulo": "Uma folha de preparação para conferir a receita nova, os sintomas e os exames combinados",
+    "tema": "Hipertensão",
+    "documento_slug": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+    "review_status": "revisado",
+    "resumo": "Ajuda a pessoa a organizar as primeiras semanas após uma mudança no tratamento, especialmente quando havia inchaço ou dificuldade para seguir os horários.",
+    "secoes": [
+      {
+        "titulo": "Antes de sair da consulta",
+        "paragrafos": [
+          "Peça uma lista única e legível. Confira quais remédios continuam, quais foram retirados e quais entram no lugar. Uma receita nova pode substituir parte da antiga; não some as duas por conta própria."
+        ],
+        "itens": [
+          "Mostre como pretende tomar cada comprimido e confirme se entendeu corretamente.",
+          "Pergunte a quem avisar se o remédio não estiver disponível ou o custo impedir a compra.",
+          "Anote a data do retorno e quem receberá os exames."
+        ]
+      },
+      {
+        "titulo": "Uma anotação curta ajuda mais do que tentar lembrar tudo",
+        "paragrafos": [
+          "Registre data, remédios realmente tomados e sintomas novos. Se esqueceu uma dose, conte isso sem receio: a informação ajuda a ajustar o plano. Peça orientação específica sobre o que fazer quando esquecer; não dobre por iniciativa própria."
+        ],
+        "itens": [
+          "Leve a receita e as caixas ou fotos dos medicamentos.",
+          "Se recebeu orientação para medir em casa, leve todos os registros, sem selecionar apenas os melhores.",
+          "Anote se o inchaço mudou e se apareceu tontura ou limitação nas atividades."
+        ]
+      },
+      {
+        "titulo": "Se havia inchaço nas pernas",
+        "paragrafos": [
+          "Alguns remédios podem causar inchaço nos tornozelos. O médico pode ajustar a dose ou trocar o medicamento após avaliar a causa. Não comece um diurético por conta própria para desinchar.",
+          "O desaparecimento do inchaço não comprova que a pressão e os exames estão adequados. Mantenha o acompanhamento combinado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Pressão melhor não significa interromper o tratamento",
+        "paragrafos": [
+          "As medidas de casa ajudam a acompanhar a resposta, mas não substituem as consultas. Não suspenda o remédio porque uma leitura ficou boa. Se surgir um problema ou você não conseguir realizar o exame solicitado, avise a equipe para reorganizar o plano."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito, falta de ar súbita, desmaio, dificuldade para falar ou perda de força: procure emergência imediatamente; no Brasil, ligue 192.",
+      "Inchaço súbito de uma perna com dor ou calor precisa de avaliação urgente.",
+      "Tontura importante, queda ou piora rápida do estado geral: procure avaliação sem aguardar o retorno marcado."
+    ],
+    "perguntas": [
+      "Quais comprimidos antigos devo deixar de tomar?",
+      "Quais exames preciso fazer, quando e quem os avaliará?",
+      "Qual é minha meta de pressão e como devo medir até o retorno?",
+      "Como entrar em contato se houver sintoma novo ou dificuldade de acesso ao remédio?"
+    ],
+    "fontes": [
+      "American Heart Association. Home Blood Pressure Monitoring. https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home",
+      "NHS Specialist Pharmacy Service. Managing peripheral oedema caused by calcium channel blockers. Atualização 26/05/2026. https://sps.nhs.uk/articles/managing-peripheral-oedema-caused-by-calcium-channel-blockers/",
+      "AHA/ACC. 2025 High Blood Pressure Guideline; síntese oficial, 14/08/2025. https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "meu-coracao-melhorou-posso-parar-os-remedios-da-insuficiencia-cardiaca",
+    "titulo": "Meu coração melhorou: posso parar os remédios?",
+    "subtitulo": "Como cuidar da insuficiência cardíaca quando a fração de ejeção se recupera",
+    "tema": "Insuficiência cardíaca",
+    "documento_slug": "icfer-classificacao-diagnostico-quatro-pilares",
+    "review_status": "revisado",
+    "resumo": "Orientação para quem tinha a força de bombeamento reduzida e apresentou melhora com o tratamento. Ajuda a preparar o retorno, conversar sobre efeitos adversos e entender por que um exame melhor não encerra os cuidados.",
+    "secoes": [
+      {
+        "titulo": "O exame melhorou, e isso merece ser acompanhado",
+        "paragrafos": [
+          "A fração de ejeção é uma medida do bombeamento do coração. Quando ela melhora durante o tratamento, isso é uma boa resposta. Porém, um número melhor no ecocardiograma não garante que a tendência à doença desapareceu.",
+          "Em um estudo com pessoas que haviam recuperado a função do coração após cardiomiopatia dilatada, parte voltou a apresentar a doença depois da retirada dos medicamentos. Essa pesquisa não incluiu todas as causas de insuficiência cardíaca, mas ajuda a explicar por que a suspensão precisa ser discutida com cuidado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "A melhora sozinha não é motivo para suspender",
+        "paragrafos": [
+          "Em geral, mantém-se o tratamento que protege o coração mesmo quando os sintomas desaparecem. Continue conforme sua prescrição. Se um medicamento causar dificuldade, converse com a equipe: pode ser possível ajustar a dose, o horário ou a combinação, sem abandonar todo o tratamento."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Leve três registros à próxima consulta",
+        "paragrafos": [
+          "Organizar estas informações ajuda a equipe a diferenciar melhora, efeito de remédio e retorno de sintomas. Você pode anotá-las no celular ou em uma folha."
+        ],
+        "itens": [
+          "Os ecocardiogramas anterior e atual, com suas datas.",
+          "A lista do que realmente toma, incluindo doses, horários, suplementos e remédios sem receita; mostre também o que parou de usar.",
+          "As mudanças que percebeu: o que consegue fazer, cansaço, inchaço, tontura e dificuldades para conseguir ou tomar os remédios."
+        ]
+      },
+      {
+        "titulo": "Saia da consulta com um combinado claro",
+        "paragrafos": [
+          "Peça que a equipe registre o próximo retorno, os exames necessários e quem vai conferir os resultados. Se uma dose for alterada ou um medicamento for interrompido, pergunte como será reavaliado. Não reduza drasticamente a água nem aumente o diurético por conta própria; o plano depende de como você está naquele momento."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar importante em repouso, desmaio, confusão ou dor forte/persistente no peito: procure atendimento de emergência; ligue 192 se necessário.",
+      "Falta de ar ao deitar, inchaço que aumenta, ganho rápido de peso ou cansaço progressivo: entre em contato com a equipe para antecipar a avaliação.",
+      "Tontura repetida, perda rápida de peso, dificuldade de beber ou redução importante da urina: avise a equipe no mesmo dia. Se houver desmaio ou piora acentuada, procure emergência."
+    ],
+    "perguntas": [
+      "Qual era e qual é agora a minha fração de ejeção? O que mudou no restante do exame?",
+      "Quais remédios preciso continuar para proteger o coração e quais dependem do meu inchaço ou de outra doença?",
+      "A tontura ou outro sintoma que estou sentindo pode exigir algum ajuste?",
+      "Quando farei o próximo exame e quem vai conferir o resultado?",
+      "Qual telefone devo usar se os sintomas mudarem antes do retorno?"
+    ],
+    "fontes": [
+      "AHA/ACC/HFSA. 2022 Guideline for the Management of Heart Failure, seção HF With Improved Ejection Fraction. https://professional.heart.org/en/science-news/-/media/832EA0F4E73948848612F228F7FA2D35.ashx",
+      "Halliday BP, Wassall R, Lota AS, et al. TRED-HF. Lancet. 2019;393:61–73. PMID 30429050. https://pubmed.ncbi.nlm.nih.gov/30429050/",
+      "American Heart Association. Heart Failure Signs and Symptoms. https://www.heart.org/en/health-topics/heart-failure/warning-signs-of-heart-failure",
+      "EMA. Forxiga: informação do produto, segurança na depleção volêmica. https://www.ema.europa.eu/en/documents/product-information/forxiga-epar-product-information_en.pdf"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "diario-de-palpitacoes-e-retorno-do-holter-como-participar",
+    "titulo": "Palpitações: o diário que ajuda a entender seu exame",
+    "subtitulo": "Como registrar o que sentiu e preparar a consulta de retorno",
+    "tema": "Arritmias",
+    "documento_slug": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+    "review_status": "revisado",
+    "resumo": "Um roteiro prático para relacionar suas sensações ao registro do coração e conversar sobre o resultado.",
+    "secoes": [
+      {
+        "titulo": "O que o aparelho registra",
+        "paragrafos": [
+          "O Holter registra a atividade elétrica do coração durante suas atividades. O diário informa o que você sentiu naquele horário. Leve os dois ao retorno."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Anote quando acontecer",
+        "paragrafos": [
+          "Use este modelo: horário — o que eu fazia — o que senti — quanto durou — outros sintomas. Exemplo fictício: 15h20 — sentado — três falhas rápidas — poucos segundos — sem tontura."
+        ],
+        "itens": [
+          "Diferencie uma falha breve de uma crise de coração disparado.",
+          "Se houver botão de evento, use-o como a equipe ensinou.",
+          "Siga as orientações específicas de cuidados com o aparelho."
+        ]
+      },
+      {
+        "titulo": "Se a crise não apareceu",
+        "paragrafos": [
+          "Avise no retorno. O médico poderá discutir um registro mais longo quando os episódios forem espaçados. A consulta deve esclarecer qual queixa foi registrada e qual ainda precisa ser investigada."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Prepare seu retorno",
+        "paragrafos": [
+          "Traga o laudo, o diário e a lista dos medicamentos usados. Informe problemas com eletrodos ou gravação. Não mude o tratamento para tentar provocar uma crise."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou pressão no peito, falta de ar intensa ou desmaio associados à palpitação: procure atendimento imediato; em emergência, ligue 192.",
+      "Não espere a devolução do aparelho ou a consulta marcada se houver sintomas de alarme."
+    ],
+    "perguntas": [
+      "A crise que mais me incomoda apareceu na gravação?",
+      "Preciso de outro período de registro?",
+      "Qual é o plano e quando devo retornar?"
+    ],
+    "fontes": [
+      "American Heart Association. Holter Monitor. Atualizado em 25/02/2025; consultado em 09/09/2026. https://www.heart.org/en/health-topics/arrhythmia/symptoms-diagnosis--monitoring-of-arrhythmia/holter-monitor",
+      "American Heart Association. Cardiac Event Recorder. Atualizado em 10/10/2024; consultado em 09/09/2026. https://www.heart.org/en/health-topics/arrhythmia/symptoms-diagnosis--monitoring-of-arrhythmia/cardiac-event-recorder",
+      "American Heart Association. Symptoms, Diagnosis and Monitoring of Arrhythmia. Atualizado em 10/10/2024; consultado em 09/09/2026. https://www.heart.org/en/health-topics/arrhythmia/symptoms-diagnosis--monitoring-of-arrhythmia"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "primeiro-retorno-apos-infarto-leve-remedios-receitas-e-duvidas",
+    "titulo": "Primeiro retorno após o infarto: leve remédios, receitas e dúvidas",
+    "subtitulo": "Prepare a consulta para sair com uma lista única e um plano que você entenda",
+    "tema": "Doença coronariana",
+    "documento_slug": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+    "review_status": "revisado",
+    "resumo": "Roteiro para organizar o que você realmente toma, explicar dificuldades e conferir as orientações depois da internação.",
+    "secoes": [
+      {
+        "titulo": "Monte uma sacola para a consulta",
+        "paragrafos": [
+          "Separe as caixas ou fotos legíveis dos medicamentos que usa. Inclua os que já tomava antes da internação, mesmo que não apareçam na receita nova. Leve também as receitas, o resumo de alta e o resultado do cateterismo, se tiver. Você não precisa adivinhar qual papel está certo: a equipe fará essa conferência com você."
+        ],
+        "itens": [
+          "Remédios de uso diário e os tomados só quando sente algum sintoma.",
+          "Vitaminas, suplementos, chás e medicamentos comprados sem receita.",
+          "Uma anotação de horários, doses esquecidas e produtos que não conseguiu comprar."
+        ]
+      },
+      {
+        "titulo": "Mostre como você toma de verdade",
+        "paragrafos": [
+          "Na consulta, aponte cada caixa e conte quantos comprimidos toma e em que horário. Se juntou receitas de serviços diferentes, diga isso. Avise se uma caixa mudou de nome ou aparência. Nomes diferentes podem causar confusão; não acrescente ou retire produtos tentando resolver a dúvida sozinho."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Manchas, falta de ar e dúvidas precisam ser contadas",
+        "paragrafos": [
+          "Anote quando o sintoma começou e se aparece em repouso ou nas atividades. Manchas roxas pequenas merecem ser mostradas à equipe; falta de ar nova precisa de avaliação. Não conclua sozinho que tudo é efeito do remédio. Se houver sinais de emergência abaixo, não espere a consulta.",
+          "Se as receitas parecem mandar tomar remédios repetidos, procure a equipe no mesmo dia para receber uma orientação individual. Não escolha uma receita ao acaso. Se o medicamento estiver acabando ou não couber no orçamento, avise antes: o plano precisa ser possível de seguir."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Saia com as respostas por escrito",
+        "paragrafos": [
+          "Peça uma lista única, com a data da atualização. Mostre a lista às outras equipes que cuidam de você, inclusive antes de procedimentos odontológicos. Use a explicação do profissional para conferir o que fará em casa."
+        ],
+        "itens": [
+          "Nome, quantidade e horário de cada remédio; quais receitas foram substituídas.",
+          "Quais mudanças serão reavaliadas, em que data e por quem.",
+          "Como entrar em contato se houver efeitos indesejados ou dificuldade de acesso.",
+          "Data do retorno, exames realmente solicitados e orientação sobre reabilitação cardíaca."
+        ]
+      },
+      {
+        "titulo": "Não interrompa por conta própria",
+        "paragrafos": [
+          "Os remédios que evitam coágulos têm um plano individual. Interromper o tratamento sem orientação pode ser perigoso, especialmente após um stent recente. Se houver sangramento importante, procure atendimento imediatamente e leve a lista; a equipe decidirá como tratar o sangramento e ajustar os medicamentos."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou pressão nova no peito, principalmente em repouso, ou semelhante à que motivou a internação: procure emergência; ligue 192 se houver suspeita de infarto.",
+      "Falta de ar intensa ou súbita, desmaio ou suor frio com mal-estar: ligue 192.",
+      "Sangramento importante, vômito com sangue ou fezes negras, pegajosas, como piche: procure atendimento imediatamente, mesmo sem fraqueza ou tontura.",
+      "Fraqueza súbita de um lado do corpo, boca torta ou dificuldade para falar: ligue 192."
+    ],
+    "perguntas": [
+      "Pode conferir minhas caixas com as receitas e escrever qual lista devo seguir?",
+      "O que devo fazer se não conseguir comprar um dos remédios?",
+      "Como devo agir se esquecer uma dose deste medicamento específico?",
+      "Quais sintomas exigem contato no mesmo dia e quais exigem emergência?",
+      "Quando será meu retorno e como começo a reabilitação indicada?"
+    ],
+    "fontes": [
+      "Rao SV, et al. Diretriz AHA/ACC de síndromes coronarianas agudas 2025, síntese oficial: https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know",
+      "FDA. BRILINTA (ticagrelor), prescribing information 03/2024, riscos de interrupção e informações ao paciente: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf",
+      "Ministério da Saúde. SAMU 192, quando chamar: https://www.gov.br/saude/pt-br/composicao/saes/samu-192"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "preparar-retorno-colesterol-exames-remedios-e-duvidas",
+    "titulo": "Como se preparar para o retorno do colesterol",
+    "subtitulo": "Um roteiro para mostrar o que mudou e combinar o próximo passo",
+    "tema": "Prevenção e lipídios",
+    "documento_slug": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+    "review_status": "revisado",
+    "resumo": "Ajuda prática para levar exames comparáveis, informar como os remédios foram usados e sair da consulta com meta e retorno definidos.",
+    "secoes": [
+      {
+        "titulo": "Separe o que ajuda a comparação",
+        "paragrafos": [
+          "Leve o exame novo e, se tiver, aquele feito antes de começar o tratamento. Anote a data em que começou ou mudou o remédio. Um exame feito durante uma interrupção conta uma história diferente de outro feito com uso diário."
+        ],
+        "itens": [
+          "Leve a receita e uma lista ou fotos das caixas dos medicamentos.",
+          "Anote quantos dias deixou de tomar e o motivo: esquecimento, custo, falta na farmácia ou sintoma.",
+          "Inclua suplementos, produtos naturais e remédios prescritos por outros profissionais."
+        ]
+      },
+      {
+        "titulo": "Preciso ficar em jejum?",
+        "paragrafos": [
+          "Muitas coletas de colesterol podem ser feitas sem jejum. Quando os triglicerídeos estão muito altos ou existe dúvida na interpretação, a equipe pode pedir uma repetição com preparo específico. Confirme a orientação antes da coleta; não prolongue o jejum por conta própria."
+        ],
+        "itens": [
+          "Se usa remédio para diabetes, combine previamente como fazer o preparo com segurança.",
+          "Informe se estava doente e se houve uma mudança importante na alimentação perto da coleta."
+        ]
+      },
+      {
+        "titulo": "Melhorou: e agora?",
+        "paragrafos": [
+          "A meta depende da sua história de saúde. O número destacado como normal no laboratório pode ser diferente do objetivo combinado com seu médico. Não suspenda o tratamento apenas porque o exame melhorou."
+        ],
+        "itens": [
+          "Peça que a sua meta seja anotada.",
+          "Antes de sair, confirme qual receita vale e quando repetir o exame.",
+          "Se não conseguir obter o remédio, avise a equipe para ajustar o plano."
+        ]
+      },
+      {
+        "titulo": "Anote sintomas com detalhes",
+        "paragrafos": [
+          "Se percebeu algum sintoma após mudar o tratamento, registre quando começou, onde ocorre e se atrapalha suas atividades. Informe exercício fora do habitual e medicamentos novos. Isso ajuda a investigar a causa sem perder informações importantes."
+        ],
+        "itens": [
+          "Não espere o retorno programado quando houver sinais de alerta.",
+          "Para entender os números, consulte [Colesterol alto](/material-paciente/colesterol-alto-e-prevencao-cardiovascular)."
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Procure avaliação urgente se aparecer fraqueza muscular importante, urina muito escura ou redução importante da urina.",
+      "Dor forte no peito, falta de ar intensa, dificuldade súbita para falar ou perda súbita de força em um lado do corpo: acione o SAMU pelo 192."
+    ],
+    "perguntas": [
+      "Qual é minha meta e qual resultado vamos usar para acompanhá-la?",
+      "O remédio que consegui tomar corresponde ao que está na receita?",
+      "Se faltar na farmácia ou causar sintomas, como entro em contato?",
+      "Quando repetirei o exame e quem conferirá o resultado?"
+    ],
+    "fontes": [
+      "Nordestgaard BG et al. Fasting is not routinely required for determination of a lipid profile: EAS/EFLM joint consensus. Eur Heart J. 2016;37:1944–1958. https://doi.org/10.1093/eurheartj/ehw152",
+      "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. DOI: 10.1093/eurheartj/ehz455. Tabelas oficiais de monitorização, páginas 124–130 da apresentação: https://eas-society.org/wp-content/uploads/2022/11/2019_dyslipidaemias_guidelin.pdf",
+      "American Heart Association. Top Things to Know: 2026 Guideline on the Management of Dyslipidemia. Atualizado em 13/03/2026. https://professional.heart.org/en/science-news/2026-guideline-on-the-management-of-dyslipidemia/top-things-to-know"
+    ],
+    "review_note": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "estenose-aortica-laudos-diferentes-preparar-a-consulta",
+    "titulo": "Dois laudos diferentes da valva aórtica: como preparar a consulta",
+    "subtitulo": "O que anotar quando o exame e o que você sente parecem não combinar",
+    "tema": "Valvopatias",
+    "documento_slug": "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+    "review_status": "revisado",
+    "review_note": "Produção científica assistida por IA em 09/09/2026; Revisão cruzada concluída. Não representa revisão humana independente. Casos e roteiros originais; limites de acesso às fontes documentados na auditoria da rodada 2. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/.",
+    "resumo": "Um roteiro para conversar sobre diferenças entre exames e mudanças nas atividades do dia a dia. A interpretação e a escolha dos próximos exames dependem da avaliação médica.",
+    "secoes": [
+      {
+        "titulo": "Um número sozinho não conta toda a história",
+        "paragrafos": [
+          "O ecocardiograma reúne várias medidas do estreitamento da valva. Diferenças entre laudos podem exigir revisão das imagens; não significam, sozinhas, que você precisa operar ou que está tudo bem."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que levar",
+        "paragrafos": [
+          "Se tiver acesso, leve as imagens dos exames, além dos laudos. Este roteiro de organização foi elaborado pelo CorVIA."
+        ],
+        "itens": [
+          "Data e local dos ecocardiogramas anteriores.",
+          "Lista dos remédios, doses e horários; anote o que mudou recentemente.",
+          "Anotações que você já tenha sobre pressão, sintomas e atendimentos recentes.",
+          "Nome e contato de quem poderá ajudar a lembrar das orientações."
+        ]
+      },
+      {
+        "titulo": "Conte o que mudou na sua rotina",
+        "paragrafos": [
+          "Em vez de dizer apenas que está bem ou cansado, dê exemplos. Não faça esforço extra para testar o coração em casa."
+        ],
+        "itens": [
+          "Que caminhada você fazia antes e deixou de fazer?",
+          "Passou a parar no meio de uma atividade? Desde quando?",
+          "Teve falta de ar, dor, tontura ou desmaio? Em qual situação?",
+          "O que gostaria de voltar a fazer com segurança?"
+        ]
+      },
+      {
+        "titulo": "Saia com o próximo passo combinado",
+        "paragrafos": [
+          "Pergunte qual dúvida precisa ser esclarecida, quem vai avaliar o resultado e quando será o retorno. Não altere remédios nem adie a consulta porque um laudo parece melhor."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio, dor forte ou persistente no peito ou falta de ar intensa em repouso: procure emergência; se necessário, ligue 192.",
+      "Piora recente do cansaço ou falta de ar nas atividades habituais: avise a equipe e peça antecipação da avaliação."
+    ],
+    "perguntas": [
+      "As medidas dos meus exames concordam entre si?",
+      "É necessário rever as imagens antes de decidir?",
+      "Que atividades posso manter com segurança até o retorno?",
+      "Qual é o próximo passo e como receberei o resultado?"
+    ],
+    "fontes": [
+      "Baumgartner H et al. Recommendations on the Echocardiographic Assessment of Aortic Valve Stenosis: A Focused Update from EACVI and ASE. JASE. 2017;30:372-392. DOI: 10.1016/j.echo.2017.02.009. https://www.asecho.org/wp-content/uploads/2017/04/2017ValveStenosisGuideline.pdf",
+      "ESC/EACTS. 2025 Guidelines for the management of valvular heart disease: portal oficial consultado em 09/09/2026; texto integral indisponível nesta sessão, sem extração de classes de intervenção. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"
+    ]
   }
 ]

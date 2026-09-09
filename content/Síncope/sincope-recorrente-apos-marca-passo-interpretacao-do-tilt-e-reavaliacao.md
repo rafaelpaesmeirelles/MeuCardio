@@ -62,3 +62,8 @@ O raciocínio adequado não começa pela troca do dispositivo nem pela atribuiç
 - [Síncope: avaliação inicial, monitorização e recorrência após marcapasso](/trilhas/trilha-consulta-progressiva-sincope)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Novo desmaio com marca-passo: o relatório normal encerra a investigação?](/casos-clinicos/sincope-apos-marca-passo-registros-temporais-e-queda-pressoria).
+- [Síncope recorrente após marca-passo: correlação do episódio e reavaliação](/checklists/sincope-recorrente-apos-marca-passo-correlacao-clinica-e-dispositivo).

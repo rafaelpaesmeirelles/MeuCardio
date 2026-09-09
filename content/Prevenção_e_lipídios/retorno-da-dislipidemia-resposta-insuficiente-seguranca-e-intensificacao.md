@@ -82,3 +82,8 @@ Finalize com quatro itens: tratamento real atualizado; meta e justificativa; exa
 - [Dislipidemia: interpretação, metas, resposta e segurança](/trilhas/trilha-consulta-progressiva-dislipidemia)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Como se preparar para o retorno do colesterol](/material-paciente/preparar-retorno-colesterol-exames-remedios-e-duvidas).
+- [Retorno da dislipidemia: uso real, resposta, meta e continuidade](/checklists/retorno-dislipidemia-uso-real-resposta-meta-e-continuidade).

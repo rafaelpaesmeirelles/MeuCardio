@@ -67,3 +67,8 @@ O retorno deve sair agendado com objetivo definido: rever sintomas, comparar par
 - [Valvopatias: do sopro à interpretação e à decisão especializada](/trilhas/trilha-consulta-progressiva-valvopatias)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Área aórtica pequena e gradiente baixo: a troca de valva já está definida?](/casos-clinicos/estenose-aortica-area-pequena-gradiente-baixo-e-laudos-nao-comparaveis).
+- [Dois laudos diferentes da valva aórtica: como preparar a consulta](/material-paciente/estenose-aortica-laudos-diferentes-preparar-a-consulta).

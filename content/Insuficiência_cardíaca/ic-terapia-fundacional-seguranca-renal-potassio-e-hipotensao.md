@@ -76,3 +76,7 @@ Dapagliflozina para IC usa 10 mg/dia. Avaliar volemia e função renal; queda in
 - [Insuficiência cardíaca: diagnóstico, segurança e transição para o ambulatório](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Primeiro retorno na ICFEr: o potássio permite iniciar espironolactona hoje?](/casos-clinicos/icfer-primeiro-retorno-potassio-52-antes-de-iniciar-espironolactona).

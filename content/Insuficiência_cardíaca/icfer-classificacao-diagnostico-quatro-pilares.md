@@ -86,3 +86,8 @@ Este documento cobre apenas o critério de entrada, sem detalhar programação o
 - [Insuficiência cardíaca: diagnóstico, segurança e transição para o ambulatório](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Meu coração melhorou: posso parar os remédios?](/material-paciente/meu-coracao-melhorou-posso-parar-os-remedios-da-insuficiencia-cardiaca).
+- [Insuficiência cardíaca com melhora da fração de ejeção: retorno longitudinal](/checklists/retorno-com-feve-melhorada-preservar-tratamento-e-reavaliar-tolerancia).

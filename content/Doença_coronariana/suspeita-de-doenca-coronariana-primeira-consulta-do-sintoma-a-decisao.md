@@ -75,3 +75,7 @@ Na doença estabelecida, separar na prescrição o objetivo de aliviar angina do
 - [Doença coronariana: da dor torácica ao primeiro retorno após SCA](/trilhas/trilha-consulta-progressiva-doenca-coronariana)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Dor aos esforços e teste interrompido por dor no joelho: a investigação terminou?](/casos-clinicos/dor-toracica-estavel-teste-interrompido-por-gonalgia-proxima-decisao).

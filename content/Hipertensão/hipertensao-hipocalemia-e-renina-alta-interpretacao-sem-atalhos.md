@@ -68,3 +68,7 @@ O retorno deve recuperar três resultados separados: segurança do potássio; co
 - [Hipertensão: da primeira consulta ao seguimento e à investigação secundária](/trilhas/trilha-consulta-progressiva-hipertensao)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Hipocalemia e renina elevada durante tratamento: um rastreio negativo pode encerrar a investigação?](/casos-clinicos/has-hipocalemia-rastreio-negativo-sob-bra-diuretico-e-renina-elevada).

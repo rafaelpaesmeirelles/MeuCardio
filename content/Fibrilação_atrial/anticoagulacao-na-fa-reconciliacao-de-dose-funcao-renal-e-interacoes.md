@@ -75,3 +75,7 @@ Registrar fórmula, data, dose decidida, motivo e reavaliação. Em doença rena
 - [FA e palpitações: reconhecimento, decisão e segurança da anticoagulação](/trilhas/trilha-consulta-progressiva-fibrilacao-atrial)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Cardioversão marcada: o paciente revelou omissões do anticoagulante](/casos-clinicos/fa-cardioversao-eletiva-omissoes-doac-reveladas-na-reconciliacao).

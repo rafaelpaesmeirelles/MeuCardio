@@ -11424,20 +11424,22 @@
     "titulo": "Angina persistente com coronárias angiograficamente normais: e agora?",
     "tema": "Doença coronariana",
     "nivel": "avançado",
-    "enunciado": "Mulher, 52 anos, angina típica recorrente, teste não invasivo com resultado inconclusivo. Angiografia coronariana invasiva não mostra lesão obstrutiva. Teste provocativo com acetilcolina realizado no mesmo procedimento reproduz a dor torácica habitual da paciente, com alteração isquêmica ao ECG, mas SEM constrição maior que 90% do calibre da artéria coronária à angiografia.",
-    "pergunta": "Segundo os critérios COVADIS, qual o endótipo mais provável e a implicação terapêutica?",
+    "enunciado": "Caso fictício para ensino. Mulher, 52 anos, com angina recorrente limitante apesar do tratamento inicial. Está estável, sem dor aguda ou congestão; PA 126/78 mmHg e FC 74 bpm. ECG basal sem bloqueio AV, ecocardiograma com FEVE 64% e sem valvopatia relevante. Coronariografia não demonstra obstrução. Em avaliação especializada por persistência dos sintomas, teste intracoronário com acetilcolina reproduz a dor habitual e alterações isquêmicas do ECG, com constrição epicárdica máxima de 30%; traçados e imagens têm qualidade adequada. Não foram apresentados resultados de reserva de fluxo ou resistência microvascular.",
+    "pergunta": "Qual endótipo é sustentado pelo teste e qual classe de antianginoso deve ser considerada inicialmente para esse mecanismo?",
     "opcoes": [
-      "Espasmo epicárdico — os três critérios estão presentes, tratamento de primeira linha com antagonista de canal de cálcio",
-      "Espasmo microvascular — apenas dois dos três critérios COVADIS estão presentes (dor reproduzida + alteração isquêmica de ECG, sem constrição epicárdica >90%), o que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez de antagonista de cálcio isolado",
-      "Teste negativo — sem lesão obstrutiva e sem constrição >90%, não há indicação de qualquer tratamento anti-isquêmico adicional",
-      "Teste inconclusivo, deve ser repetido antes de qualquer decisão terapêutica"
+      "Espasmo epicárdico, pois a reprodução de dor basta mesmo sem constrição epicárdica grave.",
+      "Espasmo microvascular; considerar inicialmente bloqueador de canal de cálcio, com escolha e dose individualizadas.",
+      "Disfunção microvascular estrutural confirmada; IECA ou ranolazina obrigatoriamente substituem bloqueador de cálcio.",
+      "Teste negativo; suspender a investigação e o tratamento porque não existe obstrução."
     ],
     "resposta_correta": 1,
-    "explicacao": "Os critérios COVADIS para teste de acetilcolina positivo definem espasmo EPICÁRDICO quando os três critérios estão presentes simultaneamente: reprodução da dor torácica habitual, alteração isquêmica ao ECG, e constrição maior que 90% do calibre da artéria coronária à angiografia. Quando apenas os dois primeiros critérios estão presentes (dor + ECG), sem a constrição epicárdica de 90%, a interpretação é de espasmo MICROVASCULAR — endótipo diferente, que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez do antagonista de canal de cálcio isolado usado no espasmo epicárdico. A diretriz ESC 2024 recomenda, com Classe I Nível B, que a avaliação funcional invasiva esteja disponível quando o mecanismo da dor torácica permanece incerto após teste não invasivo — exatamente o racional que levou a este teste provocativo.",
+    "explicacao": "B é correta: dor e ECG isquêmico provocados, sem espasmo epicárdico significativo, sustentam espasmo microvascular. O consenso EAPCI/COVADIS recomenda considerar antagonista de cálcio inicialmente nesse endótipo. A é incorreta: o padrão epicárdico exige constrição grave, ausente aqui. C é incorreta: sem CFR/IMR não se demonstrou remodelamento microvascular; IECA e ranolazina não substituem automaticamente o tratamento do espasmo. D é incorreta: ausência de obstrução não torna o teste negativo. A opção depende de PA, FC, condução AV, função ventricular e tolerância. Trata-se de orientação de consenso; não se atribui Classe I/B da ESC 2024 a toda investigação invasiva após exame inconclusivo. Recurso: [primeira consulta e continuidade diagnóstica](/biblioteca/suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao).",
     "source_refs": [
-      "Sucato V, Madaudo C, Galassi AR. The ANOCA/INOCA Dilemma Considering the 2024 ESC Guidelines on Chronic Coronary Syndromes. J Cardiovasc Dev Dis. 2024;11(10):302. DOI: 10.3390/jcdd11100302. PMID: 39452273"
+      "Kunadian V, et al. EAPCI Expert Consensus Document on Ischaemia with Non-Obstructive Coronary Arteries, em colaboração com ESC e endosso COVADIS. EuroIntervention. 2021;16:1049–1069. DOI: 10.4244/EIJY20M07_01. Seção Antianginal medication e Tabela 4, item 13, consultados em 09/09/2026: https://pmc.ncbi.nlm.nih.gov/articles/PMC9707543/",
+      "ESC. Chronic Coronary Syndromes 2024, portal primário confirma investigação ANOCA/INOCA; sem classe extrapolada do resumo: https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/chronic-coronary-syndromes/"
     ],
-    "review_status": "revisado"
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   },
   {
     "slug": "icfep-ou-icfelp-finerenona-nao-esteroidal-fineartshf",
@@ -18894,5 +18896,270 @@
     "published": true,
     "review_note": "Revisão final 31/08/2026: referências auditadas por fontes públicas disponíveis; PMIDs cruzados incorretos corrigidos; conflitos preservam a main; marcadores editoriais removidos.",
     "revisao": "Revisão científica independente concluída em 2026-09-01: narrativa, conduta, contraindicações e referências primárias/diretrizes conferidas; o caso apoia raciocínio educacional e não substitui decisão clínica individual nem protocolo local."
+  },
+  {
+    "slug": "primeira-consulta-has-doses-omitidas-por-intolerancia-e-descontrole-sustentado",
+    "titulo": "Primeira consulta: a pressão permanece alta, mas a prescrição não corresponde ao uso real",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Caso fictício para ensino. Mulher, 59 anos, hipertensa há 8 anos, sem diabetes, doença cardiovascular conhecida ou gestação. Receita: losartana 50 mg a cada 12 horas e anlodipino 10 mg/dia, este aumentado de 5 mg há 6 semanas. Desde então, edema maleolar bilateral vespertino, sem dor, calor, dispneia, ortopneia ou ganho ponderal. Pulmões sem estertores, jugulares não ingurgitadas. PA média padronizada 162/96 mmHg; MAPA tecnicamente adequada: média de 24 horas 148/90 mmHg. Creatinina 0,82 mg/dL, TFGe 82 mL/min/1,73 m², Na 140 mEq/L, K 4,1 mEq/L, albumina 4,2 g/dL e urina sem proteinúria. Ao demonstrar como toma os comprimidos, informa omitir a losartana noturna em quatro dias por semana e tomar anlodipino em dias alternados por medo do inchaço. Não usa diurético. Não há sinais de lesão aguda de órgão-alvo.",
+    "pergunta": "Qual conclusão e plano inicial melhor integram controle pressórico, tolerabilidade e uso real?",
+    "opcoes": [
+      "Hipertensão resistente confirmada pela MAPA; acrescentar espironolactona sem revisar as doses omitidas.",
+      "A MAPA elevada exclui problema de adesão; manter integralmente a receita e acrescentar furosemida para o edema.",
+      "Hipertensão sustentada não controlada, sem resistência demonstrada; conciliar o uso real, tratar a intolerância provável ao BCC e pactuar esquema simples com reavaliação da PA e segurança.",
+      "O edema confirma insuficiência cardíaca; suspender todos os anti-hipertensivos e aguardar ecocardiograma."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A opção C é a melhor. O caso separa duas informações: a pressão está elevada fora do consultório, mas os medicamentos não são usados conforme a receita. Resistência exige avaliação de classes, doses, adesão e medidas externas; dois agentes com omissões não preenchem esse raciocínio. A alternativa A antecipa a quarta droga. A B confunde confirmação de descontrole com confirmação de adesão. O vínculo temporal do edema com aumento do BCC favorece intolerância, sem provar causalidade nem excluir outras doenças. Reduzir dose ou substituir o agente pode ser apropriado; diurético não corrige bem esse mecanismo isolado. A D atribui diagnóstico de IC ao edema sem suporte suficiente e deixa a PA sem plano. A consulta deve terminar com lista explícita do que sai e do que entra, horários que a paciente consiga repetir e responsável por rever medidas, sintomas e exames. Se houver indicação de diurético para a PA, registrá-la separadamente. No retorno, melhora simultânea da pressão e do edema após múltiplas mudanças não identifica qual componente causou cada benefício. Não há prescrição única obrigatória nem comparação de marcas neste exercício. Aprofundamento: [documento de apoio](/biblioteca/hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro), [trilha progressiva](/trilhas/trilha-consulta-progressiva-hipertensao).",
+    "source_refs": [
+      "American Heart Association. Resistant Hypertension: Detection, Evaluation, and Management. Scientific Statement, 2018; síntese oficial. https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know",
+      "NHS Specialist Pharmacy Service. Managing peripheral oedema caused by calcium channel blockers. Atualização 26/05/2026. https://sps.nhs.uk/articles/managing-peripheral-oedema-caused-by-calcium-channel-blockers/",
+      "AHA/ACC. 2025 High Blood Pressure Guideline; síntese oficial, 14/08/2025. https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "has-hipocalemia-rastreio-negativo-sob-bra-diuretico-e-renina-elevada",
+    "titulo": "Hipocalemia e renina elevada durante tratamento: um rastreio negativo pode encerrar a investigação?",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Caso fictício para ensino. Mulher, 43 anos, hipertensa há 5 anos, não gestante, PA padronizada 156/94 mmHg e MAPA 24 horas 146/88 mmHg. Usa olmesartana 40 mg/dia, anlodipino 5 mg/dia e clortalidona 25 mg/dia há 6 semanas, com acesso e tomadas conferidos. Sem vômitos, diarreia, laxativos, alcaçuz ou espironolactona. K era 3,4 mEq/L antes da clortalidona e agora é 3,0 mEq/L; Na 141 mEq/L, Mg 1,9 mg/dL, creatinina 0,85 mg/dL e TFGe 87 mL/min/1,73 m². Está sem palpitação, síncope ou fraqueza; ECG sem arritmia ou alteração de repolarização relevante. Coleta matinal sentada, sem restrição recente de sódio: aldosterona por imunoensaio 18 ng/dL e atividade plasmática de renina 6 ng/mL/h; razão 3. O laboratório considera sugestiva razão >20, junto a aldosterona adequada e renina suprimida. A coleta ocorreu sem mudar o BRA ou o diurético e enquanto o K estava baixo.",
+    "pergunta": "Qual interpretação é mais adequada e qual o próximo passo?",
+    "opcoes": [
+      "A razão 3 exclui definitivamente aldosteronismo primário, independentemente do potássio e da medicação.",
+      "A aldosterona 18 ng/dL confirma adenoma produtor; solicitar TC para indicar adrenalectomia.",
+      "Suspender todos os anti-hipertensivos hoje e repetir a coleta sem acompanhamento, pois a preparação laboratorial tem prioridade sobre o controle pressórico.",
+      "Não há rastreio positivo nas condições apresentadas, mas há risco de falso negativo; abordar a hipocalemia agora e planejar repetição interpretável com estratégia medicamentosa supervisionada."
+    ],
+    "resposta_correta": 3,
+    "explicacao": "D é a melhor resposta. A razão calculada é 18/6 = 3, abaixo do corte informado, e a renina não está suprimida. Isso não confirma aldosteronismo, mas BRA e diurético podem elevar renina, e hipocalemia pode reduzir aldosterona: um resultado negativo sob essas interferências não exclui a hipótese. A recomendação 3 da Endocrine Society 2025 é condicional, com baixa certeza; suas observações técnicas orientam corrigir potássio e repetir quando há risco de falso negativo, escolhendo retirada mínima ou nenhuma retirada conforme segurança. A está errada por ignorar o contexto. B confunde concentração isolada com diagnóstico funcional e antecipa subtipagem. C cria risco por retirada indiscriminada. Neste caso, a hipocalemia anterior ao diurético mantém uma pista independente mesmo antes de confirmar resistência verdadeira; sua piora após clortalidona merece revisão. Organizar correção do potássio, rechecagem e avaliação de perdas, com prazo e via definidos pela situação clínica. ECG normal não elimina o risco de deterioração. Novos sintomas ou alterações eletrocardiográficas exigem reavaliação imediata. A questão não define dose de reposição nem exige teste de supressão específico: essas decisões dependem da avaliação e do rastreio repetido. Aprofundamento: [documento de apoio](/biblioteca/hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos), [trilha progressiva](/trilhas/trilha-consulta-progressiva-hipertensao).",
+    "source_refs": [
+      "Endocrine Society. Primary Aldosteronism: Clinical Practice Guideline, 2025, recomendação 3 e observações técnicas. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2",
+      "American Heart Association. Resistant Hypertension: Detection, Evaluation, and Management. Scientific Statement, 2018; síntese oficial. https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "icfer-primeiro-retorno-potassio-52-antes-de-iniciar-espironolactona",
+    "titulo": "Primeiro retorno na ICFEr: o potássio permite iniciar espironolactona hoje?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "básico",
+    "enunciado": "Caso educacional inteiramente fictício. Homem, 64 anos, com IC sintomática e FEVE de 32%, retorna sete dias após alta por congestão. Agora está euvolêmico, NYHA II, PA 118/72 mmHg, FC 68 bpm em ritmo sinusal, sem tontura ou sinais de hipoperfusão. Usa sacubitril/valsartana 24/26 mg a cada 12 horas, bisoprolol 2,5 mg/dia, dapagliflozina 10 mg/dia e furosemida 40 mg/dia. Não usa IECA, outro BRA, ARM ou anti-inflamatório. Não apresenta doença de Addison nem hipersensibilidade conhecida à espironolactona. Potássio era 4,8 mEq/L na alta e hoje é 5,2 mEq/L em duas amostras sem hemólise; creatinina estável em 1,5 mg/dL, TFGe informada de 51 mL/min/1,73 m², sódio 139 mEq/L. ECG sem novas alterações, sem fraqueza ou palpitações. Relata que passou a usar diariamente um substituto de sal contendo cloreto de potássio. A espironolactona ainda não foi iniciada e ele consegue repetir exames e receber contato da equipe nos próximos dias.",
+    "pergunta": "Qual é a decisão mais segura sobre iniciar o antagonista mineralocorticoide nesta consulta?",
+    "opcoes": [
+      "Iniciar espironolactona 25 mg/dia imediatamente, porque K menor que 5,5 mEq/L é o critério para começar o tratamento.",
+      "Adiar a introdução hoje, interromper o substituto de sal com potássio, revisar causas e repetir K/função renal em prazo curto definido; reconsiderar ARM quando os critérios de início forem atendidos.",
+      "Suspender definitivamente toda a terapia modificadora da IC, pois qualquer K acima de 5,0 mEq/L prova intolerância permanente aos quatro pilares.",
+      "Trocar a intenção de usar espironolactona por eplerenona e dispensar nova dosagem de potássio, pois eplerenona não causa hipercalemia."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "B é correta. Para iniciar espironolactona/eplerenona na ICFEr, a AHA/ACC/HFSA 2022 exige TFGe >30 mL/min/1,73 m² e K <5,0 mEq/L; a recomendação nos elegíveis é classe I, nível A. Neste caso, o rim não constitui a barreira inicial, mas K de 5,2 impede começar hoje. A é incorreta: confunde elegibilidade para início com o limite de manutenção; se K não puder ser mantido <5,5 durante uso de ARM, a diretriz recomenda descontinuação. C é incorreta: o caso apresenta uma exposição corrigível, não demonstra intolerância definitiva a todas as classes. D é incorreta: eplerenona também exige vigilância de K. A bula de espironolactona alerta para substitutos de sal contendo potássio e orienta monitorar K em até uma semana após introdução/titulação, com controle mais próximo quando necessário. Como plano operacional deste caso, combinar repetição de K/creatinina em 48–72 horas após retirar a exposição, revisão ativa do resultado e nova decisão; esse intervalo não é um protocolo universal. Elevação progressiva, sintomas ou alterações no ECG exigem antecipação da avaliação. A vinheta ensina segurança de início e não prescreve quelante de potássio automaticamente. Aprofundamento: [documento de apoio](/biblioteca/ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao), [trilha progressiva](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca).",
+    "source_refs": [
+      "AHA/ACC/HFSA. 2022 Guideline for the Management of Heart Failure, slide set oficial, seção Mineralocorticoid Receptor Antagonists. https://professional.heart.org/en/science-news/-/media/832EA0F4E73948848612F228F7FA2D35.ashx",
+      "Pfizer. Aldactone prescribing information, revisão 11/2025, seções 4, 5.1 e 7.1. https://labeling.pfizer.com/ShowLabeling.aspx?id=520"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "icfep-pos-alta-perda-de-peso-ortostatismo-e-lesao-renal-reavaliar-volemia",
+    "titulo": "ICFEp após a alta: perda de peso, ortostatismo e piora renal exigem outra leitura",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Caso educacional inteiramente fictício. Mulher, 76 anos, hipertensa, sem diabetes, com ICFEp previamente confirmada: FEVE 60%, aumento atrial esquerdo, disfunção diastólica e elevação de pressões de enchimento documentadas durante internação por congestão. Recebeu alta há cinco dias, já estabilizada e sem edema, com furosemida 40 mg a cada 12 horas, dapagliflozina 10 mg/dia e losartana 50 mg a cada 12 horas. Não usa ARM, IECA, ARNI ou outros anti-hipertensivos; não há história de cetoacidose, diabetes tipo 1 ou alergia aos medicamentos. Desde a alta perdeu mais 3,8 kg e limitou por conta própria a ingestão de líquidos a aproximadamente 600 mL/dia. Chega à consulta com sede e tontura ao levantar. PA deitada 104/66 mmHg e, após três minutos em pé, 80/50 mmHg com reprodução dos sintomas; FC 92 bpm, ritmo sinusal. Está lúcida, aquecida, sem dispneia, estertores, turgência jugular ou edema, com mucosas secas; SpO2 97% em ar ambiente. Nega febre, sangramento, vômitos, diarreia e anti-inflamatórios. Creatinina aumentou de 1,0 para 1,7 mg/dL em cinco dias; TFGe calculada no laboratório passou de 58 para 31 mL/min/1,73 m², embora a função renal esteja em mudança. K 4,6 mEq/L, sódio 138 mEq/L, glicemia 108 mg/dL, bicarbonato 25 mEq/L e beta-hidroxibutirato 0,2 mmol/L. Não há alterações isquêmicas no ECG.",
+    "pergunta": "Qual plano imediato melhor integra a volemia, a segurança medicamentosa e a evidência para tratamento da IC?",
+    "opcoes": [
+      "Manter todas as doses e aguardar quatro semanas: qualquer aumento de creatinina após iSGLT2 é uma alteração hemodinâmica benigna.",
+      "Duplicar furosemida, porque toda piora renal em alguém com IC indica congestão oculta e exige diurese adicional.",
+      "Realizar avaliação assistencial no mesmo dia, corrigir cautelosamente a provável depleção volêmica e rever furosemida/losartana; interromper temporariamente dapagliflozina durante a depleção, monitorar resposta e planejar reintrodução quando estabilizada.",
+      "Retirar dapagliflozina definitivamente por ausência de diabetes e declarar que a FEVE de 60% exclui insuficiência cardíaca."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "C é correta. A combinação de restrição hídrica autoinstituída, perda adicional de peso, secura de mucosas, ortostatismo sintomático e aumento importante de creatinina favorece depleção volêmica com lesão renal aguda. A revisão da diurese, dos anti-hipertensivos e a reposição cautelosa devem ocorrer sob avaliação clínica, com reexame de PA, perfusão, diurese e pulmões; não há autorização para administrar um volume fixo de fluido a toda pessoa com IC. A bula de dapagliflozina recomenda interrupção temporária durante depleção volêmica, até sua correção, e alerta para efeito aditivo com diuréticos de alça. A é incorreta: o contexto sintomático impede atribuir a piora renal a um pequeno declínio inicial esperado. B é incorreta: os achados apresentados não sustentam intensificar diurese. D é incorreta: FEVE preservada não exclui a síndrome; no EMPULSE, o benefício da empagliflozina foi avaliado em pacientes hospitalizados estabilizados, independentemente da FEVE ou diabetes, sem autorizar uso durante instabilidade. Isso não equivale a comparar diretamente os dois iSGLT2. O painel metabólico da vinheta não sustenta cetoacidose. Se hipotensão persistir, surgir oligúria, confusão ou hipoperfusão, encaminhar à emergência; a TFGe isolada é pouco confiável durante mudança rápida de creatinina. Após estabilizar, rever ingestão, dose necessária de diurético e elegibilidade para retomar a terapia, com resultado laboratorial e contato precoce documentados. Trata-se de raciocínio operacional, não de reprodução de um protocolo de ensaio. Aprofundamento: [documento de apoio](/biblioteca/ic-transicao-pos-alta-plano-primeiras-seis-semanas), [trilha progressiva](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca).",
+    "source_refs": [
+      "EMA. Forxiga: informação oficial do produto, seções 4.4 e 4.5, depleção volêmica e interação com diuréticos. https://www.ema.europa.eu/en/documents/product-information/forxiga-epar-product-information_en.pdf",
+      "Voors AA, Angermann CE, Teerlink JR, et al. The SGLT2 inhibitor empagliflozin in patients hospitalized for acute heart failure: a multinational randomized trial (EMPULSE). Nat Med. 2022;28:568–574. PMID 35228754. https://pubmed.ncbi.nlm.nih.gov/35228754/"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "palpitacoes-dois-tipos-de-sintoma-e-correlacao-parcial-no-holter",
+    "titulo": "O Holter explicou as falhas, mas também explicou o coração disparado?",
+    "tema": "Arritmias",
+    "nivel": "básico",
+    "enunciado": "Caso fictício. Mulher, 46 anos, descreve duas queixas: falhas isoladas quase diárias, de um segundo, e crises abruptas de coração disparado, de 8 a 15 minutos, a cada duas ou três semanas. Não apresenta síncope, dor torácica, dispneia importante, relação com esforço ou história familiar de morte súbita. PA 118/74 mmHg, exame físico normal, ECG sem pré-excitação ou QT prolongado e ecocardiograma sem cardiopatia estrutural. Hemograma, eletrólitos e TSH sem alterações; não usa estimulantes. Holter com 23 horas analisáveis registra três marcações de falha, cada uma coincidente com extrassístole supraventricular isolada. Há raras extrassístoles adicionais, sem taquicardia sustentada. Nenhuma das crises prolongadas ocorreu durante o exame.",
+    "pergunta": "Qual conclusão e próximo plano respeitam os dados realmente obtidos?",
+    "opcoes": [
+      "Todas as queixas foram explicadas pelas extrassístoles; encerrar a investigação das crises prolongadas.",
+      "O Holter normal fora das falhas exclui arritmia e permite diagnosticar ansiedade.",
+      "As falhas tiveram correlação; a taquicardia prolongada continua sem registro. Planejar monitorização externa mais longa, diário e retorno.",
+      "Iniciar amiodarona para suprimir as crises prolongadas, presumindo que sejam a mesma arritmia das falhas."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A alternativa C é correta: o registro respondeu somente à queixa breve. A atribui ao exame uma conclusão que ele não sustenta. B transforma ausência de captura em exclusão diagnóstica. D propõe tratamento específico sem documentação da arritmia. A duração da monitorização deve acompanhar a frequência do sintoma-alvo; aqui, um registro externo prolongado tem melhor adequação que repetir apenas um dia. A estratégia se apoia em consenso, sem garantia individual de captura. Rever o plano se surgirem sinais de alarme. Integração: [protocolo de correlação](/biblioteca/palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo) e [Holter](/exames/holter-24h). Aprofundamento: [trilha progressiva](/trilhas/trilha-consulta-progressiva-fibrilacao-atrial).",
+    "source_refs": [
+      "Steinberg JS et al. 2017 ISHNE-HRS expert consensus statement on ambulatory ECG and external cardiac monitoring/telemetry. Ann Noninvasive Electrocardiol. 2017;22:e12447. DOI: 10.1111/anec.12447. Seções 3 e 4.2. https://pmc.ncbi.nlm.nih.gov/articles/PMC6931745/"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "fa-cardioversao-eletiva-omissoes-doac-reveladas-na-reconciliacao",
+    "titulo": "Cardioversão marcada: o paciente revelou omissões do anticoagulante",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Caso fictício. Homem, 68 anos, hipertensão e diabetes, FA contínua documentada há seis semanas e início real desconhecido. Mantém fadiga aos esforços, sem angina, congestão ou instabilidade. Na avaliação pré-procedimento: PA 126/78 mmHg, FC 92 bpm, saturação 97%, FEVE 55%. Não tem prótese mecânica, estenose mitral moderada ou grave, AVC prévio, doença vascular, sangramento ativo, anemia, hepatopatia com coagulopatia ou doença renal relevante. Peso 80 kg, creatinina 1,0 mg/dL, hemoglobina 14,1 g/dL e plaquetas 224.000/mm³. Prescrição de apixabana em dose terapêutica apropriada foi conferida; não há antiagregante, AINE ou interação importante. No dia da cardioversão eletiva, a entrevista revela quatro tomadas esquecidas nos últimos dez dias. Tomou a medicação esta manhã. Não há ETE prévio nem disponibilidade de imagem para excluir trombo naquele dia.",
+    "pergunta": "Qual é a decisão mais segura, usando explicitamente a diretriz ACC/AHA/ACCP/HRS 2023?",
+    "opcoes": [
+      "Adiar o procedimento: assegurar três semanas de anticoagulação terapêutica ininterrupta ou organizar estratégia com imagem para excluir trombo, mantendo anticoagulação periprocedimento.",
+      "Proceder hoje, pois a dose da manhã compensa as omissões anteriores.",
+      "Administrar uma dose extra por conta própria e cardioverter sem imagem.",
+      "Cancelar definitivamente o controle de ritmo e trocar o anticoagulante por aspirina."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A é correta. Para FA ≥48 horas, a AHA/ACC 2023 recomenda três semanas de anticoagulação terapêutica ininterrupta OU imagem excluindo trombo antes da cardioversão eletiva (I, B-R). B e C não demonstram proteção prévia; receita e dose recente não comprovam adesão. D abandona uma opção terapêutica sem motivo e usa aspirina como substituto inadequado. Mesmo com ETE negativo, estabelecer anticoagulação antes e mantê-la por pelo menos quatro semanas depois (I, B-NR). Neste homem, CHA₂DS₂-VASc = 3: idade, hipertensão e diabetes; há indicação de continuidade de longo prazo. Se houver trombo, adiar e reavaliar após tratamento. A estabilidade permite reorganizar o preparo. Integração: [reconciliação](/biblioteca/anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes), [primeira consulta e retorno](/biblioteca/fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno) e [preparo para cardioversão](/checklists/pre-cardioversao-eletiva-de-fibrilacao-atrial). Aprofundamento: [trilha progressiva](/trilhas/trilha-consulta-progressiva-fibrilacao-atrial).",
+    "source_refs": [
+      "Joglar JA et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. J Am Coll Cardiol. 2024;83:109-279. DOI: 10.1016/j.jacc.2023.08.017. Seções 6.3.1 e 8.2.1. https://pmc.ncbi.nlm.nih.gov/articles/PMC11104284/"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "dor-toracica-estavel-teste-interrompido-por-gonalgia-proxima-decisao",
+    "titulo": "Dor aos esforços e teste interrompido por dor no joelho: a investigação terminou?",
+    "tema": "Doença coronariana",
+    "nivel": "básico",
+    "enunciado": "Caso fictício para ensino. Homem, 58 anos, hipertenso, dislipidêmico e ex-tabagista, sem infarto ou revascularização prévios. Há quatro meses apresenta pressão retroesternal ao subir duas ladeiras, cessando em três minutos de repouso, sempre no mesmo limiar. Nega episódios em repouso, piora recente, síncope ou dispneia progressiva; está sem dor na consulta. Usa losartana 50 mg duas vezes ao dia e atorvastatina 20 mg/dia. PA 132/80 mmHg, FC 68 bpm, SpO2 98%, sem congestão ou sopro. ECG de repouso interpretável e ecocardiograma com FEVE 62%, sem alteração segmentar ou valvopatia relevante. Hemoglobina 14,2 g/dL, creatinina 0,9 mg/dL e glicemia de jejum 104 mg/dL. O teste ergométrico externo foi interrompido no início por gonalgia limitante, antes de esforço diagnóstico; o laudo completo conclui 'inconclusivo para isquemia', embora a folha de encaminhamento diga 'sem alteração de ST'. Não há alergia conhecida a contraste iodado. O paciente pergunta se o coração foi descartado como causa da dor.",
+    "pergunta": "Qual a interpretação e a próxima decisão mais apropriadas?",
+    "opcoes": [
+      "Encerrar a investigação cardíaca, porque a ausência de alteração do ST e a FEVE preservada excluem doença coronariana.",
+      "Reconhecer a limitação do teste, estimar a probabilidade clínica de DAC obstrutiva e escolher investigação complementar que responda à pergunta diagnóstica; se indicada, a angiotomografia é uma opção adequada ao perfil descrito.",
+      "Encaminhar obrigatoriamente para coronariografia invasiva imediata, pois todo teste inconclusivo significa alto risco.",
+      "Solicitar troponina ambulatorial isolada e encerrar a investigação se estiver abaixo do limite do laboratório."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "B é correta. O dado central do caso é que a limitação ortopédica impediu o teste de responder à pergunta; 'sem ST alterado' não muda a conclusão de exame inconclusivo. A ESC 2024 orienta estimar probabilidade clínica ponderada por fatores de risco e individualizar testes. Na AHA/ACC 2021, angiotomografia após teste de esforço inconclusivo é razoável em dor estável com risco intermediário-alto (IIa, B-NR); essa classe corresponde à população da recomendação, não atribui automaticamente uma faixa de risco a este caso. A é incorreta: os exames apresentados não encerram a hipótese. C é incorreta: a inconclusividade, isoladamente, não demonstra alto risco. D é incorreta: um biomarcador isolado não responde à investigação de sintomas crônicos de esforço. Plano didático: registrar pergunta, teste escolhido, responsável por conferir resultado e retorno; dor nova em repouso ou piora muda a urgência. Recursos: [primeira consulta](/biblioteca/suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao), [resultados discordantes](/biblioteca/dor-toracica-exames-discordantes-reavaliacao-e-destino-seguro), [angio-TC](/exames/angiotomografia-de-coronarias), [trilha progressiva](/trilhas/trilha-consulta-progressiva-doenca-coronariana).",
+    "source_refs": [
+      "ESC. 2024 Guidelines for the management of chronic coronary syndromes. DOI: 10.1093/eurheartj/ehae177. Portal oficial consultado em 09/09/2026: https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/chronic-coronary-syndromes/",
+      "Gulati M, et al. 2021 AHA/ACC Chest Pain Guideline. DOI: 10.1161/CIR.0000000000001029. Slide set oficial, página 97, teste complementar após estudo inconclusivo: https://professional.heart.org/-/media/PHD-Files-2/Science-News/2/2021/2021-Chest-Pain-Guideline-Slide-Set-PDF-102821.pdf"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "primeiro-retorno-pos-sca-dois-p2y12-dispneia-e-receitas-conflitantes",
+    "titulo": "Primeiro retorno após SCA: dois P2Y12, equimoses e falta de ar",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Caso fictício para ensino. Homem, 66 anos, comparece 18 dias após SCA tratada com stent farmacológico na coronária direita. Não tem FA, prótese valvar, tromboembolismo ou indicação documentada de anticoagulação. O resumo final de alta prescreve AAS 100 mg/dia e ticagrelor 90 mg a cada 12 horas, além de atorvastatina 80 mg/dia e losartana 50 mg/dia; FEVE da internação 56%. Na sacola traz também clopidogrel 75 mg/dia, presente em receita preliminar anterior à ICP. Ele confirma tomar os três antiplaquetários há dez dias, sem omissões, por considerar que cada receita acrescentava remédios. Refere equimoses pequenas nos antebraços e episódios breves de sensação de ar insuficiente desde a alta, sem dor, piora aos esforços, ortopneia, melena, hematêmese ou síncope. PA 122/74 mmHg, FC 72 bpm, frequência respiratória 16/min, SpO2 98%, sem estertores, edema ou turgência jugular. ECG inalterado em relação à alta; hemoglobina atual 13,5 g/dL, versus 13,7 na alta; plaquetas 230.000/mm³ e creatinina 1,0 mg/dL. Durante a consulta, o serviço de hemodinâmica confirma que a estratégia definitiva era AAS e ticagrelor; não havia plano de associação ou troca para clopidogrel. O paciente pergunta se deve parar todos os remédios para o sangue até desaparecerem as manchas.",
+    "pergunta": "Qual conduta integra melhor segurança medicamentosa e avaliação da dispneia?",
+    "opcoes": [
+      "Suspender AAS, ticagrelor e clopidogrel por uma semana e depois decidir se ainda são necessários.",
+      "Manter os três antiplaquetários porque foram prescritos em algum momento e investigar apenas as manchas.",
+      "Corrigir hoje a duplicação confirmada, retirando o clopidogrel indevido por prescrição médica, consolidar AAS e ticagrelor conforme o plano confirmado e avaliar a dispneia sem atribuição automática ao fármaco; registrar seguimento e sinais de alarme.",
+      "Diagnosticar insuficiência cardíaca pela dispneia e iniciar diurético, sem revisar as receitas porque a hemoglobina está estável."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "C é correta. A reconciliação identificou um erro concreto e confirmou a estratégia definitiva com a equipe: corrigir a duplicação não significa abandonar a proteção antitrombótica. A bula FDA de ticagrelor orienta não associá-lo a outro P2Y12 oral. Dispneia pode ocorrer com ticagrelor, mas a atribuição requer avaliação; se confirmada e tolerável, pode-se manter o fármaco, enquanto intolerância exige alternativa prescrita. A é incorreta: cria interrupção desnecessária após stent recente. B é incorreta: perpetua uma receita preliminar explicitamente substituída. D é incorreta: o caso não estabelece congestão ou IC como explicação. AAS mais um P2Y12 é a combinação de referência na SCA; duração e alterações dependem do contexto (AHA/ACC 2025). Plano didático: lista única entregue, receita antiga marcada como substituída, paciente repete nomes e horários, canal para intercorrências e retorno definido. Piora da falta de ar, dor torácica, síncope ou sangramento importante exigem avaliação urgente. Recursos: [primeiro retorno](/biblioteca/primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias), [checklist do retorno](/checklists/primeiro-retorno-pos-sca-fechamento-de-divergencias-e-pendencias), [preparo dos medicamentos](/material-paciente/primeiro-retorno-apos-infarto-leve-remedios-receitas-e-duvidas). Aprofundamento: [trilha progressiva](/trilhas/trilha-consulta-progressiva-doenca-coronariana).",
+    "source_refs": [
+      "FDA. BRILINTA (ticagrelor), prescribing information, revisão 03/2024, seções 2.1 e 5.3. Documento específico consultado, sem afirmar ser a última bula brasileira: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf",
+      "Rao SV, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for Acute Coronary Syndromes. DOI: 10.1161/CIR.0000000000001309. Síntese oficial: https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "primeiro-lipidograma-triglicerideos-altos-ldl-calculado-nao-interpretavel",
+    "titulo": "Primeiro lipidograma: o LDL calculado permite tranquilizar este paciente?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "básico",
+    "enunciado": "Caso fictício para ensino. Homem de 46 anos, primeira consulta, sem eventos cardiovasculares conhecidos e sem hipolipemiantes. PA 128/78 mmHg, IMC 29 kg/m²; não fuma. Traz coleta feita duas horas depois do almoço: colesterol total 244 mg/dL, HDL-C 38 mg/dL e triglicerídeos 460 mg/dL. O relatório automatizado apresenta LDL-C de 114 mg/dL, identificado como calculado pela equação de Friedewald. Não tem dor abdominal, vômitos ou doença aguda; não há exames anteriores disponíveis. Pergunta se o colesterol está normal porque o LDL veio abaixo do limite destacado pelo laboratório.",
+    "pergunta": "Qual é a melhor interpretação inicial, antes de estabelecer meta e tratamento?",
+    "opcoes": [
+      "Validar LDL-C de 114 mg/dL e encerrar a avaliação: estar abaixo da referência do laboratório exclui necessidade de prevenção.",
+      "Calcular não-HDL-C de 206 mg/dL, reconhecer a limitação do LDL por Friedewald com esses triglicerídeos e programar esclarecimento da amostra, incluindo repetição em jejum e avaliação clínica de risco e causas secundárias.",
+      "Descartar todo o lipidograma porque não houve jejum; nenhum de seus componentes pode fornecer informação clínica.",
+      "Diagnosticar pancreatite apenas pelo triglicerídeo de 460 mg/dL e indicar internação, independentemente da avaliação clínica."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A — Incorreta. Intervalo laboratorial não equivale a meta individual. A operação 244 − 38 − 460/5 resulta em 114, mas aritmética correta não valida uma equação fora da condição de uso: Friedewald não deve orientar a decisão com TG ≥400 mg/dL. B — Correta. Não-HDL-C = 244 − 38 = 206 mg/dL. O consenso EAS/EFLM permite coleta inicial sem jejum e considera repetição em jejum quando TG sem jejum excedem 440 mg/dL. Revisar alimentação, álcool, fármacos e condições metabólicas antes de concluir persistência; discutir método de LDL com o laboratório se necessário. C — Incorreta. Não é preciso perder toda a informação da consulta por ausência de jejum. D — Incorreta. Este resultado isolado não diagnostica pancreatite nem define internação; sintomas novos exigem avaliação própria. A questão testa interpretação, não indica um fármaco a partir deste único exame. A escolha posterior de metas deve identificar a diretriz adotada, sem intercambiar categorias SBC, ESC e ACC/AHA. Continuar em [primeira leitura do lipidograma](/biblioteca/lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica), [perfil lipídico](/exames/perfil-lipidico-colesterol-total-ldl-hdl-e-triglicerideos) e [trilha progressiva de dislipidemia](/trilhas/trilha-consulta-progressiva-dislipidemia).",
+    "source_refs": [
+      "Nordestgaard BG et al. Fasting is not routinely required for determination of a lipid profile: EAS/EFLM joint consensus. Eur Heart J. 2016;37:1944–1958. https://doi.org/10.1093/eurheartj/ehw152",
+      "Sampson M et al. A New Equation for Calculation of Low-Density Lipoprotein Cholesterol in Patients With Normolipidemia and/or Hypertriglyceridemia. JAMA Cardiol. 2020;5:540–548. https://doi.org/10.1001/jamacardio.2020.0013",
+      "American Heart Association. Top Things to Know: 2026 Guideline on the Management of Dyslipidemia. Atualizado em 13/03/2026. https://professional.heart.org/en/science-news/2026-guideline-on-the-management-of-dyslipidemia/top-things-to-know"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "dm2-drc-queda-inicial-tfge-apos-isglt2-retorno-com-seguranca",
+    "titulo": "DM2 e doença renal: a queda inicial da TFGe exige retirar o iSGLT2?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Caso fictício para ensino. Homem de 63 anos, DM2 há 12 anos, IAM há três anos e doença renal crônica documentada: TFGe entre 56 e 59 mL/min/1,73 m² há oito meses, UACR de 160 e 175 mg/g em amostras separadas por quatro meses. Usa metformina 500 mg duas vezes ao dia, losartana 50 mg duas vezes ao dia, atorvastatina 80 mg/dia, ezetimiba 10 mg/dia e AAS 100 mg/dia. Há 14 dias iniciou empagliflozina 10 mg/dia. HbA1c 6,9%; LDL-C 49 mg/dL. TFGe passou de 58 para 46 mL/min/1,73 m²; potássio 4,5 mEq/L. Retorna preocupado com o resultado. PA 124/76 mmHg sentado e 122/74 em pé, peso estável, mucosas úmidas, diurese habitual. Nega vômitos, diarreia, febre, disúria, jejum prolongado, anti-inflamatórios ou contraste recente; não usa diurético. Está lúcido, alimentando-se normalmente, sem dispneia, edema ou sintomas de cetose.",
+    "pergunta": "Qual conduta melhor concilia a alteração laboratorial e a proteção cardiorrenal neste retorno?",
+    "opcoes": [
+      "Suspender definitivamente a empagliflozina e registrar nefrotoxicidade, porque qualquer queda da TFGe comprova dano renal irreversível.",
+      "Aumentar imediatamente a dose da empagliflozina para 25 mg/dia para recuperar a TFGe, pois a dose maior necessariamente proporciona maior proteção renal.",
+      "Manter empagliflozina 10 mg/dia neste contexto estável, revisar causas intercorrentes e programar acompanhamento da tendência renal, com orientação de situações que exigem contato antecipado ou pausa temporária.",
+      "Interromper toda a estratégia cardiorrenal porque a HbA1c e o LDL estão satisfatórios, reavaliando somente se aparecerem sintomas."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A — Incorreta. A queda foi de 20,7%: (58 − 46)/58 × 100. A KDIGO descreve redução inicial reversível da TFGe, geralmente sem necessidade de interromper o iSGLT2; este achado não comprova toxicidade estrutural. B — Incorreta. Aumentar a dose para corrigir a TFGe não é a resposta a esse resultado. C — Correta. A estabilidade clínica permite continuidade com avaliação da tendência; piora progressiva, hipovolemia ou doença aguda mudariam a decisão. A repetição em 1–2 semanas é uma escolha individualizada deste caso, não monitorização extra obrigatória para todo usuário. A recomendação KDIGO para DM2 com DRC e TFGe ≥20 é 1A; o manejo do declínio inicial é ponto de prática, sem classe própria. Jejum prolongado, cirurgia e doença crítica requerem plano de pausa temporária. D — Incorreta. Controle glicêmico/lipídico satisfatório não elimina DRC e doença vascular previamente documentadas. Não classificar progressão crônica por uma coleta após mudança terapêutica. Revisar [consulta cardiometabólica](/biblioteca/consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal), [empagliflozina](/medicamentos?slug=empagliflozina), [avaliação renal no diabetes](/exames/uacr-e-tfge-no-rastreio-de-doenca-renal-cronica-no-diabetes) e [trilha DM2](/trilhas/trilha-consulta-progressiva-diabetes-cardiovascular).",
+    "source_refs": [
+      "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Recomendação 3.7.1 e pontos de prática 3.7.2–3.7.3. https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf"
+    ],
+    "review_status": "revisado",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "estenose-aortica-area-pequena-gradiente-baixo-e-laudos-nao-comparaveis",
+    "titulo": "Área aórtica pequena e gradiente baixo: a troca de valva já está definida?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Caso fictício. Mulher de 76 anos, hipertensa, superfície corporal 1,70 m², ritmo sinusal, sem anemia ou doença pulmonar conhecida. Há 10 meses: área aórtica 1,10 cm², gradiente médio 25 mmHg e FEVE 62%; imagens indisponíveis. Agora: área 0,78 cm², Vmax 3,3 m/s, gradiente médio 28 mmHg e FEVE 60%, com valva calcificada. PA durante o exame: 168/86 mmHg; o laudo não informa volume sistólico indexado, índice adimensional nem janelas utilizadas. Na consulta, PA 142/78 mmHg, FC 68 bpm, ausculta com sopro sistólico, pulmões limpos e ausência de edema. Diz estar assintomática, mas abandonou as caminhadas com a irmã por cansaço; não teve síncope nem dor em repouso.",
+    "pergunta": "Qual é a conclusão mais adequada neste momento?",
+    "opcoes": [
+      "Confirmar estenose grave sintomática e agendar TAVI apenas porque a área é inferior a 1 cm².",
+      "Descartar estenose grave porque FEVE é normal e gradiente médio é inferior a 40 mmHg.",
+      "Registrar discordância ainda não resolvida, revisar aquisição e fluxo e reconstruir a limitação funcional antes da decisão valvar.",
+      "Concluir progressão rápida apenas pela diferença de área entre os laudos e dispensar comparação de imagens."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A alternativa C é correta: o caso ainda não permite graduar definitivamente a estenose nem atribuir o cansaço à valva. A revisão deve conferir Doppler em múltiplas janelas, via de saída, condições pressóricas e volume sistólico indexado; FEVE preservada não exclui baixo fluxo. A é incorreta porque área isolada não define indicação de intervenção. B é incorreta porque gradiente baixo não exclui gravidade. D é incorreta porque exames não comparáveis podem produzir falsa progressão. A paciente deve detalhar atividades abandonadas e quando isso ocorreu. Persistindo a discordância, a equipe define imagem complementar dirigida; o roteiro não autoriza teste de esforço indiscriminado. Ver [consulta longitudinal](/biblioteca/estenose-aortica-do-laudo-discordante-a-consulta-longitudinal). A fonte de imagem é consenso técnico; nenhuma classe ESC 2025 foi inferida. Aprofundamento: [trilha progressiva](/trilhas/trilha-consulta-progressiva-valvopatias).",
+    "source_refs": [
+      "Baumgartner H et al. Recommendations on the Echocardiographic Assessment of Aortic Valve Stenosis: A Focused Update from EACVI and ASE. JASE. 2017;30:372-392. DOI: 10.1016/j.echo.2017.02.009. https://www.asecho.org/wp-content/uploads/2017/04/2017ValveStenosisGuideline.pdf",
+      "ESC/EACTS. 2025 Guidelines for the management of valvular heart disease: portal oficial consultado em 09/09/2026; texto integral indisponível nesta sessão, sem extração de classes de intervenção. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"
+    ],
+    "review_status": "revisado",
+    "review_note": "Produção científica assistida por IA em 09/09/2026; Revisão cruzada concluída. Não representa revisão humana independente. Casos e roteiros originais; limites de acesso às fontes documentados na auditoria da rodada 2.",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "sincope-apos-marca-passo-registros-temporais-e-queda-pressoria",
+    "titulo": "Novo desmaio com marca-passo: o relatório normal encerra a investigação?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Caso fictício. Homem de 73 anos recebeu marca-passo bicameral há 18 meses por síncopes recorrentes e assistolia espontânea de 8 segundos documentada em monitor. Tilt antigo positivo. Apresenta novo desmaio ao levantar da mesa após almoço, precedido por visão escurecida e suor; recuperação em menos de 1 minuto, sem confusão, trauma ou dor torácica. No atendimento está estável: PA supina 138/76 mmHg, FC 66 bpm; em pé, PA 104/64 mmHg no primeiro e 108/66 mmHg no terceiro minuto, com tontura. ECG mostra captura apropriada; FEVE recente 58%. Indapamida foi acrescentada há 10 dias à losartana; nega diarreia ou sangramento. Interrogação inicial mostra bateria e limiares estáveis e não registra taquiarritmia, mas o horário do evento ainda não foi reconciliado com o relógio do dispositivo.",
+    "pergunta": "Qual raciocínio orienta a reavaliação?",
+    "opcoes": [
+      "Reconhecer componente hipotensivo provável, revisar medicações e correlacionar episódio e dispositivo antes de encerrar a investigação.",
+      "Atribuir obrigatoriamente o episódio à falha de captura e trocar os eletrodos.",
+      "Suspender a estimulação porque tilt positivo prova ausência de benefício do marca-passo.",
+      "Dar alta definitiva sem seguimento porque um relatório sem arritmias exclui todas as causas cardíacas."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A é correta: há queda pressórica sintomática e mudança terapêutica temporalmente plausível; o diagnóstico prévio não explica automaticamente o evento atual. B é incorreta: não foi demonstrada falha de captura. D é incorreta: é preciso correlacionar horário e registros, reconhecendo limites de detecção. A revisão da prescrição cabe à equipe, sem suspensão autônoma. C é incorreta: no BIOSync CLS, pacientes selecionados com síncope reflexa grave recorrente e assistolia induzida no tilt tiveram menos recorrências com estimulação ativa; tilt positivo não prova inutilidade universal. Esse ensaio não define a programação deste paciente nem elimina outros mecanismos. Ver [reavaliação após marca-passo](/biblioteca/sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao). A abordagem diagnóstica é apoiada por coorte observacional; o BIOSync é ensaio randomizado de população específica. Aprofundamento: [trilha progressiva](/trilhas/trilha-consulta-progressiva-sincope).",
+    "source_refs": [
+      "Rocha EA et al. Syncope in Patients with Cardiac Pacemakers. Braz J Cardiovasc Surg. 2021. PMID: 33594860. Coorte prospectiva; métodos e discussão consultados em 09/09/2026. https://pmc.ncbi.nlm.nih.gov/articles/PMC7918387/",
+      "Brignole M et al. Cardiac pacing in severe recurrent reflex syncope and tilt-induced asystole (BIOSync CLS). Eur Heart J. 2021;42:508-516. DOI: 10.1093/eurheartj/ehaa936. Abstract original consultado em 09/09/2026. https://pubmed.ncbi.nlm.nih.gov/33279955/"
+    ],
+    "review_status": "revisado",
+    "review_note": "Produção científica assistida por IA em 09/09/2026; Revisão cruzada concluída. Não representa revisão humana independente. Casos e roteiros originais; limites de acesso às fontes documentados na auditoria da rodada 2.",
+    "revisao": "Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   }
 ]

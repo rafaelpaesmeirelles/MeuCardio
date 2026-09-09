@@ -82,3 +82,7 @@ Um registro final possível: “Problema prioritário ___; meta ___; intervenç�
 - [DM2: consulta cardiometabólica e prevenção de complicações](/trilhas/trilha-consulta-progressiva-diabetes-cardiovascular)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [DM2 e doença renal: a queda inicial da TFGe exige retirar o iSGLT2?](/casos-clinicos/dm2-drc-queda-inicial-tfge-apos-isglt2-retorno-com-seguranca).

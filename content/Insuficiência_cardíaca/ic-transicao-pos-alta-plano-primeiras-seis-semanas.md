@@ -73,3 +73,7 @@ Persistência de sintomas graves, episódios repetidos de hipoperfusão, necessi
 - [Insuficiência cardíaca: diagnóstico, segurança e transição para o ambulatório](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [ICFEp após a alta: perda de peso, ortostatismo e piora renal exigem outra leitura](/casos-clinicos/icfep-pos-alta-perda-de-peso-ortostatismo-e-lesao-renal-reavaliar-volemia).

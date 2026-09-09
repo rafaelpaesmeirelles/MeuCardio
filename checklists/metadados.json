@@ -3860,7 +3860,7 @@
   {
     "slug": "confirmacao-de-hipertensao-resistente-verdadeira-antes-de-escalonar",
     "condicao": "Confirmação de hipertensão resistente verdadeira antes de escalonar tratamento",
-    "resumo": "Os quatro pontos que precisam ser excluídos — técnica de aferição, efeito do avental branco, não aderência e otimização do esquema — antes de rotular um paciente como hipertensão resistente verdadeira e partir para quarta droga, denervação renal ou investigação de causa secundária.",
+    "resumo": "Checagem de técnica, medidas fora do consultório, adesão e adequação terapêutica antes de classificar resistência verdadeira. Pistas independentes de hipertensão secundária devem ser investigadas em paralelo, sem esperar falha de uma quarta medicação.",
     "documento_origem": "hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
     "theme": "Hipertensão",
     "review_status": "revisado",
@@ -3868,7 +3868,9 @@
       "de la Sierra A, Segura J, Banegas JR, Gorostidi M, de la Cruz JJ, Armario P, Oliveras A, Ruilope LM. Clinical features of 8295 patients with resistant hypertension classified on the basis of ambulatory blood pressure monitoring. Hypertension. 2011;57(5):898-902. DOI: 10.1161/HYPERTENSIONAHA.110.168948. PMID: 21444835",
       "Jung O, Gechter JL, Wunder C, Paulke A, Bartel C, Geiger H, Toennes SW. Resistant hypertension? Assessment of adherence by toxicological urine analysis. J Hypertens. 2013;31(4):766-774. DOI: 10.1097/HJH.0b013e32835e2286. PMID: 23337469",
       "Kallioinen N, Hill A, Horswill MS, Ward HE, Watson MO. Sources of inaccuracy in the measurement of adult patients' resting blood pressure in clinical settings: a systematic review. J Hypertens. 2017;35(3):421-441. DOI: 10.1097/HJH.0000000000001197. PMID: 27977471",
-      "Carey RM, Calhoun DA, Bakris GL, Brook RD, Daugherty SL, Dennison-Himmelfarb CR, Egan BM, Flack JM, Gidding SS, Judd E, Lackland DT, Laffer CL, Newton-Cheh C, Smith SM, Taler SJ, Textor SC, Turan TN, White WB. Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association. Hypertension. 2018;72(5):e53-e90. DOI: 10.1161/HYP.0000000000000084. PMID: 30354828"
+      "Carey RM, Calhoun DA, Bakris GL, Brook RD, Daugherty SL, Dennison-Himmelfarb CR, Egan BM, Flack JM, Gidding SS, Judd E, Lackland DT, Laffer CL, Newton-Cheh C, Smith SM, Taler SJ, Textor SC, Turan TN, White WB. Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association. Hypertension. 2018;72(5):e53-e90. DOI: 10.1161/HYP.0000000000000084. PMID: 30354828",
+      "American Heart Association. Resistant Hypertension: Detection, Evaluation, and Management. Síntese oficial, 2018. https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know",
+      "Endocrine Society. Primary Aldosteronism: Clinical Practice Guideline, 2025, recomendação 3. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
     ],
     "itens": [
       {
@@ -3882,8 +3884,8 @@
         "id": "hr-mapa-mrpa",
         "categoria": "exame",
         "obrigatorio": true,
-        "texto": "MAPA (padrão-ouro) ou automedida domiciliar estruturada solicitada para confirmar a pressão fora do consultório — mais de 1 em cada 3 pacientes 'resistentes' pela pressão de consultório tem pressão ambulatorial normal",
-        "origem_secao": "Efeito do avental branco / Algoritmo prático de exclusão, item 2"
+        "texto": "MAPA ou MRPA tecnicamente adequada obtida para avaliar o controle fora do consultório; registros ocasionais não apresentados como exame protocolado.",
+        "origem_secao": "Correção focal: AHA 2018 — avaliação da hipertensão resistente; Endocrine Society 2025 — recomendação 3 e observações técnicas"
       },
       {
         "id": "hr-orientacao-automedida",
@@ -3896,8 +3898,8 @@
         "id": "hr-avental-branco-excluido",
         "categoria": "avaliacao",
         "obrigatorio": true,
-        "texto": "Se a pressão fora do consultório estiver controlada: classificado como pseudorresistência por avental branco, não hipertensão resistente verdadeira — não escalonar tratamento nem investigar causa secundária com base só na pressão de consultório",
-        "origem_secao": "Algoritmo prático de exclusão, item 2"
+        "texto": "Se PA fora do consultório controlada: efeito do avental branco reconhecido e intensificação não baseada somente na PA da consulta. Pistas independentes de causa secundária, como hipocalemia, mantêm investigação pertinente.",
+        "origem_secao": "Correção focal: AHA 2018 — avaliação da hipertensão resistente; Endocrine Society 2025 — recomendação 3 e observações técnicas"
       },
       {
         "id": "hr-aderencia-ativa",
@@ -3910,8 +3912,8 @@
         "id": "hr-esquema-otimizado",
         "categoria": "medicacao",
         "obrigatorio": true,
-        "texto": "Esquema revisado: as três classes centrais (bloqueador de canal de cálcio de ação prolongada, IECA/BRA e diurético adequado à função renal — tiazídico/similar se TFG preservada, de alça se TFG reduzida) confirmadas em dose otimizada",
-        "origem_secao": "Algoritmo prático de exclusão, item 4"
+        "texto": "Classes, doses máximas toleradas e contraindicações conferidas, incluindo bloqueador do SRAA, BCC de ação prolongada e estratégia diurética apropriada à função renal e ao estado volêmico. Não classificar qualquer redução da TFG como indicação automática de diurético de alça.",
+        "origem_secao": "Correção focal: AHA 2018 — avaliação da hipertensão resistente; Endocrine Society 2025 — recomendação 3 e observações técnicas"
       },
       {
         "id": "hr-substancias-pressoras",
@@ -3924,18 +3926,18 @@
         "id": "hr-classificacao-final",
         "categoria": "avaliacao",
         "obrigatorio": true,
-        "texto": "Só depois de excluídos os quatro pontos acima (técnica, avental branco, aderência, otimização do esquema): paciente classificado como hipertensão resistente verdadeira, com essa conclusão registrada no prontuário antes de qualquer escalonamento",
-        "origem_secao": "Algoritmo prático de exclusão, item 5"
+        "texto": "Classificação registrada após avaliar técnica, medidas externas, adesão e adequação terapêutica. Se persistir informação insuficiente, registrar resistência aparente ou avaliação incompleta; não certificar resistência verdadeira por suposição.",
+        "origem_secao": "Correção focal: AHA 2018 — avaliação da hipertensão resistente; Endocrine Society 2025 — recomendação 3 e observações técnicas"
       },
       {
         "id": "hr-encaminhamento-pos-confirmacao",
         "categoria": "seguimento",
         "obrigatorio": false,
-        "texto": "Confirmada a resistência verdadeira: caminho seguinte definido — quarta droga (espironolactona) e, se ainda não controlado, investigação de causa secundária, com prioridade para hiperaldosteronismo primário",
-        "origem_secao": "Algoritmo prático de exclusão, item 5"
+        "texto": "Confirmada resistência: investigar causas secundárias e fatores contribuintes em paralelo à otimização terapêutica. Se considerada espironolactona, conferir potássio, função renal e plano de monitoramento; não esperar falha da quarta droga para investigar causas secundárias.",
+        "origem_secao": "Correção focal: AHA 2018 — avaliação da hipertensão resistente; Endocrine Society 2025 — recomendação 3 e observações técnicas"
       }
     ],
-    "revisao": "Revisão editorial e documental concluída para publicação em 20/08/2026. Itens derivados do documento de origem citado em source_refs, com a seção de origem registrada em cada item."
+    "revisao": "Correção focal assistida por IA em 09/09/2026, Revisão cruzada concluída. Corrigidos adiamento da investigação secundária até falha da quarta droga, exclusão automática da investigação diante de efeito do avental branco e indicação indiscriminada de diurético de alça com qualquer redução da TFG. Fontes anteriores preservadas como histórico, sem alegar conferência integral. Não representa revisão humana nem revisão integral do documento de origem. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   },
   {
     "slug": "preparo-pre-operatorio-com-bloqueio-alfa-no-feocromocitoma",
@@ -8870,13 +8872,14 @@
   {
     "slug": "estenose-aortica-de-baixo-fluxo-e-baixo-gradiente-avaliacao",
     "condicao": "Estenose aórtica de baixo fluxo/baixo gradiente — avaliação diagnóstica",
-    "resumo": "O que checar diante de uma estenose aórtica com discordância entre área valvar e gradiente: confirmar os dois subtipos de baixo fluxo/baixo gradiente pela FEVE, medir o volume sistólico indexado, e usar o ecocardiograma sob estresse apenas na janela em que ele de fato diferencia estenose verdadeira de pseudoestenose — nunca no paciente já sintomático com gravidade confirmada.",
+    "resumo": "Confirmar a discordância entre área e gradiente, revisar medidas e identificar o fenótipo antes de selecionar exames adicionais e decidir encaminhamento. Não é indicação universal de estresse ou intervenção.",
     "documento_origem": "valvopatias-estenose-aortica-e-atualizacoes-gerais-esceacts-2021",
     "theme": "Valvopatias",
     "review_status": "revisado",
     "source_refs": [
       "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395",
-      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589); a tabela de indicações do ecocardiograma sob estresse em doenças cardiovasculares não isquêmicas foi conferida linha a linha em 31/07/2026"
+      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589); a tabela de indicações do ecocardiograma sob estresse em doenças cardiovasculares não isquêmicas foi conferida linha a linha em 31/07/2026",
+      "Baumgartner H et al. Recommendations on the Echocardiographic Assessment of Aortic Valve Stenosis: A Focused Update from EACVI and ASE. JASE. 2017;30:372-392. DOI: 10.1016/j.echo.2017.02.009. https://www.asecho.org/wp-content/uploads/2017/04/2017ValveStenosisGuideline.pdf"
     ],
     "itens": [
       {
@@ -8904,32 +8907,32 @@
         "id": "eao-lflg-preservada-eco-estresse",
         "categoria": "exame",
         "obrigatorio": false,
-        "texto": "No subtipo com FEVE preservada, assintomático ou com sintomas leves ou duvidosos, considerar ecocardiograma sob estresse (esforço ou dobutamina) para diferenciar estenose aórtica verdadeira de pseudoestenose — Classe IIb, Nível B (Diretriz Brasileira de Ergometria, SBC 2024)",
-        "origem_secao": "Estenose aortica — Diretriz Brasileira de Ergometria SBC 2024"
+        "texto": "No baixo fluxo/baixo gradiente com FEVE reduzida, selecionar DSE com dobutamina em baixa dose para esclarecer gravidade, em serviço capacitado. Na FEVE preservada, priorizar revisão integrada e considerar quantificação de cálcio por TC conforme a dúvida.",
+        "origem_secao": "ESC/EACTS 2021 — seção 5.1: avaliação integrada da estenose aórtica"
       },
       {
         "id": "eao-nao-eco-estresse-se-sintomatica-grave",
         "categoria": "conduta",
         "obrigatorio": true,
-        "texto": "Não solicitar ecocardiograma de esforço ou com dobutamina se a estenose aórtica grave já é sintomática — Classe III, Nível C: o sintoma já define a indicação de intervenção, e o estresse acrescenta risco sem mudar a conduta",
-        "origem_secao": "Estenose aortica — Diretriz Brasileira de Ergometria SBC 2024"
+        "texto": "Não confundir teste de esforço em estenose grave sintomática com DSE em baixa dose para esclarecer gravidade no baixo fluxo/baixo gradiente. Selecionar o exame pela pergunta clínica e segurança.",
+        "origem_secao": "ESC/EACTS 2021 — seção 5.1; EACVI/ASE 2017 — low-flow, low-gradient AS"
       },
       {
         "id": "eao-discordancia-parametros",
         "categoria": "diagnostico",
         "obrigatorio": true,
-        "texto": "Lembrar que a discordância entre os parâmetros de gravidade — tipicamente área <1,0 cm² com gradiente médio <40 mmHg — ocorre em 20 a 30% dos casos: decidir intervenção apenas por gradiente ou velocidade isolados é armadilha, a área valvar precisa entrar na conta",
+        "texto": "Integrar área valvar, velocidade, gradiente, fluxo e qualidade da aquisição; quando os parâmetros discordam, revisar medidas e contexto antes de classificar gravidade.",
         "origem_secao": "Criterios diagnosticos ecocardiograficos detalhados"
       },
       {
         "id": "eao-heart-team-decisao",
         "categoria": "encaminhamento",
         "obrigatorio": true,
-        "texto": "Encaminhar ao Heart Team para decisão entre TAVI e cirurgia, considerando características clínicas, anatômicas, experiência local e preferência informada do paciente, independentemente do padrão de fluxo/gradiente encontrado",
+        "texto": "Se houver perspectiva de intervenção ou complexidade diagnóstica relevante, encaminhar à equipe valvar com os dados e a incerteza documentados; área pequena isolada não indica troca de valva.",
         "origem_secao": "Casos intermediarios"
       }
     ],
-    "revisao": "Revisão editorial e documental concluída para integração neste lote. Os itens permanecem rastreáveis pelas fontes e seções de origem. Não há atribuição de revisão clínica individual a pessoa específica."
+    "revisao": "Correção focal assistida por IA em 09/09/2026: removida proibição genérica de dobutamina; distinguida DSE diagnóstica de teste de esforço; encaminhamento condicionado ao contexto. Revisão cruzada concluída. Demais itens preservados, sem alegação de revisão humana integral. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   },
   {
     "slug": "aplicacao-dos-criterios-de-duke-iscvid-2023-a-beira-do-leito",
@@ -39157,5 +39160,511 @@
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Os itens derivam da diretriz citada em source_refs, com a seção de origem registrada em cada item.",
     "review_note": "Revisão técnica, documental e de consistência assistida concluída em 04/09/2026; fontes, duplicidade, integridade estrutural e segurança editorial verificadas para preparação do corpus sob autorização do responsável médico."
+  },
+  {
+    "slug": "fechamento-da-consulta-apos-represcricao-anti-hipertensiva",
+    "condicao": "Fechamento da consulta após represcrição anti-hipertensiva",
+    "resumo": "Checklist de transição entre receita antiga, plano executável e retorno após intolerância ou uso diferente do prescrito. Aplicável a adultos não gestantes em acompanhamento ambulatorial; suspeita de emergência muda o destino assistencial.",
+    "documento_origem": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "AHA/ACC. 2025 High Blood Pressure Guideline; síntese oficial, 14/08/2025. https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know",
+      "American Heart Association. Resistant Hypertension: Detection, Evaluation, and Management. Scientific Statement, 2018; síntese oficial. https://professional.heart.org/en/science-news/resistant-hypertension-detection-evaluation-and-management/top-things-to-know",
+      "American Heart Association. Home Blood Pressure Monitoring. https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home",
+      "Endocrine Society. Primary Aldosteronism: Clinical Practice Guideline, 2025, recomendação 3 e observações técnicas. https://www.endocrine.org/clinical-practice-guidelines/primary-aldosteronism-2"
+    ],
+    "itens": [
+      {
+        "id": "has-retorno-receitas",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Receitas anteriores e caixas confrontadas; lista de medicamentos realmente usados registrada, incluindo doses omitidas e motivo.",
+        "origem_secao": "Intermediário: contrato clínico do primeiro atendimento"
+      },
+      {
+        "id": "has-retorno-tolerabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sintomas novos relacionados temporalmente às mudanças e avaliados; hipótese de intolerância documentada sem atribuição automática.",
+        "origem_secao": "Intermediário: contrato clínico do primeiro atendimento"
+      },
+      {
+        "id": "has-retorno-hipotese",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Diagnóstico, método de confirmação e meta registrados separadamente; descontrole não rotulado como resistência somente pela contagem de comprimidos.",
+        "origem_secao": "Escopo e ponto de partida"
+      },
+      {
+        "id": "has-retorno-medidas",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Fonte e qualidade das medidas registradas; MAPA/MRPA planejada quando indicada para responder à dúvida clínica.",
+        "origem_secao": "Básico: produzir uma medida utilizável"
+      },
+      {
+        "id": "has-retorno-lista-unica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Prescrição final identifica o que manter, retirar e substituir; duplicidades discutidas com o paciente.",
+        "origem_secao": "Intermediário: contrato clínico do primeiro atendimento"
+      },
+      {
+        "id": "has-retorno-repeticao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente repetiu com suas palavras o esquema; barreiras de custo, horários e acesso receberam plano concreto.",
+        "origem_secao": "Intermediário: contrato clínico do primeiro atendimento"
+      },
+      {
+        "id": "has-retorno-seguranca",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Necessidade de creatinina e eletrólitos após ajuste avaliada; exames indicados têm prazo, responsável e conduta se houver atraso.",
+        "origem_secao": "Avançado: planejar a segurança antes de titular"
+      },
+      {
+        "id": "has-retorno-potassio",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se hipocalemia, avaliação assistencial e investigação etiológica organizadas em paralelo; segurança não adiada até confirmar resistência.",
+        "origem_secao": "Avançado: planejar a segurança antes de titular"
+      },
+      {
+        "id": "has-retorno-alertas",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Sinais de atendimento imediato e canal para intolerância ou falha de acesso explicados.",
+        "origem_secao": "Alertas e fechamento do retorno"
+      },
+      {
+        "id": "has-retorno-fechamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado com perguntas explícitas sobre PA, uso real, tolerabilidade e exames; decisão futura não depende apenas da melhora do edema.",
+        "origem_secao": "Alertas e fechamento do retorno"
+      }
+    ],
+    "revisao": "Síntese operacional original assistida por IA em 09/09/2026, Revisão cruzada concluída.; não representa revisão humana. A linha sobre hipocalemia usa complementarmente o documento hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos, seção Seguimento e alertas. Não atribuir classe de recomendação própria a este checklist. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "retorno-com-feve-melhorada-preservar-tratamento-e-reavaliar-tolerancia",
+    "condicao": "Insuficiência cardíaca com melhora da fração de ejeção: retorno longitudinal",
+    "resumo": "Roteiro para documentar a trajetória da FEVE, evitar retirada motivada apenas pela melhora do ecocardiograma e resolver efeitos adversos com plano de seguimento. Síntese operacional original; não é escore validado nem autoriza redução automática de medicamentos.",
+    "documento_origem": "icfer-classificacao-diagnostico-quatro-pilares",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "AHA/ACC/HFSA. 2022 Guideline for the Management of Heart Failure, seção HF With Improved Ejection Fraction: manter GDMT, classe I, nível B-R. https://professional.heart.org/en/science-news/-/media/832EA0F4E73948848612F228F7FA2D35.ashx",
+      "Halliday BP, Wassall R, Lota AS, et al. TRED-HF. Lancet. 2019;393:61–73. PMID 30429050. https://pubmed.ncbi.nlm.nih.gov/30429050/",
+      "Pfizer. Aldactone prescribing information, seções 5.1, 5.2 e 7.1. https://labeling.pfizer.com/ShowLabeling.aspx?id=520"
+    ],
+    "itens": [
+      {
+        "id": "icfevm-trajetoria",
+        "categoria": "documentacao",
+        "obrigatorio": true,
+        "texto": "FEVE anterior e atual registradas numericamente, com datas, método, sintomas e tratamento entre os exames; melhora não transformada em diagnóstico de cura.",
+        "origem_secao": "Classificação: registrar o referencial e a FEVE numérica"
+      },
+      {
+        "id": "icfevm-causa",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Etiologia e fatores de recaída revisados, incluindo controle de PA/ritmo, adesão, exposições e causa tratável; resultados do TRED-HF não generalizados como risco numérico individual para todas as etiologias.",
+        "origem_secao": "Classificação: registrar o referencial e a FEVE numérica"
+      },
+      {
+        "id": "icfevm-conciliacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Lista real de medicamentos conciliada, com mudanças feitas pelo paciente, disponibilidade e duplicações; indicada a finalidade de cada fármaco e o motivo de eventual suspensão.",
+        "origem_secao": "Continuidade no CorVIA"
+      },
+      {
+        "id": "icfevm-preservacao",
+        "categoria": "decisao",
+        "obrigatorio": true,
+        "texto": "Terapia modificadora tolerada preservada apesar da melhora; qualquer exceção motivada por condição clínica concreta, com decisão individual e plano de reavaliação, e não apenas pelo novo valor de FEVE.",
+        "origem_secao": "Classificação: registrar o referencial e a FEVE numérica"
+      },
+      {
+        "id": "icfevm-tolerancia",
+        "categoria": "seguranca",
+        "obrigatorio": true,
+        "texto": "PA e sintomas ortostáticos, FC/ritmo, perfusão, congestão, peso, creatinina/TFGe e K revistos antes de ajuste; instabilidade encaminhada para avaliação imediata.",
+        "origem_secao": "Os quatro pilares do tratamento farmacológico da ICFEr"
+      },
+      {
+        "id": "icfevm-arm",
+        "categoria": "monitorizacao",
+        "obrigatorio": false,
+        "texto": "Quando espironolactona for iniciada ou titulada por indicação apropriada, K/creatinina basais e controle em até uma semana programados, com antecipação conforme risco; verificados suplementos de K e substitutos de sal.",
+        "origem_secao": "Os quatro pilares do tratamento farmacológico da ICFEr"
+      },
+      {
+        "id": "icfevm-diuretico",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Necessidade atual do diurético avaliada pela volemia; eventual redução não confundida com autorização para retirar os demais medicamentos da IC.",
+        "origem_secao": "Os quatro pilares do tratamento farmacológico da ICFEr"
+      },
+      {
+        "id": "icfevm-fechamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Próximo retorno, exames indicados e responsável pelos resultados registrados; se houve interrupção por intercorrência, definidos critérios clínicos para reconsiderar reintrodução.",
+        "origem_secao": "Continuidade no CorVIA"
+      },
+      {
+        "id": "icfevm-entendimento",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Paciente consegue explicar quais medicamentos manterá, o que foi ajustado, quando procurará ajuda e por que a melhora do exame não encerra o acompanhamento.",
+        "origem_secao": "Continuidade no CorVIA"
+      }
+    ],
+    "revisao": "Elaboração assistida por IA em 09/09/2026, com fontes primárias consultadas. Revisão cruzada concluída.; não equivale a revisão humana independente. Itens operacionais foram organizados para uso clínico contextual, sem validação como escore. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "retorno-das-palpitacoes-auditoria-da-correlacao-sintoma-ritmo",
+    "condicao": "Retorno por palpitações: revisão da correlação entre sintoma e ritmo",
+    "resumo": "Roteiro operacional para distinguir exame conclusivo, captura parcial e ausência do sintoma-alvo.",
+    "documento_origem": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Steinberg JS et al. 2017 ISHNE-HRS expert consensus statement on ambulatory ECG and external cardiac monitoring/telemetry. Ann Noninvasive Electrocardiol. 2017;22:e12447. DOI: 10.1111/anec.12447. Seções 3 e 4.2. https://pmc.ncbi.nlm.nih.gov/articles/PMC6931745/",
+      "American Heart Association. Symptoms, Diagnosis and Monitoring of Arrhythmia. Atualizado em 10/10/2024; consultado em 09/09/2026. https://www.heart.org/en/health-topics/arrhythmia/symptoms-diagnosis--monitoring-of-arrhythmia"
+    ],
+    "itens": [
+      {
+        "id": "r2-palpit-prioridade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Sinais de alarme revistos; instabilidade atual encaminhada à emergência.",
+        "origem_secao": "Escolher a janela e reconhecer prioridade"
+      },
+      {
+        "id": "r2-palpit-fenotipos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Cada padrão de palpitação identificado separadamente.",
+        "origem_secao": "O diário que melhora a utilidade do resultado"
+      },
+      {
+        "id": "r2-palpit-qualidade",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Tempo analisável, artefatos e horários conferidos.",
+        "origem_secao": "O diário que melhora a utilidade do resultado"
+      },
+      {
+        "id": "r2-palpit-sintoma-alvo",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado se ocorreu a queixa principal durante a gravação.",
+        "origem_secao": "Quatro resultados possíveis"
+      },
+      {
+        "id": "r2-palpit-tracados",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Trechos decisivos revisados, além do resumo automático.",
+        "origem_secao": "O diário que melhora a utilidade do resultado"
+      },
+      {
+        "id": "r2-palpit-correlacao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Correlação registrada por sintoma, sem generalizar entre queixas diferentes.",
+        "origem_secao": "Quatro resultados possíveis"
+      },
+      {
+        "id": "r2-palpit-incidental",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Arritmias assintomáticas avaliadas por relevância própria.",
+        "origem_secao": "Quatro resultados possíveis"
+      },
+      {
+        "id": "r2-palpit-conclusao",
+        "categoria": "comunicacao",
+        "obrigatorio": true,
+        "texto": "Ausência de captura diferenciada de sintoma com ritmo sinusal.",
+        "origem_secao": "Quatro resultados possíveis"
+      },
+      {
+        "id": "r2-palpit-janela",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se inconclusivo, duração do próximo registro ajustada à frequência dos episódios.",
+        "origem_secao": "Escolher a janela e reconhecer prioridade"
+      },
+      {
+        "id": "r2-palpit-retorno",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Plano, diário, retorno e sinais para antecipar atendimento combinados.",
+        "origem_secao": "O diário que melhora a utilidade do resultado"
+      }
+    ],
+    "revisao": "Produção assistida por IA em 09/09/2026. Consenso primário conferido; checklist operacional original, pendente de revisão clínica. Não representa revisão humana. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "primeiro-retorno-pos-sca-fechamento-de-divergencias-e-pendencias",
+    "condicao": "Primeiro retorno após SCA: fechar divergências e pendências da alta",
+    "resumo": "Roteiro de consulta para verificar o uso real, resolver receitas conflitantes e deixar responsáveis e prazos explícitos. Não é escore validado nem conjunto universal de exames.",
+    "documento_origem": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+    "theme": "Doença coronariana",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rao SV, et al. ACC/AHA ACS Guideline 2025. DOI: 10.1161/CIR.0000000000001309. Síntese oficial: https://professional.heart.org/en/science-news/2025-guideline-for-the-management-of-patients-with-acute-coronary-syndromes/top-things-to-know",
+      "FDA. BRILINTA (ticagrelor), prescribing information 03/2024, seções 2.1 e 5.3: https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/022433s035lbl.pdf"
+    ],
+    "itens": [
+      {
+        "id": "ret-sca-triagem",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Dor atual/recorrente, dispneia, síncope e sangramento pesquisados; PA, FC e sinais de congestão/perfusão registrados. Se suspeita de emergência, encaminhamento imediato documentado e interrompida a rotina eletiva.",
+        "origem_secao": "Intercorrências: organizar a avaliação, sem troca automática"
+      },
+      {
+        "id": "ret-sca-documentos",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Datas da SCA/ICP e estratégia final recuperadas. Laudo de ICP, resumo de alta e receitas confrontados; documento ausente: qual, quem obterá e até quando.",
+        "origem_secao": "Reconstruir a indicação antes de renovar"
+      },
+      {
+        "id": "ret-sca-uso-real",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Caixas/lista do paciente conferidas: fármaco, dose, frequência, última tomada, omissões, automedicação e dificuldade de compra; uso real distinguido da prescrição.",
+        "origem_secao": "Reconstruir a indicação antes de renovar"
+      },
+      {
+        "id": "ret-sca-divergencia",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Cada divergência registrada como intencional confirmada ou erro. Duplicação de P2Y12, anticoagulante sem indicação ou interrupção não planejada resolvida pelo médico no atendimento, com contato da equipe anterior quando necessário; não adiar erro ativo apenas por faltar papel.",
+        "origem_secao": "Reconstruir a indicação antes de renovar"
+      },
+      {
+        "id": "ret-sca-antitrombose",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Combinação antitrombótica, indicação de cada componente, estratégia de duração/reavaliação, razão e responsável escritos por nome. Se anticoagulação concomitante, usar avaliação específica; não copiar automaticamente duração da DAPT isolada.",
+        "origem_secao": "Decisões antitrombóticas que não podem ficar implícitas"
+      },
+      {
+        "id": "ret-sca-intercorrencia",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se equimoses/dispneia/tontura, registrar cronologia, intensidade, sinais associados e hipóteses. Dispneia não atribuída automaticamente ao ticagrelor; se intolerância confirmada exigir troca, prescrever transição explícita sem lacuna indevida de proteção.",
+        "origem_secao": "Intercorrências: organizar a avaliação, sem troca automática"
+      },
+      {
+        "id": "ret-sca-exames",
+        "categoria": "exames",
+        "obrigatorio": false,
+        "texto": "Exames condicionados ao problema: hemograma se suspeita de sangramento/anemia; creatinina/eletrólitos conforme função renal e fármacos; ECG e avaliação aguda se nova isquemia/arritmia; ecocardiograma se nova suspeita de IC/complicação. Registrar indicação, resultado disponível e pendência, evitando bateria universal.",
+        "origem_secao": "Intercorrências: organizar a avaliação, sem troca automática"
+      },
+      {
+        "id": "ret-sca-prevencao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Hipolipemiante realmente usado confirmado; programar lipidograma 4–8 semanas após início/ajuste. Encaminhamento de reabilitação conferido, incluindo barreiras de acesso e solução. Registrar tabagismo e ação acordada quando aplicável.",
+        "origem_secao": "Prevenção secundária precisa de uma próxima ação"
+      },
+      {
+        "id": "ret-sca-compreensao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Lista única datada entregue; prescrições substituídas identificadas. Paciente/cuidador explica nomes, horários, mudanças e canal de contato. Alertas de emergência e data do próximo contato registrados.",
+        "origem_secao": "Prevenção secundária precisa de uma próxima ação"
+      },
+      {
+        "id": "ret-sca-fechamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Pendências encerradas ou vinculadas a pessoa e prazo: documento/exame/medicamento/acesso. Confirmar que a próxima equipe receberá a prescrição reconciliada e o motivo das alterações.",
+        "origem_secao": "Prevenção secundária precisa de uma próxima ação"
+      }
+    ],
+    "revisao": "Elaboração e checagem de fontes assistidas por IA em 09/09/2026; pendente de revisão clínica. Sequência operacional original, sem validação como instrumento e sem declaração de revisão humana. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "retorno-dislipidemia-uso-real-resposta-meta-e-continuidade",
+    "condicao": "Retorno da dislipidemia: uso real, resposta, meta e continuidade",
+    "resumo": "Fecha o ciclo entre prescrição, exposição, resultado e próximo passo; complementa os checklists de início de estatina e de intolerância existentes.",
+    "documento_origem": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. DOI: 10.1093/eurheartj/ehz455. Tabelas oficiais de monitorização, páginas 124–130 da apresentação: https://eas-society.org/wp-content/uploads/2022/11/2019_dyslipidaemias_guidelin.pdf",
+      "American Heart Association. Top Things to Know: 2026 Guideline on the Management of Dyslipidemia. Atualizado em 13/03/2026. https://professional.heart.org/en/science-news/2026-guideline-on-the-management-of-dyslipidemia/top-things-to-know"
+    ],
+    "itens": [
+      {
+        "id": "ret-lip-exposicao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Reconciliados fármacos, doses, início/ajustes e frequência efetivamente utilizada; interrupções e barreiras de aquisição registradas.",
+        "origem_secao": "Antes de chamar a resposta de insuficiente"
+      },
+      {
+        "id": "ret-lip-comparabilidade",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Conferidos data, unidade, método de LDL, TG e condição clínica da coleta; basal sem tratamento distinguido de valor já sob terapia.",
+        "origem_secao": "Antes de chamar a resposta de insuficiente"
+      },
+      {
+        "id": "ret-lip-meta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Categoria de risco, diretriz/ano e meta individual documentados; categorias SBC, ESC e ACC/AHA não foram misturadas.",
+        "origem_secao": "Calcular o que já foi obtido e o que ainda falta"
+      },
+      {
+        "id": "ret-lip-resposta",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrados LDL atual e redução percentual quando há basal válido; ausência de basal foi explicitada, sem estimativa inventada.",
+        "origem_secao": "Calcular o que já foi obtido e o que ainda falta"
+      },
+      {
+        "id": "ret-lip-distancia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Quantificada a distância até a meta: 100 × (LDL atual − limiar)/LDL atual quando acima dela; cálculo utilizado para planejar, não para garantir efeito de um fármaco.",
+        "origem_secao": "Calcular o que já foi obtido e o que ainda falta"
+      },
+      {
+        "id": "ret-lip-causas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Antes de rotular resistência, revistos adesão, custo, dieta, álcool, hipotireoidismo, função renal e medicamentos concomitantes conforme suspeita clínica.",
+        "origem_secao": "Antes de chamar a resposta de insuficiente"
+      },
+      {
+        "id": "ret-lip-sintomas",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Perguntados sintomas musculares/hepáticos e sinais de gravidade; fraqueza importante, urina escura ou oligúria direcionam avaliação urgente.",
+        "origem_secao": "Segurança sem transformar todo retorno em bateria de exames"
+      },
+      {
+        "id": "ret-lip-enzimas",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "CK e ALT solicitadas conforme indicação clínica e fase de início/ajuste; no usuário estável assintomático de estatina, evitada monitorização seriada de CK e ALT sem indicação. Para fibratos e outros hipolipemiantes, seguido o monitoramento específico do medicamento.",
+        "origem_secao": "Segurança sem transformar todo retorno em bateria de exames"
+      },
+      {
+        "id": "ret-lip-intolerancia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se suspeita de intolerância, registradas molécula, dose, manifestação, gravidade e tentativas anteriores; encaminhamento ao protocolo próprio sem reexposição automática após toxicidade grave.",
+        "origem_secao": "Quando há suspeita de intolerância"
+      },
+      {
+        "id": "ret-lip-decisao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Plano de manter, intensificar ou ajustar tratamento contém motivo, potência necessária, tolerabilidade e acesso; preservada a estratégia já iniciada na alta de SCA.",
+        "origem_secao": "Intensificar com uma justificativa verificável"
+      },
+      {
+        "id": "ret-lip-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Exame, data de retorno e responsável definidos; referência ESC/EAS: lipídios em 8 ±4 semanas após ajuste, com prazo mais breve quando o contexto exige.",
+        "origem_secao": "O que uma boa consulta de retorno precisa responder"
+      },
+      {
+        "id": "ret-lip-acordo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente recebeu receita atual, meta, forma de contato diante de sintomas/falta do remédio e instruções para preparar o retorno.",
+        "origem_secao": "Plano de continuidade"
+      }
+    ],
+    "revisao": "Elaboração técnica assistida por IA em 09/09/2026, Revisão cruzada concluída. Roteiro operacional autoral; itens condicionais não equivalem a indicação universal de exames ou fármacos. Sem atribuição de aprovação humana. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
+  },
+  {
+    "slug": "sincope-recorrente-apos-marca-passo-correlacao-clinica-e-dispositivo",
+    "condicao": "Síncope recorrente após marca-passo: correlação do episódio e reavaliação",
+    "resumo": "Roteiro clínico original para investigar um novo episódio. Não é escore validado; itens obrigatórios indicam documentação essencial, sem prescrição universal de exames. A urgência depende do risco atual.",
+    "documento_origem": "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Rocha EA et al. Syncope in Patients with Cardiac Pacemakers. Braz J Cardiovasc Surg. 2021. PMID: 33594860. Coorte prospectiva; métodos e discussão consultados em 09/09/2026. https://pmc.ncbi.nlm.nih.gov/articles/PMC7918387/",
+      "Brignole M et al. Cardiac pacing in severe recurrent reflex syncope and tilt-induced asystole (BIOSync CLS). Eur Heart J. 2021;42:508-516. DOI: 10.1093/eurheartj/ehaa936. Abstract original consultado em 09/09/2026. https://pubmed.ncbi.nlm.nih.gov/33279955/"
+    ],
+    "itens": [
+      {
+        "id": "smp-risco",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Avaliar instabilidade, lesão e sinais de causa grave; providenciar atendimento urgente conforme o quadro.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      },
+      {
+        "id": "smp-episodio",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Documentar postura, pródromos, recuperação, testemunha e horário do episódio.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      },
+      {
+        "id": "smp-dispositivo",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Providenciar interrogação do dispositivo e correlação com registros disponíveis; registrar limitações.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      },
+      {
+        "id": "smp-pressao",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se clinicamente seguro, medir pressão supina e em ortostatismo, correlacionando sintomas.",
+        "origem_secao": "Caso didático"
+      },
+      {
+        "id": "smp-receita",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Revisar mudanças da prescrição e possíveis perdas de volume.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      },
+      {
+        "id": "smp-selecao",
+        "categoria": "conduta",
+        "obrigatorio": true,
+        "texto": "Definir a pergunta que cada exame adicional deve responder; não solicitar tilt, Holter ou estudo invasivo em bloco.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      },
+      {
+        "id": "smp-tilt",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "texto": "Não usar tilt positivo isolado para declarar ausência de benefício da estimulação.",
+        "origem_secao": "Duas evidências que respondem a perguntas diferentes"
+      },
+      {
+        "id": "smp-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Registrar hipótese, incerteza, responsável pela próxima etapa e prazo de reavaliação.",
+        "origem_secao": "Roteiro original para reconstruir o novo episódio"
+      }
+    ],
+    "revisao": "Produção científica assistida por IA em 09/09/2026; Revisão cruzada concluída. Não representa revisão humana independente. Casos e roteiros originais; limites de acesso às fontes documentados na auditoria da rodada 2. Produção e revisão cruzada por agentes de IA em 09/09/2026, com consolidação editorial. Não representa revisão humana independente nem autorização de publicação. Fontes, limites e correções em docs/producao-prevalentes-20260909-rodada2/."
   }
 ]

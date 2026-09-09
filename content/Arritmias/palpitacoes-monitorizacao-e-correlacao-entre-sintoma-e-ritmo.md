@@ -63,3 +63,9 @@ Contraste útil no retorno: se o sintoma habitual foi reproduzido diversas vezes
 - [FA e palpitações: reconhecimento, decisão e segurança da anticoagulação](/trilhas/trilha-consulta-progressiva-fibrilacao-atrial)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [O Holter explicou as falhas, mas também explicou o coração disparado?](/casos-clinicos/palpitacoes-dois-tipos-de-sintoma-e-correlacao-parcial-no-holter).
+- [Palpitações: o diário que ajuda a entender seu exame](/material-paciente/diario-de-palpitacoes-e-retorno-do-holter-como-participar).
+- [Retorno por palpitações: revisão da correlação entre sintoma e ritmo](/checklists/retorno-das-palpitacoes-auditoria-da-correlacao-sintoma-ritmo).

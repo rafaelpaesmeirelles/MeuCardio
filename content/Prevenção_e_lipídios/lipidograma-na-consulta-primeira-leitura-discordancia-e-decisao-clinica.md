@@ -78,3 +78,7 @@ Registre uma frase completa: “Dislipidemia caracterizada por ___; resultado ob
 - [Dislipidemia: interpretação, metas, resposta e segurança](/trilhas/trilha-consulta-progressiva-dislipidemia)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Primeiro lipidograma: o LDL calculado permite tranquilizar este paciente?](/casos-clinicos/primeiro-lipidograma-triglicerideos-altos-ldl-calculado-nao-interpretavel).

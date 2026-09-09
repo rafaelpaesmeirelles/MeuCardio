@@ -82,3 +82,9 @@ Custos, preferências e barreiras sociais devem integrar a decisão compartilhad
 - [Doença coronariana: da dor torácica ao primeiro retorno após SCA](/trilhas/trilha-consulta-progressiva-doenca-coronariana)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Primeiro retorno após SCA: dois P2Y12, equimoses e falta de ar](/casos-clinicos/primeiro-retorno-pos-sca-dois-p2y12-dispneia-e-receitas-conflitantes).
+- [Primeiro retorno após o infarto: leve remédios, receitas e dúvidas](/material-paciente/primeiro-retorno-apos-infarto-leve-remedios-receitas-e-duvidas).
+- [Primeiro retorno após SCA: fechar divergências e pendências da alta](/checklists/primeiro-retorno-pos-sca-fechamento-de-divergencias-e-pendencias).

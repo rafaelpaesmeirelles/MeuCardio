@@ -69,3 +69,9 @@ Dor torácica, dispneia aguda, alteração neurológica, síncope ou perda visua
 - [Hipertensão: da primeira consulta ao seguimento e à investigação secundária](/trilhas/trilha-consulta-progressiva-hipertensao)
 
 Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
+
+## Aplicação na consulta e continuidade do cuidado
+
+- [Primeira consulta: a pressão permanece alta, mas a prescrição não corresponde ao uso real](/casos-clinicos/primeira-consulta-has-doses-omitidas-por-intolerancia-e-descontrole-sustentado).
+- [Troquei o remédio da pressão: o que levar e observar até o retorno](/material-paciente/apos-trocar-remedio-da-pressao-como-organizar-retorno-e-observar-inchaco).
+- [Fechamento da consulta após represcrição anti-hipertensiva](/checklists/fechamento-da-consulta-apos-represcricao-anti-hipertensiva).
