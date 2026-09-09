@@ -1,18 +1,13 @@
+import FinalizarDocumentoGerado, { type Provedor } from "../components/FinalizarDocumentoGerado";
 import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Vazio } from "../components/Estado";
-import AssinaturaExternaITI from "../components/AssinaturaExternaITI";
-import OfertaEnvioEmailPaciente from "../components/OfertaEnvioEmailPaciente";
 import type { Endereco, Paciente } from "../components/SeletorPaciente";
 import {
   VARIAVEIS_PACIENTE, formatarDataBR, montarEnderecoCompleto, variaveisDoPaciente,
   SeletorPaciente,
 } from "../components/SeletorPaciente";
-
-// Trabalho 14 (06/08/2026) — mesmo conjunto de `provedor._MANUAL_EXTERNO`
-// no backend: métodos que não têm API própria e passam pelo Assinador ITI.
-const METODOS_MANUAL_EXTERNO = new Set(["GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"]);
 
 type Template = { id: number; title: string; doc_type: string; body: string };
 type Gerado = { id: number; title: string; doc_type: string; created_at: string; patient_name: string | null };
@@ -43,14 +38,7 @@ type GeradoDetalhe = {
   patient_profile_id: number | null;
   patient_snapshot: PatientSnapshot | null;
 };
-type Provedor = {
-  codigo: string;
-  nome: string;
-  nivel: string;
-  familia: string;
-  disponivel: boolean;
-  motivo: string | null;
-};
+
 
 // 12/08/2026 — cadastro de paciente reutilizável entre documentos
 // (`GET/POST/PUT/DELETE /api/pacientes`), separado do prontuário anônimo
@@ -75,14 +63,7 @@ function substituirVariaveis(body: string, valores: Record<string, string>): str
   return body.replace(/\{\{(\w+)\}\}/g, (_match, nome) => valores[nome] ?? "");
 }
 
-function baixarBlob(blob: Blob, nomeArquivo: string) {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = nomeArquivo;
-  a.click();
-  URL.revokeObjectURL(url);
-}
+
 
 
 function SeletorEnderecoPrescritor({ endereco, onChange }: {
@@ -206,126 +187,6 @@ function montarCorpoExames(exames: string[], indicacao: string, cid: string,
   if (prioridade === "urgente") { linhas.push("", "Prioridade: URGENTE"); }
   if (observacoes.trim()) { linhas.push("", `Observações: ${observacoes.trim()}`); }
   return linhas.join("\n");
-}
-
-// ————————————————————————————————————————————————————————————————————
-// Finalização — assinar, baixar PDF, enviar por e-mail. Compartilhada por
-// TODOS os tipos de documento gerado (modelo, exames, atestado, livre):
-// as rotas de `app/api/documents.py` já são genéricas por `GeneratedDocument.
-// id`, então esta parte da tela não precisa saber de qual fluxo o
-// documento veio.
-// ————————————————————————————————————————————————————————————————————
-function FinalizarDocumentoGerado({ geradoId, nomeArquivoBase, provedores, onFechar }: {
-  geradoId: number;
-  nomeArquivoBase: string;
-  provedores: Provedor[] | null;
-  onFechar: () => void;
-}) {
-  const { usuario } = useAuth();
-  const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
-  const [erro, setErro] = useState("");
-  const [email, setEmail] = useState("");
-  const [enviando, setEnviando] = useState(false);
-  const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
-  const [aguardandoExterno, setAguardandoExterno] = useState(false);
-  const [assinadoExternoAgora, setAssinadoExternoAgora] = useState(false);
-  const [emitido, setEmitido] = useState(false);
-
-  useEffect(() => {
-    if (usuario?.assinatura_metodo_preferido) {
-      setMetodo(usuario.assinatura_metodo_preferido);
-    }
-  }, [usuario?.assinatura_metodo_preferido]);
-
-  async function baixar() {
-    try {
-      const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
-      baixarBlob(blob, `${nomeArquivoBase}-${geradoId}.pdf`);
-      setAguardandoExterno(METODOS_MANUAL_EXTERNO.has(metodo));
-      setEmitido(true);
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
-    }
-  }
-
-  async function enviar() {
-    if (!email) return;
-    setEnviando(true);
-    setErro("");
-    try {
-      const r = await api.post<{ enviado: boolean; link: string | null }>(
-        `/document-templates/gerados/${geradoId}/enviar-email`, { email },
-      );
-      setResultadoEnvio(r);
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível enviar o e-mail.");
-    } finally {
-      setEnviando(false);
-    }
-  }
-
-  return (
-    <div className="cartao" style={{ marginTop: "0.8rem" }}>
-      <p style={{ color: "var(--sucesso)" }}>Documento gerado.</p>
-      <div style={{ marginTop: "0.4rem" }}>
-        <label>Método de assinatura</label>
-        <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
-          {(provedores ?? []).map((p) => (
-            <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
-              {p.nome}{!p.disponivel ? " — indisponível" : ""}
-            </option>
-          ))}
-        </select>
-        {(() => {
-          const escolhido = provedores?.find((p) => p.codigo === metodo);
-          if (!escolhido || escolhido.disponivel) return null;
-          return <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>{escolhido.motivo}</p>;
-        })()}
-      </div>
-      <button className="botao" style={{ marginTop: "0.6rem" }} onClick={baixar}>Baixar PDF</button>
-
-      {aguardandoExterno && (
-        <AssinaturaExternaITI
-          metodo={metodo}
-          nomeProvedor={provedores?.find((p) => p.codigo === metodo)?.nome ?? metodo}
-          enviarUrl={`/document-templates/gerados/${geradoId}/assinatura-externa`}
-          onConcluido={() => { setAguardandoExterno(false); setAssinadoExternoAgora(true); }}
-        />
-      )}
-      {assinadoExternoAgora && (
-        <p style={{ color: "var(--sucesso)", fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Assinatura conferida com sucesso — o documento já está assinado.
-        </p>
-      )}
-
-      <OfertaEnvioEmailPaciente
-        endpointBase={`/document-templates/gerados/${geradoId}`}
-        habilitado={emitido && !aguardandoExterno}
-      />
-
-      <div style={{ marginTop: "0.8rem" }}>
-        <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="paciente@exemplo.com" />
-        <button className="botao" style={{ marginTop: "0.4rem" }} onClick={enviar} disabled={enviando || !email}>
-          {enviando ? "Enviando…" : "Enviar por e-mail"}
-        </button>
-      </div>
-
-      {resultadoEnvio && (
-        resultadoEnvio.enviado ? (
-          <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>E-mail enviado.</p>
-        ) : (
-          <p style={{ fontSize: "0.86rem" }}>
-            O envio automático não está disponível agora. Copie o link e envie manualmente:{" "}
-            <code style={{ wordBreak: "break-all" }}>{resultadoEnvio.link}</code>
-          </p>
-        )
-      )}
-
-      {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
-      <button className="botao botao--secundario" style={{ marginTop: "0.8rem" }} onClick={onFechar}>Fechar</button>
-    </div>
-  );
 }
 
 type Origem = "modelo" | "exames" | "atestado" | "livre";
@@ -705,6 +566,7 @@ export default function Templates() {
   const [buscaGerados, setBuscaGerados] = useState("");
   const [tipoGerados, setTipoGerados] = useState("");
   const [pacientePreSelecionado, setPacientePreSelecionado] = useState<Paciente | null>(null);
+  const [finalizandoGerado, setFinalizandoGerado] = useState<Gerado | null>(null);
 
   const recarregar = () => api.get<Template[]>("/document-templates").then(setLista);
 
@@ -1084,14 +946,18 @@ export default function Templates() {
                       <button
                         className="botao botao--secundario"
                         style={{ padding: "0.3rem 0.6rem" }}
-                        onClick={async () => {
-                          const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
-                          baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
-                        }}
+                        onClick={() => setFinalizandoGerado(g)}
                       >
-                        Baixar PDF
+                        Assinar / baixar / enviar
                       </button>
                     </div>
+                    {finalizandoGerado?.id === g.id && (
+                      <div style={{ width: "100%" }}>
+                        <FinalizarDocumentoGerado key={g.id} geradoId={g.id}
+                          nomeArquivoBase={g.doc_type} provedores={provedores}
+                          onFechar={() => setFinalizandoGerado(null)} />
+                      </div>
+                    )}
                   </div>
                 ))}
               </section>

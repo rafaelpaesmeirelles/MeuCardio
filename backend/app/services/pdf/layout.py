@@ -21,28 +21,14 @@ from .marca import (
     TINTA_TEAL, VERMELHO, logo_disponivel,
 )
 from .nucleo import A4, PDF, largura_texto
+from .wrapping import wrap_text
 
 A4_PAISAGEM = (A4[1], A4[0])
 
 
 def quebrar(texto: str, largura: float, tamanho: float, negrito: bool = False) -> list[str]:
-    """Quebra em linhas pela largura real do texto, não por contagem de caracteres.
-
-    Palavra sozinha mais larga que a caixa não é hifenizada: ela transborda numa
-    linha própria. É raro em português clínico e o alternativo — cortar no meio —
-    produziria leitura errada em nome de fármaco.
-    """
-    linhas, atual = [], ""
-    for palavra in texto.split():
-        tentativa = f"{atual} {palavra}".strip()
-        if largura_texto(tentativa, tamanho, negrito) <= largura or not atual:
-            atual = tentativa
-        else:
-            linhas.append(atual)
-            atual = palavra
-    if atual:
-        linhas.append(atual)
-    return linhas
+    """Quebra pela largura real, inclusive identificadores sem espaços."""
+    return wrap_text(texto, largura, lambda linha: largura_texto(linha, tamanho, negrito))
 
 
 class _Base:
@@ -85,19 +71,21 @@ class _Base:
         return alt
 
     def salvar_bytes(self) -> bytes:
-        import io
+        from pathlib import Path
         import tempfile
 
         # O núcleo escreve em arquivo; a rota devolve bytes. Um temporário evita
         # duplicar a serialização só para mudar o destino.
-        with tempfile.NamedTemporaryFile(suffix=".pdf") as f:
-            self.pdf.salvar(f.name)
-            f.seek(0)
-            return f.read()
+        with tempfile.TemporaryDirectory() as pasta:
+            caminho = Path(pasta) / "documento.pdf"
+            self.pdf.salvar(str(caminho))
+            return caminho.read_bytes()
 
 
 class Documento(_Base):
     """A4 retrato, texto corrido — material educativo do paciente."""
+
+    reservar_assinatura = False
 
     def abrir_pagina(self, com_cabecalho: bool = True) -> None:
         self.pdf.nova_pagina()
@@ -113,7 +101,7 @@ class Documento(_Base):
         self.pdf.linha(self.margem, t - 9, self.largura - self.margem, t - 9, FIO)
 
     def _rodape(self) -> None:
-        b = 48
+        b = 108 if self.reservar_assinatura else 48
         self.pdf.linha(self.margem, b + 14, self.largura - self.margem, b + 14, FIO)
         self.pdf.texto(self.margem, b, self.rodape, 7.2, NEUTRO)
         n = str(self.pagina)
@@ -131,6 +119,7 @@ class Documento(_Base):
         self.y = self.altura - 40 - alt - 26
 
         for linha in quebrar(titulo, self.util, 21, True):
+            self._garantir(40)
             self.pdf.texto(self.margem, self.y - 21, linha, 21, NAVY, negrito=True)
             self.y -= 27
         self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, VERMELHO, 2.2)
@@ -138,6 +127,7 @@ class Documento(_Base):
 
         if subtitulo:
             for linha in quebrar(subtitulo, self.util, 11):
+                self._garantir(24)
                 self.pdf.texto(self.margem, self.y - 11, linha, 11, TEAL)
                 self.y -= 16
         if etiqueta:
@@ -155,6 +145,7 @@ class Documento(_Base):
         self._garantir(56)
         self.espaco(10)
         for linha in quebrar(texto, self.util, 13, True):
+            self._garantir(45)
             self.pdf.texto(self.margem, self.y - 13, linha, 13, NAVY, negrito=True)
             self.y -= 17
         self.y -= 5
@@ -185,20 +176,24 @@ class Documento(_Base):
         tamanho = 10.0
         entrelinha = tamanho * 1.5
         linhas = quebrar(texto, self.util - 44, tamanho)
-        alt = len(linhas) * entrelinha + 22 + (14 if rotulo else 0)
-        self._garantir(alt + 8)
-        topo = self.y
-        self.pdf.retangulo(self.margem, topo - alt, self.util, alt, cor_fundo)
-        self.pdf.retangulo(self.margem, topo - alt, 3.2, alt, cor_barra)
-        y = topo - 16
-        if rotulo:
-            self.pdf.texto(self.margem + 18, y - 7.5, rotulo.upper(), 7.5, cor_barra,
-                           negrito=True, espaco_extra=1.1)
-            y -= 15
-        for linha in linhas:
-            self.pdf.texto(self.margem + 18, y - tamanho, linha, tamanho, TINTA)
-            y -= entrelinha
-        self.y = topo - alt - 12
+        rotulos = quebrar(rotulo.upper(), self.util - 44, 7.5, True) if rotulo else []
+        reserva = 26 + 15 * len(rotulos)
+        while linhas:
+            self._garantir(reserva + entrelinha + 12)
+            capacidade = max(1, int((self.y - self.base - reserva - 12) // entrelinha))
+            trecho, linhas = linhas[:capacidade], linhas[capacidade:]
+            alt = len(trecho) * entrelinha + reserva
+            topo = self.y
+            self.pdf.retangulo(self.margem, topo - alt, self.util, alt, cor_fundo)
+            self.pdf.retangulo(self.margem, topo - alt, 3.2, alt, cor_barra)
+            y = topo - 16
+            for linha in rotulos:
+                self.pdf.texto(self.margem + 18, y - 7.5, linha, 7.5, cor_barra, negrito=True)
+                y -= 15
+            for linha in trecho:
+                self.pdf.texto(self.margem + 18, y - tamanho, linha, tamanho, TINTA)
+                y -= entrelinha
+            self.y = topo - alt - 12
 
 
 class Apresentacao(_Base):

@@ -6,7 +6,7 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.clinical_docs import Prescription
 from app.services.clinical_ownership import patient_for_user
-from app.services.professional_profile import council_display
+from app.services.professional_profile import document_identity
 
 router = APIRouter(prefix="/api/prescriptions", tags=["prescricoes"])
 
@@ -72,21 +72,8 @@ def dados_para_impressao(pid: int, db: Session = Depends(get_db), user=Depends(c
     if not presc:
         raise HTTPException(status_code=404, detail="Prescrição não encontrada.")
     paciente = patient_for_user(presc.patient_id, db, user)
-    nome_conselho, estado_conselho = council_display(user)
     return {
         "prescricao": _dump(presc),
         "paciente": {"initials": paciente.initials, "record_number": paciente.record_number},
-        # RQE e especialidade entram no cabeçalho impresso: num receituário que
-        # circula fora da plataforma, é o registro do especialista que dá peso ao
-        # documento — e é dado que o médico já preencheu em Minha Conta.
-        # `document_logo_url` (Tarefa 4) — logo pessoal/do consultório, exibida
-        # JUNTO da logo da Corvia em `CabecalhoDocumento.tsx`, mesmo par que o
-        # PDF do backend já desenha em `pdf_documento.py`.
-        # `council_display()` troca "OUTRO" pelo nome/estado que o médico
-        # digitou no cadastro, quando houver (08/08/2026) — nunca afeta o
-        # escopo de prescrição, que é decidido à parte por `user.council_name`.
-        "medico": {"full_name": user.full_name, "council_name": nome_conselho,
-                    "council_number": user.council_number, "council_state": estado_conselho,
-                    "rqe": user.rqe, "specialty": user.specialty,
-                    "document_logo_url": user.document_logo_url},
+        "medico": document_identity(user),
     }

@@ -22,13 +22,17 @@ from docx.shared import RGBColor as DocxRGBColor
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.util import Inches, Pt
+from PIL import Image
+from reportlab.pdfbase.pdfmetrics import stringWidth
 
 from app.services.pdf.marca import LOGO, logo_disponivel
 from app.services.professional_profile import (
     document_identity,
     professional_name,
     workplace_lines,
+    rendered_logo_png,
 )
+from app.services.pdf.wrapping import wrap_text
 
 from .apresentacao import _fragmentar
 from .exportacao_conteudo import (
@@ -237,6 +241,46 @@ def _definir_borda_inferior(paragrafo, cor: str = "1C7293", tamanho: str = "12")
     p_bdr.append(bottom)
 
 
+def _cabecalho_docx(secao, user: Any, incluir: bool, nome: str, detalhes: list[str]) -> None:
+    """A mesma identidade em três colunas, repetida pelo cabeçalho do Word."""
+    largura = secao.page_width - secao.left_margin - secao.right_margin
+    tabela = secao.header.add_table(rows=1, cols=3, width=largura)
+    tabela.autofit = False
+    larguras = [int((largura - DocxInches(1.25)) / 2), DocxInches(1.25), int((largura - DocxInches(1.25)) / 2)]
+    for coluna, celula, medida in zip(tabela.columns, tabela.rows[0].cells, larguras):
+        coluna.width = celula.width = medida
+        celula.paragraphs[0].paragraph_format.space_after = DocxPt(0)
+    if logo_disponivel():
+        tabela.cell(0, 0).paragraphs[0].add_run().add_picture(str(LOGO), width=DocxInches(1.55))
+    altura_identidade = 46.0
+    if incluir:
+        identidade = document_identity(user)
+        caminho = rendered_logo_png(identidade.get("document_logo_url"))
+        if caminho:
+            with Image.open(caminho) as imagem:
+                w, h = imagem.size
+            escala = min(70 / w, 56 / h)
+            centro = tabela.cell(0, 1).paragraphs[0]
+            centro.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            centro.add_run().add_picture(str(caminho), width=DocxPt(w * escala), height=DocxPt(h * escala))
+            altura_identidade = max(altura_identidade, h * escala)
+        direita = tabela.cell(0, 2).paragraphs[0]
+        direita.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        direita.paragraph_format.line_spacing = DocxPt(11)
+        campos = [nome, identidade.get("profession"), *detalhes]
+        linhas = [linha for campo in campos if campo
+                  for linha in wrap_text(str(campo), larguras[2] / 12700 - 14,
+                                        lambda texto: stringWidth(texto, "Helvetica", 8.5))]
+        for indice, linha in enumerate(linhas):
+            run = direita.add_run(("\n" if indice else "") + linha)
+            run.font.size = DocxPt(8.5)
+            run.font.color.rgb = DocxRGBColor.from_string("0B2E45")
+            run.bold = indice == 0
+        altura_identidade = max(altura_identidade, len(linhas) * 11)
+    secao.header_distance = DocxInches(.3)
+    secao.top_margin = DocxPt(altura_identidade + 55)
+
+
 def gerar_docx(
     itens: list[ConteudoExportavel],
     *,
@@ -267,11 +311,7 @@ def gerar_docx(
         style.font.size = DocxPt(tamanho)
         style.font.color.rgb = DocxRGBColor.from_string(cor)
 
-    if logo_disponivel():
-        try:
-            documento.add_picture(str(LOGO), width=DocxInches(1.7))
-        except (OSError, ValueError):
-            pass
+    _cabecalho_docx(secao, user, incluir_dados_assinante, nome, detalhes)
     titulo_p = documento.add_paragraph(style="Title")
     titulo_p.add_run(titulo_final)
     _definir_borda_inferior(titulo_p)
@@ -281,8 +321,6 @@ def gerar_docx(
     run_sub.bold = True
     run_sub.font.size = DocxPt(12)
     run_sub.font.color.rgb = DocxRGBColor.from_string("55666F")
-    p_ident = documento.add_paragraph()
-    p_ident.add_run(" · ".join([nome, *detalhes])).italic = True
 
     documento.add_heading("Proveniência", level=1)
     documento.add_paragraph(

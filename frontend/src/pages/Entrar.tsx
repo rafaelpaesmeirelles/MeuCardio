@@ -16,10 +16,12 @@ import "../styles/corvia-approved-fidelity-20260904.css";
 import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";
 import "../styles/corvia-login-final-approved-20260904.css";
 import "../styles/corvia-login-fidelity-20260905.css";
+import "../styles/login-universe-refinement-20260909.css";
 
 type TemaPublico = CorviaTheme;
 
-function LoginGalaxy() {
+function LoginGalaxy({ theme }: { theme: TemaPublico }) {
+  const source = theme === "light" ? "/spaces/galaxy-light-soft-20260909.png" : "/spaces/galaxy-approved-canonical.webp";
   const fallbackRef = useRef<HTMLImageElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -33,7 +35,10 @@ function LoginGalaxy() {
 
     const image = new Image();
     image.decoding = "async";
-    image.src = "/spaces/galaxy-approved-canonical.webp";
+    image.src = source;
+    if (fallback) delete fallback.dataset.replaced;
+    delete canvas.dataset.ready;
+    context.clearRect(0, 0, canvas.width, canvas.height);
     let animationFrame = 0;
     let cancelled = false;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -44,17 +49,20 @@ function LoginGalaxy() {
     image.onload = () => {
       if (cancelled) return;
       const width = 683;
-      const height = 360;
-      const square = width;
-      const coreXRatio = 386.62 / 768;
-      const coreYRatio = 119.25 / 256;
+      const height = Math.round(width * image.naturalHeight / image.naturalWidth);
+      const dark = theme === "dark";
+      const square = width * 2;
+      // Measured stellar centroid and ellipse for these two source images.
+      // Undo that projection before turning, then restore the same fixed axis.
+      const coreXRatio = dark ? 0.518405 : 0.488094;
+      const coreYRatio = dark ? 0.496900 : 0.476065;
       const projectedHeight = width * image.naturalHeight / image.naturalWidth;
-      const projectionY = projectedHeight / square;
-      const top = (height - projectedHeight) / 2;
-      const coreSquareX = coreXRatio * square;
-      const coreSquareY = coreYRatio * square;
-      const coreTargetX = coreXRatio * width;
-      const coreTargetY = top + coreYRatio * projectedHeight;
+      const projectionY = dark ? 0.443852 : 0.320397;
+      const inclination = (dark ? -10.988542 : 1.345618) * Math.PI / 180;
+      const coreSquareX = square / 2;
+      const coreSquareY = square / 2;
+      const coreTargetX = width / 2;
+      const coreTargetY = height / 2;
 
       canvas.width = width;
       canvas.height = height;
@@ -63,7 +71,10 @@ function LoginGalaxy() {
       deprojected.height = square;
       const sourceContext = deprojected.getContext("2d", { alpha: true });
       if (!sourceContext) return;
-      sourceContext.drawImage(image, 0, 0, square, square);
+      sourceContext.translate(coreSquareX, coreSquareY);
+      sourceContext.scale(1, 1 / projectionY);
+      sourceContext.rotate(-inclination);
+      sourceContext.drawImage(image, -coreXRatio * width, -coreYRatio * projectedHeight, width, projectedHeight);
 
       const startedAt = performance.now();
       let lastPaint = 0;
@@ -71,11 +82,14 @@ function LoginGalaxy() {
       const draw = (now: number) => {
         if (cancelled) return;
         if (!lastPaint || now - lastPaint >= 32) {
-          const angle = reducedMotion.matches ? 0 : ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
+          const direction = theme === "light" ? -1 : 1;
+          const angle = reducedMotion.matches ? 0 : direction * ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
           context.clearRect(0, 0, width, height);
           context.save();
           context.translate(coreTargetX, coreTargetY);
-          context.scale(1, projectionY);
+          context.rotate(inclination);
+          // Reserve diagonal clearance so the spiral is never cut as it turns.
+          context.scale(0.72, projectionY * 0.72);
           context.rotate(angle);
           context.drawImage(deprojected, -coreSquareX, -coreSquareY);
           context.restore();
@@ -98,11 +112,11 @@ function LoginGalaxy() {
       reducedMotion.removeEventListener("change", motionChanged);
       cancelAnimationFrame(animationFrame);
     };
-  }, []);
+  }, [source]);
 
   return (
     <>
-      <img ref={fallbackRef} className="login-gateway__galaxy-image" src="/spaces/galaxy-approved-canonical.webp" alt="" aria-hidden="true" draggable={false} />
+      <img ref={fallbackRef} className="login-gateway__galaxy-image" src={source} alt="" aria-hidden="true" draggable={false} />
       <canvas ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />
     </>
   );
@@ -228,7 +242,7 @@ export default function Entrar() {
 
         <div className="login-gateway__universe" aria-hidden="true">
           <div className="login-gateway__milky-way">
-            <LoginGalaxy />
+            <LoginGalaxy theme={temaPublico} />
           </div>
           <div className="login-gateway__core">
             <span className="login-gateway__core-glow" />

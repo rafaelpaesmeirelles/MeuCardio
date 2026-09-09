@@ -1,0 +1,32 @@
+.folha-impressao .doc-cabecalho {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32mm minmax(0, 1fr);
+  gap: 6mm;
+  align-items: start;
+  color: #0b2e45;
+  break-inside: avoid;
+}
+.doc-cabecalho .doc-cabecalho__profissional {
+  min-width: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.doc-cabecalho .doc-cabecalho__centro { text-align: center; }
+.doc-cabecalho .doc-cabecalho__logo { width: 100%; max-width: 42mm; }
+.doc-cabecalho .doc-cabecalho__logo-pessoal-placa { display: inline-block; max-width: 100%; box-sizing: border-box; }
+.doc-cabecalho .doc-cabecalho__logo-pessoal { width: auto; max-width: 28mm; max-height: 22mm; margin: 0; }
+@media print {
+  @page { size: A4; margin: 20mm; }
+  html body .folha-impressao {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    color: #111;
+    background: #fff;
+  }
+  .folha-impressao * { box-sizing: border-box; }
+  .folha-impressao p, .folha-impressao li { white-space: pre-wrap; orphans: 3; widows: 3; }
+  .folha-impressao img { max-width: 100%; }
+}

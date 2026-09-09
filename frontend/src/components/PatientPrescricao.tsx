@@ -2,6 +2,7 @@ import CabecalhoDocumento from "./CabecalhoDocumento";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { api, PaginaDe } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { Link } from "react-router-dom";
 
 const PrescricaoLivreEspecial = lazy(() => import("./PrescricaoLivreEspecial"));
 
@@ -203,8 +204,11 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
               <div key={p.id} style={{ display: "flex", justifyContent: "space-between", padding: "0.3rem 0", fontSize: "0.86rem" }}>
                 <span>{new Date(p.created_at).toLocaleDateString("pt-BR")} — {p.items.map((i) => i.drug_name).join(", ")}</span>
                 <button className="botao botao--secundario" style={{ padding: "0.15rem 0.5rem" }} onClick={() => abrirImpressao(p.id)}>
-                  Imprimir
+                  Imprimir para assinatura manual
                 </button>
+                <Link className="botao botao--secundario" to="/receituario" state={{ prescricaoLegadaId: p.id }}>
+                  Revisar e assinar digitalmente
+                </Link>
               </div>
             ))}
           </div>

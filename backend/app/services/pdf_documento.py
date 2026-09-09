@@ -22,8 +22,9 @@ O que este módulo **não** faz hoje, e a razão:
   cadastrado.
 
 Cabeçalho/rodapé (Tarefa 29, 30/07/2026, pedido do Rafael): logo da Corvia +
-dados da empresa no canto superior esquerdo, dados completos do profissional
-no canto superior direito, e bloco de assinatura no rodapé (identificação do
+dados da empresa no canto superior esquerdo, logo profissional centralizada
+no topo e dados completos do profissional no canto superior direito. O bloco
+de assinatura fica no rodapé (identificação do
 profissional + local/data + campo para assinatura digital ou carimbo). O
 endereço do médico que aparece — residencial ou profissional — é escolha
 feita na hora de emitir, não um padrão fixo (ver `endereco_exibido` em
@@ -46,6 +47,7 @@ from reportlab.pdfgen import canvas
 
 from app.core.config import settings
 from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.pdf.wrapping import wrap_text
 from app.services.professional_profile import (
     logo_path, professional_name, workplace_lines,
 )
@@ -178,7 +180,7 @@ def _logo(c: canvas.Canvas, x: float, y_topo: float) -> float:
 def _bloco_empresa(c: canvas.Canvas, x: float, y: float) -> float:
     c.setFillColorRGB(*CINZA)
     c.setFont("Helvetica-Bold", 7.5)
-    for linha in _quebrar(c, EMPRESA["razao_social"], "Helvetica-Bold", 7.5, 75 * mm):
+    for linha in _quebrar(c, EMPRESA["razao_social"], "Helvetica-Bold", 7.5, 65 * mm):
         c.drawString(x, y, linha)
         y -= 3.6 * mm
     c.setFont("Helvetica", 7.5)
@@ -190,7 +192,7 @@ def _bloco_empresa(c: canvas.Canvas, x: float, y: float) -> float:
     return y
 
 
-LARGURA_LOGO_PESSOAL = 18 * mm
+LARGURA_LOGO_PESSOAL = 30 * mm
 
 
 def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
@@ -198,47 +200,47 @@ def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
 
 
 def _logo_pessoal(
-    c: canvas.Canvas, x_direita: float, y: float, medico: dict,
+    c: canvas.Canvas, x_centro: float, y: float, medico: dict,
 ) -> tuple[float, float]:
-    """Logo pessoal/do consultório do médico (Tarefa 29, pedido do Rafael em
-    30/07/2026) — desenhada JUNTO da logo da Corvia, no bloco profissional,
-    não em vez dela. Ausência ou arquivo ilegível não derruba a geração do
-    documento, mesma filosofia da logo da Corvia."""
+    """Logo do profissional centralizada no topo, preservando a proporção.
+
+    Arquivo ausente ou ilegível não impede a geração do documento.
+    """
     caminho = _caminho_logo_pessoal(medico.get("document_logo_url"))
     if not caminho:
-        return x_direita, y
+        return x_centro, y
     try:
         img = ImageReader(str(caminho))
         largura_px, altura_px = img.getSize()
         escala = min(
             LARGURA_LOGO_PESSOAL / max(1, largura_px),
-            (14 * mm) / max(1, altura_px),
+            (22 * mm) / max(1, altura_px),
         )
         largura = largura_px * escala
         altura = altura_px * escala
-        x = x_direita - largura
+        x = x_centro - largura / 2
         y_base = y - altura
         # O arquivo é aplicado como foi enviado, sobre o branco do papel: sem
         # placa escura, moldura ou contorno artificial. O texto profissional
-        # usa uma coluna própria à esquerda e nunca fica sob a imagem.
+        # usa uma coluna própria à direita e nunca fica sob a imagem.
         _fundo_logo(c, x, y_base, largura, altura)
         c.drawImage(img, x, y_base,
                     width=largura, height=altura, mask="auto", preserveAspectRatio=True)
-        return x - 5 * mm, y_base
-    except OSError:
+        return x_centro, y_base
+    except (OSError, ValueError):
         log.warning("Logo pessoal em %s não pôde ser lida — documento seguiu sem ela.", caminho)
-        return x_direita, y
+        return x_centro, y
 
 
 def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: dict,
                         endereco: dict | None) -> float:
-    x_texto, y_base_logo = _logo_pessoal(c, x_direita, y, medico)
+    x_texto = x_direita
     # Empresa e profissional ocupam colunas independentes. Antes deste limite,
     # `drawRightString()` recebia linhas inteiras (local de trabalho e endereco)
     # e as projetava por cima da coluna da empresa. A logo pessoal reduzia ainda
     # mais o espaco sem que o texto fosse quebrado. A fronteira abaixo preserva
     # um respiro central fixo, com ou sem logo pessoal.
-    x_esquerda = LARGURA / 2 + 5 * mm
+    x_esquerda = LARGURA / 2 + 20 * mm
     largura_texto = max(35 * mm, x_texto - x_esquerda)
 
     def desenhar(texto: str, fonte: str, tamanho: float, entrelinha: float) -> None:
@@ -276,7 +278,7 @@ def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: di
         for linha in _endereco_linhas(endereco):
             desenhar(linha, "Helvetica", 8.1, 3.5 * mm)
 
-    return min(y, y_base_logo)
+    return y
 
 
 def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None = None) -> float:
@@ -284,9 +286,10 @@ def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | Non
 
     altura_logo = _logo(c, MARGEM, topo)
     y_empresa = _bloco_empresa(c, MARGEM, topo - altura_logo - 4 * mm)
+    _, y_logo = _logo_pessoal(c, LARGURA / 2, topo, medico)
     y_profissional = _bloco_profissional(c, LARGURA - MARGEM, topo, medico, endereco)
 
-    y = min(y_empresa, y_profissional) - 4 * mm
+    y = min(y_empresa, y_profissional, y_logo) - 4 * mm
     c.setStrokeColorRGB(*LINHA)
     c.setLineWidth(0.7)
     c.line(MARGEM, y, LARGURA - MARGEM, y)
@@ -294,88 +297,76 @@ def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | Non
 
     c.setFillColorRGB(*NAVY)
     c.setFont("Helvetica-Bold", 14)
-    c.drawCentredString(LARGURA / 2, y, titulo)
-    return y - 9 * mm
-
-
-def _bloco_paciente(c: canvas.Canvas, y: float, destinatario: dict) -> float:
-    c.setFillColorRGB(*CINZA)
-    c.setFont("Helvetica", 8.5)
-    c.drawString(MARGEM, y, "PACIENTE")
-    y -= 5 * mm
-    c.setFillColorRGB(0, 0, 0)
-    c.setFont("Helvetica", 11)
-    c.drawString(MARGEM, y, destinatario.get("nome") or "")
-    if destinatario.get("endereco"):
-        y -= 5 * mm
-        c.setFont("Helvetica", 9)
-        c.setFillColorRGB(*CINZA)
-        c.drawString(MARGEM, y, destinatario["endereco"])
-    return y - 9 * mm
+    for linha in _quebrar(c, titulo, "Helvetica-Bold", 14, LARGURA - 2 * MARGEM):
+        c.drawCentredString(LARGURA / 2, y, linha)
+        y -= 6 * mm
+    return y - 3 * mm
 
 
 def _quebrar(c: canvas.Canvas, texto: str, fonte: str, tam: float, largura: float) -> list[str]:
     """Quebra por largura real do glifo, não por contagem de caractere — nome de
     medicamento e posologia variam demais para estimativa por média."""
-    palavras, linhas, atual = texto.split(), [], ""
-    for p in palavras:
-        teste = f"{atual} {p}".strip()
-        if c.stringWidth(teste, fonte, tam) <= largura:
-            atual = teste
-        else:
-            if atual:
-                linhas.append(atual)
-            atual = p
-    if atual:
-        linhas.append(atual)
-    return linhas or [""]
+    return wrap_text(texto, largura, lambda linha: c.stringWidth(linha, fonte, tam))
 
 
-def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
-    util = LARGURA - 2 * MARGEM
+class _FluxoClinico:
+    """Paginate each line and restore font after Canvas.showPage resets it."""
+
+    def __init__(self, c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None):
+        self.c, self.medico, self.titulo, self.endereco = c, medico, titulo, endereco
+        self.y = _cabecalho(c, medico, titulo, endereco)
+        linhas = _linhas_rodape(c, medico, endereco, "00/00/0000")
+        self.base_rodape = max(62 * mm, 45 * mm + sum(linha[3] for linha in linhas[:-1]))
+
+    def garantir(self, altura: float) -> None:
+        if self.y - altura >= self.base_rodape:
+            return
+        self.c.setFont("Helvetica", 7)
+        self.c.setFillColorRGB(*CINZA)
+        self.c.drawRightString(LARGURA - MARGEM, 12 * mm, f"Página {self.c.getPageNumber()} · continua")
+        self.c.showPage()
+        self.y = _cabecalho(self.c, self.medico, self.titulo, self.endereco)
+
+    def texto(self, texto: str, fonte: str = "Helvetica", tamanho: float = 10.5,
+              entrelinha: float = 5 * mm, recuo: float = 0,
+              cor: tuple = (0, 0, 0)) -> None:
+        for linha in _quebrar(self.c, texto, fonte, tamanho, LARGURA - 2 * MARGEM - recuo):
+            self.garantir(entrelinha)
+            self.c.setFillColorRGB(*cor)
+            self.c.setFont(fonte, tamanho)
+            self.c.drawString(MARGEM + recuo, self.y, linha)
+            self.y -= entrelinha
+
+
+def _itens(fluxo: _FluxoClinico, itens: list[dict]) -> None:
     for n, item in enumerate(itens, start=1):
-        if y < 62 * mm:                       # não deixa o item colar no rodapé (mais alto desde a Tarefa 29)
-            c.showPage()
-            y = ALTURA - MARGEM
-        c.setFillColorRGB(0, 0, 0)
-        c.setFont("Helvetica-Bold", 10.5)
+        fluxo.garantir(15 * mm)
         titulo = item.get("descricao") or item.get("substancia") or ""
         if item.get("apresentacao"):
             titulo = f"{titulo} — {item['apresentacao']}"
-        for linha in _quebrar(c, f"{n}. {titulo}", "Helvetica-Bold", 10.5, util):
-            c.drawString(MARGEM, y, linha)
-            y -= 5 * mm
+        fluxo.texto(f"{n}. {titulo}", "Helvetica-Bold")
         if item.get("quantidade"):
-            c.setFont("Helvetica", 9.5)
-            c.setFillColorRGB(0.2, 0.2, 0.2)
-            for linha in _quebrar(c, f"Quantidade: {item['quantidade']}", "Helvetica", 9.5, util - 6 * mm):
-                c.drawString(MARGEM + 6 * mm, y, linha)
-                y -= 4.4 * mm
+            fluxo.texto(f"Quantidade: {item['quantidade']}", tamanho=9.5,
+                        entrelinha=4.4 * mm, recuo=6 * mm, cor=(0.2, 0.2, 0.2))
         if item.get("uso_continuo"):
-            c.setFont("Helvetica-Bold", 9.5)
-            c.setFillColorRGB(*NAVY)
-            for linha in _quebrar(
-                c,
+            fluxo.texto(
                 "USO CONTÍNUO — tratamento por tempo indeterminado. Dispensar a quantidade máxima permitida pela legislação sanitária aplicável, observada a posologia prescrita.",
-                "Helvetica-Bold", 9.5, util - 6 * mm,
-            ):
-                c.drawString(MARGEM + 6 * mm, y, linha)
-                y -= 4.4 * mm
+                "Helvetica-Bold", 9.5, entrelinha=4.4 * mm, recuo=6 * mm, cor=NAVY,
+            )
         if item.get("posologia"):
-            c.setFont("Helvetica", 10)
-            c.setFillColorRGB(0.2, 0.2, 0.2)
-            for linha in _quebrar(c, item["posologia"], "Helvetica", 10, util - 6 * mm):
-                c.drawString(MARGEM + 6 * mm, y, linha)
-                y -= 4.6 * mm
-        y -= 3 * mm
-    return y
+            fluxo.texto(item["posologia"], tamanho=10, entrelinha=4.6 * mm,
+                        recuo=6 * mm, cor=(0.2, 0.2, 0.2))
+        if item.get("orientacao"):
+            fluxo.texto(f"Orientações: {item['orientacao']}", tamanho=10,
+                        entrelinha=4.6 * mm, recuo=6 * mm, cor=(0.2, 0.2, 0.2))
+        fluxo.y -= 3 * mm
 
 
 # Mesmo conjunto de `provedor._MANUAL_EXTERNO` (Trabalho 14) — repetido
 # aqui, não importado, porque este módulo de renderização não depende do
 # pacote `assinatura/` para nada além disto, e um `set` de 6 strings não
 # justifica esse acoplamento novo.
-_METODOS_MANUAL_EXTERNO = {"GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID"}
+_METODOS_MANUAL_EXTERNO = {"GOVBR", "VIDAAS", "BIRDID", "SAFEID", "NEOID", "REMOTEID", "A3_TOKEN"}
 
 
 def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, sujeito: str) -> tuple[str, str | None]:
@@ -385,11 +376,8 @@ def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, suj
     `app/services/assinatura/`. `sujeito` é "prescritor" ou "emissor",
     conforme o tipo de documento (mesma distinção que o aviso fixo já fazia).
 
-    `MANUAL` é hoje o único caminho que realmente acontece — mantém o aviso
-    vermelho, porque o documento de fato sai sem assinatura válida e o
-    profissional precisa saber que ainda tem de assinar de próprio punho.
-    O ramo "assinado" existe pronto para quando um provedor real entrar
-    (Fase 2): nesse caso o aviso desaparece, porque deixa de ser verdade."""
+    A emissão aplica e valida a assinatura após a renderização; arquivos dos
+    métodos externos recebem uma legenda neutra durante todo o processo."""
     if metodo == "MANUAL":
         return (
             "Carimbo e assinatura do profissional",
@@ -413,6 +401,20 @@ def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, suj
     return (f"Assinado digitalmente por {nome} — {provedor}", None)
 
 
+def _linhas_rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, data: str) -> list[tuple]:
+    local = _local(endereco)
+    campos = [
+        (professional_name(medico), "Helvetica-Bold", 9.5, 4.4 * mm),
+        (medico.get("profession"), "Helvetica", 8.5, 4 * mm),
+        (medico.get("specialty"), "Helvetica", 8.5, 4 * mm),
+        (_registro(medico), "Helvetica", 8.5, 4 * mm),
+        (f"{local}, {data}" if local else data, "Helvetica", 8.5, 4 * mm),
+    ]
+    return [(linha, fonte, tamanho, entrelinha)
+            for texto, fonte, tamanho, entrelinha in campos if texto
+            for linha in _quebrar(c, texto, fonte, tamanho, LARGURA - 2 * MARGEM)]
+
+
 def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | None, aviso: str | None,
            data_emissao: datetime, legenda: str) -> None:
     """Bloco de assinatura (Tarefa 29): identificação do profissional, local
@@ -426,32 +428,15 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
     público mais de uma vez, e o PDF precisa sair byte-a-byte igual toda
     vez — condição para poder assinar e para o hash guardado em
     `DocumentoEmitido.sha256` continuar batendo."""
-    y = 52 * mm
-
-    c.setFillColorRGB(0, 0, 0)
-    c.setFont("Helvetica-Bold", 9.5)
-    nome = professional_name(medico)
-    c.drawCentredString(LARGURA / 2, y, nome)
-    y -= 4.4 * mm
-
-    c.setFont("Helvetica", 8.5)
-    c.setFillColorRGB(*CINZA)
-    if medico.get("profession"):
-        c.drawCentredString(LARGURA / 2, y, medico["profession"])
-        y -= 4 * mm
-    if medico.get("specialty"):
-        c.drawCentredString(LARGURA / 2, y, medico["specialty"])
-        y -= 4 * mm
-
-    registro = _registro(medico)
-    if registro:
-        c.drawCentredString(LARGURA / 2, y, registro)
-        y -= 4 * mm
-
-    local = _local(endereco)
     data = data_emissao.astimezone(FUSO).strftime("%d/%m/%Y")
-    c.drawCentredString(LARGURA / 2, y, f"{local}, {data}" if local else data)
-    y -= 10 * mm  # "algumas linhas abaixo", antes do campo de assinatura
+    linhas = _linhas_rodape(c, medico, endereco, data)
+    y = max(52 * mm, 35 * mm + sum(linha[3] for linha in linhas[:-1]))
+    for texto, fonte, tamanho, entrelinha in linhas:
+        c.setFillColorRGB(*CINZA if fonte == "Helvetica" else (0, 0, 0))
+        c.setFont(fonte, tamanho)
+        c.drawCentredString(LARGURA / 2, y, texto)
+        y -= entrelinha
+    y -= 6 * mm
 
     # O A1 recebe uma aparencia visivel criada pelo proprio `PdfSigner`
     # exatamente nesta area. Desenhar uma linha/legenda por baixo produz a
@@ -492,21 +477,12 @@ def documento_generico(titulo: str, corpo: str, medico: dict, data_emissao: date
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle(titulo)
 
-    y = _cabecalho(c, medico, titulo, endereco)
-
-    util = LARGURA - 2 * MARGEM
-    c.setFillColorRGB(0, 0, 0)
-    c.setFont("Helvetica", 10.5)
+    fluxo = _FluxoClinico(c, medico, titulo, endereco)
     for paragrafo in corpo.split("\n"):
         if not paragrafo.strip():
-            y -= 4 * mm
+            fluxo.y -= 4 * mm
             continue
-        if y < 62 * mm:
-            c.showPage()
-            y = ALTURA - MARGEM
-        for linha in _quebrar(c, paragrafo, "Helvetica", 10.5, util):
-            c.drawString(MARGEM, y, linha)
-            y -= 5 * mm
+        fluxo.texto(paragrafo)
 
     legenda, aviso = _assinatura_rodape(metodo_assinatura, provedor_nome, medico, "emissor")
     _rodape(c, medico, endereco, None, aviso, data_emissao, legenda)
@@ -534,21 +510,19 @@ def receituario_comum(destinatario: dict, itens: list[dict], medico: dict, data_
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle("Receituário")
 
-    y = _cabecalho(c, medico, "Receituário", endereco)
-    y = _bloco_paciente(c, y, destinatario)
-    y = _itens(c, y, itens)
+    fluxo = _FluxoClinico(c, medico, "Receituário", endereco)
+    fluxo.texto("PACIENTE", tamanho=8.5, cor=CINZA)
+    fluxo.texto(destinatario.get("nome") or "", tamanho=11)
+    if destinatario.get("endereco"):
+        fluxo.texto(destinatario["endereco"], tamanho=9, cor=CINZA)
+    fluxo.y -= 4 * mm
+    _itens(fluxo, itens)
 
     if observacoes:
-        y -= 2 * mm
-        c.setFillColorRGB(*CINZA)
-        c.setFont("Helvetica", 8.5)
-        c.drawString(MARGEM, y, "OBSERVAÇÕES")
-        y -= 5 * mm
-        c.setFillColorRGB(0.2, 0.2, 0.2)
-        c.setFont("Helvetica", 9.5)
-        for linha in _quebrar(c, observacoes, "Helvetica", 9.5, LARGURA - 2 * MARGEM):
-            c.drawString(MARGEM, y, linha)
-            y -= 4.6 * mm
+        fluxo.y -= 2 * mm
+        fluxo.garantir(10 * mm)
+        fluxo.texto("OBSERVAÇÕES", tamanho=8.5, cor=CINZA)
+        fluxo.texto(observacoes, tamanho=9.5, entrelinha=4.6 * mm, cor=(0.2, 0.2, 0.2))
 
     legenda, aviso = _assinatura_rodape(metodo_assinatura, provedor_nome, medico, "prescritor")
     _rodape(c, medico, endereco, None, aviso, data_emissao, legenda)

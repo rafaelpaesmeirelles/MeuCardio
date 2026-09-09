@@ -168,6 +168,7 @@ def _gerar_do_pedido(dados: PedidoExportacao, db: Session, user) -> ArquivoGerad
             resolvidos, user=user,
             incluir_dados_assinante=dados.incluir_dados_assinante,
             titulo=dados.titulo,
+            **({"reservar_assinatura": dados.assinar_digitalmente} if dados.formato == "pdf" else {}),
         )
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc

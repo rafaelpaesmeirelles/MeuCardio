@@ -74,6 +74,7 @@ class ItemPrescrito:
     # SEM `Drug` clínico correspondente — rastreabilidade até a linha exata
     # da planilha que originou a `substancia` usada na classificação.
     cmed_apresentacao_id: int | None = None
+    orientacao: str | None = None
 
 
 @dataclass

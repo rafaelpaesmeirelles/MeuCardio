@@ -632,20 +632,30 @@ def gerar_pdf(
     user: Any,
     incluir_dados_assinante: bool,
     titulo: str | None = None,
+    reservar_assinatura: bool = False,
 ) -> bytes:
     if not itens:
         raise ValueError("Nenhum conteúdo elegível para exportação.")
     identidade = document_identity(user)
     nome = professional_name(identidade) or "Assinante CorVIA"
     titulo_pdf = (titulo or (itens[0].titulo if len(itens) == 1 else "Seleção de conteúdo CorVIA")).strip()[:180]
-    documento = DocumentoExportacao(
+    from .material_paciente import DocumentoProfissional
+    classe = DocumentoProfissional if incluir_dados_assinante else DocumentoExportacao
+    documento = classe(
         titulo=titulo_pdf,
         autor=nome if incluir_dados_assinante else "CorVIA",
         assunto="Conteúdo clínico exportado do CorVIA",
         rodape=f"CorVIA · exportado em {datetime.now(timezone.utc).strftime('%d/%m/%Y')} · conteúdo publicado na plataforma",
+        **({"medico": identidade} if incluir_dados_assinante else {}),
     )
+    if reservar_assinatura:
+        documento.reservar_assinatura = True
+        documento.base = 140
     subtitulo = itens[0].tema or ROTULOS_TIPO[itens[0].tipo] if len(itens) == 1 else f"{len(itens)} conteúdos selecionados"
-    documento.capa_simples(titulo_pdf, subtitulo, "Exportação de conteúdo")
+    if incluir_dados_assinante:
+        documento.capa_profissional(titulo_pdf, subtitulo, "Exportação de conteúdo")
+    else:
+        documento.capa_simples(titulo_pdf, subtitulo, "Exportação de conteúdo")
 
     if incluir_dados_assinante:
         linhas = [nome]

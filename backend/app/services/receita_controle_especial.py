@@ -30,6 +30,7 @@ from app.services.professional_profile import (
     professional_name,
 )
 from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.pdf.wrapping import wrap_text
 
 log = logging.getLogger("meucardio.receita_controle_especial")
 
@@ -138,21 +139,7 @@ def _endereco_completo(endereco: dict | None) -> str:
 
 
 def _linhas(texto: str, fonte: str, tamanho: float, largura: float) -> list[str]:
-    palavras = texto.split()
-    if not palavras:
-        return [""]
-    resultado: list[str] = []
-    atual = ""
-    for palavra in palavras:
-        candidato = f"{atual} {palavra}".strip()
-        if not atual or stringWidth(candidato, fonte, tamanho) <= largura:
-            atual = candidato
-        else:
-            resultado.append(atual)
-            atual = palavra
-    if atual:
-        resultado.append(atual)
-    return resultado
+    return wrap_text(texto, largura, lambda linha: stringWidth(linha, fonte, tamanho))
 
 
 def _secao(c: canvas.Canvas, y: float, titulo: str) -> float:
@@ -164,7 +151,7 @@ def _secao(c: canvas.Canvas, y: float, titulo: str) -> float:
 
 
 def _campo(c: canvas.Canvas, y: float, rotulo: str, valor: str = "", *, tamanho: float = 9,
-           negrito_rotulo: bool = False, recuo: float = 0, max_linhas: int = 2) -> float:
+           negrito_rotulo: bool = False, recuo: float = 0, max_linhas: int | None = None) -> float:
     x = MARGEM_X + recuo
     c.setFont("Helvetica-Bold" if negrito_rotulo else "Helvetica", tamanho)
     c.drawString(x, y, rotulo)
@@ -172,7 +159,7 @@ def _campo(c: canvas.Canvas, y: float, rotulo: str, valor: str = "", *, tamanho:
     if valor:
         fonte = "Helvetica"
         largura = LARGURA - MARGEM_X - (x + largura_rotulo + 2 * mm)
-        linhas = _linhas(valor, fonte, tamanho, largura)[:max_linhas]
+        linhas = _linhas(valor, fonte, tamanho, largura)
         for indice, linha in enumerate(linhas):
             c.setFont(fonte, tamanho)
             c.drawString(x + (largura_rotulo + 2 * mm if indice == 0 else 0), y - indice * 4.2 * mm, linha)
@@ -190,12 +177,13 @@ def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -
         largura = 25 * mm
         altura = min(14 * mm, largura * altura_px / max(1, largura_px))
         largura = altura * largura_px / max(1, altura_px)
+        x -= largura / 2
         c.setFillColorRGB(1, 1, 1)
         c.rect(x, y_topo - altura, largura, altura, fill=1, stroke=0)
         c.drawImage(img, x, y_topo - altura,
                     width=largura, height=altura, preserveAspectRatio=True, mask="auto")
         c.setFillColorRGB(0, 0, 0)
-        return largura + 4 * mm
+        return altura
     except (OSError, ValueError):
         log.warning("Logo profissional ilegível em %s; RCE gerada sem a imagem.", caminho)
         return 0.0
@@ -230,54 +218,79 @@ def _texto_item(indice: int, item: dict) -> tuple[str, str]:
     quantidade = _texto(item.get("quantidade"))
     if quantidade:
         primeira += f" - Quantidade: {quantidade}"
-    return primeira, _texto(item.get("posologia"))
+    orientacao = _texto(item.get("orientacao"))
+    instrucoes = [_texto(item.get("posologia"))]
+    if orientacao:
+        instrucoes.append(f"Orientações: {orientacao}")
+    return primeira, "\n".join(filter(None, instrucoes))
+
+
+def _linhas_item(indice: int, item: dict, largura: float) -> tuple[list[str], list[str]]:
+    if "_linhas_titulo" in item:
+        return item["_linhas_titulo"], item["_linhas_posologia"]
+    primeira, posologia = _texto_item(indice, item)
+    return (_linhas(primeira, "Helvetica-Bold", 9.2, largura),
+            _linhas(posologia, "Helvetica", 8.7, largura - 7 * mm) if posologia else [])
 
 
 def _altura_item(indice: int, item: dict, largura: float) -> float:
-    primeira, posologia = _texto_item(indice, item)
-    linhas_titulo = len(_linhas(primeira, "Helvetica-Bold", 9.2, largura))
-    linhas_posologia = len(_linhas(posologia, "Helvetica", 8.7, largura - 7 * mm)) if posologia else 0
-    return linhas_titulo * 4.3 * mm + linhas_posologia * 4 * mm + 2 * mm
+    titulo, posologia = _linhas_item(indice, item, largura)
+    return len(titulo) * 4.3 * mm + len(posologia) * 4 * mm + 2 * mm
 
 
-def _paginar_prescricao(itens: list[dict], observacoes: str, *, c5: bool) -> list[dict]:
-    """Distribui todo o conteúdo sem cortes silenciosos e sem texto fora da área útil."""
+def _paginar_prescricao(itens: list[dict], observacoes: str, *, c5: bool,
+                       capacidade: float = ALTURA_PRESCRICAO_UTIL,
+                       altura_c5: float = 27 * mm) -> list[dict]:
+    """Mede e reparte inclusive um único item maior que a página."""
     largura = LARGURA - 2 * MARGEM_X - 4 * mm
+    if capacidade < 20 * mm or (c5 and altura_c5 > capacidade):
+        raise ValueError("A identificação excede o espaço do formulário. Revise os dados e o endereço antes de emitir.")
     paginas: list[dict] = []
-    pagina = {"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []}
 
+    def nova():
+        pagina = {"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []}
+        paginas.append(pagina)
+        return pagina
+
+    pagina = nova()
     for indice, item in enumerate(itens, start=1):
+        titulos, doses = _linhas_item(indice, item, largura)
         altura = _altura_item(indice, item, largura)
-        if pagina["itens"] and pagina["altura_usada"] + altura > ALTURA_PRESCRICAO_UTIL:
-            paginas.append(pagina)
-            pagina = {"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []}
-        pagina["itens"].append((indice, item))
-        pagina["altura_usada"] += altura
-    paginas.append(pagina)
+        if pagina["altura_usada"] and pagina["altura_usada"] + min(altura, capacidade) > capacidade:
+            pagina = nova()
+        linhas = [(True, linha, 4.3 * mm) for linha in titulos]
+        linhas += [(False, linha, 4 * mm) for linha in doses]
+        continuacao = False
+        while linhas:
+            titulo = [f"{indice}) Continuação do item"] if continuacao else []
+            posologia: list[str] = []
+            usada = 2 * mm + (4.3 * mm if continuacao else 0)
+            while linhas and pagina["altura_usada"] + usada + linhas[0][2] <= capacidade:
+                negrito, linha, altura_linha = linhas.pop(0)
+                (titulo if negrito else posologia).append(linha)
+                usada += altura_linha
+            pagina["itens"].append((indice, {"_linhas_titulo": titulo, "_linhas_posologia": posologia}))
+            pagina["altura_usada"] += usada
+            if linhas:
+                pagina = nova()
+                continuacao = True
 
     if c5:
-        altura_c5 = 27 * mm
-        if paginas[-1]["altura_usada"] + altura_c5 > ALTURA_PRESCRICAO_UTIL:
-            paginas.append({"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []})
-        paginas[-1]["c5"] = True
-        paginas[-1]["altura_usada"] += altura_c5
+        if pagina["altura_usada"] + altura_c5 > capacidade:
+            pagina = nova()
+        pagina["c5"] = True
+        pagina["altura_usada"] += altura_c5
 
-    linhas_observacao = (
-        _linhas(observacoes, "Helvetica", 8.3, largura) if _texto(observacoes) else []
-    )
-    while linhas_observacao:
-        atual = paginas[-1]
-        altura_cabecalho = 8 * mm if not atual["observacoes"] else 0.0
-        disponivel = ALTURA_PRESCRICAO_UTIL - atual["altura_usada"] - altura_cabecalho
-        capacidade = int(disponivel // ALTURA_LINHA_OBSERVACAO)
-        if capacidade <= 0:
-            paginas.append({"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []})
+    linhas = _linhas(observacoes, "Helvetica", 8.3, largura) if _texto(observacoes) else []
+    while linhas:
+        disponivel = capacidade - pagina["altura_usada"] - 8 * mm
+        quantidade = int(disponivel // ALTURA_LINHA_OBSERVACAO)
+        if quantidade <= 0:
+            pagina = nova()
             continue
-        trecho = linhas_observacao[:capacidade]
-        del linhas_observacao[:capacidade]
-        atual["observacoes"].extend(trecho)
-        atual["altura_usada"] += altura_cabecalho + len(trecho) * ALTURA_LINHA_OBSERVACAO
-
+        trecho, linhas = linhas[:quantidade], linhas[quantidade:]
+        pagina["observacoes"].extend(trecho)
+        pagina["altura_usada"] += 8 * mm + len(trecho) * ALTURA_LINHA_OBSERVACAO
     return paginas
 
 
@@ -287,13 +300,13 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[tuple[int, dict]],
     x = MARGEM_X + 2 * mm
     largura = LARGURA - 2 * MARGEM_X - 4 * mm
     for indice, item in itens:
-        primeira, posologia = _texto_item(indice, item)
-        for linha in _linhas(primeira, "Helvetica-Bold", 9.2, largura):
+        titulos, posologia = _linhas_item(indice, item, largura)
+        for linha in titulos:
             c.setFont("Helvetica-Bold", 9.2)
             c.drawString(x, y, linha)
             y -= 4.3 * mm
         if posologia:
-            for linha in _linhas(posologia, "Helvetica", 8.7, largura - 7 * mm):
+            for linha in posologia:
                 c.setFont("Helvetica", 8.7)
                 c.drawString(x + 7 * mm, y, linha)
                 y -= 4 * mm
@@ -320,10 +333,9 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[tuple[int, dict]],
     return y
 
 
-def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
-            destinatario: dict, itens: list[tuple[int, dict]], observacoes_linhas: list[str],
-            medico: Any, endereco_profissional: dict | None, data_emissao: datetime,
-            cid: str | None, c5: bool, assinatura_digital: bool) -> None:
+def _cabecalho_receita(c: canvas.Canvas, *, medico: Any, destinatario: dict,
+                      endereco_profissional: dict | None, c5: bool,
+                      pagina: int, total_paginas: int) -> float:
     y = ALTURA - MARGEM_Y
     _logo_corvia(c, MARGEM_X, y + 1 * mm)
     c.setFont("Helvetica-Bold", 16)
@@ -336,38 +348,32 @@ def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
     y -= 13 * mm
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO EMITENTE")
-    deslocamento = _logo_profissional(c, medico, MARGEM_X + 2 * mm, y + 1 * mm)
-    x_texto = MARGEM_X + 2 * mm + deslocamento
-    largura_texto = LARGURA - MARGEM_X - x_texto
-    nome_registro = f"{professional_name(medico)} - {_registro(medico)}".strip(" -")
-    c.setFont("Helvetica-Bold", 8.8)
-    for linha in _linhas(nome_registro, "Helvetica-Bold", 8.8, largura_texto)[:2]:
-        c.drawString(x_texto, y, linha)
-        y -= 4.2 * mm
-    instituicao = (
-        _texto(_valor(medico, "workplace_name"))
-        if bool(_valor(medico, "include_workplace_on_documents")) else ""
-    )
-    if instituicao:
-        c.setFont("Helvetica", 8.4)
-        for linha in _linhas(instituicao, "Helvetica", 8.4, largura_texto)[:2]:
-            c.drawString(x_texto, y, linha)
-            y -= 4 * mm
-    endereco_linha = _endereco_completo(endereco_profissional)
-    if endereco_linha:
-        c.setFont("Helvetica", 8.2)
-        for linha in _linhas(endereco_linha, "Helvetica", 8.2, largura_texto)[:2]:
-            c.drawString(x_texto, y, linha)
-            y -= 3.8 * mm
+    topo_identidade = y
+    altura_logo = _logo_profissional(c, medico, LARGURA / 2, y + 1 * mm)
+    direita = LARGURA - MARGEM_X - 2 * mm
+    largura_texto = 66 * mm
+    campos = [
+        (professional_name(medico), "Helvetica-Bold", 8.8),
+        (_registro(medico), "Helvetica", 8.2),
+        (_texto(_valor(medico, "profession")), "Helvetica", 8.2),
+        (_texto(_valor(medico, "specialty")), "Helvetica", 8.2),
+    ]
+    if bool(_valor(medico, "include_workplace_on_documents")):
+        campos.extend((_texto(_valor(medico, chave)), "Helvetica", 8.2)
+                      for chave in ("workplace_name", "workplace_department", "workplace_role", "workplace_notes"))
+    campos.append((_endereco_completo(endereco_profissional), "Helvetica", 8.2))
     telefone = _texto((endereco_profissional or {}).get("telefone"))
     if telefone:
-        c.setFont("Helvetica", 8.2)
-        c.drawString(x_texto, y, f"TELEFONE: {telefone}")
-        y -= 3.8 * mm
+        campos.append((f"TELEFONE: {telefone}", "Helvetica", 8.2))
     if c5:
-        c.setFont("Helvetica", 8.2)
-        c.drawString(x_texto, y, f"CPF DO PRESCRITOR: {_texto(_valor(medico, 'cpf'))}")
-        y -= 4 * mm
+        campos.append((f"CPF DO PRESCRITOR: {_texto(_valor(medico, 'cpf'))}", "Helvetica", 8.2))
+    for texto, fonte, tamanho in campos:
+        if texto:
+            c.setFont(fonte, tamanho)
+            for linha in _linhas(texto, fonte, tamanho, largura_texto):
+                c.drawRightString(direita, y, linha)
+                y -= 4 * mm
+    y = min(y, topo_identidade - altura_logo - 2 * mm)
     y = min(y, ALTURA - 58 * mm)
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO PACIENTE")
@@ -377,6 +383,16 @@ def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
                _texto(destinatario.get("documento")), tamanho=9)
 
     y = _secao(c, y - 1 * mm, "PRESCRIÇÃO")
+    return y
+
+
+def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
+            destinatario: dict, itens: list[tuple[int, dict]], observacoes_linhas: list[str],
+            medico: Any, endereco_profissional: dict | None, data_emissao: datetime,
+            cid: str | None, c5: bool, assinatura_digital: bool, emitente_c5: bool = False) -> None:
+    y = _cabecalho_receita(c, medico=medico, destinatario=destinatario,
+                           endereco_profissional=endereco_profissional, c5=emitente_c5,
+                           pagina=pagina, total_paginas=total_paginas)
     _prescricao(
         c, y, itens, observacoes_linhas, c5=c5,
         destinatario=destinatario, cid=cid,
@@ -389,6 +405,7 @@ def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
     c.drawString(MARGEM_X + 2 * mm, assinatura_y + 14 * mm, f"DATA: {data_local}")
     identificacao = f"PRESCRITOR: {professional_name(medico)}"
     largura_identificacao = 78 * mm if assinatura_digital else LARGURA - 2 * MARGEM_X - 4 * mm
+    c.setFont("Helvetica", 8.8)
     for indice, linha in enumerate(_linhas(
         identificacao, "Helvetica", 8.8, largura_identificacao,
     )[:2]):
@@ -533,7 +550,16 @@ def receita_controle_especial(*, destinatario: dict, itens: list[dict], observac
     if bloqueios:
         raise ValueError(" | ".join(bloqueios))
 
-    paginas = _paginar_prescricao(itens, observacoes, c5=c5)
+    medicao = canvas.Canvas(io.BytesIO(), pagesize=A4)
+    topo_prescricao = _cabecalho_receita(
+        medicao, medico=medico, destinatario=destinatario,
+        endereco_profissional=endereco_profissional, c5=c5, pagina=1, total_paginas=1,
+    )
+    # The signature box starts at 96 mm. Keep a full line of clearance above it.
+    capacidade = min(ALTURA_PRESCRICAO_UTIL, topo_prescricao - 101 * mm)
+    altura_c5 = -_prescricao(medicao, 0, [], [], c5=c5, destinatario=destinatario, cid=cid)
+    paginas = _paginar_prescricao(itens, observacoes, c5=c5,
+                                 capacidade=capacidade, altura_c5=altura_c5)
     total_paginas = len(paginas)
     buffer = io.BytesIO()
     pdf = canvas.Canvas(buffer, pagesize=A4, pageCompression=1)
@@ -548,7 +574,7 @@ def receita_controle_especial(*, destinatario: dict, itens: list[dict], observac
                 observacoes_linhas=conteudo["observacoes"], medico=medico,
                 endereco_profissional=endereco_profissional, data_emissao=data_emissao,
                 cid=cid, c5=bool(conteudo["c5"]),
-                assinatura_digital=metodo_assinatura == "A1_ARQUIVO",
+                assinatura_digital=metodo_assinatura == "A1_ARQUIVO", emitente_c5=c5,
             )
             pdf.showPage()
     pdf.save()

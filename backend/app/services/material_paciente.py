@@ -9,8 +9,10 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import TYPE_CHECKING
 
-from app.models.patient_material import PatientMaterial
+if TYPE_CHECKING:
+    from app.models.patient_material import PatientMaterial
 
 from .pdf import Documento, largura_texto, quebrar
 from .pdf.marca import BRANCO, FIO, NAVY, NEUTRO, TEAL, TINTA_TEAL, TINTA_VERMELHA, VERMELHO
@@ -41,7 +43,7 @@ class DocumentoProfissional(Documento):
     def _desenhar_logo_profissional(
         self,
         caminho: Path | None,
-        x_direita: float,
+        x_centro: float,
         y_topo: float,
         largura_max: float = 86.0,
         altura_max: float = 48.0,
@@ -61,7 +63,7 @@ class DocumentoProfissional(Documento):
             self.pdf.imagem(
                 nome_imagem,
                 str(caminho),
-                x_direita - largura,
+                x_centro - largura / 2,
                 y_topo - altura,
                 largura,
                 altura,
@@ -71,45 +73,46 @@ class DocumentoProfissional(Documento):
             return 0.0, 0.0
 
     def identidade_primeira_pagina(self) -> float:
-        """Logo no canto superior direito, sem disputar espaço com o título."""
+        """Logo central e identidade completa à direita, em colunas reservadas."""
         direita = self.largura - self.margem
         topo = self.altura - 34
         _, altura_logo = self._desenhar_logo_profissional(
             self.logo_profissional,
-            direita,
+            self.largura / 2,
             topo,
             largura_max=90,
             altura_max=50,
         )
-        y = topo - altura_logo - 10 if altura_logo else topo - 6
-        largura_bloco = 215.0
-        if self.nome_profissional:
-            for linha in quebrar(self.nome_profissional, largura_bloco, 8.5, True)[:2]:
-                x = direita - largura_texto(linha, 8.5, True)
-                self.pdf.texto(x, y, linha, 8.5, NAVY, negrito=True)
-                y -= 12
-        if self.registro_profissional:
-            x = direita - largura_texto(self.registro_profissional, 7.3)
-            self.pdf.texto(x, y, self.registro_profissional, 7.3, TEAL)
-            y -= 11
-        for linha in self.linhas_trabalho[:2]:
-            for trecho in quebrar(linha, largura_bloco, 7.0)[:1]:
-                x = direita - largura_texto(trecho, 7.0)
-                self.pdf.texto(x, y, trecho, 7.0, NEUTRO)
-                y -= 10
-        return y
+        y = topo - 6
+        largura_bloco = direita - (self.largura / 2 + 56)
+        campos = [
+            (self.nome_profissional, 8.5, True, NAVY),
+            (self.registro_profissional, 7.3, False, TEAL),
+            (self.medico.get("profession"), 7.0, False, NEUTRO),
+            (self.medico.get("specialty"), 7.0, False, NEUTRO),
+            *((linha, 7.0, False, NEUTRO) for linha in self.linhas_trabalho),
+        ]
+        for texto, tamanho, negrito, cor in campos:
+            if not texto:
+                continue
+            for linha in quebrar(texto, largura_bloco, tamanho, negrito):
+                x = direita - largura_texto(linha, tamanho, negrito)
+                self.pdf.texto(x, y, linha, tamanho, cor, negrito=negrito)
+                y -= tamanho + 3.5
+        return min(y, topo - altura_logo)
 
     def capa_profissional(self, titulo: str, subtitulo: str, etiqueta: str = "") -> None:
         """Capa cuja faixa superior reserva as duas identidades lado a lado."""
         self.abrir_pagina(com_cabecalho=False)
         self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
 
-        altura_corvia = self._logo(self.margem, self.altura - 40, 180)
+        altura_corvia = self._logo(self.margem, self.altura - 40, 140)
         base_corvia = self.altura - 40 - altura_corvia
         base_profissional = self.identidade_primeira_pagina()
         self.y = min(base_corvia, base_profissional) - 26
 
         for linha in quebrar(titulo, self.util, 21, True):
+            self._garantir(40)
             self.pdf.texto(self.margem, self.y - 21, linha, 21, NAVY, negrito=True)
             self.y -= 27
         self.pdf.linha(self.margem, self.y - 2, self.margem + 46, self.y - 2, VERMELHO, 2.2)
@@ -117,6 +120,7 @@ class DocumentoProfissional(Documento):
 
         if subtitulo:
             for linha in quebrar(subtitulo, self.util, 11):
+                self._garantir(24)
                 self.pdf.texto(self.margem, self.y - 11, linha, 11, TEAL)
                 self.y -= 16
         if etiqueta:
@@ -139,30 +143,10 @@ class DocumentoProfissional(Documento):
         topo = self.altura - 30
         self._logo(self.margem, topo, 84)
         direita = self.largura - self.margem
-        largura_logo, _ = self._desenhar_logo_profissional(
-            self.logo_profissional,
-            direita,
-            topo + 2,
-            largura_max=72,
-            altura_max=34,
-        )
-        limite_direita = direita - largura_logo - (12 if largura_logo else 0)
-        x_texto = self.margem + 102
-        largura_texto_disponivel = max(120.0, limite_direita - x_texto)
-        y = topo - 7
-        if self.nome_profissional:
-            for linha in quebrar(self.nome_profissional, largura_texto_disponivel, 8.2, True)[:1]:
-                self.pdf.texto(x_texto, y, linha, 8.2, NAVY, negrito=True)
-                y -= 11
-        identificacao = " · ".join(
-            parte for parte in (self.registro_profissional, *self.linhas_trabalho[:1]) if parte
-        )
-        if identificacao:
-            for linha in quebrar(identificacao, largura_texto_disponivel, 6.9)[:2]:
-                self.pdf.texto(x_texto, y, linha, 6.9, NEUTRO)
-                y -= 9
-        self.pdf.linha(self.margem, self.altura - 92, direita, self.altura - 92, FIO)
-        self.y = self.topo
+        base_identidade = self.identidade_primeira_pagina()
+        linha_y = min(self.altura - 92, base_identidade - 12)
+        self.pdf.linha(self.margem, linha_y, direita, linha_y, FIO)
+        self.y = linha_y - 24
 
 
 def _registro(medico: dict) -> str:
@@ -240,14 +224,13 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
 
     documento._garantir(30)
     hoje = datetime.now(timezone.utc).astimezone().strftime("%d/%m/%Y")
-    documento.pdf.texto(
-        documento.margem,
-        documento.y - 8,
+    nota = (
         f"Material gerado no CorVIA em {hoje}. Em caso de dúvida sobre o seu caso, "
-        "procure o profissional que entregou este documento.",
-        8,
-        NEUTRO,
-        italico=True,
+        "procure o profissional que entregou este documento."
     )
+    for linha in quebrar(nota, documento.util, 8):
+        documento._garantir(12)
+        documento.pdf.texto(documento.margem, documento.y - 8, linha, 8, NEUTRO, italico=True)
+        documento.y -= 12
 
     return documento.salvar_bytes()

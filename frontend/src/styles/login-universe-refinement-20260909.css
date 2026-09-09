@@ -1,0 +1,159 @@
+/* Shared dimensions for both login themes. Keep the orbit labels readable. */
+#root #corvia-login .login-gateway__universe {
+  max-width: 1080px !important;
+  height: 250px !important;
+}
+#root #corvia-login .login-gateway__milky-way {
+  width: min(680px, 86%) !important;
+  height: 220px !important;
+  aspect-ratio: auto !important;
+}
+#root #corvia-login .login-gateway__core {
+  width: 134px !important;
+  height: 148px !important;
+}
+#root #corvia-login .login-gateway__galaxy-canvas { object-fit: contain !important; }
+#root #corvia-login .login-gateway__universe::before { height: 220px !important; }
+#root #corvia-login .login-gateway__universe::after { height: 180px !important; }
+
+/* The light asset has natural stellar colors; do not stack legacy color filters. */
+#root #corvia-login.login-gateway--light .login-gateway__scene {
+  mix-blend-mode: multiply !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__milky-way {
+  background: none !important;
+  filter: none !important;
+  mix-blend-mode: multiply !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__galaxy-image,
+#root #corvia-login.login-gateway--light .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity: 0.88 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+@media (max-width: 900px) {
+  #root #corvia-login .login-gateway__universe { height: 190px !important; }
+  #root #corvia-login .login-gateway__milky-way { width: 100% !important; height: 148px !important; }
+  #root #corvia-login .login-gateway__core { width: 79px !important; height: 90px !important; }
+  #root #corvia-login .login-gateway__universe::before { height: 156px !important; }
+  #root #corvia-login .login-gateway__universe::after { height: 126px !important; }
+}
+
+/* Dark login: clean background and the original image proportions. */
+#root #corvia-login.login-gateway--dark {
+  background: radial-gradient(ellipse at 50% 35%, #10243b 0%, #071626 47%, #040d18 100%) !important;
+}
+#root #corvia-login.login-gateway--dark .login-gateway__stars { display: none !important; }
+#root #corvia-login.login-gateway--dark .login-gateway__milky-way {
+  width: min(480px, 58%) !important;
+  height: auto !important;
+  aspect-ratio: 620 / 350 !important;
+  background: none !important;
+  filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+#root #corvia-login.login-gateway--dark .login-gateway__galaxy-canvas[data-ready="true"],
+#root #corvia-login.login-gateway--dark .login-gateway__galaxy-image {
+  filter: saturate(.95) brightness(1.04) !important;
+  opacity: .94 !important;
+}
+@media (min-width: 901px) {
+  #root #corvia-login.login-gateway--dark { padding-top: 20px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__topbar { min-height: 68px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__brand > img { width: 52px !important; height: 52px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__brand strong { font-size: 2.1rem !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__hero h1 { font-size: clamp(2rem, 3vw, 2.65rem) !important; line-height: 1.1 !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__hero > span { font-size: 1rem !important; max-width: 640px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__universe { max-width: 900px !important; height: 260px !important; margin-top: 18px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space { width: 166px !important; min-height: 58px !important; grid-template-columns: 36px minmax(0, 1fr) !important; gap: 9px !important; padding: 8px 12px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space > span { width: 34px !important; height: 34px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space > span svg { width: 25px !important; height: 25px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space strong { font-size: .88rem !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space--hospital,
+  #root #corvia-login.login-gateway--dark .login-gateway__space--consultorio { left: 5% !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__space--pesquisa,
+  #root #corvia-login.login-gateway--dark .login-gateway__space--gestao { right: 5% !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__console { width: min(100%, 1040px) !important; margin-top: 24px !important; padding: 20px 24px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__footer { margin-top: 24px !important; }
+}
+@media (max-width: 900px) {
+  #root #corvia-login.login-gateway--dark .login-gateway__milky-way { width: 64% !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__universe { margin-top: 16px !important; height: 206px !important; }
+  #root #corvia-login.login-gateway--dark .login-gateway__console { margin-top: 20px !important; }
+}
+
+/* Desktop access stays in a slim horizontal strip at the bottom. */
+@media (min-width: 901px) {
+  #root #corvia-login.login-gateway--public .login-gateway__scene {
+    flex: 1 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 14px 0 28px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__console {
+    width: min(100%, 1280px) !important;
+    grid-template-columns: minmax(140px, .8fr) minmax(360px, 2.4fr) minmax(145px, .8fr) !important;
+    grid-template-rows: auto !important;
+    grid-template-areas: "head form join" !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin: 0 auto !important;
+    padding: 14px 18px !important;
+    border-radius: 16px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head {
+    grid-template-columns: 32px minmax(0, 1fr) !important;
+    gap: 9px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head > span { width: 32px !important; height: 32px !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head h2 { font-size: 1rem !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head p { font-size: .5rem !important; letter-spacing: .09em !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head small { display: none !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 104px !important;
+    grid-template-rows: auto auto !important;
+    align-items: end !important;
+    gap: 4px 12px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__field:nth-of-type(1) { grid-column: 1 !important; grid-row: 1 !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__field:nth-of-type(2) { grid-column: 2 !important; grid-row: 1 !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__field > span { font-size: .72rem !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__field > div { height: 40px !important; min-height: 40px !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__field input { height: 38px !important; min-height: 38px !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__enter {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    font-size: .9rem !important;
+    gap: 8px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__forgot { grid-column: 2 !important; grid-row: 2 !important; font-size: .66rem !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__join {
+    min-height: 60px !important;
+    grid-template-columns: minmax(0, 1fr) 16px !important;
+    gap: 6px !important;
+    padding: 10px 12px !important;
+    border-radius: 12px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__join > span:first-child,
+  #root #corvia-login.login-gateway--public .login-gateway__join em { display: none !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__join strong { font-size: .76rem !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__join small { font-size: .84rem !important; }
+  #root #corvia-login.login-gateway--public .login-gateway__footer { margin-top: 14px !important; }
+}
+@media (min-width: 901px) and (max-width: 1150px) {
+  #root #corvia-login.login-gateway--public .login-gateway__console {
+    grid-template-columns: 36px minmax(0, 1fr) 160px !important;
+    gap: 12px !important;
+  }
+  #root #corvia-login.login-gateway--public .login-gateway__console-head > div {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip-path: inset(50%) !important;
+  }
+}

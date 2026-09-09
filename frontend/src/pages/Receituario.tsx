@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { api, ApiError, todasAsPaginas } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
@@ -607,6 +608,35 @@ export default function Receituario() {
   const [criando, setCriando] = useState(false);
   const [erro, setErro] = useState("");
   const [criado, setCriado] = useState<ReceituarioCriado | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const prescricaoLegadaId = location.state?.prescricaoLegadaId;
+  const [avisoOrigem, setAvisoOrigem] = useState("");
+
+  useEffect(() => {
+    if (!Number.isInteger(prescricaoLegadaId) || prescricaoLegadaId <= 0) return;
+    let ativo = true;
+    api.get<{ prescricao: { items: { drug_name: string; presentation: string; posology: string; orientation: string; brand_name?: string; manufacturer?: string; ggrem?: string }[]; notes: string | null } }>(`/prescriptions/${prescricaoLegadaId}/imprimir`)
+      .then(({ prescricao }) => {
+        if (!ativo) return;
+        recriarDoHistorico({
+          prescricao_id: prescricaoLegadaId,
+          destinatario: { nome: null, endereco: null, documento: null },
+          observacoes: prescricao.notes,
+          documentos: [],
+          itens_originais: prescricao.items.map((item) => ({
+            drug_slug: null, descricao: item.drug_name, apresentacao: item.presentation,
+            posologia: item.posology, orientacao: item.orientation,
+            quantidade: "", quantidade_extenso: "", uso_continuo: false,
+            brand_name: item.brand_name, manufacturer: item.manufacturer, ggrem: item.ggrem,
+          })),
+        });
+        setAvisoOrigem("Prescrição do prontuário carregada. Complete a identificação do paciente e as quantidades; confirme cada medicamento no catálogo antes de revisar e assinar.");
+        navigate(location.pathname, { replace: true, state: null });
+      })
+      .catch((e) => { if (ativo) setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a prescrição do prontuário."); });
+    return () => { ativo = false; };
+  }, [prescricaoLegadaId, navigate, location.pathname]);
 
   useEffect(() => {
     todasAsPaginas<{ slug: string; generic_name: string }>("/drugs")
@@ -986,6 +1016,7 @@ export default function Receituario() {
 
   return (
     <div className="prescricao">
+      {avisoOrigem && <p role="status" className="cartao">{avisoOrigem}</p>}
       <header className="prescricao__cabecalho">
         <div>
           <p className="eyebrow">Documentos clínicos</p>

@@ -1,3 +1,6 @@
+import { assetUrl } from "../lib/api";
+import "../styles/document-header.css";
+
 type Medico = {
   full_name: string;
   professional_title?: string | null;
@@ -29,19 +32,21 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
 
   return (
     <header className="doc-cabecalho">
-      <div className="doc-cabecalho__profissional">
+      <img className="doc-cabecalho__logo" src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" />
+      <div className="doc-cabecalho__centro">
         {medico.document_logo_url && (
           <span className={`doc-cabecalho__logo-pessoal-placa ${medico.document_logo_dark_background ? "doc-cabecalho__logo-pessoal-placa--escura" : ""}`}>
-            <img className="doc-cabecalho__logo-pessoal" src={medico.document_logo_url} alt="" />
+            <img className="doc-cabecalho__logo-pessoal" src={assetUrl(medico.document_logo_url)} alt="Logo profissional" />
           </span>
         )}
+      </div>
+      <div className="doc-cabecalho__profissional">
         <strong className="doc-cabecalho__nome">{nome}</strong>
         {medico.profession && <span>{medico.profession}</span>}
         {registro && <span className="doc-cabecalho__registro">{registro}{uf}{medico.rqe && ` · RQE ${medico.rqe}`}</span>}
         {medico.specialty && <span className="doc-cabecalho__especialidade">{medico.specialty}</span>}
         {local.map((linha) => <span key={linha}>{linha}</span>)}
       </div>
-      <img className="doc-cabecalho__logo" src="/corvia-logo-spaces.svg" alt="CorVIA Cardiology Spaces" />
     </header>
   );
 }

@@ -567,10 +567,12 @@ def listar_gerados(
 @router.get("/gerados/{gid}")
 def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_user)):
     g = _obter_gerado(gid, db, user)
+    emitido = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
     return {
         "id": g.id, "title": g.title, "doc_type": g.doc_type,
         "rendered_body": g.rendered_body, "created_at": g.created_at,
         "tem_email_destinatario": g.destinatario_email_cifrado is not None,
+        "assinatura": {"metodo": emitido.metodo, "assinado_em": emitido.assinado_em} if emitido else None,
         "template_id": g.template_id, "variables": g.variables,
         "patient_name": cofre.decifrar_campo(g.patient_name_cifrado, g.id) if g.patient_name_cifrado else None,
         # Acrescentados em 12/08/2026: `patient_profile_id` é o atalho de
@@ -716,6 +718,12 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
     if not g or g.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
 
+    emitido = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
+    if emitido is None:
+        raise HTTPException(status_code=409, detail="Escolha o método de assinatura e conclua a emissão antes de enviar o documento.")
+    if emitido.metodo != "MANUAL" and emitido.assinado_em is None:
+        raise HTTPException(status_code=409, detail="Conclua a assinatura digital antes de enviar o documento ao paciente.")
+
     g.destinatario_email_cifrado = cofre.cifrar_campo(dados.email, g.id)
     link = DocumentShareLink(
         tipo="generated_document", referencia_id=g.id, criado_por=user.id,
@@ -730,7 +738,6 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
     # rota não exige isso: `GeneratedDocument` também aceita o método
     # MANUAL (sem assinatura), e continuar permitindo enviá-lo por e-mail é
     # o comportamento já existente, não alterado aqui.
-    emitido = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
     divulgacao = None
     if emitido and emitido.assinado_em is not None and emitido.nivel == "qualificada":
         divulgacao = divulgacao_email.texto_divulgacao(assinatura_emissao.ler_bytes(emitido))

@@ -12,6 +12,10 @@ export default function MiniUniverseCanvas() {
     const image = new Image();
     let frame = 0;
     let cancelled = false;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let repaint: (() => void) | undefined;
+    const motionChanged = () => repaint?.();
+    reducedMotion.addEventListener("change", motionChanged);
     image.src = "/spaces/corvia-galaxy-cameo.webp";
 
     image.onload = () => {
@@ -31,7 +35,7 @@ export default function MiniUniverseCanvas() {
       const coreSquareY = coreYRatio * square;
       const coreTargetX = coreXRatio * width;
       const coreTargetY = top + coreYRatio * projectedHeight;
-      const durationMs = 120_000;
+      const durationMs = 180_000;
 
       canvas.width = width;
       canvas.height = height;
@@ -47,9 +51,10 @@ export default function MiniUniverseCanvas() {
       let lastPaint = 0;
       const paint = (now: number) => {
         if (cancelled) return;
-        if (now - lastPaint >= 32) {
+        if (!lastPaint || now - lastPaint >= 32) {
           lastPaint = now;
-          const angle = -(((now - startedAt) % durationMs) / durationMs) * Math.PI * 2;
+          // Positive canvas angles rotate clockwise on screen.
+          const angle = reducedMotion.matches ? 0 : (((now - startedAt) % durationMs) / durationMs) * Math.PI * 2;
           ctx.clearRect(0, 0, width, height);
           ctx.save();
           ctx.translate(coreTargetX, coreTargetY);
@@ -61,13 +66,19 @@ export default function MiniUniverseCanvas() {
           canvas.dataset.ready = "true";
           canvas.parentElement?.setAttribute("data-galaxy-ready", "true");
         }
-        frame = requestAnimationFrame(paint);
+        if (!reducedMotion.matches) frame = requestAnimationFrame(paint);
       };
-      frame = requestAnimationFrame(paint);
+      repaint = () => {
+        cancelAnimationFrame(frame);
+        lastPaint = 0;
+        paint(performance.now());
+      };
+      paint(startedAt);
     };
 
     return () => {
       cancelled = true;
+      reducedMotion.removeEventListener("change", motionChanged);
       canvas.parentElement?.removeAttribute("data-galaxy-ready");
       cancelAnimationFrame(frame);
     };

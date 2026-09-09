@@ -1,4 +1,4 @@
-import CabecalhoDocumento from "./CabecalhoDocumento";
+import FinalizarDocumentoGerado from "./FinalizarDocumentoGerado";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
@@ -36,7 +36,6 @@ export default function PatientDocumentos({ patientId }: { patientId: number }) 
         template_id: template.id, patient_id: patientId, variables: valores,
       });
       setGerado(r);
-      setTimeout(() => window.print(), 200);
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível gerar.");
     } finally {
@@ -70,7 +69,7 @@ export default function PatientDocumentos({ patientId }: { patientId: number }) 
 
           {template && (
             <button className="botao" style={{ marginTop: "0.6rem" }} onClick={gerar} disabled={gerando}>
-              {gerando ? "Gerando…" : "Gerar e imprimir"}
+              {gerando ? "Gerando…" : "Gerar documento"}
             </button>
           )}
           {erro && <p style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
@@ -78,12 +77,8 @@ export default function PatientDocumentos({ patientId }: { patientId: number }) 
       )}
 
       {gerado && (
-        <div className="folha-impressao">
-          <CabecalhoDocumento medico={gerado.medico} />
-          <h2>{gerado.title}</h2>
-          <hr />
-          <p style={{ whiteSpace: "pre-wrap" }}>{gerado.rendered_body}</p>
-        </div>
+        <FinalizarDocumentoGerado key={gerado.id} geradoId={gerado.id}
+          nomeArquivoBase={gerado.doc_type} provedores={null} onFechar={() => setGerado(null)} />
       )}
     </div>
   );
