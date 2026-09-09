@@ -5,7 +5,7 @@
   "scope": "entire_canonical_reviewed_corpus",
   "approval_basis": "Autorização explícita do responsável pelo repositório nesta tarefa para concluir a revisão clínica, corrigir, interligar e publicar em um único deploy emergencial os 377 arquivos de origem Grok e Claude (376 itens canônicos, com duplicatas reconciliadas) e os ajustes de login/galáxias. Preserva o corpus anteriormente publicado, sem incluir ramos concorrentes. A publicação está vinculada aos slugs e arquivos canônicos deste checkout por fingerprints de todas as frentes. O escopo incremental está explicitado em grok-claude-377-20260909.json.",
   "expected_total": 12554,
-  "inventory_sha256": "a38bc1f33cbfba01dc77e5372556e6cc9f9e6c9e435ab9915dd1113c6061d2f2",
+  "inventory_sha256": "e1d7deef25db3c94d80a92eae1cdd747ce0944a84493cf6ae679025bfc0872fc",
   "fronts": {
     "documentos": {
       "count": 3125,
@@ -65,7 +65,7 @@
       "count": 486,
       "reviewed_count": 486,
       "slug_sha256": "8988cc4d5948d21a26390aeea82bbc4cf19c76d533eb155a7fe25e96c75c0299",
-      "source_sha256": "00566217b27145dfb770d4fdc56e2cb74b8b3505b6b3e9387c010c8cdc7e4cd1"
+      "source_sha256": "e54975a6d1885b42090bdf2d5a41e83371f58fb5b9635fb137ecedf1df013132"
     },
     "emergencia": {
       "count": 77,

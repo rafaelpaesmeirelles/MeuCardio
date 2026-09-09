@@ -169,5 +169,8 @@ def test_trilha_material_paciente_aparece_nos_dois_sentidos(db, transversal_pair
     edge = db.execute(select(KnowledgeRelation).where(
         KnowledgeRelation.relation_type == "contains",
     )).scalar_one()
-    assert edge.review_status == "revisado"
+    # A ligação estrutural é navegável, mas só o manifesto editorial explícito
+    # promove sua revisão. Esta fixture isola a estrutura, sem esse manifesto.
+    assert edge.review_status == "pendente_revisao"
+    assert edge.provenance_type == "structured_metadata"
     assert edge.extra["campo"] == "StudyTrack.etapas"
