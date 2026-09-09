@@ -20,6 +20,7 @@ from dataclasses import dataclass
 from fastapi.encoders import jsonable_encoder
 
 from app.core.config import settings
+from app.services.ia.usage_control import MeteredSDK, plan_rounds
 
 
 logger = logging.getLogger("meucardio.ia.provedor")
@@ -33,7 +34,12 @@ def _serializar_resultado_tool(resultado) -> str:
     essas funções diretamente. Sem esta conversão, a rotina era persistida e
     o ``json.dumps`` falhava antes de o assistente conseguir confirmá-la.
     """
-    return json.dumps(jsonable_encoder(resultado), ensure_ascii=False)
+    serialized = json.dumps(jsonable_encoder(resultado), ensure_ascii=False)
+    if len(serialized.encode("utf-8")) > 20_000:
+        # Bound the next paid request without executing the tool again.
+        preview = serialized.encode("utf-8")[:9_000].decode("utf-8", errors="ignore")
+        return json.dumps({"truncated": True, "preview": preview}, ensure_ascii=False)
+    return serialized
 
 
 @dataclass
@@ -123,7 +129,7 @@ class ProvedorOpenAI(ProvedorIA):
     def __init__(self) -> None:
         from openai import OpenAI
 
-        self._cliente = OpenAI(api_key=settings.openai_api_key)
+        self._cliente = MeteredSDK(OpenAI(api_key=settings.openai_api_key, max_retries=0), "openai")
         self._modelo = settings.openai_model
         self._modelo_embedding = settings.openai_embedding_model
 
@@ -179,15 +185,17 @@ class ProvedorOpenAI(ProvedorIA):
         ferramentas: list[dict] | None = None,
         executor_ferramenta=None,
     ):
-        modelo_efetivo = self._modelo
-        stream = self._cliente.chat.completions.create(
-            model=modelo_efetivo,
-            messages=[{"role": "system", "content": sistema}, *mensagens],
-            max_tokens=settings.ai_max_output_tokens,
-            temperature=0.2,
-            stream=True,
-            stream_options={"include_usage": True},
-        )
+        modelo_efetivo = modelo or self._modelo
+        stream_kwargs = {
+            "model": modelo_efetivo,
+            "messages": [{"role": "system", "content": sistema}, *mensagens],
+            "stream": True, "stream_options": {"include_usage": True},
+        }
+        if modelo_efetivo.startswith("gpt-5"):
+            stream_kwargs["max_completion_tokens"] = settings.ai_max_output_tokens
+        else:
+            stream_kwargs.update(max_tokens=settings.ai_max_output_tokens, temperature=0.2)
+        stream = self._cliente.chat.completions.create(**stream_kwargs)
         textos: list[str] = []
         tokens_entrada = 0
         tokens_saida = 0
@@ -329,7 +337,7 @@ class ProvedorAnthropic(ProvedorIA):
     def __init__(self) -> None:
         import anthropic
 
-        self._cliente = anthropic.Anthropic(api_key=settings.anthropic_api_key)
+        self._cliente = MeteredSDK(anthropic.Anthropic(api_key=settings.anthropic_api_key, max_retries=0), "anthropic")
         self._modelo = settings.anthropic_model
 
     @property
@@ -434,6 +442,9 @@ class ProvedorAnthropic(ProvedorIA):
         kwargs["max_tokens"] = max_output_tokens or settings.ai_max_output_tokens
         max_rodadas = self._MAX_RODADAS_TOOL_USE if ferramentas else self._MAX_RODADAS_PAUSE_TURN
 
+        plan_rounds("anthropic", {**kwargs, "messages": mensagens}, max_rodadas,
+                    tool_result_bytes=20_000 if ferramentas else 0)
+
         mensagens_turno = list(mensagens)
         textos: list[str] = []
         tokens_entrada = 0
@@ -491,6 +502,9 @@ class ProvedorAnthropic(ProvedorIA):
         modelo_efetivo = modelo or self._modelo
         kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet, ferramentas)
         max_rodadas = self._MAX_RODADAS_TOOL_USE if ferramentas else self._MAX_RODADAS_PAUSE_TURN
+
+        plan_rounds("anthropic", {**kwargs, "messages": mensagens}, max_rodadas,
+                    tool_result_bytes=20_000 if ferramentas else 0)
 
         mensagens_turno = list(mensagens)
         textos: list[str] = []

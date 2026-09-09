@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
+import CommercialFeatureGate from "./components/CommercialFeatureGate";
 import { Carregando } from "./components/Estado";
 import HomeQuickActionsPersonalizer from "./components/HomeQuickActionsPersonalizer";
 import OptionalFeatureBoundary from "./components/OptionalFeatureBoundary";
@@ -68,6 +69,7 @@ const Templates = lazy(() => import("./pages/Templates"));
 const AvaliacaoPreOperatoria = lazy(() => import("./pages/AvaliacaoPreOperatoria"));
 const EmBreve = lazy(() => import("./pages/EmBreve"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
+const Assinatura = lazy(() => import("./pages/Assinatura"));
 const Sincronizacao = lazy(() => import("./pages/Sincronizacao"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
 const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
@@ -189,7 +191,7 @@ export default function App() {
           <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
-          <Route path="documentos-cientificos-ia" element={<ScientificDocumentAI />} />
+          <Route path="documentos-cientificos-ia" element={<CommercialFeatureGate feature="ai"><ScientificDocumentAI /></CommercialFeatureGate>} />
           <Route path="doencas" element={<GuiaDoencas />} />
           <Route path="doencas/:slug" element={<GuiaDoenca />} />
           <Route path="triagem-sintomas" element={<TriagemSintomas />} />
@@ -225,26 +227,26 @@ export default function App() {
           <Route path="cursos" element={<Navigate to="/trilhas" replace />} />
           <Route path="cursos/:slug" element={<Navigate to="/trilhas" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
-          <Route path="assistente" element={<Assistente />} />
-          <Route path="heart-team" element={heartTeamEnabled() ? <HeartTeamVirtual /> : <Navigate to="/" replace />} />
-          <Route path="heart-team/:caseId" element={heartTeamEnabled() ? <HeartTeamVirtual /> : <Navigate to="/" replace />} />
-          <Route path="whatsapp-assistant" element={whatsappAssistantEnabled() ? <WhatsAppAssistant /> : <Navigate to="/minha-conta" replace />} />
+          <Route path="assistente" element={<CommercialFeatureGate feature="ai"><Assistente /></CommercialFeatureGate>} />
+          <Route path="heart-team" element={heartTeamEnabled() ? <CommercialFeatureGate feature="ai"><HeartTeamVirtual /></CommercialFeatureGate> : <Navigate to="/" replace />} />
+          <Route path="heart-team/:caseId" element={heartTeamEnabled() ? <CommercialFeatureGate feature="ai"><HeartTeamVirtual /></CommercialFeatureGate> : <Navigate to="/" replace />} />
+          <Route path="whatsapp-assistant" element={whatsappAssistantEnabled() ? <CommercialFeatureGate feature="ai"><WhatsAppAssistant /></CommercialFeatureGate> : <Navigate to="/minha-conta" replace />} />
           <Route path="prontuario" element={<Prontuario />} />
-          <Route path="exames-ia" element={<CardiovascularExamAI />} />
-          <Route path="ecg-ia" element={<CardiovascularExamAI />} />
+          <Route path="exames-ia" element={<CommercialFeatureGate feature="ai"><CardiovascularExamAI /></CommercialFeatureGate>} />
+          <Route path="ecg-ia" element={<CommercialFeatureGate feature="ai"><CardiovascularExamAI /></CommercialFeatureGate>} />
           <Route path="round" element={<Round />} />
           <Route path="agenda" element={<Agenda />} />
           <Route path="documentos" element={<Templates />} />
           <Route path="exportar" element={<ExportarConteudo />} />
           <Route path="avaliacao-preoperatoria" element={<AvaliacaoPreOperatoria />} />
           <Route path="receituario" element={<Receituario />} />
-          <Route path="assinatura" element={<Navigate to="/tour?origem=assinatura&modo=quick" replace />} />
+          <Route path="assinatura" element={<Assinatura />} />
           <Route path="minha-conta" element={<MinhaConta />} />
           <Route path="sincronizacao" element={<Sincronizacao />} />
           <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
           <Route path="telediagnostico" element={<Telediagnostico />} />
-          <Route path="caixa-de-email" element={<CaixaDeEmail />} />
-          <Route path="corvia-mail" element={<CorviaMail />} />
+          <Route path="caixa-de-email" element={<CommercialFeatureGate feature="mail"><CaixaDeEmail /></CommercialFeatureGate>} />
+          <Route path="corvia-mail" element={<CommercialFeatureGate feature="mail"><CorviaMail /></CommercialFeatureGate>} />
           <Route path="usuarios-online" element={<UsuariosOnline />} />
           <Route path="privacidade" element={<PoliticaPrivacidade />} />
           <Route path="excluir-conta" element={<ExcluirConta />} />

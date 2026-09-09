@@ -17,6 +17,8 @@ from app.services.whatsapp_intents import parse_intent
 from app.services.whatsapp_adapter import get_adapter,WhatsAppProviderError
 from app.services.whatsapp_outbox import deliver_once
 
+from app.services.ia.usage_control import ai_operation
+
 LEVELS={"agenda_list":1,"task_list":1,"scientific_search":1,"document_summary":1,"status_read":1,"daily_summary":1,"pending_items":1,"reminder_create":2,"task_create":2,"appointment_create":2,"appointment_update":2,"routine_create":2,"draft_save":2,"list_create":2,"patient_material_draft":2,"email_send":3,"message_send":3,"document_share":3,"third_party_appointment_cancel":3,"heart_team_start":3,"blocked_critical":4}
 PERMISSIONS={"agenda_list":"read_agenda","task_list":"read_tasks","scientific_search":"search_science","document_summary":"search_science","status_read":"read_tasks","daily_summary":"read_agenda","pending_items":"read_tasks","reminder_create":"create_reminder","task_create":"create_reminder","appointment_create":"create_appointment","appointment_update":"create_appointment","routine_create":"create_appointment","draft_save":"create_draft","list_create":"create_draft","patient_material_draft":"create_draft","email_send":"external_communication","message_send":"external_communication","document_share":"external_communication","third_party_appointment_cancel":"external_communication","heart_team_start":"heart_team_draft"}
 SUMMARY_PIPELINE_VERSION="whatsapp-summary-v1"
@@ -127,6 +129,30 @@ def _summary_cache_key(media,text_value):
  return media_sha,hashlib.sha256(material.encode("utf-8")).hexdigest()
 def _summary_cache_get(db,owner_id,key):
  return db.query(WhatsAppSummaryCache).filter(WhatsAppSummaryCache.owner_id==owner_id,WhatsAppSummaryCache.cache_key==key,WhatsAppSummaryCache.expires_at>utcnow()).first()
+def _prepare_heart_team_budget(db,user,cmd,payload):
+ if not settings.heart_team_enabled:raise HTTPException(409,"Heart Team indisponível")
+ if not _permission(db,user,cmd,"heart_team_draft"):raise HTTPException(403,"Permissão para Heart Team ausente")
+ a=payload.get("arguments") or {}
+ from app.services.heart_team import create_case_draft
+ case_payload={"case_text":payload.get("text"),"question":a.get("question"),"selected_agents":a.get("selected_agents")}
+ media_row=media_payload=media_data=None
+ if a.get("media_message_id"):
+  media_row,media_payload,media_data=_media_for_command(db,user,a["media_message_id"]);extracted=media_payload.get("sanitized_extract") or _extract_document(media_data,media_payload.get("mime_type"));case_payload["case_text"]=(payload.get("text") or "")+("\n\nConteúdo objetivo do anexo:\n"+extracted if extracted else "")
+ case=create_case_draft(db,owner_id=user.id,created_by_id=user.id,payload=case_payload,origin="whatsapp")
+ if media_data is not None:
+  from app.models.heart_team import HeartTeamAttachment
+  key=guardar(media_data,user.id,raiz=Path(settings.heart_team_files_dir));db.add(HeartTeamAttachment(case_id=case.id,owner_id=user.id,kind="upload",storage_key=key,media_type=media_payload.get("mime_type") or "application/octet-stream",size_bytes=len(media_data),sha256=hashlib.sha256(media_data).hexdigest(),objective_extract={"type":"whatsapp_sanitized_reviewed","text":extracted[:24000]}))
+ db.flush()
+ payload["heart_team_case_id"]=case.id
+ cmd.payload_cipher=_encrypt(payload,user.id)
+ from app.services.heart_team import estimate_case_budget
+ quote=estimate_case_budget(db,case,actor_id=user.id)
+ payload["heart_team_budget"]={"quote_id":quote["quote_id"],"maximum_credit_centavos":quote["maximum_credit_centavos"]}
+ cmd.payload_cipher=_encrypt(payload,user.id)
+ maximum=quote["maximum_credit_centavos"]/100
+ return {"mensagem":f"Heart Team: consumo máximo de {maximum:.2f} créditos de IA. Confirme esse teto com seu PIN no CorVIA em até 15 minutos. A análise é apoio à decisão, usa conteúdo anonimizado e exige revisão médica. Se expirar, solicite novo orçamento na página do caso.","case_id":case.id,"ai_budget":quote,"full_result_url":f"{settings.public_url}/heart-team/{case.id}"}
+
+@ai_operation("whatsapp_ai")
 def _execute(db,user,cmd,payload):
  kind=cmd.kind;a=payload.get("arguments") or {}
  if cmd.level==4 or payload_requires_level4(kind,payload.get("text",""),a):return {"erro":"blocked_level_4","mensagem":"Ação crítica bloqueada."}
@@ -209,16 +235,13 @@ def _execute(db,user,cmd,payload):
   share=DocumentShareLink(tipo=doc_type,referencia_id=int(reference_id),criado_por=user.id,expires_at=utcnow()+timedelta(hours=hours));db.add(share);db.flush();return {"mensagem":"Link seguro criado após confirmação.","share_url":f"{settings.public_url}/documentos/{share.token}","expires_at":share.expires_at}
  if kind=="heart_team_start":
   if not settings.heart_team_enabled:return {"erro":"feature_disabled"}
-  from app.services.heart_team import create_case_draft
-  case_payload={"case_text":payload.get("text"),"question":a.get("question"),"selected_agents":a.get("selected_agents")}
-  media_row=media_payload=media_data=None
-  if a.get("media_message_id"):
-   media_row,media_payload,media_data=_media_for_command(db,user,a["media_message_id"]);extracted=media_payload.get("sanitized_extract") or _extract_document(media_data,media_payload.get("mime_type"));case_payload["case_text"]=(payload.get("text") or "")+("\n\nConteúdo objetivo do anexo:\n"+extracted if extracted else "")
-  case=create_case_draft(db,owner_id=user.id,created_by_id=user.id,payload=case_payload,origin="whatsapp")
-  if media_data is not None:
-   from app.models.heart_team import HeartTeamAttachment
-   key=guardar(media_data,user.id,raiz=Path(settings.heart_team_files_dir));db.add(HeartTeamAttachment(case_id=case.id,owner_id=user.id,kind="upload",storage_key=key,media_type=media_payload.get("mime_type") or "application/octet-stream",size_bytes=len(media_data),sha256=hashlib.sha256(media_data).hexdigest(),objective_extract={"type":"whatsapp_sanitized_reviewed","text":extracted[:24000]}))
-  job=WhatsAppHeartTeamJob(command_id=cmd.id,case_id=case.id,owner_id=user.id,link_id=cmd.link_id,status="queued",next_attempt_at=utcnow());db.add(job);return {"mensagem":"Análise enfileirada.","case_id":case.id,"full_result_url":f"{settings.public_url}/heart-team/{case.id}"}
+  from app.services.heart_team import enqueue_analysis_job
+  budget=payload.get("heart_team_budget") or {};case_id=payload.get("heart_team_case_id")
+  if not case_id or not budget.get("quote_id") or budget.get("maximum_credit_centavos") is None:
+   raise HTTPException(409,"Solicite um orçamento do Heart Team antes de confirmar.")
+  enqueue_analysis_job(db,case_id=case_id,owner_id=user.id,actor_id=user.id,confirm_deidentified=True,confirm_medical_review=True,quote_id=budget["quote_id"],approved_max_credit_centavos=budget["maximum_credit_centavos"])
+  job=WhatsAppHeartTeamJob(command_id=cmd.id,case_id=case_id,owner_id=user.id,link_id=cmd.link_id,status="queued",next_attempt_at=utcnow());db.add(job)
+  return {"mensagem":"Análise enfileirada dentro do orçamento confirmado.","case_id":case_id,"full_result_url":f"{settings.public_url}/heart-team/{case_id}"}
  return {"erro":"unsupported"}
 def create_command(db,user,link,*,text,idempotency_key,explicit_kind,arguments,pii_reviewed=False,message_id=None):
  feature_guard(); existing=db.query(WhatsAppCommand).filter(WhatsAppCommand.owner_id==user.id,WhatsAppCommand.idempotency_key==idempotency_key).first()
@@ -230,7 +253,7 @@ def create_command(db,user,link,*,text,idempotency_key,explicit_kind,arguments,p
  if status=="awaiting_confirmation":confirm=random_token();cmd.confirmation_token_hash=token_hash(confirm,"confirm");cmd.confirmation_expires_at=utcnow()+timedelta(seconds=settings.whatsapp_confirmation_ttl_seconds)
  if level==2 and status=="pending":undo=random_token();cmd.undo_token_hash=token_hash(undo,"undo");cmd.undo_expires_at=utcnow()+timedelta(seconds=settings.whatsapp_confirmation_ttl_seconds)
  if status=="pending":result=_execute(db,user,cmd,payload);cmd.status="failed" if "erro" in result else "completed"
- elif status=="awaiting_confirmation":result={"mensagem":"Confirmação explícita necessária."}
+ elif status=="awaiting_confirmation":result=_prepare_heart_team_budget(db,user,cmd,payload) if kind=="heart_team_start" else {"mensagem":"Confirmação explícita necessária."}
  else:result={"erro":status,"mensagem":p.clarification or "Bloqueado."}
  cmd.result_cipher=_encrypt(result,user.id);db.add(WhatsAppUsageMetric(owner_id=user.id,link_id=link.id,idempotency_key=idempotency_key,operation=kind,provider=settings.whatsapp_provider,success="erro" not in result,blocked_reason=result.get("erro")));return cmd,result,confirm,undo
 def confirm_command(db,user,cmd,*,token,pin):

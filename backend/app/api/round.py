@@ -11,6 +11,8 @@ from app.models.audit import AuditLog
 from app.models.round import Patient, PatientAISuggestion, PatientNote, PatientProblem
 from app.services.clinical_ownership import patient_for_user
 
+from app.services.ia.usage_control import ai_usage_scope, AIUsageError
+
 router = APIRouter(prefix="/api/round", tags=["round"])
 
 
@@ -293,64 +295,65 @@ def generate_ai_assistance(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    from app.services import rag
+    with ai_usage_scope(user.id, "round_ai"):
+        from app.services import rag
 
-    if not settings.ai_enabled:
-        raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
+        if not settings.ai_enabled:
+            raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
 
-    patient = _patient_for_user(patient_id, db, user)
-    used = _consultas_ia_hoje(db, user.id)
-    if used >= settings.ai_daily_limit:
-        raise HTTPException(
-            status_code=429,
-            detail=f"Limite diário de {settings.ai_daily_limit} consultas atingido. Recomeça amanhã.",
+        patient = _patient_for_user(patient_id, db, user)
+        used = _consultas_ia_hoje(db, user.id)
+        if used >= settings.ai_daily_limit:
+            raise HTTPException(
+                status_code=429,
+                detail=f"Limite diário de {settings.ai_daily_limit} consultas atingido. Recomeça amanhã.",
+            )
+
+        has_clinical_data = any([
+            patient.chief_complaint,
+            patient.anamnesis,
+            patient.physical_exam,
+            patient.vital_signs,
+            patient.labs,
+            patient.imaging,
+            patient.problems,
+        ])
+        if not has_clinical_data:
+            raise HTTPException(
+                status_code=422,
+                detail="Preencha ao menos queixa principal, anamnese, exame físico ou exames antes de pedir auxílio de IA.",
+            )
+
+        try:
+            result = rag.analisar_caso(db, patient)
+        except Exception as error:
+            raise HTTPException(
+                status_code=502,
+                detail=f"O provedor de IA não respondeu ({type(error).__name__}). Tente novamente.",
+            ) from error
+
+        suggestion = PatientAISuggestion(
+            patient_id=patient.id,
+            requested_by=user.id,
+            case_snapshot=result["case_snapshot"],
+            sources=result["sources"],
+            sources_pubmed=result["sources_pubmed"],
+            model=result["model"],
+            differential_diagnosis=result["differential_diagnosis"],
+            suggested_workup=result["suggested_workup"],
+            treatment_considerations=result["treatment_considerations"],
         )
-
-    has_clinical_data = any([
-        patient.chief_complaint,
-        patient.anamnesis,
-        patient.physical_exam,
-        patient.vital_signs,
-        patient.labs,
-        patient.imaging,
-        patient.problems,
-    ])
-    if not has_clinical_data:
-        raise HTTPException(
-            status_code=422,
-            detail="Preencha ao menos queixa principal, anamnese, exame físico ou exames antes de pedir auxílio de IA.",
-        )
-
-    try:
-        result = rag.analisar_caso(db, patient)
-    except Exception as error:
-        raise HTTPException(
-            status_code=502,
-            detail=f"O provedor de IA não respondeu ({type(error).__name__}). Tente novamente.",
-        ) from error
-
-    suggestion = PatientAISuggestion(
-        patient_id=patient.id,
-        requested_by=user.id,
-        case_snapshot=result["case_snapshot"],
-        sources=result["sources"],
-        sources_pubmed=result["sources_pubmed"],
-        model=result["model"],
-        differential_diagnosis=result["differential_diagnosis"],
-        suggested_workup=result["suggested_workup"],
-        treatment_considerations=result["treatment_considerations"],
-    )
-    db.add(suggestion)
-    db.add(AuditLog(
-        user_id=user.id,
-        action="ai_assist_round",
-        entity="patient",
-        entity_id=str(patient.id),
-        detail={"modelo": result["model"], "fontes": [source["slug"] for source in result["sources"]]},
-    ))
-    db.commit()
-    db.refresh(suggestion)
-    return _dump_suggestion(suggestion)
+        db.add(suggestion)
+        db.add(AuditLog(
+            user_id=user.id,
+            action="ai_assist_round",
+            entity="patient",
+            entity_id=str(patient.id),
+            detail={"modelo": result["model"], "fontes": [source["slug"] for source in result["sources"]]},
+        ))
+        db.commit()
+        db.refresh(suggestion)
+        return _dump_suggestion(suggestion)
 
 
 @router.get("/patients/{patient_id}/ai-assist")

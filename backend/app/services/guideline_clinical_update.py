@@ -31,6 +31,8 @@ from app.models.guideline import Guideline, GuidelineLink
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.services.canonical_themes import TEMA_PADRAO, TEMAS_CANONICOS
 
+from app.services.ia.usage_control import ai_operation, metered_responses_post
+
 log = logging.getLogger("corvia.guideline_clinical_update")
 
 RESPONSES_URL = "https://api.openai.com/v1/responses"
@@ -210,7 +212,7 @@ def _responses_json(*, instructions: str, user_text: str, schema: dict,
                             "strict": True, "schema": schema}},
     }
     with httpx.Client(timeout=httpx.Timeout(220.0, connect=20.0)) as client:
-        response = client.post(
+        response = metered_responses_post(client,
             RESPONSES_URL,
             headers={"Authorization": f"Bearer {settings.openai_api_key}", "Content-Type": "application/json"},
             json=request,
@@ -794,6 +796,7 @@ def _ensure_summary_document(db: Session, guideline: Guideline, analysis: dict, 
     return doc
 
 
+@ai_operation("editorial", owner=None, cost_center="editorial")
 def process_guideline(db: Session, guideline: Guideline) -> dict:
     existing = get_analysis(db, guideline)
     analysis = existing or _analyze_source(guideline)

@@ -35,6 +35,8 @@ from app.services.rag import (
 )
 from app.services.rag_sources import FONTES_POR_TIPO, FONTES_RAG, publicados
 
+from app.services.ia.usage_control import ai_operation
+
 # `catalog_search` usa 'emergencia' como rótulo de frente (mesmo texto
 # mostrado em /api/search); `rag_sources.FONTES_RAG` usa o entity_type
 # 'protocolo_emergencia' (allowlist do grafo). Único ponto onde os dois
@@ -48,6 +50,7 @@ _FRENTE_PARA_ENTITY_TYPE["emergencia"] = "protocolo_emergencia"
 log = logging.getLogger("corvia.rag_multi")
 
 
+@ai_operation("catalog_index", owner=None, cost_center="catalog_index")
 def indexar_entidade(
     db: Session, *, entity_type: str, entity_id: int, titulo: str, texto: str, provedor=None,
     forcar: bool = False,

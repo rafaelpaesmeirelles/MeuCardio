@@ -29,6 +29,8 @@ from app.services.ia.clinical_file_sanitizer import (
     sanitize_clinical_file,
 )
 
+from app.services.ia.usage_control import ai_usage_scope, AIUsageError
+
 router = APIRouter(prefix="/api/exames-ia", tags=["exames-ia"])
 logger = logging.getLogger(__name__)
 MAX_FILES = 5
@@ -109,184 +111,185 @@ async def analisar_exame_cardiovascular(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    if not confirm_external_processing or not confirm_deidentified or consent_version != CONSENT_VERSION:
-        raise HTTPException(
-            status_code=422,
-            detail="Confirme o termo atual de processamento externo e a remoção de identificadores.",
-        )
-    enabled, _ = _availability()
-    if not enabled:
-        raise HTTPException(status_code=503, detail="A central multimodal de exames está indisponível nesta instalação.")
-    if exam_type not in cardiovascular_exam_assist.EXAM_TYPES:
-        raise HTTPException(status_code=422, detail="Selecione um tipo de exame cardiovascular válido.")
-    if len(arquivos) > MAX_FILES:
-        raise HTTPException(status_code=422, detail=f"Envie no máximo {MAX_FILES} arquivos.")
-    if len(arquivos) > 1 and not confirm_same_case:
-        raise HTTPException(status_code=422, detail="Confirme que todos os arquivos pertencem ao mesmo caso clínico.")
+    with ai_usage_scope(user.id, "exam_ai"):
+        if not confirm_external_processing or not confirm_deidentified or consent_version != CONSENT_VERSION:
+            raise HTTPException(
+                status_code=422,
+                detail="Confirme o termo atual de processamento externo e a remoção de identificadores.",
+            )
+        enabled, _ = _availability()
+        if not enabled:
+            raise HTTPException(status_code=503, detail="A central multimodal de exames está indisponível nesta instalação.")
+        if exam_type not in cardiovascular_exam_assist.EXAM_TYPES:
+            raise HTTPException(status_code=422, detail="Selecione um tipo de exame cardiovascular válido.")
+        if len(arquivos) > MAX_FILES:
+            raise HTTPException(status_code=422, detail=f"Envie no máximo {MAX_FILES} arquivos.")
+        if len(arquivos) > 1 and not confirm_same_case:
+            raise HTTPException(status_code=422, detail="Confirme que todos os arquivos pertencem ao mesmo caso clínico.")
 
-    try:
-        notes_value = json.loads(file_notes)
-    except json.JSONDecodeError as error:
-        raise HTTPException(status_code=422, detail="Legendas dos arquivos inválidas.") from error
-    if not isinstance(notes_value, list) or len(notes_value) > MAX_FILES:
-        raise HTTPException(status_code=422, detail="Legendas dos arquivos inválidas.")
-    notes = [_clean_text(str(item), "legenda do arquivo")[:300] for item in notes_value]
-
-    question = _clean_text(clinical_question, "pergunta clínica")
-    report = _clean_text(report_text, "laudo/resultados")
-    context = _clean_text(clinical_context, "contexto clínico")
-    clinical_files: list[ClinicalFile] = []
-    payload_hasher = hashlib.sha256()
-    for value in (exam_type, question, report, context, *notes):
-        payload_hasher.update(value.encode("utf-8"))
-        payload_hasher.update(b"\x00")
-    total_bytes = 0
-    sanitized_total_bytes = 0
-    pdf_count = 0
-    for index, upload in enumerate(arquivos, start=1):
         try:
-            content = await upload.read(MAX_FILE_BYTES + 1)
-        finally:
-            await upload.close()
-        if len(content) > MAX_FILE_BYTES:
-            raise HTTPException(status_code=413, detail=f"O arquivo {index} excede 20 MB.")
-        total_bytes += len(content)
-        if total_bytes > MAX_TOTAL_BYTES:
-            raise HTTPException(status_code=413, detail="Os arquivos excedem o limite total de 40 MB.")
-        try:
-            filename = safe_filename(upload.filename, f"exame-{index}")
-            media_type = validate_file(content, filename, "clinical_exam")
-        except UploadRejected as error:
-            raise HTTPException(status_code=error.status_code, detail=error.detail) from error
-        if media_type not in cardiovascular_exam_assist.supported_media_types():
-            raise HTTPException(status_code=422, detail=f"O formato do arquivo {index} não é analisado pelo provedor atual.")
-        if media_type == "application/pdf":
-            pdf_count += 1
-            if pdf_count > 1:
-                raise HTTPException(status_code=422, detail="Envie no máximo um PDF por análise; use as demais posições para imagens.")
-        try:
-            sanitized, sanitized_type = await run_in_threadpool(sanitize_clinical_file, content, media_type)
-        except UnsafeClinicalFile as error:
-            raise HTTPException(status_code=422, detail=f"Arquivo {index}: {error}") from error
-        sanitized_total_bytes += len(sanitized)
-        if sanitized_total_bytes > MAX_TOTAL_BYTES:
-            raise HTTPException(status_code=413, detail="As cópias sanitizadas excedem o limite total de 40 MB.")
-        payload_hasher.update(sanitized)
-        clinical_files.append(ClinicalFile(
-            content=sanitized,
-            media_type=sanitized_type,
-            file_id=f"arquivo-{index}",
-            label=notes[index - 1] if index <= len(notes) else "",
-        ))
-    if not clinical_files and not report and not context:
-        raise HTTPException(status_code=422, detail="Envie ao menos um arquivo, laudo/resultados ou contexto clínico.")
+            notes_value = json.loads(file_notes)
+        except json.JSONDecodeError as error:
+            raise HTTPException(status_code=422, detail="Legendas dos arquivos inválidas.") from error
+        if not isinstance(notes_value, list) or len(notes_value) > MAX_FILES:
+            raise HTTPException(status_code=422, detail="Legendas dos arquivos inválidas.")
+        notes = [_clean_text(str(item), "legenda do arquivo")[:300] for item in notes_value]
 
-    # Uma cota única impede contornar o limite alternando entre ECG legado e
-    # a central ampla de exames. O lock serializa reservas simultâneas.
-    db.query(User.id).filter(User.id == user.id).with_for_update().one()
-    start, end = _operational_day_utc_bounds()
-    used = db.query(AuditLog.id).filter(
-        AuditLog.user_id == user.id,
-        AuditLog.action.in_(("ai_ecg_transfer_attempt", "ai_clinical_exam_transfer_attempt")),
-        AuditLog.created_at >= start,
-        AuditLog.created_at < end,
-    ).count()
-    if used >= settings.ai_daily_limit:
-        db.rollback()
-        raise HTTPException(
-            status_code=429,
-            detail=f"Limite diário de {settings.ai_daily_limit} análises atingido. Recomeça amanhã.",
-        )
+        question = _clean_text(clinical_question, "pergunta clínica")
+        report = _clean_text(report_text, "laudo/resultados")
+        context = _clean_text(clinical_context, "contexto clínico")
+        clinical_files: list[ClinicalFile] = []
+        payload_hasher = hashlib.sha256()
+        for value in (exam_type, question, report, context, *notes):
+            payload_hasher.update(value.encode("utf-8"))
+            payload_hasher.update(b"\x00")
+        total_bytes = 0
+        sanitized_total_bytes = 0
+        pdf_count = 0
+        for index, upload in enumerate(arquivos, start=1):
+            try:
+                content = await upload.read(MAX_FILE_BYTES + 1)
+            finally:
+                await upload.close()
+            if len(content) > MAX_FILE_BYTES:
+                raise HTTPException(status_code=413, detail=f"O arquivo {index} excede 20 MB.")
+            total_bytes += len(content)
+            if total_bytes > MAX_TOTAL_BYTES:
+                raise HTTPException(status_code=413, detail="Os arquivos excedem o limite total de 40 MB.")
+            try:
+                filename = safe_filename(upload.filename, f"exame-{index}")
+                media_type = validate_file(content, filename, "clinical_exam")
+            except UploadRejected as error:
+                raise HTTPException(status_code=error.status_code, detail=error.detail) from error
+            if media_type not in cardiovascular_exam_assist.supported_media_types():
+                raise HTTPException(status_code=422, detail=f"O formato do arquivo {index} não é analisado pelo provedor atual.")
+            if media_type == "application/pdf":
+                pdf_count += 1
+                if pdf_count > 1:
+                    raise HTTPException(status_code=422, detail="Envie no máximo um PDF por análise; use as demais posições para imagens.")
+            try:
+                sanitized, sanitized_type = await run_in_threadpool(sanitize_clinical_file, content, media_type)
+            except UnsafeClinicalFile as error:
+                raise HTTPException(status_code=422, detail=f"Arquivo {index}: {error}") from error
+            sanitized_total_bytes += len(sanitized)
+            if sanitized_total_bytes > MAX_TOTAL_BYTES:
+                raise HTTPException(status_code=413, detail="As cópias sanitizadas excedem o limite total de 40 MB.")
+            payload_hasher.update(sanitized)
+            clinical_files.append(ClinicalFile(
+                content=sanitized,
+                media_type=sanitized_type,
+                file_id=f"arquivo-{index}",
+                label=notes[index - 1] if index <= len(notes) else "",
+            ))
+        if not clinical_files and not report and not context:
+            raise HTTPException(status_code=422, detail="Envie ao menos um arquivo, laudo/resultados ou contexto clínico.")
 
-    attempt = AuditLog(
-        user_id=user.id,
-        action="ai_clinical_exam_transfer_attempt",
-        entity="cardiovascular_exam_quick_analysis",
-        entity_id=str(user.id),
-        detail={
-            "mode": "transient_cardiovascular_exam",
-            "provider": settings.ai_provider,
-            "exam_type": exam_type,
-            "external_processing_confirmed": True,
-            "deidentified_confirmed": True,
-            "same_case_confirmed": len(clinical_files) < 2 or confirm_same_case,
-            "consent_version": CONSENT_VERSION,
-            "consent_payload_sha256": payload_hasher.hexdigest(),
-            "file_count": len(clinical_files),
-            "media_types": [item.media_type for item in clinical_files],
-            "total_size_bytes": total_bytes,
-            "sanitized_total_size_bytes": sanitized_total_bytes,
-            "has_report_text": bool(report),
-            "has_clinical_context": bool(context),
-            "persists_files_in_corvia": False,
-            "provider_response_storage_requested": False,
-            "status": "reserved",
-        },
-    )
-    db.add(attempt)
-    db.commit()
-    attempt_id = attempt.id
+        # Uma cota única impede contornar o limite alternando entre ECG legado e
+        # a central ampla de exames. O lock serializa reservas simultâneas.
+        db.query(User.id).filter(User.id == user.id).with_for_update().one()
+        start, end = _operational_day_utc_bounds()
+        used = db.query(AuditLog.id).filter(
+            AuditLog.user_id == user.id,
+            AuditLog.action.in_(("ai_ecg_transfer_attempt", "ai_clinical_exam_transfer_attempt")),
+            AuditLog.created_at >= start,
+            AuditLog.created_at < end,
+        ).count()
+        if used >= settings.ai_daily_limit:
+            db.rollback()
+            raise HTTPException(
+                status_code=429,
+                detail=f"Limite diário de {settings.ai_daily_limit} análises atingido. Recomeça amanhã.",
+            )
 
-    def record_outcome(status: str, **detail: object) -> None:
-        db.add(AuditLog(
+        attempt = AuditLog(
             user_id=user.id,
-            action="ai_clinical_exam_transfer_outcome",
+            action="ai_clinical_exam_transfer_attempt",
             entity="cardiovascular_exam_quick_analysis",
             entity_id=str(user.id),
             detail={
                 "mode": "transient_cardiovascular_exam",
-                "transfer_attempt_id": attempt_id,
                 "provider": settings.ai_provider,
-                "status": status,
-                **detail,
+                "exam_type": exam_type,
+                "external_processing_confirmed": True,
+                "deidentified_confirmed": True,
+                "same_case_confirmed": len(clinical_files) < 2 or confirm_same_case,
+                "consent_version": CONSENT_VERSION,
+                "consent_payload_sha256": payload_hasher.hexdigest(),
+                "file_count": len(clinical_files),
+                "media_types": [item.media_type for item in clinical_files],
+                "total_size_bytes": total_bytes,
+                "sanitized_total_size_bytes": sanitized_total_bytes,
+                "has_report_text": bool(report),
+                "has_clinical_context": bool(context),
+                "persists_files_in_corvia": False,
+                "provider_response_storage_requested": False,
+                "status": "reserved",
             },
-        ))
+        )
+        db.add(attempt)
         db.commit()
+        attempt_id = attempt.id
 
-    try:
-        analysis = await run_in_threadpool(
-            cardiovascular_exam_assist.analyze_exam,
-            clinical_files,
-            exam_type,
-            question,
-            report,
-            context,
-        )
-    except ValueError as error:
-        db.rollback()
-        record_outcome("invalid_response")
-        logger.warning("Resposta clínica multimodal recusada: %s", type(error).__name__)
-        raise HTTPException(
-            status_code=502,
-            detail="A IA não devolveu uma análise clínica íntegra e atualizada. O CorVIA não persistiu o conteúdo.",
-        ) from error
-    except Exception as error:
-        db.rollback()
-        logger.exception(
-            "Falha na central multimodal cardiovascular (provider=%s, error_type=%s)",
-            settings.ai_provider,
-            type(error).__name__,
-        )
-        record_outcome("provider_error", error_type=type(error).__name__)
-        raise HTTPException(
-            status_code=502,
-            detail=f"O provedor multimodal não respondeu ({type(error).__name__}). O CorVIA não persistiu o conteúdo.",
-        ) from error
+        def record_outcome(status: str, **detail: object) -> None:
+            db.add(AuditLog(
+                user_id=user.id,
+                action="ai_clinical_exam_transfer_outcome",
+                entity="cardiovascular_exam_quick_analysis",
+                entity_id=str(user.id),
+                detail={
+                    "mode": "transient_cardiovascular_exam",
+                    "transfer_attempt_id": attempt_id,
+                    "provider": settings.ai_provider,
+                    "status": status,
+                    **detail,
+                },
+            ))
+            db.commit()
 
-    record_outcome(
-        "success",
-        model=analysis["model"],
-        prompt_version=analysis["prompt_version"],
-        tokens_input=analysis["tokens_input"],
-        tokens_output=analysis["tokens_output"],
-        source_count=len(analysis["web_sources"]),
-    )
-    return {
-        "payload": analysis["payload"],
-        "web_sources": analysis["web_sources"],
-        "provider": analysis["provider"],
-        "model": analysis["model"],
-        "prompt_version": analysis["prompt_version"],
-        "persisted_in_corvia": False,
-        "provider_response_storage_requested": False,
-    }
+        try:
+            analysis = await run_in_threadpool(
+                cardiovascular_exam_assist.analyze_exam,
+                clinical_files,
+                exam_type,
+                question,
+                report,
+                context,
+            )
+        except ValueError as error:
+            db.rollback()
+            record_outcome("invalid_response")
+            logger.warning("Resposta clínica multimodal recusada: %s", type(error).__name__)
+            raise HTTPException(
+                status_code=502,
+                detail="A IA não devolveu uma análise clínica íntegra e atualizada. O CorVIA não persistiu o conteúdo.",
+            ) from error
+        except Exception as error:
+            db.rollback()
+            logger.exception(
+                "Falha na central multimodal cardiovascular (provider=%s, error_type=%s)",
+                settings.ai_provider,
+                type(error).__name__,
+            )
+            record_outcome("provider_error", error_type=type(error).__name__)
+            raise HTTPException(
+                status_code=502,
+                detail=f"O provedor multimodal não respondeu ({type(error).__name__}). O CorVIA não persistiu o conteúdo.",
+            ) from error
+
+        record_outcome(
+            "success",
+            model=analysis["model"],
+            prompt_version=analysis["prompt_version"],
+            tokens_input=analysis["tokens_input"],
+            tokens_output=analysis["tokens_output"],
+            source_count=len(analysis["web_sources"]),
+        )
+        return {
+            "payload": analysis["payload"],
+            "web_sources": analysis["web_sources"],
+            "provider": analysis["provider"],
+            "model": analysis["model"],
+            "prompt_version": analysis["prompt_version"],
+            "persisted_in_corvia": False,
+            "provider_response_storage_requested": False,
+        }

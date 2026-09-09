@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import hashlib
 import json
 import unicodedata
@@ -33,6 +34,7 @@ from app.services.heart_team_safety import (
     normalize_opinion, validate_deidentified,
 )
 from app.services.ia.provedor import obter_provedor
+from app.services.ia.usage_control import ai_operation, input_token_bound, plan_token_budgets
 from app.services.knowledge_graph import relacionados_de
 
 PIPELINE_VERSION = "heart-team-v1.1-fail-closed"
@@ -216,10 +218,8 @@ def _reserve_call(db, case: HeartTeamCase, *, agent_key: str, phase: str, input_
         # Tests may use a non-Postgres fake; production is PostgreSQL and locks.
         if getattr(db.bind.dialect, "name", None) == "postgresql":
             raise
-    monthly_limit = int(getattr(settings, "heart_team_monthly_cost_ceiling_micros", 25_000_000))
-    current_reserved = int(db.query(func.coalesce(func.sum(HeartTeamCase.reserved_cost_micros), 0)).filter(HeartTeamCase.owner_id == case.owner_id).scalar() or 0)
-    if _monthly_spend(db, case.owner_id) + current_reserved + reserve > monthly_limit:
-        raise HeartTeamBudgetExceeded("Teto mensal do Heart Team atingido antes da próxima chamada.")
+    # The shared AI wallet reserves the complete journey before the first paid
+    # request. Keep this legacy ledger for clinical audit, not a second tariff gate.
     case.reserved_cost_micros = int(case.reserved_cost_micros or 0) + reserve
     row = HeartTeamCostLedger(case_id=case.id, owner_id=case.owner_id, agent_key=agent_key, phase=phase, reserved_micros=reserve)
     db.add(row); db.commit(); db.refresh(row)
@@ -243,9 +243,6 @@ def _call(db, case: HeartTeamCase, *, provider, agent_key: str, round_name: str,
     ledger = _reserve_call(db, case, agent_key=agent_key, phase=round_name, input_chars=len(system) + len(serialized))
     try:
         response = provider.responder(sistema=system, mensagens=[{"role": "user", "content": serialized}], modelo=getattr(settings, "heart_team_clinical_model", "") or None, usar_internet=False, max_output_tokens=int(getattr(settings, "heart_team_max_output_tokens", 2200)))
-    except TypeError:
-        # Compatibility only for injected test doubles; real providers accept the explicit cap.
-        response = provider.responder(sistema=system, mensagens=[{"role": "user", "content": serialized}], modelo=getattr(settings, "heart_team_clinical_model", "") or None, usar_internet=False)
     except Exception:
         case.reserved_cost_micros = max(0, int(case.reserved_cost_micros or 0) - ledger.reserved_micros); db.commit(); raise
     _reconcile_call(db, case, ledger, response)
@@ -255,7 +252,9 @@ def _call(db, case: HeartTeamCase, *, provider, agent_key: str, round_name: str,
     content["source_ids"] = ids
     opinion = HeartTeamOpinion(case_id=case.id, agent_key=agent_key, round_name=round_name, position={"claims": [{"statement": c.get("statement"), "position": c.get("position", "uncertain")} for c in content.get("claims", [])]}, content=content, source_ids=ids, confidence=content.get("confidence", "insufficient"), content_hash=content_hash(content), model_name=response.modelo, tokens_input=response.tokens_entrada, tokens_output=response.tokens_saida)
     db.add(opinion); db.commit(); db.refresh(opinion)
-    return {"id": opinion.id, "agent_key": agent_key, "round_name": round_name, "content": content, "position": opinion.position, "source_ids": ids, "confidence": opinion.confidence, "content_hash": opinion.content_hash, "model_name": opinion.model_name, "tokens_input": opinion.tokens_input, "tokens_output": opinion.tokens_output}
+    result = {"id": opinion.id, "agent_key": agent_key, "round_name": round_name, "content": content, "position": opinion.position, "source_ids": ids, "confidence": opinion.confidence, "content_hash": opinion.content_hash, "model_name": opinion.model_name, "tokens_input": opinion.tokens_input, "tokens_output": opinion.tokens_output}
+    _check_response_envelope(result)
+    return result
 
 
 def _knowledge_graph_fingerprint(db) -> str:
@@ -409,9 +408,85 @@ def _visual_bytes(db, case: HeartTeamCase, descriptor: dict) -> bytes | None:
     return None
 
 
+
+def _response_envelope_limit(output_tokens: int | None = None) -> int:
+    """Bound structural expansion of normalized answers, without truncation."""
+    return 4096 + 32 * (output_tokens or int(getattr(settings, "heart_team_max_output_tokens", 2200)))
+
+
+def _check_response_envelope(value: dict, *, output_tokens: int | None = None) -> None:
+    if len(stable_json(value).encode("utf-8")) > _response_envelope_limit(output_tokens):
+        raise HeartTeamSafetyError("Resposta estruturada excede o limite da análise; nenhuma conclusão foi emitida.")
+
+
+def _visual_candidates(descriptors: list[dict]) -> list[dict]:
+    return [item for item in descriptors if (
+        str(item.get("media_type") or "").startswith("image/")
+        or (item.get("media_type") == "application/pdf" and not str((item.get("objective_extract") or {}).get("text") or "").strip())
+    ) and not (item.get("objective_extract") or {}).get("multimodal_extract")]
+
+
+def _plan_journey(db, case: HeartTeamCase, provider, context: dict, agent_keys: list[str], *, extra_input_bytes: int = 0) -> None:
+    """Authorize all 2N-1 deliberations and visual work before any paid request.
+
+    Future structured replies are bounded by _check_response_envelope. Input
+    bytes conservatively bound tokenizer input. The consensus allowance also
+    covers duplicated positions and deterministic disagreements. No patient
+    payload is persisted by the accounting layer.
+    """
+    provider_name = str(getattr(settings, "ai_provider", "openai"))
+    model = getattr(settings, "heart_team_clinical_model", "") or getattr(provider, "_modelo", None)
+    model = model or getattr(settings, "anthropic_model" if provider_name == "anthropic" else "openai_model")
+    max_output = int(getattr(settings, "heart_team_max_output_tokens", 2200))
+    envelope = _response_envelope_limit(max_output)
+    extract_output = min(1200, max_output)
+    candidates = _visual_candidates(context["attachments"])
+    visual_requests = []
+    future_extract_bytes = 0
+    if settings.ai_clinical_multimodal_enabled and settings.ai_clinical_data_controls_approved:
+        for descriptor in candidates:
+            binary = _visual_bytes(db, case, descriptor)
+            if not binary:
+                raise HeartTeamSafetyError("Arquivo visual não pôde ser lido com segurança.")
+            resolver = getattr(provider, "_modelo_ecg_compativel", None)
+            visual_model = resolver(getattr(settings, "heart_team_clinical_model", "") or None) if resolver else model
+            fallback = getattr(provider, "_MODELO_ECG_FALLBACK", None) or getattr(provider, "_MODELO_ECG_PADRAO", None)
+            for target in dict.fromkeys([visual_model, fallback or visual_model]):
+                # The common estimator accepts both provider envelope shapes.
+                visual_requests.append({
+                    "model": target, "max_tokens": extract_output,
+                    "system": "x" * 1024,
+                    "messages": [{"role": "user", "content": [{
+                        "type": "document" if descriptor["media_type"] == "application/pdf" else "image",
+                        "source": {"type": "base64", "media_type": descriptor["media_type"],
+                                   "data": base64.b64encode(binary).decode("ascii")},
+                    }]}],
+                })
+            # JSON escaping plus new extraction metadata in the existing descriptor.
+            future_extract_bytes += 2 * _response_envelope_limit(extract_output) + 4096
+    # A fixed wrapper allowance covers provider SDK keys and message framing.
+    context_bytes = len(stable_json(context).encode("utf-8")) + future_extract_bytes + extra_input_bytes
+    base_bytes = len(stable_json({"case": context["case"], "sources": context["sources"]}).encode("utf-8")) + extra_input_bytes
+    def budget(system: str, message_bytes: int) -> dict:
+        return {"model": model, "input_tokens": len(system.encode("utf-8")) + message_bytes + 4096,
+                "max_output_tokens": max_output}
+    budgets = [budget(specialist_prompt(key), context_bytes) for key in agent_keys]
+    specialists = [key for key in agent_keys if key not in {"evidence", "red_team"}]
+    # Original opinion + two objections, escaped once within the SDK message.
+    budgets += [budget(contestation_prompt(key), base_bytes + 6 * envelope) for key in specialists]
+    total_opinions = len(agent_keys) + len(specialists)
+    # All opinions, two mandatory reviews and deterministic disagreements.
+    # Each disagreement only repeats existing statement/agent/position values.
+    budgets.append(budget(COORDINATOR_SYSTEM, base_bytes + (8 * total_opinions + 4) * envelope))
+    budgets.extend({"model": request["model"],
+                    "input_tokens": input_token_bound(request, request["model"]) + 4096,
+                    "max_output_tokens": extract_output} for request in visual_requests)
+    plan_token_budgets(provider_name, budgets)
+
+
 def _enrich_visual_attachments(db, case: HeartTeamCase, descriptors: list[dict], provider) -> list[dict]:
     textual_report_present = any(str((item.get("objective_extract") or {}).get("text") or "").strip() for item in descriptors)
-    candidates = [item for item in descriptors if (str(item.get("media_type") or "").startswith("image/") or (item.get("media_type") == "application/pdf" and not str((item.get("objective_extract") or {}).get("text") or "").strip())) and not (item.get("objective_extract") or {}).get("multimodal_extract")]
+    candidates = _visual_candidates(descriptors)
     for descriptor in candidates:
         if not (settings.ai_clinical_multimodal_enabled and settings.ai_clinical_data_controls_approved):
             if not textual_report_present:
@@ -441,6 +516,7 @@ def _enrich_visual_attachments(db, case: HeartTeamCase, descriptors: list[dict],
             raise HeartTeamSafetyError("O provedor multimodal não conseguiu interpretar o formato; anexe um laudo textual/PDF.") from exc
         _reconcile_call(db, case, ledger, response)
         extract = _json_response(response.texto)
+        _check_response_envelope(extract, output_tokens=min(1200, int(getattr(settings, "heart_team_max_output_tokens", 2200))))
         if not isinstance(extract.get("objective_observations"), list):
             if not textual_report_present:
                 raise HeartTeamSafetyError("Extração multimodal inválida; anexe um laudo textual/PDF.")
@@ -466,7 +542,91 @@ def analyze_case_by_id(db, *, case_id: int, owner_id: int, actor_id: int, confir
     return HeartTeamOrchestrator(db).analyze(case, actor_id=actor_id)
 
 
-def enqueue_analysis_job(db, *, case_id: int, owner_id: int, actor_id: int, confirm_deidentified: bool, confirm_medical_review: bool) -> HeartTeamAnalysisJob:
+
+def _budget_fingerprint(case: HeartTeamCase, attachments: list[dict]) -> str:
+    return content_hash({
+        "input": case.input_data or {}, "selected_agents": case.selected_agents,
+        "attachments": [{key: item.get(key) for key in ("id", "kind", "reference_id", "sha256", "source_sha256", "media_type", "size_bytes")} for item in attachments],
+    })
+
+
+def estimate_case_budget(db, case: HeartTeamCase, *, actor_id: int) -> dict:
+    """Free, local estimate; persist only prices, hashes and expiry in audit."""
+    from app.services.ai_wallet import quote_cost, wallet_summary
+    from app.services.ia.usage_control import PRICING_VERSION, quote_scope
+    if case.status != "draft":
+        raise HeartTeamError("Somente rascunhos podem receber novo orçamento.")
+    snapshot, missing = structure_case(case.input_data or {})
+    if validate_deidentified(snapshot):
+        raise HeartTeamSafetyError("Anonimize o caso antes de estimar a análise.")
+    attachments = attachment_descriptors(db, case)
+    fingerprint = _budget_fingerprint(case, attachments)
+    key = _cache_key(case, snapshot, attachments, graph_fingerprint=_knowledge_graph_fingerprint(db))
+    cached = _cache_get(db, case.owner_id, key)
+    cache_hit = bool(cached and cached.get("schema") == "heart-team-cache-bundle-v2" and isinstance(cached.get("opinions"), list) and isinstance(cached.get("result"), dict))
+    maximum_cost = 0
+    if not cache_hit:
+        rows = source_catalog(db, query=stable_json(snapshot), limit=int(getattr(settings, "heart_team_source_limit", 16)))
+        context = {"case": snapshot, "missing_data": missing, "risk": emergency_screen(snapshot),
+                   "attachments": attachments, "sources": sanitize_registry_for_persistence(rows)}
+        # The worker reopens bibliography. Its abstracts never enter the model
+        # context; allow extra bibliographic metadata without external HTTP here.
+        with quote_scope(case.owner_id, "heart_team") as scope:
+            _plan_journey(db, case, obter_provedor(), context, selected_agent_keys(case.selected_agents),
+                          extra_input_bytes=8192 * len(rows))
+            maximum_cost = scope.planned_cost
+    quoted = quote_cost(owner_id=case.owner_id, max_cost_micros=maximum_cost)
+    detail = {
+        "maximum_credit_centavos": quoted["maximum_credit_centavos"],
+        "maximum_cost_micros": maximum_cost, "currency": "BRL",
+        "pricing_version": PRICING_VERSION, "case_fingerprint": fingerprint,
+        "expires_at": (utcnow() + timedelta(minutes=15)).isoformat(),
+        "cache_hit": cache_hit,
+    }
+    event = audit_event(db, case, actor_id=actor_id, action="cost_estimated", detail=detail)
+    db.flush()
+    quote_id = event.id
+    db.commit()
+    return {**detail, "quote_id": quote_id,
+            "available_credit_centavos": wallet_summary(case.owner_id)["available_credit_centavos"]}
+
+
+def _validate_budget_approval(db, case: HeartTeamCase, *, quote_id: int | None, approved_max_credit_centavos: int | None) -> dict:
+    if not quote_id or approved_max_credit_centavos is None:
+        raise HeartTeamError("Solicite e confirme o orçamento antes de iniciar o Heart Team.")
+    quote = db.query(HeartTeamAuditEvent).filter(
+        HeartTeamAuditEvent.id == quote_id, HeartTeamAuditEvent.case_id == case.id,
+        HeartTeamAuditEvent.action == "cost_estimated").first()
+    detail = dict(quote.detail or {}) if quote else {}
+    try:
+        expires = datetime.fromisoformat(detail["expires_at"])
+        amount = detail["maximum_credit_centavos"]
+    except (KeyError, ValueError, TypeError):
+        raise HeartTeamError("Orçamento inválido; solicite uma nova estimativa.") from None
+    from app.services.ia.usage_control import PRICING_VERSION
+    if (expires <= utcnow() or detail.get("pricing_version") != PRICING_VERSION
+            or isinstance(approved_max_credit_centavos, bool)
+            or approved_max_credit_centavos != amount
+            or detail.get("case_fingerprint") != _budget_fingerprint(case, attachment_descriptors(db, case))):
+        raise HeartTeamError("O orçamento expirou ou o caso mudou; solicite uma nova estimativa.")
+    return {"quote_id": quote_id, "approved_max_credit_centavos": amount,
+            "pricing_version": detail["pricing_version"], "case_fingerprint": detail["case_fingerprint"]}
+
+
+def _apply_accepted_budget(db, case: HeartTeamCase, attachments: list[dict]) -> None:
+    from app.services.ia.usage_control import set_approved_credit_limit
+    event = db.query(HeartTeamAuditEvent).filter(
+        HeartTeamAuditEvent.case_id == case.id, HeartTeamAuditEvent.action == "analysis_queued"
+    ).order_by(HeartTeamAuditEvent.id.desc()).first()
+    detail = event.detail or {} if event else {}
+    approval = detail.get("budget_approval") or {}
+    if (approval.get("approved_max_credit_centavos") is None
+            or approval.get("case_fingerprint") != _budget_fingerprint(case, attachments)):
+        raise HeartTeamError("A análise exige confirmação de orçamento para este conteúdo.")
+    set_approved_credit_limit(approval["approved_max_credit_centavos"])
+
+
+def enqueue_analysis_job(db, *, case_id: int, owner_id: int, actor_id: int, confirm_deidentified: bool, confirm_medical_review: bool, quote_id: int | None = None, approved_max_credit_centavos: int | None = None) -> HeartTeamAnalysisJob:
     """Queue exactly one durable analysis per case; never run models in HTTP."""
     enabled(); ensure_heart_team_physician(db, actor_id)
     if not confirm_deidentified or not confirm_medical_review:
@@ -479,11 +639,12 @@ def enqueue_analysis_job(db, *, case_id: int, owner_id: int, actor_id: int, conf
         return existing
     if case.status != "draft":
         raise HeartTeamError("Somente rascunho pode ser enfileirado para análise.")
+    approval = _validate_budget_approval(db, case, quote_id=quote_id, approved_max_credit_centavos=approved_max_credit_centavos)
     now = utcnow()
     case.deidentified_confirmed_at = now; case.medical_review_confirmed_at = now; case.status = "queued"
     job = HeartTeamAnalysisJob(case_id=case.id, owner_id=owner_id, actor_id=actor_id, status="queued", next_attempt_at=now)
     db.add(job); db.flush()
-    audit_event(db, case, actor_id=actor_id, action="analysis_queued", detail={"job_id": job.id, "deidentified": True, "medical_review": True})
+    audit_event(db, case, actor_id=actor_id, action="analysis_queued", detail={"job_id": job.id, "deidentified": True, "medical_review": True, "budget_approval": approval})
     db.commit(); db.refresh(job)
     return job
 
@@ -544,6 +705,20 @@ class HeartTeamOrchestrator:
     def __init__(self, db, provider=None):
         self.db = db; self.provider = provider
 
+    def _restore_cache(self, case: HeartTeamCase, *, actor_id: int, key: str) -> bool:
+        cached = _cache_get(self.db, case.owner_id, key)
+        if not cached or cached.get("schema") != "heart-team-cache-bundle-v2" or not isinstance(cached.get("opinions"), list) or not isinstance(cached.get("result"), dict):
+            return False
+        case.result = cached["result"]
+        case.model_versions = dict(cached.get("model_versions") or {})
+        _materialize_cached_opinions(self.db, case, cached["opinions"])
+        case.status = "awaiting_review"; case.finished_at = utcnow()
+        _materialize_suggestions(self.db, case, case.result)
+        audit_event(self.db, case, actor_id=actor_id, action="cache_hit", detail={"cache_key": key, "opinion_hashes": [item.get("content_hash") for item in cached["opinions"]], "model_versions": case.model_versions})
+        self.db.commit()
+        return True
+
+    @ai_operation("heart_team", owner="case.owner_id")
     def analyze(self, case: HeartTeamCase, *, actor_id: int) -> HeartTeamCase:
         enabled()
         _enforce_case_limits(self.db, case)
@@ -553,21 +728,12 @@ class HeartTeamOrchestrator:
             case.status = "failed"; audit_event(self.db, case, actor_id=actor_id, action="pii_blocked", detail={"identifier_types": pii}); self.db.commit(); raise HeartTeamSafetyError("Identificadores detectados; anonimize os dados antes da análise.")
         case.structured_case = snapshot; case.missing_data = missing; case.risk_classification = emergency_screen(snapshot); case.started_at = utcnow(); case.status = "analyzing"; self.db.commit()
         provider = self.provider or obter_provedor()
-        attachments = _enrich_visual_attachments(self.db, case, attachment_descriptors(self.db, case), provider)
+        attachments = attachment_descriptors(self.db, case)
+        _apply_accepted_budget(self.db, case, attachments)
         key = _cache_key(case, snapshot, attachments, graph_fingerprint=_knowledge_graph_fingerprint(self.db)); case.input_hash = key; self.db.commit()
         purge_expired_cache(self.db)
-        cached = _cache_get(self.db, case.owner_id, key)
-        if cached:
-            if cached.get("schema") != "heart-team-cache-bundle-v2" or not isinstance(cached.get("opinions"), list) or not isinstance(cached.get("result"), dict):
-                cached = None
-            else:
-                case.result = cached["result"]
-                case.model_versions = dict(cached.get("model_versions") or {})
-                _materialize_cached_opinions(self.db, case, cached["opinions"])
-                case.status = "awaiting_review"; case.finished_at = utcnow()
-                _materialize_suggestions(self.db, case, case.result)
-                audit_event(self.db, case, actor_id=actor_id, action="cache_hit", detail={"cache_key": key, "opinion_hashes": [item.get("content_hash") for item in cached["opinions"]], "model_versions": case.model_versions})
-                self.db.commit(); return case
+        if self._restore_cache(case, actor_id=actor_id, key=key):
+            return case
 
         registry_rows = verify_source_rows(source_catalog(self.db, query=stable_json(snapshot), limit=int(getattr(settings, "heart_team_source_limit", 16))))
         registry = {row["id"]: row for row in registry_rows}
@@ -575,6 +741,14 @@ class HeartTeamOrchestrator:
         opinions: list[dict] = []
         try:
             agent_keys = selected_agent_keys(case.selected_agents)
+            _plan_journey(self.db, case, provider, context, agent_keys)
+            attachments = _enrich_visual_attachments(self.db, case, attachments, provider)
+            context["attachments"] = attachments
+            enriched_key = _cache_key(case, snapshot, attachments, graph_fingerprint=_knowledge_graph_fingerprint(self.db))
+            case.input_hash = enriched_key
+            if enriched_key != key and self._restore_cache(case, actor_id=actor_id, key=enriched_key):
+                return case
+            key = enriched_key
             isolated = independent_round_inputs(context, agent_keys)
             for agent_key in agent_keys:
                 opinions.append(_call(self.db, case, provider=provider, agent_key=agent_key, round_name="independent", system=specialist_prompt(agent_key), message=isolated[agent_key], registry=registry))
@@ -621,6 +795,19 @@ class HeartTeamOrchestrator:
 
 
 def usage_summary(db, owner_id: int) -> dict:
+    from app.services.ai_wallet import wallet_summary
     start = utcnow().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     base = db.query(HeartTeamCase).filter(HeartTeamCase.owner_id == owner_id, HeartTeamCase.created_at >= start)
-    return {"month_start": start.isoformat(), "cases": base.count(), "awaiting_review": base.filter(HeartTeamCase.status == "awaiting_review").count(), "completed": base.filter(HeartTeamCase.status == "completed").count(), "unusable": base.filter(HeartTeamCase.status == "unusable").count(), "estimated_cost_micros": _monthly_spend(db, owner_id), "reserved_cost_micros": int(base.with_entities(func.coalesce(func.sum(HeartTeamCase.reserved_cost_micros), 0)).scalar() or 0), "monthly_limit_micros": int(getattr(settings, "heart_team_monthly_cost_ceiling_micros", 25_000_000))}
+    return {
+        "month_start": start.isoformat(), "cases": base.count(),
+        "awaiting_review": base.filter(HeartTeamCase.status == "awaiting_review").count(),
+        "completed": base.filter(HeartTeamCase.status == "completed").count(),
+        "unusable": base.filter(HeartTeamCase.status == "unusable").count(),
+        "accounting": "shared_ai_wallet",
+        "wallet": wallet_summary(owner_id),
+        "legacy_accounting": {
+            "informational_only": True,
+            "estimated_cost_micros": _monthly_spend(db, owner_id),
+            "reserved_cost_micros": int(base.with_entities(func.coalesce(func.sum(HeartTeamCase.reserved_cost_micros), 0)).scalar() or 0),
+        },
+    }

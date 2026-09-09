@@ -44,6 +44,8 @@ class HeartTeamCasePatch(BaseModel):
 class AnalyzeRequest(BaseModel):
     confirm_deidentified: bool
     confirm_medical_review: bool
+    quote_id: int = Field(gt=0)
+    approved_max_credit_centavos: int = Field(ge=0, strict=True)
 
 
 class SuggestionReviewRequest(BaseModel):

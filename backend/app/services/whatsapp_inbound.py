@@ -98,7 +98,7 @@ def _safe_reply(result):
         command_id, token = result["command_id"], result["undo_token"]
         return {"text": f"Ação concluída. Use o botão ou responda DESFAZER {command_id} {token}", "button_id": f"corvia:undo:{command_id}:{token}", "button_title": "Desfazer"}
     if result.get("requires_confirmation"):
-        return {"text": "A ação exige confirmação explícita e PIN dentro do CorVIA.", "button_id": None, "button_title": None}
+        return {"text": result.get("message") or "A ação exige confirmação explícita e PIN dentro do CorVIA.", "button_id": None, "button_title": None}
     return {"text": result.get("message") or "Comando recebido. Confira no CorVIA.", "button_id": None, "button_title": None}
 
 
@@ -209,7 +209,9 @@ def process_meta_message(db, message, *, adapter=None):
                 storage_key = guardar(media.content, link.user_id, raiz=Path(settings.whatsapp_media_dir));payload.update({"media_storage_key": storage_key, "mime_type": mime_type, "filename": filename, "sha256": __import__("hashlib").sha256(media.content).hexdigest(), "size_bytes": len(media.content)})
                 cost = require_positive_tariff(settings.whatsapp_transcription_cost_microunits, "transcrição"); enforce_cost_headroom(db, user.id, cost)
                 try:
-                    transcript = adapter.transcribe_audio(media.content, filename=filename, mime_type=mime_type)
+                    from app.services.ia.usage_control import ai_usage_scope
+                    with ai_usage_scope(user.id, "whatsapp_ai"):
+                        transcript = adapter.transcribe_audio(media.content, filename=filename, mime_type=mime_type)
                     payload["transcript"] = transcript; row.status = "awaiting_transcript_review"
                     db.add(WhatsAppUsageMetric(owner_id=user.id, link_id=link.id, idempotency_key=f"transcription:{message_id}", operation="audio_transcription", provider="openai", model=settings.whatsapp_transcription_model, estimated_cost_microunits=cost, success=True))
                     result = {"status": row.status, "message": "Áudio transcrito. Confira a interpretação no CorVIA antes de qualquer ação."}

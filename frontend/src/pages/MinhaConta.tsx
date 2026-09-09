@@ -21,11 +21,7 @@ type StatusAssinatura = {
   // Acesso concedido por convidado/investidor, sem pagamento (issue #52) —
   // só decide o texto exibido aqui, nunca é usado como gate de acesso.
   acesso_administrativo?: boolean;
-};
-
-const PRECO_POR_PLANO: Record<string, string> = {
-  basico: "R$ 49,90/mês — Assinatura Básica (Acesso ao Site).",
-  completo: "R$ 59,90/mês — Assinatura Completa (Acesso ao Site + CorvIA Mail).",
+  portal_available?: boolean;
 };
 
 const ROTULOS: Record<string, string> = {
@@ -1088,7 +1084,9 @@ function Assinatura() {
     setProcessando(true);
     try {
       const resposta = await api.post<Record<string, string>>(rota);
-      window.location.assign(resposta[campo]);
+      const url = new URL(resposta[campo]);
+      if (url.protocol !== "https:") throw new Error("Endereço de pagamento inválido.");
+      window.location.assign(url.href);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a página de pagamento.");
       setProcessando(false);
@@ -1097,7 +1095,7 @@ function Assinatura() {
 
   const ativa = status ? STATUS_COM_ACESSO.includes(status.status) : false;
   // Sem passagem pelo Stripe ainda não existe cliente, e o portal não tem o que abrir.
-  const temCliente = status ? status.status !== "inativo" : false;
+  const temCliente = status?.portal_available === true;
 
   return (
     <div className="cartao">
@@ -1128,19 +1126,16 @@ function Assinatura() {
           ) : (
             <p>
               <strong>
-                {status?.plano ? PRECO_POR_PLANO[status.plano] ?? PRECO_POR_PLANO.basico : PRECO_POR_PLANO.basico}
+                {status?.plano ? `Plano registrado: ${status.plano}.` : "Conheça os planos CorVIA e o que cada um inclui."}
               </strong>
             </p>
           )}
 
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 
-          {!ativa && !status?.acesso_administrativo && (
-            <button className="botao" style={{ marginTop: "0.8rem" }}
-                    onClick={() => ir("/billing/checkout", "checkout_url")} disabled={processando}>
-              {processando ? "Redirecionando…" : "Assinar agora"}
-            </button>
-          )}
+          <Link className="botao botao--secundario" style={{ marginTop: "0.8rem" }} to="/assinatura">
+            Ver planos, acesso e saldo de IA
+          </Link>
 
           {temCliente && (
             <>

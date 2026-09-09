@@ -346,33 +346,9 @@ def assinatura_email_ativa(db: Session, user) -> bool:
     sem caixa real), ver `app/services/entitlement.py::
     bloquear_investidor_em_operacao_real_de_mail` e
     `app/services/investidor_mail_demo.py`."""
-    if user.role == "admin":
-        return True
-    if getattr(user, "convidado", False):
-        return True
+    from app.services.commercial_plans import resolve_entitlements
 
-    from app.models.subscription import PLANO_COMPLETO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
-
-    sub_email = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user.id, Subscription.kind == TIPO_EMAIL)
-        .order_by(Subscription.id)
-        .first()
-    )
-    if sub_email is not None and sub_email.status in ACESSO_LIBERADO:
-        return True
-
-    sub_principal = (
-        db.query(Subscription)
-        .filter(Subscription.user_id == user.id, Subscription.kind == TIPO_MEUCARDIO)
-        .order_by(Subscription.id)
-        .first()
-    )
-    return (
-        sub_principal is not None
-        and sub_principal.status in ACESSO_LIBERADO
-        and sub_principal.plano == PLANO_COMPLETO
-    )
+    return resolve_entitlements(db, user)["mail"]
 
 
 def current_email_account(

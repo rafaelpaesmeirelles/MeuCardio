@@ -83,7 +83,7 @@ def reissue_confirmation(cid:int,db:Session=Depends(get_db),user:User=Depends(cu
 def undo(cid:int,data:CommandUndo,db:Session=Depends(get_db),user:User=Depends(current_user)):
  c=db.query(WhatsAppCommand).filter(WhatsAppCommand.id==cid,WhatsAppCommand.owner_id==user.id).first();r=undo_command(db,user,c,token=data.token);db.commit();return _out(c,r)
 @router.get("/history")
-def history(db:Session=Depends(get_db),user:User=Depends(current_user)):return [{"id":c.id,"kind":c.kind,"level":c.level,"status":c.status,"can_confirm":c.status=="awaiting_confirmation" and c.level==3,"result":decrypt_payload(c.result_cipher,user.id),"created_at":c.created_at} for c in db.query(WhatsAppCommand).filter(WhatsAppCommand.owner_id==user.id).order_by(WhatsAppCommand.created_at.desc()).limit(100).all()]
+def history(db:Session=Depends(get_db),user:User=Depends(current_user)):return [{"id":c.id,"kind":c.kind,"level":c.level,"status":c.status,"can_confirm":c.status=="awaiting_confirmation" and c.level==3,"result":decrypt_payload(c.result_cipher,user.id),"message":(decrypt_payload(c.result_cipher,user.id) or {}).get("mensagem"),"created_at":c.created_at} for c in db.query(WhatsAppCommand).filter(WhatsAppCommand.owner_id==user.id).order_by(WhatsAppCommand.created_at.desc()).limit(100).all()]
 @router.get("/messages/pending")
 def pending(db:Session=Depends(get_db),user:User=Depends(current_user)):
  rows=db.query(WhatsAppMessage).filter(WhatsAppMessage.owner_id==user.id,WhatsAppMessage.status.in_({"awaiting_transcript_review","awaiting_anonymization_confirmation","awaiting_media_review","transcription_unavailable"})).all();result=[]
