@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Icone from "../components/Icone";
 import UniverseStars from "../components/UniverseStars";
+import LoginGalaxy from "../components/LoginGalaxy";
 import { approvedHeartDataUri } from "../assets/approvedHeartData";
 import { useAuth } from "../lib/auth";
 import { CORVIA_LOGIN_THEME_KEY, type CorviaTheme } from "../lib/corviaTheme";
@@ -20,109 +21,6 @@ import "../styles/corvia-login-fidelity-20260905.css";
 import "../styles/login-universe-refinement-20260909.css";
 
 type TemaPublico = CorviaTheme;
-
-function LoginGalaxy({ theme }: { theme: TemaPublico }) {
-  const source = theme === "light" ? "/spaces/galaxy-light-color-20260909.png" : "/spaces/galaxy-approved-canonical.webp";
-  const fallbackRef = useRef<HTMLImageElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const fallback = fallbackRef.current;
-    if (!canvas) return;
-
-    const context = canvas.getContext("2d", { alpha: true });
-    if (!context) return;
-
-    const image = new Image();
-    image.decoding = "async";
-    image.src = source;
-    if (fallback) delete fallback.dataset.replaced;
-    delete canvas.dataset.ready;
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    let animationFrame = 0;
-    let cancelled = false;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let repaint: (() => void) | undefined;
-    const motionChanged = () => repaint?.();
-    reducedMotion.addEventListener("change", motionChanged);
-
-    image.onload = () => {
-      if (cancelled) return;
-      const width = 683;
-      const height = Math.round(width * image.naturalHeight / image.naturalWidth);
-      const dark = theme === "dark";
-      const square = width * 2;
-      // Rectify each photograph into its own disk before moving the stars.
-      // The screen projection is independent of the source photograph's tilt.
-      const coreXRatio = dark ? 0.519617 : 0.485368;
-      const coreYRatio = dark ? 0.497165 : 0.471192;
-      const projectedHeight = width * image.naturalHeight / image.naturalWidth;
-      const sourceProjectionY = dark ? 0.454819 : 0.321819;
-      const sourceInclination = (dark ? -12.242524 : 1.951326) * Math.PI / 180;
-      const diskProjectionY = 0.34;
-      const coreSquareX = square / 2;
-      const coreSquareY = square / 2;
-      const coreTargetX = width / 2;
-      const coreTargetY = height / 2;
-
-      canvas.width = width;
-      canvas.height = height;
-      const deprojected = document.createElement("canvas");
-      deprojected.width = square;
-      deprojected.height = square;
-      const sourceContext = deprojected.getContext("2d", { alpha: true });
-      if (!sourceContext) return;
-      sourceContext.translate(coreSquareX, coreSquareY);
-      sourceContext.scale(1, 1 / sourceProjectionY);
-      sourceContext.rotate(-sourceInclination);
-      sourceContext.drawImage(image, -coreXRatio * width, -coreYRatio * projectedHeight, width, projectedHeight);
-
-      const startedAt = performance.now();
-      let lastPaint = 0;
-      const durationMs = 120_000;
-      const draw = (now: number) => {
-        if (cancelled) return;
-        if (!lastPaint || now - lastPaint >= 32) {
-          const direction = theme === "light" ? -1 : 1;
-          const angle = reducedMotion.matches ? 0 : direction * ((now - startedAt) % durationMs) / durationMs * Math.PI * 2;
-          context.clearRect(0, 0, width, height);
-          context.save();
-          context.translate(coreTargetX, coreTargetY);
-          // Keep the horizontal disk fixed; only its texture turns in that plane.
-          // Applying this projection AFTER the local rotation prevents tumbling.
-          context.scale(0.72, diskProjectionY * 0.72);
-          context.rotate(angle);
-          context.drawImage(deprojected, -coreSquareX, -coreSquareY);
-          context.restore();
-          lastPaint = now;
-          if (fallback) fallback.dataset.replaced = "true";
-          canvas.dataset.ready = "true";
-        }
-        if (!reducedMotion.matches) animationFrame = requestAnimationFrame(draw);
-      };
-      repaint = () => {
-        cancelAnimationFrame(animationFrame);
-        lastPaint = 0;
-        draw(performance.now());
-      };
-      draw(startedAt);
-    };
-
-    return () => {
-      cancelled = true;
-      reducedMotion.removeEventListener("change", motionChanged);
-      cancelAnimationFrame(animationFrame);
-    };
-  }, [source]);
-
-  return (
-    <>
-      <img ref={fallbackRef} className="login-gateway__galaxy-image" src={source} alt="" aria-hidden="true" draggable={false} />
-      <canvas ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />
-    </>
-  );
-}
 
 function temaPublicoInicial(): TemaPublico {
   try {

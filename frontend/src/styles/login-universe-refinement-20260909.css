@@ -12,7 +12,13 @@
   width: 134px !important;
   height: 148px !important;
 }
-#root #corvia-login .login-gateway__galaxy-canvas { object-fit: contain !important; }
+#root #corvia-login .login-gateway__galaxy-canvas {
+  object-fit: contain !important;
+  transition: opacity 160ms ease-out !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  #root #corvia-login .login-gateway__galaxy-canvas { transition: none !important; }
+}
 #root #corvia-login .login-gateway__universe::before { height: 220px !important; }
 #root #corvia-login .login-gateway__universe::after { height: 180px !important; }
 

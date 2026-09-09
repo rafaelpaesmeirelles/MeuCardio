@@ -38,3 +38,23 @@ O solicitante autorizou publicar após concluir os ajustes, sem CI de backend e 
 - Superfície única para campos de login, ícones e preenchimento automático do navegador. Contorno de foco no campo externo, sem retângulo de outra cor dentro do input; campos mobile com 44 px e texto de 16 px.
 - Estrelas estáticas, discretas e em posições irregulares no login e nos fundos dos ambientes internos e formulários públicos. A camada não recebe cliques e é ocultada na impressão.
 - Conferência visual dos dois temas em desktop/celular, sem envio de formulário. Compilação do frontend; nenhuma alteração adicional de backend e nenhuma repetição das suítes anteriores.
+# Carregamento da galáxia — correção após vídeo de 09/09
+
+O vídeo mostrou o PNG claro sendo pintado em faixas durante o download, seguido
+pela troca da fotografia original para o disco projetado no canvas. O login agora
+revela apenas o primeiro quadro completo, depois de `HTMLImageElement.decode()`.
+Foi removida a imagem progressiva de fallback, junto com o download duplicado.
+
+- Textura clara otimizada de 1.860.719 para 137.220 bytes (92,6% menor), com largura
+  de 1366 px para o canvas de 683 px. WebP qualidade 95; diferença média no quadro
+  de renderização inferior a 1 nível por canal RGB, em escala de 0 a 255.
+- Textura escura preservada byte a byte. Ambas recebem URLs com hash em `/assets`,
+  usando o cache HTTP imutável já configurado no servidor.
+- Downloads e decodificação reutilizados ao alternar temas; animação pausada em
+  aba oculta e sem reescrita de atributos/estilos a cada quadro.
+- Geometria, sentido/velocidade do giro, paletas e layout aprovados preservados.
+- Verificação focada do componente real: download lento, troca de tema antes de
+  terminar, reutilização do arquivo, movimento reduzido e limpeza ao desmontar.
+  Comando: `node --test scripts/check-login-galaxy-loading.test.mjs` (1 aprovado).
+- TypeScript e build Vite aprovados; conferência visual dos dois temas realizada.
+  Nenhuma suíte de CI/backend executada nesta correção.
