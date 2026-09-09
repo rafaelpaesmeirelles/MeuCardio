@@ -10,11 +10,18 @@ import pytest
 
 from app.core.config import settings
 from app.models.subscription import (
+    CURRENT_COMMERCIAL_VERSION,
     PLANO_BASICO,
     PLANO_COMPLETO,
     TIPO_MEUCARDIO,
     Subscription,
 )
+
+
+@pytest.fixture(autouse=True)
+def enabled_billing_for_contract_tests(monkeypatch):
+    # Explicitly exercise the enabled flow; disabled launch has its own module.
+    monkeypatch.setattr(settings, "subscriptions_enabled", True)
 
 
 class TestCheckoutComPeriodicidade:
@@ -32,13 +39,19 @@ class TestCheckoutComPeriodicidade:
         """Sem `periodicidade` na query, o comportamento é o mesmo de antes
         desta funcionalidade: mensal, sem quebrar nenhum chamador antigo."""
         user, token = criar_usuario()
-        with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
-             patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
-            criar_cliente.return_value = {"id": "cus_x"}
-            criar_sessao.return_value = {"url": "https://checkout.stripe.com/fake"}
+        with patch("app.api.billing._stripe_client") as factory:
+            api = factory.return_value.v1
+            api.customers.create.return_value = {"id": "cus_x"}
+            api.checkout.sessions.create.return_value = {
+                "id": "cs_monthly", "url": "https://checkout.stripe.com/fake", "expires_at": 9999999999,
+            }
             resp = client.post(
                 "/api/billing/checkout?plano=basico", headers={"Authorization": f"Bearer {token}"}
             )
+            params = api.checkout.sessions.create.call_args.kwargs["params"]
+            assert params["line_items"][0]["price_data"]["unit_amount"] == 9990
+            assert params["subscription_data"]["metadata"]["periodicidade"] == "mensal"
+            assert params["subscription_data"]["metadata"]["commercial_version"] == CURRENT_COMMERCIAL_VERSION
         assert resp.status_code == 200
         sub = (
             db.query(Subscription)
@@ -47,61 +60,30 @@ class TestCheckoutComPeriodicidade:
         )
         assert sub.periodicidade == "mensal"
 
-    def test_checkout_semestral_sem_price_configurado_devolve_503(self, client, criar_usuario):
-        """Nunca inventa um price_data com o valor de PRECO_CENTAVOS para
-        semestral/anual — sem o Price real cadastrado no .env, a rota recusa
-        em vez de cobrar um valor sem lastro no Stripe."""
-        user, token = criar_usuario()
-        antigo = settings.stripe_price_id_basico_semestral
-        settings.stripe_price_id_basico_semestral = ""
-        try:
-            with patch("app.api.billing.stripe.Customer.create") as criar_cliente:
-                criar_cliente.return_value = {"id": "cus_y"}
-                resp = client.post(
-                    "/api/billing/checkout?plano=basico&periodicidade=semestral",
-                    headers={"Authorization": f"Bearer {token}"},
-                )
-            assert resp.status_code == 503
-        finally:
-            settings.stripe_price_id_basico_semestral = antigo
-
-    def test_checkout_semestral_com_price_configurado_usa_o_price_id_do_env(
-        self, client, db, criar_usuario
+    @pytest.mark.parametrize("period,configured", [
+        ("semestral", ""), ("semestral", "price_legacy"), ("anual", "price_legacy"),
+    ])
+    def test_new_nonmonthly_checkout_is_not_offered_even_with_legacy_price(
+        self, client, db, criar_usuario, monkeypatch, period, configured,
     ):
         user, token = criar_usuario()
-        antigo = settings.stripe_price_id_completo_semestral
-        settings.stripe_price_id_completo_semestral = "price_completo_semestral_fake"
-        try:
-            with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
-                 patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
-                criar_cliente.return_value = {"id": "cus_z"}
-                criar_sessao.return_value = {"url": "https://checkout.stripe.com/fake"}
-                resp = client.post(
-                    "/api/billing/checkout?plano=completo&periodicidade=semestral",
-                    headers={"Authorization": f"Bearer {token}"},
-                )
-            assert resp.status_code == 200
-            _, kwargs = criar_sessao.call_args
-            assert kwargs["line_items"][0]["price"] == "price_completo_semestral_fake"
-            assert kwargs["allow_promotion_codes"] is True
-            assert kwargs["subscription_data"]["metadata"]["periodicidade"] == "semestral"
-        finally:
-            settings.stripe_price_id_completo_semestral = antigo
-
-        sub = (
-            db.query(Subscription)
-            .filter(Subscription.user_id == user.id, Subscription.kind == TIPO_MEUCARDIO)
-            .first()
-        )
-        assert sub.periodicidade == "semestral"
-        assert sub.plano == PLANO_COMPLETO
+        monkeypatch.setattr(settings, f"stripe_price_id_completo_{period}", configured)
+        with patch("app.api.billing._stripe_client") as factory:
+            resp = client.post(
+                f"/api/billing/checkout?plano=completo&periodicidade={period}",
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            factory.assert_not_called()
+        assert resp.status_code == 409
+        assert "apenas na modalidade mensal" in resp.json()["detail"]
+        assert db.query(Subscription).filter_by(user_id=user.id, kind=TIPO_MEUCARDIO).count() == 0
 
     def test_ja_assinante_ativo_recebe_409_orientando_trocar_plano(self, client, db, criar_usuario):
         user, token = criar_usuario()
         db.add(Subscription(user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", plano=PLANO_BASICO))
         db.commit()
         resp = client.post(
-            "/api/billing/checkout?plano=completo&periodicidade=anual",
+            "/api/billing/checkout?plano=completo&periodicidade=mensal",
             headers={"Authorization": f"Bearer {token}"},
         )
         assert resp.status_code == 409
@@ -122,6 +104,7 @@ class TestTrocarPlano:
         db.add(Subscription(
             user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", plano=PLANO_BASICO,
             periodicidade="mensal", stripe_subscription_id="sub_fake_1",
+            commercial_version=CURRENT_COMMERCIAL_VERSION,
         ))
         db.commit()
         resp = client.post(
@@ -144,43 +127,50 @@ class TestTrocarPlano:
         )
         assert resp.status_code == 409
 
-    def test_troca_valida_chama_stripe_modify_e_nunca_aplica_localmente(
-        self, client, db, criar_usuario
+    def test_valid_monthly_upgrade_requests_payment_and_never_applies_locally(
+        self, client, db, criar_usuario,
     ):
-        """A rota só dispara a troca no Stripe — quem grava
-        `sub.plano`/`sub.periodicidade` de verdade é sempre o webhook,
-        nunca esta chamada otimista."""
         user, token = criar_usuario()
-        antigo = settings.stripe_price_id_completo_anual
-        settings.stripe_price_id_completo_anual = "price_completo_anual_fake"
         sub = Subscription(
             user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", plano=PLANO_BASICO,
             periodicidade="mensal", stripe_subscription_id="sub_fake_2",
         )
-        db.add(sub)
-        db.commit()
-        try:
-            with patch("app.api.billing.stripe.Subscription.retrieve") as retrieve, \
-                 patch("app.api.billing.stripe.Subscription.modify") as modify:
-                retrieve.return_value = {"items": {"data": [{"id": "si_fake_item"}]}}
-                resp = client.post(
-                    "/api/billing/trocar-plano?plano=completo&periodicidade=anual",
-                    headers={"Authorization": f"Bearer {token}"},
-                )
-                assert resp.status_code == 200
-                modify.assert_called_once()
-                args, kwargs = modify.call_args
-                assert args[0] == "sub_fake_2"
-                assert kwargs["items"][0]["id"] == "si_fake_item"
-                assert kwargs["items"][0]["price"] == "price_completo_anual_fake"
-                assert kwargs["proration_behavior"] == "create_prorations"
-        finally:
-            settings.stripe_price_id_completo_anual = antigo
-
+        db.add(sub); db.commit()
+        with patch("app.api.billing._stripe_client") as factory, \
+             patch("app.api.billing._subscription_price_id", return_value="price_completo_monthly"):
+            api = factory.return_value.v1
+            api.subscriptions.retrieve.return_value = {"items": {"data": [
+                {"id": "si_fake_item", "price": {"unit_amount": 4990}},
+            ]}}
+            resp = client.post(
+                "/api/billing/trocar-plano?plano=completo&periodicidade=mensal",
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            assert resp.status_code == 200
+            api.subscriptions.update.assert_called_once()
+            args, kwargs = api.subscriptions.update.call_args
+            assert args[0] == "sub_fake_2"
+            assert kwargs["params"]["items"] == [{"id": "si_fake_item", "price": "price_completo_monthly"}]
+            assert kwargs["params"]["proration_behavior"] == "always_invoice"
+            assert kwargs["params"]["payment_behavior"] == "pending_if_incomplete"
         db.refresh(sub)
-        # Nada aplicado localmente pela chamada otimista — só o webhook grava.
         assert sub.plano == PLANO_BASICO
         assert sub.periodicidade == "mensal"
+
+    @pytest.mark.parametrize("period", ["semestral", "anual"])
+    def test_existing_long_contract_is_preserved_until_its_end(self, client, db, criar_usuario, period):
+        user, token = criar_usuario()
+        sub = Subscription(user_id=user.id, kind=TIPO_MEUCARDIO, status="ativo", plano=PLANO_BASICO,
+                           periodicidade=period, stripe_subscription_id="sub_existing_long")
+        db.add(sub); db.commit()
+        with patch("app.api.billing._stripe_client") as factory:
+            resp = client.post("/api/billing/trocar-plano?plano=ia&periodicidade=mensal",
+                               headers={"Authorization": f"Bearer {token}"})
+            factory.assert_not_called()
+        assert resp.status_code == 409
+        assert "será preservado" in resp.json()["detail"]
+        db.refresh(sub)
+        assert sub.periodicidade == period and sub.plano == PLANO_BASICO
 
 
 class TestStatusExpoePeriodicidade:

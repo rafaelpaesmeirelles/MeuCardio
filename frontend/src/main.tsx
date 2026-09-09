@@ -86,11 +86,12 @@ import "./styles/corvia-theme-selector.css";
 /* Correções finais do lote atual. Permanecem antes do contrato escuro e do
    tema claro, que por segurança precisam encerrar a cascata nesta ordem. */
 import "./styles/cardiology-spaces-pending-fixes.css";
+/* Tokens da paleta diurna; suas regras visuais encerram a folha do tema claro. */
+import "./styles/corvia-daylight-palette.css";
 /* Contrato de segurança visual do universo escuro. */
 import "./styles/clinical-form-control-contrast.css";
 /* Aparência clara opcional: última camada, estritamente sob data-corvia-theme=light. */
 import "./styles/cardiology-spaces-light-mode.css";
-import "./styles/corvia-daylight-palette.css";
 
 async function verificarAtualizacaoCompleta(forcar = false) {
   await verificarVersaoAtual(forcar);

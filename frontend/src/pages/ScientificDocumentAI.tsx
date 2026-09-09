@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { formatBRL } from "../lib/commercialPlans";
 import { api, ApiError } from "../lib/api";
 import { ClinicalPageHeader, ClinicalSection } from "../components/ClinicalCommandPrimitives";
+
+type DocumentQuote = {
+  quote_id: number;
+  maximum_credit_centavos: number;
+  available_credit_centavos: number;
+  expires_at: string;
+  includes_translation: boolean;
+  currency: "BRL";
+};
 
 type Analysis = {
   title?: string;
@@ -53,41 +64,73 @@ export default function ScientificDocumentAI() {
   const [file, setFile] = useState<File | null>(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
+  const [quote, setQuote] = useState<(DocumentQuote & { documentId: number }) | null>(null);
 
-  async function refresh() {
+  async function refresh(documentId = selected?.id) {
     const rows = await api.get<ScientificDocument[]>("/documentos-cientificos-ia");
     setItems(rows);
-    if (selected) {
-      const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${selected.id}`);
+    if (documentId) {
+      const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${documentId}`);
       setSelected(detail);
     }
   }
 
-  useEffect(() => { void refresh(); }, []);
+  useEffect(() => { void refresh().catch((error) => setMessage(erroTexto(error))); }, []);
 
   async function upload() {
     if (!file) return;
-    setBusy(true); setMessage("");
+    setBusy(true); setMessage(""); setQuote(null);
     try {
       const row = await api.upload<ScientificDocument>("/documentos-cientificos-ia", "arquivo", file);
       setFile(null);
       const detail = await api.get<ScientificDocument>(`/documentos-cientificos-ia/${row.id}`);
       setSelected(detail);
-      await refresh();
+      await refresh(row.id);
       setMessage("Arquivo salvo de forma privada. Agora você pode solicitar a análise da IA.");
     } catch (error) { setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
-  async function analyze() {
-    if (!selected) return;
-    setBusy(true); setMessage("Analisando o documento e preparando a versão em português…");
+  async function estimate() {
+    if (!selected || busy) return;
+    setBusy(true); setMessage(""); setQuote(null);
     try {
-      const detail = await api.post<ScientificDocument>(`/documentos-cientificos-ia/${selected.id}/analisar`);
+      const result = await api.post<DocumentQuote>(`/documentos-cientificos-ia/${selected.id}/orcamento`);
+      if (result.currency !== "BRL" || !Number.isSafeInteger(result.quote_id) ||
+          !Number.isSafeInteger(result.maximum_credit_centavos) || result.maximum_credit_centavos < 0 ||
+          !Number.isSafeInteger(result.available_credit_centavos) || !Number.isFinite(Date.parse(result.expires_at))) {
+        throw new Error("invalid quote");
+      }
+      setQuote({ ...result, documentId: selected.id });
+    } catch (error) { setMessage(erroTexto(error)); }
+    finally { setBusy(false); }
+  }
+
+  async function analyze() {
+    if (!selected || busy || !quote || quote.documentId !== selected.id) return;
+    if (Date.parse(quote.expires_at) <= Date.now()) {
+      setQuote(null); setMessage("O orçamento expirou. Calcule um novo orçamento antes de analisar."); return;
+    }
+    if (quote.maximum_credit_centavos > quote.available_credit_centavos) return;
+    setBusy(true); setMessage("Analisando o documento e preparando a versão em português…");
+    const acceptedQuote = quote;
+    setQuote(null);
+    try {
+      const detail = await api.post<ScientificDocument>(`/documentos-cientificos-ia/${selected.id}/analisar`, {
+        quote_id: acceptedQuote.quote_id, approved_max_credit_centavos: acceptedQuote.maximum_credit_centavos,
+      });
       setSelected(detail);
-      await refresh();
+      await refresh(selected.id);
       setMessage("Análise concluída. O original permanece privado na sua biblioteca.");
     } catch (error) { setMessage(erroTexto(error)); }
+    finally { setBusy(false); }
+  }
+
+  async function selectDocument(id: number) {
+    if (busy) return;
+    setBusy(true); setQuote(null); setMessage("");
+    try { setSelected(await api.get<ScientificDocument>(`/documentos-cientificos-ia/${id}`)); }
+    catch (error) { setMessage(erroTexto(error)); }
     finally { setBusy(false); }
   }
 
@@ -137,7 +180,7 @@ export default function ScientificDocumentAI() {
         <ClinicalSection eyebrow="Sua biblioteca" title={`${items.length} documento(s)`}>
           <div className="lista-simples">
             {items.map((item) => (
-              <button key={item.id} type="button" className="item-lista" onClick={async () => setSelected(await api.get<ScientificDocument>(`/documentos-cientificos-ia/${item.id}`))}>
+              <button key={item.id} type="button" className="item-lista" disabled={busy} onClick={() => void selectDocument(item.id)}>
                 <strong>{item.title}</strong>
                 <small>{item.document_type} · {item.analysis_status}{item.incorporation_status === "incorporado" ? " · incorporado" : ""}</small>
               </button>
@@ -151,9 +194,19 @@ export default function ScientificDocumentAI() {
             <div className="stack">
               <div className="acoes-linha">
                 <button className="btn" type="button" onClick={() => void openOriginal()}>Abrir original</button>
-                <button className="btn primario" type="button" disabled={busy || selected.analysis_status === "processando"} onClick={() => void analyze()}>{selected.analysis_status === "concluido" ? "Reanalisar" : "Analisar com IA"}</button>
+                <button className="btn primario" type="button" disabled={busy || selected.analysis_status === "processando"} onClick={() => void estimate()}>{quote ? "Atualizar orçamento" : "Calcular orçamento de IA"}</button>
                 {selected.incorporation_recommended && selected.incorporation_status === "aguardando_consentimento" && <button className="btn" type="button" disabled={busy} onClick={() => void incorporate()}>Autorizar incorporação ao CorVIA</button>}
               </div>
+
+              {quote && quote.documentId === selected.id && <article className="card" aria-label="Orçamento da análise">
+                <h3>Até {formatBRL(quote.maximum_credit_centavos)} em créditos</h3>
+                <p>Saldo disponível: {formatBRL(quote.available_credit_centavos)}. O teto inclui a análise e eventual tradução integral. Uso efetivo debitado; restante liberado.</p>
+                <p className="texto-secundario">O cálculo do orçamento não consome créditos. Ao confirmar, você autoriza o uso de IA até esse valor.</p>
+                {quote.maximum_credit_centavos > quote.available_credit_centavos && <p role="status">Saldo ou limite disponível insuficiente. <Link to="/assinatura">Consultar créditos e limite de uso</Link>.</p>}
+                <button className="btn primario" type="button" disabled={busy || quote.maximum_credit_centavos > quote.available_credit_centavos} onClick={() => void analyze()}>
+                  Confirmar análise por até {formatBRL(quote.maximum_credit_centavos)}
+                </button>
+              </article>}
 
               {selected.analysis_status === "concluido" && selected.analysis && <>
                 <article className="card"><h3>Resumo clínico</h3><p>{selected.analysis.summary_pt}</p></article>

@@ -5,7 +5,15 @@ principal é Completo — ver `status_email` em `app/api/billing.py`).
 """
 from unittest.mock import patch
 
+import pytest
+from app.core.config import settings
+
 from app.models.subscription import PLANO_COMPLETO, TIPO_MEUCARDIO, Subscription
+
+
+@pytest.fixture(autouse=True)
+def enabled_billing_for_guest_contract_tests(monkeypatch):
+    monkeypatch.setattr(settings, "subscriptions_enabled", True)
 
 
 class TestCheckoutConvidado:
@@ -14,7 +22,7 @@ class TestCheckoutConvidado:
         user.convidado = True
         db.commit()
 
-        with patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
+        with patch("app.api.billing._stripe_client") as criar_sessao:
             resp = client.post(
                 "/api/billing/checkout?plano=basico", headers={"Authorization": f"Bearer {token}"}
             )
@@ -50,15 +58,17 @@ class TestCheckoutConvidado:
         user, token = criar_usuario()
         assert user.convidado is False
 
-        with patch("app.api.billing.stripe.Customer.create") as criar_cliente, \
-             patch("app.api.billing.stripe.checkout.Session.create") as criar_sessao:
-            criar_cliente.return_value = {"id": "cus_normal"}
-            criar_sessao.return_value = {"url": "https://checkout.stripe.com/session/fake"}
+        with patch("app.api.billing._stripe_client") as factory:
+            api = factory.return_value.v1
+            api.customers.create.return_value = {"id": "cus_normal"}
+            api.checkout.sessions.create.return_value = {
+                "id": "cs_normal", "url": "https://checkout.stripe.com/session/fake", "expires_at": 9999999999,
+            }
             resp = client.post("/api/billing/checkout?plano=basico", headers={"Authorization": f"Bearer {token}"})
-
+            api.checkout.sessions.create.assert_called_once()
+            assert api.checkout.sessions.create.call_args.kwargs["params"]["line_items"][0]["price_data"]["unit_amount"] == 9990
         assert resp.status_code == 200
         assert resp.json()["checkout_url"] == "https://checkout.stripe.com/session/fake"
-        criar_sessao.assert_called_once()
 
 
 class TestToggleAdminDeConvidado:

@@ -203,7 +203,7 @@ export const CLINICAL_ROUTES = [
   // Aliases preservados
   route({ path: "/cursos", name: "Cursos — alias de Trilhas", shortName: "Trilhas", space: "ensino", group: "conhecimento", icon: "curso", layout: "data", intelligence: true, kind: "alias", parent: "/trilhas", redirectTo: "/trilhas" }),
   route({ path: "/cursos/:slug", name: "Curso — alias de Trilhas", shortName: "Trilha", space: "ensino", group: "conhecimento", icon: "curso", layout: "data", intelligence: true, kind: "alias", parent: "/trilhas", redirectTo: "/trilhas" }),
-  route({ path: "/assinatura", name: "Assinatura — alias do Tour", shortName: "Assinatura", space: "gestao", group: "conta", icon: "check", layout: "focus", intelligence: false, kind: "alias", parent: "/tour", redirectTo: "/tour?origem=assinatura&modo=quick" }),
+  route({ path: "/assinatura", name: "Planos e créditos de IA", shortName: "Assinatura", space: "gestao", group: "conta", icon: "check", layout: "standard", intelligence: false, parent: "/minha-conta" }),
   route({ path: "/admin/usuarios-online", name: "Usuários online — alias", shortName: "Rede", space: "gestao", group: "admin", icon: "pacientes", layout: "data", intelligence: false, kind: "alias", parent: "/usuarios-online", gate: "admin", redirectTo: "/usuarios-online" }),
 
   // Experiências autenticadas fora do shell
