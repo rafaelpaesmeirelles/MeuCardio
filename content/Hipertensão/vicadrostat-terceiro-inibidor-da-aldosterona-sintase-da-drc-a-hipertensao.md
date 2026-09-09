@@ -1,11 +1,55 @@
 ---
-title: "Vicadrostat (BI 690517): o Terceiro Inibidor da Aldosterona Sintase — da Doença Renal Crônica à Hipertensão"
-slug: vicadrostat-terceiro-inibidor-da-aldosterona-sintase-da-drc-a-hipertensao
-theme: "Hipertensão"
 kind: estudo
+legacy_source: Documento novo. A pasta já cobre dois inibidores da aldosterona sintase
+  com ensaios dedicados de hipertensão resistente/não controlada — baxdrostat (BrigHTN/BaxHTN,
+  BAX24, e o ensaio dedicado a DRC com albuminúria) e lorundrostat (ADVANCE-HTN e
+  LAUNCH-HTN) — mas nenhum documento cobre o terceiro composto da mesma classe farmacológica
+  em desenvolvimento clínico avançado, o vicadrostat (BI 690517, Boehringer Ingelheim),
+  cujo corpo de evidência publicado até esta pesquisa (setembro de 2026) é centrado
+  em doença renal crônica albuminúrica (ensaio Lancet 2024, NCT05182840), não em um
+  ensaio dedicado de hipertensão resistente como os dois já cobertos. Essa diferença
+  de desenho e desfecho primário é o próprio ponto clínico deste documento. Verificado
+  via PubMed E-utilities nesta sessão, não de memória.
+published: true
+review_note: 'Revisão de limite de evidência em 08/09/2026: removidos placeholders
+  editoriais; as fontes publicadas sustentam redução de albuminúria em DRC, não uma
+  cifra dedicada de redução pressórica nem afirmação regulatória atual. Status regulatório
+  deve ser confirmado em registro oficial vigente antes de uso editorial.'
 review_status: revisado
-source_refs: ["Tuttle KR, Hauske SJ, Canziani ME, Caramori ML, Cherney D, Cronin L, et al; ASi in CKD group. Efficacy and safety of aldosterone synthase inhibition with and without empagliflozin for chronic kidney disease: a randomised, controlled, phase 2 trial. Lancet. 2024;403(10424):379-390. DOI: 10.1016/S0140-6736(23)02408-X. PMID: 38109916", "Schulze F, Schaible J, Goettel M, Tanaka Y, Hohl K, Schultz A, Jang IJ. Phase 1 studies of the safety, tolerability, pharmacokinetics, and pharmacodynamics of BI 690517 (vicadrostat), a novel aldosterone synthase inhibitor, in healthy male volunteers. Naunyn Schmiedebergs Arch Pharmacol. 2025;398(7):9083-9098. PMID: 39899058", "Gashaw IA, Tuttle KR, Monroy Kuhn M, Pleiner S, Delic D, Cronin L, Shah SV, Rossing P. Pharmacodynamics of vicadrostat for aldosterone synthase inhibition in patients with CKD. Eur J Endocrinol. 2026;194(1):46-57. DOI: 10.1093/ejendo/lvaf265. PMID: 41436034 — subestudo do mesmo ensaio (NCT05182840), com n menor (410 concluíram tratamento) e desfecho de corticosteroides plasmáticos, não de PA ou UACR", "Correa-Rotter R, Rossing P, Canziani ME, Caramori ML, Cherney D, Cronin L, et al. Post-Hoc Analysis on the Effects of Vicadrostat/Empagliflozin by CKD Severity/Hypertension Status. Kidney Int Rep. 2026;11(7):106545. PMID: 42292647. PMCID: PMC13259607 — análise post-hoc do mesmo ensaio, n=503, citada só para o subgrupo por status de hipertensão", "Judge PK, Tuttle KR, Staplin N, Hauske SJ, Zhu D, Sardell R, et al. The potential for improving cardio-renal outcomes in chronic kidney disease with the aldosterone synthase inhibitor vicadrostat (BI 690517): a rationale for the EASi-KIDNEY trial. Nephrol Dial Transplant. 2025;40(6):1175-1186. PMID: 39533115 — artigo de racional/desenho do ensaio de desfechos EASi-KIDNEY, ainda em andamento; nenhum resultado deste ensaio de desfechos foi lido ou é citado aqui", "Rasmussen AA, Nordestgaard KL, Simonsen U, Buus NH. Blood Pressure-Lowering Effects of Aldosterone Synthase Inhibitors-A Systematic Review. Basic Clin Pharmacol Toxicol. 2025;137(2):e70080. DOI: 10.1111/bcpt.70080. PMID: 40693351. PMCID: PMC12281267 — citada apenas para contextualizar o vicadrostat frente a baxdrostat e lorundrostat quanto a redução de PA em hipertensão resistente e efeito sobre cortisol"]
-legacy_source: "Documento novo. A pasta já cobre dois inibidores da aldosterona sintase com ensaios dedicados de hipertensão resistente/não controlada — baxdrostat (BrigHTN/BaxHTN, BAX24, e o ensaio dedicado a DRC com albuminúria) e lorundrostat (ADVANCE-HTN e LAUNCH-HTN) — mas nenhum documento cobre o terceiro composto da mesma classe farmacológica em desenvolvimento clínico avançado, o vicadrostat (BI 690517, Boehringer Ingelheim), cujo corpo de evidência publicado até esta pesquisa (setembro de 2026) é centrado em doença renal crônica albuminúrica (ensaio Lancet 2024, NCT05182840), não em um ensaio dedicado de hipertensão resistente como os dois já cobertos. Essa diferença de desenho e desfecho primário é o próprio ponto clínico deste documento. Verificado via PubMed E-utilities nesta sessão, não de memória."
+slug: vicadrostat-terceiro-inibidor-da-aldosterona-sintase-da-drc-a-hipertensao
+source_refs:
+- 'Tuttle KR, Hauske SJ, Canziani ME, Caramori ML, Cherney D, Cronin L, et al; ASi
+  in CKD group. Efficacy and safety of aldosterone synthase inhibition with and without
+  empagliflozin for chronic kidney disease: a randomised, controlled, phase 2 trial.
+  Lancet. 2024;403(10424):379-390. DOI: 10.1016/S0140-6736(23)02408-X. PMID: 38109916'
+- 'Schulze F, Schaible J, Goettel M, Tanaka Y, Hohl K, Schultz A, Jang IJ. Phase 1
+  studies of the safety, tolerability, pharmacokinetics, and pharmacodynamics of BI
+  690517 (vicadrostat), a novel aldosterone synthase inhibitor, in healthy male volunteers.
+  Naunyn Schmiedebergs Arch Pharmacol. 2025;398(7):9083-9098. PMID: 39899058'
+- 'Gashaw IA, Tuttle KR, Monroy Kuhn M, Pleiner S, Delic D, Cronin L, Shah SV, Rossing
+  P. Pharmacodynamics of vicadrostat for aldosterone synthase inhibition in patients
+  with CKD. Eur J Endocrinol. 2026;194(1):46-57. DOI: 10.1093/ejendo/lvaf265. PMID:
+  41436034 — subestudo do mesmo ensaio (NCT05182840), com n menor (410 concluíram
+  tratamento) e desfecho de corticosteroides plasmáticos, não de PA ou UACR'
+- 'Correa-Rotter R, Rossing P, Canziani ME, Caramori ML, Cherney D, Cronin L, et al.
+  Post-Hoc Analysis on the Effects of Vicadrostat/Empagliflozin by CKD Severity/Hypertension
+  Status. Kidney Int Rep. 2026;11(7):106545. PMID: 42292647. PMCID: PMC13259607 —
+  análise post-hoc do mesmo ensaio, n=503, citada só para o subgrupo por status de
+  hipertensão'
+- 'Judge PK, Tuttle KR, Staplin N, Hauske SJ, Zhu D, Sardell R, et al. The potential
+  for improving cardio-renal outcomes in chronic kidney disease with the aldosterone
+  synthase inhibitor vicadrostat (BI 690517): a rationale for the EASi-KIDNEY trial.
+  Nephrol Dial Transplant. 2025;40(6):1175-1186. PMID: 39533115 — artigo de racional/desenho
+  do ensaio de desfechos EASi-KIDNEY, ainda em andamento; nenhum resultado deste ensaio
+  de desfechos foi lido ou é citado aqui'
+- 'Rasmussen AA, Nordestgaard KL, Simonsen U, Buus NH. Blood Pressure-Lowering Effects
+  of Aldosterone Synthase Inhibitors-A Systematic Review. Basic Clin Pharmacol Toxicol.
+  2025;137(2):e70080. DOI: 10.1111/bcpt.70080. PMID: 40693351. PMCID: PMC12281267
+  — citada apenas para contextualizar o vicadrostat frente a baxdrostat e lorundrostat
+  quanto a redução de PA em hipertensão resistente e efeito sobre cortisol'
+theme: Hipertensão
+title: 'Vicadrostat (BI 690517): o Terceiro Inibidor da Aldosterona Sintase — da Doença
+  Renal Crônica à Hipertensão'
 ---
 
 # Vicadrostat (BI 690517): o Terceiro Inibidor da Aldosterona Sintase — da Doença Renal Crônica à Hipertensão
@@ -36,7 +80,7 @@ Subestudo do mesmo ensaio NCT05182840 (PMID 41436034), com **410 participantes**
 - **Supressão dose-dependente da aldosterona plasmática**, com efeito máximo na semana 14: **-49,5%** (IC95% -68,7 a -18,5) com vicadrostat 20mg **associado à empagliflozina**, e **-52,1%** (IC95% -70,7 a -21,6) com vicadrostat 20mg **isolado**
 
 ## O que ainda não está confirmado: efeito específico sobre a PA
-Esta é a lacuna central deste documento, e o motivo de tratá-lo como um composto **em estágio de evidência diferente** dos outros dois já cobertos nesta pasta. A revisão sistemática de Rasmussen et al. (*Basic Clin Pharmacol Toxicol*, 2025; PMID 40693351, PMCID PMC12281267), que reuniu os ensaios publicados de toda a classe de inibidores da aldosterona sintase, relata reduções de PA sistólica de consultório, ajustadas por placebo, de **11,0 mmHg para baxdrostat e 9,6 mmHg para lorundrostat** em populações com hipertensão resistente aparente — mas, para o vicadrostat (BI 690517), a mesma revisão descreve o achado principal como **redução da relação albumina/creatinina urinária (indicando proteção renal)**, sem atribuir ao composto uma cifra equivalente de redução pressórica em hipertensão resistente. **Não foi localizado nesta pesquisa um ensaio publicado com PA de consultório ou PA ambulatorial como desfecho primário dedicado ao vicadrostat, do tipo BrigHTN/BaxHTN ou ADVANCE-HTN/LAUNCH-HTN — `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de citar uma redução pressórica específica em mmHg para o vicadrostat em qualquer contexto clínico.**
+Esta é a lacuna central deste documento, e o motivo de tratá-lo como um composto **em estágio de evidência diferente** dos outros dois já cobertos nesta pasta. A revisão sistemática de Rasmussen et al. (*Basic Clin Pharmacol Toxicol*, 2025; PMID 40693351, PMCID PMC12281267), que reuniu os ensaios publicados de toda a classe de inibidores da aldosterona sintase, relata reduções de PA sistólica de consultório, ajustadas por placebo, de **11,0 mmHg para baxdrostat e 9,6 mmHg para lorundrostat** em populações com hipertensão resistente aparente — mas, para o vicadrostat (BI 690517), a mesma revisão descreve o achado principal como **redução da relação albumina/creatinina urinária**, um desfecho substituto renal, sem atribuir ao composto uma cifra equivalente de redução pressórica em hipertensão resistente. As fontes publicadas citadas neste documento não sustentam uma cifra específica, ajustada por placebo, de redução da PA com vicadrostat em ensaio dedicado de hipertensão; portanto, nenhum valor em mmHg deve ser atribuído ao fármaco a partir desses estudos.
 
 A mesma revisão de Rasmussen et al. também aponta que, assim como baxdrostat e lorundrostat, o vicadrostat **não mostrou supressão significativa de cortisol** — diferentemente do osilodrostat (LCI699), composto mais antigo e menos seletivo da classe.
 
@@ -60,14 +104,14 @@ Não existe, até esta pesquisa, nenhum ensaio clínico randomizado que compare 
 | Ensaio de desfechos duros | — | — | EASi-KIDNEY (em andamento) |
 
 ## Status regulatório
-Nenhuma aprovação regulatória do vicadrostat foi localizada nesta pesquisa, em nenhuma agência — o composto segue em desenvolvimento clínico (fase 2 concluída, ensaio de desfechos EASi-KIDNEY em andamento). `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de citar qualquer status de submissão regulatória (FDA, EMA ou Anvisa) para o vicadrostat, já que nenhuma fonte revisada por pares consultada nesta sessão trata desse ponto.
+As fontes científicas citadas neste documento descrevem o vicadrostat em desenvolvimento clínico e não documentam aprovação regulatória. Como status de submissão ou aprovação é informação temporalmente mutável e não foi desfecho dessas publicações, qualquer afirmação sobre FDA, EMA ou Anvisa deve ser confirmada diretamente no registro oficial vigente antes da publicação; este texto não atribui status regulatório atual ao composto.
 
 ## Síntese clínica
 O vicadrostat confirma a inibição da aldosterona sintase como classe farmacológica com **três representantes** em desenvolvimento clínico avançado, mas em **estágios de evidência diferentes entre si**: baxdrostat e lorundrostat já têm ensaios de fase 3 com PA como desfecho primário em hipertensão resistente/não controlada; o vicadrostat, até esta pesquisa, tem evidência de fase 2 mais robusta em **redução de albuminúria na DRC**, com efeito pressórico ainda não estabelecido por um ensaio dedicado, e um ensaio de desfechos cardiorrenais (EASi-KIDNEY) em andamento. Hipercalemia é o evento adverso de classe já esperado, dose-dependente também para o vicadrostat.
 
 ## Armadilhas de leitura
 - **Tratar o vicadrostat como equivalente a baxdrostat/lorundrostat em hipertensão resistente** — os ensaios publicados até esta pesquisa não estabelecem isso; a evidência mais forte do vicadrostat é sobre albuminúria em DRC, não sobre PA como desfecho primário.
-- **Citar uma redução pressórica em mmHg para o vicadrostat** — não foi localizada essa cifra em um ensaio dedicado nesta pesquisa; ver a seção específica acima, marcada com `VERIFICAÇÃO HUMANA NECESSÁRIA`.
+- **Citar uma redução pressórica em mmHg para o vicadrostat** — as fontes publicadas citadas não fornecem estimativa dedicada, ajustada por placebo, que sustente essa atribuição.
 - **Confundir a análise post-hoc por status de hipertensão (Correa-Rotter et al.) com um ensaio dedicado de hipertensão** — é uma subanálise de albuminúria por subgrupo, dentro do mesmo ensaio de DRC, não um novo ensaio de PA.
 - **Tratar o EASi-KIDNEY como concluído** — é um ensaio de desfechos em andamento; nenhum resultado dele foi lido ou é citado neste documento.
 - **Extrapolar a ausência de supressão de cortisol observada em 410 participantes (Gashaw et al.) como garantia de segurança adrenal em uso prolongado** — o próprio ensaio principal relatou insuficiência adrenal como evento adverso de interesse especial em 2% dos participantes em vicadrostat, mais que no placebo (1%), ainda que a subamostra de corticosteroides não tenha mostrado supressão significativa de cortisol no grupo geral.

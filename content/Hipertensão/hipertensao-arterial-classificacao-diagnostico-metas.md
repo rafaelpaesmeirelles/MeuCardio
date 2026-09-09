@@ -1,11 +1,17 @@
 ---
-title: "Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)"
+title: Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)
 slug: hipertensao-arterial-classificacao-diagnostico-metas
-theme: "Hipertensão"
+theme: Hipertensão
 kind: diretriz
 review_status: revisado
-source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624"]
-legacy_source: "Substitui versão anterior baseada na diretriz 2020, desatualizada pela diretriz 2025 (SBC/SBH/SBN, lançada no Congresso Brasileiro de Cardiologia em setembro de 2025)."
+source_refs:
+- 'Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira
+  de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624'
+- Diretriz Brasileira de Hipertensão2025. DOI:10.36660/abc.20250624. PMID:41294179.
+legacy_source: Substitui versão anterior baseada na diretriz 2020, desatualizada pela diretriz 2025 (SBC/SBH/SBN,
+  lançada no Congresso Brasileiro de Cardiologia em setembro de 2025).
+review_note: 'Revisão independente de dependência em08/09/2026: Meta comtolerabilidade; trêsestágiosnão novidade
+  absoluta; KdietéticoDRC; emergênciaHMODnão número; MRAs renal/K.'
 ---
 
 # Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025)
@@ -16,9 +22,9 @@ legacy_source: "Substitui versão anterior baseada na diretriz 2020, desatualiza
 
 ## O que mudou em relação à diretriz de 2020
 
-- A meta pressórica deixou de ser estratificada por risco — agora é **< 130/80 mmHg para todo mundo**, independentemente de idade ou risco cardiovascular.
+- A meta pressórica deixou de ser estratificada por risco — agora é **<130/80 mmHg se tolerada**, com individualização em fragilidade, hipotensão ortostática e expectativa de vida limitada.
 - A pressão "12 por 8" (120/80 mmHg) **deixou de ser considerada normal** e passou a ser classificada como pré-hipertensão.
-- A hipertensão passou a ter **três estágios**, não mais dois.
+- A classificação atual usa **três estágios**; isso não significa que a diretriz brasileira anterior tivesse apenas dois.
 - O escore de risco cardiovascular mudou: **não se usa mais Framingham/ERG** — agora é o escore **PREVENT**, da American Heart Association.
 - O termo **"urgência hipertensiva" foi abandonado**.
 - A classificação de hipertensão resistente e refratária passou a considerar também se a pressão está controlada, não só o número de medicações.
@@ -62,7 +68,7 @@ Já é considerado **alto risco automaticamente**, sem precisar calcular escore:
 
 ### Não medicamentoso
 
-Indicado **desde o diagnóstico de PA ≥ 120/80 mmHg** (ou seja, já a partir da pré-hipertensão): peso adequado, intervenção dietética, redução de sódio e aumento de potássio por alimentos naturais, atividade física moderada/aeróbica, redução de álcool, cessação do tabagismo, redução de estresse.
+Indicado **desde o diagnóstico de PA ≥ 120/80 mmHg** (ou seja, já a partir da pré-hipertensão): peso adequado, intervenção dietética, redução de sódio e ingestão alimentar de potássio adequada, individualizada em DRC, hipercalemia ou uso de fármacos que elevam potássio, atividade física moderada/aeróbica, redução de álcool, cessação do tabagismo, redução de estresse.
 
 ### Quando iniciar medicação
 
@@ -72,7 +78,7 @@ Indicado **desde o diagnóstico de PA ≥ 120/80 mmHg** (ou seja, já a partir d
 
 ### Meta — a mudança mais importante desta diretriz
 
-**< 130/80 mmHg para todos os pacientes**, independentemente de risco cardiovascular ou idade. A diretriz **não estabelece limite inferior**: se a PAS cair abaixo de 120 mmHg e o paciente estiver assintomático, a recomendação é **manter a medicação**, não reduzir a dose reativamente.
+**<130/80 mmHg quando tolerada**, individualizando em vulnerabilidade clínica. PAS abaixo de120 isoladamente não exige redução automática; avaliar sintomas, ortostatismo, quedas, perfusão e função renal, sem interpretar ausência de sintomas como segurança ilimitada.
 
 ### Escolha inicial: monoterapia ou combinação
 
@@ -92,8 +98,8 @@ Se o controle não for atingido nem aumentando as doses da combinação, a **ter
 - Monoterapia ou combinação inicial: **IECA ou BRA**, **bloqueador de canal de cálcio (BCC)**, **diurético** — qualquer uma das três pode ser usada isolada.
 - Combinação de duas: IECA/BRA + diurético, ou IECA/BRA + BCC.
 - Tripla terapia: IECA/BRA + diurético + BCC.
-- **Betabloqueador não é escolha inicial sem indicação específica** — só entra (em mono ou combinação) havendo insuficiência cardíaca, angina, fibrilação atrial, diálise, ou mulher com desejo de engravidar.
-- **Quarta droga** (quando a tripla não controla): **espironolactona**; se houver efeito colateral persistente, tentar **eplerenona**.
+- **Betabloqueador não é escolha inicial sem indicação específica** — só entra (em mono ou combinação) havendo insuficiência cardíaca, angina, fibrilação atrial, diálise, ou situações reprodutivas com escolha de agente compatível com gestação; não estender segurança a toda a classe.
+- **Quarta droga**, após confirmar resistência e elegibilidade renal/potássio: **espironolactona**. Eplerenona pode ser alternativa em situações selecionadas, mas não elimina risco de hipercalemia; monitorar.
 
 ### Condições clínicas associadas
 
@@ -103,8 +109,8 @@ Para coronariopatia, doença renal crônica, diabetes, obesidade, pós-AVC e ins
 
 PAS ≥ 180 mmHg e/ou PAD ≥ 110 mmHg agora se divide em dois cenários, sem mais usar o termo "urgência hipertensiva":
 
-- **Elevação importante da PA sem lesão progressiva de órgão-alvo**: ajustar ou iniciar medicação oral, com reavaliação ambulatorial precoce em até 7 dias. Não é indicação de conduta agressiva no pronto-socorro.
-- **Emergência hipertensiva**: mesmos níveis de PA, mas com lesão de órgão-alvo aguda e progressiva. Manter em UTI, com metas de redução específicas por órgão acometido e anti-hipertensivo endovenoso.
+- **Elevação importante da PA sem lesão progressiva de órgão-alvo**: ajustar ou iniciar medicação oral, com reavaliação ambulatorial precoce em até 7 dias. Após excluir lesão aguda e sinais de alarme, não realizar redução abrupta. Dor torácica, dispneia ou déficit neurológico novos exigem avaliação imediata, sem aguardar sete dias.
+- **Emergência hipertensiva**: elevação da PA com lesão aguda de órgão-alvo, que pode ocorrer abaixo desses cortes em determinados contextos. Manter em UTI, com metas de redução específicas por órgão acometido e anti-hipertensivo endovenoso.
 
 ## Hipertensão resistente e refratária — classificação atualizada
 
@@ -132,7 +138,7 @@ Padrão de resposta a fármaco difere entre os dois grupos: hipertensão resiste
 Ver `source_refs` no cabeçalho deste documento.
 
 ## Como esta meta se relaciona com a da ESC 2024
-A diretriz brasileira de 2025 fixa **< 130/80 mmHg para todos**, sem estratificar por risco. A diretriz europeia de 2024, descrita nos documentos de hipertensão desta mesma biblioteca, adota alvo **sistólico de 120–129 mmHg e diastólico de 70–79 mmHg** em quem tolera o tratamento.
+A diretriz brasileira de 2025 fixa **<130/80 mmHg se tolerado**, com individualização. A diretriz europeia de 2024, descrita nos documentos de hipertensão desta mesma biblioteca, adota alvo **sistólico de 120–129 mmHg e diastólico de 70–79 mmHg** em quem tolera o tratamento.
 
 As duas não se contradizem por erro: são sociedades diferentes, com metodologias e populações de referência diferentes. Mas convivem nesta biblioteca, e o número que aparece muda conforme a página aberta. **Para a prática no Brasil, a referência é a diretriz da SBC.** A meta europeia, mais baixa, é útil para entender a direção do debate e para o paciente em que o alvo mais estrito é buscado e tolerado.
 

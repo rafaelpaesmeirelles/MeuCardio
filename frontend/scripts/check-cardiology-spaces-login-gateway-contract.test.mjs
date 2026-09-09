@@ -8,6 +8,7 @@ const styles = read("src/styles/cardiology-spaces-login.css");
 const finalStyles = read("src/styles/cardiology-spaces-login-approved-final.css");
 const approvedStyles = read("src/styles/corvia-approved-fidelity-20260904.css");
 const assetFixStyles = read("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
+const consistencyStyles = read("src/styles/corvia-ui-consistency-20260908.css");
 const heartAsset = read("src/assets/approvedHeartData.ts");
 const publicStart = styles.indexOf("Gateway público — primeira impressão");
 const publicStyles = styles.slice(publicStart);
@@ -55,6 +56,10 @@ test("claro e escuro compartilham a geometria e mudam somente a cromia", () => {
   assert.match(assetFixStyles, /@media \(max-width: 900px\)/);
   assert.match(assetFixStyles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(`${entrar}\n${approvedStyles}\n${assetFixStyles}`, /telesc[oó]pio|observat[oó]rio|montanha|planeta|lua cheia/i);
+  assert.match(consistencyStyles, /login-gateway--light[\s\S]*?linear-gradient\(145deg, #fbfeff/);
+  assert.match(consistencyStyles, /login-gateway--light \.login-gateway__galaxy-(?:image|canvas)[\s\S]*?mix-blend-mode: multiply !important/);
+  assert.match(consistencyStyles, /grayscale\(1\) sepia\(1\) saturate\(3\) hue-rotate\(155deg\)/);
+  assert.doesNotMatch(consistencyStyles, /\binvert\s*\(/i);
 });
 
 test("campos claros continuam vencendo o contrato global de formulário", () => {

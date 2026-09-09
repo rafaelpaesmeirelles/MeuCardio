@@ -40,6 +40,7 @@ ROTA = {
     "checklist": "/checklists/{slug}",
     "evidencia": "/evidencias/{slug}",
     "caso_clinico": "/casos-clinicos/{slug}",
+    "material_paciente": "/material-paciente/{slug}",
 }
 
 
@@ -59,6 +60,7 @@ def _disponivel(db: Session, item_type: str, slug: str) -> bool:
     from app.models.content import Document
     from app.models.drug import Drug
     from app.models.evidence import EvidenceRecord
+    from app.models.patient_material import PatientMaterial
     from app.models.study import ScientificStudy
 
     if item_type == "calculadora":
@@ -68,7 +70,8 @@ def _disponivel(db: Session, item_type: str, slug: str) -> bool:
 
     modelos = {"documento": Document, "medicamento": Drug,
                "estudo": ScientificStudy, "checklist": DischargeChecklist,
-               "evidencia": EvidenceRecord, "caso_clinico": ClinicalCase}
+               "evidencia": EvidenceRecord, "caso_clinico": ClinicalCase,
+               "material_paciente": PatientMaterial}
     Modelo = modelos.get(item_type)
     if Modelo is None:
         return False
@@ -96,6 +99,7 @@ def _titulo(db: Session, item_type: str, slug: str) -> str | None:
     from app.models.content import Document
     from app.models.drug import Drug
     from app.models.evidence import EvidenceRecord
+    from app.models.patient_material import PatientMaterial
     from app.models.study import ScientificStudy
     from app.services.calculators import REGISTRY
 
@@ -113,6 +117,7 @@ def _titulo(db: Session, item_type: str, slug: str) -> str | None:
         "checklist": (DischargeChecklist, "condicao"),
         "evidencia": (EvidenceRecord, "statement"),
         "caso_clinico": (ClinicalCase, "titulo"),
+        "material_paciente": (PatientMaterial, "titulo"),
     }
     par = modelos_e_campo.get(item_type)
     if par is None:

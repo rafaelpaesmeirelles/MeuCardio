@@ -20,19 +20,23 @@ CLINICAL_DOMAINS: tuple[dict[str, object], ...] = (
         "label": "Arritmias, eletrofisiologia e dispositivos",
         "categories": (
             "arritmia", "arritmia_supraventricular", "disturbio_de_conducao",
-            "dispositivo_cardiaco", "cardiogenetica",
+            "dispositivo_cardiaco", "cardiogenetica", "genetica_cardiovascular",
         ),
     },
     {
         "id": "coronaria_e_intervencao",
         "label": "Doença coronariana e intervenção",
-        "categories": ("doenca_coronariana", "avaliacao_pre_procedimento"),
+        "categories": (
+            "doenca_coronariana", "avaliacao_pre_procedimento",
+            "avaliacao_perioperatoria",
+        ),
     },
     {
         "id": "insuficiencia_e_miocardio",
         "label": "Insuficiência cardíaca, miocárdio e cardiomiopatias",
         "categories": (
             "insuficiencia_cardiaca", "cardiomiopatia", "doenca_miocardica",
+            "transplante",
         ),
     },
     {
@@ -65,7 +69,10 @@ CLINICAL_DOMAINS: tuple[dict[str, object], ...] = (
     {
         "id": "inflamatorias_pericardio_e_infecciosas",
         "label": "Doenças inflamatórias, infecciosas e do pericárdio",
-        "categories": ("doenca_inflamatoria", "pericardio", "histiocitose"),
+        "categories": (
+            "doenca_inflamatoria", "pericardio", "doencas_pericardicas",
+            "histiocitose", "sequelas_pos_infecciosas",
+        ),
     },
     {
         "id": "cardiopatias_congenitas",
@@ -118,6 +125,7 @@ CLINICAL_DOMAINS: tuple[dict[str, object], ...] = (
         "categories": (
             "sintoma_e_sindrome", "sintoma_e_exame", "sindrome_clinica",
             "avaliacao_esportiva", "planejamento_reprodutivo", "planejamento",
+            "disautonomia",
         ),
     },
 )

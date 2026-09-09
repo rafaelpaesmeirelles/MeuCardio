@@ -1,11 +1,16 @@
 ---
-title: "ACC/AHA 2025: diretriz de hipertensão arterial em adultos"
+title: 'ACC/AHA 2025: diretriz de hipertensão arterial em adultos'
 slug: acc-aha-2025-diretriz-hipertensao-arterial-adultos
-theme: "Hipertensão"
+theme: Hipertensão
 kind: diretriz
 review_status: revisado
-source_refs: ["Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242."]
-legacy_source: "Documento novo. Diretriz oficial AHA/ACC/JACC conferida em 08/08/2026."
+source_refs:
+- 'Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline
+  for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol.
+  2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.'
+legacy_source: Documento novo. Diretriz oficial AHA/ACC/JACC conferida em 08/08/2026.
+review_note: 'Revisão independente de dependência em08/09/2026: Explicitados limiares de início e combinação estágio2;
+  causas secundárias separadas de pseudorresistência.'
 ---
 
 # ACC/AHA 2025: diretriz de hipertensão arterial em adultos
@@ -30,15 +35,17 @@ A diretriz reforça como base do tratamento:
 - abordagem de determinantes sociais e barreiras à adesão.
 
 ## Tratamento farmacológico
-A estratégia medicamentosa deve considerar grau de elevação pressórica, risco global, comorbidades e tolerabilidade. Em pacientes com pressão claramente acima da meta, combinação inicial de fármacos de classes complementares pode facilitar controle mais rápido e reduzir inércia terapêutica.
+Em adultos não gestantes, iniciar tratamento com PA média ≥140/90 mmHg. Com PA ≥130/80 mmHg, tratar se houver doença cardiovascular, AVC prévio, diabetes, doença renal crônica ou risco cardiovascular PREVENT em dez anos ≥7,5%. Abaixo desse risco e sem essas condições, iniciar medidas comportamentais e acrescentar fármacos se a PA permanecer ≥130/80 após 3–6 meses.
+
+Na hipertensão estágio 2 (≥140/90 mmHg), a recomendação é iniciar dois agentes de primeira linha de classes diferentes, preferencialmente em comprimido único, considerando contraindicações e tolerabilidade.
 
 ## Hipertensão resistente
 A confirmação de resistência exige excluir pseudorresistência, incluindo:
 - técnica inadequada de medida;
 - baixa adesão;
 - efeito do avental branco;
-- uso de fármacos/substâncias que elevam PA;
-- causas secundárias de hipertensão.
+
+Substâncias pressoras e causas secundárias devem ser investigadas em paralelo: podem produzir hipertensão verdadeira e não são, por definição, pseudorresistência.
 
 Após confirmação, otimização farmacológica e investigação de causas secundárias permanecem fundamentais. Terapias intervencionistas, como denervação renal, devem ser consideradas dentro de critérios clínicos e evidência disponível, não como substitutas automáticas do tratamento medicamentoso otimizado.
 

@@ -82,13 +82,16 @@ def test_login_screen_uses_dynamic_viewport_without_social_buttons():
     assert 'className={`login login-gateway login-gateway--public login-gateway--${temaPublico}`}' in login
     assert 'data-login-theme={temaPublico}' in login
     assert 'prehome--login prehome--fullscreen' not in login
-    # A disciplina de cascata final congelada em 04/09/2026: as duas camadas
-    # de fidelidade e o lock visual ficam por último. Testes não podem voltar
-    # a exigir uma arte intermediária rejeitada.
-    assert local_styles[-3:] == [
+    # A disciplina de cascata consolidada em 08/09/2026: as camadas aprovadas
+    # continuam na mesma ordem, seguidas apenas pelo refinamento de fidelidade
+    # e pela consistência responsiva final. Testes não podem reordenar essas
+    # folhas e alterar silenciosamente a arte homologada.
+    assert local_styles[-5:] == [
         'import "../styles/corvia-approved-fidelity-20260904.css";',
         'import "../styles/corvia-approved-fidelity-asset-fix-20260904.css";',
         'import "../styles/corvia-login-final-approved-20260904.css";',
+        'import "../styles/corvia-login-fidelity-20260905.css";',
+        'import "../styles/corvia-ui-consistency-20260908.css";',
     ]
     assert '/auth/social/providers' not in login
     assert '/auth/social/${provider}/start' not in login

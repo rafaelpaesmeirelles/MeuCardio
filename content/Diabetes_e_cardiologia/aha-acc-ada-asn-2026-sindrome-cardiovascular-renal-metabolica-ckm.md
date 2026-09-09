@@ -27,7 +27,7 @@ A diretriz usa estágios que representam progressão de risco e doença:
 O objetivo não é apenas identificar progressão, mas também reconhecer a possibilidade de **regressão de estágio** por mudança de estilo de vida, perda ponderal e tratamento efetivo dos componentes modificáveis.
 
 ## PREVENT passa a integrar o estadiamento e a intensidade terapêutica
-Para indivíduos em estágios CKM 0–3, a diretriz recomenda quantificar risco com as equações **PREVENT**, que estimam risco em 10 e 30 anos para:
+Para indivíduos em estágios CKM 0–3, a diretriz recomenda quantificar risco com as equações **PREVENT**, que estimam risco em **10 anos dos 30 aos 79 anos** e em **30 anos somente dos 30 aos 59 anos**, para:
 
 - doença cardiovascular aterosclerótica;
 - insuficiência cardíaca;

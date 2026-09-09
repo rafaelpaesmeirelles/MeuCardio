@@ -1,19 +1,22 @@
 ---
-title: "ESC 2026 — Reabilitação Cardíaca: Modelo Multicomponente, Prescrição e Desfechos"
+title: "Reabilitação cardíaca: modelo multicomponente, prescrição e desfechos"
 slug: esc-2026-reabilitacao-cardiaca-sintese-pratica-corvia
 theme: "Prevenção e lipídios"
 kind: documento
 fonte_producao: chatgpt
 review_status: revisado
-review_note: "Síntese clínica original em português, produzida a partir da diretriz oficial ESC 2026 fornecida para revisão. Não é tradução integral nem reprodução. O texto seleciona conceitos e recomendações de aplicação prática e preserva a referência oficial para consulta do documento completo."
-source_refs: ["European Society of Cardiology. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag099."]
+review_note: "Revisão 08/09/2026: DOI ehag099 não confirmado; retiradas atribuições e classes sem fonte verificável. Síntese sustentada por ESC2021, Thomas2019 e Cochrane2023; slug legado preservado para continuidade."
+source_refs:
+  - "Visseren et al. 2021 ESC prevention guideline. PMID: 34458905"
+  - "Thomas et al. Home-Based Cardiac Rehabilitation. Circulation. 2019. PMID: 31082266"
+  - "McDonagh et al. Home-based versus centre-based cardiac rehabilitation. Cochrane. 2023. PMID: 37888805"
 ---
 
-# ESC 2026 — Reabilitação Cardíaca
+# Reabilitação cardíaca
 
 ## Conceito central
 
-A reabilitação cardíaca (RC) em 2026 não deve ser reduzida a “programa de exercícios”. A diretriz descreve uma intervenção **multicomponente, multidisciplinar e centrada na pessoa**, na qual treinamento físico permanece essencial, mas é integrado a educação e autocuidado, otimização farmacológica, modificação de estilo de vida, suporte psicossocial e acompanhamento de resultados.
+A reabilitação cardíaca (RC) não deve ser reduzida a “programa de exercícios”. O modelo multicomponente descreve uma intervenção **multicomponente, multidisciplinar e centrada na pessoa**, na qual treinamento físico permanece essencial, mas é integrado a educação e autocuidado, otimização farmacológica, modificação de estilo de vida, suporte psicossocial e acompanhamento de resultados.
 
 Para o CorVIA, RC deve aparecer como uma etapa longitudinal do tratamento cardiovascular e não como conteúdo isolado de prevenção.
 
@@ -35,18 +38,18 @@ A prescrição deve ser individualizada e reavaliada, com integração entre car
 
 ## 2. Exercício continua central, mas não sozinho
 
-O treinamento físico deve ser prescrito de forma estruturada, considerando segurança, intensidade, frequência, duração, modalidade e progressão. A diretriz trata separadamente exercício aeróbico, treinamento resistido e estratégias adaptadas a populações com maior complexidade.
+O treinamento físico deve ser prescrito de forma estruturada, considerando segurança, intensidade, frequência, duração, modalidade e progressão. A prescrição distingue exercício aeróbico, treinamento resistido e estratégias adaptadas a populações com maior complexidade.
 
 No CorVIA, uma recomendação de exercício deve ser contextualizada pelo diagnóstico e pelo risco: paciente pós-SCA, com IC, valvopatia, cardiomiopatia, cardiopatia congênita, arritmia ou dispositivo não deve receber uma orientação genérica idêntica.
 
 ## 3. Resultados relatados pelo paciente tornam-se parte formal da qualidade
 
-A ESC 2026 reforça que resultados percebidos pelo próprio paciente devem ser medidos de maneira sistemática.
+A avaliação do programa considera que resultados percebidos pelo próprio paciente devem ser medidos de maneira sistemática.
 
-- avaliação de **patient-reported outcomes (PROs)** em pacientes com indicação de RC: **Classe I, nível A**;
-- utilização de instrumentos validados de **PROMs** para medir esses resultados: **Classe I, nível C**;
-- avaliação da experiência do paciente por **PREs/PREMs**, para identificar barreiras e melhorar o cuidado: **Classe I, nível C**;
-- utilização de PROs em pesquisa e avaliação de programas: **Classe I, nível C**.
+- avaliação de **patient-reported outcomes (PROs)** em pacientes com indicação de RC;
+- utilização de instrumentos validados de **PROMs** para medir esses resultados;
+- avaliação da experiência do paciente por **PREs/PREMs**, para identificar barreiras e melhorar o cuidado;
+- utilização de PROs em pesquisa e avaliação de programas.
 
 **Implicação CorVIA:** capacidade funcional, sintomas, qualidade de vida, percepção de saúde, aderência e experiência com o programa devem poder ser acompanhados longitudinalmente, e não apenas descritos em texto livre.
 
@@ -74,7 +77,7 @@ O CorVIA deve cruzar RC com **ansiedade/depressão, fragilidade, cognição, com
 
 ## 6. Modelos de entrega: presencial, remoto e híbrido
 
-A diretriz contempla telemonitorização e modelos remotos/híbridos. A escolha do formato deve considerar segurança, risco clínico, acesso, alfabetização digital, preferências do paciente e capacidade de monitorização.
+Modelos avaliados incluem telemonitorização e modelos remotos/híbridos. A escolha do formato deve considerar segurança, risco clínico, acesso, alfabetização digital, preferências do paciente e capacidade de monitorização.
 
 O princípio é ampliar participação sem transformar conveniência em redução de segurança. Pacientes de maior risco podem necessitar avaliação e supervisão presencial mais intensa.
 
@@ -117,8 +120,8 @@ Relacionar este documento a **IAM/SCA, doença coronariana crônica, PCI/CABG, i
 
 Em exames e avaliação funcional, ligar a **ECG, ecocardiograma, teste ergométrico, teste cardiopulmonar de exercício, pressão arterial, frequência cardíaca, parâmetros metabólicos e avaliação de capacidade funcional**. Em seguimento, integrar **adesão, PRO/PROM/PREM, telemonitorização, educação ao paciente e metas de prevenção secundária**.
 
-A diretriz ESC 2026 de IC deve aparecer como conexão bidirecional, pois recomenda exercício personalizado e RC em diferentes estágios, inclusive após descompensação quando clinicamente seguro e em pacientes com LVAD.
+Exercício em IC requer estabilidade clínica e prescrição individual; cenários de maior complexidade exigem equipe especializada.
 
 ## Limite editorial
 
-Este material é uma síntese clínica própria do CorVIA e não reproduz a diretriz. A definição completa de indicações, contraindicações, estratificação de risco, prescrição de exercício e padrões de qualidade deve ser consultada na publicação oficial pelo DOI acima.
+Este material é uma síntese clínica própria do CorVIA e não reproduz a diretriz. A definição completa de indicações, contraindicações, estratificação de risco, prescrição de exercício e padrões de qualidade deve ser consultada nas fontes verificadas acima, sem atribuir classes de recomendação não confirmadas.

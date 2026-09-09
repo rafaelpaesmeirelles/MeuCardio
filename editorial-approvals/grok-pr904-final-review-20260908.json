@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr904-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr904": "52cfa702d9e1fae3628f1b36a911fb1e412f34fd"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-hipertensao-por-vegf-tki-destino",
+      "hipertensao-por-vegf-tki-checklist-ambulatorial-de-alarme",
+      "sinalizadores-ambulatoriais-hipertensao-por-vegf-tki-quando-encaminhar"
+    ]
+  }
+}

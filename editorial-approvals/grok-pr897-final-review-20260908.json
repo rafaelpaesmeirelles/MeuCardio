@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr897-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr897": "8ce3457221cc1c4c37b3ad5b3012180ecc4b420f"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-creatinina-e-potassio-ic-drc-destino",
+      "hiperpotassemia-ambulatorial-na-ic-com-drc-quando-escalar",
+      "piora-de-creatinina-sob-gdmt-ambulatorial-quando-encaminhar-nefrologia"
+    ]
+  }
+}

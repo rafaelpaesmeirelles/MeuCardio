@@ -1,12 +1,12 @@
 ---
-title: "Lipoproteína(a) elevada: o que fazer HOJE, enquanto os desfechos de pelacarsena e olpasirana não chegam"
+title: "Lipoproteína(a) elevada: o que fazer hoje após o topline negativo do HORIZON"
 slug: lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam
 theme: "Prevenção e lipídios"
 kind: protocolo
 fonte_producao: grok
-summary: "Protocolo de consultório para o adulto com Lp(a) já medida (ou ainda não medida) enquanto Lp(a)HORIZON e OCEAN(a) Outcomes não publicaram redução de MACE. Não substitui o consenso EAS 2022 de rastreio nem o ensaio OCEAN(a)-DOSE: responde o que intensificar, o que não converter, o que não prescrever e o que não esperar do fármaco."
+summary: "Protocolo de consultório para o adulto com Lp(a) já medida (ou ainda não medida) após a patrocinadora informar que o HORIZON com pelacarsena não atingiu o desfecho primário de MACE, enquanto a publicação integral e os desfechos de outras moléculas seguem pendentes. Responde o que intensificar, o que não converter e o que não prescrever."
 review_status: revisado
-review_note: "Síntese original, 29/08/2026. Classes e GRADE só de tabelas lidas nesta revisão editorial (ESC/EAS 2025 Tabela de Recomendação 4 no PDF/EAS; SBC 2025 tabela de Lp(a) no PMC12674852). A linha ESC/EAS 2019 de dosagem ao menos uma vez é Classe IIa no texto conferido do acervo; o nível C dessa linha não foi relido na tabela integral nesta revisão editorial. COR/LOE da ACC/AHA 2026 para 'medir ao menos uma vez' não foi lido em caixa de recomendação com os dois campos juntos — não atribuído. AAS isolado por Lp(a) alta: nenhuma tabela lida recomenda; marcado LIMITE DA EVIDÊNCIA. PubMed e ClinicalTrials.gov conferidos em 29/08/2026: Lp(a)HORIZON sem artigo de desfecho; OCEAN(a) Outcomes em curso."
+review_note: "Síntese original de 29/08/2026, atualizada em 08/09/2026. Classes e GRADE só de tabelas lidas nesta revisão editorial (ESC/EAS 2025 Tabela de Recomendação 4 no PDF/EAS; SBC 2025 tabela de Lp(a) no PMC12674852). A linha ESC/EAS 2019 de dosagem ao menos uma vez é Classe IIa no texto conferido do acervo; o nível C dessa linha não foi relido na tabela integral nesta revisão editorial. COR/LOE da ACC/AHA 2026 para 'medir ao menos uma vez' não foi lido em caixa de recomendação com os dois campos juntos — não atribuído. AAS isolado por Lp(a) alta: nenhuma tabela lida recomenda; marcado LIMITE DA EVIDÊNCIA. Em 04/09/2026, a patrocinadora Novartis comunicou que o HORIZON com pelacarsena não atingiu o desfecho primário; artigo completo, HR, IC, valor de p, subgrupo ≥90 mg/dL e segurança detalhada permaneciam indisponíveis. OCEAN(a) Outcomes seguia em curso."
 source_refs:
   - "Kronenberg F, Mora S, Stroes ESG, Ference BA, Arsenault BJ, Berglund L, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785. PMCID: PMC9639807"
   - "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418"
@@ -17,11 +17,13 @@ source_refs:
   - "Tsimikas S, Karwatowska-Prokopczuk E, Gouni-Berthold I, et al. Lipoprotein(a) Reduction in Persons with Cardiovascular Disease. N Engl J Med. 2020;382(3):244-255. DOI: 10.1056/NEJMoa1905239. PMID: 31893580"
   - "Cho L, Nicholls SJ, Nordestgaard BG, et al. Design and Rationale of Lp(a)HORIZON Trial: Assessing the Effect of Lipoprotein(a) Lowering With Pelacarsen on Major Cardiovascular Events in Patients With CVD and Elevated Lp(a). Am Heart J. 2025;287:1-9. DOI: 10.1016/j.ahj.2025.03.019. PMID: 40185318 — artigo de desenho, não de desfecho"
   - "Kamstrup PR, Tybjærg-Hansen A, Steffensen R, Nordestgaard BG. Genetically elevated lipoprotein(a) and increased risk of myocardial infarction. JAMA. 2009;301(22):2331-2339. DOI: 10.1001/jama.2009.801. PMID: 19509380"
-  - "ClinicalTrials.gov NCT04023552. Assessing the Impact of Lipoprotein(a) Lowering With Pelacarsen (TQJ230) on Major Cardiovascular Events in Patients With CVD (Lp(a)HORIZON). Last update posted 2026-05-06; status Active, not recruiting; primary completion estimated 2026-06-30. Sem resultados postados na consulta de 29/08/2026"
+  - "ClinicalTrials.gov NCT04023552. Assessing the Impact of Lipoprotein(a) Lowering With Pelacarsen (TQJ230) on Major Cardiovascular Events in Patients With CVD (Lp(a)HORIZON). Registro conferido em 08/09/2026: concluído; conclusão primária efetiva em 16/07/2026; sem resultados tabulares postados. O registro descreve desfechos primários na população ≥70 mg/dL e na subpopulação ≥90 mg/dL, mas não substitui a publicação dos resultados."
   - "ClinicalTrials.gov NCT05581303. Olpasiran Trials of Cardiovascular Events and Lipoprotein(a) Reduction (OCEAN(a) Outcomes). Em curso; conclusão estimada em 2028 na ficha consultada"
+  - "Novartis. Lp(a)HORIZON Phase III topline results for pelacarsen. Comunicado da patrocinadora, 4 September 2026. NCT04023552. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+  - "Documento da casa lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta"
 ---
 
-# Lipoproteína(a) elevada: o que fazer HOJE, enquanto os desfechos não chegam
+# Lipoproteína(a) elevada: o que fazer hoje após o topline negativo do HORIZON
 
 Este texto não é o consenso EAS 2022 de **quem dosar** — esse documento já existe em
 [`lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022`](lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022.md).
@@ -29,13 +31,14 @@ Tampouco é o ensaio de busca de dose da olpasirana — esse está em
 [`lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose`](lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose.md).
 A pergunta daqui é outra, e é a que sobra no consultório depois desses dois:
 
-**O resultado já veio (ou ainda falta pedi-lo). Pelacarsena e olpasirana ainda não
-provaram reduzir infarto, AVC ou morte. O que se faz nesta semana?**
+**O resultado de Lp(a) já veio (ou ainda falta pedi-lo). A patrocinadora informou
+que o HORIZON com pelacarsena não atingiu o desfecho primário; os dados integrais e
+os desfechos de outras moléculas permanecem pendentes. O que se faz nesta semana?**
 
 A árvore correspondente está em
 [`fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco`](fluxograma-lpa-elevada-rastreio-risco-residual-e-o-que-nao-esperar-do-farmaco.md).
 
-## O que está, e o que não está, publicado em 29/08/2026
+## O que está, e o que não está, disponível em 08/09/2026
 
 Três fatos, e só esses, organizam a conduta:
 
@@ -43,14 +46,15 @@ Três fatos, e só esses, organizam a conduta:
    antisenso, Tsimikas et al., N Engl J Med 2020, PMID 31893580) e olpasirana (siRNA,
    OCEAN(a)-DOSE, PMID 36342163) baixam o biomarcador de forma substancial em fase 2.
    Isso não é desfecho clínico.
-2. **O ensaio de desfecho da pelacarsena — Lp(a)HORIZON, NCT04023552 — não tinha
-   artigo de MACE no PubMed em 29/08/2026.** O que existe é o paper de desenho
-   (Cho et al., Am Heart J 2025, PMID 40185318): fase 3, 8.323 pacientes com DCV
-   estabelecida e Lp(a) ≥70 mg/dL (cerca de 149 nmol/L). A ficha do ClinicalTrials.gov
-   consultada nesta data (última atualização 06/05/2026) permanece *Active, not recruiting*,
-   com conclusão primária estimada em 30/06/2026 e **sem resultados postados**.
-   Revisões de 2026 ainda descrevem o resultado como esperado para o fim do ano.
-   **Não se inventa Classe I de redução de evento para pelacarsena.**
+2. **Em 04/09/2026, a patrocinadora Novartis comunicou que o Lp(a)HORIZON com
+   pelacarsena não atingiu o desfecho primário de MACE de 4 pontos na população
+   geral.** O comunicado informa redução de Lp(a), mas não publica HR, IC, valor de p,
+   resultado do subgrupo ≥90 mg/dL nem segurança detalhada; a apresentação em congresso
+   e o artigo completo revisado por pares ainda estavam pendentes. O paper disponível
+   no PubMed é o de desenho (Cho et al., Am Heart J 2025, PMID 40185318): fase 3,
+   8.323 pacientes com DCV estabelecida e Lp(a) ≥70 mg/dL. Portanto, o dado atual é
+   topline da patrocinadora, não uma tabela completa de resultados. **Não se atribui
+   Classe I de redução de evento à pelacarsena.**
 3. **OCEAN(a) Outcomes (olpasirana, NCT05581303) continua em curso**, com conclusão
    estimada bem depois desta data (ficha consultada: por volta de 2028). O OCEAN(a)-DOSE
    continua sendo ensaio de dose e de biomarcador.
@@ -122,7 +126,7 @@ muda perto da fronteira e o laudo veio só em mg/dL, a conduta honesta é repeti
 em nmol/L no mesmo laboratório — não inventar um fator.
 
 A ESC/EAS 2025 admite massa "para fins clínicos", mas declara preferência molar.
-A SBC é mais dura: evita mg/dL e proíbe a fórmula. No Brasil, siga a SBC na unidade;
+A SBC é mais restritiva: prefere nmol/L e declara que fórmulas de conversão não são recomendadas. No Brasil, siga a SBC na unidade;
 use o corte da diretriz que está aplicando, na unidade em que ela o escreveu.
 
 ## Passo 3 — Interpretar sem transformar corte em biologia
@@ -164,7 +168,7 @@ repetição anual no caso índice.
 
 ## Passo 5 — O que se faz hoje: tratar o risco residual que já tem desfecho
 
-Na ausência de terapia específica de Lp(a) com MACE publicado, a ESC/EAS 2025
+Sem terapia específica de Lp(a) com benefício de MACE demonstrado, a ESC/EAS 2025
 escreve no texto (não é linha nova da Tabela 4): manejo precoce dos fatores de
 risco e **LDL mais intensivo**, considerando o risco absoluto **e** o nível de
 Lp(a). A EAS 2022 diz a mesma coisa. A SBC 2025: na secundária, Lp(a) alta prediz
@@ -194,19 +198,21 @@ Tradução operacional, sem inventar classe de "meta de LDL por causa da Lp(a)":
 ## Passo 6 — O que não esperar do fármaco (e o que não prescrever)
 
 - **Não iniciar pelacarsena, olpasirana, zerlasirana nem muvalaplina como se
-  reduzissem MACE.** Fase 2 mede concentração. Fase 3 de desfecho da pelacarsena
-  **não estava publicada em 29/08/2026**. A da olpasirana **não estava concluída**.
+  reduzissem MACE.** A patrocinadora informou que o HORIZON com pelacarsena não
+  atingiu o desfecho primário; a publicação integral ainda estava pendente. Os
+  estudos de fase 2 das demais moléculas medem concentração, e o CVOT da olpasirana
+  **não estava concluído**. O resultado da pelacarsena não é efeito de classe.
   Não há Classe I, IIa ou IIb de redução de evento para esses compostos em
   nenhuma tabela lida. Quem quiser o detalhe de dose da olpasirana vai ao
   documento OCEAN(a)-DOSE; quem quiser zerlasirana, ao ALPACAR-360; muvalaplina,
   ao ensaio de fase 2 — nenhum deles autoriza prescrição de desfecho.
-- **Não deixar o LDL pela metade "esperando o HORIZON".** O paciente de secundária
+- **Não deixar o LDL pela metade aguardando a publicação integral do HORIZON.** O paciente de secundária
   com LDL 78 mg/dL e Lp(a) 200 nmol/L tem uma conduta hoje (intensificar hipolipemiante
-  com evidência de evento) e uma hipótese amanhã (RNA se o CVOT for positivo).
+  com evidência de evento) e perguntas de pesquisa separadas para cada agente investigacional.
   Inverter a ordem é inércia, não prudência.
-- **Não vender "zerei a Lp(a)" como equivalente a zerei o risco.** Mesmo que o
-  CVOT um dia seja positivo, a magnitude, a população (secundária, corte de
-  entrada ≥70 mg/dL no HORIZON) e o NNT não se conhecem ainda.
+- **Não vender "zerei a Lp(a)" como equivalente a zerei o risco.** O HORIZON não
+  atingiu o desfecho primário comunicado, e os CVOTs de outras moléculas precisam
+  responder separadamente se haverá benefício, em qual população e com qual NNT.
 - **Ácido acetilsalicílico só porque a Lp(a) está alta: não.** Nenhuma tabela
   lida nesta revisão editorial (ESC/EAS 2019, ESC/EAS 2025 Tabela 4, SBC 2025 Lp(a), trecho
   visível da ACC/AHA 2026) recomenda AAS como tratamento da Lp(a). A ACC/AHA 2026,
@@ -231,13 +237,14 @@ Tradução operacional, sem inventar classe de "meta de LDL por causa da Lp(a)":
 ## Armadilhas clínicas
 
 - **Converter mg/dL → nmol/L com fator fixo** e reclassificar o paciente com o
-  número inventado. A SBC 2025 proíbe a fórmula; as diretrizes europeia e americana
+  número inventado. A SBC 2025 declara que a fórmula não é recomendada; as diretrizes europeia e americana
   nem sequer combinam o nmol/L do mesmo 50 mg/dL.
 - **Tratar a ausência do CVOT como motivo para não dosar.** A dosagem muda a
   intensidade do que já é tratável. A SBC chama isso de Forte (Moderada na
   população geral, Alta nos grupos de alto rendimento diagnóstico).
-- **Atribuir Classe I de redução de evento a pelacarsena ou olpasirana.** O HORIZON
-  em 29/08/2026 é desenho + ficha de trial, não resultado.
+- **Atribuir Classe I de redução de evento a pelacarsena ou extrapolar o topline
+  para olpasirana e outros agentes.** O HORIZON não atingiu o desfecho primário no
+  comunicado da patrocinadora; os detalhes integrais permaneciam pendentes.
 - **Prescrever iPCSK9 "para Lp(a)"** quando o LDL já está na meta da categoria —
   o ganho de 15–30% sobre Lp(a) não tem indicação regulatória nem classe de
   diretriz para esse fim nas tabelas lidas.
@@ -255,7 +262,8 @@ Tradução operacional, sem inventar classe de "meta de LDL por causa da Lp(a)":
    em nmol/L se a decisão mudar.
 3. ≥50 mg/dL ou ≥125 nmol/L: fator agravante; cascata familiar; meta de LDL da
    categoria, agora, com fármaco que já tem desfecho.
-4. Não comece RNA, não prometa o HORIZON, não abra AAS "por Lp(a)".
-5. Explique ao paciente que o número é genético, que o remédio específico ainda
-   não provou reduzir infarto, e que o trabalho desta década é o risco residual
+4. Não comece RNA, explique que o HORIZON com pelacarsena não atingiu o desfecho
+   primário e não extrapole esse topline para outras moléculas; não abra AAS "por Lp(a)".
+5. Explique ao paciente que o número é genético, que nenhuma terapia específica
+   tem benefício de evento demonstrado e que o trabalho de hoje é o risco residual
    que já sabemos tratar.

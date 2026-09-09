@@ -496,11 +496,12 @@ def _strict_release_manifest_issues(
         front_counts[front] = len(raw_slugs)
         for raw_slug in raw_slugs:
             slug = raw_slug.strip()
-            if slug in seen:
+            identity = f"{front}:{slug}"
+            if identity in seen:
                 raise ValueError(
-                    f"Slug duplicado no manifesto estrito de release: {slug}"
+                    f"Slug duplicado no manifesto estrito de release: {identity}"
                 )
-            seen.add(slug)
+            seen.add(identity)
             selected.append((front, kind_by_front[front], slug))
     if not selected:
         raise ValueError("Manifesto estrito de release não seleciona nenhum item")
@@ -885,7 +886,7 @@ def audit(
         "documento": ("documento", "fluxograma"), "estudo": ("estudo",),
         "medicamento": ("medicamento",), "checklist": ("checklist",),
         "caso_clinico": ("caso_clinico",), "evidencia": ("evidencia",),
-        "calculadora": ("calculadora",),
+        "calculadora": ("calculadora",), "material_paciente": ("material_paciente",),
     }
     for item in manifests["trilha"]:
         for step in item.get("etapas") or []:

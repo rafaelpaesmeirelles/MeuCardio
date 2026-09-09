@@ -5,7 +5,7 @@ theme: "Insuficiência cardíaca"
 kind: documento
 review_status: revisado
 source_refs: ["Walsh MN, Kober L, Sliwa K, et al.; Joint AHA/ACC/ESC/WHF Task Force for the Universal Definition of Heart Failure in collaboration with HFSA, HFA and JHFS. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). J Am Coll Cardiol. Published online June 29, 2026. DOI: 10.1016/j.jacc.2026.05.036. PMID: 42370864.", "Walsh MN, Kober L, Sliwa K, et al. AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026). Circulation. Published online June 29, 2026. DOI: 10.1161/CIR.0000000000001455. PMID: 42366997."]
-review_note: "Classificação corrigida em 26/08/2026: a fonte primária é um Expert Consensus Document de definição/nomenclatura, não diretriz terapêutica com classes e níveis de recomendação. Mantido como documento e conectado aos módulos locais de diagnóstico e tratamento."
+review_note: "Revisão adversarial Codex 08/09/2026: sintomas OU sinais conforme Tabela 1 e ausência de teste isolado excludente conferidas no texto integral PMC13330914. Classificação corrigida em 26/08/2026: a fonte primária é um Expert Consensus Document de definição/nomenclatura, não diretriz terapêutica com classes e níveis de recomendação. Mantido como documento e conectado aos módulos locais de diagnóstico e tratamento."
 legacy_source: "Documento novo. Consenso internacional co-publicado por JACC/Circulation/EHJ/Global Heart em 29/06/2026; texto integral aberto e registros PubMed conferidos em 13/08/2026. Não é guideline terapêutica."
 ---
 
@@ -19,13 +19,9 @@ O documento não é uma diretriz de tratamento. Sua função é padronizar **o q
 A mudança central é abandonar uma visão excessivamente rígida baseada apenas em cortes numéricos de FEVE e reconhecer que insuficiência cardíaca é uma síndrome dinâmica, de múltiplas causas e com trajetórias que podem melhorar, entrar em remissão ou recuperar-se sem que isso signifique necessariamente desaparecimento definitivo do risco.
 
 ## Definição da síndrome
-Insuficiência cardíaca continua sendo uma **síndrome clínica de causas diversas**, caracterizada pelo conjunto de:
+A definição exige uma avaliação integrada da síndrome e de sua causa cardíaca. **Sintomas ou sinais, ou ambos**, atuais ou prévios, atribuíveis a anormalidade estrutural ou funcional cardíaca caracterizam o estágio C; não é obrigatório encontrar simultaneamente dispneia, edema e estertores na consulta. A Tabela 1 do consenso explicita essa alternativa.
 
-- sintomas típicos;
-- sinais ao exame físico;
-- e anormalidades laboratoriais ou de imagem compatíveis com congestão pulmonar/sistêmica ou alteração do débito cardíaco;
-
-quando esses achados podem ser atribuídos a uma **anormalidade estrutural ou funcional cardíaca**.
+Achados laboratoriais, imagem e hemodinâmica ajudam a confirmar a explicação cardíaca. Um exame físico sem congestão aparente ou peptídeos natriuréticos normais não exclui IC em todo contexto, especialmente na ICFEp; a investigação deve acompanhar a probabilidade clínica. Essa interpretação não transforma qualquer sintoma inespecífico em diagnóstico de IC.
 
 A certeza diagnóstica aumenta com:
 
@@ -142,7 +138,9 @@ A Segunda Definição Universal de 2026 desloca a insuficiência cardíaca de um
 
 ## Tudo com Tudo
 
-- [Atualização focada ESC 2023 de insuficiência cardíaca](atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca.md)
-- [Fluxograma da insuficiência cardíaca aguda descompensada](fluxograma-insuficiencia-cardiaca-aguda-descompensada.md)
-- [Estratégia diurética na insuficiência cardíaca aguda](estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada.md)
-- [Consenso ACC 2026 para diagnóstico, fenótipos e tratamento da ICFEp](acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento.md)
+- [Atualização focada ESC 2023 de insuficiência cardíaca](/biblioteca/atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca)
+- [Fluxograma da insuficiência cardíaca aguda descompensada](/biblioteca/fluxograma-insuficiencia-cardiaca-aguda-descompensada)
+- [Estratégia diurética na insuficiência cardíaca aguda](/biblioteca/estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada)
+- [Consenso ACC 2026 para diagnóstico, fenótipos e tratamento da ICFEp](/biblioteca/acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento)
+
+Fonte integral co-publicada: [Segunda Definição Universal de IC, Tabela 1 e definição da síndrome](https://pmc.ncbi.nlm.nih.gov/articles/PMC13330914/).

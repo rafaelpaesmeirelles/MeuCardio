@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr908-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr908": "26177f4899c99d72db87d14ea25704de0a5cdcbb"
+  },
+  "fronts": {
+    "documentos": [
+      "exames-pendentes-antes-da-liberacao-pos-miocardite-ambulatorial",
+      "fluxograma-ambulatorial-gate-liberacao-pos-miocardite-atleta",
+      "gate-ambulatorial-liberacao-retorno-pos-miocardite-no-atleta"
+    ]
+  }
+}

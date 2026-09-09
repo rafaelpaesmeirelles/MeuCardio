@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr891-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr891": "37221736962fcf51b54462bae89e9d9249309c4e"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-pde5-no-retorno-cardiologico",
+      "fluxograma-ambulatorial-pde5-quando-evitar-e-escalar",
+      "sinalizadores-ambulatoriais-pde5-e-nitrato"
+    ]
+  }
+}

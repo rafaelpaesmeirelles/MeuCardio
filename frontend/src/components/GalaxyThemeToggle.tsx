@@ -28,7 +28,15 @@ function useCanonicalSpacesIdentityCopy() {
   });
 }
 
-export default function GalaxyThemeToggle({ className = "" }: { className?: string }) {
+export default function GalaxyThemeToggle({
+  className = "",
+  showLabel = false,
+  clockwise = true,
+}: {
+  className?: string;
+  showLabel?: boolean;
+  clockwise?: boolean;
+}) {
   const { theme, toggleTheme } = useCorviaTheme();
   useCanonicalSpacesIdentityCopy();
 
@@ -36,6 +44,7 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
     <button
       type="button"
       className={`galaxy-theme-toggle${className ? ` ${className}` : ""}`}
+      data-rotation={clockwise ? "clockwise" : "counterclockwise"}
       onClick={toggleTheme}
       aria-label={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
       title={`Ativar modo ${theme === "light" ? "escuro" : "claro"}`}
@@ -47,7 +56,8 @@ export default function GalaxyThemeToggle({ className = "" }: { className?: stri
         aria-hidden="true"
         draggable={false}
       />
-      <MiniUniverseCanvas />
+      <MiniUniverseCanvas clockwise={clockwise} />
+      {showLabel ? <span className="galaxy-theme-toggle__label" aria-hidden="true">Mudar universo</span> : null}
     </button>
   );
 }

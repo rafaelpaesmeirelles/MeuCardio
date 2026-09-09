@@ -34,11 +34,32 @@ from app.services.scientific_loader_safety import (
 
 # "500 mg", "12,5mg", "5 mg/kg", "2 comprimidos ao dia", "80 UI"
 POSOLOGIA = re.compile(
-    r"\b\d+(?:[.,]\d+)?\s*(?:mg|g|mcg|µg|ml|mL|UI|mEq)\b"
+    r"\b\d+(?:[.,]\d+)?\s*(?P<unidade>mg|g|mcg|µg|ml|UI|mEq)\b"
     r"|\b\d+\s*(?:comprimido|cápsula|gota|ampola)s?\b"
     r"|\b\d+\s*x\s*/?\s*dia\b",
     re.I,
 )
+
+CONCENTRACAO_LABORATORIAL = re.compile(r"\s*/\s*dl\b", re.I)
+FLUXO_FISIOLOGICO = re.compile(r"\s*/\s*min\b", re.I)
+
+
+def _encontrar_posologia(texto: str) -> re.Match[str] | None:
+    """Encontra doses sem confundir unidades laboratoriais ou de depuração.
+
+    Valores como LDL em ``mg/dL`` e eGFR em ``mL/min/1,73 m²`` descrevem
+    resultados clínicos, não uma quantidade a ser administrada. Outras razões
+    (por exemplo, ``mg/kg/min``) continuam bloqueadas pelo guard.
+    """
+    for achado in POSOLOGIA.finditer(texto):
+        unidade = (achado.group("unidade") or "").casefold()
+        sufixo = texto[achado.end():]
+        if unidade == "mg" and CONCENTRACAO_LABORATORIAL.match(sufixo):
+            continue
+        if unidade == "ml" and FLUXO_FISIOLOGICO.match(sufixo):
+            continue
+        return achado
+    return None
 
 
 def _texto_do_registro(item: dict) -> str:
@@ -128,7 +149,7 @@ def carregar(caminho: str = "/material-paciente/metadados.json") -> dict:
     recusados: list[dict] = []
     try:
         for item in dados:
-            achado = POSOLOGIA.search(_texto_do_registro(item))
+            achado = _encontrar_posologia(_texto_do_registro(item))
             if achado:
                 recusados.append({"slug": item.get("slug"),
                                   "motivo": f"contém posologia: {achado.group(0)!r}"})

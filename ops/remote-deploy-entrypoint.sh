@@ -31,6 +31,18 @@ readonly REQUEST_KIND EXPECTED_SHA INTELLIGENCE_FORCE
 
 [[ -d "$PROJECT_DIR/.git" ]] || deny "production checkout not found"
 cd "$PROJECT_DIR"
+command -v flock >/dev/null 2>&1 || deny "flock is unavailable"
+
+# Serialize every operation accepted by the production key. deploy.sh keeps
+# its own transactional deploy lock; this outer, separate lock closes the
+# window before that transaction starts and also prevents the Intelligence
+# and CFM maintenance commands from running against containers mid-release.
+readonly GIT_RUNTIME_DIR="$(git rev-parse --git-dir)"
+readonly OPERATION_LOCK="${GIT_RUNTIME_DIR}/corvia-production-operation.lock"
+readonly DEPLOYED_SHA_MARKER="${GIT_RUNTIME_DIR}/corvia-last-successful-web-sha"
+exec 8>"$OPERATION_LOCK"
+flock -n 8 || deny "another production operation is already running"
+
 changes="$(git status --porcelain --untracked-files=normal -- . ':(exclude)downloads')"
 [[ -z "$changes" ]] || { printf 'Production checkout is dirty:\n%s\n' "$changes" >&2; exit 65; }
 git fetch --prune origin main
@@ -39,6 +51,11 @@ remote_main="$(git rev-parse --verify origin/main)"
 
 require_deployed_sha() {
   [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || deny "production SHA differs"
+  local backend_sha
+  backend_sha="$(docker compose -f docker-compose.prod.yml exec -T backend printenv DEPLOY_COMMIT 2>/dev/null || true)"
+  backend_sha="${backend_sha//$'\r'/}"
+  backend_sha="${backend_sha//$'\n'/}"
+  [[ "$backend_sha" == "$EXPECTED_SHA" ]] || deny "running backend SHA differs"
 }
 
 if [[ "$REQUEST_KIND" == "intelligence" ]]; then
@@ -57,6 +74,22 @@ if [[ "$REQUEST_KIND" == "cfm-sync" ]]; then
 fi
 
 # Web-only deploy. No native build, signing, staging, promotion or validation.
+# A retry after deploy.sh completed may arrive because a later public HTTP
+# certificate step failed. A clean checkout and the running backend must both
+# attest the exact current-main SHA before this command can safely become a
+# no-op; the shared operation lock excludes an in-flight release here.
+running_backend_sha="$(docker compose -f docker-compose.prod.yml exec -T backend printenv DEPLOY_COMMIT 2>/dev/null || true)"
+running_backend_sha="${running_backend_sha//$'\r'/}"
+running_backend_sha="${running_backend_sha//$'\n'/}"
+last_successful_sha="$(sed -n '1p' "$DEPLOYED_SHA_MARKER" 2>/dev/null || true)"
+if [[ "$last_successful_sha" == "$EXPECTED_SHA" \
+      && "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" \
+      && "$running_backend_sha" == "$EXPECTED_SHA" ]]; then
+  printf 'WEB_SHA=%s\n' "$EXPECTED_SHA"
+  printf 'Release %s is already deployed; no-op.\n' "$EXPECTED_SHA"
+  exit 0
+fi
+
 git checkout main
 git merge --ff-only "$EXPECTED_SHA"
 [[ "$(git rev-parse --verify HEAD)" == "$EXPECTED_SHA" ]] || deny "checkout SHA mismatch"
@@ -68,6 +101,13 @@ changes="$(git status --porcelain --untracked-files=normal -- . ':(exclude)downl
 # HTTPS certification and rollback. Do not add a second migration/recovery path
 # here; that was the source of the previous recovery deadlock.
 bash ./deploy.sh
+
+# This marker is the durable idempotency certificate. Write it only after the
+# complete deploy transaction succeeds, then publish atomically so a partial
+# release can never be mistaken for a completed one on a later retry.
+marker_tmp="$(mktemp "${DEPLOYED_SHA_MARKER}.XXXXXX")"
+printf '%s\n' "$EXPECTED_SHA" > "$marker_tmp"
+mv -f "$marker_tmp" "$DEPLOYED_SHA_MARKER"
 
 # Self-refresh the stable forced command after a successful web deploy so future
 # executions use the exact entrypoint from the deployed SHA.

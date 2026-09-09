@@ -4,7 +4,11 @@ slug: muvalaplin-inibidor-oral-da-formacao-de-lipoproteina-a-ensaio-de-fase-2
 theme: "Prevenção e lipídios"
 kind: estudo
 review_status: revisado
-source_refs: ["Nicholls SJ, Ni W, Rhodes GM, et al. Oral Muvalaplin for Lowering of Lipoprotein(a): A Randomized Clinical Trial. JAMA. 2025;333(3):222-231. DOI: 10.1001/jama.2024.24017. PMID: 39556768", "Nicholls SJ, Nissen SE, Fleming C, et al. Muvalaplin, an Oral Small Molecule Inhibitor of Lipoprotein(a) Formation: A Randomized Clinical Trial. JAMA. 2023;330(11):1042-1053. DOI: 10.1001/jama.2023.16503. PMID: 37638695"]
+source_refs:
+  - "Nicholls SJ, Ni W, Rhodes GM, et al. Oral Muvalaplin for Lowering of Lipoprotein(a): A Randomized Clinical Trial. JAMA. 2025;333(3):222-231. DOI: 10.1001/jama.2024.24017. PMID: 39556768"
+  - "Nicholls SJ, Nissen SE, Fleming C, et al. Muvalaplin, an Oral Small Molecule Inhibitor of Lipoprotein(a) Formation: A Randomized Clinical Trial. JAMA. 2023;330(11):1042-1053. DOI: 10.1001/jama.2023.16503. PMID: 37638695"
+  - "Novartis. Lp(a)HORIZON Phase III topline results for pelacarsen. Comunicado da patrocinadora, 4 September 2026. NCT04023552. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+  - "Documento da casa lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta"
 legacy_source: "Documento novo, ciclo 18 (07/08/2026). A pasta já cobre extensamente os inibidores injetáveis de Lp(a) por via de RNA — pelacarsena (ainda não citado por nome próprio em arquivo dedicado), olpasirana (ocean-a-dose), lerodalcibepe e zerlasirana — mas nenhum documento cobria a classe mecanisticamente distinta dos inibidores orais de pequena molécula, que bloqueiam a ligação não covalente entre apolipoproteína(a) e apolipoproteína B100 em vez de suprimir a tradução do RNA mensageiro. Fecha essa lacuna com o ensaio de fase 2 (PMID 39556768) e o de fase 1 que o precedeu (PMID 37638695), ambos com PMID conferido nesta sessão via PubMed E-utilities."
 ---
 
@@ -40,5 +44,5 @@ O estudo mediu a redução por **dois métodos analíticos diferentes** — um d
 
 ## Armadilhas clínicas
 - **Tratar a redução percentual de Lp(a) como equivalente entre classes farmacológicas sem considerar o ensaio de medida usado** — comparar a redução da muvalaplina (ensaio de Lp(a) intacta) diretamente com a redução publicada para siRNAs (frequentemente medida por ensaio tradicional) pode superestimar ou subestimar a diferença real de eficácia.
-- **Presumir eficácia sobre eventos cardiovasculares a partir de um desfecho surrogado de fase 2** — nenhum inibidor de Lp(a), desta ou de qualquer outra classe, tem ainda ensaio de fase 3 com desfecho cardiovascular publicado; a hipótese causal Lp(a)-evento é apoiada por randomização mendeliana (já documentada nesta pasta), não por ensaio de intervenção concluído.
+- **Presumir eficácia sobre eventos cardiovasculares a partir de um desfecho surrogado de fase 2** — em 04/09/2026, a patrocinadora informou que o HORIZON com pelacarsena não atingiu o desfecho primário de MACE, ainda sem artigo completo, HR, IC ou subgrupos publicados. Esse resultado de um oligonucleotídeo antisenso não determina o efeito da muvalaplina oral nem de qualquer outra classe; a muvalaplina continua sem ensaio próprio de desfecho cardiovascular concluído.
 - **Ignorar que o estudo de fase 2 não tinha poder para segurança rara** — com 68 pacientes no braço de maior dose e seguimento de 12 semanas, eventos adversos infrequentes (por exemplo, hepatotoxicidade tardia) não seriam necessariamente detectados nesta fase do desenvolvimento clínico.

@@ -187,7 +187,16 @@ for (const path of await listarArquivos(distPath)) {
 // mede 3134406 B, delta auditado de 165648 B. O novo teto deixa somente 1082 B
 // de margem; entrypoint, gzip, divisão por rotas e teto de chunks opcionais
 // permanecem rigorosamente inalterados.
-const maxPrecacheBytes = 3062 * 1024;
+//
+// Ajustado de 3062 KB para 3074 KB em 08/09/2026: a mobilidade móvel, a
+// consistência dos temas claro/escuro e os recortes compactos aprovados para
+// notebooks elevaram o precache a 3147284 B. O aumento é limitado a 12 KiB,
+// deixa apenas 492 B de margem e preserva todos os demais tetos sem alteração.
+// Ajustado de 3074 KiB para 3075 KiB em 09/09/2026: login claro/escuro,
+// animação compacta e acesso a materiais nas trilhas elevaram o precache a
+// 3148349 B. Acréscimo de 1 KiB, com margem de 451 B; os limites do entrypoint,
+// gzip e chunks opcionais permanecem inalterados.
+const maxPrecacheBytes = 3075 * 1024;
 if (precacheBytes > maxPrecacheBytes) {
   failures.push(`precache ${precacheBytes} B excede ${maxPrecacheBytes} B`);
 }

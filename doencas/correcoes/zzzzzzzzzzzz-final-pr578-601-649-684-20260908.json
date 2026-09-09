@@ -1,0 +1,429 @@
+[
+  {
+    "slug": "doenca-arterial-periferica-de-membros",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão clínica final do PR578 em 08/09/2026: isquemia aguda passou a bloquear o ramo ambulatorial de CLTI; ITB normal/limítrofe com sintomas ganhou investigação funcional; Rutherford III foi definido por inviabilidade neurológica/Doppler, sem exigir necrose visível; revascularização prévia foi tratada como marcador de risco, sem prescrição antitrombótica automática. Fontes contemporâneas SWEDEPAD 1/2 e VOYAGER-PAD verificadas.",
+      "emergency_flow": [
+        "Reconhecer isquemia aguda de membro diante de instalação súbita (tipicamente inferior a duas semanas) de dor, palidez, ausência de pulso, frialdade, parestesia e/ou paralisia, com déficit sensitivo progressivo e fraqueza motora como sinais de maior ameaça à viabilidade",
+        "Acionar avaliação vascular emergencial imediatamente diante de suspeita de isquemia aguda, sem aguardar confirmação por exame de imagem; a avaliação inicial de viabilidade e o acionamento não devem ser atrasados por duplex, angio-TC ou angio-RM",
+        "Classificar o membro pela Rutherford: I viável, IIa marginalmente ameaçado, IIb imediatamente ameaçado e III irreversível/não salvável",
+        "Iniciar anticoagulação sistêmica precocemente, como classe terapêutica, na ausência de contraindicação, enquanto a estratégia definitiva é organizada",
+        "Encaminhar membro salvável (Rutherford I, IIa ou IIb) para revascularização urgente, endovascular, cirúrgica ou híbrida conforme mecanismo, anatomia e tempo de isquemia",
+        "Rutherford III é definido por anestesia profunda, paralisia/rigidez e ausência de sinais arterial e venoso ao Doppler; necrose visível não é requisito. Não revascularizar tecido comprovadamente inviável; a equipe vascular deve definir manejo cirúrgico, analgesia, controle de complicações e objetivos de cuidado",
+        "Após reperfusão, vigiar síndrome compartimental, rabdomiólise/mioglobinúria, hipercalemia, acidose e lesão renal aguda em ambiente monitorizado",
+        "Investigar fonte cardioembólica, trombose sobre DAP, trombose de stent ou enxerto após controlar a ameaça imediata, sem atrasar reperfusão"
+      ]
+    },
+    "append": {
+      "source_refs": [
+        "Falkenberg M, et al; SWEDEPAD trial investigators. Paclitaxel-coated versus uncoated devices for infrainguinal endovascular revascularisation in patients with chronic limb-threatening ischaemia (SWEDEPAD 1). Lancet. 2025. DOI: 10.1016/S0140-6736(25)01585-5. PMID: 40902617.",
+        "Nordanstig J, et al; SWEDEPAD trial investigators. Paclitaxel-coated versus uncoated devices for infrainguinal endovascular revascularisation in patients with intermittent claudication (SWEDEPAD 2). Lancet. 2025;406:1115-1127. DOI: 10.1016/S0140-6736(25)01584-3. PMID: 40902614.",
+        "Canonico ME, et al. Low-Dose Rivaroxaban Plus Aspirin in Patients With PAD Undergoing Lower Extremity Revascularization With and Without History of Prior Limb Revascularization: Insight From the VOYAGER-PAD Trial. Circ Cardiovasc Interv. 2026;19:e015229. DOI: 10.1161/CIRCINTERVENTIONS.125.015229. PMID: 41757414."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40902617/",
+        "https://pubmed.ncbi.nlm.nih.gov/40902614/",
+        "https://pubmed.ncbi.nlm.nih.gov/41757414/"
+      ]
+    },
+    "assistant_questions": {
+      "abi_measured": {
+        "required": true
+      }
+    },
+    "assistant_rules": {
+      "dap-membros-ameacado-ulcera-gangrena": {
+        "when": {
+          "all": [
+            {"field": "ulcer_or_gangrene", "op": "truthy"},
+            {"field": "acute_ischemia_signs", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": ["Perda tecidual sem síndrome aguda concomitante: possível isquemia crônica ameaçadora do membro (CLTI)"],
+          "suggested_tests": ["Avaliar perfusão com ITB e, quando indicado, TBI/TcPO2; definir anatomia para planejamento de revascularização"],
+          "ambulatory_flow": ["Encaminhar com prioridade à equipe vascular; se houver sinais de isquemia aguda, prevalece o fluxo emergencial de ALI"],
+          "emergency_flow": ["CLTI com perda tecidual exige via vascular acelerada; gangrena úmida, infecção sistêmica, progressão rápida ou síndrome aguda concomitante requer avaliação emergencial no mesmo dia"]
+        }
+      },
+      "dap-membros-revascularizacao-previa": {
+        "add": {
+          "risk": "prioritario",
+          "messages": ["Revascularização prévia identifica maior risco futuro de eventos do membro, mas não prova falha do procedimento atual nem autoriza anticoagulação plena ou combinação antitrombótica automática; revisar indicação, sangramento, patência e sintomas"]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "dap-membros-itb-normal-sintomas",
+        "priority": 55,
+        "when": {
+          "all": [
+            {"field": "abi_measured", "op": "eq", "value": "sim_normal"},
+            {"field": "limiting_claudication", "op": "truthy"},
+            {"field": "acute_ischemia_signs", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "messages": ["ITB de repouso normal não exclui DAP induzida por esforço; não encerrar a investigação quando o padrão clínico permanece compatível"],
+          "suggested_tests": ["Realizar ITB pós-exercício; se houver artéria não compressível, diabetes ou DRC, considerar índice hálux-braço/formas de onda conforme o resultado fisiológico"]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "arritmias-ventriculares-e-morte-subita-cardiaca",
+    "set": {
+      "prevalence_rank": 10,
+      "review_status": "revisado",
+      "review_note": "Revisão clínica final do PR601 em 08/09/2026: cardioversão sincronizada foi separada da desfibrilação na TV monomórfica instável; TV polimórfica sustentada, tempestade elétrica TV/FV, reentrada ramo-ramo, carga de extrassístoles, Tisdale e Rassi receberam limites acionáveis seguros. Rassi permanece prognóstico de mortalidade global, não indicação isolada de CDI."
+    },
+    "append": {
+      "tests": [
+        "Escore de Tisdale apenas no contexto hospitalar para estimar risco de prolongamento do QTc; não é probabilidade direta de torsades nem foi validado como regra geral ambulatorial ou pediátrica",
+        "Escore de Rassi na cardiopatia chagásica crônica estima mortalidade global; não constitui indicação isolada de CDI nem substitui arritmia documentada, prevenção secundária, função ventricular e julgamento especializado",
+        "Quantificação da carga de extrassístoles ventriculares por monitorização ambulatorial e avaliação seriada da função ventricular quando a carga é alta ou há suspeita de cardiomiopatia; não existe um único limiar universal que determine tratamento"
+      ],
+      "source_refs": [
+        "Rassi A Jr, Rassi A, Little WC, et al. Development and Validation of a Risk Score for Predicting Death in Chagas' Heart Disease. N Engl J Med. 2006;355:799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/16928995/"
+      ]
+    },
+    "assistant_questions_add": [
+      {
+        "id": "bundle_branch_reentry_suspected",
+        "label": "Há TV sustentada documentada com mecanismo ramo-ramo suspeito ou demonstrado no estudo eletrofisiológico?",
+        "type": "boolean",
+        "required": true,
+        "section": "Mecanismo"
+      }
+    ],
+    "assistant_rules": {
+      "avc-tv-instavel-ou-torsades": {
+        "when": {
+          "any": [
+            {"field": "sustained_vt_pattern", "op": "eq", "value": "polimorfica_torsades"},
+            {"field": "sustained_vt_pattern", "op": "eq", "value": "polimorfica_qt_normal"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["TV polimórfica sustentada exige desfibrilação não sincronizada imediata; torsades requer também correção do gatilho e do QT"],
+          "emergency_flow": ["Aplicar choque não sincronizado quando a TV polimórfica for sustentada/instável ou não permitir sincronização confiável; depois corrigir eletrólitos, suspender agentes QT-prolongadores e tratar a causa"]
+        }
+      },
+      "avc-tempestade-eletrica": {
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Tempestade elétrica: três ou mais episódios de arritmia ventricular sustentada (TV e/ou FV) em 24 horas que exigem intervenção; choques apropriados contam quando representam episódios distintos"],
+          "emergency_flow": ["Tratar em ambiente monitorizado, controlar descarga adrenérgica e buscar gatilho isquêmico, eletrolítico, farmacológico, de insuficiência cardíaca ou de dispositivo"],
+          "suggested_tests": ["ECG, eletrólitos, interrogação do dispositivo quando presente e avaliação dirigida de isquemia/causa estrutural"]
+        }
+      },
+      "avc-chagasica-substrato-epicardico": {
+        "add": {
+          "messages": ["Antecipar possibilidade de substrato epicárdico no planejamento da ablação em cardiomiopatia chagásica"],
+          "supporting": ["O escore de Rassi estima mortalidade global na cardiopatia chagásica crônica; não é indicação isolada de CDI"]
+        }
+      },
+      "avc-tv-idiopatica-primeira-linha": {
+        "add": {
+          "risk": "rotina",
+          "messages": ["Considerar ablação por cateter como terapia de primeira linha em formas idiopáticas selecionadas, como trato de saída ou fascicular, após confirmar ausência de doença estrutural"],
+          "ambulatory_flow": ["Encaminhar à eletrofisiologia para confirmar mecanismo e discutir ablação; reentrada ramo-ramo é tratada em regra própria e não deve ser rotulada automaticamente como TV idiopática"]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "avc-tv-monomorfica-instavel-com-pulso",
+        "priority": 100,
+        "when": {
+          "all": [
+            {"field": "current_hemodynamic_instability", "op": "truthy"},
+            {"field": "sustained_vt_pattern", "op": "in", "value": ["monomorfica_coracao_normal", "monomorfica_cardiopatia_estrutural"]}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["TV monomórfica sustentada com pulso e instabilidade hemodinâmica"],
+          "emergency_flow": ["Realizar cardioversão elétrica sincronizada imediata. Se não houver pulso ou a sincronização não for possível/confiável, seguir desfibrilação não sincronizada e protocolo de parada"]
+        }
+      },
+      {
+        "id": "avc-tv-instabilidade-padrao-incerto",
+        "priority": 99,
+        "when": {
+          "all": [
+            {"field": "current_hemodynamic_instability", "op": "truthy"},
+            {"field": "sustained_vt_pattern", "op": "eq", "value": "nenhuma_documentada"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": ["Instabilidade hemodinâmica atual com padrão de taquicardia ventricular ainda não documentado"],
+          "emergency_flow": ["Obter ritmo imediatamente sem atrasar tratamento: cardioversão sincronizada se taquicardia monomórfica com pulso; desfibrilação se polimórfica, sem pulso ou sem sincronização confiável"]
+        }
+      },
+      {
+        "id": "avc-reentrada-ramo-ramo",
+        "priority": 78,
+        "when": {
+          "all": [
+            {"field": "bundle_branch_reentry_suspected", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": ["TV por reentrada ramo-ramo costuma acompanhar doença estrutural/do sistema His-Purkinje; confirmar mecanismo no estudo eletrofisiológico e discutir ablação do ramo de condução envolvido em centro especializado"],
+          "suggested_tests": ["Estudo eletrofisiológico e avaliação de doença estrutural/condução basal"]
+        }
+      },
+      {
+        "id": "avc-carga-pvc-alta",
+        "priority": 58,
+        "when": {
+          "all": [
+            {"field": "documented_pvc_burden", "op": "eq", "value": "alta"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": ["Quantificar carga por monitorização ambulatorial e avaliar FEVE/estrutura cardíaca, com seguimento seriado se houver risco de cardiomiopatia induzida por extrassístoles"],
+          "messages": ["A relação carga-risco é contínua; não usar um limiar isolado como indicação automática de ablação"]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "avaliacao-basal-cardiooncologica",
+    "set": {
+      "review_status": "revisado",
+      "review_note": "Revisão clínica final do PR649 em 08/09/2026: FEVE e GLS basais foram explicitados para comparação longitudinal; vigilância passou a seguir o perfil de cada terapia mesmo no baixo risco; emergências oncológicas não devem aguardar a conclusão de toda avaliação basal, com estabilização cardiovascular e exames viáveis em paralelo.",
+      "emergency_flow": [
+        "Na instabilidade cardiovascular aguda, estabilizar imediatamente e envolver cardiologia/cardio-oncologia sem aguardar a rotina ambulatorial",
+        "Em emergência oncológica, não atrasar tratamento antineoplásico potencialmente salvador para concluir toda a avaliação cardiovascular basal; obter história, ECG, troponina/peptídeo natriurético e ecocardiograma que forem viáveis em paralelo",
+        "Documentar o risco e pactuar com oncologia um plano de vigilância específico da terapia, completando a avaliação assim que clinicamente possível"
+      ],
+      "tests": [
+        "História cardiovascular dirigida, exame físico e pressão arterial antes da terapia",
+        "ECG basal para documentar ritmo, condução e QTc",
+        "Troponina e peptídeo natriurético basais quando a terapia/risco indicar monitorização seriada, idealmente pelo mesmo método",
+        "Ecocardiograma basal com FEVE por método reprodutível e GLS, preferencialmente na mesma plataforma, quando a vigilância ecocardiográfica se aplica; o GLS basal permite interpretar mudança relativa longitudinal",
+        "Função renal, eletrólitos, glicemia/HbA1c e perfil lipídico conforme terapia e comorbidades",
+        "Ressonância cardíaca quando o ecocardiograma for inconclusivo ou houver questão clínica específica; não como exame basal universal"
+      ]
+    },
+    "assistant_questions": {
+      "prior_anthracycline_or_radiation": {"required": true},
+      "abnormal_ecg": {"required": true},
+      "abnormal_biomarkers": {"required": true}
+    },
+    "assistant_questions_add": [
+      {
+        "id": "oncologic_emergency",
+        "label": "A terapia antineoplásica é uma emergência e não pode aguardar a conclusão de toda a avaliação cardiovascular basal?",
+        "type": "boolean",
+        "required": true,
+        "section": "Prioridade"
+      },
+      {
+        "id": "baseline_echo_gls_available",
+        "label": "Há ecocardiograma basal reprodutível com FEVE e GLS disponível quando indicado para a terapia planejada?",
+        "type": "boolean",
+        "required": true,
+        "section": "Imagem basal"
+      }
+    ],
+    "assistant_rules": {
+      "checkpoint": {
+        "add": {
+          "suggested_tests": ["ECG e biomarcadores basais; orientar sintomas de miocardite e arritmia e seguir a vigilância específica de checkpoint mesmo no baixo risco, sem presumir risco zero"]
+        }
+      },
+      "vegf": {
+        "add": {
+          "suggested_tests": ["Pressão basal e plano de monitorização frequente específico para inibidor de VEGF, inclusive no baixo risco"]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "cardiooncologia-emergencia-oncologica",
+        "priority": 100,
+        "when": {
+          "all": [
+            {"field": "oncologic_emergency", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "messages": ["Não atrasar terapia antineoplásica potencialmente salvadora para completar toda a estratificação basal; estabilizar doença cardiovascular aguda e realizar avaliação viável em paralelo com decisão multidisciplinar"],
+          "missing_information": ["Registrar quais componentes basais não puderam ser obtidos e programar sua conclusão no primeiro momento seguro"]
+        }
+      },
+      {
+        "id": "cardiooncologia-gls-basal-ausente",
+        "priority": 66,
+        "when": {
+          "all": [
+            {"field": "baseline_echo_gls_available", "op": "falsy"},
+            {"field": "oncologic_emergency", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "missing_information": ["FEVE e GLS basais reprodutíveis ainda não documentados quando indicados para a terapia"],
+          "suggested_tests": ["Obter ecocardiograma basal com FEVE e GLS antes da terapia quando clinicamente indicado e sem causar atraso oncológico relevante"]
+        }
+      },
+      {
+        "id": "cardiooncologia-antraciclina-vigilancia",
+        "priority": 52,
+        "when": {
+          "all": [
+            {"field": "planned_therapy", "op": "eq", "value": "anthracycline"}
+          ]
+        },
+        "add": {
+          "messages": ["Mesmo no baixo risco, definir vigilância específica para antraciclina baseada em exposição cumulativa e protocolo; não usar baixo risco como ausência de seguimento"],
+          "suggested_tests": ["FEVE/GLS basais e biomarcadores conforme protocolo de antraciclina e risco individual"]
+        }
+      },
+      {
+        "id": "cardiooncologia-antiher2-vigilancia",
+        "priority": 52,
+        "when": {
+          "all": [
+            {"field": "planned_therapy", "op": "eq", "value": "anti_her2"}
+          ]
+        },
+        "add": {
+          "messages": ["Mesmo no baixo risco, manter cronograma ecocardiográfico específico para terapia anti-HER2; baixo risco modifica intensidade, não elimina vigilância"]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "obesidade-e-coracao",
+    "set": {
+      "scope": "adulto (18 anos ou mais)",
+      "summary": "Em adultos, obesidade é fator de risco cardiovascular e modificador importante de hipertensão, diabetes tipo 2, fibrilação atrial e insuficiência cardíaca. A evidência terapêutica deve ser interpretada por população, indicação e intervenção: SELECT, STEP-HFpEF e SUMMIT não estabelecem efeito universal de classe nem indicação automática. Critérios pediátricos, gestacionais e de crescimento estão fora deste hub.",
+      "review_status": "revisado",
+      "review_note": "Revisão clínica final do PR684 em 08/09/2026: escopo limitado a adultos; todas as perguntas são obrigatórias; multiselect de comorbidades ganhou opção explícita de nenhuma; elegibilidade farmacológica passou a exigir IMC e comorbidade nos limiares usuais; contraindicação MEN2/carcinoma medular foi explicitada por produto; DOAC em obesidade ganhou orientação por indicação e sem subdose automática."
+    },
+    "assistant_questions": {
+      "imc_atual": {"required": true},
+      "circunferencia_abdominal_cm": {"required": true},
+      "classe_obesidade": {"required": true},
+      "comorbidades_cardiovasculares": {
+        "required": true,
+        "options": [
+          {"value": "nenhuma", "label": "Nenhuma das opções"},
+          {"value": "has", "label": "Hipertensão arterial sistêmica"},
+          {"value": "dm2", "label": "Diabetes mellitus tipo 2"},
+          {"value": "dislipidemia", "label": "Dislipidemia"},
+          {"value": "dac", "label": "Doença arterial coronariana"},
+          {"value": "ic", "label": "Insuficiência cardíaca"},
+          {"value": "fa", "label": "Fibrilação atrial"},
+          {"value": "avc_previo", "label": "AVC prévio"}
+        ]
+      },
+      "em_uso_glp1_gip": {"required": true},
+      "contraindicacao_glp1": {
+        "required": true,
+        "label": "Para o produto proposto, há contraindicação de bula como história pessoal/familiar de carcinoma medular de tireoide ou neoplasia endócrina múltipla tipo 2 (MEN2), ou outra contraindicação específica?"
+      },
+      "sintomas_apneia_sono": {"required": true},
+      "candidato_cirurgia_bariatrica": {"required": true},
+      "em_uso_anticoagulante": {"required": true},
+      "dificuldade_acesso_vascular_imagem": {"required": true},
+      "perda_peso_percentual_6_meses": {"required": true},
+      "dieta_estruturada_ativa": {"required": true},
+      "sintomas_agudos": {"required": true}
+    },
+    "assistant_questions_add": [
+      {
+        "id": "has_weight_related_comorbidity",
+        "label": "Há ao menos uma comorbidade relacionada ao peso que possa compor critério de farmacoterapia em adulto?",
+        "type": "boolean",
+        "required": true,
+        "section": "Elegibilidade"
+      },
+      {
+        "id": "anticoagulation_indication",
+        "label": "Se usa anticoagulante, qual é a indicação principal?",
+        "type": "select",
+        "required": true,
+        "section": "Anticoagulação",
+        "options": [
+          {"value": "nao_usa", "label": "Não usa anticoagulante"},
+          {"value": "fibrilacao_atrial", "label": "Fibrilação atrial"},
+          {"value": "tev", "label": "Tratamento/prevenção de TEV"},
+          {"value": "outra", "label": "Outra indicação"}
+        ]
+      }
+    ],
+    "assistant_rules": {
+      "candidato_glp1_nao_iniciado": {
+        "when": {
+          "all": [
+            {"field": "em_uso_glp1_gip", "op": "falsy"},
+            {"field": "contraindicacao_glp1", "op": "falsy"},
+            {"field": "imc_atual", "op": "gte", "value": 27},
+            {"field": "has_weight_related_comorbidity", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "supporting": ["Adulto com IMC ≥27 kg/m² e comorbidade relacionada ao peso pode preencher limiar usual para discutir farmacoterapia antiobesidade; escolher agente conforme indicação, evidência, contraindicações, disponibilidade e preferência, sem presumir benefício universal de classe"]
+        }
+      },
+      "contraindicacao_glp1_alerta": {
+        "add": {
+          "opposing": ["Não iniciar o produto proposto antes de conferir contraindicações de bula, incluindo história pessoal/familiar de carcinoma medular de tireoide ou MEN2 quando aplicável; a contraindicação é específica do medicamento e da jurisdição"]
+        }
+      },
+      "anticoagulacao_obesidade_extrema": {
+        "add": {
+          "risk": "prioritario",
+          "supporting": ["Não subdosar nem excluir DOAC apenas por obesidade. Para TEV, a comunicação ISTH 2021 apoia doses padrão de apixabana ou rivaroxabana mesmo com IMC >40 kg/m² ou peso >120 kg; outras moléculas/indicações exigem evidência e diretriz próprias"],
+          "missing_information": ["Confirmar indicação, dose de bula, função renal/hepática, interações, adesão e história trombótica/hemorrágica; em FA, aplicar a recomendação específica de FA, não extrapolar automaticamente a comunicação de TEV"]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "obesidade-imc30-farmacoterapia",
+        "priority": 61,
+        "when": {
+          "all": [
+            {"field": "imc_atual", "op": "gte", "value": 30},
+            {"field": "em_uso_glp1_gip", "op": "falsy"},
+            {"field": "contraindicacao_glp1", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": ["Adulto com IMC ≥30 kg/m² pode preencher limiar usual para discutir farmacoterapia antiobesidade junto ao tratamento de estilo de vida; isso não implica indicação automática de GLP-1/GIP nem dispensa contraindicações específicas"]
+        }
+      },
+      {
+        "id": "obesidade-multiselect-nenhuma-inconsistente",
+        "priority": 69,
+        "when": {
+          "all": [
+            {"field": "comorbidades_cardiovasculares", "op": "contains", "value": "nenhuma"},
+            {"field": "has_weight_related_comorbidity", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "missing_information": ["Resposta inconsistente: foi marcada 'nenhuma' com comorbidade relacionada ao peso presente; corrigir antes de gerar recomendação"]
+        }
+      }
+    ]
+  }
+]

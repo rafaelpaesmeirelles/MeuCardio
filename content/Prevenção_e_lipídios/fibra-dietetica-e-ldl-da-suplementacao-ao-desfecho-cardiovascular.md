@@ -1,11 +1,35 @@
 ---
-title: "Fibra Dietética e LDL: da Suplementação ao Desfecho Cardiovascular"
+title: 'Fibra Dietética e LDL: da Suplementação ao Desfecho Cardiovascular'
 slug: fibra-dietetica-e-ldl-da-suplementacao-ao-desfecho-cardiovascular
-theme: "Prevenção e lipídios"
+theme: Prevenção e lipídios
 kind: estudo
 review_status: revisado
-source_refs: ["Ghavami A, Ziaei R, Talebi S, Barghchi H, Nattagh-Eshtivani E, Moradi S, Rahbarinejad P, Mohammadi H, Ghasemi-Tehrani H, Marx W, Askari G. Soluble Fiber Supplementation and Serum Lipid Profile: A Systematic Review and Dose-Response Meta-Analysis of Randomized Controlled Trials. Adv Nutr. 2023;14(3):465-474. DOI: 10.1016/j.advnut.2023.01.005. PMID: 36796439. PMCID: PMC10201678 — 181 ensaios randomizados, 220 braços de tratamento, 14.505 participantes (7.348 casos e 7.157 controles); meta-análise de dose-resposta por incremento de 5g/dia; certeza de evidência avaliada pelo GRADE. Texto integral aberto no PMC, consultado para os dados de subgrupo, patamar de dose-resposta e classificação GRADE, que não constam do resumo indexado", "Brown L, Rosner B, Willett WW, Sacks FM. Cholesterol-lowering effects of dietary fiber: a meta-analysis. Am J Clin Nutr. 1999;69(1):30-42. DOI: 10.1093/ajcn/69.1.30. PMID: 9925120 — meta-análise de 67 ensaios controlados (regressão por mínimos quadrados), quantificando o efeito por grama de fibra solúvel (pectina, farelo de aveia, goma guar, psyllium) na faixa de 2-10g/dia", "Threapleton DE, Greenwood DC, Evans CE, Cleghorn CL, Nykjaer C, Woodhead C, Cade JE, Gale CP, Burley VJ. Dietary fibre intake and risk of cardiovascular disease: systematic review and meta-analysis. BMJ. 2013;347:f6879. DOI: 10.1136/bmj.f6879. PMID: 24355537. PMCID: PMC3898422 — meta-análise de dose-resposta de 22 publicações de estudos de coorte prospectivos (não ensaios de suplementação), desfecho cardiovascular e coronariano duro, não LDL como desfecho substituto. Conflito de interesse declarado no próprio artigo: um dos autores (DET) recebeu apoio da Kellogg Marketing and Sales Company (UK) para este trabalho"]
-legacy_source: "Documento novo, escrito em 01/08/2026. Conferido por grep antes de escrever: nenhum arquivo desta pasta contém 'fibra' como palavra isolada (só 'fibratos', classe farmacológica homônima e sem relação — ver o documento de fibratos e risco cardiovascular residual, que trata de outro assunto). A pasta cobria dieta mediterrânea, ômega-3, alopurinol, colchicina e polipílula como intervenção não estatínica, mas nenhum documento tratava da fibra dietética como intervenção sobre o LDL, apesar de ser a recomendação não farmacológica mais citada em consulta de prevenção primária depois da própria dieta mediterrânea."
+source_refs:
+- 'Ghavami A, Ziaei R, Talebi S, Barghchi H, Nattagh-Eshtivani E, Moradi S, Rahbarinejad P, Mohammadi H, Ghasemi-Tehrani
+  H, Marx W, Askari G. Soluble Fiber Supplementation and Serum Lipid Profile: A Systematic Review and Dose-Response
+  Meta-Analysis of Randomized Controlled Trials. Adv Nutr. 2023;14(3):465-474. DOI: 10.1016/j.advnut.2023.01.005.
+  PMID: 36796439. PMCID: PMC10201678 — 181 ensaios randomizados, 220 braços de tratamento, 14.505 participantes
+  (7.348 casos e 7.157 controles); meta-análise de dose-resposta por incremento de 5g/dia; certeza de evidência
+  avaliada pelo GRADE. Texto integral aberto no PMC, consultado para os dados de subgrupo, patamar de dose-resposta
+  e classificação GRADE, que não constam do resumo indexado'
+- 'Brown L, Rosner B, Willett WW, Sacks FM. Cholesterol-lowering effects of dietary fiber: a meta-analysis. Am J
+  Clin Nutr. 1999;69(1):30-42. DOI: 10.1093/ajcn/69.1.30. PMID: 9925120 — meta-análise de 67 ensaios controlados
+  (regressão por mínimos quadrados), quantificando o efeito por grama de fibra solúvel (pectina, farelo de aveia,
+  goma guar, psyllium) na faixa de 2-10g/dia'
+- 'Threapleton DE, Greenwood DC, Evans CE, Cleghorn CL, Nykjaer C, Woodhead C, Cade JE, Gale CP, Burley VJ. Dietary
+  fibre intake and risk of cardiovascular disease: systematic review and meta-analysis. BMJ. 2013;347:f6879. DOI:
+  10.1136/bmj.f6879. PMID: 24355537. PMCID: PMC3898422 — meta-análise de dose-resposta de 22 publicações de estudos
+  de coorte prospectivos (não ensaios de suplementação), desfecho cardiovascular e coronariano duro, não LDL como
+  desfecho substituto. Conflito de interesse declarado no próprio artigo: um dos autores (DET) recebeu apoio da
+  Kellogg Marketing and Sales Company (UK) para este trabalho'
+legacy_source: 'Documento novo, escrito em 01/08/2026. Conferido por grep antes de escrever: nenhum arquivo desta
+  pasta contém ''fibra'' como palavra isolada (só ''fibratos'', classe farmacológica homônima e sem relação — ver
+  o documento de fibratos e risco cardiovascular residual, que trata de outro assunto). A pasta cobria dieta mediterrânea,
+  ômega-3, alopurinol, colchicina e polipílula como intervenção não estatínica, mas nenhum documento tratava da
+  fibra dietética como intervenção sobre o LDL, apesar de ser a recomendação não farmacológica mais citada em consulta
+  de prevenção primária depois da própria dieta mediterrânea.'
+review_note: 'Revisão independente de dependência em08/09/2026: Plateausuplementonãototalalimentar; observacionalnãoeventossuplemento;
+  uso seguropsyllium.'
 ---
 
 # Fibra Dietética e LDL: da Suplementação ao Desfecho Cardiovascular
@@ -32,7 +56,7 @@ Ghavami A et al. Adv Nutr. 2023;14(3):465-474 (PMID 36796439). Revisão sistemá
 - LDL-colesterol: **−5,57 mg/dL** (IC95% −7,44 a −3,69)
 - Triglicerídeos: −3,64 mg/dL (IC95% −5,31 a 0,03; p=0,052 — no limite da significância)
 
-**Patamar de dose-resposta (não linear):** o benefício máximo foi observado em **10g/dia para LDL** e **15g/dia para colesterol total e triglicerídeos** — acima desses valores, a curva de dose-resposta não mostrou ganho adicional relevante.
+**Patamar de dose-resposta (não linear):** a curva agregada sugeriu maior efeito em **10g/dia para LDL** e **15g/dia para colesterol total e triglicerídeos** — acima desses valores, a curva de dose-resposta não mostrou ganho adicional relevante.
 
 **Subgrupos por população de base**, onde o efeito foi consistentemente maior que na população geral:
 - Diabetes tipo 2: colesterol total −17,32 mg/dL (IC95% −27,08 a −7,56)
@@ -65,7 +89,7 @@ Threapleton DE et al. BMJ. 2013;347:f6879 (PMID 24355537). Revisão sistemática
 ## O que as três fontes, lidas juntas, estabelecem
 - **São três desenhos diferentes respondendo perguntas diferentes, e nenhuma prova a outra.** As duas primeiras são meta-análises de **ensaios de suplementação** medindo o efeito sobre o **LDL como desfecho substituto**; a terceira é meta-análise de **coortes observacionais** medindo o efeito da **fibra da dieta habitual** (não suplemento) sobre **infarto e evento cardiovascular duro**. A associação da fibra dietética com menos eventos cardiovasculares na coorte **não precisa ser mediada só pela redução de LDL** — a magnitude da redução de LDL por suplementação (5-8 mg/dL) é pequena diante do RR de 0,91 por 7g/dia observado na coorte, o que sugere que outras vias (efeito glicêmico, saciedade e peso, pressão arterial, microbioma) também contribuem.
 - **O efeito sobre o LDL é real, estatisticamente significativo nas duas meta-análises de suplementação, mas pequeno e de certeza baixa a muito baixa pelo GRADE.** Não é comparável, em magnitude, à redução de 30-50% obtida com estatina — é um complemento à terapia farmacológica, não substituto, e este documento não sustenta a leitura contrária.
-- **Existe um patamar de dose-resposta.** Prescrever fibra solúvel muito acima de 10g/dia esperando benefício proporcional sobre o LDL não é sustentado pelos dados de Ghavami 2023 — o ganho se estabiliza.
+- **Existe um patamar de dose-resposta.** Prescrever fibra solúvel muito acima de 10g/dia esperando benefício proporcional sobre o LDL não é sustentado pelos dados de Ghavami 2023 — a curva agregada sugere estabilização, com incerteza; isso não define o limite da ingestão total de fibra alimentar.
 - **O subgrupo com maior benefício absoluto é o de LDL/colesterol já elevado ou de base metabólica alterada** (diabetes, síndrome metabólica, hiperlipidemia estabelecida) — a extrapolação do efeito médio para toda a população deve levar isso em conta.
 
 ## Armadilhas clínicas
@@ -75,3 +99,5 @@ Threapleton DE et al. BMJ. 2013;347:f6879 (PMID 24355537). Revisão sistemática
 - **Confundir a evidência de ensaio de suplementação (LDL como desfecho substituto) com a evidência de coorte (fibra dietética habitual e evento cardiovascular duro)** — são corpos de evidência com desenho, exposição e desfecho diferentes; a coorte não prova que o benefício observado seja mediado pelo LDL, e o ensaio de suplementação não mede desfecho duro.
 - **Esperar benefício proporcional acima de 10g/dia de fibra solúvel para LDL** — a curva de dose-resposta descrita por Ghavami 2023 tem patamar, não é linear indefinidamente.
 - **Omitir o conflito de interesse declarado no estudo de coorte (Threapleton 2013)** — um dos autores recebeu apoio de fabricante de cereais; o achado é reproduzido aqui porque é a meta-análise de coorte mais citada sobre o tema, mas a transparência sobre a fonte de financiamento acompanha a citação, como em qualquer evidência desta biblioteca.
+
+A associação de coortes não prova prevenção causal de eventos por suplemento. Os patamares de10–15g/dia se referem à suplementação estudada, não ao objetivo de fibra total na dieta. Para psyllium, avaliar disfagia/obstrução e orientar líquido suficiente e intervalo em relação a medicamentos conforme apresentação; adaptar à restrição hídrica individual.

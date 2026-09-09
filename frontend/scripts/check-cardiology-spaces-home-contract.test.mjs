@@ -124,6 +124,12 @@ test("Deslocamento uses the canonical mobility target, live geolocation and a re
   assert.match(styles, /\.spaces-orbit/);
   assert.match(styles, /spaces-stellar-route__traffic--traffic_jam/);
   assert.match(styles, /@keyframes spaces-flight/);
+  assert.match(home, /function mobilitySchedule\(value\?: string \| null\)/);
+  assert.match(home, /<time dateTime=\{target\?\.starts_at\}>\{schedule\}<\/time>/);
+  assert.match(home, /mobilityDayContext\?\.stage === "at_last" && returnHomeTarget/);
+  assert.doesNotMatch(home, /mobilityDayContext\?\.stage === "no_commitments"\) \{[\s\S]*?Não há compromissos presenciais hoje/);
+  assert.doesNotMatch(home, /!mode \|\| mode === "scientific" \|\| usuario\?\.investidor/);
+  assert.equal((home.match(/<StellarRouteMiniMap/g) || []).length, 2, "todos os modos precisam exibir o próximo deslocamento");
 });
 
 test("all shelf profiles are personalized without changing the approved geometry", () => {

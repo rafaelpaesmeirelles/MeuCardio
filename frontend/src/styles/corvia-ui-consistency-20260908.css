@@ -1,0 +1,496 @@
+/*
+ * Contrato visual determinístico — 08/09/2026.
+ *
+ * Esta folha encerra os dois chunks que usam estas telas. Assim, abrir a
+ * rota diretamente e recarregá-la produzem a
+ * mesma cascata, independentemente da ordem em que o Vite resolve os chunks.
+ */
+
+/* Miniuniverso da escolha: ação compacta, legenda discreta e rotação horária. */
+#root .spaces-choice__change { display: none !important; }
+
+#root .spaces-choice .spaces-choice__theme-toggle {
+  position: relative !important;
+  inset: auto !important;
+  display: grid !important;
+  width: 104px !important;
+  height: 72px !important;
+  flex: 0 0 104px !important;
+  place-items: start center !important;
+  margin: 0 !important;
+  padding: 0 0 16px !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+#root .spaces-choice .spaces-choice__theme-toggle .galaxy-theme-toggle__image,
+#root .spaces-choice .spaces-choice__theme-toggle .galaxy-theme-toggle__canvas-live {
+  position: absolute !important;
+  inset: 0 0 auto !important;
+  width: 100% !important;
+  height: 54px !important;
+  transform: scale(1.06) !important;
+  transform-origin: 50% 50% !important;
+}
+
+#root .spaces-choice .galaxy-theme-toggle__label {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  color: var(--spaces-text-3);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .025em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  opacity: .8;
+}
+
+#root .spaces-choice .galaxy-theme-toggle[data-rotation="clockwise"] .galaxy-theme-toggle__image {
+  animation: corvia-choice-mini-universe-clockwise 240s linear infinite !important;
+}
+
+@keyframes corvia-choice-mini-universe-clockwise {
+  from { transform: scale(1.06) rotate(0deg); }
+  to { transform: scale(1.06) rotate(360deg); }
+}
+
+/* A escolha usa uma única geometria para tema claro e escuro. */
+@media (max-width: 900px) {
+  #root .spaces-choice {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-height: 100dvh !important;
+    grid-template-rows: 104px auto 36px !important;
+    padding: 0 16px 12px !important;
+    overflow-x: clip !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #root .spaces-choice > header {
+    display: grid !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 104px !important;
+    grid-template-columns: minmax(0, 1fr) 48px !important;
+    align-items: center !important;
+    column-gap: 8px !important;
+  }
+
+  #root .spaces-choice__brand-cluster {
+    display: flex !important;
+    min-width: 0 !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  #root .spaces-choice > header .spaces-brand {
+    min-width: 0 !important;
+    gap: 8px !important;
+  }
+
+  #root .spaces-choice > header .spaces-brand > img {
+    width: 48px !important;
+    height: 48px !important;
+    flex: 0 0 48px !important;
+  }
+
+  #root .spaces-choice > header .spaces-brand > span { display: flex !important; }
+  #root .spaces-choice > header .spaces-brand strong { font-size: 1.26rem !important; }
+  #root .spaces-choice > header .spaces-brand small {
+    display: block !important;
+    margin-top: 4px !important;
+    font-size: .39rem !important;
+  }
+
+  #root .spaces-choice .spaces-choice__theme-toggle {
+    width: 82px !important;
+    height: 64px !important;
+    flex-basis: 82px !important;
+  }
+
+  #root .spaces-choice .spaces-choice__theme-toggle .galaxy-theme-toggle__image,
+  #root .spaces-choice .spaces-choice__theme-toggle .galaxy-theme-toggle__canvas-live {
+    height: 47px !important;
+  }
+
+  #root .spaces-choice > header .spaces-user {
+    width: 48px !important;
+    min-width: 48px !important;
+    max-width: 48px !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+  }
+
+  #root .spaces-choice > header .spaces-user__avatar {
+    width: 46px !important;
+    height: 46px !important;
+    flex-basis: 46px !important;
+  }
+
+  #root .spaces-choice__content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 54px 0 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  #root .spaces-choice__content > .spaces-eyebrow {
+    margin-bottom: 10px !important;
+    font-size: .65rem !important;
+  }
+
+  #root .spaces-choice__content > h1 {
+    max-width: 350px !important;
+    font-size: 1.82rem !important;
+    line-height: 1.08 !important;
+  }
+
+  #root .spaces-choice__content > p:not(.spaces-eyebrow) {
+    max-width: 342px !important;
+    margin-top: 13px !important;
+    font-size: .84rem !important;
+    line-height: 1.48 !important;
+  }
+
+  #root .spaces-choice__cards {
+    display: grid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 11px !important;
+    margin: 22px 0 0 !important;
+  }
+
+  #root .spaces-choice__cards > button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 142px !important;
+    grid-template-columns: 60px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    column-gap: 14px !important;
+    row-gap: 6px !important;
+    margin: 0 !important;
+    padding: 16px 17px !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  #root .spaces-choice__cards .spaces-choice__icon {
+    width: 54px !important;
+    height: 54px !important;
+    grid-column: 1 !important;
+    grid-row: 1 / 4 !important;
+    align-self: start !important;
+  }
+
+  #root .spaces-choice__cards strong,
+  #root .spaces-choice__cards small,
+  #root .spaces-choice__cards em {
+    min-width: 0 !important;
+    grid-column: 2 !important;
+    text-align: left !important;
+  }
+
+  #root .spaces-choice__cards strong { font-size: 1.16rem !important; line-height: 1.15 !important; }
+  #root .spaces-choice__cards small { font-size: .82rem !important; line-height: 1.42 !important; }
+  #root .spaces-choice__cards em { margin-top: 2px !important; font-size: .76rem !important; }
+}
+
+@media (max-width: 420px) {
+  #root .spaces-choice { padding-inline: 14px !important; }
+  #root .spaces-choice__brand-cluster { gap: 3px !important; }
+  #root .spaces-choice > header .spaces-brand > img { width: 44px !important; height: 44px !important; flex-basis: 44px !important; }
+  #root .spaces-choice > header .spaces-brand strong { font-size: 1.15rem !important; }
+  #root .spaces-choice > header .spaces-brand small { font-size: .36rem !important; }
+  #root .spaces-choice .spaces-choice__theme-toggle { width: 74px !important; flex-basis: 74px !important; }
+  #root .spaces-choice__content { padding-top: 46px !important; }
+  #root .spaces-choice__cards > button { grid-template-columns: 56px minmax(0, 1fr) !important; column-gap: 12px !important; padding: 15px !important; }
+  #root .spaces-choice__cards .spaces-choice__icon { width: 50px !important; height: 50px !important; }
+}
+
+/* Topo interno: o claro conserva a mesma marca completa e a mesma geometria do escuro. */
+@media (max-width: 900px) {
+  #root .spaces-home__topbar {
+    grid-template-columns: auto minmax(0, 1fr) 48px !important;
+    grid-template-rows: 64px 46px !important;
+    column-gap: 8px !important;
+    row-gap: 3px !important;
+    padding-inline: 12px !important;
+  }
+
+  #root .spaces-home__brand-cluster {
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 50px !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  #root .spaces-home__brand-cluster .spaces-brand-button {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+
+  html[data-corvia-theme="light"] #root .spaces-home__topbar .spaces-brand > span,
+  html[data-corvia-theme="dark"] #root .spaces-home__topbar .spaces-brand > span {
+    display: flex !important;
+  }
+
+  #root .spaces-home__topbar .spaces-brand { gap: 6px !important; }
+  #root .spaces-home__topbar .spaces-brand > img { width: 40px !important; height: 40px !important; }
+  #root .spaces-home__topbar .spaces-brand strong { font-size: .98rem !important; line-height: 1 !important; }
+  #root .spaces-home__topbar .spaces-brand small { display: block !important; margin-top: 3px !important; font-size: .28rem !important; letter-spacing: .16em !important; }
+  #root .spaces-home__brand-cluster .galaxy-theme-toggle {
+    position: relative !important;
+    inset: auto !important;
+    width: 62px !important;
+    height: 44px !important;
+    transform: none !important;
+  }
+
+  #root .spaces-home__topbar > .spaces-user {
+    width: 48px !important;
+    min-width: 48px !important;
+    max-width: 48px !important;
+    gap: 0 !important;
+  }
+
+  #root .spaces-home__topbar > .spaces-user .spaces-user__avatar {
+    width: 46px !important;
+    height: 46px !important;
+    flex-basis: 46px !important;
+  }
+}
+
+/* O cartão sempre informa quando ocorrerá o próximo deslocamento. */
+#root .spaces-stellar-route__heading > span:nth-child(2) { gap: 1px !important; }
+#root .spaces-stellar-route__heading time {
+  overflow: hidden;
+  color: #77bdd9;
+  font-family: var(--fonte-dados);
+  font-size: .6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-corvia-theme="light"] #root .spaces-stellar-route__heading time { color: #176f88; }
+html[data-corvia-theme="light"] #root .spaces-stellar-route {
+  position: relative !important;
+  z-index: 3 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Login: universo ligeiramente menor nos quatro recortes (claro/escuro × desktop/mobile). */
+#root #corvia-login { --approved-border: var(--approved-line) !important; }
+
+@media (min-width: 901px) {
+  #root #corvia-login .login-gateway__universe { height: 282px !important; }
+  #root #corvia-login .login-gateway__milky-way { width: min(810px, 81%) !important; }
+  #root #corvia-login .login-gateway__core { width: 142px !important; height: 155px !important; }
+  #root #corvia-login .login-gateway__space { width: 184px !important; min-height: 64px !important; }
+}
+
+/*
+ * O lock de fidelidade usa dois IDs e, por isso, anulava os breakpoints de
+ * altura mais antigos. Estes recortes conservam a composição aprovada, mas
+ * permitem que login, recuperação e CTA permaneçam inteiros em notebooks.
+ */
+@media (min-width: 901px) and (max-height: 899px) {
+  #root #corvia-login {
+    min-height: 100dvh !important;
+    padding-top: 12px !important;
+    padding-bottom: 10px !important;
+  }
+
+  #root #corvia-login .login-gateway__topbar { min-height: 56px !important; }
+  #root #corvia-login .login-gateway__brand > img { width: 56px !important; height: 56px !important; }
+  #root #corvia-login .login-gateway__brand strong { font-size: 2.1rem !important; }
+  #root #corvia-login .login-gateway__brand small { margin-top: 5px !important; font-size: .56rem !important; }
+  #root #corvia-login .login-gateway__universe { height: 200px !important; }
+  #root #corvia-login .login-gateway__core { top: 72% !important; }
+  #root #corvia-login .login-gateway__footer {
+    display: flex !important;
+    margin-top: 4px !important;
+    padding-top: 4px !important;
+    font-size: .5rem !important;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 700px) {
+  #root #corvia-login { padding-top: 6px !important; padding-bottom: 6px !important; }
+  #root #corvia-login .login-gateway__topbar { min-height: 48px !important; }
+  #root #corvia-login .login-gateway__brand > img { width: 46px !important; height: 46px !important; }
+  #root #corvia-login .login-gateway__brand strong { font-size: 1.8rem !important; }
+  #root #corvia-login .login-gateway__brand small { margin-top: 3px !important; font-size: .48rem !important; }
+  #root #corvia-login .login-gateway__motto { padding-block: 7px !important; font-size: .54rem !important; }
+  #root #corvia-login .login-gateway__slogan { display: none !important; }
+  #root #corvia-login .login-gateway__hero { gap: 5px !important; }
+  #root #corvia-login .login-gateway__hero h1 { font-size: 2rem !important; line-height: 1 !important; }
+  #root #corvia-login .login-gateway__hero > span { font-size: .72rem !important; line-height: 1.25 !important; }
+  #root #corvia-login .login-gateway__universe { height: 150px !important; margin-top: 5px !important; }
+  #root #corvia-login .login-gateway__core { top: 58% !important; width: 72px !important; height: 82px !important; }
+  #root #corvia-login .login-gateway__space {
+    width: 154px !important;
+    min-height: 42px !important;
+    grid-template-columns: 30px minmax(0, 1fr) !important;
+    gap: 7px !important;
+    padding: 5px 9px !important;
+  }
+  #root #corvia-login .login-gateway__space > span { width: 30px !important; height: 30px !important; }
+  #root #corvia-login .login-gateway__space > span svg { width: 21px !important; height: 21px !important; }
+  #root #corvia-login .login-gateway__space strong { font-size: .78rem !important; }
+  #root #corvia-login .login-gateway__console {
+    gap: 6px 20px !important;
+    margin-top: 4px !important;
+    padding: 8px 18px !important;
+  }
+  #root #corvia-login .login-gateway__console-head { grid-template-columns: 38px minmax(0, 1fr) !important; gap: 10px !important; }
+  #root #corvia-login .login-gateway__console-head > span { width: 38px !important; height: 38px !important; }
+  #root #corvia-login .login-gateway__console-head h2 { font-size: 1.05rem !important; }
+  #root #corvia-login .login-gateway__console-head p { margin-bottom: 1px !important; font-size: .54rem !important; }
+  #root #corvia-login .login-gateway__console-head small { display: none !important; }
+  #root #corvia-login .login-gateway__form { gap: 3px 16px !important; }
+  #root #corvia-login .login-gateway__field { gap: 2px !important; }
+  #root #corvia-login .login-gateway__field > span { font-size: .7rem !important; }
+  #root #corvia-login .login-gateway__field > div { height: 32px !important; min-height: 32px !important; }
+  #root #corvia-login .login-gateway__field input { height: 30px !important; min-height: 30px !important; font-size: .8rem !important; }
+  #root #corvia-login .login-gateway__forgot { font-size: .68rem !important; }
+  #root #corvia-login .login-gateway__enter { height: 34px !important; min-height: 34px !important; font-size: .9rem !important; }
+  #root #corvia-login .login-gateway__join {
+    min-height: 88px !important;
+    grid-template-columns: 38px minmax(0, 1fr) 16px !important;
+    gap: 9px !important;
+    padding: 9px 12px !important;
+  }
+  #root #corvia-login .login-gateway__join > span:first-child { width: 38px !important; height: 38px !important; }
+  #root #corvia-login .login-gateway__join strong { font-size: .82rem !important; }
+  #root #corvia-login .login-gateway__join small { font-size: .9rem !important; }
+  #root #corvia-login .login-gateway__join em { display: none !important; }
+}
+
+@media (max-width: 900px) {
+  #root #corvia-login .login-gateway__universe { height: 212px !important; margin-top: 7px !important; }
+  #root #corvia-login .login-gateway__milky-way { width: calc(100% + 26px) !important; }
+  #root #corvia-login .login-gateway__core { width: 84px !important; height: 96px !important; }
+  #root #corvia-login .login-gateway__space { width: clamp(102px, 28.5vw, 112px) !important; min-height: 43px !important; }
+  #root #corvia-login .login-gateway__space > span { width: 25px !important; height: 25px !important; }
+  #root #corvia-login .login-gateway__space > span svg { width: 19px !important; height: 19px !important; }
+}
+
+/*
+ * Paleta clara: clínica e própria, não uma inversão do universo
+ * escuro. A galáxia usa azul e ciano com contraste moderado sobre o fundo claro.
+ */
+#root #corvia-login.login-gateway--light {
+  --approved-panel: rgba(255, 255, 255, .94) !important;
+  --approved-text: #14335d !important;
+  --approved-muted: #5d7392 !important;
+  --approved-line: rgba(28, 124, 171, .19) !important;
+  --approved-border: rgba(28, 124, 171, .19) !important;
+  color: #14335d !important;
+  background:
+    radial-gradient(circle at 50% 37%, rgba(33, 187, 221, .15), transparent 31rem),
+    radial-gradient(circle at 12% 12%, rgba(48, 132, 239, .10), transparent 25rem),
+    radial-gradient(circle at 88% 72%, rgba(32, 135, 169, .06), transparent 27rem),
+    linear-gradient(145deg, #fbfeff 0%, #f3f9fd 52%, #edf5fb 100%) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__hero h1,
+#root #corvia-login.login-gateway--light .login-gateway__console-head h2,
+#root #corvia-login.login-gateway--light .login-gateway__field > span,
+#root #corvia-login.login-gateway--light .login-gateway__space strong { color: #14335d !important; }
+#root #corvia-login.login-gateway--light .login-gateway__hero h1 strong { color: #087e9c !important; }
+#root #corvia-login.login-gateway--light .login-gateway__hero > span,
+#root #corvia-login.login-gateway--light .login-gateway__console-head small { color: #5d7392 !important; }
+
+#root #corvia-login.login-gateway--light .login-gateway__milky-way {
+  opacity: 1 !important;
+  background: radial-gradient(ellipse at 50% 50%, rgba(44, 180, 223, .12) 0 8%, rgba(41, 125, 222, .08) 24%, transparent 64%) !important;
+  filter: none !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__galaxy-image,
+#root #corvia-login.login-gateway--light .login-gateway__galaxy-canvas[data-ready="true"] {
+  opacity: .66 !important;
+  mix-blend-mode: multiply !important;
+  filter: grayscale(1) sepia(1) saturate(3) hue-rotate(155deg) contrast(.92) brightness(1.12) drop-shadow(0 0 16px rgba(23, 128, 205, .10)) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__universe::before,
+#root #corvia-login.login-gateway--light .login-gateway__universe::after { border-color: rgba(37, 128, 185, .25) !important; }
+
+#root #corvia-login.login-gateway--light .login-gateway__space {
+  color: #14335d !important;
+  background: rgba(255, 255, 255, .93) !important;
+  border-color: rgba(28, 124, 171, .22) !important;
+  box-shadow: 0 14px 34px -26px rgba(25, 81, 126, .28) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__console,
+#root #corvia-login.login-gateway--light .login-gateway__console-head,
+#root #corvia-login.login-gateway--light .login-gateway__form {
+  background: rgba(255, 255, 255, .94) !important;
+  border-color: rgba(28, 124, 171, .18) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__field > div {
+  color: #476784 !important;
+  background: #fff !important;
+  border-color: rgba(40, 103, 144, .22) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__field input { color: #173858 !important; }
+#root #corvia-login.login-gateway--light .login-gateway__field input::placeholder { color: #536c85 !important; opacity: 1 !important; }
+#root #corvia-login.login-gateway--light .login-gateway__enter {
+  color: #fff !important;
+  background: linear-gradient(105deg, #1e5fbf, #087e97) !important;
+  border-color: rgba(10, 143, 180, .48) !important;
+}
+
+#root #corvia-login.login-gateway--light .login-gateway__join {
+  background: linear-gradient(135deg, rgba(38, 125, 221, .075), rgba(20, 177, 194, .055) 58%, rgba(25, 144, 166, .065)) !important;
+  border-color: rgba(28, 124, 171, .20) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root .spaces-choice .galaxy-theme-toggle[data-rotation="clockwise"] .galaxy-theme-toggle__image { animation: none !important; }
+}
+
+/* Revisão de 09/09: galáxia contida na cena e ações alinhadas à paleta clara. */
+#root #corvia-login .login-gateway__milky-way {
+  height: 112% !important;
+  max-height: 330px !important;
+  aspect-ratio: auto !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join small {
+  color: #185e9b !important;
+  background: none !important;
+  -webkit-text-fill-color: #185e9b !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join > span:first-child,
+#root #corvia-login.login-gateway--light .login-gateway__console-head > span {
+  color: #166d98 !important;
+  background: #e9f4fb !important;
+  border-color: #c4e1f0 !important;
+  box-shadow: none !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__forgot,
+#root #corvia-login.login-gateway--light .login-gateway__console-head p,
+#root #corvia-login.login-gateway--light .login-gateway__field button {
+  color: #235f94 !important;
+}

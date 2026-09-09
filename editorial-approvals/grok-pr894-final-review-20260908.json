@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr894-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr894": "b5863b76a0fd64abfaf5a0dfd5feb9debb29b6e2"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-encaminhar-clinica-de-lipidios-ldl-refratario-hofh",
+      "fluxograma-ambulatorial-cascata-hf-destino-e-lipidologia",
+      "sinalizadores-ambulatoriais-rastreio-familiar-cascata-hf-quando-iniciar"
+    ]
+  }
+}

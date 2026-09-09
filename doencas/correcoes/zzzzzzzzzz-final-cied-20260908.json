@@ -1,0 +1,867 @@
+[
+  {
+    "slug": "dispositivos-cardiacos-implantaveis",
+    "set": {
+      "assistant_questions": [
+        {
+          "id": "device_type",
+          "label": "Qual o tipo de dispositivo implantado?",
+          "type": "select",
+          "required": true,
+          "section": "Dispositivo",
+          "options": [
+            {
+              "value": "marcapasso",
+              "label": "Marca-passo convencional"
+            },
+            {
+              "value": "cdi",
+              "label": "Cardiodesfibrilador implantável (CDI)"
+            },
+            {
+              "value": "trc_p",
+              "label": "Ressincronizador sem desfibrilador (TRC-P)"
+            },
+            {
+              "value": "trc_d",
+              "label": "Ressincronizador com desfibrilador (TRC-D)"
+            },
+            {
+              "value": "marcapasso_sem_eletrodo",
+              "label": "Marca-passo sem eletrodo (leadless)"
+            }
+          ]
+        },
+        {
+          "id": "pacing_dependent",
+          "label": "O paciente é dependente de estimulação (sem ritmo próprio estável na ausência do marca-passo)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Dispositivo"
+        },
+        {
+          "id": "pocket_local_signs",
+          "label": "Há sinais locais na bolsa do gerador (eritema, calor, drenagem purulenta, deiscência ou erosão/exposição do dispositivo)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "systemic_infection_signs",
+          "label": "Há febre, calafrios ou outros sinais sistêmicos de possível infecção?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "icd_shock_history",
+          "label": "Se houve choque recente, qual a avaliação de adequação pela equipe? (A contagem/temporalidade é informada abaixo.)",
+          "type": "select",
+          "required": true,
+          "section": "CDI",
+          "options": [
+            {
+              "value": "nenhum",
+              "label": "Nenhum choque recente"
+            },
+            {
+              "value": "unico_apropriado",
+              "label": "Choque único, considerado apropriado"
+            },
+            {
+              "value": "multiplos_apropriados",
+              "label": "Múltiplos choques apropriados"
+            },
+            {
+              "value": "suspeita_inapropriado",
+              "label": "Choque(s) considerado(s) inapropriado(s) ou de causa incerta"
+            }
+          ]
+        },
+        {
+          "id": "lead_dysfunction_signs",
+          "label": "Há sinais sugestivos de disfunção do eletrodo (síncope, pré-síncope, palpitações súbitas ou perda de captura identificada em interrogação)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "mri_needed",
+          "label": "Há necessidade clínica de ressonância magnética?",
+          "type": "boolean",
+          "required": true,
+          "section": "Planejamento"
+        },
+        {
+          "id": "device_mri_conditional",
+          "label": "O sistema COMPLETO (gerador e todos os eletrodos/composição) é condicional para o exame de RM proposto, conforme fabricante?",
+          "type": "select",
+          "required": true,
+          "section": "Planejamento",
+          "options": [
+            {
+              "value": "condicional",
+              "label": "Sim, condicional para RM"
+            },
+            {
+              "value": "nao_condicional",
+              "label": "Não condicional (dispositivo legado)"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Não sei / não confirmado"
+            }
+          ]
+        },
+        {
+          "id": "surgery_or_radiotherapy_planned",
+          "label": "Há cirurgia não cardíaca ou radioterapia oncológica programada?",
+          "type": "select",
+          "required": true,
+          "section": "Planejamento",
+          "options": [
+            {
+              "value": "nenhuma",
+              "label": "Nenhuma programada"
+            },
+            {
+              "value": "cirurgia_nao_cardiaca",
+              "label": "Cirurgia não cardíaca programada"
+            },
+            {
+              "value": "radioterapia",
+              "label": "Radioterapia oncológica programada"
+            },
+            {
+              "value": "ambas",
+              "label": "Ambas programadas"
+            }
+          ]
+        },
+        {
+          "id": "crt_suboptimal_response",
+          "label": "Em portador de TRC, há suspeita de resposta clínica/ecocardiográfica insuficiente à ressincronização?",
+          "type": "boolean",
+          "required": false,
+          "section": "Seguimento"
+        },
+        {
+          "id": "cied_hardware_exposed_or_purulent",
+          "label": "Há exposição/erosão do gerador ou eletrodo, drenagem purulenta ou deiscência com comunicação com o sistema?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "cied_bacteremia_without_other_source",
+          "label": "Há bacteremia documentada/persistente sem outro foco convincente ou alta suspeita microbiológica de infecção do CIED?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "shock_lead_involved_or_suspected",
+          "label": "Em CDI/TRC-D, há suspeita de que a disfunção envolva o eletrodo/circuito de choque ou possa comprometer detecção/terapia de desfibrilação?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "mri_high_risk_lead_context",
+          "label": "Para RM há eletrodo abandonado/fraturado/epicárdico, integridade duvidosa, bateria em ERI/EOL ou exame fora do protocolo/rotulagem (por exemplo, 3 T não autorizado)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Planejamento"
+        },
+        {
+          "id": "shock_timing_count",
+          "label": "Quantos choques ocorreram no episódio recente?",
+          "type": "select",
+          "options": [
+            {
+              "value": "nenhum",
+              "label": "Nenhum"
+            },
+            {
+              "value": "unico_recuperado",
+              "label": "Um único choque, com recuperação completa"
+            },
+            {
+              "value": "multiplos_24h",
+              "label": "Dois ou mais choques nas últimas 24 horas"
+            },
+            {
+              "value": "fora_janela",
+              "label": "Choques antigos, sem episódio atual"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Ainda não esclarecido"
+            }
+          ],
+          "required": true
+        },
+        {
+          "id": "acute_instability",
+          "label": "Há síncope atual/recente, sintomas persistentes, arritmia sustentada, dispneia importante, dor torácica ou instabilidade neste episódio?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "battery_status",
+          "label": "Qual o estado atual confirmado da bateria?",
+          "type": "select",
+          "options": [
+            {
+              "value": "adequada",
+              "label": "Adequada"
+            },
+            {
+              "value": "proxima_eri",
+              "label": "Aproximação de ERI, ainda não atingido"
+            },
+            {
+              "value": "eri",
+              "label": "Indicador de substituição eletiva atingido"
+            },
+            {
+              "value": "eol",
+              "label": "Fim de serviço/vida útil (EOS/EOL)"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Não confirmado"
+            }
+          ]
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "cied-infeccao-sistemica-suspeita",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "cied_bacteremia_without_other_source",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Bacteremia documentada/persistente sem outro foco ou alta suspeita microbiológica em portador de CIED é compatível com possível infecção sistêmica de CIED/endocardite de eletrodo, mesmo sem febre atual"
+            ],
+            "emergency_flow": [
+              "Colher hemoculturas antes do antibiótico quando a condição permitir, avaliar foco alternativo e envolver rapidamente equipe de infecção/extração de CIED; ausência de febre/calafrios não neutraliza bacteremia persistente sem outro foco."
+            ]
+          }
+        },
+        {
+          "id": "cied-erosao-bolsa-infeccao-local",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "cied_hardware_exposed_or_purulent",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Exposição/erosão do hardware ou drenagem purulenta compatível com infecção definida do sistema"
+            ],
+            "emergency_flow": [
+              "Encaminhar prontamente para equipe experiente em infecção/extração de CIED; hardware exposto ou comunicação purulenta com o sistema não deve ser tratado como problema cutâneo isolado."
+            ],
+            "suggested_tests": [
+              "Hemoculturas antes de antibiótico quando clinicamente possível e avaliação de extensão sistêmica/endovascular conforme contexto"
+            ]
+          }
+        },
+        {
+          "id": "cdi-choque-inapropriado-suspeita",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "icd_shock_history",
+                "op": "eq",
+                "value": "suspeita_inapropriado"
+              }
+            ],
+            "none": [
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "multiplos_24h"
+              },
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "fora_janela"
+              },
+              {
+                "field": "acute_instability",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Contatar prontamente a clínica do dispositivo para avaliação clínica e interrogação após choque isolado com recuperação completa. Se outro choque, síncope, dor, dispneia ou instabilidade, acionar emergência; se não houver acesso rápido à equipe, procurar atendimento."
+            ]
+          }
+        },
+        {
+          "id": "cdi-multiplos-choques-apropriados",
+          "priority": 98,
+          "when": {
+            "all": [
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "multiplos_24h"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Múltiplos choques em 24 horas: emergência, independentemente de serem apropriados ou inapropriados. Não esperar terceiro choque para buscar atendimento."
+            ],
+            "emergency_flow": [
+              "Avaliar em ambiente monitorizado com capacidade imediata de desfibrilação externa; interrogar o dispositivo, confirmar terapias apropriadas e investigar isquemia, distúrbios eletrolíticos, insuficiência cardíaca e outros gatilhos reversíveis."
+            ]
+          }
+        },
+        {
+          "id": "cied-disfuncao-eletrodo-dependente",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "lead_dysfunction_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "pacing_dependent",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Suspeita de disfunção grave de eletrodo com perda de captura em paciente dependente de marca-passo"
+            ],
+            "emergency_flow": [
+              "Avaliação de emergência com interrogação do dispositivo e monitorização contínua; considerar marca-passo temporário se houver perda de captura confirmada"
+            ]
+          }
+        },
+        {
+          "id": "cied-disfuncao-eletrodo-nao-dependente",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "lead_dysfunction_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "pacing_dependent",
+                "op": "falsy"
+              },
+              {
+                "field": "shock_lead_involved_or_suspected",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Investigar disfunção de eletrodo por interrogação do dispositivo mesmo sem dependência de estimulação"
+            ]
+          }
+        },
+        {
+          "id": "cied-rm-nao-condicional",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "mri_needed",
+                "op": "truthy"
+              },
+              {
+                "field": "device_mri_conditional",
+                "op": "eq",
+                "value": "nao_condicional"
+              },
+              {
+                "field": "mri_high_risk_lead_context",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Sistema não condicional pode ser avaliado para RM em 1,5 T sob protocolo especializado, após identificação completa, análise de riscos/benefícios, programação, monitorização e reinterrogação. Não liberar exame somente pela necessidade clínica nem transpor automaticamente para 3 T."
+            ],
+            "suggested_tests": [
+              "Interrogação e programação pré-exame pela equipe de eletrofisiologia, monitorização durante o exame e reinterrogação pós-exame"
+            ]
+          }
+        },
+        {
+          "id": "cied-rm-status-desconhecido",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "mri_needed",
+                "op": "truthy"
+              },
+              {
+                "field": "device_mri_conditional",
+                "op": "eq",
+                "value": "desconhecido"
+              }
+            ]
+          },
+          "add": {
+            "missing_information": [
+              "Confirmar fabricante, modelo e status de condicionalidade para RM antes do exame"
+            ]
+          }
+        },
+        {
+          "id": "cied-cirurgia-nao-cardiaca-planejada",
+          "priority": 35,
+          "when": {
+            "any": [
+              {
+                "field": "surgery_or_radiotherapy_planned",
+                "op": "eq",
+                "value": "cirurgia_nao_cardiaca"
+              },
+              {
+                "field": "surgery_or_radiotherapy_planned",
+                "op": "eq",
+                "value": "ambas"
+              }
+            ]
+          },
+          "add": {
+            "ambulatory_flow": [
+              "Avaliar pré-operatoriamente o tipo de dispositivo, a dependência de estimulação e a resposta esperada ao ímã antes da cirurgia"
+            ],
+            "messages": [
+              "Planejar o trajeto do eletrocautério a distância do dispositivo e a disponibilidade de ímã/suporte de emergência durante o procedimento"
+            ]
+          }
+        },
+        {
+          "id": "cied-radioterapia-planejada",
+          "priority": 35,
+          "when": {
+            "any": [
+              {
+                "field": "surgery_or_radiotherapy_planned",
+                "op": "eq",
+                "value": "radioterapia"
+              },
+              {
+                "field": "surgery_or_radiotherapy_planned",
+                "op": "eq",
+                "value": "ambas"
+              }
+            ]
+          },
+          "add": {
+            "ambulatory_flow": [
+              "Contatar a eletrofisiologia para estratificar risco antes da radioterapia e definir a frequência de verificação do dispositivo durante o tratamento"
+            ],
+            "messages": [
+              "Preferir técnica sem produção de nêutrons quando tecnicamente possível, sobretudo em paciente dependente de marca-passo"
+            ]
+          }
+        },
+        {
+          "id": "cied-gerador-proximo-eri",
+          "priority": 25,
+          "when": {
+            "all": [
+              {
+                "field": "battery_status",
+                "op": "in",
+                "value": [
+                  "proxima_eri",
+                  "eri"
+                ]
+              }
+            ]
+          },
+          "add": {
+            "ambulatory_flow": [
+              "Contatar a clínica e planejar substituição conforme ERI, autonomia restante, modelo, dependência e alertas do fabricante. ERI não equivale a EOL; não fixar um intervalo único para todos os dispositivos."
+            ],
+            "suggested_tests": [
+              "Interrogação do dispositivo com intervalo reduzido conforme a aproximação da substituição eletiva"
+            ],
+            "risk": "prioritario"
+          }
+        },
+        {
+          "id": "trc-nao-respondedor-suspeito",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "crt_suboptimal_response",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Investigar o percentual de estimulação biventricular, a indicação original e a posição do eletrodo de ventrículo esquerdo antes de assumir resposta insuficiente definitiva"
+            ],
+            "suggested_tests": [
+              "Ecocardiograma para remodelamento reverso e eletrocardiograma avaliando captura biventricular"
+            ]
+          }
+        },
+        {
+          "id": "cied-sinais-sistemicos-sem-bacteremia-documentada",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "systemic_infection_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "cied_bacteremia_without_other_source",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Febre/calafrios em portador de CIED exigem avaliação de fonte, hemoculturas quando indicadas e inspeção do sistema, mas não confirmam infecção de CIED isoladamente."
+            ],
+            "suggested_tests": [
+              "Avaliar foco infeccioso alternativo e colher hemoculturas antes de antibiótico quando apropriado"
+            ]
+          }
+        },
+        {
+          "id": "cied-sinais-locais-inespecificos-sem-hardware-exposto",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "pocket_local_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "cied_hardware_exposed_or_purulent",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Eritema/calor/dor local sem exposição ou pus requer avaliação presencial e correlação com tempo de implante, hematoma, cicatrização superficial e sinais sistêmicos; não rotular automaticamente como infecção profunda do CIED."
+            ]
+          }
+        },
+        {
+          "id": "cdi-choque-unico-apropriado",
+          "priority": 72,
+          "when": {
+            "all": [
+              {
+                "field": "icd_shock_history",
+                "op": "eq",
+                "value": "unico_apropriado"
+              }
+            ],
+            "none": [
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "multiplos_24h"
+              },
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "fora_janela"
+              },
+              {
+                "field": "acute_instability",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Contatar prontamente a clínica do dispositivo para avaliação clínica e interrogação após choque isolado com recuperação completa. Se outro choque, síncope, dor, dispneia ou instabilidade, acionar emergência; se não houver acesso rápido à equipe, procurar atendimento."
+            ]
+          }
+        },
+        {
+          "id": "cied-disfuncao-lead-choque",
+          "priority": 92,
+          "when": {
+            "all": [
+              {
+                "field": "lead_dysfunction_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "shock_lead_involved_or_suspected",
+                "op": "truthy"
+              }
+            ],
+            "any": [
+              {
+                "field": "device_type",
+                "op": "eq",
+                "value": "cdi"
+              },
+              {
+                "field": "device_type",
+                "op": "eq",
+                "value": "trc_d"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Possível falha de eletrodo/circuito de choque com risco de terapia inapropriada ou perda de proteção de desfibrilação"
+            ],
+            "emergency_flow": [
+              "Interrogar o dispositivo prontamente e envolver eletrofisiologia para avaliar oversensing, impedância, integridade do lead e necessidade de reprogramação/revisão; escalonar para emergência se houver choques recorrentes, síncope, arritmia ou instabilidade."
+            ]
+          }
+        },
+        {
+          "id": "cied-rm-contexto-lead-alto-risco",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "mri_needed",
+                "op": "truthy"
+              },
+              {
+                "field": "mri_high_risk_lead_context",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "missing_information": [
+              "Caracterizar completamente leads abandonados/fraturados/epicárdicos, integridade do sistema, campo magnético planejado e protocolo institucional antes da RM"
+            ],
+            "messages": [
+              "Este cenário está fora da mensagem genérica de RM em dispositivo legado; exigir avaliação individual por eletrofisiologia e radiologia com experiência em CIED antes de decidir realizar ou contraindicar o exame."
+            ]
+          }
+        },
+        {
+          "id": "cied-evento-agudo-instabilidade",
+          "priority": 110,
+          "when": {
+            "all": [
+              {
+                "field": "acute_instability",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Acionar atendimento de emergência, monitorização e suporte de desfibrilação/estimulação conforme quadro; não aguardar transmissão remota ou resposta da clínica para tratar instabilidade."
+            ]
+          }
+        },
+        {
+          "id": "cied-choque-unico-recuperado",
+          "priority": 74,
+          "when": {
+            "all": [
+              {
+                "field": "shock_timing_count",
+                "op": "eq",
+                "value": "unico_recuperado"
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_instability",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Após um único choque com recuperação completa, organizar prontamente contato/interrogação pela clínica; novo choque ou sintomas exige emergência. Monitorização remota não é serviço de emergência permanente."
+            ]
+          }
+        },
+        {
+          "id": "cied-bateria-eol",
+          "priority": 93,
+          "when": {
+            "all": [
+              {
+                "field": "battery_status",
+                "op": "eq",
+                "value": "eol"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "emergency_flow": [
+              "Fim de serviço confirmado: avaliação imediata pela equipe de dispositivos para substituição e suporte conforme autonomia/captura. Não tratar como simples planejamento eletivo de ERI. Se dependente de estimulação, encaminhar para ambiente monitorizado com capacidade de pacing."
+            ]
+          }
+        },
+        {
+          "id": "cied-eol-dependente",
+          "priority": 102,
+          "when": {
+            "all": [
+              {
+                "field": "battery_status",
+                "op": "eq",
+                "value": "eol"
+              },
+              {
+                "field": "pacing_dependent",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "EOL em paciente dependente: encaminhar imediatamente para avaliação monitorizada com interrogação e capacidade de estimulação temporária se necessária."
+            ]
+          }
+        },
+        {
+          "id": "cied-rm-condicional-verificar-label",
+          "priority": 35,
+          "when": {
+            "all": [
+              {
+                "field": "mri_needed",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "device_mri_conditional",
+                "op": "eq",
+                "value": "condicional"
+              }
+            ]
+          },
+          "add": {
+            "messages": [
+              "Confirmar que gerador, todos eletrodos e sua combinação cumprem a rotulagem do fabricante para campo magnético, parâmetros e exame propostos. Condicional não significa ausência de risco: programar, monitorizar e reinterrogar conforme protocolo; componentes incompatíveis mudam a classificação."
+            ]
+          }
+        }
+      ],
+      "emergency_flow": [
+        "Suspeita de infecção sistêmica de CIED ou endocardite de eletrodo (febre, calafrios, bacteremia): colher hemoculturas antes do antibiótico quando a condição clínica permitir e encaminhar de forma ágil para equipe de extração",
+        "Múltiplos choques em 24 horas ou choque com sintomas persistentes/instabilidade: emergência monitorizada, sem esperar definir se são apropriados. Choque único com recuperação completa exige contato rápido com a clínica e interrogação, com escalonamento se recorrência ou falta de acesso.",
+        "Suspeita de disfunção grave de eletrodo com perda de captura em paciente dependente de estimulação: avaliação de emergência com interrogação do dispositivo, monitorização contínua e disponibilidade de marca-passo temporário se houver perda de captura confirmada",
+        "Erosão ou exposição do gerador/eletrodo através da pele: tratar como infecção do sistema mesmo sem febre ou sinais sistêmicos associados, e não apenas como problema cutâneo local",
+        "Instabilidade hemodinâmica por bradiarritmia grave com possível falha do dispositivo: considerar marca-passo temporário transvenoso como ponte até resolução da causa ou implante/revisão definitiva",
+        "Bateria em EOL exige avaliação imediata; dependência de estimulação ou perda de captura impõe ambiente monitorizado e suporte de emergência. ERI isolado tem planejamento específico conforme modelo/autonomia, não prazo único."
+      ],
+      "red_flags": [
+        "Múltiplos choques em 24 horas ou choque com sintomas persistentes/instabilidade: procurar emergência sem esperar preencher definição formal de tempestade elétrica.",
+        "Instabilidade hemodinâmica associada a choque de CDI, a bradicardia sintomática grave ou a perda de captura em paciente marca-passo-dependente",
+        "Erosão de pele sobre o gerador ou sobre o trajeto do eletrodo — é infecção estabelecida do sistema por definição clínica, mesmo sem hemocultura positiva, e não deve ser tratada como problema cosmético local",
+        "Febre recorrente ou bacteremia sem foco alternativo identificado em portador de CIED — suspeitar endocardite relacionada a eletrodo até prova em contrário, mesmo diante de ecocardiograma transtorácico normal",
+        "Síncope recente com evidência de falha de captura/condução ou pausa sintomática exige avaliação rápida; limiares usados para pacing em síncope reflexa selecionada não são um marcador universal de morte súbita.",
+        "Queda ou elevação abrupta e inexplicada de impedância de choque ou de estimulação, sobretudo em eletrodo de CDI com terapia antitaquicardia ativa — risco de choque inapropriado por sobredetecção de ruído não fisiológico decorrente de fratura de condutor ou falha de isolamento"
+      ],
+      "treatment_summary": "O manejo de portador de dispositivo cardíaco eletrônico implantável (CIED) — marca-passo, cardiodesfibrilador implantável (CDI) ou ressincronizador (TRC) — se organiza em torno de seis situações que recorrem na prática clínica. Diante de infecção definitiva de CIED, seja infecção sistêmica/endovascular com bacteremia e possível envolvimento de eletrodo, seja infecção local da bolsa do gerador com erosão, exposição ou drenagem purulenta, a conduta padrão é a extração completa do sistema — remoção do gerador e de todos os eletrodos, incluindo eletrodos abandonados de trocas anteriores — associada a antimicrobianos dirigidos pelo agente isolado; extração parcial ou tratamento apenas com antibiótico, mantendo eletrodo colonizado, expõe a recidiva. Erosão do dispositivo através da pele equivale, por si só, a infecção do sistema, mesmo sem febre ou hemocultura positiva. Uma vez controlada a infecção, a indicação de reimplante deve ser reavaliada — não é automática — e, quando mantida, o novo sistema deve ser implantado em sítio distante do foco original, após intervalo de hemoculturas negativas; em pacientes de alto risco de reinfecção, marca-passo sem eletrodo ou CDI subcutâneo são alternativas a considerar quando compatíveis com a necessidade clínica. Envelope antibacteriano no implante ou na reintervenção é medida preventiva adjuvante, não tratamento da infecção já instalada.\n\nNo manejo perioperatório de cirurgia não cardíaca, a avaliação pré-procedimento deve caracterizar o tipo de dispositivo, o grau de dependência de estimulação e a resposta esperada ao ímã, planejando o trajeto do eletrocautério a distância do gerador e dos eletrodos para reduzir interferência eletromagnética; suporte de emergência e capacidade de reprogramação devem estar disponíveis durante o procedimento. Na radioterapia oncológica, o risco ao dispositivo é fisicamente distinto — dano cumulativo ao circuito e reset por produção de nêutrons secundários em feixes de fóton de alta energia — e o manejo envolve contato prévio com a eletrofisiologia, planejamento de campo evitando o gerador quando possível, preferência por técnicas que não produzam nêutrons sempre que clinicamente viável, e verificação periódica do dispositivo ao longo do tratamento conforme a categoria de risco do paciente; radioterapia de prótons exige cautela adicional, sobretudo em paciente dependente de estimulação.\n\nPara necessidade de ressonância magnética, a distinção entre dispositivo condicional e não condicional (\"legado\") deixou de ser uma barreira absoluta: em serviço com protocolo estruturado — interrogação e reprogramação pré-exame, monitorização durante o procedimento e reinterrogação ao final —, RM pode ser viável em sistema não condicional após avaliação individual e protocolo especializado, habitualmente em 1,5 T. Há riscos residuais, incluindo reset, alterações de limiar e aquecimento, que não se reduzem a reset reversível. Eletrodos abandonados/fraturados/epicárdicos, bateria em ERI/EOL e exame fora da rotulagem exigem análise especializada; não são motivo para liberação automática nem, em todos os casos, proibição absoluta. A condicionalidade exige sistema completo e parâmetros autorizados pelo fabricante, não somente o gerador.\n\nO telemonitoramento remoto de CDI e CRT-D, com transmissão automática de dados do próprio dispositivo, reduz o tempo entre o evento clínico e sua detecção pela equipe assistente, permitindo intervenção antes da descompensação franca; deve integrar o seguimento conforme protocolo da clínica. Não é atendimento de emergência 24 horas nem garante revisão imediata de toda transmissão; sintomas agudos seguem o plano de urgência informado ao paciente.\n\nDiante de não-resposta à TRC, a investigação segue sequência lógica: confirmar que a estimulação biventricular está sendo entregue de forma efetiva, reavaliar se a indicação original correspondia ao fenótipo eletrocardiográfico de benefício comprovado, investigar a posição do eletrodo de ventrículo esquerdo e a viabilidade miocárdica local, considerar otimização do intervalo atrioventricular guiada por ecocardiograma em quem já responde parcialmente, e reservar reposicionamento cirúrgico do eletrodo para os casos com posição subótima documentada e falha das medidas anteriores.\n\nA troca eletiva de gerador não deve ser tratada como procedimento uniformemente simples: o risco aumenta de forma relevante quando o escopo inclui adição ou revisão de eletrodo, ou upgrade para sistema mais complexo, em comparação com troca isolada do gerador; em paciente com carga importante de comorbidade, o risco relevante a discutir é o de mortalidade nos meses seguintes ao procedimento, determinado pela doença de base, não pela técnica cirúrgica da troca — o que reposiciona a decisão de antecipar, prosseguir ou otimizar a condição clínica antes de operar.",
+      "diagnostic_approach": {
+        "indicacao_de_marcapasso_por_bradiarritmia_esc_2021": "A diretriz ESC 2021 (Glikson M et al., Eur Heart J 2021;42(35):3427-3520, DOI 10.1093/eurheartj/ehab364, PMID 34455430) organiza a decisão por duas assimetrias centrais. Na disfunção do nó sinusal, quem decide é o sintoma atribuível à bradicardia documentada: bradicardia sinusal assintomática é Classe III (contraindicação explícita). No bloqueio atrioventricular avançado — 3º grau, 2º grau Mobitz II, 2:1 infranodal ou BAV avançado —, a indicação é Classe I independentemente de sintomas, pelo valor prognóstico da estimulação diante do risco de assistolia. Antes de qualquer indicação, exclui-se causa transitória e corrigível (fármaco cronotrópico negativo, distúrbio eletrolítico, isquemia aguda, infecção), que mantém a indicação em Classe III enquanto reversível. Na síncope com distúrbio de condução, bloqueio de ramo alternante indica marcapasso Classe I; bloqueio bifascicular depende do estudo eletrofisiológico (HV ≥70ms ou bloqueio intra/infra-His à estimulação atrial incremental confirmam Classe I); síncope reflexa cardioinibitória documentada (pausa sintomática >3s, pausa assintomática >6s, ou síncope assistólica ao tilt-test) em paciente acima de 40 anos com síncope grave, imprevisível e recorrente é Classe I, nível A, para marcapasso de dupla câmara. A exclusão de indicação permanente por causa reversível não impede suporte de estimulação temporária necessário durante instabilidade. Bloqueio bifascicular com síncope inexplicada pode ter estratégia individualizada; estudo eletrofisiológico não é condição universal de toda indicação.",
+        "indicacao_de_cdi_por_prevencao_primaria_e_secundaria_esc_2022": "Prevenção secundária (implante após evento arrítmico grave já documentado — FV ressuscitada, TV sustentada com instabilidade hemodinâmica) é sustentada pela metanálise conjunta de AVID, CIDS e CASH (Connolly SJ et al., Eur Heart J 2000;21(24):2071-2078, PMID 11102258): redução de 28% na mortalidade por qualquer causa (HR 0,72; IC95% 0,60-0,87). Prevenção primária (implante antes de qualquer evento arrítmico, por substrato de alto risco) tem como marcos MADIT-II (FEVE ≤30% pós-infarto, redução de mortalidade de 31%, N Engl J Med 2002;346(12):877-883, PMID 11907286) e SCD-HeFT (FEVE ≤35%, insuficiência cardíaca classe NYHA II-III, redução de 23%, N Engl J Med 2005;352(3):225-237, PMID 15659722); o ensaio DANISH (N Engl J Med 2016;375(13):1221-1230, PMID 27571011) questionou, especificamente na cardiomiopatia não isquêmica tratada de forma contemporânea, se o benefício de mortalidade geral se sustenta — a redução de morte súbita persistiu, a de mortalidade total não. A diretriz ESC 2022 (Eur Heart J 2022;43(40):3997-4126, DOI 10.1093/eurheartj/ehac262, PMID 36017572) mantém a fração de ejeção combinada à classe funcional NYHA como critério central na doença coronariana crônica, mas na cardiomiopatia dilatada ou não dilatada hipocinética é explícita: a indicação de CDI não deve ser restrita a FEVE ≤35% isoladamente — ressonância magnética cardíaca (realce tardio, quantificação de fibrose) e teste genético passam a integrar formalmente a decisão, com peso elevado em relação à diretriz anterior de 2015.",
+        "selecao_de_modalidade_de_estimulacao": "Fora do cenário de bloqueio atrioventricular com estimulação ventricular esperada acima de 20% do tempo, a estimulação convencional de ventrículo direito permanece a opção padrão. Acima desse limiar, o consenso clínico ESC 2025 (Glikson M et al., Europace 2025;27(4):euaf050, DOI 10.1093/europace/euaf050, PMID 40159278) estratifica por fração de ejeção: com FEVE >40%, a estimulação do sistema de condução (feixe de His ou ramo esquerdo) 'pode ser apropriada' como alternativa ao ventrículo direito convencional; com FEVE <40%, ela 'pode ser apropriada' no lugar da ressincronização biventricular, e o consenso vai além ao incluir orientação explícita de evitar a estimulação convencional isolada de ventrículo direito nesse cenário. Entre feixe de His e ramo esquerdo, quando ambas as técnicas estão disponíveis, prefere-se estimulação do ramo esquerdo em doença valvar aórtica significativa, bloqueio infra-hissiano ou ablação do nó atrioventricular planejada; prefere-se feixe de His quando é necessário poupar a valva tricúspide, por exemplo diante de troca valvar futura prevista. Nota metodológica relevante: por se tratar de consenso clínico e não de diretriz formal, a gradação usa três categorias próprias — 'Advice to do', 'May be appropriate to do' e 'Advice not to do' — em vez da escala clássica Classe I-III/Nível A-C da ESC, distinção que deve ser preservada ao comunicar a recomendação.",
+        "investigacao_de_disfuncao_de_eletrodo_e_infeccao_de_cied": "A disfunção de eletrodo tipicamente se anuncia por telemetria de rotina ou monitorização remota antes de qualquer sintoma clínico: impedância de estimulação ou de choque fora da tendência habitual, elevação abrupta de limiar de captura, perda intermitente de sensing ou artefato de alta frequência no eletrograma armazenado. A radiografia de tórax (incidências PA e oblíqua) confirma achados mecânicos grosseiros — deslocamento franco, dano evidente à bainha —, mas a fratura do condutor interno costuma ser invisível ao raio-X convencional, o que torna a curva de impedância armazenada e a reprodução de ruído por manobra provocativa mais sensíveis que a imagem para o diagnóstico elétrico. Na suspeita de infecção de CIED, hemoculturas seriadas (no mínimo duas amostras, colhidas antes do início do antibiótico) e ecocardiograma formam os dois pilares diagnósticos: o ecocardiograma transtorácico tem sensibilidade de apenas cerca de 30% para vegetação em eletrodo (Victor F et al., Heart 1999;81(1):82-87, PMID 10220550) e um resultado normal não encerra a investigação — o ecocardiograma transesofágico eleva a detecção para cerca de 91% e deve ser buscado sempre que a suspeita clínica persistir. O biofilme bacteriano que reveste preferencialmente a porção intravascular do eletrodo (Marrie TJ et al., Circulation 1982;66(6):1339-1343, PMID 7139907) explica por que uma cultura que se torna negativa sob antibiótico não prova erradicação, e por que a infecção aparentemente restrita à loja do gerador também exige explante completo do sistema — gerador e todos os eletrodos —, recomendação Classe I convergente entre AHA, HRS, ESC e EHRA."
+      },
+      "source_refs": [
+        "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. European Heart Journal. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430.",
+        "Glikson M, Burri H, Abdin A, et al. European Society of Cardiology (ESC) clinical consensus statement on indications for conduction system pacing. Europace. 2025;27(4):euaf050. DOI: 10.1093/europace/euaf050. PMID: 40159278.",
+        "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. European Heart Journal. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+        "Moss AJ, Zareba W, Hall WJ, et al. Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction (MADIT-II). New England Journal of Medicine. 2002;346(12):877-883. DOI: 10.1056/NEJMoa013474. PMID: 11907286.",
+        "Bardy GH, Lee KL, Mark DB, et al; SCD-HeFT Investigators. Amiodarone or an implantable cardioverter-defibrillator for congestive heart failure. New England Journal of Medicine. 2005;352(3):225-237. DOI: 10.1056/NEJMoa043399. PMID: 15659722.",
+        "Kusumoto FM, Schoenfeld MH, Wilkoff BL, et al. 2017 HRS expert consensus statement on cardiovascular implantable electronic device lead management and extraction. Heart Rhythm. 2017;14(12):e503-e551. DOI: 10.1016/j.hrthm.2017.09.001. PMID: 28919379.",
+        "Athan E, Chu VH, Tattevin P, et al; ICE-PCS Investigators. Clinical characteristics and outcome of infective endocarditis involving implantable cardiac devices. JAMA. 2012;307(16):1727-1735. DOI: 10.1001/jama.2012.497. PMID: 22535857.",
+        "Victor F, De Place C, Camus C, et al. Pacemaker lead infection: echocardiographic features, management, and outcome. Heart. 1999;81(1):82-87. DOI: 10.1136/hrt.81.1.82. PMID: 10220550.",
+        "Blomström-Lundqvist C, et al. Update on Cardiovascular Implantable Electronic Device Infections and Their Prevention, Diagnosis, and Management: A Scientific Statement From the American Heart Association. Circulation. 2024;149(2):e201-e216. DOI: 10.1161/CIR.0000000000001187. PMID: 38047353.",
+        "Abu-haniyeh A, Hajouli S. Pacemaker Mediated Tachycardia. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2026 Jan. PMID: 32809666.",
+        "Moss AJ, Schuger C, Beck CA, et al; MADIT-RIT Trial Investigators. Reduction in inappropriate therapy and mortality through ICD programming. New England Journal of Medicine. 2012;367(24):2275-2283. DOI: 10.1056/NEJMoa1211107. PMID: 23131066.",
+        "Swerdlow CD, Sachanandani H, Gunderson BD, Ousdigian KT, Randall M, Ellenbogen KA. Downloadable software algorithm reduces inappropriate shocks caused by implantable cardioverter-defibrillator lead fractures: a prospective study. Circulation. 2010;122(15):1449-1455. DOI: 10.1161/CIRCULATIONAHA.110.962407. PMID: 20876433.",
+        "Cha YM, Sohail MR, et al. 2026 HRS/AHA/APHRS/EHRA/IDSA/LAHRS/PACES/STS expert consensus statement update on cardiovascular implantable electronic device lead management and extraction. Heart Rhythm. 2026;23(8):e1716-e1792. DOI: 10.1016/j.hrthm.2026.04.015. PMID: 42034327.",
+        "Connolly SJ, Hallstrom AP, Cappato R, et al. Meta-analysis of the implantable cardioverter defibrillator secondary prevention trials. AVID, CASH and CIDS studies. Antiarrhythmics vs Implantable Defibrillator study. Cardiac Arrest Study Hamburg. Canadian Implantable Defibrillator Study. Eur Heart J. 2000;21(24):2071-2078. DOI: 10.1053/euhj.2000.2476. PMID: 11102258.",
+        "Marrie TJ, Nelligan J, Costerton JW. A scanning and transmission electron microscopic study of an infected endocardial pacemaker lead. Circulation. 1982;66(6):1339-1343. DOI: 10.1161/01.cir.66.6.1339. PMID: 7139907.",
+        "Køber L, Thune JJ, Nielsen JC, et al; DANISH Investigators. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011.",
+        "Rassi A Jr, Rassi A, Little WC, et al. Development and Validation of a Risk Score for Predicting Death in Chagas' Heart Disease. N Engl J Med. 2006;355(8):799-808. DOI: 10.1056/NEJMoa053241. PMID: 16928995.",
+        "Kim D, et al. SCMR expert consensus statement for cardiovascular magnetic resonance of patients with a cardiac implantable electronic device. J Cardiovasc Magn Reson. 2024. DOI:10.1016/j.jocmr.2024.100995.",
+        "Ferrick AM, et al. 2023 HRS/EHRA/APHRS/LAHRS Expert Consensus Statement on Practical Management of the Remote Device Clinic. Heart Rhythm. 2023."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34455430/",
+        "https://pubmed.ncbi.nlm.nih.gov/40159278/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+        "https://pubmed.ncbi.nlm.nih.gov/11907286/",
+        "https://pubmed.ncbi.nlm.nih.gov/15659722/",
+        "https://pubmed.ncbi.nlm.nih.gov/28919379/",
+        "https://pubmed.ncbi.nlm.nih.gov/22535857/",
+        "https://pubmed.ncbi.nlm.nih.gov/10220550/",
+        "https://pubmed.ncbi.nlm.nih.gov/38047353/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK560831/",
+        "https://pubmed.ncbi.nlm.nih.gov/23131066/",
+        "https://pubmed.ncbi.nlm.nih.gov/20876433/",
+        "https://pubmed.ncbi.nlm.nih.gov/42034327/",
+        "https://pubmed.ncbi.nlm.nih.gov/11102258/",
+        "https://pubmed.ncbi.nlm.nih.gov/7139907/",
+        "https://pubmed.ncbi.nlm.nih.gov/27571011/",
+        "https://pubmed.ncbi.nlm.nih.gov/16928995/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11211236/",
+        "https://www.hrsonline.org/resource/2023-hrsehraaphrslahrs-expert-consensus-statement-practical-management-remote-device-clinic/"
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08 PR #599: achados sobre DANISH, lead de choque e RM complexa já presentes confirmados; residuais de temporalidade/choque único, ERI/EOL e rotulagem completa de RM corrigidos. Harmonizado com faixa #906 e SCMR 2024/HRS clínica remota 2023. Publicação autorizada pelo responsável médico no fechamento consolidado."
+    }
+  }
+]

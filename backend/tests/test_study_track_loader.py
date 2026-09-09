@@ -203,3 +203,37 @@ def test_api_trilha_resolve_link_e_disponibilidade_de_evidencia_e_caso_clinico(c
         for M, s in ((StudyTrack, track_slug), (EvidenceRecord, evidence_slug), (ClinicalCase, caso_slug)):
             db.query(M).filter(M.slug == s).delete(synchronize_session=False)
         db.commit()
+
+
+def test_material_paciente_na_trilha_respeita_publicacao_e_progresso(db):
+    from app.api.study_tracks import _dump
+    from app.models.patient_material import PatientMaterial
+    from app.services.study_track_progress import completed_stage_ids
+
+    slug = "material-teste-trilha-publicacao"
+    material = PatientMaterial(slug=slug, titulo="Entenda a pericardite", tema="Pericárdio",
+                               review_status="revisado", published=False)
+    db.add(material)
+    db.flush()
+    etapa = {"ordem": 1, "item_type": "material_paciente", "item_slug": slug,
+             "por_que": "Preparar a comunicação com o paciente."}
+    track = StudyTrack(slug="trilha-teste-material", titulo="Pericardite", tema="Pericárdio",
+                       objetivo="Orientar o paciente", nivel="intermediário", etapas=[etapa])
+    try:
+        assert _existe(db, "material_paciente", slug)
+        assert not _existe(db, "material_paciente", slug + "-inexistente")
+        payload = _dump(db, track, None)
+        assert payload["etapas"][0]["titulo"] == material.titulo
+        assert payload["etapas"][0]["link"] == f"/material-paciente/{slug}"
+        assert payload["etapas_indisponiveis"] == 1
+        material.published = True
+        db.flush()
+        assert _dump(db, track, None)["etapas_indisponiveis"] == 0
+        identity = f"material_paciente:{slug}"
+        assert completed_stage_ids([identity], [etapa]) == {identity}
+        material.review_status = "pendente_revisao"
+        db.flush()
+        assert _dump(db, track, None)["etapas_indisponiveis"] == 1
+    finally:
+        db.delete(material)
+        db.commit()

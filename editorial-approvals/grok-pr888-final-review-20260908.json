@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr888-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr888": "6655d754ced5d04a838e74f3591cd43978657c34"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-dcm-acm-genetica-e-rastreio-familiar",
+      "sinalizadores-ambulatoriais-acm-arvc-rastreamento-familiar-quando-escalar",
+      "sinalizadores-ambulatoriais-dcm-quando-referir-aconselhamento-genetico"
+    ]
+  }
+}

@@ -1,25 +1,46 @@
 ---
-title: "Metformina na Insuficiência Cardíaca: Segurança e Benefício"
+title: 'Metformina na Insuficiência Cardíaca: Segurança e Benefício'
 slug: metformina-na-insuficiencia-cardiaca-seguranca-e-beneficio
-theme: "Diabetes e cardiologia"
+theme: Diabetes e cardiologia
 kind: estudo
 review_status: revisado
-source_refs: ["Huang W, Zhao R. Clinical outcomes in type 2 diabetes patients with chronic heart failure treated with metformin: a meta-analysis. Endocrine. 2025;87(2):436-447. DOI: 10.1007/s12020-024-04025-6. PMID: 39277567 — números conferidos linha a linha contra o abstract do PubMed em 01/08/2026, sem divergência", "FDA Safety Announcements for Metformin — Metformin Use in Patients with Historical Contraindications or Precautions. NCBI Bookshelf, NBK409379 — consultado em 30/07/2026 e reconferido em 01/08/2026 para o texto histórico da bula sobre insuficiência cardíaca", "Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663 — texto integral conferido diretamente em 02/08/2026: o link do artigo no Oxford Academic redirecionou ao PDF completo hospedado no servidor de distribuição do editor (Silverchair), extraído com pdftotext -layout. Recommendation Table 22 (p. 4094) e seção 7.5.5 Metformin (p. 4093) lidas linha a linha — recomendação textual 'Metformin should be considered for glucose-lowering treatment in patients with T2DM and HF', Classe IIa, Nível B, nota de rodapé 'd': 'Chronic and stable HF'", "Erlikh AD, Zilov AV, Shchekochikhin DY, et al. Summary of the 2023 European Society of Cardiology clinical guidelines on the management of cardiovascular disease in patients with diabetes mellitus. Probl Endokrinol (Mosk). 2024;70(4):94-102. DOI: 10.14341/probl13414. PMID: 39302869 — fonte secundária consultada antes da leitura da fonte primária; classe/nível que ela reproduzia foi confirmado, sem divergência, contra o texto integral do guideline"]
-legacy_source: "Documento novo — a rotulagem histórica de metformina listava insuficiência cardíaca com tratamento farmacológico como fator de risco para acidose láctica na bula, e muitos médicos ainda evitam o fármaco nessa população por formação antiga, apesar da evidência atual apontar segurança e benefício."
+source_refs:
+- 'Huang W, Zhao R. Clinical outcomes in type 2 diabetes patients with chronic heart failure treated with metformin:
+  a meta-analysis. Endocrine. 2025;87(2):436-447. DOI: 10.1007/s12020-024-04025-6. PMID: 39277567 — números conferidos
+  linha a linha contra o abstract do PubMed em 01/08/2026, sem divergência'
+- FDA Safety Announcements for Metformin — Metformin Use in Patients with Historical Contraindications or Precautions.
+  NCBI Bookshelf, NBK409379 — consultado em 30/07/2026 e reconferido em 01/08/2026 para o texto histórico da bula
+  sobre insuficiência cardíaca
+- 'Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients
+  with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663 — texto integral
+  conferido diretamente em 02/08/2026: o link do artigo no Oxford Academic redirecionou ao PDF completo hospedado
+  no servidor de distribuição do editor (Silverchair), extraído com pdftotext -layout. Recommendation Table 22 (p.
+  4094) e seção 7.5.5 Metformin (p. 4093) lidas linha a linha — recomendação textual ''Metformin should be considered
+  for glucose-lowering treatment in patients with T2DM and HF'', Classe IIa, Nível B, nota de rodapé ''d'': ''Chronic
+  and stable HF'''
+- 'Erlikh AD, Zilov AV, Shchekochikhin DY, et al. Summary of the 2023 European Society of Cardiology clinical guidelines
+  on the management of cardiovascular disease in patients with diabetes mellitus. Probl Endokrinol (Mosk). 2024;70(4):94-102.
+  DOI: 10.14341/probl13414. PMID: 39302869 — fonte secundária consultada antes da leitura da fonte primária; classe/nível
+  que ela reproduzia foi confirmado, sem divergência, contra o texto integral do guideline'
+legacy_source: Documento novo — a rotulagem histórica de metformina listava insuficiência cardíaca com tratamento
+  farmacológico como fator de risco para acidose láctica na bula, e muitos médicos ainda evitam o fármaco nessa
+  população por formação antiga, apesar da evidência atual apontar segurança e benefício.
+review_note: 'Revisão independente de dependência em08/09/2026: 15estudosnãoprovaRCTmortalidade; acidosepersistirisco;
+  eGFR30/45 e agudopausa.'
 ---
 
 # Metformina na Insuficiência Cardíaca: Segurança e Benefício
 
 ## Definicao
-Ponto de prática clínica com defasagem conhecida entre a formação médica antiga e a evidência atual: metformina foi historicamente evitada em insuficiência cardíaca por preocupação com acidose láctica, mas a evidência acumulada — inclusive metanálise recente de ensaios randomizados — aponta segurança e possível benefício, não risco.
+Ponto de prática clínica com defasagem conhecida entre a formação médica antiga e a evidência atual: metformina foi historicamente evitada em insuficiência cardíaca por preocupação com acidose láctica, mas a evidência acumulada — incluindo síntese de estudos com limitações de desenho — apoia uso para controle glicêmico na IC estável quando elegível, sem eliminar o risco de acidose láctica em situações predisponentes.
 
 ## O que a rotulagem historica realmente dizia
 A advertência em quadro (boxed warning) de metformina trata do risco de **acidose láctica** de forma ampla, e lista **insuficiência cardíaca congestiva que exige tratamento farmacológico, em particular a IC instável ou aguda com risco de hipoperfusão e hipoxemia** como um dos **fatores de risco** para esse desfecho — ao lado de outros fatores como disfunção renal significativa, idade avançada, estados de hipóxia/desidratação/sepse, uso excessivo de álcool e disfunção hepática (texto literal da rotulagem histórica, reproduzido no NCBI Bookshelf NBK409379). Não é uma contraindicação isolada e específica de "não usar em IC" — é um item numa lista de fatores de risco para um evento raro (acidose láctica), cuja causa histórica remonta à fenformina (análogo retirado do mercado), não à própria metformina.
 
-A atualização de segurança da FDA de 08/04/2016 — a mais recente que trata da bula de metformina, conforme o NBK409379 — mudou **apenas** o critério de avaliação da função renal (troca da creatinina sérica isolada pela taxa de filtração glomerular estimada, ampliando o uso em disfunção renal leve a moderada). **Não alterou** a advertência específica sobre IC: o texto de risco de acidose láctica em IC descompensada/instável permanece na rotulagem sem revisão desde então.
+A atualização histórica da FDA de08/04/2016 mudou **apenas** o critério de avaliação da função renal (troca da creatinina sérica isolada pela taxa de filtração glomerular estimada, ampliando o uso em disfunção renal leve a moderada). **Não alterou** a advertência específica sobre IC: o texto de risco de acidose láctica em IC descompensada/instável permanece na rotulagem sem revisão desde então.
 
 ## Metanalise recente — seguranca e beneficio, nao so ausencia de dano
-Huang W, Zhao R. Endocrine. 2025;87(2):436-447 (PMID 39277567). Metanálise de **15 ensaios clínicos randomizados**, **20.595 pacientes** com diabetes tipo 2 e IC crônica, comparando uso de metformina vs. não uso:
+Huang W, Zhao R. Endocrine. 2025;87(2):436-447 (PMID 39277567). Metanálise de **15 estudos**, com evidência observacional relevante e sem ensaio cardiovascular dedicado que estabeleça redução causal de mortalidade nessa população,, **20.595 pacientes** com diabetes tipo 2 e IC crônica, comparando uso de metformina vs. não uso:
 - **Mortalidade por qualquer causa**: risco relativo **0,72** (IC95% 0,60-0,87) — **menor** com metformina
 - **Mortalidade cardiovascular**: risco relativo **0,52** (IC95% 0,29-0,92) — **menor** com metformina
 - **Hospitalização por IC**: risco relativo 0,85 (IC95% 0,70-1,04) — **sem diferença significativa**
@@ -36,10 +57,13 @@ Isso não torna a metformina primeira linha para redução de risco cardiovascul
 **Nota sobre o acesso à fonte:** o texto integral deste guideline costuma ficar bloqueado por Cloudflare no site do editor (`academic.oup.com`) e não tem depósito no PMC (confirmado por `elink` do PubMed: só há artigos que o citam, não um depósito do próprio texto). Nesta revisão, o PDF completo foi obtido porque o link do artigo redirecionou automaticamente para o servidor de distribuição do editor (Silverchair), e a Recommendation Table 22 e a seção 7.5.5 foram lidas diretamente, linha a linha, com `pdftotext -layout` — deixando de depender só do resumo secundário citado anteriormente. A classe/nível confirmada bate exatamente com o que aquele resumo (Erlikh AD et al., PMID 39302869) já reproduzia, sem divergência.
 
 ## Sintese pratica
-A evidência atual não apenas afasta o receio histórico (acidose láctica) — mostra associação com **menor** mortalidade geral e cardiovascular em paciente diabético com IC crônica. **Conclusão dos próprios autores** da metanálise: metformina está ligada a menor chance de morte por qualquer causa e cardiovascular, melhora função cardíaca (por NT-proBNP) sem elevar risco de hospitalização por IC — estabelecendo segurança e benefício potencial. Essa evidência de nível de metanálise de ERC é coerente com a diretriz mais recente que trata do tema (ESC 2023, Classe IIa/B, texto integral conferido diretamente — ver nota acima) — as duas apontam metformina como opção segura e aceitável em IC crônica e estável, não como fármaco a evitar. A ressalva permanece nos fatores de risco reais para acidose láctica listados na bula (disfunção renal significativa, hipóxia/instabilidade hemodinâmica aguda, uso excessivo de álcool) — não a presença de IC crônica compensada por si só.
+A IC crônica estável não é contraindicação isolada; a evidência mostra associação com **menor** mortalidade geral e cardiovascular em paciente diabético com IC crônica. **Conclusão dos próprios autores** da metanálise: metformina está ligada a menor chance de morte por qualquer causa e cardiovascular, melhora função cardíaca (por NT-proBNP) sem elevar risco de hospitalização por IC — sem comprovar benefício causal nem excluir eventos adversos raros. Essa evidência agregada, limitada por desenho e confundimento, é coerente com a diretriz mais recente que trata do tema (ESC 2023, Classe IIa/B, texto integral conferido diretamente — ver nota acima) — as duas apontam metformina como opção segura e aceitável em IC crônica e estável, não como fármaco a evitar. A ressalva permanece nos fatores de risco reais para acidose láctica listados na bula (disfunção renal significativa, hipóxia/instabilidade hemodinâmica aguda, uso excessivo de álcool) — não a presença de IC crônica compensada por si só.
 
 ## Armadilhas clinicas
 - Evitar ou suspender metformina rotineiramente só pelo diagnóstico de IC, sem avaliar os fatores de risco reais para acidose láctica (função renal, estado de hipóxia agudo, uso de álcool) — a evidência atual não sustenta essa prática
 - Confundir "IC como fator de risco listado na bula" com "IC como contraindicação absoluta" — a rotulagem histórica lista IC com tratamento farmacológico como um entre vários fatores de risco para um evento raro, não como proibição isolada
 - Suspender metformina na IC descompensada aguda sem reavaliar reintrodução quando o quadro agudo (hipóxia, hipoperfusão) se resolver — o risco elevado de acidose láctica é do estado agudo, não da IC crônica compensada
 - Ignorar que o benefício de mortalidade da metanálise não se acompanhou de melhora na FEVE ou no diâmetro do VE — o mecanismo do benefício de mortalidade não está plenamente explicado por remodelamento estrutural mensurável neste corpo de evidência
+
+## Elegibilidade e intercorrências
+Segundo a rotulagem, TFGe<30mL/min/1,73m² contraindica metformina; início com TFGe30–44 não é recomendado na bula FDA e uso já estabelecido exige reavaliação. Suspender em hipóxia, hipoperfusão, AKI ou outras intercorrências predisponentes; contraste iodado exige aplicação dos critérios específicos de bula e reavaliação renal antes de reinício. Fonte atual de rotulagem: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=498ac5fc-14be-d36a-e063-6394a90a3012.

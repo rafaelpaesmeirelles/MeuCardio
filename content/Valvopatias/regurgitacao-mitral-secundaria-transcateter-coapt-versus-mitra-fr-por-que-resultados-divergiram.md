@@ -1,11 +1,27 @@
 ---
-title: "Regurgitação Mitral Secundária Transcateter: COAPT versus MITRA-FR — Por Que os Resultados Divergiram"
+title: 'Regurgitação Mitral Secundária Transcateter: COAPT versus MITRA-FR — Por Que os Resultados Divergiram'
 slug: regurgitacao-mitral-secundaria-transcateter-coapt-versus-mitra-fr-por-que-resultados-divergiram
-theme: "Valvopatias"
+theme: Valvopatias
 kind: protocolo
 review_status: revisado
-source_refs: ["Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640 — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026).", "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927 — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026).", "Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663 — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026)."]
-legacy_source: "Documento novo. O fluxograma já publicado (`fluxograma-regurgitacao-mitral-esc-eacts-2025.md`) traduz a árvore de decisão da diretriz ESC/EACTS 2025 para regurgitação mitral secundária ventricular — 'otimizar tratamento clínico antes de considerar intervenção' —, mas não explica a base de evidência por trás dessa recomendação, nem o motivo pelo qual dois ensaios randomizados contemporâneos sobre a mesma pergunta (reparo transcateter borda a borda na regurgitação mitral secundária) chegaram a conclusões opostas. Esse é precisamente o tipo de nuance que o médico precisa entender para explicar ao paciente por que ele pode (ou não) ser candidato ao procedimento."
+source_refs:
+- 'Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients
+  with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640 — abstract
+  conferido via PubMed E-utilities nesta sessão (11/08/2026).'
+- 'Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment
+  for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927
+  — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026).'
+- 'Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual
+  Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362.
+  DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663 — abstract conferido via PubMed E-utilities nesta sessão (11/08/2026).'
+legacy_source: Documento novo. O fluxograma já publicado (`fluxograma-regurgitacao-mitral-esc-eacts-2025.md`) traduz
+  a árvore de decisão da diretriz ESC/EACTS 2025 para regurgitação mitral secundária ventricular — 'otimizar tratamento
+  clínico antes de considerar intervenção' —, mas não explica a base de evidência por trás dessa recomendação, nem
+  o motivo pelo qual dois ensaios randomizados contemporâneos sobre a mesma pergunta (reparo transcateter borda
+  a borda na regurgitação mitral secundária) chegaram a conclusões opostas. Esse é precisamente o tipo de nuance
+  que o médico precisa entender para explicar ao paciente por que ele pode (ou não) ser candidato ao procedimento.
+review_note: 'Revisão independente de dependência em08/09/2026: Retirada promoção da proporcionalidade a regra preditiva;
+  doses máximas toleradas e encaminhamento sem barreira artificial.'
 ---
 
 # Regurgitação Mitral Secundária Transcateter: COAPT versus MITRA-FR — Por Que os Resultados Divergiram
@@ -51,20 +67,17 @@ Regurgitação mitral secundária (também chamada funcional) grave, em paciente
 **Fonte**: Obadia JF et al., N Engl J Med 2018;379(24):2297-2306.
 
 ## Por que dois ensaios sobre a mesma pergunta divergiram tanto
-A explicação mais aceita não é qualidade metodológica de um ensaio contra o outro — os dois são randomizados, multicêntricos, bem conduzidos. A explicação é que os dois ensaios **recrutaram populações fisiopatologicamente diferentes**, uma diferença que só ficou clara em análise posterior (Grayburn PA et al., JACC Cardiovasc Imaging 2019).
+A hipótese de regurgitação proporcional ou desproporcional, proposta por Grayburn e colaboradores, ajuda a discutir diferenças médias entre as populações, mas não demonstra a causa única da divergência nem valida uma regra individual de elegibilidade. Gravidade da regurgitação, tamanho ventricular, otimização terapêutica, sucesso do procedimento e definição/tempo dos desfechos também diferiram.
 
-**O racional, pela equação de Gorlin**: a área do orifício regurgitante efetivo (EROA) na regurgitação mitral secundária depende do volume diastólico final do ventrículo esquerdo (VDFVE) — quanto mais o ventrículo dilata, mais o anel mitral se distende e os folhetos são tracionados, gerando regurgitação **proporcional** ao grau de dilatação. Um paciente com FEVE de 30%, VDFVE de 220-250 mL e fração regurgitante de 50% teria, por essa lógica, EROA esperada de aproximadamente 0,3 cm² — **independente** de anormalidade específica de tração dos folhetos.
-
-- **Regurgitação proporcional**: a EROA é compatível com o grau de dilatação do VE. Nesse cenário, tratar o ventrículo (otimizar terapia clínica, reduzir o VDFVE) tende a reduzir a regurgitação junto — a válvula em si não é o problema principal.
-- **Regurgitação desproporcional**: a EROA é **maior do que o esperado** para aquele grau de dilatação do VE (no artigo, EROA de 0,3-0,4 cm² com VDFVE de apenas 160-200 mL). Nesse cenário, a válvula é, ela mesma, uma fonte adicional de disfunção — e intervir diretamente sobre ela tende a trazer benefício que o tratamento do ventrículo sozinho não traria.
-
-**Onde cada ensaio caiu nesse espectro**: os pacientes do MITRA-FR tinham regurgitação **proporcional** ao grau de dilatação do VE — e, no seguimento de longo prazo, o VDFVE e os desfechos clínicos não diferiram do grupo tratado clinicamente, consistente com a lógica acima. Os pacientes do COAPT tinham EROA cerca de **30% maior**, mas volumes de VE cerca de **30% menores** — ou seja, regurgitação **desproporcional**. Nesse grupo, o reparo transcateter reduziu risco de morte e de hospitalização por IC, e esse benefício veio acompanhado de redução mensurável do VDFVE.
+A razão EROA/volume ventricular é dependente da mensuração e das condições de carga. Não se deve classificar todo participante do MITRA-FR como proporcional e todo participante do COAPT como desproporcional, nem concluir benefício individual apenas dessa razão.
 
 ## O que isso significa na prática clínica
-A seleção do candidato ao reparo transcateter na regurgitação mitral secundária não deve se basear só na gravidade da regurgitação isoladamente, nem só no tamanho do ventrículo isoladamente — a **relação entre os dois** (EROA versus VDFVE) é o que ajuda a prever quem se beneficia de intervir diretamente na válvula versus quem se beneficia mais de intensificar o tratamento do ventrículo. Isso é consistente com, e ajuda a entender o racional por trás, o que a diretriz ESC/EACTS 2025 já recomenda no fluxograma publicado nesta pasta: otimizar o tratamento da insuficiência cardíaca antes de considerar intervenção na regurgitação secundária ventricular.
+Para regurgitação secundária **ventricular**, integrar sintomas, gravidade por imagem, anatomia, função e dimensões ventriculares, pressão pulmonar, função direita e tratamento da IC nas **doses máximas toleradas**, incluindo ressincronização quando indicada. A impossibilidade de atingir uma dose-alvo por hipotensão ou disfunção renal não deve bloquear encaminhamento ao Heart Team. O fenótipo atrial secundário exige avaliação própria.
+
+A ESC/EACTS 2025 usa seleção integrada; proporcionalidade não é requisito isolado. O RESHAPE-HF2 também acrescentou evidência randomizada posterior aos ensaios de 2018 (Anker et al., DOI: 10.1056/NEJMoa2314328), reforçando que a interpretação atual não cabe em uma oposição binária COAPT/MITRA-FR.
 
 ## Armadilhas clínicas
-- Concluir que "o MitraClip não funciona" na regurgitação mitral secundária a partir do MITRA-FR isoladamente, ignorando o COAPT — os dois ensaios responderam populações diferentes, não a mesma pergunta com respostas contraditórias por acaso.
-- Concluir que todo paciente com regurgitação mitral secundária grave e IC deve ser encaminhado para reparo transcateter a partir do COAPT isoladamente, sem considerar se a terapia clínica já foi otimizada e maximizada — os pacientes do COAPT já estavam em terapia clínica otimizada guiada por diretriz antes da randomização, não é substituto do tratamento farmacológico e de dispositivo da IC.
+- Concluir que "o MitraClip não funciona" na regurgitação mitral secundária a partir do MITRA-FR isoladamente, ignorando o COAPT — as populações e os desenhos diferiram, sem que isso prove uma causa única para a divergência.
+- Concluir que todo paciente com regurgitação mitral secundária grave e IC deve ser encaminhado para reparo transcateter a partir do COAPT isoladamente, sem considerar se a terapia clínica já foi otimizada nas doses máximas toleradas — os pacientes do COAPT já estavam em terapia clínica otimizada guiada por diretriz antes da randomização, não é substituto do tratamento farmacológico e de dispositivo da IC.
 - Tratar "proporcional versus desproporcional" como dicotomia obrigatória de se calcular à beira do leito com a fórmula de Gorlin — o conceito é um **framework explicativo** que ajuda a entender a seleção de pacientes, não um cálculo de rotina exigido antes de cada decisão; a decisão prática continua sendo guiada pela avaliação ecocardiográfica padrão e pelos critérios de elegibilidade da diretriz vigente.
 - Ignorar que MITRA-FR e COAPT usaram desfechos primários diferentes (composto de morte/hospitalização não planejada por IC em 12 meses no MITRA-FR; taxa de hospitalização por IC por paciente-ano em 24 meses no COAPT) — isso também contribui para a dificuldade de comparação direta entre os dois ensaios, além da diferença de população.

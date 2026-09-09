@@ -1201,3 +1201,20 @@ def test_revisao_documento_permite_despublicar_pendente():
     }
     assert document.published is False
     assert session.commits == 1
+
+@pytest.mark.parametrize('existing_record', [False, True])
+def test_procedure_checklist_scope_survives_reload(tmp_path, monkeypatch, existing_record):
+    source = {
+        'slug': 'resposta-pcr-procedimento', 'condicao': 'Resposta à PCR',
+        'scope_type': 'procedimento', 'review_status': 'revisado',
+        'itens': [{'id': 'reconhecer', 'origem_secao': 'Reconhecimento'}],
+    }
+    existing = SimpleNamespace(scope_type='doenca', review_status='revisado', published=True) if existing_record else None
+    session = _Session(existing)
+    monkeypatch.setattr(carregar_checklists, 'SessionLocal', lambda: session)
+    path = tmp_path / 'checklists.json'
+    path.write_text(json.dumps([source]), encoding='utf-8')
+    carregar_checklists.carregar(str(path))
+    record = existing if existing_record else session.added[0]
+    assert record.scope_type == 'procedimento'
+    assert record.published is existing_record

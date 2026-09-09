@@ -1,0 +1,249 @@
+[
+  {
+    "slug": "insuficiencia-cardiaca",
+    "set": {
+      "summary": "Síndrome clínica causada por alteração estrutural ou funcional cardíaca, com sintomas ou sinais de congestão e/ou baixo débito corroborados por evidência objetiva; o fenótipo por fração de ejeção, a etiologia e o estado de congestão orientam tratamento e prognóstico.",
+      "diagnostic_approach": {
+        "confirmacao": [
+          "Integrar sintomas e sinais com ECG, peptídeos natriuréticos e imagem cardíaca; nenhum achado isolado confirma todos os fenótipos",
+          "Ecocardiograma define fração de ejeção, estrutura, valvas, ventrículo direito e pistas etiológicas",
+          "Na fração de ejeção preservada, exigir evidência objetiva de pressões de enchimento elevadas ou anormalidade estrutural/funcional compatível"
+        ],
+        "fenotipo": [
+          "Registrar FEVE medida, data e trajetória. Na ESC 2026, ICFEr corresponde a FEVE <50% e ICFEp a ≥50%, sempre no contexto da síndrome confirmada; a antiga faixa levemente reduzida é histórica. A Segunda Definição Universal reconhece fenótipos reduzido, preservado e melhorado sem impor os mesmos cortes rígidos.",
+          "Definir estado clínico: compensada, congesta, hipoperfundida ou em choque",
+          "Distinguir IC crônica estável, descompensação de doença conhecida ou apresentação de novo e trajetória avançada; melhora da FEVE não implica cura nem retirada automática do tratamento."
+        ],
+        "etiologia": [
+          "Investigar doença isquêmica, hipertensiva, valvar, arrítmica, tóxica, inflamatória, infiltrativa, genética e periparto conforme história e fenótipo",
+          "Procurar precipitantes de descompensação: infecção, isquemia, arritmia, não adesão, fármacos, hipertensão, anemia, disfunção renal ou tireoidiana"
+        ],
+        "estratificacao": "Avaliar classe funcional, hospitalizações, biomarcadores, função renal/hepática, pressão, frequência, ritmo, ferro, fragilidade e elegibilidade para terapias avançadas ou cuidados paliativos."
+      },
+      "assistant_questions": [
+        {
+          "id": "objective_evidence",
+          "label": "Há evidência objetiva de alteração cardíaca ou pressões de enchimento elevadas que sustente o diagnóstico?",
+          "type": "boolean",
+          "required": true,
+          "section": "Confirmação"
+        },
+        {
+          "id": "hypoperfusion",
+          "label": "Há hipoperfusão atual, como hipotensão acompanhada de confusão, extremidades frias ou oligúria, ou outros sinais de choque?",
+          "type": "boolean",
+          "required": true,
+          "section": "Perfusão"
+        },
+        {
+          "id": "pulmonary_edema",
+          "label": "Há edema pulmonar agudo, hipoxemia nova/importante ou esforço respiratório agudo?",
+          "type": "boolean",
+          "required": true,
+          "section": "Congestão"
+        },
+        {
+          "id": "recurrent_admissions",
+          "label": "Há internações repetidas ou sintomas refratários apesar de tratamento?",
+          "type": "boolean",
+          "section": "Trajetória"
+        }
+      ],
+      "review_note": "Publicação autorizada pelo responsável clínico em 27/08/2026 ao solicitar a correção e disponibilização imediata do Guia de Doenças. Conteúdo baseado em diretrizes primárias AHA/ACC/HFSA 2022 e ESC 2023 e sujeito a julgamento clínico individual. | Lote vincular Tudo com Tudo 28/08/2026: adicionados 3 related_document_slugs (Segunda Definição Universal de IC 2026, comparativo de estadiamento AHA/ACC/HFSA vs ESC/SBC, atualização focada ESC 2023), levando o total de 2 para 5. Critério rigoroso aplicado: só hub geral/transversal da síndrome, não subtipos/fenótipos já cobertos por documentos próprios (ICFEr, ICFEp) para evitar diluir o vínculo. Revisado para o release científico consolidado de 28/08/2026 após reconciliação de fontes, vínculos Tudo com Tudo e segurança clínica; publicação autorizada pelo responsável médico. Revisão Codex 08/09/2026: classificação ESC2026 e definição universal atualizadas; sinais agudos diferenciados de achados estáveis. Critérios de ensaios/dispositivos históricos não foram convertidos por simples troca do corte de FEVE.",
+      "source_refs": [
+        "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145:e895-e1032. DOI: 10.1161/CIR.0000000000001063.",
+        "McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for acute and chronic heart failure. Eur Heart J. 2023;44:3627-3639. DOI: 10.1093/eurheartj/ehad195.",
+        "ESC 2026 Guidelines for the management of heart failure. DOI: 10.1093/eurheartj/ehag100. Seções 3.3 e 7.1.",
+        "Second Universal Definition of Heart Failure 2026. DOI: 10.1016/j.jacc.2026.05.036. PMID: 42370864."
+      ],
+      "related_document_slugs": [
+        "fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023",
+        "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
+        "segunda-definicao-universal-insuficiencia-cardiaca-2026",
+        "estadiamento-e-classificacao-ic-aha-acc-hfsa-2022-versus-esc-e-sbc",
+        "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca",
+        "esc-2026-insuficiencia-cardiaca-mudancas-chave-e-recomendacoes",
+        "acc-2026-expert-consensus-icfep-diagnostico-fenotipos-e-tratamento",
+        "ic-descompensada-esc-2026-e-titulacao-pos-alta"
+      ]
+    }
+  },
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "set": {
+      "diagnostic_approach": {
+        "reconhecimento_inicial": [
+          "Tratar sintomas compatíveis como possível emergência e registrar horário de início, duração, persistência ou recorrência e momento da última crise; documentar separadamente episódios intermitentes",
+          "Realizar ECG de 12 derivações rapidamente e repetir quando o primeiro traçado não for diagnóstico e a suspeita persistir",
+          "Não aguardar troponina para ativar a via de reperfusão quando houver supradesnivelamento persistente de ST ou equivalente isquêmico reconhecido por equipe habilitada"
+        ],
+        "biomarcadores": [
+          "Concluir um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação somente quando o próprio algoritmo, o tempo desde o início e o limite específico do ensaio o permitirem",
+          "Interpretar valor absoluto e variação temporal no contexto de sintomas, ECG, tempo desde o início, função renal e diagnósticos alternativos",
+          "Troponina elevada identifica lesão miocárdica; infarto requer lesão aguda e evidência de isquemia. A classificação clínica 2026 distingue IAM primário, secundário e relacionado a procedimento; elevação isolada não confirma nenhum deles."
+        ],
+        "classificacao_e_risco": [
+          "Separar apresentação com supradesnivelamento persistente de ST ou equivalente, SCA sem supra e diagnósticos alternativos ameaçadores",
+          "Reconhecer risco muito alto por choque ou instabilidade, dor refratária, insuficiência cardíaca aguda isquêmica, arritmia ameaçadora, parada cardíaca, complicação mecânica ou alterações isquêmicas recorrentes",
+          "Usar escores validados apenas como complemento; eles não substituem avaliação clínica, ECG, algoritmo validado de troponina de alta sensibilidade nem julgamento sobre reperfusão",
+          "MINOCA, na definição 2026, é lesão miocárdica com coronárias não obstrutivas como diagnóstico de trabalho na apresentação de possível IAM; investigar mecanismo e diagnóstico final. Parada recuperada sem supra, isoladamente em paciente estável, não exige angiografia imediata universal."
+        ],
+        "limite_do_assistente": "O assistente organiza sinais de alarme e dados ausentes. Não interpreta traçados, não seleciona dose, não determina elegibilidade para fibrinólise ou intervenção e não recomenda alta automática."
+      },
+      "assistant_questions": [
+        {
+          "id": "current_or_recurrent_ischemic_symptoms",
+          "label": "Há dor ou equivalente isquêmico atual, persistente ou recorrente?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "nao",
+              "label": "Não"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Desconhecido"
+            }
+          ],
+          "section": "Sintomas"
+        },
+        {
+          "id": "hemodynamic_or_electrical_instability",
+          "label": "Há instabilidade atual: choque, hipotensão com comprometimento, edema pulmonar agudo, arritmia ameaçadora, parada em curso/recente ou suspeita de complicação mecânica? Antecedente remoto isolado não conta.",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "nao",
+              "label": "Não"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Desconhecido"
+            }
+          ],
+          "section": "Instabilidade"
+        },
+        {
+          "id": "st_elevation_or_equivalent",
+          "label": "Equipe habilitada identificou supradesnivelamento persistente de ST ou equivalente isquêmico?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "nao",
+              "label": "Não"
+            },
+            {
+              "value": "nao_avaliado_suspeita_aguda",
+              "label": "Ainda não avaliado, em suspeita aguda atual"
+            },
+            {
+              "value": "nao_aplicavel_sem_suspeita_aguda",
+              "label": "Não aplicável: sem suspeita aguda atual"
+            }
+          ],
+          "section": "ECG"
+        },
+        {
+          "id": "hs_troponin_pathway_completed",
+          "label": "Foi concluído um algoritmo diagnóstico validado de troponina cardíaca de alta sensibilidade para o ensaio local, incluindo descarte na apresentação quando o próprio algoritmo o permitir?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "incompleto_suspeita_aguda",
+              "label": "Não, em avaliação aguda atual"
+            },
+            {
+              "value": "nao_aplicavel_reperfusao",
+              "label": "Não aplicável: via de reperfusão já ativada"
+            },
+            {
+              "value": "nao_aplicavel_sem_suspeita_aguda",
+              "label": "Não aplicável: sem suspeita aguda atual"
+            }
+          ],
+          "section": "Biomarcadores"
+        },
+        {
+          "id": "lethal_alternative_red_flags",
+          "label": "Há sinais de síndrome aórtica, embolia pulmonar, pneumotórax ou outra causa imediatamente ameaçadora?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "nao",
+              "label": "Não"
+            },
+            {
+              "value": "desconhecido",
+              "label": "Desconhecido"
+            }
+          ],
+          "section": "Diagnósticos alternativos"
+        },
+        {
+          "id": "bleeding_or_anticoagulation_risk_known",
+          "label": "Alergia, sangramento ativo/recente, anticoagulação, função renal, peso e idade foram verificados antes de terapia antitrombótica?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "sim",
+              "label": "Sim"
+            },
+            {
+              "value": "incompleto_suspeita_aguda",
+              "label": "Não, em suspeita aguda atual"
+            },
+            {
+              "value": "nao_aplicavel_sem_suspeita_aguda",
+              "label": "Não aplicável: sem suspeita aguda atual"
+            }
+          ],
+          "section": "Segurança terapêutica"
+        }
+      ],
+      "review_note": "Revisão técnica e científica assistida concluída; correções de segurança aplicadas e publicação autorizada pelo responsável médico em 27/08/2026. Revisão Codex 08/09/2026: nomenclatura UDMI2026, MINOCA de trabalho e parada remota versus atual qualificadas.",
+      "source_refs": [
+        "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025;151:e771-e862. DOI: 10.1161/CIR.0000000000001309; consultar também as correções oficiais DOI: 10.1161/CIR.0000000000001328, 10.1161/CIR.0000000000001346 e 10.1161/CIR.0000000000001397.",
+        "Rao SV, O'Donoghue ML, Ruel M, et al. 2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes. Circulation. 2025. doi:10.1161/CIR.0000000000001309.",
+        "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44:3720-3826. doi:10.1093/eurheartj/ehad191.",
+        "de Barros e Silva PGM, et al. Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025;122(9):e20250620.",
+        "Fifth Universal Definition of Myocardial Infarction 2026. DOI: 10.1093/eurheartj/ehag101. Seções 6–8 e 11."
+      ],
+      "related_document_slugs": [
+        "acc-aha-2025-diretriz-sindrome-coronariana-aguda",
+        "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+        "fluxograma-sindrome-coronariana-aguda-esc-2023",
+        "fluxograma-algoritmo-0-1h-troponina-de-alta-sensibilidade-esc-2023",
+        "fluxograma-iamcsst-estrategia-de-reperfusao-icp-primaria-vs-fibrinolise-esc-2023",
+        "fluxograma-sca-sem-supra-timing-da-estrategia-invasiva-esc-2023",
+        "posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023",
+        "quinta-definicao-universal-infarto-miocardio-2026-sintese-corvia"
+      ]
+    }
+  }
+]

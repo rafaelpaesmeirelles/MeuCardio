@@ -1,20 +1,34 @@
 ---
-title: "Tirzepatida na ICFEp com Obesidade: o Ensaio SUMMIT"
-slug: summit-tirzepatida-icfep-com-obesidade
-theme: "Insuficiência cardíaca"
-kind: estudo
 fonte_producao: grok
+kind: estudo
+legacy_source: Documento novo nesta pasta, escrito em 29/08/2026. O STEP-HFpEF (semaglutida,
+  sintomas e peso) já estava em Insuficiência cardíaca; o SUMMIT já tinha versão no
+  tema Diabetes e cardiologia (`tirzepatida-e-icfep-com-obesidade-o-ensaio-summit.md`).
+  Esta peça é o ensaio de eventos clínicos da mesma população, lido ao lado do STEP-HFpEF,
+  sem reescrevê-lo. Números restritos ao abstract PubMed PMID 39555826.
+published: true
+review_note: Conferidos ensaios primários e tabelas ESC 2026 pertinentes; corrigidos
+  limites de população, segurança, doses ou interpretação quando aplicável.
 review_status: revisado
-source_refs: ["Packer M, Zile MR, Kramer CM, Baum SJ, Litwin SE, Menon V, Ge J, Weerakkody GJ, Ou Y, Bunck MC, Hurt KC, Murakami M, Borlaug BA; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826. Epub 2024 Nov 16.", "European Society of Cardiology. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table 18."]
-legacy_source: "Documento novo nesta pasta, escrito em 29/08/2026. O STEP-HFpEF (semaglutida, sintomas e peso) já estava em Insuficiência cardíaca; o SUMMIT já tinha versão no tema Diabetes e cardiologia (`tirzepatida-e-icfep-com-obesidade-o-ensaio-summit.md`). Esta peça é o ensaio de eventos clínicos da mesma população, lido ao lado do STEP-HFpEF, sem reescrevê-lo. Números restritos ao abstract PubMed PMID 39555826."
+slug: summit-tirzepatida-icfep-com-obesidade
+source_refs:
+- 'Packer M, Zile MR, Kramer CM, Baum SJ, Litwin SE, Menon V, Ge J, Weerakkody GJ,
+  Ou Y, Bunck MC, Hurt KC, Murakami M, Borlaug BA; SUMMIT Trial Study Group. Tirzepatide
+  for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437.
+  DOI: 10.1056/NEJMoa2410027. PMID: 39555826. Epub 2024 Nov 16.'
+- 'European Society of Cardiology. 2026 ESC Guidelines for the management of heart
+  failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. Recommendation Table
+  18.'
+theme: Insuficiência cardíaca
+title: 'Tirzepatida na ICFEp com Obesidade: o Ensaio SUMMIT'
 ---
 
 # Tirzepatida na ICFEp com Obesidade: o Ensaio SUMMIT
 
 ## A pergunta que o step-hfpef nao fez
-O STEP-HFpEF (Kosiborod et al., N Engl J Med. 2023;389(12):1069-1084, PMID 37622681), já registrado nesta pasta, estabeleceu o fenótipo de ICFEp relacionada à obesidade como alvo terapêutico próprio — mas os coprimários foram **KCCQ-CSS e peso**, não evento clínico. O SUMMIT testa a mesma população com uma molécula diferente e com um desfecho que o STEP não mediu: o **composto de morte por causas cardiovasculares adjudicada ou evento de piora da insuficiência cardíaca**.
+O STEP-HFpEF (Kosiborod et al., N Engl J Med. 2023;389(12):1069-1084, PMID 37622681), já registrado nesta pasta, estabeleceu o fenótipo de ICFEp relacionada à obesidade como alvo terapêutico próprio — mas os coprimários foram **KCCQ-CSS e peso**, não evento clínico. O SUMMIT testa uma população relacionada, com FEVE ≥50% em vez de ≥45% com uma molécula diferente e com um desfecho clínico que não era coprimário no STEP: o **composto de morte por causas cardiovasculares adjudicada ou evento de piora da insuficiência cardíaca**.
 
-Tirzepatida é agonista de longa duração dos receptores de GIP (peptídeo insulinotrópico dependente de glicose) e de GLP-1. Não é semaglutida com outro nome. Este documento não compara as duas moléculas cabeça a cabeça — isso está em `agonistas-incretina-na-icfep-com-obesidade-step-e-summit.md`. Aqui cabe só o que o abstract do SUMMIT sustenta.
+Tirzepatida é agonista de longa duração dos receptores de GIP (peptídeo insulinotrópico dependente de glicose) e de GLP-1. Não é semaglutida com outro nome. Este documento não apresenta comparação randomizada entre as duas moléculas; uma discussão indireta está em [Agonistas de Incretina na ICFEp com Obesidade: STEP-HFpEF versus SUMMIT](/biblioteca/agonistas-incretina-na-icfep-com-obesidade-step-e-summit). Aqui cabe só o que o abstract do SUMMIT sustenta.
 
 ## Desenho
 Packer M et al., N Engl J Med. 2025;392(5):427-437 (PMID 39555826; NCT04847557). Ensaio internacional, duplo-cego, randomizado, controlado por placebo, financiado pela Eli Lilly:
@@ -37,19 +51,19 @@ O abstract **não** descreve peso corporal, distância de caminhada de 6 minutos
 | **KCCQ-CSS** aos 52 semanas (variação média ± DP*) | **+19,5 ± 1,2** | **+12,7 ± 1,3** | diferença **6,9** (IC95% 3,3 a 10,6); **p < 0,001** |
 | Eventos adversos (sobretudo gastrointestinais) que levaram à descontinuação | **23 (6,3%)** | **5 (1,4%)** | — |
 
-\*O abstract rotula esses intervalos como “mean (±SD)”. A magnitude é a de erro-padrão; o número citado é o do PubMed, sem reinterpretação.
+\*O abstract rotula esses intervalos como “mean (±SD)”. O rótulo é reproduzido como publicado; não se deve inferir outro tipo de dispersão apenas pela magnitude.
 
 Conclusão literal do abstract: o tratamento com tirzepatida **levou a menor risco de um composto de morte por causas cardiovasculares ou piora da insuficiência cardíaca** do que o placebo **e melhorou o estado de saúde** em pacientes com ICFEp e obesidade.
 
 ## O composto nao e reducao de mortalidade
 O HR 0,62 é do **composto**. O componente de piora da IC (29 vs. 52; HR 0,54) carrega o resultado. A morte cardiovascular adjudicada isolada ocorreu em **8 pacientes no braço tirzepatida e 5 no placebo** (HR 1,58; IC95% 0,52 a 4,83): poucos eventos, intervalo que cruza a unidade, **numericamente na direção oposta**. O SUMMIT **não demonstra redução de mortalidade cardiovascular**. Citar o composto como se fosse “reduz morte” é o erro que este documento existe para impedir.
 
-O mesmo padrão já está documentado nesta pasta para iSGLT2 (EMPEROR-Preserved e DELIVER) e para finerenona (FINEARTS-HF): composto positivo puxado por piora/hospitalização, mortalidade isolada sem significância. Ver `inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver.md` e `finerenona-na-icfep-e-icfelr-o-ensaio-finearts-hf.md`.
+O mesmo padrão já está documentado nesta pasta para iSGLT2 (EMPEROR-Preserved e DELIVER) e para finerenona (FINEARTS-HF): composto positivo puxado por piora/hospitalização, mortalidade isolada sem significância. Ver [Inibidores de SGLT2 na ICFEp: Empagliflozina (EMPEROR-Preserved) e Dapagliflozina (DELIVER)](/biblioteca/inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver) e [Finerenona na ICFEp e ICFElr: o Ensaio FINEARTS-HF](/biblioteca/finerenona-na-icfep-e-icfelr-o-ensaio-finearts-hf).
 
 ## Onde se encaixa — e o que a esc 2026 de fato recomenda
 A ESC 2026 (DOI 10.1093/eurheartj/ehag100, Recommendation Table 18) posiciona semaglutida **ou** tirzepatida como terapia médica **adicional** (AMT), não fundacional:
 
-> Semaglutide or tirzepatide should be considered for patients with symptomatic HF, LVEF ≥45%, and BMI ≥30 kg/m², regardless of diabetes status, to reduce body weight, and improve exercise capacity and QoL. **Classe IIa, nível B1.**
+A ESC considera semaglutida ou tirzepatida em IC sintomática com FEVE ≥45% e IMC ≥30, independentemente de diabetes, para peso, capacidade de exercício e qualidade de vida (IIa B1).
 
 Três observações que o painel da diretriz e o abstract do ensaio não deixam misturar:
 
@@ -57,9 +71,9 @@ Três observações que o painel da diretriz e o abstract do ensaio não deixam 
 2. O corte de FEVE da diretriz é **≥45%**; o SUMMIT entrou com **≥50%**. Aplicar a recomendação entre 45% e 49% é síntese da diretriz, não evidência deste ensaio.
 3. iSGLT2 (e, na ESC 2026, MRA) continuam terapia fundacional da ICFEp. Incretina **soma** no fenótipo obesidade; **não substitui** SGLT2, diurético de congestão nem o diagnóstico de que a dispneia é mesmo ICFEp.
 
-O STEP-HFpEF, nesta mesma pasta (`semaglutida-na-icfep-com-obesidade-o-ensaio-step-hfpef.md`), responde sintomas, limitação física, capacidade de exercício e peso. O SUMMIT responde o composto de evento e o KCCQ. São perguntas diferentes. A comparação operacional está no protocolo `agonistas-incretina-na-icfep-com-obesidade-step-e-summit.md`.
+O STEP-HFpEF, nesta mesma pasta ([Semaglutida na ICFEp com Obesidade: o Ensaio STEP-HFpEF](/biblioteca/semaglutida-na-icfep-com-obesidade-o-ensaio-step-hfpef)), responde sintomas, limitação física, capacidade de exercício e peso. O SUMMIT responde o composto de evento e o KCCQ. São perguntas diferentes. A comparação operacional está no protocolo [Agonistas de Incretina na ICFEp com Obesidade: STEP-HFpEF versus SUMMIT](/biblioteca/agonistas-incretina-na-icfep-com-obesidade-step-e-summit).
 
-Há registro prévio do mesmo PMID no tema Diabetes e cardiologia (`tirzepatida-e-icfep-com-obesidade-o-ensaio-summit.md`). Esta peça não o substitui: ali o eixo é a molécula dupla GIP/GLP-1 no mapa das incretinas; aqui o eixo é o lugar do ensaio na ICFEp.
+Há registro prévio do mesmo PMID no tema Diabetes e cardiologia ([Tirzepatida e ICFEp com Obesidade: o Ensaio SUMMIT](/biblioteca/tirzepatida-e-icfep-com-obesidade-o-ensaio-summit)). Esta peça não o substitui: ali o eixo é a molécula dupla GIP/GLP-1 no mapa das incretinas; aqui o eixo é o lugar do ensaio na ICFEp.
 
 ## Armadilhas clinicas
 - **Ler o SUMMIT como prova de redução de mortalidade** — o abstract fala de composto; a morte CV isolada foi 8 vs. 5, HR 1,58 (IC95% 0,52 a 4,83)

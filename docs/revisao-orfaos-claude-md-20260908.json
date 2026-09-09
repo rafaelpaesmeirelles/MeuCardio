@@ -1,0 +1,1707 @@
+{
+  "source_branch": "claude/science-scale-20k-20260904",
+  "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
+  "snapshot_count": 163,
+  "reviewed_count": 53,
+  "pending_count": 110,
+  "boundary": "Somente snapshot extraído antes das novas sessões Claude; nenhum fetch ou incorporação de produção posterior.",
+  "records": [
+    {
+      "index": 0,
+      "path": "content/Aorta_e_doença_arterial_periférica/doenca-ateroembolica-por-cristais-de-colesterol-diagnostico-e-manejo.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "bd0d29fdd39f14cb9a5910731cab213d2d676d86bfb79eae7fa01088ed314b2f",
+      "findings": [
+        "Belenfant não comparou estatina versus ausência: removida atribuição falsa de sobrevida.",
+        "Causalidade anticoagulação incerta; não suspender indicação independente automaticamente.",
+        "Umemoto mostrou vasculite coexistente, não apenas mimetismo; pulsos preservados não excluem urgência.",
+        "Doença pode ser aguda; eosinofilia não obrigatória; recuperação renal e modalidade dialítica observacionais."
+      ],
+      "sources": [
+        "Todos os 12 PMIDs originais: identidade e abstracts conferidos no cache PubMed.",
+        "Kronzon/Saric Circulation2010 DOI10.1161/CIRCULATIONAHA.109.886465 PMID20697039: revisão primária de manejo.",
+        "PMIDs10213638 e39639413 reconferidos diretamente no PubMed."
+      ],
+      "reviewed_sha256": "2007db07f030e01dce68bb7fc83d323c4d8b43534174c9e0966ebadf69f119dd"
+    },
+    {
+      "index": 1,
+      "path": "content/Aorta_e_doença_arterial_periférica/eritromelalgia-forma-primaria-scn9a-e-forma-secundaria-doenca-mieloproliferativa.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "68e0689a6700de4f296e2fb58f9bbad4d4654a215350366d9cdb10cc55a72c86",
+      "findings": [
+        "Primária não equivale obrigatoriamente a SCN9A hereditária; formas idiopáticas e teste negativo preservados.",
+        "AAS não é teste diagnóstico binário; risco hemorrágico/von Willebrand adquirido e indicação hematológica antes de uso.",
+        "Farrar estudou excitabilidade axonal, não prova de biópsia cutânea.",
+        "Dor paroxística não é ganho mais extremo; tratamentos e mecanismo não universais."
+      ],
+      "sources": [
+        "18 PMIDs originais: identidade e abstracts individualmente conferidos.",
+        "GeneReviews SCN9A PMID20301342 e Cattaneo DOI10.3324/haematol.2022.281388 consultados online."
+      ],
+      "reviewed_sha256": "63aa4eacafa83c676b4b50f52bab070d913c1f40fe8df65a52d58613af2ce13b"
+    },
+    {
+      "index": 2,
+      "path": "content/Aorta_e_doença_arterial_periférica/osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "a7ea1aa5f78fe7b429e013f0be676a2064931f005ddfaaa94d3a38482dccb0fe",
+      "findings": [
+        "Consenso Delphi2025 omitido restaurado: avaliação clínica, não eco universal assintomático; risco por tipo/genótipo não estabelecido.",
+        "Sullivan invertido: nenhuma fratura por manguito/torniquete; uma por posicionamento.",
+        "Removidas alegações herdadas de leitura integral não demonstrada nesta auditoria e falsas lacunas de consenso.",
+        "Demais genes não são todos recessivos; coortes99/52 do mesmo grupo não replicação independente; hemostasia1984 não protocolo universal."
+      ],
+      "sources": [
+        "9 referências originais: identidade e abstracts conferidos.",
+        "Folkestad DOI10.1093/jbmr/zjae197 PMID39665364: recomendações completas acessíveis em resultado primário PMC11789389.",
+        "Sullivan PMID29189536 reconferido no PubMed; GeneReviews tabela de vigilância online."
+      ],
+      "reviewed_sha256": "49e24c04ab05c9afa314f96116865931c0bfed99c5b75375c5e1c2657e2f4ac2"
+    },
+    {
+      "index": 3,
+      "path": "content/Aorta_e_doença_arterial_periférica/poliarterite-nodosa-e-acometimento-cardiovascular-coronarite-microaneurismas-e-cardiopatia-hipertensiva.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "c1ae9b456f78048c659f117f104168afe633a62b6c4ddc50ea6724ca922eb255",
+      "findings": [
+        "GLOBAL-PAN excluiu VHB; não demonstra sua prevalência atual.",
+        "Günal15 não encontrou isquemia/infarto: removida extrapolação de coronarite.",
+        "Biópsia e imagem complementares; ACR2021 omitida restaurada e terapia não grave poupadora de corticoide.",
+        "Samson118 iniciou GC em todos; CHUSPAN vantagem não sustentada10anos; idosos somente10PAN.",
+        "PAN-VHB não proibida pela nomenclatura; anticoagulação e corticoide não protocolo universal; mortalidade antiviral115 não significativa."
+      ],
+      "sources": [
+        "19 referências originais: abstracts individualmente lidos;23045170/34353474 somente metadados, sem abstract disponível.",
+        "ACR/VF DOI10.1002/art.41776 PDF primário e publicação simultânea acr.24633 consultados.",
+        "GLOBAL-PAN38343337 eVHB16148731 relidos completos no cache para exclusões e significância."
+      ],
+      "reviewed_sha256": "ffd7584ade639fdfb32a398e8ffb1a33673d33a1561f1a3918e4207a5866d5bc"
+    },
+    {
+      "index": 4,
+      "path": "content/Aorta_e_doença_arterial_periférica/policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "f0f9062a1b187519965dd12d0048d96f20be01a3f920a7ea6eee98d05d7c54c8",
+      "findings": [
+        "PMID15380048 corrigido para estudo murino2004 DOIar1218, não autoanticorpos humanos2001.",
+        "Resposta agrupada de biológicos não superioridade; mielodisplasia tendência em2018, não VEXAS identificado.",
+        "Broncoscopia seletiva por risco, biópsia traqueal desaconselhada; ECG/eco basal sustentados pelo PNDS.",
+        "Erdogan114 selecionados por aorta; IQR não amplitude; não angioTC fixa indefinida universal.",
+        "Ruptura de cúspide pode exigir cirurgia urgente apesar de aparente controle inflamatório."
+      ],
+      "sources": [
+        "19 PMIDs originais obtidos diretamente por Eutils; 29200026 somente metadados sem abstract.",
+        "PNDS2021 primário páginas19–20 e26 (PDF físico): avaliação, segurança e cirurgia.",
+        "Arnaud2023 PMID37236870 e revisão traqueobrônquica2019 PII S1568997219301533 primárias online.",
+        "Cache1620 auditado: ArticleIdList correto; extrator temporário novo tinha campo ids amplo, não usado no documento."
+      ],
+      "reviewed_sha256": "322bbcd72ee1cd9aad561b52ad2b480cd20f0cf909ab9276d791305a44af31e2"
+    },
+    {
+      "index": 5,
+      "path": "content/Aorta_e_doença_arterial_periférica/pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "31c042edefe6c29ac2ad161bcc4db346b1081207b314f3cd1c750005643ee542",
+      "findings": [
+        "Campens32pacientes+23portadores+28controles; Pingel28,6% entre35, não46 e não incidência.",
+        "Kranenburg rigidez maior queDM2, não menor; PXE não exclui aterosclerose.",
+        "Aspirina evitar quando possível não veto absoluto após indicação cardiovascular; diagnóstico molecular não depende de sinais universais.",
+        "TEMP74RCT primárioPETneutro, TCsecundário favorável e hiperfosfatemia; coorte326eventos2025 restaurada sem extrapolar benefício.",
+        "GenesENPP1/ABCC6nãoalélicos entre si; excluídas generalizações calcifilaxia/idade."
+      ],
+      "sources": [
+        "10referências originais: abstracts individuais; GeneReviews online para manejo.",
+        "TEMP PMID29519353 DOI10.1016/j.jacc.2017.12.062 eHarmsen39581064 DOI10.1016/j.atherosclerosis.2024.119051: abstracts primários online."
+      ],
+      "reviewed_sha256": "65e1de5d60ee1ee541e3b0727011803294584db2c388137706d82de92077c910"
+    },
+    {
+      "index": 6,
+      "path": "content/Aorta_e_doença_arterial_periférica/sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "dd355e388521ea16363a8d2f4ace2ad47b5704d4bffbc65225210c2faa313ed2",
+      "findings": [
+        "CDC líquor/HIV antes da terapia terciária e esquema porresultado restaurados; benzatina não universal.",
+        "Aneurismas tambémfusiformes; sífilis adquirida não prevê inevitavelmenteaortite futura.",
+        "Costa qualidadepré-natal não significativa; removidosMoseley/idososnãoidentificados.",
+        "Positividade treponêmica não prova etiologia doaneurisma; antimicrobiano não garante estabilizaçãoestrutural.",
+        "Limiar cirúrgico não deve ignorar etiologiainfecciosa/morfologia/urgência."
+      ],
+      "sources": [
+        "11PMIDs originais: identidade conferida;2679075/33744210/35550616/32580086 semabstract, sem alegar integral lido.",
+        "CDC páginas sífilis terciária e neurossífilis consultadas diretamente08/09/2026.",
+        "Kallash39902879, Yuan30073493, Costa38917233 abstracts completos conferidos."
+      ],
+      "reviewed_sha256": "27db3ae33bbe4523af68442c5520276b0256ce3423d193380cfb80a9bd511d07"
+    },
+    {
+      "index": 7,
+      "path": "content/Aorta_e_doença_arterial_periférica/sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "8d7743dda44c0ee1d54400e49a8b5cacf012b37656794226c0b95cc07d4ad788",
+      "findings": [
+        "Tortuosidade não exclui Marfan/vEDS; estudos primários AJNR2020 eJAHA2023 contradizem regra do original.",
+        "Coucke2006 mostrouTGFβ aumentado; hipóteseascorbato não exclui essa via.",
+        "Ecoanual requer dimensõesnormais, não apenas estáveis; imagem3anos exige ausência dedilataçãoraiz também.",
+        "45mmpré-gestacional é extrapolaçãoMarfan, não limiar validadoATS; removidas prevalências/certezas mecanísticas excessivas."
+      ],
+      "sources": [
+        "4referências originais: abstracts conferidos; GeneReviews integral das seções mecanismo/diferencial/manejo/vigilância/gestação consultadas online.",
+        "SpinardiDOI10.3174/ajnr.A6732 primária; StephensDOI10.1161/JAHA.123.029518 PMID37776192 primária."
+      ],
+      "reviewed_sha256": "0ba85b23fbc95fc5d5d44b39227ed946efb0161e044829f31bac20773e5d01d6"
+    },
+    {
+      "index": 8,
+      "path": "content/Aorta_e_doença_arterial_periférica/sindrome-de-cogan-acometimento-cardiovascular-aortite-e-insuficiencia-aortica.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "40a5e7ca66c1dbc6526cf3fe584910f58aac08e76eeba3b9da71cf938c462fdd",
+      "findings": [
+        "Chapel Hill classifica Cogan como vasculite de vasos variáveis; apresentação atípica não é estratificador cardiovascular validado.",
+        "Durtette: 126 linhas em 61 pessoas, não grupos independentes; OR infliximabe com IC 1,65–260 e primeira linha sem diferença.",
+        "Ross é autoenxerto; caso único não demonstra superioridade universal de prótese mecânica ou falha das biopróteses.",
+        "Exclusão de sífilis não exige ambos testes negativos; imagem e imunossupressão individualizadas, sem calendário universal provado.",
+        "Removidas extrapolações de relato pós-COVID e caso único de GN como série pediátrica."
+      ],
+      "sources": [
+        "12 PMIDs originais/citados: identidade e abstracts disponíveis conferidos; Saiin34866099 apenas identidade, sem alegação de leitura integral.",
+        "Chapel Hill PMID23045170 DOI10.1002/art.37715 e classificação publicada pelo consenso consultados.",
+        "CDC Laboratory Recommendations2024; Durtette29037902, Marrero39110231 e Gad40843044 abstracts primários."
+      ],
+      "reviewed_sha256": "94b64fe1c539340ef60b508f0aaf11b26f9072a456a822124de80598a53d71b3"
+    },
+    {
+      "index": 9,
+      "path": "content/Arritmias/bloqueio-cardiaco-progressivo-familiar-genetica-scn5a-sobreposicao-brugada-e-manejo.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "335f107d8e9b9e060b971c1fe85b0194ea6ec79ea73e839386d438e896cc481c",
+      "findings": [
+        "Removida exigência de sintomas para marca-passo em MobitzII/BAV avançado sem causa reversível.",
+        "Incluída laminopatia e possível CDI com estimulação; etiologia genética pode alterar seleção do dispositivo.",
+        "Provocação com bloqueador de sódio não rotineira em portadores SCN5A; consenso2025, contexto diagnóstico e segurança incorporados.",
+        "Mapeamento19q13 pertence à linha TRPM4, não SCN5A; variabilidade e penetrância substituem cronologia inevitável.",
+        "VUS não confirma doença nem orienta dispositivo isoladamente."
+      ],
+      "sources": [
+        "14 referências originais: identidades conferidas; abstracts disponíveis lidos, sem alegar leitura integral dos históricos sem abstract.",
+        "AHA texto online de recomendação2018 confirmado; erratum31424988 identificado, texto integral inacessível, sem alegar sua revisão.",
+        "Consenso genético2022 DOIeuac030; corrigendum euac106 lido: autoria/afiliações apenas.",
+        "ESC2021 DOIehab364 recomendação LMNA consultada; consenso provocação2025 DOIeuaf067 seções indicação, rastreio familiar e segurança consultadas."
+      ],
+      "reviewed_sha256": "4d06a65e782bc2ff7872e8c25aaed151791a838fed4c1a2de0420252a6c5a7f3"
+    },
+    {
+      "index": 10,
+      "path": "content/Cardio-oncologia/cardiotoxicidade-do-interferon-arritmia-cardiomiopatia-e-isquemia-miocardica.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "3bb7ee0c705c83fdbd6759bf1b03c7c54634c69c9f6b0d5a83d07ea886341ff3",
+      "findings": [
+        "Série44 era de câncer, não majoritariamente hepatite; não há ranking robusto de isquemia como manifestação mais rara.",
+        "Reversibilidade não garantida nem prova causal; removido contraste mecanístico simplista com antraciclinas.",
+        "Anemia por ribavirina no caso com reexposição e hipotireoidismo como contribuinte restaurados.",
+        "Incluídas advertências cardiovasculares BESREMi/PEGASYS e limites à reexposição; risco vai além de cardiopatia estrutural inespecífica.",
+        "HepatiteB não usa ribavirina padrão; resposta molecular não prova modificação de história natural; dois casos gestacionais não validam classe."
+      ],
+      "sources": [
+        "12 PMIDs originais: identidade e abstracts conferidos individualmente.",
+        "Bulas oficiais DailyMed BESREMi/PEGASYS seções5.3 e advertências da associação com ribavirina consultadas em08/09/2026.",
+        "AASLD/IDSA HCV Guidance atual consultada; não alegada aprovação local específica de formulações."
+      ],
+      "reviewed_sha256": "c3394e808ed8ba93a2e6b62e3eee32900455e58775a9cab9e8b438d974d80367"
+    },
+    {
+      "index": 11,
+      "path": "content/Cardiologia_geriátrica/hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "eb6947e0a8d095895f91d4f14166482719d65165a72b716cd3845bef0c760ec9",
+      "findings": [
+        "Incluída anticoagulação por risco em FA tireotóxica e urgência cardiovascular; não aguardar eutireoidismo se instável.",
+        "Hipertireoidismo subclínico exige persistência e exclusão de causas transitórias; TSH baixo não é necessariamente indetectável.",
+        "Collet FA n8711, não52674; Gencer apenas subclínicos e coortes compartilhadas; associação não prova benefício de tratar.",
+        "PIRAHTES2024 ITT neutro p0,238; pós-hoc de normalização não preserva randomização e radioiodo pode causar hipotireoidismo.",
+        "Amiodarona não é terapia tireoidiana rotineira; AIT mista pode precisar combinação inicial e deterioração rápida de tireoidectomia."
+      ],
+      "sources": [
+        "13 referências originais: identidades e abstracts disponíveis conferidos; Lahey1931 sem abstract, sem alegar leitura integral.",
+        "ATA2016 recomendações2/3/83 e diagnóstico consultados no editor; errata2017 (RAI pediátrico) e2025 (tabela Burch-Wartofsky) lidos, sem alteração relevante nas recomendações usadas.",
+        "ETA2015 DOI000438750; AIT2018 PMID29594056; ACC/AHA2023 seção10.11 e PIRAHTES39159264 primárias consultadas.",
+        "Klein2007 tem aviso de erratum sem PMID no XML; não utilizado para magnitudes/recomendações específicas."
+      ],
+      "reviewed_sha256": "b8450269ca29fbcc67f5078f2a97cdf5609430af30e656d190524f93d4f0ecf7"
+    },
+    {
+      "index": 12,
+      "path": "content/Cardiologia_pediátrica/acondroplasia-e-risco-cardiovascular-forame-magno-na-infancia-e-risco-cardiometabolico-no-adulto.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "59a8cf79568f720abac8834f588ba7056f5a299564734d97a68b072941fbcbec"
+    },
+    {
+      "index": 13,
+      "path": "content/Cardiologia_pediátrica/citomegalovirose-congenita-e-acometimento-cardiovascular-miocardite-neonatal-e-repercussao-cardiaca-da-infeccao-congenita-mais-comum.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "66d50d4ee9c1a1ac8cb321a1998c0420ed56761de8569fdb6a23e806c719e357"
+    },
+    {
+      "index": 14,
+      "path": "content/Cardiologia_pediátrica/coqueluche-maligna-no-lactente-hiperleucocitose-e-hipertensao-pulmonar-refrataria.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "2b936bf363e50a49294d9fa8a24504c0bf1cc6da61a66743a94dce0d58b015c0"
+    },
+    {
+      "index": 15,
+      "path": "content/Cardiologia_pediátrica/deficiencia-de-cpt2-cardiomiopatia-arritmia-e-morte-subita-nas-tres-formas-clinicas-do-defeito-da-lancadeira-de-carnitina.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "c4add3061664bb5e859662d7b8392a04e8a67f825e560b5dc650b1732c6a4884"
+    },
+    {
+      "index": 16,
+      "path": "content/Cardiologia_pediátrica/deficiencia-de-vlcad-cardiomiopatia-neonatal-e-diagnostico-diferencial-com-cardiomiopatias-metabolicas-pediatricas.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "f1ff97b7278cd0c91ca38a79e45ac604623929c59de5f63476fe1bf882701f6c"
+    },
+    {
+      "index": 17,
+      "path": "content/Cardiologia_pediátrica/escorpionismo-grave-e-acometimento-cardiovascular-na-crianca.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "71d745a2614418275457ef1d2ff188ecc754bdbe5994292fe57d08b347aa2910"
+    },
+    {
+      "index": 18,
+      "path": "content/Cardiologia_pediátrica/febre-purpurica-brasileira-choque-fulminante-por-haemophilus-aegyptius.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "341d0d89a08032ad82a90d7f7fe9147a498a2d2f90dbdfc59f718fc3647bbb4b"
+    },
+    {
+      "index": 19,
+      "path": "content/Cardiologia_pediátrica/miocardite-neonatal-por-enterovirus-coxsackievirus-b-transmissao-vertical-periparto-sepse-like-e-disfuncao-multiorganica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "f01352d9ee1273a99670977dd498c77f7b9217cf294d49c6a91ffdf64c7ba65d"
+    },
+    {
+      "index": 20,
+      "path": "content/Cardiologia_pediátrica/progeria-de-hutchinson-gilford-mecanismo-da-aterosclerose-acelerada-rastreio-cardiovascular-e-lonafarnib.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "680371c5afdeaf6fe802d1799e79820f2d823ee17fd1855b9c9528c496448cab"
+    },
+    {
+      "index": 21,
+      "path": "content/Cardiologia_pediátrica/sifilis-congenita-transmissao-transplacentaria-quadro-clinico-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "c2c80e85e4460448494c492433259a9a76b6fc85c3727070dc775eea55d91004"
+    },
+    {
+      "index": 22,
+      "path": "content/Cardiologia_pediátrica/sindrome-cardiofaciocutanea-cfc-espectro-cardiaco-genetica-braf-map2k1-map2k2-e-diferenciacao-de-noonan-e-costello.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "602be047b5ed46753509ed25fcd0b060527959cf4e500b8b150bb0d511abd35b"
+    },
+    {
+      "index": 23,
+      "path": "content/Cardiologia_pediátrica/sindrome-congenita-do-zika-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "41d1a483ed10f0d0c4b3dd9eca1548264fc508707cc60e40d872968faeb1a774"
+    },
+    {
+      "index": 24,
+      "path": "content/Cardiologia_pediátrica/sindrome-da-rubeola-congenita-canal-arterial-patente-e-estenose-pulmonar-periferica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "650924cff9ee6effaa595e647be113838e369a476e43b01938a58be026be9fc6"
+    },
+    {
+      "index": 25,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-alstrom-cardiomiopatia-dilatada-bifasica-ciliopatia-e-diagnostico-diferencial-na-crianca.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "73e7b632aa9c33cb58815b813a43a5ee122f9e957aee60ac713a6e20814b5ba0"
+    },
+    {
+      "index": 26,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-cantu-canalopatia-katp-abcc9-kcnj8-hipertricose-cardiomegalia.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "61932ece113c70f48f04b263e1353a4d4b3391a782e9c4d8f9ef2fe4648d771c"
+    },
+    {
+      "index": 27,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-costello-cardiomiopatia-hipertrofica-precoce-taquicardia-atrial-caotica-e-risco-tumoral-na-rasopatia-por-hras.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "61b82f8ede6df809ff7c02656edf0d0d2d9294e353a66fa54039e7f87e3bf451"
+    },
+    {
+      "index": 28,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-kabuki-espectro-cardiovascular-genetica-kmt2d-kdm6a-e-rastreio-cardiaco.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "bd09bc93530bbfe4c4c76102ccd5706d683370378fe47b460bd857323c2b5d2c"
+    },
+    {
+      "index": 29,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-mazzanti-rasopatia-por-shoc2-cabelo-anageno-frouxo-espectro-cardiaco-e-cardiomiopatia-hipertrofica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "4ebc0f21245686b9346dabd51a0d68037da504a0939a2f2c18dbb74779cd0b72"
+    },
+    {
+      "index": 30,
+      "path": "content/Cardiologia_pediátrica/sindrome-de-timothy-lqt8-canalopatia-cacna1c-fenotipo-multissistemico-e-estrategias-de-tratamento.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "f7bd02867b8772c86c4c470a4ba809134e3be91d8a5eb255ccbbefc62e02fabb"
+    },
+    {
+      "index": 31,
+      "path": "content/Cardiologia_pediátrica/sindrome-leopard-noonan-com-multiplos-lentigos-mecanismo-paradoxal-de-ptpn11-e-cardiomiopatia-hipertrofica-na-rasopatia.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "0395869a28aca02f9a7c473e32958166e44fe0d00632db6c5a15e2bc3df4ebf5"
+    },
+    {
+      "index": 32,
+      "path": "content/Cardiologia_pediátrica/teratoma-intrapericardico-fetal-e-pediatrico-hidropsia-nao-imune-diagnostico-e-conduta-cirurgica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "7b64bcb55cfd12ad391840081e004a20c51ab7a9792029a9180b7fed23fdd338"
+    },
+    {
+      "index": 33,
+      "path": "content/Cardiologia_pediátrica/toxoplasmose-congenita-e-acometimento-cardiovascular-miocardite-neonatal-na-infeccao-transplacentaria-por-toxoplasma-gondii.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "bc8f497f805296aa5c4a5c81921e06170e1e89a854a23509c026f76e3db4f06c"
+    },
+    {
+      "index": 34,
+      "path": "content/Cardiologia_pediátrica/vasculite-por-iga-purpura-de-henoch-schonlein-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "8b1fad8c9f90425d37301db0987fb66e46bedd01d4a48c1f75d32fd8425d1dcc"
+    },
+    {
+      "index": 35,
+      "path": "content/Cardiomiopatias/aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "monoterapia não equivale a população sem exposição prévia; washout supervisionado",
+        "massa VE não significativamente diferente; publicação online agosto"
+      ],
+      "sources": [
+        "https://www.jacc.org/doi/10.1016/j.jchf.2024.11.011",
+        "https://www.nejm.org/doi/full/10.1056/NEJMoa2504654",
+        "PMID40932433"
+      ],
+      "source_sha256": "29e97526a23917a394fa22b378648366c109435245c58006b516f69c7123914f",
+      "reviewed_sha256": "98aff1bdcaba5d4102fdd3360c67632e2b658cdd995b763eb2356597ebb54bf8"
+    },
+    {
+      "index": 36,
+      "path": "content/Cardiomiopatias/cardiomiopatia-hipertrofica-apical-fenotipo-diagnostico-diferencial-e-prognostico.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "0b96245f40b492c844f09a006a95521b74a211412b4d50625e929dd62c94655e"
+    },
+    {
+      "index": 37,
+      "path": "content/Cardiomiopatias/cardiomiopatia-por-prkag2-fenocopia-glicogenica-pre-excitacao-e-doenca-de-conducao-progressiva.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "00b743a732b67412c6c09ffe913049341ff4db8c959ec9a5ac83aff7ae2f92fd"
+    },
+    {
+      "index": 38,
+      "path": "content/Cardiomiopatias/fibrilacao-atrial-na-cardiomiopatia-hipertrofica-anticoagulacao-independente-do-cha2ds2-vasc.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "e85436904e60e389606d1a8a1f3ecfdc2e48ff7c165494959349ede50a58f23a",
+      "findings": [
+        "Limitada anticoagulação universal à FA clínica; acrescentados limiares e decisão específica para FA subclínica.",
+        "Corrigida exceção valvar genérica para prótese mecânica/estenose mitral moderada-grave, preservando DOAC na insuficiência mitral.",
+        "Retirada preferência universal por ablação; explicitadas indicações e preferência do paciente.",
+        "Coorte DOAC restrita à CMH obstrutiva sem AVC prévio; associação não causal e ausência de diferença não equivalência.",
+        "Trombo8,5% em amostra selecionada para ETE não prevalência de toda CMH; recorrência definida por nova intervenção em1 ano."
+      ],
+      "sources": [
+        "PMID41838376",
+        "PMID42269731",
+        "PMID42029363",
+        "DOI10.1161/CIR.0000000000001250",
+        "DOI10.1161/CIR.0000000000001193"
+      ],
+      "reviewed_sha256": "d98ba04040571db7a88723929946ea3d46ad265de59705152b59727d67a9681f"
+    },
+    {
+      "index": 39,
+      "path": "content/Cardiomiopatias/mavacamten-em-cmh-obstrutiva-elegivel-para-reducao-septal-o-ensaio-valor-hcm.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "dose/atribuição permaneciam cegas após16sem",
+        "elegibilidade não cirurgia inevitável",
+        "erratum tabela4 5(4,6%)",
+        "limitações segurança/encaminhamento"
+      ],
+      "sources": [
+        "PMID35798455",
+        "PMID37639243",
+        "PMID39556124",
+        "PMID40354453",
+        "PMID40100181"
+      ],
+      "source_sha256": "46f3fb5fc0da78f6fb06838f3ff4b4faabb0b4a3c68b27f67b8e5d1d31c591d2",
+      "reviewed_sha256": "2d8739f82b8d93f86ab304082b6c9d70bc17035e7070c3e92fa852290bab7076"
+    },
+    {
+      "index": 40,
+      "path": "content/Cardiomiopatias/miocardite-cronica-cardiomiopatia-inflamatoria-progressao-para-cmd.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "024493d8202b06bcdb783163e92c179862bafc463e4d5298da93716eb819e6c3"
+    },
+    {
+      "index": 41,
+      "path": "content/Cardiomiopatias/preditores-de-recuperacao-da-feve-na-cardiomiopatia-dilatada-nao-isquemica-rm-lge-strain-e-genetica.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "8ecc2edccd6840d97451dc69c7164a7c6d31b50fb6bdd0b1caf8f20ff67e39ad",
+      "findings": [
+        "TRED-HF44% em6 meses não maioria; data futura de busca removida como comprovação.",
+        "Metanálises podem compartilhar estudos; Berdibekov avaliaLGE/T1/ECV, não strain; removido melhor VPP universal e antecipação automática CDI.",
+        "Setti: padrão anelar LGE, não qualquerLGE; definição de remodelamento não normalização completa.",
+        "Kan ganhoAUC não significativo; LACI validação interna/coorte64; ApoA1/BRE recuperação>35% não normalização.",
+        "Removidas menções sem fonte identificada a Passo/ivabradina; genética por variantes P/LP e não VUS; mantida terapia após melhora."
+      ],
+      "sources": [
+        "PMID30429050",
+        "PMID39955068",
+        "PMID39941566",
+        "PMID40460665",
+        "PMID40296583",
+        "PMID37697922",
+        "PMID39890030",
+        "PMID39375197",
+        "PMID41067410",
+        "PMID40988625",
+        "PMID42155308",
+        "PMID42204922",
+        "PMID42368855"
+      ],
+      "reviewed_sha256": "6a7fc6164ebe87c454d13a963768a70e0d03ff2f36a878640f570ce023c70e44"
+    },
+    {
+      "index": 42,
+      "path": "content/Cardiomiopatias/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "tríade corrigida",
+        "CDI individualizado não extrapolado LMNA",
+        "segurança fase2 óbito/hold/retomada separados da fase1",
+        "comunicados não promovidos a eficácia"
+      ],
+      "sources": [
+        "Greenberg B, Taylor M, Rossano JW, et al. Phase 1 Study of AAV9.LAMP2B Gene Therapy in Danon Disease. N Engl J Med. 2025;392(10):972-983. DOI: 10.1056/NEJMoa2412392. PMID: 39556016.",
+        "ClinicalTrials.gov. Gene Therapy for Male Patients With Danon Disease Using RP-A501 (AAV9.LAMP2B). NCT03882437.",
+        "Taylor MRG, Adler ED. Danon Disease. GeneReviews. Revisão23/05/2024. https://www.ncbi.nlm.nih.gov/books/NBK554742/",
+        "Rocket Pharmaceuticals. Atualização de segurança fase2 e retomada do protocolo, 2025–2026. https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-provides-update-phase-2-clinical-trial-rp ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/ ; https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update"
+      ],
+      "source_sha256": "c4eedc48650e37f091da202a188e61a49cf86acc46dabbd1d72ac83a0c7e6da0",
+      "reviewed_sha256": "d7573aecba505a8a48cd52f9b50d67349f778dd76e7bc86b86916c61bcdfaabb"
+    },
+    {
+      "index": 43,
+      "path": "content/Cardiopatias_congênitas/associacao-vacterl-espectro-de-cardiopatia-congenita-criterios-diagnosticos-e-rastreio-no-recem-nascido.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "9a435e86b59a07b855234c85b582b90bba9c37dc26628e60118a9cb737387ff6"
+    },
+    {
+      "index": 44,
+      "path": "content/Cardiopatias_congênitas/fistula-arteriovenosa-coronariana-congenita-fisiopatologia-do-roubo-coronariano-diagnostico-e-fechamento-percutaneo.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "944cea5c76e4a372531ba9ed1e2d893cabd8b64e6b10c42dff2286ff52055533"
+    },
+    {
+      "index": 45,
+      "path": "content/Cardiopatias_congênitas/sindrome-de-alagille-acometimento-cardiovascular-estenose-pulmonar-periferica-e-tetralogia-de-fallot.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "5ebfc799a4c03a846c728645414f251bdccc80089ff80bcb0782f9d740e0afcb"
+    },
+    {
+      "index": 46,
+      "path": "content/Cardiopatias_congênitas/sindrome-de-charge-cardiopatia-congenita-gene-chd7-e-rastreio-cardiaco-no-recem-nascido.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "dc418db8d0d83ef1f5180ac1b9cf6ebdaafa183458c18124e0b4be2cd61b7cba"
+    },
+    {
+      "index": 47,
+      "path": "content/Cardiopatias_congênitas/sindrome-de-cornelia-de-lange-espectro-de-cardiopatia-congenita-genetica-das-coesinopatias-e-rastreio-cardiaco.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "8390a7cbf44c7e43488385cc88a3e1bd183524b78d0157758d8cdd1a92ad05c4"
+    },
+    {
+      "index": 48,
+      "path": "content/Cardiopatias_congênitas/sindrome-de-rubinstein-taybi-espectro-cardiovascular-genetica-crebbp-ep300-e-risco-anestesico.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "50d58801a4da891df123acefccb83c7f1dd99a97c669c4c94e0bb0183de6a63c"
+    },
+    {
+      "index": 49,
+      "path": "content/Cardiopatias_congênitas/sindrome-phace-coarctacao-de-aorta-arteriopatia-cerebrovascular-e-cautela-com-propranolol.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "2cd6b1a3ea4287b52cae4b25de4dc6eb6a3941414b61094108b9e53c8a29e169"
+    },
+    {
+      "index": 50,
+      "path": "content/Cardiorrenal/morte-subita-cardiaca-em-hemodialise-o-ciclo-dialitico-e-o-longo-intervalo-interdialitico.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "af4a8a67ce58e79b8be81b893a594e75e65ae694fd8be71856001cd837a0dc5a"
+    },
+    {
+      "index": 51,
+      "path": "content/Diabetes_e_cardiologia/diferencas-de-sexo-no-risco-cardiovascular-do-diabetes-tipo-2.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "08fe76622773b111d5851f51fb5867907d48ae5697b1a92779d8f4f8fc9a9dce"
+    },
+    {
+      "index": 52,
+      "path": "content/Diabetes_e_cardiologia/insulina-semanal-icodec-seguranca-cardiovascular-e-hipoglicemia.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "HR ICamplo não prova segurança/noninferiority",
+        "IcoSema não isola icodec",
+        "composto hipoglicemia não apenasgrave",
+        "DM1 maiorhipo EMA"
+      ],
+      "sources": [
+        "PMID42119975",
+        "PMID40482670",
+        "https://www.ema.europa.eu/en/medicines/human/EPAR/awiqli"
+      ],
+      "source_sha256": "7d4b4ad09699142db0b13e242607c26faf5350e201c9e59cdb61f306517991d5",
+      "reviewed_sha256": "7f47b792823f9f09a054c7787c9342a4bb3d268ac98f2d6bd89f709b5ea9d8f2"
+    },
+    {
+      "index": 53,
+      "path": "content/Diabetes_e_cardiologia/pre-diabetes-resistencia-insulinica-e-disfuncao-vascular-subclinica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "34ef8468d27cfff72f1fe4d33f9477fea4425ba73ba272d9d30ea5094e733acc"
+    },
+    {
+      "index": 54,
+      "path": "content/Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "superioridade indireta removida",
+        "HbA1c24semanas;exceção0,5mg",
+        "TRIUMPH3ponderalvs4OA",
+        "TRIUMPH-Outcomes existente semresultados"
+      ],
+      "sources": [
+        "PMID37385280",
+        "PMID42250575",
+        "PMID41090431",
+        "https://clinicaltrials.gov/study/NCT06383390"
+      ],
+      "source_sha256": "f44c7c588a54a5f83449ccd76937374bd3fc4ffbf3c33d23049bbaf47be9c92c",
+      "reviewed_sha256": "fd0e122f85b1f166a07e39d2fa8ca6ee484e32784cee04368b84fd2c72b9ed80"
+    },
+    {
+      "index": 55,
+      "path": "content/Diabetes_e_cardiologia/retinopatia-diabetica-como-marcador-de-risco-cardiovascular-sistemico.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "73a27681a67c8f97d4e668d81409c2acf5eb0b4b013a2cb50b9c20bcc3257577"
+    },
+    {
+      "index": 56,
+      "path": "content/Diabetes_e_cardiologia/sglt2-glp1-dpp4-e-risco-de-fibrilacao-atrial-no-diabetes-tipo-2-metanalise-em-rede-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "d43e7a22585dd677a883b92ff8f885e6029147a4dc4bf37990dd2ba75b923d7c"
+    },
+    {
+      "index": 57,
+      "path": "content/Diabetes_e_cardiologia/tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "7e3a659bc132723d38e8abe9e12bc0745c42ba174bce34a2f9b1ea507c598ab5",
+      "findings": [
+        "Dez pontos percentuais não10% relativo; HR relativo não risco absoluto; ORmeta nãoRR causal.",
+        "Cai subgruposHbA1c ejejum separados, mortalidade total nãoCV automaticamente; CGMbasal não longitudinal10anos.",
+        "Qu inclui CGM/flash/capilar e desfechos heterogêneos; aterosclerose não necessariamenteobstrução; removida equivalênciaCAC.",
+        "Lu33097560 precede2025; TIR/TITR nãointercambiáveis, sem ensaio mortalidade ou meta intensiva independente."
+      ],
+      "sources": [
+        "Duas fontes originais: abstracts/identidade conferidos.",
+        "Lu33097560 primário ADA ePubMed consultados.",
+        "Textos integraisCaiPMC/QuMDPI indisponíveis nesta consulta; não conservados detalhes além de resultados verificáveis."
+      ],
+      "reviewed_sha256": "0e800c2696f2b5042649cbc200c69e8ba12a33a60e8a1f6c1e83bd4159784132"
+    },
+    {
+      "index": 58,
+      "path": "content/Diabetes_e_cardiologia/transplante-de-pancreas-e-ilhotas-e-desfecho-cardiovascular-no-diabetes-tipo-1.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "feaf9a8b76b3eedd7808034a38f126d0bca1f893ea3df69b4ca9e9269a36095d"
+    },
+    {
+      "index": 59,
+      "path": "content/Diabetes_e_cardiologia/variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "dbfa37dff90a603d4afa597d3bb7ca10eae658ea11132d4f947c6a701fb07dda",
+      "findings": [
+        "CADDY CGM10dias a cada2meses, não contínuo18meses; FA detectada inclui prévia, associação agregada não específicaFA.",
+        "Retirada hipótese contrarregulação/neuropatia como explicação comprovada e generalização de risco maior foraDM.",
+        "Zeng discriminação retrospectiva não previsão prospectiva validada; DCA não ensaio utilidade; CGM/ambulatorial/unidadeOR não confirmados pelo abstract.",
+        "MIMIC variabilidade pós-admissão não CGM; sem indicação automáticaILR ou intervenção antiFA."
+      ],
+      "sources": [
+        "Quatro referências originais: abstracts/identidades conferidos.",
+        "CADDY texto integral Springer métodos/desfechos/discussão consultados.",
+        "Zeng resumo primário QJM/PubMed consultado; texto completo não acessível, detalhes não comprovados removidos."
+      ],
+      "reviewed_sha256": "ce8d5a66b58d8e6f54078e3e57b2ba601430a5c961fae32286469d4f628dab8a"
+    },
+    {
+      "index": 60,
+      "path": "content/Doença_coronariana/apneia-obstrutiva-do-sono-e-doenca-coronariana-desfechos-cardiovasculares-e-o-fenotipo-de-alto-risco.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "cbadc8f4f7de9ae8e1d4ec8de19ff16f5cf9d5414f026584c8b4a073fb654d6c"
+    },
+    {
+      "index": 61,
+      "path": "content/Doença_coronariana/balao-farmacologico-lesao-de-novo-versus-reestenose-rec-cagefree-e-agent-ide.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "fd244cc15613804337a177acd1970de12dc21d72c24fd4db282821627542c734"
+    },
+    {
+      "index": 62,
+      "path": "content/Doença_coronariana/clear-synergy-oasis-9-espironolactona-rotineira-apos-infarto-agudo-do-miocardio.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "IC95%coprimário2adicionado",
+        "GPC exploratória e componentes dano explícitos",
+        "ausência diferença composta não prova nulidade cada componente"
+      ],
+      "sources": [
+        "Jolly SS, d'Entremont MA, Pitt B, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, et al. Routine Spironolactone in Acute Myocardial Infarction. N Engl J Med. 2025;392(7):643-652. DOI: 10.1056/NEJMoa2405923. PMID: 39555814.",
+        "d'Entremont MA, Jolly SS, Alharthi F, Shah B, Austin D, Yi Q, Storey RF, Bossard M, Cornel J, Jaspers Focks J, Kedev S, Asani V, Stankovic G, Tsang M, Valettas N, Tyrwhitt J, Betz J, Lee SF, Mian R, Silvain J, Beygui F, Czarnecki A, Dehghani P, Cantor W, Lavi S, Spratt JC, Belley-Côté EP, Eikelboom JW. Benefit-risk of colchicine and spironolactone in acute myocardial infarction: prespecified generalised pairwise comparisons analysis of the CLEAR-SYNERGY trial. Heart. 2026;112(6):326-332. DOI: 10.1136/heartjnl-2025-326218. PMID: 40908114.",
+        "d'Entremont MA, Lee SF, Mian R, Kedev S, Montalescot G, Cornel JH, Stankovic G, Moreno R, Storey RF, Henry TD, Skuriat E, Tyrwhitt J, Mehta SR, Devereaux PJ, Eikelboom J, Cairns JA, Pitt B, Jolly SS. Design and rationale of the CLEAR SYNERGY (OASIS 9) trial: a 2x2 factorial randomized controlled trial of colchicine versus placebo and spironolactone versus placebo in patients with myocardial infarction. Am Heart J. 2024;275:173-182. DOI: 10.1016/j.ahj.2024.06.007. PMID: 38936755."
+      ],
+      "source_sha256": "8dd8fc7623ec8156f0e8ae30ad1fa6da4d64b41f14f2a874135ae9276845ae24",
+      "reviewed_sha256": "077d44396818707effcc04c82dafb7c758ced8bf8c6c90d599a335e032011ade"
+    },
+    {
+      "index": 63,
+      "path": "content/Doença_coronariana/deficiencia-de-ferro-na-sindrome-coronariana-aguda.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "5ab20f0e6aed7c08978712469567afbd5899c1881572a55db02f56d36ca6e6d4",
+      "findings": [
+        "Incluído ajuste por hs-CRP que elimina significância em Masini; retirada falsa divergência prognóstica independente.",
+        "Retirada inferência de menor resposta no subgrupo isquêmico: interações não significativas.",
+        "Corrigida formulação IRONMAN para derisomaltose.",
+        "Identificados INFERRCT randomizado e iCHF-2 encerrado; removida alegação de inexistência de ensaios.",
+        "Preservadas investigação e reposição por anemia/deficiência sem exigir IC; não promovido benefício prognóstico para SCA."
+      ],
+      "sources": [
+        "PMID40120841",
+        "PMID39780944",
+        "PMID41027507",
+        "NCT05759078",
+        "NCT03991000"
+      ],
+      "reviewed_sha256": "15b966a9c97828259f4eabe61700b4bce9c22eed32a28052eddb67ee7dc4039f"
+    },
+    {
+      "index": 64,
+      "path": "content/Doença_coronariana/desescalonamento-guiado-por-genotipo-cyp2c19-dan-dapt-e-revisao-sistematica-2026.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "4104d57226c263a548bf117de39787afad4c2c1a5ddf2b297559506b277188e9",
+      "findings": [
+        "DAN-DAPT: portadores LOF permanecem prasugrel/ticagrelor; protocolo não troca todos; dois coprimários distintos e amostras planejadas contextualizadas.",
+        "Modelo econômico deriva de FORCE-ACS, não POPular Genetics; resultados não prova de segurança.",
+        "TAILOR-PCI não confirmou superioridade primária; retirado agrupamento de ensaios como prova universal.",
+        "Incluído sinal isquêmico STOPDAPT-2 ACS e retirada equivalência entre estratégias pelo intervalo25–65%.",
+        "Explicitado limite temporal ESC e painel CRT não normativo."
+      ],
+      "sources": [
+        "PMID40015616",
+        "PMID39537191",
+        "PMID42410742",
+        "PMID42443024",
+        "NCT05262803",
+        "DOI10.1001/jama.2020.12443",
+        "DOI10.1093/eurheartj/ehad191"
+      ],
+      "reviewed_sha256": "8f06f303807a8a981708b5b37ad9a2d7eb684828cc43c1753981ad43034f09bd"
+    },
+    {
+      "index": 65,
+      "path": "content/Doença_coronariana/doenca-coronariana-em-artrite-reumatoide-aterosclerose-acelerada-e-risco-cardiovascular-de-jak-e-biologicos.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "31fba9f7b73f127480b9ec3fd72c16d0c7a0e99b98f0a0af1fa3f8c8496d6330"
+    },
+    {
+      "index": 66,
+      "path": "content/Doença_coronariana/doenca-coronariana-em-candidatos-e-receptores-de-transplante-renal-e-hepatico-fim-do-rastreio-universal.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "0fba6b3238e47b161b10b82aede6cc2bc62fe203f5eaae7a0126c0f258da5367"
+    },
+    {
+      "index": 67,
+      "path": "content/Doença_coronariana/ectasia-e-aneurisma-coronariano-no-adulto-definicao-etiologia-e-antitrombotico.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "0fcb5de506a9f918d723f068711b83b7431e55eaa58045a32b43a653a2282bdd"
+    },
+    {
+      "index": 68,
+      "path": "content/Doença_coronariana/inibicao-do-fator-xia-apos-sindrome-coronariana-aguda-racional-do-librexia-acs.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "b2181cec393e80775de594e2382f013ad74c52b32ec5eed494c41f95af5f5a08",
+      "findings": [
+        "Substituída narrativa sem resultado pelo LIBREXIA-ACS publicado29/08/2026, interrompido por futilidade; definido sangramento BARC3c/5 sem universalizar segurança.",
+        "Corrigida dose OCEANIC-AF100→50mg e separada falha dessa molécula/dose/indicação de efeito de classe.",
+        "Incluída existência de OCEANIC-STROKE positivo em população não cardioembólica; não extrapolado a FA/SCA."
+      ],
+      "sources": [
+        "PMID39986336",
+        "PMID36030390",
+        "PMID41791675",
+        "PMID42670965",
+        "DOI10.1056/NEJMoa2407105",
+        "DOI10.1056/NEJMoa2513880"
+      ],
+      "reviewed_sha256": "9d048dd23e486721b0d95f3eb4c19b365a385d3c47a54e46238f16e8d1f9a220"
+    },
+    {
+      "index": 69,
+      "path": "content/Doença_coronariana/inteligencia-artificial-placa-coronariana-vulneravel-escore-mib-e-metanalise-ai-qccta-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "cf039ad6165a5cdaa8d8ab0fa445abcdaf3521566cff6186bce7d21c5a9937a0"
+    },
+    {
+      "index": 70,
+      "path": "content/Doença_coronariana/litotripsia-intravascular-em-calcificacao-coronaria-grave-roller-coastr-epic22-e-metanalise-2025.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "718f822e243d03ba9214d55c4862e6997d878631126fb9a49b478ecadad6f774"
+    },
+    {
+      "index": 71,
+      "path": "content/Doença_coronariana/oct-guiada-versus-angiografia-na-pci-de-lesoes-complexas-metanalises-2025-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "70c45761ed8b7082464f1601825a472fa92e2f1fbac684694180cf10814f1e0b"
+    },
+    {
+      "index": 72,
+      "path": "content/Doença_coronariana/tempo-da-revascularizacao-completa-no-iamcsst-imediata-versus-estagiada.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "333226e621dbfeac9af6b8b2b30c79c9bb06abb61c7a613da7dcb1d5d07b9be0"
+    },
+    {
+      "index": 73,
+      "path": "content/Doença_coronariana/terapia-antitrombotica-dac-cirrose-hepatica-e-trombocitopenia.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "697a0df4aa68f8d8034e437c7e20ea907f4d74c9efafd806a2e5b74c01b9d85e"
+    },
+    {
+      "index": 74,
+      "path": "content/Fibrilação_atrial/ablacao-de-fibrilacao-atrial-na-icfep-subanalise-do-cabana-e-metanalise-2025.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "59144b8c40a7edc9df887164f478d6291fc8cf3e45d427fcbd036c0307ebfa6f"
+    },
+    {
+      "index": 75,
+      "path": "content/Fibrilação_atrial/ablacao-redo-na-fibrilacao-atrial-recorrente-reconexao-de-veias-pulmonares-e-timing-metanalise-2025.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "d68e1345036483a79504ee025cf5fe5feed702a14dc793a83de5591e3e52cfd0"
+    },
+    {
+      "index": 76,
+      "path": "content/Fibrilação_atrial/cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "2cfedd8ee0f7cd0fddedf1eedb79da067f2cfaf76a52f213f0d5c03a832ddff6"
+    },
+    {
+      "index": 77,
+      "path": "content/Fibrilação_atrial/colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "aba3a593603b5b8591efa50e6b905d5baa3f584d02178be8c710e18eb641dadf"
+    },
+    {
+      "index": 78,
+      "path": "content/Fibrilação_atrial/diferencas-de-sexo-na-fibrilacao-atrial-mecanismo-hormonal-acesso-e-desfechos-apos-ablacao.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "e309b8d16f4d5b1f02e62b1699e35b86f50cebbd6162e23e24a49d0f8255b876"
+    },
+    {
+      "index": 79,
+      "path": "content/Fibrilação_atrial/fa-e-hipotireoidismo-subclinico-tsh-e-eletrofisiologia-atrial.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "b941db2f16514de0827ca4fbf8fdc53b201caf1549e4f61d3de21870656559a0"
+    },
+    {
+      "index": 80,
+      "path": "content/Fibrilação_atrial/fibrilacao-atrial-e-cirrose-hepatica-qual-anticoagulante-escolher.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "7e567a4ce46cc5c8509d56189f230ea7693e13a02fe13d28df408e071ad4bcbf"
+    },
+    {
+      "index": 81,
+      "path": "content/Fibrilação_atrial/finerenona-e-prevencao-de-fibrilacao-atrial-incidente-a-analise-agrupada-fine-heart.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "23953eb897c8488ec88401a683b3b311f6cc5744b0532a735cc9a86c325746dd",
+      "findings": [
+        "FINEARTS isolado FAincidenteHR0,77 IC0,57–1,04 p0,09 omitido no original; adicionado e separado do composto IC.",
+        "Sobreposição de participantes impede chamar análise isolada de replicação independente.",
+        "FINE-HEART pré-especificado com adjudicação cega; monitorização não contínua não permite afirmar direção do viés.",
+        "Removido NNT125 como horizonte fixo e erro de decompor soma randomizados só por FA prévia; mantida não indicação isolada prevenir FA."
+      ],
+      "sources": [
+        "PMID40306837",
+        "PMID40156827",
+        "PMID33264825",
+        "PMID34449181",
+        "PMID39225278",
+        "FDA215341s0092025"
+      ],
+      "reviewed_sha256": "e0fcbd6bd73bf2003a65349a4b49691b8588694daf34accf8638ccbff65f5756"
+    },
+    {
+      "index": 82,
+      "path": "content/Fibrilação_atrial/ia-aplicada-ao-ecg-em-ritmo-sinusal-para-deteccao-e-predicao-de-fibrilacao-atrial-oculta.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "c5e0d5f6953f90107d41104fce21063bf6de930e470ac95bddc6ec9c6b011ef0"
+    },
+    {
+      "index": 83,
+      "path": "content/Fibrilação_atrial/isolamento-da-parede-posterior-na-ablacao-por-campo-pulsado-da-fa-persistente-advantage-af.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "4b0de489eb5301fa62e92e60cf550c583c79bded77841fbbad26f3524276d3bc"
+    },
+    {
+      "index": 84,
+      "path": "content/Fibrilação_atrial/miopatia-atrial-biomarcadores-e-strain-como-preditores-na-fibrilacao-atrial.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "e9c1f34b478fb49547afc83358eb23f55f549d9496f3a8b23624f9340b7b7229"
+    },
+    {
+      "index": 85,
+      "path": "content/Fibrilação_atrial/neuromodulacao-cirurgica-denervacao-autonomica-e-ganglios-na-prevencao-da-fibrilacao-atrial-pos-operatoria.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "4d9895c0ef0a52f12fe6fe2752afc05fe7137fe1d5971810ccee958d9624f23a"
+    },
+    {
+      "index": 86,
+      "path": "content/Fibrilação_atrial/sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "40113f6e61e44c8798898b01a5964096371ea5475b166dd737dc6aab223be102",
+      "findings": [
+        "DARE-AF inclui FA persistente em todos; não majoritariamente.",
+        "Diferença entre coortes e RCT não isola mecanismos indiretos/diretos nem prova interação por comorbidade.",
+        "Retiradas magnitudes TriNetX por RR com orientação ambígua e erratum integral inacessível; identidade41697582 registrada sem alegar leitura.",
+        "Mantidos dados RCT e limitações observacionais; não promover SGLT2 isoladamente prevenir recorrência nem invalidar indicação cardiorrenal."
+      ],
+      "sources": [
+        "PMID41206792",
+        "PMID41357094",
+        "PMID41134438",
+        "PMID41697582identidade_apenas",
+        "PMID42289243"
+      ],
+      "reviewed_sha256": "7fffb5a59fc68814257856f46406f4bb0c3404284f322a0da005d8cf76d215fa"
+    },
+    {
+      "index": 87,
+      "path": "content/Fibrilação_atrial/timing-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial-elan-timing-optimas-e-catalyst.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "a041d835569e99ffa38777cfadf2b10926491c0f9a18cbd14e348c7c68b33c6d",
+      "findings": [
+        "Corrigida regra1–3–6–12: dia1éAIT, não AVC leve.",
+        "Corrigidas falsas exclusões universais: ELAN inclui infarto maior; OPTIMAS permite HI1/HI2/PH1, excluiPH2.",
+        "Distinguidos gravidade radiológica ELAN e NIHSS; CATALYST não inclui todas as janelas ELAN.",
+        "Removida falsa contagem tripla de eventos e conclusão universal baseada só em TC sem sangue.",
+        "START reconhecido como RCT publicado; mantidos números dos quatro abstracts primários."
+      ],
+      "sources": [
+        "PMID36065821",
+        "PMID37222476",
+        "PMID39491870",
+        "PMID40570866",
+        "DOI10.1001/jamaneurol.2025.0285",
+        "DOI10.1186/s13063-025-08761-6"
+      ],
+      "reviewed_sha256": "d2e61f6aa4012586a2924f6fc972cb1fe84ae04b1b77b4827ba0979ae0d7a680",
+      "dependency_intersection": {
+        "source": "docs/auditoria-dependencias-json-orfaos-20260908.json",
+        "resolution": "já corrigida: OPTIMAS HI1/HI2/PH1 permitidos, PH2 excluído; ELAN maior6–7dias"
+      }
+    },
+    {
+      "index": 88,
+      "path": "content/Geral/actinomicose-toracica-com-acometimento-pericardico-mimetizando-cancer-de-pulmao.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "155ce180aa034618839b223f83c37c0873a19248ccb3023d1035fc5160b5af3b"
+    },
+    {
+      "index": 89,
+      "path": "content/Geral/babesiose-grave-e-acometimento-cardiovascular-hemolise-choque-e-miocardite-em-relatos-de-caso.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "ffdb06421132b72092b2a2ac39ba2dc71fba250c752b1e9d23e4e61e6a465219"
+    },
+    {
+      "index": 90,
+      "path": "content/Geral/cardiomiopatia-associada-ao-hiv-da-era-pre-tarv-a-doenca-cardiovascular-acelerada.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "b484e532e461645a15154c76cc80c88920f3b5a91c1b9507033b0b91ab988bec"
+    },
+    {
+      "index": 91,
+      "path": "content/Geral/cisticercose-cardiaca-achado-incidental-na-neurocisticercose-sistemica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "a06f356ad2a1ec701cba7a0a8aaad84e27b327ceab2f4744e73a408e6db512d1"
+    },
+    {
+      "index": 92,
+      "path": "content/Geral/peste-yersinia-pestis-choque-septico-e-disfuncao-miocardica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "d9e71a63a586cbb212ceadb659ddbbff5d01fd5872fedfb83819b8fa47a03093"
+    },
+    {
+      "index": 93,
+      "path": "content/Geral/sindrome-de-sjogren-primaria-e-acometimento-cardiovascular-no-adulto.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "d6ad81942555f6c0190b8f7ef5ff76189d9f6efb17450c86ef356d38aa2531f5",
+      "findings": [
+        "Barendregt e Tumiati tinham resultados invertidos; restaurada heterogeneidade autonômica e denominadores.",
+        "ESSDAI não possui domínio cardiopulmonar; pericardite/disautonomia não captadas adequadamente.",
+        "Liu transversal não prova ineficácia preventiva de HCQ; rituximabe individualizado para manifestações graves/refratárias.",
+        "Lai e001993 corrigido;58862 são conjunto IMID; critérios classificatórios e limites de rastreio explicitados."
+      ],
+      "sources": [
+        "19 referências originais: identidade e abstracts conferidos individualmente.",
+        "EULAR2020 texto do editor consultado sobre ESSDAI e tratamento sistêmico.",
+        "BSR DOIkeae152 texto integral do editor consultado em prevenção cardiovascular e imunossupressão.",
+        "ESSDAI2010 possui erratum sem PMID no cache; não acessado conteúdo, não se reproduzem pesos ou tabela corrigível."
+      ],
+      "reviewed_sha256": "81da2949f265b0ad692640b835d6386fb8e97d5983d572dd9b07dd41bc2bcf59"
+    },
+    {
+      "index": 94,
+      "path": "content/Hipertensão/amilorida-5-versus-10-mg-e-a-razao-clortalidona-hidroclorotiazida-ensaio-fatorial-brasileiro-jaha-2026.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "superioridadenegativa nãoequivalência",
+        "sem braço semamilorida nãoefeitofraco",
+        "nãodefinequarta droga universal"
+      ],
+      "sources": [
+        "Bottino LG, Fuchs SC, Camilo BP, Rigo PR, Procianoy GS, Tavares AL, Valter LK, Soares RB, Martins VM, Fuchs FD. Comparative Effectiveness of Chlorthalidone Versus Hydrochlorothiazide and Dose-Response of Amiloride on Blood Pressure and Biochemical Parameters. J Am Heart Assoc. 2026 Aug 30:e047583. DOI: 10.1161/JAHA.125.047583. PMID: 42669885. Abstract estruturado (Background/Methods/Results/Conclusions) conferido na íntegra via PubMed/E-utilities em 01/09/2026."
+      ],
+      "source_sha256": "89d9ee96c243616e15d7a07845936da94aa5901dfcafda81542ad40a5c665cdc",
+      "reviewed_sha256": "a75fec030dddf685495442ef9baf8a8533ced7cc24639bf5212c324d0860724a"
+    },
+    {
+      "index": 95,
+      "path": "content/Hipertensão/desprescricao-de-anti-hipertensivos-no-idoso-fragil-mortalidade-hospitalizacao-e-o-ensaio-retreat-frail.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "ausênciadiferença nãoequivalência",
+        "população-alvoestimada nãonovoRCT798mil",
+        "indicaçõesIC/FA/anginaantesretirar",
+        "semextrapolarPA não controlada"
+      ],
+      "sources": [
+        "Benetos A, Gautier S, Freminet A, Metz A, Labat C, et al. Reduction of Antihypertensive Treatment in Nursing Home Residents. N Engl J Med. 2025;393(20):1990-2000. DOI: 10.1056/NEJMoa2508157. PMID: 40879421",
+        "Alsubaiei AA, Alyahya SA, Emara A, Aldeyain SJ, Alenezi MF, Almutairi RA, Aljaber BH, Rawashdeh IA, Qamar AR, Alharran AM. Efficacy and safety of antihypertensive drugs deprescribing in older adults: a systematic review and meta-analysis. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131",
+        "Christiaens A, Wang A, McAllister DA, et al. Effect of antihypertensive medication reduction on short-term blood pressure control in older adults. Age Ageing. 2026;55(6):afag192. DOI: 10.1093/ageing/afag192. PMID: 42381392"
+      ],
+      "source_sha256": "c7938e40c0b6e0c0832da8036343ff4c859cc4252e29443a3f187fc81adcd2d8",
+      "reviewed_sha256": "d9098a2f08f987ca1ddfe638220dfb96dff88062942e0a7d0e48154a69c4e679"
+    },
+    {
+      "index": 96,
+      "path": "content/Hipertensão/efeito-anti-hipertensivo-dos-agonistas-de-glp-1-e-do-coagonista-gip-glp-1.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "164d828d5136b15c83a93f27f72ab6aacb8937455f73a040945affe323ac3910"
+    },
+    {
+      "index": 97,
+      "path": "content/Hipertensão/esaxerenona-antagonista-nao-esteroidal-seletivo-do-receptor-mineralocorticoide-escort-ht-e-excite-ht.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "bb5300dcc78949ed9a808b7a0acb9fac4a324e9494f30b4231503cd52b9768b1",
+      "findings": [
+        "NT-proBNP intragrupo não demonstra superioridade entre tratamentos; redução pressórica não desfecho CV.",
+        "Combinações noturnas não randomizadas entre si, post hoc; removida superioridade causal e três ensaios equivalentes.",
+        "Coorte vascular44/12semanas observacional, não benefício clínico comprovado.",
+        "Adicionada monitorização K/renal e contraindicação combinações poupadorasK segundo PMDA; não inferir aprovação foraJapão por ausência de busca.",
+        "Finerenona não limitada a DM/DRC, inclui evidênciaIC≥40; não intercambiável."
+      ],
+      "sources": [
+        "PMIDs42032273,40189653,40178088,40394919: abstracts primários verificados",
+        "https://www.pmda.go.jp/PmdaSearch/rdDetail/iyaku/2149049F1027_1?user=1 : registro e bulaJapão",
+        "https://www.pmda.go.jp/files/000231769.pdf : relatório regulatório, monitorização",
+        "https://www.pmda.go.jp/files/000273119.pdf : atualização contraindicações17dez2024"
+      ],
+      "reviewed_sha256": "ee88f20537ebb73886e65aec6c3665f7c6d845dfea6d63d416d433c163758439"
+    },
+    {
+      "index": 98,
+      "path": "content/Hipertensão/exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "b1f51b8102a89104d49a4dcd95ac10af2cf301d349ee066aa59caeaa30c65050",
+      "findings": [
+        "Wang21872294 mostra persistência de risco décadas após cessação; original inverteu resultado e inventou efeito em blackfoot.",
+        "Newman27810857 associação ITB>1,4, não ITB<0,9; distinção de não compressibilidade restaurada.",
+        "Abir meta inconclusiva/heterogênea; Chiou prevalência nordeste, não coorte mesma população sudoeste.",
+        "Moon2018 longitudinal apenas estudo familiar; coorte principal sem mudança anual.",
+        "Urina exige especiação/considerar frutos do mar, cabelo/unhas limitados; ATO não bolus, PDH não cadeia respiratória; quelação especializada."
+      ],
+      "sources": [
+        "16 fontes originais: abstracts/identidades conferidos individualmente.",
+        "ATSDR Clinician Brief2025 e Clinical Assessment consultados diretamente."
+      ],
+      "reviewed_sha256": "6c19755f28d0ea7ab94e085d587473aeb20716175a41aa3cd5180ea3a867f3e8"
+    },
+    {
+      "index": 99,
+      "path": "content/Hipertensão/hipertensao-baixa-renda-vulnerabilidade-social-intervencoes-comunitarias.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "ee8a2ca5a00eaa07ffa010fbc8a19b6621ad537b44c7a75b8fc96fa4deaf4b28"
+    },
+    {
+      "index": 100,
+      "path": "content/Hipertensão/hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "e5b896320c0fa1b5fda405ac3de8d2c2fe22eda68612c3825daf4b466fe97f0f",
+      "findings": [
+        "PATH-BP contradiz paracetamol regular como alternativa pressoricamente neutra; incorporadoRCT110, sistólica diurna+4,7mmHg.",
+        "IncluídoPRECISION-ABPM444; retirado ranking definitivo e alegação de risco isquêmico somente após uso prolongado.",
+        "Metanálises coxibes versus não seletivos tinham incidência de hipertensão sem diferença significativa; não efeito uniforme.",
+        "Inserida combinação AINE+diurético+IECA/BRA e lesão renal precoce; retirar AINE não exclui investigar outra causa persistente.",
+        "DOIAw normalizado conforme ArticleIdList; textoSowers com erratum inacessível mantido apenas como contexto histórico semmagnitudes."
+      ],
+      "sources": [
+        "Oito PMIDs originais/citados: abstracts e identidades conferidos.",
+        "PRECISION-ABPM29020251 primária; PATH-BP35130054 DOI10.1161/CIRCULATIONAHA.121.056015; Lapi23299844 DOI10.1136/bmj.e8525.",
+        "FDA alerta cardiovascular2015 consultado; Sowers erratum ArchInternMed2005;165:551 identificado, não alegada leitura integral."
+      ],
+      "reviewed_sha256": "57284f5568d2194181053bc68a0316fbe572ead84d5cff5df4f2f3e923591aae"
+    },
+    {
+      "index": 101,
+      "path": "content/Hipertensão/hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "426d677b873afe12aa0af453d79bdf9bc43a19293920ed0ee3902861a02e4c2b",
+      "findings": [
+        "HAARLEM100 prospectivo mede PA e recuperação: contradiz alegação de ausência de dados; reversão média não é garantia individual.",
+        "Henriksen55%vs19% não é prevalência isolada de hipertensão; resumo descreve FEVE reduzida em combinação com PA/HVE.",
+        "Busca de cuidado não era exclusivamente por sintoma cardiovascular; removida prevalência populacional não sustentada.",
+        "Estudo transversal de ex-usuários não prova irreversibilidade; avaliação pressórica/manguito e manejo sem presumir cura incorporados."
+      ],
+      "sources": [
+        "Cinco referências originais: abstracts/identidades conferidos.",
+        "HenriksenDOI10.1111/sms.14554 texto indexado do editor seções resultados/discussão consultado, tabelas integrais não acessíveis; removidas magnitudes ambíguas.",
+        "Smit35014715 DOI10.1111/and.14372 abstract primário e PDF publicado pela autoridade antidoping consultados."
+      ],
+      "reviewed_sha256": "64f96556bc4c3614ff6bc47af4940e5211101c05df19400e2f6bec62ba27a28e"
+    },
+    {
+      "index": 102,
+      "path": "content/Hipertensão/hipertensao-na-doenca-renal-policistica-autossomica-dominante-non-dipping-e-tolvaptan.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "b41ab6598428f07f1cc3e7319f05ce9c62cbde643966f3ff93168e8664e7e86c"
+    },
+    {
+      "index": 103,
+      "path": "content/Hipertensão/intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "619b8ec5dce78eb9ca8aaa25d5b35b79c99b1cd7c7553c3153ebb05bac102335",
+      "findings": [
+        "Yu2021 resultado HRV predominantemente negativo, não disautonomia precoce confirmada; abstract PubMed ausente exigiu primária institucional.",
+        "TACT2 randomizou1000;959 análise≥1infusão; baixoPb0,92µg/dL não saturnismo ocupacional grave.",
+        "EDTA cálcio-dissódico e dissódico não intercambiáveis; quelação toxicologista e sem retirar indicação de intoxicação.",
+        "Mecanismos experimentais não dose-resposta humana universal; vias de absorção e limites Brasil versus recomendação externa esclarecidos."
+      ],
+      "sources": [
+        "Nove referências originais conferidas; Yu texto/abstract primário UTRGV lido porque PubMed contém apenas Figure.",
+        "TACT2 texto completo PMC11325247 método, denominadores e resultados consultado.",
+        "NIOSH2024 Blood Lead Guidance lido; NR7 página oficial consultada sem converter limiares clínicos estrangeiros em lei brasileira."
+      ],
+      "reviewed_sha256": "57c0eeacb728b146d1adf84aa9c6a1e8f2209c63d253eed2a442e5f0ae109dfa"
+    },
+    {
+      "index": 104,
+      "path": "content/Hipertensão/medida-de-pressao-arterial-sem-manguito-cuffless-evidencia-2025-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "3f62adbc1fa766a1ee3b60cf34d4794917d918d7bb1e6984f261f66239a6ff1e"
+    },
+    {
+      "index": 105,
+      "path": "content/Hipertensão/modalidade-de-exercicio-fisico-e-reducao-da-pressao-arterial-metanalises-em-rede-2025-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "b09cf42db966c19c453ff7b3cae2d4d697556186b324e867a5c8a3827ca1e490"
+    },
+    {
+      "index": 106,
+      "path": "content/Hipertensão/neurofibromatose-tipo-1-e-acometimento-cardiovascular-vasculopatia-estenose-pulmonar-feocromocitoma-e-cardiomiopatia-hipertrofica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "a4cad0590199c2df4f1458f808b79511dba1032370bdf618361f449a52894f44"
+    },
+    {
+      "index": 107,
+      "path": "content/Hipertensão/polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "9798456e2d32f94b4919176a9b4be8a0b06d5a8af95a516314b985c69a4a2cc9"
+    },
+    {
+      "index": 108,
+      "path": "content/Hipertensão/poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "f8cec482c4e217b6927224e6b5291cdd8cd950f84066f8c83640ebf40355f1b4"
+    },
+    {
+      "index": 109,
+      "path": "content/Hipertensão/pressao-arterial-central-aortica-versus-periferica-implicacao-prognostica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "06a807518b9d816aae9c18bc6b32d2c13bc8361817e1eb73011379d0d24091f7"
+    },
+    {
+      "index": 110,
+      "path": "content/Hipertensão/quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "3acfbda6cce406957b975666c904b597e11dab780d11798c76308f310e2ba59f",
+      "findings": [
+        "QUARTET52 semanas7,7mmHg (417continuaram), não6,7; segurança não equivalente por p negativo.",
+        "QUARTET USA sistólica−4,8 IC−10,8 a1,3 não equivalência.",
+        "QUADUAL períodos4 semanas e dupla dose padrão não algoritmo ESC completo.",
+        "Retirada recomendação empírica de reproduzir quatro classes separadas e alegação Anvisa não verificada; título deixa de prescrever início universal."
+      ],
+      "sources": [
+        "PMID34469767",
+        "PMID38501351",
+        "PMID38477128",
+        "PMID38584159",
+        "PMID40178246",
+        "PMID39881316",
+        "PMID40283054"
+      ],
+      "reviewed_sha256": "885ca717c665b9633525c137d0bda8d0ba6dd494d9c2e23ac1a832d2ccc03488"
+    },
+    {
+      "index": 111,
+      "path": "content/Hipertensão/variabilidade-da-pressao-arterial-visita-a-visita-e-mapa-24h-como-preditor-independente-de-desfecho.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "c76e0e1b9372bbd00cb766bdce601eed89bfaf9d214a738654e291fe66690b7b"
+    },
+    {
+      "index": 112,
+      "path": "content/Hipertensão_pulmonar/doenca-mista-do-tecido-conjuntivo-e-acometimento-cardiovascular-hipertensao-arterial-pulmonar-pericardite-e-miocardite.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "3d60b55697f33d1a08e97b15913ea9ad3093f7b0cce931e204782b205cc6ccda"
+    },
+    {
+      "index": 113,
+      "path": "content/Hipertensão_pulmonar/telangiectasia-hemorragica-hereditaria-mavs-pulmonares-hepaticas-genetica-e-rastreio.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "bd84b2c1e2b606d970a203a46d582fdb220b243c0c3f30f7d5ccf39e3ea02fab"
+    },
+    {
+      "index": 114,
+      "path": "content/Insuficiência_cardíaca/ansiedade-na-insuficiencia-cardiaca-prevalencia-adesao-e-rastreio.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "3301d8fb3bf1b9f547de9695ab62212ffdd690d75d5e41d41e66d56b14f94d44"
+    },
+    {
+      "index": 115,
+      "path": "content/Insuficiência_cardíaca/bio-adm-adrenomedulina-biomarcador-e-alvo-terapeutico-na-insuficiencia-cardiaca-aguda.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "5a36bcfcf6ba17aa22d97e78d682874d8e38e4dac9a1229a95e205ef324a78cf"
+    },
+    {
+      "index": 116,
+      "path": "content/Insuficiência_cardíaca/biomarcadores-de-fibrose-miocardica-na-insuficiencia-cardiaca-fibroblastos-galectina-3-e-imagem.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "32d0426a4b7bdaffff7c8e323a2b31191e5d3e975eb39f5dae3c37fa5e132be6"
+    },
+    {
+      "index": 117,
+      "path": "content/Insuficiência_cardíaca/ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "2603332f10bdc9b284e3abd8f0807b52afe2c58869761a11012f0876be542037",
+      "findings": [
+        "Falsa inexistência RCT corrigida: CHANCE-HF380 e estudo diurético160. Protocolo multicomponente não efeito puro biomarcador; não rotina obrigatória.",
+        "ENACT-HF não randomizado, diferenciado PUSH-AHF.",
+        "HR1,27 por unidade log, não U/mL; idosos desfecho mortalidade/composito, não reinternação isolada; limiar100 exploratório não obrigatório.",
+        "CA125 inespecífico não exclui neoplasia; DPOC não explica automaticamente derrame; sST2 interação observacional não mecanismo causal."
+      ],
+      "sources": [
+        "PMIDs42235631,39809935,42418867,41899087,41524052,42425178: abstracts primários",
+        "10.1016/j.jchf.2016.06.007: CHANCE-HF artigo primário",
+        "PMID31422111 DOI10.1016/j.amjmed.2019.07.041: ensaio diurético randomizado"
+      ],
+      "reviewed_sha256": "dc4e7a7c3ec378040b48c93e42b829c9b4df242a04531213133438ddf849b171"
+    },
+    {
+      "index": 118,
+      "path": "content/Insuficiência_cardíaca/cardiomiopatia-por-deficiencia-de-tiamina-beriberi-cardiaco-e-reversibilidade-com-reposicao.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "9e2a80c794d4958e5aaefd223c971771eb3a1b9d4b5bae5b391601a098446b9e",
+      "findings": [
+        "Glicose urgente não deve aguardar tiamina; via oral não equivalente em choque/vômitos.",
+        "Transcetolase é citosólica e não produz NADPH diretamente; ETKAC é indireto.",
+        "Seligmann não placebo; Shimon extensão aberta não efeito randomizado de22%; RCT69 negativo incluído.",
+        "Nisar31=12gestantes+19puérperas; resposta em24h não garantia nem exclusão, shoshin não exige alto débito.",
+        "Retirada suplementação empírica universal de selênio e certezas comparativas sem respaldo."
+      ],
+      "sources": [
+        "23 referências originais: abstracts e identidade conferidos individualmente.",
+        "StatPearls capítulo atualizado31jan2026 lido diretamente, doses tratadas como variáveis por contexto.",
+        "ASAM2020 recomendação primária V.7 e EFNS20642790 consultadas.",
+        "RCT31504093 PubMed e texto primário AJCN consultados."
+      ],
+      "reviewed_sha256": "10169b726a1ecb82531654993e2160ff0cfa485e2224a3c4464d0c97c5d5d8ea"
+    },
+    {
+      "index": 119,
+      "path": "content/Insuficiência_cardíaca/descongestao-guiada-por-ultrassom-pulmonar-e-vexus-na-insuficiencia-cardiaca-linhas-b-congestao-subclinica-e-o-ensaio-icarus.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "20e27f392c45610f852f014624d83da204cf55e5c97754652152c128aa941c5b"
+    },
+    {
+      "index": 120,
+      "path": "content/Insuficiência_cardíaca/diferencas-de-sexo-na-resposta-ao-treinamento-fisico-na-icfep-optimex-clin-e-ex-dhf.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "ad314c7378265f92fdd37138e3679727c40228992febba050db2f8d705789420"
+    },
+    {
+      "index": 121,
+      "path": "content/Insuficiência_cardíaca/escorbuto-deficiencia-grave-de-vitamina-c-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "d2333dadce98e3e7f8d31c049ac410c7add9f1326dafedcd4b104f3ac3a25964"
+    },
+    {
+      "index": 122,
+      "path": "content/Insuficiência_cardíaca/expansao-do-pool-de-doadores-dcd-e-perfusao-ex-situ-em-transplante-cardiaco.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "e68b20b62370bfdae947497a0e33fb9d7da603a183b9ef449b10fbc837ed667e"
+    },
+    {
+      "index": 123,
+      "path": "content/Insuficiência_cardíaca/falencia-do-ventriculo-direito-apos-implante-de-lvad-predicao-e-estrategia-de-rvad-upfront-versus-resgate.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "875fa5930ba9a2cd9178c559a585b5bc562ea577005eebbda6d360648b77a14a"
+    },
+    {
+      "index": 124,
+      "path": "content/Insuficiência_cardíaca/furosemida-subcutanea-descongestao-ambulatorial-na-insuficiencia-cardiaca.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "345e9d09dfaf3d9d8b72d491c0240d2e81d6c3fe43290701a1dfc768c68371f5"
+    },
+    {
+      "index": 125,
+      "path": "content/Insuficiência_cardíaca/helios-b-vutrisirana-amiloidose-cardiaca-transtirretina-mortalidade-eventos-cardiovasculares.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "monoterapiatafamidisbasal",
+        "nãoinferebenefícioincrementalcombinação",
+        "aprovaçãoFDA2025+vitaminaA"
+      ],
+      "sources": [
+        "Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, Damy T, Garcia-Pavia P, Taubel J, Solomon SD, Sheikh FH, Tahara N, González-Costello J, Tsujita K, Morbach C, Pozsonyi Z, Petrie MC, Delgado D, Van der Meer P, Jabbour A, Bondue A, Kim D, Azevedo O, Hvitfeldt Poulsen S, Yilmaz A, Jankowska EA, Algalarrondo V, Slugg A, Garg PP, Boyle KL, Yureneva E, Silliman N, Yang L, Chen J, Eraly SA, Vest J, Maurer MS; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194 — resumo estruturado (Background/Methods/Results/Conclusions) conferido via NCBI E-utilities (efetch, retmode=xml) nesta sessão, com todos os números do desfecho primário, mortalidade, 6MWT, KCCQ-OS e segurança extraídos diretamente do abstract estruturado do artigo.",
+        "FDA. Amvuttra prescribing information, março2025, seções1.2 e5.1. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/215515s006lbl.pdf"
+      ],
+      "source_sha256": "a33eff05539152c6ce54a2827851631c088062d26fe97e3a61ce5d57922b03d6",
+      "reviewed_sha256": "95df6b0302352f7e6a0b10904a4e58c81628f3f064c5e8397870c97a7c002aba"
+    },
+    {
+      "index": 126,
+      "path": "content/Insuficiência_cardíaca/hipocloremia-na-insuficiencia-cardiaca-fisiopatologia-e-resposta-ao-tiazidico.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "4dedf623179ef75729b4e62c4d2ec341ff16fb9378bb39b57ee1ed3f1e757d8e",
+      "findings": [
+        "CLOROTIC cloreto contínuo sem interação, omitido; resultado categórico isolado não permite direção prescritiva.",
+        "ALCALOTIC386dos665 completos, associação não benefício causal.",
+        "Cloreto sérico não oferta luminal; removida hipótese simplista de falta substrato tiazídico.",
+        "Adicionada piora renal CLOROTIC e vigilânciaK; reconhecido RCT fisiológicoASN2025 como congresso, sem validação de rotina."
+      ],
+      "sources": [
+        "PMIDs26248993,26763893,41159486,40500604,40379935,42155809,41765091,40806852,36423214: abstracts primários",
+        "https://www.asn-online.org/education/kidneyweek/2025/program-abstract.aspx?controlId=4400864 : apresentação fisiológica randomizada, não artigo integral"
+      ],
+      "reviewed_sha256": "5c67aa0aef419fc8b9763e5328114e301441f37070aaaadbb5a4d351d6871a0f"
+    },
+    {
+      "index": 127,
+      "path": "content/Insuficiência_cardíaca/manejo-farmacologico-da-insuficiencia-cardiaca-na-amiloidose-cardiaca-digoxina-e-bloqueadores-de-canal-de-calcio-al-versus-attr.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "326cb8f95179b64f74f9c09d068b3d29a21e12680dd0ee4855d035e889666c91",
+      "findings": [
+        "Digoxina não contraindicação absoluta: coorte69 e ESC-HFA2025/26 permitem uso selecionado monitorado; não negar literatura contemporânea.",
+        "Removida afirmação in vitro provou concentração livre no tecido condução.",
+        "Coorte2371MRA/betabloqueador acrescentada como associação, sem neuropatia, sem extrapolarAL.",
+        "DisautonomiaATTRv pode ser precoce/importante, não hierarquiaAL>todaATTR.",
+        "Biomarcador respostaNTproBNP distinto troponina prognóstica; estágioAL não corte automático transplante.",
+        "SGLT2 hospitalizaçãoIC não significativa; causalidade limitada."
+      ],
+      "sources": [
+        "PMIDs7014028,8339658,42110711,41347328: abstracts verificados;4003314 identidade título",
+        "PMID32800294: coorte69digoxina",
+        "PMID37216684 DOIehad347: coorte2371; erratum ehae140 lido integral, somente disponibilidade de dados",
+        "PMID41055898 DOIehaf710: consenso integral viaGUARD-HEART, seções suporte/ratecontrol",
+        "PMID38769233: coorte disautonomiaATTRv"
+      ],
+      "reviewed_sha256": "b34c822ff3d6f804c9d6afe646bdbc9b9bb72075937a2c62544acd56ee78e23d"
+    },
+    {
+      "index": 128,
+      "path": "content/Insuficiência_cardíaca/ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "6f6759437e0485c7404264738477a9eddffb68dc01f2b378e7861b67aab54933",
+      "findings": [
+        "IMPROVE-HCM: VO2pico p0,90 e KCCQglobal p0,30 negativos omitidos; subgrupo35 post hoc; segurança não definitiva4/34vs2/33SAE.",
+        "CMH sintomática não exclui IC; removida separação absoluta.",
+        "DiCE coortes antes/depois sem controle, idadeparte1 72; débitoL/min não volume; ausênciaNTproBNP não prova mecanismo.",
+        "Não negar genericamente toda investigação mitotrópica; FORTITUDEphase2b reconhecido; não afirmar que toda combinação nunca estudada."
+      ],
+      "sources": [
+        "PMID41410037 DOI10.1161/CIRCULATIONAHA.125.074041: abstract primário",
+        "PMID38599256 DOI10.1016/j.jacc.2024.03.387: abstract primário",
+        "PMIDs38752753,42250280: revisões mecanísticas, não evidência desfechos",
+        "NCT07023614: registro FORTITUDE-HCM fase2b; sem inferência eficácia",
+        "Detalhes gastrointestinais do DiCE não revalidados no integral: retirados sem inferir segurança"
+      ],
+      "reviewed_sha256": "918be6e1905cc4043fd30a126eaaeefd206ac5abd5a3ad1d9df4d02a69696103"
+    },
+    {
+      "index": 129,
+      "path": "content/Insuficiência_cardíaca/pelagra-deficiencia-de-niacina-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "17a616bf56395f0600dec72b4202d9103a72c73eddaafdf818314179dee2c059"
+    },
+    {
+      "index": 130,
+      "path": "content/Insuficiência_cardíaca/reabilitacao-cardiaca-estruturada-na-icfer-adesao-telerreabilitacao-e-otimizacao-do-tratamento.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "c008613d2aa76fb33d41ac99bc030c37e2a3c7e95637317607648b15a3a9e97c"
+    },
+    {
+      "index": 131,
+      "path": "content/Insuficiência_cardíaca/terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "011e40e65454969f687dda8a6abd109ba5cffed9e52b8760b3d97890e9717f01",
+      "findings": [
+        "ACHIEVE/ALCHEMIST2025 neutros restaurados; não recomendar ARMrotineiro por meta2022 nem tratar diálise como proteçãohiperK.",
+        "EMPERORReduced≥20; EMPAKIDNEY20–<45independentealbuminúria; DAPA/EMPA incluemparteDRC4.",
+        "KDIGO iniciar/manterdistintos; coortePeng faixa15–29sobrepostaRCTnão prova<20/diálise.",
+        "CKM4nãoDRC4; FIDELITYnãoquádruplaICFEr; finerenonanãotrocaARMautomática.",
+        "Cice114RCTdiálise existe; não alegar ausência absoluta.",
+        "Guo30 resposta agregada não decisão, metaARNIrenalnãoexclusivadiálise; mortalidadeCVARni nãosignificativa."
+      ],
+      "sources": [
+        "PMIDs42584660,42234894,42389639,42234437,42247581,12742278: abstracts primários",
+        "ACHIEVE PMID40818850 DOI10.1016/S0140-6736(25)01198-5",
+        "ALCHEMIST PMID40818851 DOI10.1016/S0140-6736(25)01194-8",
+        "KDIGO2024 original; EMPAKIDNEY NEJMoa2204233 e DAPACKD NEJMoa2024816",
+        "Dependência checklist JSON correspondente conferida: mesmo finding estrutural corrigido noMD"
+      ],
+      "dependency_intersection": {
+        "source": "docs/auditoria-dependencias-json-orfaos-20260908.json",
+        "slug": "terapia-quadrupla-icfer-doenca-renal-cronica-avancada-e-dialise",
+        "resolution": "corrigida individualmente com primárias"
+      },
+      "reviewed_sha256": "7437027c7f5821c7e2dda8e7f76cfe875850fbdff1f16000a9d144ef8d685235"
+    },
+    {
+      "index": 132,
+      "path": "content/Insuficiência_cardíaca/vasculopatia-do-enxerto-cardiaco-rejeicao-cronica-isquemia-silenciosa-rastreio-e-manejo.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "08a7e941d44589ebdf0b66ca960a936c5d5dad9f02e5f8ac3bfd2d892cef5ef1"
+    },
+    {
+      "index": 133,
+      "path": "content/Pericárdio/abscesso-hepatico-amebiano-com-ruptura-pericardica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "bee36e69495e051886d30c784c4529f96058db691b18dc871daac919bd72a13f"
+    },
+    {
+      "index": 134,
+      "path": "content/Pericárdio/granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "b05a0ebcd4f10b80a083543f7c2e0e99f982ec2623cffde1c63c9c21429031b5"
+    },
+    {
+      "index": 135,
+      "path": "content/Prevenção_e_lipídios/aterosclerose-subclinica-de-carotida-em-adultos-jovens-metanalise-de-prevalencia-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "0c043c0f9b2a7bb769de7bc41f3c2f91b27611225898752b836a95445ee57282"
+    },
+    {
+      "index": 136,
+      "path": "content/Prevenção_e_lipídios/colesterol-remanescente-o-alvo-lipidico-causal-que-o-ldl-c-isolado-nao-captura.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "6e71f6587f455f7ea81b56408c5c4565881c9c7cc1fa26f1ba1de296ff216660"
+    },
+    {
+      "index": 137,
+      "path": "content/Prevenção_e_lipídios/deficiencia-de-lipase-acida-lisossomica-lal-d-espectro-wolman-cesd-e-aterosclerose-acelerada.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "308f134f64c63d5e949468768f9732481f0eda836b6fc8a7ed027be381854dc5"
+    },
+    {
+      "index": 138,
+      "path": "content/Prevenção_e_lipídios/edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "618bd27e8e1d97ae15410e499bc858e2096b2d5e7e43350c90d4ceb5940bb667"
+    },
+    {
+      "index": 139,
+      "path": "content/Prevenção_e_lipídios/estatinas-em-prevencao-primaria-cardiovascular-em-pessoas-vivendo-com-hiv-da-reprieve-as-atualizacoes-de-2025.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "2646b0a8fdf73398e6b641c1fabe77b1864d7675298861a9dbfefee112b274aa"
+    },
+    {
+      "index": 140,
+      "path": "content/Prevenção_e_lipídios/hdl-funcional-capacidade-de-efluxo-de-colesterol-e-desfecho-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "03f270dead5456ab8f4120a8debcfb94798d3047220dbdaaaecf13a9a0850923"
+    },
+    {
+      "index": 141,
+      "path": "content/Prevenção_e_lipídios/hematopoiese-clonal-chip-e-risco-cardiovascular-mecanismo-inflamatorio-e-o-que-ainda-nao-e-acionavel.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "ef75f65e90713b6982b38e509a49d97d684959d22f769450c3f678568fddaab7"
+    },
+    {
+      "index": 142,
+      "path": "content/Prevenção_e_lipídios/inclisirana-sem-estatina-de-base-victorion-mono-e-difference.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "DIFFERENCEfase4",
+        "eritema não todasreações",
+        "rosuvastatina40diferente nãoefeito muscularintrínseco",
+        "ORION4 semresultados"
+      ],
+      "sources": [
+        "Taub PR, Gutierrez A, Wewers D, Garcia Cantu E, Cao H, Deck C, Lesogor A, Ott D, Mena-Madrazo J, Zang X, Wright RS. Safety and Lipid-Lowering Efficacy of Inclisiran Monotherapy in Patients Without ASCVD: The VICTORION-Mono Randomized Clinical Trial. J Am Coll Cardiol. 2025;86(3):196-208. DOI: 10.1016/j.jacc.2025.04.049. PMID: 40392667",
+        "Landmesser U, Laufs U, Schatz U, Winzer EB, Nowak B, Kassner U, Gouni-Berthold I, Esteban A, Lubyayi L, Krueger A, Hentschke C, Wilke A, Winkelmann BR, Achouba A, Banach M. Inclisiran-based treatment strategy in hypercholesterolaemia: the VICTORION-difference trial. Eur Heart J. 2026;47(25):3241-3253. DOI: 10.1093/eurheartj/ehaf685. PMID: 40884558",
+        "Steg PG, Goodman SG, Jukema JW, Martens P, Zirlik A, Bhatt DL, Menon V, Szarek M, Lesogor A, Stratz C, O'Donoghue F, Mena-Madrazo J, Shao Q, Liu K, Mehran R; VICTORION-2 Prevent Investigators. Design of VICTORION-2 Prevent: a randomized double-blind, placebo-controlled trial, assessing the impact of inclisiran on major adverse cardiovascular events in patients with established cardiovascular disease. Am Heart J. 2026. DOI: 10.1016/j.ahj.2026.107493. PMID: 42203164",
+        "Ray KK, Wright RS, Kallend D, Koenig W, Leiter LA, Raal FJ, et al; ORION-10 and ORION-11 Investigators. Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol. N Engl J Med. 2020;382(16):1507-1519. DOI: 10.1056/NEJMoa1912387. PMID: 32187462",
+        "VICTORION-Difference, texto completo: https://academic.oup.com/eurheartj/article/47/25/3241/8243858 ; distribuição de rosuvastatina40mg e eritema no local de injeção conferidos.",
+        "ClinicalTrials.gov. ORION-4, NCT03705234. https://clinicaltrials.gov/study/NCT03705234?tab=results. Sem resultados postados em08/09/2026."
+      ],
+      "source_sha256": "e7be1cfeba0366f4ea65b2d0ddc2e3e15b1bd4d36fa0b027073e83046d436aeb",
+      "reviewed_sha256": "36c8d78297e3410c4080247a8e228483a8d175a26060b5ab724100abc6b904ec"
+    },
+    {
+      "index": 143,
+      "path": "content/Prevenção_e_lipídios/lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "a4aceabf97329e8d9613f2d32146bbf1466b6654c6afc58a17a43f03d8e86991",
+      "findings": [
+        "Falsa precedência fase3: OCEAN(a)olpasirana registrado2022, antes ACCLAIM2024.",
+        "Estatinas não reduzem Lpa consistentemente/podem elevar; não suspender LDLterapia.",
+        "ALPACA inclui braço400mgseguido placebo180, omitido.",
+        "Olpasirana12/24semanas; zerlasirana média81–86 não96 (mediana pontual); sem superioridade indireta duração.",
+        "Registros ACCLAIM atualizados conferidos:17300ativosemrecrutar/252CTA recrutando; datas estimadas não resultados.",
+        "Atualização focal: HORIZON topline04set2026 separado de evidência siRNA e de artigo completo."
+      ],
+      "sources": [
+        "PMIDs37952254,40162643,36342163,39556769: abstracts primários verificados",
+        "NCT06292013 API24ago2026; NCT07613294 API8set2026; NCT05581303 API27fev2026",
+        "EAS2022 DOI10.1093/eurheartj/ehac361 e ESC2025ehaf190; efeito estatina não terapiaLpa"
+      ],
+      "reviewed_sha256": "45bcfabc166f79144bcc7fb0e197a8b0779350a5b74bb39ed098b9e9ab1340c0"
+    },
+    {
+      "index": 144,
+      "path": "content/Prevenção_e_lipídios/lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "dff65d514aecf008b2307a8b19d4c40b4ff527ace55b8738276325009175ddfb",
+      "findings": [
+        "LDL genético não excluído por ensaios negativos de estatina em progressão; EPISODE não primeiro hipolipemiante nem mecanismo Lp(a) isolado.",
+        "Girard seguimento2,5–5 anos e associação não efeito terapêutico; removida conversão fixa nmol/mg.",
+        "FRONTIERS CAVS fase2 incluído; OCEAN-DOSE separado de Outcomes.",
+        "HORIZON comunicado negativo04set2026 incorporado sem inventar HR/subgrupo nem extrapolar à válvula."
+      ],
+      "sources": [
+        "Nove fontes originais conferidas em abstracts e identidade PubMed.",
+        "Smith25344734 primário consultado.",
+        "ClinicalTrials.gov APIs de quatro registros consultadas.",
+        "Comunicado primário Novartis04set2026 lido integralmente."
+      ],
+      "reviewed_sha256": "69645d0de2470bcf840240da2c31a3b089c8e3659448dc76cf92d28c32170077"
+    },
+    {
+      "index": 145,
+      "path": "content/Prevenção_e_lipídios/prevent-e-score2-em-subgrupos-raciais-e-etnicos-validacao-2025-2026.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "8711cd05540959a1a1a1ef4d1e27993fa8d14230cd317e672483db5b31d61fb5"
+    },
+    {
+      "index": 146,
+      "path": "content/Terapia_intensiva/envenenamento-botropico-jararaca-coagulopatia-e-choque-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "a168ba571e9b866d37355478154add71bbae8d559643c15b361c1fa1770a52e5"
+    },
+    {
+      "index": 147,
+      "path": "content/Terapia_intensiva/hlh-secundaria-miocardite-choque-refratario-e-tamponamento-cardiaco.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "884624aca74a71935b59b50022471336dd053d62ef019899970867254bc7b32a"
+    },
+    {
+      "index": 148,
+      "path": "content/Terapia_intensiva/intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "4f175d8f4a188a5cfbf933111feaa2506754c0ba36bb74cddacc38cb45dc7d59"
+    },
+    {
+      "index": 149,
+      "path": "content/Terapia_intensiva/onda-de-osborn-e-progressao-arritmica-na-hipotermia-acidental.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "d3ff6a97a83f82f77d24e823d00770f76e698a2674a3bdb3700dc4801bcb5c4c"
+    },
+    {
+      "index": 150,
+      "path": "content/Terapia_intensiva/raiva-hidrofobia-disautonomia-e-complicacoes-cardiovasculares.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "1a27218bb3750bea3b1d126a0adc168e6a07611e30a9e76f2a488f1910a10816"
+    },
+    {
+      "index": 151,
+      "path": "content/Terapia_intensiva/sindrome-antifosfolipide-catastrofica-e-acometimento-cardiovascular-tempestade-trombotica-e-triade-terapeutica.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "e0bb62e19aaf0aa2ca64442e77ebae2cf71cf0e55dbc10f5462ad8ce23ac3490"
+    },
+    {
+      "index": 152,
+      "path": "content/Terapia_intensiva/tetano-grave-e-disautonomia-cardiovascular-mecanismo-tempestade-simpatica-e-tratamento.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "86a0a9693e14eec8859fedbff0a02494b8fc04cacca5fe48adcbf2fb04053fde"
+    },
+    {
+      "index": 153,
+      "path": "content/Valvopatias/ausculta-digital-com-inteligencia-artificial-na-triagem-de-valvopatia.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "ed6a5d653c5953603183551b9e83da0fcd201435f25637b58b672ea2011ca5ba"
+    },
+    {
+      "index": 154,
+      "path": "content/Valvopatias/calcificacao-valvar-na-doenca-renal-cronica-preditores-mecanismos-e-limites-terapeuticos.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "a48b74aea22d5ad537cf1088bd231d4ee557a05c01937db9944a60c5e84d88a9"
+    },
+    {
+      "index": 155,
+      "path": "content/Valvopatias/doenca-valvar-multivalvar-estenose-aortica-regurgitacao-mitral-sequenciamento-intervencao.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "39bb919adf2cab204c25000b6705bde5671ba2ac06fa2ef9662fc3d00a6bd3aa"
+    },
+    {
+      "index": 156,
+      "path": "content/Valvopatias/estenose-aortica-baixo-fluxo-baixo-gradiente-fenotipos-diagnostico-diferencial-e-decisao.md",
+      "status": "pending_contextual_review",
+      "source_sha256": "a9be446cc867b4b05fc57a8667ceac1c003942148a11482bc5e3f3f615dc6e8a"
+    },
+    {
+      "index": 157,
+      "path": "content/Valvopatias/estenose-aortica-moderada-com-icfer-tavi-antecipado-tavr-unload.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "EAmoderada sintomas nãoindicamintervençãoautomática",
+        "exceçãoSAVR concomitante",
+        "EVOLVED neutro",
+        "43%crossover eprimárioincluiKCCQ"
+      ],
+      "sources": [
+        "Van Mieghem NM, Elmariah S, Spitzer E, et al. Transcatheter Aortic Valve Replacement in Patients With Systolic Heart Failure and Moderate Aortic Stenosis: TAVR UNLOAD. J Am Coll Cardiol. 2025;85(9):878-890. DOI: 10.1016/j.jacc.2024.10.070. PMID: 39480381.",
+        "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.",
+        "Loganath K, et al. EVOLVED randomized trial. JAMA.2024. DOI:10.1001/jama.2024.22730. https://jamanetwork.com/journals/jama/fullarticle/2825540"
+      ],
+      "source_sha256": "10a4d02b31a8c20969426a5aa09c878aa2143f86c8dc9ef5d7f9fa46fd4eef19",
+      "reviewed_sha256": "5052a071b2378d470cf0235d9ba675680c4c8f8487e036c541a01a4d4223b2c9"
+    },
+    {
+      "index": 158,
+      "path": "content/Valvopatias/regurgitacao-aortica-aguda-emergencia-endocardite-e-dissecacao.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "bbf3d56b70fe6d17584861fcbe4efb960cca52dac0b8854867ed8b53d1bb15f2",
+      "findings": [
+        "Corrigida inversão endocardite/dissecção no reparo e desbridamento.",
+        "Emergência por edema refratário/choque separada de urgência por IC sem colapso; não esperar cultura negativa.",
+        "ECMO convencional não recomendada genericamente: piora da pós-carga; LAVA-ECMO apenas estratégia especializada com evidência limitada.",
+        "Vasodilatação condicionada à pressão/perfusão; retirada taquicardia como única sustentação de débito e taxa fixa de mortalidade.",
+        "BSE confirma término prematuro do fluxo aórtico com fechamento aórtico precoce; preservado sem reinterpretar incorretamente como jato regurgitante."
+      ],
+      "sources": [
+        "10.1186/s44156-024-00067-8: texto integral, seção acute AR",
+        "10.1093/eurheartj/ehad193: diretriz ESC 2023, indicação e timing cirúrgico",
+        "10.1093/eurheartj/ehae179: diretriz aórtica ESC 2024",
+        "10.1080/14796678.2025.2472551: suporte e LAVA-ECMO",
+        "PMC10242569: relato técnico, contraindicação VA-ECMO convencional na IA grave; não RCT"
+      ],
+      "reviewed_sha256": "8c00ed872666dc0e81ae0b891ba75475b8c8e1b37649c7851c42f8577481f66f"
+    },
+    {
+      "index": 159,
+      "path": "content/Valvopatias/reshape-hf2-teer-insuficiencia-mitral-funcional-moderada-a-grave.md",
+      "status": "corrected_reviewed",
+      "findings": [
+        "COAPT também3+/4+; falsa exclusividade removida",
+        "três primários eKCCQ12meses",
+        "segurançaespecífica não todosEA",
+        "proporcionalidade hipótesenãogate"
+      ],
+      "sources": [
+        "Anker SD, Friede T, von Bardeleben RS, et al.; RESHAPE-HF2 Investigators. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation. N Engl J Med. 2024;391(19):1799-1809. DOI: 10.1056/NEJMoa2314328 · PMID: 39216092 — abstract conferido via PubMed E-utilities nesta sessão.",
+        "Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640 · PMID: 30280640.",
+        "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374 · PMID: 30145927.",
+        "Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006 · PMID: 30553663."
+      ],
+      "source_sha256": "389504766630647cd0f9c311b214c35ca75e1045ae1052e1f87cfbf43af10c0e",
+      "reviewed_sha256": "ea447927dc52d1de2ab19ed81ac042a43827e89ad510d5d19a3ee2ab61a9f22a"
+    },
+    {
+      "index": 160,
+      "path": "content/Valvopatias/tavi-anel-aortico-pequeno-escolha-de-protese-ensaio-smart-2024.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "5088867fdf04bfbee03afadc8f98f19125afc185241e73fb012c7e3851ed1f37",
+      "findings": [
+        "Corrigida inversão da regurgitação residual: menor com SEV no subgrupo feminino.",
+        "BVD hemodinâmica não igual a degeneração anatômica/durabilidade; removida recomendação universal de plataforma.",
+        "Subgrupo não replicação; contextualizada idade média80anos e limiar geral de diretriz não específico de anel pequeno.",
+        "Acrescentado seguimento3anos como apresentação EuroPCR2026, não artigo integral revisado por pares; sem superioridade clínica."
+      ],
+      "sources": [
+        "PMID38587261 DOI10.1056/NEJMoa2312573: abstract primário",
+        "PMID39382856 DOI10.1001/jamacardio.2024.3241: abstract primário; retirados detalhes numéricos não revalidados no texto integral",
+        "https://europcr2026.europa-inviteo.com/gws/index.php?langue=en&onglet=33&paramProjet=107923 : resumo investigador,3anos",
+        "https://www.pcronline.com/Cases-resources-images/Resources/Course-videos-slides/2026/EuroPCR/TAVI-head-to-head-trials : programação20maio2026"
+      ],
+      "reviewed_sha256": "397537a8fad0285593cdc2a8a22412224b620b4318f930dc2c83dbd73782e44f"
+    },
+    {
+      "index": 161,
+      "path": "content/Valvopatias/tavi-em-valva-aortica-bicuspide-evidencia-especifica-alem-dos-ensaios-pivotais.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "0d94502f044e0452a554a607bdfe06bc8edc0bbbaa645cb11a28404ee2bc73da",
+      "findings": [
+        "NOTION-2 subgrupo100bicúspides acrescentado: evidência randomizada existe, mas limitada; interação0,10 não prova heterogeneidade.",
+        "Observação de condução não posterga MP por BAV alto grau persistente24–48h ou ramo alternante.",
+        "PVL requer avaliação e correção intraprocedural; pré-alta confirma residual, não substitui intervenção inicial.",
+        "Metas podem sobrepor estudos; associação tardia não causal, meta-regressão ecológica; registro de durabilidade não equivalência.",
+        "Removida afirmação MP bicúspide consistentemente maior confundindo comparadores."
+      ],
+      "sources": [
+        "PMIDs42657854,42534253,42485121,42576591,42601268,42585416,42621122,42604179: abstracts primários verificados",
+        "PMIDs42454205,42409619: identidades editoriais; nenhuma magnitude atribuída",
+        "10.1093/eurheartj/ehae331: NOTION-2 resultados primários",
+        "10.1093/eurheartj/ehab364: ESC estimulação, recomendação pósTAVI"
+      ],
+      "reviewed_sha256": "4419bc73d9a1d455eadb75980dc38eed4b93f7e4de92e8b9570251e2d732dfb4"
+    },
+    {
+      "index": 162,
+      "path": "content/Valvopatias/trombose-subclinica-de-folheto-halt-apos-tavi-incidencia-preditores-e-anticoagulacao.md",
+      "status": "corrected_reviewed",
+      "source_sha256": "77e5ccc5e89a515fe35fa10da7d38af0cdf61bb8644561ee68e6d040cd9b87e3",
+      "findings": [
+        "HALT pode ou não restringir mobilidade; coorte não prova ausência universal de gradiente ou causalidade cerebrovascular.",
+        "ADAPT-TAVR primário p0,076: não significativo, sem diferença qualquer/maior sangramento; removido falso sangramento menor.",
+        "GALILEO composto/mortalidade e sangramento p0,08 separados; AAS/clopidogrel duração3 meses.",
+        "Removida ideia de que profilaxia se baseia só em consenso; ESC2025 distingue HALT incidental e aumento relevante gradiente/restrição confirmada, com anticoagulação a considerar.",
+        "BVD distribuição60,9/39,1 entre casos não incidência por plataforma."
+      ],
+      "sources": [
+        "PMID40967263",
+        "PMID40353875",
+        "PMID31733180",
+        "PMID31733182",
+        "PMID35373583",
+        "PMID39736458",
+        "DOI10.1093/ejcts/ezaf276"
+      ],
+      "reviewed_sha256": "b43de27fd41f95db98be2c043c93471ab58daaa178ca2039fefdef23c9254929"
+    }
+  ]
+}

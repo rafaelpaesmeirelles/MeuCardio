@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr889-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr889": "4afb7d1322f36f663ede9bcfea35283061956db4"
+  },
+  "fronts": {
+    "documentos": [
+      "checklist-ambulatorial-pos-ei-higiene-oral-e-alarmes",
+      "fluxograma-ambulatorial-pos-tratamento-endocardite-destino",
+      "sinalizadores-ambulatoriais-pos-tratamento-endocardite-quando-escalar"
+    ]
+  }
+}

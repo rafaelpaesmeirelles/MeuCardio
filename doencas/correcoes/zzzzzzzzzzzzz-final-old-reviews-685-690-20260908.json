@@ -1,0 +1,602 @@
+[
+  {
+    "slug": "insuficiencia-mitral",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Revisão final dirigida do PR #685 em 08/09/2026: estados não graves foram explicitamente separados de indicação de intervenção; o gatilho ventricular da IM primária passou a usar FEVE medida; terapia de insuficiência cardíaca e TEER foram restringidas à IM secundária ventricular grave elegível; FA como gatilho de intervenção foi limitada à IM primária grave; IM aguda grave exige estabilização e avaliação cirúrgica urgente."
+    },
+    "replace": [
+      {
+        "old": "Fibrilação atrial de início recente em paciente com insuficiência mitral — marcador de indicação de intervenção no paciente assintomático",
+        "new": "Fibrilação atrial de início recente em paciente assintomático com insuficiência mitral primária grave — gatilho para avaliação de intervenção, após confirmar mecanismo e gravidade"
+      }
+    ],
+    "assistant_questions": {
+      "lvef_percent": {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "secondary_mr_mechanism",
+        "label": "Qual o mecanismo da insuficiência mitral secundária?",
+        "type": "select",
+        "options": [
+          {"value": "ventricular", "label": "Ventricular"},
+          {"value": "atrial", "label": "Atrial"},
+          {"value": "mista", "label": "Mista"},
+          {"value": "indeterminado", "label": "Indeterminado"}
+        ]
+      }
+    ],
+    "assistant_rules": {
+      "rule_acute_severe_mr_emergency": {
+        "when": {
+          "all": [
+            {"field": "acute_severe_mr_suspicion", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Suspeita de insuficiência mitral aguda grave com risco de edema agudo de pulmão ou choque"
+          ],
+          "emergency_flow": [
+            "Estabilizar imediatamente, obter ecocardiograma urgente e acionar cirurgia cardíaca para avaliação urgente; suporte clínico não substitui correção da IM aguda grave"
+          ],
+          "suggested_tests": [
+            "Ecocardiograma transtorácico imediato e transesofágico quando necessário para definir o mecanismo"
+          ]
+        }
+      },
+      "rule_chordal_rupture": {
+        "when": {
+          "all": [
+            {"field": "acute_severe_mr_suspicion", "op": "truthy"},
+            {"field": "acute_mr_cause", "op": "contains", "value": "rotura_cordoalha"}
+          ]
+        }
+      },
+      "rule_papillary_muscle_rupture": {
+        "when": {
+          "all": [
+            {"field": "acute_severe_mr_suspicion", "op": "truthy"},
+            {"field": "acute_mr_cause", "op": "contains", "value": "rotura_musculo_papilar"}
+          ]
+        }
+      },
+      "rule_primary_mr_incipient_dysfunction": {
+        "when": {
+          "all": [
+            {"field": "mr_etiology", "op": "eq", "value": "primaria"},
+            {"field": "mr_severity", "op": "eq", "value": "grave"},
+            {"field": "lvef_percent", "op": "gte", "value": 0},
+            {"field": "lvef_percent", "op": "lte", "value": 60}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "IM primária grave com FEVE ≤60% preenche critério ventricular para avaliação cirúrgica, mesmo que a FEVE pareça apenas discretamente reduzida"
+          ],
+          "ambulatory_flow": [
+            "Priorizar avaliação cirúrgica antes de deterioração adicional da função ventricular"
+          ]
+        }
+      },
+      "rule_secondary_mr_optimize_therapy": {
+        "when": {
+          "all": [
+            {"field": "mr_etiology", "op": "eq", "value": "secundaria"},
+            {"field": "secondary_mr_mechanism", "op": "eq", "value": "ventricular"},
+            {"field": "optimized_hf_therapy", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "missing_information": [
+            "Confirmar terapia guiada por diretriz da insuficiência cardíaca na IM secundária ventricular antes de intervenção estrutural"
+          ],
+          "ambulatory_flow": [
+            "Otimizar a terapia da insuficiência cardíaca e ressincronização quando indicada; não extrapolar esse fluxo para IM secundária atrial sem fenótipo ventricular de IC"
+          ]
+        }
+      },
+      "rule_secondary_mr_teer_eligible": {
+        "when": {
+          "all": [
+            {"field": "mr_etiology", "op": "eq", "value": "secundaria"},
+            {"field": "secondary_mr_mechanism", "op": "eq", "value": "ventricular"},
+            {"field": "mr_severity", "op": "eq", "value": "grave"},
+            {"field": "optimized_hf_therapy", "op": "truthy"},
+            {"field": "symptomatic", "op": "truthy"},
+            {"field": "teer_candidate_criteria", "op": "truthy"}
+          ]
+        }
+      },
+      "rule_high_surgical_risk_alternative": {
+        "when": {
+          "all": [
+            {"field": "mr_severity", "op": "eq", "value": "grave"},
+            {"field": "teer_candidate_criteria", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "surgical_risk", "op": "eq", "value": "alto"},
+            {"field": "surgical_risk", "op": "eq", "value": "proibitivo"}
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Na IM grave, alto risco cirúrgico pode favorecer estratégia transcateter apenas após confirmar indicação clínica e elegibilidade anatômica"
+          ],
+          "missing_information": [
+            "Confirmar mecanismo, gravidade e elegibilidade anatômica em heart team"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "rule_nonsevere_mr_no_intervention_trigger",
+        "priority": 25,
+        "when": {
+          "any": [
+            {"field": "mr_severity", "op": "eq", "value": "leve"},
+            {"field": "mr_severity", "op": "eq", "value": "moderada"}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "opposing": [
+            "IM leve ou moderada não constitui, por si só, indicação de cirurgia ou TEER; sintomas discordantes exigem pesquisa de outra causa e confirmação da gravidade"
+          ],
+          "ambulatory_flow": [
+            "Acompanhar clinicamente e por ecocardiograma conforme etiologia, sintomas e progressão"
+          ]
+        }
+      },
+      {
+        "id": "rule_primary_severe_mr_new_af_intervention",
+        "priority": 76,
+        "when": {
+          "all": [
+            {"field": "mr_etiology", "op": "eq", "value": "primaria"},
+            {"field": "mr_severity", "op": "eq", "value": "grave"},
+            {"field": "atrial_fibrillation", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Fibrilação atrial associada à IM primária grave exige avaliação do momento de intervenção e manejo tromboembólico individualizado"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação valvar especializada; não extrapolar esse gatilho de intervenção para IM não grave"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "estenose-mitral",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Revisão final dirigida do PR #688 em 08/09/2026: Wilkins limitado a 4–16 e usado apenas quando há indicação de intervenção; valvuloplastia restringida à EM reumática com fusão comissural; edema pulmonar não depende de gravidade previamente preenchida; explicitado o efeito da taquicardia sobre o tempo diastólico; alerta contra DOAC condicionado a EM reumática clinicamente relevante (moderada/grave ou área ≤2,0 cm²).",
+      "summary": "A estenose mitral é obstrução ao fluxo entre átrio e ventrículo esquerdos, predominantemente reumática, mas também degenerativa/calcífica. O ecocardiograma define etiologia, área valvar, gradiente e repercussão. A anatomia e o escore de Wilkins só orientam a escolha do procedimento quando existe indicação clínica de intervenção; valvuloplastia por balão é destinada à EM reumática com fusão comissural e anatomia apropriada, não à EM degenerativa por calcificação anular. Em fibrilação atrial com EM reumática clinicamente relevante — moderada/grave ou área valvar ≤2,0 cm² — prefere-se antagonista da vitamina K, sem extrapolar essa restrição automaticamente à doença leve sem EM relevante."
+    },
+    "replace": [
+      {
+        "old": "A valvuloplastia mitral por balão percutânea é a estratégia de primeira escolha quando a anatomia valvar é favorável, caracterizada por escore de Wilkins baixo, ausência de trombo em átrio esquerdo e ausência de regurgitação mitral significativa associada — condições que reduzem o risco do procedimento e favorecem bom resultado hemodinâmico com preservação da valva nativa.",
+        "new": "Quando há indicação de intervenção na estenose mitral reumática com fusão comissural, a valvuloplastia por balão é favorecida se a anatomia for apropriada, sem trombo em átrio esquerdo nem regurgitação mitral mais que leve. O escore de Wilkins (faixa 4–16) é um componente da avaliação, não um gatilho isolado; a estenose degenerativa/calcífica sem fusão comissural não é tratada por valvuloplastia reumática convencional."
+      },
+      {
+        "old": "Nos pacientes com estenose mitral de etiologia reumática associada a fibrilação atrial ou a evento embólico/trombo prévio, a anticoagulação indicada é com antagonista de vitamina K, e não com anticoagulantes orais diretos (DOAC), dado o padrão de evidência que sustenta a eficácia e segurança dos antagonistas de vitamina K nesse contexto valvar específico — sem especificação de dose neste conteúdo.",
+        "new": "Nos pacientes com fibrilação atrial e estenose mitral reumática clinicamente relevante (moderada/grave ou área valvar ≤2,0 cm²), ou com trombo/evento embólico no contexto apropriado, a anticoagulação é baseada em antagonista da vitamina K, e não em DOAC. Na doença leve sem estenose mitral relevante, a escolha do anticoagulante exige classificação individual e não deve ser inferida apenas do antecedente reumático."
+      },
+      {
+        "old": "Avaliar anatomia valvar pelo escore de Wilkins para definir elegibilidade à valvuloplastia por balão",
+        "new": "Se houver indicação clínica de intervenção e etiologia reumática, avaliar fusão comissural e anatomia, incluindo escore de Wilkins (4–16), para estimar elegibilidade à valvuloplastia por balão"
+      }
+    ],
+    "assistant_questions": {
+      "wilkins_score": {
+        "min": 4,
+        "max": 16,
+        "step": 1
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "mitral_valve_area_cm2",
+        "label": "Qual a área valvar mitral (cm²)?",
+        "type": "number",
+        "min": 0,
+        "max": 10,
+        "step": 0.1
+      }
+    ],
+    "assistant_rules": {
+      "anatomia_favoravel_valvuloplastia": {
+        "when": {
+          "all": [
+            {"field": "etiology", "op": "eq", "value": "reumatica"},
+            {"field": "severity_ms", "op": "eq", "value": "grave"},
+            {"field": "symptomatic", "op": "truthy"},
+            {"field": "wilkins_score", "op": "gte", "value": 4},
+            {"field": "wilkins_score", "op": "lte", "value": 8},
+            {"field": "atrial_thrombus", "op": "falsy"},
+            {"field": "significant_mr", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "supporting": [
+            "EM reumática grave sintomática, com indicação de intervenção e anatomia favorável, pode ser tratada por valvuloplastia mitral por balão"
+          ],
+          "ambulatory_flow": [
+            "Confirmar fusão comissural e ausência de contraindicações antes de encaminhar para valvuloplastia"
+          ]
+        }
+      },
+      "anatomia_desfavoravel_cirurgia": {
+        "when": {
+          "all": [
+            {"field": "etiology", "op": "eq", "value": "reumatica"},
+            {"field": "severity_ms", "op": "eq", "value": "grave"},
+            {"field": "symptomatic", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "wilkins_score", "op": "gt", "value": 8},
+            {"field": "atrial_thrombus", "op": "truthy"},
+            {"field": "significant_mr", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "opposing": [
+            "Anatomia desfavorável ou contraindicação à valvuloplastia por balão no contexto de EM reumática com indicação de intervenção"
+          ],
+          "supporting": [
+            "Avaliação por heart team para cirurgia ou estratégia alternativa"
+          ],
+          "ambulatory_flow": [
+            "Encaminhar para avaliação cirúrgica cardíaca"
+          ]
+        }
+      },
+      "fa_reumatica_anticoagulacao_avk": {
+        "when": {
+          "all": [
+            {"field": "atrial_fibrillation", "op": "truthy"},
+            {"field": "etiology", "op": "eq", "value": "reumatica"}
+          ],
+          "any": [
+            {"field": "severity_ms", "op": "eq", "value": "moderada"},
+            {"field": "severity_ms", "op": "eq", "value": "grave"},
+            {"field": "mitral_valve_area_cm2", "op": "lte", "value": 2.0}
+          ]
+        }
+      },
+      "doac_inadequado_fa_reumatica": {
+        "when": {
+          "all": [
+            {"field": "anticoagulation_current", "op": "eq", "value": "doac"},
+            {"field": "etiology", "op": "eq", "value": "reumatica"},
+            {"field": "atrial_fibrillation", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "severity_ms", "op": "eq", "value": "moderada"},
+            {"field": "severity_ms", "op": "eq", "value": "grave"},
+            {"field": "mitral_valve_area_cm2", "op": "lte", "value": 2.0}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "DOAC em FA com estenose mitral reumática clinicamente relevante (moderada/grave ou área ≤2,0 cm²): revisar anticoagulação e usar antagonista da vitamina K conforme diretriz"
+          ]
+        }
+      },
+      "doac_inadequado_evento_embolico_previo": {
+        "when": {
+          "all": [
+            {"field": "anticoagulation_current", "op": "eq", "value": "doac"},
+            {"field": "etiology", "op": "eq", "value": "reumatica"},
+            {"field": "prior_embolic_event", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "severity_ms", "op": "eq", "value": "moderada"},
+            {"field": "severity_ms", "op": "eq", "value": "grave"},
+            {"field": "mitral_valve_area_cm2", "op": "lte", "value": 2.0}
+          ]
+        },
+        "add": {
+          "risk": "urgente",
+          "red_flags": [
+            "DOAC em estenose mitral reumática clinicamente relevante com evento embólico prévio: revisar para antagonista da vitamina K"
+          ]
+        }
+      },
+      "edema_agudo_pulmao_taquiarritmia": {
+        "when": {
+          "all": [
+            {"field": "acute_pulmonary_edema", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Edema agudo de pulmão em paciente com estenose mitral suspeita ou conhecida é emergência e não deve ser suprimido por gravidade ainda não preenchida"
+          ],
+          "emergency_flow": [
+            "Encaminhar imediatamente para estabilização; controlar taquiarritmia quando presente, pois a redução do tempo diastólico eleva o gradiente mitral e a pressão atrial esquerda"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "slug": "cardiomiopatia-dilatada",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Revisão final dirigida do PR #689 em 08/09/2026: FEVE validada em faixa 0–100%; urgência periparto limitada ao período atual, sem disparo por antecedente remoto; CRT exige sintomas persistentes, BRE/QRS e terapia otimizada; CDI em prevenção primária exige elegibilidade completa, incluindo NYHA II–III, FEVE ≤35%, terapia adequada, causas reversíveis excluídas e expectativa de sobrevida funcional superior a um ano."
+    },
+    "replace": [
+      {
+        "old": "A estratificação de risco de morte súbita cardíaca é etapa central do seguimento, sendo indicado cardioversor-desfibrilador implantável em prevenção primária para pacientes que mantêm fração de ejeção reduzida após período adequado de terapia farmacológica otimizada, respeitando os intervalos mínimos de reavaliação estabelecidos pelas diretrizes antes de indicar o dispositivo.",
+        "new": "A estratificação de risco de morte súbita cardíaca é etapa central do seguimento. O CDI em prevenção primária não deve ser indicado apenas pela FEVE: exige confirmar FEVE ≤35% persistente, sintomas NYHA II–III, terapia guiada por diretriz por período adequado, exclusão ou tratamento de causas reversíveis e expectativa de sobrevida com bom estado funcional superior a um ano, além de individualizar etiologia e risco."
+      }
+    ],
+    "assistant_questions": {
+      "fracao_ejecao_percentual": {
+        "min": 0,
+        "max": 100,
+        "step": 1
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "causas_reversiveis_excluidas",
+        "label": "Causas reversíveis de disfunção ventricular foram tratadas ou excluídas?",
+        "type": "boolean"
+      },
+      {
+        "id": "sobrevida_funcional_maior_um_ano",
+        "label": "A expectativa de sobrevida com bom estado funcional é superior a um ano?",
+        "type": "boolean"
+      },
+      {
+        "id": "ritmo_sinusal",
+        "label": "O paciente está em ritmo sinusal?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": {
+      "periparto_suporte": {
+        "when": {
+          "all": [
+            {"field": "periodo_periparto_atual", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Cardiomiopatia no período periparto atual exige avaliação cardio-obstétrica; antecedente remoto isolado não dispara urgência obstétrica"
+          ],
+          "suggested_tests": [
+            "Avaliação conjunta com obstetrícia/cardio-obstetrícia",
+            "Ecocardiograma e avaliação de congestão"
+          ]
+        }
+      },
+      "cdi_prevencao_primaria_avaliar": {
+        "when": {
+          "all": [
+            {"field": "fracao_ejecao_percentual", "op": "gte", "value": 0},
+            {"field": "fracao_ejecao_percentual", "op": "lte", "value": 35},
+            {"field": "em_terapia_otimizada_guiada_diretriz", "op": "truthy"},
+            {"field": "tempo_terapia_otimizada_dias", "op": "gte", "value": 90},
+            {"field": "causas_reversiveis_excluidas", "op": "truthy"},
+            {"field": "sobrevida_funcional_maior_um_ano", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "classe_funcional_nyha", "op": "eq", "value": "ii"},
+            {"field": "classe_funcional_nyha", "op": "eq", "value": "iii"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "FEVE ≤35% persistente, NYHA II–III, terapia otimizada por período adequado, causas reversíveis excluídas e sobrevida funcional esperada >1 ano permitem avaliação de CDI em prevenção primária"
+          ],
+          "suggested_tests": [
+            "Reavaliação ecocardiográfica da FEVE e confirmação de todos os critérios de elegibilidade",
+            "Encaminhamento para eletrofisiologia/arritmia"
+          ]
+        }
+      },
+      "trc_avaliar": {
+        "when": {
+          "all": [
+            {"field": "duracao_qrs_ms", "op": "gte", "value": 150},
+            {"field": "padrao_bloqueio_ramo_esquerdo", "op": "truthy"},
+            {"field": "ritmo_sinusal", "op": "truthy"},
+            {"field": "fracao_ejecao_percentual", "op": "gte", "value": 0},
+            {"field": "fracao_ejecao_percentual", "op": "lte", "value": 35},
+            {"field": "em_terapia_otimizada_guiada_diretriz", "op": "truthy"}
+          ],
+          "any": [
+            {"field": "classe_funcional_nyha", "op": "eq", "value": "ii"},
+            {"field": "classe_funcional_nyha", "op": "eq", "value": "iii"},
+            {"field": "classe_funcional_nyha", "op": "eq", "value": "iv"}
+          ]
+        },
+        "add": {
+          "supporting": [
+            "Sintomas persistentes (NYHA II–IV), ritmo sinusal, BRE com QRS ≥150 ms e FEVE ≤35% apesar de terapia otimizada favorecem avaliação de ressincronização"
+          ],
+          "suggested_tests": [
+            "Eletrocardiograma para confirmar ritmo, morfologia e duração do QRS",
+            "Encaminhamento para avaliação de ressincronização cardíaca"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "periparto_remoto_sem_urgencia_obstetrica",
+        "priority": 30,
+        "when": {
+          "all": [
+            {"field": "etiologia_suspeita", "op": "eq", "value": "periparto"},
+            {"field": "periodo_periparto_atual", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Antecedente remoto de cardiomiopatia periparto requer seguimento de cardiomiopatia e aconselhamento reprodutivo, mas não deve ser rotulado como urgência obstétrica atual sem nova gestação ou descompensação"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "slug": "apneia-do-sono-e-coracao",
+    "set": {
+      "review_status": "revisado",
+      "version": 2,
+      "review_note": "Revisão final dirigida do PR #690 em 08/09/2026: HSAT limitado a adulto não complicado e sem doença cardiorrespiratória significativa; faixas de IAH corrigidas; regra de FA restringida à AOS; STOP-BANG validado em 0–8 com faixa intermediária 3–4 em ambulatório; removido PMID 21300732 por tratar duração do sono, não apneia do sono.",
+      "source_refs": [
+        "Johns MW. A new method for measuring daytime sleepiness: the Epworth sleepiness scale. Sleep. 1991;14(6):540-545. PMID 1798888",
+        "Chung F, Yegneswaran B, Liao P, et al. STOP questionnaire: a tool to screen patients for obstructive sleep apnea. Anesthesiology. 2008;108(5):812-821. PMID 18431116",
+        "Martínez-García MA, Capote F, Campos-Rodríguez F, et al; Spanish Sleep Network. Effect of CPAP on blood pressure in patients with obstructive sleep apnea and resistant hypertension: the HIPARCO randomized clinical trial. JAMA. 2013;310(22):2407-2415. PMID 24327037",
+        "McEvoy RD, Antic NA, Heeley E, et al; SAVE Investigators and Coordinators. CPAP for Prevention of Cardiovascular Events in Obstructive Sleep Apnea. N Engl J Med. 2016;375(10):919-931. PMID 27571048",
+        "Costanzo MR, Ponikowski P, Javaheri S, et al. Transvenous neurostimulation for central sleep apnoea: a randomised controlled trial. Lancet. 2016;388(10048):974-982. PMID 27598679",
+        "Gottlieb DJ, Yenokyan G, Newman AB, et al. Prospective study of obstructive sleep apnea and incident coronary heart disease and heart failure: the Sleep Heart Health Study. Circulation. 2010;122(4):352-360. PMID 20625114",
+        "Lanfranchi PA, Braghiroli A, Bosimini E, et al. Prognostic value of nocturnal Cheyne-Stokes respiration in chronic heart failure. Circulation. 1999;99(11):1435-1440. PMID 10086966",
+        "Cowie MR, Woehrle H, Wegscheider K, et al; SERVE-HF Investigators. Adaptive Servo-Ventilation for Central Sleep Apnea in Systolic Heart Failure. N Engl J Med. 2015;373(12):1095-1105. PMID 26323938",
+        "Badr MS, Khayat RN, Allam JS, et al. Treatment of central sleep apnea in adults: an American Academy of Sleep Medicine clinical practice guideline. J Clin Sleep Med. 2025;21(12). DOI: 10.5664/jcsm.11858."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/1798888/",
+        "https://pubmed.ncbi.nlm.nih.gov/18431116/",
+        "https://pubmed.ncbi.nlm.nih.gov/24327037/",
+        "https://pubmed.ncbi.nlm.nih.gov/27571048/",
+        "https://pubmed.ncbi.nlm.nih.gov/27598679/",
+        "https://pubmed.ncbi.nlm.nih.gov/20625114/",
+        "https://pubmed.ncbi.nlm.nih.gov/10086966/",
+        "https://pubmed.ncbi.nlm.nih.gov/26323938/",
+        "https://doi.org/10.5664/jcsm.11858"
+      ]
+    },
+    "replace": [
+      {
+        "old": "classificando gravidade (leve 5-15/h, moderada 15-30/h, grave acima de 30/h); a poligrafia respiratória domiciliar é alternativa validada para pacientes com probabilidade pré-teste alta e sem comorbidades respiratórias relevantes",
+        "new": "classificando a gravidade no adulto (leve: IAH de 5 a <15/h; moderada: 15 a <30/h; grave: ≥30/h); o teste domiciliar de apneia do sono (HSAT/poligrafia) é alternativa para adulto não complicado, com probabilidade pré-teste apropriada e sem doença cardiorrespiratória significativa, suspeita de hipoventilação, uso crônico de opioide, antecedente de AVC ou insônia grave; nesses cenários, prefere-se polissonografia"
+      }
+    ],
+    "assistant_questions": {
+      "stop_bang_score": {
+        "min": 0,
+        "max": 8,
+        "step": 1
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "significant_cardiorespiratory_disease",
+        "label": "Há doença cardiorrespiratória significativa ou outro fator que torne o HSAT inadequado?",
+        "type": "boolean"
+      }
+    ],
+    "assistant_rules": {
+      "stop_bang_alto_investigar": {
+        "when": {
+          "all": [
+            {"field": "stop_bang_score", "op": "gte", "value": 5},
+            {"field": "stop_bang_score", "op": "lte", "value": 8}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "suggested_tests": [
+            "Confirmar AOS com polissonografia ou, somente no adulto não complicado e sem doença cardiorrespiratória significativa, HSAT validado"
+          ],
+          "missing_information": [
+            "Confirmação diagnóstica de apneia obstrutiva do sono ainda pendente"
+          ]
+        }
+      },
+      "avaliacao_pre_operatoria_stop_bang": {
+        "when": {
+          "all": [
+            {"field": "pre_op_context", "op": "truthy"},
+            {"field": "stop_bang_score", "op": "gte", "value": 3},
+            {"field": "stop_bang_score", "op": "lte", "value": 8}
+          ]
+        }
+      },
+      "fibrilacao_atrial_apneia_nao_tratada": {
+        "when": {
+          "all": [
+            {"field": "sleep_apnea_type", "op": "eq", "value": "obstrutiva"},
+            {"field": "arrhythmia_history", "op": "contains", "value": "fibrilacao_atrial"},
+            {"field": "cpap_prescribed", "op": "falsy"}
+          ]
+        },
+        "add": {
+          "supporting": [
+            "A apneia obstrutiva do sono se associa a recorrência de fibrilação atrial; essa regra não deve ser disparada apenas por apneia central"
+          ],
+          "suggested_tests": [
+            "Avaliação diagnóstica de AOS como parte do manejo integrado de fatores de recorrência arrítmica"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "stop_bang_intermediario_ambulatorial",
+        "priority": 50,
+        "when": {
+          "all": [
+            {"field": "pre_op_context", "op": "falsy"},
+            {"field": "stop_bang_score", "op": "gte", "value": 3},
+            {"field": "stop_bang_score", "op": "lte", "value": 4}
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "STOP-BANG 3–4 indica risco intermediário em contexto ambulatorial; integrar sintomas, probabilidade pré-teste e comorbidades antes de escolher o exame"
+          ],
+          "suggested_tests": [
+            "Avaliação em medicina do sono e confirmação objetiva quando a suspeita clínica for relevante"
+          ]
+        }
+      },
+      {
+        "id": "hsat_inadequado_doenca_cardiorrespiratoria",
+        "priority": 82,
+        "when": {
+          "all": [
+            {"field": "significant_cardiorespiratory_disease", "op": "truthy"}
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "opposing": [
+            "HSAT não é o exame de escolha diante de doença cardiorrespiratória significativa ou outro fator de complexidade"
+          ],
+          "suggested_tests": [
+            "Polissonografia completa em laboratório"
+          ]
+        }
+      }
+    ]
+  }
+]

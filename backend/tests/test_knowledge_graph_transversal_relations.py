@@ -148,3 +148,29 @@ def test_transversal_human_rejection_survives_removal_and_source_change(db, tran
     assert edge.review_status == "rejeitado"
     assert edge.extra["human_review_note"] == "Decisão editorial de rejeitar."
     assert edge.extra.get("_inactive_reason") != "source_removed"
+
+
+def test_trilha_material_paciente_aparece_nos_dois_sentidos(db, transversal_pair):
+    from app.models.patient_material import PatientMaterial
+    from app.models.study_track import StudyTrack
+
+    material = PatientMaterial(slug="material-paciente-etapa-teste", titulo="Entenda a pericardite",
+                               tema="Pericárdio", review_status="revisado", published=True)
+    track = StudyTrack(slug="trilha-material-etapa-teste", titulo="Pericardite",
+                       tema="Pericárdio", objetivo="Comunicação", nivel="intermediário",
+                       review_status="revisado", published=True,
+                       etapas=[{"ordem": 1, "item_type": "material_paciente",
+                                "item_slug": material.slug, "por_que": "Preparar a orientação."}])
+    db.add_all([material, track])
+    db.commit()
+    kg.backfill_mesmo_tema(db)
+    assert material.slug in _related_slugs(db, "trilha", track.slug)
+    assert track.slug in _related_slugs(db, "material_paciente", material.slug)
+    edge = db.execute(select(KnowledgeRelation).where(
+        KnowledgeRelation.relation_type == "contains",
+    )).scalar_one()
+    # A ligação estrutural é navegável, mas só o manifesto editorial explícito
+    # promove sua revisão. Esta fixture isola a estrutura, sem esse manifesto.
+    assert edge.review_status == "pendente_revisao"
+    assert edge.provenance_type == "structured_metadata"
+    assert edge.extra["campo"] == "StudyTrack.etapas"

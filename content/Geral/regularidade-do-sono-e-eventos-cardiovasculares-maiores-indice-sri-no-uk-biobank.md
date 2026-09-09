@@ -1,17 +1,37 @@
 ---
-title: "Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores: o Índice SRI no UK Biobank"
-slug: regularidade-do-sono-e-eventos-cardiovasculares-maiores-indice-sri-no-uk-biobank
-theme: "Geral"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Geral já cobre DURAÇÃO
+  do sono (metanálise de Cappuccio) e desssincronização circadiana por trabalho em
+  turnos, mas nenhum documento tratava da REGULARIDADE do sono — dia a dia, medida
+  por dispositivo, independente de quantas horas a pessoa dorme em média — que é a
+  pergunta clínica emergente e distinta captada pelo estudo de Chaput et al. (2025),
+  o primeiro a associar o Índice de Regularidade do Sono (SRI), medido objetivamente
+  por acelerômetro, a eventos cardiovasculares maiores em uma coorte prospectiva de
+  grande porte. Nota de bastidor: ao levantar os arquivos já existentes sobre sono
+  nesta pasta, encontrei dois documentos quase idênticos sobre a MESMA metanálise
+  de Cappuccio (mesmo PMID 21300732) — ''duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md''
+  e ''sono-e-risco-cardiovascular-metanalise-de-cappuccio.md''. Não toquei neles (fora
+  do escopo desta tarefa e da minha pasta de commit), mas registro o achado para limpeza
+  futura.'
+published: true
 review_status: revisado
-source_refs: ["Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Rajaratnam SMW, Bian W, St-Onge MP, Stamatakis E. Sleep regularity and major adverse cardiovascular events: a device-based prospective study in 72 269 UK adults. J Epidemiol Community Health. 2025 Mar 10;79(4):257-264. DOI: 10.1136/jech-2024-222795. PMID: 39603689. PMCID: PMC12066246 — coorte prospectiva UK Biobank com acelerometria de punho por 7 dias, 72.269 adultos, seguimento médio de 7,8 anos"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Geral já cobre DURAÇÃO do sono (metanálise de Cappuccio) e desssincronização circadiana por trabalho em turnos, mas nenhum documento tratava da REGULARIDADE do sono — dia a dia, medida por dispositivo, independente de quantas horas a pessoa dorme em média — que é a pergunta clínica emergente e distinta captada pelo estudo de Chaput et al. (2025), o primeiro a associar o Índice de Regularidade do Sono (SRI), medido objetivamente por acelerômetro, a eventos cardiovasculares maiores em uma coorte prospectiva de grande porte. Nota de bastidor: ao levantar os arquivos já existentes sobre sono nesta pasta, encontrei dois documentos quase idênticos sobre a MESMA metanálise de Cappuccio (mesmo PMID 21300732) — 'duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md' e 'sono-e-risco-cardiovascular-metanalise-de-cappuccio.md'. Não toquei neles (fora do escopo desta tarefa e da minha pasta de commit), mas registro o achado para limpeza futura."
+slug: regularidade-do-sono-e-eventos-cardiovasculares-maiores-indice-sri-no-uk-biobank
+source_refs:
+- 'Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Rajaratnam SMW, Bian W, St-Onge MP,
+  Stamatakis E. Sleep regularity and major adverse cardiovascular events: a device-based
+  prospective study in 72 269 UK adults. J Epidemiol Community Health. 2025 Mar 10;79(4):257-264.
+  DOI: 10.1136/jech-2024-222795. PMID: 39603689. PMCID: PMC12066246 — coorte prospectiva
+  UK Biobank com acelerometria de punho por 7 dias, 72.269 adultos, seguimento médio
+  de 7,8 anos'
+theme: Geral
+title: 'Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores:
+  o Índice SRI no UK Biobank'
 ---
 
 # Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores: o Índice SRI no UK Biobank
 
 ## A pergunta que a duração do sono, sozinha, não responde
-Esta biblioteca já documenta que dormir pouco ou dormir demais prediz desfecho cardiovascular (ver `duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md`). Mas duração média não captura outra dimensão do sono que também varia entre indivíduos e é biologicamente plausível como fator de risco: a **regularidade** — dormir e acordar em horários consistentes de um dia para o outro, versus um padrão errático, mesmo que a quantidade total de sono seja semelhante. Chaput JP et al. (J Epidemiol Community Health. 2025;79(4):257-264, PMID 39603689) testaram, pela primeira vez em coorte prospectiva de grande porte com sono medido por dispositivo (não autorreferido), se a irregularidade do sono prediz eventos cardiovasculares maiores independentemente da duração.
+Esta biblioteca já documenta que dormir pouco ou dormir demais prediz desfecho cardiovascular (ver [Duração do Sono Curta e Longa Como Preditor Cardiovascular: a Metanálise de Cappuccio](/biblioteca/duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio)). Mas duração média não captura outra dimensão do sono que também varia entre indivíduos e é biologicamente plausível como fator de risco: a **regularidade** — dormir e acordar em horários consistentes de um dia para o outro, versus um padrão errático, mesmo que a quantidade total de sono seja semelhante. Chaput JP et al. (J Epidemiol Community Health. 2025;79(4):257-264, PMID 39603689) testaram, pela primeira vez em coorte prospectiva de grande porte com sono medido por dispositivo (não autorreferido), se a irregularidade do sono prediz eventos cardiovasculares maiores independentemente da duração.
 
 ## Desenho
 Coorte prospectiva de participantes do UK Biobank, 40-79 anos, que usaram acelerômetro de punho por 7 dias consecutivos para permitir o cálculo objetivo do sono:
@@ -27,7 +47,7 @@ Coorte prospectiva de participantes do UK Biobank, 40-79 anos, que usaram aceler
 
 ## Resultados
 - **Sono irregular**: **HR 1,26** (IC95% 1,16-1,37) para MACE, comparado a sono regular
-- **Sono moderadamente irregular**: **HR 1,08** (IC95% publicado no artigo: 1,01-1,70 — intervalo internamente inconsistente, já que o limite inferior citado excede o limite superior; reproduzido aqui literalmente como consta no abstract original e confirmado no texto completo do artigo (PMCID PMC12066246), sem correção pela redação; o sentido qualitativo do achado — risco intermediário, maior que o grupo regular — não muda, mas o intervalo numérico exato **não deve ser citado sem antes checar a errata ou o texto completo direto na fonte**)
+- **Sono moderadamente irregular**: **HR 1,08** (**IC95% 1,01-1,17** na Figura 2). O resumo e a narrativa do artigo imprimem 1,01-1,70, mas esse limite superior conflita com o próprio forest plot e com a escala gráfica; a estimativa aqui usada vem da figura, e a discrepância editorial é explicitada em vez de ocultada.
 - **Análise dose-resposta** (SRI como variável contínua): relação **quase linear**, com redução de risco de MACE mais acentuada em escores de SRI mais altos (sono mais regular)
 - **Subtipos de MACE, no grupo de sono irregular** (comparado a regular):
   - **Insuficiência cardíaca: HR 1,45** (IC95% 1,21-1,75)
@@ -36,16 +56,16 @@ Coorte prospectiva de participantes do UK Biobank, 40-79 anos, que usaram aceler
 - **Análise conjunta de regularidade e duração do sono**: cumprir a recomendação de duração de sono específica para a idade **atenuou o risco** nos moderadamente irregulares (HR ajustado **1,07**, IC95% 0,96-1,18 — sem significância estatística), **mas não atenuou o risco nos irregulares** (HR ajustado **1,19**, IC95% 1,06-1,35 — ainda significativo)
 
 ## Conclusão do próprio estudo
-**"O sono irregular foi fortemente associado a maior risco de MACE. Duração adequada de sono não foi suficiente para compensar esses efeitos adversos entre os dormidores irregulares."** Os autores defendem a inclusão da regularidade do sono, ao lado da duração, nas diretrizes de saúde pública e na prática clínica como fator de risco cardiovascular.
+Os autores concluíram que o sono irregular esteve associado a maior risco de MACE e que a duração adequada não eliminou essa associação no grupo mais irregular. Trata-se de associação observacional; o estudo não demonstrou que uma intervenção para regularizar horários reduza eventos.
 
 ## Por que isso muda a pergunta que se faz na anamnese
-O achado central e prático é que **dormir "o suficiente" em média não protege quem dorme em horários erráticos** — a análise conjunta mostra que duração adequada compensa parcialmente a irregularidade moderada, mas não compensa a irregularidade franca. Isso sustenta ampliar a anamnese de sono cardiovascular além da pergunta "quantas horas você dorme", incluindo também "os horários de dormir e acordar variam muito de um dia para o outro" — pergunta hoje pouco frequente na rotina clínica e que este estudo indica ter peso próprio, não redutível à duração.
+Na análise ajustada, cumprir a duração recomendada não eliminou a associação no estrato mais irregular. O resultado sustenta perguntar também sobre variação dos horários de dormir e acordar, mas não transforma as categorias de SRI usadas no estudo em pontos de corte diagnósticos nem prova benefício cardiovascular de uma intervenção específica.
 
 ## Limitações, declaradas com honestidade
 - **Desenho observacional**: não estabelece causalidade. Irregularidade do sono pode ser marcador de doença subjacente não diagnosticada, de turno de trabalho, de comorbidade psiquiátrica ou de outros hábitos de vida não totalmente controlados no ajuste estatístico (causalidade reversa e confusão residual não podem ser excluídas).
 - **SRI medido por apenas 7 dias de acelerometria** no início do seguimento — não captura mudança de padrão de sono ao longo dos 7,8 anos de acompanhamento subsequente.
 - **Coorte do UK Biobank**: população predominantemente branca, mais saudável que a população geral do Reino Unido (viés de participação voluntária conhecido do UK Biobank), o que pode limitar a magnitude absoluta do risco observado em populações mais diversas.
-- **O intervalo de confiança do grupo moderadamente irregular está publicado de forma internamente inconsistente** (ver acima) — usar com cautela até checar eventual errata da revista.
+- **Discrepância numérica da publicação**: resumo e narrativa imprimem IC95% 1,01-1,70 para HR 1,08, enquanto a Figura 2 mostra 1,01-1,17. Este registro adota o valor da figura e mantém a ressalva; não foi identificada errata formal nas fontes consultadas.
 - Faixa etária estudada foi **40-79 anos** no recrutamento — não informa sobre a mesma associação em adultos mais jovens.
 
 ## Tudo com Tudo
@@ -59,7 +79,7 @@ O achado central e prático é que **dormir "o suficiente" em média não proteg
 
 ## Armadilhas clínicas
 - **Perguntar só "quantas horas você dorme" e considerar a anamnese de sono completa** — este estudo mostra que a irregularidade tem associação própria com MACE, não plenamente explicada pela duração.
-- **Citar o HR do grupo moderadamente irregular (1,08) junto com o intervalo de confiança publicado (1,01-1,70) sem checar a fonte primária** — o intervalo, como está no artigo e no PubMed, é internamente inconsistente (limite inferior maior que o esperado para o efeito relatado); vale conferir eventual correção antes de citar em material voltado ao paciente ou em decisão clínica.
+- **Citar 1,01-1,70 sem reconhecer a discrepância** — o texto tem provável erro tipográfico; a Figura 2 mostra 1,01-1,17. Nenhum dos valores deve ser convertido em limiar individual de decisão.
 - **Tratar este achado como prova de causalidade** — é coorte observacional; irregularidade de sono pode ser marcador de outros fatores de risco não totalmente ajustados (turno de trabalho, transtorno psiquiátrico, uso de substâncias).
 - **Extrapolar para adultos jovens (<40 anos)** — a coorte foi recrutada entre 40 e 79 anos.
-- **Ignorar a mensagem prática mais forte do estudo**: dormir a duração recomendada não neutraliza o risco de quem tem sono muito irregular — apenas atenua parcialmente o risco de quem é moderadamente irregular.
+- **Inferir efeito terapêutico**: a duração recomendada não eliminou a associação no grupo mais irregular, mas o desenho não prova que regularizar o sono previna MACE.

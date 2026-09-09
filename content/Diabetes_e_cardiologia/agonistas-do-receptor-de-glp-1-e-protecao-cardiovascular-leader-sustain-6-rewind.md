@@ -1,10 +1,19 @@
 ---
-title: "Agonistas do Receptor de GLP-1 e Proteção Cardiovascular no Diabetes: LEADER, SUSTAIN-6 e REWIND"
+title: 'Agonistas do Receptor de GLP-1 e Proteção Cardiovascular no Diabetes: LEADER, SUSTAIN-6 e REWIND'
 slug: agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind
-theme: "Diabetes e cardiologia"
+theme: Diabetes e cardiologia
 kind: protocolo
 review_status: revisado
-source_refs: ["Marso SP, Daniels GH, Brown-Frandsen K, et al; LEADER Steering Committee and Investigators. Liraglutide and cardiovascular outcomes in type 2 diabetes (LEADER). N Engl J Med. 2016;375(4):311-322. DOI: 10.1056/NEJMoa1603827. PMID: 27295427", "Marso SP, Bain SC, Consoli A, et al; SUSTAIN-6 Investigators. Semaglutide and cardiovascular outcomes in patients with type 2 diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI: 10.1056/NEJMoa1607141. PMID: 27633186", "Gerstein HC, Colhoun HM, Dagenais GR, et al; REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130. DOI: 10.1016/S0140-6736(19)31149-3. PMID: 31189511"]
+source_refs:
+- 'Marso SP, Daniels GH, Brown-Frandsen K, et al; LEADER Steering Committee and Investigators. Liraglutide and cardiovascular
+  outcomes in type 2 diabetes (LEADER). N Engl J Med. 2016;375(4):311-322. DOI: 10.1056/NEJMoa1603827. PMID: 27295427'
+- 'Marso SP, Bain SC, Consoli A, et al; SUSTAIN-6 Investigators. Semaglutide and cardiovascular outcomes in patients
+  with type 2 diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI: 10.1056/NEJMoa1607141. PMID: 27633186'
+- 'Gerstein HC, Colhoun HM, Dagenais GR, et al; REWIND Investigators. Dulaglutide and cardiovascular outcomes in
+  type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130.
+  DOI: 10.1016/S0140-6736(19)31149-3. PMID: 31189511'
+review_note: 'Revisão independente de dependência em08/09/2026: Qualificada populaçãoLEADER/SUSTAIN; magnitudeintertrialnãoequivalência.
+  Demaisnúmeros/componentesjáadequados.'
 ---
 
 # Agonistas do Receptor de GLP-1 e Proteção Cardiovascular no Diabetes: LEADER, SUSTAIN-6 e REWIND
@@ -19,10 +28,10 @@ O documento geral desta biblioteca sobre doença cardiovascular no diabetes (ESC
 3.297 pacientes com diabetes tipo 2, 83,0% já com doença cardiovascular estabelecida, doença renal crônica, ou ambas, randomizados para semaglutida semanal (0,5 ou 1,0 mg) ou placebo, seguimento de 104 semanas. Desfecho primário composto: **6,6% com semaglutida vs. 8,9% com placebo** (HR 0,74; IC95% 0,58-0,95; p<0,001 para não inferioridade). AVC não fatal: 1,6% vs. 2,7% (HR 0,61; IC95% 0,38-0,99; p=0,04). Mortalidade cardiovascular isolada foi semelhante entre os grupos — a diferença do desfecho composto veio principalmente do componente de AVC. **Achado de segurança relevante e específico deste ensaio**: complicações de retinopatia (hemorragia vítrea, cegueira, ou necessidade de tratamento intravítreo/fotocoagulação) foram **mais frequentes com semaglutida** (HR 1,76; IC95% 1,11-2,78; p=0,02) — piora de nefropatia foi menos frequente no grupo semaglutida.
 
 ## Rewind dulaglutida
-9.901 participantes com diabetes tipo 2 com idade ≥50 anos, com evento cardiovascular prévio **ou** fatores de risco cardiovascular — critério de entrada mais amplo que o dos dois ensaios acima, que exigiam predominantemente doença estabelecida —, randomizados para dulaglutida semanal (1,5 mg) ou placebo, seguimento mediano de 5,4 anos. Desfecho primário composto: **12,0% com dulaglutida (2,4/100 pacientes-ano) vs. 13,4% com placebo (2,7/100 pacientes-ano)** (HR 0,88; IC95% 0,79-0,99; p=0,026). Mortalidade por qualquer causa não diferiu entre os grupos (10,8% vs. 12,0%; HR 0,90; IC95% 0,80-1,01; p=0,067). Evento adverso gastrointestinal foi mais frequente com dulaglutida (47,4% vs. 34,1%; p<0,0001).
+9.901 participantes com diabetes tipo 2 com idade ≥50 anos, com evento cardiovascular prévio **ou** fatores de risco cardiovascular — critério de entrada mais amplo que o dos dois ensaios acima, que também incluíam participantes sem evento prévio, embora a maioria tivesse doença estabelecida e/ou DRC —, randomizados para dulaglutida semanal (1,5 mg) ou placebo, seguimento mediano de 5,4 anos. Desfecho primário composto: **12,0% com dulaglutida (2,4/100 pacientes-ano) vs. 13,4% com placebo (2,7/100 pacientes-ano)** (HR 0,88; IC95% 0,79-0,99; p=0,026). Mortalidade por qualquer causa não diferiu entre os grupos (10,8% vs. 12,0%; HR 0,90; IC95% 0,80-1,01; p=0,067). Evento adverso gastrointestinal foi mais frequente com dulaglutida (47,4% vs. 34,1%; p<0,0001).
 
 ## O que os tres tem em comum
-Os três reduziram o desfecho composto de morte cardiovascular, IAM não fatal ou AVC não fatal, com magnitude de efeito semelhante (HR na faixa de 0,74 a 0,88). Eventos gastrointestinais são o efeito adverso mais consistente e mais frequente em todos. Nenhum dos três foi desenhado nem tem poder estatístico para comparar um agonista de GLP-1 contra outro — a semelhança de efeito não deve ser lida como equivalência comprovada entre as moléculas.
+Os três apresentaram menor ocorrência do desfecho composto de morte cardiovascular, IAM não fatal ou AVC não fatal, com HRs entre0,74 e0,88; comparação indireta não determina equivalência de magnitude. Eventos gastrointestinais são o efeito adverso mais consistente e mais frequente em todos. Nenhum dos três foi desenhado nem tem poder estatístico para comparar um agonista de GLP-1 contra outro — a semelhança de efeito não deve ser lida como equivalência comprovada entre as moléculas.
 
 ## Diferencas que importam na pratica
 - **população de entrada**: LEADER e SUSTAIN-6 recrutaram predominantemente pacientes com doença cardiovascular já estabelecida; REWIND aceitou também quem tinha apenas fatores de risco, sem evento prévio — é o ensaio com a base de evidência mais ampla para prevenção primária dentro do diabetes tipo 2

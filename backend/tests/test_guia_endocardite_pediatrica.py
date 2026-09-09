@@ -104,10 +104,21 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
         ("checklist", "indicacao-e-timing-de-cirurgia-na-endocardite-complicada"),
         ("trilha", "trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico"),
         ("trilha", "trilha-endocardite-situacoes-especiais"),
+        (
+            "caso_clinico",
+            "endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia",
+        ),
+        ("material_paciente", "endocardite-pediatrica"),
     }
     targets = {
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "caso_clinico": {
+            item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")
+        },
+        "material_paciente": {
+            item["slug"] for item in _records(PATIENT_MATERIALS)
+        },
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

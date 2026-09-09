@@ -306,7 +306,9 @@ test("os portais claros usam ambientes com luz natural sem alterar as cenas escu
 
 test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da minigaláxia", () => {
   const toggle = readRequired("src/components/GalaxyThemeToggle.tsx");
+  const miniUniverse = readRequired("src/components/MiniUniverseCanvas.tsx");
   const home = readRequired("src/pages/CardiologySpacesHome.tsx");
+  const consistencyStyles = readRequired("src/styles/corvia-ui-consistency-20260908.css");
   const internalStyles = readRequired("src/styles/corvia-internal-final-approved-20260904.css");
   const assetFixStyles = readRequired("src/styles/corvia-approved-fidelity-asset-fix-20260904.css");
   const imagePath = "public/spaces/galaxy-approved-canonical.webp";
@@ -320,16 +322,22 @@ test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da 
   assert.ok(image.readUInt32LE(21) & (1 << 28), "o WebP canônico precisa preservar o canal alfa");
   assert.match(toggle, /<img[\s\S]*?className="galaxy-theme-toggle__image"/);
   assert.match(toggle, /src="\/spaces\/galaxy-approved-canonical\.webp"/);
-  assert.match(toggle, /<MiniUniverseCanvas\s*\/>/);
+  assert.match(toggle, /<MiniUniverseCanvas clockwise=\{clockwise\}\s*\/>/);
   assert.match(toggle, /alt=""\s*aria-hidden="true"\s*draggable=\{false\}/);
   assert.doesNotMatch(toggle, /<video|galaxy-loop-v2\.mp4|galaxy-loop-poster\.webp/);
   assert.match(toggle, /useCorviaTheme\s*\(\s*\)/);
   assert.match(toggle, /onClick=\{toggleTheme\}/);
   assert.match(toggle, /aria-label=\{`Ativar modo \$\{theme === "light" \? "escuro" : "claro"\}`\}/);
-  assert.match(home, /<GalaxyThemeToggle className="spaces-choice__theme-toggle" \/>/);
+  assert.match(home, /<GalaxyThemeToggle className="spaces-choice__theme-toggle" showLabel clockwise \/>/);
+  assert.match(toggle, />Mudar universo<\/span>/);
+  assert.match(miniUniverse, /const rotationDirection = clockwise \? 1 : -1/);
+  assert.match(toggle, /clockwise = true/);
+  assert.match(miniUniverse, /clockwise = true/);
+  assert.match(miniUniverse, /const durationMs = 240_000/);
+  assert.match(consistencyStyles, /corvia-choice-mini-universe-clockwise[\s\S]*?rotate\(360deg\)/);
   assert.match(internalStyles, /background:\s*transparent !important/);
-  assert.match(internalStyles, /animation:\s*corvia-internal-galaxy-ccw 120s linear infinite !important/);
-  assert.match(internalStyles, /@keyframes corvia-internal-galaxy-ccw[\s\S]*?rotate\(-360deg\)/);
+  assert.match(internalStyles, /animation:\s*corvia-internal-galaxy-cw 240s linear infinite !important/);
+  assert.match(internalStyles, /@keyframes corvia-internal-galaxy-cw[\s\S]*?rotate\(360deg\)/);
   assert.match(internalStyles, /html\[data-corvia-theme="light"\] \.galaxy-theme-toggle__image[\s\S]*?mix-blend-mode:\s*normal !important/);
   assert.match(assetFixStyles, /prefers-reduced-motion:\s*reduce/);
 });
@@ -390,8 +398,10 @@ test("o modo claro usa figura clínica funcional por rota e preserva a cenografi
   assert.deepEqual(unscopedFigureRules, [], `estilos da figura fora do tema claro: ${unscopedFigureRules.join(", ")}`);
 });
 
-test("a camada clara é a última folha, escopada no html e cobre todas as superfícies autenticadas", () => {
+test("a camada clara permanece escopada e cada tela encerra a cascata com o contrato determinístico", () => {
   const main = readRequired("src/main.tsx");
+  const home = readRequired("src/pages/CardiologySpacesHome.tsx");
+  const login = readRequired("src/pages/Entrar.tsx");
   const selectorStyles = readRequired("src/styles/corvia-theme-selector.css");
   const lightStyles = readRequired("src/styles/cardiology-spaces-light-mode.css");
   const imports = [...main.matchAll(/^\s*import\s+["']([^"']+\.css)["'];?/gm)].map((match) => match[1]);
@@ -399,7 +409,9 @@ test("a camada clara é a última folha, escopada no html e cobre todas as super
   const darkContrastImport = imports.indexOf("./styles/clinical-form-control-contrast.css");
   assert.ok(selectorImport >= 0 && selectorImport < darkContrastImport,
     "a geometria escura do seletor precisa existir antes do contrato final de contraste");
-  assert.equal(imports.at(-1), "./styles/cardiology-spaces-light-mode.css", "a camada clara precisa ser o último CSS da cascata");
+  assert.equal(imports.at(-1), "./styles/cardiology-spaces-light-mode.css", "a paleta clara global precisa encerrar a cascata base");
+  assert.match(home, /corvia-internal-final-approved-20260904\.css";\s*import "\.\.\/styles\/corvia-ui-consistency-20260908\.css";/);
+  assert.match(login, /corvia-login-fidelity-20260905\.css";\s*import "\.\.\/styles\/corvia-ui-consistency-20260908\.css";/);
 
   assert.match(selectorStyles, /\.corvia-theme-selector__options\s*>\s*button/,
     "o seletor precisa manter geometria própria também no modo escuro padrão");

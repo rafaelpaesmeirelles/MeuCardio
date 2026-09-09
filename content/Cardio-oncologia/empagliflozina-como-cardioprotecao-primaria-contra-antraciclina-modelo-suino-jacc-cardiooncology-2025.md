@@ -1,11 +1,24 @@
 ---
-title: "Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno de Grande Porte, JACC: CardioOncology 2025"
-slug: empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025
-theme: "Cardio-oncologia"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já
+  cobria cardioproteção por betabloqueador (carvedilol/CECCY), estatina (STOP-CA),
+  dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas nenhum
+  documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária
+  contra cardiotoxicidade por antraciclina, uma linha de pesquisa pré-clínica que
+  ganhou tração entre 2024 e 2026.
+published: true
 review_status: revisado
-source_refs: ["PMID:39967204", "DOI:10.1016/j.jaccao.2024.12.004"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já cobria cardioproteção por betabloqueador (carvedilol/CECCY), estatina (STOP-CA), dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas nenhum documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária contra cardiotoxicidade por antraciclina, uma linha de pesquisa pré-clínica que ganhou tração entre 2024 e 2026."
+slug: empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025
+source_refs:
+- PMID:39967204
+- DOI:10.1016/j.jaccao.2024.12.004
+- 'Simela K, et al. SGLT2 inhibitors and cardiovascular toxicity related to cancer
+  treatment: systematic review. Cardiooncology. 2025;11:15. PMID:39934910'
+- ClinicalTrials.gov NCT05271162 (EMPACT), registro consultado em 08/09/2026; estudo
+  sem resultado publicado no registro nessa data
+theme: Cardio-oncologia
+title: 'Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno
+  de Grande Porte, JACC: CardioOncology 2025'
 ---
 
 # Pergunta clínica
@@ -50,7 +63,7 @@ A cardioproteção primária contra antraciclina já conta, nesta biblioteca, co
 
 # Limites da evidência
 
-Modelo animal, não humano — o efeito em pacientes oncológicos pode diferir por espécie, comorbidade, idade e interação com outros fármacos antineoplásicos e cardioprotetores. Amostra pequena (32 porcas na fase de randomização), com desfecho primário de imagem (FEVE), não desfecho clínico duro (insuficiência cardíaca sintomática, interrupção de tratamento oncológico ou mortalidade). Não há, até a data desta síntese, ensaio clínico randomizado prospectivo concluído em humanos testando SGLT2i para prevenção de cardiotoxicidade por antraciclina — a afirmação de ausência de tal ensaio segue a revisão sistemática de Simela et al. (PMID: 39934910), com busca em outubro de 2024; um ensaio humano concluído após essa data poderia não estar refletido aqui. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à existência de resultados de ensaios clínicos randomizados em humanos publicados após a data de fechamento desta síntese.
+Modelo animal, não humano — o efeito em pacientes oncológicos pode diferir por espécie, comorbidade, idade e interação com outros fármacos antineoplásicos e cardioprotetores. Amostra pequena (32 porcas na fase de randomização), com desfecho primário de imagem (FEVE), não desfecho clínico duro. Busca atualizada em 08/09/2026 confirmou a revisão sistemática de Simela et al. (PMID: 39934910) e ensaios humanos registrados, como EMPACT (NCT05271162), mas não identificou resultado publicado de ensaio randomizado prospectivo concluído que estabeleça SGLT2i como cardioproteção primária contra antraciclina. Assim, o achado permanece pré-clínico: não iniciar SGLT2i apenas para essa profilaxia fora de ensaio; seu uso requer outra indicação clínica aprovada. O documento deve ser reavaliado quando houver resultado humano revisado por pares.
 
 ## Tudo com Tudo
 

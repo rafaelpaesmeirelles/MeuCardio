@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr900-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr900": "02fc4bbc4cf7bdcca64d3fcb4ad1f7493e523b78"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-destino-ambulatorial-tev-associado-ao-cancer",
+      "sinalizadores-ambulatoriais-tev-associado-ao-cancer-destino-ps-vs-oncologia",
+      "tev-associado-ao-cancer-quando-escalar-hematologia-oncologia-vs-urgencia"
+    ]
+  }
+}

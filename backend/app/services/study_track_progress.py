@@ -29,6 +29,7 @@ STAGE_TYPES = frozenset({
     "checklist",
     "evidencia",
     "caso_clinico",
+    "material_paciente",
 })
 
 

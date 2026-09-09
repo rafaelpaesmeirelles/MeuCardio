@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr909-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr909": "ebe50ee8ce9e568e61d2d017f6a8808cf7c97404"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-suspeita-inoca-minoca-destino",
+      "pos-angiografia-sem-obstrucao-ambulatorial-alarme-e-encaminhamento",
+      "suspeita-ambulatorial-inoca-minoca-quando-escalar"
+    ]
+  }
+}

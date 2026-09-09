@@ -116,6 +116,10 @@ def list_tests(
         ]
         if term_filters:
             query = query.filter(and_(*term_filters))
+        else:
+            # Uma consulta composta só de pontuação/curingas não é ausência de
+            # filtro: deve produzir conjunto vazio, nunca expor todo o acervo.
+            query = query.filter(False)
     total = query.count()
     if q and q.strip():
         normalized_q = _termo_sem_acentos(q)
