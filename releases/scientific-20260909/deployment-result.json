@@ -1,0 +1,30 @@
+{
+  "verified_at": "2026-09-09T21:08:14.148133+00:00",
+  "frontend_commit": "9ca2cc8a5d70cfbbcf3cfdd35b2b18f43c82bf78",
+  "backend_commit": "3ace9d3e056baf980f5ce54260d1df3eaa5f4055",
+  "public_routes": {
+    "/": 200,
+    "/entrar": 200,
+    "/admin/atividade": 200,
+    "/api/health": 200,
+    "/api/ready": 200,
+    "/api/admin/activity_unauthenticated": 401
+  },
+  "admin_activity": {
+    "periods": [
+      "day",
+      "week",
+      "month",
+      "year"
+    ],
+    "month_series_rows": 30,
+    "timezone": "America/Sao_Paulo",
+    "presence_window_seconds": 90,
+    "redis_available": true,
+    "subscriptions_tracking_since": "2026-09-09T21:04:33.946515+00:00"
+  },
+  "validation": "TypeScript compilation; frontend production build; scoped publication integrity; public availability; administrative aggregates and authentication gate. No CI/backend test suites.",
+  "scientific_publication": "completed at 2026-09-09T20:39:22.582080+00:00",
+  "semantic_index": "blocked by provider credit_balance_exhausted (insufficient_quota, HTTP429); stopped without repeating the unavailable provider; existing chunks retained",
+  "work_production": "excluded from reviewed publication package"
+}

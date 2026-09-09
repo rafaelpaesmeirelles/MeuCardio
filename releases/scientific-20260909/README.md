@@ -26,3 +26,9 @@ python /tmp/publish_scientific_release_20260909.py /tmp/reviewed-content.json --
 python /tmp/publish_scientific_release_20260909.py /tmp/reviewed-content.json --sha256 HASH --apply
 python /tmp/index_scientific_release_20260909.py /tmp/reviewed-content.json --sha256 HASH
 ```
+
+## Publicação confirmada
+
+Conteúdo publicado em 09/09/2026 às 17h39 BRT: 716 registros e 2.256 vínculos explícitos. Aplicação e painel administrativo confirmados disponíveis às 18h06 BRT, após o horário-alvo das 18h. Endpoints públicos saudáveis; administração exige autenticação.
+
+A indexação semântica ficou pendente: o provedor retornou credit_balance_exhausted / insufficient_quota (HTTP 429). As tentativas foram interrompidas e os índices anteriores preservados; o pacote exato poderá ser retomado após reposição de créditos. A produção do Work permaneceu fora da publicação revisada.

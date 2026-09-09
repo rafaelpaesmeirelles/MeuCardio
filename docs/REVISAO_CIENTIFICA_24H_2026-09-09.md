@@ -16,3 +16,9 @@ A publicação usa somente este pacote, com backup das linhas científicas afeta
 Estado deste relatório: preparado; o resultado efetivo da execução será registrado em `publication-result.json` e `rag-result.json` no diretório da release.
 
 SHA-256 do pacote: `9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9`.
+
+## Publicação confirmada
+
+Conteúdo publicado em 09/09/2026 às 17h39 BRT: 716 registros e 2.256 vínculos explícitos. Aplicação e painel administrativo confirmados disponíveis às 18h06 BRT, após o horário-alvo das 18h. Endpoints públicos saudáveis; administração exige autenticação.
+
+A indexação semântica ficou pendente: o provedor retornou credit_balance_exhausted / insufficient_quota (HTTP 429). As tentativas foram interrompidas e os índices anteriores preservados; o pacote exato poderá ser retomado após reposição de créditos. A produção do Work permaneceu fora da publicação revisada.
