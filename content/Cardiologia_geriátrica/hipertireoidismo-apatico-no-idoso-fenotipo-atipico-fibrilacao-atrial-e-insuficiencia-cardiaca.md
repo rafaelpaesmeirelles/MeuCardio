@@ -1,0 +1,108 @@
+---
+title: 'Hipertireoidismo Apático no Idoso: o Fenótipo Sem Sinais Clássicos, a Fibrilação
+  Atrial como Manifestação Dominante e a Armadilha do ''É Só Idade'''
+slug: hipertireoidismo-apatico-no-idoso-fenotipo-atipico-fibrilacao-atrial-e-insuficiencia-cardiaca
+theme: Cardiologia geriátrica
+kind: protocolo
+review_status: revisado
+source_refs:
+- 'Lahey FH. Apathetic Thyroidism. Ann Surg. 1931;93(5):1026-1030. DOI: 10.1097/00000658-193105000-00008.
+  PMID: 17866558'
+- 'Trivalle C, Doucet J, Chassagne P, Landrin I, Kadri N, Menard JF, Bercoff E. Differences
+  in the signs and symptoms of hyperthyroidism in older and younger patients. J Am
+  Geriatr Soc. 1996;44(1):50-53. PMID: 8537590'
+- 'Boelaert K, Torlinska B, Holder RL, Franklyn JA. Older subjects with hyperthyroidism
+  present with a paucity of symptoms and signs: a large cross-sectional study. J Clin
+  Endocrinol Metab. 2010;95(6):2715-2726. PMID: 20392869'
+- 'Delacroix R, Umberger JM. Apathetic hyperthyroidism in an elderly patient presenting
+  with psychomotor retardation. J Am Assoc Nurse Pract. 2022;34(9):1098-1102. PMID:
+  36083321'
+- 'Palacios A, Cohen MA, Cobbs R. Apathetic hyperthyroidism in middle age. Int J Psychiatry
+  Med. 1991. PMID: 1723058'
+- 'Sawin CT, Geller A, Wolf PA, Belanger AJ, Baker E, Bacharach P, Wilson PW, Benjamin
+  EJ, D''Agostino RB. Low serum thyrotropin concentrations as a risk factor for atrial
+  fibrillation in older persons. N Engl J Med. 1994;331(19):1249-1252. PMID: 7935681'
+- 'Cappola AR, Fried LP, Arnold AM, Danese MD, Kuller LH, Burke GL, Tracy RP, Ladenson
+  PW. Thyroid status, cardiovascular risk, and mortality in older adults. JAMA. 2006;295(9):1033-1041.
+  PMID: 16507804'
+- 'Collet TH, Gussekloo J, Bauer DC, den Elzen WP, Cappola AR, et al. Subclinical
+  hyperthyroidism and the risk of coronary heart disease and mortality. Arch Intern
+  Med. 2012;172(10):799-809. PMID: 22529182'
+- 'Gencer B, Collet TH, Virgini V, Bauer DC, Gussekloo J, Cappola AR, et al. Subclinical
+  thyroid dysfunction and the risk of heart failure events: an individual participant
+  data analysis from 6 prospective cohorts. Circulation. 2012;126(9):1040-1049. PMID:
+  22821943'
+- 'Klein I, Danzi S. Thyroid disease and the heart. Circulation. 2007;116(15):1725-1735.
+  PMID: 17923583'
+- 'Osuna PM, Udovcic M, Sharma MD. Hyperthyroidism and the Heart. Methodist Debakey
+  Cardiovasc J. 2017;13(2):60-63. PMID: 28740583'
+- 'Ross DS, Burch HB, Cooper DS, Greenlee MC, Laurberg P, Maia AL, Rivkees SA, Samuels
+  M, Sosa JA, Stan MN, Walter MA. 2016 American Thyroid Association Guidelines for
+  Diagnosis and Management of Hyperthyroidism and Other Causes of Thyrotoxicosis.
+  Thyroid. 2016;26(10):1343-1421. PMID: 27521067'
+- 'Bartalena L, Bogazzi F, Chiovato L, Hubalewska-Dydejczyk A, Links TP, Vanderpump
+  M. 2018 European Thyroid Association (ETA) Guidelines for the Management of Amiodarone-Associated
+  Thyroid Dysfunction. Eur Thyroid J. 2018;7(2):55-66. PMID: 29594056'
+- 'Biondi B, et al. 2015 ETA Guidelines on Diagnosis and Treatment of Endogenous Subclinical
+  Hyperthyroidism. DOI: 10.1159/000438750. PMID: 26558232.'
+- 'Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management
+  of Atrial Fibrillation. DOI: 10.1161/CIR.0000000000001193. Seção10.11.'
+- 'Goichot B, et al. Treatment of subclinical hyperthyroidism in patients older than50years:
+  a randomized controlled study. Eur Thyroid J.2024;13:e240121. DOI:10.1530/ETJ-24-0121.
+  PMID:39159264.'
+- 'Correções ATA2016: PMID29035639 DOI10.1089/thy.2016.0229.correx (2017); PMID40765504
+  DOI10.1089/thy.2016.0229.correx2 (2025).'
+fonte_producao: claude
+---
+
+# Hipertireoidismo Apático no Idoso: Fenótipo Atípico, Fibrilação Atrial e Insuficiência Cardíaca
+
+## Reconhecer sem exigir sinais clássicos
+
+Apatia, lentificação, fraqueza, anorexia e perda de peso podem predominar no hipertireoidismo do idoso. Tremor, agitação e intolerância ao calor podem ser discretos ou ausentes. Esse fenótipo não é um diagnóstico bioquímico separado e não significa que todo idoso hipertireóideo seja apático. A ausência de sinais exuberantes não exclui doença clinicamente importante.
+
+Trivalle et al. (PMID8537590) compararam 34 pacientes hipertireóideos≥70anos, 50≤50anos e68 controles idosos eutireóideos. O número médio de sinais foi6 versus10,8 nos grupos hipertireóideos; FA ocorreu em35% versus2%. Apatia, taquicardia e perda de peso se associaram à tireotoxicose na comparação com controles idosos. São associações de uma amostra pequena, não um teste diagnóstico validado baseado numa tríade. Boelaert et al. (PMID20392869), em3049 pacientes, também observaram menos sinais clássicos com maior idade e recomendaram limiar baixo para testar função tireoidiana diante de FA, emagrecimento ou dispneia.
+
+Depressão, declínio cognitivo, neoplasia e cardiopatia podem produzir sintomas semelhantes e coexistir. Não atribuir automaticamente piora funcional ao envelhecimento, mas também não encerrar os demais diagnósticos diferenciais após encontrar TSH baixo. Relatos de apresentação neuropsiquiátrica ilustram essa dificuldade, sem estimar sua frequência (PMIDs36083321 e1723058).
+
+## FA e insuficiência cardíaca: associação não equivale a benefício terapêutico provado
+
+Na coorte de Sawin et al. (PMID7935681), 2007 pessoas≥60anos sem FA foram acompanhadas por10anos. TSH≤0,1mUI/L associou-se a risco relativo ajustado3,1 (IC95%1,7–5,5), com incidência cumulativa28% versus11% no grupo com TSH normal. O grupo com TSH apenas discretamente baixo não teve diferença significativa. Esses resultados não devem ser generalizados para qualquer TSH abaixo do limite.
+
+Cappola et al. (PMID16507804) avaliaram3233 idosos; após excluir FA prevalente, a incidência foi67 versus31/1000pessoas-ano no hipertireoidismo subclínico e eutireoidismo (HR1,98;IC95%1,29–3,03). A coorte não mostrou diferença nos demais desfechos cardiovasculares ou de mortalidade examinados; ausência de significância não demonstra equivalência.
+
+Collet et al. (PMID22529182) reuniram52674 pessoas, mas a análise de FA usou **8711 participantes de cinco coortes**, não o total. O HR de FA foi1,68 (IC95%1,16–2,43); mortalidade total1,24 (1,06–1,46) e coronariana1,29 (1,02–1,62). O gradiente de risco com TSH<0,1 foi demonstrado para FA e mortalidade coronariana, não indistintamente para todos os desfechos. Gencer et al. (PMID22821943), em25390 participantes, encontraram HR1,94 (1,01–3,72) para IC com TSH<0,1. A análise era de disfunção **subclínica**, não demonstração conjunta para formas francas. As metanálises compartilham coortes e não são replicações totalmente independentes.
+
+Excesso hormonal e FA rápida podem aumentar demanda miocárdica, produzir taquicardiomiopatia ou descompensar doença estrutural. A recuperação depende da causa e do dano acumulado; não é assegurada apenas por normalizar a tireoide (PMID28740583).
+
+O ensaio PIRAHTES (Goichot et al., PMID39159264) randomizou144 pessoas≥50anos com autonomia tireoidiana para radioiodo ou vigilância. Houve FA em1/70 versus4/74 (p=0,238): **o desfecho primário por intenção de tratar não foi significativo**. Análise pós-hoc por normalização do TSH foi favorável, mas perde a proteção da randomização. Cerca de25% dos94 efetivamente tratados com radioiodo desenvolveram hipotireoidismo. O ensaio não comprova prevenção universal de FA nem invalida decisões individualizadas nas pessoas de maior risco.
+
+## Confirmar e identificar a causa
+
+Em FA nova, perda de peso ou IC inexplicada, solicitar TSH e complementar com T4 livre e T3 quando indicado. Hipertireoidismo primário franco costuma apresentar TSH baixo com T4 livre e/ou T3 elevados. No subclínico, hormônios periféricos são normais e o TSH permanece abaixo da referência; valores entre0,1 e o limite inferior não precisam estar indetectáveis.
+
+Investigar doença aguda não tireoidiana, medicamentos e interferência laboratorial. No paciente estável com padrão subclínico inicial, repetir em2–3meses pode confirmar persistência (ETA2015, PMID26558232); instabilidade cardiovascular exige avaliação imediata, sem aguardar esse intervalo. Anticorpos antirreceptor de TSH, cintilografia e ultrassom dirigido ajudam a distinguir Graves, autonomia nodular e tireoidite conforme o contexto.
+
+Em≥65anos com TSH persistentemente<0,1, a ATA recomenda tratamento; com redução menos intensa, a decisão considera cardiopatia, sintomas e outros riscos. Essa recomendação não deve ser apresentada como prova de redução de mortalidade em ensaios randomizados. A etiologia determina o tratamento: tionamidas reduzem síntese hormonal, não são terapia universal para tireoidite destrutiva (ATA2016, PMID27521067).
+
+## Manejo cardiovascular e tireoidiano
+
+Betabloqueador pode controlar sintomas e frequência na tireotoxicose, com titulação conforme pressão, condução e tolerância. Em IC aguda com baixo débito ou choque, não iniciar ou intensificar bloqueio beta de modo automático: é necessária estabilização e supervisão hospitalar. Terapia tireoidiana deve ser coordenada com endocrinologia; Graves e autonomia nodular podem exigir antitireoidiano, radioiodo ou cirurgia conforme situação. A apresentação apática não exclui crise tireotóxica; alteração importante da consciência, instabilidade ou falência orgânica exige urgência.
+
+**Anticoagulação não deve ser omitida por considerar a FA reversível.** A diretriz ACC/AHA2023 recomenda anticoagular pacientes com hipertireoidismo/FA e risco elevado de AVC pelos escores clínicos usuais até normalização tireoidiana e manutenção de ritmo sinusal. Depois disso, reavaliar recorrência e risco tromboembólico; não retirar automaticamente por um TSH normal. Instabilidade hemodinâmica por FA pode exigir cardioversão urgente, sem esperar eutireoidismo; decisões eletivas de ritmo seguem avaliação e proteção tromboembólica apropriadas.
+
+## Amiodarona
+
+Amiodarona pode causar hipo ou tireotoxicose; não é tratamento rotineiro de doença tireoidiana. Na tireotoxicose induzida, AIT1 envolve síntese aumentada, frequentemente em tireoide nodular/Graves, e costuma requerer tionamida; AIT2 é destrutiva e costuma ser tratada com glicocorticoide. Formas mistas podem exigir combinação, inclusive desde o início quando o diagnóstico é incerto. Na AIT2, acompanhar após resolução, inclusive pelo risco de hipotireoidismo; ausência de manutenção antitireoidiana não dispensa vigilância.
+
+Manter ou suspender amiodarona depende da necessidade arrítmica e decisão conjunta. Deterioração cardíaca rápida pode exigir tireoidectomia urgente em qualquer forma. Radioiodo na AIT1 não é necessariamente viável imediatamente, pois a carga de iodo compromete captação (ETA2018, PMID29594056).
+
+## Tudo com Tudo
+
+- [Hipotireoidismo e o Sistema Cardiovascular: Bradicardia, Dislipidemia Secundária e Derrame Pericárdico](/biblioteca/hipotireoidismo-sistema-cardiovascular-bradicardia-dislipidemia)
+- [FA e Hipertireoidismo Subclínico: Quando Tratar a Tireoide Antes de Decidir a Cardioversão](/biblioteca/fa-e-hipertireoidismo-subclinico-quando-tratar-a-tireoide-antes-de-decidir-a-cardioversao)
+- [Taquicardiomiopatia (Cardiomiopatia Induzida por Taquicardia): Reconhecimento e Reversibilidade](/biblioteca/taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade)
+- [Disfunção Tireoidiana Associada à Amiodarona: Diferenciar Tipo 1 de Tipo 2 e Decidir se Suspende](/biblioteca/disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender)
+- [Comprometimento Cognitivo e Demência como Modificador de Decisão Cardiovascular: Rastreio, Controle Pressórico e Anticoagulação na Fibrilação Atrial](/biblioteca/comprometimento-cognitivo-e-demencia-como-modificador-de-decisao-cardiovascular)
+- [Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso](/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal)
+- [Sarcopenia e Caquexia Cardíaca no Idoso com Insuficiência Cardíaca: Definições Diferentes, Mesma Direção de Prognóstico](/biblioteca/sarcopenia-e-caquexia-cardiaca-no-idoso-com-insuficiencia-cardiaca-definicoes-prevalencia-e-prognostico)

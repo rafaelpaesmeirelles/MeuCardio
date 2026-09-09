@@ -1,0 +1,600 @@
+[
+  {
+    "slug": "miocardite",
+    "replace": [
+      {
+        "old": "Indicada (Classe I, Nível C) em miocardite de alto risco, instabilidade hemodinâmica, ou risco intermediário sem resposta ao tratamento convencional — e sempre que há suspeita de células gigantes ou sarcoidose cardíaca, pela implicação terapêutica direta de imunossupressão precoce combinada.",
+        "new": "A biópsia endomiocárdica deve ser considerada precocemente quando o resultado puder mudar a conduta — sobretudo em instabilidade hemodinâmica, arritmia ventricular ou bloqueio avançado, deterioração apesar do tratamento, ou suspeita de células gigantes, eosinofílica ou sarcoidose. A classificação clínica de alto risco, isoladamente, não torna o procedimento obrigatório em todos os pacientes: disponibilidade, rendimento esperado e risco individual devem ser ponderados por equipe experiente."
+      },
+      {
+        "old": "— não é neutro, é contraindicado por falta de benefício de desfecho demonstrado.",
+        "new": "— isso significa que o uso rotineiro não é recomendado por ausência de benefício demonstrado e potencial dano; não equivale a contraindicação absoluta em todo subtipo ou circunstância clínica."
+      },
+      {
+        "old": "é doença rara, mas historicamente quase invariavelmente fatal — morte ou necessidade de cirurgia cardíaca em praticamente a totalidade dos casos não tratados, em mediana de poucos meses desde o início dos sintomas.",
+        "new": "é doença rara e teve prognóstico muito desfavorável nas pequenas coortes históricas anteriores aos esquemas imunossupressores atuais, com alta frequência de morte ou transplante em poucos meses sem tratamento. Esses números históricos não são uma estimativa contemporânea calibrada para cada paciente."
+      },
+      {
+        "old": "a mesma vacina associada ao episódio tem incidência de miocardite bem menor do que a própria infecção pelo SARS-CoV-2 que ela previne.",
+        "new": "em análises populacionais agregadas, o risco de miocardite ou outras complicações cardíacas após infecção por SARS-CoV-2 foi maior do que após vacinação, mas a magnitude varia por idade, sexo, produto e dose; em alguns estratos de homens jovens após a segunda dose, o excesso de curto prazo associado à vacina pode ser comparável ou superior ao da infecção."
+      },
+      {
+        "old": "com risco absoluto de miocardite bem menor do que o associado à própria infecção por SARS-CoV-2.",
+        "new": "com comparação de risco dependente de idade, sexo, produto e dose; no conjunto da população, a infecção por SARS-CoV-2 se associa a maior risco cardíaco, mas alguns estratos de homens jovens após a segunda dose exigem análise individualizada."
+      },
+      {
+        "old": "com mortalidade ou necessidade de transplante próxima de 100% sem imunossupressão precoce",
+        "new": "com mortalidade ou necessidade de transplante muito altas nas pequenas coortes históricas sem imunossupressão, sem que esse número deva ser aplicado como prognóstico individual contemporâneo"
+      },
+      {
+        "old": "Pendente apenas revisão humana final (review_status=pendente_revisao).",
+        "new": "Revisão clínica adversarial concluída, com correções de segurança incorporadas ao overlay final."
+      }
+    ],
+    "assistant_rules": {
+      "alto-risco-estratificacao": {
+        "add": {
+          "risk": "urgente",
+          "suggested_tests": [
+            "Avaliação em centro experiente para decidir se biópsia endomiocárdica mudará a conduta; alto risco isolado não torna a biópsia obrigatória em todos os pacientes"
+          ],
+          "supporting": [
+            "Critérios clínicos ou de imagem de alto risco alteram a intensidade da investigação e a indicação de internação"
+          ]
+        }
+      }
+    },
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "dislipidemia",
+    "append": {
+      "source_refs": [
+        "Tenner S, Vege SS, Sheth SG, et al. American College of Gastroenterology Guidelines: Management of Acute Pancreatitis. Am J Gastroenterol. 2024;119(3):419-437. DOI: 10.14309/ajg.0000000000002645. PMID: 38857482.",
+        "US Food and Drug Administration. FDA requests removal of strongest warning against using cholesterol-lowering statins during pregnancy; still advises most pregnant patients should stop taking statins. Drug Safety Communication. 20/07/2021."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/38857482/",
+        "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requests-removal-strongest-warning-against-using-cholesterol-lowering-statins-during-pregnancy"
+      ]
+    },
+    "replace": [
+      {
+        "old": "os inibidores de PCSK9 (anticorpos monoclonais ou, por mecanismo de RNA de interferência, a inclisirana) reduzem LDL-C de forma acentuada e têm benefício de desfecho cardiovascular comprovado tanto em doença aterosclerótica estável quanto após síndrome coronariana aguda; a inclisirana, especificamente, tem até o momento apenas desfecho de redução de LDL-C validado em ensaio, sem desfecho cardiovascular maior publicado.",
+        "new": "os anticorpos monoclonais contra PCSK9 reduzem LDL-C de forma acentuada e têm benefício de desfecho cardiovascular comprovado em doença aterosclerótica estável e após síndrome coronariana aguda. A inclisirana, por mecanismo de RNA de interferência, também reduz LDL-C de forma acentuada, mas não deve ser apresentada como terapia com benefício de desfecho cardiovascular comprovado enquanto os ensaios de eventos não estiverem publicados."
+      },
+      {
+        "old": "Mulheres em idade fértil merecem atenção específica antes mesmo da gestação: a estatina é contraindicada na gravidez e na lactação, e a bula recomenda uso apenas quando a gravidez for altamente improvável e houver contracepção eficaz. Ezetimiba e inibidores de PCSK9 restringem-se por ausência de dado de segurança, não por dano demonstrado, mas em associação com estatina a restrição mais forte prevalece. Planejamento de gravidez indica suspensão de estatina previamente à concepção, com reinício após o término da amamentação, exceto em risco cardiovascular muito alto, em que a reintrodução individualizada no terceiro trimestre pode ser considerada.",
+        "new": "Mulheres em idade fértil merecem planejamento reprodutivo antes da gestação. Para a maioria das gestantes, a estatina deve ser suspensa antes da concepção ou assim que a gravidez for reconhecida; a retirada da contraindicação absoluta pela FDA permite decisão individualizada rara em risco cardiovascular muito alto, como hipercolesterolemia familiar homozigótica ou doença aterosclerótica estabelecida grave, sob equipe especializada. Isso não autoriza uso rotineiro nem restringe a decisão apenas ao terceiro trimestre. Ezetimiba e inibidores de PCSK9 não têm dados suficientes para uso rotineiro na gestação. Durante a lactação, estatinas são geralmente evitadas; quando o risco materno não permite interrupção prolongada, discutir tratamento e alternativa à amamentação de forma compartilhada."
+      },
+      {
+        "old": "Diante de dor abdominal em andar superior associada a náusea/vômito e lipase ou amilase 3x ou mais o limite superior da normalidade em paciente com hipertrigliceridemia grave, internar para manejo de pancreatite aguda (jejum, hidratação intravenosa vigorosa) e considerar plasmaférese terapêutica ou insulina associada a heparina em infusão contínua em centro com experiência.",
+        "new": "Diante de pancreatite aguda confirmada por pelo menos dois de três critérios (dor típica, lipase/amilase pelo menos 3 vezes o limite superior ou imagem compatível), internar e aplicar manejo de suporte guiado por gravidade. Só atribuir a etiologia aos triglicerídeos quando houver elevação grave, em geral próxima ou acima de 1.000 mg/dL no contexto adequado, e após avaliar causas concorrentes. Insulina intravenosa pode ser considerada quando houver hiperglicemia/diabetes descompensado; heparina não deve ser usada rotineiramente para reduzir triglicerídeos. Plasmaférese fica reservada a situações graves e selecionadas, pois o benefício clínico não está estabelecido para uso habitual."
+      },
+      {
+        "old": "Reavaliar triglicerídeos em 4 a 12 semanas após correção de causa secundária e intervenção dietética em hipertrigliceridemia grave, para decidir sobre indicação de fibrato ou ômega-3 prescrito.",
+        "new": "Reavaliar triglicerídeos em 4 a 12 semanas após intervenção nos quadros persistentes sem risco imediato; quando os triglicerídeos estiverem em faixa extrema (especialmente 1.000 mg/dL ou mais), programar controle em intervalo curto, conforme magnitude, sintomas e tratamento, sem aguardar automaticamente 12 semanas."
+      },
+      {
+        "old": "Triglicerídeos de 1.000 mg/dL ou mais, ou sinais de síndrome de quilomicronemia (xantoma eruptivo, lipemia retinalis) — risco iminente de pancreatite aguda, exige conduta dirigida imediata.",
+        "new": "Triglicerídeos de 1.000 mg/dL ou mais, ou sinais de síndrome de quilomicronemia (xantoma eruptivo, lipemia retinalis) — risco elevado de pancreatite aguda, exige correção rápida de causas secundárias, tratamento dirigido e seguimento em curto prazo."
+      },
+      {
+        "old": "com verificação de PMID/DOI via NCBI E-utilities para as 12 referências citadas",
+        "new": "com verificação de PMID/DOI via NCBI E-utilities para as 12 referências originais; a revisão adversarial acrescentou a diretriz ACG 2024 de pancreatite e o comunicado FDA 2021 sobre estatina na gestação"
+      },
+      {
+        "old": "Pendente apenas revisão humana final (review_status=pendente_revisao).",
+        "new": "Revisão clínica adversarial concluída, com correções de segurança incorporadas ao overlay final."
+      }
+    ],
+    "assistant_questions": {
+      "acute_pancreatitis_now": {
+        "label": "Há pancreatite aguda confirmada por pelo menos 2 de 3 critérios: dor abdominal típica, lipase ou amilase 3 vezes ou mais o limite superior, ou imagem compatível?"
+      },
+      "statin_intolerance_suspected": {
+        "label": "Há suspeita ou confirmação de intolerância muscular a estatina (sintomas musculares e/ou elevação de CK com relação temporal plausível)?"
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "current_triglycerides_mg_dl",
+        "label": "Qual é o valor atual dos triglicerídeos (mg/dL)?",
+        "type": "number",
+        "min": 0,
+        "max": 20000,
+        "section": "Segurança"
+      },
+      {
+        "id": "active_or_decompensated_liver_disease",
+        "label": "Há doença hepática ativa ou descompensada, distinta de sintomas musculares atribuídos à estatina?",
+        "type": "boolean",
+        "section": "Segurança hepática"
+      }
+    ],
+    "assistant_rules": {
+      "disl-pancreatite-aguda-em-curso": {
+        "add": {
+          "risk": "emergencia",
+          "red_flags": [
+            "Pancreatite aguda confirmada; a etiologia hipertrigliceridêmica só deve ser atribuída se houver triglicerídeos em faixa grave e avaliação de causas concorrentes"
+          ],
+          "emergency_flow": [
+            "Internar e aplicar suporte guiado por gravidade; confirmar triglicerídeos atuais e investigar causas concorrentes. Não usar heparina rotineiramente para baixar triglicerídeos; considerar insulina se houver hiperglicemia/diabetes descompensado e reservar plasmaférese a casos graves selecionados"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "disl-triglicerideos-extremos-seguimento-curto",
+        "priority": 80,
+        "when": {
+          "all": [
+            {
+              "field": "current_triglycerides_mg_dl",
+              "op": "gte",
+              "value": 1000
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Triglicerídeos em faixa extrema exigem tratamento dirigido e nova dosagem em intervalo curto definido pelo quadro clínico; não aguardar automaticamente 12 semanas"
+          ]
+        }
+      },
+      {
+        "id": "disl-risco-cardiovascular-a-calcular",
+        "priority": 35,
+        "when": {
+          "all": [
+            {
+              "field": "cardiovascular_risk_established",
+              "op": "eq",
+              "value": "a_calcular"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Calcular e registrar risco cardiovascular com ferramenta validada para idade e região (SCORE2/SCORE2-OP ou PREVENT-ASCVD), depois integrar modificadores de risco"
+          ]
+        }
+      },
+      {
+        "id": "disl-hepatopatia-ativa-separada-da-intolerancia-muscular",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "active_or_decompensated_liver_disease",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Doença hepática ativa ou descompensada requer avaliação própria antes de iniciar ou manter estatina; não deve ser classificada como intolerância muscular à estatina"
+          ],
+          "suggested_tests": [
+            "Caracterizar gravidade e atividade da hepatopatia e revisar causas concorrentes com a equipe responsável"
+          ]
+        }
+      }
+    ],
+    "set": {
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "diabetes-mellitus-tipo-2",
+    "replace": [
+      {
+        "old": "O rastreamento é bidirecional: entre 10% e 47% dos pacientes que se apresentam com evento cardiovascular agudo têm diabetes não diagnosticado previamente, o que justifica investigar diabetes sistematicamente em todo paciente com doença cardiovascular, assim como investigar doença cardiovascular e doença renal crônica em todo paciente com diabetes.",
+        "new": "A avaliação é bidirecional, mas não simétrica: diante de doença cardiovascular, deve-se investigar diabetes com testes diagnósticos apropriados; diante de diabetes, deve-se pesquisar sintomas, sinais, fatores de risco, doença renal e cardiovascular já manifesta, sem converter essa avaliação em rastreio sistemático de doença coronariana silenciosa no paciente assintomático."
+      },
+      {
+        "old": "Os agonistas do receptor de GLP-1, testados no LEADER, no SUSTAIN-6 e no REWIND, reduziram de forma consistente o composto de morte cardiovascular, infarto não fatal e AVC não fatal, com magnitude de efeito semelhante entre os três ensaios; o REWIND, com critério de entrada mais amplo, incluindo pacientes com apenas fatores de risco cardiovascular e sem evento prévio, sustenta o uso dessa classe também em prevenção mais primária dentro do diabetes tipo 2. Nenhum dos ensaios comparou diretamente as moléculas entre si, e a semelhança de efeito entre elas não deve ser lida como equivalência comprovada.",
+        "new": "Agonistas do receptor de GLP-1 com benefício cardiovascular demonstrado em ensaios dedicados — como liraglutida no LEADER, semaglutida subcutânea no SUSTAIN-6 e dulaglutida no REWIND — reduziram eventos cardiovasculares maiores. O benefício deve ser atribuído às moléculas e formulações estudadas, não automaticamente a toda a classe; os ensaios não compararam diretamente os fármacos entre si nem provaram equivalência de magnitude. O REWIND incluiu uma maioria sem doença cardiovascular estabelecida, mas com fatores de risco, ampliando a aplicabilidade além da prevenção secundária estrita."
+      },
+      {
+        "old": "os inibidores de SGLT2 exigem suspensão programada antes de cirurgia eletiva ou procedimento invasivo com jejum, pelo risco de cetoacidose diabética euglicêmica — quadro que cursa com glicemia normal ou apenas discretamente elevada e por isso escapa da suspeita clínica habitual —, com reintrodução somente quando a ingesta oral tiver retornado ao padrão basal e a doença aguda intercorrente estiver resolvida; em cirurgia de urgência, sem tempo hábil para suspensão programada, mantém-se vigilância clínica ativa com monitorização de cetonas mesmo diante de glicemia normal.",
+        "new": "os inibidores de SGLT2 exigem suspensão programada antes de cirurgia eletiva ou procedimento invasivo com jejum pelo risco de cetoacidose euglicêmica: canagliflozina, dapagliflozina e empagliflozina devem ser suspensas pelo menos 3 dias antes, e ertugliflozina pelo menos 4 dias antes. A reintrodução só deve ocorrer quando a ingesta e a hidratação estiverem restabelecidas e a doença aguda resolvida; em cirurgia de urgência, sem tempo para suspensão, manter vigilância clínica e monitorização de cetonas mesmo com glicemia normal."
+      },
+      {
+        "old": "Rastreio de neuropatia autonômica cardíaca e de isquemia miocárdica silenciosa em diabéticos de maior risco cardiovascular",
+        "new": "Rastreio clínico de neuropatia autonômica cardíaca; investigação de isquemia deve ser dirigida por sintomas, sinais, ECG ou outra indicação específica, e não feita sistematicamente apenas por o paciente ter diabetes ou risco elevado"
+      },
+      {
+        "old": "ECG de repouso e rastreio oportunístico de fibrilação atrial por palpação de pulso ou ECG: indicado sistematicamente a partir dos 65 anos (Classe I, ESC 2023) e considerado antes disso na presença de fatores de risco associados; limitação — ECG isolado tem baixa sensibilidade para isquemia silenciosa e não substitui investigação dirigida quando há sintoma ou sinal de alarme",
+        "new": "Fibrilação atrial: rastreio oportunístico por palpação de pulso ou ECG durante contatos assistenciais é distinto de rastreio sistemático com ECG repetido/intermitente. O oportunístico é recomendado a partir dos 65 anos; estratégias sistemáticas ficam reservadas a grupos etários/de risco selecionados conforme diretriz e recursos. ECG isolado tem baixa sensibilidade para isquemia silenciosa e não substitui investigação dirigida quando há sintoma ou sinal de alarme"
+      },
+      {
+        "old": "com verificação de PMID/DOI via NCBI E-utilities para as 11 referências citadas",
+        "new": "com verificação de PMID/DOI via NCBI E-utilities para as 11 referências originais; a revisão adversarial acrescentou o ensaio FIDELIO-DKD de finerenona"
+      },
+      {
+        "old": "Pendente apenas revisão humana final (review_status=pendente_revisao).",
+        "new": "Revisão clínica adversarial concluída, com correções de segurança incorporadas ao overlay final."
+      }
+    ],
+    "append": {
+      "source_refs": [
+        "Bakris GL, Agarwal R, Anker SD, et al. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383(23):2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/33264825/"
+      ]
+    },
+    "assistant_questions": {
+      "acute_coronary_symptoms": {
+        "label": "Há dor torácica aguda, nova ou em repouso, independentemente do valor atual da glicemia?"
+      },
+      "current_cv_protective_therapy": {
+        "type": "select",
+        "label": "Qual destas opções descreve as classes atuais com benefício cardiovascular comprovado?",
+        "options": [
+          {
+            "value": "isglt2",
+            "label": "Inibidor de SGLT2"
+          },
+          {
+            "value": "glp1_ra",
+            "label": "Agonista de GLP-1 com benefício cardiovascular demonstrado"
+          },
+          {
+            "value": "ambas",
+            "label": "Ambas as classes"
+          },
+          {
+            "value": "nenhuma",
+            "label": "Nenhuma das duas"
+          }
+        ]
+      }
+    },
+    "assistant_questions_add": [
+      {
+        "id": "sglt2_agent",
+        "label": "Qual inibidor de SGLT2 está em uso no período perioperatório?",
+        "type": "select",
+        "section": "Perioperatório",
+        "options": [
+          {
+            "value": "canagliflozina_dapagliflozina_empagliflozina",
+            "label": "Canagliflozina, dapagliflozina ou empagliflozina"
+          },
+          {
+            "value": "ertugliflozina",
+            "label": "Ertugliflozina"
+          },
+          {
+            "value": "nao_usa",
+            "label": "Não usa inibidor de SGLT2"
+          },
+          {
+            "value": "desconhecido",
+            "label": "Molécula desconhecida"
+          }
+        ]
+      },
+      {
+        "id": "persistent_albuminuria_despite_raas",
+        "label": "Há DRC com albuminúria persistente apesar de inibidor da ECA ou bloqueador do receptor de angiotensina na dose máxima tolerada?",
+        "type": "boolean",
+        "section": "Doença renal crônica"
+      },
+      {
+        "id": "finerenone_renal_potassium_eligible",
+        "label": "A TFGe e o potássio permitem considerar finerenona (TFGe pelo menos 25 mL/min/1,73 m² e potássio dentro do limite de início do protocolo local)?",
+        "type": "boolean",
+        "section": "Doença renal crônica"
+      }
+    ],
+    "assistant_rules": {
+      "dmt2cv-cirurgia-programada-isglt2": {
+        "add": {
+          "risk": "prioritario",
+          "red_flags": [
+            "Risco de cetoacidose euglicêmica perioperatória associada a inibidor de SGLT2"
+          ],
+          "ambulatory_flow": [
+            "Identificar a molécula: suspender canagliflozina, dapagliflozina ou empagliflozina pelo menos 3 dias antes; suspender ertugliflozina pelo menos 4 dias antes"
+          ],
+          "messages": [
+            "Reintroduzir somente após retomada adequada de ingesta e hidratação e resolução da doença aguda; se a molécula for desconhecida, confirmar antes de definir o intervalo"
+          ]
+        }
+      },
+      "dmt2cv-drc-associada": {
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Doença renal crônica associada favorece terapia com benefício renal e cardiovascular comprovado"
+          ],
+          "messages": [
+            "Avaliar TFGe para uso de inibidor de SGLT2 e considerar agonista de GLP-1 com benefício comprovado conforme risco cardiovascular e necessidade metabólica",
+            "Finerenona não é automática em toda DRC: considerar em diabetes tipo 2 com albuminúria persistente apesar de bloqueio do SRAA na dose máxima tolerada, se TFGe e potássio permitirem, com monitorização de potássio"
+          ]
+        }
+      },
+      "dmt2cv-ascvd-estabelecida": {
+        "add": {
+          "risk": "rotina",
+          "supporting": [
+            "Doença cardiovascular aterosclerótica estabelecida é indicação para classe terapêutica com benefício cardiovascular comprovado"
+          ],
+          "messages": [
+            "Priorizar molécula com redução de eventos cardiovasculares maiores demonstrada em ensaio dedicado, incluindo agonista de GLP-1 com benefício cardiovascular comprovado e/ou inibidor de SGLT2 apropriado ao fenótipo clínico"
+          ]
+        }
+      },
+      "dmt2cv-sem-terapia-protetora": {
+        "when": {
+          "all": [
+            {
+              "field": "current_cv_protective_therapy",
+              "op": "eq",
+              "value": "nenhuma"
+            }
+          ]
+        }
+      },
+      "dmt2cv-neuropatia-autonomica": {
+        "add": {
+          "risk": "rotina",
+          "suggested_tests": [
+            "Testes padronizados de variação da frequência cardíaca para neuropatia autonômica cardíaca"
+          ],
+          "messages": [
+            "Neuropatia autonômica cardíaca é marcador de risco aumentado, mas não constitui, isoladamente, indicação de rastreio sistemático de isquemia silenciosa; investigar doença coronariana quando houver sintomas, sinais, ECG alterado ou outra indicação específica"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "dmt2cv-finerenona-elegivel",
+        "priority": 55,
+        "when": {
+          "all": [
+            {
+              "field": "persistent_albuminuria_despite_raas",
+              "op": "truthy"
+            },
+            {
+              "field": "finerenone_renal_potassium_eligible",
+              "op": "truthy"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Considerar finerenona como adição ao bloqueio do SRAA na dose máxima tolerada para DRC diabética albuminúrica, com monitorização precoce e seriada do potássio e da função renal"
+          ]
+        }
+      }
+    ],
+    "set": {
+      "prevalence_rank": 1,
+      "review_status": "revisado"
+    }
+  },
+  {
+    "slug": "tromboembolismo-venoso",
+    "replace": [
+      {
+        "old": "com exceções bem definidas (síndrome antifosfolípide, doença renal crônica grave/diálise, gestação, câncer ativo com risco de sangramento de mucosa).",
+        "new": "com exceções e cautelas definidas pelo contexto (gestação, doença renal grave/diálise, síndrome antifosfolípide de alto risco ou evento arterial, câncer com risco de sangramento de mucosa e situações de absorção comprometida)."
+      },
+      {
+        "old": "Obesidade extrema / pós-cirurgia bariátrica: peso corporal muito elevado (IMC ≥ 40 ou peso ≥ 120 kg) e alterações farmacocinéticas após bypass gástrico (absorção reduzida, trânsito acelerado) podem comprometer a eficácia de doses fixas de DOAC; a ISTH orienta cautela e, em alguns cenários, dosagem de nível plasmático do DOAC ou preferência por HBPM/varfarina monitorada.",
+        "new": "Obesidade extrema e pós-cirurgia bariátrica não são o mesmo cenário. Para TEV em IMC acima de 40 kg/m² ou peso acima de 120 kg, a comunicação ISTH 2021 aceita apixabana ou rivaroxabana em dose padrão e não recomenda dosagem rotineira de nível; dados para dabigatrana e edoxabana são insuficientes. Após cirurgia bariátrica, a absorção pode ser imprevisível: na fase inicial costuma-se preferir anticoagulante parenteral e, depois, decidir entre antagonista da vitamina K monitorável ou DOAC com avaliação especializada do procedimento e da absorção."
+      },
+      {
+        "old": "Trombofilia hereditária e síndrome antifosfolípide (SAF): trombofilias hereditárias (fator V Leiden, mutação da protrombina, deficiência de proteína C/S ou antitrombina) influenciam a decisão de duração da anticoagulação após evento não provocado; a SAF trombótica é uma contraindicação formal a DOACs, que se mostraram inferiores à varfarina nessa população, exigindo anticoagulação com antagonista de vitamina K.",
+        "new": "Trombofilia hereditária e síndrome antifosfolípide (SAF): o resultado de trombofilia só deve ser solicitado quando puder mudar a conduta. Na SAF de alto risco — especialmente triplo-positiva ou com evento arterial — antagonista da vitamina K é preferido e DOAC deve ser evitado; o ensaio TRAPS demonstrou excesso de eventos com rivaroxabana nesse perfil. A evidência é menos definitiva em SAF venosa de baixo risco, simples ou duplamente positiva, e não sustenta transformar os dados de rivaroxabana em contraindicação absoluta e indistinta de todos os DOAC para todo perfil de SAF."
+      },
+      {
+        "old": "Há exceções bem definidas que afastam do DOAC como escolha padrão: síndrome antifosfolípide, sobretudo no perfil triplo-positivo, em que a varfarina permanece a classe padrão;",
+        "new": "Há exceções e cautelas que afastam do DOAC como escolha padrão: síndrome antifosfolípide de alto risco, sobretudo perfil triplo-positivo ou evento arterial, em que antagonista da vitamina K permanece o padrão; nos perfis venosos simples/duplos a evidência é menos definitiva e a escolha deve ser individualizada;"
+      },
+      {
+        "old": "Quando a decisão é estender, o anticoagulante em dose reduzida tem eficácia comparável à dose plena com menos sangramento não maior, e é preferível à aspirina, cujo efeito é modesto e inconsistente entre os ensaios que a testaram e não é equivalente ao anticoagulante. No câncer ativo, a duração mínima recomendada é de pelo menos seis meses, prolongada enquanto a doença permanecer ativa, e a fase estendida também favorece a dose reduzida, com eficácia preservada e menos sangramento clinicamente relevante.",
+        "new": "Quando a decisão é estender TEV não associado a câncer, esquemas reduzidos validados de apixabana ou rivaroxabana podem ser usados em pacientes selecionados e são preferíveis à aspirina, que não é alternativa equivalente. No câncer ativo, a duração inicial é de pelo menos seis meses e costuma ser prolongada enquanto a doença permanecer ativa. Para a fase estendida após pelo menos seis meses, o API-CAT demonstrou especificamente que apixabana 2,5 mg duas vezes ao dia foi não inferior a 5 mg duas vezes ao dia para recorrência e reduziu sangramento clinicamente relevante; esse resultado não deve ser generalizado automaticamente a todo anticoagulante ou a uma fase inicial incompleta."
+      },
+      {
+        "old": "Quando a decisão for estender a anticoagulação, preferir a dose reduzida do anticoagulante sobre a dose plena e sobre a aspirina, que não é uma alternativa equivalente",
+        "new": "Quando a decisão for estender anticoagulação fora do câncer, considerar esquemas reduzidos validados de apixabana ou rivaroxabana em pacientes selecionados; no câncer ativo, usar apixabana reduzida somente na fase estendida após pelo menos seis meses, conforme a população estudada no API-CAT"
+      },
+      {
+        "old": "No câncer ativo, aplicar o escore de Khorana antes de iniciar quimioterapia para selecionar quem se beneficia de tromboprofilaxia primária, e manter a anticoagulação terapêutica por pelo menos seis meses, com preferência por dose reduzida na fase estendida",
+        "new": "No câncer ativo, aplicar o escore de Khorana antes de terapia sistêmica apenas para tromboprofilaxia primária; no TEV estabelecido, manter anticoagulação terapêutica por pelo menos seis meses e considerar apixabana reduzida na fase estendida conforme elegibilidade e risco de sangramento"
+      },
+      {
+        "old": "com verificação de PMID/DOI via NCBI E-utilities para as 28 referências citadas.",
+        "new": "com verificação de PMID/DOI via NCBI E-utilities para as 28 referências originais; a revisão adversarial acrescentou API-CAT, a comunicação ISTH 2021 sobre obesidade e o ensaio TRAPS."
+      },
+      {
+        "old": "Nenhuma dose de fármaco foi incluída em nenhum campo.",
+        "new": "A revisão adversarial acrescentou apenas o esquema de apixabana diretamente validado no API-CAT para delimitar com segurança a fase estendida do TEV associado ao câncer."
+      },
+      {
+        "old": "Pendente apenas revisão humana final (review_status=pendente_revisao).",
+        "new": "Revisão clínica adversarial concluída, com correções de segurança incorporadas ao overlay final."
+      }
+    ],
+    "append": {
+      "source_refs": [
+        "Mahé I, Carrier M, Mayeur D, et al. Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism. N Engl J Med. 2025;392(14):1363-1373. DOI: 10.1056/NEJMoa2416112. PMID: 40162636.",
+        "Martin KA, Beyer-Westendorf J, Davidson BL, Huisman MV, Sandset PM, Moll S. Use of direct oral anticoagulants in patients with obesity for treatment and prevention of venous thromboembolism: Updated communication from the ISTH SSC. J Thromb Haemost. 2021;19(8):1874-1882. DOI: 10.1111/jth.15358. PMID: 34259389.",
+        "Pengo V, Denas G, Zoppellaro G, et al. Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome. Blood. 2018;132(13):1365-1371. DOI: 10.1182/blood-2018-04-848333. PMID: 30002145."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40162636/",
+        "https://pubmed.ncbi.nlm.nih.gov/34259389/",
+        "https://pubmed.ncbi.nlm.nih.gov/30002145/"
+      ]
+    },
+    "assistant_questions_add": [
+      {
+        "id": "obesity_or_bariatric_status",
+        "label": "Há obesidade extrema ou cirurgia bariátrica que possa alterar a escolha do anticoagulante?",
+        "type": "select",
+        "section": "Populações especiais",
+        "options": [
+          {
+            "value": "none",
+            "label": "Nenhuma"
+          },
+          {
+            "value": "extreme_obesity",
+            "label": "IMC acima de 40 kg/m² ou peso acima de 120 kg"
+          },
+          {
+            "value": "recent_bariatric",
+            "label": "Cirurgia bariátrica recente ou absorção ainda incerta"
+          },
+          {
+            "value": "remote_bariatric",
+            "label": "Cirurgia bariátrica remota"
+          }
+        ]
+      },
+      {
+        "id": "aps_profile",
+        "label": "Há síndrome antifosfolípide e qual é o perfil clínico/laboratorial?",
+        "type": "select",
+        "section": "Populações especiais",
+        "options": [
+          {
+            "value": "none",
+            "label": "Sem SAF"
+          },
+          {
+            "value": "triple_positive_or_arterial",
+            "label": "Triplo-positiva e/ou evento arterial"
+          },
+          {
+            "value": "venous_single_or_double",
+            "label": "Evento venoso com positividade simples ou dupla"
+          },
+          {
+            "value": "unknown",
+            "label": "Perfil ainda não definido"
+          }
+        ]
+      }
+    ],
+    "assistant_rules": {
+      "tev-cancer-ativo": {
+        "add": {
+          "risk": "prioritario",
+          "supporting": [
+            "Câncer ativo é fator de risco forte para TEV e recorrência sob anticoagulação"
+          ],
+          "messages": [
+            "Preferir HBPM ou DOAC por pelo menos 6 meses, prolongando enquanto o câncer permanecer ativo; considerar HBPM se houver tumor gastrointestinal ou geniturinário luminal não ressecado, alto risco de sangramento, absorção comprometida ou interação relevante",
+            "Após pelo menos 6 meses, apixabana em dose reduzida é opção validada pelo API-CAT para a fase estendida; não generalizar esse resultado a todos os anticoagulantes nem à fase inicial"
+          ],
+          "suggested_tests": [
+            "Aplicar o escore de Khorana antes de terapia sistêmica somente para decidir tromboprofilaxia primária em quem ainda não tem TEV diagnosticado"
+          ]
+        }
+      }
+    },
+    "assistant_rules_add": [
+      {
+        "id": "tev-obesidade-extrema",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "obesity_or_bariatric_status",
+              "op": "eq",
+              "value": "extreme_obesity"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Obesidade extrema isolada não exige evitar todo DOAC: apixabana ou rivaroxabana em dose padrão são opções aceitas pela comunicação ISTH 2021; dados são insuficientes para recomendar dabigatrana ou edoxabana nesse perfil"
+          ]
+        }
+      },
+      {
+        "id": "tev-cirurgia-bariatrica",
+        "priority": 55,
+        "when": {
+          "any": [
+            {
+              "field": "obesity_or_bariatric_status",
+              "op": "eq",
+              "value": "recent_bariatric"
+            },
+            {
+              "field": "obesity_or_bariatric_status",
+              "op": "eq",
+              "value": "remote_bariatric"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Após cirurgia bariátrica, avaliar procedimento, tempo desde a cirurgia e absorção antes de escolher DOAC; na fase inicial preferir anticoagulação parenteral e depois considerar opção monitorável ou estratégia especializada"
+          ]
+        }
+      },
+      {
+        "id": "tev-saf-alto-risco",
+        "priority": 70,
+        "when": {
+          "all": [
+            {
+              "field": "aps_profile",
+              "op": "eq",
+              "value": "triple_positive_or_arterial"
+            }
+          ]
+        },
+        "add": {
+          "risk": "prioritario",
+          "messages": [
+            "Na SAF triplo-positiva ou com evento arterial, preferir antagonista da vitamina K e evitar DOAC; o excesso de eventos do TRAPS foi demonstrado com rivaroxabana nesse perfil de alto risco"
+          ]
+        }
+      },
+      {
+        "id": "tev-saf-venosa-baixo-risco",
+        "priority": 45,
+        "when": {
+          "all": [
+            {
+              "field": "aps_profile",
+              "op": "eq",
+              "value": "venous_single_or_double"
+            }
+          ]
+        },
+        "add": {
+          "risk": "rotina",
+          "messages": [
+            "Na SAF venosa simples ou duplamente positiva, a evidência é menos definitiva; individualizar em conjunto com hematologia e não extrapolar automaticamente o TRAPS para todo DOAC e todo perfil"
+          ]
+        }
+      }
+    ],
+    "set": {
+      "review_status": "revisado"
+    }
+  }
+]

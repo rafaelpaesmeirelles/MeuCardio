@@ -5,7 +5,7 @@ theme: "Fibrilação atrial"
 kind: fluxograma
 summary: "Árvore de decisão da ESC 2024 para o controle de frequência na FA: cardioversão se há instabilidade, escolha do fármaco pela FEVE (acima de 40% ou até 40%), alvo lenient de repouso abaixo de 110 bpm, combinação quando a monoterapia falha e ablação do nó AV com marca-passo ou TRC no refratário."
 review_status: revisado
-review_note: "Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
+review_note: "Revisão adversarial Codex 08/09/2026: texto original inglês, Table12/RecommendationTable14 e seção7.1 conferidos no PDF institucional Erasmus; gates de descompensação, FEVE desconhecida, taquicardiomiopatia e alternativa de ritmo corrigidos. Produção científica assistida (Claude) e revisão editorial e científica independente (Codex), concluídas em 26/08/2026. Fontes primárias, coerência clínica, lógica dos fluxos, metadados e links foram conferidos; correções incorporadas."
 source_refs:
   - "Van Gelder IC, Rienstra M, Bunting KV, Casado-Arroyo R, Caso V, Crijns HJGM, et al; ESC Scientific Document Group. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723. https://academic.oup.com/eurheartj/article/45/36/3314/7738779 — seção 7.1 e Tabela 12 lidas em reprodução textual: http://www.tomwademd.net/linking-to-the-2024-esc-guidelines-on-atrial-fibrillation-7-r-reduce-symptoms-by-rate-and-rhythm-control/"
   - "Van Gelder IC, Rienstra M, Bunting KV, et al. Wytyczne ESC 2024 dotyczące postępowania w migotaniu przedsionków opracowane we współpracy z EACTS (tradução oficial da diretriz ESC 2024 de FA pela Polskie Towarzystwo Kardiologiczne). Kardiologia Polska. 2024; Zeszyty Edukacyjne 2–3/2024 — Tabela de Recomendações 14, Tabela 12 e Figura 7. https://ptkardio.pl/resources/data/wytyczne/40/ze_kp_2024_23_01.pdf"
@@ -15,7 +15,7 @@ source_refs:
 
 # Fluxograma: Controle de frequência na fibrilação atrial — escolha da droga pela FEVE e alvo de FC (ESC 2024)
 
-Decidido controlar a frequência — como estratégia única, como ponte até a cardioversão ou como adjuvante do controle de ritmo —, sobra a pergunta que a diretriz ESC 2024 responde com uma única variável de corte: **a FEVE**. Acima de 40%, quatro fármacos são de primeira escolha em pé de igualdade, e a digoxina voltou a esse grupo por conta do RATE-AF; em 40% ou menos, diltiazem e verapamil saem da mesa e sobram betabloqueador e digoxina. O alvo inicial é o mesmo em todos os ramos: **frequência de repouso abaixo de 110 bpm**, o controle lenient do RACE II. O que muda de um ramo para outro é só o que fazer quando esse alvo não vem — combinação, e depois ablação do nó AV com marca-passo ou ressincronizador. Os fluxogramas já publicados nesta pasta cobrem a trajetória AF-CARE como um todo (ver fluxograma-fibrilacao-atrial-af-care-esc-2024) e a FA de início recente no pronto-socorro (ver fluxograma-fa-inicio-recente-pronto-socorro); este trata apenas da escolha e do escalonamento da droga de frequência.
+Decidido controlar a frequência — como estratégia única, como ponte até a cardioversão ou como adjuvante do controle de ritmo —, sobra a pergunta que a diretriz ESC 2024 responde com a FEVE em conjunto com estabilidade, perfusão, condução AV, comorbidades e interações. Acima de 40%, quatro fármacos são de primeira escolha em pé de igualdade, e a digoxina voltou a esse grupo por conta do RATE-AF; em 40% ou menos, diltiazem e verapamil saem da mesa e sobram betabloqueador e digoxina. Sem sintomas persistentes ou suspeita de taquicardiomiopatia, pode-se começar pelo alvo de **frequência de repouso abaixo de 110 bpm**, o controle lenient do RACE II. Se o alvo não for atingido, reavaliar causas, tolerância e controle de ritmo antes de considerar escalonamento ou ablação do nó AV. Os fluxogramas já publicados nesta pasta cobrem a trajetória AF-CARE como um todo (ver fluxograma-fibrilacao-atrial-af-care-esc-2024) e a FA de início recente no pronto-socorro (ver fluxograma-fa-inicio-recente-pronto-socorro); este trata apenas da escolha e do escalonamento da droga de frequência.
 
 ## Árvore de decisão
 
@@ -23,22 +23,25 @@ Decidido controlar a frequência — como estratégia única, como ponte até a 
 flowchart TD
   R0["Paciente com FA sem pré-excitação (WPW),<br/>em que se decidiu controlar a frequência ventricular,<br/>como estratégia única ou adjuvante do controle de ritmo"] --> D1{"Instabilidade hemodinâmica aguda<br/>ou em piora, atribuível à FA?"}
 
-  D1 -->|"Sim"| C1(["Cardioversão elétrica imediata, classe I.<br/>Enquanto se prepara, amiodarona IV, digoxina IV,<br/>esmolol ou landiolol podem ser considerados<br/>para controle rápido, classe IIb"])
+  D1 -->|"Sim"| C1(["Cardioversão elétrica imediata, classe I.<br/>Não atrasar cardioversão para testar fármacos<br/>Opções IV apenas em contexto selecionado e monitorizado"])
 
-  D1 -->|"Não"| D2{"FEVE"}
+  D1 -->|"Não"| AC{"Choque, hipoperfusão, IC descompensada,<br/>broncoespasmo grave, BAV relevante ou outra contraindicação?"}
+  AC -->|Sim ou suspeita relevante| IND["Avaliação aguda individual e monitorizada<br/>Não iniciar ou aumentar betabloqueador automaticamente<br/>Tratar causa e definir controle de ritmo/frequência"]
+  AC -->|Não| D2{"FEVE"}
+  D2 -->|Desconhecida| EF["Avaliar função ventricular e perfil hemodinâmico<br/>Não presumir segurança de diltiazem/verapamil"]
 
   D2 -->|"Acima de 40%"| P1["Monoterapia de primeira escolha, classe I:<br/>betabloqueador, diltiazem, verapamil ou digoxina.<br/>Escolha pelo perfil do paciente, ver tabela"]
-  P1 --> D3{"FC de repouso abaixo de 110 bpm<br/>e sintomas controlados?"}
+  P1 --> D3{"FC de repouso abaixo de 110 bpm,<br/>sintomas controlados e sem suspeita<br/>de taquicardiomiopatia?"}
   D3 -->|"Sim"| C2(["Manter a monoterapia com alvo lenient.<br/>Seguir o ciclo AF-CARE com<br/>reavaliação dinâmica"])
   D3 -->|"Não"| P2["Otimizar a dose e combinar: betabloqueador<br/>com digoxina, ou diltiazem ou verapamil<br/>com digoxina, classe IIa, evitando bradicardia"]
   P2 --> D4{"Alvo de frequência e controle<br/>de sintomas atingidos?"}
   D4 -->|"Sim"| C3(["Manter a combinação com vigilância de<br/>bradicardia. Betabloqueador com diltiazem ou<br/>verapamil só em atenção especializada,<br/>com Holter de 24 horas"])
   D4 -->|"Não"| D8{"FA permanente, sintomas graves<br/>e ao menos uma hospitalização<br/>por insuficiência cardíaca?"}
   D8 -->|"Sim"| C4(["Ablação do nó AV combinada a TRC,<br/>classe IIa. Amiodarona só como<br/>última opção farmacológica"])
-  D8 -->|"Não"| C9(["Ablação do nó AV com marca-passo, classe IIa.<br/>Modo de estimulação conforme IC e FEVE.<br/>Amiodarona só como última opção farmacológica"])
+  D8 -->|"Não"| C9(["Reavaliar antes alternativas de controle de ritmo<br/>Se refratário ou inelegível, considerar<br/>ablação do nó AV com marca-passo, classe IIa.<br/>Modo de estimulação conforme IC e FEVE.<br/>Amiodarona só como última opção farmacológica"])
 
   D2 -->|"40% ou menos"| P3["Betabloqueador e/ou digoxina, classe I.<br/>Diltiazem e verapamil contraindicados.<br/>Betabloqueador conforme terapia da IC"]
-  P3 --> D5{"FC de repouso abaixo de 110 bpm<br/>e sintomas controlados?"}
+  P3 --> D5{"FC de repouso abaixo de 110 bpm,<br/>sintomas controlados e sem suspeita<br/>de taquicardiomiopatia?"}
   D5 -->|"Sim"| C5(["Manter o esquema com alvo lenient.<br/>Otimizar a terapia da IC e seguir<br/>o ciclo AF-CARE com reavaliação"])
   D5 -->|"Não"| P4["Combinar betabloqueador com digoxina,<br/>classe IIa, com vigilância de bradicardia,<br/>função renal e nível sérico de digoxina"]
   P4 --> D7{"Alvo de frequência e controle<br/>de sintomas atingidos?"}
@@ -67,7 +70,7 @@ Betabloqueador, diltiazem, verapamil ou digoxina são **recomendados como primei
 
 ## FEVE de 40% ou menos: betabloqueador e/ou digoxina
 
-Na FEVE de 40% ou menos, a recomendação é **betabloqueador e/ou digoxina (classe I, nível B)**. Verapamil e diltiazem estão **contraindicados** nessa faixa pela Tabela 12 da diretriz, o que faz da FEVE o único corte que de fato retira uma opção da mesa. A tabela da diretriz também exclui o atenolol na IC com FEVE reduzida e na gestação.
+Na FEVE de 40% ou menos, a recomendação é **betabloqueador e/ou digoxina (classe I, nível B)**. Verapamil e diltiazem estão **contraindicados** nessa faixa pela Tabela 12 da diretriz, sem que isso elimine as demais contraindicações e precauções, especialmente na descompensação. A tabela da diretriz também exclui o atenolol na IC com FEVE reduzida e na gestação.
 
 Quando o controle de frequência falha nessa população, vale lembrar o que a árvore não decide: em IC com FEVE reduzida e FA sintomática, o CASTLE-AF mostrou redução de mortalidade e hospitalização com ablação por cateter — a discussão dessa estratégia, antes de abolir a condução AV de vez, está em controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af e em fluxograma-indicacao-ablacao-cateter-fa-esc-2024.
 
@@ -98,12 +101,11 @@ No refratário, a ablação do nó AV com marca-passo **deve ser considerada (cl
 | Digoxina | 0,5 mg em bolus, ou 0,75–1,5 mg em 24 h em doses divididas | 0,0625–0,25 mg 1x/dia | Níveis altos associados a eventos adversos; checar função renal antes e ajustar na DRC |
 | Amiodarona | 300 mg em 250 mL de glicose 5% em 30–60 min, depois 900–1200 mg em 24 h, via central | 200 mg 1x/dia após carga de 200 mg 3x/dia por 4 semanas | Contraindicada na sensibilidade ao iodo; toxicidade pulmonar, ocular, hepática e tireoidiana; múltiplas interações |
 
-Todos os fármacos de controle de frequência, inclusive amiodarona IV, são contraindicados na síndrome de Wolff-Parkinson-White. Propranolol e labetalol não são recomendados como terapia específica de controle de frequência na FA. Para a dose baixa de digoxina do RATE-AF, monitorização de função renal, potássio e toxicidade, ver digoxina e fluxograma-intoxicacao-digitalica.
+Na FA pré-excitada, evitar fármacos que modulam a condução nodal AV e amiodarona IV; seguir a via especializada, com cardioversão imediata se houver instabilidade. Não extrapolar essa proibição a todo traçado com pré-excitação fora desse contexto. Propranolol e labetalol não são recomendados como terapia específica de controle de frequência na FA. Para a dose baixa de digoxina do RATE-AF, monitorização de função renal, potássio e toxicidade, ver digoxina e fluxograma-intoxicacao-digitalica.
 
 ## Limitações e o que confirmar
 
-- Os números de classe e nível da Tabela de Recomendações 14 foram lidos na tradução oficial polonesa publicada em Kardiologia Polska, não na tabela em inglês do European Heart Journal, cujo texto integral não carregou nesta sessão; a tradução polonesa grafa o corte da segunda recomendação como "LVEF <40%", enquanto a Tabela 12 e o resumo da ACC usam "≤40%" — adotou-se 40% ou menos, coerente com a contraindicação de verapamil e diltiazem.
-- O texto da seção 7.1 e da Tabela 12 em inglês foi lido em reprodução textual de terceiros, conferida linha a linha contra a tradução oficial; a leitura direta do original permanece pendente para a revisão independente.
+- A Tabela de Recomendações 14 e a Tabela 12 foram agora conferidas no original inglês: corte ≤40% confirmado; o acesso anterior apenas à tradução não permanece como pendência.
 - A árvore posiciona a ablação do nó AV com TRC depois da falha da combinação farmacológica; a diretriz recomenda considerá-la na FA permanente gravemente sintomática com hospitalização por IC sem exigir explicitamente essa etapa prévia, e no APAF-CRT o comparador foi controle farmacológico de frequência — a antecipação é decisão de julgamento clínico.
 - A diretriz não define numericamente o alvo "estrito" para quem persiste sintomático; o valor de 80 bpm em repouso citado aqui é o braço estrito do RACE II, não uma meta recomendada.
 - Digitoxina consta da Tabela 12 (0,05–0,1 mg 1x/dia) mas foi omitida da tabela acima por não estar disponível no Brasil.
@@ -117,3 +119,5 @@ Todos os fármacos de controle de frequência, inclusive amiodarona IV, são con
 - [Ablação do Nó Atrioventricular e Ressincronização na FA Permanente: o Ensaio APAF-CRT](/biblioteca/ablacao-do-no-atrioventricular-e-ressincronizacao-na-fa-permanente-o-ensaio-apaf-crt)
 - [Fluxograma: indicação de ablação por cateter na fibrilação atrial (ESC 2024)](/biblioteca/fluxograma-indicacao-ablacao-cateter-fa-esc-2024)
 - [Fluxograma: intoxicação digitálica com risco de vida](/biblioteca/fluxograma-intoxicacao-digitalica)
+
+[Texto primário ESC 2024 — PDF institucional Erasmus](https://pure.eur.nl/ws/portalfiles/portal/182889750/2024_ESC_Guidelines_for_the_management_of_atrial_fibrillation_developed_in_collaboration_with_the_European_Association_for_Cardio-Thoracic_Surgery_EACTS_.pdf).

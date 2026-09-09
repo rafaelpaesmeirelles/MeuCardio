@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr910-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr910": "a2c10408dc9849490e31f8a896cd52121aab3c1c"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-sinalizadores-ambulatoriais-vacinacao-cardiopata",
+      "sinalizadores-ambulatoriais-vacinacao-cardiopata-quando-escalar",
+      "vacinacao-cardiopata-no-consultorio-pos-sca-ic-checklist"
+    ]
+  }
+}

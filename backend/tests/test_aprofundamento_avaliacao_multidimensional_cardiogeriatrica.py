@@ -69,6 +69,8 @@ ALLOWED_ADD_KEYS = {
 }
 
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
+    # Sarcopenia é um domínio explícito da avaliação geriátrica ampla.
+    "sarcopenia-e-risco-cardiovascular-metanalise-de-estudos-longitudinais",
     # também em fragilidade-pre-procedimento-cardiovascular e valvopatias
     "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
     # também em insuficiencia-cardiaca-no-idoso

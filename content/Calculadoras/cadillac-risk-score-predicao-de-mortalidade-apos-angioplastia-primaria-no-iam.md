@@ -4,7 +4,9 @@ slug: cadillac-risk-score-predicao-de-mortalidade-apos-angioplastia-primaria-no-
 theme: "Calculadoras"
 kind: calculadora
 review_status: revisado
-source_refs: ["Halkin A, Singh M, Nikolsky E, Grines CL, Tcheng JE, Garcia E, Cox DA, Turco M, Stuckey TD, Na Y, Lansky AJ, Gersh BJ, O'Neill WW, Mehran R, Stone GW. Prediction of mortality after primary percutaneous coronary intervention for acute myocardial infarction: the CADILLAC risk score. J Am Coll Cardiol. 2005;45(9):1397-1405. DOI: 10.1016/j.jacc.2005.01.041. PMID: 15862409 — artigo de derivação e validação, abstract completo obtido verbatim nesta sessão via PubMed E-utilities (esearch por 'CADILLAC risk score Halkin primary angioplasty myocardial infarction', depois efetch em texto puro do PMID confirmado). As sete variáveis, seus pontos, os tamanhos de coorte e os quatro c-estatísticos citados neste documento vêm todos, literalmente, desse abstract — não de calculadora de terceiros nem de fonte secundária.", "Busca dirigida nesta sessão, via PubMed E-utilities (esearch, termo 'CADILLAC risk score validation', sem filtro de data): retornou 6 resultados, nenhum dos quais é uma validação externa independente e dedicada do CADILLAC risk score fora da coorte Stent-PAMI já incluída no artigo de derivação — os demais são escores concorrentes (ex.: ALPHA score, PMID 28029531; ACTION-GWTG, PMID 29254271; modelos de aprendizado de máquina mais recentes) que usam o CADILLAC risk score apenas como comparador. Só os títulos desses seis registros foram lidos (esummary), não os abstracts completos — por isso não entram como fonte de dado numérico neste documento, só como base para a afirmação de que uma validação externa dedicada não foi localizada nesta pesquisa."]
+published: false
+review_note: "Revisão clínica individual em 2026-09-08: derivação/validação original (PMID 15862409) e validação externa contemporânea (PMID 34772341/PMCID PMC8588705) conferidas; cortes operacionais, limites de generalização e uso estritamente prognóstico explicitados."
+source_refs: ["Halkin A, Singh M, Nikolsky E, Grines CL, Tcheng JE, Garcia E, Cox DA, Turco M, Stuckey TD, Na Y, Lansky AJ, Gersh BJ, O'Neill WW, Mehran R, Stone GW. Prediction of mortality after primary percutaneous coronary intervention for acute myocardial infarction: the CADILLAC risk score. J Am Coll Cardiol. 2005;45(9):1397-1405. DOI: 10.1016/j.jacc.2005.01.041. PMID: 15862409.", "Wilson RS, Malamas P, Dembo B, Lall SK, Zaman N, Peterson BR. The CADILLAC risk score accurately identifies patients at low risk for in-hospital mortality and adverse cardiovascular events following ST elevation myocardial infarction. BMC Cardiovasc Disord. 2021;21(1):533. DOI: 10.1186/s12872-021-02348-0. PMID: 34772341. PMCID: PMC8588705 — validação contemporânea retrospectiva em 341 pacientes com STEMI tratados por PCI primária."]
 legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Calculadoras já cobria escores de risco cirúrgico (EuroSCORE II, STS Risk Score), o escore anatômico de complexidade coronariana (SYNTAX e SYNTAX Score II, para decisão entre PCI e CABG) e os escores de síndrome coronariana aguda aplicados na apresentação/triagem (TIMI, GRACE 2.0, HEART) — mas nenhum documento cobria um escore que prediz mortalidade especificamente DEPOIS de realizada a angioplastia primária no IAM, incorporando o resultado angiográfico pós-procedimento (fluxo TIMI) e a função ventricular basal. Essa é uma pergunta distinta: não é 'qual a probabilidade de complicação antes de decidir a estratégia' (GRACE/TIMI/HEART) nem 'CABG ou PCI é melhor para esta anatomia' (SYNTAX), é 'este paciente, já submetido à angioplastia primária, tem que prognóstico de curto e longo prazo'. Checagem de colisão feita em content/**/*.md, não só nos JSONs: a pasta Doença_coronariana já tem documentos sobre o ENSAIO CADILLAC (Stone GW, NEJM 2002, PMID 11919304 — stent vs. PTCA ± abciximabe) e sobre ADMIRAL/EPILOG (outros ensaios de abciximab na ICP) — nenhum deles trata do escore de risco derivado posteriormente a partir da coorte CADILLAC, que é o objeto deste documento; são complementares, não duplicados, e o ensaio original foi linkado na seção Tudo com Tudo. Verificado via PubMed E-utilities nesta sessão (esearch + efetch de texto puro do abstract, PMID confirmado diretamente)."
 ---
 
@@ -22,27 +24,27 @@ Direto do abstract (PMID 15862409):
 - **Coorte de derivação**: ensaio **CADILLAC** (*Controlled Abciximab and Device Investigation to Lower Late Angioplasty Complications*) — **2.082 pacientes**
 - **Coorte de validação**: ensaio **Stent-PAMI** (*Stent-Primary Angioplasty in Myocardial Infarction*) — **900 pacientes**
 - **Método**: regressão logística e o procedimento *jackknife* para selecionar correlatos independentes de **mortalidade em 1 ano**, que foram então ponderados e integrados num sistema de pontuação inteira (escore de pontos)
-- Ambas as coortes são de **ensaios clínicos randomizados multicêntricos de PCI primária no IAM** — as duas maiores disponíveis para esse desenho, segundo os autores
+- Ambas as coortes vieram de **ensaios clínicos randomizados multicêntricos de PCI primária no IAM**. O escore, porém, resulta de uma análise prognóstica pós-hoc dessas bases; sua derivação e validação não constituem um ensaio randomizado do uso do escore
 
 ## As sete variáveis e a pontuação
 
-Citação literal do resultado do artigo (PMID 15862409) — sete variáveis selecionadas do modelo multivariado inicial, ponderadas proporcionalmente à sua razão de chances (*odds ratio*) para mortalidade em 1 ano:
+O modelo de Halkin et al. (PMID 15862409) selecionou sete variáveis do modelo multivariado inicial e as ponderou conforme sua associação com mortalidade em 1 ano. Os cortes operacionais são reproduzidos conforme a literatura primária de derivação/validação:
 
 | Variável | Pontos |
 |---|---|
 | Idade > 65 anos | 2 |
 | Classe de Killip 2/3 | 3 |
 | Fração de ejeção do ventrículo esquerdo basal < 40% | 4 |
-| Anemia | 2 |
-| Insuficiência renal | 3 |
+| Anemia: hematócrito <39% em homens ou <36% em mulheres | 2 |
+| Insuficiência renal: clearance de creatinina estimado <60 mL/min | 3 |
 | Doença trivascular | 2 |
-| Fluxo TIMI pós-procedimento (grau) | 2 |
+| Fluxo TIMI final 0–2 | 2 |
 
 **Escore total**: soma direta dos pontos (máximo aritmético de 18, calculado a partir da soma dos sete itens acima — o abstract não enuncia esse total explicitamente, é resultado direto da soma).
 
 **Achado destacado pelos próprios autores**: entre as sete variáveis, a **fração de ejeção do ventrículo esquerdo basal é o preditor isolado mais forte de sobrevida** — é também a variável com maior peso (4 pontos) e a que os autores citam nominalmente na conclusão como devendo ser incorporada a modelos de risco após reperfusão.
 
-**O que o abstract não define, e que fica como VERIFICAÇÃO HUMANA NECESSÁRIA**: os cortes operacionais exatos usados para "insuficiência renal" (por exemplo, o valor de creatinina ou clearance) e para "anemia" (o valor de hemoglobina) neste artigo especificamente. Como a insuficiência renal é uma das sete variáveis do escore, o cálculo do clearance de creatinina pode ser apoiado no documento desta pasta sobre [Clearance de Creatinina (Cockcroft-Gault)](/biblioteca/clearance-de-creatinina-cockcroft-gault-ajuste-de-dose-em-cardiologia) — mas o corte específico usado pelos autores do CADILLAC risk score para classificar "insuficiência renal" não foi confirmado nesta pesquisa.
+Os cortes operacionais acima constam da literatura primária de derivação/validação. O cálculo exige os dados originais do paciente; valores ausentes, unidades incompatíveis ou outra definição laboratorial não devem ser completados por aproximação. Para o cálculo do clearance, consulte também [Clearance de Creatinina (Cockcroft-Gault)](/biblioteca/clearance-de-creatinina-cockcroft-gault-ajuste-de-dose-em-cardiologia), lembrando que o documento de apoio não substitui a definição do próprio escore.
 
 ## Estratificação de risco e desempenho (c-estatística)
 
@@ -62,24 +64,24 @@ Os autores classificam essa performance como "excelente acurácia prognóstica p
 
 **O que este documento NÃO confirma**: o abstract não traz as taxas de mortalidade absoluta (percentual) observadas em cada um dos três estratos de risco (baixo/intermediário/alto), nem em 30 dias nem em 1 ano — só a discriminação (c-estatística) do modelo como um todo. Reproduzir essas taxas a partir de uma calculadora online ou de uma tabela de terceiros não conferida contra o texto completo repetiria o erro que este projeto já identificou e corrigiu antes no documento de GRACE 2.0 desta pasta. Quem precisar da mortalidade absoluta por estrato deve confirmar contra o texto completo do artigo original (PMID 15862409), não contra este resumo.
 
-## Validação externa posterior — o que não foi encontrado
+## Validação externa posterior
 
-Uma busca dirigida no PubMed nesta sessão (termo "CADILLAC risk score validation", sem filtro de data) não localizou nenhum estudo de **validação externa independente e dedicada** do CADILLAC risk score além da própria coorte Stent-PAMI já incluída no artigo de derivação de 2005. Os seis registros retornados por essa busca são, na maioria, escores concorrentes mais recentes (ex.: o escore ALPHA, que acrescenta via de acesso vascular, PMID 28029531; o escore ACTION-GWTG, PMID 29254271; modelos de aprendizado de máquina para IAM) que citam o CADILLAC risk score apenas como comparador histórico — não foram lidos em texto completo nesta sessão, só seus títulos, e por isso não sustentam nenhum número específico neste documento.
+Há estudos posteriores que aplicaram o CADILLAC em outras coortes. Em uma análise retrospectiva contemporânea de **341 pacientes com STEMI tratados por PCI primária** em um único centro entre 2014 e 2018 (Wilson et al., 2021; PMID 34772341), o escore foi comparado a TIMI, GRACE e classe de Killip. A coorte excluiu pacientes com parada cardíaca, choque cardiogênico ou necessidade de suporte mecânico, e avaliou desfechos diferentes dos da derivação; portanto, não reproduz integralmente a população nem as estimativas originais. Ela confirma que o CADILLAC já foi avaliado externamente, mas não elimina a necessidade de calibração local nem autoriza transportar as c-estatísticas de 2005 para qualquer serviço atual.
 
 ## O que muda na prática
 
 - O CADILLAC risk score responde a uma pergunta pós-procedimento: dado que a PCI primária já foi feita e o resultado angiográfico já é conhecido (fluxo TIMI final), qual o risco de morte em 30 dias e em 1 ano deste paciente específico.
-- Isso o distingue de TIMI, GRACE 2.0 e HEART — calculados **antes** ou **no momento da apresentação**, sem incorporar o resultado do próprio procedimento — e do SYNTAX/SYNTAX Score II, que respondem a uma pergunta de **escolha de estratégia de revascularização** (PCI vs. CABG), não de prognóstico pós-PCI primária no IAM.
-- A classe de Killip 2/3 (sinais de insuficiência cardíaca) e a fração de ejeção < 40% são, dentro deste escore, sinalizadores diretos de maior risco — pacientes que pontuam alto nessas duas variáveis (e por consequência caem no estrato de "alto risco", ≥6 pontos) são também os candidatos mais prováveis a evoluir para choque cardiogênico refratário, cenário em que a decisão sobre suporte mecânico circulatório pode se apoiar no [Escore SAVE (sobrevida após ECMO venoarterial no choque cardiogênico refratário)](/biblioteca/escore-save-sobrevida-apos-ecmo-venoarterial-no-choque-cardiogenico-refratario), já coberto nesta pasta.
+- Isso o distingue de TIMI, GRACE 2.0 e HEART — escores de risco aplicados na apresentação, sem incorporar o resultado do próprio procedimento — e do SYNTAX/SYNTAX Score II, que respondem a uma pergunta de **escolha de estratégia de revascularização** (PCI vs. CABG), não de prognóstico pós-PCI primária no IAM.
+- Classe de Killip 2/3 e fração de ejeção <40% aumentam a pontuação, mas o total é um marcador prognóstico. Ele **não indica, isoladamente, UTI, suporte mecânico, nova revascularização ou alta**, nem prediz especificamente choque refratário.
 - O escore usa a **classificação de Killip** como uma de suas sete variáveis de entrada — ver o documento dedicado, [Classificação de Killip](/biblioteca/classificacao-de-killip-classe-funcional-na-fase-aguda-do-infarto), para a definição completa das quatro classes.
 
 ## Armadilhas clínicas
 
-- **Confundir com GRACE 2.0 ou TIMI** — estes avaliam risco na apresentação da síndrome coronariana aguda, para orientar timing de estratégia invasiva; o CADILLAC risk score pressupõe que a PCI primária **já foi realizada**, incluindo o fluxo TIMI pós-procedimento como variável de entrada. Não são intercambiáveis nem medem o mesmo momento da doença.
+- **Confundir com GRACE 2.0 ou TIMI** — estes avaliam risco na apresentação da síndrome coronariana aguda; o CADILLAC risk score pressupõe que a PCI primária **já foi realizada**, incluindo o fluxo TIMI pós-procedimento como variável de entrada. Não são intercambiáveis nem medem o mesmo momento da doença.
 - **Confundir com SYNTAX/SYNTAX Score II** — aqueles orientam a escolha entre PCI e CABG por complexidade anatômica (mais aplicável a doença estável ou multiarterial fora do contexto de PCI primária de emergência); o CADILLAC risk score não participa dessa decisão, é estritamente prognóstico após a PCI primária já ter sido feita.
 - **Tratar o escore total (máximo aritmético 18) como validado enquanto tal pelo artigo** — o valor máximo é resultado de soma simples dos pontos listados no abstract, não um número que os autores enunciam explicitamente; os estratos de risco (0-2/3-5/≥6) sim são citados literalmente.
 - **Buscar as taxas de mortalidade absolutas por estrato de risco em calculadora de terceiros e tratá-las como confirmadas** — este documento não confirma essas taxas (ver seção acima); só a discriminação (c-estatística) foi confirmada diretamente do abstract.
-- **Aplicar os cortes de "insuficiência renal" e "anemia" por intuição clínica genérica** — os valores exatos usados pelos autores para essas duas variáveis não foram confirmados nesta pesquisa; ver VERIFICAÇÃO HUMANA NECESSÁRIA na seção "As sete variáveis e a pontuação".
+- **Aplicar definições locais diferentes às variáveis** — anemia usa hematócrito <39% em homens ou <36% em mulheres, e insuficiência renal usa clearance estimado <60 mL/min; substituir esses critérios por outros altera o escore validado.
 
 ## Tudo com Tudo
 

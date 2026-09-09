@@ -1,12 +1,25 @@
 ---
-title: "Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)"
+title: 'Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)'
 slug: doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025
-theme: "Valvopatias"
+theme: Valvopatias
 kind: diretriz
 review_status: revisado
-review_note: "Diretriz ESC/EACTS 2025, registro PubMed e corrigendum de julho de 2026 conferidos em 26/08/2026. O corrigendum remove apenas texto duplicado na seção de lacunas de evidência e não altera recomendações reproduzidas neste documento."
-source_refs: ["Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.", "Corrigendum to: 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg. 2026;68(7):ezag193. DOI: 10.1093/ejcts/ezag193. PMID: 42452857.", "European Society of Cardiology. 2025 ESC/EACTS Guidelines for the management of valvular heart disease — página oficial. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"]
-legacy_source: "Fusão de dois documentos de valvopatia na mesma pasta, com 13 e 9 seções e 4 em comum. Revisado a fundo em 30/07/2026: o corte etário de TAVI (≥70 anos, valva tricúspide, independente do risco cirúrgico) já estava correto aqui e conferido de forma independente contra múltiplas fontes secundárias concordantes — consistente com os dois outros documentos desta pasta dedicados à mesma mudança, revisados na mesma sessão. Seção 'Criterios internacao', vazia, preenchida."
+review_note: 'Diretriz ESC/EACTS 2025, registro PubMed e corrigendum de julho de 2026 conferidos em 26/08/2026.
+  O corrigendum remove apenas texto duplicado na seção de lacunas de evidência e não altera recomendações reproduzidas
+  neste documento. Revisão independente de dependência em08/09/2026: TAVI≥70exigeacessotransfemoral; TEERsecundáriacoerenteESC2025;
+  antitrombóticoTAVIporindicação.'
+source_refs:
+- 'Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur
+  J Cardiothorac Surg. 2025;67(8):ezaf276. DOI: 10.1093/ejcts/ezaf276. PMID: 40878291.'
+- 'Corrigendum to: 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur J Cardiothorac Surg.
+  2026;68(7):ezag193. DOI: 10.1093/ejcts/ezag193. PMID: 42452857.'
+- European Society of Cardiology. 2025 ESC/EACTS Guidelines for the management of valvular heart disease — página
+  oficial. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/
+legacy_source: 'Fusão de dois documentos de valvopatia na mesma pasta, com 13 e 9 seções e 4 em comum. Revisado
+  a fundo em 30/07/2026: o corte etário de TAVI (≥70 anos, valva tricúspide, independente do risco cirúrgico) já
+  estava correto aqui e conferido de forma independente contra múltiplas fontes secundárias concordantes — consistente
+  com os dois outros documentos desta pasta dedicados à mesma mudança, revisados na mesma sessão. Seção ''Criterios
+  internacao'', vazia, preenchida.'
 ---
 
 # Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)
@@ -27,10 +40,10 @@ Decisão em pacientes idosos requer integração de múltiplos parâmetros: expe
 Seleção do modo mais apropriado de intervenção para estenose aórtica grave pelo Heart Team deve considerar características clínicas (idade, expectativa de vida, condição geral), características anatômicas, riscos relativos de SAVR vs. TAVI, viabilidade de TAVI transfemoral, experiência local e dados de resultado, além de preferência informada do paciente
 
 ## Regurgitacao mitral primaria
-Reparo cirúrgico é método preferido se reparo durável puder ser alcançado; TEER (reparo transcateter borda-a-borda) é alternativa segura mas menos eficaz, considerada em contraindicação cirúrgica ou alto risco operatório
+Reparo cirúrgico é método preferido se reparo durável puder ser alcançado; TEER (reparo transcateter borda-a-borda) é alternativa em pacientes selecionados, com eficácia e riscos próprios, considerada em contraindicação cirúrgica ou alto risco operatório
 
 ## Regurgitacao mitral secundaria grave
-Terapia médica guiada por diretriz (incluindo TRC se indicada) deve ser primeiro passo; se sintomático, cirurgia mitral concomitante recomendada se houver indicação de revascularização; TEER deve ser considerada em não elegíveis para cirurgia com critérios de boa resposta
+Terapia médica guiada por diretriz (incluindo TRC se indicada) deve ser primeiro passo; se sintomático, cirurgia mitral concomitante recomendada se houver indicação de revascularização; na forma ventricular, TEER é recomendado em pacientes selecionados que preenchem os critérios ESC2025, para hospitalização porIC e qualidade devida; diferenciar o fenótipo atrial
 
 ## Regurgitacao tricuspide
 Deve ser tratada liberalmente no momento de cirurgia valvar esquerda; cirurgia isolada de regurgitação tricúspide secundária grave requer avaliação abrangente de doença subjacente, hemodinâmica pulmonar e função de VD
@@ -59,7 +72,7 @@ Heart Team dentro de redes regionais (Heart Valve Networks) é central para diag
 ## Estenose aortica
 
 - **criterios intervencao**: Critérios de escolha entre TAVI e troca valvar cirúrgica refinados, considerando características clínicas (idade, expectativa de vida, comorbidades, preferência do paciente), anatomia de acesso/valva e trajetória de vida do paciente
-- **novo corte idade tavi**: TAVI estendida a pacientes anatomicamente adequados com ≥70 anos (reduzido de 75 anos), independentemente do risco cirúrgico estimado, se valva aórtica tricúspide
+- **novo corte idade tavi**: TAVI estendida a pacientes anatomicamente adequados com ≥70 anos (reduzido de 75 anos), independentemente do risco cirúrgico estimado, se valva aórtica tricúspide e TAVI transfemoral viável, após avaliação anatômica e clínica pelo Heart Team
 - **papel cirurgia**: Cirurgia continua sendo preferida em pacientes jovens de baixo risco que podem necessitar múltiplas intervenções futuras e em anatomia bicúspide
 - **assintomaticos graves**: Nova recomendação Classe IIa para tratamento precoce em estenose aórtica grave de alto gradiente assintomática
 - **fonte**: ESC 2025
@@ -74,7 +87,7 @@ Heart Team dentro de redes regionais (Heart Valve Networks) é central para diag
 
 ## Antitrombotico pos tavi
 
-Estratégias antitrombóticas simplificadas, incluindo uso restrito de dupla antiagregação plaquetária pós-TAVI em pacientes sem outra indicação de anticoagulação oral
+Na ausência de indicação independente de anticoagulação, TAVI não autoriza anticoagulação rotineira; antiagregação segue recomendação específica e DAPT depende de outra indicação, como ICP recente. Se houver indicação de OAC, definir esquema e necessidade real de antiagregante associado para limitar sangramento.
 
 ## Populacoes especiais
 

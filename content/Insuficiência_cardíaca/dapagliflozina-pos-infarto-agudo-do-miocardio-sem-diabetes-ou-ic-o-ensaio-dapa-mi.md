@@ -4,6 +4,8 @@ slug: dapagliflozina-pos-infarto-agudo-do-miocardio-sem-diabetes-ou-ic-o-ensaio-
 theme: "Insuficiência cardíaca"
 kind: estudo
 review_status: revisado
+published: false
+review_note: "Revisão clínica e editorial consolidada em 08/09/2026. Preservada a distinção entre o win ratio cardiometabólico e o desfecho clínico duro neutro de morte cardiovascular ou hospitalização por insuficiência cardíaca."
 source_refs: ["James S, Erlinge D, Storey RF, McGuire DK, de Belder M, Eriksson N, Andersen K, Austin D, Arefalk G, Carrick D, Hofmann R, Hoole SP, Jones DA, Lee K, Tygesen H, Johansson PA, Langkilde AM, Ridderstråle W, Parvaresh Rizi E, Deanfield J, Oldgren J; DAPA-MI Trial Committees and Investigators. Dapagliflozin in Myocardial Infarction without Diabetes or Heart Failure. NEJM Evid. 2024;3(2):EVIDoa2300286. DOI: 10.1056/EVIDoa2300286. PMID: 38320489. Epub 2023 Nov 11 (apresentado no AHA Scientific Sessions 2023). NCT04564742 — abstract completo conferido no PubMed via E-utilities nesta sessão (09/09/2026)."]
 legacy_source: "Documento novo, escrito em 09/09/2026. A biblioteca já tinha o EMPACT-MI (empagliflozina pós-IAM, prevenção de IC incidente em paciente de alto risco sem IC prévia) e o EMMY (citado apenas no legacy_source do EMPACT-MI, não coberto em arquivo próprio), mas nenhum documento tratava do DAPA-MI — o ensaio-espelho com dapagliflozina, de desenho registry-based e desfecho primário por win ratio hierárquico, que é justamente o tipo de comparação metodológica que falta nesta pasta. Conferido por grep (sglt2, sacubitril, finerenona, tirzepatida, semaglutida) e por título antes de escrever; não há duplicata."
 ---

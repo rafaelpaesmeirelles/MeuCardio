@@ -1,0 +1,729 @@
+[
+  {
+    "slug": "canalopatias-cardiacas-hereditarias",
+    "set": {
+      "assistant_questions": [
+        {
+          "id": "sudden_cardiac_arrest_history",
+          "label": "O paciente já teve parada cardíaca abortada (ressuscitada) alguma vez na vida?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "recurrent_syncope",
+          "label": "O paciente já teve mais de um episódio de síncope de provável causa cardíaca?",
+          "type": "boolean",
+          "required": true,
+          "section": "Segurança"
+        },
+        {
+          "id": "syncope_triggers",
+          "label": "Se já houve síncope, quais foram os gatilhos? Deixar vazio se nunca ocorreu.",
+          "type": "multiselect",
+          "required": false,
+          "section": "História",
+          "options": [
+            {
+              "value": "esforco_fisico",
+              "label": "Durante ou logo após esforço físico"
+            },
+            {
+              "value": "emocao_susto_barulho",
+              "label": "Desencadeada por emoção forte, susto ou barulho (ex.: despertador, telefone)"
+            },
+            {
+              "value": "durante_sono_repouso",
+              "label": "Durante o sono ou em repouso"
+            },
+            {
+              "value": "sem_gatilho_identificado",
+              "label": "Sem gatilho identificável"
+            }
+          ]
+        },
+        {
+          "id": "ecg_channelopathy_pattern",
+          "label": "O ECG já documentou algum destes padrões?",
+          "type": "select",
+          "required": true,
+          "section": "Exames",
+          "options": [
+            {
+              "value": "brugada_tipo1_espontaneo",
+              "label": "Padrão de Brugada tipo 1 espontâneo"
+            },
+            {
+              "value": "qt_longo_documentado",
+              "label": "QT longo documentado (QTc prolongado)"
+            },
+            {
+              "value": "qt_curto_documentado",
+              "label": "QT curto documentado (QTc curto)"
+            },
+            {
+              "value": "nao_documentado",
+              "label": "Nenhum padrão documentado / ECG normal ou não realizado"
+            },
+            {
+              "value": "brugada_tipo2_3",
+              "label": "Padrão Brugada tipo 2/3 (não diagnóstico isoladamente)"
+            },
+            {
+              "value": "brugada_tipo1_febre",
+              "label": "Tipo 1 durante febre"
+            },
+            {
+              "value": "brugada_tipo1_farmaco",
+              "label": "Tipo 1 induzido em teste farmacológico"
+            }
+          ]
+        },
+        {
+          "id": "family_sudden_death_young",
+          "label": "Há história familiar de morte súbita inexplicada em parente jovem (antes dos 40-50 anos)?",
+          "type": "boolean",
+          "required": true,
+          "section": "História familiar"
+        },
+        {
+          "id": "competitive_athlete",
+          "label": "O paciente é atleta competitivo ou pratica esporte de alta intensidade regularmente?",
+          "type": "boolean",
+          "required": false,
+          "section": "Perfil"
+        },
+        {
+          "id": "pregnancy_postpartum_status",
+          "label": "Situação reprodutiva atual da paciente",
+          "type": "select",
+          "required": false,
+          "section": "Perfil",
+          "options": [
+            {
+              "value": "gestante",
+              "label": "Gestante no momento"
+            },
+            {
+              "value": "nao_aplicavel",
+              "label": "Não gestante nem puérpera / não aplicável"
+            },
+            {
+              "value": "puerperio_ate_9_meses",
+              "label": "Até 9 meses após o parto"
+            },
+            {
+              "value": "puerperio_9_a_12_meses",
+              "label": "Mais de 9 até 12 meses após o parto"
+            }
+          ]
+        },
+        {
+          "id": "beta_blocker_adherence",
+          "label": "Situação de uso do betabloqueador prescrito para a canalopatia",
+          "type": "select",
+          "required": false,
+          "section": "Tratamento",
+          "options": [
+            {
+              "value": "em_uso_regular",
+              "label": "Em uso regular do betabloqueador prescrito"
+            },
+            {
+              "value": "uso_irregular_ou_interrompido",
+              "label": "Uso irregular ou interrompido recentemente"
+            },
+            {
+              "value": "nao_prescrito",
+              "label": "Betabloqueador não prescrito / não indicado até o momento"
+            }
+          ]
+        },
+        {
+          "id": "acute_arrhythmic_event",
+          "label": "Há evento agudo agora ou ainda sem avaliação: parada recém-revertida, síncope recente suspeita de arritmia, arritmia sustentada, dor torácica/dispneia importante ou instabilidade?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "has_syncope_history",
+          "label": "Já ocorreu algum episódio de síncope?",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "id": "icd_shock_context",
+          "label": "Qual o contexto dos choques do CDI?",
+          "type": "select",
+          "options": [
+            {
+              "value": "nenhum",
+              "label": "Nenhum recente"
+            },
+            {
+              "value": "unico_estavel",
+              "label": "Um único choque, recuperado e sem sintomas persistentes"
+            },
+            {
+              "value": "multiplos_24h",
+              "label": "Múltiplos choques em 24 horas"
+            },
+            {
+              "value": "choque_com_sintomas",
+              "label": "Choque com síncope, sintomas persistentes ou instabilidade"
+            }
+          ]
+        },
+        {
+          "id": "confirmed_channelopathy",
+          "label": "Qual canalopatia foi confirmada pela equipe?",
+          "type": "select",
+          "options": [
+            {
+              "value": "lqts",
+              "label": "QT longo congênito"
+            },
+            {
+              "value": "cpvt",
+              "label": "TVPC/CPVT"
+            },
+            {
+              "value": "brugada",
+              "label": "Brugada"
+            },
+            {
+              "value": "sqts",
+              "label": "QT curto"
+            },
+            {
+              "value": "outra",
+              "label": "Outra"
+            },
+            {
+              "value": "nao_confirmada",
+              "label": "Ainda não confirmada"
+            }
+          ]
+        },
+        {
+          "id": "syncope_despite_optimized_therapy",
+          "label": "Na canalopatia confirmada, houve síncope arrítmica apesar de tratamento otimizado e adesão verificada pela equipe?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "canal-parada-cardiaca-abortada",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "sudden_cardiac_arrest_history",
+                "op": "truthy"
+              },
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sobrevivente de parada cardíaca abortada por canalopatia — altíssimo risco de recorrência"
+            ],
+            "emergency_flow": [
+              "Encaminhar imediatamente para avaliação em emergência com monitorização contínua e desfibrilador disponível"
+            ],
+            "suggested_tests": [
+              "ECG seriado, eletrólitos (K, Mg, Ca) e revisão completa de fármacos QT-prolongadores ou desmascaradores de Brugada"
+            ],
+            "messages": [
+              "Após estabilização de parada recente, definir prevenção secundária conforme causa, reversibilidade e subtipo. Na CPVT, CDI não substitui tratamento antiadrenérgico; evitar terapia isolada pelo dispositivo."
+            ]
+          }
+        },
+        {
+          "id": "canal-choque-cdi-recorrente-tempestade",
+          "priority": 100,
+          "when": {
+            "any": [
+              {
+                "field": "icd_shock_context",
+                "op": "eq",
+                "value": "multiplos_24h"
+              },
+              {
+                "field": "icd_shock_context",
+                "op": "eq",
+                "value": "choque_com_sintomas"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Múltiplos choques recentes ou choque com sintomas persistentes/instabilidade: emergência, mesmo antes de saber se são apropriados."
+            ],
+            "emergency_flow": [
+              "Interrogar o CDI imediatamente e encaminhar a serviço com suporte de eletrofisiologia disponível"
+            ],
+            "messages": [
+              "Tempestade elétrica (múltiplos episódios de TV/FV ou choques apropriados em curto intervalo) exige manejo agudo específico por canalopatia e reavaliação de otimização farmacológica ou ablação do substrato"
+            ]
+          }
+        },
+        {
+          "id": "canal-sincope-recorrente-ecg-alto-risco",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "recurrent_syncope",
+                "op": "truthy"
+              },
+              {
+                "field": "ecg_channelopathy_pattern",
+                "op": "in",
+                "value": [
+                  "brugada_tipo1_espontaneo",
+                  "qt_longo_documentado",
+                  "qt_curto_documentado"
+                ]
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "suggested_tests": [
+              "Holter ou monitor de eventos prolongado, ecocardiograma para excluir causa estrutural, avaliação por eletrofisiologia"
+            ],
+            "differentials": [
+              "Síncope vasovagal",
+              "Crise epiléptica",
+              "Arritmia supraventricular"
+            ],
+            "messages": [
+              "História de síncope recorrente e padrão de canalopatia exige avaliação especializada rápida, distinguindo evento arrítmico de síncope reflexa e verificando tratamento/adesão. Esse conjunto não indica CDI automaticamente; eventos agudos seguem a via de emergência."
+            ]
+          }
+        },
+        {
+          "id": "canal-sincope-esforco-ou-emocao",
+          "priority": 60,
+          "when": {
+            "any": [
+              {
+                "field": "syncope_triggers",
+                "op": "contains",
+                "value": "esforco_fisico"
+              },
+              {
+                "field": "syncope_triggers",
+                "op": "contains",
+                "value": "emocao_susto_barulho"
+              }
+            ],
+            "all": [
+              {
+                "field": "has_syncope_history",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Síncope desencadeada por esforço físico ou emoção sugere canalopatia catecolamino-dependente (QT longo tipo 1/2, TVPC)"
+            ],
+            "suggested_tests": [
+              "Avaliação especializada com ECG e teste de esforço supervisionado, se clinicamente estável e indicado; protocolo e condições de segurança definidos pela equipe, sem provocar gatilhos fora do ambiente preparado."
+            ]
+          }
+        },
+        {
+          "id": "canal-sincope-sono-repouso",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "syncope_triggers",
+                "op": "contains",
+                "value": "durante_sono_repouso"
+              },
+              {
+                "field": "has_syncope_history",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Síncope ou eventos durante o sono ou repouso sugerem síndrome de Brugada ou síndrome do QT longo tipo 3"
+            ],
+            "suggested_tests": [
+              "ECG com precordiais direitas altas quando houver suspeita de Brugada; teste farmacológico apenas em pacientes selecionados por equipe experiente, após avaliar indicação, especificidade e riscos."
+            ]
+          }
+        },
+        {
+          "id": "canal-historia-familiar-morte-subita",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "family_sudden_death_young",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "História familiar reforça a probabilidade pré-teste em escores diagnósticos (Schwartz para QT longo, Shanghai para Brugada)"
+            ],
+            "missing_information": [
+              "Idade e causa da morte do familiar, grau de parentesco, e disponibilidade de necropsia ou teste genético"
+            ],
+            "messages": [
+              "Considerar rastreio em cascata familiar e encaminhamento para aconselhamento genético formal"
+            ]
+          }
+        },
+        {
+          "id": "canal-atleta-competitivo",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "competitive_athlete",
+                "op": "truthy"
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "ambulatory_flow": [
+              "Avaliação compartilhada com cardiologia do esporte antes de liberar retorno à competição"
+            ],
+            "missing_information": [
+              "Modalidade esportiva pretendida, adesão ao betabloqueador, resultado de teste de esforço específico da modalidade"
+            ],
+            "messages": [
+              "Diagnóstico de canalopatia não implica exclusão esportiva automática — decisão individualizada conforme fenótipo, controle terapêutico objetivo e ausência de eventos"
+            ]
+          }
+        },
+        {
+          "id": "canal-gestacao-puerperio",
+          "priority": 75,
+          "when": {
+            "all": [
+              {
+                "field": "pregnancy_postpartum_status",
+                "op": "eq",
+                "value": "puerperio_ate_9_meses"
+              }
+            ],
+            "any": [
+              {
+                "field": "confirmed_channelopathy",
+                "op": "eq",
+                "value": "lqts"
+              },
+              {
+                "field": "ecg_channelopathy_pattern",
+                "op": "eq",
+                "value": "qt_longo_documentado"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "QT longo congênito, especialmente LQT2: maior risco descrito nos primeiros 9 meses pós-parto. O dado não demonstra aumento equivalente em CPVT."
+            ],
+            "messages": [
+              "Planejar seguimento e manter/rever betabloqueador prescrito com cardiologia e obstetrícia, incluindo segurança materna e neonatal; não interromper por conta própria. Puerpério isolado não é emergência."
+            ]
+          }
+        },
+        {
+          "id": "canal-uso-irregular-betabloqueador",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "beta_blocker_adherence",
+                "op": "eq",
+                "value": "uso_irregular_ou_interrompido"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "opposing": [
+              "Uso irregular ou interrupção do betabloqueador reduz a proteção contra evento arrítmico maligno"
+            ],
+            "messages": [
+              "Reforçar adesão ao betabloqueador como classe terapêutica de primeira linha; não trocar ou suspender sem orientação especializada"
+            ]
+          }
+        },
+        {
+          "id": "canal-evento-agudo",
+          "priority": 105,
+          "when": {
+            "all": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "emergency_flow": [
+              "Acionar atendimento de emergência, monitorizar e estabilizar o evento atual. Se PCR, iniciar RCP/DEA; arritmia sustentada segue suporte avançado e tratamento específico pelo subtipo."
+            ]
+          }
+        },
+        {
+          "id": "canal-parada-remota-seguimento",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "sudden_cardiac_arrest_history",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Parada antiga já tratada exige prevenção secundária e seguimento especializado. História remota isolada, sem evento atual, não implica nova ida automática ao pronto-socorro."
+            ]
+          }
+        },
+        {
+          "id": "canal-choque-unico-estavel",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "icd_shock_context",
+                "op": "eq",
+                "value": "unico_estavel"
+              }
+            ],
+            "none": [
+              {
+                "field": "acute_arrhythmic_event",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Contatar prontamente a clínica do dispositivo para interrogá-lo e orientar a conduta após choque único estável. Se novo choque, síncope, dor, dispneia ou instabilidade, acionar emergência; sem acesso rápido à equipe, procurar atendimento."
+            ]
+          }
+        },
+        {
+          "id": "canal-sincope-apesar-terapia",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "recurrent_syncope",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "syncope_despite_optimized_therapy",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "confirmed_channelopathy",
+                "op": "in",
+                "value": [
+                  "lqts",
+                  "cpvt"
+                ]
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "Síncope arrítmica apesar de terapia otimizada/adesão verificada exige reestratificação por eletrofisiologia. Na LQTS considerar CDI/denervação conforme risco; na CPVT otimizar tratamento combinado e discutir denervação/CDI sem substituir a terapia antiadrenérgica."
+            ]
+          }
+        },
+        {
+          "id": "canal-cpvt-prevencao-sem-sintomas",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "confirmed_channelopathy",
+                "op": "eq",
+                "value": "cpvt"
+              },
+              {
+                "field": "beta_blocker_adherence",
+                "op": "eq",
+                "value": "nao_prescrito"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "messages": [
+              "CPVT confirmada exige planejamento de prevenção farmacológica mesmo sem síncope; não esperar primeiro evento. Betabloqueador não seletivo é base da terapia, com avaliação especializada de contraindicações e necessidade de associação."
+            ]
+          }
+        }
+      ],
+      "diagnostic_approach": {
+        "criterios_schwartz_qt_longo": "Aplicar o escore de Schwartz modificado ESC 2022 na ausência de causas secundárias de prolongamento. Os achados independentes se somam, observando exclusões específicas: usar uma única faixa de QTc basal; não somar síncope com e sem estresse, nem qualquer síncope com torsades; não usar o mesmo familiar para QT longo e morte súbita. Não escolher apenas o maior valor de toda a categoria ECG: isso descartaria critérios independentes como alternância/entalhe de T e QTc na recuperação. A tabela completa deve ser consultada (GeneReviews NBK1129, tabela1); inclui também surdez congênita. Total >3 permite diagnóstico clínico sem causa secundária; variante patogênica causal em gene validado de LQTS pode estabelecer diagnóstico independentemente do QTc. VUS não equivale a variante causal. Conferir QT manualmente, frequência e QRS antes de interpretar; um ECG normal não exclui penetrância incompleta.",
+        "padrao_eletrocardiografico_brugada": "O padrão tipo 1 apresenta ST coved elevado ≥2 mm em V1 ou V2 nas posições padrão ou altas. Distinguir padrão espontâneo, durante febre e após teste farmacológico. Tipo 2/3 não define síndrome nem obriga teste provocativo em todo assintomático. O teste deve ter indicação individualizada por equipe experiente, devido a riscos e limitações de especificidade. Tipo 1 induzido exige integração à história clínica/familiar; febre pode revelar Brugada verdadeira e não define fenocópia benigna. No escore Shanghai, ≥3,5 pontos caracteriza provável/definido, 2–3 possível; usar o maior achado de cada categoria do escore, com ao menos critério de ECG. O escore auxilia diagnóstico e não determina CDI isoladamente.",
+        "criterios_diagnosticos_cpvt": "Suspeitar de CPVT em arritmia ventricular bidirecional/polimórfica relacionada a esforço ou emoção, frequentemente com ECG basal e estrutura cardíaca normais. Teste de esforço supervisionado é central, mas resultado negativo isolado não exclui doença; interpretar com tratamento em uso, qualidade do teste, idade, fenótipo e genética. Não exigir frequência cardíaca fixa para início da ectopia. Teste de catecolamina tem indicação selecionada e não é intercambiável de forma irrestrita com exercício. Investigar variantes causais em genes validados com aconselhamento; resultado negativo ou VUS não exclui/confirma automaticamente o diagnóstico. Variantes de RYR2 com diferentes mecanismos podem produzir fenótipos distintos.",
+        "avaliacao_genetica_rastreio_familiar": "Investigar sistematicamente parada inexplicada antes de rotular FV idiopática. No CASPER 2009, 35/63 tiveram diagnóstico; teste genético dirigido foi positivo em 9/19 selecionados e rastreio familiar identificou 15/64 (PMID 19597050), não rendimento universal de qualquer painel. A coorte de 200 pacientes de 2016 teve 34% diagnosticados inicialmente e 7% adicionais no seguimento (PMID 26783233), mostrando a utilidade da reavaliação. Rastreio familiar combina avaliação clínica/ECG, exames adequados ao fenótipo e teste dirigido a variante patogênica/provavelmente patogênica causal. VUS não justifica diagnóstico em cascata. ECG basal normal não exclui LQTS ou CPVT; familiares menores precisam plano pediátrico/genético específico, não somente ECG neonatal.",
+        "investigacao_qt_curto_andersen_tawil_fv_idiopatica": "QT curto exige QTc persistentemente encurtado e integração clínica/genética; teste genético negativo não exclui. Em Andersen–Tawil, distinguir QT de QU pela onda U proeminente, integrando paralisia periódica, dismorfismo e arritmias; o QT pode ser normal ou discretamente prolongado, sem limiar universal de QU diagnóstico. FV idiopática é diagnóstico de exclusão após investigação de causas estruturais, coronarianas, metabólicas, tóxicas e elétricas, com reavaliação longitudinal. Padrão de repolarização precoce isolado em pessoa saudável não equivale a síndrome associada a FV."
+      },
+      "treatment_summary": "A conduta é específica para cada canalopatia. Betabloqueadores, preferencialmente nadolol/propranolol conforme disponibilidade, contraindicações e tolerância, são base de prevenção em CPVT confirmada, incluindo assintomáticos; LQTS também pode exigir prevenção em assintomáticos com QT prolongado ou variante causal, e não somente após síncope. A escolha e titulação são especializadas. A coorte pediátrica de 329 pacientes CPVT sintomáticos associou beta1-seletivos a mais eventos que não seletivos (PMID 34874747), evidência observacional que não torna as opções equivalentes nem prova causalidade por randomização.\n\nNa LQTS, rever eletrólitos e medicamentos que prolongam QT; quando uma terapia essencial tem risco, decidir em conjunto com seu prescritor, sem suspensão abrupta automática. Não extrapolar essa proibição ao QT curto: quinidina pode ser opção terapêutica selecionada nesse subtipo. Em Brugada, tratar febre prontamente e consultar lista específica de fármacos; betabloqueador não tem o papel preventivo de LQTS/CPVT.\n\nCDI depende de evento, reversibilidade, subtipo e risco; prevenção secundária após parada é particularmente relevante, mas história de síncope ou padrão ECG isolado não autoriza implante automático. Na CPVT, manter terapia antiadrenérgica otimizada e considerar associação/denervação; choques podem alimentar descarga catecolaminérgica, tornando inadequado usar CDI como tratamento isolado. Na Brugada refratária com arritmias/choques recorrentes, ablação do substrato em centro experiente pode reduzir recorrência; não é garantia de cura nem elimina automaticamente necessidade de CDI.\n\nNa emergência, TV polimórfica sustentada requer choque não sincronizado imediato segundo AHA 2025, seguido de investigação do mecanismo. Brugada com tempestade de FV pode requerer isoproterenol/isoprenalina e quinidina em ambiente monitorizado, conforme equipe; isso não significa suprimir catecolaminas nesse subtipo. Na CPVT, a estratégia específica reduz ativação adrenérgica com sedação, betabloqueio e outras medidas especializadas; não transpor isoproterenol de Brugada para CPVT/LQTS. QT longo adquirido, congênito e TV polimórfica com QT normal têm vias diferentes.\n\nParticipação esportiva exige equipe experiente, decisão compartilhada, avaliação do controle arrítmico, tratamento/adesão e plano de emergência conforme subtipo. Não há liberação automática pela ausência de sintomas nem exclusão universal pelo rótulo diagnóstico (AHA/ACC 2025).",
+      "differentials": [
+        "QT longo adquirido por medicamentos, eletrólitos ou bradicardia: pesquisar e corrigir contribuições secundárias. Normalização do QT não exclui predisposição genética ou LQTS de penetrância incompleta.",
+        "QT prolongado durante terapia oncológica: avaliar exposição, QT basal, QRS, eletrólitos e interações com cardio-oncologia. ECG previamente normal não exclui predisposição hereditária; não interromper terapia essencial sem decisão coordenada.",
+        "Fenocópias de Brugada por causas metabólicas/isquêmicas ou outras condições exigem diferenciação especializada. Febre pode desmascarar Brugada verdadeira; desaparecimento do padrão após defervescência não prova ausência de substrato hereditário.",
+        "Cardiomiopatia arritmogênica de ventrículo direito e outras cardiopatias estruturais ocultas — podem se apresentar como parada cardíaca com ECG basal enganosamente normal ou com padrão sugestivo de canalopatia, exigindo ressonância cardíaca para exclusão.",
+        "Epilepsia — síncope convulsiva de origem cardíaca (arrítmica) é confundida com crise epiléptica primária, sobretudo quando o evento ocorre durante o sono ou tem componente motor breve; investigação cardiológica deve ser considerada em 'epilepsia' refratária ou atípica com história familiar de morte súbita.",
+        "Síncope vasovagal/neuromediada — é o diagnóstico diferencial mais comum de síncope em jovens e pode coexistir com uma canalopatia; a diferenciação depende do contexto do gatilho, de pródromos autonômicos e, quando indicado, de teste de inclinação e do próprio ECG basal.",
+        "Miocardite ou espasmo coronariano como causa de parada cardíaca sem lesão coronariana obstrutiva — diagnósticos identificados em investigação sistemática de parada cardíaca inexplicada e que mimetizam a apresentação de uma canalopatia primária."
+      ],
+      "ambulatory_flow": [
+        "Confirmar o diagnóstico com os critérios formais de cada canalopatia (escore de Schwartz para QT longo, escore de Shanghai para Brugada) e documentar a distinção entre padrão espontâneo e induzido por fármaco/febre.",
+        "Encaminhar para avaliação em cardiologia especializada em arritmias/eletrofisiologia para estratificação de risco individualizada e decisão sobre CDI, evitando indicação automática a partir de um único achado isolado.",
+        "Avaliar prevenção com betabloqueador em LQTS/CPVT confirmadas, inclusive assintomáticos conforme genótipo/fenótipo; reforçar adesão e controle terapêutico com equipe especializada.",
+        "Rever medicamentos e eletrólitos conforme subtipo: lista de risco de QT na LQTS, lista de Brugada nesta síndrome, e terapia específica no QT curto; não impor a todos a mesma proibição nem suspender terapia essencial por conta própria.",
+        "Encaminhar para aconselhamento genético formal e organizar o rastreio em cascata familiar, incluindo discussão estruturada com os pais sobre teste em menores quando o resultado muda a conduta pediátrica (QT longo e TVPC).",
+        "Discutir participação esportiva de forma compartilhada e documentada com equipe de cardiologia do esporte, revisando fenótipo, controle terapêutico e ausência de eventos antes de qualquer liberação.",
+        "Planejar gestação e pós-parto com cardiologia/obstetrícia. LQTS, especialmente LQT2, tem maior risco nos primeiros 9 meses pós-parto; a coorte CPVT não demonstrou aumento equivalente. Preservar tratamento indicado e individualizar vigilância."
+      ],
+      "emergency_flow": [
+        "Parada recém-revertida, arritmia sustentada ou instabilidade atual: suporte emergencial monitorizado e investigação de causas reversíveis. Parada remota já tratada exige seguimento/prevenção secundária, sem nova internação automática pelo antecedente.",
+        "Múltiplos choques recentes ou choque com sintomas persistentes: emergência e interrogação do CDI, mesmo antes de classificar adequação. Choque único com recuperação completa: contato rápido com a clínica de dispositivos, com escalonamento se recorrência/sintomas ou falta de acesso.",
+        "TV polimórfica sustentada: choque não sincronizado imediato pelo suporte avançado, mesmo com pulso; depois distinguir QT longo adquirido/congênito, CPVT, Brugada, isquemia e outros mecanismos. Não encaminhar todo caso ao protocolo de QT adquirido.",
+        "Tempestade em Brugada: equipe pode usar isoproterenol e quinidina em ambiente monitorizado. Em CPVT, reduzir ativação adrenérgica e otimizar terapia específica; não aplicar isoproterenol de Brugada a todas as canalopatias.",
+        "Síncope recente suspeita de arritmia exige avaliação urgente/emergencial conforme quadro; história remota não equivale a episódio atual. No puerpério, investigar também causas obstétricas, tromboembólicas e estruturais conforme apresentação."
+      ],
+      "monitoring": [
+        "Programar ECG e exames de seguimento conforme subtipo, fenótipo, tratamento e intercorrências; precordiais altas quando relevantes à avaliação de Brugada, sem impor todos exames em toda consulta.",
+        "Interrogação periódica do CDI, quando presente, para detectar choques apropriados/inapropriados e arritmias assintomáticas registradas pelo dispositivo.",
+        "Reavaliação da adesão ao betabloqueador e da tolerância ao tratamento a cada consulta, com atenção especial ao período pós-parto e a trocas de fármaco não planejadas.",
+        "Rever medicamentos em cada mudança terapêutica; medir eletrólitos conforme quadro, fármacos, doença intercorrente e risco, sem exigir painel laboratorial universal em toda consulta estável.",
+        "Teste ergométrico periódico na TVPC para documentar supressão ou controle da ectopia ventricular induzida por esforço, sobretudo antes de decisões sobre retorno ao esporte.",
+        "Rastreio em cascata dos familiares de primeiro grau, com ECG e, quando indicado, teste genético dirigido à variante familiar já identificada.",
+        "Em filhos de portadores, organizar avaliação pediátrica e aconselhamento/teste dirigido quando houver variante causal; ECG e exames são adequados à doença e idade. ECG neonatal normal não exclui CPVT ou LQTS e não substitui rastreio genético/fenotípico longitudinal. Seguimento materno pós-parto depende do subtipo, com atenção especial à LQTS nos primeiros 9 meses."
+      ],
+      "special_populations": [
+        "Gestação/pós-parto: LQTS, sobretudo LQT2, tem maior risco nos primeiros 9 meses após parto (PMID 17349890). Na coorte CPVT com 96 mulheres e 228 gestações, risco combinado gestacional/pós-parto não foi maior que fora desses períodos; todos eventos ocorreram sem betabloqueador (PMID 30898243). Isso não demonstra risco zero nem autoriza suspender tratamento. Planejar seguimento e terapia com cardiologia e obstetrícia.",
+        "Atleta competitivo com canalopatia diagnosticada ou suspeita: a decisão sobre elegibilidade e retorno ao esporte é individualizada por subtipo, genótipo, gatilho identificado e controle de sintomas — não é uma restrição uniforme para todo portador; a triagem pré-participação com ECG pode identificar um caso incidental, assintomático, e reabre o debate sobre custo-efetividade do rastreio eletrocardiográfico obrigatório.",
+        "Criança e adolescente com canalopatia: a apresentação, a epidemiologia (por exemplo, Brugada precipitada por febre) e as particularidades de estratificação de risco e tratamento nessa faixa etária são tratadas em profundidade no hub-irmão 'Canalopatias na infância' (canalopatias-pediatricas); este hub geral não duplica os documentos pediátricos-específicos daquele hub e remete a ele para o recorte de criança/adolescente.",
+        "Familiar assintomático de portador identificado (rastreio em cascata): o reconhecimento de um caso-índice obriga ECG — e, quando indicado, teste genético direcionado — dos familiares de primeiro grau; um portador assintomático identificado por rastreio já é indicação para avaliação especializada, e a comunicação desse risco genético (incluindo questões de culpa parental e teste em menores) exige abordagem estruturada.",
+        "Paciente com QT longo adquirido por quimioterapia/terapia oncológica: o prolongamento do QT induzido por agentes antineoplásicos (por exemplo, inibidores de tirosina-quinase, antraciclinas e outros) é uma entidade distinta da canalopatia hereditária, com monitorização eletrocardiográfica seriada durante o tratamento oncológico; o manejo específico desse cenário é detalhado no hub 'Prolongamento do QT em terapia oncológica' (qt-longo-terapia-oncologica), para o qual este hub geral remete sem duplicar seu conteúdo."
+      ],
+      "source_refs": [
+        "Schwartz PJ, Moss AJ, Vincent GM, Crampton RS. Diagnostic criteria for the long QT syndrome. An update. Circulation. 1993;88(2):782-784. PMID: 8339437.",
+        "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+        "Antzelevitch C, Yan GX, Ackerman MJ, et al. J-Wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. Heart Rhythm. 2016;13(10):e295-e324. DOI: 10.1016/j.hrthm.2016.05.024. PMID: 27423412.",
+        "Priori SG, Wilde AA, Horie M, et al. Executive summary: HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Europace. 2013;15(10):1389-1406. DOI: 10.1093/europace/eut272. PMID: 23994779.",
+        "Mazzanti A, Kanthan A, Monteforte N, Memmi M, Bloise R, et al. Novel insight into the natural history of short QT syndrome. J Am Coll Cardiol. 2014;63(13):1300-1308. DOI: 10.1016/j.jacc.2013.09.078. PMID: 24291113.",
+        "Kannankeril PJ, Moore JP, Cerrone M, Priori SG, Kertesz NJ, et al. Efficacy of Flecainide in the Treatment of Catecholaminergic Polymorphic Ventricular Tachycardia: A Randomized Clinical Trial. JAMA Cardiol. 2017;2(7):759-766. DOI: 10.1001/jamacardio.2017.1320. PMID: 28492868.",
+        "Napolitano C, Mazzanti A, Bloise R, Priori SG. Catecholaminergic Polymorphic Ventricular Tachycardia. GeneReviews [Internet]. Seattle: University of Washington; updated 2022 Jun 23. Bookshelf ID: NBK1289.",
+        "Tawil R, Ptacek LJ, Pavlakis SG, DeVivo DC, Penn AS, Ozdemir C, Griggs RC. Andersen's syndrome: potassium-sensitive periodic paralysis, ventricular ectopy, and dysmorphic features. Ann Neurol. 1994;35(3):326-330. DOI: 10.1002/ana.410350313. PMID: 8080508.",
+        "Delannoy E, Sacher F, Maury P, et al. Cardiac characteristics and long-term outcome in Andersen-Tawil syndrome patients related to KCNJ2 mutation. Europace. 2013;15(12):1805-1811. DOI: 10.1093/europace/eut160. PMID: 23867365.",
+        "Haïssaguerre M, Derval N, Sacher F, et al. Sudden cardiac arrest associated with early repolarization. N Engl J Med. 2008;358(19):2016-2023. DOI: 10.1056/NEJMoa071968. PMID: 18463377.",
+        "Krahn AD, Healey JS, Chauhan V, et al. Systematic assessment of patients with unexplained cardiac arrest: Cardiac Arrest Survivors With Preserved Ejection Fraction Registry (CASPER). Circulation. 2009;120(4):278-285. DOI: 10.1161/CIRCULATIONAHA.109.853143. PMID: 19597050.",
+        "Herman ARM, Cheung C, Gerull B, et al. Outcome of Apparently Unexplained Cardiac Arrest: Results From Investigation and Follow-Up of the Prospective Cardiac Arrest Survivors With Preserved Ejection Fraction Registry. Circ Arrhythm Electrophysiol. 2016;9(1):e003619. DOI: 10.1161/CIRCEP.115.003619. PMID: 26783233.",
+        "Sieira J, Conte G, Ciconte G, et al. A score model to predict risk of events in patients with Brugada Syndrome. Eur Heart J. 2017;38(22):1756-1763. DOI: 10.1093/eurheartj/ehx119. PMID: 28379344.",
+        "Chow JJ, Leong KMW, Yazdani M, et al. A Multicenter External Validation of a Score Model to Predict Risk of Events in Patients With Brugada Syndrome. Am J Cardiol. 2021;160:53-59. DOI: 10.1016/j.amjcard.2021.08.035. PMID: 34610873.",
+        "Probst V, Veltmann C, Eckardt L, et al. Long-term prognosis of patients diagnosed with Brugada syndrome: results from the FINGER Brugada Syndrome Registry. Circulation. 2010;121(5):635-643. PMID: 20100972.",
+        "Priori SG, Gasparini M, Napolitano C, et al. Risk stratification in Brugada syndrome: results of the PRELUDE (PRogrammed ELectrical stimUlation preDictive valuE) registry. J Am Coll Cardiol. 2012;59(1):37-45. PMID: 22192666.",
+        "Sieira J, Conte G, Ciconte G, et al. Prognostic value of programmed electrical stimulation in Brugada syndrome: 20 years experience. Circ Arrhythm Electrophysiol. 2015;8(4):777-784. PMID: 25904495.",
+        "An International Multicenter Cohort Study on beta-Blockers for the Treatment of Symptomatic Children With CPVT. Circulation. PMID:34874747. DOI:10.1161/CIRCULATIONAHA.121.056018.",
+        "Cheung CC, et al. Pregnancy in Catecholaminergic Polymorphic Ventricular Tachycardia. JACC Clin Electrophysiol. 2019. PMID:30898243. DOI:10.1016/j.jacep.2018.10.019.",
+        "Seth R, et al. Long QT syndrome and pregnancy. J Am Coll Cardiol. 2007. PMID:17349890.",
+        "Groffen AJ, Bikker H, Christiaans I. Long QT Syndrome Overview. GeneReviews. NBK1129.",
+        "Kim JH, et al. Clinical Considerations for Competitive Sports Participation for Athletes With Cardiovascular Abnormalities. AHA/ACC 2025. DOI:10.1161/CIR.0000000000001297.",
+        "Wigginton JG, et al. Adult Advanced Life Support. AHA 2025. DOI:10.1161/CIR.0000000000001376."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/8339437/",
+        "https://pubmed.ncbi.nlm.nih.gov/36017572/",
+        "https://pubmed.ncbi.nlm.nih.gov/27423412/",
+        "https://pubmed.ncbi.nlm.nih.gov/23994779/",
+        "https://pubmed.ncbi.nlm.nih.gov/24291113/",
+        "https://pubmed.ncbi.nlm.nih.gov/28492868/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK1289/",
+        "https://pubmed.ncbi.nlm.nih.gov/8080508/",
+        "https://pubmed.ncbi.nlm.nih.gov/23867365/",
+        "https://pubmed.ncbi.nlm.nih.gov/18463377/",
+        "https://pubmed.ncbi.nlm.nih.gov/19597050/",
+        "https://pubmed.ncbi.nlm.nih.gov/26783233/",
+        "https://pubmed.ncbi.nlm.nih.gov/28379344/",
+        "https://pubmed.ncbi.nlm.nih.gov/34610873/",
+        "https://pubmed.ncbi.nlm.nih.gov/20100972/",
+        "https://pubmed.ncbi.nlm.nih.gov/22192666/",
+        "https://pubmed.ncbi.nlm.nih.gov/25904495/",
+        "https://pubmed.ncbi.nlm.nih.gov/34874747/",
+        "https://pubmed.ncbi.nlm.nih.gov/30898243/",
+        "https://pubmed.ncbi.nlm.nih.gov/17349890/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK1129/",
+        "https://www.brugadadrugs.org/emergencies/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145891/",
+        "https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/adult-advanced-life-support"
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08 PR #585: temporalidade dos eventos, choques de CDI, Schwartz/Shanghai, Brugada vs CPVT, QT curto, prevenção assintomática e rastreio neonatal contextual; fontes primárias e diretrizes identificadas. Sem incorporar produção nova."
+    }
+  }
+]

@@ -12,6 +12,7 @@ import { chamamentoComArtigo, nomeComTratamento } from "../lib/clinicalIdentity"
 import { withoutReservedSmokeTestRecord, withoutReservedSmokeTestRecords } from "../lib/reservedSmokeAgenda";
 import "../styles/cardiology-spaces-home.css";
 import "../styles/corvia-internal-final-approved-20260904.css";
+import "../styles/corvia-ui-consistency-20260908.css";
 
 type Mode = "complete" | "essential" | "scientific";
 type ClinicalSpaceId = "consultorio" | "hospital" | "ensino" | "pesquisa" | "gestao";
@@ -679,14 +680,15 @@ function StellarRouteMiniMap({
   onOpen: () => void;
 }) {
   const destination = target?.location?.name || target?.service_name || "Próximo destino";
+  const schedule = mobilitySchedule(target?.starts_at);
   const hasRoute = Boolean(route && minutes);
   const level = trafficLevel(route?.congestion);
   const miniRoute = useMemo(() => buildMiniRouteGeometry(route), [route]);
   const accessibleStatus = busy
     ? `Calculando deslocamento para ${destination}`
     : hasRoute
-      ? `Abrir deslocamento para ${destination}: ${minutes} minutos, ${distanceLabel(route?.distance_meters)}, ${trafficLabel(route?.congestion)}`
-      : `Calcular deslocamento para ${destination}`;
+      ? `Abrir deslocamento para ${destination}, ${schedule}: ${minutes} minutos, ${distanceLabel(route?.distance_meters)}, ${trafficLabel(route?.congestion)}`
+      : `Calcular deslocamento para ${destination}, ${schedule}`;
 
   return (
     <button
@@ -701,7 +703,7 @@ function StellarRouteMiniMap({
     >
       <span className="spaces-stellar-route__heading">
         <span><Icone nome="rota" /></span>
-        <span><strong>Deslocamento</strong><small>{destination}</small></span>
+        <span><strong>Deslocamento</strong><small>{destination}</small><time dateTime={target?.starts_at}>{schedule}</time></span>
         <Icone nome="seta" />
       </span>
       <span className="spaces-stellar-route__map" aria-hidden="true">
@@ -809,6 +811,21 @@ function time(value?: string | null) {
   if (!value) return "";
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? "" : date.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+}
+
+function mobilitySchedule(value?: string | null) {
+  if (!value) return "Data e horário pela Agenda";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Data e horário pela Agenda";
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const day = sameLocalDay(value, today)
+    ? "Hoje"
+    : sameLocalDay(value, tomorrow)
+      ? "Amanhã"
+      : date.toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" }).replace(/\.$/, "");
+  return `${day} · ${time(value)}`;
 }
 
 function routineToAgendaItem(routine: WorkRoutine): AgendaItem | null {
@@ -1045,7 +1062,7 @@ export default function CardiologySpacesHome() {
   }, []);
 
   useEffect(() => {
-    if (!mode || mode === "scientific" || usuario?.investidor) return;
+    if (!mode || usuario?.investidor) return;
     let active = true;
     api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {})
       .then((target) => { if (active) setMobilityTarget(withoutReservedSmokeTestRecord(target)); })
@@ -1054,7 +1071,7 @@ export default function CardiologySpacesHome() {
   }, [mode, usuario?.investidor]);
 
   useEffect(() => {
-    if (!mode || mode === "scientific" || usuario?.investidor) {
+    if (!mode || usuario?.investidor) {
       setMapConfiguration(null);
       setMobilityPreference(null);
       setMobilityDayContext(null);
@@ -1142,11 +1159,9 @@ export default function CardiologySpacesHome() {
       location: endLocation,
     };
   }, [mobilityDayContext]);
-  const plannedMobilityTarget = mobilityDayContext?.stage === "at_last"
+  const plannedMobilityTarget = mobilityDayContext?.stage === "at_last" && returnHomeTarget
     ? returnHomeTarget
-    : mobilityDayContext?.stage === "no_commitments"
-      ? null
-      : mobilityTarget;
+    : mobilityTarget;
   const returnHomeActive = plannedMobilityTarget?.source === "return";
   const resultMatchesTarget = Boolean(
     mobilityResult?.destination?.target_key
@@ -1337,14 +1352,6 @@ export default function CardiologySpacesHome() {
         return;
       }
       let target = plannedMobilityTarget;
-      if (mobilityDayContext?.stage === "at_last" && !target) {
-        setTravelError("Configure Casa ou outro destino final na Agenda para calcular o retorno após o último compromisso.");
-        return;
-      }
-      if (mobilityDayContext?.stage === "no_commitments") {
-        setTravelError("Não há compromissos presenciais hoje para calcular um deslocamento.");
-        return;
-      }
       if (!target) {
         const preparedTarget = await api.post<MobilityTarget | null>("/agenda/mobility/prepare-next-target", {});
         target = withoutReservedSmokeTestRecord(preparedTarget);
@@ -1418,11 +1425,10 @@ export default function CardiologySpacesHome() {
         <header>
           <span className="spaces-choice__brand-cluster">
             <Brand />
-            <GalaxyThemeToggle className="spaces-choice__theme-toggle" />
+            <GalaxyThemeToggle className="spaces-choice__theme-toggle" showLabel clockwise />
           </span>
           <span className="spaces-user"><UserIdentity usuario={usuario} /></span>
         </header>
-        <div className="spaces-choice__change" aria-hidden="true"><span><Icone nome="seta" /></span><div><strong>Mudar universo</strong><small>Clique para explorar</small></div></div>
         <section className="spaces-choice__content">
           <p className="spaces-eyebrow">ESCOLHA SEU ESPAÇO</p>
           <h1>Onde {chamamentoNaFrase} vai trabalhar agora?</h1>
@@ -1495,7 +1501,7 @@ export default function CardiologySpacesHome() {
       <section className="spaces-workspace">
         <header className="spaces-workspace__greeting">
           <h1>{question}</h1>
-          <span>{mode === "scientific" ? "Escolha uma jornada científica. O conhecimento continua conectado." : "Escolha o ambiente. A interface reorganiza as prioridades sem esconder o CorVIA."}</span>
+          <span>{mode === "scientific" ? "Escolha uma jornada científica. O conhecimento continua conectado." : "Escolha o Ambiente. O CorVIA reorganiza as Prioridades."}</span>
         </header>
 
         <div className="spaces-doors" onMouseLeave={() => setPreviewSpace(null)}>
@@ -1536,6 +1542,16 @@ export default function CardiologySpacesHome() {
           <Link to="/trilhas" className="spaces-day__item spaces-day__item--violet"><i /><span><strong>Trilhas</strong><small>Continuar aprendizagem</small></span></Link>
           <Link to="/favoritos" className="spaces-day__item spaces-day__item--rose"><i /><span><strong>Favoritos</strong><small>Retomar leituras</small></span></Link>
           <Link to="/trilhas/timeline" className="spaces-day__travel"><Icone nome="relogio" /><span><strong>Minha timeline</strong><small>Ver evolução do conhecimento</small></span></Link>
+          <StellarRouteMiniMap
+            target={travelTarget}
+            route={bestRoute}
+            minutes={travelMinutes}
+            busy={travelBusy}
+            onOpen={() => {
+              if (bestRoute) setTravelOpen(true);
+              else void startTravel();
+            }}
+          />
         </> : <>
           {dayItems.length ? dayItems.slice(0, 3).map((item) => {
             const itemSpace = inferClinicalSpace(item);
@@ -1643,7 +1659,7 @@ export default function CardiologySpacesHome() {
           </div>}
 
           <div className="spaces-travel__status" role="status" aria-live="polite">
-            {travelBusy ? <><strong>Calculando rota…</strong><small>Consultando sua posição autorizada e o trânsito atual.</small></> : bestRoute ? <><strong>{travelMinutes} min <em>·</em> {distanceLabel(bestRoute.distance_meters)}</strong><small>{bestRoute.summary || "Rota recomendada"}{bestRoute.congestion ? ` · ${trafficLabel(bestRoute.congestion)}` : ""}{mobilityResult?.provider ? ` · ${mobilityResult.provider}` : ""}</small></> : <><strong>{travelTarget?.location?.name || travelTarget?.service_name || "Próximo destino"}</strong><small>{travelError || "Destino preparado. Calcule a rota para incluir sua origem e o trânsito atual."}</small></>}
+            {travelBusy ? <><strong>Calculando rota…</strong><small>{mobilitySchedule(travelTarget?.starts_at)} · Consultando sua posição autorizada e o trânsito atual.</small></> : bestRoute ? <><strong>{travelMinutes} min <em>·</em> {distanceLabel(bestRoute.distance_meters)}</strong><small>{mobilitySchedule(travelTarget?.starts_at)} · {bestRoute.summary || "Rota recomendada"}{bestRoute.congestion ? ` · ${trafficLabel(bestRoute.congestion)}` : ""}{mobilityResult?.provider ? ` · ${mobilityResult.provider}` : ""}</small></> : <><strong>{travelTarget?.location?.name || travelTarget?.service_name || "Próximo destino"}</strong><small>{mobilitySchedule(travelTarget?.starts_at)} · {travelError || "Destino preparado. Calcule a rota para incluir sua origem e o trânsito atual."}</small></>}
           </div>
           {resultMatchesTarget && mobilityResult?.tips?.length ? <ul>{mobilityResult.tips.slice(0, 3).map((tip) => <li key={tip}>{tip}</li>)}</ul> : null}
           <footer>

@@ -23,7 +23,7 @@ As mudanças práticas mais importantes são:
 - tratamento mais precoce quando a exposição cumulativa a lipoproteínas aterogênicas é relevante.
 
 ## PREVENT substitui PCE na prevenção primária
-Para adultos de **30 a 79 anos**, a diretriz recomenda usar as equações AHA **PREVENT-ASCVD** para estimar risco em 10 e 30 anos, em vez das antigas Pooled Cohort Equations.
+Para adultos de **30 a 79 anos**, a diretriz recomenda usar as equações AHA **PREVENT-ASCVD** para estimar risco em **10 anos**; a estimativa de **30 anos** é destinada somente à faixa de **30 a 59 anos**. Essas equações substituem as antigas Pooled Cohort Equations nessa avaliação.
 
 O modelo operacional sugerido é o “CPR”:
 

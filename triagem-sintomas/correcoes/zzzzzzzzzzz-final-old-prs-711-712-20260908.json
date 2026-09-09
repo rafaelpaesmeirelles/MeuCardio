@@ -1,0 +1,1135 @@
+[
+  {
+    "slug": "suspeita-infeccao-dispositivo-cardiaco-implantavel",
+    "set": {
+      "questions": [
+        {
+          "id": "device_type",
+          "label": "Qual dispositivo está implantado?",
+          "type": "select",
+          "required": true,
+          "section": "Contexto",
+          "options": [
+            {
+              "value": "marca_passo",
+              "label": "Marca-passo"
+            },
+            {
+              "value": "cdi",
+              "label": "Cardiodesfibrilador implantável (CDI)"
+            },
+            {
+              "value": "ressincronizador",
+              "label": "Ressincronizador (TRC)"
+            },
+            {
+              "value": "outro",
+              "label": "Outro ou não sabe especificar"
+            }
+          ]
+        },
+        {
+          "id": "days_since_procedure",
+          "label": "Quantos dias se passaram desde o implante ou o procedimento mais recente no dispositivo (troca de gerador, revisão, upgrade)?",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 3650,
+          "unit": "dias",
+          "section": "Contexto"
+        },
+        {
+          "id": "erosion_exposure",
+          "label": "Há erosão da pele com exposição do gerador ou do eletrodo?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "purulent_drainage",
+          "label": "Há drenagem purulenta ou trajeto fistuloso na loja do gerador?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "wound_dehiscence",
+          "label": "Há deiscência de sutura ou abertura da incisão sobre a loja do dispositivo?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "dehiscence_communicates_with_pocket",
+          "label": "Se há deiscência, foi confirmada comunicação da abertura com a loja do dispositivo?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "pocket_pain_tenderness",
+          "label": "Há dor ou sensibilidade nova/progressiva na loja do dispositivo?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais locais"
+        },
+        {
+          "id": "early_inflammation_severe_or_progressive",
+          "label": "Nos primeiros 14 dias, a inflamação local é intensa, progressiva, associada a dor importante ou maior que o esperado para o pós-operatório?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais locais"
+        },
+        {
+          "id": "local_erythema_warmth",
+          "label": "Há eritema, calor ou edema localizado na loja do gerador?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais locais"
+        },
+        {
+          "id": "hematoma_only",
+          "label": "Há apenas hematoma ou equimose no local, sem eritema, calor ou drenagem associados?",
+          "type": "boolean",
+          "section": "Sinais locais"
+        },
+        {
+          "id": "fever",
+          "label": "Há febre ou calafrio associado?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais sistêmicos"
+        },
+        {
+          "id": "sepsis_signs",
+          "label": "Há hipotensão, taquicardia importante, confusão mental ou outros sinais de sepse?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais sistêmicos"
+        },
+        {
+          "id": "positive_blood_cultures",
+          "label": "Há hemoculturas prévias positivas relacionadas a este quadro atual?",
+          "type": "boolean",
+          "section": "Investigação prévia"
+        },
+        {
+          "id": "vegetation_on_lead_echo",
+          "label": "Há ecocardiograma prévio mostrando massa em eletrodo/valva (achado que ainda precisa diferenciar vegetação de trombo, fibrina ou artefato)?",
+          "type": "boolean",
+          "section": "Investigação prévia"
+        }
+      ],
+      "rules": [
+        {
+          "id": "erosao-exposicao",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Erosão com exposição do gerador ou eletrodo equivale a infecção definitiva do sistema, com risco de bacteremia e endocardite relacionada a dispositivo"
+            ],
+            "emergency_flow": [
+              "Não tratar como problema cutâneo isolado nem tentar reparo local ou reimplante no mesmo sítio",
+              "Acionar avaliação para extração completa do sistema (gerador e todos os eletrodos, incluindo eletrodos abandonados)",
+              "Colher hemoculturas antes de iniciar antimicrobiano quando a condição clínica permitir"
+            ]
+          }
+        },
+        {
+          "id": "sepse-sistemica",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "sepsis_signs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sinais de sepse em paciente com dispositivo cardíaco implantável exigem protocolo de sepse e investigação imediata de infecção do dispositivo e endocardite"
+            ],
+            "emergency_flow": [
+              "Iniciar protocolo de sepse institucional sem aguardar confirmação de infecção do dispositivo",
+              "Colher hemoculturas antes do antimicrobiano quando a condição clínica permitir",
+              "Discutir com infectologia, cardiologia/eletrofisiologia e equipe de extração"
+            ]
+          }
+        },
+        {
+          "id": "vegetacao-eletrodo-previa",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "vegetation_on_lead_echo",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Massa em eletrodo/valva não é sinônimo automático de vegetação; pode representar trombo, fibrina ou artefato."
+            ],
+            "emergency_flow": [
+              "Avaliar com hemoculturas, ecocardiografia apropriada e equipe de infecção/CIED; classificar como endocardite apenas pela integração microbiológica, clínica e de imagem."
+            ]
+          }
+        },
+        {
+          "id": "febre-com-sinais-locais",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "fever",
+                "op": "truthy"
+              }
+            ],
+            "any": [
+              {
+                "field": "local_erythema_warmth",
+                "op": "truthy"
+              },
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              },
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Febre associada a sinais locais na loja do dispositivo aumenta a probabilidade de infecção de CIED com possível envolvimento sistêmico"
+            ],
+            "suggested_tests": [
+              "Hemoculturas antes do antimicrobiano, quando a condição clínica permitir",
+              "Ecocardiograma transesofágico se a suspeita de envolvimento endovascular persistir"
+            ]
+          }
+        },
+        {
+          "id": "drenagem-purulenta",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Drenagem purulenta na loja do gerador indica infecção de bolsa estabelecida e deve ser investigada mesmo sem febre — o consenso HRS 2017 trata como infecção do sistema"
+            ],
+            "emergency_flow": [
+              "Não aspirar a bolsa para diagnóstico — colher cultura de tecido/eletrodo apenas no momento da extração",
+              "Acionar avaliação para extração completa do sistema"
+            ]
+          }
+        },
+        {
+          "id": "deiscencia-sutura",
+          "priority": 82,
+          "when": {
+            "all": [
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "dehiscence_communicates_with_pocket",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Deiscência com comunicação confirmada com a loja equivale a exposição/contaminação do sistema e exige avaliação urgente para extração completa."
+            ]
+          }
+        },
+        {
+          "id": "hemocultura-previa-positiva",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "positive_blood_cultures",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Hemocultura prévia positiva em paciente com dispositivo cardíaco implantável aumenta a probabilidade de infecção relacionada ao dispositivo e deve ser correlacionada com sinais locais e ecocardiograma"
+            ],
+            "suggested_tests": [
+              "Investigar fonte alternativa de bacteremia quando não houver sinais locais evidentes",
+              "Ecocardiograma transesofágico conforme probabilidade pré-teste (organismo, persistência, ausência de outra fonte)"
+            ]
+          }
+        },
+        {
+          "id": "eritema-tardio-sem-outros-sinais",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "local_erythema_warmth",
+                "op": "truthy"
+              },
+              {
+                "field": "days_since_procedure",
+                "op": "gt",
+                "value": 14
+              }
+            ],
+            "none": [
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              },
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              },
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "fever",
+                "op": "truthy"
+              },
+              {
+                "field": "sepsis_signs",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Eritema localizado que surge fora da janela pós-operatória imediata (mais de 14 dias após o procedimento) é menos provável reação inflamatória benigna e reforça avaliação para infecção de bolsa"
+            ]
+          }
+        },
+        {
+          "id": "hematoma-sem-inflamacao",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "hematoma_only",
+                "op": "truthy"
+              }
+            ],
+            "none": [
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              },
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              },
+              {
+                "field": "local_erythema_warmth",
+                "op": "truthy"
+              },
+              {
+                "field": "fever",
+                "op": "truthy"
+              },
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "sepsis_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "positive_blood_cultures",
+                "op": "truthy"
+              },
+              {
+                "field": "vegetation_on_lead_echo",
+                "op": "truthy"
+              },
+              {
+                "field": "pocket_pain_tenderness",
+                "op": "truthy"
+              },
+              {
+                "field": "early_inflammation_severe_or_progressive",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "opposing": [
+              "Hematoma sem eritema, calor ou drenagem sugere complicação hemorrágica local, não infecção — não deve ser puncionado nem tratado empiricamente com antimicrobiano"
+            ],
+            "suggested_tests": [
+              "Reavaliação clínica precoce para monitorar evolução, sem aspiração diagnóstica do hematoma"
+            ]
+          }
+        },
+        {
+          "id": "eritema-leve-pos-procedimento-recente",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "local_erythema_warmth",
+                "op": "truthy"
+              },
+              {
+                "field": "days_since_procedure",
+                "op": "lte",
+                "value": 14
+              }
+            ],
+            "none": [
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              },
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              },
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "fever",
+                "op": "truthy"
+              },
+              {
+                "field": "sepsis_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "positive_blood_cultures",
+                "op": "truthy"
+              },
+              {
+                "field": "vegetation_on_lead_echo",
+                "op": "truthy"
+              },
+              {
+                "field": "pocket_pain_tenderness",
+                "op": "truthy"
+              },
+              {
+                "field": "early_inflammation_severe_or_progressive",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Eritema leve isolado, sem outros sinais, próximo ao implante ou procedimento recente, é compatível com reação inflamatória benigna pós-operatória, mas ainda requer reavaliação clínica"
+            ],
+            "suggested_tests": [
+              "Reavaliação clínica em 48 a 72 horas para monitorar evolução do eritema"
+            ]
+          }
+        },
+        {
+          "id": "deiscencia-comunicacao-nao-confirmada",
+          "priority": 86,
+          "when": {
+            "all": [
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "dehiscence_communicates_with_pocket",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Deiscência isolada não confirma comunicação com a loja, mas exige exame presencial rápido para excluir exposição do sistema."
+            ],
+            "emergency_flow": [
+              "Não manipular nem fechar superficialmente sem avaliar profundidade e comunicação com a loja por equipe de CIED."
+            ]
+          }
+        },
+        {
+          "id": "dor-nova-na-loja",
+          "priority": 82,
+          "when": {
+            "all": [
+              {
+                "field": "pocket_pain_tenderness",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Dor/sensibilidade nova ou progressiva na loja é sinal local relevante, mesmo sem drenagem."
+            ],
+            "emergency_flow": [
+              "Avaliação presencial rápida da loja e dos sinais sistêmicos; não classificar automaticamente como dor pós-operatória benigna."
+            ]
+          }
+        },
+        {
+          "id": "inflamacao-precoce-intensa-progressiva",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "days_since_procedure",
+                "op": "lte",
+                "value": 14
+              },
+              {
+                "field": "early_inflammation_severe_or_progressive",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Inflamação precoce intensa ou progressiva não deve ser tranquilizada apenas pelo tempo desde o procedimento."
+            ],
+            "emergency_flow": [
+              "Avaliar no mesmo dia por equipe do dispositivo para excluir infecção, hematoma sob tensão ou complicação da ferida."
+            ]
+          }
+        },
+        {
+          "id": "febre-isolada-em-portador-cied",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "fever",
+                "op": "truthy"
+              }
+            ],
+            "none": [
+              {
+                "field": "sepsis_signs",
+                "op": "truthy"
+              },
+              {
+                "field": "local_erythema_warmth",
+                "op": "truthy"
+              },
+              {
+                "field": "pocket_pain_tenderness",
+                "op": "truthy"
+              },
+              {
+                "field": "purulent_drainage",
+                "op": "truthy"
+              },
+              {
+                "field": "wound_dehiscence",
+                "op": "truthy"
+              },
+              {
+                "field": "erosion_exposure",
+                "op": "truthy"
+              },
+              {
+                "field": "positive_blood_cultures",
+                "op": "truthy"
+              },
+              {
+                "field": "vegetation_on_lead_echo",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "messages": [
+              "Febre isolada em portador de CIED não confirma infecção do sistema, mas requer investigação da fonte e não pode ficar sem fluxo."
+            ],
+            "emergency_flow": [
+              "Avaliar presencialmente, colher hemoculturas antes de antibiótico quando clinicamente apropriado e investigar fontes alternativas; escalar se bacteremia, sepse ou sinais do dispositivo surgirem."
+            ]
+          }
+        }
+      ],
+      "review_note": "PR #711 revalidada em 08/09/2026: janela limitada a 3650 dias, dor e gravidade precoce coletadas, deiscência exige comunicação, massa não presume vegetação e febre isolada ganhou fluxo."
+    }
+  },
+  {
+    "slug": "complicacao-local-pos-cateterismo-procedimento-vascular",
+    "set": {
+      "questions": [
+        {
+          "id": "access_site",
+          "label": "Qual foi o sítio de acesso do procedimento?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "radial",
+              "label": "Radial (punho, lado do polegar)"
+            },
+            {
+              "value": "ulnar",
+              "label": "Ulnar (punho, lado do dedo mínimo)"
+            },
+            {
+              "value": "femoral",
+              "label": "Femoral (virilha)"
+            },
+            {
+              "value": "other",
+              "label": "Outro sítio (braquial, axilar ou não sabe informar)"
+            }
+          ],
+          "section": "Contexto"
+        },
+        {
+          "id": "time_since_procedure",
+          "label": "Quanto tempo se passou desde o procedimento?",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "lt_6h",
+              "label": "Menos de 6 horas"
+            },
+            {
+              "value": "6_24h",
+              "label": "Entre 6 e 24 horas"
+            },
+            {
+              "value": "1_7d",
+              "label": "Entre 24 horas e 1 semana"
+            },
+            {
+              "value": "gt_7d",
+              "label": "Mais de 1 semana"
+            }
+          ],
+          "section": "Contexto"
+        },
+        {
+          "id": "anticoagulant_or_antiplatelet",
+          "label": "Está em uso de anticoagulante e/ou antiagregante (incluindo o administrado durante o procedimento)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Modificadores"
+        },
+        {
+          "id": "hematoma_present",
+          "label": "Há hematoma (mancha arroxeada/inchaço) visível ou palpável no local de acesso?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sítio"
+        },
+        {
+          "id": "hematoma_expanding_or_pulsatile",
+          "label": "O hematoma está aumentando de tamanho, é pulsátil ou continua crescendo apesar de compressão adequada?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "active_bleeding_uncontrolled",
+          "label": "Há sangramento ativo no local que não cede após 10-15 minutos de compressão manual direta?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "pain_disproportionate",
+          "label": "A dor no membro é desproporcional ao que o exame local mostra (muito mais intensa do que o hematoma ou sinal visível sugere)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "limb_pallor_or_coldness",
+          "label": "O membro distal ao acesso está pálido, frio ou com coloração diferente do lado oposto?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "paresthesia_or_motor_weakness",
+          "label": "Há formigamento, dormência ou fraqueza motora nova no membro distal ao acesso?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "distal_pulse_absent_or_reduced",
+          "label": "Pulso distal ausente ou nitidamente reduzido comparado ao lado oposto (radial/ulnar ou pedioso/tibial posterior, conforme o sítio)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "capillary_refill_delayed",
+          "label": "O enchimento capilar está lentificado no membro distal ao acesso?",
+          "type": "boolean",
+          "required": false,
+          "section": "Red flags"
+        },
+        {
+          "id": "hypotension_or_hypoperfusion",
+          "label": "Há hipotensão, taquicardia ou outro sinal de hipoperfusão desde o procedimento?",
+          "type": "boolean",
+          "required": true,
+          "section": "Sinais vitais"
+        },
+        {
+          "id": "abdominal_flank_or_back_pain",
+          "label": "Há dor lombar, no flanco ou abdominal nova, sem outra explicação, desde o procedimento (especialmente após acesso femoral)?",
+          "type": "boolean",
+          "required": true,
+          "section": "Red flags"
+        },
+        {
+          "id": "pulsatile_mass_or_bruit",
+          "label": "Há massa pulsátil localizada no sítio de acesso, com ou sem sopro à ausculta?",
+          "type": "boolean",
+          "required": false,
+          "section": "Sinais"
+        }
+      ],
+      "rules": [
+        {
+          "id": "isquemia-aguda-membro-palidez-frieza-pulso-ausente",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "limb_pallor_or_coldness",
+                "op": "truthy"
+              },
+              {
+                "field": "distal_pulse_absent_or_reduced",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Palidez/frieza do membro associada a pulso distal ausente ou reduzido após acesso vascular sugere isquemia aguda de membro — risco de perda de membro dependente do tempo até revascularização"
+            ],
+            "emergency_flow": [
+              "Acionar avaliação vascular de urgência imediatamente; não aguardar exame de imagem prolongado quando houver perda de perfusão distal"
+            ]
+          }
+        },
+        {
+          "id": "isquemia-aguda-deficit-neurologico",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "paresthesia_or_motor_weakness",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Déficit sensitivo ou motor novo após acesso arterial é emergência vascular mesmo que o pulso ainda seja palpável."
+            ],
+            "emergency_flow": [
+              "Acionar atendimento vascular de urgência sem atraso; sedação/analgesia não devem mascarar a reavaliação seriada de sensibilidade e força"
+            ]
+          }
+        },
+        {
+          "id": "sangramento-retroperitoneal-suspeito",
+          "priority": 100,
+          "when": {
+            "all": [
+              {
+                "field": "access_site",
+                "op": "eq",
+                "value": "femoral"
+              },
+              {
+                "field": "abdominal_flank_or_back_pain",
+                "op": "truthy"
+              },
+              {
+                "field": "hypotension_or_hypoperfusion",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Dor lombar/abdominal nova associada a hipotensão após acesso femoral sugere sangramento retroperitoneal — POCUS abdominal normal não exclui o diagnóstico"
+            ],
+            "emergency_flow": [
+              "Acionar avaliação vascular/intervencionista de urgência; considerar TC de abdome/pelve contrastada conforme estabilidade hemodinâmica; não atribuir a hipotensão apenas a causa cardíaca sem excluir sangramento retroperitoneal"
+            ]
+          }
+        },
+        {
+          "id": "hematoma-expansivo-ou-sangramento-ativo-nao-controlado",
+          "priority": 90,
+          "when": {
+            "any": [
+              {
+                "field": "hematoma_expanding_or_pulsatile",
+                "op": "truthy"
+              },
+              {
+                "field": "active_bleeding_uncontrolled",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Hematoma expansivo/pulsátil ou sangramento ativo não controlado por compressão manual adequada exige controle da fonte sem demora"
+            ],
+            "suggested_tests": [
+              "Hemograma e sinais vitais seriados",
+              "Ultrassom Doppler do sítio de acesso quando disponível"
+            ]
+          }
+        },
+        {
+          "id": "palidez-frieza-com-pulso-presente",
+          "priority": 89,
+          "when": {
+            "all": [
+              {
+                "field": "limb_pallor_or_coldness",
+                "op": "truthy"
+              },
+              {
+                "field": "distal_pulse_absent_or_reduced",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Palidez ou frieza do membro após acesso vascular continua sendo sinal de possível comprometimento da perfusão mesmo quando o pulso distal é palpável"
+            ],
+            "suggested_tests": [
+              "Reavaliação neurovascular seriada com comparação bilateral",
+              "Ultrassom Doppler e avaliação vascular urgente conforme disponibilidade e protocolo local"
+            ],
+            "messages": [
+              "Pulso distal palpável não torna palidez ou frieza pós-procedimento um achado benigno; a perfusão deve ser reavaliada com urgência"
+            ]
+          }
+        },
+        {
+          "id": "pulso-distal-ausente-ou-reduzido-isolado",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "distal_pulse_absent_or_reduced",
+                "op": "truthy"
+              }
+            ],
+            "any": [
+              {
+                "field": "access_site",
+                "op": "neq",
+                "value": "radial"
+              },
+              {
+                "field": "time_since_procedure",
+                "op": "in",
+                "value": [
+                  "lt_6h",
+                  "6_24h"
+                ]
+              }
+            ],
+            "none": [
+              {
+                "field": "paresthesia_or_motor_weakness",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Pulso distal ausente ou reduzido após procedimento vascular exige avaliação de perfusão de forma urgente, mesmo sem palidez ou déficit neurológico associados"
+            ],
+            "suggested_tests": [
+              "Doppler vascular do membro",
+              "Avaliação vascular urgente à beira do leito"
+            ]
+          }
+        },
+        {
+          "id": "dor-desproporcional",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "pain_disproportionate",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Dor desproporcional ao exame local é sinal precoce de isquemia e pode preceder palidez, frieza ou ausência de pulso"
+            ],
+            "messages": [
+              "Não aguardar palidez ou ausência de pulso para investigar; dor desproporcional isoladamente já indica avaliação vascular"
+            ]
+          }
+        },
+        {
+          "id": "hipotensao-ou-hipoperfusao-isolada",
+          "priority": 80,
+          "when": {
+            "all": [
+              {
+                "field": "hypotension_or_hypoperfusion",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Hipotensão ou sinal de hipoperfusão após procedimento vascular exige excluir sangramento local visível ou oculto/retroperitoneal antes de atribuir a outra causa"
+            ],
+            "suggested_tests": [
+              "Hemograma seriado",
+              "Sinais vitais seriados",
+              "TC de abdome/pelve contrastada se estável e a suspeita de sangramento oculto persistir"
+            ]
+          }
+        },
+        {
+          "id": "enchimento-capilar-lentificado",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "capillary_refill_delayed",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Enchimento capilar lentificado é sinal adicional de comprometimento de perfusão distal, mesmo sem palidez ou pulso ausente já confirmados"
+            ],
+            "suggested_tests": [
+              "Reavaliação seriada de perfusão distal e pulsos"
+            ]
+          }
+        },
+        {
+          "id": "pseudoaneurisma-suspeito-massa-pulsatil",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "pulsatile_mass_or_bruit",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "differentials": [
+              "Pseudoaneurisma no local de punção",
+              "Fístula arteriovenosa iatrogênica"
+            ],
+            "suggested_tests": [
+              "Ultrassom Doppler do sítio de acesso"
+            ]
+          }
+        },
+        {
+          "id": "anticoagulante-ou-antiplaquetario-em-uso",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "anticoagulant_or_antiplatelet",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "supporting": [
+              "Uso de anticoagulante/antiagregante aumenta risco e pode prolongar sangramento no sítio de acesso"
+            ],
+            "messages": [
+              "Não há indicação de suspender anticoagulação/antiagregante de rotina apenas por hematoma leve e estável; a decisão deve considerar a gravidade do sangramento e a indicação da terapia"
+            ]
+          }
+        },
+        {
+          "id": "deteccao-tardia-possivel-rao-radial",
+          "priority": 25,
+          "when": {
+            "all": [
+              {
+                "field": "access_site",
+                "op": "eq",
+                "value": "radial"
+              },
+              {
+                "field": "distal_pulse_absent_or_reduced",
+                "op": "truthy"
+              },
+              {
+                "field": "limb_pallor_or_coldness",
+                "op": "falsy"
+              },
+              {
+                "field": "time_since_procedure",
+                "op": "in",
+                "value": [
+                  "1_7d",
+                  "gt_7d"
+                ]
+              },
+              {
+                "field": "pain_disproportionate",
+                "op": "falsy"
+              },
+              {
+                "field": "capillary_refill_delayed",
+                "op": "falsy"
+              },
+              {
+                "field": "paresthesia_or_motor_weakness",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "differentials": [
+              "Oclusão de artéria radial (RAO) pós-cateterismo, geralmente assintomática"
+            ],
+            "suggested_tests": [
+              "Teste de Barbeau (oximetria de pulso/pletismografia) para confirmar patência da radial"
+            ],
+            "messages": [
+              "Pulso radial reduzido/ausente detectado tardiamente, sem sinais de isquemia da mão, pode corresponder a oclusão radial tardia e requer avaliação dirigida, sem disparar simultaneamente a regra genérica de isquemia aguda."
+            ]
+          }
+        },
+        {
+          "id": "equimose-leve-estavel-sem-outros-sinais",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "hematoma_present",
+                "op": "truthy"
+              },
+              {
+                "field": "hematoma_expanding_or_pulsatile",
+                "op": "falsy"
+              },
+              {
+                "field": "active_bleeding_uncontrolled",
+                "op": "falsy"
+              },
+              {
+                "field": "pain_disproportionate",
+                "op": "falsy"
+              },
+              {
+                "field": "limb_pallor_or_coldness",
+                "op": "falsy"
+              },
+              {
+                "field": "distal_pulse_absent_or_reduced",
+                "op": "falsy"
+              },
+              {
+                "field": "capillary_refill_delayed",
+                "op": "falsy"
+              },
+              {
+                "field": "paresthesia_or_motor_weakness",
+                "op": "falsy"
+              },
+              {
+                "field": "hypotension_or_hypoperfusion",
+                "op": "falsy"
+              },
+              {
+                "field": "pulsatile_mass_or_bruit",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "messages": [
+              "Equimose leve e estável, sem expansão, sangramento ativo, dor desproporcional ou comprometimento de perfusão distal, costuma ser achado benigno e autolimitado"
+            ],
+            "ambulatory_flow": [
+              "Orientar observação domiciliar, compressa fria intermitente nas primeiras 24-48 horas e retorno se houver crescimento do hematoma, dor nova ou sinal de má perfusão"
+            ]
+          }
+        }
+      ],
+      "review_note": "PR #712 revalidada em 08/09/2026: déficit neurológico independe do pulso, acesso ulnar foi separado, oclusão radial tardia não sobrepõe regra aguda e equimose benigna exclui refill lento."
+    }
+  }
+]

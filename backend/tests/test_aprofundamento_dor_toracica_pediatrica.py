@@ -25,6 +25,8 @@ DOSE_PATTERNS = (r"\d+[\.,]?\d*\s*mg\b",r"\d+[\.,]?\d*\s*mg/kg",r"\d+[\.,]?\d*\s
 ALLOWED_ADD_KEYS = {"risk","red_flags","supporting","opposing","missing_information","suggested_tests","differentials","ambulatory_flow","emergency_flow","messages"}
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
     "dor-toracica-pediatrica-avaliacao-de-sinais-de-alarme-cardiaco-vs-causa-nao-cardiaca",
+    "pericardite-aguda-na-crianca-e-no-adolescente-etiologia-diagnostico-e-tratamento",
+    "sindrome-pos-pericardiotomia-pediatrica-incidencia-diagnostico-e-tratamento",
     "sindrome-de-turner-na-crianca-e-adolescente-espectro-cardiovascular-indice-de-tamanho-aortico-e-rastreio-antes-do-estrogenio",
     "isquemia-coronaria-aguda-apos-switch-arterial",
     "descompensacao-aguda-da-circulacao-de-fontan",

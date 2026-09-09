@@ -6,7 +6,7 @@ kind: fluxograma
 fonte_producao: grok
 summary: "Árvore do consultório com o resultado de Lp(a) na mão: unidade certa, corte como fator agravante, cascata, intensificar LDL agora, e o ramo que recusa pelacarsena/olpasirana como se já tivessem reduzido MACE. Não substitui o consenso EAS 2022 de quem dosar nem o OCEAN(a)-DOSE."
 review_status: revisado
-review_note: "Produção científica assistida em 29/08/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Classes: ESC/EAS 2025 Tabela 4 IIa B (fator agravante >50 mg/dL ≈105 nmol/L) lida no PDF/EAS; SBC 2025 GRADE da tabela de Lp(a) lida no PMC. HORIZON sem artigo de desfecho em 29/08/2026 (PubMed + NCT04023552). AAS por Lp(a) isolada: nenhuma tabela lida — ramo de não prescrever, com LIMITE DA EVIDÊNCIA no protocolo irmão."
+review_note: "Produção científica assistida em 29/08/2026, atualizada em 08/09/2026. Árvore estrita (raiz única, um pai por nó, conduta só em folha). Classes: ESC/EAS 2025 Tabela 4 IIa B (fator agravante >50 mg/dL ≈105 nmol/L) lida no PDF/EAS; SBC 2025 GRADE da tabela de Lp(a) lida no PMC. Em 04/09/2026, a patrocinadora Novartis comunicou que o HORIZON com pelacarsena não atingiu o desfecho primário; publicação integral, HR, IC e subgrupos permaneciam pendentes. AAS por Lp(a) isolada: nenhuma tabela lida — ramo de não prescrever, com LIMITE DA EVIDÊNCIA no protocolo irmão."
 source_refs:
   - "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 4"
   - "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418"
@@ -16,6 +16,8 @@ source_refs:
   - "Cho L, Nicholls SJ, Nordestgaard BG, et al. Design and Rationale of Lp(a)HORIZON Trial. Am Heart J. 2025;287:1-9. DOI: 10.1016/j.ahj.2025.03.019. PMID: 40185318"
   - "O'Donoghue ML, Rosenson RS, Gencer B, et al. Small Interfering RNA to Reduce Lipoprotein(a) in Cardiovascular Disease. N Engl J Med. 2022;387(20):1855-1864. PMID: 36342163"
   - "Derivado de lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam.md. Liga, não clona, lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022.md e lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose.md"
+  - "Novartis. Lp(a)HORIZON Phase III topline results for pelacarsen. Comunicado da patrocinadora, 4 September 2026. NCT04023552. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+  - "Documento da casa lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta"
 ---
 
 # Fluxograma: Lp(a) elevada — rastreio, risco residual e o que não esperar do fármaco
@@ -24,8 +26,9 @@ source_refs:
 não da pergunta "quem dosar na população" (consenso EAS 2022) nem da pergunta
 "quanto a olpasirana baixa o biomarcador" (OCEAN(a)-DOSE). As folhas são condutas
 de hoje. Nenhuma folha inicia pelacarsena, olpasirana ou AAS "porque a Lp(a) está
-alta": Lp(a)HORIZON não tinha MACE publicado em 29/08/2026, e nenhuma tabela lida
-nesta revisão editorial recomenda AAS só por esse número.
+alta": a patrocinadora informou que o HORIZON com pelacarsena não atingiu o
+desfecho primário de MACE; o artigo completo permanecia pendente, e nenhuma tabela
+lida nesta revisão editorial recomenda AAS só por esse número.
 
 O texto que explica unidade, GRADE brasileiro e o status dos CVOTs está em
 [`lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam`](lipoproteina-a-conduta-pratica-enquanto-os-desfechos-nao-chegam.md).
@@ -34,7 +37,7 @@ O texto que explica unidade, GRADE brasileiro e o status dos CVOTs está em
 
 ```mermaid
 flowchart TD
-  R0["Adulto em consultório:<br/>Lp(a) já medida, ou ainda nunca medida"] --> D1{"Já existe uma dosagem<br/>de Lp(a) na vida adulta?"}
+  R0["Adulto em consultório:<br/>Lp(a) já medida, ou ainda não medida"] --> D1{"Já existe uma dosagem<br/>de Lp(a) na vida adulta?"}
 
   D1 -->|"Não"| C1(["Pedir uma vez, de preferência em nmol/L<br/>com ensaio independente da isoforma.<br/>SBC 2025: Forte / Moderada na população geral;<br/>Forte / Alta se DAC precoce, estenose aórtica,<br/>HF ou história familiar. Não é exame anual"])
 
@@ -53,7 +56,7 @@ flowchart TD
   D4 -->|"Sim"| P1["Fator agravante: ESC/EAS 2025<br/>Tabela 4, Classe IIa, Nível B.<br/>SBC: prediz recorrência"]
   P1 --> D5{"O LDL já está na meta<br/>da categoria deste paciente?"}
 
-  D5 -->|"Não"| C5(["Intensificar HOJE o hipolipemiante<br/>com desfecho já publicado:<br/>estatina de alta intensidade, ezetimiba,<br/>iPCSK9 ou ácido bempedoico.<br/>Não esperar o HORIZON. iPCSK9 é para o LDL,<br/>não 'para Lp(a)'"])
+  D5 -->|"Não"| C5(["Intensificar HOJE o hipolipemiante<br/>com desfecho já publicado:<br/>estatina de alta intensidade, ezetimiba,<br/>iPCSK9 ou ácido bempedoico.<br/>Sem aguardar a publicação integral do HORIZON.<br/>iPCSK9 é para o LDL, não 'para Lp(a)'"])
 
   D5 -->|"Sim"| C6(["Manter a meta de LDL; apertar<br/>pressão, tabaco, diabetes, peso e exercício.<br/>Cascata familiar se ≥50 mg/dL<br/>ou ≥125 nmol/L — SBC 2025 Forte / Alta.<br/>Não iniciar pelacarsena/olpasirana/AAS"])
 
@@ -70,10 +73,11 @@ flowchart TD
 
 ## O que a árvore recusa de propósito
 
-**Pelacarsena e olpasirana não têm folha de "iniciar".** O OCEAN(a)-DOSE (PMID 36342163)
-baixa o biomarcador; o Lp(a)HORIZON (PMID 40185318, NCT04023552) é ensaio de desfecho
-**ainda sem artigo de MACE na consulta PubMed de 29/08/2026**. OCEAN(a) Outcomes
-(NCT05581303) segue em curso. Quem precisa do detalhe de dose vai ao documento
+**Pelacarsena e olpasirana não têm folha de "iniciar".** O comunicado da patrocinadora
+de 04/09/2026 informa que o HORIZON com pelacarsena não atingiu o desfecho primário;
+artigo completo, HR, IC e subgrupos permaneciam pendentes. Isso não determina o
+resultado da olpasirana: OCEAN(a)-DOSE (PMID 36342163) baixa o biomarcador, e OCEAN(a)
+Outcomes (NCT05581303) segue em curso. Quem precisa do detalhe de dose vai ao documento
 [`lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose`](lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose.md)
 — não se copia aquele ensaio nesta árvore.
 
@@ -85,7 +89,7 @@ AAS continua nas regras de prevenção primária ou secundária que já existem.
 SBC 2025 e ACC/AHA 2026 usam 125 nmol/L para o mesmo 50 mg/dL. A folha C2 existe
 para impedir a conta de guardanapo.
 
-**Quem dosar na população** (adulto nunca testado, criança só com AVC ou pai/mãe
+**Quem dosar na população** (adulto ainda não testado, criança só com AVC ou pai/mãe
 com DCVA prematura, ancestralidade como ressalva de corte) continua no consenso
 EAS 2022. Esta árvore assume a consulta individual, não o programa de rastreio.
 

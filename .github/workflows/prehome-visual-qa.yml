@@ -210,7 +210,7 @@ jobs:
                   panel: '.login-gateway__console',
                   brand: '.login-gateway__scene',
                   logo: '.login-gateway__brand',
-                  hero: '.login-gateway__core .prehome-brand__heart',
+                  hero: '.login-gateway__core .login-gateway__approved-heart',
                 } : {
                   root: '.public-space',
                   panel: '.public-space__surface',
@@ -219,7 +219,7 @@ jobs:
                   hero: '.public-space__signal',
                 };
                 const sample = document.querySelector(selectors.panel);
-                const heart = rect('.login-gateway__core .prehome-brand__heart');
+                const heart = rect('.login-gateway__core .login-gateway__approved-heart');
                 const ensino = rect('.login-gateway__space--ensino');
                 const style = sample ? getComputedStyle(sample) : null;
                 return {
@@ -234,9 +234,10 @@ jobs:
                   heroVisual: visible(selectors.hero),
                   rootRect: rect(selectors.root),
                   panelRect: rect(selectors.panel),
+                  footerVisible: visible('.login-gateway__footer'),
                   footerRect: rect('.login-gateway__footer'),
                   utilitiesRect: rect('.login-gateway__join'),
-                  metaRect: rect('.login-gateway__form-meta'),
+                  recoveryRect: rect('.login-gateway__forgot'),
                   headingRect: rect('.login-gateway__hero h1'),
                   sceneRect: rect('.login-gateway__scene'),
                   heartOverlapsEnsino: intersects(heart, ensino),
@@ -253,8 +254,9 @@ jobs:
               if ((metrics.isLogin ? !metrics.isMobile : true) && !metrics.heroVisual) report.failures.push(`${viewportName}/${name}: elemento visual central ausente`);
               if (metrics.isLogin && !metrics.isMobile && metrics.heartOverlapsEnsino) report.failures.push(`${viewportName}/${name}: coração conflita geometricamente com o espaço Ensino`);
               if (metrics.isLogin && !metrics.isMobile) {
+                if (!metrics.footerVisible) report.failures.push(`${viewportName}/${name}: rodapé institucional não está visível`);
                 if (metrics.scrollHeight > metrics.height + 2) report.failures.push(`${viewportName}/${name}: login excede verticalmente a área útil ${metrics.scrollHeight}px > ${metrics.height}px`);
-                for (const [part, bounds] of [['raiz', metrics.rootRect], ['console', metrics.panelRect], ['rodapé', metrics.footerRect], ['utilidades', metrics.utilitiesRect], ['metadados', metrics.metaRect]]) {
+                for (const [part, bounds] of [['raiz', metrics.rootRect], ['console', metrics.panelRect], ['rodapé', metrics.footerRect], ['utilidades', metrics.utilitiesRect], ['recuperação', metrics.recoveryRect]]) {
                   if (!bounds || bounds.y < -1 || bounds.bottom > metrics.height + 1) report.failures.push(`${viewportName}/${name}: ${part} fora da área útil ${JSON.stringify(bounds)}`);
                 }
                 if (!metrics.headingRect || !metrics.sceneRect || metrics.headingRect.x < metrics.sceneRect.x - 1 || metrics.headingRect.right > metrics.sceneRect.right + 1 || metrics.headingRect.y < metrics.sceneRect.y - 1) report.failures.push(`${viewportName}/${name}: título principal cortado ${JSON.stringify({ heading:metrics.headingRect, scene:metrics.sceneRect })}`);
@@ -273,7 +275,7 @@ jobs:
                   '.login-gateway__space--gestao', '.login-gateway__console',
                   '.login-gateway__console-head', '.login-gateway__theme-choice',
                   '.login-gateway__form', '.login-gateway__footer',
-                  '.login-gateway__form-meta', '.login-gateway__join',
+                  '.login-gateway__forgot', '.login-gateway__join',
                 ];
                 const captureThemeContract = () => page.evaluate((selectors) => {
                   const rects = Object.fromEntries(selectors.map((selector) => {

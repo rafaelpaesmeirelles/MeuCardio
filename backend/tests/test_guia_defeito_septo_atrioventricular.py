@@ -109,10 +109,26 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
             "checklist",
             "elegibilidade-esportiva-na-crianca-e-no-adolescente-com-cardiopatia-congenita-por-lesao",
         ),
+        ("evidencia", "cc-adulto-tc-defeito-do-septo-atrioventricular-com-sinais-de-ic"),
+        (
+            "caso_clinico",
+            "defeito-do-septo-atrioventricular-total-reparo-primario-precoce-versus-bandagem-de-arteria-pulmonar-coorte-australiana",
+        ),
+        (
+            "estudo",
+            "fong2021-preditores-de-reoperacao-e-mortalidade-apos-reparo-do-defeito-do-septo-atrioventricular-total",
+        ),
+        ("galeria", "canal-atrioventricular-completo-eco-4-camaras"),
     }
     targets = {
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "evidencia": {item["slug"] for item in _records(ROOT / "evidencias/metadados.json")},
+        "caso_clinico": {
+            item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")
+        },
+        "estudo": {item["slug"] for item in _records(ROOT / "estudos/metadados.json")},
+        "galeria": {item["slug"] for item in _records(ROOT / "galeria/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)
@@ -145,4 +161,3 @@ def test_assistente_prioriza_instabilidade_sem_prescricao_automatica():
     assert "atendimento hospitalar imediato" in rendered
     assert "mg/kg" not in rendered
     assert "prescrever" not in rendered
-

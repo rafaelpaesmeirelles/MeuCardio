@@ -1,0 +1,486 @@
+{
+  "frozen_source_sha": "deeccd771955810f02c770fc58b3034fbf51bbc5",
+  "base": "0eb28da3",
+  "records": {
+    "55": {
+      "path": "content/Doença_coronariana/betabloqueador-pos-iam-evidencia-estratificada-por-feve-40-49-versus-50.md",
+      "decision": "verified_no_change",
+      "findings": [
+        "Texto canônico já distingue populações, resultados neutros e retirada abrupta; nenhuma alteração necessária."
+      ],
+      "source_refs": [
+        "Munkhaugen J, Kristensen AMD, Fagerland MW, et al.; BETAMI-DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716.",
+        "Rossello X, Prescott EIB, Kristensen AMD, et al. β blockers after myocardial infarction with mildly reduced ejection fraction: an individual patient data meta-analysis of randomised controlled trials. Lancet. 2025;406(10508):1128-1137. DOI: 10.1016/S0140-6736(25)01592-2. PMID: 40897190.",
+        "Kristensen AMD, Rossello X, Atar D, et al. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954."
+      ],
+      "before_sha256": "474d1ead7efcb08af681c8b7a6fe35ffb9a8d8671821594643f93762ca9f1c37",
+      "after_sha256": "474d1ead7efcb08af681c8b7a6fe35ffb9a8d8671821594643f93762ca9f1c37"
+    },
+    "56": {
+      "path": "content/Hipertensão/acc-aha-2025-diretriz-hipertensao-arterial-adultos.md",
+      "decision": "corrected",
+      "findings": [
+        "Explicitados limiares de início e combinação estágio2; causas secundárias separadas de pseudorresistência."
+      ],
+      "source_refs": [
+        "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242."
+      ],
+      "before_sha256": "69de88ae8c2b60298b13080e8b6bf1dc89ba1deac90f4b6f318fdcf443f7e721",
+      "after_sha256": "80c4d6fbb9d4998369583d2297d505f8d1d6e59f2d1941e9e480ce688454e5e4"
+    },
+    "57": {
+      "path": "content/Diabetes_e_cardiologia/estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025.md",
+      "decision": "corrected",
+      "findings": [
+        "Lp(a)/NT-proBNP EAR; discrepâncias 3EAR/idade56 expostas; corrigida troca 4D/AURORA e continuação estatina."
+      ],
+      "source_refs": [
+        "Izar M, Fonseca F, Faludi A, Valente F, Bertoluci M, Araújo D. Manejo do risco cardiovascular: dislipidemia. Diretriz Oficial SBD. DOI do capítulo: 10.29327/557753.2022-19. Versão online consultada em 08/09/2026: https://diretriz.diabetes.org.br/manejo-do-risco-cardiovascular-dislipidemia/ ; PDF, Quadros 1–4: https://diretriz.diabetes.org.br/manejo-do-risco-cardiovascular-dislipidemia/?generate_pdf=3303",
+        "4D: Wanner et al. Atorvastatin in patients with type2 diabetes mellitus undergoing hemodialysis. NEJM2005. DOI:10.1056/NEJMoa043545. PMID:16034009.",
+        "AURORA: Fellstrom et al. Rosuvastatin and cardiovascular events in patients undergoing hemodialysis. NEJM2009. DOI:10.1056/NEJMoa0810177. PMID:19332456."
+      ],
+      "before_sha256": "57998e5a2b134f56870ad4721deedb28afaaffe3afa4d119fb65f210dbb89938",
+      "after_sha256": "bea67c2edff3dc72acf2bd3f8dfc6b0285eabace544a13aebbff9d0e7e2c4df1"
+    },
+    "60": {
+      "path": "content/Valvopatias/regurgitacao-mitral-secundaria-transcateter-coapt-versus-mitra-fr-por-que-resultados-divergiram.md",
+      "decision": "corrected",
+      "findings": [
+        "Retirada promoção da proporcionalidade a regra preditiva; doses máximas toleradas e encaminhamento sem barreira artificial."
+      ],
+      "source_refs": [
+        "Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640. PMID: 30280640.",
+        "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374. PMID: 30145927.",
+        "Grayburn PA, Sannino A, Packer M. Proportionate and Disproportionate Functional Mitral Regurgitation: A New Conceptual Framework That Reconciles the Results of the MITRA-FR and COAPT Trials. JACC Cardiovasc Imaging. 2019;12(2):353-362. DOI: 10.1016/j.jcmg.2018.11.006. PMID: 30553663.",
+        "Praz F et al. ESC/EACTS 2025. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295. Seleção integrada para TEER ventricular secundário.",
+        "Anker SD et al. Transcatheter Valve Repair in Heart Failure with Moderate to Severe Mitral Regurgitation (RESHAPE-HF2). NEJM. 2024;391:1799–1809. DOI: 10.1056/NEJMoa2314328. https://www.nejm.org/doi/full/10.1056/NEJMoa2314328"
+      ],
+      "before_sha256": "b6297e99cf3dd199dc496cb80caf0d0a9ec5e585454458cc3db0abc73af73053",
+      "after_sha256": "e84352006fd64d0d67a5347e0cfa05a2e47244d4303b63b6d97d3c102680fec6"
+    },
+    "62": {
+      "path": "content/Cardiomiopatias/cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024.md",
+      "decision": "corrected",
+      "findings": [
+        "Critério adulto e coexistência hipertensão; comparação entre métodos não sistematicamente maior; handgrip pós-carga; redução septal intermediária excepcional."
+      ],
+      "source_refs": [
+        "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e20240415. DOI: 10.36660/abc.20240415.",
+        "Texto primário SBC 2024: https://www.scielo.br/j/abc/a/ZCS9yyxrVK8H7qgFTbn9rvH/?lang=en",
+        "SBC2024CMH. DOI:10.36660/abc.20240415. PMID:39082572."
+      ],
+      "before_sha256": "0a9a8aee0d185ef5ae1ef7ffad8910a0f9dc8a5ddf896f86bd0f711e39bd8787",
+      "after_sha256": "f0f2124add7d5ebd3de5718b098cd4708048cd7e02e114092e551451e247b412"
+    },
+    "63": {
+      "path": "content/Doença_coronariana/angiotomografia-coronariana-e-escore-de-calcio-no-algoritmo-diagnostico-esc-2024.md",
+      "decision": "corrected",
+      "findings": [
+        "CCTA quando investigação indicada; critérios de alto risco não reduzidos à DA; segurança renal; CAC não indica aspirina automaticamente; removida exclusividade falsa FFR-CT."
+      ],
+      "source_refs": [
+        "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710."
+      ],
+      "before_sha256": "1566137bb6a1ca88145b8b1b918ff8f178323dcb63b6a1e7d0637a83c41333f9",
+      "after_sha256": "181d60eb141e9caaa8f73211533086a79f5c9b99692b3d2f524215271d287e8f"
+    },
+    "64": {
+      "path": "content/Hipertensão/hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023.md",
+      "decision": "corrected",
+      "findings": [
+        "Separadas metas ESH/ESC; removido horário/dose universal e limite etário generalizado; corrigida alça na DRC resistente."
+      ],
+      "source_refs": [
+        "McEvoy JW et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. DOI: 10.1093/eurheartj/ehae178. https://www.escardio.org/static-file/Escardio/Guidelines/Products/Essential%20Messages/2024%20EM/Essential%20Messages_2024%20HTN.pdf",
+        "2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023. Referência comparativa histórica; suas metas por idade não foram atribuídas à ESC 2024."
+      ],
+      "before_sha256": "a66561df0f30a63dcc6547395ac013c8cbb955b92e31a5492bd1d5f2063b166d",
+      "after_sha256": "9bff54fe09a0ac441efb63ee79fd015d8ac80bda4df676533737dd6e35beb48f"
+    },
+    "65": {
+      "path": "content/Valvopatias/estenose-mitral-diagnostico-e-manejo-esc-eacts-2025.md",
+      "decision": "corrected",
+      "findings": [
+        "Incluído limiar ≤1,5, exceção sintomática selecionada acima1,5, contraindicações anatômicas/cirúrgicas faltantes e ritmo sinusal para ivabradina. Exceção tromboLAA já correta."
+      ],
+      "source_refs": [
+        "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8, texto integral obtido e conferido diretamente em 30/07/2026.",
+        "Texto integral ESC/EACTS 2025 conferido em 08/09/2026, seções 10.2–10.3, Table 8 e Recommendation Table 8. Cópia primária: https://arrhythmiaclinic.org/wp-content/uploads/2025/08/2025-ESC-Guideline-Valvular-Heart-Disease.pdf"
+      ],
+      "before_sha256": "730ed2244d014c94d563c29d21e8207df9fca9195454a752b19a3d96eceae70f",
+      "after_sha256": "7012a619459a47cf87f5e17c905e774c9ed1f090e87507ac931365a1404b4119"
+    },
+    "67": {
+      "path": "content/Cardiomiopatias/cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa.md",
+      "decision": "corrected",
+      "findings": [
+        "13–14mm adulto; ausênciaLGE nãoexclui; SRT excepcional; monoterapia mavacamten não qualquer intolerância isolada; ablaçãoFA não universalmente preferida; fenótipoNDLVC."
+      ],
+      "source_refs": [
+        "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194",
+        "PMID 37622657",
+        "Erratum ESC2023. DOI: 10.1093/eurheartj/ehag645. PMID: 42605809. Incidência/prevalência pediátrica HCM corrigidas e T2* reduzido na sobrecarga de ferro (Table22); sem alteração dos itens deste checklist. Aviso integral consultado em 08/09/2026."
+      ],
+      "before_sha256": "477b3b70e5a242ffcba361b9c42b0aa5156f0cb7394989adc529003431977106",
+      "after_sha256": "524e25268344bc92119536c375964f37429692f7db75a554c8e823187f05d068"
+    },
+    "68": {
+      "path": "content/Hipertensão/fluxograma-hipertensao-arterial-esc-2024.md",
+      "decision": "corrected",
+      "findings": [
+        "Corrigidos operadoresE/OU, diastólica80 na árvore, risco≥10 e idade≥85; incorporadas condições de alto risco omitidas e tolerabilidade."
+      ],
+      "source_refs": [
+        "2024 ESC Guidelines for the management of elevated blood pressure and hypertension · European Heart Journal · 2024 · 10.1093/eurheartj/ehae178 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/",
+        "2024 ESC Guidelines for Management of Elevated BP and Hypertension: Key Points · American College of Cardiology · 2024 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2024/09/05/14/11/2024-esc-guidelines-for-bp-esc-2024",
+        "New Definition of Elevated Blood Pressure in the 2024 ESC Guidelines: Increased Prevalence, Uncertain Evidence · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.124.072696",
+        "Navigating the 2024 ESC Hypertension Guidelines: What Is New, Context, and Future Directions · Journal of the American College of Cardiology · 2024 · https://www.jacc.org/doi/10.1016/j.jacc.2024.10.114",
+        "ESC2024hipertensão. DOI:10.1093/eurheartj/ehae178. PMID:39210715."
+      ],
+      "before_sha256": "710ef87969a7bb1d2e700fee7eab8e8ca83554523d8c9bbdef2f2bdefa71a32d",
+      "after_sha256": "da7d19add3b655d1291f597c3065dc202e032e4910358aa6ce5d5f3da9c59f14"
+    },
+    "69": {
+      "path": "content/Diabetes_e_cardiologia/doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023.md",
+      "decision": "corrected",
+      "findings": [
+        "ElegibilidadeSCORE2DM; renalGLP1 específica; SGLT2 não universalDM1/diálise; antitrombóticos por indicação; finerenona critérios; contexto históricoPA."
+      ],
+      "source_refs": [
+        "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · European Heart Journal · 2023 · 44(39):4043-4140 · https://academic.oup.com/eurheartj/article/44/39/4043/7238227",
+        "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 1 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/08/18/40/2023-esc-guidelines-cvd-diabetes-part-1-esc-2023",
+        "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 2 · American College of Cardiology · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/11/03/37/2023-esc-guidelines-cvd-diabetes-part-2-esc-2023",
+        "Marx N et al. ESC 2023 diabetes. DOI: 10.1093/eurheartj/ehad192. População SCORE2-Diabetes e recomendações terapêuticas por contexto. Revisão histórica não substitui atualizações específicas posteriores.",
+        "ESC2023diabetes. DOI:10.1093/eurheartj/ehad192. PMID:37622663."
+      ],
+      "before_sha256": "3a2419b37f1f29550d6d54500bc2ac47d304e0f63a96dd31b2f4e4deaab91f9a",
+      "after_sha256": "4d13ebd930ad8e2c52b83bb37cfb1a59616d0d34ac016e1009ea76587fcb8923"
+    },
+    "71": {
+      "path": "content/Valvopatias/disfuncao-de-biopotese-valvar-classificacao-varc-3-e-valve-in-valve-registro-vivid.md",
+      "decision": "corrected",
+      "findings": [
+        "VARC3 quatrocategorias; endocarditeurgência; SVD não reintervenção automática; tamanho≠mismatch."
+      ],
+      "source_refs": [
+        "Généreux P et al. VARC-3. JACC.2021;77:2717–2746. DOI:10.1016/j.jacc.2021.02.038. PMID:33888385. Consenso de endpoints; este checklist não reproduz graus hemodinâmicos numéricos completos.",
+        "Dvir D, Webb JG, Bleiziffer S, et al.; Valve-in-Valve International Data Registry Investigators. Transcatheter aortic valve implantation in failed bioprosthetic surgical valves. JAMA. 2014;312(2):162-170. DOI: 10.1001/jama.2014.7246. PMID: 25005653 — abstract estruturado conferido via PubMed E-utilities nesta sessão.",
+        "Praz F et al. ESC/EACTS2025. DOI:10.1093/eurheartj/ehaf194. Seção14.4 e Table12, texto integral conferido: https://arrhythmiaclinic.org/wp-content/uploads/2025/08/2025-ESC-Guideline-Valvular-Heart-Disease.pdf"
+      ],
+      "before_sha256": "82eeecf22efb562b05d2a5db7a742b30bed9f0511a5533dd9e799a343882ef3e",
+      "after_sha256": "4d3abdcdaeb4cb405442c33dacb7302b20b5246545793e41a2fb2f13a16b9570"
+    },
+    "72": {
+      "path": "content/Doença_coronariana/fluxograma-manejo-do-no-reflow-na-icp-primaria.md",
+      "decision": "corrected",
+      "findings": [
+        "Retirado limiar inventado de duasclasses; suporte mecânico pelochoque nãoTIMI; drogas nãointercambiáveis."
+      ],
+      "source_refs": [
+        "Pelliccia F, Niccoli G, Zimarino M, et al. Pathophysiology and Treatment of the No-Reflow Phenomenon in ST-Segment Elevation Myocardial Infarction · Reviews in Cardiovascular Medicine · 2023 · 24(12):365 · PMID: 39077094",
+        "Jolly SS, Cairns JA, Yusuf S, et al. Randomized trial of primary PCI with or without routine manual thrombectomy (TOTAL) · New England Journal of Medicine · 2015 · 372(15):1389-1398 · PMID: 25853743",
+        "SCAI Expert Consensus Statement on the Management of Patients With STEMI Referred for Primary PCI. 2024. Texto primário definitivo: https://pmc.ncbi.nlm.nih.gov/articles/PMC11624394/ — no-reflow, entrega distal e suporte de perfusão."
+      ],
+      "before_sha256": "9e3dc0e6087b905765a65827f7d49ed55fc74316ddb103e6be727cae179bd40b",
+      "after_sha256": "39c4865cccecf16812cbfa4f2d931f2b8ccdb4061fd444d92f7945f3aa1a9d8a"
+    },
+    "74": {
+      "path": "content/Hipertensão/hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo.md",
+      "decision": "corrected",
+      "findings": [
+        "Kurinário pontual não prova perda; renina/aldo cominterferentes; cornãoexposição; emergênciaHMOD; prevenido reboteK."
+      ],
+      "source_refs": [
+        "Sabbadin C, Bordin L, Donà G, Manso J, Avruscio G, Armanini D. Licorice: From Pseudohyperaldosteronism to Therapeutic Uses. Front Endocrinol (Lausanne). 2019;10:484. DOI: 10.3389/fendo.2019.00484. PMID: 31379750 — revisão narrativa, acesso aberto",
+        "McHugh J, Marzella J, Kane A, Islam N. A life-threatening case of pseudo-aldosteronism secondary to excessive liquorice ingestion. BMC Endocr Disord. 2021;21(1):158. DOI: 10.1186/s12902-021-00816-4. PMID: 34362360 — relato de caso, acesso aberto, com valores numéricos de potássio, pressão arterial e renina/aldosterona",
+        "Sabbadin C, Graziani A, Bavaresco A, Mazzeo P, Tizianel I, Ceccato F, Armanini D, Barbot M. Pseudohyperaldosteronism Due to Licorice: A Practice-Based Learning from a Case Series. Int J Mol Sci. 2024;25(13):7454. DOI: 10.3390/ijms25137454. PMID: 39000561 — série de casos, acesso aberto, com o ponto prático de manejo (retirada, reposição de potássio, antagonista do receptor mineralocorticoide)"
+      ],
+      "before_sha256": "aa9000c9d726482fcf23677a868e5c4021940bb675ebfe8440c3822c96d02a25",
+      "after_sha256": "eacbb1cd00b09fd09b405b8e89c98744b6e37da01a022e488cf18254e74976be"
+    },
+    "75": {
+      "path": "content/Cardiomiopatias/taquicardiomiopatia-cardiomiopatia-induzida-por-taquicardia-reconhecimento-e-reversibilidade.md",
+      "decision": "corrected",
+      "findings": [
+        "Coorte encaminhada paraablação; sem corteuniversal; cardiopatiaestrutural podecoexistir; interpolação≠duplaFCmecânica; retirada falsa autoriaRoberts."
+      ],
+      "source_refs": [
+        "Sato N, et al. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026 Jul 7. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249 — abstract conferido no PubMed em 12/08/2026 ('Tachycardia-induced cardiomyopathy (TIC) is a reversible form of myocardial dysfunction caused by sustained or recurrent tachyarrhythmias').",
+        "Baman TS, Lange DC, Ilg KJ, et al. Relationship between burden of premature ventricular complexes and left ventricular function. Heart Rhythm. 2010;7(7):865-869. PMID: 20348027 — abstract conferido no PubMed em 12/08/2026, números reproduzidos como no resumo: 174 pacientes, corte de 24% de carga de ExSV separando função de VE preservada de reduzida, FEVE média 0,37±0,10 em 57/174 (33%) com disfunção, cardiomiopatia reversível já descrita a partir de carga de 10%.",
+        "Zeppenfeld K, et al. 2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death. Eur Heart J. 2022;43:3997–4126. DOI: 10.1093/eurheartj/ehac262. Seção de cardiomiopatia induzida ou agravada por extrassístoles ventriculares."
+      ],
+      "before_sha256": "e9e806e7c1f8db7f97d60b0bb81b471fd18cdc14c256519e6e44ba10dfedaf7c",
+      "after_sha256": "000182296c2113a5ce32447aaedeecd53ce93af41436f0686468bef99cc4bf01"
+    },
+    "78": {
+      "path": "content/Valvopatias/fluxograma-insuficiencia-tricuspide-secundaria-grave-quando-intervir-esc-eacts-2025.md",
+      "decision": "corrected",
+      "findings": [
+        "Ramo assintomático com progressãoVD; critérioscirurgia/transcateter separados; atualizaçãoTRILUMINATE2anos; cabo≠causa/exclusão."
+      ],
+      "source_refs": [
+        "Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — já citada e verificada em 'insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda.md' desta pasta; título/revista/ano reconferidos nesta sessão via PubMed E-utilities.",
+        "Praz F, Borger MA, Lanz J, et al.; ESC/EACTS Scientific Document Group. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4736. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Recommendation Table 9, texto integral já conferido em 30/07/2026 por sessão anterior; título/revista/ano reconferidos nesta sessão via PubMed E-utilities.",
+        "Kar S, et al. Two-Year Outcomes of Transcatheter Edge-to-Edge Repair for Severe Tricuspid Regurgitation: The TRILUMINATE Pivotal Randomized Controlled Trial. Circulation. 2025. PMID: 40159089. DOI: 10.1161/CIRCULATIONAHA.125.074536."
+      ],
+      "before_sha256": "ba509429cfaa1dda495f365cc582a2620b668b245a6332f4aff9652fcc3046bd",
+      "after_sha256": "7c26b07b6a5c95724e31f42d93e046a4b5472c43bf0ccc5fe6144d372beab434"
+    },
+    "79": {
+      "path": "content/Cardiomiopatias/fluxograma-cardiomiopatia-dilatada-risco-de-morte-subita-e-cdi.md",
+      "decision": "corrected",
+      "findings": [
+        "Critériosparalelos; removeTTN/genedesmossômicogenérico; FEVEprerequisito; prevençãosecundáriasemespera; VUSnãoP/LP; DANISHmortalidadevsMS."
+      ],
+      "source_refs": [
+        "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+        "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. DOI: 10.1161/CIRCULATIONAHA.118.039410. PMID: 31155932.",
+        "Køber L, Thune JJ, Nielsen JC, et al. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011.",
+        "Karanikola AE, Doundoulakis I, Antoniou CK, et al. Redefining Sudden Cardiac Death Risk Stratification in Dilated Cardiomyopathy: An Integrative Approach. Rev Cardiovasc Med. 2026;27(7):49889. DOI: 10.31083/RCM49889. PMID: 42534340.",
+        "Tetaj N, Segreti A, Ferro A, et al. High-Risk Cardiomyopathy Genotypes and Arrhythmic Risk: LMNA, FLNC, RBM20, PLN and Desmosomal Genes in the ESC 2023 Era. Genes (Basel). 2026;17(4):370. DOI: 10.3390/genes17040370. PMID: 42074488.",
+        "Ruscio E, Scacciavillani R, Gurgoglione FL, et al. Risk Stratification and Optimal Use of Implantable Cardioverter-Defibrillator Therapy in Primary Prevention of Sudden Cardiac Death in Genetic Cardiomyopathies, with Assessment of the Role of Genetic Variants in Guiding Therapeutic Decisions. Biomedicines. 2025;13(11). DOI: 10.3390/biomedicines13112626. PMID: 41301721.",
+        "Yokoshiki H, Watanabe M, Mitsuhashi T, et al. Current Status of Implantable Cardioverter-Defibrillators (ICDs)/Cardiac Resynchronization Therapy With Defibrillators (CRT-Ds) for Primary Prevention of Sudden Cardiac Death. J Arrhythm. 2026;42(2):e70349. DOI: 10.1002/joa3.70349. PMID: 42039769.",
+        "Arbelo E, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023. DOI: 10.1093/eurheartj/ehad194."
+      ],
+      "before_sha256": "29a7665abbb826ed576738c8bb37bc03e6e754124069cf2f962ff4ebfd051aeb",
+      "after_sha256": "58cd5f506159f6efae0c8068170a12b142a9d7c00f0750e4217abaafbb7140b6"
+    },
+    "87": {
+      "path": "content/Hipertensão/hipertensao-arterial-classificacao-diagnostico-metas.md",
+      "decision": "corrected",
+      "findings": [
+        "Meta comtolerabilidade; trêsestágiosnão novidade absoluta; KdietéticoDRC; emergênciaHMODnão número; MRAs renal/K."
+      ],
+      "source_refs": [
+        "Diretriz Brasileira de Hipertensão Arterial 2025. https://www.scielo.br/j/abc/a/BXT7Vk4B9VKQnJFsJhgJ4Hn/",
+        "Diretriz Brasileira de Hipertensão2025. DOI:10.36660/abc.20250624. PMID:41294179."
+      ],
+      "before_sha256": "b91f444a03be53f34d4506632cf1d0f4162cf959a359b152b718c3cdb47626b4",
+      "after_sha256": "ad13fb8b7cbafebd8de8466b729c0273ed8f38744a4dd730dbd30fea48095cfc"
+    },
+    "89": {
+      "path": "content/Fibrilação_atrial/terminologia-fa-valvar-versus-nao-valvar-e-o-criterio-real-que-contraindica-doac.md",
+      "decision": "corrected",
+      "findings": [
+        "RestriçãoMS moderada/grave não liberar degenerativa; bioprótesepósopcontexto; TAVIisoladanãoindicaOAC."
+      ],
+      "source_refs": [
+        "2024 ESC Guidelines for atrial fibrillation. DOI: 10.1093/eurheartj/ehae176.",
+        "2025 ESC/EACTS Guidelines for valvular heart disease. DOI: 10.1093/eurheartj/ehaf194.",
+        "ESC2024FA. DOI:10.1093/eurheartj/ehae176. PMID:39210723."
+      ],
+      "before_sha256": "89994c7128f770c05b7b3650e4e936073e62e8ea411ad07cd404058422bc1971",
+      "after_sha256": "cf4eb9333dd7bf8146a249b2ff3037990e30d564fa5da2671906d8eefae8dfad"
+    },
+    "90": {
+      "path": "content/Insuficiência_cardíaca/fluxograma-sequenciamento-titulacao-terapia-quadrupla-icfer.md",
+      "decision": "corrected",
+      "findings": [
+        "Congestãonãoinstabilidade; MRArenal/Knãoindiscriminado; marcapassonãoescalonadorBB; hipercalemiagraveprioridade."
+      ],
+      "source_refs": [
+        "2024 ACC Expert Consensus Decision Pathway for HFrEF. DOI: 10.1016/j.jacc.2023.12.024."
+      ],
+      "before_sha256": "8bb2a86abe9b8c196ab963981ca04ba6d5d96fdcf0e78da75f2ab8c90f4ceffc",
+      "after_sha256": "96ec46196ccdb0412f0de36171ca201542a243ce41d12812bdb876471814c5b7"
+    },
+    "91": {
+      "path": "content/Doença_coronariana/fluxograma-duracao-e-desescalonamento-da-dapt-apos-icp.md",
+      "decision": "corrected",
+      "findings": [
+        "P2Y12nãoretiradaautomática; DAPTscoreapós12meses; eventonovoexigeavaliação; ticagmono≥1mselecionados; removesuperioridadegenótiponãofonte."
+      ],
+      "source_refs": [
+        "2025 ACC/AHA guideline for acute coronary syndromes. DOI: 10.1016/j.jacc.2024.11.009.",
+        "2024 ESC Guidelines for chronic coronary syndromes. DOI: 10.1093/eurheartj/ehae177."
+      ],
+      "before_sha256": "85ae07ed5139dfa5dad88c5f1599934e4a28b611c5cd37b8b900981fe12b061a",
+      "after_sha256": "640b6aed5b40a20a4e6932fcbf700c945eaab536766b38a54b2bb6c2fbf2484d"
+    },
+    "93": {
+      "path": "content/Diabetes_e_cardiologia/agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md",
+      "decision": "corrected",
+      "findings": [
+        "Qualificada populaçãoLEADER/SUSTAIN; magnitudeintertrialnãoequivalência. Demaisnúmeros/componentesjáadequados."
+      ],
+      "source_refs": [
+        "LEADER. PMID: 27295427. DOI: 10.1056/NEJMoa1603827.",
+        "SUSTAIN-6. PMID: 27633186. DOI: 10.1056/NEJMoa1607141.",
+        "REWIND. PMID: 31189511. DOI: 10.1016/S0140-6736(19)31149-3."
+      ],
+      "before_sha256": "5a8448b972780a07775bfab60ed19312b3f72ef533d58950951f9b6fe19fc1ef",
+      "after_sha256": "e076c05fc7030ac252aa46e5b0a504fd584f4e99c87a150e3d1df328821f5bfb"
+    },
+    "94": {
+      "path": "content/Valvopatias/troca-valvar-aortica-precoce-na-estenose-aortica-assintomatica-grave-metanalise-de-4-rcts.md",
+      "decision": "corrected",
+      "findings": [
+        "EVOLVEDintervençãomista; testeexercícionãouniversalaosquatro; sembenefíciomodalidadeuniforme."
+      ],
+      "source_refs": [
+        "Song et al. Early Aortic Valve Replacement of Asymptomatic Severe Aortic Stenosis: A Meta-Analysis of Randomized Controlled Trials. DOI: 10.1161/JAHA.125.041283.",
+        "EVOLVED. JAMA. 2024. PMID: 39466640. DOI: 10.1001/jama.2024.22730.",
+        "2025 ESC/EACTS Guidelines for valvular heart disease. DOI: 10.1093/eurheartj/ehaf194."
+      ],
+      "before_sha256": "54ee31d715e154218b11a91c5412397e72d10abf4b52ab4727ba6fe67d857895",
+      "after_sha256": "db1cabd289c0f800e4eb5702f3e84a9f9a42d9d5f8c6e82a2b8069c2e198f528"
+    },
+    "95": {
+      "path": "content/Cardiomiopatias/manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023.md",
+      "decision": "corrected",
+      "findings": [
+        "Coexistênciacausas; genéticanegativa/VUSnãoencerra família."
+      ],
+      "source_refs": [
+        "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657."
+      ],
+      "before_sha256": "fc4c32ed25dbef649c32857f9ecf2cca3644e5546f46805b439e1aabcff66b88",
+      "after_sha256": "a4471f1294c21f0e189b29b53d1ded7d44e98312f38c682f297473396171c7b8"
+    },
+    "98": {
+      "path": "content/Doença_coronariana/orbita-2-pci-versus-placebo-angina-estavel.md",
+      "decision": "corrected",
+      "findings": [
+        "Escores2,9/5,6compostosnãoescalaintensidade; ORnãochanceabsolutaduplicada."
+      ],
+      "source_refs": [
+        "ORBITA-2. DOI: 10.1056/NEJMoa2310610.",
+        "COURAGE. DOI: 10.1056/NEJMoa070829."
+      ],
+      "before_sha256": "eae89c631783a49fa0f4126453077f3aed426591f7c232309a22b9f0f9b5820d",
+      "after_sha256": "759a6e71faabf4dffdb28642ffa8ae4fe0e643af89b2af8d33675cf3df5724ed"
+    },
+    "99": {
+      "path": "content/Prevenção_e_lipídios/dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md",
+      "decision": "corrected",
+      "findings": [
+        "LDL40podeserconsideradonãocategoriaformal; SCORE2população; Lpanãoabsolutamentefixa; combinaçãoSCAcontexto."
+      ],
+      "source_refs": [
+        "Mach F, Koskinas KC, Roeters van Lennep J et al. 2025 focused update of the 2019 ESC/EAS guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190",
+        "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188.",
+        "ESC/EAS2025. DOI:10.1093/eurheartj/ehaf190. PMID:40878289."
+      ],
+      "before_sha256": "99ef60415964c6ad11380e495e18221c28b756eadc44a7fc92b468c7c205a1eb",
+      "after_sha256": "8f16adc9f79a73718fdedce834c97157336227058a09bda299df4482ef998af5"
+    },
+    "100": {
+      "path": "content/Valvopatias/doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025.md",
+      "decision": "corrected",
+      "findings": [
+        "TAVI≥70exigeacessotransfemoral; TEERsecundáriacoerenteESC2025; antitrombóticoTAVIporindicação."
+      ],
+      "source_refs": [
+        "2025 ESC/EACTS Guidelines for valvular heart disease. DOI: 10.1093/eurheartj/ehaf194."
+      ],
+      "before_sha256": "fc33053e51c950a6172ca9479adaad964847c20259decdefd3c7c54190500de4",
+      "after_sha256": "4073f07f8033235e075134f79db5a9dcc7ff1d1c5fa25d3dcc7fcaa453040a6e"
+    },
+    "101": {
+      "path": "content/Cardiomiopatias/tratamento-etiologico-da-doenca-de-chagas-cronica-benznidazol-e-nifurtimox.md",
+      "decision": "corrected",
+      "findings": [
+        "Gestaçãointeira; neurocontraagenteespecífica; PCRnãoécuraseguimentonão20universal; metanáliseobservacionalnãoanulaBENEFIT; reativaçãoexceção."
+      ],
+      "source_refs": [
+        "Hasslocher-Moreno AM. Trypanocidal Treatment for Chronic Chagas Disease: Past, Present, and Future. Rev Soc Bras Med Trop. 2025;58:e0242-2025. PMID: 41172392",
+        "Ministério da Saúde/CONITEC. Protocolo Clínico e Diretrizes Terapêuticas Doença de Chagas. Outubro/2018, nº 397",
+        "OPAS. Guidelines for the diagnosis and treatment of Chagas disease. 2019. https://iris.paho.org/bitstream/handle/10665.2/49653/9789275120439_eng.pdf",
+        "Morillo CA et al. BENEFIT. N Engl J Med. 2015. DOI: 10.1056/NEJMoa1507574. PMID: 26323937.",
+        "Ministério da Saúde. PCDT Doença de Chagas, portal atualizado em 2025. https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-de-chagas/view"
+      ],
+      "before_sha256": "51ac65b48abea2d79ece49503c15b562aa12d7f2ab2a370ef73c3237155b1d0e",
+      "after_sha256": "864b65cdab458c9276ac1caaa4c409f0f5e389c858b66ed7f8d7b23ff7c00b83"
+    },
+    "102": {
+      "path": "content/Hipertensão/hipertensao-do-avental-branco-nao-tratada-nao-e-inofensiva.md",
+      "decision": "corrected",
+      "findings": [
+        "Nãotratadobaseline≠nuncatratado; comparadortratadocontrolado; observacionalnãocausal."
+      ],
+      "source_refs": [
+        "Cohen JB et al. Cardiovascular events and mortality in white coat hypertension. Ann Intern Med. 2019. DOI: 10.7326/M19-0223. PMID: 31181575. https://pmc.ncbi.nlm.nih.gov/articles/PMC6736754/"
+      ],
+      "before_sha256": "1191587622ab3aefdc832785deebdd2ca4eef898a1f8aaa77066561d2515927c",
+      "after_sha256": "36381a1798ee76de8b86e150705d60a47fb4c51af6b2f4b965dd2f6564ae69fc"
+    },
+    "103": {
+      "path": "content/Doença_coronariana/courage-pci-versus-terapia-medica-na-dac-estavel.md",
+      "decision": "corrected",
+      "findings": [
+        "ISCHEMIAprimárionãomorteIAMapenas; neutralidadenãoempateequivalência; troncosignificativonãorestrito instável."
+      ],
+      "source_refs": [
+        "Estudo COURAGE (Boden WE et al., New England Journal of Medicine, 2007) — comparação entre stent associado a tratamento clínico e tratamento clínico isolado na doença coronariana estável."
+      ],
+      "before_sha256": "15ce848fe80bba463a9e04a5e2313c53a6359244fbd4c19b46074f2707c5c13f",
+      "after_sha256": "15161f46514bde127c1a4af6388f537cc2f4c327a07db096279c9d488e0ce66b"
+    },
+    "104": {
+      "path": "content/Insuficiência_cardíaca/sindrome-cardiorrenal-classificacao-em-cinco-tipos-e-manejo-na-insuficiencia-cardiaca.md",
+      "decision": "corrected",
+      "findings": [
+        "Inotrópicopelohipoperfusão; DRCmoderadaevidência; diálisenãoatrasofixo; MRA/K/dip; removeausênciauniversaldesatualizada."
+      ],
+      "source_refs": [
+        "Ronco C, McCullough P, Anker SD, et al., for the Acute Dialysis Quality Initiative (ADQI) consensus group. Cardio-renal syndromes: report from the consensus conference of the Acute Dialysis Quality Initiative. Eur Heart J. 2010;31(6):703-711. DOI: 10.1093/eurheartj/ehp507.",
+        "Rangaswami J, Bhalla V, Blair JEA, et al.; American Heart Association. Cardiorenal Syndrome: Classification, Pathophysiology, Diagnosis, and Treatment Strategies: A Scientific Statement From the American Heart Association. Circulation. 2019;139(16):e840-e878. DOI: 10.1161/CIR.0000000000000664.",
+        "SODIUM-HF. Lancet. 2022. PMID: 35381194."
+      ],
+      "before_sha256": "aa0cd06877f7a5884465d5530c4d76aa8eb5947ff0ed6fc8ac00edb6935c1913",
+      "after_sha256": "3cdb4beeebca7fac326cc70b9f9db5e12391ff67483d960d3c0031ffb0fdb760"
+    },
+    "105": {
+      "path": "content/Diabetes_e_cardiologia/metformina-na-insuficiencia-cardiaca-seguranca-e-beneficio.md",
+      "decision": "corrected",
+      "findings": [
+        "15estudosnãoprovaRCTmortalidade; acidosepersistirisco; eGFR30/45 e agudopausa."
+      ],
+      "source_refs": [
+        "Clinical outcomes in type 2 diabetes patients with chronic heart failure treated with metformin: a meta-analysis. PMID: 39277567.",
+        "FDA/DailyMed. Metformin hydrochloride prescribing information. https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=498ac5fc-14be-d36a-e063-6394a90a3012&type=display",
+        "ESC 2023 diabetes and cardiovascular disease. DOI: 10.1093/eurheartj/ehad192."
+      ],
+      "before_sha256": "445e60d1b91373dd5e80ddb68c6a40b1c0b353379b5b9e6593430ebdd666ffb1",
+      "after_sha256": "62094bc4d69a4a2326ca874c7448c858a0c21219d8e6e9bc9120124a75a40e02"
+    },
+    "106": {
+      "path": "content/Prevenção_e_lipídios/fibra-dietetica-e-ldl-da-suplementacao-ao-desfecho-cardiovascular.md",
+      "decision": "corrected",
+      "findings": [
+        "Plateausuplementonãototalalimentar; observacionalnãoeventossuplemento; uso seguropsyllium."
+      ],
+      "source_refs": [
+        "Soluble Fiber Supplementation and Serum Lipid Profile. Adv Nutr. 2023. PMID: 36796439.",
+        "Threapleton DE et al. Dietary fibre intake and risk of cardiovascular disease. BMJ. 2013;347:f6879. DOI: 10.1136/bmj.f6879."
+      ],
+      "before_sha256": "14bc79594502835aa2f6d63925a37ae87163529deb956672dd88697e2d06431b",
+      "after_sha256": "8d2805061fd8b3bd0b9b4e956c4ff4f888046e9410dca57967ea67d72eafc812"
+    },
+    "107": {
+      "path": "content/Insuficiência_cardíaca/impedancia-toracica-bioeletrica-nao-invasiva-vestivel-para-deteccao-precoce-de-congestao.md",
+      "decision": "corrected",
+      "findings": [
+        "IMPEDANCEHFmensalambulatorialnãoautomediçãodiáriacolete; corrigendumalcancenãoverificado; removidoNNTcomparativo; 57/106denominador; especificidadenãoPPV; pressão≠impedância."
+      ],
+      "source_refs": [
+        "Darling CE, Dovancescu S, Saczynski JS, Riistama J, Sert Kuniyoshi F, Rock J, et al. Bioimpedance-Based Heart Failure Deterioration Prediction Using a Prototype Fluid Accumulation Vest-Mobile Phone Dyad: An Observational Study. JMIR Cardio. 2017;1(1):e1. DOI: 10.2196/cardio.6057. PMID: 31758769",
+        "Curtain JP, Talebi A, McIntosh A, McConnachie A, O'Donnell J, Welsh P, et al. Measuring congestion with a non-invasive monitoring device in heart failure and haemodialysis: CONGEST-HF. Eur J Heart Fail. 2024;26(6):1383-1392. DOI: 10.1002/ejhf.3290. PMID: 38741283",
+        "Shochat MK, Shotan A, Blondheim DS, Kazatsker M, Dahan I, Asif A, Rozenman Y, Kleiner I, Weinstein JM, Frimerman A, Vasilenko L, Meisel SR. Non-Invasive Lung IMPEDANCE-Guided Preemptive Treatment in Chronic Heart Failure Patients: A Randomized Controlled Trial (IMPEDANCE-HF Trial). J Card Fail. 2016;22(9):713-722. DOI: 10.1016/j.cardfail.2016.03.015. PMID: 27058408",
+        "Corrigendum IMPEDANCE-HF. J Card Fail. 2017. DOI: 10.1016/j.cardfail.2017.05.004. PMID: 28571729."
+      ],
+      "before_sha256": "1ab59411363a325b758a68e6216a09d0081ea6262c69136abf277963a4944eee",
+      "after_sha256": "a809021a3fb2a43cb5e300dbffb9b43b25b7dc1e814b473ffa9558a3dc2dd1d0"
+    }
+  },
+  "validation": {
+    "documents_reviewed": 34,
+    "documents_changed": 33,
+    "pubmed_resolved": 84,
+    "pubmed_total": 84,
+    "doi_pair_errors": 0,
+    "mermaid_parsed": 6,
+    "yaml_valid": 34,
+    "scope": "Dependências51–115 com exclusões coordenadas; etapa de trilhas116–141 será revisão separada."
+  }
+}

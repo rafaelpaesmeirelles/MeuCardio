@@ -1,0 +1,1620 @@
+[
+  {
+    "slug": "protese-valvar-mecanica",
+    "set": {
+      "assistant_questions": [
+        {
+          "id": "momento_clinico",
+          "label": "Qual o momento clínico da avaliação?",
+          "type": "select",
+          "options": [
+            {
+              "value": "escolha_da_protese",
+              "label": "Escolha do tipo de prótese antes do implante"
+            },
+            {
+              "value": "seguimento_cronico",
+              "label": "Seguimento crônico de prótese mecânica já implantada"
+            },
+            {
+              "value": "suspeita_trombose_aguda",
+              "label": "Suspeita aguda de trombose de prótese mecânica"
+            }
+          ]
+        },
+        {
+          "id": "posicao_valvar",
+          "label": "Qual a posição da prótese (ou a ser implantada)?",
+          "type": "select",
+          "options": [
+            {
+              "value": "aortica",
+              "label": "Aórtica"
+            },
+            {
+              "value": "mitral",
+              "label": "Mitral"
+            },
+            {
+              "value": "tricuspide_pulmonar",
+              "label": "Tricúspide ou pulmonar"
+            }
+          ]
+        },
+        {
+          "id": "idade_paciente",
+          "label": "Qual a idade do paciente (anos)?",
+          "type": "number",
+          "min": 0,
+          "max": 120
+        },
+        {
+          "id": "preferencia_informada_do_paciente",
+          "label": "Há preferência clara do paciente informado sobre o tipo de prótese?",
+          "type": "select",
+          "options": [
+            {
+              "value": "mecanica",
+              "label": "Preferência por mecânica"
+            },
+            {
+              "value": "biologica",
+              "label": "Preferência por biológica"
+            },
+            {
+              "value": "sem_preferencia",
+              "label": "Sem preferência clara"
+            }
+          ]
+        },
+        {
+          "id": "contraindicacao_anticoagulacao_longo_prazo",
+          "label": "Há contraindicação a anticoagulação oral de longo prazo?",
+          "type": "boolean"
+        },
+        {
+          "id": "planejamento_gestacional",
+          "label": "Há planejamento de gestação futura?",
+          "type": "boolean"
+        },
+        {
+          "id": "ja_tem_protese_mecanica_outra_posicao",
+          "label": "O paciente já tem prótese mecânica em outra posição?",
+          "type": "boolean"
+        },
+        {
+          "id": "indicacao_outra_anticoagulacao_longo_prazo",
+          "label": "Há indicação clara de anticoagulação de longo prazo por outro motivo (ex.: fibrilação atrial permanente)?",
+          "type": "boolean"
+        },
+        {
+          "id": "fator_protrombotico_adicional",
+          "label": "Há fator pró-trombótico adicional (hipercoagulabilidade, FEVE <35%, FA com estenose mitral significativa, evento trombótico maior recente)?",
+          "type": "boolean"
+        },
+        {
+          "id": "em_uso_doac_ou_dupla_antiagregacao",
+          "label": "O paciente está em uso de anticoagulante oral direto (DOAC) ou dupla antiagregação em vez de AVK para a prótese mecânica?",
+          "type": "boolean"
+        },
+        {
+          "id": "tempo_em_faixa_terapeutica_inadequado",
+          "label": "O tempo em faixa terapêutica de INR está inadequado ou há INR subterapêutico recente documentado?",
+          "type": "boolean"
+        },
+        {
+          "id": "trombose_confirmada_por_imagem",
+          "label": "A trombose de prótese foi confirmada por ecocardiograma/imagem?",
+          "type": "boolean"
+        },
+        {
+          "id": "tipo_de_trombose",
+          "label": "A trombose confirmada é obstrutiva ou não obstrutiva?",
+          "type": "select",
+          "options": [
+            {
+              "value": "obstrutiva",
+              "label": "Obstrutiva"
+            },
+            {
+              "value": "nao_obstrutiva",
+              "label": "Não obstrutiva"
+            },
+            {
+              "value": "nao_confirmada",
+              "label": "Ainda não confirmada"
+            }
+          ]
+        },
+        {
+          "id": "ic_aguda_nyha_iii_iv",
+          "label": "Há insuficiência cardíaca aguda NYHA III-IV atribuída à trombose obstrutiva?",
+          "type": "boolean"
+        },
+        {
+          "id": "tamanho_trombo_mm",
+          "label": "Qual o tamanho do trombo à ecocardiografia transesofágica (mm)?",
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "id": "evento_embolico_associado",
+          "label": "Há evento embólico associado ao trombo?",
+          "type": "boolean"
+        },
+        {
+          "id": "persistencia_apesar_anticoagulacao_otima",
+          "label": "O trombo persiste apesar de anticoagulação oral otimizada?",
+          "type": "boolean"
+        },
+        {
+          "id": "distincao_trombo_pannus",
+          "label": "A tomografia cardíaca diferenciou trombo de pannus?",
+          "type": "select",
+          "options": [
+            {
+              "value": "trombo",
+              "label": "Trombo"
+            },
+            {
+              "value": "pannus",
+              "label": "Pannus"
+            },
+            {
+              "value": "indeterminado",
+              "label": "Indeterminado / não realizado"
+            }
+          ]
+        },
+        {
+          "id": "contraindicacao_ou_alto_risco_cirurgico",
+          "label": "Há contraindicação a cirurgia ou risco cirúrgico muito alto?",
+          "type": "boolean"
+        },
+        {
+          "id": "contraindicacao_fibrinolise",
+          "label": "Há contraindicação à fibrinólise avaliada pela equipe (por exemplo, hemorragia intracraniana prévia ou sangramento ativo relevante)?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "trombose_obstrutiva_ic_aguda_heart_team",
+          "priority": 97,
+          "when": {
+            "all": [
+              {
+                "field": "trombose_confirmada_por_imagem",
+                "op": "truthy"
+              },
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "obstrutiva"
+              },
+              {
+                "field": "ic_aguda_nyha_iii_iv",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Trombose obstrutiva de prótese mecânica com insuficiência cardíaca aguda NYHA III-IV — exige avaliação imediata da Heart Team para decidir entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B)."
+            ],
+            "supporting": [
+              "A decisão integra estabilidade hemodinâmica, contraindicações a trombolítico, risco de reoperação, extensão/localização do trombo, embolização, experiência do centro e possibilidade de resgate cirúrgico."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "trombose_obstrutiva_sem_ic_grave",
+          "priority": 88,
+          "when": {
+            "all": [
+              {
+                "field": "trombose_confirmada_por_imagem",
+                "op": "truthy"
+              },
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "obstrutiva"
+              },
+              {
+                "field": "ic_aguda_nyha_iii_iv",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "supporting": [
+              "Trombose obstrutiva é emergência potencial mesmo sem instabilidade hemodinâmica franca no momento da avaliação — o atraso na decisão entre cirurgia e fibrinólise piora desfecho."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "protese_esquerda_obstrutiva_favorece_cirurgia",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "obstrutiva"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "in",
+                "value": [
+                  "aortica",
+                  "mitral"
+                ]
+              },
+              {
+                "field": "contraindicacao_ou_alto_risco_cirurgico",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Trombose obstrutiva do lado esquerdo com risco cirúrgico aceitável: literatura histórica mostra menos embolia e menos recorrência com cirurgia do que com fibrinólise isolada, sem diferença estatística consistente em mortalidade."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "protese_direita_favorece_fibrinolise",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "obstrutiva"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "tricuspide_pulmonar"
+              },
+              {
+                "field": "contraindicacao_fibrinolise",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "trombose_confirmada_por_imagem",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "none": [
+              {
+                "field": "distincao_trombo_pannus",
+                "op": "eq",
+                "value": "pannus"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "supporting": [
+              "Na trombose obstrutiva direita confirmada, sem contraindicação à fibrinólise e sem pannus, a posição favorece considerar fibrinólise em protocolo especializado; decisão final integra estabilidade, anatomia, sangramento e opções cirúrgicas."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "trombo_nao_obstrutivo_grande",
+          "priority": 72,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "nao_obstrutiva"
+              },
+              {
+                "field": "tamanho_trombo_mm",
+                "op": "gt",
+                "value": 10
+              },
+              {
+                "field": "evento_embolico_associado",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Trombo protético >10 mm complicado por embolia: considerar cirurgia em Heart Team (ESC/EACTS 2025, IIa C), integrando risco e anatomia."
+            ]
+          }
+        },
+        {
+          "id": "trombo_nao_obstrutivo_com_embolia",
+          "priority": 72,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "nao_obstrutiva"
+              },
+              {
+                "field": "evento_embolico_associado",
+                "op": "truthy"
+              },
+              {
+                "field": "tamanho_trombo_mm",
+                "op": "lte",
+                "value": 10
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Trombo não obstrutivo com embolia exige avaliação especializada rápida e revisão da anticoagulação; o tamanho e a evolução determinam a estratégia. Não atribuir automaticamente a recomendação cirúrgica de trombo >10 mm a qualquer tamanho."
+            ]
+          }
+        },
+        {
+          "id": "trombo_nao_obstrutivo_persistente",
+          "priority": 72,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "nao_obstrutiva"
+              },
+              {
+                "field": "persistencia_apesar_anticoagulacao_otima",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Trombo persistente apesar de anticoagulação adequada requer nova imagem e Heart Team, especialmente com obstrução clinicamente relevante ou embolia; não é indicação cirúrgica automática apenas pela persistência."
+            ]
+          }
+        },
+        {
+          "id": "trombo_nao_obstrutivo_pequeno_sem_repercussao",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "nao_obstrutiva"
+              },
+              {
+                "field": "evento_embolico_associado",
+                "op": "falsy"
+              },
+              {
+                "field": "persistencia_apesar_anticoagulacao_otima",
+                "op": "falsy"
+              },
+              {
+                "field": "tamanho_trombo_mm",
+                "op": "lt",
+                "value": 10
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Trombo não obstrutivo pequeno e sem repercussão não é indicação automática de intervenção — priorizar intensificação da anticoagulação com reavaliação seriada por imagem."
+            ]
+          }
+        },
+        {
+          "id": "distincao_pannus_evitar_fibrinolise",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "distincao_trombo_pannus",
+                "op": "eq",
+                "value": "pannus"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Pannus identificado por tomografia cardíaca: responde mal à fibrinólise e tende a exigir reoperação — não tratar como trombose aguda simples."
+            ]
+          }
+        },
+        {
+          "id": "doac_ou_dupla_antiagregacao_em_protese_mecanica",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "em_uso_doac_ou_dupla_antiagregacao",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Uso de DOAC ou dupla antiagregação em vez de antagonista de vitamina K em prótese valvar mecânica — contraindicado (Classe III, Nível A); o ensaio RE-ALIGN mostrou excesso de AVC isquêmico e de sangramento maior com dabigatrana."
+            ],
+            "supporting": [
+              "Reavaliar a troca imediata para antagonista de vitamina K, com alvo de INR individualizado conforme tipo/posição de prótese — não há alternativa oral aprovada com evidência favorável para essa indicação."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "tempo_em_faixa_inadequado_reforcar_educacao",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "in",
+                "value": [
+                  "seguimento_cronico",
+                  "suspeita_trombose_aguda"
+                ]
+              },
+              {
+                "field": "tempo_em_faixa_terapeutica_inadequado",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "INR/tempo em faixa inadequado exige correção supervisionada da anticoagulação e identificação da causa. Na suspeita/trombose aguda, restaurar cobertura apropriada em paralelo à decisão urgente; ajuste de INR não substitui intervenção indicada."
+            ]
+          }
+        },
+        {
+          "id": "escolha_favorece_biologica_contraindicacao",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Contraindicação à anticoagulação de longo prazo favorece prótese biológica. Preferência por mecânica não elimina a necessidade de AVK vitalício e não supera essa contraindicação."
+            ]
+          }
+        },
+        {
+          "id": "escolha_favorece_biologica_gestacao",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Planejamento de gestação futura: favorece prótese biológica (Classe IIa), salvo preferência explícita do paciente em sentido contrário."
+            ]
+          }
+        },
+        {
+          "id": "escolha_favorece_mecanica_ja_tem_outra",
+          "priority": 48,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "ja_tem_protese_mecanica_outra_posicao",
+                "op": "truthy"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Já ter prótese mecânica em outra posição favorece nova prótese mecânica (Classe IIa), na ausência de contraindicação a anticoagulação."
+            ]
+          }
+        },
+        {
+          "id": "escolha_favorece_mecanica_indicacao_previa",
+          "priority": 48,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "indicacao_outra_anticoagulacao_longo_prazo",
+                "op": "truthy"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Indicação clara de anticoagulação de longo prazo por outro motivo (ex.: fibrilação atrial permanente) permite considerar prótese mecânica (Classe IIb), na ausência de contraindicação a anticoagulação."
+            ]
+          }
+        },
+        {
+          "id": "fator_protrombotico_adicional_inr_mais_alto",
+          "priority": 42,
+          "when": {
+            "all": [
+              {
+                "field": "fator_protrombotico_adicional",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Fator pró-trombótico adicional presente (hipercoagulabilidade, FEVE <35%, FA com estenose mitral significativa, evento trombótico maior recente): exige alvo de INR mais alto do que o padrão para o mesmo tipo/posição de prótese."
+            ]
+          }
+        },
+        {
+          "id": "suspeita_aguda_investigar_com_imagem",
+          "priority": 68,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "suspeita_trombose_aguda"
+              },
+              {
+                "field": "trombose_confirmada_por_imagem",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "suggested_tests": [
+              "Ecocardiograma transtorácico e transesofágico, complementados por cinefluoroscopia ou tomografia cardíaca 4D quando disponíveis, para confirmar trombose obstrutiva ou não obstrutiva."
+            ],
+            "supporting": [
+              "Dispneia recente ou evento embólico em portador de prótese mecânica exige investigação imediata — trombose valvar é diagnóstico de suspeita ativa, não de exclusão por estabilidade aparente."
+            ],
+            "emergency_flow": [
+              "Avaliação urgente monitorizada pela equipe valvar/Heart Team. Confirmar mecanismo por imagem, revisar anticoagulação e contraindicações e definir intervenção conforme estabilidade; não substituir intervenção necessária por ajuste isolado de anticoagulante."
+            ]
+          }
+        },
+        {
+          "id": "trombo_10_ou_mais_sem_embolia",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "tipo_de_trombose",
+                "op": "eq",
+                "value": "nao_obstrutiva"
+              },
+              {
+                "field": "tamanho_trombo_mm",
+                "op": "gte",
+                "value": 10
+              },
+              {
+                "field": "evento_embolico_associado",
+                "op": "eq",
+                "value": false
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Trombo ≥10 mm não deve ser descrito como pequeno. Avaliar tamanho, mobilidade, anticoagulação e evolução com Heart Team; tamanho isolado sem embolia/obstrução não impõe cirurgia."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_aortica_jovem",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "aortica"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "lt",
+                "value": 60
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "A idade favorece considerar prótese mecânica, se AVK vitalício for viável; integrar expectativa de vida, risco hemorrágico, reintervenções e preferência."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_aortica_intermediaria",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "aortica"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "gte",
+                "value": 60
+              },
+              {
+                "field": "idade_paciente",
+                "op": "lte",
+                "value": 65
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Faixa etária de escolha individualizada entre prótese mecânica e biológica; discutir durabilidade, AVK e estratégia ao longo da vida."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_aortica_idoso",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "aortica"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "gt",
+                "value": 65
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "A idade favorece considerar bioprótese, integrando expectativa de vida, risco hemorrágico, durabilidade e preferência; não é decisão automática pela idade."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_mitral_jovem",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "mitral"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "lt",
+                "value": 65
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "A idade favorece considerar prótese mecânica, se AVK vitalício for viável; integrar expectativa de vida, risco hemorrágico, reintervenções e preferência."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_mitral_intermediaria",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "mitral"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "gte",
+                "value": 65
+              },
+              {
+                "field": "idade_paciente",
+                "op": "lte",
+                "value": 70
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Faixa etária de escolha individualizada entre prótese mecânica e biológica; discutir durabilidade, AVK e estratégia ao longo da vida."
+            ]
+          }
+        },
+        {
+          "id": "escolha_idade_mitral_idoso",
+          "priority": 20,
+          "when": {
+            "all": [
+              {
+                "field": "momento_clinico",
+                "op": "eq",
+                "value": "escolha_da_protese"
+              },
+              {
+                "field": "preferencia_informada_do_paciente",
+                "op": "eq",
+                "value": "sem_preferencia"
+              },
+              {
+                "field": "contraindicacao_anticoagulacao_longo_prazo",
+                "op": "falsy"
+              },
+              {
+                "field": "planejamento_gestacional",
+                "op": "falsy"
+              },
+              {
+                "field": "posicao_valvar",
+                "op": "eq",
+                "value": "mitral"
+              },
+              {
+                "field": "idade_paciente",
+                "op": "gt",
+                "value": 70
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "A idade favorece considerar bioprótese, integrando expectativa de vida, risco hemorrágico, durabilidade e preferência; não é decisão automática pela idade."
+            ]
+          }
+        }
+      ],
+      "diagnostic_approach": {
+        "confirmacao_da_trombose_valvar": "Ecocardiograma transtorácico (ETT) e transesofágico (ETE) são a base da confirmação diagnóstica diante de suspeita de trombose valvar (dispneia recente ou evento embólico em portador de prótese). Cinefluoroscopia e tomografia computadorizada cardíaca (TCC), quando disponíveis prontamente, complementam a avaliação — a fluoroscopia é particularmente útil para avaliar a mobilidade dos folhetos/disco da prótese mecânica, e a TCC (idealmente 4D) ajuda a diferenciar trombo de pannus, distinção clinicamente decisiva porque pannus (tecido fibroso de encapsulamento crônico) responde mal à fibrinólise e tende a exigir reoperação, enquanto trombo agudo pode responder a estratégia farmacológica.",
+        "obstrutiva_versus_nao_obstrutiva": "A primeira pergunta que organiza toda a decisão subsequente é se a trombose é obstrutiva (redução importante da mobilidade dos folhetos/disco, gradiente elevado, potencial para edema pulmonar, baixo débito, choque, síncope, arritmia ou tromboembolismo) ou não obstrutiva (achado incidental ou associado a evento embólico, com gradiente preservado ou apenas discretamente alterado). A gravidade hemodinâmica muda completamente a urgência da investigação e da decisão terapêutica.",
+        "avaliacao_para_escolha_entre_fibrinolise_e_cirurgia": "Quando a trombose obstrutiva causa insuficiência cardíaca aguda NYHA III-IV, a diretriz ESC/EACTS 2025 exige avaliação imediata pela Heart Team para escolher entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B) — não há mais resposta automática de cirurgia para todo paciente grave, ao contrário da diretriz de 2021. A escolha entre as duas estratégias integra: classe funcional/estabilidade hemodinâmica (variável mais determinante segundo a literatura clássica de Roudaut et al.); tamanho do trombo à ETE, com o corte histórico de 0,8 cm² citado como referência de estratificação de risco de complicação da fibrinólise; lado da prótese — esquerda (mitral/aórtica) tradicionalmente favorece cirurgia quando viável, enquanto direita (tricúspide/pulmonar) tradicionalmente favorece fibrinólise pelo menor risco de embolia sistêmica de um êmbolo que, se deslocado, vai para a circulação pulmonar; contraindicações a trombolítico; risco cirúrgico individual; experiência do centro; e possibilidade de resgate cirúrgico. Para trombo não obstrutivo pequeno e sem repercussão, a conduta inicial não é nenhuma das duas estratégias de emergência, e sim intensificação da anticoagulação com reavaliação seriada por imagem; cirurgia deve ser considerada para trombo protético grande (maior que 10 mm) complicado por embolia (Classe IIa, Nível C); persistência apesar de anticoagulação adequada exige nova imagem e Heart Team conforme obstrução clinicamente relevante ou embolia.",
+        "escolha_de_protese_mecanica_versus_biologica_na_indicacao_inicial": "Antes mesmo de existir prótese implantada, a escolha do tipo de prótese na indicação inicial de troca valvar pondera, na ordem que a diretriz ESC/EACTS 2025 prioriza: preferência informada entre opções clinicamente viáveis (a prótese mecânica requer ausência de contraindicação à anticoagulação vitalícia); contraindicação a anticoagulação oral de longo prazo (favorece biológica, Classe I); já ter prótese mecânica em outra posição (favorece nova prótese mecânica, Classe IIa); indicação clara de anticoagulação de longo prazo por outro motivo, como fibrilação atrial permanente (permite considerar mecânica, Classe IIb); planejamento de gestação (favorece biológica, Classe IIa); e só então, na ausência desses fatores, o corte etário por posição — abaixo de 60 anos (posição aórtica) ou 65 anos (posição mitral) favorece mecânica (Classe IIa), acima de 65 anos (aórtica) ou 70 anos (mitral) favorece biológica (Classe IIa), com zona intermediária de decisão individualizada nos anos entre esses cortes."
+      },
+      "treatment_summary": "O manejo de prótese valvar mecânica se organiza em dois momentos distintos, que não devem ser confundidos: a prevenção crônica da trombose, centrada na anticoagulação obrigatória, e o manejo agudo da trombose já instalada, centrado na decisão entre fibrinólise e cirurgia. Na prevenção crônica, todo portador de prótese mecânica necessita de anticoagulação com antagonista de vitamina K (AVK), com alvo de INR individualizado conforme o tipo/geração da prótese, a posição valvar (aórtica, mitral ou tricúspide/pulmonar) e a presença de fator pró-trombótico adicional (estado de hipercoagulabilidade herdado ou adquirido, disfunção de ventrículo esquerdo, fibrilação atrial com estenose mitral significativa, ou evento trombótico maior recente) — a diretriz ESC/EACTS 2025 detalha essas faixas de INR por combinação de fatores como informação de classificação de risco, não como esquema posológico do fármaco em si, já que a dose individual de AVK é titulada por resposta laboratorial, não prescrita em número fixo. Anticoagulante oral direto e dupla antiagregação NÃO são recomendados para essa indicação (Classe III, Nível A) — o ensaio randomizado RE-ALIGN, interrompido precocemente por excesso simultâneo de AVC isquêmico e de sangramento maior no grupo dabigatrana, estabeleceu esse ponto de forma definitiva para prótese mecânica, e também há evidência randomizada desfavorável com apixabana no PROACT Xa, sem respaldo para substituir AVK por DOAC. Educação estruturada do paciente sobre a anticoagulação oral é recomendada (Classe I, Nível A) para melhorar a qualidade do controle, dada a janela terapêutica estreita do AVK e sua interação com fármacos e alimentos. Diante de complicação tromboembólica maior apesar de INR documentado adequado e tempo em faixa terapêutica satisfatório, aumentar o alvo de INR ou associar antiagregação em dose baixa deve ser considerado (Classe IIa, Nível C) — nunca substituir por DOAC, que segue contraindicado nesse cenário. Já no manejo agudo da trombose instalada, a primeira decisão é diferenciar trombose obstrutiva de não obstrutiva. Na trombose obstrutiva com insuficiência cardíaca aguda importante (NYHA III-IV), a avaliação pela Heart Team é recomendada (Classe I, Nível B) para escolher entre nova troca valvar e fibrinólise em baixa dose/infusão lenta — mudança relevante frente à diretriz de 2021, que apresentava a cirurgia como resposta praticamente automática para todo paciente grave. A escolha integra classe funcional, estabilidade hemodinâmica, tamanho e localização do trombo, lado da prótese (esquerdo versus direito), contraindicações a trombolítico, risco de reoperação, experiência do centro e possibilidade de resgate cirúrgico; a diferenciação entre trombo e pannus por imagem também orienta a decisão, já que pannus responde mal à fibrinólise. Na trombose não obstrutiva, trombo pequeno e sem repercussão não é indicação automática de intervenção — a conduta inicial é intensificar a anticoagulação com reavaliação seriada por imagem —, mas cirurgia deve ser considerada para trombo grande (maior que 10 mm) complicado por embolia (Classe IIa, Nível C); persistência apesar de anticoagulação adequada exige nova imagem e Heart Team conforme obstrução clinicamente relevante ou embolia. Nenhuma das duas estratégias de emergência — fibrinólise ou cirurgia — é isenta de risco sério, e a decisão exige avaliação especializada individualizada, não protocolo genérico aplicado por reflexo. Fora do contexto de trombose, a escolha inicial entre prótese mecânica e biológica na indicação de troca valvar pondera preferência do paciente informado, contraindicação a anticoagulação de longo prazo, planejamento gestacional, já ter prótese mecânica em outra posição e, por último, corte etário por posição valvar — decisão multifatorial centrada no paciente, não equação apenas de idade.",
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08: PR #715: tamanho/embolia/repercussão separados, contraindicação à fibrinólise obrigatoriamente avaliada, preferência não supera inviabilidade de AVK, idade/posição utilizadas e correção de INR também na via aguda. ESC/EACTS 2025 Fig20/Tabela17.",
+      "ambulatory_flow": [
+        "Confirmar e reforçar a obrigatoriedade de anticoagulação com antagonista de vitamina K vitalícia em todo portador de prótese mecânica, com alvo de INR individualizado conforme tipo/geração da prótese, posição valvar e presença de fator pró-trombótico adicional.",
+        "Investir em educação estruturada do paciente sobre anticoagulação oral — a diretriz ESC/EACTS 2025 recomenda essa educação como Classe I, Nível A, pela alta variabilidade intra e interpaciente do AVK, a janela terapêutica estreita e a interação com fármacos e alimentos.",
+        "Monitorizar o INR com a periodicidade definida pelo serviço responsável, calculando o tempo em faixa terapêutica ao longo do seguimento, não apenas o valor pontual do exame.",
+        "Nunca converter para anticoagulante oral direto ou dupla antiagregação \"para simplificar o seguimento\" mesmo diante de dificuldade real de controle de INR — o caminho correto é melhorar o tempo em faixa terapêutica, não trocar de classe de anticoagulante.",
+        "Diante de complicação tromboembólica maior apesar de INR adequado e tempo em faixa terapêutica satisfatório, considerar aumentar o alvo de INR em fração de unidade ou associar antiagregação em dose baixa (Classe IIa, Nível C) — não trocar para DOAC, que segue contraindicado nesse cenário.",
+        "Reavaliar periodicamente a prótese com ecocardiograma transtorácico, comparando gradiente e mobilidade de folheto/disco com o exame basal pós-implante.",
+        "Orientar explicitamente o paciente sobre sinais de alarme que exigem avaliação de emergência — dispneia nova, evento embólico focal, síncope — e não apenas sobre a rotina de controle de INR.",
+        "Em paciente com trombo não obstrutivo pequeno tratado clinicamente, programar ecocardiograma seriado até documentar resolução ou estabilidade.",
+        "Revisar interações medicamentosas e alimentares relevantes ao AVK a cada mudança de prescrição concomitante, dada a janela terapêutica estreita do fármaco.",
+        "Planejar com antecedência o manejo perioperatório de anticoagulação (interrupção, ponte, retomada) sempre que procedimento eletivo for necessário, remetendo ao protocolo específico de manejo perioperatório desta biblioteca."
+      ],
+      "emergency_flow": [
+        "Diante de dispneia recente ou evento embólico em portador de prótese mecânica, investigar imediatamente com ecocardiograma transtorácico e transesofágico, complementados por cinefluoroscopia ou tomografia cardíaca 4D quando disponíveis, para confirmar trombose obstrutiva ou não obstrutiva.",
+        "Em trombose obstrutiva com insuficiência cardíaca aguda NYHA III-IV, acionar avaliação imediata da Heart Team para decidir entre nova troca valvar e fibrinólise em baixa dose/infusão lenta (Classe I, Nível B) — a escolha depende de estabilidade hemodinâmica, contraindicações a trombolítico, risco de reoperação, extensão/localização do trombo, embolização, experiência do centro e possibilidade de resgate cirúrgico.",
+        "Em trombose obstrutiva do lado esquerdo (mitral/aórtica) com risco cirúrgico aceitável, a cirurgia mantém papel central segundo a literatura histórica que sustenta a diretriz, com menor taxa de embolia e de recorrência do que a fibrinólise isolada, ainda que sem diferença estatística consistente em mortalidade nos estudos disponíveis.",
+        "Em trombose obstrutiva do lado direito (tricúspide/pulmonar), considerar fibrinólise se não houver contraindicação, após avaliação especializada de sangramento, anatomia, mecanismo e opções cirúrgicas.",
+        "Para trombo não obstrutivo pequeno e sem repercussão hemodinâmica, priorizar intensificação da anticoagulação (revisão da adesão, ajuste guiado por INR seriado, com reavaliação por imagem seriada) em vez de intervenção imediata.",
+        "Considerar cirurgia para trombo não obstrutivo grande (maior que 10 mm) complicado por embolia (Classe IIa, Nível C); persistência apesar de anticoagulação adequada exige nova imagem e Heart Team conforme obstrução clinicamente relevante ou embolia.",
+        "Diferenciar trombo de pannus por tomografia cardíaca antes de definir estratégia sempre que a apresentação permitir — pannus responde mal à fibrinólise e orienta diretamente para reoperação.",
+        "Corrigir prontamente causa identificável de trombose (sobretudo anticoagulação subterapêutica recente) em paralelo à decisão de reperfusão, sem que a correção substitua a necessidade de decisão sobre fibrinólise versus cirurgia no paciente com repercussão hemodinâmica importante.",
+        "Não reproduzir esquema fibrinolítico rápido em bolus como padrão atual — a diretriz ESC/EACTS 2025 especifica baixa dose/infusão lenta e manejo em centro experiente, sem protocolo numérico padronizado para uso fora de serviço especializado."
+      ]
+    },
+    "append": {
+      "source_refs": [
+        "Wang TY et al. Apixaban or Warfarin in Patients with an On-X Mechanical Aortic Valve. NEJM Evid. 2023. DOI: 10.1056/EVIDoa2300067. PMID: 38320162."
+      ],
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/38320162/"
+      ]
+    }
+  },
+  {
+    "slug": "estenose-aortica",
+    "set": {
+      "assistant_questions": [
+        {
+          "id": "sintomas_atribuiveis",
+          "label": "Há sintoma atribuível à estenose aórtica (dispneia, angina, síncope)?",
+          "type": "boolean"
+        },
+        {
+          "id": "sincope_ou_pre_sincope",
+          "label": "Houve síncope ou pré-síncope, sobretudo relacionada a esforço?",
+          "type": "boolean"
+        },
+        {
+          "id": "parametros_discordantes",
+          "label": "Há discordância entre os parâmetros de gravidade (por exemplo, área grave com gradiente não grave)?",
+          "type": "boolean"
+        },
+        {
+          "id": "fracao_ejecao_ve",
+          "label": "Qual a fração de ejeção do ventrículo esquerdo (%)?",
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "id": "morfologia_valvar",
+          "label": "Qual a morfologia da valva aórtica?",
+          "type": "select",
+          "options": [
+            {
+              "value": "tricuspide",
+              "label": "Tricúspide"
+            },
+            {
+              "value": "bicuspide",
+              "label": "Bicúspide"
+            },
+            {
+              "value": "indeterminada",
+              "label": "Não determinada"
+            }
+          ]
+        },
+        {
+          "id": "idade_anos",
+          "label": "Qual a idade do paciente (anos)?",
+          "type": "number",
+          "min": 0,
+          "max": 120
+        },
+        {
+          "id": "teste_esforco_realizado",
+          "label": "Foi realizado teste de esforço supervisionado em paciente teoricamente assintomático?",
+          "type": "boolean"
+        },
+        {
+          "id": "teste_esforco_anormal",
+          "label": "O teste de esforço mostrou sintoma, queda de pressão arterial ou resposta anormal atribuível à estenose?",
+          "type": "boolean"
+        },
+        {
+          "id": "progressao_hemodinamica_rapida",
+          "label": "Há calcificação valvar importante e aumento de Vmax ≥0,3 m/s/ano documentado?",
+          "type": "boolean"
+        },
+        {
+          "id": "bnp_muito_elevado",
+          "label": "BNP/NT-proBNP >3 vezes o limite ajustado para idade/sexo, confirmado em nova medida e sem outra explicação?",
+          "type": "boolean"
+        },
+        {
+          "id": "aortopatia_associada",
+          "label": "Há dilatação da aorta ascendente associada (mais relevante em valva bicúspide)?",
+          "type": "boolean"
+        },
+        {
+          "id": "outra_cirurgia_cardiaca_indicada",
+          "label": "Há outra indicação concomitante de cirurgia cardíaca (revascularização, cirurgia de aorta, outra valva)?",
+          "type": "boolean"
+        },
+        {
+          "id": "risco_cirurgico_estimado",
+          "label": "Qual o risco cirúrgico estimado pelo Heart Team (STS-PROM/EuroSCORE II)?",
+          "type": "select",
+          "options": [
+            {
+              "value": "baixo",
+              "label": "Baixo (menor que 4%)"
+            },
+            {
+              "value": "intermediario",
+              "label": "Intermediário"
+            },
+            {
+              "value": "alto_ou_proibitivo",
+              "label": "Alto ou proibitivo"
+            }
+          ]
+        },
+        {
+          "id": "expectativa_vida_maior_1_ano",
+          "label": "A expectativa de vida estimada é superior a 1 ano?",
+          "type": "boolean"
+        },
+        {
+          "id": "discussao_heart_team_pendente",
+          "label": "O caso ainda não foi discutido em Heart Team apesar de haver critério de gravidade ou de intervenção?",
+          "type": "boolean"
+        },
+        {
+          "id": "sinais_baixo_debito_ou_choque",
+          "label": "Há sinais de baixo débito cardíaco ou choque cardiogênico?",
+          "type": "boolean"
+        },
+        {
+          "id": "gravidade_ecocardiograma",
+          "label": "Qual a gravidade integrada da estenose aórtica após conferir medidas e fluxo?",
+          "type": "select",
+          "options": [
+            {
+              "value": "nao_definida",
+              "label": "Ainda não definida"
+            },
+            {
+              "value": "leve",
+              "label": "Leve"
+            },
+            {
+              "value": "moderada",
+              "label": "Moderada"
+            },
+            {
+              "value": "grave",
+              "label": "Grave"
+            }
+          ]
+        },
+        {
+          "id": "baixo_risco_procedimento",
+          "label": "A equipe confirmou BAIXO risco do procedimento considerado (incluindo anatomia e comorbidades)?",
+          "type": "boolean"
+        },
+        {
+          "id": "feve_reduzida_atribuivel_ea",
+          "label": "A redução da FEVE foi atribuída à EA, sem outra causa suficiente?",
+          "type": "boolean"
+        },
+        {
+          "id": "intervencao_valvar_indicada_heart_team",
+          "label": "O Heart Team já estabeleceu indicação de intervenção valvar?",
+          "type": "boolean"
+        },
+        {
+          "id": "anatomia_adequada_tavi",
+          "label": "A anatomia/acesso são adequados para TAVI, segundo avaliação da equipe?",
+          "type": "boolean"
+        },
+        {
+          "id": "risco_cirurgico_aceitavel_concomitante",
+          "label": "O risco da cirurgia concomitante foi considerado aceitável?",
+          "type": "boolean"
+        }
+      ],
+      "assistant_rules": [
+        {
+          "id": "sintomatico-grave-urgente",
+          "priority": 90,
+          "when": {
+            "all": [
+              {
+                "field": "sintomas_atribuiveis",
+                "op": "truthy"
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Estenose aórtica grave já sintomática — prognóstico sem intervenção é desfavorável e piora de forma abrupta."
+            ],
+            "supporting": [
+              "Sintoma associado a estenose grave confirmada é indicação para avaliação de intervenção sem demora desnecessária."
+            ],
+            "emergency_flow": [
+              "Providenciar avaliação valvar sem demora. Se sintomas atuais importantes, síncope recente ou instabilidade, encaminhar a atendimento monitorizado; confirmar gravidade e definir intervenção com Heart Team."
+            ]
+          }
+        },
+        {
+          "id": "sincope-red-flag",
+          "priority": 95,
+          "when": {
+            "all": [
+              {
+                "field": "sincope_ou_pre_sincope",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "urgente",
+            "red_flags": [
+              "Síncope em paciente com estenose aórtica exige avaliação prioritária, mesmo sem gravidade ecocardiográfica ainda confirmada."
+            ],
+            "emergency_flow": [
+              "Providenciar avaliação valvar sem demora. Se sintomas atuais importantes, síncope recente ou instabilidade, encaminhar a atendimento monitorizado; confirmar gravidade e definir intervenção com Heart Team."
+            ]
+          }
+        },
+        {
+          "id": "choque-emergencia",
+          "priority": 98,
+          "when": {
+            "all": [
+              {
+                "field": "sinais_baixo_debito_ou_choque",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "emergencia",
+            "red_flags": [
+              "Sinais de baixo débito ou choque cardiogênico em paciente com estenose aórtica: avaliação emergencial imediata."
+            ],
+            "emergency_flow": [
+              "Estabilizar hemodinamicamente evitando redução abrupta de pré-carga ou pós-carga e acionar avaliação valvar urgente."
+            ]
+          }
+        },
+        {
+          "id": "discordancia-baixo-fluxo-baixo-gradiente",
+          "priority": 55,
+          "when": {
+            "all": [
+              {
+                "field": "parametros_discordantes",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Parâmetros discordantes não comprovam baixo fluxo. Conferir medidas Doppler/LVOT, pressão arterial, volume sistólico indexado e função ventricular antes de classificar."
+            ],
+            "suggested_tests": [
+              "Revisão ecocardiográfica integrada; dobutamina ou escore de cálcio por TC conforme o padrão de fluxo/gradiente/FEVE e a pergunta clínica, após excluir erro de medida."
+            ]
+          }
+        },
+        {
+          "id": "teste-esforco-desmascara-sintoma",
+          "priority": 85,
+          "when": {
+            "all": [
+              {
+                "field": "teste_esforco_realizado",
+                "op": "truthy"
+              },
+              {
+                "field": "teste_esforco_anormal",
+                "op": "truthy"
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Teste de esforço desmascarou sintoma, queda de pressão ou resposta anormal: reclassificar como estenose sintomática e avaliar intervenção."
+            ]
+          }
+        },
+        {
+          "id": "criterios-intervencao-precoce-assintomatico",
+          "priority": 70,
+          "when": {
+            "all": [
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "sintomas_atribuiveis",
+                "op": "falsy"
+              },
+              {
+                "field": "baixo_risco_procedimento",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "fracao_ejecao_ve",
+                "op": "gte",
+                "value": 50
+              }
+            ],
+            "any": [
+              {
+                "field": "progressao_hemodinamica_rapida",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "bnp_muito_elevado",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "EA grave assintomática com FEVE ≥50%, baixo risco do procedimento e progressão/calcificação importante ou BNP repetidamente >3 vezes o limite sem outra causa: discutir intervenção precoce conforme ESC/EACTS 2025 (IIa), ponderando vigilância e preferência."
+            ]
+          }
+        },
+        {
+          "id": "bicuspide-favorece-cirurgia",
+          "priority": 60,
+          "when": {
+            "all": [
+              {
+                "field": "morfologia_valvar",
+                "op": "eq",
+                "value": "bicuspide"
+              },
+              {
+                "field": "intervencao_valvar_indicada_heart_team",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Valva aórtica bicúspide: cirurgia é a modalidade primária recomendada de troca valvar, sobretudo em paciente jovem ou com aortopatia associada."
+            ],
+            "suggested_tests": [
+              "Avaliar aorta ascendente por imagem seriada e considerar rastreio familiar de primeiro grau."
+            ]
+          }
+        },
+        {
+          "id": "aortopatia-bicuspide-seguimento",
+          "priority": 45,
+          "when": {
+            "all": [
+              {
+                "field": "morfologia_valvar",
+                "op": "eq",
+                "value": "bicuspide"
+              },
+              {
+                "field": "aortopatia_associada",
+                "op": "truthy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "suggested_tests": [
+              "Imagem seriada da aorta torácica (ecocardiograma, angiotomografia ou ressonância) para acompanhar progressão da dilatação da aorta ascendente, independentemente da gravidade valvar."
+            ]
+          }
+        },
+        {
+          "id": "outra-cirurgia-indica-troca-concomitante",
+          "priority": 65,
+          "when": {
+            "all": [
+              {
+                "field": "outra_cirurgia_cardiaca_indicada",
+                "op": "truthy"
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "risco_cirurgico_aceitavel_concomitante",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Indicação concomitante de cirurgia cardíaca por outro motivo favorece troca valvar aórtica combinada na mesma cirurgia."
+            ]
+          }
+        },
+        {
+          "id": "expectativa-vida-curta-paliativo",
+          "priority": 40,
+          "when": {
+            "all": [
+              {
+                "field": "expectativa_vida_maior_1_ano",
+                "op": "falsy"
+              }
+            ]
+          },
+          "add": {
+            "risk": "rotina",
+            "supporting": [
+              "Expectativa de vida estimada inferior a 1 ano: benefício clínico da intervenção é improvável — decisão compartilhada em Heart Team, com discussão de cuidados paliativos."
+            ]
+          }
+        },
+        {
+          "id": "heart-team-pendente",
+          "priority": 30,
+          "when": {
+            "all": [
+              {
+                "field": "discussao_heart_team_pendente",
+                "op": "truthy"
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Estenose grave confirmada, ou critério de intervenção presente, sem discussão em Heart Team é lacuna assistencial a corrigir."
+            ]
+          }
+        },
+        {
+          "id": "ea_feve_menor50_sem_outra_causa",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "sintomas_atribuiveis",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "fracao_ejecao_ve",
+                "op": "lt",
+                "value": 50
+              },
+              {
+                "field": "feve_reduzida_atribuivel_ea",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "EA grave assintomática com FEVE <50% sem outra causa: indicação de intervenção (Classe I), com avaliação do Heart Team."
+            ]
+          }
+        },
+        {
+          "id": "ea_feve50a55_baixo_risco",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "sintomas_atribuiveis",
+                "op": "eq",
+                "value": false
+              },
+              {
+                "field": "fracao_ejecao_ve",
+                "op": "gte",
+                "value": 50
+              },
+              {
+                "field": "fracao_ejecao_ve",
+                "op": "lt",
+                "value": 55
+              },
+              {
+                "field": "feve_reduzida_atribuivel_ea",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "baixo_risco_procedimento",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "FEVE 50–54,9% atribuível à EA grave em assintomático com baixo risco do procedimento: discutir intervenção precoce (ESC/EACTS 2025, IIa)."
+            ]
+          }
+        },
+        {
+          "id": "ea_moderada_cirurgia_concomitante",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "moderada"
+              },
+              {
+                "field": "outra_cirurgia_cardiaca_indicada",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "risco_cirurgico_aceitavel_concomitante",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Na EA moderada, considerar SAVR concomitante quando já indicada CABG ou cirurgia de aorta/outra valva, após avaliação individual de risco e progressão; não equivale a indicação isolada por sintoma."
+            ]
+          }
+        },
+        {
+          "id": "ea_modalidade_tavi70",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "intervencao_valvar_indicada_heart_team",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "idade_anos",
+                "op": "gte",
+                "value": 70
+              },
+              {
+                "field": "morfologia_valvar",
+                "op": "eq",
+                "value": "tricuspide"
+              },
+              {
+                "field": "anatomia_adequada_tavi",
+                "op": "eq",
+                "value": true
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Em candidato à bioprótese com EA grave, idade ≥70, valva tricúspide e anatomia adequada, ESC/EACTS 2025 recomenda TAVI. Considerar estratégia ao longo da vida e condições associadas em Heart Team."
+            ]
+          }
+        },
+        {
+          "id": "ea_modalidade_savr_menor70",
+          "priority": 50,
+          "when": {
+            "all": [
+              {
+                "field": "intervencao_valvar_indicada_heart_team",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "field": "gravidade_ecocardiograma",
+                "op": "eq",
+                "value": "grave"
+              },
+              {
+                "field": "idade_anos",
+                "op": "lt",
+                "value": 70
+              },
+              {
+                "field": "risco_cirurgico_estimado",
+                "op": "eq",
+                "value": "baixo"
+              }
+            ]
+          },
+          "add": {
+            "risk": "prioritario",
+            "supporting": [
+              "Em paciente <70 anos com intervenção indicada para EA grave e baixo risco cirúrgico, ESC/EACTS 2025 recomenda SAVR; discutir tipo de prótese, durabilidade e preferência."
+            ]
+          }
+        }
+      ],
+      "review_status": "revisado",
+      "review_note": "Revisão adversarial Codex 2026-09-08: PR #718: risco do procedimento e FEVE ClasseI/IIa separados, discordância não presume baixo fluxo, idade/modalidade condicionadas a indicação e EA moderada com cirurgia concomitante contemplada. ESC/EACTS 2025."
+    }
+  }
+]

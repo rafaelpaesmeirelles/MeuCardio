@@ -1,12 +1,42 @@
 ---
-title: "Fluxograma: Sequenciamento e Titulação da Terapia Quádrupla na ICFEr"
+title: 'Fluxograma: Sequenciamento e Titulação da Terapia Quádrupla na ICFEr'
 slug: fluxograma-sequenciamento-titulacao-terapia-quadrupla-icfer
-theme: "Insuficiência cardíaca"
+theme: Insuficiência cardíaca
 kind: fluxograma
 fonte_producao: chatgpt
 review_status: revisado
-review_note: "Nenhum PMID/DOI novo foi introduzido nesta sessão. Todas as referências reutilizadas já estavam publicadas e verificadas nesta mesma pasta: CONSENSUS PMID 2883575, PARADIGM-HF PMID 25176015, DAPA-HF PMID 31535829, EMPEROR-Reduced PMID 32865377, RALES PMID 10471456, EMPHASIS-HF PMID 21073363, STRONG-HF PMID 36356631, DIAMOND PMID 35900838 e Atualização Focada 2023 da ESC PMID 37622666. O STRONG-HF testou titulação rápida de IECA/BRA/ARNI, betabloqueador e antagonista mineralocorticoide após internação por IC; iSGLT2 não era obrigatório no protocolo. Portanto, ele sustenta acompanhamento intensivo pós-alta, não uma exigência de iniciar simultaneamente os quatro pilares nem um intervalo universal para dobrar doses. A lógica de sequenciamento por barreira de segurança permanece qualitativa e individualizada."
-source_refs: ["CONSENSUS Trial Study Group. Effects of enalapril on mortality in severe congestive heart failure (CONSENSUS). N Engl J Med. 1987;316(23):1429-1435. DOI: 10.1056/NEJM198706043162301. PMID: 2883575", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015", "McMurray JJV, Solomon SD, Inzucchi SE, et al; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829", "Packer M, Anker SD, Butler J, et al; EMPEROR-Reduced Trial Investigators. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. N Engl J Med. 2020;383(15):1413-1424. DOI: 10.1056/NEJMoa2022190. PMID: 32865377", "Pitt B, Zannad F, Remme WJ, et al; RALES Investigators. The effect of spironolactone on morbidity and mortality in patients with severe heart failure. N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Zannad F, McMurray JJ, Krum H, et al; EMPHASIS-HF Study Group. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. DOI: 10.1056/NEJMoa1009492. PMID: 21073363", "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised trial. Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631", "Butler J, Anker SD, Lund LH, et al. Patiromer for the management of hyperkalemia in heart failure with reduced ejection fraction: the DIAMOND trial. Eur Heart J. 2022;43(41):4362-4373. DOI: 10.1093/eurheartj/ehac401. PMID: 35900838", "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666"]
+review_note: 'Nenhum PMID/DOI novo foi introduzido nesta sessão. Todas as referências reutilizadas já estavam publicadas
+  e verificadas nesta mesma pasta: CONSENSUS PMID 2883575, PARADIGM-HF PMID 25176015, DAPA-HF PMID 31535829, EMPEROR-Reduced
+  PMID 32865377, RALES PMID 10471456, EMPHASIS-HF PMID 21073363, STRONG-HF PMID 36356631, DIAMOND PMID 35900838
+  e Atualização Focada 2023 da ESC PMID 37622666. O STRONG-HF testou titulação rápida de IECA/BRA/ARNI, betabloqueador
+  e antagonista mineralocorticoide após internação por IC; iSGLT2 não era obrigatório no protocolo. Portanto, ele
+  sustenta acompanhamento intensivo pós-alta, não uma exigência de iniciar simultaneamente os quatro pilares nem
+  um intervalo universal para dobrar doses. A lógica de sequenciamento por barreira de segurança permanece qualitativa
+  e individualizada. Revisão independente de dependência em08/09/2026: Congestãonãoinstabilidade; MRArenal/Knãoindiscriminado;
+  marcapassonãoescalonadorBB; hipercalemiagraveprioridade.'
+source_refs:
+- 'CONSENSUS Trial Study Group. Effects of enalapril on mortality in severe congestive heart failure (CONSENSUS).
+  N Engl J Med. 1987;316(23):1429-1435. DOI: 10.1056/NEJM198706043162301. PMID: 2883575'
+- 'McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-neprilysin inhibition
+  versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015'
+- 'McMurray JJV, Solomon SD, Inzucchi SE, et al; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients
+  with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303.
+  PMID: 31535829'
+- 'Packer M, Anker SD, Butler J, et al; EMPEROR-Reduced Trial Investigators. Cardiovascular and Renal Outcomes with
+  Empagliflozin in Heart Failure. N Engl J Med. 2020;383(15):1413-1424. DOI: 10.1056/NEJMoa2022190. PMID: 32865377'
+- 'Pitt B, Zannad F, Remme WJ, et al; RALES Investigators. The effect of spironolactone on morbidity and mortality
+  in patients with severe heart failure. N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID:
+  10471456'
+- 'Zannad F, McMurray JJ, Krum H, et al; EMPHASIS-HF Study Group. Eplerenone in patients with systolic heart failure
+  and mild symptoms. N Engl J Med. 2011;364(1):11-21. DOI: 10.1056/NEJMoa1009492. PMID: 21073363'
+- 'Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed
+  medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised trial. Lancet.
+  2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631'
+- 'Butler J, Anker SD, Lund LH, et al. Patiromer for the management of hyperkalemia in heart failure with reduced
+  ejection fraction: the DIAMOND trial. Eur Heart J. 2022;43(41):4362-4373. DOI: 10.1093/eurheartj/ehac401. PMID:
+  35900838'
+- '2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure.
+  Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195. PMID: 37622666'
 ---
 
 # Fluxograma: Sequenciamento e Titulação da Terapia Quádrupla na ICFEr
@@ -29,20 +59,20 @@ classe por intolerância evitável.
 ```mermaid
 flowchart TD
   R0["Diagnóstico confirmado de ICFEr<br/>(FEVE ≤ 40%): indicação de iniciar<br/>a terapia quádrupla"]
-  D1{"Paciente hemodinamicamente instável<br/>agora (congestão não tratada,<br/>hipotensão sintomática, hipercalemia,<br/>injúria renal aguda)?"}
-  C1(["Estabilizar a intercorrência aguda<br/>primeiro — tratar a congestão, corrigir<br/>potássio e função renal; iniciar os<br/>quatro pilares assim que estabilizado,<br/>retomando esta mesma árvore de decisão"])
+  D1{"Paciente hemodinamicamente instável<br/>agora (choque/hipoperfusão,<br/>hipercalemia grave ou outra<br/>intercorrência que exige estabilização)?"}
+  C1(["Estabilizar a intercorrência aguda<br/>primeiro — tratar a congestão, corrigir<br/>potássio e avaliar função renal; iniciar<br/>pilares elegíveis assim que seguro,<br/>retomando esta mesma árvore de decisão"])
   D2{"Há barreira específica que limita<br/>iniciar as quatro classes ao mesmo<br/>tempo — PA limítrofe, FC/condução<br/>limítrofes, ou TFGe/potássio<br/>limítrofes?"}
   P1["Introduzir prontamente os quatro<br/>pilares, em sequência individualizada<br/>ou concomitante quando seguro — iSGLT2<br/>não exige titulação; iniciar as demais<br/>classes em doses toleráveis"]
   C2(["Sequenciar por segurança: iniciar<br/>primeiro iSGLT2 e antagonista<br/>mineralocorticoide (menor efeito<br/>hipotensor imediato); introduzir<br/>IECA/ARNI e betabloqueador em dose<br/>mínima, com intervalo maior entre as<br/>introduções — ver fluxograma dedicado<br/>de hipotensão sintomática"])
-  C3(["Sequenciar por segurança: iniciar<br/>iSGLT2, antagonista mineralocorticoide<br/>e IECA/ARNI primeiro; betabloqueador em<br/>dose mínima com monitorização de FC e<br/>ECG, avaliando necessidade de<br/>marca-passo antes de escalar a dose"])
-  C4(["Sequenciar por segurança: iniciar<br/>iSGLT2 e betabloqueador primeiro (menor<br/>impacto renal/potássio imediato);<br/>IECA/ARNI e antagonista<br/>mineralocorticoide em dose mínima, com<br/>controle de potássio e TFGe em 1 a 2<br/>semanas antes de qualquer titulação"])
+  C3(["Sequenciar por segurança: iniciar<br/>iSGLT2, antagonista mineralocorticoide<br/>e IECA/ARNI primeiro; betabloqueador em<br/>dose mínima apenas se elegível, monitorar<br/>FC/ECG; investigar bloqueio significativo.<br/>Marca-passo depende de indicação própria"])
+  C4(["Sequenciar por segurança: iniciar<br/>iSGLT2 e betabloqueador primeiro (menor<br/>impacto renal/potássio imediato);<br/>IECA/ARNI e MRA somente se elegíveis;<br/>avaliar K/TFGe e contraindicações.<br/>Monitorização precoce individualizada"])
   D3{"Na reavaliação precoce após cada<br/>mudança: PA, FC, potássio e TFGe<br/>toleraram a dose atual?"}
   C5(["Titular uma ou mais classes conforme<br/>tolerância até doses-alvo ou máximas<br/>toleradas; individualizar intervalo e<br/>incremento, com monitorização clínica e<br/>laboratorial apropriada"])
   D4{"Qual parâmetro limitou a titulação?"}
   C6(["Hipotensão sintomática: seguir o<br/>fluxograma dedicado de manejo da<br/>hipotensão limitando titulação de<br/>IECA/ARNI"])
-  C7(["Hipercalemia: considerar quelante de<br/>potássio antes de reduzir a dose do<br/>bloqueador do SRAA ou do antagonista<br/>mineralocorticoide (DIAMOND)"])
+  C7(["Hipercalemia: avaliar gravidade/ECG e tratar<br/>urgência quando presente. Quelante pode<br/>facilitar SRAA/MRA em contexto selecionado;<br/>não atrasar suspensão necessária ou emergência"])
   C8(["Bradicardia ou distúrbio de condução:<br/>reduzir a dose do betabloqueador e<br/>priorizar a titulação dos demais<br/>pilares"])
-  C9(["Piora renal isolada, leve a moderada:<br/>manter a dose atual — não suspender por<br/>elevação isolada e leve de creatinina —<br/>e reavaliar em 1 a 2 semanas"])
+  C9(["Piora renal isolada, leve a moderada:<br/>avaliar tendência, congestão, volemia e K;<br/>pequena elevação isolada não obriga suspensão.<br/>AKI progressiva exige avaliação antecipada"])
 
   R0 --> D1
   D1 -->|"Sim"| C1
@@ -91,3 +121,5 @@ imediato.
 descompensação, nova intercorrência aguda ou mudança de outro fármaco
 concomitante reabrem o processo de decisão a qualquer momento, não apenas nas
 consultas de 1-2 semanas representadas no diagrama.
+
+Congestão não equivale automaticamente a instabilidade: otimização de fármacos elegíveis pode ocorrer durante descongestão após estabilização. Início de betabloqueador exige atenção específica à estabilidade e congestão. Há limites de elegibilidade de bula/ensaio para função renal e potássio; a expressão “limítrofe” não os substitui. Fonte: ESC2026HF, DOI:10.1093/eurheartj/ehag100, seções7.4.2–3/Tabela8.

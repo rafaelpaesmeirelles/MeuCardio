@@ -98,13 +98,16 @@ def test_hardware_exposto_ou_pus_dispara_fluxo_especifico():
 
 
 def test_multiplos_choques_apropriados_sao_emergencia_e_choque_unico_nao_e_ignorado():
-    multiple = _evaluate(icd_shock_history="multiplos_apropriados")
+    multiple = _evaluate(
+        icd_shock_history="multiplos_apropriados",
+        shock_timing_count="multiplos_24h",
+    )
     assert "cdi-multiplos-choques-apropriados" in multiple["matched_rules"]
     assert multiple["risk"] == "emergencia"
 
     single = _evaluate(icd_shock_history="unico_apropriado")
     assert "cdi-choque-unico-apropriado" in single["matched_rules"]
-    assert single["risk"] in {"urgente", "emergencia"}
+    assert single["risk"] == "prioritario"
 
 
 def test_falha_suspeita_de_lead_de_choque_recebe_prioridade_propria():

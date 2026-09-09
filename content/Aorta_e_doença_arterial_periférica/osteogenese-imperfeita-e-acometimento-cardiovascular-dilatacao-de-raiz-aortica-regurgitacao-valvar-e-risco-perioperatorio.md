@@ -1,0 +1,60 @@
+---
+title: 'Osteogênese Imperfeita e Acometimento Cardiovascular: Dilatação de Raiz Aórtica, Regurgitação Valvar e Risco Perioperatório'
+slug: osteogenese-imperfeita-e-acometimento-cardiovascular-dilatacao-de-raiz-aortica-regurgitacao-valvar-e-risco-perioperatorio
+theme: Aorta e doença arterial periférica
+kind: documento
+review_status: revisado
+source_refs:
+- 'Folkestad L et al. Cardiovascular disease in adults with osteogenesis imperfecta: clinical characteristics, care recommendations, and research priorities identified using a modified Delphi technique. J Bone Miner Res. 2025;40:211-221. DOI: 10.1093/jbmr/zjae197. PMID: 39665364. Publicação online 12/12/2024.'
+- 'Rodriguez Celin M, Steiner RD, Basel D. COL1A1- and COL1A2-Related Osteogenesis Imperfecta. 2005 Jan 28 [Updated 2025 May 29]. In: Adam MP, Feldman J, Mirzaa GM, Pagon RA, Wallace SE, Amemiya A, editors. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301472'
+- 'Radunovic Z, Wekre LL, Diep LM, Steine K. Cardiovascular abnormalities in adults with osteogenesis imperfecta. Am Heart J. 2011;161(3):523-529. PMID: 21392607'
+- 'Ashournia H, Johansen FT, Folkestad L, Diederichsen ACP, Brixen K. Heart disease in patients with osteogenesis imperfecta - a systematic review. Int J Cardiol. 2015;196:149-157. PMID: 26100571'
+- 'Radunovic Z, Steine K. Prevalence of Cardiovascular Disease and Cardiac Symptoms: Left and Right Ventricular Function in Adults With Osteogenesis Imperfecta. Can J Cardiol. 2015;31(11):1386-1392. PMID: 26416541'
+- 'Balasubramanian M, Verschueren A, Kleevens S, Luyckx I, Perik M, Schirwani S, Mortier G, Morisaki H, Rodrigus I, Van Laer L, Verstraeten A, Loeys B. Aortic aneurysm/dissection and osteogenesis imperfecta: Four new families and review of the literature. Bone. 2019;121:191-195. PMID: 30684648'
+- 'Beethe AR, Bohannon NA, Ogun OA, Wallace MJ, Esposito PW, Lockhart TJ, Hamlin RJ, Williams JR, Goeller JK. Neuraxial and regional anesthesia in surgical patients with osteogenesis imperfecta: a narrative review of literature. Reg Anesth Pain Med. 2020;45(12):993-999. PMID: 33037052'
+- 'Evensen SA, Myhre L, Stormorken H. Haemostatic studies in osteogenesis imperfecta. Scand J Haematol. 1984;33(2):177-179. PMID: 6474094'
+- 'Huang J, Dinh M, Kuchle N, Zhou J. Anesthetic management for combined mitral valve replacement and aortic valve repair in a patient with osteogenesis imperfecta. Ann Card Anaesth. 2011;14(2):115-118. PMID: 21636932'
+- 'Sullivan BT, Margalit A, Garg VS, Njoku DB, Sponseller PD. Incidence of Fractures From Perioperative Blood Pressure Cuff Use, Tourniquet Use, and Patient Positioning in Osteogenesis Imperfecta. J Pediatr Orthop. 2019;39(1):e68-e70. PMID: 29189536'
+fonte_producao: claude
+---
+
+# Osteogênese Imperfeita e Acometimento Cardiovascular
+
+## Contexto
+
+Osteogênese imperfeita (OI) é um grupo heterogêneo de doenças com fragilidade óssea e manifestações extraesqueléticas. Variantes em COL1A1/COL1A2 explicam a maioria dos casos e geralmente têm herança autossômica dominante. Outros genes e modos de herança também existem; os casos restantes não são todos recessivos. O colágeno tipo I participa de vasos, válvulas e miocárdio, além do osso. Portanto, o predomínio esquelético não elimina a possibilidade de doença cardiovascular (GeneReviews, PMID: 20301472).
+
+As categorias clínicas clássicas incluem formas não deformante, perinatal grave, progressivamente deformante e variável. Elas ajudam a descrever o fenótipo esquelético, mas não fornecem, por si só, uma classificação validada de risco aórtico. Não equiparar o manejo da OI ao de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular.
+
+## Evidência cardiovascular
+
+A revisão de Ashournia reuniu 68 estudos com 499 pacientes, sobretudo relatos e séries pequenas. Regurgitação valvar e aumento de diâmetro aórtico foram os achados mais frequentes, mas essa seleção não estima com precisão a prevalência populacional (PMID: 26100571).
+
+Radunovic comparou 99 adultos com OI e 52 controles. No grupo OI, registrou hipertensão em 37,4%, regurgitação aórtica leve em 10,1%, moderada em 10,1% e mitral moderada em 7,1%. Medidas cardíacas e aórticas indexadas eram maiores, especialmente no tipo III. Trata-se de associação transversal, com diferenças de tamanho corporal relevantes para interpretação, não de uma regra para vigilância mais intensa baseada no subtipo (PMID: 21392607). O estudo de 2015 do mesmo grupo também avaliou 99 pacientes e 52 controles; não deve ser apresentado como replicação independente (PMID: 26416541).
+
+Aneurismas e dissecções foram documentados em famílias e relatos, incluindo a publicação de Balasubramanian de 2019. O número de casos citados naquela época não corresponde a uma contagem atual nem estima risco individual. Dor torácica ou dorsal súbita e sinais de isquemia exigem investigação de síndrome aórtica ou vascular conforme apresentação (PMID: 30684648).
+
+## Avaliação e seguimento
+
+**Existe um consenso específico recente:** Folkestad e colaboradores publicaram 14 recomendações por Delphi modificado, online em dezembro de 2024 e no volume de 2025. Recomenda avaliação cardiovascular clínica basal e periódica nos adultos. **Não sustenta ecocardiograma de rastreio rotineiro, nem rastreio aórtico por imagem, apenas pelo diagnóstico de OI na ausência de outras indicações.** Sintomas, sopro ou suspeita de doença estrutural orientam investigação; anormalidades estabelecidas seguem as diretrizes cardiovasculares gerais. O consenso também considera insuficiente a evidência para estratificar risco cardiovascular por genótipo ou tipo de OI. É orientação consensual baseada em evidência limitada, não ensaio de rastreamento (PMID: 39665364).
+
+Quando indicado, o ecocardiograma deve avaliar válvulas e aorta com técnica adequada à anatomia e tamanho corporal. A indexação exige cautela na baixa estatura. Dilatação ou valvopatia relevante requer acompanhamento especializado, com intervalo e intervenção definidos pelo achado e contexto; não há limiar cirúrgico específico por gene de OI validado para substituir critérios gerais (PMID: 39665364). O GeneReviews recomenda avaliação clínica de sintomas cardiovasculares e tratamento convencional dos problemas identificados (PMID: 20301472).
+
+## Segurança perioperatória
+
+Planejar posicionamento e manipulação cuidadosos, considerando deformidades, fraturas prévias, via aérea e coluna cervical. **Sullivan não encontrou fraturas associadas ao manguito de pressão ou ao torniquete:** foram 37 pacientes e 98 procedimentos, com uma fratura durante posicionamento. O resultado não garante risco zero em todas as situações, mas contradiz a afirmação de que essa série documentou fraturas por manguito. Não omitir monitorização pressórica necessária por esse motivo; adaptar dispositivo e local ao paciente (PMID: 29189536).
+
+Uma série de hemostasia com 58 pacientes identificou fragilidade capilar e alterações plaquetárias ou plasmáticas em subgrupos. Retenção plaquetária reduzida não equivale à mesma frequência de agregação deficiente ao colágeno. História hemorrágica, procedimentos anteriores e tipo de cirurgia orientam avaliação hematológica; a série de 1984 não valida teste de torniquete nem painel funcional universal como protocolo contemporâneo (PMID: 6474094).
+
+A revisão de Beethe reuniu 161 casos de anestesia regional ou neuroaxial, sem eventos adversos atribuídos relatados, porém com acompanhamento incompleto. Não comprova segurança universal nem contraindicação automática. Considerar anatomia, posicionamento e hemostasia individualmente (PMID: 33037052).
+
+O relato de Huang descreve uma estratégia anestésica para dupla intervenção valvar; não demonstra superioridade de dexmedetomidina ou prevenção de hipertermia maligna. Não transformar uma precaução daquele caso em associação causal estabelecida entre OI e hipertermia maligna. Cirurgia cardíaca deve ter planejamento multidisciplinar e atenção a sangramento, fragilidade tecidual e cicatrização (PMID: 21636932).
+
+## Tudo com Tudo
+
+- [Aortopatias Genéticas na Criança: Síndrome de Marfan, Síndrome de Loeys-Dietz e Síndrome de Ehlers-Danlos Vascular](/biblioteca/aortopatias-geneticas-na-crianca-marfan-loeys-dietz-e-ehlers-danlos-vascular-vigilancia-e-limiares-cirurgicos)
+- [Síndrome da Tortuosidade Arterial (SLC2A10/GLUT10): Fenótipo e Diferenciação de Marfan, Loeys-Dietz e Ehlers-Danlos Vascular](/biblioteca/sindrome-da-tortuosidade-arterial-slc2a10-glut10-tortuosidade-difusa-fenotipo-e-diferenciacao-de-marfan-loeys-dietz-e-ehlers-danlos-vascular)
+- [Regurgitação Aórtica Crônica e Aguda: Indicação Cirúrgica ESC/EACTS 2021](/biblioteca/regurgitacao-aortica-cronica-e-aguda-indicacao-cirurgica-esceacts-2021)
+- [Disjunção Anular Mitral e Prolapso Valvar Mitral Arrítmico](/biblioteca/disjuncao-anular-mitral-e-prolapso-valvar-mitral-arritmico)
+- [Fluxograma: Síndrome Aórtica Aguda ESC 2024](/biblioteca/fluxograma-sindrome-aortica-aguda-esc-2024)
+- [Valvopatia e Cirurgia Não Cardíaca: Avaliação e Manejo ESC 2022](/biblioteca/valvopatia-e-cirurgia-nao-cardiaca-avaliacao-e-manejo-esc-2022)

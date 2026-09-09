@@ -33,6 +33,12 @@ def _preparar_auditoria(tmp_path, monkeypatch, *, evidencias, estudos):
     (tmp_path / "medicamentos" / "interacoes.json").write_text(
         "[]", encoding="utf-8",
     )
+    # O auditor composto também carrega as relações transversais curadas. A
+    # fixture unitária não exercita essa frente, mas precisa representar um
+    # corpus mínimo completo para não depender de arquivos da árvore real.
+    (tmp_path / "doencas" / "relacoes-transversais.json").write_text(
+        "[]", encoding="utf-8",
+    )
     manifestos = {
         "evidencias": evidencias,
         "estudos": estudos,

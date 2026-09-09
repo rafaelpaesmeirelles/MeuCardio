@@ -1,0 +1,20 @@
+{
+  "batch": "grok-pr885-pr907-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Autorização do responsável para revisão científica integral consolidada; seis documentos conferidos com fontes primárias, comentários e HEADs remotos; publicação depende dos gates finais centralizados.",
+  "source_heads": {
+    "pr885": "4e8fb138f2af81662f283300d60ab1b54dd36acb",
+    "pr907": "01bc9ec0a4c875d28d9297d00ee7cba2eeff2952"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-sinalizadores-ambulatoriais-qt-longo",
+      "qt-longo-ambulatorial-quando-suspender-farmacos-prolongadores-de-qt",
+      "sinalizadores-ambulatoriais-de-qt-longo-congenito-e-adquirido-quando-escalar",
+      "checklist-ambulatorial-alarme-cardite-suspeita-fra",
+      "fluxograma-ambulatorial-suspeita-fra-destino-hospital",
+      "sinalizadores-ambulatoriais-suspeita-febre-reumatica-aguda-quando-encaminhar"
+    ]
+  }
+}

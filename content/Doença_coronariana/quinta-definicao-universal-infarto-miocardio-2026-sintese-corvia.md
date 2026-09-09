@@ -5,8 +5,8 @@ theme: "Doença coronariana"
 kind: documento
 fonte_producao: chatgpt
 review_status: revisado
-review_note: "Síntese clínica original em português, baseada no documento oficial ESC/ACC/AHA/WHF 2026 fornecido para revisão. Não é tradução integral nem reprodução. A nova taxonomia, critérios conceituais e principais mudanças foram parafraseados para atualização do CorVIA e integração Tudo com Tudo."
-source_refs: ["ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101."]
+review_note: "Revisão adversarial Codex 08/09/2026: agudeza, confirmação de IAM secundário, nexo e critérios periprocedimento, incerteza na morte súbita e contexto MINOCA conferidos nas seções 6–8 e 11 do texto primário. Síntese clínica original em português, baseada no documento oficial ESC/ACC/AHA/WHF 2026 fornecido para revisão. Não é tradução integral nem reprodução. A nova taxonomia, critérios conceituais e principais mudanças foram parafraseados para atualização do CorVIA e integração Tudo com Tudo."
+source_refs: ["ESC/ACC/AHA/WHF Task Force. Fifth Universal Definition of Myocardial Infarction (2026). Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag101. PMID ainda não atribuído no registro consultado.", "Thygesen K, Alpert JS, Jaffe AS, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-269. DOI: 10.1093/eurheartj/ehy462. PMID: 30165617. Referência primária anterior para os conceitos preservados de lesão miocárdica e evidência de isquemia."]
 ---
 
 # Quinta Definição Universal de Infarto do Miocárdio — 2026
@@ -38,7 +38,7 @@ A evidência isquêmica pode incluir, de acordo com o contexto:
 
 A definição de lesão miocárdica utiliza pelo menos um valor de troponina cardíaca acima do **limite superior de referência no percentil 99**. A atualização reforça a utilização de **limites de referência específicos por sexo**, quando validados para o ensaio, para reduzir viés sistemático e subdiagnóstico em mulheres.
 
-A Quinta Definição também reforça medições seriadas e caminhos diagnósticos acelerados com troponina de alta sensibilidade, sem substituir o raciocínio sobre causa e contexto da elevação.
+A lesão aguda requer variação de troponina em amostras seriadas, interpretada conforme ensaio e tempo de apresentação; elevação estável pode ser crônica. Um valor elevado isolado não estabelece agudeza nem infarto.
 
 ## 3. IAM primário
 
@@ -58,7 +58,7 @@ O IAM secundário é considerado quando existe uma **condição aguda alternativ
 
 A nova classificação busca aumentar a especificidade e separar IAM secundário de **lesão miocárdica aguda não isquêmica**, problema frequente em sepse, choque, insuficiência respiratória, taquiarritmias, anemia grave e outras doenças críticas.
 
-No CorVIA, o alerta deve ser: **não rotular automaticamente qualquer elevação dinâmica de troponina em paciente grave como IAM secundário**. É necessário demonstrar que o mecanismo isquêmico é plausível e sustentado pelos critérios clínicos/objetivos propostos.
+No CorVIA, o alerta deve ser: **não rotular automaticamente qualquer elevação dinâmica de troponina em paciente grave como IAM secundário**. Quando a imagem é viável e apropriada, buscar DAC obstrutiva sem patologia coronariana aguda ou nova alteração isquêmica miocárdica para confirmação. Se não houver confirmação possível, registrar a incerteza, sem transformar plausibilidade em certeza.
 
 ## 5. IAM relacionado a procedimento
 
@@ -66,17 +66,17 @@ A antiga divisão em IAM 4a, 4b, 4c e 5 é substituída por uma categoria clíni
 
 A definição considera complicação de procedimento cardíaco percutâneo ou cirúrgico ocorrida **dentro de 30 dias**. O diagnóstico deixa de depender dos antigos múltiplos fixos de troponina utilizados como critério principal e prioriza evidência objetiva de complicação coronariana e/ou nova lesão miocárdica isquêmica por imagem, conforme o contexto do procedimento.
 
-Quando a complicação ocorre durante o procedimento índice ou quando o procedimento é realizado no contexto de IAM agudo, a exigência de critérios objetivos é mais rigorosa.
+Nesses dois contextos — complicação durante o procedimento ou intervenção por IAM agudo — a confirmação exige complicação coronariana **e** nova alteração miocárdica isquêmica por imagem. Após procedimento inicialmente sem complicações, não basta proximidade temporal: verificar nexo com o vaso/território tratado; eventos independentes podem ser primários ou secundários.
 
 ## 6. O antigo “IAM tipo 3” deixa de existir como categoria
 
-O termo numérico “tipo 3” é removido. Quando o IAM for considerado a causa provável de morte súbita antes de avaliação diagnóstica completa, deve-se buscar classificar o evento como **primário, secundário ou relacionado a procedimento**, com base no cenário clínico e, quando disponível, em achados pós-morte.
+O termo numérico “tipo 3” é removido. Sem investigação suficiente, preservar a incerteza; não forçar subtipo apenas por suspeita de IAM. Achados clínicos, ECG e investigação pós-morte podem esclarecer causa e classificação.
 
 ## 7. MINOCA: mudança conceitual importante
 
 MINOCA passa a significar **myocardial injury with non-obstructive coronary arteries — lesão miocárdica com artérias coronárias não obstrutivas**.
 
-A razão da mudança é explícita: MINOCA é um **diagnóstico de trabalho**, e não uma etiologia final. Após angiografia sem obstrução coronariana significativa, a investigação deve procurar o mecanismo da lesão, incluindo causas coronarianas e não coronarianas, com uso apropriado de RMC, imagem intravascular e testes funcionais conforme o caso.
+A razão da mudança é explícita: MINOCA é um **diagnóstico de trabalho**, e não uma etiologia final. Na apresentação com possível IAM, lesão aguda e angiografia sem estenose ≥50%, a investigação deve procurar o mecanismo da lesão, incluindo causas coronarianas e não coronarianas, com uso apropriado de RMC, imagem intravascular e testes funcionais conforme o caso.
 
 Essa atualização deve substituir no CorVIA a equivalência automática entre “MINOCA” e “infarto com coronárias não obstrutivas”. O acrônimo permanece, mas o “MI” passa a representar **myocardial injury**.
 
@@ -107,3 +107,4 @@ Na prevenção secundária, ligar a **antiagregação, anticoagulação quando i
 **Troponina elevada ≠ IAM. Coronária não obstrutiva ≠ etiologia definida. Classificação não substitui investigação do mecanismo.**
 
 Este documento é uma síntese editorial própria. Critérios diagnósticos completos, tabelas, definições analíticas de variação da troponina e exceções devem ser consultados na publicação oficial pelo DOI acima.
+[Texto primário ESC/ACC/AHA/WHF 2026 — seções 6–8 e 11](https://academic.oup.com/eurheartj/advance-article/doi/10.1093/eurheartj/ehag101/8766309?searchresult=1).

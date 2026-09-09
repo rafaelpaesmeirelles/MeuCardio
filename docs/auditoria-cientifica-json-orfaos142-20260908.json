@@ -1,0 +1,2445 @@
+{
+  "frozen_source_sha": "deeccd771955810f02c770fc58b3034fbf51bbc5",
+  "source_snapshot_proof": {
+    "branch": "claude/science-scale-20k-20260904",
+    "source_commit": "deeccd771955810f02c770fc58b3034fbf51bbc5",
+    "frozen_records": 142,
+    "records_exactly_matched": 142,
+    "checks": [
+      {
+        "path": "casos-clinicos/diabetes-tipo-2-e-hipertensao-nao-controlada-qual-diuretico-associar-ao-ieca.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "diabetes-tipo-2-e-hipertensao-nao-controlada-qual-diuretico-associar-ao-ieca",
+        "exact_record_match": true,
+        "snapshot_sha256": "0e0ef0ace717561925f78ec95cfc90308f8239dae19bf998b77b6f7999c6d4c6"
+      },
+      {
+        "path": "casos-clinicos/finearts-hf-pressao-arterial-normal-nao-contraindica-finerenona-icfep.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "finearts-hf-pressao-arterial-normal-nao-contraindica-finerenona-icfep",
+        "exact_record_match": true,
+        "snapshot_sha256": "5e901d888f53af9d23f1ffad7b87a107c2296d0ad3b2078fc1587cbee91a2363"
+      },
+      {
+        "path": "casos-clinicos/glp-1-pre-ablacao-de-fa-persistente-manter-trocar-ou-suspender-o-agonista-estudo-leaf.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "glp-1-pre-ablacao-de-fa-persistente-manter-trocar-ou-suspender-o-agonista-estudo-leaf",
+        "exact_record_match": true,
+        "snapshot_sha256": "f5c8ee32fd9c99f2ac65750ed66d59ab0fedc48fedfd8d72f0a36898bc49d3fb"
+      },
+      {
+        "path": "casos-clinicos/diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul",
+        "exact_record_match": true,
+        "snapshot_sha256": "a06fa0bb984b5f0b53c65ff4176abfcf2909e3482c6dba731f7fb1d8a6442c15"
+      },
+      {
+        "path": "casos-clinicos/betabloqueador-pos-iam-fe-normal-meta-analise-individual-2026.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "betabloqueador-pos-iam-fe-normal-meta-analise-individual-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "344043d89075a900153942036e5580837102728f11a021feeef830091e8121ef"
+      },
+      {
+        "path": "casos-clinicos/prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "cd30f904be891ead0eca0ef0f1fdd9cf86f9ce1dd4670ec6e82041c9fe0280c1"
+      },
+      {
+        "path": "casos-clinicos/hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "b516aa1f1431f326e8b8ba0efc193e41ab4a1d5e5a462be867ae25e6b855fd61"
+      },
+      {
+        "path": "casos-clinicos/estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "e3bc3d2d94143d76265d4c2ad7a0f4079d9b1f727908c162cae960cb9bada99f"
+      },
+      {
+        "path": "casos-clinicos/dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto",
+        "exact_record_match": true,
+        "snapshot_sha256": "a2db1edef853f10021a75a92379718143150f267df9028d93d8de2b0da7b2e66"
+      },
+      {
+        "path": "casos-clinicos/sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade",
+        "exact_record_match": true,
+        "snapshot_sha256": "af1d69bb98869b3b159fd5e5592e7caeaeb6bad57bfe6966000d423bd495015e"
+      },
+      {
+        "path": "casos-clinicos/orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3",
+        "exact_record_match": true,
+        "snapshot_sha256": "7a3137da168cc391727dc8eb3115088f1d862b5b309f641bc925ebc9e2c55a08"
+      },
+      {
+        "path": "casos-clinicos/dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo",
+        "exact_record_match": true,
+        "snapshot_sha256": "7cd65abe033014f97d5ff849027c7730de08877a28a5d9891e809a35e8eeb91a"
+      },
+      {
+        "path": "casos-clinicos/dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af",
+        "exact_record_match": true,
+        "snapshot_sha256": "d94013322bc0aaab661acbfc2780337b9fcff0d8000a1d54ce8fe16c95dc62a8"
+      },
+      {
+        "path": "casos-clinicos/regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "b3f5961a0f855fdecb6e2452b3af83db24bd66f3f42e74b64bf084fe71180d1f"
+      },
+      {
+        "path": "casos-clinicos/pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot",
+        "exact_record_match": true,
+        "snapshot_sha256": "453526013e854701277d07de88b3f1697837908c4f4723e7a117b4996803f6a2"
+      },
+      {
+        "path": "casos-clinicos/cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm",
+        "exact_record_match": true,
+        "snapshot_sha256": "1c52d14c843408091cd9d19a65ab023c40ec356ef4842adae1ddb7731ee9c5bf"
+      },
+      {
+        "path": "casos-clinicos/oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa",
+        "exact_record_match": true,
+        "snapshot_sha256": "6942fc9ea0cdb663d957e7e69305148c3ccd1ff57a020e95f5e77ca010039319"
+      },
+      {
+        "path": "casos-clinicos/modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico",
+        "exact_record_match": true,
+        "snapshot_sha256": "fc2072677d9a13eea62b6d1425649406a9bed644ffcd82b61235ced29f099056"
+      },
+      {
+        "path": "casos-clinicos/icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "4284cd92d8b92a397e3953b14e593fadf0512593ae899c5d81824ce7433b1ad9"
+      },
+      {
+        "path": "casos-clinicos/oct-guiada-vs-angiografia-pci-bifurcacao-complexa-decisao.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "oct-guiada-vs-angiografia-pci-bifurcacao-complexa-decisao",
+        "exact_record_match": true,
+        "snapshot_sha256": "5ebab8d6994a2343004655efab675b55e924f091ad4026829be2e3439b108c34"
+      },
+      {
+        "path": "casos-clinicos/semaglutida-oral-soul-decisao-cardiovascular-t2dm.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "semaglutida-oral-soul-decisao-cardiovascular-t2dm",
+        "exact_record_match": true,
+        "snapshot_sha256": "db6c76dbf3baeec8f71a79fd30f046b9d6770a971be2e56973ce19b9ec4831cc"
+      },
+      {
+        "path": "casos-clinicos/fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af",
+        "exact_record_match": true,
+        "snapshot_sha256": "c33b1b71010e22edd72bba0344c02f6d181d9c44b0e6240fa8fee851ee90d948"
+      },
+      {
+        "path": "casos-clinicos/icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "2fd1af744588c0ca28ca4c124812787590181538fa4f365ff5ffc43e10cfb311"
+      },
+      {
+        "path": "casos-clinicos/aprocitentana-precision-hipertensao-resistente-quarta-droga.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "aprocitentana-precision-hipertensao-resistente-quarta-droga",
+        "exact_record_match": true,
+        "snapshot_sha256": "92ffdc972d0c68d00573d68a2c00f342184b3a32a64d04cceae06963533f7042"
+      },
+      {
+        "path": "casos-clinicos/tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos",
+        "exact_record_match": true,
+        "snapshot_sha256": "b3f83d5908b2e321686d41d2cd5d9e1c7a964b544bdb688bae3c29f50ec37e73"
+      },
+      {
+        "path": "casos-clinicos/cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada",
+        "exact_record_match": true,
+        "snapshot_sha256": "d490bed1b78cf23143e2e9061b007bdf2bbd84a95f4778984ade5d10344be027"
+      },
+      {
+        "path": "casos-clinicos/iam-feve-44-sem-ic-betabloqueador-de-longo-prazo.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "iam-feve-44-sem-ic-betabloqueador-de-longo-prazo",
+        "exact_record_match": true,
+        "snapshot_sha256": "4cb8a2ecf62903db6ab6aec1dfd0be6c01aa135b74917ada9fa2a2e0efd6172e"
+      },
+      {
+        "path": "casos-clinicos/dapagliflozina-adjuvante-pos-ablacao-fa-sem-indicacao-metabolica.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "dapagliflozina-adjuvante-pos-ablacao-fa-sem-indicacao-metabolica",
+        "exact_record_match": true,
+        "snapshot_sha256": "f84e3b5a97f26de23f9f422dcce4f135546718ba4f0c3e16ee9f51ff5fa80311"
+      },
+      {
+        "path": "casos-clinicos/proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal",
+        "exact_record_match": true,
+        "snapshot_sha256": "113822341c0506c0a23fd098523f7161d69ba0705bbb86db6476dcb8f8f3b5ac"
+      },
+      {
+        "path": "casos-clinicos/empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2",
+        "exact_record_match": true,
+        "snapshot_sha256": "1c4719340b3325b08fd69a1352ef2b83b344cb55d0080ec5a8755ed022849193"
+      },
+      {
+        "path": "casos-clinicos/hipertensao-alvo-intensivo-diabetico-esprit-derruba-accord.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "hipertensao-alvo-intensivo-diabetico-esprit-derruba-accord",
+        "exact_record_match": true,
+        "snapshot_sha256": "5946ec65f9bd222fdaadfcfa3c5f89929dc1fd4aac786f2a37b47c260dd5d03f"
+      },
+      {
+        "path": "casos-clinicos/heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "d19187855e51515e244ecba2ca1b126c0c387735790a9826f8c59792db5db7c7"
+      },
+      {
+        "path": "casos-clinicos/zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever",
+        "exact_record_match": true,
+        "snapshot_sha256": "673f93ff9d3d155e1116925cd07e35c81d0d7e686bc0871cae8673c8b90857cd"
+      },
+      {
+        "path": "casos-clinicos/icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao",
+        "exact_record_match": true,
+        "snapshot_sha256": "69fad4af5c1ae3ea22b9a6547d33f7be92412c15bd0fae33f087137315974e06"
+      },
+      {
+        "path": "casos-clinicos/attr-cm-acoramidis-extensao-54-meses-inicio-precoce-vs-tardio.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "attr-cm-acoramidis-extensao-54-meses-inicio-precoce-vs-tardio",
+        "exact_record_match": true,
+        "snapshot_sha256": "70799cebe7ee11e019b768a72d0b8f81fd1964c5cfe8be23aad82a6577c36a9a"
+      },
+      {
+        "path": "casos-clinicos/insuficiencia-tricuspide-grave-ttvr-mundo-real-registro-sts-acc-tvt.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "insuficiencia-tricuspide-grave-ttvr-mundo-real-registro-sts-acc-tvt",
+        "exact_record_match": true,
+        "snapshot_sha256": "542649bf5b7a0751e8f1e017a3a99b5be0da6befef6672b5576828178b43820b"
+      },
+      {
+        "path": "casos-clinicos/fibrose-endomiocardica-trombo-apical-mapeamento-t2-decide-imunossupressao.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "fibrose-endomiocardica-trombo-apical-mapeamento-t2-decide-imunossupressao",
+        "exact_record_match": true,
+        "snapshot_sha256": "ee4397840e978023c58970f14da6ec92112292ccd6e999847de2dbc2e005a010"
+      },
+      {
+        "path": "casos-clinicos/risco-inflamatorio-residual-com-drc-ziltivekimabe-nao-reduz-mace-zeus.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "risco-inflamatorio-residual-com-drc-ziltivekimabe-nao-reduz-mace-zeus",
+        "exact_record_match": true,
+        "snapshot_sha256": "b43a4da6cbc7a094bdaee74a789d42ecadfbbe5cee7c841f5ee8e7cff412816a"
+      },
+      {
+        "path": "casos-clinicos/sca-com-deficiencia-de-ferro-repor-ferro-endovenoso-por-analogia-a-ic.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "sca-com-deficiencia-de-ferro-repor-ferro-endovenoso-por-analogia-a-ic",
+        "exact_record_match": true,
+        "snapshot_sha256": "bcba9e94a2f5422b4f8c9aa69980ab058a758cc3cd4059a455653d1f1f752a21"
+      },
+      {
+        "path": "casos-clinicos/empact-mi-empagliflozina-pos-iam-desfecho-neutro-nao-inflar-conclusao.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "empact-mi-empagliflozina-pos-iam-desfecho-neutro-nao-inflar-conclusao",
+        "exact_record_match": true,
+        "snapshot_sha256": "3caaf5fe308726e1e4adc827c9d5fb0b7029457c28f4a86d595f30b3c58dfa79"
+      },
+      {
+        "path": "casos-clinicos/inibidor-de-fator-xi-xia-versus-doac-troca-por-menos-sangramento-na-fa.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "inibidor-de-fator-xi-xia-versus-doac-troca-por-menos-sangramento-na-fa",
+        "exact_record_match": true,
+        "snapshot_sha256": "23c32f81df57c27bf2115f3a6875985f85f279fc69b6de30f3142217bd0c5b25"
+      },
+      {
+        "path": "casos-clinicos/hipertensao-resistente-espironolactona-vs-baxdrostat-apos-ginecomastia.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "hipertensao-resistente-espironolactona-vs-baxdrostat-apos-ginecomastia",
+        "exact_record_match": true,
+        "snapshot_sha256": "5edf3a420d02d1c4c49c5d92059f2c774dea851b4b0744272624df09275c8a55"
+      },
+      {
+        "path": "casos-clinicos/dapt-pos-sca-alto-risco-hemorragico-genotipo-cyp2c19-indisponivel.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "dapt-pos-sca-alto-risco-hemorragico-genotipo-cyp2c19-indisponivel",
+        "exact_record_match": true,
+        "snapshot_sha256": "e9d60402d318ee2689989ba64e24982300f2de9c3f7d3a426028edc0f5154a91"
+      },
+      {
+        "path": "casos-clinicos/bioimpedancia-vestivel-alerta-congestao-especificidade-moderada-nao-e-diagnostico.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "bioimpedancia-vestivel-alerta-congestao-especificidade-moderada-nao-e-diagnostico",
+        "exact_record_match": true,
+        "snapshot_sha256": "a9a7e5b3040ad2951ad4c441de2455859ef4132bcb2ac65fe646bbb5f723c31a"
+      },
+      {
+        "path": "casos-clinicos/estenose-aortica-paradoxal-baixo-fluxo-baixo-gradiente-razao-mg-eoa-reboot-paradox.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "estenose-aortica-paradoxal-baixo-fluxo-baixo-gradiente-razao-mg-eoa-reboot-paradox",
+        "exact_record_match": true,
+        "snapshot_sha256": "14301c028e537dc79b0091805d51caef897ffe2969d83d7d0184822cc54cb0be"
+      },
+      {
+        "path": "casos-clinicos/cmh-obstrutiva-sintomatica-sem-tratamento-previo-metoprolol-ou-aficamten-maple-hcm.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "cmh-obstrutiva-sintomatica-sem-tratamento-previo-metoprolol-ou-aficamten-maple-hcm",
+        "exact_record_match": true,
+        "snapshot_sha256": "a33f346436fbff3a1354d1522a26f51861f6380423072430ffd4f908a52a6b10"
+      },
+      {
+        "path": "casos-clinicos/lpa-elevada-lepodisiran-acesso-via-pesquisa.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "lpa-elevada-lepodisiran-acesso-via-pesquisa",
+        "exact_record_match": true,
+        "snapshot_sha256": "73ea5cbfd3d319d3de80d515aa7d379c8a98c432a7108d25dafa04af739a4643"
+      },
+      {
+        "path": "casos-clinicos/variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar",
+        "exact_record_match": true,
+        "snapshot_sha256": "bbcbabf04b273228291457f255b2fc967f1ce5a9788cb964fa033e506d4fbae6"
+      },
+      {
+        "path": "casos-clinicos/fa-hipotireoidismo-subclinico-tsh-elevado-tratar-para-prevenir-recorrencia.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "fa-hipotireoidismo-subclinico-tsh-elevado-tratar-para-prevenir-recorrencia",
+        "exact_record_match": true,
+        "snapshot_sha256": "b724517509ffb70ef4e3413b23fa86be8de84d369c1690b5e846a36e4443f3b8"
+      },
+      {
+        "path": "casos-clinicos/retinopatia-diabetica-moderada-e-inicio-de-glp1ra-medo-de-piora-oftalmologica.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "retinopatia-diabetica-moderada-e-inicio-de-glp1ra-medo-de-piora-oftalmologica",
+        "exact_record_match": true,
+        "snapshot_sha256": "6c66b46f4c58c6a18b1e6d2ff417b2bc28a0f3af4b905db90c9a964ce40e46ee"
+      },
+      {
+        "path": "casos-clinicos/candidato-a-transplante-renal-rastreio-cardiaco-positivo-cateterismo-de-rotina.json",
+        "git_container": "casos-clinicos/metadados.json",
+        "slug": "candidato-a-transplante-renal-rastreio-cardiaco-positivo-cateterismo-de-rotina",
+        "exact_record_match": true,
+        "snapshot_sha256": "91bd0acdad86f74dc941a7c7f0b8eb40e5114945f8538e19ad6186797556905e"
+      },
+      {
+        "path": "checklists/classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "aec844c6a89c304d256d341ff4a997c6baf7855c96cc213ab3a1d618e83dc9fa"
+      },
+      {
+        "path": "checklists/titulacao-intensiva-pos-alta-em-ic-descompensada.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "titulacao-intensiva-pos-alta-em-ic-descompensada",
+        "exact_record_match": true,
+        "snapshot_sha256": "6727d373fafa99f5c2e58f5a375baf60ba95b2e3cd19ab8653305a6ea1e2299a"
+      },
+      {
+        "path": "checklists/escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica",
+        "exact_record_match": true,
+        "snapshot_sha256": "3edcbbfd1e4f549d30b6638c890a39e5bccce95d2c0284174f643755bd91105b"
+      },
+      {
+        "path": "checklists/timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial",
+        "exact_record_match": true,
+        "snapshot_sha256": "1824a8900db767ef39c0bf88895a1f8ae876c5247355f12468f5fc78672c2a0a"
+      },
+      {
+        "path": "checklists/decisao-de-betabloqueador-pos-iam-por-estrato-de-feve.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "decisao-de-betabloqueador-pos-iam-por-estrato-de-feve",
+        "exact_record_match": true,
+        "snapshot_sha256": "4944932252c3f63ff6d6fab6a35e071f9e8acf4f0dc0bc1d1bcd25586db1c982"
+      },
+      {
+        "path": "checklists/definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "2481f337f79729f226b00208bc08f09351f0bd2f5cb972e0126ad83ed4f205ff"
+      },
+      {
+        "path": "checklists/classificacao-de-risco-cardiovascular-no-diabetico-diretriz-sbd-2025.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "classificacao-de-risco-cardiovascular-no-diabetico-diretriz-sbd-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "10426d6d4063a8fa57242440e4a1476698708d3762ae0890b91c98da84fcc5a1"
+      },
+      {
+        "path": "checklists/escolha-do-farmaco-de-controle-de-frequencia-na-fibrilacao-atrial-por-feve.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "escolha-do-farmaco-de-controle-de-frequencia-na-fibrilacao-atrial-por-feve",
+        "exact_record_match": true,
+        "snapshot_sha256": "05645f76b7e318f9d6d929155738f920c812e38114b4ff4f9a1a779664a83cca"
+      },
+      {
+        "path": "checklists/decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "b121bfed0fdcf6d5a0100545c08521f29237e1b745afb07a2e75740eb16fac98"
+      },
+      {
+        "path": "checklists/regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda",
+        "exact_record_match": true,
+        "snapshot_sha256": "6c0f9432910176bf6fac3777f85b34bc157da95377aee43cee546b2df3bcdcb6"
+      },
+      {
+        "path": "checklists/caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026",
+        "exact_record_match": true,
+        "snapshot_sha256": "17dcb65dcee76218e4ac9844a7e5d744094384b421480c45b5f95f6d66609ba1"
+      },
+      {
+        "path": "checklists/criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica",
+        "exact_record_match": true,
+        "snapshot_sha256": "657c7fc0ee5487ba0441230f1a3415fdaa8b699ff6a62a9a397ee5cdc6086336"
+      },
+      {
+        "path": "checklists/ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc",
+        "exact_record_match": true,
+        "snapshot_sha256": "041c1de786a443f2f4c6759e9431cb3fd8980583442783059079719f321fe75b"
+      },
+      {
+        "path": "checklists/definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024",
+        "exact_record_match": true,
+        "snapshot_sha256": "d1aead8f64697cf1db5d02df746372d0a19ee8b5d3bd6436c655bdf181a4238e"
+      },
+      {
+        "path": "checklists/checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025",
+        "exact_record_match": true,
+        "snapshot_sha256": "0f92c527ba2dd46f7045b5e31ffc850533d3ba062743cbe4102ed6fbbe51f67d"
+      },
+      {
+        "path": "checklists/sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023",
+        "exact_record_match": true,
+        "snapshot_sha256": "e87f5342dd56cf5593957e25e7852e7ba87276c636201807c742009c2a4ec0c5"
+      },
+      {
+        "path": "checklists/cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023",
+        "exact_record_match": true,
+        "snapshot_sha256": "8ee0ca071548d388298f292b708b289887540d48e94e3e65f0ca3ae80aecd8a9"
+      },
+      {
+        "path": "checklists/classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024",
+        "exact_record_match": true,
+        "snapshot_sha256": "f26706e21dc8430b45351a83ad0664a13c157e29238fd9a60695e13c9101e4fe"
+      },
+      {
+        "path": "checklists/estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023",
+        "exact_record_match": true,
+        "snapshot_sha256": "a5f007a0fd04efd82b72dec406c090e7f214f03c930b40f9270de0ec6a2125ff"
+      },
+      {
+        "path": "checklists/manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care",
+        "exact_record_match": true,
+        "snapshot_sha256": "0a543c5a118188786aee03db780fbee64b8f0b0c4428a66867b1ec482f060f58"
+      },
+      {
+        "path": "checklists/disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve",
+        "exact_record_match": true,
+        "snapshot_sha256": "25ece264294b90dab733995948a7278ad5d300100b3fe1bf6473a22052b011fb"
+      },
+      {
+        "path": "checklists/manejo-do-no-reflow-durante-a-icp-primaria.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "manejo-do-no-reflow-durante-a-icp-primaria",
+        "exact_record_match": true,
+        "snapshot_sha256": "f3e70f9a970cc7ff5070e56071627d97e90ce915d36b38ac84b73ac29b64d8f2"
+      },
+      {
+        "path": "checklists/alta-hospitalar-ic-aguda-titulacao-intensiva-strong-hf.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "alta-hospitalar-ic-aguda-titulacao-intensiva-strong-hf",
+        "exact_record_match": true,
+        "snapshot_sha256": "d98e2ad1cd1712333df8713fe24f3451c2fef782c8790a9a31a85f21f8b64729"
+      },
+      {
+        "path": "checklists/hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo",
+        "exact_record_match": true,
+        "snapshot_sha256": "96b4d1a9c21d57806957a7380e29f553a6651f91c02354bd4f79684b42d9a869"
+      },
+      {
+        "path": "checklists/reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia",
+        "exact_record_match": true,
+        "snapshot_sha256": "370d92ed49c14e67ceecc6a769b8f9eb84f672d6396133059b2fe34d1d317832"
+      },
+      {
+        "path": "checklists/decisao-tavi-vs-savr-na-estenose-aortica-grave-esceacts-2021.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "decisao-tavi-vs-savr-na-estenose-aortica-grave-esceacts-2021",
+        "exact_record_match": true,
+        "snapshot_sha256": "8ead0772d672b95dddb448782ba0ee3000856cd30e77e96e9611aeb691015b56"
+      },
+      {
+        "path": "checklists/suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2",
+        "exact_record_match": true,
+        "snapshot_sha256": "bb260d3655a98cbe4b234648ee704cc5a25fda37faff33c73422abb9330c374a"
+      },
+      {
+        "path": "checklists/selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave",
+        "exact_record_match": true,
+        "snapshot_sha256": "0e3650395950c4a6322909e05e044597ecdac209a09f2bce0f30d5cc87b46c49"
+      },
+      {
+        "path": "checklists/estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica",
+        "exact_record_match": true,
+        "snapshot_sha256": "6304d5497a7fbc5916021012c019e7cb7bedb9e6742330473b7212ab64ee57db"
+      },
+      {
+        "path": "checklists/manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao",
+        "exact_record_match": true,
+        "snapshot_sha256": "f726433ea5321399853c922f3b101ddef4b4890620a5fc81aca42cf361581265"
+      },
+      {
+        "path": "checklists/ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise",
+        "exact_record_match": true,
+        "snapshot_sha256": "3aeda880368c7e53a6de6b956498e8f82c0c88489da938a57b67724d99d762bf"
+      },
+      {
+        "path": "checklists/manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia",
+        "exact_record_match": true,
+        "snapshot_sha256": "d602b3897e2a63e0d18156b68cff7f408c38a18185896475bb5f0981ef410e39"
+      },
+      {
+        "path": "checklists/retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular",
+        "exact_record_match": true,
+        "snapshot_sha256": "65920ec0c0dfb0557d2e55f534fbb71acba32685b53b4f8954359bced22e2f09"
+      },
+      {
+        "path": "checklists/orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9",
+        "exact_record_match": true,
+        "snapshot_sha256": "da14926461bd6e55306a9c2ad973024e46cd147ad3cfd08229abb6f266c7eca0"
+      },
+      {
+        "path": "checklists/prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao",
+        "exact_record_match": true,
+        "snapshot_sha256": "a76d487e1b757f447c6d7a1264c0d08b44222b561cbbfde0ce3c6e3e36c82e27"
+      },
+      {
+        "path": "checklists/diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente.json",
+        "git_container": "checklists/metadados.json",
+        "slug": "diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente",
+        "exact_record_match": true,
+        "snapshot_sha256": "fe8a5155c33c419ced9be0a3b91947b4cce9245071204323c9ab3758efb5356a"
+      },
+      {
+        "path": "material-paciente/pressao-alta-diagnostico-e-meta-de-tratamento.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "pressao-alta-diagnostico-e-meta-de-tratamento",
+        "exact_record_match": true,
+        "snapshot_sha256": "ce56a8b017c1b537f84133653d5c03ac5a7e2e7c05c69a372cb0c66442f60c63"
+      },
+      {
+        "path": "material-paciente/sindrome-coronariana-aguda-como-e-diagnosticada-e-tratada.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "sindrome-coronariana-aguda-como-e-diagnosticada-e-tratada",
+        "exact_record_match": true,
+        "snapshot_sha256": "63d8e56b891ab2f20bf0a7cf05fed8e63fb47ae5e44a08445c9405d95d320603"
+      },
+      {
+        "path": "material-paciente/fibrilacao-atrial-com-problema-na-valvula-quando-isso-muda-seu-anticoagulante.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "fibrilacao-atrial-com-problema-na-valvula-quando-isso-muda-seu-anticoagulante",
+        "exact_record_match": true,
+        "snapshot_sha256": "73f43701a668ee5d8a0a15630aff4e850fd63834bf6e06c1df873e534ac3e3a3"
+      },
+      {
+        "path": "material-paciente/ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca",
+        "exact_record_match": true,
+        "snapshot_sha256": "d899b970e968f51ea3dbca6fcc46310e39592a33e96cfbb9e272acab98f4aff6"
+      },
+      {
+        "path": "material-paciente/dupla-antiagregacao-plaquetaria-apos-stent-quanto-tempo-tomar.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "dupla-antiagregacao-plaquetaria-apos-stent-quanto-tempo-tomar",
+        "exact_record_match": true,
+        "snapshot_sha256": "2d0949d6964ec743494d0cb5cde190e01e26bb2189fa93faeed0b650895e1593"
+      },
+      {
+        "path": "material-paciente/remedio-para-dor-anti-inflamatorio-pode-subir-sua-pressao.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "remedio-para-dor-anti-inflamatorio-pode-subir-sua-pressao",
+        "exact_record_match": true,
+        "snapshot_sha256": "242760bdbaf066dc2d223ebf8b9e60e9c1c7b732e725087f05a45840075cf351"
+      },
+      {
+        "path": "material-paciente/glp-1-e-protecao-do-coracao.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "glp-1-e-protecao-do-coracao",
+        "exact_record_match": true,
+        "snapshot_sha256": "c204b48ba4ff891bde8d75bdd5ee245bfcca6416864a9e44f073cb4acfa93a1c"
+      },
+      {
+        "path": "material-paciente/estenose-aortica-grave-sem-sintomas-vale-a-pena-adiantar-a-cirurgia.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "estenose-aortica-grave-sem-sintomas-vale-a-pena-adiantar-a-cirurgia",
+        "exact_record_match": true,
+        "snapshot_sha256": "2335619a18743fa3c6d30cdecd5fd7d0cf2bc32f4103fb389676108538d0bf09"
+      },
+      {
+        "path": "material-paciente/cardiomiopatias-entendendo-o-diagnostico-e-o-acompanhamento.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "cardiomiopatias-entendendo-o-diagnostico-e-o-acompanhamento",
+        "exact_record_match": true,
+        "snapshot_sha256": "3b5721c537acbe75c979ba23671a3d59759c633b5248b3ee03a650d2c9c0828f"
+      },
+      {
+        "path": "material-paciente/diabetes-e-coracao-o-que-mudou-no-jeito-de-cuidar.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "diabetes-e-coracao-o-que-mudou-no-jeito-de-cuidar",
+        "exact_record_match": true,
+        "snapshot_sha256": "cecba56e1af1f16597ef111956f1a5942530a99e6805b65fb6bcccdfbfe8fc27"
+      },
+      {
+        "path": "material-paciente/fibrilacao-atrial-o-que-e-anticoagulacao-e-ablacao.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "fibrilacao-atrial-o-que-e-anticoagulacao-e-ablacao",
+        "exact_record_match": true,
+        "snapshot_sha256": "f60b0c7d3932d31fb7fb7844c139842e543213e476c7a8387d2d88d4e3227b78"
+      },
+      {
+        "path": "material-paciente/stent-na-angina-o-que-ele-realmente-faz.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "stent-na-angina-o-que-ele-realmente-faz",
+        "exact_record_match": true,
+        "snapshot_sha256": "4d6d1d92b5937a815b7e9e92ca0b57435f3b32940c6d9871a264711ac8a4ca35"
+      },
+      {
+        "path": "material-paciente/colesterol-ldl-qual-e-a-minha-meta-e-como-chegar-la.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "colesterol-ldl-qual-e-a-minha-meta-e-como-chegar-la",
+        "exact_record_match": true,
+        "snapshot_sha256": "f17cad6770fff1a969c6008fde9aaffb856f99c752242100c28eb518157b7510"
+      },
+      {
+        "path": "material-paciente/valvas-do-coracao-quando-e-preciso-tratar.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "valvas-do-coracao-quando-e-preciso-tratar",
+        "exact_record_match": true,
+        "snapshot_sha256": "10f1184b7f293d360939e56632e62542d84e4e39fadc157ad7737daa999153bf"
+      },
+      {
+        "path": "material-paciente/tratamento-da-doenca-de-chagas-benznidazol-e-nifurtimox.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "tratamento-da-doenca-de-chagas-benznidazol-e-nifurtimox",
+        "exact_record_match": true,
+        "snapshot_sha256": "3df802ae67f064f907937e2f4dfd0b79244fae46585f20f22f95dccbfc052cbe"
+      },
+      {
+        "path": "material-paciente/pressao-alta-so-no-consultorio-avental-branco-nao-tratada.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "pressao-alta-so-no-consultorio-avental-branco-nao-tratada",
+        "exact_record_match": true,
+        "snapshot_sha256": "598800191e8de4a8d5131cc42ff62b2cb6164436da856a943092c275a54290d4"
+      },
+      {
+        "path": "material-paciente/preciso-de-stent-para-angina-estavel.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "preciso-de-stent-para-angina-estavel",
+        "exact_record_match": true,
+        "snapshot_sha256": "ee856f7e3d5896bfc4d595e5dfbd09778ce17adbe0be86767f619b70705d7711"
+      },
+      {
+        "path": "material-paciente/meu-rim-e-meu-coracao-o-que-e-a-sindrome-cardiorrenal.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "meu-rim-e-meu-coracao-o-que-e-a-sindrome-cardiorrenal",
+        "exact_record_match": true,
+        "snapshot_sha256": "f746676e8a7e2b017c9e1a9cc066c7141293bcdca8c32a1982777ed52f74f899"
+      },
+      {
+        "path": "material-paciente/metformina-e-insuficiencia-cardiaca-e-seguro-tomar.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "metformina-e-insuficiencia-cardiaca-e-seguro-tomar",
+        "exact_record_match": true,
+        "snapshot_sha256": "874da8d8bdedc326a53944323622cc2f33219df22582256a7ba663dd1e233344"
+      },
+      {
+        "path": "material-paciente/fibra-na-alimentacao-e-colesterol.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "fibra-na-alimentacao-e-colesterol",
+        "exact_record_match": true,
+        "snapshot_sha256": "c74c78268a73fad9a1f659c45e5bda471cebad2534b2048b91ed8abd23ccea56"
+      },
+      {
+        "path": "material-paciente/dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma",
+        "exact_record_match": true,
+        "snapshot_sha256": "b36789a3834140b2e173cab31d265493857b96c121e78121fb852b8d6b5a4756"
+      },
+      {
+        "path": "material-paciente/oscilacao-do-acucar-no-sangue-pode-afetar-o-ritmo-do-coracao.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "oscilacao-do-acucar-no-sangue-pode-afetar-o-ritmo-do-coracao",
+        "exact_record_match": true,
+        "snapshot_sha256": "eb00317f9f4be3bd7d58f17facc224946a8338e56370c4292d3b2b4e90cf8f0c"
+      },
+      {
+        "path": "material-paciente/relogio-pode-medir-minha-pressao.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "relogio-pode-medir-minha-pressao",
+        "exact_record_match": true,
+        "snapshot_sha256": "57d6ec61ed0fc62aa8d8de357e28d2f53ff527980012fe3a66b242dc3c1f4513"
+      },
+      {
+        "path": "material-paciente/fibrilacao-atrial-e-cirurgia-bariatrica-o-que-a-perda-de-peso-cirurgica-muda.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "fibrilacao-atrial-e-cirurgia-bariatrica-o-que-a-perda-de-peso-cirurgica-muda",
+        "exact_record_match": true,
+        "snapshot_sha256": "b13fd16f4d346b196268dfacbfafb194e2b104d4998a4edc140b386a5a30ce23"
+      },
+      {
+        "path": "material-paciente/estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia",
+        "exact_record_match": true,
+        "snapshot_sha256": "c4dfd842227197740fd1192dd3534775073d75719e5102f667737390742f5fe2"
+      },
+      {
+        "path": "material-paciente/exame-genetico-cyp2c19-para-ajustar-o-remedio-do-sangue-apos-o-stent.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "exame-genetico-cyp2c19-para-ajustar-o-remedio-do-sangue-apos-o-stent",
+        "exact_record_match": true,
+        "snapshot_sha256": "e243d2f302cf746238c078cedf51936d86dfbc7f02ffaf745ed640ad1fe22263"
+      },
+      {
+        "path": "material-paciente/cardiomiopatia-hipertrofica-obstrutiva-aficamten-ou-betabloqueador.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "cardiomiopatia-hipertrofica-obstrutiva-aficamten-ou-betabloqueador",
+        "exact_record_match": true,
+        "snapshot_sha256": "5156c6730b0edb0353661e63d660e3bf8318c84b94950a2b9decbcd3c4cb0e6a"
+      },
+      {
+        "path": "material-paciente/calculadora-de-risco-cardiovascular-e-raca.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "calculadora-de-risco-cardiovascular-e-raca",
+        "exact_record_match": true,
+        "snapshot_sha256": "8b25477595758122b7b6fa6d4e8aaddd7c1ae551576da0b57897726b708e5c31"
+      },
+      {
+        "path": "material-paciente/ansiedade-na-insuficiencia-cardiaca-quando-e-normal-e-quando-buscar-ajuda.json",
+        "git_container": "material-paciente/metadados.json",
+        "slug": "ansiedade-na-insuficiencia-cardiaca-quando-e-normal-e-quando-buscar-ajuda",
+        "exact_record_match": true,
+        "snapshot_sha256": "25e8501ecedfb9d3378b38972ee14c5895f967078b8a0960fcf478bac9350674"
+      },
+      {
+        "path": "trilhas/trilha-complicacoes-mecanicas-pos-infarto.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-complicacoes-mecanicas-pos-infarto",
+        "exact_record_match": true,
+        "snapshot_sha256": "6c75e2d0808c53c7c1a90b731feb2c8fb2e088470147b959ad3c740aec219896"
+      },
+      {
+        "path": "trilhas/trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria",
+        "exact_record_match": true,
+        "snapshot_sha256": "e38e55930b3b856f3a373a27de3bb086e921bd6bc0c16ebcd036d09336271b24"
+      },
+      {
+        "path": "trilhas/trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento",
+        "exact_record_match": true,
+        "snapshot_sha256": "7daf561fdd39845cfb98d4eee788b816923e7cff773b06d89c9289bd2d66cf02"
+      },
+      {
+        "path": "trilhas/trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl",
+        "exact_record_match": true,
+        "snapshot_sha256": "becbfbd0f56e83f2adb23469dfca142cc197d7ac459078f01f0b76b2cee34db7"
+      },
+      {
+        "path": "trilhas/trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca",
+        "exact_record_match": true,
+        "snapshot_sha256": "63e08d882edc568eb4b666be5cfcc1ca8e2d711b4c6bb7b0c2147b6fd3426e76"
+      },
+      {
+        "path": "trilhas/trilha-hipertensao-ensaios-comparativos-primeira-linha.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-hipertensao-ensaios-comparativos-primeira-linha",
+        "exact_record_match": true,
+        "snapshot_sha256": "0e6f16ed87eb330867cd0c7993ad57023ff2187e98b0a1c2444a20f6988af38d"
+      },
+      {
+        "path": "trilhas/trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular",
+        "exact_record_match": true,
+        "snapshot_sha256": "f5d1106bfa76e25af1a5c9101faa9ba36c37f758b914302f56edbaf867c72595"
+      },
+      {
+        "path": "trilhas/trilha-anoca-inoca-endotipo-guiado.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-anoca-inoca-endotipo-guiado",
+        "exact_record_match": true,
+        "snapshot_sha256": "6360c65f5898a0b6e0dbe89d4ca8eafe7004644ada07999bcdf20b481ddce732"
+      },
+      {
+        "path": "trilhas/trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral",
+        "exact_record_match": true,
+        "snapshot_sha256": "341070cf5bce0057a4cc3b922019ee1eab1ece39b9d23666e1b97b32875f061c"
+      },
+      {
+        "path": "trilhas/trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd",
+        "exact_record_match": true,
+        "snapshot_sha256": "3e42bb65f4dcfb6c301c7e5dcad632290493a6415d84324854c8949ec4132634"
+      },
+      {
+        "path": "trilhas/trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al",
+        "exact_record_match": true,
+        "snapshot_sha256": "41da305d749f3b69edb1fa6795994680098866e5844cc0fb942684650b47f972"
+      },
+      {
+        "path": "trilhas/trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora",
+        "exact_record_match": true,
+        "snapshot_sha256": "72e00653908eeaa280fb5a4b6702ae17df1722cc9364e66a0fa45fc1c8d4bc85"
+      },
+      {
+        "path": "trilhas/trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular",
+        "exact_record_match": true,
+        "snapshot_sha256": "303f310f6d197d6954b284902bd3920f69cc1c3887861692fce33858cdfd362e"
+      },
+      {
+        "path": "trilhas/trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante",
+        "exact_record_match": true,
+        "snapshot_sha256": "cb2cc7fd70d591a06b5b79ef870e9066d8663fba2ed9713d4455960dddfff3c4"
+      },
+      {
+        "path": "trilhas/trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica",
+        "exact_record_match": true,
+        "snapshot_sha256": "f9ffcb1f4b0ae241c57114af9c38cb0c105bbe756ab6133bd590da05a97e0152"
+      },
+      {
+        "path": "trilhas/trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao",
+        "exact_record_match": true,
+        "snapshot_sha256": "58e71f58f33003cdfe28df3fd5066bd3169120427fe666a9e76ad2fe4ba9f78f"
+      },
+      {
+        "path": "trilhas/trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte",
+        "exact_record_match": true,
+        "snapshot_sha256": "b3fbfb8a704d51a6d5e2d8b8fad575e1ac7f2846668d667c5fb6df62d7eb62bb"
+      },
+      {
+        "path": "trilhas/trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais",
+        "exact_record_match": true,
+        "snapshot_sha256": "76bfcea0672cdbb79041335e400cc74384f4a4a42779576f7c705e0cd8417501"
+      },
+      {
+        "path": "trilhas/trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda",
+        "exact_record_match": true,
+        "snapshot_sha256": "ea18e426a5b29e9546c42e69fc7b1743cd87e849106871a1badb697f1a9f4fa1"
+      },
+      {
+        "path": "trilhas/trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3",
+        "exact_record_match": true,
+        "snapshot_sha256": "baa822eb86e2242fb19224d8ab109a6c5fce66b8f02f2b481aff38a530a29ffe"
+      },
+      {
+        "path": "trilhas/trilha-diabetes-variabilidade-glicemica-e-arritmia.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-diabetes-variabilidade-glicemica-e-arritmia",
+        "exact_record_match": true,
+        "snapshot_sha256": "2036ddaf76c68699512926bc98a6866d29a3e64b34fcbea4f3a5a9f3f07fca4d"
+      },
+      {
+        "path": "trilhas/trilha-insuficiencia-cardiaca-descongestao-guiada.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-insuficiencia-cardiaca-descongestao-guiada",
+        "exact_record_match": true,
+        "snapshot_sha256": "aafc5c86443a3ff54607da8054637f38340cb4df8ba69a0e9df88b2cbfe263a3"
+      },
+      {
+        "path": "trilhas/trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao",
+        "exact_record_match": true,
+        "snapshot_sha256": "9139564d601ba22c54fae0ce501e294f0757d69c1b64840f0cd0b0407e1f2b32"
+      },
+      {
+        "path": "trilhas/trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo",
+        "exact_record_match": true,
+        "snapshot_sha256": "b318b040c2609115aa6b0ff68c5c463bcc842f7a3d4885ff2c94a7153907a3af"
+      },
+      {
+        "path": "trilhas/trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia",
+        "exact_record_match": true,
+        "snapshot_sha256": "0384fd87de656798405d581140867f61d382cd5c54b5356f3574711d47993d90"
+      },
+      {
+        "path": "trilhas/trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade.json",
+        "git_container": "trilhas/metadados.json",
+        "slug": "trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade",
+        "exact_record_match": true,
+        "snapshot_sha256": "7315355725387eb9a4db43b2ba1e45f655a1434b16c8e58a0f1285f5dadf11d5"
+      }
+    ],
+    "policy": "Somente os142 registros extraídos. Não há fetch ou produção posterior."
+  },
+  "decisions": {
+    "0": {
+      "source": "casos-clinicos/diabetes-tipo-2-e-hipertensao-nao-controlada-qual-diuretico-associar-ao-ieca.json",
+      "source_sha256": "0e0ef0ace717561925f78ec95cfc90308f8239dae19bf998b77b6f7999c6d4c6",
+      "note": "Conferida seção8.3DBHA2025 no SciELO; indapamida/metabolismo consta. Retirada referênciaBPROAD não comparativa. https://www.scielo.br/j/abc/a/BXT7Vk4B9VKQnJFsJhgJ4Hn/",
+      "destination": "casos-clinicos/metadados.json#diabetes-tipo-2-e-hipertensao-nao-controlada-qual-diuretico-associar-ao-ieca",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/diabetes-tipo-2-e-hipertensao-nao-controlada-qual-diuretico-associar-ao-ieca.json",
+      "reviewed_sha256": "3bfec0251474e12044d8fd38a9793aa83e1c5d0d531522ba0208566da1da8fae"
+    },
+    "1": {
+      "source": "casos-clinicos/finearts-hf-pressao-arterial-normal-nao-contraindica-finerenona-icfep.json",
+      "source_sha256": "5e901d888f53af9d23f1ffad7b87a107c2296d0ad3b2078fc1587cbee91a2363",
+      "note": "Texto integral JAMA2026 PMID42418169 conferido: totaleventos versus primeiro na mediação;7,4%ICcruza0, -3,1mmHg longo prazo; adicionado perfilrenal/potássio do caso. https://jamanetwork.com/journals/jamacardiology/fullarticle/2851277",
+      "destination": "casos-clinicos/metadados.json#finearts-hf-pressao-arterial-normal-nao-contraindica-finerenona-icfep",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/finearts-hf-pressao-arterial-normal-nao-contraindica-finerenona-icfep.json",
+      "reviewed_sha256": "099e7d693a30025f3be1a75cd59163eb445974fcd9754bc70b05bddf90c5ae94"
+    },
+    "2": {
+      "source": "casos-clinicos/glp-1-pre-ablacao-de-fa-persistente-manter-trocar-ou-suspender-o-agonista-estudo-leaf.json",
+      "source_sha256": "f5c8ee32fd9c99f2ac65750ed66d59ab0fedc48fedfd8d72f0a36898bc49d3fb",
+      "note": "PMID42159524 população59/principalEATneutro/secundáriorecorrência;42033283 mistura desenhos. Corrigido estudo≠diretriz e separada manutenção crônica da segurança anestésica.",
+      "destination": "casos-clinicos/metadados.json#glp-1-pre-ablacao-de-fa-persistente-manter-trocar-ou-suspender-o-agonista-estudo-leaf",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/glp-1-pre-ablacao-de-fa-persistente-manter-trocar-ou-suspender-o-agonista-estudo-leaf.json",
+      "reviewed_sha256": "4b95fd3a7ea8859aa0b3cb62d024f61c989dbcc2628d88a8f6eae68f0b821797"
+    },
+    "3": {
+      "source": "casos-clinicos/diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul.json",
+      "source_sha256": "a06fa0bb984b5f0b53c65ff4176abfcf2909e3482c6dba731f7fb1d8a6442c15",
+      "note": "PMID41627802 conferido: corrigido periódico JAMAInternalMedicine/DOI. HRs,subgrupos e interação0,06 preservados como exploratórios; não substituiSGLT2.",
+      "destination": "casos-clinicos/metadados.json#diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/diabetes-tipo-2-com-icfep-e-doenca-cardiovascular-semaglutida-oral-e-desfecho-de-ic-soul.json",
+      "reviewed_sha256": "3520b1c9a96f56e7e51d2cebd0d7ba4baf930fa968db51c04e3627d52695e62a"
+    },
+    "4": {
+      "source": "casos-clinicos/betabloqueador-pos-iam-fe-normal-meta-analise-individual-2026.json",
+      "source_sha256": "344043d89075a900153942036e5580837102728f11a021feeef830091e8121ef",
+      "note": "Duplicata semântica do casoREDUCEAMI canônico; atualizar caso existente com IPD17801/HR0,97IC0,87–1,07, sem interpretar neutro como equivalência/retirada abrupta. PMID41211954.",
+      "destination": "casos-clinicos/metadados.json#pos-infarto-com-feve-preservada-manter-betabloqueador-indefinidamente-reduce-ami",
+      "action": "update_existing",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/betabloqueador-pos-iam-fe-normal-meta-analise-individual-2026.json",
+      "reviewed_sha256": "787840339eadc3728edfa5c15d0e49fb2294dac8f7a04fd16f6ece6643552ff1"
+    },
+    "5": {
+      "source": "casos-clinicos/prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026.json",
+      "source_sha256": "cd30f904be891ead0eca0ef0f1fdd9cf86f9ce1dd4670ec6e82041c9fe0280c1",
+      "note": "Diretriz2026 primária DOI1423/PMID41824590 confirma PREVENT30–79 e faixa5–<10% shouldbeconsidered após discussão; semindicaçãoautomática porLDLisolado. https://www.ahajournals.org/doi/abs/10.1161/CIR.0000000000001423",
+      "destination": "casos-clinicos/metadados.json#prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/prevent-ascvd-risco-5-10-decisao-de-estatina-acc-aha-2026.json",
+      "reviewed_sha256": "5db84ed98a62f7514e6de16ca02218e8507d7f1620eb886ae3f54de7459ed652"
+    },
+    "6": {
+      "source": "casos-clinicos/hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025.json",
+      "source_sha256": "b516aa1f1431f326e8b8ba0efc193e41ab4a1d5e5a462be867ae25e6b855fd61",
+      "note": "PMID40815242/DOI1356 e recomendação atualconferidos; corrigida generalização contra monoterapia, especificado estágio2/combinaçãoúnica.",
+      "destination": "casos-clinicos/metadados.json#hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/hipertensao-recem-diagnosticada-combinacao-inicial-acc-aha-2025.json",
+      "reviewed_sha256": "dd811e2c1e5715ed557d29bc28072451bc35c879d9d49c4d4db29f2d86e887a3"
+    },
+    "7": {
+      "source": "casos-clinicos/estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025.json",
+      "source_sha256": "e3bc3d2d94143d76265d4c2ad7a0f4079d9b1f727908c162cae960cb9bada99f",
+      "note": "ESC/EACTS2025 bicúspidejovembaixoriscoSAVR; TAVI IIbBriscoaumentado/anatomiaadequada; corte70somente tricúspide. Corrigendum2026semalteração destecritério; candidato foco bicúspide não duplicar casoetário tricúspide.",
+      "destination": "casos-clinicos/metadados.json#estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/estenose-aortica-bicuspide-grave-savr-modalidade-primaria-esc-eacts-2025.json",
+      "reviewed_sha256": "17b5566f88d4f5f33806f46e6533db284be66d3959afb9761e949ca767f6b599"
+    },
+    "8": {
+      "source": "casos-clinicos/dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto.json",
+      "source_sha256": "a2db1edef853f10021a75a92379718143150f267df9028d93d8de2b0da7b2e66",
+      "note": "PMID38569758/33144086 população/resultados conferidos. Corrigido perigoso nãoestabilizado→congesto comsegurançahemodinâmica; IVinotrópico excluído. https://www.acc.org/Latest-in-Cardiology/Clinical-Trials/2023/08/24/03/11/dictate-ahf",
+      "destination": "casos-clinicos/metadados.json#dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/dictate-ahf-dapagliflozina-precoce-na-ic-aguda-ainda-congesto.json",
+      "reviewed_sha256": "9d0669112cd94330fa93e201dd5766dfca13193d84fa2d6e161fb77953476988"
+    },
+    "9": {
+      "source": "casos-clinicos/sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade.json",
+      "source_sha256": "af1d69bb98869b3b159fd5e5592e7caeaeb6bad57bfe6966000d423bd495015e",
+      "note": "PMID42485013 ensaiocluster28/1465, biomarcadorem6meses eICsconferidos; metaestudada<50distinta de metaexterna; nãoprovouMACE. Removida classificaçãoderiscoforaescopo.",
+      "destination": "casos-clinicos/metadados.json#sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/sapphire-ldl-controle-lipidico-em-ascvd-intervencao-digital-de-qualidade.json",
+      "reviewed_sha256": "97b80720df2123a4e92e55358730aa7daaf3ccb9c2ab5fbc4003cbf0f8a128bd"
+    },
+    "10": {
+      "source": "casos-clinicos/orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3.json",
+      "source_sha256": "7a3137da168cc391727dc8eb3115088f1d862b5b309f641bc925ebc9e2c55a08",
+      "note": "PMID41765029:1698/52semanas, aberto, NIesuperioridadeHbA1c conferidos. Retirada afirmação temporal não verificada de ACHIEVE4apenasrelease; nãoinferiraprovação/prescrição local do estudo.",
+      "destination": "casos-clinicos/metadados.json#orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/orforglipron-versus-semaglutida-oral-em-diabetes-tipo-2-achieve-3.json",
+      "reviewed_sha256": "cc36636e583d3b49a8b2540a6594bce4213e2256e6409ed9f1700fad6ad2bad9"
+    },
+    "11": {
+      "source": "casos-clinicos/dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo.json",
+      "source_sha256": "7cd65abe033014f97d5ff849027c7730de08877a28a5d9891e809a35e8eeb91a",
+      "note": "DBHA2025seção8.1 riscoJcontextual conferido; corrigida alegação indevidaIAMrecente(2anos)/benefíciobetabloqueadoruniversal em contradiçãoIPD2026.",
+      "destination": "casos-clinicos/metadados.json#dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/dac-hipertensao-curva-em-j-manter-ou-reduzir-anti-hipertensivo.json",
+      "reviewed_sha256": "e1e68c73f0d6f56960dc432864ad999cdcc73d9488bbd51079cb479da4612dba"
+    },
+    "12": {
+      "source": "casos-clinicos/dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af.json",
+      "source_sha256": "d94013322bc0aaab661acbfc2780337b9fcff0d8000a1d54ce8fe16c95dc62a8",
+      "note": "DAREAF200/198analisados,3meses/HR1,11/ICamplo conferido; metanálise11inclui2RCTs, nãosóobservacional. Duplicata interna12↔27: manter12 e cobrir27 sem adição duplicada.",
+      "destination": "casos-clinicos/metadados.json#dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af.json",
+      "reviewed_sha256": "a381daad26fbaf264cfcc7d9f351b0b9c5f49e4ab961b1a1ee4773cc16f92332"
+    },
+    "13": {
+      "source": "casos-clinicos/regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025.json",
+      "source_sha256": "b3f5961a0f855fdecb6e2452b3af83db24bd66f3f42e74b64bf084fe71180d1f",
+      "note": "Corrigido overclaim importante: sólimiaresVE isolados justificamregra descrita; FA/PSAP/AE/TR não cadaumClasseI. Indexação38/1,45≈26mantida; reparabilidade não presumida absoluta.",
+      "destination": "casos-clinicos/metadados.json#regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/regurgitacao-mitral-primaria-assintomatica-diametro-sistolico-indexado-esc-eacts-2025.json",
+      "reviewed_sha256": "e91a93ccfe47ed94d81fce0d225dfec5cff4de606d74d7a0412d7c944bf1ed0d"
+    },
+    "14": {
+      "source": "casos-clinicos/pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot.json",
+      "source_sha256": "453526013e854701277d07de88b3f1697837908c4f4723e7a117b4996803f6a2",
+      "note": "Corrigidos falsoexclusivismomensal(evolocumabe mensal), comparabilidadenãodireta e inferênciaregulatórianãoverificada. LIBerateLDLversusplacebo≠CVOT;FOURIER/ODYSSEY benefícioestabelecido.",
+      "destination": "casos-clinicos/metadados.json#pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/pos-iam-ldl-fora-da-meta-lerodalcibepe-mensal-versus-pcsk9-com-cvot.json",
+      "reviewed_sha256": "06f3a2d3636b8bdaa644f0c79da493f5024f98aee561700a568b1fbfefee2e38"
+    },
+    "15": {
+      "source": "casos-clinicos/cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm.json",
+      "source_sha256": "1c52d14c843408091cd9d19a65ab023c40ec356ef4842adae1ddb7731ee9c5bf",
+      "note": "Atualizado pela publicação primária ACACIA de 28/08/2026, DOI 10.1056/NEJMoa2603021, PMID 42663312: 517 participantes, efeitos em KCCQ/VO2 e risco de disfunção sistólica. FOREST permanece evidência aberta; sem extrapolação regulatória.",
+      "destination": "casos-clinicos/metadados.json#cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/cmh-nao-obstrutiva-sintomatica-aficamteno-e-opcao-fora-de-estudo-forest-hcm.json",
+      "reviewed_sha256": "9931d517c8f6c72f1bc884623b9113cc0867b35bf56b7547ed7b39ac5a40f97a"
+    },
+    "16": {
+      "source": "casos-clinicos/oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa.json",
+      "source_sha256": "6942fc9ea0cdb663d957e7e69305148c3ccd1ff57a020e95f5e77ca010039319",
+      "note": "PMIDs37634149/37634188/41534986: populações eefeitosconferidos; corrigidafísicaIVUScálcio e equivalência indevida. Manter16 cobreduplicata19.",
+      "destination": "casos-clinicos/metadados.json#oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa.json",
+      "reviewed_sha256": "fe7bc58c9ef97b9d03ff47a8e12c5c46355a8679a2930426352616a01ecc5979"
+    },
+    "17": {
+      "source": "casos-clinicos/modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico.json",
+      "source_sha256": "fc2072677d9a13eea62b6d1425649406a9bed644ffcd82b61235ced29f099056",
+      "note": "Corrigido overclaim substancial:redeMAPAnãoincluiuCT/IETcomparáveis, semdiferençaentre modalidades;MRPA≠MAPA,SUCRA≠superioridade e830nãoalvoindividual.",
+      "destination": "casos-clinicos/metadados.json#modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/modalidade-de-exercicio-na-hipertensao-hiit-combinado-ou-isometrico.json",
+      "reviewed_sha256": "23c0e43951d501e82e01210ab7da3d403b7a7a7b8f977248639d119be9dd3f6b"
+    },
+    "18": {
+      "source": "casos-clinicos/icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026.json",
+      "source_sha256": "4284cd92d8b92a397e3953b14e593fadf0512593ae899c5d81824ce7433b1ad9",
+      "note": "ECDPprimário2026 DOI06.018 conferido:SPIRITabstractonly, não comparação direta. FINEARTSdesfechocomposto predominantementeIC,nãomortalidadeisolada. Corrigido H2FPEFconfirmatório.",
+      "destination": "casos-clinicos/metadados.json#icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/icfep-mra-nao-e-efeito-de-classe-finerenona-versus-espironolactona-acc-2026.json",
+      "reviewed_sha256": "907719849818f264561dde55631d4f32422459d50cc0f155a003830f40160cb0"
+    },
+    "19": {
+      "source": "casos-clinicos/oct-guiada-vs-angiografia-pci-bifurcacao-complexa-decisao.json",
+      "action": "exclude_duplicate",
+      "destination": "casos-clinicos/metadados.json#oct-ou-ivus-versus-angiografia-isolada-em-lesao-de-bifurcacao-complexa",
+      "note": "Caso19 mesma pergunta clínica/bifurcaçãoLAD-Diagonal e fontes de16; mecanismosdaimagem/ausênciadediferençanãoequivalência corrigidosem16. Não adicionar segunda questão. PMID40373983 mecânico não prova desfechoclínico."
+    },
+    "20": {
+      "source": "casos-clinicos/semaglutida-oral-soul-decisao-cardiovascular-t2dm.json",
+      "source_sha256": "db6c76dbf3baeec8f71a79fd30f046b9d6770a971be2e56973ce19b9ec4831cc",
+      "note": "Corrigida troca entre morte cardiovascular e morte por qualquer causa no PIONEER 6; separados sinal secundário e superioridade de MACE no SOUL. Removidas garantia de adesão e inferência mecanística causal.",
+      "destination": "casos-clinicos/metadados.json#semaglutida-oral-soul-decisao-cardiovascular-t2dm",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/semaglutida-oral-soul-decisao-cardiovascular-t2dm.json",
+      "reviewed_sha256": "66fefeacf1ad90bc83e257aff50c66c04a67d1647ecdce5edb7005a36f9618f2"
+    },
+    "21": {
+      "source": "casos-clinicos/fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af.json",
+      "source_sha256": "c33b1b71010e22edd72bba0344c02f6d181d9c44b0e6240fa8fee851ee90d948",
+      "note": "ALONE-AF não prova não inferioridade isolada para AVC; incorporados risco residual, contexto ESC 2024 e diferença entre monitorização periódica e contínua.",
+      "destination": "casos-clinicos/metadados.json#fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/fa-pos-ablacao-sem-recorrencia-suspender-anticoagulacao-alone-af.json",
+      "reviewed_sha256": "c02a4bceba1af9f6456455fbba181dfbb3283a25da55cf7958bc01324736b744"
+    },
+    "22": {
+      "source": "casos-clinicos/icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026.json",
+      "source_sha256": "2fd1af744588c0ca28ca4c124812787590181538fa4f365ff5ffc43e10cfb311",
+      "note": "Mantida investigação objetiva de ICFEp com biomarcador baixo na obesidade. Corrigida falsa equivalência mecanística de depuração entre BNP e NT-proBNP; escores são probabilidade, não confirmação isolada.",
+      "destination": "casos-clinicos/metadados.json#icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/icfep-obesidade-bnp-normal-nao-exclui-diagnostico-acc-2026.json",
+      "reviewed_sha256": "b127a6efd940541732ce1c99f89106b131590b5aba80853bb7be5904a854d541"
+    },
+    "23": {
+      "source": "casos-clinicos/aprocitentana-precision-hipertensao-resistente-quarta-droga.json",
+      "source_sha256": "92ffdc972d0c68d00573d68a2c00f342184b3a32a64d04cceae06963533f7042",
+      "note": "Corrigidas prova de adesão por MRPA, extrapolação da fase 25 mg para 12,5 mg e exclusão absoluta de ajuste diurético. Bula DailyMed vigente 14/08/2026 verificada; hipercalemia requer confirmação e investigação.",
+      "destination": "casos-clinicos/metadados.json#aprocitentana-precision-hipertensao-resistente-quarta-droga",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/aprocitentana-precision-hipertensao-resistente-quarta-droga.json",
+      "reviewed_sha256": "81f1cf6e7ed807adf046ad91503649e9291d7826ced785dce6e9864c40e05590"
+    },
+    "24": {
+      "source": "casos-clinicos/tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos.json",
+      "source_sha256": "b3f83d5908b2e321686d41d2cd5d9e1c7a964b544bdb688bae3c29f50ec37e73",
+      "note": "Separadas análises adicionais/ad hoc e trombose clínica/subclínica; sem superioridade indireta entre próteses. Errata primária 42584918 conferida: apenas p da Figura 2 corrigido para 0,88.",
+      "destination": "casos-clinicos/metadados.json#tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/tavi-baixo-risco-escolha-de-familia-de-protese-durabilidade-em-7-anos.json",
+      "reviewed_sha256": "9b3cff0ec668ce647cbb75ed92e4312cca14d85dd860bb97f28c5bab0a9e3ed7"
+    },
+    "25": {
+      "source": "casos-clinicos/cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada.json",
+      "source_sha256": "d490bed1b78cf23143e2e9061b007bdf2bbd84a95f4778984ade5d10344be027",
+      "note": "Fase 2a aberta e subgrupos não confirmam benefício clínico nem interação genética; registro KINSHIP-DCM primário verificado. Removida afirmação regulatória mundial não demonstrada.",
+      "destination": "casos-clinicos/metadados.json#cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/cmd-sarcomerica-myh7-danicamtiv-fase-2-nao-e-terapia-aprovada.json",
+      "reviewed_sha256": "0dae4dfcebdb06e657dfacbadedb82633ddbd43c801c950d95b3e081b3c1607d"
+    },
+    "26": {
+      "source": "casos-clinicos/iam-feve-44-sem-ic-betabloqueador-de-longo-prazo.json",
+      "source_sha256": "4cb8a2ecf62903db6ab6aec1dfd0be6c01aa135b74917ada9fa2a2e0efd6172e",
+      "note": "Confirmada meta-análise individual 1.885 pacientes FEVE 40–49%; não extrapolar neutralidade ≥50%. Corrigida associação implícita losartana/IECA no caso fictício e acrescentada reavaliação de tolerância.",
+      "destination": "casos-clinicos/metadados.json#iam-feve-44-sem-ic-betabloqueador-de-longo-prazo",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/iam-feve-44-sem-ic-betabloqueador-de-longo-prazo.json",
+      "reviewed_sha256": "7e64b625638aa93f917cd7dccecb9cfe814cd0f6f3d6c675ab82ba94a2c94bf2"
+    },
+    "27": {
+      "source": "casos-clinicos/dapagliflozina-adjuvante-pos-ablacao-fa-sem-indicacao-metabolica.json",
+      "source_sha256": "f84e3b5a97f26de23f9f422dcce4f135546718ba4f0c3e16ee9f51ff5fa80311",
+      "action": "exclude_duplicate",
+      "destination": "casos-clinicos/metadados.json#dapagliflozina-pos-ablacao-de-fa-sem-indicacao-metabolica-o-ensaio-dare-af",
+      "note": "Mesmo dilema clínico e população sem indicação basal do caso 12 DARE-AF; meta-análise mista (2 RCT/9 coortes) já corrigida no destino. Não cria segundo caso equivalente."
+    },
+    "28": {
+      "source": "casos-clinicos/proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal.json",
+      "source_sha256": "113822341c0506c0a23fd098523f7161d69ba0705bbb86db6476dcb8f8f3b5ac",
+      "note": "Conferido PROACTIVE-HF de braço único: 0,89 evento por paciente em 24 meses, não por paciente-ano. Mantida impossibilidade de promessa causal de mortalidade/internações.",
+      "destination": "casos-clinicos/metadados.json#proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/proactive-hf-cordella-nyha-iii-braco-unico-nao-e-prova-causal.json",
+      "reviewed_sha256": "b76003f9e741b7ea91e84d5b7c103bbc2bf5ef98a03656fc7d488202dda94b9d"
+    },
+    "29": {
+      "source": "casos-clinicos/empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2.json",
+      "source_sha256": "1c4719340b3325b08fd69a1352ef2b83b344cb55d0080ec5a8755ed022849193",
+      "note": "Corrigidos 65 recrutados/57 concluintes, análise combinada de dois estudos e extrapolação de mortalidade do EMPA-REG para qualquer diabético. Dose não é titulada por VO2/volume; indicada avaliação da dispneia.",
+      "destination": "casos-clinicos/metadados.json#empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/empagliflozina-vo2-pico-e-remodelamento-ventricular-em-diabetes-tipo-2.json",
+      "reviewed_sha256": "f7ce42658f5754c8ae2953d68c1aac3a234ab53b5e9235c95ea09c01eaeeedfb"
+    },
+    "30": {
+      "source": "casos-clinicos/hipertensao-alvo-intensivo-diabetico-esprit-derruba-accord.json",
+      "source_sha256": "5946ec65f9bd222fdaadfcfa3c5f89929dc1fd4aac786f2a37b47c260dd5d03f",
+      "note": "Substitui caso canônico ACCORD-BP com a mesma decisão clínica, contextualizando ESPRIT e BPROAD. Removida conclusão post hoc de poder e comparação simplista de significância; alvo individualizado.",
+      "destination": "casos-clinicos/metadados.json#diabetes-tipo-2-alto-risco-cv-alvo-pressorico-intensivo-accord-bp",
+      "action": "update_existing",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/hipertensao-alvo-intensivo-diabetico-esprit-derruba-accord.json",
+      "reviewed_sha256": "06e7f2028a2c9ae68168f9d2520fe1eae23c85f38f89451460c8cdad578fbe41"
+    },
+    "31": {
+      "source": "casos-clinicos/heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025.json",
+      "source_sha256": "d19187855e51515e244ecba2ca1b126c0c387735790a9826f8c59792db5db7c7",
+      "note": "Diretriz SBC primária PMC12981354 conferida: HEART 6 é intermediário, repetição 10–20 min condicionada ao contexto e versões de alta sensibilidade existem. Corrigidas três generalizações do original.",
+      "destination": "casos-clinicos/metadados.json#heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/heart-score-doenca-aterosclerotica-previa-e-ecg-nao-diagnostico-sbc-2025.json",
+      "reviewed_sha256": "2430e414c00985753588ab1d76fe7ecf9ebe6e9b1ea81b4761ebf261bca1dc48"
+    },
+    "32": {
+      "source": "casos-clinicos/zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever.json",
+      "source_sha256": "673f93ff9d3d155e1116925cd07e35c81d0d7e686bc0871cae8673c8b90857cd",
+      "note": "Atualizada fase 3 ZENITH e removidos apenas fase 2/aprovação mundial presumida. KARDIA-2 adição a monoterapia, não quarta linha; mecanismo comparativo é hipótese.",
+      "destination": "casos-clinicos/metadados.json#zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/zilebesirana-sirna-angiotensinogenio-ainda-nao-prescrever.json",
+      "reviewed_sha256": "7033f3ea3a7e16797cc2917b86781e5a10467b1f326735633f492db26554f4db"
+    },
+    "33": {
+      "source": "casos-clinicos/icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao.json",
+      "source_sha256": "69fad4af5c1ae3ea22b9a6547d33f7be92412c15bd0fae33f087137315974e06",
+      "note": "Confirmados RELIEVE-HF neutro global e subgrupos exploratórios com interação; FEVE >40% do ensaio não equivale à ICFEp usual. Removida exclusão não fundamentada de avaliação avançada.",
+      "destination": "casos-clinicos/metadados.json#icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/icfer-refrataria-shunt-interatrial-relieve-hf-subgrupo-nao-e-indicacao.json",
+      "reviewed_sha256": "9708ae3eb8d356be64b6799ad3742128a02f93cc07ec929ebb071d9ba4824e62"
+    },
+    "34": {
+      "source": "casos-clinicos/attr-cm-acoramidis-extensao-54-meses-inicio-precoce-vs-tardio.json",
+      "source_sha256": "70799cebe7ee11e019b768a72d0b8f81fd1964c5cfe8be23aad82a6577c36a9a",
+      "note": "Corrigida referência JACC não correspondente, seleção 389 na extensão versus 632 randomizados e extrapolação de atraso 30 meses para 6–12 meses. SPECT e genotipagem explicitados no caso fictício.",
+      "destination": "casos-clinicos/metadados.json#attr-cm-acoramidis-extensao-54-meses-inicio-precoce-vs-tardio",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/attr-cm-acoramidis-extensao-54-meses-inicio-precoce-vs-tardio.json",
+      "reviewed_sha256": "d1a5106853d724e8099ac51468ab9f58603bba5d031f66f052c94ee6f4087150"
+    },
+    "35": {
+      "source": "casos-clinicos/insuficiencia-tricuspide-grave-ttvr-mundo-real-registro-sts-acc-tvt.json",
+      "source_sha256": "542649bf5b7a0751e8f1e017a3a99b5be0da6befef6672b5576828178b43820b",
+      "note": "Incluído risco omitido de novo CIED (15,9% dos pacientes sem dispositivo), endpoint pivotal principalmente sintomático e avaliação de elegibilidade. Registro 30 dias não prova causalidade/durabilidade.",
+      "destination": "casos-clinicos/metadados.json#insuficiencia-tricuspide-grave-ttvr-mundo-real-registro-sts-acc-tvt",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/insuficiencia-tricuspide-grave-ttvr-mundo-real-registro-sts-acc-tvt.json",
+      "reviewed_sha256": "0bf32ead77f279af79f56087aa03149b886b33077ea7a27494142dedc5c96374"
+    },
+    "36": {
+      "source": "casos-clinicos/fibrose-endomiocardica-trombo-apical-mapeamento-t2-decide-imunossupressao.json",
+      "source_sha256": "ee4397840e978023c58970f14da6ec92112292ccd6e999847de2dbc2e005a010",
+      "note": "Removido algoritmo perigoso T2 decide imunossupressão derivado de relato único. Incluídos atividade sistêmica, etiologia, urgência por lesão orgânica e Strongyloides; anticoagulação sem superioridade de DOAC.",
+      "destination": "casos-clinicos/metadados.json#fibrose-endomiocardica-trombo-apical-mapeamento-t2-decide-imunossupressao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/fibrose-endomiocardica-trombo-apical-mapeamento-t2-decide-imunossupressao.json",
+      "reviewed_sha256": "11c11f1bfc3b92cd7449ee1f0d33c066aad94dbb867333bcee82b8469658cfe9"
+    },
+    "37": {
+      "source": "casos-clinicos/risco-inflamatorio-residual-com-drc-ziltivekimabe-nao-reduz-mace-zeus.json",
+      "source_sha256": "b43a4da6cbc7a094bdaee74a789d42ecadfbbe5cee7c841f5ee8e7cff412816a",
+      "note": "Separados desenho revisado por pares e resultado preliminar do patrocinador. Removida afirmação automática LDL na meta e indicação reflexa de colchicina; biomarcador não justifica biológico.",
+      "destination": "casos-clinicos/metadados.json#risco-inflamatorio-residual-com-drc-ziltivekimabe-nao-reduz-mace-zeus",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/risco-inflamatorio-residual-com-drc-ziltivekimabe-nao-reduz-mace-zeus.json",
+      "reviewed_sha256": "a9995b979558b354a0bb696972c99a8a33b8d78b74b21fce2f44ade5293f0bd2"
+    },
+    "38": {
+      "source": "casos-clinicos/sca-com-deficiencia-de-ferro-repor-ferro-endovenoso-por-analogia-a-ic.json",
+      "source_sha256": "bcba9e94a2f5422b4f8c9aa69980ab058a758cc3cd4059a455653d1f1f752a21",
+      "note": "Corrigidas falsa diferença entre subgrupos FAIR-HF2, associação Masini que perde significância após PCR e proibição de investigar/tratar ferro sem IC. Sem extrapolação da IC para rotina pós-SCA.",
+      "destination": "casos-clinicos/metadados.json#sca-com-deficiencia-de-ferro-repor-ferro-endovenoso-por-analogia-a-ic",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/sca-com-deficiencia-de-ferro-repor-ferro-endovenoso-por-analogia-a-ic.json",
+      "reviewed_sha256": "f43b4972e724af655973341fbc4e7b5f32f599540d56299da9185d0caf1c2958"
+    },
+    "39": {
+      "source": "casos-clinicos/empact-mi-empagliflozina-pos-iam-desfecho-neutro-nao-inflar-conclusao.json",
+      "source_sha256": "3caaf5fe308726e1e4adc827c9d5fb0b7029457c28f4a86d595f30b3c58dfa79",
+      "note": "Confirmado primário neutro e componente IC exploratório. Corrigida ausência de contraindicações inferida de segurança média e preservadas indicações independentes em diabetes/IC atual.",
+      "destination": "casos-clinicos/metadados.json#empact-mi-empagliflozina-pos-iam-desfecho-neutro-nao-inflar-conclusao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/empact-mi-empagliflozina-pos-iam-desfecho-neutro-nao-inflar-conclusao.json",
+      "reviewed_sha256": "a671f2650aa0a7e5588e3393b18af8c0d7b80d4a30c07c5343b2cca288215474"
+    },
+    "40": {
+      "source": "casos-clinicos/inibidor-de-fator-xi-xia-versus-doac-troca-por-menos-sangramento-na-fa.json",
+      "source_sha256": "23c32f81df57c27bf2115f3a6875985f85f279fc69b6de30f3142217bd0c5b25",
+      "note": "Corrigidos escore não sustentado, peso/creatinina ausentes e história temporal; meta inclui protocolo qualitativo, só3 ensaios quantitativos. Falha asundexiana não extrapolada à classe ou aprovação mundial.",
+      "destination": "casos-clinicos/metadados.json#inibidor-de-fator-xi-xia-versus-doac-troca-por-menos-sangramento-na-fa",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/inibidor-de-fator-xi-xia-versus-doac-troca-por-menos-sangramento-na-fa.json",
+      "reviewed_sha256": "551722e62bfaf35aef0c01f8af0d67000e9560c1663c402df257cb6309605ee2"
+    },
+    "41": {
+      "source": "casos-clinicos/hipertensao-resistente-espironolactona-vs-baxdrostat-apos-ginecomastia.json",
+      "source_sha256": "5edf3a420d02d1c4c49c5d92059f2c774dea851b4b0744272624df09275c8a55",
+      "note": "Bula BAXFENDY primária maio2026 confirmada; incluídos sódio/função renal e acesso local. Removida alegação de estudo específico pós-ginecomastia e de vantagem comprovada versus alternativas.",
+      "destination": "casos-clinicos/metadados.json#hipertensao-resistente-espironolactona-vs-baxdrostat-apos-ginecomastia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/hipertensao-resistente-espironolactona-vs-baxdrostat-apos-ginecomastia.json",
+      "reviewed_sha256": "0cd4387978a875f720d3c61972971d631a4fdd5570c8d574a349c62cf7e94b1f"
+    },
+    "42": {
+      "source": "casos-clinicos/dapt-pos-sca-alto-risco-hemorragico-genotipo-cyp2c19-indisponivel.json",
+      "source_sha256": "e9d60402d318ee2689989ba64e24982300f2de9c3f7d3a426028edc0f5154a91",
+      "note": "Removida preferência universal por clopidogrel precoce após SCA e equivalência não demonstrada com genotipagem. Incorporados STOPDAPT-2 ACS, diretriz2025, retirada AINE e gastroproteção; TALOS não é monoterapia.",
+      "destination": "casos-clinicos/metadados.json#dapt-pos-sca-alto-risco-hemorragico-genotipo-cyp2c19-indisponivel",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/dapt-pos-sca-alto-risco-hemorragico-genotipo-cyp2c19-indisponivel.json",
+      "reviewed_sha256": "bf191f593fda399c53639a6a4163b651ab46b2decbca1ecfd456ad1cd5fc2bad"
+    },
+    "43": {
+      "source": "casos-clinicos/bioimpedancia-vestivel-alerta-congestao-especificidade-moderada-nao-e-diagnostico.json",
+      "source_sha256": "a9a7e5b3040ad2951ad4c441de2455859ef4132bcb2ac65fe646bbb5f723c31a",
+      "note": "Corrigido erro especificidade70% =30%dos alertas falsos; retirado exame físico impossível por autorrelato. Diferenciados colete, impedância ambulatorial e pressão pulmonar invasiva; sem automatizar diurético.",
+      "destination": "casos-clinicos/metadados.json#bioimpedancia-vestivel-alerta-congestao-especificidade-moderada-nao-e-diagnostico",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/bioimpedancia-vestivel-alerta-congestao-especificidade-moderada-nao-e-diagnostico.json",
+      "reviewed_sha256": "a710e6f76be3d0b4db67b7d0f28f7c9abb93f2e1f421217c209256f87a8b4503"
+    },
+    "44": {
+      "source": "casos-clinicos/estenose-aortica-paradoxal-baixo-fluxo-baixo-gradiente-razao-mg-eoa-reboot-paradox.json",
+      "source_sha256": "14301c028e537dc79b0091805d51caef897ffe2969d83d7d0184822cc54cb0be",
+      "note": "Corrigida substituição indevida da confirmação multimodal por MG/EOA, C-index prognóstico confundido com equivalência diagnóstica e benefício funcional falso REBOOT-PARADOX. Incluídos baixo recrutamento e crossover.",
+      "destination": "casos-clinicos/metadados.json#estenose-aortica-paradoxal-baixo-fluxo-baixo-gradiente-razao-mg-eoa-reboot-paradox",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/estenose-aortica-paradoxal-baixo-fluxo-baixo-gradiente-razao-mg-eoa-reboot-paradox.json",
+      "reviewed_sha256": "0a4e8b5d66e3ec310e3e491da074d4314f5767f870dd010f8e279df72998cf10"
+    },
+    "45": {
+      "source": "casos-clinicos/cmh-obstrutiva-sintomatica-sem-tratamento-previo-metoprolol-ou-aficamten-maple-hcm.json",
+      "source_sha256": "a33f346436fbff3a1354d1522a26f51861f6380423072430ffd4f908a52a6b10",
+      "note": "Corrigido MAPLE-HCM falsamente descrito como população virgem; washout confirmado primário39909646. Retiradas síncopes não investigadas do caso fictício e primeira linha automática; preservadas monitorização e estratificação de risco.",
+      "destination": "casos-clinicos/metadados.json#cmh-obstrutiva-sintomatica-sem-tratamento-previo-metoprolol-ou-aficamten-maple-hcm",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/cmh-obstrutiva-sintomatica-sem-tratamento-previo-metoprolol-ou-aficamten-maple-hcm.json",
+      "reviewed_sha256": "6e9671d3f8ee4c350f22b82c11b437f6a85f60d7b8d0a3aa609c72e245e2dd62"
+    },
+    "46": {
+      "source": "casos-clinicos/lpa-elevada-lepodisiran-acesso-via-pesquisa.json",
+      "source_sha256": "73ea5cbfd3d319d3de80d515aa7d379c8a98c432a7108d25dafa04af739a4643",
+      "note": "Corrigida promessa de pesquisa em ensaio fechado e inelegibilidade idade42semASCVD; registro CTgov primário atualizado24/08/2026 verificado. Corrigido endpoint temporal ALPACA e mantida prevenção global.",
+      "destination": "casos-clinicos/metadados.json#lpa-elevada-lepodisiran-acesso-via-pesquisa",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/lpa-elevada-lepodisiran-acesso-via-pesquisa.json",
+      "reviewed_sha256": "3c50f7a69b17c12f69776f0d0b99696f44da4aefbf20edc45d192cd5a6ffd918"
+    },
+    "47": {
+      "source": "casos-clinicos/variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar.json",
+      "source_sha256": "bbcbabf04b273228291457f255b2fc967f1ce5a9788cb964fa033e506d4fbae6",
+      "note": "Corrigidos PA136/83 sempre na meta, exclusão de fenótipos por amplitude e ensaio-alvo observacional tratado como comparação randomizada. Investigar apneia mesmo com descenso preservado.",
+      "destination": "casos-clinicos/metadados.json#variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/variabilidade-pressorica-visita-a-visita-media-controlada-o-que-investigar.json",
+      "reviewed_sha256": "c7fd00d1cb00798dd596e77d2da5e06ec1250884092a7890283e01932e0e7e76"
+    },
+    "48": {
+      "source": "casos-clinicos/fa-hipotireoidismo-subclinico-tsh-elevado-tratar-para-prevenir-recorrencia.json",
+      "source_sha256": "b724517509ffb70ef4e3413b23fa86be8de84d369c1690b5e846a36e4443f3b8",
+      "note": "Corrigidas células experimentais humanas para HL-1/rato, associação não causal e necessidade de confirmar TSH persistente; TRUST idoso não extrapolado à mulher58.",
+      "destination": "casos-clinicos/metadados.json#fa-hipotireoidismo-subclinico-tsh-elevado-tratar-para-prevenir-recorrencia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/fa-hipotireoidismo-subclinico-tsh-elevado-tratar-para-prevenir-recorrencia.json",
+      "reviewed_sha256": "7040c8a3303426ea8ba2687aff92ae18836fb3a3de60225cdb824591ecc4667d"
+    },
+    "49": {
+      "source": "casos-clinicos/retinopatia-diabetica-moderada-e-inicio-de-glp1ra-medo-de-piora-oftalmologica.json",
+      "source_sha256": "6c66b46f4c58c6a18b1e6d2ff417b2bc28a0f3af4b905db90c9a964ce40e46ee",
+      "note": "Removida falsa reclassificação por multiplicador7 e proteção causal inferida de coorte; incorporada vigilância ocular na queda rápida da HbA1c conforme ADA2026.",
+      "destination": "casos-clinicos/metadados.json#retinopatia-diabetica-moderada-e-inicio-de-glp1ra-medo-de-piora-oftalmologica",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/retinopatia-diabetica-moderada-e-inicio-de-glp1ra-medo-de-piora-oftalmologica.json",
+      "reviewed_sha256": "12199cefb6eeb5df76cf84565edcdc53bcdd8fc2badc29715d5fee74eea5cf16"
+    },
+    "50": {
+      "source": "casos-clinicos/candidato-a-transplante-renal-rastreio-cardiaco-positivo-cateterismo-de-rotina.json",
+      "source_sha256": "91bd0acdad86f74dc941a7c7f0b8eb40e5114945f8538e19ad6186797556905e",
+      "note": "Corrigidos denominador15% (rastreio positivo), inferência causal de atraso e liberação automática. Meta2% limitada às definições usadas; estatina não universal em hemodiálise. Texto integral BTS indisponível, sem atribuir recomendação específica além do resumo primário.",
+      "destination": "casos-clinicos/metadados.json#candidato-a-transplante-renal-rastreio-cardiaco-positivo-cateterismo-de-rotina",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/casos-clinicos/candidato-a-transplante-renal-rastreio-cardiaco-positivo-cateterismo-de-rotina.json",
+      "reviewed_sha256": "ee6b7b75d1f94c3ab11e786a4947cb0ca27733f6bf2199bd1ba7e917e177133b"
+    },
+    "51": {
+      "source": "checklists/classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026.json",
+      "source_sha256": "aec844c6a89c304d256d341ff4a997c6baf7855c96cc213ab3a1d618e83dc9fa",
+      "note": "Conferidos critérios clínicos no texto primário JACC 2026.07.025; corrigidos quatro pontos que permitiam classificação excessiva. Documento real de 2026, sem converter novamente para a taxonomia antiga. Contrarrevisão adicional: admitido IAM não especificado em morte súbita/incerteza e exigido nexo pós-procedimento, não apenas ≤30 dias.",
+      "destination": "checklists/metadados.json#classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/classificacao-e-diagnostico-do-infarto-do-miocardio-pela-quinta-definicao-universal-2026.json",
+      "reviewed_sha256": "977e0a15023ea483e506a916cac51351c11d8f7a6b065906b9d7c53292b1d78f"
+    },
+    "52": {
+      "source": "checklists/titulacao-intensiva-pos-alta-em-ic-descompensada.json",
+      "source_sha256": "6727d373fafa99f5c2e58f5a375baf60ba95b2e3cd19ab8653305a6ea1e2299a",
+      "note": "Conteúdo complementar incorporado à decisão73 que atualiza checklist canônico existente; não adicionar outro roteiro de alta.",
+      "destination": "checklists/metadados.json#alta-pos-insuficiencia-cardiaca-descompensada",
+      "action": "exclude_duplicate_merged",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/titulacao-intensiva-pos-alta-em-ic-descompensada.json",
+      "reviewed_sha256": "bac9750f3b08c56921f7507d084a5a22ffe7333d673d76057ca5e02566be7ad8"
+    },
+    "53": {
+      "source": "checklists/escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica.json",
+      "source_sha256": "3edcbbfd1e4f549d30b6638c890a39e5bccce95d2c0284174f643755bd91105b",
+      "note": "Confirmadas recomendações de idade, acesso e bicúspide no texto primário ESC/EACTS 2025. Risco cirúrgico não reduzido a escore isolado; acrescentados demais candidatos e benefício clínico esperado.",
+      "destination": "checklists/metadados.json#escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica.json",
+      "reviewed_sha256": "dc70a6bdabc7dc1ad0ef7c841107417abed2759c84008fc9cf49c032ffb5e089"
+    },
+    "54": {
+      "source": "checklists/timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial.json",
+      "source_sha256": "1824a8900db767ef39c0bf88895a1f8ae876c5247355f12468f5fc78672c2a0a",
+      "note": "Falso enunciado de exclusões sistemáticas corrigido com protocolo primário OPTIMAS. IC de HIC adicionado; AVC maior ELAN não equivale a início até 4 dias. Não extrapolar a VKA/prótese mecânica.",
+      "destination": "checklists/metadados.json#timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/timing-de-inicio-da-anticoagulacao-apos-avc-isquemico-na-fibrilacao-atrial.json",
+      "reviewed_sha256": "f3b604b5f3392d180974425bc4a472df3dc566230a937dee7cd7cd6ed2d90bf7"
+    },
+    "55": {
+      "source": "checklists/decisao-de-betabloqueador-pos-iam-por-estrato-de-feve.json",
+      "source_sha256": "4944932252c3f63ff6d6fab6a35e071f9e8acf4f0dc0bc1d1bcd25586db1c982",
+      "note": "Números e populações conferidos: 1.885 pacientes FEVE 40–49% e 17.801 FEVE ≥50%. Preservadas cautela com indicações independentes e proibição de retirada abrupta. Sem extrapolar benefício entre estratos.",
+      "destination": "checklists/metadados.json#decisao-de-betabloqueador-pos-iam-por-estrato-de-feve",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/decisao-de-betabloqueador-pos-iam-por-estrato-de-feve.json",
+      "reviewed_sha256": "24005309df4a33a5e4459aba226839d14f66b9edbda26e3511bd41556e8e2e12"
+    },
+    "56": {
+      "source": "checklists/definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025.json",
+      "source_sha256": "2481f337f79729f226b00208bc08f09351f0bd2f5cb972e0126ad83ed4f205ff",
+      "note": "Conferidos limiares e estratégia no texto primário JACC 2025.05.007. Corrigido tratamento inicial vago; causas secundárias não classificadas como pseudorresistência. Errata identificadas; conteúdo relevante cotejado na versão online atual.",
+      "destination": "checklists/metadados.json#definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/definicao-da-meta-pressorica-e-estrategia-terapeutica-na-hipertensao-arterial-acc-aha-2025.json",
+      "reviewed_sha256": "d9da3a1243f8038d060bbaef7933918e2276e77f2d0aaa07ecbb7ced87636379"
+    },
+    "57": {
+      "source": "checklists/classificacao-de-risco-cardiovascular-no-diabetico-diretriz-sbd-2025.json",
+      "source_sha256": "10426d6d4063a8fa57242440e4a1476698708d3762ae0890b91c98da84fcc5a1",
+      "note": "Erro clínico concreto: Lp(a)/NT-proBNP estavam como EMAR, mas são EAR no Quadro 2. Quadro 4 define ≥3 EAR; Quadro 1 contém >3 discrepante. Sobreposição aos 56 anos explicitada. Sem atribuir precisão de risco individual às faixas populacionais.",
+      "destination": "checklists/metadados.json#classificacao-de-risco-cardiovascular-no-diabetico-diretriz-sbd-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/classificacao-de-risco-cardiovascular-no-diabetico-diretriz-sbd-2025.json",
+      "reviewed_sha256": "a1c96d93cc1892bcc227933913f32638a1e10a2771419058d330019e6905a14d"
+    },
+    "58": {
+      "source": "checklists/escolha-do-farmaco-de-controle-de-frequencia-na-fibrilacao-atrial-por-feve.json",
+      "source_sha256": "05645f76b7e318f9d6d929155738f920c812e38114b4ff4f9a1a779664a83cca",
+      "note": "Controle de frequência revisado por contexto: cardioversão não atrasada, contraindicação vinculada à FA pré-excitada, classes elegíveis não equivalentes em efeito agudo. Digoxina exige eletrólitos e interações além da função renal.",
+      "destination": "checklists/metadados.json#escolha-do-farmaco-de-controle-de-frequencia-na-fibrilacao-atrial-por-feve",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/escolha-do-farmaco-de-controle-de-frequencia-na-fibrilacao-atrial-por-feve.json",
+      "reviewed_sha256": "d75d46382d9f5858e946f26f6ec58604e9866dc9153de4138e3b97cbf5feca9b"
+    },
+    "59": {
+      "source": "checklists/decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026.json",
+      "source_sha256": "b121bfed0fdcf6d5a0100545c08521f29237e1b745afb07a2e75740eb16fac98",
+      "note": "Falha crítica da árvore original: risco ≥10% e LDL≥190 não podem terminar sem indicação por ausência de reclassificação CAC. Corrigidos biomarcadores capazes de modificar decisão e limiar de hipertrigliceridemia. Comunicado ao coordenador para reparar MD canônico não incluído nos 163 órfãos.",
+      "destination": "checklists/metadados.json#decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/decisao-de-tratar-estatina-em-prevencao-primaria-acc-aha-2026.json",
+      "reviewed_sha256": "4c1de5350ca8783b10e0ed86eb075952953718fadc4123d162789ceb324be394"
+    },
+    "60": {
+      "source": "checklists/regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda.json",
+      "source_sha256": "6c0f9432910176bf6fac3777f85b34bc157da95377aee43cee546b2df3bcdcb6",
+      "note": "Números originais COAPT/MITRA-FR confirmados, mas hipótese de proporcionalidade estava promovida a regra. Corrigido potencial bloqueio de encaminhamento por impossibilidade de atingir doses máximas; deve ser máxima tolerada.",
+      "destination": "checklists/metadados.json#regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/regurgitacao-mitral-secundaria-selecao-para-reparo-transcateter-borda-a-borda.json",
+      "reviewed_sha256": "cd62e2691c793ccd4b726c2cf2bd6cd90a251ba03418c9cb1a1294ace72da0c3"
+    },
+    "61": {
+      "source": "checklists/caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026.json",
+      "source_sha256": "17dcb65dcee76218e4ac9844a7e5d744094384b421480c45b5f95f6d66609ba1",
+      "note": "Consenso real e texto integral conferido. Corrigida exigência implícita simultânea de sintomas e sinais; preservados diagnóstico integrado, trajetória e possibilidade de peptídeos normais na ICFEp.",
+      "destination": "checklists/metadados.json#caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/caracterizacao-diagnostica-da-insuficiencia-cardiaca-segunda-definicao-universal-2026.json",
+      "reviewed_sha256": "048bdab744eb286829a64671276a3294aecd92c2f53afb6bdae944904731d8bc"
+    },
+    "62": {
+      "source": "checklists/criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica.json",
+      "source_sha256": "657c7fc0ee5487ba0441230f1a3415fdaa8b699ff6a62a9a397ee5cdc6086336",
+      "note": "Removida alegação não sustentada de RMC medir sistematicamente mais e números de discrepância sem referência específica. Corrigido handgrip como pós-carga e escopo adulto. Fonte de HCM Risk-SCD retirada por não sustentar estes itens diagnósticos.",
+      "destination": "checklists/metadados.json#criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/criterios-diagnosticos-e-diferenciacao-do-sam-na-cardiomiopatia-hipertrofica.json",
+      "reviewed_sha256": "6ee5d75cde71b158492ce07034acd627c8aed54d9559d47f4c1c3bc02848e9c6"
+    },
+    "63": {
+      "source": "checklists/ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc.json",
+      "source_sha256": "041c1de786a443f2f4c6759e9431cb3fd8980583442783059079719f321fe75b",
+      "note": "Corrigida definição incompleta de alto risco e uso potencialmente automático de antiagregante por CAC. Preservados limiares RF-CL da ESC e contraindicações técnicas.",
+      "destination": "checklists/metadados.json#ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/ccta-e-escore-de-calcio-na-investigacao-anatomica-da-scc.json",
+      "reviewed_sha256": "5e6f49c29345f90b7e3508c8658fdb034981052e13508fdf215cb7876783403b"
+    },
+    "64": {
+      "source": "checklists/definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024.json",
+      "source_sha256": "d1aead8f64697cf1db5d02df746372d0a19ee8b5d3bd6436c655bdf181a4238e",
+      "note": "Mistura de diretrizes levava a meta e limiar idosos incorretos para ESC2024. Reescrito com distinção explícita; retiradas classes II inespecíficas e doses de clortalidona sem seleção. Fonte primária ESC2024 e texto renal conferidos.",
+      "destination": "checklists/metadados.json#definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/definicao-de-meta-pressorica-e-estrategia-farmacologica-inicial-esh-2023-esc-2024.json",
+      "reviewed_sha256": "71ff88185a8429d039475f6de54c649dfe7baf234a720f231be59d4a0e9aca16"
+    },
+    "66": {
+      "source": "checklists/sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023.json",
+      "source_sha256": "e87f5342dd56cf5593957e25e7852e7ba87276c636201807c742009c2a4ec0c5",
+      "note": "Correções de segurança: fibrinólise não automática; NSTEMI confirmado é alto risco por si, sem exigir GRACE>140 adicional. Rule-out não exclui angina instável e angiografia imediata NSTE-ACS não autoriza lise.",
+      "destination": "checklists/metadados.json#sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/sindrome-coronariana-aguda-do-primeiro-contato-a-estrategia-invasiva-esc-2023.json",
+      "reviewed_sha256": "f2e305daac73583c67eb9aaf94ce5708f2a70a5de1a7bd21f6d3c18ef5790807"
+    },
+    "67": {
+      "source": "checklists/cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023.json",
+      "source_sha256": "8ee0ca071548d388298f292b708b289887540d48e94e3e65f0ca3ae80aecd8a9",
+      "note": "Faixas diagnósticas e aplicações dos escores revistas. Genética não restrita a jovens/familiares; segurança de verapamil ampliada e anticoagulação CMH/FA preservada. Erratum ehag645 conferido integral: epidemiologia pediátrica e direção T2*; sem efeito nestes itens.",
+      "destination": "checklists/metadados.json#cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/cardiomiopatia-hipertrofica-diagnostico-estratificacao-risco-tratamento-esc-2023.json",
+      "reviewed_sha256": "527add2430501463a95be076997e588e774429d7ef422489ef8816be1da630c2"
+    },
+    "68": {
+      "source": "checklists/classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024.json",
+      "source_sha256": "f26706e21dc8430b45351a83ad0664a13c157e29238fd9a60695e13c9101e4fe",
+      "note": "Corrigidos cortes limítrofes que deixavam pacientes fora do algoritmo e categoria elevada sobrepondo hipertensão. Retirada alegação DBHA meta para todos sem risco/exceções. Fonte primária ESC2024 conferida.",
+      "destination": "checklists/metadados.json#classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/classificacao-da-pressao-arterial-e-decisao-de-tratar-esc-2024.json",
+      "reviewed_sha256": "48175db8b159f7c7e87b6af4baa149327c1a9f0572df6a65198051f727de63c5"
+    },
+    "65": {
+      "source": "checklists/checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025.json",
+      "source_sha256": "0f92c527ba2dd46f7045b5e31ffc850533d3ba062743cbe4102ed6fbbe51f67d",
+      "note": "Nota Table8 exige resolução do trombo por ETE após 1–3 meses de OAC, não exceção imediata. Corrigidas omissões de contraindicações e OAC indicada versus apenas considerada. Escopo DOAC reumático explicitado.",
+      "destination": "checklists/metadados.json#checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/checklist-estenose-mitral-diagnostico-manejo-esc-eacts-2025.json",
+      "reviewed_sha256": "1fac12b887df1bd92d854693200249badea0b27c7cfee40008312c1aae9f8651"
+    },
+    "69": {
+      "source": "checklists/estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023.json",
+      "source_sha256": "a5f007a0fd04efd82b72dec406c090e7f214f03c930b40f9270de0ec6a2125ff",
+      "note": "Erros de escopo e segurança corrigidos: SCORE2 apenas população validada; GLP-1 não compartilha corte renal único; finerenona requer elegibilidade; ticagrelor60 pósCABG não universal. Parte das omissões remetida às diretrizes específicas, sem fabricar doses.",
+      "destination": "checklists/metadados.json#estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/estratificacao-risco-e-manejo-cardiovascular-no-diabetes-esc-2023.json",
+      "reviewed_sha256": "1afb04e7b22758d599c5bb6c600c45439b72b3d59baff0f01eaf0bc1cd8f9438"
+    },
+    "70": {
+      "source": "checklists/manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care.json",
+      "source_sha256": "0a543c5a118188786aee03db780fbee64b8f0b0c4428a66867b1ec482f060f58",
+      "note": "AF-CARE preservado com limiares operacionais de OAC e cardioversão, incluindo ≥24h/duração incerta e 4 semanas após, evitando suspensão pelo ritmo sinusal.",
+      "destination": "checklists/metadados.json#manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/manejo-integrado-da-fibrilacao-atrial-pelo-modelo-af-care.json",
+      "reviewed_sha256": "fb2750e3701dda487cafa7ff8096171a8043e22369f35bf1ad2d742e7bca4890"
+    },
+    "71": {
+      "source": "checklists/disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve.json",
+      "source_sha256": "25ece264294b90dab733995948a7278ad5d300100b3fe1bf6473a22052b011fb",
+      "note": "Categorias de disfunção e conduta contextualizadas pelo texto ESC2025; VIVID números conferidos. Não chamar endocardite genericamente reversível nem atrasar cirurgia indicada. Planejamento inclui diâmetro interno e obstrução coronariana.",
+      "destination": "checklists/metadados.json#disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/disfuncao-de-biopotese-classificacao-varc-3-e-valve-in-valve.json",
+      "reviewed_sha256": "a0708913b6c0ee127b56fceef59ecc00a19b6651dfaf9986131353ea44980d90"
+    },
+    "72": {
+      "source": "checklists/manejo-do-no-reflow-durante-a-icp-primaria.json",
+      "source_sha256": "f3e70f9a970cc7ff5070e56071627d97e90ce915d36b38ac84b73ac29b64d8f2",
+      "note": "Algoritmo original inventava refratariedade após duas classes e aceitava fluxo ruim automaticamente. Corrigida seleção hemodinâmica individual e separado resgate de aspiração rotineira; fonte SCAI2024 acrescentada.",
+      "destination": "checklists/metadados.json#manejo-do-no-reflow-durante-a-icp-primaria",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/manejo-do-no-reflow-durante-a-icp-primaria.json",
+      "reviewed_sha256": "ed23158c28ccbbecb07978708e20273be9bf69af0519e5aa6f8a8ae7fd0b4e31"
+    },
+    "73": {
+      "source": "checklists/alta-hospitalar-ic-aguda-titulacao-intensiva-strong-hf.json",
+      "source_sha256": "d98e2ad1cd1712333df8713fe24f3451c2fef782c8790a9a31a85f21f8b64729",
+      "note": "Consolidados JSON52/73 no checklist canônico de alta, evitando três roteiros concorrentes. Protocolo STRONG-HF individualizado; ESC2026 Table8 p47 confirma I C préalta/I B2 seis semanas. Preservados washout, avaliação de ferro e dispositivos com critérios.",
+      "destination": "checklists/metadados.json#alta-pos-insuficiencia-cardiaca-descompensada",
+      "action": "update_existing",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/alta-hospitalar-ic-aguda-titulacao-intensiva-strong-hf.json",
+      "reviewed_sha256": "9f22d17ed396f25730dd5fbf943beb651376f49da396aead27cafab965558d4f"
+    },
+    "74": {
+      "source": "checklists/hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo.json",
+      "source_sha256": "96b4d1a9c21d57806957a7380e29f553a6651f91c02354bd4f79684b42d9a869",
+      "note": "Relato e série primários PMIDs 34362360 e 39000561 conferidos. Corrigidos inferência de exposição por potássio urinário isolado, reposição fixa após recuperação e classificação de emergência pela PA isolada; acrescentada interpretação de interferentes no rastreio hormonal.",
+      "destination": "checklists/metadados.json#hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/hipertensao-por-alcacuz-suspeita-e-manejo-do-pseudohiperaldosteronismo.json",
+      "reviewed_sha256": "ac6b71584753b5186663dfa56f245ff92e783422a64a324ea594db9220400071"
+    },
+    "75": {
+      "source": "checklists/reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia.json",
+      "source_sha256": "370d92ed49c14e67ceecc6a769b8f9eb84f672d6396133059b2fe34d1d317832",
+      "note": "Conferidos Baman (PMID 20348027), revisão 2026 e ESC 2022. Removida referência ilustrativa com autoria inconsistente; corrigidas exclusão de cardiopatia coexistente, interpretação universal do corte de 24%, duplicação mecânica por interpolação e garantias de cura.",
+      "destination": "checklists/metadados.json#reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/reconhecimento-e-tratamento-etiologico-da-taquicardiomiopatia.json",
+      "reviewed_sha256": "55c9ef67e0cb8a4584de248f818514df57c518e08b2398b9153055eea9402c67"
+    },
+    "76": {
+      "source": "checklists/decisao-tavi-vs-savr-na-estenose-aortica-grave-esceacts-2021.json",
+      "source_sha256": "8ead0772d672b95dddb448782ba0ee3000856cd30e77e96e9611aeb691015b56",
+      "action": "exclude_duplicate_outdated",
+      "destination": "checklists/metadados.json#escolha-de-modalidade-tavi-ou-savr-na-estenose-aortica-grave-sintomatica",
+      "note": "Checklist histórico mistura faixas ACC/AHA 2020 e ESC 2021, com condutas já substituídas. Decisão atual TAVI/SAVR coberta pelo candidato 53, ESC/EACTS 2025. Não importar roteiro histórico de decisão ao lado do vigente."
+    },
+    "77": {
+      "source": "checklists/suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2.json",
+      "source_sha256": "bb260d3655a98cbe4b234648ee704cc5a25fda37faff33c73422abb9330c374a",
+      "note": "Conferidos prazos por fármaco e R6 perioperatória. Atualizados definição euglicêmica, preferência por beta-hidroxibutirato, reposição de glicose concomitante e distinção entre reinício preventivo pós-operatório e reexposição após CAD. Retirada normalização do uso rotineiro em DM1.",
+      "destination": "checklists/metadados.json#suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/suspeita-e-manejo-perioperatorio-da-cetoacidose-euglicemica-por-isglt2.json",
+      "reviewed_sha256": "1ebedcc6fdab943231f024c49e510ac2fe46fe11301232334bac1913b3162020"
+    },
+    "78": {
+      "source": "checklists/selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave.json",
+      "source_sha256": "0e3650395950c4a6322909e05e044597ecdac209a09f2bce0f30d5cc87b46c49",
+      "note": "Tabela 9 integral conferida. Corrigidos atraso até otimização indefinida, exclusão universal de cabos, omissão de VD deteriorando sem sintomas e extrapolação de critérios entre cirurgia e transcateter. Atualizado seguimento de dois anos sem prometer mortalidade.",
+      "destination": "checklists/metadados.json#selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/selecao-de-paciente-para-intervencao-na-insuficiencia-tricuspide-secundaria-grave.json",
+      "reviewed_sha256": "75d2507a9a1346208246368167df2b87b051d7b05ef912acd5bf1fd8067b09cc"
+    },
+    "79": {
+      "source": "checklists/estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica.json",
+      "source_sha256": "6304d5497a7fbc5916021012c019e7cb7bedb9e6742330473b7212ab64ee57db",
+      "note": "Correção crítica do algoritmo multiparamétrico ESC 2022: retirados TTN e genes desmossômicos como inclusão automática, FEVE não conta como fator adicional. Removidos espera universal de três meses, sequenciamento genético obrigatório por LMNA e extensão a variantes incertas. DANISH e modelo LMNA conferidos.",
+      "destination": "checklists/metadados.json#estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/estratificacao-de-risco-de-morte-subita-e-indicacao-de-cdi-na-cardiomiopatia-dilatada-nao-isquemica.json",
+      "reviewed_sha256": "d7e599eefbc51ed8c7c9425fa0fc21fef7ef10159946ad3c88e2c0e8ca380d55"
+    },
+    "80": {
+      "source": "checklists/manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao.json",
+      "source_sha256": "f726433ea5321399853c922f3b101ddef4b4890620a5fc81aca42cf361581265",
+      "note": "Consenso 2024 conferido: oito semanas preservadas como convenção de recorrência precoce. Corrigidos abandono anual do assintomático, espera obrigatória antes de cardioversão e tentativa universal de antiarrítmico antes do redo; incluída estabilidade e segurança tromboembólica.",
+      "destination": "checklists/metadados.json#manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/manejo-da-recorrencia-de-fa-apos-ablacao-blanking-e-reablacao.json",
+      "reviewed_sha256": "9ceb6659c270de8190799ebb621106d85b7bc996ae34a32345b8961ac62198c2"
+    },
+    "81": {
+      "source": "checklists/ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise.json",
+      "source_sha256": "3aeda880368c7e53a6de6b956498e8f82c0c88489da938a57b67724d99d762bf",
+      "note": "Correção crítica: metanálise 2022 não sustenta ARM rotineiro após ACHIEVE/ALCHEMIST 2025 neutros. DAPA-CKD e EMPA-KIDNEY incluíram parte do estágio 4; CKM4 não é DRC4. Corrigidas ausência fictícia de RCT apesar de Cice e generalização de segurança da hipercalemia. Fontes primárias e KDIGO conferidos.",
+      "destination": "checklists/metadados.json#ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/ajuste-da-terapia-quadrupla-icfer-em-drc-avancada-e-dialise.json",
+      "reviewed_sha256": "b55a69b9bb892d54dd2fbbba3217c20927cca0a1d2411faffb438409c697ad5a"
+    },
+    "82": {
+      "source": "checklists/manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia.json",
+      "source_sha256": "d602b3897e2a63e0d18156b68cff7f408c38a18185896475bb5f0981ef410e39",
+      "note": "Correção crítica: ARC-HBR incorpora cirrose com hipertensão portal. Retirada redução automática de DOAC por limiares oncológicos e aprovação de todo DOAC em Child-Pugh B. Landmark TriNetX não prova estratégia universal de DAPT de 30 dias; reestenose não é trombose de stent.",
+      "destination": "checklists/metadados.json#manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/manejo-antitrombotico-na-dac-com-cirrose-ou-trombocitopenia.json",
+      "reviewed_sha256": "0e522e4d056120f5fcbb33aace90ece280096eff54061172715e33061f6e01e7"
+    },
+    "83": {
+      "source": "checklists/retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular.json",
+      "source_sha256": "65920ec0c0dfb0557d2e55f534fbb71acba32685b53b4f8954359bced22e2f09",
+      "note": "Removidos multiplicador não validado de sete vezes, recomendação de iSGLT2 para AVC baseada em subgrupo e neutralização excessiva do risco ocular. Periodicidade individualizada pela ADA 2026 e evidência observacional explicitada; coerente com correção do caso49.",
+      "destination": "checklists/metadados.json#retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/retinopatia-diabetica-na-estratificacao-de-risco-cardiovascular.json",
+      "reviewed_sha256": "54953d30af2f40674f41190c7b9eca78f3d893483ec716ae613fc39a185c1ba5"
+    },
+    "84": {
+      "source": "checklists/orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9.json",
+      "source_sha256": "da14926461bd6e55306a9c2ad973024e46cd147ad3cfd08229abb6f266c7eca0",
+      "note": "PMID 42187087 e comunicação primária Lilly conferidos. Corrigido denominador do seguimento: 15, não 35, atingiram um ano. Retiradas afirmações não demonstradas sobre inexistência mundial de acesso expandido e dados completos exclusivos de um candidato; preservados limites da edição e ausência de CVOT.",
+      "destination": "checklists/metadados.json#orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/orientacao-e-conduta-diante-do-interesse-em-edicao-de-base-do-pcsk9.json",
+      "reviewed_sha256": "263aceb5719204279aa671749c8015a889014158c3249cb2dfc190f7985bd544"
+    },
+    "85": {
+      "source": "checklists/prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao.json",
+      "source_sha256": "a76d487e1b757f447c6d7a1264c0d08b44222b561cbbfde0ce3c6e3e36c82e27",
+      "note": "Conferidos coorte Morabito, análise pós-hoc SPRINT e lista essencial OMS 2025. Retirada equivalência entre RRs de formulações diferentes e preferência absoluta sem considerar titulação; acrescentado monitoramento laboratorial por componentes.",
+      "destination": "checklists/metadados.json#prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/prescricao-de-combinacao-em-comprimido-unico-para-adesao-na-hipertensao.json",
+      "reviewed_sha256": "1f101675345a0ababd3da7f2f6c3cb5d06112d08509df8de0c4a931906eef51a"
+    },
+    "86": {
+      "source": "checklists/diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente.json",
+      "source_sha256": "fe8a5155c33c419ced9be0a3b91947b4cce9245071204323c9ab3758efb5356a",
+      "note": "ESC 2025 integral e REBOOT-PARADOX primário conferidos. Dobutamina não é padrão obrigatório na FE preservada; MG/EOA não confirma sozinho; TC contrastada exige protocolo próprio. Corrigido benefício funcional inexistente e omissão de recrutamento insuficiente/crossovers; coerente com caso44.",
+      "destination": "checklists/metadados.json#diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/checklists/diagnostico-diferencial-de-estenose-aortica-de-baixo-fluxo-baixo-gradiente.json",
+      "reviewed_sha256": "2c4dbc4cb5dd0b734202fb574c478cc86881324238980a1d6d074479de9dde92"
+    },
+    "87": {
+      "source": "material-paciente/pressao-alta-diagnostico-e-meta-de-tratamento.json",
+      "source_sha256": "ce56a8b017c1b537f84133653d5c03ac5a7e2e7c05c69a372cb0c66442f60c63",
+      "note": "Corrigidos diagnóstico nunca por medida isolada versus exceções, meta universal sem tolerabilidade, potássio alimentar indiscriminado, escolha medicamentosa na gravidez e resistência só por contagem. Orientação de sintomas de emergência substitui espera indevida de sete dias.",
+      "destination": "material-paciente/metadados.json#pressao-alta-diagnostico-e-meta-de-tratamento",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/pressao-alta-diagnostico-e-meta-de-tratamento.json",
+      "reviewed_sha256": "e252d2d8fdaa514d05b79da4ab4ba65556151053a53993eec4d0d104d4b7893d"
+    },
+    "88": {
+      "source": "material-paciente/sindrome-coronariana-aguda-como-e-diagnosticada-e-tratada.json",
+      "source_sha256": "63d8e56b891ab2f20bf0a7cf05fed8e63fb47ae5e44a08445c9405d95d320603",
+      "note": "Corrigidos angiografia como procedimento que abre artéria, veto absoluto à troca por complicação, limite oncológico automático, prescrição universal de todos os cardioprotetores e prognóstico neurológico contado da admissão. Incluída orientação de emergência sem automedicação.",
+      "destination": "material-paciente/metadados.json#sindrome-coronariana-aguda-como-e-diagnosticada-e-tratada",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/sindrome-coronariana-aguda-como-e-diagnosticada-e-tratada.json",
+      "reviewed_sha256": "d763ac55a39b51015c1518a33d68493ff6bdbcf0f20e34a88ccb7be4d8d0ff32"
+    },
+    "89": {
+      "source": "material-paciente/fibrilacao-atrial-com-problema-na-valvula-quando-isso-muda-seu-anticoagulante.json",
+      "source_sha256": "73f43701a668ee5d8a0a15630aff4e850fd63834bf6e06c1df873e534ac3e3a3",
+      "note": "Correção crítica: retirada autorização de DOAC em estenose mitral moderada/grave não reumática. Removidas classificação tripartite apresentada como universal, linguagem promocional moderno versus antigo e dispensa de acompanhamento. Pós-operatório e indicação independente após TAVI explicitados.",
+      "destination": "material-paciente/metadados.json#fibrilacao-atrial-com-problema-na-valvula-quando-isso-muda-seu-anticoagulante",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/fibrilacao-atrial-com-problema-na-valvula-quando-isso-muda-seu-anticoagulante.json",
+      "reviewed_sha256": "dc320f4393e75adb312c8e6b7722faea2c480e00fdb05726c19f244749f63e09"
+    },
+    "90": {
+      "source": "material-paciente/ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca.json",
+      "source_sha256": "d899b970e968f51ea3dbca6fcc46310e39592a33e96cfbb9e272acab98f4aff6",
+      "note": "Removida sequência obrigatória por perfil sem considerar contraindicações, bloqueio de toda terapia até desaparecer congestão e marca-passo automático para titulação. Não recomenda ARM apenas em dose mínima apesar de contraindicação renal/potássio; monitorização segue gravidade.",
+      "destination": "material-paciente/metadados.json#ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/ordem-de-introducao-dos-remedios-da-insuficiencia-cardiaca.json",
+      "reviewed_sha256": "972f1339c0431dd8153908384c4ede4a74e81878cec37313af28709329743dd8"
+    },
+    "91": {
+      "source": "material-paciente/dupla-antiagregacao-plaquetaria-apos-stent-quanto-tempo-tomar.json",
+      "source_sha256": "2d0949d6964ec743494d0cb5cde190e01e26bb2189fa93faeed0b650895e1593",
+      "note": "Atualiza material canônico de duração DAPT em vez de criar terceira explicação concorrente. Diferenciados ticagrelor isolado após ≥1 mês selecionado, duração individual e investigação de nova isquemia; removida regra de sempre manter AAS após retirar segundo.",
+      "destination": "material-paciente/metadados.json#por-que-tomar-dois-remedios-para-o-sangue-depois-do-infarto-ou-stent",
+      "action": "update_existing",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/dupla-antiagregacao-plaquetaria-apos-stent-quanto-tempo-tomar.json",
+      "reviewed_sha256": "28fb530573d802c699f111a40b3da2fd3cd46b291740d66633d07f7397e7e0c5"
+    },
+    "92": {
+      "source": "material-paciente/remedio-para-dor-anti-inflamatorio-pode-subir-sua-pressao.json",
+      "source_sha256": "242760bdbaf066dc2d223ebf8b9e60e9c1c7b732e725087f05a45840075cf351",
+      "note": "Removida falsa ausência de efeito em normotensos e exclusão de doença renal/endócrina por associação ao AINE. Acrescentada cautela com paracetamol regular em dose alta (PATH-BP) e interações com bloqueio SRAA/diurético; não presume um AINE seguro.",
+      "destination": "material-paciente/metadados.json#remedio-para-dor-anti-inflamatorio-pode-subir-sua-pressao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/remedio-para-dor-anti-inflamatorio-pode-subir-sua-pressao.json",
+      "reviewed_sha256": "24fd32add4c00ec424732c1498aa4cb8549246d40cb8d920404fb7e8a97bdf07"
+    },
+    "93": {
+      "source": "material-paciente/glp-1-e-protecao-do-coracao.json",
+      "source_sha256": "c204b48ba4ff891bde8d75bdd5ee245bfcca6416864a9e44f073cb4acfa93a1c",
+      "note": "Dados dos três ensaios primários conferidos. Diferenciado desfecho composto de redução de cada componente; REWIND não foi o único a incluir prevenção primária. Placebo foi sobre tratamento habitual, não ausência de cuidado.",
+      "destination": "material-paciente/metadados.json#glp-1-e-protecao-do-coracao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/glp-1-e-protecao-do-coracao.json",
+      "reviewed_sha256": "78292f6300352c7bcaa5b9e2117afe3ad0709f84d038ceaf9ee1a0e6c8c11589"
+    },
+    "94": {
+      "source": "material-paciente/estenose-aortica-grave-sem-sintomas-vale-a-pena-adiantar-a-cirurgia.json",
+      "source_sha256": "2335619a18743fa3c6d30cdecd5fd7d0cf2bc32f4103fb389676108538d0bf09",
+      "note": "Corrigida classificação de EVOLVED como TAVI exclusivo e extrapolação de benefício de mortalidade a todo procedimento/paciente. Números da metanálise específica conferidos; acrescidos seleção, segurança do teste e limites entre técnicas.",
+      "destination": "material-paciente/metadados.json#estenose-aortica-grave-sem-sintomas-vale-a-pena-adiantar-a-cirurgia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/estenose-aortica-grave-sem-sintomas-vale-a-pena-adiantar-a-cirurgia.json",
+      "reviewed_sha256": "d5740babd6b8aff246891835f1af9c93453d782140949d6c6741e26bdd35af93"
+    },
+    "95": {
+      "source": "material-paciente/cardiomiopatias-entendendo-o-diagnostico-e-o-acompanhamento.json",
+      "source_sha256": "3b5721c537acbe75c979ba23671a3d59759c633b5248b3ee03a650d2c9c0828f",
+      "note": "ESC 2023 conferida: condições de carga coexistentes não excluem cardiomiopatia, acrescentado fenótipo não dilatado e rastreio familiar mesmo sem variante identificada. Variante incerta não tratada como diagnóstico familiar.",
+      "destination": "material-paciente/metadados.json#cardiomiopatias-entendendo-o-diagnostico-e-o-acompanhamento",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/cardiomiopatias-entendendo-o-diagnostico-e-o-acompanhamento.json",
+      "reviewed_sha256": "84d3a4630331075b1c1bdc06eac70aa569fc82f0f3d6f6b2e8e7c4024288be0a"
+    },
+    "96": {
+      "source": "material-paciente/diabetes-e-coracao-o-que-mudou-no-jeito-de-cuidar.json",
+      "source_sha256": "cecba56e1af1f16597ef111956f1a5942530a99e6805b65fb6bcccdfbfe8fc27",
+      "note": "Retiradas estatina universal e extrapolação de iSGLT2 a todo diabetes/diálise, SCORE2-Diabetes fora da população de aplicação, órgão isolado automaticamente muito alto risco e metas antigas de PA/HbA1c generalizadas pela idade.",
+      "destination": "material-paciente/metadados.json#diabetes-e-coracao-o-que-mudou-no-jeito-de-cuidar",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/diabetes-e-coracao-o-que-mudou-no-jeito-de-cuidar.json",
+      "reviewed_sha256": "44b5e1f9209cf85596e8f265654273dc996500877a76ebec011edc1f07827a5d"
+    },
+    "97": {
+      "source": "material-paciente/fibrilacao-atrial-o-que-e-anticoagulacao-e-ablacao.json",
+      "source_sha256": "f60b0c7d3932d31fb7fb7844c139842e543213e476c7a8387d2d88d4e3227b78",
+      "note": "Conferida ESC 2024. Alerta de relógio exige confirmação; cardioversão <24h não é automática, início incerto tratado como tal, instabilidade é exceção de urgência e proteção pós-cardioversão explicitada.",
+      "destination": "material-paciente/metadados.json#fibrilacao-atrial-o-que-e-anticoagulacao-e-ablacao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/fibrilacao-atrial-o-que-e-anticoagulacao-e-ablacao.json",
+      "reviewed_sha256": "a76c5452c784f45954917d1829a4fafa1c3fbdf3071bee4a08c727d39c8cb138"
+    },
+    "98": {
+      "source": "material-paciente/stent-na-angina-o-que-ele-realmente-faz.json",
+      "source_sha256": "4d6d1d92b5937a815b7e9e92ca0b57435f3b32940c6d9871a264711ac8a4ca35",
+      "note": "ORBITA-2 primário: baixo/nenhum antianginoso basal, escore composto e OR ordinal não são nota simples de dor nem chance duas vezes maior. Removidos angina como precursor obrigatório e dor imaginária. Integrada pergunta prognóstica COURAGE do candidato103 para evitar duplicação educativa.",
+      "destination": "material-paciente/metadados.json#stent-na-angina-o-que-ele-realmente-faz",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/stent-na-angina-o-que-ele-realmente-faz.json",
+      "reviewed_sha256": "d17dfc2c9a351b8702f8f1324705b8e609190af8b55bf6713aeb18d372b63a6d"
+    },
+    "103": {
+      "source": "material-paciente/preciso-de-stent-para-angina-estavel.json",
+      "source_sha256": "ee856f7e3d5896bfc4d595e5dfbd09778ce17adbe0be86767f619b70705d7711",
+      "action": "exclude_duplicate",
+      "destination": "material-paciente/metadados.json#stent-na-angina-o-que-ele-realmente-faz",
+      "note": "Mesmo objetivo educativo sobre indicação de stent na angina estável. Questão prognóstica de COURAGE integrada ao candidato98 após distinguir ausência de diferença de equivalência, população selecionada e sintomas. Não importar segundo material sobre a mesma decisão."
+    },
+    "99": {
+      "source": "material-paciente/colesterol-ldl-qual-e-a-minha-meta-e-como-chegar-la.json",
+      "source_sha256": "f17cad6770fff1a969c6008fde9aaffb856f99c752242100c28eb518157b7510",
+      "note": "ESC/EAS 2025 conferida. SCORE2 não universalizado no Brasil, LDL40 após recorrência é opção e não categoria europeia extrema obrigatória; Lp(a) pode influenciar tratamento, e combinação inicial não exige escada lenta.",
+      "destination": "material-paciente/metadados.json#colesterol-ldl-qual-e-a-minha-meta-e-como-chegar-la",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/colesterol-ldl-qual-e-a-minha-meta-e-como-chegar-la.json",
+      "reviewed_sha256": "ba932a256e3e2a8f9d0f3d081257c0d3d8a3ea7188b0d27a7fa6e27894c2258b"
+    },
+    "100": {
+      "source": "material-paciente/valvas-do-coracao-quando-e-preciso-tratar.json",
+      "source_sha256": "10f1184b7f293d360939e56632e62542d84e4e39fadc157ad7737daa999153bf",
+      "note": "Corrigidos ausência universal de resposta da regurgitação secundária a medicamentos, TAVI aplicado a qualquer valva/prótese mecânica, escolha só por idade e TEER mais seguro universalmente. Antitrombótico após bioprótese individualizado.",
+      "destination": "material-paciente/metadados.json#valvas-do-coracao-quando-e-preciso-tratar",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/valvas-do-coracao-quando-e-preciso-tratar.json",
+      "reviewed_sha256": "58d5b6e7e945888586b9bc8067f3a578c2fdd9fd0e0de619c45e932a0513bf9e"
+    },
+    "101": {
+      "source": "material-paciente/tratamento-da-doenca-de-chagas-benznidazol-e-nifurtimox.json",
+      "source_sha256": "3df802ae67f064f907937e2f4dfd0b79244fae46585f20f22f95dccbfc052cbe",
+      "note": "Corrigidas transmissão por fezes versus picada, gravidez inteira, contraindicações específicas, ausência de benefício no BENEFIT versus proibição absoluta, PCR negativo versus cura e seguimento prolongado; alertas graves não devem aguardar consulta.",
+      "destination": "material-paciente/metadados.json#tratamento-da-doenca-de-chagas-benznidazol-e-nifurtimox",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/tratamento-da-doenca-de-chagas-benznidazol-e-nifurtimox.json",
+      "reviewed_sha256": "c69aca2d2ef457482b22f1807d03ce93c044d6b629aec189542733169eb139e8"
+    },
+    "102": {
+      "source": "material-paciente/pressao-alta-so-no-consultorio-avental-branco-nao-tratada.json",
+      "source_sha256": "598800191e8de4a8d5131cc42ff62b2cb6164436da856a943092c275a54290d4",
+      "note": "Removida inferência causal de proteção pelo tratamento e ausência de preocupação; não tratado na avaliação inicial não equivale a nunca tratado. Corrigidos comparadores, limites observacionais e necessidade de MAPA/MRPA sem exigir ambos.",
+      "destination": "material-paciente/metadados.json#pressao-alta-so-no-consultorio-avental-branco-nao-tratada",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/pressao-alta-so-no-consultorio-avental-branco-nao-tratada.json",
+      "reviewed_sha256": "154a3cf0075e802fd14d87b202a4292c3593b9ed0d0417ed8fcb72686584ac63"
+    },
+    "104": {
+      "source": "material-paciente/meu-rim-e-meu-coracao-o-que-e-a-sindrome-cardiorrenal.json",
+      "source_sha256": "f746676e8a7e2b017c9e1a9cc066c7141293bcdca8c32a1982777ed52f74f899",
+      "note": "Removida causalidade de dano por restrição de sal; SODIUM-HF não demonstrou benefício primário nem justifica excesso. Congestão incluída como causa renal; pequenas variações não tornam MRA/hipercalemia automaticamente benignos.",
+      "destination": "material-paciente/metadados.json#meu-rim-e-meu-coracao-o-que-e-a-sindrome-cardiorrenal",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/meu-rim-e-meu-coracao-o-que-e-a-sindrome-cardiorrenal.json",
+      "reviewed_sha256": "9b67e83b5bbdf216d57baf5f3ac1d3872674b051f8053146f10f7c4153487b29"
+    },
+    "105": {
+      "source": "material-paciente/metformina-e-insuficiencia-cardiaca-e-seguro-tomar.json",
+      "source_sha256": "874da8d8bdedc326a53944323622cc2f33219df22582256a7ba663dd1e233344",
+      "note": "Removida prova causal de benefício/suposta inexistência de acidose; estudos observacionais não demonstram equivalência de internações. Acrescentadas TFGe <30, início 30–44 conforme bula e interrupção por hipoxia/lesão renal aguda/contraste quando indicada.",
+      "destination": "material-paciente/metadados.json#metformina-e-insuficiencia-cardiaca-e-seguro-tomar",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/metformina-e-insuficiencia-cardiaca-e-seguro-tomar.json",
+      "reviewed_sha256": "66602c05345e5413a60540136d893c1fda21529296d225b3bc97e8caf3abaefe"
+    },
+    "106": {
+      "source": "material-paciente/fibra-na-alimentacao-e-colesterol.json",
+      "source_sha256": "c74c78268a73fad9a1f659c45e5bda471cebad2534b2048b91ed8abd23ccea56",
+      "note": "Corrigida baixa certeza versus garantia de efeito real; platô de suplemento não é limite de fibra total. Removida causalidade cardiovascular observacional e ausência de efeitos adversos; acrescentado cuidado com psyllium/disfagia/líquidos.",
+      "destination": "material-paciente/metadados.json#fibra-na-alimentacao-e-colesterol",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/fibra-na-alimentacao-e-colesterol.json",
+      "reviewed_sha256": "bb0e4d7893863b6f0ad7d7399e1389243d0207715043fc3e6fc9d0cd7123d856"
+    },
+    "107": {
+      "source": "material-paciente/dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma.json",
+      "source_sha256": "b36789a3834140b2e173cab31d265493857b96c121e78121fb852b8d6b5a4756",
+      "note": "Corrigidos 57 com dados versus 106 acompanhados, especificidade versus proporção de alarmes falsos, consultas mensais IMPEDANCE-HF versus colete domiciliar, pressão versus impedância e peso não infalível. Corrigendo identificado sem texto integral: retiradas extrapolações e estimativas numéricas de eficácia.",
+      "destination": "material-paciente/metadados.json#dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/dispositivos-vestiveis-podem-detectar-acumulo-de-liquido-antes-do-sintoma.json",
+      "reviewed_sha256": "ddfcd929edf9cac3ab339b780064153464ed718a10bc7db2de208a50501a4f5d"
+    },
+    "108": {
+      "source": "material-paciente/oscilacao-do-acucar-no-sangue-pode-afetar-o-ritmo-do-coracao.json",
+      "source_sha256": "eb00317f9f4be3bd7d58f17facc224946a8338e56370c4292d3b2b4e90cf8f0c",
+      "note": "Retrospectivo e presença de FA não provam incidência/causalidade; estudo teve validação externa, sem prova de utilidade clínica. Distintas medidas temporais de variabilidade e populações não devem ser equiparadas; CADDY não significa CGM contínuo por 18 meses.",
+      "destination": "material-paciente/metadados.json#oscilacao-do-acucar-no-sangue-pode-afetar-o-ritmo-do-coracao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/oscilacao-do-acucar-no-sangue-pode-afetar-o-ritmo-do-coracao.json",
+      "reviewed_sha256": "23c38ae4e4f7605a4677ad7e1fd75d248b920aafbd3f18ea0dfb45410c572a2d"
+    },
+    "109": {
+      "source": "material-paciente/relogio-pode-medir-minha-pressao.json",
+      "source_sha256": "57d6ec61ed0fc62aa8d8de357e28d2f53ff527980012fe3a66b242dc3c1f4513",
+      "note": "Corrigidas medida indireta do manguito, diversidade tecnológica/calibração e falsa garantia de acompanhar tendências. Erro médio pequeno não assegura precisão individual ou diurna; AHA HYP.0000000000000254.",
+      "destination": "material-paciente/metadados.json#relogio-pode-medir-minha-pressao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/relogio-pode-medir-minha-pressao.json",
+      "reviewed_sha256": "9a469eeb27801b90e244d12967b317901e3c4ae342fc8e760defc8512c56cf21"
+    },
+    "110": {
+      "source": "material-paciente/fibrilacao-atrial-e-cirurgia-bariatrica-o-que-a-perda-de-peso-cirurgica-muda.json",
+      "source_sha256": "b13fd16f4d346b196268dfacbfafb194e2b104d4998a4edc140b386a5a30ce23",
+      "note": "Restabelecida opção de varfarina respaldada por diretriz após bariátrica; coorte apixabana não a invalida nem anti-Xa garante proteção. Ascandar avaliou internações, não apenas ablações; corrigendo identificado e retiradas estimativas dependentes não verificadas. Não presumida independência das bases ou equivalência dos métodos de perda de peso.",
+      "destination": "material-paciente/metadados.json#fibrilacao-atrial-e-cirurgia-bariatrica-o-que-a-perda-de-peso-cirurgica-muda",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/fibrilacao-atrial-e-cirurgia-bariatrica-o-que-a-perda-de-peso-cirurgica-muda.json",
+      "reviewed_sha256": "8c173925a2f019425e2bb44a6b73f99c9b33c69b09326150597604e490f58516"
+    },
+    "111": {
+      "source": "material-paciente/estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia.json",
+      "source_sha256": "c4dfd842227197740fd1192dd3534775073d75719e5102f667737390742f5fe2",
+      "note": "Sensibilidade não é acurácia nem detecção de todas as valvopatias: desfecho sopro estrutural audível e perda de especificidade explicitados. Removida equivalência celular versus aparelho e causalidade não demonstrada para diferenças entre estudos.",
+      "destination": "material-paciente/metadados.json#estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/estetoscopio-digital-com-inteligencia-artificial-e-a-deteccao-precoce-de-valvopatia.json",
+      "reviewed_sha256": "a2e36c471e75cae5487e506c93bac9e65410a034dd32c184fb74eb25c3aa3eee"
+    },
+    "112": {
+      "source": "material-paciente/exame-genetico-cyp2c19-para-ajustar-o-remedio-do-sangue-apos-o-stent.json",
+      "source_sha256": "e243d2f302cf746238c078cedf51936d86dfbc7f02ffaf745ed640ad1fe22263",
+      "note": "Desescalonamento não é retirar um dos dois fármacos nem ticagrelor+prasugrel juntos. TAILOR-PCI primário não significativo contrapõe garantia universal. Removidas disponibilidade brasileira não demonstrada, recrutamento temporal não confirmado e equivalência clopidogrel/ticagrelor em monoterapia precoce.",
+      "destination": "material-paciente/metadados.json#exame-genetico-cyp2c19-para-ajustar-o-remedio-do-sangue-apos-o-stent",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/exame-genetico-cyp2c19-para-ajustar-o-remedio-do-sangue-apos-o-stent.json",
+      "reviewed_sha256": "defca540b0b27eceee5c787b9c80377fa08c221a5e28ed9d6d02c677b9baf3ec"
+    },
+    "113": {
+      "source": "material-paciente/cardiomiopatia-hipertrofica-obstrutiva-aficamten-ou-betabloqueador.json",
+      "source_sha256": "5156c6730b0edb0353661e63d660e3bf8318c84b94950a2b9decbcd3c4cb0e6a",
+      "note": "Corrigida repetida alegação de tratamento inicial/virgem: protocolo permitiu terapia anterior com washout ≥7 dias. Removida afirmação temporal não confirmada de nenhuma diretriz atualizada; mantidos escopo de 24 semanas e monitorização de função sistólica.",
+      "destination": "material-paciente/metadados.json#cardiomiopatia-hipertrofica-obstrutiva-aficamten-ou-betabloqueador",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/cardiomiopatia-hipertrofica-obstrutiva-aficamten-ou-betabloqueador.json",
+      "reviewed_sha256": "3c7b069d1b47b962bea91f9dbd14c108cfb9c7ec2174c58f5a1a98f1d7298334"
+    },
+    "114": {
+      "source": "material-paciente/calculadora-de-risco-cardiovascular-e-raca.json",
+      "source_sha256": "8b25477595758122b7b6fa6d4e8aaddd7c1ae551576da0b57897726b708e5c31",
+      "note": "Removida ausência de validação brasileira contradita pela própria referência ELSA-Brasil; SCORE2 não automaticamente adaptado. Distinguidas publicação PREVENT/adoção, simulação de elegibilidade versus benefício e limiares PCE versus diretriz 2026; prevenção secundária/LDL elevado não dependem da conta.",
+      "destination": "material-paciente/metadados.json#calculadora-de-risco-cardiovascular-e-raca",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/calculadora-de-risco-cardiovascular-e-raca.json",
+      "reviewed_sha256": "892b76fdbe84408c94525f1009932f775f6dcf0f30fa5e7b4dfec2abe1068a50"
+    },
+    "115": {
+      "source": "material-paciente/ansiedade-na-insuficiencia-cardiaca-quando-e-normal-e-quando-buscar-ajuda.json",
+      "source_sha256": "25e8501ecedfb9d3378b38972ee14c5895f967078b8a0960fcf478bac9350674",
+      "note": "SwedeHF item ansiedade/depressão não é diagnóstico nem 15 anos por paciente; rede de sintomas não prova causalidade do sono. Revisão farmacológica heterogênea não exclui efeitos individuais. Exercício não é única terapia eficaz e incluída emergência por risco de autoagressão.",
+      "destination": "material-paciente/metadados.json#ansiedade-na-insuficiencia-cardiaca-quando-e-normal-e-quando-buscar-ajuda",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/material-paciente/ansiedade-na-insuficiencia-cardiaca-quando-e-normal-e-quando-buscar-ajuda.json",
+      "reviewed_sha256": "8d0a84eabdf4ba6f0587241f4567a217e8e4c15caf766d552083a08d38dc85d7"
+    },
+    "116": {
+      "source": "trilhas/trilha-complicacoes-mecanicas-pos-infarto.json",
+      "source_sha256": "6c75e2d0808c53c7c1a90b731feb2c8fb2e088470147b959ad3c740aec219896",
+      "note": "DanGer-Shock é bomba microaxial, não reperfusão precoce. Choque de bomba e estrutural podem coexistir; IABP ponte selecionada não etapa universal, e FE reduzida não obrigatória após reparo.",
+      "destination": "trilhas/metadados.json#trilha-complicacoes-mecanicas-pos-infarto",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-complicacoes-mecanicas-pos-infarto.json",
+      "reviewed_sha256": "822748c0b33b70b6d54e3e0c199125818e552de9d9ac163c94689b5b747fedc6"
+    },
+    "117": {
+      "source": "trilhas/trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria.json",
+      "source_sha256": "e38e55930b3b856f3a373a27de3bb086e921bd6bc0c16ebcd036d09336271b24",
+      "note": "MRPA diurna não confirma padrão do sono. Neutralidade TIME/BedMed não prova impossibilidade de alterar PA ou benefício individual. Removida hierarquia sem fonte para causas farmacológicas e exigência de excluir tudo antes de investigar secundária.",
+      "destination": "trilhas/metadados.json#trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-hipertensao-ritmo-descontrole-farmacologico-e-causa-secundaria.json",
+      "reviewed_sha256": "b9b2c8abc5f86d8a36c7bf28b07161367115df674236adf4f46e6f7580d60e41"
+    },
+    "118": {
+      "source": "trilhas/trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento.json",
+      "source_sha256": "7daf561fdd39845cfb98d4eee788b816923e7cff773b06d89c9289bd2d66cf02",
+      "note": "Removido menu suspender/trocar por AAS/fechar que omitia manter OAC. OCEAN neutro não demonstra equivalência nem AAS como substituto; ALONE poucos AVCs e resultado guiado por sangramento. CABANA ITT neutro e CASTLE população selecionada.",
+      "destination": "trilhas/metadados.json#trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-fibrilacao-atrial-ablacao-evidencia-pivotal-e-anticoagulacao-pos-procedimento.json",
+      "reviewed_sha256": "30d7b34475d79b6f7aee2cb37cfca8e2da3146272c0e2a40ada3f4a09f016345"
+    },
+    "119": {
+      "source": "trilhas/trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl.json",
+      "source_sha256": "becbfbd0f56e83f2adb23469dfca142cc197d7ac459078f01f0b76b2cee34db7",
+      "note": "Lp(a) recomendada não obrigação coercitiva; CKD-EPI isolado não confirma DRC. Rosuvastatina intensidade dependente de dose, LDL55 não universal primária, ezetimiba não degrau obrigatório para todos.",
+      "destination": "trilhas/metadados.json#trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-prevencao-acc-aha-2026-prevent-lpa-e-metas-de-ldl.json",
+      "reviewed_sha256": "904597d5ef8f4e8e8d7a4544834e6e92028111e4bfde1aa290017acc7e999e99"
+    },
+    "120": {
+      "source": "trilhas/trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca.json",
+      "source_sha256": "63e08d882edc568eb4b666be5cfcc1ca8e2d711b4c6bb7b0c2147b6fd3426e76",
+      "note": "Atorvastatina não única estatina de alta intensidade; IDEAL primário neutro e redução de LDL não separada do efeito de intensidade. LDL muito baixo sem sinal de dano não prova ausência universal de piso ou segurança infinita; contextualizada combinação.",
+      "destination": "trilhas/metadados.json#trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-prevencao-estatina-de-alta-intensidade-precoce-pos-sca.json",
+      "reviewed_sha256": "ef88b22ffadb14fc949ed0184784da93ca9723dd72f67d99dc4bbc7239a51e61"
+    },
+    "121": {
+      "source": "trilhas/trilha-hipertensao-ensaios-comparativos-primeira-linha.json",
+      "source_sha256": "0e6f16ed87eb330867cd0c7993ad57023ff2187e98b0a1c2444a20f6988af38d",
+      "note": "Neutralidade não equivale a empate. CONVINCE tinha margem pré-especificada e IC não a cumpriu; diferença de significância entre sexos não prova interação ANBP2. LIFE benefício predominante de AVC não demonstra mediação exclusiva.",
+      "destination": "trilhas/metadados.json#trilha-hipertensao-ensaios-comparativos-primeira-linha",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-hipertensao-ensaios-comparativos-primeira-linha.json",
+      "reviewed_sha256": "c71a5e6c6b42b33bf6712509998170f0141cb29a4da3906814e8b27e0f30bb09"
+    },
+    "122": {
+      "source": "trilhas/trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular.json",
+      "source_sha256": "f5d1106bfa76e25af1a5c9101faa9ba36c37f758b914302f56edbaf867c72595",
+      "note": "SURMOUNT-1 risco projetado não eventos e SELECT prevenção secundária ≥45/IMC27 não prova mediação exclusivamente pelo peso. SOS não randomizado não compara diretamente com incretinas; removida sequência obrigatória GLP1→duplo→cirurgia. Corrigido slug do estudo SELECT para registro canônico existente.",
+      "destination": "trilhas/metadados.json#trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-prevencao-obesidade-glp1-e-cirurgia-bariatrica-como-alvo-cardiovascular.json",
+      "reviewed_sha256": "cf82e4eea063707b5a54cc8167faf05bb69fc8b497161b31e035097da2ddad34"
+    },
+    "123": {
+      "source": "trilhas/trilha-anoca-inoca-endotipo-guiado.json",
+      "source_sha256": "6360c65f5898a0b6e0dbe89d4ca8eafe7004644ada07999bcdf20b481ddce732",
+      "note": "Incluído espasmo microvascular/sobreposição e diagnóstico diferencial; caso não comprovadamente real. CorMicA sintomas/QV não MACE e teste não obrigatório universal. Verapamil opção com limites sistólicos/condução.",
+      "destination": "trilhas/metadados.json#trilha-anoca-inoca-endotipo-guiado",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-anoca-inoca-endotipo-guiado.json",
+      "reviewed_sha256": "f2b8e6158ecb08600fe205f705fc9d33cc49b3423ecd0ae43bfe7b47581f5b28"
+    },
+    "124": {
+      "source": "trilhas/trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral.json",
+      "source_sha256": "341070cf5bce0057a4cc3b922019ee1eab1ece39b9d23666e1b97b32875f061c",
+      "note": "Duke não exclui clinicamente sozinho; timing pósAVC não janela universal. POET restrito a endocardite esquerda estável, microrganismos/terapia ativa/seguimento e indicações cirúrgicas resolvidas, não estabilidade isolada.",
+      "destination": "trilhas/metadados.json#trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-valvopatias-endocardite-infecciosa-diagnostico-timing-cirurgico-e-transicao-oral.json",
+      "reviewed_sha256": "f95bc432dd8b1b26b59f50b80d8d08edb4b11e84e6991a89cba4e6baf113b2b4"
+    },
+    "125": {
+      "source": "trilhas/trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd.json",
+      "source_sha256": "3e42bb65f4dcfb6c301c7e5dcad632290493a6415d84324854c8949ec4132634",
+      "note": "CECCY nunca comprovou proteção inicial da FEVE; SUCCOUR-MRI desfecho de imagem não mortalidade. CTRCD não implica vigilância falha, e miocardite checkpoint pode ter FE preservada/não ser fulminante.",
+      "destination": "trilhas/metadados.json#trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-cardiomiopatias-induzida-por-terapia-oncologica-ctrcd.json",
+      "reviewed_sha256": "a458244680f6544f7a7a78533b349e2cf42f8eab28ab593295f7c2ccd75be556"
+    },
+    "126": {
+      "source": "trilhas/trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al.json",
+      "source_sha256": "41da305d749f3b69edb1fa6795994680098866e5844cc0fb942684650b47f972",
+      "note": "Diagnóstico não invasivo restrito ATTR com captação apropriada e triagem monoclonal completa negativa; AL pode captar. Incluída ATTR hereditária e genética. Extensão aberta não ensaio randomizado integral nem ranking de fármacos; estágio não prescrição automática.",
+      "destination": "trilhas/metadados.json#trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-insuficiencia-cardiaca-amiloidose-cardiaca-attr-versus-al.json",
+      "reviewed_sha256": "0fce37a7d583cd1528c9b083368888820dcf0dba07ca67fbfd6d412d61d6f081"
+    },
+    "127": {
+      "source": "trilhas/trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora.json",
+      "source_sha256": "72e00653908eeaa280fb5a4b6702ae17df1722cc9364e66a0fa45fc1c8d4bc85",
+      "note": "TFGe não determina tudo; SCORE2-Diabetes população restrita. Finerenona não exige falha prévia iSGLT2 e suspensão perioperatória não elimina risco de cetoacidose.",
+      "destination": "trilhas/metadados.json#trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-diabetes-rastreio-e-seguranca-pratica-da-terapia-cardioprotetora.json",
+      "reviewed_sha256": "694a58899c68ca791938d3f4a5eafe9acc88bba09e74a71e487abf1db0409b2d"
+    },
+    "128": {
+      "source": "trilhas/trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular.json",
+      "source_sha256": "303f310f6d197d6954b284902bd3920f69cc1c3887861692fce33858cdfd362e",
+      "note": "Associações reprodutivas não equivalem todas a risk enhancers formais nem entradas PREVENT/PCE. Sem multiplicador inventado; fenótipos precoces/tardios sobrepostos. Terapia hormonal não indicada para prevenção cardiovascular.",
+      "destination": "trilhas/metadados.json#trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-prevencao-historico-reprodutivo-como-modificador-de-risco-cardiovascular.json",
+      "reviewed_sha256": "ca361ffdbaa4d6e4da0dcf51bde6244059265045ecc29b46002fda7af3c82154"
+    },
+    "129": {
+      "source": "trilhas/trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante.json",
+      "source_sha256": "cb2cc7fd70d591a06b5b79ef870e9066d8663fba2ed9713d4455960dddfff3c4",
+      "note": "FA multifatorial, estabilização não espera oncologia, escore não captura todo risco. Acalabrutinibe/zanubrutinibe são mesma classe; substrato CYP3A4 não implica interação inibitória. Câncer geral não respalda varfarina automática com ibrutinibe.",
+      "destination": "trilhas/metadados.json#trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-fibrilacao-atrial-cardio-oncologica-inibidores-de-btk-e-interacao-com-o-anticoagulante.json",
+      "reviewed_sha256": "4b72a823ec7989adcbc5f6b102aeeb4565fd255ebb413ab79301948aa195a2b8"
+    },
+    "130": {
+      "source": "trilhas/trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica.json",
+      "source_sha256": "f9ffcb1f4b0ae241c57114af9c38cb0c105bbe756ab6133bd590da05a97e0152",
+      "note": "Rule-in não confirma IAM, HEART não supera alto risco e gatilho oferta-demanda não basta. Contextualizada nomenclatura antiga nos slugs sem fingir renomeação dos destinos; IAM indeterminado quando mecanismo incerto.",
+      "destination": "trilhas/metadados.json#trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-doenca-coronariana-troponina-ultrassensivel-e-diagnostico-diferencial-na-dor-toracica.json",
+      "reviewed_sha256": "9c75773240e0b9f3a89f582dc3d9f604e147484dea01dc1d359d50a5fca39c10"
+    },
+    "131": {
+      "source": "trilhas/trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao.json",
+      "source_sha256": "58e71f58f33003cdfe28df3fd5066bd3169120427fe666a9e76ad2fe4ba9f78f",
+      "note": "COMPANION não prova CRTD superior CRTP, SCDHEFT braços versus placebo. Quatro pilares em alvo não pré-requisito universal de qualquer dispositivo. LBBP estudo selecionado não mortalidade/substituição universal.",
+      "destination": "trilhas/metadados.json#trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-insuficiencia-cardiaca-terapia-eletrica-cdi-e-ressincronizacao.json",
+      "reviewed_sha256": "94f03cb89ed54363baf4f2987480562aa969025fcc10394b1e012eb2459221d5"
+    },
+    "132": {
+      "source": "trilhas/trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte.json",
+      "source_sha256": "b3fbfb8a704d51a6d5e2d8b8fad575e1ac7f2846668d667c5fb6df62d7eb62bb",
+      "note": "Zona13–15não universal, imagem não bateria obrigatória e ausênciaLGE não exclusão. CDI não licença esportiva nem indicação apenas para jogar; risco exercício específico de fenótipo/genótipo.",
+      "destination": "trilhas/metadados.json#trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-cardiomiopatias-no-atleta-zona-cinzenta-e-retorno-ao-esporte.json",
+      "reviewed_sha256": "10dec71459ca3dc7ff702911f498826b3f23d67c586086be06162341e2003fdd"
+    },
+    "133": {
+      "source": "trilhas/trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais.json",
+      "source_sha256": "76bfcea0672cdbb79041335e400cc74384f4a4a42779576f7c705e0cd8417501",
+      "note": "Corrigida renina suprimida no aldosteronismo primário e interferência hipocalemia. AINE efeito não universal; removido estereótipo academia, Menke mortalidade não ensaio PA/quelação e sequência causal obrigatória inadequada.",
+      "destination": "trilhas/metadados.json#trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-hipertensao-substancias-farmacos-drogas-e-toxinas-ambientais.json",
+      "reviewed_sha256": "02f6539141eccd21213501df27658a6f0f0cb772fe7cadef33d710d2228ce184"
+    },
+    "134": {
+      "source": "trilhas/trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda.json",
+      "source_sha256": "ea18e426a5b29e9546c42e69fc7b1743cd87e849106871a1badb697f1a9f4fa1",
+      "note": "Retirada narrativa de desaparecimento da classe e de ONTIME2 apenas substituto/sem dados clínicos. EARLYACS estratégia invasiva; CADILLAC não replicação exata ADMIRAL. Mantido uso de resgate selecionado atual.",
+      "destination": "trilhas/metadados.json#trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-doenca-coronariana-inibidores-glicoproteina-iib-iiia-ascensao-e-queda.json",
+      "reviewed_sha256": "a504e55da2b4f45bd2dd012d19d5b7ef6199f615b8196fd60be9bdcea2512af7"
+    },
+    "135": {
+      "source": "trilhas/trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3.json",
+      "source_sha256": "baa822eb86e2242fb19224d8ab109a6c5fce66b8f02f2b481aff38a530a29ffe",
+      "note": "Lepodisirana não primeira fase3/olpasirana jáfase3; removidos rankings entre estudos. Lp(a) não absolutamente fixa e genética não prova efeito farmacológico. EPISODE não primeiro hipolipemiante na EA.",
+      "destination": "trilhas/metadados.json#trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-prevencao-lpa-arsenal-inibidores-mecanismo-a-fase-3.json",
+      "reviewed_sha256": "20c61baee2522296ad0b64a9e7aea198cf18ef9f4b34eff4878963759ae0aef4"
+    },
+    "136": {
+      "source": "trilhas/trilha-diabetes-variabilidade-glicemica-e-arritmia.json",
+      "source_sha256": "2036ddaf76c68699512926bc98a6866d29a3e64b34fcbea4f3a5a9f3f07fca4d",
+      "note": "Retirada superioridade universal CGM/variabilidade sobre média e elo autonômico obrigatório. TIR não é variabilidade, rede não comparação direta universal; QT contextual e hipoglicemia não arritmia inevitável.",
+      "destination": "trilhas/metadados.json#trilha-diabetes-variabilidade-glicemica-e-arritmia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-diabetes-variabilidade-glicemica-e-arritmia.json",
+      "reviewed_sha256": "985ef8c769210349e4920abc2ee92d09fa212ead9ac1d061b4ffecef571d92de"
+    },
+    "137": {
+      "source": "trilhas/trilha-insuficiencia-cardiaca-descongestao-guiada.json",
+      "source_sha256": "aafc5c86443a3ff54607da8054637f38340cb4df8ba69a0e9df88b2cbfe263a3",
+      "note": "ADVOR/CLOROTIC não comparação direta nem resistência prévia universal; PUSH natriurese não benefício clínico comprovado. VExUS/LUS complementares, UNLOAD não falha máxima prévia e furosemidaSC não substitui internação necessária.",
+      "destination": "trilhas/metadados.json#trilha-insuficiencia-cardiaca-descongestao-guiada",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-insuficiencia-cardiaca-descongestao-guiada.json",
+      "reviewed_sha256": "1a0c3d3d4eb5b9f86053f51c857372e0948f58963350ea889ba2220ea11c30e4"
+    },
+    "138": {
+      "source": "trilhas/trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao.json",
+      "source_sha256": "9139564d601ba22c54fae0ce501e294f0757d69c1b64840f0cd0b0407e1f2b32",
+      "note": "Dobutamina não solução universal de baixo fluxo multivalvar; COAPT não prevê diretamente regressão pósTAVI. Transcateter combinado possível selecionado e MAC limita também transcateter, não atalho automático.",
+      "destination": "trilhas/metadados.json#trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-valvopatias-doenca-multivalvar-sequenciamento-intervencao.json",
+      "reviewed_sha256": "3345de00613132d5bcab0865bdce8eb39cbe9ddcd593710c67b9dd49f4a39313"
+    },
+    "139": {
+      "source": "trilhas/trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo.json",
+      "source_sha256": "b318b040c2609115aa6b0ff68c5c463bcc842f7a3d4885ff2c94a7153907a3af",
+      "note": "LEAF primário neutro corrigido, colchicina não único RCT e classeCPAP não sustentada retirada. Coorte GLP1 não prova independência peso, estudos peso distintos e controle ritmo não espera esgotar comorbidades.",
+      "destination": "trilhas/metadados.json#trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-fibrilacao-atrial-recorrencia-pos-ablacao-comorbidades-e-redo.json",
+      "reviewed_sha256": "07ec4f6c5dec2355eb8d2758d06e34ededbdfb51301bbabb4bb68740c0f35279"
+    },
+    "140": {
+      "source": "trilhas/trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia.json",
+      "source_sha256": "0384fd87de656798405d581140867f61d382cd5c54b5356f3574711d47993d90",
+      "note": "MAPLE não virgem; extensão não comparador causal. Incluído ACACIA publicado28/08/2026, não prevalência nHCM2/3. Fenótipoapical podeobstrução médio-ventricular; removida ausênciauniversal.",
+      "destination": "trilhas/metadados.json#trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-cardiomiopatia-hipertrofica-aficamten-mapa-de-evidencia.json",
+      "reviewed_sha256": "77264a85d76362f3ced833deb8ee09d36bc23707352d72197d3bd4a6554d8ec3"
+    },
+    "141": {
+      "source": "trilhas/trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade.json",
+      "source_sha256": "7315355725387eb9a4db43b2ba1e45f655a1434b16c8e58a0f1285f5dadf11d5",
+      "note": "MRPA diurna não padrão sono; variabilidade entreconsultas nãoMAPA24h. Associação nãoalvo terapêutico; pressão central nãoinvalida braquial nemmetauniversal. Removida exclusividadebiblioteca.",
+      "destination": "trilhas/metadados.json#trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade",
+      "action": "candidate_add_individually_reviewed",
+      "reviewed_file": "/tmp/corvia-med-orphans142/reviewed/trilhas/trilha-hipertensao-medida-de-proxima-geracao-cuffless-central-e-variabilidade.json",
+      "reviewed_sha256": "bec372a896a4ff72f704b9c75b63c5425067be1b3b0e66cf29af35349f757b6d"
+    }
+  },
+  "counts": {
+    "candidate_add_individually_reviewed": 133,
+    "update_existing": 4,
+    "exclude_duplicate": 3,
+    "exclude_duplicate_merged": 1,
+    "exclude_duplicate_outdated": 1
+  },
+  "limitations": [
+    "Fontes bibliográficas resolvidas não equivalem por si a aprovação; notas registram correções por conteúdo.",
+    "Corrigendos sem texto integral: retiradas estimativas/extrapolações dependentes quando necessário.",
+    "Mapeamento lexical foi triagem; deduplicação semântica consolidou casos19/27, checklists52/76 e material103, além de atualizar4/30/73/91.",
+    "Nenhum push ou deploy; metadados precisam integração por registro para preservar alterações paralelas."
+  ],
+  "validation": {
+    "json_parse": "pass",
+    "duplicate_slugs": "none",
+    "duplicate_checklist_item_ids": "none",
+    "semantic_diff_only_expected_records": [
+      {
+        "front": "casos-clinicos",
+        "adds": 47,
+        "updated": 2,
+        "removed": 0
+      },
+      {
+        "front": "checklists",
+        "adds": 33,
+        "updated": 1,
+        "removed": 0
+      },
+      {
+        "front": "material-paciente",
+        "adds": 27,
+        "updated": 1,
+        "removed": 0
+      },
+      {
+        "front": "trilhas",
+        "adds": 26,
+        "updated": 0,
+        "removed": 0
+      }
+    ],
+    "pmids": 230,
+    "resolved_pmids": 230,
+    "doi_pair_mismatches": [],
+    "trilha_links": 238,
+    "calculators": "6 occurrences confirmed in backend/app/services/calculators.py",
+    "study_select": "corrected to canonical slug",
+    "pending_md_links": [
+      [
+        117,
+        "documento",
+        "hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo"
+      ],
+      [
+        133,
+        "documento",
+        "hipertensao-induzida-por-anti-inflamatorios-nao-esteroidais-mecanismo-e-antagonismo-do-anti-hipertensivo"
+      ],
+      [
+        133,
+        "documento",
+        "hipertensao-induzida-por-esteroides-anabolizantes-androgenicos-mecanismo-prevalencia-e-rastreio"
+      ],
+      [
+        133,
+        "documento",
+        "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular"
+      ],
+      [
+        133,
+        "documento",
+        "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular"
+      ],
+      [
+        135,
+        "documento",
+        "lipoproteina-a-e-estenose-aortica-calcificada-do-mendeliano-ao-ensaio-episode"
+      ],
+      [
+        135,
+        "documento",
+        "lepodisiran-sirna-duracao-estendida-lipoproteina-a-fase-3"
+      ],
+      [
+        136,
+        "documento",
+        "variabilidade-glicemica-e-risco-de-fibrilacao-atrial-no-diabetes"
+      ],
+      [
+        136,
+        "documento",
+        "tempo-no-alvo-time-in-range-e-mortalidade-cardiovascular-no-diabetes-tipo-2"
+      ],
+      [
+        136,
+        "documento",
+        "sglt2-glp1-dpp4-e-risco-de-fibrilacao-atrial-no-diabetes-tipo-2-metanalise-em-rede-2026"
+      ],
+      [
+        137,
+        "documento",
+        "descongestao-guiada-por-ultrassom-pulmonar-e-vexus-na-insuficiencia-cardiaca-linhas-b-congestao-subclinica-e-o-ensaio-icarus"
+      ],
+      [
+        137,
+        "documento",
+        "furosemida-subcutanea-descongestao-ambulatorial-na-insuficiencia-cardiaca"
+      ],
+      [
+        138,
+        "documento",
+        "estenose-aortica-baixo-fluxo-baixo-gradiente-fenotipos-diagnostico-diferencial-e-decisao"
+      ],
+      [
+        138,
+        "documento",
+        "doenca-valvar-multivalvar-estenose-aortica-regurgitacao-mitral-sequenciamento-intervencao"
+      ],
+      [
+        139,
+        "documento",
+        "cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao"
+      ],
+      [
+        139,
+        "documento",
+        "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025"
+      ],
+      [
+        139,
+        "documento",
+        "colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter"
+      ],
+      [
+        139,
+        "documento",
+        "ablacao-redo-na-fibrilacao-atrial-recorrente-reconexao-de-veias-pulmonares-e-timing-metanalise-2025"
+      ],
+      [
+        140,
+        "documento",
+        "aficamten-versus-metoprolol-monoterapia-cardiomiopatia-hipertrofica-obstrutiva-maple-hcm"
+      ],
+      [
+        140,
+        "documento",
+        "cardiomiopatia-hipertrofica-apical-fenotipo-diagnostico-diferencial-e-prognostico"
+      ],
+      [
+        141,
+        "documento",
+        "variabilidade-da-pressao-arterial-visita-a-visita-e-mapa-24h-como-preditor-independente-de-desfecho"
+      ],
+      [
+        141,
+        "documento",
+        "medida-de-pressao-arterial-sem-manguito-cuffless-evidencia-2025-2026"
+      ],
+      [
+        141,
+        "documento",
+        "pressao-arterial-central-aortica-versus-periferica-implicacao-prognostica"
+      ]
+    ],
+    "pending_md_note": "22 MD destinations absent from base c37+75, coordinated with frozen orphan MD review; do not publish before integration and validation."
+  }
+}

@@ -101,7 +101,7 @@ def _manifest(fingerprints, *, expected_total, inventory_sha256):
 
 
 class FullCorpusReleaseAuthorizationTests(unittest.TestCase):
-    def test_manifesto_real_vincula_exatamente_11581_revisados(self):
+    def test_manifesto_real_vincula_exatamente_12217_revisados(self):
         canonical, fingerprints = _repository_inventory()
 
         authorized, metadata = validate_full_corpus_authorization(
@@ -110,8 +110,8 @@ class FullCorpusReleaseAuthorizationTests(unittest.TestCase):
             fingerprints=fingerprints,
         )
 
-        self.assertEqual(sum(map(len, authorized.values())), 11_581)
-        self.assertEqual(metadata["authorized_total"], 11_581)
+        self.assertEqual(sum(map(len, authorized.values())), 12_217)
+        self.assertEqual(metadata["authorized_total"], 12_217)
         self.assertEqual(set(authorized), set(FRONT_SOURCES))
         self.assertTrue(all(
             fingerprint["count"] == fingerprint["reviewed_count"]

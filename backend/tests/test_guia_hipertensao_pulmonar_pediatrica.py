@@ -107,11 +107,13 @@ def test_referencias_tudo_com_tudo_resolvem_sem_inferencia_tematica():
         ("checklist", "manejo-da-falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo"),
         ("trilha", "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar"),
         ("trilha", "trilha-cardiopatia-congenita-hipertensao-pulmonar-associada-e-fechamento-por-dispositivo"),
+        ("estudo", "starts-2-sildenafila-sobrevida-hipertensao-pulmonar-pediatrica"),
     }
     targets = {
         "protocolo_emergencia": {item["slug"] for item in _records(EMERGENCIES)},
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "estudo": {item["slug"] for item in _records(ROOT / "estudos/metadados.json")},
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

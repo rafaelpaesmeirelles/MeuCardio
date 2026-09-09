@@ -1,11 +1,20 @@
 ---
-title: "Estenose Mitral: Diagnóstico e Manejo (ESC/EACTS 2025)"
+title: 'Estenose Mitral: Diagnóstico e Manejo (ESC/EACTS 2025)'
 slug: estenose-mitral-diagnostico-e-manejo-esc-eacts-2025
-theme: "Valvopatias"
+theme: Valvopatias
 kind: protocolo
 review_status: revisado
-source_refs: ["Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura 14 e Recommendation Table 8, texto integral obtido e conferido diretamente em 30/07/2026."]
-legacy_source: "Documento novo — a pasta Valvopatias já cobria estenose aórtica (TAVI vs. SAVR), regurgitação mitral (fluxograma) e insuficiência tricúspide (TRILUMINATE), mas não tinha nenhum documento dedicado à estenose mitral, apesar de ser a valvopatia mais associada à febre reumática (tema desta mesma sessão) e uma causa importante de morbimortalidade em países de baixa/média renda."
+source_refs:
+- 'Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur
+  Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — Seção 10 (Mitral stenosis), Figura
+  14 e Recommendation Table 8, texto integral obtido e conferido diretamente em 30/07/2026.'
+legacy_source: Documento novo — a pasta Valvopatias já cobria estenose aórtica (TAVI vs. SAVR), regurgitação mitral
+  (fluxograma) e insuficiência tricúspide (TRILUMINATE), mas não tinha nenhum documento dedicado à estenose mitral,
+  apesar de ser a valvopatia mais associada à febre reumática (tema desta mesma sessão) e uma causa importante de
+  morbimortalidade em países de baixa/média renda.
+review_note: 'Revisão independente de dependência em08/09/2026: Incluído limiar ≤1,5, exceção sintomática selecionada
+  acima1,5, contraindicações anatômicas/cirúrgicas faltantes e ritmo sinusal para ivabradina. Exceção tromboLAA
+  já correta.'
 ---
 
 # Estenose Mitral: Diagnóstico e Manejo (ESC/EACTS 2025)
@@ -28,14 +37,14 @@ A etiologia da estenose mitral (EM) é mais frequentemente reumática ou degener
 - **fonte**: escore conferido de forma independente contra múltiplas fontes secundárias concordantes de ecocardiografia (não é objeto de tabela numérica na diretriz ESC/EACTS 2025, que cita o escore por nome e por corte de decisão, remetendo à tabela suplementar S3 do próprio documento).
 
 ## Terapia médica
-Diuréticos, betabloqueadores, digoxina, bloqueadores de canal de cálcio não diidropiridínicos e ivabradina podem melhorar sintomas ao controlar sobrecarga de volume e frequência cardíaca. Anticoagulação com antagonista de vitamina K, com INR-alvo entre 2 e 3, é indicada em paciente com fibrilação atrial (FA) associada.
+Diuréticos, betabloqueadores, digoxina, bloqueadores de canal de cálcio não diidropiridínicos e ivabradina (somente em ritmo sinusal) podem melhorar sintomas ao controlar sobrecarga de volume e frequência cardíaca. Anticoagulação com antagonista de vitamina K, com INR-alvo entre 2 e 3, é indicada em paciente com fibrilação atrial (FA) associada.
 
 **Atenção — corte de área valvar para uso de DOAC**: DOACs devem ser evitados em paciente com EM e AVM ≤2,0 cm², segundo a evidência atual — corte que não é o mesmo usado para definir gravidade clínica da estenose (≤1,5 cm²). Restaurar ritmo sinusal (cardioversão ou ablação por cateter em veia pulmonar) tem baixa chance de sucesso em EM grave não tratada; se a FA for recente e o átrio esquerdo moderadamente aumentado, cardioversão pode ser tentada logo após intervenção bem-sucedida, ou em EM moderada combinada com amiodarona.
 
 Anticoagulação oral está indicada em ritmo sinusal após embolia sistêmica ou na presença de trombo em átrio esquerdo, e deve ser considerada quando o ecocardiograma transesofágico mostrar contraste espontâneo denso ou átrio esquerdo aumentado (diâmetro em modo-M >50 mm ou volume >60 mL/m²). Profilaxia de endocardite infecciosa é indicada conforme apropriado.
 
 ## Indicações de intervenção — comissurotomia percutânea versus cirurgia
-O tipo de tratamento (CMP ou cirurgia) e o momento devem ser decididos com base em características clínicas, anatomia da valva e do aparato subvalvular, e experiência local. Em geral, a indicação de intervenção deve se limitar a paciente com EM reumática clinicamente grave (AVM <1,5 cm²) em quem a CMP deve ter impacto significativo no desfecho clínico.
+O tipo de tratamento (CMP ou cirurgia) e o momento devem ser decididos com base em características clínicas, anatomia da valva e do aparato subvalvular, e experiência local. Em geral, a indicação de intervenção deve se limitar a paciente com EM reumática clinicamente grave (AVM ≤1,5 cm²) em quem a CMP deve ter impacto significativo no desfecho clínico.
 
 | Recomendação | Classe | Nível |
 |---|---|---|
@@ -48,12 +57,12 @@ O tipo de tratamento (CMP ou cirurgia) e o momento devem ser decididos com base 
 
 Fonte: Recommendation Table 8 da diretriz, texto integral conferido em 30/07/2026.
 
-**Contraindicações à CMP** (Tabela 8 da diretriz): AVM >1,5 cm²; trombo em átrio esquerdo (exceto trombo confinado ao apêndice atrial esquerdo, em que a CMP pode ser considerada em paciente com contraindicação a cirurgia ou sem necessidade urgente de intervenção, se a anticoagulação puder ser mantida com segurança por 1-3 meses e o ecocardiograma transesofágico repetido confirmar resolução do trombo); insuficiência mitral mais que leve; calcificação grave ou bicomissural.
+**Contraindicações à CMP** (Tabela 8 da diretriz): AVM >1,5 cm², ressalvada a consideração em paciente sintomático selecionado sem outra explicação para sintomas e com anatomia favorável; trombo em átrio esquerdo (exceto trombo confinado ao apêndice atrial esquerdo, em que a CMP pode ser considerada em paciente com contraindicação a cirurgia ou sem necessidade urgente de intervenção, se a anticoagulação puder ser mantida com segurança por 1-3 meses e o ecocardiograma transesofágico repetido confirmar resolução do trombo); insuficiência mitral mais que leve; calcificação grave ou bicomissural; ausência de fusão comissural; doença aórtica grave ou doença tricúspide combinada grave que exija cirurgia; DAC com indicação de cirurgia de revascularização.
 
 ## Casos clínicos particulares
 - **doença valvar múltipla**: exige avaliação abrangente pelo Heart Team e abordagem individualizada. Cirurgia é preferível à CMP em EM grave com doença aórtica grave associada, a menos que o risco cirúrgico seja alto. Em EM grave com doença aórtica moderada, a CMP pode ser realizada para postergar o tratamento cirúrgico de ambas as valvas.
 - **IT grave concomitante**: em caso de alto risco, CMP pode ser considerada em paciente selecionado, em ritmo sinusal, com aumento atrial moderado e IT secundária por hipertensão pulmonar pós-capilar. Fora desse cenário de alto risco, cirurgia das duas valvas é preferida.
-- **EM grave de baixo gradiente**: tratamento de EM grave com baixo gradiente (AVM <1,5 cm², gradiente médio <10 mmHg) é desafiador, porque esses pacientes costumam ser mais idosos e ter anatomia desfavorável.
+- **EM grave de baixo gradiente**: tratamento de EM grave com baixo gradiente (AVM ≤1,5 cm², gradiente médio <10 mmHg) é desafiador, porque esses pacientes costumam ser mais idosos e ter anatomia desfavorável.
 
 ## Seguimento
 Paciente assintomático com EM clinicamente grave sem intervenção deve ter seguimento anual por ecocardiograma transtorácico, com intervalo maior (2-3 anos) em estenose moderada. Após CMP, a área valvar e o gradiente médio pós-procedimento são parâmetros importantes que influenciam o desfecho clínico de longo prazo — o seguimento é necessário porque reestenose assintomática pode ocorrer. O envolvimento reumático progressivo de outras valvas deve ser avaliado periodicamente, independente da modalidade terapêutica. Educação e engajamento familiar são centrais no manejo da EM reumática, já que costuma afetar indivíduos jovens e mulheres em idade fértil.

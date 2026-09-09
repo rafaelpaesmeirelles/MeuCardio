@@ -1,0 +1,16 @@
+{
+  "batch": "grok-pr896-final-review-20260908",
+  "base": "c37de49b25446449b57cb5ecf7cdfad56cb1cf29",
+  "decision": "approved_for_publication",
+  "approval_basis": "Revisão científica focal autorizada; reconstrução de findings e adversarial. Gates finais centralizados obrigatórios.",
+  "source_heads": {
+    "pr896": "76fd33f81beccb55c09157144f7e0d1d5ea9d9d7"
+  },
+  "fronts": {
+    "documentos": [
+      "fluxograma-ambulatorial-pos-tmcs-destino",
+      "seguimento-ambulatorial-pos-tmcs-ponte-temporaria-quando-escalar",
+      "sinalizadores-ambulatoriais-pos-tmcs-sitio-vascular-ic-avancada"
+    ]
+  }
+}

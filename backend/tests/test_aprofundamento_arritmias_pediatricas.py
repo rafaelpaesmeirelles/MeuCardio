@@ -72,6 +72,10 @@ ALLOWED_ADD_KEYS = {
 }
 
 DOCUMENTOS_COMPARTILHADOS_COM_OUTRAS_FICHAS = {
+    # Sobreposições centrais com as fichas específicas de TSV/WPW.
+    "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+    "fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente",
+    "fluxograma-fibrilacao-atrial-pre-excitada-wpw-na-crianca-e-adolescente",
     "sindrome-do-qt-longo-congenita-na-crianca-escore-de-schwartz-genotipos-e-estratificacao-de-risco",
     "taquicardia-ventricular-polimorfica-catecolaminergica-cpvt-na-crianca-e-adolescente-genetica-diagnostico-e-tratamento",
     "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
