@@ -322,6 +322,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
   #root #corvia-login .login-gateway__brand strong { font-size: 2.1rem !important; }
   #root #corvia-login .login-gateway__brand small { margin-top: 5px !important; font-size: .56rem !important; }
   #root #corvia-login .login-gateway__universe { height: 200px !important; }
+  #root #corvia-login .login-gateway__core { top: 67% !important; }
   #root #corvia-login .login-gateway__footer {
     display: flex !important;
     margin-top: 4px !important;
@@ -342,7 +343,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
   #root #corvia-login .login-gateway__hero h1 { font-size: 2rem !important; line-height: 1 !important; }
   #root #corvia-login .login-gateway__hero > span { font-size: .72rem !important; line-height: 1.25 !important; }
   #root #corvia-login .login-gateway__universe { height: 150px !important; margin-top: 5px !important; }
-  #root #corvia-login .login-gateway__core { width: 72px !important; height: 82px !important; }
+  #root #corvia-login .login-gateway__core { top: 58% !important; width: 72px !important; height: 82px !important; }
   #root #corvia-login .login-gateway__space {
     width: 154px !important;
     min-height: 42px !important;
