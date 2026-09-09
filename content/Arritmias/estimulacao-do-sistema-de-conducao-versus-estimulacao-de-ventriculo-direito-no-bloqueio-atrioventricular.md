@@ -1,11 +1,25 @@
 ---
-title: "Estimulação do Sistema de Condução versus Estimulação de Ventrículo Direito no Bloqueio Atrioventricular"
+title: Estimulação do Sistema de Condução versus Estimulação de Ventrículo Direito no Bloqueio Atrioventricular
 slug: estimulacao-do-sistema-de-conducao-versus-estimulacao-de-ventriculo-direito-no-bloqueio-atrioventricular
-theme: "Arritmias"
+theme: Arritmias
 kind: estudo
 review_status: revisado
-source_refs: ["Curila K, Mizner J, Morava J, Smisek R, Vesela J, Sussenbek O, Stros P, Kupec J, Waldauf P, Leinveber P, Poviser L, Nagy L, Cerny J, Bitmanova B, Jurak P, Polasek R. Prospective randomized trial of conduction system pacing vs right ventricular pacing for patients with atrioventricular block; Prague CSP trial. Heart Rhythm. 2025;22(10):e894-e902. DOI: 10.1016/j.hrthm.2025.05.036. PMID: 40412596 — abstract lido na íntegra via PubMed nesta sessão", "Jastrzębski M, Kiełbasa G, Cano O, Curila K, Zanon F, Pestrea C, De Pooter J, Luermans J, Rademakers LM, Žižek D, Grieco D, Huybrechts W, Krisai P, Whinnett ZI, Moskal P, Valiton V, Navarrete-Navarro J, Stros P, Deluca F, Cicala E, Özpak E, Vernooy K, Burri H. Left bundle branch area pacing vs right ventricular pacing for atrioventricular block: the MELOS RELOADED study. Eur Heart J. 2026;47(13):1541-1550. DOI: 10.1093/eurheartj/ehaf699. PMID: 40977097. PMCID: PMC13043191 — abstract lido na íntegra via PubMed nesta sessão", "Daniyal SM, Meer KK, Javaid M, Sarwar M, Khalid A, Hassaan SM, Burhan M, Gul I, Khatoon NM, Asifa S, Ashraf DA, Rizvi A, Hassan IN, Fonarow GC. Conduction System Pacing Versus Right Ventricular Pacing in Atrioventricular Block: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. Pacing Clin Electrophysiol. 2026;49(6):733-741. DOI: 10.1111/pace.70229. PMID: 41891151 — abstract lido na íntegra via PubMed nesta sessão"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta tinha vários registros sobre QUANDO indicar marca-passo em doença de condução atrioventricular (bloqueio bifascicular, cardite de Lyme, Kearns-Sayre, distrofia miotônica tipo 1, fluxograma de bradicardia sintomática), mas nenhum sobre COMO estimular uma vez indicado o dispositivo — a escolha entre estimulação convencional do ápice de ventrículo direito (RVP) e estimulação do sistema de condução (marca-passo do feixe de His ou da região do ramo esquerdo, agrupados como CSP). Essa é uma mudança de prática ativa em 2024-2026, com o primeiro ensaio randomizado desenhado para desfecho clínico (Prague CSP, 2025) e o maior estudo de sobrevida já publicado (MELOS RELOADED, 2026) saindo quase simultaneamente — e os dois níveis de evidência ainda não concordam totalmente entre si."
+source_refs:
+- 'Curila K, Mizner J, Morava J, Smisek R, Vesela J, Sussenbek O, Stros P, Kupec J, Waldauf P, Leinveber P, Poviser L, Nagy
+  L, Cerny J, Bitmanova B, Jurak P, Polasek R. Prospective randomized trial of conduction system pacing vs right ventricular
+  pacing for patients with atrioventricular block; Prague CSP trial. Heart Rhythm. 2025;22(10):e894-e902. DOI: 10.1016/j.hrthm.2025.05.036.
+  PMID: 40412596 — abstract lido na íntegra via PubMed nesta sessão'
+- 'Jastrzębski M, Kiełbasa G, Cano O, Curila K, Zanon F, Pestrea C, De Pooter J, Luermans J, Rademakers LM, Žižek D, Grieco
+  D, Huybrechts W, Krisai P, Whinnett ZI, Moskal P, Valiton V, Navarrete-Navarro J, Stros P, Deluca F, Cicala E, Özpak E,
+  Vernooy K, Burri H. Left bundle branch area pacing vs right ventricular pacing for atrioventricular block: the MELOS RELOADED
+  study. Eur Heart J. 2026;47(13):1541-1550. DOI: 10.1093/eurheartj/ehaf699. PMID: 40977097. PMCID: PMC13043191 — abstract
+  lido na íntegra via PubMed nesta sessão'
+- 'Daniyal SM, Meer KK, Javaid M, Sarwar M, Khalid A, Hassaan SM, Burhan M, Gul I, Khatoon NM, Asifa S, Ashraf DA, Rizvi A,
+  Hassan IN, Fonarow GC. Conduction System Pacing Versus Right Ventricular Pacing in Atrioventricular Block: A Systematic
+  Review and Meta-Analysis of Randomized Controlled Trials. Pacing Clin Electrophysiol. 2026;49(6):733-741. DOI: 10.1111/pace.70229.
+  PMID: 41891151 — abstract lido na íntegra via PubMed nesta sessão'
+review_note: Conferidos ensaio, registro e metanálise; segurança sem diferença estatística não equivale a equivalência; removida
+  primazia não demonstrada e corrigida atribuição da fluoroscopia.
 ---
 
 # Estimulação do Sistema de Condução versus Estimulação de Ventrículo Direito no Bloqueio Atrioventricular
@@ -27,7 +41,7 @@ Curila K et al., Heart Rhythm. 2025;22(10):e894-e902 (PMID 40412596). Randomizad
 Jastrzębski M et al., Eur Heart J. 2026;47(13):1541-1550 (PMID 40977097). Estudo multicêntrico europeu **baseado em registro** (não randomizado), pacientes com BAV, FEVE >40% e necessidade de estimulação ventricular >20% do tempo:
 - **3.382 pacientes pareados por escore de propensão** 1:1 entre RVP e LBBAP
 - **Desfecho primário**: mortalidade por todas as causas, via registros nacionais
-- Em **4 anos de seguimento**, diferença absoluta de sobrevida de **11,8% a favor do LBBAP** (curva de Kaplan-Meier, p<0,001)
+- Em **4 anos de seguimento**, diferença absoluta de sobrevida de **11,8 pontos percentuais a favor do LBBAP** (curva de Kaplan-Meier, p<0,001)
 - **LBBAP associado a HR 0,53 (IC95% 0,42-0,65; p<0,001)** para mortalidade, em modelo de Cox multivariável
 - **Dentro do grupo LBBAP**, preditores independentes de maior mortalidade: **ausência de captura confirmada do ramo esquerdo** (HR 1,85; p<0,001), menor percentual de estimulação ventricular (HR 1,12), e idade
 - Os próprios autores descrevem como **"o primeiro grande estudo a demonstrar benefício de sobrevida em longo prazo do LBBAP"**, mas qualificam a conclusão como válida **"enquanto se aguardam os resultados de ensaios randomizados"** — reconhecimento explícito de que o desenho é observacional, sujeito a confundimento residual mesmo após pareamento
@@ -40,16 +54,16 @@ Daniyal SM et al., Pacing Clin Electrophysiol. 2026;49(6):733-741 (PMID 41891151
 - **Complicações relacionadas a dispositivo/eletrodo**: sem diferença significativa entre CSP e RVP (RR 1,35; IC95% 0,28-6,63; p=0,71)
 
 ## O que isso muda na pratica
-- **O benefício em função ventricular e QRS estreito já tem lastro consistente em ensaios randomizados** — CSP preserva melhor a FEVE que RVP, com segurança procedural comparável, ao custo de maior tempo de sala e fluoroscopia
-- **O benefício de sobrevida ainda não tem confirmação randomizada** — o sinal do MELOS RELOADED (HR 0,53) é grande e vem de uma amostra bem maior (3.382 vs. 249 pacientes) que qualquer ensaio randomizado disponível até a data desta busca, mas é observacional; o Prague CSP, o único RCT com desfecho clínico composto, não atingiu significância (p=0,15) numa amostra proporcionalmente pequena para esse tipo de desfecho
+- **O benefício em função ventricular e QRS estreito já tem lastro consistente em ensaios randomizados** — CSP preserva melhor a FEVE que RVP, sem diferença estatística de complicações nas amostras estudadas, ao custo de maior tempo de sala e fluoroscopia; os intervalos de confiança amplos não demonstram equivalência de segurança
+- **O benefício de sobrevida ainda não tem confirmação randomizada** — o sinal do MELOS RELOADED (HR 0,53) é grande e vem de uma amostra bem maior (3.382 vs. 249 pacientes) que qualquer ensaio randomizado disponível até a data desta busca, mas é observacional; o Prague CSP, que também avaliou um desfecho clínico composto, não atingiu significância (p=0,15) numa amostra proporcionalmente pequena para esse tipo de desfecho
 - **A confirmação de captura do ramo esquerdo importa** — dentro do próprio grupo LBBAP do MELOS RELOADED, não confirmar a captura associou-se a quase o dobro de mortalidade (HR 1,85); isso sugere que parte do benefício populacional de LBBAP pode depender de verificação eletrocardiográfica/eletrofisiológica rigorosa da captura, não apenas da posição anatômica do eletrodo
-- **CSP tem custo procedural real** — tempo de procedimento e de fluoroscopia consistentemente maiores nas três fontes; a decisão de oferecer CSP de rotina depende também de curva de aprendizado e recursos locais, não só do benefício esperado
+- **CSP tem custo procedural real** — tempo de procedimento maior no ensaio e na metanálise, com fluoroscopia também maior no Prague CSP; a decisão de oferecer CSP de rotina depende também de curva de aprendizado e recursos locais, não só do benefício esperado
 
 ## Armadilhas clinicas
 - **Apresentar o HR 0,53 de mortalidade do MELOS RELOADED como se viesse de um ensaio randomizado** — é um estudo de registro com pareamento por escore de propensão; os próprios autores dizem que a confirmação randomizada ainda está pendente
 - **Concluir que CSP "não mostrou benefício clínico" a partir do Prague CSP isoladamente** — o desfecho composto não atingiu significância, mas a amostra (249 pacientes, poucos eventos: 4 vs. 9) não tinha poder estatístico para desfecho clínico duro; o estudo foi desenhado e teve poder para o desfecho primário de função ventricular, que foi positivo
 - **Tratar todo CSP como equivalente** — o braço CSP do Prague CSP incluiu LBBAP, estimulação do feixe de His e estimulação septal profunda; a maior parte da evidência mais recente (MELOS RELOADED) é especificamente sobre LBBAP, não sobre His
-- **Ignorar a maior duração de procedimento e fluoroscopia ao planejar a agenda ou consentir o paciente** — diferença de dezenas de minutos e mais que o dobro do tempo de fluoroscopia em relação a RVP, replicada em ensaio randomizado e em metanálise
+- **Ignorar a maior duração de procedimento e fluoroscopia ao planejar a agenda ou consentir o paciente** — o Prague CSP encontrou 63 versus 40 minutos de procedimento e 7 versus 3 minutos de fluoroscopia; a metanálise confirmou maior tempo de procedimento
 
 ## Tudo com Tudo
 - [Bloqueio Bifascicular e Risco de Progressão para Bloqueio Atrioventricular Total](/biblioteca/bloqueio-bifascicular-e-risco-de-progressao-para-bloqueio-atrioventricular-total) — cobre quando a progressão para BAV total indica marca-passo; este documento cobre a técnica de estimulação escolhida uma vez indicado

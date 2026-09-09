@@ -1,17 +1,34 @@
 ---
-title: "CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T"
-slug: cart-7-escore-de-estratificacao-de-risco-cardiovascular-basal-para-terapia-car-t
-theme: "Cardio-oncologia"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta já cobre a cardiotoxicidade
+  de CAR-T mediada por síndrome de liberação de citocinas (incidência agrupada de
+  arritmia/IC/cardiomiopatia/SCA/parada cardíaca durante ou logo após a infusão) e
+  a graduação ASTCT da própria síndrome de liberação de citocinas. Faltava um documento
+  sobre o outro lado do mesmo problema: quais fatores, medidos ANTES da infusão, predizem
+  esse risco — e a ferramenta de escore que os agrupa, publicada em 2026, ainda não
+  estava incorporada ao acervo.'
+published: true
+review_note: Resumo CART-7 e ESC 2022 conferidos; corrigidos 12 estudos e limites
+  de confusão. Publicação restrita a resumo crítico, sem pesos não verificados, calculadora
+  ou protocolo de triagem validado.
 review_status: revisado
-source_refs: ["Farmakis D, Karampinos KI, Cordoba R, López-Fernández T, Filippatos G. Predictive Factors and Baseline Risk Stratification for CAR-T Cell Therapy-Related Cardiovascular Toxicity. Eur J Haematol. 2026;116(1):54-65. Epub 2025 Oct 7. DOI: 10.1111/ejh.70040. PMID: 41058225 — abstract lido na íntegra via PubMed E-utilities"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta já cobre a cardiotoxicidade de CAR-T mediada por síndrome de liberação de citocinas (incidência agrupada de arritmia/IC/cardiomiopatia/SCA/parada cardíaca durante ou logo após a infusão) e a graduação ASTCT da própria síndrome de liberação de citocinas. Faltava um documento sobre o outro lado do mesmo problema: quais fatores, medidos ANTES da infusão, predizem esse risco — e a ferramenta de escore que os agrupa, publicada em 2026, ainda não estava incorporada ao acervo."
+slug: cart-7-escore-de-estratificacao-de-risco-cardiovascular-basal-para-terapia-car-t
+source_refs:
+- 'Farmakis D, Karampinos KI, Cordoba R, López-Fernández T, Filippatos G. Predictive
+  Factors and Baseline Risk Stratification for CAR-T Cell Therapy-Related Cardiovascular
+  Toxicity. Eur J Haematol. 2026;116(1):54-65. Epub 2025 Oct 7. DOI: 10.1111/ejh.70040.
+  PMID: 41058225 — abstract lido na íntegra via PubMed E-utilities'
+- 'ESC Guidelines on cardio-oncology 2022, seção 5.5.15. DOI: 10.1093/eurheartj/ehac244.'
+theme: Cardio-oncologia
+title: 'CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia
+  CAR-T'
 ---
 
 # CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T
 
-## O que este documento acrescenta ao que já existe sobre CAR-T
-O documento já existente sobre cardiotoxicidade de CAR-T nesta pasta descreve o que acontece **durante e logo depois** da infusão — a incidência agrupada de arritmia (54%), insuficiência cardíaca (30%), cardiomiopatia (20%), síndrome coronariana aguda (10%) e parada cardíaca (7%) entre os pacientes que desenvolvem evento cardiovascular, mediada pela síndrome de liberação de citocinas (SLC). Este documento trata da pergunta anterior a essa, feita **antes de o paciente ser submetido à infusão**: quais condições cardiovasculares basais aumentam a chance de um desses eventos acontecer, e como agrupá-las numa ferramenta prática de estratificação de risco.
+## Objetivo
+
+Resumo crítico dos fatores basais associados à toxicidade cardiovascular por CAR-T e do escore proposto CART-7. Este documento não implementa calculadora nem permite obter uma pontuação individual.
 
 ## O estudo: metanálise para construir um escore (Farmakis 2026)
 Farmakis D et al., *European Journal of Haematology*. 2026;116(1):54-65, publicado online em 07/10/2025 (PMID 41058225), grupo de cardio-oncologia de Atenas em colaboração com centros de Madri. Metanálise de estudos comparando achados clínicos, de biomarcador, ecocardiográficos e de tratamento farmacológico basais entre pacientes que desenvolveram evento adverso cardiovascular (EACV) relacionado a CAR-T e os que não desenvolveram, usando os riscos relativos (RR) agrupados dos preditores significativos para construir um escore de estratificação de risco.
@@ -39,21 +56,21 @@ Os sete fatores acima foram incorporados a um escore de predição chamado **CAR
 - **18-25**: risco alto
 - **26-33**: risco muito alto
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: o resumo publicado no PubMed não detalha a pontuação individual atribuída a cada um dos sete fatores dentro do intervalo de 0 a 33 — só o risco relativo agrupado de cada fator e as quatro faixas finais de classificação. Para aplicar o CART-7 com a pontuação exata por fator, é necessário consultar a tabela completa no artigo original (*Eur J Haematol*. 2026;116(1):54-65).
+A pontuação individual dos fatores não foi verificada no texto completo e não é fornecida aqui. Não reconstruir pesos a partir dos riscos relativos agrupados.
 
 ## Status de validação, segundo os próprios autores
-Os autores classificam o CART-7 como um escore **derivado**, ainda **não validado prospectivamente** — a conclusão do próprio artigo é explícita: *"further validation of the resulting CART-7 score is warranted to support its clinical use in baseline CV risk stratification for patients undergoing CAR-T cell therapy"*. Ou seja, o escore nasce de uma metanálise de estudos observacionais heterogêneos (12 estudos, populações e desenhos diferentes), e ainda precisa de confirmação numa coorte prospectiva e independente antes de ser adotado como ferramenta de decisão clínica isolada.
+Os autores classificam o CART-7 como um escore **derivado**, ainda **não validado prospectivamente** — os autores solicitam validação adicional. Assim, o escore nasce de uma metanálise de estudos observacionais heterogêneos (12 estudos, populações e desenhos diferentes), e ainda precisa de confirmação numa coorte prospectiva e independente antes de ser adotado como ferramenta de decisão clínica isolada.
 
 ## Onde isso se encaixa na prática
-- **Complementa, não substitui, a avaliação basal já recomendada pela ESC 2022** (biomarcador — troponina e BNP/NT-proBNP —, ECG e ecocardiograma basais, já documentada nesta pasta) — o CART-7 organiza os fatores de risco clínico que devem orientar a intensidade dessa vigilância basal, não troca os exames pela pontuação.
+- **Complementa, não substitui, a avaliação basal já recomendada pela ESC 2022** (ECG, troponina e peptídeos natriuréticos basais para todos; considerar ecocardiograma, especialmente em doença ou fatores de risco cardiovascular prévios) — o CART-7 propõe organizar fatores clínicos, mas sua utilidade para escolher a intensidade da vigilância requer validação, não troca os exames pela pontuação.
 - Um paciente com **insuficiência cardíaca ou fibrilação atrial prévias** — os dois fatores de maior peso no CART-7 — é candidato a avaliação cardiológica mais detalhada e a vigilância mais próxima durante e após a infusão, independentemente da faixa final de pontuação.
-- Serve como ferramenta de **triagem pré-CAR-T** para direcionar o paciente de risco alto/muito alto a acompanhamento conjunto com cardio-oncologia desde antes da infusão, em vez de reagir somente quando a síndrome de liberação de citocinas já estiver instalada.
+- Serve como ferramenta de **pesquisa sobre estratificação pré-CAR-T** para direcionar o paciente de risco alto/muito alto a acompanhamento conjunto com cardio-oncologia desde antes da infusão, em vez de reagir somente quando a síndrome de liberação de citocinas já estiver instalada.
 
 ## Limites
-- **Sete estudos observacionais heterogêneos combinados**, com diferentes definições de EACV, diferentes populações (predominantemente CD19, mas não exclusivamente) e diferentes tempos de seguimento — metanálise de estudos observacionais está sujeita a viés de confusão residual que uma coorte prospectiva desenhada para o escore não teria.
+- **Doze estudos combinados**, com diferentes definições de EACV, diferentes populações (predominantemente CD19, mas não exclusivamente) e diferentes tempos de seguimento — metanálise de estudos observacionais está sujeita a viés de confusão residual que também pode persistir em uma coorte prospectiva.
 - **Pontuação individual de cada fator dentro do intervalo 0-33 não está disponível no resumo indexado no PubMed** — descrito como lacuna explícita acima, não fabricado.
 - **Escore ainda não validado prospectivamente**, palavra dos próprios autores — não deve ser usado, nesta fase, como critério isolado para negar ou postergar terapia CAR-T, que costuma ser indicada em contexto de doença hematológica refratária sem alternativa terapêutica equivalente.
-- O estudo não estratifica o risco por **produto de CAR-T específico** (diferentes construtos têm diferentes perfis de incidência e gravidade de síndrome de liberação de citocinas) nem pela **gravidade da própria SLC**, que é o mediador mecanístico mais provável entre o fator de risco basal e o evento cardiovascular.
+- O resumo não fornece estratificação operacional por **produto de CAR-T específico** (diferentes construtos têm diferentes perfis de incidência e gravidade de síndrome de liberação de citocinas) ou pela **gravidade da própria SLC**, que é o mediador mecanístico mais provável entre o fator de risco basal e o evento cardiovascular.
 
 ## Armadilhas clínicas
 - Usar o CART-7 como critério único para excluir um paciente de terapia CAR-T — o escore é uma ferramenta de estratificação de vigilância, não um critério validado de elegibilidade, e a alternativa terapêutica em doença hematológica refratária costuma ser limitada.

@@ -1,27 +1,51 @@
 ---
-title: "Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica: Corredores de Realce Tardio e Genótipo de Alto Risco"
-slug: estratificacao-de-risco-arritmico-na-cardiomiopatia-dilatada-nao-isquemica-corredores-de-realce-tardio-e-genotipo-de-alto-risco
-theme: "Arritmias"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta já cobria estratificação
+  de risco de morte súbita por etiologia na diretriz ESC 2022 (arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md,
+  geral, todas as etiologias) e cardiomiopatia arritmogênica especificamente (critérios
+  de Padua/Task Force, calculadora por genótipo). Faltava o documento que aborda a
+  lacuna mais citada da diretriz de 2022 nesse tema — a estratificação de risco arrítmico
+  na cardiomiopatia dilatada NÃO isquêmica além do corte binário de FEVE ≤35%, com
+  o estudo mais recente e de maior porte publicado sobre o assunto (Circulation, 08/09/2026,
+  publicado no dia desta redação).
+published: true
+review_note: Resumo Circulation conferido; removidas exclusividade do corte FE e lista
+  de genes atribuída sem fonte ao estudo; corrigida FE>35 para exclusão indevida,
+  seleção por exames e limite de discriminação versus utilidade terapêutica.
 review_status: revisado
-source_refs: ["Ramos-López N, Mora-Ayestarán N, Ochoa JP, Claver E, Gómez González C, Poel E, García Monsalvo M, Casas G, Muñoz-Esparza C, Basurte-Elorz MT, Larrañaga-Moreira JM, García-Pinilla JM, Mogollón Jiménez MV, Cabezón Villalba G, Espejo Bares V, Ruiz-Cueto M, López-Abel B, García-Álvarez A, Climent-Payá V, Tirón C, Cabrera-Borrego E, Peña-Peña ML, Ripoll-Vera T, Zorio E, Sanaú J, Rodríguez González E, Bezzina CR, Gallego Delgado M, Rodríguez-Palomares JF, di Marco A, Espinosa Castro MÁ, Amin AS, Garcia-Pavia P, Mirelis JG. Arrhythmic Risk Stratification According to LGE Corridors and Genetics in Nonischemic Dilated Cardiomyopathy. Circulation. 2026 Sep 8. DOI: 10.1161/CIRCULATIONAHA.126.080608. PMID: 42708210 — coorte multicêntrica europeia (22 centros), 925 pacientes com cardiomiopatia dilatada não isquêmica, teste genético e ressonância cardíaca sistemáticos, seguimento mediano de 5,4 anos; abstract lido na íntegra via PubMed nesta sessão"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta já cobria estratificação de risco de morte súbita por etiologia na diretriz ESC 2022 (arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md, geral, todas as etiologias) e cardiomiopatia arritmogênica especificamente (critérios de Padua/Task Force, calculadora por genótipo). Faltava o documento que aborda a lacuna mais citada da diretriz de 2022 nesse tema — a estratificação de risco arrítmico na cardiomiopatia dilatada NÃO isquêmica além do corte binário de FEVE ≤35%, com o estudo mais recente e de maior porte publicado sobre o assunto (Circulation, 08/09/2026, publicado no dia desta redação)."
+slug: estratificacao-de-risco-arritmico-na-cardiomiopatia-dilatada-nao-isquemica-corredores-de-realce-tardio-e-genotipo-de-alto-risco
+source_refs:
+- 'Ramos-López N, Mora-Ayestarán N, Ochoa JP, Claver E, Gómez González C, Poel E,
+  García Monsalvo M, Casas G, Muñoz-Esparza C, Basurte-Elorz MT, Larrañaga-Moreira
+  JM, García-Pinilla JM, Mogollón Jiménez MV, Cabezón Villalba G, Espejo Bares V,
+  Ruiz-Cueto M, López-Abel B, García-Álvarez A, Climent-Payá V, Tirón C, Cabrera-Borrego
+  E, Peña-Peña ML, Ripoll-Vera T, Zorio E, Sanaú J, Rodríguez González E, Bezzina
+  CR, Gallego Delgado M, Rodríguez-Palomares JF, di Marco A, Espinosa Castro MÁ, Amin
+  AS, Garcia-Pavia P, Mirelis JG. Arrhythmic Risk Stratification According to LGE
+  Corridors and Genetics in Nonischemic Dilated Cardiomyopathy. Circulation. 2026
+  Sep 8. DOI: 10.1161/CIRCULATIONAHA.126.080608. PMID: 42708210 — coorte multicêntrica
+  europeia (22 centros), 925 pacientes com cardiomiopatia dilatada não isquêmica,
+  teste genético e ressonância cardíaca sistemáticos, seguimento mediano de 5,4 anos;
+  abstract lido na íntegra via PubMed nesta sessão'
+theme: Arritmias
+title: 'Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica:
+  Corredores de Realce Tardio e Genótipo de Alto Risco'
 ---
 
 # Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica: Corredores de Realce Tardio e Genótipo de Alto Risco
 
-## O problema que este estudo endereça
-A estratificação de risco de morte súbita na cardiomiopatia dilatada não isquêmica (CMDNI) segue apoiada, na prática clínica e nas diretrizes, principalmente no corte de **fração de ejeção do ventrículo esquerdo (FEVE) ≤ 35%** para indicar cardiodesfibrilador implantável (CDI) em prevenção primária — o mesmo corte, historicamente derivado sobretudo de população isquêmica, extrapolado para uma etiologia com fisiopatologia distinta. É um critério com discriminação reconhecidamente modesta: parte relevante dos eventos arrítmicos maiores em CMDNI ocorre em pacientes com FEVE acima de 35%, e parte dos pacientes com FEVE ≤ 35% nunca desenvolve arritmia ventricular maligna. O realce tardio de gadolínio (RTG) na ressonância cardíaca e o teste genético já vinham sendo estudados isoladamente como marcadores de risco adicionais — este estudo é o primeiro, na escala apresentada, a testar se **corredores de condução dentro do RTG** (canais de miocárdio viável entretecidos por fibrose, o substrato estrutural do circuito de reentrada) combinados com **genótipo de alto risco (HRG)** melhoram a discriminação de forma aditiva.
+## Pergunta clínica
+A FEVE é um componente da estratificação arrítmica na cardiomiopatia dilatada não isquêmica, mas não resume todas as indicações de CDI. O estudo avalia se corredores de realce tardio e genótipos de alto risco acrescentam informação prognóstica ao limiar isolado de FEVE ≤35%. Não testa uma estratégia de implante de CDI.
 
 ## Desenho e população
 Ramos-López N et al., Circulation. 2026 (PMID 42708210), publicado em 08/09/2026.
 
-- **Coorte multicêntrica de 22 centros europeus**, pacientes consecutivos com CMDNI submetidos a **teste genético e ressonância cardíaca com RTG** de forma sistemática
+- **Coorte multicêntrica de 22 centros europeus**, pacientes consecutivos com CMDNI que haviam realizado **teste genético e ressonância cardíaca com RTG**; essa seleção pode limitar generalização
 - **925 pacientes**, idade média 54,5 anos (intervalo interquartil 43,7-63,9), **64% homens**
 - **FEVE média 37,6%** (intervalo interquartil 26,9%-44,8%)
 - **RTG presente em 24,3%** da coorte
 - **Corredores de RTG presentes em 160 pacientes (17,3%)**
-- **Genótipo de alto risco (HRG — genes como LMNA, FLNC, RBM20, PLN e desmossômicos, conforme a era pós-ESC 2023) em 119 pacientes (12,9%)**
+- **Genótipo de alto risco (HRG, conforme classificação dos autores) em 119 pacientes (12,9%)**
 - **Seguimento mediano de 5,4 anos** (intervalo interquartil 3,3-7,7)
 - **Desfecho primário: evento arrítmico ventricular maior (MVA)**
 
@@ -35,13 +59,13 @@ Ramos-López N et al., Circulation. 2026 (PMID 42708210), publicado em 08/09/202
   - Área sob a curva dependente do tempo em 5 anos: **0,72** (IC95% 0,65-0,78) com o algoritmo multiparamétrico **vs. 0,57** (IC95% 0,51-0,64) com o corte isolado de FEVE ≤35% (p=0,001)
   - **Aumento progressivo do risco arrítmico** através das categorias do algoritmo (teste de Gray, p<0,001), permitindo classificação de risco clinicamente significativa
 
-## Conclusão literal dos autores
-"Corredores de RTG e genótipos de alto risco fornecem valor aditivo para a estratificação de risco arrítmico em pacientes com cardiomiopatia dilatada não isquêmica. Estes achados apoiam a predição multiparamétrica de MVA sobre o limiar tradicional de FEVE ≤35%."
+## Interpretação
+As duas medidas forneceram informação prognóstica adicional nesta amostra. Discriminação estatística não demonstra benefício de tratar segundo o algoritmo.
 
 ## O que isso muda na prática — e o que ainda não muda
-- **A FEVE isolada, sobretudo o corte binário ≤35%, tem discriminação estatisticamente inferior** (AUC 0,57, próxima do acaso) à de um modelo que combina RTG, contagem de corredores e genótipo (AUC 0,72) — é a evidência quantitativa mais direta já publicada de que esse corte único subestima e superestima risco de forma relevante em CMDNI
-- **A avaliação completa exige as duas frentes**: ressonância cardíaca com protocolo capaz de identificar e quantificar corredores dentro do RTG (não apenas relatar presença/ausência de RTG) **e** teste genético — nenhuma das duas isoladamente reproduz a discriminação do modelo combinado
-- **O teste genético para os genes de alto risco (LMNA, FLNC, RBM20, PLN, desmossômicos) já é recomendação de diretriz** (ESC 2023) na avaliação inicial da cardiomiopatia dilatada — este estudo reforça o motivo, ligando o genótipo diretamente ao risco arrítmico mensurável, não apenas ao diagnóstico etiológico
+- **A FEVE isolada, sobretudo o corte binário ≤35%, tem discriminação estatisticamente inferior** (AUC 0,57, próxima do acaso) à de um modelo que combina RTG, contagem de corredores e genótipo (AUC 0,72) — é uma comparação dentro desta coorte, sem estabelecer superioridade universal sobre a avaliação clínica completa
+- **A reprodução do modelo requer seus componentes**: ressonância cardíaca com protocolo capaz de identificar e quantificar corredores dentro do RTG (não apenas relatar presença/ausência de RTG) **e** teste genético — nenhuma das duas isoladamente reproduz a discriminação do modelo combinado
+- **A classificação de genótipo deve respeitar a variante e os critérios do estudo**, não apenas o nome do gene. O resumo não detalha a lista operacional completa; este documento não implementa o algoritmo.
 - **Este é um estudo de associação e discriminação estatística, não um ensaio randomizado que teste se indicar CDI pelo novo algoritmo reduz mortalidade** em comparação com o critério de FEVE isolada — a mudança de indicação de CDI baseada nesses cortes ainda não foi validada prospectivamente como estratégia terapêutica
 
 ## Limites
@@ -52,8 +76,12 @@ Ramos-López N et al., Circulation. 2026 (PMID 42708210), publicado em 08/09/202
 - Não há, no abstract disponível nesta sessão, detalhamento de quantos dos 95 eventos foram morte súbita/parada cardiorrespiratória versus TV sustentada tratada por CDI sem repercussão hemodinâmica maior — a composição exata do desfecho MVA precisa ser conferida no texto completo por quem for usar este achado para decisão individual de implante
 
 ## Armadilhas clínicas
-- **Usar FEVE ≤35% como critério único e suficiente para descartar risco arrítmico relevante em CMDNI** — a discriminação isolada desse corte (AUC 0,57) é próxima do acaso nesta coorte
-- **Tratar "presença de RTG" e "corredores de RTG" como sinônimos** — o achado central do estudo é que a *contagem* de corredores (≥4) discrimina risco, não a simples presença de fibrose
+- **Usar FEVE >35% isoladamente para descartar risco arrítmico relevante em CMDNI** — a discriminação isolada desse corte (AUC 0,57) é próxima do acaso nesta coorte
+- **Tratar "presença de RTG" e "corredores de RTG" como sinônimos** — o achado central do estudo é que a *contagem* de corredores (≥4) discrimina risco, além da presença e extensão de fibrose, que não perdem seu valor prognóstico por esse resultado
 - **Solicitar teste genético só quando já há suspeita de canalopatia ou cardiomiopatia hereditária "clássica"** — este estudo reforça que o genótipo de alto risco tem valor prognóstico arrítmico independente também na CMDNI de apresentação inespecífica
 - **Extrapolar este algoritmo diretamente para decisão de implante de CDI fora do contexto de pesquisa** sem considerar que a validação prospectiva de que essa estratégia reduz eventos clínicos duros (morte, choque apropriado) ainda não está estabelecida — é estratificação de risco com melhor discriminação estatística, não ainda uma indicação terapêutica validada por ensaio clínico
-- **Confundir esta coorte de CMDNI genérica com a cardiomiopatia arritmogênica de ventrículo direito/biventricular**, já coberta em profundidade nos documentos desta pasta (`cardiomiopatia-arritmogenica-criterios-de-padua-2020-e-task-force-revisada-de-2010.md` e `calculadora-de-risco-da-cardiomiopatia-arritmogenica-desempenho-por-genotipo.md`) — são entidades e algoritmos de risco distintos, com sobreposição parcial apenas nos genes desmossômicos
+- **Confundir esta coorte de CMDNI genérica com a cardiomiopatia arritmogênica de ventrículo direito/biventricular**, já coberta em profundidade nos documentos desta pasta ([Cardiomiopatia Arritmogênica: Critérios da Task Force Revisada de 2010 e a Atualização de Padua 2020](/biblioteca/cardiomiopatia-arritmogenica-criterios-de-padua-2020-e-task-force-revisada-de-2010) e [Calculadora de Risco da Cardiomiopatia Arritmogênica: Desempenho Genótipo-Dependente e o Limite da RM com Realce Tardio](/biblioteca/calculadora-de-risco-da-cardiomiopatia-arritmogenica-desempenho-por-genotipo)) — são entidades e algoritmos de risco distintos, com sobreposição parcial apenas nos genes desmossômicos
+
+## Conteúdo clínico relacionado
+
+- [CDI Profilático na Cardiomiopatia Não Isquêmica: o Ensaio DANISH](/biblioteca/cdi-profilatico-na-cardiomiopatia-nao-isquemica-o-ensaio-danish)
