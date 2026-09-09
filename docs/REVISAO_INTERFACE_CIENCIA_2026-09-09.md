@@ -10,6 +10,7 @@
 - Página da timeline usa seleção compacta de tema e contraste adequado em ambos os temas.
 - Chat e Emergência ficam em área reservada do dock, fora dos painéis de leitura. No mobile, o espaço ativo continua acessível pela navegação, liberando espaço no dock para os controles.
 - Paleta global clara alinhada ao login aprovado: azul-gelo/ciano, texto azul-petróleo e painéis azuis suaves. Variáveis compartilhadas com o login; removidos banhos de rosa/lavanda de fundos. Ícones e estados semânticos mantêm suas cores.
+- Corrigido o enquadramento de “O que é” dentro de “Definição clínica” na busca. A altura de 100% fica restrita aos cartões da grade; o quadro aninhado passa a acompanhar seu conteúdo e respeitar o cabeçalho e as bordas do painel.
 
 ## Verificação
 
@@ -19,6 +20,7 @@
 - Conferência em 1440 × 900, 390 × 844 e 360 × 740, temas claro e escuro. A área útil termina antes do dock; sem sobreposição dos atalhos ou linha no painel. Dia e hora permanecem dentro da largura móvel.
 - Abertura e fechamento do Chat pelo dock conferidos. Os horários fictícios de 10/09 08:00 e saída 07:28 refletem 22 minutos de rota e 10 minutos de margem.
 - Nenhuma suíte CI/backend executada.
+- Correção do quadro “O que é”: build Vite aprovado e limites conferidos com texto fictício longo nos temas claro/escuro em 1440 × 900 e 390 × 844. O quadro preservou 17 px (desktop) e 15,39 px (mobile) até a borda inferior, sem invadir a seção seguinte e sem transbordamento horizontal.
 - Imagens realistas: TypeScript e build aprovados após a substituição; cinco imagens carregadas em cada tema, sem transbordamento horizontal em 1440 × 900 e 390 × 844. Dez arquivos somam 655 KB, com 298–356 KB por tema, aproximadamente.
 
 Publicação agrupada com o conteúdo científico após sua revisão, conforme pedido do usuário.
