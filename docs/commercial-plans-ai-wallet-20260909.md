@@ -35,7 +35,7 @@ A medição alcança SDKs OpenAI/Anthropic, Responses HTTP, streaming, ferrament
 
 Recuperação semântica, indexação comum e trabalho editorial têm centros institucionais próprios, separados do saldo do assinante. O limite inicial configurável é R$100 por centro/mês. O Tudo com Tudo não debita a carteira individual por busca.
 
-Heart Team apresenta orçamento antes da execução; a confirmação e o teto aceito acompanham o trabalho até o worker. A cotação expira e depende do conteúdo do caso. Reabrir conteúdo já produzido não gera nova chamada ao provedor.
+Heart Team e documentos particulares apresentam orçamento antes da execução; a confirmação e o teto aceito acompanham o trabalho até o worker. A cotação expira e depende do conteúdo do caso. Reabrir conteúdo já produzido não gera nova chamada ao provedor.
 
 ## Validação e publicação
 
@@ -46,14 +46,22 @@ Validações locais concluídas em ambiente isolado:
 - Cobrança e direitos: 27 testes iniciais, dois cenários complementares e dois testes finais de proporcionalidade/cancelamento.
 - Carteira: reservas concorrentes, liquidação, saldo, estornos e ciclos; dois testes finais de upgrade proporcional e renovação integral.
 - Recargas: sete testes, incluindo webhook com assinatura real e objetos reais do SDK Stripe, com transporte simulado.
-- Instrumentação: 22 testes; Heart Team: 20 testes.
-- Frontend: 18 testes e verificação TypeScript aprovados.
+- Instrumentação: 22 testes; Heart Team: 20 testes; orçamento de documentos: 12 testes, incluindo execução real em threadpool com transporte simulado.
+- Frontend: 18 testes iniciais, quatro novos testes de orçamento de documentos e verificação TypeScript aprovados. Dez testes do tema claro, contraste e cobertura das 76 rotas passaram na integração complementar.
 - Migration aplicada em PostgreSQL isolado; sintaxe Python e diferenças verificadas.
 
 A publicação segue os gates do repositório. Este registro documenta a implementação e os testes locais; a presença no GitHub não comprova implantação em produção.
 
 ## Revisão pré-lançamento
 
-Concluir a apresentação de orçamento prévio na interface de documentos particulares (o controle financeiro no servidor já se aplica); confirmar preços e franquia com consumo real por função/modelo; avaliar experiência das reservas conservadoras; conferir taxas de pagamento, câmbio, custo e limites do Mail/WhatsApp; reconciliar webhooks de pagamentos e estornos; confirmar configurações dos provedores e saldo; homologar casos clínicos representativos. A revisão deve considerar a contribuição variável e os demais custos, sem tratar o teto de IA como garantia de lucro líquido.
+Confirmar preços e franquia com consumo real por função/modelo; avaliar experiência das reservas conservadoras; conferir taxas de pagamento, câmbio, custo e limites do Mail/WhatsApp; reconciliar webhooks de pagamentos e estornos; confirmar configurações dos provedores e saldo; homologar casos clínicos representativos. A revisão deve considerar a contribuição variável e os demais custos, sem tratar o teto de IA como garantia de lucro líquido.
 
 A instrumentação de custo não substitui homologação clínica. A comparação de qualidade semântica previamente preparada continua dependente do restabelecimento do provedor e da validação do índice.
+
+## Estado de integração em 09/09/2026
+
+Implementação enviada ao PR #917 (`codex/commercial-plans-ai-wallet-20260909`), primeiro commit `366946de382999a0046a1681ebed39bb2f5e92eb`. Testes reais de integração confirmaram upgrade no último dia do ciclo limitado a 1/30 da franquia e do teto, renovação seguinte integral e cancelamento terminal resistente a replay no mesmo segundo. A aplicação importa, gera OpenAPI e registra as novas rotas no ambiente isolado.
+
+A publicação em produção está bloqueada pelo gate científico: o manifesto de autorização cobre 11.581 registros e o corpus atual contém 12.160. Evidência: Corpus database reconciliation, run 34417647946 do PR #917. Não houve alteração do manifesto, aprovação científica presumida ou atualização de banco em produção. As correções anteriores do Tudo com Tudo estão no PR #916, também ainda não publicado.
+
+A etapa complementar validou 24 testes de cobrança legada e a coleta de 12 testes de PDF com dependência declarada somente no ambiente de desenvolvimento. A migration final também foi aplicada pelo comando operacional ao banco isolado do candidato integrado; as cinco tabelas financeiras e as três novas colunas contratuais correspondem aos modelos.

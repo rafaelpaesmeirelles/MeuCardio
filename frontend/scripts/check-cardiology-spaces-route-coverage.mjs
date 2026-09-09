@@ -8,7 +8,8 @@ const read = (relative) => fs.readFileSync(path.join(root, relative), "utf8");
 const app = read("src/App.tsx");
 const context = read("src/components/ClinicalRouteContext.tsx");
 const registry = read("src/lib/clinicalRouteRegistry.ts");
-const EXPECTED_AUTHENTICATED_PATTERNS = 75;
+// Inventário explícito: App.tsx e registro possuem os mesmos 76 padrões autenticados.
+const EXPECTED_AUTHENTICATED_PATTERNS = 76;
 
 const shellStart = app.indexOf('<Route element={<Shell />}>');
 if (shellStart < 0) throw new Error("Não foi possível localizar o bloco autenticado <Shell /> em App.tsx.");
@@ -81,6 +82,16 @@ for (const requiredPath of ["/", "/tour", "/tour/cardiology-spaces", "/em-breve"
   if (!appPathSet.has(requiredPath) || !registryPathSet.has(requiredPath)) {
     throw new Error(`Padrão autenticado obrigatório ausente: ${requiredPath}`);
   }
+}
+
+// A assinatura voltou a ser uma página de gestão vinculada à conta.
+const subscriptionRoute = registryRoutes.find((definition) => definition.path === "/assinatura");
+if (!subscriptionRoute || subscriptionRoute.space !== "gestao" || subscriptionRoute.group !== "conta" ||
+    subscriptionRoute.kind !== "page" || subscriptionRoute.parent !== "/minha-conta" || subscriptionRoute.redirectTo) {
+  throw new Error("/assinatura deve ser uma página de gestão vinculada a /minha-conta, sem redirecionamento ao Tour.");
+}
+if (!/<Route\s+path="assinatura"\s+element=\{<Assinatura\s*\/>\}/.test(authenticatedRoutes)) {
+  throw new Error("/assinatura deve renderizar a página Assinatura.");
 }
 
 const functionalSpaces = ["consultorio", "hospital", "ensino", "pesquisa", "gestao"];

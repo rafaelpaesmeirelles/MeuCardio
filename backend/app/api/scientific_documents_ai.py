@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+import hashlib
+from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Response, UploadFile
+from pydantic import BaseModel, Field
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from starlette.concurrency import run_in_threadpool
@@ -16,14 +18,16 @@ from app.models.scientific_user_document import ScientificUserDocument
 from app.services import cofre
 from app.services import scientific_document_ai as engine
 
-from app.services.ia.usage_control import ai_usage_scope, AIUsageError
+from app.services.ia.usage_control import ai_usage_scope, quote_scope, set_approved_credit_limit, PRICING_VERSION
+from app.services import ai_wallet
 
 router = APIRouter(prefix="/api/documentos-cientificos-ia", tags=["documentos-cientificos-ia"])
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
 
-def _row_for_user(document_id: int, db: Session, user) -> ScientificUserDocument:
-    row = db.get(ScientificUserDocument, document_id)
+def _row_for_user(document_id: int, db: Session, user, *, lock: bool = False) -> ScientificUserDocument:
+    row = (db.query(ScientificUserDocument).filter(ScientificUserDocument.id == document_id).populate_existing().with_for_update().first()
+           if lock else db.get(ScientificUserDocument, document_id))
     if not row or row.owner_id != user.id:
         raise HTTPException(status_code=404, detail="Documento científico não encontrado.")
     return row
@@ -220,23 +224,106 @@ def get_original_file(
     )
 
 
+class DocumentBudgetApproval(BaseModel):
+    quote_id: int = Field(gt=0, strict=True)
+    approved_max_credit_centavos: int = Field(ge=0, strict=True)
+
+
+def _budget_fingerprint(row, extracted: str, maximum_cost: int) -> str:
+    value = {"sha256": row.sha256, "text_sha256": hashlib.sha256(extracted.encode("utf-8")).hexdigest(),
+             "model": engine._model(), "maximum_cost_micros": maximum_cost, "pricing_version": PRICING_VERSION}
+    return hashlib.sha256(json.dumps(value, sort_keys=True).encode("utf-8")).hexdigest()
+
+
+def _validate_document_budget(db, row, user, approval: DocumentBudgetApproval, extracted: str, maximum_cost: int) -> None:
+    event = db.query(AuditLog).filter(
+        AuditLog.id == approval.quote_id, AuditLog.user_id == user.id,
+        AuditLog.entity == "scientific_user_document", AuditLog.entity_id == str(row.id),
+        AuditLog.action == "quote_private_scientific_document").first()
+    detail = event.detail or {} if event else {}
+    used = db.query(AuditLog).filter(
+        AuditLog.user_id == user.id, AuditLog.entity == "scientific_user_document",
+        AuditLog.entity_id == str(row.id), AuditLog.action == "approve_private_scientific_document_budget",
+        AuditLog.detail["quote_id"].as_integer() == approval.quote_id).first()
+    if used:
+        raise HTTPException(409, "Este orçamento já foi utilizado. Consulte o resultado ou solicite uma nova estimativa para reanalisar.")
+    try:
+        expires = datetime.fromisoformat(detail["expires_at"])
+        valid = (expires > datetime.now(timezone.utc)
+                 and detail["maximum_credit_centavos"] == approval.approved_max_credit_centavos
+                 and detail["fingerprint"] == _budget_fingerprint(row, extracted, maximum_cost))
+    except (KeyError, TypeError, ValueError):
+        valid = False
+    if not valid:
+        raise HTTPException(409, "O orçamento expirou ou o documento/modelo mudou. Solicite e confirme uma nova estimativa.")
+    set_approved_credit_limit(approval.approved_max_credit_centavos)
+
+
+@router.post("/{document_id}/orcamento")
+async def estimate_document(document_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
+    row = _row_for_user(document_id, db, user)
+    if row.analysis_status == "processando":
+        raise HTTPException(409, "Este documento já está em análise.")
+    try:
+        content = cofre.ler(row.storage_key, row.id, raiz=engine.private_root())
+        extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
+        with quote_scope(user.id, "scientific_document_ai") as scope:
+            engine.plan_document(extracted)
+            maximum_cost = scope.planned_cost
+        quoted = ai_wallet.quote_cost(owner_id=user.id, max_cost_micros=maximum_cost)
+        available = ai_wallet.wallet_summary(user.id)["available_credit_centavos"]
+    except HTTPException as error:
+        if error.status_code == 402:
+            raise HTTPException(409, error.detail) from error
+        raise
+    except ai_wallet.AIWalletAccessDenied as error:
+        raise HTTPException(403, str(error)) from error
+    except ai_wallet.AIWalletError as error:
+        raise HTTPException(409, str(error)) from error
+    except ValueError as error:
+        raise HTTPException(422, str(error)) from error
+    detail = {"maximum_credit_centavos": quoted["maximum_credit_centavos"],
+              "maximum_cost_micros": maximum_cost, "currency": "BRL", "pricing_version": PRICING_VERSION,
+              "fingerprint": _budget_fingerprint(row, extracted, maximum_cost),
+              "expires_at": (datetime.now(timezone.utc) + timedelta(minutes=15)).isoformat(),
+              "includes_translation": True}
+    event = AuditLog(user_id=user.id, action="quote_private_scientific_document",
+                     entity="scientific_user_document", entity_id=str(row.id), detail=detail)
+    db.add(event); db.flush()
+    quote_id = event.id
+    db.commit()
+    return {"quote_id": quote_id, "maximum_credit_centavos": detail["maximum_credit_centavos"],
+            "available_credit_centavos": available, "expires_at": detail["expires_at"],
+            "includes_translation": True, "currency": "BRL"}
+
+
 @router.post("/{document_id}/analisar")
 async def analyze_document(
     document_id: int,
+    approval: DocumentBudgetApproval,
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
     with ai_usage_scope(user.id, "scientific_document_ai"):
-        row = _row_for_user(document_id, db, user)
+        row = _row_for_user(document_id, db, user, lock=True)
         if row.analysis_status == "processando":
             raise HTTPException(status_code=409, detail="Este documento já está em análise.")
+        content = cofre.ler(row.storage_key, row.id, raiz=engine.private_root())
+        extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
+        try:
+            maximum_cost = engine.plan_document(extracted)
+        except HTTPException as error:
+            if error.status_code == 402:
+                raise HTTPException(409, error.detail) from error
+            raise
+        _validate_document_budget(db, row, user, approval, extracted, maximum_cost)
         row.analysis_status = "processando"
         row.analysis_error = None
+        db.add(AuditLog(user_id=user.id, action="approve_private_scientific_document_budget",
+                       entity="scientific_user_document", entity_id=str(row.id),
+                       detail={"quote_id": approval.quote_id, "approved_max_credit_centavos": approval.approved_max_credit_centavos}))
         db.commit()
         try:
-            content = cofre.ler(row.storage_key, row.id, raiz=engine.private_root())
-            extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
-            engine.plan_document(extracted)
             analysis = await run_in_threadpool(engine.analyze_text, extracted)
             duplicate = engine.find_duplicate(db, analysis)
             traceable = engine.has_traceable_source(analysis)
@@ -289,6 +376,14 @@ async def analyze_document(
                 detail={"error_type": type(error).__name__},
             ))
             db.commit()
+            if isinstance(error, HTTPException):
+                if error.status_code == 402:
+                    raise HTTPException(409, error.detail) from error
+                raise
+            if isinstance(error, ai_wallet.AIWalletAccessDenied):
+                raise HTTPException(403, str(error)) from error
+            if isinstance(error, ai_wallet.AIWalletError):
+                raise HTTPException(409, str(error)) from error
             if isinstance(error, ValueError):
                 raise HTTPException(status_code=422, detail=str(error)) from error
             raise HTTPException(status_code=502, detail=f"A análise científica não foi concluída ({type(error).__name__}). O original privado foi preservado.") from error
