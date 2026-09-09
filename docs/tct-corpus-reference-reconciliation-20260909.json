@@ -1,0 +1,439 @@
+{
+  "generated_at": "2026-09-09T22:20:21.906367+00:00",
+  "scope": "Scientific metadata only. No content, publication flags, review statuses or approvals changed.",
+  "checkout_reference_count": 20,
+  "unique_targets": 14,
+  "runtime_resolved_references": 20,
+  "references": [
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "progeria-de-hutchinson-gilford-mecanismo-da-aterosclerose-acelerada-rastreio-cardiovascular-e-lonafarnib",
+      "target": "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+        "title": "Pseudoxantoma Elástico: Acometimento Cardiovascular, Calcificação Arterial e Rastreio Estruturado"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Cardiologia_pediátrica/progeria-de-hutchinson-gilford-mecanismo-da-aterosclerose-acelerada-rastreio-cardiovascular-e-lonafarnib.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "sifilis-congenita-transmissao-transplacentaria-quadro-clinico-e-acometimento-cardiovascular",
+      "target": "sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial",
+        "title": "Sífilis Cardiovascular Terciária: Aortite, Aneurisma e Estenose Ostial Coronariana"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Cardiologia_pediátrica/sifilis-congenita-transmissao-transplacentaria-quadro-clinico-e-acometimento-cardiovascular.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "cardiomiopatia-por-prkag2-fenocopia-glicogenica-pre-excitacao-e-doenca-de-conducao-progressiva",
+      "target": "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+        "title": "Terapia Gênica para Doença de Danon: RP-A501 (AAV9.LAMP2B) — Resultados de Fase 1"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Cardiomiopatias/cardiomiopatia-por-prkag2-fenocopia-glicogenica-pre-excitacao-e-doenca-de-conducao-progressiva.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "doenca-de-danon-lamp2-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-genica-rp-a501",
+      "target": "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1",
+        "title": "Terapia Gênica para Doença de Danon: RP-A501 (AAV9.LAMP2B) — Resultados de Fase 1"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Cardiomiopatias/doenca-de-danon-lamp2-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-genica-rp-a501.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "retatrutida-e-marcadores-de-risco-cardiovascular-no-diabetes-tipo-2-e-na-obesidade",
+      "target": "retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular",
+        "title": "Retatrutida (Agonista Triplo GIP/GLP-1/Glucagon) em Diabetes Tipo 2: Eficácia, Perfil de Risco Cardiovascular e a Lacuna do Desfecho Cardiovascular Dedicado"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Diabetes_e_cardiologia/retatrutida-e-marcadores-de-risco-cardiovascular-no-diabetes-tipo-2-e-na-obesidade.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "lipoproteina-a-fator-de-risco-causal-terapias-em-desenvolvimento-e-o-reves-do-lpahorizon",
+      "target": "lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta",
+        "title": "Lp(a)HORIZON: pelacarsena não atingiu o desfecho primário de MACE — o que muda na consulta"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Doença_coronariana/lipoproteina-a-fator-de-risco-causal-terapias-em-desenvolvimento-e-o-reves-do-lpahorizon.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "ninerafaxstat-modulador-da-energetica-miocardica-ensaios-improve-hcm-e-improve-dice",
+      "target": "ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice",
+        "title": "Ninerafaxstat, modulador metabólico cardíaco (mitotrópico), na cardiomiopatia diabética e na ICFEp: o que mostra o ensaio IMPROVE-DiCE (2025-2026)"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Farmacologia/ninerafaxstat-modulador-da-energetica-miocardica-ensaios-improve-hcm-e-improve-dice.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao",
+      "target": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+        "title": "SGLT2 e Recorrência de Fibrilação Atrial Pós-Ablação: o Ensaio DARE-AF e a Metanálise de 2025"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Fibrilação_atrial/cirurgia-bariatrica-e-fibrilacao-atrial-incidencia-complicacoes-periablacao-e-recorrencia-pos-ablacao.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter",
+      "target": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+        "title": "SGLT2 e Recorrência de Fibrilação Atrial Pós-Ablação: o Ensaio DARE-AF e a Metanálise de 2025"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Fibrilação_atrial/colchicina-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-por-cateter.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "isglt2-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-metanalise-2025",
+      "target": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+        "title": "SGLT2 e Recorrência de Fibrilação Atrial Pós-Ablação: o Ensaio DARE-AF e a Metanálise de 2025"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Fibrilação_atrial/isglt2-e-recorrencia-de-fibrilacao-atrial-apos-ablacao-metanalise-2025.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "carga-global-de-doenca-cardiovascular-o-estudo-gbd-2023",
+      "target": "poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020",
+        "title": "Poluição do ar e prevenção cardiovascular: ESC 2021 e AHA 2020"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Geral/carga-global-de-doenca-cardiovascular-o-estudo-gbd-2023.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "hipertensao-baixa-renda-vulnerabilidade-social-intervencoes-comunitarias",
+      "target": "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+        "title": "Combinação quádrupla em baixa dose na hipertensão: QUARTET e limites de aplicação"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Hipertensão/hipertensao-baixa-renda-vulnerabilidade-social-intervencoes-comunitarias.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa",
+      "target": "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+        "title": "Combinação quádrupla em baixa dose na hipertensão: QUARTET e limites de aplicação"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Hipertensão/polipilula-anti-hipertensiva-combinacao-em-comprimido-unico-e-adesao-medicamentosa.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026",
+      "target": "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+        "title": "Arsênio Inorgânico Ambiental e Ocupacional: Blackfoot Disease, Hipertensão e Aterosclerose Acelerada na Exposição Crônica"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Hipertensão/poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026",
+      "target": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+        "title": "Saturnismo Ocupacional Brasileiro: Mecanismo da Hipertensão Induzida por Chumbo e a Controvérsia da Quelação (TACT/TACT2)"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Hipertensão/poluicao-ar-ruido-e-mudanca-climatica-na-hipertensao-position-paper-esh-2026.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "bio-adm-adrenomedulina-biomarcador-e-alvo-terapeutico-na-insuficiencia-cardiaca-aguda",
+      "target": "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+        "title": "CA125 (antígeno de carboidrato 125) como biomarcador de congestão na insuficiência cardíaca: o que a evidência de 2025-2026 mostra"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Insuficiência_cardíaca/bio-adm-adrenomedulina-biomarcador-e-alvo-terapeutico-na-insuficiencia-cardiaca-aguda.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "biomarcadores-de-fibrose-miocardica-na-insuficiencia-cardiaca-fibroblastos-galectina-3-e-imagem",
+      "target": "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+        "title": "CA125 (antígeno de carboidrato 125) como biomarcador de congestão na insuficiência cardíaca: o que a evidência de 2025-2026 mostra"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Insuficiência_cardíaca/biomarcadores-de-fibrose-miocardica-na-insuficiencia-cardiaca-fibroblastos-galectina-3-e-imagem.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular",
+      "target": "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma",
+        "title": "Policondrite Recidivante e Acometimento Cardiovascular: Aortite, Insuficiência Valvar e Aneurisma"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Pericárdio/granulomatose-com-poliangiite-gpa-e-acometimento-cardiovascular.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl",
+      "target": "inclisirana-sem-estatina-de-base-victorion-mono-e-difference",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "inclisirana-sem-estatina-de-base-victorion-mono-e-difference",
+        "title": "Inclisirana sem Estatina de Base: VICTORION-Mono e VICTORION-DIFFERENCE"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Prevenção_e_lipídios/edicao-de-base-do-pcsk9-verve-102-dose-unica-para-reducao-vitalicia-de-ldl.md",
+      "action": "preserve_existing_link"
+    },
+    {
+      "actual_types": [],
+      "allowed_types": [
+        "documento",
+        "fluxograma"
+      ],
+      "field": "Document.body_md.link",
+      "reason": "missing_target",
+      "source": "intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular",
+      "target": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+      "published_runtime_match": {
+        "kind": "documento",
+        "slug": "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+        "title": "Saturnismo Ocupacional Brasileiro: Mecanismo da Hipertensão Induzida por Chumbo e a Controvérsia da Quelação (TACT/TACT2)"
+      },
+      "runtime_resolved": true,
+      "source_path": "content/Terapia_intensiva/intoxicacao-por-talio-exposicao-mecanismo-e-repercussao-cardiovascular.md",
+      "action": "preserve_existing_link"
+    }
+  ],
+  "runtime_source_check": {
+    "runtime_document_source": "/content",
+    "targets_present_in_runtime_source": [],
+    "targets_absent_in_runtime_source": [
+      "ca125-antigeno-de-carboidrato-125-biomarcador-de-congestao-na-insuficiencia-cardiaca",
+      "exposicao-cronica-a-arsenico-inorganico-e-doenca-cardiovascular",
+      "inclisirana-sem-estatina-de-base-victorion-mono-e-difference",
+      "intoxicacao-cronica-por-chumbo-saturnismo-e-risco-cardiovascular",
+      "lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta",
+      "ninerafaxstat-modulador-metabolico-cardiaco-cardiomiopatia-diabetica-icfep-improve-dice",
+      "policondrite-recidivante-e-acometimento-cardiovascular-aortite-insuficiencia-valvar-e-aneurisma",
+      "poluicao-do-ar-prevencao-cardiovascular-esc-2021-aha-2020",
+      "pseudoxantoma-elastico-acometimento-cardiovascular-calcificacao-arterial-e-rastreio-estruturado",
+      "quartet-combinacao-quadrupla-em-dose-baixa-como-tratamento-inicial-da-hipertensao",
+      "retatrutida-agonista-triplo-gip-glp-1-glucagon-em-diabetes-tipo-2-e-a-lacuna-do-desfecho-cardiovascular",
+      "sglt2-e-recorrencia-de-fibrilacao-atrial-pos-ablacao-o-ensaio-dare-af-e-a-metanalise-de-2025",
+      "sifilis-cardiovascular-terciaria-aortite-aneurisma-e-estenose-ostial",
+      "terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1"
+    ]
+  },
+  "editorial": {
+    "runtime_manifest_path": "/editorial-approvals/full-corpus-release-20260907.json",
+    "canonical_counts": {
+      "documentos": 3009,
+      "galeria": 281,
+      "exames": 423,
+      "evidencias": 3363,
+      "estudos": 2061,
+      "medicamentos": 206,
+      "checklists": 473,
+      "casos_clinicos": 915,
+      "trilhas": 555,
+      "material_paciente": 448,
+      "emergencia": 77,
+      "doencas_especializadas": 326,
+      "triagem_sintomas": 23
+    },
+    "valid": false,
+    "error_type": "RuntimeError",
+    "error": "Autorização integral diverge do total canônico: manifesto=11581, atual=12160."
+  },
+  "conclusions": [
+    "All 20 reported Markdown references resolve to exact published document slugs in the current production database.",
+    "All 14 targets are absent both from this Git worktree and from the mounted runtime canonical /content source.",
+    "This is a source/database reconciliation gap, not evidence that the 20 links currently fail for users.",
+    "Generic auditor ignores the approved_for_full_corpus_publication manifest type. Its --approval-manifest flag accepts only approved_for_publication; the full manifest cannot be passed to that flag.",
+    "The runtime full-corpus authorization is also stale: it requires 11581 canonical items, but the mounted source contains 12160. Its existing validator rejects it.",
+    "545 published_without_approval diagnostics must not be dismissed by pretending a manifest is valid; neither do they establish 545 clinically unreviewed documents.",
+    "No authorization was created or refreshed, no source document was relabeled and no hyperlink was replaced."
+  ]
+}

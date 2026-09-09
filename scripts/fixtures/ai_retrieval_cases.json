@@ -1,0 +1,182 @@
+[
+  {
+    "id": "fa_stroke_exact",
+    "query": "FA prevenção de AVC",
+    "group": "exact",
+    "pair_id": "fa_stroke",
+    "required_any": [
+      "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+      "documento:esc-2024-diretriz-fibrilacao-atrial-af-care"
+    ],
+    "rationale": "As referências tratam da prevenção tromboembólica na FA clínica, com avaliação individual e exceções; a pergunta não é sobre cardioversão nem FA apenas suspeita."
+  },
+  {
+    "id": "fa_stroke_paraphrase",
+    "query": "Paciente com arritmia atrial confirmada: como estimar o risco de derrame e decidir se precisa de anticoagulante por longo prazo?",
+    "group": "paraphrase",
+    "pair_id": "fa_stroke",
+    "required_any": [
+      "documento:fluxograma-anticoagulacao-cha2ds2-va-esc-2024",
+      "documento:esc-2024-diretriz-fibrilacao-atrial-af-care"
+    ],
+    "rationale": "As referências tratam da prevenção tromboembólica na FA clínica, com avaliação individual e exceções; a pergunta não é sobre cardioversão nem FA apenas suspeita."
+  },
+  {
+    "id": "ambulatory_monitoring_exact",
+    "query": "Holter",
+    "group": "exact",
+    "pair_id": "ambulatory_monitoring",
+    "required_any": [
+      "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+      "documento:holter-nao-e-ilr-nao-e-cdi"
+    ],
+    "rationale": "O fluxograma de palpitações e o documento sobre janelas de monitorização discutem a escolha do exame conforme a frequência dos sintomas e os limites de um registro curto."
+  },
+  {
+    "id": "ambulatory_monitoring_paraphrase",
+    "query": "Palpitações intermitentes em paciente estável, mas o traçado feito no consultório veio normal. Como escolher a duração do registro para capturar o episódio?",
+    "group": "paraphrase",
+    "pair_id": "ambulatory_monitoring",
+    "required_any": [
+      "documento:fluxograma-palpitacoes-avaliacao-inicial-ambulatorial",
+      "documento:holter-nao-e-ilr-nao-e-cdi"
+    ],
+    "rationale": "O fluxograma de palpitações e o documento sobre janelas de monitorização discutem a escolha do exame conforme a frequência dos sintomas e os limites de um registro curto."
+  },
+  {
+    "id": "hf_four_pillars_exact",
+    "query": "ICFEr quatro pilares",
+    "group": "exact",
+    "pair_id": "hf_four_pillars",
+    "required_any": [
+      "documento:icfer-classificacao-diagnostico-quatro-pilares",
+      "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+      "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced"
+    ],
+    "rationale": "Dois documentos cobrem o conjunto e a sequência das classes fundamentais; a referência dos ensaios complementa especificamente a classe SGLT2. É rotulagem de pertinência, não validação da conduta gerada."
+  },
+  {
+    "id": "hf_four_pillars_paraphrase",
+    "query": "Paciente estável com coração dilatado e fração de ejeção de 32%. Quais classes de remédio mudam o prognóstico e preciso terminar de aumentar uma antes de começar as outras?",
+    "group": "paraphrase",
+    "pair_id": "hf_four_pillars",
+    "required_any": [
+      "documento:icfer-classificacao-diagnostico-quatro-pilares",
+      "documento:icfer-doses-iniciais-alvo-quatro-pilares-arvore",
+      "documento:inibidores-de-sglt2-na-icfer-dapa-hf-e-emperor-reduced"
+    ],
+    "rationale": "Dois documentos cobrem o conjunto e a sequência das classes fundamentais; a referência dos ensaios complementa especificamente a classe SGLT2. É rotulagem de pertinência, não validação da conduta gerada."
+  },
+  {
+    "id": "apixaban_dose_exact",
+    "query": "Apixabana ajuste renal",
+    "group": "exact",
+    "pair_id": "apixaban_dose",
+    "required_any": [
+      "documento:apixabana",
+      "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao"
+    ],
+    "rationale": "As duas fontes explicitam a identidade Eliquis/apixabana e a avaliação conjunta de indicação, idade, peso e função renal na seleção de dose pela bula brasileira."
+  },
+  {
+    "id": "apixaban_dose_paraphrase",
+    "query": "Uma pessoa de 82 anos, 58 kg e creatinina 1,6 usa Eliquis por arritmia atrial. Onde consultar os critérios brasileiros de redução da dose?",
+    "group": "paraphrase",
+    "pair_id": "apixaban_dose",
+    "required_any": [
+      "documento:apixabana",
+      "documento:apixabana-rivaroxabana-dose-bula-brasil-2025-arvore-de-decisao"
+    ],
+    "rationale": "As duas fontes explicitam a identidade Eliquis/apixabana e a avaliação conjunta de indicação, idade, peso e função renal na seleção de dose pela bula brasileira."
+  },
+  {
+    "id": "resistant_hypertension_exact",
+    "query": "Hipertensão resistente",
+    "group": "exact",
+    "pair_id": "resistant_hypertension",
+    "required_any": [
+      "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+      "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+      "documento:fluxograma-hipertensao-resistente-quarta-droga"
+    ],
+    "rationale": "As fontes cobrem confirmação de resistência verdadeira, pseudorresistência, adesão/medição fora do consultório e o estudo da quarta opção terapêutica."
+  },
+  {
+    "id": "resistant_hypertension_paraphrase",
+    "query": "A pressão continua alta apesar de três remédios, incluindo um diurético. O que confirmar antes de acrescentar outro e qual evidência orienta a quarta opção?",
+    "group": "paraphrase",
+    "pair_id": "resistant_hypertension",
+    "required_any": [
+      "documento:hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco",
+      "documento:hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+      "documento:fluxograma-hipertensao-resistente-quarta-droga"
+    ],
+    "rationale": "As fontes cobrem confirmação de resistência verdadeira, pseudorresistência, adesão/medição fora do consultório e o estudo da quarta opção terapêutica."
+  },
+  {
+    "id": "minoca_exact",
+    "query": "MINOCA",
+    "group": "exact",
+    "pair_id": "minoca",
+    "required_any": [
+      "documento:fluxograma-minoca-investigacao-diagnostica",
+      "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+    ],
+    "rationale": "Ambas as fontes discutem MINOCA como diagnóstico de trabalho e a investigação etiológica depois da angiografia não obstrutiva."
+  },
+  {
+    "id": "minoca_paraphrase",
+    "query": "O quadro preencheu critérios de infarto, mas o cateterismo não mostrou obstrução importante. Quais exames ajudam a descobrir a causa e diferenciar miocardite ou Takotsubo?",
+    "group": "paraphrase",
+    "pair_id": "minoca",
+    "required_any": [
+      "documento:fluxograma-minoca-investigacao-diagnostica",
+      "documento:minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea"
+    ],
+    "rationale": "Ambas as fontes discutem MINOCA como diagnóstico de trabalho e a investigação etiológica depois da angiografia não obstrutiva."
+  },
+  {
+    "id": "pericarditis_colchicine_exact",
+    "query": "Pericardite colchicina",
+    "group": "exact",
+    "pair_id": "pericarditis_colchicine",
+    "required_any": [
+      "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+      "documento:colchicina-na-pericardite-o-que-esperar"
+    ],
+    "rationale": "Uma referência distingue CORP/CORP-2/ICAP; a outra explica o propósito do tratamento e diferencia primeiro episódio de recorrência."
+  },
+  {
+    "id": "pericarditis_colchicine_paraphrase",
+    "query": "A inflamação da membrana que envolve o coração voltou depois de melhorar. Que evidências existem para acrescentar colchicina e evitar novos episódios?",
+    "group": "paraphrase",
+    "pair_id": "pericarditis_colchicine",
+    "required_any": [
+      "documento:colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+      "documento:colchicina-na-pericardite-o-que-esperar"
+    ],
+    "rationale": "Uma referência distingue CORP/CORP-2/ICAP; a outra explica o propósito do tratamento e diferencia primeiro episódio de recorrência."
+  },
+  {
+    "id": "statin_intolerance_exact",
+    "query": "Intolerância a estatinas",
+    "group": "exact",
+    "pair_id": "statin_intolerance",
+    "required_any": [
+      "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+      "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+    ],
+    "rationale": "As referências descrevem sintomas musculares, CK e suspensão/reexposição estruturada antes de classificar intolerância à classe."
+  },
+  {
+    "id": "statin_intolerance_paraphrase",
+    "query": "A paciente relata dor muscular depois de iniciar o remédio para colesterol. Como investigar causalidade e tentar outra dose ou molécula antes de abandonar toda a classe?",
+    "group": "paraphrase",
+    "pair_id": "statin_intolerance",
+    "required_any": [
+      "documento:intolerancia-a-estatina-definicao-operacional-e-protocolo-de-reexposicao-eas-2015",
+      "documento:fluxograma-intolerancia-a-estatina-definicao-e-protocolo-de-reexposicao"
+    ],
+    "rationale": "As referências descrevem sintomas musculares, CK e suspensão/reexposição estruturada antes de classificar intolerância à classe."
+  }
+]
