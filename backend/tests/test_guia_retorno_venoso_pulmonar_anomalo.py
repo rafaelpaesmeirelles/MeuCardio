@@ -93,10 +93,34 @@ def test_referencias_tudo_com_tudo_resolvem_explicitamente():
         item for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
     ]
-    assert len(relations) == 4
+    assert {
+        (item["target_type"], item["target_slug"])
+        for item in relations
+    } == {
+        (
+            "checklist",
+            "conduta-inicial-na-cianose-central-com-suspeita-de-cardiopatia-congenita-critica-no-recem-nascido",
+        ),
+        ("trilha", "trilha-cardiologia-pediatrica-recem-nascido-cianotico"),
+        (
+            "trilha",
+            "trilha-cardiologia-pediatrica-malformacoes-vasculares-raras-diagnostico-anatomico",
+        ),
+        ("trilha", "trilha-cardiopatia-congenita-triagem-para-centro-terciario"),
+        ("documento", "retorno-venoso-pulmonar-anomalo-papvr-tapvr-no-adulto"),
+        (
+            "documento",
+            "retorno-venoso-pulmonar-anomalo-fetal-limitacoes-diagnosticas-e-sinais-indiretos",
+        ),
+        ("material_paciente", "retorno-venoso-pulmonar-anomalo-fetal"),
+    }
     targets = {
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "documento": _document_slugs(),
+        "material_paciente": {
+            item["slug"] for item in _records(PATIENT_MATERIALS)
+        },
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
     assert all(item["review_status"] == "revisado" for item in relations)

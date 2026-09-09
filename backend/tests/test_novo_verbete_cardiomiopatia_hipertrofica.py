@@ -74,6 +74,7 @@ EXPECTED_SHARED_WITH_CARDIOMYOPATHY_HUB = {
 EXPECTED_SHARED_WITH_OTHER_DISEASES = {
     "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
     "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+    "fluxograma-investigacao-genetica-cardiomiopatia-historia-familiar-morte-subita",
 }
 
 

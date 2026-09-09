@@ -111,7 +111,11 @@ def test_cockpit_expoe_lra_kdigo_sem_prescricao_automatica():
 def test_auditoria_descobre_calculadoras_de_registros_modulares():
     auditoria = (ROOT / "scripts" / "audit_tudo_com_tudo.py").read_text(encoding="utf-8")
 
-    assert 'glob("*calculators*.py")' in auditoria
+    # A descoberta deve usar o registro efetivamente montado pelo serviço. Um
+    # glob de nomes de arquivo perde calculadoras modulares registradas por
+    # importação e também pode aceitar declarações indisponíveis em runtime.
+    assert "calculator_service.REGISTRY.values()" in auditoria
+    assert 'calculator.status == "implementada"' in auditoria
 
 
 def test_lote_acido_base_preserva_gates_editoriais_e_conexoes_bidirecionais():

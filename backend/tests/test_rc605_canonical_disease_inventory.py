@@ -7,7 +7,7 @@ from app.services.carregar_triagem_sintomas import load_triage_records
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "doencas" / "metadados.json"
-CANONICAL_DISEASE_COUNT = 326
+CANONICAL_DISEASE_COUNT = 346
 TRIAGE_BASE = ROOT / "triagem-sintomas" / "metadados.json"
 
 
@@ -19,7 +19,7 @@ def _load_script(name: str, path: Path):
     return module
 
 
-def test_catalogo_canonico_tem_326_doencas_incluindo_fragmentos():
+def test_catalogo_canonico_tem_346_doencas_incluindo_fragmentos():
     records = load_disease_records(BASE)
     assert len(records) == CANONICAL_DISEASE_COUNT
     slugs = {item["slug"] for item in records}

@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import frontmatter
-from sqlalchemy import or_, select
+from sqlalchemy import false, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -427,13 +427,20 @@ def _load_controlled_substances(db: Session) -> dict:
     return result
 
 
-def _runtime_managed_document_filter():
+def _runtime_managed_document_filter(model=Document):
     """Documentos científicos criados em runtime não pertencem ao corpus Git.
 
     O reconcile canônico deve arquivar documentos estáticos removidos do commit,
     mas não pode despublicar sínteses CorVIA Intelligence nem documentos
     incorporados explicitamente a partir do acervo privado do assinante.
     """
+    # Testes de política podem substituir a frente por um modelo mínimo em um
+    # banco isolado. Não deixe a expressão carregar silenciosamente a tabela
+    # ``documents`` (nem suas tabelas auxiliares) para um UPDATE desse modelo.
+    # Em produção a frente canônica continua obrigada a usar Document.
+    if model is not Document:
+        return false()
+
     incorporated_ids = select(ScientificUserDocument.incorporated_document_id).where(
         ScientificUserDocument.incorporated_document_id.is_not(None)
     )
@@ -533,7 +540,7 @@ def _synchronize_publication(
             )
             if front == "documentos":
                 removed_query = removed_query.filter(
-                    ~_runtime_managed_document_filter()
+                    ~_runtime_managed_document_filter(model)
                 )
             removed = removed_query.update(
                 {model.published: False}, synchronize_session=False
@@ -576,7 +583,7 @@ def _database_inventory(
         runtime_managed = 0
         if front == "documentos":
             runtime_managed = db.query(model).filter(
-                _runtime_managed_document_filter(),
+                _runtime_managed_document_filter(model),
                 model.slug.notin_(slugs),
             ).count()
         minimum = int(config["minimum"])

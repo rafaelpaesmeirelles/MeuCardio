@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import unicodedata
 
+from app.services.calculators import REGISTRY as CALCULATOR_REGISTRY
 from app.services.clinical_rule_engine import (
     evaluate_rules,
     validate_question_definitions,
@@ -145,7 +146,7 @@ def test_embolia_pulmonar_resolve_referencias_e_vinculo_exato_de_triagem():
     )
 
 
-def test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas():
+def test_embolia_pulmonar_tem_arestas_externas_explicitas_e_resolvidas():
     relations = [
         item for item in _records(EXPLICIT_RELATIONS)
         if item["source_disease_slug"] == SLUG
@@ -161,6 +162,12 @@ def test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas():
             "trilha",
             "trilha-tromboembolismo-pulmonar-risco-intermediario-alto-e-terapia-guiada-pelo-risco",
         ),
+        ("caso_clinico", "tep-hemodinamicamente-estavel-rivaroxabana-isolada-einstein-pe"),
+        ("calculadora", "wells-tep"),
+        ("calculadora", "geneva-revisado"),
+        ("calculadora", "geneva-simplificado"),
+        ("calculadora", "pesi"),
+        ("calculadora", "spesi"),
     }
     assert all(item["confidence"] == "explicit" for item in relations)
     assert all(item["provenance_type"] == "editorial" for item in relations)
@@ -169,6 +176,10 @@ def test_embolia_pulmonar_tem_quatro_arestas_externas_explicitas_e_resolvidas():
         "protocolo_emergencia": {item["slug"] for item in _records(EMERGENCY)},
         "checklist": {item["slug"] for item in _records(CHECKLISTS)},
         "trilha": {item["slug"] for item in _records(TRACKS)},
+        "caso_clinico": {
+            item["slug"] for item in _records(ROOT / "casos-clinicos/metadados.json")
+        },
+        "calculadora": set(CALCULATOR_REGISTRY),
     }
     assert all(item["target_slug"] in targets[item["target_type"]] for item in relations)
 

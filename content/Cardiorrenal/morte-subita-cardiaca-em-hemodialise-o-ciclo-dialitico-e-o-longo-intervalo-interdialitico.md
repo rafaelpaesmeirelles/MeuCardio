@@ -1,7 +1,7 @@
 ---
 title: "Morte Súbita Cardíaca em Hemodiálise: o Ciclo Dialítico, o Longo Intervalo Interdialítico e a Mudança do Paradigma Arrítmico"
 slug: morte-subita-cardiaca-em-hemodialise-o-ciclo-dialitico-e-o-longo-intervalo-interdialitico
-theme: "Cardiorrenal"
+theme: "Insuficiência cardíaca"
 kind: documento
 review_status: revisado
 published: false

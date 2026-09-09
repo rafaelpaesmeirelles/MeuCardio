@@ -5,13 +5,13 @@
   "scope": "entire_canonical_reviewed_corpus",
   "approval_basis": "Instrução explícita e reiterada do responsável pelo repositório em 08/09/2026 para concluir e publicar em um único deploy emergencial todo o corpus canônico revisado, incluindo o lote antigo pendente, o lote Grok anexado, os documentos já incorporados à main, o conteúdo resgatado e o commit de frontend/mobilidade 4b1c5bd. O escopo foi congelado na mesma data, sem autorização para acrescentar documentos posteriores. A autorização está vinculada criptograficamente aos 12.217 itens e aos fingerprints por frente abaixo; qualquer alteração de slug, fonte, contagem ou estado editorial invalida este manifesto.",
   "expected_total": 12217,
-  "inventory_sha256": "d71464001b34c281ef450fb9934a543b4388f3b074b7cb118c481eca8272340c",
+  "inventory_sha256": "a35e8516c940d4739aa6bbace89d8e9b6ab8d3d1b1af524aa2e331e752dccc13",
   "fronts": {
     "documentos": {
       "count": 2891,
       "reviewed_count": 2891,
       "slug_sha256": "c3ae80c4d8bc9bc807b60625941b075b838f9f7cacc43d2017852a5dfdfbd9b5",
-      "source_sha256": "e7bcc0e50779754e98bbf9afddda895dcc2441fe2fa2d7b7b044989f20fa01bd"
+      "source_sha256": "604c80716605e4f665c3f3ea8ac410974c77852b7933c4453f7a8f2737bbffb4"
     },
     "galeria": {
       "count": 281,
@@ -41,7 +41,7 @@
       "count": 206,
       "reviewed_count": 206,
       "slug_sha256": "152405b478a5154514ee282334098f00e55b1143bf089b69d15799d7a16f452e",
-      "source_sha256": "808984addb6d6a647ffbecca42103ee333177a5180d937739bd62a5a367e95bd"
+      "source_sha256": "6aefe4b22aa013193b7b67c34f520ef29760dc8d31ff09b20623acfd10a5ee3f"
     },
     "checklists": {
       "count": 512,
@@ -77,7 +77,7 @@
       "count": 346,
       "reviewed_count": 346,
       "slug_sha256": "be0ae04b00aaacf2b7a962fae4d7e4fca27c6be86b70527554cec82dc77e6281",
-      "source_sha256": "d38eb092d8eddb600680db0c8a917b1f0c7d1bbb41b4d52c1c607b57d4362c33"
+      "source_sha256": "e59a0f85861b8090697ad790bb30f55e0a261ead3a0cd3a71a061479ef9f3a89"
     },
     "triagem_sintomas": {
       "count": 23,
