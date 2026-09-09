@@ -1,0 +1,22 @@
+{
+  "slug": "vanish2-tv-isquemica-ablacao-ou-amiodarona",
+  "titulo": "TV isquêmica com CDI: ablação de primeira linha ou amiodarona? O VANISH2",
+  "tema": "Arritmias",
+  "theme": "Arritmias",
+  "nivel": "avançado",
+  "enunciado": "Homem de 68 anos, infarto antigo da parede inferior, FEVE 38%, CDI em prevenção secundária. Internado após dois choques apropriados e uma tempestade de TV revertida no PS. Nunca usou amiodarona nem sotalol de forma crônica. O plantonista propõe «amiodarona agora e ablação só se falhar, porque ablação de TV não tem risco e ainda não é Classe I». A eletrofisiologia cita o VANISH2.",
+  "pergunta": "O que o VANISH2 (Sapp et al., NEJM 2025, PMID 39555820) mostrou sobre estratégia inicial de ablação versus antiarrítmico neste recorte (IAM prévio, CDI, TV clinicamente significativa)?",
+  "opcoes": [
+    "A ablação de primeira linha não tem risco de morte nem de evento adverso; por isso passou a ser Classe I automática no lugar de amiodarona",
+    "Estratégia inicial de ablação reduziu o composto (morte, tempestade de TV, choque apropriado de CDI ou TV sustentada tratada após 14 dias): 103/203 (50,7%) versus 129/213 (60,6%); HR 0,75; IC95% 0,58–0,97 — com risco procedimental real (morte em 30 dias 1,0%; eventos não fatais 11,3%)",
+    "O VANISH2 mostrou redução isolada de mortalidade; amiodarona passou a ser contraindicada em qualquer TV isquêmica com CDI",
+    "Ablação só entra depois de falha de antiarrítmico (é o que o VANISH2 testou); iniciar pelo cateter não foi comparado com fármaco"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O VANISH2 randomizou 416 pacientes com infarto prévio, CDI e TV clinicamente significativa para ablação por cateter em até 14 dias (n=203) versus sotalol ou amiodarona (n=213). Seguimento mediano 4,3 anos. O desfecho primário é um composto — morte por qualquer causa ou, após 14 dias, tempestade de TV, choque apropriado de CDI ou TV sustentada tratada por intervenção médica — e ocorreu em 50,7% versus 60,6%; HR 0,75; IC95% 0,58–0,97; P=0,03. Isso autoriza discutir ablação como estratégia inicial neste recorte. Não autoriza dizer que ablação não tem risco: em 30 dias após o procedimento houve morte em 2/203 (1,0%) e eventos não fatais em 23 (11,3%); no braço fármaco, morte por toxicidade pulmonar em 1 (0,5%) e eventos não fatais em 46 (21,6%). Não demonstrou benefício isolado de mortalidade. Um resultado de ensaio não atribui, por si só, uma classe formal de recomendação. A opção «ablação só após falha de fármaco» descreve o VANISH 2016, não o VANISH2. Amiodarona não foi contraindicada. Os eventos procedimentais foram contados em 30 dias, enquanto os eventos atribuídos aos fármacos foram acompanhados durante o estudo; percentuais dessas janelas não são uma comparação direta de risco no mesmo período. O manejo imediato da tempestade arrítmica e a escolha da estratégia de longo prazo são decisões relacionadas, mas distintas.",
+  "source_refs": [
+    "Sapp JL, et al.; VANISH2 Study Team. Catheter Ablation or Antiarrhythmic Drugs for Ventricular Tachycardia. N Engl J Med. 2025;392(8):737-747. DOI: 10.1056/NEJMoa2409501. PMID: 39555820. NCT02830360."
+  ],
+  "review_status": "revisado",
+  "review_note": "VANISH2 conferido; corrigidas janelas diferentes de segurança e separação entre emergência e estratégia de longo prazo."
+}

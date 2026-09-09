@@ -1,0 +1,23 @@
+{
+  "slug": "dapa-hf-nao-e-emperor-reduced",
+  "titulo": "ICFEr: DAPA-HF ou EMPEROR-Reduced?",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "intermediário",
+  "enunciado": "IC NYHA II, FEVE 32%, sem diabetes. Colega diz que «é o mesmo iSGLT2, soma o HR 0,74 do DAPA-HF com o 0,75 do EMPEROR-Reduced» e cita o DECLARE (MACE no DM2) como se autorizasse a molécula nesta FE.",
+  "pergunta": "Qual leitura está alinhada aos ensaios?",
+  "opcoes": [
+    "DAPA-HF e EMPEROR-Reduced são o mesmo ensaio; some 0,74 com 0,75 e aplique o DECLARE (MACE) nesta FEVE.",
+    "DAPA-HF (dapagliflozina 10 mg, FEVE ≤ 40%, n=4744, 18,2 meses): primário 16,3% vs 21,2%; HR 0,74 (0,65–0,85). EMPEROR-Reduced (empagliflozina 10 mg, FEVE ≤ 40%, 1863 vs 1867, 16 meses): 19,4% vs 24,7%; HR 0,75 (0,65–0,86). Duas moléculas, dois ensaios — não somar. DECLARE é CVOT no DM2; MACE não fechou.",
+    "EMPEROR-Preserved (FEVE >40%) é o ensaio desta FEVE 32%; o HR 0,79 vale aqui.",
+    "DAPA-CKD (HR 0,61, NNT 19) substitui o DAPA-HF quando não há diabetes."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 31535829 é dapagliflozina na ICFEr (FEVE ≤ 40%), com ou sem DM. PMID 32865377 é empagliflozina na mesma faixa de FE — outra molécula, outro n, outro tempo; HR 0,75 não se soma ao 0,74. DECLARE (PMID 30415602) é CVOT em DM2: MACE 8,8% vs 9,4%; HR 0,93; P=0,17. DAPA-CKD é rim. EMPEROR-Preserved é FEVE >40%. FEVE 32% sem diabetes entra pelo DAPA-HF ou pelo EMPEROR-Reduced, não pelo DECLARE nem pelo Preserved. DAPA-HF incluía no primário piora de IC por hospitalização ou atendimento urgente com tratamento intravenoso, além de morte CV. EMPEROR-Reduced usou hospitalização por IC ou morte CV. Não é comparação direta entre dapagliflozina e empagliflozina nem base para usar os dois juntos.",
+  "source_refs": [
+    "McMurray JJV, et al. N Engl J Med. 2019;381:1995-2008. PMID 31535829. NCT03036124.",
+    "Packer M, et al. N Engl J Med. 2020;383:1413-1424. PMID 32865377. NCT03057977.",
+    "Wiviott SD, et al. N Engl J Med. 2019;380:347-357. PMID 30415602. NCT01730534."
+  ],
+  "review_status": "revisado",
+  "review_note": "N, doses e resultadosconferidos nas três fontes; esclarecida diferença dos compostos e ausência de comparação direta entre moléculas."
+}

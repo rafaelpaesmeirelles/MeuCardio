@@ -1,11 +1,49 @@
 ---
-title: "Fesomersen: o Inibidor Antisense do Fator XI e o Ensaio RE-THINC ESRD em Hemodiálise"
+title: 'Fesomersen: o Inibidor Antisense do Fator XI e o Ensaio RE-THINC ESRD em Hemodiálise'
 slug: fesomersen-antisense-fator-xi-ensaio-re-thinc-esrd-hemodialise
-theme: "Farmacologia"
+theme: Farmacologia
 kind: farmacologia
 review_status: revisado
-source_refs: ["Winkelmayer WC, Lensing AWA, Thadhani RI, Mahaffey KW, Walsh M, Pap ÁF, Willmann S, Thelen K, Hodge S, Solms A, Ingham SJM, Eikelboom J; RE-THINC investigators. A Phase II randomized controlled trial evaluated antithrombotic treatment with fesomersen in patients with kidney failure on hemodialysis. Kidney Int. 2024 Jul;106(1):145-153. DOI: 10.1016/j.kint.2024.02.024. PMID: 38537676 — abstract completo relido via PubMed E-utilities (efetch, formato MEDLINE) em 09/09/2026.", "Liu T, Hashizume K, Krieg E, Chen H, Mukaida Y, Thelen K, Friedrichs F, Willmann S, Schwers S, Solms A, Yu R. Pharmacokinetics, pharmacodynamics, and safety of fesomersen, a novel antisense inhibitor of factor XI, in healthy Chinese, Japanese, and Caucasian volunteers. Clin Transl Sci. 2024 Apr;17(4):e13784. DOI: 10.1111/cts.13784. PMID: 38563414 — abstract completo conferido via PubMed E-utilities em 09/09/2026.", "Steiner D, Kraemmer D, Nopp S, Königsbrügge O, Ay C. A Systematic Review of Safety and Efficacy of Factor XI/XIa Inhibitors in Patients With ESKD on Hemodialysis. Kidney Int Rep. 2024 Oct 15;10(1):145-156. DOI: 10.1016/j.ekir.2024.10.007. PMID: 39810768 — abstract completo conferido via PubMed E-utilities em 09/09/2026.", "Stamellou E, Noels H, Floege J. Factor XI inhibition in hemodialysis patients: the safer anticoagulation? (editorial de acompanhamento). Kidney Int. 2024 Jul;106(1):21-23. DOI: 10.1016/j.kint.2024.03.029. PMID: 38906653 — abstract conferido via PubMed E-utilities em 09/09/2026.", "ClinicalTrials.gov. NCT04534114 — Factor XI LICA to Reduce Thrombotic Events in End-Stage Renal Disease Patients on Hemodialysis (nome interno do fármaco no registro: BAY 2976217). Patrocinador: Bayer. Status: Completed (fase 2). Conferido via API pública do ClinicalTrials.gov (v2/studies) em 09/09/2026 — nenhum outro estudo de fesomersen (ou BAY 2976217) encontrado na busca por termo nesse mesmo registro na mesma data."]
-legacy_source: "Documento novo, 09/09/2026. Busca por grep em todo o content/ (incluindo os .md de todas as pastas, não só os JSONs) não encontrou nenhuma ocorrência de 'fesomersen', 'BAY 2976217', 'RE-THINC' ou 'IONIS-FXI' antes desta sessão — a base já cobre inibidores orais do fator XIa (milvexian, asundexian) e um anticorpo monoclonal (abelacimabe), mas nenhum documento tratava da terceira modalidade da classe, o oligonucleotídeo antisense conjugado a GalNAc (plataforma LICA da Ionis Pharmaceuticals, desenvolvido em parceria com a Bayer), nem da população específica de doença renal terminal em hemodiálise, onde varfarina e DOAC têm problemas de segurança/eficácia já documentados nesta base (ver 'Tudo com Tudo'). Todos os números vêm dos abstracts estruturados obtidos via NCBI E-utilities (esearch/esummary/efetch em formato MEDLINE) nesta sessão, não de memória."
+source_refs:
+- 'Winkelmayer WC, Lensing AWA, Thadhani RI, Mahaffey KW, Walsh M, Pap ÁF, Willmann S, Thelen K, Hodge S, Solms A, Ingham
+  SJM, Eikelboom J; RE-THINC investigators. A Phase II randomized controlled trial evaluated antithrombotic treatment with
+  fesomersen in patients with kidney failure on hemodialysis. Kidney Int. 2024 Jul;106(1):145-153. DOI: 10.1016/j.kint.2024.02.024.
+  PMID: 38537676 — abstract completo relido via PubMed E-utilities (efetch, formato MEDLINE) em 09/09/2026.'
+- 'Liu T, Hashizume K, Krieg E, Chen H, Mukaida Y, Thelen K, Friedrichs F, Willmann S, Schwers S, Solms A, Yu R. Pharmacokinetics,
+  pharmacodynamics, and safety of fesomersen, a novel antisense inhibitor of factor XI, in healthy Chinese, Japanese, and
+  Caucasian volunteers. Clin Transl Sci. 2024 Apr;17(4):e13784. DOI: 10.1111/cts.13784. PMID: 38563414 — abstract completo
+  conferido via PubMed E-utilities em 09/09/2026.'
+- 'Steiner D, Kraemmer D, Nopp S, Königsbrügge O, Ay C. A Systematic Review of Safety and Efficacy of Factor XI/XIa Inhibitors
+  in Patients With ESKD on Hemodialysis. Kidney Int Rep. 2024 Oct 15;10(1):145-156. DOI: 10.1016/j.ekir.2024.10.007. PMID:
+  39810768 — abstract completo conferido via PubMed E-utilities em 09/09/2026.'
+- 'ClinicalTrials.gov. NCT04534114 — Factor XI LICA to Reduce Thrombotic Events in End-Stage Renal Disease Patients on Hemodialysis
+  (nome interno do fármaco no registro: BAY 2976217). Patrocinador: Bayer. Status: Completed (fase 2). Conferido via API pública
+  do ClinicalTrials.gov (v2/studies) em 09/09/2026'
+legacy_source: Documento novo, 09/09/2026. Busca por grep em todo o content/ (incluindo os .md de todas as pastas, não só
+  os JSONs) não encontrou nenhuma ocorrência de 'fesomersen', 'BAY 2976217', 'RE-THINC' ou 'IONIS-FXI' antes desta sessão
+  — a base já cobre inibidores orais do fator XIa (milvexian, asundexian) e um anticorpo monoclonal (abelacimabe), mas nenhum
+  documento tratava da terceira modalidade da classe, o oligonucleotídeo antisense conjugado a GalNAc (plataforma LICA da
+  Ionis Pharmaceuticals, desenvolvido em parceria com a Bayer), nem da população específica de doença renal terminal em hemodiálise,
+  onde varfarina e DOAC têm problemas de segurança/eficácia já documentados nesta base (ver 'Tudo com Tudo'). Todos os números
+  vêm dos abstracts estruturados obtidos via NCBI E-utilities (esearch/esummary/efetch em formato MEDLINE) nesta sessão, não
+  de memória.
+review_note: Confirmados PMID38537676 e textos PMC10985948/PMC11725973. Preservados doses, denominadores, eventos e estimativas
+  da metanálise; corrigidos intervalo atribuído ao abelacimabe e equivalência indevida de segurança. Retiradas alegações universais
+  não demonstradas sobre ausência de registros/ensaios e autorização regulatória. Síntese limitada aos resultados realmente
+  sustentados, sem análises de subgrupo ou IC inventados.
+summary: 'Fesomersen (nome de desenvolvimento BAY 2976217) é um oligonucleotídeo antisense conjugado a
+
+  GalNAc (a plataforma é chamada LICA — Ligand-Conjugated Antisense, terminologia que consta no
+
+  próprio título oficial do registro do ensaio no ClinicalTrials.gov) que reduz a síntese hepática do
+
+  fator XI, administrado por injeção subcutânea em intervalo mensal. O fármaco foi originado na
+
+  Ionis Pharmaceuticals e é desenvolvido em parceria com a Bayer.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Fesomersen: o Inibidor Antisense do Fator XI e o Ensaio RE-THINC ESRD em Hemodiálise
@@ -24,8 +62,7 @@ nesta base:
 - **Inibidores orais de molécula pequena do fator XIa ativado** — **milvexian** e **asundexian** (ambos
   já documentados nesta pasta) bloqueiam a forma ativada da enzima, administrados por via oral diária.
 - **Anticorpo monoclonal** — **abelacimabe** (já documentado na pasta Fibrilação_atrial) bloqueia o
-  zimogênio e a forma ativada do fator XI por via intravenosa/subcutânea em intervalo mensal a
-  trimestral.
+  zimogênio e a forma ativada do fator XI por mecanismos diferentes do antisense; os intervalos e vias dependem do programa clínico.
 - **Oligonucleotídeo antisense (fesomersen, objeto deste documento)** — não inibe a enzima já formada;
   **reduz a quantidade de proteína fator XI produzida pelo fígado**, um mecanismo rio acima das outras
   duas classes. O efeito é de instalação mais lenta (semanas) e reversão também mais lenta, mas permite
@@ -68,8 +105,7 @@ mesma população (ver seção de contexto de classe, abaixo).
 - **resultado de segurança (desfecho primário)**: MB/CRNMB em **6,5% (40 mg)**, **5,1% (80 mg)**,
   **3,9% (120 mg)** e **4,0% (placebo)** — comparação agrupada fesomersen versus placebo **P = 0,78**,
   ou seja, **sem diferença estatisticamente significativa** de sangramento entre as doses de fesomersen
-  e placebo. O abstract consultado não relata um intervalo de confiança para essa comparação, apenas o
-  valor de P (ver "Verificação humana necessária").
+  e placebo. O estudo não demonstrou equivalência de segurança; não detectar diferença estatística em uma amostra pequena não exclui aumento ou redução clinicamente importante de sangramento.
 - **eventos ateroembólicos maiores**: **1 paciente (1,3%) em cada braço de tratamento** — número
   absoluto muito baixo, sem poder estatístico para qualquer conclusão de eficácia.
 - **desfechos exploratórios positivos**: níveis previstos mais baixos de fator XI associaram-se a
@@ -93,9 +129,7 @@ prática:
 - Os perfis farmacocinético e farmacodinâmico foram **semelhantes entre os três grupos étnicos**
   estudados, e nenhum evento de sangramento maior foi observado em nenhum dos três estudos de fase 1.
 - Esse perfil de instalação e reversão lentas (semanas) é o racional farmacológico direto para a
-  posologia mensal testada no RE-THINC ESRD, e contrasta com a reversão em horas dos inibidores orais de
-  molécula pequena (milvexian, asundexian) e com o intervalo de dosagem mais longo (mensal a trimestral)
-  do abelacimabe.
+  posologia mensal testada no RE-THINC ESRD, e não deve ser confundido com o perfil de início e término de ação de outras modalidades de inibição do fator XI/XIa.
 
 ## Contexto de classe: o que a revisão sistemática de 2025 mostra
 
@@ -103,9 +137,7 @@ Uma revisão sistemática com metanálise (Steiner et al., *Kidney Int Rep* 2025
 fase 2 (1.270 participantes)** que testaram inibidores do fator XI/XIa **especificamente na população
 geral em hemodiálise**, citando os fármacos investigacionais **gruticibarte, IONIS-FXIRx, osocimabe e
 fesomersen** — quatro programas distintos, dos quais quatro estudos estavam publicados e entraram na
-síntese quantitativa. Este documento não verificou de forma independente os dados de gruticibarte e de
-IONIS-FXIRx além do que consta nesta revisão sistemática (ver "Verificação humana necessária");
-IONIS-FXIRx, em particular, é um composto antisense mais antigo e **não conjugado a GalNAc** — ou seja,
+síntese quantitativa. IONIS-FXIRx, em particular, é um composto antisense mais antigo e **não conjugado a GalNAc** — ou seja,
 uma molécula diferente do fesomersen (que é a versão conjugada, de segunda geração), não um sinônimo
 dele.
 
@@ -121,26 +153,13 @@ Resultados agrupados da metanálise:
 com inibidores do fator XI/XIa em pacientes com DRC terminal em hemodiálise, comparados a placebo — mas
 todos os intervalos de confiança cruzam a unidade, e os próprios autores concluem que **eficácia e
 associação com mortalidade por todas as causas ainda precisam ser investigadas em ensaios de fase 3
-adequadamente dimensionados**. Um editorial de acompanhamento do RE-THINC ESRD (Stamellou et al.,
-*Kidney Int* 2024) resume o estado da arte de forma direta: "vários inibidores do fator XI... estão em
-desenvolvimento" para essa população, e o RE-THINC ESRD "mostrou um bom perfil de segurança... e sugeriu
-que as taxas de coagulação da fístula arteriovenosa e do circuito de diálise são menores" — sem, no
-entanto, estabelecer benefício de eficácia clínica.
+adequadamente dimensionados**. O estudo de fase 2 e a metanálise não estabelecem prevenção eficaz de AVC nem substituem a avaliação individual de anticoagulação em fibrilação atrial.
 
 ## O que isto muda na prática
 
-- **Nada muda na conduta clínica atual.** Fesomersen é fármaco de investigação, sem aprovação
-  regulatória (FDA ou ANVISA) em nenhuma indicação até a data desta sessão. Não há registro de ensaio de
-  fase 3 para fesomersen no ClinicalTrials.gov na busca realizada em 09/09/2026 — apenas o NCT04534114,
-  de fase 2, já concluído.
-- **Reforça, por ora, que a decisão de anticoagulação em fibrilação atrial e hemodiálise continua
-  seguindo a evidência já disponível** (varfarina versus DOAC, com as limitações já documentadas em
-  "Fibrilação Atrial em Diálise" — RENAL-AF e AXADIA-AFNET 8) — nenhum inibidor do fator XI/XIa, em
-  qualquer modalidade, tem hoje evidência de fase 3 nessa população.
-- **É um sinal de direção de pesquisa, não uma mudança terapêutica**: o interesse simultâneo de pelo
-  menos quatro programas distintos (fesomersen, osocimabe, gruticibarte, IONIS-FXIRx) na mesma população
-  de hemodiálise sinaliza que a lacuna terapêutica é reconhecida pela indústria, mas nenhum desses
-  programas tem ainda um resultado de eficácia definitivo.
+O RE-THINC ESRD é um ensaio de **fase 2**, voltado principalmente à segurança e farmacodinâmica. Não estabelece uma nova indicação de anticoagulação nem autoriza substituir a conduta habitual em fibrilação atrial e hemodiálise por fesomersen. A decisão nesse contexto continua exigindo avaliação individual de risco tromboembólico, sangramento e limitações dos estudos disponíveis.
+
+Os sinais de menor coagulação do circuito e trombose do acesso são exploratórios, baseados na associação com níveis previstos de fator XI. Não demonstram benefício confirmatório sobre AVC, embolia ou mortalidade. Resultados de moléculas distintas da classe não devem ser transferidos ao fesomersen.
 
 ## Armadilhas clínicas
 
@@ -154,29 +173,18 @@ entanto, estabelecer benefício de eficácia clínica.
   (milvexian, asundexian) ou com o anticorpo monoclonal (abelacimabe)** — mecanismo de ação, via de
   administração e intervalo de dose são diferentes entre as três modalidades, e os resultados de um
   programa não devem ser extrapolados para os outros.
-- **Presumir disponibilidade comercial ou uso fora de protocolo de pesquisa** — fesomersen não está
-  aprovado para uso clínico em nenhuma indicação.
+- **Presumir disponibilidade comercial ou uso fora de protocolo de pesquisa** — um ensaio de fase 2 não estabelece disponibilidade comercial ou autorização para uso fora de pesquisa.
 
-## Verificação humana necessária
+## Limites desta síntese
 
-Os números deste documento vêm dos abstracts estruturados obtidos via NCBI E-utilities (esearch,
-esummary e efetch em formato MEDLINE) nesta sessão, não do texto integral dos artigos. Pontos que **não**
-puderam ser confirmados nesta sessão e ficam como verificação humana necessária: (1) o intervalo de
-confiança da comparação agrupada de MB/CRNMB no RE-THINC ESRD (o abstract traz apenas o valor de P);
-(2) qualquer detalhamento de subgrupo (idade, tempo em diálise, uso concomitante de outros
-antiagregantes/anticoagulantes) no mesmo ensaio; (3) dados independentes sobre gruticibarte e
-IONIS-FXIRx além do que a revisão sistemática de Steiner et al. relata — este documento não teve acesso
-a artigos primários dedicados a esses dois compostos; (4) a existência ou não de um ensaio de fase 3 de
-fesomersen além do NCT04534114 — a busca no ClinicalTrials.gov nesta sessão (09/09/2026) não encontrou
-nenhum outro registro para o termo "fesomersen", mas o status pode mudar e deve ser reconferido antes de
-qualquer uso deste documento para decisão editorial ou clínica.
+Os resultados de RE-THINC são apresentados no nível relatado no resumo primário, sem inventar intervalos de confiança ou análises de subgrupos não publicados nesse resumo. O texto integral dos estudos farmacocinéticos e da revisão sistemática foi consultado para distinguir os compostos. A redução de atividade do fator XI é um marcador farmacodinâmico, não uma redução proporcional comprovada de trombose.
 
 ## Tudo com Tudo
 
-- [Milvexian na SCA: o Ensaio LIBREXIA-ACS, Interrompido por Futilidade](milvexian-sca-ensaio-librexia-acs-interrompido-por-futilidade.md)
-- [Inibidores do Fator XIa: Asundexian e o Ensaio OCEANIC-STROKE](inibidores-do-fator-xia-asundexian-e-o-ensaio-oceanic-stroke.md)
-- [Inibidores do Fator XI (Abelacimabe): o Ensaio AZALEA-TIMI 71](../Fibrilação_atrial/inibidores-do-fator-xi-abelacimabe-o-ensaio-azalea-timi-71.md)
-- [Metanálise 2026: Inibidores do Fator XI/XIa versus DOAC na FA](../Fibrilação_atrial/metanalise-2026-inibidores-do-fator-xi-xia-versus-doac-na-fa-menos-sangramento-mais-avc.md)
-- [ROXI-VTE I e II: anticorpos anti-fator XI na profilaxia de TEV pós-artroplastia de joelho](../Tromboembolismo/roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho.md)
-- [Fibrilação Atrial em Diálise: o que Diz a Evidência (RENAL-AF e AXADIA-AFNET 8)](../Fibrilação_atrial/fibrilacao-atrial-em-dialise-o-que-diz-a-evidencia-renal-af-e-axadia-afnet-8.md)
-- [Fluxograma: Escolha e ajuste de dose de DOAC na fibrilação atrial — função renal, idade, peso e interações](../Fibrilação_atrial/fluxograma-escolha-e-dose-de-doac-na-fa-por-funcao-renal-idade-e-peso.md)
+- [Milvexian na SCA: o Ensaio LIBREXIA-ACS, Interrompido por Futilidade](/biblioteca/milvexian-sca-ensaio-librexia-acs-interrompido-por-futilidade)
+- [Inibidores do Fator XIa: Asundexian e o Ensaio OCEANIC-STROKE](/biblioteca/inibidores-do-fator-xia-asundexian-e-o-ensaio-oceanic-stroke)
+- [Inibidores do Fator XI (Abelacimabe): o Ensaio AZALEA-TIMI 71](/biblioteca/inibidores-do-fator-xi-abelacimabe-o-ensaio-azalea-timi-71)
+- [Metanálise 2026: Inibidores do Fator XI/XIa versus DOAC na FA](/biblioteca/metanalise-2026-inibidores-do-fator-xi-xia-versus-doac-na-fa-menos-sangramento-mais-avc)
+- [ROXI-VTE I e II: anticorpos anti-fator XI na profilaxia de TEV pós-artroplastia de joelho](/biblioteca/roxi-vte-i-e-ii-anticorpos-anti-fator-xi-na-profilaxia-de-tev-pos-artroplastia-de-joelho)
+- [Fibrilação Atrial em Diálise: o que Diz a Evidência (RENAL-AF e AXADIA-AFNET 8)](/biblioteca/fibrilacao-atrial-em-dialise-o-que-diz-a-evidencia-renal-af-e-axadia-afnet-8)
+- [Fluxograma: Escolha e ajuste de dose de DOAC na fibrilação atrial — função renal, idade, peso e interações](/biblioteca/fluxograma-escolha-e-dose-de-doac-na-fa-por-funcao-renal-idade-e-peso)

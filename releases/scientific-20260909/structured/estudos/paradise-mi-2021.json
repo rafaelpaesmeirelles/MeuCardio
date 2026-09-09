@@ -1,0 +1,25 @@
+{
+  "slug": "paradise-mi-2021",
+  "title": "PARADISE-MI: sacubitril–valsartan não superior ao ramipril após IAM sem IC prévia",
+  "tema": "Doença coronariana",
+  "theme": "Doença coronariana",
+  "year": 2021,
+  "journal": "New England Journal of Medicine",
+  "pmid": "34758252",
+  "doi": "10.1056/NEJMoa2104508",
+  "nct": "NCT02924727",
+  "design": "Ensaio internacional, randomizado, duplo-cego, controlado por comparador ativo (ramipril). Financiado por Novartis.",
+  "population": "5.661 adultos com IAM agudo complicado por FEVE reduzida, congestão pulmonar ou ambos, sem história de IC. 2.830 sacubitril–valsartan versus 2.831 ramipril.",
+  "intervention": "Sacubitril/valsartana com alvo de 97/103 mg duas vezes ao dia, além da terapia recomendada.",
+  "control": "Ramipril com alvo de 5 mg duas vezes ao dia.",
+  "primary_outcome": "Morte por causa cardiovascular ou IC incidente (IC ambulatorial sintomática ou hospitalização por IC), o que ocorresse primeiro.",
+  "key_findings": "Seguimento mediano 22 meses. Primário: 338/2.830 (11,9%) versus 373/2.831 (13,2%); HR 0,90; IC95% 0,78–1,04; P=0,17 — neutro. Morte CV ou hospitalização por IC: 308 (10,9%) versus 335 (11,8%); HR 0,91; IC95% 0,78–1,07. Morte CV: 168 (5,9%) versus 191 (6,7%); HR 0,87; IC95% 0,71–1,08. Morte por qualquer causa: 213 (7,5%) versus 242 (8,5%); HR 0,88; IC95% 0,73–1,05. Interrupção por evento adverso: 357 (12,6%) versus 379 (13,4%).",
+  "clinical_implications": "Após IAM com FEVE reduzida e/ou congestão e sem IC prévia, sacubitril/valsartana não demonstrou superioridade ao ramipril para morte cardiovascular ou IC incidente. O intervalo de confiança inclui benefício possível e ausência de benefício; não é prova de equivalência exata. PARADIGM-HF avaliou ICFEr sintomática estabelecida e enalapril como comparador. Se a ICFEr sintomática persistir, sua avaliação segue as evidências próprias de IC; o resultado do pós-IAM não constitui contraindicação universal de ARNI.",
+  "source_refs": [
+    "Pfeffer MA, Claggett B, Lewis EF, et al.; PARADISE-MI Investigators and Committees. Angiotensin Receptor–Neprilysin Inhibition in Acute Myocardial Infarction. N Engl J Med. 2021;385:1845-1855. DOI 10.1056/NEJMoa2104508. PMID 34758252. NCT02924727.",
+    "McMurray JJV, Packer M, Desai AS, et al.; PARADIGM-HF Investigators and Committees. Angiotensin–Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371:993-1004. DOI 10.1056/NEJMoa1409077. PMID 25176015. NCT01035255."
+  ],
+  "review_status": "revisado",
+  "note": "evidencias/paradise-mi-arni-pos-iam-neutro.json e casos-clinicos/paradise-mi-nao-e-paradigm.json já existiam; este arquivo é o registro em estudos/. Não misturar com PARADIGM-HF (PMID 25176015).",
+  "review_note": "PARADISE-MI conferido; doses identificadas como alvos e distinção clara entre ausência de superioridade e equivalência."
+}

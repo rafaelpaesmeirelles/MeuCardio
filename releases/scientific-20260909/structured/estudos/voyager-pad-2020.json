@@ -1,0 +1,25 @@
+{
+  "slug": "voyager-pad-2020",
+  "title": "VOYAGER PAD 2020 — rivaroxabana 2,5 + AAS após revascularização de membro",
+  "theme": "Aorta e doença arterial periférica",
+  "trial": "VOYAGER PAD",
+  "year": 2020,
+  "n": 6564,
+  "pmid": "32222135",
+  "nct": "NCT02504216",
+  "population": "DAP após revascularização de membro inferior",
+  "intervention": "Rivaroxabana 2,5 mg 2×/dia + AAS",
+  "comparator": "Placebo + AAS",
+  "primary": "ALI, amputação maior vascular, IAM, AVC isquêmico ou morte CV: 17,3% vs 19,9% em 3 anos; HR 0,85 (0,76–0,96)",
+  "source_refs": [
+    "Bonaca MP, et al. N Engl J Med. 2020;382:1994-2004. PMID 32222135."
+  ],
+  "review_status": "revisado",
+  "note": "Não é COMPASS. TIMI maior NS; ISTH maior HR 1,42.",
+  "control": "Placebo + AAS",
+  "design": "Ensaio randomizado, duplo-cego, controlado por placebo sobre AAS.",
+  "primary_outcome": "Isquemia aguda de membro, amputação vascular maior, IAM, AVC isquêmico ou morte cardiovascular.",
+  "key_findings": "ALI, amputação maior vascular, IAM, AVC isquêmico ou morte CV: 17,3% vs 19,9% em 3 anos; HR 0,85 (0,76–0,96)",
+  "clinical_implications": "Benefício do composto após revascularização de membro inferior com rivaroxabana 2,5 mg duas vezes ao dia mais AAS. Sangramento maior TIMI não diferiu significativamente (HR 1,43; IC95% 0,97–2,10), mas ISTH aumentou (HR 1,42; 1,10–1,84). Ausência de significância em uma definição não demonstra ausência de risco. A dose vascular não substitui anticoagulação em dose indicada para FA.",
+  "review_note": "VOYAGER conferido; campos alternativos mapeados e segurança incorporada à ficha importável."
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "poise-nao-e-bb-cronico",
+  "titulo": "Cirurgia de cólon amanhã: iniciar metoprolol agora?",
+  "tema": "Perioperatório",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 72 anos, DAC estável, sem BB. Colega quer iniciar metoprolol succinato 2–4 h antes da colectomia ‘pelo POISE, o primário caiu’.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "O HR 0,84 do primário autoriza iniciar BB de alta carga horas antes em todo vasculopata.",
+    "POISE: primário 5,8% vs 6,9% (HR 0,84), mas morte 3,1% vs 2,3% (HR 1,33) e AVC 1,0% vs 0,5% (HR 2,17). Não é benefício líquido. Continuar BB crônico é outra pergunta.",
+    "POISE testou a suspensão do BB da ICFEr e mostrou segurança.",
+    "O POISE-2 (AAS) substitui a decisão de betabloqueador."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "POISE estudou 8.351 pacientes e iniciou metoprolol de liberação prolongada 2–4 horas antes da cirurgia, por 30 dias. O composto de morte cardiovascular, IAM não fatal ou parada não fatal diminuiu, porém morte total e AVC aumentaram nas proporções da resposta correta. O achado não sustenta copiar esse início imediatamente antes da cirurgia. O estudo não responde à suspensão de betabloqueador crônico ou à titulação iniciada com antecedência por indicação própria. Resultados de AAS e clonidina do POISE-2 não substituem essa decisão.",
+  "source_refs": [
+    "Devereaux PJ, et al. Lancet. 2008;371:1839-1847. PMID 18479744."
+  ],
+  "review_status": "revisado",
+  "review_note": "POISE conferido: composto, prazo, população e danos; removida informação numérica de outro estudo sem fonte no caso."
+}

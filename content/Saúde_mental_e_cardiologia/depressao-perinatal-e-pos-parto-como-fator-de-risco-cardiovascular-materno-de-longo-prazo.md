@@ -1,42 +1,55 @@
 ---
-title: "Depressão Perinatal e Pós-Parto como Fator de Risco Cardiovascular Materno de Longo Prazo"
+title: Depressão Perinatal e Pós-Parto como Fator de Risco Cardiovascular Materno de Longo Prazo
 slug: depressao-perinatal-e-pos-parto-como-fator-de-risco-cardiovascular-materno-de-longo-prazo
-theme: "Saúde mental e cardiologia"
+theme: Saúde mental e cardiologia
 kind: estudo
 review_status: revisado
-source_refs: ["Lu D, Valdimarsdóttir UA, Wei D, Chen Y, Andreassen OA, Fang F, László KD, Bränn E. Perinatal depression and risk of maternal cardiovascular disease: a Swedish nationwide study. Eur Heart J. 2024;45(31):2865-2875. DOI: 10.1093/eurheartj/ehae170. PMID: 38889798", "Sharma G, Gaffey AE, Hameed A, Kasparian NA, Mauricio R, Marsh EB, Beck D, Skowronski J, Wolfe D, Levine GN; American Heart Association Women's Health Science Committee. Optimizing Psychological Health Across the Perinatal Period: An Update on Maternal Cardiovascular Health: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(5):e041369. DOI: 10.1161/JAHA.125.041369. PMID: 39996493. Correction em J Am Heart Assoc. 2025;14(9):e10898. DOI: 10.1161/JAHA.125.035161. PMID: 40265597"]
-legacy_source: "Documento novo. A pasta já cobre depressão como fator de risco para insuficiência cardíaca incidente (metanálise de 2,6 milhões, população geral) e depressão pós-infarto (van Melle/ENRICHD, população já com doença coronariana estabelecida) — nenhum dos dois é específico do período perinatal. O tema 'Gravidez' cobre entidades clínicas distintas (ex.: cardiomiopatia periparto, hipertensão gestacional) que são doença cardíaca causada pela própria gestação; este documento trata de algo diferente, um diagnóstico psiquiátrico (depressão perinatal, incluindo a forma pós-parto) funcionando como marcador de risco cardiovascular futuro na mulher, mesmo sem cardiopatia gestacional associada."
+source_refs:
+- 'Perinatal depression and risk of maternal cardiovascular disease: a Swedish nationwide study. European heart journal. PMID:
+  38889798. DOI: 10.1093/eurheartj/ehae170. PMCID: PMC11328867.'
+- 'Optimizing Psychological Health Across the Perinatal Period: An Update on Maternal Cardiovascular Health: A Scientific
+  Statement From the American Heart Association. Journal of the American Heart Association. PMID: 39996493. DOI: 10.1161/JAHA.125.041369.
+  PMCID: PMC12132617.'
+- 'Correction to: Optimizing Psychological Health Across the Perinatal Period: An Update on Maternal Cardiovascular Health:
+  A Scientific Statement From the American Heart Association. Journal of the American Heart Association. PMID: 40265597. DOI:
+  10.1161/JAHA.125.035161. PMCID: PMC12184279.'
+review_note: PMIDs 38889798 e 39996493 conferidos; erratum 40265597 integralmente lido (créditos de figuras e volume bibliográfico).
+  Corrigidas inferências causais, ranking de subtipos por HR e interpretação de posicionamento como validação causal.
+summary: Lu et al. estudaram 55.539 mulheres com depressão perinatal diagnosticada entre 2001 e 2014 e 545.567 mulheres sem
+  o diagnóstico, pareadas por idade e ano da concepção/parto. O seguimento foi até 2020, em média 10,4 anos e no máximo 20
+  anos. A idade média ao diagnóstico foi 30,8 anos.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Depressão Perinatal e Pós-Parto como Fator de Risco Cardiovascular Materno de Longo Prazo
+# Depressão perinatal e risco cardiovascular materno de longo prazo
 
-## Definicao
-Complementa dois documentos já existentes sobre depressão como fator de risco cardiovascular nesta pasta — depressão como preditor de insuficiência cardíaca incidente na população geral, e depressão pós-infarto (van Melle/ENRICHD) numa população que já tinha doença coronariana estabelecida —, isolando um recorte que nenhum dos dois cobre: a depressão perinatal, diagnosticada durante a gestação ou no pós-parto, como marcador independente de risco cardiovascular na mulher em médio prazo, décadas antes da faixa etária em que doença cardiovascular costuma ser considerada. Não deve ser confundido com as entidades já cobertas no tema Gravidez (como cardiomiopatia periparto) — ali a doença cardíaca é causada pela própria gestação; aqui o objeto é um diagnóstico psiquiátrico funcionando como marcador de risco cardiovascular futuro, presente inclusive em mulheres sem nenhuma complicação cardíaca gestacional.
+## Coorte sueca
 
-## O estudo nacional sueco de lu et al — depressao perinatal e risco cardiovascular materno
-Lu D et al. Eur Heart J. 2024;45(31):2865-2875 (PMID 38889798; PMCID PMC11328867). Estudo de coorte pareada, de base populacional, utilizando registros nacionais de saúde da Suécia:
-- **55.539 mulheres com diagnóstico de depressão perinatal (PND) entre 2001 e 2014**, pareadas individualmente por idade e ano de concepção/parto a **545.567 mulheres sem o diagnóstico**; seguimento de todas as participantes até 2020
-- Idade média ao diagnóstico de PND: 30,8 anos (DP 5,6); seguimento médio de 10,4 anos (DP 3,6), até 20 anos
-- **6,4% das mulheres com PND desenvolveram doença cardiovascular (DCV) durante o seguimento, contra 3,7% das mulheres sem o diagnóstico**
-- **Risco de qualquer DCV, comparado a mulheres pareadas sem PND: razão de risco (HR) ajustada de 1,36** (IC95% 1,31-1,42)
-- **Análise adicional com pareamento por irmãs** (controla confundimento familiar/genético compartilhado): **HR ajustado de 1,20** (IC95% 1,07-1,34) — a associação **permanece significativa mesmo controlando fatores familiares compartilhados**, embora atenuada em relação à análise populacional
-- **A associação foi mais pronunciada em mulheres SEM história prévia de transtorno psiquiátrico** (p de interação <0,001) — ou seja, não é um achado restrito a quem já tinha diagnóstico psiquiátrico anterior à gestação
-- **Risco por subtipo de DCV, o mais alto entre os três**: doença hipertensiva, HR 1,50 (IC95% 1,41-1,60); doença isquêmica do coração, HR 1,37 (IC95% 1,13-1,65); insuficiência cardíaca, HR 1,36 (IC95% 1,06-1,74)
-- **Conclusão dos próprios autores**: mulheres com PND apresentam risco maior de DCV na idade adulta intermediária; a história reprodutiva, incluindo a PND, deveria ser considerada na avaliação de risco cardiovascular da mulher
+Lu et al. estudaram 55.539 mulheres com depressão perinatal diagnosticada entre 2001 e 2014 e 545.567 mulheres sem o diagnóstico, pareadas por idade e ano da concepção/parto. O seguimento foi até 2020, em média 10,4 anos e no máximo 20 anos. A idade média ao diagnóstico foi 30,8 anos.
 
-## O posicionamento cientifico da american heart association, 2025
-Sharma G et al.; American Heart Association Women's Health Science Committee. J Am Heart Assoc. 2025;14(5):e041369 (PMID 39996493; PMCID PMC12132617; correção publicada em maio de 2025, PMID 40265597, sem alteração de conteúdo lida nesta sessão). Posicionamento científico formal da AHA:
-- Reconhece que **condições psicológicas perinatais (depressão e ansiedade perinatal) são uma das principais causas de mortalidade materna nos Estados Unidos**, e associam-se a desfechos gestacionais adversos, desfechos cardiovasculares de longo prazo, e efeitos intergeracionais sobre o neurodesenvolvimento da criança
-- **Redefine formalmente a saúde cardiovascular materna para incluir a saúde psicológica** como componente constituinte, não como comorbidade separada
-- Recomenda rastreio e manejo da saúde psicológica ao longo de todo o período perinatal, definido como gestação até 1 ano pós-parto
-- Descreve modelos de cuidado que integrem, de forma recorrente, a saúde psicológica perinatal ao cuidado cardio-obstétrico, com intervenções comportamentais e farmacológicas, seguimento pós-parto mais longo, e necessidade de avaliar comparativamente a efetividade desses modelos
+Doença cardiovascular ocorreu em 3.533 mulheres com depressão perinatal (6,4%) e 20.202 comparadoras (3,7%). O HR ajustado para qualquer doença cardiovascular foi 1,36 (IC95% 1,31–1,42). Em comparação entre irmãs, foi 1,20 (1,07–1,34). O desenho entre irmãs reduz confusão familiar compartilhada, mas não elimina diferenças individuais ou comprova causalidade.
 
-## Sintese pratica
-As duas fontes, lidas juntas, deslocam a depressão perinatal de "problema de saúde mental confinado ao puerpério" para "marcador de risco cardiovascular de longo prazo que merece constar na anamnese cardiológica da mulher adulta". O estudo sueco mostra magnitude de risco relevante (36% de aumento na análise populacional, ainda 20% mesmo controlando fatores familiares compartilhados pelo desenho de pareamento por irmãs) e um padrão de subtipo que aponta a doença hipertensiva como o desfecho mais fortemente associado — dado prático para orientar qual componente do risco cardiovascular merece atenção mais próxima no seguimento dessa paciente. O posicionamento da AHA, publicado no mesmo ciclo (2025), consolida essa evidência em recomendação formal, redefinindo institucionalmente a saúde cardiovascular materna para incluir a dimensão psicológica — o que dá ao achado do estudo sueco um peso que vai além de uma associação estatística isolada.
+As associações incluíram doença hipertensiva (HR 1,50; 1,41–1,60), doença isquêmica cardíaca (1,37; 1,13–1,65) e insuficiência cardíaca (1,36; 1,06–1,74). Comparar apenas esses HR não estabelece uma hierarquia de prioridades clínicas ou que uma doença deva ser rastreada em detrimento das demais. A associação global foi mais pronunciada em mulheres sem história psiquiátrica prévia (p de interação <0,001).
 
-## Armadilhas clinicas
-- Confundir depressão perinatal como fator de risco cardiovascular com as entidades já cobertas no tema Gravidez desta plataforma (cardiomiopatia periparto, hipertensão gestacional) — são objetos diferentes: ali a doença cardíaca é causada pela própria gestação; aqui um diagnóstico psiquiátrico funciona como marcador de risco cardiovascular futuro, presente mesmo em mulheres sem nenhuma complicação cardíaca gestacional
-- Atribuir a associação inteiramente a confundimento familiar/genético compartilhado — a análise com pareamento por irmãs, desenhada exatamente para testar essa hipótese, ainda encontrou risco aumentado e estatisticamente significativo (HR 1,20), apenas atenuado em relação à análise populacional (HR 1,36)
-- Assumir que o risco se concentra em mulheres que já tinham diagnóstico psiquiátrico antes da gestação — o próprio estudo encontrou o efeito **mais pronunciado**, não menos, nas mulheres sem história psiquiátrica prévia, o que amplia a população-alvo de atenção clínica em vez de restringi-la
-- Tratar os três subtipos de doença cardiovascular como igualmente relevantes para o seguimento clínico — a magnitude de risco foi maior para doença hipertensiva (HR 1,50) do que para doença isquêmica (HR 1,37) ou insuficiência cardíaca (HR 1,36), achado que pode orientar prioridade de rastreio pressórico nessa população
-- Interpretar este documento como prova de mecanismo causal único e definido — é uma associação robusta em coorte observacional de grande escala e com desenho que testa confundimento familiar, não a demonstração de uma via biológica específica; a leitura correta é a mesma cautela epistêmica já registrada nesta pasta para outras associações entre condição psiquiátrica e desfecho cardiovascular (por exemplo, depressão pós-infarto e ENRICHD)
+Esses resultados apoiam registrar a depressão perinatal na história reprodutiva e cardiovascular. Não demonstram que tratar depressão evite eventos cardiovasculares, nem validam recalibrar um escore individual multiplicando seu risco por 1,36. Percentuais brutos e HR ajustados são medidas diferentes.
+
+## Posicionamento AHA 2025
+
+O posicionamento de Sharma et al. incorpora saúde psicológica à saúde cardiovascular materna e discute rastreio, tratamento e integração do cuidado durante a gestação e até um ano pós-parto. Aborda condições como depressão e ansiedade, determinantes sociais, intervenções comportamentais e farmacológicas e continuidade do cuidado cardio-obstétrico.
+
+Condições de saúde mental integram causas relevantes de mortalidade materna nos Estados Unidos; isso não deve ser traduzido como prova de que toda ansiedade perinatal, isoladamente, cause morte. O documento é um posicionamento científico de integração assistencial, não um ensaio demonstrando que um modelo específico reduz eventos cardiovasculares.
+
+A correção publicada em maio de 2025 (PMID 40265597) foi lida: acrescentou atribuição das imagens Life’s Essential 8 nas figuras 1 e 2 e corrigiu o volume da referência de 13 para 14. Não alterou as estimativas clínicas aqui resumidas.
+
+## Aplicação e limites
+
+A avaliação pode integrar sintomas emocionais, pressão arterial e fatores de risco modificáveis, com continuidade entre obstetrícia, atenção primária, saúde mental e cardiologia conforme a necessidade. A história de depressão perinatal é um marcador associado a risco futuro, distinto de diagnosticar cardiomiopatia periparto ou outra complicação cardíaca da gestação; não se pressupõe mecanismo causal único para nenhuma dessas condições.
+
+A associação epidemiológica permanece sujeita a confusão residual e a diferenças de diagnóstico e tratamento. O reconhecimento da saúde psicológica pela AHA reforça sua relevância clínica, mas não converte a coorte sueca em evidência causal nem determina um protocolo exclusivo de rastreio pressórico.
+
+## Tudo com Tudo
+
+- [Depressão pós-parto como marcador de risco cardiovascular materno de longo prazo](/biblioteca/depressao-pos-parto-risco-cardiovascular-materno) — Aprofunda a mesma associação entre depressão perinatal/pós-parto e risco cardiovascular materno tardio.

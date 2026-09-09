@@ -1,11 +1,27 @@
 ---
-title: "Fluxograma: Amiloidose cardíaca — algoritmo diagnóstico não invasivo e tipagem genética"
+title: 'Fluxograma: Amiloidose cardíaca — algoritmo diagnóstico não invasivo e tipagem genética'
 slug: fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo
-theme: "Cardiomiopatias"
+theme: Cardiomiopatias
 kind: fluxograma
-summary: "Árvore do algoritmo não invasivo do position statement da ESC: a pesquisa de proteína monoclonal vem antes da cintilografia na ordem de leitura, porque captação óssea grau 2 ou 3 só fecha diagnóstico de ATTR quando as três provas de clonalidade são normais — caso contrário exige histologia com tipagem."
+summary: 'Algoritmo diagnóstico de amiloidose cardíaca: captação miocárdica grau 2 ou 3 só estabelece ATTR sem biópsia na
+  ausência de proteína monoclonal, com cadeias leves interpretadas pelo ensaio e função renal. Inclui SPECT, situações que
+  exigem histologia e aconselhamento genético.'
 review_status: revisado
-source_refs: ["Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the ESC Working Group on Myocardial and Pericardial Diseases · European Heart Journal · 2021 · 42(16):1554-1568 · DOI: 10.1093/eurheartj/ehab072 · PMID: 33825853 (co-publicado no European Journal of Heart Failure, DOI: 10.1002/ejhf.2140, versões idênticas salvo diferenças de estilo)", "Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT) · New England Journal of Medicine · 2018 · 379(11):1007-1016 · DOI: 10.1056/NEJMoa1805689 · PMID: 30145929"]
+source_refs:
+- 'Garcia-Pavia P, Rapezzi C, Adler Y, et al. Diagnosis and treatment of cardiac amyloidosis: a position statement of the
+  ESC Working Group on Myocardial and Pericardial Diseases · European Heart Journal · 2021 · 42(16):1554-1568 · DOI: 10.1093/eurheartj/ehab072
+  · PMID: 33825853 (co-publicado no European Journal of Heart Failure, DOI: 10.1002/ejhf.2140, versões idênticas salvo diferenças
+  de estilo)'
+- 'Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy
+  (ATTR-ACT) · New England Journal of Medicine · 2018 · 379(11):1007-1016 · DOI: 10.1056/NEJMoa1805689 · PMID: 30145929'
+- 'PMID: 27143678. DOI: 10.1161/CIRCULATIONAHA.116.021612.'
+review_note: Conferido posicionamento ESC 2021 (tabelas 3 e 7 e algoritmo), Gillmore e ATTR-ACT. Corrigido limite renal <45
+  e nó de clonalidade para não confundir desvio por DRC com proteína monoclonal; especificados familiares adultos, vigilância
+  multissistêmica e antecipação diante de sintomas.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Fluxograma: Amiloidose cardíaca — algoritmo diagnóstico não invasivo e tipagem genética
@@ -19,7 +35,7 @@ A regra é esta. A cintilografia com traçador ósseo positiva **não prova ATTR
 sozinha** — captação miocárdica grau 2 ou 3 aparece em mais de 10% dos pacientes
 com amiloidose de cadeia leve. Por isso a pesquisa de proteína monoclonal não é
 exame complementar: ela é **condição de validade** da cintilografia. Se qualquer
-uma das três provas de clonalidade estiver alterada, a cintilografia deixa de
+uma das três provas indicar clonalidade após interpretação do ensaio e da função renal, a cintilografia deixa de
 poder estabelecer o diagnóstico, por mais intensa que seja a captação.
 
 Os dois exames são pedidos juntos. É a leitura que é hierárquica.
@@ -47,7 +63,7 @@ flowchart TD
 
   P1 --> P2["Provas de proteína monoclonal: eletroforese com<br/>imunofixação no soro, eletroforese com imunofixação<br/>na urina e relação de cadeias leves livres séricas"]
 
-  P2 --> D1{"Alguma das três provas de proteína<br/>monoclonal está alterada?"}
+  P2 --> D1{"Há evidência de proteína monoclonal?<br/>Interpretar cadeias leves pelo ensaio/TFGe"}
 
   D1 -->|"Não: as três normais"| D2{"Grau de captação miocárdica<br/>na cintilografia"}
 
@@ -57,7 +73,7 @@ flowchart TD
 
   D2 -->|"Grau 0"| C3(["Probabilidade muito baixa de amiloidose cardíaca:<br/>ATTR e AL improváveis. Considerar diagnóstico alternativo.<br/>Se a suspeita persistir, ressonância cardíaca e, depois,<br/>biópsia cardíaca ou extracardíaca — a cintilografia pode<br/>ser negativa em algumas variantes de ATTRv"])
 
-  D1 -->|"Sim: ao menos uma alterada"| D3{"Grau de captação miocárdica<br/>na cintilografia"}
+  D1 -->|"Sim: evidência de clonalidade"| D3{"Grau de captação miocárdica<br/>na cintilografia"}
 
   D3 -->|"Grau 2 ou 3"| C4(["Não assumir ATTR. Encaminhar ao hematologista<br/>e obter histologia com tipagem do amiloide,<br/>em geral por biópsia endomiocárdica"])
 
@@ -77,7 +93,7 @@ flowchart TD
 
   D4 -->|"Não"| C6(["ATTRwt, forma selvagem.<br/>Sem indicação de rastreamento genético familiar"])
 
-  D4 -->|"Sim"| P4["ATTRv, forma hereditária: oferecer aconselhamento<br/>e teste genético em cascata aos familiares"]
+  D4 -->|"Sim"| P4["ATTRv, forma hereditária: oferecer aconselhamento<br/>e teste genético em cascata aos familiares adultos"]
 
   P4 --> D5{"O familiar testado é portador<br/>da variante?"}
 
@@ -111,8 +127,8 @@ valor normal **depende do ensaio e da função renal**:
 |---|---|
 | Ensaio Freelite | 0,26 a 1,65 |
 | Ensaio N Latex | 0,53 a 1,51 |
-| Doença renal crônica com TFGe de 45 mL/min/1,73 m² ou menos, com eletroforeses séricas e urinárias normais | até 2,0 |
-| Paciente em diálise | até 3,1 |
+| Ensaio Freelite, DRC com TFGe <45, imunofixações sérica e urinária normais | até 2,0 |
+| Ensaio Freelite, paciente em diálise, com imunofixações normais | até 3,1 |
 
 Ler a relação de um paciente renal crônico pela faixa do paciente com função
 renal normal produz uma clonalidade que não existe — e joga para a biópsia um
@@ -141,3 +157,11 @@ específica — os três, não apenas o fármaco.
 **Estenose aórtica grave e amiloidose coexistem com frequência que não é
 anedótica.** Investigar antes do TAVI muda a expectativa de benefício do
 procedimento, e é um dos cenários em que a diretriz explicitamente manda procurar.
+
+As faixas renais acima pertencem ao esquema do posicionamento ESC 2021 e não devem ser aplicadas indistintamente ao N Latex ou a qualquer laboratório. Discordância requer hematologia. Espessura ≥12 mm é um sinal de suspeita, não condição obrigatória para investigar AL ou doença precoce. A relação de terapias citada descreve 2021; não é lista exaustiva de opções disponíveis em 2026.
+
+O acompanhamento de portadores de variante deve também considerar avaliação neurológica e oftalmológica, Holter e imagem adicional conforme o protocolo e os sintomas. A periodicidade é orientada por consenso e deve ser individualizada; sintomas compatíveis justificam investigação antes da idade prevista. Teste preditivo de menores assintomáticos não é rotina.
+
+## Tudo com Tudo
+
+- [Diagnóstico e Tratamento da Amiloidose Cardíaca](/biblioteca/diagnostico-e-tratamento-da-amiloidose-cardiaca) — Relaciona o algoritmo não invasivo à narrativa de diagnóstico, exclusão de cadeia leve, tipagem genética e tratamento específico.

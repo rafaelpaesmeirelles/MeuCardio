@@ -1,0 +1,22 @@
+{
+  "slug": "attr-act-nao-e-helios-b",
+  "titulo": "ATTR-CM: tafamidis ou vutrisiran — o que cada ensaio mediu",
+  "tema": "Cardiomiopatias",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 74 anos, ATTR-CM wild-type. Colega cita “HR 0,70 do silenciador”.",
+  "pergunta": "Qual afirmação está alinhada?",
+  "opcoes": [
+    "ATTR-ACT (tafamidis, estabilizador) e HELIOS-B (vutrisiran, siRNA) são o mesmo ensaio.",
+    "ATTR-ACT: 264 vs 177, 30 meses; morte 29,5% vs 42,9%; HR 0,70. HELIOS-B é silenciador com composto HR 0,72 — outra classe, outra pergunta.",
+    "O HR 0,70 do ATTR-ACT autoriza suspender o CDI se FEVE >35%.",
+    "Tafamidis 20 mg e 80 mg foram analisados só em separado; não há braço agrupado."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "ATTR-ACT PMID 30145929: estabilizador. HELIOS-B PMID 39213194: silenciador. Não somar HRs. Análise primária do ATTR-ACT agrupou 80+20 mg vs placebo. O HR 0,70 refere-se à mortalidade isolada no ATTR-ACT; o HR 0,72 ao composto de morte e eventos cardiovasculares recorrentes no HELIOS-B. Não há comparação direta de superioridade entre medicamentos.",
+  "source_refs": [
+    "Maurer MS, et al. N Engl J Med. 2018;379:1007-1016. PMID 30145929.",
+    "Vutrisiran in ATTR-CM. PMID:39213194. DOI:10.1056/NEJMoa2409134."
+  ],
+  "review_status": "revisado",
+  "review_note": "Populações, mortalidade e composto conferidos nas duas fontes; adicionada referência HELIOS-B e limite de comparação indireta."
+}

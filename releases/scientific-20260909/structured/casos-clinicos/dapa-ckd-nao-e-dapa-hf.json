@@ -1,0 +1,22 @@
+{
+  "slug": "dapa-ckd-nao-e-dapa-hf",
+  "titulo": "Dapagliflozina: DRC ou ICFEr?",
+  "tema": "Cardiorrenal",
+  "nivel": "intermediário",
+  "enunciado": "TFGe 42 mL/min/1,73 m², UACR 400 mg/g, sem IC. Colega cita DAPA-HF (redução de morte na ICFEr) como base para iniciar dapagliflozina 10 mg.",
+  "pergunta": "Qual ensaio fala desta porta?",
+  "opcoes": [
+    "DAPA-HF (ICFEr) se aplica a qualquer TFGe baixa, mesmo sem IC.",
+    "DAPA-CKD: 4304 pacientes, TFGe 25–75 e UACR 200–5000; primário 9,2% vs 14,5%; HR 0,61; NNT 19 no seguimento mediano de 2,4 anos. DAPA-HF é ICFEr — outra pergunta.",
+    "FLOW (semaglutida) é o ensaio da dapagliflozina na DRC.",
+    "O NNT 19 do DAPA-CKD autoriza suspender o IECA."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 32970396 é DRC albuminúrica. DAPA-HF é ICFEr. FLOW é semaglutida. Não misturar. O primário reuniu queda sustentada de TFGe ≥ 50%, doença renal terminal ou morte renal/cardiovascular. O NNT depende do desfecho e horizonte. A terapia de base e contraindicações devem ser conferidas; função renal baixa isoladamente não resume os critérios de inclusão.",
+  "source_refs": [
+    "Heerspink HJL, et al. N Engl J Med. 2020;383:1436-1446. PMID 32970396.",
+    "DAPA-HF. PMID:31535829."
+  ],
+  "review_status": "revisado",
+  "review_note": "Conferidos recorterenal, unidades, composto e horizonte doNNT; adicionada fonte do comparadorDAPA-HF."
+}

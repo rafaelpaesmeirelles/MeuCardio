@@ -1,0 +1,16 @@
+{
+  "slug": "corp-pericardite-recorrente",
+  "title": "CORP: colchicina reduz recorrência na primeira recidiva de pericardite",
+  "tema": "Pericárdio",
+  "theme": "Pericárdio",
+  "statement": "No CORP (Imazio et al., Ann Intern Med. 2011;155:409-414; PMID 21873705; NCT00128414), ensaio prospectivo, randomizado, duplo-cego, placebo-controlado, multicêntrico (4 hospitais na Itália), 120 pacientes com primeira recorrência de pericardite (60 colchicina, 60 placebo) receberam colchicina 1,0–2,0 mg no primeiro dia e manutenção 0,5–1,0 mg/d por 6 meses, adjunta a AINE convencional. Tuberculose, neoplasia e causa purulenta excluídas. Primário: recorrência aos 18 meses. Recorrência 24% vs 55%; RRA 0,31 (IC95% 0,13–0,46); RRR 0,56 (0,27–0,73); NNT 3 (2–7). Persistência de sintomas em 72 horas: redução absoluta de risco de 0,30 (IC95% 0,13–0,45) e redução relativa de 0,56 (0,27–0,74). Eventos adversos e descontinuação semelhantes. Não é ICAP (primeiro episódio; 3 meses). Não é CORP-2 (múltiplas recorrências). Não testa anakinra nem rilonacept. As doses com ataque descrevem o protocolo histórico; não substituem ajuste atual por função renal/hepática, interações e tolerabilidade.",
+  "society": "Ann Intern Med / CORP",
+  "year": 2011,
+  "pmid": "21873705",
+  "source_refs": [
+    "Imazio M, Brucato A, Cemin R, et al.; CORP (COlchicine for Recurrent Pericarditis) Investigators. Colchicine for recurrent pericarditis (CORP): a randomized trial. Ann Intern Med. 2011;155(7):409-414. DOI 10.7326/0003-4819-155-7-201110040-00359. PMID 21873705. NCT00128414."
+  ],
+  "note": "Não misturar com ICAP (PMID 23992557; primeiro episódio; 3 meses; sem ataque) nem com CORP-2 (PMID 24694983; duas ou mais recorrências). evidencias/icap-colchicina-primeiro-episodio.json já cobre a porta ICAP. Doses são de protocolo, não da Tabela 13 da ESC 2025.",
+  "review_status": "revisado",
+  "review_note": "CORP primário conferido; corrigido RR de sintomas erroneamente citado e preservado NNT publicado, distinguindo protocolo histórico."
+}

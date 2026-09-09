@@ -1,5 +1,5 @@
 ---
-title: 'Disfunção erétil por esteroides anabolizantes: recuperação após a suspensão e interseção com risco cardiovascular'
+title: 'Disfunção sexual após esteroides anabolizantes: recuperação e avaliação'
 slug: disfuncao-eretil-por-esteroides-anabolizantes-recuperacao-apos-suspensao
 theme: Cardiologia do Esporte e do Exercício
 kind: estudo
@@ -11,8 +11,17 @@ source_refs:
   J Clin Endocrinol Metab. 2026;111(9):2649-2663. DOI: 10.1210/clinem/dgag110. PMID: 41818709.'
 - 'İbis MA, Yap T, Satchi M, et al. Post-cycle therapy after short-term anabolic-androgenic steroid use: comparative outcomes
   in recreational bodybuilders. BJU Int. 2026;137(1):154-165. DOI: 10.1111/bju.70059. PMID: 41147237.'
-review_note: Corrigido estudo transversal e composição 50/125/72; removidas proibição universal de retirada abrupta, desmame
-  obrigatório, pacote de exames e causalidade da terapia pós-ciclo.
+review_note: 'Corrigido estudo transversal e composição 50/125/72; removidas proibição universal de retirada abrupta, desmame
+  obrigatório, pacote de exames e causalidade da terapia pós-ciclo. Conferência editorial final: título alinhado ao corpo
+  revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando
+  necessário. Vínculos internos preservados.'
+summary: A supressão do eixo hipotálamo-hipófise-gonadal pode causar queda de libido, disfunção erétil e comprometimento da
+  espermatogênese. A recuperação hormonal e a seminal não ocorrem necessariamente no mesmo ritmo. Não é correto afirmar que
+  a disfunção sexual ocorre apenas depois da suspensão.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Disfunção sexual após esteroides anabolizantes: recuperação e avaliação
@@ -34,3 +43,7 @@ Em uma **coorte retrospectiva** de 79 homens com exposição de até seis meses 
 A revisão de Majzoub recomenda priorizar cessação e prevenção de recaída, com avaliação individual de sintomas, hormônios, fertilidade e repercussões orgânicas. **Não sustenta uma regra de “nunca suspender abruptamente”, manutenção obrigatória de testosterona ou desmame universal.** O plano deve considerar exposição, dependência, comorbidades e sintomas de abstinência, incluindo sofrimento psíquico.
 
 História de uso deve integrar a avaliação da disfunção sexual. Pressão e risco metabólico merecem atenção; ecocardiograma e exames hormonais adicionais dependem dos achados, não de um pacote obrigatório derivado dessas coortes. [Majzoub, 2026](https://pubmed.ncbi.nlm.nih.gov/42026176/).
+
+## Tudo com Tudo
+
+- [Esteroides anabolizantes, doping e risco cardiovascular no atleta](/biblioteca/esteroides-anabolizantes-doping-e-risco-cardiovascular-no-atleta) — Conecta recuperação gonadal após anabolizantes à exposição cardiovascular e à avaliação de cardiotoxicidade no atleta.

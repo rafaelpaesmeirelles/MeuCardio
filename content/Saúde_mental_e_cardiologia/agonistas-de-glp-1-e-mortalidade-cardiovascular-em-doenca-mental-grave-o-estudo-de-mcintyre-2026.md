@@ -1,17 +1,27 @@
 ---
-title: "Agonistas de GLP-1 e Mortalidade Cardiovascular em Doença Mental Grave: o Estudo de McIntyre 2026"
+title: 'Agonistas de GLP-1 e Mortalidade Geral em Doença Mental Grave: Estudo Observacional de McIntyre 2026'
 slug: agonistas-de-glp-1-e-mortalidade-cardiovascular-em-doenca-mental-grave-o-estudo-de-mcintyre-2026
-theme: "Saúde mental e cardiologia"
+theme: Saúde mental e cardiologia
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["McIntyre RS, Zhang-James Y, Kwan ATH. Glucagon-Like Peptide 1 Receptor Agonists, Mortality, and Cardiovascular Outcomes in Serious Mental Illness. JAMA Psychiatry. 2026 Aug 26. DOI: 10.1001/jamapsychiatry.2026.2574. PMID: 42647034 — emulação retrospectiva de ensaio-alvo (target trial emulation) na TriNetX Analytics Network, 1.528.230 adultos pareados por escore de propensão (764.115 pares; 195.184 pares com doença mental grave e 568.931 pares sem), publicação eletrônica antecipada ('online ahead of print'), sem paginação/volume-fascículo definitivos até a data de consulta"]
-legacy_source: "Documento novo, escrito em 09/09/2026. Esta pasta já documenta o sinal regulatório de ideação suicida associado a agonistas de GLP-1 (revisões EMA/FDA), mas nenhum documento cobria o achado oposto e mais recente sobre a mesma classe de fármaco: um estudo de emulação de ensaio-alvo, publicado em agosto de 2026 na JAMA Psychiatry, associando o início de agonista de GLP-1 (vs. inibidor de SGLT2) a menor mortalidade e menor risco de eventos cardiovasculares maiores especificamente em pessoas com doença mental grave (transtorno depressivo maior, transtorno bipolar e esquizofrenia) — população que já carrega, nos documentos desta pasta e da metanálise de Correll et al. 2017 (PMID 28498599, citada no documento sobre transtorno bipolar e síndrome metabólica), excesso de mortalidade cardiovascular bem estabelecido. Busca confirmada por grep no repositório inteiro antes de escrever ('GLP-1', 'glucagon', 'semaglutid', 'tirzepatide', 'McIntyre', 'Serious Mental Illness', PMID 42647034): nenhum resultado prévio em content/. O PMID foi lido na íntegra via E-utilities do PubMed (esearch + efetch de abstract) nesta sessão antes de qualquer número entrar no texto; nenhum dado veio de resumo secundário ou memória."
+review_status: revisado
+source_refs:
+- 'McIntyre RS, Zhang-James Y, Kwan ATH. Glucagon-Like Peptide 1 Receptor Agonists, Mortality, and Cardiovascular Outcomes
+  in Serious Mental Illness. JAMA Psychiatry. 2026. DOI: 10.1001/jamapsychiatry.2026.2574. PMID: 42647034. https://pubmed.ncbi.nlm.nih.gov/42647034/'
+summary: 'Conclusão dos autores, no texto: o início de agonista de GLP-1 associou-se a menor mortalidade e menor incidência
+  de eventos cardiovasculares comparado ao início de inibidor de SGLT2, com diferenças absolutas maiores em doença mental
+  grave; o benefício foi evidente já no primeiro ano, consistente entre os subtipos de doença mental grave avaliados, e conduzido
+  sobretudo por semaglutida e tirzepatida. Os próprios autores concluem que ensaios clínicos randomizados e prospectivos são
+  necessários para confirmar o achado.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Agonistas de GLP-1 e Mortalidade Cardiovascular em Doença Mental Grave: o Estudo de McIntyre 2026
+# Agonistas de GLP-1 e Mortalidade Geral em Doença Mental Grave: o Estudo de McIntyre 2026
 
-## A pergunta que este documento responde
-Esta pasta já registra, em documento próprio, o sinal regulatório de ideação suicida investigado pela EMA e pela FDA sobre os agonistas do receptor de GLP-1 — um sinal de segurança que motivou duas revisões formais e que, ao final, **não** se confirmou como associação causal robusta nas conclusões regulatórias mais recentes. Este documento trata de uma pergunta diferente e, para o cardiologista, talvez mais relevante na prática diária: pessoas com doença mental grave (transtorno depressivo maior, transtorno bipolar, esquizofrenia) morrem prematuramente, principalmente de doença cardiovascular — excesso de risco já registrado nesta pasta (documento sobre transtorno bipolar e síndrome metabólica, citando Correll et al. 2017, PMID 28498599: HR 1,78 para incidência de doença cardiovascular e HR 1,85 para morte cardiovascular em doença mental grave agrupada). McIntyre et al. perguntaram: iniciar um agonista de GLP-1, em vez de um inibidor de SGLT2, muda esse desfecho nessa população especificamente?
+## Pergunta clínica
+Uma emulação de ensaio-alvo comparou iniciar um agonista de GLP-1 ou um inibidor de SGLT2 em pessoas com e sem doença mental grave. O desfecho primário foi mortalidade **por qualquer causa**, e não mortalidade cardiovascular isolada. A associação observada não demonstra superioridade terapêutica causal.
 
 ## O desenho do estudo
 McIntyre RS, Zhang-James Y, Kwan ATH. JAMA Psychiatry. 2026 Aug 26 (PMID 42647034, publicação eletrônica antecipada, DOI 10.1001/jamapsychiatry.2026.2574).
@@ -30,26 +40,20 @@ McIntyre RS, Zhang-James Y, Kwan ATH. JAMA Psychiatry. 2026 Aug 26 (PMID 4264703
 - **Mortalidade em 4 anos, na coorte com DMG:** **4,91% (9.585/195.184) com GLP-1 RA vs. 6,45% (12.584/195.184) com SGLT2i** — **HR 0,76** (IC95% 0,74-0,78); **diferença de risco absoluto de -1,54 pontos percentuais** (IC95% -1,68 a -1,39; p<0,001).
 - **Na coorte com DMG e diabetes tipo 2**, semaglutida (comparada a inibidor de SGLT2) associou-se a menor risco de **MACE de 3 pontos** (HR 0,77; IC95% 0,76-0,79), **MACE de 5 pontos**, **infarto do miocárdio**, **AVC**, **insuficiência cardíaca** e **revascularização miocárdica cirúrgica (CABG)** — todos com risco menor no grupo semaglutida.
 - **Mortalidade em 1 ano, em coorte pareada separadamente, na DMG:** **1,46% (2.898/198.065) com GLP-1 RA vs. 2,84% (5.624/198.065) com SGLT2i** — **RR 0,52** (IC95% 0,49-0,54); **diferença de risco absoluto de -1,38 pontos percentuais** (IC95% -1,47 a -1,29; p<0,001).
-- **Análise exploratória em 10 anos, subgrupo com diabetes tipo 2:** semaglutida (vs. SGLT2i) associou-se a menor mortalidade em cada transtorno específico — **transtorno depressivo maior: RR 0,55** (IC95% 0,53-0,56); **transtorno bipolar: RR 0,57** (IC95% 0,51-0,63); **esquizofrenia: RR 0,67** (IC95% 0,59-0,75) — todos com p<0,001.
 - **A associação de mortalidade primária persistiu em todas as análises de sensibilidade pré-especificadas** (estratificação por diabetes, exclusão de insuficiência cardíaca/doença renal crônica basais, censura em crossover).
 
-**Conclusão dos autores, no texto:** o início de agonista de GLP-1 associou-se a menor mortalidade e menor incidência de eventos cardiovasculares comparado ao início de inibidor de SGLT2, com reduções absolutas maiores em doença mental grave; o benefício foi evidente já no primeiro ano, consistente entre os subtipos de doença mental grave avaliados, e conduzido sobretudo por semaglutida e tirzepatida. Os próprios autores concluem que **ensaios clínicos randomizados e prospectivos são necessários** para confirmar o achado.
+**Conclusão dos autores, no texto:** o início de agonista de GLP-1 associou-se a menor mortalidade e menor incidência de eventos cardiovasculares comparado ao início de inibidor de SGLT2, com diferenças absolutas maiores em doença mental grave; o benefício foi evidente já no primeiro ano, consistente entre os subtipos de doença mental grave avaliados, e conduzido sobretudo por semaglutida e tirzepatida. Os próprios autores concluem que **ensaios clínicos randomizados e prospectivos são necessários** para confirmar o achado.
 
-## Por que isso importa na prática cardiológica
-A doença mental grave já carrega, nesta pasta e na literatura (Correll et al. 2017), excesso substancial de mortalidade cardiovascular independente de qual fármaco psiquiátrico está em uso. Este estudo sugere que a escolha de **qual fármaco cardiometabólico** usar num paciente com doença mental grave e obesidade ou diabetes tipo 2 concomitantes pode não ser neutra: a magnitude de benefício absoluto de mortalidade associada ao agonista de GLP-1 foi **maior** na coorte com doença mental grave do que na coorte sem, sugerindo que essa população — historicamente subtratada e com maior barreira de acesso a cuidado cardiovascular preventivo, tema já registrado no documento desta pasta sobre disparidade de cuidado cardiovascular no transtorno mental grave — pode ser exatamente onde o benefício absoluto é maior. Isso não substitui a necessidade de vigilância do sinal de ideação suicida já documentado nesta pasta: são achados sobre desfechos diferentes (mortalidade cardiovascular vs. comportamento suicida), extraídos de desenhos de estudo diferentes (emulação de ensaio-alvo em base de dados administrativa vs. farmacovigilância e revisão regulatória), e a leitura correta é de **dois sinais que coexistem e precisam ser comunicados juntos**, não um invalidando o outro.
+## Interpretação clínica
+Os dados sugerem associação entre início de GLP-1 e menor mortalidade geral nessa população, mas o comparador foi outra classe ativa com indicações próprias. Confusão por indicação, gravidade de diabetes, insuficiência cardíaca, doença renal e acesso ao cuidado pode persistir apesar do pareamento. O achado não autoriza substituir automaticamente iSGLT2 nem comprova redução específica de morte cardiovascular.
 
 ## Limitações, declaradas com honestidade
 - **Desenho observacional retrospectivo (emulação de ensaio-alvo), não um ensaio clínico randomizado** — os próprios autores concluem pedindo confirmação prospectiva randomizada; associação não é prova de causalidade, por mais que o desenho de novo usuário e comparador ativo reduza vieses clássicos de estudos observacionais com fármacos.
 - **Base de dados administrativa (TriNetX)** — dados de registro eletrônico de saúde multinacional, sujeitos a confundimento residual por indicação (motivo clínico de escolher GLP-1 RA em vez de SGLT2i pode se associar, por si, a menor risco basal não completamente capturado pelo pareamento por escore de propensão).
-- **Definição operacional de "doença mental grave" (DMG/SMI) não detalhada no resumo indexado consultado** — o resumo não especifica os códigos diagnósticos exatos usados para compor a coorte de DMG nem o momento de ascertainment do diagnóstico psiquiátrico em relação ao início do fármaco; `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar da definição operacional exata, mediante leitura do artigo completo (ainda em publicação eletrônica antecipada até a data de consulta, sem volume/fascículo/paginação definitivos).
-- **Achado de 10 anos por transtorno específico é exploratório**, restrito ao subgrupo com diabetes tipo 2 e a um agente específico (semaglutida) — não deve ser lido como estimativa válida para toda a classe de GLP-1 RA nem para pacientes sem diabetes tipo 2 nesse horizonte de seguimento.
-- **Comparador é um fármaco ativo (inibidor de SGLT2), não placebo** — o achado deve ser lido como "GLP-1 RA parece superior a SGLT2i nesta população", não como "GLP-1 RA reduz mortalidade em termos absolutos comparado a não tratamento"; SGLT2i também tem benefício cardiovascular estabelecido, o que torna o comparador clinicamente relevante, mas não neutro.
-- **Publicação em estágio de "online ahead of print"** na data de consulta (26/08/2026) — texto integral e eventuais correções/errata pós-publicação formal ainda não conferidos.
+- **Comparador é um fármaco ativo (inibidor de SGLT2), não placebo** — o achado deve ser lido como associação comparativa observacional, não como "GLP-1 RA reduz mortalidade em termos absolutos comparado a não tratamento"; SGLT2i também tem benefício cardiovascular estabelecido, o que torna o comparador clinicamente relevante, mas não neutro.
 
 ## Armadilhas clínicas
 - Tratar este achado como evidência suficiente para trocar rotineiramente inibidor de SGLT2 por agonista de GLP-1 em todo paciente com doença mental grave e diabetes — o próprio estudo é observacional e os autores pedem confirmação por ensaio randomizado; a decisão individual de escolha de fármaco cardiometabólico continua sendo clínica, não determinada por este estudo isolado.
-- Interpretar o achado deste documento como contraditório ao sinal de ideação suicida já registrado nesta pasta — são desfechos, populações-alvo de análise e desenhos de estudo diferentes; a leitura correta é de coexistência de dois sinais, ambos a serem comunicados ao paciente, não de invalidação mútua.
-- Extrapolar a redução de mortalidade por transtorno específico (transtorno depressivo maior, transtorno bipolar, esquizofrenia) do subgrupo exploratório de 10 anos para pacientes sem diabetes tipo 2 — esse recorte específico foi feito apenas dentro do subgrupo com diabetes tipo 2.
 - Assumir que o benefício é de classe uniforme — o próprio resumo atribui o efeito predominantemente a **semaglutida e tirzepatida**, não a todos os agonistas de GLP-1 indistintamente.
 
 ## Conteúdo CorVIA conectado

@@ -1,0 +1,23 @@
+{
+  "slug": "emperor-preserved-nao-e-reduced",
+  "titulo": "FEVE 52%: EMPEROR-Reduced ou Preserved?",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "intermediário",
+  "enunciado": "IC, FEVE 52%, sem diabetes. Colega cita EMPEROR-Reduced (19,4% vs 24,7%; HR 0,75) para iniciar empagliflozina 10 mg.",
+  "pergunta": "Qual ensaio fala desta FE?",
+  "opcoes": [
+    "EMPEROR-Reduced inclui qualquer FEVE; o HR 0,75 vale aqui.",
+    "EMPEROR-Preserved: FEVE >40%, 5988 pacientes, primário 13,8% vs 17,1%; HR 0,79. Reduced é FE reduzida. DELIVER é dapagliflozina na mesma faixa de FE.",
+    "DELIVER e EMPEROR-Preserved são o mesmo ensaio com nomes diferentes.",
+    "Sem diabetes o Preserved não se aplica."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 34449189 Preserved (FEVE >40%). PMID 32865377 Reduced (FE reduzida). Consistente com/sem DM no Preserved. O primário do Preserved foi morte CV ou hospitalização por IC, com benefício principalmente nas hospitalizações. FEVE >40% inclui faixas hoje descritas como levemente reduzida e preservada; não significa que todos tinham FEVE ≥ 50%. Avaliar critérios clínicos, não apenas FEVE.",
+  "source_refs": [
+    "Anker SD, et al. N Engl J Med. 2021. PMID 34449189.",
+    "EMPEROR-Reduced. PMID:32865377.",
+    "DELIVER. PMID:36027570. DOI:10.1056/NEJMoa2206286."
+  ],
+  "review_status": "revisado",
+  "review_note": "ConferidoEMPEROR-Preserved e acrescentados composto e distinção FE>40 versus≥50; fontes doscomparadores incluídas."
+}

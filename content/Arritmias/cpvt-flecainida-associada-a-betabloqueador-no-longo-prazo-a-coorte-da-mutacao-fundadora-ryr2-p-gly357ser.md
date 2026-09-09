@@ -1,33 +1,26 @@
 ---
 kind: estudo
-legacy_source: Documento novo, escrito em 08/09/2026. A pasta já tinha, dentro de
-  qt-curto-e-cpvt-duas-canalopatias-em-que-a-parada-e-a-primeira-manifestacao.md,
-  o ensaio randomizado cruzado de Kannankeril et al. (JAMA Cardiol 2017, PMID 28492868)
-  que demonstrou, em 13 pacientes e 6 meses de seguimento, que a flecainida suprime
-  ectopia ventricular ao esforço na CPVT além do betabloqueador isolado — mas com
-  desfecho substituto (escore de arritmia ao teste de esforço), não evento clínico,
-  e sem dado de longo prazo. Faltava o documento que traz seguimento real de longo
-  prazo (mediana de 7,3 anos de flecainida, dados até 2024) numa coorte de tamanho
-  maior (32 pacientes em terapia combinada, dentro de uma coorte-base de 235 portadores
-  genéticos), com desfecho clínico duro (evento arrítmico registrado pelo CDI) além
-  do escore de esforço — angulo distinto e complementar, não sobreposto.
 published: true
-review_note: Coorte e ECR 2017 conferidos; cinco pacientes não equivale a cinco eventos,
-  14 randomizados/13 completos, comparação antes-depois não prova benefício causal
-  ou mortalidade; doses apenas descritivas.
+review_note: 'Coorte e ECR 2017 conferidos; cinco pacientes não equivale a cinco eventos, 14 randomizados/13 completos, comparação
+  antes-depois não prova benefício causal ou mortalidade; doses apenas descritivas. Conferência editorial final: título alinhado
+  ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido
+  quando necessário. Vínculos internos preservados.'
 review_status: revisado
 slug: cpvt-flecainida-associada-a-betabloqueador-no-longo-prazo-a-coorte-da-mutacao-fundadora-ryr2-p-gly357ser
 source_refs:
-- 'Wangüemert-Perez F, Ostos-Cañero G, Wangüemert-Guerra M, Acosta-Materan C, Cárdenes-León
-  A, Caballero-Dorta E, Pérez-Rodríguez K, Brugada R, Brugada J, Martínez-Quintana
-  E. Long-Term Serial Exercise Stress Testing in Catecholaminergic Polymorphic Ventricular
-  Tachycardia on Beta-Blocker and Flecainide Therapy. J Cardiovasc Electrophysiol.
-  2026 Jun 30. DOI: 10.1111/jce.70429. PMID: 42378424 — coorte de 235 portadores genéticos
-  confirmados da mutação RyR2 p.Gly357Ser, 32 em terapia combinada com flecainida,
-  seguimento de 2007 a 2024; abstract lido na íntegra via PubMed nesta sessão'
+- 'Wangüemert-Perez F, Ostos-Cañero G, Wangüemert-Guerra M, Acosta-Materan C, Cárdenes-León A, Caballero-Dorta E, Pérez-Rodríguez
+  K, Brugada R, Brugada J, Martínez-Quintana E. Long-Term Serial Exercise Stress Testing in Catecholaminergic Polymorphic
+  Ventricular Tachycardia on Beta-Blocker and Flecainide Therapy. J Cardiovasc Electrophysiol. 2026 Jun 30. DOI: 10.1111/jce.70429.
+  PMID: 42378424.'
 theme: Arritmias
-title: 'CPVT: Flecainida Associada a Betabloqueador no Longo Prazo — a Coorte da Mutação
-  Fundadora RyR2 p.Gly357Ser'
+title: 'CPVT: Flecainida Associada a Betabloqueador no Longo Prazo — a Coorte da Mutação Fundadora RyR2 p.Gly357Ser'
+summary: 'A leitura conjunta é o que importa clinicamente: o ensaio randomizado estabelece causalidade a curto prazo para
+  o desfecho substituto (arritmia ao esforço); a coorte descreve menor carga arrítmica e ausência de eventos por CDI reportados
+  após a adição, sem permitir atribuir causalmente a diferença ao medicamento — sem, ainda assim, constituir prova formal
+  de redução de mortalidade, pelo desenho observacional sem grupo controle contemporâneo.'
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # CPVT: Flecainida Associada a Betabloqueador no Longo Prazo — a Coorte da Mutação Fundadora RyR2 p.Gly357Ser

@@ -1,0 +1,21 @@
+{
+  "slug": "early-tavr-morte-vs-internacao",
+  "titulo": "EARLY TAVR: o HR 0,50 é mortalidade ou o composto puxado por internação?",
+  "tema": "Valvopatias",
+  "nivel": "avançado",
+  "enunciado": "Mulher de 71 anos, estenose aórtica grave assintomática, FEVE 60%, anatomia femoral adequada, STS PROM baixo. Na reunião do Heart Team, o intervencionista projeta o EARLY TAVR (Généreux et al., NEJM 2025) e conclui: «HR 0,50 — TAVI precoce corta a mortalidade pela metade; vigilância deixou de ser ética.» A proposta é TAVI automático em toda EA grave assintomática ≥ 65 anos.",
+  "pergunta": "O que o EARLY TAVR realmente mostrou ao decompor o composto primário (morte, AVC ou internação cardiovascular não planejada) da mortalidade isolada?",
+  "opcoes": [
+    "O HR 0,50 é o de morte por qualquer causa (8,4% vs 9,2% seria o composto); TAVI precoce é obrigação porque o ensaio é de mortalidade",
+    "O composto (morte, AVC ou internação CV não planejada) foi 26,8% vs 45,3% (HR 0,50; IC95% 0,40–0,63); a mortalidade isolada foi 8,4% vs 9,2% e o motor foram as internações CV não planejadas (20,9% vs 41,7%) — não demonstrou redução de mortalidade isolada",
+    "O ensaio foi neutro no composto e na mortalidade; a única leitura possível continua sendo vigilância até o primeiro sintoma",
+    "A redução de mortalidade isolada foi o desfecho primário; a internação CV (20,9% vs 41,7%) entrou só como secundário exploratório e não deve pesar na decisão"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O EARLY TAVR (n=901; mediana 3,8 anos) comparou TAVI precoce com vigilância em EA grave assintomática com FE preservada. O desfecho primário é um composto — morte, AVC ou internação cardiovascular não planejada — e ocorreu em 122/455 (26,8%) versus 202/446 (45,3%); HR 0,50; IC95% 0,40–0,63; P<0,001. A mortalidade isolada foi 8,4% versus 9,2%: diferença que não sustenta benefício isolado de morte. O composto foi puxado sobretudo pelas internações CV não planejadas (20,9% vs 41,7%); o AVC foi 4,2% vs 6,7%. Ler HR 0,50 como «metade das mortes» confunde composto com mortalidade. Superioridade no composto autoriza discutir TAVI precoce no Heart Team, no recorte do ensaio; não autoriza protocolo automático nem a frase «ensaio de mortalidade». No seguimento mediano de 3,8 anos, 87% dos participantes em vigilância receberam substituição valvar. A comparação é entre intervenção precoce e estratégia de vigilância com intervenção quando indicada, não entre TAVI e nunca tratar. O resultado não obriga procedimento automático sem avaliação de anatomia, expectativa de vida e preferências.",
+  "source_refs": [
+    "Généreux P, Schwartz A, Oldemeyer JB, et al.; EARLY TAVR Trial Investigators. Transcatheter Aortic-Valve Replacement for Asymptomatic Severe Aortic Stenosis. N Engl J Med. 2025;392(3):217-227. DOI: 10.1056/NEJMoa2405880. PMID: 39466903"
+  ],
+  "review_status": "revisado",
+  "review_note": "RCTEARLY-TAVR conferido; adicionado87% deintervenção durantevigilância e evitada interpretação de mortalidade isolada ou proibição devigilância."
+}

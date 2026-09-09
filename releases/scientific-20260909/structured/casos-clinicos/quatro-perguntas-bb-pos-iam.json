@@ -1,0 +1,25 @@
+{
+  "slug": "quatro-perguntas-bb-pos-iam",
+  "titulo": "Alta pós-IAM: qual ensaio de betabloqueador se aplica?",
+  "tema": "Doença coronariana",
+  "nivel": "avançado",
+  "enunciado": "IAM com FEVE 52%, reperfusão feita, sem FA nem angina. Colega cita BETAMI-DANBLOCK (HR 0,85) para manter BB de rotina.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "BETAMI-DANBLOCK (FEVE ≥ 40%) se aplica direto à FEVE 52% e cancela REDUCE-AMI e a IPD.",
+    "REDUCE-AMI e a metanálise individual de FEVE ≥ 50% não demonstraram redução de seus compostos primários. BETAMI-DANBLOCK também incluiu pacientes com FEVE 52%, mas seu resultado global de FEVE ≥ 40% não comprova benefício específico no subgrupo de FE preservada. Outra indicação clínica de betabloqueador deve ser avaliada.",
+    "REBOOT mostrou benefício (HR 0,85) na FEVE >40%.",
+    "Os quatro ensaios têm o mesmo primário e o mesmo recorte de FE."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "REDUCE-AMI avaliou FEVE ≥ 50% e morte total ou novo IAM (HR 0,96; P=0,64). A metanálise individual de FEVE ≥ 50% reuniu 17.801 participantes e encontrou HR 0,97 para morte, IAM ou IC. REBOOT, com FEVE >40%, teve HR 1,04. BETAMI-DANBLOCK, com FEVE ≥ 40%, encontrou HR 0,85 para composto mais amplo; não excluiu FEVE 52%, mas seu efeito global não demonstra efeito nessa faixa isolada. Já a análise individual de FEVE 40–49% encontrou HR 0,75 (IC95% 0,58–0,97), população diferente do caso. Resultado não significativo não equivale a contraindicação ou ordem para suspender abruptamente tratamento.",
+  "source_refs": [
+    "Yndigegn T, et al. N Engl J Med. 2024;390:1372-1381. PMID 38587241.",
+    "REBOOT. PMID: 40888702.",
+    "BETAMI-DANBLOCK. PMID: 40888716.",
+    "Metanálise individual FEVE ≥50%. PMID: 41211954.",
+    "Metanálise individual FEVE 40–49%. PMID: 40897190."
+  ],
+  "review_status": "revisado",
+  "review_note": "Corrigida exclusão conceitual indevida de FEVE 52% do BETAMI; adicionadas análises individuais por FEVE e referências dos quatro resultados."
+}

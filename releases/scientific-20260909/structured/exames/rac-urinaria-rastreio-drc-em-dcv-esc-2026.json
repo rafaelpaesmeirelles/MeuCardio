@@ -1,0 +1,28 @@
+{
+  "slug": "rac-urinaria-rastreio-drc-em-dcv-esc-2026",
+  "name": "Relação albumina/creatinina urinária (RAC/uACR) no rastreio de DRC em DCV — ESC 2026 (STAMP)",
+  "category": "laboratorial",
+  "theme": "Geral",
+  "what_it_measures": "Quantifica a albuminúria pela razão entre albumina e creatinina em amostra isolada de urina, preferencialmente matinal. É marcador de dano renal, cuja causa não pode ser deduzida apenas pelo resultado. No STAMP da ESC 2026, deve acompanhar a TFGe: os dois eixos informam o risco renal e cardiovascular.",
+  "reference_range": "A ESC 2026 adota o sistema CGA (Cause, GFR, Albuminuria) da KDIGO. Limiares da RAC na diretriz: A1 (normal a levemente aumentada) <3 mg/mmol (<30 mg/g); A2 (moderadamente aumentada) 3–30 mg/mmol (≈30–300 mg/g); A3 (severamente aumentada) >30 mg/mmol (>300 mg/g). Albuminúria aumentada para fins de definição de DRC: RAC ≥3 mg/mmol (≥30 mg/g).",
+  "indications": "Rastreio sistemático de DRC em todo paciente com DCV recém-estabelecida — hipertensão, DAC, IC, DAP e AVC (Recommendation Table 3: Classe I, nível C). Medir RAC em amostra isolada matinal é Classe I, nível A (Recommendation Table 1). A dosagem quantitativa é preferida pela melhor sensibilidade e especificidade; fita reagente qualitativa só como triagem inicial em cenário de poucos recursos. A RAC entra no estadiamento, na predição de risco cardiovascular e de falência renal, no ajuste de terapêutica que modifica o risco cardiorrenal e na decisão de encaminhar à nefrologia. Rechecar pelo menos anualmente em diabetes, DRC e DCV (mensagem-chave da diretriz).",
+  "interpretation": "Um único valor elevado não confirma DRC. Persistência de RAC ≥ 30 mg/g por pelo menos três meses pode definir dano renal mesmo com TFGe preservada. Classificar risco pela combinação de categoria G, albuminúria e causa. Alteração nova, grave ou inesperada exige avaliação e repetição em prazo curto para investigar doença aguda, sem esperar três meses para agir.",
+  "limitations": "Febre, exercício intenso, infecção urinária, hematúria ou contaminação podem elevar transitoriamente a RAC. A quantidade de creatinina urinária também varia com massa muscular e outros fatores; valores limítrofes exigem interpretação e confirmação. Fita qualitativa tem menor acurácia e não substitui quantificação. RAC não determina isoladamente a etiologia nem equivale diretamente à excreção de albumina em g/dia.",
+  "source_refs": [
+    "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA). Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426. Recommendation Tables 1 e 3; seções 3.1.1 e 3.3; acrônimo STAMP.",
+    "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. Sumário executivo: Kidney Int. 2024;105(4):684-701. PMID 38519239 — origem do heatmap CGA (A1–A3) adotado pela ESC 2026."
+  ],
+  "review_status": "revisado",
+  "published": false,
+  "tags": [
+    "rac",
+    "uacr",
+    "albuminúria",
+    "drc",
+    "esc 2026",
+    "stamp",
+    "cardiorrenal",
+    "rastreio"
+  ],
+  "review_note": "Rastreamento e categorias renais conferidos com ESC/KDIGO. Corrigidas inferências de causa, equivalência RAC/excreção e uso indiscriminado da TFGe indexada para dose de DOAC."
+}

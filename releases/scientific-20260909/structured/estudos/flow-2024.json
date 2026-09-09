@@ -1,0 +1,24 @@
+{
+  "slug": "flow-2024",
+  "title": "FLOW: semaglutida 1,0 mg SC e desfechos renais no DM2 com DRC",
+  "tema": "Diabetes e cardiologia",
+  "year": 2024,
+  "journal": "New England Journal of Medicine",
+  "pmid": "38785209",
+  "doi": "10.1056/NEJMoa2403347",
+  "design": "Ensaio randomizado, duplo-cego, controlado por placebo, dirigido a eventos, interrompido precocemente após análise interina pré-especificada.",
+  "population": "3.533 adultos com DM2 e DRC (TFGe 50–75 mL/min/1,73 m² com RAC >300 e <5.000 mg/g, ou TFGe 25 a <50 com RAC >100 e <5.000 mg/g). 1.767 semaglutida vs 1.766 placebo.",
+  "intervention": "Semaglutida subcutânea 1,0 mg uma vez por semana após titulação (0,25 mg e 0,5 mg).",
+  "control": "Placebo.",
+  "primary_outcome": "Composto de falência renal (diálise, transplante ou TFGe <15), redução sustentada ≥ 50% da TFGe, ou morte renal ou cardiovascular.",
+  "key_findings": "Seguimento mediano 3,4 anos. Primário: 331 vs 410 primeiros eventos; HR 0,76; IC95% 0,66–0,88; P=0,0003. Componentes renais específicos: HR 0,79 (0,66–0,94). Morte CV: HR 0,71 (0,56–0,89). Inclinação anual da TFGe menos íngreme em 1,16 mL/min/1,73 m² (P<0,001). MACE: HR 0,82 (0,68–0,98); P=0,029. Morte por qualquer causa: HR 0,80 (0,67–0,95); P=0,01. EA graves 49,6% vs 53,8%. Subestudo de IC (PMID 39217553): evento de IC ou morte CV HR 0,73 (0,62–0,87).",
+  "clinical_implications": "FLOW demonstrou benefício no composto renal/cardiovascular com semaglutida SC 1,0 mg semanal após titulação em DM2 com DRC. A maioria usava IECA/BRA, mas apenas 15,6% usavam iSGLT2 inicialmente. Nesse subgrupo, HR 1,07 (IC95% 0,69–1,67) foi impreciso; interação P=0,109. Não se pode garantir o mesmo benefício incremental em todo usuário de iSGLT2 nem suspender terapias de base por extrapolação. A ESC 2026 recomenda semaglutida nesse contexto com critérios próprios de TFGe/albuminúria (I A), que não devem ser confundidos com identidade exata de todos os limites de inclusão do ensaio. A formulação oral e a dose SC de 2,4 mg pertencem a outras perguntas de pesquisa.",
+  "source_refs": [
+    "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+    "Pratley RE, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Heart Failure Outcomes in Diabetes and Chronic Kidney Disease in the FLOW Trial. J Am Coll Cardiol. 2024;84(17):1615-1628. DOI: 10.1016/j.jacc.2024.08.004. PMID: 39217553.",
+    "FLOW por uso basal de SGLT2. PMID: 38914124. DOI: 10.1038/s41591-024-03133-0.",
+    "ESC 2026 DCV/DRC. PMID: 42661426. DOI: 10.1093/eurheartj/ehag098."
+  ],
+  "review_status": "revisado",
+  "review_note": "FLOW e análise de IC conferidos; corrigida generalização sobre SGLT2 e limites de recomendação versus ensaio; tema canônico."
+}

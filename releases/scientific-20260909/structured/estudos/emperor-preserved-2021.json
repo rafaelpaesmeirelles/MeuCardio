@@ -1,0 +1,26 @@
+{
+  "slug": "emperor-preserved-2021",
+  "title": "EMPEROR-Preserved 2021 — empagliflozina 10 mg, FEVE >40%",
+  "theme": "Insuficiência cardíaca",
+  "trial": "EMPEROR-Preserved",
+  "year": 2021,
+  "n": 5988,
+  "pmid": "34449189",
+  "population": "IC classe II–IV, FEVE >40%",
+  "intervention": "Empagliflozina 10 mg/dia",
+  "comparator": "Placebo",
+  "primary": "Morte CV ou hospitalização por IC: 13,8% vs 17,1%; HR 0,79 (0,69–0,90); mediana 26,2 meses",
+  "source_refs": [
+    "Anker SD, et al. N Engl J Med. 2021;385:1451-1461. PMID 34449189."
+  ],
+  "review_status": "revisado",
+  "note": "Não é EMPEROR-Reduced nem DELIVER.",
+  "journal": "New England Journal of Medicine",
+  "doi": "10.1056/NEJMoa2107038",
+  "design": "Ensaio randomizado, duplo-cego, controlado por placebo.",
+  "control": "Placebo",
+  "primary_outcome": "Morte cardiovascular ou hospitalização por insuficiência cardíaca.",
+  "key_findings": "Morte CV ou hospitalização por IC: 13,8% vs 17,1%; HR 0,79 (0,69–0,90); mediana 26,2 meses",
+  "clinical_implications": "Empagliflozina reduziu o composto sobretudo por menos hospitalizações por IC, independentemente de diabetes. FEVE >40% inclui faixas levemente reduzida e preservada; não significa que todos tinham FEVE ≥ 50%. Não foi comparação direta com dapagliflozina nem prova de redução isolada de mortalidade.",
+  "review_note": "EMPEROR-Preserved conferido; convertidos campos alternativos para preservar resultados no importador e esclarecida faixa de FEVE."
+}

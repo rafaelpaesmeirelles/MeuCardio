@@ -7,15 +7,20 @@ review_status: revisado
 source_refs:
 - 'de Vos CB, Pisters R, Nieuwlaat R, Prins MH, Tieleman RG, Coelen RJ, et al. Progression from paroxysmal to persistent atrial
   fibrillation: clinical correlates and prognosis. J Am Coll Cardiol. 2010;55(8):725-731. DOI: 10.1016/j.jacc.2009.11.040.
-  PMID: 20170808 — Euro Heart Survey, 1.219 pacientes com FA paroxística'
+  PMID: 20170808.'
 - 'Chao TF, Ambrose K, Tsao HM, Lin YJ, Chang SL, Lo LW, et al. Usefulness of HATCH score in the prediction of new-onset atrial
-  fibrillation for Asians. Medicine (Baltimore). 2017;96(1):e5597. DOI: 10.1097/MD.0000000000005597. PMID: 28072697 — 670.804
-  indivíduos, base de dados de saúde de Taiwan'
+  fibrillation for Asians. Medicine (Baltimore). 2017;96(1):e5597. DOI: 10.1097/MD.0000000000005597. PMID: 28072697.'
 - 'Qin S, Tao Y, et al. HATCH score associated with new-onset atrial fibrillation in patients with ST-segment elevation myocardial
-  infarction. BMC Cardiovasc Disord. 2025;25(1):516. DOI: 10.1186/s12872-025-04989-x. PMID: 40670941 — 774 pacientes com STEMI
-  submetidos a angioplastia primária'
-review_note: Conferidos pontos e três estudos; removidos usos terapêuticos não testados e extrapolação do limiar de STEMI
-  para outros contextos.
+  infarction. BMC Cardiovasc Disord. 2025;25(1):516. DOI: 10.1186/s12872-025-04989-x. PMID: 40670941.'
+review_note: 'Conferidos pontos e três estudos; removidos usos terapêuticos não testados e extrapolação do limiar de STEMI
+  para outros contextos. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo
+  conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: A atribuição dos pontos foi conferida no resumo de Chao et al. (PMID 28072697), estudo de aplicação do instrumento.
+  Idade exatamente igual a 75 anos não preenche o critério >75.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Escore HATCH: Progressão da Fibrilação Atrial Paroxística e Risco de FA Incidente
@@ -53,12 +58,12 @@ Achados literais de de Vos et al. 2010, sobre a progressão em 1 ano:
 Pacientes que progrediram tiveram, segundo a fonte, **mais internações hospitalares e mais eventos cardiovasculares adversos maiores** que os que permaneceram em FA paroxística.
 
 ## Validação em larga escala — predição de FA incidente (não apenas progressão), Taiwan 2017
-O uso do HATCH se ampliou depois da derivação: além de prever progressão em quem já tem FA paroxística, o escore mostrou também prever o **aparecimento de FA nova** em indivíduos sem arritmia prévia. Chao TF et al., *Medicine (Baltimore)*. 2017;96(1):e5597 (PMID 28072697):
+O uso do HATCH se ampliou depois da derivação: além de prever progressão em quem já tem FA paroxística, o escore mostrou também prever o **aparecimento de FA nova** em indivíduos sem arritmia prévia. Chao TF et al., *Medicine (Baltimore)*. 2017;96(1):e 5597 (PMID 28072697):
 - **670.804 indivíduos** (> 20 anos, sem história de arritmia cardíaca) da base de dados do seguro nacional de saúde de Taiwan (2000-2001)
 - Seguimento médio de **9,0 ± 2,2 anos**
 - **9.174 (1,4%) desenvolveram FA nova**
 - **Incidência por faixa de escore**: **0,8 por 1.000 pacientes-ano** no escore 0, subindo até **57,3 por 1.000 pacientes-ano** no escore 7 (incidência geral da coorte: 1,5 por 1.000 pacientes-ano)
-- **Razão de risco (hazard ratio) de 2,059 por ponto adicional** (IC95% 2,027-2,093; p < 0,001)
+- **Razão de risco (hazard ratio) de 2,059 por ponto adicional** (IC 95% 2,027-2,093; p < 0,001)
 - Conclusão da fonte, citada literalmente: *"o escore HATCH foi útil na estimativa de risco e na estratificação de FA de novo"*
 
 ## Validação recente em contexto agudo — STEMI, 2025
@@ -67,8 +72,8 @@ Qin S, Tao Y et al., *BMC Cardiovasc Disord*. 2025;25(1):516 (PMID 40670941), co
 - **FA nova (NOAF) em 73 pacientes (9,43%)** durante a internação
 - **AUC (curva ROC) de 0,731** para predição de FA nova pelo HATCH
 - **Ponto de corte identificado: 2,5**
-- **Razão de chances (OR) de 1,66 por ponto adicional** (IC95% 1,41-1,95; p < 0,001)
-- **OR de 4,10 para HATCH ≥ 3** (IC95% 2,39-7,02; p < 0,001)
+- **Razão de chances (OR) de 1,66 por ponto adicional** (IC 95% 1,41-1,95; p < 0,001)
+- **OR de 4,10 para HATCH ≥ 3** (IC 95% 2,39-7,02; p < 0,001)
 - Conclusão da fonte, citada literalmente: *"escore HATCH elevado é um fator de risco independente para o desenvolvimento de NOAF após ICP em pacientes com STEMI"*, com *"relação dose-resposta linear entre o escore HATCH e a NOAF"*
 
 ## Aplicação e limites
@@ -81,3 +86,7 @@ O HATCH estima progressão ou incidência conforme a população estudada. Os tr
 - **Somar hipertensão e insuficiência cardíaca sem checar se um item de 2 pontos foi contabilizado como 1** — "T" (AVC/AIT) e o segundo "H" (insuficiência cardíaca) valem 2 pontos cada, diferente dos outros três critérios (1 ponto cada)
 - **Usar isoladamente para decidir estratégia terapêutica (cardioversão vs. controle de frequência)** — o HATCH estratifica risco de progressão/incidência, não substitui a avaliação clínica completa nem os escores de risco tromboembólico (CHA₂DS₂-VA) e hemorrágico (HAS-BLED) já usados para a decisão de anticoagulação
 - **Extrapolar o ponto de corte de 2,5-3 validado em STEMI (Qin 2025) para outros contextos clínicos sem validação própria** — cada cenário (pós-operatório de cirurgia cardíaca, pós-ablação de flutter, população ambulatorial) pode ter limiar ótimo diferente; é necessária validação específica para cada população
+
+## Tudo com Tudo
+
+- [Escore C2HEST: Predição de Fibrilação Atrial Incidente na População Geral e no AVC Criptogênico](/biblioteca/escore-c2hest-predicao-de-fibrilacao-atrial-incidente) — Distingue progressão de FA paroxística, foco do HATCH, da predição de FA incidente pelo C2HEST; os escores não são intercambiáveis.

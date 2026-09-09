@@ -1,0 +1,21 @@
+{
+  "slug": "summit-2025",
+  "title": "SUMMIT — tirzepatida vs placebo na ICFEp com obesidade",
+  "pmid": "39555826",
+  "year": 2025,
+  "journal": "N Engl J Med",
+  "design": "RCT duplo-cego vs placebo, dois primários",
+  "n": 731,
+  "theme": "Insuficiência cardíaca",
+  "key_findings": "Morte cardiovascular ou piora de IC: 9,9% versus 15,3%; HR 0,62 (IC95% 0,41–0,95; P=0,026). Piora de IC: HR 0,54. Morte cardiovascular: 8 versus 5, HR 1,58 (0,52–4,83), sem redução demonstrada. Diferença de KCCQ-CSS em 52 semanas: 6,9 pontos. Seguimento mediano: 104 semanas. Suspensão por eventos adversos: 6,3% versus 1,4%.",
+  "clinical_implications": "Sintomas e eventos de IC, não mortalidade CV. Distinto do SURPASS-CVOT (MACE vs dulaglutida).",
+  "review_status": "revisado",
+  "population": "731 pacientes com IC sintomática, FEVE ≥ 50% e IMC ≥ 30 kg/m²; 364 tirzepatida e 367 placebo.",
+  "intervention": "Tirzepatida subcutânea semanal, titulada até 15 mg.",
+  "control": "Placebo.",
+  "primary_outcome": "Dois primários: morte cardiovascular ou piora de IC; e mudança no KCCQ-CSS em 52 semanas.",
+  "source_refs": [
+    "Packer M et al. SUMMIT. DOI: 10.1056/NEJMoa2410027. PMID: 39555826."
+  ],
+  "review_note": "SUMMIT traduzido e conferido; adicionadas população, titulação, coprimários e segurança."
+}

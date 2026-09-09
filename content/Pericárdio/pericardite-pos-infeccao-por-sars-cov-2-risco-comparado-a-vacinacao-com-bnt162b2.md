@@ -1,112 +1,53 @@
 ---
-title: "Pericardite Após Infecção por SARS-CoV-2: Risco Comparado à Vacinação com BNT162b2"
+title: 'Pericardite Após Infecção por SARS-CoV-2: Risco Comparado à Vacinação com BNT162b2'
 slug: pericardite-pos-infeccao-por-sars-cov-2-risco-comparado-a-vacinacao-com-bnt162b2
-theme: "Pericárdio"
+theme: Pericárdio
 kind: protocolo
 review_status: revisado
-review_note: "Verificado em 09/09/2026: PMID conferido via E-utilities (esearch/esummary/efetch) contra o registro do PubMed, abstract completo lido — Toraih EA, Hussein MH, Thomas SJ, Aiash H. Vaccine. 2026 (PMID 42607625), coorte retrospectiva TriNetX de 4.072.375 indivíduos. Todos os números (RR, IC95%, incidências, diferença de risco absoluto) reproduzidos exatamente como no resumo estruturado (BACKGROUND/METHODS/FINDINGS/INTERPRETATION), sem arredondamento nem extrapolação. O documento já publicado nesta pasta sobre miopericardite associada à vacina de mRNA cobre o lado da vacinação isoladamente (estudos de segurança/farmacovigilância); este documento cobre o lado que faltava — o risco da própria infecção pelo vírus, comparado diretamente à vacinação, na mesma população."
-source_refs: ["Toraih EA, Hussein MH, Thomas SJ, Aiash H. Cardiac outcomes following SARS-CoV-2 infection versus BNT162b2 vaccination in adolescents and young adults: a cohort study of 4 million individuals. Vaccine. 2026;91:129001. DOI: 10.1016/j.vaccine.2026.129001. PMID: 42607625 — abstract conferido no PubMed em 09/09/2026."]
-legacy_source: "Documento novo, 09/09/2026. A pasta já tem um documento dedicado à miopericardite associada à vacina de mRNA contra COVID-19 (segurança da vacina), mas nenhum documento cobre o outro lado da mesma pergunta clínica — o risco de pericardite pela própria infecção natural por SARS-CoV-2, e como ele se compara, número a número, ao risco associado à vacinação. É exatamente essa comparação direta, na mesma coorte e com a mesma metodologia, que responde à pergunta que o paciente costuma fazer ('é mais arriscado tomar a vacina ou pegar a doença?')."
+review_note: Conferido PMID 42607625 e conflito de interesses no registro primário. Corrigida falsa causalidade dos desfechos
+  cardíacos, comparação inválida de risco relativo com absoluto e leitura do inverso da diferença como NNV. Diferenciadas
+  incidência cumulativa e comparação pareada.
+source_refs:
+- 'Cardiac outcomes following SARS-CoV-2 infection versus BNT162b2 vaccination in adolescents and young adults: a cohort study
+  of 4 million individuals. Vaccine. PMID: 42607625. DOI: 10.1016/j.vaccine.2026.129001.'
+summary: 'Toraih et al. analisaram registros eletrônicos TriNetX entre dezembro de 2020 e setembro de 2025. Foram 4.072.375
+  pessoas de 16–25 anos: 3.572.000 sem infecção/vacinação registradas, 248.546 com infecção sem vacinação registrada, 241.152
+  vacinadas sem infecção registrada e 10.677 com ambas. Os desfechos em seis meses foram miocardite, pericardite e mortalidade.
+  Foram usados pareamento por propensão, análise de riscos competitivos e regressão de Cox.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Pericardite Após Infecção por SARS-CoV-2: Risco Comparado à Vacinação com BNT162b2
+# Pericardite após infecção por SARS-CoV-2 versus vacinação com BNT162b2
 
-## Por que este documento existe
+## Comparação observacional em jovens
 
-O documento já publicado nesta pasta sobre miopericardite associada à vacina
-de mRNA contra COVID-19 cobre a segurança da vacinação isoladamente. Falta a
-outra metade da pergunta que o paciente — e frequentemente o próprio médico —
-faz na prática: **a infecção natural pelo SARS-CoV-2 é mais ou menos
-arriscada, para o coração, do que a vacina?** Uma coorte retrospectiva de
-grande porte, publicada em 2026, respondeu a essa pergunta com comparação
-direta na mesma base de dados, na mesma faixa etária, com o mesmo período de
-observação.
+Toraih et al. analisaram registros eletrônicos TriNetX entre dezembro de 2020 e setembro de 2025. Foram 4.072.375 pessoas de 16–25 anos: 3.572.000 sem infecção/vacinação registradas, 248.546 com infecção sem vacinação registrada, 241.152 vacinadas sem infecção registrada e 10.677 com ambas. Os desfechos em seis meses foram miocardite, pericardite e mortalidade. Foram usados pareamento por propensão, análise de riscos competitivos e regressão de Cox.
 
-## O estudo — coorte TriNetX de 4 milhões de indivíduos
+## Resultados
 
-- **desenho**: coorte retrospectiva, usando dados agregados da plataforma
-  TriNetX, dezembro de 2020 a setembro de 2025. População de **4.072.375
-  indivíduos** com idade entre 16 e 25 anos, categorizados em quatro grupos:
-  - não infectado/não vacinado: 3.572.000
-  - infectado/não vacinado: 248.546
-  - vacinado/não infectado: 241.152
-  - imunidade híbrida (infectado **e** vacinado): 10.677
-  - **método**: análise de risco competitivo, pareamento por escore de
-    propensão (*propensity-score matching*), regressão de Cox, e análises
-    estratificadas por sexo — desfechos avaliados em **6 meses**.
-- **desfechos avaliados**: miocardite, pericardite e mortalidade.
+A maior incidência cumulativa de miocardite foi reportada no grupo infectado/não vacinado (0,116%). Após pareamento 1:1, a infecção esteve associada, frente à ausência de infecção, a maior risco de miocardite (RR 4,91; IC95% 3,11–7,77), pericardite (RR 1,93; 1,39–2,67) e mortalidade (RR 1,33; 1,04–1,71).
 
-## Resultado principal — a infecção teve risco maior que a vacina, nos três desfechos
+Na comparação direta entre vacinação registrada sem infecção e infecção registrada sem vacinação, os autores reportaram riscos relativos menores em 85% para miocardite, 79% para pericardite e 72% para mortalidade no grupo vacinado. O padrão foi semelhante nas análises por sexo.
 
-- **incidência cumulativa mais alta** foi no grupo infectado/não vacinado:
-  **0,116%** para miocardite.
-- **Depois do pareamento por escore de propensão 1:1**, a infecção por
-  SARS-CoV-2 esteve associada a risco significativamente maior, em
-  comparação a não ter sido infectado, de:
-  - **miocardite**: risco relativo (RR) = **4,91** (IC95% 3,11–7,77)
-  - **pericardite**: RR = **1,93** (IC95% 1,39–2,67)
-  - **mortalidade**: RR = **1,33** (IC95% 1,04–1,71)
-- **Comparação direta, infecção versus vacinação**: a vacinação esteve
-  associada a **85% menos risco de miocardite**, **79% menos risco de
-  pericardite** e **72% menos risco de mortalidade**, em comparação à
-  infecção. A proteção foi **consistente entre os sexos** (análise
-  estratificada).
-- **diferença de risco absoluto para miocardite**: 0,0354 pontos
-  percentuais — o que corresponde a **1 evento de miocardite a menos
-  registrado a cada 2.827 indivíduos** no grupo vacinado/não infectado, em
-  comparação ao grupo infectado/não vacinado.
-- **interpretação dos autores**: os achados sustentam um perfil de
-  benefício-risco favorável para a vacinação com BNT162b2, em comparação à
-  infecção documentada, em adolescentes e adultos jovens. **Ressalva
-  declarada explicitamente pelos autores**: a comparação de mortalidade por
-  todas as causas é observacional e deve ser interpretada como
-  **descritiva, não causal** — o desenho não permite atribuir causalidade
-  direta ao componente de mortalidade geral, ao contrário dos desfechos
-  cardíacos específicos (miocardite/pericardite), que são o achado central
-  do estudo.
+A diferença absoluta reportada para miocardite nessa comparação foi 0,0354 ponto percentual, equivalente a um evento registrado a menos para cada 2.827 pessoas comparadas. Não se deve combinar essa diferença ajustada com a incidência bruta de 0,116% para recalcular riscos, nem denominá-la número necessário para vacinar: a comparação não foi randomizada e os grupos representam histórias de exposição distintas.
 
-**fonte**: Toraih EA, Hussein MH, Thomas SJ, Aiash H. Cardiac outcomes
-following SARS-CoV-2 infection versus BNT162b2 vaccination in adolescents
-and young adults: a cohort study of 4 million individuals. Vaccine.
-2026;91:129001. DOI: 10.1016/j.vaccine.2026.129001. PMID: 42607625.
+## Interpretação e limites
 
-## Leitura clínica dos números
+Os achados favorecem o perfil de risco observado após BNT162b2 frente à infecção documentada nesta população. Entretanto, **nenhum dos três desfechos permite atribuição causal automática**. A ressalva dos autores sobre mortalidade não transforma miocardite e pericardite em resultados de um experimento randomizado.
 
-- **A pericardite pela própria infecção quase dobra o risco basal** (RR
-  1,93) em comparação a não ter sido infectado — número menor que o da
-  miocardite (RR 4,91), o que é consistente com a literatura estabelecida de
-  que a miocardite tende a ser o desfecho cardíaco mais fortemente associado
-  a COVID-19 agudo em jovens, com a pericardite como desfecho relacionado
-  porém de magnitude de risco menor.
-- **A redução de risco associada à vacinação (79% para pericardite) é maior,
-  em termos relativos, do que o risco absoluto da própria vacina** — o
-  documento já publicado sobre miopericardite pós-vacina de mRNA descreve o
-  risco absoluto (pequeno) associado à própria vacina; este estudo mostra
-  que, mesmo somando esse risco residual da vacina, **o saldo líquido ainda
-  favorece fortemente a vacinação** quando comparado ao risco de contrair a
-  infecção sem proteção vacinal.
-- **Conflito de interesse declarado no artigo, para transparência de
-  leitura**: um dos autores (Thomas SJ) foi investigador no ensaio de fase 3
-  do BNT162b2 e participou de comitês de monitoramento de segurança de dados
-  para patrocinadores da indústria de vacinas contra COVID-19 — declarado
-  explicitamente pelos próprios autores no artigo, sem que os demais autores
-  reportem conflito.
-- **Limitação estrutural do desenho, não declarada como ressalva específica
-  pelos autores mas inerente ao método**: dados de reivindicação/registro
-  administrativo (TriNetX) dependem de diagnóstico codificado — infecção e
-  vacinação "não registradas" (assintomáticas, não testadas, ou aplicadas
-  fora do sistema de saúde capturado pela base) não entram na contagem, o
-  que pode subestimar o denominador real de ambos os grupos. Os próprios
-  autores descrevem os grupos como "infectado/não vacinado **registrado**" e
-  similares — coerente com essa limitação inerente a bases administrativas.
+Pareamento controla apenas características mensuradas. Procura por atendimento, registro de vacinação fora da rede, infecções não testadas, calendário de variantes e gravidade da doença podem diferir entre os grupos. A ausência de registro não garante ausência de exposição. Tais fatores podem produzir classificação incorreta e confusão residual; não é possível antecipar uma única direção de viés.
 
-## Como este documento se relaciona com o já publicado sobre miopericardite pós-vacina
+Uma redução relativa de 79% não pode ser comparada numericamente a uma incidência absoluta pós-vacinal para calcular um saldo líquido: são métricas e comparadores distintos. Tampouco se deve generalizar o resultado a todas as idades, produtos, doses ou períodos epidemiológicos, nem interpretar o estudo como comparação completa entre todas as possíveis trajetórias futuras de pessoas vacinadas e não vacinadas.
 
-Os dois documentos respondem a metades diferentes da mesma pergunta clínica
-e devem ser lidos em conjunto: o documento de miopericardite associada à
-vacina de mRNA descreve o risco absoluto pequeno e predominantemente
-autolimitado associado à vacinação em si (sobretudo em homens jovens, após a
-segunda dose); este documento mostra que, **quando a pergunta é comparativa —
-vacinar ou arriscar a infecção sem proteção —, o risco cardíaco da infecção
-natural é maior que o da vacina**, nos três desfechos avaliados (miocardite,
-pericardite, mortalidade) e de forma consistente entre os sexos.
+O artigo declara participação de Stephen J. Thomas no ensaio de fase 3 de BNT162b2 e em atividades remuneradas de comitês/consultoria para fabricantes; os demais autores não declararam conflitos. Essa informação integra a avaliação crítica, junto com o desenho e as limitações dos registros.
+
+## Mensagem clínica
+
+Nesta coorte de adolescentes e adultos jovens, a infecção registrada esteve associada a mais miocardite, pericardite e mortalidade em curto prazo do que a vacinação BNT162b2 registrada. A comunicação deve apresentar riscos absolutos e relativos com seus comparadores, reconhecer o risco cardíaco pós-vacinal e preservar a natureza observacional da comparação.
+
+## Tudo com Tudo
+
+- [Miocardite Após Vacina de mRNA e Risco Cardiovascular Pós-COVID: o que os Números Dizem](/biblioteca/miocardite-apos-vacina-de-mrna-e-risco-cardiovascular-pos-covid-o-que-os-numeros-dizem) — Compara eventos inflamatórios pós-infecção e pós-vacina mRNA com cuidado para separar miocardite e pericardite, denominadores e risco absoluto.

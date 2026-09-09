@@ -1,0 +1,23 @@
+{
+  "slug": "danger-shock-2024",
+  "title": "DanGer Shock: bomba microaxial no IAMCSST com choque cardiogênico",
+  "tema": "Terapia intensiva",
+  "year": 2024,
+  "journal": "New England Journal of Medicine",
+  "pmid": "38587239",
+  "doi": "10.1056/NEJMoa2312572",
+  "design": "Ensaio randomizado, aberto, grupos paralelos, 14 centros europeus. NCT01633502. Financiado pela Danish Heart Foundation e Abiomed.",
+  "population": "360 randomizados; 355 na análise final (179 versus 176), com IAMCSST e choque cardiogênico em população selecionada. Idade mediana de 67 anos, 79,2% homens.",
+  "intervention": "Bomba de fluxo microaxial (Impella CP) + cuidado padrão.",
+  "control": "Cuidado padrão.",
+  "primary_outcome": "Morte por qualquer causa em 180 dias.",
+  "key_findings": "Morte em 180 dias: 82/179 (45,8%) com bomba versus 103/176 (58,5%) com cuidado padrão; HR 0,74; IC95% 0,55–0,99; P=0,04. Composto de segurança (sangramento grave, isquemia de membro, hemólise, falha do dispositivo ou piora da regurgitação aórtica): 43 (24,0%) versus 11 (6,2%); RR 4,74; IC95% 2,36–9,55. Terapia renal substitutiva: 75 (41,9%) versus 47 (26,7%); RR 1,98; IC95% 1,27–3,09.",
+  "clinical_implications": "DanGer mostrou menor mortalidade em 180 dias, com mais eventos adversos e terapia renal substitutiva. Não avaliou balão intra-aórtico nem suporte circulatório rotineiro em todo tipo de choque. A ESC 2026 considera bomba microaxial em IAMCSST com choque selecionado, disfunção ventricular esquerda e sem risco de lesão cerebral hipóxica (IIa B1); uso rotineiro não selecionado e BIA rotineira não são recomendados. Complicações mecânicas com necessidade de ponte constituem cenário separado.",
+  "source_refs": [
+    "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. DOI 10.1056/NEJMoa2312572. PMID 38587239. NCT01633502.",
+    "ESC 2026, insuficiência cardíaca, tabela de choque. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420.",
+    "IABP-SHOCK II. PMID: 22920912."
+  ],
+  "review_status": "revisado",
+  "review_note": "DanGer e tabela ESC 2026 conferidos; retiradas estimativas secundárias não necessárias e adicionadas fontes das comparações e seleção clínica."
+}

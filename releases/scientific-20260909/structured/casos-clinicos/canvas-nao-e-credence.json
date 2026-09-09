@@ -1,0 +1,22 @@
+{
+  "slug": "canvas-nao-e-credence",
+  "titulo": "Canagliflozina e amputação: qual ensaio?",
+  "tema": "Farmacologia",
+  "nivel": "avançado",
+  "enunciado": "DM2, DRC albuminúrica. Colega recusa canagliflozina ‘porque o CANVAS dobrou amputação’ e cita o mesmo HR para o CREDENCE.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "CANVAS e CREDENCE têm o mesmo HR de amputação; a molécula está contraindicada em qualquer DRC.",
+    "CANVAS (PMID 28605608): amputação 6,3 vs 3,4/1000 a-a; HR 1,97. CREDENCE (PMID 30990260): sem diferença significativa em amputação/fratura. Não copiar o HR.",
+    "O CREDENCE é o ensaio de amputação; o CANVAS é só renal.",
+    "Dapagliflozina herda o HR 1,97 do CANVAS."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "CANVAS e CREDENCE estudaram a mesma molécula, canagliflozina, em populações e desenhos diferentes. O sinal de amputação do CANVAS não deve ser transplantado como estimativa do CREDENCE. Ausência de diferença significativa em CREDENCE não significa risco zero nem revoga a necessidade de avaliar doença arterial periférica, lesões nos pés e histórico de amputação. As fontes não estabelecem contraindicação universal em DRC.",
+  "source_refs": [
+    "Neal B, et al. N Engl J Med. 2017;377:644-657. PMID 28605608.",
+    "Perkovic V, et al. N Engl J Med. 2019;380:2295-2306. PMID 30990260."
+  ],
+  "review_status": "revisado",
+  "review_note": "Corrigida afirmação de moléculas diferentes: amboscanagliflozina. Conferidos resultados amputação sem falsa garantia deequivalência."
+}

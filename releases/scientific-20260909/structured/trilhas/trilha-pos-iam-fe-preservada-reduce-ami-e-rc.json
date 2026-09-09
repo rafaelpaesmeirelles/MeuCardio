@@ -1,0 +1,54 @@
+{
+  "slug": "trilha-pos-iam-fe-preservada-reduce-ami-e-rc",
+  "titulo": "Pós-IAM com FE preservada: REDUCE-AMI, betabloqueador e reabilitação cardíaca",
+  "tema": "Doença coronariana",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "reduce-ami-betabloqueador-apos-iam-com-feve-preservada",
+      "por_que": "Ler REDUCE-AMI: 5.020 participantes com IAM, angiografia e FEVE ≥ 50%; HR 0,96 para morte ou novo IAM, sem redução significativa. Não foi estudo de retirada abrupta de terapia crônica."
+    },
+    {
+      "ordem": 2,
+      "item_type": "documento",
+      "item_slug": "fluxograma-betabloqueador-longo-prazo-apos-iam-reduce-ami",
+      "por_que": "Aplicar seleção clínica: FEVE ≥ 50% sem outra indicação difere de FEVE 40–49%, cuja análise individual de 1.885 pessoas mostrou HR 0,75 (IC95% 0,58–0,97) para morte, IAM ou IC. Angina, arritmia e outras indicações exigem avaliação própria."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "conversa-sobre-nao-usar-betabloqueador-cronico-apos-iam-com-fe-preservada",
+      "por_que": "Explicar resultados absolutos e preferências sem recomendar interrupção autônoma. Manter os demais componentes indicados da prevenção secundária."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "indicacoes-de-reabilitacao-cardiaca-esc-2026-por-condicao",
+      "por_que": "Após SCA, organizar encaminhamento e avaliação para reabilitação, independente da discussão do betabloqueador."
+    },
+    {
+      "ordem": 5,
+      "item_type": "documento",
+      "item_slug": "telereabilitacao-cardiaca-padroes-eapc-2025",
+      "por_que": "Selecionar reabilitação remota ou híbrida quando apropriada ao risco e à capacidade de acompanhamento; preservar avaliação inicial e padrões de qualidade."
+    },
+    {
+      "ordem": 6,
+      "item_type": "caso_clinico",
+      "item_slug": "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+      "por_que": "Aplicar ao caso com FEVE 55% e sem outra indicação: ausência de benefício significativo do uso rotineiro no recorte estudado não equivale a contraindicação."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241. NCT03278509.",
+    "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag099. PMID: 42661418.",
+    "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation: A scientific statement of the EAPC and ACNAP of the ESC, and the ESC Working Group on e-Cardiology. Eur Heart J. 2025;46(38):3714-3737. DOI: 10.1093/eurheartj/ehaf408. PMID: 40742158.",
+    "Metanálise individual FEVE ≥50%. PMID: 41211954.",
+    "Metanálise individual FEVE 40–49%. PMID: 40897190."
+  ],
+  "objetivo": "Interpretar REDUCE-AMI e a análise individual de cinco ensaios no pós-IAM com FEVE ≥ 50%, sem outras indicações de betabloqueador. Distinguir da evidência em FEVE 40–49%, discutir decisões sem suspensão abrupta e manter prevenção secundária e reabilitação.",
+  "nivel": "intermediario",
+  "review_note": "Trilha pós-IAM atualizada com ambas as análises de FEVE; corrigido tipo do caso, risco de retirada abrupta e referência RC."
+}

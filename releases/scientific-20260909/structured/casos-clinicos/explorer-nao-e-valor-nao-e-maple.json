@@ -1,0 +1,23 @@
+{
+  "slug": "explorer-nao-e-valor-nao-e-maple",
+  "titulo": "MHO sintomática: EXPLORER, VALOR ou MAPLE?",
+  "tema": "Cardiomiopatias",
+  "nivel": "avançado",
+  "enunciado": "MHO, NYHA II, gradiente 60 mmHg, sem indicação atual de redução septal. Colega cita VALOR-HCM (17,9% vs 76,8%) para iniciar aficamten.",
+  "pergunta": "O que está desalinhado?",
+  "opcoes": [
+    "VALOR-HCM é o ensaio de sintomas/pVO2 e usa aficamten.",
+    "EXPLORER-HCM (mavacamten vs placebo, 37% vs 17% no primário de pVO2/NYHA) é a porta de sintomas. VALOR é a porta da fila de SRT. MAPLE é aficamten vs metoprolol. Não misturar molécula nem pergunta.",
+    "Os três ensaios têm o mesmo primário e a mesma molécula.",
+    "EXPLORER mostrou redução de morte (HR 0,72)."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "EXPLORER PMID 32871100: pVO2/NYHA. VALOR PMID 35798455: SRT. MAPLE: aficamten. Sem desfecho de morte no EXPLORER citado aqui. O VALOR-HCM usou mavacamten e mediu permanecer elegível ou realizar redução septal em 16 semanas, não apenas procedimentos realizados. O MAPLE comparou aficamten e metoprolol em monoterapia. Nenhum desses resultados autoriza prometer redução de mortalidade nem prescrever uma molécula usando a dose/efeito da outra.",
+  "source_refs": [
+    "Olivotto I, et al. Lancet. 2020;396:759-769. PMID 32871100.",
+    "VALOR-HCM. PMID:35798455. DOI:10.1016/j.jacc.2022.04.048.",
+    "MAPLE-HCM. PMID:40888697. DOI:10.1056/NEJMoa2504654."
+  ],
+  "review_status": "revisado",
+  "review_note": "ConferidosEXPLORER/VALOR/MAPLE; corrigida interpretaçãoVALOR(compositelegibilidade/procedimento) e adicionadasduasfontesfaltantes."
+}

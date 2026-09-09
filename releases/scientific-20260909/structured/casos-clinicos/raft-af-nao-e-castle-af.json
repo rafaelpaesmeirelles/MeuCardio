@@ -1,0 +1,23 @@
+{
+  "slug": "raft-af-nao-e-castle-af",
+  "titulo": "Ablação de FA na IC: RAFT-AF fechou o primário?",
+  "tema": "Fibrilação atrial",
+  "nivel": "avançado",
+  "enunciado": "Colega cita RAFT-AF (Parkash, Circulation 2022) como prova de que ablação reduz morte na IC, ‘igual ao CASTLE-AF’.",
+  "pergunta": "Qual leitura está alinhada aos ensaios?",
+  "opcoes": [
+    "RAFT-AF e CASTLE-AF são o mesmo recorte; ambos HR 0,62.",
+    "RAFT-AF: 411 pacientes, parado por futilidade; primário 23,4% vs 32,5%; HR 0,71 (0,49–1,03); P=0,066 — não significativo. CASTLE-AF fechou o primário (HR 0,62; P=0,007) em FEVE ≤ 35% + CDI.",
+    "RAFT-AF autoriza ablação de FA em ICFEp com obesidade.",
+    "O P=0,066 do RAFT-AF equivale a superioridade clínica e dispensa o CDI."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "RAFT-AF comparou controle de ritmo baseado em ablação com controle de frequência em 411 pessoas com FA e IC. Foi interrompido por aparente futilidade; morte total ou eventos de IC ocorreu em 23,4% versus 32,5% (HR 0,71; IC95% 0,49–1,03; P=0,066). Melhoras de FEVE, caminhada e qualidade de vida foram estatisticamente significativas, mas não demonstram redução de mortalidade. CASTLE-AF avaliou FEVE ≤ 35%, CDI e critérios próprios, com benefício no composto morte total/hospitalização por IC. CASTLE-HTx avaliou pacientes encaminhados para avaliação de transplante, não exclusivamente pessoas já em lista. Resultados globais não determinam indicação ou proibição de ablação em qualquer paciente com ICFEp.",
+  "source_refs": [
+    "Parkash R, et al. Circulation. 2022;145:1693-1704. PMID 35313733.",
+    "CASTLE-AF. PMID: 29385358.",
+    "CASTLE-HTx. PMID: 37634135."
+  ],
+  "review_status": "revisado",
+  "review_note": "RAFT-AF conferido; corrigidas melhorias secundárias significativas, população de CASTLE-HTx e interpretação do composto versus mortalidade."
+}

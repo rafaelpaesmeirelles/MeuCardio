@@ -1,0 +1,21 @@
+{
+  "slug": "cha2ds2-va-mulher-65-has",
+  "titulo": "Mulher de 66 anos com HAS e FA: o sexo ainda pontua no escore?",
+  "tema": "Fibrilação atrial",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 66 anos. Fibrilação atrial documentada no ECG. Hipertensão arterial em tratamento. Sem insuficiência cardíaca, sem diabetes, sem AVC/AIT ou tromboembolismo prévio, sem doença vascular conhecida. Sem contraindicação aparente à anticoagulação. TFGe 62 mL/min/1,73 m². Colega pontua CHA₂DS₂-VASc = 3 (idade 65–74 + HAS + sexo feminino) e diz que a ESC 2024 não mudou nada para mulheres.",
+  "pergunta": "Pela ESC 2024 de FA (Van Gelder et al., Eur Heart J. 2024;45:3314-3414), qual é o escore CHA₂DS₂-VA desta paciente e a conduta de anticoagulação?",
+  "opcoes": [
+    "CHA₂DS₂-VA = 3 (idade + HAS + sexo feminino); anticoagulação recomendada — o sexo permanece no escore 2024",
+    "CHA₂DS₂-VA = 2 (idade 65–74 + HAS); o sexo não pontua. Anticoagulação recomendada porque o escore é ≥ 2",
+    "CHA₂DS₂-VA = 1 (só HAS): idade 66 anos não pontua e o sexo saiu; apenas considerar anticoagulação",
+    "CHA₂DS₂-VA = 2, mas a ESC 2024 ainda exige ≥ 3 em mulheres para recomendar anticoagulação, como no VASc antigo"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "A ESC 2024 troca CHA₂DS₂-VASc por CHA₂DS₂-VA: a categoria sexo sai. Nesta paciente, idade 65–74 anos (1) + hipertensão (1) = CHA₂DS₂-VA 2. O ponto de sexo que fazia o VASc = 3 não entra. Anticoagulação é recomendada se CHA₂DS₂-VA ≥ 2; deve ser considerada se =1; escore 0 é baixo risco. O número caiu de 3 para 2, mas o corte ≥ 2 continua a indicar anticoagular — não se usa mais o limiar diferente para mulheres (≥ 3). Idade 66 anos pontua (faixa 65–74); não é só a HAS. Conferir contraindicações e dose conforme características individuais; o escore orienta a indicação, não os miligramas do fármaco. Fonte ESC2024: PMID 39210723.",
+  "source_refs": [
+    "Van Gelder IC et al.2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J.2024;45:3314–3414. DOI:10.1093/eurheartj/ehae176. PMID:39210723."
+  ],
+  "review_status": "revisado",
+  "review_note": "CHA2DS2VA=2 conferido com recomendaçãoESC2024. Identificadorprimárioresolvido; removida extrapolação renaldesnecessária e dose nãofoi inventada."
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "poise-2-2014",
+  "title": "POISE-2 2014 — AAS perioperatório em cirurgia não cardíaca",
+  "theme": "Perioperatório",
+  "trial": "POISE-2",
+  "year": 2014,
+  "n": 10010,
+  "nct": "NCT01082874",
+  "population": "Risco vascular, cirurgia não cardíaca; fatorial AAS × clonidina",
+  "intervention": "AAS 200 mg pré + 100 mg/dia (30 d início ou 7 d continuação)",
+  "comparator": "Placebo",
+  "primary": "Morte ou IAM não fatal 30 d: 7,0% vs 7,1%; HR 0,99 (0,86–1,15); P=0,92",
+  "key_harms": "Sangramento maior 4,6% vs 3,8%; HR 1,23 (1,01–1,49)",
+  "source_refs": [
+    "Devereaux PJ, et al. N Engl J Med. 2014;370:1494-1503. DOI 10.1056/NEJMoa1401105. NCT01082874."
+  ],
+  "review_status": "revisado",
+  "note": "Este registro é o braço AAS. Clonidina é outro artigo do fatorial.",
+  "pmid": "24679062",
+  "doi": "10.1056/NEJMoa1401105",
+  "journal": "New England Journal of Medicine",
+  "design": "Ensaio randomizado fatorial 2×2, com avaliação de AAS e clonidina em comparações separadas.",
+  "control": "Placebo",
+  "primary_outcome": "Morte ou infarto não fatal em 30 dias.",
+  "key_findings": "Morte ou IAM não fatal 30 d: 7,0% vs 7,1%; HR 0,99 (0,86–1,15); P=0,92. Sangramento maior 4,6% vs 3,8%; HR 1,23 (1,01–1,49)",
+  "clinical_implications": "AAS perioperatório não reduziu morte/IAM na população geral do estudo e aumentou sangramento maior. O esquema foi diferente nos estratos de início e continuação. O resultado não determina suspensão automática em pacientes com indicação de antiagregação ou stent; a decisão depende de risco trombótico, hemorrágico e momento da intervenção. Este registro corresponde ao AAS; clonidina é a outra comparação do fatorial.",
+  "review_note": "POISE-2/AAS conferido; resultados e danos mapeados para campos importáveis, referência completa e limites de aplicação a stent."
+}

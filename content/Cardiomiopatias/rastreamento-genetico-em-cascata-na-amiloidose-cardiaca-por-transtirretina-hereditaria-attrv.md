@@ -1,72 +1,61 @@
 ---
-title: "Rastreamento Genético em Cascata na Amiloidose Cardíaca por Transtirretina Hereditária (ATTRv): Impacto Diagnóstico e Prognóstico"
+title: Rastreamento em cascata na amiloidose hereditária por transtirretina
 slug: rastreamento-genetico-em-cascata-na-amiloidose-cardiaca-por-transtirretina-hereditaria-attrv
-theme: "Cardiomiopatias"
+theme: Cardiomiopatias
 kind: documento
 review_status: revisado
-source_refs: ["Cappelli F, Fumagalli C, Luigetti M, et al. Cascade genetic screening in families with hereditary transthyretin amyloidosis: diagnostic and prognostic impact. Eur Heart J. 2026;47(32):4462-4476. DOI: 10.1093/eurheartj/ehag222. PMID: 41955077.", "Gillmore JD, Damy T, Fontana M, et al. A new staging system for cardiac transthyretin amyloidosis. Eur Heart J. 2018;39(30):2799-2806. PMID: 29048471.", "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID: 37622657."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A base já cobre diagnóstico e tratamento farmacológico da amiloidose por transtirretina (diagnostico-e-tratamento-da-amiloidose-cardiaca.md, tafamidis-treatment-for-patients-with-transthyretin-amyloid-cardiomyopathy-attr-act.md, acoramidis-extensao-aberta-de-54-meses-do-attribute-cm.md), mas nenhum documento tratava especificamente do rastreamento genético em cascata de familiares de portadores da variante — a pergunta prática de quando e como testar o parente assintomático, e o que fazer com o resultado."
+source_refs:
+- 'Cappelli F, Fumagalli C, Luigetti M, et al. Cascade genetic screening in families with hereditary transthyretin amyloidosis:
+  diagnostic and prognostic impact. Eur Heart J. 2026;47(32):4462-4476. DOI: 10.1093/eurheartj/ehag222. PMID: 41955077.'
+- 'Gillmore JD, Damy T, Fontana M, et al. A new staging system for cardiac transthyretin amyloidosis. Eur Heart J. 2018;39(30):2799-2806.
+  PMID: 29048471.'
+- 'Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626.
+  PMID: 37622657.'
+- GeneReviews. Hereditary Transthyretin Amyloidosis. https://www.ncbi.nlm.nih.gov/books/NBK1194/.
+review_note: 'Tabela 2 conferida: corrigidos percentuais de conversão por variante e denominador 11/62; corrigido risco genético
+  para irmãos, teste automático de menores e inferência causal de sobrevida/terapia. Conferência editorial final: título alinhado
+  ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido
+  quando necessário. Vínculos internos preservados.'
+summary: A ATTRv tem herança autossômica dominante e penetrância variável. Cada filho de uma pessoa heterozigota tem probabilidade
+  de 50% de herdar a variante. Para irmãos e outros parentes, o risco depende da origem da variante e da situação genética
+  dos pais; não se atribui automaticamente 50% a todo parente de primeiro grau.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Rastreamento Genético em Cascata na Amiloidose Cardíaca por Transtirretina Hereditária (ATTRv): Impacto Diagnóstico e Prognóstico
+# Rastreamento em cascata na amiloidose hereditária por transtirretina
 
-## O que é o rastreamento em cascata, e por que ele é diferente de rastrear a população geral
+A ATTRv tem herança autossômica dominante e penetrância variável. Cada filho de uma pessoa heterozigota tem probabilidade de 50% de herdar a variante. Para irmãos e outros parentes, o risco depende da origem da variante e da situação genética dos pais; não se atribui automaticamente 50% a todo parente de primeiro grau.
 
-A amiloidose por transtirretina hereditária (ATTRv, do inglês *variant*) é uma doença autossômica dominante com **penetrância variável** — o mesmo gene *TTR* mutado pode permanecer silencioso por décadas num portador e causar doença grave e precoce em outro membro da mesma família, inclusive com a mesma variante. Isso torna o rastreamento em cascata (testar sistematicamente os parentes de primeiro grau de um caso índice já diagnosticado) uma estratégia estrutural diferente de qualquer programa de rastreamento populacional: a probabilidade pré-teste de um parente carrear a variante já é conhecida (50% para filho ou irmão de um heterozigoto), e o resultado do teste não é apenas diagnóstico — ele redefine a vigilância daquela pessoa para o resto da vida.
+O teste identifica predisposição, sem prever com precisão idade de início ou gravidade individual. Deve ser oferecido com aconselhamento e consentimento. O teste preditivo de menores assintomáticos em condições de início adulto, sem benefício demonstrado de intervenção na infância, não deve ser automático; pessoas sintomáticas exigem avaliação independentemente da idade. [GeneReviews — ATTRv](https://www.ncbi.nlm.nih.gov/books/NBK1194/).
 
-O estudo de referência deste documento (Cappelli F et al., *European Heart Journal*, 2026;47(32):4462-4476, DOI 10.1093/eurheartj/ehag222, PMID 41955077) é a maior análise retrospectiva já publicada sobre o desfecho prático desse rastreamento: uma coorte multicêntrica italiana de **967 indivíduos de 431 famílias**, acompanhados entre 2004 e 2024 em 15 centros de referência.
+## Conversão fenotípica: denominadores corretos
 
-## Desenho do estudo e categorias de classificação
+A coorte retrospectiva italiana identificou 569 portadores no rastreio de 1.243 familiares: 108 com fenótipo e 461 sem fenótipo. Durante mediana de 5,3 anos, 77/461 desenvolveram doença manifesta.
 
-A partir da identificação de **398 casos índice** (o primeiro membro sintomático diagnosticado em cada família), o rastreamento genético foi oferecido a **1.243 parentes**, identificando **569 portadores da variante patogênica** (carriers). Os participantes foram classificados em três categorias, com nomenclatura que vale reter porque estrutura toda a discussão clínica do tema:
+**A Tabela 2 apresenta a conversão dentro de cada variante**, e não a participação da variante entre os 77 conversores:
 
-- **Casos índice ATTRv** — o parente sintomático original que motivou o teste em cascata da família.
-- **Portadores sintomáticos (G+/P+, genótipo positivo/fenótipo positivo)** — parente com a variante patogênica **e** já com manifestação clínica da doença no momento da identificação.
-- **Portadores assintomáticos (G+/P-, genótipo positivo/fenótipo negativo)** — parente com a variante patogênica, sem manifestação clínica no momento do teste. É o grupo de maior interesse prático, porque é nele que a vigilância programada pode antecipar o diagnóstico antes que o dano cardíaco e neurológico se estabeleça.
+| Variante, nomenclatura do artigo | Conversores/portadores sem fenótipo | Proporção |
+|---|---:|---:|
+| Glu89Gln | 19/45 | 42,2% |
+| Phe64Leu | 18/73 | 24,7% |
+| Val30Met | 11/84 | 13,1% |
+| Ile68Leu | 11/150 | 7,3% |
+| Val122Ile | 2/39 | 5,1% |
+| Outras | 16/70 | 22,9% |
 
-## Resultado principal: conversão fenotípica e o papel da variante específica
+As proporções não são penetrância vital e refletem diferentes idades e tempos de observação. Entre **62 conversores com informação para a comparação familiar**, 11 tiveram início mais de dez anos antes do caso índice. Não foram 11 entre todos os portadores, nem “um em cinco” da coorte inteira.
 
-Entre os **461 portadores assintomáticos (G+/P-)**, ao longo de um seguimento mediano de **5,3 anos (intervalo interquartil 1,7–9,8 anos)**, **77 pacientes (16,7%)** desenvolveram diagnóstico clínico de ATTRv durante o acompanhamento — ou seja, aproximadamente 1 em cada 6 portadores assintomáticos converteu para doença manifesta dentro desse período de observação.
+Parentes com fenótipo identificado pelo rastreio tiveram menor mortalidade observada que casos índice (HR 0,43; IC 95% 0,24–0,79). Antecipação diagnóstica, seleção e diferenças de tratamento impedem atribuir causalmente essa vantagem ao rastreamento. [Cappelli et al., texto integral e Tabela 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC13500165/).
 
-A taxa de conversão **variou de forma acentuada conforme a variante genética específica**, com os seguintes percentuais de participação entre os conversores (intervalos de confiança de 95%):
+## Aplicação
 
-| Variante | Participação entre os conversores | IC 95% |
-|---|---|---|
-| Glu89Gln | 42,2% | 28,8–56,9% |
-| Phe64Leu | 24,7% | 16,1–35,8% |
-| Val30Met | 13,1% | 7,4–22,1% |
-| Ile68Leu | 7,3% | 4,1–12,8% |
-| Val122Ile | 5,1% | 1,3–18,3% |
-| Outras variantes | 22,9% | 14,5–34,1% |
+O resultado genético positivo deve motivar um plano de acompanhamento adequado à variante, idade, história familiar e avaliação inicial. A idade esperada de início é uma referência, não um limite que dispense avaliação de sintomas anteriores. O estudo não valida uma periodicidade única para todos.
 
-**VERIFICAÇÃO HUMANA NECESSÁRIA**: o estudo relata esses percentuais como a distribuição de variantes *entre os pacientes que converteram*, não como a taxa de conversão *de cada variante individual* — ou seja, Glu89Gln responde por 42,2% dos 77 casos que converteram, o que não é o mesmo que dizer que 42,2% dos portadores de Glu89Gln converteram. O abstract não fornece o denominador (número de portadores assintomáticos) por variante, necessário para calcular a taxa de conversão específica de cada mutação; essa granularidade, se precisar ser citada com esse nível de detalhe, requer consulta ao texto completo do artigo.
+Confirmar genótipo positivo sem fenótipo não equivale a indicação imediata de tratamento modificador. Quando surge doença, a equipe deve avaliar fenótipo, estágio e elegibilidade terapêutica. A grande associação observacional entre tratamento e sobrevida não deve ser apresentada como redução causal garantida de mortalidade nem extrapolada a todos os medicamentos.
 
-## O achado mais relevante para a prática: conversão antes do previsto pela idade estimada de início
+## Tudo com Tudo
 
-Um dos achados de maior impacto prático do estudo é que **11 de 62 portadores (17,7%)** desenvolveram a doença **mais de 10 anos antes** da idade prevista de início dos sintomas — idade essa que normalmente é estimada a partir da idade de início de acometimento em outros membros afetados da mesma família (o chamado "relógio familiar", historicamente usado para calendarizar o início da vigilância).
-
-Isso é uma ressalva direta à prática difundida de calcular a idade de início esperada por variante ou por histórico familiar e só intensificar a vigilância perto dessa data: **quase 1 em cada 5 portadores nesta amostra converteu de forma antecipada e inesperada**, o que sustenta a recomendação do estudo de vigilância sistemática desde a confirmação genética, sem esperar a aproximação da idade estimada.
-
-## Impacto na sobrevida: portador sintomático detectado precocemente sobrevive mais que o caso índice
-
-Os portadores sintomáticos identificados por rastreamento em cascata (G+/P+) tiveram **sobrevida significativamente melhor que os casos índice** (razão de risco [HR] 0,43; IC 95% 0,24–0,79) — ou seja, o mesmo genótipo, quando identificado através de um parente já sintomático e investigado ativamente (em vez de aparecer clinicamente e ser diagnosticado de forma reativa, como o caso índice típico), associou-se a menos da metade do risco de morte no seguimento. A interpretação mais direta é que o rastreamento familiar identifica a doença numa fase mais precoce da história natural, quando a intervenção ainda tem maior janela de efeito — mas o desenho observacional não permite atribuir causalidade de forma definitiva a essa diferença isolada de contexto de diagnóstico.
-
-Dois achados adicionais de estratificação de risco, ambos do mesmo estudo:
-
-- **Fenótipo misto (cardíaco + neurológico) teve desfecho pior que apresentação cardíaca isolada** — reforçando que a avaliação neurológica (polineuropatia sensitivo-motora, disautonomia) não pode ser dispensada mesmo quando o quadro cardíaco domina a apresentação inicial.
-- **Terapia modificadora de doença associou-se de forma independente a menor mortalidade** (HR 0,11; IC 95% 0,01–0,17) — o intervalo de confiança extremamente amplo e próximo de zero no limite inferior reflete o número reduzido de eventos nesse subgrupo tratado precocemente, e deve ser lido como sinal de magnitude de efeito, não como estimativa de precisão equivalente à de um ensaio clínico randomizado dedicado.
-
-## O que este estudo NÃO permite concluir
-
-- **Não é um ensaio clínico randomizado** — é uma coorte observacional retrospectiva multicêntrica. A associação entre rastreamento em cascata e melhor sobrevida é consistente com o racional de diagnóstico precoce, mas não prova causalidade isolada do rastreamento em si (vieses de seleção e de tempo de sobrevida — *survivorship bias* — são inerentes a esse desenho).
-- **A distribuição de variantes reflete a genética das famílias italianas incluídas**, com predominância de variantes específicas dessa população (Glu89Gln, Phe64Leu). Val30Met, a variante mais comum em focos endêmicos como Portugal e regiões do Japão, respondeu por apenas 13,1% dos conversores nesta coorte — **a proporção relativa entre variantes não deve ser extrapolada diretamente para populações com epidemiologia genética diferente**, incluindo a população brasileira, cuja distribuição de variantes de TTR não foi objeto direto deste estudo.
-- **O intervalo de confiança do efeito da terapia modificadora de doença é muito amplo** (0,01–0,17), o que limita a precisão da estimativa de magnitude de benefício, ainda que a direção do efeito seja consistente com o conhecido de ensaios randomizados de estabilizadores de TTR (tafamidis, acoramidis) já documentados nesta biblioteca.
-
-## Implicação prática para o cardiologista
-
-Diante de um caso índice confirmado de ATTRv, este estudo sustenta:
-
-1. **Oferecer aconselhamento genético e teste em cascata a todos os parentes de primeiro grau**, independentemente da idade de início de sintomas relatada na família — a variabilidade de penetrância e de idade de início dentro da mesma variante é maior do que a prática de calendarizar por "idade familiar esperada" pressupõe.
-2. **Iniciar vigilância cardiológica e neurológica sistemática a partir da confirmação genética em portador assintomático**, não a partir da proximidade da idade estimada de início — dado que quase 1 em cada 5 portadores neste estudo converteu de forma antecipada e inesperada.
-3. **Reconhecer que a variante genética específica modula o risco e o ritmo de conversão**, o que reforça a recomendação já estabelecida nas diretrizes da ESC 2023 de manejo de cardiomiopatias (Arbelo E et al., PMID 37622657) de seguimento genótipo-orientado, com intervalos de reavaliação ajustados à variante identificada sempre que essa informação estiver disponível.
-4. **Não postergar o início de terapia modificadora de doença após a confirmação de fenótipo positivo** — a magnitude do benefício de sobrevida observada, ainda que com intervalo de confiança amplo, é consistente com o racional de intervir o mais precocemente possível na história natural da doença.
+- [Amiloidose Cardíaca por Transtirretina: Hereditária versus Selvagem — Diferenciação Clínica e Papel do Teste Genético](/biblioteca/amiloidose-cardiaca-attr-hereditaria-versus-selvagem-diferenciacao-clinica-e-teste-genetico) — Conecta rastreio em cascata à distinção ATTRv/ATTRwt, confirmação da variante e aconselhamento familiar.

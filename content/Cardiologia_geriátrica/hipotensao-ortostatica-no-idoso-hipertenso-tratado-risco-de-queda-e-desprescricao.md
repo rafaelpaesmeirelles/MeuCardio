@@ -1,97 +1,72 @@
 ---
-kind: protocolo
-legacy_source: Documento novo — tema Cardiologia geriátrica, produzido em 08/09/2026.
-  Cobre a hipotensão ortostática como entidade própria no idoso hipertenso tratado
-  (definição, prevalência, classes farmacológicas de risco, protocolo de aferição
-  e a evidência mais recente de desprescrição), ângulo até então sem documento dedicado
-  nesta pasta — o documento já publicado sobre hipotensão pós-prandial trata de mecanismo
-  pós-refeição, distinto da hipotensão ortostática por mudança de posição, que aqui
-  é o assunto central.
+kind: documento
 published: true
-review_note: 'AHA 2024 integral e resumos conferidos: HO não equivale a pós-prandial;
-  SPRINT sentado/em pé e PAS≥110, tratamento intensivo pode elevar síncope/hipotensão
-  apesar de HO não maior. Metanálises não específicas de HO; DeFRID apenas protocolo,
-  randomização dos médicos.'
+review_note: 'AHA 2024 integral e resumos conferidos: HO não equivale a pós-prandial; SPRINT sentado/em pé e PAS≥110, tratamento
+  intensivo pode elevar síncope/hipotensão apesar de HO não maior. Metanálises não específicas de HO; DeFRID apenas protocolo,
+  randomização dos médicos. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo
+  conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
 review_status: revisado
 slug: hipotensao-ortostatica-no-idoso-hipertenso-tratado-risco-de-queda-e-desprescricao
 source_refs:
-- 'Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition
-  of orthostatic hypotension, neurally mediated syncope and the postural tachycardia
-  syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID:
-  21431947 — publicado simultaneamente em Auton Neurosci. 2011;161(1-2):46-48, PMID
-  21393070. Conferido via PubMed E-utilities (efetch) em 08/09/2026: o registro do
-  PubMed para as duas versões não traz resumo estruturado (é um consenso curto de
-  sociedade, sem abstract indexado) — a definição operacional citada neste documento
-  (queda de pressão sistólica ≥20 mmHg ou diastólica ≥10 mmHg em até 3 minutos após
-  ortostase ativa ou inclinação passiva a pelo menos 60°) foi confirmada por busca
-  cruzada, não pelo abstract do PubMed em si, que está ausente.'
-- 'Juraschek SP, Cortez MM, Flack JM, et al. Orthostatic Hypotension in Adults With
-  Hypertension: A Scientific Statement From the American Heart Association. Hypertension.
-  2024;81(3):e16-e30. DOI: 10.1161/HYP.0000000000000236. PMID: 38205630. Abstract
-  integral conferido via PubMed E-utilities (efetch) em 08/09/2026 e texto completo
-  consultado no PMC (PMC11067441) em 08/09/2026 para os pontos de prevalência, classes
-  farmacológicas associadas e protocolo de aferição citados neste documento — todos
-  conferindo com o texto da declaração científica.'
-- 'Juraschek SP, Taylor AA, Wright JT Jr, et al; SPRINT Research Group. Orthostatic
-  Hypotension, Cardiovascular Outcomes, and Adverse Events: Results From SPRINT. Hypertension.
-  2020;75(3):660-667. DOI: 10.1161/HYPERTENSIONAHA.119.14309. PMID: 31983312. Abstract
-  integral conferido via PubMed E-utilities (efetch) em 08/09/2026: os números do
-  documento (definição de HO por queda ≥20 mmHg sistólica ou ≥10 mmHg diastólica 1
-  minuto após ficar em pé a partir da posição sentada; 1.170 [5,7%] episódios de HO
-  no grupo de meta convencional contra 1.057 [5,0%] no grupo de meta intensiva; HR
-  1,06 [IC95% 0,78-1,44] para o desfecho primário cardiovascular; HR 1,77 [IC95% 1,11-2,82]
-  para internação/atendimento de emergência relacionado a hipotensão; HR 1,94 [IC95%
-  1,19-3,15] para bradicardia; ausência de associação com síncope, distúrbio eletrolítico,
-  queda com lesão ou insuficiência renal aguda; associações não diferindo pela meta
-  de tratamento) conferem exatamente com o abstract original.'
-- 'Floriani C, Minchio G, Schulthess-Lisibach AE, et al. Deprescribing antihypertensive
-  medications in older people: a systematic review and a meta-analysis. BMC Geriatr.
-  2026;26(1):222. DOI: 10.1186/s12877-025-06941-2. PMID: 41491674. Abstract integral
-  conferido via PubMed E-utilities (efetch) em 08/09/2026: os números do documento
-  (17 estudos incluídos; OR combinado para mortalidade por qualquer causa de 1,11
-  [IC95% 0,82-1,50], 6 ECR; OR 1,32 [IC95% 0,30-5,92] para infarto do miocárdio, 3
-  ECR; OR 3,16 [IC95% 1,53-6,55] para insuficiência cardíaca, 3 ECR; OR 3,08 [IC95%
-  0,73-13,00] para AVC, 4 ECR; conclusão de que os efeitos da desprescrição permanecem
-  incertos e a decisão deve ser individualizada, especialmente em populações frágeis
-  e multimórbidas) conferem exatamente com o abstract original.'
-- 'Alsubaiei AA, Alyahya SA, Emara A, et al. Efficacy and safety of antihypertensive
-  drugs deprescribing in older adults: A systematic review and meta-analysis of randomized
-  controlled trials. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570. DOI: 10.1016/j.ijcrp.2025.200570.
-  PMID: 41550131. Abstract integral conferido via PubMed E-utilities (efetch) em 08/09/2026:
-  os números do documento (4 ECR, 2.173 participantes; RR de mortalidade por qualquer
-  causa 1,02 [IC95% 0,93-1,12]; RR de mortalidade cardiovascular 1,11 [IC95% 0,80-1,55];
-  RR de internação por qualquer causa 0,95 [IC95% 0,85-1,05]; RR de MACE 1,09 [IC95%
-  0,90-1,33]; RR de infarto 0,76 [IC95% 0,42-1,38]; RR de AVC 1,12 [IC95% 0,66-1,89];
-  RR de eventos adversos graves 1,08 [IC95% 0,90-1,30]; RR de quedas 1,00 [IC95% 0,89-1,13];
-  conclusão de que a desprescrição não se associou a maior risco de mortalidade, MACE
-  ou outros eventos adversos graves, mas a evidência permanece limitada e exige monitorização
-  clínica rigorosa) conferem exatamente com o abstract original.'
-- 'Priyadarshini R, Eerike M, Varatharajan S, et al. Assessing the Efficacy of the
-  ARMOR Tool-Based Deprescribing Intervention for Fall Risk Reduction in Older Patients
-  Taking Fall Risk-Increasing Drugs (DeFRID Trial): Protocol for a Randomized Controlled
-  Trial. JMIR Res Protoc. 2024;13:e55638. DOI: 10.2196/55638. PMID: 38861709. Abstract
-  integral conferido via PubMed E-utilities (efetch) em 08/09/2026: é PROTOCOLO de
-  ensaio clínico randomizado ainda em andamento (início abril de 2024, conclusão prevista
-  para 2026), citado apenas pelo desenho e pelos instrumentos de avaliação (Fall Efficacy
-  Scale, Timed Up and Go, Tinetti Performance-Oriented Mobility Assessment, hipotensão
-  ortostática e histórico de queda coletados no basal) — nenhum resultado de eficácia
-  foi publicado até a data desta verificação, e nenhum número de desfecho deste estudo
-  é citado neste documento como evidência de efeito.'
+- 'Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated
+  syncope and the postural tachycardia syndrome. Clin Auton Res. 2011;21(2):69-72. DOI: 10.1007/s10286-011-0119-5. PMID: 21431947.'
+- 'Juraschek SP, Cortez MM, Flack JM, et al. Orthostatic Hypotension in Adults With Hypertension: A Scientific Statement From
+  the American Heart Association. Hypertension. 2024;81(3):e16-e30. DOI: 10.1161/HYP.0000000000000236. PMID: 38205630. Abstract
+  integral conferido via PubMed E-utilities (efetch) em 08/09/2026 e texto completo consultado no PMC (PMC11067441) em 08/09/2026
+  para os pontos de prevalência, classes farmacológicas associadas e protocolo de aferição citados neste documento.'
+- 'Juraschek SP, Taylor AA, Wright JT Jr, et al; SPRINT Research Group. Orthostatic Hypotension, Cardiovascular Outcomes,
+  and Adverse Events: Results From SPRINT. Hypertension. 2020;75(3):660-667. DOI: 10.1161/HYPERTENSIONAHA.119.14309. PMID:
+  31983312. Abstract integral conferido via PubMed E-utilities (efetch) em 08/09/2026: os números do documento (definição
+  de HO por queda ≥20 mmHg sistólica ou ≥10 mmHg diastólica 1 minuto após ficar em pé a partir da posição sentada; 1.170 [5,7%]
+  episódios de HO no grupo de meta convencional contra 1.057 [5,0%] no grupo de meta intensiva; HR 1,06 [IC95% 0,78-1,44]
+  para o desfecho primário cardiovascular; HR 1,77 [IC95% 1,11-2,82] para internação/atendimento de emergência relacionado
+  a hipotensão; HR 1,94 [IC95% 1,19-3,15] para bradicardia; ausência de associação com síncope, distúrbio eletrolítico, queda
+  com lesão ou insuficiência renal aguda; associações não diferindo pela meta de tratamento) conferem exatamente com o abstract
+  original.'
+- 'Floriani C, Minchio G, Schulthess-Lisibach AE, et al. Deprescribing antihypertensive medications in older people: a systematic
+  review and a meta-analysis. BMC Geriatr. 2026;26(1):222. DOI: 10.1186/s12877-025-06941-2. PMID: 41491674. Abstract integral
+  conferido via PubMed E-utilities (efetch) em 08/09/2026: os números do documento (17 estudos incluídos; OR combinado para
+  mortalidade por qualquer causa de 1,11 [IC95% 0,82-1,50], 6 ECR; OR 1,32 [IC95% 0,30-5,92] para infarto do miocárdio, 3
+  ECR; OR 3,16 [IC95% 1,53-6,55] para insuficiência cardíaca, 3 ECR; OR 3,08 [IC95% 0,73-13,00] para AVC, 4 ECR; conclusão
+  de que os efeitos da desprescrição permanecem incertos e a decisão deve ser individualizada, especialmente em populações
+  frágeis e multimórbidas) conferem exatamente com o abstract original.'
+- 'Alsubaiei AA, Alyahya SA, Emara A, et al. Efficacy and safety of antihypertensive drugs deprescribing in older adults:
+  A systematic review and meta-analysis of randomized controlled trials. Int J Cardiol Cardiovasc Risk Prev. 2026;28:200570.
+  DOI: 10.1016/j.ijcrp.2025.200570. PMID: 41550131. Abstract integral conferido via PubMed E-utilities (efetch) em 08/09/2026:
+  os números do documento (4 ECR, 2.173 participantes; RR de mortalidade por qualquer causa 1,02 [IC95% 0,93-1,12]; RR de
+  mortalidade cardiovascular 1,11 [IC95% 0,80-1,55]; RR de internação por qualquer causa 0,95 [IC95% 0,85-1,05]; RR de MACE
+  1,09 [IC95% 0,90-1,33]; RR de infarto 0,76 [IC95% 0,42-1,38]; RR de AVC 1,12 [IC95% 0,66-1,89]; RR de eventos adversos graves
+  1,08 [IC95% 0,90-1,30]; RR de quedas 1,00 [IC95% 0,89-1,13]; conclusão de que a desprescrição não se associou a maior risco
+  de mortalidade, MACE ou outros eventos adversos graves, mas a evidência permanece limitada e exige monitorização clínica
+  rigorosa) conferem exatamente com o abstract original.'
+- 'Priyadarshini R, Eerike M, Varatharajan S, et al. Assessing the Efficacy of the ARMOR Tool-Based Deprescribing Intervention
+  for Fall Risk Reduction in Older Patients Taking Fall Risk-Increasing Drugs (DeFRID Trial): Protocol for a Randomized Controlled
+  Trial. JMIR Res Protoc. 2024;13:e55638. DOI: 10.2196/55638. PMID: 38861709. Abstract integral conferido via PubMed E-utilities
+  (efetch) em 08/09/2026: é PROTOCOLO de ensaio clínico randomizado ainda em andamento (início abril de 2024, conclusão prevista
+  para 2026), citado apenas pelo desenho e pelos instrumentos de avaliação (Fall Efficacy Scale, Timed Up and Go, Tinetti
+  Performance-Oriented Mobility Assessment, hipotensão ortostática e histórico de queda coletados no basal).'
 theme: Cardiologia geriátrica
-title: 'Hipotensão Ortostática no Idoso Hipertenso Tratado: Risco de Queda e o que
-  a Evidência de Desprescrição em 2025-2026 Mostra'
+title: 'Hipotensão Ortostática no Idoso Hipertenso Tratado: Risco de Queda e o que a Evidência de Desprescrição em 2025-2026
+  Mostra'
+summary: A hipotensão ortostática pode coexistir com hipertensão e ocorrer sem sintomas. A medição em pé complementa a avaliação
+  pressórica e ajuda a investigar tontura e quedas. Este documento examina a relação com tratamento intensivo e os limites
+  da evidência sobre desprescrição de anti-hipertensivos.
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # Hipotensão Ortostática no Idoso Hipertenso Tratado: Risco de Queda e o que a Evidência de Desprescrição em 2025-2026 Mostra
 
-## Por que isso importa na prática
-O cardiologista trata a hipertensão do idoso pensando em AVC, infarto e insuficiência cardíaca — e é fácil esquecer que a mesma pressão arterial que protege contra esses desfechos, medida na posição errada, pode estar escondendo uma queda perigosa ao ficar em pé. A hipotensão ortostática (HO) é comum no idoso tratado, frequentemente assintomática, e é justamente essa ausência de sintoma que a torna traiçoeira: ninguém pergunta, ninguém mede de pé, e o paciente só aparece depois, na emergência, com fratura de quadril. A pergunta que este documento responde com dado real, não com impressão clínica, é dupla: tratar a hipertensão intensivamente causa mais HO — e, quando a HO já está presente, desprescrever o anti-hipertensivo reduz o risco de queda?
+## Pergunta clínica
+
+A hipotensão ortostática pode coexistir com hipertensão e ocorrer sem sintomas. A medição em pé complementa a avaliação pressórica e ajuda a investigar tontura e quedas. Este documento examina a relação com tratamento intensivo e os limites da evidência sobre desprescrição de anti-hipertensivos.
 
 ## Definição, medida com precisão
 O consenso de referência (Freeman et al., Clin Auton Res 2011) define hipotensão ortostática como **queda da pressão arterial sistólica de pelo menos 20 mmHg, ou da diastólica de pelo menos 10 mmHg, dentro de 3 minutos após a ortostase ativa (ficar em pé) ou a inclinação passiva a pelo menos 60° numa mesa de inclinação (tilt table)**. Não equivale à definição de hipotensão pós-prandial, que se relaciona à refeição e tem critérios próprios — os dois podem coexistir no mesmo paciente, e a HO frequentemente compete no diagnóstico diferencial de síncope e queda do idoso junto com a hipotensão pós-prandial e a síncope reflexa.
 
 ## Magnitude do problema
-A declaração científica da AHA de 2024 sobre HO no adulto hipertenso (Juraschek et al., Hypertension 2024) fixa os números de prevalência que sustentam a preocupação: **a HO é estimada em cerca de 10% dos adultos com 60 anos ou mais, subindo para 16% a 30% entre os maiores de 65 anos**, e **até 10% dos adultos com hipertensão** apresentam HO. Ou seja, num consultório de cardiologia geriátrica, um em cada dez a três hipertensos idosos pode ter HO — a maioria sem nunca ter sido perguntado sobre isso, porque a rotina de medir pressão sentado ou deitado não capta o problema.
+A declaração científica da AHA de 2024 sobre HO no adulto hipertenso (Juraschek et al., Hypertension 2024) fixa os números de prevalência que sustentam a preocupação: **a HO é estimada em cerca de 10% dos adultos com 60 anos ou mais, subindo para 16% a 30% entre os maiores de 65 anos**, e **até 10% dos adultos com hipertensão** apresentam HO.
 
 ## Quais classes de anti-hipertensivo mais "desmascaram" a HO
 A mesma declaração da AHA identifica que **bloqueadores alfa periféricos, betabloqueadores e simpatolíticos centrais estão associados a HO**. Um achado específico citado no documento merece destaque pela magnitude: **a monoterapia com betabloqueador associou-se a 2 vezes as chances de HO inicial e em 3 vezes as chances de HO sustentada**. Em contraste, **as classes de primeira linha da diretriz ACC/AHA 2017 (tiazídico, IECA/BRA, bloqueador de canal de cálcio) são, como grupo, classes de menor risco para causar HO** — o que reforça, por um ângulo adicional ao já conhecido de eficácia cardiovascular, a preferência por essas classes como ponto de partida no idoso.
@@ -103,8 +78,8 @@ O protocolo recomendado pela AHA é aferir a pressão **após 5 a 10 minutos em 
 A pergunta que mais preocupa na prática — "se eu intensificar o tratamento, vou provocar quedas?" — foi respondida diretamente por uma subanálise do SPRINT (Juraschek et al., Hypertension 2020), um ensaio randomizado de grande porte com esse desfecho medido sistematicamente:
 
 - **A incidência de HO não foi maior no grupo de meta intensiva (PAS-alvo <120 mmHg) do que no grupo de meta convencional (PAS-alvo <140 mmHg)**: 1.170 episódios (5,7%) no grupo convencional contra 1.057 episódios (5,0%) no grupo intensivo, ao longo de um seguimento mediano de 3 anos.
-- **A HO não se associou a maior risco do desfecho cardiovascular primário** (HR 1,06; IC95% 0,78-1,44), nem a síncope, distúrbio eletrolítico, queda com lesão ou insuficiência renal aguda.
-- **A HO se associou a mais internação/atendimento de emergência por hipotensão** (HR 1,77; IC95% 1,11-2,82) **e a mais bradicardia** (HR 1,94; IC95% 1,19-3,15) — mas **essas duas associações não diferiram entre os grupos de meta de tratamento**, ou seja, o risco associado à HO existe independentemente de qual meta pressórica o paciente estava recebendo.
+- **A HO não se associou a maior risco do desfecho cardiovascular primário** (HR 1,06; IC 95% 0,78-1,44), nem a síncope, distúrbio eletrolítico, queda com lesão ou insuficiência renal aguda.
+- **A HO se associou a mais internação/atendimento de emergência por hipotensão** (HR 1,77; IC 95% 1,11-2,82) **e a mais bradicardia** (HR 1,94; IC 95% 1,19-3,15) — mas **essas duas associações não diferiram entre os grupos de meta de tratamento**, ou seja, o risco associado à HO existe independentemente de qual meta pressórica o paciente estava recebendo.
 - **Conclusão dos próprios autores, textual em sentido**: HO assintomática durante o tratamento da hipertensão não deveria, por si só, ser motivo para reduzir a dose do anti-hipertensivo, mesmo no contexto de meta pressórica mais baixa.
 
 **Distinção importante:** a associação entre HO medida e eventos não é o mesmo que o efeito da randomização para tratamento intensivo. A AHA destaca aumento de episódios de hipotensão e síncope com tratamento intensivo no SPRINT, embora não tenha aumentado a HO medida. O estudo exigiu PAS em pé ≥110 mmHg e não sustenta extrapolação irrestrita para HO sintomática ou neurogênica grave. O que ele encontrou é que a própria presença de HO — independentemente da intensidade do tratamento — sinaliza um paciente com risco maior de descompensação hemodinâmica (internação por hipotensão, bradicardia), e que esse sinal deve ser investigado, não usado como justificativa automática para desintensificar o tratamento pressórico.
@@ -112,9 +87,9 @@ A pergunta que mais preocupa na prática — "se eu intensificar o tratamento, v
 ## E desprescrever o anti-hipertensivo reduz queda? Duas metanálises de 2025-2026, lidas juntas
 Aqui a evidência mais recente é mais ambígua do que a intuição sugere, e as duas metanálises publicadas nesta janela **não devem ser lidas isoladamente**:
 
-**Floriani et al. (BMC Geriatrics, 2026)**, a revisão mais abrangente, reuniu **17 estudos** (ensaios randomizados e observacionais comparativos) comparando desprescrição contra manutenção do anti-hipertensivo em adultos ≥65 anos. No desfecho primário, mortalidade por qualquer causa, o OR combinado foi **1,11 (IC95% 0,82-1,50; 6 ECR)** — sem diferença estatisticamente significativa. Mas nos desfechos secundários, **o OR para insuficiência cardíaca foi de 3,16 (IC95% 1,53-6,55; 3 ECR)** — um sinal estatisticamente significativo de **mais** insuficiência cardíaca no grupo que desprescreveu, ainda que baseado em apenas 3 ensaios. Infarto (OR 1,32; IC95% 0,30-5,92) e AVC (OR 3,08; IC95% 0,73-13,00) não atingiram significância, mas os intervalos são largos e não excluem risco relevante. A conclusão dos autores é que **os efeitos da desprescrição permanecem incertos**, com evidência limitada e de baixa taxa de evento, exigindo decisão individualizada — especialmente no idoso frágil e multimórbido.
+**Floriani et al. (BMC Geriatrics, 2026)**, a revisão mais abrangente, reuniu **17 estudos** (ensaios randomizados e observacionais comparativos) comparando desprescrição contra manutenção do anti-hipertensivo em adultos ≥65 anos. No desfecho primário, mortalidade por qualquer causa, o OR combinado foi **1,11 (IC 95% 0,82-1,50; 6 ECR)** — sem diferença estatisticamente significativa. Mas nos desfechos secundários, **o OR para insuficiência cardíaca foi de 3,16 (IC 95% 1,53-6,55; 3 ECR)** — um sinal estatisticamente significativo de **mais** insuficiência cardíaca no grupo que desprescreveu, ainda que baseado em apenas 3 ensaios. Infarto (OR 1,32; IC 95% 0,30-5,92) e AVC (OR 3,08; IC 95% 0,73-13,00) não atingiram significância, mas os intervalos são largos e não excluem risco relevante. A conclusão dos autores é que **os efeitos da desprescrição permanecem incertos**, com evidência limitada e de baixa taxa de evento, exigindo decisão individualizada — especialmente no idoso frágil e multimórbido.
 
-**Alsubaiei et al. (International Journal of Cardiology: Cardiovascular Risk and Prevention, 2026)**, restrita a **4 ensaios randomizados com 2.173 participantes**, encontrou um quadro mais tranquilizador: **sem diferença significativa em mortalidade por qualquer causa** (RR 1,02; IC95% 0,93-1,12), **mortalidade cardiovascular** (RR 1,11; IC95% 0,80-1,55), **internação por qualquer causa** (RR 0,95; IC95% 0,85-1,05), **MACE** (RR 1,09; IC95% 0,90-1,33) — e, especificamente para o desfecho que mais interessa a este documento, **sem diferença em queda** (RR 1,00; IC95% 0,89-1,13). A conclusão dos autores é que a desprescrição não se associou a maior risco de mortalidade ou eventos adversos graves, mas que a base de evidência **permanece limitada e incerta**, recomendando cautela e monitorização clínica rigorosa.
+**Alsubaiei et al. (International Journal of Cardiology: Cardiovascular Risk and Prevention, 2026)**, restrita a **4 ensaios randomizados com 2.173 participantes**, encontrou um quadro mais tranquilizador: **sem diferença significativa em mortalidade por qualquer causa** (RR 1,02; IC 95% 0,93-1,12), **mortalidade cardiovascular** (RR 1,11; IC 95% 0,80-1,55), **internação por qualquer causa** (RR 0,95; IC 95% 0,85-1,05), **MACE** (RR 1,09; IC 95% 0,90-1,33) — e, especificamente para o desfecho que mais interessa a este documento, **sem diferença em queda** (RR 1,00; IC 95% 0,89-1,13). A conclusão dos autores é que a desprescrição não se associou a maior risco de mortalidade ou eventos adversos graves, mas que a base de evidência **permanece limitada e incerta**, recomendando cautela e monitorização clínica rigorosa.
 
 **Por que as duas não são contraditórias, e o que fazer com isso na prática**: são conjuntos parcialmente diferentes de ensaios (17 estudos incluídos, mas estimativas combinadas de ECR e síntese narrativa dos observacionais, contra 4 ECR), medindo desfechos parcialmente diferentes, com intervalos de confiança amplos nos dois lados — nenhuma tem poder estatístico para afirmar com segurança que desprescrever é seguro nem que desprescrever causa dano. O sinal de mais insuficiência cardíaca em Floriani (3 ECR apenas) é preocupante o suficiente para não tratar a desprescrição como intervenção neutra e reflexa diante de HO assintomática; a ausência de sinal em queda em Alsubaiei (a pergunta mais direta deste documento) tampouco autoriza afirmar que desprescrever previne queda. **A leitura honesta das duas juntas é que a desprescrição antihipertensiva no idoso com HO é uma decisão individualizada — não um protocolo automático em nenhuma das duas direções**, exatamente como orienta o documento desta plataforma sobre desprescrição cardiovascular no idoso (cascata de prescrição e critérios STOPP/START).
 
@@ -131,3 +106,7 @@ A publicação de 2024 (PMID 38861709; CTRI/2023/12/060516) descreve intervenç�
 
 ## Armadilhas clínicas
 Não medir pressão em pé porque o paciente "não se queixa de tontura" — a maior parte da HO é assintomática, e é justamente a HO assintomática que o SPRINT associou a mais internação por hipotensão e mais bradicardia; medir só aos 3 minutos e concluir "sem HO" quando o sintoma relatado pelo paciente ocorre no primeiro minuto após levantar-se, janela que o protocolo padrão pode não captar; desintensificar reflexamente o tratamento anti-hipertensivo diante de HO assintomática, contrariando o que os próprios dados do SPRINT sustentam; tratar a desprescrição do anti-hipertensivo como intervenção sabidamente segura para prevenir queda, quando a metanálise mais recente e específica sobre esse desfecho (Alsubaiei 2026) não mostrou benefício algum sobre queda, e a metanálise mais ampla (Floriani 2026) sinalizou possível excesso de insuficiência cardíaca; e confundir hipotensão ortostática (mudança de posição) com hipotensão pós-prandial (relacionada à refeição) — as duas têm mecanismo, corte diagnóstico e às vezes tratamento distintos, e frequentemente coexistem no mesmo idoso.
+
+## Tudo com Tudo
+
+- [Fluxograma: Hipotensão ortostática — diagnóstico, causa e manejo escalonado](/biblioteca/fluxograma-hipotensao-ortostatica-diagnostico-causa-e-manejo-escalonado) — Relaciona dados de desprescrição à confirmação de hipotensão ortostática, identificação da causa e manejo individualizado.

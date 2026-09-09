@@ -1,14 +1,23 @@
 ---
-title: "Duração da hipotermia após parada cardíaca: ensaio ICECAP"
+title: 'Duração da hipotermia após parada cardíaca: ensaio ICECAP'
 slug: duracao-da-hipotermia-terapeutica-pos-parada-cardiorrespiratoria-o-ensaio-icecap
-theme: "Terapia intensiva"
+theme: Terapia intensiva
 kind: estudo
-summary: "ICECAP: prolongar a hipotermia não melhorou a recuperação neurológica. As durações efetivamente alocadas foram de 6 a 48 horas; o estudo não estabelece seis horas como padrão assistencial."
+summary: 'ICECAP: prolongar a hipotermia não melhorou a recuperação neurológica. As durações efetivamente alocadas foram de
+  6 a 48 horas; o estudo não estabelece seis horas como padrão assistencial.'
 review_status: revisado
 source_refs:
-  - "Meurer WJ, Yeatts SD, Geocadin RG, et al. Duration of Therapeutic Hypothermia After Out-of-Hospital Cardiac Arrest: The ICECAP Randomized Clinical Trial. JAMA. 2026;336(10):857-867. DOI: 10.1001/jama.2026.10247. PMID: 42554995. https://jamanetwork.com/journals/jama/fullarticle/2852508"
-  - "Kirkegaard H, Søreide E, de Haas I, et al. Targeted Temperature Management for 48 vs 24 Hours and Neurologic Outcome After Out-of-Hospital Cardiac Arrest: A Randomized Clinical Trial. JAMA. 2017;318(4):341-350. DOI: 10.1001/jama.2017.8978. PMID: 28742911. https://pubmed.ncbi.nlm.nih.gov/28742911/"
-review_note: "Revisão Codex em 09/09/2026: texto integral e tabela 3 do ICECAP conferidos. Consolidadas duas versões do mesmo slug; corrigidas duração efetivamente alocada, interpretação bayesiana e alegação de primeiro ensaio de duração."
+- 'Meurer WJ, Yeatts SD, Geocadin RG, et al. Duration of Therapeutic Hypothermia After Out-of-Hospital Cardiac Arrest: The
+  ICECAP Randomized Clinical Trial. JAMA. 2026;336(10):857-867. DOI: 10.1001/jama.2026.10247. PMID: 42554995. https://jamanetwork.com/journals/jama/fullarticle/2852508'
+- 'Kirkegaard H, Søreide E, de Haas I, et al. Targeted Temperature Management for 48 vs 24 Hours and Neurologic Outcome After
+  Out-of-Hospital Cardiac Arrest: A Randomized Clinical Trial. JAMA. 2017;318(4):341-350. DOI: 10.1001/jama.2017.8978. PMID:
+  28742911. https://pubmed.ncbi.nlm.nih.gov/28742911/'
+review_note: 'Revisão Codex em 09/09/2026: texto integral e tabela 3 do ICECAP conferidos. Consolidadas duas versões do mesmo
+  slug; corrigidas duração efetivamente alocada, interpretação bayesiana e alegação de primeiro ensaio de duração.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Duração da hipotermia após parada cardíaca: ensaio ICECAP

@@ -1,45 +1,36 @@
 ---
 kind: documento
-legacy_source: Documento novo, escrito em 08/09/2026. A pasta já cobre miocardite
-  por checkpoint (emergência ESC 2025, estratificação HFA-ICOS, framework de rechallenge),
-  pericardite/derrame e a tríade miocardite-miosite-miastenia, mas nenhum documento
-  tratava especificamente da aterosclerose acelerada e da síndrome coronariana aguda
-  (SCA) associadas a inibidor de checkpoint imunológico (ICI) — um mecanismo de cardiotoxicidade
-  distinto (agravamento de doença inflamatória crônica preexistente, não miocardite
-  aguda) e de reconhecimento mais recente na literatura.
 published: true
-review_note: Quatro fontes primárias/posição conferidas; corrigidas causalidade, interpretação
-  da mediana e equivalência por sexo; associação com corticosteroide não constitui
-  indicação preventiva. Texto não reivindica protocolo institucional não verificado.
+review_note: 'Quatro fontes primárias/posição conferidas; corrigidas causalidade, interpretação da mediana e equivalência
+  por sexo; associação com corticosteroide não constitui indicação preventiva. Texto não reivindica protocolo institucional
+  não verificado. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos,
+  referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
 review_status: revisado
 slug: aterosclerose-acelerada-e-sindrome-coronariana-aguda-por-inibidor-de-checkpoint-imunologico
 source_refs:
-- 'Drobni ZD, Alvi RM, Taron J, Zafar A, Murphy SP, Rambarat PK, Mosarla RC, Lee C,
-  Zlotoff DA, Raghu VK, Hartmann SE, Gilman HK, Gong J, Zubiri L, Sullivan RJ, Reynolds
-  KL, Mayrhofer T, Zhang L, Hoffmann U, Neilan TG. Association Between Immune Checkpoint
-  Inhibitors With Cardiovascular Events and Atherosclerotic Plaque. Circulation. 2020;142(24):2299-2311.
-  DOI: 10.1161/CIRCULATIONAHA.120.049981. PMID: 33003973. PMCID: PMC7736526 — abstract
-  lido na íntegra via PubMed E-utilities'
-- 'Suero-Abreu GA, Drobni ZD, Gongora CA, Taron J, Karady J, Gilman HK, Merkely B,
-  Vago H, Varga ZV, Sullivan RJ, Reynolds KL, Zlotoff D, Foldyna B, Zanni MV, Neilan
-  TG. Immune Checkpoint Inhibitors, Atherosclerotic Cardiovascular Events, and Plaque
-  Progression Among Women With Cancer. J Am Heart Assoc. 2026;15(6):e041925. Epub
-  2025 Nov 26. DOI: 10.1161/JAHA.125.041925. PMID: 41294143. PMCID: PMC13055813 —
-  abstract lido na íntegra via PubMed E-utilities'
-- 'Saganty RS, Leiva O, Hutchins E, Stein-Merlob AF, Yang EH. Immune Checkpoint Inhibitor
-  Therapy and Acute Coronary Syndrome: A Review of Mechanisms and Management. J Am
-  Heart Assoc. 2026;15(6):e042824. Epub 2025 Nov 26. DOI: 10.1161/JAHA.125.042824.
-  PMID: 41294138. PMCID: PMC13055655 — abstract lido na íntegra via PubMed E-utilities'
-- 'Herrmann J, Barac A, Carver J, Cheng RK, Daniele A, Dent S, Deych E, Lee DH, Lenihan
-  D, Leong DP, Liu J, Lopez-Fernandez T, Lyon AR, Fradley M, Macedo AVS, Mooradian
-  MJ, Nohria A, Porter C, Rassaf T, Suero-Abreu G, Sverdlov AL, Thavendiranathan P,
-  Neilan TG, Mitchell JD. Immune Checkpoint Inhibitor-Associated Cardiovascular Toxic
-  Effects: International Cardio-Oncology Society Position Statement. JAMA Oncol. 2026;12(1):90-99.
-  DOI: 10.1001/jamaoncol.2025.4543. PMID: 41231466 — abstract lido na íntegra via
-  PubMed E-utilities'
+- 'Drobni ZD, Alvi RM, Taron J, Zafar A, Murphy SP, Rambarat PK, Mosarla RC, Lee C, Zlotoff DA, Raghu VK, Hartmann SE, Gilman
+  HK, Gong J, Zubiri L, Sullivan RJ, Reynolds KL, Mayrhofer T, Zhang L, Hoffmann U, Neilan TG. Association Between Immune
+  Checkpoint Inhibitors With Cardiovascular Events and Atherosclerotic Plaque. Circulation. 2020;142(24):2299-2311. DOI: 10.1161/CIRCULATIONAHA.120.049981.
+  PMID: 33003973. PMCID: PMC7736526.'
+- 'Suero-Abreu GA, Drobni ZD, Gongora CA, Taron J, Karady J, Gilman HK, Merkely B, Vago H, Varga ZV, Sullivan RJ, Reynolds
+  KL, Zlotoff D, Foldyna B, Zanni MV, Neilan TG. Immune Checkpoint Inhibitors, Atherosclerotic Cardiovascular Events, and
+  Plaque Progression Among Women With Cancer. J Am Heart Assoc. 2026;15(6):e041925. Epub 2025 Nov 26. DOI: 10.1161/JAHA.125.041925.
+  PMID: 41294143. PMCID: PMC13055813.'
+- 'Saganty RS, Leiva O, Hutchins E, Stein-Merlob AF, Yang EH. Immune Checkpoint Inhibitor Therapy and Acute Coronary Syndrome:
+  A Review of Mechanisms and Management. J Am Heart Assoc. 2026;15(6):e042824. Epub 2025 Nov 26. DOI: 10.1161/JAHA.125.042824.
+  PMID: 41294138. PMCID: PMC13055655.'
+- 'Herrmann J, Barac A, Carver J, Cheng RK, Daniele A, Dent S, Deych E, Lee DH, Lenihan D, Leong DP, Liu J, Lopez-Fernandez
+  T, Lyon AR, Fradley M, Macedo AVS, Mooradian MJ, Nohria A, Porter C, Rassaf T, Suero-Abreu G, Sverdlov AL, Thavendiranathan
+  P, Neilan TG, Mitchell JD. Immune Checkpoint Inhibitor-Associated Cardiovascular Toxic Effects: International Cardio-Oncology
+  Society Position Statement. JAMA Oncol. 2026;12(1):90-99. DOI: 10.1001/jamaoncol.2025.4543. PMID: 41231466.'
 theme: Cardio-oncologia
-title: Aterosclerose Acelerada e Síndrome Coronariana Aguda por Inibidor de Checkpoint
-  Imunológico
+title: Aterosclerose Acelerada e Síndrome Coronariana Aguda por Inibidor de Checkpoint Imunológico
+summary: Não iniciar corticosteroide para prevenir aterosclerose associada a ICI com base nessas coortes. Otimizar a prevenção
+  cardiovascular conforme indicações clínicas e avaliar SCA e miocardite com equipe multidisciplinar. Não interromper tratamento
+  oncológico apenas por uma estimativa populacional de risco.
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # Aterosclerose Acelerada e Síndrome Coronariana Aguda por Inibidor de Checkpoint Imunológico
@@ -49,19 +40,19 @@ Os documentos já existentes nesta pasta sobre inibidor de checkpoint imunológi
 
 ## O estudo fundador: risco 3 vezes maior de evento cardiovascular após ICI (Drobni 2020)
 Drobni ZD et al., *Circulation*. 2020;142(24):2299-2311 (PMID 33003973, PMCID PMC7736526), Massachusetts General Hospital/Harvard. Desenho em três partes, com todos os desfechos adjudicados de forma cega:
-- **Coorte pareada**: 2.842 pacientes expostos a ICI comparados a 2.842 controles pareados por idade, história de evento cardiovascular prévio e tipo de câncer. Desfecho primário composto: infarto do miocárdio, revascularização coronariana e AVC isquêmico. **Risco 3 vezes maior de evento cardiovascular após início do ICI** (HR 3,3; IC95% 2,0-5,5; p<0,001), com aumento semelhante em cada componente individual do desfecho.
-- **Análise case-crossover** (mesmo paciente como seu próprio controle, período de risco de 2 anos após o ICI vs. período-controle de 2 anos antes): eventos cardiovasculares subiram de **1,37 para 6,55 por 100 pacientes-ano** aos 2 anos (HR ajustado 4,8; IC95% 3,5-6,5; p<0,001).
+- **Coorte pareada**: 2.842 pacientes expostos a ICI comparados a 2.842 controles pareados por idade, história de evento cardiovascular prévio e tipo de câncer. Desfecho primário composto: infarto do miocárdio, revascularização coronariana e AVC isquêmico. **Risco 3 vezes maior de evento cardiovascular após início do ICI** (HR 3,3; IC 95% 2,0-5,5; p<0,001), com aumento semelhante em cada componente individual do desfecho.
+- **Análise case-crossover** (mesmo paciente como seu próprio controle, período de risco de 2 anos após o ICI vs. período-controle de 2 anos antes): eventos cardiovasculares subiram de **1,37 para 6,55 por 100 pacientes-ano** aos 2 anos (HR ajustado 4,8; IC 95% 3,5-6,5; p<0,001).
 - **Substudo de imagem** (n=40): a taxa de progressão do volume total de placa aórtica foi **mais de 3 vezes maior com ICI** (de 2,1%/ano antes do tratamento para 6,7%/ano depois). **Essa associação entre uso de ICI e progressão acelerada de placa foi atenuada pelo uso concomitante de estatina ou corticosteroide** — associação exploratória, sem demonstrar eficácia preventiva de corticosteroides.
 
 ## Confirmação e dados específicos em mulheres, com substudo de imagem (Suero-Abreu 2026)
-Suero-Abreu GA et al., *J Am Heart Assoc*. 2026;15(6):e041925, publicado online em 26/11/2025 (PMID 41294143, PMCID PMC13055813), mesmo grupo do Massachusetts General Hospital. Estudo retrospectivo unicêntrico em **1.188 mulheres tratadas com ICI**:
+Suero-Abreu GA et al., *J Am Heart Assoc*. 2026;15(6):e 041925, publicado online em 26/11/2025 (PMID 41294143, PMCID PMC13055813), mesmo grupo do Massachusetts General Hospital. Estudo retrospectivo unicêntrico em **1.188 mulheres tratadas com ICI**:
 - **54 pacientes (5%) desenvolveram doença cardiovascular aterosclerótica (DCVA)**, com **tempo mediano até o evento de 174 dias** — ou seja, metade dos eventos ocorreu antes ou até aproximadamente esse tempo entre as pacientes com evento.
 - Pacientes que desenvolveram DCVA tinham maior prevalência de **infarto do miocárdio ou revascularização coronariana prévios** (15% vs. 6%; p=0,007) e de **AVC prévio** (7% vs. 2%; p=0,039).
-- Em análise de risco competitivo ajustada para fatores de risco cardiovascular, **história de evento cardiovascular prévio associou-se a quase 3 vezes mais risco de DCVA pós-ICI** (HR 2,71; IC95% 1,24-5,95; p=0,013).
+- Em análise de risco competitivo ajustada para fatores de risco cardiovascular, **história de evento cardiovascular prévio associou-se a quase 3 vezes mais risco de DCVA pós-ICI** (HR 2,71; IC 95% 1,24-5,95; p=0,013).
 - No substudo de imagem, a taxa anual de progressão de placa pós-ICI foi de **6% para placa total e 7% para placa não calcificada**, **com taxas semelhantes entre mulheres e homens** — ou seja, não foi detectada diferença por sexo nessa amostra, o que não demonstra equivalência.
 
 ## Mecanismo e desafio de manejo da SCA no paciente oncológico (Saganty 2026)
-Saganty RS et al., *J Am Heart Assoc*. 2026;15(6):e042824, publicado online em 26/11/2025 (PMID 41294138, PMCID PMC13055655), revisão do grupo de cardio-oncologia da UCLA. Pontos centrais da revisão:
+Saganty RS et al., *J Am Heart Assoc*. 2026;15(6):e 042824, publicado online em 26/11/2025 (PMID 41294138, PMCID PMC13055655), revisão do grupo de cardio-oncologia da UCLA. Pontos centrais da revisão:
 - A caracterização de eventos adversos cardiovasculares por ICI historicamente concentrou-se na miocardite; a associação entre ICI e **doença cardiovascular aterosclerótica é evidência emergente**, ainda menos incorporada à prática do que o reconhecimento de miocardite.
 - O manejo da SCA associada a ICI é um **desafio terapêutico que exige abordagem individualizada e multidisciplinar**, por causa do **risco basal mais alto de trombose E de sangramento** já inerente ao paciente oncológico — antiagregação plaquetária dupla e anticoagulação carregam trade-offs que não são os mesmos do paciente sem câncer (ver também, nesta pasta, os cortes de plaqueta para antiagregação em SCA da diretriz ESC 2022 e o documento específico de SCA em paciente oncológico com trombocitopenia).
 - A revisão discute oportunidades de **prevenção de risco** nos pacientes em uso de ICI, alinhadas ao achado de Drobni 2020 de que estatina e corticosteroide atenuam a progressão de placa.

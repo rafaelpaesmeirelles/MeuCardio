@@ -1,79 +1,66 @@
 ---
-title: "Diabetes Gestacional e Risco Cognitivo/Demência Materna: a Evidência Divergente de 2024-2025"
+title: 'Diabetes gestacional e cognição materna: associações e incertezas'
 slug: diabetes-gestacional-e-risco-cognitivo-demencia-materna-evidencia-2024-2025
-theme: "Gravidez"
+theme: Gravidez
 kind: documento
 review_status: revisado
-source_refs: ["Zhang Y, Gao D, Gao Y, Li J, Li C, Pan Y, Wang Y, Zhang J, Zheng F, Xie W. Gestational diabetes mellitus is associated with greater incidence of dementia during long-term post-partum follow-up. J Intern Med. 2024 Jun;295(6):774-784. DOI: 10.1111/joim.13787. PMID: 38629919 — coorte UK Biobank, 1.292 mulheres com história de DMG vs. 204.171 sem história, seguimento mediano de 45 anos desde o primeiro parto, 2.921 casos de demência por qualquer causa no total da amostra; HR 1,67 (IC95% 1,03-2,69) para DMG vs. sem DMG; mediação parcial por diabetes tipo 2 (34,5% do efeito), doença coronariana (8,4%), doença renal crônica (5,2%) e comorbidade combinada — duas das três doenças (18,8%); interação significativa com atividade física (p=0,030) — associação presente apenas em mulheres fisicamente inativas, ausente nas fisicamente ativas. Abstract PubMed conferido integralmente.", "Soria-Contreras DC, Wang S, Liu J, Lawn RB, Mitsunami M, Purdue-Smithe AC, Zhang C, Oken E, Chavarro JE. Lifetime history of gestational diabetes and cognitive function in parous women in midlife. Diabetologia. 2025 Jan;68(1):105-115. DOI: 10.1007/s00125-024-06270-w. PMID: 39240352. PMCID: PMC11960863 — Nurses' Health Study II, 15.906 mulheres pares livres de DCV/câncer/diabetes antes do primeiro parto (749 com história de DMG, 4,7%), avaliação cognitiva em meia-idade (média 62,0 anos, DP 4,9) pela bateria Cogstate; DMG associada a pior desempenho em velocidade psicomotora/atenção (β -0,08; IC95% -0,14 a -0,01) e em cognição global (β -0,06; IC95% -0,11 a -0,01) versus sem DMG, parcialmente explicado pelo desenvolvimento subsequente de diabetes tipo 2. Abstract PubMed conferido integralmente.", "Miller EC, Conley P, Alirezaei M, Wolfova K, Gonzales MM, Tan ZS, Tom SE, Yee LM, Brickman AM, Bello NA. Associations between adverse pregnancy outcomes and cognitive impairment and dementia: a systematic review and meta-analysis. Lancet Healthy Longev. 2024 Dec;5(12):100660. DOI: 10.1016/j.lanhl.2024.100660. PMID: 39675366. PMCID: PMC11726346 — revisão sistemática (15 estudos, 7.347.202 participantes) e metanálise (11 estudos, 6.263.431 participantes), protocolo PROSPERO CRD42023453511. Para qualquer desfecho gestacional adverso agrupado: HR ajustado 1,32 (IC95% 1,17-1,49) para demência por qualquer causa, 1,26 (1,04-1,53) para Alzheimer, 1,94 (1,70-2,21) para demência vascular. Para transtorno hipertensivo da gestação especificamente: 1,32 (1,11-1,57) para demência por qualquer causa, 1,78 (1,46-2,17) para demência vascular, sem associação significativa com Alzheimer (1,24; IC95% 0,98-1,57). Para diabetes mellitus gestacional especificamente — subgrupo de apenas 3 estudos incluídos (Andolf et al. 2020, Zhang et al. 2024, Sheng et al. 2022) — HR ajustado 1,14 (IC95% 0,54-2,41; I²=79%), sem significância estatística. Texto integral (PMC) conferido especificamente para o dado de subgrupo de DMG, que não consta do resumo indexado no PubMed.", "Xu QH, Huang YJ. Rethinking the link between gestational diabetes and dementia risk. Diabetologia. 2025 Sep;68(9):2077-2079. DOI: 10.1007/s00125-025-06480-w. PMID: 40603554 — carta com análise de randomização mendeliana testando causalidade entre DMG e subtipos de demência (Alzheimer, frontotemporal, corpos de Lewy) a partir de dados públicos de GWAS. O registro no PubMed é do tipo 'Letter' e não traz resumo estruturado; direção e magnitude do achado não puderam ser confirmadas neste levantamento. Citada apenas para registrar que a questão causal segue em aberto na literatura — VERIFICAÇÃO HUMANA NECESSÁRIA antes de citar qualquer conclusão quantitativa específica desta carta."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta já tem um documento sobre hipertensão gestacional e risco de demência (Million Women Study, Floud et al. 2025), mas nenhum documento tratava do mesmo desfecho — demência/declínio cognitivo — para diabetes mellitus gestacional (DMG), uma exposição gestacional distinta. Ao contrário do caso da hipertensão (uma única coorte de 1,3 milhão de mulheres), a evidência para DMG e demência vem de duas coortes individuais convergentes e recentes (UK Biobank 2024, Nurses' Health Study II 2025) somadas a uma metanálise formal (Lancet Healthy Longevity, dez/2024) cujo resultado agrupado para DMG especificamente não atinge significância estatística (HR 1,14; IC95% 0,54-2,41; apenas 3 estudos). Esse padrão — sinal em estudos individuais bem conduzidos, mas ausência de confirmação quando os estudos são somados formalmente — é o próprio achado que vale documentar, sem fabricar um consenso que a literatura ainda não tem."
+source_refs:
+- 'Zhang Y et al. J Intern Med. 2024;295:774-784. DOI: 10.1111/joim.13787. PMID: 38629919.'
+- 'Soria-Contreras DC et al. Diabetologia. 2025;68:105-115. DOI: 10.1007/s00125-024-06270-w. PMID: 39240352. PMCID: PMC11960863.'
+- 'Miller EC et al. Lancet Healthy Longev. 2024;5:100660. DOI: 10.1016/j.lanhl.2024.100660. PMID: 39675366. PMCID: PMC11726346.'
+review_note: Resumos primários das duas coortes e texto integral PMC11726346 conferidos. Corrigida tradução de parous, distinguido
+  intervalo desde parto de seguimento prospectivo, retiradas inferências de mediação causal/proteção por exercício e efeito
+  terapêutico não testado. Dado específico DMG (HR1,14/IC0,54–2,41/I²79%) confirmado no integral. Carta sem conclusão verificável
+  excluída como fundamento. Sem duplicata da mesma pergunta na fila 251; tema preservado e links .md convertidos em rotas
+  reais.
+summary: História de diabetes mellitus gestacional (DMG), desempenho cognitivo em meia-idade e diagnóstico tardio de demência
+  são medidas diferentes. Estudos observacionais sugerem associações, mas não demonstram que a DMG cause demência nem que
+  uma intervenção pós-parto previna esse desfecho.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Diabetes Gestacional e Risco Cognitivo/Demência Materna: a Evidência Divergente de 2024-2025
+# Diabetes gestacional e cognição materna: associações e incertezas
 
-## A pergunta que faltava nesta pasta
+História de diabetes mellitus gestacional (DMG), desempenho cognitivo em meia-idade e diagnóstico tardio de demência são medidas diferentes. Estudos observacionais sugerem associações, mas não demonstram que a DMG cause demência nem que uma intervenção pós-parto previna esse desfecho.
 
-Esta pasta já documenta que a hipertensão gestacional carrega um pequeno excesso de risco de demência, majoritariamente explicado pela persistência de hipertensão na meia-idade (Million Women Study, Floud et al. 2025). Mas a diabetes mellitus gestacional (DMG) é uma exposição gestacional diferente, com mecanismo de dano vascular/metabólico distinto, e nenhum documento aqui havia perguntado: **a DMG também deixa rastro cognitivo décadas depois?** Dois estudos de coorte publicados em 2024 e 2025 sugeriram que sim. Uma metanálise formal publicada no mesmo período, somando os estudos disponíveis, não confirmou a associação com significância estatística para DMG especificamente. Essa divergência — não o "sim" nem o "não" isolado — é o que este documento registra.
+## UK Biobank
 
-## O que os estudos individuais mostraram
+Zhang e colaboradores analisaram 1.292 mulheres com história de DMG e 204.171 sem essa história. Houve 2.921 diagnósticos de demência na amostra total. O intervalo mediano informado desde o primeiro parto foi de 45 anos; isso não equivale a 45 anos de observação prospectiva dentro do UK Biobank.
 
-### UK Biobank: excesso de risco de demência, mediado por diabetes tipo 2 e doença coronariana
+A associação com demência apresentou **HR 1,67 (IC 95% 1,03–2,69)**. O intervalo é amplo e não representa aumento de 67 pontos percentuais ou previsão individual.
 
-Zhang et al. (*J Intern Med*, 2024; PMID 38629919) acompanharam **1.292 mulheres com história de DMG e 204.171 sem história**, dentro do UK Biobank, por um período mediano de **45 anos desde o primeiro parto**, com **2.921 casos de demência por qualquer causa** identificados na amostra total.
+Modelos de mediação atribuíram parcelas da associação a diabetes tipo 2, doença coronariana e doença renal. São estimativas dependentes de pressupostos; não demonstram vias causais nem autorizam somar proporções provenientes de modelos sobrepostos. Houve interação estatística com atividade física, mas ausência de associação significativa nas mulheres ativas não prova que exercício elimine o risco.
 
-- **HR para demência por qualquer causa em mulheres com DMG vs. sem DMG: 1,67 (IC95% 1,03-2,69)** — um aumento de 67% no risco relativo, com o limite inferior do intervalo de confiança bem próximo de 1
-- Em análise de mediação, parte do efeito foi explicada pelo desenvolvimento subsequente de **diabetes tipo 2 (34,5% do efeito mediado)**, **doença coronariana (8,4%)**, **doença renal crônica (5,2%)** e pela presença de **comorbidade combinada — duas das três doenças (18,8%)**
-- **Atividade física modificou a associação (p de interação = 0,030)**: entre mulheres fisicamente inativas, a DMG associou-se significativamente à demência; entre as fisicamente ativas, a associação desapareceu
+## Nurses’ Health Study II
 
-### Nurses' Health Study II: pior desempenho cognitivo em meia-idade, não diagnóstico de demência
+Na análise de 15.906 mulheres que haviam tido pelo menos um parto, 749 tinham história de DMG. A idade média na avaliação cognitiva foi de 62 anos. A história de DMG associou-se a escores menores de velocidade psicomotora/atenção, **β −0,08 (IC 95% −0,14 a −0,01)**, e cognição global, **β −0,06 (−0,11 a −0,01)**.
 
-Soria-Contreras et al. (*Diabetologia*, 2025; PMID 39240352) usaram um desenho diferente: em vez de diagnóstico de demência, mediram **desempenho em testes cognitivos objetivos** (bateria Cogstate) em **15.906 mulheres pares** livres de doença cardiovascular, câncer e diabetes antes do primeiro parto, das quais **749 (4,7%) tinham história de DMG**. A avaliação ocorreu em meia-idade, com média de **62,0 anos**.
+Essas diferenças de escores não equivalem a diagnóstico de demência, incapacidade funcional ou declínio longitudinal demonstrado. Ajustes adicionais por diabetes tipo 2 atenuaram parte da associação, sem estabelecer mecanismo causal.
 
-- Mulheres com história de DMG tiveram desempenho **pior em velocidade psicomotora/atenção (β -0,08; IC95% -0,14 a -0,01)** e em **cognição global (β -0,06; IC95% -0,11 a -0,01)**, comparadas às sem história de DMG
-- A diferença foi **apenas parcialmente explicada** pelo desenvolvimento posterior de diabetes tipo 2 — ou seja, parte do efeito não passou pela via glicêmica óbvia
-- Importante: isso é diferença de **escore em teste cognitivo**, não diagnóstico clínico de demência — um desfecho mais sensível, porém mais brando e de interpretação clínica menos direta do que os "casos de demência" do UK Biobank
+## Revisão sistemática e metanálise
 
-## A metanálise: o sinal não se sustenta quando os estudos são somados
+Miller e colaboradores incluíram 15 estudos na revisão e 11 na metanálise de desfechos gestacionais adversos. A análise específica de DMG encontrou **HR ajustado 1,14 (IC 95% 0,54–2,41; I²=79%)** para demência por qualquer causa.
 
-Miller et al. (*Lancet Healthy Longevity*, dez/2024; PMID 39675366), com protocolo registrado no PROSPERO, revisaram sistematicamente **15 estudos (7.347.202 participantes)** sobre desfechos gestacionais adversos e demência/comprometimento cognitivo, com **11 estudos (6.263.431 participantes)** entrando na metanálise formal.
+O intervalo cruza 1, mas também admite aumento clinicamente relevante. A heterogeneidade e a base limitada impedem concluir ausência de associação. O resultado agregado de todos os desfechos gestacionais adversos, dominado por outras exposições, não deve ser atribuído à DMG. A revisão também inclui o estudo de Zhang; não é uma confirmação independente dessa coorte.
 
-- Para **qualquer desfecho gestacional adverso agrupado** (THG, DMG, natimorto, restrição de crescimento fetal, parto pré-termo, descolamento de placenta): HR ajustado **1,32 (IC95% 1,17-1,49)** para demência por qualquer causa, **1,26 (1,04-1,53)** para Alzheimer, **1,94 (1,70-2,21)** para demência vascular
-- Para **transtorno hipertensivo da gestação especificamente**: **1,32 (1,11-1,57)** para demência por qualquer causa e **1,78 (1,46-2,17)** para demência vascular — coerente com o que o Million Women Study, já documentado nesta pasta, encontrou de forma independente
-- Para **diabetes mellitus gestacional especificamente** — e aqui está o ponto central deste documento — apenas **3 estudos** entraram no subgrupo (Andolf et al. 2020, o próprio Zhang et al. 2024 do UK Biobank, e Sheng et al. 2022): **HR ajustado 1,14 (IC95% 0,54-2,41; I²=79%)**, **sem significância estatística**
+## Interpretação clínica
 
-Ou seja: o mesmo estudo do UK Biobank que, isoladamente, mostrou HR 1,67 significativo, entra na metanálise como um dos apenas três estudos disponíveis — e quando somado aos outros dois, o intervalo de confiança se abre para 0,54-2,41, cruzando 1, com heterogeneidade alta (I²=79%). Isso não significa que o achado do UK Biobank esteja errado; significa que a base de evidência para DMG e demência é pequena demais (3 estudos) para uma metanálise dar um veredito estável — o oposto do que ocorre com hipertensão gestacional, onde a metanálise reforça o sinal.
+As fontes não fornecem uma resposta causal definitiva. Diferenças de exposição, captação de desfechos, seleção das participantes e confundimento cardiometabólico dificultam comparação direta. Significância em uma coorte e ausência na síntese não provam contradição: os intervalos são compatíveis com incerteza considerável.
 
-## Uma pergunta de causalidade ainda em aberto
+O acompanhamento metabólico e cardiovascular após DMG continua relevante por indicações próprias. Estes estudos não estabelecem protocolo especial de rastreamento cognitivo pós-DMG nem demonstram que tratar diabetes ou fatores vasculares reduza demência especificamente nesse grupo. Sintomas cognitivos devem ser avaliados por seu contexto clínico, sem atribuição automática ao antecedente gestacional.
 
-Uma carta publicada em 2025 na mesma revista que publicou o estudo do NHS II (Xu & Huang, *Diabetologia*, set/2025; PMID 40603554) aplicou randomização mendeliana — método que usa variantes genéticas como instrumento para testar causalidade, menos sujeito a confundimento reverso do que coortes observacionais — especificamente à relação entre DMG e subtipos de demência (Alzheimer, frontotemporal, corpos de Lewy). O registro no PubMed é do tipo carta e não traz resumo estruturado; **não foi possível confirmar neste levantamento a direção ou magnitude do achado reportado**. Fica registrado apenas que a pergunta causal específica — DMG causa demência, ou é marcador de um perfil de risco vascular/metabólico compartilhado — segue sendo formalmente testada na literatura em 2025. **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de citar qualquer conclusão específica dessa carta em material voltado a paciente ou prescritor.
+## Fontes
 
-## Por que a divergência importa mais do que qualquer número isolado
-
-O padrão de mediação do UK Biobank (34,5% do efeito via diabetes tipo 2, mais doença coronariana e renal crônica) aponta na mesma direção do que já foi estabelecido nesta pasta para hipertensão gestacional e demência: o excesso de risco parece correr, em boa parte, pela via de um perfil cardiometabólico que persiste ou se desenvolve depois da gestação — não por um mecanismo exclusivo e isolado do episódio de DMG em si. Isso é coerente com a interpretação já registrada no documento sobre hipertensão: o alvo terapêutico de maior retorno é o rastreamento e controle do que vem **depois** da gestação (aqui, diabetes tipo 2 e doença coronariana), não um "efeito DMG" tratável em separado.
-
-## Limitações que pesam na leitura
-
-- **Base de evidência ainda pequena para DMG especificamente**: apenas 3 estudos alimentam a metanálise formal, contra um número bem maior de estudos disponíveis para hipertensão gestacional — o intervalo de confiança amplo (0,54-2,41) reflete essa escassez, não necessariamente ausência de efeito real
-- **Desfechos não comparáveis entre os dois estudos individuais**: o UK Biobank mediu diagnóstico clínico de demência (evento discreto); o NHS II mediu escore em teste cognitivo (variável contínua, mais sensível a efeitos sutis, porém sem equivalência direta com diagnóstico de demência)
-- **Confundimento por perfil metabólico pré-gestacional**: obesidade e resistência insulínica anteriores à gestação predispõem tanto à DMG quanto a doença cardiovascular e demência — nenhum dos estudos elimina totalmente esse caminho causal alternativo
-- **Heterogeneidade alta (I²=79%) no subgrupo de DMG da metanálise**: os três estudos que a compõem provavelmente diferem em definição de DMG, tempo de seguimento e forma de captar demência, o que fragiliza a interpretação do HR agrupado tanto para "sim" quanto para "não"
-- **A carta de randomização mendeliana (Xu & Huang, 2025) não pôde ser verificada em conteúdo** — citada apenas como evidência de que a pergunta causal segue investigada, não como fonte de números
-
-## Armadilhas clínicas
-
-- **Afirmar à paciente que "diabetes gestacional causa demência" como fato estabelecido** — a metanálise disponível não confirma isso com significância estatística; o que existe é sinal em dois estudos de coorte individuais, não confirmação por síntese formal
-- **Descartar o achado por não ter significância na metanálise** — o problema é tamanho de amostra (3 estudos), não necessariamente ausência de efeito; os dois estudos individuais mais robustos (UK Biobank e NHS II) apontam na mesma direção
-- **Confundir "pior desempenho em teste cognitivo" (NHS II) com "diagnóstico de demência" (UK Biobank e metanálise)** — são desfechos diferentes, com implicação clínica diferente
-- **Tratar isso como indicação de rastreamento cognitivo especial pós-DMG** — nenhum dos estudos testou ou recomenda essa conduta; o dado reforça o racional para o rastreamento de diabetes tipo 2 já indicado após DMG, não cria uma indicação nova e independente
-
-## Mensagem prática
-
-A história de DMG parece se somar — na mesma direção observada para hipertensão gestacional nesta pasta — a um risco discretamente maior de comprometimento cognitivo e demência décadas depois, mediado em boa parte por diabetes tipo 2 e doença coronariana que se desenvolvem no intervalo. Mas, diferente da hipertensão gestacional, essa associação ainda não tem confirmação por metanálise formal (HR 1,14; IC95% 0,54-2,41, não significativo, com apenas 3 estudos disponíveis) e sua causalidade específica está sendo testada por métodos genéticos cuja conclusão não pôde ser verificada aqui. Na prática, isso não muda a conduta já estabelecida: manter o rastreamento de diabetes tipo 2 pós-parto após DMG (já indicado por motivos metabólicos e cardiovasculares independentes deste achado) continua sendo o alvo modificável relevante — a possível redução de risco cognitivo é, no melhor cenário atual, um benefício adicional dessa mesma vigilância, não uma indicação nova por si só.
+- [Zhang et al., PMID 38629919](https://pubmed.ncbi.nlm.nih.gov/38629919/). DOI 10.1111/joim.13787.
+- [Soria-Contreras et al., PMID 39240352](https://pubmed.ncbi.nlm.nih.gov/39240352/). DOI 10.1007/s00125-024-06270-w.
+- [Miller et al., texto completo e análise específica de DMG](https://pmc.ncbi.nlm.nih.gov/articles/PMC11726346/). PMID 39675366; DOI 10.1016/j.lanhl.2024.100660.
 
 ## Tudo com Tudo
 
-- [Hipertensão na Gestação e Risco de Demência: o Million Women Study (2025)](hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025.md)
-- [Bomba de insulina e monitorização contínua de glicose na gestante diabética: desfechos e a lacuna cardiovascular](bomba-de-insulina-e-monitorizacao-continua-de-glicose-na-gestante-diabetica-desfechos-e-a-lacuna-cardiovascular.md)
-- [Distúrbios hipertensivos da gestação: o subtipo modifica o risco cardiovascular de longo prazo](disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026.md)
-- [AVC de longo prazo após desfechos gestacionais adversos: coorte sueca de coirmãs (2025)](avc-de-longo-prazo-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2025.md)
-- [Obesidade central no início da gestação e risco de diabetes e hipertensão pré-natal e pós-parto](obesidade-central-no-inicio-da-gestacao-e-risco-de-diabetes-e-hipertensao-pre-natal-e-pos-parto.md)
-- [ACC 2026: cuidado cardiovascular pós-parto do hospital ao primeiro ano](acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano.md)
+- [Hipertensão na Gestação e Risco de Demência: o Million Women Study (2025)](/biblioteca/hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025)
+- [Distúrbios hipertensivos da gestação: o subtipo modifica o risco cardiovascular de longo prazo](/biblioteca/disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026)
+- [Obesidade Central no Início da Gestação e Risco de Diabetes e Hipertensão Pré-natal e Pós-parto](/biblioteca/obesidade-central-no-inicio-da-gestacao-e-risco-de-diabetes-e-hipertensao-pre-natal-e-pos-parto)
+- [ACC 2026: cuidado cardiovascular pós-parto do hospital ao primeiro ano](/biblioteca/acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano)

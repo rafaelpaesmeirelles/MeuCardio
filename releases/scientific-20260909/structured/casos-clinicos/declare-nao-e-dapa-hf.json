@@ -1,0 +1,22 @@
+{
+  "slug": "declare-nao-e-dapa-hf",
+  "titulo": "DM2 sem IC: DECLARE ou DAPA-HF?",
+  "tema": "Diabetes e cardiologia",
+  "nivel": "intermediário",
+  "enunciado": "Pessoa com DM2 e múltiplos fatores de risco cardiovascular, sem IC, FEVE 58%. Colega inicia dapagliflozina citando DAPA-HF, HR 0,74, como prova de redução de MACE nesta população.",
+  "pergunta": "Qual ensaio fala deste paciente?",
+  "opcoes": [
+    "DAPA-HF inclui qualquer FEVE; o HR 0,74 reduz MACE neste caso.",
+    "DECLARE: 17160 com DM2, MACE HR 0,93 (P=0,17) — não fechou. Internamento por IC HR 0,73. DAPA-HF é ICFEr (FEVE ≤ 40%), HR 0,74 no composto de IC/morte CV.",
+    "Os dois ensaios têm o mesmo primário.",
+    "CANVAS autoriza copiar o HR 0,74 da dapagliflozina."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "DECLARE recrutou DM2 com doença aterosclerótica ou múltiplos fatores de risco. MACE: HR 0,93, p 0,17, sem superioridade demonstrada; o composto morte CV/hospitalização IC foi reduzido (HR 0,83), principalmente pela hospitalização IC (HR 0,73). DAPA-HF recrutou ICFEr com ou sem diabetes e mediu piora IC/morte CV. Não transportar seu HR para MACE de uma pessoa sem IC. Isso não exclui outras indicações de dapagliflozina.",
+  "source_refs": [
+    "DECLARE-TIMI58. PMID:30415602. DOI:10.1056/NEJMoa1812389.",
+    "DAPA-HF. PMID:31535829. DOI:10.1056/NEJMoa1911303."
+  ],
+  "review_status": "revisado",
+  "review_note": "Acrescentado riscoaterosclerótico aoenunciado conformeDECLARE e fontesverificadas; MACEneutro distinguido decompostoICpositivo."
+}

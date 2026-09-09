@@ -1,0 +1,22 @@
+{
+  "slug": "paradise-mi-nao-e-paradigm",
+  "titulo": "ARNI na alta do IAM: PARADISE-MI ou PARADIGM-HF?",
+  "tema": "Doença coronariana",
+  "nivel": "intermediário",
+  "enunciado": "IAM anterior, FEVE 38%, congestão no 2º dia, sem IC prévia. Colega troca ramipril por sacubitril–valsartan “porque o PARADIGM ganhou”.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "PARADIGM-HF (ICFEr estabelecida) e PARADISE-MI (IAM sem IC prévia) são o mesmo recorte; HR 0,80 em ambos.",
+    "PARADISE-MI: 5661 pacientes, morte CV ou IC incidente 11,9% vs 13,2%; HR 0,90; P=0,17 — neutro. PARADIGM-HF é ICFEr sintomática já instalada (HR 0,80). Não copie o benefício da IC para a alta do infarto.",
+    "PARADISE-MI mostrou superioridade do ARNI sobre ramipril (P=0,17 equivale a ganho).",
+    "ARNI pós-IAM substitui a quádrupla da ICFEr mesmo sem sintomas."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PARADISE-MI comparou sacubitril/valsartana com ramipril após IAM complicado por disfunção ventricular, congestão pulmonar ou ambos. Em 5.661 participantes e mediana de 22 meses, morte cardiovascular ou IC incidente ocorreu em 11,9% versus 13,2%: HR 0,90 (IC95% 0,78–1,04; P=0,17), sem superioridade demonstrada. IC incidente incluía apresentação ambulatorial sintomática ou hospitalização. PARADIGM-HF avaliou IC crônica sintomática e comparou com enalapril, reduzindo morte cardiovascular ou hospitalização por IC de 26,5% para 21,8% (HR 0,80). Populações, comparadores e compostos diferem. A ausência de superioridade no pós-IAM não impede tratar ICFEr persistente que venha a preencher critérios próprios; não se deve apenas transferir o HR entre ensaios.",
+  "source_refs": [
+    "Pfeffer MA, et al. N Engl J Med. 2021;385:1845-1855. PMID 34758252.",
+    "McMurray JJV, et al. N Engl J Med. 2014;371:993-1004. PMID 25176015."
+  ],
+  "review_status": "revisado",
+  "review_note": "PARADISE-MI/PARADIGM-HF conferidos; explicitados intervalo de confiança, comparadores e IC ambulatorial, sem tratar resultado não significativo como equivalência."
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "ipd-bb-pos-iam-feve-50-cinco-ensaios",
+  "title": "IPD de cinco ensaios: betabloqueador após IAM com FEVE ≥ 50% não reduz morte, infarto ou IC",
+  "tema": "Doença coronariana",
+  "theme": "Doença coronariana",
+  "statement": "Na metanálise de dados individuais (Kristensen et al., NEJM 2026, PMID 41211954), 17.801 pacientes com IAM recente, FEVE ≥ 50% e sem outra indicação de betabloqueador — vindos de REBOOT (7.459), REDUCE-AMI (4.967), BETAMI (2.441), DANBLOCK (2.277) e CAPITAL-RCT (657) — foram analisados: 8.831 betabloqueador versus 8.970 sem betabloqueador. Seguimento mediano 3,6 anos (IIQ 2,3–4,6). Desfecho primário — morte por qualquer causa, infarto do miocárdio ou insuficiência cardíaca: 717 (8,1%) versus 748 (8,3%); HR 0,97; IC95% 0,87–1,07; P=0,54. Morte: 335 vs 326; HR 1,04; IC95% 0,89–1,21. Infarto: 360 vs 407; HR 0,89; IC95% 0,77–1,03. Insuficiência cardíaca: 75 vs 87; HR 0,87; IC95% 0,64–1,19. Não houve redução do composto. Não extrapolar para FEVE 40–49%. Não afirmar dano. Não fundir com BETAMI-DANBLOCK (FEVE ≥ 40%; composto de morte ou MACE; HR 0,85) nem com o REBOOT no conjunto FEVE >40% (HR 1,04). O resultado não implica contraindicação do fármaco nem avalia suspensão abrupta. Uma análise individual separada de FEVE 40–49% incluiu 1.885 pacientes e encontrou HR 0,75 (IC95% 0,58–0,97) para morte, novo IAM ou IC.",
+  "year": 2026,
+  "pmid": "41211954",
+  "document_slug": "metanalise-ipd-betabloqueador-pos-iam-feve-50-cinco-ensaios",
+  "source_refs": [
+    "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954.",
+    "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+    "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241.",
+    "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716.",
+    "Rossello X et al. Lancet. 2025. PMID: 40897190."
+  ],
+  "note": "n=17.801 é o recorte IPD com FEVE ≥ 50% e sem outra indicação — não é o n total de cada ensaio publicado. BETAMI contribuiu 2.441 e DANBLOCK 2.277 para esta IPD; o BETAMI-DANBLOCK publicado (PMID 40888716) é outro recorte (FEVE ≥ 40%, composto diferente). Não extrapolar o nulo para FEVE 40–49%. Não afirmar que betabloqueador aumenta mortalidade (HR de morte 1,04; IC95% 0,89–1,21).",
+  "review_status": "revisado",
+  "study_slug": "ipd-bb-pos-iam-feve-50-2026",
+  "review_note": "IPD e análise separada 40–49% conferidas; corrigido limite inferior da faixa e evitada extrapolação para retirada abrupta."
+}

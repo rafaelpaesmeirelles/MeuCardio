@@ -1,0 +1,50 @@
+{
+  "slug": "trilha-lpa-e-ldl-surrogato-2025",
+  "titulo": "Lp(a) e LDL: biomarcadores, desfechos e a atualização HORIZON de 2026",
+  "tema": "Prevenção e lipídios",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "lpa-o-que-ja-e-alvo-terapeutico-e-o-que-ainda-e-surrogato-2025",
+      "por_que": "Interpretar risco associado à Lp(a) e controlar fatores modificáveis. Atualizar o panorama com o primário negativo de pelacarsen no Lp(a)HORIZON, anunciado em 4/9/2026; não afirmar que nenhum ensaio de desfecho foi realizado."
+    },
+    {
+      "ordem": 2,
+      "item_type": "documento",
+      "item_slug": "lepodisiran-alpaca-sirna-prolongado-contra-lpa",
+      "por_que": "ALPACA: n=320, redução percentual média de Lp(a) ajustada ao placebo de 93,9 pontos percentuais nos braços de 400 mg agrupados entre dias 60–180. Não era ensaio de IAM, AVC ou morte."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "obicetrapib-broadway-inibidor-seletivo-de-cetp",
+      "por_que": "BROADWAY: n=2.530, obicetrapib 10 mg/dia, diferença de LDL-C de −32,6 pontos percentuais no dia 84. O primário foi lipídico, sem concluir redução de MACE."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "lepodisiran-e-obicetrapib-o-que-o-clinico-pode-prometer-hoje",
+      "por_que": "Comunicar que doses experimentais e alterações laboratoriais não são promessa de menos eventos nem autorização automática para prescrever."
+    },
+    {
+      "ordem": 5,
+      "item_type": "documento",
+      "item_slug": "select-semaglutida-24-mg-mace-em-obesidade-sem-diabetes",
+      "por_que": "Comparar com SELECT: 17.604 pessoas com DCV, IMC ≥ 27 e sem diabetes; MACE HR 0,80. Esse resultado não se transfere a silenciadores de Lp(a) ou inibidores de CETP."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643. NCT05565742.",
+    "Nicholls SJ, Nelson AJ, Ditmarsch M, et al.; BROADWAY Investigators. Safety and Efficacy of Obicetrapib in Patients at High Cardiovascular Risk. N Engl J Med. 2025;393(1):51-61. DOI: 10.1056/NEJMoa2415820. PMID: 40337982. NCT05142722.",
+    "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131.",
+    "Tsimikas S, Karwatowska-Prokopczuk E, Gouni-Berthold I, et al. Lipoprotein(a) Reduction in Persons with Cardiovascular Disease. N Engl J Med. 2020;382(3):244-255. DOI: 10.1056/NEJMoa1905239. PMID: 31893580.",
+    "O'Donoghue ML, Rosenson RS, Gencer B, et al.; OCEAN(a)-DOSE Trial Investigators. Small Interfering RNA to Reduce Lipoprotein(a) in Cardiovascular Disease. N Engl J Med. 2022;387(20):1855-1864. DOI: 10.1056/NEJMoa2211023. PMID: 36342163.",
+    "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "Novartis. Lp(a)HORIZON phase III topline results, 4 September 2026. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+  ],
+  "objetivo": "Distinguir redução laboratorial de benefício clínico. ALPACA e BROADWAY tiveram primários lipídicos; o anúncio negativo do primário Lp(a)HORIZON de 4/9/2026 reforça que diminuir Lp(a) não garante reduzir eventos. SELECT oferece contraste metodológico de um ensaio de MACE, sem ser terapia dirigida a Lp(a).",
+  "nivel": "intermediario",
+  "review_note": "ALPACA/BROADWAY/SELECT conferidos e HORIZON negativo atualizado; pendências resolvidas sem afirmações regulatórias especulativas."
+}

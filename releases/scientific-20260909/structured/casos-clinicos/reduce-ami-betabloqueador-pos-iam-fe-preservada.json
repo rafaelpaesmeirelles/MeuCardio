@@ -1,0 +1,21 @@
+{
+  "slug": "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+  "titulo": "IAM com FEVE 55% e angioplastia: o betabloqueador ainda é automático?",
+  "tema": "Doença coronariana",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 62 anos, internado por IAM sem supradesnivelamento, submetido a angiografia com angioplastia da descendente anterior. Ecocardiograma na alta com FEVE 55%, sem angina residual, sem fibrilação atrial e com pressão controlada sem betabloqueador. O colega da enfermaria prescreve bisoprolol 'porque todo infarto sai com betabloqueador'.",
+  "pergunta": "O que o ensaio REDUCE-AMI (Yndigegn et al., NEJM 2024) mostrou sobre betabloqueador de longo prazo exatamente neste recorte (IAM, angiografia, FEVE ≥ 50%)?",
+  "opcoes": [
+    "Redução clara de morte ou novo infarto (HR cerca de 0,70), o que justifica manter o automático da alta",
+    "Ensaio de 5020 pacientes, seguimento mediano 3,5 anos: morte ou novo IAM em 7,9% com betabloqueador versus 8,3% sem (HR 0,96; IC95% 0,79–1,16; P=0,64) — não houve redução do desfecho primário",
+    "O ensaio mostrou aumento de mortalidade com betabloqueador e a droga passou a ser contraindicada após qualquer IAM",
+    "O benefício apareceu só na morte cardiovascular isolada, embora o composto primário fosse neutro"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O REDUCE-AMI randomizou 5020 pacientes com IAM submetidos a angiografia e FEVE ≥ 50% para betabloqueador de longo prazo (metoprolol ou bisoprolol) versus nenhum betabloqueador. O desfecho primário — morte por qualquer causa ou novo infarto — ocorreu em 199/2508 (7,9%) versus 208/2512 (8,3%); HR 0,96; IC95% 0,79–1,16; P=0,64. Morte isolada 3,9% vs 4,1%; infarto 4,5% vs 4,7%. O ensaio é aberto e não testou FE reduzida nem a fase aguda intravenosa. Betabloqueador deixa de ser automático neste recorte; permanece se houver outra indicação (angina, FA, HAS, arritmia). Não é contraindicação. O resultado não é um ensaio de retirada abrupta em quem já usa betabloqueador cronicamente. Uma indicação independente e a tolerabilidade precisam ser avaliadas antes de iniciar, manter ou retirar.",
+  "source_refs": [
+    "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241. NCT03278509."
+  ],
+  "review_status": "revisado",
+  "review_note": "REDUCE-AMI conferido integralmente no resumo primário; acrescentado limite para retirada de tratamento crônico."
+}

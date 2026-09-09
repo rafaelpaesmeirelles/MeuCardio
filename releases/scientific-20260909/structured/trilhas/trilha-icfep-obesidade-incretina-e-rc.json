@@ -1,0 +1,49 @@
+{
+  "slug": "trilha-icfep-obesidade-incretina-e-rc",
+  "titulo": "ICFEp com obesidade: fenótipos 2026, incretina IIa, FINEARTS e reabilitação cardíaca",
+  "tema": "Insuficiência cardíaca",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+      "por_que": "Conhecer ICFEr com FEVE <50% e ICFEp com FEVE ≥ 50% na ESC 2026. A escolha da molécula de ARM depende de evidência, função renal e potássio."
+    },
+    {
+      "ordem": 2,
+      "item_type": "documento",
+      "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+      "por_que": "Na IC sintomática com FEVE ≥ 45% e IMC ≥ 30, semaglutida ou tirzepatida são IIa B1 para peso, exercício e qualidade de vida. STEP-HFpEF estudou sintomas/peso; SUMMIT mostrou composto de morte CV/piora de IC, sem benefício isolado comprovado de morte."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "finearts-hf-finerenona-ic-feve-maior-igual-40",
+      "por_que": "Ler FINEARTS-HF: 6.001 participantes, FEVE ≥ 40%, mediana de 32 meses. RR 0,84 para eventos totais de piora de IC e morte CV; morte CV isolada não significativa. Não transpor limites renais/potássio para todos os ARM."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "exercicio-na-icfep-com-incretina-esc-2026",
+      "por_que": "Integrar exercício e reabilitação ao tratamento do fenótipo com obesidade; selecionar intensidade e modalidade pela avaliação individual, sem substituir medicação indicada."
+    },
+    {
+      "ordem": 5,
+      "item_type": "documento",
+      "item_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+      "por_que": "Organizar encaminhamento a programa multicomponente, presencial, híbrido ou remoto conforme risco e estrutura; não se resume a uma prescrição de exercício."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420.",
+    "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI 10.1056/NEJMoa2306963. PMID 37622681.",
+    "Packer M, Zile MR, Kramer CM, et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI 10.1056/NEJMoa2410027. PMID 39555826.",
+    "Solomon SD, McMurray JJV, Vaduganathan M, et al. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI 10.1056/NEJMoa2407107. PMID 39225278.",
+    "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag099. PMID: 42661418.",
+    "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation. Eur Heart J. 2025;46(38):3714-3737. DOI 10.1093/eurheartj/ehaf408. PMID 40742158."
+  ],
+  "objetivo": "Distinguir os fenótipos da ESC 2026, os benefícios de ARM e incretinas e o papel da reabilitação na IC com obesidade. Ensaios e recomendações têm populações e desfechos próprios; não equivalem a benefício isolado de mortalidade.",
+  "nivel": "intermediario",
+  "review_note": "Trilha ESC 2026/STEP/SUMMIT/FINEARTS conferida; referências RC completadas, critérios de ARM não generalizados e etapas nativas."
+}

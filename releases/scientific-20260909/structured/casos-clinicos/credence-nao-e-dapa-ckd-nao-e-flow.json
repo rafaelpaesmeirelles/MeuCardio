@@ -1,0 +1,23 @@
+{
+  "slug": "credence-nao-e-dapa-ckd-nao-e-flow",
+  "titulo": "DRC albuminúrica: CREDENCE, DAPA-CKD ou FLOW?",
+  "tema": "Cardiorrenal",
+  "nivel": "avançado",
+  "enunciado": "DM2, TFGe 48 mL/min/1,73 m², UACR 600 mg/g. Colega cita DAPA-CKD e FLOW como se fossem o mesmo ensaio de canagliflozina.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "CREDENCE, DAPA-CKD e FLOW usam a mesma molécula e o mesmo primário.",
+    "CREDENCE: canagliflozina, só DM2, HR 0,70 no composto de falência renal, duplicação de creatinina ou morte renal/cardiovascular. DAPA-CKD: dapagliflozina, com e sem DM, HR 0,61. FLOW: semaglutida 1,0 mg SC semanal em DM2 e DRC. Três perguntas.",
+    "O CREDENCE mostrou aumento de amputação igual ao CANVAS.",
+    "FLOW autoriza trocar iSGLT2 por semaglutida na DRC sem DM."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 30990260 CREDENCE (canagliflozina, DM2). PMID 32970396 DAPA-CKD (dapagliflozina, ±DM). FLOW é GLP-1. CREDENCE: sem diferença em amputação/fratura. O primário do DAPA-CKD também incluía morte cardiovascular; o FLOW avaliou outra molécula e não foi comparação direta com iSGLT2.",
+  "source_refs": [
+    "Perkovic V, et al. N Engl J Med. 2019;380:2295-2306. PMID 30990260.",
+    "DAPA-CKD. PMID:32970396. DOI:10.1056/NEJMoa2024816.",
+    "FLOW. PMID:38785209. DOI:10.1056/NEJMoa2403347."
+  ],
+  "review_status": "revisado",
+  "review_note": "Corrigido composto nãoexclusivamenterenal, adicionadas unidades e fontesDAPA-CKD/FLOW; sem extrapolação de redução deamputação."
+}

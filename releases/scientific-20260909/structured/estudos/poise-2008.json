@@ -1,0 +1,24 @@
+{
+  "slug": "poise-2008",
+  "title": "POISE: metoprolol iniciado 2–4 h antes — IAM cai, morte e AVC sobem",
+  "tema": "Perioperatório",
+  "theme": "Perioperatório",
+  "year": 2008,
+  "journal": "Lancet",
+  "pmid": "18479744",
+  "doi": "10.1016/S0140-6736(08)60601-7",
+  "nct": "NCT00182039",
+  "design": "Ensaio randomizado, controlado por placebo, mascarado (pacientes, equipe, coletores e adjudicadores). 190 hospitais em 23 países. Análise por intenção de tratar.",
+  "population": "8351 pacientes com doença aterosclerótica ou risco, submetidos a cirurgia não cardíaca. 4174 metoprolol succinato de liberação prolongada versus 4177 placebo. 8331 (99,8%) completaram o seguimento de 30 dias.",
+  "intervention": "Metoprolol succinato de liberação prolongada iniciado 2–4 h antes da cirurgia e continuado por 30 dias.",
+  "control": "Placebo.",
+  "primary_outcome": "Composto de morte cardiovascular, infarto do miocárdio não fatal e parada cardíaca não fatal, em 30 dias.",
+  "key_findings": "Primário: 244/4174 (5,8%) versus 290/4177 (6,9%); HR 0,84; IC95% 0,70–0,99; P=0,0399. IAM: 176 (4,2%) versus 239 (5,7%); HR 0,73; IC95% 0,60–0,89; P=0,0017. Morte: 129 (3,1%) versus 97 (2,3%); HR 1,33; IC95% 1,03–1,74; P=0,0317. AVC: 41 (1,0%) versus 19 (0,5%); HR 2,17; IC95% 1,26–3,74; P=0,0053. O composto caiu porque o IAM caiu; morte e AVC subiram.",
+  "clinical_implications": "O início do esquema de metoprolol 2–4 horas antes da cirurgia reduziu IAM, mas aumentou morte total e AVC. O composto favorável não permite declarar benefício líquido ou adotar o esquema preventivamente de rotina. POISE não avaliou suspender betabloqueador crônico nem titulação iniciada com antecedência por outra indicação. POISE-2 avaliou AAS e clonidina em outro desenho; não substitui essa interpretação.",
+  "source_refs": [
+    "POISE Study Group; Devereaux PJ, Yang H, Yusuf S, et al. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI 10.1016/S0140-6736(08)60601-7. PMID 18479744. NCT00182039."
+  ],
+  "review_status": "revisado",
+  "note": "evidencias/poise-2008-metoprolol-perioperatorio.json e content/Perioperatório/poise-bb-iniciado-horas-antes-nao-e-beneficio-liquido.md já existiam; este arquivo é o registro em estudos/. Não misturar com POISE-2. Não aplicar à suspensão de BB crônico.",
+  "review_note": "POISE conferido; mantida leitura equilibrada de benefício e danos, sem instruções editoriais na ficha clínica."
+}

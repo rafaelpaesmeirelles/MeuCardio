@@ -1,0 +1,24 @@
+{
+  "slug": "step-nao-e-summit-nao-e-select",
+  "titulo": "Semaglutida 2,4 mg na ICFEp: o que o STEP-HFpEF mediu",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 64 anos, FEVE 55%, IMC 33, IC classe II, sem diabetes. Você discute semaglutida 2,4 mg com base no STEP-HFpEF (529 pacientes, 52 semanas).",
+  "pergunta": "O que o STEP-HFpEF usou como desfecho primário?",
+  "opcoes": [
+    "Morte cardiovascular ou piora de IC, como no SUMMIT da tirzepatida.",
+    "MACE (morte CV, IAM, AVC) como no SELECT.",
+    "Variação do KCCQ-CSS e variação do peso (diferença de KCCQ +7,8 pontos; peso −10,7 pontos percentuais vs placebo).",
+    "Composto renal do FLOW com dose de 1,0 mg."
+  ],
+  "resposta_correta": 2,
+  "explicacao": "STEP-HFpEF avaliou 529 pessoas com ICFEp e obesidade sem diabetes, por 52 semanas. Seus dois primários foram mudanças no KCCQ-CSS e no peso, com diferenças ajustadas de +7,8 pontos e −10,7 pontos percentuais versus placebo. A dose-alvo de semaglutida era 2,4 mg semanal após titulação. O estudo não demonstrou redução de mortalidade isolada; um composto hierárquico secundário não equivale a um ensaio dimensionado para morte. SUMMIT avaliou tirzepatida e teve dois primários, composto de morte cardiovascular/piora de IC e mudança no KCCQ. SELECT estudou MACE; FLOW, composto renal/cardiovascular em DM2 e DRC.",
+  "source_refs": [
+    "Kosiborod MN, et al. N Engl J Med. 2023;389:1069-1084. PMID 37622681.",
+    "SUMMIT. PMID: 39555826.",
+    "SELECT. PMID: 37952131.",
+    "FLOW. PMID: 38785209."
+  ],
+  "review_status": "revisado",
+  "review_note": "STEP-HFpEF conferido; incluída ausência de diabetes e esclarecidos coprimários e limites de mortalidade."
+}

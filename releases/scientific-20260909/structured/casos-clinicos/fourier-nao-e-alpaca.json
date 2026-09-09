@@ -1,0 +1,24 @@
+{
+  "slug": "fourier-nao-e-alpaca",
+  "titulo": "FOURIER (MACE, HR 0,85) não é ALPACA (Lp(a) surrogato)",
+  "tema": "Prevenção e lipídios",
+  "theme": "Prevenção e lipídios",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 64 anos, IAM há 3 anos, estatina de alta intensidade, LDL-C 88 mg/dL, Lp(a) 260 nmol/L. Na reunião, o colega resume: «saiu o siRNA que zera o Lp(a); é a mesma lógica do FOURIER — HR 0,85 de MACE — então o lepodisiran já reduz infarto e pode substituir o evolocumabe». Propõe iniciar lepodisiran e suspender a discussão de PCSK9.",
+  "pergunta": "O que o FOURIER (evolocumabe, PMID 28304224) mostrou em MACE e o que o ALPACA (lepodisiran, PMID 40162643) não autoriza copiar?",
+  "opcoes": [
+    "ALPACA e FOURIER medem o mesmo primário; −93,9 pontos percentuais de Lp(a) equivalem ao HR 0,85 e autorizam suspender o PCSK9.",
+    "FOURIER: 27.564 com DCVA em estatina; evolocumabe 140 mg a cada 2 semanas ou 420 mg/mês versus placebo; primário (morte CV, IAM, AVC, internamento por angina instável ou revascularização coronariana) 1.344 (9,8%) versus 1.563 (11,3%); HR 0,85 (0,79–0,92); P<0,001. ALPACA: lepodisiran, fase 2, n=320; primário de Lp(a) (surrogato) dos dias 60 ao 180; 400 mg agrupados −93,9 pp (IC95% −95,1 a −92,5) — não é CVOT, não tem HR de MACE. Não copiar o 0,85 para o siRNA de Lp(a).",
+    "ALPACA fechou MACE (HR 0,85) em 27.564 pessoas; o FOURIER é só queda de LDL e não conta como desfecho clínico.",
+    "ORION-4 (inclisirana) e ALPACA são o mesmo siRNA; some o HR 0,85 do FOURIER com −93,9 pp e prescreva uma injeção só."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Duas moléculas, dois alvos, duas perguntas. FOURIER (Sabatine, NEJM 2017; PMID 28304224; NCT01764633): anticorpo monoclonal anti-PCSK9 (evolocumabe) em 27.564 pessoas com doença cardiovascular aterosclerótica e LDL-C ≥ 70 mg/dL já em estatina. Mediana 2,2 anos. Primário clínico: 1.344 (9,8%) versus 1.563 (11,3%); HR 0,85; IC95% 0,79–0,92; P<0,001. Secundário-chave (morte CV, IAM ou AVC): 816 (5,9%) versus 1.013 (7,4%); HR 0,80 (0,73–0,88). LDL mediano às 48 semanas: 30 mg/dL (queda de 59% vs placebo, de mediana basal 92 mg/dL). Isso é MACE. ALPACA (Nissen, NEJM 2025; PMID 40162643; NCT05565742): siRNA contra apo(a)/Lp(a), fase 2, n=320, mediana basal 253,9 nmol/L. Primário: variação percentual média no tempo, ajustada ao placebo, da Lp(a) sérica do dia 60 ao dia 180 — surrogato, não evento. 16 mg −40,8 pp; 96 mg −75,2 pp; 400 mg agrupados −93,9 pp (IC95% −95,1 a −92,5). Eventos graves em 35 participantes; nenhum atribuído ao fármaco pelos investigadores. ALPACA não testa infarto, AVC ou morte como desfecho de eficácia. Não há HR 0,85 no ALPACA. Evolocumabe não é lepodisiran. PCSK9/LDL não é apo(a)/Lp(a). Queda de partícula no ALPACA não herda o composto do FOURIER. Inclisirana (ORION-4) é outro siRNA, outro alvo; não some. ALPACA não estabelece aprovação regulatória nem indicação para prescrição; o resultado é de fase 2 e não substitui terapias com evidência de desfechos clínicos.",
+  "source_refs": [
+    "Sabatine MS, Giugliano RP, Keech AC, et al.; FOURIER Steering Committee and Investigators. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease. N Engl J Med. 2017;376(18):1713-1722. DOI 10.1056/NEJMoa1615664. PMID 28304224. NCT01764633.",
+    "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI 10.1056/NEJMoa2415818. PMID 40162643. NCT05565742."
+  ],
+  "review_status": "revisado",
+  "note": "Não reescreve evidencias/fourier-2017-evolocumabe.json nem content/Prevenção_e_lipídios/fourier-evolocumabe-nao-e-orion-nem-alpaca.md. Surrogato de Lp(a) ≠ MACE.",
+  "review_note": "FOURIER e ALPACA conferidos nas publicações primárias: compostos, amostras, doses, tempos e diferença em pontos percentuais. Removida pendência regulatória sem afirmar aprovação."
+}

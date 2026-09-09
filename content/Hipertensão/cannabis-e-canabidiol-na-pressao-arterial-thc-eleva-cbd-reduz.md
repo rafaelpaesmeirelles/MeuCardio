@@ -1,67 +1,66 @@
 ---
-title: "Cannabis e Canabidiol na Pressão Arterial: Por Que THC e CBD Apontam para Direções Opostas — o Que os Dados de 2025-2026 Mostram"
+title: 'Cannabis, THC e canabidiol: efeitos cardiovasculares e limites da evidência pressórica'
 slug: cannabis-e-canabidiol-na-pressao-arterial-thc-eleva-cbd-reduz
-theme: "Hipertensão"
+theme: Hipertensão
 kind: documento
 review_status: revisado
-source_refs: ["Storck W, Elbaz M, Vindis C, Déguilhem A, Lapeyre-Mestre M, Jouanjus E. Cardiovascular risk associated with the use of cannabis and cannabinoids: a systematic review and meta-analysis. Heart. 2025;111(22):1047-1056. DOI: 10.1136/heartjnl-2024-325429. PMID: 40527600. PROSPERO CRD42023401401", "Shah RM, Patel S, Shah S, Doshi S, Li A, Diamond JA. Sustained cannabis use does not predispose clinical hypertension: Findings from a national survey. J Clin Hypertens (Greenwich). 2023;25(1):47-52. DOI: 10.1111/jch.14623. PMID: 36545898. PMCID: PMC9832227", "Chaiton M, Kundu A, Nathwani AA. Health impacts of cannabis: focus on smoking vs. vaping effects on the respiratory and cardiovascular systems. Curr Opin Pulm Med. 2026;32(2):93-97. DOI: 10.1097/MCP.0000000000001239. PMID: 41355516", "Dujic G, Kumric M, Vrdoljak J, Dujic Z, Bozic J. Chronic Effects of Oral Cannabidiol Delivery on 24-h Ambulatory Blood Pressure in Patients with Hypertension (HYPER-H21-4): A Randomized, Placebo-Controlled, and Crossover Study. Cannabis Cannabinoid Res. 2024;9(4):979-989. DOI: 10.1089/can.2022.0320. PMID: 37093160. ClinicalTrials.gov NCT05346562", "Kumric M, Dujic G, Vrdoljak J, Supe Domic D, Dujic Z, Bozic J. Can Endocannabinoids Explain CBD-Mediated Reduction in Blood Pressure? Insights from a Randomized, Placebo-Controlled, Crossover Trial. Cannabis Cannabinoid Res. 2025 Nov 7. DOI: 10.1177/25785125251392773. PMID: 41203237", "Roberts A, Fountzopoulos S, Desai T. The effects of oral cannabidiol supplementation on blood pressure in adults: a systematic review of randomised controlled trials. J Cannabis Res. 2026;8(1):96. DOI: 10.1186/s42238-026-00463-3. PMID: 42321899. PMCID: PMC13531894"]
-review_note: "Os seis PMIDs conferidos via PubMed E-utilities (esearch/efetch/esummary) em 09/09/2026 — título, revista, ano, desenho e números centrais conferidos linha a linha contra o abstract de cada artigo, nenhum de memória. Nenhum efeito de uma substância (THC recreativo/fumado) foi atribuído à outra (CBD oral isolado) — são vias farmacológicas e fontes de evidência distintas, tratadas em seções separadas de propósito, para não fabricar uma equivalência que a literatura não sustenta. O documento HYPER-H21-4 citado (PMID 37093160) é a publicação de resultado primário do ensaio (2024); os PMIDs 41203237 e 42321899 são publicações de 2025-2026 que dele derivam ou o revisam sistematicamente, e foram os que justificaram tratar este como tema não coberto pela biblioteca (o ensaio original é de 2023-2024, mas não havia nenhum documento sobre CBD/cannabis e hipertensão em `content/Hipertensão/` antes deste). Checado contra a pasta inteira antes de escrever: não havia nenhum documento sobre cannabis, canabidiol, CBD, THC ou maconha em `content/Hipertensão/` — é lacuna nova, não duplicata."
+source_refs:
+- 'Cardiovascular risk associated with the use of cannabis and cannabinoids: a systematic review and meta-analysis. Heart
+  (British Cardiac Society). PMID: 40527600. DOI: 10.1136/heartjnl-2024-325429.'
+- 'Sustained cannabis use does not predispose clinical hypertension: Findings from a national survey. Journal of clinical
+  hypertension (Greenwich, Conn.). PMID: 36545898. DOI: 10.1111/jch.14623. PMCID: PMC9832227.'
+- 'Health impacts of cannabis: focus on smoking vs. vaping effects on the respiratory and cardiovascular systems. Current
+  opinion in pulmonary medicine. PMID: 41355516. DOI: 10.1097/MCP.0000000000001239.'
+- 'Chronic Effects of Oral Cannabidiol Delivery on 24-h Ambulatory Blood Pressure in Patients with Hypertension (HYPER-H21-4):
+  A Randomized, Placebo-Controlled, and Crossover Study. Cannabis and cannabinoid research. PMID: 37093160. DOI: 10.1089/can.2022.0320.'
+- 'Can Endocannabinoids Explain CBD-Mediated Reduction in Blood Pressure? Insights from a Randomized, Placebo-Controlled,
+  Crossover Trial. Cannabis and cannabinoid research. PMID: 41203237. DOI: 10.1177/25785125251392773.'
+- 'The effects of oral cannabidiol supplementation on blood pressure in adults: a systematic review of randomised controlled
+  trials. Journal of cannabis research. PMID: 42321899. DOI: 10.1186/s42238-026-00463-3. PMCID: PMC13531894.'
+- 'DOI: 10.1161/CIR.0000000000000883'
+review_note: Seis fontes conferidas, incluindo resultados integrais da revisão PMC13531894. Corrigidos título de efeitos opostos
+  invariáveis, causalidade atribuída ao THC em estudos de cannabis, falsa replicação pelo substudo e afirmação de redução
+  sustentada uniforme nos quatro ensaios. Removida dose-resposta entre estudos heterogêneos e IC malformado não reconstruído.
+summary: Esses dados são observacionais, sujeitos a confundimento por outras substâncias, tabagismo, condições clínicas e
+  padrões de uso. Não isolam experimentalmente o efeito do THC nem demonstram que qualquer formulação de CBD tenha o mesmo
+  risco. A revisão de 2026 sobre fumo e vaporização descreve efeitos agudos em ambas as vias; menor exposição à combustão
+  não comprova segurança cardiovascular da vaporização.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Cannabis e Canabidiol na Pressão Arterial: Por Que THC e CBD Apontam para Direções Opostas — o Que os Dados de 2025-2026 Mostram
+# Cannabis, THC e canabidiol: efeitos cardiovasculares e limites da evidência pressórica
 
-## Por que separar cannabis de canabidiol
-"Cannabis" e "canabidiol (CBD)" não são sinônimos, e tratá-los como um só tema é a fonte mais comum de confusão nesta área — inclusive na literatura leiga que chega ao paciente. A planta *Cannabis sativa* contém dezenas de canabinoides; os dois clinicamente mais relevantes para o sistema cardiovascular têm efeitos farmacológicos e vias de evidência **opostos**:
-- **THC (tetrahidrocanabinol)**, o composto psicoativo, predominante no uso recreativo fumado ou vaporizado, tem efeito **simpaticomimético agudo** — eleva frequência cardíaca e pressão arterial.
-- **CBD (canabidiol)**, componente não psicoativo, isolado e administrado por via oral em formulação farmacêutica, vem sendo testado em ensaios clínicos randomizados como potencial **redutor** de pressão arterial.
+## Exposições diferentes
+Produtos de cannabis variam em THC, CBD, dose, via e outros componentes. THC pode causar taquicardia e elevação pressórica aguda, mas a resposta não é invariavelmente hipertensiva: hipotensão também pode ocorrer. CBD é não intoxicante, o que não significa farmacologicamente inativo ou isento de interações. A fórmula “THC sempre eleva, CBD sempre reduz” é inadequada.
 
-Este documento trata os dois separadamente, com a evidência própria de cada um — misturar as duas linhas produziria exatamente a afirmação simplista e errada que a literatura mais recente ajuda a corrigir.
+## Estudos sobre cannabis
+A metanálise de Storck (2025) reuniu **24 artigos: 17 transversais, seis coortes e um caso-controle**. As estimativas combinadas associaram uso de cannabis a síndrome coronariana aguda (RR **1,29**, IC95% 1,05–1,59), AVC (**1,20**, 1,13–1,26) e morte cardiovascular (**2,10**, 1,29–3,42). O composto SCA/AVC, avaliado em apenas dois estudos, não mostrou associação significativa.
 
-## Cannabis recreativa e THC: o que a evidência de risco cardiovascular mostra
+Esses dados são observacionais, sujeitos a confundimento por outras substâncias, tabagismo, condições clínicas e padrões de uso. Não isolam experimentalmente o efeito do THC nem demonstram que qualquer formulação de CBD tenha o mesmo risco. A revisão de 2026 sobre fumo e vaporização descreve efeitos agudos em ambas as vias; menor exposição à combustão não comprova segurança cardiovascular da vaporização.
 
-### A metanálise mais recente: associação com eventos cardiovasculares maiores, não necessariamente com diagnóstico de hipertensão
-Storck W et al. (*Heart*, periódico do BMJ Group, 2025;111(22):1047-1056, PMID 40527600, PROSPERO CRD42023401401) publicaram a revisão sistemática e metanálise mais atual sobre risco cardiovascular associado ao uso de cannabis e canabinoides, reunindo **24 artigos** (17 estudos transversais, 6 de coorte, 1 caso-controle) sobre eventos cardiovasculares adversos maiores (MACE: morte cardiovascular, síndrome coronariana aguda não fatal incluindo infarto, ou AVC não fatal). Resultado, com estimativas de efeito ajustadas combinadas por modelo de efeito aleatório:
-- **Síndrome coronariana aguda**: risco relativo **1,29** (IC95% 1,05-1,59)
-- **AVC**: risco relativo **1,20** (IC95% 1,13-1,26)
-- **Morte cardiovascular**: risco relativo **2,10** (IC95% 1,29-3,42) — a maior associação entre os três desfechos
-- A análise restrita só a estudos de coorte (desenho mais robusto que transversal) manteve resultado comparável (RR 1,32; IC95% 1,01-1,73)
-- Não houve associação estatisticamente significativa para o desfecho composto de SCA+AVC combinado, medido em apenas dois dos estudos
+No NHANES 2017–2018, **4.565 respondentes**, incluindo 867 com uso sustentado prévio, foram analisados transversalmente. O diagnóstico prévio de hipertensão era autorreferido. Não se demonstrou associação significativa com uso sustentado (OR **1,12**, IC95% 0,66–1,91). O intervalo amplo e o desenho não provam ausência de risco, nem excluem efeitos agudos sobre a pressão.
 
-Conclusão dos próprios autores: os achados revelam associações positivas entre uso de cannabis e MACE, e devem encorajar a investigação ativa do uso de cannabis em qualquer paciente com quadro cardiovascular grave — recomendação prática direta para a anamnese cardiológica.
+## CBD oral: HYPER-H21-4
+O ensaio randomizado, triplo-cego e cruzado incluiu **70 hipertensos leves ou moderados**, tratados ou não. Cada período durou cinco semanas, separado por washout superior a duas semanas. O resumo relata, após 2,5 semanas de CBD, reduções de aproximadamente **4,76 mmHg na sistólica e 2,25 mmHg na diastólica ambulatoriais de 24 horas**, sem queda adicional substancial após aumento da dose.
 
-### O que a mesma linha de evidência NÃO mostra: associação com diagnóstico formal de hipertensão
-Este é o ponto que evita a leitura fácil de "cannabis causa hipertensão". Shah RM et al. (*J Clin Hypertens*, 2023;25(1):47-52, PMID 36545898, PMCID PMC9832227), em análise transversal de dados do NHANES 2017-2018 (4.565 respondentes, 867 = 19,0% com uso sustentado de cannabis no passado), não encontraram associação estatisticamente significativa entre uso sustentado de cannabis e diagnóstico de hipertensão (razão de chance 1,12; IC95% 0,66-1,91; p=0,6) — nem entre frequência de uso (moderado: OR 1,08, IC95% 0,36-3,25; alta frequência: OR 1,30, IC95% 0,56-3,03), idade de início, recência de uso ou uso atual vs. passado. Conclusão literal dos autores: **nem o uso passado nem o atual de cannabis está associado ao status de hipertensão clínica**.
+Não houve evento adverso grave ou alteração de enzimas hepáticas detectada nessa pequena amostra e curto seguimento. Não houve diferença significativa em velocidade de onda de pulso. Isso não estabelece segurança hepática ou cardiovascular prolongada, nem prevenção de infarto ou AVC. Os intervalos de confiança pressóricos do resumo contêm notação inconsistente; não são reconstruídos aqui.
 
-A leitura conjunta dos dois estudos não é contraditória, é complementar: cannabis se associa a **maior risco de eventos cardiovasculares agudos** (SCA, AVC, morte cardiovascular) — provavelmente por mecanismos hemodinâmicos agudos e efeito pró-trombótico/pró-arrítmico do THC — sem que isso se traduza necessariamente em **diagnóstico crônico de hipertensão** captado por questionário populacional. O risco cardiovascular do THC recreativo não depende de o usuário "ter" hipertensão para se manifestar.
+Um substudo em **66 participantes do mesmo ensaio**, e não uma replicação independente, encontrou aumento de anandamida, sem correlação demonstrada com a redução sistólica (r=−0,106; p=0,428). O mecanismo não foi esclarecido; ausência de correlação não exclui definitivamente participação dessa via.
 
-### O mecanismo agudo: elevação de frequência cardíaca e pressão arterial, por fumo ou vaporização
-Chaiton M et al. (*Curr Opin Pulm Med*, 2026;32(2):93-97, PMID 41355516), em revisão de escopo comparando fumo e vaporização de cannabis, confirmam que **ambas as formas de administração produzem efeitos fisiológicos agudos comparáveis**, incluindo **aumento agudo de frequência cardíaca e pressão arterial** — a vaporização reduz exposição a produtos de combustão, mas não elimina o efeito hemodinâmico agudo do THC em si. A revisão também nota que a evidência sobre risco de longo prazo (infarto, AVC) para o modo vaporizado especificamente ainda é limitada e não conclusiva, ao contrário do fumo, mais estudado.
+## Revisão de quatro ensaios
+A revisão de Roberts (2026) incluiu **120 participantes em quatro ECRs**, com doses, populações e condições de medida diferentes. Não realizou metanálise quantitativa. Alguns efeitos foram encontrados sob estresse ou durante o sono; no estudo de Sultan, o efeito em repouso não se manteve após sete dias e não houve alteração significativa na MAPA de 24 horas. Portanto, não houve demonstração uniforme de redução sustentada em todas as situações.
 
-## CBD oral: evidência de redução pressórica, de ensaio clínico randomizado
+Comparações entre estudos que usaram doses diferentes não estabelecem dose-resposta causal. Formulações também não foram comparadas diretamente. O conjunto permanece pequeno e breve para definir CBD como tratamento de hipertensão.
 
-### O ensaio de referência: HYPER-H21-4
-Dujic G et al. (*Cannabis Cannabinoid Res*, 2024;9(4):979-989, PMID 37093160, NCT05346562) conduziram o ensaio randomizado, triplo-cego, controlado por placebo e cruzado (*crossover*) que hoje ancora esta linha de evidência: **70 pacientes** com hipertensão primária leve a moderada, tratados ou sem tratamento prévio, receberam 5 semanas de CBD oral ou placebo, seguidas de período de washout >2 semanas e cruzamento para o braço alternativo. Desfecho primário: variação da PA ambulatorial de 24 horas (MAPA).
+## Aplicação
+Investigar uso, composição e via de produtos de cannabis é pertinente na anamnese cardiovascular. Os dados não sustentam recomendar CBD como substituto de anti-hipertensivos estabelecidos. Resultados de formulações pesquisadas não devem ser extrapolados a produtos de composição desconhecida.
 
-- **Resultado**: a administração de CBD reduziu a PA média, sistólica e diastólica de 24h já após 2,5 semanas — **-4,76±1,24mmHg na sistólica** (IC95% -1,72 a -7,80) e **-2,25±0,80mmHg na diastólica** (IC95% -0,30 a -6,01), ambas com p<0,05, com valores permanecendo estáveis após a titulação ascendente da dose.
-- **Segurança**: sem alteração de enzimas hepáticas nem eventos adversos graves; sem diferença de rigidez arterial (velocidade de onda de pulso) entre os grupos.
-- Conclusão dos autores: administração crônica de CBD reduz a PA ambulatorial tanto em hipertensão tratada quanto não tratada, com perfil de segurança e tolerabilidade favorável na formulação testada.
+## Fontes
+PMIDs 40527600, 36545898, 41355516, 37093160 e 41203237; revisão integral PMID 42321899, https://pmc.ncbi.nlm.nih.gov/articles/PMC13531894/. Contexto de segurança: declaração científica da AHA, DOI 10.1161/CIR.0000000000000883.
 
-### O mecanismo ainda não está esclarecido
-Kumric M et al. (*Cannabis Cannabinoid Res*, 2025 Nov 7, PMID 41203237), em substudo do mesmo ensaio HYPER-H21-4, testaram se o efeito hipotensor do CBD seria explicado por alteração no sistema endocanabinoide endógeno — medindo anandamida (AEA) e 2-araquidonoilglicerol (2-AG) em 66 pacientes do ensaio original. A administração crônica de CBD **aumentou significativamente os níveis plasmáticos de AEA** (variação de +11,1±3,7ng/mL; p=0,025) em comparação ao placebo, mas **essa variação não se correlacionou com a redução da PA sistólica** (r=-0,106; p=0,428) — e não houve associação significativa com os níveis de 2-AG. Conclusão dos autores: embora o CBD crônico pareça elevar a AEA plasmática, **este estudo não fornece evidência conclusiva de que essa alteração explique a redução da PA mediada pelo CBD** — o mecanismo pelo qual o CBD reduz a pressão arterial segue não esclarecido.
+## Tudo com Tudo
 
-### Revisão sistemática de 2026: efeito consistente entre os poucos ensaios disponíveis, mas evidência ainda limitada
-Roberts A, Fountzopoulos S, Desai T (*J Cannabis Res*, 2026;8(1):96, PMID 42321899, PMCID PMC13531894) revisaram sistematicamente ensaios clínicos randomizados de CBD oral e pressão arterial em adultos normotensos e hipertensos, buscando em PubMed, Web of Science, Scopus e Medline. Apenas **4 ECRs, totalizando 120 participantes**, atenderam aos critérios de inclusão — heterogêneos o suficiente (dose de CBD entre 225-600mg/dia, duração de 2 horas a 5 semanas, populações diferentes) para impedir metanálise quantitativa; a síntese foi narrativa.
-
-- **Todos os 4 estudos** relataram redução estatisticamente significativa da PA sistólica com CBD versus placebo, com efeito mais pronunciado sob estresse ou durante o sono.
-- **2 dos 4 estudos** relataram também redução da PA diastólica.
-- Associação dose-resposta observada: doses mais altas associaram-se a maior redução pressórica, com o efeito mais forte na administração aguda de 600mg/dia.
-- Efeitos adversos foram leves a moderados (náusea, diarreia, fadiga), sem evento cardiovascular grave relatado.
-
-Limitações que os próprios autores destacam, e que valem como ressalva clínica direta: **amostras pequenas, ensaios de curta duração, variabilidade de formulação e dose de CBD, ausência de dados farmacocinéticos consistentes e incerteza sobre segurança hepática a longo prazo**. A conclusão dos autores é de potencial terapêutico a confirmar, não de recomendação de uso já estabelecida: são necessários ensaios maiores, mais longos, com estratégias de suplementação homogêneas e medidas de biodisponibilidade, antes de definir o papel terapêutico do CBD no manejo da pressão arterial.
-
-## Síntese para a prática clínica
-1. **Cannabis recreativa (fumada ou vaporizada, rica em THC) eleva agudamente frequência cardíaca e pressão arterial**, e seu uso associa-se a maior risco de eventos cardiovasculares maiores (SCA, AVC, morte cardiovascular) em metanálise de estudos observacionais — mas **não** necessariamente ao diagnóstico formal de hipertensão em levantamento populacional. Pergunta sobre uso de cannabis deve ser rotina na anamnese de qualquer paciente com evento cardiovascular agudo, independentemente de o paciente ser ou não hipertenso conhecido.
-2. **CBD oral isolado**, em formulação farmacêutica testada por ensaio clínico randomizado (HYPER-H21-4), reduziu a PA ambulatorial de 24h de forma estatisticamente significativa e com boa tolerabilidade em hipertensos leves a moderados — achado replicado, com a mesma direção de efeito, nos 4 ECRs disponíveis até 2026 revisados sistematicamente.
-3. **O mecanismo do efeito hipotensor do CBD não está esclarecido** — não se explica, pelo menos não isoladamente, pelo aumento de anandamida plasmática que o CBD crônico produz.
-4. **A evidência de CBD ainda não sustenta indicação terapêutica formal**: 4 ensaios, 120 participantes ao todo, dose e duração heterogêneas, sem dado de segurança de longo prazo nem de biodisponibilidade padronizada. Não é base para prescrever ou recomendar CBD como anti-hipertensivo — é base para reconhecer um sinal real e consistente, que pede confirmação em ensaios maiores.
-5. **Nunca extrapolar o achado do CBD isolado para produtos de cannabis não regulamentados ou de composição desconhecida** — a formulação testada no HYPER-H21-4 é canabidiol farmacêutico purificado, não extrato de cannabis de uso recreativo (que contém THC e outros canabinoides com efeito farmacológico oposto).
+- [Interação de Suplementos e Fitoterápicos com Fármacos Cardiovasculares](/biblioteca/interacao-de-suplementos-e-fitoterapicos-com-farmacos-cardiovasculares) — Relaciona anamnese de produtos de cannabis/CBD à avaliação de suplementos, fitoterápicos e interações com medicamentos cardiovasculares, sem equiparar seus riscos.

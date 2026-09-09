@@ -1,0 +1,21 @@
+{
+  "slug": "surpass-cvot-tirzepatida-ou-dulaglutida-mace",
+  "titulo": "DM2 com DCV aterosclerótica: tirzepatida é superior à dulaglutida em MACE?",
+  "tema": "Diabetes e cardiologia",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 64 anos, diabetes tipo 2 há 15 anos, IAM prévio, IMC 33 kg/m², HbA1c 8,3%. A equipe discute incretina injetável semanal. Um colega afirma que a tirzepatida 'já mostrou ser superior à dulaglutida em infarto, AVC e morte cardiovascular, porque é agonista duplo'. Outro diz que o SURPASS-CVOT só mediu glicemia e peso.",
+  "pergunta": "O que o SURPASS-CVOT (Nicholls et al., NEJM 2025) demonstrou para MACE com tirzepatida versus dulaglutida?",
+  "opcoes": [
+    "Superioridade em MACE: HR 0,92 com P de superioridade significativo, o que autoriza dizer que tirzepatida reduz mais morte CV, infarto e AVC do que dulaglutida",
+    "Inferioridade: tirzepatida aumentou MACE em relação à dulaglutida e não deve ser usada em quem já tem DCV",
+    "Não inferioridade, não superioridade: MACE em 12,2% versus 13,1%; HR 0,92 (IC 95,3% 0,83–1,01); P=0,003 para não inferioridade e P=0,09 para superioridade",
+    "O ensaio não mediu MACE — era um estudo de HbA1c e peso, como os SURPASS glicêmicos, e a proteção cardiovascular da tirzepatida permanece sem CVOT"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "O SURPASS-CVOT foi ensaio de não inferioridade, duplo-cego, com comparador ativo, em pessoas com DM2 e DCV aterosclerótica. População mITT: 6.586 com tirzepatida (até 15 mg/semana) versus 6.579 com dulaglutida 1,5 mg/semana. Desfecho primário: MACE (morte cardiovascular, infarto ou AVC). Eventos em 801 (12,2%) versus 862 (13,1%); HR 0,92; IC 95,3% 0,83–1,01; P=0,003 para não inferioridade; P=0,09 para superioridade. Tirzepatida foi não inferior à dulaglutida. Não foi superior no primário. P=0,09 não autoriza a frase 'já mostrou superioridade em MACE'. Também não é ensaio só de glicemia: o primário foi MACE. Não tratar o HR 0,92 como prova de menos morte. Foram randomizados 13.299 participantes; 134 excluídos da análise modificada por inelegibilidade. A margem de não inferioridade era 1,05 para o limite superior do IC de 95,3%. Comparador ativo com benefício conhecido não equivale a placebo; maior redução de peso ou glicemia não comprova superioridade cardiovascular. As doses indicadas são máximas/de comparação, não início automático.",
+  "source_refs": [
+    "Nicholls SJ, Pavo I, Bhatt DL, et al.; SURPASS-CVOT Investigators. Cardiovascular Outcomes with Tirzepatide versus Dulaglutide in Type 2 Diabetes. N Engl J Med. 2025;393(24):2409-2420. DOI: 10.1056/NEJMoa2505928. PMID: 41406444. NCT04255433."
+  ],
+  "review_status": "revisado",
+  "review_note": "SURPASS-CVOT conferido; acrescentados população modificada, margem de não inferioridade e interpretação do comparador ativo."
+}

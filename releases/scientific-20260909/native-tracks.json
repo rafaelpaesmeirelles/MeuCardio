@@ -1,0 +1,524 @@
+[
+  {
+    "slug": "trilha-ablacao-fa-na-ic-tres-ensaios",
+    "titulo": "Ablação de FA na IC: CASTLE-AF, RAFT-AF e CASTLE-HTx — três perguntas",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Distinguir indicações e resultados de ablação de FA em diferentes fenótipos de IC.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "castle-af-ablacao-de-fa-na-ic-com-fe-reduzida",
+        "por_que": "Reconhecer o recorte de FA, IC e CDI estudado no CASTLE-AF."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "raft-af-nao-fechou-o-primario-nao-e-castle-af",
+        "por_que": "Interpretar o primário não significativo do RAFT-AF."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "castle-htx-nao-e-castle-af-ic-terminal",
+        "por_que": "Distinguir IC terminal encaminhada para avaliação de transplante."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "tres-ensaios-de-ablacao-de-fa-na-ic-castle-raft-htx",
+        "por_que": "Comparar populações e compostos antes de comunicar benefício."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "vanish2-nao-dispensa-o-cdi",
+        "por_que": "Separar ablação da indicação de proteção por CDI."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "quando-ablacao-de-fa-na-ic-o-que-castle-af-e-a-esc-2026-separam",
+        "por_que": "Aplicar a recomendação da diretriz ao fenótipo correto."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral e confronto dos três ensaios com PubMed/NEJM e tabela oficial ESC 2026. Corrigida avaliação para transplante (não inclusão obrigatória em lista), explicitada classe IIa C e separado o critério de CDI do ensaio de uma indicação universal. Vínculos conferidos por slug e pertinência clínica: tres-ensaios-de-ablacao-de-fa-na-ic-castle-raft-htx, esc-2026-ic-e-fa-ritmo-e-frequencia-no-mesmo-paciente, vanish2-nao-dispensa-o-cdi. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-attr-cm-tafamidis-e-vutrisiran",
+    "titulo": "ATTR-CM: tafamidis (estabilizador) e vutrisiran (silenciador)",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Comparar diagnóstico, mecanismos e resultados de tafamidis e vutrisiran na ATTR-CM.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "attr-cm-quando-pensar-e-o-que-helios-b-mudou",
+        "por_que": "Confirmar ATTR e excluir amiloidose AL antes de escolher o fármaco."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "attr-act-tafamidis-nao-e-helios-b",
+        "por_que": "Entender estabilização de TTR e os resultados do ATTR-ACT."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "helios-b-vutrisiran-na-attr-cm",
+        "por_que": "Ler a população e o composto do HELIOS-B."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "helios-b-numeros-que-o-clinico-precisa-separar",
+        "por_que": "Distinguir pessoas com eventos de eventos recorrentes."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "estabilizador-vs-silenciador-na-attr-cm",
+        "por_que": "Comparar mecanismos sem presumir superioridade entre classes."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "silenciadores-de-ttr-helios-b-nao-e-cardio-ttransform",
+        "por_que": "Evitar extrapolar o benefício de um silenciador a toda a classe."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; ATTR-ACT e HELIOS-B confrontados com fontes primárias. 6MWT 75,68 (EP 9,24) e KCCQ 13,65 (EP 2,13) confirmados também no relatório EMA. Corrigidas formulação meglumina, falsa divergência 125/202, diagnóstico diferencial AL e extrapolação regulatória. Vínculos conferidos por slug e pertinência clínica: attr-act-tafamidis-nao-e-helios-b, attr-cm-quando-pensar-e-o-que-helios-b-mudou, helios-b-vutrisiran-na-attr-cm, silenciadores-de-ttr-helios-b-nao-e-cardio-ttransform. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-bb-pos-iam-tres-ensaios",
+    "titulo": "Betabloqueador após IAM: ensaios e sínteses por fração de ejeção",
+    "tema": "Doença coronariana",
+    "objetivo": "Aplicar a evidência de betabloqueador após IAM conforme fração de ejeção e indicação.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "betami-danblock-bb-pos-iam-feve-maior-igual-40",
+        "por_que": "Ler o composto e a população do BETAMI-DANBLOCK."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "reboot-betabloqueador-apos-iam-com-feve-maior-40",
+        "por_que": "Confrontar o resultado do REBOOT com a pergunta do ensaio."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "metanalise-ipd-betabloqueador-pos-iam-feve-50-cinco-ensaios",
+        "por_que": "Interpretar a síntese restrita a FEVE normal."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "reduce-ami-betabloqueador-apos-iam-com-feve-preservada",
+        "por_que": "Situar o REDUCE-AMI dentro da população de FEVE preservada."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-betabloqueador-pos-iam-reboot-e-ipd-2025",
+        "por_que": "Separar FE40–49%, FE normal e outras indicações."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "reboot-e-reduce-ami-como-atualizar-a-conversa-do-alta",
+        "por_que": "Comunicar a decisão da alta sem suspensão automática."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "como-nao-misturar-reboot-e-betami-na-alta",
+        "por_que": "Aplicar a distinção de ensaios à decisão individual."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; ensaios e duas IPD verificados em fontes primárias. Corrigida análise REBOOT (8.438 de 8.505 randomizados), incorporada IPD FE 40–49% que faltava e recomendação ESC 2026 estágio B FE<50% I B1, incluindo o caso com FE44%. Vínculos conferidos por slug e pertinência clínica: quatro-perguntas-de-bb-pos-iam-reduce-reboot-betami-ipd, reboot-e-reduce-ami-como-atualizar-a-conversa-do-alta, como-nao-misturar-reboot-e-betami-na-alta. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-dap-compass-e-voyager",
+    "titulo": "DAP: COMPASS estável não é VOYAGER-PAD após revascularização",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Comparar antitrombóticos na DAP estável e após revascularização, com avaliação renal e hemorrágica.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "compass-nao-e-voyageur-nao-e-stamp",
+        "por_que": "Conhecer o benefício e o sangramento na doença estável."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "voyager-pad-nao-e-compass",
+        "por_que": "Reconhecer o recorte após revascularização de membro."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "compass-2-5-nao-e-dose-de-fa",
+        "por_que": "Separar a dose vascular da anticoagulação para FA."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "esc-2026-drc-e-doenca-arterial-periferica-stamp",
+        "por_que": "Integrar avaliação renal à doença arterial periférica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "itb-090-nao-e-prevent-nem-stamp",
+        "por_que": "Avaliar risco e diagnóstico sem trocar a população do ensaio."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "depois-da-dap-quais-temas-acendem",
+        "por_que": "Conectar prevenção, função renal, exercício e comunicação."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral e conferência de COMPASS/VOYAGER em PubMed/NEJM e STAMP na fonte oficial ESC 2026. Preservados compostos, denominadores e definições TIMI/ISTH; incluída seleção hemorrágica e impedida substituição da anticoagulação de FA ou associação antitrombótica automática. Vínculos conferidos por slug e pertinência clínica: esc-2026-drc-e-doenca-arterial-periferica-stamp, itb-090-nao-e-prevent-nem-stamp. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-icfep-summit-e-rc",
+    "titulo": "ICFEp com obesidade: SUMMIT, Classe IIa e reabilitação cardíaca",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Integrar incretinas, tratamento da IC e reabilitação na ICFEp com obesidade.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+        "por_que": "Identificar o recorte da recomendação de incretinas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "summit-tirzepatida-icfep-com-obesidade",
+        "por_que": "Separar piora de IC de mortalidade no SUMMIT."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-icfep-obesidade-incretina-apos-summit",
+        "por_que": "Integrar tratamento da obesidade e terapia da IC."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "exercicio-na-icfep-com-incretina-esc-2026",
+        "por_que": "Planejar exercício e reabilitação individualizados."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; SUMMIT/STEP-HFpEF e tabelas oficiais HF/RC 2026 conferidos. Corrigida categoria de interrupção por eventos adversos, removida ordem obrigatória de titulação não sustentada e preservado recorte FE45–49% da recomendação. Resolvido PMID da RC. Vínculos conferidos por slug e pertinência clínica: summit-nao-reduziu-morte-cv-o-composto-foi-de-ic, quatro-perguntas-de-semaglutida-select-soul-flow-step, tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-icfer-dapa-hf-e-emperor-reduced",
+    "titulo": "ICFEr: DAPA-HF e EMPEROR-Reduced — duas moléculas, dois programas",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Comparar dapagliflozina e empagliflozina nos ensaios de IC com fração reduzida.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dapa-hf-nao-e-emperor-reduced",
+        "por_que": "Compreender a população e o composto do DAPA-HF."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "tres-perguntas-de-empagliflozina-reduced-preserved-empact",
+        "por_que": "Ler o EMPEROR-Reduced no programa de empagliflozina."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver",
+        "por_que": "Comparar as perguntas clínicas sem somar HRs."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "dapa-hf-nao-e-deliver-feve-reduzida-nao-e-preservada",
+        "por_que": "Distinguir a evidência de FE reduzida daquela de FE>40%."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; DAPA-HF e EMPEROR-Reduced comparados com os artigos primários, inclusive componentes, doses, seguimento e eventos. Distinguido recorte histórico FE≤40% da classificação atual, explicitada frequência diária e preservada separação das populações. Vínculos conferidos por slug e pertinência clínica: tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver, tres-perguntas-de-empagliflozina-reduced-preserved-empact, tres-ensaios-de-arni-paradigm-paragon-paradise. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-im-secundaria-coapt-e-mitra-fr",
+    "titulo": "Trilha: IM secundária — COAPT e MITRA-FR",
+    "tema": "Valvopatias",
+    "objetivo": "Interpretar COAPT e MITRA-FR na seleção para reparo mitral transcateter.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "o-que-e-um-clipe-na-valva-mitral",
+        "por_que": "Compreender o procedimento e o mecanismo da insuficiência mitral."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "arni-duas-perguntas-paradigm-e-paradise",
+        "por_que": "Otimizar o tratamento da IC antes de discutir reparo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "coapt-nao-e-mitra-fr",
+        "por_que": "Interpretar a população e o resultado do MITRA-FR."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "coapt-e-mitra-fr-duas-perguntas-de-clipe-mitral",
+        "por_que": "Comparar COAPT e MITRA-FR com seus critérios e desfechos."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "depois-do-clipe-mitral-a-rc-nao-e-opcional",
+        "por_que": "Planejar seguimento e reabilitação após a decisão do Heart Team."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; COAPT e MITRA-FR confrontados com NEJM/PubMed. Corrigido critério MITRA-FR (EROA OU volume), incluídos recorte FE, numeradores de frequência, IC e diferença entre taxa recorrente e composto em pessoas; tratamento prévio e decisão Heart Team contextualizados. Vínculos conferidos por slug e pertinência clínica: coapt-e-mitra-fr-duas-perguntas-de-clipe-mitral, tres-ensaios-de-arni-paradigm-paragon-paradise, marca-passo-nao-e-cdi-nao-e-trct. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-isglt2-rim-e-ic-dapa-ckd-dapa-hf",
+    "titulo": "iSGLT2 no rim e na IC: DAPA-CKD, DAPA-HF e DELIVER — três portas",
+    "tema": "Cardiorrenal",
+    "objetivo": "Separar as indicações e os resultados de iSGLT2 na DRC e nos fenótipos de IC.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dapa-ckd-nao-e-dapa-hf",
+        "por_que": "Reconhecer DRC albuminúrica e o composto DAPA-CKD."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "stellar-sotatercept-capacidade-de-exercicio-na-hap",
+        "por_que": "Identificar o recorte e os eventos do DAPA-HF."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "dapa-hf-nao-e-deliver-feve-reduzida-nao-e-preservada",
+        "por_que": "Ler a evidência do DELIVER para FE>40%."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver",
+        "por_que": "Comunicar as três perguntas sem transportar efeitos."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-stamp-on-ckd-esc-2026",
+        "por_que": "Aplicar os limiares de função renal e albuminúria da diretriz."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "empact-mi-nao-e-dapa-hf-o-iam-nao-substitui-a-ic",
+        "por_que": "Evitar extrapolar IC crônica para o IAM sem IC."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; DAPA-CKD/HF/DELIVER confrontados com artigos primários. Resolvidos limiares da tabela ESC 2026 para DRC com e sem DM2 (DM2 TFGe≥20 sem RAC obrigatório; sem DM2 TFGe20–44/RAC<200 IIa B1), com unidades explícitas. Vínculos conferidos por slug e pertinência clínica: fluxograma-protecao-renal-em-dm2-com-drc-esc-2026, tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver, tres-perguntas-de-empagliflozina-reduced-preserved-empact. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-mho-quatro-ensaios-explorer-valor-sequoia-maple",
+    "titulo": "MHO obstrutiva: EXPLORER, VALOR, SEQUOIA e MAPLE — quatro perguntas",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Comparar os ensaios de inibidores de miosina e aplicar seus limites de eficácia e segurança.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "explorer-hcm-nao-e-valor-nem-e-maple",
+        "por_que": "Entender o desfecho funcional do EXPLORER-HCM."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "valor-hcm-nao-e-maple-nem-e-cirurgia",
+        "por_que": "Interpretar elegibilidade a redução septal no VALOR-HCM."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sequoia-hcm-aficamten-na-mho-obstrutiva-sintomatica",
+        "por_que": "Conhecer a comparação de aficamten com placebo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "maple-hcm-aficamten-versus-metoprolol-na-mho-obstrutiva",
+        "por_que": "Distinguir a comparação direta com metoprolol."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tres-ensaios-de-mho-sequoia-maple-valor",
+        "por_que": "Comparar moléculas, populações e perguntas sem fusão."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-mho-obstrutiva-sintomatica-apos-sequoia-hcm",
+        "por_que": "Integrar seleção clínica, ecocardiograma e segurança."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral e conferência dos quatro ensaios e análise SEQUOIA-JACC. Corrigido aumento de pVO2 (não valor absoluto), nomenclatura de HR e frequências das doses. Resolvidos limiares diferentes de FE das bulas FDA para aficamten/mavacamten, sem afirmar registro brasileiro. Vínculos conferidos por slug e pertinência clínica: tres-ensaios-de-mho-sequoia-maple-valor, explorer-hcm-nao-e-valor-nem-e-maple, fluxograma-primeira-linha-mho-obstrutiva-apos-maple-hcm, valor-hcm-nao-e-explorer. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-pcsk9-e-icosapent-nao-misturar",
+    "titulo": "Trilha: PCSK9 e icosapent — FOURIER, ODYSSEY e REDUCE-IT não se misturam",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Distinguir intervenções com anti-PCSK9 e icosapent pelas populações e pelos desfechos.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fourier-evolocumabe-nao-e-orion-nem-alpaca",
+        "por_que": "Reconhecer a prevenção secundária estudada no FOURIER."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "odyssey-outcomes-nao-e-fourier",
+        "por_que": "Distinguir a população pós-SCA e a titulação de alirocumabe."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "reduce-it-icosapent-nao-e-omega-3-generico",
+        "por_que": "Separar EPA etílico de anticorpos anti-PCSK9."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fourier-odyssey-reduce-it-tres-perguntas-de-prevencao",
+        "por_que": "Comunicar resultados com populações e tempos distintos."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "reduce-it-nao-e-compass",
+        "por_que": "Distinguir intervenção lipídica de estratégia antitrombótica."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; FOURIER/ODYSSEY/REDUCE-IT conferidos nas fontes primárias, incluindo eventos, doses, seguimentos e sangramento. Corrigida interpretação nominal da mortalidade ODYSSEY e delimitada população REDUCE-IT (não qualquer hipertrigliceridemia). Vínculos conferidos por slug e pertinência clínica: fourier-odyssey-reduce-it-tres-perguntas-de-prevencao, como-nao-prometer-mace-com-lpa-em-2025, fourier-no-idoso-nao-cria-meta-de-ldl-inventada. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-pcsk9-fourier-nao-e-lp-a",
+    "titulo": "Trilha: PCSK9 — FOURIER não é Lp(a)",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Separar mecanismo, biomarcador e desfechos clínicos na terapia de LDL e Lp(a).",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "o-que-e-um-pcsk9",
+        "por_que": "Compreender o alvo PCSK9 e seu papel após a terapia de base."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fourier-evolocumabe-nao-e-orion-nem-alpaca",
+        "por_que": "Reconhecer o desfecho clínico demonstrado no FOURIER."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "orion-4-nao-e-alpaca",
+        "por_que": "Distinguir estudos de inclisirana daqueles dirigidos à Lp(a)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "lepodisiran-alpaca-sirna-prolongado-contra-lpa",
+        "por_que": "Separar a redução de Lp(a) de benefício cardiovascular comprovado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fourier-odyssey-reduce-it-tres-perguntas-de-prevencao",
+        "por_que": "Escolher a explicação clínica conforme mecanismo e desfecho."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; FOURIER e ALPACA confrontados com primários. Resolvida pendência ORION-4 por informativo Oxford de janeiro 2026 (resultados previstos primavera2027), sem inventar MACE. Atualizado Lp(a)HORIZON com comunicado negativo de 04/09/2026, explicitamente resultado inicial de patrocinador e molécula distinta. Vínculos conferidos por slug e pertinência clínica: como-nao-prometer-mace-com-lpa-em-2025, fourier-odyssey-reduce-it-tres-perguntas-de-prevencao, trilha-pcsk9-e-icosapent-nao-misturar. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  },
+  {
+    "slug": "trilha-tv-isquemica-vanish2-e-dispositivo",
+    "titulo": "TV isquêmica: VANISH2, ablação de primeira linha e o CDI na mesma sala",
+    "tema": "Arritmias",
+    "objetivo": "Integrar VANISH2, seguimento do CDI e cuidado após choques na TV isquêmica.",
+    "nivel": "intermediario",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "vanish2-ablacao-versus-antiarrhythmico-na-tv-pos-iam",
+        "por_que": "Conhecer a estratégia inicial estudada no VANISH2."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "vanish2-nao-dispensa-o-cdi",
+        "por_que": "Integrar risco da ablação e manutenção da proteção pelo CDI."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "clinica-de-dispositivo-como-hub-tudo-com-tudo-esc-2026",
+        "por_que": "Organizar interrogação, alertas e seguimento do dispositivo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "desligar-cdi-e-reabilitacao-duas-conversas-que-se-cruzam",
+        "por_que": "Abordar ansiedade, exercício seguro e decisões sobre o dispositivo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-tv-isquemica-estrategia-inicial-vanish2",
+        "por_que": "Aplicar a estratégia após estabilização de TV significativa."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Leitura integral; VANISH2 e fontes ESC de RC/saúde mental conferidos. Separadas janelas dos eventos (30 dias do procedimento vs seguimento do fármaco), removida negativa não comprovada sobre medição de QoL, corrigidos exercício pós-choque e urgência de tempestade de TV. Vínculos conferidos por slug e pertinência clínica: vanish2-ablacao-versus-antiarrhythmico-na-tv-pos-iam, vanish2-nao-dispensa-o-cdi, clinica-de-dispositivo-como-hub-tudo-com-tudo-esc-2026, desligar-cdi-e-reabilitacao-duas-conversas-que-se-cruzam. Etapas ligadas a narrativas revisadas com identidades distintas para preservar progresso individual na trilha nativa."
+  }
+]

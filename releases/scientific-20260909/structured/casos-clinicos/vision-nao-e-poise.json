@@ -1,0 +1,22 @@
+{
+  "slug": "vision-nao-e-poise",
+  "titulo": "Troponina no D1 da colectomia: VISION ou POISE?",
+  "tema": "Perioperatório",
+  "nivel": "intermediário",
+  "enunciado": "Troponina T de 4ª geração 0,04 ng/mL no 1º dia após cirurgia não cardíaca, sem dor. Colega quer cateterismo ‘pelo VISION’ e iniciar metoprolol ‘pelo POISE’.",
+  "pergunta": "O que está alinhado?",
+  "opcoes": [
+    "VISION randomizou cateterismo e mostrou redução de morte.",
+    "VISION é coorte: pico 0,03–0,29 associou-se a morte 9,3% (aHR 5,00). Não é intervenção. POISE iniciou metoprolol 2–4 h antes e aumentou morte (HR 1,33) e AVC (HR 2,17).",
+    "Toda troponina pós-operatória é IAM tipo 1 e manda para a hemodinâmica.",
+    "O corte do VISION vale para qualquer hs-cTn atual."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "VISION foi uma coorte de 15.133 pacientes com medidas de troponina T de quarta geração nos primeiros 3 dias após cirurgia. Pico de 0,03–0,29 ng/mL associou-se a mortalidade de 9,3% em 30 dias (aHR 5,00 versus pico ≤ 0,01), não ao benefício de cateterismo. Uma medida isolada no dia 1 pode não ser o pico; investigar tendência, ECG, contexto clínico e causas de lesão miocárdica. Os cortes não devem ser transferidos para qualquer ensaio de troponina de alta sensibilidade. POISE avaliou início de metoprolol antes da cirurgia e aumentou morte/AVC; não avaliou iniciar metoprolol depois de uma troponina elevada. Nenhum dos dois estudos determina cateterismo automático ou permite ignorar suspeita clínica de síndrome coronariana aguda.",
+  "source_refs": [
+    "Devereaux PJ, et al. JAMA. 2012;307:2295-2304. PMID 22706835.",
+    "POISE. PMID: 18479744. DOI: 10.1016/S0140-6736(08)60601-7."
+  ],
+  "review_status": "revisado",
+  "review_note": "VISION e POISE conferidos; corrigida passagem de pico seriado para medida única, ensaio de troponina e extrapolação temporal."
+}

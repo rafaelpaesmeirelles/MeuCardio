@@ -1,65 +1,45 @@
 ---
-title: 'Vigilância Não Invasiva de Rejeição Pós-Transplante Cardíaco Pediátrico: dd-cfDNA, Ressonância Cardíaca Multiparamétrica
-  e Daratumumabe na Rejeição Mediada por Anticorpo (Atualização 2025-2026)'
+title: 'Rejeição após transplante cardíaco pediátrico: biomarcadores, imagem e tratamento em investigação'
 slug: vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-pediatrico-dd-cfdna-rm-cardiaca-e-daratumumabe
 theme: Cardiologia pediátrica
-kind: protocolo
+kind: documento
 review_status: revisado
 source_refs:
 - 'Milligan C, Daly KP. Management of acute cellular rejection after pediatric heart transplantation. JHLT Open. 2025;10:100359.
-  DOI: 10.1016/j.jhlto.2025.100359. PMID: 40837547. PMCID: PMC12362128 — texto integral de acesso aberto lido nesta sessão
-  via PMC (WebFetch), com reprodução literal dos trechos citados (cutoff de dd-cfDNA de 0,23% com valor preditivo negativo
-  >90% para rejeição celular aguda, e redução de mais de 80% em procedimentos de biópsia ao incorporar dd-cfDNA a protocolo
-  de vigilância pediátrica — ambos números atribuídos pela própria revisão a estudos de terceiros que ela cita, não extraídos
-  por esta sessão dos artigos originais); a classificação de gravidade da rejeição celular aguda (ISHLT 1R/2R/3R) e o esquema
-  geral de tratamento por gravidade (observação/otimização de imunossupressão basal na 1R; pulsoterapia com corticosteroide
-  na 2R; corticosteroide intravenoso associado a globulina antitimocítica e suporte hemodinâmico na 3R) também vêm desta revisão,
-  que não fornece doses numéricas pediátricas específicas e remete às diretrizes da Pediatric Heart Transplant Society para
-  posologia — por isso nenhuma dose de corticosteroide ou de globulina antitimocítica é reproduzida neste documento.'
+  DOI: 10.1016/j.jhlto.2025.100359. PMID: 40837547. PMCID: PMC12362128.'
 - 'Richmond ME, Zangwill SD, Kindel SJ, Deshpande SR, Schroder JN, Bichell DP, Knecht KR, Mahle WT, Wigger MA, Gaglianello
   NA, Pahl E, Simpson PM, Dasgupta M, North PE, Hidestrand M, Tomita-Mitchell A, Mitchell ME. Donor fraction cell-free DNA
   and rejection in adult and pediatric heart transplantation. J Heart Lung Transplant. 2020;39(5):454-463. DOI: 10.1016/j.healun.2019.11.015.
-  PMID: 31983667 — abstract completo conferido via PubMed E-utilities nesta sessão. Estudo prospectivo multicêntrico, cego,
-  de 7 centros (DTRT — DNA-Based Transplant Rejection Test), 241 receptores de transplante cardíaco (146 pediátricos, de 8
-  dias a <18 anos, e 95 adultos), 624 amostras pareadas a biópsia; fonte da validação inicial de que a fração doadora de cfDNA
-  é mais alta em rejeição celular aguda ISHLT 1R/2R que em 0R (p=0,02) e em rejeição mediada por anticorpo pAMR1/pAMR2 que
-  em pAMR0 (p=0,04 e p=0,05).'
+  PMID: 31983667.'
 - 'Olsen BA, MacBeth ML, Cole JM, Auerbach SR, Helander L, Roark CL, Simpson KE, Everitt MD. Elevated donor-derived cell-free
   DNA correlates with donor-specific antibodies and cardiac allograft vasculopathy in pediatric heart transplant patients
   without rejection. J Heart Lung Transplant. 2026 Jul 16:S1053-2498(26)01997-2. DOI: 10.1016/j.healun.2026.07.010. PMID:
-  42463023 — abstract completo conferido via PubMed E-utilities nesta sessão. Estudo retrospectivo unicêntrico, 81 receptores
-  pediátricos com pelo menos 1 dosagem de dd-cfDNA, amostras associadas a decisão de tratar rejeição excluídas; fonte dos
-  números de dd-cfDNA elevado (mediana 0,33% vs. 0,11%) associado a anticorpo doador-específico circulante e de dd-cfDNA (mediana
-  0,48% vs. 0,11%, p=0,005) associado a história de vasculopatia do enxerto, e do achado de que anticorpo doador-específico
-  e vasculopatia foram mais prevalentes acima do corte de 0,2%.'
+  42463023.'
 - 'Watanabe K, Magnetta DA, Laternser C, Birjiniuk A, Robinson JD, Rigsby CK, Husain N. Abnormal Cardiac Magnetic Resonance
   Imaging Mapping Parameters in Pediatric Heart Transplant Patients with Elevated Donor-Derived Cell Free DNA. Pediatr Cardiol.
-  2026 Jul 9. DOI: 10.1007/s00246-026-04344-7. PMID: 42423982 — abstract completo conferido via PubMed E-utilities nesta sessão.
-  Estudo retrospectivo unicêntrico, 68 receptores pediátricos com RM cardíaca multiparamétrica e dd-cfDNA pareados em até
-  30 dias (14 no grupo dd-cfDNA ≥0,16%, 54 no grupo <0,16%); fonte dos valores de T1 e T2 miocárdico global e segmentar elevados
-  no grupo de dd-cfDNA alto, sem diferença de volume/função ventricular entre os grupos.'
+  2026 Jul 9. DOI: 10.1007/s00246-026-04344-7. PMID: 42423982.'
 - 'Lo Yau Y, Xu Q, Zinn MD, Rose-Felker K, West SC, Miller SA, Zeevi A, Feingold B. Daratumumab for non-acute antibody-mediated
   rejection after pediatric heart transplantation: Treatment response in the presence and absence of circulating HLA donor-specific
-  antibody. J Heart Lung Transplant. 2026 Aug 7:S1053-2498(26)02036-X. DOI: 10.1016/j.healun.2026.07.036. PMID: 42567380 —
-  abstract completo conferido via PubMed E-utilities nesta sessão. Estudo retrospectivo unicêntrico, 10 receptores (pediátricos
-  e adultos jovens) tratados com daratumumabe (16 mg/kg × 4 doses) para rejeição mediada por anticorpo identificada por dd-cfDNA
-  elevado sem disfunção de enxerto, confirmada por perfil de expressão gênica em biópsia endomiocárdica (EMB-GEP); fonte dos
-  números de queda de dd-cfDNA (1,6% para 0,04%, p=0,002), resolução ou possível resolução da rejeição em 8 pacientes com
-  biópsia pós-tratamento, e recorrência em 6 pacientes com mediana de 246 dias (IIQ 239-283).'
+  antibody. J Heart Lung Transplant. 2026 Aug 7:S1053-2498(26)02036-X. DOI: 10.1016/j.healun.2026.07.036. PMID: 42567380.'
 - 'Milligan C, Wong A, Bastardi H, Singh TP, Daly KP, Esteso P. Daratumumab for Anti-HLA Antibody Desensitization and Antibody
   Mediated Rejection in Pediatric Heart Transplant Patients. Pediatr Transplant. 2025;29(5):e70106. DOI: 10.1111/petr.70106.
-  PMID: 40485616 — abstract completo conferido via PubMed E-utilities nesta sessão. Série de casos unicêntrica, 12 pacientes
-  (0,5-24 anos, 8-90 kg) tratados com daratumumabe para rejeição mediada por anticorpo (n=9) ou dessensibilização anti-HLA
-  (n=3), 65 infusões ao todo; fonte dos números de reação a infusão (12% das infusões, nenhuma exigindo suspensão), infecção
-  (75% dos pacientes, majoritariamente infecções infantis comuns sem internação) e resposta em 100% dos pacientes tratados
-  por rejeição mediada por anticorpo.'
+  PMID: 40485616.'
 - 'Deshpande SR et al. Evaluating threshold for donor fraction cell-free DNA using clinically available assay. Pediatr Transplant.
   2024. PMID: 38553812. DOI: 10.1111/petr.14708.'
 - 'Feingold B et al. Short-term clinical outcomes and predicted cost savings of dd-cfDNA-led surveillance after pediatric
   heart transplantation. Clin Transplant. 2023. PMID: 36779524. DOI: 10.1111/ctr.14933.'
 - CareDx. HeartCare Clinical Interpretive Guide. https://caredx.com/wp-content/uploads/2021/09/LK-10482-Heartcare-Interpretive-Guide.pdf.
-review_note: Corrigida confusão entre AlloMap sanguíneo e EMB-GEP; conferidas fontes originais sobre limiares/redução de biópsias;
-  limitadas associações não significativas, segurança e manutenção obrigatória de daratumumabe.
+review_note: 'Corrigida confusão entre AlloMap sanguíneo e EMB-GEP; conferidas fontes originais sobre limiares/redução de
+  biópsias; limitadas associações não significativas, segurança e manutenção obrigatória de daratumumabe. Conferência editorial
+  final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas
+  e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: dd-cfDNA e ressonância podem complementar a avaliação do enxerto. Um biomarcador isolado não distingue todas as causas
+  de lesão, nem classifica a rejeição celular ou mediada por anticorpos. Suspeita clínica relevante pode exigir biópsia mesmo
+  diante de resultado sanguíneo baixo.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Rejeição após transplante cardíaco pediátrico: biomarcadores, imagem e tratamento em investigação
@@ -95,3 +75,7 @@ Uma série de 12 pacientes, incluindo adultos jovens, descreveu 65 infusões: no
 Em dez receptores com rejeição mediada por anticorpos **não aguda**, confirmada por EMB-GEP, o esquema estudado foi 16 mg/kg por quatro doses. O dd-cfDNA diminuiu de 1,6% para 0,04%; entre oito rebiopsiados, seis não tinham mais rejeição molecular e dois tinham possível rejeição. Seis apresentaram recorrência em mediana de 246 dias e responderam a retratamento.
 
 Esse regime é descrição de pesquisa, não prescrição pediátrica universal. Recorrência não prova que manutenção periódica seja obrigatória ou superior a retratamento, e o estudo não demonstra mecanismo independente de anticorpos. São necessárias avaliações prospectivas e de longo prazo. [Lo Yau et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42567380/).
+
+## Tudo com Tudo
+
+- [Vigilância Não Invasiva de Rejeição Pós-Transplante Cardíaco: Perfil de Expressão Gênica (AlloMap) e DNA Livre Derivado do Doador (dd-cfDNA)](/biblioteca/vigilancia-nao-invasiva-de-rejeicao-pos-transplante-cardiaco-perfil-de-expressao-genica-e-dd-cfdna) — Compara vigilância pediátrica de rejeição com os fundamentos de dd-cfDNA e expressão gênica, preservando diferenças de validação por população.

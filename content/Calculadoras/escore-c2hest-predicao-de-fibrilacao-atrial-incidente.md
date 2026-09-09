@@ -1,5 +1,5 @@
 ---
-title: 'Escore C2HEST: Predição de Fibrilação Atrial Incidente na População Geral e no AVC Criptogênico'
+title: 'C2HEST: predição de fibrilação atrial incidente'
 slug: escore-c2hest-predicao-de-fibrilacao-atrial-incidente
 theme: Calculadoras
 kind: calculadora
@@ -11,8 +11,16 @@ source_refs:
 - 'Pinnacchio G, Scacciavillani R, Narducci ML, et al. External Validation of Published Scoring Systems to Predict Incident
   Atrial Fibrillation After Cryptogenic Stroke/Embolic Stroke of Undetermined Source. J Am Heart Assoc. 2026;15(13):e047601.
   DOI: 10.1161/JAHA.125.047601. PMID: 42333650'
-review_note: Corrigida atribuição da calibração e exclusão de doença estrutural; retirados cortes arbitrários para Holter/monitor
-  e contagens contraditórias dos comparadores.
+review_note: 'Corrigida atribuição da calibração e exclusão de doença estrutural; retirados cortes arbitrários para Holter/monitor
+  e contagens contraditórias dos comparadores. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação
+  e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos
+  preservados.'
+summary: O C2HEST estima aparecimento de fibrilação atrial (FA). Não calcula risco de AVC em quem já tem FA nem constitui
+  indicação de anticoagulação.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # C2HEST: predição de fibrilação atrial incidente
@@ -41,3 +49,7 @@ A AUC foi 0,75 na derivação/validação interna e 0,65 na aplicação coreana.
 Em uma validação observacional de 132 pacientes com AVC criptogênico/AIT e monitor implantável, 40 tiveram FA detectada em seguimento médio de 13 meses. A AUC do C2HEST foi 0,704, comparada com 0,755 para Brown ESUS-AF e 0,726 para AS5F. Diferenças numéricas não demonstram superioridade estatística. [Pinnacchio et al., JAHA, 2026](https://pubmed.ncbi.nlm.nih.gov/42333650/).
 
 Os estudos avaliam predição, não benefício clínico de escolher Holter ou monitor implantável por um corte isolado. O escore pode complementar a avaliação, mas não autoriza omitir investigação indicada após AVC nem define, sozinho, a duração da monitorização.
+
+## Tudo com Tudo
+
+- [Escore CHARGE-AF: Predição de Risco de Desenvolver Fibrilação Atrial](/biblioteca/escore-charge-af-predicao-de-risco-de-desenvolver-fibrilacao-atrial) — Compara escores de predição de FA incidente, preservando população de desenvolvimento e limites de C2HEST versus CHARGE-AF.

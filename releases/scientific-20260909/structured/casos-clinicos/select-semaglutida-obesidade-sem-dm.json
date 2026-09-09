@@ -1,0 +1,22 @@
+{
+  "slug": "select-semaglutida-obesidade-sem-dm",
+  "titulo": "Após IAM, IMC 32 e sem diabetes: a semaglutida 2,4 mg reduz MACE?",
+  "tema": "Prevenção e lipídios",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 58 anos, infarto com supra há 18 meses, stent na descendente anterior, IMC 32 kg/m², HbA1c 5,6%, sem diabetes. TFGe 78 mL/min/1,73 m², RAC 8 mg/g. Pergunta se 'o Ozempic do emagrecimento' reduz novo infarto, porque um colega disse que agonista de GLP-1 só vale para quem tem diabetes.",
+  "pergunta": "O que o ensaio SELECT (Lincoff et al., NEJM 2023) demonstrou para semaglutida subcutânea 2,4 mg semanal neste recorte (DCV estabelecida, IMC ≥ 27, sem diabetes)?",
+  "opcoes": [
+    "Apenas segurança cardiovascular, sem redução de MACE — o benefício de evento duro existe só no diabetes (SUSTAIN-6, FLOW ou SOUL)",
+    "Equivalência com a semaglutida 1,0 mg do FLOW e com o comprimido de 14 mg do SOUL, permitindo trocar a dose pela mesma molécula",
+    "17.604 pacientes (8.803 vs 8.801): MACE em 6,5% com semaglutida 2,4 mg versus 8,0% com placebo (HR 0,80; IC95% 0,72–0,90; P<0,001) em seguimento médio de 39,8±9,4 meses",
+    "Redução de MACE conduzida por morte cardiovascular (HR 0,72) e AVC não fatal; o infarto não fatal foi neutro"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "O SELECT foi ensaio de superioridade, duplo-cego, em 17.604 adultos ≥ 45 anos com DCV estabelecida (IAM, AVC e/ou DAP), IMC ≥ 27 e sem diabetes. Semaglutida subcutânea 2,4 mg semanal versus placebo. MACE em 569/8.803 (6,5%) versus 701/8.801 (8,0%); HR 0,80; IC95% 0,72–0,90; P<0,001; seguimento médio 39,8±9,4 meses. O componente com contraste foi o infarto não fatal (HR 0,72; 0,61–0,85). Morte CV (HR 0,85; 0,71–1,01) e AVC não fatal (HR 0,93; 0,74–1,15) não atingiram significância. Descontinuação por evento adverso 16,6% vs 8,2%. Não é o FLOW (1,0 mg SC no DM2 com DRC) nem o SOUL (14 mg oral no DM2). Diabetes não é pré-requisito para este resultado. Os componentes secundários devem ser interpretados considerando a hierarquia de testes; morte cardiovascular não foi significativa, interrompendo a inferência confirmatória subsequente. A dose de 2,4 mg é alvo após titulação, não dose inicial. SELECT excluiu evento cardiovascular recente em até 60 dias; o IAM há 18 meses do caso respeita esse recorte.",
+  "source_refs": [
+    "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131.",
+    "FDA, avaliação clínica SELECT/Wegovy. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215256Orig1s011.pdf"
+  ],
+  "review_status": "revisado",
+  "review_note": "SELECT e análise FDA conferidos; preservados componentes corretos com ressalva hierárquica, titulação e exclusão de IAM recente."
+}

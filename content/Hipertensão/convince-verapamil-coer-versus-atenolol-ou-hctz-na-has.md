@@ -1,16 +1,24 @@
 ---
-title: "CONVINCE: verapamil COER vs atenolol/HCTZ — não demonstrou equivalência; ensaio fechado pelo patrocinador"
+title: 'CONVINCE: verapamil COER vs atenolol/HCTZ — não demonstrou equivalência; ensaio fechado pelo patrocinador'
 slug: convince-verapamil-coer-versus-atenolol-ou-hctz-na-has
-theme: "Hipertensão"
+theme: Hipertensão
 kind: estudo
-summary: "16.602 HAS + ≥1 fator, duplo-cego, 15 países. Verapamil COER 180 mg vs atenolol 50 ou HCTZ 12,5. Patrocinador encerrou após média de 3 anos, antes do unblinding. Primário (AVC, IAM ou morte CV) 364 vs 365; HR 1,02 (0,88–1,18); P=0,77. Margem de equivalência ausente neste abstract. Hemorragia não-AVC HR 1,54 (P=0,003). Não vender cronoterapia: eventos 6–12 h NS entre braços. Não é INVEST."
+summary: 'CONVINCE: 16.602 pacientes com hipertensão e risco adicional. Verapamil COER não demonstrou equivalência ao esquema
+  iniciado com atenolol ou hidroclorotiazida; HR do composto 1,02 (IC95% 0,88–1,18), com mais hemorragia não relacionada a
+  AVC. Ensaio encerrado precocemente.'
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via NCBI efetch (Black, PMID 12709465; JAMA. 2003;289(16):2073-2082; DOI 10.1001/jama.289.16.2073). Equivalência NÃO demonstrada; margem ausente. Encerrado pelo patrocinador. Revisão científica concluída em 30/08/2026."
+review_note: 'Conferido PMID 12709465: desenho, 16.602 pacientes, eventos, HR/IC e sangramento. Preservada conclusão explícita
+  dos autores de equivalência não demonstrada; neutralidade não interpretada como superioridade ou equivalência de cronoterapia.'
 source_refs:
-  - "Black HR, Elliott WJ, Grandits G, et al. Principal results of the Controlled Onset Verapamil Investigation of Cardiovascular End Points (CONVINCE) trial. JAMA. 2003;289(16):2073-2082. DOI: 10.1001/jama.289.16.2073. PMID: 12709465. Abstract relido nesta revisão editorial."
-  - "Documento da casa invest-verapamil-versus-atenolol-na-has-com-dac — verapamil, DAC, outra pergunta."
-  - "Documento da casa nordil-diltiazem-versus-diuretico-ou-betabloqueador-na-has — outro não-diidropiridina, primário NS."
+- 'Black HR, Elliott WJ, Grandits G, et al. Principal results of the Controlled Onset Verapamil Investigation of Cardiovascular
+  End Points (CONVINCE) trial. JAMA. 2003;289(16):2073-2082. DOI: 10.1001/jama.289.16.2073. PMID: 12709465. Abstract relido
+  nesta revisão editorial.'
+- Black et al. JAMA2003. DOI:10.1001/jama.289.16.2073. PMID:12709465.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # CONVINCE: equivalência não demonstrada
@@ -33,4 +41,8 @@ Eventos das 6–12 h: **99/277 vs 88/274**; HR **1,15** (0,86–1,53) — NS. PA
 
 ## Mensagem prática
 
-**Não vendeu equivalência — e o patrocinador parou o ensaio.** A margem não está neste abstract. Não vender cronoterapia. INVEST é outro verapamil, outra pergunta.
+**O ensaio não demonstrou equivalência e foi encerrado precocemente pelo patrocinador.** A margem pré-especificada exigia IC do HR dentro de 0,86–1,16; o IC observado 0,88–1,18 não a satisfez. A análise de eventos no período matinal não demonstra superioridade da cronoterapia; o estudo tampouco compara todos os esquemas possíveis de verapamil.
+
+## Tudo com Tudo
+
+- [INVEST: verapamil LP vs atenolol na HAS com DAC — composto igual (RR 0,98), PA igual](/biblioteca/invest-verapamil-versus-atenolol-na-has-com-dac) — Compara CONVINCE e INVEST, ambos com estratégias de verapamil/atenolol, respeitando população, fechamento precoce e diferença entre neutralidade e equivalência.

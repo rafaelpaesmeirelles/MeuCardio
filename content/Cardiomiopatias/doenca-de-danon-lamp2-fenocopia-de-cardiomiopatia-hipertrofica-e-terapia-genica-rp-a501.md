@@ -1,12 +1,13 @@
 ---
-title: 'Doença de Danon (LAMP2): Fenocópia Ligada ao X da Cardiomiopatia Hipertrófica e a Terapia Gênica RP-A501'
+title: Doença de Danon e terapia gênica RP-A501
 slug: doenca-de-danon-lamp2-fenocopia-de-cardiomiopatia-hipertrofica-e-terapia-genica-rp-a501
 theme: Cardiomiopatias
 kind: documento
 review_status: revisado
-review_note: Corrigida revisão de casos versus coorte e registro errado de fase 2; removidas primazia/eficácia/janela terapêutica
+review_note: 'Corrigida revisão de casos versus coorte e registro errado de fase 2; removidas primazia/eficácia/janela terapêutica
   indevidas; incluídos evento fatal de 2025, suspensão/retomada e atualização da patrocinadora de 2026 sem tratar como ensaio
-  concluído.
+  concluído. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos,
+  referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
 source_refs:
 - 'Brambatti M, Caspi O, Maolo A, Koshi E, Greenberg B, Taylor MRG, Adler ED. Danon disease: Gender differences in presentation
   and outcomes. Int J Cardiol. 2019;286:92-98. DOI: 10.1016/j.ijcard.2019.01.020. PMID: 30857840.'
@@ -18,9 +19,16 @@ source_refs:
   Orphanet J Rare Dis. 2025;20(1):530. DOI: 10.1186/s13023-025-04058-8. PMID: 41121270.'
 - 'Richards M, Tetelbaum L, Frishman WH. Danon Disease: Clinical Manifestations, Pathophysiology, and Treatment. Cardiol Rev.
   2026 Mar 31. DOI: 10.1097/CRD.0000000000001253. PMID: 41913263.'
-- ClinicalTrials.gov. NCT06092034. https://clinicaltrials.gov/study/NCT06092034 — consulta 09/09/2026.
+- ClinicalTrials.gov. NCT06092034. https://clinicaltrials.gov/study/NCT06092034.
 - Rocket Pharmaceuticals. Atualizações de 27/05/2025, 20/08/2025 e 03/08/2026, links no texto; comunicados da patrocinadora,
   não artigos revisados por pares.
+summary: Variantes patogênicas de LAMP2 causam uma doença lisossômica ligada ao X, com comprometimento da autofagia e manifestações
+  cardíacas, musculares e cognitivas. Deficiência de LAMP2 não deve ser descrita simplesmente como ruptura estrutural da membrana
+  lisossômica. A apresentação e a gravidade variam entre indivíduos e sexos. Richards et al., 2026(https://pubmed.ncbi.nlm.nih.gov/41913263/).
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Doença de Danon e terapia gênica RP-A501
@@ -54,3 +62,7 @@ Em maio de 2025, a patrocinadora comunicou síndrome de extravasamento capilar g
 A empresa anunciou retirada da suspensão em 20/08/2025. Em 03/08/2026, informou que três participantes tratados sob protocolo modificado não apresentaram microangiopatia trombótica ou extravasamento capilar até a atualização, e que discutia a continuidade com a FDA. São dados iniciais divulgados pela patrocinadora, não resultados revisados por pares de um ensaio concluído. [Retirada da suspensão](https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-fda-has-lifted-clinical-hold/), [atualização de agosto de 2026](https://ir.rocketpharma.com/news-releases/news-release-details/rocket-pharmaceuticals-announces-positive-clinical-safety-update).
 
 RP-A501 permanece investigacional nas fontes consultadas. O cuidado clínico de suporte e o planejamento de transplante quando indicado não devem ser adiados por expectativa de benefício ainda não confirmado.
+
+## Tudo com Tudo
+
+- [Terapia Gênica para Doença de Danon: RP-A501 (AAV9.LAMP2B) — Resultados de Fase 1](/biblioteca/terapia-genica-doenca-de-danon-rp-a501-aav9-lamp2b-fase-1) — Aprofunda a mesma terapia gênica RP-A501/LAMP2B e o estudo de fase 1 na doença de Danon.

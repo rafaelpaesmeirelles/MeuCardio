@@ -1,0 +1,25 @@
+{
+  "slug": "raft-af-2022",
+  "title": "RAFT-AF: ritmo baseado em ablação versus controle de frequência na FA com insuficiência cardíaca",
+  "tema": "Fibrilação atrial",
+  "theme": "Fibrilação atrial",
+  "year": 2022,
+  "journal": "Circulation",
+  "pmid": "35313733",
+  "doi": "10.1161/CIRCULATIONAHA.121.057095",
+  "nct": "NCT01420393",
+  "design": "Ensaio randomizado. Ritmo baseado em ablação versus controle de frequência. Parado precocemente pelo DSMC por futilidade aparente.",
+  "population": "411 pacientes com FA de alta carga e insuficiência cardíaca: 214 ritmo por ablação versus 197 controle de frequência. Não é o recorte CASTLE-AF (FEVE ≤ 35% + CDI).",
+  "intervention": "Estratégia de controle de ritmo baseada em ablação por cateter.",
+  "control": "Controle de frequência.",
+  "primary_outcome": "Morte por qualquer causa ou eventos de insuficiência cardíaca.",
+  "key_findings": "n=411 (214 vs 197). Parado por futilidade aparente. Primário: 50/214 (23,4%) vs 64/197 (32,5%); HR 0,71; IC95% 0,49–1,03; P=0,066. Não houve diferença estatística no primário. Secundários: FEVE +10,1 vs +3,8 pontos percentuais (P=0,017); 6 minutos +44,9 vs +27,5 m (P=0,025); NT-proBNP −77,1% vs −39,2%. Eventos adversos graves: 50% em ambos os braços.",
+  "clinical_implications": "RAFT-AF não demonstrou superioridade no composto de morte total/eventos de IC (P=0,066), após interrupção por aparente futilidade. FEVE, caminhada, NT-proBNP e qualidade de vida melhoraram significativamente em análises secundárias; não eram apenas tendências, mas também não comprovam menor mortalidade. CASTLE-AF e CASTLE-HTx selecionaram populações diferentes. O resultado global não define indicação ou proibição de ablação para qualquer fenótipo e não dispensa CDI ou terapia da IC quando indicados.",
+  "source_refs": [
+    "Parkash R, Wells GA, Rouleau J, et al. Randomized Ablation-Based Rhythm-Control Versus Rate-Control Trial in Patients With Heart Failure and Atrial Fibrillation: Results from the RAFT-AF trial. Circulation. 2022;145:1693-1704. DOI 10.1161/CIRCULATIONAHA.121.057095. PMID 35313733. NCT01420393.",
+    "Marrouche NF, Brachmann J, Andresen D, et al. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378:417-427. PMID 29385358.",
+    "Sohns C, et al. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389:1380-1389. PMID 37634135."
+  ],
+  "review_status": "revisado",
+  "review_note": "RAFT-AF conferido; corrigidas melhorias secundárias significativas e evitada confusão com mortalidade."
+}

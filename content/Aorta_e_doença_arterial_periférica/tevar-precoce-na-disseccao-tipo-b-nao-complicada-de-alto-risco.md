@@ -1,5 +1,5 @@
 ---
-title: 'TEVAR Precoce na Dissecção Aórtica Tipo B Não Complicada de Alto Risco: Onde Está a Evidência em 2025-2026'
+title: TEVAR precoce na dissecção tipo B não complicada de alto risco
 slug: tevar-precoce-na-disseccao-tipo-b-nao-complicada-de-alto-risco
 theme: Aorta e doença arterial periférica
 kind: documento
@@ -21,8 +21,17 @@ source_refs:
 - 'Nienaber CA et al. Endovascular repair of type B aortic dissection: long-term results of the randomized investigation of
   stent grafts in aortic dissection trial. Circ Cardiovasc Interv. 2013;6:407-416. DOI: 10.1161/CIRCINTERVENTIONS.113.000463.
   PMID: 23922146.'
-review_note: Corrigida falsa ausência de ECRs com ADSORB/INSTEAD-XL; removidas atribuições conflitantes de complicações e
-  comparações causais entre coortes; corrigida população EU-TBAR.
+review_note: 'Corrigida falsa ausência de ECRs com ADSORB/INSTEAD-XL; removidas atribuições conflitantes de complicações e
+  comparações causais entre coortes; corrigida população EU-TBAR. Conferência editorial final: título alinhado ao corpo revisado,
+  campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário.
+  Vínculos internos preservados.'
+summary: A seleção de pacientes e o momento da intervenção continuam relevantes. Existem ensaios randomizados prévios; é incorreto
+  descrever toda a evidência como observacional. Eles, porém, não resolvem de modo uniforme a indicação preemptiva em cada
+  perfil anatômico de alto risco.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # TEVAR precoce na dissecção tipo B não complicada de alto risco
@@ -47,3 +56,7 @@ Na base administrativa norte-americana com 12.645 pacientes, TEVAR associou-se a
 ## Aplicação
 
 Os resultados favorecem avaliação individual pela equipe de aorta, considerando apresentação, anatomia, risco do procedimento e seguimento por imagem. Os critérios de alto risco variam entre estudos. Um protocolo não deve ser construído combinando cortes isolados de diferentes coortes. A publicação metodológica de 2026 do IMPROVE-AD descreve um ensaio destinado a esclarecer essa decisão, sem apresentar seus desfechos comparativos. [Sipelii et al.](https://pubmed.ncbi.nlm.nih.gov/42285645/).
+
+## Tudo com Tudo
+
+- [Síndrome Aórtica Aguda e Dissecção: Diagnóstico e Manejo](/biblioteca/sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo) — Relaciona a seleção para TEVAR precoce à classificação da dissecção tipo B, às complicações e ao tratamento clínico da síndrome aórtica aguda.

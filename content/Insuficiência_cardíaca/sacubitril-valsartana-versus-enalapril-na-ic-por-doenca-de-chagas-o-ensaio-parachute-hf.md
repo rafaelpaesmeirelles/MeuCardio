@@ -1,24 +1,42 @@
 ---
-title: "Sacubitril/Valsartana versus Enalapril na Insuficiência Cardíaca por Doença de Chagas: o Ensaio PARACHUTE-HF"
-slug: sacubitril-valsartana-versus-enalapril-na-ic-por-doenca-de-chagas-o-ensaio-parachute-hf
-theme: "Insuficiência cardíaca"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta cobre sacubitril/valsartana em várias populações (pós-IAM, pós-descompensação,
+  ICFEp) e cobre indicação de transplante/terapias avançadas citando cardiomiopatia chagásica como etiologia, mas nenhum documento
+  desta pasta trata da eficácia e segurança de um tratamento farmacológico modificador de doença TESTADO especificamente na
+  população chagásica — que tem fisiopatologia distinta (miocardite crônica autoimune/parasitária, disautonomia, arritmogênese
+  própria) da cardiomiopatia dilatada não chagásica em que os ensaios pivotais de sacubitril/valsartana (PARADIGM-HF) foram
+  conduzidos, e que raramente é representada nesses ensaios. Busca por 'chagas' e 'PARACHUTE' em todo content/Insuficiência_cardíaca/
+  não retornou nenhum documento existente sobre este ensaio.
+published: true
+review_note: Resumo primário PARACHUTE-HF conferido; preservados n=922, win ratio e componentes, esclarecida apresentação
+  do ARNI e limites do biomarcador; removidas inferências epidemiológicas e comparação indireta de efeito.
 review_status: revisado
-source_refs: ["Lopes RD, Bocchi EA, Echeverría LE, et al; PARACHUTE-HF Investigators. Sacubitril/Valsartan vs Enalapril in Heart Failure Due to Chagas Disease: An Open-Label, Multicenter Randomized Clinical Trial. JAMA. 2026;335(1):49-59. DOI: 10.1001/jama.2025.19808. PMCID: PMC12676478. PMID: 41335448. NCT04023227."]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta cobre sacubitril/valsartana em várias populações (pós-IAM, pós-descompensação, ICFEp) e cobre indicação de transplante/terapias avançadas citando cardiomiopatia chagásica como etiologia, mas nenhum documento desta pasta trata da eficácia e segurança de um tratamento farmacológico modificador de doença TESTADO especificamente na população chagásica — que tem fisiopatologia distinta (miocardite crônica autoimune/parasitária, disautonomia, arritmogênese própria) da cardiomiopatia dilatada não chagásica em que os ensaios pivotais de sacubitril/valsartana (PARADIGM-HF) foram conduzidos, e que raramente é representada nesses ensaios. Busca por 'chagas' e 'PARACHUTE' em todo content/Insuficiência_cardíaca/ não retornou nenhum documento existente sobre este ensaio."
+slug: sacubitril-valsartana-versus-enalapril-na-ic-por-doenca-de-chagas-o-ensaio-parachute-hf
+source_refs:
+- 'Sacubitril/Valsartan vs Enalapril in Heart Failure Due to Chagas Disease: An Open-Label, Multicenter Randomized Clinical
+  Trial. JAMA. PMID: 41335448. DOI: 10.1001/jama.2025.19808. PMCID: PMC12676478.'
+theme: Insuficiência cardíaca
+title: 'Sacubitril/Valsartana versus Enalapril na Insuficiência Cardíaca por Doença de Chagas: o Ensaio PARACHUTE-HF'
+summary: 'Win ratio estratificado final: 1,52 (IC95% 1,28-1,82; p<0,001), favorecendo sacubitril/valsartana — mas essa vitória
+  global do índice hierárquico foi impulsionada quase inteiramente pela redução de NT-proBNP em 12 semanas, não pelos desfechos
+  clínicos duros: as taxas de morte cardiovascular (23,8% vs. 25,4%) e de hospitalização por IC (22,1% vs. 24,1%) foram numericamente
+  próximas entre os grupos, sem diferença estatística relatada como significativa nesses componentes isolados.'
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # Sacubitril/Valsartana versus Enalapril na Insuficiência Cardíaca por Doença de Chagas: o Ensaio PARACHUTE-HF
 
 ## Por que este ensaio importa para a cardiologia brasileira
-A eficácia dos quatro pilares farmacológicos da IC com fração de ejeção reduzida — já detalhados nesta pasta em `inibicao-do-sraa-na-icfer-consensus-solvd-e-paradigm-hf.md` e demais documentos de cada classe — foi estabelecida em populações onde a cardiomiopatia isquêmica e a não isquêmica idiopática predominam. A **cardiomiopatia chagásica crônica** tem mecanismo distinto: miocardite crônica de base autoimune e parasitária persistente, disautonomia cardíaca própria e um substrato arritmogênico (fibrose focal, aneurisma apical) diferente do observado na cardiomiopatia dilatada não chagásica. Pacientes chagásicos foram sistematicamente sub-representados nos grandes ensaios pivotais de IC, inclusive no PARADIGM-HF (sacubitril/valsartana versus enalapril na IC com fração de ejeção reduzida em geral). O PARACHUTE-HF (*Prevention and Reduction of Adverse Outcomes in Chagasic Heart Failure Trial Evaluation*) foi desenhado para responder diretamente se essa extrapolação é válida, numa população majoritariamente latino-americana e majoritariamente brasileira.
+A eficácia dos quatro pilares farmacológicos da IC com fração de ejeção reduzida — já detalhados nesta pasta em [Inibição do SRAA na ICFEr: CONSENSUS, SOLVD e PARADIGM-HF](/biblioteca/inibicao-do-sraa-na-icfer-consensus-solvd-e-paradigm-hf) e demais documentos de cada classe — foi estabelecida em populações onde a cardiomiopatia isquêmica e a não isquêmica idiopática predominam. A **cardiomiopatia chagásica crônica** tem mecanismo distinto: miocardite crônica de base autoimune e parasitária persistente, disautonomia cardíaca própria e um substrato arritmogênico (fibrose focal, aneurisma apical) diferente do observado na cardiomiopatia dilatada não chagásica. Pacientes chagásicos foram sistematicamente sub-representados nos grandes ensaios pivotais de IC, inclusive no PARADIGM-HF (sacubitril/valsartana versus enalapril na IC com fração de ejeção reduzida em geral). O PARACHUTE-HF (*Prevention and Reduction of Adverse Outcomes in Chagasic Heart Failure Trial Evaluation*) foi desenhado para responder diretamente se essa extrapolação é válida, numa população majoritariamente latino-americana e majoritariamente brasileira.
 
 ## Desenho
 Ensaio clínico randomizado, aberto, multicêntrico (Lopes RD, Bocchi EA, Echeverría LE, et al.; PARACHUTE-HF Investigators. JAMA. 2026;335(1):49-59, PMID 41335448), conduzido em **83 centros na Argentina, no Brasil, na Colômbia e no México**, com liderança de investigadores brasileiros (Instituto do Coração — InCor, entre outros) e patrocínio da Novartis (NCT04023227):
 
 - **Recrutamento**: 10 de dezembro de 2019 a 13 de setembro de 2023
 - **Critérios de inclusão**: IC confirmada, diagnóstico confirmado de doença de Chagas, fração de ejeção do ventrículo esquerdo **≤40%**, e NT-proBNP **≥600 pg/mL** (ou BNP ≥150 pg/mL) — ou, para quem teve internação por IC nos 12 meses anteriores, limiar mais baixo de NT-proBNP **≥400 pg/mL** (ou BNP ≥100 pg/mL)
-- **Intervenções**: sacubitril/valsartana (dose-alvo 200 mg duas vezes ao dia) versus enalapril (dose-alvo 10 mg duas vezes ao dia), ambos **em adição à terapia padrão**
+- **Intervenções**: sacubitril/valsartana (dose-alvo nominal 200 mg duas vezes ao dia, correspondente à apresentação de sacubitril 97 mg/valsartana 103 mg) versus enalapril (dose-alvo 10 mg duas vezes ao dia), ambos **em adição à terapia padrão**
 - **Randomização**: **462 pacientes** para sacubitril/valsartana e **460 pacientes** para enalapril (idade média 64,2 ± 10,8 anos; **387 pacientes, 42,0%, do sexo feminino**)
 - **Seguimento mediano**: **25,2 meses** (intervalo interquartil 18,4-33,2 meses)
 - **Desfecho primário**: composto hierárquico testado, nesta ordem, por **win ratio**: morte cardiovascular → hospitalização por IC → variação relativa do NT-proBNP da linha de base até 12 semanas
@@ -32,11 +50,16 @@ Ensaio clínico randomizado, aberto, multicêntrico (Lopes RD, Bocchi EA, Echeve
 **Win ratio estratificado final**: **1,52** (IC95% 1,28-1,82; **p<0,001**), favorecendo sacubitril/valsartana — mas essa vitória global do índice hierárquico foi **impulsionada quase inteiramente pela redução de NT-proBNP em 12 semanas**, não pelos desfechos clínicos duros: as taxas de morte cardiovascular (23,8% vs. 25,4%) e de hospitalização por IC (22,1% vs. 24,1%) foram **numericamente próximas entre os grupos**, sem diferença estatística relatada como significativa nesses componentes isolados.
 
 ## Síntese prática
-O PARACHUTE-HF é o maior ensaio randomizado dedicado especificamente à cardiomiopatia chagásica com um dos quatro pilares farmacológicos da IC. A leitura correta do resultado exige separar o que ele demonstrou do que ele não demonstrou: **não houve diferença significativa nos desfechos clínicos** (morte cardiovascular e hospitalização por IC) entre sacubitril/valsartana e enalapril nesta população — os dois grupos tiveram taxas de eventos semelhantes ao longo de um seguimento mediano de mais de dois anos. O que impulsionou o win ratio favorável (1,52) foi a **maior redução de NT-proBNP em 12 semanas** no grupo sacubitril/valsartana (30,6% vs. 5,5%), um desfecho substituto de remodelamento/descongestão neuro-hormonal, não um desfecho clínico duro. Isso não invalida a utilidade de sacubitril/valsartana na cardiomiopatia chagásica — a redução mais robusta de NT-proBNP é consistente com o mecanismo já estabelecido do fármaco em outras etiologias —, mas significa que **a evidência de superioridade clínica dura sobre enalapril, especificamente na etiologia chagásica, ainda não está estabelecida** com a força que existe para a população geral de IC com fração de ejeção reduzida (PARADIGM-HF).
+O PARACHUTE-HF é o maior ensaio randomizado dedicado especificamente à cardiomiopatia chagásica com um dos quatro pilares farmacológicos da IC. A leitura correta do resultado exige separar o que ele demonstrou do que ele não demonstrou: **não houve diferença significativa nos desfechos clínicos** (morte cardiovascular e hospitalização por IC) entre sacubitril/valsartana e enalapril nesta população — os dois grupos tiveram taxas de eventos semelhantes ao longo de um seguimento mediano de mais de dois anos. O que impulsionou o win ratio favorável (1,52) foi a **maior redução de NT-proBNP em 12 semanas** no grupo sacubitril/valsartana (30,6% vs. 5,5%), um biomarcador, sem demonstração isolada de remodelamento ou benefício clínico, não um desfecho clínico duro. Isso não invalida a utilidade de sacubitril/valsartana na cardiomiopatia chagásica — a redução mais robusta de NT-proBNP é consistente com o mecanismo já estabelecido do fármaco em outras etiologias —, mas significa que **a evidência de superioridade clínica dura sobre enalapril, especificamente na etiologia chagásica, ainda não está estabelecida** com a força que existe para a população geral de IC com fração de ejeção reduzida (PARADIGM-HF).
 
 ## Armadilhas clínicas
 - **Ler "win ratio 1,52, p<0,001" como equivalente a "reduz morte e hospitalização"** — o resultado positivo do índice hierárquico composto é impulsionado majoritariamente pelo componente de NT-proBNP em 12 semanas; os componentes clínicos duros (morte cardiovascular, hospitalização por IC) tiveram taxas próximas entre os grupos.
-- **Extrapolar diretamente o benefício do PARADIGM-HF (população geral de IC com fração de ejeção reduzida) para a cardiomiopatia chagásica sem esta fonte** — é exatamente a extrapolação que o PARACHUTE-HF foi desenhado para testar, e o resultado nesta população específica é mais modesto nos desfechos duros do que o observado no PARADIGM-HF na população geral.
+- **Extrapolar diretamente o benefício do PARADIGM-HF (população geral de IC com fração de ejeção reduzida) para a cardiomiopatia chagásica sem esta fonte** — é exatamente a extrapolação que o PARACHUTE-HF foi desenhado para testar, e o resultado nesta população específica não estabelece uma interação entre etiologia e tratamento por comparação indireta com PARADIGM-HF.
 - **Ignorar que o desenho é aberto (não cego)**, o que pode influenciar decisões de manejo e relato de desfechos menos objetivos, mesmo com adjudicação de eventos — o NT-proBNP, componente que mais pesou no resultado, é um exame laboratorial objetivo, mas a condução aberta do ensaio ainda merece ser lembrada ao interpretar magnitude de efeito.
-- **Desconsiderar a relevância epidemiológica regional** — Argentina, Brasil, Colômbia e México concentram a maior carga de doença de Chagas nas Américas, e este é o maior corpo de evidência randomizada específico para IC nessa etiologia disponível até a publicação (janeiro de 2026); mesmo com resultado neutro nos desfechos duros, o ensaio preenche uma lacuna real de representação que os grandes ensaios multinacionais de IC historicamente deixaram na cardiomiopatia chagásica.
+- **Desconsiderar a relevância epidemiológica regional** — o estudo incluiu centros na Argentina, Brasil, Colômbia e México, e este é o maior corpo de evidência randomizada específico para IC nessa etiologia disponível até a publicação (janeiro de 2026); mesmo sem diferença estatisticamente significativa nos desfechos clínicos, o ensaio preenche uma lacuna real de representação que os grandes ensaios multinacionais de IC historicamente deixaram na cardiomiopatia chagásica.
 - **Tratar sacubitril/valsartana como contraindicado ou inferior ao enalapril na cardiomiopatia chagásica a partir deste resultado** — o ensaio não mostrou inferioridade de sacubitril/valsartana; mostrou ausência de superioridade estatística nos desfechos clínicos duros dentro do seguimento estudado, com sinal favorável mantido no biomarcador. A decisão de uso individual continua orientada pelas mesmas indicações e contraindicações já estabelecidas para a classe.
+
+## Conteúdo clínico relacionado
+
+- [Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos](/biblioteca/icfer-classificacao-diagnostico-quatro-pilares)
+- [Cardiopatia Chagásica Crônica: Escore de Rassi e Indicação de CDI (Diretriz Brasileira DCEI 2023)](/biblioteca/cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi)

@@ -1,35 +1,26 @@
 ---
 kind: estudo
-legacy_source: Documento novo, escrito em 08/09/2026. A pasta já cobria estratificação
-  de risco de morte súbita por etiologia na diretriz ESC 2022 (arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md,
-  geral, todas as etiologias) e cardiomiopatia arritmogênica especificamente (critérios
-  de Padua/Task Force, calculadora por genótipo). Faltava o documento que aborda a
-  lacuna mais citada da diretriz de 2022 nesse tema — a estratificação de risco arrítmico
-  na cardiomiopatia dilatada NÃO isquêmica além do corte binário de FEVE ≤35%, com
-  o estudo mais recente e de maior porte publicado sobre o assunto (Circulation, 08/09/2026,
-  publicado no dia desta redação).
 published: true
-review_note: Resumo Circulation conferido; removidas exclusividade do corte FE e lista
-  de genes atribuída sem fonte ao estudo; corrigida FE>35 para exclusão indevida,
-  seleção por exames e limite de discriminação versus utilidade terapêutica.
+review_note: 'Resumo Circulation conferido; removidas exclusividade do corte FE e lista de genes atribuída sem fonte ao estudo;
+  corrigida FE>35 para exclusão indevida, seleção por exames e limite de discriminação versus utilidade terapêutica. Conferência
+  editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas
+  organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
 review_status: revisado
 slug: estratificacao-de-risco-arritmico-na-cardiomiopatia-dilatada-nao-isquemica-corredores-de-realce-tardio-e-genotipo-de-alto-risco
 source_refs:
-- 'Ramos-López N, Mora-Ayestarán N, Ochoa JP, Claver E, Gómez González C, Poel E,
-  García Monsalvo M, Casas G, Muñoz-Esparza C, Basurte-Elorz MT, Larrañaga-Moreira
-  JM, García-Pinilla JM, Mogollón Jiménez MV, Cabezón Villalba G, Espejo Bares V,
-  Ruiz-Cueto M, López-Abel B, García-Álvarez A, Climent-Payá V, Tirón C, Cabrera-Borrego
-  E, Peña-Peña ML, Ripoll-Vera T, Zorio E, Sanaú J, Rodríguez González E, Bezzina
-  CR, Gallego Delgado M, Rodríguez-Palomares JF, di Marco A, Espinosa Castro MÁ, Amin
-  AS, Garcia-Pavia P, Mirelis JG. Arrhythmic Risk Stratification According to LGE
-  Corridors and Genetics in Nonischemic Dilated Cardiomyopathy. Circulation. 2026
-  Sep 8. DOI: 10.1161/CIRCULATIONAHA.126.080608. PMID: 42708210 — coorte multicêntrica
-  europeia (22 centros), 925 pacientes com cardiomiopatia dilatada não isquêmica,
-  teste genético e ressonância cardíaca sistemáticos, seguimento mediano de 5,4 anos;
-  abstract lido na íntegra via PubMed nesta sessão'
+- 'Ramos-López N, Mora-Ayestarán N, Ochoa JP, Claver E, Gómez González C, Poel E, García Monsalvo M, Casas G, Muñoz-Esparza
+  C, Basurte-Elorz MT, Larrañaga-Moreira JM, García-Pinilla JM, Mogollón Jiménez MV, Cabezón Villalba G, Espejo Bares V, Ruiz-Cueto
+  M, López-Abel B, García-Álvarez A, Climent-Payá V, Tirón C, Cabrera-Borrego E, Peña-Peña ML, Ripoll-Vera T, Zorio E, Sanaú
+  J, Rodríguez González E, Bezzina CR, Gallego Delgado M, Rodríguez-Palomares JF, di Marco A, Espinosa Castro MÁ, Amin AS,
+  Garcia-Pavia P, Mirelis JG. Arrhythmic Risk Stratification According to LGE Corridors and Genetics in Nonischemic Dilated
+  Cardiomyopathy. Circulation. 2026 Sep 8. DOI: 10.1161/CIRCULATIONAHA.126.080608. PMID: 42708210.'
 theme: Arritmias
-title: 'Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica:
-  Corredores de Realce Tardio e Genótipo de Alto Risco'
+title: 'Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica: Corredores de Realce Tardio e Genótipo
+  de Alto Risco'
+summary: ''
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica: Corredores de Realce Tardio e Genótipo de Alto Risco
@@ -52,11 +43,11 @@ Ramos-López N et al., Circulation. 2026 (PMID 42708210), publicado em 08/09/202
 ## Os achados principais
 - **95 pacientes (10,3%) apresentaram MVA** durante o seguimento
 - Em análise multivariável de risco competitivo, ajustada para FEVE e extensão do RTG, tanto o **número de corredores de RTG** quanto o **HRG** foram associados de forma independente a MVA:
-  - **Número de corredores de RTG**: razão de risco de subdistribuição (subdistribution HR) **1,25** (IC95% 1,11-1,42; p<0,001) por corredor adicional
-  - **HRG**: subdistribution HR **2,28** (IC95% 1,32-3,96; p=0,003)
+  - **Número de corredores de RTG**: razão de risco de subdistribuição (subdistribution HR) **1,25** (IC 95% 1,11-1,42; p<0,001) por corredor adicional
+  - **HRG**: subdistribution HR **2,28** (IC 95% 1,32-3,96; p=0,003)
 - **Corte ótimo identificado: ≥4 corredores de RTG** foi o que melhor predisse MVA
 - Um **algoritmo escalonado de estratificação de risco**, integrando presença de RTG, ≥4 corredores de RTG e HRG, **superou a classificação tradicional baseada em FEVE ≤35%**:
-  - Área sob a curva dependente do tempo em 5 anos: **0,72** (IC95% 0,65-0,78) com o algoritmo multiparamétrico **vs. 0,57** (IC95% 0,51-0,64) com o corte isolado de FEVE ≤35% (p=0,001)
+  - Área sob a curva dependente do tempo em 5 anos: **0,72** (IC 95% 0,65-0,78) com o algoritmo multiparamétrico **vs. 0,57** (IC 95% 0,51-0,64) com o corte isolado de FEVE ≤35% (p=0,001)
   - **Aumento progressivo do risco arrítmico** através das categorias do algoritmo (teste de Gray, p<0,001), permitindo classificação de risco clinicamente significativa
 
 ## Interpretação

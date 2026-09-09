@@ -1,0 +1,32 @@
+{
+  "slug": "lpa-nmol-rastreio-prevencao-2025",
+  "name": "Lipoproteína(a) em nmol/L — rastreio em prevenção, 2025",
+  "category": "laboratorial",
+  "theme": "Prevenção e lipídios",
+  "what_it_measures": "Concentração plasmática da partícula lipoproteína(a), preferencialmente em nmol/L (número de partículas), não em mg/dL. Lp(a) é determinada geneticamente; um valor isolado na vida adulta costuma bastar para estratificação. Não é LDL-C: estatina pouco a altera. ALPACA (Nissen et al., NEJM 2025;392:1673-1683, PMID 40162643) é fase 2 de surrogate: n=320, Lp(a) mediana basal 253,9 nmol/L; lepodisiran 400 mg agrupados −93,9 pontos percentuais da Lp(a) nos dias 60–180. Queda da partícula não é desfecho clínico.",
+  "reference_range": "Não há limiar universal de tratamento em nmol/L comprovado por desfecho (CVOT). Não inventar corte prescritivo. O consenso EAS 2022 usa faixas pragmáticas de rastreio — 'afastar' (<75 nmol/L / <30 mg/dL) e 'confirmar risco' (>125 nmol/L / >50 mg/dL) — e a ESC/EAS 2019 considera medir pelo menos uma vez para identificar níveis hereditários muito altos (>430 nmol/L ou >180 mg/dL). Esses números identificam risco; não autorizam fármaco específico. Conversão mg/dL ↔ nmol/L não é fator único confiável — preferir o laboratório em nmol/L.",
+  "indications": "Dosagem pelo menos uma vez na vida adulta para identificar risco hereditário e refinar prevenção. O resultado elevado reforça o controle dos fatores de risco modificáveis e não autoriza automaticamente um silenciador de Lp(a). Interpretar a unidade e o método do laboratório; não empregar fator fixo de conversão entre mg/dL e nmol/L.",
+  "interpretation": "Lp(a) alta sinaliza risco adicional de doença aterosclerótica e estenose aórtica. ALPACA demonstrou redução laboratorial com lepodisiran, sem testar redução de eventos. O anúncio primário de 4/9/2026 do Lp(a)HORIZON informou que pelacarsen não atingiu o desfecho primário; a redução da concentração não deve ser convertida em promessa de menos infarto.",
+  "limitations": "Faixas de risco não são limiares comprovados para iniciar tratamento específico de Lp(a). A relação é contínua e depende do risco absoluto. O consenso EAS 2022 e a atualização ESC/EAS 2025 usam convenções distintas: a última considera >50 mg/dL ou ≥ 105 nmol/L como modificador de risco, sem implicar conversão universal de unidades. Resultados de ALPACA ou de ensaios de LDL-C como BROADWAY não demonstram MACE.",
+  "source_refs": [
+    "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392:1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643. NCT05565742.",
+    "Kronenberg F, Mora S, Stroes ESG, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785.",
+    "Mach F, Baigent C, Catapano AL, et al.; ESC Scientific Document Group. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+    "2025 Focused Update of the ESC/EAS Guidelines for the management of dyslipidaemias. DOI: 10.1093/eurheartj/ehaf190.",
+    "Novartis. Lp(a)HORIZON phase III topline results, 4 September 2026. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+  ],
+  "review_status": "revisado",
+  "published": false,
+  "tags": [
+    "lpa",
+    "lipoproteína(a)",
+    "nmol/L",
+    "rastreio",
+    "prevenção",
+    "alpaca",
+    "lepodisiran",
+    "surrogate",
+    "não cvot"
+  ],
+  "review_note": "Lp(a) revisada com EAS/ESC, ALPACA e atualização negativa HORIZON; retiradas pendências e afirmação de CVOT ainda não realizado."
+}

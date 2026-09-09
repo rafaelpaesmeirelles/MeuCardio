@@ -1,0 +1,21 @@
+{
+  "slug": "early-tavr-ea-grave-assintomatica",
+  "titulo": "Estenose aórtica grave assintomática: TAVI precoce ou vigilância clínica? O ensaio EARLY TAVR",
+  "tema": "Valvopatias",
+  "nivel": "avançado",
+  "enunciado": "Homem, 76 anos, estenose aórtica grave assintomática e fração de ejeção preservada, de baixo risco cirúrgico. A proposta da equipe é manter vigilância clínica a cada 6–12 meses e indicar troca valvar só quando surgirem sintomas.",
+  "pergunta": "O que o ensaio EARLY TAVR mostrou ao comparar TAVI precoce com vigilância clínica?",
+  "opcoes": [
+    "A TAVI precoce reduziu mortalidade isolada (8,4% vs 9,2%) e, por isso, a vigilância deixou de ser aceitável",
+    "A TAVI precoce reduziu o composto de morte, AVC ou internação cardiovascular não planejada (26,8% vs 45,3%; HR 0,50; IC95% 0,40-0,63); a mortalidade isolada foi 8,4% vs 9,2% e o composto foi puxado sobretudo pelas internações (20,9% vs 41,7%) — não foi demonstrado benefício isolado de mortalidade",
+    "O ensaio foi neutro no composto primário e a conduta permanece vigilância até surgir sintoma",
+    "A TAVI precoce só se aplica a estenose aórtica sintomática de alto risco cirúrgico; em paciente assintomático de baixo risco o ensaio não informa a decisão"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O EARLY TAVR comparou TAVI precoce com vigilância clínica em estenose aórtica grave assintomática. O desfecho primário composto (morte, AVC ou internação cardiovascular não planejada) ocorreu em 26,8% no grupo TAVI versus 45,3% na vigilância (HR 0,50; IC95% 0,40-0,63). A mortalidade isolada foi 8,4% versus 9,2% — diferença que não sustenta benefício isolado de morte. O composto foi puxado sobretudo pelas internações cardiovasculares não planejadas (20,9% vs 41,7%). Ler o desfecho primário com precisão é o ponto deste caso: superioridade no composto não equivale a redução isolada de mortalidade, e a vigilância clássica até o primeiro sintoma deixa de ser a única leitura possível da evidência randomizada nesta população. No seguimento mediano de 3,8 anos, 87% dos participantes em vigilância receberam substituição valvar. A comparação é entre intervenção precoce e estratégia de vigilância com intervenção quando indicada, não entre TAVI e nunca tratar. O resultado não obriga procedimento automático sem avaliação de anatomia, expectativa de vida e preferências.",
+  "source_refs": [
+    "Généreux P, Schwartz A, Oldemeyer JB, et al.; EARLY TAVR Trial Investigators. Transcatheter Aortic-Valve Replacement for Asymptomatic Severe Aortic Stenosis. N Engl J Med. 2025;392(3):217-227. DOI: 10.1056/NEJMoa2405880. PMID: 39466903"
+  ],
+  "review_status": "revisado",
+  "review_note": "RCTEARLY-TAVR conferido; adicionado87% deintervenção durantevigilância e evitada interpretação de mortalidade isolada ou proibição devigilância."
+}

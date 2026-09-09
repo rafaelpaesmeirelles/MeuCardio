@@ -1,27 +1,24 @@
 ---
 kind: estudo
-legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta já cobre a cardiotoxicidade
-  de CAR-T mediada por síndrome de liberação de citocinas (incidência agrupada de
-  arritmia/IC/cardiomiopatia/SCA/parada cardíaca durante ou logo após a infusão) e
-  a graduação ASTCT da própria síndrome de liberação de citocinas. Faltava um documento
-  sobre o outro lado do mesmo problema: quais fatores, medidos ANTES da infusão, predizem
-  esse risco — e a ferramenta de escore que os agrupa, publicada em 2026, ainda não
-  estava incorporada ao acervo.'
 published: true
-review_note: Resumo CART-7 e ESC 2022 conferidos; corrigidos 12 estudos e limites
-  de confusão. Publicação restrita a resumo crítico, sem pesos não verificados, calculadora
-  ou protocolo de triagem validado.
+review_note: 'Resumo CART-7 e ESC 2022 conferidos; corrigidos 12 estudos e limites de confusão. Publicação restrita a resumo
+  crítico, sem pesos não verificados, calculadora ou protocolo de triagem validado. Conferência editorial final: título alinhado
+  ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido
+  quando necessário. Vínculos internos preservados.'
 review_status: revisado
 slug: cart-7-escore-de-estratificacao-de-risco-cardiovascular-basal-para-terapia-car-t
 source_refs:
-- 'Farmakis D, Karampinos KI, Cordoba R, López-Fernández T, Filippatos G. Predictive
-  Factors and Baseline Risk Stratification for CAR-T Cell Therapy-Related Cardiovascular
-  Toxicity. Eur J Haematol. 2026;116(1):54-65. Epub 2025 Oct 7. DOI: 10.1111/ejh.70040.
-  PMID: 41058225 — abstract lido na íntegra via PubMed E-utilities'
+- 'Farmakis D, Karampinos KI, Cordoba R, López-Fernández T, Filippatos G. Predictive Factors and Baseline Risk Stratification
+  for CAR-T Cell Therapy-Related Cardiovascular Toxicity. Eur J Haematol. 2026;116(1):54-65. Epub 2025 Oct 7. DOI: 10.1111/ejh.70040.
+  PMID: 41058225.'
 - 'ESC Guidelines on cardio-oncology 2022, seção 5.5.15. DOI: 10.1093/eurheartj/ehac244.'
 theme: Cardio-oncologia
-title: 'CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia
-  CAR-T'
+title: 'CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T'
+summary: Resumo crítico dos fatores basais associados à toxicidade cardiovascular por CAR-T e do escore proposto CART-7. Este
+  documento não implementa calculadora nem permite obter uma pontuação individual.
+tags: []
+source_tier: A
+gaps: []
 ---
 
 # CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T
@@ -37,7 +34,7 @@ Farmakis D et al., *European Journal of Haematology*. 2026;116(1):54-65, publica
 **12 estudos, 1.354 pacientes com neoplasia hematológica**, a maioria tratada com terapia CAR-T direcionada a CD19. **228 pacientes (16,8%) desenvolveram EACV.**
 
 ### Os sete preditores basais significativos, com risco relativo agrupado
-| Condição basal | RR agrupado | IC95% |
+| Condição basal | RR agrupado | IC 95% |
 |---|---|---|
 | Insuficiência cardíaca prévia | 2,74 | 1,62-4,61 |
 | Fibrilação atrial prévia | 2,42 | 1,51-3,88 |

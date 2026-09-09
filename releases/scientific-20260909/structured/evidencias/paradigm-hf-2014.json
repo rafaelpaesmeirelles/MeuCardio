@@ -1,0 +1,18 @@
+{
+  "slug": "paradigm-hf-2014",
+  "title": "PARADIGM-HF: sacubitril–valsartan reduz morte CV ou hospitalização por IC na ICFEr estabelecida",
+  "tema": "Insuficiência cardíaca",
+  "theme": "Insuficiência cardíaca",
+  "statement": "PARADIGM-HF (McMurray et al., NEJM 2014, PMID 25176015; NCT01035255): 8.442 pacientes com IC NYHA II–IV e FEVE ≤ 40%. Doses-alvo após run-in: LCZ696 200 mg 2×/dia (sacubitril–valsartan 97/103 mg) versus enalapril 10 mg 2×/dia. Parado cedo; mediana 27 meses. Primário (morte CV ou hospitalização por IC): 914 (21,8%) versus 1.117 (26,5%); HR 0,80; IC95% 0,73–0,87; P<0,001. Morte CV 13,3% versus 16,5%; HR 0,80 (0,71–0,89). Primeira hospitalização por IC 12,8% versus 15,6%; HR 0,79 (0,71–0,89). Morte total 17,0% versus 19,8%; HR 0,84 (0,76–0,93). Isso é ICFEr estabelecida. Não é PARADISE-MI (PMID 34758252; IAM sem IC prévia; 11,9% versus 13,2%; HR 0,90; P=0,17 — neutro). Não copiar o HR 0,80 para a alta do infarto sem IC.",
+  "society": "NEJM / PARADIGM-HF",
+  "year": 2014,
+  "pmid": "25176015",
+  "document_slug": "paradigm-hf-arni-na-icfer-estabelecida",
+  "source_refs": [
+    "McMurray JJV, Packer M, Desai AS, et al.; PARADIGM-HF Investigators and Committees. Angiotensin–Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371:993-1004. DOI 10.1056/NEJMoa1409077. PMID 25176015. NCT01035255.",
+    "Pfeffer MA, Claggett B, Lewis EF, et al.; PARADISE-MI Investigators and Committees. Angiotensin Receptor–Neprilysin Inhibition in Acute Myocardial Infarction. N Engl J Med. 2021;385:1845-1855. DOI 10.1056/NEJMoa2104508. PMID 34758252. NCT02924727."
+  ],
+  "review_status": "revisado",
+  "note": "O protocolo começou com FEVE ≤ 40% e posteriormente restringiu a inclusão a ≤ 35%. O run-in selecionou tolerância às terapias antes da randomização.",
+  "review_note": "PARADIGM primário conferido; doses-alvo, run-in e alteração de elegibilidade explicitados."
+}

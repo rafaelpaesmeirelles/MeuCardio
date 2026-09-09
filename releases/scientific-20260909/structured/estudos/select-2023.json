@@ -1,0 +1,22 @@
+{
+  "slug": "select-2023",
+  "title": "SELECT: semaglutida 2,4 mg e MACE em obesidade sem diabetes",
+  "tema": "Prevenção e lipídios",
+  "year": 2023,
+  "journal": "New England Journal of Medicine",
+  "pmid": "37952131",
+  "doi": "10.1056/NEJMoa2307563",
+  "design": "Ensaio de superioridade, duplo-cego, controlado por placebo, dirigido a eventos.",
+  "population": "17.604 adultos ≥ 45 anos com DCV estabelecida (IAM, AVC e/ou doença arterial periférica), IMC ≥ 27 kg/m², sem diabetes (8.803 vs 8.801). Evento cardiovascular nos 60 dias anteriores era critério de exclusão.",
+  "intervention": "Semaglutida subcutânea com alvo de 2,4 mg semanal após titulação, além do cuidado padrão.",
+  "control": "Placebo.",
+  "primary_outcome": "Tempo até o primeiro MACE (morte cardiovascular, infarto não fatal ou AVC não fatal).",
+  "key_findings": "Exposição média ao fármaco 34,2±13,7 meses; seguimento médio 39,8±9,4 meses. MACE em 569/8.803 (6,5%) versus 701/8.801 (8,0%); HR 0,80; IC95% 0,72–0,90; P<0,001. Infarto não fatal HR 0,72 (0,61–0,85). Morte CV HR 0,85 (0,71–1,01) — não significativo. AVC não fatal HR 0,93 (0,74–1,15) — não significativo. Descontinuação por evento adverso 16,6% vs 8,2%.",
+  "clinical_implications": "SELECT demonstrou redução de MACE em prevenção secundária, com sobrepeso/obesidade e sem diabetes. A mortalidade cardiovascular não foi significativa; os componentes e desfechos subsequentes exigem interpretação conforme a hierarquia estatística. Efeitos gastrointestinais e maior descontinuação são relevantes. O estudo não demonstrou equivalência com 1 mg SC do FLOW ou semaglutida oral do SOUL, nem indica início automático na fase aguda de um IAM.",
+  "source_refs": [
+    "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131.",
+    "FDA, avaliação clínica SELECT. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215256Orig1s011.pdf"
+  ],
+  "review_status": "revisado",
+  "review_note": "SELECT e avaliação FDA conferidos; acrescentadas exclusão de evento recente, dose-alvo e hierarquia estatística."
+}

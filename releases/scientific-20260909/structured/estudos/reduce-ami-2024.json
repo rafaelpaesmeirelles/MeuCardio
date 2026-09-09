@@ -1,0 +1,21 @@
+{
+  "slug": "reduce-ami-2024",
+  "title": "REDUCE-AMI: betabloqueador após IAM com fração de ejeção preservada",
+  "tema": "Doença coronariana",
+  "year": 2024,
+  "journal": "New England Journal of Medicine",
+  "pmid": "38587241",
+  "doi": "10.1056/NEJMoa2401479",
+  "design": "Ensaio randomizado aberto, grupos paralelos, 45 centros (Suécia, Estônia, Nova Zelândia).",
+  "population": "5020 pacientes com IAM agudo submetidos a angiografia coronariana e FEVE ≥ 50% (95,4% da Suécia).",
+  "intervention": "Betabloqueador de longo prazo (metoprolol ou bisoprolol).",
+  "control": "Nenhum betabloqueador.",
+  "primary_outcome": "Morte por qualquer causa ou novo infarto do miocárdio.",
+  "key_findings": "Seguimento mediano 3,5 anos (IIQ 2,2–4,7). Desfecho primário em 199/2508 (7,9%) com betabloqueador versus 208/2512 (8,3%) sem betabloqueador; HR 0,96; IC95% 0,79–1,16; P=0,64. Morte 3,9% vs 4,1%; morte CV 1,5% vs 1,3%; infarto 4,5% vs 4,7%; internação por FA 1,1% vs 1,4%; internação por IC 0,8% vs 0,9%.",
+  "clinical_implications": "No IAM contemporâneo com angiografia e FEVE ≥ 50%, o betabloqueador crônico não reduziu morte ou novo infarto. Não extrapolar para FE reduzida nem para a fase aguda. Manter se houver outra indicação (angina, FA, HAS, arritmia). O ensaio não testou retirada abrupta de betabloqueador usado cronicamente; a decisão individual deve considerar indicações adicionais, tolerabilidade e forma de retirada quando cabível.",
+  "source_refs": [
+    "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241. NCT03278509."
+  ],
+  "review_status": "revisado",
+  "review_note": "REDUCE-AMI conferido; acrescentado limite para retirada de tratamento crônico."
+}

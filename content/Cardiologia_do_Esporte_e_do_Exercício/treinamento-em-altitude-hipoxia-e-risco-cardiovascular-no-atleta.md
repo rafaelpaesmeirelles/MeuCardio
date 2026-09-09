@@ -1,5 +1,5 @@
 ---
-title: 'Treinamento em altitude e hipóxia: efeitos cardiovasculares e risco no atleta'
+title: 'Treinamento em altitude: desempenho e incerteza sobre risco cardiovascular'
 slug: treinamento-em-altitude-hipoxia-e-risco-cardiovascular-no-atleta
 theme: Cardiologia do Esporte e do Exercício
 kind: estudo
@@ -15,8 +15,16 @@ source_refs:
 - 'Boulares A, Dupuy O, Bragazzi NL, Pichon A. Effects of Intermittent Hypoxia Protocols on Physical Performance in Trained
   and Untrained Individuals: An Umbrella Review of Systematic Reviews and Meta-Analyses. Sports Med Open. 2025;11(1):145.
   DOI: 10.1186/s40798-025-00933-7. PMID: 41276779.'
-review_note: Corrigida inferência longitudinal em estudo transversal, destacado confundimento por modalidade esportiva e QT
-  versus QTc; retiradas garantias de segurança e uniformidade de efeito entre protocolos.
+review_note: 'Corrigida inferência longitudinal em estudo transversal, destacado confundimento por modalidade esportiva e
+  QT versus QTc; retiradas garantias de segurança e uniformidade de efeito entre protocolos. Conferência editorial final:
+  título alinhado ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e
+  espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: A exposição temporária para treinamento e a residência permanente em altitude são situações diferentes. Hipóxia hipobárica,
+  hipóxia normobárica e os diversos regimes de treino também não são intercambiáveis.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Treinamento em altitude: desempenho e incerteza sobre risco cardiovascular
@@ -40,3 +48,7 @@ Uma revisão de 22 revisões sistemáticas, abrangendo 487 estudos primários e 
 A revisão de Chacón-Díaz et al. descreve ativação simpática, vasoconstrição pulmonar e remodelamento vascular/ventricular com exposição à altitude. Abrange moradores de altitude e pessoas procedentes de regiões baixas; não fornece uma estimativa de risco para atletas em cada regime de treinamento. [Parte I](https://pubmed.ncbi.nlm.nih.gov/42238502/), [Parte II](https://pubmed.ncbi.nlm.nih.gov/42238493/).
 
 Pressão arterial, sintomas, cardiopatia prévia, intensidade e duração da exposição devem compor a avaliação individual. ECG e outros exames dependem desse contexto; os estudos citados não validam um pacote obrigatório de rastreamento nem um limite de altitude que garanta segurança. Acompanhamento nutricional pode integrar o cuidado esportivo, sem ser apresentado como proteção antiarrítmica comprovada por esse estudo.
+
+## Tudo com Tudo
+
+- [Prescrição de exercício e retorno ao esporte em cardiopatas: coronariopatia, insuficiência cardíaca e valvopatias](/biblioteca/prescricao-de-exercicio-e-retorno-ao-esporte-em-cardiopatas) — Relaciona hipóxia e carga do treinamento à avaliação individual de sintomas, cardiopatia e segurança esportiva, sem criar altitude universalmente segura.

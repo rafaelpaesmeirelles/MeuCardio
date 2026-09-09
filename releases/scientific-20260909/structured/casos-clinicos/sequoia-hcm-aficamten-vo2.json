@@ -1,0 +1,21 @@
+{
+  "slug": "sequoia-hcm-aficamten-vo2",
+  "titulo": "MHO obstrutiva sintomática: o SEQUOIA-HCM reduziu mortalidade com aficamten?",
+  "tema": "Cardiomiopatias",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 58 anos, miocardiopatia hipertrófica obstrutiva, dispneia CF III apesar de betabloqueador. Gradiente em repouso 58 mmHg, FEVE 75%. A equipe discute iniciar aficamten e um colega afirma que o SEQUOIA-HCM 'já mostrou que o fármaco reduz morte'.",
+  "pergunta": "Qual foi o desfecho primário do SEQUOIA-HCM (Maron et al., NEJM 2024) e o que o ensaio mostrou?",
+  "opcoes": [
+    "Mortalidade total em 24 semanas, reduzida de forma significativa — por isso aficamten substitui redução septal",
+    "Morte súbita ou CDI apropriado; o ensaio foi neutro e aficamten não informa a decisão",
+    "VO₂ pico em 24 semanas (não mortalidade): n=282 (142 vs 140); +1,8 vs 0,0 mL/kg/min; diferença 1,7 (IC95% 1,0–2,4); P<0,001",
+    "Composto de morte e internação por IC, com HR de mortalidade isolada que autoriza prometer menos morte"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "O SEQUOIA-HCM randomizou 282 pacientes (142 aficamten vs 140 placebo) com MHO obstrutiva sintomática. Idade média 59,1 anos; 59,2% homens; gradiente em repouso 55,1 mmHg; FEVE 74,8%. Dose 5–20 mg, titulação por eco. Desfecho primário: variação do VO₂ pico em 24 semanas — não mortalidade. Resultado: +1,8 vs 0,0 mL/kg/min; diferença 1,7 (1,0–2,4); P<0,001. Não é ensaio de morte súbita nem de mortalidade total. Redução septal continua existindo. Monitorar FEVE faz parte da classe. A diferença ajustada de 1,7 não precisa coincidir com a subtração de médias arredondadas (1,8 e 0,0). A dose descreve o protocolo, não uma prescrição automática; a titulação dependia da avaliação ecocardiográfica.",
+  "source_refs": [
+    "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2024;390(20):1849-1861. DOI: 10.1056/NEJMoa2401424. PMID: 38739079. NCT05186818."
+  ],
+  "review_status": "revisado",
+  "review_note": "SEQUOIA-HCM conferido, incluindo diferença ajustada, população e dose do protocolo; sem atribuir benefício de mortalidade."
+}

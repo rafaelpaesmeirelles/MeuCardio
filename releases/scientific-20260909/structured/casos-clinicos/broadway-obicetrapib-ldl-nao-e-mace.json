@@ -1,0 +1,21 @@
+{
+  "slug": "broadway-obicetrapib-ldl-nao-e-mace",
+  "titulo": "BROADWAY: queda de LDL-C no dia 84 autoriza prometer menos MACE?",
+  "tema": "Prevenção e lipídios",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 67 anos, infarto há 3 anos, HeFH, estatina de alta intensidade, ezetimiba e inibidor de PCSK9. LDL-C 98 mg/dL. Lê que 'saiu um comprimido novo de CETP que derruba o colesterol em 30%' e pergunta se, com isso, o risco de novo infarto já caiu. O colega da clínica quer anotar no prontuário que o BROADWAY 'já mostrou redução de MACE'.",
+  "pergunta": "O que o ensaio BROADWAY (Nicholls et al., NEJM 2025; PMID 40337982) demonstrou — e o que esta publicação não autoriza prometer?",
+  "opcoes": [
+    "Redução de MACE (morte CV, infarto não fatal ou AVC não fatal) com HR 0,80, o que permite prometer menos evento duro a partir deste paper",
+    "Ensaio de desfechos cardiovasculares (CVOT) em 17.604 pacientes; a queda de LDL-C foi só um secundário e já se pode substituir o PCSK9",
+    "n=2530; LDL-C no dia 84: −29,9% versus +2,7% (diferença −32,6 pontos percentuais; P<0,001) — desfecho substituto (SURROGATE). Esta publicação não estabelece redução de MACE; não se pode prometer menos infarto, AVC ou morte a partir deste paper",
+    "Neutro no LDL-C, mas positivo em morte cardiovascular isolada, o que justifica prometer menos morte mesmo sem cair o colesterol"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "O BROADWAY randomizou 2530 pacientes de alto risco (DCVA ou HeFH) já em terapia hipolipemiante máxima tolerada para obicetrapib 10 mg/dia oral versus placebo. Desfecho primário: variação percentual do LDL-C da linha de base ao dia 84 — lipídico, substituto, não MACE. Resultado: −29,9% versus +2,7%; diferença −32,6 pontos percentuais; P<0,001. SURROGATE, não CVOT: este paper não estabelece redução de infarto, AVC ou morte. Não se interpola o HR 0,80 do SELECT (semaglutida 2,4 mg, outro fármaco, outro desfecho). Obicetrapib foi estudado sobre a terapia máxima tolerada, não no lugar de estatina, ezetimiba ou PCSK9. O caso avalia a publicação científica e não estabelece disponibilidade ou aprovação regulatória no Brasil. A resposta correta é recusar a promessa de MACE a partir desta publicação.",
+  "source_refs": [
+    "Nicholls SJ, Nelson AJ, Ditmarsch M, et al.; BROADWAY Investigators. Safety and Efficacy of Obicetrapib in Patients at High Cardiovascular Risk. N Engl J Med. 2025;393(1):51-61. DOI: 10.1056/NEJMoa2415820. PMID: 40337982. NCT05142722."
+  ],
+  "review_status": "revisado",
+  "review_note": "Conferidos2530participantes, dose10mg e LDLdia84. Mantida distinção desfecholipídico versus benefício cardiovascular; sem alegação regulatória."
+}

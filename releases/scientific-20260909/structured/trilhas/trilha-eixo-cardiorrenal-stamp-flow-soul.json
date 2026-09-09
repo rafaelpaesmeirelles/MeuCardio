@@ -1,0 +1,47 @@
+{
+  "slug": "trilha-eixo-cardiorrenal-stamp-flow-soul",
+  "titulo": "Eixo cardiorrenal: STAMP-on-CKD, FLOW, SOUL e ARM na IC",
+  "tema": "Diabetes e cardiologia",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "fluxograma-stamp-on-ckd-esc-2026",
+      "por_que": "Aplicar STAMP com TFGe e RAC urinária; confirmar persistência por pelo menos três meses, sem adiar avaliação de alterações agudas."
+    },
+    {
+      "ordem": 2,
+      "item_type": "evidencia",
+      "item_slug": "esc-2026-rastrear-drc-em-todo-paciente-com-dcv",
+      "por_que": "Consultar a recomendação de rastreamento renal em toda pessoa com doença cardiovascular, com avaliação conjunta de filtração e albuminúria."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "flow-semaglutida-dm2-e-doenca-renal-cronica",
+      "por_que": "Interpretar FLOW: semaglutida SC com alvo de 1 mg/semana em DM2 e DRC selecionados; primário renal/cardiovascular. Só 15,6% usavam iSGLT2 no início, limitando a precisão do benefício incremental nesse subgrupo."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "soul-semaglutida-oral-em-dm2-com-drc-ou-ascvd",
+      "por_que": "Comparar SOUL: semaglutida oral com alvo de 14 mg/dia em DM2 de alto risco; primário MACE positivo, composto renal não positivo. O estudo não demonstra equivalência da via oral com a injetável."
+    },
+    {
+      "ordem": 5,
+      "item_type": "documento",
+      "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+      "por_que": "Escolher ARM segundo fenótipo da IC, evidência da molécula, potássio e função renal; a classe I A não torna finerenona substituta automática de espironolactona/eplerenona na ICFEr."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Damman K, Herrington WG, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the ERA. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098. PMID: 42661426.",
+    "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+    "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642.",
+    "Køber L, Adamo M, Ruwald AC, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420."
+  ],
+  "objetivo": "Conectar o rastreamento renal na doença cardiovascular à evidência específica de FLOW e SOUL no DM2 e à seleção de ARM na IC. Distinguir desfechos, vias, doses-alvo após titulação e critérios de segurança.",
+  "nivel": "intermediario",
+  "review_note": "Trilha revisada contra STAMP/FLOW/SOUL/ESC IC; etapas convertidas para tipos reais e retiradas afirmações de equivalência."
+}

@@ -1,74 +1,67 @@
 ---
-title: "FRAIL-AF: Trocar Varfarina por DOAC no Idoso Frágil com Fibrilação Atrial — Mais Sangramento, Sem Menos AVC"
+title: 'FRAIL-AF e COMBINE-AF: troca de anticoagulante em idosos frágeis'
 slug: frail-af-troca-de-vka-por-doac-no-idoso-fragil-com-fibrilacao-atrial
-theme: "Fibrilação atrial"
+theme: Fibrilação atrial
 kind: estudo
 review_status: revisado
-source_refs: ["Joosten LPT, van Doorn S, van de Ven PM, et al; FRAIL-AF Investigators. Safety of Switching From a Vitamin K Antagonist to a Non-Vitamin K Antagonist Oral Anticoagulant in Frail Older Patients With Atrial Fibrillation: Results of the FRAIL-AF Randomized Controlled Trial. Circulation. 2024;149(4):279-289. DOI: 10.1161/CIRCULATIONAHA.123.066485. PMID: 37634130", "Wallentin L, Giugliano RP. Switching to Direct Anticoagulation or Continued Vitamin-K Antagonists in Frail Patients With Atrial Fibrillation in Whom Vitamin-K Antagonists Are Tolerated? [editorial]. Circulation. 2024;149(4):290-292. DOI: 10.1161/CIRCULATIONAHA.123.067555. PMID: 38252742", "Nicolau AM, Giugliano RP, Zimerman A, et al. Outcomes in Older Patients After Switching to a Newer Anticoagulant or Remaining on Warfarin: The COMBINE-AF Substudy. J Am Coll Cardiol. 2025;86(6):426-439. DOI: 10.1016/j.jacc.2025.05.060. PMID: 40769671"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A biblioteca já cobre extensamente o medo de anticoagular o idoso com histórico de quedas (documento próprio) e a escolha de DOAC por função renal/idade/peso, mas não tinha nenhum registro sobre a pergunta oposta e igualmente frequente no consultório: o idoso frágil que já está em varfarina, bem controlado, e cujo médico considera trocar para DOAC por conveniência (sem necessidade de INR seriado). O FRAIL-AF é o único ensaio randomizado dedicado a essa troca especificamente na população frágil, e foi interrompido precocemente por futilidade — resultado contraintuitivo que merece registro próprio, não extrapolação dos ensaios pivotais de DOAC (que testaram início de novo, não troca de paciente já estabilizado)."
+source_refs:
+- 'Joosten LPT, van Doorn S, van de Ven PM, et al; FRAIL-AF Investigators. Safety of Switching From a Vitamin K Antagonist
+  to a Non-Vitamin K Antagonist Oral Anticoagulant in Frail Older Patients With Atrial Fibrillation: Results of the FRAIL-AF
+  Randomized Controlled Trial. Circulation. 2024;149(4):279-289. DOI: 10.1161/CIRCULATIONAHA.123.066485. PMID: 37634130'
+- 'Wallentin L, Giugliano RP. Switching to Direct Anticoagulation or Continued Vitamin-K Antagonists in Frail Patients With
+  Atrial Fibrillation in Whom Vitamin-K Antagonists Are Tolerated? [editorial]. Circulation. 2024;149(4):290-292. DOI: 10.1161/CIRCULATIONAHA.123.067555.
+  PMID: 38252742'
+- 'Nicolau AM, Giugliano RP, Zimerman A, et al. Outcomes in Older Patients After Switching to a Newer Anticoagulant or Remaining
+  on Warfarin: The COMBINE-AF Substudy. J Am Coll Cardiol. 2025;86(6):426-439. DOI: 10.1016/j.jacc.2025.05.060. PMID: 40769671'
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC6937027/
+review_note: 'Corrigidos AVK realmente usados no FRAIL-AF e erro de negar uso prévio/troca no subgrupo COMBINE. Não presumido
+  INR perfeito em toda coorte; composto hemorrágico distinguido de maior isolado e interação não confundida com significância
+  do subgrupo. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos,
+  referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: O FRAIL-AF avaliou trocar um antagonista da vitamina K (AVK) já em uso por um anticoagulante oral direto (DOAC),
+  ou continuar o AVK, em idosos frágeis com FA. O tratamento habitual holandês era acenocumarol ou femprocumona, não varfarina
+  em todos os participantes. A classe farmacológica é a mesma, mas nomear um medicamento não estudado como comparador exclusivo
+  é incorreto.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# FRAIL-AF: Trocar Varfarina por DOAC no Idoso Frágil com Fibrilação Atrial — Mais Sangramento, Sem Menos AVC
+# FRAIL-AF e COMBINE-AF: troca de anticoagulante em idosos frágeis
 
-## A pergunta que os ensaios pivotais de DOAC não respondem
-RE-LY, ROCKET-AF, ARISTOTLE e ENGAGE AF-TIMI 48 — todos já documentados nesta biblioteca — estabeleceram que um DOAC é, em média, ao menos tão seguro e eficaz quanto a varfarina para **iniciar** anticoagulação em fibrilação atrial não valvar. Nenhum deles respondeu a uma pergunta distinta e comum na prática: o paciente **idoso frágil que já está em varfarina há anos, com INR bem controlado**, e cujo médico considera trocar para um DOAC — pela conveniência de dispensar o INR seriado, ou por preferência do próprio paciente. Essa troca virou prática difundida sem evidência randomizada dedicada, sustentada apenas pela extrapolação (intuitivamente razoável, mas não testada) de que o que funciona para iniciar também funciona para substituir. O FRAIL-AF é o primeiro e, até esta data, único ensaio randomizado desenhado especificamente para testar essa troca na população frágil.
+O FRAIL-AF avaliou trocar um antagonista da vitamina K (AVK) já em uso por um anticoagulante oral direto (DOAC), ou continuar o AVK, em idosos frágeis com FA. O tratamento habitual holandês era **acenocumarol ou femprocumona**, não varfarina em todos os participantes. A classe farmacológica é a mesma, mas nomear um medicamento não estudado como comparador exclusivo é incorreto.
 
-## O ensaio
-Joosten LPT et al.; FRAIL-AF Investigators. Circulation. 2024;149(4):279-289 (PMID 37634130). Ensaio pragmático, multicêntrico, aberto, randomizado, de superioridade, conduzido na Holanda entre janeiro de 2018 e junho de 2022.
+## FRAIL-AF
 
-- **População**: pacientes com FA **≥75 anos** vivendo com fragilidade, definida por **escore do Groningen Frailty Indicator ≥3** — instrumento de rastreio de fragilidade validado, cobrindo domínios de mobilidade, saúde física, cognição, saúde psicossocial e social. Excluídos pacientes com **taxa de filtração glomerular <30 mL·min⁻¹·1,73 m⁻²** e FA **valvar**.
-- **Desenho da intervenção**: todos os pacientes estavam em **varfarina guiada por INR** no momento da randomização — ou seja, não é comparação de estratégias de novo, é comparação de **manter o que já estava funcionando** versus **trocar** para um DOAC (a escolha do DOAC específico e da dose seguiu a prática clínica local/bula, não foi padronizada por protocolo único).
-- **2.621 pacientes triados**, **1.330 randomizados** (idade média **83 anos**, escore mediano do Groningen Frailty Indicator **4**). Após a randomização, 6 pacientes do braço troca-para-DOAC e 1 do braço continuar-com-VKA foram excluídos por critério de exclusão identificado a posteriori, restando **662 no braço trocado para DOAC** e **661 no braço que continuou varfarina** na população por intenção de tratar.
-- **Seguimento**: 12 meses.
-- **Desfecho primário**: sangramento maior **ou** clinicamente relevante não maior (o que ocorresse primeiro), com morte tratada como risco competitivo — hazard ratio causa-específico.
-- **Desfecho secundário**: eventos tromboembólicos.
+O ensaio pragmático, aberto e randomizado incluiu idade ≥75 anos e Groningen Frailty Indicator ≥3; excluiu filtração glomerular <30 mL/min/1,73 m² e FA valvar. Foram randomizados 1.330 participantes; após exclusões por critérios identificados posteriormente, 662 foram analisados no braço de troca e 661 no de manutenção. Idade média de 83 anos; seguimento de 12 meses.
 
-## Resultado — parado por futilidade, não por dano catastrófico nem por sucesso
-Depois de **163 eventos do desfecho primário** (101 no braço trocado para DOAC, 62 no braço que continuou varfarina), o ensaio foi **interrompido precocemente** por uma análise de futilidade pré-especificada:
+O desfecho primário foi primeiro sangramento **maior ou clinicamente relevante não maior**, com morte como risco competitivo. Após 163 eventos, 101 versus 62, a análise de futilidade pré-especificada levou ao encerramento. O HR foi **1,69 (IC 95% 1,23–2,32)**, desfavorável à troca. Para eventos tromboembólicos, HR 1,26 (0,60–2,61), sem benefício demonstrado nem prova de equivalência.
 
-- **Hazard ratio para o desfecho primário (sangramento maior ou clinicamente relevante não maior): 1,69 (IC95% 1,23-2,32)** — mais eventos de sangramento no braço que trocou para DOAC
-- **Hazard ratio para eventos tromboembólicos: 1,26 (IC95% 0,60-2,61)** — numericamente também maior no braço DOAC, mas **sem significância estatística** (intervalo de confiança cruza 1, amplo pela raridade do evento)
+Não se deve descrever os 163 eventos como sangramentos maiores isolados. O estudo selecionou pessoas já acompanhadas com AVK; isso não significa que todos tivessem controle perfeito de INR, nem permite estabelecer um limiar de tempo em faixa terapêutica que não foi critério de inclusão. O resultado desaconselha a troca indiscriminada, mas não obriga manter AVK diante de INR ruim, interações relevantes ou outra indicação individual de mudança.
 
-**Conclusão literal dos autores**: trocar o tratamento guiado por INR com antagonista da vitamina K para um DOAC em pacientes idosos frágeis com FA associou-se a **mais complicações hemorrágicas** em comparação a continuar com o antagonista da vitamina K, **sem redução associada de complicações tromboembólicas**.
+## COMBINE-AF, análise publicada em 2025
 
-## O que "sangramento maior ou clinicamente relevante não maior" significa aqui, e por que isso importa
-O desfecho primário combina sangramento **maior** com sangramento **clinicamente relevante não maior** (CRNM) — categoria que inclui eventos hemorrágicos que exigem atenção médica ou interrupção transitória do tratamento, mas sem os critérios mais graves (queda de hemoglobina ≥2 g/dL, transfusão, sítio crítico) do sangramento maior propriamente dito. O abstract do ensaio não fornece a quebra numérica exata entre as duas categorias dentro dos 163 eventos — **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem precisar da proporção exata de sangramento maior isolado (a leitura do texto completo do artigo é o caminho, não o resumo indexado). O ponto clínico que independe dessa quebra: o desfecho combinado captura sangramento clinicamente relevante mesmo quando não catastrófico — é exatamente o tipo de evento que reduz a qualidade de vida e a adesão no idoso frágil, mesmo sem risco de vida.
+O consórcio reúne dados individuais de quatro ensaios randomizados de DOAC versus varfarina. A análise identificou 5.913 pacientes que simultaneamente tinham ≥75 anos, experiência prévia com AVK e fragilidade por índice derivado do modelo de Rockwood. O seguimento mediano foi 27 meses.
 
-## A pergunta que os próprios editorialistas do Circulation levantaram
-Wallentin L, Giugliano RP. Circulation. 2024;149(4):290-292 (PMID 38252742), editorial de acompanhamento — título do próprio comentário resume a ressalva mais importante para interpretar o resultado: **"Switching to Direct Anticoagulation or Continued Vitamin-K Antagonists in Frail Patients With Atrial Fibrillation in Whom Vitamin-K Antagonists Are Tolerated?"** (Trocar para anticoagulação direta ou manter antagonista da vitamina K em pacientes frágeis com FA **nos quais o antagonista da vitamina K é bem tolerado**?). A população do FRAIL-AF era, por definição do próprio desenho, composta de pacientes **já estabelecidos e bem controlados** em varfarina — não pacientes com INR instável ou de difícil controle, que são exatamente os candidatos mais intuitivos para troca. O resultado do FRAIL-AF não informa o que aconteceria se a troca fosse feita no paciente com controle de INR ruim ou instável; informa apenas o que acontece quando se troca um paciente **que já estava bem** — e a conclusão prática, nesse recorte, é não trocar sem motivo.
+**Esse subgrupo tinha uso prévio de AVK.** Sua randomização para DOAC ou varfarina informa, sim, uma comparação de mudança versus continuidade; não é correto descartá-lo como se todos estivessem iniciando anticoagulação pela primeira vez. Trata-se, porém, de subanálise de ensaios anteriores, com seleção e instrumento de fragilidade diferentes do FRAIL-AF.
 
-## O contraponto: a subanálise do COMBINE-AF, publicada em 2025, aponta na direção oposta em pontos-chave
-Nicolau AM, Giugliano RP, Zimerman A, et al. J Am Coll Cardiol. 2025;86(6):426-439 (PMID 40769671). Este não é um ensaio randomizado dedicado à troca — é uma análise post-hoc de dados individuais de pacientes de **4 ensaios randomizados** do consórcio COMBINE-AF (71.683 pacientes com FA, comparando DOAC vs. varfarina em dose padrão), na qual a fragilidade foi estimada por um **índice derivado do modelo de acúmulo de déficits de Rockwood** (18 condições associadas à idade) — instrumento **diferente** do Groningen Frailty Indicator usado no FRAIL-AF, e aplicado retrospectivamente sobre pacientes que foram **randomizados de novo** entre DOAC e varfarina, não pacientes que estavam **estabelecidos** em varfarina e foram trocados.
+No subgrupo frágil/idoso/experiente em AVK, DOAC em regime de dose padrão apresentou HR 0,83 para AVC/embolia sistêmica e 0,95 para morte. A ausência de interação com o restante da população não demonstra, por si, significância estatística de cada desfecho dentro desse subgrupo.
 
-- **5.913 pacientes** identificados como frágeis, idosos (≥75 anos) e com experiência prévia em antagonista da vitamina K; **52.721 pacientes** não preenchiam os três critérios simultaneamente
-- Seguimento mediano de **27 meses**
-- **Sem heterogeneidade de efeito** entre o subgrupo frágil e o não frágil para AVC/embolia sistêmica (HR 0,83 vs. 0,81; p de interação = 0,75) nem para óbito (HR 0,95 vs. 0,91; p de interação = 0,54)
-- **Sangramento maior semelhante** entre DOAC em dose padrão e varfarina no subgrupo frágil/idoso/experiente em VKA (HR 1,06; IC95% 0,90-1,25) — **enquanto foi significativamente reduzido** com DOAC no subgrupo que não preenchia os três critérios (HR 0,82; IC95% 0,76-0,89; p de interação = 0,007)
-- **Sangramento fatal e intracraniano reduzidos com DOAC nos dois subgrupos**, de magnitude semelhante
-- **Sangramento gastrointestinal aumentado com DOAC**, e de forma **mais acentuada** no subgrupo frágil/idoso/experiente em VKA (HR 1,83; IC95% 1,42-2,36) que no restante (HR 1,23; IC95% 1,09-1,39; p de interação = 0,006)
+Sangramento maior teve HR **1,06 (IC 95% 0,90–1,25)** e o desfecho clínico líquido HR **1,01 (0,91–1,13)**, sem diferença estatisticamente demonstrada. Sangramento gastrointestinal aumentou, HR **1,83 (1,42–2,36)**; sangramento fatal e intracraniano foram reduzidos. “Dose padrão” descreve o braço do ensaio, com seus ajustes protocolizados, e não autoriza ignorar critérios de redução.
 
-**Conclusão literal dos autores**: no idoso frágil com experiência prévia em antagonista da vitamina K, o DOAC em dose padrão associou-se a **redução significativa de AVC/embolia sistêmica, sangramento fatal e intracraniano, e óbito**; sangramento gastrointestinal aumentou, e sangramento maior e o desfecho clínico líquido combinado foram semelhantes. Os autores concluem que o DOAC em dose padrão é escolha razoável para reduzir AVC, óbito e os tipos mais graves de sangramento nessa população.
+## Aplicação
 
-## Por que os dois resultados não são, estritamente, a mesma pergunta — e por que a tensão entre eles é real mesmo assim
-- **Desenho**: o FRAIL-AF testa **trocar** um paciente já em uso e bem controlado de varfarina; o COMBINE-AF testa a alocação **randomizada inicial** entre DOAC e varfarina — não capta o efeito específico de interromper um controle de INR já estabelecido para começar um DOAC.
-- **Instrumento de fragilidade**: Groningen Frailty Indicator (rastreio multidimensional prospectivo, usado para selecionar a amostra do FRAIL-AF) não é o mesmo constructo que um índice de acúmulo de déficits de Rockwood aplicado retrospectivamente sobre dados de ensaio (COMBINE-AF) — os dois medem fragilidade, mas por métodos diferentes, em populações selecionadas de formas diferentes.
-- **Desfecho de sangramento que mais diverge**: o FRAIL-AF encontra excesso de sangramento **maior ou clinicamente relevante não maior combinado**; o COMBINE-AF encontra sangramento **maior isolado semelhante**, com o excesso concentrado em **sangramento gastrointestinal** especificamente. Um desfecho combinado mais amplo (FRAIL-AF) tende a capturar mais eventos que um desfecho de sangramento maior isolado (COMBINE-AF) — parte da divergência numérica pode vir dessa diferença de definição, não necessariamente de uma contradição biológica.
-- **O que os dois têm em comum, e não diverge**: nenhum dos dois mostra benefício de AVC/embolia com a troca especificamente no paciente frágil já estabelecido em VKA — o FRAIL-AF não mostra redução; o COMBINE-AF mostra redução de AVC com DOAC, mas isso é o resultado da alocação randomizada inicial, não da troca de um paciente já controlado.
+As duas análises não são intercambiáveis: usam diferentes medidas de fragilidade, seleção, AVK, acompanhamento e definições hemorrágicas. O FRAIL-AF sustenta cautela com troca rotineira em quem já usa AVK; o COMBINE-AF mostra que a discussão inclui tipos distintos de sangramento e experiência prévia com AVK, sem uma proibição geral dos DOAC.
 
-**Este documento não escolhe um vencedor entre os dois.** Respondem perguntas parcialmente diferentes, com métodos de fragilidade diferentes e populações de partida diferentes (já estabelecido em VKA e bem controlado, no FRAIL-AF; randomizado de novo, no COMBINE-AF). O que os dois sustentam em conjunto, sem contradição: a decisão de trocar um idoso frágil **já bem controlado** em varfarina para um DOAC não deve ser feita por conveniência isolada — o ganho esperado (menos monitorização) não vem acompanhado de um sinal robusto e consistente de menos sangramento maior isolado nesse recorte específico de paciente, e o FRAIL-AF, que testou exatamente essa troca de forma randomizada, mostrou o oposto do que a conveniência sugeriria.
+A decisão deve integrar risco tromboembólico e hemorrágico, qualidade do INR, função renal, interações, dose correta, acesso à monitorização e preferência informada. Fragilidade isoladamente não justifica suspender anticoagulação indicada nem converter automaticamente todo paciente de DOAC para AVK.
 
-## Síntese prática
-| | FRAIL-AF (PMID 37634130) | COMBINE-AF substudy (PMID 40769671) |
-|---|---|---|
-| Pergunta testada | Trocar VKA já controlado → DOAC | Alocação randomizada inicial DOAC vs. VKA |
-| Instrumento de fragilidade | Groningen Frailty Indicator ≥3 | Índice de Rockwood (18 condições), retrospectivo |
-| N frágil/idoso | 1.323 (por intenção de tratar) | 5.913 |
-| Desfecho primário | Sangramento maior + CRNM combinado | Múltiplos desfechos pré-especificados |
-| Resultado de sangramento | **Mais eventos com DOAC** (HR 1,69) | Sangramento maior **semelhante**; GI **maior** com DOAC |
-| Resultado de AVC/embolia | Sem diferença estatística (HR 1,26, IC largo) | **Reduzido** com DOAC (HR 0,83), sem heterogeneidade vs. não frágil |
+## Fontes
 
-## Armadilhas clínicas
-- **Tratar o FRAIL-AF como prova de que DOAC é pior que varfarina no idoso frágil em geral** — o ensaio testa especificamente a **troca** de um paciente já bem controlado, não a escolha inicial de anticoagulante nessa população; extrapolar para "não iniciar DOAC no idoso frágil" contradiz diretamente o resultado do COMBINE-AF (que mostra menos AVC, óbito e sangramento fatal/intracraniano com DOAC quando a alocação é inicial).
-- **Ignorar que a população do FRAIL-AF já estava bem controlada em INR** — o editorial do próprio Circulation (Wallentin/Giugliano) chama atenção para isso: o resultado não informa a conduta em paciente com controle de INR ruim ou instável, que é justamente o cenário em que trocar para DOAC costuma ser considerado com mais urgência na prática.
-- **Confundir os dois instrumentos de fragilidade como equivalentes** — Groningen Frailty Indicator e índice de acúmulo de déficits de Rockwood medem o constructo "fragilidade" por caminhos metodológicos distintos; um paciente classificado como frágil por um instrumento não é automaticamente comparável ao classificado por outro.
-- **Superestimar o intervalo de confiança do desfecho tromboembólico do FRAIL-AF** — HR 1,26 com IC95% 0,60-2,61 não demonstra excesso de risco tromboembólico com DOAC; demonstra apenas que o ensaio, interrompido precocemente por futilidade no desfecho primário de sangramento, não teve poder estatístico para esse desfecho secundário raro.
+- [FRAIL-AF, PMID 37634130](https://pubmed.ncbi.nlm.nih.gov/37634130/).
+- [Protocolo do FRAIL-AF](https://pmc.ncbi.nlm.nih.gov/articles/PMC6937027/).
+- [COMBINE-AF, PMID 40769671](https://pubmed.ncbi.nlm.nih.gov/40769671/).
+
+## Tudo com Tudo
+
+- [Fibrilação Atrial no Idoso: Anticoagulação versus Risco de Queda, e Ajuste de Dose Renal no Muito Idoso](/biblioteca/fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal) — Relaciona FRAIL-AF à decisão de anticoagulação no muito idoso, fragilidade, função renal e risco de queda, sem troca automática de AVK.

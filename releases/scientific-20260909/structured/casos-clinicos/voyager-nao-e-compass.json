@@ -1,0 +1,22 @@
+{
+  "slug": "voyager-nao-e-compass",
+  "titulo": "Rivaroxabana 2,5 após angioplastia de femoral: COMPASS ou VOYAGER?",
+  "tema": "Aorta e doença arterial periférica",
+  "nivel": "avançado",
+  "enunciado": "DAP, revascularização de membro há 1 semana. Colega cita COMPASS (MACE 4,1% vs 5,4%; HR 0,76) para iniciar rivaroxabana 2,5 mg duas vezes ao dia mais AAS.",
+  "pergunta": "Qual ensaio é a porta?",
+  "opcoes": [
+    "COMPASS inclui revascularização recente; o HR 0,76 vale.",
+    "VOYAGER-PAD: 6564 após revascularização; composto 17,3% vs 19,9% em 3 anos; HR 0,85. COMPASS é doença estável. TIMI maior no VOYAGER não foi significativo; ISTH foi.",
+    "Os dois ensaios usam rivaroxabana 20 mg da FA.",
+    "STAMP autoriza a mesma dose."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "VOYAGER-PAD avaliou 6.564 pessoas após revascularização de membro inferior, com rivaroxabana 2,5 mg duas vezes ao dia mais AAS versus AAS. O composto incluía isquemia aguda de membro, amputação vascular maior, IAM, AVC isquêmico ou morte cardiovascular. Estimativas de Kaplan–Meier em 3 anos: 17,3% versus 19,9% (HR 0,85; IC95% 0,76–0,96). Sangramento maior TIMI: HR 1,43 (IC95% 0,97–2,10; P=0,07); ISTH: HR 1,42 (1,10–1,84; P=0,007). Ausência de significância TIMI não demonstra ausência de dano hemorrágico. COMPASS estudou doença aterosclerótica estável, com outro composto. A dose vascular não é dose para prevenção de AVC na FA; risco hemorrágico, função renal e outras indicações antitrombóticas precisam ser considerados.",
+  "source_refs": [
+    "Bonaca MP, et al. N Engl J Med. 2020;382:1994-2004. PMID 32222135.",
+    "COMPASS. PMID: 28844192. DOI: 10.1056/NEJMoa1709118."
+  ],
+  "review_status": "revisado",
+  "review_note": "VOYAGER conferido; explicitadas frequência da dose, estimativa temporal, composto e duas definições de sangramento."
+}

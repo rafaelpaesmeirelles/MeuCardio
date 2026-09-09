@@ -1,0 +1,23 @@
+{
+  "slug": "valor-hcm-nao-e-maple",
+  "titulo": "MHO obstrutiva na fila de miectomia septal: qual ensaio?",
+  "tema": "Cardiomiopatias",
+  "nivel": "avançado",
+  "enunciado": "MHO, NYHA III, gradiente 80 mmHg, encaminhado a redução septal. Colega cita MAPLE-HCM para ‘tirar da fila com aficamten’.",
+  "pergunta": "Qual ensaio fala desta porta?",
+  "opcoes": [
+    "MAPLE-HCM (aficamten vs metoprolol) é o ensaio da fila de SRT.",
+    "VALOR-HCM (mavacamten vs placebo, 112 pts, 16 semanas): ainda elegível/SRT 17,9% vs 76,8%. MAPLE é outra molécula e outra pergunta. Liberdade de SRT no longo prazo não determinada.",
+    "SEQUOIA-HCM mostrou que aficamten substitui miomectomia (HR 0,24).",
+    "Mavacamten e aficamten são intercambiáveis na mesma dose."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "VALOR-HCM incluiu 112 pacientes com sintomas importantes apesar de tratamento máximo, gradiente ≥ 50 mmHg e indicação de redução septal. Mavacamten foi comparado a placebo; em 16 semanas, 10/56 (17,9%) versus 43/56 (76,8%) permaneciam elegíveis ou haviam realizado redução septal. Não é a proporção de cirurgias efetuadas isoladamente. MAPLE comparou aficamten e metoprolol; SEQUOIA comparou aficamten e placebo com primário de VO₂. A publicação inicial de VALOR não estabeleceu liberdade permanente de intervenção nem tornou a cirurgia obsoleta.",
+  "source_refs": [
+    "Desai MY, et al. J Am Coll Cardiol. 2022;80:95-108. PMID 35798455.",
+    "MAPLE-HCM. PMID: 40888697.",
+    "SEQUOIA-HCM. PMID: 38739079."
+  ],
+  "review_status": "revisado",
+  "review_note": "VALOR conferido; corrigida terminologia para miectomia, interpretação do composto e vínculo dos estudos comparados."
+}

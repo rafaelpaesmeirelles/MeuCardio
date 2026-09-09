@@ -1,0 +1,25 @@
+{
+  "slug": "betami-nao-e-reboot",
+  "titulo": "BETAMI-DANBLOCK não é o REBOOT: três recortes de betabloqueador após IAM",
+  "tema": "Doença coronariana",
+  "theme": "Doença coronariana",
+  "nivel": "avançado",
+  "enunciado": "Mulher de 59 anos, IAM com supra tratado com angioplastia primária, alta com FEVE 44%, sem angina, sem FA, pressão controlada, sem IC. Na passagem de plantão o colega diz: «o REBOOT matou o betabloqueador acima de 40%; o BETAMI-DANBLOCK é o mesmo ensaio com outro nome; a IPD dos cinco ensaios confirmou que não adianta em ninguém com FE preservada». Ele prescreve «sem BB, Classe I de não usar».",
+  "pergunta": "Qual leitura separa corretamente BETAMI-DANBLOCK (FEVE ≥ 40%), REBOOT (FEVE >40%) e a IPD de cinco ensaios (FEVE ≥ 50%)?",
+  "opcoes": [
+    "BETAMI-DANBLOCK e REBOOT são o mesmo recorte (FEVE >40%, composto idêntico, ambos nulos); a IPD de FEVE ≥ 50% apenas replica o nulo — pode-se suspender o betabloqueador em qualquer IAM com FEVE >40% como se fosse Classe I",
+    "São três recortes e três compostos: BETAMI-DANBLOCK (PMID 40888716; FEVE ≥ 40% sem IC; n=5.574; morte ou MACE; HR 0,85; IC95% 0,75–0,98); REBOOT (PMID 40888702; FEVE >40%; 8.505 randomizados; 8.438 analisados; morte, reinfarto ou internação por IC; HR 1,04; IC95% 0,89–1,22); IPD (PMID 41211954; FEVE ≥ 50%; n=17.801; morte, IAM ou IC; HR 0,97; IC95% 0,87–1,07) — não fundir e não inventar Classe I",
+    "A IPD de 17.801 pacientes com FEVE ≥ 50% mostrou o mesmo benefício do BETAMI-DANBLOCK (HR 0,85); portanto betabloqueador é obrigatório na FE preservada e o REBOOT pode ser ignorado",
+    "Os três trabalhos contraindicam betabloqueador após qualquer IAM contemporâneo; FE reduzida, angina, FA e hipertensão também saem da indicação"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Três papéis, três recortes. BETAMI-DANBLOCK (PMID 40888716): Dinamarca e Noruega; FEVE ≥ 40% sem IC; 5.574 pacientes; composto de morte ou MACE (novo IAM, revascularização não planejada, AVC isquêmico, IC ou arritmia ventricular maligna); 14,2% vs 16,3%; HR 0,85; IC95% 0,75–0,98; P=0,03 — puxado sobretudo pelo infarto (5,0% vs 6,7%; HR 0,73), não pela morte isolada (4,2% vs 4,4%). REBOOT (PMID 40888702): Espanha e Itália; FEVE >40%; 8.505 randomizados, 8.438 na análise principal; composto de morte, reinfarto ou internação por IC; HR 1,04; IC95% 0,89–1,22; P=0,63 — nulo. IPD de cinco ensaios (PMID 41211954): FEVE ≥ 50% e sem outra indicação; n=17.801 (REBOOT 7.459, REDUCE-AMI 4.967, BETAMI 2.441, DANBLOCK 2.277, CAPITAL-RCT 657); morte, IAM ou IC; 8,1% vs 8,3%; HR 0,97; IC95% 0,87–1,07; P=0,54 — nulo na FE preservada. A paciente do enunciado tem FEVE 44%: entrou no recorte do REBOOT e do BETAMI-DANBLOCK, saiu da IPD (≥ 50%). Há também uma metanálise de dados individuais específica de FEVE 40–49% (Lancet 2025, PMID 40897190): 1885 pacientes, composto morte/novo IAM/IC em 106/991 versus 129/894; HR 0,75 (IC95% 0,58–0,97), p=0,031. Esse achado favorável deve integrar a avaliação da paciente com FEVE 44%, sem transformar um ensaio isolado em classe de diretriz. Angina, FA, HAS, arritmia e FE reduzida continuam sendo indicações que não saem destes papers. BETAMI-DANBLOCK não é o REBOOT: PMIDs consecutivos (40888716 vs 40888702), compostos diferentes, sinais diferentes.",
+  "source_refs": [
+    "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716. NCT03646357. NCT03778554.",
+    "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+    "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954.",
+    "β blockers after myocardial infarction with mildly reduced ejection fraction. Lancet2025. PMID:40897190. DOI:10.1016/S0140-6736(25)01592-2."
+  ],
+  "review_status": "revisado",
+  "review_note": "Corrigidos randomizados/analisadosREBOOT e adicionadaIPD40–49% favorável, omitida nooriginal. Sem classe derecomendação inventada."
+}

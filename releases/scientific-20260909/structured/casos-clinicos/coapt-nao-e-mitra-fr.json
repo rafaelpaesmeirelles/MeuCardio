@@ -1,0 +1,22 @@
+{
+  "slug": "coapt-nao-e-mitra-fr",
+  "titulo": "IM funcional: COAPT ou MITRA-FR?",
+  "tema": "Valvopatias",
+  "nivel": "avançado",
+  "enunciado": "IC, FEVE 32%, IM secundária. Colega recusa clípe ‘porque o MITRA-FR foi neutro (OR 1,16)’ e outro insiste no COAPT (HR 0,53).",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "Os dois ensaios têm o mesmo primário e o mesmo EROA; escolha o que preferir.",
+    "MITRA-FR: 304 pacientes, IM secundária definida por EROA >20 mm² ou volume regurgitante >30 mL/batimento, desfecho morte/hospitalização por IC em 12 meses, OR 1,16. COAPT: 614 pacientes sintomáticos apesar de tratamento otimizado, hospitalizações por IC em 24 meses HR 0,53 e mortalidade HR 0,62. Seleção, primário e seguimento diferem.",
+    "COAPT autoriza clípe em toda IM primária degenerativa.",
+    "EARLY TAVR substitui o clípe mitral."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 30145927 MITRA-FR. PMID 30280640 COAPT. Primário, tempo e seleção diferem. No COAPT, a seleção foi de IM secundária moderada a grave ou grave, persistente apesar da terapia máxima tolerada. A decisão não se baseia apenas em FEVE 32% e presença de IM: requer avaliação integrada de gravidade, anatomia, tratamento otimizado e elegibilidade. OR e HR não são a mesma medida.",
+  "source_refs": [
+    "Obadia JF, et al. N Engl J Med. 2018. PMID 30145927.",
+    "Stone GW, et al. N Engl J Med. 2018. PMID 30280640."
+  ],
+  "review_status": "revisado",
+  "review_note": "Corrigido critério MITRA-FR(EROA ou volume), excluído marcador nãoresolvido deEROA e enfatizada avaliação integradaCOAPT semlimiarinventado."
+}

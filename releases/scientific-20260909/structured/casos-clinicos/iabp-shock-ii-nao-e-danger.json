@@ -1,0 +1,25 @@
+{
+  "slug": "iabp-shock-ii-nao-e-danger",
+  "titulo": "IABP-SHOCK II não é DanGer Shock: BIA nula em 30 dias não é Impella em 180",
+  "tema": "Doença coronariana",
+  "theme": "Doença coronariana",
+  "nivel": "avançado",
+  "enunciado": "Homem de 66 anos, IAMCSST anterior, choque cardiogênico, reperfusão planejada. Na sala o colega diz: «o DanGer mostrou que bomba reduz morte — então BIA de rotina agora é Classe I; o IABP-SHOCK II é o mesmo ensaio com outro nome, 45,8% vs 58,5%, HR 0,74». Pede balão intra-aórtico em todo choque do IAM e cita o DanGer como se fosse o Thiele 2012.",
+  "pergunta": "Qual leitura separa corretamente IABP-SHOCK II (BIA, morte em 30 dias) do DanGer Shock (bomba microaxial Impella CP, morte em 180 dias)?",
+  "opcoes": [
+    "São o mesmo recorte e o mesmo dispositivo; 39,7% vs 41,3% e 45,8% vs 58,5% medem o mesmo primário em 30 dias — BIA de rotina herda o HR 0,74 e virou Classe I na ESC 2026",
+    "IABP-SHOCK II (Thiele, PMID 22920912): BIA vs sem BIA no choque do IAM com reperfusão planejada; 300 vs 298 na análise; morte em 30 dias 119/300 (39,7%) vs 123/298 (41,3%); RR 0,96 (IC95% 0,79–1,17); P=0,69 — nulo. DanGer Shock (Møller, PMID 38587239): Impella CP vs cuidado padrão no IAMCSST com choque selecionado; 82/179 (45,8%) vs 103/176 (58,5%) em 180 dias; HR 0,74 (0,55–0,99); P=0,04 — outro dispositivo, outro tempo, outro recorte. ESC 2026: BIA rotineira III B1; microaxial STEMI selecionado IIa B1",
+    "O DanGer testou BIA e o IABP-SHOCK II testou Impella; por isso a ESC 2026 promoveu BIA a Classe I e rebaixou a bomba microaxial a III",
+    "Ambos autorizam MCS de rotina em todo IAM com choque, inclusive sem supradesnível e na gestante; o composto de segurança do DanGer foi menor com a bomba"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Dois ensaios, dois dispositivos, dois tempos. IABP-SHOCK II (Thiele et al., N Engl J Med. 2012;367:1287-1296; DOI 10.1056/NEJMoa1208410; PMID 22920912; NCT00491036): 600 com choque cardiogênico complicando IAM, reperfusão planejada; BIA 301 vs sem BIA 299; análise primária 300 vs 298; morte por qualquer causa em 30 dias 119 (39,7%) vs 123 (41,3%); RR 0,96 (0,79–1,17); P=0,69. Sangramento maior 3,3% vs 4,4%; isquemia periférica 4,3% vs 3,4%; sepse 15,7% vs 20,5%; AVC 0,7% vs 1,7% — sem diferença significativa. Neutro em 30 dias. Aos 12 meses (PMID 24011548) permaneceu nulo: 155/299 (52%) vs 152/296 (51%); RR 1,01 (0,86–1,18); P=0,91. DanGer Shock (Møller et al., N Engl J Med. 2024;390:1382-1393; DOI 10.1056/NEJMoa2312572; PMID 38587239; NCT01633502): bomba de fluxo microaxial (Impella CP) + cuidado padrão vs cuidado padrão no IAMCSST com choque; 360 randomizados, 355 na análise (179 vs 176); idade mediana 67 anos; 79,2% homens; morte em 180 dias 82/179 (45,8%) vs 103/176 (58,5%); HR 0,74 (0,55–0,99); P=0,04. Composto de segurança (sangramento grave, isquemia de membro, hemólise, falha do dispositivo ou piora de regurgitação aórtica) 24,0% vs 6,2%; RR 4,74 (2,36–9,55). Terapia de substituição renal 41,9% vs 26,7%; RR 1,98 (1,27–3,09). Recorte selecionado, não MCS de rotina. ESC 2026 de IC (PMID 42661420): BIA em não selecionados III B1; microaxial STEMI selecionado (sem lesão hipóxica encefálica) IIa B1; MCS no IAM não selecionado III B1. Não transformar o DanGer em «BIA agora funciona». Não inverter os dispositivos. A extrapolação a outras populações exige avaliação própria. Frequências naturais: IABP-SHOCK II em 30 dias — morte em 40 em 100 com BIA e em 41 em 100 sem BIA; DanGer em 180 dias — 46 em 100 com bomba e 59 em 100 com cuidado padrão. As frequências descrevem ensaios distintos e não devem ser comparadas como uma avaliação direta entre dispositivos. A recomendação de bomba microaxial exige seleção clínica, disfunção ventricular esquerda e ausência de risco de lesão cerebral hipóxica. Suporte como ponte em complicações mecânicas constitui cenário separado; a restrição ao uso rotineiro não equivale a proibição em toda situação.",
+  "source_refs": [
+    "Thiele H, Zeymer U, Neumann FJ, et al.; IABP-SHOCK II Trial Investigators. Intraaortic Balloon Support for Myocardial Infarction with Cardiogenic Shock. N Engl J Med. 2012;367(14):1287-1296. DOI 10.1056/NEJMoa1208410. PMID 22920912. NCT00491036.",
+    "Thiele H, Zeymer U, Neumann FJ, et al. Intra-aortic balloon counterpulsation in acute myocardial infarction complicated by cardiogenic shock (IABP-SHOCK II): final 12 month results of a randomised, open-label trial. Lancet. 2013;382(9905):1638-1645. DOI 10.1016/S0140-6736(13)61783-3. PMID 24011548.",
+    "Møller JE, Engstrøm T, Jensen LO, et al.; DanGer Shock Investigators. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. DOI 10.1056/NEJMoa2312572. PMID 38587239. NCT01633502.",
+    "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420."
+  ],
+  "review_status": "revisado",
+  "review_note": "IABP-SHOCK II de 30 dias/12 meses, DanGer e tabela ESC 2026 conferidos. Esclarecidas seleção, complicações mecânicas e limites da extrapolação."
+}

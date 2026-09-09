@@ -1,78 +1,74 @@
 ---
-title: "Parto Pré-Termo como Preditor de Risco Cardiovascular Materno de Longo Prazo (European Cardiology, 2026)"
+title: Parto Pré-Termo como Preditor de Risco Cardiovascular Materno de Longo Prazo (European Cardiology, 2026)
 slug: parto-pre-termo-como-preditor-de-risco-cardiovascular-materno-de-longo-prazo-european-cardiology-2026
-theme: "Gravidez"
+theme: Gravidez
 kind: estudo
 review_status: revisado
-source_refs: ["Segovia-Reyes J, Iboleon-Jimenez A, Jiménez-Salva M, Carmona-Segovia AD, Jimenez Navarro MF, Ortega-Gomez A. Preterm Birth and Maternal Cardiovascular Risk. Eur Cardiol. 2026 May 5;21:e24. DOI: 10.15420/ecr.2025.43. PMID: 42170194. PMCID: PMC13187938 — acesso aberto, texto integral lido nesta sessão via PMC (revisão narrativa)", "Tanz LJ, Stuart JJ, Williams PL, et al. Preterm Delivery and Maternal Cardiovascular Disease in Young and Middle-Aged Adult Women. Circulation. 2017;135(6):578-589. DOI: 10.1161/CIRCULATIONAHA.116.025954. PMID: 28153993", "Wu P, Gulati M, Kwok CS, et al. Preterm Delivery and Future Risk of Maternal Cardiovascular Disease: A Systematic Review and Meta-Analysis. J Am Heart Assoc. 2018;7(2):e007809. DOI: 10.1161/JAHA.117.007809. PMID: 29335319", "Heida KY, Franx A, van Rijn BB, et al. Cardiovascular disease risk in women with a history of spontaneous preterm delivery: A systematic review and meta-analysis. Eur J Prev Cardiol. 2016;23(3):253-263. DOI: 10.1177/2047487314566758. PMID: 25665808", "Grandi SM, Filion KB, Yoon S, et al. Cardiovascular Disease-Related Morbidity and Mortality in Women With a History of Pregnancy Complications. Circulation. 2019;139(8):1069-1079. DOI: 10.1161/CIRCULATIONAHA.118.036748. PMID: 30779636", "Crump C, Sundquist J, McLaughlin MA, Dhamoon MS, Edwards AC, Sundquist K. Preterm Delivery and Long-term Risk of Hypertension in Women. JAMA Cardiol. 2022;7(1):65-74. DOI: 10.1001/jamacardio.2021.4127. PMID: 34643643", "Crump C, Groves A, Sundquist J, Sundquist K. Adverse pregnancy outcomes and long term risk of ischemic heart disease in mothers. BMJ. 2023;380:e072112. DOI: 10.1136/bmj-2022-072112. PMID: 36724989", "Crump C, Sundquist J, Sundquist K. Pre-term delivery and long-term risk of heart failure in women. Eur Heart J. 2021;43(3):202-212. DOI: 10.1093/eurheartj/ehab789. PMID: 34849711", "Cederlöf ET, Lundgren M, Lindahl B, Christersson C. Pregnancy complications and long-term risk of cardiovascular events in women with structural heart disease. Open Heart. 2024;11(2):e002833. DOI: 10.1136/openhrt-2024-002833. PMID: 39277187"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta já tem documentos que isolam desfechos vasculares específicos após desfechos gestacionais adversos (AVC e doença arterial periférica, ambos da mesma linhagem de coortes suecas de coirmãs de Crump/Sundquist) e documentos sobre risco cardiovascular agregado após hipertensão gestacional/pré-eclâmpsia e sobre seus subtipos. Nenhum documento desta pasta tratava do PARTO PRÉ-TERMO isoladamente (independente de ser ou não acompanhado de pré-eclâmpsia) como fator de risco cardiovascular materno de longo prazo, nem sintetizava os mecanismos biológicos propostos (inflamação, disfunção endotelial, anormalidades placentárias, fatores genéticos/epigenéticos) e as recomendações práticas de rastreamento pós-parto. A revisão de Segovia-Reyes et al. (European Cardiology, maio de 2026, PMID 42170194) preenche essa lacuna com uma síntese orientada à prática clínica, alinhada às diretrizes ESC 2025 e a declarações científicas da AHA, distinta em foco e finalidade dos documentos de coorte já existentes sobre AVC e DAP. Busca confirmada em PubMed E-utilities (esearch) sem artigo equivalente já coberto; texto integral lido via PMC (acesso aberto, CC), não apenas resumo."
+source_refs:
+- 'Preterm Birth and Maternal Cardiovascular Risk. European cardiology. PMID: 42170194. DOI: 10.15420/ecr.2025.43. PMCID:
+  PMC13187938.'
+- 'Preterm Delivery and Maternal Cardiovascular Disease in Young and Middle-Aged Adult Women. Circulation. PMID: 28153993.
+  DOI: 10.1161/CIRCULATIONAHA.116.025954. PMCID: PMC5308562.'
+- 'Preterm Delivery and Future Risk of Maternal Cardiovascular Disease: A Systematic Review and Meta-Analysis. Journal of
+  the American Heart Association. PMID: 29335319. DOI: 10.1161/JAHA.117.007809. PMCID: PMC5850169.'
+- 'Cardiovascular disease risk in women with a history of spontaneous preterm delivery: A systematic review and meta-analysis.
+  European journal of preventive cardiology. PMID: 25665808. DOI: 10.1177/2047487314566758.'
+- 'Cardiovascular Disease-Related Morbidity and Mortality in Women With a History of Pregnancy Complications. Circulation.
+  PMID: 30779636. DOI: 10.1161/CIRCULATIONAHA.118.036748.'
+- 'Preterm Delivery and Long-term Risk of Hypertension in Women. JAMA cardiology. PMID: 34643643. DOI: 10.1001/jamacardio.2021.4127.
+  PMCID: PMC8515256.'
+- 'Adverse pregnancy outcomes and long term risk of ischemic heart disease in mothers: national cohort and co-sibling study.
+  BMJ (Clinical research ed.). PMID: 36724989. DOI: 10.1136/bmj-2022-072112. PMCID: PMC9890184.'
+- 'Pre-term delivery and long-term risk of heart failure in women: a national cohort and co-sibling study. European heart
+  journal. PMID: 34849711. DOI: 10.1093/eurheartj/ehab789.'
+- 'Pregnancy complications and long-term risk of cardiovascular events in women with structural heart disease. Open heart.
+  PMID: 39277187. DOI: 10.1136/openhrt-2024-002833. PMCID: PMC11404238.'
+review_note: Nove registros e estudos primários comparados. Corrigidos HRs de IC por idade gestacional (4,27/3,39/2,70 na
+  primeira década), intervalo temporal e significado dos 13–15% de mediação. Corrigida inversão cronológica 3–6 meses versus
+  seis semanas; removida meta pressórica genérica e causalidade de mecanismos não estabelecida.
+summary: No estudo de insuficiência cardíaca (PMID 34849711), os HRs ajustados na primeira década foram 4,27 (IC95% 2,54–7,17)
+  para 22–27 semanas, 3,39 (2,57–4,48) para 28–33 semanas e 2,70 (2,19–3,32) para 34–36 semanas. Não são 12,8, 3,7 e 2,2.
+  Para qualquer parto pré-termo, o HR foi 1,56 (1,47–1,66) após 30–43 anos. HRs não representam probabilidades absolutas nem
+  permanecem constantes durante todo o seguimento.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Parto Pré-Termo como Preditor de Risco Cardiovascular Materno de Longo Prazo (European Cardiology, 2026)
+# Parto pré-termo e risco cardiovascular materno de longo prazo
 
-## Por que este documento existe
-A pasta já cobre, a partir da mesma linhagem de coortes suecas de coirmãs (Crump/Sundquist), o AVC e a doença arterial periférica como desfechos vasculares isolados após um conjunto de cinco desfechos gestacionais adversos avaliados em bloco (parto pré-termo, pequeno para idade gestacional, pré-eclâmpsia, outros distúrbios hipertensivos e diabetes gestacional). O que faltava era um documento que tratasse o **parto pré-termo (PPT) especificamente** — independente de coexistir ou não com pré-eclâmpsia — como fator de risco cardiovascular próprio, reunindo os mecanismos biológicos propostos e traduzindo a evidência em uma rotina de rastreamento pós-parto. Segovia-Reyes et al. publicaram em maio de 2026, na *European Cardiology* (revista de acesso aberto ligada à Radcliffe Cardiology, PMID 42170194), uma revisão narrativa exatamente com esse recorte, citando estudos de coorte de grande porte (Tanz et al. 2017, Wu et al. 2018, Heida et al. 2016, Grandi et al. 2019 e a série de coortes suecas de Crump et al. 2021-2023) e propondo uma rotina prática de incorporação da história obstétrica à avaliação de risco cardiovascular, alinhada às diretrizes ESC 2025 de doença cardiovascular e gravidez e a declarações científicas da AHA.
+## Tipo de evidência
+A revisão narrativa de Segovia-Reyes e colaboradores (2026) reúne estudos sobre parto antes de 37 semanas e risco cardiovascular posterior. Ela não é uma nova coorte nem uma metanálise original. O antecedente obstétrico é um **marcador de risco**, mesmo após ajuste para fatores convencionais em alguns estudos; isso não prova que o parto pré-termo cause diretamente cada desfecho.
 
-## O que caracteriza esta revisão
-Trata-se de uma revisão narrativa (não uma metanálise nova nem um estudo de coorte original) que sintetiza a evidência epidemiológica já publicada ligando PPT (<37 semanas) a maior risco cardiovascular materno de longo prazo, propõe mecanismos biológicos unificadores e discute a tradução clínica dos achados à luz das diretrizes ESC 2025 e AHA. O valor deste documento está em reunir, num só lugar, achados de estudos independentes (não apenas a linhagem sueca já citada nesta pasta) e em oferecer uma proposta concreta de rotina de rastreamento — o que os documentos de coorte já existentes na pasta, focados em quantificar um desfecho específico, não faziam.
+## Estudos principais
+| Estudo e população | Estimativa relevante |
+|---|---|
+| Tanz, Nurses' Health Study II, 70.182 mulheres | Parto pré-termo na primeira gravidez: HR ajustado 1,42 (IC95% 1,16–1,72) para infarto ou AVC. Antes de 32 semanas: HR 2,01 (1,47–2,75). |
+| Wu, metanálise de 21 estudos, mais de 5,8 milhões de mulheres | RR 1,43 (1,18–1,72) para doença cardiovascular, 1,49 (1,38–1,60) para doença coronariana e 1,65 (1,51–1,79) para AVC; desfechos e populações variaram. |
+| Crump, coorte sueca de hipertensão | Na primeira década após o parto, HR 1,67 (1,61–1,74) para hipertensão após parto pré-termo; associação ainda presente após 30–43 anos. |
+| Crump, coorte sueca de doença isquêmica | HR 1,72 (1,55–1,90) na primeira década; 1,23 (1,19–1,27) após 30–46 anos. |
+| Crump, coorte sueca de insuficiência cardíaca | HR 2,96 (2,48–3,53) na primeira década para qualquer parto pré-termo, comparado a 39–41 semanas. |
 
-## Magnitude do risco segundo os estudos citados na revisão
-A revisão aponta que, de forma consistente entre estudos independentes, mulheres com história de PPT têm risco cardiovascular aumentado em aproximadamente **43% a mais que o dobro** em relação a mulheres sem esse antecedente (Wu et al. 2018, meta-análise, PMID 29335319), com variações conforme o desfecho avaliado e a idade gestacional do parto:
+No estudo de insuficiência cardíaca (PMID 34849711), os **HRs ajustados na primeira década** foram **4,27** (IC95% 2,54–7,17) para 22–27 semanas, **3,39** (2,57–4,48) para 28–33 semanas e **2,70** (2,19–3,32) para 34–36 semanas. Não são 12,8, 3,7 e 2,2. Para qualquer parto pré-termo, o HR foi 1,56 (1,47–1,66) após 30–43 anos. HRs não representam probabilidades absolutas nem permanecem constantes durante todo o seguimento.
 
-| Desfecho | Achado | Estudo |
-|---|---|---|
-| Eventos cardiovasculares (IAM e outros) | PPT muito precoce (<32 semanas) associado a **risco cerca de duas vezes maior** | Tanz et al. 2017, PMID 28153993 |
-| Hipertensão crônica | Risco elevado de forma consistente ao longo de décadas de seguimento | Crump et al. 2022, PMID 34643643 |
-| Doença isquêmica do coração | PPT associado de forma independente a **72% mais risco** de doença isquêmica do coração na primeira década pós-parto, com elevação residual detectável 30-46 anos depois | Crump et al. 2023 (coorte nacional sueca), PMID 36724989 |
-| Insuficiência cardíaca (IC) | Qualquer PPT: **quase 3x mais risco** de IC de início recente. Por faixa: <28 semanas, **12,8x**; 28-33 semanas, **~3,7x**; 34-36 semanas, **2,2x**. Risco residual ainda presente (~HR 1,5) 30-40 anos após o parto | Crump et al. 2021, PMID 34849711 |
-| AVC | Associações robustas com AVC isquêmico e hemorrágico (achado citado de forma consolidada na revisão; ver também documento desta pasta sobre AVC na coorte sueca de coirmãs) | Citado na revisão a partir da série de Crump/Sundquist |
-| Doença cardiovascular em mulheres com cardiopatia estrutural prévia | Complicações gestacionais (incluindo PPT) associadas a maior risco de eventos cardiovasculares de longo prazo especificamente nesta subpopulação de maior risco basal | Cederlöf et al. 2024, PMID 39277187 |
+A metanálise de Heida incluiu especificamente parto pré-termo **espontâneo** e também encontrou associação com eventos futuros. Grandi avaliou um conjunto mais amplo de complicações obstétricas. Em mulheres com cardiopatia estrutural prévia, Cederlöf identificou associações entre parto pré-termo e mortalidade por todas as causas (HR 1,91; IC95% 1,38–2,64) e hospitalizações por doença aterosclerótica (1,56; 1,19–2,04). Essas populações e estimativas não são intercambiáveis.
 
-A revisão também registra que apenas uma **fração modesta (aproximadamente 13-15%)** do excesso de risco cardiovascular após PPT é explicada por fatores pós-parto convencionais mensuráveis (hipertensão e diabetes estabelecidas no seguimento) — o restante aponta para processos biológicos persistentes (inflamação de baixo grau, alterações da coagulação, disfunção endotelial) que não se resolvem com o parto.
+## Mecanismos e mediação
+Inflamação, alterações endoteliais e placentárias e fatores genéticos compartilhados são hipóteses discutidas na revisão. Não está estabelecida a contribuição causal de cada mecanismo.
 
-## Mecanismos biológicos propostos
-A revisão organiza a fisiopatologia proposta em cinco eixos, todos com plausibilidade biológica prévia mas ainda sem comprovação causal definitiva isolada:
-- **Inflamação e estresse oxidativo**: citocinas pró-inflamatórias (IL-1β, IL-6, IL-8, TNF-α) elevadas no PPT, com espécies reativas de oxigênio superando as defesas antioxidantes e ativação do fator de transcrição NF-κB, além de disfunção de células T regulatórias.
-- **Disfunção endotelial**: moléculas de adesão solúveis elevadas (sICAM-1, sVCAM-1, E-selectina solúvel), indicativas de ativação endotelial, favorecendo adesão e transmigração leucocitária e dano vascular progressivo.
-- **Anormalidades vasculares placentárias**: conversão inadequada das artérias espirais uterinas na placentação, gerando perfusão útero-placentária subótima e um ambiente isquêmico que amplifica estresse oxidativo e sinalização inflamatória — descritas como o segundo achado mais reportado no PPT, atrás apenas da inflamação aguda.
-- **Disfunção da via angiogênica**: elevação de sFlt-1 (tirosina-quinase-1 solúvel semelhante a fms) com redução correspondente do fator de crescimento placentário, prejudicando a angiogênese — o mesmo eixo bioquímico já conhecido desta pasta pela pré-eclâmpsia, aqui estendido ao PPT isoladamente.
-- **Fatores genéticos e epigenéticos**: polimorfismos nos genes das óxido nítrico sintases (NOS2, NOS3), alterações de microRNAs (aumento de hsa-miR-150-5p, redução de hsa-miR-23b-5p) e alterações de metilação em genes do eixo hipotálamo-hipófise-adrenal (como o receptor de glicocorticoide NR3C1) associadas a estresse materno.
+Na coorte de Tanz, o desenvolvimento de hipertensão, hipercolesterolemia, diabetes tipo 2 e mudanças de IMC explicou estatisticamente cerca de **13–15% da associação** em análises específicas. O restante não pode ser atribuído automaticamente a inflamação persistente: medição incompleta, confundimento e pressupostos da análise de mediação também importam. Esse percentual não estima quanto risco seria eliminado pelo tratamento dos fatores convencionais.
 
-## Recomendações práticas de rastreamento propostas pela revisão
-A revisão traduz a evidência em uma proposta concreta de incorporação da história obstétrica à prática clínica, alinhada às diretrizes ESC 2025 e a declarações científicas da AHA:
-- **História obstétrica como fator de risco a ser perguntado de rotina**: PPT (<37 semanas) e seu fenótipo (espontâneo versus indicado; recorrente versus único) devem ser tratados como fator obstétrico clinicamente relevante que amplifica o risco cardiovascular ("risk-enhancing"), perguntado de rotina na atenção primária e em consultas de cardiologia, e registrado em prontuário.
-- **Janela de avaliação cardiovascular precoce**: avaliação cardiovascular abrangente no pós-parto precoce (dentro de 3-6 meses), especialmente para os fenótipos de PPT de maior risco (indicado por causa materna, associado a pré-eclâmpsia e/ou restrição de crescimento fetal).
-- **Componentes mínimos da avaliação**: pressão arterial (meta <140/90 mmHg, com controle mais rígido se já houver dano de órgão-alvo), perfil lipídico completo e rastreamento glicêmico (HbA1c ou glicemia de jejum).
-- **Encaminhamento**: mulheres com PPT por indicação médica e/ou acompanhado de síndromes placentárias (pré-eclâmpsia, restrição de crescimento fetal) devem ser consideradas para encaminhamento a um "heart team" materno ou clínica especializada em cardio-obstetrícia; onde esse serviço não existir, monitorização periódica de fatores de risco cardiovascular na atenção primária é razoável, com periodicidade anual considerada para os fenótipos de maior risco.
-- **Intervenções preventivas**: aconselhamento intensivo de estilo de vida iniciado já no pós-parto precoce, apoio ao aleitamento materno (associado a perfil cardiometabólico mais favorável na revisão), dieta e atividade física regular; terapia farmacológica quando o risco global for limítrofe deve considerar a história obstétrica como contexto que reforça a indicação, com decisão individualizada.
-- **Aconselhamento pré-concepcional para gestação subsequente**: idealmente envolvendo um "pregnancy heart team", para otimizar a saúde cardiovascular antes de nova gestação.
+## Aplicação clínica
+Registrar idade gestacional, recorrência, parto espontâneo ou indicado e coexistência de pré-eclâmpsia ajuda a contextualizar a avaliação cardiovascular. A revisão propõe avaliação estruturada de pressão, lipídios, glicemia e hábitos de vida, com continuidade após o puerpério e encaminhamento conforme os achados e a cardiopatia prévia.
 
-## Síntese prática
-1. **Parto pré-termo, isoladamente (mesmo sem pré-eclâmpsia), é fator de risco cardiovascular materno independente e de longo prazo** — hipertensão, diabetes tipo 2, doença isquêmica do coração, insuficiência cardíaca e AVC, com magnitude que varia por desfecho e se acentua quanto mais precoce o parto.
-2. **A insuficiência cardíaca mostra o gradiente mais impressionante por idade gestacional**: de 2,2x (34-36 semanas) a 12,8x (<28 semanas) segundo Crump et al. 2021 (PMID 34849711) — a idade gestacional do parto pré-termo importa tanto quanto o diagnóstico binário "pré-termo sim/não".
-3. **O risco não se explica, em sua maior parte, por hipertensão e diabetes que se instalam depois** — só 13-15% do excesso é atribuível a esses fatores mensuráveis no seguimento, reforçando que há um processo biológico próprio (inflamatório, endotelial, vascular placentário) que liga o PPT ao risco cardiovascular futuro.
-4. **A revisão propõe um horizonte de ação concreto**: perguntar a história de PPT na rotina, avaliar risco cardiovascular entre 3-6 meses pós-parto (mais cedo do que a consulta de revisão obstétrica padrão de 6 semanas costuma contemplar de forma estruturada), e considerar encaminhamento a cardio-obstetrícia nos fenótipos de maior risco.
-5. **Fenótipo do PPT importa**: a revisão distingue espontâneo de indicado, e recorrente de único — distinção que a documentação desta pasta sobre DAP na coorte sueca já havia demonstrado ser clinicamente relevante (PPT por indicação médica associado a DAP; PPT espontâneo isoladamente, não).
+A janela de **3–6 meses** discutida para avaliação preventiva é **posterior** à consulta obstétrica de seis semanas e não a substitui. Também não justifica adiar avaliação de sintomas ou hipertensão no pós-parto imediato. Metas pressóricas e medicamentos devem seguir a situação clínica, lactação, planejamento reprodutivo e recomendações específicas; o antecedente isolado não determina uma prescrição automática.
 
-## Armadilhas clínicas
-- **Perguntar sobre pré-eclâmpsia na anamnese cardiovascular e não perguntar sobre parto pré-termo isolado** — a evidência reunida nesta revisão mostra risco cardiovascular elevado mesmo quando o PPT ocorre sem pré-eclâmpsia.
-- **Tratar todo "parto pré-termo" como categoria única** — o gradiente de risco de insuficiência cardíaca por faixa de idade gestacional (2,2x a 12,8x) mostra que quanto mais precoce o parto, maior o risco; PPT tardio (34-36 semanas) não deveria ser equiparado a PPT extremo (<28 semanas) na estratificação.
-- **Adiar a avaliação cardiovascular para a consulta de puerpério padrão de 6 semanas sem estrutura dedicada** — a revisão propõe janela de avaliação cardiovascular abrangente (pressão arterial, perfil lipídico, glicemia) em até 3-6 meses, com estrutura própria, para os fenótipos de maior risco.
-- **Assumir que o excesso de risco será corrigido apenas tratando hipertensão e diabetes que aparecerem depois** — a própria revisão registra que isso explica apenas 13-15% do excesso; a vigilância deve continuar mesmo em mulheres sem esses diagnósticos.
-- **Não considerar o fenótipo (espontâneo versus indicado)** ao aconselhar sobre risco cardiovascular futuro — a distinção é citada como clinicamente relevante e converge com achado já documentado nesta pasta para DAP.
+As estratégias de rastreamento propostas pela revisão não foram testadas por ela em ensaio de desfechos. As associações epidemiológicas sustentam vigilância e prevenção individualizada, sem transformar riscos relativos em prognóstico inevitável.
 
-## Limites
-- É uma **revisão narrativa**, não uma metanálise nova nem um estudo de coorte original — a força de cada associação numérica depende da qualidade do estudo primário citado (coortes suecas de registro nacional, coorte americana, metanálises), não de uma reanálise unificada de dados individuais.
-- Os mecanismos biológicos descritos (inflamação, disfunção endotelial, fatores genéticos/epigenéticos) são **plausíveis e apoiados por estudos observacionais e translacionais**, mas a revisão não estabelece qual mecanismo é predominante nem sua contribuição causal quantitativa isolada.
-- As recomendações práticas de rastreamento (janela de 3-6 meses, periodicidade anual, encaminhamento a cardio-obstetrícia) refletem **posição de especialistas alinhada a diretrizes ESC 2025/AHA**, não um ensaio clínico randomizado testando a própria estratégia de rastreamento contra desfechos.
-- Estudos de base (americanos, suecos, e metanálises com estudos de múltiplos países) têm **diferenças de sistema de saúde e de captação de desfechos** entre si; a revisão sintetiza sem homogeneizar essas diferenças metodológicas.
+## Fontes
+Revisão: PMID 42170194, DOI 10.15420/ecr.2025.43. Estudos e sínteses de base: PMIDs 28153993, 29335319, 25665808, 30779636, 34643643, 36724989, 34849711 e 39277187.
 
 ## Tudo com Tudo
 
-- [AVC de Longo Prazo Após Desfechos Gestacionais Adversos: Coorte Sueca de Coirmãs (2025)](avc-de-longo-prazo-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2025.md)
-- [Doença Arterial Periférica Após Desfechos Gestacionais Adversos: Coorte Sueca de Coirmãs (2026)](doenca-arterial-periferica-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2026.md)
-- [Distúrbios hipertensivos da gestação: o subtipo modifica o risco cardiovascular de longo prazo](disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026.md)
-- [Hipertensão Gestacional e Pré-eclâmpsia: Risco Cardiovascular Materno de Longo Prazo](hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo.md)
-- [Duração da Pré-Eclâmpsia como Preditor de Risco Cardiovascular de Longo Prazo](duracao-da-pre-eclampsia-como-preditor-de-risco-cardiovascular-de-longo-prazo.md)
-- [ACC 2026: cuidado cardiovascular pós-parto do hospital ao primeiro ano](acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano.md)
-- [Carga Contemporânea de Doença Cardiovascular na Gravidez: Coorte de Prontuário Eletrônico](carga-contemporanea-de-doenca-cardiovascular-na-gravidez-coorte-de-prontuario-eletronico.md)
+- [AVC de Longo Prazo Após Desfechos Gestacionais Adversos: Coorte Sueca de Coirmãs (2025)](/biblioteca/avc-de-longo-prazo-apos-desfechos-gestacionais-adversos-coorte-sueca-de-coirmas-2025) — Relaciona parto pré-termo e outros desfechos gestacionais adversos ao AVC materno tardio, preservando o caráter observacional.

@@ -1,0 +1,25 @@
+{
+  "slug": "congenita-do-adulto-nao-e-hap-idiopatica",
+  "titulo": "Eisenmenger do adulto: IPAH, STELLAR ou centro de ACHD?",
+  "tema": "Cardiopatias congênitas",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 32 anos, CIV ampla nunca operada, cianose de longa data, baqueteamento, saturação 84% em ar ambiente, 6MWD 380 m. Colega inicia sotatercept “porque é HAP grupo 1: o STELLAR ganhou 40,8 m e o ZENITH reduziu morte (HR 0,24)”. Propõe fechar a CIV “se Qp:Qs >1,5”.",
+  "pergunta": "O que está alinhado com a ESC 2020 de ACHD e com os ensaios abertos?",
+  "opcoes": [
+    "Nada a corrigir: Eisenmenger é IPAH; STELLAR e ZENITH valem iguais; fechar a CIV reduz a RVP.",
+    "Eisenmenger é shunt com reversão e cianose, não IPAH. STELLAR (PMID 36877098) entrou HAP após correção de shunt, não o não operado com reversão. ZENITH (PMID 40167274) é alto risco de outra população. ESC 2020 (PMID 32860028): centro de ACHD; com 6MWD <450 m, considerar ERA em monoterapia inicial (IIa B, ESC 2020). Não fechar o shunt de Eisenmenger. BREATHE-5 (PMID 16801459) é o placebo-controlado do Eisenmenger em CF III: 37 vs 17, +53,1 m, saturação não piorou.",
+    "Sotatercept tem NNT 4 no Eisenmenger; a ESC 2020 já o colocou em Classe I.",
+    "Fechar a CIV agora (Classe I se Qp:Qs >1,5, qualquer RVP) e só então discutir bosentana."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 32860028: ACHD no centro especialista; Eisenmenger ≠ IPAH; 6MWD <450 m → ERA monoterapia inicial IIa B na diretriz ESC2020. STELLAR métodos: idiopática, hereditária, fármaco, tecido conectivo ou após correção de shunt — não o shunt aberto com reversão. ZENITH não empresta o HR 0,24. BREATHE-5: 54 (37 vs 17), 16 semanas, CF III, +53,1 m (P=0,0079), SpO2 +1,0% (−0,7 a 2,8). Sem NNT impresso. O fechamento do defeito em síndrome de Eisenmenger é contraindicado. Limiares de RVP usados em outros cenários de shunt não tornam operável um paciente com Eisenmenger. O HR 0,24 de ZENITH pertence ao composto morte/transplante pulmonar/hospitalização por piora de HAP, não à mortalidade isolada.",
+  "source_refs": [
+    "Baumgartner H, et al. Eur Heart J. 2021;42:563-645. PMID 32860028.",
+    "Galiè N, et al. Circulation. 2006;114:48-54. PMID 16801459.",
+    "Hoeper MM, et al. N Engl J Med. 2023;388:1478-1490. PMID 36877098.",
+    "Humbert M, et al. N Engl J Med. 2025;392:1987-2000. PMID 40167274.",
+    "ESC2020 ACHD, texto integral da diretriz: https://www.sks.sk/system/files/vrodeny_chyby_srdca_v_dospelosti_2020_guidelines.pdf"
+  ],
+  "review_status": "revisado",
+  "review_note": "ClasseERA6MWT<450conferida no textoESC2020. Corrigidos mortalidadeisolada versuscompostoZENITH e generalização indevida de limiarRVP deoutraslesões."
+}

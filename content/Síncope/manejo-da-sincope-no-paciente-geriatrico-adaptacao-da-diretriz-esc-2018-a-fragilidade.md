@@ -1,11 +1,33 @@
 ---
-title: "Manejo da Síncope no Paciente Geriátrico: Adaptação da Diretriz ESC 2018 à Fragilidade"
+title: 'Manejo da Síncope no Paciente Geriátrico: Adaptação da Diretriz ESC 2018 à Fragilidade'
 slug: manejo-da-sincope-no-paciente-geriatrico-adaptacao-da-diretriz-esc-2018-a-fragilidade
-theme: "Síncope"
+theme: Síncope
 kind: documento
 review_status: revisado
-review_note: "Verificado nesta sessão: fonte primária conferida via PubMed E-utilities (título/revista/data/DOI exatos), abstract completo lido no efetch, os elementos centrais da revisão (metodologia da busca, achados por eixo temático) conferidos contra o texto do resumo estruturado. Checado contra o corpus canônico: a pasta já cobre síncope no idoso por vários ângulos específicos — armadilhas diagnósticas e diferencial com queda (sincope-no-idoso-armadilhas-diagnosticas), decisão de pedir ecocardiograma (escore ROMEO), hipersensibilidade do seio carotídeo e direção veicular, e risco de fratura por queda em coortes — mas nenhum aborda a pergunta mais ampla de ADAPTAÇÃO DO PRÓPRIO ALGORITMO DE MANEJO da diretriz ESC 2018 à fragilidade do paciente geriátrico (fenotipagem ortostática repetida, desprescrição sistemática, integração explícita de fragilidade/cognição/risco de trauma na decisão de internar). Este documento fecha essa lacuna estrutural, sem duplicar os ângulos já cobertos."
-source_refs: ["Antonazzo B, Sirignano A, Salvini M, et al. Management of Syncope in Geriatric Patients: Are 2018 European Society of Cardiology Guidelines Still Relevant? J Clin Med. 2026;15(16):6303. DOI: 10.3390/jcm15166303. PMID: 42652707. PMCID: PMC13513275 — revisão narrativa estruturada ancorada na diretriz ESC 2018, busca em MEDLINE/PubMed até fevereiro de 2026; abstract completo conferido no PubMed via E-utilities em 09/09/2026.", "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — diretriz de referência que a revisão de 2026 reavalia; já usada em outros documentos desta pasta."]
+review_note: Conferidos diretriz ESC2018 e revisão estruturada PMID 42652707. Corrigidas desprescrição como suspensão automática,
+  marca-passo por tilt isolado e suposta validação rotineira da cardioneuroablação em jovens. Síntese narrativa delimitada
+  sem estimativas inventadas.
+source_refs:
+- 'Management of Syncope in Geriatric Patients: Are 2018 European Society of Cardiology Guidelines Still Relevant? Journal
+  of clinical medicine. PMID: 42652707. DOI: 10.3390/jcm15166303. PMCID: PMC13513275.'
+- '2018 ESC Guidelines for the diagnosis and management of syncope. European heart journal. PMID: 29562304. DOI: 10.1093/eurheartj/ehy037.'
+summary: 'Oito anos depois da publicação da diretriz ESC 2018 de síncope, Antonazzo et al. (Journal of
+
+  Clinical Medicine, 2026) fizeram uma pergunta direta: o arcabouço daquela diretriz ainda é válido
+
+  especificamente para o paciente geriátrico, ou a literatura acumulada desde então exige adaptação?
+
+  A motivação é um problema já bem descrito na prática clínica e parcialmente coberto por outros
+
+  documentos desta pasta (ver "Síncope no Idoso: Armadilhas Diagnósticas"): síncope no idoso é comum,
+
+  heterogênea e frequentemente classificada de forma equivocada como queda inexplicada — o que leva
+
+  a lesão, medo de recorrência e a uma cascata de exames de baixo ren'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Manejo da Síncope no Paciente Geriátrico: Adaptação da Diretriz ESC 2018 à Fragilidade
@@ -51,10 +73,10 @@ exemplo) aprofunda especificamente essas duas formas tardias/pós-prandiais no c
 é um refinamento que a revisão de 2026 acrescenta.
 
 ### 2. Desprescrição sistemática como intervenção central
-A revisão aponta a **desprescrição sistemática** — revisão e suspensão de medicações que contribuem
+A revisão aponta a **desprescrição sistemática** — revisão de indicação, dose e possível redução ou suspensão individualizada de medicações que contribuem
 para hipotensão, bradicardia ou disautonomia (anti-hipertensivos, diuréticos, agentes com efeito
 cronotrópico negativo, entre outros) — como componente central do manejo geriátrico da síncope, indo
-além da investigação diagnóstica isolada.
+além da investigação diagnóstica isolada. Não significa suspender automaticamente anti-hipertensivos, diuréticos ou tratamentos necessários para insuficiência cardíaca; deve-se ponderar congestão, pressão arterial, ritmo e indicação de cada fármaco.
 
 ### 3. Integração explícita de fragilidade, cognição e risco de trauma na decisão de disposição
 Talvez o ponto mais estruturalmente novo em relação ao restante da pasta: a revisão defende que a
@@ -70,12 +92,11 @@ incorporam esses três eixos geriátricos.
   síncope inexplicada recorrente, associado a monitoramento remoto — reforço de estratégia já
   documentado nesta pasta (fluxograma de síncope inexplicada recorrente), sem contradizê-lo.
 - **Marca-passo seletivo para síncope reflexa assistólica induzida por tilt**: a revisão reforça a
-  seleção de pacientes com **assistolia induzida por tilt test** como candidatos à estimulação
+  seleção de pacientes com síncope reflexa grave, recorrente e imprevisível e componente assistólico documentado, incluindo no tilt, como possíveis candidatos à estimulação
   cardíaca — coerente com o documento já existente sobre marca-passo versus cardioneuroablação nesta
   pasta.
 - **Cardioneuroablação permanece investigacional na maioria dos idosos**: ponto relevante de
-  cautela — ao contrário da população mais jovem, onde a cardioneuroablação já tem posição conjunta
-  de sociedades (documento já publicado nesta pasta, EHRA/HRS/APHRS/LAHRS 2024), a revisão de 2026
+  cautela — uma posição conjunta de sociedades não torna a técnica tratamento rotineiro validado para todos os jovens; a revisão de 2026
   classifica o procedimento como **investigacional para a maioria dos idosos**, sem endossar
   extrapolação direta dos critérios de seleção de pacientes mais jovens para a população geriátrica.
 
@@ -94,16 +115,13 @@ extensa hospitalar de baixo rendimento).
   metanálise quantitativa dos desfechos citados (lesão, queda, internação, diagnóstico arrítmico,
   eventos graves em curto prazo). Não citar como se fosse revisão sistemática Cochrane ou metanálise
   formal.
-- A revisão **não fornece números agregados específicos** (incidências, razões de risco) para os
-  achados por eixo temático no próprio resumo estruturado — o valor do documento está na **síntese
-  de direção da evidência e na proposta de adaptação do algoritmo**, não em estimativas numéricas
-  pontuais. Onde a prática clínica exigir um número específico de incidência ou risco relativo para
-  hipotensão pós-prandial ou tardia, `VERIFICAÇÃO HUMANA NECESSÁRIA` contra o texto completo do artigo
-  antes de citar um valor.
-- **Conflito de interesse declarado** por um dos coautores (consultoria para múltiplas empresas de
-  dispositivos e fármacos cardiovasculares) — não relacionado diretamente ao conteúdo desta revisão de
-  síncope geriátrica, mas registrado por transparência, como já é praxe nesta base.
+- Trata-se de síntese qualitativa e proposta de percurso assistencial; não há estimativa agregada que permita quantificar benefício do algoritmo como um todo.
+- Declarações de conflito de interesses devem ser consideradas; ausência de relação direta alegada pelos autores não equivale a demonstrar ausência de influência.
 - Este documento **complementa, e não substitui**, os documentos já existentes sobre armadilhas
   diagnósticas no idoso, escore ROMEO, hipersensibilidade do seio carotídeo/direção veicular e risco
   de fratura por queda — cada um responde a uma pergunta distinta dentro do mesmo problema geriátrico
   mais amplo.
+
+## Tudo com Tudo
+
+- [Síncope: diagnóstico e manejo (ESC 2018)](/biblioteca/sincope-diagnostico-e-manejo-esc-2018) — Relaciona adaptações por fragilidade ao algoritmo original ESC de síncope, mecanismos, medicamentos e investigação direcionada.

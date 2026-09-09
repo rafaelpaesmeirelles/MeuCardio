@@ -1,0 +1,25 @@
+{
+  "slug": "dapa-ckd-2020",
+  "title": "DAPA-CKD: dapagliflozina e desfechos de DRC, com ou sem diabetes",
+  "tema": "Geral",
+  "year": 2020,
+  "journal": "New England Journal of Medicine",
+  "pmid": "32970396",
+  "doi": "10.1056/NEJMoa2024816",
+  "design": "Ensaio de fase 3, randomizado, duplo-cego, controlado por placebo, dirigido a eventos. NCT03036150. Parado precocemente por eficácia a pedido do comitê independente de monitoramento. Financiado por AstraZeneca.",
+  "population": "Adultos com DRC: TFGe 25 a 75 mL/min/1,73 m² e relação albumina/creatinina urinária 200 a 5000 (albumina em mg, creatinina em g), com ou sem diabetes tipo 2. n=4.304 (2.152 dapagliflozina versus 2.152 placebo).",
+  "intervention": "Dapagliflozina 10 mg uma vez ao dia.",
+  "control": "Placebo.",
+  "primary_outcome": "Composto de queda sustentada de pelo menos 50% da TFGe, doença renal terminal, ou morte por causa renal ou cardiovascular.",
+  "key_findings": "Seguimento mediano 2,4 anos. Primário: 197/2.152 (9,2%) versus 312/2.152 (14,5%); HR 0,61; IC95% 0,51–0,72; P<0,001; NNT 19 (IC95% 15–27) publicado pelo próprio ensaio para prevenir um evento primário. Composto renal (queda sustentada ≥ 50% da TFGe, DRT ou morte renal, sem morte CV): HR 0,56; IC95% 0,45–0,68; P<0,001. Morte CV ou hospitalização por IC: HR 0,71; IC95% 0,55–0,92; P=0,009. Morte por qualquer causa: 101 (4,7%) versus 146 (6,8%); HR 0,69; IC95% 0,53–0,88; P=0,004. Efeito semelhante com e sem diabetes tipo 2. Perfil de segurança conhecido da dapagliflozina confirmado.",
+  "clinical_implications": "Na DRC albuminúrica do recorte (TFGe 25–75 e RAC 200–5000), dapagliflozina 10 mg reduz o composto de progressão renal ou morte renal/CV, com ou sem diabetes. Não é DAPA-HF (ICFEr, FEVE ≤ 40%, composto de piora de IC ou morte CV; PMID 31535829; HR 0,74). Não é DELIVER (IC com FEVE >40%; PMID 36027570; HR 0,82). Não é FLOW (semaglutida 1,0 mg SC no DM2 com DRC). Não é FIDELIO-DKD (finerenona no DM2 com DRC). Não fundir 9,2% versus 14,5% com internação por IC da ICFEr. O NNT 19 é o publicado para o horizonte do ensaio, de mediana 2,4 anos. O ensaio não justifica retirar IECA/BRA apenas por iniciar iSGLT2; ajustes dependem das indicações e da tolerabilidade.",
+  "source_refs": [
+    "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al.; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383:1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396. NCT03036150.",
+    "McMurray JJV, Solomon SD, Inzucchi SE, et al.; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381:1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829. NCT03036124.",
+    "Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2022;387:1089-1098. DOI: 10.1056/NEJMoa2206286. PMID: 36027570. NCT03619213.",
+    "FLOW. PMID: 38785209.",
+    "FIDELIO-DKD. PMID: 33264825."
+  ],
+  "review_status": "revisado",
+  "review_note": "DAPA-CKD e estudos comparados conferidos; tema canônico, horizonte de NNT e tratamento de base esclarecidos."
+}

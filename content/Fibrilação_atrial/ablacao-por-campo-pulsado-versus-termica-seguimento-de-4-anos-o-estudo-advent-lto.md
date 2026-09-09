@@ -1,46 +1,61 @@
 ---
-title: "Ablação por Campo Pulsado versus Térmica em 4 Anos: o Estudo ADVENT-LTO"
+title: 'ADVENT-LTO: resultados de quatro anos de ablação por campo pulsado'
 slug: ablacao-por-campo-pulsado-versus-termica-seguimento-de-4-anos-o-estudo-advent-lto
-theme: "Fibrilação atrial"
+theme: Fibrilação atrial
 kind: estudo
 review_status: revisado
-source_refs: ["Reddy VY, Gerstenfeld EP, Mountantonakis SE, et al; ADVENT-LTO Study Investigators. Pulsed field ablation versus conventional thermal ablation for paroxysmal atrial fibrillation: 4-year outcomes in the ADVENT-LTO study. Nat Med. 2026;32(4):1444-1453. DOI: 10.1038/s41591-026-04246-4. PMID: 41652117 — extensão de seguimento de longo prazo do ensaio ADVENT (Reddy et al., N Engl J Med. 2023;389(18):1660-1671, PMID 37634148, já documentado nesta biblioteca). Estudo patrocinado pela Boston Scientific (fabricante do cateter de campo pulsado testado); três dos coautores (E.R., M.D.M., B.S.) são funcionários e acionistas da Boston Scientific, e a maioria dos demais coautores declara vínculo de consultoria/honorário com a empresa — declarado no próprio artigo, relevante para a interpretação"]
-legacy_source: "Documento novo, escrito em 08/09/2026. O documento já existente nesta biblioteca sobre o ensaio ADVENT cobre apenas o desfecho de 1 ano (publicação original, NEJM 2023). Este documento traz o seguimento de 4 anos da mesma coorte randomizada (ADVENT-LTO, Nature Medicine 2026), respondendo diretamente à lacuna de dados de PFA além do primeiro ano — reconhecida pelos próprios autores como escassa até esta publicação."
+source_refs:
+- 'Reddy VY, Gerstenfeld EP, Mountantonakis SE, et al; ADVENT-LTO Study Investigators. Pulsed field ablation versus conventional
+  thermal ablation for paroxysmal atrial fibrillation: 4-year outcomes in the ADVENT-LTO study. Nat Med. 2026;32(4):1444-1453.
+  DOI: 10.1038/s41591-026-04246-4. PMID: 41652117.'
+- 'PubMed: https://pubmed.ncbi.nlm.nih.gov/37634148/'
+review_note: 'Métodos completos corrigiram erro central: extensão observacional sem hipóteses confirmatórias/poder dedicado,
+  desfecho permite antiarrítmicos e difere do original. ADVENT demonstrou não inferioridade, não superioridade de segurança;
+  removidas afirmações de ausência de deterioração das curvas. Conferência editorial final: título alinhado ao corpo revisado,
+  campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário.
+  Vínculos internos preservados.'
+summary: 'O ADVENT original randomizou 607 pessoas com FA paroxística sintomática refratária a antiarrítmico: 305 para campo
+  pulsado (PFA) e 302 para ablação térmica por radiofrequência ou criobalão. Em um ano, demonstrou não inferioridade, tanto
+  no desfecho de eficácia quanto nos eventos graves relacionados ao dispositivo/procedimento. Não demonstrou superioridade
+  de segurança: eventos do desfecho de segurança ocorreram em seis pacientes com PFA e quatro com ablação térmica.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Ablação por Campo Pulsado versus Térmica em 4 Anos: o Estudo ADVENT-LTO
+# ADVENT-LTO: resultados de quatro anos de ablação por campo pulsado
 
-## O que faltava depois do ADVENT original
-O documento já existente nesta biblioteca sobre o ensaio ADVENT (Reddy VY et al., N Engl J Med. 2023;389(18):1660-1671, PMID 37634148) estabeleceu, em 1 ano de seguimento, a não inferioridade da ablação por campo pulsado (PFA) frente à ablação térmica convencional (radiofrequência ou criobalão) para FA paroxística refratária a fármaco — com probabilidade posterior de não inferioridade acima de 0,999 tanto para eficácia quanto para segurança. O que aquele resultado não podia responder é a pergunta que mais importa para o paciente que vai viver com o resultado da ablação por anos: **o benefício da PFA se mantém, ou a curva de recorrência da PFA e da ablação térmica convergem com o tempo?** Os próprios autores do estudo original reconheceram, na publicação de seguimento, que **havia pouco dado de desfecho além de 1 ano** para qualquer modalidade de PFA até esta publicação.
+O ADVENT original randomizou 607 pessoas com FA paroxística sintomática refratária a antiarrítmico: 305 para campo pulsado (PFA) e 302 para ablação térmica por radiofrequência ou criobalão. Em um ano, demonstrou **não inferioridade**, tanto no desfecho de eficácia quanto nos eventos graves relacionados ao dispositivo/procedimento. Não demonstrou superioridade de segurança: eventos do desfecho de segurança ocorreram em seis pacientes com PFA e quatro com ablação térmica.
 
-## O estudo ADVENT-LTO (2026)
-Reddy VY et al.; ADVENT-LTO Study Investigators. Nat Med. 2026;32(4):1444-1453 (PMID 41652117). Extensão de seguimento de longo prazo (Long-Term Outcomes) da mesma coorte randomizada do ADVENT original — não é um estudo novo com nova randomização, é o acompanhamento prolongado dos mesmos pacientes:
-- **364 pacientes com FA paroxística participaram do seguimento estendido** — **183 do braço PFA e 181 do braço térmico** (237 homens, 127 mulheres)
-- Seguimento médio de **1.332 ± 147 dias** (cerca de 3,6 anos, arredondado a 4 anos no título do estudo)
-- **Desfecho primário: sucesso terapêutico em 4 anos** (ausência de recorrência de arritmia atrial, sem necessidade de reintervenção — mesma lógica de desfecho composto usada no ADVENT original de 1 ano)
+## Extensão observacional
 
-**Atenção ao tamanho da amostra**: o ADVENT original randomizou 305 pacientes para PFA e 302 para ablação térmica (607 no total). O ADVENT-LTO reporta **364 pacientes no total (183 + 181)** — ou seja, o seguimento estendido cobriu **cerca de 60% da coorte original randomizada**, não sua totalidade. O artigo não detalha aqui os motivos da perda de acompanhamento (pacientes não recrutados para a extensão, perda de seguimento, óbito por causa não relacionada, entre outros motivos possíveis) — isso é uma limitação real de qualquer estudo de extensão de seguimento de longo prazo, e deve ser considerado ao generalizar os números abaixo para "todos os pacientes ablados por PFA", não apenas para os que permaneceram em acompanhamento.
+O ADVENT-LTO incluiu 364 participantes da coorte original, 183 com PFA e 181 com ablação térmica. O seguimento médio foi 1.332 ±147 dias. Não houve nova randomização: quem completara o primeiro ano foi contatado após pelo menos três anos para novo consentimento, revisão de prontuário e, quando aceito, Holter de sete dias. A participação correspondeu a aproximadamente 60% da coorte inicial; seleção e perdas podem influenciar a comparação.
 
-## Resultados em 4 anos
-- **Sucesso terapêutico (desfecho primário)**: **72,8% com PFA vs. 64,3% com ablação térmica** — diferença numérica a favor da PFA, mas **sem significância estatística** (p=0,12)
-- **Liberdade de intervenção hospitalar por arritmia** (desfecho pré-especificado, secundário): **85,6% com PFA vs. 78,6% com ablação térmica** — HR 0,64 (IC95% 0,38-1,05), tendência a favor da PFA, **intervalo de confiança cruzando 1**
-- **Reablação (nova ablação por recorrência)**: **10,4% com PFA vs. 17,7% com ablação térmica** — **p=0,04**, esta comparação isolada atingiu significância estatística nominal
-- **Progressão para FA persistente** (desfecho pré-especificado, secundário): **2,6% com PFA vs. 4,6% com ablação térmica** — HR 0,55 (IC95% 0,16-1,88), tendência a favor da PFA, **intervalo de confiança amplo e cruzando 1**
+O desfecho principal foi ausência de taquiarritmia atrial documentada ≥30 segundos, cardioversão ou reablação depois do período de blanking de três meses. **O uso de antiarrítmicos era permitido**, diferentemente do desfecho original de um ano. Portanto, os percentuais das duas publicações não representam exatamente a mesma medida de sucesso.
 
-**Conclusão literal dos autores**: em conjunto, os dados demonstram que os resultados favoráveis da PFA se mantêm ao longo de 4 anos; combinados com as vantagens de segurança da PFA sobre a ablação térmica (já estabelecidas no ADVENT original em 1 ano), esses dados de longo prazo sustentam a adoção ampla da PFA para o tratamento da FA.
+## Resultados estimados em quatro anos
 
-## Como ler estes números com o rigor que o desenho pede
-O desfecho primário de 4 anos — o único dos quatro resultados acima com poder estatístico dedicado a essa comparação — **não atingiu significância estatística** (p=0,12): a diferença de 8,5 pontos percentuais (72,8% vs. 64,3%) é numericamente favorável à PFA, mas o estudo não pode afirmar, com a evidência apresentada, que a PFA é superior à ablação térmica em eficácia de 4 anos. Os outros três resultados (liberdade de intervenção hospitalar, reablação e progressão para FA persistente) são descritos pelos próprios autores como **desfechos pré-especificados secundários** — a reablação foi a única com p<0,05 isolado, mas isso deve ser lido no contexto de múltiplas comparações secundárias sem correção formal declarada no resumo, e de um intervalo de confiança da HR de liberdade de intervenção hospitalar (0,38-1,05) que também cruza a unidade. **A leitura correta desta publicação é: tendência consistente a favor da PFA em todos os desfechos de eficácia de longo prazo, sem superioridade estatística formalmente estabelecida no desfecho primário** — isso é diferente de "a PFA provou ser superior em 4 anos", e diferente também de "os resultados divergem entre PFA e térmica com o tempo". O achado central e mais robusto é o que o próprio título anuncia: os resultados favoráveis observados em 1 ano **se mantiveram** (não pioraram, não convergiram) ao longo do seguimento estendido.
+| Desfecho | PFA | Térmica | Comparação |
+|---|---:|---:|---|
+| Sucesso terapêutico | 72,8% | 64,3% | p nominal=0,12 |
+| Livre de intervenção hospitalar por arritmia | 85,6% | 78,6% | HR 0,64; IC 95% 0,38–1,05 |
+| Reablação | 10,4% | 17,7% | p nominal=0,04 |
+| Progressão para FA persistente | 2,6% | 4,6% | HR 0,55; IC 95% 0,16–1,88 |
 
-## Vínculo com a indústria — declarado, não escondido
-Este é um estudo patrocinado pela Boston Scientific, fabricante do sistema de cateter de campo pulsado testado. Três dos coautores são funcionários e acionistas diretos da patrocinadora, e a maioria absoluta dos demais coautores — incluindo o primeiro e o último autor — declara vínculos de consultoria, honorário ou equity com a Boston Scientific e/ou outras empresas do setor de eletrofisiologia. Isso não invalida os números reportados (o desenho é o mesmo ensaio randomizado original, com adjudicação de desfecho já estabelecida na publicação de 1 ano), mas é informação relevante de procedência que deve acompanhar qualquer citação deste estudo — mesmo padrão de transparência de fonte já praticado nesta biblioteca para outros ensaios com financiamento industrial declarado.
+Os métodos esclarecem que **não foram predefinidas hipóteses formais para teste**: todas as análises são exploratórias e geradoras de hipóteses. É incorreto afirmar que o desfecho primário tinha poder confirmatório dedicado ou usar p=0,04 da reablação como prova definitiva de superioridade. Os percentuais de sucesso são estimativas de Kaplan–Meier, não simples proporções de todos os participantes observados por quatro anos completos.
 
-## Síntese prática
-O ADVENT-LTO é, até esta data, a maior extensão de seguimento randomizado publicada comparando PFA a ablação térmica além do primeiro ano — resposta direta à lacuna que os próprios investigadores do campo reconheciam. A mensagem central para a prática clínica é de **manutenção do benefício**, não de deterioração do resultado da PFA com o tempo: a proporção de pacientes livres de recorrência aos 4 anos permanece numericamente favorável à PFA (72,8% vs. 64,3%), a taxa de reablação foi menor com PFA (10,4% vs. 17,7%; p=0,04), e não houve sinal de que a curva de sucesso da PFA "caia" mais rápido que a da ablação térmica ao longo do tempo. Isso reforça — sem provar superioridade formal — a adoção já em curso da PFA como alternativa de primeira linha à ablação térmica na FA paroxística, complementando o documento já existente nesta biblioteca sobre o ensaio ADVENT original de 1 ano.
+## Interpretação
 
-## Armadilhas clínicas
-- **Afirmar que "o ADVENT-LTO provou que a PFA é superior à ablação térmica em 4 anos"** — o desfecho primário teve p=0,12, sem significância estatística; a leitura correta é tendência favorável, não superioridade demonstrada
-- **Ignorar que apenas ~60% da coorte original randomizada (364 de 607) permaneceu no seguimento de 4 anos** — isso é atrito relevante de um estudo de extensão de longo prazo, e limita a generalização direta dos percentuais para toda a população originalmente randomizada
-- **Tratar a redução de reablação (10,4% vs. 17,7%; p=0,04) como o desfecho principal do estudo** — ela foi estatisticamente significativa isoladamente, mas é um desfecho secundário pré-especificado entre vários, não o desfecho primário do ADVENT-LTO
-- **Esquecer o vínculo com a indústria** — patrocínio da Boston Scientific e múltiplos coautores com vínculo financeiro direto, declarado no próprio artigo; não desqualifica os dados, mas deve acompanhar a citação
-- **Extrapolar estes números para FA persistente** — assim como o ADVENT original, o ADVENT-LTO manteve o foco em **FA paroxística refratária a fármaco**; não é dado de FA persistente ou de longa duração
+A extensão oferece dados favoráveis de persistência da efetividade da PFA no grupo acompanhado. Não comprova superioridade em quatro anos, equivalência formal, ausência de recorrência tardia ou trajetórias idênticas às de um ano. Mudança da definição, monitorização intermitente e seleção da coorte impedem concluir simplesmente que o resultado “não piorou”.
+
+O estudo foi patrocinado pela Boston Scientific, que participou do desenho, coleta e análise, com laboratório independente cegado para monitorização de ritmo; conflitos financeiros foram declarados. A aplicabilidade permanece restrita à população e ao sistema estudados, sem extrapolação direta para FA persistente ou todos os dispositivos de PFA.
+
+## Fontes
+
+- ADVENT: [PMID 37634148](https://pubmed.ncbi.nlm.nih.gov/37634148/), DOI 10.1056/NEJMoa2307291.
+- ADVENT-LTO: [PMID 41652117](https://pubmed.ncbi.nlm.nih.gov/41652117/), [métodos completos](https://pmc.ncbi.nlm.nih.gov/articles/PMC13099369/), DOI 10.1038/s41591-026-04246-4.
+
+## Tudo com Tudo
+
+- [Ablação por Campo Pulsado versus Térmica: o Ensaio ADVENT](/biblioteca/ablacao-por-campo-pulsado-versus-termica-o-ensaio-advent) — Liga o seguimento ADVENT-LTO ao ADVENT original, preservando randomização, comparadores e limitações do seguimento de quatro anos.

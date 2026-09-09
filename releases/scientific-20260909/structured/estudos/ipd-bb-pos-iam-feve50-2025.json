@@ -1,0 +1,26 @@
+{
+  "slug": "ipd-bb-pos-iam-feve50-2025",
+  "title": "IPD de cinco ensaios: betabloqueador após IAM com FEVE ≥ 50%",
+  "tema": "Doença coronariana",
+  "theme": "Doença coronariana",
+  "year": 2026,
+  "journal": "New England Journal of Medicine",
+  "pmid": "41211954",
+  "doi": "10.1056/NEJMoa2512686",
+  "design": "Metanálise de dados individuais (IPD), modelo de Cox de efeitos fixos em um estágio. Cinco ensaios abertos que randomizaram betabloqueador versus sem betabloqueador após IAM contemporâneo. Recorte retido: FEVE ≥ 50% e sem outra indicação da classe.",
+  "population": "17.801 pacientes: REBOOT 7.459, REDUCE-AMI 4.967, BETAMI 2.441, DANBLOCK 2.277, CAPITAL-RCT 657. 8.831 (49,6%) betabloqueador versus 8.970 (50,4%) sem betabloqueador.",
+  "intervention": "Betabloqueador de longo prazo após IAM.",
+  "control": "Sem betabloqueador.",
+  "primary_outcome": "Composto de morte por qualquer causa, infarto do miocárdio ou insuficiência cardíaca.",
+  "key_findings": "Seguimento mediano 3,6 anos (IIQ 2,3–4,6). Desfecho primário: 717 (8,1%) com betabloqueador versus 748 (8,3%) sem; HR 0,97; IC95% 0,87–1,07; P=0,54. Morte: 335 vs 326; HR 1,04; IC95% 0,89–1,21. Infarto: 360 vs 407; HR 0,89; IC95% 0,77–1,03. Insuficiência cardíaca: 75 vs 87; HR 0,87; IC95% 0,64–1,19. Nenhum componente autoriza afirmar benefício nem dano.",
+  "clinical_implications": "Síntese confirmatória da FE preservada: em 17.801 pacientes com FEVE ≥ 50% e sem outra indicação, o betabloqueador de longo prazo não reduziu morte, infarto ou IC. Não extrapolar para FEVE 40–49% (a IPD exigiu ≥ 50%). Não misturar com BETAMI-DANBLOCK (PMID 40888716; FEVE ≥ 40%; composto de morte ou MACE; HR 0,85) nem com o REBOOT no conjunto FEVE >40% (PMID 40888702; HR 1,04). Os n da tabela são subconjuntos da IPD, não os n publicados de cada ensaio. Resultado nulo não é contraindicação. Manter a classe se houver angina, FA, HAS, arritmia ou FE reduzida. A ausência de superioridade não demonstra equivalência exata nem responde à retirada abrupta de tratamento crônico. A análise individual separada de FEVE 40–49% encontrou benefício no composto (HR 0,75; IC95% 0,58–0,97), reforçando a necessidade de respeitar os recortes.",
+  "source_refs": [
+    "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954.",
+    "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+    "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241.",
+    "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716.",
+    "IPD FEVE 40–49%. PMID: 40897190."
+  ],
+  "review_status": "revisado",
+  "review_note": "IPD de FEVE ≥50% conferida, incluindo subconjuntos e componentes; corrigido limite inferior e adicionada análise 40–49%."
+}

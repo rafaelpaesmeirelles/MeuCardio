@@ -1,0 +1,21 @@
+{
+  "slug": "soul-semaglutida-oral-mace-dm2",
+  "titulo": "Diabetes tipo 2 com DAC e DRC: o comprimido de semaglutida reduz MACE?",
+  "tema": "Diabetes e cardiologia",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 67 anos, diabetes tipo 2 (HbA1c 7,8%), revascularização cirúrgica há 4 anos, TFGe 48 mL/min/1,73 m². Recusa injeções. Pergunta se o comprimido de semaglutida 'protege o coração como o Ozempic'.",
+  "pergunta": "O que o ensaio SOUL (McGuire et al., NEJM 2025) demonstrou para semaglutida oral na dose máxima de 14 mg ao dia?",
+  "opcoes": [
+    "Apenas segurança cardiovascular, sem redução de MACE — era um ensaio de não inferioridade como o PIONEER-6",
+    "Equivalência comprovada com a semaglutida injetável 2,4 mg do SELECT, permitindo troca automática",
+    "9650 pacientes com DM2 e ASCVD e/ou DRC: MACE em 12,0% com semaglutida oral 14 mg versus 13,8% com placebo (HR 0,86; IC95% 0,77–0,96; P=0,006) em mediana de 49,5 meses",
+    "Redução de MACE restrita a quem tinha HbA1c acima de 9% no basal"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "O SOUL foi ensaio de superioridade, duplo-cego, em 9650 pessoas ≥ 50 anos com DM2 (HbA1c 6,5–10%) e ASCVD conhecida, DRC ou ambas. Semaglutida oral até 14 mg/dia versus placebo. MACE em 579/4825 (12,0%; 3,1/100 pessoas-ano) versus 668/4825 (13,8%; 3,7/100 pessoas-ano); HR 0,86; IC95% 0,77–0,96; P=0,006; mediana de seguimento 49,5 meses. Isso responde a quem recusa injeção. Não prova identidade com SUSTAIN-6 (injetável 0,5 ou 1,0 mg) nem com SELECT/STEP (2,4 mg). PIONEER-6 foi segurança, não este resultado. A dose de 14 mg era máxima após titulação, não início imediato. O composto renal confirmatório não diferiu significativamente; redução de MACE não implica demonstrar o mesmo benefício renal do FLOW.",
+  "source_refs": [
+    "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642."
+  ],
+  "review_status": "revisado",
+  "review_note": "SOUL conferido; corrigidas duas doses de SUSTAIN-6 e esclarecidas titulação e ausência de benefício renal confirmatório."
+}

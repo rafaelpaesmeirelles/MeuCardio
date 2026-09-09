@@ -1,0 +1,22 @@
+{
+  "slug": "prevent-75-estagio-1-has",
+  "titulo": "Hipertensão estágio 1 e PREVENT de 9%: iniciar fármaco agora?",
+  "tema": "Hipertensão",
+  "nivel": "básico",
+  "enunciado": "Homem, 52 anos. Pressão arterial 136/84 mmHg confirmada em medições repetidas. Sem diabetes, sem doença renal crônica e sem doença cardiovascular estabelecida. Risco de doença cardiovascular total em 10 anos pelo PREVENT-CVD = 9%.",
+  "pergunta": "Pela diretriz AHA/ACC 2025, deve-se iniciar fármaco anti-hipertensivo agora?",
+  "opcoes": [
+    "Não: aguardar 3–6 meses só com mudança de estilo de vida; medicação só se a PA persistir ≥ 130/80 mmHg depois disso",
+    "Sim: hipertensão estágio 1 com PREVENT de 10 anos ≥ 7,5% indica iniciar fármaco agora, junto com mudança de estilo de vida, com alvo <130/80 mmHg",
+    "Não: tratar com fármaco apenas se a PA atingir ≥ 140/90 mmHg (estágio 2)",
+    "Usar o limiar de 10% das Pooled Cohort Equations (PCE) de 2013 para decidir se inicia anti-hipertensivo"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Pela diretriz AHA/ACC 2025, este paciente tem hipertensão estágio 1 (PA 130–139/80–89 mmHg). Sem diabetes, DRC ou DCV clínica, a decisão de iniciar fármaco no estágio 1 passa pelo risco PREVENT de 10 anos: se ≥ 7,5%, indica-se medicação agora, junto com mudança de estilo de vida, com alvo <130/80 mmHg. O PREVENT de 9% cruza esse limiar. Aguardar 3–6 meses só com estilo de vida vale para PREVENT <7,5%, não para este caso. Tratar apenas a partir de ≥ 140/90 mmHg ignora a indicação do estágio 1 de risco aumentado. As PCE com limiar de 10% são o modelo da diretriz de 2017; a diretriz de 2025 substitui esse recorte pelas equações PREVENT com limiar de 7,5%. O limiar refere-se ao risco cardiovascular total do PREVENT-CVD, não ao componente aterosclerótico isolado nem ao risco de 30 anos. A pressão foi confirmada; tolerabilidade, preferências e acompanhamento orientam a escolha do medicamento.",
+  "source_refs": [
+    "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242",
+    "AHA, Top Things to Know, recomendação 5. https://professional.heart.org/en/science-news/2025-high-blood-pressure-guideline/top-things-to-know"
+  ],
+  "review_status": "revisado",
+  "review_note": "Recomendação oficial AHA 2025 conferida; esclarecido PREVENT-CVD total de 10 anos."
+}

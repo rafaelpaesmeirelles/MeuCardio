@@ -1,0 +1,25 @@
+{
+  "slug": "reduce-it-2019",
+  "title": "REDUCE-IT: icosapent etílico 4 g/dia em triglicérides elevados na estatina — não é ômega-3 de prateleira",
+  "tema": "Prevenção e lipídios",
+  "theme": "Prevenção e lipídios",
+  "year": 2019,
+  "journal": "New England Journal of Medicine",
+  "pmid": "30415628",
+  "doi": "10.1056/NEJMoa1812792",
+  "nct": "NCT01492361",
+  "n": 8179,
+  "design": "Ensaio multicêntrico, randomizado, duplo-cego, controlado por placebo. Financiado por Amarin Pharma.",
+  "population": "8179 pacientes com DCV estabelecida ou com diabetes e outros fatores de risco, em estatina, triglicérides de jejum 135 a 499 mg/dL (1,52 a 5,63 mmol/L) e LDL-C 41 a 100 mg/dL (1,06 a 2,59 mmol/L). 70,7% prevenção secundária.",
+  "intervention": "Icosapent etílico 2 g duas vezes ao dia (dose diária total 4 g).",
+  "control": "Placebo.",
+  "primary_outcome": "Composto de morte cardiovascular, infarto do miocárdio não fatal, AVC não fatal, revascularização coronariana ou angina instável.",
+  "key_findings": "Seguimento mediano 4,9 anos. Primário: 17,2% versus 22,0%; HR 0,75; IC95% 0,68–0,83; P<0,001. Secundário-chave (morte CV, IAM não fatal ou AVC não fatal): 11,2% versus 14,8%; HR 0,74; IC95% 0,65–0,83; P<0,001. Morte cardiovascular: 4,3% versus 5,2%; HR 0,80; IC95% 0,66–0,98; P=0,03. Internação por fibrilação atrial ou flutter: 3,1% versus 2,1%; P=0,004. Sangramento grave: 2,7% versus 2,1%; P=0,06. Frequências naturais: evento primário em cerca de 17 em 100 com icosapent e em cerca de 22 em 100 com placebo, nesse tempo.",
+  "clinical_implications": "Icosapent etílico 4 g/dia reduziu eventos isquêmicos na população com TG elevados em estatina. Formulação e dose são essenciais: esse resultado não pode ser atribuído automaticamente a cápsulas mistas de EPA/DHA ou suplementos em outras doses. Houve mais hospitalizações por FA/flutter e um sinal de sangramento grave que não atingiu significância convencional. O balanço individual de benefício e risco permanece necessário. Não há comparação direta com inibidores de PCSK9 ou terapias para Lp(a).",
+  "source_refs": [
+    "Bhatt DL, Steg PG, Miller M, et al.; REDUCE-IT Investigators. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia. N Engl J Med. 2019;380(1):11-22. DOI 10.1056/NEJMoa1812792. PMID 30415628. NCT01492361."
+  ],
+  "review_status": "revisado",
+  "note": "Não reescreve evidencias/reduce-it-2019.json nem content/Prevenção_e_lipídios/reduce-it-icosapent-nao-e-omega-3-generico.md nem casos-clinicos/reduce-it-nao-e-omega-3-de-prateleira.json. Abstract PubMed aberto nesta sessão.",
+  "review_note": "REDUCE-IT conferido; preservadas elegibilidade, resultados e segurança, eliminadas instruções e pendências sem dado clínico."
+}

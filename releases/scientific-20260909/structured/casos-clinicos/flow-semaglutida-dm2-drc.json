@@ -1,0 +1,23 @@
+{
+  "slug": "flow-semaglutida-dm2-drc",
+  "titulo": "DM2 com DRC albuminúrica: qual semaglutida protege o rim?",
+  "tema": "Diabetes e cardiologia",
+  "nivel": "intermediário",
+  "enunciado": "Homem de 64 anos, DM2, TFGe 42 mL/min/1,73 m², RAC 420 mg/g, em IECA e dapagliflozina. O colega sugere 'Wegovy 2,4 mg porque o SELECT protege o coração e o rim'. O paciente recusa injeção e pergunta se o comprimido do SOUL serve igual.",
+  "pergunta": "O que o FLOW (Perkovic et al., NEJM 2024) demonstrou — e com qual dose?",
+  "opcoes": [
+    "Semaglutida oral 14 mg/dia reduziu o composto renal (é o SOUL, n=9.650, HR 0,86 de MACE, e o composto renal foi o primário positivo)",
+    "Semaglutida 2,4 mg SC semanal no SELECT (n=17.604, sem diabetes) reduziu falência renal com HR 0,76 e substitui o iSGLT2",
+    "Semaglutida subcutânea 1,0 mg uma vez por semana, em 3.533 pessoas com DM2 e DRC: 331 vs 410 eventos do composto renal/CV (HR 0,76; IC95% 0,66–0,88; P=0,0003); não autoriza suspender iSGLT2 nem trocar pela dose de 2,4 mg ou pela oral de 14 mg",
+    "Finerenona, não semaglutida, é a única camada adicional comprovada neste recorte; FLOW foi ensaio de segurança, não de superioridade renal"
+  ],
+  "resposta_correta": 2,
+  "explicacao": "FLOW avaliou semaglutida subcutânea com dose de manutenção de 1,0 mg semanal em 3.533 pessoas com DM2 e DRC. Em mediana de 3,4 anos, ocorreram 331 versus 410 primeiros eventos: HR 0,76 (IC95% 0,66–0,88; P=0,0003). O composto incluía falência renal, queda sustentada de pelo menos 50% da TFGe e morte renal ou cardiovascular. Não era apenas falência renal. A maioria usava IECA/BRA; somente 15,6% usavam iSGLT2 inicialmente. Nesse subgrupo, a estimativa foi imprecisa (HR 1,07; IC95% 0,69–1,67; interação P=0,109), portanto o ensaio não comprova automaticamente o mesmo benefício adicional em todo usuário de dapagliflozina. Não há indicação de suspender iSGLT2 com base nessa análise. SOUL estudou a formulação oral até 14 mg/dia e reduziu MACE; seus desfechos renais confirmatórios não diferiram significativamente. Doses, formulações e populações não são intercambiáveis por extrapolação; 1 mg é manutenção após titulação, não dose inicial automática.",
+  "source_refs": [
+    "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+    "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642.",
+    "Mann JFE et al. Nature Medicine. 2024. DOI: 10.1038/s41591-024-03133-0. PMID: 38914124."
+  ],
+  "review_status": "revisado",
+  "review_note": "FLOW/SOUL e análise primária por uso de SGLT2 conferidos. Corrigida falsa impressão de tratamento universal sobre iSGLT2, composto e dose de manutenção; tema canônico."
+}

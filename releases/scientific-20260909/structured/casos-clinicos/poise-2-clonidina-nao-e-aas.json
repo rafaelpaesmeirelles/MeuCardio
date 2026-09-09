@@ -1,0 +1,22 @@
+{
+  "slug": "poise-2-clonidina-nao-e-aas",
+  "titulo": "POISE-2: clonidina ou AAS?",
+  "tema": "Perioperatório",
+  "nivel": "avançado",
+  "enunciado": "Cirurgia não cardíaca. Colega cita POISE-2 ‘neutro’ e quer clonidina perioperatória porque ‘AAS pelo menos não mata’.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "Clonidina e AAS são o mesmo artigo com o mesmo HR 0,99.",
+    "Dois artigos do fatorial: AAS — morte/IAM HR 0,99 e sangramento HR 1,23. Clonidina — morte/IAM HR 1,08; hipotensão HR 1,32; parada não fatal HR 3,20. Nenhum reduziu significativamente o composto primário na população estudada.",
+    "Clonidina reduziu IAM (HR 0,73) como o metoprolol do POISE.",
+    "POISE-2 autoriza iniciar os dois na véspera."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "POISE-2 foi fatorial, com 10.010 participantes e dois artigos. Clonidina não reduziu morte ou IAM não fatal em 30 dias (HR 1,08; IC95% 0,93–1,26), mas aumentou hipotensão clinicamente importante (47,6% versus 37,1%; HR 1,32) e parada não fatal (16 versus 5; HR 3,20). O artigo de AAS mostrou HR 0,99 para morte/IAM e mais sangramento maior (HR 1,23). Isso não autoriza iniciar clonidina preventivamente nem suspender automaticamente medicações crônicas: indicação de antiagregação, stent, risco de sangramento e possível rebote da clonidina exigem decisão específica.",
+  "source_refs": [
+    "Devereaux PJ, et al. N Engl J Med. 2014;370:1504-1513. PMID 24679061.",
+    "POISE-2, aspirin. N Engl J Med. 2014. DOI: 10.1056/NEJMoa1401105. PMID: 24679062."
+  ],
+  "review_status": "revisado",
+  "review_note": "Dois artigos POISE-2 confrontados; removida generalização absoluta e diferenciada iniciação preventiva de manejo da terapia crônica."
+}

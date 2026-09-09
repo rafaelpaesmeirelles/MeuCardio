@@ -1,0 +1,24 @@
+{
+  "slug": "finearts-hf-finerenona-ic-feve-40",
+  "titulo": "IC com FEVE 52%: finerenona reduz morte cardiovascular?",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 74 anos, insuficiência cardíaca sintomática, FEVE 52%, TFGe 48 mL/min/1,73 m², potássio 4,4 mmol/L, em diurético e iSGLT2. O colega da enfermaria discute iniciar finerenona e diz à família: 'é o remédio que reduz a morte nesta fração de ejeção — o FINEARTS-HF comprovou'. A paciente pergunta se é isso mesmo.",
+  "pergunta": "O que o FINEARTS-HF (Solomon et al., NEJM 2024) mostrou exatamente neste recorte (IC sintomática, FEVE ≥ 40%)?",
+  "opcoes": [
+    "Redução significativa de morte cardiovascular (8,1% versus 8,7%; HR 0,93; P significativo), o que autoriza prometer sobrevivência",
+    "Eventos totais do primário 1.083 em 624/3.003 versus 1.283 em 719/2.998; RR 0,84 (0,74–0,95); P=0,007, puxado por piora de IC (842 versus 1.024). Morte CV 8,1% versus 8,7%; HR 0,93 (0,78–1,11) — não significativa. Não é ensaio de mortalidade isolada",
+    "O FINEARTS-HF é o mesmo composto renal do FIDELIO-DKD e a indicação depende de RAC ≥ 3 mg/mmol, não de insuficiência cardíaca",
+    "Finerenona está contraindicada porque a TFGe é 48 mL/min/1,73 m²; o ensaio excluiu qualquer TFGe abaixo de 60"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "O FINEARTS-HF randomizou 3.003 pacientes para finerenona e 2.998 para placebo, FEVE ≥ 40%, seguimento mediano 32 meses. O primário foi eventos totais de piora de IC (internação ou visita urgente) e morte cardiovascular: 1.083 eventos em 624/3.003 versus 1.283 em 719/2.998; RR 0,84; IC95% 0,74–0,95; P=0,007. Eventos de piora de IC: 842 versus 1.024; RR 0,82; IC95% 0,71–0,94; P=0,006. Morte CV: 8,1% versus 8,7%; HR 0,93; IC95% 0,78–1,11 — não significativa. Exclusões: TFGe <25 e K >5,0 mmol/L; dose máxima 20 ou 40 mg/dia. Potássio >6,0: 3,0% versus 1,4%; internação por hipercalemia 0,5% versus 0,2%. Prometer redução de morte CV com este ensaio é erro. Não fundir com o composto renal do FIDELIO-DKD. TFGe 48 não é exclusão. A dose inicial não se confunde com a dose-alvo: na informação FDA de IC, TFGe 25–<60 mL/min/1,73 m² corresponde a início de 10 mg/dia e alvo 20 mg/dia, condicionado a potássio/função renal e monitorização. Isso descreve a fonte consultada, sem substituir a bula local e avaliação individual. O caso não deve sugerir início automático de 20 mg na TFGe 48.",
+  "source_refs": [
+    "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391:1475-1485. DOI 10.1056/NEJMoa2407107. PMID 39225278. NCT04435626.",
+    "Køber L et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420.",
+    "InformaçãoFDA Kerendia: https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/215341Orig1s009lbl.pdf",
+    "FINEARTS-HF apresentação originalESC2024, tabela de segurança: https://www.heartfailure.medicalaffairs.bayer.com/sites/g/files/vrxlpx56641/files/2024-09/ESC2024_Finerenone%20in%20Heart%20Failure%20with%20Mildly%20Reduced%20or%20Preserved%20Ejection%20Fraction%20-%20The%20FINEARTS-HF%20Trial.pdf"
+  ],
+  "review_status": "revisado",
+  "review_note": "Conferidosprimário total, morteCVnão significativa e segurança na apresentaçãooriginal. Corrigida sugestão de início20mg comTFGe48; explicitada doseinicialversusalvofonteFDA."
+}

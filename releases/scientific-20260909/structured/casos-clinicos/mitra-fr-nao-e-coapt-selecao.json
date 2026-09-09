@@ -1,0 +1,22 @@
+{
+  "slug": "mitra-fr-nao-e-coapt-selecao",
+  "titulo": "IM secundária: seleção do MITRA-FR (EROA >20 mm²) não é o COAPT",
+  "tema": "Valvopatias",
+  "nivel": "avançado",
+  "enunciado": "IC, FEVE 32%, IM secundária. EROA 22 mm². Colega recusa clípe «porque o MITRA-FR foi neutro (OR 1,16; EROA >20 mm²)» e outro insiste no COAPT (hospitalizações HR 0,53) como se o corte de EROA fosse o mesmo.",
+  "pergunta": "Qual leitura está alinhada à seleção e aos primários abertos?",
+  "opcoes": [
+    "MITRA-FR e COAPT usam o mesmo corte de EROA e o mesmo primário; some OR 1,16 com HR 0,53 e indique o clípe.",
+    "MITRA-FR: 304 pts (152 vs 152), EROA >20 mm² ou volume regurgitante >30 ml, FEVE 15–40%, morte ou internamento não planejado por IC em 12 meses 54,6% vs 51,3%; OR 1,16 (0,73–1,84); P=0,53. COAPT: 614 pts, IM secundária moderada a grave ou grave sob terapia máxima, hospitalizações por IC em 24 meses 35,8% vs 67,9% paciente-ano; HR 0,53 (0,40–0,70). A decisão exige graduação ecocardiográfica integrada, anatomia, sintomas e tratamento otimizado; EROA de 22 mm² isolada não define elegibilidade.",
+    "COAPT autoriza clípe em toda IM primária degenerativa com EROA >20 mm².",
+    "EARLY TAVR e PARTNER 3 substituem a seleção mitral: 8,4% vs 9,2% de morte vale neste EROA."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PMID 30145927 MITRA-FR: EROA >20 mm² ou VR >30 ml, FEVE 15–40%, n=304, primário 12 meses OR 1,16 (0,73–1,84); P=0,53. Morte 24,3% vs 22,4%; internamento por IC 48,7% vs 47,4%. PMID 30280640 COAPT: n=614 (302 vs 312), IM secundária moderada a grave ou grave sintomática sob terapia máxima; primário = todas as hospitalizações por IC em 24 meses, HR 0,53 (0,40–0,70); morte 29,1% vs 46,1%, HR 0,62 (0,46–0,82). COAPT selecionou IM secundária 3+ ou 4+ por avaliação integrada, com sintomas persistentes apesar de tratamento máximo tolerado. Um único valor de EROA não reproduz essa seleção. Primário, tempo e seleção diferem. Não some 1,16 com 0,53. Não é EARLY TAVR nem PARTNER 3.",
+  "source_refs": [
+    "Obadia JF, Messika-Zeitoun D, Leurent G, et al. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379:2297-2306. DOI 10.1056/NEJMoa1805374. PMID 30145927. NCT01920698.",
+    "Stone GW, Lindenfeld J, Abraham WT, et al.; COAPT Investigators. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379:2307-2318. DOI 10.1056/NEJMoa1806640. PMID 30280640. NCT01626079."
+  ],
+  "review_status": "revisado",
+  "review_note": "MITRA-FR/COAPT conferidos; corrigida pendência na opção correta e substituído corte isolado por elegibilidade ecocardiográfica e clínica integrada."
+}

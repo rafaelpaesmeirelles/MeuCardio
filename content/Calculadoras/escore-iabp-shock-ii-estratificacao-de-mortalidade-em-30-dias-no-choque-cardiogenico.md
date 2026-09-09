@@ -1,5 +1,5 @@
 ---
-title: 'Escore IABP-SHOCK II: Estratificação de Mortalidade em 30 Dias no Choque Cardiogênico'
+title: Escore IABP-SHOCK II
 slug: escore-iabp-shock-ii-estratificacao-de-mortalidade-em-30-dias-no-choque-cardiogenico
 theme: Calculadoras
 kind: calculadora
@@ -11,7 +11,15 @@ source_refs:
   care cardiology trials network registry. Am Heart J. 2024;270:1-12. DOI: 10.1016/j.ahj.2023.12.018. PMID: 38190931. PMCID:
   PMC11032171, tabela 1.'
 review_note: 'Revisão editorial e conferência das fontes em 09/09/2026: Completados os pontos; corrigidas a população CardShock
-  e a AUC de derivação; removida extrapolação para seleção de dispositivos.'
+  e a AUC de derivação; removida extrapolação para seleção de dispositivos. Conferência editorial final: título alinhado ao
+  corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido
+  quando necessário. Vínculos internos preservados.'
+summary: Estima mortalidade em 30 dias no choque cardiogênico associado ao infarto, após intervenção coronária percutânea
+  (ICP). A análise original incluiu 480 participantes com dados completos.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Escore IABP-SHOCK II
@@ -49,3 +57,7 @@ As porcentagens descrevem essas coortes, não uma probabilidade individual unive
 
 - [Pöss et al., JACC, 2017](https://pubmed.ncbi.nlm.nih.gov/28408020/): desenvolvimento e validações originais.
 - [Alviar et al., American Heart Journal, 2024 — tabela 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC11032171/): conferência das variáveis e dos pontos.
+
+## Tudo com Tudo
+
+- [Escore IABP-SHOCK II: Estratificação de Risco de Mortalidade no Choque Cardiogênico Pós-IAM](/biblioteca/escore-iabp-shock-ii-estratificacao-de-risco-de-mortalidade-no-choque-cardiogenico-pos-iam) — Duas apresentações do mesmo escore IABP-SHOCK II: variáveis, predição de mortalidade e diferença entre estratificar prognóstico e indicar suporte mecânico.

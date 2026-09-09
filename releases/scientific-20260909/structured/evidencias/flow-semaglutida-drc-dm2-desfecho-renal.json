@@ -1,0 +1,19 @@
+{
+  "slug": "flow-semaglutida-drc-dm2-desfecho-renal",
+  "title": "FLOW: semaglutida 1,0 mg SC reduz composto renal no DM2 com DRC",
+  "theme": "Diabetes e cardiologia",
+  "tema": "Diabetes e cardiologia",
+  "statement": "No FLOW (Perkovic et al., NEJM 2024;391:109-121, PMID 38785209; NCT03819153), 3533 adultos com DM2 e DRC (1767 semaglutida SC 1,0 mg semanal vs 1766 placebo; mediana 3,4 anos). Primário (falência renal, queda sustentada ≥ 50% da TFGe, ou morte renal ou CV): 331 vs 410 primeiros eventos; HR 0,76 (IC95% 0,66–0,88); P=0,0003. Morte CV HR 0,71 (0,56–0,89). MACE HR 0,82 (0,68–0,98); P=0,029. Morte por qualquer causa HR 0,80 (0,67–0,95); P=0,01. Inclinação anual da TFGe menos íngreme em 1,16 mL/min/1,73 m² (P<0,001). EA graves 49,6% vs 53,8%. Dose-alvo após titulação: 1,0 mg SC semanal — não 2,4 mg (SELECT) nem 14 mg oral (SOUL). Não substitui IECA/BRA nem iSGLT2.",
+  "society": "NEJM / FLOW",
+  "year": 2024,
+  "pmid": "38785209",
+  "source_refs": [
+    "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+    "Análise por uso de iSGLT2: Nature Medicine. DOI: 10.1038/s41591-024-03133-0. PMID: 38914124."
+  ],
+  "document_slug": "flow-semaglutida-dm2-e-doenca-renal-cronica",
+  "review_status": "revisado",
+  "note": "FLOW estudou benefício renal e cardiovascular em recorte específico de DM2 e DRC. Somente 15,6% usavam iSGLT2 no início; a análise desse subgrupo era imprecisa, sem demonstrar benefício incremental de igual magnitude. A elegibilidade exata da diretriz deve ser distinguida dos limites do protocolo.",
+  "study_slug": "flow-2024",
+  "review_note": "FLOW conferido; removida pendência regulatória sem alegar aprovação e esclarecida exposição limitada a iSGLT2."
+}

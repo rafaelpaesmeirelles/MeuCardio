@@ -1,0 +1,26 @@
+{
+  "slug": "poet-2019",
+  "title": "POET: troca para oral não inferior ao IV na endocardite esquerda estável",
+  "tema": "Endocardite",
+  "theme": "Endocardite",
+  "year": 2019,
+  "journal": "New England Journal of Medicine",
+  "pmid": "30152252",
+  "doi": "10.1056/NEJMoa1808312",
+  "nct": "NCT01375257",
+  "design": "Ensaio randomizado aberto, multicêntrico, de não inferioridade (Dinamarca). Margem 10 pontos percentuais. Avaliação do composto até 6 meses após o fim do antibiótico.",
+  "population": "400 adultos em condição estável com endocardite do lado esquerdo causada por estreptococo, Enterococcus faecalis, Staphylococcus aureus ou estafilococo coagulase-negativo, já em antibiótico IV. 199 continuar IV vs 201 trocar para oral. IV pelo menos 10 dias em todos; se cirurgia valvar na internação, pelo menos 7 dias de IV após a operação. 152/400 (38%) já operados antes da randomização. Prótese prévia em 107 (27%).",
+  "intervention": "Troca para dois antibióticos orais de classes diferentes, guiados pela suscetibilidade, após estabilidade. Alta para tratamento ambulatorial se viável.",
+  "control": "Continuar o antibiótico intravenoso até completar o curso.",
+  "primary_outcome": "Composto de morte por qualquer causa, cirurgia cardíaca não planejada, evento embólico ou recaída de bacteremia pelo patógeno índice, da randomização até 6 meses após o fim do antibiótico.",
+  "key_findings": "Primário: 24/199 (12,1%) no IV versus 18/201 (9,0%) no oral; diferença 3,1 pontos percentuais; IC95% −3,4 a 9,6; P=0,40. Não inferioridade (margem 10 pp) cumprida. Depois da randomização, o restante do antibiótico: mediana 19 dias (IIQ 14–25) no IV versus 17 dias (IIQ 14–25) no oral (P=0,48). Estabilidade do protocolo: temperatura abaixo de 38,0 °C por mais de 2 dias; PCR menor que 25% do pico ou menor que 20 mg/L; leucócitos menor que 15 × 10⁹/L. Não é PARTNER 3 (PMID 30883058).",
+  "clinical_implications": "Em endocardite esquerda estável pelos critérios do POET, completar o curso com dois antibióticos orais de classes diferentes não foi inferior ao IV contínuo. A troca exigia organismo sensível, estabilidade, avaliação ecocardiográfica recente, absorção e adesão adequadas. Não é tratamento oral desde o primeiro dia nem redução automática da duração total; lado direito, fungos e doença instável não são populações demonstradas por este ensaio. P=0,40 não é teste positivo de superioridade; a conclusão depende da margem pré-especificada de não inferioridade.",
+  "source_refs": [
+    "Iversen K, Ihlemann N, Gill SU, et al. Partial Oral versus Intravenous Antibiotic Treatment of Endocarditis. N Engl J Med. 2019;380(5):415-424. DOI 10.1056/NEJMoa1808312. PMID 30152252. NCT01375257.",
+    "Delgado V, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44:3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656.",
+    "Registro primário do protocolo POET, critérios de elegibilidade. https://clinicaltrials.gov/study/NCT01375257"
+  ],
+  "review_status": "revisado",
+  "note": "evidencias/poet-oral-nao-inferior-apos-estabilizacao.json já existia; este arquivo é o registro em estudos/. Não misturar com PARTNER 3 (PMID 30883058).",
+  "review_note": "POET conferido com publicação e registro primário; critérios de estabilidade/IV confirmados na revisão paralela. Eliminada mistura entre classe de diretriz e resultado de ensaio."
+}

@@ -1,12 +1,21 @@
 ---
-title: "Fluxograma: FA aguda durante tratamento com inibidor de BTK"
+title: 'Fluxograma: FA aguda durante tratamento com inibidor de BTK'
 slug: fluxograma-fibrilacao-atrial-aguda-durante-tratamento-com-inibidor-de-btk
-theme: "Cardio-oncologia"
+theme: Cardio-oncologia
 kind: fluxograma
-summary: "Árvore de decisão para FA em paciente em ibrutinibe/acalabrutinibe, separando instabilidade, controle de ritmo/frequência e decisão antitrombótica baseada também em sangramento e interações."
+summary: Árvore de decisão para FA em paciente em ibrutinibe/acalabrutinibe, separando instabilidade, controle de ritmo/frequência
+  e decisão antitrombótica baseada também em sangramento e interações.
 review_status: revisado
-source_refs: ["Lyon AR, López-Fernández T, Couch LS, et al.; ESC Scientific Document Group. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568."]
-review_note: "Revisado em 26/08/2026 contra as seções 5.5.6 e 6.4.1 e a Tabela de Recomendação 31 da diretriz ESC 2022 de cardio-oncologia (PMID 36017568). O ramo genérico de controle de frequência/ritmo foi corrigido para priorizar betabloqueador e evitar, quando possível, diltiazem/verapamil por interação e inotropismo negativo. A anticoagulação passou a separar contraindicação temporária por risco hemorrágico muito alto, indicação exclusiva de VKA, fatores que podem favorecer LMWH apenas como estratégia de curto prazo e seleção de NOAC condicionada a interação, função renal, sítio tumoral e absorção. A eficácia de LMWH para prevenir AVC na FA não está estabelecida. Pendente revisão médica independente antes de uso assistencial."
+source_refs:
+- 'Lyon AR, López-Fernández T, Couch LS, et al.; ESC Scientific Document Group. 2022 ESC Guidelines on cardio-oncology. Eur
+  Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568.'
+review_note: 'Revisão editorial e bibliográfica: conferidas as recomendações ESC 2022 (PMID 36017568), TBIP, preferência por
+  betabloqueador, restrições de DOAC e limite da evidência de HBPM para FA; preservada a correção do servidor e a necessidade
+  de decisão multidisciplinar.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # FA aguda durante inibidor de BTK
@@ -15,7 +24,7 @@ review_note: "Revisado em 26/08/2026 contra as seções 5.5.6 e 6.4.1 e a Tabela
 flowchart TD
   R0["Paciente em inibidor de BTK<br/>+ FA nova/recorrente"]
   D1{"Instabilidade hemodinâmica?<br/>choque, isquemia, edema pulmonar<br/>ou alteração importante da consciência"}
-  P1["Cardioversão elétrica sincronizada<br/>conforme protocolo geral de FA"]
+  P1["Cardioversão elétrica sincronizada imediata;<br/>não aguardar discussão oncológica.<br/>Anticoagulação pericardioversão conforme segurança"]
   P2["Estável: ECG, eletrólitos, função renal/hepática<br/>+ procurar infecção, anemia, hipóxia, TEP<br/>e outros precipitantes"]
   D2{"Controle de frequência/ritmo<br/>necessário?"}
   P3["Preferir betabloqueador para frequência;<br/>evitar, quando possível, diltiazem/verapamil.<br/>Se estratégia de ritmo: checar QT e interações"]
@@ -24,11 +33,11 @@ flowchart TD
   D4{"Risco hemorrágico muito alto?<br/>sangramento maior ativo/recente &lt;1 mês,<br/>lesão intracraniana ou plaquetas &lt;25.000/µL"}
   P5["Não iniciar automaticamente;<br/>corrigir causa e discutir momento/alternativa<br/>com cardio-oncologia + hematologia/oncologia"]
   D4A{"Prótese mecânica ou<br/>estenose mitral moderada/grave?"}
-  P6["VKA conforme protocolo específico"]
+  P6["VKA pela indicação valvar: discutir urgentemente<br/>compatibilidade do BTK com oncologia;<br/>não trocar por DOAC contraindicado"]
   D4B{"Tumor GI/GU não operado, toxicidade GI,<br/>CrCl &lt;15, plaquetas &lt;50.000/µL<br/>ou interação maior com NOAC?"}
   P7["Discutir LMWH como opção de curto prazo;<br/>eficácia para prevenção de AVC na FA<br/>não estabelecida"]
   P8["Considerar NOAC conforme protocolo de FA,<br/>função renal e interações"]
-  D5{"TV/QRS largo, síncope inexplicada<br/>ou PCR?"}
+  D5{"Suspeita de TV, síncope com sinais de alarme<br/>ou PCR? QRS largo isolado exige caracterização"}
   C1(["Migrar para algoritmo de<br/>arritmia ventricular/PCR"])
   C2(["Manter monitorização e decisão<br/>multidisciplinar sobre BTK"])
 
@@ -63,3 +72,9 @@ flowchart TD
 ## Regra prática
 
 FA em paciente em BTK exige três perguntas simultâneas: **está instável? precisa controle de ritmo/frequência? pode anticoagular com segurança?** O CHA2DS2-VASc pode subestimar o risco trombótico no câncer; por outro lado, plaquetopenia, tumor gastrointestinal/geniturinário, absorção e interações impedem automatizar a escolha do anticoagulante. FA atribuída a fator transitório deve ter a necessidade de anticoagulação reavaliada após três meses. FA ou risco de FA, isoladamente, não contraindicam o tratamento antineoplásico: manutenção, pausa ou troca do BTK dependem de decisão multidisciplinar.
+
+A anticoagulação pericardioversão segue critérios próprios de duração da FA, imagem e período pós-procedimento; não deve ser decidida somente pelo escore de risco crônico. Ibrutinibe com VKA exige revisão especializada da terapia oncológica e do risco hemorrágico.
+
+## Tudo com Tudo
+
+- [Fibrilação atrial aguda durante tratamento com inibidor de BTK](/biblioteca/fibrilacao-atrial-aguda-durante-tratamento-com-inibidor-de-btk) — Liga o fluxograma à narrativa da mesma FA aguda durante BTK: estabilidade, controle de frequência, anticoagulação e interação medicamentosa.

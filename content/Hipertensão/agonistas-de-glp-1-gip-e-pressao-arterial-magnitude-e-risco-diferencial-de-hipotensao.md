@@ -1,46 +1,62 @@
 ---
-title: "Agonistas de GLP-1/GIP e Pressão Arterial: Magnitude da Redução e o Risco Diferencial de Hipotensão entre Tirzepatida, Semaglutida e Retatrutida"
+title: 'Terapias incretínicas e pressão arterial: redução média e eventos de hipotensão'
 slug: agonistas-de-glp-1-gip-e-pressao-arterial-magnitude-e-risco-diferencial-de-hipotensao
-theme: "Hipertensão"
+theme: Hipertensão
 kind: documento
 review_status: revisado
-source_refs: ["Chen QX, Zhou XY, Wu Q, Xie JJ, Xu Y, Teng FY, Guo M. Effect of tirzepatide and semaglutide on blood pressure: A systematic review and meta-analysis. Endocrine. 2026;91(1):275. DOI: 10.1007/s12020-026-04757-7. PMID: 42603240", "Simental-Mendía LE, Barragán-Zúñiga LJ, Reyes-Avitia V. Effect of Retatrutide, a Novel Triple Receptor Agonist, on Blood Pressure and Lipid Levels: A Systematic Review and Meta-analysis of Randomized Controlled Trials. High Blood Press Cardiovasc Prev. 2026;33(5):503-516. DOI: 10.1007/s40292-026-00812-6. PMID: 42371360"]
-review_note: "Documento novo. Checado por grep em `content/Hipertensão/` (96 documentos antes deste — nenhum arquivo contendo 'semaglutid', 'tirzepatid', 'glp-1', 'glp1' ou 'retatrutid') e confirmado que não havia nenhum documento dedicado a agonistas de GLP-1/GIP e pressão arterial nesta pasta — é lacuna nova, não duplicata. Buscado também em `content/Cardio-oncologia/` e no restante do repositório: existem documentos sobre hipertensão INDUZIDA por antiangiogênicos/inibidores de VEGF/TKI (classe farmacológica totalmente distinta, mecanismo de dano vascular, não de agonismo incretínico) — não há sobreposição de mecanismo, população ou fármaco com este documento. Os dois PMIDs conferidos via PubMed E-utilities (esearch/esummary/efetch) em 09/09/2026, título/revista/ano/DOI e todos os números (RR, IC95%, WMD, valor de p, número de estudos e de participantes) conferidos linha a linha contra o abstract estruturado de cada artigo, nenhum de memória. Os dois artigos são meta-analises independentes, de grupos de autores distintos, publicadas em revistas com revisão por pares distintas (Endocrine e High Blood Press Cardiovasc Prev) — não há conflito de interesse financeiro declarado em nenhum dos dois. Nenhum resultado de um fármaco foi extrapolado para outro fármaco da mesma classe: os números de tirzepatida/semaglutida (evento adverso de hipertensão/hipotensão, expressos em risco relativo) e os de retatrutida (magnitude em mmHg, expressos em diferença média) vêm de metodologias e desfechos diferentes, e são apresentados em seções separadas, sem conversão nem comparação numérica direta entre eles."
+source_refs:
+- 'Effect of tirzepatide and semaglutide on blood pressure: A systematic review and meta-analysis. Endocrine. PMID: 42603240.
+  DOI: 10.1007/s12020-026-04757-7.'
+- 'Effect of Retatrutide, a Novel Triple Receptor Agonist, on Blood Pressure and Lipid Levels: A Systematic Review and Meta-analysis
+  of Randomized Controlled Trials. High blood pressure & cardiovascular prevention : the official journal of the Italian Society
+  of Hypertension. PMID: 42371360. DOI: 10.1007/s40292-026-00812-6.'
+- https://www.lilly.com/news/stories/what-to-know-about-retatrutide
+review_note: Estimativas e desfechos das duas metanálises conferidos. Corrigida confusão de eventos adversos com PA média,
+  significância separada com comparação direta entre fármacos e subgrupo de dose com demonstração de interação. Estado investigacional
+  confirmado em fonte oficial; retirado ajuste automático de anti-hipertensivo.
+summary: Baixo I² não garante alta certeza nem substitui a avaliação de número de estudos, tamanho de amostra, risco de viés
+  e duração. A síntese não estabelece a contribuição causal da perda de peso, natriurese ou outros mecanismos, nem comprova
+  redução de eventos cardiovasculares por esse efeito pressórico.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Agonistas de GLP-1/GIP e Pressão Arterial: Magnitude da Redução e o Risco Diferencial de Hipotensão entre Tirzepatida, Semaglutida e Retatrutida
+# Terapias incretínicas e pressão arterial: redução média e eventos de hipotensão
 
-## Por que este documento existe agora
-Os agonistas do receptor de GLP-1 (semaglutida) e os agonistas duplos GLP-1/GIP (tirzepatida) já são amplamente prescritos para diabetes tipo 2 e obesidade, e um terceiro composto — a **retatrutida**, agonista triplo dos receptores de GLP-1, GIP e glucagon — está em desenvolvimento avançado. Todos os três reduzem a pressão arterial (PA) como efeito associado ao tratamento, não como indicação primária, e essa redução tem consequência prática direta para o cardiologista: o paciente em uso concomitante de anti-hipertensivo pode precisar de ajuste de dose, e o risco de **hipotensão** — não só o benefício de redução pressórica — precisa ser monitorado, principalmente quando as classes são combinadas. Duas meta-análises publicadas em 2026, com metodologias complementares, permitem quantificar esse efeito com mais precisão do que o resumo genérico de "reduz a pressão arterial" costuma transmitir.
+## Perguntas distintas
+Uma mudança média da pressão arterial em mmHg e a frequência de eventos adversos classificados como hipertensão ou hipotensão são desfechos diferentes. As duas metanálises de 2026 aqui resumidas não permitem comparar diretamente retatrutida, tirzepatida e semaglutida como anti-hipertensivos.
 
-## Retatrutida: magnitude do efeito em mmHg
-Simental-Mendía et al. (High Blood Press Cardiovasc Prev. 2026;33(5):503-516, PMID 42371360) conduziram uma revisão sistemática com meta-análise de ensaios clínicos randomizados avaliando o efeito da retatrutida sobre PA e perfil lipídico, com busca em PubMed, Cochrane Library, Scopus e ClinicalTrials.gov, usando modelo de efeitos aleatórios e o método da variância inversa genérica.
+## Retatrutida
+A metanálise de ensaios randomizados de Simental-Mendía encontrou diferenças médias ponderadas de **−6,79 mmHg na pressão sistólica** (IC95% −8,36 a −5,23; I²=20%) e **−2,46 mmHg na diastólica** (−3,25 a −1,67; I²=0%). Colesterol total, LDL e triglicerídeos também diminuíram, sem diferença demonstrada no HDL.
 
-**Resultado central**: a retatrutida reduziu, de forma estatisticamente significativa:
-- **PA sistólica**: diferença média ponderada (WMD) de **−6,79 mmHg** (IC95% −8,36 a −5,23; p < 0,0001; I² = 20%, heterogeneidade baixa).
-- **PA diastólica**: WMD de **−2,46 mmHg** (IC95% −3,25 a −1,67; p < 0,0001; I² = 0%, sem heterogeneidade detectável).
+Baixo I² não garante alta certeza nem substitui a avaliação de número de estudos, tamanho de amostra, risco de viés e duração. A síntese não estabelece a contribuição causal da perda de peso, natriurese ou outros mecanismos, nem comprova redução de eventos cardiovasculares por esse efeito pressórico.
 
-O mesmo corpo de evidência mostrou redução significativa de colesterol total (WMD −21,88 mg/dL), LDL-C (WMD −13,10 mg/dL) e triglicerídeos (WMD −40,90 mg/dL), sem efeito significativo sobre HDL-C (WMD −0,01 mg/dL; p = 0,98). A baixa heterogeneidade (I² = 0-20%) nos desfechos de pressão arterial dá mais confiança à magnitude do efeito do que a heterogeneidade mais alta observada nos desfechos lipídicos (I² até 84% para colesterol total).
+A retatrutida, agonista de GLP-1, GIP e glucagon, permanece descrita como **investigacional e não aprovada pela FDA** na informação oficial do fabricante consultada em 09/09/2026. Os resultados não constituem indicação para prescrição como anti-hipertensivo.
 
-**Ponto que a fonte não resolve, e que fica como lacuna explícita**: o mecanismo pelo qual a retatrutida reduz PA — se é primariamente mediado pela perda de peso, por natriurese direta, por redução da atividade simpática, ou por combinação desses fatores — não é objeto desta meta-análise, que reporta o desfecho agregado sem decompor a via causal. **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem precisar do mecanismo fisiopatológico detalhado: este documento não afirma qual proporção do efeito pressórico é dependente da perda de peso associada.
+## Tirzepatida e semaglutida
+Chen e colaboradores reuniram **32 ensaios, 47.332 participantes** com diabetes tipo 2 ou obesidade. As estimativas frente aos comparadores dos ensaios foram:
 
-## Tirzepatida e semaglutida: risco diferencial de hipertensão versus hipotensão
-Chen et al. (Endocrine. 2026;91(1):275, PMID 42603240) fizeram uma pergunta diferente e complementar: não "quanto a PA cai em média", e sim **qual o risco relativo de eventos adversos relacionados a hipertensão e a hipotensão** durante o tratamento com tirzepatida ou semaglutida, em pacientes com diabetes tipo 2 ou obesidade. A meta-análise reuniu **32 ensaios clínicos randomizados, com 47.332 participantes**, busca em PubMed, Scopus, Web of Science, Embase, CENTRAL e ClinicalTrials.gov até 26 de setembro de 2025, com modelo de efeitos aleatórios e análises de subgrupo.
+| Eventos adversos | Tirzepatida, RR (IC95%) | Semaglutida, RR (IC95%) |
+|---|---|---|
+| Relacionados a hipertensão | 0,40 (0,26–0,60) | 0,81 (0,57–1,15) |
+| Relacionados a hipotensão | 2,45 (1,35–4,45) | 1,39 (0,81–2,36) |
 
-**Achado central — os dois fármacos têm perfis de segurança pressórica distintos**:
-- **Tirzepatida**: associada a **risco menor de eventos relacionados a hipertensão** (RR = 0,40; IC95% 0,26-0,60; p < 0,001) — ou seja, reduz em cerca de 60% o risco relativo desse tipo de evento adverso comparado ao grupo de referência do ensaio. Esse efeito antihipertensivo potente veio acompanhado de **risco aumentado de eventos relacionados a hipotensão** (RR = 2,45; IC95% 1,35-4,45; p = 0,003), risco que foi **maior nas doses mais altas** (RR = 2,58; IC95% 1,38-4,81; p = 0,003) — ou seja, o risco de hipotensão com tirzepatida é **dose-dependente**.
-- **Semaglutida**: perfil de PA **relativamente neutro**, sem associação estatisticamente significativa com eventos de hipertensão (RR = 0,81; IC95% 0,57-1,15; p = 0,233) nem de hipotensão (RR = 1,39; IC95% 0,81-2,36; p = 0,232) — embora os autores relatem sinal potencialmente protetor em subgrupos de dose alta, sem que esse sinal tenha atingido significância estatística no conjunto.
+No subgrupo de doses mais altas de tirzepatida, o RR de eventos relacionados a hipotensão foi **2,58 (1,38–4,81)**. Esse achado merece atenção, mas a comparação de um subgrupo com a estimativa global, por si só, não demonstra uma diferença dose-resposta entre doses.
 
-Os próprios autores concluem que essas diferenças de perfil hemodinâmico entre os dois fármacos **justificam decisão terapêutica individualizada, considerando a PA basal e o risco cardiometabólico do paciente** — não é o mesmo efeito de classe aplicado igualmente aos dois compostos.
+A ausência de significância para semaglutida **não prova ausência de efeito sobre a pressão ou de risco de hipotensão**. Tampouco a significância em um fármaco e não no outro demonstra superioridade ou diferença estatística entre eles. Os intervalos de confiança, eventos absolutos e características dos comparadores precisam ser considerados.
 
-## O que isso significa na prática do cardiologista
-1. **Não é seguro assumir "efeito de classe uniforme" entre os agonistas incretínicos quanto à pressão arterial.** Tirzepatida reduz risco de evento hipertensivo mais que semaglutida, mas em contrapartida aumenta o risco de hipotensão de forma dose-dependente — um trade-off que semaglutida, nesta meta-análise, não mostrou de forma estatisticamente significativa.
-2. **Paciente hipertenso em uso de anti-hipertensivo que inicia tirzepatida (ou, por extensão farmacológica ainda não testada da mesma forma, retatrutida) merece reavaliação da dose do anti-hipertensivo** — a redução de PA associada ao agonista incretínico se soma ao efeito do fármaco já em uso, e o risco de hipotensão sintomática (tontura, síncope, queda) é real e mensurável, não teórico.
-3. **A magnitude absoluta em mmHg da retatrutida (−6,79/−2,46 mmHg) é maior que a redução tipicamente relatada para semaglutida** em revisões anteriores da literatura — mas essa comparação é apresentada aqui apenas como contexto de grandeza, não como comparação estatística direta entre os dois fármacos: os dois estudos citados não compararam retatrutida contra semaglutida ou tirzepatida dentro do mesmo desenho, e nenhuma inferência de superioridade entre esses três compostos deve ser extraída deste documento.
-4. **Retatrutida ainda não tem registro brasileiro confirmado nesta sessão** — **VERIFICAÇÃO HUMANA NECESSÁRIA** quanto ao status regulatório atual (ANVISA/FDA) no momento em que este documento for lido; nenhuma afirmação de disponibilidade comercial é feita aqui.
+## Implicação prática
+Ao iniciar ou titular tratamento incretínico, acompanhar pressão, sintomas, ingestão hídrica e efeitos gastrointestinais ajuda a identificar necessidade de ajuste de anti-hipertensivos. O ajuste é orientado pelas medidas e condições do paciente; não deve ser uma redução automática preventiva em todos os casos.
 
-## Resumo prático
-- **Retatrutida** (agonista triplo GLP-1/GIP/glucagon): reduz PA sistólica em média −6,79 mmHg e PA diastólica em −2,46 mmHg (meta-análise de ECRs, heterogeneidade baixa), além de reduzir colesterol total, LDL-C e triglicerídeos.
-- **Tirzepatida** (agonista duplo GLP-1/GIP): reduz risco de evento hipertensivo (RR 0,40) mas aumenta risco de hipotensão de forma dose-dependente (RR 2,45, RR 2,58 em dose alta) — meta-análise de 32 ECRs, 47.332 participantes.
-- **Semaglutida** (agonista GLP-1): perfil pressórico relativamente neutro nesta meta-análise, sem associação significativa com hipertensão ou hipotensão.
-- Implicação prática: reavaliar a dose do anti-hipertensivo ao iniciar agonista incretínico, principalmente tirzepatida em dose alta, pelo risco de hipotensão sintomática.
+Os RRs acima não informam diretamente a probabilidade absoluta de síncope ou queda de cada paciente. Estas metanálises não justificam combinar agonistas entre si nem substituir tratamento específico de hipertensão.
+
+## Fontes
+- Simental-Mendía et al. PMID 42371360; DOI 10.1007/s40292-026-00812-6.
+- Chen et al. PMID 42603240; DOI 10.1007/s12020-026-04757-7.
+- Estado investigacional da retatrutida: https://www.lilly.com/news/stories/what-to-know-about-retatrutide (consulta em 09/09/2026).
+
+## Tudo com Tudo
+
+- [Efeito Anti-Hipertensivo dos Agonistas de GLP-1 e do Coagonista GIP/GLP-1: o que a Evidência de 2025-2026 Mostra](/biblioteca/efeito-anti-hipertensivo-dos-agonistas-de-glp-1-e-do-coagonista-gip-glp-1) — Duas sínteses dos efeitos pressóricos de GLP-1/GIP e da hipotensão; reduções médias não autorizam substituição de anti-hipertensivos indicados.

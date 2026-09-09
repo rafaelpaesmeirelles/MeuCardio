@@ -1,54 +1,59 @@
 ---
-title: "Endocardite Infecciosa por Enterococcus: Perfil Clínico e Desfechos no Registro EURO-ENDO (ESC-EORP)"
+title: Endocardite enterocócica no registro EURO-ENDO
 slug: endocardite-infecciosa-por-enterococcus-perfil-clinico-e-desfechos-no-registro-euro-endo
-theme: "Endocardite"
+theme: Endocardite
 kind: estudo
 review_status: revisado
-source_refs: ["Philip M, et al. Clinical characteristics, management and outcomes of enterococcal infective endocarditis: an ancillary study from the ESC-EORP EURO-ENDO registry. Eur Heart J Qual Care Clin Outcomes. 2026;12(3):308-321. DOI: 10.1093/ehjqcco/qcaf145. PMID: 41299837 — resumo estruturado conferido via PubMed E-utilities (esearch/esummary/efetch) em 09/09/2026; todos os números deste documento vêm dele, salvo indicação em contrário.", "Bartoletti M, et al. Monotherapy vs. combination therapy for Enterococcus faecalis bacteraemia: a target trial emulation. Clin Microbiol Infect. 2026;32(6):983-990. DOI: 10.1016/j.cmi.2026.03.018. PMID: 41850617 — usado só para a ressalva sobre bacteriemia isolada SEM endocardite (ecocardiograma negativo em até 7 dias), população explicitamente diferente da coorte de endocardite enterocócica deste documento; abstract conferido em 09/09/2026.", "Rizkou H, et al. Enterococcus faecalis Endocarditis as a Diagnostic Clue to Occult Rectal Cancer. Cureus. 2026;18(8):e114209. DOI: 10.7759/cureus.114209. PMID: 42713540 — relato de dois casos, nível de evidência baixo (declarado no texto), usado só para a seção de rastreio de neoplasia colorretal."]
-legacy_source: "Documento novo, 09/09/2026. A pasta já tem as doses e a duração de tratamento do Enterococcus na endocardite (documento 'Esquemas antibióticos na endocardite infecciosa, por agente, ESC 2023' — ampicilina/amoxicilina combinada a ceftriaxona ou gentamicina, conforme HLAR), mas nenhum documento descrevia o perfil clínico, a epidemiologia comparativa e o desfecho real do paciente com endocardite enterocócica. O registro multicêntrico EURO-ENDO (ESC-EORP), com dado publicado em 2026, permite fazer isso com informação de vida real — não de diretriz nem de série de caso isolada."
+source_refs:
+- 'Philip M, et al. Clinical characteristics, management and outcomes of enterococcal infective endocarditis: an ancillary
+  study from the ESC-EORP EURO-ENDO registry. Eur Heart J Qual Care Clin Outcomes. 2026;12(3):308-321. DOI: 10.1093/ehjqcco/qcaf145.
+  PMID: 41299837.'
+- 'Bartoletti M, et al. Monotherapy vs. combination therapy for Enterococcus faecalis bacteraemia: a target trial emulation.
+  Clin Microbiol Infect. 2026;32(6):983-990. DOI: 10.1016/j.cmi.2026.03.018. PMID: 41850617.'
+- 'Rizkou H, et al. Enterococcus faecalis Endocarditis as a Diagnostic Clue to Occult Rectal Cancer. Cureus. 2026;18(8):e114209.
+  DOI: 10.7759/cureus.114209. PMID: 42713540.'
+review_note: 'Três fontes conferidas. Corrigidos ecocardiograma negativo como exclusão definitiva, equivalência monoterapia,
+  causalidade da cirurgia, PET como neoplasia e restrição ampicilina/ceftriaxona a HLAR. Preservados denominadores de recorrência
+  e mortalidade. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos,
+  referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: Esta análise do registro prospectivo EURO-ENDO incluiu 3.083 adultos com endocardite definida ou possível entre 2016
+  e 2018. Desses, 365 (12%) tinham infecção enterocócica monomicrobiana.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Endocardite Infecciosa por Enterococcus: Perfil Clínico e Desfechos no Registro EURO-ENDO (ESC-EORP)
+# Endocardite enterocócica no registro EURO-ENDO
 
-## O que este documento cobre, e o que não cobre
-Este documento **não repete dose nem duração de antibiótico** — isso já está no documento "Esquemas antibióticos na endocardite infecciosa, por agente (ESC 2023)", nesta mesma pasta, com a tabela de ampicilina/amoxicilina combinada a ceftriaxona (cepa HLAR) ou a gentamicina (cepa não-HLAR). O objetivo aqui é outro: descrever **quem é** o paciente com endocardite infecciosa enterocócica (EIE), **como ele difere** do paciente com endocardite por outro agente (NEIE, endocardite não enterocócica), e **qual é o desfecho medido** num registro multicêntrico prospectivo — não numa extrapolação de ensaio de antibiótico.
+Esta análise do registro prospectivo EURO-ENDO incluiu 3.083 adultos com endocardite definida ou possível entre 2016 e 2018. Desses, 365 (12%) tinham infecção enterocócica monomicrobiana.
 
-## O registro EURO-ENDO (ESC-EORP)
-Esta é uma análise ancilar do **EURO-ENDO**, registro prospectivo da European Society of Cardiology (programa ESC-EORP), que incluiu adultos com endocardite infecciosa **definida ou possível**, recrutados entre **janeiro de 2016 e março de 2018**.
+Comparados aos demais agentes, esses pacientes eram mais velhos (média 68 versus 58 anos), tinham mais comorbidades e maior frequência de envolvimento de prótese valvar (41% versus 26%). Localização aórtica e captação colônica em PET/CT também foram mais frequentes. A ausência de percentuais detalhados no resumo não autoriza inventá-los.
 
-- **3.083 pacientes** no registro total.
-- **365 (12%)** tinham endocardite infecciosa **enterocócica monomicrobiana** (EIE) — o recorte deste documento.
-- Os demais 2.718 (88%) formam o grupo de comparação, endocardite não enterocócica (NEIE).
+## Desfechos
 
-## Perfil clínico: como o paciente com EIE difere do paciente com NEIE
-Comparado ao paciente com NEIE, o paciente com EIE no registro é, em bloco:
+A mortalidade hospitalar foi 16% versus 17%. Após ajuste por EuroSCORE II e condição valvar, OR 0,67 (IC 95% 0,42–1,04; p=0,083). Não houve associação independente demonstrada com maior mortalidade, mas isso não prova equivalência nem efeito protetor do enterococo.
 
-- **Mais velho**: idade média de **68 anos**, contra **58 anos** no grupo NEIE.
-- **Mais comórbido**: o artigo descreve maior carga de comorbidade no grupo EIE, sem detalhar cada condição individualmente no resumo estruturado disponível — `VERIFICAÇÃO HUMANA NECESSÁRIA` para a lista específica de comorbidades (por exemplo, doença renal crônica, neoplasia, imunossupressão) e seus percentuais, que exigiria acesso ao texto integral do artigo.
-- **Mais frequentemente portador de prótese valvar**: **41%** dos pacientes com EIE tinham prótese valvar, contra **26%** no grupo NEIE — reforça o enterococo como agente relevante na endocardite protética, ao lado do estafilococo.
-- **Com localização aórtica mais comum** que no grupo NEIE (o artigo relata a diferença sem discriminar o percentual exato por valva no resumo estruturado — `VERIFICAÇÃO HUMANA NECESSÁRIA` para o número).
+Entre **195 pacientes com seguimento de um ano disponível**, a recorrência foi 6%. Esse denominador não é o total de 365. Aquisição relacionada à assistência, infecção protética e recorrência acompanharam piores resultados e menores taxas de cirurgia. O registro não demonstra causalmente quanto operar teria evitado de mortalidade; gravidade e seleção para cirurgia podem confundir a associação.
 
-## Desfechos: mortalidade intra-hospitalar e recidiva em 1 ano
-Dois achados centrais, e os dois pedem leitura cuidadosa do intervalo de confiança, não só do número pontual:
+## Cólon e porta de entrada
 
-- **Mortalidade intra-hospitalar: 16% no grupo EIE, contra 17% no grupo NEIE** — numericamente até menor no grupo EIE, apesar de esse grupo ser mais velho e mais comórbido. Depois de ajuste para os fatores de confusão relevantes, a razão de chances foi **0,67 (IC95% 0,42–1,04; p = 0,083)** — ou seja, **o intervalo de confiança cruza 1** e a diferença **não atinge significância estatística**. A leitura correta não é "enterococo protege", é que **a endocardite enterocócica não se mostrou, neste registro, independentemente associada a maior mortalidade intra-hospitalar** do que a endocardite por outros agentes, apesar do perfil basal mais desfavorável (idade, comorbidade, prótese).
-- **Taxa cirúrgica menor associada a piores desfechos**: o artigo relata que a combinação de aquisição associada a cuidados de saúde com envolvimento de prótese valvar associou-se a **menor taxa de cirurgia**, e que taxa cirúrgica mais baixa acompanhou desfecho pior — sem fornecer, no resumo estruturado disponível, o percentual exato de pacientes operados em cada grupo (`VERIFICAÇÃO HUMANA NECESSÁRIA` para esse número específico).
-- **Recidiva em 1 ano: 6%**, medida nos **195 pacientes do grupo EIE com seguimento de 1 ano disponível** (não nos 365 totais — o dado de recidiva é restrito ao subgrupo com seguimento completo, e isso deve ser lembrado ao comunicar o número).
+Uma série de dois casos descreveu endocardite por E. faecalis com sintomas gastrointestinais e câncer retal diagnosticado na investigação. Esses casos reforçam avaliar sintomas e porta de entrada, mas não quantificam prevalência de neoplasia nem estabelecem rastreamento universal por colonoscopia em toda endocardite enterocócica. Captação colônica em PET/CT também não equivale a diagnóstico de câncer.
 
-## Rastreio de neoplasia colorretal — sinal a levar em conta, evidência ainda fraca
-O mesmo registro relata **maior frequência de captação colônica em PET-CT** no grupo com EIE, sem quantificar o percentual no resumo estruturado disponível (`VERIFICAÇÃO HUMANA NECESSÁRIA` para o número exato). Esse achado ecoa a associação já bem estabelecida entre *Streptococcus gallolyticus* (bovis) e neoplasia colorretal — mas aqui o agente é o *Enterococcus*, e a evidência de associação com neoplasia colorretal é **mais recente e mais fraca**.
+## Bacteriemia sem endocardite é outra população
 
-Um relato de dois casos publicado em 2026 (Rizkou et al., Cureus) descreve pacientes com endocardite por *Enterococcus faecalis* e sintoma gastrointestinal em que a colonoscopia revelou adenocarcinoma retal antes não diagnosticado. **É nível de evidência de relato de caso, não de coorte ou de diretriz** — não deve ser lido como recomendação formal equivalente à investigação colonoscópica já consagrada para *S. gallolyticus*. Na prática, o que os dois achados somados sugerem — o sinal do PET-CT no registro EURO-ENDO e os dois casos publicados — é que, **na endocardite enterocócica sem porta de entrada evidente, ou com sintoma gastrointestinal associado, vale baixar o limiar para investigar o cólon**, sem que isso hoje tenha o peso de uma recomendação de diretriz com classe e nível.
+Uma emulação de ensaio-alvo incluiu 373 pacientes com bacteriemia por E. faecalis, ecocardiograma negativo em até sete dias e sem diagnóstico inicial de endocardite. Falha clínica em 90 dias ocorreu em 75/267 com monoterapia e 39/106 com combinação. Não houve benefício estatisticamente demonstrado da combinação; o desenho observacional não comprova equivalência.
 
-## Não confundir: o debate sobre monoterapia é de bacteriemia SEM endocardite, não de endocardite confirmada
-Um estudo de emulação de ensaio-alvo publicado em 2026 (Bartoletti et al., *Clinical Microbiology and Infection*) reabriu a discussão sobre se toda bacteriemia por *Enterococcus faecalis* precisa de terapia combinada. É importante não aplicar essa conclusão à endocardite enterocócica coberta por este documento, porque a população do estudo é **outra**: dos 373 pacientes analisados, **todos tinham hemocultura monomicrobiana para E. faecalis com ecocardiograma NEGATIVO dentro de 7 dias** — ou seja, a **endocardite foi explicitamente excluída** como critério de inclusão. Nessa população de bacteriemia isolada, sem endocardite, o desfecho composto de falha clínica em 90 dias foi de **28% (75/267) com monoterapia** contra **36% (39/106) com terapia combinada** (a combinação mais usada foi ampicilina com ceftriaxona ou gentamicina, em 75% dos casos combinados), sem diferença estatística entre os grupos — o que levou os autores a sugerir que a terapia combinada pode ser dispensável quando a endocardite já foi afastada.
+**Um ecocardiograma negativo isolado não exclui definitivamente endocardite**, especialmente se persiste suspeita. O próprio desfecho do estudo incluía diagnóstico posterior de endocardite. Seus resultados não justificam monoterapia para endocardite confirmada nem reduzir a investigação indicada.
 
-**Isso não altera a conduta na endocardite enterocócica confirmada**: nela, o esquema combinado (ampicilina/amoxicilina + ceftriaxona ou gentamicina, conforme perfil de resistência à gentamicina) permanece o padrão já documentado na diretriz ESC 2023 e detalhado no documento de esquemas antibióticos desta pasta. O estudo de Bartoletti et al. serve a um propósito diferente e anterior na linha de decisão: **depois que o ecocardiograma já excluiu endocardite**, não antes.
+Este documento não é esquema antibiótico. A escolha depende de espécie, sensibilidade, resistência de alto nível a aminoglicosídeos, função renal e diretriz aplicável. Ampicilina com ceftriaxona não é uma combinação restrita exclusivamente a cepas com resistência de alto nível a aminoglicosídeos.
 
-## Implicações práticas
-- **Idade avançada e múltiplas comorbidades no paciente com endocardite enterocócica não devem, por si só, desencorajar a indicação cirúrgica** quando ela é clinicamente indicada — o registro associa menor taxa de cirurgia a piores desfechos, e a mortalidade intra-hospitalar da EIE não se mostrou pior que a da NEIE depois de ajuste, sugerindo que o perfil basal desfavorável não é motivo suficiente, isoladamente, para reter o paciente do tratamento cirúrgico quando indicado.
-- **Prótese valvar prévia é achado de alta prevalência na EIE** (41% no registro) — reforça manter o enterococo na lista de agentes prioritários ao escolher terapia empírica para suspeita de endocardite protética, ao lado do estafilococo, como já registrado no documento de esquemas antibióticos e no documento de endocardite pós-TAVI desta pasta.
-- **Sintoma gastrointestinal associado a endocardite enterocócica, ou ausência de porta de entrada evidente, é razão para baixar o limiar de investigação colonoscópica** — sinal presente tanto no registro EURO-ENDO (captação colônica em PET-CT) quanto em relato de caso recente, ainda que nenhum dos dois tenha hoje o peso de recomendação formal de diretriz.
-- **A discussão sobre simplificar para monoterapia (Bartoletti et al. 2026) é sobre bacteriemia SEM endocardite confirmada** — não deve ser transposta para a endocardite enterocócica documentada, onde a terapia combinada continua sendo o padrão.
+## Fontes
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: o resumo estruturado consultado nesta sessão não trouxe (1) o percentual exato de pacientes operados em cada grupo (EIE vs. NEIE), (2) a lista discriminada de comorbidades com percentuais individuais, (3) a proporção de *Enterococcus faecalis* versus *Enterococcus faecium* na coorte, e (4) o percentual exato de captação colônica em PET-CT. Esses quatro números exigem acesso ao texto integral do artigo (Eur Heart J Qual Care Clin Outcomes. 2026;12(3):308-321) antes de serem citados com precisão.
+- EURO-ENDO: [PMID 41299837](https://pubmed.ncbi.nlm.nih.gov/41299837/).
+- Bacteriemia sem endocardite: [PMID 41850617](https://pubmed.ncbi.nlm.nih.gov/41850617/).
+- Série de câncer retal: [PMID 42713540](https://pubmed.ncbi.nlm.nih.gov/42713540/).
+
+## Tudo com Tudo
+
+- [Endocardite Infecciosa: Prevenção, Diagnóstico e Tratamento (ESC 2023)](/biblioteca/endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023) — Conecta o perfil por Enterococcus ao diagnóstico, escolha antimicrobiana e decisão de equipe de endocardite, sem extrapolar resultados do registro para causalidade.

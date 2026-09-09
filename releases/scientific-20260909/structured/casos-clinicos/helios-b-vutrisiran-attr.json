@@ -1,0 +1,22 @@
+{
+  "slug": "helios-b-vutrisiran-attr",
+  "titulo": "ATTR-CM: o HELIOS-B mostrou só biomarcador ou reduziu morte e eventos?",
+  "tema": "Cardiomiopatias",
+  "nivel": "avançado",
+  "enunciado": "Homem de 74 anos com ATTR-CM confirmada por investigação completa, incluindo cintilografia, imunofixação sérica e urinária, cadeias leves livres e teste genético compatível com forma selvagem. Já usa tafamidis. A família pergunta se vutrisiran só reduz TTR ou se HELIOS-B avaliou morte e eventos cardiovasculares.",
+  "pergunta": "O que o ensaio HELIOS-B (Fontana et al., NEJM 2025) demonstrou para vutrisiran na ATTR-CM?",
+  "opcoes": [
+    "Apenas queda de TTR e melhora de 6 minutos, sem desfecho clínico de morte ou eventos — era um ensaio de surrogate como os fase 2 de Lp(a)",
+    "n=655 (326 vs 329): morte por qualquer causa e eventos CV recorrentes, HR 0,72 (IC95% 0,56–0,93); P=0,01 na população overall; monoterapia HR 0,67 (0,49–0,93)",
+    "Equivalência com eplontersen (CARDIO-TTRansform), que também reduziu o composto de morte CV e eventos recorrentes",
+    "Redução de mortalidade isolada sem efeito em 6MWT nem em KCCQ, o que torna o fármaco um substituto direto do tafamidis"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "HELIOS-B randomizou 655 pacientes (326 vutrisiran, 329 placebo), permitindo tafamidis de base. O composto de morte por qualquer causa e eventos cardiovasculares recorrentes teve HR 0,72 (IC95% 0,56–0,93; P=0,01) na população total e 0,67 (0,49–0,93) em quem não usava tafamidis inicialmente. Ao menos um evento ocorreu em 125 versus 159 pessoas; número de pessoas não é contagem de eventos recorrentes. Mortalidade por qualquer causa até 42 meses: HR 0,65 (0,46–0,90). A distância caminhada e KCCQ apresentaram menor deterioração que o placebo, com diferenças de 26,5 m e 5,8 pontos. O estudo não comparou diretamente vutrisiran com tafamidis e não torna obrigatória a associação. CARDIO-TTRansform, com eplontersen, não demonstrou redução significativa de seu composto primário (RR 0,89; IC95% 0,73–1,09; P=0,28); não se presume efeito igual entre moléculas.",
+  "source_refs": [
+    "Fontana M, Berk JL, Gillmore JD, et al. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194. NCT04153149.",
+    "CARDIO-TTRansform. N Engl J Med. 28 agosto 2026. DOI: 10.1056/NEJMoa2608510. https://www.nejm.org/doi/full/10.1056/NEJMoa2608510"
+  ],
+  "review_status": "revisado",
+  "review_note": "HELIOS-B conferido; removida falsa pendência 125/159 versus eventos recorrentes, esclarecida preservação funcional e diagnóstico monoclonal completo; atualizado CARDIO-TTRansform primário negativo."
+}

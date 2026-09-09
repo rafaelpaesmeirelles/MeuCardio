@@ -1,56 +1,62 @@
 ---
-title: "Defeito do Septo Atrioventricular no Adulto: Destino da Valva Atrioventricular Esquerda e a Vulnerabilidade do Paciente com Síndrome de Down"
+title: 'Defeito do septo atrioventricular: seguimento valvar e síndrome de Down'
 slug: defeito-do-septo-atrioventricular-no-adulto-destino-da-valva-atrioventricular-esquerda-e-sindrome-de-down
-theme: "Cardiopatias congênitas"
-kind: protocolo
+theme: Cardiopatias congênitas
+kind: documento
 review_status: revisado
-source_refs: ["O'Connor M, Stauber CE, Venardos NM, Fraser CD, Mery CM, Well A. The Fate of the Left Atrioventricular Valve After Atrioventricular Septal Defect Repair: Long-Term Outcomes. Pediatr Cardiol. 2026;47(3):941-949. DOI: 10.1007/s00246-025-03860-2. PMID: 40208292 — números conferidos contra o resumo do artigo.", "Sarilar CC, Cicek S. Complete atrioventricular septal defect, Australian repair: Technique and long-term results. Asian Cardiovasc Thorac Ann. 2026;34(2):160-166. DOI: 10.1177/02184923251399044. PMID: 41313357.", "Chen Z, Li Y, Xie W, et al. Repair of Partial and Transitional Atrioventricular Septal Defects: Mid-term Outcomes in a Single-center Cohort. Rev Cardiovasc Med. 2026;27(1):44492. DOI: 10.31083/RCM44492. PMID: 41659084 — números conferidos contra o resumo do artigo.", "Tabibian K, Chaturvedi A, Vadlakonda A, et al. Inpatient hospitalizations in adults with congenital heart disease and down syndrome: A national perspective. Int J Cardiol Congenit Heart Dis. 2026;24:100674. DOI: 10.1016/j.ijcchd.2026.100674. PMID: 42078798 — números conferidos contra o resumo do artigo."]
+source_refs:
+- 'O''Connor M, Stauber CE, Venardos NM, Fraser CD, Mery CM, Well A. The Fate of the Left Atrioventricular Valve After Atrioventricular
+  Septal Defect Repair: Long-Term Outcomes. Pediatr Cardiol. 2026;47(3):941-949. DOI: 10.1007/s00246-025-03860-2. PMID: 40208292.'
+- 'Sarilar CC, Cicek S. Complete atrioventricular septal defect, Australian repair: Technique and long-term results. Asian
+  Cardiovasc Thorac Ann. 2026;34(2):160-166. DOI: 10.1177/02184923251399044. PMID: 41313357.'
+- 'Chen Z, Li Y, Xie W, et al. Repair of Partial and Transitional Atrioventricular Septal Defects: Mid-term Outcomes in a
+  Single-center Cohort. Rev Cardiovasc Med. 2026;27(1):44492. DOI: 10.31083/RCM44492. PMID: 41659084.'
+- 'Tabibian K, Chaturvedi A, Vadlakonda A, et al. Inpatient hospitalizations in adults with congenital heart disease and down
+  syndrome: A national perspective. Int J Cardiol Congenit Heart Dis. 2026;24:100674. DOI: 10.1016/j.ijcchd.2026.100674. PMID:
+  42078798.'
+review_note: 'Explicitada mediana PHIS de 1,99 ano e limites de extrapolação à vida adulta; corrigidas internações versus
+  pessoas e menor utilização versus falta de acesso; removidas causalidade, superioridade técnica universal e recomendação
+  implícita de adiar reparo. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo
+  conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: O seguimento após reparo do defeito do septo atrioventricular (DSAV) deve considerar a valva atrioventricular esquerda,
+  obstrução da via de saída, lesões residuais e contexto clínico. A valva atrioventricular esquerda do DSAV não deve ser tratada
+  como anatomicamente idêntica à mitral normal, embora bases administrativas utilizem códigos de procedimento mitral.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Defeito do Septo Atrioventricular no Adulto: Destino da Valva Atrioventricular Esquerda e a Vulnerabilidade do Paciente com Síndrome de Down
+# Defeito do septo atrioventricular: seguimento valvar e síndrome de Down
 
-## Definição e por que este documento faltava
-O defeito do septo atrioventricular (DSAV, também chamado canal atrioventricular ou "AVSD") — completo, parcial ou transicional — é reparado quase sempre na infância, e por isso a biblioteca de cardiopatias congênitas tratava até agora o assunto pela lente cirúrgica pediátrica implícita em outros documentos, sem um verbete dedicado ao que acontece **depois**, quando esse paciente chega ao consultório do cardiologista de adulto. Este documento cobre duas frentes que só aparecem em escala real quando o seguimento se estende à vida adulta: o destino de longo prazo da valva atrioventricular esquerda (LAVV) reparada — o determinante isolado mais importante do prognóstico tardio — e a vulnerabilidade específica do paciente com síndrome de Down, que responde pela maioria dos casos de DSAV completo.
+O seguimento após reparo do defeito do septo atrioventricular (DSAV) deve considerar a valva atrioventricular esquerda, obstrução da via de saída, lesões residuais e contexto clínico. A valva atrioventricular esquerda do DSAV não deve ser tratada como anatomicamente idêntica à mitral normal, embora bases administrativas utilizem códigos de procedimento mitral.
 
-## O destino da valva atrioventricular esquerda — coorte multicêntrica de 7.745 pacientes
-- **fonte**: O'Connor M et al., Pediatr Cardiol 2026;47(3):941-949, PMID 40208292 — revisão retrospectiva do Pediatric Health Information System (PHIS) americano, janeiro de 2004 a dezembro de 2023, todos os pacientes submetidos a reparo de DSAV completo (CAVSD).
-- **amostra**: 7.745 pacientes, 57,4% do sexo feminino, idade mediana de 5,4 meses (IIQ 3,7-10,2) no reparo inicial; 54,9% com síndrome de Down.
-- **reintervenção na LAVV** (definida como reparo ou troca valvar mitral após o DSAV inicial): necessária em **503 pacientes (6,5%)** — 80,5% reparo, 19,5% troca.
-- **liberdade de reintervenção ao longo do tempo**: 93,8% em 1 ano, 88,3% em 5 anos, **83,8% em 10 anos e 79,1% em 15 anos** — ou seja, para quem chega à vida adulta depois do reparo na infância, o risco de precisar de uma nova intervenção na valva mitral continua se acumulando por pelo menos 15 anos, não se esgota no seguimento pediátrico imediato.
-- **fatores associados a menor risco de reparo da LAVV**: idade mais avançada no reparo inicial do DSAV (razão de risco/HR 0,98 por mês de idade; IC95% 0,97-0,99; p<0,001) e diagnóstico de síndrome de Down (HR 0,56; IC95% 0,45-0,88; p=0,006) — ou seja, no reparo, o paciente com síndrome de Down teve **menor** risco de precisar de reparo posterior da LAVV nesta coorte, o inverso do que a intuição sobre maior fragilidade nessa população sugeriria.
-- **fatores associados a menor risco de troca (não apenas reparo) da LAVV**: síndrome de Down foi o único fator estatisticamente significativo (HR 0,47; IC95% 0,30-0,72; p<0,001).
-- **conclusão dos autores**: a reintervenção na LAVV depois do reparo de DSAV completo não é incomum (incidência de 7% na coorte), o que reforça a necessidade de vigilância de longo prazo; idade mais avançada no reparo inicial e diagnóstico de síndrome de Down associaram-se a menor risco de reintervenção nesta amostra.
+## Reintervenção após reparo completo
 
-## A técnica cirúrgica também determina o desfecho de longo prazo
-- **fonte**: Sarilar CC, Cicek S. Asian Cardiovasc Thorac Ann 2026;34(2):160-166, PMID 41313357 — revisão de técnica e desfecho da técnica de reparo "Australiana" (Nunn modificada, patch único) para DSAV completo, caracterizada pela aproximação direta dos folhetos em ponte à crista septal sem uso de retalho ventricular.
-- **desfecho relatado em séries contemporâneas**: **acima de 90% de liberdade de reoperação da LAVV e acima de 97% de liberdade de obstrução da via de saída do ventrículo esquerdo (VSVE) em 10 a 15 anos** — superior, segundo os autores, ao reparo tradicional em múltiplas coortes institucionais e multicêntricas.
-- **consistência**: as vantagens descritas se mantêm num amplo espectro de tamanho de comunicação interventricular e de idade do paciente, desde que os pré-requisitos anatômicos estejam presentes.
-- **implicação prática**: o adulto que chega ao seguimento tardio depois de reparo de DSAV completo carrega, junto com o resultado clínico, uma técnica cirúrgica específica — vale registrar qual foi usada (quando disponível no relatório operatório antigo), porque ela própria é uma variável prognóstica da durabilidade da valva.
+No PHIS, 7.745 pacientes operados entre 2004 e 2023 tinham mediana de 5,4 meses no reparo; 54,9% apresentavam síndrome de Down. Foram registradas 503 reintervenções (6,5%): 405 reparos e 98 substituições.
 
-## Defeito parcial e transicional — desfecho de médio prazo, incluindo o paciente que chega adulto ao reparo
-- **fonte**: Chen Z et al., Rev Cardiovasc Med 2026;27(1):44492, PMID 41659084 — coorte unicêntrica retrospectiva (China), pacientes submetidos a reparo de DSAV parcial ou transicional entre janeiro de 2019 e dezembro de 2022, incluindo população pediátrica e adulta.
-- **amostra**: 136 pacientes (DSAV parcial, n=100; transicional, n=36), seguimento mediano de 50,5 meses, internação mediana de 14 dias.
-- **mortalidade**: zero óbitos precoces ou tardios na coorte.
-- **reoperação**: necessária em 4 pacientes (2,9%) — **todas as reoperações envolveram a LAVV**; sem diferença estatisticamente significativa entre os subtipos de DSAV (p=1,000) nem entre faixas etárias (p=0,177), incluindo, portanto, o subgrupo de pacientes já adultos no momento do reparo inicial.
-- **regurgitação moderada ou maior da LAVV**: sem diferença significativa entre pacientes que receberam ou não anuloplastia com anel, tanto no pós-operatório imediato quanto no seguimento final (p=1,000 nas duas comparações) — achado que os próprios autores tratam como preliminar, não como equivalência estabelecida entre as técnicas.
-- **conclusão dos autores**: o reparo de DSAV parcial e transicional tem excelente sobrevida de médio prazo e baixa taxa de reoperação, tanto na população pediátrica quanto na adulta; o refinamento contínuo da estratégia de reparo da valva atrioventricular permanece essencial, e o seguimento de longo prazo ainda é necessário para avaliar a durabilidade da anuloplastia por sutura versus anel.
+A liberdade estimada de reintervenção foi 93,8%, 88,3%, 83,8% e 79,1% em um, cinco, dez e 15 anos. **A mediana de seguimento total foi apenas 1,99 ano**. Estimativas tardias não equivalem a acompanhamento completo de todos até 15 anos, e uma coorte operada na lactância não descreve diretamente toda a vida adulta.
 
-## A vulnerabilidade do adulto com cardiopatia congênita e síndrome de Down — dado nacional americano
-- **fonte**: Tabibian K et al., Int J Cardiol Congenit Heart Dis 2026;24:100674, PMID 42078798 — coorte retrospectiva do National Inpatient Sample americano, 2016-2022, todas as internações de adultos (18-64 anos) com diagnóstico de cardiopatia congênita.
-- **amostra estimada**: 54.410 pacientes com cardiopatia congênita internados, dos quais **3.745 (6,9%) tinham síndrome de Down** — proporção estável ao longo do período (6,6% a 6,2%; p de tendência=0,23), enquanto o número absoluto de internações por cardiopatia congênita cresceu (p de tendência<0,05).
-- **perfil de comorbidade**: pacientes com síndrome de Down apresentaram, com maior frequência (todos p<0,05), hipotireoidismo, demência e doença pulmonar obstrutiva crônica.
-- **menor acesso a procedimento cardíaco durante a internação**: 7,6% dos pacientes com síndrome de Down foram submetidos a procedimento cardíaco, contra 23,2% dos pacientes sem síndrome de Down (p<0,001) — uma diferença de mais de três vezes.
-- **mortalidade intra-hospitalar, ajustada por risco**: síndrome de Down associou-se de forma independente a maior chance de óbito em qualquer internação (razão de chances ajustada/AOR 2,00; IC95% 1,40-2,88; p<0,001).
-- **conclusão dos autores**: o adulto com síndrome de Down e cardiopatia congênita é uma população clinicamente vulnerável, com maior mortalidade intra-hospitalar e menor utilização de procedimento, o que aponta para a necessidade de vias de cuidado dedicadas para melhorar o desfecho nas internações médicas dessa população.
+Idade maior no reparo e síndrome de Down se associaram a menos reintervenções; isso não demonstra que adiar a cirurgia melhore resultados. Anatomia, seleção e práticas de cada centro podem influenciar as associações. [O'Connor et al., 2026](https://pubmed.ncbi.nlm.nih.gov/40208292/).
 
-## Leitura clínica integrada
-O DSAV completo é, na maioria dos casos, uma cardiopatia associada à síndrome de Down — e as quatro fontes deste documento, lidas juntas, mostram uma aparente contradição que precisa ser explicitada em vez de escondida: **no momento do reparo cirúrgico específico da LAVV**, ter síndrome de Down associou-se a **menor** risco de reintervenção valvar (coorte do PHIS, HR 0,56 para reparo e HR 0,47 para troca) — mas, **de forma geral, ao longo da vida adulta**, o paciente com síndrome de Down e cardiopatia congênita tem **maior** mortalidade intra-hospitalar (AOR 2,00) e recebe **menos** procedimento cardíaco quando internado, comparado ao paciente sem síndrome de Down. Essas duas observações não se contradizem — respondem a perguntas diferentes: uma é sobre o risco específico de reintervenção na própria valva mitral reparada; a outra é sobre o risco de qualquer desfecho adverso durante qualquer internação médica ao longo da vida adulta. A leitura mais honesta é que a fragilidade global do adulto com síndrome de Down (comorbidade respiratória, endócrina e cognitiva mais frequente, menor acesso a intervenção quando indicada) pesa mais no prognóstico de longo prazo do que a durabilidade específica do reparo da LAVV em si — que, pelos dados disponíveis, não é pior nessa população, e possivelmente é até mais favorável.
+## Técnica e formas parcial/transicional
 
-## Armadilhas clínicas
-- **Assumir que o seguimento da LAVV "termina" quando o paciente sai da infância sem sinal de disfunção.** A liberdade de reintervenção continua caindo entre 10 e 15 anos de seguimento (88,3% → 83,8% → 79,1%) — o risco não se esgota no acompanhamento pediátrico imediato, e a vigilância ecocardiográfica seriada da LAVV deve continuar na vida adulta.
-- **Presumir que síndrome de Down significa maior risco de falha valvar especificamente.** Os dados da maior coorte disponível (n=7.745) mostram o oposto para o risco de reintervenção na LAVV — a vulnerabilidade real do paciente com síndrome de Down aparece em outro desfecho (mortalidade intra-hospitalar geral e menor acesso a procedimento), não na durabilidade do reparo valvar em si.
-- **Atribuir a maior mortalidade do adulto com síndrome de Down apenas à cardiopatia congênita.** O próprio estudo nacional mostra maior prevalência de comorbidade não cardíaca (hipotireoidismo, demência, DPOC) nessa população — a vulnerabilidade é sistêmica, não isolada ao coração.
-- **Deixar de investigar regurgitação da LAVV recorrente como causa de sintoma em adulto já reparado na infância**, presumindo que o reparo antigo é definitivo. Todas as reoperações na coorte de DSAV parcial/transicional envolveram a LAVV — é o ponto de falha mais previsível do reparo, em qualquer subtipo de DSAV.
+Uma revisão da técnica australiana, de patch único modificado, relata resultados favoráveis em séries selecionadas, incluindo liberdade de reoperação valvar >90% em dez a 15 anos. A técnica depende de pré-requisitos anatômicos, e a revisão não é ensaio randomizado de superioridade universal. Recuperar o relatório operatório ajuda a interpretar a anatomia atual. [Sarilar e Cicek, 2026](https://pubmed.ncbi.nlm.nih.gov/41313357/).
 
-## O que este documento não cobre
-Técnica cirúrgica detalhada de reparo primário do DSAV (single-patch, double-patch, técnica Australiana) é abordada aqui só na medida em que se associa a desfecho de longo prazo — não é um manual operatório. Reparo transcateter borda a borda de valva atrioventricular em cardiopatia congênita do adulto, incluindo seu papel potencial na regurgitação residual ou recorrente da LAVV pós-DSAV, está no documento dedicado a essa técnica nesta mesma pasta. Avaliação cardiológica de rotina em adulto com síndrome de Down sem cardiopatia congênita conhecida não é objeto deste documento.
+Em 136 pacientes com DSAV parcial ou transicional, houve quatro reoperações, todas envolvendo a valva atrioventricular esquerda, e nenhum óbito em mediana de 50,5 meses. Não detectar diferença entre idades, subtipos ou uso de anel não demonstra equivalência, especialmente com apenas quatro eventos. O estudo inclui crianças e adultos; não se deve apresentar seu resultado agregado como estimativa específica de adultos. [Chen et al., 2026](https://pubmed.ncbi.nlm.nih.gov/41659084/).
+
+## Internações em adultos com síndrome de Down
+
+A análise do National Inpatient Sample de 2016–2022 abrangeu aproximadamente 54.410 **internações** de pessoas entre 18 e 64 anos com cardiopatia congênita, incluindo 3.745 com síndrome de Down. Não era uma coorte exclusiva de DSAV nem acompanhamento longitudinal de pacientes únicos.
+
+Houve menor utilização de procedimentos cardíacos (7,6% versus 23,2%) e maior odds ajustada de morte intra-hospitalar (2,00; IC 95% 1,40–2,88) no grupo com Down. **Menor utilização não comprova falta de acesso a procedimento indicado**, e a associação de mortalidade não identifica quanto decorre de comorbidades, cardiopatia ou decisões terapêuticas. [Tabibian et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42078798/).
+
+## Aplicação
+
+Os estudos respondem a perguntas diferentes: durabilidade de reparo pediátrico, técnica cirúrgica, resultados de médio prazo e internações de adultos. Não permitem concluir que menor risco de reintervenção valvar compense ou explique a mortalidade geral na síndrome de Down.
+
+Manter a transição para acompanhamento especializado na vida adulta e investigar sintomas ou regurgitação recorrente conforme avaliação clínica. A síndrome de Down não deve ser usada isoladamente para presumir falha valvar, contraindicar intervenção ou determinar intensidade de cuidado.
+
+## Tudo com Tudo
+
+- [Defeito do Septo Atrioventricular na Síndrome de Down: Classificação, Hipertensão Pulmonar Precoce e Timing Cirúrgico](/biblioteca/defeito-do-septo-atrioventricular-na-sindrome-de-down-classificacao-hipertensao-pulmonar-precoce-e-timing-cirurgico) — Conecta a evolução tardia da valva AV esquerda ao defeito AV na síndrome de Down, anatomia, reparo inicial e risco pulmonar.

@@ -1,0 +1,22 @@
+{
+  "slug": "fidelio-dkd-2020",
+  "title": "FIDELIO-DKD: finerenona e desfechos de DRC no diabetes tipo 2",
+  "tema": "Diabetes e cardiologia",
+  "year": 2020,
+  "journal": "New England Journal of Medicine",
+  "pmid": "33264825",
+  "doi": "10.1056/NEJMoa2025845",
+  "design": "Ensaio de fase 3, randomizado, duplo-cego, controlado por placebo. NCT02540993. Financiado por Bayer.",
+  "population": "Adultos com diabetes tipo 2 e DRC em bloqueio do sistema renina-angiotensina: RAC 30 a <300 mg/g com TFGe 25 a <60 mL/min/1,73 m² e retinopatia diabética, ou RAC 300 a 5000 mg/g com TFGe 25 a <75. n=2.833 finerenona versus 2.841 placebo. Foram randomizados 5.734 pacientes; os denominadores da análise principal totalizam 5.674.",
+  "intervention": "Finerenona, antagonista não esteroide do receptor mineralocorticoide.",
+  "control": "Placebo.",
+  "primary_outcome": "Composto renal: falência renal, queda sustentada ≥ 40% da TFGe em relação à linha de base, ou morte por causa renal.",
+  "key_findings": "Seguimento mediano 2,6 anos. Primário: 504/2.833 (17,8%) versus 600/2.841 (21,1%); HR 0,82; IC95% 0,73–0,93; P=0,001. Secundário-chave (morte CV, infarto não fatal, AVC não fatal ou hospitalização por IC): 367 (13,0%) versus 420 (14,8%); HR 0,86; IC95% 0,75–0,99; P=0,03. Frequência global de eventos adversos semelhante. Descontinuação do regime do ensaio por hipercalemia: 2,3% versus 0,9%.",
+  "clinical_implications": "No DM2 com DRC no recorte do FIDELIO-DKD, finerenona reduz o composto de progressão renal. Não é o FIGARO-DKD (composto CV como primário) nem o FINEARTS-HF (piora de IC na FEVE ≥ 40%). Não fundir 17,8% versus 21,1% com internação por IC. A suspensão por hipercalemia é um dano relevante (2,3% vs 0,9%). A ESC 2026 de DCV+DRC (Damman, PMID 42661426) transformou o recorte de finerenona no DM2 com DRC, TFGe ≥ 25 mL/min/1,73 m² e RAC ≥ 30 mg/g, em Classe I A — essa classe nasce da pergunta renal, não do FINEARTS-HF. A recomendação exige considerar potássio, função renal e tratamento de base; não basta o diagnóstico genérico de diabetes com DRC.",
+  "source_refs": [
+    "Bakris GL, Agarwal R, Anker SD, et al.; FIDELIO-DKD Investigators. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383:2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825. NCT02540993.",
+    "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the ERA. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098. PMID: 42661426."
+  ],
+  "review_status": "revisado",
+  "review_note": "FIDELIO e tabela ESC 2026 conferidos; explicitados denominadores, critérios renais/albuminúria e monitorização; tema canônico."
+}

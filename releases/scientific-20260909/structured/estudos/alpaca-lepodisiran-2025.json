@@ -1,0 +1,23 @@
+{
+  "slug": "alpaca-lepodisiran-2025",
+  "title": "Lepodisiran, um siRNA de longa duração contra a lipoproteína(a) (ALPACA, fase 2)",
+  "tema": "Prevenção e lipídios",
+  "year": 2025,
+  "journal": "N Engl J Med",
+  "pmid": "40162643",
+  "doi": "10.1056/NEJMoa2415818",
+  "design": "Ensaio de fase 2 randomizado, duplo-cego, controlado por placebo, com alocação 1:2:2:2:2. NCT05565742. O primário foi laboratorial.",
+  "population": "320 adultos; mediana basal de Lp(a) de 253,9 nmol/L.",
+  "intervention": "Lepodisiran subcutâneo 16 mg, 96 mg ou 400 mg no basal e no dia 180; um braço de 400 mg recebeu placebo no dia 180. Os grupos 400 mg no basal foram agrupados (400 mg pooled) na análise primária.",
+  "control": "Placebo subcutâneo no basal e no dia 180.",
+  "primary_outcome": "Variação percentual média no tempo, ajustada ao placebo, da Lp(a) sérica do dia 60 ao dia 180 (desfecho substituto; não é desfecho clínico).",
+  "key_findings": "ALPACA é um ensaio de fase 2 (n=320) com desfecho exclusivamente substituto; nenhum evento clínico (MACE, morte, infarto) foi testado como desfecho de eficácia. Lp(a) mediana 253,9 nmol/L. A variação percentual média no tempo, ajustada ao placebo, do dia 60 ao 180 (day 60-180) foi −40,8 pp com 16 mg, −75,2 pp com 96 mg e −93,9 pp no 400 mg pooled (IC 95% −95,1 a −92,5). Do dia 30 ao 360: −41,2 pp (16 mg), −77,2 pp (96 mg), −88,5 pp (400 mg + placebo no D180) e −94,8 pp (400 mg + 400 mg). Sem eventos adversos graves atribuídos ao fármaco; reações locais leves em até ~12% na dose alta.",
+  "clinical_implications": "Lepodisiran reduziu intensamente Lp(a), mas o ALPACA não demonstrou redução de infarto, AVC ou morte. Não é possível converter a mudança laboratorial em um HR de eventos cardiovasculares ou em indicação clínica de rotina. A confirmação do benefício clínico exige estudo de desfechos; a publicação de fase 2 não estabelece aprovação regulatória.",
+  "source_refs": [
+    "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392:1673-1683. doi:10.1056/NEJMoa2415818. PMID: 40162643.",
+    "ClinicalTrials.gov NCT05565742 (ALPACA).",
+    "https://pubmed.ncbi.nlm.nih.gov/40162643/"
+  ],
+  "review_status": "revisado",
+  "review_note": "ALPACA conferido; removidas estimativas demográficas aproximadas não essenciais e distinção clara entre biomarcador e benefício clínico."
+}

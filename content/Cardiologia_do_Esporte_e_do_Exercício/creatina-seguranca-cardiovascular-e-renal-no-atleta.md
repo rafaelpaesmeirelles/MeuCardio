@@ -1,19 +1,32 @@
 ---
-title: 'Suplementação com creatina no atleta: segurança cardiovascular e renal na evidência de 2025-2026'
+title: 'Creatina no atleta: segurança renal e limites da evidência cardiovascular'
 slug: creatina-seguranca-cardiovascular-e-renal-no-atleta
 theme: Cardiologia do Esporte e do Exercício
 kind: estudo
 review_status: revisado
-source_refs: []
-review_note: Removidas prova universal de segurança renal/cardiovascular, atribuição obrigatória da creatinina ao suplemento
-  e falsa exclusão específica de trombose em análise agregada.
+source_refs:
+- 'PubMed: https://pubmed.ncbi.nlm.nih.gov/42035842/'
+- 'PubMed: https://pubmed.ncbi.nlm.nih.gov/42043069/'
+- 'PubMed: https://pubmed.ncbi.nlm.nih.gov/42124755/'
+- 'PubMed: https://pubmed.ncbi.nlm.nih.gov/41541997/'
+review_note: 'Removidas prova universal de segurança renal/cardiovascular, atribuição obrigatória da creatinina ao suplemento
+  e falsa exclusão específica de trombose em análise agregada. Conferência editorial final: título alinhado ao corpo revisado,
+  campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário.
+  Vínculos internos preservados.'
+summary: Uma metanálise de 19 ensaios randomizados e um estudo cruzado encontrou aumento médio de creatinina de 0,13 mg/dL
+  (IC 95% 0,07–0,18). Não detectou diferença estatística de ureia ou TFGe; para TFGe, a diferença foi −5,20 mL/min/1,73 m²
+  (IC 95% −15,00 a 4,60).
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Creatina no atleta: segurança renal e limites da evidência cardiovascular
 
 ## Função renal
 
-Uma metanálise de 19 ensaios randomizados e um estudo cruzado encontrou aumento médio de creatinina de 0,13 mg/dL (IC95% 0,07–0,18). Não detectou diferença estatística de ureia ou TFGe; para TFGe, a diferença foi −5,20 mL/min/1,73 m² (IC95% −15,00 a 4,60).
+Uma metanálise de 19 ensaios randomizados e um estudo cruzado encontrou aumento médio de creatinina de 0,13 mg/dL (IC 95% 0,07–0,18). Não detectou diferença estatística de ureia ou TFGe; para TFGe, a diferença foi −5,20 mL/min/1,73 m² (IC 95% −15,00 a 4,60).
 
 Esses resultados não provam ausência de lesão renal em cada usuário. Aumento da produção de creatinina pode contribuir, mas não deve ser presumido como explicação exclusiva de uma alteração individual. Os autores pedem ensaios superiores a um ano. [Tsiaras et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42035842/).
 
@@ -30,3 +43,7 @@ Um relato descreve tromboembolismo em usuário de creatina. Sem comparador, não
 ## Leitura clínica
 
 A evidência é tranquilizadora nos contextos estudados, com limites de duração e registro de eventos. Uma creatinina elevada exige correlação com evolução, contexto clínico e demais exames; não deve ser automaticamente rotulada como nefrotoxicidade nem descartada como efeito benigno. Suspeita de trombose deve ser investigada pelos critérios clínicos habituais, independentemente do suplemento.
+
+## Tudo com Tudo
+
+- [Lesão Renal Aguda na UCO: Critérios KDIGO por Creatinina e Diurese](/biblioteca/lesao-renal-aguda-na-uco-criterios-kdigo-creatinina-e-diurese) — Distingue aumento de creatinina durante suplementação de critérios clínicos de lesão renal aguda; o suplemento não permite descartar lesão individual.

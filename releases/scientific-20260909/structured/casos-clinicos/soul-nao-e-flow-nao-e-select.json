@@ -1,0 +1,25 @@
+{
+  "slug": "soul-nao-e-flow-nao-e-select",
+  "titulo": "SOUL não é FLOW não é SELECT: três doses, três perguntas, três HRs",
+  "tema": "Diabetes e cardiologia",
+  "theme": "Diabetes e cardiologia",
+  "nivel": "avançado",
+  "enunciado": "Homem de 62 anos, DM2 (HbA1c 7,4%), IAM há 2 anos, IMC 31 kg/m², TFGe 38 mL/min/1,73 m², RAC 380 mg/g, em IECA e dapagliflozina. Na reunião, o colega resume: «semaglutida reduz MACE e protege o rim; o HR 0,80 do SELECT, o 0,76 do FLOW e o 0,86 do SOUL são o mesmo efeito; 2,4 mg cobre os três; o comprimido do SOUL é o FLOW sem agulha — uma receita só.» Propõe Wegovy 2,4 mg SC e, se o paciente recusar injeção, Rybelsus 14 mg 'que herda o primário renal'.",
+  "pergunta": "Qual leitura separa corretamente SOUL (oral 14 mg, MACE no DM2), FLOW (SC 1,0 mg, renal no DM2 com DRC) e SELECT (SC 2,4 mg, MACE em obesidade sem diabetes)?",
+  "opcoes": [
+    "Os três HRs (0,86; 0,76; 0,80) medem o mesmo composto na mesma população; 2,4 mg SC herda o primário renal do FLOW e a oral 14 mg é o FLOW sem agulha — uma dose cobre os três ensaios",
+    "Três ensaios, três doses, três perguntas: SOUL (PMID 40162642; oral 14 mg/dia; DM2 com ASCVD e/ou DRC; n=9.650; MACE 12,0% vs 13,8%; HR 0,86; IC95% 0,77–0,96); FLOW (PMID 38785209; SC 1,0 mg/semana; DM2 com DRC; n=3.533; composto renal/CV 331 vs 410; HR 0,76; IC95% 0,66–0,88); SELECT (PMID 37952131; SC 2,4 mg/semana; DCV e IMC ≥ 27 sem diabetes; n=17.604; MACE 6,5% vs 8,0%; HR 0,80; IC95% 0,72–0,90) — não fundir, não ranquear, não trocar a dose",
+    "SELECT (2,4 mg) é o ensaio renal (HR 0,76) e exige diabetes; SOUL (oral 14 mg) é obesidade sem DM (HR 0,80); FLOW (1,0 mg) é só MACE no DM2 (HR 0,86) — inverter os recortes autoriza subir a dose de 1,0 para 2,4 no rim",
+    "SOUL provou equivalência head-to-head com FLOW e SELECT; a oral 14 mg reduz o composto renal com o mesmo HR 0,76 e substitui iSGLT2 neste paciente"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Três papéis, três recortes, três vias. SOUL (McGuire, NEJM 2025; PMID 40162642): semaglutida oral até 14 mg/dia versus placebo; 9.650 adultos ≥ 50 anos com DM2 (HbA1c 6,5–10%) e ASCVD, DRC ou ambas; primário MACE; 579/4.825 (12,0%) vs 668/4.825 (13,8%); HR 0,86; IC95% 0,77–0,96; P=0,006; mediana 49,5 meses. FLOW (Perkovic, NEJM 2024; PMID 38785209): semaglutida SC 1,0 mg/semana — não 2,4 mg — em 3.533 pessoas com DM2 e DRC albuminúrica; primário composto de falência renal, queda sustentada ≥ 50% da TFGe ou morte renal ou cardiovascular; 331 vs 410; HR 0,76; IC95% 0,66–0,88; P=0,0003; mediana 3,4 anos. SELECT (Lincoff, NEJM 2023; PMID 37952131): semaglutida SC 2,4 mg/semana em 17.604 adultos ≥ 45 anos com DCV estabelecida, IMC ≥ 27 e sem diabetes; MACE 569/8.803 (6,5%) vs 701/8.801 (8,0%); HR 0,80; IC95% 0,72–0,90; P<0,001; seguimento médio 39,8±9,4 meses. Não há head-to-head. HR 0,86, 0,76 e 0,80 não se ranqueiam. Subir de 1,0 para 2,4 mg não converte FLOW em SELECT. A oral 14 mg não herda o primário renal do FLOW. SELECT exige não ter diabetes. O paciente do enunciado tem DM2 e DRC albuminúrica: o recorte renal é o FLOW (1,0 mg SC), tratamento adicional ao cuidado padrão, predominantemente com IECA/BRA. Somente 15,6% usavam iSGLT2 inicialmente; a análise desse subgrupo foi imprecisa e não garante benefício adicional de magnitude igual em todos os usuários de dapagliflozina. Se a pergunta for MACE pela via oral, é o SOUL (14 mg). 2,4 mg é o SELECT, população sem diabetes. Essas são doses de manutenção ou máximas dos ensaios, após titulação. O resumo não estabelece equivalência regulatória ou indicação de uma apresentação comercial pela evidência de outra.",
+  "source_refs": [
+    "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642.",
+    "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+    "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131.",
+    "FLOW por uso basal de SGLT2. PMID: 38914124. DOI: 10.1038/s41591-024-03133-0."
+  ],
+  "review_status": "revisado",
+  "review_note": "Três estudos primários conferidos; corrigida generalização do FLOW sobre iSGLT2 e removida pendência regulatória, sem criar equivalência de formulações."
+}

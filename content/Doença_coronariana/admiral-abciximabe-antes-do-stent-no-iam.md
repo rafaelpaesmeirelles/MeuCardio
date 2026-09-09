@@ -1,15 +1,24 @@
 ---
-title: "ADMIRAL: abciximabe pré-stent no IAM reduz composto 30 d; n=300; CADILLAC não replica morte/IAM"
+title: 'ADMIRAL: composto positivo num ensaio pequeno'
 slug: admiral-abciximabe-antes-do-stent-no-iam
-theme: "Doença coronariana"
+theme: Doença coronariana
 kind: estudo
-summary: "300 IAM, duplo-cego: abciximabe+stent vs placebo+stent, fármaco antes da angio. Primário 30 d (morte, reinfarto, TVR urgente) 6,0% vs 14,6% (P=0,01); 6 meses 7,4% vs 15,9% (P=0,02). TIMI 3 pré-procedimento 16,8% vs 5,4%. Sangramento maior 0,7% vs 0. n pequeno. CADILLAC, maior, não mostra diferença em morte/reinfarto/AVC. FEVE numérica ausente neste abstract."
+summary: 'ADMIRAL randomizou 300 pacientes: abciximabe antes da angiografia reduziu o composto de morte, reinfarto ou TVR
+  urgente em 30 dias (6,0% vs 14,6%). Não estabelece uso rotineiro contemporâneo nem equivale ao desenho do CADILLAC.'
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via Europe PMC (Montalescot, PMID 11419426; N Engl J Med. 2001;344(25):1895-1903; DOI 10.1056/NEJM200106213442503). n=300. Conclusão cita FEVE — números não estão no abstract, não inventar. Revisão científica concluída em 30/08/2026."
+review_note: 'Resumo integral do ADMIRAL PMID 11419426 comparado: 300 randomizados, eventos compostos, TIMI e sangramento
+  conferidos. Comparação contextual CADILLAC PMID 11919304 também conferida; preservadas diferenças de desenho e ausência
+  de recomendação rotineira contemporânea.'
 source_refs:
-  - "Montalescot G, Barragan P, Wittenberg O, Ecollan P, Elhadad S, Villain P, Boulenc JM, Morice MC, Maillard L, Pansiéri M, Choussat R, Pinton P. Platelet glycoprotein IIb/IIIa inhibition with coronary stenting for acute myocardial infarction. N Engl J Med. 2001;344(25):1895-1903. DOI: 10.1056/NEJM200106213442503. PMID: 11419426. Abstract relido nesta revisão editorial."
-  - "Documento da casa cadillac-stent-versus-angioplastia-com-ou-sem-abciximabe-no-iam — 2.082, morte/IAM NS."
+- 'Montalescot G, Barragan P, Wittenberg O, Ecollan P, Elhadad S, Villain P, Boulenc JM, Morice MC, Maillard L, Pansiéri M,
+  Choussat R, Pinton P. Platelet glycoprotein IIb/IIIa inhibition with coronary stenting for acute myocardial infarction.
+  N Engl J Med. 2001;344(25):1895-1903. DOI: 10.1056/NEJM200106213442503. PMID: 11419426. Abstract relido nesta revisão editorial.'
+- 'PMID: 11919304. DOI: 10.1056/NEJMoa013404.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # ADMIRAL: composto positivo num ensaio pequeno
@@ -29,8 +38,12 @@ IAM com stent primário. Abciximabe **antes da angio** reduz morte, reinfarto ou
 - TIMI 3 antes: **16,8% vs 5,4%**; **P=0,01**. Depois: **95,1% vs 86,7%**; **P=0,04**. 6 meses: **94,3% vs 82,8%**; **P=0,04**
 - Sangramento maior: **1 (0,7%) vs 0**
 
-Números de FEVE **não** estão neste abstract.
+A FEVE foi avaliada, mas esta síntese não atribui uma magnitude numérica à mudança por não estar reportada no resumo primário.
 
 ## Mensagem prática
 
-**n=300.** CADILLAC, com 2.082, atribui o composto ao TVR do stent e **não** mostra diferença em morte/reinfarto/AVC. Não usar ADMIRAL para mandar abciximabe de rotina no IAM contemporâneo.
+**n=300.** O CADILLAC tinha desenho fatorial, comparadores e desfecho/tempo diferentes; não é uma replicação exata que invalide automaticamente o ADMIRAL pelo tamanho. No CADILLAC, o composto foi impulsionado por TVR, sem diferença significativa de morte/reinfarto/AVC. Não usar ADMIRAL para recomendar abciximabe de rotina no IAM contemporâneo.
+
+## Tudo com Tudo
+
+- [CADILLAC: o primário cai pelo TVR do stent; morte, reinfarto e AVC NS; abciximabe não muda reestenose](/biblioteca/cadillac-stent-versus-angioplastia-com-ou-sem-abciximabe-no-iam) — Compara ADMIRAL e CADILLAC no IAM tratado com stent e abciximabe, separando efeito do stent do efeito do GPI.

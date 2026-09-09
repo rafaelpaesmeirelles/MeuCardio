@@ -1,0 +1,48 @@
+{
+  "slug": "trilha-icfep-obesidade-incretina-mra-e-rc",
+  "titulo": "ICFEp 2026: dois fenótipos, ARM, incretina e reabilitação",
+  "tema": "Insuficiência cardíaca",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+      "por_que": "Distinguir os dois fenótipos da ESC 2026 e selecionar ARM pela evidência da molécula."
+    },
+    {
+      "ordem": 2,
+      "item_type": "documento",
+      "item_slug": "finearts-hf-finerenona-ic-feve-maior-igual-40",
+      "por_que": "Interpretar FINEARTS: redução do composto de eventos totais, sem benefício isolado de mortalidade cardiovascular."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "fluxograma-mra-independente-da-feve-esc-2026",
+      "por_que": "Avaliar potássio e função renal com limites próprios para cada ARM; não associar dois ARM."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+      "por_que": "Diferenciar melhora de sintomas/peso de redução comprovada de mortalidade na recomendação de incretinas."
+    },
+    {
+      "ordem": 5,
+      "item_type": "documento",
+      "item_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+      "por_que": "Encaminhar a reabilitação individualizada, incluindo opções remotas em selecionados."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420.",
+    "Solomon SD, et al. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391:1475-1485. PMID: 39225278.",
+    "Kosiborod MN, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389:1069-1084. PMID: 37622681."
+  ],
+  "objetivo": "Revisão do fenótipo de IC com obesidade, indicação de ARM, incretinas e reabilitação. Consolidar com a trilha ampliada do mesmo percurso.",
+  "nivel": "intermediario",
+  "merge_into": "trilha-icfep-obesidade-incretina-e-rc",
+  "publication_action": "merge_duplicate",
+  "review_note": "Percurso clinicamente duplicado revisado; consolidar na trilha ampliada sem criar nova cópia."
+}

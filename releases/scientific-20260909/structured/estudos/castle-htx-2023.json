@@ -1,0 +1,23 @@
+{
+  "slug": "castle-htx-2023",
+  "title": "CASTLE-HTx: ablação de FA na IC terminal referida para transplante",
+  "tema": "Fibrilação atrial",
+  "year": 2023,
+  "journal": "New England Journal of Medicine",
+  "pmid": "37634135",
+  "doi": "10.1056/NEJMoa2306037",
+  "nct": "NCT04649801",
+  "design": "Ensaio unicêntrico, aberto, randomizado (Alemanha). Parado por eficácia pelo comitê de monitorização 1 ano após o fim da randomização.",
+  "population": "194 adultos com FA sintomática e IC terminal referidos para avaliação de transplante cardíaco (97 ablação + terapia médica dirigida por diretriz vs 97 terapia médica isolada).",
+  "intervention": "Ablação por cateter de FA mais terapia médica dirigida por diretriz. Ablação realizada em 81/97 (84%) no braço ablação e em 16/97 (16%) no braço médico (cruzamento).",
+  "control": "Terapia médica isolada.",
+  "primary_outcome": "Composto de morte por qualquer causa, implante de DAVI (LVAD) ou transplante cardíaco urgente.",
+  "key_findings": "Seguimento mediano 18,0 meses (IQR 14,6–22,6). Primário: 8/97 (8%) vs 29/97 (30%); HR 0,24; IC95% 0,11–0,52; P<0,001. Morte por qualquer causa: 6/97 (6%) vs 19/97 (20%); HR 0,29; IC95% 0,12–0,72. Complicação relacionada ao procedimento: 3 vs 1.",
+  "clinical_implications": "Em pacientes com FA e IC terminal encaminhados para avaliação de transplante, a estratégia de ablação reduziu o composto de morte, DAVI ou transplante urgente neste ensaio unicêntrico. A amostra de 194, interrupção precoce e cruzamento entre grupos limitam a extrapolação. Não foi comparação com CASTLE-AF, não estudou ICFEp e não demonstrou dispensar CDI ou terapia da IC. Avaliação para transplante não significa que todos já estavam em lista.",
+  "source_refs": [
+    "Sohns C, Fox H, Marrouche NF, et al.; CASTLE HTx Investigators. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389(15):1380-1389. DOI 10.1056/NEJMoa2306037. PMID 37634135. NCT04649801.",
+    "Marrouche NF, Brachmann J, Andresen D, et al.; CASTLE-AF Investigators. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378(5):417-427. DOI 10.1056/NEJMoa1707855. PMID 29385358. NCT00643188."
+  ],
+  "review_status": "revisado",
+  "review_note": "CASTLE-HTx conferido; mantidos desfechos e cruzamento, retirados números sem fonte direta e linguagem editorial; sem extrapolação de classe."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "valor-hcm-2022",
+  "title": "VALOR-HCM: mavacamten na MHO obstrutiva elegível a redução septal",
+  "tema": "Cardiomiopatias",
+  "year": 2022,
+  "journal": "Journal of the American College of Cardiology",
+  "pmid": "35798455",
+  "design": "Ensaio de fase 3, duplo-cego, controlado por placebo, 16 semanas (NCT04349072).",
+  "population": "112 adultos com MHO obstrutiva, gradiente de VSVE ≥ 50 mmHg (repouso ou provocação), elegíveis a redução septal (SRT) pela diretriz (56 mavacamten vs 56 placebo). Idade média 60 anos; 93% NYHA III/IV; gradiente pós-esforço médio 84 mmHg.",
+  "intervention": "Mavacamten oral, dose inicial 5 mg, titulada até 15 mg. Não é aficamten.",
+  "control": "Placebo.",
+  "primary_outcome": "Seguir para SRT ou permanecer elegível à SRT pela diretriz, em 16 semanas (não mortalidade; não é MAPLE nem SEQUOIA).",
+  "key_findings": "Primário: 10/56 (17,9%) com mavacamten vs 43/56 (76,8%) com placebo. Diferença 58,9 pontos percentuais (44,0–73,9); P<0,001. Secundários hierárquicos, todos P<0,001 a favor: gradiente pós-esforço −37,2 mmHg; melhora ≥ 1 classe NYHA 41,1 pontos percentuais; desfecho relatado pelo paciente +9,4 pontos. Autores: liberdade de SRT no longo prazo ainda precisa ser determinada.",
+  "clinical_implications": "Em 16 semanas, mavacamten reduziu a proporção que foi a SRT ou permaneceu elegível. 16 semanas ≠ alta definitiva da fila. Não prova que a cirurgia ficou obsoleta. Não é MAPLE-HCM (aficamten vs metoprolol; PMID 40888697) nem SEQUOIA-HCM (aficamten vs placebo no VO2; PMID 38739079). Mavacamten ≠ aficamten; doses não se trocam. A informação FDA de mavacamten recomenda não iniciar com FEVE <55% e interromper se FEVE <50% ou IC/piora clínica. O manejo deve seguir a informação específica do produto e ecocardiogramas seriados.",
+  "source_refs": [
+    "Desai MY, et al. Myosin Inhibition in Patients With Obstructive Hypertrophic Cardiomyopathy Referred for Septal Reduction Therapy. J Am Coll Cardiol. 2022;80:95-108. PMID 35798455. NCT04349072.",
+    "FDA CAMZYOS. https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/214998s010lbl.pdf",
+    "MAPLE-HCM. PMID: 40888697.",
+    "SEQUOIA-HCM. PMID: 38739079."
+  ],
+  "review_status": "revisado",
+  "note": "evidencias/valor-hcm-mavacamten-srt.json e content/Cardiomiopatias/valor-hcm-nao-e-maple-nem-e-cirurgia.md já existem — não reescritos. Este é o registro-estudo. Não fundir com MAPLE nem SEQUOIA.",
+  "review_note": "VALOR conferido; substituída pendência de segurança por critérios específicos de mavacamten e acrescentadas fontes dos comparadores."
+}

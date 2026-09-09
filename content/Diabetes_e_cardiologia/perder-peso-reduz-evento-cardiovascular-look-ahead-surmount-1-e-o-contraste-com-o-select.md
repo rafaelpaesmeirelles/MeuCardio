@@ -1,11 +1,25 @@
 ---
-title: "Perder Peso Reduz Evento Cardiovascular? Look AHEAD, SURMOUNT-1 e o Contraste com o SELECT"
+title: Perder Peso Reduz Evento Cardiovascular? Look AHEAD, SURMOUNT-1 e o Contraste com o SELECT
 slug: perder-peso-reduz-evento-cardiovascular-look-ahead-surmount-1-e-o-contraste-com-o-select
-theme: "Diabetes e cardiologia"
+theme: Diabetes e cardiologia
 kind: estudo
 review_status: revisado
-source_refs: ["Look AHEAD Research Group; Wing RR, Bolin P, Brancati FL, Bray GA, et al. Cardiovascular effects of intensive lifestyle intervention in type 2 diabetes. N Engl J Med. 2013;369(2):145-154. DOI: 10.1056/NEJMoa1212914. PMID: 23796131 — NCT00017953, 5.145 pacientes, 16 centros nos EUA, interrompido por futilidade com seguimento mediano de 9,6 anos. NOTA: existe Erratum em N Engl J Med. 2014;370(19):1866, registrado mas NÃO lido nesta consulta", "Jastreboff AM, Aronne LJ, Ahmad NN, Wharton S, Connery L, et al; SURMOUNT-1 Investigators. Tirzepatide Once Weekly for the Treatment of Obesity. N Engl J Med. 2022;387(3):205-216. DOI: 10.1056/NEJMoa2206038. PMID: 35658024 — NCT04184622, 2.539 adultos, fase 3, 72 semanas. Financiamento: Eli Lilly", "Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, et al; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131 — NCT03574597, 17.604 pacientes; citado aqui para a comparação, com documento próprio nesta mesma pasta. Financiamento: Novo Nordisk"]
-legacy_source: "Documento novo, escrito em 01/08/2026. A pasta tinha o SELECT e a cirurgia bariátrica (SOS), mas não o Look AHEAD — o maior ensaio de intervenção intensiva de estilo de vida com desfecho cardiovascular, e que foi NEGATIVO. Sem ele, o assinante não entende por que a semaglutida no SELECT foi um resultado tão relevante, nem por que 'emagrecer protege o coração' é uma frase que precisa de qualificação."
+source_refs:
+- 'Look AHEAD Research Group; Wing RR, Bolin P, Brancati FL, Bray GA, et al. Cardiovascular effects of intensive lifestyle
+  intervention in type 2 diabetes. N Engl J Med. 2013;369(2):145-154. DOI: 10.1056/NEJMoa1212914. PMID: 23796131'
+- 'Jastreboff AM, Aronne LJ, Ahmad NN, Wharton S, Connery L, et al; SURMOUNT-1 Investigators. Tirzepatide Once Weekly for
+  the Treatment of Obesity. N Engl J Med. 2022;387(3):205-216. DOI: 10.1056/NEJMoa2206038. PMID: 35658024'
+- 'Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, et al; SELECT Trial Investigators. Semaglutide and Cardiovascular
+  Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131'
+review_note: 'Revisados os três resumos primários completos (PMID 23796131/35658024/37952131): denominadores, efeitos, tempos
+  e descontinuações correspondem. Diferenciados resultado não significativo de ausência absoluta de efeito, benefício em fatores
+  de risco e mediação pelo peso. Retirada alegação de erratum conferido que não faz parte desta revisão.'
+summary: 'Conclusão do estudo: a intervenção intensiva focada em perda de peso não demonstrou redução significativa da taxa
+  de eventos cardiovasculares.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Perder Peso Reduz Evento Cardiovascular?
@@ -27,13 +41,13 @@ Look AHEAD Research Group, N Engl J Med. 2013;369(2):145-154 (PMID 23796131). **
 - **A intervenção também produziu maior redução de hemoglobina glicada e melhora inicial maior do condicionamento e de TODOS os fatores de risco cardiovascular — exceto o LDL**
 - **Desfecho primário: 403 vs. 418 pacientes** — **1,83 vs. 1,92 eventos por 100 pessoas-ano** — HR **0,95** (IC95% **0,83-1,09**; **p=0,51**)
 
-**Conclusão literal:** a intervenção intensiva focada em perda de peso **não reduziu a taxa de eventos cardiovasculares**.
+**Conclusão do estudo:** a intervenção intensiva focada em perda de peso **não demonstrou redução significativa da taxa de eventos cardiovasculares**.
 
 **Este é um dos resultados negativos mais importantes da cardiologia preventiva, e ele merece leitura cuidadosa:**
 - **A intervenção funcionou** — mais perda de peso, melhor glicemia, melhor condicionamento, melhores fatores de risco
-- **E o desfecho não se moveu**
-- **A diferença de peso ENCOLHEU ao longo do tempo**: 7,9 pontos percentuais em 1 ano contra **2,5 pontos** ao fim. É a explicação mais aceita — o grupo controle também emagreceu, e o efeito se diluiu
-- **O LDL não melhorou**, o que remove um dos mecanismos esperados
+- **A diferença no desfecho primário não foi estatisticamente significativa**
+- **A diferença de peso ENCOLHEU ao longo do tempo**: 7,9 pontos percentuais em 1 ano contra **2,5 pontos** ao fim. A menor separação pode ter limitado o contraste, mas não demonstra a causa da neutralidade
+- **O LDL não melhorou mais que no controle**; isso não estabelece a causa do resultado neutro
 
 ## SURMOUNT-1 (2022) — quanto peso é possível perder com fármaco
 Jastreboff AM et al., N Engl J Med. 2022;387(3):205-216 (PMID 35658024). Fase 3, duplo-cego, randomizado:
@@ -49,7 +63,7 @@ Jastreboff AM et al., N Engl J Med. 2022;387(3):205-216 (PMID 35658024). Fase 3,
 - **Eventos adversos mais comuns gastrointestinais**, na maioria leves a moderados, sobretudo na escalada de dose
 - **Descontinuação por evento adverso: 4,3%, 7,1% e 6,2% vs. 2,6%**
 
-**Conclusão literal:** a tirzepatida forneceu **reduções substanciais e sustentadas de peso**.
+**Conclusão do estudo:** a tirzepatida forneceu **reduções substanciais e sustentadas de peso**.
 
 > ⚠️ **O SURMOUNT-1 é ensaio de PESO, não de desfecho cardiovascular.** Ele mostra o que é possível perder; **não** mostra que isso reduz infarto ou AVC.
 
@@ -71,8 +85,8 @@ Lincoff AM et al., N Engl J Med. 2023;389(24):2221-2232 (PMID 37952131), com doc
 
 **Quatro conclusões defensáveis:**
 1. **"Emagrecer protege o coração" não é uma verdade automática** — o Look AHEAD testou isso com 5.145 pacientes e quase 10 anos, e foi negativo
-2. **A magnitude importa.** O Look AHEAD sustentou **2,5 pontos percentuais** de diferença de peso ao fim; os fármacos modernos entregam **15% a 21%**
-3. **O SELECT mostrou redução de evento** — mas com semaglutida, em população com doença cardiovascular estabelecida, e **não se pode atribuir o benefício exclusivamente ao peso**: os agonistas de GLP-1 têm efeitos sobre pressão, inflamação e glicemia que independem dele
+2. **Os contrastes de peso e as populações diferem.** Os 2,5 pontos percentuais entre grupos ao fim do Look AHEAD não são diretamente comparáveis à perda total de 15% a 21% no braço ativo de outro ensaio. Essa comparação indireta não estabelece quanto emagrecimento seria necessário para prevenir eventos
+3. **O SELECT mostrou redução de evento** — mas com semaglutida, em população com doença cardiovascular estabelecida, e **não se pode atribuir o benefício exclusivamente ao peso**: o ensaio não isola a mediação do benefício pelo peso ou por outras vias
 4. **O SURMOUNT-1 não é evidência cardiovascular** — é o ensaio que quantifica quanto peso a tirzepatida faz perder
 
 **A frase correta para o consultório:** perder peso melhora fatores de risco, capacidade funcional e qualidade de vida — **e a redução de evento cardiovascular está demonstrada para fármacos específicos em populações específicas, não para a perda de peso em si.**
@@ -86,17 +100,20 @@ pasta. A semaglutida na ICFEp com obesidade está em
 ## Limites
 - **O Look AHEAD é de 2013** e foi interrompido por futilidade — não por dano
 - **A diferença de peso do Look AHEAD encolheu para 2,5 pontos percentuais**, o que limita muito o que ele pode responder sobre perdas maiores
-- **O SURMOUNT-1 dura 72 semanas** e não avalia desfecho clínico
+- **Esta análise do SURMOUNT-1 dura 72 semanas** e não foi desenhada para testar redução de infarto/AVC
 - **SURMOUNT-1 e SELECT são financiados pelos fabricantes** (Eli Lilly e Novo Nordisk)
 - **As populações não são comparáveis**: o Look AHEAD exigia diabetes; SURMOUNT-1 e SELECT o excluíam
 - **A descontinuação por evento adverso do SELECT foi o dobro do placebo** (16,6% vs. 8,2%) — número que pesa na expectativa de adesão real
-- **Existe Erratum do Look AHEAD** (NEJM 2014;370(19):1866), **não lido nesta redação**
 
 ## Armadilhas clínicas
 - **Prometer redução de infarto e AVC com perda de peso por estilo de vida** — é exatamente o que o Look AHEAD testou e não encontrou
 - **Citar o SURMOUNT-1 como evidência cardiovascular** — os coprimários são peso
-- **Atribuir todo o benefício do SELECT ao emagrecimento** — os agonistas de GLP-1 têm efeitos independentes do peso
+- **Atribuir todo o benefício do SELECT ao emagrecimento** — a randomização do tratamento não isola a mediação do efeito pela perda de peso
 - **Concluir que estilo de vida "não funciona"** — no Look AHEAD ele melhorou glicemia, condicionamento e todos os fatores de risco exceto o LDL; o que não se moveu foi o desfecho
 - **Ignorar a erosão da diferença de peso ao longo do tempo** ao planejar qualquer programa de emagrecimento
 - **Extrapolar o SELECT para quem não tem doença cardiovascular estabelecida** — não é a população randomizada
 - **Subestimar o abandono por efeito gastrointestinal** ao prescrever qualquer um dos dois fármacos
+
+## Tudo com Tudo
+
+- [SELECT: semaglutida 2,4 mg e MACE no sobrepeso ou obesidade sem diabetes](/biblioteca/select-semaglutida-24-mg-mace-em-obesidade-sem-diabetes) — Contrasta perda de peso ou projeção de risco com redução observada de eventos no SELECT, sem presumir equivalência entre intervenções.

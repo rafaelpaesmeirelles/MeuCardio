@@ -1,63 +1,57 @@
 ---
-title: "Medida de Pressão Arterial Sem Manguito por Smartwatch: o Que a Validação de 2025-2026 Mostra — e Por Que Ainda Não Deve Guiar Decisão Clínica"
+title: 'Medida de Pressão Arterial Sem Manguito por Smartwatch: o Que a Validação de 2025-2026 Mostra — e Por Que Ainda Não
+  Deve Guiar Decisão Clínica'
 slug: medida-de-pressao-arterial-sem-manguito-por-smartwatch-validacao-e-limites-2025-2026
-theme: "Hipertensão"
+theme: Hipertensão
 kind: documento
 review_status: revisado
-source_refs: ["Parati G, Ochoa JE, Abreu A, et al. Cuffless Blood Pressure Monitoring Devices: Technical Foundations and Clinical Implications. Eur J Prev Cardiol. 2026;33(7):1058-1071. DOI: 10.1093/eurjpc/zwag058. PMID: 41739846", "Choi KH, Park CS, Kang D, et al. Feasibility and performance evaluation of PPG on a Galaxy Watch in continuous central blood pressure monitoring. Eur Heart J Digit Health. 2026;7(2):ztag008. DOI: 10.1093/ehjdh/ztag008. PMID: 41716935. PMCID: PMC12912915", "Walzel S, Sebestova H, Rafl-Huttova V, Rozanek M, Rafl J. Long-term accuracy and stability of blood pressure measurements from a smartwatch: Prospective validation study. Digit Health. 2026;12:20552076261415923. DOI: 10.1177/20552076261415923. PMID: 41602947. PMCID: PMC12833194. ClinicalTrials.gov NCT06098092"]
-review_note: "Os três PMIDs conferidos via PubMed E-utilities (esearch/efetch/esummary) em 09/09/2026 — título, revista, ano e achado numérico principal conferidos linha a linha contra o abstract, nenhum de memória. O documento central (Parati et al. 2026) é um scientific statement da European Society of Cardiology publicado no Eur J Prev Cardiol, com posição institucional explícita contra o uso destes dispositivos em decisão clínica — citado como tal, não como recomendação de uso. Os dois estudos de validação (Choi et al., Walzel et al.) são citados como evidência primária que sustenta essa posição, não como endosso de uso clínico. Nenhum número de acurácia foi extrapolado além do que consta no abstract/resumo estruturado de cada artigo. Checado contra `content/Hipertensão/` inteiro antes de escrever: não havia nenhum documento sobre medida de PA sem manguito/cuffless/smartwatch nesta pasta — é lacuna nova, não duplicata."
+source_refs:
+- 'Cuffless Blood Pressure Monitoring Devices: Technical Foundations and Clinical Implications. European journal of preventive
+  cardiology. PMID: 41739846. DOI: 10.1093/eurjpc/zwag058.'
+- 'Feasibility and performance evaluation of PPG on a Galaxy Watch in continuous central blood pressure monitoring. European
+  heart journal. Digital health. PMID: 41716935. DOI: 10.1093/ehjdh/ztag008. PMCID: PMC12912915.'
+- 'Long-term accuracy and stability of blood pressure measurements from a smartwatch: Prospective validation study. Digital
+  health. PMID: 41602947. DOI: 10.1177/20552076261415923. PMCID: PMC12833194.'
+review_note: Três fontes conferidas. Removida primeira posição institucional supostamente inédita e lista de diretrizes não
+  checada; mantida recomendação expressa da declaração. Corrigidos algoritmo experimental versus produto comercial, correlação
+  versus concordância, erro médio versus máximo e generalização de calibração a toda a classe.
+summary: As aplicações propostas — monitorização frequente, variabilidade e padrões noturnos — são possibilidades a validar.
+  Elas não constituem demonstração de melhora de desfechos ou de substituição da MAPA e MRPA com equipamentos validados.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Medida de Pressão Arterial Sem Manguito por Smartwatch: o Que a Validação de 2025-2026 Mostra — e Por Que Ainda Não Deve Guiar Decisão Clínica
+# Pressão arterial sem manguito: validação de smartwatches e limites clínicos
 
-## Por que este documento existe agora
-Relógios inteligentes e outros dispositivos "cuffless" (sem manguito) que estimam a pressão arterial (PA) a partir de fotopletismografia (PPG) ou de tempo de trânsito de onda de pulso já são vendidos e usados por pacientes, muitas vezes sem que o cardiologista saiba. A pergunta que chega ao consultório não é mais "essa tecnologia existe?", e sim "posso confiar no número que meu paciente me mostra na tela do relógio?". Em 2026, pela primeira vez, existe uma resposta institucional explícita da cardiologia europeia a essa pergunta, publicada como *scientific statement* — e ela é mais cautelosa do que o entusiasmo comercial em torno do tema sugere.
+## Posição do documento científico de 2026
+Parati e colaboradores descrevem uma família heterogênea de dispositivos, com diferentes sensores, algoritmos, modalidades de uso e necessidades de calibração. O documento **não recomenda usar essas estimativas para decisões clínicas**, devido à validação de acurácia ainda insuficiente. O desempenho de um modelo não valida os demais, e critérios desenvolvidos para manguitos não cobrem automaticamente todos os requisitos específicos de tecnologias sem manguito.
 
-## O que são, tecnicamente, os dispositivos "cuffless"
-Pela revisão técnica de Parati G et al. (European Society of Cardiology, *Eur J Prev Cardiol*, 2026;33(7):1058-1071, PMID 41739846), os dispositivos sem manguito formam um **grupo tecnologicamente heterogêneo**, não uma categoria única — o que já é o primeiro ponto de cautela: validar um modelo específico não valida a classe inteira. Eles se dividem por:
-- **Princípio de medida**: tempo de trânsito de onda de pulso (pulse transit time) ou análise de forma de onda, captados por sensor de contato (PPG no pulso) ou sem contato.
-- **Modo de operação**: contínuo ou intermitente; automatizado ou manual.
-- **Necessidade de calibração**: alguns não exigem calibração, outros exigem calibração inicial contra um manguito convencional (e, como visto adiante, essa calibração se degrada com o tempo).
-- **Forma física**: vestível (relógio, anel, faixa) ou estacionário.
+As aplicações propostas — monitorização frequente, variabilidade e padrões noturnos — são possibilidades a validar. Elas não constituem demonstração de melhora de desfechos ou de substituição da MAPA e MRPA com equipamentos validados.
 
-Essa diversidade técnica é, segundo o próprio documento, a razão pela qual **os protocolos de validação usados para monitores oscilométricos convencionais (ISO 81060-2) não se aplicam diretamente** a esta classe de dispositivos — cada categoria exige requisito de validação próprio, ainda em desenvolvimento.
+## Algoritmo experimental com Galaxy Watch 6
+Choi e colaboradores desenvolveram e calibraram um algoritmo com **6.117 medidas de 440 participantes** e o avaliaram prospectivamente em outros **114 submetidos a cateterismo**. A referência foi pressão aórtica central invasiva, registrada em intervalos de um minuto. O alvo era detectar **aumento ≥15% da pressão arterial média em relação ao basal**.
 
-## A posição institucional: potencial reconhecido, uso clínico não recomendado
-O texto de Parati et al. é explícito ao separar **potencial de aplicação** de **prontidão para uso clínico**. Do próprio resumo estruturado do documento:
+Após calibração, as mudanças estimadas tiveram correlação r=0,92 e viés médio de 0,51 mmHg frente à referência. A AUC para detectar o aumento predefinido foi **0,85 (IC95% 0,80–0,91)**, com atraso mediano de um minuto.
 
-> *"Devido à validação de acurácia insuficiente, este scientific statement não recomenda seu uso em decisões clínicas, apesar do interesse potencial, em linha com as diretrizes internacionais que não recomendam seu uso no manejo da hipertensão."*
+Trata-se de **algoritmo de pesquisa**, não de validação automática da função comercial do relógio. Correlação alta e viés médio pequeno não asseguram concordância individual: dispersão dos erros e limites de concordância também importam. Os próprios autores afirmam que o protocolo não cumpriu os requisitos pertinentes de validação. Medida de mudança da PAM central não equivale a validação de pressão sistólica/diastólica braquial para diagnóstico domiciliar.
 
-Isso não é rejeição da tecnologia — o documento lista aplicações clínicas potenciais genuínas e relevantes: monitorização ambulatorial ampliada fora do consultório, avaliação não enviesada do padrão circadiano de PA e de sua variabilidade, melhor detecção de hipertensão noturna, potencial de melhorar adesão e controle pressórico de longo prazo por facilitar a medida repetida, monitorização contínua em ambiente hospitalar, e — pelo menor custo frente à tecnologia convencional — possível ampliação do rastreio de hipertensão em cenários de recursos limitados. O documento também nomeia os desafios que faltam resolver antes que esse potencial vire prática: protocolos de validação padronizados por categoria de dispositivo, dados normativos de PA específicos para essas tecnologias, o volume de dados gerado (que sobrecarrega o clínico se não for filtrado), e o amadurecimento de sensores, modelos matemáticos e algoritmos.
+## Calibração por 28 dias
+Walzel e colaboradores acompanharam **37 participantes** com Galaxy Watch 5 e referência Omron M4. Após calibração inicial, realizaram medidas pareadas por 27 dias. As diferenças médias agregadas foram **−0,34 mmHg sistólica e 0,62 mmHg diastólica**, com pouca deriva temporal.
 
-## Dois estudos de 2026 que ilustram exatamente esse recado — o dispositivo funciona, e ainda tem limite real
+Quando a referência se afastava **10 mmHg do ponto de calibração**, as diferenças médias foram **3,4 mmHg sistólica e 5,1 mmHg diastólica**. Esses valores são médias observadas nessa condição, **não limites máximos de erro**. O aparelho cumpriu a maior parte dos critérios avaliados, mas o estudo pequeno e de braço único não certifica todas as condições reais de uso.
 
-### Rastreamento de mudança de pressão em tempo real (Galaxy Watch, cateterismo como padrão-ouro)
-Choi KH et al. (Samsung Medical Center, *Eur Heart J Digit Health*, 2026;7(2):ztag008, PMID 41716935, PMCID PMC12912915) desenvolveram um algoritmo baseado em PPG do Samsung Galaxy Watch 6 para detectar **mudanças** na pressão arterial média (PAM), usando pressão aórtica central invasiva (via cateter durante cateterismo cardíaco) como referência — o padrão mais rigoroso possível de comparação.
+## Aplicação
+Valores apresentados pelo paciente em relógios devem ser contextualizados pelo modelo, método e calibração. Uma leitura discordante deve ser confirmada com técnica correta e equipamento validado, considerando também erros de medida no consultório e variação real da pressão. Não se deve descartar automaticamente sintomas ou discrepâncias como defeito do relógio.
 
-- **Calibração**: 6.117 medidas em 440 participantes.
-- **Validação externa prospectiva**: 114 participantes submetidos a cateterismo cardíaco esquerdo e/ou direito, com PA aórtica central registrada a intervalos de 1 minuto por cateter *pigtail*, comparada em tempo real ao sinal PPG do relógio.
-- **Desfecho primário**: detecção de um aumento ≥15% na PAM em relação ao basal.
-- **Resultado**: correlação forte entre a estimativa do relógio e a medida invasiva (r=0,92; p<0,001), viés médio de **0,51mmHg** (Bland-Altman). Acurácia diagnóstica para detectar aumento ≥15% da PAM: AUC 0,85 (IC95% 0,80-0,91), com desempenho robusto mesmo em conjunto de dados não calibrado. Defasagem temporal entre a mudança de PA invasiva e a detectada pelo relógio: mediana de **1,0 minuto**.
+Para diagnóstico ou ajuste de tratamento, as fontes apoiam **confirmação com método validado com manguito**. Não há validação, nesses estudos, de decisões terapêuticas automáticas a partir de um wearable. A exigência de calibração e seus limites variam entre tecnologias; o desempenho de dois modelos não pode ser generalizado para toda a classe.
 
-Os próprios autores emolduram o achado com a mesma cautela institucional: **"desde que nosso protocolo não atendeu aos requisitos de validação relevantes, mais estudos são necessários para confirmar sua aplicabilidade clínica potencial"** — ou seja, mesmo o estudo com o padrão-ouro mais rigoroso disponível (PA aórtica invasiva) se descreve como viabilidade preliminar, não como validação suficiente para uso clínico.
+## Fontes
+- Parati et al. PMID 41739846; DOI 10.1093/eurjpc/zwag058.
+- Choi et al. PMID 41716935; DOI 10.1093/ehjdh/ztag008.
+- Walzel et al. PMID 41602947; DOI 10.1177/20552076261415923.
 
-### Estabilidade da calibração ao longo de 28 dias — o achado mais prático para o consultório
-Walzel S et al. (Czech Technical University, *Digit Health*, 2026;12:20552076261415923, PMID 41602947, PMCID PMC12833194) testaram algo diferente e clinicamente mais relevante para o dia a dia: **quanto tempo a calibração inicial de um smartwatch continua confiável?** A maioria dos estudos de validação de dispositivos cuffless mede acurácia em um único momento; este mediu estabilidade ao longo do intervalo de recalibração recomendado pelo fabricante.
+## Tudo com Tudo
 
-- **Desenho**: estudo prospectivo de braço único, 37 participantes, protocolo de 28 dias — calibração inicial no dia 0 (Samsung Galaxy Watch 5 contra esfigmomanômetro validado Omron M4) seguida de 27 dias de medidas pareadas diárias.
-- **Resultado agregado**: diferença média desprezível entre relógio e referência ao longo de todo o período — **-0,34mmHg** para PA sistólica e **0,62mmHg** para PA diastólica (Bland-Altman), com drift mínimo ao longo da janela de calibração (-0,19mmHg sistólica; 1,02mmHg diastólica). Pelos critérios ISO/IEEE de acurácia, o dispositivo passou em todos os quesitos, menos um.
-- **O achado que mais importa na prática**: quando a PA de referência estava **10mmHg distante do ponto de calibração**, a diferença média subiu para **3,4mmHg na sistólica e 5,1mmHg na diastólica** — ou seja, a acurácia é boa perto do valor calibrado e se deteriora à medida que a PA real do paciente se afasta desse ponto.
-
-Conclusão dos próprios autores, praticamente idêntica em espírito à posição da ESC: o dispositivo demonstrou estabilidade e acurácia de longo prazo aceitáveis para monitorização de tendência, **"mas a acurácia diminuiu conforme os valores se afastaram do ponto de calibração. Confirmação por manguito é recomendada quando a PA flutua substancialmente ou quando decisões diagnósticas ou terapêuticas estão planejadas."**
-
-## Síntese para a prática clínica
-Os três documentos, lidos juntos, convergem para uma mensagem consistente, não contraditória entre si:
-
-1. **A tecnologia funciona razoavelmente bem para o que ela foi desenhada — detectar tendência e mudança relativa de PA**, não para substituir a medida absoluta que orienta diagnóstico e ajuste de dose. A correlação com padrão-ouro invasivo (r=0,92) e o viés médio baixo (<1mmHg) em condições próximas à calibração são dados reais e favoráveis.
-2. **A acurácia depende de calibração recente e de a PA atual não se afastar muito do valor calibrado.** Um paciente hipertenso que descompensa — exatamente o cenário em que a medida mais importa — é também o cenário em que o erro do dispositivo cresce (até ~5mmHg na diastólica, no estudo de Walzel), porque a PA real se afasta do ponto de calibração.
-3. **Nenhuma das três fontes recomenda decisão clínica — diagnóstico, início ou ajuste de anti-hipertensivo — baseada nesses dispositivos.** A posição da ESC é explícita, e os dois estudos de validação, mesmo favoráveis aos seus próprios dispositivos, reforçam a mesma cautela nas próprias conclusões.
-4. **O uso apropriado hoje é complementar e informal**: apoiar o paciente a perceber padrão e variabilidade de PA no dia a dia (por exemplo, sinalizar quando procurar aferição com manguito), nunca substituir MAPA/MRPA validados para diagnóstico de hipertensão mascarada, do avental branco ou para ajuste terapêutico — que continuam sendo os métodos recomendados pelas diretrizes vigentes (SBC 2020, ESC 2024) para medida fora do consultório.
-5. **Pergunta a fazer na anamnese, na prática**: se o paciente relatar valores de um relógio inteligente muito diferentes dos aferidos no consultório ou por MAPA/MRPA validados, **o valor confiável é o do método validado** — a diferença não indica necessariamente descompensação real, pode ser deriva de calibração do dispositivo vestível, especialmente se a calibração inicial for antiga ou a PA atual estiver longe do valor calibrado.
-
-## VERIFICAÇÃO HUMANA NECESSÁRIA
-O *scientific statement* de Parati et al. (2026) refere-se a "diretrizes internacionais" que já não recomendam o uso desses dispositivos em manejo da hipertensão, sem nomear individualmente cada diretriz nem citar o trecho exato de recomendação (classe/nível) de cada uma no resumo estruturado disponível. Não foi possível, dentro desta verificação, localizar e confirmar o texto integral do artigo (bloqueado por acesso restrito na Oxford Academic) para extrair a citação literal dessas diretrizes internacionais — o achado central relatado aqui (posição de não recomendação) está confirmado pelo próprio resumo/abstract do artigo, mas a lista específica de diretrizes que ele referencia nesse ponto não foi verificada linha a linha e não deve ser citada como se tivesse sido.
+- [Medida de Pressão Arterial Sem Manguito (Cuffless): o Que a Evidência de 2025-2026 Já Sustenta — e o Que Ainda Não](/biblioteca/medida-de-pressao-arterial-sem-manguito-cuffless-evidencia-2025-2026) — Aprofunda validação e limitações da mesma tecnologia cuffless e distingue desempenho experimental de medida apta a guiar tratamento.

@@ -1,0 +1,23 @@
+{
+  "slug": "eisenmenger-nao-e-ipah",
+  "titulo": "Cianose e CIA grande: IPAH ou Eisenmenger?",
+  "tema": "Cardiopatias congênitas",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 28 anos, CIA ampla não corrigida, cianose com investigação hemodinâmica confirmando síndrome de Eisenmenger. Colega aplica o HR 0,24 do ZENITH como se fosse mortalidade isolada em HAP idiopática e propõe fechar o defeito.",
+  "pergunta": "Qual leitura está alinhada?",
+  "opcoes": [
+    "ZENITH randomizou Eisenmenger e autoriza sotatercept como Classe I.",
+    "Eisenmenger envolve doença vascular pulmonar e shunt bidirecional ou direito-esquerdo; não é HAPidiopática. A população de shunt corrigido dos ensaios não permite copiar o benefício para este cenário. Encaminhar ao centro especializado; fechamento do defeito é contraindicado no Eisenmenger.",
+    "Fechar a CIA agora é o padrão da IPAH.",
+    "Gravidez é segura se a 6MWD passar de 450 m."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "A avaliação confirmou Eisenmenger; cianose de esforço isoladamente não basta para esse diagnóstico. O fechamento pode descompensar a circulação em doença vascular pulmonar irreversível. O HR 0,24 de ZENITH refere-se ao composto morte/transplante/hospitalização por piora de HAP, não à mortalidade isolada. Tratamento farmacológico deve ser definido em centro de cardiopatia congênita doadulto/HAP, sem extrapolar automaticamente STELLAR ou ZENITH para shunt não corrigido.",
+  "source_refs": [
+    "ESC2020ACHD. PMID:32860028. DOI:10.1093/eurheartj/ehaa554.",
+    "ZENITH. PMID:40167274. DOI:10.1056/NEJMoa2415160.",
+    "STELLAR. PMID:36877098. DOI:10.1056/NEJMoa2213558."
+  ],
+  "review_status": "revisado",
+  "review_note": "Confirmado diagnóstico no caso para evitar inferirEisenmenger decianoseisolada; corrigido compostoZENITH e fontes/contraindicação defechamento."
+}

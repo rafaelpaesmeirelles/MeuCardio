@@ -1,0 +1,23 @@
+{
+  "slug": "attr-act-2018",
+  "title": "ATTR-ACT: tafamidis na amiloidose por transtirretina com cardiomiopatia",
+  "tema": "Cardiomiopatias",
+  "year": 2018,
+  "journal": "New England Journal of Medicine",
+  "pmid": "30145929",
+  "doi": "10.1056/NEJMoa1805689",
+  "design": "Ensaio de fase 3, multicêntrico, internacional, duplo-cego, controlado por placebo (NCT01994889). Randomização 2:1:2 para tafamidis 80 mg, tafamidis 20 mg ou placebo por 30 meses. Análise primária agrupou o ativo (Finkelstein–Schoenfeld: morte por qualquer causa e, em seguida, hospitalizações CV).",
+  "population": "441 adultos com ATTR-CM (variante ou selvagem): tafamidis agrupado 264 versus placebo 177.",
+  "intervention": "Tafamidis (estabilizador do tetrâmero da TTR; 80 mg ou 20 mg). Não é siRNA.",
+  "control": "Placebo.",
+  "primary_outcome": "Morte por qualquer causa e, em hierarquia, frequência de hospitalizações cardiovasculares (Finkelstein–Schoenfeld), 30 meses.",
+  "key_findings": "O primário hierárquico favoreceu tafamidis (P<0,001). Morte: 78/264 (29,5%) versus 76/177 (42,9%); HR 0,70 (IC95% 0,51–0,96). Hospitalizações cardiovasculares: 0,48 versus 0,70 por ano; razão de taxas 0,68 (0,56–0,81). Em 30 meses, houve menor declínio da distância caminhada e do KCCQ-OS (ambos P<0,001). Tipos e incidência de eventos adversos foram semelhantes.",
+  "clinical_implications": "Na ATTR-CM, tafamidis (estabilizador) reduziu morte (HR 0,70) e hospitalização CV em 30 meses e atenuou a perda de 6 minutos e de KCCQ. Não é HELIOS-B (vutrisiran, siRNA; composto HR 0,72; PMID 39213194). Não somar HRs. Não há ensaio de combinação como pergunta primária neste registro. Não é terapia da ICFEp genérica nem da MHO. As doses de 20 e 80 mg descrevem a formulação estudada. Apresentações com sais ou formulações diferentes não devem ser trocadas miligrama por miligrama sem consultar a informação específica do produto.",
+  "source_refs": [
+    "Maurer MS, Schwartz JH, Gundapaneni B, et al.; ATTR-ACT Study Investigators. Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy. N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929. NCT01994889.",
+    "HELIOS-B. PMID: 39213194. DOI: 10.1056/NEJMoa2409134."
+  ],
+  "review_status": "revisado",
+  "note": "evidencias/attr-act-2018.json não foi criado: já existe evidencias/attr-act-tafamidis-mortalidade.json. Este é o registro-estudo. Não fundir com HELIOS-B.",
+  "review_note": "ATTR-ACT conferido; mantidos resultados primários verificáveis e esclarecida formulação, sem afirmar aprovação brasileira."
+}

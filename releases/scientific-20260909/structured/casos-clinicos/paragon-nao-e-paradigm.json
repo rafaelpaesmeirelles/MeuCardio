@@ -1,0 +1,22 @@
+{
+  "slug": "paragon-nao-e-paradigm",
+  "titulo": "FEVE 50%: PARADIGM ou PARAGON?",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "avançado",
+  "enunciado": "IC, FEVE 50%. Colega inicia sacubitril–valsartana ‘pelo PARADIGM, HR 0,80’.",
+  "pergunta": "Qual ensaio fala desta FE?",
+  "opcoes": [
+    "PARADIGM-HF inclui FEVE 50%; o HR 0,80 vale.",
+    "PARAGON-HF: FEVE ≥ 45%, 4822 pacientes, RR 0,87 (0,75–1,01), P=0,06 — não fechou o primário. PARADIGM é ICFEr. PARADISE-MI é pós-IAM.",
+    "PARAGON-HF mostrou redução de morte (HR 0,70) como o ATTR-ACT.",
+    "EMPEROR-Preserved e PARAGON são o mesmo fármaco."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "PARAGON-HF comparou sacubitril/valsartana com valsartana em 4.822 pacientes com IC sintomática, FEVE ≥ 45%, peptídeos natriuréticos elevados e doença cardíaca estrutural. O composto de hospitalizações totais por IC e morte cardiovascular apresentou razão de taxas 0,87 (IC95% 0,75–1,01; P=0,06), sem superioridade estatística demonstrada. A elegibilidade não era determinada apenas pela FEVE. PARADIGM-HF avaliou IC com FE reduzida e comparou com enalapril; seu HR não pode ser transferido para FEVE 50%. O resultado global de PARAGON não equivale a uma contraindicação absoluta de ARNI em todos os fenótipos; subgrupos e recomendações devem ser avaliados separadamente.",
+  "source_refs": [
+    "PARAGON-HF. DOI: 10.1056/NEJMoa1908655. PMID: 31475794.",
+    "PARADIGM-HF. DOI: 10.1056/NEJMoa1409077. PMID: 25176015."
+  ],
+  "review_status": "revisado",
+  "review_note": "PARAGON primário conferido; explicitados comparador, composto recorrente e critérios além da FEVE; referências completas."
+}

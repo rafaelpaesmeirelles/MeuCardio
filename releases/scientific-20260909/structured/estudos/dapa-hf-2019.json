@@ -1,0 +1,22 @@
+{
+  "slug": "dapa-hf-2019",
+  "title": "DAPA-HF: dapagliflozina 10 mg na ICFEr (FEVE ≤ 40%) — não misturar com DECLARE",
+  "tema": "Insuficiência cardíaca",
+  "year": 2019,
+  "journal": "New England Journal of Medicine",
+  "pmid": "31535829",
+  "doi": "10.1056/NEJMoa1911303",
+  "design": "Ensaio de fase 3, randomizado, duplo-cego, controlado por placebo. NCT03036124. Financiado por AstraZeneca.",
+  "population": "4744 pacientes com IC NYHA II, III ou IV e FEVE ≤ 40%, com ou sem diabetes tipo 2. 2373 dapagliflozina versus 2371 placebo.",
+  "intervention": "Dapagliflozina 10 mg uma vez ao dia, além da terapia recomendada.",
+  "control": "Placebo.",
+  "primary_outcome": "Composto de piora da IC (hospitalização ou visita urgente com terapia intravenosa para IC) ou morte cardiovascular.",
+  "key_findings": "Mediana 18,2 meses. Primário: 386/2373 (16,3%) versus 502/2371 (21,2%); HR 0,74; IC95% 0,65–0,85; P<0,001. Primeiro evento de piora da IC: 237 (10,0%) versus 326 (13,7%); HR 0,70; IC95% 0,59–0,83. Morte CV: 227 (9,6%) versus 273 (11,5%); HR 0,82; IC95% 0,69–0,98. Morte por qualquer causa: 276 (11,6%) versus 329 (13,9%); HR 0,83; IC95% 0,71–0,97. Achados semelhantes com e sem diabetes. Frequência de eventos adversos de depleção volêmica, disfunção renal e hipoglicemia sem diferença entre grupos.",
+  "clinical_implications": "DAPA-HF mostrou redução de piora de IC ou morte cardiovascular na ICFEr sintomática, com ou sem diabetes. A visita urgente com terapia intravenosa fazia parte da definição de piora. DECLARE-TIMI 58 avaliou DM2 com doença aterosclerótica ou fatores de risco: não reduziu significativamente MACE, embora tenha reduzido morte cardiovascular/hospitalização por IC. Os compostos e populações diferem; os HRs não se somam e não representam comparação direta. A indicação e a segurança devem considerar o contexto clínico, não apenas a molécula.",
+  "source_refs": [
+    "McMurray JJV, Solomon SD, Inzucchi SE, et al.; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381:1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829. NCT03036124.",
+    "Wiviott SD, Raz I, Bonaca MP, et al.; DECLARE–TIMI 58 Investigators. Dapagliflozin and Cardiovascular Outcomes in Type 2 Diabetes. N Engl J Med. 2019;380:347-357. DOI: 10.1056/NEJMoa1812389. PMID: 30415602. NCT01730534."
+  ],
+  "review_status": "revisado",
+  "review_note": "DAPA-HF/DECLARE conferidos; diferenciados compostos, visitas urgentes e populações, sem comparações aritméticas."
+}

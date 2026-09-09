@@ -1,0 +1,22 @@
+{
+  "slug": "finearts-hf-2024",
+  "title": "FINEARTS-HF: finerenona na IC com FEVE ≥ 40%",
+  "tema": "Insuficiência cardíaca",
+  "year": 2024,
+  "journal": "New England Journal of Medicine",
+  "pmid": "39225278",
+  "doi": "10.1056/NEJMoa2407107",
+  "design": "Ensaio internacional, randomizado, duplo-cego, controlado por placebo. Análise de eventos totais no desfecho primário.",
+  "population": "6.001 adultos com IC sintomática e FEVE ≥ 40% (3.003 finerenona versus 2.998 placebo). Exclusões-chave: TFGe <25 mL/min/1,73 m² e potássio >5,0 mmol/L.",
+  "intervention": "Finerenona, antagonista não esteroide do receptor mineralocorticoide; dose máxima 20 ou 40 mg/dia conforme a TFGe.",
+  "control": "Placebo.",
+  "primary_outcome": "Eventos totais de piora de insuficiência cardíaca (internação ou visita urgente) e morte cardiovascular.",
+  "key_findings": "Seguimento mediano 32 meses. Eventos primários: 1.083 em 624/3.003 versus 1.283 em 719/2.998; RR 0,84; IC95% 0,74–0,95; P=0,007. Eventos de piora de IC: 842 versus 1.024; RR 0,82; IC95% 0,71–0,94; P=0,006. Morte cardiovascular: 8,1% versus 8,7%; HR 0,93; IC95% 0,78–1,11 — não significativa. Potássio >6,0 mmol/L: 3,0% versus 1,4%. Internação por hipercalemia: 0,5% versus 0,2%.",
+  "clinical_implications": "Na IC sintomática com FEVE ≥ 40%, finerenona reduz o composto de piora de IC e morte CV, puxado por menos piora de IC. Não é ensaio de mortalidade cardiovascular isolada: 8,1% versus 8,7% não autoriza prometer redução de morte. Conferir TFGe ≥ 25 e K ≤ 5,0 mmol/L. Não fundir com o composto renal do FIDELIO-DKD nem com o composto cardiovascular do FIGARO-DKD. A ESC 2026 recomenda ARM na IC sintomática independente da FEVE (I A), com sMRA na ICFER e sMRA/nsMRA na ICFEP; finerenona é nomeada no lado da ICFEP. A escolha do ARM depende do fenótipo e da evidência da molécula; a recomendação de classe não torna finerenona substituta automática de espironolactona/eplerenona na ICFEr. Doses máximas de 20/40 mg não são doses iniciais universais. Monitorizar potássio e função renal.",
+  "source_refs": [
+    "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391:1475-1485. DOI 10.1056/NEJMoa2407107. PMID 39225278. NCT04435626.",
+    "Køber L et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420."
+  ],
+  "review_status": "revisado",
+  "review_note": "FINEARTS, apresentação original de segurança e tabela ESC 2026 conferidos. Esclarecida seleção de molécula e dose-alvo versus inicial."
+}

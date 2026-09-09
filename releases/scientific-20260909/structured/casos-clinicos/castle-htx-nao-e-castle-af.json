@@ -1,0 +1,22 @@
+{
+  "slug": "castle-htx-nao-e-castle-af",
+  "titulo": "Ablação de FA: CASTLE-AF ou CASTLE-HTx?",
+  "tema": "Fibrilação atrial",
+  "nivel": "avançado",
+  "enunciado": "Dois ensaios de ablação de FA na IC saíram no NEJM. Você precisa escolher a frase correta.",
+  "pergunta": "Qual distinção está alinhada aos ensaios?",
+  "opcoes": [
+    "São o mesmo ensaio com nomes diferentes; HR 0,62 em ambos.",
+    "CASTLE-AF (PMID 29385358): FEVE ≤ 35% + CDI, n=363, morte/hosp. IC HR 0,62. CASTLE-HTx (PMID 37634135): IC terminal referida para transplante, 97 vs 97, morte/DAVI/Tx urgente 8% vs 30%; HR 0,24.",
+    "CASTLE-HTx autoriza ablação de FA em ICFEp com obesidade.",
+    "Ambos substituem CDI de prevenção primária."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "Populações e primários diferentes. CASTLE-AF é ICFEr ambulatorial com dispositivo. CASTLE-HTx recrutou pacientes encaminhados para avaliação de transplante; não é sinônimo de todos já estarem em lista. Era estudo aberto de centro único, encerrado precocemente por eficácia. Nenhum é ICFEp. Nenhum dispensa o dispositivo quando indicado.",
+  "source_refs": [
+    "Marrouche NF, et al. N Engl J Med. 2018;378:417-427. PMID 29385358.",
+    "Sohns C, et al. N Engl J Med. 2023;389:1380-1389. PMID 37634135."
+  ],
+  "review_status": "revisado",
+  "review_note": "Conferidos desfechos distintos e corrigido encaminhamento paraavaliação versus inclusão emlista de transplante."
+}

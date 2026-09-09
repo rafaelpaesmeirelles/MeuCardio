@@ -1,0 +1,45 @@
+{
+  "slug": "trilha-has-2025-prevent-e-meta-130-80",
+  "titulo": "HAS 2025: PREVENT, limiar de 7,5% e meta <130/80 mmHg",
+  "tema": "Hipertensão",
+  "etapas": [
+    {
+      "ordem": 1,
+      "item_type": "documento",
+      "item_slug": "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
+      "por_que": "Situar estágio pressórico, risco e alvo; individualizar na fragilidade, expectativa de vida limitada e gestação."
+    },
+    {
+      "ordem": 2,
+      "item_type": "documento",
+      "item_slug": "equacao-prevent-aha-e-o-limiar-75-na-diretriz-2025",
+      "por_que": "Usar PREVENT de DCV total, que inclui doença aterosclerótica e IC. A função renal é preditor, não componente do desfecho. O limiar anti-hipertensivo é ≥ 7,5% em dez anos."
+    },
+    {
+      "ordem": 3,
+      "item_type": "documento",
+      "item_slug": "fluxograma-inicio-de-farmaco-aha-2025-prevent",
+      "por_que": "Iniciar fármaco no estágio 1 com DCV, AVC prévio, diabetes, DRC ou risco ≥ 7,5%. Se risco menor e PA persistir ≥ 130/80 após 3–6 meses de estilo de vida, também iniciar medicação."
+    },
+    {
+      "ordem": 4,
+      "item_type": "documento",
+      "item_slug": "como-explicar-prevent-75-e-a-meta-130-80-na-consulta",
+      "por_que": "Comunicar risco absoluto e alvo pressórico sem equiparar a antiga estimativa PCE de ASCVD ao PREVENT de DCV total."
+    },
+    {
+      "ordem": 5,
+      "item_type": "caso_clinico",
+      "item_slug": "prevent-75-estagio-1-has",
+      "por_que": "Aplicar ao caso de PA 136/84 e PREVENT total de 9%: medicação com medidas de estilo de vida, sem aguardar estágio 2."
+    }
+  ],
+  "review_status": "revisado",
+  "source_refs": [
+    "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+    "Khan SS, Matsushita K, Sang Y, et al. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI: 10.1161/CIRCULATIONAHA.123.067626. PMID: 37947085. PMC10910659."
+  ],
+  "objetivo": "Aplicar o risco PREVENT de DCV total em dez anos à decisão de anti-hipertensivo, com meta usual <130/80 mmHg e individualização. Diferenciar decisão inicial de tratamento de hipertensão persistente após medidas de estilo de vida.",
+  "nivel": "intermediario",
+  "review_note": "PREVENT e diretriz AHA 2025 conferidos; removido rim como desfecho, corrigida conduta de baixo risco persistente e tipo do caso."
+}

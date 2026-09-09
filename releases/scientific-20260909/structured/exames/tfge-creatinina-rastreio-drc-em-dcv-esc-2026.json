@@ -1,0 +1,29 @@
+{
+  "slug": "tfge-creatinina-rastreio-drc-em-dcv-esc-2026",
+  "name": "TFGe pela creatinina no rastreio de DRC em DCV — ESC 2026 (STAMP)",
+  "category": "laboratorial",
+  "theme": "Geral",
+  "what_it_measures": "Estima a filtração glomerular a partir da creatinina sérica por equação validada. No STAMP da ESC 2026, a TFGe é avaliada junto à RAC urinária. O valor isolado da creatinina é insuficiente para estadiar DRC; deve ser interpretado conforme idade, massa muscular e contexto clínico.",
+  "reference_range": "Estadiamento G da KDIGO, adotado pela ESC 2026: G1 ≥90; G2 60–89; G3a 45–59; G3b 30–44; G4 15–29; G5 <15 mL/min/1,73 m² (falência renal — termo que substitui “doença renal terminal”). TFGe persistentemente <60 mL/min/1,73 m² preenche critério funcional de DRC, desde que confirmada em ≥3 meses. A ESC 2026 recomenda equação de TFGe baseada em creatinina validada (Classe I, nível A).",
+  "indications": "Rastreio de DRC em todo paciente com DCV recém-estabelecida (hipertensão, DAC, IC, DAP, AVC): Classe I, nível C. Medir TFGe por creatinina com equação validada para avaliar função e estadiar: Classe I, nível A. Serve para predição de risco cardiovascular e de falência renal, dose de fármacos, escolha de antitrombótico e encaminhamento nefrológico. Rechecar pelo menos anualmente em diabetes, DRC e DCV. TFGe por cistatina C (ou creatinina + cistatina C) deve ser considerada (Classe IIa, nível A) quando há fonte provável de erro na estimativa pela creatinina e a precisão muda a decisão clínica.",
+  "interpretation": "Confirmar persistência por pelo menos três meses para definir DRC; uma queda nova, grave ou inesperada requer investigação imediata de lesão renal aguda. Combinar categoria G e albuminúria para estimar risco. TFGe ≥ 60 com RAC A1, sem outros marcadores de dano, não define DRC. Um resultado estimado não é medição direta da filtração.",
+  "limitations": "Estimativas pela creatinina são menos confiáveis nos extremos de massa muscular, amputação, sarcopenia, desnutrição e alterações agudas da função renal. Considerar cistatina C quando maior precisão puder mudar a conduta. Para dose de fármacos, utilizar a medida especificada na bula ou protocolo: vários DOAC usam depuração de creatinina por Cockcroft–Gault, que não é intercambiável automaticamente com TFGe indexada a 1,73 m². Decisões sobre contraste e terapias exigem benefício, risco e contexto; não se baseiam em um corte isolado de creatinina.",
+  "source_refs": [
+    "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA). Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426. Recommendation Tables 1 e 3; seções 3.1.1 e 3.3; nota sobre CKD-EPI 2009 sem raça vs. 2021 em população europeia.",
+    "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. Sumário executivo: Kidney Int. 2024;105(4):684-701. PMID 38519239 — categorias G1–G5 do heatmap CGA.",
+    "Levey AS, Stevens LA, Schmid CH, et al. A new equation to estimate glomerular filtration rate. Ann Intern Med. 2009;150(9):604-612. PMID 19414839 — CKD-EPI 2009, a equação que a ESC 2026 cita como compromisso para europeus sem coeficiente de raça."
+  ],
+  "review_status": "revisado",
+  "published": false,
+  "tags": [
+    "tfge",
+    "creatinina",
+    "ckd-epi",
+    "drc",
+    "esc 2026",
+    "stamp",
+    "cardiorrenal",
+    "rastreio"
+  ],
+  "review_note": "Rastreamento e categorias renais conferidos com ESC/KDIGO. Corrigidas inferências de causa, equivalência RAC/excreção e uso indiscriminado da TFGe indexada para dose de DOAC."
+}

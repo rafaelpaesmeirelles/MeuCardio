@@ -1,0 +1,24 @@
+{
+  "slug": "castle-af-nao-e-icfep",
+  "titulo": "CASTLE-AF não é ablação de FA na ICFEp",
+  "tema": "Fibrilação atrial",
+  "theme": "Fibrilação atrial",
+  "nivel": "avançado",
+  "enunciado": "Mulher de 72 anos, FEVE 55%, ICFEp, FA persistente oligossintomática, sem CDI. O colega propõe ablação de FA «porque o CASTLE-AF reduziu morte na insuficiência cardíaca — vale para qualquer fração de ejeção, inclusive preservada, e o CASTLE-HTx é o mesmo ensaio». A eletrofisiologia pede o recorte real.",
+  "pergunta": "O que o CASTLE-AF (Marrouche et al., NEJM 2018, PMID 29385358) realmente randomizou e mostrou?",
+  "opcoes": [
+    "Ablação de FA na ICFEp (FEVE ≥ 50%, sem CDI) reduziu MACE; o HR 0,62 vale para FE preservada e autoriza Classe I de ablação na ICFEp oligossintomática",
+    "FA sintomática + FEVE ≤ 35% + CDI (NYHA II–IV); ablação n=179 vs terapia médica n=184; mediana 37,8 meses; composto morte ou hospitalização por IC 28,5% vs 44,6%; HR 0,62 (IC95% 0,43–0,87); P=0,007 — não é ICFEp e não é CASTLE-HTx",
+    "CASTLE-AF e CASTLE-HTx são o mesmo recorte de FE preservada; a ablação substitui CDI e a quádrupla da ICFEr",
+    "O CASTLE-AF testou ablação de FA em FEVE ≥ 50% com desfecho de qualidade de vida, como o STEP-HFpEF; mortalidade não foi medida"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "CASTLE-AF (Marrouche et al., N Engl J Med. 2018;378:417-427; DOI 10.1056/NEJMoa1707855; PMID 29385358; NCT00643188): FA paroxística ou persistente sintomática, NYHA II–IV, FEVE ≤ 35% e CDI (ou CRT-D) já implantado. Ablação por cateter n=179 versus terapia médica de ritmo ou frequência n=184. Seguimento mediano 37,8 meses. Primário — morte por qualquer causa ou hospitalização por piora de IC: 51/179 (28,5%) vs 82/184 (44,6%); HR 0,62; IC95% 0,43–0,87; P=0,007. Morte 13,4% vs 25,0%; HR 0,53 (0,32–0,86). Hospitalização por IC 20,7% vs 35,9%; HR 0,56 (0,37–0,83). Morte CV 11,2% vs 22,3%; HR 0,49 (0,29–0,84). Não é ICFEp. Não é FA oligossintomática com FEVE 55% sem dispositivo. Não substitui quádrupla nem CDI. CASTLE-HTx (PMID 37634135) é IC terminal referida para transplante — outro ensaio. RAFT-AF (PMID 35313733) não fechou o primário. Este caso avalia a população e os resultados do CASTLE-AF, sem atribuir classe de recomendação para ICFEp. A ausência dessa população no ensaio não significa que ablação seja proibida; significa que o benefício quantitativo citado não pode ser transportado para ela.",
+  "source_refs": [
+    "Marrouche NF, Brachmann J, Andresen D, et al.; CASTLE-AF Investigators. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378(5):417-427. DOI 10.1056/NEJMoa1707855. PMID 29385358. NCT00643188.",
+    "CASTLE-HTx. PMID:37634135. DOI:10.1056/NEJMoa2306037.",
+    "RAFT-AF. PMID:35313733."
+  ],
+  "review_status": "revisado",
+  "review_note": "CASTLE-AF conferido: FEVE≤35%, sintomáticos com dispositivo, comparaçãoadicionadaà terapia deIC. Removida classe nãoverificada e evitada contraindicação indevida naICFEp."
+}

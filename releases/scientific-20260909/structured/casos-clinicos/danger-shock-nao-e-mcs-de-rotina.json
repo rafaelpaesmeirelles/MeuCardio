@@ -1,0 +1,22 @@
+{
+  "slug": "danger-shock-nao-e-mcs-de-rotina",
+  "titulo": "IAMCSST com choque: o que o DanGer Shock autoriza dizer",
+  "tema": "Terapia intensiva",
+  "nivel": "avançado",
+  "enunciado": "Homem de 64 anos, IAMCSST anterior, choque cardiogênico, candidato a reperfusão. A equipe discute Impella CP com base no DanGer Shock (NEJM 2024).",
+  "pergunta": "O que o ensaio mostrou?",
+  "opcoes": [
+    "Redução de morte em 180 dias no recorte STEMI+choque: 45,8% vs 58,5%; HR 0,74 (0,55–0,99). Eventos adversos compostos maiores com a bomba. Não é MCS de rotina em todo IAM.",
+    "BIA rotineira reduz morte no choque do IAM — por isso a ESC 2026 a tornou Classe I.",
+    "ECMO VA de rotina em todo choque cardiogênico, independentemente do ECG.",
+    "O resultado se aplica a choque da gestante e a IAM sem supradesnível."
+  ],
+  "resposta_correta": 0,
+  "explicacao": "DanGer Shock (PMID 38587239): 355 analisados de 360 randomizados, mortalidade em 180 dias 82/179 versus 103/176. Composto de segurança em 24,0% versus 6,2%, incluindo sangramento grave, isquemia de membro, hemólise, falha do dispositivo ou piora de insuficiência aórtica; também houve mais terapia renal substitutiva. A ESC 2026 considera bomba microaxial (IIa B1) em pacientes selecionados com choque por IAMCSST, disfunção sistólica ventricular esquerda e sem risco de lesão cerebral hipóxica. Suporte mecânico temporário em choque por IAM não selecionado é III B1; BIA em choque não selecionado é III B1. Complicações mecânicas do IAM constituem outro cenário, no qual suporte como ponte ao tratamento definitivo pode ser considerado. Não generalizar para todo choque ou toda população.",
+  "source_refs": [
+    "Møller JE, et al. N Engl J Med. 2024;390:1382-1393. PMID 38587239.",
+    "ESC2026 HeartFailure. DOI:10.1093/eurheartj/ehag100. Slides oficiais,p68: https://dam-assets.escardio.org/download/b2e587389baa11f185de06bdfb3e4be9"
+  ],
+  "review_status": "revisado",
+  "review_note": "ConferidosRCT e tabelaESC2026p68, incluindo seleção neurológica, risco renal e exceçãocomplicaçõesmecânicas;nãoextrapoladoapoioarotina."
+}

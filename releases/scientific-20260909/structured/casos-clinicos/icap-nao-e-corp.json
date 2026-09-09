@@ -1,0 +1,21 @@
+{
+  "slug": "icap-nao-e-corp",
+  "titulo": "Primeiro episódio de pericardite: o que o ICAP mediu",
+  "tema": "Pericárdio",
+  "nivel": "básico",
+  "enunciado": "Mulher de 38 anos, primeiro episódio de pericardite aguda, já em ibuprofeno. Você discute colchicina com base no ICAP (NEJM 2013; 240 pacientes).",
+  "pergunta": "Qual afirmação está alinhada ao ICAP?",
+  "opcoes": [
+    "É o mesmo ensaio CORP da pericardite recorrente, só com outro nome.",
+    "Colchicina adicionada a AAS ou ibuprofeno por 3 meses reduziu pericardite incessante ou recorrente de 37,5% para 16,7%. O ICAP usou 0,5 mg duas vezes ao dia se peso >70 kg e uma vez ao dia se ≤ 70 kg; o artigo informa NNT 4.",
+    "A colchicina substitui AAS/ibuprofeno no primeiro episódio.",
+    "O ICAP autoriza retorno imediato ao esporte competitivo."
+  ],
+  "resposta_correta": 1,
+  "explicacao": "ICAP (240 adultos; 120 por grupo) avaliou o primeiro episódio de pericardite aguda, com colchicina adicionada ao anti-inflamatório. O composto de doença incessante ou recorrente ocorreu em 20 versus 45 pacientes. O NNT 4 é o valor informado pelos autores, não um cálculo novo a partir dos percentuais arredondados. CORP avaliou recorrência e não é o mesmo ensaio. O esquema do estudo precisa ser ajustado à função renal/hepática, interações e tolerabilidade individuais. ICAP não definiu liberação esportiva; o retorno exige avaliação de remissão e risco, sem alta automática pelo início da colchicina.",
+  "source_refs": [
+    "Imazio M, et al. N Engl J Med. 2013;369:1522-1528. PMID 23992557."
+  ],
+  "review_status": "revisado",
+  "review_note": "ICAP integralmente confrontado com resumo primário; detalhados peso, duração e tratamento associado. Mantido NNT publicado e removida regra esportiva simplificada."
+}

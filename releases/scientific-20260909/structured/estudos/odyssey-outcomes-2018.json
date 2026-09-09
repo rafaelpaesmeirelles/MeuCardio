@@ -1,0 +1,24 @@
+{
+  "slug": "odyssey-outcomes-2018",
+  "title": "ODYSSEY OUTCOMES: alirocumabe após SCA — HR 0,85; não é FOURIER",
+  "tema": "Doença coronariana",
+  "year": 2018,
+  "journal": "New England Journal of Medicine",
+  "pmid": "30403574",
+  "doi": "10.1056/NEJMoa1801174",
+  "design": "Ensaio multicêntrico, randomizado, duplo-cego, controlado por placebo. NCT01663402. Financiado por Sanofi e Regeneron Pharmaceuticals.",
+  "population": "18.924 pacientes (9462 vs 9462) com síndrome coronariana aguda 1 a 12 meses antes, em estatina de alta intensidade ou na dose máxima tolerada, e LDL-C ≥ 70 mg/dL (1,8 mmol/L) ou não-HDL-C ≥ 100 mg/dL (2,6 mmol/L) ou apolipoproteína B ≥ 80 mg/dL.",
+  "intervention": "Alirocumabe subcutâneo 75 mg a cada 2 semanas, com ajuste às cegas para alvo de LDL-C 25 a 50 mg/dL (0,6 a 1,3 mmol/L).",
+  "control": "Placebo subcutâneo a cada 2 semanas.",
+  "primary_outcome": "Composto de morte por doença coronariana, infarto do miocárdio não fatal, acidente vascular cerebral isquêmico fatal ou não fatal, ou angina instável com necessidade de hospitalização.",
+  "key_findings": "Mediana 2,8 anos. Primário: 903/9462 (9,5%) versus 1052/9462 (11,1%); HR 0,85; IC95% 0,78–0,93; P<0,001. Morte por qualquer causa: 334 (3,5%) versus 392 (4,1%); HR 0,85; IC95% 0,73–0,98. Benefício absoluto do composto maior se LDL-C basal ≥ 100 mg/dL. Eventos adversos semelhantes, salvo reação local no local da injeção: 3,8% versus 2,1%.",
+  "clinical_implications": "Alirocumabe reduziu o composto isquêmico em pacientes com SCA há 1–12 meses apesar de estatina de alta intensidade ou máxima tolerada. O resultado de mortalidade total deve ser interpretado como análise secundária nominal diante da hierarquia de testes, sem prometer benefício confirmatório isolado. FOURIER avaliou evolocumabe em doença aterosclerótica estabelecida com outro composto e esquema; igualdade numérica de HR não significa comparação direta ou equivalência. Alirocumabe foi titulado para uma faixa de LDL-C, sem substituir a terapia de base.",
+  "source_refs": [
+    "Schwartz GG, Steg PG, Szarek M, et al.; ODYSSEY OUTCOMES Committees and Investigators. Alirocumab and Cardiovascular Outcomes after Acute Coronary Syndrome. N Engl J Med. 2018;379(22):2097-2107. DOI: 10.1056/NEJMoa1801174. PMID: 30403574. NCT01663402.",
+    "Sabatine MS, Giugliano RP, Keech AC, et al.; FOURIER Steering Committee and Investigators. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease. N Engl J Med. 2017;376(18):1713-1722. DOI: 10.1056/NEJMoa1615664. PMID: 28304224. NCT01764633.",
+    "Bhatt DL, Steg PG, Miller M, et al.; REDUCE-IT Investigators. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia. N Engl J Med. 2019;380(1):11-22. DOI: 10.1056/NEJMoa1812792. PMID: 30415628. NCT01492361."
+  ],
+  "review_status": "revisado",
+  "note": "Não reescreve evidencias/odyssey-outcomes-2018.json. evidencias/odyssey-nao-misturar-com-fourier.json não foi criado — odyssey-outcomes-2018.json já existia em evidencias/.",
+  "review_note": "ODYSSEY primário conferido; corrigida interpretação confirmatória de mortalidade e eliminadas instruções editoriais/regulatórias expostas."
+}

@@ -1,63 +1,48 @@
 ---
-title: "AVC na Gestação e Puerpério: Etiologia, Incidência e Fatores de Risco em Coorte Terciária Contemporânea (2013–2024)"
+title: 'AVC na Gestação e Puerpério: Etiologia, Incidência e Fatores de Risco em Coorte Terciária Contemporânea (2013–2024)'
 slug: avc-na-gestacao-e-puerperio-etiologia-incidencia-e-fatores-de-risco-coorte-terciaria
-theme: "Gravidez"
+theme: Gravidez
 kind: estudo
 review_status: revisado
-source_refs: ["PMID:41232477", "DOI:10.1016/j.clineuro.2025.109237"]
-legacy_source: "Göçmen A, Çekiç M, İncebıyık M, Ağırcan D, Demir TG, Öz Ö, Ethemoğlu Ö. Stroke in pregnancy and postpartum: Etiology, incidence, and risk factors in a tertiary care cohort. Clin Neurol Neurosurg. 2026;260:109237."
+source_refs:
+- 'Stroke in pregnancy and postpartum: Etiology, incidence, and risk factors in a tertiary care cohort. Clinical neurology
+  and neurosurgery. PMID: 41232477. DOI: 10.1016/j.clineuro.2025.109237.'
+- DOI:10.1016/j.clineuro.2025.109237
+- 'PMID: 37195076.'
+review_note: Coorte PMID 41232477 conferida. Corrigida incidência hospitalar versus populacional, anemia associada versus
+  prevenção comprovada e interpretação perigosa de MTHFR como trombofilia, confrontada com diretriz primária ASH 2023. Não
+  utilizadas frequências genéticas sem denominadores verificáveis.
+summary: A frequência calculada no centro foi de 57,8 casos por 100.000 partos. Esse denominador hospitalar e o referenciamento
+  terciário limitam a comparação com incidências nacionais ou com estudos de síndromes neurológicas específicas.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# AVC na Gestação e Puerpério: Etiologia, Incidência e Fatores de Risco em Coorte Terciária Contemporânea
+# AVC durante a gestação e o puerpério: coorte de um centro terciário
 
-## Contexto
+## População e resultados
+Uma revisão retrospectiva dos prontuários do Harran University Hospital, na Turquia, identificou **83 mulheres adultas** com AVC entre janeiro de 2013 e outubro de 2024: **25 durante a gestação e 58 até 12 semanas após o parto**. Os controles foram gestantes ou puérperas hospitalizadas por indicações obstétricas, pareadas por idade, sem AVC.
 
-O AVC agudo durante a gestação ou no puerpério é evento raro, mas com desproporção de gravidade — é causa relevante de morbimortalidade materna, e o diagnóstico diferencial em uma gestante ou puérpera com déficit neurológico agudo precisa considerar etiologias que praticamente não entram no algoritmo do AVC fora do ciclo gravídico-puerperal (trombose venosa cerebral, dissecção arterial, PRES/RCVS, embolia paradoxal).
+A frequência calculada **no centro** foi de **57,8 casos por 100.000 partos**. Esse denominador hospitalar e o referenciamento terciário limitam a comparação com incidências nacionais ou com estudos de síndromes neurológicas específicas.
 
-Isso é diferente do que a pasta já cobre sob "AVC" nesta pasta: o documento sobre coorte sueca de coirmãs trata do **risco cardiovascular de longo prazo** (até décadas depois) associado a desfechos gestacionais adversos como pré-eclâmpsia, usando a gestação como exposição para um desfecho futuro. Este documento é sobre o **evento agudo em si**, ocorrendo durante a gestação ou nas primeiras 12 semanas de puerpério — outra pergunta clínica, com implicação prática distinta (reconhecimento e conduta no momento agudo, não estratificação de risco cardiovascular pós-parto).
+Eventos classificados pelos autores como isquêmicos predominaram; a classificação incluiu tanto AVC arterial quanto trombose venosa cerebral. A **trombose venosa cerebral foi o subtipo mais frequente nessa série**, especialmente no puerpério e nas primeiras seis semanas. Isso não estabelece que ela seja o subtipo mais comum em todas as populações obstétricas.
 
-## Desenho do estudo
+Pré-eclâmpsia/eclâmpsia e anemia foram mais frequentes nos casos (p<0,01). Houve diferenças em diversos exames laboratoriais, incluindo maior inflamação e menor hemoglobina, ferritina e albumina. O desenho não distingue integralmente fatores antecedentes de alterações associadas ao evento ou à gravidade clínica.
 
-Coorte retrospectiva de centro terciário (Turquia), abrangendo o período de 2013 a 2024. Foram identificadas **83 mulheres** com AVC ocorrido durante a gestação ou dentro de 12 semanas pós-parto — 25 durante a gestação e 58 no puerpério — comparadas a controles pareados sem AVC.
+## Trombofilia: ressalva necessária
+Os autores relatam maior frequência de algumas variantes nos pacientes com trombose venosa cerebral. A presença de polimorfismos **MTHFR C677T/A1298C não equivale a diagnóstico de trombofilia clinicamente estabelecida**: a diretriz ASH de 2023 destaca que esses polimorfismos não demonstram associação com tromboembolismo venoso. Não devem, isoladamente, indicar anticoagulação ou rastreamento familiar. Fator V Leiden e protrombina G20210A são questões distintas, cuja investigação depende do contexto e de potencial mudança de manejo.
 
-## Achados principais
+## Aplicação e limites
+Cefaleia intensa ou persistente, convulsões ou déficit neurológico na gestação e no puerpério exigem avaliação imediata, incluindo trombose venosa cerebral no diagnóstico diferencial. Essas etiologias também existem fora da gestação.
 
-**Incidência**: 57,8 casos por 100.000 partos — ordem de magnitude bem mais alta que a incidência de PRES/RCVS isolados relatada em outro documento desta pasta (1,52/100.000), consistente com o AVC agregando múltiplas etiologias, não uma síndrome única e rara.
+O estudo reforça a identificação de hipertensão gestacional e anemia, mas **não testou se corrigir anemia previne AVC**, nem validou um protocolo de tromboprofilaxia. Associações de uma série pequena, retrospectiva e de centro único não bastam para ampliar indicações de anticoagulação ou de exames genéticos.
 
-**Tipo de evento**: eventos **isquêmicos predominaram** sobre hemorrágicos. Dentro dos eventos isquêmicos, a **trombose venosa cerebral (TVC)** foi o subtipo mais frequente, concentrada particularmente **nas primeiras 6 semanas** de puerpério — a janela de maior risco protrombótico do ciclo gravídico-puerperal.
+## Fontes
+- Göçmen et al. *Stroke in pregnancy and postpartum: Etiology, incidence, and risk factors in a tertiary care cohort*. PMID 41232477; DOI 10.1016/j.clineuro.2025.109237.
+- ASH 2023, diretriz de investigação de trombofilia. PMID 37195076; https://pmc.ncbi.nlm.nih.gov/articles/PMC10709681/.
 
-**Fatores de risco identificados** (significativamente mais frequentes nos casos que nos controles, p<0,01):
-- **pré-eclâmpsia/eclâmpsia**;
-- **anemia**.
+## Tudo com Tudo
 
-**Alterações laboratoriais associadas**: marcadores inflamatórios elevados, glicemia e lipídios elevados, hemoglobina e albumina reduzidas nos casos em relação aos controles.
-
-**Fatores genéticos**: maior frequência de variantes de trombofilia hereditária nos casos, incluindo mutação do gene da metilenotetrahidrofolato redutase (MTHFR) e mutação do Fator V de Leiden.
-
-## Interpretação clínica
-
-Três pontos práticos que este estudo sustenta:
-
-1. **A trombose venosa cerebral é o subtipo de AVC mais associado à janela de maior risco puerperal** (primeiras 6 semanas) — deve entrar no diagnóstico diferencial de cefaleia persistente, convulsão ou déficit neurológico focal na puérpera recente, ao lado das etiologias mais discutidas (pré-eclâmpsia/eclâmpsia, PRES/RCVS, dissecção). É entidade distinta do tromboembolismo pulmonar e da trombose venosa profunda de membros já cobertos nesta pasta — mesmo substrato protrombótico do puerpério, território vascular diferente.
-2. **Anemia aparece como fator de risco identificável e potencialmente modificável** para AVC peripartum nesta coorte — reforça a relevância de triagem e correção de anemia no pré-natal e no puerpério não apenas por seus desfechos obstétricos já conhecidos, mas também como parte da estratificação de risco cerebrovascular.
-3. **Pré-eclâmpsia/eclâmpsia reforça, de outro ângulo, o que outros documentos desta pasta já mostram**: o espectro hipertensivo gestacional não é apenas fator de risco cardiovascular futuro (documentos sobre subtipos de HDP e coorte sueca) — é também fator de risco para evento cerebrovascular agudo dentro da própria janela gestacional/puerperal.
-
-## O que o estudo não prova
-
-- É coorte **retrospectiva de centro único**, com **N absoluto pequeno** (83 casos) — associações, especialmente as de variantes genéticas de trombofilia, são particularmente sujeitas a achado por acaso em amostras desse tamanho; **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de usar as frequências genéticas relatadas como referência quantitativa — o estudo não fornece razão de chances nem intervalo de confiança para essas variantes no resumo disponível.
-- A associação entre anemia e AVC peripartum é, neste desenho, **associação estatística, não relação causal comprovada** — o estudo não testa se corrigir a anemia reduz o risco de AVC.
-- População de um único país (Turquia) e um único centro terciário — perfil de referenciamento pode inflar a proporção de casos graves/complexos em relação ao que ocorreria numa base populacional ampla, e a incidência absoluta pode não ser diretamente comparável entre sistemas de saúde diferentes.
-- O estudo é descritivo de etiologia/incidência/fatores de risco — não avalia uma estratégia específica de prevenção, rastreamento ou tratamento do AVC peripartum.
-
-## Aplicação no Corvia
-
-Este documento fixa dois pontos de referência que faltavam na pasta:
-
-- uma **estimativa contemporânea de incidência de AVC agudo** (isquêmico e hemorrágico) associado ao ciclo gravídico-puerperal, distinta e mais ampla que a de PRES/RCVS isolados;
-- a caracterização da **trombose venosa cerebral** como subtipo predominante dentro da janela de maior risco puerperal (primeiras 6 semanas), quadro que, até este documento, não tinha registro próprio nesta pasta apesar de tromboembolismo pulmonar, trombose venosa profunda e trombofilia hereditária já estarem cobertos.
-
-Na prática, isso significa que o raciocínio diagnóstico diante de cefaleia intensa, convulsão ou déficit neurológico focal na gestante ou puérpera recente deve incluir, de forma explícita, a trombose venosa cerebral como diagnóstico diferencial — sobretudo nas primeiras 6 semanas pós-parto — e que a triagem/correção de anemia e o controle do espectro hipertensivo gestacional têm, além do papel obstétrico e cardiovascular de longo prazo já documentados, relevância direta na prevenção do AVC agudo peripartum.
-
-## Referência principal
-
-Göçmen A, Çekiç M, İncebıyık M, Ağırcan D, Demir TG, Öz Ö, Ethemoğlu Ö. Stroke in pregnancy and postpartum: Etiology, incidence, and risk factors in a tertiary care cohort. *Clin Neurol Neurosurg*. 2026;260:109237. DOI: 10.1016/j.clineuro.2025.109237. PMID: 41232477.
+- [Síndrome da Encefalopatia Posterior Reversível e Vasoconstrição Cerebral Reversível na Gestação e Puerpério: Estudo Populacional Finlandês](/biblioteca/pres-e-vasoconstricao-cerebral-reversivel-na-gestacao-e-puerperio-estudo-populacional-finlandes) — Conecta AVC gestacional ao diagnóstico diferencial com PRES e vasoconstrição cerebral reversível no mesmo período obstétrico.

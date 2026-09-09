@@ -1,19 +1,25 @@
 ---
-title: "EPIC: bolus+infusão de abciximabe reduz o composto isquêmico de 30 d; bolus isolado NS; mais sangramento"
+title: 'EPIC: abciximabe na angioplastia de alto risco'
 slug: epic-abciximabe-bolus-e-infusao-na-angioplastia-de-alto-risco
-theme: "Doença coronariana"
+theme: Doença coronariana
 kind: estudo
-summary: "2.099 angioplastia/aterectomia de alto risco (angina instável grave, IAM em evolução ou anatomia de risco), 56 centros. Primário 30 d (morte, IAM, revasc não planejada, stent não planejado ou BIA por isquemia): placebo 12,8%; bolus+infusão 8,3% (redução 35%; P=0,008); bolus isolado 11,5% (P=0,43 NS). Sangramento e transfusão mais frequentes com bolus+infusão — percentuais ausentes neste abstract. Era do balão. EPILOG testa heparina baixa depois deste ensaio."
+summary: 'EPIC: em 2.099 pacientes, bolus mais infusão reduziu o composto isquêmico contra placebo em 30 dias (8,3% vs 12,8%)
+  e aumentou sangramento; bolus isolado não demonstrou diferença significativa.'
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via NCBI efetch (EPIC Investigators, PMID 8121459; N Engl J Med. 1994;330(14):956-961; DOI 10.1056/NEJM199404073301402). Percentuais de sangramento NÃO estão neste abstract — não inventar. Bolus isolado é NS. Não extrapolar para DAPT/stent contemporâneo. Revisão científica concluída em 30/08/2026."
+review_note: 'Conferido EPIC PMID 8121459: 2.099 pacientes, 56 centros, três braços, composto e p-valores. Preservada distinção
+  entre comparação com placebo e teste direto de regimes; removidas referências não fundamentadas e linguagem de nota interna.'
 source_refs:
-  - "EPIC Investigators. Use of a monoclonal antibody directed against the platelet glycoprotein IIb/IIIa receptor in high-risk coronary angioplasty. N Engl J Med. 1994;330(14):956-961. DOI: 10.1056/NEJM199404073301402. PMID: 8121459. Abstract relido nesta revisão editorial."
-  - "Documento da casa epilog-abciximabe-com-heparina-baixa-na-icp — heparina baixa, sangramento maior sem diferença."
-  - "Documento da casa gusto-iv-acs-abciximabe-sem-revascularizacao-precoce — enfermaria, sem revasc precoce, NS."
+- 'EPIC Investigators. Use of a monoclonal antibody directed against the platelet glycoprotein IIb/IIIa receptor in high-risk
+  coronary angioplasty. N Engl J Med. 1994;330(14):956-961. DOI: 10.1056/NEJM199404073301402. PMID: 8121459. Abstract relido
+  nesta revisão editorial.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# EPIC: o ancestral do GPI no laboratório
+# EPIC: abciximabe na angioplastia de alto risco
 
 ## Pergunta clínica
 
@@ -29,8 +35,12 @@ Prospectivo, randomizado, duplo-cego, **56** centros, **2.099**. Três braços: 
 - Bolus+infusão: **8,3%** (redução de **35%**; **P=0,008**)
 - Bolus isolado: **11,5%** (redução de **10%**; **P=0,43**, NS)
 
-A redução com bolus+infusão foi consistente em revasc não planejada e IAM não fatal. Sangramento e transfusão foram **mais frequentes** no braço bolus+infusão — este abstract **não** traz percentuais.
+A redução com bolus+infusão foi consistente em revasc não planejada e IAM não fatal. Sangramento e transfusão foram **mais frequentes** no braço bolus+infusão; a síntese não atribui percentuais não apresentados no resumo primário.
 
 ## Mensagem prática
 
-**Precisa da infusão; o bolus sozinho não ganhou.** Sangramento sobe (número absoluto não relido aqui). EPILOG veio depois para baixar a heparina. Não é GUSTO-IV ACS (enfermaria). Não é a ICP com DAPT de 2026.
+**O regime de bolus mais infusão mostrou benefício contra placebo; bolus isolado não demonstrou diferença significativa.** A diferença entre significâncias não é, sozinha, um teste direto de superioridade entre os dois regimes. O benefício isquêmico precisa ser considerado junto do aumento de sangramento. O regime e o contexto de angioplastia desse ensaio histórico não equivalem ao tratamento antitrombótico contemporâneo.
+
+## Tudo com Tudo
+
+- [EPILOG: abciximabe com heparina baixa reduz morte/IAM/revasc urgente aos 30 d; ensaio interrompido](/biblioteca/epilog-abciximabe-com-heparina-baixa-na-icp) — Relaciona EPIC ao EPILOG, que modificou o regime de heparina para preservar efeito antitrombótico com segurança hemorrágica.

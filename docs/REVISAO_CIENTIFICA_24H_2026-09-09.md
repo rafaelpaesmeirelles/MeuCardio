@@ -1,62 +1,18 @@
-# Revisão científica e varredura de produção — 09/09/2026
+# Revisão científica e interface — 09/09/2026
 
-## Escopo e publicação
+Pacote fechado para publicação autorizada: **697 arquivos-fonte revisados** — 270 do Claude e 427 do Grok. A produção posterior do Work está fora deste pacote.
 
-Revisar a produção do Claude e localizar conteúdo produzido ou alterado nas últimas 24 horas que ainda não chegou à publicação. Janela de inventário ancorada em 08/09/2026 17:14 UTC. A revisão de conteúdo precede a publicação conjunta com as correções de interface. Nenhum deploy desta rodada foi realizado até esta atualização.
+- 716 registros publicáveis nos módulos nativos e na biblioteca.
+- 2256 relações explícitas e rastreáveis para Tudo com Tudo; nenhum registro desconectado.
+- 7 versões redundantes consolidadas nos respectivos registros canônicos, preservando as fontes originais.
+- 14 materiais educativos ao paciente e 12 trilhas narrativas convertidos também para seus módulos nativos, além dos registros estruturados recebidos.
+- Fontes primárias, DOI/PMID, denominadores, desenho, interpretação, contraindicações e limites da evidência conferidos. Corrigidas extrapolações, doses, referências equivocadas e dados não sustentados.
+- Metadados, temas canônicos, títulos, resumos, slugs e vínculos internos conferidos. A revisão foi editorial e bibliográfica assistida por Codex; não é assinatura de revisão médica humana.
 
-O layout publicado deve ser preservado: substituição das imagens de Ciência e Ensino e correções explicitamente solicitadas, sem reformulação estrutural. Não executar CI/backend nem repetir verificações já concluídas sem alteração que as justifique.
+As correções de interface preservam a estrutura aprovada: paleta clara, imagens realistas de Ciência e Ensino nos dois temas, deslocamento com data/hora, timeline e contexto sem linhas indevidas, espaço para ações flutuantes e enquadramento da definição clínica. Build de frontend e conferência visual dirigida concluídos; sem suítes de CI/backend.
 
-## Inventário confrontado com o banco
+A publicação usa somente este pacote, com backup das linhas científicas afetadas, preservação de revisões anteriores, transação atômica e validação das relações. A atualização do índice semântico também fica restrita às identidades deste pacote; não há reconcile, prune ou varredura da nova produção.
 
-- 977 referências Git consultadas; 17 branches atualizadas na janela, 366 commits científicos e 872 caminhos Markdown tocados.
-- 978 variantes locais deduplicadas correspondem a 853 slugs. Desses, 755 possuem uma variante com corpo idêntico ao documento publicado e 98 estavam ausentes do banco.
-- Dois documentos adicionais estavam sem commit no servidor: hipoglicemia grave no DM1 e angioplastia pulmonar na CTEPH. Ambos foram preservados e copiados para revisão local.
-- Lote inicial para leitura: 120 arquivos — 100 ausentes do banco e 20 versões alternativas de documentos publicados. Os “100 documentos novos” do relatório Claude incluem 20 alternativas a textos já publicados.
-- O banco contém 3.188 documentos publicados. Nas outras frentes existem 22 itens não publicados, criados em julho/agosto, fora da janela: não são alvo de publicação em massa nesta rodada.
-- 323 PMIDs citados pelo lote inicial foram recuperados da fonte NIH sem identificadores ausentes. Existência do PMID não valida por si a interpretação clínica.
+Estado deste relatório: preparado; o resultado efetivo da execução será registrado em `publication-result.json` e `rag-result.json` no diretório da release.
 
-## Revisões adicionais no servidor
-
-Foram identificadas 131 variantes em dois heads que não estavam entre as variantes locais: 21 revisões de dependências em `ba628105` e 110 revisões em `324d616c`. As 21 primeiras diferem de documentos cujo banco ainda registra versões de julho/agosto. As 110 seguintes têm correspondentes publicados em 09/09/2026 após o commit de revisão, mas o corpo difere. A data mais recente não prova que as correções anteriores foram preservadas: a amostra de acondroplasia mostrou regressão de interpretações já corrigidas. Todas as 131 foram preservadas em cache local e acrescentadas à fila, que contém 251 slugs distintos (100 novos e 151 existentes).
-
-Nenhum arquivo original do servidor foi removido ou sobrescrito. A importação final deve ser dirigida por manifesto, preservando documentos publicados fora do lote e sem reconciliação que arquive todo conteúdo ausente da branch principal.
-
-## Progresso da leitura individual
-
-Estado da fila consolidada: corrected: 23, pending: 222, retain_published: 6.
-
-Fontes PubMed em cache: 1339. Identificadores citados ainda não recuperados: 20301283, 20301300, 20301365, 20301431, 20301444, 20301450, 20301537, 20301557, 20301680, 20301696, 20301699, 21882399, 25275207, 26225414. A recuperação não substitui leitura e conferência de correspondência entre referência, população e afirmação.
-
-- **Endoprótese Fenestrada/Ramificada Modificada pelo Cirurgião: Mortalidade de Longo Prazo e Causa de Óbito em 10 Anos** — `corrected`. Retirada explicação causal não sustentada para número de vasos e distribuição de causas com denominador inconsistente no resumo; mantidos desenho, estimativas e limitações verificáveis.
-- **TEVAR Precoce na Dissecção Aórtica Tipo B Não Complicada de Alto Risco: Onde Está a Evidência em 2025-2026** — `corrected`. Corrigida falsa ausência de ECRs com ADSORB/INSTEAD-XL; removidas atribuições conflitantes de complicações e comparações causais entre coortes; corrigida população EU-TBAR.
-- **CPVT: Flecainida Associada a Betabloqueador no Longo Prazo — a Coorte da Mutação Fundadora RyR2 p.Gly357Ser** — `retain_published`. Lidas ambas as versões e os resumos de 2017/2026; preservada versão publicada que distingue cinco pacientes de cinco eventos, 14 randomizados/13 completos e associação de causalidade.
-- **Estimulação do Sistema de Condução versus Estimulação de Ventrículo Direito no Bloqueio Atrioventricular** — `corrected`. Conferidos ensaio, registro e metanálise; segurança sem diferença estatística não equivale a equivalência; removida primazia não demonstrada e corrigida atribuição da fluoroscopia.
-- **Estimulação Vagal Auricular na Extrassístole Ventricular: o Ensaio TREAT-PVC** — `corrected`. Corrigidos 100 randomizados/96 analisados e intensidade 1 mA abaixo do limiar, não fixa; removidas inferência de placebo dominante e equivalência não demonstrada.
-- **Estratificação de Risco Arrítmico na Cardiomiopatia Dilatada Não Isquêmica: Corredores de Realce Tardio e Genótipo de Alto Risco** — `retain_published`. Lidas versão Claude, correções publicadas e fonte Circulation; preservada versão que corrige exclusividade da FEVE, genótipos não especificados e inversão FEVE >35% para exclusão indevida de risco.
-- **Teste Farmacológico Provocativo com Ajmalina na Suspeita de Brugada Sem Sintomas ou História Familiar: as Diretrizes Atuais Deixam Casos de Fora?** — `corrected`. Retiradas porcentagens com denominador não resolvido e inferências de falsos negativos/sensibilidade; distinguido padrão induzido de diagnóstico e prognóstico.
-- **Escore C2HEST: Predição de Fibrilação Atrial Incidente na População Geral e no AVC Criptogênico** — `corrected`. Corrigida atribuição da calibração e exclusão de doença estrutural; retirados cortes arbitrários para Holter/monitor e contagens contraditórias dos comparadores.
-- **Escore HATCH: Progressão da Fibrilação Atrial Paroxística e Risco de FA Incidente** — `corrected`. Conferidos pontos e três estudos; removidos usos terapêuticos não testados e extrapolação do limiar de STEMI para outros contextos.
-- **Escore IABP-SHOCK II: Estratificação de Mortalidade em 30 Dias no Choque Cardiogênico** — `corrected`. Completados os pontos; corrigidas a população CardShock e a AUC de derivação; removida extrapolação para seleção de dispositivos.
-- **Escore MECKI: Teste Cardiopulmonar de Exercício Combinado a Índices Cardíaco e Renal na Insuficiência Cardíaca** — `corrected`. Removida alegação de exclusividade e equivalência da AUC a excelência; fornecida calculadora oficial e unidades, distinguindo descrição do modelo de implementação local.
-- **RACHS-1: Ajuste de Risco para Cirurgia de Cardiopatia Congênita** — `corrected`. Reclassificado como síntese de estudo, sem simular calculadora incompleta; removida classificação indevida de Fontan; mantidas apenas informações sustentadas pelo resumo original.
-- **Aterosclerose Acelerada e Síndrome Coronariana Aguda por Inibidor de Checkpoint Imunológico** — `retain_published`. Lidas ambas as versões e fontes; preservadas correções publicadas de causalidade, mediana, equivalência por sexo e ausência de indicação de corticosteroide preventivo.
-- **CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T** — `retain_published`. Lidas ambas as versões e metanálise; preservadas correções publicadas de 12 estudos, natureza experimental e ausência de pesos não verificados.
-- **Eventos Cardiovasculares Tardios Após Terapia CAR-T em Linfoma B Agressivo: Coorte Prospectiva 2025** — `corrected`. Conferido texto completo; corrigida inclusão de eventos persistentes, FEVE basal e gravidade de COVID; removida causalidade para atraso de tocilizumabe e comparação direta entre coortes.
-- **Miocardite por Checkpoint Refratária a Corticoide: Resgate com Abatacepte e Ruxolitinibe** — `corrected`. Atualizado ACHLYS concluído sem resultados no registro; distinguida busca de dose de comparação com placebo; removidas eficácia causal, primazia terapêutica e superioridade não testada sobre plasmaférese.
-- **Pirtobrutinibe: Inibidor de BTK Não Covalente e Menor Toxicidade Cardiovascular** — `corrected`. Conferida tabela 3 completa: segurança n=330/325, FA 8/44 e duração do tratamento 20,5/19,3 meses; corrigidas alegação de dado ausente e superioridade indireta generalizada.
-- **Suplementação com creatina no atleta: segurança cardiovascular e renal na evidência de 2025-2026** — `corrected`. Removidas prova universal de segurança renal/cardiovascular, atribuição obrigatória da creatinina ao suplemento e falsa exclusão específica de trombose em análise agregada.
-- **Disfunção erétil por esteroides anabolizantes: recuperação após a suspensão e interseção com risco cardiovascular** — `corrected`. Corrigido estudo transversal e composição 50/125/72; removidas proibição universal de retirada abrupta, desmame obrigatório, pacote de exames e causalidade da terapia pós-ciclo.
-- **Treinamento de força e remodelamento cardíaco biventricular: o que distingue do coração do atleta de endurance** — `corrected`. Mantidos números conferidos; retiradas causalidade indevida, garantias de segurança e afirmação não conferida sobre irrelevância da errata.
-- **Treinamento em altitude e hipóxia: efeitos cardiovasculares e risco no atleta** — `corrected`. Corrigida inferência longitudinal em estudo transversal, destacado confundimento por modalidade esportiva e QT versus QTc; retiradas garantias de segurança e uniformidade de efeito entre protocolos.
-- **Agonistas de GLP-1 no Idoso Cardiopata: Perda de Massa Magra, o Debate sobre Sarcopenia e Como Mitigar sem Perder o Benefício Cardiovascular** — `corrected`. Corrigidas causalidade/equivalência indevidas, hipótese adaptativa e generalização de benefícios; identificada referência nutricional omitida, individualizadas metas na DRC e conferido registro LEAN-PREP sem resultados.
-- **Carga Anticolinérgica Cumulativa e Risco Cardiovascular no Idoso: Dose-Resposta, Mortalidade e o Gatilho do Aumento Recente** — `retain_published`. Lidos os três estudos e a diferença entre versões; preservadas correções publicadas sobre causalidade, DDD, viés protopático, Beers não aditivo e percentual NHANES não bruto.
-- **Doença de Chagas Cardíaca no Idoso: o Envelhecimento da Epidemia, Reativação sob Imunossupressão e os Limites do Rastreio e da Terapia Antiparasitária** — `corrected`. Removidas generalizações etárias e ausência universal de benefício do BENEFIT; separadas reativação e doença crônica; explicitadas seleção da coorte de transplante e limitações do rastreio por IA.
-- **Hipotensão Ortostática no Idoso Hipertenso Tratado: Risco de Queda e o que a Evidência de Desprescrição em 2025-2026 Mostra** — `retain_published`. Conferidos estudos e texto integral AHA; preservadas correções publicadas que distinguem HO de síncope/hipotensão no SPRINT, protocolo sentado versus supino, randomização dos médicos no DeFRID e indicações específicas de betabloqueador.
-- **Hipertensão Pulmonar Associada à Displasia Broncopulmonar: Sildenafila, o Ensaio SILDI-SAFE e a Lacuna de Evidência de Eficácia (Atualização 2025-2026)** — `corrected`. Texto integral: corrigidos 125 randomizados/122 expostos e exclusão de HP basal pelo centro; removidas primazia não demonstrada e garantia de segurança; separados prevenção exploratória e tratamento de HP estabelecida.
-- **Vigilância Não Invasiva de Rejeição Pós-Transplante Cardíaco Pediátrico: dd-cfDNA, Ressonância Cardíaca Multiparamétrica e Daratumumabe na Rejeição Mediada por Anticorpo (Atualização 2025-2026)** — `corrected`. Corrigida confusão entre AlloMap sanguíneo e EMB-GEP; conferidas fontes originais sobre limiares/redução de biópsias; limitadas associações não significativas, segurança e manutenção obrigatória de daratumumabe.
-- **Doença de Danon (LAMP2): Fenocópia Ligada ao X da Cardiomiopatia Hipertrófica e a Terapia Gênica RP-A501** — `corrected`. Corrigida revisão de casos versus coorte e registro errado de fase 2; removidas primazia/eficácia/janela terapêutica indevidas; incluídos evento fatal de 2025, suspensão/retomada e atualização da patrocinadora de 2026 sem tratar como ensaio concluído.
-- **Duração da hipotermia após parada cardíaca: ensaio ICECAP** — `corrected`. Dois textos consolidados; duração efetiva 6–48 h; probabilidade do grupo chocável 0,490; removidas falsa não inferioridade e falsa primazia histórica.
-
-## Pendências para liberação
-
-Completar a leitura dos itens pendentes e das diferenças do servidor; conferir vínculos e metadados; consolidar o manifesto por slug e hash; importar/publicar apenas as versões aprovadas; executar a publicação da interface autorizada e verificar os resultados em produção. O inventário não equivale à conclusão da revisão clínica.
+SHA-256 do pacote: `96da332fd635fb19a3cd99569d0573be044c1c85d891403e391ea51274432f73`.

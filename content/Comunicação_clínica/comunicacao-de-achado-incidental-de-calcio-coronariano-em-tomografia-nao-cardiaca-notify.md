@@ -1,60 +1,61 @@
 ---
-title: "Comunicação do Achado Incidental de Cálcio Coronariano em Tomografia Não Cardíaca: os Ensaios NOTIFY"
+title: 'Comunicação de cálcio coronariano incidental: os estudos NOTIFY'
 slug: comunicacao-de-achado-incidental-de-calcio-coronariano-em-tomografia-nao-cardiaca-notify
-theme: "Comunicação clínica"
+theme: Comunicação clínica
 kind: documento
 review_status: revisado
-source_refs: ["Sandhu AT, Rodriguez F, Ngo S, Patel BN, Mastrodicasa D, Eng D, Khandwala N, Balla S, Sousa D, Maron DJ. Incidental Coronary Artery Calcium: Opportunistic Screening of Previous Nongated Chest Computed Tomography Scans to Improve Statin Rates (NOTIFY-1 Project). Circulation. 2023;147(9):703-714. DOI: 10.1161/CIRCULATIONAHA.122.062746. PMID: 36342823 — abstract completo, com todos os números do desfecho primário e secundário, conferido via PubMed E-utilities em 09/09/2026.", "Dudum R, Jain SS, Mastrodicasa D, Furst A, Xu S, Ngo S, Eng D, Khandwala N, Sousa D, Chaudhari A, Langlotz C, Sandhu AT, Maron DJ, Rodriguez F. Effects of Real-Time Notification of AI-Detected Incidental Coronary Artery Calcium on Statin Prescription: The NOTIFY-PICTURE Trial. Circulation. 2026;153(3):210-212. DOI: 10.1161/CIRCULATIONAHA.125.078155. PMID: 41213130 — publicação classificada no PubMed como 'Letter' (carta/relato breve), SEM AbstractText estruturado no registro (confirmado por efetch em XML em 09/09/2026); os percentuais citados neste documento vêm de fonte secundária agregada (resumo da American College of Cardiology e cobertura especializada), não do abstract primário do PubMed — sinalizado explicitamente no corpo deste documento como VERIFICAÇÃO HUMANA NECESSÁRIA para os números exatos.", "Writing Group. Opportunistic Detection of Coronary Artery Calcium on Noncardiac Chest Computed Tomography: An Emerging Tool for Cardiovascular Disease Prevention: A Scientific Statement From the American Heart Association. Circulation. 2025;152(19):e391-e401. DOI: 10.1161/CIR.0000000000001382. PMID: 41099128 — abstract completo conferido via PubMed E-utilities em 09/09/2026.", "Mollo AF, McCarthy DM, Cameron KA, et al. Communication of incidental findings in the ED: Patient perspectives. Patient Educ Couns. 2026;152:109801. DOI: 10.1016/j.pec.2026.109801. PMID: 42551209 — estudo qualitativo com pacientes de pronto-socorro submetidos a imagem abdominal, não cardiovascular; citado neste documento apenas como pano de fundo sobre a experiência do paciente diante de achado incidental em geral, não como evidência cardiológica direta — distinção explicitada no corpo do texto."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta cobre extensivamente comunicação de risco genético/hereditário, más notícias, decisão compartilhada em procedimento e prognóstico — mas não existe documento sobre a comunicação de um achado cardiovascular INESPERADO, feito de passagem, num exame solicitado por outro motivo (cálcio coronariano incidental em TC de tórax não cardíaca), que é um cenário de comunicação estruturalmente diferente: o paciente não veio para ouvir sobre o coração, e a notificação em si — não apenas o conteúdo dela — é o que determina se a informação gera ação clínica."
+source_refs:
+- 'Sandhu AT, Rodriguez F, Ngo S, Patel BN, Mastrodicasa D, Eng D, Khandwala N, Balla S, Sousa D, Maron DJ. Incidental Coronary
+  Artery Calcium: Opportunistic Screening of Previous Nongated Chest Computed Tomography Scans to Improve Statin Rates (NOTIFY-1
+  Project). Circulation. 2023;147(9):703-714. DOI: 10.1161/CIRCULATIONAHA.122.062746. PMID: 36342823.'
+- 'Dudum R, Jain SS, Mastrodicasa D, Furst A, Xu S, Ngo S, Eng D, Khandwala N, Sousa D, Chaudhari A, Langlotz C, Sandhu AT,
+  Maron DJ, Rodriguez F. Effects of Real-Time Notification of AI-Detected Incidental Coronary Artery Calcium on Statin Prescription:
+  The NOTIFY-PICTURE Trial. Circulation. 2026;153(3):210-212. DOI: 10.1161/CIRCULATIONAHA.125.078155. PMID: 41213130.'
+- 'Writing Group. Opportunistic Detection of Coronary Artery Calcium on Noncardiac Chest Computed Tomography: An Emerging
+  Tool for Cardiovascular Disease Prevention: A Scientific Statement From the American Heart Association. Circulation. 2025;152(19):e391-e401.
+  DOI: 10.1161/CIR.0000000000001382. PMID: 41099128.'
+- 'Mollo AF, McCarthy DM, Cameron KA, et al. Communication of incidental findings in the ED: Patient perspectives. Patient
+  Educ Couns. 2026;152:109801. DOI: 10.1016/j.pec.2026.109801. PMID: 42551209.'
+review_note: 'Conferido NOTIFY-PICTURE integral e retirado marcador de números não verificados; corrigidos n=202, limites
+  de subgrupos/adesão e falsa superioridade de tempo real; AHA classificada como declaração científica e CAC incidental não
+  equiparado automaticamente a escore dedicado. Conferência editorial final: título alinhado ao corpo revisado, campos de
+  classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos
+  internos preservados.'
+summary: Cálcio coronariano identificado em tomografia de tórax feita por outro motivo pode contribuir para avaliação preventiva.
+  Seu relato não determina sozinho tratamento, necessidade de angiografia ou uma pontuação equivalente à de uma tomografia
+  cardíaca dedicada.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Comunicação do Achado Incidental de Cálcio Coronariano em Tomografia Não Cardíaca: os Ensaios NOTIFY
+# Comunicação de cálcio coronariano incidental: os estudos NOTIFY
 
-## O problema de comunicação, específico deste cenário
-A maior parte deste tema trata de conversas planejadas — o paciente sabe que vai discutir um diagnóstico, uma decisão de procedimento, um prognóstico. O achado incidental de cálcio coronariano (CAC) em tomografia de tórax **não-gated**, solicitada por outro motivo (rastreio de câncer de pulmão, dor torácica atípica, avaliação pré-operatória, entre outros), é diferente: o paciente não está preparado para receber informação cardiovascular, e o radiologista que faz o laudo raramente é quem vai conduzir o tratamento. Segundo a diretriz científica da American Heart Association (AHA) sobre o tema (Circulation 2025;152(19):e391-e401, PMID 41099128), **mais de 17 milhões de pessoas nos EUA têm risco cardiovascular limítrofe a intermediário** e seriam candidatas à medição formal de CAC pelas diretrizes vigentes, mas a adoção dessa medição dedicada permanece baixa; ao mesmo tempo, **cerca de 19 milhões de tomografias de tórax não-gated são realizadas por ano** só nos Estados Unidos, e o cálcio coronariano aparece nelas com frequência, mesmo sem ter sido o motivo do exame.
+Cálcio coronariano identificado em tomografia de tórax feita por outro motivo pode contribuir para avaliação preventiva. Seu relato não determina sozinho tratamento, necessidade de angiografia ou uma pontuação equivalente à de uma tomografia cardíaca dedicada.
 
-O problema, então, não é de conhecimento científico — a associação entre CAC e risco de doença aterosclerótica é bem estabelecida — mas de **comunicação e ação**: será que um achado mencionado (ou não) num laudo de radiologia, sobre uma queixa que não é a do paciente, é notado, comunicado e vira mudança de conduta?
+## NOTIFY-1
 
-## O ensaio NOTIFY-1: notificação estruturada versus laudo passivo
-Sandhu AT et al., Circulation. 2023;147(9):703-714 (PMID 36342823). Estudo randomizado de melhoria de qualidade no sistema Stanford Health Care. **Método**: pacientes sem doença aterosclerótica conhecida e sem prescrição prévia de estatina foram rastreados por algoritmo de aprendizado profundo (deep learning), com confirmação por radiologista, para CAC incidental em tomografias de tórax não-gated prévias, realizadas entre 2014 e 2019.
+O projeto randomizado de melhoria de qualidade avaliou notificação do paciente e do médico, com imagem do achado e recomendações sobre estatinas, versus cuidado usual. Foram analisados 173 participantes sem aterosclerose clínica conhecida ou estatina prévia.
 
-De **2.113 pacientes rastreados**, CAC foi identificado em **424** pelo algoritmo; após confirmação pelo radiologista, **173 pacientes foram randomizados** para notificação (do médico assistente e do próprio paciente) versus cuidado usual (laudo arquivado, sem alerta ativo).
+Em seis meses, houve prescrição de estatina em 44/86 (51,2%) versus 6/87 (6,9%; P<0,001), e investigação coronariana adicional em 15,1% versus 2,3%. O estudo mediu prescrição e uso de exames, **não redução de infarto, AVC ou mortalidade**, nem isolou o efeito de cada componente da notificação. [Sandhu et al., 2023](https://pubmed.ncbi.nlm.nih.gov/36342823/).
 
-### Resultados
-- **Prescrição de estatina em 6 meses: 51,2% (44/86) no braço de notificação vs. 6,9% (6/87) no cuidado usual, p<0,001.**
-- **Mais investigação adicional de doença coronariana no braço de notificação: 15,1% (13/86) vs. 2,3% (2/87), p=0,008.**
+## NOTIFY-PICTURE: resultados conferidos no texto integral
 
-### Conclusão dos próprios autores
-Os autores concluem que o rastreio oportunístico de CAC combinado com notificação ativa do médico e do paciente **aumentou de forma expressiva a prescrição de estatina**, e que pesquisa adicional é necessária para determinar se essa abordagem reduz eventos cardiovasculares ateroscleróticos de fato — ou seja, o desfecho comprovado é de **processo de cuidado** (prescrição, investigação adicional), não ainda de desfecho clínico duro.
+O ensaio unicêntrico randomizou 202 pessoas sem terapia hipolipemiante, após análise de 6.188 exames. A notificação ocorreu próxima ao exame; 172 participantes não tinham aterosclerose clínica prévia. O cálcio era mencionado em 97% dos laudos, mas em apenas 4% das conclusões.
 
-## A extensão para tempo real e inteligência artificial: NOTIFY-PICTURE
-Dudum R et al., Circulation. 2026;153(3):210-212 (PMID 41213130). Publicado como carta/relato breve (classificado assim no próprio registro do PubMed, sem resumo estruturado indexado), este ensaio testa se a **notificação em tempo real** — próxima ao momento do exame, não meses depois como no NOTIFY-1 original — de CAC detectado por algoritmo de inteligência artificial num espectro mais amplo de clínicos e pacientes durante o cuidado de rotina muda a prescrição de estatina.
+Estatina foi prescrita em 44/100 (44%) no grupo notificação e 10/102 (9,8%) no cuidado usual. Sem aterosclerose prévia, as proporções foram 47% versus 6%; com doença prévia, 29% versus 31% (P de interação=0,003). O estudo não tinha poder adequado para diferenças de subgrupo, não avaliou adesão e não demonstrou redução de eventos.
 
-**VERIFICAÇÃO HUMANA NECESSÁRIA — os números a seguir vêm de fonte secundária agregada (resumo da American College of Cardiology e cobertura especializada), não do abstract primário indexado no PubMed, que não está disponível para este registro por se tratar de carta breve.** Segundo essas fontes secundárias, a prescrição de estatina teria ocorrido em **44% do braço de notificação vs. 9,8% do braço de cuidado usual (p<0,001)**, com um efeito de interação relevante por subgrupo: entre pacientes **sem** doença aterosclerótica conhecida, a diferença teria sido maior (47% vs. 6%) do que entre os que **já tinham** doença aterosclerótica conhecida (29% vs. 31%, sem diferença aparente), com p de interação relatado como 0,003. **Antes de citar esses números como dado definitivo em material clínico, confirmar contra o texto integral do artigo (Circulation, DOI 10.1161/CIRCULATIONAHA.125.078155) ou uma fonte secundária que os reproduza com atribuição clara.**
+Não houve aumento detectado da utilização de serviços. Comparar seus percentuais aos do NOTIFY-1 não prova que notificar mais cedo seja superior, pois são populações e estudos diferentes. A ausência de resumo no PubMed não impede conferir os resultados na carta completa. [Dudum et al., Circulation, texto integral](https://pmc.ncbi.nlm.nih.gov/articles/PMC12829528/).
 
-O que é seguro afirmar, porque está no registro bibliográfico verificável do PubMed independentemente do conteúdo do abstract: o estudo existe, foi publicado em Circulation em 2026, é de autoria em parte compartilhada com a equipe do NOTIFY-1 original (Sandhu AT, Maron DJ, Rodriguez F aparecem nos dois), e representa uma extensão direta e recente (2025-2026) da mesma linha de pesquisa sobre notificação de achado incidental cardiovascular.
+## Um fluxo de cuidado após o achado
 
-## O que a diretriz da AHA 2025 recomenda como estrutura de comunicação
-A diretriz científica da AHA (Circulation 2025;152(19):e391-e401, PMID 41099128) situa a notificação de CAC opportunistico dentro de um problema mais amplo de implementação: **relatar o achado sem estrutura de ação corre o risco de gerar testes adicionais desnecessários**, e a estimativa de risco por escore de fatores tradicionais já é subutilizada mesmo sem a complexidade extra de um achado incidental. Os autores defendem **abordagens sistemáticas** que garantam relato, interpretação e ação apropriados, com **equipes multidisciplinares envolvendo radiologia, cardiologia e atenção primária**, e destacam que algoritmos de inteligência artificial já em uso podem aumentar a probabilidade de que o achado seja de fato relatado e de que a terapia preventiva apropriada seja alocada — mas a diretriz não endossa notificação automática sem essa estrutura de cuidado por trás.
+A **declaração científica** da AHA de 2025 recomenda organização do relato, interpretação e ação, integrando radiologia, cardiologia e atenção primária para evitar investigação desnecessária. Não equivale a prescrever estatina automaticamente para todo achado, e deve ser distinguida de uma diretriz formal de tratamento. [AHA, 2025](https://pubmed.ncbi.nlm.nih.gov/41099128/).
 
-## Comunicação ao paciente: o que perspectivas qualitativas mostram (contexto, não evidência cardiológica direta)
-Mollo AF et al., Patient Educ Couns. 2026;152:109801 (PMID 42551209) — **importante deixar claro que este é um estudo qualitativo com pacientes de pronto-socorro recebendo achado incidental em imagem abdominal, não cardiovascular**, incluído aqui apenas como pano de fundo sobre a experiência do paciente diante do achado incidental em geral, porque a cardiologia não tem, até esta verificação, um estudo qualitativo equivalente sobre CAC incidental especificamente. Com 16 pacientes entrevistados (62,5% mulheres, distribuição etária de 35 a 55+ anos), o estudo identificou quatro temas recorrentes na forma como o paciente prefere receber a notícia de um achado inesperado: **comunicação empática por um profissional que domine o assunto**, **preocupações variadas e nem sempre previsíveis desencadeadas pelo achado**, **valor atribuído a explicações detalhadas** (não apenas "foi encontrado algo") e **desejo por passos concretos de seguimento**. Apenas um quarto dos entrevistados já tinha conhecimento prévio sobre a existência de achados incidentais antes de vivenciar um.
+Em 16 entrevistas sobre achados incidentais **abdominais** no pronto-socorro, pacientes valorizaram explicação clara, empatia, atenção a preocupações e próximos passos. É informação contextual, não estudo de experiência com cálcio coronariano nem evidência de efeito dos ensaios NOTIFY. [Mollo et al., 2026](https://pubmed.ncbi.nlm.nih.gov/42551209/).
 
-Esses quatro elementos — comunicação empática e especializada, explicação detalhada, passo concreto de seguimento — são inteiramente compatíveis com o desenho dos dois ensaios NOTIFY: a notificação ativa (não o laudo silencioso) é, na prática, a operacionalização desses princípios para o cálcio coronariano incidental.
+Ao comunicar, explicar o significado do achado, quem fará a avaliação e qual o próximo passo. O seguimento deve considerar sintomas, risco global e preferências; comunicar melhor não significa solicitar indiscriminadamente mais exames.
 
-## Síntese prática
-Os dois ensaios NOTIFY demonstram algo que a intuição clínica já sugeria mas que faltava medir: **um achado clinicamente relevante, presente no laudo, não gera ação por si só** — a diferença entre 6,9% e 51,2% de prescrição de estatina, no mesmo achado, apenas pela presença ou ausência de notificação ativa, é uma das maiores diferenças de efeito documentadas neste tema para uma intervenção puramente de comunicação/processo, sem nenhuma mudança na terapia oferecida. O CAC estava lá, nos dois braços; a diferença inteira foi **quem soube e quando**.
+## Tudo com Tudo
 
-A extensão para tempo real e IA (NOTIFY-PICTURE) parece apontar na mesma direção — quanto mais perto do momento do exame e mais amplamente distribuída a notificação, maior o efeito —, mas os números específicos dessa extensão precisam de confirmação direta na fonte primária antes de serem usados como referência numérica definitiva, dado que a publicação é uma carta breve sem abstract estruturado indexado.
-
-## O que fazer com isso na prática
-1. **Não presumir que um achado incidental relevante "vai ser visto" pelo médico assistente ou pelo paciente só porque está no laudo.** O NOTIFY-1 mostra uma diferença de mais de 7 vezes na taxa de prescrição de estatina dependendo só de haver, ou não, notificação ativa do mesmo achado.
-2. **Estruturar o fluxo de notificação com equipe multidisciplinar** (radiologia identificando e sinalizando, cardiologia ou atenção primária processando e agindo) — a diretriz da AHA 2025 recomenda isso explicitamente, e não como recomendação genérica: é resposta direta ao problema de reporting não sistemático.
-3. **Ao comunicar o achado ao paciente, seguir os quatro elementos que a literatura qualitativa (mesmo que fora da cardiologia) já identifica como o que o paciente valoriza**: comunicação empática, feita por quem entende do assunto; explicação do que o achado significa, não só que ele existe; e um passo de seguimento concreto e nomeado (ex. "vou pedir um perfil lipídico e considerar estatina", não "seu exame mostrou algo, converse com seu médico").
-4. **Tratar o achado incidental de CAC como oportunidade real de prevenção primária, não como nota de rodapé do laudo** — é exatamente o motivo pelo qual a AHA elevou o tema a diretriz científica dedicada em 2025.
-
-## Armadilhas clínicas
-- Assumir que "constar no laudo" equivale a "o paciente e o médico assistente sabem" — o NOTIFY-1 mede exatamente essa lacuna, e ela é grande (6,9% vs. 51,2%).
-- Citar os percentuais do NOTIFY-PICTURE como se estivessem confirmados no abstract primário do PubMed — a publicação é uma carta breve, sem AbstractText estruturado indexado; os números aqui vêm de fonte secundária e precisam de confirmação direta na fonte antes de uso em material que exija precisão numérica auditável.
-- Extrapolar o achado qualitativo de Mollo AF et al. (achados incidentais em imagem abdominal de pronto-socorro) como se fosse evidência direta sobre a experiência do paciente com CAC incidental — é analogia de contexto, não dado cardiológico.
-- Confundir notificação de CAC incidental com rastreio formal por escore de cálcio coronariano solicitado deliberadamente para estratificação de risco — são vias de entrada diferentes (uma é subproduto de exame feito por outro motivo, a outra é exame pedido com essa finalidade), mesmo que o dado final (a pontuação de cálcio) seja tecnicamente o mesmo.
+- [Escore de Cálcio Coronariano: o que o MESA Mediu e o que Significa um Escore Zero](/biblioteca/escore-de-calcio-coronariano-o-que-o-mesa-mediu-e-o-que-significa-um-escore-zero) — Liga comunicação de cálcio incidental à interpretação de calcificação coronariana e de escore zero; TC incidental não é automaticamente escore dedicado.

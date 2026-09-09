@@ -1,17 +1,23 @@
 ---
-title: "CAPTURE: abciximabe 18–24 h antes da PTCA reduz o composto de 30 d; 6 meses empatado; interrompido"
+title: 'CAPTURE: GPI antes da PTCA na angina refratária da era do balão'
 slug: capture-abciximabe-antes-da-ptca-na-angina-instavel-refrataria
-theme: "Doença coronariana"
+theme: Doença coronariana
 kind: estudo
-summary: "1.265 de 1.400 previstos, angina instável refratária (isquemia sob heparina e nitrato) com PTCA planejada. Infusão 18–24 h antes até 1 h depois. Primário 30 d (morte, IAM ou intervenção urgente) 11,3% vs 15,9% (P=0,012). IAM pré-PTCA 0,6% vs 2,1%; durante 2,6% vs 5,5%. Sangramento maior 3,8% vs 1,9% (P=0,043). Aos 6 meses, 193 eventos em cada braço — não vender. Era do balão. GUSTO-IV ACS (sem revasc) é NS."
+summary: 'CAPTURE: composto em 30 dias de 11,3% vs 15,9%, com mais sangramento maior (3,8% vs 1,9%). Mesma contagem aos seis
+  meses não demonstra equivalência. Estudo da era da angioplastia por balão.'
 review_status: revisado
 fonte_producao: grok
-review_note: "Produção científica contínua em 29/08/2026. Abstract relido via NCBI efetch (CAPTURE Study, PMID 9164316; Lancet. 1997;349(9063):1429-1435). DOI 10.1016/s0140-6736(96)10452-9 confirmado no Crossref (NCBI ArticleIdList sem DOI). Interrompido na interina de 1.050. 6 meses empatado. Não extrapolar para DAPT/stent. Revisão científica concluída em 30/08/2026."
+review_note: 'Conferido CAPTURE PMID 9164316: parada interina, denominadores 630/635, composto em 30 dias, IAM antes/durante
+  e sangramento maior; 193 por braço aos seis meses não foi interpretado como equivalência. Removidas comparações telegráficas
+  com outros ensaios.'
 source_refs:
-  - "CAPTURE Study. Randomised placebo-controlled trial of abciximab before and during coronary intervention in refractory unstable angina. Lancet. 1997;349(9063):1429-1435. DOI: 10.1016/s0140-6736(96)10452-9. PMID: 9164316. Abstract relido nesta revisão editorial; DOI via Crossref."
-  - "Documento da casa epic-abciximabe-bolus-e-infusao-na-angioplastia-de-alto-risco — GPI no laboratório, era do balão."
-  - "Documento da casa gusto-iv-acs-abciximabe-sem-revascularizacao-precoce — sem PTCA de rotina, NS."
-  - "Documento da casa early-acs-eptifibatida-precoce-versus-provisoria-na-sca-sem-supra — eptifibatida ≥12 h pré-angio, NS."
+- 'CAPTURE Study. Randomised placebo-controlled trial of abciximab before and during coronary intervention in refractory unstable
+  angina. Lancet. 1997;349(9063):1429-1435. DOI: 10.1016/s0140-6736(96)10452-9. PMID: 9164316. Abstract relido nesta revisão
+  editorial; DOI via Crossref.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # CAPTURE: GPI antes da PTCA na angina refratária da era do balão
@@ -36,4 +42,8 @@ Aos 6 meses: morte, IAM ou reintervenção em **193** pacientes **em cada** bra�
 
 ## Mensagem prática
 
-**Ganhou o 30 d; empatou o 6.º mês; sangrou mais.** Pré-tratamento longo de GPI não é EARLY-ACS (NS) nem GUSTO-IV (sem revasc, NS). Era do balão.
+**O composto foi menor em 30 dias; aos seis meses os grupos tiveram a mesma contagem de eventos, o que não demonstra equivalência. Houve mais sangramento maior.** O estudo pertence à era da angioplastia por balão e não estabelece uma estratégia universal para a intervenção coronariana contemporânea.
+
+## Tudo com Tudo
+
+- [EPIC: abciximabe na angioplastia de alto risco](/biblioteca/epic-abciximabe-bolus-e-infusao-na-angioplastia-de-alto-risco) — Compara os ensaios históricos CAPTURE e EPIC, destacando população, momento de abciximabe, contexto da angioplastia e sangramento.

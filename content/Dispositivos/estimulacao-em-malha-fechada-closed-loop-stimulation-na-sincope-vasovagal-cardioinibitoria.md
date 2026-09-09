@@ -1,100 +1,94 @@
 ---
-title: "Estimulação em Malha Fechada (Closed Loop Stimulation) na Síncope Vasovagal Cardioinibitória: o Sensor, os Dois Ensaios Pivotais e o que Mudou em 2024-2026"
+title: Estimulação em malha fechada na síncope vasovagal cardioinibitória
 slug: estimulacao-em-malha-fechada-closed-loop-stimulation-na-sincope-vasovagal-cardioinibitoria
-theme: "Dispositivos"
+theme: Dispositivos
 kind: estudo
 review_status: revisado
-source_refs: ["Baron-Esquivias G, Morillo CA, Moya-Mitjans A, Martinez-Alday J, Ruiz-Granell R, Lacunza-Ruiz J, Garcia-Civera R, Gutierrez-Carretero E, Romero-Garrido R. Dual-Chamber Pacing With Closed Loop Stimulation in Recurrent Reflex Vasovagal Syncope: The SPAIN Study. J Am Coll Cardiol. 2017;70(14):1720-1728. DOI: 10.1016/j.jacc.2017.08.026. PMID: 28958328 — registro (título, autoria, revista, volume, páginas, todos os números do resultado primário) conferido no PubMed/abstract via E-utilities nesta sessão (09/09/2026)", "Brignole M, Russo V, Arabia F, Oliveira M, Pedrote A, Aerts A, Rapacciuolo A, Boveda S, Deharo JC, Maglia G, Nigro G, Giacopelli D, Gargaro A, Tomaino M; BioSync CLS trial Investigators. Cardiac pacing in severe recurrent reflex syncope and tilt-induced asystole. Eur Heart J. 2021;42(5):508-516. DOI: 10.1093/eurheartj/ehaa936. PMID: 33279955 — registro e números do desfecho primário conferidos no PubMed nesta sessão", "Barón-Esquivias G, Moya-Mitjans A, Martinez-Alday J, Ruiz-Granell R, Lacunza-Ruiz J, Garcia-Civera R, Gutiérrez-Carretero E, Romero-Garrido R, Morillo CA. Impact of dual-chamber pacing with closed loop stimulation on quality of life in patients with recurrent reflex vasovagal syncope: results of the SPAIN study. Europace. 2020;22(2):314-319. DOI: 10.1093/europace/euz294. PMID: 31713631 — substudo de qualidade de vida do mesmo ensaio SPAIN, registro conferido nesta sessão", "Russo V, Anguera I, de Lange FJ, De Ruvo E, Taieb J, Zardini M, Nigro G, Giacopelli D, Gargaro A, Brignole M. Heart rate distribution in paced and non-paced patients with severe recurrent reflex syncope and tilt-induced asystole: Findings from the BIOSync CLS study. Int J Cardiol. 2021;335:52-54. DOI: 10.1016/j.ijcard.2021.04.032. PMID: 33887343 — substudo mecanístico do ensaio BioSync CLS, conferido nesta sessão", "Russo V, Tomaino M, Parente E, Comune A, Giacopelli D, Napoli P, Gargaro A, Brignole M. Temporal relationship between haemodynamic changes and activation of closed-loop stimulation during a tilt-induced vasovagal syncope. Europace. 2024;26(2):euae045. DOI: 10.1093/europace/euae045. PMID: 38340330 — estudo mecanístico de 2024, n=17 pacientes analisados, conferido nesta sessão", "Sbarra F, Pagnoni G, Darroudi S, Moscetti L, Vicenzi A, Bolognesi MG, Coppi F, Rossi L, Aschieri D. Dual-chamber pacing for vasovagal syncope: A systematic review and meta-analysis of randomized controlled trials. Int J Cardiol Heart Vasc. 2026;64:101903. DOI: 10.1016/j.ijcha.2026.101903. PMID: 41960278 — metanálise de 2026 (6 ensaios, 429 pacientes), números do efeito geral e da análise por cegamento conferidos nesta sessão", "Wang H, Zhang Y, Liao S, Zhang H, Huang X. Comparing Physical, Pharmacological, Pacemaker, and Cardioneuroablation Therapies for Patients with Vasovagal Syncope: A systematic review and network meta-analysis. Int J Cardiol Heart Vasc. 2026;63:101885. DOI: 10.1016/j.ijcha.2026.101885. PMID: 41716718 — metanálise em rede de 2026 (49 ECRs, 2798 pacientes), conferida nesta sessão", "Sutton R. Sensor detection and pacing for impending reflex syncope. Europace. 2026;28(5):euag070. DOI: 10.1093/europace/euag070. PMID: 42145267 — revisão de 2026 comparando os algoritmos RDR e CLS, usada apenas para o contraste conceitual entre os dois sistemas de detecção, sem dado numérico próprio extraído desta fonte", "Gargaro A, Biancalana G, Botto GL, Brignole M. The clinical role of closed loop stimulation pacemakers in the treatment of patients with sinus node dysfunction: a review. Future Cardiol. 2025;21(8):567-578. DOI: 10.1080/14796678.2025.2507464. PMID: 40388576 — revisão de 2025 do mecanismo do sensor CLS (impedância intracavitária unipolar), usada apenas para a descrição do princípio de funcionamento, sem dado quantitativo populacional extraído desta fonte; conflito de interesse declarado (dois autores funcionários da Biotronik, fabricante do CLS)"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Dispositivos ainda não tinha nenhum documento sobre estimulação anti-síncope reflexa — o tema mais próximo já coberto é o marca-passo em bradiarritmia estrutural (fluxogramas ESC 2021/BAV) e a disfunção do nó sinusal (MOST), que não tratam de síncope vasovagal. A pasta Síncope já tem um documento comparando marca-passo (agrupando os algoritmos CLS e RDR) contra cardioneuroablação, citando uma metanálise de 2019 (da Cunha et al., 5 estudos/228 pacientes) e um estudo comparativo de 2022 — mas nenhum documento em nenhuma das duas pastas detalha o mecanismo do próprio sensor CLS, os números primários dos dois ensaios pivotais que sustentam esse mecanismo especificamente (SPAIN e BioSync CLS trial), nem a atualização de evidência de 2024-2026: um substudo mecanístico de 2024 sobre o momento exato de ativação do CLS durante o reflexo vasovagal, e duas metanálises de 2026 que, lidas com atenção ao desenho (cego vs. aberto), matizam de forma importante a força da evidência already summarized no documento mais antigo desta base. Este documento é complementar, não redundante: foco no dispositivo e nos ensaios que testam especificamente o algoritmo CLS, com a camada de evidência mais recente ainda ausente do corpus."
+source_refs:
+- 'Baron-Esquivias G, Morillo CA, Moya-Mitjans A, Martinez-Alday J, Ruiz-Granell R, Lacunza-Ruiz J, Garcia-Civera R, Gutierrez-Carretero
+  E, Romero-Garrido R. Dual-Chamber Pacing With Closed Loop Stimulation in Recurrent Reflex Vasovagal Syncope: The SPAIN Study.
+  J Am Coll Cardiol. 2017;70(14):1720-1728. DOI: 10.1016/j.jacc.2017.08.026. PMID: 28958328.'
+- 'Brignole M, Russo V, Arabia F, Oliveira M, Pedrote A, Aerts A, Rapacciuolo A, Boveda S, Deharo JC, Maglia G, Nigro G, Giacopelli
+  D, Gargaro A, Tomaino M; BioSync CLS trial Investigators. Cardiac pacing in severe recurrent reflex syncope and tilt-induced
+  asystole. Eur Heart J. 2021;42(5):508-516. DOI: 10.1093/eurheartj/ehaa936. PMID: 33279955.'
+- 'Barón-Esquivias G, Moya-Mitjans A, Martinez-Alday J, Ruiz-Granell R, Lacunza-Ruiz J, Garcia-Civera R, Gutiérrez-Carretero
+  E, Romero-Garrido R, Morillo CA. Impact of dual-chamber pacing with closed loop stimulation on quality of life in patients
+  with recurrent reflex vasovagal syncope: results of the SPAIN study. Europace. 2020;22(2):314-319. DOI: 10.1093/europace/euz294.
+  PMID: 31713631.'
+- 'Russo V, Anguera I, de Lange FJ, De Ruvo E, Taieb J, Zardini M, Nigro G, Giacopelli D, Gargaro A, Brignole M. Heart rate
+  distribution in paced and non-paced patients with severe recurrent reflex syncope and tilt-induced asystole: Findings from
+  the BIOSync CLS study. Int J Cardiol. 2021;335:52-54. DOI: 10.1016/j.ijcard.2021.04.032. PMID: 33887343.'
+- 'Russo V, Tomaino M, Parente E, Comune A, Giacopelli D, Napoli P, Gargaro A, Brignole M. Temporal relationship between haemodynamic
+  changes and activation of closed-loop stimulation during a tilt-induced vasovagal syncope. Europace. 2024;26(2):euae045.
+  DOI: 10.1093/europace/euae045. PMID: 38340330.'
+- 'Sbarra F, Pagnoni G, Darroudi S, Moscetti L, Vicenzi A, Bolognesi MG, Coppi F, Rossi L, Aschieri D. Dual-chamber pacing
+  for vasovagal syncope: A systematic review and meta-analysis of randomized controlled trials. Int J Cardiol Heart Vasc.
+  2026;64:101903. DOI: 10.1016/j.ijcha.2026.101903. PMID: 41960278.'
+- 'Wang H, Zhang Y, Liao S, Zhang H, Huang X. Comparing Physical, Pharmacological, Pacemaker, and Cardioneuroablation Therapies
+  for Patients with Vasovagal Syncope: A systematic review and network meta-analysis. Int J Cardiol Heart Vasc. 2026;63:101885.
+  DOI: 10.1016/j.ijcha.2026.101885. PMID: 41716718.'
+- 'Sutton R. Sensor detection and pacing for impending reflex syncope. Europace. 2026;28(5):euag070. DOI: 10.1093/europace/euag070.
+  PMID: 42145267.'
+- 'Gargaro A, Biancalana G, Botto GL, Brignole M. The clinical role of closed loop stimulation pacemakers in the treatment
+  of patients with sinus node dysfunction: a review. Future Cardiol. 2025;21(8):567-578. DOI: 10.1080/14796678.2025.2507464.
+  PMID: 40388576.'
+review_note: 'Oito fontes e PMC13059020texto/tabela conferidos: SPAIN aceita bradicardia semassistolia e nãointegra metanálise6ECR;
+  interaçãoassistolia p0,39 não significativa. Corrigidos tempo1,7min antesnadir (não inícioquedaPA), HR não é tempo7×, denominadoresQoL/completadores
+  e não superioridade CLSvsRDR. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e
+  resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+summary: A estimulação em malha fechada (CLS) adapta a frequência do marca-passo a mudanças de impedância no ventrículo direito,
+  relacionadas à dinâmica de contração. Pode iniciar estimulação antes da bradicardia acentuada durante um reflexo vasovagal.
+  Não mede diretamente a pressão arterial e não elimina necessariamente o componente vasodepressor.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Estimulação em Malha Fechada (Closed Loop Stimulation) na Síncope Vasovagal Cardioinibitória: o Sensor, os Dois Ensaios Pivotais e o que Mudou em 2024-2026
+# Estimulação em malha fechada na síncope vasovagal cardioinibitória
 
-## O que este documento cobre e o que já existe em outro lugar
-A pasta Síncope já tem um documento comparando marca-passo (CLS e RDR agrupados) contra cardioneuroablação, e citando uma metanálise de 2019 sobre os dois algoritmos de estimulação — ver [Marca-Passo versus Cardioneuroablação na Síncope Vasovagal Cardioinibitória, e o Algoritmo de Estimulação: CLS versus RDR](/biblioteca/marca-passo-versus-cardioneuroablacao-na-sincope-vasovagal-cardioinibitoria-e-o-algoritmo-de-estimulacao-cls-versus-rdr). Este documento não repete aquela comparação de estratégia — aprofunda especificamente o dispositivo: como o sensor de estimulação em malha fechada (CLS, *Closed Loop Stimulation*, Biotronik) funciona, o que os dois ensaios clínicos randomizados e duplo-cegos que o testaram isoladamente (SPAIN e BioSync CLS trial) mostraram em números primários, e a atualização de evidência de 2024-2026 — incluindo um substudo mecanístico inédito no corpus (2024) e duas metanálises de 2026 que qualificam de forma relevante a força da evidência.
+A estimulação em malha fechada (CLS) adapta a frequência do marca-passo a mudanças de impedância no ventrículo direito, relacionadas à dinâmica de contração. Pode iniciar estimulação antes da bradicardia acentuada durante um reflexo vasovagal. Não mede diretamente a pressão arterial e não elimina necessariamente o componente vasodepressor.
 
-## Mecanismo — o que o sensor mede e como decide estimular
-- O CLS é um modo de estimulação adaptativa de frequência baseado na **avaliação contínua da impedância intracavitária unipolar do ventrículo direito** durante a sístole de cada ciclo cardíaco — um sinal que se correlaciona com a **contratilidade e a velocidade de contração** miocárdica.
-- Aumento da contratilidade/velocidade de contração altera a tendência da impedância; o algoritmo CLS responde ajustando a frequência de estimulação para cima, integrando-se aos mecanismos autonômicos normais de regulação do débito cardíaco (o mesmo princípio já é usado, em outra indicação, para incompetência cronotrópica na disfunção do nó sinusal).
-- Na síncope vasovagal, a lógica é distinta da estimulação por bradicardia estrutural: o gatilho fisiopatológico é o **reflexo vasovagal**, que combina vasodepressão (queda de pressão arterial, mediada por retirada simpática) e cardioinibição (bradicardia/assistolia, mediada por hipertonia vagal) — a vasodepressão tipicamente precede a cardioinibição. O CLS detecta o aumento inicial de contratilidade que ocorre na fase pré-sincopal (resposta adrenérgica compensatória à queda de pressão) e dispara estimulação em alta frequência **antes** que a bradicardia/assistolia se instale — diferente do algoritmo mais antigo *Rate-Drop Response* (RDR, Medtronic), que detecta a própria queda de frequência já em curso.
-  **Fonte do mecanismo**: Gargaro A et al., Future Cardiol. 2025;21(8):567-578 (PMID 40388576) — revisão com conflito de interesse declarado (autores empregados da Biotronik); usada apenas para a descrição do princípio físico do sensor.
+## Dois ensaios de CLS
 
-## O momento exato da ativação — substudo mecanístico de 2024
-Estudo prospectivo, unicêntrico, em pacientes já portadores de marca-passo CLS há em média 3,9 anos, submetidos a novo tilt test sob videogravação para caracterizar a relação temporal entre hemodinâmica e ativação do CLS:
-- **20 pacientes** submetidos a tilt test; **17 analisados** (3 excluídos: 1 sem síncope induzida, 2 por violação de protocolo).
-- Em **14 dos 17 pacientes**, a estimulação CLS emergiu já na **fase pré-sincopal de instabilidade circulatória**, quando a frequência cardíaca intrínseca média era de **88 ± 12 bpm** e a pressão arterial sistólica (PAS) de **108 ± 19 mmHg**.
-- A frequência de estimulação CLS subiu rapidamente para **105 ± 14 bpm** em mediana de **0,1 minuto** (IQR 0,1-0,7 min) após o início, quando a PAS já estava em **99 ± 21 mmHg**.
-- No momento de efeito vasovagal máximo (síncope ou pré-síncope), a PAS caiu para **63 ± 17 mmHg**, e a frequência CLS estava em **95 ± 13 bpm**.
-- O início da estimulação CLS ocorreu, em mediana, **1,7 minuto (IQR 1,5-3,4) antes** da síncope ou do nadir de PAS; a duração total da estimulação CLS foi de **5,0 minutos (IQR 3,3-8,3)**.
-- Em **3 pacientes**, não houve estimulação CLS apesar de queda de PAS semelhante (142 ± 22 → 69 ± 4 mmHg), porque não houve aumento significativo de frequência cardíaca intrínseca (59 ± 1 bpm) — um subgrupo em que o sensor não "viu" o reflexo a tempo.
-- **Fonte**: Russo V et al., Europace. 2024;26(2):euae045 (PMID 38340330).
-- **Leitura clínica**: este é o primeiro dado publicado (2024) que documenta objetivamente, com vídeo e hemodinâmica batimento a batimento, que o CLS antecipa a queda pressórica em minuto e meio a mais — apoiando o racional mecanístico do porquê o algoritmo teria vantagem teórica sobre a detecção reativa (RDR). Não é, porém, um ensaio comparativo de desfecho clínico entre os dois algoritmos.
+**SPAIN:** ensaio randomizado, duplo-cego, cruzado, em pessoas com pelo menos 40 anos, síncope recorrente e tilt cardioinibitório. O critério permitia **bradicardia <40 bpm por dez segundos ou assistolia >3 segundos**; não eram todos selecionados obrigatoriamente por assistolia.
 
-## Ensaio pivotal 1 — SPAIN Study (2017), o primeiro RCT duplo-cego
-Estudo randomizado, **duplo-cego**, cruzado, incluindo pacientes canadenses e espanhóis com idade ≥40 anos, alta carga de síncope (≥5 episódios ao longo da vida, ≥2 no último ano) e tilt test cardioinibitório (bradicardia <40 bpm por 10s ou assistolia >3s):
-- Randomização para DDD-CLS por 12 meses seguido de modo simulado DDI (30 ppm) por mais 12 meses (grupo A), ou a sequência inversa (grupo B); *crossover* também ocorria antecipadamente se houvesse até 3 episódios sincopais em 1 mês.
-- **46 pacientes completaram o protocolo** (22 homens, 47,8%; idade média 56,3 ± 10,6 anos; mediana de 12 episódios sincopais prévios, variando de 9 a 20).
-- **Desfecho primário — proporção com redução ≥50% no número de episódios sincopais**: **72%** (IC95% 47-90%) com DDD-CLS vs. **28%** (IC95% 9,7-53,5%) com DDI simulado (p=0,017).
-- **Eventos durante o seguimento**: 4 pacientes (8,7%) com DDD-CLS vs. 21 (45,7%) com DDI simulado — hazard ratio **6,7** (IC95% 2,3-19,8) a favor do CLS.
-- **Tempo até a primeira síncope** (Kaplan-Meier): mediana de **29,2 meses** (IC95% 15,3-29,2) com DDD-CLS vs. **9,3 meses** (IC95% 6,21-NA) com DDI simulado (p<0,016); razão de chances **0,11** (IC95% 0,03-0,37; p<0,0001).
-- **Conclusão dos autores**: DDD-CLS reduziu a carga de síncope e prolongou em 7 vezes o tempo até a primeira recorrência, comparado a estimulação simulada.
-- **Fonte**: Baron-Esquivias G et al., J Am Coll Cardiol. 2017;70(14):1720-1728 (PMID 28958328). Registro: NCT01621464.
+Entre os 46 que completaram o protocolo, houve síncope em quatro durante DDD-CLS e em 21 durante DDI simulado a 30 pulsos/minuto. Redução de pelo menos 50% da carga sincopal foi observada em 72% versus 28% (p=0,017). O efeito é favorável ao CLS nessa população e nesse comparador. Um HR não representa multiplicação do tempo até o evento; não se deve traduzir a estimativa publicada como garantia de adiar a síncope em sete vezes.
 
-### Substudo de qualidade de vida do SPAIN (2020)
-- **54 pacientes** de 11 centros; questionário SF-36 (escores de componente físico — PCS — e mental — MCS) antes da randomização e aos 12 e 24 meses.
-- Sem efeito de carryover significativo entre os períodos; único efeito de período observado no subdomínio de vitalidade (p=0,033).
-- Escores SF-36 médios mais altos com DDD-CLS em todos os 8 subdomínios, com diferença estatisticamente significativa em papel físico, dor corporal e vitalidade (p<0,05); melhora significativa também no PCS combinado.
-- **Fonte**: Barón-Esquivias G et al., Europace. 2020;22(2):314-319 (PMID 31713631).
+O relatório de qualidade de vida descreve 54 inscritos em 11 centros e melhora significativa de alguns domínios do SF-36 e do componente físico. É uma análise do mesmo ensaio, com denominador diferente dos 46 que completaram o protocolo, não uma replicação independente.
 
-## Ensaio pivotal 2 — BioSync CLS Trial (2021), o RCT duplo-cego multicêntrico maior
-Estudo multicêntrico europeu, randomizado, **duplo-cego** (pacientes e avaliadores de desfecho independentes cegos para o grupo alocado), em pacientes ≥40 anos com ≥2 episódios de síncope reflexa grave e imprevisível no último ano, e assistolia induzida por tilt test >3s:
-- Randomização para marca-passo bicameral ativo (CLS ligado; **63 pacientes**) ou inativo (CLS desligado, modo ODO; **64 pacientes**).
-- **Desfecho primário — tempo até a primeira recorrência de síncope**, após seguimento mediano de **11,2 meses**: síncope ocorreu em **10 pacientes (16%)** do grupo com estimulação ativa vs. **34 pacientes (53%)** do grupo controle — hazard ratio **0,23** (p=0,00005).
-- **Taxa estimada de recorrência de síncope**: em 1 ano, **19%** (ativo) vs. **53%** (controle); em 2 anos, **22%** (ativo) vs. **68%** (controle).
-- **Desfecho combinado (síncope ou pré-síncope)**: **23 pacientes (37%)** no grupo ativo vs. **40 (63%)** no grupo controle — hazard ratio **0,44** (p=0,002).
-- **Segurança**: eventos adversos menores relacionados ao dispositivo em **5 pacientes (4%)**.
-- **Fonte**: Brignole M et al.; BioSync CLS trial Investigators. Eur Heart J. 2021;42(5):508-516 (PMID 33279955). Registro: NCT02324920.
+**BioSync CLS:** 127 participantes com pelo menos 40 anos, episódios graves e imprevisíveis e síncope no tilt com pausa assistólica >3 segundos. Foram alocados a estimulação ativa (63) ou inativa (64), com pacientes e avaliadores cegos. Após mediana de 11,2 meses, houve recorrência em dez (16%) versus 34 (53%); HR 0,23. As estimativas em dois anos foram 22% versus 68%, e não proporções observadas após dois anos em todos. Cinco pacientes tiveram eventos menores relacionados ao dispositivo.
 
-### Substudo mecanístico — descartando disfunção do nó sinusal/AV como fator de confusão
-- Em **103 dos pacientes do BioSync CLS trial** (52 ativo, 51 controle) com dados de diagnóstico do dispositivo disponíveis aos 12 meses: distribuição de batimentos por frequência cardíaca semelhante entre os grupos (p=0,96), frequência cardíaca média de **76 ± 8 bpm** (ativo) vs. **77 ± 7 bpm** (controle) — **sem evidência de disfunção do nó sinusal ou atrioventricular** subjacente não diagnosticada que pudesse inflar artificialmente o benefício aparente do CLS.
-- No grupo ativo, mediana de **47%** de estimulação atrial e **0%** de estimulação ventricular; intolerância a frequências altas de CLS relatada em apenas **1 paciente (1,6%)**, resolvida com reprogramação do limite máximo.
-- **Conclusão dos autores**: o benefício do CLS deve ser atribuído à prevenção de episódios vasovagais puros, não a um efeito de estimulação de bradicardia crônica não relacionada — o algoritmo modula a frequência numa faixa ampla, competindo de forma consistente com o nó sinusal durante o reflexo.
-- **Fonte**: Russo V et al., Int J Cardiol. 2021;335:52-54 (PMID 33887343).
+Esses ensaios não compararam diretamente CLS com rate-drop response (RDR).
 
-## O que as metanálises de 2026 acrescentam — e uma ressalva importante sobre cegamento
-Duas metanálises publicadas em 2026 atualizam a leitura do conjunto de evidência, e juntas trazem uma nuance que o documento mais antigo desta base (baseado na metanálise de 2019, 5 estudos/228 pacientes) ainda não capturava:
+## O que mostram os estudos mecanísticos
 
-- **Metanálise de ensaios randomizados** (Sbarra F et al., Int J Cardiol Heart Vasc. 2026;64:101903, PMID 41960278): **6 ECRs, 429 pacientes**, avaliando RDR, CLS ou estimulação DDI agrupados.
-  - Efeito geral: estimulação ativa reduziu significativamente a recorrência de síncope vs. controle (risco relativo **0,47**; IC95% 0,27-0,82).
-  - **Análise por cegamento — o achado central**: em **ensaios abertos**, o efeito foi maior e estatisticamente significativo (RR **0,22**; IC95% 0,11-0,46); em **ensaios cegos** (que incluem o SPAIN e o BioSync CLS trial detalhados acima), a tendência de benefício **não atingiu significância estatística** (RR **0,59**; IC95% 0,32-1,08).
-  - Em pacientes com síncope vasovagal asistólica documentada, o benefício foi significativo (RR 0,35; IC95% 0,22-0,55); sem seleção por assistolia documentada, não houve benefício significativo.
-  - **Conclusão dos próprios autores**: o efeito observado no conjunto da literatura "parece ser fortemente influenciado pelo desenho de ensaios abertos" — uma ressalva que qualifica, sem invalidar, os resultados individuais do SPAIN e do BioSync CLS trial (ambos duplo-cegos e com seleção por assistolia documentada — os dois critérios que a própria metanálise identifica como associados a efeito real).
+Na análise de dados de 103 dispositivos do BioSync, a distribuição de frequência não revelou evidência de disfunção sinusal ou atrioventricular oculta. Isso apoia a interpretação reflexa dos episódios, mas não exclui toda forma de doença de condução em qualquer paciente.
 
-- **Metanálise em rede** (Wang H et al., Int J Cardiol Heart Vasc. 2026;63:101885, PMID 41716718): **49 ECRs, 2.798 pacientes**, comparando terapia física, farmacológica, marca-passo e cardioneuroablação (CNA) para síncope vasovagal.
-  - Para recorrência espontânea de síncope, marca-passo (razão de chances **0,075**; IC de credibilidade 95% 0,023-0,22) e CNA (OR **0,077**; ICr 0,015-0,403) foram as intervenções com maior efeito estimado, superiores a terapia farmacológica e física.
-  - **Em análise de subgrupo, a estimulação bicameral com CLS (DDD-CLS) foi a terapia mais bem ranqueada** entre todas as comparadas para síncope vasovagal cardioinibitória.
-  - Os próprios autores classificam a CNA como "geradora de hipótese", por evidência direta limitada, recomendando ECRs comparativos de longo prazo — a mesma ressalva que já constava no documento desta base sobre marca-passo vs. CNA.
+Em um estudo de tilt com 20 participantes, 17 foram analisados e 14 apresentaram ativação do CLS durante instabilidade pré-sincopal. O início ocorreu em mediana 1,7 minuto **antes da síncope ou do menor valor de pressão**, não antes do início da queda pressórica. A pressão já caía quando o sistema foi ativado e ainda alcançou valores baixos. Em três não houve ativação observada; o desenho não prova uma causa específica para essa ausência.
 
-## Leitura conjunta — o que sustentar e o que não sustentar
-- **Os dois ensaios pivotais do CLS especificamente (SPAIN e BioSync CLS trial) são duplo-cegos, com seleção por assistolia documentada em tilt test** — exatamente os dois atributos que a metanálise de 2026 associa a efeito estatisticamente real. Isso não elimina a ressalva sobre o campo em geral, mas apoia a leitura de que o benefício do CLS nesses dois ensaios específicos não é artefato de ausência de cegamento.
-- **O substudo mecanístico de 2021 (distribuição de frequência cardíaca) e o de 2024 (tempo de ativação hemodinâmica) reforçam a plausibilidade biológica**: o sensor ativa precocemente na fase pré-sincopal, e o benefício não parece decorrer de disfunção sinusal/AV não diagnosticada.
-- **A metanálise geral de 2026 (RR 0,47 no conjunto, RR 0,59 não significativo nos ensaios cegos) é o dado que mais deveria mudar a conversa clínica desde 2019** — sustenta cautela em extrapolar "marca-passo funciona na síncope vasovagal" para toda a população não selecionada, mesmo com os dois RCTs cegos específicos do CLS sendo favoráveis.
-- Nenhuma das fontes desta sessão constitui comparação direta, randomizada, entre o algoritmo **CLS e o RDR** — a superioridade do CLS sobre o RDR permanece uma inferência indireta (RCTs separados, populações e décadas diferentes), como também já observado no documento equivalente da pasta Síncope, agora reforçada pela revisão de 2026 de Sutton, que também nota a ausência de ensaio comparativo direto entre os dois sistemas.
-  **Fonte**: Sutton R, Europace. 2026;28(5):euag070 (PMID 42145267).
+## Revisões de 2026
 
-## Armadilhas clínicas
-- **Tratar a metanálise geral de 2026 (RR 0,47) como se equivalesse ao resultado dos dois ensaios cegos do CLS** — os números centrais deste documento (HR 0,23 no BioSync CLS trial; OR 0,11 no SPAIN) são de ensaios individuais duplo-cegos, mais robustos que a média heterogênea de 6 estudos que mistura RDR, CLS e DDI.
-- **Selecionar pacientes para marca-passo CLS sem tilt test com assistolia documentada** — os próprios dados de 2026 mostram que o benefício desaparece fora do subgrupo com assistolia comprovada; ver também [Estratificação de Risco, Tilt Test e Monitor de Eventos Implantável na Síncope](/biblioteca/estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope) e [Marca-Passo Empírico na Síncope Reflexa Cardioinibitória: o Ensaio ISSUE-3](/biblioteca/marca-passo-empirico-na-sincope-reflexa-cardioinibitoria-issue-3) para a via alternativa de seleção guiada por monitor de eventos implantável, não por tilt test.
-- **Confundir a indicação de CLS na síncope vasovagal com a indicação de estimulação bicameral por disfunção do nó sinusal estrutural** (ver [Modo de Estimulação na Disfunção do Nó Sinusal: Dupla Câmara ou Ventricular? (MOST)](/biblioteca/modo-de-estimulacao-na-disfuncao-do-no-sinusal-dupla-camara-ou-ventricular-most)) — populações, desfechos e racional fisiopatológico distintos, mesmo compartilhando o mesmo algoritmo de sensor em alguns dispositivos.
-- **Ignorar o conflito de interesse**: o substudo mecanístico de 2024, o substudo de distribuição de frequência de 2021 e a revisão de mecanismo de 2025 têm coautores empregados da Biotronik (fabricante do CLS) — não invalida os dados adjudicados de forma independente (síncope é desfecho objetivo, e os dois ensaios pivotais tiveram avaliadores cegos), mas exige leitura crítica das interpretações mecanísticas.
-- **Extrapolar os dados de qualidade de vida do SPAIN (54 pacientes) como generalizáveis** a todas as apresentações de síncope vasovagal — amostra pequena, população específica (idade ≥40 anos, alta carga sincopal prévia).
+A metanálise de Sbarra reuniu seis ensaios e 429 pacientes. **Sua tabela inclui BioSync, mas não SPAIN.** O RR agregado foi 0,47 (IC 95% 0,27–0,82), com técnicas e seleções diferentes.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: nenhuma fonte consultada nesta sessão traz status regulatório atual (ANVISA) ou disponibilidade comercial do sistema CLS no Brasil, nem comparação de custo-efetividade; e não foi localizado, nesta sessão, um ensaio randomizado comparando diretamente CLS versus RDR — a afirmação de superioridade do CLS permanece inferência indireta entre ensaios distintos, não comparação cabeça a cabeça.
+Nos estudos cegos, RR 0,59 (0,32–1,08); nos abertos, 0,22 (0,11–0,46), com interação por cegamento p=0,04. A análise selecionada por assistolia mostrou RR 0,35 (0,22–0,55), mas a interação entre seleção por assistolia ou não **não foi significativa (p=0,39)**. Portanto, não demonstra que todo benefício desapareça fora desse subgrupo nem invalida isoladamente um ensaio favorável.
 
-## Conteúdo CorVIA conectado
-- [Marca-Passo versus Cardioneuroablação na Síncope Vasovagal Cardioinibitória, e o Algoritmo de Estimulação: CLS versus RDR](/biblioteca/marca-passo-versus-cardioneuroablacao-na-sincope-vasovagal-cardioinibitoria-e-o-algoritmo-de-estimulacao-cls-versus-rdr)
-- [Marca-Passo Empírico na Síncope Reflexa Cardioinibitória: o Ensaio ISSUE-3](/biblioteca/marca-passo-empirico-na-sincope-reflexa-cardioinibitoria-issue-3)
-- [Estratificação de Risco, Tilt Test e Monitor de Eventos Implantável na Síncope](/biblioteca/estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope)
-- [Monitor Cardíaco Implantável na Síncope Inexplicada: o Registro PICTURE e o Momento de Implantar](/biblioteca/monitor-cardiaco-implantavel-na-sincope-inexplicada-o-registro-picture)
-- [Fluxograma: Bradiarritmia — indicação de marcapasso definitivo (ESC 2021)](/biblioteca/fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021)
-- [Modo de Estimulação na Disfunção do Nó Sinusal: Dupla Câmara ou Ventricular? (MOST)](/biblioteca/modo-de-estimulacao-na-disfuncao-do-no-sinusal-dupla-camara-ou-ventricular-most)
+A revisão em rede de Wang, com 49 ensaios e 2.798 participantes, posicionou DDD-CLS favoravelmente no ranqueamento. O resultado depende da comparabilidade entre populações e controles, não prova superioridade direta sobre RDR ou cardioneuroablação. A evidência direta desta última era limitada.
+
+## Aplicação e limites
+
+O benefício demonstrado refere-se principalmente a adultos selecionados com episódios graves recorrentes e documentação de cardioinibição. Não se indica marca-passo para toda síncope vasovagal. Tilt com assistolia é uma via de seleção, mas não a única: pausas espontâneas documentadas por monitor podem informar avaliação especializada.
+
+Os dados não demonstram vantagem comparativa definitiva de CLS sobre RDR. Amostras pequenas, desfecho sujeito a relato, técnicas diversas e vínculos de alguns autores com o fabricante precisam entrar na leitura. Este documento não faz afirmações sobre registro comercial, reembolso ou custo-efetividade no Brasil.
+
+## Fontes
+
+- SPAIN: [PMID 28958328](https://pubmed.ncbi.nlm.nih.gov/28958328/), DOI:10.1016/j.jacc.2017.08.026; qualidade de vida: [PMID 31713631](https://pubmed.ncbi.nlm.nih.gov/31713631/).
+- BioSync: [PMID 33279955](https://pubmed.ncbi.nlm.nih.gov/33279955/), DOI:10.1093/eurheartj/ehaa936; distribuição de frequência: [PMID 33887343](https://pubmed.ncbi.nlm.nih.gov/33887343/).
+- Estudo temporal de tilt: [PMID 38340330](https://pubmed.ncbi.nlm.nih.gov/38340330/), DOI:10.1093/europace/euae045; princípio de CLS: [PMID 40388576](https://pubmed.ncbi.nlm.nih.gov/40388576/).
+- Sbarra: [PMID 41960278](https://pubmed.ncbi.nlm.nih.gov/41960278/), [texto completo e tabela 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC13059020/).
+- Wang: [PMID 41716718](https://pubmed.ncbi.nlm.nih.gov/41716718/); revisão dos sensores: [PMID 42145267](https://pubmed.ncbi.nlm.nih.gov/42145267/).
+
+## Tudo com Tudo
+
+- [Marca-Passo versus Cardioneuroablação na Síncope Vasovagal Cardioinibitória, e o Algoritmo de Estimulação: CLS versus RDR](/biblioteca/marca-passo-versus-cardioneuroablacao-na-sincope-vasovagal-cardioinibitoria-e-o-algoritmo-de-estimulacao-cls-versus-rdr) — Aprofunda CLS versus RDR e seleção de pacing na síncope vasovagal cardioinibitória, incluindo comparação conceitual com cardioneuroablação.

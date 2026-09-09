@@ -1,0 +1,23 @@
+{
+  "slug": "stamp-rastreio-drc-em-dac",
+  "titulo": "DAC nova, creatinina ‘normal’, RAC nunca pedida: o rim está liberado?",
+  "tema": "Doença coronariana",
+  "nivel": "básico",
+  "enunciado": "Homem de 64 anos, síndrome coronariana crônica recém-diagnosticada na consulta de retorno após angiografia. Creatinina sérica 0,95 mg/dL, no intervalo de referência do laboratório. Nunca se mediu razão albumina/creatinina urinária (RAC). Sem diabetes conhecido. O colega registra ‘função renal normal’ e não pede exame de urina.",
+  "pergunta": "Pela ESC 2026 de DCV e DRC (Damman et al., PMID 42661426), o que está correto neste paciente?",
+  "opcoes": [
+    "Nada a acrescentar: creatinina no intervalo de referência libera o rim; RAC só se a creatinina subir ou se houver diabetes",
+    "Rastrear DRC em todo paciente com DCV no diagnóstico, com TFGe a partir da creatinina E RAC urinária — creatinina isolada não fecha o assunto",
+    "Pedir só a TFGe pela creatinina; a RAC fica reservada à TFGe já <60 mL/min/1,73 m²",
+    "DRC exige TFGe <30 mL/min/1,73 m²; com creatinina ‘normal’ o rastreio STAMP não se aplica à DAC estável"
+  ],
+  "resposta_correta": 1,
+  "explicacao": "A ESC 2026 (Damman, ehag098; PMID 42661426), primeira diretriz dedicada à coexistência DCV–DRC, recomenda rastrear DRC em TODOS os pacientes com DCV no diagnóstico: TFGe pela creatinina E RAC urinária. DRC = anormalidades de estrutura ou função renal por pelo menos 3 meses. A RAC identifica dano glomerular quando a TFGe ainda é preservada; omiti-la deixa passar DRC albuminúrica. Creatinina isolada no intervalo do laboratório não equivale a ‘rim normal’ e não autoriza pular a RAC. O acrônimo é STAMP on CKD (Screen, Triage, Address, Modify, Plan). Diabetes não é pré-requisito do rastreio. Não há corte de creatinina em mg/dL que dispense o par TFGe + RAC. Achados alterados devem ser confirmados e avaliados clinicamente para estabelecer cronicidade, sem rotular DRC por uma única medida.",
+  "source_refs": [
+    "Damman K, Herrington WG, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA). Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426.",
+    "European Society of Cardiology. New ESC Guidelines recommend all patients with heart disease are tested for kidney disease. Press release, 28 August 2026.",
+    "ESC 2026, apresentação oficial STAMP. https://www.escardio.org/news/news-room/congress-news/2026-esc-guidelines-for-the-management-of-cvd-and-ckd/"
+  ],
+  "review_status": "revisado",
+  "review_note": "Recomendação oficial ESC 2026 e STAMP conferidos; tema canônico e distinção entre rastreio e confirmação de cronicidade."
+}

@@ -1,167 +1,64 @@
 ---
-title: "Adesão à Profilaxia Secundária da Febre Reumática: Barreiras Documentadas e a Injeção Subcutânea de Longo Intervalo (SCIP)"
+title: Adesão à profilaxia da febre reumática e estudos de penicilina subcutânea
 slug: adesao-a-profilaxia-secundaria-barreiras-e-a-injecao-subcutanea-de-longo-intervalo-scip
-theme: "Febre reumática"
-kind: protocolo
-summary: "O documento já publicado sobre profilaxia secundária cobre DURAÇÃO por categoria de risco, não ADESÃO. Este cobre a lacuna: os cinco determinantes de má adesão à penicilina benzatina intramuscular mensal, documentados por estudo qualitativo etíope de 2026, e a estratégia emergente de maior intervalo entre doses — a injeção subcutânea de alta dose (SCIP), com dados de farmacocinética, segurança, aceitabilidade e custo publicados entre 2023 e 2026."
+theme: Febre reumática
+kind: estudo
+summary: Estudos sobre barreiras à profilaxia secundária e penicilina subcutânea de intervalo ampliado. Farmacocinética, aceitabilidade
+  e modelagem econômica não demonstram equivalência clínica nem autorizam adaptar a apresentação intramuscular.
 review_status: revisado
-source_refs: ["Birru EM, et al. Determinants of secondary prophylaxis for childhood rheumatic heart disease in Ethiopia: A qualitative study of children and caregivers. PLoS One. 2026;21(5):e0349776. DOI: 10.1371/journal.pone.0349776. PMID: 42189864", "Kado J, et al. Subcutaneous infusion of high-dose benzathine penicillin G is safe, tolerable, and suitable for less-frequent dosing. Antimicrob Agents Chemother. 2023 Dec 14;67(12). DOI: 10.1128/aac.00962-23. PMID: 37971244. PMCID: PMC10720493", "Bennett J, et al. High dose, subcutaneous injections of benzathine penicillin G (SCIP) to prevent rheumatic fever. J Infect. 2025 Jul;91(1):106506. DOI: 10.1016/j.jinf.2025.106506. PMID: 40378963", "Cooper J, et al. Subcutaneous injections of penicillin (SCIP): Convenient and effective treatment for Māori, Pacific Peoples and their families in preventing rheumatic heart disease. PLOS Glob Public Health. 2025;5(10):e0004895. DOI: 10.1371/journal.pgph.0004895. PMID: 41071849", "Leung W, et al. Prevention of rheumatic heart disease in New Zealand: High-dose subcutaneous benzathine penicillin is cost-saving compared with traditional intramuscular injections. IJID Reg. 2025 Dec;17:100784. DOI: 10.1016/j.ijregi.2025.100784. PMID: 41209540"]
-review_note: "Os 5 PMIDs conferidos via PubMed E-utilities (esummary/efetch) nesta sessão — título, revista, volume/página/DOI batendo em todos. Os números de dose (7,2-10,8 milhões de unidades), tamanho de amostra (24 no estudo de dose-resposta; 55 participantes/182 doses e 31 participantes/169 pontos de PK no ensaio fase IIa) e o achado de zero recorrência/infecção estreptocócica de avanço vieram dos abstracts estruturados, lidos diretamente via efetch. O documento distingue com cuidado três estágios de evidência diferentes — farmacocinética em voluntário sadio (Kado 2023), ensaio fase IIa em paciente com FR prévia (Bennett 2025) e aceitabilidade/custo em uso real (Cooper e Leung 2025) — sem tratar os três como o mesmo nível de prova. Nenhum dado de adesão medida objetivamente (ex.: percentual de doses recebidas no prazo com SCIP versus IM) foi encontrado nas fontes consultadas; onde a fonte fala de percepção de menor sobrecarga, e não de adesão objetivamente medida, o texto marca essa distinção."
+source_refs:
+- 'Birru EM, et al. Determinants of secondary prophylaxis for childhood rheumatic heart disease in Ethiopia: A qualitative
+  study of children and caregivers. PLoS One. 2026;21(5):e0349776. DOI: 10.1371/journal.pone.0349776. PMID: 42189864'
+- 'Kado J, et al. Subcutaneous infusion of high-dose benzathine penicillin G is safe, tolerable, and suitable for less-frequent
+  dosing. Antimicrob Agents Chemother. 2023 Dec 14;67(12). DOI: 10.1128/aac.00962-23. PMID: 37971244. PMCID: PMC10720493'
+- 'Bennett J, et al. High dose, subcutaneous injections of benzathine penicillin G (SCIP) to prevent rheumatic fever. J Infect.
+  2025 Jul;91(1):106506. DOI: 10.1016/j.jinf.2025.106506. PMID: 40378963'
+- 'Cooper J, et al. Subcutaneous injections of penicillin (SCIP): Convenient and effective treatment for Māori, Pacific Peoples
+  and their families in preventing rheumatic heart disease. PLOS Glob Public Health. 2025;5(10):e0004895. DOI: 10.1371/journal.pgph.0004895.
+  PMID: 41071849'
+- 'Leung W, et al. Prevention of rheumatic heart disease in New Zealand: High-dose subcutaneous benzathine penicillin is cost-saving
+  compared with traditional intramuscular injections. IJID Reg. 2025 Dec;17:100784. DOI: 10.1016/j.ijregi.2025.100784. PMID:
+  41209540'
+review_note: 'Cinco fontes conferidas. Erro crítico corrigido:10-weekly=a cada10semanas, não10injeções semanais.57dias acimaalvo
+  não13semanasproteção. Confirmada Wellington, distinguidos estudoPK, modelo econômico e eficácia; não adaptar apresentaçãoIM
+  paraSC. Conferência editorial final: título alinhado ao corpo revisado, campos de classificação e resumo conferidos, referências
+  bibliográficas organizadas e espaçamento corrigido quando necessário. Vínculos internos preservados.'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
-# Adesão à Profilaxia Secundária: Barreiras e a Injeção Subcutânea de Longo Intervalo
+# Adesão à profilaxia da febre reumática e estudos de penicilina subcutânea
 
-O documento já publicado neste tema, "Profilaxia Secundária Antibiótica na Febre
-Reumática: Duração por Categoria de Risco", responde **por quanto tempo** manter
-a profilaxia. Ele não responde por que, na prática, tantos pacientes não
-completam esse tempo. Este documento cobre essa outra pergunta: **o que
-concretamente impede a adesão** à penicilina benzatina mensal, e **qual
-estratégia emergente** tenta contornar essa barreira sem trocar o fármaco.
+A profilaxia secundária enfrenta obstáculos de acesso, abastecimento, dor e acompanhamento. Em grupos focais de quatro hospitais etíopes, 30 crianças/adolescentes e 12 cuidadores relataram barreiras estruturais, organizacionais, terapêuticas, relacionadas aos profissionais e individuais. O estudo qualitativo descreve experiências, não prevalências ou taxas de adesão na população inteira.
 
-A profilaxia secundária continua sendo, como o documento de duração já registra,
-a intervenção isolada mais eficaz para prevenir recorrência e progressão do dano
-valvar. O problema nunca foi a eficácia da penicilina benzatina — é a dificuldade
-de sustentar uma injeção intramuscular dolorosa a cada 3 ou 4 semanas, por anos,
-em criança ou adolescente, muitas vezes em região de acesso a saúde precário.
+## SCIP: evidência farmacocinética
 
-## Os cinco determinantes de má adesão, documentados por estudo qualitativo (Etiópia, 2026)
+Na fase 1 com 24 voluntários, foram estudadas doses subcutâneas únicas de penicilina G benzatina de 3,6, 7,2 ou 10,8 milhões de unidades. Todos tiveram reações locais transitórias e leves. Na simulação da dose de 10,8 milhões a cada 13 semanas, a concentração ficou acima de 20 ng/mL por **57 dias de aproximadamente 91**, não durante todas as 13 semanas. Esse limiar é um correlato farmacológico convencional, não garantia individual de proteção clínica.
 
-Birru et al. (PLoS One, 2026) conduziram um estudo qualitativo descritivo com
-**42 participantes** (crianças com cardiopatia reumática e seus cuidadores) em
-**quatro hospitais etíopes**, por grupos focais, para identificar barreiras e
-facilitadores à administração da penicilina G benzatina (BPG) mensal. O estudo
-identificou **cinco determinantes interligados**:
+Na fase IIa em Wellington, Nova Zelândia, 55 participantes com febre reumática prévia receberam 182 doses de 7,2–10,8 milhões de unidades. **“10-weekly” significa uma aplicação a cada dez semanas, não dez aplicações semanais.**
 
-1. **Limitações estruturais** — inacessibilidade geográfica e custo de
-   transporte até o serviço de saúde.
-2. **Obstáculos organizacionais** — desabastecimento do medicamento no serviço.
-3. **Desafios terapêuticos** — dor da injeção, relatada como barreira relevante
-   por si só, não apenas incômodo menor.
-4. **Preocupações do provedor de saúde** — receio de reação adversa à injeção
-   intramuscular, ao ponto de influenciar a decisão de administrar.
-5. **Fatores individuais** — concepções erradas sobre a doença e o tratamento, e
-   estresse psicológico associado à rotina de injeções repetidas.
+Não foram relatadas recorrências de febre reumática ou infecções estreptocócicas de escape. A modelagem usou 169 amostras de 31 participantes e estimou exposição mais favorável que a aplicação intramuscular em vários cenários. Estudo de braço único e farmacocinética não demonstram não inferioridade clínica, nem definem um esquema de prescrição geral.
 
-**Achado clínico direto, não apenas teórico**: os autores registram que **algumas
-crianças receberam antibiótico oral, menos eficaz**, quando a BPG injetável estava
-indisponível — ou seja, a barreira de abastecimento não só atrasa a dose, ela
-empurra o paciente para uma opção terapêutica inferior.
+## Aceitabilidade e custos
 
-**Recomendação dos próprios autores**: *"fortalecer a educação de pacientes e
-cuidadores, melhorar as formulações e o acesso à BPG, e enfrentar as lacunas de
-recursos dos sistemas de saúde são fundamentais para melhorar a adesão"* (Birru
-et al., 2026). É exatamente a segunda parte dessa recomendação — melhorar a
-formulação — que a estratégia a seguir tenta endereçar.
+Entrevistas com dez famílias Māori/Pacífico, incluindo nove participantes em SCIP, relataram menor sobrecarga física/emocional com o intervalo ampliado e importância do vínculo com a enfermagem. Percepção de facilidade não equivale a medida comparativa de doses recebidas no prazo.
 
-## A estratégia emergente: injeção subcutânea de alta dose e longo intervalo (SCIP)
+O modelo econômico neozelandês estimou custo anual de NZ$1.629 para uma criança de dez anos, aproximadamente metade do comparador, com valores em moeda de 2024. Isso depende de custos locais, produtividade, idade e pressupostos de adesão; não é economia comprovada no Brasil nem estudo de redução de mortalidade. A publicação descreve inclusão do SCIP em procedimentos locais da região sul da Ilha Norte desde 2025, sem implicar adoção universal.
 
-SCIP (*subcutaneous injection/infusion of penicillin*) é uma via de administração
-alternativa à injeção intramuscular clássica: dose mais alta de penicilina
-benzatina (Bicillin-LA®), aplicada por via **subcutânea**, com o objetivo de
-manter concentração sérica protetora por um **intervalo entre doses maior que os
-28 dias tradicionais** — reduzindo o número de vezes por ano em que o paciente
-precisa comparecer para a injeção.
+## Limites para a prática
 
-### Fase de farmacocinética em voluntário sadio (Kado et al., 2023)
+O texto descreve pesquisa e implementação local. **Não autoriza trocar a via intramuscular da apresentação disponível, aumentar a dose ou ampliar o intervalo fora de protocolo especializado e das condições regulatórias aplicáveis.** As fontes não demonstram recorrência equivalente em ensaio randomizado com poder clínico. A formulação, via e monitorização importam; doses experimentais não são uma receita pronta para uso.
 
-**Desenho**: **24 voluntários sadios** receberam dose única de penicilina
-benzatina por infusão subcutânea, em três níveis — **3,6, 7,2 ou 10,8 milhões de
-unidades**.
+## Fontes
 
-**Achados**: a infusão subcutânea foi **geralmente bem tolerada**, com todos os
-participantes apresentando apenas reações transitórias e leves no local da
-infusão. A modelagem farmacocinética mostrou que a dose mais alta manteve
-concentração terapêutica por aproximadamente **57 dias**, permitindo — em
-projeção — intervalo de dosagem de **até 13 semanas**, contra as 4 semanas do
-esquema intramuscular padrão.
+- Barreiras: [PMID 42189864](https://pubmed.ncbi.nlm.nih.gov/42189864/).
+- Fase 1: [PMID 37971244](https://pubmed.ncbi.nlm.nih.gov/37971244/).
+- Fase IIa: [PMID 40378963](https://pubmed.ncbi.nlm.nih.gov/40378963/).
+- Qualitativo: [PMID 41071849](https://pubmed.ncbi.nlm.nih.gov/41071849/).
+- Custos: [PMID 41209540](https://pubmed.ncbi.nlm.nih.gov/41209540/).
 
-**Conclusão dos autores**: SCIP em alta dose é *"seguro, com tolerabilidade
-aceitável, e pode ser adequado para intervalos de dosagem de até 3 meses"* para
-profilaxia secundária.
+## Tudo com Tudo
 
-### Ensaio fase IIa em paciente com febre reumática prévia (Bennett et al., 2025)
-
-**Desenho**: ensaio fase IIa avaliando segurança e farmacocinética de **10
-injeções subcutâneas semanais** de penicilina em jovens com **história de febre
-reumática aguda**, doses de **7,2 a 10,8 milhões de unidades** de Bicillin-LA®.
-
-**Achados**: **55 participantes** receberam **182 doses no total**, e **nenhuma
-recorrência de febre reumática aguda nem infecção estreptocócica de garganta
-sem sintoma de avanço ("breakthrough") foi relatada**. A análise farmacocinética
-populacional, em **31 participantes e 169 pontos de dados**, mostrou que **SCIP
-superou a BPG intramuscular na manutenção de concentrações protetoras em quase
-todos os limiares farmacológicos plausíveis de correlato de proteção (10-20
-ng/mL)**.
-
-**Conclusão dos autores**: a via subcutânea demonstrou *"exposição favorável à
-penicilina para a maioria dos indivíduos"*, sendo *"segura e bem tolerada"* —
-com recomendação explícita de avaliação futura em prazos mais longos e
-populações mais variadas. **Este é um ensaio fase IIa, de segurança e
-farmacocinética — não um ensaio clínico de eficácia comparativa com desfecho
-duro de recorrência como objetivo primário**, e este documento não trata a
-ausência de eventos nele como prova definitiva de não inferioridade clínica.
-
-### Aceitabilidade e adesão percebida, em uso real (Cooper et al., 2025 — Nova Zelândia)
-
-Estudo qualitativo com **10 famílias** (nove participantes já em uso de SCIP com
-intervalo de **10 semanas**) entre famílias Māori e do Pacífico na Nova Zelândia,
-população historicamente mais afetada por febre reumática/cardiopatia reumática
-naquele país. Identificou seis temas: **redução da sobrecarga do
-tratamento**, melhora emocional, cuidado de enfermagem centrado na família,
-fortalecimento de vínculo, letramento em saúde e manejo da dor.
-
-**Achado central, nas palavras dos autores**: *"o intervalo de dosagem estendido
-proporcionado pelo SCIP reduziu a sobrecarga física e emocional"* que as
-famílias relatavam com a injeção mensal tradicional — com escolha do local de
-aplicação e vínculo forte com o provedor de saúde reforçando adesão e bem-estar.
-
-**Ressalva de leitura**: este é relato de **percepção de sobrecarga reduzida**,
-coletado por entrevista qualitativa — não é uma medida objetiva de percentual de
-doses recebidas no prazo (taxa de adesão objetiva) comparando SCIP contra o
-esquema mensal. As duas coisas tendem na mesma direção, mas não são o mesmo dado.
-
-### Custo, em modelo de mundo real (Leung et al., 2025 — Nova Zelândia)
-
-Usando dados reais de ausência escolar e ao trabalho, o estudo modelou custos de
-tratamento comparando o esquema de 10 semanas subcutâneo contra o esquema
-intramuscular a cada 4 semanas. Resultado: **SCIP reduziu o custo em 12 meses em
-quase a metade, para NZ$ 1.629** em uma criança de 10 anos, com vantagem de
-custo consistente ao longo de todo o curso do tratamento — mais pronunciada em
-pacientes mais jovens com melhor adesão.
-
-## Como ler os cinco estudos juntos, sem misturar níveis de evidência
-
-- **Kado 2023** estabelece a farmacocinética e a segurança em **voluntário
-  sadio** — a base para propor o intervalo estendido.
-- **Bennett 2025** é o primeiro ensaio **em paciente real com febre reumática
-  prévia**, fase IIa, com desfecho de segurança/farmacocinética, não desfecho
-  primário de eficácia comparativa.
-- **Cooper 2025** e **Leung 2025** são estudos de **implementação em uso real**
-  — aceitabilidade qualitativa e custo, respectivamente —, não ensaios que meçam
-  taxa de recorrência.
-
-**Nenhuma das cinco fontes consultadas nesta sessão fornece um ensaio clínico
-randomizado comparando diretamente a taxa de recorrência de febre reumática ou a
-taxa objetiva de adesão entre SCIP e o esquema intramuscular tradicional.**
-`VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar dessa comparação direta antes
-de recomendar a mudança de esquema em escala — o que existe hoje é sinal
-farmacocinético favorável, ausência de evento em amostra pequena de fase IIa, e
-percepção qualitativa de menor sobrecarga.
-
-## O que este documento não cobre
-
-**A duração da profilaxia por categoria de risco** e o esquema de dose da
-penicilina benzatina intramuscular padrão (900 mg/1.200.000 UI a cada 21-28
-dias) — está no documento já publicado sobre profilaxia secundária.
-
-**Os desafios farmacocinéticos da reformulação de ação prolongada da
-benzilpenicilina** de modo geral — tem documento próprio nesta pasta, com foco
-em farmacocinética populacional; este documento trata especificamente da via
-subcutânea como estratégia de adesão, ângulo distinto.
-
-**SCIP como produto disponível no Brasil** — as fontes consultadas são de
-programas-piloto na Nova Zelândia (SCIP) e um ensaio fase IIa cujo país de
-condução não foi confirmado nas fontes lidas nesta sessão; não há registro,
-nesta pesquisa, de aprovação regulatória ou disponibilidade comercial de SCIP no
-Brasil. `VERIFICAÇÃO HUMANA NECESSÁRIA` antes de sugerir esse esquema fora de
-protocolo de pesquisa.
+- [Profilaxia Secundária Antibiótica na Febre Reumática: Duração por Categoria de Risco](/biblioteca/profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco) — Conecta barreiras de adesão e penicilina subcutânea investigacional à profilaxia secundária estabelecida e à duração por risco.

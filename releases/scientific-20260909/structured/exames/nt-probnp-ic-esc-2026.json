@@ -1,0 +1,26 @@
+{
+  "slug": "nt-probnp-ic-esc-2026",
+  "name": "NT-proBNP: interpretação clínica e elegibilidade do FINEARTS-HF",
+  "category": "laboratorial",
+  "theme": "Insuficiência cardíaca",
+  "what_it_measures": "Fragmento N-terminal do pró-peptídeo natriurético tipo B, liberado pelos cardiomiócitos sob estresse de parede. Marca sobrecarga hemodinâmica e auxilia o diagnóstico, o prognóstico e a seleção de pacientes para ensaios de IC. Não é fração de ejeção, não estagia DRC e não substitui o quadro clínico.",
+  "reference_range": "Não existe um único valor de referência que confirme IC em todos os cenários. Os pontos de decisão dependem da apresentação aguda ou ambulatorial, idade, ritmo, obesidade e função renal. No FINEARTS-HF, NT-proBNP ≥300 pg/mL em ritmo sinusal ou ≥900 pg/mL em FA eram critérios de inclusão; não constituem faixa normal, meta terapêutica ou diagnóstico isolado.",
+  "indications": "Suspeita de insuficiência cardíaca (sintomas/sinais, cardiopatia estrutural) e seguimento prognóstico. Na seleção de FINEARTS-HF (Solomon et al., NEJM 2024; PMID 39225278): adultos ≥ 40 anos, IC sintomática, FEVE ≥ 40%, peptídeo natriurético elevado — NT-proBNP ≥ 300 pg/mL em sinus (≥ 900 pg/mL se FA) — além de diurético ≥ 30 dias. Esse recorte é critério de inclusão do ensaio, não corte diagnóstico da ESC 2026.",
+  "interpretation": "Um NT-proBNP elevado aumenta a probabilidade de IC e de evento, mas o valor isolado não fecha o diagnóstico nem indica um fármaco específico. Em FINEARTS, finerenona reduziu o composto de eventos totais de piora de IC e morte CV (RR 0,84); morte CV isolada não foi significativa — o peptídeo selecionou a população, não foi o desfecho. A ESC 2026 passou a recomendar ARM na IC sintomática independente da FEVE (Classe I A); isso não transforma o NT-proBNP de FINEARTS em limiar diagnóstico da diretriz. FA, idade, DRC e obesidade deslocam o peptídeo: não aplicar o ≥ 300/≥ 900 fora do contexto de elegibilidade do ensaio.",
+  "limitations": "TFGe baixa, FA e idade avançada podem elevar o peptídeo; obesidade pode reduzi-lo. A ESC 2026 recomenda sua medição na suspeita de IC com interpretação desses fatores (I C). Correlacionar com sintomas, sinais e ecocardiograma; não iniciar ou suspender terapias apenas pelo valor. Este registro distingue interpretação clínica de elegibilidade do FINEARTS e não substitui o algoritmo diagnóstico completo.",
+  "source_refs": [
+    "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278. NCT04435626. Elegibilidade: NT-proBNP ≥300 pg/mL em ritmo sinusal (≥900 pg/mL se FA) — critério de ensaio, não corte diagnóstico ESC.",
+    "Køber L et al. 2026 ESC Guidelines for the management of heart failure. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420. Tabela de avaliação da suspeita de IC e fatores que alteram peptídeos natriuréticos."
+  ],
+  "review_status": "revisado",
+  "published": false,
+  "tags": [
+    "nt-probnp",
+    "peptídeo natriurético",
+    "insuficiência cardíaca",
+    "finearts",
+    "esc 2026",
+    "laboratorial"
+  ],
+  "review_note": "Interpretabilidade e critérios FINEARTS conferidos; eliminado falso campo normal e pendências, mantendo limites do marcador e indicação I C."
+}

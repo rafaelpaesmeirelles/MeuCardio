@@ -1,12 +1,25 @@
 ---
-title: 'Eventos Cardiovasculares Tardios Após Terapia CAR-T em Linfoma B Agressivo: Coorte Prospectiva 2025'
+title: Eventos cardiovasculares tardios após CAR-T em linfoma B agressivo
 slug: eventos-cardiovasculares-tardios-apos-car-t-em-linfoma-b-agressivo-coorte-2025
 theme: Cardio-oncologia
 kind: estudo
-review_status: pendente_revisao
-source_refs: []
-review_note: Conferido texto completo; corrigida inclusão de eventos persistentes, FEVE basal e gravidade de COVID; removida
-  causalidade para atraso de tocilizumabe e comparação direta entre coortes.
+review_status: revisado
+source_refs:
+- 'Camacho-Arteaga L et al. Late Adverse Events After Chimeric Antigen Receptor T-Cell Therapy for Patients With Aggressive
+  B-Cell Non-Hodgkin Lymphoma. JAMA Netw Open. 2025. PMID: 39998830. DOI: 10.1001/jamanetworkopen.2024.61683.'
+- 'Alvi RM et al. Cardiovascular Events Among Adults Treated With Chimeric Antigen Receptor T-Cells. J Am Coll Cardiol. 2019.
+  PMID: 31856966. DOI: 10.1016/j.jacc.2019.10.038.'
+review_note: 'Conferido texto completo; corrigida inclusão de eventos persistentes, FEVE basal e gravidade de COVID; removida
+  causalidade para atraso de tocilizumabe e comparação direta entre coortes. Conferência editorial final: título alinhado
+  ao corpo revisado, campos de classificação e resumo conferidos, referências bibliográficas organizadas e espaçamento corrigido
+  quando necessário. Vínculos internos preservados.'
+summary: Uma coorte prospectiva de seis hospitais espanhóis acompanhou 172 adultos que sobreviveram pelo menos três meses
+  após CAR-T comercial, sem nova terapia antilinfoma. A coleta prosseguiu até novo tratamento, óbito, perda de seguimento
+  ou 24 meses após a infusão.
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Eventos cardiovasculares tardios após CAR-T em linfoma B agressivo
@@ -26,3 +39,7 @@ São poucos eventos, sem controle não exposto. Não se pode atribuir cada epis�
 No registro de Alvi et al., com 137 pacientes, ocorreram 17 eventos cardiovasculares, com mediana de 21 dias. Todos ocorreram com síndrome de liberação de citocinas grau ≥2. O intervalo até tocilizumabe associou-se ao risco; o desenho não demonstra causalidade nem estabelece um prazo terapêutico por essa associação. [Alvi et al., JACC, 2019](https://pubmed.ncbi.nlm.nih.gov/31856966/).
 
 As coortes têm seleção, janelas e definições diferentes. Suas proporções não podem ser comparadas como evolução de uma mesma população. A observação de eventos além da fase inicial apoia atenção continuada, mas não define por si um intervalo obrigatório de ecocardiogramas.
+
+## Tudo com Tudo
+
+- [CART-7: Escore de Estratificação de Risco Cardiovascular Basal para Terapia CAR-T](/biblioteca/cart-7-escore-de-estratificacao-de-risco-cardiovascular-basal-para-terapia-car-t) — Conecta eventos cardiovasculares tardios pós-CAR-T à estratificação basal CART-7 e à necessidade de vigilância conforme o risco.

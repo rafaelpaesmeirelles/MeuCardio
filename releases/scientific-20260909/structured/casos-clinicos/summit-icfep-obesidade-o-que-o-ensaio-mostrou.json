@@ -1,0 +1,21 @@
+{
+  "slug": "summit-icfep-obesidade-o-que-o-ensaio-mostrou",
+  "titulo": "ICFEp com obesidade: o que o SUMMIT autoriza dizer",
+  "tema": "Insuficiência cardíaca",
+  "nivel": "intermediário",
+  "enunciado": "Mulher de 68 anos, FEVE 58%, IMC 34, IC classe II, já em iSGLT2 e finerenona. Você discute tirzepatida com base no SUMMIT (NEJM 2025; 364 vs 367; mediana de seguimento de 104 semanas). Qual afirmação está alinhada ao ensaio?",
+  "pergunta": "O que o SUMMIT mostrou?",
+  "opcoes": [
+    "Redução de morte cardiovascular isolada (HR 0,62).",
+    "Não inferioridade de MACE contra dulaglutida, como no SURPASS-CVOT.",
+    "Redução do composto de morte CV ou piora de IC (9,9% vs 15,3%; HR 0,62), puxada pelos eventos de IC; não houve redução demonstrada de morte CV isolada (HR 1,58; IC atravessa 1).",
+    "Substituição da quádrupla da ICFEr pela tirzepatida."
+  ],
+  "resposta_correta": 2,
+  "explicacao": "SUMMIT: composto 36/364 vs 56/367; HR 0,62 (0,41–0,95). Piora de IC HR 0,54. Morte CV 8 vs 5; HR 1,58 (0,52–4,83). KCCQ +6,9. SURPASS-CVOT é outra pergunta (MACE vs dulaglutida). PMID 39555826. O outro primário foi a mudança no KCCQ-CSS em 52 semanas, com diferença ajustada de 6,9 pontos. A mediana de seguimento clínico foi 104 semanas; não significa que todos foram acompanhados exatamente por esse período. Eventos adversos levaram à suspensão em 6,3% versus 1,4%. O ensaio não comprovou especificamente o benefício incremental da combinação tirzepatida, iSGLT2 e finerenona usada pela paciente.",
+  "source_refs": [
+    "Packer M, et al. N Engl J Med. 2025;392:427-437. PMID 39555826."
+  ],
+  "review_status": "revisado",
+  "review_note": "SUMMIT conferido; explicitados dois primários, duração mediana, segurança e limite de extrapolação à combinação tripla."
+}

@@ -1,11 +1,57 @@
 ---
-title: "Semaglutida e o Sinal de NAION: o que EMA e MHRA Confirmaram em 2025-2026"
+title: 'Semaglutida e o Sinal de NAION: o que EMA e MHRA Confirmaram em 2025-2026'
 slug: semaglutida-tirzepatida-sinal-de-naion-farmacovigilancia-ema-mhra-2025-2026
-theme: "Farmacologia"
+theme: Farmacologia
 kind: farmacologia
 review_status: revisado
-source_refs: ["Hathaway JT, Shah MP, Hathaway DB, et al. Risk of Nonarteritic Anterior Ischemic Optic Neuropathy in Patients Prescribed Semaglutide. JAMA Ophthalmol. 2024;142(8):732-739. DOI: 10.1001/jamaophthalmol.2024.2296. PMID: 38958939 — abstract completo lido via PubMed E-utilities (efetch) nesta sessão (09/09/2026); coorte retrospectiva de centro único (Mass Eye and Ear), o estudo que originou o sinal.", "Reynolds KR, O'Malley KM, Roy JA, Dave CV. Glucagon-Like Peptide-1 Receptor Agonists and Risk for Ischemic Optic Neuropathy: A Target Trial Emulation. Ann Intern Med. 2026 Jul 14. DOI: 10.7326/ANNALS-25-00860. PMID: 42441967 — abstract completo lido via efetch; emulação de ensaio-alvo em base de dados de sinistros comerciais dos EUA (2017-2022).", "Ueda P, Svanström H, Söderling J, et al. Glucagon-like Peptide-1 Receptor Agonists and Risk for Anterior Ischemic Optic Neuropathy: A Nationwide Cohort Study. Ann Intern Med. 2026 Jul 14. DOI: 10.7326/ANNALS-25-02096. PMID: 42441962 — abstract completo lido via efetch; coorte nacional sueca (2013-2024), publicada no mesmo número/data do estudo anterior.", "Systematic Review and Meta-Analysis: Semaglutide-Induced Nonarteritic Anterior Ischemic Optic Neuropathy. J Clin Pharmacol. 2026;66(8):e70248. DOI: 10.1002/jcph.70248. PMID: 42612051 — abstract completo lido via efetch; 8 estudos de coorte observacionais, 5.916.559 participantes.", "European Medicines Agency. PRAC concludes eye condition NAION is a very rare side effect of semaglutide medicines Ozempic, Rybelsus and Wegovy. Comunicado oficial, ema.europa.eu, 06/06/2025 — texto lido via WebFetch nesta sessão.", "Medicines and Healthcare products Regulatory Agency (MHRA, Reino Unido). Drug Safety Update: Semaglutide and NAION. PDF oficial, gov.uk, 05/02/2026 — texto lido via WebFetch nesta sessão.", "Busca PubMed E-utilities (esearch), termo '(NAION OR non-arteritic anterior ischemic optic neuropathy) AND (semaglutide OR GLP-1 OR tirzepatide)', 143 resultados em 09/09/2026 — usada para mapear o volume e os tipos de publicação (revisões, séries de casos, cartas, uma retratação em Retina em 2026, relatos de caso com tirzepatida como PMID 42569780 e 42432542), sem extração de números específicos além dos artigos individualmente citados acima."]
-legacy_source: "Documento novo, 09/09/2026. Busca por grep em todo o content/ (não só Farmacologia) confirmou que 'NAION' não aparecia em nenhum documento da base antes deste, apesar de semaglutida e tirzepatida já terem documentos próprios (banco-de-medicamentos) e de a base ter cobertura extensa de outros efeitos adversos e manejo perioperatório da classe GLP-1. O primeiro alvo de busca desta sessão foi istaroxima (inotrópico-lusitrópico experimental para IC aguda), mas grep por 'istaroxime' revelou documento já existente e recente em Insuficiência_cardíaca cobrindo exatamente o programa SEISMiC — candidato descartado antes da escrita. Múltiplos outros candidatos de fármaco novo (aprocitentana, baxdrostat, lorundrostat, vicadrostat, zilebesirana, obicetrapibe, muvalaplina, zerlasirana, olpasirana, lepodisiran, plozasiran/olezarsen, ziltivekimabe, retatrutida, etripamil) também já tinham documento dedicado. Este documento cobre, em vez de um fármaco novo, um alerta de farmacovigilância real e recente (EMA/MHRA 2025-2026) sobre uma classe já amplamente coberta na base."
+source_refs:
+- 'Hathaway JT, Shah MP, Hathaway DB, et al. Risk of Nonarteritic Anterior Ischemic Optic Neuropathy in Patients Prescribed
+  Semaglutide. JAMA Ophthalmol. 2024;142(8):732-739. DOI: 10.1001/jamaophthalmol.2024.2296. PMID: 38958939 — abstract completo
+  lido via PubMed E-utilities (efetch) nesta sessão (09/09/2026); coorte retrospectiva de centro único (Mass Eye and Ear),
+  o estudo que originou o sinal.'
+- 'Reynolds KR, O''Malley KM, Roy JA, Dave CV. Glucagon-Like Peptide-1 Receptor Agonists and Risk for Ischemic Optic Neuropathy:
+  A Target Trial Emulation. Ann Intern Med. 2026 Jul 14. DOI: 10.7326/ANNALS-25-00860. PMID: 42441967 — abstract completo
+  lido via efetch; emulação de ensaio-alvo em base de dados de sinistros comerciais dos EUA (2017-2022).'
+- 'Ueda P, Svanström H, Söderling J, et al. Glucagon-like Peptide-1 Receptor Agonists and Risk for Anterior Ischemic Optic
+  Neuropathy: A Nationwide Cohort Study. Ann Intern Med. 2026 Jul 14. DOI: 10.7326/ANNALS-25-02096. PMID: 42441962 — abstract
+  completo lido via efetch; coorte nacional sueca (2013-2024), publicada no mesmo número/data do estudo anterior.'
+- 'Systematic Review and Meta-Analysis: Semaglutide-Induced Nonarteritic Anterior Ischemic Optic Neuropathy. J Clin Pharmacol.
+  2026;66(8):e70248. DOI: 10.1002/jcph.70248. PMID: 42612051 — abstract completo lido via efetch; 8 estudos de coorte observacionais,
+  5.916.559 participantes.'
+- European Medicines Agency. PRAC concludes eye condition NAION is a very rare side effect of semaglutide medicines Ozempic,
+  Rybelsus and Wegovy. Comunicado oficial, ema.europa.eu, 06/06/2025 — texto lido via WebFetch nesta sessão.
+- 'Medicines and Healthcare products Regulatory Agency (MHRA, Reino Unido). Drug Safety Update: Semaglutide and NAION. PDF
+  oficial, gov.uk, 05/02/2026 — texto lido via WebFetch nesta sessão.'
+- Anvisa. Alerta de NOIANA associado à semaglutida, 12/06/2025. https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-alerta-sobre-evento-adverso-muito-raro-associado-a-semaglutida-que-pode-levar-a-perda-da-visao/
+legacy_source: Documento novo, 09/09/2026. Busca por grep em todo o content/ (não só Farmacologia) confirmou que 'NAION' não
+  aparecia em nenhum documento da base antes deste, apesar de semaglutida e tirzepatida já terem documentos próprios (banco-de-medicamentos)
+  e de a base ter cobertura extensa de outros efeitos adversos e manejo perioperatório da classe GLP-1. O primeiro alvo de
+  busca desta sessão foi istaroxima (inotrópico-lusitrópico experimental para IC aguda), mas grep por 'istaroxime' revelou
+  documento já existente e recente em Insuficiência_cardíaca cobrindo exatamente o programa SEISMiC — candidato descartado
+  antes da escrita. Múltiplos outros candidatos de fármaco novo (aprocitentana, baxdrostat, lorundrostat, vicadrostat, zilebesirana,
+  obicetrapibe, muvalaplina, zerlasirana, olpasirana, lepodisiran, plozasiran/olezarsen, ziltivekimabe, retatrutida, etripamil)
+  também já tinham documento dedicado. Este documento cobre, em vez de um fármaco novo, um alerta de farmacovigilância real
+  e recente (EMA/MHRA 2025-2026) sobre uma classe já amplamente coberta na base.
+review_note: 'Conferidos PMIDs38958939,42441967,42441962,42612051 e comunicados oficiais EMA/MHRA/Anvisa. Corrigida suspensão
+  indiscriminada: avaliação urgente por sintomas e interrupção se NAION confirmada. Acrescentado alerta Anvisa2025; removida
+  inversão cronológica e extrapolação de classe; explicitados códigos de desfecho, heterogeneidade91% e incerteza causal.'
+summary: 'A semaglutida deixou de ser "apenas" um fármaco de diabetes/obesidade: o ensaio SELECT (já
+
+  documentado nesta base, ver "Tudo com Tudo" abaixo) estabeleceu redução de eventos cardiovasculares
+
+  maiores em pacientes com sobrepeso/obesidade e doença cardiovascular estabelecida, o que trouxe a
+
+  molécula para dentro da prática cardiológica de forma direta — não mais apenas por intermédio do
+
+  endocrinologista. Isso torna um sinal de segurança oftalmológico recém-confirmado pelos reguladores
+
+  europeus diretamente relevante para quem prescreve ou coprescreve a droga por indicação cardiovascular:
+
+  neuropatia óptica isquêmica anterior não arterítica (NAION),'
+tags: []
+source_tier: A
+gaps: []
+published: true
 ---
 
 # Semaglutida e o Sinal de NAION: o que EMA e MHRA Confirmaram em 2025-2026
@@ -50,88 +96,41 @@ unilateral e geralmente permanente, sem tratamento eficaz estabelecido.
   substancialmente** ao restringir a análise a pacientes já em uso de metformina, sugerindo possível
   confusão residual por gravidade/indicação de base.
 - **2026 — metanálise consolidando o sinal**: 8 estudos de coorte observacionais, **5.916.559
-  participantes** (1.870.346 expostos à semaglutida), **RR agrupado 1,93 (IC95% 1,22-3,08)**; efeito
-  mantido em diabéticos (**RR 1,84; IC95% 1,21-2,80**), mas **não significativo isoladamente** na
-  população apenas com sobrepeso/obesidade (**RR 1,68; IC95% 0,72-3,91**, IC cruzando 1).
+  participantes** (1.870.346 expostos à semaglutida), **efeito relativo agrupado (RE) 1,93 (IC95% 1,22-3,08), com heterogeneidade muito alta (I²=91%)**; efeito
+  mantido em diabéticos (**RE 1,84; IC95% 1,21-2,80**), mas **não significativo isoladamente** na
+  população apenas com sobrepeso/obesidade (**RE 1,68; IC95% 0,72-3,91**, IC cruzando 1).
 - **5 de fevereiro de 2026 — MHRA (Reino Unido) publica Drug Safety Update** confirmando a conclusão da
   EMA e orientando conduta clínica (ver abaixo).
 
-## Leitura crítica: por que o efeito "encolheu" entre 2024 e 2026
+## Leitura crítica das estimativas
 
-- O estudo de 2024 (HR 4-8x) é de **centro único, retrospectivo, com poucos eventos absolutos** —
-  desenho mais suscetível a viés de seleção e a estimativas instáveis de efeito. Os estudos maiores e
-  independentes de 2026 (bases nacionais/de sinistros, dezenas a centenas de milhares de pacientes)
-  convergem para um **RR mais modesto, na faixa de ~1,7 a ~1,9**, ainda estatisticamente significativo
-  na maioria das análises, mas de magnitude bem menor.
-- Esse padrão — sinal inicial exagerado em estudo pequeno, confirmado como real porém mais discreto em
-  réplicas de maior escala — é comum em farmacovigilância e **não invalida o sinal**; apenas recalibra
-  sua magnitude clínica. O risco absoluto permanece **baixo** (NNH da ordem de milhares).
-- A atenuação do efeito ao ajustar para uso basal de metformina (estudo sueco) e a não significância
-  isolada no subgrupo de sobrepeso/obesidade (metanálise) indicam que **parte do sinal pode refletir
-  confusão residual** por gravidade da doença metabólica de base, não necessariamente um efeito
-  causal puro do fármaco — o próprio PRAC, no entanto, concluiu causalidade após revisão de conjunto
-  mais amplo de evidência (incluindo dados de ensaios clínicos), não apenas dos estudos observacionais
-  aqui resumidos.
+O estudo inicial foi realizado em um centro de referência oftalmológica, com poucos eventos e potencial viés de seleção. Suas incidências absolutas não devem ser aplicadas diretamente a todos os usuários de semaglutida. Os estudos de 2026 diferem em população, comparador e definição do desfecho: Reynolds e Ueda avaliaram iniciantes de **GLP-1RA como classe**, em pessoas com diabetes tipo 2, utilizando códigos de neuropatia óptica isquêmica/anterior como aproximação de NAION. Não são estimativas específicas da semaglutida nem diagnósticos oftalmológicos uniformemente adjudicados.
 
-## Orientação regulatória e conduta clínica
+O RR sueco em cinco anos não foi estatisticamente significativo. Confusão residual e a heterogeneidade muito alta da metanálise impedem interpretar o conjunto como uma medida causal única. As coortes publicadas em julho de 2026 acrescentam informação posterior; **não poderiam ter fundamentado a decisão da EMA de junho de 2025**.
 
-- **Classificação de frequência**: efeito colateral **muito raro** (até 1 em 10.000) — não uma
-  contraindicação.
-- **Conduta diante de sintoma**: segundo a MHRA, **"se o paciente apresentar perda súbita de visão ou
-  outros sintomas oculares em uso de semaglutida, o tratamento deve ser interrompido"**, com
-  **encaminhamento urgente a oftalmologista**.
-- **Escopo confirmado pelos reguladores**: a revisão da EMA e o alerta da MHRA cobrem especificamente
-  **semaglutida** (Ozempic, Rybelsus, Wegovy). Nenhuma das fontes consultadas nesta sessão registra
-  conclusão regulatória equivalente para **tirzepatida** — a literatura sobre tirzepatida e NAION nesta
-  data consiste em **relatos de caso isolados e sinal de desproporcionalidade em bancos de eventos
-  adversos (FAERS)**, um nível de evidência bem mais preliminar. Não generalizar a conclusão da EMA
-  para tirzepatida.
-- **História pessoal de NAION**: nenhuma das fontes primárias lidas nesta sessão (comunicado da EMA,
-  DSU da MHRA) menciona explicitamente contraindicação ou cautela formal para pacientes com história
-  prévia de NAION (no mesmo olho ou no contralateral) — apesar de existir na literatura pelo menos um
-  relato de caso de **NAION bilateral** associado a semaglutida. Na ausência de orientação regulatória
-  explícita sobre este subgrupo, a decisão de manter ou suspender o fármaco em paciente com história
-  pessoal de NAION exige avaliação individualizada com oftalmologia — **VERIFICAÇÃO HUMANA NECESSÁRIA**
-  quanto a uma eventual atualização de bula que trate especificamente deste subgrupo.
+## Orientação regulatória e aplicação clínica
 
-## O que isto muda (e o que não muda) na prática cardiológica
+Em junho de 2025, a EMA classificou NAION como efeito muito raro da semaglutida. A revisão tratou de Ozempic, Rybelsus e Wegovy; sua conclusão não deve ser transferida automaticamente à tirzepatida ou a todos os agonistas de GLP-1.
 
-- **Não muda a indicação cardiovascular estabelecida da semaglutida** (SELECT) para a grande maioria
-  dos pacientes elegíveis — o risco absoluto de NAION é baixo e o benefício de redução de MACE
-  demonstrado em ensaio de fase 3 randomizado permanece a base da decisão.
-- **Muda a orientação que deve ser dada ao paciente no início do tratamento**: perda visual súbita,
-  unilateral, indolor, deve ser tratada como emergência — suspender o fármaco e encaminhar
-  imediatamente à oftalmologia, independentemente de quem prescreveu (cardiologista ou
-  endocrinologista).
-- **Reforça a necessidade de notificação de farmacovigilância** (no Brasil, à ANVISA via VigiMed) diante
-  de qualquer caso suspeito, já que a magnitude real do risco em populações fora dos estudos analisados
-  (incluindo a população brasileira) permanece incerta.
-- **Status regulatório no Brasil**: nenhuma fonte consultada nesta sessão confirma se a ANVISA já
-  incorporou este alerta à bula brasileira de Ozempic/Wegovy/Rybelsus — **VERIFICAÇÃO HUMANA
-  NECESSÁRIA** antes de citar a bula nacional como já atualizada.
+Segundo a MHRA (5 de fevereiro de 2026), **perda súbita de visão, inclusive parcial, ou piora visual rápida exige avaliação oftalmológica urgente**. A orientação de interromper semaglutida aplica-se quando **NAION é confirmada**, não indistintamente a qualquer queixa ocular. O atendimento urgente também permite investigar outras causas potencialmente graves de perda visual. [Orientação oficial da MHRA](https://www.gov.uk/drug-safety-update/semaglutide-wegovy-ozempic-and-rybelsus-risk-of-non-arteritic-anterior-ischemic-optic-neuropathy-naion).
+
+No Brasil, a **Anvisa publicou alerta em 12 de junho de 2025**, anunciou a solicitação de inclusão de NOIANA como reação muito rara nas bulas e recomendou atendimento imediato diante de perda súbita ou piora rápida da visão, com interrupção se o diagnóstico for confirmado. Essa informação não equivale a uma auditoria de cada apresentação comercial atualmente disponível. Casos suspeitos podem ser notificados pelo VigiMed. [Alerta da Anvisa](https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-alerta-sobre-evento-adverso-muito-raro-associado-a-semaglutida-que-pode-levar-a-perda-da-visao/).
+
+O alerta não elimina os benefícios cardiovasculares demonstrados na população do SELECT. A decisão terapêutica deve considerar indicação, risco absoluto e alternativas; uma história prévia de NAION requer avaliação individual com oftalmologia. Esta revisão não estabelece uma contraindicação universal adicional.
 
 ## Armadilhas clínicas
 
-- **Confundir "efeito colateral muito raro confirmado" com "motivo para suspender indicação
-  cardiovascular estabelecida"** — o risco-benefício populacional continua favorável na imensa maioria
-  dos pacientes com indicação SELECT.
-- **Extrapolar a conclusão regulatória da EMA (específica para semaglutida) para toda a classe
-  GLP-1RA/GIP-GLP-1**, incluindo tirzepatida — a evidência para tirzepatida é de nível bem inferior
-  (relatos de caso, desproporcionalidade em FAERS), não uma conclusão de causalidade de agência
-  regulatória.
-- **Ignorar o sintoma por parecer "só oftalmológico"** — o cardiologista costuma ser o primeiro contato
-  do paciente em uso de GLP-1RA por indicação cardiovascular; reconhecer o quadro (perda visual súbita
-  unilateral) e agir rápido (suspender + encaminhar) importa mesmo fora da especialidade.
-- **Tratar o HR de 4-8x do estudo de 2024 como a estimativa de risco "oficial"** — os estudos maiores e
-  mais recentes (2026) convergem para um risco relativo bem mais modesto (~1,7-1,9x), e é essa faixa
-  que embasou a conclusão regulatória da EMA.
+- Confundir frequência regulatória “muito rara” com o risco de um centro oftalmológico selecionado.
+- Transformar associação observacional em causalidade comprovada para toda a classe ou para tirzepatida.
+- Ignorar perda visual súbita: a prioridade é avaliação urgente; se NAION for confirmada, interromper a semaglutida conforme orientação regulatória.
+- Atribuir decisões regulatórias de 2025 a estudos publicados em 2026.
 
 ## Tudo com Tudo
 
-- [Semaglutida](semaglutida.md)
-- [Tirzepatida](tirzepatida.md)
-- [Cagrilintida: Agonismo do Receptor de Amilina e o Efeito Pressórico do REDEFINE-1](cagrilintida-agonismo-do-receptor-de-amilina-e-o-efeito-pressorico-do-redefine-1.md)
-- [Retatrutida: Agonista Triplo GIP/GLP-1/Glucagon e Risco Cardiovascular (TRANSCEND-T2D-1)](../Diabetes_e_cardiologia/retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1.md)
-- [Agonistas de Receptor de GLP-1 no Perioperatório: Orientação Multissocietária 2024](../Perioperatório/agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024.md)
-- [Risco de Aspiração Pulmonar Perioperatória com Agonistas de GLP-1](../Diabetes_e_cardiologia/risco-de-aspiracao-pulmonar-perioperatoria-com-agonistas-de-glp-1.md)
-- [Fluxograma: Obesidade e Doença Cardiovascular — Quando Indicar Agonista de GLP-1 e Cirurgia Bariátrica](../Prevenção_e_lipídios/fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica.md)
+- [Semaglutida](/biblioteca/semaglutida)
+- [Tirzepatida](/biblioteca/tirzepatida)
+- [Cagrilintida: Agonismo do Receptor de Amilina e o Efeito Pressórico do REDEFINE-1](/biblioteca/cagrilintida-agonismo-do-receptor-de-amilina-e-o-efeito-pressorico-do-redefine-1)
+- [Retatrutida: Agonista Triplo GIP/GLP-1/Glucagon e Risco Cardiovascular (TRANSCEND-T2D-1)](/biblioteca/retatrutida-agonista-triplo-gip-glp-1-glucagon-e-risco-cardiovascular-transcend-t2d-1)
+- [Agonistas de Receptor de GLP-1 no Perioperatório: Orientação Multissocietária 2024](/biblioteca/agonistas-de-receptor-de-glp-1-no-perioperatorio-orientacao-multissocietaria-2024)
+- [Risco de Aspiração Pulmonar Perioperatória com Agonistas de GLP-1](/biblioteca/risco-de-aspiracao-pulmonar-perioperatoria-com-agonistas-de-glp-1)
+- [Fluxograma: Obesidade e Doença Cardiovascular — Quando Indicar Agonista de GLP-1 e Cirurgia Bariátrica](/biblioteca/fluxograma-obesidade-e-doenca-cardiovascular-quando-indicar-agonista-de-glp-1-e-cirurgia-bariatrica)
