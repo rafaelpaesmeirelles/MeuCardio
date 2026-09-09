@@ -15,4 +15,4 @@ A publicação usa somente este pacote, com backup das linhas científicas afeta
 
 Estado deste relatório: preparado; o resultado efetivo da execução será registrado em `publication-result.json` e `rag-result.json` no diretório da release.
 
-SHA-256 do pacote: `96da332fd635fb19a3cd99569d0573be044c1c85d891403e391ea51274432f73`.
+SHA-256 do pacote: `9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9`.
