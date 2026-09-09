@@ -9,8 +9,12 @@ TIPO_MEUCARDIO = "meucardio"
 TIPO_CURSO = "curso"
 TIPO_EMAIL = "email"  # CorvIA Mail (Tarefa 28) — add-on cobrado à parte, não substitui a assinatura principal
 
-PLANO_BASICO = "basico"     # R$49,90/mês, acesso completo à plataforma, sem CorvIA Mail
-PLANO_COMPLETO = "completo"  # R$59,90/mês, acesso completo à plataforma + CorvIA Mail incluso
+PLANO_BASICO = "basico"
+PLANO_BASICO_MAIL = "basico_mail"
+PLANO_IA = "ia"
+PLANO_COMPLETO = "completo"
+LEGACY_COMMERCIAL_VERSION = "legacy_v1"
+CURRENT_COMMERCIAL_VERSION = "2026-09-four-plans"
 
 # Periodicidade da assinatura principal (kind=meucardio) — mensal já existia
 # implicitamente; semestral/anual pedidos pelo Rafael em 08/08/2026, com
@@ -68,6 +72,12 @@ class Subscription(Base):
     # Só tem sentido para kind='meucardio' — nas linhas de curso e de CorvIA
     # Mail o campo existe (coluna única na tabela) mas não é lido.
     plano: Mapped[str] = mapped_column(String(20), default=PLANO_BASICO)
+    # Existing contracts retain their prices and included benefits. A verified
+    # Stripe subscription event, not a checkout request, adopts the new version.
+    commercial_version: Mapped[str] = mapped_column(
+        String(32), default=LEGACY_COMMERCIAL_VERSION,
+        server_default=LEGACY_COMMERCIAL_VERSION,
+    )
     # Idem: só tem sentido para kind='meucardio'. Migração 26751b9d12f0.
     periodicidade: Mapped[str] = mapped_column(String(20), default=PERIODICIDADE_MENSAL)
     stripe_customer_id: Mapped[str | None] = mapped_column(String(255), nullable=True, index=True)
@@ -77,6 +87,8 @@ class Subscription(Base):
     # Traduzido dos status do Stripe em app/api/billing.py (STATUS_STRIPE_PT);
     # quais deles liberam acesso está em app/core/security.py (ACESSO_LIBERADO).
     current_period_end: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    current_period_start: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    ai_access_started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     # Momento do último evento de webhook já aplicado, para descartar evento
     # atrasado que sobrescreveria um estado mais novo.
     last_event_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

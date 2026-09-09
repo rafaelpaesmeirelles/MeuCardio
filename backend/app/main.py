@@ -17,6 +17,7 @@ from app.api import (
     whatsapp, heart_team,
 )
 from app.core.canonical_registration import CanonicalRegistrationMiddleware
+from app.api import ai_credits, ai_wallet
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
@@ -102,7 +103,7 @@ PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER = getattr(_patient_multimodal_delete_guar
 ROUTERS_LIVRES = (
     presence.heartbeat_router,
     health.router, auth.router, identity_profile.router, browser_session.router, social_login.router, password_reset.router,
-    sessions.router, billing.router,
+    sessions.router, billing.router, ai_credits.router, ai_wallet.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para
     # acrescentar a notificação transacional sem quebrar o frontend existente.
     account_access_admin.router, admin.router, ADMIN_USER_DELETE_ROUTER, admin_user_management.router,

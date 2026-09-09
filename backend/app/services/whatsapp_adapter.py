@@ -126,12 +126,14 @@ class MetaCloudAdapter:
         if not settings.openai_api_key:
             raise WhatsAppProviderError("Provedor de transcrição não configurado")
         from openai import OpenAI
+        from app.services.ia.usage_control import metered_transcription
         stream = BytesIO(content)
         stream.name = filename or "audio.ogg"
         try:
-            result = OpenAI(api_key=settings.openai_api_key).audio.transcriptions.create(
-                model=settings.whatsapp_transcription_model,
-                file=stream,
+            result = metered_transcription(
+                OpenAI(api_key=settings.openai_api_key, max_retries=0),
+                model=settings.whatsapp_transcription_model, content=content,
+                filename=stream.name, media_type=mime_type,
             )
         except Exception as exc:
             raise WhatsAppProviderError("Falha no provedor de transcrição") from exc

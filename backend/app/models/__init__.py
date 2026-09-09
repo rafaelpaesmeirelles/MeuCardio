@@ -46,3 +46,6 @@ from app.models.heart_team import (  # noqa: F401
     HeartTeamPatientRecord, HeartTeamSuggestion, HeartTeamSuggestionReview,
 )
 from app.models.cfm_registry import CfmPhysician, CfmSyncRun  # noqa: F401
+
+from app.models.ai_credit_purchase import AICreditPurchase  # noqa: F401
+from app.models.ai_wallet import AIWalletAccount, AIWalletPeriod, AIWalletOperation, AIWalletCreditGrant  # noqa: F401

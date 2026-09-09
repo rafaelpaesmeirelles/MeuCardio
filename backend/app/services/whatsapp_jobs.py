@@ -10,6 +10,25 @@ from app.services.whatsapp_adapter import get_adapter
 from app.services.whatsapp_assistant import enforce_cost_headroom,require_positive_tariff
 from app.services.whatsapp_outbox import deliver_once
 from app.services.whatsapp_security import canonical_json,phone_hash,utcnow
+
+def _advance_heart_team_case(db, case):
+ from app.models.heart_team import HeartTeamAnalysisJob
+ from app.services.heart_team import process_analysis_job
+ if case.status in {"awaiting_review", "completed"}:
+  return {"status": "ready"}
+ canonical=db.query(HeartTeamAnalysisJob).filter(HeartTeamAnalysisJob.case_id==case.id,HeartTeamAnalysisJob.owner_id==case.owner_id).first()
+ if not canonical:
+  return {"status": "failed", "error_code": "budget_confirmation_missing"}
+ if canonical.status=="queued":
+  process_analysis_job(canonical.id)
+  db.refresh(case)
+  db.refresh(canonical)
+ if case.status in {"awaiting_review", "completed"}:
+  return {"status": "ready"}
+ if canonical.status in {"queued", "running"}:
+  return {"status": "retry", "error_code": "analysis_pending"}
+ return {"status": "failed", "error_code": canonical.last_error_code or "analysis_unusable"}
+
 def process_heart_team_job(job_id,*,adapter=None):
  if not settings.whatsapp_assistant_enabled or not settings.heart_team_enabled:return {"status":"feature_disabled"}
  db=SessionLocal()
@@ -19,9 +38,13 @@ def process_heart_team_job(job_id,*,adapter=None):
   if job.status not in {"queued","retry"}:return {"status":job.status}
   job.status="running";job.attempts+=1;db.commit()
   from app.models.heart_team import HeartTeamCase
-  from app.services.heart_team import analyze_case_by_id
   case=db.query(HeartTeamCase).filter(HeartTeamCase.id==job.case_id,HeartTeamCase.owner_id==job.owner_id).first()
-  if case.status not in {"awaiting_review","completed"}:case=analyze_case_by_id(db,case_id=case.id,owner_id=job.owner_id,actor_id=job.owner_id,confirm_deidentified=True,confirm_medical_review=True,origin="whatsapp_worker")
+  outcome=_advance_heart_team_case(db,case) if case else {"status":"failed","error_code":"case_not_found"}
+  if outcome["status"]!="ready":
+   job.status=outcome["status"];job.last_error_code=outcome["error_code"]
+   if job.status=="retry":job.next_attempt_at=utcnow()+timedelta(minutes=1)
+   else:job.completed_at=utcnow()
+   db.commit();return {"status":job.status,"case_id":job.case_id,"error_code":job.last_error_code}
   link=db.query(WhatsAppLink).filter(WhatsAppLink.id==job.link_id,WhatsAppLink.status=="active").first()
   if not link:
    job.status="cancelled";job.last_error_code="link_revoked";job.completed_at=utcnow();db.add(AuditLog(user_id=job.owner_id,action="whatsapp_heart_notification_cancelled",entity="whatsapp_heart_team_job",entity_id=str(job.id),detail={"reason":"link_revoked"}));db.commit();return {"status":"cancelled"}

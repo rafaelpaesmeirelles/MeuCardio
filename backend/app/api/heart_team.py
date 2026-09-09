@@ -28,7 +28,7 @@ from app.services.heart_team import (
     HeartTeamBudgetExceeded, HeartTeamDisabled, HeartTeamError, HeartTeamSafetyError,
     audit_event, audit_sensitive_read, content_hash,
     create_case_draft, purge_expired_cache, usage_summary, utcnow,
-    is_heart_team_physician, enqueue_analysis_job,
+    is_heart_team_physician, enqueue_analysis_job, estimate_case_budget,
 )
 from app.services.heart_team_agents import AGENTS
 from app.services.ia.clinical_file_sanitizer import UnsafeClinicalFile, sanitize_clinical_file
@@ -199,9 +199,20 @@ def download_attachment(case_id: int, position: int, user=Depends(current_user),
     return Response(ler(row.storage_key, user.id, raiz=Path(settings.heart_team_files_dir)), media_type=row.media_type, headers={"Content-Disposition": f'attachment; filename="{name}"'})
 
 
+@router.post("/cases/{case_id}/estimate", dependencies=[Depends(_enabled), Depends(_physician)])
+def estimate(case_id: int, user=Depends(current_user), db: Session = Depends(get_db)):
+    case = _owned_case(db, case_id, user.id, lock=True)
+    try:
+        return estimate_case_budget(db, case, actor_id=user.id)
+    except HeartTeamSafetyError as exc:
+        raise HTTPException(422, str(exc))
+    except HeartTeamError as exc:
+        raise HTTPException(409, str(exc))
+
+
 @router.post("/cases/{case_id}/analyze", status_code=202, dependencies=[Depends(_enabled), Depends(_physician)])
 def analyze(case_id: int, payload: AnalyzeRequest, user=Depends(current_user), db: Session = Depends(get_db)):
-    try: job = enqueue_analysis_job(db, case_id=case_id, owner_id=user.id, actor_id=user.id, confirm_deidentified=payload.confirm_deidentified, confirm_medical_review=payload.confirm_medical_review)
+    try: job = enqueue_analysis_job(db, case_id=case_id, owner_id=user.id, actor_id=user.id, confirm_deidentified=payload.confirm_deidentified, confirm_medical_review=payload.confirm_medical_review, quote_id=payload.quote_id, approved_max_credit_centavos=payload.approved_max_credit_centavos)
     except HeartTeamDisabled as exc: raise HTTPException(404, str(exc))
     except HeartTeamSafetyError as exc: raise HTTPException(422, str(exc))
     except HeartTeamBudgetExceeded as exc: raise HTTPException(429, str(exc))
@@ -267,6 +278,14 @@ def case_audit(case_id: int, user=Depends(current_user), db: Session = Depends(g
 
 @admin_router.get("/metrics", dependencies=[Depends(_enabled)])
 def admin_metrics(_admin=Depends(require_admin), db: Session = Depends(get_db)):
+    from app.models.ai_wallet import AIWalletOperation
+    operations = db.query(AIWalletOperation).filter(AIWalletOperation.feature == "heart_team")
+    wallet_accounting = {
+        "currency": "BRL", "scope": "heart_team_since_wallet_activation",
+        "actual_cost_micros": int(operations.with_entities(func.coalesce(func.sum(AIWalletOperation.actual_cost_micros), 0)).scalar() or 0),
+        "reserved_cost_micros": int(operations.filter(AIWalletOperation.state.in_(["reserved", "unknown"])).with_entities(func.coalesce(func.sum(AIWalletOperation.reserved_cost_micros), 0)).scalar() or 0),
+        "unknown_operations": operations.filter(AIWalletOperation.state == "unknown").count(),
+    }
     statuses = {status: count for status, count in db.query(HeartTeamCase.status, func.count(HeartTeamCase.id)).group_by(HeartTeamCase.status).all()}
     cases = db.query(HeartTeamCase).order_by(HeartTeamCase.owner_id, HeartTeamCase.id).all()
     subscribers: dict[int, dict] = {}; models: dict[str, int] = {}; latencies = []
@@ -276,7 +295,7 @@ def admin_metrics(_admin=Depends(require_admin), db: Session = Depends(get_db)):
         for model in (case.model_versions or {}).values(): models[str(model)] = models.get(str(model), 0) + 1
         if case.started_at and case.finished_at: latencies.append(max(0, (case.finished_at - case.started_at).total_seconds() * 1000))
     db.add(AuditLog(user_id=_admin.id, action="heart_team.admin_metrics_read", entity="heart_team_metrics", detail={})); db.commit()
-    return {"cases_by_status": statuses, "awaiting_review": statuses.get("awaiting_review", 0), "completed": statuses.get("completed", 0), "unusable": statuses.get("unusable", 0), "tokens_input": int(db.query(func.coalesce(func.sum(HeartTeamCase.tokens_input), 0)).scalar() or 0), "tokens_output": int(db.query(func.coalesce(func.sum(HeartTeamCase.tokens_output), 0)).scalar() or 0), "estimated_cost_micros": int(db.query(func.coalesce(func.sum(HeartTeamCase.estimated_cost_micros), 0)).scalar() or 0), "reserved_cost_micros": int(db.query(func.coalesce(func.sum(HeartTeamCase.reserved_cost_micros), 0)).scalar() or 0), "models": models, "average_latency_ms": int(sum(latencies) / len(latencies)) if latencies else 0, "subscribers": list(subscribers.values()), "limits": {"daily_cases": settings.heart_team_daily_case_limit, "monthly_cases": settings.heart_team_monthly_case_limit, "monthly_cost_micros": settings.heart_team_monthly_cost_ceiling_micros}}
+    return {"wallet_accounting": wallet_accounting, "legacy_cost_fields_informational_only": True, "cases_by_status": statuses, "awaiting_review": statuses.get("awaiting_review", 0), "completed": statuses.get("completed", 0), "unusable": statuses.get("unusable", 0), "tokens_input": int(db.query(func.coalesce(func.sum(HeartTeamCase.tokens_input), 0)).scalar() or 0), "tokens_output": int(db.query(func.coalesce(func.sum(HeartTeamCase.tokens_output), 0)).scalar() or 0), "estimated_cost_micros": int(db.query(func.coalesce(func.sum(HeartTeamCase.estimated_cost_micros), 0)).scalar() or 0), "reserved_cost_micros": int(db.query(func.coalesce(func.sum(HeartTeamCase.reserved_cost_micros), 0)).scalar() or 0), "models": models, "average_latency_ms": int(sum(latencies) / len(latencies)) if latencies else 0, "subscribers": list(subscribers.values()), "limits": {"daily_cases": settings.heart_team_daily_case_limit, "monthly_cases": settings.heart_team_monthly_case_limit}}
 
 
 @admin_router.post("/retention/purge", dependencies=[Depends(_enabled)])

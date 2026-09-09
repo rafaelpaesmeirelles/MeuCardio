@@ -24,6 +24,8 @@ from app.services.ia import cardiovascular_exam_assist
 from app.services.ia.cardiovascular_exam_assist import ClinicalFile
 from app.services.ia.clinical_file_sanitizer import UnsafeClinicalFile, contains_identifier, sanitize_clinical_file
 
+from app.services.ia.usage_control import ai_usage_scope, AIUsageError
+
 router = APIRouter(prefix="/api/pacientes", tags=["prontuario-multimodal"])
 MAX_FILE_BYTES = 20 * 1024 * 1024
 MAX_CONTEXT_CHARS = 28_000
@@ -442,87 +444,88 @@ async def generate_multimodal_suggestion(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    _ensure_ai_available()
-    row = _exam_for_user(pid, exam_id, db, user)
-    question = request.clinical_question.strip()
-    if len(question) > 4000 or contains_identifier(question):
-        raise HTTPException(status_code=422, detail="A pergunta clínica deve ser desidentificada e ter no máximo 4000 caracteres.")
+    with ai_usage_scope(user.id, "exam_ai"):
+        _ensure_ai_available()
+        row = _exam_for_user(pid, exam_id, db, user)
+        question = request.clinical_question.strip()
+        if len(question) > 4000 or contains_identifier(question):
+            raise HTTPException(status_code=422, detail="A pergunta clínica deve ser desidentificada e ter no máximo 4000 caracteres.")
 
-    try:
-        original = cofre.ler(row.storage_key, row.id)
-        sanitized, sanitized_type = await run_in_threadpool(sanitize_clinical_file, original, row.media_type)
-    except FileNotFoundError as error:
-        raise HTTPException(status_code=404, detail="Arquivo do exame não encontrado.") from error
-    except (cofre.CofreIndisponivel, UnsafeClinicalFile) as error:
-        raise HTTPException(status_code=422, detail=str(error)) from error
+        try:
+            original = cofre.ler(row.storage_key, row.id)
+            sanitized, sanitized_type = await run_in_threadpool(sanitize_clinical_file, original, row.media_type)
+        except FileNotFoundError as error:
+            raise HTTPException(status_code=404, detail="Arquivo do exame não encontrado.") from error
+        except (cofre.CofreIndisponivel, UnsafeClinicalFile) as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
 
-    context = _chart_context(pid, db, user)
-    attempt_id = _reserve_quota(db, user, exam_id=row.id)
-    # A observação livre permanece cifrada e local no prontuário. A legenda
-    # externa usa apenas o tipo canônico do exame para não transferir texto
-    # potencialmente identificável que não passou pelo sanitizador clínico.
-    clinical_file = ClinicalFile(
-        content=sanitized,
-        media_type=sanitized_type,
-        file_id=f"exame-{row.id}",
-        label=cardiovascular_exam_assist.EXAM_TYPES[row.exam_type],
-    )
-    try:
-        analysis = await run_in_threadpool(
-            cardiovascular_exam_assist.analyze_exam,
-            [clinical_file], row.exam_type, question, "", context,
+        context = _chart_context(pid, db, user)
+        attempt_id = _reserve_quota(db, user, exam_id=row.id)
+        # A observação livre permanece cifrada e local no prontuário. A legenda
+        # externa usa apenas o tipo canônico do exame para não transferir texto
+        # potencialmente identificável que não passou pelo sanitizador clínico.
+        clinical_file = ClinicalFile(
+            content=sanitized,
+            media_type=sanitized_type,
+            file_id=f"exame-{row.id}",
+            label=cardiovascular_exam_assist.EXAM_TYPES[row.exam_type],
         )
-    except Exception as error:
-        db.rollback()
+        try:
+            analysis = await run_in_threadpool(
+                cardiovascular_exam_assist.analyze_exam,
+                [clinical_file], row.exam_type, question, "", context,
+            )
+        except Exception as error:
+            db.rollback()
+            db.add(AuditLog(
+                user_id=user.id,
+                action="ai_clinical_exam_transfer_outcome",
+                entity="patient_multimodal_exam_record",
+                entity_id=str(row.id),
+                detail={"mode": "longitudinal_patient_record", "transfer_attempt_id": attempt_id, "status": "provider_error", "error_type": type(error).__name__},
+            ))
+            db.commit()
+            raise HTTPException(status_code=502, detail=f"A análise multimodal não foi concluída ({type(error).__name__}). O exame original permanece preservado.") from error
+
+        payload = dict(analysis["payload"])
+        payload["disclaimer"] = (
+            "Sugestão assistiva gerada por IA com base no exame e no contexto longitudinal desidentificado. "
+            "Não é laudo, diagnóstico ou prescrição; não substitui julgamento, conduta nem decisão médica. "
+            "Qualquer incorporação ao prontuário exige revisão e aceitação explícita do médico responsável."
+        )
+        suggestion = PatientMultimodalAISuggestion(
+            owner_id=user.id,
+            patient_profile_id=pid,
+            exam_record_id=row.id,
+            requested_by=user.id,
+            status="generated",
+            payload_cifrado=b"",
+            provider=analysis["provider"],
+            model=analysis["model"],
+            prompt_version=analysis["prompt_version"],
+            tokens_input=analysis["tokens_input"],
+            tokens_output=analysis["tokens_output"],
+        )
+        db.add(suggestion)
+        db.flush()
+        suggestion.payload_cifrado = cofre.cifrar_campo(json.dumps({"payload": payload, "web_sources": analysis["web_sources"]}, ensure_ascii=False), suggestion.id)
+        db.add(AuditLog(
+            user_id=user.id,
+            action="generate_patient_multimodal_ai_suggestion",
+            entity="patient_multimodal_ai_suggestion",
+            entity_id=str(suggestion.id),
+            detail={"patient_profile_id": pid, "exam_record_id": row.id, "exam_type": row.exam_type, "source_count": len(analysis["web_sources"]), "transfer_attempt_id": attempt_id},
+        ))
         db.add(AuditLog(
             user_id=user.id,
             action="ai_clinical_exam_transfer_outcome",
             entity="patient_multimodal_exam_record",
             entity_id=str(row.id),
-            detail={"mode": "longitudinal_patient_record", "transfer_attempt_id": attempt_id, "status": "provider_error", "error_type": type(error).__name__},
+            detail={"mode": "longitudinal_patient_record", "transfer_attempt_id": attempt_id, "status": "success", "model": analysis["model"], "source_count": len(analysis["web_sources"])},
         ))
         db.commit()
-        raise HTTPException(status_code=502, detail=f"A análise multimodal não foi concluída ({type(error).__name__}). O exame original permanece preservado.") from error
-
-    payload = dict(analysis["payload"])
-    payload["disclaimer"] = (
-        "Sugestão assistiva gerada por IA com base no exame e no contexto longitudinal desidentificado. "
-        "Não é laudo, diagnóstico ou prescrição; não substitui julgamento, conduta nem decisão médica. "
-        "Qualquer incorporação ao prontuário exige revisão e aceitação explícita do médico responsável."
-    )
-    suggestion = PatientMultimodalAISuggestion(
-        owner_id=user.id,
-        patient_profile_id=pid,
-        exam_record_id=row.id,
-        requested_by=user.id,
-        status="generated",
-        payload_cifrado=b"",
-        provider=analysis["provider"],
-        model=analysis["model"],
-        prompt_version=analysis["prompt_version"],
-        tokens_input=analysis["tokens_input"],
-        tokens_output=analysis["tokens_output"],
-    )
-    db.add(suggestion)
-    db.flush()
-    suggestion.payload_cifrado = cofre.cifrar_campo(json.dumps({"payload": payload, "web_sources": analysis["web_sources"]}, ensure_ascii=False), suggestion.id)
-    db.add(AuditLog(
-        user_id=user.id,
-        action="generate_patient_multimodal_ai_suggestion",
-        entity="patient_multimodal_ai_suggestion",
-        entity_id=str(suggestion.id),
-        detail={"patient_profile_id": pid, "exam_record_id": row.id, "exam_type": row.exam_type, "source_count": len(analysis["web_sources"]), "transfer_attempt_id": attempt_id},
-    ))
-    db.add(AuditLog(
-        user_id=user.id,
-        action="ai_clinical_exam_transfer_outcome",
-        entity="patient_multimodal_exam_record",
-        entity_id=str(row.id),
-        detail={"mode": "longitudinal_patient_record", "transfer_attempt_id": attempt_id, "status": "success", "model": analysis["model"], "source_count": len(analysis["web_sources"])},
-    ))
-    db.commit()
-    db.refresh(suggestion)
-    return _dump_suggestion(suggestion)
+        db.refresh(suggestion)
+        return _dump_suggestion(suggestion)
 
 
 @router.post("/{pid}/exames-multimodais/{exam_id}/sugestoes/{suggestion_id}/revisao")

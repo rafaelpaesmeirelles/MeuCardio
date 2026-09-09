@@ -15,8 +15,12 @@ test("Heart Team uses the registered agent and case contract", () => {
     assert.match(page, new RegExp(`${field}:`));
     assert.match(schema, new RegExp(`${field}:`));
   }
-  assert.match(page, /confirm_deidentified: confirmDeidentified/);
-  assert.match(page, /confirm_medical_review: confirmMedicalReview/);
+  // Consent is submitted from the budget confirmation panel; behavior is
+  // exercised by check-heart-team-budget.test.mjs.
+  for (const field of ["confirm_deidentified", "confirm_medical_review", "quote_id", "approved_max_credit_centavos"]) {
+    assert.match(page, new RegExp(`${field}:`));
+    assert.match(schema, new RegExp(`${field}:`));
+  }
 });
 
 test("suggestions and final medical review cannot bypass human confirmation", () => {

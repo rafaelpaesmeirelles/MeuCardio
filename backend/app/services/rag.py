@@ -35,6 +35,8 @@ from app.models.rag import AIConversation, AIMessage, DocumentChunk, KnowledgeCh
 from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA, executar_tool_assistente
 from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
 
+from app.services.ia.usage_control import ai_operation
+
 log = logging.getLogger("corvia.rag")
 
 MAX_CHARS = 1400
@@ -249,6 +251,7 @@ def dividir(markdown: str) -> list[tuple[str | None, str]]:
     return compactado
 
 
+@ai_operation("catalog_index", owner=None, cost_center="catalog_index")
 def indexar_documento(db: Session, doc: Document, provedor=None, *, forcar: bool = False) -> int:
     """Upsert idempotente por CONTEÚDO, não só por presença de chunk.
 
@@ -445,6 +448,7 @@ def _rrf(listas: list[list[int]], k: int = 60) -> list[int]:
     return [i for i, _ in sorted(escore.items(), key=lambda x: -x[1])]
 
 
+@ai_operation("retrieval", owner=None, cost_center="retrieval")
 def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> list[dict]:
     # Import tardio: rag_multi importa rag (dividir/obter_provedor_embeddings)
     # — import no topo do arquivo criaria ciclo no boot do pacote.
@@ -1089,6 +1093,7 @@ def _preparar_por_modo(
     )
 
 
+@ai_operation(lambda args: "personal_ai" if args.get("modo") == "pessoal" else "clinical_ai")
 def perguntar(
     db: Session,
     pergunta: str,
@@ -1133,6 +1138,7 @@ def perguntar(
     }
 
 
+@ai_operation(lambda args: "personal_ai" if args.get("modo") == "pessoal" else "clinical_ai")
 def perguntar_stream(
     db: Session,
     pergunta: str,

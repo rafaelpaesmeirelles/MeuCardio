@@ -16,6 +16,8 @@ from app.models.scientific_user_document import ScientificUserDocument
 from app.services import cofre
 from app.services import scientific_document_ai as engine
 
+from app.services.ia.usage_control import ai_usage_scope, AIUsageError
+
 router = APIRouter(prefix="/api/documentos-cientificos-ia", tags=["documentos-cientificos-ia"])
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
@@ -224,71 +226,73 @@ async def analyze_document(
     db: Session = Depends(get_db),
     user=Depends(current_user),
 ):
-    row = _row_for_user(document_id, db, user)
-    if row.analysis_status == "processando":
-        raise HTTPException(status_code=409, detail="Este documento já está em análise.")
-    row.analysis_status = "processando"
-    row.analysis_error = None
-    db.commit()
-    try:
-        content = cofre.ler(row.storage_key, row.id, raiz=engine.private_root())
-        extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
-        analysis = await run_in_threadpool(engine.analyze_text, extracted)
-        duplicate = engine.find_duplicate(db, analysis)
-        traceable = engine.has_traceable_source(analysis)
-        if duplicate:
-            analysis["adds_to_corvia"] = False
-            analysis["incorporation_reason_pt"] = f"Documento já representado no acervo CorVIA por {duplicate.title}."
-            row.incorporation_status = "duplicado"
-            row.incorporated_document_id = duplicate.id
-        elif analysis.get("adds_to_corvia") and traceable:
-            row.incorporation_status = "aguardando_consentimento"
-        else:
-            if analysis.get("adds_to_corvia") and not traceable:
-                analysis["incorporation_reason_pt"] = (
-                    "O documento pode acrescentar conhecimento, mas DOI/URL de fonte rastreável não foi identificado no próprio arquivo. "
-                    "Ele permanece na biblioteca privada e não será incorporado automaticamente ao acervo compartilhado."
-                )
-            row.incorporation_status = "nao_recomendado"
-
-        translated = ""
-        if analysis.get("needs_translation"):
-            translated = await run_in_threadpool(engine.translate_full_text, extracted)
-        row.extracted_text_cifrado = cofre.cifrar_campo(extracted, row.id)
-        row.translated_text_cifrado = cofre.cifrar_campo(translated, row.id) if translated else None
-        row.analysis_cifrado = cofre.cifrar_campo(json.dumps(analysis, ensure_ascii=False), row.id)
-        row.display_title_cifrado = cofre.cifrar_campo(str(analysis.get("title") or _title(row)), row.id)
-        row.document_type = str(analysis.get("document_type") or "outro")[:40]
-        row.language = str(analysis.get("language") or "")[:20] or None
-        row.doi = str(analysis.get("doi") or "").strip()[:160] or None
-        row.source_url = str(analysis.get("source_url") or "").strip() or None
-        row.incorporation_recommended = bool(analysis.get("adds_to_corvia")) and duplicate is None and traceable
-        row.analysis_status = "concluido"
-        db.add(AuditLog(
-            user_id=user.id,
-            action="analyze_private_scientific_document",
-            entity="scientific_user_document",
-            entity_id=str(row.id),
-            detail={"document_type": row.document_type, "language": row.language, "incorporation_recommended": row.incorporation_recommended, "traceable_source": traceable, "duplicate_document_id": duplicate.id if duplicate else None},
-        ))
-        db.commit()
-    except Exception as error:
-        db.rollback()
+    with ai_usage_scope(user.id, "scientific_document_ai"):
         row = _row_for_user(document_id, db, user)
-        row.analysis_status = "erro"
-        row.analysis_error = type(error).__name__[:160]
-        db.add(AuditLog(
-            user_id=user.id,
-            action="analyze_private_scientific_document_failed",
-            entity="scientific_user_document",
-            entity_id=str(row.id),
-            detail={"error_type": type(error).__name__},
-        ))
+        if row.analysis_status == "processando":
+            raise HTTPException(status_code=409, detail="Este documento já está em análise.")
+        row.analysis_status = "processando"
+        row.analysis_error = None
         db.commit()
-        if isinstance(error, ValueError):
-            raise HTTPException(status_code=422, detail=str(error)) from error
-        raise HTTPException(status_code=502, detail=f"A análise científica não foi concluída ({type(error).__name__}). O original privado foi preservado.") from error
-    return _dump(row, detail=True)
+        try:
+            content = cofre.ler(row.storage_key, row.id, raiz=engine.private_root())
+            extracted = await run_in_threadpool(engine.extract_text, content, row.media_type)
+            engine.plan_document(extracted)
+            analysis = await run_in_threadpool(engine.analyze_text, extracted)
+            duplicate = engine.find_duplicate(db, analysis)
+            traceable = engine.has_traceable_source(analysis)
+            if duplicate:
+                analysis["adds_to_corvia"] = False
+                analysis["incorporation_reason_pt"] = f"Documento já representado no acervo CorVIA por {duplicate.title}."
+                row.incorporation_status = "duplicado"
+                row.incorporated_document_id = duplicate.id
+            elif analysis.get("adds_to_corvia") and traceable:
+                row.incorporation_status = "aguardando_consentimento"
+            else:
+                if analysis.get("adds_to_corvia") and not traceable:
+                    analysis["incorporation_reason_pt"] = (
+                        "O documento pode acrescentar conhecimento, mas DOI/URL de fonte rastreável não foi identificado no próprio arquivo. "
+                        "Ele permanece na biblioteca privada e não será incorporado automaticamente ao acervo compartilhado."
+                    )
+                row.incorporation_status = "nao_recomendado"
+
+            translated = ""
+            if analysis.get("needs_translation"):
+                translated = await run_in_threadpool(engine.translate_full_text, extracted)
+            row.extracted_text_cifrado = cofre.cifrar_campo(extracted, row.id)
+            row.translated_text_cifrado = cofre.cifrar_campo(translated, row.id) if translated else None
+            row.analysis_cifrado = cofre.cifrar_campo(json.dumps(analysis, ensure_ascii=False), row.id)
+            row.display_title_cifrado = cofre.cifrar_campo(str(analysis.get("title") or _title(row)), row.id)
+            row.document_type = str(analysis.get("document_type") or "outro")[:40]
+            row.language = str(analysis.get("language") or "")[:20] or None
+            row.doi = str(analysis.get("doi") or "").strip()[:160] or None
+            row.source_url = str(analysis.get("source_url") or "").strip() or None
+            row.incorporation_recommended = bool(analysis.get("adds_to_corvia")) and duplicate is None and traceable
+            row.analysis_status = "concluido"
+            db.add(AuditLog(
+                user_id=user.id,
+                action="analyze_private_scientific_document",
+                entity="scientific_user_document",
+                entity_id=str(row.id),
+                detail={"document_type": row.document_type, "language": row.language, "incorporation_recommended": row.incorporation_recommended, "traceable_source": traceable, "duplicate_document_id": duplicate.id if duplicate else None},
+            ))
+            db.commit()
+        except Exception as error:
+            db.rollback()
+            row = _row_for_user(document_id, db, user)
+            row.analysis_status = "erro"
+            row.analysis_error = type(error).__name__[:160]
+            db.add(AuditLog(
+                user_id=user.id,
+                action="analyze_private_scientific_document_failed",
+                entity="scientific_user_document",
+                entity_id=str(row.id),
+                detail={"error_type": type(error).__name__},
+            ))
+            db.commit()
+            if isinstance(error, ValueError):
+                raise HTTPException(status_code=422, detail=str(error)) from error
+            raise HTTPException(status_code=502, detail=f"A análise científica não foi concluída ({type(error).__name__}). O original privado foi preservado.") from error
+        return _dump(row, detail=True)
 
 
 @router.post("/{document_id}/incorporar")
