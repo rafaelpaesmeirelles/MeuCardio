@@ -58,3 +58,23 @@ Foi removida a imagem progressiva de fallback, junto com o download duplicado.
   Comando: `node --test scripts/check-login-galaxy-loading.test.mjs` (1 aprovado).
 - TypeScript e build Vite aprovados; conferência visual dos dois temas realizada.
   Nenhuma suíte de CI/backend executada nesta correção.
+# Galáxia escura visível durante falha ou demora de rede — 09/09
+
+O canvas ficava oculto até a textura terminar de baixar/decodificar. Se o arquivo
+atrasasse ou falhasse, restavam apenas o coração e as órbitas. Agora os dois temas
+incluem um primeiro quadro completo no próprio módulo do login (data URI), com a
+mesma projeção da animação. A troca ocorre de uma vez, só depois do primeiro
+quadro animado estar pronto. Falhas transitórias têm uma nova tentativa limitada;
+se persistirem, a imagem completa continua visível.
+
+- Textura escura reduzida de 304.046 para 191.498 bytes, mantendo a transparência.
+  Diferença média por canal, composta no fundo escuro: inferior a 0,63/255.
+- Imagem inicial escura mantém canal alfa; a clara usa o branco neutro da
+  composição multiply existente. Layout, cores e geometria aprovados mantidos.
+- Verificação do componente ampliada para cobrir duas falhas de download,
+  tentativa limitada e permanência da galáxia inicial: aprovada.
+- Conferência visual do build real em servidor local que responde 503 aos
+  arquivos da animação: galáxias visíveis e completas nos dois temas.
+- Conferência visual da animação escura com download normal: canvas pronto e
+  imagem inicial retirada corretamente. TypeScript e build Vite aprovados.
+- Nenhuma suíte de CI/backend executada.

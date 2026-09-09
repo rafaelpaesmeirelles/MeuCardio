@@ -1,20 +1,27 @@
 import { useEffect, useRef } from "react";
 import lightSource from "../assets/login/galaxy-light.webp";
 import darkSource from "../assets/login/galaxy-dark.webp";
+import { darkGalaxyPoster, lightGalaxyPoster } from "../assets/loginGalaxyPosters";
 import type { CorviaTheme } from "../lib/corviaTheme";
 
 // Share one download/decode across theme switches and React remounts.
 // Vite gives these files content hashes and the server caches /assets immutably.
 const decodedImages = new Map<string, Promise<HTMLImageElement>>();
 
-function loadGalaxy(source: string) {
-  const cached = decodedImages.get(source);
-  if (cached) return cached;
+function decodeGalaxy(source: string) {
   const image = new Image();
   image.decoding = "async";
   image.fetchPriority = "high";
   image.src = source;
-  const decoded = image.decode().then(() => image).catch((error: unknown) => {
+  return image.decode().then(() => image);
+}
+
+function loadGalaxy(source: string) {
+  const cached = decodedImages.get(source);
+  if (cached) return cached;
+  // A transient download/decode failure gets one fresh attempt. The embedded
+  // complete frame stays visible even if both attempts fail.
+  const decoded = decodeGalaxy(source).catch(() => decodeGalaxy(source)).catch((error: unknown) => {
     decodedImages.delete(source);
     throw error;
   });
@@ -24,9 +31,11 @@ function loadGalaxy(source: string) {
 
 export default function LoginGalaxy({ theme }: { theme: CorviaTheme }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const posterRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const poster = posterRef.current;
     if (!canvas) return;
     const context = canvas.getContext("2d", { alpha: true });
     if (!context) return;
@@ -96,11 +105,11 @@ export default function LoginGalaxy({ theme }: { theme: CorviaTheme }) {
         draw(performance.now());
       };
       draw(startedAt);
-      // Reveal only the complete, projected frame. No progressive image or
-      // raw-photo fallback can flash while downloading; no DOM writes per frame.
+      // Swap two complete frames with the same projection, in one paint.
       canvas.dataset.ready = "true";
+      if (poster) poster.dataset.replaced = "true";
     }).catch(() => {
-      // The decorative image must never prevent entering the application.
+      // Keep the embedded galaxy visible; never block access to the login.
     });
 
     return () => {
@@ -111,5 +120,18 @@ export default function LoginGalaxy({ theme }: { theme: CorviaTheme }) {
     };
   }, [theme]);
 
-  return <canvas key={theme} ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />;
+  return <>
+    <img
+      key={`poster-${theme}`}
+      ref={posterRef}
+      className="login-gateway__galaxy-poster"
+      src={theme === "dark" ? darkGalaxyPoster : lightGalaxyPoster}
+      width={683}
+      height={theme === "dark" ? 386 : 231}
+      alt=""
+      aria-hidden="true"
+      draggable={false}
+    />
+    <canvas key={theme} ref={canvasRef} className="login-gateway__galaxy-canvas" aria-hidden="true" />
+  </>;
 }

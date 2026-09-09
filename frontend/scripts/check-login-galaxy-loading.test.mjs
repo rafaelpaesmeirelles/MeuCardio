@@ -10,7 +10,8 @@ import { transform } from "esbuild";
 test("login shows only decoded frames, reuses downloads and cancels stale work", async () => {
   const source = (await readFile(new URL("../src/components/LoginGalaxy.tsx", import.meta.url), "utf8"))
     .replace(/import lightSource[^;]+;/, 'const lightSource = "/assets/light.webp";')
-    .replace(/import darkSource[^;]+;/, 'const darkSource = "/assets/dark.webp";');
+    .replace(/import darkSource[^;]+;/, 'const darkSource = "/assets/dark.webp";')
+    .replace(/import \{ darkGalaxyPoster, lightGalaxyPoster \}[^;]+;/, 'const darkGalaxyPoster = "data:image/webp;base64,dark"; const lightGalaxyPoster = "data:image/webp;base64,light";');
   const transformed = await transform(source, { loader: "tsx", format: "cjs", jsx: "automatic" });
   const module = { exports: {} };
   const { createRequire } = await import("node:module");
@@ -20,6 +21,7 @@ test("login shows only decoded frames, reuses downloads and cancels stale work",
   const originals = Object.fromEntries(["Image", "window", "document", "requestAnimationFrame", "cancelAnimationFrame"].map(key => [key, globalThis[key]]));
   const images = [];
   const visibleCanvases = [];
+  const posters = [];
   const frames = new Map();
   const visibilityListeners = new Set();
   const motionListeners = new Set();
@@ -45,11 +47,15 @@ test("login shows only decoded frames, reuses downloads and cancels stale work",
   try {
     await act(async () => {
       renderer = TestRenderer.create(React.createElement(Galaxy, { theme: "light" }), {
-        createNodeMock: () => { const canvas = makeCanvas(); visibleCanvases.push(canvas); return canvas; },
+        createNodeMock: (node) => {
+          if (node.type === "img") { const poster = { dataset: {} }; posters.push(poster); return poster; }
+          const canvas = makeCanvas(); visibleCanvases.push(canvas); return canvas;
+        },
       });
     });
     assert.equal(images.length, 1);
-    assert.equal(renderer.root.findAllByType("img").length, 0, "never expose a progressive/raw image");
+    assert.match(renderer.root.findByType("img").props.src, /^data:image\/webp;base64,/, "the initial complete frame needs no network request");
+    assert.equal(posters[0].dataset.replaced, undefined, "the galaxy is present while downloading");
     assert.equal(visibleCanvases[0].dataset.ready, undefined);
     assert.equal(visibleCanvases[0].calls.length, 0, "partial dimensions do not count as decoded pixels");
 
@@ -60,6 +66,7 @@ test("login shows only decoded frames, reuses downloads and cancels stale work",
     await act(async () => images[1].finish());
     const darkCanvas = visibleCanvases.at(-1);
     assert.equal(darkCanvas.dataset.ready, "true");
+    assert.equal(posters.at(-1).dataset.replaced, "true", "replace the poster only after a complete animated frame");
     assert.ok(darkCanvas.calls.some(([name]) => name === "drawImage"));
     for (let i = 0; i < 6; i++) {
       const scheduled = [...frames.values()]; frames.clear();
@@ -84,6 +91,26 @@ test("login shows only decoded frames, reuses downloads and cancels stale work",
     assert.equal(frames.size, 0);
     assert.equal(visibilityListeners.size, 0);
     assert.equal(motionListeners.size, 0);
+
+    // A fresh URL models a failed asset in the reported dark first load.
+    const failedModule = { exports: {} };
+    new Function("require", "module", "exports", transformed.code)(require, failedModule, failedModule.exports);
+    await act(async () => {
+      renderer = TestRenderer.create(React.createElement(failedModule.exports.default, { theme: "dark" }), {
+        createNodeMock: node => {
+          if (node.type === "img") { const poster = { dataset: {} }; posters.push(poster); return poster; }
+          const canvas = makeCanvas(); visibleCanvases.push(canvas); return canvas;
+        },
+      });
+    });
+    const beforeFailure = images.length;
+    await act(async () => images.at(-1).fail(new Error("network failure")));
+    assert.equal(images.length, beforeFailure + 1, "retry the failed download once");
+    await act(async () => images.at(-1).fail(new Error("still offline")));
+    assert.equal(images.length, beforeFailure + 1, "do not retry indefinitely");
+    assert.equal(visibleCanvases.at(-1).dataset.ready, undefined);
+    assert.equal(posters.at(-1).dataset.replaced, undefined, "dark galaxy remains visible even when animation cannot load");
+    assert.match(renderer.root.findByType("img").props.src, /^data:image\/webp;base64,dark$/);
   } finally {
     if (renderer) await act(async () => renderer.unmount());
     for (const [key, value] of Object.entries(originals)) {

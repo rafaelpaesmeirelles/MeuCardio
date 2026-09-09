@@ -14,10 +14,29 @@
 }
 #root #corvia-login .login-gateway__galaxy-canvas {
   object-fit: contain !important;
-  transition: opacity 160ms ease-out !important;
+  transition: none !important;
 }
-@media (prefers-reduced-motion: reduce) {
-  #root #corvia-login .login-gateway__galaxy-canvas { transition: none !important; }
+#root #corvia-login .login-gateway__galaxy-poster {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+#root #corvia-login.login-gateway--dark .login-gateway__galaxy-poster {
+  opacity: .94 !important;
+  filter: saturate(.95) brightness(1.04) !important;
+}
+#root #corvia-login .login-gateway__galaxy-poster[data-replaced="true"] {
+  visibility: hidden !important;
 }
 #root #corvia-login .login-gateway__universe::before { height: 220px !important; }
 #root #corvia-login .login-gateway__universe::after { height: 180px !important; }
