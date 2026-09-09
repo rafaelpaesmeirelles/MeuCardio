@@ -1,12 +1,45 @@
 ---
-title: "Tromboprofilaxia Farmacológica Pós-Cesárea: a Lacuna de Evidência Randomizada e os Ensaios-Piloto de 2024-2026"
-slug: tromboprofilaxia-farmacologica-pos-cesarea-a-lacuna-de-evidencia-randomizada-e-os-ensaios-piloto
-theme: "Tromboembolismo"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A biblioteca já cobria anticoagulantes
+  na gestação/lactação de forma geral (bula registrada) e profilaxia estendida no
+  paciente clínico hospitalizado (escore de Padua), mas nenhum documento tratava especificamente
+  da profilaxia farmacológica pós-cesárea — a decisão mais frequente do dia a dia
+  obstétrico envolvendo tromboembolismo — nem do fato, pouco divulgado fora da literatura
+  especializada, de que essa prática amplamente adotada carece de ensaio randomizado
+  definitivo. Três ensaios-piloto de viabilidade (2024-2026) e uma revisão crítica
+  (2025) mais uma revisão narrativa ampla da AJOG (2026) documentam essa lacuna diretamente.
+  Conferido antes de escrever que nenhum outro documento desta pasta cita PARTUM,
+  PP-HEP ou o piloto de Utah.
+published: true
 review_status: revisado
-published: false
-source_refs: ["Federspiel JJ, Rodger MA, Hoffman MR, Skeith L, Ortel TL, Bruno AM, James AH. Postoperative venous thromboembolism following cesarean delivery: prevalence, pathophysiology, diagnosis, treatment, and prevention. Am J Obstet Gynecol. 2026;233(6S):S404-S424. DOI: 10.1016/j.ajog.2025.07.055. PMID: 41485833 — revisão narrativa, resumo estruturado conferido via PubMed E-utilities (esearch + efetch) em 08/09/2026", "Rath W, Tsikouras P, Pecks U. Pharmacologic thromboprophylaxis following cesarean delivery-what is the evidence? A critical reappraisal. J Perinat Med. 2025;53(5):553-560. DOI: 10.1515/jpm-2025-0041. PMID: 40123282 — resumo estruturado conferido via PubMed E-utilities", "Skeith L, Malinowski AK, El-Chaâr D, Chan WS, Donnelly J, et al; Pilot PARTUM Group. Low-dose aspirin versus placebo in postpartum venous thromboembolism: a multi-national, pilot, randomised, placebo-controlled trial. Lancet Haematol. 2025;12(2):e109-e119. DOI: 10.1016/S2352-3026(24)00338-7. PMID: 39827892 — NCT04153760, 257 pacientes; há errata publicada (Lancet Haematol. 2025;12(3):e175, DOI 10.1016/S2352-3026(25)00031-6) — existe e NÃO foi lida nesta redação, declarada em vez de omitida", "Blondon M, Claver M, Celetta E, Righini M, de Tejada BM. Preventing Postpartum Venous Thromboembolism With Low-Molecular-Weight Heparin: The PP-HEP Pilot Randomised Controlled Trial. BJOG. 2025;132(1):35-43. DOI: 10.1111/1471-0528.17943. PMID: 39238110 — NCT05878899, 77 pacientes", "Bruno AM, Allshouse AA, Branch DW, Silver RM, Metz TD. Low Molecular Weight Heparin Thromboprophylaxis or No Treatment following Cesarean Delivery: A Pilot Randomized Controlled Trial. Am J Perinatol. 2026;43(10):1328-1334. DOI: 10.1055/a-2753-9286. Epub 2025 Nov 25. PMID: 41290205 — 64 pacientes"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A biblioteca já cobria anticoagulantes na gestação/lactação de forma geral (bula registrada) e profilaxia estendida no paciente clínico hospitalizado (escore de Padua), mas nenhum documento tratava especificamente da profilaxia farmacológica pós-cesárea — a decisão mais frequente do dia a dia obstétrico envolvendo tromboembolismo — nem do fato, pouco divulgado fora da literatura especializada, de que essa prática amplamente adotada carece de ensaio randomizado definitivo. Três ensaios-piloto de viabilidade (2024-2026) e uma revisão crítica (2025) mais uma revisão narrativa ampla da AJOG (2026) documentam essa lacuna diretamente. Conferido antes de escrever que nenhum outro documento desta pasta cita PARTUM, PP-HEP ou o piloto de Utah."
+slug: tromboprofilaxia-farmacologica-pos-cesarea-a-lacuna-de-evidencia-randomizada-e-os-ensaios-piloto
+source_refs:
+- 'Federspiel JJ, Rodger MA, Hoffman MR, Skeith L, Ortel TL, Bruno AM, James AH. Postoperative
+  venous thromboembolism following cesarean delivery: prevalence, pathophysiology,
+  diagnosis, treatment, and prevention. Am J Obstet Gynecol. 2026;233(6S):S404-S424.
+  DOI: 10.1016/j.ajog.2025.07.055. PMID: 41485833 — revisão narrativa, resumo estruturado
+  conferido via PubMed E-utilities (esearch + efetch) em 08/09/2026'
+- 'Rath W, Tsikouras P, Pecks U. Pharmacologic thromboprophylaxis following cesarean
+  delivery-what is the evidence? A critical reappraisal. J Perinat Med. 2025;53(5):553-560.
+  DOI: 10.1515/jpm-2025-0041. PMID: 40123282 — resumo estruturado conferido via PubMed
+  E-utilities'
+- 'Skeith L, Malinowski AK, El-Chaâr D, Chan WS, Donnelly J, et al; Pilot PARTUM Group.
+  Low-dose aspirin versus placebo in postpartum venous thromboembolism: a multi-national,
+  pilot, randomised, placebo-controlled trial. Lancet Haematol. 2025;12(2):e109-e119.
+  DOI: 10.1016/S2352-3026(24)00338-7. PMID: 39827892 — NCT04153760, 257 pacientes;
+  há errata publicada (Lancet Haematol. 2025;12(3):e175, DOI 10.1016/S2352-3026(25)00031-6)
+  — existe e NÃO foi lida nesta redação, declarada em vez de omitida'
+- 'Blondon M, Claver M, Celetta E, Righini M, de Tejada BM. Preventing Postpartum
+  Venous Thromboembolism With Low-Molecular-Weight Heparin: The PP-HEP Pilot Randomised
+  Controlled Trial. BJOG. 2025;132(1):35-43. DOI: 10.1111/1471-0528.17943. PMID: 39238110
+  — NCT05878899, 77 pacientes'
+- 'Bruno AM, Allshouse AA, Branch DW, Silver RM, Metz TD. Low Molecular Weight Heparin
+  Thromboprophylaxis or No Treatment following Cesarean Delivery: A Pilot Randomized
+  Controlled Trial. Am J Perinatol. 2026;43(10):1328-1334. DOI: 10.1055/a-2753-9286.
+  Epub 2025 Nov 25. PMID: 41290205 — 64 pacientes'
+theme: Tromboembolismo
+title: 'Tromboprofilaxia Farmacológica Pós-Cesárea: a Lacuna de Evidência Randomizada
+  e os Ensaios-Piloto de 2024-2026'
 ---
 
 # Tromboprofilaxia Farmacológica Pós-Cesárea: a Lacuna de Evidência Randomizada e os Ensaios-Piloto de 2024-2026

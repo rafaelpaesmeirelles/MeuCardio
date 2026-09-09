@@ -331,10 +331,13 @@ test("o GalaxyThemeToggle mantém a imagem canônica transparente e o canvas da 
   assert.match(home, /<GalaxyThemeToggle className="spaces-choice__theme-toggle" showLabel clockwise \/>/);
   assert.match(toggle, />Mudar universo<\/span>/);
   assert.match(miniUniverse, /const rotationDirection = clockwise \? 1 : -1/);
+  assert.match(toggle, /clockwise = true/);
+  assert.match(miniUniverse, /clockwise = true/);
+  assert.match(miniUniverse, /const durationMs = 240_000/);
   assert.match(consistencyStyles, /corvia-choice-mini-universe-clockwise[\s\S]*?rotate\(360deg\)/);
   assert.match(internalStyles, /background:\s*transparent !important/);
-  assert.match(internalStyles, /animation:\s*corvia-internal-galaxy-ccw 120s linear infinite !important/);
-  assert.match(internalStyles, /@keyframes corvia-internal-galaxy-ccw[\s\S]*?rotate\(-360deg\)/);
+  assert.match(internalStyles, /animation:\s*corvia-internal-galaxy-cw 240s linear infinite !important/);
+  assert.match(internalStyles, /@keyframes corvia-internal-galaxy-cw[\s\S]*?rotate\(360deg\)/);
   assert.match(internalStyles, /html\[data-corvia-theme="light"\] \.galaxy-theme-toggle__image[\s\S]*?mix-blend-mode:\s*normal !important/);
   assert.match(assetFixStyles, /prefers-reduced-motion:\s*reduce/);
 });

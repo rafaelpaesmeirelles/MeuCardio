@@ -1,19 +1,47 @@
 ---
-title: "Decisão Compartilhada entre TAVI e Troca Cirúrgica da Valva Aórtica: o Piloto que Testou a Ferramenta e o Estudo IMPACT SDM que Testa a Implementação"
-slug: decisao-compartilhada-entre-tavi-e-troca-cirurgica-da-valva-aortica-o-estudo-impact-sdm
-theme: "Comunicação clínica"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. Esta pasta já cobre ferramentas
+  de decisão compartilhada validadas para angioplastia eletiva (PCI-CHOICE), LVAD
+  de terapia de destino (DECIDE-LVAD), fechamento de apêndice atrial esquerdo e fragilidade/decisão
+  em procedimento de alto risco no idoso, mas nenhum documento tratava especificamente
+  da decisão entre TAVI e troca cirúrgica da valva aórtica (SAVR). Diretrizes americanas
+  recomendam decisão compartilhada com a equipe de valva; a cobertura CMS vigente
+  exige avaliações independentes do heart team, enquanto a proposta CMS de 2026 apoia
+  a decisão compartilhada e encoraja ferramentas padronizadas, sem exigir uma ferramenta
+  específica. A ferramenta e sua implementação começaram a ser testadas com maior
+  rigor no piloto de 2022 e no protocolo multicêntrico de 2024.
+published: true
+review_note: 'Revisão clínica e editorial concluída em 08/09/2026. Os dois PMIDs foram
+  confirmados no PubMed; o registro NCT06171737 foi conferido no ClinicalTrials.gov
+  (status verificado em 06/2025: enrolling by invitation, n=1.300 estimado, conclusão
+  primária estimada em 05/2027, sem resultados); e o contexto regulatório foi conferido
+  na NCD 20.32 vigente e na proposta CMS CAG-00430R2 de 15/06/2026.'
 review_status: revisado
-published: false
-review_note: "Revisão clínica e editorial concluída em 08/09/2026. Os dois PMIDs foram confirmados no PubMed; o registro NCT06171737 foi conferido no ClinicalTrials.gov (status verificado em 06/2025: enrolling by invitation, n=1.300 estimado, conclusão primária estimada em 05/2027, sem resultados); e o contexto regulatório foi conferido na NCD 20.32 vigente e na proposta CMS CAG-00430R2 de 15/06/2026."
-source_refs: ["Valentine KD, Marques F, Selberg A, Flannery L, Langer N, Inglessis I, Passeri J, Sundt T, Sepucha K, Elmariah S. Impact of Decision Aid on Decision-making of Patients With Severe Aortic Stenosis: Randomized Pilot Study. J Soc Cardiovasc Angiogr Interv. 2022;1(2):100025. DOI: 10.1016/j.jscai.2022.100025. PMID: 39132569", "Sepucha K, Elmariah S, Valentine KD, Cavender MA, Chang Y, Devireddy CM, Dickert NW, Gama KD, Knoepke CE, Korngold E, Kumbhani DJ, Matlock DD, Messenger JC, Strong S, Thourani VH, Nathan A, Quader N, Brescia AA. The IMproving treatment decisions for Patients with AortiC stenosis Through Shared Decision Making (IMPACT SDM) Study: study protocol for a cluster randomized stepped wedge trial. Trials. 2024;25(1):820. DOI: 10.1186/s13063-024-08640-6. PMID: 39696639", "ClinicalTrials.gov. NCT06171737 (IMPACT SDM), registro conferido em 08/09/2026: https://clinicaltrials.gov/study/NCT06171737", "Centers for Medicare & Medicaid Services. NCD 20.32 e Proposed Decision Memo CAG-00430R2, 15/06/2026: https://www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo.aspx?ncaid=321&proposed=Y"]
-legacy_source: "Documento novo, escrito em 08/09/2026. Esta pasta já cobre ferramentas de decisão compartilhada validadas para angioplastia eletiva (PCI-CHOICE), LVAD de terapia de destino (DECIDE-LVAD), fechamento de apêndice atrial esquerdo e fragilidade/decisão em procedimento de alto risco no idoso, mas nenhum documento tratava especificamente da decisão entre TAVI e troca cirúrgica da valva aórtica (SAVR). Diretrizes americanas recomendam decisão compartilhada com a equipe de valva; a cobertura CMS vigente exige avaliações independentes do heart team, enquanto a proposta CMS de 2026 apoia a decisão compartilhada e encoraja ferramentas padronizadas, sem exigir uma ferramenta específica. A ferramenta e sua implementação começaram a ser testadas com maior rigor no piloto de 2022 e no protocolo multicêntrico de 2024."
+slug: decisao-compartilhada-entre-tavi-e-troca-cirurgica-da-valva-aortica-o-estudo-impact-sdm
+source_refs:
+- 'Valentine KD, Marques F, Selberg A, Flannery L, Langer N, Inglessis I, Passeri
+  J, Sundt T, Sepucha K, Elmariah S. Impact of Decision Aid on Decision-making of
+  Patients With Severe Aortic Stenosis: Randomized Pilot Study. J Soc Cardiovasc Angiogr
+  Interv. 2022;1(2):100025. DOI: 10.1016/j.jscai.2022.100025. PMID: 39132569'
+- 'Sepucha K, Elmariah S, Valentine KD, Cavender MA, Chang Y, Devireddy CM, Dickert
+  NW, Gama KD, Knoepke CE, Korngold E, Kumbhani DJ, Matlock DD, Messenger JC, Strong
+  S, Thourani VH, Nathan A, Quader N, Brescia AA. The IMproving treatment decisions
+  for Patients with AortiC stenosis Through Shared Decision Making (IMPACT SDM) Study:
+  study protocol for a cluster randomized stepped wedge trial. Trials. 2024;25(1):820.
+  DOI: 10.1186/s13063-024-08640-6. PMID: 39696639'
+- 'ClinicalTrials.gov. NCT06171737 (IMPACT SDM), registro conferido em 08/09/2026:
+  https://clinicaltrials.gov/study/NCT06171737'
+- 'Centers for Medicare & Medicaid Services. NCD 20.32 e Proposed Decision Memo CAG-00430R2,
+  15/06/2026: https://www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo.aspx?ncaid=321&proposed=Y'
+theme: Comunicação clínica
+title: 'Decisão Compartilhada entre TAVI e Troca Cirúrgica da Valva Aórtica: o Piloto
+  que Testou a Ferramenta e o Estudo IMPACT SDM que Testa a Implementação'
 ---
 
 # Decisão Compartilhada entre TAVI e Troca Cirúrgica da Valva Aórtica: o Piloto que Testou a Ferramenta e o Estudo IMPACT SDM que Testa a Implementação
 
 ## Por que esta decisão específica exige uma ferramenta própria
-Desde que os ensaios de baixo risco (PARTNER 3, Evolut Low Risk) estenderam a indicação de TAVI a pacientes mais jovens e de menor risco cirúrgico, a escolha entre **implante transcateter de valva aórtica (TAVI)** e **troca cirúrgica da valva aórtica (SAVR)** deixou de ter uma resposta óbvia guiada só por escore de risco — ver `escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia.md` e `tavi-baixo-risco-6-7-anos-durabilidade-valvar-partner3-evolut-low-risk.md`, nesta base. As diretrizes ACC/AHA recomendam decisão compartilhada com a equipe de valva. No plano regulatório, a NCD 20.32 vigente exige avaliações independentes por cardiologista intervencionista e cirurgião; a proposta CMS CAG-00430R2 de 2026 apoia a decisão compartilhada e encoraja ferramentas padronizadas, mas reconhece que não há ferramenta plenamente desenvolvida e **não exige uma ferramenta específica**. Os estudos revisados aqui avaliam justamente uma ferramenta e uma estratégia de implementação.
+Desde que os ensaios de baixo risco (PARTNER 3, Evolut Low Risk) estenderam a indicação de TAVI a pacientes mais jovens e de menor risco cirúrgico, a escolha entre **implante transcateter de valva aórtica (TAVI)** e **troca cirúrgica da valva aórtica (SAVR)** deixou de ter uma resposta óbvia guiada só por escore de risco — ver [Escore STS: Cortes de Risco e a Decisão do Heart Team entre TAVI e Cirurgia](/biblioteca/escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia) e [TAVI em Baixo Risco, 6–7 Anos: Durabilidade Valvar Divergente entre SAPIEN 3 (PARTNER 3) e Autoexpansível (Evolut Low Risk)](/biblioteca/tavi-baixo-risco-6-7-anos-durabilidade-valvar-partner3-evolut-low-risk), nesta base. As diretrizes ACC/AHA recomendam decisão compartilhada com a equipe de valva. No plano regulatório, a NCD 20.32 vigente exige avaliações independentes por cardiologista intervencionista e cirurgião; a proposta CMS CAG-00430R2 de 2026 apoia a decisão compartilhada e encoraja ferramentas padronizadas, mas reconhece que não há ferramenta plenamente desenvolvida e **não exige uma ferramenta específica**. Os estudos revisados aqui avaliam justamente uma ferramenta e uma estratégia de implementação.
 
 ## O piloto (2022): sinal preliminar sobre conhecimento e comunicação
 Valentine KD et al., publicado no *Journal of the Society for Cardiovascular Angiography & Interventions* (2022;1(2):100025, PMID 39132569), conduziram um **ensaio piloto randomizado, aprovado por comitê de ética**, em pacientes elegíveis para TAVI ou SAVR por estenose aórtica (EA) grave, em centro único (Massachusetts General Hospital):
@@ -56,10 +84,10 @@ Sepucha K et al., publicado em *Trials* (2024;25(1):820, PMID 39696639, NCT06171
 - **Confundir "usar a ferramenta de decisão" com "decisão compartilhada completa"** — a ferramenta é um componente do processo. O achado de maior escore entre quem viu os dois especialistas foi observacional e não permite comparar causalmente o peso da estrutura da consulta com o da ferramenta.
 
 ## Tudo com Tudo
-- `escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia.md` — o escore de risco cirúrgico que alimenta a mesma decisão de heart team que a ferramenta de SDM aqui descrita busca tornar mais compartilhada, não só numérica.
-- `tavi-baixo-risco-6-7-anos-durabilidade-valvar-partner3-evolut-low-risk.md` — os dados de durabilidade valvar em baixo risco que tornaram a escolha entre TAVI e SAVR clinicamente ambígua o suficiente para exigir decisão compartilhada formal.
-- `estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade.md` — no extremo oposto do espectro de risco, a mesma decisão TAVI-vs-alternativa exige comunicação estruturada sobre futilidade, não apenas ferramenta de preferência.
-- `fragilidade-e-decisao-compartilhada-em-procedimento-cardiovascular-de-alto-risco-no-idoso.md` — o arcabouço mais amplo de decisão compartilhada em procedimento cardiovascular de alto risco no idoso, do qual a decisão TAVI-vs-SAVR é um caso concreto.
-- `ferramenta-de-decisao-compartilhada-na-angioplastia-eletiva-o-pci-choice.md` — outra ferramenta de decisão validada para procedimento cardiovascular eletivo (PCI-CHOICE), mesmo desenho conceitual aplicado a outro procedimento.
-- `decisao-compartilhada-para-lvad-de-terapia-de-destino-o-ensaio-decide-lvad.md` — outro dispositivo cardiovascular de alto impacto em que ferramenta de decisão formal já foi testada em ensaio, útil para comparar maturidade de evidência entre dispositivos.
-- `ferramentas-de-apoio-a-decisao-eficacia-real-revisao-cochrane.md` — a revisão sistemática que contextualiza, em nível de evidência agregada, o que se pode esperar (e o que não se deve esperar) de qualquer ferramenta de decisão isolada, incluindo a testada aqui.
+- [Escore STS: Cortes de Risco e a Decisão do Heart Team entre TAVI e Cirurgia](/biblioteca/escore-sts-cortes-de-risco-e-a-decisao-do-heart-team-entre-tavi-e-cirurgia) — o escore de risco cirúrgico que alimenta a mesma decisão de heart team que a ferramenta de SDM aqui descrita busca tornar mais compartilhada, não só numérica.
+- [TAVI em Baixo Risco, 6–7 Anos: Durabilidade Valvar Divergente entre SAPIEN 3 (PARTNER 3) e Autoexpansível (Evolut Low Risk)](/biblioteca/tavi-baixo-risco-6-7-anos-durabilidade-valvar-partner3-evolut-low-risk) — os dados de durabilidade valvar em baixo risco que tornaram a escolha entre TAVI e SAVR clinicamente ambígua o suficiente para exigir decisão compartilhada formal.
+- [Estenose Aórtica Grave no Idoso Frágil: Quando o TAVI Muda o Prognóstico e Quando a Fragilidade Contraindica a Intervenção](/biblioteca/estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade) — no extremo oposto do espectro de risco, a mesma decisão TAVI-vs-alternativa exige comunicação estruturada sobre futilidade, não apenas ferramenta de preferência.
+- [Fragilidade e Decisão Compartilhada antes de Procedimento Cardiovascular de Alto Risco no Idoso: Além do Escore de Risco Cirúrgico](/biblioteca/fragilidade-e-decisao-compartilhada-em-procedimento-cardiovascular-de-alto-risco-no-idoso) — o arcabouço mais amplo de decisão compartilhada em procedimento cardiovascular de alto risco no idoso, do qual a decisão TAVI-vs-SAVR é um caso concreto.
+- [Ferramenta de Decisão Compartilhada na Angioplastia Eletiva: o Ensaio PCI Choice](/biblioteca/ferramenta-de-decisao-compartilhada-na-angioplastia-eletiva-o-pci-choice) — outra ferramenta de decisão validada para procedimento cardiovascular eletivo (PCI-CHOICE), mesmo desenho conceitual aplicado a outro procedimento.
+- [Decisão Compartilhada para LVAD de Terapia de Destino: o Ensaio DECIDE-LVAD](/biblioteca/decisao-compartilhada-para-lvad-de-terapia-de-destino-o-ensaio-decide-lvad) — outro dispositivo cardiovascular de alto impacto em que ferramenta de decisão formal já foi testada em ensaio, útil para comparar maturidade de evidência entre dispositivos.
+- [Ferramentas de Apoio à Decisão: Eficácia Real, Revisão Cochrane](/biblioteca/ferramentas-de-apoio-a-decisao-eficacia-real-revisao-cochrane) — a revisão sistemática que contextualiza, em nível de evidência agregada, o que se pode esperar (e o que não se deve esperar) de qualquer ferramenta de decisão isolada, incluindo a testada aqui.

@@ -57,8 +57,8 @@ test("claro e escuro compartilham a geometria e mudam somente a cromia", () => {
   assert.match(assetFixStyles, /@media \(prefers-reduced-motion: reduce\)/);
   assert.doesNotMatch(`${entrar}\n${approvedStyles}\n${assetFixStyles}`, /telesc[oó]pio|observat[oó]rio|montanha|planeta|lua cheia/i);
   assert.match(consistencyStyles, /login-gateway--light[\s\S]*?linear-gradient\(145deg, #fbfeff/);
-  assert.match(consistencyStyles, /login-gateway--light \.login-gateway__galaxy-(?:image|canvas)[\s\S]*?mix-blend-mode: normal !important/);
-  assert.match(consistencyStyles, /hue-rotate\(0deg\)/);
+  assert.match(consistencyStyles, /login-gateway--light \.login-gateway__galaxy-(?:image|canvas)[\s\S]*?mix-blend-mode: multiply !important/);
+  assert.match(consistencyStyles, /grayscale\(1\) sepia\(1\) saturate\(3\) hue-rotate\(155deg\)/);
   assert.doesNotMatch(consistencyStyles, /\binvert\s*\(/i);
 });
 

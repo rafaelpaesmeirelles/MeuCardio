@@ -84,8 +84,8 @@ FRONTS: dict[str, dict[str, Any]] = {
     # erro sempre existiam em `casos-clinicos/metadados.json`, só ainda não
     # tinham chegado ao banco nesta ordem antiga.
     "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
-    "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 470, "loader": "carregar_trilhas"},
     "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 28, "loader": "carregar_material_paciente"},
+    "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 470, "loader": "carregar_trilhas"},
     "emergencia": {"path": "/emergencia/metadados.json", "model": EmergencyProtocol, "minimum": 32, "loader": "carregar_emergencia"},
     "doencas_especializadas": {
         "path": "/doencas/metadados.json",

@@ -22,6 +22,7 @@ const ROTULO_CATEGORIA: Record<string, string> = {
   laboratorial: "Laboratorial",
   metodo_grafico: "Método gráfico",
   imagem: "Imagem",
+  escore_clinico: "Escore clínico",
 };
 
 function rotuloTipo(valor: string) {

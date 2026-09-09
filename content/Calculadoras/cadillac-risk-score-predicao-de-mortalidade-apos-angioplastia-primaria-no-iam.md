@@ -1,13 +1,45 @@
 ---
-title: "CADILLAC Risk Score: Predição de Mortalidade Após Angioplastia Primária no Infarto Agudo do Miocárdio"
-slug: cadillac-risk-score-predicao-de-mortalidade-apos-angioplastia-primaria-no-iam
-theme: "Calculadoras"
 kind: calculadora
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Calculadoras já cobria
+  escores de risco cirúrgico (EuroSCORE II, STS Risk Score), o escore anatômico de
+  complexidade coronariana (SYNTAX e SYNTAX Score II, para decisão entre PCI e CABG)
+  e os escores de síndrome coronariana aguda aplicados na apresentação/triagem (TIMI,
+  GRACE 2.0, HEART) — mas nenhum documento cobria um escore que prediz mortalidade
+  especificamente DEPOIS de realizada a angioplastia primária no IAM, incorporando
+  o resultado angiográfico pós-procedimento (fluxo TIMI) e a função ventricular basal.
+  Essa é uma pergunta distinta: não é ''qual a probabilidade de complicação antes
+  de decidir a estratégia'' (GRACE/TIMI/HEART) nem ''CABG ou PCI é melhor para esta
+  anatomia'' (SYNTAX), é ''este paciente, já submetido à angioplastia primária, tem
+  que prognóstico de curto e longo prazo''. Checagem de colisão feita em content/**/*.md,
+  não só nos JSONs: a pasta Doença_coronariana já tem documentos sobre o ENSAIO CADILLAC
+  (Stone GW, NEJM 2002, PMID 11919304 — stent vs. PTCA ± abciximabe) e sobre ADMIRAL/EPILOG
+  (outros ensaios de abciximab na ICP) — nenhum deles trata do escore de risco derivado
+  posteriormente a partir da coorte CADILLAC, que é o objeto deste documento; são
+  complementares, não duplicados, e o ensaio original foi linkado na seção Tudo com
+  Tudo. Verificado via PubMed E-utilities nesta sessão (esearch + efetch de texto
+  puro do abstract, PMID confirmado diretamente).'
+published: true
+review_note: 'Revisão clínica individual em 2026-09-08: derivação/validação original
+  (PMID 15862409) e validação externa contemporânea (PMID 34772341/PMCID PMC8588705)
+  conferidas; cortes operacionais, limites de generalização e uso estritamente prognóstico
+  explicitados.'
 review_status: revisado
-published: false
-review_note: "Revisão clínica individual em 2026-09-08: derivação/validação original (PMID 15862409) e validação externa contemporânea (PMID 34772341/PMCID PMC8588705) conferidas; cortes operacionais, limites de generalização e uso estritamente prognóstico explicitados."
-source_refs: ["Halkin A, Singh M, Nikolsky E, Grines CL, Tcheng JE, Garcia E, Cox DA, Turco M, Stuckey TD, Na Y, Lansky AJ, Gersh BJ, O'Neill WW, Mehran R, Stone GW. Prediction of mortality after primary percutaneous coronary intervention for acute myocardial infarction: the CADILLAC risk score. J Am Coll Cardiol. 2005;45(9):1397-1405. DOI: 10.1016/j.jacc.2005.01.041. PMID: 15862409.", "Wilson RS, Malamas P, Dembo B, Lall SK, Zaman N, Peterson BR. The CADILLAC risk score accurately identifies patients at low risk for in-hospital mortality and adverse cardiovascular events following ST elevation myocardial infarction. BMC Cardiovasc Disord. 2021;21(1):533. DOI: 10.1186/s12872-021-02348-0. PMID: 34772341. PMCID: PMC8588705 — validação contemporânea retrospectiva em 341 pacientes com STEMI tratados por PCI primária."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Calculadoras já cobria escores de risco cirúrgico (EuroSCORE II, STS Risk Score), o escore anatômico de complexidade coronariana (SYNTAX e SYNTAX Score II, para decisão entre PCI e CABG) e os escores de síndrome coronariana aguda aplicados na apresentação/triagem (TIMI, GRACE 2.0, HEART) — mas nenhum documento cobria um escore que prediz mortalidade especificamente DEPOIS de realizada a angioplastia primária no IAM, incorporando o resultado angiográfico pós-procedimento (fluxo TIMI) e a função ventricular basal. Essa é uma pergunta distinta: não é 'qual a probabilidade de complicação antes de decidir a estratégia' (GRACE/TIMI/HEART) nem 'CABG ou PCI é melhor para esta anatomia' (SYNTAX), é 'este paciente, já submetido à angioplastia primária, tem que prognóstico de curto e longo prazo'. Checagem de colisão feita em content/**/*.md, não só nos JSONs: a pasta Doença_coronariana já tem documentos sobre o ENSAIO CADILLAC (Stone GW, NEJM 2002, PMID 11919304 — stent vs. PTCA ± abciximabe) e sobre ADMIRAL/EPILOG (outros ensaios de abciximab na ICP) — nenhum deles trata do escore de risco derivado posteriormente a partir da coorte CADILLAC, que é o objeto deste documento; são complementares, não duplicados, e o ensaio original foi linkado na seção Tudo com Tudo. Verificado via PubMed E-utilities nesta sessão (esearch + efetch de texto puro do abstract, PMID confirmado diretamente)."
+slug: cadillac-risk-score-predicao-de-mortalidade-apos-angioplastia-primaria-no-iam
+source_refs:
+- 'Halkin A, Singh M, Nikolsky E, Grines CL, Tcheng JE, Garcia E, Cox DA, Turco M,
+  Stuckey TD, Na Y, Lansky AJ, Gersh BJ, O''Neill WW, Mehran R, Stone GW. Prediction
+  of mortality after primary percutaneous coronary intervention for acute myocardial
+  infarction: the CADILLAC risk score. J Am Coll Cardiol. 2005;45(9):1397-1405. DOI:
+  10.1016/j.jacc.2005.01.041. PMID: 15862409.'
+- 'Wilson RS, Malamas P, Dembo B, Lall SK, Zaman N, Peterson BR. The CADILLAC risk
+  score accurately identifies patients at low risk for in-hospital mortality and adverse
+  cardiovascular events following ST elevation myocardial infarction. BMC Cardiovasc
+  Disord. 2021;21(1):533. DOI: 10.1186/s12872-021-02348-0. PMID: 34772341. PMCID:
+  PMC8588705 — validação contemporânea retrospectiva em 341 pacientes com STEMI tratados
+  por PCI primária.'
+theme: Calculadoras
+title: 'CADILLAC Risk Score: Predição de Mortalidade Após Angioplastia Primária no
+  Infarto Agudo do Miocárdio'
 ---
 
 # CADILLAC Risk Score: Predição de Mortalidade Após Angioplastia Primária no Infarto Agudo do Miocárdio

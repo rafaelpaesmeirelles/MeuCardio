@@ -1,12 +1,33 @@
 ---
-title: "Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e a Metanálise CATALYST"
-slug: timing-de-doac-apos-avc-por-fibrilacao-atrial-optimas-e-a-metanalise-catalyst
-theme: "Fibrilação atrial"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 08/09/2026. A biblioteca já cobre timing
+  de anticoagulação em duas situações vizinhas — reinício após hemorragia intracraniana
+  (SoSTART/PRESTIGE-AF/COCROACH) e anticoagulação empírica no AVC criptogênico sem
+  FA documentada (NAVIGATE ESUS/RE-SPECT ESUS/ARCADIA) — mas nenhum documento tratava
+  da pergunta mais comum na prática: paciente com FA já conhecida ou recém-diagnosticada,
+  que teve um AVC isquêmico, e a dúvida é quantos dias esperar antes de iniciar o
+  DOAC. É uma pergunta distinta das duas já cobertas, e só ganhou resposta de ensaio
+  pivotal grande e de metanálise de dados individuais em 2024-2025.'
+published: true
 review_status: revisado
-published: false
-source_refs: ["Werring DJ, Dehbi HM, Ahmed N, et al; OPTIMAS investigators. Optimal timing of anticoagulation after acute ischaemic stroke with atrial fibrillation (OPTIMAS): a multicentre, blinded-endpoint, phase 4, randomised controlled trial. Lancet. 2024 Oct 23:S0140-6736(24)02197-4. DOI: 10.1016/S0140-6736(24)02197-4. PMID: 39491870. ISRCTN17896007, NCT03759938. Errata publicada em Lancet. 2025 Jan 4;405(10472):32, DOI 10.1016/S0140-6736(24)02802-2 — existe e NÃO foi lida nesta redação, declarada em vez de omitida", "Dehbi HM, Fischer U, Åsberg S, et al. Collaboration on the optimal timing of anticoagulation after ischaemic stroke and atrial fibrillation: a systematic review and prospective individual participant data meta-analysis of randomised controlled trials (CATALYST). Lancet. 2025;406(10498):43-51. DOI: 10.1016/S0140-6736(25)00439-8. PMID: 40570866. PROSPERO CRD42024522634. Ambos os registros lidos na íntegra (abstract completo via PubMed E-utilities esearch/efetch) em 08/09/2026"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A biblioteca já cobre timing de anticoagulação em duas situações vizinhas — reinício após hemorragia intracraniana (SoSTART/PRESTIGE-AF/COCROACH) e anticoagulação empírica no AVC criptogênico sem FA documentada (NAVIGATE ESUS/RE-SPECT ESUS/ARCADIA) — mas nenhum documento tratava da pergunta mais comum na prática: paciente com FA já conhecida ou recém-diagnosticada, que teve um AVC isquêmico, e a dúvida é quantos dias esperar antes de iniciar o DOAC. É uma pergunta distinta das duas já cobertas, e só ganhou resposta de ensaio pivotal grande e de metanálise de dados individuais em 2024-2025."
+slug: timing-de-doac-apos-avc-por-fibrilacao-atrial-optimas-e-a-metanalise-catalyst
+source_refs:
+- 'Werring DJ, Dehbi HM, Ahmed N, et al; OPTIMAS investigators. Optimal timing of
+  anticoagulation after acute ischaemic stroke with atrial fibrillation (OPTIMAS):
+  a multicentre, blinded-endpoint, phase 4, randomised controlled trial. Lancet. 2024
+  Oct 23:S0140-6736(24)02197-4. DOI: 10.1016/S0140-6736(24)02197-4. PMID: 39491870.
+  ISRCTN17896007, NCT03759938. Errata publicada em Lancet. 2025 Jan 4;405(10472):32,
+  DOI 10.1016/S0140-6736(24)02802-2 — existe e NÃO foi lida nesta redação, declarada
+  em vez de omitida'
+- 'Dehbi HM, Fischer U, Åsberg S, et al. Collaboration on the optimal timing of anticoagulation
+  after ischaemic stroke and atrial fibrillation: a systematic review and prospective
+  individual participant data meta-analysis of randomised controlled trials (CATALYST).
+  Lancet. 2025;406(10498):43-51. DOI: 10.1016/S0140-6736(25)00439-8. PMID: 40570866.
+  PROSPERO CRD42024522634. Ambos os registros lidos na íntegra (abstract completo
+  via PubMed E-utilities esearch/efetch) em 08/09/2026'
+theme: Fibrilação atrial
+title: 'Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e
+  a Metanálise CATALYST'
 ---
 
 # Quando Iniciar o Anticoagulante Após AVC por Fibrilação Atrial: OPTIMAS e a Metanálise CATALYST

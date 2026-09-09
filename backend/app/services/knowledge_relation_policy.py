@@ -143,7 +143,7 @@ RELATION_TYPE_MATRIX: dict[str, frozenset[tuple[str, str]]] = {
         frozenset({"trilha"}),
         frozenset({
             "documento", "fluxograma", "estudo", "medicamento", "checklist",
-            "caso_clinico", "evidencia", "calculadora",
+            "caso_clinico", "evidencia", "calculadora", "material_paciente",
         }),
     ),
 }

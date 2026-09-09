@@ -1,21 +1,68 @@
 ---
-title: "Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística: os Ensaios RAPID e NODE-303 e a Aprovação da FDA"
-slug: etripamil-nasal-para-reversao-da-taquicardia-supraventricular-paroxistica-rapid-e-node-303
-theme: "Arritmias"
 kind: documento
+legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta Arritmias já cobria
+  taquicardia supraventricular (TSV) em profundidade — diagnóstico e manejo agudo
+  pelo algoritmo ESC 2019, ablação por cateter versus fármacos e escolha de energia
+  na AVNRT, WPW assintomático, taquicardia por reentrada sinoatrial e taquicardia
+  atrial focal — mas nenhum documento tratava de uma opção terapêutica genuinamente
+  nova: um fármaco autoadministrado por spray nasal para reversão aguda da TSV fora
+  do ambiente hospitalar. Etripamil recebeu sua primeira aprovação regulatória mundial
+  (FDA, 12/12/2025) depois do encerramento deste documento na maioria dos textos de
+  referência da pasta — é o primeiro bloqueador de canal de cálcio intranasal aprovado
+  para essa indicação, com dado de eficácia populacional publicado no The Lancet em
+  2023 e dado de segurança em uso real (sem dose-teste supervisionada) publicado em
+  2025. Não duplica os documentos existentes sobre ablação da AVNRT: aqui a pergunta
+  clínica é sobre tratamento farmacológico agudo autoadministrado, não sobre a decisão
+  de curar a arritmia por cateter.'
+published: true
+regulatory_source: 'CARDAMYST (etripamil), bula FDA/DailyMed revisada em 12/2025,
+  SPL setid a92170b9-4f93-4b83-b2cd-cb85c52821cd: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a92170b9-4f93-4b83-b2cd-cb85c52821cd'
+review_note: Revisão clínica e editorial concluída em 08/09/2026; PMIDs confirmados
+  diretamente no PubMed. A bula FDA/DailyMed de CARDAMYST, revisada em 12/2025, foi
+  conferida em 08/09/2026 para indicação, posologia, contraindicações e alerta de
+  síncope. O estudo de efeito pressórico (PMID 42269477) permanece citado apenas para
+  registrar sua existência, sem uso de números dele no corpo do texto.
 review_status: revisado
-published: false
-review_note: "Revisão clínica e editorial concluída em 08/09/2026; PMIDs confirmados diretamente no PubMed. A bula FDA/DailyMed de CARDAMYST, revisada em 12/2025, foi conferida em 08/09/2026 para indicação, posologia, contraindicações e alerta de síncope. O estudo de efeito pressórico (PMID 42269477) permanece citado apenas para registrar sua existência, sem uso de números dele no corpo do texto."
-regulatory_source: "CARDAMYST (etripamil), bula FDA/DailyMed revisada em 12/2025, SPL setid a92170b9-4f93-4b83-b2cd-cb85c52821cd: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a92170b9-4f93-4b83-b2cd-cb85c52821cd"
-source_refs: ["Stambler BS, Camm AJ, Alings M, Dorian P, Heidbuchel H, Houtgraaf J, et al; RAPID Investigators. Self-administered intranasal etripamil using a symptom-prompted, repeat-dose regimen for atrioventricular-nodal-dependent supraventricular tachycardia (RAPID): a multicentre, randomised trial. Lancet. 2023;402(10396):118-128. DOI: 10.1016/S0140-6736(23)00776-6. PMID: 37331368 — NCT03464019 (parte 2 do NODE-301), 692 randomizados, 184 com evento confirmado tratado (99 etripamil/85 placebo); abstract lido na íntegra via PubMed nesta sessão", "Ip JE, Coutu B, Ip JH, Noseworthy PA, Parody ML, Rafii F, et al. Etripamil Nasal Spray for Recurrent Paroxysmal Supraventricular Tachycardia Conversion: Results From the NODE-303 Open-Label Study. J Cardiovasc Electrophysiol. 2025;36(11):2990-3003. DOI: 10.1111/jce.70086. PMID: 40931676 — NCT04072835, estudo aberto de braço único, 1116 pacientes incluídos, 503 autoadministraram ≥1 dose para 1054 episódios percebidos de TSV; abstract lido na íntegra via PubMed nesta sessão", "Brown MB. Etripamil: First Approval. Drugs. 2026;86(7):1147-1152. DOI: 10.1007/s40265-026-02321-1. PMID: 42068525 — artigo regulatório de resumo de desenvolvimento; aprovação nos EUA em 12/12/2025 (CARDAMYST); abstract lido na íntegra via PubMed nesta sessão", "Dorian P, Alings M, Coutu B, Ip JE, Martinez FA, Piccini JP, et al. Self-Administered Etripamil Nasal Spray Slows Ventricular Rate in Patients With Atrial Fibrillation: A Post Hoc Analysis of the NODE-303 Study. J Cardiovasc Electrophysiol. 2026;37(4):859-863. DOI: 10.1111/jce.70287. PMID: 41668514 — subanálise post hoc, n=18 episódios de FA identificados dentro da coorte NODE-303; abstract lido na íntegra via PubMed nesta sessão", "Ip JE, Noseworthy P, Rafii F, Piccini JP, Singh N, Stambler B, et al. Minimal Blood Pressure Effects of Intranasal Etripamil for Paroxysmal Supraventricular Tachycardia. JACC Adv. 2026;5(7):102868. DOI: 10.1016/j.jacadv.2026.102868. PMID: 42269477 — citado apenas para registrar que existe análise dedicada de segurança pressórica; abstract em texto não disponível no PubMed nesta sessão, nenhum número deste estudo foi usado no corpo do texto"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Arritmias já cobria taquicardia supraventricular (TSV) em profundidade — diagnóstico e manejo agudo pelo algoritmo ESC 2019, ablação por cateter versus fármacos e escolha de energia na AVNRT, WPW assintomático, taquicardia por reentrada sinoatrial e taquicardia atrial focal — mas nenhum documento tratava de uma opção terapêutica genuinamente nova: um fármaco autoadministrado por spray nasal para reversão aguda da TSV fora do ambiente hospitalar. Etripamil recebeu sua primeira aprovação regulatória mundial (FDA, 12/12/2025) depois do encerramento deste documento na maioria dos textos de referência da pasta — é o primeiro bloqueador de canal de cálcio intranasal aprovado para essa indicação, com dado de eficácia populacional publicado no The Lancet em 2023 e dado de segurança em uso real (sem dose-teste supervisionada) publicado em 2025. Não duplica os documentos existentes sobre ablação da AVNRT: aqui a pergunta clínica é sobre tratamento farmacológico agudo autoadministrado, não sobre a decisão de curar a arritmia por cateter."
+slug: etripamil-nasal-para-reversao-da-taquicardia-supraventricular-paroxistica-rapid-e-node-303
+source_refs:
+- 'Stambler BS, Camm AJ, Alings M, Dorian P, Heidbuchel H, Houtgraaf J, et al; RAPID
+  Investigators. Self-administered intranasal etripamil using a symptom-prompted,
+  repeat-dose regimen for atrioventricular-nodal-dependent supraventricular tachycardia
+  (RAPID): a multicentre, randomised trial. Lancet. 2023;402(10396):118-128. DOI:
+  10.1016/S0140-6736(23)00776-6. PMID: 37331368 — NCT03464019 (parte 2 do NODE-301),
+  692 randomizados, 184 com evento confirmado tratado (99 etripamil/85 placebo); abstract
+  lido na íntegra via PubMed nesta sessão'
+- 'Ip JE, Coutu B, Ip JH, Noseworthy PA, Parody ML, Rafii F, et al. Etripamil Nasal
+  Spray for Recurrent Paroxysmal Supraventricular Tachycardia Conversion: Results
+  From the NODE-303 Open-Label Study. J Cardiovasc Electrophysiol. 2025;36(11):2990-3003.
+  DOI: 10.1111/jce.70086. PMID: 40931676 — NCT04072835, estudo aberto de braço único,
+  1116 pacientes incluídos, 503 autoadministraram ≥1 dose para 1054 episódios percebidos
+  de TSV; abstract lido na íntegra via PubMed nesta sessão'
+- 'Brown MB. Etripamil: First Approval. Drugs. 2026;86(7):1147-1152. DOI: 10.1007/s40265-026-02321-1.
+  PMID: 42068525 — artigo regulatório de resumo de desenvolvimento; aprovação nos
+  EUA em 12/12/2025 (CARDAMYST); abstract lido na íntegra via PubMed nesta sessão'
+- 'Dorian P, Alings M, Coutu B, Ip JE, Martinez FA, Piccini JP, et al. Self-Administered
+  Etripamil Nasal Spray Slows Ventricular Rate in Patients With Atrial Fibrillation:
+  A Post Hoc Analysis of the NODE-303 Study. J Cardiovasc Electrophysiol. 2026;37(4):859-863.
+  DOI: 10.1111/jce.70287. PMID: 41668514 — subanálise post hoc, n=18 episódios de
+  FA identificados dentro da coorte NODE-303; abstract lido na íntegra via PubMed
+  nesta sessão'
+- 'Ip JE, Noseworthy P, Rafii F, Piccini JP, Singh N, Stambler B, et al. Minimal Blood
+  Pressure Effects of Intranasal Etripamil for Paroxysmal Supraventricular Tachycardia.
+  JACC Adv. 2026;5(7):102868. DOI: 10.1016/j.jacadv.2026.102868. PMID: 42269477 —
+  citado apenas para registrar que existe análise dedicada de segurança pressórica;
+  abstract em texto não disponível no PubMed nesta sessão, nenhum número deste estudo
+  foi usado no corpo do texto'
+theme: Arritmias
+title: 'Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística:
+  os Ensaios RAPID e NODE-303 e a Aprovação da FDA'
 ---
 
 # Etripamil Nasal para Reversão da Taquicardia Supraventricular Paroxística: os Ensaios RAPID e NODE-303 e a Aprovação da FDA
 
 ## A pergunta em aberto até agora
 
-Pacientes com taquicardia supraventricular paroxística (TSV) dependente do nó atrioventricular (AV) — a reentrada nodal (AVNRT) e a reentrada atrioventricular ortodrômica (AVRT) por via acessória oculta — costumam ter episódios recorrentes, sintomáticos, que hoje se resolvem de três formas: manobra vagal (que pode falhar), adenosina ou verapamil/diltiazem intravenosos em pronto-socorro, ou ablação por cateter definitiva (já coberta em `taquicardia-por-reentrada-nodal-avnrt-ablacao-versus-farmacos-e-escolha-da-energia.md`, nesta mesma pasta). Para quem não quer ou não pode ser ablacionado, e para quem tem episódios pouco frequentes demais para justificar a ablação mas frequentes o bastante para incomodar, faltava uma opção farmacológica de ação rápida que o próprio paciente pudesse aplicar em casa, no início dos sintomas — sem depender de uma veia periférica e de uma sala de emergência. O etripamil, um bloqueador de canal de cálcio tipo L de ação intranasal, foi desenhado exatamente para essa lacuna.
+Pacientes com taquicardia supraventricular paroxística (TSV) dependente do nó atrioventricular (AV) — a reentrada nodal (AVNRT) e a reentrada atrioventricular ortodrômica (AVRT) por via acessória oculta — costumam ter episódios recorrentes, sintomáticos, que hoje se resolvem de três formas: manobra vagal (que pode falhar), adenosina ou verapamil/diltiazem intravenosos em pronto-socorro, ou ablação por cateter definitiva (já coberta em [Taquicardia por Reentrada Nodal (AVNRT): Ablação por Cateter vs. Tratamento Farmacológico e Escolha da Energia](/biblioteca/taquicardia-por-reentrada-nodal-avnrt-ablacao-versus-farmacos-e-escolha-da-energia), nesta mesma pasta). Para quem não quer ou não pode ser ablacionado, e para quem tem episódios pouco frequentes demais para justificar a ablação mas frequentes o bastante para incomodar, faltava uma opção farmacológica de ação rápida que o próprio paciente pudesse aplicar em casa, no início dos sintomas — sem depender de uma veia periférica e de uma sala de emergência. O etripamil, um bloqueador de canal de cálcio tipo L de ação intranasal, foi desenhado exatamente para essa lacuna.
 
 ## Mecanismo e desenho dos ensaios
 
@@ -57,7 +104,7 @@ Etripamil é um bloqueador do canal de cálcio tipo L não-diidropiridínico, ad
 
 ## Armadilhas clínicas
 
-- **Prescrever para taquicardia de mecanismo não confirmado**: os ensaios pivotais selecionaram especificamente TSV dependente do nó AV — taquicardia atrial focal, flutter atrial ou taquicardia sinusal inapropriada não têm o mesmo racional fisiopatológico de resposta ao bloqueio nodal AV (ver `taquicardia-atrial-focal-diagnostico-morfologia-da-onda-p-manejo-e-ablacao-por-cateter.md` e `taquicardia-sinusal-inapropriada-e-ivabradina-o-ensaio-de-cappato.md`, nesta mesma pasta, para os diagnósticos diferenciais que não se beneficiam do mesmo mecanismo)
+- **Prescrever para taquicardia de mecanismo não confirmado**: os ensaios pivotais selecionaram especificamente TSV dependente do nó AV — taquicardia atrial focal, flutter atrial ou taquicardia sinusal inapropriada não têm o mesmo racional fisiopatológico de resposta ao bloqueio nodal AV (ver [Taquicardia Atrial Focal: Diagnóstico, Morfologia da Onda P para Localização, Manejo e Ablação por Cateter](/biblioteca/taquicardia-atrial-focal-diagnostico-morfologia-da-onda-p-manejo-e-ablacao-por-cateter) e [Taquicardia Sinusal Inapropriada e Ivabradina: o Ensaio de Cappato](/biblioteca/taquicardia-sinusal-inapropriada-e-ivabradina-o-ensaio-de-cappato), nesta mesma pasta, para os diagnósticos diferenciais que não se beneficiam do mesmo mecanismo)
 - **Ignorar as contraindicações da bula**: hipersensibilidade ao produto; insuficiência cardíaca NYHA II–IV; WPW, Lown–Ganong–Levine ou pré-excitação manifesta (onda delta) no ECG de 12 derivações; doença do nó sinusal sem marcapasso permanente; e bloqueio AV de segundo grau Mobitz II ou de grau superior
 - **Ignorar que o achado em FA é post hoc e de amostra pequena (n=18)**: útil como sinal para gerar hipótese, não como base para uso rotineiro em controle de frequência da FA fora de protocolo de pesquisa
 - **Minimizar as queixas nasais como “só efeito local sem importância”**: cerca de 30% dos pacientes relatam desconforto nasal em uso real (NODE-303) — vale antecipar isso na conversa com o paciente para não comprometer a adesão ao autotratamento

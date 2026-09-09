@@ -1,17 +1,37 @@
 ---
-title: "Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores: o Índice SRI no UK Biobank"
-slug: regularidade-do-sono-e-eventos-cardiovasculares-maiores-indice-sri-no-uk-biobank
-theme: "Geral"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Geral já cobre DURAÇÃO
+  do sono (metanálise de Cappuccio) e desssincronização circadiana por trabalho em
+  turnos, mas nenhum documento tratava da REGULARIDADE do sono — dia a dia, medida
+  por dispositivo, independente de quantas horas a pessoa dorme em média — que é a
+  pergunta clínica emergente e distinta captada pelo estudo de Chaput et al. (2025),
+  o primeiro a associar o Índice de Regularidade do Sono (SRI), medido objetivamente
+  por acelerômetro, a eventos cardiovasculares maiores em uma coorte prospectiva de
+  grande porte. Nota de bastidor: ao levantar os arquivos já existentes sobre sono
+  nesta pasta, encontrei dois documentos quase idênticos sobre a MESMA metanálise
+  de Cappuccio (mesmo PMID 21300732) — ''duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md''
+  e ''sono-e-risco-cardiovascular-metanalise-de-cappuccio.md''. Não toquei neles (fora
+  do escopo desta tarefa e da minha pasta de commit), mas registro o achado para limpeza
+  futura.'
+published: true
 review_status: revisado
-source_refs: ["Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Rajaratnam SMW, Bian W, St-Onge MP, Stamatakis E. Sleep regularity and major adverse cardiovascular events: a device-based prospective study in 72 269 UK adults. J Epidemiol Community Health. 2025 Mar 10;79(4):257-264. DOI: 10.1136/jech-2024-222795. PMID: 39603689. PMCID: PMC12066246 — coorte prospectiva UK Biobank com acelerometria de punho por 7 dias, 72.269 adultos, seguimento médio de 7,8 anos"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Geral já cobre DURAÇÃO do sono (metanálise de Cappuccio) e desssincronização circadiana por trabalho em turnos, mas nenhum documento tratava da REGULARIDADE do sono — dia a dia, medida por dispositivo, independente de quantas horas a pessoa dorme em média — que é a pergunta clínica emergente e distinta captada pelo estudo de Chaput et al. (2025), o primeiro a associar o Índice de Regularidade do Sono (SRI), medido objetivamente por acelerômetro, a eventos cardiovasculares maiores em uma coorte prospectiva de grande porte. Nota de bastidor: ao levantar os arquivos já existentes sobre sono nesta pasta, encontrei dois documentos quase idênticos sobre a MESMA metanálise de Cappuccio (mesmo PMID 21300732) — 'duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md' e 'sono-e-risco-cardiovascular-metanalise-de-cappuccio.md'. Não toquei neles (fora do escopo desta tarefa e da minha pasta de commit), mas registro o achado para limpeza futura."
+slug: regularidade-do-sono-e-eventos-cardiovasculares-maiores-indice-sri-no-uk-biobank
+source_refs:
+- 'Chaput JP, Biswas RK, Ahmadi M, Cistulli PA, Rajaratnam SMW, Bian W, St-Onge MP,
+  Stamatakis E. Sleep regularity and major adverse cardiovascular events: a device-based
+  prospective study in 72 269 UK adults. J Epidemiol Community Health. 2025 Mar 10;79(4):257-264.
+  DOI: 10.1136/jech-2024-222795. PMID: 39603689. PMCID: PMC12066246 — coorte prospectiva
+  UK Biobank com acelerometria de punho por 7 dias, 72.269 adultos, seguimento médio
+  de 7,8 anos'
+theme: Geral
+title: 'Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores:
+  o Índice SRI no UK Biobank'
 ---
 
 # Regularidade do Sono (Não Só a Duração) e Eventos Cardiovasculares Maiores: o Índice SRI no UK Biobank
 
 ## A pergunta que a duração do sono, sozinha, não responde
-Esta biblioteca já documenta que dormir pouco ou dormir demais prediz desfecho cardiovascular (ver `duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio.md`). Mas duração média não captura outra dimensão do sono que também varia entre indivíduos e é biologicamente plausível como fator de risco: a **regularidade** — dormir e acordar em horários consistentes de um dia para o outro, versus um padrão errático, mesmo que a quantidade total de sono seja semelhante. Chaput JP et al. (J Epidemiol Community Health. 2025;79(4):257-264, PMID 39603689) testaram, pela primeira vez em coorte prospectiva de grande porte com sono medido por dispositivo (não autorreferido), se a irregularidade do sono prediz eventos cardiovasculares maiores independentemente da duração.
+Esta biblioteca já documenta que dormir pouco ou dormir demais prediz desfecho cardiovascular (ver [Duração do Sono Curta e Longa Como Preditor Cardiovascular: a Metanálise de Cappuccio](/biblioteca/duracao-do-sono-curta-e-longa-como-preditor-cardiovascular-metanalise-de-cappuccio)). Mas duração média não captura outra dimensão do sono que também varia entre indivíduos e é biologicamente plausível como fator de risco: a **regularidade** — dormir e acordar em horários consistentes de um dia para o outro, versus um padrão errático, mesmo que a quantidade total de sono seja semelhante. Chaput JP et al. (J Epidemiol Community Health. 2025;79(4):257-264, PMID 39603689) testaram, pela primeira vez em coorte prospectiva de grande porte com sono medido por dispositivo (não autorreferido), se a irregularidade do sono prediz eventos cardiovasculares maiores independentemente da duração.
 
 ## Desenho
 Coorte prospectiva de participantes do UK Biobank, 40-79 anos, que usaram acelerômetro de punho por 7 dias consecutivos para permitir o cálculo objetivo do sono:

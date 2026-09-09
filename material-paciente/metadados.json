@@ -27891,15 +27891,15 @@
       "Meu LDL já está na meta que vale para o meu risco, agora que a Lp(a) entrou na conta?",
       "Meu laudo está em nmol/L ou só em mg/dL? Preciso repetir na outra unidade?",
       "Alguém da minha família deveria dosar também?",
-    "Existe algum estudo clínico de uma terapia específica de Lp(a) aberto e adequado para o meu caso, ou a conduta agora é outra?"
+      "Existe algum estudo clínico de uma terapia específica de Lp(a) aberto e adequado para o meu caso, ou a conduta agora é outra?"
     ],
     "fontes": [
       "Rached FH et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. PMID: 41379178",
       "Mach F et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025. PMID: 40878289",
       "Kronenberg F et al. European Atherosclerosis Society consensus statement on lipoprotein(a). Eur Heart J. 2022. PMID: 36036785",
-    "Cho L et al. Design and Rationale of Lp(a)HORIZON Trial. Am Heart J. 2025. PMID: 40185318 — artigo de desenho",
-    "Novartis. Lp(a)HORIZON Phase III topline results for pelacarsen. Comunicado da patrocinadora, 04/09/2026. NCT04023552. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd",
-    "Documento da casa lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta"
+      "Cho L et al. Design and Rationale of Lp(a)HORIZON Trial. Am Heart J. 2025. PMID: 40185318 — artigo de desenho",
+      "Novartis. Lp(a)HORIZON Phase III topline results for pelacarsen. Comunicado da patrocinadora, 04/09/2026. NCT04023552. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd",
+      "Documento da casa lpa-horizon-pelacarsen-nao-atingiu-desfecho-primario-mace-o-que-muda-na-consulta"
     ]
   },
   {
@@ -33194,7 +33194,7 @@
       {
         "titulo": "Dose de suplemento não é meta de fibra total",
         "paragrafos": [
-        "A análise sugeriu estabilização do efeito sobre o LDL nas faixas mais altas de fibra solúvel suplementar avaliadas, mas isso não define um limite universal nem uma meta de fibra total da alimentação. O benefício não cresce necessariamente na mesma proporção da quantidade usada."
+          "A análise sugeriu estabilização do efeito sobre o LDL nas faixas mais altas de fibra solúvel suplementar avaliadas, mas isso não define um limite universal nem uma meta de fibra total da alimentação. O benefício não cresce necessariamente na mesma proporção da quantidade usada."
         ],
         "itens": []
       },
@@ -34048,5 +34048,442 @@
     ],
     "fonte_producao": "claude",
     "review_note": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: Alarmes com destino explícito; Febre reumática sem atribuir culpa por tratamento."
+  },
+  {
+    "slug": "colchicina-na-pericardite-o-que-esperar",
+    "titulo": "Colchicina na pericardite: o que esperar",
+    "subtitulo": "Como a colchicina ajuda e o que acompanhar",
+    "tema": "Pericárdio",
+    "documento_slug": "icap-colchicina-no-primeiro-episodio-nao-e-corp",
+    "resumo": "A pericardite é uma inflamação da membrana que envolve o coração. A colchicina ajuda a diminuir a chance de a inflamação persistir ou voltar. Em geral, acompanha o ácido acetilsalicílico ou um anti-inflamatório, conforme a indicação e as contraindicações avaliadas pela equipe.",
+    "secoes": [
+      {
+        "titulo": "Por que foi prescrita",
+        "paragrafos": [
+          "A pericardite é uma inflamação da membrana que envolve o coração. A colchicina ajuda a diminuir a chance de a inflamação persistir ou voltar. Em geral, acompanha o ácido acetilsalicílico ou um anti-inflamatório, conforme a indicação e as contraindicações avaliadas pela equipe."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Primeiro episódio e recorrência",
+        "paragrafos": [
+          "No ICAP, com 240 pessoas no primeiro episódio, a inflamação persistente ou recorrente ocorreu em aproximadamente 17 de cada 100 com colchicina e 38 de cada 100 com placebo. O tratamento do estudo durou três meses.",
+          "No CORP, com 120 pessoas que já tinham a primeira recorrência, houve nova recorrência em aproximadamente 24 de cada 100 com colchicina e 55 de cada 100 com placebo, durante o acompanhamento de 18 meses. O tratamento durou seis meses. As durações desses estudos ajudam a conversa, mas o seu plano deve ser individualizado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Tolerância e acompanhamento",
+        "paragrafos": [
+          "Avise a equipe se houver diarreia importante, vômitos, fraqueza incomum ou dificuldade para manter a hidratação. Informe todos os medicamentos e suplementos: interações e problemas renais ou hepáticos podem exigir ajustes. Não altere o esquema por conta própria.",
+          "Se a inflamação persistir, é preciso reavaliar o diagnóstico, a adesão e o tratamento. Medicamentos que bloqueiam a interleucina 1 são opções para situações específicas avaliadas pelo especialista."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Voltar ao exercício",
+        "paragrafos": [
+          "O retorno depende da remissão clínica e dos exames. A orientação ESC 2025 prevê restrição por pelo menos um mês e até a remissão; completar um mês, sozinho, não libera treino. A equipe orienta a retomada gradual."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova, intensa ou diferente, falta de ar importante ou desmaio exigem avaliação urgente.",
+      "Diarreia ou vômitos persistentes e incapacidade de beber líquidos precisam de contato rápido com a equipe."
+    ],
+    "perguntas": [
+      "Este é o primeiro episódio ou uma recorrência?",
+      "Qual é a duração prevista e quando serei reavaliado?",
+      "Que exames e critérios serão usados para liberar exercício?"
+    ],
+    "fontes": [
+      "Imazio M, Brucato A, Cemin R, et al.; ICAP Investigators. A randomized trial of colchicine for acute pericarditis. N Engl J Med. 2013;369(16):1522-1528. DOI 10.1056/NEJMoa1208536. PMID 23992557. NCT00128453.",
+      "Imazio M, Brucato A, Cemin R, et al.; CORP (COlchicine for Recurrent Pericarditis) Investigators. Colchicine for recurrent pericarditis (CORP): a randomized trial. Ann Intern Med. 2011;155(7):409-414. DOI 10.7326/0003-4819-155-7-201110040-00359. PMID 21873705. NCT00128414.",
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI 10.1093/eurheartj/ehaf192. PMID 40878297."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "endocardite-por-que-o-tratamento-e-longo",
+    "titulo": "Endocardite: por que o tratamento é longo",
+    "subtitulo": "Por que o plano é prolongado e quem pode completar o tratamento por via oral",
+    "tema": "Endocardite",
+    "documento_slug": "poet-oral-apos-estabilizacao-o-que-o-ensaio-nao-e",
+    "resumo": "A endocardite infecciosa atinge o revestimento interno do coração e frequentemente as válvulas; também pode envolver próteses ou dispositivos. O tratamento precisa eliminar a infecção e acompanhar complicações. A duração depende do microrganismo, do local, de próteses e da resposta clínica.",
+    "secoes": [
+      {
+        "titulo": "Por que leva tempo",
+        "paragrafos": [
+          "A endocardite infecciosa atinge o revestimento interno do coração e frequentemente as válvulas; também pode envolver próteses ou dispositivos. O tratamento precisa eliminar a infecção e acompanhar complicações. A duração depende do microrganismo, do local, de próteses e da resposta clínica.",
+          "Antibióticos devem seguir um plano escrito. A melhora da febre não é motivo para interromper o tratamento. A equipe decide também se há necessidade de cirurgia."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o POET mostrou",
+        "paragrafos": [
+          "O POET estudou 400 adultos selecionados com endocardite do lado esquerdo que estavam estáveis depois de tratamento intravenoso. Comparou continuar pela veia com completar o curso usando uma combinação de antibióticos orais escolhida pela equipe. Não foi um estudo para simplesmente encurtar todo o tratamento.",
+          "O desfecho combinado — morte, cirurgia cardíaca não planejada, embolia ou retorno da infecção pelo mesmo microrganismo — ocorreu em aproximadamente 12 de cada 100 no grupo intravenoso e 9 de cada 100 no grupo oral. Esse resultado depende da seleção e do acompanhamento do estudo; não autoriza qualquer pessoa com endocardite a trocar a via em casa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que precisa estar organizado",
+        "paragrafos": [
+          "A equipe verifica estabilidade, exames, ecocardiograma, controle da infecção, possibilidade de absorver os medicamentos e de cumprir o esquema, além de acesso ao retorno. Combinação de antibióticos significa medicamentos selecionados, não um número fixo de comprimidos.",
+          "Peça por escrito os horários, a data prevista para terminar, os exames, o retorno e o contato para intercorrências. Informe dificuldades financeiras, de transporte ou para tomar o medicamento: isso permite ajustar o plano."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Febre que retorna, falta de ar, desmaio ou piora importante exigem contato imediato com a equipe.",
+      "Fraqueza de um lado do corpo, alteração da fala ou dor no peito intensa exigem atendimento de emergência."
+    ],
+    "perguntas": [
+      "Qual foi o microrganismo e qual a duração prevista?",
+      "Eu preencho os critérios para completar o tratamento por via oral?",
+      "Quem acompanhará meus exames e como contato o serviço?"
+    ],
+    "fontes": [
+      "Iversen K, Ihlemann N, Gill SU, et al. Partial Oral versus Intravenous Antibiotic Treatment of Endocarditis. N Engl J Med. 2019;380(5):415-424. DOI 10.1056/NEJMoa1808312. PMID 30152252. NCT01375257.",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al.; ESC Scientific Document Group. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "meta-pressao-130-80-o-que-isso-significa",
+    "titulo": "Meta de pressão 130/80: o que isso significa",
+    "subtitulo": "Entenda o alvo de pressão e como ele se aplica a você",
+    "tema": "Comunicação clínica",
+    "documento_slug": "equacao-prevent-aha-e-o-limiar-75-na-diretriz-2025",
+    "resumo": "O primeiro número é a pressão sistólica e o segundo, a diastólica. A diretriz americana de 2025 propõe uma meta abaixo de 130/80 para a maioria dos adultos não gestantes com hipertensão, quando apropriada e tolerada. A decisão considera medidas confiáveis, risco cardiovascular, outras doenças e tolerância.",
+    "secoes": [
+      {
+        "titulo": "O que significa 130/80",
+        "paragrafos": [
+          "O primeiro número é a pressão sistólica e o segundo, a diastólica. A diretriz americana de 2025 propõe uma meta abaixo de 130/80 para a maioria dos adultos não gestantes com hipertensão, quando apropriada e tolerada. A decisão considera medidas confiáveis, risco cardiovascular, outras doenças e tolerância.",
+          "Uma medida isolada não basta para definir todo o tratamento. A equipe pode pedir medidas repetidas em casa ou monitorização. Idade avançada, fragilidade, tontura ao levantar e outras situações podem exigir individualização."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Onde entra o risco cardiovascular",
+        "paragrafos": [
+          "A equação PREVENT estima risco cardiovascular usando vários dados clínicos. Na diretriz americana, um risco de dez anos a partir de 7,5% participa da decisão de iniciar medicamento em determinadas faixas de pressão. Isso não significa certeza de que um evento acontecerá.",
+          "O PREVENT foi desenvolvido em populações dos Estados Unidos. Sua aplicação no Brasil precisa considerar essa origem; a estimativa não substitui o julgamento clínico."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que pode ajudar",
+        "paragrafos": [
+          "Reduzir sal e álcool, controlar o peso, praticar atividade física orientada e cuidar do sono fazem parte do plano. Os medicamentos, quando indicados, se somam a essas medidas.",
+          "Peça demonstração de como medir em casa e registre os valores conforme orientação. Não dobre, suspenda ou troque medicamentos por uma leitura isolada."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito, falta de ar importante, confusão, alteração da fala ou fraqueza de um lado exigem atendimento urgente.",
+      "Tontura recorrente, quedas ou desmaio durante o tratamento precisam de reavaliação."
+    ],
+    "perguntas": [
+      "Qual é a minha meta e por quê?",
+      "Como e quando devo medir em casa?",
+      "O cálculo de risco se aplica ao meu caso e como muda o plano?"
+    ],
+    "fontes": [
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI 10.1016/j.jacc.2025.05.007. PMID 40815242.",
+      "Khan SS, Matsushita K, Sang Y, et al. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI 10.1161/CIRCULATIONAHA.123.067626. PMID 37947085."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "o-que-e-miocardiopatia-hipertrofica-obstrutiva",
+    "titulo": "O que é miocardiopatia hipertrófica obstrutiva",
+    "subtitulo": "Sintomas, exames e opções discutidas com o especialista",
+    "tema": "Cardiomiopatias",
+    "documento_slug": "sequoia-hcm-aficamten-na-mho-obstrutiva-sintomatica",
+    "resumo": "Na miocardiopatia hipertrófica, o músculo do coração fica espessado de uma maneira que não é explicada apenas por condições como hipertensão ou treinamento físico. Essas condições podem coexistir e precisam ser avaliadas. A doença pode ser familiar.",
+    "secoes": [
+      {
+        "titulo": "O que é a obstrução",
+        "paragrafos": [
+          "Na miocardiopatia hipertrófica, o músculo do coração fica espessado de uma maneira que não é explicada apenas por condições como hipertensão ou treinamento físico. Essas condições podem coexistir e precisam ser avaliadas. A doença pode ser familiar.",
+          "Na forma obstrutiva, há dificuldade para o sangue sair do ventrículo esquerdo. O ecocardiograma avalia essa obstrução e outros aspectos do coração. Falta de ar, dor no peito, palpitação, tontura ou desmaio podem ocorrer, mas algumas pessoas têm poucos sintomas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Tratamento e acompanhamento",
+        "paragrafos": [
+          "Betabloqueadores são uma opção habitual para controlar sintomas. Os inibidores de miosina reduzem a contração excessiva e exigem acompanhamento com ecocardiograma, porque podem reduzir demais a função de bombeamento. Mavacamten e aficamten são medicamentos diferentes, com esquemas próprios. A equipe verifica indicação, registro e disponibilidade do produto.",
+          "Cirurgia de redução do septo ou ablação alcoólica são opções para casos selecionados em centros especializados. A escolha depende dos sintomas, da anatomia, da resposta ao tratamento e das preferências da pessoa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Ensaios respondem perguntas diferentes",
+        "paragrafos": [
+          "O SEQUOIA-HCM comparou aficamten com placebo e avaliou capacidade de exercício em 24 semanas. O MAPLE-HCM comparou aficamten com metoprolol, ambos em monoterapia, também com foco na capacidade de exercício. Esses resultados não demonstram, por si, redução de mortalidade.",
+          "O VALOR-HCM estudou mavacamten em 112 pessoas já elegíveis para redução septal. Em 16 semanas, aproximadamente 18 de cada 100 com o medicamento e 77 de cada 100 com placebo seguiram para o procedimento ou continuaram elegíveis. Isso não representa dispensa definitiva de cirurgia."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Família e atividade física",
+        "paragrafos": [
+          "Converse sobre avaliação de familiares, atividade física e planos de gravidez. A avaliação do risco de morte súbita e de indicação de desfibrilador é uma conversa específica, que não é substituída pelo controle dos sintomas."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Desmaio durante esforço, dor no peito intensa ou falta de ar importante exigem avaliação urgente.",
+      "Informe história familiar de morte súbita, sobretudo em pessoas jovens."
+    ],
+    "perguntas": [
+      "Minha doença é obstrutiva e o que mostrou o ecocardiograma?",
+      "Qual objetivo esperamos alcançar com cada opção?",
+      "Quem acompanhará meus exames e avaliará minha família?"
+    ],
+    "fontes": [
+      "Desai MY, et al. Myosin Inhibition in Patients With Obstructive Hypertrophic Cardiomyopathy Referred for Septal Reduction Therapy. J Am Coll Cardiol. 2022;80:95-108. PMID 35798455. NCT04349072.",
+      "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2024;390(20):1849-1861. DOI 10.1056/NEJMoa2401424. PMID 38739079.",
+      "Garcia-Pavia P, Maron MS, Masri A, et al. Aficamten or Metoprolol Monotherapy for Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2025;393(10):949-960. DOI 10.1056/NEJMoa2504654. PMID 40888697."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "o-que-e-reabilitacao-depois-do-iam",
+    "titulo": "O que é reabilitação depois do infarto",
+    "subtitulo": "Um plano para recuperar função e reduzir o risco depois do infarto",
+    "tema": "Reabilitação cardíaca",
+    "documento_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+    "resumo": "A reabilitação cardíaca combina exercício orientado, educação, revisão do tratamento e cuidado psicossocial. Após o infarto, ajuda a recuperar função, qualidade de vida e confiança, e participa da prevenção de novos eventos. A ESC publicou em 2026 sua primeira diretriz dedicada ao tema.",
+    "secoes": [
+      {
+        "titulo": "Um tratamento com várias partes",
+        "paragrafos": [
+          "A reabilitação cardíaca combina exercício orientado, educação, revisão do tratamento e cuidado psicossocial. Após o infarto, ajuda a recuperar função, qualidade de vida e confiança, e participa da prevenção de novos eventos. A ESC publicou em 2026 sua primeira diretriz dedicada ao tema.",
+          "O programa acompanha a prevenção com medicamentos, controle da pressão e do colesterol, alimentação e cessação do tabagismo. Não substitui as consultas nem os tratamentos indicados."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Peça um encaminhamento concreto",
+        "paragrafos": [
+          "Antes da alta ou no retorno, converse sobre serviço, data de avaliação e formato. O início deve ser precoce quando houver segurança clínica. Dor persistente, arritmia não controlada ou descompensação podem adiar o treino até a estabilização; a equipe mantém e reavalia o plano.",
+          "Idade, fragilidade e outras doenças exigem adaptação, e não exclusão automática. Número de sessões, intensidade e progressão são individualizados."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Presencial, híbrido ou em casa com suporte",
+        "paragrafos": [
+          "Programas domiciliares e digitais podem ser opções para pessoas selecionadas, com equipe, avaliação, metas e acompanhamento. Um aplicativo isolado não oferece todos esses componentes. Caminhadas orientadas podem integrar o programa.",
+          "Transporte, trabalho, custos, medo e responsabilidades familiares devem entrar na conversa. A equipe explica a indicação e constrói com você um formato viável, respeitando suas escolhas."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Durante esforço, dor no peito, falta de ar intensa, palpitação com mal-estar ou desmaio exigem interromper a atividade e buscar avaliação urgente."
+    ],
+    "perguntas": [
+      "Meu encaminhamento já tem serviço e data?",
+      "Qual formato é adequado ao meu risco e à minha rotina?",
+      "Como o programa acompanhará meus sintomas e meu bem-estar?"
+    ],
+    "fontes": [
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag099.  Pocket Guidelines on Cardiac Rehabilitation, agosto 2026. Chairpersons: Maria Bäck, Matthias Wilhelm, Dominique Hansen. Indicações: síndromes coronarianas agudas e crônicas; frailty and comorbidities (seção 5.9 da diretriz / pocket qualitativo — sem copiar classe/nível).",
+      "European Society of Cardiology. Heart, body and mind – the first ESC Guidelines highlight the many benefits of cardiac rehabilitation. Press release, 28 August 2026.",
+      "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation: A scientific statement of the EAPC and ACNAP of the ESC, and the ESC Working Group on e-Cardiology. Eur Heart J. 2025;46(38):3714-3737. DOI 10.1093/eurheartj/ehaf408. PMID 40742158."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "pressao-na-gravidez-nao-e-a-mesma-meta",
+    "titulo": "Pressão na gravidez não é a mesma meta",
+    "subtitulo": "Na gravidez, use o plano específico combinado com a equipe",
+    "tema": "Gravidez",
+    "documento_slug": "alvo-pressorio-na-gestacao-esc-2025-e-aha-2025",
+    "resumo": "O alvo geral abaixo de 130/80 para muitos adultos não deve ser aplicado automaticamente à gestação. As diretrizes de 2025 orientam tratamento e acompanhamento específicos; a ESC recomenda manter a pressão abaixo de 140/90 em gestantes tratadas por hipertensão.",
+    "secoes": [
+      {
+        "titulo": "A gestação tem recomendações próprias",
+        "paragrafos": [
+          "O alvo geral abaixo de 130/80 para muitos adultos não deve ser aplicado automaticamente à gestação. As diretrizes de 2025 orientam tratamento e acompanhamento específicos; a ESC recomenda manter a pressão abaixo de 140/90 em gestantes tratadas por hipertensão.",
+          "Uma pressão normal ou uma diastólica abaixo de 80 não é, por si, motivo para suspender tratamento. A equipe obstétrica e cardiológica ajusta o plano de acordo com seus sintomas e exames."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que mudou com o CHAP",
+        "paragrafos": [
+          "O CHAP avaliou 2.408 gestantes com hipertensão crônica leve. A estratégia de tratar com alvo abaixo de 140/90 reduziu um conjunto de complicações da gestação, sem aumento estatisticamente significativo de recém-nascidos pequenos para a idade gestacional. O resultado não significa que qualquer medicamento seja seguro na gravidez."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Tratamento e planejamento",
+        "paragrafos": [
+          "Informe todos os medicamentos assim que planejar ou reconhecer uma gravidez. Alguns usados fora da gestação precisam ser substituídos. Faça isso com a equipe, sem iniciar ou suspender por conta própria.",
+          "A necessidade de prevenção de pré-eclâmpsia depende dos fatores de risco. Registre a pressão conforme orientação e mantenha o acompanhamento também depois do parto."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Pressão sistólica de 160 ou mais, ou diastólica de 110 ou mais, requer avaliação urgente: procure assistência e não espere a próxima consulta.",
+      "Dor de cabeça intensa, alteração visual, dor forte na parte superior do abdome, falta de ar ou convulsão exigem atendimento imediato, mesmo sem uma medida de pressão."
+    ],
+    "perguntas": [
+      "Qual é minha meta durante a gravidez e depois do parto?",
+      "Meus medicamentos são adequados para esta fase?",
+      "Como reconheço uma urgência e a qual serviço devo ir?"
+    ],
+    "fontes": [
+      "De Backer J, Haugaa KH, Hasselberg NE, et al. 2025 ESC Guidelines for the management of cardiovascular disease and pregnancy. Eur Heart J. 2025;46(43):4462-4568. DOI 10.1093/eurheartj/ehaf193. PMID 40878294.",
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI 10.1016/j.jacc.2025.05.007. PMID 40815242."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "reabilitacao-cardiaca-o-que-esperar",
+    "titulo": "Reabilitação cardíaca: o que esperar",
+    "subtitulo": "Exercício, informação, tratamento e apoio em um único programa",
+    "tema": "Reabilitação cardíaca",
+    "documento_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+    "resumo": "A reabilitação cardíaca reúne exercício orientado, educação, acompanhamento do tratamento e apoio psicossocial. Pode melhorar capacidade física, qualidade de vida e confiança. Os benefícios sobre eventos e hospitalizações dependem da doença e da população estudada.",
+    "secoes": [
+      {
+        "titulo": "O que o programa oferece",
+        "paragrafos": [
+          "A reabilitação cardíaca reúne exercício orientado, educação, acompanhamento do tratamento e apoio psicossocial. Pode melhorar capacidade física, qualidade de vida e confiança. Os benefícios sobre eventos e hospitalizações dependem da doença e da população estudada.",
+          "A diretriz ESC 2026 aborda pessoas com doença coronariana, insuficiência cardíaca e outras condições específicas. A indicação e o formato são definidos após avaliação; o diagnóstico isolado não torna qualquer programa adequado a qualquer pessoa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como começa",
+        "paragrafos": [
+          "A equipe avalia sintomas, exames, limitações, outras doenças e seus objetivos. Define atividades, intensidade, progressão e acompanhamento. Idade avançada e fragilidade pedem adaptação, sem exclusão automática.",
+          "Instabilidade clínica precisa ser tratada antes do treino. O plano é reavaliado depois, para que a pessoa não perca o acesso ao cuidado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Um formato que caiba na sua vida",
+        "paragrafos": [
+          "Pode haver atendimento presencial, híbrido ou domiciliar com acompanhamento, conforme risco e recursos. O programa inclui mais do que uma lista de exercícios ou um aplicativo.",
+          "Converse sobre transporte, custos, horários, medo de esforço e humor. A equipe deve explicar as opções e decidir com você. Não existe um número único de sessões apropriado para todas as pessoas."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito, falta de ar intensa, desmaio ou palpitação com mal-estar durante atividade exigem interromper o esforço e buscar avaliação urgente."
+    ],
+    "perguntas": [
+      "Tenho indicação de reabilitação e qual benefício esperamos?",
+      "Que formato é seguro e viável para mim?",
+      "Quem devo procurar se tiver sintomas ou dificuldade para participar?"
+    ],
+    "fontes": [
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag099.",
+      "European Society of Cardiology. Heart, body and mind – the first ESC Guidelines highlight the many benefits of cardiac rehabilitation. Press release, 28 August 2026.",
+      "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation: A scientific statement of the EAPC and ACNAP of the ESC, and the ESC Working Group on e-Cardiology. Eur Heart J. 2025;46(38):3714-3737. DOI 10.1093/eurheartj/ehaf408. PMID 40742158."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
+  },
+  {
+    "slug": "semaglutida-nao-e-uma-so-pergunta",
+    "titulo": "Semaglutida não é uma só pergunta",
+    "subtitulo": "O objetivo e a formulação mudam a interpretação dos estudos",
+    "tema": "Comunicação clínica",
+    "documento_slug": "quatro-perguntas-de-semaglutida-select-soul-flow-step",
+    "resumo": "A semaglutida foi estudada em diferentes formulações, esquemas e populações. Tratamento da obesidade, controle do diabetes, proteção cardiovascular e proteção renal são perguntas relacionadas, mas não equivalentes. As apresentações não são intercambiáveis por conta própria.",
+    "secoes": [
+      {
+        "titulo": "Uma molécula, diferentes situações",
+        "paragrafos": [
+          "A semaglutida foi estudada em diferentes formulações, esquemas e populações. Tratamento da obesidade, controle do diabetes, proteção cardiovascular e proteção renal são perguntas relacionadas, mas não equivalentes. As apresentações não são intercambiáveis por conta própria.",
+          "A equipe verifica a indicação aprovada para o produto, as contraindicações, os outros medicamentos e o acompanhamento necessário. O nome da molécula, sozinho, não define seu tratamento."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "SELECT: pessoas com doença cardiovascular e excesso de peso",
+        "paragrafos": [
+          "O SELECT incluiu 17.604 pessoas com doença cardiovascular estabelecida e sobrepeso ou obesidade, sem diabetes. Durante cerca de 40 meses, morte cardiovascular, infarto ou AVC ocorreu em 6,5% com semaglutida e 8,0% com placebo. A redução relativa foi de 20%; não significa 20 eventos a menos a cada 100 pessoas.",
+          "Interrupção definitiva por efeitos adversos ocorreu em 16,6% e 8,2%, respectivamente. Esses números abrangem diferentes efeitos adversos, e não apenas náusea."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "SOUL: diabetes e alto risco cardiovascular",
+        "paragrafos": [
+          "O SOUL avaliou a formulação oral em 9.650 pessoas com diabetes tipo 2 e doença cardiovascular, renal ou ambas. O mesmo conjunto de eventos cardiovasculares ocorreu em 12,0% com semaglutida e 13,8% com placebo, em aproximadamente quatro anos. Essa população é diferente da do SELECT."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "FLOW: diabetes e doença renal",
+        "paragrafos": [
+          "O FLOW estudou 3.533 pessoas com diabetes tipo 2 e doença renal crônica com albuminúria. O desfecho combinado, que incluía piora renal importante e morte renal ou cardiovascular, ocorreu em 18,7% e 23,2%, em aproximadamente 3,4 anos. O resultado não deve ser transportado automaticamente para qualquer alteração de exame renal."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que acompanhar",
+        "paragrafos": [
+          "Náuseas, vômitos e outros sintomas digestivos podem ocorrer. Informe efeitos persistentes, dificuldade de alimentação ou hidratação e todos os outros medicamentos. Não troque formulação nem altere o esquema sem orientação.",
+          "Converse sobre o objetivo principal, a tolerância, o custo, o acompanhamento e o restante do tratamento. Resultados de estudos diferentes não devem ser somados."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor abdominal forte e persistente ou vômitos que impedem a hidratação exigem avaliação rápida.",
+      "Desmaio, confusão ou sinais de hipoglicemia, especialmente com outros antidiabéticos, precisam de atendimento conforme o plano combinado."
+    ],
+    "perguntas": [
+      "Qual é o objetivo do medicamento no meu caso?",
+      "Qual formulação tem indicação para esse objetivo?",
+      "Como acompanharemos a tolerância e os resultados?"
+    ],
+    "fontes": [
+      "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI 10.1056/NEJMoa2307563. PMID 37952131.",
+      "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI 10.1056/NEJMoa2501006. PMID 40162642.",
+      "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI 10.1056/NEJMoa2403347. PMID 38785209."
+    ],
+    "fonte_producao": "Grok; adaptação e revisão clínica para material de pacientes em 2026-09-09",
+    "review_status": "revisado",
+    "review_note": "Convertido integralmente para o esquema de material ao paciente; linguagem editorial substituída por orientação legível, dados de ensaios conferidos nas revisões técnicas correspondentes, sem posologia; segurança, decisão compartilhada e vínculo documental explícitos.",
+    "published": true
   }
 ]

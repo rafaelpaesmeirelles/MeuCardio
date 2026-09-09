@@ -1,12 +1,44 @@
 ---
-title: "QRISK3: Risco Cardiovascular em 10 Anos — Derivação e Validação na Coorte QResearch (Reino Unido)"
-slug: qrisk3-risco-cardiovascular-em-10-anos-derivacao-e-validacao-na-coorte-qresearch
-theme: "Calculadoras"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta Calculadoras já cobria
+  as três grandes famílias de risco cardiovascular em prevenção primária de origem
+  americana e europeia — Framingham Risk Score (framingham-risk-score-frs), Pooled
+  Cohort Equations e Equações PREVENT (pooled-cohort-equations-e-equacoes-prevent-risco-cardiovascular-em-prevencao-primaria)
+  e SCORE2/SCORE2-OP, incluindo aplicabilidade brasileira e a variante SCORE2-Diabetes
+  (score2-e-score2-op, score2-score2-op-aplicabilidade-e-limites-no-paciente-brasileiro,
+  score2-diabetes-estimativa-de-risco-cardiovascular-em-10-anos-no-diabetes-tipo-2)
+  — mas nenhum documento tratava do QRISK3, a ferramenta britânica (QResearch/NHS)
+  que é hoje o modelo de risco cardiovascular com o maior número de variáveis clínicas
+  incorporadas (doença renal crônica, variabilidade da pressão arterial, migrânea,
+  corticosteroides, lúpus, antipsicóticos atípicos, doença mental grave e disfunção
+  erétil), e que por isso levanta uma pergunta distinta das demais: o ganho de variáveis
+  clínicas se traduz em ganho de discriminação, ou apenas em reclassificação de subgrupos
+  específicos? Verificado via PubMed E-utilities nesta sessão (esearch por autor ''Hippisley-Cox
+  QRISK3'' e por termo ''QRISK3 external validation''; efetch de abstract nos três
+  PMIDs acima).'
+published: true
 review_status: revisado
-published: false
-source_refs: ["Hippisley-Cox J, Coupland C, Brindle P. Development and validation of QRISK3 risk prediction algorithms to estimate future risk of cardiovascular disease: prospective cohort study. BMJ. 2017;357:j2099. DOI: 10.1136/bmj.j2099. PMID: 28536104. PMCID: PMC5441081 — artigo de derivação e validação, conferido nesta sessão via PubMed E-utilities (esearch + efetch, registro/abstract lido diretamente)", "Mortensen MB, Tybjærg-Hansen A, Nordestgaard BG. Statin Eligibility for Primary Prevention of Cardiovascular Disease According to 2021 European Prevention Guidelines Compared With Other International Guidelines. JAMA Cardiol. 2022;7(8):836-843. DOI: 10.1001/jamacardio.2022.1876. PMID: 35793078. PMCID: PMC9260641 — usado aqui apenas como validação externa de desempenho do QRISK3 fora do Reino Unido (coorte dinamarquesa), não como fonte de coeficientes", "Livingstone S, Morales DR, Fleuriot J, Donnan PT, Guthrie B. External validation of the QLifetime cardiovascular risk prediction tool: population cohort study. BMC Cardiovasc Disord. 2023;23(1):194. DOI: 10.1186/s12872-023-03209-8. PMID: 37061672. PMCID: PMC10105395 — usado aqui apenas para confirmar o uso do limiar QRISK3 ≥10% na prática clínica britânica (CPRD) e o número necessário a tratar associado"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Calculadoras já cobria as três grandes famílias de risco cardiovascular em prevenção primária de origem americana e europeia — Framingham Risk Score (framingham-risk-score-frs), Pooled Cohort Equations e Equações PREVENT (pooled-cohort-equations-e-equacoes-prevent-risco-cardiovascular-em-prevencao-primaria) e SCORE2/SCORE2-OP, incluindo aplicabilidade brasileira e a variante SCORE2-Diabetes (score2-e-score2-op, score2-score2-op-aplicabilidade-e-limites-no-paciente-brasileiro, score2-diabetes-estimativa-de-risco-cardiovascular-em-10-anos-no-diabetes-tipo-2) — mas nenhum documento tratava do QRISK3, a ferramenta britânica (QResearch/NHS) que é hoje o modelo de risco cardiovascular com o maior número de variáveis clínicas incorporadas (doença renal crônica, variabilidade da pressão arterial, migrânea, corticosteroides, lúpus, antipsicóticos atípicos, doença mental grave e disfunção erétil), e que por isso levanta uma pergunta distinta das demais: o ganho de variáveis clínicas se traduz em ganho de discriminação, ou apenas em reclassificação de subgrupos específicos? Verificado via PubMed E-utilities nesta sessão (esearch por autor 'Hippisley-Cox QRISK3' e por termo 'QRISK3 external validation'; efetch de abstract nos três PMIDs acima)."
+slug: qrisk3-risco-cardiovascular-em-10-anos-derivacao-e-validacao-na-coorte-qresearch
+source_refs:
+- 'Hippisley-Cox J, Coupland C, Brindle P. Development and validation of QRISK3 risk
+  prediction algorithms to estimate future risk of cardiovascular disease: prospective
+  cohort study. BMJ. 2017;357:j2099. DOI: 10.1136/bmj.j2099. PMID: 28536104. PMCID:
+  PMC5441081 — artigo de derivação e validação, conferido nesta sessão via PubMed
+  E-utilities (esearch + efetch, registro/abstract lido diretamente)'
+- 'Mortensen MB, Tybjærg-Hansen A, Nordestgaard BG. Statin Eligibility for Primary
+  Prevention of Cardiovascular Disease According to 2021 European Prevention Guidelines
+  Compared With Other International Guidelines. JAMA Cardiol. 2022;7(8):836-843. DOI:
+  10.1001/jamacardio.2022.1876. PMID: 35793078. PMCID: PMC9260641 — usado aqui apenas
+  como validação externa de desempenho do QRISK3 fora do Reino Unido (coorte dinamarquesa),
+  não como fonte de coeficientes'
+- 'Livingstone S, Morales DR, Fleuriot J, Donnan PT, Guthrie B. External validation
+  of the QLifetime cardiovascular risk prediction tool: population cohort study. BMC
+  Cardiovasc Disord. 2023;23(1):194. DOI: 10.1186/s12872-023-03209-8. PMID: 37061672.
+  PMCID: PMC10105395 — usado aqui apenas para confirmar o uso do limiar QRISK3 ≥10%
+  na prática clínica britânica (CPRD) e o número necessário a tratar associado'
+theme: Calculadoras
+title: 'QRISK3: Risco Cardiovascular em 10 Anos — Derivação e Validação na Coorte
+  QResearch (Reino Unido)'
 ---
 
 # QRISK3: Risco Cardiovascular em 10 Anos — Derivação e Validação na Coorte QResearch (Reino Unido)

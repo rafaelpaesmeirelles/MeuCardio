@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "release": "corvia-full-consolidated-20260908",
+  "release": "corvia-grok-claude-377-login-20260909",
   "decision": "approved_for_full_corpus_publication",
   "scope": "entire_canonical_reviewed_corpus",
-  "approval_basis": "Instrução explícita e reiterada do responsável pelo repositório em 08/09/2026 para concluir e publicar em um único deploy emergencial todo o corpus canônico revisado, incluindo o lote antigo pendente, o lote Grok anexado, os documentos já incorporados à main, o conteúdo resgatado e o commit de frontend/mobilidade 4b1c5bd. O escopo foi congelado na mesma data, sem autorização para acrescentar documentos posteriores. A autorização está vinculada criptograficamente aos 12.217 itens e aos fingerprints por frente abaixo; qualquer alteração de slug, fonte, contagem ou estado editorial invalida este manifesto.",
-  "expected_total": 12217,
-  "inventory_sha256": "a35e8516c940d4739aa6bbace89d8e9b6ab8d3d1b1af524aa2e331e752dccc13",
+  "approval_basis": "Autorização explícita do responsável pelo repositório nesta tarefa para concluir a revisão clínica, corrigir, interligar e publicar em um único deploy emergencial os 377 arquivos de origem Grok e Claude (376 itens canônicos, com duplicatas reconciliadas) e os ajustes de login/galáxias. Preserva o corpus anteriormente publicado, sem incluir ramos concorrentes. A publicação está vinculada aos slugs e arquivos canônicos deste checkout por fingerprints de todas as frentes. O escopo incremental está explicitado em grok-claude-377-20260909.json.",
+  "expected_total": 12554,
+  "inventory_sha256": "a38bc1f33cbfba01dc77e5372556e6cc9f9e6c9e435ab9915dd1113c6061d2f2",
   "fronts": {
     "documentos": {
-      "count": 2891,
-      "reviewed_count": 2891,
-      "slug_sha256": "c3ae80c4d8bc9bc807b60625941b075b838f9f7cacc43d2017852a5dfdfbd9b5",
-      "source_sha256": "604c80716605e4f665c3f3ea8ac410974c77852b7933c4453f7a8f2737bbffb4"
+      "count": 3125,
+      "reviewed_count": 3125,
+      "slug_sha256": "235b3e023f9b38f788222032998fdd3642fc06c18da445c592559ce90088215c",
+      "source_sha256": "be2f98f6066a36e203dde2812b4a8ec428bcb93117c30f71645192655a774d91"
     },
     "galeria": {
       "count": 281,
@@ -20,22 +20,22 @@
       "source_sha256": "40530e6f27ef517cd829ebc3e387f2edc65b8d5eceaf9f9c37a2007ffbc5f7d1"
     },
     "exames": {
-      "count": 431,
-      "reviewed_count": 431,
-      "slug_sha256": "644905b966f1e620eed8aaf7298175f968c8325b1c51c9852d229f5c0b96bd02",
-      "source_sha256": "0fd871f2420498c61aba09935fed3171a9061d13b549de895ad16149cde013ce"
+      "count": 436,
+      "reviewed_count": 436,
+      "slug_sha256": "954553db1411141fc47a0bb7535e4fe63ad214deab9b341521f5502e6faf8f2b",
+      "source_sha256": "96bd31125a838430cf3637c805a2973552224ef40df3f7c30c0c3b3d1afcfd0f"
     },
     "evidencias": {
-      "count": 3363,
-      "reviewed_count": 3363,
-      "slug_sha256": "268560235d62920ce6e5e05f658dec773bb700f614f26a99ac55fd1b8f96b0e9",
-      "source_sha256": "71b83a76e80272b9aa3eb788d2f4160dd9737fd9dcc11ced142bf23224fc5abb"
+      "count": 3401,
+      "reviewed_count": 3401,
+      "slug_sha256": "f135212221b8afb2071214c538ba105921bd6a058a94ab6f5504bd6deba355fe",
+      "source_sha256": "48b4975b8368b7e3a8158ecd1012f8aadae2c0a74c0416ff73a6d0546882d012"
     },
     "estudos": {
-      "count": 2061,
-      "reviewed_count": 2061,
-      "slug_sha256": "4bc72fb6938177ba232ea8f64ebd4e96d3c34a5d98d55024d6a3ab308b55c27f",
-      "source_sha256": "5d11bd9c5b0a023522925060c725cfbff98c7bb6779f9d0223852be49ca40eb9"
+      "count": 2065,
+      "reviewed_count": 2065,
+      "slug_sha256": "bd7d47591126992429dbcdffb53e4bfaac91fc4e1a93cb2663e14fb9f3d9037e",
+      "source_sha256": "57c5da3de9cfd79250a092c9c92e4d3625b7786bf98068cb4a183f2372e50753"
     },
     "medicamentos": {
       "count": 206,
@@ -50,22 +50,22 @@
       "source_sha256": "8ba802c8267884fddbf3e09c70c8fc04159108bb496e336b2c8ebd5965037353"
     },
     "casos_clinicos": {
-      "count": 967,
-      "reviewed_count": 967,
-      "slug_sha256": "c077d99f47bb478c32461cfad3291ce49205211cf321f1e19000717035d0030a",
-      "source_sha256": "5e2436d488fc9d941df9e1541c79ed1592195efd076954318b0c6d126b228919"
+      "count": 1001,
+      "reviewed_count": 1001,
+      "slug_sha256": "031ff60975dca52668f472a265ad810cb1637d25cf84d5495e999381566730c8",
+      "source_sha256": "baf58ef39093fd6f9b161f571128bee6fcea0c641d54c862f8e3861be263488e"
     },
     "trilhas": {
-      "count": 581,
-      "reviewed_count": 581,
-      "slug_sha256": "16b6be517008f02ca01edf2659826c21eaba4082a1d3148517b2583d43385eda",
-      "source_sha256": "8c69cc36aa1785cb941e4aa4daeea177dad27d5d16924fc5b36a5a894ac7afa6"
+      "count": 595,
+      "reviewed_count": 595,
+      "slug_sha256": "9663f18a096af394ee83a6805420ae6a00cd77984f59008c9141a8d469307bac",
+      "source_sha256": "a6c0ebf7d51c09f5563589d215a9266624b07be6cf35a6360f4e87f57b8ea4af"
     },
     "material_paciente": {
-      "count": 478,
-      "reviewed_count": 478,
-      "slug_sha256": "6e7ee634b4c3784a8cda1102ff3e5b2dea3e783ae326d92d9a561fddf6ea150f",
-      "source_sha256": "4552bff379046f4fe6e771ba865e394217ce6bf2dd4a8b93d193002936e1ef01"
+      "count": 486,
+      "reviewed_count": 486,
+      "slug_sha256": "8988cc4d5948d21a26390aeea82bbc4cf19c76d533eb155a7fe25e96c75c0299",
+      "source_sha256": "00566217b27145dfb770d4fdc56e2cb74b8b3505b6b3e9387c010c8cdc7e4cd1"
     },
     "emergencia": {
       "count": 77,
@@ -77,7 +77,7 @@
       "count": 346,
       "reviewed_count": 346,
       "slug_sha256": "be0ae04b00aaacf2b7a962fae4d7e4fca27c6be86b70527554cec82dc77e6281",
-      "source_sha256": "e59a0f85861b8090697ad790bb30f55e0a261ead3a0cd3a71a061479ef9f3a89"
+      "source_sha256": "153d1723d49aefc7c1d23e96b81b84d09164360b8f05c138ab761e46693c64bc"
     },
     "triagem_sintomas": {
       "count": 23,

@@ -1,12 +1,40 @@
 ---
-title: "Sensor Implantável de Veia Cava Inferior para Monitorização de Congestão: o Programa FUTURE-HF"
-slug: sensor-implantavel-de-veia-cava-inferior-para-monitorizacao-de-congestao-o-programa-future-hf
-theme: "Dispositivos"
 kind: estudo
+legacy_source: 'Documento novo. A pasta já cobre monitorização hemodinâmica implantável
+  por sensor de pressão de artéria pulmonar (CHAMPION/GUIDE-HF, sistema CardioMEMS)
+  e por algoritmo multissensor intratorácico embutido em CDI/CRT-D (HeartLogic/MultiSENSE
+  vs. OptiVol/DOT-HF), mas nenhum documento tratava de um sensor implantável com mecanismo
+  fisiológico distinto dos dois anteriores: medição direta da área e da colapsabilidade
+  da veia cava inferior (IVC), sem contato com o sistema arterial pulmonar nem algoritmo
+  indireto de impedância torácica. É tecnologia de primeiro-em-humanos (2024-2026),
+  ainda em fase de estudo de viabilidade, não de ensaio pivotal comparativo — ângulo
+  genuinamente novo e não coberto.'
+published: true
 review_status: revisado
-published: false
-source_refs: ["Uriel N, Bhatt K, Kahwash R, McMinn TR, Patel MR, Lilly S, Britton JR, et al. Safety and Feasibility of an Implanted Inferior Vena Cava Sensor for Accurate Volume Assessment: FUTURE-HF2 Trial. J Card Fail. 2025;31(2):369-376. DOI: 10.1016/j.cardfail.2024.09.003. PMID: 39349159", "Kalra PR, Gogorishvili I, Khabeishvili G, Málek F, Toman O, Critoph C, Flett AS, et al; FUTURE-HF Investigators. First-in-Human Implantable Inferior Vena Cava Sensor for Remote Care in Heart Failure: FUTURE-HF. JACC Heart Fail. 2025;13(6):1000-1010. DOI: 10.1016/j.jchf.2025.01.019. PMID: 40208140. NCT04203576", "Damman K, Uriel N, Mehra MR, Testani J, Fudim M, Bhatt K, Kahwash R, et al. Long-term Safety and Performance of an Implantable IVC Sensor for Congestion-Guided Management in Heart Failure: 12-Month Results from the FUTURE-HF Trial Portfolio. Eur J Heart Fail. 2026 Mar 17:xuag080 [ahead of print]. DOI: 10.1093/ejhf/xuag080. PMID: 41841702", "Uriel N, Mehra MR, Greene BR, Bhatt K, Kahwash R, Feitell S, Sayer G, et al. Physician-Directed Patient Self-Management Using an Implantable IVC Congestion Sensor: Insights From FUTURE-HFII. JACC Heart Fail. 2026 Mar 3:103011 [ahead of print]. DOI: 10.1016/j.jchf.2026.103011. PMID: 41860506. NCT05763407 — estudo 'Early Feasibility Study of the NORM System', mesmo dispositivo e mesmo patrocinador (FIRE1) do FUTURE-HF, com nome comercial diferente ('NORM System' em vez de 'FIRE1 System'); usado apenas para o subestudo de autogestão pelo paciente, não para números de segurança/desempenho geral do sensor"]
-legacy_source: "Documento novo. A pasta já cobre monitorização hemodinâmica implantável por sensor de pressão de artéria pulmonar (CHAMPION/GUIDE-HF, sistema CardioMEMS) e por algoritmo multissensor intratorácico embutido em CDI/CRT-D (HeartLogic/MultiSENSE vs. OptiVol/DOT-HF), mas nenhum documento tratava de um sensor implantável com mecanismo fisiológico distinto dos dois anteriores: medição direta da área e da colapsabilidade da veia cava inferior (IVC), sem contato com o sistema arterial pulmonar nem algoritmo indireto de impedância torácica. É tecnologia de primeiro-em-humanos (2024-2026), ainda em fase de estudo de viabilidade, não de ensaio pivotal comparativo — ângulo genuinamente novo e não coberto."
+slug: sensor-implantavel-de-veia-cava-inferior-para-monitorizacao-de-congestao-o-programa-future-hf
+source_refs:
+- 'Uriel N, Bhatt K, Kahwash R, McMinn TR, Patel MR, Lilly S, Britton JR, et al. Safety
+  and Feasibility of an Implanted Inferior Vena Cava Sensor for Accurate Volume Assessment:
+  FUTURE-HF2 Trial. J Card Fail. 2025;31(2):369-376. DOI: 10.1016/j.cardfail.2024.09.003.
+  PMID: 39349159'
+- 'Kalra PR, Gogorishvili I, Khabeishvili G, Málek F, Toman O, Critoph C, Flett AS,
+  et al; FUTURE-HF Investigators. First-in-Human Implantable Inferior Vena Cava Sensor
+  for Remote Care in Heart Failure: FUTURE-HF. JACC Heart Fail. 2025;13(6):1000-1010.
+  DOI: 10.1016/j.jchf.2025.01.019. PMID: 40208140. NCT04203576'
+- 'Damman K, Uriel N, Mehra MR, Testani J, Fudim M, Bhatt K, Kahwash R, et al. Long-term
+  Safety and Performance of an Implantable IVC Sensor for Congestion-Guided Management
+  in Heart Failure: 12-Month Results from the FUTURE-HF Trial Portfolio. Eur J Heart
+  Fail. 2026 Mar 17:xuag080 [ahead of print]. DOI: 10.1093/ejhf/xuag080. PMID: 41841702'
+- 'Uriel N, Mehra MR, Greene BR, Bhatt K, Kahwash R, Feitell S, Sayer G, et al. Physician-Directed
+  Patient Self-Management Using an Implantable IVC Congestion Sensor: Insights From
+  FUTURE-HFII. JACC Heart Fail. 2026 Mar 3:103011 [ahead of print]. DOI: 10.1016/j.jchf.2026.103011.
+  PMID: 41860506. NCT05763407 — estudo ''Early Feasibility Study of the NORM System'',
+  mesmo dispositivo e mesmo patrocinador (FIRE1) do FUTURE-HF, com nome comercial
+  diferente (''NORM System'' em vez de ''FIRE1 System''); usado apenas para o subestudo
+  de autogestão pelo paciente, não para números de segurança/desempenho geral do sensor'
+theme: Dispositivos
+title: 'Sensor Implantável de Veia Cava Inferior para Monitorização de Congestão:
+  o Programa FUTURE-HF'
 ---
 
 # Sensor Implantável de Veia Cava Inferior para Monitorização de Congestão: o Programa FUTURE-HF

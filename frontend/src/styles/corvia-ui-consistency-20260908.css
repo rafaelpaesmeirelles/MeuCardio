@@ -51,7 +51,7 @@
 }
 
 #root .spaces-choice .galaxy-theme-toggle[data-rotation="clockwise"] .galaxy-theme-toggle__image {
-  animation: corvia-choice-mini-universe-clockwise 120s linear infinite !important;
+  animation: corvia-choice-mini-universe-clockwise 240s linear infinite !important;
 }
 
 @keyframes corvia-choice-mini-universe-clockwise {
@@ -300,7 +300,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 
 @media (min-width: 901px) {
   #root #corvia-login .login-gateway__universe { height: 282px !important; }
-  #root #corvia-login .login-gateway__milky-way { width: min(930px, 92%) !important; }
+  #root #corvia-login .login-gateway__milky-way { width: min(810px, 81%) !important; }
   #root #corvia-login .login-gateway__core { width: 142px !important; height: 155px !important; }
   #root #corvia-login .login-gateway__space { width: 184px !important; min-height: 64px !important; }
 }
@@ -385,7 +385,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 
 @media (max-width: 900px) {
   #root #corvia-login .login-gateway__universe { height: 212px !important; margin-top: 7px !important; }
-  #root #corvia-login .login-gateway__milky-way { width: calc(100% + 82px) !important; }
+  #root #corvia-login .login-gateway__milky-way { width: calc(100% + 26px) !important; }
   #root #corvia-login .login-gateway__core { width: 84px !important; height: 96px !important; }
   #root #corvia-login .login-gateway__space { width: clamp(102px, 28.5vw, 112px) !important; min-height: 43px !important; }
   #root #corvia-login .login-gateway__space > span { width: 25px !important; height: 25px !important; }
@@ -393,8 +393,8 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 }
 
 /*
- * Paleta clara aprovada: clínica e própria, não uma inversão do universo
- * escuro. A galáxia mantém azul, ciano e núcleo quente do asset original.
+ * Paleta clara: clínica e própria, não uma inversão do universo
+ * escuro. A galáxia usa azul e ciano com contraste moderado sobre o fundo claro.
  */
 #root #corvia-login.login-gateway--light {
   --approved-panel: rgba(255, 255, 255, .94) !important;
@@ -406,7 +406,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
   background:
     radial-gradient(circle at 50% 37%, rgba(33, 187, 221, .15), transparent 31rem),
     radial-gradient(circle at 12% 12%, rgba(48, 132, 239, .10), transparent 25rem),
-    radial-gradient(circle at 88% 72%, rgba(105, 82, 218, .07), transparent 27rem),
+    radial-gradient(circle at 88% 72%, rgba(32, 135, 169, .06), transparent 27rem),
     linear-gradient(145deg, #fbfeff 0%, #f3f9fd 52%, #edf5fb 100%) !important;
 }
 
@@ -414,7 +414,7 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 #root #corvia-login.login-gateway--light .login-gateway__console-head h2,
 #root #corvia-login.login-gateway--light .login-gateway__field > span,
 #root #corvia-login.login-gateway--light .login-gateway__space strong { color: #14335d !important; }
-#root #corvia-login.login-gateway--light .login-gateway__hero h1 strong { color: #08a8c7 !important; }
+#root #corvia-login.login-gateway--light .login-gateway__hero h1 strong { color: #087e9c !important; }
 #root #corvia-login.login-gateway--light .login-gateway__hero > span,
 #root #corvia-login.login-gateway--light .login-gateway__console-head small { color: #5d7392 !important; }
 
@@ -426,9 +426,9 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 
 #root #corvia-login.login-gateway--light .login-gateway__galaxy-image,
 #root #corvia-login.login-gateway--light .login-gateway__galaxy-canvas[data-ready="true"] {
-  opacity: .98 !important;
-  mix-blend-mode: normal !important;
-  filter: saturate(1.34) contrast(1.16) brightness(.96) hue-rotate(0deg) drop-shadow(0 0 24px rgba(23, 128, 205, .2)) !important;
+  opacity: .66 !important;
+  mix-blend-mode: multiply !important;
+  filter: grayscale(1) sepia(1) saturate(3) hue-rotate(155deg) contrast(.92) brightness(1.12) drop-shadow(0 0 16px rgba(23, 128, 205, .10)) !important;
 }
 
 #root #corvia-login.login-gateway--light .login-gateway__universe::before,
@@ -455,18 +455,42 @@ html[data-corvia-theme="light"] #root .spaces-stellar-route {
 }
 
 #root #corvia-login.login-gateway--light .login-gateway__field input { color: #173858 !important; }
-#root #corvia-login.login-gateway--light .login-gateway__field input::placeholder { color: #72859a !important; opacity: 1 !important; }
+#root #corvia-login.login-gateway--light .login-gateway__field input::placeholder { color: #536c85 !important; opacity: 1 !important; }
 #root #corvia-login.login-gateway--light .login-gateway__enter {
   color: #fff !important;
-  background: linear-gradient(90deg, #237ce7, #08abc8) !important;
+  background: linear-gradient(105deg, #1e5fbf, #087e97) !important;
   border-color: rgba(10, 143, 180, .48) !important;
 }
 
 #root #corvia-login.login-gateway--light .login-gateway__join {
-  background: linear-gradient(135deg, rgba(38, 125, 221, .075), rgba(20, 177, 194, .055) 58%, rgba(104, 80, 211, .065)) !important;
-  border-color: rgba(72, 91, 190, .20) !important;
+  background: linear-gradient(135deg, rgba(38, 125, 221, .075), rgba(20, 177, 194, .055) 58%, rgba(25, 144, 166, .065)) !important;
+  border-color: rgba(28, 124, 171, .20) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
   #root .spaces-choice .galaxy-theme-toggle[data-rotation="clockwise"] .galaxy-theme-toggle__image { animation: none !important; }
+}
+
+/* Revisão de 09/09: galáxia contida na cena e ações alinhadas à paleta clara. */
+#root #corvia-login .login-gateway__milky-way {
+  height: 112% !important;
+  max-height: 330px !important;
+  aspect-ratio: auto !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join small {
+  color: #185e9b !important;
+  background: none !important;
+  -webkit-text-fill-color: #185e9b !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__join > span:first-child,
+#root #corvia-login.login-gateway--light .login-gateway__console-head > span {
+  color: #166d98 !important;
+  background: #e9f4fb !important;
+  border-color: #c4e1f0 !important;
+  box-shadow: none !important;
+}
+#root #corvia-login.login-gateway--light .login-gateway__forgot,
+#root #corvia-login.login-gateway--light .login-gateway__console-head p,
+#root #corvia-login.login-gateway--light .login-gateway__field button {
+  color: #235f94 !important;
 }

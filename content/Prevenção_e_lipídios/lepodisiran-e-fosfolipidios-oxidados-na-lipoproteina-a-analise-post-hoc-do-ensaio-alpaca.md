@@ -1,12 +1,39 @@
 ---
-title: "Lepodisiran e Fosfolipídios Oxidados na Lipoproteína(a): a Análise Post Hoc do Ensaio ALPACA"
-slug: lepodisiran-e-fosfolipidios-oxidados-na-lipoproteina-a-analise-post-hoc-do-ensaio-alpaca
-theme: "Prevenção e lipídios"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta já cobre extensamente
+  a classe de terapias direcionadas à lipoproteína(a) — olpasirana (ocean-a-dose),
+  zerlasirana (alpacar-360), muvalaplina (oral, mecanismo distinto), lerodalcibepe
+  e enlicitide (inibidores de PCSK9) — mas nenhum documento tratava especificamente
+  da lepodisirana (siRNA de duração estendida, dose a cada 6 meses) nem da via mecanística
+  dos fosfolipídios oxidados (OxPL) ligados à apo(a) e à apoB, hipótese que tenta
+  explicar parte do risco aterosclerótico causal atribuído à Lp(a). Fecha essa lacuna
+  dupla com uma publicação genuinamente recente (JACC, 31/08/2026, ainda 'online ahead
+  of print' na data desta escrita) — análise post hoc de 213 dos 320 participantes
+  do ensaio de fase 2 ALPACA (NEJM 2025, PMID 40162643, já citado como base) — com
+  PMID, autoria, revista, ano, n e todos os números conferidos nesta sessão via PubMed
+  E-utilities antes da redação.
+published: true
 review_status: revisado
-published: false
-source_refs: ["Nissen SE, Navar AM, Krege JH, Ni W, St John J, Nicholls SJ, Shen X, Wolski K, Michael LF. Effect on Lipoprotein(a) Oxidized Phospholipids of Lepodisiran, an Extended-Duration siRNA Targeting Lipoprotein(a). J Am Coll Cardiol. 2026 Aug 31 (online ahead of print). DOI: 10.1016/j.jacc.2026.07.015. PMID: 42671367 — NCT05565742 (ALPACA)", "Annink ME, Stroes ESG, Kroon J. Taking the Sting Out of Lipoprotein(a): Oxidized Phospholipid Lowering With Lepodisiran [editorial]. J Am Coll Cardiol. 2026 Aug 12 (online ahead of print). DOI: 10.1016/j.jacc.2026.07.046. PMID: 42671368 — editorial de acompanhamento; texto integral não lido nesta sessão, apenas título e metadados confirmados via PubMed, portanto seu conteúdo específico não é reproduzido neste documento", "Nissen SE, Ni W, Shen X, Wang Q, Navar AM, Nicholls SJ, Wolski K, Michael L, Haupt A, Krege JH; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643 — NCT05565742, 320 pacientes, ensaio de base do qual a análise post hoc deriva"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta já cobre extensamente a classe de terapias direcionadas à lipoproteína(a) — olpasirana (ocean-a-dose), zerlasirana (alpacar-360), muvalaplina (oral, mecanismo distinto), lerodalcibepe e enlicitide (inibidores de PCSK9) — mas nenhum documento tratava especificamente da lepodisirana (siRNA de duração estendida, dose a cada 6 meses) nem da via mecanística dos fosfolipídios oxidados (OxPL) ligados à apo(a) e à apoB, hipótese que tenta explicar parte do risco aterosclerótico causal atribuído à Lp(a). Fecha essa lacuna dupla com uma publicação genuinamente recente (JACC, 31/08/2026, ainda 'online ahead of print' na data desta escrita) — análise post hoc de 213 dos 320 participantes do ensaio de fase 2 ALPACA (NEJM 2025, PMID 40162643, já citado como base) — com PMID, autoria, revista, ano, n e todos os números conferidos nesta sessão via PubMed E-utilities antes da redação."
+slug: lepodisiran-e-fosfolipidios-oxidados-na-lipoproteina-a-analise-post-hoc-do-ensaio-alpaca
+source_refs:
+- 'Nissen SE, Navar AM, Krege JH, Ni W, St John J, Nicholls SJ, Shen X, Wolski K,
+  Michael LF. Effect on Lipoprotein(a) Oxidized Phospholipids of Lepodisiran, an Extended-Duration
+  siRNA Targeting Lipoprotein(a). J Am Coll Cardiol. 2026 Aug 31 (online ahead of
+  print). DOI: 10.1016/j.jacc.2026.07.015. PMID: 42671367 — NCT05565742 (ALPACA)'
+- 'Annink ME, Stroes ESG, Kroon J. Taking the Sting Out of Lipoprotein(a): Oxidized
+  Phospholipid Lowering With Lepodisiran [editorial]. J Am Coll Cardiol. 2026 Aug
+  12 (online ahead of print). DOI: 10.1016/j.jacc.2026.07.046. PMID: 42671368 — editorial
+  de acompanhamento; texto integral não lido nesta sessão, apenas título e metadados
+  confirmados via PubMed, portanto seu conteúdo específico não é reproduzido neste
+  documento'
+- 'Nissen SE, Ni W, Shen X, Wang Q, Navar AM, Nicholls SJ, Wolski K, Michael L, Haupt
+  A, Krege JH; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering
+  RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818.
+  PMID: 40162643 — NCT05565742, 320 pacientes, ensaio de base do qual a análise post
+  hoc deriva'
+theme: Prevenção e lipídios
+title: 'Lepodisiran e Fosfolipídios Oxidados na Lipoproteína(a): a Análise Post Hoc
+  do Ensaio ALPACA'
 ---
 
 # Lepodisiran e Fosfolipídios Oxidados na Lipoproteína(a): a Análise Post Hoc do Ensaio ALPACA

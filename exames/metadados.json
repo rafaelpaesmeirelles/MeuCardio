@@ -10500,5 +10500,146 @@
     "published": true,
     "fonte_producao": "claude",
     "review_note": "Revisão científica independente Codex em 08/09/2026 sobre snapshot congelado de 29/08; correções: AVC não aguarda duplex; sem rastreio indiscriminado; Transcraniano separado; fonte possui tabela de velocidades."
+  },
+  {
+    "slug": "lpa-nmol-rastreio-prevencao-2025",
+    "name": "Lipoproteína(a) em nmol/L — rastreio em prevenção, 2025",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Concentração plasmática da partícula lipoproteína(a), preferencialmente em nmol/L (número de partículas), não em mg/dL. Lp(a) é determinada geneticamente; um valor isolado na vida adulta costuma bastar para estratificação. Não é LDL-C: estatina pouco a altera. ALPACA (Nissen et al., NEJM 2025;392:1673-1683, PMID 40162643) é fase 2 de surrogate: n=320, Lp(a) mediana basal 253,9 nmol/L; lepodisiran 400 mg agrupados −93,9 pontos percentuais da Lp(a) nos dias 60–180. Queda da partícula não é desfecho clínico.",
+    "reference_range": "Não há limiar universal de tratamento em nmol/L comprovado por desfecho (CVOT). Não inventar corte prescritivo. O consenso EAS 2022 usa faixas pragmáticas de rastreio — 'afastar' (<75 nmol/L / <30 mg/dL) e 'confirmar risco' (>125 nmol/L / >50 mg/dL) — e a ESC/EAS 2019 considera medir pelo menos uma vez para identificar níveis hereditários muito altos (>430 nmol/L ou >180 mg/dL). Esses números identificam risco; não autorizam fármaco específico. Conversão mg/dL ↔ nmol/L não é fator único confiável — preferir o laboratório em nmol/L. A atualização ESC/EAS 2025 considera Lp(a) >50 mg/dL (aproximadamente 105 nmol/L no texto) agravante de risco, IIa B; este valor não substitui as faixas pragmáticas EAS 2022 nem autoriza conversão fixa de unidades. O risco é contínuo: Lp(a) baixa não exclui risco por outros fatores.",
+    "indications": "Medir pelo menos uma vez na vida adulta para identificar Lp(a) elevada como risco residual (ESC/EAS 2019, classe IIa C no texto da diretriz europeia). A classe citada é europeia; não está sendo atribuída à SBC. Não é indicação de siRNA, ASO ou inibidor de CETP. Enquanto não houver CVOT positivo e fármaco com desfecho em bula, a conduta é intensificar LDL-C/apoB, pressão, tabagismo e diabetes.",
+    "interpretation": "Lp(a) alta marca risco que o LDL-C isolado não captura. ALPACA: lepodisiran 400 mg pooled −93,9 pp (dias 60–180) — surrogate only, not an outcomes trial. Obicetrapib (BROADWAY) é ensaio de LDL-C no dia 84, não CVOT de Lp(a). Até esta escrita não há fármaco com indicação em bula comprovada por desfecho para reduzir eventos CV ao baixar Lp(a). Não traduzir “−94 pp de Lp(a)” em “menos infarto”. Em 04/09/2026, o patrocinador informou que Lp(a)HORIZON com pelacarsen não atingiu o primário; comunicado preliminar, sem extrapolação para lepodisiran.",
+    "limitations": "Ensaios de fase 2 (lepodisiran/ALPACA, olpasiran, pelacarsen) e BROADWAY (obicetrapib, LDL-C surrogate) não são CVOTs. Não há, nesta data, fármaco com evidência de desfecho e registro para tratar eventos CV via redução de Lp(a). Não inventar limiar nmol/L de “tratar com siRNA”. Imunoensaios e unidades (nmol/L vs mg/dL) não são intercambiáveis. Esta ficha não estabelece indicação aprovada no Brasil para esses fármacos.",
+    "source_refs": [
+      "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392:1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643. NCT05565742.",
+      "Kronenberg F, Mora S, Stroes ESG, et al. Lipoprotein(a) in atherosclerotic cardiovascular disease and aortic stenosis: a European Atherosclerosis Society consensus statement. Eur Heart J. 2022;43(39):3925-3946. DOI: 10.1093/eurheartj/ehac361. PMID: 36036785.",
+      "Mach F, Baigent C, Catapano AL, et al.; ESC Scientific Document Group. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+      "ESC/EAS focused update 2025. PMID 40878289. https://eas-society.org/publications/guidelines/2025-focused-update-of-the-2019-esc-eas-guidelines-for-the-management-of-dyslipidaemias/",
+      "Novartis. Lp(a)HORIZON topline, 04/09/2026. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "tags": [
+      "lpa",
+      "lipoproteína(a)",
+      "nmol/L",
+      "rastreio",
+      "prevenção",
+      "alpaca",
+      "lepodisiran",
+      "surrogate",
+      "não cvot"
+    ],
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "nt-probnp-ic-esc-2026",
+    "name": "NT-proBNP na insuficiência cardíaca — contexto ESC 2026 e FINEARTS",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Fragmento N-terminal do pró-peptídeo natriurético tipo B, liberado pelos cardiomiócitos sob estresse de parede. Marca sobrecarga hemodinâmica e auxilia o diagnóstico, o prognóstico e a seleção de pacientes para ensaios de IC. Não é fração de ejeção, não estagia DRC e não substitui o quadro clínico.",
+    "reference_range": "No algoritmo ambulatorial da ESC 2026 (Figura 4), NT-proBNP elevado: ≥125 pg/mL abaixo de 50 anos, ≥250 pg/mL entre 50–74 e ≥500 pg/mL a partir de 75 anos; alternativamente BNP ≥35 pg/mL. Esses valores direcionam ecocardiograma e avaliação especializada, não confirmam IC isoladamente. Mesmo abaixo do limiar, manter investigação se a suspeita clínica for alta. Este algoritmo não é o da dispneia aguda. FINEARTS-HF: ≥300 pg/mL em ritmo sinusal ou ≥900 pg/mL em FA são critérios de inclusão de ensaio, não esses limiares diagnósticos.",
+    "indications": "Suspeita de insuficiência cardíaca (sintomas/sinais, cardiopatia estrutural) e seguimento prognóstico. Na seleção de FINEARTS-HF (Solomon et al., NEJM 2024; PMID 39225278): adultos ≥40 anos, IC sintomática, FEVE ≥40%, peptídeo natriurético elevado — NT-proBNP ≥300 pg/mL em sinus (≥900 pg/mL se FA) — além de diurético ≥30 dias. Esse recorte é critério de inclusão do ensaio, não corte diagnóstico da ESC 2026.",
+    "interpretation": "Um NT-proBNP elevado aumenta a probabilidade de IC e de evento, mas o valor isolado não fecha o diagnóstico nem indica um fármaco específico. Em FINEARTS, finerenona reduziu o composto de eventos totais de piora de IC e morte CV (RR 0,84); morte CV isolada não foi significativa — o peptídeo selecionou a população, não foi o desfecho. A ESC 2026 passou a recomendar ARM esteroide na ICFEr e não esteroide ou esteroide na ICFEp (Classe I A, conforme fenótipo e elegibilidade); isso não transforma o NT-proBNP de FINEARTS em limiar diagnóstico da diretriz. FA, idade, DRC e obesidade deslocam o peptídeo: não aplicar o ≥300/≥900 fora do contexto de elegibilidade do ensaio.",
+    "limitations": "Idade, FA e disfunção renal podem elevar NT-proBNP; obesidade e tratamento de IC podem reduzi-lo. Interpretar em conjunto com clínica, ECG e ecocardiograma. Não aplicar o algoritmo ambulatorial à dispneia aguda nem usar concentração isolada para iniciar, suspender ou titular fármacos. Os critérios de FINEARTS-HF não são meta terapêutica.",
+    "source_refs": [
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278. NCT04435626. Elegibilidade: NT-proBNP ≥300 pg/mL em ritmo sinusal (≥900 pg/mL se FA) — critério de ensaio, não corte diagnóstico ESC.",
+      "Køber L, Adamo M, et al. ESC heart failure 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420. Figura 4 e recomendações diagnósticas; slides oficiais, página 36."
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "tags": [
+      "nt-probnp",
+      "peptídeo natriurético",
+      "insuficiência cardíaca",
+      "finearts",
+      "esc 2026",
+      "laboratorial"
+    ],
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "prevent-escore-10-anos-aha-2024",
+    "name": "Escore PREVENT de 10 anos — AHA 2023/2024",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Equações PREVENT (Predicting Risk of CVD EVENTs) da American Heart Association: estimam o risco absoluto de DCV total incidente — composta de DCV aterosclerótica (IAM e AVC) e insuficiência cardíaca — em 10 anos (e também em 30 anos, fora do foco deste item) em adultos de 30 a 79 anos sem DCV conhecida. São específicas para o sexo e não usam raça como preditor. Incorporam saúde cardiovascular, renal e metabólica (CKM) e ajustam para o risco competitivo de morte não cardiovascular.",
+    "reference_range": "Não é exame laboratorial e não tem valor de referência único. O produto é uma probabilidade contínua de evento em 10 anos (0–100%). Limiares de decisão (iniciar estatina, intensificar anti-hipertensivo, etc.) pertencem à diretriz de prevenção/lipídios vigente — não foram extraídos aqui para não colar corte de outra era (PCE 2013/2018) sobre o PREVENT. Na AHA/ACC 2025 de hipertensão, PREVENT de DCV total de 10 anos ≥7,5% orienta início de fármaco no estágio 1; não é um limiar universal para estatina. PAS e PAD são critérios alternativos na classificação da hipertensão.",
+    "indications": "Avaliação de risco absoluto na prevenção primária de DCV em adultos 30–79 anos sem DCV estabelecida, quando se pretende casar intensidade de intervenção com risco predito. Derivação: 25 conjuntos, N=3.281.919 (1992–2017). Validação externa: 3.330.085; amostra total de derivação e validação: 6.612.004 adultos (idade média 53±12 anos; 56% mulheres); 211.515 eventos de DCV total em seguimento médio de 4,8±3,1 anos (Khan et al., Circulation 2024, PMID 37947085).",
+    "interpretation": "C-estatística na validação externa para DCV total: mediana 0,794 (intervalo interquartil 0,763–0,809) nas mulheres e 0,757 (0,727–0,778) nos homens. O modelo-base usa fatores clássicos (tabagismo, pressão sistólica, colesterol, uso de anti-hipertensivo ou estatina, diabetes) mais TFGe. Modelos adicionais, quando o dado está disponível, incluem RAC, HbA1c e índice de privação social (SDI). A calibração melhorou de forma significativa ao acrescentar RAC no subgrupo com albuminúria marcada (>300 mg/g): 1,05 (0,84–1,20) vs. 1,39 (1,14–1,65); P=0,01. Lista completa de variáveis de entrada, coeficientes e splines: não reproduzida aqui — usar o código aberto da AHA / artigo de métodos, não uma lista reconstruída de memória.",
+    "limitations": "Não se aplica a quem já tem DCV clínica (não é escore de prevenção secundária). Não substitui julgamento clínico nem imagem (cálcio coronário) quando o risco intermediário deixa a decisão em aberto. A amostra dos EUA sub-representa alguns grupos (hispânicos e asiáticos em relação às estimativas nacionais); a ausência de raça como preditor é deliberada, mas a calibração em subgrupos desagregados (p.ex. sul-asiáticos) é limitada. SDI é apenas um primeiro passo de determinantes sociais, não mede racismo nem privação individual. Equações derivadas em população contemporânea dos EUA — transporte direto a outras geografias exige cautela. Não inventar aqui a lista fechada de inputs nem os coeficientes.",
+    "source_refs": [
+      "Khan SS, Matsushita K, Sang Y, et al.; Chronic Kidney Disease Prognosis Consortium and the American Heart Association Cardiovascular-Kidney-Metabolic Science Advisory Group. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI 10.1161/CIRCULATIONAHA.123.067626. PMID 37947085.",
+      "Khan SS, Coresh J, Pencina MJ, Ndumele CE, et al. Novel Prediction Equations for Absolute Risk Assessment of Total Cardiovascular Disease Incorporating Cardiovascular-Kidney-Metabolic Health: A Scientific Statement From the American Heart Association. Circulation. 2023;148(24):1982-2004. DOI 10.1161/CIR.0000000000001191."
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "tags": [
+      "prevent",
+      "escore de risco",
+      "prevenção primária",
+      "aha 2024",
+      "ckm",
+      "10 anos"
+    ],
+    "category": "escore_clinico",
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "rac-urinaria-rastreio-drc-em-dcv-esc-2026",
+    "name": "Relação albumina/creatinina urinária (RAC/uACR) no rastreio de DRC em DCV — ESC 2026 (STAMP)",
+    "category": "laboratorial",
+    "theme": "Geral",
+    "what_it_measures": "Quantifica a albuminúria pela razão entre albumina e creatinina numa amostra isolada de urina (de preferência a primeira da manhã). É marcador de lesão renal, frequentemente glomerular, e de risco cardiovascular; não demonstra isoladamente hiperfiltração ou dano endotelial generalizado — muitas vezes antes de a TFGe cair. Na ESC 2026 de DCV e DRC (Damman et al., PMID 42661426), a RAC faz o par obrigatório com a TFGe no passo S do acrônimo STAMP (Screening, Triage and staging of CKD, Addressing CKD risk, Modifying approaches to CVD management and Planning health services): não se rastreia rim no cardiopata só com creatinina sérica.",
+    "reference_range": "A ESC 2026 adota o sistema CGA (Cause, GFR, Albuminuria) da KDIGO. Limiares da RAC na diretriz: A1 (normal a levemente aumentada) <3 mg/mmol (<30 mg/g); A2 (moderadamente aumentada) 3–30 mg/mmol (≈30–300 mg/g); A3 (severamente aumentada) >30 mg/mmol (>300 mg/g, equivalente a pelo menos 0,3 g/dia de albuminúria). Albuminúria aumentada para fins de definição de DRC: RAC ≥3 mg/mmol (≥30 mg/g).",
+    "indications": "Rastreio sistemático de DRC em todo paciente com DCV recém-estabelecida — hipertensão, DAC, IC, DAP e AVC (Recommendation Table 3: Classe I, nível C). Medir RAC em amostra isolada matinal é Classe I, nível A (Recommendation Table 1). A dosagem quantitativa é preferida pela melhor sensibilidade e especificidade; fita reagente qualitativa só como triagem inicial em cenário de poucos recursos. A RAC entra no estadiamento, na predição de risco cardiovascular e de falência renal, no ajuste de terapêutica que modifica o risco cardiorrenal e na decisão de encaminhar à nefrologia. Rechecar pelo menos anualmente em diabetes, DRC e DCV (mensagem-chave da diretriz).",
+    "interpretation": "Um único valor elevado não fecha DRC. A cronicidade exige duas medições de TFGe e RAC ao longo de pelo menos 3 meses (Classe I, nível C). RAC ≥3 mg/mmol persistente por pelo menos três meses, com TFGe preservada, pode preencher critério de DRC (categoria A2 ou A3) e desloca o paciente no heatmap de risco de falência renal e de DCV. A3 com qualquer TFGe, ou TFGe <30 mL/min/1,73 m² com qualquer albuminúria, coloca o paciente em risco cardiovascular relativamente muito alto para prevenção (Recommendation Table 7). Quando a alteração é nova, grave e inesperada, repetir em dias — não em meses — para não perder LRA. A RAC isolada não substitui a TFGe: os dois eixos são independentes e aditivos.",
+    "limitations": "A RAC sobe de forma transitória com febre, exercício extenuante e infecção urinária — daí a exigência de confirmar persistência além de 3 meses. Amostra não matinal e desidratação alteram o denominador (creatinina urinária). Fita qualitativa tem menor acurácia e não estagia A2 vs. A3. Não diferencia causa glomerular primária de hiperfiltração por obesidade, diabetes ou hipertensão. Em hematúria franca ou contaminação, o resultado é ininterpretável. A diretriz não autoriza tratar albuminúria transitória como DRC crônica.",
+    "source_refs": [
+      "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA). Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426. Recommendation Tables 1 e 3; seções 3.1.1 e 3.3; acrônimo STAMP.",
+      "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. Sumário executivo: Kidney Int. 2024;105(4):684-701. PMID 38519239 — origem do heatmap CGA (A1–A3) adotado pela ESC 2026."
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "tags": [
+      "rac",
+      "uacr",
+      "albuminúria",
+      "drc",
+      "esc 2026",
+      "stamp",
+      "cardiorrenal",
+      "rastreio"
+    ],
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "tfge-creatinina-rastreio-drc-em-dcv-esc-2026",
+    "name": "TFGe pela creatinina no rastreio de DRC em DCV — ESC 2026 (STAMP)",
+    "category": "laboratorial",
+    "theme": "Geral",
+    "what_it_measures": "Estima a taxa de filtração glomerular a partir da creatinina sérica por equação validada, e não pelo valor cru da creatinina. Na ESC 2026 de DCV e DRC (Damman et al., PMID 42661426), a TFGe pela creatinina é o outro pilar do rastreio STAMP, sempre em conjunto com a RAC urinária. A creatinina isolada não estagia DRC, não prediz risco e não autoriza ajuste de dose.",
+    "reference_range": "Estadiamento G da KDIGO, adotado pela ESC 2026: G1 ≥90; G2 60–89; G3a 45–59; G3b 30–44; G4 15–29; G5 <15 mL/min/1,73 m² (falência renal — termo que substitui “doença renal terminal”). TFGe persistentemente <60 mL/min/1,73 m² preenche critério funcional de DRC, desde que confirmada em ≥3 meses. A ESC 2026 recomenda equação de TFGe baseada em creatinina validada (Classe I, nível A). A equação deve ser validada para a população e o uso pretendido; esta ficha não atribui superioridade universal à CKD-EPI 2009 ou 2021.",
+    "indications": "Rastreio de DRC em todo paciente com DCV recém-estabelecida (hipertensão, DAC, IC, DAP, AVC): Classe I, nível C. Medir TFGe por creatinina com equação validada para avaliar função e estadiar: Classe I, nível A. Serve para predição de risco cardiovascular e de falência renal, dose de fármacos, escolha de antitrombótico e encaminhamento nefrológico. Rechecar pelo menos anualmente em diabetes, DRC e DCV. TFGe por cistatina C (ou creatinina + cistatina C) deve ser considerada (Classe IIa, nível A) quando há fonte provável de erro na estimativa pela creatinina e a precisão muda a decisão clínica.",
+    "interpretation": "Cronicidade: duas medições de TFGe e RAC em intervalo de pelo menos 3 meses (Classe I, nível C). Queda nova, grave e inesperada exige repetição em dias para diagnosticar LRA, não DRC. O heatmap CGA combina categoria G com A: TFGe 45–59 com RAC A2 já é DRC de risco cardiovascular relativamente alto; TFGe <30 com qualquer albuminúria, TFGe 30–44 com RAC 3–30 mg/mmol, ou RAC >30 mg/mmol com qualquer TFGe, é risco relativamente muito alto (Recommendation Table 7). TFGe ≥60 com RAC A1 não define DRC por esses dois critérios isolados; outros marcadores persistentes de lesão renal podem estabelecer o diagnóstico. A precisão das fórmulas cai acima de 60 mL/min/1,73 m² — um valor “90” não é medida direta de filtração normal.",
+    "limitations": "A creatinina é produto de miócito: a TFGe pela creatinina erra nos extremos de massa muscular (sarcopenia, amputação, culturismo), na desnutrição e em dieta vegetariana extrema. Há variação biológica intra-indivíduo dia a dia. Equações são menos precisas com TFGe >60 mL/min/1,73 m². Cistatina C também tem determinantes não-GFR e não é substituto universal. A ESC 2026 não homologa um único corte de creatinina sérica em mg/dL para diagnosticar DRC. Não usar creatinina isolada para “liberar” contraste, dose de DOAC ou iSGLT2 — a decisão depende da avaliação clínica e do método de função renal exigido para cada fármaco. Muitos DOAC usam clearance de creatinina por Cockcroft–Gault na bula; não substituir automaticamente por TFGe indexada. Na LRA, a creatinina não está em estado estável e a TFGe calculada pode ser inadequada.",
+    "source_refs": [
+      "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA). Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426. Recommendation Tables 1 e 3; seções 3.1.1 e 3.3.",
+      "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. Sumário executivo: Kidney Int. 2024;105(4):684-701. PMID 38519239 — categorias G1–G5 do heatmap CGA.",
+      "Levey AS, Stevens LA, Schmid CH, et al. A new equation to estimate glomerular filtration rate. Ann Intern Med. 2009;150(9):604-612. PMID 19414839 — desenvolvimento da CKD-EPI 2009."
+    ],
+    "review_status": "revisado",
+    "published": true,
+    "tags": [
+      "tfge",
+      "creatinina",
+      "ckd-epi",
+      "drc",
+      "esc 2026",
+      "stamp",
+      "cardiorrenal",
+      "rastreio"
+    ],
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
   }
 ]

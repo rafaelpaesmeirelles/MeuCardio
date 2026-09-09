@@ -23,9 +23,9 @@
   mix-blend-mode: screen !important;
   filter: brightness(1.08) saturate(1.22) contrast(1.04) drop-shadow(0 0 8px rgba(55,145,255,.25)) !important;
   transform-origin: 50% 50% !important;
-  animation: corvia-internal-galaxy-ccw 120s linear infinite !important;
+  animation: corvia-internal-galaxy-cw 240s linear infinite !important;
 }
-@keyframes corvia-internal-galaxy-ccw { to { transform: rotate(-360deg); } }
+@keyframes corvia-internal-galaxy-cw { to { transform: rotate(360deg); } }
 /* Escolha de ambiente: modelo final aprovado. */
 .spaces-choice__heart { display: none !important; }
 .spaces-choice__change {
@@ -232,7 +232,7 @@ html[data-corvia-theme="dark"] .spaces-brand strong b {
   --corvia-mini-galaxy-scale: 1.05;
   transform-origin: 50% 50% !important;
   transform-style: preserve-3d !important;
-  animation: corvia-final-mini-galaxy-horizontal 120s linear infinite !important;
+  animation: corvia-final-mini-galaxy-horizontal 240s linear infinite !important;
 }
 @keyframes corvia-final-mini-galaxy-horizontal {
   from { transform: scale(var(--corvia-mini-galaxy-scale)) rotateY(0deg); }
@@ -273,7 +273,7 @@ html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
 .spaces-home .galaxy-theme-toggle__image,
 .spaces-choice .galaxy-theme-toggle__image {
   transform-style: flat !important;
-  animation: corvia-internal-galaxy-ccw 120s linear infinite !important;
+  animation: corvia-internal-galaxy-cw 240s linear infinite !important;
 }
 
 /* FINAL: Ensino permanece inteiro no trio inicial do carrossel clínico mobile. */
@@ -318,11 +318,11 @@ html[data-corvia-theme="light"] .galaxy-theme-toggle__image {
   transform-style: flat !important;
   image-rendering: auto !important;
   will-change: transform, filter !important;
-  animation: corvia-canonical-mini-universe-ccw 120s linear infinite !important;
+  animation: corvia-canonical-mini-universe-cw 240s linear infinite !important;
 }
-@keyframes corvia-canonical-mini-universe-ccw {
+@keyframes corvia-canonical-mini-universe-cw {
   from { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(0deg); }
-  to { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(-360deg); }
+  to { transform: scale(var(--corvia-mini-galaxy-scale)) rotate(360deg); }
 }
 
 html[data-corvia-theme="light"] .galaxy-theme-toggle__image {

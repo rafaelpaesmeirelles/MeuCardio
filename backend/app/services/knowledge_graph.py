@@ -262,7 +262,7 @@ _ASSINATURAS_AUTOMATICAS_LEGADAS = {
     "StudyTrack.etapas": (
         "contains", {"trilha"}, {
             "documento", "fluxograma", "estudo", "medicamento", "checklist",
-            "caso_clinico", "evidencia", "calculadora",
+            "caso_clinico", "evidencia", "calculadora", "material_paciente",
         },
     ),
     "Document.body_md.link": (
@@ -996,6 +996,7 @@ def _registrar_referencias_explicitas(
         "caso_clinico": ("caso_clinico",),
         "evidencia": ("evidencia",),
         "calculadora": ("calculadora",),
+        "material_paciente": ("material_paciente",),
     }
     for trilha in db.execute(
         select(StudyTrack).where(StudyTrack.published.is_(True))

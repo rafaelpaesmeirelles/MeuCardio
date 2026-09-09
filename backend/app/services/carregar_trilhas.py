@@ -20,6 +20,7 @@ from app.models.content import Document
 from app.models.drug import Drug
 from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
+from app.models.patient_material import PatientMaterial
 from app.models.study_track import StudyTrack
 from app.services.calculators import REGISTRY
 from app.services.scientific_loader_safety import combined_review_note, enforce_safe_publication
@@ -41,6 +42,8 @@ def _existe(db, item_type: str, slug: str) -> bool:
         return db.query(EvidenceRecord).filter(EvidenceRecord.slug == slug).first() is not None
     if item_type == "caso_clinico":
         return db.query(ClinicalCase).filter(ClinicalCase.slug == slug).first() is not None
+    if item_type == "material_paciente":
+        return db.query(PatientMaterial).filter(PatientMaterial.slug == slug).first() is not None
     if item_type == "calculadora":
         # Calculadoras vivem em código, mas o mesmo registro que alimenta a
         # rota permite validar o slug antes que um link quebrado seja publicado.

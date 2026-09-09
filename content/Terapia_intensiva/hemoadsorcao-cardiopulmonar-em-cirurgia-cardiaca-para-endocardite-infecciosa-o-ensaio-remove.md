@@ -1,13 +1,39 @@
 ---
-title: "Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio REMOVE e a Revisão de 2024-2025"
-slug: hemoadsorcao-cardiopulmonar-em-cirurgia-cardiaca-para-endocardite-infecciosa-o-ensaio-remove
-theme: "Terapia intensiva"
 kind: estudo
+legacy_source: Documento novo, escrito em 09/09/2026. O tema Terapia intensiva já
+  cobre extensamente cirurgia cardíaca no pós-operatório (síndrome de baixo débito
+  pós-CEC, ácido tranexâmico, insuficiência aórtica aguda por endocardite exigindo
+  cirurgia, trombose de prótese valvar), mas nenhum documento tratava da hemoadsorção
+  intraoperatória (CytoSorb integrado à circulação extracorpórea) como estratégia
+  de modulação da resposta inflamatória sistêmica — dispositivo comercialmente ativo
+  e usado fora de ensaio em endocardite infecciosa, transplante cardíaco e cirurgia
+  aórtica, cujo único ensaio randomizado pivotal (REMOVE, 2022) foi negativo e continua
+  sendo reanalisado e contestado por literatura observacional financiada pelo fabricante
+  até 2025.
+published: true
+review_note: Revisão clínica e editorial consolidada em 08/09/2026. Mantida a prioridade
+  do ensaio randomizado REMOVE sobre evidência observacional e explicitado o conflito
+  de interesse da revisão subsequente.
 review_status: revisado
-published: false
-review_note: "Revisão clínica e editorial consolidada em 08/09/2026. Mantida a prioridade do ensaio randomizado REMOVE sobre evidência observacional e explicitado o conflito de interesse da revisão subsequente."
-source_refs: ["Diab M, Lehmann T, Bothe W, Akhyari P, Platzer S, Wendt D, et al; REMOVE Trial Investigators. Cytokine Hemoadsorption During Cardiac Surgery Versus Standard Surgical Care for Infective Endocarditis (REMOVE): Results From a Multicenter Randomized Controlled Trial. Circulation. 2022;145(13):959-968. DOI: 10.1161/CIRCULATIONAHA.121.056940. PMID: 35213213. NCT03266302.", "Matejic-Spasic M, Lindstedt S, Lebreton G, Dzemali O, Suwalski P, Folliguet T, et al. The role of hemoadsorption in cardiac surgery - a systematic review. BMC Cardiovasc Disord. 2024;24(1):258. DOI: 10.1186/s12872-024-03938-4. PMID: 38762715. PMCID: PMC11102180 — revisão financiada/coautorada por funcionários da CytoSorbents, conflito de interesse declarado no próprio artigo.", "Caldonazo T, Doenst T, Fazzini L, Kirov H, Hagel S, Lehmann T, et al; REMOVE Trial Investigators. Sex differences on the effect of hemoadsorption during cardiac surgery - A REMOVE trial post-hoc analysis. Int J Cardiol. 2025;435:133371. DOI: 10.1016/j.ijcard.2025.133371. PMID: 40414542."]
-legacy_source: "Documento novo, escrito em 09/09/2026. O tema Terapia intensiva já cobre extensamente cirurgia cardíaca no pós-operatório (síndrome de baixo débito pós-CEC, ácido tranexâmico, insuficiência aórtica aguda por endocardite exigindo cirurgia, trombose de prótese valvar), mas nenhum documento tratava da hemoadsorção intraoperatória (CytoSorb integrado à circulação extracorpórea) como estratégia de modulação da resposta inflamatória sistêmica — dispositivo comercialmente ativo e usado fora de ensaio em endocardite infecciosa, transplante cardíaco e cirurgia aórtica, cujo único ensaio randomizado pivotal (REMOVE, 2022) foi negativo e continua sendo reanalisado e contestado por literatura observacional financiada pelo fabricante até 2025."
+slug: hemoadsorcao-cardiopulmonar-em-cirurgia-cardiaca-para-endocardite-infecciosa-o-ensaio-remove
+source_refs:
+- 'Diab M, Lehmann T, Bothe W, Akhyari P, Platzer S, Wendt D, et al; REMOVE Trial
+  Investigators. Cytokine Hemoadsorption During Cardiac Surgery Versus Standard Surgical
+  Care for Infective Endocarditis (REMOVE): Results From a Multicenter Randomized
+  Controlled Trial. Circulation. 2022;145(13):959-968. DOI: 10.1161/CIRCULATIONAHA.121.056940.
+  PMID: 35213213. NCT03266302.'
+- 'Matejic-Spasic M, Lindstedt S, Lebreton G, Dzemali O, Suwalski P, Folliguet T,
+  et al. The role of hemoadsorption in cardiac surgery - a systematic review. BMC
+  Cardiovasc Disord. 2024;24(1):258. DOI: 10.1186/s12872-024-03938-4. PMID: 38762715.
+  PMCID: PMC11102180 — revisão financiada/coautorada por funcionários da CytoSorbents,
+  conflito de interesse declarado no próprio artigo.'
+- 'Caldonazo T, Doenst T, Fazzini L, Kirov H, Hagel S, Lehmann T, et al; REMOVE Trial
+  Investigators. Sex differences on the effect of hemoadsorption during cardiac surgery
+  - A REMOVE trial post-hoc analysis. Int J Cardiol. 2025;435:133371. DOI: 10.1016/j.ijcard.2025.133371.
+  PMID: 40414542.'
+theme: Terapia intensiva
+title: 'Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio
+  REMOVE e a Revisão de 2024-2025'
 ---
 
 # Hemoadsorção na Circulação Extracorpórea para Endocardite Infecciosa: o Ensaio REMOVE e a Revisão de 2024-2025

@@ -31,7 +31,7 @@ function useCanonicalSpacesIdentityCopy() {
 export default function GalaxyThemeToggle({
   className = "",
   showLabel = false,
-  clockwise = false,
+  clockwise = true,
 }: {
   className?: string;
   showLabel?: boolean;

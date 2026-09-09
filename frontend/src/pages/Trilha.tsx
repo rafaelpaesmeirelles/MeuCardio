@@ -37,6 +37,7 @@ const TIPO: Record<string, string> = {
   checklist: "Checklist",
   evidencia: "Evidência",
   caso_clinico: "Caso clínico",
+  material_paciente: "Material ao paciente",
 };
 
 export default function Trilha() {

@@ -1,12 +1,24 @@
 ---
-title: "Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno de Grande Porte, JACC: CardioOncology 2025"
-slug: empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025
-theme: "Cardio-oncologia"
 kind: estudo
+legacy_source: Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já
+  cobria cardioproteção por betabloqueador (carvedilol/CECCY), estatina (STOP-CA),
+  dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas nenhum
+  documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária
+  contra cardiotoxicidade por antraciclina, uma linha de pesquisa pré-clínica que
+  ganhou tração entre 2024 e 2026.
+published: true
 review_status: revisado
-published: false
-source_refs: ["PMID:39967204", "DOI:10.1016/j.jaccao.2024.12.004", "Simela K, et al. SGLT2 inhibitors and cardiovascular toxicity related to cancer treatment: systematic review. Cardiooncology. 2025;11:15. PMID:39934910", "ClinicalTrials.gov NCT05271162 (EMPACT), registro consultado em 08/09/2026; estudo sem resultado publicado no registro nessa data"]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta Cardio-oncologia já cobria cardioproteção por betabloqueador (carvedilol/CECCY), estatina (STOP-CA), dexrazoxano, e vigilância guiada por troponina, NT-proBNP e strain — mas nenhum documento tratava de inibidores de SGLT2 como estratégia de cardioproteção primária contra cardiotoxicidade por antraciclina, uma linha de pesquisa pré-clínica que ganhou tração entre 2024 e 2026."
+slug: empagliflozina-como-cardioprotecao-primaria-contra-antraciclina-modelo-suino-jacc-cardiooncology-2025
+source_refs:
+- PMID:39967204
+- DOI:10.1016/j.jaccao.2024.12.004
+- 'Simela K, et al. SGLT2 inhibitors and cardiovascular toxicity related to cancer
+  treatment: systematic review. Cardiooncology. 2025;11:15. PMID:39934910'
+- ClinicalTrials.gov NCT05271162 (EMPACT), registro consultado em 08/09/2026; estudo
+  sem resultado publicado no registro nessa data
+theme: Cardio-oncologia
+title: 'Empagliflozina como Cardioproteção Primária contra Antraciclina: Modelo Suíno
+  de Grande Porte, JACC: CardioOncology 2025'
 ---
 
 # Pergunta clínica

@@ -1,13 +1,42 @@
 ---
-title: "Vutrisiran"
-slug: vutrisiran
-theme: "Farmacologia"
 kind: farmacologia
+legacy_source: Documento novo, escrito em 09/09/2026. A pasta Farmacologia já cobre
+  dois fármacos de ATTR-CM por outro mecanismo — estabilizadores de transtirretina
+  (tafamidis.md e, em Cardiomiopatias, o ensaio ATTR-ACT e a extensão aberta de 54
+  meses do acoramidis/ATTRibute-CM) — mas nenhum documento do acervo (conferido em
+  content/**/*.md, não só nos JSONs) cobre o vutrisiran, terapêutica de RNA de interferência
+  (siRNA) que silencia a produção hepática de transtirretina. É mecanismo farmacológico
+  distinto (supressão da síntese da proteína amiloidogênica na origem, não estabilização
+  da forma tetramérica circulante) e teve extensão de indicação para cardiomiopatia
+  aprovada pela FDA em março de 2025, com base em ensaio de desfecho de mortalidade
+  (HELIOS-B) publicado no NEJM — assunto genuinamente 2024-2025, ainda não coberto.
+published: true
+review_note: Revisão clínica e editorial consolidada em 08/09/2026. Ensaio pivotal
+  e aprovação FDA conferidos; retiradas inferências de efeito aditivo e afirmações
+  não verificadas sobre disponibilidade regulatória brasileira.
 review_status: revisado
-published: false
-review_note: "Revisão clínica e editorial consolidada em 08/09/2026. Ensaio pivotal e aprovação FDA conferidos; retiradas inferências de efeito aditivo e afirmações não verificadas sobre disponibilidade regulatória brasileira."
-source_refs: ["Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, et al; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. Epub 2024 Aug 30. DOI: 10.1056/NEJMoa2409134. PMID: 39213194. NCT04153149 — 655 pacientes, abstract completo lido via PubMed E-utilities em 09/09/2026", "FDA, Drugs@FDA (openFDA drugsfda API), aplicação BLA/NDA 215515 (AMVUTTRA, vutrisiran, Alnylam Pharmaceuticals) · https://api.fda.gov/drug/drugsfda.json?search=openfda.generic_name:vutrisiran · consultado em 09/09/2026 — aprovação original (Tipo 1, nova entidade molecular) em 13/06/2022 para polineuropatia da amiloidose hereditária por transtirretina (hATTR-PN); suplemento de eficácia (submission_number 6) aprovado em 20/03/2025, ampliando a indicação para cardiomiopatia amiloide por transtirretina (ATTR-CM), com base nos dados do HELIOS-B", "Fontana M, Gillmore JD, Witteles RM, Laryea B, Dworkin M, Payne A, et al. Treatment with vutrisiran in people with transthyretin amyloidosis with cardiomyopathy: a plain language summary. Future Cardiol. 2025;21(8):555-565. DOI: 10.1080/14796678.2025.2493019. PMID: 40371908 — resumo em linguagem simples do HELIOS-B, usado apenas para confirmar desenho de administração (a cada 12 semanas, por até 3 anos) e financiamento; não usado como fonte primária de números de eficácia"]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Farmacologia já cobre dois fármacos de ATTR-CM por outro mecanismo — estabilizadores de transtirretina (tafamidis.md e, em Cardiomiopatias, o ensaio ATTR-ACT e a extensão aberta de 54 meses do acoramidis/ATTRibute-CM) — mas nenhum documento do acervo (conferido em content/**/*.md, não só nos JSONs) cobre o vutrisiran, terapêutica de RNA de interferência (siRNA) que silencia a produção hepática de transtirretina. É mecanismo farmacológico distinto (supressão da síntese da proteína amiloidogênica na origem, não estabilização da forma tetramérica circulante) e teve extensão de indicação para cardiomiopatia aprovada pela FDA em março de 2025, com base em ensaio de desfecho de mortalidade (HELIOS-B) publicado no NEJM — assunto genuinamente 2024-2025, ainda não coberto."
+slug: vutrisiran
+source_refs:
+- 'Fontana M, Berk JL, Gillmore JD, Witteles RM, Grogan M, Drachman B, et al; HELIOS-B
+  Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with
+  Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. Epub 2024 Aug 30. DOI: 10.1056/NEJMoa2409134.
+  PMID: 39213194. NCT04153149 — 655 pacientes, abstract completo lido via PubMed E-utilities
+  em 09/09/2026'
+- FDA, Drugs@FDA (openFDA drugsfda API), aplicação BLA/NDA 215515 (AMVUTTRA, vutrisiran,
+  Alnylam Pharmaceuticals) · https://api.fda.gov/drug/drugsfda.json?search=openfda.generic_name:vutrisiran
+  · consultado em 09/09/2026 — aprovação original (Tipo 1, nova entidade molecular)
+  em 13/06/2022 para polineuropatia da amiloidose hereditária por transtirretina (hATTR-PN);
+  suplemento de eficácia (submission_number 6) aprovado em 20/03/2025, ampliando a
+  indicação para cardiomiopatia amiloide por transtirretina (ATTR-CM), com base nos
+  dados do HELIOS-B
+- 'Fontana M, Gillmore JD, Witteles RM, Laryea B, Dworkin M, Payne A, et al. Treatment
+  with vutrisiran in people with transthyretin amyloidosis with cardiomyopathy: a
+  plain language summary. Future Cardiol. 2025;21(8):555-565. DOI: 10.1080/14796678.2025.2493019.
+  PMID: 40371908 — resumo em linguagem simples do HELIOS-B, usado apenas para confirmar
+  desenho de administração (a cada 12 semanas, por até 3 anos) e financiamento; não
+  usado como fonte primária de números de eficácia'
+theme: Farmacologia
+title: Vutrisiran
 ---
 
 # Vutrisiran
@@ -49,7 +78,7 @@ Cardiomiopatia amiloide por transtirretina (ATTR-CM), tanto na forma hereditári
 
 ## Vutrisiran vs. estabilizadores de TTR (tafamidis, acoramidis) — o que o HELIOS-B não permite concluir
 - O HELIOS-B **não comparou vutrisiran diretamente contra tafamidis ou acoramidis** — o comparador foi placebo, com tafamidis basal permitido em ambos os braços. Não há, a partir deste ensaio isolado, uma resposta sobre qual fármaco (ou classe) é superior
-- O desfecho de **mortalidade por qualquer causa** como componente do desfecho primário (e como desfecho isolado, com HR 0,65 até 42 meses) é um diferencial relevante frente ao ATTR-ACT do tafamidis, cujo desfecho de mortalidade descrito no acervo (ver `tafamidis.md`) foi de 29,5% vs. 42,9% ao longo de 30 meses — números de estudos diferentes, populações e desenhos distintos, que não devem ser comparados informalmente como se fossem braços do mesmo ensaio
+- O desfecho de **mortalidade por qualquer causa** como componente do desfecho primário (e como desfecho isolado, com HR 0,65 até 42 meses) é um diferencial relevante frente ao ATTR-ACT do tafamidis, cujo desfecho de mortalidade descrito no acervo (ver [Tafamidis](/biblioteca/tafamidis)) foi de 29,5% vs. 42,9% ao longo de 30 meses — números de estudos diferentes, populações e desenhos distintos, que não devem ser comparados informalmente como se fossem braços do mesmo ensaio
 - A permissão de uso concomitante de tafamidis no protocolo do HELIOS-B torna a combinação uma possibilidade clínica estudada dentro da população geral, mas o ensaio não foi desenhado para isolar seu efeito incremental sobre qualquer monoterapia.
 
 ## Armadilhas clínicas

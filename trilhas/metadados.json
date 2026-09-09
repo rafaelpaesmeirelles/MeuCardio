@@ -27816,5 +27816,746 @@
       "AHA cuffless 2026. DOI: 10.1161/HYP.0000000000000254."
     ],
     "review_note": "Revisão científica 08/09/2026: MRPA diurna não padrão sono; variabilidade entreconsultas nãoMAPA24h. Associação nãoalvo terapêutico; pressão central nãoinvalida braquial nemmetauniversal. Removida exclusividadebiblioteca."
+  },
+  {
+    "slug": "trilha-eixo-cardiorrenal-stamp-flow-soul",
+    "titulo": "Eixo cardiorrenal: STAMP-on-CKD, FLOW, SOUL e ARM na IC",
+    "tema": "Diabetes e cardiologia",
+    "resumo": "Todo paciente com DCV deve ser rastreado para DRC no diagnóstico (TFGe pela creatinina e RAC urinária) — STAMP on CKD da ESC 2026. Em seguida, o que os ensaios de agonista de GLP-1 realmente mostraram nesse cruzamento: FLOW (semaglutida subcutânea 1,0 mg semanal no DM2 com DRC albuminúrica; desfecho renal composto) e SOUL (semaglutida oral 14 mg no DM2 com ASCVD e/ou DRC; desfecho primário MACE, composto renal não positivo). Fecha com o ARM na IC sintomática independente da FEVE (ESC 2026). Não misturar doses (1,0 mg SC ≠ oral 14 mg ≠ 2,4 mg) nem inventar classe para o rastreio.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-stamp-on-ckd-esc-2026",
+        "por_que": "STAMP: rastrear, triar, tratar risco renal, adaptar manejo cardiovascular e planejar serviços. Classificação por TFGe e albuminúria: I A; confirmação de cronicidade com duas avaliações separadas por pelo menos três meses: I C. Alteração inesperada requer reavaliação em dias ou semanas para excluir lesão aguda."
+      },
+      {
+        "ordem": 2,
+        "item_type": "evidencia",
+        "item_slug": "esc-2026-rastrear-drc-em-todo-paciente-com-dcv",
+        "por_que": "Rastrear DRC no diagnóstico de DCV com TFGe baseada em creatinina e RAC urinária: I C, ESC 2026. Os dois testes identificam dimensões distintas do risco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "flow-semaglutida-dm2-e-doenca-renal-cronica",
+        "por_que": "Ensaio de desfecho renal (NCT03819153): semaglutida subcutânea 1,0 mg uma vez por semana — não 2,4 mg, não a formulação oral. Porta cardiorrenal do FLOW. Não usar o SOUL como substituto deste ensaio: o FLOW testou o composto renal duro nesta população; o SOUL não o substitui."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "soul-semaglutida-oral-em-dm2-com-drc-ou-ascvd",
+        "por_que": "Porta cardiorrenal do SOUL. A população inclui DRC, ASCVD ou ambas, mas o desfecho primário publicado é MACE da amostra total (12,0% vs 13,8%; HR 0,86; IC95% 0,77–0,96; P=0,006; n=9650; oral 14 mg/dia). O composto renal do SOUL não foi positivo — não citar SOUL como evidência de proteção renal equivalente ao FLOW. Via oral para quem recusa injeção; não equivale, por este ensaio, à semaglutida injetável 1,0 ou 2,4 mg."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+        "por_que": "A diretriz de IC 2026 abandona os três fenótipos de fração de ejeção e recomenda antagonista do receptor mineralocorticoide em IC sintomática independentemente da FEVE (sMRA na ICFEr e sMRA/nsMRA na ICFEp) para reduzir internação por IC ou morte cardiovascular — Classe I, nível A no registro de evidência correspondente. Fecha o eixo: rim (STAMP), GLP-1 no DM2 com DRC (FLOW/SOUL) e ARM na IC, sem fundir as três fontes numa classe só."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Damman K, Herrington WG, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the ERA. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098. PMID: 42661426.",
+      "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+      "McGuire DK, Marx N, Mulvagh SL, et al.; SOUL Study Group. Oral Semaglutide and Cardiovascular Outcomes in High-Risk Type 2 Diabetes. N Engl J Med. 2025;392(20):2001-2012. DOI: 10.1056/NEJMoa2501006. PMID: 40162642.",
+      "Køber L, Adamo M, Ruwald AC, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420."
+    ],
+    "objetivo": "Todo paciente com DCV deve ser rastreado para DRC no diagnóstico (TFGe pela creatinina e RAC urinária) — STAMP on CKD da ESC 2026. Em seguida, o que os ensaios de agonista de GLP-1 realmente mostraram nesse cruzamento: FLOW (semaglutida subcutânea 1,0 mg semanal no DM2 com DRC albuminúrica; desfecho renal composto) e SOUL (semaglutida oral 14 mg no DM2 com ASCVD e/ou DRC; desfecho primário MACE, composto renal não positivo). Fecha com o ARM na IC sintomática independente da FEVE (ESC 2026). Não misturar doses (1,0 mg SC ≠ oral 14 mg ≠ 2,4 mg) nem inventar classe para o rastreio.",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Revisão individual contra fontes primárias SELECT/SOUL/FLOW/STEP/SURPASS e ESC 2026, conforme o escopo. Corrigidos seleção pós-evento de 60 dias, não inferioridade versus equivalência, interpretação secundária e vínculos canônicos. Anvisa 2026 e bula brasileira conferidas quando citadas. No subgrupo renal SOUL, mantidas contagens sem reproduzir percentual aritmeticamente inconsistente. Detalhes acessórios sem confirmação suficiente foram omitidos, sem extrapolar resultados ou categoria de segurança."
+  },
+  {
+    "slug": "trilha-has-2025-prevent-e-meta-130-80",
+    "titulo": "HAS 2025: PREVENT, limiar de 7,5% e meta <130/80 mmHg",
+    "tema": "Hipertensão",
+    "resumo": "Percorrer a diretriz AHA/ACC 2025 de hipertensão no adulto: o que mudou na conta de risco (PREVENT no lugar das PCE), quando o estágio 1 dispara fármaco (PREVENT de 10 anos ≥7,5%, ou DCV, diabetes ou DRC), a meta <130/80 mmHg, e como dizer isso na consulta — sem misturar o recorte antigo de 10% das PCE nem inventar classe de recomendação unificada para o conjunto.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "acc-aha-2025-diretriz-hipertensao-arterial-adultos",
+        "por_que": "Moldura do recorte. A diretriz destaca a meta geral <130/80 mmHg no adulto, com individualização (fragilidade, institucionalização, expectativa de vida limitada, gestação). Não tratar este documento como tabela COR/LOE de cada linha: o que importa aqui é o mapa — estágio, risco e alvo — antes de abrir a equação e o fluxograma."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "equacao-prevent-aha-e-o-limiar-75-na-diretriz-2025",
+        "por_que": "A PREVENT estima DCV total (aterosclerose mais insuficiência cardíaca) em prevenção primária, 30–79 anos, sem DCV conhecida, em modelos sex-específicos sem raça, com TFGe no modelo-base. Na HAS estágio 1 (PAS 130–139 ou PAD 80–89 mmHg), na ausência de DCV clínica, diabetes ou DRC, o corte de fármaco passou a ser risco de 10 anos ≥7,5% — não o 10% das PCE de 2013. Estágio 2 (PAS ≥140 ou PAD ≥90 mmHg) trata-se independentemente do percentual."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-inicio-de-farmaco-aha-2025-prevent",
+        "por_que": "Árvore da decisão de começar anti-hipertensivo agora versus esperar 3–6 meses só com estilo de vida. O ramo de fármaco imediato no estágio 1 inclui DCV clínica, AVC prévio, diabetes, DRC ou PREVENT ≥7,5%. O ramo de espera é o estágio 1 sem esses marcadores (PREVENT <7,5%). Não usa classe de recomendação inventada nem mistura PAS e PAD num único nível de evidência."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "como-explicar-prevent-75-e-a-meta-130-80-na-consulta",
+        "por_que": "Tradução em frequência natural. O paciente compara 7,5% com o 10% antigo e ouve ou alarme ou desconfiança. O texto separa o que o número mede (risco de DCV total em 10 anos, incluindo IC; o rim entra como preditor, não como desfecho renal), por que a conta mudou, e o que <130/80 mmHg pede no dia a dia — sem NNT inventado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "prevent-75-estagio-1-has",
+        "por_que": "Aplica a trilha a um homem de 52 anos, 136/84 mmHg, PREVENT 9%, sem diabetes, DRC ou DCV. O ponto a acertar: estágio 1 com PREVENT ≥7,5% indica fármaco agora, junto com estilo de vida, alvo <130/80 mmHg. Aguardar 3–6 meses só com estilo de vida vale para PREVENT <7,5%. Não usar PCE/10% nem esperar 140/90 mmHg."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Jones DW, Ferdinand KC, Taler SJ, et al. 2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. J Am Coll Cardiol. 2025;86(18):1567-1678. DOI: 10.1016/j.jacc.2025.05.007. PMID: 40815242.",
+      "Khan SS, Matsushita K, Sang Y, et al. Development and Validation of the American Heart Association's PREVENT Equations. Circulation. 2024;149(6):430-449. DOI: 10.1161/CIRCULATIONAHA.123.067626. PMID: 37947085. PMC10910659."
+    ],
+    "objetivo": "Percorrer a diretriz AHA/ACC 2025 de hipertensão no adulto: o que mudou na conta de risco (PREVENT no lugar das PCE), quando o estágio 1 dispara fármaco (PREVENT de 10 anos ≥7,5%, ou DCV, diabetes ou DRC), a meta <130/80 mmHg, e como dizer isso na consulta — sem misturar o recorte antigo de 10% das PCE nem inventar classe de recomendação unificada para o conjunto.",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "trilha-icfep-obesidade-incretina-e-rc",
+    "titulo": "ICFEp com obesidade: fenótipos 2026, incretina IIa, FINEARTS e reabilitação cardíaca",
+    "tema": "Insuficiência cardíaca",
+    "resumo": "A ESC 2026 de IC (Køber, PMID 42661420) deixou dois fenótipos (ICFEr FEVE <50%; ICFEp FEVE ≥50%), ARM Classe I A independente da FEVE, e semaglutida ou tirzepatida Classe IIa na IC sintomática com FEVE ≥45% e IMC ≥30 kg/m² para peso, capacidade de exercício e qualidade de vida — não mortalidade. A trilha percorre a síntese de fenótipos, a classe da incretina com os números de STEP-HFpEF (n=529; KCCQ-CSS +16,6 vs +8,7; peso −13,3% vs −2,6%) e SUMMIT (n=731; HR 0,62 para morte CV ou piora de IC, puxado por eventos de IC), o FINEARTS-HF da finerenona na FEVE ≥40%, o documento que amarra exercício/RC à incretina, e o fluxograma de encaminhamento à RC (ESC 2026, Bäck, ehag099). Não misturar desfecho de morte com IIa de incretina. Não inventar intensidade de exercício em METs ou %VO₂.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+        "por_que": "Remove HFmrEF. ICFEr = FEVE <50%; ICFEp = FEVE ≥50%. ARM na IC sintomática independente da FEVE para reduzir internação por IC ou morte CV: sMRA na ICFEr e sMRA/nsMRA na ICFEp — Classe I A. PAS <130 mmHg na hipertensão ou no estágio B para reduzir IC: I A. Incretina IIa no recorte obesidade aparece neste documento-síntese e se aprofunda na etapa seguinte. Não tratar a zona 45–49% como se a IIa de incretina e o fenótipo ‘ICFEp nova’ fossem a mesma gaveta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+        "por_que": "Semaglutida ou tirzepatida na IC sintomática, FEVE ≥45%, IMC ≥30 kg/m², com ou sem diabetes: IIa B1 para peso, capacidade de exercício e qualidade de vida. STEP-HFpEF (PMID 37622681): n=529, KCCQ-CSS +16,6 vs +8,7, peso −13,3% vs −2,6% — não é ensaio de mortalidade. SUMMIT (PMID 39555826): n=731, HR 0,62 (IC95% 0,41–0,95) para morte CV ou piora de IC, puxado por eventos de IC (HR 0,54), não por morte CV (HR 1,58; poucos eventos). A ESC 2026 não promoveu a IIa a desfecho de morte."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "finearts-hf-finerenona-ic-feve-maior-igual-40",
+        "por_que": "O ARM não esteroide que a ESC 2026 nomeia no lado da ICFEp. n=6.001, FEVE ≥40%, mediana 32 meses. Eventos totais de piora de IC ou morte CV: RR 0,84 (0,74–0,95; P=0,007), puxado por piora de IC (RR 0,82). Morte CV 8,1% vs 8,7%; HR 0,93 (0,78–1,11) — não significativo. Não prometer redução de morte. Finerenona não substitui iSGLT2 nem incretina. TFGe <25 e K⁺ >5,0 mmol/L foram exclusões do desenho. Esses limites são da finerenona; para ARM esteroide na IC, considerar TFGe ≥30 e K <5,0, com monitorização específica. A tabela da ESC DRC para ARM na IC com FE ≥40% e TFGe ≥25 é IIa B1, distinta da recomendação geral de IC."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "exercicio-na-icfep-com-incretina-esc-2026",
+        "por_que": "A RC (Bäck, ehag099) e a incretina IIa (Køber) no mesmo paciente. RC na ICFEp para funcionamento físico e HRQoL: I B1 no extrato conferido; IIa B1 para reduzir hospitalizações por qualquer causa. Treino personalizado no contexto de RC: I B1 na diretriz de IC 2026 (todo estável, salvo contraindicação). Participação europeia ~30–40% (PMID 40742158); telereabilitação como alternativa ou adjunto. Não inventar METs nem %VO₂. Incretina não substitui o programa; o programa não substitui a incretina."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+        "por_que": "A porta operacional: IC é indicação de RC multicomponente (exercício + educação + fármacos + suporte emocional). Barreira de transporte ou agenda, com risco compatível: RC digital/híbrida com telemonitorização (padrões EAPC 2025). Fecha a trilha no encaminhamento, não na prescrição de intensidade."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420.",
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI 10.1056/NEJMoa2306963. PMID 37622681.",
+      "Packer M, Zile MR, Kramer CM, et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI 10.1056/NEJMoa2410027. PMID 39555826.",
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI 10.1056/NEJMoa2407107. PMID 39225278.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag099.",
+      "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation. Eur Heart J. 2025;46(38):3714-3737. DOI 10.1093/eurheartj/ehaf408. PMID 40742158.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. DOI 10.1093/eurheartj/ehag099. Official ESC slides, recommendation tables by condition, psychosocial management and delivery models."
+    ],
+    "objetivo": "A ESC 2026 de IC (Køber, PMID 42661420) deixou dois fenótipos (ICFEr FEVE <50%; ICFEp FEVE ≥50%), ARM Classe I A independente da FEVE, e semaglutida ou tirzepatida Classe IIa na IC sintomática com FEVE ≥45% e IMC ≥30 kg/m² para peso, capacidade de exercício e qualidade de vida — não mortalidade. A trilha percorre a síntese de fenótipos, a classe da incretina com os números de STEP-HFpEF (n=529; KCCQ-CSS +16,6 vs +8,7; peso −13,3% vs −2,6%) e SUMMIT (n=731; HR 0,62 para morte CV ou piora de IC, puxado por eventos de IC), o FINEARTS-HF da finerenona na FEVE ≥40%, o documento que amarra exercício/RC à incretina, e o fluxograma de encaminhamento à RC (ESC 2026, Bäck, ehag099). Não misturar desfecho de morte com IIa de incretina. Não inventar intensidade de exercício em METs ou %VO₂.",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Conferência individual: tabelas oficiais ESC RC 2026 por condição, modalidade e manejo psicossocial; consenso ESC 2025 Tables 4–5; ensaios STEP-HFpEF/SUMMIT/REDUCE-AMI e tabelas ESC IC/DRC para as trilhas. Corrigidas classes, limites de extrapolação, instrumentos e árvores sem convergência; identificadores não localizados substituídos por DOI verificado, sem inventar PMID."
+  },
+  {
+    "slug": "trilha-icfep-obesidade-incretina-mra-e-rc",
+    "titulo": "ICFEp 2026: dois fenótipos, ARM, incretina e reabilitação",
+    "tema": "Insuficiência cardíaca",
+    "resumo": "A ESC 2026 acaba com HFmrEF (ICFEr <50%, ICFEp ≥50%), recomenda ARM na IC sintomática independente da FEVE (I A), posiciona semaglutida ou tirzepatida como IIa na FEVE ≥45% com IMC ≥30 para peso e qualidade de vida — não mortalidade — e manda encaminhar a reabilitação. FINEARTS ancora a finerenona (RR 0,84 no composto de piora de IC; morte CV não significativa).",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "esc-2026-dois-fenotipos-e-mra-independente-da-feve",
+        "por_que": "Moldura 2026. Sem HFmrEF. Classe I A do ARM. Não misturar com a IIa da incretina."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "finearts-hf-finerenona-ic-feve-maior-igual-40",
+        "por_que": "1.083 vs 1.283 eventos totais; RR 0,84; morte CV 8,1% vs 8,7% (HR 0,93, NS). Não prometer redução de morte."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-mra-independente-da-feve-esc-2026",
+        "por_que": "Escolher o ARM conforme fenótipo, indicação, potássio e função renal. ARM esteroide: em geral TFGe ≥30 e K <5,0 na IC. Finerenona: TFGe ≥25 e K ≤5,0 para início, com dose e monitorização próprias. Um ARM, sem combinação de dois."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+        "por_que": "STEP-HFpEF (KCCQ e peso, não mortalidade) e SUMMIT (composto puxado por piora de IC). Classe IIa, não I."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-encaminhamento-reabilitacao-cardiaca-esc-2026",
+        "por_que": "A incretina não substitui exercício estruturado. Telereabilitação em selecionados (EAPC 2025)."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag100. PMID: 42661420.",
+      "Solomon SD, et al. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391:1475-1485. PMID: 39225278.",
+      "Kosiborod MN, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389:1069-1084. PMID: 37622681.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. DOI 10.1093/eurheartj/ehag099. Official ESC slides, recommendation tables by condition, psychosocial management and delivery models.",
+      "Packer M et al. SUMMIT. DOI 10.1056/NEJMoa2410027. PMID 39555826."
+    ],
+    "objetivo": "A ESC 2026 acaba com HFmrEF (ICFEr <50%, ICFEp ≥50%), recomenda ARM na IC sintomática independente da FEVE (I A), posiciona semaglutida ou tirzepatida como IIa na FEVE ≥45% com IMC ≥30 para peso e qualidade de vida — não mortalidade — e manda encaminhar a reabilitação. FINEARTS ancora a finerenona (RR 0,84 no composto de piora de IC; morte CV não significativa).",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Conferência individual: tabelas oficiais ESC RC 2026 por condição, modalidade e manejo psicossocial; consenso ESC 2025 Tables 4–5; ensaios STEP-HFpEF/SUMMIT/REDUCE-AMI e tabelas ESC IC/DRC para as trilhas. Corrigidas classes, limites de extrapolação, instrumentos e árvores sem convergência; identificadores não localizados substituídos por DOI verificado, sem inventar PMID."
+  },
+  {
+    "slug": "trilha-lpa-e-ldl-surrogato-2025",
+    "titulo": "Lp(a) e LDL em 2025: o que já é alvo, o que ainda é surrogato, e o que um CVOT parece",
+    "tema": "Prevenção e lipídios",
+    "resumo": "Lp(a) já é marcador causal e alvo farmacológico de fase 2; baixar a partícula ainda não é reduzir MACE. A trilha percorre o mapa (medir uma vez; tratar o LDL que já tem desfecho), o ALPACA (lepodisiran, n=320, Lp(a) mediana 253,9 nmol/L, −93,9 pp nos 400 mg agrupados, dias 60–180), o BROADWAY (obicetrapib 10 mg/dia, n=2.530, LDL-C −29,9% vs +2,7% no dia 84) e a frase do consultório: laboratório, não evento. Fecha com o SELECT (semaglutida 2,4 mg, n=17.604, MACE 6,5% vs 8,0%; HR 0,80) — o contraste de um CVOT verdadeiro, não um substituto de Lp(a). Não promover ALPACA/BROADWAY a CVOT. Doses investigacionais não constituem prescrição; verificar registro e bula aplicáveis antes de uso assistencial.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "lpa-o-que-ja-e-alvo-terapeutico-e-o-que-ainda-e-surrogato-2025",
+        "por_que": "O mapa. Medir Lp(a) pelo menos uma vez (ESC/EAS 2019 IIa C para identificar níveis hereditários muito altos). Pelacarsen, olpasiran e lepodisiran baixam a partícula em fase 2; nenhum é ensaio de desfecho. Enquanto o CVOT não vier, a conduta diante de Lp(a) alta é intensificar o que já reduz evento: LDL-C/apoB, pressão, tabagismo, diabetes. Não antecipar o siRNA como se já reduzisse MACE. Atualização de 04/09/2026: o patrocinador informou que Lp(a)HORIZON com pelacarsen não atingiu o primário cardiovascular. É comunicado preliminar, não resultado do ALPACA nem prova contra toda a classe."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "lepodisiran-alpaca-sirna-prolongado-contra-lpa",
+        "por_que": "Nissen et al., NEJM 2025; PMID 40162643. Fase 2, n=320, mediana de Lp(a) 253,9 nmol/L. Desfecho primário: variação percentual média no tempo, ajustada ao placebo, dias 60–180: −40,8 pp (16 mg), −75,2 pp (96 mg), −93,9 pp (400 mg agrupados). Eventos graves em 35 participantes, nenhum atribuído ao fármaco. Surrogato. Não demonstra redução de infarto, AVC, morte CV, progressão de estenose aórtica ou DAP. Testado sobre estatina/ezetimiba/PCSK9, não no lugar delas."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "obicetrapib-broadway-inibidor-seletivo-de-cetp",
+        "por_que": "Nicholls et al., NEJM 2025; PMID 40337982. n=2.530 (1.686 vs 844), DCVA ou HeFH em terapia máxima tolerada, obicetrapib 10 mg/dia. Desfecho primário lipídico no dia 84: LDL-C −29,9% vs +2,7%; diferença −32,6 pontos percentuais; P<0,001. Surrogato. Não é CVOT. Esta etapa utiliza o primário lipídico do artigo, sem inferir benefício em eventos a partir de análises de biomarcadores. Não substitui estatina, ezetimiba ou PCSK9."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "lepodisiran-e-obicetrapib-o-que-o-clinico-pode-prometer-hoje",
+        "por_que": "A frase do consultório. Pode: queda de Lp(a) ~94 pp em 320 pessoas (ALPACA) e queda de LDL ~30% em 2.530 pessoas (BROADWAY). Não pode: menos infarto, AVC ou morte a partir destes dois papers. Doses são de ensaio, não receita. Doses investigacionais não constituem prescrição; verificar registro e bula aplicáveis antes de uso assistencial. Medir Lp(a) uma vez continua sendo identificação de risco residual — não indicação automática de siRNA."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "select-semaglutida-24-mg-mace-em-obesidade-sem-diabetes",
+        "por_que": "O contraste. Lincoff et al., NEJM 2023; PMID 37952131. Semaglutida 2,4 mg SC semanal, n=17.604, DCV estabelecida, IMC ≥27, sem diabetes. MACE 569/8803 (6,5%) vs 701/8801 (8,0%); HR 0,80; IC95% 0,72–0,90; P<0,001. Isto é ensaio de evento. ALPACA e BROADWAY não são. SELECT não trata Lp(a), não substitui estatina e não autoriza vender siRNA/CETP como se já tivessem o mesmo tipo de prova. Morte CV isolada HR 0,85 (0,71–1,01) — não significativa. Não misturar 2,4 mg com FLOW 1,0 mg nem com SOUL oral 14 mg."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392(17):1673-1683. DOI: 10.1056/NEJMoa2415818. PMID: 40162643. NCT05565742.",
+      "Nicholls SJ, Nelson AJ, Ditmarsch M, et al.; BROADWAY Investigators. Safety and Efficacy of Obicetrapib in Patients at High Cardiovascular Risk. N Engl J Med. 2025;393(1):51-61. DOI: 10.1056/NEJMoa2415820. PMID: 40337982. NCT05142722.",
+      "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131.",
+      "Tsimikas S, Karwatowska-Prokopczuk E, Gouni-Berthold I, et al. Lipoprotein(a) Reduction in Persons with Cardiovascular Disease. N Engl J Med. 2020;382(3):244-255. DOI: 10.1056/NEJMoa1905239. PMID: 31893580.",
+      "O'Donoghue ML, Rosenson RS, Gencer B, et al.; OCEAN(a)-DOSE Trial Investigators. Small Interfering RNA to Reduce Lipoprotein(a) in Cardiovascular Disease. N Engl J Med. 2022;387(20):1855-1864. DOI: 10.1056/NEJMoa2211023. PMID: 36342163.",
+      "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418.",
+      "Novartis. Lp(a)HORIZON topline, 04/09/2026. https://www.novartis.com/news/media-releases/novartis-announces-lpahorizon-phase-iii-topline-results-pelacarsen-patients-elevated-lpa-and-established-cardiovascular-disease-cvd"
+    ],
+    "objetivo": "Lp(a) já é marcador causal e alvo farmacológico de fase 2; baixar a partícula ainda não é reduzir MACE. A trilha percorre o mapa (medir uma vez; tratar o LDL que já tem desfecho), o ALPACA (lepodisiran, n=320, Lp(a) mediana 253,9 nmol/L, −93,9 pp nos 400 mg agrupados, dias 60–180), o BROADWAY (obicetrapib 10 mg/dia, n=2.530, LDL-C −29,9% vs +2,7% no dia 84) e a frase do consultório: laboratório, não evento. Fecha com o SELECT (semaglutida 2,4 mg, n=17.604, MACE 6,5% vs 8,0%; HR 0,80) — o contraste de um CVOT verdadeiro, não um substituto de Lp(a). Não promover ALPACA/BROADWAY a CVOT. Doses investigacionais não constituem prescrição; verificar registro e bula aplicáveis antes de uso assistencial.",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Exames e trilhas conferidos com fontes primárias já revisadas. NT-proBNP atualizado pela Figura 4 ESC 2026 (125/250/500 por idade), separado de FINEARTS. Corrigida amostra PREVENT e desfecho sem rim; DRC inclui cronicidade, outros marcadores e CrCl para DOAC. Lp(a) atualizada ESC/EAS e comunicado HORIZON. Conexões das trilhas pendentes de auditoria final."
+  },
+  {
+    "slug": "trilha-pos-iam-fe-preservada-reduce-ami-e-rc",
+    "titulo": "Pós-IAM com FE preservada: REDUCE-AMI, betabloqueador e reabilitação cardíaca",
+    "tema": "Doença coronariana",
+    "resumo": "Depois de um IAM contemporâneo com angiografia e FEVE ≥50%, o betabloqueador crônico deixa de ser automático (REDUCE-AMI: 7,9% vs 8,3% de morte ou novo IAM; HR 0,96; IC95% 0,79–1,16; P=0,64). A trilha percorre o ensaio, a árvore de decisão, a conversa na alta e a porta que não depende do REDUCE-AMI: reabilitação cardíaca (indicações ESC 2026 e telereabilitação EAPC 2025). Não extrapolar para FE reduzida nem para a fase aguda intravenosa. Não inventar classe de recomendação.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "reduce-ami-betabloqueador-apos-iam-com-feve-preservada",
+        "por_que": "O ensaio que responde a pergunta. 5.020 pacientes com IAM e angiografia, FEVE ≥50%, metoprolol ou bisoprolol oral de longo prazo versus nenhum betabloqueador. Seguimento mediano 3,5 anos. Desfecho primário (morte ou novo IAM) 199/2508 (7,9%) versus 208/2512 (8,3%); HR 0,96; IC95% 0,79–1,16; P=0,64. Ensaio aberto; 95,4% da Suécia. Não testou FE reduzida nem betabloqueador IV na fase aguda."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-betabloqueador-longo-prazo-apos-iam-reduce-ami",
+        "por_que": "Distinguir FEVE ≥50% sem outra indicação de betabloqueador da disfunção ventricular. A ESC IC 2026 recomenda betabloqueador no estágio B com FEVE <50% (I B1). REDUCE-AMI não estudou essa população e não determina retirada abrupta de tratamento crônico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "conversa-sobre-nao-usar-betabloqueador-cronico-apos-iam-com-fe-preservada",
+        "por_que": "O paciente ouviu a vida inteira “depois de infarto, betabloqueador para sempre”. Frequências naturais do REDUCE-AMI: em 100 pessoas como as do ensaio, em 3,5 anos de mediana, cerca de 8 morreram ou tiveram novo infarto com ou sem betabloqueador. A conversa distingue o infarto com FE reduzida (indicação que permanece) do recorte testado. Vacina, estatina, antitrombótico e reabilitação não saem da alta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "indicacoes-de-reabilitacao-cardiaca-esc-2026-por-condicao",
+        "por_que": "Após SCA ou na síndrome coronariana crônica, com ou sem revascularização: RC Classe I A para reduzir mortalidade cardiovascular e infarto; I B1 para hospitalizações por qualquer causa, capacidade física e qualidade de vida. Início do exercício após avaliação de estabilidade e segurança; a recomendação de treinamento precoce pós-IAM para remodelamento é IIa B2. O momento deve ser individualizado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "telereabilitacao-cardiaca-padroes-eapc-2025",
+        "por_que": "Só cerca de 30–40% dos elegíveis na Europa participam de RC; as barreiras que o statement nomeia são transporte e agenda, não falta de evidência. Telereabilitação entra como alternativa ou adjunto. A ESC 2026 admite RC domiciliar digitalmente potencializada em pacientes selecionados. Padrões mínimos de qualidade: statement EAPC/ACNAP 2025 (PMID 40742158). Não inventar HRs de ensaios individuais de telereabilitação nesta etapa."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "reduce-ami-betabloqueador-pos-iam-fe-preservada",
+        "por_que": "Fecha a trilha no leito. Homem de 62 anos, IAMSSST, angioplastia da DA, FEVE 55%, sem angina, FA ou HAS a tratar com betabloqueador. O colega prescreve bisoprolol “porque todo infarto sai com betabloqueador”. O que o REDUCE-AMI mostrou neste recorte: ausência de demonstração de redução do desfecho primário — não redução com HR 0,70, não aumento de mortalidade, não benefício isolado em morte cardiovascular."
+      }
+    ],
+    "review_status": "revisado",
+    "source_refs": [
+      "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241. NCT03278509.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag099.",
+      "Scherrenberg M, Falter M, Abreu A, et al. Standards for cardiac telerehabilitation: A scientific statement of the EAPC and ACNAP of the ESC, and the ESC Working Group on e-Cardiology. Eur Heart J. 2025;46(38):3714-3737. DOI: 10.1093/eurheartj/ehaf408. PMID: 40742158.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. DOI 10.1093/eurheartj/ehag099. Official ESC slides, recommendation tables by condition, psychosocial management and delivery models.",
+      "Køber L, Adamo M et al. 2026 ESC Guidelines for heart failure. DOI 10.1093/eurheartj/ehag100. PMID 42661420; stage B table."
+    ],
+    "objetivo": "Depois de um IAM contemporâneo com angiografia e FEVE ≥50%, o betabloqueador crônico deixa de ser automático (REDUCE-AMI: 7,9% vs 8,3% de morte ou novo IAM; HR 0,96; IC95% 0,79–1,16; P=0,64). A trilha percorre o ensaio, a árvore de decisão, a conversa na alta e a porta que não depende do REDUCE-AMI: reabilitação cardíaca (indicações ESC 2026 e telereabilitação EAPC 2025). Não extrapolar para FE reduzida nem para a fase aguda intravenosa. Não inventar classe de recomendação.",
+    "nivel": "intermediário",
+    "published": true,
+    "review_note": "Conferência individual: tabelas oficiais ESC RC 2026 por condição, modalidade e manejo psicossocial; consenso ESC 2025 Tables 4–5; ensaios STEP-HFpEF/SUMMIT/REDUCE-AMI e tabelas ESC IC/DRC para as trilhas. Corrigidas classes, limites de extrapolação, instrumentos e árvores sem convergência; identificadores não localizados substituídos por DOI verificado, sem inventar PMID."
+  },
+  {
+    "slug": "trilha-ablacao-fa-na-ic-tres-ensaios",
+    "titulo": "Ablação de FA na IC: CASTLE-AF, RAFT-AF e CASTLE-HTx — três perguntas",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Distinguir população, dispositivo e desfechos de CASTLE-AF, RAFT-AF e CASTLE-HTx; aplicar a diretriz e discutir a estratégia sem extrapolar os ensaios.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "castle-af-ablacao-de-fa-na-ic-com-fe-reduzida",
+        "por_que": "CASTLE-AF: 363 pacientes, FEVE ≤35% e CDI; morte ou hospitalização por IC 28,5% versus 44,6%, HR 0,62 (IC95% 0,43–0,87). Não extrapolar para toda FA ou ICFEp."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "raft-af-nao-fechou-o-primario-nao-e-castle-af",
+        "por_que": "RAFT-AF: 411 pacientes com alta carga de FA e IC; HR 0,71 (0,49–1,03), P=0,066, interrupção por futilidade aparente. Secundários favoráveis não tornam o primário significativo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "castle-htx-nao-e-castle-af-ic-terminal",
+        "por_que": "CASTLE-HTx: 194 pacientes com IC avançada encaminhados para avaliação de transplante; composto de morte, DAVI ou transplante urgente, HR 0,24 (0,11–0,52). Centro único, amostra pequena e parada precoce limitam extrapolação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "tres-ensaios-de-ablacao-de-fa-na-ic-castle-raft-htx",
+        "por_que": "Comparar frequências naturais com os respectivos tempos e componentes, sem somar denominadores ou transportar HR entre fenótipos."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "vanish2-nao-dispensa-o-cdi",
+        "por_que": "Separar ablação de FA e de TV. CASTLE-AF e VANISH2 incluíram pacientes com CDI; seus resultados não demonstram que a ablação substitua um desfibrilador indicado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "quando-ablacao-de-fa-na-ic-o-que-castle-af-e-a-esc-2026-separam",
+        "por_que": "Concluir com a indicação da diretriz, anticoagulação, tratamento da IC e decisão compartilhada. Classe de recomendação deve vir da diretriz, e não do HR de um ensaio."
+      }
+    ],
+    "source_refs": [
+      "Marrouche NF, Brachmann J, Andresen D, et al.; CASTLE-AF Investigators. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378:417-427. DOI 10.1056/NEJMoa1707855. PMID 29385358. NCT00643188.",
+      "Parkash R, Wells GA, Rouleau J, et al. Randomized Ablation-Based Rhythm-Control Versus Rate-Control Trial in Patients With Heart Failure and Atrial Fibrillation: Results from the RAFT-AF trial. Circulation. 2022;145:1693-1704. DOI 10.1161/CIRCULATIONAHA.121.057095. PMID 35313733. NCT01420393.",
+      "Sohns C, Fox H, Marrouche NF, et al.; CASTLE HTx Investigators. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389:1380-1389. DOI 10.1056/NEJMoa2306037. PMID 37634135. NCT04649801.",
+      "Sapp JL, et al.; VANISH2 Study Team. Catheter Ablation or Antiarrhythmic Drugs for Ventricular Tachycardia. N Engl J Med. 2025;392:737-747. DOI 10.1056/NEJMoa2409501. PMID 39555820. NCT02830360."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-attr-cm-tafamidis-e-vutrisiran",
+    "titulo": "ATTR-CM: tafamidis (estabilizador) e vutrisiran (silenciador)",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Confirmar ATTR-CM, diferenciar estabilização de TTR e silenciamento e interpretar ATTR-ACT e HELIOS-B sem comparação indireta de superioridade.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "attr-cm-quando-pensar-e-o-que-helios-b-mudou",
+        "por_que": "Começar pelo diagnóstico, com exclusão de AL por cadeias leves e imunofixação sérica e urinária antes de interpretar a cintilografia como diagnóstico não invasivo de ATTR."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "attr-act-tafamidis-nao-e-helios-b",
+        "por_que": "ATTR-ACT: 441 participantes, tafamidis agrupado 264 versus placebo 177, 30 meses; mortalidade 29,5% versus 42,9%, HR 0,70 (0,51–0,96). Estabilizador de TTR, não siRNA."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "helios-b-vutrisiran-na-attr-cm",
+        "por_que": "HELIOS-B: 655 participantes; composto de morte e eventos cardiovasculares recorrentes, HR 0,72 (0,56–0,93). Diferenças no teste de caminhada e KCCQ representam menor declínio em relação ao placebo, não necessariamente melhora absoluta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "helios-b-numeros-que-o-clinico-precisa-separar",
+        "por_que": "Separar população total, subgrupo sem tafamidis no basal e mortalidade até 42 meses. Contagem de participantes com eventos não substitui a análise de recorrentes."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "estabilizador-vs-silenciador-na-attr-cm",
+        "por_que": "Mecanismos distintos e ausência de comparação direta; tafamidis concomitante permitido no HELIOS-B não constitui randomização de uma estratégia combinada. Consultar as indicações brasileiras atuais nas fichas revisadas."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "silenciadores-de-ttr-helios-b-nao-e-cardio-ttransform",
+        "por_que": "Confrontar vutrisiran com a pergunta diferente do eplontersen: CARDIO-TTRansform 2026 não atingiu o primário, RR 0,89 (0,73–1,09), P=0,28."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "attr-act-nao-e-helios-b",
+        "por_que": "Aplicar a distinção entre moléculas, mecanismos, populações e desfechos na discussão de um caso."
+      }
+    ],
+    "source_refs": [
+      "Maurer MS, Schwartz JH, Gundapaneni B, et al.; ATTR-ACT Study Investigators. Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy. N Engl J Med. 2018;379(11):1007-1016. DOI 10.1056/NEJMoa1805689. PMID 30145929. NCT01994889.",
+      "Fontana M, Berk JL, Gillmore JD, et al.; HELIOS-B Trial Investigators. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI 10.1056/NEJMoa2409134. PMID 39213194. NCT04153149."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-bb-pos-iam-tres-ensaios",
+    "titulo": "Betabloqueador após IAM: BETAMI-DANBLOCK, REBOOT e a IPD de cinco ensaios",
+    "tema": "Doença coronariana",
+    "objetivo": "Interpretar betabloqueadores após IAM por fração de ejeção, presença de IC, outras indicações e diferença entre iniciar e retirar tratamento.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "evidencia",
+        "item_slug": "betami-danblock-bb-pos-iam-feve-40",
+        "por_que": "BETAMI-DANBLOCK: FEVE ≥40%, sem IC, 5.574 pacientes; composto de morte ou MACE 14,2% versus 16,3%, HR 0,85 (0,75–0,98). O resultado não demonstra redução isolada de mortalidade."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "reboot-betabloqueador-apos-iam-com-feve-maior-40",
+        "por_que": "REBOOT: 8.505 randomizados, 8.438 na análise; FEVE >40%; morte, reinfarto ou hospitalização por IC, HR 1,04 (0,89–1,22). Não fundir seu composto com BETAMI-DANBLOCK."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "metanalise-ipd-betabloqueador-pos-iam-feve-50-cinco-ensaios",
+        "por_que": "IPD de cinco ensaios: 17.801 pacientes com FEVE ≥50% sem outra indicação; morte, IAM ou IC, HR 0,97 (0,87–1,07). Subconjuntos da IPD não são as amostras integrais dos ensaios."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "reduce-ami-betabloqueador-apos-iam-com-feve-preservada",
+        "por_que": "REDUCE-AMI: 5.020 pacientes, FEVE ≥50%; morte ou novo IAM 7,9% versus 8,3%, HR 0,96 (0,79–1,16). Seu composto não inclui IC como o da IPD."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-betabloqueador-pos-iam-reboot-e-ipd-2025",
+        "por_que": "Distinguir FEVE ≤40%, 41–49% e ≥50%, IC e outras indicações. FEVE 40% não pode cair num intervalo vazio. Incorporar a recomendação vigente sem transformar ensaio neutro em contraindicação."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "reboot-e-reduce-ami-como-atualizar-a-conversa-do-alta",
+        "por_que": "Explicar a incerteza na população correta e manter a prevenção secundária. Iniciar tratamento e retirar tratamento crônico são perguntas diferentes; não orientar interrupção abrupta."
+      },
+      {
+        "ordem": 7,
+        "item_type": "caso_clinico",
+        "item_slug": "betami-nao-e-reboot",
+        "por_que": "Aplicar a análise à FEVE 44%: esta paciente não pertence ao recorte ≥50% da IPD."
+      }
+    ],
+    "source_refs": [
+      "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716. NCT03646357. NCT03778554.",
+      "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+      "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954.",
+      "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-icfep-summit-e-rc",
+    "titulo": "ICFEp com obesidade: SUMMIT, Classe IIa e reabilitação cardíaca",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Distinguir a recomendação ESC 2026 para peso, função e qualidade de vida dos desfechos clínicos do SUMMIT; integrar tratamento da IC e reabilitação.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "incretinas-na-icfep-com-obesidade-esc-2026-classe-iia",
+        "por_que": "Na IC sintomática, FEVE ≥45% e IMC ≥30, semaglutida ou tirzepatida devem ser consideradas para peso, capacidade de exercício e qualidade de vida: IIa B1. O corte da recomendação não redefine a classificação de ICFEp."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "summit-tirzepatida-icfep-com-obesidade",
+        "por_que": "SUMMIT: 731 pacientes, FEVE ≥50%, IMC ≥30; morte CV ou piora de IC 9,9% versus 15,3%, HR 0,62 (0,41–0,95). Piora de IC HR 0,54; morte CV isolada HR 1,58 (0,52–4,83), sem benefício demonstrado nesse componente."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-icfep-obesidade-incretina-apos-summit",
+        "por_que": "Reconhecer IC e obesidade, avaliar contraindicações e integrar os tratamentos indicados. Não é necessário atrasar uma opção apropriada até completar sequencialmente todos os demais fármacos."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "exercicio-na-icfep-com-incretina-esc-2026",
+        "por_que": "Reabilitação para função física e qualidade de vida I B1; redução de hospitalizações IIa B1. Incretinas não substituem o programa, cuja seleção e progressão são individualizadas."
+      }
+    ],
+    "source_refs": [
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420.",
+      "Packer M, Zile MR, Kramer CM, et al.; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI 10.1056/NEJMoa2410027. PMID 39555826. NCT04847557.",
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al.; STEP-HFpEF Trial Committees and Investigators. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI 10.1056/NEJMoa2306963. PMID 37622681.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag099."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-isglt2-rim-e-ic-dapa-ckd-dapa-hf",
+    "titulo": "iSGLT2 no rim e na IC: DAPA-CKD, DAPA-HF e DELIVER — três portas",
+    "tema": "Cardiorrenal",
+    "objetivo": "Separar as populações renais e cardíacas de DAPA-CKD, DAPA-HF e DELIVER e aplicar os critérios atuais de função renal e albuminúria.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dapa-ckd-nao-e-dapa-hf",
+        "por_que": "DAPA-CKD: 4.304 pacientes, TFGe 25–75 e RAC 200–5.000, com ou sem DM2; desfecho de declínio renal, falência renal ou morte renal/CV 9,2% versus 14,5%, HR 0,61 (0,51–0,72). NNT 19 publicado para o horizonte do ensaio."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "dapa-hf-nao-e-deliver-feve-reduzida-nao-e-preservada",
+        "por_que": "Comparar DAPA-HF, FEVE ≤40%, HR 0,74 (0,65–0,85), com DELIVER, FEVE >40%, HR 0,82 (0,73–0,92). O componente de morte CV do DELIVER, HR 0,88 (0,74–1,05), não teve redução significativa."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tres-perguntas-de-dapagliflozina-dapa-hf-dapa-ckd-deliver",
+        "por_que": "Apresentar riscos absolutos, componentes e tempo de acompanhamento próprios de cada ensaio, sem combinar percentuais ou aplicar o NNT renal à IC."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "esc-2026-isglt2-drc-ia",
+        "por_que": "ESC 2026: em DRC com DM2, iSGLT2 com TFGe ≥20, independentemente da albuminúria, I A. Examinar a recomendação completa e a bula do produto escolhido."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "esc-2026-isglt2-drc-sem-diabetes-ia",
+        "por_que": "Sem DM2: TFGe ≥20 e RAC ≥200, I A; TFGe 20–44 com RAC menor que 200, IIa B1. Diferenciar estes critérios da inclusão do DAPA-CKD."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-stamp-on-ckd-esc-2026",
+        "por_que": "Integrar avaliação renal, tratamento de base, monitorização e terapias adicionais conforme a indicação; STAMP on CKD é o acrônimo da diretriz, não um escore numérico."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "empact-mi-nao-e-dapa-hf-o-iam-nao-substitui-a-ic",
+        "por_que": "Separar ensaio pós-IAM de IC estabelecida e considerar a recomendação específica de DCV/DRC quando presente, sem transformar neutralidade de EMPACT-MI em proibição geral."
+      }
+    ],
+    "source_refs": [
+      "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al.; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383:1436-1446. DOI 10.1056/NEJMoa2024816. PMID 32970396. NCT03036150.",
+      "McMurray JJV, Solomon SD, Inzucchi SE, et al.; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381:1995-2008. DOI 10.1056/NEJMoa1911303. PMID 31535829. NCT03036124.",
+      "Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2022;387:1089-1098. DOI 10.1056/NEJMoa2206286. PMID 36027570. NCT03619213.",
+      "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the ERA. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag098. PMID 42661426."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-mho-quatro-ensaios-explorer-valor-sequoia-maple",
+    "titulo": "MHO obstrutiva: EXPLORER, VALOR, SEQUOIA e MAPLE — quatro perguntas",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Comparar EXPLORER, VALOR, SEQUOIA e MAPLE por molécula, comparador, sintomas, capacidade funcional e elegibilidade para redução septal.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "explorer-hcm-nao-e-valor-nem-e-maple",
+        "por_que": "EXPLORER: mavacamten versus placebo, 251 pacientes, 30 semanas; resposta composta de pVO2/NYHA 37% versus 17%. Não é um ensaio de mortalidade nem de aficamten."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "valor-hcm-nao-e-maple-nem-e-cirurgia",
+        "por_que": "VALOR: mavacamten versus placebo, 112 pacientes elegíveis para redução septal; procedimento ou elegibilidade persistente em 16 semanas 17,9% versus 76,8%. Não demonstra que a miectomia se tornou obsoleta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sequoia-hcm-aficamten-na-mho-obstrutiva-sintomatica",
+        "por_que": "SEQUOIA: aficamten versus placebo, 282 pacientes, 24 semanas; diferença de VO2 pico 1,7 mL/kg/min (1,0–2,4). Desfechos funcionais não equivalem a mortalidade."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "maple-hcm-aficamten-versus-metoprolol-na-mho-obstrutiva",
+        "por_que": "MAPLE: aficamten versus metoprolol em monoterapia, 175 pacientes; diferença de VO2 pico 2,3 mL/kg/min (1,5–3,1). Não estabelece intercambialidade entre os inibidores de miosina."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "explorer-nao-e-valor-nao-e-maple",
+        "por_que": "Testar a interpretação de quatro resultados distintos. São diferenças funcionais e proporções, não quatro HRs."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fluxograma-mho-obstrutiva-sintomatica-apos-sequoia-hcm",
+        "por_que": "Aplicar seleção clínica e monitorização por ecocardiograma. Usar os limites e os ajustes específicos de cada molécula e da bula, sem intercambiar doses."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-primeira-linha-mho-obstrutiva-apos-maple-hcm",
+        "por_que": "Discutir estratégia com especialista, preservar tratamento de outras indicações e avaliar redução septal quando apropriada."
+      }
+    ],
+    "source_refs": [
+      "Olivotto I, Oreziak A, Barriales-Villa R, et al. Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet. 2020;396(10253):759-769. DOI 10.1016/S0140-6736(20)31792-X. PMID 32871100. NCT03470545.",
+      "Desai MY, et al. Myosin Inhibition in Patients With Obstructive Hypertrophic Cardiomyopathy Referred for Septal Reduction Therapy. J Am Coll Cardiol. 2022;80:95-108. DOI 10.1016/j.jacc.2022.04.048. PMID 35798455. NCT04349072.",
+      "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2024;390(20):1849-1861. DOI 10.1056/NEJMoa2401424. PMID 38739079. NCT05186818.",
+      "Garcia-Pavia P, Maron MS, Lewis GD, et al. Aficamten or Metoprolol Monotherapy for Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2025;393(10):949-960. DOI 10.1056/NEJMoa2504654. PMID 40888697. NCT05767346."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-pericardite-icap-e-corp",
+    "titulo": "Pericardite: ICAP, CORP, fluxograma ESC 2025 e retorno ao esporte",
+    "tema": "Pericárdio",
+    "objetivo": "Distinguir pericardite inicial e recorrente, aplicar a sequência de tratamento ESC 2025 e orientar retorno ao exercício e comunicação ao paciente.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "icap-colchicina-no-primeiro-episodio-nao-e-corp",
+        "por_que": "ICAP: primeiro episódio, 240 pacientes, colchicina adjunta por três meses; pericardite incessante ou recorrente 16,7% versus 37,5%, NNT 4 publicado. Não extrapolar o tempo de tratamento para toda recorrência."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "colchicina-na-pericardite-recorrente-o-que-o-ensaio-mostra",
+        "por_que": "CORP: primeira recorrência, 120 pacientes, seis meses de tratamento e 18 meses de avaliação; 24% versus 55%, RRR 0,56 (0,27–0,74). CORP-2: múltiplas recorrências, 240 pacientes, 21,6% versus 42,5%."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-pericardite-recorrente-esc-2025",
+        "por_que": "Usar AAS/AINE e colchicina quando indicados, corticoide em situações selecionadas e anti-IL-1 nos critérios apropriados de refratariedade e inflamação. Corticoide não é primeira opção de rotina, mas contraindicações à primeira linha exigem individualização."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "retorno-ao-esporte-apos-miocardite-esc-2025",
+        "por_que": "Restrição até a remissão por pelo menos um mês, I C. O prazo mínimo não libera exercício automaticamente; avaliar evolução, exames e retorno gradual."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "icap-nao-e-corp",
+        "por_que": "Aplicar a distinção entre primeiro episódio, recorrência, duração do tratamento e liberação esportiva."
+      },
+      {
+        "ordem": 6,
+        "item_type": "material_paciente",
+        "item_slug": "colchicina-na-pericardite-o-que-esperar",
+        "por_que": "Concluir com a orientação ao paciente: objetivo do tratamento, tolerância, interações, sinais de alerta e plano de acompanhamento, sem posologia automática."
+      }
+    ],
+    "source_refs": [
+      "Imazio M, Brucato A, Cemin R, et al.; ICAP Investigators. A randomized trial of colchicine for acute pericarditis. N Engl J Med. 2013;369(16):1522-1528. DOI 10.1056/NEJMoa1208536. PMID 23992557. NCT00128453.",
+      "Imazio M, Brucato A, Cemin R, et al.; CORP Investigators. Colchicine for recurrent pericarditis (CORP): a randomized trial. Ann Intern Med. 2011;155(7):409-414. DOI 10.7326/0003-4819-155-7-201110040-00359. PMID 21873705. NCT00128414.",
+      "Imazio M, Belli R, Brucato A, et al. Efficacy and safety of colchicine for treatment of multiple recurrences of pericarditis (CORP-2). Lancet. 2014;383(9936):2232-2237. PMID 24694983.",
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI 10.1093/eurheartj/ehaf192. PMID 40878297."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
+  },
+  {
+    "slug": "trilha-tv-isquemica-vanish2-e-dispositivo",
+    "titulo": "TV isquêmica: VANISH2, ablação de primeira linha e o CDI na mesma sala",
+    "tema": "Arritmias",
+    "objetivo": "Interpretar a estratégia inicial de ablação do VANISH2 sem equiparar janelas de segurança diferentes, e integrar CDI, reabilitação e cuidado emocional.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "evidencia",
+        "item_slug": "vanish2-ablacao-tv-vs-aad",
+        "por_que": "VANISH2: 416 pacientes com cardiomiopatia isquêmica e CDI; 50,7% versus 60,6% no composto, HR 0,75 (0,58–0,97). A estratégia inicial difere da ablação após falha farmacológica estudada no VANISH 2016."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "vanish2-ablacao-como-terapia-inicial-vs-antiarritmico-na-tv",
+        "por_que": "Rever o desenho e a segurança: óbito 2/203 e eventos não fatais 23/203 em 30 dias da ablação; no braço farmacológico, 1 óbito e 46 eventos não fatais atribuídos ao medicamento ao longo do seguimento. Não comparar essas frequências como se tivessem a mesma janela."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "clinica-de-dispositivo-como-hub-tudo-com-tudo-esc-2026",
+        "por_que": "Integrar interrogação do CDI, tratamento da arritmia, avaliação clínica e reabilitação. Ablação não substitui um CDI indicado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "desligar-cdi-e-reabilitacao-duas-conversas-que-se-cruzam",
+        "por_que": "Abordar ansiedade relacionada ao choque e decisões sobre o dispositivo com objetivos e consentimento próprios; não inferir desativação a partir do VANISH2."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "vanish2-tv-isquemica-ablacao-ou-amiodarona",
+        "por_que": "Aplicar o ensaio após estabilização e avaliação especializada; tempestade elétrica exige tratamento imediato, e o resultado do ensaio não torna amiodarona proibida nem ablação isenta de risco."
+      }
+    ],
+    "source_refs": [
+      "Sapp JL, et al.; VANISH2 Study Team. Catheter Ablation or Antiarrhythmic Drugs for Ventricular Tachycardia. N Engl J Med. 2025;392(8):737-747. DOI: 10.1056/NEJMoa2409501. PMID: 39555820. NCT02830360.",
+      "Bäck M, Wilhelm M, Hansen D, et al. 2026 ESC Guidelines on cardiac rehabilitation. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag099.",
+      "Bueno H, Deaton C, Farrero M, et al. 2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191. PMID: 40878270."
+    ],
+    "review_status": "revisado",
+    "review_note": "Trilha convertida em etapas canônicas com justificativas clínicas; ensaios e diretrizes conferidos nas fichas técnicas revisadas, comparadores e horizontes separados. Corrigidas extrapolações, números de análise, interpretações de segurança e linguagem de instrução editorial. Vínculos serão validados no gate de integração.",
+    "published": true
   }
 ]

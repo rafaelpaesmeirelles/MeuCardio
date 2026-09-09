@@ -1,13 +1,39 @@
 ---
-title: "CPVT: Estratégias sem Betabloqueador e o Papel da LCSD na Decisão sobre CDI"
-slug: cpvt-quando-dispensar-o-betabloqueador-e-quando-dispensar-o-cdi-registro-internacional-e-lcsd
-theme: "Arritmias"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta já tinha `qt-curto-e-cpvt-duas-canalopatias-em-que-a-parada-e-a-primeira-manifestacao.md`,
+  que cobre o ensaio randomizado da flecainida como ADIÇÃO ao betabloqueador (Kannankeril
+  2017, PMID 28492868) para suprimir ectopia ao esforço — uma pergunta farmacológica
+  de eficácia aditiva. Este documento traz duas perguntas distintas e mais recentes
+  (2024-2026): dá para TIRAR o betabloqueador de vez em algum subgrupo, e a denervação
+  simpática cardíaca esquerda (LCSD) permite dispensar o CDI. Nenhuma das duas fontes
+  constava no repositório.'
+published: true
+review_note: 'Revisão clínica individual em 2026-09-08: PMIDs 39708032 e 42138682
+  conferidos; coortes observacionais separadas de recomendações de diretriz, sem autorizar
+  retirada de betabloqueador ou CDI fora de centro especializado.'
 review_status: revisado
-published: false
-review_note: "Revisão clínica individual em 2026-09-08: PMIDs 39708032 e 42138682 conferidos; coortes observacionais separadas de recomendações de diretriz, sem autorizar retirada de betabloqueador ou CDI fora de centro especializado."
-source_refs: ["Neves R, Bains S, Bos JM, van der Werf C, Bergeman AT, Peltenburg P, Blom NA, Sanatani S, Swan H, Probst V, Kannankeril PJ, Skinner JR, Brugada R, Robyns T, Borggrefe M, Shimizu W, Kammeraad JAE, Krahn AD, Wilde AAM, Ackerman MJ. International Multicenter Cohort Study on Beta-Blocker-Free Treatment Strategies for Catecholaminergic Polymorphic Ventricular Tachycardia Patients. JACC Clin Electrophysiol. 2025;11(2):270-278. DOI: 10.1016/j.jacep.2024.10.005. PMID: 39708032 — International CPVT Registry, 1017 pacientes RYR2-positivos, 100 (10%) em estratégia sem betabloqueador por pelo menos 6 meses", "Bos JM, Dusi V, Viskin D, Paul T, Rosés I Noguer F, Till J, Khoury A, Emkanjoo Z, Dalili M, Termosesov SA, Bereznitskaya VV, Rordorf R, Musu G, Crotti L, Polites SF, De Ferrari GM, Pugliese L, Ackerman MJ, Schwartz PJ. How Many CPVT Patients Need an ICD? The Impact of Left Cardiac Sympathetic Denervation. JACC Clin Electrophysiol. 2026 May 11 [Epub ahead of print]. DOI: 10.1016/j.jacep.2026.03.027. PMID: 42138682 — estudo retrospectivo multicêntrico mundial, 162 pacientes submetidos a LCSD, subanálise principal de 118", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta já tinha `qt-curto-e-cpvt-duas-canalopatias-em-que-a-parada-e-a-primeira-manifestacao.md`, que cobre o ensaio randomizado da flecainida como ADIÇÃO ao betabloqueador (Kannankeril 2017, PMID 28492868) para suprimir ectopia ao esforço — uma pergunta farmacológica de eficácia aditiva. Este documento traz duas perguntas distintas e mais recentes (2024-2026): dá para TIRAR o betabloqueador de vez em algum subgrupo, e a denervação simpática cardíaca esquerda (LCSD) permite dispensar o CDI. Nenhuma das duas fontes constava no repositório."
+slug: cpvt-quando-dispensar-o-betabloqueador-e-quando-dispensar-o-cdi-registro-internacional-e-lcsd
+source_refs:
+- 'Neves R, Bains S, Bos JM, van der Werf C, Bergeman AT, Peltenburg P, Blom NA, Sanatani
+  S, Swan H, Probst V, Kannankeril PJ, Skinner JR, Brugada R, Robyns T, Borggrefe
+  M, Shimizu W, Kammeraad JAE, Krahn AD, Wilde AAM, Ackerman MJ. International Multicenter
+  Cohort Study on Beta-Blocker-Free Treatment Strategies for Catecholaminergic Polymorphic
+  Ventricular Tachycardia Patients. JACC Clin Electrophysiol. 2025;11(2):270-278.
+  DOI: 10.1016/j.jacep.2024.10.005. PMID: 39708032 — International CPVT Registry,
+  1017 pacientes RYR2-positivos, 100 (10%) em estratégia sem betabloqueador por pelo
+  menos 6 meses'
+- 'Bos JM, Dusi V, Viskin D, Paul T, Rosés I Noguer F, Till J, Khoury A, Emkanjoo
+  Z, Dalili M, Termosesov SA, Bereznitskaya VV, Rordorf R, Musu G, Crotti L, Polites
+  SF, De Ferrari GM, Pugliese L, Ackerman MJ, Schwartz PJ. How Many CPVT Patients
+  Need an ICD? The Impact of Left Cardiac Sympathetic Denervation. JACC Clin Electrophysiol.
+  2026 May 11 [Epub ahead of print]. DOI: 10.1016/j.jacep.2026.03.027. PMID: 42138682
+  — estudo retrospectivo multicêntrico mundial, 162 pacientes submetidos a LCSD, subanálise
+  principal de 118'
+- 'Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management
+  of patients with ventricular arrhythmias and the prevention of sudden cardiac death.
+  Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.'
+theme: Arritmias
+title: 'CPVT: Estratégias sem Betabloqueador e o Papel da LCSD na Decisão sobre CDI'
 ---
 
 # CPVT: Estratégias sem Betabloqueador e o Papel da LCSD na Decisão sobre CDI

@@ -1,13 +1,34 @@
 ---
-title: "Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico: uma Análise Multicêntrica"
-slug: carga-de-fibrilacao-atrial-detectada-por-cied-apos-inicio-de-antiarritmico-uma-analise-multicentrica
-theme: "Dispositivos"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre
+  vários usos de dados gerados por CIED (dispositivo cardíaco eletrônico implantável)
+  — telemonitoramento remoto ligado a mortalidade (IN-TIME), rendimento diagnóstico
+  do monitor cardíaco implantável, e o algoritmo multissensor de descompensação (HeartLogic/MultiSENSE
+  vs. OptiVol/DOT-HF) — e a pasta Fibrilação_atrial cobre o uso da carga de FA subclínica
+  detectada por dispositivo como gatilho para decisão de anticoagulação (NOAH-AFNET
+  6, ARTESiA). Nenhum documento tratava de uma pergunta distinta das duas anteriores:
+  uma vez que o paciente já está em controle de ritmo farmacológico, a carga de FA
+  registrada pelo próprio CIED pode servir como métrica objetiva de resposta ao antiarrítmico
+  — ou seja, usar o dispositivo não para diagnosticar FA nem para decidir sobre anticoagulante,
+  mas para acompanhar se o fármaco iniciado está funcionando. É esse ângulo — carga
+  de FA como marcador de resposta terapêutica ao antiarrítmico, não como gatilho diagnóstico
+  ou de anticoagulação — que este documento cobre, a partir de um estudo multicêntrico
+  retrospectivo publicado em 2026.'
+published: true
+review_note: 'Revisão clínica individual em 2026-09-08: PMID 41908184/PMCID PMC13031027
+  conferidos no texto completo; critérios de exclusão, limites do desenho pré/pós
+  e separação entre carga de FA, benefício clínico e anticoagulação explicitados.'
 review_status: revisado
-published: false
-review_note: "Revisão clínica individual em 2026-09-08: PMID 41908184/PMCID PMC13031027 conferidos no texto completo; critérios de exclusão, limites do desenho pré/pós e separação entre carga de FA, benefício clínico e anticoagulação explicitados."
-source_refs: ["Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Multicenter analysis of device-detected atrial fibrillation burden reduction after antiarrhythmic drug initiation. Heart Rhythm O2. 2026;7(3):465-471. DOI: 10.1016/j.hroo.2025.12.019. PMID: 41908184. PMCID: PMC13031027. Publicação eletrônica 08/01/2026 (eCollection março/2026)."]
-legacy_source: "Documento novo, escrito em 09/09/2026. A pasta Dispositivos já cobre vários usos de dados gerados por CIED (dispositivo cardíaco eletrônico implantável) — telemonitoramento remoto ligado a mortalidade (IN-TIME), rendimento diagnóstico do monitor cardíaco implantável, e o algoritmo multissensor de descompensação (HeartLogic/MultiSENSE vs. OptiVol/DOT-HF) — e a pasta Fibrilação_atrial cobre o uso da carga de FA subclínica detectada por dispositivo como gatilho para decisão de anticoagulação (NOAH-AFNET 6, ARTESiA). Nenhum documento tratava de uma pergunta distinta das duas anteriores: uma vez que o paciente já está em controle de ritmo farmacológico, a carga de FA registrada pelo próprio CIED pode servir como métrica objetiva de resposta ao antiarrítmico — ou seja, usar o dispositivo não para diagnosticar FA nem para decidir sobre anticoagulante, mas para acompanhar se o fármaco iniciado está funcionando. É esse ângulo — carga de FA como marcador de resposta terapêutica ao antiarrítmico, não como gatilho diagnóstico ou de anticoagulação — que este documento cobre, a partir de um estudo multicêntrico retrospectivo publicado em 2026."
+slug: carga-de-fibrilacao-atrial-detectada-por-cied-apos-inicio-de-antiarritmico-uma-analise-multicentrica
+source_refs:
+- 'Schwartz SM, Peigh G, Culler K, Knight BP, Wan EY, Biviano A, Passman RS. Multicenter
+  analysis of device-detected atrial fibrillation burden reduction after antiarrhythmic
+  drug initiation. Heart Rhythm O2. 2026;7(3):465-471. DOI: 10.1016/j.hroo.2025.12.019.
+  PMID: 41908184. PMCID: PMC13031027. Publicação eletrônica 08/01/2026 (eCollection
+  março/2026).'
+theme: Dispositivos
+title: 'Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico:
+  uma Análise Multicêntrica'
 ---
 
 # Carga de Fibrilação Atrial Detectada por CIED Após Início de Antiarrítmico: uma Análise Multicêntrica

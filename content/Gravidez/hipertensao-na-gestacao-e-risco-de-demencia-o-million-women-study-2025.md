@@ -1,12 +1,32 @@
 ---
-title: "Hipertensão na Gestação e Risco de Demência: o Million Women Study (2025)"
-slug: hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025
-theme: "Gravidez"
 kind: estudo
+legacy_source: 'Documento novo, escrito em 08/09/2026. A pasta já cobre extensamente
+  o risco cardiovascular de longo prazo após transtorno hipertensivo da gestação (THG)
+  para desfechos como insuficiência cardíaca, doença coronariana, AVC, morte cardiovascular
+  e hipertensão crônica (Wu et al., Behrens et al., a coorte sueca de coirmãs, o estudo
+  de subtipos JAMA Intern Med 2026) — mas nenhum documento tratava do desfecho demência/declínio
+  cognitivo, nem da pergunta causal específica que o Million Women Study responde:
+  o excesso de risco de demência após TGH é efeito direto do episódio gestacional,
+  ou é inteiramente explicado por essa mulher também desenvolver hipertensão crônica
+  na meia-idade? É uma pergunta distinta das já respondidas nesta pasta (que tratam
+  de eventos cardiovasculares maiores, não de demência, e não estratificam pela persistência
+  ou não da hipertensão fora da gestação), por isso um documento próprio.'
+published: true
 review_status: revisado
-published: false
-source_refs: ["Floud S, Hermon C, Whiteley W, Fitzpatrick KE, Reeves GK. Hypertension in pregnancy and in midlife and the risk of dementia: prospective study of 1.3 million UK women. Alzheimers Dement. 2025 Sep;21(9):e70595. DOI: 10.1002/alz.70595. PMID: 40922100. PMCID: PMC12417322 — Million Women Study, 1.363.457 mulheres recrutadas (idade 50-64 anos, ano mediano de recrutamento 1998), seguidas por até 26 anos (até 31/12/2021), com 84.729 casos de demência (CID-10 F00-F03 ou G30). Exposição à hipertensão gestacional aferida por autorrelato retrospectivo (pergunta única, sim/não, sem distinção de subtipo); exposição à hipertensão de meia-idade aferida por autorrelato de tratamento anti-hipertensivo atual, não por PA medida. Texto integral (PMC) conferido para os HRs e ICs95% citados neste documento."]
-legacy_source: "Documento novo, escrito em 08/09/2026. A pasta já cobre extensamente o risco cardiovascular de longo prazo após transtorno hipertensivo da gestação (THG) para desfechos como insuficiência cardíaca, doença coronariana, AVC, morte cardiovascular e hipertensão crônica (Wu et al., Behrens et al., a coorte sueca de coirmãs, o estudo de subtipos JAMA Intern Med 2026) — mas nenhum documento tratava do desfecho demência/declínio cognitivo, nem da pergunta causal específica que o Million Women Study responde: o excesso de risco de demência após TGH é efeito direto do episódio gestacional, ou é inteiramente explicado por essa mulher também desenvolver hipertensão crônica na meia-idade? É uma pergunta distinta das já respondidas nesta pasta (que tratam de eventos cardiovasculares maiores, não de demência, e não estratificam pela persistência ou não da hipertensão fora da gestação), por isso um documento próprio."
+slug: hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025
+source_refs:
+- 'Floud S, Hermon C, Whiteley W, Fitzpatrick KE, Reeves GK. Hypertension in pregnancy
+  and in midlife and the risk of dementia: prospective study of 1.3 million UK women.
+  Alzheimers Dement. 2025 Sep;21(9):e70595. DOI: 10.1002/alz.70595. PMID: 40922100.
+  PMCID: PMC12417322 — Million Women Study, 1.363.457 mulheres recrutadas (idade 50-64
+  anos, ano mediano de recrutamento 1998), seguidas por até 26 anos (até 31/12/2021),
+  com 84.729 casos de demência (CID-10 F00-F03 ou G30). Exposição à hipertensão gestacional
+  aferida por autorrelato retrospectivo (pergunta única, sim/não, sem distinção de
+  subtipo); exposição à hipertensão de meia-idade aferida por autorrelato de tratamento
+  anti-hipertensivo atual, não por PA medida. Texto integral (PMC) conferido para
+  os HRs e ICs95% citados neste documento.'
+theme: Gravidez
+title: 'Hipertensão na Gestação e Risco de Demência: o Million Women Study (2025)'
 ---
 
 # Hipertensão na Gestação e Risco de Demência: o Million Women Study (2025)

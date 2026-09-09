@@ -131,9 +131,9 @@ FRENTES = {
     "estudos": ("/estudos/metadados.json", "carregar_estudos", "ScientificStudy"),
     "medicamentos": ("/medicamentos/metadados.json", "carregar_drugs", "Drug"),
     "checklists": ("/checklists/metadados.json", "carregar_checklists", "DischargeChecklist"),
-    "trilhas": ("/trilhas/metadados.json", "carregar_trilhas", "StudyTrack"),
     "material_paciente": ("/material-paciente/metadados.json",
                           "carregar_material_paciente", "PatientMaterial"),
+    "trilhas": ("/trilhas/metadados.json", "carregar_trilhas", "StudyTrack"),
     "emergencia": ("/emergencia/metadados.json", "carregar_emergencia", "EmergencyProtocol"),
     "casos_clinicos": ("/casos-clinicos/metadados.json", "carregar_casos_clinicos", "ClinicalCase"),
 }

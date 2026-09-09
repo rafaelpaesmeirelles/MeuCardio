@@ -606,7 +606,7 @@
     "pmid": "30145929",
     "url": "https://pubmed.ncbi.nlm.nih.gov/30145929/",
     "summary": "Ensaio internacional, multicêntrico, duplo-cego, controlado por placebo, com 441 pacientes com cardiomiopatia amiloide por transtirretina (hereditária ou selvagem), randomizados 2:1:2 para tafamidis 80 mg (161), tafamidis 20 mg (103) ou placebo (177), por 30 meses. Análise primária hierárquica pelo método de Finkelstein-Schoenfeld, combinando mortalidade por qualquer causa e frequência de hospitalização cardiovascular.",
-    "key_findings": "Análise hierárquica primária favoreceu tafamidis (p<0,001). Mortalidade por qualquer causa: 29,5% (78/264) com tafamidis contra 42,9% (76/177) com placebo — HR 0,70; IC95% 0,51-0,96. Taxa de hospitalização cardiovascular: razão de risco relativo 0,68 (0,48 versus 0,70 por ano; IC95% 0,56-0,81). Declínio no teste de caminhada de 6 minutos e no escore KCCQ-OS (qualidade de vida) foi menor com tafamidis em ambos (p<0,001). Incidência e tipos de eventos adversos foram semelhantes entre os grupos.",
+    "key_findings": "Análise hierárquica primária favoreceu tafamidis (p<0,001). Mortalidade por qualquer causa: 29,5% (78/264) com tafamidis contra 42,9% (76/177) com placebo — HR 0,70; IC95% 0,51-0,96. Taxa de hospitalização cardiovascular: razão de risco relativo 0,68 (0,48 versus 0,70 por ano; IC95% 0,56-0,81). Declínio no teste de caminhada de 6 minutos e no escore KCCQ-OS (qualidade de vida) foi menor com tafamidis em ambos (p<0,001). Incidência e tipos de eventos adversos foram semelhantes entre os grupos. Diferença ajustada no declínio do 6MWT: 75,68 m (IC95% 57,56–93,80); KCCQ-OS: 13,65 pontos (9,48–17,83). São diferenças entre grupos, não ganhos absolutos individuais.",
     "clinical_implications": "Primeiro ensaio randomizado a mostrar redução de mortalidade num tratamento específico para cardiomiopatia amiloide por transtirretina, abrindo a era da terapia estabilizadora de tetrâmero nessa doença antes tratada só com suporte. É a base regulatória e de diretriz para o uso de tafamidis na ATTR-CM sintomática, tanto na forma hereditária quanto na selvagem (wild-type).",
     "limitations": "Excluiu pacientes em classe funcional NYHA IV e com doença muito avançada, população em que o benefício não foi testado. Custo elevado do fármaco limita acesso fora de sistemas com cobertura específica. Seguimento de 30 meses — não responde sobre efeito a prazo muito mais longo, embora extensões abertas subsequentes tenham sustentado o achado.",
     "theme": "Cardiomiopatias",
@@ -618,7 +618,12 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Maurer MS, Schwartz JH, Gundapaneni B, et al.; ATTR-ACT Study Investigators. Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy. N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929. NCT01994889.",
+      "Pfizer. Tafamidis prescribing information; ATTR-ACT outcomes. https://labeling.pfizer.com/ShowLabeling.aspx?id=18349"
+    ],
+    "review_note": "Revisão individual ATTR-ACT/HELIOS-B e metanálise JAMA PMID 42669065; CARDIO-TTRansform verificado por EFetch PMID 42663301. Resolvidas contagens 125/159 pelo resumo primário; corrigidos rastreio AL completo, apresentações de tafamidis e interpretação da randomização com terapia basal. Estudos duplicados comparados e preservados em canônico único; ausência de afirmação regulatória brasileira."
   },
   {
     "slug": "attribute-cm-acoramidis-na-amiloidose-cardiaca-por-transtirretina",
@@ -2789,9 +2794,9 @@
     "pmid": "39466903",
     "url": "https://pubmed.ncbi.nlm.nih.gov/39466903/",
     "summary": "Ensaio randomizado em 75 centros dos Estados Unidos e Canadá, com 901 pacientes com estenose aórtica grave **assintomática** — idade média de 76 anos, 83,6% de baixo risco cirúrgico. Comparou TAVI transfemoral precoce com válvula expansível por balão (455 pacientes) contra vigilância clínica (446). Seguimento mediano de 3,8 anos.",
-    "key_findings": "Desfecho primário composto de morte, AVC ou hospitalização não programada por causa cardiovascular: 26,8% (122) com TAVI precoce contra 45,3% (202) com vigilância. Por componente: morte 8,4% contra 9,2%; AVC 4,2% contra 6,7%; e hospitalização cardiovascular não programada 20,9% contra 41,7% — é este último que carrega quase toda a diferença. **87% do braço de vigilância acabou sendo submetido a troca valvar** ao longo do seguimento.",
-    "clinical_implications": "Desloca a decisão na estenose aórtica grave assintomática de 'esperar o sintoma' para 'intervir antes dele', num paciente de baixo risco cirúrgico. Mas o número que mais orienta a conversa com o paciente é o 87%: em quase todos, a vigilância adiou a operação, não a evitou — e o adiamento veio ao custo de dobrar a hospitalização cardiovascular. A mortalidade, no entanto, não diferiu de forma expressiva no período.",
-    "limitations": "O ganho é dirigido pela hospitalização não programada, componente mais sujeito a viés em ensaio sem cego — saber-se sob vigilância pode alterar o limiar de internar. Mortalidade e AVC não mostraram diferença expressiva em 3,8 anos. População de baixo risco cirúrgico e anatomia adequada a TAVI transfemoral, o que não se estende a alto risco nem a indicação cirúrgica convencional. Revisado pelo Rafael em 30/07/2026 — o hazard ratio com intervalo de confiança do desfecho primário não estava disponível nas fontes secundárias consultadas; os percentuais e o n foram obtidos em fontes concordantes e a citação foi confirmada no PubMed.",
+    "key_findings": "Desfecho primário composto de morte, AVC ou hospitalização não programada por causa cardiovascular: 26,8% (122) com TAVI precoce contra 45,3% (202) com vigilância. Por componente: morte 8,4% contra 9,2%; AVC 4,2% contra 6,7%; e hospitalização cardiovascular não programada 20,9% contra 41,7% — é este último que carrega quase toda a diferença. **87% do braço de vigilância acabou sendo submetido a troca valvar** ao longo do seguimento. HR do composto 0,50; IC95% 0,40–0,63; P<0,001.",
+    "clinical_implications": "Redução do composto com maior diferença nas hospitalizações; não demonstra redução isolada de mortalidade. A ESC/EACTS 2025 (Tabela 4) recomenda intervenção na EA grave assintomática com FEVE <50% sem outra causa (I B). Com FEVE ≥50%, EA grave de alto gradiente, ausência de sintomas confirmada por teste de esforço normal quando viável e baixo risco do procedimento, a intervenção deve ser considerada como alternativa à vigilância ativa próxima (IIa A). A escolha de TAVI ou cirurgia depende do Heart Team, anatomia, idade, expectativa de vida e planejamento de intervenções futuras; a recomendação não significa TAVI automático em todos.",
+    "limitations": "Ensaio aberto, predominantemente de baixo risco, com anatomia adequada à TAVI transfemoral e financiamento Edwards. O componente hospitalização pode ser influenciado pela estratégia aberta. Não compara TAVI versus cirurgia nem todas as anatomias. 87% da vigilância receberam troca valvar; o contraste é de estratégias de momento da intervenção.",
     "theme": "Valvopatias",
     "tags": [
       "estenose aórtica",
@@ -2801,7 +2806,11 @@
       "EARLY TAVR"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Praz F et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. DOI 10.1093/eurheartj/ehaf194. Tabela 4, p. 36."
+    ],
+    "review_note": "EARLY TAVR e PARTNER 3 conferidos em PMID 39466903/30883058/37874020. Incorporados HR e IC ausentes no canônico; ESC/EACTS 2025 Tabela 4 conferida visualmente. Corrigida árvore que poderia direcionar FE reduzida à vigilância; explicitados I B versus IIa A, composição do desfecho e escolha individual da modalidade."
   },
   {
     "slug": "east-afnet-4-controle-precoce-do-ritmo-na-fibrilacao-atrial",
@@ -3349,8 +3358,8 @@
     "pmid": "32871100",
     "url": "https://pubmed.ncbi.nlm.nih.gov/32871100/",
     "summary": "Ensaio de fase 3, randomizado, duplo-cego e controlado por placebo, em 68 centros de 13 países, com 251 pacientes com cardiomiopatia hipertrófica obstrutiva, gradiente de via de saída do ventrículo esquerdo de 50 mmHg ou mais e classe funcional NYHA II ou III. Comparou mavacamteno — inibidor seletivo da miosina cardíaca, iniciado em 5 mg — contra placebo por 30 semanas: 123 pacientes no braço ativo e 128 no placebo.",
-    "key_findings": "Desfecho primário composto — melhora de pelo menos 1,5 mL/kg/min no pVO2 com queda de ao menos uma classe NYHA, ou melhora de 3,0 mL/kg/min sem piora de classe: 37% (45 de 123) com mavacamteno contra 17% (22 de 128) com placebo — diferença de 19,4 pontos percentuais, IC 95% 8,7–30,1; p = 0,0005. Secundários, todos favoráveis ao mavacamteno: gradiente de via de saída pós-exercício −36 mmHg (p < 0,0001); pVO2 +1,4 mL/kg/min (p = 0,0006); melhora de ao menos uma classe NYHA em 65% contra 31% (p < 0,0001); e escore KCCQ +9,1 pontos. Eventos adversos semelhantes ao placebo, em geral leves; houve uma morte súbita, no grupo placebo.",
-    "clinical_implications": "É o ensaio que introduziu uma classe farmacológica nova na cardiomiopatia hipertrófica obstrutiva — a inibição direta da miosina cardíaca, atacando a hipercontratilidade que é o mecanismo da doença, em vez de apenas reduzir frequência e pós-carga como betabloqueador e verapamil. Sustenta a indicação de mavacamteno no paciente sintomático apesar do tratamento convencional, antes de partir para terapia de redução septal invasiva.",
+    "key_findings": "Desfecho primário composto — melhora de pelo menos 1,5 mL/kg/min no pVO2 com queda de ao menos uma classe NYHA, ou melhora de 3,0 mL/kg/min sem piora de classe: 37% (45 de 123) com mavacamteno contra 17% (22 de 128) com placebo — diferença de 19,4 pontos percentuais, IC 95% 8,7–30,1; p = 0,0005. Secundários, todos favoráveis ao mavacamteno: gradiente de via de saída pós-exercício −36 mmHg (p < 0,0001); pVO2 +1,4 mL/kg/min (p = 0,0006); melhora de ao menos uma classe NYHA em 65% contra 31% (p < 0,0001); e escore KCCQ +9,1 pontos. Eventos adversos semelhantes ao placebo, em geral leves; houve uma morte súbita, no grupo placebo. HCMSQ-SoB: diferença −1,8 (IC95% −2,4 a −1,2).",
+    "clinical_implications": "Mavacamten melhorou capacidade física, obstrução, sintomas e estado de saúde em 30 semanas. Não comparou diretamente com betabloqueador, verapamil ou redução septal. A escolha da sequência terapêutica requer diretriz e decisão individual.",
     "limitations": "Seguimento de 30 semanas: não responde sobre desfecho duro, remodelamento a longo prazo nem sobre a permanência do efeito após suspensão. Excluiu pacientes com fração de ejeção reduzida, e o mavacamteno reduz a fração de ejeção por mecanismo — o que exige monitorização ecocardiográfica seriada na prática. Não comparou o fármaco com miectomia ou ablação septal alcoólica.",
     "theme": "Cardiomiopatias",
     "tags": [
@@ -3361,7 +3370,11 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Olivotto I, Oreziak A, Barriales-Villa R, et al. Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): a randomised, double-blind, placebo-controlled, phase 3 trial. Lancet. 2020;396(10253):759-769. DOI 10.1016/S0140-6736(20)31792-X. PMID 32871100. NCT03470545. Financiamento: MyoKardia."
+    ],
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema."
   },
   {
     "slug": "faella-hijazi-2000-oclusor-amplatzer-canal-arterial-registro-internacional",
@@ -4266,8 +4279,8 @@
     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2409134",
     "summary": "Ensaio randomizado duplo-cego (cegamento quádruplo no registro NCT04153149) com 655 pacientes com amiloidose por transtirretina com cardiomiopatia, alocados 1:1 para vutrisirana 25 mg por via subcutânea a cada 12 semanas (326 pacientes) ou placebo (329), por até 36 meses. A vutrisirana é agente de interferência de RNA que inibe a produção hepática de transtirretina. Os desfechos de eficácia foram avaliados de forma hierárquica na população geral e na população em monoterapia, definida como os pacientes que não usavam tafamidis no início do estudo.",
     "key_findings": "Desfecho primário composto de morte por qualquer causa e eventos cardiovasculares recorrentes: razão de risco de 0,72 na população geral (IC95% 0,56-0,93; p = 0,01) e de 0,67 na população em monoterapia (IC95% 0,49-0,93; p = 0,02). Tiveram ao menos um evento do desfecho primário 125 pacientes do grupo vutrisirana e 159 do grupo placebo. Morte por qualquer causa em até 42 meses: razão de risco de 0,65 na população geral (IC95% 0,46-0,90; p = 0,01). Na população geral, a queda na distância do teste de caminhada de 6 minutos foi menor com vutrisirana (diferença de médias por mínimos quadrados de 26,5 m; IC95% 13,4-39,6; p < 0,001), assim como a queda no escore KCCQ-OS (diferença de 5,8 pontos; IC95% 2,4-9,2; p < 0,001). Eventos adversos ocorreram em 99% do grupo vutrisirana e 98% do placebo; eventos adversos graves em 62% e 67%, respectivamente.",
-    "clinical_implications": "Estabelece o silenciamento gênico da transtirretina como estratégia com benefício de desfecho duro na amiloidose cardíaca, ao lado da estabilização com tafamidis demonstrada no ATTR-ACT. A população geral incluiu pacientes que já usavam tafamidis, e a população em monoterapia mostrou efeito de magnitude semelhante; porém, o ensaio não foi desenhado para demonstrar benefício incremental da combinação sobre tafamidis isolado.",
-    "limitations": "A distinção entre população geral e população em monoterapia é de subgrupos definidos pelo uso prévio de tafamidis — o ensaio não randomizou a associação, então não compara diretamente a combinação contra tafamidis isolado. O desfecho de mortalidade foi analisado em janela de 42 meses, mais longa que os 36 meses de tratamento previstos.",
+    "clinical_implications": "Demonstra benefício de vutrisiran no composto de morte/eventos e preservação funcional na ATTR-CM. HELIOS-B randomizou vutrisiran versus placebo, inclusive entre usuários prévios de tafamidis, mas não randomizou o início de tafamidis nem um esquema fatorial de quatro estratégias. O efeito no subgrupo com estabilizador pode informar tratamento adicional, com precisão limitada; não prova superioridade universal da combinação nem permite comparar causalmente usuários e não usuários de tafamidis.",
+    "limitations": "Não é comparação direta com tafamidis nem fatorial de início de estabilizador e silenciador. Subgrupos de terapia basal têm precisão limitada. Mortalidade até 42 meses não é a mesma janela de até 36 meses do tratamento previsto.",
     "theme": "Cardiomiopatias",
     "tags": [
       "helios-b",
@@ -4279,7 +4292,10 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão científica concluída em 01/09/2026 contra o registro bibliográfico e o abstract/XML PubMed (PMID 39213194; DOI 10.1056/NEJMoa2409134). Confirmados título, ano, desenho duplo-cego randomizado, 655 participantes, intervenção, desfecho composto, estimativas e limites; restringida a interpretação da associação com tafamidis, que não foi comparação randomizada."
+    "review_note": "Revisão individual ATTR-ACT/HELIOS-B e metanálise JAMA PMID 42669065; CARDIO-TTRansform verificado por EFetch PMID 42663301. Resolvidas contagens 125/159 pelo resumo primário; corrigidos rastreio AL completo, apresentações de tafamidis e interpretação da randomização com terapia basal. Estudos duplicados comparados e preservados em canônico único; ausência de afirmação regulatória brasileira.",
+    "source_refs": [
+      "Fontana M, Berk JL, Gillmore JD, et al. Vutrisiran in Patients with Transthyretin Amyloidosis with Cardiomyopathy. N Engl J Med. 2025;392(1):33-44. DOI: 10.1056/NEJMoa2409134. PMID: 39213194. NCT04153149."
+    ]
   },
   {
     "slug": "hokusai-vte-cancer-edoxabana-versus-dalteparina",
@@ -4493,8 +4509,8 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/23992557/",
     "summary": "Ensaio multicêntrico, randomizado e duplo-cego com 240 pacientes no primeiro episódio de pericardite aguda, 120 em cada braço. Comparou colchicina somada ao anti-inflamatório padrão — aspirina ou ibuprofeno — contra o anti-inflamatório isolado. A dose foi ajustada pelo peso e sem ataque: 0,5 mg duas vezes ao dia acima de 70 kg e 0,5 mg uma vez ao dia até 70 kg, por 3 meses.",
     "key_findings": "Desfecho primário de pericardite incessante ou recorrente: 16,7% (20 de 120) com colchicina contra 37,5% (45 de 120) com placebo — redução de risco relativo de 0,56, IC 95% 0,30–0,72; p < 0,001, com NNT de 4. Secundários, todos favoráveis: persistência de sintomas em 72 horas 19,2% contra 40,0% (p = 0,001); recorrências por paciente 0,21 contra 0,52 (p = 0,001); hospitalização 5,0% contra 14,2% (p = 0,02); e remissão em 1 semana 85,0% contra 58,3% (p < 0,001). Efeitos adversos e taxa de suspensão do fármaco semelhantes entre os grupos, sem nenhum evento adverso grave.",
-    "clinical_implications": "É o ensaio pivotal que levou a colchicina de adjuvante opcional a terapia de primeira linha na pericardite aguda. A diretriz ESC 2025 de miocardite e pericardite a recomenda como Classe I, nível A, associada ao AAS/AINE ou ao corticoide, para reduzir recorrências. Um NNT de 4 é excepcional em cardiologia, e explica por que a recomendação subiu de classe.",
-    "limitations": "Primeiro episódio apenas — recorrência estabelecida foi estudada em ensaios próprios (CORP e CORP-2). Não avaliou pericardite de causa específica, como neoplásica, tuberculosa ou pós-cardiotomia, em que a história natural e o tratamento diferem. A dose sem ataque e ajustada ao peso é parte do resultado: esquemas com ataque tiveram mais intolerância gastrointestinal em estudos anteriores.",
+    "clinical_implications": "O ensaio sustenta colchicina adjunta ao tratamento anti-inflamatório no primeiro episódio. O NNT 4 é o valor publicado pelo artigo, não uma estimativa recalculada a partir dos percentuais arredondados. ESC 2025 recomenda colchicina adjunta como I A; a ESC 2015 já continha recomendação I A, portanto o estudo não justifica dizer que houve subida inédita de classe em 2025.",
+    "limitations": "Ensaio do primeiro episódio, distinto de CORP/CORP-2. Incluiu pericardite idiopática/viral, após lesão cardíaca e associada a doença do tecido conjuntivo; não extrapolar a etiologias bacterianas/tuberculosas ou neoplásicas excluídas. Avaliar contraindicações, função renal/hepática e interações. NNT 4 é o valor publicado. Não demonstra equivalência de dose de ataque versus ausência de ataque, pois não randomizou essas estratégias.",
     "theme": "Pericárdio",
     "tags": [
       "pericardite aguda",
@@ -4504,7 +4520,11 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "ICAP, texto primário. https://www.acc.org/~/media/Non-Clinical/Files-PDFs-Excel-MS-Word-etc/Education%20and%20Meeting/Products%20and%20Resources/Journal%20Club/2014/6/nejmoa1208536.pdf"
+    ],
+    "review_note": "Conferidos ICAP, CORP, CORP-2, AIRTRIP/RHAPSODY e ESC 2025 integral. ICAP incluiu lesão cardíaca/tecido conjuntivo; corrigida exclusão canônica e narrativa de subida de classe. Ajustado peso ≤70/>70 no CORP-2 e retiradas estimativas secundárias não verificadas. Confirmado IIa C do anti-IL-1 com RMC, corticoide e mínimo de exercício ≥1 mês até remissão. Fluxo distingue etapa de corticoide, resgate e fenótipos; imunossupressão/BB não indiscriminados em instabilidade. Não atribuído registro Anvisa não verificado."
   },
   {
     "slug": "idea-caso-cruzado-britanico-de-procedimento-dentario-e-endocardite",
@@ -6973,10 +6993,10 @@
     "year": 2019,
     "doi": "10.1056/NEJMoa1808312",
     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1808312",
-    "summary": "Ensaio randomizado, aberto, multicêntrico, com 400 pacientes adultos com endocardite infecciosa em valva esquerda estável, causada por Streptococcus spp., Enterococcus faecalis, Staphylococcus aureus ou estafilococos coagulase-negativos. Após pelo menos 10 dias de antibiótico intravenoso e estabilização clínica, pacientes foram randomizados para continuar antibiótico intravenoso ou trocar para regime antibiótico oral (amoxicilina, linezolida, dicloxacilina ou moxifloxacino, conforme sensibilidade do agente), completando o mesmo tempo total de tratamento.",
-    "key_findings": "Desfecho composto (morte por qualquer causa, recidiva de bacteremia, evento embólico ou reinternação não planejada por endocardite) em 6 meses ocorreu em 9% do grupo oral versus 12,1% do grupo intravenoso (razão de chances 0,72; IC95% 0,37-1,36) — troca para via oral não foi inferior à manutenção do antibiótico intravenoso.",
+    "summary": "400 adultos em condição estável com endocardite do lado esquerdo causada por estreptococo, Enterococcus faecalis, Staphylococcus aureus ou estafilococo coagulase-negativo, já em antibiótico IV. 199 continuar IV vs 201 trocar para oral. IV pelo menos 10 dias em todos; se cirurgia valvar na internação, pelo menos 7 dias de IV após a operação. 152/400 (38%) já operados antes da randomização. Prótese prévia em 107 (27%). Troca para dois antibióticos orais de classes diferentes, guiados pela suscetibilidade, após estabilidade. Alta para tratamento ambulatorial se viável.",
+    "key_findings": "Desfecho primário: Composto de morte por qualquer causa, cirurgia cardíaca não planejada, evento embólico ou recaída de bacteremia pelo patógeno índice, da randomização até 6 meses após o fim do antibiótico. Primário: 24/199 (12,1%) no IV versus 18/201 (9,0%) no oral; diferença 3,1 pontos percentuais; IC95% −3,4 a 9,6; P=0,40. Não inferioridade (margem 10 pp) cumprida. Depois da randomização, o restante do antibiótico: mediana 19 dias (IIQ 14–25) no IV versus 17 dias (IIQ 14–25) no oral (P=0,48). Estabilidade do protocolo: temperatura abaixo de 38,0 °C por mais de 2 dias; PCR menor que 25% do pico ou menor que 20 mg/L; leucócitos menor que 15 × 10⁹/L. Não é PARTNER 3 (PMID 30883058).",
     "clinical_implications": "Sustenta a troca para antibiótico oral em pacientes selecionados e clinicamente estáveis com endocardite infecciosa em valva esquerda, após fase intravenosa inicial e resposta clínica adequada, reduzindo tempo de internação e riscos associados a acesso venoso prolongado.",
-    "limitations": "Excluiu pacientes com endocardite em valva protética de implante recente, infecção por patógenos fora do protocolo do estudo, ou instabilidade clínica persistente — resultado não se aplica a esses grupos; desenho aberto (sem cegamento).",
+    "limitations": "Ensaio aberto em pacientes estáveis e selecionados, com dois antibióticos suscetíveis, absorção e adesão adequadas e acompanhamento próximo. Incluiu próteses e pacientes operados antes da randomização; não extrapolar a endocardite instável ou agentes fora do protocolo. O teste é de via, não de curso abreviado.",
     "theme": "Endocardite",
     "tags": [
       "poet",
@@ -6986,8 +7006,9 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false,
-    "pmid": "30152252"
+    "published": true,
+    "pmid": "30152252",
+    "review_note": "POET PMID 30152252/protocolo NCT01375257, extensão 35139280 e POET II 42663314 confrontados com fontes primárias. Corrigido composto canônico: cirurgia cardíaca não planejada, não reinternação. Esclarecidas próteses, não inferioridade e recaída fora do composto POET II. Ajustados limites da troca, repetição de eco/culturas e cirurgia após AVC; coletar culturas não deve atrasar tratamento de instável."
   },
   {
     "slug": "poetry-implementacao-clinica-do-protocolo-poet",
@@ -7693,9 +7714,9 @@
     "doi": "10.1056/NEJMoa2401479",
     "pmid": "38587241",
     "summary": "Ensaio randomizado ABERTO, de grupos paralelos, em 45 centros da Suécia, Estônia e Nova Zelândia, com 5.020 pacientes que tiveram infarto agudo do miocárdio, foram submetidos a coronariografia e mantinham FRAÇÃO DE EJEÇÃO IGUAL OU SUPERIOR A 50%. Comparou betabloqueador de longo prazo — metoprolol ou bisoprolol — contra nenhum betabloqueador. Mediana de seguimento de 3,5 anos.",
-    "key_findings": "O desfecho primário, composto de morte por qualquer causa ou novo infarto, ocorreu em 199 de 2.508 pacientes (7,9%) com betabloqueador contra 208 de 2.512 (8,3%) sem — HR 0,96 (IC 95% 0,79 a 1,16); p=0,64. Todos os secundários foram neutros: morte total 3,9% contra 4,1%; morte cardiovascular 1,5% contra 1,3%; infarto 4,5% contra 4,7%; internação por fibrilação atrial 1,1% contra 1,4%; internação por insuficiência cardíaca 0,8% contra 0,9%. A segurança também não diferiu: bradicardia, bloqueio atrioventricular, hipotensão ou síncope em 3,4% contra 3,2%.",
-    "limitations": "Desenho ABERTO, e a taxa de eventos ficou muito abaixo da prevista — com 7,9% em 3,5 anos, o intervalo de confiança do HR vai até 1,16, ou seja, NÃO exclui um benefício relativo de até cerca de 21%. É ausência de benefício demonstrado, não equivalência provada. Além disso, 95% da amostra é sueca, o que limita a extrapolação.",
-    "clinical_implications": "Depois de infarto com coronariografia realizada e fração de ejeção preservada, o betabloqueador de longo prazo não reduziu morte nem reinfarto — a prescrição automática pós-infarto deixa de se sustentar nessa população específica.",
+    "key_findings": "O desfecho primário, composto de morte por qualquer causa ou novo infarto, ocorreu em 199 de 2.508 pacientes (7,9%) com betabloqueador contra 208 de 2.512 (8,3%) sem — HR 0,96 (IC 95% 0,79 a 1,16); p=0,64. Todos os secundários foram neutros: morte total 3,9% contra 4,1%; morte cardiovascular 1,5% contra 1,3%; infarto 4,5% contra 4,7%; internação por fibrilação atrial 1,1% contra 1,4%; internação por insuficiência cardíaca 0,8% contra 0,9%. Nos eventos de segurança relatados, as frequências foram próximas: bradicardia, bloqueio atrioventricular, hipotensão, síncope ou implante de marca-passo em 3,4% contra 3,2%.",
+    "limitations": "Desenho ABERTO, e a taxa de eventos ficou muito abaixo da prevista — com 7,9% em 3,5 anos, o intervalo de confiança do HR é 0,79–1,16: não exclui redução relativa de 21% nem aumento de 16%. É ausência de benefício demonstrado, não equivalência provada. Além disso, 95% da amostra é sueca, o que limita a extrapolação.",
+    "clinical_implications": "Depois de infarto com coronariografia realizada e fração de ejeção preservada, o betabloqueador de longo prazo não reduziu morte nem reinfarto — a prescrição automática pós-infarto deixa de se sustentar nessa população específica. Angina, FA ou hipertensão só justificam manutenção se houver indicação clínica específica para betabloqueador; o diagnóstico isolado não torna a classe obrigatória. IC com FE preservada tampouco é indicação universal. Esses estudos não devem ser usados para retirar tratamento de disfunção sistólica relevante. A decisão de não iniciar após IAM recente não equivale à retirada tardia. ABYSS não demonstrou não inferioridade da interrupção para seu composto amplo; SMART-DECISION demonstrou não inferioridade em pacientes estáveis, FEVE ≥40%, sem IC, tratados por pelo menos um ano, para morte, novo IAM ou internação por IC. Populações, desfechos e margens diferem. Reavaliar individualmente; não suspender abruptamente. A ESC 2026 de IC recomenda betabloqueador no estágio B com FEVE <50% para reduzir internação por IC ou morte (Classe I, nível B1). Essa recomendação de diretriz deve ser distinguida dos resultados de cada ensaio e da IPD restrita a FEVE ≥50%. Disfunção ventricular assintomática após IAM pode configurar estágio B; ausência de sintomas não exclui essa indicação. Avaliar contraindicações e tolerância.",
     "theme": "Doença coronariana",
     "tags": [
       "betabloqueador",
@@ -7704,8 +7725,14 @@
       "REDUCE-AMI"
     ],
     "review_status": "revisado",
-    "published": false,
-    "url": "https://doi.org/10.1056/NEJMoa2401479"
+    "published": true,
+    "url": "https://doi.org/10.1056/NEJMoa2401479",
+    "source_refs": [
+      "Silvain J, et al. ABYSS. N Engl J Med. 2024. DOI 10.1056/NEJMoa2404204.",
+      "Choi KH, et al. SMART-DECISION. N Engl J Med. 2026;394:1302-1312. DOI 10.1056/NEJMoa2601005.",
+      "Køber L, Adamo M, et al. 2026 ESC Guidelines for the management of heart failure. DOI 10.1093/eurheartj/ehag100. PMID 42661420. Tabela: estágio B e disfunção ventricular (slides oficiais, p. 32)."
+    ],
+    "review_note": "Comparados REDUCE-AMI, REBOOT, BETAMI-DANBLOCK e IPD por população, denominador e composto; corrigidas inferências de equivalência, indicação e descontinuação quando presentes."
   },
   {
     "slug": "regain-anestesia-espinhal-vs-geral-em-fratura-de-quadril",
@@ -8599,7 +8626,7 @@
     "pmid": "38739079",
     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2401424",
     "summary": "Ensaio de fase 3, duplo-cego, 282 pacientes adultos com CMH obstrutiva sintomática, randomizados para aficamteno (dose inicial 5 mg, máxima 20 mg, com ajuste guiado por ecocardiograma) ou placebo por 24 semanas. Idade média 59,1 anos, 59,2% homens, gradiente de via de saída de VE em repouso basal médio de 55,1 mmHg, FEVE basal média de 74,8%. Desfecho primário: variação do pico de consumo de oxigênio (pVO2) por teste cardiopulmonar de esforço, do início ao fim da semana 24. Dez desfechos secundários pré-especificados, testados hierarquicamente (KCCQ, classe funcional NYHA, gradiente pós-Valsalva, elegibilidade para redução septal, carga de trabalho total).",
-    "key_findings": "Variação de pVO2 em 24 semanas: +1,8 mL/kg/min com aficamteno contra 0,0 mL/kg/min com placebo — diferença de médias ajustadas de 1,7 mL/kg/min (IC95% 1,0-2,4; p<0,001). Melhora de pelo menos 1 classe NYHA em 58,5% (aficamteno) contra 24,3% (placebo). Redução do gradiente de VSVE pós-Valsalva 50 mmHg maior com aficamteno; gradiente pós-Valsalva <30 mmHg alcançado por 49,3% (aficamteno) contra 3,6% (placebo). Todos os 10 desfechos secundários pré-especificados foram significativamente melhores com aficamteno. Incidência de eventos adversos semelhante entre os grupos.",
+    "key_findings": "Variação de pVO2 em 24 semanas: +1,8 mL/kg/min com aficamteno contra 0,0 mL/kg/min com placebo — diferença de médias ajustadas de 1,7 mL/kg/min (IC95% 1,0-2,4; p<0,001). Melhora de pelo menos 1 classe NYHA em 58,5% (aficamteno) contra 24,3% (placebo). Redução do gradiente de VSVE pós-Valsalva 50 mmHg maior com aficamteno; gradiente pós-Valsalva <30 mmHg alcançado por 49,3% (aficamteno) contra 3,6% (placebo). Todos os 10 desfechos secundários pré-especificados foram significativamente melhores com aficamteno. Incidência de eventos adversos semelhante entre os grupos. Análise de respondedores JACC (PMID 39352339): resposta hemodinâmica completa 68% vs 7%; queda ≥50% NT-proBNP 84% vs 8%; 28/32 vs 15/29 deixaram de ser elegíveis a redução septal em 24 semanas. Não equivale a cirurgia evitada permanentemente.",
     "clinical_implications": "Segundo inibidor de miosina cardíaca (após mavacamten/EXPLORER-HCM, já coberto nesta biblioteca) com ensaio de fase 3 positivo em CMH obstrutiva sintomática — resultado consistente em desfecho funcional objetivo (pVO2) e em todos os desfechos secundários, incluindo redução de elegibilidade para redução septal invasiva. Amplia a classe terapêutica de inibidores de miosina como alternativa aos betabloqueadores/verapamil/disopiramida tradicionais.",
     "limitations": "Seguimento de 24 semanas — não avalia segurança/eficácia de longo prazo. FEVE basal alta (74,8%) reflete a fisiopatologia hipercontrátil da doença, mas segurança de queda de FEVE com uso prolongado exige monitorização ecocardiográfica seriada, como já ocorre com mavacamten.",
     "theme": "Cardiomiopatias",
@@ -8612,7 +8639,12 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2024;390(20):1849-1861. DOI: 10.1056/NEJMoa2401424. PMID: 38739079. NCT05186818.",
+      "Maron MS, et al. Impact of Aficamten on Disease and Symptom Burden in Obstructive Hypertrophic Cardiomyopathy: Results From SEQUOIA-HCM. J Am Coll Cardiol. 2024;84(19):1821-1831. DOI: 10.1016/j.jacc.2024.09.003. PMID: 39352339."
+    ],
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema."
   },
   {
     "slug": "seraphin-macitentana-hipertensao-arterial-pulmonar",
@@ -10103,17 +10135,17 @@
   },
   {
     "slug": "valor-hcm-mavacanteno-em-candidatos-a-terapia-de-reducao-septal",
-    "title": "VALOR-HCM — Mavacanteno em pacientes com cardiomiopatia hipertrófica obstrutiva já encaminhados à terapia de redução septal",
+    "title": "VALOR-HCM — Mavacamten em pacientes com cardiomiopatia hipertrófica obstrutiva já encaminhados à terapia de redução septal",
     "study_type": "ensaio_clinico",
     "authors": "Desai MY, Owens A, Geske JB, Wolski K, Naidu SS, et al.",
     "journal": "Journal of the American College of Cardiology",
     "year": 2022,
     "doi": "10.1016/j.jacc.2022.04.048",
     "pmid": "35798455",
-    "summary": "Ensaio randomizado, DUPLO-CEGO e controlado por placebo, com 112 pacientes portadores de cardiomiopatia hipertrófica obstrutiva, gradiente de via de saída de 50 mmHg ou mais em repouso ou à provocação, que já PREENCHIAM critério de diretriz para terapia de redução septal — miectomia ou alcoolização. Mavacanteno de 5 mg/dia titulado até 15 mg conforme gradiente e fração de ejeção. Idade média de 60 anos, 93% em classe funcional III ou IV, gradiente pós-exercício médio de 84 mmHg. Desfecho primário em 16 semanas.",
-    "key_findings": "O desfecho primário — proporção que foi à redução septal OU permaneceu elegível por diretriz em 16 semanas — ocorreu em 43 de 56 no placebo (76,8%) contra 10 de 56 no mavacanteno (17,9%): diferença de 58,9 pontos percentuais (IC 95% 44,0 a 73,9); p<0,001. Todos os secundários hierárquicos foram positivos com p<0,001: redução de 37,2 mmHg no gradiente pós-exercício, melhora de pelo menos uma classe funcional em 41,1% a mais dos pacientes, e queda de NT-proBNP e de troponina I.",
+    "summary": "Ensaio randomizado, DUPLO-CEGO e controlado por placebo, com 112 pacientes portadores de cardiomiopatia hipertrófica obstrutiva, gradiente de via de saída de 50 mmHg ou mais em repouso ou à provocação, que já PREENCHIAM critério de diretriz para terapia de redução septal — miectomia ou alcoolização. Mavacamten de 5 mg/dia titulado até 15 mg conforme gradiente e fração de ejeção. Idade média de 60 anos, 93% em classe funcional III ou IV, gradiente pós-exercício médio de 84 mmHg. Desfecho primário em 16 semanas.",
+    "key_findings": "O desfecho primário — proporção que foi à redução septal OU permaneceu elegível por diretriz em 16 semanas — ocorreu em 43 de 56 no placebo (76,8%) contra 10 de 56 no mavacamten (17,9%): diferença de 58,9 pontos percentuais (IC 95% 44,0 a 73,9); p<0,001. Todos os secundários hierárquicos foram positivos com p<0,001: redução de 37,2 mmHg no gradiente pós-exercício, melhora de pelo menos uma classe funcional em 41,1% a mais dos pacientes, e queda de NT-proBNP e de troponina I. Diferença no desfecho relatado pelo paciente: +9,4 pontos. As diferenças de gradiente e classe NYHA são comparações entre grupos.",
     "limitations": "Dezesseis semanas de seguimento, e o desfecho é ELEGIBILIDADE A PROCEDIMENTO, não evento clínico. Os próprios autores registram que a liberdade de longo prazo da redução septal permanece por determinar. Deixar de preencher o critério de diretriz num corte de quatro meses não é o mesmo que evitar a cirurgia.",
-    "clinical_implications": "No paciente com cardiomiopatia hipertrófica obstrutiva sintomática refratária que já foi encaminhado à redução septal, o mavacanteno retira a maioria da elegibilidade em 16 semanas — abre uma etapa farmacológica antes do procedimento, sem ainda demonstrar que o substitui.",
+    "clinical_implications": "No paciente com cardiomiopatia hipertrófica obstrutiva sintomática refratária que já foi encaminhado à redução septal, o mavacamten retira a maioria da elegibilidade em 16 semanas — abre uma etapa farmacológica antes do procedimento, sem ainda demonstrar que o substitui.",
     "theme": "Cardiomiopatias",
     "tags": [
       "mavacanteno",
@@ -10122,8 +10154,12 @@
       "miectomia"
     ],
     "review_status": "revisado",
-    "published": false,
-    "url": "https://doi.org/10.1016/j.jacc.2022.04.048"
+    "published": true,
+    "url": "https://doi.org/10.1016/j.jacc.2022.04.048",
+    "source_refs": [
+      "Desai MY, et al. Myosin Inhibition in Patients With Obstructive Hypertrophic Cardiomyopathy Referred for Septal Reduction Therapy. J Am Coll Cardiol. 2022;80:95-108. PMID 35798455. NCT04349072."
+    ],
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema."
   },
   {
     "slug": "valvuloplastia-aortica-fetal-desfechos-pos-natais-dos-primeiros-100-pacientes",
@@ -10625,9 +10661,9 @@
     "doi": "10.1056/NEJMoa2403347",
     "pmid": "38785209",
     "url": "https://pubmed.ncbi.nlm.nih.gov/38785209/",
-    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, com 3.533 participantes com diabetes tipo 2 e doença renal crônica (TFGe 50-75 mL/min/1,73m² com RAC 300-5.000 mg/g, ou TFGe 25-<50 com RAC 100-5.000 mg/g), randomizados para semaglutida 1mg subcutânea semanal ou placebo sobre a terapia padrão. É o primeiro ensaio de um agonista de GLP-1 com desfecho renal composto como desfecho primário (não secundário/exploratório, como em LEADER, SUSTAIN-6 e REWIND). Seguimento mediano de 3,4 anos.",
-    "key_findings": "Desfecho primário (declínio persistente ≥50% da TFGe, falência renal, ou morte renal ou cardiovascular): 331 eventos com semaglutida vs. 410 com placebo — HR 0,76 (IC95% 0,66-0,88; p=0,0003), redução de risco relativo de 24%. Declínio anual da TFGe 1,16 mL/min/1,73m² menos acentuado com semaglutida (p<0,001). Morte cardiovascular: HR 0,71 (IC95% 0,56-0,89). Análise de subgrupo pré-especificada (Mann JFE et al., Nat Med. 2024, PMID 38914124) mostrou que só 15,6% da coorte usava iSGLT2 no basal; nesse subgrupo pequeno (n=550) o HR foi 1,07 (IC95% 0,69-1,67), sem heterogeneidade estatisticamente confirmada (p de interação 0,109) — poder insuficiente para concluir ausência de efeito aditivo.",
-    "clinical_implications": "Estabelece que a semaglutida tem efeito nefroprotetor primário e independente no diabetes tipo 2 com DRC, ocupando espaço equivalente ao que DAPA-CKD e EMPA-KIDNEY estabeleceram para iSGLT2. As faixas de entrada (TFGe 25-75 com albuminúria elevada) se sobrepõem às desses ensaios de iSGLT2, e a maioria das diretrizes já recomenda associar as duas classes em quem tem indicação para ambas — mas não há ensaio dedicado a provar efeito aditivo em desfecho renal duro.",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, com 3.533 participantes com diabetes tipo 2 e doença renal crônica (TFGe 50-75 mL/min/1,73m² com RAC >300 e <5.000 mg/g, ou TFGe 25-<50 com RAC >100 e <5.000 mg/g), randomizados para semaglutida 1mg subcutânea semanal ou placebo sobre a terapia padrão. É o primeiro ensaio de um agonista de GLP-1 com desfecho renal composto como desfecho primário (não secundário/exploratório, como em LEADER, SUSTAIN-6 e REWIND). Seguimento mediano de 3,4 anos.",
+    "key_findings": "Desfecho primário (declínio persistente ≥50% da TFGe, falência renal, ou morte renal ou cardiovascular): 331 eventos com semaglutida vs. 410 com placebo — HR 0,76 (IC95% 0,66-0,88; p=0,0003), redução de risco relativo de 24%. Declínio anual da TFGe 1,16 mL/min/1,73m² menos acentuado com semaglutida (p<0,001). Morte cardiovascular: HR 0,71 (IC95% 0,56-0,89). Análise de subgrupo pré-especificada (Mann JFE et al., Nat Med. 2024, PMID 38914124) mostrou que só 15,6% da coorte usava iSGLT2 no basal; nesse subgrupo pequeno (n=550) o HR foi 1,07 (IC95% 0,69-1,67), sem heterogeneidade estatisticamente confirmada (p de interação 0,109) — poder insuficiente para concluir ausência de efeito aditivo. MACE: HR 0,82 (IC95% 0,68–0,98); mortalidade total: HR 0,80 (0,67–0,95); eventos adversos graves 49,6% vs 53,8%. Subanálise de IC (PMID 39217553): IC ou morte CV HR 0,73 (0,62–0,87).",
+    "clinical_implications": "Evidência de semaglutida SC 1 mg/semana no DM2 com DRC do recorte estudado. Apenas 15,6% usavam iSGLT2 no basal: não demonstrou equivalência a iSGLT2 nem efeito aditivo universal. ESC DRC 2026 recomenda semaglutida no recorte TFGe/RAC específico, independentemente de glicemia. Não extrapolar para DRC sem DM2 nem para semaglutida oral.",
     "limitations": "O subgrupo com uso basal de iSGLT2 (n=550, 79 eventos) teve poder estatístico insuficiente para confirmar ou refutar heterogeneidade de efeito — o HR próximo de 1 nesse subgrupo não deve ser lido como 'a semaglutida perde efeito com iSGLT2 associado', apenas como ausência de confirmação estatística de sinergia.",
     "theme": "Diabetes e cardiologia",
     "tags": [
@@ -10638,7 +10674,12 @@
       "desfecho renal"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209. NCT03819153.",
+      "Pratley RE, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Heart Failure Outcomes in Diabetes and Chronic Kidney Disease in the FLOW Trial. J Am Coll Cardiol. 2024;84(17):1615-1628. DOI: 10.1016/j.jacc.2024.08.004. PMID: 39217553."
+    ],
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema."
   },
   {
     "slug": "devote-degludeca-versus-glargina-seguranca-cardiovascular",
@@ -14612,10 +14653,10 @@
     "doi": "10.1056/NEJMoa2312572",
     "pmid": "38587239",
     "url": "https://pubmed.ncbi.nlm.nih.gov/38587239/",
-    "summary": "Ensaio randomizado, internacional e multicêntrico, com 355 pacientes com infarto agudo do miocárdio com supra de ST complicado por choque cardiogênico, comparando bomba de fluxo microaxial (Impella CP) associada a cuidado padrão versus cuidado padrão isolado.",
-    "key_findings": "Mortalidade por qualquer causa em 180 dias foi menor no grupo com bomba microaxial (45,8% vs. 58,5%; HR 0,74; IC95% 0,55-0,99; p=0,04). Em contrapartida, o desfecho composto de segurança (sangramento grave, isquemia de membro, hemólise, falha do dispositivo ou agravamento de insuficiência aórtica) foi quase quatro vezes mais frequente com o dispositivo (24,0% vs. 6,2%), e a necessidade de terapia renal substitutiva quase dobrou (41,9% vs. 26,7%).",
+    "summary": "Ensaio randomizado aberto internacional: 360 randomizados, 355 analisados (179 bomba e 176 cuidado padrão). Idade mediana 67 anos; 79,2% homens. IAMCSST (ou equivalente) com choque: PAS <100 mmHg ou vasopressor, lactato arterial ≥2,5 mmol/L, FEVE <45%. Excluídos: PCR extra-hospitalar ainda comatoso na chegada ao laboratório; falência manifesta de VD.",
+    "key_findings": "Morte em 180 dias: 82/179 (45,8%) versus 103/176 (58,5%); HR 0,74 (IC95% 0,55–0,99), P=0,04. No DanGer, o composto de segurança ocorreu em 43/179 (24,0%) versus 11/176 (6,2%), RR reportado 4,74 (IC95% 2,36–9,55); terapia renal substitutiva em 75/179 (41,9%) versus 47/176 (26,7%), RR reportado 1,98 (1,27–3,09). Essas estimativas publicadas não devem ser substituídas pela divisão simples das proporções.",
     "clinical_implications": "Primeiro ensaio randomizado a demonstrar redução de mortalidade com suporte circulatório mecânico ativo no choque cardiogênico por IAMCST — mas o ganho de sobrevida vem acompanhado de mais complicações vasculares, hemolíticas e renais, o que exige seleção criteriosa do paciente e monitorização atenta do acesso vascular, não adoção indiscriminada do dispositivo.",
-    "limitations": "Estudo aberto, sem cegamento para o dispositivo, por natureza da intervenção; o desfecho composto de segurança é amplo e reúne eventos de gravidade bastante variável; população majoritariamente masculina (79%) com mediana de idade de 67 anos, sem garantia de generalização para choque cardiogênico de etiologia não isquêmica.",
+    "limitations": "Estudo aberto, sem cegamento para o dispositivo, por natureza da intervenção; o desfecho composto de segurança é amplo e reúne eventos de gravidade bastante variável; população majoritariamente masculina (79%) com mediana de idade de 67 anos, sem garantia de generalização para choque cardiogênico de etiologia não isquêmica. Excluídos coma persistente após PCR extra-hospitalar e falência manifesta de VD. Financiamento: Danish Heart Foundation e Abiomed.",
     "theme": "Terapia intensiva",
     "tags": [
       "choque cardiogênico",
@@ -14625,7 +14666,8 @@
       "dispositivo"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "review_note": "DanGer/IABP-SHOCK II/seguimento PMID 38587239,22920912,24011548 conferidos; ESC HF 2026 tabelas de DHF/MCS e ESC SCA 2023. Completados dados de segurança e randomizados versus analisados; retiradas proporções secundárias sem confirmação primária direta. Árvores corrigidas: nós intermediários não são condutas terminais; lactato normal e ausência de choque não excluem SCA, e suporte não atrasa reperfusão."
   },
   {
     "slug": "ecls-shock-suporte-de-vida-extracorporeo-no-choque-cardiogenico-por-infarto",
@@ -22196,9 +22238,9 @@
     "doi": "10.1056/NEJMoa2409501",
     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2409501",
     "summary": "Ensaio internacional, randomizado 1:1, com 416 pacientes com infarto do miocárdio prévio, CDI e taquicardia ventricular (TV) clinicamente significativa (tempestade elétrica, choque apropriado, estimulação antitaquicardia do CDI, ou TV sustentada encerrada por atendimento de emergência) — sem exigir falha prévia de antiarrítmico. Comparou ablação por cateter como terapia inicial (realizada em até 14 dias da randomização, n=203) versus terapia antiarrítmica com sotalol ou amiodarona por critérios pré-especificados (n=213). Seguimento mediano de 4,3 anos.",
-    "key_findings": "Desfecho primário composto (morte por qualquer causa durante todo o seguimento, ou — após 14 dias da randomização — tempestade elétrica, choque apropriado do CDI ou TV sustentada tratada por intervenção médica): 50,7% (103/203) no grupo ablação versus 60,6% (129/213) no grupo antiarrítmico — HR 0,75 (IC95% 0,58-0,97; p=0,03). Eventos adversos em 30 dias: 2 mortes (1,0%) e 23 eventos não fatais (11,3%) no braço ablação; no braço antiarrítmico, 1 morte por toxicidade pulmonar (0,5%) e 46 eventos não fatais (21,6%) — o dobro de eventos adversos não fatais no braço farmacológico.",
-    "clinical_implications": "Move a indicação de ablação por cateter de 'depois que o antiarrítmico falhou' para 'primeira linha' em paciente com infarto prévio, CDI e TV clinicamente significativa — o desenho testa deliberadamente esse momento mais precoce, ao contrário do VANISH original (2016), que só randomizava após falha de antiarrítmico. O perfil de segurança também favorece a ablação: menos da metade dos eventos adversos não fatais do braço farmacológico, e a única morte atribuída a tratamento no braço antiarrítmico foi por toxicidade pulmonar da amiodarona.",
-    "limitations": "Sem diferença de mortalidade isolada demonstrada com significância — o ganho está no desfecho composto, movido em parte por eventos como choque apropriado do CDI, que são em parte marcador de recorrência de arritmia. População restrita a infarto prévio com CDI já implantado; não testa cardiomiopatia não isquêmica nem paciente sem CDI. Antiarrítmico do braço comparador limitado a sotalol/amiodarona por critérios pré-especificados, não abrangendo todo o arsenal farmacológico possível.",
+    "key_findings": "Seguimento mediano 4,3 anos. Desfecho primário: 103/203 (50,7%) na ablação versus 129/213 (60,6%) no fármaco; HR 0,75; IC95% 0,58–0,97; P=0,03. Eventos adversos em 30 dias após a ablação: morte em 2 (1,0%) e não fatais em 23 (11,3%). No braço fármaco: morte por toxicidade pulmonar em 1 (0,5%) e eventos não fatais atribuídos ao antiarrítmico em 46 (21,6%).",
+    "clinical_implications": "Na cardiomiopatia isquêmica com TV clinicamente significativa e CDI, a estratégia inicial de ablação reduziu o composto primário em relação ao antiarrítmico. Não é ensaio de mortalidade isolada. Ablação não é risco zero (morte em 30 dias 1,0%; eventos não fatais 11,3%). Distinto do VANISH 2016, que testou ablação após falha de antiarrítmico. A classificação de diretriz não decorre automaticamente do ensaio. A conversa inclui o CDI (todos os pacientes o tinham) e o risco procedimental. As taxas de segurança da ablação se referem aos 30 dias após o procedimento, enquanto as farmacológicas são eventos atribuídos ao antiarrítmico durante o acompanhamento. Não representam duas janelas temporais idênticas e não devem ser comparadas como se fossem.",
+    "limitations": "Sem diferença de mortalidade isolada demonstrada com significância — o ganho está no desfecho composto, movido em parte por eventos como choque apropriado do CDI, que são em parte marcador de recorrência de arritmia. População restrita a infarto prévio com CDI já implantado; não testa cardiomiopatia não isquêmica nem paciente sem CDI. Antiarrítmico do braço comparador limitado a sotalol/amiodarona por critérios pré-especificados, não abrangendo todo o arsenal farmacológico possível. O registro NCT02830360 especifica eventos nos seis meses anteriores sem antiarrítmico de classe I/III: TV monomórfica sustentada tratada, pelo menos um choque apropriado, três episódios em 24 horas, ou ATP em pelo menos três episódios com um sintomático ou cinco episódios independentemente de sintomas. Excluiu isquemia ativa/causa reversível, SCA recente, ablação prévia de TV e arritmia de apresentação polimórfica/FV. Instabilidade e tempestade ativa exigem estabilização imediata; o ensaio não define uma ordem obrigatória de implante antes de ablação urgente.",
     "theme": "Arritmias",
     "tags": [
       "vanish2",
@@ -22210,8 +22252,11 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
-    "pmid": "39555820"
+    "review_note": "VANISH2 PMID 39555820 e protocolo NCT02830360: resultados e critérios individuais conferidos; corrigida comparação de segurança com janelas diferentes e ordem indevida de implante antes de intervenção urgente. CDI/RC: ESC 2026; DANISH PMID incorreto 27557360 corrigido para 27571011, seguimento 41123523 incorporado. Critérios completos e limites primária/secundária explicitados. Mental ESC 2025 conforme números confirmados, sem transformar associação em indicação de desativação.",
+    "pmid": "39555820",
+    "source_refs": [
+      "VANISH2 protocol NCT02830360. https://clinicaltrials.gov/study/NCT02830360"
+    ]
   },
   {
     "slug": "survive-vt-ablacao-de-substrato-vs-antiarritmico-apos-choque-do-cdi",
@@ -22250,9 +22295,9 @@
     "doi": "10.1056/NEJMoa2415820",
     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2415820",
     "summary": "Ensaio de fase 3, randomizado, duplo-cego, controlado por placebo, multicêntrico (NCT05142722), com 2.530 pacientes com doença cardiovascular aterosclerótica estabelecida ou hipercolesterolemia familiar heterozigótica, todos em terapia hipolipemiante na dose máxima tolerada (a maioria em estatina, muitos também em ezetimiba). Randomizados 2:1 para obicetrapibe 10 mg/dia (n=1.686) ou placebo (n=844). Idade média 65 anos, 34% mulheres, LDL basal médio 98 mg/dL. Duração do tratamento: 365 dias. Financiamento: NewAmsterdam Pharma.",
-    "key_findings": "Desfecho primário (variação percentual média do LDL do basal ao dia 84): -29,9% com obicetrapibe versus +2,7% com placebo — diferença de 32,6 pontos percentuais (p<0,001). Efeito consistente independentemente da terapia de base (estatina isolada, estatina + ezetimiba, ou hipercolesterolemia familiar). Segurança em 365 dias: incidência de eventos adversos semelhante entre os grupos, sem o sinal de elevação pressórica que levou à interrupção do torcetrapibe (inibidor de CETP de primeira geração).",
-    "clinical_implications": "Obicetrapibe é inibidor de CETP (proteína de transferência de éster de colesterol) que reduz LDL de forma robusta e reprodutível (~30% adicional sobre terapia hipolipemiante já otimizada), sem o sinal de dano cardiovascular que interrompeu o torcetrapibe. Mas o desfecho primário do BROADWAY é um marcador substituto (LDL), não evento clínico — o ensaio não tem poder estatístico para desfecho cardiovascular. Obicetrapibe não está aprovado para uso clínico em nenhuma diretriz de dislipidemia atual e não deve ser prescrito fora de estudo clínico: a classe de inibidores de CETP já teve quatro fracassos anteriores em desfecho cardiovascular (torcetrapibe interrompido por excesso de mortalidade; dalcetrapibe e evacetrapibe neutros apesar de reduzir LDL/elevar HDL; anacetrapibe com benefício modesto mas nunca comercializado por acúmulo tecidual). O ensaio de desfecho cardiovascular dedicado (PREVAIL, NCT05202509, 9.541 participantes) segue em andamento, com conclusão primária estimada para novembro de 2026 — é o único capaz de responder se a redução de LDL se traduz em redução de eventos.",
-    "limitations": "Desfecho primário é substituto (variação de LDL), não evento clínico — sem poder estatístico para MACE. Seguimento curto (365 dias) não permite extrapolar segurança de longo prazo, mesma limitação que os ensaios de fase 2/3 do torcetrapibe tinham antes do dano em desfecho aparecer. Uma análise agrupada exploratória e não pré-especificada de BROADWAY com o ensaio irmão BROOKLYN (JACC 2025, PMID 40888776) sugeriu sinal direcional de redução de MACE (HR 0,77; IC95% 0,54-1,11; p=0,16, sem significância estatística) — não deve ser tratada como evidência de redução de eventos cardiovasculares, é hipótese-geradora, não confirmatória. Financiado pelo fabricante (NewAmsterdam Pharma).",
+    "key_findings": "Primário, LDL-C do basal ao dia 84: −29,9% (IC95% −32,1 a −27,8) versus +2,7% (−0,4 a 5,8); diferença −32,6 pontos percentuais (−35,8 a −29,5), P<0,001. Incidência de eventos adversos aparentemente semelhante no seguimento do ensaio, sem prova de equivalência ou segurança de longo prazo.",
+    "clinical_implications": "O primário é lipídico, não demonstra benefício confirmatório em MACE. A história heterogênea da classe CETP não autoriza inferir eficácia ou dano de outro composto; anacetrapibe teve benefício no REVEAL, portanto é incorreto classificar todos os quatro predecessores como fracassos de desfecho. PREVAIL (NCT05202509) é o ensaio dedicado de eventos; registro consultado em 09/09/2026: 9.541 participantes e conclusão primária estimada em novembro de 2026, não resultado disponível. Esta síntese descreve o ensaio e não afirma registro ou indicação aprovada no Brasil. Conferir produto e indicação no portal de registro da Anvisa antes de qualquer uso; dose de investigação não é prescrição.",
+    "limitations": "Desfecho substituto, tratamento por 365 dias e financiamento do fabricante limitam inferências de benefício clínico e segurança tardia. A análise agrupada BROADWAY/BROOKLYN (PMID 40888776, estudo de 2.884 participantes, não o artigo individual BROOKLYN) encontrou composto de morte coronária/IAM/AVC isquêmico/revascularização 3,9% versus 5,0%; HR 0,77 (0,54–1,11), P=0,16. Outros compostos e janelas temporais tiveram resultados nominais favoráveis, mas não tornam positivo o primário lipídico como ensaio confirmatório de eventos; interpretar multiplicidade e desenho exploratório.",
     "theme": "Prevenção e lipídios",
     "tags": [
       "broadway",
@@ -22264,8 +22309,12 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação.",
-    "pmid": "40337982"
+    "review_note": "Conferidos BROADWAY/ALPACA, OCEAN(a)-DOSE, pelacarsen fase 2 e consenso EAS. Corrigido canônico BROADWAY: PMID agrupado não é BROOKLYN, anacetrapibe não foi fracasso de desfecho, segurança não é equivalência. Atualização ESC/EAS 2025 IIa B >50 mg/dL (~105 nmol/L), distinta de cortes EAS 2022, sem conversão fixa. Incluído comunicado primário Lp(a)HORIZON 04/09/2026 como preliminar, sem HR inventado nem extrapolação de classe. Removidas promessas individuais/regulatórias; ICAP classe e recorte corrigidos.",
+    "pmid": "40337982",
+    "source_refs": [
+      "Nicholls SJ, et al. Pooled analysis. JACC 2025. DOI 10.1016/j.jacc.2025.07.056. PMID 40888776.",
+      "PREVAIL NCT05202509. https://clinicaltrials.gov/study/NCT05202509"
+    ]
   },
   {
     "slug": "eorp-ppcm-registro-bromocriptina-cardiomiopatia-periparto",
@@ -22914,7 +22963,7 @@
     "pmid": "39555826",
     "url": "https://pubmed.ncbi.nlm.nih.gov/39555826/",
     "summary": "Ensaio internacional, duplo-cego, randomizado, controlado por placebo. 731 pacientes com IC, FEVE ≥50% e IMC ≥30 kg/m², randomizados 1:1 (364 vs. 367) para tirzepatida (até 15 mg subcutânea semanal) ou placebo por pelo menos 52 semanas; seguimento mediano de 104 semanas. Dois desfechos primários: composto de morte cardiovascular adjudicada ou evento de piora da IC (tempo até o primeiro evento) e variação do KCCQ-CSS até 52 semanas. Números restritos ao abstract PubMed. NCT04847557. Financiamento: Eli Lilly.",
-    "key_findings": "Composto primário: 36/364 (9,9%) vs. 56/367 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). Piora da IC: 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). Morte CV adjudicada: 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83) — numericamente pior no braço ativo, IC que cruza 1. KCCQ-CSS: +19,5±1,2 vs. +12,7±1,3, diferença 6,9 (IC95% 3,3-10,6; p<0,001). Descontinuação por evento adverso (sobretudo GI): 6,3% vs. 1,4%. O abstract não reporta peso nem caminhada de 6 minutos.",
+    "key_findings": "Composto primário: 36/364 (9,9%) vs. 56/367 (15,3%), HR 0,62 (IC95% 0,41-0,95; p=0,026). Piora da IC: 29 (8,0%) vs. 52 (14,2%), HR 0,54 (IC95% 0,34-0,85). Morte CV adjudicada: 8 (2,2%) vs. 5 (1,4%), HR 1,58 (IC95% 0,52-4,83) — diferença não significativa, poucos eventos. KCCQ-CSS: +19,5±1,2 vs. +12,7±1,3, diferença 6,9 (IC95% 3,3-10,6; p<0,001). Descontinuação por evento adverso (sobretudo GI): 6,3% vs. 1,4%. O abstract não reporta peso nem caminhada de 6 minutos.",
     "clinical_implications": "O SUMMIT demonstra menor risco do COMPOSTO de morte cardiovascular ou piora da IC, puxado pela piora da IC, e melhora do estado de saúde (KCCQ). Não demonstra redução de mortalidade cardiovascular. Na ESC 2026 a classe (semaglutida ou tirzepatida) entra como AMT IIa B1 para peso, exercício e QoL em IC sintomática com FEVE ≥45% e IMC ≥30, independente de diabetes — não como FMT e não como redução de morte. Não substitui iSGLT2.",
     "limitations": "Morte CV isolada sem significância e numericamente na direção oposta (8 vs. 5). Sem comparação direta com semaglutida. População restrita a FEVE ≥50% e IMC ≥30. Abstract do artigo principal não traz peso nem 6MWT. Não extrapolar para ICFEr nem para ICFEp sem obesidade.",
     "theme": "Diabetes e cardiologia",
@@ -22928,8 +22977,9 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão científica e consolidação de duplicata concluídas em 2026-09-01 contra PubMed PMID 39555826 e DOI 10.1056/NEJMoa2410027. O registro duplicado summit-tirzepatida-icfep-com-obesidade foi incorporado neste canônico sem perda de resultados, limitações, identificadores ou contexto exclusivo; síntese não deve ser extrapolada além da população e dos desfechos da fonte.",
-    "document_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit"
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema.",
+    "document_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+    "source_refs": []
   },
   {
     "slug": "empagliflozina-funcao-cardiaca-vo2-diabetes-tipo-2-rct-2026",
@@ -23021,8 +23071,8 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/32970396/",
     "summary": "4.304 participantes com TFGe de 25 a 75 mL/min/1,73m² e relação albumina/creatinina urinária de 200 a 5.000 mg/g, randomizados para dapagliflozina 10mg/dia vs. placebo. Desfecho primário composto: queda sustentada de ≥50% na TFGe, doença renal terminal, ou morte de causa renal ou cardiovascular. Interrompido por eficácia por recomendação do comitê independente; mediana de seguimento de 2,4 anos.",
     "key_findings": "Primário: 9,2% vs. 14,5%, HR 0,61 (IC95% 0,51-0,72; p<0,001), NNT 19 (IC95% 15-27). Composto renal (queda ≥50% da TFG, DRT ou morte renal): HR 0,56 (IC95% 0,45-0,68; p<0,001). Morte cardiovascular ou internação por IC: HR 0,71 (IC95% 0,55-0,92; p=0,009). Morte por qualquer causa: 4,7% vs. 6,8%, HR 0,69 (IC95% 0,53-0,88; p=0,004). Efeitos semelhantes com e sem diabetes tipo 2.",
-    "clinical_implications": "Sustenta a indicação de iSGLT2 na DRC independentemente da presença de diabetes. Mostrou redução de mortalidade total e do composto cardiovascular — ver comparação com o EMPA-KIDNEY (cadastrado nesta mesma PR), que teve espectro mais amplo de função renal mas não mostrou o mesmo benefício de mortalidade.",
-    "limitations": "Mostrou redução de mortalidade total, ao contrário do EMPA-KIDNEY — diferença atribuída, pelo documento de origem, a seguimento mais curto e albuminúria mais baixa incluída no EMPA-KIDNEY, não a resultado conflitante genuíno entre os dois ensaios.",
+    "clinical_implications": "Sustenta dapagliflozina na DRC albuminúrica estudada, com ou sem diabetes; não equivale à população do DAPA-HF/DELIVER. NNT 19 pertence ao desfecho e horizonte do DAPA-CKD. O início de iSGLT2 não substitui bloqueio do SRA quando indicado.",
+    "limitations": "Seguimento mediano de 2,4 anos e interrupção por eficácia. A seleção exige DRC albuminúrica nas faixas do ensaio. Comparações com EMPA-KIDNEY são indiretas e não permitem atribuir causalmente diferenças de mortalidade a seguimento ou albuminúria.",
     "theme": "Diabetes e cardiologia",
     "tags": [
       "dapa-ckd",
@@ -23032,7 +23082,12 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema.",
+    "source_refs": [
+      "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al.; DAPA-CKD Trial Committees and Investigators. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383:1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396. NCT03036150.",
+      "McMurray JJV, Solomon SD, Inzucchi SE, et al.; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381:1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829. NCT03036124.",
+      "Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2022;387:1089-1098. DOI: 10.1056/NEJMoa2206286. PMID: 36027570. NCT03619213."
+    ]
   },
   {
     "slug": "empa-kidney-empagliflozina-na-doenca-renal-cronica",
@@ -23069,9 +23124,9 @@
     "doi": "10.1056/NEJMoa2025845",
     "pmid": "33264825",
     "url": "https://pubmed.ncbi.nlm.nih.gov/33264825/",
-    "summary": "5.734 pacientes com DRC e diabetes tipo 2, TFGe entre 25 e <75 mL/min/1,73m² (predominantemente estágio 3-4), com albuminúria moderada a grave, já em bloqueio otimizado do sistema renina-angiotensina. Seguimento mediano de 2,6 anos. Desfecho primário: falência renal, queda ≥40% da TFGe do basal, ou morte de causa renal.",
+    "summary": "5.734 randomizados, 5.674 na análise (2.833 finerenona, 2.841 placebo), com DM2 e DRC em bloqueio otimizado do SRA. Inclusão: RAC 30 a <300 mg/g, TFGe 25 a <60 mL/min/1,73 m² e retinopatia diabética; ou RAC 300–5000 e TFGe 25 a <75. Seguimento mediano 2,6 anos. Primário: falência renal, queda sustentada ≥40% da TFGe ou morte renal.",
     "key_findings": "Primário: 17,8% (finerenona) vs. 21,1% (placebo), HR 0,82 (IC95% 0,73-0,93; p=0,001). Desfecho secundário-chave (morte cardiovascular, IAM não fatal, AVC não fatal ou hospitalização por IC): 13,0% vs. 14,8%, HR 0,86 (IC95% 0,75-0,99; p=0,03). Descontinuação por hiperpotassemia: 2,3% (finerenona) vs. 0,9% (placebo).",
-    "clinical_implications": "Sustenta a recomendação de iniciar finerenona em paciente diabético tipo 2 com DRC para redução de progressão renal — mecanismo de proteção cardiorrenal complementar (não intercambiável) ao dos iSGLT2. Ver também o FIGARO-DKD (cadastrado nesta mesma PR), com espectro de gravidade renal e desfecho primário diferentes.",
+    "clinical_implications": "Sustenta a recomendação de iniciar finerenona em paciente diabético tipo 2 com DRC para redução de progressão renal — mecanismo de proteção cardiorrenal complementar (não intercambiável) ao dos iSGLT2. Ver também o FIGARO-DKD , com espectro de gravidade renal e desfecho primário diferentes.",
     "limitations": "Descontinuação por hiperpotassemia mais que o dobro no grupo finerenona (2,3% vs. 0,9%), consistente com o mecanismo antagonista mineralocorticoide — a monitorização de potássio continua obrigatória. Não confundir com o FIGARO-DKD.",
     "theme": "Diabetes e cardiologia",
     "tags": [
@@ -23082,7 +23137,11 @@
     ],
     "review_status": "revisado",
     "published": true,
-    "review_note": "Revisão independente CorVIA concluída em 19/08/2026: identidade bibliográfica e resultados reportados confrontados com a fonte primária indexada; pendências explícitas foram resolvidas antes da publicação."
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema.",
+    "source_refs": [
+      "Bakris GL, Agarwal R, Anker SD, et al.; FIDELIO-DKD Investigators. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383:2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825. NCT02540993.",
+      "Damman K, Herrington WG, ter Maaten JM, et al. 2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the ERA. Eur Heart J. 2026. DOI: 10.1093/eurheartj/ehag098. PMID: 42661426."
+    ]
   },
   {
     "slug": "figaro-dkd-finerenona-desfecho-cardiovascular-na-doenca-renal-cronica",
@@ -30733,7 +30792,7 @@
     "pmid": "34758252",
     "url": "https://pubmed.ncbi.nlm.nih.gov/34758252/",
     "summary": "Ensaio randomizado, duplo-cego, com 5.661 pacientes com infarto agudo do miocárdio recente (0,5-7 dias), FEVE ≤40% e/ou congestão pulmonar transitória mais fator de risco adicional, sem IC prévia nem instabilidade hemodinâmica, comparando sacubitril-valsartana (2.830) versus ramipril (2.831).",
-    "key_findings": "Desfecho primário (morte cardiovascular ou IC incidente) foi neutro: 11,9% vs. 13,2%; HR 0,90 (IC95% 0,78-1,04; p=0,17). Morte cardiovascular isolada: HR 0,87 (IC95% 0,71-1,08). Morte por qualquer causa: HR 0,88 (IC95% 0,73-1,05). O ensaio atingiu o número de eventos pré-especificado (711 observados de 708 alvo).",
+    "key_findings": "Desfecho primário (morte cardiovascular ou IC incidente) foi neutro: 11,9% vs. 13,2%; HR 0,90 (IC95% 0,78-1,04; p=0,17). Morte cardiovascular isolada: HR 0,87 (IC95% 0,71-1,08). Morte por qualquer causa: HR 0,88 (IC95% 0,73-1,05). O ensaio atingiu o número de eventos pré-especificado (711 observados de 708 alvo). Seguimento mediano 22 meses; interrupção por evento adverso 12,6% vs 13,4%. Sacubitril/valsartana 97/103 mg duas vezes/dia versus ramipril 5 mg duas vezes/dia.",
     "clinical_implications": "Sacubitril-valsartana não demonstrou superioridade sobre ramipril na prevenção de morte cardiovascular ou IC incidente pós-infarto sem IC prévia; o IECA/BRA continua sendo a terapia de base recomendada nesse cenário.",
     "limitations": "O comparador foi um IECA ativo já comprovadamente eficaz (não placebo); a terapia de base contemporânea intensa (88% com ICP primária) reduz a margem de benefício incremental; estudo financiado pela Novartis.",
     "theme": "Insuficiência cardíaca",
@@ -30744,7 +30803,12 @@
       "arni"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": true,
+    "source_refs": [
+      "Pfeffer MA, Claggett B, Lewis EF, et al.; PARADISE-MI Investigators and Committees. Angiotensin Receptor–Neprilysin Inhibition in Acute Myocardial Infarction. N Engl J Med. 2021;385:1845-1855. DOI 10.1056/NEJMoa2104508. PMID 34758252. NCT02924727.",
+      "McMurray JJV, Packer M, Desai AS, et al.; PARADIGM-HF Investigators and Committees. Angiotensin–Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371:993-1004. DOI 10.1056/NEJMoa1409077. PMID 25176015. NCT01035255."
+    ],
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema."
   },
   {
     "slug": "step-hfpef-semaglutida-icfep-obesidade",
@@ -32086,9 +32150,9 @@
     "pmid": "37952131",
     "url": "https://pubmed.ncbi.nlm.nih.gov/37952131/",
     "summary": "Ensaio multicêntrico, duplo-cego, controlado por placebo, de superioridade, orientado por eventos, com 17.604 pacientes com idade ≥45 anos, doença cardiovascular preexistente, IMC ≥27 kg/m² e sem história de diabetes, randomizados 1:1 para semaglutida 2,4 mg subcutânea semanal (n=8.803) ou placebo (n=8.801). Exposição média 34,2±13,7 meses; seguimento médio 39,8±9,4 meses. Desfecho primário: morte cardiovascular, infarto não fatal ou AVC não fatal. Financiado pela Novo Nordisk.",
-    "key_findings": "Evento do desfecho primário em 569/8.803 (6,5%) com semaglutida versus 701/8.801 (8,0%) com placebo — HR 0,80 (IC95% 0,72-0,90; P<0,001). Eventos adversos que levaram à descontinuação permanente: 1.461 (16,6%) versus 718 (8,2%); P<0,001. O abstract do PubMed não reporta os componentes isolados do composto nem a magnitude da perda de peso; estes números não devem ser inventados a partir desta entrada.",
+    "key_findings": "Exposição média ao fármaco 34,2±13,7 meses; seguimento médio 39,8±9,4 meses. MACE em 569/8.803 (6,5%) versus 701/8.801 (8,0%); HR 0,80; IC95% 0,72–0,90; P<0,001. Infarto não fatal HR 0,72 (0,61–0,85). Morte CV HR 0,85 (0,71–1,01) — não significativo. AVC não fatal HR 0,93 (0,74–1,15) — não significativo. Descontinuação por evento adverso 16,6% vs 8,2%. Os componentes individuais não substituem o resultado primário; os testes secundários subsequentes à morte CV são exploratórios.",
     "clinical_implications": "Primeiro ensaio a demonstrar redução de MACE de 3 pontos com um fármaco antiobesidade em prevenção secundária na ausência de diabetes. A dose testada é 2,4 mg semanal, não 1,0 mg (FLOW) nem a formulação oral. O resultado não se extrapola para prevenção primária, para quem não tem doença cardiovascular preexistente, nem para outros agonistas de GLP-1 ou tirzepatida.",
-    "limitations": "População de prevenção secundária (doença cardiovascular preexistente obrigatória); abstract não decompõe os componentes do MACE nem o mecanismo (peso versus efeitos pleiotrópicos); descontinuação por evento adverso o dobro do placebo; financiamento pelo fabricante (Novo Nordisk); não testa semaglutida 1,0 mg, formulação oral, tirzepatida nem cirurgia bariátrica.",
+    "limitations": "Ensaio de prevenção secundária, sem diabetes. O SELECT não incluía participantes nos primeiros 60 dias após evento cardiovascular ou neurológico, nem com revascularização programada; seus resultados não demonstram início durante a internação do infarto. A ausência de diabetes delimita a população estudada, sem representar uma contraindicação geral à semaglutida em pessoas com diabetes. Não distingue o mecanismo de benefício (perda de peso versus outros efeitos); descontinuação por evento adverso maior; financiado pelo fabricante.",
     "theme": "Farmacologia",
     "tags": [
       "semaglutida",
@@ -32102,7 +32166,7 @@
     "review_status": "revisado",
     "published": true,
     "document_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
-    "review_note": "Revisão científica e consolidação de duplicata concluídas em 2026-09-01 contra PubMed PMID 37952131 e DOI 10.1056/NEJMoa2307563. O registro duplicado select-lincoff-semaglutida-24mg-mace-obesidade-sem-diabetes foi incorporado neste canônico sem perda de resultados, limitações, identificadores ou contexto exclusivo; síntese não deve ser extrapolada além da população e dos desfechos da fonte."
+    "review_note": "Revisão individual contra fontes primárias SELECT/SOUL/FLOW/STEP/SURPASS e ESC 2026, conforme o escopo. Corrigidos seleção pós-evento de 60 dias, não inferioridade versus equivalência, interpretação secundária e vínculos canônicos. Anvisa 2026 e bula brasileira conferidas quando citadas. No subgrupo renal SOUL, mantidas contagens sem reproduzir percentual aritmeticamente inconsistente. Detalhes acessórios sem confirmação suficiente foram omitidos, sem extrapolar resultados ou categoria de segurança."
   },
   {
     "slug": "cast-encainida-e-flecainida-supressao-de-arritmia-pos-infarto",
@@ -40583,7 +40647,7 @@
   },
   {
     "slug": "finearts-hf-populacao-feve-maior-igual-40-faixa-historica-icfei",
-    "title": "FINEARTS-HF — finerenona em FEVE ≥40% (36% na faixa 40–50%); ensaio da molécula, não da reclassificação ESC 2026",
+    "title": "FINEARTS-HF — Finerenona na IC sintomática com FEVE ≥40%",
     "study_type": "ensaio_clinico",
     "authors": "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Committees and Investigators",
     "journal": "New England Journal of Medicine",
@@ -40591,8 +40655,8 @@
     "doi": "10.1056/NEJMoa2407107",
     "pmid": "39225278",
     "url": "https://pubmed.ncbi.nlm.nih.gov/39225278/",
-    "summary": "Ensaio randomizado e duplo-cego com 6.001 pacientes com insuficiência cardíaca sintomática e FEVE ≥40% (3.003 finerenona; 2.998 placebo), com seguimento mediano de 32 meses. O corte de entrada abrange faixas de fração de ejeção levemente reduzida e preservada.",
-    "key_findings": "Desfecho primário (eventos totais de piora de IC mais morte cardiovascular): 1.083 versus 1.283 eventos; razão de taxa 0,84 (IC95% 0,74–0,95; p=0,007). Eventos totais de piora de IC: 842 versus 1.024; razão de taxa 0,82 (IC95% 0,71–0,94; p=0,006). Morte cardiovascular: 8,1% versus 8,7%; HR 0,93 (IC95% 0,78–1,11), sem diferença significativa.",
+    "summary": "Ensaio randomizado e duplo-cego com 6.001 pacientes com insuficiência cardíaca sintomática e FEVE ≥40% (3.003 finerenona; 2.998 placebo), com seguimento mediano de 32 meses. O corte de entrada abrange faixas de fração de ejeção levemente reduzida e preservada. Exclusões incluíram TFGe <25 mL/min/1,73 m² e K >5 mmol/L; dose máxima 20 ou 40 mg/dia conforme função renal, não dose inicial universal.",
+    "key_findings": "Desfecho primário (eventos totais de piora de IC mais morte cardiovascular): 1.083 versus 1.283 eventos; razão de taxa 0,84 (IC95% 0,74–0,95; p=0,007). Eventos totais de piora de IC: 842 versus 1.024; razão de taxa 0,82 (IC95% 0,71–0,94; p=0,006). Morte cardiovascular: 8,1% versus 8,7%; HR 0,93 (IC95% 0,78–1,11), sem diferença significativa. Os eventos primários ocorreram em 624/3.003 versus 719/2.998 pacientes; não confundir pessoas com número total de eventos.",
     "clinical_implications": "O FINEARTS-HF demonstrou redução do composto, impulsionada por eventos de piora de IC, em FEVE ≥40%. O ensaio avaliou finerenona e não estabelece equivalência com espironolactona ou eplerenona nem autoriza extrapolação para outras classes ou dispositivos.",
     "limitations": "Benefício impulsionado por piora de IC, não por morte CV isolada. Hipercalemia mais frequente. Não estabelece equivalência entre finerenona e espironolactona/eplerenona. Não autoriza dispositivo.",
     "theme": "Insuficiência cardíaca",
@@ -40610,7 +40674,11 @@
     "review_status": "revisado",
     "published": true,
     "document_slug": "icfei-historica-e-a-reclassificacao-esc-2026",
-    "review_note": "Revisão científica e consolidação de duplicata concluídas em 2026-09-01 contra PubMed PMID 39225278 e DOI 10.1056/NEJMoa2407107. O registro duplicado finearts-hf-finerenona-na-icfem-e-icfep foi incorporado neste canônico sem perda de resultados, limitações, identificadores ou contexto exclusivo; síntese não deve ser extrapolada além da população e dos desfechos da fonte."
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema.",
+    "source_refs": [
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391:1475-1485. DOI 10.1056/NEJMoa2407107. PMID 39225278. NCT04435626.",
+      "Køber L et al. 2026 ESC Guidelines for the management of heart failure. Eur Heart J. 2026. DOI 10.1093/eurheartj/ehag100. PMID 42661420."
+    ]
   },
   {
     "slug": "paragon-hf-neutro-e-a-faixa-45-49-nao-e-paradigm",
@@ -41737,10 +41805,10 @@
     "doi": "10.1056/NEJMoa2306037",
     "pmid": "37634135",
     "url": "https://pubmed.ncbi.nlm.nih.gov/37634135/",
-    "summary": "97 pacientes com FA e IC terminal alocados a ablação + terapia dirigida por diretriz versus terapia médica. Primário: morte, implante de DVSE ou transplante urgente. Interrompido por eficácia 1 ano após o fim da randomização. Mediana 18,0 meses (IIQ 14,6-22,6).",
+    "summary": "194 pacientes com FA e IC terminal encaminhados para avaliação de transplante: 97 para ablação + terapia dirigida por diretriz e 97 para terapia médica. Primário: morte, implante de DAVI ou transplante urgente. Interrompido por eficácia 1 ano após o fim da randomização. Mediana 18,0 meses (IIQ 14,6-22,6).",
     "key_findings": "Ablação realizada em 81/97 (84%) vs 16/97 (16%). Primário: 8 (8%) vs 29 (30%) (HR 0,24; IC95% 0,11-0,52; p<0,001). Morte: 6 (6%) vs 19 (20%) (HR 0,29; 0,12-0,72). Complicações do procedimento: 3 vs 1.",
     "clinical_implications": "Em IC terminal com FA, a estratégia de ablação associou-se a menos morte/DVSE/transplante. Amostra pequena (n=194), interrompida precocemente; cruzamento de 16% no controle. Não generalizar para IC não terminal.",
-    "limitations": "n=194, interrupção precoce, centro(s) especializado(s). Cruzamento relevante.",
+    "limitations": "Ensaio aberto de centro único na Alemanha, n=194, encerrado por eficácia; cruzamento de 16% no controle. Limita a generalização para outros centros e fenótipos.",
     "theme": "Fibrilação atrial",
     "tags": [
       "castle-htx",
@@ -41750,11 +41818,15 @@
       "lvad"
     ],
     "review_status": "revisado",
-    "published": false,
+    "published": true,
     "fonte_producao": "grok",
-    "review_note": "Revisão independente concluída em 2026-08-30: PMID, DOI, ano, números, interpretação, limitações e vínculos reconciliados contra o abstract PubMed. Síntese restrita ao abstract; não constitui recomendação de diretriz.",
+    "review_note": "Origem Grok comparada individualmente ao estudo canônico existente pelo PMID/DOI, preservando slug e conteúdo válido e incorporando informação exclusiva conferida. Corrigidos denominadores CASTLE-HTx/FIDELIO, critérios FLOW, comparações indiretas e nomenclatura VALOR; nenhum segundo registro do mesmo ensaio criado. Resultado clínico conferido nas fontes primárias do tema.",
     "document_slug": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
-    "disease_slug": "insuficiencia-cardiaca"
+    "disease_slug": "insuficiencia-cardiaca",
+    "source_refs": [
+      "Sohns C, Fox H, Marrouche NF, et al.; CASTLE HTx Investigators. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389(15):1380-1389. DOI 10.1056/NEJMoa2306037. PMID 37634135. NCT04649801.",
+      "Marrouche NF, Brachmann J, Andresen D, et al.; CASTLE-AF Investigators. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378(5):417-427. DOI 10.1056/NEJMoa1707855. PMID 29385358. NCT00643188."
+    ]
   },
   {
     "slug": "cirt-metotrexato-baixa-dose-para-prevencao-aterosclerotica",
@@ -44225,9 +44297,9 @@
     "doi": "10.1056/NEJMoa2501006",
     "pmid": "40162642",
     "url": "https://pubmed.ncbi.nlm.nih.gov/40162642/",
-    "summary": "9650 ≥50 anos, DM2 com HbA1c 6,5-10,0% e DAC aterosclerótica, DRC ou ambas: semaglutida oral até 14 mg/dia vs placebo. Primário: MACE. Mediana 49,5 meses.",
-    "key_findings": "MACE 12,0% vs 13,8% (3,1 vs 3,7/100 pessoas-ano; HR 0,86; IC95% 0,77-0,96; p=0,006). Secundários confirmatórios (incluindo composto renal de 5 pontos) sem diferença significativa. Eventos graves 47,9% vs 50,3%; GI 5,0% vs 4,4%.",
-    "clinical_implications": "Semaglutida oral reduziu MACE neste alto risco. Secundários confirmatórios nulos — não extrapolar rim. GI 5,0% vs 4,4% no recorte de 'disorders' do abstract.",
+    "summary": "9650 adultos ≥50 anos com DM2 (HbA1c 6,5–10%) e ASCVD conhecida, DRC ou ambas. Semaglutida oral até 14 mg/dia versus placebo. Ensaio de superioridade, duplo-cego, controlado por placebo, dirigido a eventos.",
+    "key_findings": "Seguimento médio 47,5±10,9 meses (mediana 49,5). MACE em 579/4825 (12,0%; 3,1/100 pessoas-ano) versus 668/4825 (13,8%; 3,7/100 pessoas-ano); HR 0,86; IC95% 0,77–0,96; P=0,006. EA graves 47,9% vs 50,3% (P=0,02 no material concomitante ao ACC.25). Secundários confirmatórios sem diferença significativa.",
+    "clinical_implications": "Via oral de 14 mg reduz MACE em DM2 com ASCVD e/ou DRC. Não equivale, por este ensaio, à semaglutida injetável 1,0 ou 2,4 mg. Opção para quem recusa injeção. Não comprovou redução do composto renal confirmatório.",
     "limitations": "Secundários nulos. Event-driven. Financiado pelo fabricante.",
     "theme": "Diabetes e cardiologia",
     "tags": [
@@ -44237,11 +44309,10 @@
       "mace"
     ],
     "review_status": "revisado",
-    "published": false,
+    "published": true,
     "fonte_producao": "grok",
-    "review_note": "Revisão independente concluída em 2026-08-30: PMID, DOI, ano, números, interpretação, limitações e vínculos reconciliados contra o abstract PubMed. Síntese restrita ao abstract; não constitui recomendação de diretriz.",
-    "document_slug": "select-semaglutida-desfechos-cardiovasculares-obesidade-sem-diabetes",
-    "disease_slug": "doenca-coronariana-idoso"
+    "review_note": "Revisão individual contra fontes primárias SELECT/SOUL/FLOW/STEP/SURPASS e ESC 2026, conforme o escopo. Corrigidos seleção pós-evento de 60 dias, não inferioridade versus equivalência, interpretação secundária e vínculos canônicos. Anvisa 2026 e bula brasileira conferidas quando citadas. No subgrupo renal SOUL, mantidas contagens sem reproduzir percentual aritmeticamente inconsistente. Detalhes acessórios sem confirmação suficiente foram omitidos, sem extrapolar resultados ou categoria de segurança.",
+    "document_slug": "soul-semaglutida-oral-desfechos-cardiovasculares-dm2"
   },
   {
     "slug": "sparcl-atorvastatina-80-apos-avc-ou-ait-sem-dac",
@@ -52339,5 +52410,123 @@
     "published": true,
     "fonte_producao": "codex",
     "review_note": "Revisão científica independente concluída em 2026-09-01 contra o registro e o abstract/XML PubMed (PMID 42637297; DOI 10.1016/j.jcin.2026.06.021): título, desenho, população, intervenção/comparador, desfechos, números reportados e limitações conferidos. Síntese restrita ao material primário PubMed consultado; não extrapolar para recomendação clínica nem para conteúdo não reportado na fonte. Proveniência de produção preservada."
+  },
+  {
+    "slug": "alpaca-lepodisiran-2025",
+    "title": "Lepodisiran, um siRNA de longa duração contra a lipoproteína(a) (ALPACA, fase 2)",
+    "tema": "Prevenção e lipídios",
+    "year": 2025,
+    "journal": "N Engl J Med",
+    "pmid": "40162643",
+    "doi": "10.1056/NEJMoa2415818",
+    "design": "Ensaio de fase 2, randomizado, duplo-cego, controlado por placebo, em 66 centros (NCT05565742). Randomização 1:2:2:2:2. Desfecho primário laboratorial (surrogate only). Não é um ensaio de desfechos clínicos (not an outcomes trial).",
+    "population": "320 participantes com Lp(a) elevada; mediana basal de 253,9 nmol/L.",
+    "intervention": "Lepodisiran subcutâneo 16 mg, 96 mg ou 400 mg no basal e no dia 180; um braço de 400 mg recebeu placebo no dia 180. Os grupos 400 mg no basal foram agrupados (400 mg pooled) na análise primária.",
+    "control": "Placebo subcutâneo no basal e no dia 180.",
+    "primary_outcome": "Variação percentual média no tempo, ajustada ao placebo, da Lp(a) sérica do dia 60 ao dia 180 (desfecho substituto; não é desfecho clínico).",
+    "key_findings": "ALPACA é um ensaio de fase 2 (n=320) com desfecho exclusivamente substituto — not an outcomes trial; nenhum evento clínico (MACE, morte, infarto) foi testado como desfecho de eficácia. Lp(a) mediana 253.9 nmol/L. A variação percentual média no tempo, ajustada ao placebo, do dia 60 ao 180 (day 60-180) foi −40,8 pp com 16 mg, −75,2 pp com 96 mg e −93.9 pp no 400 mg pooled (IC 95% −95,1 a −92,5). Do dia 30 ao 360: −41,2 pp (16 mg), −77,2 pp (96 mg), −88,5 pp (400 mg + placebo no D180) e −94,8 pp (400 mg + 400 mg). Sem eventos adversos graves atribuídos ao fármaco; reações locais leves em até ~12% na dose alta.",
+    "clinical_implications": "O desfecho foi laboratorial: a redução de Lp(a) não demonstra, neste ensaio, redução de infarto, AVC ou morte. Os resultados não estabelecem indicação clínica individual nem substituem um ensaio de desfechos cardiovasculares.",
+    "source_refs": [
+      "Nissen SE, Ni W, Shen X, et al.; ALPACA Trial Investigators. Lepodisiran — A Long-Duration Small Interfering RNA Targeting Lipoprotein(a). N Engl J Med. 2025;392:1673-1683. doi:10.1056/NEJMoa2415818. PMID: 40162643.",
+      "ClinicalTrials.gov NCT05565742 (ALPACA).",
+      "https://pubmed.ncbi.nlm.nih.gov/40162643/"
+    ],
+    "review_status": "revisado",
+    "theme": "Prevenção e lipídios",
+    "study_type": "ensaio_clinico",
+    "summary": "Ensaio randomizado de fase 2, controlado por placebo, com 320 participantes. Lepodisiran subcutâneo em doses de 16, 96 ou 400 mg no basal e no dia 180; um dos braços de 400 mg recebeu placebo no dia 180. Os dois braços de 400 mg foram agrupados na análise primária. Desfecho primário: variação percentual média no tempo da Lp(a) entre os dias 60 e 180, ajustada ao placebo.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40162643/",
+    "published": true,
+    "document_slug": "lepodisiran-alpaca-sirna-prolongado-contra-lpa",
+    "review_note": "Revisão de fonte primária concluída em 2026-09-09: conferidos desenho, população, desfecho, estimativas e limites; não atribuída classe de diretriz ao resultado do ensaio."
+  },
+  {
+    "slug": "betami-danblock-2025",
+    "title": "BETAMI-DANBLOCK: betabloqueador após IAM em pacientes sem insuficiência cardíaca (FEVE ≥40%)",
+    "tema": "Doença coronariana",
+    "theme": "Doença coronariana",
+    "year": 2025,
+    "journal": "New England Journal of Medicine",
+    "pmid": "40888716",
+    "doi": "10.1056/NEJMoa2505985",
+    "design": "Análise conjunta de dois ensaios prospectivos, randomizados, abertos, com avaliação cega de desfecho (PROBE): BETAMI (NCT03646357) e DANBLOCK (NCT03778554). Centros na Dinamarca e na Noruega.",
+    "population": "5.574 pacientes com IAM e FEVE ≥40%, sem insuficiência cardíaca: 2.783 betabloqueador versus 2.791 sem betabloqueador.",
+    "intervention": "Betabloqueador de longo prazo após o infarto.",
+    "control": "Sem betabloqueador.",
+    "primary_outcome": "Composto de morte por qualquer causa ou MACE (novo infarto, revascularização coronariana não planejada, AVC isquêmico, insuficiência cardíaca ou arritmia ventricular maligna).",
+    "key_findings": "Seguimento mediano 3,5 anos (IIQ 2,2–4,6). Desfecho primário: 394 (14,2%) com betabloqueador versus 454 (16,3%) sem; HR 0,85; IC95% 0,75–0,98; P=0,03. Morte 4,2% vs 4,4%; IAM 5,0% vs 6,7% (HR 0,73; IC95% 0,59–0,92); revascularização 3,9% vs 3,9%; AVC isquêmico 1,6% vs 1,3%; IC 1,5% vs 1,9%; arritmia ventricular maligna 0,5% vs 0,6%. Sem diferenças aparentes de segurança entre os grupos. O composto foi puxado sobretudo pelo infarto; a morte isolada não se separou.",
+    "clinical_implications": "Após IAM com FEVE ≥40% e sem IC, o BETAMI-DANBLOCK mostrou redução do composto de morte ou MACE (HR 0,85). Não é o REBOOT (PMID 40888702; FEVE >40%; n=8.505; morte, reinfarto ou internação por IC; HR 1,04; IC95% 0,89–1,22; P=0,63). Não é a IPD de cinco ensaios com FEVE ≥50% (PMID 41211954; n=17.801; HR 0,97; IC95% 0,87–1,07). Três recortes, três compostos, três respostas. O resultado não é uma classificação formal de diretriz. Não tratar o HR 0,85 como redução isolada de mortalidade. Reavaliar as demais indicações clínicas individualmente; o ensaio não fundamenta retirada automática de betabloqueador.",
+    "source_refs": [
+      "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716. NCT03646357. NCT03778554.",
+      "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+      "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954."
+    ],
+    "review_status": "revisado",
+    "study_type": "ensaio_clinico",
+    "summary": "Desenho: Análise conjunta de dois ensaios prospectivos, randomizados, abertos, com avaliação cega de desfecho (PROBE): BETAMI (NCT03646357) e DANBLOCK (NCT03778554). Centros na Dinamarca e na Noruega.\n\nPopulação: 5.574 pacientes com IAM e FEVE ≥40%, sem insuficiência cardíaca: 2.783 betabloqueador versus 2.791 sem betabloqueador.\n\nIntervenção: Betabloqueador de longo prazo após o infarto.\n\nComparador: Sem betabloqueador.\n\nDesfecho primário: Composto de morte por qualquer causa ou MACE (novo infarto, revascularização coronariana não planejada, AVC isquêmico, insuficiência cardíaca ou arritmia ventricular maligna).",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40888716/",
+    "published": true,
+    "document_slug": "betami-danblock-bb-pos-iam-feve-maior-igual-40",
+    "review_note": "Revisão de fonte primária concluída em 2026-09-09: conferidos desenho, população, desfecho, estimativas e limites; não atribuída classe de diretriz ao resultado do ensaio."
+  },
+  {
+    "slug": "ipd-bb-pos-iam-feve50-2025",
+    "title": "IPD de cinco ensaios: betabloqueador após IAM com FEVE ≥50%",
+    "tema": "Doença coronariana",
+    "theme": "Doença coronariana",
+    "year": 2026,
+    "journal": "New England Journal of Medicine",
+    "pmid": "41211954",
+    "doi": "10.1056/NEJMoa2512686",
+    "design": "Metanálise de dados individuais (IPD), modelo de Cox de efeitos fixos em um estágio. Cinco ensaios abertos que randomizaram betabloqueador versus sem betabloqueador após IAM contemporâneo. Recorte retido: FEVE ≥50% e sem outra indicação da classe.",
+    "population": "17.801 pacientes: REBOOT 7.459, REDUCE-AMI 4.967, BETAMI 2.441, DANBLOCK 2.277, CAPITAL-RCT 657. 8.831 (49,6%) betabloqueador versus 8.970 (50,4%) sem betabloqueador.",
+    "intervention": "Betabloqueador de longo prazo após IAM.",
+    "control": "Sem betabloqueador.",
+    "primary_outcome": "Composto de morte por qualquer causa, infarto do miocárdio ou insuficiência cardíaca.",
+    "key_findings": "Seguimento mediano 3,6 anos (IIQ 2,3–4,6). Desfecho primário: 717 (8,1%) com betabloqueador versus 748 (8,3%) sem; HR 0,97; IC95% 0,87–1,07; P=0,54. Morte: 335 vs 326; HR 1,04; IC95% 0,89–1,21. Infarto: 360 vs 407; HR 0,89; IC95% 0,77–1,03. Insuficiência cardíaca: 75 vs 87; HR 0,87; IC95% 0,64–1,19. Nenhum componente autoriza afirmar benefício nem dano.",
+    "clinical_implications": "Síntese confirmatória da FE preservada: em 17.801 pacientes com FEVE ≥50% e sem outra indicação, o betabloqueador de longo prazo não reduziu morte, infarto ou IC. Não extrapolar para FEVE 41–49% (a IPD exigiu ≥50%). Não misturar com BETAMI-DANBLOCK (PMID 40888716; FEVE ≥40%; composto de morte ou MACE; HR 0,85) nem com o REBOOT no conjunto FEVE >40% (PMID 40888702; HR 1,04). Os n da tabela são subconjuntos da IPD, não os n publicados de cada ensaio. Resultado nulo não é contraindicação. Reavaliar individualmente outras indicações da classe antes de modificar o tratamento. O resultado não é uma classificação formal de diretriz.",
+    "source_refs": [
+      "Kristensen AMD, Rossello X, Prescott EIB, Munkhaugen J, Jernberg T, Ibanez B; Beta-Blocker Trialists’ Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954.",
+      "Ibanez B, Latini R, Rossello X, et al. Beta-Blockers after Myocardial Infarction without Reduced Ejection Fraction. N Engl J Med. 2025;393:1889-1900. DOI: 10.1056/NEJMoa2504735. PMID: 40888702.",
+      "Yndigegn T, Lindahl B, Mars K, et al.; REDUCE-AMI Investigators. Beta-Blockers after Myocardial Infarction and Preserved Ejection Fraction. N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241.",
+      "Munkhaugen J, Kristensen AMD, Halvorsen S, et al.; BETAMI–DANBLOCK Investigators. Beta-Blockers after Myocardial Infarction in Patients without Heart Failure. N Engl J Med. 2025;393(19):1901-1911. DOI: 10.1056/NEJMoa2505985. PMID: 40888716."
+    ],
+    "review_status": "revisado",
+    "study_type": "metanalise",
+    "summary": "Desenho: Metanálise de dados individuais (IPD), modelo de Cox de efeitos fixos em um estágio. Cinco ensaios abertos que randomizaram betabloqueador versus sem betabloqueador após IAM contemporâneo. Recorte retido: FEVE ≥50% e sem outra indicação da classe.\n\nPopulação: 17.801 pacientes: REBOOT 7.459, REDUCE-AMI 4.967, BETAMI 2.441, DANBLOCK 2.277, CAPITAL-RCT 657. 8.831 (49,6%) betabloqueador versus 8.970 (50,4%) sem betabloqueador.\n\nIntervenção: Betabloqueador de longo prazo após IAM.\n\nComparador: Sem betabloqueador.\n\nDesfecho primário: Composto de morte por qualquer causa, infarto do miocárdio ou insuficiência cardíaca.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41211954/",
+    "published": true,
+    "document_slug": "metanalise-ipd-betabloqueador-pos-iam-feve-50-cinco-ensaios",
+    "review_note": "Revisão de fonte primária concluída em 2026-09-09: conferidos desenho, população, desfecho, estimativas e limites; não atribuída classe de diretriz ao resultado do ensaio."
+  },
+  {
+    "slug": "raft-af-2022",
+    "title": "RAFT-AF: ritmo baseado em ablação versus controle de frequência na FA com insuficiência cardíaca",
+    "tema": "Fibrilação atrial",
+    "theme": "Fibrilação atrial",
+    "year": 2022,
+    "journal": "Circulation",
+    "pmid": "35313733",
+    "doi": "10.1161/CIRCULATIONAHA.121.057095",
+    "nct": "NCT01420393",
+    "design": "Ensaio randomizado. Ritmo baseado em ablação versus controle de frequência. Parado precocemente pelo DSMC por futilidade aparente.",
+    "population": "411 pacientes com FA de alta carga e insuficiência cardíaca: 214 ritmo por ablação versus 197 controle de frequência. Não é o recorte CASTLE-AF (FEVE ≤35% + CDI).",
+    "intervention": "Estratégia de controle de ritmo baseada em ablação por cateter.",
+    "control": "Controle de frequência.",
+    "primary_outcome": "Morte por qualquer causa ou eventos de insuficiência cardíaca.",
+    "key_findings": "n=411 (214 vs 197). Parado por futilidade aparente. Primário: 50/214 (23,4%) vs 64/197 (32,5%); HR 0,71; IC95% 0,49–1,03; P=0,066. Não houve diferença estatística no primário. Secundários: FEVE +10,1 vs +3,8 pontos percentuais (P=0,017); 6 minutos +44,9 vs +27,5 m (P=0,025); NT-proBNP −77,1% vs −39,2%. Eventos adversos graves: 50% em ambos os braços.",
+    "clinical_implications": "RAFT-AF não fechou o primário. Intervalo atravessa 1. P=0,066 e parada por futilidade não autorizam a frase «ablação reduz morte na IC». Não é CASTLE-AF (PMID 29385358; FEVE ≤35% + CDI; n=363; morte ou hospitalização por IC; HR 0,62; IC95% 0,43–0,87; P=0,007). Não é CASTLE-HTx (PMID 37634135; IC terminal referida para transplante; HR 0,24). Tendência nos secundários (FEVE, 6MWD, NT-proBNP) não substitui o primário. O resultado não demonstra benefício específico de desfechos clínicos na ICFEp. Não inventar NNT. Não dispensar CDI nem a terapia fundacional da IC.",
+    "source_refs": [
+      "Parkash R, Wells GA, Rouleau J, et al. Randomized Ablation-Based Rhythm-Control Versus Rate-Control Trial in Patients With Heart Failure and Atrial Fibrillation: Results from the RAFT-AF trial. Circulation. 2022;145:1693-1704. DOI 10.1161/CIRCULATIONAHA.121.057095. PMID 35313733. NCT01420393.",
+      "Marrouche NF, Brachmann J, Andresen D, et al. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378:417-427. PMID 29385358.",
+      "Sohns C, et al. Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation. N Engl J Med. 2023;389:1380-1389. PMID 37634135."
+    ],
+    "review_status": "revisado",
+    "study_type": "ensaio_clinico",
+    "summary": "Desenho: Ensaio randomizado. Ritmo baseado em ablação versus controle de frequência. Parado precocemente pelo DSMC por futilidade aparente.\n\nPopulação: 411 pacientes com FA de alta carga e insuficiência cardíaca: 214 ritmo por ablação versus 197 controle de frequência. Não é o recorte CASTLE-AF (FEVE ≤35% + CDI).\n\nIntervenção: Estratégia de controle de ritmo baseada em ablação por cateter.\n\nComparador: Controle de frequência.\n\nDesfecho primário: Morte por qualquer causa ou eventos de insuficiência cardíaca.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35313733/",
+    "published": true,
+    "document_slug": "raft-af-nao-fechou-o-primario-nao-e-castle-af",
+    "review_note": "Revisão de fonte primária concluída em 2026-09-09: conferidos desenho, população, desfecho, estimativas e limites; não atribuída classe de diretriz ao resultado do ensaio."
   }
 ]
