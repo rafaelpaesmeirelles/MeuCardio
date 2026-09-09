@@ -1,0 +1,195 @@
+{
+  "base_commit": "64796aa973316c94b47dcf8dc75a474415ecba34",
+  "documents": [
+    {
+      "path": "content/Arritmias/palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo.md",
+      "slug": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+      "new": true,
+      "words": 593,
+      "references": 1
+    },
+    {
+      "path": "content/Diabetes_e_cardiologia/consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal.md",
+      "slug": "consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal",
+      "new": true,
+      "words": 968,
+      "references": 4
+    },
+    {
+      "path": "content/Doença_coronariana/dor-toracica-exames-discordantes-reavaliacao-e-destino-seguro.md",
+      "slug": "dor-toracica-exames-discordantes-reavaliacao-e-destino-seguro",
+      "new": true,
+      "words": 812,
+      "references": 4
+    },
+    {
+      "path": "content/Doença_coronariana/fluxograma-sindrome-coronariana-cronica-esc-2024.md",
+      "slug": "fluxograma-sindrome-coronariana-cronica-esc-2024",
+      "new": false,
+      "words": 1008,
+      "references": 4
+    },
+    {
+      "path": "content/Doença_coronariana/primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias.md",
+      "slug": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+      "new": true,
+      "words": 838,
+      "references": 4
+    },
+    {
+      "path": "content/Doença_coronariana/suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao.md",
+      "slug": "suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao",
+      "new": true,
+      "words": 784,
+      "references": 4
+    },
+    {
+      "path": "content/Fibrilação_atrial/anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes.md",
+      "slug": "anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes",
+      "new": true,
+      "words": 749,
+      "references": 4
+    },
+    {
+      "path": "content/Fibrilação_atrial/fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care.md",
+      "slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+      "new": false,
+      "words": 1541,
+      "references": 3
+    },
+    {
+      "path": "content/Fibrilação_atrial/fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno.md",
+      "slug": "fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno",
+      "new": true,
+      "words": 683,
+      "references": 3
+    },
+    {
+      "path": "content/Hipertensão/edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao.md",
+      "slug": "edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao",
+      "new": true,
+      "words": 851,
+      "references": 2
+    },
+    {
+      "path": "content/Hipertensão/hipertensao-arterial-classificacao-diagnostico-metas.md",
+      "slug": "hipertensao-arterial-classificacao-diagnostico-metas",
+      "new": false,
+      "words": 2025,
+      "references": 6
+    },
+    {
+      "path": "content/Hipertensão/hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos.md",
+      "slug": "hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos",
+      "new": true,
+      "words": 832,
+      "references": 1
+    },
+    {
+      "path": "content/Hipertensão/hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro.md",
+      "slug": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+      "new": true,
+      "words": 787,
+      "references": 3
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/ic-primeira-consulta-dispneia-confirmacao-e-etiologia.md",
+      "slug": "ic-primeira-consulta-dispneia-confirmacao-e-etiologia",
+      "new": true,
+      "words": 696,
+      "references": 4
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao.md",
+      "slug": "ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao",
+      "new": true,
+      "words": 829,
+      "references": 4
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/ic-transicao-pos-alta-plano-primeiras-seis-semanas.md",
+      "slug": "ic-transicao-pos-alta-plano-primeiras-seis-semanas",
+      "new": true,
+      "words": 839,
+      "references": 3
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante.md",
+      "slug": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
+      "new": false,
+      "words": 722,
+      "references": 5
+    },
+    {
+      "path": "content/Insuficiência_cardíaca/icfer-classificacao-diagnostico-quatro-pilares.md",
+      "slug": "icfer-classificacao-diagnostico-quatro-pilares",
+      "new": false,
+      "words": 1006,
+      "references": 3
+    },
+    {
+      "path": "content/Prevenção_e_lipídios/dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025.md",
+      "slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+      "new": false,
+      "words": 751,
+      "references": 2
+    },
+    {
+      "path": "content/Prevenção_e_lipídios/lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica.md",
+      "slug": "lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica",
+      "new": true,
+      "words": 902,
+      "references": 4
+    },
+    {
+      "path": "content/Prevenção_e_lipídios/retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao.md",
+      "slug": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+      "new": true,
+      "words": 974,
+      "references": 4
+    },
+    {
+      "path": "content/Síncope/sincope-diagnostico-e-manejo-esc-2018.md",
+      "slug": "sincope-diagnostico-e-manejo-esc-2018",
+      "new": false,
+      "words": 2551,
+      "references": 4
+    },
+    {
+      "path": "content/Síncope/sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao.md",
+      "slug": "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao",
+      "new": true,
+      "words": 590,
+      "references": 3
+    },
+    {
+      "path": "content/Valvopatias/estenose-aortica-do-laudo-discordante-a-consulta-longitudinal.md",
+      "slug": "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+      "new": true,
+      "words": 699,
+      "references": 3
+    },
+    {
+      "path": "content/Valvopatias/insuficiencia-mitral-leitura-critica-do-laudo-e-preparo-da-decisao.md",
+      "slug": "insuficiencia-mitral-leitura-critica-do-laudo-e-preparo-da-decisao",
+      "new": true,
+      "words": 606,
+      "references": 2
+    }
+  ],
+  "new_documents": 18,
+  "corrected_documents": 7,
+  "internal_links": 359,
+  "explicit_new_relations": 81,
+  "new_tracks": 8,
+  "new_track_stages": 49,
+  "prior_relations_preserved": 3054,
+  "prior_tracks_preserved": 555,
+  "disease_loader_validated": true,
+  "errors": [],
+  "limits": [
+    "Validação de arquivos e contratos; banco de produção, importação, promoção editorial e interface online não executados.",
+    "Revisão científica assistida por IA e revisão cruzada; sem revisão humana declarada.",
+    "Este lote não certifica completude de todo o acervo."
+  ]
+}

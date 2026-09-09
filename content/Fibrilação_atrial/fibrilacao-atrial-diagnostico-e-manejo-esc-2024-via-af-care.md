@@ -1,13 +1,26 @@
 ---
-title: "Fibrilação Atrial: Diagnóstico e Manejo (ESC 2024) — Via AF-CARE"
+title: 'Fibrilação Atrial: Diagnóstico e Manejo (ESC 2024) — Via AF-CARE'
 slug: fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care
-theme: "Fibrilação atrial"
-kind: estudo
+theme: Fibrilação atrial
+kind: diretriz
 review_status: revisado
-source_refs: ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723", "The 2024 ESC guidelines on atrial fibrillation: essential updates for everyday clinical practice. Intern Emerg Med. 2025. PMID: 40514614"]
-legacy_source: "Fusão de dois documentos sobre a mesma diretriz na mesma pasta: este e fibrilacao-atrial-diagnostico-e-manejo-framework-af-care-esc-2024.md. Do absorvido vieram a expansão correta do acrônimo AF-CARE, o novo estilo de escrita das recomendações e o capítulo sobre inteligência artificial; ele também trazia uma seção 'Criterios internacao' inteiramente vazia, que não foi transposta. As referências de portal médico e o PDF hospedado em servidor universitário de terceiro foram trocados pela citação da própria diretriz."
+review_note: 'Correção pontual assistida por IA em 09/09/2026: delimitação ESC versus ACC/AHA. Sem alegação de revisão
+  humana das demais seções. Revisão científica assistida por IA e revisão cruzada entre agentes em 09/09/2026; ajustes
+  consolidados pelo coordenador. Não representa revisão humana independente. Escopo, fontes verificadas e limites
+  documentados em docs/producao-prevalentes-20260909.md.'
+source_refs:
+- 'Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed
+  in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723'
+- 'The 2024 ESC guidelines on atrial fibrillation: essential updates for everyday clinical practice. Intern Emerg
+  Med. 2025. PMID: 40514614'
+- 'Joglar JA et al. ACC/AHA/ACCP/HRS 2023. DOI: 10.1016/j.jacc.2023.08.017. https://pmc.ncbi.nlm.nih.gov/articles/PMC11104284/
+  — seções 6.3.1 e 8.2.1 verificadas em 09/09/2026.'
+legacy_source: 'Fusão de dois documentos sobre a mesma diretriz na mesma pasta: este e fibrilacao-atrial-diagnostico-e-manejo-framework-af-care-esc-2024.md.
+  Do absorvido vieram a expansão correta do acrônimo AF-CARE, o novo estilo de escrita das recomendações e o capítulo
+  sobre inteligência artificial; ele também trazia uma seção ''Criterios internacao'' inteiramente vazia, que não
+  foi transposta. As referências de portal médico e o PDF hospedado em servidor universitário de terceiro foram
+  trocados pela citação da própria diretriz.'
 ---
-
 # Fibrilação Atrial: Diagnóstico e Manejo (ESC 2024) — Via AF-CARE
 
 ## Definicao
@@ -27,7 +40,7 @@ Vale a atenção à letra **A**: ela é *Avoid stroke*, não "Anticoagulação".
 Recomendação forte para tratar obesidade, apneia obstrutiva do sono, hipertensão arterial, insuficiência cardíaca, diabetes e transtorno por uso de álcool.
 
 ## Novo escore de risco tromboembolico
-- **mudança**: o CHA₂DS₂-VASc foi substituído pelo **CHA₂DS₂-VA** — o ponto atribuído ao sexo feminino saiu
+- **mudança na ESC 2024**: o CHA₂DS₂-VASc foi substituído pelo **CHA₂DS₂-VA** — o ponto atribuído ao sexo feminino saiu; isso não elimina o uso do VASc em outras diretrizes
 - **justificativa**: a variável sexo não mudava a decisão final de anticoagular na prática, e a categorização binária não acomoda pessoas não binárias, transgênero ou em terapia hormonal
 - **recomendação**: anticoagulação recomendada com CHA₂DS₂-VA ≥2; com 1 ponto, pode ser considerada em decisão compartilhada, caso a caso
 
@@ -68,7 +81,37 @@ Mudança estrutural que ajuda na leitura: cada recomendação passou a especific
 A diretriz inclui considerações sobre o uso de inteligência artificial em análise preditiva no manejo da FA, registrando a tendência sem transformá-la em recomendação.
 
 ## Armadilhas clinicas
-- Continuar usando o CHA₂DS₂-VASc com ponto por sexo feminino, em vez do CHA₂DS₂-VA
-- Aplicar o corte de 48 horas para cardioversão sem ecocardiograma transesofágico, quando o corte atual é de 24 horas
+- Misturar pontos ou limiares do CHA₂DS₂-VASc com os do CHA₂DS₂-VA: identificar a diretriz e aplicar o escore correspondente
+- Aplicar a janela de 48 horas da ACC/AHA 2023 como se fosse o limiar da ESC 2024; a diretriz americana também exige avaliação individual dentro dessa janela
 - Tratar comorbidade como assunto secundário, quando ela é a primeira etapa do AF-CARE — apneia do sono, obesidade e álcool incluídos
 - Não reavaliar periodicamente, ignorando a etapa E do caminho
+
+
+## Comparação com a ACC/AHA/ACCP/HRS 2023
+
+A diretriz americana mantém CHA₂DS₂-VASc: anticoagulação recomendada no risco anual ≥2% (ex.: ≥2 no homem ou ≥3 na mulher), classe I/A. Para cardioversão eletiva de FA ≥48h, exige três semanas de anticoagulação terapêutica ininterrupta ou imagem para excluir trombo, classe I/B-R. Isso não torna toda FA <48h segura para cardioversão sem avaliação. [ACC/AHA 2023, seções 6.3.1 e 8.2.1](https://pmc.ncbi.nlm.nih.gov/articles/PMC11104284/).
+
+## Continuidade prática — Tudo com Tudo
+
+- [Primeira consulta e retorno](/biblioteca/fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno).
+- [Reconciliação renal e de doses](/biblioteca/anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes).
+- [CHA₂DS₂-VA](/biblioteca/cha2ds2-va), [HAS-BLED](/biblioteca/has-bled) e [Cockcroft-Gault](/biblioteca/clearance-de-creatinina-cockcroft-gault-ajuste-de-dose-em-cardiologia).
+
+
+## Recursos relacionados no CorVIA
+
+- [Palpitações: monitorização e correlação entre sintoma e ritmo](/biblioteca/palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo)
+- [Fibrilação atrial na primeira consulta: plano longitudinal e retorno](/biblioteca/fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno)
+- [Anticoagulação na FA: reconciliação de dose, função renal e interações](/biblioteca/anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes)
+- [Fibrilação atrial](/doencas/fibrilacao-atrial)
+- [CHA₂DS₂-VASc (referencial AHA/ACC)](/calculadoras/cha2ds2-vasc)
+- [HAS-BLED](/calculadoras/has-bled)
+- [Cockcroft–Gault](/calculadoras/cockcroft-gault)
+- [HAS-BLED alto: motivo para não anticoagular na fibrilação atrial?](/casos-clinicos/has-bled-alto-e-motivo-para-nao-anticoagular)
+- [Holter — monitorização eletrocardiográfica ambulatorial](/exames/holter-24h)
+- [apixabana](/medicamentos?slug=apixabana)
+- [Fibrilação atrial](/material-paciente/fibrilacao-atrial)
+- [alta pos fibrilacao atrial](/checklists/alta-pos-fibrilacao-atrial)
+- [FA e palpitações: reconhecimento, decisão e segurança da anticoagulação](/trilhas/trilha-consulta-progressiva-fibrilacao-atrial)
+
+Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.
