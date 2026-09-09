@@ -2,10 +2,11 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api, ApiError, PaginaDe } from "../lib/api";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import { exactSearchAnchors } from "../lib/searchAnchors";
 
-type Res = { slug: string; title: string; kind: string; frente?: string; theme: string | null; snippet: string; ano?: number; rank?: number };
+type Res = { slug: string; title: string; kind: string; frente?: string; theme: string | null; snippet: string; ano?: number; rank?: number; relation_type?: string | null; context_only?: boolean };
 type PrimaryDisease = { slug: string; name: string; summary: string; area: string; category: string };
-type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; primary_disease?: PrimaryDisease | null };
+type SearchResponse = { results: Res[]; total: number; next_offset?: number | null; por_frente: Record<string, number>; primary_disease?: PrimaryDisease | null; supplementary_groups?: Rel[] };
 type Drug = { slug: string; generic_name: string; drug_class: string; brand_names?: string[]; commercial_names?: string[] };
 type Insight = Drug & {
   mechanism: string | null; presentations: string[]; dosing: Record<string, unknown>;
@@ -139,6 +140,22 @@ function mergeGraphGroups(respostas: GraphResponse[], resultados: Res[]): Rel[] 
   return [...grupos.values()].filter((grupo) => grupo.itens.length > 0);
 }
 
+function connectionLabel(item: Res): string | null {
+  const labels: Record<string, string> = {
+    contraindicated_in: "Contraindicação relacionada — verificar o contexto",
+    contraindicated_with: "Contraindicação de associação — verificar o contexto",
+    interacts_with: "Interação medicamentosa relacionada",
+    monitor_with: "Monitorização relacionada",
+    diagnosed_by: "Investigação diagnóstica relacionada",
+    differential_for: "Diagnóstico diferencial relacionado",
+    supported_by: "Fundamentação científica relacionada",
+    studied_in: "Estudo relacionado ao assunto",
+    mentioned_in: "Assunto citado neste conteúdo",
+    patient_education_for: "Orientação ao paciente sobre o assunto",
+  };
+  return item.relation_type ? labels[item.relation_type] ?? null : null;
+}
+
 function Snippet({ texto }: { texto: string }) {
   return <>{texto.split(/<\/?mark>/i).map((p, i) => i % 2 ? <mark key={i}>{p}</mark> : p)}</>;
 }
@@ -217,7 +234,10 @@ export default function Busca() {
     }
     let ecossistemaDoenca: GraphResponse | null = null;
     let ecossistemaEntidade: GraphResponse | null = null;
-    if (disease) {
+    if (disease && s.value.supplementary_groups !== undefined) {
+      const grupos = s.value.supplementary_groups;
+      ecossistemaDoenca = { grupos, total: grupos.reduce((n, g) => n + g.itens.length, 0) };
+    } else if (disease) {
       try { ecossistemaDoenca = await api.get<GraphResponse>(`/relacionados/doenca/${encodeURIComponent(disease.slug)}`); }
       catch (e) { if (id === seq.current) setAviso((atual) => atual || (e instanceof ApiError ? e.message : "Ecossistema clínico da doença temporariamente indisponível.")); }
       if (id !== seq.current) return;
@@ -229,8 +249,7 @@ export default function Busca() {
       if (id !== seq.current) return;
     }
     if (!disease && !medicamentoSlug) {
-      const termoNormalizado = norm(termo);
-      const exatos = itens.filter((item) => norm(item.title) === termoNormalizado || norm(item.slug.replaceAll("-", " ")) === termoNormalizado);
+      const exatos = exactSearchAnchors(itens, termo);
       if (exatos.length === 1) {
         const entidade = graphEntity(exatos[0]);
         if (entidade) {
@@ -245,18 +264,10 @@ export default function Busca() {
       }
     }
     const fontesRelacionadas: GraphResponse[] = [];
-    if (itens.length > 0) {
-      // Arestas diretas continuam prioritárias. O ecossistema da doença
-      // complementa com tema estruturado e match contextual auditável.
-      const candidatos: Res[] = [];
-      const frentesVisitadas = new Set<string>();
-      for (const item of itens) {
-        const entidade = graphEntity(item);
-        if (!entidade || frentesVisitadas.has(entidade)) continue;
-        candidatos.push(item);
-        frentesVisitadas.add(entidade);
-        if (candidatos.length === 8) break;
-      }
+    if (!disease && !medicamentoSlug && !ecossistemaEntidade && itens.length > 0) {
+      // Expand only exact identities of the question. Expanding arbitrary
+      // lexical hits admits unrelated second-hop neighbours into the answer.
+      const candidatos = exactSearchAnchors(itens, termo).filter((item) => graphEntity(item));
       const conexoes = await Promise.allSettled(candidatos.map((item) => {
         const query = new URLSearchParams({ entity_type: graphEntity(item) as string, slug: item.slug, limite_por_tipo: "6" });
         return api.get<GraphResponse>(`/grafo/relacionados?${query.toString()}`);
@@ -307,16 +318,16 @@ export default function Busca() {
     {erro && <Erro mensagem={erro} />}{aviso && <p className="cartao" role="status">{aviso}</p>}{loading && <Carregando texto="Conectando o conhecimento…" />}
     {!loading && primaryDisease && <PainelDoenca disease={primaryDisease} />}
     {!loading && drug && <PainelDrug d={drug} />}
-    {!loading && res && res.length > 0 && <section className="cartao">
+    {!loading && res && (res.length > 0 || rel.length > 0) && <section className="cartao">
       <header className="tct-head"><div><p className="eyebrow">{primaryDisease ? "Sequência clínica" : "Mapa do assunto"}</p><h2>{primaryDisease ? "Da definição à decisão" : "Conteúdo conectado"}</h2><p>{res.length}{total > res.length ? ` de ${total}` : ""} resultados por frente de conhecimento</p></div></header>
       <nav className="tct-nav" aria-label="Frentes de conhecimento">{ordenados.map(([s, xs]) => <a className="selo" href={`#secao-${s}`} key={s}>{SECOES[s][0]} · {porFrente[s] ?? xs.length}</a>)}</nav>
       <div className="grade grade--2 tct-grid">
-        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.frente || r.kind}-${r.slug}`}><small>{r.theme || SECOES[s][0]} · {ROTULOS[r.frente || r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
+        {ordenados.map(([s, xs]) => <section className="cartao tct-group" id={`secao-${s}`} key={s}><header><p className="eyebrow">{xs.length} resultado{xs.length > 1 ? "s" : ""}</p><h3>{SECOES[s][0]}</h3><p>{SECOES[s][1]}</p></header><div>{xs.map((r) => <Link className="tct-row" to={rota(r)} key={`${r.frente || r.kind}-${r.slug}`}><small>{r.theme || SECOES[s][0]} · {ROTULOS[r.frente || r.kind] ?? r.kind}{r.ano ? ` · ${r.ano}` : ""}</small><strong>{r.title}</strong>{connectionLabel(r) && <small>{connectionLabel(r)}</small>}{r.snippet && <p><Snippet texto={r.snippet} /></p>}</Link>)}</div></section>)}
         {rel.map((g) => <section className="cartao tct-group" key={`grafo-${g.tipo}`}><header><p className="eyebrow">Conteúdo conectado</p><h3>{g.rotulo || REL_LABELS[g.tipo] || g.tipo}</h3>{g.rota_lista && <Link to={g.rota_lista}>Ver área →</Link>}</header><div>{g.itens.map((x) => <Link className="tct-row" to={x.rota} key={`${g.tipo}-${x.slug}`}><small>{x.context_only || x.relation_scope === "structured_clinical_topic" ? "Mesmo tema clínico" : x.relation_scope === "clinical_match" ? "Relação contextual determinística" : "Relação direta"}</small><strong>{x.titulo}</strong>{x.subtitulo && <p>{x.subtitulo}</p>}</Link>)}</div></section>)}
       </div>
       {nextOffset != null && <div style={{ display: "flex", justifyContent: "center", marginTop: "1rem" }}><button className="botao botao--secundario" type="button" disabled={loadingMore} onClick={() => void carregarMais()}>{loadingMore ? "Conectando mais conteúdo…" : `Carregar mais · ${Math.max(total - res.length, 0)} restantes`}</button></div>}
     </section>}
     {!loading && timeline.length > 0 && <section className="cartao tct-time"><p className="eyebrow">Timeline</p><h2>Estudos e evidências ao longo do tempo</h2><ol>{timeline.map((r) => <li key={`${r.kind}-${r.slug}`}><time>{r.ano}</time><Link to={rota(r)}><small>{SECOES[secao(r)][0]}</small><strong>{r.title}</strong></Link></li>)}</ol></section>}
-    {!loading && res?.length === 0 && !drug && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
+    {!loading && res?.length === 0 && rel.length === 0 && !drug && !primaryDisease && <Vazio titulo="Nada encontrado" acao="Tente o princípio ativo ou um sinônimo clínico." />}
   </main>;
 }

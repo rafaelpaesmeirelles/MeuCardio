@@ -6,18 +6,18 @@ from app.core.db import get_db
 from app.core.security import current_user
 from app.models.specialty_guide import SpecialtyDisease
 from app.services.catalog_search import (
-    COUNT_SQL,
+    DISEASE_SQL,
     INTERNAL_MARKER_SQL_PATTERN,
     INTERNAL_OVERRIDE_SQL_PATTERN,
-    LITERAL_COUNT_SQL,
-    LITERAL_SQL,
+    LITERAL_PAGE_SQL,
     PRIMARY_DISEASE_SQL,
-    SQL,
+    PAGE_SQL,
     calculadoras_encontradas,
     literal_like,
     normalizar,
 )
 from app.services.clinical_text import clinical_text_without_internal_overrides
+from app.services.connected_content import buscar_relacionados_da_doenca
 
 router = APIRouter(prefix="/api/search", tags=["busca"])
 
@@ -28,47 +28,12 @@ def _disease_identity_phrases(disease: SpecialtyDisease) -> tuple[str, ...]:
     phrases: list[str] = []
     for value in values:
         phrase = normalizar(str(value or "")).replace("-", " ").strip()
-        if not phrase or phrase in seen:
+        if len(phrase.replace(" ", "")) < 2 or phrase in seen:
             continue
         seen.add(phrase)
         phrases.append(phrase)
     return tuple(sorted(phrases, key=lambda value: (-len(value.split()), -len(value))))
 
-
-def _row_has_strong_disease_identity(row: dict, disease: SpecialtyDisease) -> bool:
-    """Disease-mode search accepts identity in title/slug, never body-only mentions."""
-    if row.get("frente") == "calculadora":
-        return True
-    if row.get("frente") == "doenca" and row.get("slug") == disease.slug:
-        return True
-
-    title = normalizar(str(row.get("title") or "")).replace("-", " ")
-    slug = normalizar(str(row.get("slug") or "")).replace("-", " ")
-    haystack = f" {title} {slug} "
-    slug_tokens = set(slug.split())
-
-    # Prevent the high-impact lexical collision reported in production.
-    if disease.slug == "hipertensao-arterial-sistemica" and (
-        "hipertensao pulmonar" in haystack or "hipertensao arterial pulmonar" in haystack
-    ):
-        return False
-
-    for phrase in _disease_identity_phrases(disease):
-        parts = phrase.split()
-        if len(parts) == 1:
-            # One-word aliases/acronyms are accepted only as a slug token.
-            if parts[0] in slug_tokens:
-                return True
-        elif f" {phrase} " in haystack:
-            return True
-    return False
-
-
-def _precision_disease_rows(
-    rows: list[dict], disease: SpecialtyDisease, *, cap: int = 36,
-) -> list[dict]:
-    kept = [row for row in rows if _row_has_strong_disease_identity(row, disease)]
-    return kept[:cap]
 
 # A consulta SQL do catálogo (as 13 frentes + calculadoras) mora em
 # `app/services/catalog_search.py` — reaproveitada também pela busca léxica
@@ -90,105 +55,124 @@ def search(
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
-    calculadoras = calculadoras_encontradas(q) if frente in (None, "calculadora") else []
+    # Resolve aliases before retrieval. FA and its canonical name use the same
+    # candidate set, including connections whose title does not repeat FA.
+    disease_rows = db.execute(PRIMARY_DISEASE_SQL, {"q": q}).mappings().all()
+    resolved = dict(disease_rows[0]) if len(disease_rows) == 1 else None
+    disease_model = None
+    if resolved is not None:
+        disease_model = db.execute(
+            select(SpecialtyDisease).where(
+                SpecialtyDisease.slug == resolved["slug"],
+                SpecialtyDisease.published.is_(True),
+            )
+        ).scalar_one_or_none()
+    primary_disease = resolved if frente in (None, "doenca") else None
+    if primary_disease is not None:
+        primary_disease["summary"] = clinical_text_without_internal_overrides(
+            primary_disease.get("summary")
+        )
+
+    query = disease_model.name if disease_model is not None else q
+    calculadoras = calculadoras_encontradas(query) if frente in (None, "calculadora") else []
+    if disease_model is not None and frente in (None, "calculadora"):
+        seen_calculators = {item["slug"] for item in calculadoras}
+        for phrase in _disease_identity_phrases(disease_model):
+            for item in calculadoras_encontradas(phrase):
+                if item["slug"] not in seen_calculators:
+                    calculadoras.append(item)
+                    seen_calculators.add(item["slug"])
+    ecosystem = None
+    disease_links: list[str] = []
+    supplementary_groups: list[dict] = []
+    connection_metadata: dict[str, dict] = {}
+    if disease_model is not None:
+        ecosystem = buscar_relacionados_da_doenca(db, disease_model.slug)
+        for group in (ecosystem or {}).get("grupos", []):
+            kind = {"fluxograma": "documento", "protocolo_emergencia": "emergencia"}.get(
+                group["tipo"], group["tipo"]
+            )
+            disease_links.extend(
+                f"{kind}:{item['slug']}" for item in group.get("itens", [])
+                if item.get("slug") and not item.get("context_only")
+            )
+            for item in group.get("itens", []):
+                if item.get("slug"):
+                    connection_metadata.setdefault(f"{kind}:{item['slug']}", item)
+            recommendations = [item for item in group.get("itens", [])
+                               if item.get("relation_method") == "SpecialtyDisease.tests"]
+            if recommendations:
+                supplementary_groups.append({**group, "itens": recommendations})
+        if frente in (None, "calculadora"):
+            # Retrieve the calculator's actual catalogue row, not a synthetic
+            # result or a new clinical indication inferred by the search.
+            from app.services import calculators as calc
+            linked = set(disease_links)
+            existing = {item["slug"] for item in calculadoras}
+            for calculator in calc.REGISTRY.values():
+                if f"calculadora:{calculator.slug}" in linked and calculator.slug not in existing:
+                    exact = [item for item in calculadoras_encontradas(calculator.slug)
+                             if item["slug"] == calculator.slug]
+                    calculadoras.extend(exact)
+                    existing.add(calculator.slug)
+        disease_links.append(f"doenca:{disease_model.slug}")
+
     if frente == "calculadora":
         rows = calculadoras[offset:offset + limit]
         next_offset = offset + len(rows)
         return {
-            "query": q,
-            "count": len(rows),
-            "total": len(calculadoras),
-            "limit": limit,
-            "offset": offset,
+            "query": q, "count": len(rows), "total": len(calculadoras),
+            "limit": limit, "offset": offset,
             "next_offset": next_offset if next_offset < len(calculadoras) else None,
             "por_frente": {"calculadora": len(calculadoras)} if calculadoras else {},
-            "primary_disease": None,
-            "results": rows,
+            "primary_disease": None, "results": rows,
         }
 
-    # Na busca transversal, calculadoras ocupam o início da sequência paginada
-    # e o banco recebe apenas as vagas restantes. Descontar essa frente do
-    # offset mantém páginas estáveis e garante `count <= limit`.
-    calculator_rows = (
-        calculadoras[offset:offset + limit]
-        if frente is None and offset < len(calculadoras)
-        else []
-    )
+    calculator_rows = calculadoras[offset:offset + limit] if frente is None else []
     database_limit = limit - len(calculator_rows)
     database_offset = max(0, offset - len(calculadoras)) if frente is None else offset
     values = {
-        "q": q, "q_like": literal_like(q), "frente": frente,
+        "q": query, "q_like": literal_like(query), "frente": frente,
         "limit": database_limit, "offset": database_offset,
     }
+    sql = PAGE_SQL
+    if disease_model is not None:
+        sql = DISEASE_SQL
+        values.update({
+            "disease_phrases": list(_disease_identity_phrases(disease_model)),
+            "disease_links": list(dict.fromkeys(disease_links)),
+            "systemic_hypertension": disease_model.slug == "hipertensao-arterial-sistemica",
+        })
     search_values = {
         **values,
-        # Binds intencionais: interpolar regex POSIX em `text()` faria o parser
-        # do SQLAlchemy interpretar `:space`/`:plain` como parâmetros espúrios.
         "internal_override_pattern": INTERNAL_OVERRIDE_SQL_PATTERN,
         "internal_marker_pattern": INTERNAL_MARKER_SQL_PATTERN,
     }
-    raw_rows = db.execute(SQL, search_values).mappings().all() if database_limit else []
-    count_rows = db.execute(COUNT_SQL, values).mappings().all()
-    # A busca literal é um fallback, nunca um segundo braço OR da consulta
-    # indexada. Isso evita duas varreduras integrais em toda busca normal.
-    if not count_rows and normalizar(q):
-        raw_rows = db.execute(LITERAL_SQL, search_values).mappings().all() if database_limit else []
-        count_rows = db.execute(LITERAL_COUNT_SQL, values).mappings().all()
+    page = db.execute(sql, search_values).mappings().one()
+    raw_rows = page["results"]
+    por_frente = page["por_frente"]
+    if disease_model is None and not por_frente and normalizar(q):
+        page = db.execute(LITERAL_PAGE_SQL, search_values).mappings().one()
+        raw_rows = page["results"]
+        por_frente = page["por_frente"]
 
     rows = calculator_rows + [dict(row) for row in raw_rows]
     for row in rows:
         if isinstance(row.get("snippet"), str):
             row["snippet"] = clinical_text_without_internal_overrides(row["snippet"])
-
-    disease_rows = (
-        db.execute(PRIMARY_DISEASE_SQL, {"q": q}).mappings().all()
-        if frente in (None, "doenca") else []
-    )
-    primary_disease = dict(disease_rows[0]) if len(disease_rows) == 1 else None
-    disease_model = None
-    if primary_disease is not None:
-        primary_disease["summary"] = clinical_text_without_internal_overrides(
-            primary_disease.get("summary")
-        )
-        disease_model = db.execute(
-            select(SpecialtyDisease).where(
-                SpecialtyDisease.slug == primary_disease["slug"],
-                SpecialtyDisease.published.is_(True),
-            )
-        ).scalar_one_or_none()
-
-    if disease_model is not None and frente is None:
-        # Exact disease query: high precision only. The structured ecosystem
-        # supplies indirect but clinically curated connections separately.
-        rows = _precision_disease_rows(rows, disease_model, cap=min(limit, 36))
-        por_frente: dict[str, int] = {}
-        for row in rows:
-            key = str(row.get("frente") or row.get("kind") or "")
-            if key:
-                por_frente[key] = por_frente.get(key, 0) + 1
-        total = len(rows)
-        next_offset = None
-    else:
-        por_frente = {
-            str(row["frente"]): int(row["total"])
-            for row in count_rows
-        }
-        if calculadoras:
-            por_frente["calculadora"] = len(calculadoras)
-        total_banco = sum(
-            value for key, value in por_frente.items() if key != "calculadora"
-        )
-        total = total_banco + len(calculadoras)
-        next_offset_value = offset + len(rows)
-        next_offset = next_offset_value if next_offset_value < total else None
+        relation = connection_metadata.get(f"{row['frente']}:{row['slug']}")
+        if relation is not None:
+            row["relation_type"] = relation.get("relation_type")
+            row["context_only"] = relation.get("context_only", False)
+    por_frente = {str(kind): int(count) for kind, count in por_frente.items()}
+    if calculadoras:
+        por_frente["calculadora"] = len(calculadoras)
+    total = sum(por_frente.values())
+    next_offset = offset + len(rows)
     return {
-        "query": q,
-        "count": len(rows),
-        "total": total,
-        "limit": limit,
-        "offset": offset,
-        "next_offset": next_offset,
-        "por_frente": por_frente,
-        "primary_disease": primary_disease,
+        "query": q, "count": len(rows), "total": total, "limit": limit, "offset": offset,
+        "next_offset": next_offset if next_offset < total else None,
+        "por_frente": por_frente, "primary_disease": primary_disease,
+        "supplementary_groups": supplementary_groups,
         "results": rows,
     }
