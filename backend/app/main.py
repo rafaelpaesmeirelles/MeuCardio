@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -31,6 +33,18 @@ configure_observability_logging()
 validar_configuracao_de_execucao(settings)
 configurar_modo_investidor()
 
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # Marco real de coleta, antes de servir webhooks; nunca inferido de um replay.
+    from app.core.db import SessionLocal
+    from app.services.admin_activity import tracking_started
+    with SessionLocal() as db:
+        tracking_started(db)
+        db.commit()
+    yield
+
+
 app = FastAPI(
     title="Corvia — API",
     description=(
@@ -40,6 +54,7 @@ app = FastAPI(
     version="0.1.0",
     docs_url="/api/docs",
     openapi_url="/api/openapi.json",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -85,6 +100,7 @@ ADMIN_USER_DELETE_ROUTER = getattr(_admin_user_delete, "router")
 PATIENT_MULTIMODAL_DELETE_GUARD_ROUTER = getattr(_patient_multimodal_delete_guard, "router")
 
 ROUTERS_LIVRES = (
+    presence.heartbeat_router,
     health.router, auth.router, identity_profile.router, browser_session.router, social_login.router, password_reset.router,
     sessions.router, billing.router,
     # Precisa preceder admin.router: substitui somente /users/{id}/decidir para

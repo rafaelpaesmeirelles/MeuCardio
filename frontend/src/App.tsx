@@ -7,6 +7,7 @@ import OptionalFeatureBoundary from "./components/OptionalFeatureBoundary";
 import { cardiologySpacesEnabled } from "./lib/cardiologySpacesFeature";
 import { heartTeamEnabled, whatsappAssistantEnabled } from "./lib/aiFeatureFlags";
 import { useAuth } from "./lib/auth";
+import { useActivityHeartbeat } from "./lib/useActivityHeartbeat";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Produto = lazy(() => import("./pages/Produto"));
@@ -48,6 +49,7 @@ const CardiovascularExamAI = lazy(() => import("./pages/CardiovascularExamAI"));
 const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
+const AdminAtividade = lazy(() => import("./pages/AdminAtividade"));
 const AdminAssinantes = lazy(() => import("./pages/AdminAssinantes"));
 const AdminFichaAssinante = lazy(() => import("./pages/AdminFichaAssinante"));
 const AdminGerenciarUsuario = lazy(() => import("./pages/AdminGerenciarUsuario"));
@@ -103,6 +105,7 @@ function RotasSuspensas({ children }: { children: ReactNode }) {
 
 export default function App() {
   const { usuario, carregando } = useAuth();
+  useActivityHeartbeat(usuario?.id);
   const location = useLocation();
 
   useEffect(() => {
@@ -247,6 +250,7 @@ export default function App() {
           <Route path="excluir-conta" element={<ExcluirConta />} />
           <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && <Route path="admin/atividade" element={<AdminAtividade />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios" element={<AdminAssinantes />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios/:id" element={<AdminFichaAssinante />} />}
           {usuario.role === "admin" && <Route path="admin/usuarios/:id/gerenciar" element={<AdminGerenciarUsuario />} />}

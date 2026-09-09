@@ -5,7 +5,7 @@ import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { whatsappAssistantEnabled } from "../lib/aiFeatureFlags";
 import { googleAccountConnectVisible } from "../lib/cardiologySpacesFeature";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
 const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
@@ -1191,6 +1191,7 @@ export default function MinhaConta() {
           {saindo ? "Saindo…" : "Sair do sistema"}
         </button>
       </div>
+      {usuario?.role === "admin" && <Link to="/admin/atividade" className="cartao cartao--clinico" style={{ display: "block", margin: "0.8rem 0", textDecoration: "none" }}><strong>Administração · Atividade e crescimento →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Cadastros, assinaturas, acessos e pessoas ativas agora.</p></Link>}
       {perfil.profile_completion_required && (
         <div className="cartao" role="status" style={{ borderLeft: "4px solid var(--destaque)" }}>
           <strong>Complete seus dados pessoais e profissionais para continuar.</strong>

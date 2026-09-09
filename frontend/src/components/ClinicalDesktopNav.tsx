@@ -142,6 +142,7 @@ const SPACE_META: Record<SpaceKey, { label: string; icon: NomeIcone; actions: Na
       { to: "/sincronizacao", label: "Contas conectadas", icon: "sincronizar" },
       { to: "/minha-conta", label: "Minha conta", icon: "conta" },
       { to: "/admin", label: "Administração", icon: "gestao", adminOnly: true },
+      { to: "/admin/atividade", label: "Atividade e crescimento", icon: "indicadores", adminOnly: true },
     ],
   },
 };

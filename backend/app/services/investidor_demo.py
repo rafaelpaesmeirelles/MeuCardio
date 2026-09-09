@@ -38,6 +38,8 @@ _ESCRITAS_AUTH_PERMITIDAS = {
     "/api/auth/sessao",
     "/api/auth/login",
     "/api/auth/sair",
+    # Somente presença efêmera e agregada no Redis; sem operação de produto.
+    "/api/presence/heartbeat",
 }
 
 _ESCRITAS_UX_SIMULADAS = {

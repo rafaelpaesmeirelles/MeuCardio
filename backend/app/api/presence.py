@@ -10,12 +10,20 @@ from app.models.user import User
 from app.services.professional_profile import council_display
 
 router = APIRouter(prefix="/api/presence", tags=["presença online"])
+heartbeat_router = APIRouter(prefix="/api/presence", tags=["presença administrativa"])
 
 ONLINE_WINDOW = timedelta(minutes=5)
 
 
 class PresencePreferenceIn(BaseModel):
     visible: bool
+
+
+@heartbeat_router.post("/heartbeat")
+def visible_page_heartbeat(user: User = Depends(current_user)):
+    """Presença agregada administrativa, separada da preferência social pública."""
+    from app.services.admin_activity import heartbeat
+    return heartbeat(user.id)
 
 
 def _public_user(user: User) -> dict:

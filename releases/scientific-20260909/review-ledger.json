@@ -4,7 +4,7 @@
   "source_count": 697,
   "ready_count": 697,
   "joint_release_ready": true,
-  "publication_state": "prepared",
+  "publication_state": "published",
   "pack_sha256": "9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9",
   "claude": [
     {
@@ -17587,5 +17587,6 @@
       "merge_into": "pirtobrutinibe-inibidor-de-btk-nao-covalente-e-menor-toxicidade-cardiovascular",
       "reason": "Original preservado sem publicação separada. Revisão independente do primário PMC12904240 (métodos e tabela 3) e comparação completa com Claude16 demonstram a mesma pergunta: eficácia e segurança cardiovascular do pirtobrutinibe versus ibrutinibe. O canônico já incorpora população, ORR, FA, hipertensão e sangramento corretamente. Não transportar alegação de superioridade confirmatória do ORR, ranking versus ELEVATE-RR, causalidade da seletividade ou indicação regulatória do original. Consolidar no destino revisado; vínculos TCT do original conferidos no release-catalog."
     }
-  ]
+  ],
+  "published_at": "2026-09-09T20:39:22.582080+00:00"
 }

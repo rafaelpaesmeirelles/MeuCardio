@@ -1,0 +1,67 @@
+.admin-atividade { width: 100%; max-width: 1320px; min-width: 0; margin: 0 auto; color: var(--texto); }
+.admin-atividade__header, .admin-atividade__status { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.admin-atividade__header h1 { margin: .2rem 0 .4rem; font-size: clamp(1.45rem, 2.6vw, 2rem); }
+.admin-atividade__header p:not(.eyebrow), .admin-atividade__caption, .admin-atividade__status span { color: var(--texto-secundario); font-size: .84rem; }
+.admin-atividade__header .botao { flex-shrink: 0; }
+.admin-atividade__controls { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-top: 1.15rem; }
+.admin-atividade__controls fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.admin-atividade__controls legend, .admin-atividade__date { font-size: .78rem; font-weight: 650; }
+.admin-atividade__controls legend { padding: 0; margin-bottom: 6px; }
+.admin-atividade__periods { display: flex; padding: 3px; border: 1px solid var(--borda); border-radius: 10px; background: var(--superficie); gap: 3px; }
+.admin-atividade__periods button { min-height: 36px; padding: 6px 15px; background: transparent; color: var(--texto-secundario); border: 1px solid transparent; border-radius: 7px; cursor: pointer; font: inherit; font-size: .82rem; }
+.admin-atividade__periods button[aria-pressed="true"] { background: var(--acento-tinta); color: var(--acento); border-color: var(--borda); font-weight: 750; }
+.admin-atividade__periods button:focus-visible, .admin-atividade__table-wrap:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+.admin-atividade__date { display: grid; gap: 6px; }
+.admin-atividade__date input { min-height: 44px; width: 170px; margin: 0; }
+.admin-atividade__controls > .botao { min-height: 44px; }
+.admin-atividade__caption { margin: .65rem 0; line-height: 1.5; }
+.admin-atividade__status { font-size: .8rem; margin: 1rem 0 .7rem; }
+.admin-atividade__cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.admin-atividade__metric, .admin-atividade__chart, .admin-atividade__definitions { min-width: 0; padding: 17px; border: 1px solid var(--borda); border-radius: 12px; background: var(--superficie); }
+.admin-atividade__metric { border-top: 3px solid var(--acento); }
+.admin-atividade__metric--subscriptions { border-top-color: #14b8a6; }
+.admin-atividade__metric--accesses { border-top-color: #3b82f6; }
+.admin-atividade__metric--presence { border-top-color: #22b8cf; }
+.admin-atividade__metric h2 { margin: 0; font-size: .85rem; font-weight: 650; }
+.admin-atividade__number { display: block; margin: .5rem 0; font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.2; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.admin-atividade__metric p, .admin-atividade__metric small { display: block; margin: .3rem 0 0; color: var(--texto-secundario); font-size: .75rem; line-height: 1.5; }
+.admin-atividade__partial { display: inline-block; font-size: .66rem; font-weight: 500; color: var(--texto-secundario); margin-left: 3px; vertical-align: middle; }
+.admin-atividade__section { margin-top: 1.5rem; }
+.admin-atividade__section > h2, .admin-atividade__definitions h2 { font-size: 1.05rem; margin: 0 0 .6rem; }
+.admin-atividade__charts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: .8rem 0; }
+.admin-atividade__chart { --activity-bar: #0284c7; padding: 13px; }
+.admin-atividade__chart--subscriptions { --activity-bar: #14b8a6; }
+.admin-atividade__chart--accesses { --activity-bar: #3b82f6; }
+.admin-atividade__chart-heading { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.admin-atividade__chart-heading h3 { margin: 0; font-size: .8rem; }
+.admin-atividade__chart-heading small, .admin-atividade__chart-axis { color: var(--texto-secundario); font-size: .68rem; }
+.admin-atividade__bars { height: 100px; display: flex; align-items: flex-end; gap: 3px; border-bottom: 1px solid var(--borda); margin-top: 17px; }
+.admin-atividade__bar-slot { flex: 1; min-width: 0; height: 100%; display: flex; align-items: flex-end; }
+.admin-atividade__bar-slot > span { display: block; width: 100%; background: var(--activity-bar); border-radius: 3px 3px 0 0; }
+.admin-atividade__bar-slot > .is-unavailable { border-top: 2px dotted var(--texto-secundario); }
+.admin-atividade__chart-empty { height: 100px; margin: 17px 0 0; display: flex; align-items: center; justify-content: center; font-size: .76rem; color: var(--texto-secundario); text-align: center; }
+.admin-atividade__chart-axis { display: flex; justify-content: space-between; margin-top: 6px; }
+.admin-atividade__table-wrap { overflow-x: auto; max-width: 100%; border: 1px solid var(--borda); border-radius: 10px; background: var(--superficie); }
+.admin-atividade table { width: 100%; min-width: 550px; border-collapse: collapse; font-size: .78rem; font-variant-numeric: tabular-nums; }
+.admin-atividade th, .admin-atividade td { text-align: right; padding: 10px 13px; border-bottom: 1px solid var(--borda); }
+.admin-atividade th:first-child { text-align: left; }
+.admin-atividade thead th { font-size: .7rem; color: var(--texto-secundario); background: var(--superficie-suave, var(--superficie)); }
+.admin-atividade tbody th { font-weight: 500; }
+.admin-atividade tr:last-child > * { border-bottom: 0; }
+.admin-atividade caption { text-align: left; padding: 10px 13px; color: var(--texto-secundario); font-size: .74rem; border-bottom: 1px solid var(--borda); }
+.admin-atividade__definitions { margin-top: 1.5rem; }
+.admin-atividade__definitions dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 22px; margin: 0; }
+.admin-atividade__definitions dt { font-size: .8rem; font-weight: 700; }
+.admin-atividade__definitions dd { margin: 4px 0 0; color: var(--texto-secundario); font-size: .77rem; line-height: 1.6; overflow-wrap: anywhere; }
+@media (max-width: 1050px) { .admin-atividade__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) {
+  .admin-atividade__charts, .admin-atividade__definitions dl { grid-template-columns: minmax(0, 1fr); }
+  .admin-atividade__header { align-items: flex-start; }
+  .admin-atividade__controls { gap: 10px; }
+  .admin-atividade__controls fieldset { flex: 1 1 100%; }
+  .admin-atividade__periods button { flex: 1; min-height: 40px; padding: 6px 8px; }
+  .admin-atividade__metric { padding: 12px; }
+  .admin-atividade__number { font-size: 1.8rem; }
+  .admin-atividade__status { align-items: flex-start; flex-direction: column; gap: 5px; }
+}
+@media (max-width: 359px) { .admin-atividade__cards { grid-template-columns: minmax(0, 1fr); } }

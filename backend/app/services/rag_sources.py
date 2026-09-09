@@ -71,8 +71,20 @@ def _texto_trilha(item: StudyTrack) -> str:
 
 
 def _texto_material_paciente(item: PatientMaterial) -> str:
+    # Seções nativas guardam o conteúdo em listas de parágrafos e itens.
+    # O extrator genérico prioriza o título e, sozinho, perde essas orientações.
+    secoes = []
+    for secao in item.secoes or []:
+        if isinstance(secao, dict):
+            secoes.append("\n".join(parte for parte in (
+                _lista_texto(secao),
+                _lista_texto(secao.get("paragrafos")),
+                _lista_texto(secao.get("itens")),
+            ) if parte))
+        else:
+            secoes.append(_lista_texto(secao))
     partes = [
-        item.subtitulo, item.resumo, _lista_texto(item.secoes),
+        item.subtitulo, item.resumo, "\n\n".join(secoes),
         _lista_texto(item.sinais_de_alerta), _lista_texto(item.perguntas),
     ]
     return "\n\n".join(p for p in partes if p)

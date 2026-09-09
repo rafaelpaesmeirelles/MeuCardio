@@ -315,6 +315,7 @@ export default function Admin() {
 
   return <>
     <p className="eyebrow">Administração</p><h1>Usuários</h1>
+    <Link to="/admin/atividade" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 760, textDecoration: "none" }}><strong>Atividade e crescimento →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Cadastros, assinaturas e acessos por dia, semana, mês ou ano, com pessoas ativas agora.</p></Link>
     <Link to="/admin/usuarios" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 760, textDecoration: "none" }}><strong>Ficha completa de assinantes →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Busca, KYC, assinatura, documentos e histórico administrativo.</p></Link>
     {(heartTeamEnabled() || whatsappAssistantEnabled()) && <Link to="/admin/operacoes-ia" className="cartao cartao--clinico" style={{ display: "block", marginTop: "0.8rem", maxWidth: 760, textDecoration: "none" }}><strong>Operações de IA e custos →</strong><p style={{ margin: "0.3rem 0 0", color: "var(--texto-secundario)", fontSize: "0.86rem" }}>Heart Team, WhatsApp, consumo, segurança, latência e falhas operacionais.</p></Link>}
     <EmailTransacionalPanel />

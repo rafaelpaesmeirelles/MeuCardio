@@ -850,6 +850,7 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
         estado_antes: dict = {}
 
         def alterar(sub):
+            previous_stripe_id = sub.stripe_subscription_id
             estado_antes["era_nova"] = sub.stripe_subscription_id is None
             estado_antes["status_anterior"] = sub.status
             estado_antes["plano_anterior"] = sub.plano
@@ -872,6 +873,11 @@ async def webhook(request: Request, background_tasks: BackgroundTasks, db: Sessi
                     sub.plano = novo_plano
                 if nova_periodicidade:
                     sub.periodicidade = nova_periodicidade
+            from app.services.admin_activity import record_subscription_activation
+            record_subscription_activation(
+                db, subscription=sub, previous_status=estado_antes["status_anterior"],
+                previous_stripe_id=previous_stripe_id, event_at=quando,
+            )
 
         sub = _aplicar_evento(db, obj, quando, alterar)
 

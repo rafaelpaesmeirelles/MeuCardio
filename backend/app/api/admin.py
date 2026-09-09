@@ -1,6 +1,7 @@
 """Curadoria editorial: o que a equipe assistencial pode ver."""
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
+from typing import Literal
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Response
 from pydantic import BaseModel, field_validator
@@ -28,6 +29,20 @@ router = APIRouter(prefix="/api/admin", tags=["administração"])
 class DecisaoRevisao(BaseModel):
     publicar: bool
     nota: str | None = None
+
+
+@router.get("/activity")
+def activity(
+    period: Literal["day", "week", "month", "year"] = Query("month"),
+    reference_date: date | None = Query(None, alias="date"),
+    db: Session = Depends(get_db),
+    _=Depends(require_admin),
+):
+    """Somente agregados administrativos; nenhum dado pessoal é retornado."""
+    from app.services.admin_activity import activity_report
+    if reference_date is not None and not 2000 <= reference_date.year <= 9998:
+        raise HTTPException(status_code=422, detail="Data fora do intervalo permitido.")
+    return activity_report(db, period, reference_date)
 
 
 @router.get("/overview")

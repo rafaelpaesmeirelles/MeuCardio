@@ -191,6 +191,7 @@ export const CLINICAL_ROUTES = [
   route({ path: "/termos", name: "Termos de uso", shortName: "Termos", space: "gestao", group: "geral", icon: "documento", layout: "reading", intelligence: false, catalog: true }),
 
   // Administração
+  route({ path: "/admin/atividade", name: "Atividade e crescimento", shortName: "Atividade", space: "gestao", group: "admin", icon: "indicadores", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin", name: "Painel administrativo", shortName: "Administração", space: "gestao", group: "admin", icon: "gestao", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin/usuarios", name: "Usuários & Permissões", shortName: "Usuários", space: "gestao", group: "admin", icon: "pacientes", layout: "data", intelligence: false, gate: "admin", catalog: true }),
   route({ path: "/admin/usuarios/:id/gerenciar", name: "Gerenciar conta", space: "gestao", group: "admin", icon: "configuracao", layout: "standard", intelligence: false, kind: "detail", parent: "/admin/usuarios", gate: "admin" }),

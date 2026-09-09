@@ -4,7 +4,7 @@
   "source_count": 697,
   "ready_count": 697,
   "joint_release_ready": true,
-  "publication_state": "prepared",
+  "publication_state": "published",
   "pack_sha256": "9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9",
   "merged_duplicates": [
     {
@@ -6502,5 +6502,6 @@
       "findings": "Resumos primários das duas coortes e texto integral PMC11726346 conferidos. Corrigida tradução de parous, distinguido intervalo desde parto de seguimento prospectivo, retiradas inferências de mediação causal/proteção por exercício e efeito terapêutico não testado. Dado específico DMG (HR1,14/IC0,54–2,41/I²79%) confirmado no integral. Carta sem conclusão verificável excluída como fundamento. Sem duplicata da mesma pergunta na fila 251; tema preservado e links .md convertidos em rotas reais. TCT: hipertensao-na-gestacao-e-risco-de-demencia-o-million-women-study-2025, disturbios-hipertensivos-gestacao-subtipos-risco-cardiovascular-longo-prazo-2026, obesidade-central-no-inicio-da-gestacao-e-risco-de-diabetes-e-hipertensao-pre-natal-e-pos-parto, acc-2026-cuidado-cardiovascular-pos-parto-primeiro-ano.",
       "hash": "103f64544d0f6057f40820285e4905aa9d0fca1161b41eb0f9958da56d6c3fe9"
     }
-  ]
+  ],
+  "published_at": "2026-09-09T20:39:22.582080+00:00"
 }

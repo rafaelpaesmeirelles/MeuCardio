@@ -73,6 +73,7 @@ const CONTA_ADMIN: LinkItem[] = [
   { to: "/termos", label: "Termos", icon: "documento" },
   { to: "/tour", label: "Suporte & Ajuda", icon: "curso" },
   { to: "/admin", label: "Administração", icon: "gestao", adminOnly: true },
+  { to: "/admin/atividade", label: "Atividade e crescimento", icon: "indicadores", adminOnly: true },
   ...((heartTeamEnabled() || whatsappAssistantEnabled()) ? [{ to: "/admin/operacoes-ia", label: "Operações de IA", icon: "indicadores" as NomeIcone, adminOnly: true }] : []),
   { to: "/admin/usuarios", label: "Usuários & Permissões", icon: "pacientes", adminOnly: true },
   { to: "/fila-telediagnostico", label: "Fila telediagnóstico", icon: "evidencia", adminOnly: true },
