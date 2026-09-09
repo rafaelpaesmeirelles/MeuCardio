@@ -1,13 +1,32 @@
 ---
-title: "Síncope: diagnóstico e manejo (ESC 2018)"
+title: 'Síncope: diagnóstico e manejo (ESC 2018)'
 slug: sincope-diagnostico-e-manejo-esc-2018
-theme: "Síncope"
+theme: Síncope
 kind: diretriz
 review_status: revisado
-source_refs: ["Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre manejo no departamento de emergência (Tabelas 5, 6 e 7), tratamento da síncope reflexa (marca-passo), testes de função autonômica (seção 4.2.3) e estudo eletrofisiológico (seção 4.2.6), lidas no texto integral, incluindo as tabelas de recomendação.", "Sheldon RS, Sharma J, Koshman ML, et al. Diagnostic criteria for vasovagal syncope based on a quantitative history. Eur Heart J. 2006;27(3):344-350. PMID 16223744 — Escore de Sintomas de Calgary, números conferidos contra o abstract indexado em 30/07/2026."]
-legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao) tinha os critérios de admissão e as classes de recomendação de marca-passo/CDI marcados como 'não extraídos nesta rodada'; ambos resolvidos contra o texto integral da diretriz. Enriquecido novamente no mesmo dia: acrescentados testes de função autonômica (Valsalva, respiração profunda, MAPA), estudo eletrofisiológico (indicações e terapia guiada) e o Escore de Calgary — lacuna declarada no documento de classificação etiológica desta mesma pasta, fechada com texto integral da diretriz já obtido nesta sessão mais o artigo de derivação do escore."
+review_note: 'Correção editorial científica em 09/09/2026: invertida afirmação incorreta sobre tilt negativo e recorrência
+  após marca-passo, conferida nos estudos primários ISSUE-3 (PMID 24336948) e BIOSync CLS (PMID 33279955). Esta
+  alteração não representa revisão humana integral do documento. Revisão científica assistida por IA e revisão cruzada
+  entre agentes em 09/09/2026; ajustes consolidados pelo coordenador. Não representa revisão humana independente.
+  Escopo, fontes verificadas e limites documentados em docs/producao-prevalentes-20260909.md.'
+source_refs:
+- 'Brignole M et al. ISSUE-3 tilt substudy. Circ Arrhythm Electrophysiol. 2014;7:10-16. DOI: 10.1161/CIRCEP.113.001103.
+  https://pubmed.ncbi.nlm.nih.gov/24336948/'
+- 'Brignole M et al. BIOSync CLS. Eur Heart J. 2021;42:508-516. DOI: 10.1093/eurheartj/ehaa936. https://pubmed.ncbi.nlm.nih.gov/33279955/'
+- 'Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur
+  Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre manejo no departamento
+  de emergência (Tabelas 5, 6 e 7), tratamento da síncope reflexa (marca-passo), testes de função autonômica (seção
+  4.2.3) e estudo eletrofisiológico (seção 4.2.6), lidas no texto integral, incluindo as tabelas de recomendação.'
+- Sheldon RS, Sharma J, Koshman ML, et al. Diagnostic criteria for vasovagal syncope based on a quantitative history.
+  Eur Heart J. 2006;27(3):344-350. PMID 16223744 — Escore de Sintomas de Calgary, números conferidos contra o abstract
+  indexado em 30/07/2026.
+legacy_source: 'Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao)
+  tinha os critérios de admissão e as classes de recomendação de marca-passo/CDI marcados como ''não extraídos nesta
+  rodada''; ambos resolvidos contra o texto integral da diretriz. Enriquecido novamente no mesmo dia: acrescentados
+  testes de função autonômica (Valsalva, respiração profunda, MAPA), estudo eletrofisiológico (indicações e terapia
+  guiada) e o Escore de Calgary — lacuna declarada no documento de classificação etiológica desta mesma pasta, fechada
+  com texto integral da diretriz já obtido nesta sessão mais o artigo de derivação do escore.'
 ---
-
 # Síncope: diagnóstico e manejo (ESC 2018)
 
 Síncope é uma das causas mais frequentes de visita a departamento de
@@ -102,9 +121,7 @@ contexto clínico de uma condição benigna que afeta sobretudo pacientes
 jovens**: marca-passo deve ficar restrito a uma pequena fração muito
 selecionada de quem tem síncope reflexa grave — tipicamente paciente mais
 velho, com síncope recorrente iniciada na meia-idade ou depois, com lesão
-frequente por ausência de pródromo. A resposta do tilt test é descrita como
-o **preditor mais forte de eficácia do marca-passo**: resposta negativa
-associa-se a risco de recorrência mesmo com o dispositivo implantado.
+frequente por ausência de pródromo. O resultado do tilt test ajuda a interpretar a suscetibilidade hipotensiva e o risco de recorrência após implante. Na subanálise do ISSUE-3, **tilt positivo**, e não negativo, associou-se a maior recorrência entre pacientes com assistolia espontânea que receberam marca-passo. O achado provém de subgrupo pequeno e não demonstra ausência de benefício em todos os pacientes com tilt positivo. Posteriormente, o BIOSync CLS demonstrou redução de recorrência com estimulação em malha fechada em pacientes selecionados com síncope reflexa grave e assistolia induzida no tilt. Ver [interpretação clínica do tilt e da recorrência após marca-passo](/biblioteca/sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao).
 
 Farmacologicamente, betabloqueador **não está indicado** (Classe III, Nível
 A) na síncope reflexa — é a única recomendação Nível A de toda essa seção,
@@ -157,7 +174,7 @@ subjacente da síncope. Recomendações da diretriz, com classe e nível:
 
 **Interpretação prática da manobra de Valsalva**: ausência de *overshoot* de PA e ausência de aumento de FC durante a manobra é achado patognomônico de HO neurogênica (falência autonômica primária ou secundária) — o grau de hipotensão/falta de compensação costuma se correlacionar com o grau de disfunção autonômica. Já uma queda de PA pronunciada além do esperado na expiração forçada, mas com resposta cronotrópica normal, sugere síncope situacional (tosse, canto, instrumento de sopro, levantamento de peso), não falência autonômica primária.
 
-**Teste de respiração profunda**: em condição fisiológica, a FC sobe na inspiração e cai na expiração — a variabilidade (índice E/I, expiratório/inspiratório) é ≥15 bpm em indivíduo saudável >50 anos. Variação embotada ou abolida sugere disfunção parassimpática.
+**Teste de respiração profunda**: em condição fisiológica, a FC sobe na inspiração e cai na expiração. A diferença entre as frequências máxima e mínima é expressa em bpm; a razão E/I, calculada a partir dos intervalos RR, é adimensional. Não intercambiar esses índices. A interpretação depende da idade e dos valores de referência do protocolo do laboratório; resposta embotada ou abolida pode sugerir disfunção parassimpática.
 
 **Ressalvas práticas**: efeito de idade e sexo deve ser considerado na interpretação; adesão pode ser limitada em paciente com demência; tremor ou parkinsonismo podem impedir o *handgrip* sustentado; o teste do frio pode ser desconfortável em fenômeno de Raynaud.
 
@@ -216,3 +233,16 @@ próprio, `estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na
 cardiomiopatia arritmogênica do ventrículo direito, canalopatia) não foi
 reproduzida aqui — cada uma tem tabela própria na diretriz, com critério
 específico da doença de base.
+
+## Recursos relacionados no CorVIA
+
+- [sincope classificacao etiologica em tres grandes grupos](/biblioteca/sincope-classificacao-etiologica-em-tres-grandes-grupos)
+- [Síncope recorrente após marca-passo: interpretar o tilt e reavaliar o mecanismo](/biblioteca/sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao)
+- [Síncope](/doencas/sincope)
+- [ISSUE-3 — Marca-passo na síncope reflexa com assistolia documentada por monitor implantável](/estudos/issue-3-marca-passo-na-sincope-reflexa-com-assistolia-documentada)
+- [Teste de inclinação (tilt test)](/exames/teste-de-inclinacao-tilt-test)
+- [Holter e monitor de eventos externo (looper) na síncope](/exames/holter-e-monitor-de-eventos-externo-na-sincope)
+- [Síncope (desmaio)](/material-paciente/sincope-desmaio)
+- [Síncope: avaliação inicial, monitorização e recorrência após marcapasso](/trilhas/trilha-consulta-progressiva-sincope)
+
+Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.

@@ -1,39 +1,67 @@
 ---
-title: "ICFEp: Diagnóstico com Escores H2FPEF/HFA-PEFF e Terapias Avançadas (LVAD e Transplante)"
+title: 'ICFEp: confirmação diagnóstica, tratamento por fenótipo e encaminhamento especializado'
 slug: icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante
-theme: "Insuficiência cardíaca"
+theme: Insuficiência cardíaca
 kind: protocolo
 review_status: revisado
-source_refs: ["2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/37/3627/7246292", "The role of SGLT2 inhibitors in heart failure with preserved ejection fraction (HFpEF): a systematic review and meta-analysis · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12557931/", "Current indications for heart transplantation and left ventricular assist device: A practical point of view · ScienceDirect · https://www.sciencedirect.com/science/article/abs/pii/S0953620514000533", "Left ventricular assist device therapy in advanced heart failure: patient selection and outcomes · European Journal of Heart Failure · 2017 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.779"]
+review_note: Revisão científica assistida por IA em 09/09/2026; fontes primárias conferidas, sem revisão humana
+  independente. Removidas superioridade não demonstrada entre escores e aplicação indevida de LVAD à ICFEp. Incorporada
+  ESC 2026. Revisão científica assistida por IA e revisão cruzada entre agentes em 09/09/2026; ajustes consolidados
+  pelo coordenador. Não representa revisão humana independente. Escopo, fontes verificadas e limites documentados
+  em docs/producao-prevalentes-20260909.md.
+source_refs:
+- ESC. Heart failure guideline 2026; DOI 10.1093/eurheartj/ehag100. https://dam-assets.escardio.org/download/b2e587389baa11f185de06bdfb3e4be9
+- Reddy et al. H2FPEF. Circulation. 2018. PMID 29792299. https://pubmed.ncbi.nlm.nih.gov/29792299/
+- Pieske et al. HFA-PEFF. Eur Heart J. 2019. PMID 31504452. https://pubmed.ncbi.nlm.nih.gov/31504452/
+- Anker et al. EMPEROR-Preserved. NEJM. 2021. PMID 34449189. https://pubmed.ncbi.nlm.nih.gov/34449189/
+- Solomon et al. FINEARTS-HF. NEJM. 2024. PMID 39225278. https://pubmed.ncbi.nlm.nih.gov/39225278/
 ---
+# ICFEp: da suspeita ao tratamento individualizado
 
-# ICFEp: Diagnóstico com Escores H2FPEF/HFA-PEFF e Terapias Avançadas (LVAD e Transplante)
+ICFEp requer síndrome clínica de insuficiência cardíaca e FEVE preservada, com evidência objetiva que sustente pressões de enchimento elevadas ou disfunção cardíaca compatível. Dispneia com FEVE 60% não basta; alteração de relaxamento isolada em pessoa assintomática também não estabelece a síndrome. A investigação e o tratamento precisam explicar a limitação daquele paciente.
 
-## Definicao
-Complementa os quatro documentos já existentes sobre insuficiência cardíaca nesta biblioteca (atualização focada ESC 2023, quatro pilares da ICFEr, estudo STRONG-HF), cobrindo duas lacunas citadas no COBERTURA.md e ainda sem documento dedicado: insuficiência cardíaca com fração de ejeção preservada (ICFEp) e terapias avançadas (dispositivo de assistência ventricular e transplante)
+## Confirmar antes de rotular
 
-## Escores diagnosticos de ICFEp
-- **H2FPEF**: escore proposto e validado para auxiliar no diagnóstico de ICFEp
-- **HFA-PEFF**: escore com maior utilidade diagnóstica em comparação ao H2FPEF, com valor prognóstico independente para mortalidade por todas as causas em pacientes com ICFEp
-- **fonte**: revisão sistemática sobre iSGLT2 em ICFEp (PMC)
+O H2FPEF estima probabilidade em pacientes com dispneia inexplicada usando obesidade, FA, idade, tratamento anti-hipertensivo e parâmetros ecocardiográficos. Foi desenvolvido com referência hemodinâmica invasiva; sua população de derivação não equivale a rastreamento universal. Utilize a [calculadora e seus critérios](/biblioteca/escore-h2fpef-probabilidade-diagnostica-de-icfep-em-dispneia-inexplicada). [Estudo original H2FPEF](https://pubmed.ncbi.nlm.nih.gov/29792299/).
 
-## Tratamento farmacologico da ICFEp
-- **iSGLT2**: atualização focada ESC 2023 ampliou a recomendação de dapagliflozina ou empagliflozina para todo o espectro de fração de ejeção, incluindo ICFEp — recomendação classe I, nível de evidência A, para reduzir hospitalização por IC ou morte cardiovascular
-- **magnitude do efeito**: redução do risco de morte cardiovascular ou hospitalização por IC (HR 0,83; IC 95% 0,76-0,90) e de hospitalização por IC isoladamente (HR 0,75; IC 95% 0,68-0,84)
-- **fonte**: ESC 2023; revisão sistemática (PMC)
+O HFA-PEFF combina avaliação clínica inicial, ecocardiografia e peptídeos natriuréticos. Escore ≥5 sustenta diagnóstico; ≤1 torna-o improvável; 2–4 exige esclarecimento funcional. Biomarcadores normais não excluem todos os casos, especialmente com obesidade. Não há fundamento para declarar um escore universalmente superior ao outro. Discordância deve levar à revisão dos dados e da probabilidade pré-teste. [Consenso original HFA-PEFF](https://pubmed.ncbi.nlm.nih.gov/31504452/).
 
-## Terapias avancadas — criterios de gravidade
-- **indicadores de doenca avancada**: fração de ejeção do VE <25%, 3 ou mais hospitalizações por IC em um ano, dependência de inotrópico, ou disfunção hepática/renal progressiva atribuída a hipoperfusão por IC
-- **classificacao INTERMACS**: usada para estratificar gravidade e orientar decisão entre LVAD como ponte para transplante (bridge to transplant) ou terapia de destino (destination therapy)
-- **fonte**: revisão prática sobre indicações de transplante e LVAD (ScienceDirect)
+Se persistir dúvida que mudará a conduta, discutir ecocardiografia de esforço ou hemodinâmica em exercício em serviço experiente. Antes de atribuir tudo à ICFEp, procurar anemia, doença pulmonar, isquemia, valvopatia importante, pericardite constritiva e amiloidose conforme os achados.
 
-## Dispositivo de assistencia ventricular esquerda (LVAD)
-- **indicacao**: candidatos elegíveis a transplante com IC em estágio terminal, para melhorar sintomas, reduzir risco de hospitalização e reduzir risco de morte prematura enquanto aguardam transplante
-- **momento do implante**: implante mais precoce em pacientes menos graves (classe INTERMACS mais alta) mostra melhores desfechos do que manter apenas terapia clínica
-- **estabilidade no implante**: desfecho após implante de LVAD em pacientes estáveis é superior ao de pacientes em choque cardiogênico agudo ("crash and burn") ou dependentes de inotrópico em deterioração — favorece encaminhamento e implante precoces
-- **fonte**: European Journal of Heart Failure 2017
+## Tratar a síndrome e o mecanismo predominante
 
-## Avaliacao para transplante cardiaco
-- **principio central**: fração de ejeção isolada não deve ser usada como critério de candidatura a transplante; capacidade funcional e hemodinâmica são igualmente críticas
-- **pre-requisito**: terapia clínica máxima deve estar instituída e mantida antes da avaliação para transplante
-- **fonte**: revisão prática sobre indicações de transplante e LVAD (ScienceDirect)
+Na ESC 2026, **iSGLT2 e antagonista mineralocorticoide** integram tratamento de IC sintomática, com recomendação I A independentemente da FEVE; para ICFEp, a recomendação contempla ARM esteroidal ou não esteroidal. A seleção exige função renal, potássio e avaliação de tolerância. A classe de recomendação não significa que cada fármaco tenha comprovado redução isolada de mortalidade. [ESC 2026, slide 50](https://dam-assets.escardio.org/download/b2e587389baa11f185de06bdfb3e4be9).
+
+No EMPEROR-Preserved, empagliflozina 10 mg/dia reduziu morte cardiovascular ou hospitalização por IC em população com FEVE >40%: 13,8% versus 17,1%; HR 0,79, IC95% 0,69–0,90. O efeito foi principalmente sobre hospitalizações e ocorreu com ou sem diabetes. [Ensaio original](https://pubmed.ncbi.nlm.nih.gov/34449189/).
+
+No FINEARTS-HF, finerenona reduziu o composto de eventos totais de piora de IC e morte cardiovascular em FEVE ≥40%: razão de taxas 0,84, IC95% 0,74–0,95. Mortalidade cardiovascular isolada não foi significativamente reduzida; houve mais hipercalemia. O resultado não autoriza associar finerenona a espironolactona/eplerenona nem substituir automaticamente o ARM esteroidal na ICFEr. Ver [FINEARTS-HF no acervo](/biblioteca/finerenona-na-icfep-e-icfelr-o-ensaio-finearts-hf) e [publicação original](https://pubmed.ncbi.nlm.nih.gov/39225278/).
+
+Uma consulta deve resultar em um plano para cada problema ativo: congestão, hipertensão, FA, obesidade, doença renal, doença coronariana e limitação ao exercício. Na ausência de congestão, aumentar diurético porque a dispneia persiste pode provocar hipovolemia sem resolver sua causa. Não importar automaticamente betabloqueador, nitrato ou dispositivo do protocolo de ICFEr; registrar a indicação específica.
+
+## Encaminhamento e segurança
+
+LVAD durável não é terapia rotineira para ICFEp. A anatomia ventricular, função direita, etiologia e hemodinâmica tornam a avaliação complexa. Sintomas refratários e deterioração de órgãos apesar de tratamento justificam avaliação em centro de IC avançada; FEVE isolada não define candidatura a transplante. O [fluxo de encaminhamento especializado](/biblioteca/fluxograma-encaminhamento-ic-avancada-lvad-transplante) pertence a uma decisão multidisciplinar.
+
+Dispneia em repouso, síncope, dor torácica prolongada, confusão ou hipoperfusão exigem avaliação urgente. Após mudanças farmacológicas, conferir PA, sintomas, peso, função renal e K; definir data para repetir exames e quem avaliará os resultados. Ver [segurança renal e eletrolítica](/biblioteca/ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao) e [transição após alta](/biblioteca/ic-transicao-pos-alta-plano-primeiras-seis-semanas).
+
+## Caso didático de aplicação
+
+Mulher de 72 anos, obesidade, HAS e dispneia tem FEVE 61%, mas os dados diastólicos são incompletos. O passo seguinte é completar a avaliação objetiva e investigar causas concorrentes. Se a ICFEp for confirmada, pactuar objetivos mensuráveis: capacidade de caminhar, edema, eventos de piora e tolerância. “FEVE normal” não encerra a investigação; “escore elevado” também não dispensa coerência clínica.
+
+## Recursos relacionados no CorVIA
+
+- [Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos](/biblioteca/icfer-classificacao-diagnostico-quatro-pilares)
+- [Primeira consulta na suspeita de insuficiência cardíaca: dispneia, confirmação e etiologia](/biblioteca/ic-primeira-consulta-dispneia-confirmacao-e-etiologia)
+- [Terapia fundacional da IC: segurança renal, potássio e hipotensão na implementação prática](/biblioteca/ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao)
+- [IC após a alta: plano das primeiras seis semanas e prevenção de falhas na transição](/biblioteca/ic-transicao-pos-alta-plano-primeiras-seis-semanas)
+- [Insuficiência cardíaca](/doencas/insuficiencia-cardiaca)
+- [sacubitrilvalsartana](/medicamentos?slug=sacubitrilvalsartana)
+- [DAPA-HF — Dapagliflozina em pacientes com insuficiência cardíaca e fração de ejeção reduzida](/estudos/dapa-hf-dapagliflozina-icfer)
+- [alta pos insuficiencia cardiaca descompensada](/checklists/alta-pos-insuficiencia-cardiaca-descompensada)
+- [Potássio sérico na avaliação de risco arrítmico e monitorização cardiovascular](/exames/potassio-serico-risco-arritmico-e-monitorizacao)
+- [espironolactona](/medicamentos?slug=espironolactona)
+- [dapagliflozina](/medicamentos?slug=dapagliflozina)
+- [Insuficiência cardíaca](/material-paciente/insuficiencia-cardiaca)
+- [Insuficiência cardíaca: diagnóstico, segurança e transição para o ambulatório](/trilhas/trilha-consulta-progressiva-insuficiencia-cardiaca)
+
+Os recursos de exames e tratamentos devem ser usados conforme a indicação e o contexto descritos; sua presença nesta sequência não indica solicitação ou prescrição automática.

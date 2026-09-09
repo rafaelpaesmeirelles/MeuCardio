@@ -26002,5 +26002,387 @@
     ],
     "published": true,
     "revisao": "Revisão científica independente concluída em 2026-09-01: sequência, nexo clínico e resolução de cada etapa conferidos contra o conteúdo canônico e suas fontes; nenhum alvo inexistente foi publicado. Narrativa e sequência reconciliadas após manter removidas as etapas legadas sem alvo suportado pelo carregador canônico."
+  },
+  {
+    "slug": "trilha-consulta-progressiva-hipertensao",
+    "titulo": "Hipertensão: da primeira consulta ao seguimento e à investigação secundária",
+    "tema": "Hipertensão",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-classificacao-diagnostico-metas",
+        "por_que": "Fundamentos e delimitação do cenário clínico. Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratamento (Diretriz 2025). Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-primeira-consulta-plano-longitudinal-e-retorno-seguro",
+        "por_que": "Aplicação e aprofundamento. Hipertensão na primeira consulta: plano longitudinal e retorno seguro. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "edema-no-hipertenso-em-uso-de-bcc-avaliacao-e-represcricao",
+        "por_que": "Aplicação e aprofundamento. Edema no hipertenso em uso de BCC: avaliação e represcrição. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipertensao-hipocalemia-e-renina-alta-interpretacao-sem-atalhos",
+        "por_que": "Aplicação e aprofundamento. Hipertensão, hipocalemia e renina alta: interpretação sem atalhos. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "olmesartana-medoxomila",
+        "por_que": "Aplicação e aprofundamento. olmesartana medoxomila. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "allhat-diuretico-tiazidico-vs-ieca-vs-bloqueador-de-canal-de-calcio",
+        "por_que": "Aplicação e aprofundamento. ALLHAT — Diurético tiazídico versus IECA versus bloqueador de canal de cálcio como anti-hipertensivo de primeira linha. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-insuficiencia-cardiaca",
+    "titulo": "Insuficiência cardíaca: diagnóstico, segurança e transição para o ambulatório",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "icfer-classificacao-diagnostico-quatro-pilares",
+        "por_que": "Fundamentos e delimitação do cenário clínico. Insuficiência Cardíaca com Fração de Ejeção Reduzida — Classificação, Diagnóstico e os Quatro Pilares Terapêuticos. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ic-primeira-consulta-dispneia-confirmacao-e-etiologia",
+        "por_que": "Aplicação e aprofundamento. Primeira consulta na suspeita de insuficiência cardíaca: dispneia, confirmação e etiologia. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ic-terapia-fundacional-seguranca-renal-potassio-e-hipotensao",
+        "por_que": "Aplicação e aprofundamento. Terapia fundacional da IC: segurança renal, potássio e hipotensão na implementação prática. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
+        "por_que": "Aplicação e aprofundamento. ICFEp: confirmação diagnóstica, tratamento por fenótipo e encaminhamento especializado. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ic-transicao-pos-alta-plano-primeiras-seis-semanas",
+        "por_que": "Aplicação e aprofundamento. IC após a alta: plano das primeiras seis semanas e prevenção de falhas na transição. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "sacubitrilvalsartana",
+        "por_que": "Aplicação e aprofundamento. sacubitrilvalsartana. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "dapa-hf-dapagliflozina-icfer",
+        "por_que": "Aplicação e aprofundamento. DAPA-HF — Dapagliflozina em pacientes com insuficiência cardíaca e fração de ejeção reduzida. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
+        "por_que": "Aplicação e aprofundamento. alta pos insuficiencia cardiaca descompensada. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-fibrilacao-atrial",
+    "titulo": "FA e palpitações: reconhecimento, decisão e segurança da anticoagulação",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+        "por_que": "Fundamentos e delimitação do cenário clínico. Fibrilação Atrial: Diagnóstico e Manejo (ESC 2024) — Via AF-CARE. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "palpitacoes-monitorizacao-e-correlacao-entre-sintoma-e-ritmo",
+        "por_que": "Aplicação e aprofundamento. Palpitações: monitorização e correlação entre sintoma e ritmo. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-primeira-consulta-plano-longitudinal-e-retorno",
+        "por_que": "Aplicação e aprofundamento. Fibrilação atrial na primeira consulta: plano longitudinal e retorno. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-na-fa-reconciliacao-de-dose-funcao-renal-e-interacoes",
+        "por_que": "Aplicação e aprofundamento. Anticoagulação na FA: reconciliação de dose, função renal e interações. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "Aplicar o referencial AHA/ACC; comparar com CHA₂DS₂-VA da ESC no documento basal. Os modelos e as recomendações não são intercambiáveis."
+      },
+      {
+        "ordem": 6,
+        "item_type": "calculadora",
+        "item_slug": "has-bled",
+        "por_que": "Identificar riscos de sangramento modificáveis; pontuação elevada não é motivo isolado para negar anticoagulação."
+      },
+      {
+        "ordem": 7,
+        "item_type": "calculadora",
+        "item_slug": "cockcroft-gault",
+        "por_que": "Aplicação e aprofundamento. Cockcroft–Gault. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 8,
+        "item_type": "caso_clinico",
+        "item_slug": "has-bled-alto-e-motivo-para-nao-anticoagular",
+        "por_que": "Aplicação e aprofundamento. HAS-BLED alto: motivo para não anticoagular na fibrilação atrial?. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-doenca-coronariana",
+    "titulo": "Doença coronariana: da dor torácica ao primeiro retorno após SCA",
+    "tema": "Doença coronariana",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "suspeita-de-doenca-coronariana-primeira-consulta-do-sintoma-a-decisao",
+        "por_que": "Fundamentos e delimitação do cenário clínico. Suspeita de doença coronariana: primeira consulta, do sintoma à decisão. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-coronariana-cronica-esc-2024",
+        "por_que": "Aplicação e aprofundamento. Fluxograma: Síndrome coronariana crônica — investigação da dor torácica (ESC 2024). Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "dor-toracica-exames-discordantes-reavaliacao-e-destino-seguro",
+        "por_que": "Aplicação e aprofundamento. Dor torácica com exames discordantes: reavaliação e destino seguro. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "primeiro-retorno-pos-sca-conciliacao-antitrombotica-e-intercorrencias",
+        "por_que": "Aplicação e aprofundamento. Primeiro retorno após SCA: conciliação antitrombótica e intercorrências. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "calculadora",
+        "item_slug": "heart",
+        "por_que": "Aplicação e aprofundamento. HEART. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 6,
+        "item_type": "calculadora",
+        "item_slug": "grace",
+        "por_que": "Aplicação e aprofundamento. GRACE. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 7,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-sindrome-coronariana-aguda",
+        "por_que": "Aplicação e aprofundamento. alta pos sindrome coronariana aguda. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-dislipidemia",
+    "titulo": "Dislipidemia: interpretação, metas, resposta e segurança",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "por_que": "Fundamentos e delimitação do cenário clínico. Dislipidemia — Metas de LDL, Estratificação de Risco e a Atualização ESC/EAS 2025. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "lipidograma-na-consulta-primeira-leitura-discordancia-e-decisao-clinica",
+        "por_que": "Aplicação e aprofundamento. Lipidograma na consulta: primeira leitura, discordância e decisão clínica. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "retorno-da-dislipidemia-resposta-insuficiente-seguranca-e-intensificacao",
+        "por_que": "Aplicação e aprofundamento. Retorno da dislipidemia: resposta insuficiente, segurança e intensificação. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "atorvastatina-calcica",
+        "por_que": "Aplicação e aprofundamento. atorvastatina calcica. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "ezetimiba",
+        "por_que": "Aplicação e aprofundamento. ezetimiba. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "improve-it-cannon-2015-ezetimiba-associada-a-estatina-apos-sca",
+        "por_que": "Aplicação e aprofundamento. IMPROVE-IT (Cannon et al. 2015) — Ezetimiba associada a estatina após síndrome coronariana aguda. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-diabetes-cardiovascular",
+    "titulo": "DM2: consulta cardiometabólica e prevenção de complicações",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+        "por_que": "Fundamentos e delimitação do cenário clínico. doenca cardiovascular em pacientes com diabetes estratificacao de risco e manejo esc 2023. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "consulta-cardiometabolica-no-dm2-avaliacao-inicial-e-plano-longitudinal",
+        "por_que": "Aplicação e aprofundamento. Consulta cardiometabólica no DM2: avaliação inicial e plano longitudinal. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
+        "por_que": "Aplicação e aprofundamento. finerenona fidelio dkd figaro dkd e a fidelity. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "empagliflozina",
+        "por_que": "Aplicação e aprofundamento. empagliflozina. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "diabetes-tipo-2-com-dac-estabelecida-empagliflozina-independente-do-controle-glicemico-empa-reg",
+        "por_que": "Aplicação e aprofundamento. Diabético com infarto prévio e HbA1c já na meta: vale a pena acrescentar empagliflozina?. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-valvopatias",
+    "titulo": "Valvopatias: do sopro à interpretação e à decisão especializada",
+    "tema": "Valvopatias",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sopro-cardiaco-incidental-no-adulto-assintomatico",
+        "por_que": "Fundamentos e delimitação do cenário clínico. fluxograma sopro cardiaco incidental no adulto assintomatico. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-do-laudo-discordante-a-consulta-longitudinal",
+        "por_que": "Aplicação e aprofundamento. Estenose aórtica: do laudo discordante à consulta longitudinal. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-mitral-leitura-critica-do-laudo-e-preparo-da-decisao",
+        "por_que": "Aplicação e aprofundamento. Insuficiência mitral: leitura crítica do laudo e preparo da decisão. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-regurgitacao-mitral-esc-eacts-2025",
+        "por_que": "Aplicação e aprofundamento. fluxograma regurgitacao mitral esc eacts 2025. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "partner-3-tavi-baixo-risco",
+        "por_que": "Aplicação e aprofundamento. PARTNER 3 — TAVI versus troca cirúrgica em pacientes de baixo risco com estenose aórtica grave. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-consulta-progressiva-sincope",
+    "titulo": "Síncope: avaliação inicial, monitorização e recorrência após marcapasso",
+    "tema": "Síncope",
+    "objetivo": "Percorrer fundamentos, aplicação na consulta e decisões complexas, integrando segurança, acompanhamento e recursos relacionados.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "revisao": "Sequência editorial original conferida por IA em 09/09/2026. Conteúdo novo submetido a revisão cruzada. Sem declaração de revisão humana ou de completude de todo o tema.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+        "por_que": "Fundamentos e delimitação do cenário clínico. sincope classificacao etiologica em tres grandes grupos. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sincope-diagnostico-e-manejo-esc-2018",
+        "por_que": "Aplicação e aprofundamento. Síncope: diagnóstico e manejo (ESC 2018). Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sincope-recorrente-apos-marca-passo-interpretacao-do-tilt-e-reavaliacao",
+        "por_que": "Aplicação e aprofundamento. Síncope recorrente após marca-passo: interpretar o tilt e reavaliar o mecanismo. Interpretar no contexto e na população apresentados pelo recurso."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "issue-3-marca-passo-na-sincope-reflexa-com-assistolia-documentada",
+        "por_que": "Aplicação e aprofundamento. ISSUE-3 — Marca-passo na síncope reflexa com assistolia documentada por monitor implantável. Interpretar no contexto e na população apresentados pelo recurso."
+      }
+    ]
   }
 ]
