@@ -3,6 +3,8 @@
 .admin-atividade__header h1 { margin: .2rem 0 .4rem; font-size: clamp(1.45rem, 2.6vw, 2rem); }
 .admin-atividade__header p:not(.eyebrow), .admin-atividade__caption, .admin-atividade__status span { color: var(--texto-secundario); font-size: .84rem; }
 .admin-atividade__header .botao { flex-shrink: 0; }
+.admin-atividade .botao--secundario { color: var(--texto) !important; background: var(--superficie); border-color: var(--borda); }
+.admin-atividade .admin-atividade__date { color: var(--texto) !important; }
 .admin-atividade__controls { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-top: 1.15rem; }
 .admin-atividade__controls fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 .admin-atividade__controls legend, .admin-atividade__date { font-size: .78rem; font-weight: 650; }

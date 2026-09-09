@@ -5,6 +5,7 @@ from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+from threading import Event
 
 from sqlalchemy import select, text
 from app.core.config import settings
@@ -15,8 +16,12 @@ from app.services.rag import indexar_documento, fingerprint_fonte, esta_atualiza
 from app.services.rag_multi import indexar_entidade
 from app.services.rag_sources import FONTES_POR_TIPO
 
+STOP_REQUESTED = Event()
+
 
 def process(item, verify_only=False):
+    if STOP_REQUESTED.is_set() and not verify_only:
+        return None
     kind, slug = item['kind'], item['data']['slug']
     with SessionLocal() as db:
         model = Document if kind == 'documento' else FONTES_POR_TIPO[kind].model
@@ -63,14 +68,23 @@ def main():
         try:
             with ThreadPoolExecutor(max_workers=4) as pool:
                 futures = {pool.submit(process, item): item for item in pack['items']}
+                consecutive_failures = 0
                 for future in as_completed(futures):
                     item = futures[future]
                     try:
                         count = future.result()
-                        stats['updated' if count else 'unchanged'] += 1
-                        stats['chunks_written'] += count
+                        if count is None:
+                            stats['deferred'] += 1
+                        else:
+                            consecutive_failures = 0
+                            stats['updated' if count else 'unchanged'] += 1
+                            stats['chunks_written'] += count
                     except Exception as error:
-                        failures.append({'kind':item['kind'], 'slug':item['data']['slug'], 'error_type':type(error).__name__})
+                        code = getattr(error, 'code', None)
+                        failures.append({'kind':item['kind'], 'slug':item['data']['slug'], 'error_type':type(error).__name__, 'code':code})
+                        consecutive_failures += 1
+                        if code in ('credit_balance_exhausted', 'insufficient_quota') or consecutive_failures >= 3:
+                            STOP_REQUESTED.set()
                     stats['completed'] += 1
                     if stats['completed'] % 25 == 0:
                         print(json.dumps(dict(stats)), flush=True)

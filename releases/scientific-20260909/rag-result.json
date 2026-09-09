@@ -1,0 +1,11 @@
+{
+  "state": "blocked_external",
+  "records_in_scope": 716,
+  "provider_error": "RateLimitError",
+  "provider_code": "credit_balance_exhausted",
+  "provider_type": "insufficient_quota",
+  "http_status": 429,
+  "action": "Stopped scoped indexing; previous chunks preserved. Resume this exact package after provider credit is restored.",
+  "published_content_and_explicit_relations": "confirmed",
+  "pack_sha256": "9c5a671b37558f3bb71ac338d9069845ccc95c373f25bf22a4d474f71a9c92c9"
+}
