@@ -5,10 +5,12 @@ import re
 import json
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "backend"))
 
+from app.services import clinical_link_availability as availability
 from app.services.clinical_markdown_links import (
     parse_clinical_markdown_target, resolve_clinical_markdown_destination,
     rewrite_clinical_markdown_links,
@@ -105,7 +107,9 @@ class TypedApprovedLinksTests(unittest.TestCase):
         cls.root = Path(__file__).resolve().parents[2]
         report = json.loads((cls.root / "docs/tct-missing-link-destination-review-20260910.json").read_text())
         cls.aliases = [item for item in report["items"] if item["status"] == "approved_same_entity"]
-        cls.excluded = [item for item in report["items"] if item["status"] != "approved_same_entity"]
+        # Excluded from ALIAS substitution in the historical report; their
+        # exact canonical documents were subsequently published and restored.
+        cls.not_aliased = [item for item in report["items"] if item["status"] != "approved_same_entity"]
 
     def test_exactly_seven_aliases_have_approved_typed_destinations(self):
         approval = json.loads((self.root / "editorial-approvals/scoped-corpus-release-20260910.json").read_text())
@@ -127,7 +131,7 @@ class TypedApprovedLinksTests(unittest.TestCase):
             self.assertEqual(resolve_clinical_markdown_destination(relative), item["new_url"])
 
     def test_partial_unknown_and_external_targets_are_never_aliased(self):
-        for item in self.excluded:
+        for item in self.not_aliased:
             self.assertEqual(resolve_clinical_markdown_destination(item["old_url"]), item["old_url"])
         for destination in ["/biblioteca/ainda-nao-existe", "https://example.org" + self.aliases[0]["old_url"]]:
             self.assertEqual(resolve_clinical_markdown_destination(destination), destination)
@@ -141,11 +145,20 @@ class TypedApprovedLinksTests(unittest.TestCase):
             rewrite_clinical_markdown_links(f"[{label}]({alias['old_url']})"),
             f"[{label}]({alias['new_url']})",
         )
-        unavailable = self.excluded[0]["old_url"]
-        self.assertIsNone(parse_clinical_markdown_target(unavailable))
-        rendered = rewrite_clinical_markdown_links(f"[{label}]({unavailable})")
-        self.assertEqual(rendered, label + " (conteúdo indisponível nesta versão)")
-        self.assertNotIn(unavailable, rendered)
+        restored = self.not_aliased[0]["old_url"]
+        self.assertEqual(parse_clinical_markdown_target(restored),
+                         (("documento", "fluxograma"), restored.rsplit("/", 1)[1]))
+        self.assertEqual(rewrite_clinical_markdown_links(f"[{label}]({restored})"),
+                         f"[{label}]({restored})")
+        # Preserve the unavailable-label grammar without pretending a newly
+        # approved real document is still quarantined or absent.
+        unavailable = "/biblioteca/fixture-unavailable-multiline"
+        with patch.dict(availability.UNAVAILABLE_REFERENCES,
+                        {unavailable: {"reason": "target_quarantined"}}):
+            self.assertIsNone(parse_clinical_markdown_target(unavailable))
+            rendered = rewrite_clinical_markdown_links(f"[{label}]({unavailable})")
+            self.assertEqual(rendered, label + " (conteúdo indisponível nesta versão)")
+            self.assertNotIn(unavailable, rendered)
 
 
     def test_code_samples_and_images_remain_unchanged(self):
@@ -169,7 +182,7 @@ class TypedApprovedLinksTests(unittest.TestCase):
         fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "_registrar_referencias_explicitas")
         loop = next(n for n in fn.body if isinstance(n, ast.For) and isinstance(n.target, ast.Name) and n.target.id == "documento")
         calls = []
-        body = "\n".join(f"[Referência]({item['old_url']})" for item in self.aliases + self.excluded)
+        body = "\n".join(f"[Referência]({item['old_url']})" for item in self.aliases + self.not_aliased)
         env = {"documentos": [SimpleNamespace(slug="origem", kind="documento", body_md=body)],
                "parse_clinical_markdown_target": parse_clinical_markdown_target,
                "_LINK_MARKDOWN": re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)\)"),
@@ -177,9 +190,11 @@ class TypedApprovedLinksTests(unittest.TestCase):
                "_no": lambda types, slug: (types, slug),
                "_ligar": lambda *args, **kwargs: calls.append((args, kwargs))}
         exec(compile(ast.Module(body=[loop], type_ignores=[]), str(path), "exec"), env)
-        self.assertEqual(len(calls), 7)
-        self.assertEqual({call[0][0] for call in calls},
-                         {((item["new_type"],), item["new_slug"]) for item in self.aliases})
+        expected_aliases = {((item["new_type"],), item["new_slug"]) for item in self.aliases}
+        expected_canonical = {(("documento", "fluxograma"), item["old_url"].rsplit("/", 1)[1])
+                              for item in self.not_aliased}
+        self.assertEqual(len(calls), len(self.aliases) + len(self.not_aliased))
+        self.assertEqual({call[0][0] for call in calls}, expected_aliases | expected_canonical)
         self.assertTrue(all(call[0][1:] == ((("documento",), "origem"), "mentioned_in") for call in calls))
 
 
