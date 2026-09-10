@@ -54,3 +54,8 @@ PR921 is already live at the base commit. Original acquisition and Portuguese pr
 Implementation head bd8ce12e72d7153ae3076a47133bf9e1f0977247 passed CI (both backend test jobs skipped), frontend, corpus database/inventory, deep inventory, route coverage and approved-reference QA. RC2 stopped at the static feature inventory because the newly authorized admin route/router had not been added to that second inventory. They are now registered explicitly, with the new supporting files protected; existing expectations remain.
 
 Visual QA completed the existing 32 mobile and 10 Intelligence cases with no page errors, then stopped when the new helper attempted to use the Home galaxy control on an internal page. The helper now operates the actual account-menu theme radio control, closes the overlay and asserts the resulting theme. No application UI, tolerance or existing case was removed. The corrected combined head must pass normal gates before merge.
+
+
+## Second visual gate follow-up
+
+Head 8c6b3f51f72914456ffe60376ed9ba187a6b27ec passed RC2 and the other required PR gates; both backend test jobs remained skipped. Visual QA again completed the existing mobile and Intelligence cases without page errors. The new pending-notice fixture was bypassed by the service worker retained from those preceding cases: actual QA API responses contained no pending proposals. The synthetic Favorites/approval cases now use their own authenticated browser context with service workers blocked, while the existing real-app matrix keeps its original context and behavior. Assertions and tolerances remain unchanged; no approval mutation is permitted.

@@ -1,6 +1,15 @@
 // Runs only inside the existing isolated Visual QA workflow, using synthetic API fixtures.
 // No decisions are submitted: every clinical-approval mutation is intercepted and fails the gate.
-export async function inspectFavoritesAndApprovals({ page, base, out, report, approvalTitle }) {
+export async function inspectFavoritesAndApprovals({ page: sourcePage, base, out, report, approvalTitle }) {
+  // Earlier real-stack surfaces deliberately exercise the PWA. Isolate only
+  // synthetic API fixtures: a controlling service worker can bypass route().
+  const context = await sourcePage.context().browser().newContext({
+    storageState: await sourcePage.context().storageState(),
+    viewport: sourcePage.viewportSize(),
+    locale: 'pt-BR', colorScheme: 'dark', serviceWorkers: 'block',
+  });
+  const page = await context.newPage();
+  page.on('pageerror', error => report.pageErrors.push(String(error)));
   let role = 'admin';
   let owner = true;
   let approvalMutationRequests = 0;
@@ -40,7 +49,7 @@ export async function inspectFavoritesAndApprovals({ page, base, out, report, ap
     if (url.pathname.startsWith('/api/favorites') && method !== 'GET') return fulfill(route, { detail: 'Visual QA does not change favorites.' }, 403);
     return route.continue();
   };
-  await page.context().route('**/api/**', handler);
+  await context.route('**/api/**', handler);
   const fail = message => report.failures.push(`favorites-approvals: ${message}`);
   async function setTheme(theme) {
     if (await page.locator('html').getAttribute('data-corvia-theme') !== theme) {
@@ -127,6 +136,6 @@ export async function inspectFavoritesAndApprovals({ page, base, out, report, ap
     if (approvalMutationRequests) fail(`${approvalMutationRequests} approval mutations attempted without consent`);
     report.favoritesAndApprovals = { cases, approvalMutationRequests, fixtureOnly: true };
   } finally {
-    await page.context().unroute('**/api/**', handler);
+    await context.close();
   }
 }
