@@ -23,7 +23,9 @@ source = source.replace('import { api } from "../lib/api";', 'const api = { get:
 source = source.replace('import { useAuth } from "../lib/auth";', 'const useAuth = () => ({ usuario: globalThis.corviaIntelligenceFixture.user });');
 source = source.replace('"../lib/scientificIntelligence"', '"./scientificIntelligence.mjs"');
 source = source.replace('import Icone from "./Icone";', 'const Icone = () => null;');
-source = source.replace('import ScientificReadingAccess from "./ScientificReadingAccess";', 'const ScientificReadingAccess = props => <span data-reading-type={props.entityType} data-reading-slug={props.slug} data-lazy={props.lazy} />;');
+source = source.replace('import("./ScientificReadingAccess")', 'globalThis.corviaReadingModuleFixture()');
+let readingModuleLoads = 0;
+globalThis.corviaReadingModuleFixture = async () => { readingModuleLoads++; return { default: props => React.createElement('span', { 'data-reading-type': props.entityType, 'data-reading-slug': props.slug, 'data-lazy': props.lazy }) }; };
 source = source.replace('import "../styles/scientific-intelligence-monitor.css";', '');
 await writeFile(path.join(temp, 'monitor.mjs'), transpile(source));
 const { default: Monitor } = await import(pathToFileURL(path.join(temp, 'monitor.mjs')));
@@ -53,8 +55,10 @@ test('only an enabled and active status is announced as active', () => {
 });
 
 test('compact monitor uses internal discovery routes and only reads status on refresh', async t => {
-  const calls = fixture(async () => status({ recent_discoveries: [discovery(42, 'Recent publication')] }));
+  const calls = fixture(async () => status({ recent_discoveries: [{ ...discovery(42, 'Recent publication'), slug: 'recent-publication' }] }));
+  const loadsBefore = readingModuleLoads;
   const renderer = await mount(t, { compact: true });
+  assert.equal(readingModuleLoads, loadsBefore, 'compact Home must not load the online reader module');
   const links = renderer.root.findAllByType('a').map(node => node.props.href);
   assert.ok(links.includes('/intelligence'));
   assert.ok(links.includes('/intelligence#descoberta-42'));
@@ -121,6 +125,7 @@ test('document availability is counted honestly and discovery reading is lazy', 
   assert.match(words, /0 traduções integrais do texto prontas/);
   assert.match(words, /sem atividade recente confirmada/);
   const reader = renderer.root.findAllByType('span').find(node => node.props['data-reading-type']);
+  assert.ok(readingModuleLoads > 0, 'full monitor lazily loads the reading module');
   assert.equal(reader.props['data-reading-type'], 'descoberta');
   assert.equal(reader.props['data-reading-slug'], 'new-source');
   assert.equal(reader.props['data-lazy'], true);

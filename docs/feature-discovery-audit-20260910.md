@@ -52,3 +52,10 @@ Aquisição gratuita pela API oficial validada com DOI `10.1002/prca.70052`, PMC
 
 
 Validação documental concluída antes do commit: 11 testes focais aprovados em três grupos necessários (6 de extração/integridade, 3 de persistência/vínculo e preservação numérica, 2 de autenticação HTTP e truncamento). Migração em QA, aquisição real gratuita e revisão independente aprovadas. Detalhes em scientific-reading-library-20260910.md. Nenhum teste backend CI executado.
+
+
+## Primeira rodada de gates e correções
+
+PR head caa00bd4: inventário, reconciliação de corpus, cobertura de rotas, Visual QA e referência aprovada passaram. Backend CI completo/focal ficaram skipped. O frontend compilou, mas o precache excedeu o teto por cerca de 11 KB. Foi corrigida a política de carregamento das telas dependentes de conexão, preservando o monitor no shell e as APIs sem cache. Um build focal confirmou precache de 3.113.859 bytes, abaixo de 3.135.488 bytes, sem ampliar o limite.
+
+A inspeção humana das capturas encontrou títulos escuros sobre o fundo escuro do novo monitor, apesar do gate geométrico aprovado. As cores dos títulos passaram a ser explícitas por tema; o gate visual foi ampliado para esse contraste. A área lateral desktop já possui rolagem própria, preservada nesta correção. Originais XML também oferecem link direto à página da publicação. A publicação aguarda os gates da revisão final, sem reutilizar o resultado da geometria como prova de contraste.

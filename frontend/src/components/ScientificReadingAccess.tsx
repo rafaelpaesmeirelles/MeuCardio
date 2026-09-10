@@ -125,7 +125,8 @@ export default function ScientificReadingAccess({ entityType, slug, lazy = false
             <div>{originalStored ? <button className="btn" type="button" disabled={busy} onClick={() => void openArtifact(source.original, false)}>Baixar original{source.original.media_type?.includes("xml") ? " (XML)" : ""}</button>
               : originalExternal ? <a className="btn" href={originalExternal} target="_blank" rel="noopener noreferrer">Original na fonte ↗</a>
                 : <button className="btn" disabled type="button">Original</button>}
-              <small>{originalStored ? "Arquivo disponível no CorVIA" : originalExternal ? "Acesso no site da publicação" : statusText(source.original)}</small></div>
+              <small>{originalStored ? "Arquivo disponível no CorVIA" : originalExternal ? "Acesso no site da publicação" : statusText(source.original)}</small>
+              {originalStored && externalUrl(source.url) && <a href={externalUrl(source.url)} target="_blank" rel="noopener noreferrer">Página da publicação ↗</a>}</div>
           </div>
           {source.attribution && <p>{source.attribution}</p>}
           {(source.doi || source.title) && <p><Link to={`/busca?modo=tudo-com-tudo&q=${encodeURIComponent(source.doi || source.title || "")}`}>Relações no Tudo com Tudo</Link></p>}

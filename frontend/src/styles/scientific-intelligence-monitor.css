@@ -26,3 +26,8 @@ html[data-corvia-theme="dark"] .scientific-intelligence-monitor__health:is(.is-d
 .scientific-intelligence-monitor.is-compact p { font-size:.85rem; }
 .scientific-intelligence-monitor.is-compact h4 { margin-bottom:6px; }
 @media (min-width:901px) { .scientific-intelligence-monitor:not(.is-compact) dl { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+
+/* Explicit heading colors prevent global light-theme heading rules from
+   leaking into the scientific Home's dark surface. */
+html[data-corvia-theme="dark"] #root .scientific-intelligence-monitor :is(h3,h4) { color:#e4edf3 !important; }
+html[data-corvia-theme="light"] #root .scientific-intelligence-monitor :is(h3,h4) { color:#19394b !important; }

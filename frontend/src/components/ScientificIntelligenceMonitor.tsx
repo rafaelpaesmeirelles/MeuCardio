@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { intelligenceHealthLabel, scientificDate, scientificSourceUrl, type IntelligenceStatus } from "../lib/scientificIntelligence";
 import Icone from "./Icone";
-import ScientificReadingAccess from "./ScientificReadingAccess";
+const ScientificReadingAccess = lazy(() => import("./ScientificReadingAccess"));
 import "../styles/scientific-intelligence-monitor.css";
 
 export default function ScientificIntelligenceMonitor({ compact = false }: { compact?: boolean }) {
@@ -70,7 +70,7 @@ export default function ScientificIntelligenceMonitor({ compact = false }: { com
               {compact ? <Link to={`/intelligence#descoberta-${item.id}`}>{item.title}</Link> : <strong>{item.title}</strong>}
               {!compact && <><small>Identificado em {scientificDate(item.discovered_at)}</small>
                 {url && <a href={url} target="_blank" rel="noopener noreferrer">Abrir publicação original ↗</a>}
-                {item.slug && <ScientificReadingAccess entityType="descoberta" slug={item.slug} lazy />}</>}
+                {item.slug && <Suspense fallback={<p role="status">Carregando opções de leitura…</p>}><ScientificReadingAccess entityType="descoberta" slug={item.slug} lazy /></Suspense>}</>}
             </li>;
           })}</ul> : <p>Nenhuma descoberta recente registrada.</p>}
           {!compact && <p className="scientific-intelligence-monitor__note">A identificação de uma publicação não implica validação clínica. As sínteses disponíveis e suas fontes aparecem abaixo.</p>}

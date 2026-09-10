@@ -31,7 +31,13 @@ const operacaoClinicaSomenteOnline = /(?:^|\/)(?:Agenda|Prontuario|Receituario|R
 // Cotações, saldo, chat e análises de IA exigem autorização e execução no backend.
 // Pré-carregar essas telas não oferece operação offline; seus chunks mantêm o
 // mesmo cache NetworkFirst de assets após o acesso, sem aumentar o download inicial.
-const iaECobrancaSomenteOnline = /(?:^|\/)(?:Assinatura|Assistente|HeartTeamVirtual|ScientificDocumentAI)-[^/]*\.(?:js|css)$/;
+const iaECobrancaSomenteOnline = /(?:^|\/)(?:Assinatura|Assistente|HeartTeamVirtual|ScientificDocumentAI|WhatsAppAssistant)-[^/]*\.(?:js|css)$/;
+
+// O leitor de fontes e a rota Intelligence consultam versões/publicações no
+// backend e baixam os artefatos autenticados sob demanda. Mantêm NetworkFirst
+// para seus chunks; os documentos e APIs permanecem NetworkOnly. O monitor
+// compartilhado pela Home continua no precache, preservando o shell visual.
+const leituraCientificaSomenteOnline = /(?:^|\/)(?:ScientificReadingAccess|CorviaIntelligence)-[^/]*\.(?:js|css)$/;
 
 export default defineConfig({
   plugins: [
@@ -95,6 +101,7 @@ export default defineConfig({
               if (conteudoConectadoSomenteOnline.test(entry.url)) return false;
               if (operacaoClinicaSomenteOnline.test(entry.url)) return false;
               if (iaECobrancaSomenteOnline.test(entry.url)) return false;
+              if (leituraCientificaSomenteOnline.test(entry.url)) return false;
               if (!entry.url.endsWith(".js")) return true;
               if (foraDoPrecacheInicial.test(entry.url)) return false;
               if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
