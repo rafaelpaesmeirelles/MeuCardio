@@ -11,7 +11,7 @@ PR925 integrado à main em a2eb46de, sem publicação intermediária. PR926 reú
 - Importador: 27 testes isolados e 2 casos adicionais do vínculo exato de errata; hashes e licença dos 13 originais conferidos offline. Recuperação exclusiva de falha de aquisição HAS: 2 testes adicionais aprovados, mantendo attempts=1. Texto extraído da errata: 2 testes adicionais aprovados (hash, DOI, integridade e armazenamento independente da tradução).
 - Decisão de CI: 9 contratos locais para identidade exata de PR/tree, recusa de herança por outra release e ausência de certificado de testes backend.
 - PDF/API: 2 casos focais adicionais aprovados para texto extraído com hash próprio e vínculo ao PDF original; manifesto PDF com prova ausente recusa read_url.
-- Leitor frontend: verificação final do texto PDF em andamento. O iframe nativo apareceu vazio nos navegadores de teste e foi removido; CSP original foi preservada. A leitura usa texto extraído e o PDF original continua disponível para download.
+- Leitor frontend: build TypeScript/Vite/PWA aprovado; 2 casos PDF extraído claro/escuro e 12 verificações finais aprovadas, sem erros JavaScript, CSP ou overflow; download PDF idêntico e texto/aviso visíveis. Evidências em docs/qa/cardiol-reader-20260910. O iframe nativo apareceu vazio nos navegadores de teste e foi removido; CSP original foi preservada. A leitura usa texto extraído e o PDF original continua disponível para download.
 
 ## Limites que permanecem
 
