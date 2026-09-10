@@ -568,7 +568,9 @@ jobs:
                  "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-editorial-classifications-20260910 ||
                  "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-feature-discovery-20260910 ||
                  "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-universal-favorites-20260910 ||
-                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-publication-http-retry-20260910 ]] || exit 1
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-publication-http-retry-20260910 ||
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-cardiol-calculators-20260910 ||
+                 "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-cardiol-release-gate-20260910 ]] || exit 1
               echo "backend CI não executado por decisão do responsável"
               if [[ "$SUITE_KEY" == backend-risk-v1-authorized-no-backend-ci-pr918 ]]; then
                 echo "Initial full run remains failed (84 failed, 3038 passed); local evidence is recorded separately."
