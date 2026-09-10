@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "decision_id": "universal-favorites-20260910",
+  "repository": "rafaelpaesmeirelles/MeuCardio",
+  "head_branch": "codex/universal-favorites-20260910",
+  "base_sha": "97270582d93cac6327c9d843395fa704be831373",
+  "pull_request": null,
+  "authorization": {
+    "date": "2026-09-10",
+    "instruction": "Sem novo ci backend",
+    "mode": "authorized-no-backend-ci",
+    "source": "Explicit user instruction recorded earlier in this session remains in force. The subsequent request after PR921 deployment to extend Meus Favoritos to any site content and expose original, Portuguese summary and translation where applicable did not revoke it; the user did not repeat the CI instruction in this subtask.",
+    "scope": "Only the independently sealed universal-favorites PR on codex/universal-favorites-20260910 and its exact confirmed main integration: extend private Meus Favoritos compatibly to any authorized site content and collect original, Portuguese summary and translation accesses where applicable. Opening or favoriting never invokes paid AI. Existing access, privacy, usage and scientific-publication controls remain. No authorization inherited from PR918, PR919, PR920 or PR921."
+  },
+  "local_evidence": [
+    "docs/universal-favorites-audit-20260910.md"
+  ]
+}
