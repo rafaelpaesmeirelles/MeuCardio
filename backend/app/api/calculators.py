@@ -34,6 +34,7 @@ def list_calculators(_=Depends(current_user)):
             "purpose": c.purpose,
             "status": c.status,
             "kind": c.kind,
+            "external_url": c.external_url,
         }
         for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
     ]
@@ -51,6 +52,7 @@ def get_calculator(slug: str, _=Depends(current_user)):
         "purpose": c.purpose,
         "status": c.status,
         "kind": c.kind,
+        "external_url": c.external_url,
         "reference": c.reference,
         "limitations": c.limitations,
         "fields": [asdict(f) for f in c.fields],
