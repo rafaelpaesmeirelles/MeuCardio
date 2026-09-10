@@ -443,7 +443,7 @@ def _itens_por_tema(
         _add(g.theme, _ItemTema("galeria", g.id, g.slug, g.title))
 
     for c in calc.REGISTRY.values():
-        if c.status == "implementada":
+        if c.status == "implementada" or (c.status == "referencia_externa" and c.external_url):
             _add(c.theme, _ItemTema(
                 "calculadora", _id_estavel("calculadora", c.slug), c.slug, c.name,
             ))

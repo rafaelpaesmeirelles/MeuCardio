@@ -13,6 +13,7 @@ import {
 type Calc = { slug: string; name: string; theme: string; purpose: string; status: string; kind: string };
 
 const PREFIXO_DOSE = "Doses — ";
+const TEMA_RISCO_CARDIOVASCULAR = "Prevenção e lipídios";
 
 function normalizarBusca(valor: string): string {
   return valor.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").replace(/\s+/g, " ").trim();
@@ -20,6 +21,7 @@ function normalizarBusca(valor: string): string {
 
 function CalculadoraCard({ c }: { c: Calc }) {
   const liberada = c.status === "implementada";
+  const externa = c.status === "referencia_externa";
   const corpo = (
     <>
       <span className="cv-tool-card__icon">∑</span>
@@ -27,11 +29,13 @@ function CalculadoraCard({ c }: { c: Calc }) {
         <small>{c.theme}</small>
         <strong>{c.name}</strong>
         <p>{c.purpose}</p>
+        {externa && <span className="selo">Ferramenta oficial externa</span>}
+        {externa && <small>Ver orientação e acessar o site oficial →</small>}
       </span>
-      {!liberada ? <SeloRevisao status={c.status} /> : <span className="cv-tool-card__open" aria-hidden="true">↗</span>}
+      {!liberada && !externa ? <SeloRevisao status={c.status} /> : <span className="cv-tool-card__open" aria-hidden="true">↗</span>}
     </>
   );
-  return liberada ? <Link to={`/calculadoras/${c.slug}`} className="cv-tool-card">{corpo}</Link> : <div className="cv-tool-card is-disabled" aria-disabled="true">{corpo}</div>;
+  return liberada || externa ? <Link to={`/calculadoras/${c.slug}`} className="cv-tool-card">{corpo}</Link> : <div className="cv-tool-card is-disabled" aria-disabled="true">{corpo}</div>;
 }
 
 export default function Calculadoras() {
@@ -60,7 +64,11 @@ export default function Calculadoras() {
   if (!lista) return <Carregando texto="Abrindo ferramentas clínicas…" />;
 
   const doses = filtradas.filter((c) => c.kind === "dose");
-  const avaliacoes = filtradas.filter((c) => c.kind !== "dose");
+  const riscoCardiovascular = filtradas.filter((c) => c.kind !== "dose" && c.theme === TEMA_RISCO_CARDIOVASCULAR);
+  const riscoNativas = riscoCardiovascular.filter((c) => c.status === "implementada");
+  const riscoPendentes = riscoCardiovascular.filter((c) => c.status !== "implementada" && c.status !== "referencia_externa");
+  const riscoExternas = riscoCardiovascular.filter((c) => c.status === "referencia_externa");
+  const avaliacoes = filtradas.filter((c) => c.kind !== "dose" && c.theme !== TEMA_RISCO_CARDIOVASCULAR);
   const implementadas = lista.filter((c) => c.status === "implementada").length;
   const dosesPorArea = new Map<string, Calc[]>();
   for (const c of doses) {
@@ -78,7 +86,7 @@ export default function Calculadoras() {
         actions={[
           { to: "/assistente", label: "Assistente Clínica", icon: "assistente", tone: "primary" },
         ]}
-        meta={<><span className="selo">{implementadas} disponíveis</span><span className="selo">referência rastreável</span></>}
+        meta={<><span className="selo">{implementadas} com cálculo no CorVIA</span><span className="selo">referência rastreável</span></>}
       />
 
       <ClinicalSection eyebrow="Encontrar ferramenta" title="Qual cálculo você precisa agora?" className="cv-calculator-finder">
@@ -101,10 +109,36 @@ export default function Calculadoras() {
 
       <div className="cv-metrics" aria-label="Resumo do catálogo">
         <ClinicalMetric label="Ferramentas" value={lista.length} detail="catálogo total" icon="calculadora" />
-        <ClinicalMetric label="Disponíveis" value={implementadas} detail="validadas para uso" icon="check" />
+        <ClinicalMetric label="Cálculo no CorVIA" value={implementadas} detail="ferramentas internas" icon="check" />
         <ClinicalMetric label="Temas" value={temas.length} detail="áreas clínicas" icon="clinica" />
         <ClinicalMetric label="Seleção" value={filtradas.length} detail="resultados atuais" icon="busca" />
       </div>
+
+      {riscoCardiovascular.length > 0 && (
+        <ClinicalSection eyebrow="Prevenção e lipídios" title="Risco cardiovascular" description="Compare a população, o desfecho e as limitações de cada modelo antes de estimar o risco.">
+          <div className="cv-tool-sections">
+            {riscoExternas.length > 0 && (
+              <section className="cv-tool-group">
+                <div className="cv-tool-group__heading"><h3>Ferramentas oficiais externas</h3><span>{riscoExternas.length}</span></div>
+                <p>Consulte a orientação no CorVIA e acesse a ferramenta disponibilizada pela instituição responsável.</p>
+                <div className="cv-tool-grid">{riscoExternas.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>
+              </section>
+            )}
+            {riscoNativas.length > 0 && (
+              <section className="cv-tool-group">
+                <div className="cv-tool-group__heading"><h3>Modelos históricos — cálculo no CorVIA</h3><span>{riscoNativas.length}</span></div>
+                <div className="cv-tool-grid">{riscoNativas.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>
+              </section>
+            )}
+            {riscoPendentes.length > 0 && (
+              <section className="cv-tool-group">
+                <div className="cv-tool-group__heading"><h3>Acesso em confirmação</h3><span>{riscoPendentes.length}</span></div>
+                <div className="cv-tool-grid">{riscoPendentes.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>
+              </section>
+            )}
+          </div>
+        </ClinicalSection>
+      )}
 
       {doses.length > 0 && (
         <ClinicalSection eyebrow="Dose e infusão" title="Calculadoras de doses" description="Taxa de infusão, dose ponderal e parâmetros estruturados por área. O resultado apoia; a decisão permanece do médico.">
@@ -119,9 +153,9 @@ export default function Calculadoras() {
         </ClinicalSection>
       )}
 
-      <ClinicalSection eyebrow="Escores e avaliações" title="Estratificação e apoio à decisão">
+      {(avaliacoes.length > 0 || filtradas.length === 0) && <ClinicalSection eyebrow="Escores e avaliações" title="Estratificação e apoio à decisão">
         {avaliacoes.length === 0 ? <ClinicalEmpty title="Nenhuma calculadora encontrada" description={busca ? `Sem resultado para “${busca.trim()}”.` : "Ajuste os filtros."} /> : <div className="cv-tool-grid">{avaliacoes.map((c) => <CalculadoraCard key={c.slug} c={c} />)}</div>}
-      </ClinicalSection>
+      </ClinicalSection>}
 
       <ClinicalSection eyebrow="Contexto" title="Depois do cálculo">
         <div className="cv-context-grid">

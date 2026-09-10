@@ -1,6 +1,6 @@
 import BotaoFavorito from "../components/BotaoFavorito";
 import ScientificReadingAccess from "../components/ScientificReadingAccess";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
@@ -30,12 +30,13 @@ type Provedor = { codigo: string; nome: string; nivel: string; familia: string; 
 
 type Campo = {
   name: string; label: string; type: string; unit: string | null;
-  options: { value: string | number; label: string }[];
+  options: { value: string | number | boolean; label: string }[];
   min: number | null; max: number | null; help: string | null; required: boolean;
 };
 type Calc = {
   slug: string; name: string; theme: string; purpose: string; kind: string;
   reference: string; limitations: string[]; fields: Campo[];
+  status?: string; external_url?: string | null;
 };
 type Saida = {
   result: Record<string, unknown>; interpretation: string | null;
@@ -58,6 +59,7 @@ export default function Calculadora() {
   const [valores, setValores] = useState<Record<string, unknown>>({});
   const [saida, setSaida] = useState<Saida | null>(null);
   const [erro, setErro] = useState("");
+  const revisaoFormulario = useRef(0);
 
   const [provedores, setProvedores] = useState<Provedor[] | null>(null);
   const [mostrarDocumento, setMostrarDocumento] = useState(false);
@@ -81,7 +83,13 @@ export default function Calculadora() {
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
 
   useEffect(() => {
+    let ativo = true;
+    revisaoFormulario.current += 1;
+    setCalc(null);
+    setValores({});
+    setErro("");
     api.get<Calc>(`/calculators/${slug}`).then((c) => {
+      if (!ativo) return;
       setCalc(c);
       const iniciais: Record<string, unknown> = {};
       for (const f of c.fields) {
@@ -89,11 +97,19 @@ export default function Calculadora() {
         if (f.type === "select") iniciais[f.name] = "";
       }
       setValores(iniciais);
+    }).catch((e) => {
+      if (ativo) setErro(e instanceof Error ? e.message : "Não foi possível abrir a calculadora.");
     });
     setSaida(null);
     setMostrarDocumento(false);
     setGeradoId(null);
     setResultadoEnvio(null);
+    setErroGeracao("");
+    setGerando(false);
+    setAguardandoExterno(false);
+    setAssinadoExternoAgora(false);
+    setEmitido(false);
+    return () => { ativo = false; revisaoFormulario.current += 1; };
   }, [slug]);
 
   useEffect(() => {
@@ -106,19 +122,41 @@ export default function Calculadora() {
     }
   }, [usuario?.assinatura_metodo_preferido]);
 
+  function atualizarCampo(nome: string, valor: unknown) {
+    revisaoFormulario.current += 1;
+    setValores((atuais) => ({ ...atuais, [nome]: valor }));
+    setSaida(null);
+    setErro("");
+    setMostrarDocumento(false);
+    setGeradoId(null);
+    setResultadoEnvio(null);
+    setErroGeracao("");
+    setGerando(false);
+    setAguardandoExterno(false);
+    setAssinadoExternoAgora(false);
+    setEmitido(false);
+  }
+
   async function calcular() {
+    if (!calc || calc.slug !== slug || calc.status === "referencia_externa") return;
+    const revisao = ++revisaoFormulario.current;
     setErro("");
     try {
-      setSaida(await api.post<Saida>(`/calculators/${slug}/run`, valores));
+      const resultado = await api.post<Saida>(`/calculators/${slug}/run`, valores);
+      if (revisao !== revisaoFormulario.current) return;
+      setSaida(resultado);
       setGeradoId(null);
       setResultadoEnvio(null);
     } catch (e) {
+      if (revisao !== revisaoFormulario.current) return;
       setSaida(null);
       setErro(e instanceof Error ? e.message : "Revise os valores informados.");
     }
   }
 
   async function gerarDocumento() {
+    if (!saida || !calc || calc.slug !== slug || calc.status === "referencia_externa") return;
+    const revisao = revisaoFormulario.current;
     setGerando(true);
     setErroGeracao("");
     try {
@@ -129,11 +167,11 @@ export default function Calculadora() {
         endereco: endereco || null,
         payload: valores,
       });
-      setGeradoId(r.id);
+      if (revisao === revisaoFormulario.current) setGeradoId(r.id);
     } catch (e) {
-      setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível gerar o documento.");
+      if (revisao === revisaoFormulario.current) setErroGeracao(e instanceof ApiError ? e.message : "Não foi possível gerar o documento.");
     } finally {
-      setGerando(false);
+      if (revisao === revisaoFormulario.current) setGerando(false);
     }
   }
 
@@ -165,7 +203,9 @@ export default function Calculadora() {
     }
   }
 
-  if (!calc) return <Carregando />;
+  if (!calc || calc.slug !== slug) return erro ? <Erro mensagem={erro} /> : <Carregando />;
+
+  const externa = calc.status === "referencia_externa";
 
   const faltando = calc.fields.some(
     (f) => f.required !== false && f.type !== "boolean"
@@ -183,6 +223,17 @@ export default function Calculadora() {
         <Link to={`/biblioteca?tema=${encodeURIComponent(calc.theme)}`}>Biblioteca — {calc.theme}</Link>.
       </p>
 
+      {externa ? (
+        <div className="cartao cartao--clinico" style={{ marginTop: "1rem" }}>
+          <p className="eyebrow">Ferramenta oficial externa</p>
+          <p>A ferramenta é disponibilizada pela instituição responsável. O cálculo é realizado no serviço oficial. O CorVIA não envia dados preenchidos.</p>
+          {calc.external_url && /^https:\/\//.test(calc.external_url) ? (
+            <a className="botao" href={calc.external_url} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">
+              Acessar ferramenta oficial ↗
+            </a>
+          ) : <p>O acesso à ferramenta oficial está indisponível no momento.</p>}
+        </div>
+      ) : <>
       <div className="cartao cartao--clinico" style={{ marginTop: "1rem" }}>
         {calc.fields.map((f) => (
           <div key={f.name} style={{ marginBottom: "0.9rem" }}>
@@ -192,7 +243,7 @@ export default function Calculadora() {
                   type="checkbox"
                   style={{ marginTop: 2 }}
                   checked={Boolean(valores[f.name])}
-                  onChange={(e) => setValores({ ...valores, [f.name]: e.target.checked })}
+                  onChange={(e) => atualizarCampo(f.name, e.target.checked)}
                 />
                 <span>
                   {f.label}
@@ -211,7 +262,7 @@ export default function Calculadora() {
                   value={String(valores[f.name] ?? "")}
                   onChange={(e) => {
                     const opt = f.options.find((o) => String(o.value) === e.target.value);
-                    setValores({ ...valores, [f.name]: opt?.value });
+                    atualizarCampo(f.name, opt?.value);
                   }}
                 >
                   <option value="" disabled>Selecione…</option>
@@ -233,10 +284,11 @@ export default function Calculadora() {
                   min={f.min ?? undefined}
                   max={f.max ?? undefined}
                   value={String(valores[f.name] ?? "")}
-                  onChange={(e) => setValores({ ...valores, [f.name]: e.target.value })}
+                  onChange={(e) => atualizarCampo(f.name, e.target.value)}
                 />
               </>
             )}
+            {f.type !== "boolean" && f.help && <p style={{ fontSize: "0.8rem", color: "var(--texto-secundario)", margin: "0.3rem 0 0" }}>{f.help}</p>}
           </div>
         ))}
 
@@ -372,6 +424,8 @@ export default function Calculadora() {
           )}
         </div>
       )}
+
+      </>}
 
       <div className="aviso">
         <strong>Referência:</strong> {calc.reference}
