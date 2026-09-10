@@ -42,6 +42,19 @@ def changed_followup_paths(baseline: str, pr_head: str, candidate: str) -> list[
     subprocess.run(["git", "merge-base", "--is-ancestor", baseline, pr_head], check=True, capture_output=True)
     return git("diff", "--no-renames", "--name-only", "--diff-filter=ACDMRTUXB", f"{baseline}..{candidate}").splitlines()
 
+LINK_CONTRACT_SCOPE = {
+    "manifest": "docs/ci/cardiol-link-contracts-no-backend-ci.json",
+    "head_branch": "codex/cardiol-link-contracts-20260910",
+    "repository": "rafaelpaesmeirelles/MeuCardio",
+    "decision_id": "cardiol-link-contracts-20260910",
+    "base_sha": "10d98763d08168a41ae3cfd2a0bdb18c96b7ff78",
+    "minimum_pull_request": 929,
+    "local_evidence": "docs/cardiol-link-contracts-20260910.md",
+    "decision_document": "docs/ci/cardiol-link-contracts-owner-decision.md",
+    "suite_key": "backend-risk-v1-authorized-no-backend-ci-cardiol-link-contracts-20260910",
+}
+
+
 CORPUS_REPAIR_SCOPE = {
     "manifest": "docs/ci/cardiol-corpus-repair-no-backend-ci.json",
     "head_branch": "codex/cardiol-gate-fixtures-20260910",
@@ -269,7 +282,9 @@ def main() -> int:
     event, number = os.environ.get("EVENT_NAME", ""), os.environ.get("PR_NUMBER", "")
     context = dict(event=event, number=number, head_ref=os.environ.get("PR_HEAD_REF", ""),
                    repository=os.environ.get("REPOSITORY", ""))
-    decision = scoped_owner_decision(root, scope=CORPUS_REPAIR_SCOPE, **context)
+    decision = scoped_owner_decision(root, scope=LINK_CONTRACT_SCOPE, **context)
+    if decision is None:
+        decision = scoped_owner_decision(root, scope=CORPUS_REPAIR_SCOPE, **context)
     if decision is None:
         decision = scoped_owner_decision(root, scope=CARDIOL_GATE_SCOPE, **context)
     if decision is None:
